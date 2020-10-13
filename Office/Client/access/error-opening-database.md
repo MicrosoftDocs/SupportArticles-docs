@@ -1,5 +1,5 @@
 ---
-title: Unable to open an Access database
+title: Unable to open an Access database on a server
 description: Fixes an issue in which you may receive a "file already in use" error message when you open an Access database.
 author: MaryQiu1987
 ms.author: v-maqiu

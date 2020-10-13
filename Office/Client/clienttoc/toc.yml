@@ -313,295 +313,295 @@
       href: ../support/2013-versions-of-office-365.md
   - name: Excel
     items:
-    - name: .SpecialCells(xlCellTypeBlanks) VBA function doesn't work
+    - name: .SpecialCells(xlCellTypeBlanks) VBA function doesn't work
       href: ../excel/specialcells(xlcelltypeblanks)-vba-function.md
-    - name: A file is updated without user interaction
+    - name: A file is updated without user interaction
       href: ../excel/file-updated-without-user-interaction.md
-    - name: Access data connections are slow to refresh
+    - name: Access data connections are slow to refresh
       href: ../excel/access-data-connections-refresh-slowly.md
-    - name: Algorithm is used by the XIRR() function
+    - name: Algorithm is used by the XIRR() function
       href: ../excel/algorithm-of-xirr-funcation.md
-    - name: An active process continues to run
+    - name: An active process continues to run
       href: ../excel/quitting-process-continues-running.md
-    - name: Apply permissions to separate ranges
+    - name: Apply permissions to separate ranges
       href: ../excel/apply-password-to-separate-range.md
-    - name: AutoComplete may not work
+    - name: AutoComplete may not work
       href: ../excel/autocomplete-not-work.md
-    - name: AutoRecover functions in Excel
+    - name: AutoRecover functions in Excel
       href: ../excel/autorecover-functions-in-excel.md
-    - name: Blank pages are unexpectedly printed
+    - name: Blank pages are unexpectedly printed
       href: ../excel/blank-pages-unexpectedly-printed.md
-    - name: Border missing when pasting table in email for Mac
+    - name: Border missing when pasting table in email for Mac
       href: ../excel/table-border-missing.md
-    - name: Calculate ages before 1/1/1900
+    - name: Calculate ages before 1/1/1900
       href: ../excel/calculate-age-before-1-1-1900.md
-    - name: Calculate interpolation step value
+    - name: Calculate interpolation step value
       href: ../excel/calculate-interpolation-step-value.md
-    - name: Can't add refedit control to VBA userform
+    - name: Can't add refedit control to VBA userform
       href: ../excel/cant-add-refedit-control-to-vba-userform..md
-    - name: Can't create a PivotTable in Excel 2013
+    - name: Can't create a PivotTable in Excel 2013
       href: ../excel/cannot-create-pivottable.md
-    - name: Can't export to Excel from SharePoint Online
+    - name: Can't export to Excel from SharePoint Online
       href: ../excel/cannot-export-to-excel.md
-    - name: Can't modify oData connection in PowerPivot
+    - name: Can't modify oData connection in PowerPivot
       href: ../excel/cannot-modify-odata-connection.md
-    - name: Can't open IRM protected workbook
+    - name: Can't open IRM protected workbook
       href: ../excel/cannot-open-irm-protected-workbook.md
-    - name: Can't paste any attributes into a workbook in another instance
+    - name: Can't paste any attributes into a workbook in another instance
       href: ../excel/cannot-paste-attributes.md
-    - name: Can't remove error tracing arrow
+    - name: Can't remove error tracing arrow
       href: ../excel/removing-error-tracing-arrow-fails.md
-    - name: Can't use object linking and embedding
+    - name: Can't use object linking and embedding
       href: ../excel/cant-use-object-linking-and-embedding-error.md
-    - name: Center Across Columns does not appear on the toolbar
+    - name: Center Across Columns does not appear on the toolbar
       href: ../excel/center-across-columns-button-disappear.md
-    - name: Chart trendline formula is inaccurate
+    - name: Chart trendline formula is inaccurate
       href: ../excel/inaccurate-chart-trendline-formula.md
-    - name: CHIINV statistical functions
+    - name: CHIINV statistical functions
       href: ../excel/statistical-functions-chiinv.md
-    - name: Clean up workbooks with less memory
+    - name: Clean up workbooks with less memory
       href: ../excel/clean-workbook-less-memory.md
-    - name: Columns and rows are labeled numerically
+    - name: Columns and rows are labeled numerically
       href: ../excel/numeric-columns-and-rows.md
-    - name: COM add-ins are not displayed
+    - name: COM add-ins are not displayed
       href: ../excel/com-add-ins-not-displayed.md
-    - name: Command bars of add-ins aren't displayed or removed
+    - name: Command bars of add-ins aren't displayed or removed
       href: ../excel/add-ins-command-bars-removed.md
-    - name: Command can't be used on multiple selections
+    - name: Command can't be used on multiple selections
       href: ../excel/command-cannot-be-used-on-selections.md
-    - name: Conditional formatting is set incorrectly with VBA
+    - name: Conditional formatting is set incorrectly with VBA
       href: ../excel/conditional-formatting-set-incorrectly.md
-    - name: Connection to ODBC driver fails in PowerPivot
+    - name: Connection to ODBC driver fails in PowerPivot
       href: ../excel/connection-to-odbc-driver-fails.md
-    - name: Convert degrees/minutes/seconds angles
+    - name: Convert degrees/minutes/seconds angles
       href: ../excel/convert-degrees-minutes-seconds-angles.md
-    - name: Convert Excel column numbers
+    - name: Convert Excel column numbers
       href: ../excel/convert-excel-column-numbers.md
-    - name: Create a dynamic defined range
+    - name: Create a dynamic defined range
       href: ../excel/create-dynamic-defined-range.md
-    - name: Create a monthly calendar
+    - name: Create a monthly calendar
       href: ../excel/create-monthly-calendar.md
-    - name: Create and user two-input data tables
+    - name: Create and user two-input data tables
       href: ../excel/create-two-input-data-tables.md
-    - name: Create application-level event handlers
+    - name: Create application-level event handlers
       href: ../excel/create-application-level-event-handler.md
-    - name: Custom function may not calculate expected value
+    - name: Custom function may not calculate expected value
       href: ../excel/custom-function-calculate-wrong-value.md
-    - name: Data collected by Excel Baseline Diagnostic
+    - name: Data collected by Excel Baseline Diagnostic
       href: ../excel/data-collected-by-excel-support-diagnostic.md
-    - name: Date format is incorrect when converting a CSV text file with macros
+    - name: Date format is incorrect when converting a CSV text file with macros
       href: ../excel/incorrect-date-format-converted-csv-file.md
-    - name: Delete cells with a "For Each...Next" loop
+    - name: Delete cells with a "For Each...Next" loop
       href: ../excel/use-for-each-next-loop-to-delete-cell.md
-    - name: Delete every other row on a worksheet
+    - name: Delete every other row on a worksheet
       href: ../excel/delete-every-other-row.md
-    - name: Determine the current mode of calculation
+    - name: Determine the current mode of calculation
       href: ../excel/current-mode-of-calculation.md
-    - name: Determine whether a year is a leap year
+    - name: Determine whether a year is a leap year
       href: ../excel/determine-a-leap-year.md
-    - name: Difference between STDEVPA and STDEVP functions
+    - name: Difference between STDEVPA and STDEVP functions
       href: ../excel/statistical-functions-differences.md
-    - name: Differences between 1900 and 1904 date system
+    - name: Differences between 1900 and 1904 date system
       href: ../excel/1900-and-1904-date-system.md
-    - name: Digital signatures and code signing
+    - name: Digital signatures and code signing
       href: ../excel/digital-signatures-code-signing.md
-    - name: Display more digits in trendline equation coefficients
+    - name: Display more digits in trendline equation coefficients
       href: ../excel/trendline-equation-coefficient-digits.md
-    - name: Dsum and Dcount functions not working
+    - name: Dsum and Dcount functions not working
       href: ../excel/dsum-and-dcount-not-work-with-pivottables.md
-    - name: Embedded macros are blocked from running
+    - name: Embedded macros are blocked from running
       href: ../excel/embedded-macros-not-run.md
-    - name: Error when saving a file
+    - name: Error when saving a file
       href: ../excel/error-saving-file.md
-    - name: Error when sending commands in Excel
+    - name: Error when sending commands in Excel
       href: ../excel/error-when-send-commands-in-excel.md
-    - name: Error when you copy formulas over large area
+    - name: Error when you copy formulas over large area
       href: ../excel/copy-formulas-over-large-area.md
-    - name: Error when you import data to a workbook
+    - name: Error when you import data to a workbook
       href: ../excel/index-outside-bounds-of-array-error.md
-    - name: Excel 2016 for Mac crashes
+    - name: Excel 2016 for Mac crashes
       href: ../excel/excel-2016-for-mac-crashes.md
-    - name: Excel cannot complete this task
+    - name: Excel cannot complete this task
       href: ../excel/excel-cannot-complete-task-with-available.md
-    - name: Excel doesn't recognize data as Date type data
+    - name: Excel doesn't recognize data as Date type data
       href: ../excel/not-recognize-data-as-date-type-data.md
-    - name: Excel doesn't shut down after calling Quit method
+    - name: Excel doesn't shut down after calling Quit method
       href: ../excel/jscript-not-shut-down-excel.md
-    - name: Excel incorrectly assumes 1900 is a leap year
+    - name: Excel incorrectly assumes 1900 is a leap year
       href: ../excel/wrongly-assumes-1900-is-leap-year.md
-    - name: Excel opening blank
+    - name: Excel opening blank
       href: ../excel/excel-opens-blank.md
-    - name: Excel stops working after KB3118373 is installed
+    - name: Excel stops working after KB3118373 is installed
       href: ../excel/excel-has-stopped-working-error.md
-    - name: Excel takes long time to insert or delete rows
+    - name: Excel takes long time to insert or delete rows
       href: ../excel/excel-takes-long-time-to-insert-delete-rows.md
-    - name: Export a text file with both comma and quote delimiters
+    - name: Export a text file with both comma and quote delimiters
       href: ../excel/export-text-file-with-comma-quote.md
-    - name: F4 keyboard shortcut doesn't work in Excel
+    - name: F4 keyboard shortcut doesn't work in Excel
       href: ../excel/f4-keyboard-shortcut-not-work.md
-    - name: FALSE result with the ISBLANK() function
+    - name: FALSE result with the ISBLANK() function
       href: ../excel/isblank-function-return-false.md
-    - name: First sheet name displays different language
+    - name: First sheet name displays different language
       href: ../excel/first-sheet-name-displays-different-language.md
-    - name: Floating-point arithmetic gives inaccurate results
+    - name: Floating-point arithmetic gives inaccurate results
       href: ../excel/floating-point-arithmetic-inaccurate-result.md
-    - name: Force Excel to open in a new instance by default
+    - name: Force Excel to open in a new instance by default
       href: ../excel/force-excel-to-open-new-instance.md
-    - name: Format Cells settings
+    - name: Format Cells settings
       href: ../excel/format-cells-settings.md
-    - name: Formatted text is limited to 240 characters per line
+    - name: Formatted text is limited to 240 characters per line
       href: ../excel/prn-file-limited-to-240-characters.md
-    - name: Formula errors when list separator isn't set
+    - name: Formula errors when list separator isn't set
       href: ../excel/formula-errors.md
-    - name: Formulas to count text occurrences in Excel
+    - name: Formulas to count text occurrences in Excel
       href: ../excel/formulas-to-count-occurrences-in-excel.md
-    - name: GROWTH statistical functions
+    - name: GROWTH statistical functions
       href: ../excel/statistical-functions-growth.md
-    - name: Hide sheets and use xlVeryHidden constant in a macro
+    - name: Hide sheets and use xlVeryHidden constant in a macro
       href: ../excel/hide-sheet-and-use-xlveryhidden.md
-    - name: How column widths are determined
+    - name: How column widths are determined
       href: ../excel/determine-column-widths.md
-    - name: How Excel works with two-digit year numbers
+    - name: How Excel works with two-digit year numbers
       href: ../excel/two-digit-year-numbers.md
-    - name: How to obtain the latest Excel Viewer
+    - name: How to obtain the latest Excel Viewer
       href: ../excel/get-latest-excel-viewer.md
-    - name: Hyperlink to mht file fails to load
+    - name: Hyperlink to mht file fails to load
       href: ../excel/hyperlink-to-mht-file-fails-to-load.md
-    - name: Incorrect icon shows when inserting an object
+    - name: Incorrect icon shows when inserting an object
       href: ../excel/inserted-object-icon-incorrect.md
-    - name: Inquire COM add-in options don't respond
+    - name: Inquire COM add-in options don't respond
       href: ../excel/inquire-com-add-in-not-respond.md
-    - name: INTERCEPT statistical functions
+    - name: INTERCEPT statistical functions
       href: ../excel/statistical-functions-intercept.md
-    - name: Invalid signature error in Excel workbooks
+    - name: Invalid signature error in Excel workbooks
       href: ../excel/document-contains-invalid-signatures-error.md
-    - name: Issue when saving Excel workbooks
+    - name: Issue when saving Excel workbooks
       href: ../excel/issue-when-save-excel-workbooks.md
-    - name: Issue when sorting a range that has merged cells
+    - name: Issue when sorting a range that has merged cells
       href: ../excel/error-sort-a-range-merged-cell.md
-    - name: Issue when starting Excel for Mac
+    - name: Issue when starting Excel for Mac
       href: ../excel/fails-starting-excel-mac.md
-    - name: Issue when updating external links
+    - name: Issue when updating external links
       href: ../excel/update-external-links.md
-    - name: Issue with updating a data connection or change PivotTable fields
+    - name: Issue with updating a data connection or change PivotTable fields
       href: ../excel/connection-failed-to-refresh.md
-    - name: Issue with using different print quality for sheets
+    - name: Issue with using different print quality for sheets
       href: ../excel/different-print-quality.md
-    - name: Large Address Aware capability change
+    - name: Large Address Aware capability change
       href: ../excel/laa-capability-change.md
-    - name: Last digits are changed to zeros
+    - name: Last digits are changed to zeros
       href: ../excel/last-digits-changed-to-zeros.md
-    - name: Legacy UML features are missing
+    - name: Legacy UML features are missing
       href: ../excel/legacy-uml-features-missing.md
-    - name: Limitations for working with arrays
+    - name: Limitations for working with arrays
       href: ../excel/arrays-limitations.md
-    - name: Link a Visio drawing to a specific region
+    - name: Link a Visio drawing to a specific region
       href: ../excel/link-visio-drawing-to-a-specific-region.md
-    - name: LOGEST statistical functions
+    - name: LOGEST statistical functions
       href: ../excel/statistical-functions-logest.md
-    - name: Loop through a list of data by using macros
+    - name: Loop through a list of data by using macros
       href: ../excel/loop-through-data-using-macro.md
-    - name: Macro to extract data from a chart
+    - name: Macro to extract data from a chart
       href: ../excel/macro-retrieves-chart-data.md
-    - name: Macros run slowly
+    - name: Macros run slowly
       href: ../excel/macros-run-slowly.md
-    - name: Make Paste Options button disappear
+    - name: Make Paste Options button disappear
       href: ../excel/make-paste-options-button-disappear.md
-    - name: Margins do not fit page size when printing
+    - name: Margins do not fit page size when printing
       href: ../excel/fails-printing-a-workbook.md
-    - name: Memory usage in the 32-bit edition of Excel
+    - name: Memory usage in the 32-bit edition of Excel
       href: ../excel/memory-usage-32-bit-edition-of-excel.md
-    - name: Misleading labels in the output of Analysis ToolPak t-Test tools
+    - name: Misleading labels in the output of Analysis ToolPak t-Test tools
       href: ../excel/output-misleading-labels.md
-    - name: Network Mapped Drive hyperlinks resolve as UNC
+    - name: Network Mapped Drive hyperlinks resolve as UNC
       href: ../excel/network-mapped-drive-hyperlinks-unc.md
-    - name: Office 365 users can't open or synchronize files
+    - name: Office 365 users can't open or synchronize files
       href: ../excel/cannot-operate-files.md
-    - name: Operation Must Use an Updatable Query
+    - name: Operation Must Use an Updatable Query
       href: ../excel/fails-accessing-excel-through-odbc.md
-    - name: Parts of Excel turn white or gray
+    - name: Parts of Excel turn white or gray
       href: ../excel/parts-of-excel-turn-white-or-gray.md
-    - name: Paster special option is missing or not working
+    - name: Paster special option is missing or not working
       href: ../excel/paste-special-missing-or-not-working.md
-    - name: PowerPivot controls disabled with non-default Excel file format
+    - name: PowerPivot controls disabled with non-default Excel file format
       href: ../excel/powerpivot-controls-disabled-with-non-default.md
-    - name: Prevent files from opening automatically
+    - name: Prevent files from opening automatically
       href: ../excel/files-open-automatically.md
-    - name: Programmatically copy all range names
+    - name: Programmatically copy all range names
       href: ../excel/copy-range-names.md
-    - name: Programmatically print all embedded charts
+    - name: Programmatically print all embedded charts
       href: ../excel/print-embedded-charts.md
-    - name: Programmatically save a file to a network drive
+    - name: Programmatically save a file to a network drive
       href: ../excel/save-file-to-network-drive.md
-    - name: Query and update data with ADO from ASP
+    - name: Query and update data with ADO from ASP
       href: ../excel/query-update-data.md
-    - name: Recalculation with a SUMIF formula takes a longer time
+    - name: Recalculation with a SUMIF formula takes a longer time
       href: ../excel/worksheet-recalculation-sumif-formula.md
-    - name: Registry keys that control the File Repair feature
+    - name: Registry keys that control the File Repair feature
       href: ../excel/file-repair-registry-key.md
-    - name: Representing ties by using RANK
+    - name: Representing ties by using RANK
       href: ../excel/representing-ties-using-rank.md
-    - name: RSQ statistical functions
+    - name: RSQ statistical functions
       href: ../excel/statistical-functions-rsq.md
-    - name: Run a macro with certain cells change
+    - name: Run a macro with certain cells change
       href: ../excel/run-macro-cells-change.md
-    - name: Run-time Error 1004 with legend entries in charts
+    - name: Run-time Error 1004 with legend entries in charts
       href: ../excel/run-time-error-1004.md
-    - name: Run-time error '-2147467259 (80004005)' when setting a chart property
+    - name: Run-time error '-2147467259 (80004005)' when setting a chart property
       href: ../excel/run-time-error-2147467259-80004005.md
-    - name: Sample macro to insert/delete rows or columns
+    - name: Sample macro to insert/delete rows or columns
       href: ../excel/macro-insert-delete-rows-columns.md
-    - name: Sample user-defined function to hide formula errors
+    - name: Sample user-defined function to hide formula errors
       href: ../excel/hide-formula-error.md
-    - name: SAP add-ins don't display controls after update to version 1806
+    - name: SAP add-ins don't display controls after update to version 1806
       href: ../excel/sap-add-ins-not-display-control.md
-    - name: Security settings for Dynamic Data Exchange
+    - name: Security settings for Dynamic Data Exchange
       href: ../excel/security-settings.md
-    - name: Set page setup attributes for sheets
+    - name: Set page setup attributes for sheets
       href: ../excel/set-page-setup-attributes.md
-    - name: Set up and use the RTD function
+    - name: Set up and use the RTD function
       href: ../excel/set-up-realtimedata-function.md
-    - name: Startup message about updating linked workbooks
+    - name: Startup message about updating linked workbooks
       href: ../excel/control-startup-message.md
-    - name: STEYX statistical functions
+    - name: STEYX statistical functions
       href: ../excel/statistical-functions-steyx.md
-    - name: Too many different cell formats in Excel
+    - name: Too many different cell formats in Excel
       href: ../excel/too-many-different-cell-formats-in-excel.md
-    - name: Transfer data to Excel from Visual Basic
+    - name: Transfer data to Excel from Visual Basic
       href: ../excel/transfer-data-to-excel-from-vb.md
-    - name: Troubleshoot available resources issues
+    - name: Troubleshoot available resources issues
       href: ../excel/available-resources-errors.md
-    - name: Turn off Function Argument ToolTips
+    - name: Turn off Function Argument ToolTips
       href: ../excel/turn-off-function-argument-tooltips.md
-    - name: Unable to cast COM object
+    - name: Unable to cast COM object
       href: ../excel/team-explorer-export-fails.md
-    - name: Use a worksheet function in a VB macro
+    - name: Use a worksheet function in a VB macro
       href: ../excel/worksheet-function-in-vb-macro.md
-    - name: Use cell references and defined names in criteria
+    - name: Use cell references and defined names in criteria
       href: ../excel/use-cell-references-defined-names.md
-    - name: Use defined names to update a chart range
+    - name: Use defined names to update a chart range
       href: ../excel/defined-names-to-update-chart-range.md
-    - name: Use left, right, mid, and len functions in VB
+    - name: Use left, right, mid, and len functions in VB
       href: ../excel/use-left-right-mid-len-function.md
-    - name: Use logical AND or OR in a SUM+IF statement
+    - name: Use logical AND or OR in a SUM+IF statement
       href: ../excel/logical-and-or-in-sum-if.md
-    - name: Use macro to apply cell shading format to other rows
+    - name: Use macro to apply cell shading format to other rows
       href: ../excel/apply-cell-shading-format-by-macro.md
-    - name: Use OnEntry macro to create a running total in cell comment
+    - name: Use OnEntry macro to create a running total in cell comment
       href: ../excel/use-onentry-to-create-running-total.md
-    - name: Use saved property to determine if workbook is changed
+    - name: Use saved property to determine if workbook is changed
       href: ../excel/saved-property-determine-workbook-is-changed.md
-    - name: Use shared workbooks with different versions
+    - name: Use shared workbooks with different versions
       href: ../excel/use-shared-workbook.md
-    - name: Use startup folders
+    - name: Use startup folders
       href: ../excel/use-startup-folders.md
-    - name: VBA writes to cells slowly when ActiveX controls are invisible
+    - name: VBA writes to cells slowly when ActiveX controls are invisible
       href: ../excel/vba-writes-to-cells-slowly.md
-    - name: Workbook isn't activated when you run a macro
+    - name: Workbook isn't activated when you run a macro
       href: ../excel/workbook-not-activated.md
-    - name: Workbooks not open
+    - name: Workbooks not open
       href: ../excel/workbooks-not-open.md
-    - name: Wrap text doesn't adjust row height
+    - name: Wrap text doesn't adjust row height
       href: ../excel/wrap-text-not-adjust-row-height.md
   - name: InfoPath
     items:
@@ -655,169 +655,169 @@
       href: ../office-for-mac/wkresources-files-moved-to-trash.md
   - name: Office Suite Issues
     items:
-    - name: '0x80004005: General Error Unable to Open Registry Key'
+    - name: '0x80004005: General Error Unable to Open Registry Key'
       href: ../office-suite-issues/fails-accessing-page-connected-access-database.md
-    - name: 0x80041015 when starting an Office application
+    - name: 0x80041015 when starting an Office application
       href: ../office-suite-issues/0x80041015-start-office-program.md
-    - name: AD FS sites are slow to open
+    - name: AD FS sites are slow to open
       href: ../office-suite-issues/slow-open-adfs-sites.md
-    - name: Another account is already signed in
+    - name: Another account is already signed in
       href: ../office-suite-issues/another-account-already-signed-in.md
-    - name: Applications crash when opening IRM document
+    - name: Applications crash when opening IRM document
       href: ../office-suite-issues/office-applications-crash-when-open-irm-doc.md
-    - name: Apps for Office don't start
+    - name: Apps for Office don't start
       href: ../office-suite-issues/apps-for-office-not-start.md
-    - name: Background task activation is spurious
+    - name: Background task activation is spurious
       href: ../office-suite-issues/background-task-activation-spurious.md
-    - name: Can't change the number of places in Recent Places
+    - name: Can't change the number of places in Recent Places
       href: ../office-suite-issues/change-number-of-recent-places.md
-    - name: Can't create user name that contains special characters
+    - name: Can't create user name that contains special characters
       href: ../office-suite-issues/username-contains-special-character.md
-    - name: Can't embed Adobe OpenType fonts
+    - name: Can't embed Adobe OpenType fonts
       href: ../office-suite-issues/fails-embedding-adobe-opentype-font.md
-    - name: Can't install 64-bit Office with 32-bit
+    - name: Can't install 64-bit Office with 32-bit
       href: ../office-suite-issues/cannot-install-64-bit-office-with-32-bit.md
-    - name: Can't install 64-bit version of Office with Click-to-Run
+    - name: Can't install 64-bit version of Office with Click-to-Run
       href: ../office-suite-issues/64-bit-cant-install-with-click-to-run.md
-    - name: Can't install Office Starter 2010 on Windows 8
+    - name: Can't install Office Starter 2010 on Windows 8
       href: ../office-suite-issues/cant-install-office-on-windows-8.md
-    - name: Can't locate proxy server when clicking hyperlink
+    - name: Can't locate proxy server when clicking hyperlink
       href: ../office-suite-issues/cannot-locate-server-when-click-hyperlink.md
-    - name: Can't open a file from UNC share
+    - name: Can't open a file from UNC share
       href: ../office-suite-issues/file-not-found-when-open-file-from-unc.md
-    - name: Can't open Click-to-run version of Office on terminal server
+    - name: Can't open Click-to-run version of Office on terminal server
       href: ../office-suite-issues/click-to-run-office-on-terminal-server.md
-    - name: Can't open Excel, Word or PowerPoint file
+    - name: Can't open Excel, Word or PowerPoint file
       href: ../office-suite-issues/cannot-open-excel-word-or-powerpoint-file.md
-    - name: Can't open this add-in from localhost when loading an add-in
+    - name: Can't open this add-in from localhost when loading an add-in
       href: ../office-suite-issues/cannot-open-add-in-from-localhost.md
-    - name: Can't start an Office Starter program
+    - name: Can't start an Office Starter program
       href: ../office-suite-issues/cannot-be-opened-error-when-start.md
-    - name: Can't start in Windows safe mode
+    - name: Can't start in Windows safe mode
       href: ../office-suite-issues/office-not-start-safe-mode-windows.md
-    - name: Can't uninstall Office
+    - name: Can't uninstall Office
       href: ../office-suite-issues/error-when-uninstall-office.md
-    - name: Can't use Convert bibliography to static text
+    - name: Can't use Convert bibliography to static text
       href: ../office-suite-issues/convert-bibliography-to-static-text.md
-    - name: 'Compile Error: Procedure too large'
+    - name: 'Compile Error: Procedure too large'
       href: ../office-suite-issues/compile-error-procedure-too-large.md
-    - name: Connection to a network document is lost
+    - name: Connection to a network document is lost
       href: ../office-suite-issues/connect-to-network-document-lost.md
-    - name: Do you want to download the converter
+    - name: Do you want to download the converter
       href: ../office-suite-issues/error-do-you-want-download-converter.md
-    - name: Document files in Office Document Cache not deleted
+    - name: Document files in Office Document Cache not deleted
       href: ../office-suite-issues/office-temporary-files-not-delete.md
-    - name: Document Information Panel is deprecated
+    - name: Document Information Panel is deprecated
       href: ../office-suite-issues/document-information-panel-deprecate.md
-    - name: Edit OLE document property with Dsofile.dll
+    - name: Edit OLE document property with Dsofile.dll
       href: ../office-suite-issues/dsofile.dll-allow-edit-document-property.md
-    - name: Enable Office 2010 to run on a terminal server
+    - name: Enable Office 2010 to run on a terminal server
       href: ../office-suite-issues/office-pro-plus-2010-terminal-server.md
-    - name: Error 25090 with an Office application
+    - name: Error 25090 with an Office application
       href: ../office-suite-issues/error-25090-starting-office-program.md
-    - name: Error when editing an equation in Office
+    - name: Error when editing an equation in Office
       href: ../office-suite-issues/issue-when-edit-equation-in-office.md
-    - name: Error when installing Office 2013
+    - name: Error when installing Office 2013
       href: ../office-suite-issues/office-2013-installation-error.md
-    - name: Error when installing VS2010 Toos for Office Runtime
+    - name: Error when installing VS2010 Toos for Office Runtime
       href: ../office-suite-issues/generic-trust-failure-(0x800b010b)-error.md
-    - name: Error when opening a document
+    - name: Error when opening a document
       href: ../office-suite-issues/error-open-document.md
-    - name: FAQ about Office Activation Wizard
+    - name: FAQ about Office Activation Wizard
       href: ../office-suite-issues/faq-about-office-activation-wizard.md
-    - name: Features to enable collaboration
+    - name: Features to enable collaboration
       href: ../office-suite-issues/enable-collaboration.md
-    - name: Files necessary to run the Office Customization Tool were not found
+    - name: Files necessary to run the Office Customization Tool were not found
       href: ../office-suite-issues/fails-running-office-customization-tool.md
-    - name: How to determine retail or volume license
+    - name: How to determine retail or volume license
       href: ../office-suite-issues/determine-retail-volume-license.md
-    - name: Incorrect function with saving to a CD-RW or DVD/CD-RW drive
+    - name: Incorrect function with saving to a CD-RW or DVD/CD-RW drive
       href: ../office-suite-issues/incorrect-function-saving-office-file.md
-    - name: Information about Office Click-to-Run installation
+    - name: Information about Office Click-to-Run installation
       href: ../office-suite-issues/office-click-to-run-installation.md
-    - name: Installing Office 2010 from Office 365 Subscription fails
+    - name: Installing Office 2010 from Office 365 Subscription fails
       href: ../office-suite-issues/install-office-from-office-365-subscription.md
-    - name: Introduce Click-to-Run for Office 2010
+    - name: Introduce Click-to-Run for Office 2010
       href: ../office-suite-issues/office-click-to-run-faq.md
-    - name: Invalid product key or license mismatch
+    - name: Invalid product key or license mismatch
       href: ../office-suite-issues/invalid-product-key-or-license-mismatch-error.md
-    - name: Issue when launching Office in Microsoft Store app
+    - name: Issue when launching Office in Microsoft Store app
       href: ../office-suite-issues/windows-cannot-access-device.md
-    - name: Issue when Office 365 activates Skype for Business
+    - name: Issue when Office 365 activates Skype for Business
       href: ../office-suite-issues/office-365-activates-skype.md
-    - name: Issue when opening a file with a long folder name
+    - name: Issue when opening a file with a long folder name
       href: ../office-suite-issues/fails-opening-long-folder-name-files.md
-    - name: Issue with starting Office applications
+    - name: Issue with starting Office applications
       href: ../office-suite-issues/microsoft-program-cannot-be-opened.md
-    - name: Issues when you click hyperlink to SSO Web site in a document
+    - name: Issues when you click hyperlink to SSO Web site in a document
       href: ../office-suite-issues/click-hyperlink-to-sso-website.md
-    - name: Loss of image quality occurs in a document
+    - name: Loss of image quality occurs in a document
       href: ../office-suite-issues/office-docuemnt-image-quality-loss.md
-    - name: Manage templates in Office program
+    - name: Manage templates in Office program
       href: ../office-suite-issues/manage-office-program-templates.md
-    - name: Missing file error with a web page file
+    - name: Missing file error with a web page file
       href: ../office-suite-issues/web-page-missing-file-error.md
-    - name: Missing fonts issue in documents
+    - name: Missing fonts issue in documents
       href: ../office-suite-issues/missing-fonts-opening-documents.md
-    - name: Mobile viewing PDF files with Office Web Apps
+    - name: Mobile viewing PDF files with Office Web Apps
       href: ../office-suite-issues/mobile-viewing-pdf-files.md
-    - name: No default mail client
+    - name: No default mail client
       href: ../office-suite-issues/no-default-mail-client-error.md
-    - name: No Office entitlement found on device
+    - name: No Office entitlement found on device
       href: ../office-suite-issues/office-not-entitled-on-device.md
-    - name: Numbering Schema for Office 2013
+    - name: Numbering Schema for Office 2013
       href: ../office-suite-issues/numbering-scheme-product-code-guids.md
-    - name: Numbering Schema for Office 2016
+    - name: Numbering Schema for Office 2016
       href: ../office-suite-issues/numbering-scheme-for-product-guid.md
-    - name: Office 2010 installation doesn't finish
+    - name: Office 2010 installation doesn't finish
       href: ../office-suite-issues/install-and-use-this-product-error.md
-    - name: Office 2010 Setup program not restart
+    - name: Office 2010 Setup program not restart
       href: ../office-suite-issues/office-suite-setup-not-restart.md
-    - name: Office End User License Agreement always appears
+    - name: Office End User License Agreement always appears
       href: ../office-suite-issues/office-end-user-license-agreement.md
-    - name: Office file previews in Windows Explorer may not show after switching from 64-bit Office to 32-bit Office
+    - name: Office file previews in Windows Explorer may not show after switching from 64-bit Office to 32-bit Office
       href: ../office-suite-issues/no-file-previews-file-explorer-switching-to-32-bit.md
-    - name: Office files with RMS protection crash
+    - name: Office files with RMS protection crash
       href: ../office-suite-issues/rms-protected-files-crash.md
-    - name: Office has detected a problem with this file
+    - name: Office has detected a problem with this file
       href: ../office-suite-issues/office-file-fails-validation.md
-    - name: Office installation Error 1401, 1402 or 1406
+    - name: Office installation Error 1401, 1402 or 1406
       href: ../office-suite-issues/office-install-error-1401-1402-1406.md
-    - name: Office stops responding when you open a file
+    - name: Office stops responding when you open a file
       href: ../office-suite-issues/office-stops-responding.md
-    - name: Prevent Office 2010 from disabling printers
+    - name: Prevent Office 2010 from disabling printers
       href: ../office-suite-issues/prevent-office-from-disabling-printers.md
-    - name: Repair process of click-to-run app
+    - name: Repair process of click-to-run app
       href: ../office-suite-issues/click-to-run-app-repair-process.md
-    - name: 'Run-time Error 13: Type Mismatch'
+    - name: 'Run-time Error 13: Type Mismatch'
       href: ../office-suite-issues/run-time-error-13-type-mismatch.md
-    - name: Saving documents to network server is slow
+    - name: Saving documents to network server is slow
       href: ../office-suite-issues/saving-file-to-network-server-slow.md
-    - name: Selected a single-byte font to replace a double-byte font with Japanese
+    - name: Selected a single-byte font to replace a double-byte font with Japanese
       href: ../office-suite-issues/single-byte-font-replace-error.md
-    - name: Services display incorrectly in Research pane
+    - name: Services display incorrectly in Research pane
       href: ../office-suite-issues/duplicate-service-listed.md
-    - name: Set default font for Office apps
+    - name: Set default font for Office apps
       href: ../office-suite-issues/set-default-font.md
-    - name: Some VB Editor settings disabled in Office 2010
+    - name: Some VB Editor settings disabled in Office 2010
       href: ../office-suite-issues/vb-editor-settings-disabled.md
-    - name: The document caused a serious error the last time it was opened
+    - name: The document caused a serious error the last time it was opened
       href: ../office-suite-issues/error-open-word-excel.md
-    - name: This file can't be previewed
+    - name: This file can't be previewed
       href: ../office-suite-issues/this-file-cant-be-previewed.md
-    - name: Unable to create DSN for Office System Driver
+    - name: Unable to create DSN for Office System Driver
       href: ../office-suite-issues/cant-create-dsn-for-office-system-driver.md
-    - name: Updates are offered for nonexistent Office programs
+    - name: Updates are offered for nonexistent Office programs
       href: ../office-suite-issues/updates-provided-for-nonexistent-office.md
-    - name: Use different versions of Office on the same PC
+    - name: Use different versions of Office on the same PC
       href: ../office-suite-issues/use-multiple-versions-of-office.md
-    - name: Use GetObject and CreateObject with automation server
+    - name: Use GetObject and CreateObject with automation server
       href: ../office-suite-issues/getobject-createobject-behavior.md
-    - name: View error signatures for Office
+    - name: View error signatures for Office
       href: ../office-suite-issues/view-error-signatures.md
-    - name: Win32API_PtrSafe with 64-bit Support
+    - name: Win32API_PtrSafe with 64-bit Support
       href: ../office-suite-issues/win32api_ptrsafe-with-64-bit-support.md
-    - name: Your system is low on virtual memory
+    - name: Your system is low on virtual memory
       href: ../office-suite-issues/your-system-is-low-on-virtual-memory.md
   - name: OneNote
     items:
@@ -989,69 +989,69 @@
       href: ../visio/cannot-load-visio-web-drawing.md
   - name: Word
     items:
-    - name: A connector doesn't move when moving a shape
+    - name: A connector doesn't move when moving a shape
       href: ../word/connector-not-move-with-shapes.md
-    - name: Can't open documents with unsupported XML elements
+    - name: Can't open documents with unsupported XML elements
       href: ../word/custom-xml-elements-not-supported.md
-    - name: Can't open this file because it is larger than 512 Megabytes
+    - name: Can't open this file because it is larger than 512 Megabytes
       href: ../word/file-larger-than-512-megabytes.md
-    - name: Can't use  mouse to draw selection rectangle
+    - name: Can't use  mouse to draw selection rectangle
       href: ../word/cant-use-mouse-draw-selection-rectangle.md
-    - name: Configure the default search engine
+    - name: Configure the default search engine
       href: ../word/configure-search-engine-in-word.md
-    - name: Create TOC entries without page numbers
+    - name: Create TOC entries without page numbers
       href: ../word/create-toc-entries-no-page-number.md
-    - name: Cross-reference links don't update to the correct heading number
+    - name: Cross-reference links don't update to the correct heading number
       href: ../word/cross-reference-links-update.md
-    - name: Customize the color of the spelling and grammar checker underlines
+    - name: Customize the color of the spelling and grammar checker underlines
       href: ../word/spelling-grammar-checker-underline-color.md
-    - name: Damaged documents in Word
+    - name: Damaged documents in Word
       href: ../word/damaged-documents-in-word.md
-    - name: End tag error when opening docx file
+    - name: End tag error when opening docx file
       href: ../word/end-tag-error-when-open-docx.md
-    - name: Headers and footers remain after removing sensitivity label
+    - name: Headers and footers remain after removing sensitivity label
       href: ../word/headers-footers-remain-after-remove-sensitivity-label.md
-    - name: Image DPI is changed after you print to PDF
+    - name: Image DPI is changed after you print to PDF
       href: ../word/image-dpi-change-after-print-to-pdf.md
-    - name: In-place edit of an embedded Word document with ActiveX control causes flickering
+    - name: In-place edit of an embedded Word document with ActiveX control causes flickering
       href: ../word/embedded-doc-with-activex-control-flickers.md
-    - name: Issues when start or use Word
+    - name: Issues when start or use Word
       href: ../word/issues-when-start-or-use-word.md
-    - name: Mail merge issue
+    - name: Mail merge issue
       href: ../word/mail-merge-error.md
-    - name: Merge multiple Word documents into one
+    - name: Merge multiple Word documents into one
       href: ../word/merge-word-documents.md
-    - name: Object may not appear in Word 2010
+    - name: Object may not appear in Word 2010
       href: ../word/object-not-appear-in-word-2010.md
-    - name: Opening file is blocked by registry policy
+    - name: Opening file is blocked by registry policy
       href: ../word/opening-file-blocked-by-registry-policy.md
-    - name: Operating parameter limitations and specifications
+    - name: Operating parameter limitations and specifications
       href: ../word/operating-parameter-limitation.md
-    - name: Performance issues with AutoRecover location
+    - name: Performance issues with AutoRecover location
       href: ../word/performance-issue-on-autorecover-location.md
-    - name: Print failures in Word
+    - name: Print failures in Word
       href: ../word/print-failures-in-word.md
-    - name: Recover a lost Word document
+    - name: Recover a lost Word document
       href: ../word/recover-lost-document.md
-    - name: relationship rID8 was not found
+    - name: relationship rID8 was not found
       href: ../word/image-part-relationship-rld8-not-found-error-microsoft-word.md
-    - name: Reset user options and registry settings in Word
+    - name: Reset user options and registry settings in Word
       href: ../word/reset-options-and-settings-in-word.md
-    - name: Spell checker doesn't check text in the form fields
+    - name: Spell checker doesn't check text in the form fields
       href: ../word/spell-checker-not-check-form-field-text.md
-    - name: Spell Checker not recognizes misspelled words in Word 2010
+    - name: Spell Checker not recognizes misspelled words in Word 2010
       href: ../word/not-recognize-mispespelled-words-in-word.md
-    - name: Track Changes functionality disabled when RMS is disabled
+    - name: Track Changes functionality disabled when RMS is disabled
       href: ../word/track-changes-disabled.md
-    - name: Troubleshoot print failures in Word for Office 365 on Windows 10
+    - name: Troubleshoot print failures in Word for Office 365 on Windows 10
       href: ../word/print-failures-word-for-office-365-on-win-10.md
-    - name: Using printer fonts in Word
+    - name: Using printer fonts in Word
       href: ../word/printer-fonts-in-word.md
-    - name: Word could not create the work file
+    - name: Word could not create the work file
       href: ../word/word-could-not-create-the-work-file.md
-    - name: Word slows or stops responding
+    - name: Word slows or stops responding
       href: ../word/word-stops-responding.md
-    - name: You're prompted to save changes to global template
+    - name: You're prompted to save changes to global template
       href: ../word/save-changes-to-global-template.md
   - name: Office Developer
     href: /previous-versions/office/troubleshoot/office-developer/add-button-in-word
