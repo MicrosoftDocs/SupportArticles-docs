@@ -43,7 +43,7 @@ After the diagnostic checks finish and the configuration issue is found, the sys
 
 :::image type="content" source="media/admin-self-help-diagnostics/admin-self-help-diagnostics-2.png" alt-text="Example diagnostics response screen.":::
  
-## What scenarios are currently covered?
+### What scenarios are currently covered?
 The following diagnostics are currently available with brief scenario descriptions:
 - Teams Sign-in
 - Teams Direct Routing
@@ -65,7 +65,5 @@ The following diagnostics are currently available with brief scenario descriptio
 
 More diagnostics will be added at a future date.
 
-
-## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
