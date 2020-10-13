@@ -28,7 +28,7 @@ The xcopy and the xcopy32 commands have the same switches. This article describe
 
 The following command line includes the syntax and the switches that you can use with the xcopy and the xcopy32 commands in MS-DOS mode:
 
-xcopy **source** [**destination**] [/a | /m] [/d: **date**] [/p] [/s] [/e] [/v] [/w]
+`xcopy **source** [**destination**] [/a | /m] [/d: **date**] [/p] [/s] [/e] [/v] [/w]`
 
 > [!NOTE]
 > The square brackets ([]) indicate optional switches. The brackets are not part of the command.
@@ -59,7 +59,7 @@ The following table describes the optional switches you can use with xcopy and x
 
 The following command line includes the syntax and the switches for the xcopy and the xcopy32 commands when you run it from an MS-DOS window:
 
-xcopy **source** [ **destination** ] [/a | /m] [/d: **date**] [/p] [/s] [/e] [/w] [/c] [/i] [/q] [/f] [/l] [/h] [/r] [/t] [/u] [/k] [/n]
+`xcopy **source** [ **destination** ] [/a | /m] [/d: **date**] [/p] [/s] [/e] [/w] [/c] [/i] [/q] [/f] [/l] [/h] [/r] [/t] [/u] [/k] [/n]`
 
 > [!NOTE]
 > The square brackets ([]) indicate optional switches. The brackets are not part of the command.

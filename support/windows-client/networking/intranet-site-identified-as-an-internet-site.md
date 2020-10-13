@@ -26,8 +26,8 @@ When you access a local area network (LAN), an intranet share, or an intranet We
 
 - `\\Computer.childdomain.domain.com\Share`  
 - `http://computer.childdomain.domain.com`
-- \\157.54.100.101\share
-- file://157.54.100.101/share
+- `\\157.54.100.101\share`
+- `file://157.54.100.101/share`
 - `http://157.54.100.101`
 
 This behavior can occur regardless of whether any or all of the following settings are configured:

@@ -17,7 +17,7 @@ ms.technology: SysManagementComponents
 
  This article describes how to use the at command to create and to cancel scheduled tasks.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 313565
 
 > [!NOTE]
@@ -35,9 +35,9 @@ To use the at command, the Task Scheduler service must be running, and you must 
 
 The at command uses the following syntax:
 
-- at \\**computername time**/interactive | /every: **date**, ... /next: **date**, ... **command**  
+- `at \\computername time/interactive | /every: date, ... /next: date, ... command`  
 
-- at \\**computername id**/delete | /delete /yes
+- `at \\computername id/delete | /delete /yes`
 
 The following list describes the parameters that you can use with the at command:
 
