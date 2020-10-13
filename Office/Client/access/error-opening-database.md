@@ -39,10 +39,11 @@ If doesn't have the Create permissions for the folder in which the database is l
 
 > [!NOTE]
 > The locking information file is:
+>
 > - *.ldb in Access 2003 and in earlier versions of Access
 > - *.laccdb in Access 2007/2010
 
-## Resolution
+## Workaround
 
 To prevent this behavior, make sure that all users who open the database have the Read, Write, and Create permissions for the folder in which the database is located.
 
