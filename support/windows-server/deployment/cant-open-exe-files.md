@@ -68,14 +68,5 @@ Corrupt registry settings or some third-party product (or virus) can change the 
 
 9. Close Regedit utility.
 
-   >[!Note]
-   If you are using Windows XP and you enable "System Restore" , you need to  
- disable "System Restore" in "Safe Mode" before using the instructions above.
-
-## More information
-
-A Description of the Safe Mode Boot Options in Windows XP
-
-How to Turn On and Turn Off System Restore in Windows XP
-
-Description of the Microsoft Windows Registry
+   > [!Note]
+   > If you are using Windows XP and you enable "System Restore" , you need to disable "System Restore" in "Safe Mode" before using the instructions above.

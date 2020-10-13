@@ -49,20 +49,24 @@ Before you edit the Boot.ini file, modify your folder options so you can view hi
 
 The following is a sample of a default Boot.ini file from a Windows Server 2003-based computer:
 
-> [boot loader]  
+```ini
+[boot loader]  
 timeout=30  
 default=multi(0)disk(0)rdisk(0)partition(1)\WINDOWS  
 [operating systems]  
 multi(0)disk(0)rdisk(0)partition(1)\WINDOWS="Microsoft Windows .NET Standard Server" /fastdetect  
+```
 
 The following is a sample of the same Boot.ini file after the addition of another partition that runs Microsoft Windows XP Professional.
 
-> [boot loader]  
+```ini
+[boot loader]  
 timeout=30  
 default=multi(0)disk(0)rdisk(0)partition(1)\WINDOWS  
 [operating systems]  
 multi(0)disk(0)rdisk(0)partition(1)\WINDOWS="Microsoft Windows .NET Standard Server" /fastdetect  
 multi(0)disk(0)rdisk(0)partition(2)\WINDOWS="Microsoft Windows XP Professional"
+```
 
 ## Edit the Boot.ini file
 
@@ -79,7 +83,7 @@ To remove an operating system from the menu, follow these steps:
 
 1. In Notepad, select the line that contains information about the operating system that you want to remove, and then click **Delete** on the **Edit** menu. For example, select the following line:
 
-    > multi(0)disk(1)rdisk(0)partition(2)\WINDOWS="Microsoft Windows XP Professional" /fastdetect
+    `multi(0)disk(1)rdisk(0)partition(2)\WINDOWS="Microsoft Windows XP Professional" /fastdetect`
 
 2. On the **File** menu, click **Save**.
 
@@ -97,14 +101,15 @@ The default operating system is the operating system that is started if no selec
 
 1. In Notepad, modify the following line to change the default operating system:
 
-    > default=multi(0)disk(0)rdisk(0)partition(1)\WINDOWS
+    `default=multi(0)disk(0)rdisk(0)partition(1)\WINDOWS`
 
     For example, to change the default operating system from Windows Server 2003 to Windows XP Professional, modify the following 
 
-    > linedefault=multi(0)disk(0)rdisk(0)partition(1)\WINDOWS
+    `linedefault=multi(0)disk(0)rdisk(0)partition(1)\WINDOWS`
+
     to the following:
 
-    > default=multi(0)disk(0)rdisk(1)partition(2)\WINDOWS
+    `default=multi(0)disk(0)rdisk(1)partition(2)\WINDOWS`
 
 2. On the **File** menu, click **Save**.
 
@@ -114,7 +119,7 @@ To modify the time-out value, follow these steps:
 
 1. In Notepad, edit the following line to change the time-out (where the value is 30 seconds):
 
-    > timeout=30
+    `timeout=30`
 
 2. On the **File** menu, click **Save**.
 

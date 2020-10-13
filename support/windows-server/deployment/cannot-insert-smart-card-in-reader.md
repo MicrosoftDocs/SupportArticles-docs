@@ -63,40 +63,41 @@ If custom software such a PKCS#11 driver, an ActiveX control, or some other midd
 
 The following is a sample template for a NULL driver for a smart card.
 
-> ;  
+```ini
+;  
 ; Null Driver for Fabrikam Smartcard installation x86 and x64 package.  
 ;
->
-> [Version]  
+
+[Version]  
 Signature="$Windows NT$"  
 Class=SmartCard  
 ClassGuid={990A2BD7-E738-46c7-B26F-1CF8FB9F1391}  
 Provider=%ProviderName%  
 CatalogFile=delta.cat  
 DriverVer=4/21/2006,1.0.0.0
->
-> [Manufacturer]  
+
+[Manufacturer]  
 %ProviderName%=Minidriver,NTamd64,NTamd64.6.1,NTx86,NTx86.6.1
->
-> [Minidriver.NTamd64]  
+
+[Minidriver.NTamd64]  
 ;This driver has no applicability on OS versions earlier than Windows 7
->
-> [Minidriver.NTx86]  
+
+[Minidriver.NTx86]  
 ;This driver has no applicability on OS versions earlier than Windows 7
->
-> [Minidriver.NTamd64.6.1]  
+
+[Minidriver.NTamd64.6.1]  
 %CardDeviceName%=Minidriver64_Install,<DEVICE_ID>  
 ;%CardDeviceName%=Minidriver64_Install,<DEVICE_ID2>  
 ;%CardDeviceName%=Minidriver64_Install,<DEVICE_ID3>  
 ;...
->
-> [Minidriver.NTx86.6.1]  
+
+[Minidriver.NTx86.6.1]  
 %CardDeviceName%=Minidriver32_Install,<DEVICE_ID>  
 ;%CardDeviceName%=Minidriver32_Install,<DEVICE_ID2>  
 ;%CardDeviceName%=Minidriver32_Install,<DEVICE_ID3>  
 ;...
->
-> ;Leave the following sections blank  
+
+;Leave the following sections blank  
 [DefaultInstall]  
 [DefaultInstall.ntamd64]  
 [DefaultInstall.NTx86]  
@@ -106,18 +107,19 @@ DriverVer=4/21/2006,1.0.0.0
 [Minidriver64_61_Install.NT]  
 [Minidriver32_Install.NT]  
 [Minidriver32_61_Install.NT]
->
-> [Minidriver64_61_Install.NT.Services]  
+
+[Minidriver64_61_Install.NT.Services]  
 AddService = ,2
->
+
 [Minidriver32_61_Install.NT.Services]  
 AddService = ,2
->
-> ; =================== Generic ==================================
->
-> [Strings]  
+
+; =================== Generic ==================================
+
+[Strings]  
 ProviderName ="Microsoft"  
 CardDeviceName="Fabrikam Generic Smart card"
+```
 
 To generate the hardware device ID that is referenced by the DEVICE_ID string in the sample, follow the instructions in the smart card minidriver's specification.
 

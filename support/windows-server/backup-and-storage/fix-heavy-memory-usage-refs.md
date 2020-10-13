@@ -55,7 +55,7 @@ This option causes ReFS to try a complete an MM unmap of all metadata streams at
 
 Specify the indicated values in the following subkey:  
 
-> `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem`  
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem`  
 Value Name: **RefsEnableLargeWorkingSetTrim**  
 Set RefsEnableLargeWorkingSetTrim = **1**  
 Value Type: **REG_DWORD**  
@@ -71,7 +71,7 @@ This option works if the VA range that's being unmapped doesn't have any active 
 
 Specify the indicated values in the following subkey:  
 
-> `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem`  
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem`  
 Value Name: **RefsNumberOfChunksToTrim**  
 Value Type: **REG_DWORD**  
 DEFAULT (if not set or 0): **4**  
@@ -85,7 +85,7 @@ In this option, ReFS sends down an MM trim inline while it unmaps its metadata p
 
 Specify the indicated values in the following subkey:  
 
-> `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem`  
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem`  
 Value Name: **RefsEnableInlineTrim**  
 Value Type: **REG_DWORD**  
 Set **RefsEnableInlineTrim = 1**  

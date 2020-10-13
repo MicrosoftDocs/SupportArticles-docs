@@ -27,15 +27,13 @@ You run the System File Checker (SFC) utility (Sfc.exe) to scan for changes in W
 
 However, when you view the %windir%\Logs\CBS\CBS.log file that the Sfc.exe program generates, you may see the following entries:
 
-```console
-<Date> <Time>, Info CSI 00000142 [SR] Repairing 1 components
-<Date> <Time>, Info CSI 00000143 [SR] Beginning Verify and Repair transaction
-<Date> <Time>, Info CSI 00000145 [SR] Cannot repair member file [l:18{9}]"img11.jpg" of Microsoft-Windows-Shell-Wallpaper-Common, Version = 6.0.5720.0, pA = PROCESSOR_ARCHITECTURE_INTEL (0), Culture neutral, VersionScope = 1 nonSxS, PublicKeyToken = {l:8 b:31bf3856ad364e35}, Type neutral, TypeName neutral, PublicKey neutral in the store, hash mismatch
-<Date> <Time>, Info CSI 00000147 [SR] Cannot repair member file [l:18{9}]"img11.jpg" of Microsoft-Windows-Shell-Wallpaper-Common, Version = 6.0.5720.0, pA = PROCESSOR_ARCHITECTURE_INTEL (0), Culture neutral, VersionScope = 1 nonSxS, PublicKeyToken = {l:8 b:31bf3856ad364e35}, Type neutral, TypeName neutral, PublicKey neutral in the store, hash mismatch
-<Date> <Time>, Info CSI 00000149 [SR] Repair complete
-<Date> <Time>, Info CSI 0000014a [SR] Committing transaction
-<Date> <Time>, Info CSI 0000014e [SR] Verify and Repair Transaction completed. All files and registry keys listed in this transaction have been successfully repaired
-```
+> \<Date> \<Time>, Info CSI 00000142 [SR] Repairing 1 components  
+\<Date> \<Time>, Info CSI 00000143 [SR] Beginning Verify and Repair transaction  
+\<Date> \<Time>, Info CSI 00000145 [SR] Cannot repair member file [l:18{9}]"img11.jpg" of Microsoft-Windows-Shell-Wallpaper-Common, Version = 6.0.5720.0, pA = PROCESSOR_ARCHITECTURE_INTEL (0), Culture neutral, VersionScope = 1 nonSxS, PublicKeyToken = {l:8 b:31bf3856ad364e35}, Type neutral, TypeName neutral, PublicKey neutral in the store, hash mismatch  
+\<Date> \<Time>, Info CSI 00000147 [SR] Cannot repair member file [l:18{9}]"img11.jpg" of Microsoft-Windows-Shell-Wallpaper-Common, Version = 6.0.5720.0, pA = PROCESSOR_ARCHITECTURE_INTEL (0), Culture neutral, VersionScope = 1 nonSxS, PublicKeyToken = {l:8 b:31bf3856ad364e35}, Type neutral, TypeName neutral, PublicKey neutral in the store, hash mismatch  
+\<Date> \<Time>, Info CSI 00000149 [SR] Repair complete  
+\<Date> \<Time>, Info CSI 0000014a [SR] Committing transaction  
+\<Date> \<Time>, Info CSI 0000014e [SR] Verify and Repair Transaction completed. All files and registry keys listed in this transaction have been successfully repaired
 
 ## Cause
 

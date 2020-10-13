@@ -47,14 +47,16 @@ To fix this problem, follow these steps:
       2. For each subkey that is in the following format, perform the following step:
         `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\UserData\<SID>\Products\<ProductSQUID>\Patches\<PatchSQUID>`
 
-          - Verify that the following subkey exists:
-            `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\UserData\<SID>\Patches\<PatchSQUID>`
+         Verify that the following subkey exists:
 
-            If the subkey is missing, the product is affected. Continue to step 2.
+         `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\UserData\<SID>\Patches\<PatchSQUID>`
 
-            If the subkey exists, verify that the LocalPackage string value is set correctly, and that the package referenced by the LocalPackage string value also exists.
-                  1. If the LocalPackage string value or referenced package is missing, the product is affected. Continue to step 2.
-                  2. If the referenced package exists and no additional action is required.
+         If the subkey is missing, the product is affected. Continue to step 2.
+
+         If the subkey exists, verify that the LocalPackage string value is set correctly, and that the package referenced by the LocalPackage string value also exists.
+
+         1. If the LocalPackage string value or referenced package is missing, the product is affected. Continue to step 2.
+         2. If the referenced package exists and no additional action is required.
 2. Re-create software update cache registry details. To do this, follow these steps:
 
     1. Search the %windir%\installer\\*.msp for the software update that you tried to install. Verify that the software update has the correct Patch Globally Unique Identifier (GUID) in the Summary Information Stream and targets the correct product GUIDs.
