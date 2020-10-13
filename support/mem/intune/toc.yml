@@ -192,6 +192,8 @@
     href: error-deploying-password-policy.md
   - name: Secure boot enabled device shows as Not Compliant
     href: secure-boot-enabled-device-shows-not-compliant.md
+  - name: Support tip - Integrate Cisco ISE with Intune
+    href: integrate-cisco-ise-intune.md
   - name: Users are prompted to enroll when accessing Office 365 resources
     href: intune-licensed-users-prompted-to-enroll.md
   - name: Windows 10 devices show incorrect compliance status
