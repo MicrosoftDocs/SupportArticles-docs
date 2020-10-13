@@ -10,13 +10,13 @@ ms.prod: microsoft-teams
 ms.technology: microsoft-graph
 localization_priority: Normal
 search.appverid:
-- SPO160
-- MET150
+- Diag: SPO160
+- Diag: MET150
 appliesto:
-- Teams
+- Diag: Teams
 ms.custom: 
-- CI 124054
-- CSSTroubleshoot 
+- Diag: CI 124054
+- Diag: CSSTroubleshoot 
 ms.reviewer: salarson 
 description: How to run self-help diagnostics in Microsoft Teams
 ---
@@ -45,23 +45,23 @@ After the diagnostic checks finish and the configuration issue is found, the sys
  
 ### What scenarios are currently covered?
 The following diagnostics are currently available with brief scenario descriptions:
-- Teams Sign-in
-- Teams Direct Routing
-- Teams Call Queue
-- Teams Remove Number from Conference Bridge
-- Teams Dial Pad is missing 
-- Teams Calendar App 
-- Teams Federation 
-- Teams Files Guest Access 
-- Teams Add-in is missing in Outlook 
-- Unable to invite Guest users to Teams 
-- Unable to make domestic PSTN calls in Teams 
-- Unable to make International PSTN calls in Teams 
-- Unable to create a Teams conference call 
-- Unable to join a Teams conference call 
-- Teams Auto-Attendant 
-- We Can't Get Your Files 
-- Unable to Schedule a Teams Meeting on behalf of Delegate in Outlook  
+- Diag: Teams Sign-in
+- Diag: Teams Direct Routing
+- Diag: Teams Call Queue
+- Diag: Teams Remove Number from Conference Bridge
+- Diag: Teams Dial Pad is missing 
+- Diag: Teams Calendar App 
+- Diag: Teams Federation 
+- Diag: Teams Files Guest Access 
+- Diag: Teams Add-in is missing in Outlook 
+- Diag: Unable to invite Guest users to Teams 
+- Diag: Unable to make domestic PSTN calls in Teams 
+- Diag: Unable to make International PSTN calls in Teams 
+- Diag: Unable to create a Teams conference call 
+- Diag: Unable to join a Teams conference call 
+- Diag: Teams Auto-Attendant 
+- Diag: We Can't Get Your Files 
+- Diag: Unable to Schedule a Teams Meeting on behalf of Delegate in Outlook  
 
 More diagnostics will be added at a future date.
 
