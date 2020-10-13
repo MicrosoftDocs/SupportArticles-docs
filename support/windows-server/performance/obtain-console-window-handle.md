@@ -48,7 +48,7 @@ The resulting HWND isn't guaranteed to be suitable for all window handle operati
 
 The following function retrieves the current console application window handle (HWND). If the function succeeds, the return value is the handle of the console window. If the function fails, the return value is NULL. Some error checking is omitted, for brevity.
 
-```csharp
+```c++
 HWND GetConsoleHwnd(void)
    {
        #define MY_BUFSIZE 1024 // Buffer size for console window titles.
