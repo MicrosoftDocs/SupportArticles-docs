@@ -45,18 +45,14 @@ Follow these steps to configure the computer to obtain an IP address from a DHCP
 7. At the command prompt, type ipconfig /release, and then press ENTER.
 8. Type ipconfig /renew, and then press ENTER.
 
-      The network adapter is assigned an IP address by the DHCP server, and a message similar to the following appears:  
+   The network adapter is assigned an IP address by the DHCP server, and a message similar to the following appears:  
   
-    ```console  
-    Windows Server IP Configuration  
-
-    Ethernet adapter Local Area Connection:
-
-   Connection-specific DNS Suffix. :dns.microsoft.com  
-   IP Address. . . . . . . . . . . . :192.168.0.201  
-   Subnet Mask . . . . . . . . . . . :255.255.255.0  
-   Default Gateway . . . . . . . . . :192.168.0.1  
-   ```
+   > Windows Server IP Configuration  
+     Ethernet adapter Local Area Connection:  
+     Connection-specific DNS Suffix. :dns.microsoft.com  
+     IP Address. . . . . . . . . . . . :192.168.0.201  
+     Subnet Mask . . . . . . . . . . . :255.255.255.0  
+     Default Gateway . . . . . . . . . :192.168.0.1  
 
 9. Type exit, and then press ENTER to quit the command prompt.
 

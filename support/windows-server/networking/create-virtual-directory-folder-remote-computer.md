@@ -41,11 +41,11 @@ To create a virtual directory to a remote network share, create the share, and t
 
 1. Log on to the Web server computer using an account that has administrative privileges.
 2. Click **Start**, point to **Programs** > **Administrative Tools**, and then click **Internet Services Manager**.
-3. In the **Internet Information Services** window, expand **server name** (where ***server name** is the name of the server).
+3. In the **Internet Information Services** window, expand **server name** (where **server name** is the name of the server).
 4. Right-click the Web site that you want (for example, **Default Web Site**), point to **New**, and then click **Virtual Directory**.
 5. On the **Welcome to the Virtual Directory Creation Wizard** page, click **Next**.
 6. On the **Virtual Directory Alias** page, type the alias that you want (for example, **Sales**), and then click **Next**.
-7. On the **Web Site Content Directory** page, type the UNC path to the remote folder that you've created (for example, \\\\**Server**\\**Share**), and then click **Next**.
+7. On the **Web Site Content Directory** page, type the UNC path to the remote folder that you've created (for example, \\\\Server\\Share), and then click **Next**.
 8. On the **User Name and Password** page, type the user name and password that has sufficient privileges to gain access to the remote folder.
     > [!NOTE]
     > To maintain the highest levels of security, use an account that has the minimum permissions that are necessary to provide access to the remote content.
@@ -61,10 +61,10 @@ To create a virtual directory to a remote network share, create the share, and t
 ## How to test the virtual directory
 
 1. Start Internet Explorer.
-2. In the **Address** box, type the URL to your Web server (for example, http://**WebServer**), and then click**Go**.
+2. In the **Address** box, type the URL to your Web server (for example, `http://WebServer`), and then click**Go**.
 
     Verify that you can view the default Web site.
-3. Append the alias of the virtual directory to the address that you typed in step two (for example, **http://**WebServer**/**Sales****), and then click **Go**.
+3. Append the alias of the virtual directory to the address that you typed in step two (for example, `http://WebServer/Sales`), and then click **Go**.
 
     The virtual directory Web content is displayed in the browser window.
 
@@ -78,7 +78,7 @@ To delete a virtual directory, remove the alias that Internet Information Servic
 To delete a virtual directory, follow these steps:
 
 1. Click **Start**, point to **Programs** > **Administrative Tools**, and then click **Internet Services Manager**.
-2. In the **Internet Information Services** window, click to expand ***server name** (where **server name** is the name of the server).
+2. In the **Internet Information Services** window, click to expand **server name** (where **server name** is the name of the server).
 3. Expand the Web site that contains the virtual directory that you want to delete. For example, expand **Default Web Site**.
 4. Right-click the virtual directory that you want (for example, **Sales**) and then click **Delete**.
 5. Click **Yes** when the following message is displayed:
