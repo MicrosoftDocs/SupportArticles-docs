@@ -1,6 +1,6 @@
 ---
 title: Support tip - Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises
-description: This article describes the significance of CSPs, Open Mobile Alliance – Uniform Resources (OMA-URIs), and how custom MDM policies are delivered to a Windows 10-based device.
+description: This article describes the significance of CSPs, Open Mobile Alliance – Uniform Resources (OMA-URIs), and how custom mobile device management (MDM) policies are delivered to a Windows 10-based device.
 ms.date: 09/28/2020
 ms.prod-support-area-path: device configuration
 ms.reviewer: sausarka
@@ -29,7 +29,7 @@ CSPs were introduced to the Windows 10 platform starting in Windows 10, version 
 
 ## CSP scope
 
-CSP policies have a scope that defines the level at which a policy can be configured. It is similar to the policies that are available in the Intune portal UI. Some policies can be configured only at the device level. These policies apply regardless of who is logged in to the device. Other policies can be configured at the user level. These policies apply to only that user. The configuration level is dictated by the platform, not by the MDM provider. When you deploy a custom policy, [you can look here](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) to find the scope of the CSP that you want to use.
+CSP policies have a scope that defines the level at which a policy can be configured. It is similar to the policies that are available in the Intune portal UI. Some policies can be configured only at the device level. These policies apply regardless of who is logged in to the device. Other policies can be configured at the user level. These policies apply to only that user. The configuration level is dictated by the platform, not by the MDM provider. When you deploy a custom policy, [you can look here](/windows/client-management/mdm/policy-configuration-service-provider) to find the scope of the CSP that you want to use.
 
 The scope of the CSP is important because it will dictate the syntax of the OMA-URI string that you should use. For example:
 
@@ -47,7 +47,7 @@ The scope of the CSP is important because it will dictate the syntax of the OMA-
 
 The OMA-URI is a path to a specific configuration setting that is supported by a CSP.
 
-**The OMA-URI**: It is a string that represents custom configuration for a Windows 10-based device. The syntax is determined by the CSPs on the client. You can find [details about each CSP here](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider).
+**The OMA-URI**: It is a string that represents custom configuration for a Windows 10-based device. The syntax is determined by the CSPs on the client. You can find [details about each CSP here](/windows/client-management/mdm/policy-configuration-service-provider).
 
 **A custom policy**: It contains the OMA-URIs to deploy. It's configured in the Intune portal.
 
@@ -61,7 +61,7 @@ To summarize: The OMA-URI is the payload, the custom policy is the container, In
 
 This is the same process that's used by Intune to deliver the standard device configuration policies that are already built into the UI. When OMA-URIs use the Intune UI, they are hidden behind user-friendly configuration interfaces. It makes the process easier and more intuitive for the administrator. Use the built-in policy settings whenever possible, and use custom OMA-URI policies only for options that are otherwise unavailable.
 
-To demonstrate this process, you can use a built-in policy to set the lock screen image on a device. You can also deploy an OMA-URI and targeting the relevant CSP. Both methods achieve the same result.
+To demonstrate this process, you can use a built-in policy to set the lock screen image on a device. You can also deploy an OMA-URI and target the relevant CSP. Both methods achieve the same result.
 
 ### OMA-URIs from the portal
 
@@ -73,7 +73,7 @@ The same setting can be set directly by using the following OMA-URI:
 
 ./Vendor/MSFT/Policy/Config/DeviceLock/EnforceLockScreenAndLogonImage
 
-It is documented in the [Windows CSP reference](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock). After you determine the OMA-URI, create a custom policy for it.
+It is documented in the [Windows CSP reference](/windows/client-management/mdm/policy-csp-devicelock). After you determine the OMA-URI, create a custom policy for it.
 
 ![OMA-URI Settings - Edit Row screen](./media/deploy-oma-uris-to-target-csp-via-intune/intune-deploy-csp-edit-row.png)
 
@@ -99,7 +99,7 @@ In the new cloud-based world, you can achieve the same result through Intune ove
 
 The MDM Migration Analysis Tool (MMAT) determines which Group Policies have been set for a targeted user or computer. Then, it generates a report that lists the level of support for each policy setting in MDM equivalents.
 
-[Download the MMAT here](https://github.com/WindowsDeviceManagement/MMAT).
+[Download the MMAT](https://github.com/WindowsDeviceManagement/MMAT).
 
 ### Aspects of your Group Policy before and after you migrate to the cloud
 
@@ -111,12 +111,12 @@ The following table shows the different aspects of your Group Policy both before
 |Domain Controllers|MDM server (Intune service)|
 |Sysvol folder|Intune database/MSUs|
 |Client-side Extension to process GPO|CSPs to process the MDM policy|
-|SMB protocol used for communication|HTTPs protocol used for communication|
-|.pol | .ini file (it is usually the input)|SyncML is the input for the devices|
+|SMB protocol used for communication|HTTPS protocol used for communication|
+|`.pol` | `.ini` file (it is usually the input)|SyncML is the input for the devices|
 
 ## Important notes on policy behavior
 
-If the policy changes on the MDM server, the updated policy is pushed to the device, and the setting is configured to the new value. However, removing the assignment of the policy from the user or device may not revert the setting to the default value. There are a few profiles that are removed after the assignment is removed or the profile is deleted, such as Wi-Fi profiles, VPN profiles, certificate profiles, and email profiles. Because this behavior is controlled by each CSP, you should try to understand the behavior of the CSP to manage your settings correctly. For more information, see [Windows CSP reference](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider).
+If the policy changes on the MDM server, the updated policy is pushed to the device, and the setting is configured to the new value. However, removing the assignment of the policy from the user or device may not revert the setting to the default value. There are a few profiles that are removed after the assignment is removed or the profile is deleted, such as Wi-Fi profiles, VPN profiles, certificate profiles, and email profiles. Because this behavior is controlled by each CSP, you should try to understand the behavior of the CSP to manage your settings correctly. For more information, see [Windows CSP reference](/windows/client-management/mdm/policy-configuration-service-provider).
 
 ## Put it all together
 
