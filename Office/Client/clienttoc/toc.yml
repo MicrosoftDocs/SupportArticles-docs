@@ -313,7 +313,7 @@
       href: ../support/2013-versions-of-office-365.md
   - name: Excel
     items:
-    - name: .SpecialCells(xlCellTypeBlanks) VBA function doesn't work
+    - name: '.SpecialCells(xlCellTypeBlanks) VBA function doesn't work'
       href: ../excel/specialcells(xlcelltypeblanks)-vba-function.md
     - name: A file is updated without user interaction
       href: ../excel/file-updated-without-user-interaction.md
