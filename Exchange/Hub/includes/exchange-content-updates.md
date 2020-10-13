@@ -62,3 +62,13 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 9/30/2020 | [Search-AdminAuditLog or Search-MailboxAuditLog with parameter returns empty results in Exchange Server](/exchange/troubleshoot/compliance/search-adminauditlog-mailboxauditlog-return-no-result) | modified |
+
+
+## Week of October 05, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/6/2020 | [Modern Authentication configuration requirements for transition](/exchange/troubleshoot/administration/modern-authentication-configuration) | modified |
+| 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/exchange/troubleshoot/index) | modified |
+| 10/9/2020 | [Proxy address is already being used" error message in Exchange Online](/exchange/troubleshoot/administration/proxy-address-being-used) | modified |

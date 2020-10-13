@@ -55,8 +55,7 @@ Function Convert_Degree(Decimal_Deg) As Variant
         Seconds = Format(((Minutes - Int(Minutes)) * 60), "0")
         'Returns the Result of degree conversion
         '(for example, 10.46 = 10~ 27  ' 36")
-        Convert_Degree = " " & Degrees & "° " & Int(Minutes) &        ' " _
-        & Seconds + Chr(34)
+        Convert_Degree = " " & Degrees & "° " & Int(Minutes) & " ' " & Seconds + Chr(34)
     End With
 End Function
 ```
