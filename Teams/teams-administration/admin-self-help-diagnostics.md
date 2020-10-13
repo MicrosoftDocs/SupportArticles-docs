@@ -10,13 +10,13 @@ ms.prod: microsoft-teams
 ms.technology: microsoft-graph
 localization_priority: Normal
 search.appverid:
-- Diag: SPO160
-- Diag: MET150
+- SPO160
+- MET150
 appliesto:
-- Diag: Teams
+- Teams
 ms.custom: 
-- Diag: CI 124054
-- Diag: CSSTroubleshoot 
+- CI 124054
+- CSSTroubleshoot 
 ms.reviewer: salarson 
 description: How to run self-help diagnostics in Microsoft Teams
 ---
