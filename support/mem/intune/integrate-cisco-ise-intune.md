@@ -3,7 +3,7 @@ title: Integrate Cisco ISE with Intune
 description: Introduces how to configure Microsoft Intune as an MDM server for Cisco ISE. 
 author: helenclu
 ms.author: luche
-ms.reviewer: ybao
+ms.reviewer: shhodge
 ms.date: 10/13/2020
 ms.prod-support-area-path: 
 ---
@@ -46,9 +46,9 @@ Cisco Identity Services Engine (ISE) integration with Microsoft Intune MDM Servi
 
    After the script runs, the values are stored in the variables. Type the variable name at the PowerShell prompt to review the values, as shown in the following example:
 
-   :::image type="content" source="media/integrate-cisco-ise-intune/script-demo.png" alt-text="Review vavariable values":::
+   :::image type="content" source="media/integrate-cisco-ise-intune/script-demo.png" alt-text="Review variable values":::
 
-4. Keep the values for `$base64Thumbprint`, `$base64Value` and `$keyid`, they will be used in Configure the application manifest and upload to Azure.
+4. Keep the values for `$base64Thumbprint`, `$base64Value`, and `$keyid`. They will be used in Configure the application manifest and upload to Azure.
 
 ## Create a Cisco ISE application in Azure
 
@@ -87,7 +87,7 @@ Cisco Identity Services Engine (ISE) integration with Microsoft Intune MDM Servi
     ```                   
 
    For more information about the KeyCredentials complex type, see [KeyCredential Type](/previous-versions/azure/ad/graph/api/entity-and-complex-type-reference#keycredential-type).
-5. Save the the json file, and then select **Upload** to upload it to Azure.
+5. Save the json file, and then select **Upload** to upload it to Azure.
 
 ## Get the endpoints to configure Cisco ISE
 
@@ -108,7 +108,7 @@ The following screenshot shows the application permissions and delegated permiss
 
 To configure the permissions, follow these steps:
 
-1. In the [Azure portal](https://portal.azure.com/), select **Azure Active Directory** > **App registrations** , and then select the ISE application.
+1. In the [Azure portal](https://portal.azure.com/), select **Azure Active Directory** > **App registrations**, and then select the ISE application.
 2. Select **API permissions** > **Add a permission**.
 3. Select **Microsoft Graph** from the APIs.
 4. Select **Delegated permissions**, select the following permissions, and then select **Add permissions**.
@@ -117,7 +117,7 @@ To configure the permissions, follow these steps:
    |----------|-----------|
    |`Directory.Read.All`|Read directory data|
    |`User.Read`|Sign in and read user profile|
-   |`DeviceManagementConfiguration.Read.All`|Read Microsoft Intune device donfiguration and policies|
+   |`DeviceManagementConfiguration.Read.All`|Read Microsoft Intune device Configuration and policies|
    |`DeviceManagementServiceConfig.Read.All`|Read Microsoft Intune configuration|
    |`openid`|Sign users in|
    |`offline_access`|Access user's data anytime|
