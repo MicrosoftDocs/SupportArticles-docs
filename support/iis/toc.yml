@@ -8,7 +8,7 @@
     href: display-images-stored-blob-field.md
   - name: Error ASP 0178 when you instantiate COM object
     href: server-object-error-asp-0178-occurs.md
-  - name: Read and display binary data by using ServerXMLHTTP
+  - name: Read and display binary data using ServerXMLHTTP
     href: read-and-display-binary-data-serverxmlhttp.md
   - name: Run SQL Server stored procedures from an ASP Page
     href: run-sql-server-stored-procedures-asp-page.md

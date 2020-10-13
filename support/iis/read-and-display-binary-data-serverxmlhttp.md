@@ -5,7 +5,7 @@ ms.date: 09/24/2020
 ms.prod-support-area-path: Active Server Pages
 ms.prod: iis
 ---
-# Read and Display Binary Data in ASP Using ServerXMLHTTP
+# Read and display binary data in ASP using ServerXMLHTTP
 
 This article shows how to read and display binary data in Active Server Pages (ASP) using `ServerXMLHTTP`.
 

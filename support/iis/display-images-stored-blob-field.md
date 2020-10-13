@@ -6,7 +6,7 @@ ms.prod-support-area-path: Active Server Pages
 ms.reviewer: jlewis
 ms.prod: iis
 ---
-# How To images stored in a BLOB field
+# Display images stored in a BLOB field
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 173308
@@ -65,4 +65,4 @@ This technique can also be applied to other types of binary data, not just graph
 
 ## References
 
-For the latest Knowledge Base articles and other support information on Visual InterDev and Active Server Pages, see [Support Visual InterDev](https://support.microsoft.com/search/results?query=vinterdev&isEnrichedQuery=false)
+For the latest Knowledge Base articles and other support information on Visual InterDev and Active Server Pages, see [Support Visual InterDev](https://support.microsoft.com/search/results?query=vinterdev&isEnrichedQuery=false).
