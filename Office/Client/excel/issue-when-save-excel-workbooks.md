@@ -49,9 +49,8 @@ For more information about Microsoft Excel safe mode, press F1 in Excel to ope
 
 For more information about how to determine the folders that Excel uses during startup and additional options to disable this functionality, select the following article numbers to view the articles in the Microsoft Knowledge Base:
 
-[822107](https://support.microsoft.com/help/822107) How to use startup folders in Excel
- 
-[826922](https://support.microsoft.com/help/826922) How to prevent files from opening automatically in Excel
+- [Use startup folders in Excel](https://docs.microsoft.com/office/troubleshoot/excel/use-startup-folders) 
+- [How to prevent files from opening automatically in Excel](https://docs.microsoft.com/office/troubleshoot/excel/files-open-automatically) 
 
 ## Restricted permissions
  
@@ -67,15 +66,14 @@ When you save an Excel file, you must have the following permissions to the fold
 
 ## Insufficient drive space
  
-When you save to any medium, such as a floppy disk drive, a local hard disk, or a network drive, you must make sure that the drive has sufficient free space to enable the file to save. If the destination drive does not have sufficient space, Excel cannot complete the save operation, and you receive the following error message:
+When you save to any medium, such as a hard drive, an external storage drive, or a network drive, you must make sure that the drive has sufficient free space to enable the file to save. If the destination drive does not have sufficient space, Excel cannot complete the save operation, and you receive the following error message:
    
-**Disk is Full.**
+> **Disk is Full.**
 
-For more information about this error message, select the following article numbers to view the articles in the Microsoft Knowledge Base:
+For more information about this error message, see the following articles:
 
-[214245](https://support.microsoft.com/help/214245) You receive the "Disk is Full" error message when you save a workbook in Excel 
-
-[214073](https://support.microsoft.com/help/214073) You receive an error message when you try to save a file in Excel
+- [You receive the "Disk is Full" error message when you save a workbook in Excel](https://support.microsoft.com/help/214245/you-receive-the-disk-is-full-error-message-when-you-save-a-workbook-in) 
+- [Error while saving a file in Excel](https://docs.microsoft.com/office/troubleshoot/excel/error-saving-file)
   
 ## Antivirus software conflict
  
@@ -85,9 +83,8 @@ When antivirus software is installed or is running, you may receive an error mes
  
 If you and a second user work concurrently on a shared workbook, you may receive an error message if you and the second user try to save the file at the same time. You receive an error message because Excel cannot save the file if another instance of Excel is saving the same file.
 
-For more information about this error message, see the following Microsoft Knowledge Base article:
+For more information about this error message, see [Unlock a file that has been locked for editing](https://support.microsoft.com/office/unlock-a-file-that-has-been-locked-for-editing-bdda0d41-1b8e-44ed-a6ae-6d095d37c22d?ui=en-us&rs=en-us&ad=us).
 
-[130494](https://support.office.com/article/Unlock-a-file-that-has-been-locked-for-editing-bdda0d41-1b8e-44ed-a6ae-6d095d37c22d) Unlock a file that has been locked for editing 
 ## File name length
  
 If you try to save or open an Excel file, and the path of that file (including the file name) is more than 218 characters, you may receive the following error message:
