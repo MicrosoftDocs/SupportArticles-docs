@@ -54,6 +54,12 @@
     href: develop-deliver-working-win32-app-via-intune.md
   - name: Support tip - Devices enrolled in Intune MAM policy are prompted to enroll
     href: device-enroll-intune-app-management-error.md
+  - name: Troubleshoot app installation issues
+    href: troubleshoot-app-install.md
+  - name: Troubleshoot app protection policy deployment
+    href: troubleshoot-app-protection-policy-deployment.md
+  - name: Troubleshoot mobile application management
+    href: troubleshoot-mam.md
 - name: Co-management with Configuration Manager
   items:
   - name: Troubleshoot co-management auto-enroll
