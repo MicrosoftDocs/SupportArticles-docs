@@ -82,6 +82,8 @@
     href: c2491-define-data-member-dllimport.md
   - name: CDatabase::GetConnect returns empty string
     href: cdatabase-getconnect-returnn-empty.md
+  - name: Create a Database programmatically by using ADO.NET
+    href: create-database-programmatically.md
   - name: Do basic file I/O operations
     href: basic-file-io-operation.md
   - name: Enable Tablet press-and-hold gesture in MFC
@@ -90,6 +92,10 @@
     href: lnk1000-error-wholearchive-switch.md
   - name: MFC applications can't redraw controls
     href: mfc-application-fail-redraw-control.md
+  - name: Provide file drag and drop functionality
+    href: provide-file-drag-drop-functionality.md
+  - name: Read XML data from a file
+    href: read-xml-data-from-file.md
   - name: ReadFromStream() returns Access Denied
     href: readfromstream-return-access-denied.md
   - name: Unnested loops cause C1061 compiler error

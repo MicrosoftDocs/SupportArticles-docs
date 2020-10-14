@@ -86,6 +86,8 @@
     href: restrict-usb-with-administrative-template.md
   - name: SIP address and password can't be saved
     href: sip-address-password-not-saved.md
+  - name: Support tip - Deploy OMA-URIs to target a CSP through Intune
+    href: deploy-oma-uris-to-target-csp-via-intune.md
   - name: Troubleshoot CSP custom settings
     href: troubleshoot-csp-custom-settings.md
   - name: Users can't log on to Windows 10 computers with multi-app kiosk profile assigned
