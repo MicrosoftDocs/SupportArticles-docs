@@ -9,7 +9,7 @@
   - name: Android APK app installation fails
     href: app-installation-failed-error.md
   - name: App installation error codes reference
-    href: app-install-error-codes
+    href: app-install-error-codes.md
   - name: Apps don't appear as Available
     href: apps-appear-unavailable.md
   - name: Can't attach photos due to IO error
