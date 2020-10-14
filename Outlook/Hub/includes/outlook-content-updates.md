@@ -23,3 +23,12 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 9/21/2020 | [Can't install Calendar Printing Assistant](/outlook/troubleshoot/installation/installing-calendar-printing-assistant-fails) | modified |
+
+
+## Week of September 28, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/28/2020 | [Folder names are incorrect or displayed in an incorrect language in Outlook](/outlook/troubleshoot/user-interface/incorrect-folder-names) | modified |
+| 9/30/2020 | [Can't send or receive email and Metered Connection Warning is triggered](/outlook/troubleshoot/profiles-and-accounts/metered-connection-warning) | modified |
