@@ -19,6 +19,8 @@
       href: ../administration/modern-authentication-configuration.md
     - name: Update contact information
       href: ../administration/update-contact-information.md
+    - name: Validation errors for a mailbox archive GUID
+      href: ../administration/validation-errors-for-mailbox-archive-guid.md
     - name: WinRM client cannot process the request
       href: ../administration/winrm-cannot-process-request.md
   - name: Antispam
