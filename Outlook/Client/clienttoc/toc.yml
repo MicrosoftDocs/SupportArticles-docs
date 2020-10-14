@@ -319,6 +319,8 @@
       href: ../message-body/outside-messages-not-include-email-signature.md
     - name: Multiple slashes are changed to one slash
       href: ../message-body/url-multiple-slashes-become-single-slash.md
+    - name: No subject or content in automatically emails
+      href: ../message-body/no-subject-content-in-automatically-email.md
     - name: Pictures are not shown but displayed as red X
       href: ../message-body/pictures-not-displayed-and-shown-as-red-x.md
     - name: Specified Message Identity is Invalid error when opening delivery reports
