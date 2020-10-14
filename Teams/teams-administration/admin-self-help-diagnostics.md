@@ -44,24 +44,25 @@ After the diagnostic checks finish and the configuration issue is found, the sys
 :::image type="content" source="media/admin-self-help-diagnostics/admin-self-help-diagnostics-2.png" alt-text="Example diagnostics response screen.":::
  
 ### What scenarios are currently covered?
-The following diagnostics are currently available with brief scenario descriptions:
-- Diag: Teams Sign-in
-- Diag: Teams Direct Routing
-- Diag: Teams Call Queue
-- Diag: Teams Remove Number from Conference Bridge
-- Diag: Teams Dial Pad is missing 
-- Diag: Teams Calendar App 
-- Diag: Teams Federation 
-- Diag: Teams Files Guest Access 
-- Diag: Teams Add-in is missing in Outlook 
-- Diag: Unable to invite Guest users to Teams 
-- Diag: Unable to make domestic PSTN calls in Teams 
-- Diag: Unable to make International PSTN calls in Teams 
-- Diag: Unable to create a Teams conference call 
-- Diag: Unable to join a Teams conference call 
-- Diag: Teams Auto-Attendant 
-- Diag: We Can't Get Your Files 
-- Diag: Unable to Schedule a Teams Meeting on behalf of Delegate in Outlook  
+The following diagnostics are currently available with brief scenario descriptions and shortcut commands:
+
+| Diagnostic | Description | Shortcut cmd |
+|---|---|---|
+| Teams Sign-in | Validates that a user can sign in to the Teams app.	 | Diag: Teams Sign-In|
+| Teams Direct Routing | Validates that a user is correctly configured for direct routing.	 | Diag: Teams Direct Routing|
+| Teams Call Queue | Validates that a call queue is able to receive calls.	 | Diag: Teams Call Queue|
+| Teams Remove Number from Conference Bridge | Validates that the number can be removed from the conference bridge.	 | Diag: Remove Conf Bridge Number|
+| Teams Dial Pad is Missing | Validates that the dial pad is visible within Teams.	 | Diag: Teams Dial Pad Missing|
+| Teams Calendar App | Validates that the pre-requisites are properly configured for the Microsoft Teams calendar app to function. 	 | Diag: Teams Calendar App|
+| Teams Federation | Validates that the Teams user can communicate with a federated Teams user.	 | Diag: Teams Federation|
+| Teams Files Guest Access | Validates that guest users can be added to Teams and the Team is shared with the user.	 | Diag: Teams Files Guest Access|
+| Teams Add-in is Missing in Outlook | Validates that a user has the correct policies to enable the Teams Outlook add-in.	 | Diag: Teams Add-in Missing in Outlook|
+| Unable to Invite Guest Users to Teams | Validates that a specific guest can sign into Teams.	 | Diag: Teams Guest Access|
+| Unable to Make Domestic or International PSTN calls in Teams | Validates that a user has the ability to make or receive domestic or international PSTN calls.	 | Diag: Teams PSTN|
+| Unable to Join or Create a Teams Conference Call | Validates that a user has the ability to create or join a PSTN conference call.	 | Diag: Teams Conference|
+| Teams Auto-Attendant | Validates that an auto attendant is able to receive calls.	 | Diag: Teams Auto Attendant
+| We Can't Get Your Files | Validates that a Team is provisioned and accessible by the specified user.	 | Diag: Teams Files Error|
+
 
 More diagnostics will be added at a future date.
 
