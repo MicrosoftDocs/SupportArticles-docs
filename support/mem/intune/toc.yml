@@ -104,16 +104,20 @@
     href: windows-feature-updates-never-offered.md
 - name: Device enrollment
   items:
-  - name: Android enrollment
-    items:
-    - name: End-to-end guide for configuring Android enterprise devices
-      href: configure-android-enterprise-devices-intune.md
-    - name: Device ownership is changed to Corporate
-      href: device-ownership-changed-to-corporate.md
   - name: Can't update enrollment
     href: cannot-update-enrollment.md
   - name: Devices try to enroll in a canceled Intune subscription
     href: devices-enroll-canceled-intune-subscription.md
+  - name: Troubleshoot device enrollment
+    href: troubleshoot-device-enrollment-in-intune.md
+  - name: Android enrollment
+    items:
+    - name: Device ownership is changed to Corporate
+      href: device-ownership-changed-to-corporate.md
+    - name: End-to-end guide for configuring Android enterprise devices
+      href: configure-android-enterprise-devices-intune.md
+    - name: Troubleshoot Android Enterprise device enrollment
+      href: troubleshoot-android-enrollment.md
   - name: iOS/iPadOS enrollment
     items:
     - name: Auto-enrollment doesn't start on Apple DEP devices
@@ -122,6 +126,8 @@
       href: dep-enrollment-xpc-type-error.md
     - name: Keychain error -25244 during enrollment
       href: keychain-error-enrolling-macos-devices.md
+    - name: Troubleshoot iOS/iPadOS device enrollment
+      href: troubleshoot-ios-enrollment-errors.md
   - name: Windows enrollment
     items:
     - name: 80180002b during Windows 10 Group Policy-based auto-enrollment
@@ -138,6 +144,8 @@
       href: intune-connector-for-ad-not-appear.md
     - name: Support Tip - Comparison of methods for enrolling a Windows device in Intune
       href: enroll-devices-in-intune-tip.md
+    - name: Troubleshoot Windows device enrollment
+      href: troubleshoot-windows-enrollment-errors.md
     - name: Understand and troubleshoot the Enrollment Status Page
       href: understand-troubleshoot-esp.md
     - name: Unexpected error signing in to Intune Connector
