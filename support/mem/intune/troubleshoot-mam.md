@@ -46,7 +46,7 @@ Common end user issues are broken down in the following categories:
 |iOS/Android | Apps not allowing Save As to Local Storage when policy is enabled | The App behavior for this setting is controlled by the App Developer.|
 |Android | Android has more restrictions than iOS/iPadOS on what "native" apps can access MAM protected content | Android is an open platform and the **native** app association can be changed by the end user to potentially unsafe apps. Apply [Data transfer policy exceptions](/mem/intune/apps/app-protection-policies-exception) to exempt specific apps.|
 |Android | Azure Information Protection (AIP) can Save as PDF when Save As is prevented | AIP honors the MAM policy for 'Disable printing' when Save as PDF is used.|
-|iOS | Opening PDF attachments in Outlook app fails with "Action Not Allowed | This issue can occur if the user has not authenticated to Acrobat Reader for Intune, or has used thumbprint to authenticate to their organization. Open Acrobat Reader beforehand and authenticate using UPN credentials.|
+|iOS | Opening PDF attachments in Outlook app fails with **Action Not Allowed** | This issue can occur if the user has not authenticated to Acrobat Reader for Intune, or has used thumbprint to authenticate to their organization. Open Acrobat Reader beforehand and authenticate using UPN credentials.|
 
 ### Normal usage dialogs
 
