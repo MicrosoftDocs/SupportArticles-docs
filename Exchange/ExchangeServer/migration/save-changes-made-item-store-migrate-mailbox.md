@@ -37,7 +37,7 @@ For more information about Exchange Online mailbox folder limits, see [Exchange 
 
 ## Resolution
 
-### For Microsoft Exchange Server 2013, Exchange Server 2016, and Exchange Server 2019
+### For Microsoft Exchange Server 2013 and above
 
 1. Run these commands in the on-premises PowerShell to check which folder contains more than 1 million items.
 
