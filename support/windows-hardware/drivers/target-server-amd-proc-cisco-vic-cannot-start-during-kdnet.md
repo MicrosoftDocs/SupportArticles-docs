@@ -7,12 +7,12 @@ ms.author: v-tea
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.prod: windows-hardware
 localization_priority: medium
 ms.reviewer: kaushika
 keywords: amd processor, cisco VIC
 ms.prod-support-area-path: Kerberos authentication
-ms.technology: WindowsSecurity
+ms.technology: drivers
 ---
 # Target server that has AMD processor and CISCO VIC cannot start when KDNET debugging is enabled
 
@@ -24,11 +24,11 @@ _Original product version:_ &nbsp;Windows Server 2019, version 2004 and earlier 
 
 You try to use KDNET network kernel debugging, and your target server meets all of the following criteria:
 
-- The operating system is Windows Server 2019, version 2004 or earlier, or Windows Server 2016
+- The operating system is Windows Server 2019, version 2004 or an earlier version, or Windows Server 2016
 - The server has an AMD processor installed
 - The server has a Cisco virtual interface card (VIC) adapter installed
 
-You set up the target and host servers and turn on KDNET debugging (by using **bcdedit /debug on**). However, when you restart the target server, it stops at the Windows logo screen. The startup process cannot finish.
+You set up the target and host servers and turn on KDNET debugging (by using **bcdedit /debug on**). However, when you restart the target server, it stops at the Windows logo screen. The startup process doesn't finish.
 
 ## Cause
 
