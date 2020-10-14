@@ -85,3 +85,12 @@
 |------|------------|--------|
 | 9/28/2020 | [SharePoint Online service process schedule temporary change](/sharepoint/troubleshoot/administration/temporary-adjustments-in-sharepoint-online) | modified |
 | 9/28/2020 | [SharePoint Online Public Websites to be discontinued](/sharepoint/troubleshoot/sites/public-websites-be-discontinued) | modified |
+
+
+## Week of October 05, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/sharepoint/troubleshoot/index) | modified |
+| 10/8/2020 | [Everyone except external users group is removed on Office 365](/sharepoint/troubleshoot/sharing-and-permissions/everyone-except-external-user-removed) | modified |
