@@ -19,6 +19,8 @@
       href: ../administration/modern-authentication-configuration.md
     - name: Update contact information
       href: ../administration/update-contact-information.md
+    - name: Validation errors for a mailbox archive GUID
+      href: ../administration/validation-errors-for-mailbox-archive-guid.md
     - name: WinRM client cannot process the request
       href: ../administration/winrm-cannot-process-request.md
   - name: Antispam
@@ -175,6 +177,8 @@
       href: ../user-and-shared-mailboxes/create-and-manage-resource-mailboxes.md
     - name: Mailbox provision delays
       href: ../user-and-shared-mailboxes/delays-provision-mailbox-sync-changes.md
+    - name: Private items aren't displayed
+      href: ../user-and-shared-mailboxes/private-items-not-display.md
     - name: Restore user mailboxes by using cmdlets
       href: ../user-and-shared-mailboxes/mailbox-recovery-in-exchange-online.md
     - name: Sent items aren't saved
