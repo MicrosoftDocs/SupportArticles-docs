@@ -31,7 +31,7 @@ When you migrate on-premises Exchange mailboxes to Exchange Online organization,
 
 ## Cause
 
-There is at least one on-premises mailbox folder that contains over 1 million items. It exceeds the limit for Exchange Online mailbox folder.
+There is at least one on-premises mailbox folder that contains over 1 million items. It exceeds the limit of Exchange Online mailbox folder.
 
 For more information about Exchange Online mailbox folder limits, see [Exchange Online limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#mailbox-folder-limits).
 
