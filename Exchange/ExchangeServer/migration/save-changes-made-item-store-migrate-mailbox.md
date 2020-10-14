@@ -37,7 +37,7 @@ For more information about Exchange Online mailbox folder limits, see [Exchange 
 
 ## Resolution
 
-### For Exchange server 2013 and above
+### For Microsoft Exchange Server 2013, Exchange Server 2016, and Exchange Server 2019
 
 1. Run these commands in the on-premises PowerShell to check which folder contains more than 1 million items.
 
@@ -59,7 +59,7 @@ For more information about Exchange Online mailbox folder limits, see [Exchange 
 
     There's a high chance that a folder named **Deferred action** contains more than 1 million items. You can delete some (HardDelete) using MFCMAPI. The folder is right below the root of the mailbox.
 
-### For Exchange server 2010
+### For Microsoft Exchange server 2010
 
 1. Run this command in the on-premises PowerShell to check which folder contains more than 1 million items.
 
