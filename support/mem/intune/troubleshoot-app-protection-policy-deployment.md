@@ -3,9 +3,7 @@ title: How to troubleshoot Intune app protection policy deployment
 description: Discusses how to troubleshoot issues that you may experience when you deploy Intune app protection policies. 
 ms.date: 4/17/2020
 ---
-# Troubleshooting app protection policy deployment in Intune
-
-## Introduction
+# Troubleshoot app protection policy deployment in Intune
 
 This article helps you understand and troubleshoot problems when you apply app protection policies in Microsoft Intune. Follow the sections that apply to your situation.
 
