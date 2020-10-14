@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem where the behavi
 ms.date: 09/27/2020
 ms.prod-support-area-path: Development and Deployment
 ms.reviewer: shaheera
+ms.prod: biztalk-server
 ---
 # Change in scripting function boolean parameter behavior
 
@@ -29,13 +30,13 @@ public int AddIfTrue(int param1, int param2, bool addNum)
 
 - In BizTalk Server 2013, the behavior is as follows:
 
-  - If `addNum` is **true**, **false**, or any other value the output is `param1+param2`
-  - If `addNum` is **empty**, the output is `param1`
+  - If `addNum` is **true**, **false**, or any other value the output is `param1+param2`.
+  - If `addNum` is **empty**, the output is `param1`.
 
 - In prior versions of BizTalk, the behavior was as follows:
 
-  - If `addNum` is **false** the output is `param1`
-  - If `addNum` is **true**, the output is `param1+param2`
+  - If `addNum` is **false** the output is `param1`.
+  - If `addNum` is **true**, the output is `param1+param2`.
   - If `addNum` is **empty** or any other value the function fails with error **String was not recognized as a valid Boolean**.
 
 ## Cause

@@ -5,6 +5,7 @@ ms.date: 09/27/2020
 ms.prod-support-area-path: Accelerators
 ms.reviewer: anandsi, MQuian
 ms.topic: how-to
+ms.prod: biztalk-server
 ---
 # Generate 999 acknowledgments for HIPAA 5010 in BizTalk Server 2010
 
@@ -21,7 +22,7 @@ BizTalk Server 2010 cumulative update 3 includes a schema that allows 999 acknow
 
 1. Download Cumulative Update 3 for BizTalk Server 2010:
 
-2. To extract the schema, launch the BiztalkServer2010-RTM-KB2617149-ENU.exe setup. A temporary folder named with a unique GUID is created on the `c:\ drive`. In this folder, the following two files contain the *X12_00501_277_A* and *X12_00501_999* schemas:
+2. To extract the schema, launch the BiztalkServer2010-RTM-KB2617149-ENU.exe setup. A temporary folder named with a unique GUID is created on the `c:\drive`. In this folder, the following two files contain the *X12_00501_277_A* and *X12_00501_999* schemas:
 
    - MicrosoftEdiXSDTemplatesKb2510733.exe: Run as Administrator to extract the schema
    - MicrosoftEdiXSDTemplatesKb2566805.zip: Unzip to extract the schema
@@ -51,8 +52,8 @@ BizTalk Server 2010 cumulative update 3 includes a schema that allows 999 acknow
 
         ![Batch Marker Component](./media/999-acknowledgments-hipaa-5010/batch-marker-component-image.jpg)
 
-    > [!NOTE]
-    > This Batch Marker component is also used with the EDI Batching Orchestration.
+        > [!NOTE]
+        > This Batch Marker component is also used with the EDI Batching Orchestration.
 
     1. Build and deploy this project to the BizTalk EDI Application. Any new or existing application can be used. If the goal is to keep all core EDI items together, use the existing BizTalk EDI Application.
 

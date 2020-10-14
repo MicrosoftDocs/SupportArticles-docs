@@ -5,12 +5,13 @@ ms.date: 09/25/2020
 ms.prod-support-area-path: Management and Operations
 ms.reviewer: mandia
 ms.topic: how-to
+ms.prod: biztalk-server
 ---
 # Maintain and troubleshoot BizTalk Server databases
 
 This article provides detailed information about how to maintain and troubleshoot BizTalk Server databases.
 
-_Original product version:_ &nbsp; BizTalk Server databases  
+_Original product version:_ &nbsp; BizTalk Server  
 _Original KB number:_ &nbsp; 952555
 
 ## Summary
@@ -132,7 +133,7 @@ Service instances can be suspended (resumable) or suspended (not resumable). The
 
 These service instances can make the BizTalkMsgBoxDb database grow unnecessarily and can be terminated. The following table lists what method can be used, depending on the BizTalk version:
 
-||Group Hub|HAT|Terminate.vbs|Terminator Tool|
+|Version|Group Hub|HAT|Terminate.vbs|Terminator Tool|
 |---|---|---|---|---|
 |BizTalk Server 2010|Yes|No|Yes|Yes|
 |BizTalk Server 2009|Yes|No|Yes|Yes|
@@ -158,7 +159,7 @@ An orphan message is a message that does not have an associated instance. For ex
 
 A zombie message is a message that was routed but not consumed. For example, a message was delivered to a convoy orchestration. However, the convoy orchestration went down another code path. The orchestration instance finishes. The message is discarded and is now known as a zombie message.
 
-For a description of zombie messages, visit the following MSDN website: [BizTalk Core Engine's WebLog](/archive/blogs/biztalk_core_engine/)
+For a description of zombie messages, see [BizTalk Core Engine's WebLog](/archive/blogs/biztalk_core_engine/).
 
 ## You may experience SQL Server and BizTalk Server performance issues
 
@@ -220,6 +221,7 @@ Additionally, you can use the MsgBoxViewer tool output to determine which tables
 |dta_MessageInOutEvents|This table stores tracked event messages in the BizTalkDTADb database. These tracked event messages include message context information.|
 |dta_ServiceInstanceExceptions|This table stores error information for any suspended service instance in the BizTalkDTADb database.|
 |||
+
 Consider the following scenarios.
 
 - **HostName** Q_Suspended tables
