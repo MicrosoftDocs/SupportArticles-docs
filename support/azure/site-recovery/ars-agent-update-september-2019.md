@@ -75,9 +75,6 @@ If your servers are registered to one or more Recovery Services Vaults, you can 
 ### Restart information
 If you are using Windows Server 2008 (SP2 and R2 SP1, any version), you must restart the computer after you apply this update. Users who installed MARS Agent on other Windows Server versions don’t have to restart the computer after applying this update.
 
-### Replacement information
-This update replaces previously released update [KB 4048992](https://support.microsoft.com/help/4048992).
-
 ### Prerequisites
 If you use System Center 2016 Data Protection Manager (SC DPM), Microsoft recommends that you apply [Update Rollup 1](https://support.microsoft.com/help/3190600) for System Center 2016 Data Protection Manager or a later version.
 
