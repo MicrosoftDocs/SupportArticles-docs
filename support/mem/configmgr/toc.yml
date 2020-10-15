@@ -28,6 +28,10 @@
       href: deploy-language-pack.md
     - name: Deployment Type changes are deployed unexpectedly
       href: deployment-type-changes-deployed-unexpectedly.md
+    - name: Troubleshoot Microsoft Store for Business and Education integration
+      href: troubleshoot-microsoft-store-for-business-integration.md
+    - name: Troubleshooting tips for application deployments
+      href: troubleshoot-application-deployment.md
 - name: Client installation and assignment
   items:
     - name: Can't install client in Windows Server 2008 SP2
@@ -172,6 +176,10 @@
       href: recommended-antivirus-exclusions.md
     - name: Support policies for Azure Virtual Machines
       href: support-policies-for-azure-virtual-machines.md
+- name: Microsoft Deployment Toolkit (MDT)
+  items:
+    - name: Troubleshooting reference for MDT
+      href: troubleshooting-reference.md
 - name: Mobile device management
   items:
     - name: Call to HttpSendRequestSync failed for port 443
