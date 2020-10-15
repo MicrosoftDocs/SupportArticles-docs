@@ -55,9 +55,9 @@ For more information about Exchange Online mailbox folder limits, see [Exchange 
     $non_root | sort itemsinfolder -descending |ft folderpath,itemsinfolder
     ```
 
-3. If the faulty folder is accessible from Outlook or [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/tag/20.0.20280.01) tool, move some of the items to other folders and resume the migration.
+3. If the problem folder is accessible from Outlook or [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/tag/20.0.20280.01) tool, move some of the items to other folders and resume the migration.
 
-    There's a high chance that a folder named **Deferred action** contains more than 1 million items. You can delete some (HardDelete) using MFCMAPI. The folder is right below the root of the mailbox.
+    There's a high chance that a folder named **Deferred action** contains more than 1 million items. You can delete some (HardDelete) using MFCMAPI. The folder is right below the root of the mailbox. To learn more about this folder, see [this article](/openspecs/exchange_server_protocols/ms-oxorule/0ae81043-05e6-47e4-aa3f-f546512e96b6).
 
 ### For Microsoft Exchange server 2010
 
