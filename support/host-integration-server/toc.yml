@@ -30,19 +30,20 @@
 
 - name: Network integration (SNA gateway)
   items:
-  - name: SNA LU6.2 Resync TP fails to start
-    href: sna-lu6-2-resync-tp-fails-start.md
-  - name: Use session request types to control access
-    href: use-session-request-types-control-access.md
   - name: Other
     items:
     - name: Troubleshoot Event 23 warnings
       href: troubleshoot-event-23-warning.md
     - name: Troubleshoot Event 230 warnings
       href: troubleshoot-event-230-warning.md
+  - name: SNA LU6.2 Resync TP fails to start
+    href: sna-lu6-2-resync-tp-fails-start.md
   - name: SNA Manager
     items:
     - name: SNA Manager version combinations
       href: sna-manager-version-combination.md
     - name: Unable to stop or start connections or service
       href: unable-stop-start-connections-service.md
+  - name: Use session request types to control access
+    href: use-session-request-types-control-access.md
+
