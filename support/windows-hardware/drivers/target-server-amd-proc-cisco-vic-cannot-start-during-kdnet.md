@@ -28,7 +28,7 @@ You try to use KDNET network kernel debugging, and your target server meets all 
 - The server has an AMD processor installed
 - The server has a Cisco virtual interface card (VIC) adapter installed
 
-You set up the target and host servers and turn on KDNET debugging (by using **bcdedit /debug on**). However, when you restart the target server, it stops at the Windows logo screen. The startup process doesn't finish.
+You set up the target and host servers and turn on KDNET debugging (by using **bcdedit /debug on**). However, when you restart the target server, the startup process stops at the Windows logo screen.
 
 ## Cause
 
@@ -42,6 +42,8 @@ To work around this issue, open an administrative Command Prompt window on the t
 bcdedit.exe /set {bootmgr} bootdebug true
 bcdedit.exe /set {default} bootdebug true
 ```
+
+After you run these commands, restart the target server as you normally would for KDNET debugging.
 
 ## More information
 
