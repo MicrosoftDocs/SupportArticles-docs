@@ -27,7 +27,7 @@ Consider the following scenario:
 - The setup media is located on D: drive
 - The unattended installation is started from PowerShell or command prompt as "`setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" instead of "`.\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell) or "`D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell or command prompt).
 
-In this situation, the Exchange Server Setup program starts, and may indicate that it completed successfully. However, the program isn't updated, and still shows the original version before you try the upgrade.
+In this situation, the Exchange Server Setup program starts, and may indicate that it's successfully completed. However, Exchange itself isn't updated.
 
 ## Cause
 
