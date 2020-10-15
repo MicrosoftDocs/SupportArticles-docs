@@ -33,7 +33,8 @@ Mailbox '**USER**' in the source forest is currently enabled for Unified Messagi
 
 ## Cause
 
-This issue occurs because Exchange Online cannot find a valid target forest that you are trying to migrate to. 
+This issue occurs because Exchange Online cannot find a valid target forest that you are trying to migrate to.
+Also, this could be thrown if the user you are trying to migrate to does not have an Exchange Online Plan 2, Office 365 Enterprise E3 or Office 365 Enterprise E5 license assigned.
 
 ## Resolution
 
@@ -42,7 +43,7 @@ To resolve this issue, follow these steps:
 1. Make sure that the user has an Exchange Online license. 
 
     > [!NOTE]
-    > [Exchange Online Service Description](https://technet.microsoft.com/library/exchange-online-service-description.aspx) indicates that some mailbox plans don't include UM. To resolve this issue, a license must be applied for a mailbox plan that includes UM (for example, Office 365 Enterprise E3 or E5).    
+    > [Exchange Online Service Description](https://technet.microsoft.com/library/exchange-online-service-description.aspx) indicates that some mailbox plans don't include Voice Message Services (formerly known as UM). To resolve this issue, a license must be applied for a mailbox plan that includes Voice Message Services (this is Exchange Online Plan 2, Office 365 Enterprise E3 or Office 365 Enterprise E5 license).    
 2. Verify that the value of the **LicenseReconciliationNeeded** property is **False**. To do this, run the following Microsoft Online Services Module for Windows PowerShell cmdlets in the given order:  
    - Connect-MsolService    
    - Get-MsolUser -UserPrincipalName**UPN** |fl LicenseReconciliationNeeded    
