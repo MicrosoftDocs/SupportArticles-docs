@@ -1,6 +1,6 @@
 ---
-title: Support engineers cannot guarantee complete repair of all corrupted Office files
-description: Not all corrupted Office files including Word, Excel, PowerPoint and Outlook files can be completely repaired.
+title: Support engineers can't guarantee complete repair of all corrupted Office files
+description: Not all corrupted Office files including Word, Excel, PowerPoint, and Outlook files can be completely repaired.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -29,15 +29,15 @@ appliesto:
 ms.reviewer: 
 ---
 
-# Support Engineers cannot guarantee complete repair of all corrupted Office files
+# Support Engineers can't guarantee complete repair of all corrupted Office files
 
 _Original KB number:_ &nbsp; 2620482
 
 ## Summary
 
-In certain situations you may need a Microsoft Support Engineer's assistance to repair or recover a corrupted Microsoft Office file. However, not all corrupted Office files can be completely recovered/repaired.
+In certain situations, you may need a Microsoft Support Engineer's assistance to repair or recover a corrupted Microsoft Office file. However, not all corrupted Office files can be completely recovered/repaired.
 
-When repairing a corrupted Office file, whether it be an Access database, Excel workbook, PowerPoint slide deck, Word document, Outlook personal (.PST) file or any other file created using Microsoft Office, Microsoft Support Engineers will attempt to assist you with troubleshooting and recovering the file. However, Microsoft cannot guarantee that any corrupted Office file can be recovered or that any data contained within the file can be recovered during this process.
+When you repair a corrupted Office file, whether it be an Access database, Excel workbook, PowerPoint slide deck, Word document, Outlook personal (.PST) file or any other file that's created using Microsoft Office, Microsoft Support Engineers will assist you with troubleshooting and recovering the file. However, Microsoft can't guarantee that any corrupted Office file can be recovered or that any data contained within the file can be recovered during this process.
 
 ## More information
 
