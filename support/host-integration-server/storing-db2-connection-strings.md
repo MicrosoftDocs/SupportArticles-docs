@@ -62,7 +62,7 @@ To configure ESSO for use with HIS 2010. You must configure Enterprise Single Si
 
 Apply HIS 2010 hotfix KB 2499828/Cumulative Update 1. You must apply HIS 2010 hotfix KB 2499828 or Cumulative Update 1, in order to use Windows-initiated SSO and to store a DB2 connection securely for use by multiple client programs and users.
 
-1. Download the hotfix package
+1. Download the hotfix package.
 2. Install the hotfix package on the HIS 2010 computer(s).
 
 To define an ESSO Affiliate Application for Windows-initiated SSO  

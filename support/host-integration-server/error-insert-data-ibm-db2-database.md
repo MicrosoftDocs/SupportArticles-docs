@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 2848234
 
 Consider the following scenario:
 
-- You use SQL Server Integration Services (SSIS) and the OLE DB Provider for DB2 V4.0 to insert data into an IBM DB2 database.
+- You use SQL Server Integration Services (SSIS) and the OLE DB Provider for DB2 to insert data into an IBM DB2 database.
 
 - The OLE DB Destination in the SSIS package is configured with `Accessmode = OpenRowset Using FastLoad`.
 
@@ -29,8 +29,8 @@ During the SSIS process of inserting data into the IBM DB2 database, an error si
 
 There are two ways to resolve the problem.
 
-1. Change the OLE DB Destination in the SSIS package to use `AccessMode = OpenRowset` to disable the use of `FastLoad`. The disadvantage of this option is that the performance of the inserts into the DB2 database will be much slower as each row is inserted one at a time.
+- Change the OLE DB Destination in the SSIS package to use `AccessMode = OpenRowset` to disable the use of `FastLoad`. The disadvantage of this option is that the performance of the inserts into the DB2 database will be much slower as each row is inserted one at a time.
 
-2. Add the following parameter to the DB2 connection string used by SSIS to connect to the IBM DB2 system:
+- Add the following parameter to the DB2 connection string used by SSIS to connect to the IBM DB2 system:
 
    `Use Early Metadata=true`

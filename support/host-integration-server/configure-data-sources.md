@@ -19,7 +19,7 @@ The Provider tab allows the user to select the OLE DB provider (the provider nam
 
 The Connection tab allows the user to configure the basic properties required to connect to a data source. For OLE DB Provider for DB2, the connection properties include the following values:
 
-- Data Source: The data source is an optional parameter that can be used to describe the data source. When the Data Links configuration program is loaded from the SNA Server program folder, the Data Source field is required. This field is used to name the UDL file, which is stored in the `Program Files\Common Files\System\OLE DB\Data directory`.
+- Data Source: The data source is an optional parameter that can be used to describe the data source. When the Data Links configuration program is loaded from the SNA Server program folder, the Data Source field is required. This field is used to name the UDL file, which is stored in the `Program Files\Common Files\System\OLE DB\Data` directory.
 
 - User name: A valid user name is normally required to access data on DB2. Optionally, you can persist a user name in the Data Link. The OLE DB provider will prompt the user at runtime to enter a valid password. Additionally, the prompt dialog box will allow the user to override the user name stored in the Data Link.
 
