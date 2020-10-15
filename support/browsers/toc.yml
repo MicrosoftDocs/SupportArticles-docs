@@ -319,6 +319,9 @@
     - name: Troubleshoot Internet Explorer 9 installation issues
       href: troubleshoot-installation-problems-ie-9.md
 
+    - name: Can't uninstall Internet Explorer 9
+      href: what-to-do-if-you-cannot-uninstall-internet-explorer-9.md
+
 - name: Security and Privacy
   items:
     - name: Applications attempt to access the Admin web cache
