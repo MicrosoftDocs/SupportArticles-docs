@@ -701,6 +701,8 @@
       href: ../office-suite-issues/convert-bibliography-to-static-text.md
     - name: 'Compile Error: Procedure too large'
       href: ../office-suite-issues/compile-error-procedure-too-large.md
+    - name: Complete repair of corrupted files isn't guaranteed
+      href: ../office-suite-issues/cannot-guarantee-complete-repair-corrupted-files.md
     - name: Connection to a network document is lost
       href: ../office-suite-issues/connect-to-network-document-lost.md
     - name: Do you want to download the converter
