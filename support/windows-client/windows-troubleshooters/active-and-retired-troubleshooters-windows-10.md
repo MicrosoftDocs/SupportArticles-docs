@@ -1,7 +1,7 @@
 ---
 title: Active and retired troubleshooters for Windows 10
-description: Active and retired troubleshooters for Windows 10.
-ms.date: 09/21/2020
+description: Introduce active and retired troubleshooters for Windows 10.
+ms.date: 10/16/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -9,9 +9,9 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: ksharma, kaushika
-ms.prod-support-area-path: TPM
-ms.technology: WindowsSecurity
+ms.reviewer: kaushika
+ms.prod-support-area-path:
+ms.technology:
 ---
 # Active and retired troubleshooters for Windows 10
 
@@ -33,7 +33,7 @@ Devices that successfully ran the "Hardware and devices" troubleshooter will be 
 
 ## Hardware and devices troubleshooter
 
-Automatically repairs system files and settings to fix a problem on your device
+Automatically repairs system files and settings to fix a problem on your device.
 
 ### Description
 
