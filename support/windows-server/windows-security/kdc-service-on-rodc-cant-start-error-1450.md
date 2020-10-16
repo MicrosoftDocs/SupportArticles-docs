@@ -36,7 +36,7 @@ If you use a command such as **repadmin /replicate** to trigger inbound replicat
 
 The **krbtgt_#####** account for the RODC has been deleted.
 
-Each RODC has its own **krbtgt_#####** account in Active Directory. In the account name, ##### represents a number that identifies the RODC. Typically, you do not have to interact with the **krbtgt_#####** accounts. When you promote or demote an RODC, Windows automatically manages the accounts. However, if an RODC fails and the metadata is not cleaned up, an "orphan" **krbtgt_#####** account may remain in Active Directory.
+Each RODC has its own **krbtgt_#####** account in Active Directory. In the account name, ##### represents a number that identifies the RODC. Typically, you don't have to interact with the **krbtgt_#####** accounts. When you promote or demote an RODC, Windows automatically manages the accounts. However, if an RODC fails and the metadata isn't cleaned up, an "orphan" **krbtgt_#####** account may remain in Active Directory.
 
 If an administrator tries to manually clean up orphan accounts, the issue described in the Symptoms section may occur. This issue typically means that a non-orphan **krbtgt_#####** account was deleted instead of an orphan account.
 
@@ -67,7 +67,7 @@ If the AD Recycle Bin feature hasn't been enabled, follow these steps on a write
    > The authoritative restore operation creates a LDAP Data Interchange Format (LDIF) file that contains information from the restored account. You will need this file in later steps.
    
 1. Restart the server to return to normal Active Directory mode.
-1. Populate the backlink attributes for the restored account by importing the LDIF file that was created in the previous step. To do this, in a Command Prompt window, run the following command :
+1. Populate the backlink attributes for the restored account by importing the LDIF file that was created in the previous step. To do this, in a Command Prompt window, run the following command:
    
    ```cmd
    ldifde -i -f <filename>.ldf
@@ -81,7 +81,7 @@ After you finish these steps, you may have to reset the password of the RODC com
 
 If the AD Recycle Bin feature hasn't been enabled, follow these steps.
 
-1. On a RWDC or GC, in an elevated Command Prompt window, run the following commands to restore the account:
+1. On an RWDC or GC, in an elevated Command Prompt window, run the following commands to restore the account:
 
    ```ps
    import-module ActiveDirectory
