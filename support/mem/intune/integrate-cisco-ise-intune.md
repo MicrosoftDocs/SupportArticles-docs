@@ -52,26 +52,29 @@ Cisco Identity Services Engine (ISE) integration with Microsoft Intune MDM Servi
 
 ## Create an ISE application in Azure
 
-1. In the [Azure portal](https://portal.azure.com/), select **Azure Active Directory** > **Enterprise applications - All Applications** > **Categories** > **Add an application**.
-2. Select **Add an application my organization is developing**.
+1. In the [Azure portal](https://portal.azure.com/), select **Azure Active Directory**.
+2. Under **Manage**, select **App registrations**, then select **New registration**.
+3. Enter the following information for the application:
 
-   :::image type="content" source="media/integrate-cisco-ise-intune/add-application.png" alt-text="Add an application":::
+   - **Name**: Enter a name for your application, such as *Cisco ISE*.
+   - **Supported account types**: Select an option to specify who can use the application.
+   - **Redirect URI (optional)**: Select **Web**, and then enter the [redirect URI](/azure/active-directory/develop/quickstart-register-app#add-a-redirect-uri) where the access token is sent to. 
+   
+   :::image type="content" source="media/integrate-cisco-ise-intune/register-application.png" alt-text="Register an application":::
 
-3. Select **New application registration**.
-4. Enter the following information for the application:
-
-   - **Name**: select a name for your application, such as *CiscoISE*.
-   - **Application type**: select **Web app / API**.
-   - **Sign-on URL**: enter the URL at which your application is hosted, such as `https://CiscoISE.contoso.onmicrosoft.com`.
-   - **App ID URI**: a unique identifier for your application. The URI must be in a verified custom domain for an external user to grant your application access to their data in Azure AD. For example, if your tenant is `contoso.onmicrosoft.com`, the APP ID URI can be `https://app.contoso.onmicrosoft.com`.
-
-5.	Select **Create** to create the application.
+4.	Select **Register** to complete the app registration.
 
 ## Configure the application manifest and upload to Azure
 
-1.	In the [Azure portal](https://portal.azure.com/), select **Azure Active Directory** > **App registrations**, select the ISE application you created.
-2. From the application's **Overview** page, select **Manifest**.
-3. Select **Download** to download the manifest file and save it as a JSON file. Do not change the name of the manifest file.  
+1. When registration completes, the Azure portal displays the application's **Overview** page, which includes the **Application (client) ID**.
+
+   :::image type="content" source="media/integrate-cisco-ise-intune/application-overview.png" alt-text="Application overview after registration":::
+
+2. From the application's **Overview** page, select **Manifest** under **Manage**.
+3. Select **Download** to download the manifest file and save it as a JSON file. Do not change the name of the manifest file. 
+
+   :::image type="content" source="media/integrate-cisco-ise-intune/download-manifest.png" alt-text="Download the manifest file":::
+
 4. Update the **keyCredentials** field in the JSON file as shown in the following example. 
 
    - Replace **Base64 Encoded String of ISE PAN cert** with the exported, edited certificate file from ISE, which is the `$base64Value` from the PowerShell script in [Export the Cisco ISE self-signed certificate](#export-the-cisco-ise-self-signed-certificate).
@@ -104,32 +107,27 @@ Cisco Identity Services Engine (ISE) integration with Microsoft Intune MDM Servi
 
 These values are used when you [configure the Microsoft Intune server in ISE](#configure-the-microsoft-intune-server-in-ise).
 
-## Configure application permissions and delegated permissions
-
-The following screenshot shows the application permissions and delegated permissions to be configured:
-
-:::image type="content" source="media/integrate-cisco-ise-intune/permission-settings.png" alt-text="Permissions":::
-
-To configure the permissions, follow these steps:
+## Configure API permissions
 
 1. In the [Azure portal](https://portal.azure.com/), select **Azure Active Directory** > **App registrations**, and then select the ISE application.
 2. Select **API permissions** > **Add a permission**.
 3. Select **Microsoft Graph** from the APIs.
-4. Select **Delegated permissions**, select the following permissions, and then select **Add permissions**.
+4. Select **Delegated permissions**, select the following permissions:
 
    |Permission|Description|
    |----------|-----------|
    |`Directory.Read.All`|Read directory data|
    |`User.Read`|Sign in and read user profile|
-   |`DeviceManagementConfiguration.Read.All`|Read Microsoft Intune device configuration and policies|
+   |`DeviceManagementConfiguration.Read.All`|Read Microsoft Intune Device Configuration and Policies|
    |`DeviceManagementServiceConfig.Read.All`|Read Microsoft Intune configuration|
    |`openid`|Sign users in|
-   |`offline_access`|Access user's data anytime|
-5. Select **Application permissions**, expand **Directory**, select the `Directory.Read.All` permission, and then select **Add permissions**.
-6. Select **Intune** from the APIs, select **Application permissions**, select the `get_device_compliance` permission, and then select **Add permissions**.
-7. To grant admin consent to the permissions configured for the application, select **Grant admin consent for \<tenant>**, select **Yes** when you are prompted to confirm the consent action.
+   |`offline_access`|Maintain access to data you have given it access to|
+5. Select **Application permissions**, expand **Directory**, select the `Directory.Read.All` permission.
+6. Select **Intune** from the APIs, select **Application permissions**, select the `get_device_compliance` permission.
+7. Select **Add permissions**.
+8. Select **Grant admin consent for \<tenant>** to grant admin consent to the configured permissions. Select **Yes** when you are prompted to confirm the consent action.
 
-   :::image type="content" source="media/integrate-cisco-ise-intune/configured-permissions.png" alt-text="Configured permissions":::
+   :::image type="content" source="media/integrate-cisco-ise-intune/configured-permissions.png" alt-text="Grant admin consent":::
 
 ## Configure the Microsoft Intune server in ISE
 
