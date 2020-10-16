@@ -40,7 +40,7 @@ Each RODC has its own **krbtgt_#####** account in Active Directory. In the accou
 
 If an administrator tries to manually clean up orphan accounts, the issue described in the Symptoms section may occur. This issue typically means that a non-orphan **krbtgt_#####** account was deleted instead of an orphan account.
 
-For information about how to identify orphan k**rbtgt_#####** accounts, see [MailBag: RODCs – krbtgt_#####, Orphans, and Load Balancing RODC Connection Objects](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/mailbag-rodcs-krbtgt-orphans-and-load-balancing-rodc-connection/ba-p/256064).
+For information about how to identify orphan **krbtgt_#####** accounts, see [MailBag: RODCs – krbtgt_#####, Orphans, and Load Balancing RODC Connection Objects](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/mailbag-rodcs-krbtgt-orphans-and-load-balancing-rodc-connection/ba-p/256064).
 
 ## Resolution
 
