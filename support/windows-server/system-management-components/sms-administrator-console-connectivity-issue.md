@@ -301,6 +301,6 @@ For more information about SMS Administrator connection problems, click the foll
 
 [908478](https://support.microsoft.com/help/908478) One or more site objects may be missing after you expand a site hierarchy node in a remote System Management Server 2003 Administrator Console  
 
-For more information about how to help secure remote WMI connections, visit the following Microsoft Web site: [https://msdn2.microsoft.com/library/aa392291.aspx](https://msdn2.microsoft.com/library/aa392291.aspx) 
-For more information about granular COM permissions, visit the following Microsoft Web site: [https://technet2.microsoft.com/WindowsServer/en/library/4c9a2873-2010-4dbb-b9dd-6a7d1e275f0f1033.mspx?mfr=true](https://technet2.microsoft.com/windowsserver/en/library/4c9a2873-2010-4dbb-b9dd-6a7d1e275f0f1033.mspx?mfr=true) 
+For more information about how to help secure remote WMI connections, visit the following Microsoft Web site: [https://msdn2.microsoft.com/library/aa392291.aspx](https://msdn2.microsoft.com/library/aa392291.aspx)
+
 For a list of frequently asked questions about site systems, visit the following Microsoft Web site: [https://www.microsoft.com/technet/sms/2003/library/techfaq/tfaq02.mspx](https://www.microsoft.com/technet/sms/2003/library/techfaq/tfaq02.mspx)

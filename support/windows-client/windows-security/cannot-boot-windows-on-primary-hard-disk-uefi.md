@@ -36,7 +36,7 @@ Because of variances in different versions of uEFI firmware, Windows doesn't mak
 
 ## Workaround
 
-The only Microsoft supported workaround for booting multiple installations of Windows in a uEFI environment is to use a [dual boot](https://answers.microsoft.com/windows/forum/windows_8-windows_install/dual-boot-windows-8-pro-and-windows-7/0c2887f8-fbe8-489a-ba20-b8ba2dfb0eab) configuration. This will make use of a single ESP and one MSR while still allowing the user to choose to boot to an installation on disk 1 or disk 2.
+The only Microsoft supported workaround for booting multiple installations of Windows in a uEFI environment is to use a [dual boot](https://answers.microsoft.com/en-US/windows/forum/windows_8-windows_install/dual-boot-windows-8-pro-and-windows-7/0c2887f8-fbe8-489a-ba20-b8ba2dfb0eab) configuration. This will make use of a single ESP and one MSR while still allowing the user to choose to boot to an installation on disk 1 or disk 2.
 
 Note: The EFI firmware will use the last Windows installation (using setup.exe) as the primary boot OS.
 

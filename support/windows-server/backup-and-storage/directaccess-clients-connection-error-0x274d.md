@@ -43,7 +43,7 @@ In this policy the DirectAccess (DNS Servers) entry will be set to the internal 
 
 > Error: 0x2AFC  
 Role: Client  
-URL: https://da.contoso.com/IPHTTPS  
+URL: `https://da.contoso.com/IPHTTPS`  
 Last Error Code: 0x2AFC  
 Interface Status: Failed to connect to IPHTTPs server; Waiting to reconnect.  
 0x2AFC translates to:  
@@ -62,7 +62,7 @@ There are several reasons this error may occur:
 
 > Error: 0x274D  
 Role: Client  
-URL: https://da.contoso.com/IPHTTPS  
+URL: `https://da.contoso.com/IPHTTPS`  
 Last Error Code: 0x274D  
 Interface Status: Failed to connect to IPHTTPs server; Waiting to reconnect.  
 0x274D translates to:  

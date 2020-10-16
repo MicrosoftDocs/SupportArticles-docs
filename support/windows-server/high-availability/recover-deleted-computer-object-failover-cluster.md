@@ -88,8 +88,8 @@ To recover a deleted computer object that corresponds to a VCO, follow these ste
 
 For more information, visit the following Microsoft Web sites:
 
- [Recovering a Deleted Cluster Name Object (CNO) in a Windows Server 2008 Failover Cluster](/archive/blogs/askcore/recovering-a-deleted-cluster-name-object-cno-in-a-windows-server-2008-failover-cluster) 
+ [Recovering a Deleted Cluster Name Object (CNO) in a Windows Server 2008 Failover Cluster](/archive/blogs/askcore/recovering-a-deleted-cluster-name-object-cno-in-a-windows-server-2008-failover-cluster)
 
- [Event ID 1207 - Active Directory permissions for cluster accounts](https://technet2.microsoft.com/windowsserver2008/en/library/4dbabb5d-24f7-445f-b57e-1bb3b4a6d1831033.mspx) 
+ [Event ID 1207 - Active Directory permissions for cluster accounts](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc773451(v=ws.10)?redirectedfrom=MSDN)
 
  [Active Directory backup and restore](https://technet.microsoft.com/library/bb727048.aspx)

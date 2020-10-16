@@ -39,7 +39,7 @@ In BDD.log we can see following information:
 --- Applying bootable Windows PE Image -----  
 LTI applying Windows PE  
 Will boot into Windows PE architecture x64 to match OS being deployed.
-Copying [\\Server\Deploymentshare\Boot\LiteTouchPE_x64.wim](file://server/deploymentshare/boot/litetouchpe_x64.wim) to E:\sources.boot.wim  
+Copying `\\Server\Deploymentshare\Boot\LiteTouchPE_x64.wim` to E:\sources.boot.wim  
 MDT was copying the LiteTouchPE.wim to E:\ LiteTouchPE.wim that is the first partition in hard drive.
 
 ## Cause

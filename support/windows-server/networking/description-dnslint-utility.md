@@ -26,7 +26,7 @@ DNSLint is a Microsoft Windows utility that helps you to diagnose common DNS nam
 
 The following file is available for download from the Microsoft Download Center:  
 
-[Download the Dnslint.exe package now.](https://download.microsoft.com/download/2/7/2/27252452-e530-4455-846a-dd68fc020e16/dnslint.v204.exe) 
+[Download the Dnslint.exe package now.](https://files.downloadnow.com/s/software/15/75/74/76/dnslint.v204.exe?token=1602873050_a5688db078512493a28c7348462e2532&fileName=dnslint.v204.exe)
 
  For additional information about how to download Microsoft Support files, click the following article number to view the article in the Microsoft Knowledge Base:
 

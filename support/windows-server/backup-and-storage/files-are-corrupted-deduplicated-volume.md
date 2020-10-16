@@ -45,7 +45,7 @@ To decompress the deduplication metadata folder so that write actions to dedupli
     [https://technet.microsoft.com/sysinternals/bb897553.aspx](https://technet.microsoft.com/sysinternals/bb897553.aspx) 
     > [!NOTE]
     > The PsExec tool lets users run processes by having "SYSTEM" user rights. This is necessary to access the protected Data Deduplication metadata folder that is located in the System Volume Information folder.
-2. Block data access for your users on the affected volume. To do this, run the following Windows PowerShell [disable-dedupvolume](https://technet.microsoft.com/library/hh848440.aspx) command:
+2. Block data access for your users on the affected volume. To do this, run the following Windows PowerShell [disable-dedupvolume](/powershell/module/deduplication/disable-dedupvolume?view=win10-ps) command:
 
     ```powershell
     disable-dedupvolume X: -dataaccess

@@ -44,6 +44,6 @@ This behavior is expected.
 
 For more information about how to configure the Availability service for cross-forest topologies, visit the following Microsoft website:
 - [General information about the Dirquota quota](https://technet.microsoft.com/library/cc770384%28v=ws.10%29)
-- [General information about the Update-FsrmQuota cmdlet](https://technet.microsoft.com/library/jj900616.aspx)
+- [General information about the Update-FsrmQuota cmdlet](/powershell/module/fileserverresourcemanager/update-fsrmquota?view=win10-ps)
 
 See an issue that [the FSRM quota report for the system root folder shows a smaller available size than Windows Explorer](https://support.microsoft.com/help/977522).
