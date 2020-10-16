@@ -36,7 +36,7 @@ To resolve the errors, update the **msExchArchiveGUID** (**ArchiveGUID**) proper
 If you have a hybrid environment that has Exchange on-premises, run the following command to update the value:
 
 ```powershell
-Set-RemoteMailboxJohn -ArchiveGUIDCloudArchiveGuid
+Set-RemoteMailbox <John> -ArchiveGUID CloudArchiveGuid
 ```
 
 > [!NOTE]
