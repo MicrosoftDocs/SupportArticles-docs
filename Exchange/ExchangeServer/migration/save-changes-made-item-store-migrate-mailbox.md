@@ -25,7 +25,7 @@ appliesto:
 
 ## Symptoms
 
-When you migrate on-premises Exchange mailboxes to Exchange Online organization, you receive this error message:
+When you migrate on-premises Exchange mailboxes to Exchange Online, you receive this error message:
 
 > "Cannot save changes made to an item to store. --> MapiExceptionMessagePerFolderCountQuotaExceeded: Unable to save changes. (hr=0x80004005, ec=1252)"
 
