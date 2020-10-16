@@ -7,9 +7,9 @@ ms.reviewer: nicholad
 ---
 # Troubleshoot event ID 2115-related performance problems in Operations Manager
 
-This article helps you identify and troubleshoot performance problems that affect Operations Manager (OpsMgr) database and data warehouse data insertion time.
+This article helps you identify and troubleshoot performance problems that affect Operations Manager (OpsMgr) database and data warehouse data insertion time. It applies to all supported versions of System Center Operations Manager
 
-_Original product version:_ &nbsp; System Center 2012 R2 Operations Manager, Microsoft System Center 2012 Operations Manager  
+_Original product version:_ &nbsp; System Center Operations Manager  
 _Original KB number:_ &nbsp; 2681388
 
 A typical sign of Operations Manager database performance issues is the presence of event ID 2115 events in the Operations Manager event log. These events typically indicate that performance issues exist on the management server or on the server that's running Microsoft SQL Server and that's hosting the Operations Manager or Operations Manager data warehouse databases.
