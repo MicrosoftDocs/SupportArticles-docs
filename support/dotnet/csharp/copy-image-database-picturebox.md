@@ -40,8 +40,8 @@ This article assumes that you are familiar with the following topics:
     ```sql
     CREATE TABLE BLOBTest
     (
-    BLOBID INT IDENTITY NOT NULL,
-    BLOBData IMAGE NOT NULL
+        BLOBID INT IDENTITY NOT NULL,
+        BLOBData IMAGE NOT NULL
     )
     ```
 
@@ -87,7 +87,8 @@ This article assumes that you are familiar with the following topics:
         cn.Close();
     }
     catch(Exception ex)
-    {    MessageBox.Show(ex.Message);
+    {
+        MessageBox.Show(ex.Message);
     }
     ```
 

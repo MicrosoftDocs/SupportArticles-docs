@@ -46,7 +46,7 @@ The next section illustrates how to create a sample project that implements both
 
 3. Copy the following code to the Code window of Form1:
 
-    ```vb
+    ```vbnet
     Option Explicit
 
     Private Declare Function GetModuleFileName Lib "kernel32" _

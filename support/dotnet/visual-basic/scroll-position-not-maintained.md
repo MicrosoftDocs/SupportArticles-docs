@@ -31,7 +31,7 @@ The get method of the `Panel.AutoScrollPosition.X` property and the get method o
 
 Visual Basic .NET or Visual Basic 2005 code
 
-```vb
+```vbnet
 Panel1.AutoScrollPosition = New Point(Math.Abs(Panel1.AutoScrollPosition.X), Math.Abs(CurrentPoint.Y))
 ```
 
@@ -65,7 +65,7 @@ To use this workaround in a sample application, follow these steps:
 
     Visual Basic .NET or Visual Basic 2005 code
 
-    ```vb
+    ```vbnet
     Private count As Integer
     Private arrayctl As New ArrayList
 
@@ -134,10 +134,6 @@ To use this workaround in a sample application, follow these steps:
 
     > [!NOTE]
     > The scroll position is maintained in the Panel control.
-
-## Status
-
-This behavior is by design.
 
 ## References
 

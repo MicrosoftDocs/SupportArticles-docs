@@ -47,49 +47,49 @@ This article assumes that you are familiar with the following topics:
 
 3. Use the `Imports` statement on the `Xml` and `XPath` namespaces so that you are not required to qualify declarations in those namespaces later in your code. You must use the `Imports` statement prior to any other declarations.
 
-    ```csharp
+    ```vbnet
     Imports System.Xml
     Imports System.Xml.XPath
     ```
 
 4. Declare the appropriate variables. Declare an `XPathDocument` object to hold the XML document and an `XPathNavigator` object to evaluate XPath expressions and move through the document. Declare a String object to hold the XPath expression. Add the declaration code in the Main procedure in Module1.
 
-    ```csharp
+    ```vbnet
     Dim nav As XPathNavigator
     Dim docNav As XPathDocument
     ```
 
 5. Load an `XPathDocument` object with the sample file `Books.xml`. The `XPathDocument` class uses Extensible Stylesheet Language Transformations (XSLT) to provide a fast and performance-oriented cache for XML document processing. It is similar to the XML Document Object Model (DOM) but is highly optimized for XSLT processing and the XPath data model.
 
-    ```csharp
+    ```vbnet
     'Open the XML.
     docNav = New XPathDocument("books.xml")
     ```
 
 6. Create an `XPathNavigator` object from the document. `XPathNavigator` enables you to move through both the attributes nodes and the namespace nodes in an XML document.
 
-    ```csharp
+    ```vbnet
     'Create a navigator to query with XPath.
     nav = docNav.CreateNavigator
     ```
 
 7. Move to the root of the document with the `MoveToRoot` method. `MoveToRoot` sets the navigator to the document node that contains the entire tree of nodes.
 
-    ```csharp
+    ```vbnet
     'Initial XPathNavigator to start at the root.
     nav.MoveToRoot()
     ```
 
 8. Use the `MoveToFirstChild` method to move to the children of the XML document. The `MoveToFirstChild` method moves to the first child of the current node. In the case of the `Books.xml` source, you are moving away from the root document into the children, the `Comment` section, and the Bookstore node.
 
-    ```csharp
+    ```vbnet
     'Move to the first child node (comment field).
     nav.MoveToFirstChild()
     ```
 
 9. Use the `MoveToNext` method to iterate through nodes at the sibling level. The `MoveToNext` method moves to the next sibling of the current node.
 
-    ```csharp
+    ```vbnet
     'Loop through all the root nodes.
     Do
     ...
@@ -98,7 +98,7 @@ This article assumes that you are familiar with the following topics:
 
 10. Use the `NodeType` property to make sure that you are only processing element nodes, and use the `Value` property to display the text representation of the element.
 
-    ```csharp
+    ```vbnet
     Do
     'Find the first element.
     If nav.NodeType = XPathNodeType.Element Then
@@ -123,7 +123,7 @@ This article assumes that you are familiar with the following topics:
     > [!NOTE]
     > This code segment only walks through the descendants of the root node and not the entire tree.
 
-    ```csharp
+    ```vbnet
     Do
     'Find the first element.
     If nav.NodeType = XPathNodeType.Element Then
@@ -148,7 +148,7 @@ This article assumes that you are familiar with the following topics:
 
 12. Use the `ReadLine` method of the `Console` object to add a pause at the end of the console display to more readily display the above results.
 
-    ```csharp
+    ```vbnet
     'Pause.
     Console.ReadLine()
     ```
@@ -157,7 +157,7 @@ This article assumes that you are familiar with the following topics:
 
 ## Complete code listing
 
-```csharp
+```vbnet
 Imports System.Xml
 Imports System.Xml.XPath
 

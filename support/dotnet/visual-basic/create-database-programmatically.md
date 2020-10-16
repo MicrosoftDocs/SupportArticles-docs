@@ -28,7 +28,7 @@ Programmers often need to create databases programmatically. This article descri
 
 4. Copy and paste the following code after the region "Windows Form Designer generated code":
 
-    ```csharp
+    ```vbnet
     Private Sub btnCreateDatabase_Click(ByVal sender As System.Object, _
     ByVal e As System.EventArgs) Handles btnCreateDatabase.Click
     Dim str As String
@@ -77,7 +77,7 @@ Programmers often need to create databases programmatically. This article descri
 - The folder that will hold the created .mdf and .ldf files must already exist before you run the code or an exception will be generated.
 - If you want to create a database that is similar to SQL Server's Model database and in the default location, then change the str variable in the code:
 
-    ```csharp
+    ```vbnet
     str = "CREATE DATABASE MyDatabase"
     ```
 

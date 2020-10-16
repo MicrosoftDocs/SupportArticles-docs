@@ -28,7 +28,7 @@ The following steps show you how to distribute and configure a client/server app
 
 2. Add the following code to the Class1 module:
 
-    ```vb
+    ```vbnet
     Public Function ServerTime() As String
         ServerTime = Time
     End Function
@@ -62,7 +62,7 @@ The following steps show you how to distribute and configure a client/server app
 6. Place a command button on Form1, and change the button's caption to **Run**.
 7. Place the following code in the button's click event:
 
-    ```vb
+    ```vbnet
     Dim MyObj As DCOMDemo_Svr.Class1
 
     On Error GoTo err1

@@ -9,7 +9,7 @@ ms.topic: how-to
 
 This article describes how to trace and debug in Visual C# and provides some sample steps to explain related information.
 
-_Original product version:_ &nbsp; Visual C#
+_Original product version:_ &nbsp; Visual C#  
 _Original KB number:_ &nbsp; 815788
 
 ## Summary

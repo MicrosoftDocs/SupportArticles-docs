@@ -8,7 +8,7 @@ ms.prod-support-area-path: Language or Compilers
 
 This article helps you resolve the problem that occurs when you use a protocol other than TCP/IP to connect to SQL Server on a port other than 1433.
 
-_Original product version:_ &nbsp; Visual Studio  
+_Original product version:_ &nbsp; Visual C#  
 _Original KB number:_ &nbsp; 307645
 
 ## Symptoms
