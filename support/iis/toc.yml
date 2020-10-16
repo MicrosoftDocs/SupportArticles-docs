@@ -4,8 +4,20 @@
     href: cannot-create-object-asp-applications-run.md
   - name: Create GUIDs
     href: create-guids-asp.md
+  - name: Display images stored in a BLOB field
+    href: display-images-stored-blob-field.md
+  - name: Error ASP 0178 when you instantiate COM object
+    href: server-object-error-asp-0178-occurs.md
+  - name: Read and display binary data using ServerXMLHTTP
+    href: read-and-display-binary-data-serverxmlhttp.md
+  - name: Run SQL Server stored procedures from an ASP Page
+    href: run-sql-server-stored-procedures-asp-page.md
   - name: Set locale ID per the browser's language
     href: set-asp-locale-id-browser-language.md
+  - name: VBScript type mismatch error
+    href: vbscript-type-mismatch-error.md
+  - name: XMLHttpRequest setRequestHeader method and Cookies
+    href: xmlhttprequest-setrequestheader-method-cookies.md
 
 - name: Application Request and Routing (ARR)
   items:
@@ -62,6 +74,8 @@
     href: asp-support-windows.md
   - name: Description of registry keys
     href: use-registry-keys.md
+  - name: Design customization IIS log file field names
+    href: customize-iis-log-file-field-names.md
   - name: Expression Web 4.0 FAQs
     href: expression-web-faq.md
   - name: IIS Express isn't supported in production environment
@@ -211,6 +225,8 @@
     href: shutdowntimelimit-not-apply-to-wcf.md
   - name: Troubleshoot Kerberos failures
     href: troubleshoot-kerberos-failures-ie.md
+  - name: Understanding identities
+    href: understanding-identities.md
 
 - name: WWW modules and features
   items:
