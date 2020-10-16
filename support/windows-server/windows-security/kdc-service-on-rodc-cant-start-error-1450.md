@@ -6,15 +6,15 @@ author: Teresa-Motiv
 ms.author: v-tea
 manager: dscontentpm
 audience: itpro
-keywords: ad, security
+keywords: ad, security,KDC service, RODC, error 1450, handle invalid
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Kerberos authentication
-ms.technology: WindowsSecurity
-keywords: KDC service, RODC, error 1450, handle invalid
+ms.technology: windows-security
 ---
+
 # KDC service on an RODC can't start and generates error 1450
 
 This article provides resolutions for an issue in which the KDC service on a read-only domain controller (RODC) cannot start, and generates an error message that refers to insufficient system resources.
