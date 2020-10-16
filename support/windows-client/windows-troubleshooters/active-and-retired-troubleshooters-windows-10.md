@@ -33,7 +33,7 @@ Devices that successfully ran the "Hardware and devices" troubleshooter will be 
 
 ## Hardware and devices troubleshooter
 
-Automatically repairs system files and settings to fix a problem on your device.
+Automatically repair system files and settings to fix a problem on your device.
 
 ### Description
 
@@ -53,7 +53,7 @@ This troubleshooter runs automatically on devices that meet the following criter
 
 ## Storage Spaces cleanup troubleshooter
 
-Automatically restores your previous settings and environment for Storage Spaces.
+Automatically restore your previous settings and environment for Storage Spaces.
 
 ### Description
 
@@ -93,11 +93,11 @@ Successfully ran the "Hardware and devices" or "Storage Space" troubleshooter
 
 ### Hardware and devices troubleshooter
 
-Automatically changes system settings to fix a problem on your device.
+Automatically change system settings to fix a problem on your device.
 
 ### Storage space troubleshooter
 
-Data corruption was detected on your parity storage space. To prevent further corruption, the volume has been marked as Read-Only. Your data is still accessible at this time. For more information and recommended actions please see the link below.
+Data corruption was detected on your parity storage space. To prevent further corruption, the volume has been marked as Read-Only. Your data is still accessible at this time. For more information and recommended actions please see the link below.
 
 ### Description
 
@@ -116,7 +116,7 @@ The first time, the troubleshooter runs automatically. The second time, it notif
 
 ## Windows Update troubleshooter
 
-Automatically changes system settings to fix a problem on your device.
+Automatically change system settings to fix a problem on your device.
 
 ### Description
 
