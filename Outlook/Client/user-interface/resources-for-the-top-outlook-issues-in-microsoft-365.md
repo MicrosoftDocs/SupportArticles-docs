@@ -68,7 +68,7 @@ The following resources can help you get started with some of the more advanced 
 
 - How to recover deleted items from any folder
 
-  [Recover deleted items in Outlook for Windows](https://office.microsoft.com/outlook-help/recover-deleted-items-from-any-folder-ha001116528.aspx)
+  [Recover deleted items in Outlook for Windows](https://support.microsoft.com/office/recover-deleted-items-in-outlook-for-windows-49e81f3c-c8f4-4426-a0b9-c0fd751d48ce)
 
 - How to set up a shared mailbox
 
