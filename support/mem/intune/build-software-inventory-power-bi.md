@@ -35,7 +35,7 @@ Follow step 1 to 10 in [Connect to the OData feed for the Intune Data Warehouse 
 
 ## Build the report
 
-1. In the **Visualizations** pane, select the ellipsis button (...), and then select **Import from marketplace**.
+1. In the **Visualizations** pane, select the ellipsis button (**...**), and then select **Import from marketplace**.
 
    :::image type="content" source="media/build-software-inventory-power-bi/import-from-marketplace.png" alt-text="Import from marketplace":::
 2. In the Power BI Visuals window, select **Filters**, locate **HierarchySlicer**, and then select **Add**.
@@ -43,13 +43,13 @@ Follow step 1 to 10 in [Connect to the OData feed for the Intune Data Warehouse 
    :::image type="content" source="media/build-software-inventory-power-bi/hierarchy-slicer.png" alt-text="Add HierarchySlicer":::
 
 3. In the **Visualizations** pane, select **HierarchySlicer** to add it to the report canvas.
-4. In the **Fields** pane, locate and expand the `applicationInventories` table. Select the `applicationName` and `applicationVersion` data fields, drag the data fields to the **Visualizations** pane, and then drop into the **Values** section in the box that's labeled **Add data fields here**.
+4. In the **Fields** pane, locate and expand the `applicationInventories` table. Select the `applicationName` and `applicationVersion` data fields, drag the data fields to the **Visualizations** pane, and then drop them into the **Values** section in the box that's labeled **Add data fields here**.
 
    :::image type="content" source="media/build-software-inventory-power-bi/add-application-fields.png" alt-text="Add applicationName and applicationVersion":::
 
    By adding multiple data fields, you can drill down within these values. For example, by adding the application name and application version, you can search the required application based on versions.
 
-5. To find a specific application, select the ellipsis button (...), and then select **Search**.
+5. To find a specific application, select the ellipsis button (**...**), and then select **Search**.
 
    :::image type="content" source="media/build-software-inventory-power-bi/enable-search.png" alt-text="Search for an application":::
 
