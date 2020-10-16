@@ -9,9 +9,9 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: narafa, winciccore, kaushika
-ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.reviewer: narafa, kaushika
+ms.prod-support-area-path: User Experience Virtualization (UE-V)
+ms.technology: UE-V
 ---
 # Unexpected one-minute startup of Outlook if UE-V is enabled
 
@@ -47,17 +47,7 @@ The Sync method **None** is specific to workstations that have a permanent netwo
 
 ### Method 2
 
-If you can't change to other **Sync** methods, you can change the behavior of UE-V by configuring the items in the corresponding template by following these steps:
-
-1. Go to the TemplateCatalog path that is defined in the UEV Configuration settings. If you use the default location, the path should be  as follows:
-
-    %ProgramData%\Microsoft\UEV\InboxTemplates\MicrosoftOutlook2016CAWinXX.xml 
-2. Update the following lines in the template, and then save and re-apply the new template:
-
-    \<Version> **3** \</Version>  
-    \<Asynchronous> **true** \</Asynchronous>
- 
-**Important**  For method 2, the template editing is applicable to only Office 2019 and Office 2016. It doesn't apply to earlier versions of Office. Changing the template for a version of Office other than Office 2019 or Office 2016 can cause crashes and undefined behavior in the program.
+Download and replace the version 3 of the Outlook custom action UEV template from the download center [UE-V OutlookCA template update](https://www.microsoft.com/download/details.aspx?id=102259)
 
 ## More information
 
