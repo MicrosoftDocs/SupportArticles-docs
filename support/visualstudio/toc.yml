@@ -32,6 +32,8 @@
       href: ../dotnet/visual-basic/navigate-xml-xpathnavigator-class.md
     - name: Scroll position is not maintained
       href: ../dotnet/visual-basic/scroll-position-not-maintained.md
+    - name: Start a process as another user
+      href: start-process-as-another-user.md
   - name: Examine CheckBox values in a DataGrid column
     href: ../dotnet/visual-basic/checkbox-control-values-datagrid.md
   - name: NullReferenceException when you use CommandBuilder
