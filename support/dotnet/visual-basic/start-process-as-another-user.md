@@ -48,7 +48,7 @@ The `CreateProcessWithLogonW()` API was introduced in Windows 2000. A call to `C
 
 In the future, use the `CreateProcessWithLogonW()` API. It handles the permissions that are associated with the inherited window station and desktop. In this scenario, the application just calls the `RunAsUser` helper function in the following sample Visual Basic code.
 
-```VB
+```vbnet
 Option Explicit
 
 Private Const CREATE_DEFAULT_ERROR_MODE = &H4000000
