@@ -27,7 +27,7 @@ The Kerberos Key Distribution Center (KDC) service fails to start on a read-only
 
 > Windows could not start the Kerberos Key Distribution Center service on Local Computer. Error 1450: Insufficient system resources exist to complete the requested service.
 
-If you use a command such as **repadmin /replicate \<*RODC_Name*> \<*RWDC_Source_DSA_Name*> \<*Naming_Context*> \[/force]** to trigger inbound replication to the RODC from a source domain controller, the command fails and generates the following message:
+If you use a command such as **repadmin /replicate** to trigger inbound replication to the RODC from a source domain controller, the command fails and generates the following message:
 
 > DsReplicaSync() failed with status 6 (0x6):  
 > The handle is invalid.
