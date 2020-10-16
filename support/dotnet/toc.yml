@@ -4,6 +4,9 @@
 - name: .NET Framework
   href: ./framework/toc.yml
 
+- name: Navigate XML with XPathNavigator class
+  href: navigate-xml-xpathnavigator-class.md
+
 - name: WCF
   items:
   - name: Async services use wrong impersonation

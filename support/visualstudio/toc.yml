@@ -20,6 +20,16 @@
     href: ./silverlight/slsvcutil-tool-crashes.md
 - name: Visual Basic
   items:
+  - name: Language or compilers
+    items:
+    - name: Check program running
+      href: ../dotnet/visual-basic/check-if-program-is-running.md
+    - name: Create a DCOM client server application
+      href: ../dotnet/visual-basic/create-dcom-clientserver-application.md
+    - name: Create SQL Server database programmatically
+      href: ../dotnet/visual-basic/create-database-programmatically.md
+    - name: Scroll position is not maintained
+      href: ../dotnet/visual-basic/scroll-position-not-maintained.md
   - name: Examine CheckBox values in a DataGrid column
     href: ../dotnet/visual-basic/checkbox-control-values-datagrid.md
   - name: NullReferenceException when you use CommandBuilder
