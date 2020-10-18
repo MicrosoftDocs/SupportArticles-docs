@@ -72,3 +72,14 @@
 | 10/6/2020 | [Modern Authentication configuration requirements for transition](/exchange/troubleshoot/administration/modern-authentication-configuration) | modified |
 | 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/exchange/troubleshoot/index) | modified |
 | 10/9/2020 | [Proxy address is already being used" error message in Exchange Online](/exchange/troubleshoot/administration/proxy-address-being-used) | modified |
+
+
+## Week of October 12, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/12/2020 | [Exchange Server 2019 setup does not run as expected if started from PowerShell using Setup.exe](/exchange/troubleshoot/setup/ex2019-setup-does-not-run-correctly-started-powershell) | modified |
+| 10/15/2020 | [Exchange Server 2019 setup does not run as expected if started from PowerShell using Setup.exe](/exchange/troubleshoot/setup/ex2019-setup-does-not-run-correctly-started-powershell) | modified |
+| 10/15/2020 | [Validation errors for a mailbox archive GUID for Microsoft 365 users](/exchange/troubleshoot/administration/validation-errors-for-mailbox-archive-guid) | modified |
+| 10/15/2020 | [Error (Cannot save changes made to an item to store) while migrating mailbox to Exchange Online](/exchange/troubleshoot/migration/save-changes-made-item-store-migrate-mailbox) | modified |
