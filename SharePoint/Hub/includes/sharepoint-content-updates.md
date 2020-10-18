@@ -94,3 +94,10 @@
 |------|------------|--------|
 | 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/sharepoint/troubleshoot/index) | modified |
 | 10/8/2020 | [Everyone except external users group is removed on Office 365](/sharepoint/troubleshoot/sharing-and-permissions/everyone-except-external-user-removed) | modified |
+
+
+## Week of October 12, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
