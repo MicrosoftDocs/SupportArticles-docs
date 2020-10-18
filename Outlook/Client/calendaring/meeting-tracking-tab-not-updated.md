@@ -74,7 +74,7 @@ To determine whether the meeting response was processed by something other than 
       > If the profile that you chose in step 5C connects to your Exchange mailbox in Online mode, expand **Top of Information Store** instead of **IPM_SUBTREE**.    
    6. Double-click the **Inbox** folder to open a new window that displays its contents.    
    7. Find the meeting response item that the attendee sent to you, and then select it. Do not double-click to open it.    
-   8. In the bottom pane, locate the **PR_PROCESSED **property in the **Property name(s)** column.
+   8. In the bottom pane, locate the **PR_PROCESSED** property in the **Property name(s)** column.
 
       - If the meeting response has a PR_PROCESSED property, and if the property is set to **True**, the meeting response was processed by another client, device, or third-party application. Therefore, when you start Outlook, it considers that this item was already processed and does not update the tracking on the calendar item.    
       - If the meeting response does not have the PR_PROCESSED property, the meeting response has not been processed.         
