@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;310996
 
 ## Summary
 
-The information covered in this article is provided in part by: [Microsoft Press](https://mspress.microsoft.com/).
+The information covered in this article is provided in part by: [Microsoft Press](https://www.microsoftpressstore.com/).
 
 This article is part 1 of a series of two articles that explain Active Directory Services and Windows 2000 or Windows Server 2003 domains. To view part 2, click the following link:
 
@@ -61,8 +61,7 @@ The following topics are covered in part 2:
     - Cataloging the Enterprise (the Global Catalog)
 - Conclusions
 
-This information is an excerpt from the *Active Directory Services for Microsoft Windows 2000 Technical Reference* book, Chapter 3: Active Directory Services and Windows 2000 Domains. Learn more about
-[Active Directory Services for Microsoft Windows 2000 Technical Reference](https://www.microsoft.com/mspress/books/sampchap/3173.aspx#samplechapter). It has been updated to include information about Microsoft Windows Server 2003.
+This information is an excerpt from the *Active Directory Services for Microsoft Windows 2000 Technical Reference* book, Chapter 3: Active Directory Services and Windows 2000 Domains.
 
 ## More information
 
@@ -186,10 +185,6 @@ The information in this article is an excerpt from the *Active Directory Service
 
 ![Picture of Active Directory Services for Microsoft Windows 2000 Technical Reference book](./media/active-directory-services-domains-part-one/mspresspilot-ads-2000-reference-book.jpg)
 
-Learn more about
-
-[Active Directory Services for Microsoft Windows 2000 Technical Reference](https://www.microsoft.com/mspress/books/sampchap/3173.aspx#samplechapter) 
-
 For more information about this publication and other Microsoft Press titles, see
 
-[https://mspress.microsoft.com](https://mspress.microsoft.com).
+[https://www.microsoftpressstore.com/](https://www.microsoftpressstore.com/).

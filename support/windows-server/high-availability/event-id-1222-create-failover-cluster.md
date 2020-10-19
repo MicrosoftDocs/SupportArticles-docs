@@ -48,5 +48,4 @@ To improve the level of protection and ability to recover from the accidental de
 
 [How to configure accounts in Active Directory](https://technet.microsoft.com/library/cc731002%28v=ws.10%29.aspx) 
 For more information about the failover cluster security model, click the following article number to view the article in Microsoft Knowledge Base: [947049](https://support.microsoft.com/help/947049) Description of the failover cluster security model in Windows Server 2008
-For more information about Cluster Computer Objects, go to the following MSDN website: [How to identify stale Cluster Computer objects](https://blogs.msdn.com/b/clustering/archive/2011/08/17/10197069.aspx) 
-For more information about the Protect object from accidental deletion option, go to the following TechNet website: [How to preventing unwanted or accidental deletions and how to restore deleted objects in Active Directory](https://blogs.technet.com/b/abizerh/archive/2009/06/09/preventing-unwanted-accidental-deletions-and-restore-deleted-objects-in-active-directory.aspx)
+For more information about Cluster Computer Objects, go to the following MSDN website: [How to identify stale Cluster Computer objects](https://techcommunity.microsoft.com/t5/failover-clustering/identifying-stale-cluster-computer-objects/ba-p/371687)

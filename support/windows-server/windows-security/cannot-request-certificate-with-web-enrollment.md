@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2885758
 
 ## Symptoms
 
-When you browse the [CA website](https://cawebsiteurl/) to request a certificate, and click on "Request a certificate" and then click on "Create and submit a request to this CA", you get the following message:
+When you browse the CA website to request a certificate, and click on "Request a certificate" and then click on "Create and submit a request to this CA", you get the following message:
 
 > In order to complete certificate enrollment, the web site for the CA must be configured to use HTTPS authentication 
 

@@ -31,6 +31,6 @@ This issue occurs because the removal operation tries to contact the server in o
 
 ## Resolution
 
-To safely remove the server from your RDS deployment, contact Microsoft Customer Support Services. For a complete list of Microsoft Customer Support Services telephone numbers and information about support costs, visit the following Microsoft website: [Contact Us](/contactus/?ws=support) 
+To safely remove the server from your RDS deployment, contact Microsoft Customer Support Services. For a complete list of Microsoft Customer Support Services telephone numbers and information about support costs, visit the following Microsoft website: [Contact Us](https://support.microsoft.com/home/expcontact/) 
 > [!IMPORTANT]
->  We do not recommend that you manually edit the database that is used by the RDS deployment.
+> We do not recommend that you manually edit the database that is used by the RDS deployment.
