@@ -73,10 +73,10 @@ Other Registries:
 
 [.CA Domain - CA*net Canadian IP Address Registry and the Canadian Domain Name Registry.](https://www.cadns.ca/) 
 
-[NIC-Mexico - Mexico Registration Mexico](https://www.nic.mx/) 
+[NIC-Mexico - Mexico Registration Mexico](https://www.nicmexico.mx/) 
 
 [RIPE NCC Europe Registration](https://www.ripe.net/) 
 
 [APNIC (Asia Pacific Network Information Center)](https://www.apnic.net/) 
 
-Some information above was provided by Network Solutions, Inc., the sponsor of InterNIC registration services. Additional information is available on the [InterNIC web page](https://www.internic.net) and RFC 1400 - "Transition and Modernization of the Internet Registration Service" (https://www.faqs.org/rfc/rfc1400.txt)
+Some information above was provided by Network Solutions, Inc., the sponsor of InterNIC registration services. Additional information is available on the [InterNIC web page](https://www.internic.net) and [RFC 1400 - "Transition and Modernization of the Internet Registration Service"](https://tools.ietf.org/html/rfc1400).

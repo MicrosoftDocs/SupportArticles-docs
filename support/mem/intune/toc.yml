@@ -6,8 +6,10 @@
     href: configure-app-protection-access-denied.md
   - name: Access denied for app protection options
     href: app-protection-options-access-denied.md
-  - name: App installation failed error
+  - name: Android APK app installation fails
     href: app-installation-failed-error.md
+  - name: App installation error codes reference
+    href: app-install-error-codes.md
   - name: Apps don't appear as Available
     href: apps-appear-unavailable.md
   - name: Can't attach photos due to IO error
@@ -52,8 +54,16 @@
     href: set-up-app-protection-policies-ios-device.md
   - name: Support Tip - Deployment, delivery, and processing of a Win32 application
     href: develop-deliver-working-win32-app-via-intune.md
+  - name: Support Tip - Build software inventory using Power BI
+    href: build-software-inventory-power-bi.md
   - name: Support tip - Devices enrolled in Intune MAM policy are prompted to enroll
     href: device-enroll-intune-app-management-error.md
+  - name: Troubleshoot app installation issues
+    href: troubleshoot-app-install.md
+  - name: Troubleshoot app protection policy deployment
+    href: troubleshoot-app-protection-policy-deployment.md
+  - name: Troubleshoot mobile application management
+    href: troubleshoot-mam.md
 - name: Co-management with Configuration Manager
   items:
   - name: Troubleshoot co-management auto-enroll
@@ -90,22 +100,32 @@
     href: deploy-oma-uris-to-target-csp-via-intune.md
   - name: Troubleshoot CSP custom settings
     href: troubleshoot-csp-custom-settings.md
+  - name: Troubleshoot email profile issues
+    href: troubleshoot-email-profiles-in-microsoft-intune.md
+  - name: Troubleshoot policies and profiles
+    href: troubleshoot-policies-in-microsoft-intune.md
+  - name: Troubleshoot Wi-Fi profiles
+    href: troubleshoot-wi-fi-profiles.md
   - name: Users can't log on to Windows 10 computers with multi-app kiosk profile assigned
     href: users-cannot-logon-windows-multi-app-kiosk.md
   - name: Windows feature updates are not offered
     href: windows-feature-updates-never-offered.md
 - name: Device enrollment
   items:
-  - name: Android enrollment
-    items:
-    - name: End-to-end guide for configuring Android enterprise devices
-      href: configure-android-enterprise-devices-intune.md
-    - name: Device ownership is changed to Corporate
-      href: device-ownership-changed-to-corporate.md
   - name: Can't update enrollment
     href: cannot-update-enrollment.md
   - name: Devices try to enroll in a canceled Intune subscription
     href: devices-enroll-canceled-intune-subscription.md
+  - name: Troubleshoot device enrollment
+    href: troubleshoot-device-enrollment-in-intune.md
+  - name: Android enrollment
+    items:
+    - name: Device ownership is changed to Corporate
+      href: device-ownership-changed-to-corporate.md
+    - name: End-to-end guide for configuring Android enterprise devices
+      href: configure-android-enterprise-devices-intune.md
+    - name: Troubleshoot Android Enterprise device enrollment
+      href: troubleshoot-android-enrollment.md
   - name: iOS/iPadOS enrollment
     items:
     - name: Auto-enrollment doesn't start on Apple DEP devices
@@ -114,6 +134,8 @@
       href: dep-enrollment-xpc-type-error.md
     - name: Keychain error -25244 during enrollment
       href: keychain-error-enrolling-macos-devices.md
+    - name: Troubleshoot iOS/iPadOS device enrollment
+      href: troubleshoot-ios-enrollment-errors.md
   - name: Windows enrollment
     items:
     - name: 80180002b during Windows 10 Group Policy-based auto-enrollment
@@ -132,6 +154,8 @@
       href: azure-ad-device-registration-autopilot.md
     - name: Support Tip - Comparison of methods for enrolling a Windows device in Intune
       href: enroll-devices-in-intune-tip.md
+    - name: Troubleshoot Windows device enrollment
+      href: troubleshoot-windows-enrollment-errors.md
     - name: Understand and troubleshoot the Enrollment Status Page
       href: understand-troubleshoot-esp.md
     - name: Unexpected error signing in to Intune Connector
@@ -146,6 +170,8 @@
     href: intune-managed-ios-device-backup-encrypted.md
   - name: RemoteWipe CSP fails to send a doWipe command
     href: remotewipe-fails-sending-dowipe-command.md
+  - name: Troubleshoot device actions
+    href: troubleshoot-device-actions.md
   - name: UPN listed as None for orphaned devices
     href: orphaned-device-upn-shown-as-none.md
   - name: Windows 10 devices can't sync with Intune
@@ -164,6 +190,8 @@
       href: certificateregistrationsvc-verify-request-error.md
     - name: Devices fail to obtain SCEP certificates
       href: devices-receive-scep-certificates-error-0x80094800.md
+    - name: Intune Certificate Connector events and diagnostic codes
+      href: troubleshoot-certificate-connector-events.md
     - name: Intune Connector Setup Wizard ended prematurely
       href: connector-setup-wizard-ends-prematurely.md
     - name: NDES certificate not installed
@@ -176,8 +204,24 @@
       href: scep-certificate-request-fails.md
     - name: Sign in to Intune NDES Connector error 0x80004003
       href: ndes-connector-signin-error-80004003.md
+    - name: Support Tip - Choose between SCEP and PKCS
+      href: scep-pkcs-certificate-comparison.md
     - name: Troubleshoot PKCS certificate deployment
-      href: troubleshooting-pkcs-certificate-deployment.md
+      href: troubleshoot-pkcs-certificate-profiles.md
+    - name: Troubleshoot SCEP certificate profiles
+      items:
+      - name: Overview
+        href: troubleshoot-scep-certificate-profiles.md
+      - name: Profile deployment to devices
+        href: troubleshoot-scep-certificate-profile-deployment.md
+      - name: Device to NDES server communication
+        href: troubleshoot-scep-certificate-device-to-ndes.md
+      - name: NDES operations
+        href: troubleshoot-scep-certificate-ndes-policy-module.md
+      - name: Certificate delivery to devices
+        href: troubleshoot-scep-certificate-delivery.md
+      - name: Reporting for certificate deployment
+        href: troubleshoot-scep-certificate-reporting.md
     - name: Verify NDES configuration on-premises
       href: verify-ndes-configuration.md
   - name: Conditional Access
@@ -188,12 +232,26 @@
       href: could-not-retrieve-access-token.md
     - name: Intune Exchange Connector version is not supported
       href: exchange-connector-version-not-supported.md
+    - name: Troubleshoot Conditional Access
+      href: troubleshoot-conditional-access.md
+    - name: Troubleshoot the Exchange Connector
+      items:
+      - name: Troubleshoot the Exchange connector
+        href: troubleshoot-exchange-connector.md
+      - name: Common problems with the Exchange connector
+        href: troubleshoot-exchange-connector-common-problems.md
+      - name: Common errors with the Exchange connector
+        href: troubleshoot-exchange-connector-common-errors.md
+    - name: Troubleshoot Jamf Pro integration
+      href: troubleshoot-jamf.md
     - name: Unable to connect or send inventory information
       href: unable-to-connect-send-inventory-information.md
   - name: Error -2016281112 deploying a password policy
     href: error-deploying-password-policy.md
   - name: Secure boot enabled device shows as Not Compliant
     href: secure-boot-enabled-device-shows-not-compliant.md
+  - name: Troubleshoot BitLocker policies
+    href: troubleshoot-bitlocker-policies.md
   - name: Users are prompted to enroll when accessing Office 365 resources
     href: intune-licensed-users-prompted-to-enroll.md
   - name: Windows 10 devices show incorrect compliance status
@@ -204,8 +262,12 @@
     href: assignmentfilter-permissions.md
   - name: Attributes synced by Intune
     href: intune-synced-attributes-list.md
+  - name: Common company resource access error codes
+    href: troubleshoot-company-resource-access-problems.md
   - name: Device-only subscription
     href: device-licenses-introduction.md
+  - name: Endpoint protection common errors
+    href: troubleshoot-endpoint-protection-in-microsoft-intune.md 
   - name: Help and support blade doesn't load
     href: cannot-load-help-and-support-blade.md
   - name: Intune account portal retired
@@ -216,6 +278,8 @@
     href: before-you-call-intune-support.md
   - name: Troubleshooting blade fails to load
     href: troubleshooting-blade-fails-loading.md
+  - name: Troubleshoot software updates
+    href: troubleshoot-software-updates-in-microsoft-intune.md
   - name: Use PowerShell to look up licenses
     href: look-up-intune-licenses.md
 - name: Migration to the Azure Portal

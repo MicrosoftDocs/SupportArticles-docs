@@ -41,12 +41,8 @@ This problem occurs with HP Smart Array SCSI or SAS/SATA Controllers driver HpCI
 
 ## Resolution
 
-To resolve this problem, you need to downgrade the HPCISSS2 driver to 62.24.2.64. 
-
-The HPCISSS2.SYS version 62.24.2.64 is available here: [http://www.hp.com/swpublishing/MTX-9175345236064183975c0c817f](http://www.hp.com/swpublishing/mtx-9175345236064183975c0c817f) 
+To resolve this problem, you need to downgrade the HPCISSS2 driver to 62.24.2.64.
 
 ## More information
 
 This blue screen error occurs because of a portion of the Smart Array firmware that deals with 64-bit command submissions. HP Windows Server 2012 HPCISSS2.SYS driver Version 62.26.0.64 exposes this error condition because it is the first driver to enable 64-bit command addressing feature support.
-
-HP Customer Advisory is located [here](http://h20566.www2.hp.com/portal/site/hpsc/template.page/public/help/docdisplay/?javax.portlet.begcachetok=com.vignette.cachetoken&javax.portlet.endcachetok=com.vignette.cachetoken&javax.portlet.prp_ba847bafb2a2d782fcbb0710b053ce01=wsrp-navigationalstate%3ddocid%253demr_na-c03793656-2%257cdoclocale%253d%257ccalledby%253d&javax.portlet.tpst=ba847bafb2a2d782fcbb0710b053ce01&ac.admitted=1371740522281.876444892.199480143).

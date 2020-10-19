@@ -59,7 +59,3 @@ To resolve this issue, follow these steps:
 
 To temporarily work around this problem, disable the IPSEC Services component, and then restart the domain controller.
 
-## References
-
-For more information about IPsec Block mode. visit the following Microsoft Web site:  
-[https://technet2.microsoft.com/windowsserver/en/library/b0b6adaa-6b38-4952-b055-14559f46e5611033.mspx](https://technet2.microsoft.com/windowsserver/en/library/b0b6adaa-6b38-4952-b055-14559f46e5611033.mspx)

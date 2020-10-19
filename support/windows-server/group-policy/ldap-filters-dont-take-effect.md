@@ -39,7 +39,7 @@ If the hotfix is available for download, there is a "Hotfix download available" 
 
 > [!NOTE]
 > If additional issues occur or if any troubleshooting is required, you might have to create a separate service request. The usual support costs will apply to additional support questions and issues that do not qualify for this specific hotfix. For a complete list of Microsoft Customer Service and Support telephone numbers or to create a separate service request, visit the following Microsoft Web site:  
-[https://support.microsoft.com/contactus/?ws=support](/contactus/?ws=support)
+[https://support.microsoft.com/home/expcontact/](https://support.microsoft.com/home/expcontact/)
 
 > [!NOTE]
 > The "Hotfix download available" form displays the languages for which the hotfix is available. If you do not see your language, it is because a hotfix is not available for that language.
