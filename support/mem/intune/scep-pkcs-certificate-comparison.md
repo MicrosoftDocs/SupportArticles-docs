@@ -12,12 +12,12 @@ ms.prod-support-area-path:
 When you try to access protected company resources, the process generally involves the following phases:
 
 - Authentication: Determining your identity.
-- Authorization: Determining whether you have access to a resource. This process specifies what data you're allowed to access and what you can do with that data.   
+- Authorization: Determining whether you have access to a resource. This process specifies what data you're allowed to access and what you can do with that data.
 
-Typically, authentication for an app, or for a Wi-Fi or VPN connection is done by entering a username and password. To make this process more seamless for users, use certificates for authentication. Using certificates for authentication has the following advantages:
+Typically, users authenticate an app, a Wi-Fi or VPN connection by entering a username and password. To make this process more seamless for users, use certificates for authentication. Using certificates for authentication has the following advantages:
 
 - It provides a more secure authentication.
-- Your users won't have to enter their usernames and passwords.  
+- Your users won't have to enter their credentials.  
 
 > [!NOTE]
 > The certificate that the user uses to prove authenticity must come from a trusted certification authority (CA), such as a trusted third-party CA or an on-premises Microsoft CA.
@@ -25,15 +25,15 @@ Typically, authentication for an app, or for a Wi-Fi or VPN connection is done b
 You can deploy the following kinds of user or device certificates by using Intune:
 
 - Simple Certificate Enrollment Protocol (SCEP)
-- Public Key Cryptography Standards (PKCS). 
+- Public Key Cryptography Standards (PKCS)
 
-Both provide seamless authentication by delivering a certificate from a trusted CA in the intranet to a device that exists anywhere on the internet. 
+Both provide seamless authentication by delivering a certificate from a trusted CA in the intranet to a device that exists anywhere on the internet.
 
-Intune is merely a delivery mechanism that's responsible for providing a certificate from an on-premises CA to devices through the internet. After the certificate is obtained by the device, the device is responsible for using the certificate when to prove its authenticity.
+Intune is merely a delivery mechanism that's responsible for providing a certificate from an on-premises CA to devices through the internet. After the certificate is obtained by the device, the device is responsible for using the certificate to prove its authenticity.
 
 ## SCEP versus PKCS
 
-SCEP was originally developed by Cisco. It's based on the HTTP request and response model, such as the Get and POST methods. The SCEP certificate contains a private key, and the private key is marked as not exportable.
+SCEP was originally developed by Cisco. It's based on the HTTP request-and-response model, such as the Get and POST methods. The SCEP certificate contains a private key, and the private key is marked as not exportable.
 
 PKCS #12 is the successor to Microsoft PFX. The terms *PKCS #12* and *PFX* are sometimes used interchangeably. In contrary to SCEP, the PKCS certificate private key is exportable.
 
