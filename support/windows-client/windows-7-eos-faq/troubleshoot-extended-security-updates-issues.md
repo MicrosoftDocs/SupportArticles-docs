@@ -337,8 +337,8 @@ Collapsible element body
 
 This section describes problems that you might encounter when you use VAMT online or proxy activation. When you do this, use the following VAMT proxy activation URLs:
 
-- https://activation.sls.microsoft.com/BatchActivation/BatchActivation.asmx​
-- https://go.microsoft.com/fwlink/?LinkId=82160 (This FWLink redirects to the preceding URL.)​
+- `https://activation.sls.microsoft.com/BatchActivation/BatchActivation.asmx​`
+- `https://go.microsoft.com/fwlink/?LinkId=82160` (This FWLink redirects to the preceding URL.)​
 ​
 Alternatively, include the following domains in the computer's allow list:
 

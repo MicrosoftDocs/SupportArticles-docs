@@ -38,18 +38,15 @@ If the datagram is fragmented, then the TCP driver does not fill the second Memo
 
 ### Windows NT Server or Workstation 4.0
 
-To resolve this problem, obtain the latest service pack for Windows NT 4.0 or the individual software update. For information on obtaining the latest service pack, please go to:
-
-- [152734](/EN-US/help/152734) how to obtain the latest windows nt 4.0 service pack  
+To resolve this problem, obtain the latest service pack for Windows NT 4.0 or the individual software update.
 
 For information on obtaining the individual software update, contact Microsoft Product Support Services. For a complete list of Microsoft Product Support Services phone numbers and information on support costs, please go to the following address on the World Wide Web:
 
-[https://support.microsoft.com/default.aspx?scid=fh;EN-US;CNTACTMS](/default.aspx?scid=fh;en-us;cntactms)  
+[Global Customer Service phone numbers](https://support.microsoft.com/help/4051701)  
 
 ### Windows NT Server 4.0, Terminal Server Edition
 
-To resolve this problem, obtain the latest service pack for Windows NT Server 4.0, Terminal Server Edition. For additional information, click the following article number to view the article in the Microsoft Knowledge Base:  
- [152734](/EN-US/help/152734) How to Obtain the Latest Windows NT 4.0 Service Pack  
+To resolve this problem, obtain the latest service pack for Windows NT Server 4.0, Terminal Server Edition.
 
 ## Status
 

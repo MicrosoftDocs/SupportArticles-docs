@@ -99,5 +99,6 @@ To enable the Volume Shadow Copy service's debug tracing features in Windows Ser
 
 28. Quit Registry Editor.
 
-For more information about the Volume Shadow Copy service, visit the following Microsoft Web site:  
-[https://technet2.microsoft.com/windowsserver/en/library/B45C7507-B7AD-420E-A981-C273C2012A831033.mspx](https://technet2.microsoft.com/windowsserver/en/library/b45c7507-b7ad-420e-a981-c273c2012a831033.mspx)
+For more information about the Volume Shadow Copy service, visit the following Microsoft Web site:
+
+[Volume Shadow Copy Service](/windows-server/storage/file-server/volume-shadow-copy-service)
