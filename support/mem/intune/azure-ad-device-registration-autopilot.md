@@ -9,11 +9,11 @@ ms.prod-support-area-path: Windows enrollment
 ---
 # Support Tip: Azure AD device registration and Windows Autopilot
 
-This article provides some tips for troubleshooting Azure AD device registration and Windows Autopilot issues.
+This article contains tips for troubleshooting Azure Active Directory (Azure AD) device registration and Windows Autopilot issues.
 
 ## Azure AD device registration
 
-By connecting devices to Azure Active Directory (Azure AD), the end users can easily access the organization's assets, and IT administrators can easily control and manage the connected devices to protect the organization's assets. For more information about the benefits, see [Do I really need to connect my device to Azure AD](https://azureera.com/do-i-really-need-to-connect-my-device-to-azure-ad). For more information about device identity, see [What is a device identity](/azure/active-directory/devices/overview).
+By connecting devices to Azure AD, users can easily access the organization's assets, and IT administrators can easily control and manage the connected devices to protect the organization's assets. For more information about the benefits, see [Do I really need to connect my device to Azure AD?](https://azureera.com/do-i-really-need-to-connect-my-device-to-azure-ad) For more information about device identity, see [What is a device identity?](/azure/active-directory/devices/overview)
 
 To get a device in Azure AD, you have the following options:
 
@@ -23,11 +23,11 @@ To get a device in Azure AD, you have the following options:
 
 To troubleshoot common device registration issues, use the [Device Registration Troubleshooter Tool](https://aka.ms/DevRegTS).
 
-The following screenshot is the main menu of the tool:
+The following screenshot shows the main menu of the tool:
 
 :::image type="content" source="media/azure-ad-device-registration-autopilot/device-registration-troubleshooter.png" alt-text="Troublehooter main menu":::
 
-For example, if the device health status is **Pending**, select **5** in the menu. If the device doesn't have the Primary Refresh Token (PRT) issued, select **6** in the menu.
+For example, if the device health status is **Pending**, select **5** on the menu. If the device doesn't have the Primary Refresh Token (PRT) issued, select **6** on the menu.
 
 For more information about Azure AD device registration, see the following articles:
 
@@ -40,7 +40,7 @@ For more information about Azure AD device registration, see the following artic
 
 You can use [Windows Autopilot](/mem/autopilot/windows-autopilot) to set up new devices and reset devices. 
 
-To add Windows Autopilot devices in Intune, import a CSV file with the devices information. To import the CSV file, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Import**.
+To add Windows Autopilot devices in Microsoft Intune, import a CSV file that contains the device information. To import the CSV file, open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Import**.
 
 You can use the [Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) PowerShell script to generate the CSV file. You can either manually download the script or run the following command to install the script:
 
@@ -57,7 +57,7 @@ To troubleshoot Windows Autopilot issues, first [collect logs](understand-troubl
 -	TpmHliInfo_Output.txt
 -	microsoft-windows-provisioning-diagnostics-provider-admin.evtx
     
-    This file contains some informational messages about the Enrollment Status Page (ESP), such as app installation failures or timeout. Here are some examples:
+    This file contains some informational messages about the Enrollment Status Page (ESP), such as app installation failures or timeouts. Here are some examples:
 
 	- AutoPilotGetOobeSettingsOverride succeeded:  OOBE setting = AUTOPILOT_OOBE_SETTINGS_AAD_JOIN_ONLY; state = enabled.
 	- CloudExperienceHost Web App Event 1. Name: 'UnifiedEnrollment_ProvisioningProgressPage_ApplicationsFailed'.
