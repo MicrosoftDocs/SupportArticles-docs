@@ -18,6 +18,10 @@
     href: ./silverlight/run-configuration-tool.md
   - name: Slsvcutil.exe crashes
     href: ./silverlight/slsvcutil-tool-crashes.md
+- name: Subscriptions
+  items:
+  - name: Opt out of dev essentials
+    href: ./subscriptions/opt-out-of-dev-essentials.md
 - name: Visual Basic
   items:
   - name: Examine CheckBox values in a DataGrid column
