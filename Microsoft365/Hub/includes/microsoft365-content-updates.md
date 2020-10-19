@@ -93,3 +93,11 @@
 | 10/6/2020 | [No Add-ins loaded due to group policy settings](/office365/troubleshoot/group-policy/office-add-in-not-loaded) | modified |
 | 10/6/2020 | [O365 reports show anonymous instead of actual user names](/office365/troubleshoot/miscellaneous/reports-show-anonymous-user-name) | modified |
 | 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/office365/troubleshoot/index) | modified |
+
+
+## Week of October 12, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/15/2020 | [Unable to sign in to Office 365, Azure, or Intune](/office365/troubleshoot/sign-in/sign-in-to-office-365-azure-intune) | modified |
