@@ -77,7 +77,7 @@ To resolve this issue, clear the file system cache on all servers in the server 
 
 6. Double-click the Cache.ini file.    
 
-7. On the **Edit **menu, click **Select All**.    
+7. On the **Edit** menu, click **Select All**.    
 
 8. On the **Edit** menu, click **Delete**.    
 

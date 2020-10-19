@@ -24,18 +24,18 @@ description: Resolves a multi-factor authentication error in a Teams form.
 
 ## Symptom
 
-You receive an error when using multi-factor (or modern) authentication in Microsoft Teams forms. 
+You receive an error when using multi-factor (or modern) authentication in Microsoft Teams forms.
 
 ## Cause
 
-Forms authorization is not enabled. 
+Forms authorization is not enabled.
 
 ## Resolution
 
-Use the web app for authentication. Make sure the following switch is set: 
+Use the web app for authentication. Make sure the following switch is set:
 
-```
-Set -MsolDomainFederationSettings -DomainName yourdomainhere -PreferredAuthenticationProtocol WsFed -SupportsMfa $False -PromptLoginBehavior Disabled.
+```powershell
+Set-MsolDomainFederationSettings -DomainName yourdomainhere -PreferredAuthenticationProtocol WsFed -SupportsMfa $False -PromptLoginBehavior Disabled.
 ```
 
 ## More information
