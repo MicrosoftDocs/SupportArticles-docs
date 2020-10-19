@@ -63,4 +63,4 @@ You must restart the computer to complete this operation.
 ## More information
 
 - [Enabling BitLocker by Using the Command Line](/previous-versions/windows/it-pro/windows-7/dd894351(v=ws.10))
-- [Using the BitLocker Drive Preparation Tool for Windows 7](previous-versions/windows/it-pro/windows-7/dd875534(v=ws.10))
+- [Using the BitLocker Drive Preparation Tool for Windows 7](/previous-versions/windows/it-pro/windows-7/dd875534(v=ws.10))
