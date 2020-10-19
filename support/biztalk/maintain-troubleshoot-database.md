@@ -201,13 +201,14 @@ Additionally, you can use the BHM tool output to determine which tables are the 
 |dta_MessageInOutEvents|This table stores tracked event messages in the BizTalkDTADb database. These tracked event messages include message context information.|
 |dta_ServiceInstanceExceptions|This table stores error information for any suspended service instance in the BizTalkDTADb database.|
 |||
+
 Consider the following scenarios.
 
 - **HostNameQ_Suspended tables**
 
   If the `HostNameQ_Suspended` tables have many records, the tables could be valid suspended instances that appear in **Group Hub** or in HAT. These instances can be terminated. If these instances do not appear in **Group Hub** or in HAT, the instances are probably caching instances or orphaned routing failure reports. When suspended instances are terminated, the items in this table and their associated rows in the Spool and Instances tables are cleaned up.
 
-In this scenario, handle the suspended instances by resuming them or terminating them. The BHM tool can also be used.
+  In this scenario, handle the suspended instances by resuming them or terminating them. The BHM tool can also be used.
 
 - **HostNameQ tables**
 
@@ -221,7 +222,7 @@ In this scenario, handle the suspended instances by resuming them or terminating
 
 - **Spool, Parts, and Fragments tables**
 
-If the Spool, Parts, and Fragments tables have many records, many messages are currently active, dehydrated, or suspended. Depending on the size, the number of parts, and the fragmentation settings in these tables, a single message may spawn all these tables. Each message has exactly one row in the Spool table and at least one row in the Parts table.
+    If the Spool, Parts, and Fragments tables have many records, many messages are currently active, dehydrated, or suspended. Depending on the size, the number of parts, and the fragmentation settings in these tables, a single message may spawn all these tables. Each message has exactly one row in the Spool table and at least one row in the Parts table.
 
 - **Instances table**
 

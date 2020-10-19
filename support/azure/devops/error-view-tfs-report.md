@@ -3,6 +3,7 @@ title: Error when you view a report
 description: This article provides a resolution for the problem that occurs when you attempt to view a TFS report in SQL Server Reporting Services.
 ms.date: 09/25/2020
 ms.prod-support-area-path: Server Administration
+ms.prod: devops
 ---
 # Error browsing Microsoft Team Foundation Server reports
 
