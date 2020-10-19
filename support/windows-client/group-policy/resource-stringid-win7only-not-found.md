@@ -34,7 +34,7 @@ Assume that you update the ADML and ADMX file to the Windows 10, version 1803 ve
 
 This is a known issue. There are text updates in the Windows 10, version 1803 version of SearchOCR.ADML. However, when the changes were made, this line was cut-out of the new ADML:
 
-> \<string id="Win7Only">Microsoft Windows 7 or later\</string>
+`\<string id="Win7Only">Microsoft Windows 7 or later\</string>`
 
 ## Resolution
 
@@ -61,6 +61,6 @@ To update SearchOCR.adml, follow these steps:
 5. Add a blank line. Line 26 should now be blank.
 6. On the blank line 26 paste this text:
 
-    > \<string id="Win7Only">Microsoft Windows 7 or later\</string>
+    `\<string id="Win7Only">Microsoft Windows 7 or later\</string>`
 
 7. Save the file.

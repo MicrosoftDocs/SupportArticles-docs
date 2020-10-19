@@ -43,6 +43,7 @@ To resolve this issue:
 
     > [!NOTE]
     > For Windows Server 2003, click **Start**, point to **Control Panel**, and then point to **Network Connections**.
+
 2. Right-click the appropriate dial-up networking connection, and then click **Properties**.
 3. Click the **Networking** tab, and then click **Settings**.
 4. Click to clear the **Negotiate multi-link for single link connections** check box (if it's selected).
