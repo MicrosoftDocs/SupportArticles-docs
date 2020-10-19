@@ -9,7 +9,7 @@ ms.prod-support-area-path:
 This article describes how to opt out of Visual Studio Dev Essentials.
 
 _Original product version:_ &nbsp; Visual Studio Dev Essentials  
-_Original KB number:_ &nbsp; 316787
+_Original KB number:_ &nbsp; 4013962
 
 If you wish to opt out of Visual Studio Dev Essentials, please follow these steps:
 
@@ -35,4 +35,4 @@ If you wish to opt out of Visual Studio Dev Essentials, please follow these step
 
 For More Information About Visual Studio Dev Essentials click [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/).
 
-![Visual Studio](./media/opt-out-of-essentials/visual-studio-image.png)
+![Visual Studio](./media/opt-out-of-dev-essentials/visual-studio-image.png)
