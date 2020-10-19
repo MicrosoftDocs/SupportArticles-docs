@@ -5,13 +5,12 @@ ms.date: 09/25/2020
 ms.prod-support-area-path: Management and Operations
 ms.reviewer: mandia
 ms.topic: how-to
-ms.prod: biztalk-server
 ---
 # Maintain and troubleshoot BizTalk Server databases
 
 This article provides detailed information about how to maintain and troubleshoot BizTalk Server databases.
 
-_Original product version:_ &nbsp; BizTalk Server  
+_Original product version:_ &nbsp; BizTalk Server databases  
 _Original KB number:_ &nbsp; 952555
 
 ## Summary
@@ -32,9 +31,9 @@ Microsoft BizTalk Server databases and the health of the databases are important
 
 This article describes how to maintain BizTalk Server databases and how to troubleshoot BizTalk Server database issues.
 
-## You must disable the auto update Statistics and auto create Statistics options
+## You must disable the auto update statistics and auto create statistics options
 
-You must disable the `auto create statistics` and `auto update statistics` options on the `BizTalkMsgBoxDb` database. To determine whether these settings are disabled, execute the following stored procedures in SQL Server:
+You must keep the `auto create statistics` and `auto update statistics` options disabled on the `BizTalkMsgBoxDb` database. To determine whether these settings are disabled, execute the following stored procedures in SQL Server:
 
 ```sql
 exec sp_dboption 'BizTalkMsgBoxDB', 'auto create statistics'
@@ -77,17 +76,17 @@ Typically, locks and blocks occur in a BizTalk Server environment. However, thes
 
 ## You may experience issues with large databases or tables
 
-We have seen that when the `BizTalkMsgBoxDb` database is larger than 5 GB, performance problems can occur. Ideally, the `BizTalkMsgBoxDb` database should not be holding any data. The `BizTalkMsgBoxDb` database should be considered a buffer until the data is processed or moved to the BizTalkDTADb database.
+We have seen that when the `BizTalkMsgBoxDb` database is larger, performance problems can occur. Ideally, the `BizTalkMsgBoxDb` database should not be holding any data. The `BizTalkMsgBoxDb` database should be considered a buffer until the data is processed or moved to the BizTalkDTADb or BAM database.
 
 An environment that uses a powerful SQL Server at the back end and many long-running orchestrations may have a `BizTalkMsgBoxDb` database that is larger than 5 GB. A high-volume environment that uses no long-running orchestrations should have a `BizTalkMsgBoxDb` database that is much smaller than 5 GB.
 
-The BizTalkDTADb database does not have a set size. However, if performance decreases, the database is probably too large. Typically, 15 GB to 20 GB is considered too large. When you have large BizTalk Server databases, you may experience the following issues:
+The BizTalkDTADb database does not have a set size. However, if performance decreases, the database is probably too large. For some customers 20 GB may be considered too large. while others with very powerful SQL server running with many CPUs, lots of memory and very fast network and storage may run fine with 200 GB. When you have large BizTalk Server databases, you may experience the following issues:
 
 - The `BizTalkMsgBoxDb` database continues to grow. However, both the log file and the data size remain large.
 
 - BizTalk Server takes a longer time than usual to process even a simple message flow scenario.
 
-- Health and Activity Tracking (HAT) queries take a longer time than usual and may time out.
+- BizTalk admin console or Health and Activity Tracking (HAT) queries take a longer time than usual and may time out.
 
 - The database log file is never truncated.
 
@@ -111,7 +110,7 @@ By default, tracking is enabled on the default host. BizTalk requires that the A
 
 We recommend that you dedicate one host to tracking. To allow for TDDS to maintain new tracking events in high-volume scenarios, create multiple instances of a single tracking host. No more than one tracking host should exist.
 
-There can be too many rows in a table. There is no set number of rows that are too many. Additionally, this number of rows varies by what kind of data is stored in the table. For example, a `dta_DebugTrace` table that has more than 1 million rows probably has too many rows. A **HostName** Q_Suspended table that has more than 200,000 rows probably has too many rows.
+There can be too many rows in a table. There is no set number of rows that are too many. Additionally, this number of rows varies by what kind of data is stored in the table. For example, a `dta_DebugTrace` table that has more than 1 million rows probably has too many rows. A **HostNameQ_Suspended** table that has more than 200,000 rows probably has too many rows.
 
 ## Use the correct BizTalk SQL Server Agent jobs
 
@@ -131,35 +130,16 @@ All BizTalk SQL Server Agent jobs except the `MessageBox_Message_ManageRefCountL
 
 Service instances can be suspended (resumable) or suspended (not resumable). These service instances may be Messaging, Orchestration, or Port.
 
-These service instances can make the BizTalkMsgBoxDb database grow unnecessarily and can be terminated. The following table lists what method can be used, depending on the BizTalk version:
+These service instances can make the BizTalkMsgBoxDb database grow unnecessarily and can be terminated. You can use the Group Hub to query, resume or terminate messages. You can also use Terminate.vbs script or BizTalk Health Monitor (BHM) tool to query, purge and maintain BizTalk databases. In some situations there can be orphaned or zombie messages left  in the system. The BHM tool can help to correct these situations.
 
-|Version|Group Hub|HAT|Terminate.vbs|Terminator Tool|
-|---|---|---|---|---|
-|BizTalk Server 2010|Yes|No|Yes|Yes|
-|BizTalk Server 2009|Yes|No|Yes|Yes|
-|BizTalk Server 2006 R2|Yes|Yes|Yes|Yes|
-|BizTalk Server 2006|Yes|Yes|Yes|Yes|
-|BizTalk Server 2004|No|Yes|Yes|Yes|
-||||||
-
-For more information about the Terminate.vbs script, visit the following MSDN website: [Removing Suspended Service Instances](/biztalk/core/technical-reference/removing-suspended-service-instances)
+For more information about the Terminate.vbs script, see [Removing Suspended Service Instances](/biztalk/core/technical-reference/removing-suspended-service-instances).
 
 Caching instances do not appear in the **Group Hub** page, and you cannot suspend or terminate them. This restriction is a common cause of table growth. To prevent new zombie messages for the cache service instances in BizTalk Server 2006, install the hotfix in Microsoft Knowledge Base article 936536. This issue is fixed in BizTalk Server 2006 R2 and later versions.
 
 > [!NOTE]
 > A zombie message is a message that was routed but not consumed.
 
-When a BizTalk Server host instance terminates, caching instances may not be removed. To resolve this behavior in BizTalk Server 2006, install the hotfix in Microsoft Knowledge Base article 944426. In BizTalk Server 2006 R2, install BizTalk 2006 R2 Service Pack 1. This issue is fixed in BizTalk Server 2009 and later versions.
-
-Another common issue is that Routing Failure Reports (RFRs) may build up in the **BizTalkHost** Q and **BizTalkHost** Q_Suspended tables. The RFRs are not removed, and this behavior may cause the `BizTalkMsgBoxDb` database to grow. To address this issue in BizTalk Server 2006, install the hotfix in Microsoft Knowledge Base article 941690. This issue is fixed in BizTalk Server 2006 R2 and later versions.
-
-The terms "orphan messages" and "zombie messages" are frequently used interchangeably.
-
-An orphan message is a message that does not have an associated instance. For example, a routing failure report is an orphan message.
-
-A zombie message is a message that was routed but not consumed. For example, a message was delivered to a convoy orchestration. However, the convoy orchestration went down another code path. The orchestration instance finishes. The message is discarded and is now known as a zombie message.
-
-For a description of zombie messages, see [BizTalk Core Engine's WebLog](/archive/blogs/biztalk_core_engine/).
+For a description of zombie messages, visit the following MSDN website: [BizTalk Core Engine's WebLog](/archive/blogs/biztalk_core_engine/)
 
 ## You may experience SQL Server and BizTalk Server performance issues
 
@@ -171,9 +151,9 @@ BizTalk Server makes hundreds of short, quick transactions to SQL Server within 
 
 - [How to troubleshoot SQL Server performance issues](https://support.microsoft.com/help/298475)
 
-## Best Practices in BizTalk Server
+## Best practices in BizTalk Server
 
-Start SQL Server Agent on the SQL Server. When the SQL Server Agent is stopped, the built-in BizTalk SQL Server Agent jobs that are responsible for database maintenance cannot run. This behavior causes database growth, and this growth may cause performance issues. BizTalk Server database maintenance has greatly improved in BizTalk Server 2004 Service Pack 2 (SP2) and later versions.
+Start SQL Server Agent on the SQL Server. When the SQL Server Agent is stopped, the built-in BizTalk SQL Server Agent jobs that are responsible for database maintenance cannot run. This behavior causes database growth, and this growth may cause performance issues.
 
 Put the SQL Server LDF and MDF files on separate drives. When the LDF and MDF files for the `BizTalkMsgBoxDb` and BizTalkDTADb databases are on the same drive, disk contention can occur.
 
@@ -183,7 +163,7 @@ Typically, smaller transaction logs cause better performance. To keep the transa
 
 The `sp_ForceFullBackup` stored procedure in the BizTalkMgmtDb database can also be used to help perform an ad-hoc full backup of the data and log files. The stored procedure updates the adm_ForceFullBackup table with a value 1. The next time the Backup BizTalk Server job runs, a full database backup set is created.
 
-The BizTalk Server Best Practices Analyzer (BPA) can be used to evaluate an existing BizTalk Server deployment. The BPA performs numerous database-related checks.
+BizTalk Health Monitor (BHM) tool can be used to evaluate an existing BizTalk Server deployment. BHM performs numerous database-related checks.
 
 ## Troubleshooting
 
@@ -195,17 +175,17 @@ All the BizTalk SQL Server Agent jobs except the `MessageBox_Message_ManageRefCo
 
 If a failure occurs, use the **View History** option in SQL Server to view the error information, and then troubleshoot the failure accordingly. Remember that the `MessageBox_Message_ManageRefCountLog_BizTalkMsgBoxDb` SQL Server Agent job runs infinitely. Therefore, you should only be concerned if the job history reports that the job constantly fails and restarts.
 
-## Step 2: Use the MsgBoxViewer tool
+## Step 2: Use the BizTalk Health Monitor (BHM)/MsgBoxViewer tool
 
-Collect MsgBoxViewer data while you reproduce an issue.
+Collect BHM report while you reproduce an issue.
 
-The MsgBoxViewer tool is useful for troubleshooting because it provides an HTML report that has detailed information about table sizes and the row count. The report can also help determine whether BizTalk Server is throttling. Additionally, the tool provides a snapshot of the BizTalk Server databases and the BizTalk Server configuration.
+The BHM tool is useful for troubleshooting because it provides an HTML report that has detailed information about table sizes and the row count. The report can also help determine whether BizTalk Server is throttling. Additionally, the tool provides a snapshot view of the BizTalk Server databases and the BizTalk Server configuration.
 
 For more information about throttling in BizTalk Server, see [How BizTalk Server Implements Host Throttling](/biztalk/core/how-biztalk-server-implements-host-throttling).
 
-When BizTalk Server is running slower than usual, run the MsgBoxViewer tool, and then review the generated HTML report for any problems. The **Summary** section lists warnings in yellow and potential problems in red.
+When BizTalk Server is running slower than usual, run the BHM tool, and then review the generated HTML report for any problems. The **Summary** section lists warnings in yellow and potential problems in red.
 
-Additionally, you can use the MsgBoxViewer tool output to determine which tables are the largest and have the most records. The following table lists the BizTalk Server tables that typically grow the largest. You can use this data to determine where a potential problem may exist.
+Additionally, you can use the BHM tool output to determine which tables are the largest and have the most records. The following table lists the BizTalk Server tables that typically grow the largest. You can use this data to determine where a potential problem may exist.
 
 |Table|Description|
 |---|---|
@@ -221,18 +201,17 @@ Additionally, you can use the MsgBoxViewer tool output to determine which tables
 |dta_MessageInOutEvents|This table stores tracked event messages in the BizTalkDTADb database. These tracked event messages include message context information.|
 |dta_ServiceInstanceExceptions|This table stores error information for any suspended service instance in the BizTalkDTADb database.|
 |||
-
 Consider the following scenarios.
 
-- **HostName** Q_Suspended tables
+- **HostNameQ_Suspended tables**
 
-  If the **HostName** Q_Suspended tables have many records, the tables could be valid suspended instances that appear in **Group Hub** or in HAT. These instances can be terminated. If these instances do not appear in **Group Hub** or in HAT, the instances are probably caching instances or orphaned routing failure reports. When suspended instances are terminated, the items in this table and their associated rows in the Spool and Instances tables are cleaned up.
+  If the `HostNameQ_Suspended` tables have many records, the tables could be valid suspended instances that appear in **Group Hub** or in HAT. These instances can be terminated. If these instances do not appear in **Group Hub** or in HAT, the instances are probably caching instances or orphaned routing failure reports. When suspended instances are terminated, the items in this table and their associated rows in the Spool and Instances tables are cleaned up.
 
-In this scenario, handle the suspended instances by resuming them or terminating them. The BizTalk Terminator tool can also be used.
+In this scenario, handle the suspended instances by resuming them or terminating them. The BHM tool can also be used.
 
-- **HostName** Q tables
+- **HostNameQ tables**
 
-  If the **HostName** Q tables have many of records, the following kinds of instances may exist:
+  If the `HostNameQ` tables have many records, the following kinds of instances may exist:
 
   - Ready-to-run instances
   - Active instances
@@ -246,23 +225,17 @@ If the Spool, Parts, and Fragments tables have many records, many messages are c
 
 - **Instances table**
 
-  The BizTalk Administrator should not allow for many suspended instances to remain in the Instances table. Dehydrated instances should only remain if the business logic requires long-running orchestrations. Remember that one service instance can be associated with many messages in the Spool table.
+  The BizTalk Administrator should not allow many suspended instances to remain in the Instances table. Dehydrated instances should only remain if business logic requires long-running orchestrations. Remember that one service instance can be associated with many messages on the Spool table.
 
 - **TrackingData_x_x tables**
 
-  If the TrackingData_x_x tables are large, the Tracking host (TDDS) is not running or is not running successfully. If the tracking host instance is running, review the event logs and the `TDDS_FailedTrackingData` table in the `BizTalkDTADb` database for error information. If BizTalk is throttling with a state of 6 (large database), these tables can also be truncated by using the BizTalk Terminator tool.
+  If the `TrackingData_x_x` tables are large, the Tracking host (TDDS) is not running or is not running successfully. If the tracking host instance is running, review the event logs and the `TDDS_FailedTrackingData` table in the `BizTalkDTADb` database for error information. If BizTalk is throttling with a state of 6 (large database), these tables can also be truncated by using the BizTalk Terminator tool if data is not needed.
 
-  If there is a large gap between the sequence numbers in the `BizTalkMsgBoxDb` `TrackingData_x_x` tables and the `BAMPrimaryImport` or `BizTalkDTADb` `TDDS_StreamStatus` tables, then TDDS may not move the data from the `BizTalkMsgBoxDb` database. To correct this, use the BizTalk Terminator tool to purge these tables and reset the sequence number.
-
-  On BizTalk Server 2006 R2, install BizTalk 2006 R2 Service Pack 1 to address a known issue with the tracking data.
-
-- **Tracking_Spool1 or Tracking_Spool2 tables**
-
-  If the `Tracking_Spool1` or `Tracking_Spool2` tables become large in BizTalk Server 2004 SP1 and in earlier versions of BizTalk Server 2004, confirm that the `TrackingSpool_Cleanup_BizTalkMsgBoxDb` SQL Server Agent job is enabled and running.
+  If there is a large gap between the sequence numbers in the `BizTalkMsgBoxDb` `TrackingData_x_x` tables and the `BAMPrimaryImport` or `BizTalkDTADb` `TDDS_StreamStatus` tables, then TDDS may not move the data from the `BizTalkMsgBoxDb` database. To correct this, use the BHM tool to purge these tables and reset the sequence number.
 
 - **dta_DebugTrace table and dta_MessageInOutEvents**
 
-  The dta_DebugTrace table is populated when Shape start and end are enabled on an orchestration. If the `dta_DebugTrace` table has many records, these orchestration debugging events are being used or were being used. If orchestration debugging is not required for regular operations, clear the check box for the Shape start and end option in the orchestration properties.
+  The `dta_DebugTrace` table is populated when Shape start and end are enabled on an orchestration. If the `dta_DebugTrace` table has many records, these orchestration debugging events are being used or were being used. If orchestration debugging is not required for regular operations, clear the check box for the Shape start and end option in the orchestration properties.
 
   The `dta_MessageInOutEvents` table is populated when Message send and receive is enabled on orchestrations and/or pipelines. If these tracking events are not needed, clear the check box for this option in the orchestration and/or pipeline properties.
 
@@ -270,27 +243,10 @@ If the Spool, Parts, and Fragments tables have many records, many messages are c
 
   By default, global tracking is enabled. If global tracking is not necessary, it can be disabled. For more information, see [How to Turn Off Global Tracking](/biztalk/core/how-to-turn-off-global-tracking).
 
-  If the `dta_DebugTrace` table and/or the `dta_messageInOutEvents` table in the `BizTalkDTADb` database are too large, you can truncate the tables manually after you stop the tracking host. The BizTalk Terminator tool also provides this functionality.
-
-  In BizTalk Server 2004, the **dtav_FindMessageFacts** view in the `BizTalkDTADb` database prevents the `dta_MessageInOutEvents` table from truncating. To work around this behavior, follow these steps:
-
-    1. Stop the tracking host and the DTA Purge and Archive job.
-    2. If you want to truncate the **dta_messageInOutEvents** table, save and then delete the **dtav_FindMessageFacts** view. To do this, follow these steps:
-
-       1. In SQL Server, access the **dtav_FindMessageFacts** view in the `BizTalkDTADb` database.
-       2. Right-click the **dtav_FindMessageFacts** view, click **All Tasks**, and then click **Generate SQL Script**. When the **Generate SQL Scripts** dialog box opens, make no changes, and then click **OK**.
-       3. Name the file *dtav_FindMessageFacts.sql*, and then click **Save**.
-       4. Right-click the **dtav_FindMessageFacts** view, and then click **Delete**. Click **Drop All**.
-
-  You can now truncate the table(s). If you truncate the `dta_messageInOutEvents` table, you must also truncate the `dta_url` table. The `dta_url` table only exists in BizTalk Server 2004.
-
-  When you are finished, follow these steps to re-create the `dtav_FindMessageFacts` view:
-
-  1. Open a new query in SQL Server.
-  2. In the **Available Databases** list, select the **BizTalkDTADb** database.
-  3. Execute your saved *dtav_FindMessageFacts.sql* script. This will re-create the view in the **BizTalkDTADb** database.
+  If the `dta_DebugTrace` table and/or the `dta_messageInOutEvents` table in the `BizTalkDTADb` database are too large, you can truncate the tables manually after you stop the tracking host. The BHM tool also provides this functionality.
   
-  Restart the tracking host and the DTA Purge and Archive job.
+  To truncate all tracking tables in the `BizTalkMsgBoxDb` database, use the BHM tool. The BHM tool is available externally at the Microsoft Download Center.
+
   For more information about tracking database sizing guidelines, visit the following MSDN website: [Tracking Database Sizing Guidelines](/biztalk/core/tracking-database-sizing-guidelines).
 
 - **dta_ServiceInstanceExceptions table**
@@ -317,6 +273,10 @@ Additionally, use the PSSDiag utility to collect data on the `Lock:Deadlock` eve
 
 The `BizTalkMsgBoxDB` database is a high-volume and high-transaction Online Transaction Processing (OLTP) database. Some deadlocking is expected, and this deadlocking is handled internally by the BizTalk Server engine. When this behavior occurs, no errors are listed in the error logs. When you investigate a deadlock scenario, the deadlock that you are investigating in the output must be correlated with a deadlock error in the event logs.
 
+The dequeue command and some SQL Server Agent jobs are expected to deadlock. Typically, these jobs are selected as deadlock victims. These jobs will appear in a deadlock trace. However, no errors are listed in the event logs. Therefore, this deadlockling is expected, and you can safely ignore the deadlocking with these jobs.
+
+If frequent deadlocks appear in a deadlock trace and if a correlating error is listed in the event logs, you may want the deadlock.
+
 ## Step 4: Look for blocked processes
 
 Use Activity Monitor in SQL Server to obtain the server process identifier (SPID) of a locking system process. Then, run SQL Profiler to determine the SQL statement that is executing in the locking SPID.
@@ -332,15 +292,7 @@ For more information about the blocked process threshold, visit the following MS
 
 ## Step 5: Install the Latest BizTalk Server Service Pack and Cumulative Update
 
-BizTalk Server 2006 R2 and later versions have moved to a Cumulative Update (CU) model. The cumulative updates will contain the latest hot fixes. BizTalk Server 2006 R2 Service Pack 1 is also available: [BizTalk Server 2006 R2 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=17886).
-
-BizTalk Server 2004 SP1 has no built-in purging and archiving functionality for the `BizTalkDTADb` database. This functionality is included with BizTalk Server 2004 SP2. Depending on the size of the `BizTalkDTADb` database, installing BizTalk Server 2004 SP2 may take hours because the Setup program purges the `BizTalkDTADb` database.
-
-When you install BizTalk Server 2004 SP2, we recommend that you follow these steps:
-
-1. Install the hotfix in Microsoft Knowledge Base article 894253. Follow the steps in this Knowledge Base article to execute the `bts_tracking_shrinkexistingdatabase.sql` script in SQL Server 2000.
-
-1. Install BizTalk Server 2004 SP2.
+BizTalk Server later versions have moved to a Cumulative Update (CU) model. The cumulative updates will contain the latest fixes.
 
 ## Delete all the data
 
@@ -349,26 +301,13 @@ If the databases are too large or if the preferred method is to delete all data,
 > [!CAUTION]
 > Do not use this method in any environment where the data is business critical or if the data is needed.
 
-## BizTalkMsgBoxDb Database Purging Steps
+## BizTalkMsgBoxDb database purging steps
 
-To delete all data in the `BizTalkMsgBoxDb` database, you can use the BizTalk Terminator tool. Otherwise, follow these steps.
-
-> [!NOTE]
-> This action deletes all messages. Be extremely cautious if you follow these steps in a production environment.
-
-1. Back up all BizTalk Server databases. Remember, the `BizTalkMgmtDb.dbo.sp_ForceFullBackup` stored procedure can be used to force a full backup of the data and log files. Execute this stored procedure, and then execute the Backup BizTalk Server SQL Agent job.
-2. Copy the `Msgbox_cleanup_logic.sql` script from Drive: `\Program Files\Microsoft BizTalk 200 x \schema to the SQL Server`.
-3. Execute this SQL script against the `BizTalkMsgBoxDb` database to update the `bts_CleanupMsgbox` stored procedure.
-
-4. Stop all BizTalk hosts, services, and custom isolated adapters. If you use HTTP or the SOAP adapter, restart the IIS services.
-
-5. Execute the `bts_CleanupMsgbox` stored procedure on all the `BizTalkMsgBoxDb` databases.
-
-6. Restart all host instances and BizTalk Server services.
+To delete all data in the `BizTalkMsgBoxDb` database, you can use the BizTalk Health Monitor (BHM) tool.
 
 ## BizTalkDTADb database purging options
 
-To delete all data from the `BizTalkDTADb` database, you can use the BizTalk Terminator tool. Otherwise, use one of the following methods.
+To delete all data from the `BizTalkDTADb` database, you can use the BizTalk Health Monitor (BHM) tool. Otherwise, use one of the following methods.
 
 > [!NOTE]
 > Both methods delete all messages. Method 2 is faster.
@@ -395,28 +334,13 @@ To delete all data from the `BizTalkDTADb` database, you can use the BizTalk Ter
 
 ## BizTalk Server 2004-only steps
 
-To delete all data from the `BizTalkDTADb` database in BizTalk Server 2004, follow these steps.
-
-> [!NOTE]
-> This action deletes all completed messages.
-
-1. Back up all BizTalk Server databases.
-
-2. Stop all BizTalk hosts, services, and custom isolated adapters. If you use HTTP or the SOAP adapter, restart the IIS services.
-
-3. Install the hotfix in Microsoft Knowledge Base article 894253. Follow the steps in this Knowledge Base article to run the `Bts_tracking_shrinkexistingdatabase.sql` script in SQL Server 2000.
-
-   For information about the `dtasp_PruneTrackingdatabase` stored procedure, see [FIX: The dtasp_PruneTrackingdatabase() stored procedure may take many hours to clean up the DTA database in BizTalk Server 2004](https://mskb.pkisolutions.com/kb/894253).
-
-4. Restart all hosts and BizTalk services.
-
 > [!NOTE]
 > If you must have the tracking data, back up the `BizTalkDTADb` database, restore the database to another SQL Server, and then purge the original `BizTalkDTADb` database.
 
-If you need help to analyze the MsgBoxViewer data or the PSSDiag output, contact Microsoft Customer Support Services. For a complete list of Customer Support Services telephone numbers and information about support costs, see [Contact Microsoft Support](https://support.microsoft.com/home/expcontact/).
+If you need help to analyze the BHM data or the PSSDiag output, contact Microsoft Customer Support Services. For a complete list of Customer Support Services telephone numbers and information about support costs, see [Contact Microsoft Support](https://support.microsoft.com/home/expcontact/).
 
 > [!NOTE]
-> Before you contact Customer Support Services, compress the MsgBoxViewer data, the PSSDiag output, and the updated event logs (.evt files). You may have to send these files to a BizTalk Server support engineer.
+> Before you contact Customer Support Services, compress the BHM report data, the PSSDiag output, and the updated event logs (.evt files). You may have to send these files to a BizTalk Server support engineer.
 
 ## Applies to
 
