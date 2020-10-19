@@ -8,14 +8,14 @@ ms.prod: visual-studio
 ---
 # Determine the connection state of your local system and how to initiate or end an Internet connection by using Visual Basic .NET or Visual Basic 2005
 
-This article shows how to determine the connection state of your local system and how to initiate or end an Internet connection by using Visual Basic .NET or Visual Basic 2005
+This article shows how to determine the connection state of your local system and how to initiate or end an Internet connection by using Visual Basic .NET or Visual Basic 2005.
 
 _Original product version:_ &nbsp; Visual Studio  
 _Original KB number:_ &nbsp; 821770
 
 ## Summary
 
-This step-by-step article describes how to determine the connected state of your local system by using the InternetGetConnectedState function that the Microsoft Windows Internet (WinINet) API provides. This article also describes how to initiate an Internet connection and how to end an Internet connection by using the `InternetDial` `WinINet` API function and by using the `InternetHangUp` `WinINet` API function.
+This step-by-step article describes how to determine the connected state of your local system by using the `InternetGetConnectedState` function that the Microsoft Windows Internet (WinINet) API provides. This article also describes how to initiate an Internet connection and how to end an Internet connection by using the `InternetDial` `WinINet` API function and by using the `InternetHangUp` `WinINet` API function.
 
 The `WinINet` API is a set of functions that enables applications to interact with Gopher, with File Transfer Protocol (FTP), and with Hypertext Transfer Protocol (HTTP) to access many resources on the Internet. The `InternetGetConnectedState` function returns True or False based on whether a connection exists. After a call to the `InternetGetConnectedState` function, the *lpdwFlags* parameter contains a predefined value that provides more information about the connection. For example, the value that *IpdwFlags* contains may indicate that the connection is a local area network (LAN) connection, a modem connection, or another type of connection. You can infer whether connection exists from the return value of the `InternetGetConnectedState` function.
 
