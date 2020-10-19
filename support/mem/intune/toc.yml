@@ -128,6 +128,8 @@
       href: mdm-enrollment-error-0xcaa9001f.md
     - name: Intune Connector for AD doesn't appear
       href: intune-connector-for-ad-not-appear.md
+    - name: Support Tip - Azure AD device registration and Windows Autopilot
+      href: azure-ad-device-registration-autopilot.md
     - name: Support Tip - Comparison of methods for enrolling a Windows device in Intune
       href: enroll-devices-in-intune-tip.md
     - name: Understand and troubleshoot the Enrollment Status Page
