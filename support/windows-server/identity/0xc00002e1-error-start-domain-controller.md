@@ -84,19 +84,19 @@ To resolve this problem, follow these steps:
 
     > Drive Information:
     >
-    >        C:\ NTFS (Fixed Drive  ) free(533.3 Mb) total(4.1 Gb)
+    > C:\ NTFS (Fixed Drive  ) free(533.3 Mb) total(4.1 Gb)
     >
     > DS Path Information:
     >
-    >        Database   : C:\WINDOWS\NTDS\ntds.dit - 10.1 Mb
-    >        Backup dir : C:\WINDOWS\NTDS\dsadata.bak
-    >        Working dir: C:\WINDOWS\NTDS
-    >        Log dir    : C:\WINDOWS\NTDS - 42.1 Mb total
-    >                        temp.edb - 2.1 Mb
-    >                        res2.log - 10.0 Mb
-    >                        res1.log - 10.0 Mb
-    >                        edb00001.log - 10.0 Mb
-    >                        edb.log - 10.0 Mb
+    > Database   : C:\WINDOWS\NTDS\ntds.dit - 10.1 Mb
+    > Backup dir : C:\WINDOWS\NTDS\dsadata.bak
+    > Working dir: C:\WINDOWS\NTDS
+    > Log dir    : C:\WINDOWS\NTDS - 42.1 Mb total
+    > temp.edb - 2.1 Mb
+    > res2.log - 10.0 Mb
+    > res1.log - 10.0 Mb
+    > edb00001.log - 10.0 Mb
+    > edb.log - 10.0 Mb
 
     > [!NOTE]
     > The file locations that are included in this output are also found in the following registry subkey:  

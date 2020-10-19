@@ -134,7 +134,7 @@ Consider the following situation:
 |DC|Windows Server 2003|RC4 and DES|
 |Client|Windows 7|AES and RC4|
 |Resource Server|J2EE|DES|
-||||
+
 In this situation, the criteria 1 is satisfied by RC4 encryption, and the criteria 2 is satisfied by DES encryption. The third criterion fails because the server is DES-only and because client doesn't support DES.
 
 The hotfix 978055 must be installed on each Windows Server 2008 R2-based domain controller if the following conditions are true in the domain:

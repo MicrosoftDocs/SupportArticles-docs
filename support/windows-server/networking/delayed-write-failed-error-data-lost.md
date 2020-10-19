@@ -1,5 +1,5 @@
 ---
-title: "Delayed Write Failed" error 
+title: Delayed Write Failed error 
 description: Helps to fix the error message "Delayed Write Failed" which states that your data has been lost.
 ms.date: 10/09/2020
 author: Deland-Han

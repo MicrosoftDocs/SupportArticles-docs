@@ -239,7 +239,7 @@ The signed request and response might be received by the AD FS server from the c
     > [!NOTE]
     > You can use Windows PowerShell cmdlets for AD FS 2.0 to configure the following revocation settings:  
     >
-        >- **SigningCertificateRevocationCheck** parameter of the Set-ADFSClaimsProviderTrust or Set-ADFSRelyingPartyTrust cmdlet
-        >- **EncryptionCertificateRevocationCheck** parameter of the Set-ADFSRelyingPartyTrust or Set-ADFSClaimsProviderTrust cmdlet  
+    > - **SigningCertificateRevocationCheck** parameter of the Set-ADFSClaimsProviderTrust or Set-ADFSRelyingPartyTrust cmdlet
+    > - **EncryptionCertificateRevocationCheck** parameter of the Set-ADFSRelyingPartyTrust or Set-ADFSClaimsProviderTrust cmdlet  
 
 For more information, see [Troubleshooting certificate problems with AD FS 2.0.](https://technet.microsoft.com/library/adfs2-troubleshooting-certificate-problems%28v=ws.10%29.aspx)

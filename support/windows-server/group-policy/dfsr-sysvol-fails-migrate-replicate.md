@@ -26,8 +26,10 @@ _Original KB number:_ &nbsp; 2567421
 Running the `/GETMIGRATIONSTATE` reporting command shows:
 
 > **DFSRMIG.EXE /GETMIGRATIONSTATE**  
-Domain Controller (Local Migration State) - DC Type  
-===================================================  
+>
+> Domain Controller (Local Migration State) - DC Type
+>
+> ===================================================  
 2008R2-MIG-01 ('Preparing') - Primary DC  
 **2008R2-MIG-02 ('Preparing') - Writable DC**  
 Migration has not yet reached a consistent state on all Domain Controllers.  

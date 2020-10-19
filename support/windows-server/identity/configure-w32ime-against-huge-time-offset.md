@@ -120,7 +120,7 @@ The `MaxPosPhaseCorrection` and `MaxNegPhaseCorrection` registry entries have a 
 
 ## Windows Server 2003 and Windows XP Time Service registry entries
 
-|||
+|Type|Details|
 |---|---|
 |Registry Entry|MaxPosPhaseCorrection|
 |Value Type|DWORD|
@@ -169,7 +169,7 @@ The `MaxAllowedClockErrInSecs` registry entry has a default value of 43,200 (12 
 
 ### Windows Server 2000 SP 4 registry entry
 
-|||
+|Type|Details|
 |---|---|
 |Registry Entry|MaxAllowedClockErrInSecs|
 |Value Type|DWORD|

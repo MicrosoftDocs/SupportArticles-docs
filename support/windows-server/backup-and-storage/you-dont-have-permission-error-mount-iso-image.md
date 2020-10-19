@@ -104,7 +104,7 @@ For example, consider the following layout.
 |D|DVD|
 |E|USB device|
 |F|ISO (auto assigned)|
-|||
+
 In this layout, the ISO image is auto assigned to drive F when it is mounted. It causes the error that is mentioned in the "Symptoms" section. However, the drive continues to function.
 
 After you eject the ISO drive F, reassign the USB drive to drive F. Now when you mount the ISO image, it will be auto assigned to drive E without generating any errors. The new layout will be as follows.
@@ -115,4 +115,4 @@ After you eject the ISO drive F, reassign the USB drive to drive F. Now when you
 |D|DVD|
 |E|ISO (auto assigned)|
 |F|USB device|
-|||
+

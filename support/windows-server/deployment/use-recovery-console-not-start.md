@@ -46,7 +46,7 @@ To run the Recovery Console, follow these steps:
     help at the command prompt, and then press ENTER.
 
    > [!NOTE]
-    > Alternatively, you can install the Recovery Console as a startup option on the computer so that it is always available. For information about how to do so, see the [Precautionary Measures](#Precautionary-Measures) section in this article.
+    > Alternatively, you can install the Recovery Console as a startup option on the computer so that it is always available. For information about how to do so, see the [Precautionary Measures](#precautionary-measures) section in this article.
 9. To quit the Recovery Console and restart the computer, type  
  exit at the command prompt, and then press ENTER.
 
