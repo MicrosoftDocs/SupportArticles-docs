@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path:
-ms.technology:
+ms.prod-support-area-path: Windows Troubleshooters
+ms.technology: windows-troubleshooters
 ---
 # Active and retired troubleshooters for Windows 10
 
@@ -25,13 +25,13 @@ You may have lost access to your Files On-Demand. This troubleshooter re
 
 After updating to Windows 10, version 2004, some older devices or devices that have certain older apps installed that use legacy [file system filter drivers](/windows-hardware/drivers/ifs/about-file-system-filter-drivers) might be unable to connect to OneDrive through the OneDrive app. Affected devices might not be able to download new Files On-Demand content or open previously synced or downloaded files. This troubleshooter mitigates the issue.
 
-Devices that successfully ran the "Hardware and devices" troubleshooter will be notified and asked to run this troubleshooter. This troubleshooter cannot be run manually.
+Devices that successfully ran the "Hardware and Devices" troubleshooter will be notified and asked to run this troubleshooter. This troubleshooter cannot be run manually.
 
 |Activation date|Retirement date|More information|
 |---|---|---|
 |6/30/20|\-|[https://aka.ms/AA8vtwr](https://aka.ms/AA8vtwr)|
 
-## Hardware and devices troubleshooter
+## Hardware and Devices troubleshooter
 
 Automatically repair system files and settings to fix a problem on your device.
 
@@ -57,11 +57,11 @@ Automatically restore your previous settings and environment for Storage Spaces.
 
 ### Description
 
-Devices that use Parity Storage Spaces might not be able to use or access their storage spaces after you update to Windows 10, version 2004 (the May 2020 update) or Windows Server, version 2004. After [KB4568831](https://support.microsoft.com/help/4568831) has been applied to your device, this troubleshooter restores your previous Storage Spaces settings.
+Devices that use Parity Storage Spaces might not be able to use or access their Storage Spaces after you update to Windows 10, version 2004 (the May 2020 update) or Windows Server, version 2004. After [KB4568831](https://support.microsoft.com/help/4568831) has been applied to your device, this troubleshooter restores your previous Storage Spaces settings.
 
 This troubleshooter runs automatically on devices that meet the following criteria:
 
-Successfully ran the "Hardware and devices" or "Storage space" troubleshooter
+Successfully ran the "Hardware and Devices" or "Storage Spaces" troubleshooter
 
 > [!NOTE]
 > This troubleshooter cannot be run manually.
@@ -70,17 +70,17 @@ Successfully ran the "Hardware and devices" or "Storage space" troubleshooter
 |---|---|---|
 |7/30/2020|\-|[https://aka.ms/AA8uojg](https://aka.ms/AA8uojg)|
 
-## Storage space troubleshooter
+## Storage Spaces troubleshooter
 
-Data corruption was detected on your parity storage space. This troubleshooter takes actions to prevent further corruption. It also restores write access if the space was previously marked read-only. For more information and recommended actions please see the link below.
+Data corruption was detected on your parity Storage Spaces. This troubleshooter takes actions to prevent further corruption. It also restores write access if the space was previously marked read-only. For more information and recommended actions please see the link below.
 
 ### Description
 
-Devices that use Parity Storage Spaces might experience issues when they try to use or access their storage spaces after they update to Windows 10, version 2004 (the May 2020 Update) or Windows Server, version 2004. This troubleshooter mitigates the issue for some users and restores read and write access to your Parity Storage Spaces. 
+Devices that use Parity Storage Spaces might experience issues when they try to use or access their Storage Spaces after they update to Windows 10, version 2004 (the May 2020 Update) or Windows Server, version 2004. This troubleshooter mitigates the issue for some users and restores read and write access to your Parity Storage Spaces. 
 
 This troubleshooter runs automatically on devices that meet the following criteria.
 
-Successfully ran the "Hardware and devices" or "Storage Space" troubleshooter
+Successfully ran the "Hardware and Devices" or "Storage Spaces" troubleshooter
 
 > [!NOTE]
 > This troubleshooter cannot be run manually.
@@ -89,24 +89,24 @@ Successfully ran the "Hardware and devices" or "Storage Space" troubleshooter
 |---|---|---|
 |7/2/2020|\-|[https://aka.ms/AA8uojg](https://aka.ms/AA8uojg)|
 
-## Hardware and devices troubleshooter and Storage space troubleshooter
+## Hardware and Devices troubleshooter and Storage Spaces troubleshooter
 
-### Hardware and devices troubleshooter
+### Hardware and Devices troubleshooter
 
 Automatically change system settings to fix a problem on your device.
 
-### Storage space troubleshooter
+### Storage Spaces troubleshooter
 
-Data corruption was detected on your parity storage space. To prevent further corruption, the volume has been marked as Read-Only. Your data is still accessible at this time. For more information and recommended actions please see the link below.
+Data corruption was detected on your parity Storage Spaces. To prevent further corruption, the volume has been marked as Read-Only. Your data is still accessible at this time. For more information and recommended actions please see the link below.
 
 ### Description
 
-Devices that use Parity Storage Spaces might experience issues when they try to use or access their storage spaces after they are updated to Windows 10, version 2004 (the May 2020 Update) or Windows Server, version 2004. This troubleshooter helps prevent issues that affect the data on your storage spaces. After the troubleshooter runs, you will not be able to write to your storage spaces.
+Devices that use Parity Storage Spaces might experience issues when they try to use or access their Storage Spaces after they are updated to Windows 10, version 2004 (the May 2020 Update) or Windows Server, version 2004. This troubleshooter helps prevent issues that affect the data on your Storage Spaces. After the troubleshooter runs, you will not be able to write to your Storage Spaces.
 
 This troubleshooter runs two times on devices that meet the following criteria:
 
 - Runs Windows 10, version 2004
-- Uses storage spaces
+- Uses Storage Spaces
 
 The first time, the troubleshooter runs automatically. The second time, it notifies the user.
 
