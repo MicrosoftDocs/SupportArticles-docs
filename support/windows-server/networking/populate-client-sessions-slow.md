@@ -26,7 +26,7 @@ When trying to view the information about client sessions by clicking Shared Fol
 
 ## Cause
 
-Computer Management will try to resolve the client IP address to user-friendly NetBIOS name. In and IPv6 and IPv4 hybrid environment, and clients use [\\\NetBIOS](file://netbios/)  to access share folders, if the NetBIOS name cannot be resolved, it shows the IPv6 address immediately. However, if clients are using [\\\IPv4](file://ipv4/) to access share folder, the failure of resolving to the NetBIOS name causes the Computer Management console to hang.
+Computer Management will try to resolve the client IP address to user-friendly NetBIOS name. In and IPv6 and IPv4 hybrid environment, and clients use **NetBIOS** to access share folders, if the NetBIOS name cannot be resolved, it shows the IPv6 address immediately. However, if clients are using **ipv4** to access share folder, the failure of resolving to the NetBIOS name causes the Computer Management console to hang.
 
 ## Resolution
 

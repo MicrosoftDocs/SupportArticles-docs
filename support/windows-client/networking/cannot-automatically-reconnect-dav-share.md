@@ -102,4 +102,4 @@ If no proxy is configured, WinHTTP sends credentials only to local intranet site
 
 ## References
 
-[WebDAV Redirector Registry Settings](https://blogs.msdn.com/b/robert_mcmurray/archive/2008/01/17/webdav-redirector-registry-settings.aspx)
+[WebDAV Redirector Registry Settings](/archive/blogs/robert_mcmurray/webdav-redirector-registry-settings)

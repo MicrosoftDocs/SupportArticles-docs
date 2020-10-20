@@ -64,11 +64,22 @@
 
 - name: Language or compilers
   items:
-  - name: Can't throw a warning for events
-    href: no-warning-event-obsolete.md
-  - name: Use ComboBox to edit data in a ListView
-    href: use-combobox-edit-listview.md
+  - name: Add a user to the local system
+    href: add-user-local-system.md
   - name: Bind an array to DataGrid 
     href: bind-datagrid-to-array.md
+  - name: Can't throw a warning for events
+    href: no-warning-event-obsolete.md
+  - name: Convert from System String to Char
+    href: convert-systemstring-char.md
+  - name: Copy image from database to PictureBox control
+    href: copy-image-database-picturebox.md
+  - name: Fail to connect to SQL Server instance
+    href: fail-connect-sql-server-instance.md
   - name: Navigate XML with XPathNavigator
     href: xml-xpathnavigator.md
+  - name: Trace and debug
+    href: trace-and-debug.md
+  - name: Use ComboBox to edit data in a ListView
+    href: use-combobox-edit-listview.md
+

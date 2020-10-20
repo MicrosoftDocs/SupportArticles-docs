@@ -48,4 +48,4 @@ To resolve this issue, delete the mapped drive from the user's profile or set th
 
 For more detailed information on how Rootdrive is used in Terminal Server, see the following Microsoft Knowledge Base article:
 
-[195950](/EN-US/help/195950) How and Why ROOTDRIVE Is Used on Windows Terminal Server
+[195950](https://support.microsoft.com/help/195950) How and Why ROOTDRIVE Is Used on Windows Terminal Server

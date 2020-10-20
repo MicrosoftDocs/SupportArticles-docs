@@ -77,20 +77,6 @@ To work around this problem, re-register Msiexec.exe. To do this, click **Start*
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, regarding the performance or reliability of these products.  
 
-Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.  
+Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
 
-For more information about how to upgrade to PowerChute Business Edition v7.x, visit the following Microsoft APC Web site:
-
-[http://nam-en.apc.com/cgi-bin/nam_en.cfg/php/enduser/std_adp.php?p_faqid=7202](http://nam-en.apc.com/cgi-bin/nam_en.cfg/php/enduser/std_adp.php?p_faqid=7202)
-
-APC PowerChute Business Edition v6 uses a Sun Java Run Time Engine that expired from service on July 27, 2005. APC now uses PowerChute Business Edition to communicate and to manage UPS (uninterruptible power supply and battery backup) systems. For more information about a critical update that is required for PowerChute Business Edition, visit the following APC Web site:
-
-[http://nam-en.apc.com/cgi-bin/nam_en.cfg/php/enduser/olh_adp.php?ISOCountryCode=us&p_faqid=7202&p_olh=1](http://nam-en.apc.com/cgi-bin/nam_en.cfg/php/enduser/olh_adp.php?isocountrycode=us&p_faqid=7202&p_olh=1)
-
-For more information, visit the following APC Web site:
-
-[http://nam-en.apc.com/cgi-bin/nam_en.cfg/php/enduser/std_adp.php?p_sid=rE8v_fNh&p_lva=&p_faqid=7259&p_created=1124315705&p_sp=cF9zcmNoPSZwX2dyaWRzb3J0PSZwX3Jvd19jbnQ9NTAxJnBfcGFnZT0x&p_li=](http://nam-en.apc.com/cgi-bin/nam_en.cfg/php/enduser/std_adp.php?p_sid=re8v_fnh&p_lva=&p_faqid=7259&p_created=1124315705&p_sp=cf9zcmnopszwx2dyawrzb3j0pszwx3jvd19jbnq9ntaxjnbfcgfnzt0x&p_li=)
-
-For more information, visit the following Sun Web site:
-
-[http://www.oracle.com/partners/campaign/eblasts/msc-sunsolve-retire-186767.html](http://www.oracle.com/partners/campaign/eblasts/msc-sunsolve-retire-186767.html)
+APC PowerChute Business Edition v6 uses a Sun Java Run Time Engine that expired from service on July 27, 2005. APC now uses PowerChute Business Edition to communicate and to manage UPS (uninterruptible power supply and battery backup) systems.

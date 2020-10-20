@@ -56,6 +56,10 @@
     href: cannot-use-scale-140-badge-logo.md
   - name: Deploy web applications with Xcopy
     href: deploy-aspnet-app-xcopy-command.md
+  - name: Determine connection state of local system
+    href: determine-connection-state-local-system.md
+  - name: Fail to compile a 32-bit app on a x64 machine
+    href: cannot-compile-32-bit-app-x64-machine.md
   - name: Help Viewer 2.0 crashes
     href: help-viewer-2-crashes.md
   - name: LNK1102 error when you build projects
@@ -66,9 +70,8 @@
     href: single-instance-application-crashes.md
   - name: Visual Studio 2012 crashes with StarDist-3
     href: crash-with-stardist-3.md
-  - name: Fail to compile a 32-bit app on a x64 machine
-    href: cannot-compile-32-bit-app-x64-machine.md
-
+  - name: Use JScript or JavaScript to traverse a collection
+    href: use-jscript-javascript-traverse-collection.md
 
 - name: Integrated development environment (IDE)
   items:

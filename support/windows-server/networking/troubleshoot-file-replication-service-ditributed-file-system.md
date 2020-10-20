@@ -36,10 +36,6 @@ Database is out of disk space.
 Event id: 13522
 Staging directory is full. An outbound partner that has not connected for a while can cause this. Delete the connection and stop and restart FRS to force deletion of the staging files.
 
-    For additional information about how to move the database to a larger volume, click the article number below to view the article in the Microsoft Knowledge Base:
-
-    [221093](/EN-US/help/221093) How to Relocate the NTFRS Jet Database and Log Files  
-
 2. Create a test file on Computer B and verify its replication to Computer A.
 3. Verify that both Computer A and Computer B are available on the network. Because FRS uses the fully qualified domain name (FQDN) of the replica members, an appropriate first check is to use a ping command specifying the fully qualified name of the problem replicas.
 
