@@ -62,6 +62,7 @@ The following diagnostics are currently available with brief scenario descriptio
 | Unable to Join or Create a Teams Conference Call | Validates that a user has the ability to create or join a PSTN conference call.	 | Diag: Teams Conference|
 | Teams Auto-Attendant | Validates that an auto attendant is able to receive calls.	 | Diag: Teams Auto Attendant
 | We Can't Get Your Files | Validates that a Team is provisioned and accessible by the specified user.	 | Diag: Teams Files Error|
+| Teams presence | Validates that a user's Teams presence can be correctly displayed. | Diag: Teams presence
 
 
 More diagnostics will be added at a future date.
