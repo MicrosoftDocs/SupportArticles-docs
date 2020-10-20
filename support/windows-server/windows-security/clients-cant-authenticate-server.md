@@ -29,109 +29,107 @@ If you enable verbose logging on the server that is running IAS or Routing and R
 > [!NOTE]
 > If you're using IAS as your Radius server for authentication, you see this behavior on the IAS server. If you're using Routing and Remote Access, and Routing and Remote Access is configured for Windows Authentication (not Radius authentication), you see this behavior on the Routing and Remote Access server.
 
-```console
-072] 15:47:57:280: CRYPT_E_NO_REVOCATION_CHECK will not be ignored
-
-[1072] 15:47:57:280: CRYPT_E_REVOCATION_OFFLINE will not be ignored
-
-[1072] 15:47:57:280: The root cert will not be checked for revocation
-
-[1072] 15:47:57:280: The cert will be checked for revocation
-
-[1072] 15:47:57:280:
-
-[1072] 15:47:57:280: EapTlsMakeMessage(Example\client)
-
-[1072] 15:47:57:280: >> Received Response (Code: 2) packet: Id: 11, Length: 25, Type: 0, TLS blob length: 0. Flags:
-
-[1072] 15:47:57:280: EapTlsSMakeMessage
-
-[1072] 15:47:57:280: EapTlsReset
-
-[1072] 15:47:57:280: State change to Initial
-
-[1072] 15:47:57:280: GetCredentials
-
-[1072] 15:47:57:280: The name in the certificate is: server.example.com
-
-[1072] 15:47:57:312: BuildPacket
-
-[1072] 15:47:57:312: << Sending Request (Code: 1) packet: Id: 12, Length: 6, Type: 13, TLS blob length: 0. Flags: S
-
-[1072] 15:47:57:312: State change to SentStart
-
-[1072] 15:47:57:312:
-
-[1072] 15:47:57:312: EapTlsEnd(Example\client)
-
-[1072] 15:47:57:312:
-
-[1072] 15:47:57:312: EapTlsEnd(Example\client)
-
-[1072] 15:47:57:452:
-
-[1072] 15:47:57:452: EapTlsMakeMessage(Example\client)
-
-[1072] 15:47:57:452: >> Received Response (Code: 2) packet: Id: 12, Length: 80, Type: 13, TLS blob length: 70. Flags: L
-
-[1072] 15:47:57:452: EapTlsSMakeMessage
-
-[1072] 15:47:57:452: MakeReplyMessage
-
-[1072] 15:47:57:452: Reallocating input TLS blob buffer
-
-[1072] 15:47:57:452: SecurityContextFunction
-
-[1072] 15:47:57:671: State change to SentHello
-
-[1072] 15:47:57:671: BuildPacket
-
-[1072] 15:47:57:671: << Sending Request (Code: 1) packet: Id: 13, Length: 1498, Type: 13, TLS blob length: 3874. Flags: LM
-
-[1072] 15:47:57:702:
-
-[1072] 15:47:57:702: EapTlsMakeMessage(Example\client)
-
-[1072] 15:47:57:702: >> Received Response (Code: 2) packet: Id: 13, Length: 6, Type: 13, TLS blob length: 0. Flags: 
-
-[1072] 15:47:57:702: EapTlsSMakeMessage
-
-[1072] 15:47:57:702: BuildPacket
-
-[1072] 15:47:57:702: << Sending Request (Code: 1) packet: Id: 14, Length: 1498, Type: 13, TLS blob length: 0. Flags: M
-
-[1072] 15:47:57:718:
-
-[1072] 15:47:57:718: EapTlsMakeMessage(Example\client)
-
-[1072] 15:47:57:718: >> Received Response (Code: 2) packet: Id: 14, Length: 6, Type: 13, TLS blob length: 0. Flags:
-
-[1072] 15:47:57:718: EapTlsSMakeMessage
-
-[1072] 15:47:57:718: BuildPacket
-
-[1072] 15:47:57:718: << Sending Request (Code: 1) packet: Id: 15, Length: 900, Type: 13, TLS blob length: 0. Flags:
-
-[1072] 15:48:12:905:
-
-[1072] 15:48:12:905: EapTlsMakeMessage(Example\client)
-
-[1072] 15:48:12:905: >> Received Response (Code: 2) packet: Id: 15, Length: 6, Type: 13, TLS blob length: 0. Flags:
-
-[1072] 15:48:12:905: EapTlsSMakeMessage
-
-[1072] 15:48:12:905: MakeReplyMessage
-
-[1072] 15:48:12:905: SecurityContextFunction
-
-[1072] 15:48:12:905: State change to SentFinished. Error: 0x80090318
-
-[1072] 15:48:12:905: Negotiation unsuccessful
-
-[1072] 15:48:12:905: BuildPacket
-
-[1072] 15:48:12:905: << Sending Failure (Code: 4) packet: Id: 15, Length: 4, Type: 0, TLS blob le
-```
+> [1072] 15:47:57:280: CRYPT_E_NO_REVOCATION_CHECK will not be ignored
+>
+> [1072] 15:47:57:280: CRYPT_E_REVOCATION_OFFLINE will not be ignored
+>
+> [1072] 15:47:57:280: The root cert will not be checked for revocation
+>
+> [1072] 15:47:57:280: The cert will be checked for revocation
+>
+> [1072] 15:47:57:280:
+>
+> [1072] 15:47:57:280: EapTlsMakeMessage(Example\client)
+>
+> [1072] 15:47:57:280: >> Received Response (Code: 2) packet: Id: 11, Length: 25, Type: 0, TLS blob length: 0. Flags:
+>
+> [1072] 15:47:57:280: EapTlsSMakeMessage
+>
+> [1072] 15:47:57:280: EapTlsReset
+>
+> [1072] 15:47:57:280: State change to Initial
+>
+> [1072] 15:47:57:280: GetCredentials
+>
+> [1072] 15:47:57:280: The name in the certificate is: server.example.com
+>
+> [1072] 15:47:57:312: BuildPacket
+>
+> [1072] 15:47:57:312: << Sending Request (Code: 1) packet: Id: 12, Length: 6, Type: 13, TLS blob length: 0. Flags: S
+>
+> [1072] 15:47:57:312: State change to SentStart
+>
+> [1072] 15:47:57:312:
+>
+> [1072] 15:47:57:312: EapTlsEnd(Example\client)
+>
+> [1072] 15:47:57:312:
+>
+> [1072] 15:47:57:312: EapTlsEnd(Example\client)
+>
+> [1072] 15:47:57:452:
+>
+> [1072] 15:47:57:452: EapTlsMakeMessage(Example\client)
+>
+> [1072] 15:47:57:452: >> Received Response (Code: 2) packet: Id: 12, Length: 80, Type: 13, TLS blob length: 70. Flags: L
+>
+> [1072] 15:47:57:452: EapTlsSMakeMessage
+>
+> [1072] 15:47:57:452: MakeReplyMessage
+>
+> [1072] 15:47:57:452: Reallocating input TLS blob buffer
+>
+> [1072] 15:47:57:452: SecurityContextFunction
+>
+> [1072] 15:47:57:671: State change to SentHello
+>
+> [1072] 15:47:57:671: BuildPacket
+>
+> [1072] 15:47:57:671: << Sending Request (Code: 1) packet: Id: 13, Length: 1498, Type: 13, TLS blob length: 3874. Flags: LM
+>
+> [1072] 15:47:57:702:
+>
+> [1072] 15:47:57:702: EapTlsMakeMessage(Example\client)
+>
+> [1072] 15:47:57:702: >> Received Response (Code: 2) packet: Id: 13, Length: 6, Type: 13, TLS blob length: 0. Flags:
+>
+> [1072] 15:47:57:702: EapTlsSMakeMessage
+>
+> [1072] 15:47:57:702: BuildPacket
+>
+> [1072] 15:47:57:702: << Sending Request (Code: 1) packet: Id: 14, Length: 1498, Type: 13, TLS blob length: 0. Flags: M
+>
+> [1072] 15:47:57:718:
+>
+> [1072] 15:47:57:718: EapTlsMakeMessage(Example\client)
+>
+> [1072] 15:47:57:718: >> Received Response (Code: 2) packet: Id: 14, Length: 6, Type: 13, TLS blob length: 0. Flags:
+>
+> [1072] 15:47:57:718: EapTlsSMakeMessage
+>
+> [1072] 15:47:57:718: BuildPacket
+>
+> [1072] 15:47:57:718: << Sending Request (Code: 1) packet: Id: 15, Length: 900, Type: 13, TLS blob length: 0. Flags:
+>
+> [1072] 15:48:12:905:
+>
+> [1072] 15:48:12:905: EapTlsMakeMessage(Example\client)
+>
+> [1072] 15:48:12:905: >> Received Response (Code: 2) packet: Id: 15, Length: 6, Type: 13, TLS blob length: 0. Flags:
+>
+> [1072] 15:48:12:905: EapTlsSMakeMessage
+>
+> [1072] 15:48:12:905: MakeReplyMessage
+>
+> [1072] 15:48:12:905: SecurityContextFunction
+>
+> [1072] 15:48:12:905: State change to SentFinished. Error: 0x80090318
+>
+> [1072] 15:48:12:905: Negotiation unsuccessful
+>
+> [1072] 15:48:12:905: BuildPacket
+>
+> [1072] 15:48:12:905: << Sending Failure (Code: 4) packet: Id: 15, Length: 4, Type: 0, TLS blob le
 
 ## Cause
 

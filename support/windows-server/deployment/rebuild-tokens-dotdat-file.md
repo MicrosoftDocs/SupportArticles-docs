@@ -35,7 +35,7 @@ To rebuild the Tokens.dat file, follow these steps:
     3. Swipe across or right-click the displayed **Command Prompt** icon.
     4. Tap or select **Run as administrator**.
 2. Type the following commands in the order in which they're presented. Press **Enter** after each command.
-    1. net stop sppsvc
+    1. `net stop sppsvc`
 
     2. For Windows 10, Windows Server 2016 and later versions of Windows:  
           `cd %windir%\system32\spp\store\2.0`
@@ -46,9 +46,9 @@ To rebuild the Tokens.dat file, follow these steps:
         For Windows 7, Windows Server 2008 and Windows Server 2008 R2:  
           `cd%windir%\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft\SoftwareProtectionPlatform`
 
-    3. ren tokens.dat tokens.bar
+    3. `ren tokens.dat tokens.bar`
 
-    4. net start sppsvc
+    4. `net start sppsvc`
 
     5. `cscript.exe %windir%\system32\slmgr.vbs /rilc`
 
@@ -58,8 +58,9 @@ To rebuild the Tokens.dat file, follow these steps:
 
 After you rebuild theTokens.dat file, you must reinstall your product key by using one of the following methods:
 
-- At the same elevated prompt command, type the following command, and then press **Enter**:  
-    **cscript.exe %windir%\system32\slmgr.vbs /ipk \<product key>**  
+- At the same elevated prompt command, type the following command, and then press **Enter**:
+  
+    `cscript.exe %windir%\system32\slmgr.vbs /ipk \<product key>`
 
 - Right-click **My Computer**, select **Properties**, and then select **Change product key**.
 

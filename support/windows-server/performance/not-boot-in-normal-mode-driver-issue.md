@@ -22,10 +22,6 @@ _Original KB number:_ &nbsp; 555996
 
 This article was written by [`Nirmal Sharma`](https://mvp.microsoft.com/en-US/PublicProfile/33635), Microsoft MVP.
 
-## Community solutions content disclaimer
-
-Microsoft corporation and/or its respective suppliers make no representations about the suitability, reliability, or accuracy of the information and related graphics contained herein. All such information and related graphics are provided "as is" without warranty of any kind. Microsoft and/or its respective suppliers hereby disclaim all warranties and conditions with regard to this information and related graphics, including all implied warranties and conditions of merchantability, fitness for a particular purpose, workmanlike effort, title, and non-infringement. You specifically agree that in no event shall Microsoft and/or its suppliers be liable for any direct, indirect, punitive, incidental, special, consequential damages or any damages whatsoever including, without limitation, damages for loss of use, data or profits, arising out of or in any way connected with the use of or inability to use the information and related graphics contained herein, whether based on contract, tort, negligence, strict liability or otherwise, even if microsoft or any of its suppliers has been advised of the possibility of damages.
-
 ## Summary
 
 This article explains a situation when Windows doesn't boot in Normal Mode because of a driver issue.  
@@ -54,3 +50,5 @@ The problem might be either with Windows Driver or Third-Party applications. In 
 - Now restart your computer in Normal Mode.  
 
 Note editing registry is not recommended by users only experienced administrators should edit the registry.
+
+[!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]

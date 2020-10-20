@@ -147,12 +147,12 @@ Also without modification, an Active Directory domain member in a forest that co
 
     For the changes to take effect, restart the computers where you changed the registry entries.
 
-    Notes
-
-  - For Windows Server 2003 and later versions, the UpdateTopLevelDomainZones entry has moved to the following registry subkey:  
+    > [!NOTE]
+    >
+    > - For Windows Server 2003 and later versions, the UpdateTopLevelDomainZones entry has moved to the following registry subkey:  
     `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient`
-  - On a Microsoft Windows 2000 SP4-based domain controller, the computer will report the following name registration error in the System event log if the UpdateTopLevelDomainZones setting is not enabled:
-  - On a Windows 2000 SP4-based domain controller, you must restart your computer after you add the UpdateTopLevelDomainZones setting.
+    > - On a Microsoft Windows 2000 SP4-based domain controller, the computer will report the following name registration error in the System event log if the UpdateTopLevelDomainZones setting is not enabled:
+    > - On a Windows 2000 SP4-based domain controller, you must restart your computer after you add the UpdateTopLevelDomainZones setting.
 
 ### Method 2: Use Group Policy
 

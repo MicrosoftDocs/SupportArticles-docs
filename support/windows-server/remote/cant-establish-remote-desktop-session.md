@@ -20,10 +20,6 @@ This article provides a solution to an error that occurs when you try to connect
 _Original product version:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 555382
 
-## Community Solutions Content Disclaimer
-
-Microsoft corporation and/or its respective suppliers make no representations about the suitability, reliability, or accuracy of the information and related graphics contained herein. All such information and related graphics are provided "as is" without warranty of any kind. Microsoft and/or its respective suppliers hereby disclaim all warranties and conditions with regard to this information and related graphics, including all implied warranties and conditions of merchantability, fitness for a particular purpose, workmanlike effort, title, and non-infringement. You specifically agree that in no event should microsoft and/or its suppliers be liable for any direct, indirect, punitive, incidental, special, consequential damages or any damages whatsoever including, without limitation, damages for loss of use, data or profits, arising out of or in any way connected with the use of or inability to use the information and related graphics contained herein, whether based on contract, tort, negligence, strict liability or otherwise, even if microsoft or any of its suppliers has been advised of the possibility of damages.
-
 ## Symptoms
 
 When you try to connect to the Terminal service running on one of the affected products, you receive the following error message:
@@ -82,3 +78,6 @@ Use these steps only if you can't do local sign-in to the affected server.
 7. Navigate to the following value:
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp\LanAdapter`.  
     Change it's data to the value you noted in step 6. If you want RDP to listen on all LAN adapters enter value of 0.
+
+[!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]
+

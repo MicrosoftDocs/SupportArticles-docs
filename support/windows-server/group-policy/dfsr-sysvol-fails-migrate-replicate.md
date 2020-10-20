@@ -132,7 +132,7 @@ To resolve the issue, follow all steps in the order, using an elevated CMD promp
 
 1. Determine which security group policy is applying this setting to the DCs by running on the PDCE:
 
-    ```powershell
+    ```console
     GPRESULT.EXE /H secpol.htm
     ```
 
@@ -140,20 +140,20 @@ To resolve the issue, follow all steps in the order, using an elevated CMD promp
 3. Using **GPMC.MSC**, edit that group policy to include the group **Administrators**.
 4. Allow AD and SYSVOL replication to converge on all DCs. On the PDCE, run:
 
-    ```powershell
+    ```console
     GPUPDATE /FORCE
     ```
 
 5. Sign out the PDCE and log back on, to update your security token with the user right assignment.
 6. Run:
 
-    ```powershell
+    ```console
     DFSRMIG.EXE /CREATEGLOBALOBJECTS
     ```
 
 7. Allow AD and SYSVOL replication to converge on all DCs. On the PDCE, run:
 
-    ```powershell
+    ```console
     DFSRDIAG.EXE POLLAD
     DFSRMIG.EXE /GETMIGRATIONSTATE
     ```
@@ -164,7 +164,7 @@ To resolve the issue, follow all steps in the order, using an elevated CMD promp
 
 1. Determine which security group policy is applying this setting to the DCs by running on the PDCE:
 
-    ```powershell
+    ```console
     GPRESULT.EXE /H secpol.htm
     ```
 
@@ -172,7 +172,7 @@ To resolve the issue, follow all steps in the order, using an elevated CMD promp
 3. Using **GPMC.MSC**, edit that group policy to include the group **Administrators**.
 4. Allow AD and SYSVOL replication to converge on all DCs. On the affected DC, run:
 
-    ```powershell
+    ```console
     GPUPDATE /FORCE
     ```
 
@@ -190,7 +190,7 @@ Steps:
 1. Open the policy and add the user or group to the "manage auditing and security log" user right.
 1. Run:
 
-    ```powershell
+    ```console
     gpupdate force.
     ```
 

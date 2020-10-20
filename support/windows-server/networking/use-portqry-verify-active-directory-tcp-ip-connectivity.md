@@ -86,7 +86,7 @@ PortQry knows how to send a query to the RPC end point mapper (using UDP and TCP
 
 If PortQry isn't available, you can use LDP.EXE to connect to the Domain Controller on port 389 with the **Connectionless** check box activated.
 
-Another alternative to PortQry is NLTEST, but it doesn't work for arbitrary servers. The server must be a Domain Controller in the same domain as the machine that you run the tool on. If this is the case, you can use Nltest /sc_reset **< domain name >** \ **< computer name >** to force a security channel onto a specific domain controller. For more information, see [Network Connectivity](/previous-versions/windows/it-pro/windows-2000-server/cc961803%28v=technet.10%29).
+Another alternative to PortQry is NLTEST, but it doesn't work for arbitrary servers. The server must be a Domain Controller in the same domain as the machine that you run the tool on. If this is the case, you can use Nltest /sc_reset **\<domain name>** \ **\<computer name>** to force a security channel onto a specific domain controller. For more information, see [Network Connectivity](/previous-versions/windows/it-pro/windows-2000-server/cc961803%28v=technet.10%29).
 
 ## Using portqry
 
@@ -96,7 +96,7 @@ This example demonstrates how to use PortQry to determine if the LDAP service is
 
 By default, LDAP is configured to listen to port 389. The example call specifies the server to query using the UDP protocol:
 
-**PortQry** **-n myserver -p udp -e 389**  
+`PortQry -n myserver -p udp -e 389`
 
 PortQry automatically resolves UDP port 389 using the %SystemRoot%\System32\Drivers\\...\Services file included in Windows Server 2003 and later computers. In the example output below, the port resolves to an LDAP service that is active and PortQry reports that the port is LISTENING or FILTERED.
 
@@ -159,7 +159,7 @@ This example demonstrates how to use PortQry to determine which services or appl
 
 By default, the RPC end point mapper database is configured to listen to port 185. The example call specifies the server to query using the UDP protocol:
 
-**portqry -n `mydc.reskit.com` -p udp -e 135**
+`portqry -n mydc.reskit.com -p udp -e 135`
 
 #### Sample output
 

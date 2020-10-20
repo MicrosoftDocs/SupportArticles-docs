@@ -31,9 +31,11 @@ Under some conditions, an administrator may want to force a logoff of all users 
 
 To create a batch file that calls these two Terminal Server specific commands, place the following information into a batch (.bat) file:  
 
+```console
 query session >session.txt  
 for /f "skip=1 tokens=3," %%i in (session.txt) DO logoff %%i  
 del session.txt  
+```
 
 This batch file may be run at any time the Administrator desires to force the logoff of all users that are not logged on to the Terminal Server console.
 
@@ -46,8 +48,10 @@ Error [5]: Access is denied.
 
 It is due to a limitation of the Logoff command. It cannot force the logoff of the console session. A work-around to this issue would be to modify the batch file to read:  
 
+```console
 query session >session.txt  
 for /f "skip=2 tokens=3," %%i in (session.txt) DO logoff %%i  
 del session.txt  
+```
 
 It causes the first two lines of the Session.txt file to be skipped, avoiding the error.

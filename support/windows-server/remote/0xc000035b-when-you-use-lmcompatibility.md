@@ -76,9 +76,10 @@ Adjust the **LmCompatibility** registry value on the client to not force NTLMv1 
 
 ### Method 2
 
-Set the **EnforceChannelBinding** registry value to 0 (zero) to ignore missing channel bindings on the Gateway server. To do it, locate the following registry subkey, and use the given specifications:  
-    `HKLM\Software\Microsoft\Windows NT\CurrentVersion\TerminalServerGateway\Config\Core` 
-> Type: **REG_DWORD**  
+Set the **EnforceChannelBinding** registry value to 0 (zero) to ignore missing channel bindings on the Gateway server. To do it, locate the following registry subkey, and use the given specifications:
+
+`HKLM\Software\Microsoft\Windows NT\CurrentVersion\TerminalServerGateway\Config\Core`  
+Type: **REG_DWORD**  
 Name: **EnforceChannelBinding**  
 Value: **0 (Decimal)**
 

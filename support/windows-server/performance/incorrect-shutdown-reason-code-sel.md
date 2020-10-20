@@ -44,11 +44,15 @@ Microsoft has confirmed that this is a problem.
 
 ## Resolution
 
-Microsoft will address the problem in future releases.  
- **WORKAROUND:**  
-Use shutdown.exe to initiate the shutdown, run below command (for example) from the elevated command line:  
- **shutdown.exe /r /d P:4:2**  
-This will result in an eventlog and SEL entry with reason code 0x80040002.  
+Microsoft will address the problem in future releases.
+
+## Workaround
+
+Use shutdown.exe to initiate the shutdown, run below command (for example) from the elevated command line:
+
+`shutdown.exe /r /d P:4:2`
+
+This will result in an event log and SEL entry with reason code 0x80040002.  
 Shutdown reason codes can be found here: [https://msdn.microsoft.com/library/aa376885(VS.85).aspx](https://msdn.microsoft.com/library/aa376885%28VS.85%29.aspx)  
 
 ## More information

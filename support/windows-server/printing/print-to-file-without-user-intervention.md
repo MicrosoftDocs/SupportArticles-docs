@@ -28,18 +28,17 @@ When choosing the option to Print to File from an application, the user is promp
 
 Here are the steps to achieve it:  
 
-Go to Devices and Printers  
-Click on "Add Printers"  
-Click on "Add a local or network printer as an administrator"  
-Click on "Add a local printer"  
-Click on Create a new port: Local Port  
-You will get a Port Name Box - Type in Path and the file name  
-for example "C:\Temp\PrintJob.txt"  
-Select the Manufacturer - Generic  
-Select Printers - Generic / Text Only  
-elect - Use the driver that is currently installed (recommended)  
-Type a name for the printer.  
-Share the Printer if needed  
-Finish
+1. Go to Devices and Printers.
+2. Click on "Add Printers".
+3. Click on "Add a local or network printer as an administrator".
+4. Click on "Add a local printer".
+5. Click on Create a new port: Local Port.
+6. You will get a Port Name Box - Type in Path and the file name. for example, "C:\Temp\PrintJob.txt".
+7. Select the Manufacturer - Generic.
+8. Select Printers - Generic / Text Only.
+9. Select - Use the driver that is currently installed (recommended).
+10. Type a name for the printer.  
+11. Share the Printer if needed.
+12. Finish.
 
 After these steps, any print jobs sent to this printer will automatically be saved to the location specified as the port.

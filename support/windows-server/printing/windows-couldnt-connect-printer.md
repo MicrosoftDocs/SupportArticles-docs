@@ -39,8 +39,9 @@ This issue can occur because of optimization changes to the spooler code for non
 
 ## Workaround
 
-To work around this issue, use the following command to add a registry key on the print server that is running Windows 2008 Server R2 and that is being accessed by an alias (CNAME) resource record:  
-> reg add HKLM\SYSTEM\CurrentControlSet\Control\Print /v DnsOnWire /t REG_DWORD /d 1
+To work around this issue, use the following command to add a registry key on the print server that is running Windows 2008 Server R2 and that is being accessed by an alias (CNAME) resource record:
+
+`reg add HKLM\SYSTEM\CurrentControlSet\Control\Print /v DnsOnWire /t REG_DWORD /d 1`
 
 > [!NOTE]
 >

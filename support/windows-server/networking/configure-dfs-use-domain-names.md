@@ -53,11 +53,11 @@ The overall approach consists of the following four stages:
 1. Obtain the list of domain-based namespaces that are hosted on the server. To do it, use one of the following methods:
 
     ```powershell
-    Get-DfsnRoot - ComputerName < ServerName > |Where type -NotMatch "Standalone"
+    Get-DfsnRoot - ComputerName ServerName |Where type -NotMatch "Standalone"
     ```
 
     ```powershell
-    dfsutil.exe server < ServerName > and manually identify the domain-based namespaces
+    dfsutil.exe server ServerName and manually identify the domain-based namespaces
     ```
 
     > [!NOTE]
@@ -69,11 +69,11 @@ The overall approach consists of the following four stages:
    Generally, domain-based namespaces are hosted on multiple namespace servers. So when you remove the namespace from one namespace server, as you do in this step, namespace availability isn't affected. However, you should make sure that there is in fact more than one namespace server that is hosting your namespace. To do it, use one of the following methods:
 
     ```powershell
-    (Get-DfsnRootTarget -Path < Namespace >).Count
+    (Get-DfsnRootTarget -Path Namespace).Count
     ```
 
     ```powershell
-    dfsutil.exe root < Namespace >
+    dfsutil.exe root Namespace
     ```
 
     For example, the placeholder `<Namespace>` could represent the following:  
@@ -91,11 +91,11 @@ The overall approach consists of the following four stages:
     Remove each hosted domain-based namespace from the server. To do it, use one of the following methods:
 
     ```powershell
-    Remove-DfsnRootTarget -TargetPath < NamespaceRootTarget >
+    Remove-DfsnRootTarget -TargetPath NamespaceRootTarget
     ```
 
     ```powershell
-    dfsutil.exe target Remove < NamespaceRootTarget >
+    dfsutil.exe target Remove NamespaceRootTarget
     ```
 
     For example, the placeholder `<NamespaceRootTarget>` could represent the following:  
@@ -104,11 +104,11 @@ The overall approach consists of the following four stages:
 5. Enable the DFSN FQDN root referral behavior. To do it, use one of the following methods:
 
     ```powershell
-    Set-DfsnServerConfiguration -ComputerName < ServerName > -UseFqdn $true
+    Set-DfsnServerConfiguration -ComputerName ServerName -UseFqdn $true
     ```
 
     ```powershell
-    Dfsutil.exe server registry dfsdnsconfig set < ServerName >
+    Dfsutil.exe server registry dfsdnsconfig set ServerName
     ```
 
 6. Restart the DFSN service. To do it, use one of the following methods:
@@ -127,11 +127,11 @@ The overall approach consists of the following four stages:
     Restore each namespace that you previously removed from this namespace server. To do this, use one of the following methods:
 
     ```powershell
-    New-DfsnRootTarget - TargetPath < RootTarget > [-Path < Namespace >]
+    New-DfsnRootTarget - TargetPath RootTarget [-Path Namespace]
     ```
 
     ```powershell
-    Dfsutil target add \\< RootTarget >
+    Dfsutil target add \\RootTarget
     ```
 
 8. Depending on what you did in step B, follow these optional steps:
@@ -146,7 +146,7 @@ Follow these steps for each namespace that is hosted on the namespace server:
 1. Export the namespace metadata:
 
     ```xml
-    dfsutil.exe root export \\contoso.com\< DomainNamespace1 > C:\dir1\a.txt
+    dfsutil.exe root export \\contoso.com\DomainNamespace1 C:\dir1\a.txt
     ```
 
 2. Make any necessary FQDN-related adjustments to folder targets. For each "Target" XML element that is contained in a "Link" XML element, change its NetBIOS reference to its equivalent FQDN reference.
@@ -166,7 +166,7 @@ Follow these steps for each namespace that is hosted on the namespace server:
 3. Import the updated namespace metadata:
 
     ```xml
-    dfsutil.exe root import set C:\dir1\a.txt \\contoso.com\< DomainNamespace1 >
+    dfsutil.exe root import set C:\dir1\a.txt \\contoso.com\DomainNamespace1
     ```
 
 ## References
