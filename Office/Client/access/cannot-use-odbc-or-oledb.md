@@ -22,7 +22,7 @@ appliesto:
 - Excel for Office 365
 ---
 
-# Can't use the Access ODBC driver or OLEDB provider outside Office Click-to-Run applications
+# Unable to use the Access ODBC, OLEDB or DAO interfaces outside Office Click-to-Run applications
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -42,10 +42,8 @@ Affected drivers:
 - Microsoft Access Driver (*.mdb, *.accdb)    
 - Microsoft Access Text Driver (*.txt, *.csv)    
 - Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)
-- Microsoft Access
-- Microsoft Excel
  
-Additionally, if you try to define an OLEDB connection from an external application (one that's running outside of Office) by using the Microsoft.ACE.OLEDB.12.0 OLEDB provider, you encounter a "Provider cannot be found" error when you try to connect to the provider. 
+Additionally, if you try to define an OLEDB connection from an external application (one that's running outside of Office) by using the Microsoft.ACE.OLEDB.12.0 or Microsoft.ACE.OLEDB.16.0 OLEDB provider, you encounter a "Provider cannot be found" error when you try to connect to the provider. 
 
 ## Cause
 
@@ -55,29 +53,30 @@ Click-to-Run installations of Office run in an isolated virtual environment on t
 
 ## Resolution
 
-### ODBC connections to be used in Office applications
+Beginning with Microsoft 365 Apps for Enterprise Version 2009, work has been completed to [break ACE out of the C2R virtualization bubble](https://techcommunity.microsoft.com/t5/access-blog/breaking-ace-out-of-the-bubble/ba-p/1167712) so that applications outside of Office are able to locate the ODBC, OLEDB and DAO interfaces provided by the Access Database Engine within the C2R installation.
 
-You can work around the issue by creating a DSN from within an Office application, such as Access, instead of using the ODBC Administrator. To create a new DSN in Access, follow these steps:  
+Use the following table to understand if additional components are necessary to access these intefaces within your environment:
+
+| Current Office Installation |	Additional components needed |	Recommended Additional Installation |
+|:----------------------------|:----------------------------:|:-----------------------------------:|
+| Microsoft 365 Apps for Enterprise, Office 2016/2019 Consumer Version 2009 or later |	No	| - |
+| Microsoft 365 Apps for Enterprise, Office 2016/2019 Consumer Prior to Version 2009 | Yes |	[Microsoft Access 2013 Runtime](https://www.microsoft.com/download/details.aspx?id=39358) |
+| Office 2016/2019 Pro Plus C2R (Volume License) |	Yes |	[Microsoft Access 2013 Runtime](https://www.microsoft.com/download/details.aspx?id=39358) |
+| Office 2010/2013/2016 MSI |	No |	- |
+| No Office installation |	Yes |	[Microsoft 365 Access Runtime](https://support.microsoft.com/en-us/office/download-and-install-microsoft-365-access-runtime-185c5a32-8ba9-491e-ac76-91cbe3ea09c9) |
+
+
+**Note** The [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920) is not provided as a recommended solution for the indicated scenarios as both the Access Database Engine 2016 and M365 Apps use the same major version identifier (16.0) which may introduce unexpected behaviors. Office side-by-side detection will also prevent the installation from proceeding if this scenario is detected.
+
+**Note2** The [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255) is no longer suggested as a recommended solution because Office 2010 has reached the end of the Microsoft Support Lifecycle.
+
+### Additional information for creating ODBC connections 
+
+All Click-to-Run instances of Office are unable to create Machine/System datasource names from within an Office application or from the Data Sources ODBC Administrator. 
+
+
+
+
  
-1. On the ribbon, select **External Data** > **ODBC Database**.
-2. Select **Import** or **Link**, and then click **OK**.
-3. Select the tab for the kind of DSN that you want to create (**File Data Source** or **Machine Data Source**), and then click **New**.
-4. Select the appropriate driver along with any required information to complete the entry.
-5. After the DSN is created, click **Cancel** to exit the remaining Import/Link steps.
-6. The DSN should now appear in the ODBC Administrator, and you can use it in any Office application.
 
-### ODBC or Microsoft.ACE.OLEDB.12.0 OLEDB provider connections that will be used outside of Office
-
-You must install an MSI installation of the Microsoft Access Database Engine from one of the following sources so that the calling application can locate the driver and provider.
-
-[Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920)
-
-**Note** If Office 365 is already installed, side-by-side detection will prevent the installation from proceeding. To install the package, perform a [quiet installation](https://msdn.microsoft.com/library/windows/desktop/aa372024%28v=vs.85%29.aspx) by running a command such as the following:
-
-> **\<File location>:\\\<File name> /quiet**
->
-> For example: C:\AccessDatabaseEngine.exe /quiet
  
-[Microsoft Access 2013 Runtime](https://www.microsoft.com/download/details.aspx?id=39358)
- 
-[Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255)
