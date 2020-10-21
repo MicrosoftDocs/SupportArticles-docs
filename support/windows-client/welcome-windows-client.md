@@ -28,6 +28,6 @@ Browse the following content or use the search feature.
 - System Management Components
 - User Profiles and Logon
 - Virtualization
-- Windows 7 EOS FAQ
+- Windows 7 EoS FAQ
 - Windows Security
 - Windows Troubleshooters
