@@ -1,23 +1,21 @@
-- name: Windows Client
-  href: welcome-windows-client.md
 - name: Active Directory
   items:
-  - name: DCPromo and the installation of domain controllers
-    items:
-    - name: DirectAccess clients can't connect with IP-HTTPS
-      href: ./networking/directaccess-clients-unable-connect-error-0x80092013.md
   - name: Schema update - known issues, best practies, workflow review
     items:
     - name: Error when checking domain object property
       href: ./identity/error-when-checking-domain-object-property.md
   - name: User, computer, group, and object management
     items:
-    - name: Known issues for managing Group Policy clients
+    - name: Known issues for managing Group Policy clients
       href: ./identity/known-issues-for-group-policy-clients.md
     - name: The LsaLookupSids function returns the old user name
       href: ./identity/lsalookupsids-function-not-return-new-user-name.md
     - name: UAC blocks elevation of executable applications
       href: ./identity/uac-blocks-elevation-executable-apps.md
+  - name: Windows Time Service
+    items:
+    - name: W32Time doesn't start automatically
+      href: ./identity/w32time-not-start-on-workgroup.md
 - name: Admin Development
   items:
   - name: Active Directory Services Interface (ADSI)
@@ -36,7 +34,7 @@
       href: ./application-management/x64-windows-not-support-16-bit-programs.md
     - name: Availability and description of FCIV
       href: ./application-management/virtualization-apps-not-work-with-hyper-v.md
-    - name: Registering OCX and DLL files as System Globals
+    - name: Registering OCX and DLL files as System Globals
       href: ./application-management/registering-ocx-dll-files-system-globals.md
     - name: Registry key WOW6432Node is listed on x86 machines
       href: ./application-management/wow6432node-registry-key-present-32-bit-machine.md
@@ -46,6 +44,8 @@
       href: ./application-management/com-port-settings-reset-to-default.md
     - name: Printer VBScript error 0x1A8
       href: ./application-management/printer-vbscript-error-0x1a8-object-required.md
+    - name: USMT 4.0 migration from x86 to x64 results in corrupted COM+ components
+      href: ./application-management/usmt-4-migrate-from-x86-to-x64-com-plus-component-corrupt.md
   - name: DCOM service startup and permissions
     items:
     - name: Event 10016 when accessing DCOM components
@@ -66,15 +66,19 @@
       href: ./application-management/add-remove-programs-displays-programs-incorrectly.md
   - name: Multilingual User Interface (MUI) and Input Method Editor (IME)
     items:
-    - name: Can't link TextService in Eudcedit.exe
+    - name: Can not link TextService in Eudcedit.exe
       href: ./application-management/cannot-link-textservice-eudcedit.md
+  - name: Windows Script Host (CScript or WScript)
+    items:
+    - name: Change registry values or permissions
+      href: ./application-management/change-registry-values-permissions.md
 - name: Backup and Storage
   items:
   - name: Configuring and using Backup software
     items:
     - name: Backup fails when you create system image
       href: ./backup-and-storage/backup-fails-when-create-system-image.md
-    - name: Error 0x810000 when using the Backup and Restore Wizard
+    - name: Error 0x810000 when using the Backup and Restore Wizard
       href: ./backup-and-storage/error-0x81000031-back-up-files-backup-restore-wizard.md
     - name: System Image Recovery fails with 0x80070002 error
       href: ./backup-and-storage/system-image-restore-failed-error-0x80070002.md
@@ -82,8 +86,12 @@
     items:
     - name: Event ID 158 is logged for identical disk GUIDs
       href: ./backup-and-storage/event-id-158-for-identical-disk-guids.md
-    - name: Garmin USB devices don't work
+    - name: Garmin USB devices don't work 
       href: ./backup-and-storage/garmin-usb-devices-not-working.md
+  - name: System Restore or resetting your computer
+    items:
+    - name: How to use System Restore to log on
+      href: ./backup-and-storage/system-restore-log-on-lose-access-account.md
   - name: Volume Shadow Copy Service (VSS)
     items:
     - name: Event IDs for Volsnap
@@ -104,9 +112,9 @@
     items:
     - name: BitLocker could not be enabled
       href: ./deployment/bitlocker-not-enabled-usb-drive-not-found.md
-    - name: Can't retrieve BitLocker Recovery key
+    - name: Can't retrieve BitLocker Recovery key
       href: ./deployment/cant-retrieve-bitlocker-recovery-key.md
-    - name: Disk partition requirement for using Windows RE tools on a UEFI-based computer
+    - name: Disk partition requirement for using Windows RE tools on a UEFI-based computer
       href: ./deployment/disk-partition-requirement-use-windows-re-tool.md
     - name: Error after you enter BitLocker PIN at startup
       href: ./deployment/bitlocker-too-many-pin-entry-attempts.md
@@ -114,18 +122,18 @@
       href: ./deployment/tpm-is-ready-for-use-with-reduced-functionality.md
     - name: Event ID 15 when a computer resumes from sleep
       href: ./deployment/event-id-15-computer-resume-from-sleep.md
+    - name: How to enable BitLocker device encryption
+      href: ./deployment/enable-bitlocker-device-encryption-local-hard-disk.md
     - name: MBAM client fails with error 0x8004100E
       href: ./deployment/mbam-client-fails-event-id-4-0x8004100e.md
+    - name: Parameter is incorrect when you enable  BitLocker
+      href: ./deployment/parameter-is-incorrect.md
     - name: Specified Account not exist when enabling BitLocker
       href: ./deployment/specified-account-not-exist-enable-bitlocker.md
+    - name: The recovery password for BitLocker isn't available when FIPS compliant policy is set
+      href: ./deployment/bitlocker-recovery-password-not-fips-compliant.md
     - name: The requested Key ID is invalid
       href: ./deployment/requested-key-id-is-invalid.md
-    - name: The recovery password for BitLocker isn't available when FIPS compliant policy is set
-      href: ./deployment/bitlocker-recovery-password-not-fips-compliant.md
-  - name: COM+ Setup
-    items:
-    - name: Can't upgrade Windows when PowerShell is installed
-      href: ./deployment/cannot-upgrade-windows-with-powershell-installed.md
   - name: Devices and Drivers
     items:
     - name: A description of the driver support
@@ -138,17 +146,19 @@
       href: ./deployment/dynamic-link-library.md
     - name: Error when you access a USB storage device
       href: ./deployment/error-when-you-access-usb-storage-device.md
-    - name: Fail to attach PCI Express expansion chassis
+    - name: Event ID 7000 or 7026 after starting a computer
+      href: ./deployment/system-log-event-id-7000-7026.md
+    - name: Fail to attach PCI Express expansion chassis 
       href: ./deployment/error-attach-pci-express-expansion-chassis.md
-    - name: Firmware update failures in Windows 8.1
+    - name: Firmware update failures in Windows 8.1
       href: ./deployment/firmware-updates-fail-windows-8dot1.md
     - name: Hide Devices in Devices and Printers
       href: ./deployment/disable-devices-in-devices-and-printers.md
     - name: How to use or to reference the Usbser.sys driver
       href: ./deployment/how-to-use-reference-usbser-driver-universal-serial-bus.md
-    - name: Limitations of $WinPeDriver$
+    - name: Limitations of $WinPeDriver$
       href: ./deployment/limitations-dollar-sign-winpedriver-dollar-sign.md
-    - name: Media device isn't available
+    - name: Media device isn't available
       href: ./deployment/media-device-isnt-available.md
     - name: Msinfo32.exe reports wrong values for Adapter RAM
       href: ./deployment/msinfo32-report-wrong-display-adapter-ram.md
@@ -166,7 +176,7 @@
     items:
     - name: Desktop wakes up unexpectedly from sleep or hibernation
       href: ./deployment/desktop-wakes-up-unexpectedly-from-sleep-hibernation.md
-    - name: Hard disk usage reaches 100 percent
+    - name: Hard disk usage reaches 100 percent
       href: ./deployment/hard-disk-usage-reaches-100-percent.md
     - name: How to disable and re-enable hibernation
       href: ./deployment/disable-and-re-enable-hibernation.md
@@ -174,38 +184,70 @@
       href: ./deployment/wake-on-lan-feature.md
     - name: Power/shutdown button is missing from start screen
       href: ./deployment/power-shutdown-button-missing.md
+    - name: The Power Management option isn't selected
+      href: ./deployment/power-management-option-isnt-selected.md
   - name: Servicing
     items:
     - name: .NET Framework 1.1 isn't supported
       href: ./deployment/dotnet-framework-1dot1-not-supported.md
     - name: 80072EE6 error when downloading an update from WSUS
       href: ./deployment/error-80072ee6-downlaod-wsus-update.md
-    - name: Can't use the ImageX.exe tool for backup
+    - name: Analyze log file entries that SFC.exe generates
+      href: ./deployment/analyze-sfc-program-log-file-entries.md
+    - name: Automatic Updates can't download updates
+      href: ./deployment/automatic-updates-cannot-download-updates-event-16.md
+    - name: Cannot use the ImageX.exe tool for backup 
       href: ./deployment/cannot-use-imagex-tool-backup.md
-    - name: Can't select the "Upgrade" option when installing Windows Vista
+    - name: Can't select the "Upgrade" option when installing Windows Vista
       href: ./deployment/unavailable-upgrade-option-install-windows.md
-    - name: Command-line switches for software update packages
+    - name: Command-line switches for software update packages
       href: ./deployment/command-line-switches-deploy-update-packages.md
+    - name: Command-line switches supported by Self-Extractor packages
+      href: ./deployment/command-switches-supported-by-self-extractor-package.md
+    - name: Compute MD5 or SHA-1 cryptographic hash values
+      href: ./deployment/compute-md5sha-1-cryptographic-hash-value.md
+    - name: Error 403 when you access Windows Update
+      href: ./deployment/error-403-connect-to-windows-update.md
     - name: Error 87 when a Windows 10 image is applied
       href: ./deployment/dism-error-87-apply-windows-10-image.md
+    - name: Error message when installing RSAT
+      href: ./deployment/error-message-when-installing-rsat.md
+    - name: Error messages when you scan for updates
+      href: ./deployment/error-messages-when-you-scan-updates.md
+    - name: Fix errors found in CheckSUR.log
+      href: ./deployment/errors-in-checksur-log.md
     - name: Get the latest Skype version by Microsoft Update
       href: ./deployment/skype-for-microsoft-update.md
     - name: How to get updates via Windows Update
       href: ./deployment/get-updates-through-windows-update.md
     - name: How to keep Windows up to date
       href: ./deployment/keep-windows-up-to-date.md
+    - name: How to schedule automatic updates
+      href: ./deployment/how-to-use-automatic-updates-feature.md
     - name: How to solve disk space issues caused by WinSxS directory
       href: ./deployment/address-disk-space-issues-caused-by-winsxs.md
-    - name: How to schedule automatic updates
-      href: ./deployment/how-to-use-automatic-updates-feature.md
+    - name: Install Service Packs and Hotfixes
+      href: ./deployment/install-service-packs-hotfixes.md
+    - name: Package Manager can install only the first package 
+      href: ./deployment/package-manager-cannot-manage-two-more-packages.md
     - name: Previously released updates are reoffered
       href: ./deployment/previously-released-updates-reoffered.md
-    - name: SFC detects Opencl.dll as corrupted
+    - name: SFC detects Opencl.dll as corrupted
       href: ./deployment/sfc-detects-opencl-dot-dll-corrupted.md
     - name: Standard terminology that defines software updates
       href: ./deployment/standard-terminology-software-updates.md
+    - name: Switches with Xcopy and Xcopy32 commands
+      href: ./deployment/switches-with-xcopy-and-xcopy32-command.md
     - name: Sysprep fails after you remove or update Microsoft Store apps
       href: ./deployment/sysprep-fails-remove-or-update-store-apps.md
+    - name: The same update is offered repeately
+      href: ./deployment/repeatedly-offer-the-same-update.md
+    - name: Update Windows Update Agent to latest version
+      href: ./deployment/update-windows-update-agent.md
+    - name: view system registry with 64-bit versions of Windows
+      href: ./deployment/view-system-registry-with-64-bit-windows.md
+    - name: Windows Update automatically downloads and installs updates 
+      href: ./deployment/updates-automatically-downloaded.md
     - name: Windows Update hangs
       href: ./deployment/windows-update-hangs-updates-uninstalled.md
   - name: Setup
@@ -214,10 +256,12 @@
       href: ./deployment/dotnet-framework-4dot5dot1-web-installer.md
     - name: Automate regional and language settings
       href: ./deployment/automate-regional-language-settings.md
+    - name: Can't enter UEFI firmware setup
+      href: ./deployment/cant-enter-uefi-firmware-setup.md
     - name: Can't turn off a computer from Audit mode
       href: ./deployment/fail-to-turn-off-computer-from-audit-mode.md
-    - name: Can't enter UEFI firmware setup
-      href: ./deployment/cant-enter-uefi-firmware-setup.md
+    - name: Can't upgrade Windows when PowerShell is installed
+      href: ./deployment/cannot-upgrade-windows-with-powershell-installed.md
     - name: Customize default local user profile
       href: ./deployment/customize-default-local-user-profile.md
     - name: Download and burn an ISO file from VLSC
@@ -226,19 +270,37 @@
       href: ./deployment/event-10-is-logged-in-application-log.md
     - name: Fail to perform an in-place upgrade
       href: ./deployment/windows-not-parse-process-unattend-answer-file.md
-    - name: How to customize the default local user profile when creating an image 
+    - name: HAL_INITIALIZATION_FAILED error on VMWare VM
+      href: ./deployment/installation-error-hal-initialization-failed.md
+    - name: How to customize the default local user profile when creating an image 
       href: ./deployment/customize-default-local-user-profile-prepare-image.md
+    - name: How to edit the Boot.ini file in Windows 2000
+      href: ./deployment/edit-boot-ini-file-windows-2000.md
+    - name: Installation File Location not behave on the Explain tab
+      href: ./deployment/installation-file-location-service-pack-not-behave.md
+    - name: Operations fail if Windows 8 is improperly identified as a WTG installation
+      href: ./deployment/windows-8-incorrectly-reported-as-wtg-installation.md
     - name: Running Sysprep /generalize returns error
       href: ./deployment/error-occurs-when-running-sysprep-generalize.md
     - name: Sysprep and capture task sequence fails
       href: ./deployment/sysprep-capture-task-sequence-fails.md
-    - name: WinRE can't be built after deploying an image
+    - name: System restore points are disabled after upgrade
+      href: ./deployment/system-restore-points-disabled.md
+    - name: Unattended setup parameters for unattend.txt
+      href: ./deployment/unattended-setup-parameters-for-unattend-dot-txt.md
+    - name: Windows optional component setup tool
+      href: ./deployment/use-ocsetup-to-install-remove-components.md
+    - name: Windows SIM can't generate a catalog
+      href: ./deployment/windows-sim-unable-generate-catalog-error.md
+    - name: Windows setup log file locations
+      href: ./deployment/windows-setup-log-file-locations.md
+    - name: WinRE can't be built after deploying an image
       href: ./deployment/winre-cannot-built-deploy-image-captured-non-uefi-computer.md
 - name: Group Policy
   items:
   - name: AppLocker or software restriction policies
     items:
-    - name: Archived application can't be restored
+    - name: Archived application can't be restored
       href: ./group-policy/archived-application-cant-be-restored.md
   - name: Group Policy management - GPMC or AGPM
     items:
@@ -246,17 +308,21 @@
       href: ./group-policy/admx-errors-when-local-group-policy-editor.md
     - name: How to create and manage Central Store for registry-based policies
       href: ./group-policy/create-and-manage-central-store.md
+    - name: Logon scripts don't run for five minutes
+      href: ./group-policy/logon-scripts-not-run-for-long-time.md
     - name: Use Settings app Group Policy
       href: ./group-policy/use-settings-app-group-policy.md
   - name: Problems applying Group Policy objects to users or computers
     items:
+    - name: Can't open gpedit.msc after updating ADML and ADMX file
+      href: ./group-policy/resource-stringid-win7only-not-found.md
     - name: Clients fail to apply group policy at startup
       href: ./group-policy/fail-to-apply-group-policy-at-startup.md
     - name: Group Policy is not applied to a user account
       href: ./group-policy/group-policy-not-applied-user-account-runas.md
-    - name: Group Policy Screensaver setting isn't working
+    - name: Group Policy Screensaver setting isn't working
       href: ./group-policy/group-policy-screensaver-setting-not-work.md
-    - name: Point and Print Restrictions policies are ignored
+    - name: Point and Print Restrictions policies are ignored
       href: ./group-policy/point-print-restrictions-policies-ignored.md
     - name: Save documents to OneDrive by default
       href: ./group-policy/save-documents-to-onedrive-by-default.md
@@ -270,10 +336,16 @@
   items:
   - name: Access to remote file shares (SMB or DFS Namespace)
     items:
+    - name: '"User has not been authenticated" error when accessing a network drive'
+      href: ./networking/error-access-network-drive-mapped-web-share.md
     - name: Access Denied when you access SMB file share
       href: ./networking/access-denied-access-smb-file-share.md
+    - name: Can access offline files even if the file server is removed
+      href: ./networking/access-offline-files-file-server-removed-from-network.md
     - name: Error when accessing an administrative share
       href: ./networking/cannot-logon-access-administrative-share.md
+    - name: Mapped drive connection to network share is lost
+      href: ./networking/mapped-drive-connection-to-network-share-lost.md
     - name: Mapped drives not available in elevated command prompt
       href: ./networking/mapped-drives-not-available-from-elevated-command.md
     - name: Slow network performance on remote network computer
@@ -290,43 +362,69 @@
       href: ./networking/dhcp-clients-blocked-dai-enabled-network.md
   - name: Folder redirection and Offline Files and Folders (CSC)
     items:
+    - name: Can't redirect Documents folder to the home directory 
+      href: ./networking/redirect-users-documents-folder-to-their-home-directory-fail.md
+    - name: Can't open files offline
+      href: ./networking/error-open-files-offline-offline-files-wip.md
     - name: Change the location of CSC folder
       href: ./networking/change-csc-folder-location-with-cachelocation-registry.md
     - name: CSCCMD tool Version 1.1. functions and features
       href: ./networking/client-side-caching-command-line-options-v1dot1.md
-    - name: Errors when having a large "Folder Redirection" policy settings file
+    - name: Errors when having a large "Folder Redirection" policy settings file
       href: ./networking/errors-work-large-folder-redirection-policy-settings-file.md
     - name: Folder redirection doesn't work correctly
       href: ./networking/folder-redirection-not-work.md
-    - name: Folder redirection fails when redirected to mapped drive letter
+    - name: Folder redirection fails when redirected to mapped drive letter
       href: ./networking/cannot-redirect-folder-use-drive-map-letter.md
     - name: Move the CSC folder to a new location
       href: ./networking/move-client-side-caching-folder.md
     - name: Offline file synchronization issues
       href: ./networking/offline-file-synchronization-issue.md
+  - name: IP Address Management (IPAM)
+    items:
+    - name: Intranet site is identified as Internet site
+      href: ./networking/intranet-site-identified-as-an-internet-site.md
   - name: Remote access
     items:
+    - name: CMAK-based VPN client doesn't work
+      href: ./networking/cmak-based-vpn-doesnt-work.md
+    - name: Default gateway route doesn't appear in Routing Table 
+      href: ./networking/default-gateway-route-not-appear.md
+    - name: DirectAccess clients can't connect by IP-HTTPS
+      href: ./networking/error-directaccess-clients-connect-over-ip-https.md
+    - name: DirectAccess clients can't connect with IP-HTTPS
+      href: ./networking/directaccess-clients-unable-connect-error-0x80092013.md
     - name: DirectAccess clients connection error 0x800b0109
       href: ./networking/directaccess-clients-connection-error-0x800b0109.md
     - name: Disconnect incoming VPN connection
       href: ./networking/disconnect-incoming-vpn-connection.md
-    - name: Error 721 when establishing a VPN connection
+    - name: Error 721 when establishing a VPN connection
       href: ./networking/error-when-establishing-vpn-connection.md
-    - name: Modern Apps can't connect when using Check Point VPN
+    - name: Error codes for dial-up or VPN connections
+      href: ./networking/error-codes-for-dial-up-vpn-connection.md
+    - name: Modern Apps can't connect when using Check Point VPN
       href: ./networking/modern-apps-cannot-connect-check-point-vpn.md
     - name: Troubleshoot L2TP/IPSec VPN client connection
       href: ./networking/l2tp-ipsec-vpn-client-connection-issue.md
   - name: TCP/IP communications
     items:
+    - name: Additional gateways appear in persistent routes
+      href: ./networking/incorrect-default-gateways-in-persistent-routes.md
     - name: Can't turn on Network Discovery
       href: ./networking/cannot-turn-on-network-discovery.md
+    - name: Check Microsoft Broadband Network Adapter
+      href: ./networking/ping-exe-check-microsoft-broadband-network-adapter.md
     - name: Configure client proxy server settings
       href: ./networking/configure-client-proxy-server-settings-by-registry-file.md
+    - name: error "WSAENOBUFS (10055)"
+      href: ./networking/connect-tcp-greater-than-5000-error-wsaenobufs-10055.md
     - name: Error 0x80071779 when removing network components
       href: ./networking/cannot-uninstall-client-for-microsoft-networks.md
+    - name: Error 734 when establishing a dial-up connection
+      href: ./networking/cannot-establish-dial-up-connection.md
     - name: How to disable network adapter power management
       href: ./networking/power-management-on-network-adapter.md
-    - name: Port Scanning Prevention Filter behavior
+    - name: Port Scanning Prevention Filter behavior
       href: ./networking/lots-disk-io-writes-wfpdiag-etl-log.md
     - name: Set up your small business network
       href: ./networking/set-up-your-small-business-network.md
@@ -334,13 +432,25 @@
       href: ./networking/settings-for-minimizing-periodic-wan-traffic.md
     - name: TCP/IP addressing and subnetting
       href: ./networking/tcpip-addressing-and-subnetting.md
+    - name: Unwanted wake-up events when you enable WOL
+      href: ./networking/unwanted-wake-up-events.md
+  - name: Web Application Proxy (WAP) role service
+    items:
+    - name: Fail to use apps that connect to Internet
+      href: ./networking/use-authenticated-proxy-servers.md
+  - name: WebClient and WebDAV
+    items:
+    - name: Can't access WebDAV Web folder
+      href: ./networking/cannot-access-webdav-web-folder.md
+    - name: Can't automatically reconnect a DAV share when Basic Authentication is used
+      href: ./networking/cannot-automatically-reconnect-dav-share.md
   - name: Windows Defender Exploit Guard
     items:
-    - name: Lost internet connectivity using VPN
+    - name: Lost internet connectivity using VPN
       href: ./networking/network-connectivity-lost.md
   - name: Windows Firewall with Advanced Security (WFAS)
     items:
-    - name: Firewall profile doesn't switch to Domain when using a third-party VPN
+    - name: Firewall profile doesn't switch to Domain when using a third-party VPN
       href: ./networking/firewall-profile-not-switch-to-domain.md
     - name: Internet firewalls prevent browsing and file sharing
       href: ./networking/internet-firewalls-prevent-browsing-file-sharing.md
@@ -348,8 +458,14 @@
     items:
     - name: Code 31 error for WAN Miniport device
       href: ./networking/code-31-error-device-manager-for-wan-miniport.md
+    - name: Configure Wi-Fi Sense and Paid Wi-Fi Services
+      href: ./networking/configure-wifi-sense-and-paid-wifi-service.md
     - name: Event 10317 when you turn on mobile broadband device
       href: ./networking/event-10317-mobile-broadband-device.md
+    - name: How to connect to a wireless network
+      href: ./networking/connect-to-wireless-network.md
+    - name: Intel's My WiFi Technology stops working
+      href: ./networking/intels-my-wifi-stops-working.md
     - name: 'Microsoft: Protected EAP (PEAP) option is missing'
       href: ./networking/microsoft-protected-eap-option-missing.md
     - name: OpenGL applications don't run on Miracast display
@@ -358,19 +474,21 @@
       href: ./networking/windows-security-alert-wireless-network.md
     - name: Virtual WiFi/SoftAP fails to start
       href: ./networking/virtual-wifisoftap-fails-to-start.md
+    - name: Wireless devices are disabled after Airplane mode is off
+      href: ./networking/wireless-devices-disabled-airplane-mode-off.md
 - name: Performance
   items:
   - name: Applications
     items:
-    - name: Check Point and Centrify apps stop working
+    - name: Check Point and Centrify apps stop working
       href: ./performance/check-point-centrify-apps-stop-working.md
-    - name: Command prompt and PowerShell don't Start
+    - name: Command prompt and PowerShell don't start
       href: ./performance/command-prompt-powershell-not-start.md
     - name: Flight Simulator X hangs on loading screen
       href: ./performance/flight-simulator-x-stops-responding.md
     - name: Running an.exe file starts different program
       href: ./performance/running-exe-starts-another-program.md
-    - name: SuperFetch (SysMain) service consumes CPU
+    - name: SuperFetch(SysMain) service consumes CPU
       href: ./performance/superfetch-sysmain-service-spikes-cpu.md
   - name: Blue Screen/Bugcheck
     items:
@@ -380,7 +498,7 @@
       href: ./performance/nmi-hardware-failure-error.md
     - name: Read small memory dump files
       href: ./performance/read-small-memory-dump-file.md
-    - name: Stop error 0xE6 for a wireless device driver
+    - name: Stop error 0xE6 for a wireless device driver 
       href: ./performance/stop-error-0xe6-wireless-device-driver-dmar.md
     - name: Tablet device creates only a minidump file
       href: ./performance/tablet-device-creates-minidump-file.md
@@ -394,12 +512,18 @@
       href: ./performance/invalid-boot-file-received-error.md
   - name: Performance monitoring tools
     items:
+    - name: Cannot modify user environment variables
+      href: ./performance/cannot-modify-user-environment-variables-system-properties.md
     - name: CPU usage exceeds 100%
       href: ./performance/cpu-usage-exceeds-100.md
+    - name: Determine hardware DEP is available
+      href: ./performance/determine-hardware-dep-available.md
     - name: GPU Process Memory counters report incorrect values
       href: ./performance/gpu-process-memory-counters-report-wrong-value.md
-    - name: Task Manager shows incorrect CPU speed
+    - name: Task Manager shows incorrect CPU speed
       href: ./performance/task-manager-shows-incorrect-cpu-speed.md
+    - name: Use the System Configuration utility to troubleshoot
+      href: ./performance/system-configuration-utility-troubleshoot-configuration-errors.md
     - name: Windows Experience Index shows 1.0
       href: ./performance/windows-experience-index-shows-1-dot-0.md
   - name: Shutdown is slow or hangs
@@ -412,52 +536,47 @@
       href: ./performance/lsaiso-process-high-cpu-usage.md
     - name: How to speed up your computer
       href: ./performance/speed-up-your-computer.md
-    - name: NMI_HARDWARE_FAILURE error
-      href: ./performance/nmi-hardware-failure-error.md
+    - name: Memory leak in remote registry service
+      href: ./performance/memory-leak-remote-registry-service.md
     - name: Push-button reset fails because language resources are missing
       href: ./performance/pbr-reset-fails-language-resources-missing.md
-    - name: Running an.exe file starts different program 
-      href: ./performance/running-exe-starts-another-program.md
-    - name: SuperFetch (SysMain) service consumes CPU
-      href: ./performance/superfetch-sysmain-service-spikes-cpu.md
-    - name: Troubleshooting slow file copying in Windows 
-    - name: Memory leak in remote registry service
-      href: ./performance/memory-leak-remote-registry-service.md
     - name: Troubleshooting slow file copying in Windows
       href: ./performance/troubleshooting-slow-file-copying-in-windows.md
-- name: 'Printing '
+- name: Printing 
   items:
-  - name: (Errors and troubleshooting) Print output or print failures
-    items:
-    - name: Duplex printing options can't be set
-      href: ./printing/two-sided-printing-cannot-be-set.md
-  - name: (Errors and troubleshooting) Print spooler
-    items:
-    - name: Printers don't work with XPS-based print drivers
-      href: ./printing/print-directly-to-the-printer-setting-not-work.md
-  - name: (Management and Configuration) General issues
-    items:
-    - name: Error 0x00000709 when using CNAME record
-      href: ./printing/error-0x00000709-use-cname-record.md
-    - name: Error 0x00000709 when using CNAME record
-      href: ./printing/error-0x00000709-use-cname-record.md
-  - name: Errors and troubleshooting - General issues
+  - name: 'Errors and troubleshooting: General issues'
     items:
     - name: Can't install a Secure WSD printer from Print Management Console
       href: ./printing/cannot-install-secure-web-services-on-devices.md
+    - name: Error occurs when adding an IPP printer
+      href: ./printing/error-occurs-when-adding-ipp-printer.md
+  - name: 'Errors and troubleshooting: Print output or print failures'
+    items:
+    - name: Duplex printing options can't be set
+      href: ./printing/two-sided-printing-cannot-be-set.md
+    - name: PNG images don't print correctly in Word 2010 after changing display scaling
+      href: ./printing/png-images-not-print-correctly-change-display-scaling.md
+  - name: 'Errors and troubleshooting: Print spooler'
+    items:
+    - name: Printers don't work with XPS-based print drivers
+      href: ./printing/print-directly-to-the-printer-setting-not-work.md
   - name: Issues with Scanning
     items:
     - name: '"Server Busy" error message when you try to scan a document'
       href: ./printing/server-busy-error-scan-document.md
     - name: Scanning cause TWAIN aware application to hang
       href: ./printing/scanning-twain-aware-application-hang.md
-  - name: Management and Configuration General issues
+  - name: 'Management and Configuration: General issues'
     items:
-    - name: Add print directory feature
+    - name: Add print directory feature
       href: ./printing/add-print-directory-feature.md
+    - name: Alter printers that roam with roaming profiles
+      href: ./printing/alter-printers-behavior-roaming-profiles.md
+    - name: Error 0x00000709 when you use CNAME record
+      href: ./printing/error-0x00000709-use-cname-record.md
     - name: Errors when you connect to a shared printer by using a CNAME record
       href: ./printing/errors-connect-to-shared-printer-cname-record.md
-    - name: Printing from Modern App creates large spool file
+    - name: Printing from Modern App creates large spool file
       href: ./printing/print-modern-app-creates-large-file.md
 - name: Remote Desktop Services
   items:
@@ -465,13 +584,17 @@
     items:
     - name: Description of Remote Server Administration Tools
       href: ./remote/description-remote-server-administration-tools.md
+  - name: Connecting to a session or desktop
+    items:
+    - name: 802.1x user authentication fails when using RDS connection
+      href: ./remote/cannot-use-802dot1x-user-authentication-connect-rds.md
   - name: Redirection (not printer)
     items:
     - name: Some USB devices aren't available
       href: ./remote/usb-devices-unavailable-remotefx-usb-redirection.md
   - name: Remote desktop sessions
     items:
-    - name: Invalid client IP address in security event ID 4624
+    - name: Invalid client IP address in security event ID 4624
       href: ./remote/invalid-client-ip-address-port-number-event-4624.md
     - name: Troubleshoot RDP Client connection problems
       href: ./remote/terminal-server-client-connection-failures.md
@@ -483,18 +606,24 @@
       href: ./shell-experience/windows-search-service-not-starting.md
     - name: Fix problems in Windows Search
       href: ./shell-experience/fix-problems-in-windows-search.md
-    - name: Troubleshoot Windows Search performance
+    - name: Issues for Windows Desktop Search and Cortana
+      href: ./shell-experience/windows-desktop-search-and-cortana-issues.md
+    - name: Troubleshoot Windows Search performance
       href: ./shell-experience/windows-search-performance-issues.md
+    - name: Windows.edb becomes larger than expected
+      href: ./shell-experience/larger-windowsdotedb-file.md
   - name: Desktop Shell
     items:
+    - name:  Black screen when unlocking a computer
+      href: ./shell-experience/windows-7-black-screen-unlock-computer.md
     - name: An x in App titles in the lower-right corner
       href: ./shell-experience/x-app-titles-lower-right-corner.md
-    - name: Black screen when unlocking a computer
-      href: ./shell-experience/windows-7-black-screen-unlock-computer.md
     - name: Blank screen with no Start Menu
       href: ./shell-experience/windows-logon-process-failed-spawn-user-app.md
     - name: Fail to execute commands with RunOnce and RunOnceEx
       href: ./shell-experience/standard-user-cannot-run-commnad-via-runonce.md
+    - name: Fail to register a DLL by using Regsvr32.exe
+      href: ./shell-experience/dllregisterserver-error.md
     - name: HotStart buttons doesn't work
       href: ./shell-experience/disabling-autoplay-cause-hotstart-buttons-not-working.md
     - name: How to modify the command line string limitation
@@ -503,11 +632,13 @@
     items:
     - name: Can't open high resolution file in Photo Gallery
       href: ./shell-experience/cannot-open-high-resolution-file-photo-gallery.md
+    - name: Custom display settings revert to the default
+      href: ./shell-experience/custom-display-settings-revert-to-default.md
     - name: Display issue when you use USB-attached monitor
       href: ./shell-experience/display-configuration-retained-after-reboot.md
     - name: Display resolution changes to a lower resolution
       href: ./shell-experience/display-resolution-changes-win-p-key.md
-    - name: Error when DDA-capable app is against GPU
+    - name: Error when DDA-capable app is against GPU
       href: ./shell-experience/error-when-dda-capable-app-is-against-gpu.md
     - name: Fonts may not all get scaled properly
       href: ./shell-experience/fonts-may-not-all-get-scaled-properly.md
@@ -515,19 +646,29 @@
       href: ./shell-experience/incomplete-list-modes-in-duplicate-mode.md
     - name: Mouse input in games is incorrectly scaled
       href: ./shell-experience/mouse-input-incorrectly-scaled.md
+    - name: The blocking untrusted fonts feature
+      href: ./shell-experience/feature-to-block-untrusted-fonts.md
     - name: Video resolution limit for H.264 and stabilization
       href: ./shell-experience/video-stabilization-resolution-limits-h-264.md
   - name: DST and Timezones
     items:
     - name: Changes to calendar date in BIOS are not reflected in Windows
       href: ./shell-experience/changes-calendar-date-in-bios-not-reflected.md
+  - name: File Associations
+    items:
+    - name: Can't associate a program with an extension
+      href: ./shell-experience/cannot-associate-program-with-extension.md
   - name: File Explorer/Windows Explorer
     items:
+    - name: .CHM file not render properly
+      href: ./shell-experience/dot-chm-file-not-render-properly.md
     - name: Context menu items are missing
       href: ./shell-experience/context-menus-shortened-select-over-15-files.md
     - name: Error when burning files to disc
       href: ./shell-experience/error-when-burning-files-to-disc.md
-    - name: How to remove the Security tab by a group policy
+    - name: Error when opening a Library in Windows Explorer
+      href: ./shell-experience/no-longer-working-error-library-windows-explorer.md
+    - name: How to remove the Security tab by a group policy
       href: ./shell-experience/disable-security-tab-use-group-policy.md
     - name: Renaming a network folder fails
       href: ./shell-experience/renaming-a-network-folder-fails.md
@@ -535,13 +676,13 @@
       href: ./shell-experience/file-folder-name-whitespace-characters.md
   - name: Lock Screen or Screensaver
     items:
-    - name: Lock screen isn't displayed
+    - name: Lock screen isn't displayed
       href: ./shell-experience/lock-screen-isnt-displayed.md
     - name: Manage lock screen image
       href: ./shell-experience/manage-lock-screen-image.md
-  - name: Modern, Inbox and Microsoft Store Apps
-    items:
-    - name: Can't open Microsoft Store when making a VPN connection
+    - name: Monitor powers off when computer is locked
+      href: ./shell-experience/monitor-powers-off-when-pc-locked.md
+    - name: Can't open Microsoft Store when making a VPN connection
       href: ./shell-experience/microsoft-store-not-open-domain-joine-computer-vpn.md
     - name: Can't play audio in a system with DisplayPort
       href: ./shell-experience/errors-play-audio-displayport-hdmi-monitor.md
@@ -549,16 +690,22 @@
       href: ./shell-experience/cannot-remove-uninstall-or-reinstall-microsoft-store-app.md
     - name: Can't start Microsoft Store apps
       href: ./shell-experience/error-start-store-apps.md
-    - name: Microsoft Store app removed unexpectedly
+    - name: Microsoft Store app removed unexpectedly 
       href: ./shell-experience/pre-installed-microsoft-store-app-removed-logon.md
     - name: Microsoft Store Apps fail to start
       href: ./shell-experience/microsoft-store-apps-fail-to-start.md
-    - name: Microsoft-Windows-AppReadiness event ID 215 error
+    - name: Microsoft-Windows-AppReadiness event ID 215 error
       href: ./shell-experience/microsoft-windows-appreadiness-event-id-215-error.md
     - name: Store App can't start without user profile
       href: ./shell-experience/apps-not-start-without-user-profile-programdata.md
     - name: Store app used by multiple users won't open after update
       href: ./shell-experience/store-app-not-start-after-update.md
+  - name: Windows Media Player
+    items:
+    - name: Toggle between full screen mode and Windows mode
+      href: ./shell-experience/toggle-full-mode-and-windows-mode.md
+    - name: Videos don't play in Windows Media Player 11
+      href: ./shell-experience/media-player-11-not-play-video.md
 - name: System Management Components
   items:
   - name: Event Viewer
@@ -577,15 +724,23 @@
     items:
     - name: Error 0x80041323 when you run Scheduled tasks
       href: ./system-management-components/0x80041323-running-scheduled-tasks.md
+    - name: Error when using the "/z" switch with the "Schtasks.exe" command
+      href: ./system-management-components/error-task-xml-missing-required-element-attribute.md
+    - name: Run programs automatically when a user logs on
+      href: ./system-management-components/run-programs-automatically.md
     - name: Task scheduler runs tasks as background processes
       href: ./system-management-components/task-scheduler-task-only-runs-in-background.md
+    - name: Use the at command to schedule tasks
+      href: ./system-management-components/use-at-command-to-schedule-tasks.md
   - name: WinRM
     items:
+    - name: Errors when you run WinRM commands
+      href: ./system-management-components/errors-when-you-run-winrm-commands.md
     - name: How to configure WINRM for HTTPS
       href: ./system-management-components/configure-winrm-for-https.md
-  - name: WMI
+  - name: WMI 
     items:
-    - name: Failed logon event when running remote WMI
+    - name: Failed logon event when running remote WMI
       href: ./system-management-components/failed-logon-event-when-running-remote-wmi.md
     - name: WMI-Activity Event ID 5858 logged with ResultCode = 0x80041032
       href: ./system-management-components/wmi-activity-event-5858-logged-with-resultcode-0x80041032.md
@@ -595,26 +750,34 @@
     items:
     - name: '%username% is unavailable that has OneDrive for Business installed'
       href: ./ue-v/percent-username-percent-unavailable.md
+    - name: Unexpected one-minute delay of Outlook if UE-V is enabled
+      href: ./ue-v/outlook-takes-one-minute-start.md
   - name: User Experience Virtualization (UE-V)
     items:
-    - name: Enable debug logging
+    - name: Enable debug logging
       href: ./ue-v/enable-debug-logging.md
     - name: Troubleshoot UE-V replication issues
       href: ./ue-v/ue-v-replication-issues.md
-    - name: UE-V Registry Settings
+    - name: UE-V Registry Settings
       href: ./ue-v/ue-v-registry-settings.md
 - name: UserProfiles and Logon
   items:
+  - name: Slow logon
+    items:
+    - name: Slow logon with a blank screen
+      href: ./user-profiles-and-logon/slow-logon-with-blank-screen.md
   - name: User Logon fails
     items:
     - name: Custom credential providers don't load when you first log on
       href: ./user-profiles-and-logon/custom-credential-providers-dont-load-first-logon.md
+    - name: Error 0xCAA5001C Token broker operation failed
+      href: ./user-profiles-and-logon/event-1098-error-0xcaa5001c.md
     - name: First sign-in fails after deploying an image
       href: ./user-profiles-and-logon/first-logon-fails-deploy-image.md
+    - name: Holding Shift key while logging off the system can't disable automatic logon
+      href: ./user-profiles-and-logon/hold-shift-key-shutting-down-not-disable-automatic-logon.md
     - name: Logon fails when using cached credentials
       href: ./user-profiles-and-logon/cached-user-logon-fails-lsasrv-event-45058.md
-    - name: Mapped drive connection to network share is lost
-      href: ./networking/mapped-drive-connection-to-network-share-lost.md
   - name: User profiles
     items:
     - name: Can't set a convenience PIN
@@ -649,65 +812,65 @@
   items:
   - name: E5 ESU offers
     items:
-    - name: FAQ about Windows 7 ESU offers for E5 customers
+    - name: FAQ about Windows 7 ESU offers for E5 customers
       href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.md
   - name: General information
     items:
-    - name: FAQ about the end of support for Windows 7
+    - name: FAQ about the end of support for Windows 7
       href: ./windows-7-eos-faq/windows-7-end-support-faq-general.md
   - name: Main page
     items:
-    - name: IT Pro FAQ about the end of support for Windows 7
+    - name: IT Pro FAQ about the end of support for Windows 7
       href: ./windows-7-eos-faq/windows-7-end-support-faq.md
   - name: Troubleshoot issues in ESU
     items:
-    - name: Troubleshoot issues in Extended Security Updates
+    - name: Troubleshoot issues in Extended Security Updates
       href: ./windows-7-eos-faq/troubleshoot-extended-security-updates-issues.md
   - name: Windows 7 Extended Security Updates (ESU)
     items:
-    - name: FAQ about Extended Security Updates for Windows 7
+    - name: FAQ about Extended Security Updates for Windows 7
       href: ./windows-7-eos-faq/windows-7-extended-security-updates-faq.md
 - name: Windows Security
   items:
-  - name: Bitlocker
+  - name: Account lockouts
     items:
-    - name: Earlier Windows versions don't start after "Setup Windows and Configuration Manager"
+    - name: Access computer after administrator account is disabled
+      href: ./windows-security/access-computer-after-administrator-disabled.md
+    - name: Earlier Windows versions don't start after "Setup Windows and Configuration Manager"
       href: ./windows-security/earlier-versions-not-start-use-pre-provision-bitlocker.md
-    - name: TPM is in reduced functionality mode
+    - name: TPM is in reduced functionality mode
       href: ./windows-security/trusted-platform-module-reduced-functionality-mode.md
-  - name: Certificates and public key infrastructure (PKI)
-    items:
-    - name: Event ID 7000 or 7026 after starting a computer
-      href: ./deployment/system-log-event-id-7000-7026.md
-    - name: Unexpected one-minute delay of Outlook if UE-V is enabled
-      href: ./ue-v/outlook-takes-one-minute-start.md
   - name: Kerberos authentication
     items:
+    - name: '"Not enough storage is available to complete this operation" error'
+      href: ./windows-security/not-enough-storage-available-complete-operation-error.md
     - name: Fail to paste password into credential dialog box
       href: ./windows-security/file-system-error-when-pasting-password.md
-    - name: W32Time doesn't start automatically
-      href: ./identity/w32time-not-start-on-workgroup.md
   - name: Legacy authentication (NTLM)
     items:
     - name: Enable NTLM 2 authentication
       href: ./windows-security/enable-ntlm-2-authentication.md
-    - name: Enabling debug logging for the Netlogon service
+    - name: Enabling debug logging for the Netlogon service
       href: ./windows-security/enable-debug-logging-netlogon-service.md
+  - name: Permissions, access control, and auditing
+    items:
+    - name: Permissions when you copy and move files
+      href: ./windows-security/permissions-on-copying-moving-files.md
   - name: Secure Boot and UEFI
     items:
+    - name: Can't boot if more than one EFI system partition is present
+      href: ./windows-security/cannot-boot-windows-on-primary-hard-disk-uefi.md
     - name: Error 0x80290300 when clearing the TPM
       href: ./windows-security/clear-tpm-fails-error-code-0x80290300.md
     - name: TPM isn't recognized as a compatible device
       href: ./windows-security/tpm-is-not-recognized.md
   - name: Smart card logon
     items:
-    - name: Can't authenticate because of an incorrect PIV smart card driver update
+    - name: Can't authenticate because of an incorrect PIV smart card driver update
       href: ./windows-security/cannot-authenticate-incorrect-piv-smart-card-driver-update.md
   - name: TPM
     items:
     - name: Events 14 and 17 for TPM command failure or non-recoverable error
       href: ./windows-security/tpm-device-driver-error-log.md
-  - name: Windows Firewall with Advanced Security (WFAS)
-    items:
     - name: Enable diagnostic logging for Windows Security Center
       href: ./windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md
