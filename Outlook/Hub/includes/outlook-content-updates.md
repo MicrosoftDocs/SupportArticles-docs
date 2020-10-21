@@ -40,3 +40,14 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/outlook/troubleshoot/index) | modified |
+
+
+## Week of October 12, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/15/2020 | [The address list cannot be displayed error](/outlook/troubleshoot/contacts/the-address-list-cannot-be-displayed-error) | modified |
+| 10/15/2020 | [Outlook crashes in KERNELBASE.dll due to corrupt data file](/outlook/troubleshoot/performance/outlook-2013-crashes-in-kernelbase-dll) | modified |
+| 10/15/2020 | [Stability issues in Citrix environment with AppSense](/outlook/troubleshoot/performance/possible-stability-issues-in-citrix-enviconment-with-appsense) | modified |
+| 10/15/2020 | [Resources for the top Outlook issues](/outlook/troubleshoot/user-interface/resources-for-the-top-outlook-issues-in-microsoft-365) | modified |

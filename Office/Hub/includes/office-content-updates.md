@@ -307,3 +307,13 @@
 | 10/8/2020 | [Export a text file with both comma and quote delimiters in Excel](/office/troubleshoot/excel/export-text-file-with-comma-quote) | modified |
 | 10/9/2020 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
 | 10/9/2020 | [Convert degrees/minutes/seconds angles to or from decimal angles](/office/troubleshoot/excel/convert-degrees-minutes-seconds-angles) | modified |
+
+
+## Week of October 12, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/12/2020 | [Unable to open an Access database on a server](/office/troubleshoot/access/error-opening-database) | modified |
+| 10/14/2020 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
+| 10/15/2020 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |

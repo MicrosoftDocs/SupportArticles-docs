@@ -229,6 +229,10 @@
       href: ../deployment/macros-in-this-project-disabled-outlook.md
     - name: How to manage multiple VBA projects
       href: ../deployment/manage-distribute-outlook-vba-project.md
+  - name: Development
+    items:
+    - name: Advise MAPI function returns 0x8007000E
+      href: ../development/advise-mapi-function-returns-0x8007000e.md
     - name: How to use Cdosys.dll to send emails with attachments via Visual C#
       href: ../development/how-to-use-cdosys-dll-library-to-send-email-with-attachments.md
   - name: Email Management

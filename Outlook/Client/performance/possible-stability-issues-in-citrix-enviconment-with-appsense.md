@@ -54,6 +54,6 @@ If you are experiencing one or more of the above symptoms in a Citrix environmen
 |LockDownMgr.dll|8.1.591.0|8.1.591.0|8.2.206.0|
 |||||
 
-If your version is lower than the version listed under Fixed EM version in the above table, see [AppSense Web site](http://www.myappsense.com/) (registration required) to install the latest available version of the AppSense Environment Manager.
+If your version is lower than the version listed under Fixed EM version in the above table, see [AppSense Web site](https://www.citrix.com/) (registration required) to install the latest available version of the AppSense Environment Manager.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
