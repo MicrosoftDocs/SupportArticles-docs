@@ -102,205 +102,19 @@ To determine if the Stop error is the result of a single-bit error in the ESP re
 
 2. Run the WinDbg tool, select **File**, select **Open Crash Dump** to locate the memory dump file that contains the Stop error information, and then select **OK**.
 
-    The initial bug check analysis typically appears similar to the following example:
+3. Run the `!analyze -v` command to obtain an automated analysis of the dump file.
 
-    ```console
-    *******************************************************************************
-    *                                                                             *
-    *                        Bugcheck Analysis                                    *
-    *                                                                             *
-    *******************************************************************************
+4. Examine the output of the `!analyze -v` command to see if the output shows a double-fault condition. If a double-fault condition exists, run the `.tss 28` command to display the system state at the time of the double-fault. Generally, this value is relatively close to the value of the EBP register.
 
-    Use !analyze -v to get detailed debugging information.
+5. Run the `!thread` command to view the current thread's stack range. A double-fault exception typically occurs when the value of the ESP register is outside the range of addresses that are reserved for the stack for the current thread.
 
-    BugCheck 7F, {8, 0, 0, 0}
+    When this particular thread is running, the ESP register value must always be between the Stack Base value (f5d2a000) and the Limit value (f5d27000). Generally, the value of the ESP register is relatively close to the Current value (f5d29c9c). (The Current value is also between the Stack Base value and the Limit value.)
 
-    Probably caused by : ntkrnlmp.exe ( nt!KiUnlockDispatcherDatabase+1c )
-
-    Followup: MachineOwner
-    ```
-
-3. Run the `!analyze -v` command to obtain an automated analysis of the dump file. The following is an example of the output of the `!analyze -v` command:
-
-    ```console
-    0: kd> !analyze -v
-    *******************************************************************************
-    *                                                                             *
-    *                        Bugcheck Analysis                                    *
-    *                                                                             *
-    *******************************************************************************
-
-    UNEXPECTED_KERNEL_MODE_TRAP (7f)
-    This means a trap occurred in kernel mode, and it is a trap of a kind
-    that the kernel isn't permitted to have/catch (bound trap) or that
-    is always instant death (double fault).  The first number in the
-    bugcheck params is the number of the trap (8 = double fault, etc)
-    Consult an Intel x86 family manual to learn more about what these
-    traps are. Here is a *portion* of those codes:
-    If kv shows a taskGate
-            use .tss on the part before the colon, then kv.
-    Else if kv shows a trapframe
-            use .trap on that value
-    Else
-            .trap on the appropriate frame will show where the trap was taken
-            (on x86, this will be the ebp that goes with the procedure KiTrap)
-    Endif
-    kb will then show the corrected stack.
-    Arguments:
-    Arg1: 00000008, EXCEPTION_DOUBLE_FAULT
-    Arg2: 00000000
-    Arg3: 00000000
-    Arg4: 00000000
-
-    Debugging Details:
-    ------------------
-
-    BUGCHECK_STR:  0x7f_8
-
-    TSS:  00000028 -- (.tss 28)
-    eax=ffdff4dc ebx=f5d299dc ecx=8046f1c0 edx=00000000 esi=853e7a60 edi=00000102
-    eip=8046a86c esp=f5da9948 ebp=f5d2997c iopl=0         nv up ei pl zr na po nc
-    cs=0008  ss=0010  ds=0023  es=0023  fs=0030  gs=0000             efl=00010246
-    nt!KiUnlockDispatcherDatabase+0x1c:
-    8046a86c 59               pop     ecx
-    Resetting default scope
-
-    DEFAULT_BUCKET_ID:  DRIVER_FAULT
-
-    LAST_CONTROL_TRANSFER:  from 80450bb3 to 8046a86c
-
-    STACK_TEXT:  
-    f5d2997c 80450bb3 00000003 f5d299f8 00000001 nt!KiUnlockDispatcherDatabase+0x1c
-    f5d29d48 80466389 00000003 0076fe84 00000001 nt!NtWaitForMultipleObjects+0x385
-    f5d29d48 77f9323e 00000003 0076fe84 00000001 nt!KiSystemService+0xc9
-    0076fe5c 77e7a059 00000003 0076fe84 00000001 ntdll!ZwWaitForMultipleObjects+0xb
-    0076feac 77dee9fb 0076fe84 00000001 00000000 KERNEL32!WaitForMultipleObjectsEx+0xea
-    0076ff08 77deea48 0076fed4 0076ff5c 00000000 USER32!MsgWaitForMultipleObjectsEx+0x153
-    0076ff24 6d095a7c 00000002 0076ff5c 00000000 USER32!MsgWaitForMultipleObjects+0x1d
-    0076ff7c 780085bc 00283a90 0062f5ac 0062ffdc IisRTL!SchedulerWorkerThread+0xa7
-    0076ff90 8042fa31 85400680 0076ff88 ffffffff MSVCRT!_endthreadex+0xc1
-    00283ab8 ffffffff 00000000 00000000 00000000 nt!KiDeliverApc+0x1a1
-    00283ab8 ffffffff 00000000 00000000 00000000 0xffffffff
-    0000096c 00000000 00000000 00000000 00000000 0xffffffff
-
-    FOLLOWUP_IP:
-    nt!KiUnlockDispatcherDatabase+1c
-    8046a86c 59               pop     ecx
-
-    SYMBOL_STACK_INDEX:  0
-
-    FOLLOWUP_NAME:  MachineOwner
-
-    SYMBOL_NAME:  nt!KiUnlockDispatcherDatabase+1c
-
-    MODULE_NAME:  nt
-
-    IMAGE_NAME:  ntkrnlmp.exe
-
-    DEBUG_FLR_IMAGE_TIMESTAMP:  3ee650b3
-
-    STACK_COMMAND:  .tss 28 ; kb
-
-    BUCKET_ID:  0x7f_8_nt!KiUnlockDispatcherDatabase+1c
-
-    Followup: MachineOwner
-    ```
-
-4. Examine the output of the `!analyze -v` command to see if the output shows a double-fault condition. If a double-fault condition exists, run the `.tss 28` command to display the system state at the time of the double-fault. For example, the following output shows the values in the processor's registers at the moment when a double-fault exception occurred:
-
-    ```console
-    0: kd> .tss 28
-    eax=ffdff4dc ebx=f5d299dc ecx=8046f1c0 edx=00000000 esi=853e7a60 edi=00000102
-    eip=8046a86c esp=f5da9948 ebp=f5d2997c iopl=0         nv up ei pl zr na po nc
-    cs=0008  ss=0010  ds=0023  es=0023  fs=0030  gs=0000             efl=00010246
-    nt!KiUnlockDispatcherDatabase+0x1c:
-    8046a86c 59               pop     ecx
-    ```
-
-    In the previous example, the value of the ESP register is f5da9948. Generally, this value is relatively close to the value of the EBP register. In the previous example, the value of the EBP register is f5d2997c.
-
-5. Run the `!thread` command to view the current thread's stack range. A double-fault exception typically occurs when the value of the ESP register is outside the range of addresses that are reserved for the stack for the current thread. The following is an example of the output of the `!thread` command:
-
-    ```console
-    0: kd> !thread
-    THREAD 853e7a60  Cid 904.96c  Teb: 7ffdc000  Win32Thread: a21a5c48 RUNNING
-    Not impersonating
-    Owning Process 85400680
-    Wait Start TickCount    578275        Elapsed Ticks: 0
-    Context Switch Count    38423                   LargeStack
-    UserTime                  0:00:02.0031
-    KernelTime                0:00:06.0640
-    Start Address KERNEL32!BaseThreadStartThunk (0x77e5b700)
-    Win32 Start Address MSVCRT!_threadstartex (0x78008532)
-    Stack Init f5d2a000 Current f5d29c9c Base f5d2a000 Limit f5d27000 Call 0
-    Priority 8 BasePriority 8 PriorityDecrement 0 DecrementCount 0
-
-    ChildEBP RetAddr  Args to Child
-    00000000 8046a86c 00000000 00000000 00000000 nt!_KiTrap08+0x41
-    f5d2997c 80450bb3 00000003 f5d299f8 00000001 nt!KiUnlockDispatcherDatabase+0x1c
-    f5d29d48 80466389 00000003 0076fe84 00000001 nt!NtWaitForMultipleObjects+0x385
-    f5d29d48 77f9323e 00000003 0076fe84 00000001 nt!_KiSystemService+0xc9
-    0076fe5c 77e7a059 00000003 0076fe84 00000001 ntdll!ZwWaitForMultipleObjects+0xb
-    0076feac 77dee9fb 0076fe84 00000001 00000000 KERNEL32!WaitForMultipleObjectsEx+0xea
-    0076ff08 77deea48 0076fed4 0076ff5c 00000000 USER32!MsgWaitForMultipleObjectsEx+0x153
-    0076ff24 6d095a7c 00000002 0076ff5c 00000000 USER32!MsgWaitForMultipleObjects+0x1d
-    0076ff7c 780085bc 00283a90 0062f5ac 0062ffdc IisRTL!SchedulerWorkerThread+0xa7
-    0076ffb4 77e5b382 00283ab8 0062f5ac 0062ffdc MSVCRT!_threadstartex+0x8f
-    0076ffec 00000000 78008532 00283ab8 00000000 KERNEL32!BaseThreadStart+0x52
-    ```
-
-    In the previous output, the following information indicates the stack range values:
-
-    > Stack Init f5d2a000 Current f5d29c9c Base f5d2a000 Limit f5d27000 Call 0
-
-    When this particular thread is running, the ESP register value must always be between the Stack Base value (f5d2a000) and the Limit value (f5d27000). Generally, the value of the ESP register is relatively close to the Current value (f5d29c9c). (The Current value is also between the Stack Base value and the Limit value.) In the previous example, the value of the ESP register is f5da9948. This value is considerably outside the required range.
-
-    You may also be able to check the stack range values by running the `!pcr` command. The following is an example of the output of the `!pcr` command:
-
-    ```console
-    0: kd> !pcr
-    PCR Processor 0 @ffdff000
-    NtTib.ExceptionList: f5d29d38
-        NtTib.StackBase: f5d29df0
-       NtTib.StackLimit: f5d27000
-     NtTib.SubSystemTib: 00000000
-          NtTib.Version: 00000000
-      NtTib.UserPointer: 00000000
-          NtTib.SelfTib: 7ffdc000
-
-                SelfPcr: ffdff000
-                   Prcb: ffdff120
-                   Irql: 00000000
-                    IRR: 00000000
-                    IDR: ffffffff
-          InterruptMode: 00000000
-                    IDT: 80036400
-                    GDT: 80036000
-                    TSS: 80474850
-
-          CurrentThread: 853e7a60
-             NextThread: 00000000
-             IdleThread: 80470600
-
-              DpcQueue:
-    ```
+    You may also be able to check the stack range values by running the `!pcr` command.
 
     The `NtTib.StackLimit` value represents the lower limit of the stack range. The `NtTib.StackBase` value represents a recent value of ESP. The `NtTib.StackBase` value may be compared against the current value of the ESP register to help identify whether there's a single-bit error in the current ESP register value.
 
-6. Run the `.formats esp ^ ebp` command to display the differences in values between the ESP and EBP registers. The stack pointer value in the EBP register will be close to the stack pointer value in the ESP register, except for the single-bit error. This command frequently reveals the single high-order bit that contains the error, especially when the error is displayed in binary format, as it is in the following example:
-
-    ```console
-    0: kd> .formats esp ^ ebp
-    Evaluate expression:
-      Hex:     00080034
-      Decimal: 524340
-      Octal:   00002000064
-      Binary:  00000000 00001000 00000000 00110100
-      Chars:   ...4
-      Time:    Tue Jan 06 17:39:00 1970
-      Float:   low 7.34757e-040 high 0
-      Double:  2.59058e-318
-    ```
+6. Run the `.formats esp ^ ebp` command to display the differences in values between the ESP and EBP registers. The stack pointer value in the EBP register will be close to the stack pointer value in the ESP register, except for the single-bit error. This command frequently reveals the single high-order bit that contains the error, especially when the error is displayed in binary format.
 
     If you ignore the lower, least significant digits, the single-bit difference between the ESP and EBP registers is 00000000 00001000 00000000 00000000 in binary format. The difference is 00080000 in hexadecimal format.
 
@@ -308,54 +122,12 @@ To determine if the Stop error is the result of a single-bit error in the ESP re
 
 To obtain more information about your specific hardware, follow these steps:
 
-1. Use the `!cpuinfo` command to obtain CPU version information. The following is an example of the output from the `!cpuinfo` command.
+1. Use the `!cpuinfo` command to obtain CPU version information.
 
-    ```console
-    0: kd> !cpuinfo
-    TargetInfo::ReadMsr is not available in the current debug session
-    CP F/M/S Manufacturer  MHz Update Signature Features
-     0 15,2,9 GenuineIntel 2790>0000000000000000<00002fff
-     1 15,2,9 GenuineIntel 2790 0000000000000000 00002fff
-    ```
+    Although the **Update Signature** value may not always be accurately reported when you analyze a crash dump file, the **Update Signature** field generally indicates the microcode update revision that is applied to the CPU.
 
-    Although the **Update Signature** value may not always be accurately reported when you analyze a crash dump file, the **Update Signature** field generally indicates the microcode update revision that is applied to the CPU. In the previous example, this value is 0 (0000000000000000). The currently supported revision is 0x18 (0000001800000000), as shown in the following example output:
+2. Use the `!pcitree` command to find the vendor and device identifiers (VenDev IDs) for existing Peripheral Connect Interface (PCI) devices.
 
-    ```console
-    0: kd> !cpuinfo
-    CP F/M/S Manufacturer MHz Update Signature Features
-    TargetInfo::ReadMsr is not available in the current debug session
-     0 15,2,9 GenuineIntel 2994>0000001800000000<00033fff
-     1 15,2,9 GenuineIntel 2994 0000001800000000 00033fff
-     2 15,2,9 GenuineIntel 2994 0000001800000000 00033fff
-     3 15,2,9 GenuineIntel 2994 0000001800000000 00033fff
-    ```
-
-2. Use the `!pcitree` command to find the vendor and device identifiers (VenDev IDs) for existing Peripheral Connect Interface (PCI) devices. The following is an example of the output from the `!pcitree` command:
-
-    ```console
-    0: kd> !pcitree
-    Bus 0x0 (FDO Ext 85dceed8)
-      0600 00141166 (d=0,  f=0) devext 85dcf348 Bridge/HOST to PCI
-      0600 00141166 (d=0,  f=1) devext 85e110e8 Bridge/HOST to PCI
-      0600 00141166 (d=0,  f=2) devext 85e11ee8 Bridge/HOST to PCI
-      0100 00c09005 (d=2,  f=0) devext 85e11ce8 Mass Storage Controller/SCSI
-      0100 00c09005 (d=2,  f=1) devext 85e11ae8 Mass Storage Controller/SCSI
-      0300 47521002 (d=3,  f=0) devext 85e11788 Display Controller/VGA
-      0200 16a614e4 (d=4,  f=0) devext 85e11428 Network Controller/Ethernet
-      0880 a0f00e11 (d=5,  f=0) devext 85dcdee8 Base System Device/'Other' base system device
-      0601 02011166 (d=f, f=0) devext 85dcdb88 Bridge/PCI to ISA
-      0101 02121166 (d=f, f=1) devext 85dcd988 Mass Storage Controller/IDE
-      0c03 02201166 (d=f, f=2) devext 85dcd628 Serial Bus Controller/USB
-      0600 02251166 (d=f, f=3) devext 85dcd2c8 Bridge/HOST to PCI
-      0600 01011166 (d=11, f=0) devext 85e100e8 Bridge/HOST to PCI
-      0600 01011166 (d=11, f=2) devext 85e10ee8 Bridge/HOST to PCI
-    Bus 0x2 (FDO Ext 85dcecd8)
-      0104 00460e11 (d=2,  f=0) devext 85e0f9a8 Mass Storage Controller/RAID
-    Bus 0x5 (FDO Ext 85dce9d8)
-    No devices have been enumerated on this bus.
-    Total PCI Root busses processed = 3
-    ```
-
-    For each PCI device that is listed, the first 8-digit hexadecimal value (DWORD) on each line is the VenDev ID. The Vendor ID is actually the second 4 digits of this value. For example, the first device that is listed in the previous example has a VenDev ID of 0x00141166. The Device ID is 0x0014, and the Vendor ID is 0x1166. The Vendor ID for ServerWorks is 0x1166. So this output is from a processor that is installed on a motherboard that uses ServerWorks chipsets.
+    For each PCI device that is listed, the first 8-digit hexadecimal value (DWORD) on each line is the VenDev ID. The Vendor ID is actually the second 4 digits of this value. For example, the first device that is listed has a VenDev ID of 0x00141166. The Device ID is 0x0014, and the Vendor ID is 0x1166. The Vendor ID for ServerWorks is 0x1166. So this output is from a processor that is installed on a motherboard that uses ServerWorks chipsets.
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
