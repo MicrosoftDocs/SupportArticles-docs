@@ -37,7 +37,7 @@ To test for and eliminate the possibility that a third-party Excel add-in or fil
 
 1. Exit Excel.    
 2. Select **Start**, and then point to **Programs**.    
-3. Press Ctrl when you start Excel, and hold it until you receive a message that resembles the following:   
+3. Press **Ctrl** when you start Excel, and hold it until you receive a message that resembles the following:   
 
     **Excel has detected that you are holding down the Ctrl key. Do you want to start Excel in safe mode?**           
 4. Select **Yes**.    
@@ -45,9 +45,9 @@ To test for and eliminate the possibility that a third-party Excel add-in or fil
  
 If the file saves correctly, a custom add-in or a file that is located in an Excel startup location is most likely the cause. You must locate and remove the add-in or the file to eliminate the problem. After you determine the add-in or the file that caused the problem, contact the vendor that designed it. The vendor may have additional information about this issue and an update that does not cause the issue to occur.
 
-For more information about Microsoft Excel safe mode, press F1 in Excel to open the Help menu, type safe modein the Search box, and then select Search to view the topic.
+For more information about Microsoft Excel safe mode, press **F1** in Excel to open the Help menu, type **safe mode** in the **Search** box, and then select **Search** to view the topic.
 
-For more information about how to determine the folders that Excel uses during startup and additional options to disable this functionality, select the following article numbers to view the articles in the Microsoft Knowledge Base:
+For more information about how to determine the folders that Excel uses during startup and additional options to disable this functionality, see the following articles:
 
 - [Use startup folders in Excel](https://docs.microsoft.com/office/troubleshoot/excel/use-startup-folders) 
 - [How to prevent files from opening automatically in Excel](https://docs.microsoft.com/office/troubleshoot/excel/files-open-automatically) 
@@ -79,6 +79,8 @@ For more information about this error message, see the following articles:
  
 When antivirus software is installed or is running, you may receive an error message when you try to save an existing workbook. You do not receive an error message if you try to save a new file. You may receive an error message because some antivirus programs quickly scan any new files that appear on a computer. This scan can sometimes disrupt the Excel save process. This interruption may stop Excel from saving the file correctly.
 
+To check if your antivirus software conflicts with Excel, temporarily deactivate the antivirus software and then try to save the Excel file. 
+
 ## File sharing conflict
  
 If you and a second user work concurrently on a shared workbook, you may receive an error message if you and the second user try to save the file at the same time. You receive an error message because Excel cannot save the file if another instance of Excel is saving the same file.
@@ -88,7 +90,7 @@ For more information about this error message, see [Unlock a file that has been 
 ## File name length
  
 If you try to save or open an Excel file, and the path of that file (including the file name) is more than 218 characters, you may receive the following error message:
-   
+
 **Filename is not valid.**
  
 For more information, see [Error message when you open or save a file in Microsoft Excel: "Filename is not valid"](https://support.microsoft.com/help/213983).
@@ -239,11 +241,11 @@ Restart Windows in safe mode, and then try to save the workbook to your local ha
 
 ## Additional resources
  
-If you experience specific issues when you use Word, go to the following website to search for more information about your program version:
+If you experience specific issues when you use Excel, go to the following website to search for more information about your program version:
 
-[Microsoft Word Product Solution Center: Word](https://support.office.com/search/results?query=word)
+[Microsoft Excel Product Solution Center: Excel](https://support.office.com/search/results?query=excel)
 
-### Detailed view of the options 
+## Detailed view of the options 
 
 The following section provides more detailed descriptions of these options.
 
