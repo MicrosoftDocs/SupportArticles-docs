@@ -647,26 +647,26 @@
       href: ./virtualization/hyper-v-not-start-vm-after-upgrade.md
 - name: Windows 7 EoS FAQ
   items:
-  - name: E5 ESU offers
-    items:
-    - name: FAQ about Windows 7 ESU offers for E5 customers
-      href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.md
-  - name: General information
-    items:
-    - name: FAQ about the end of support for Windows 7
-      href: ./windows-7-eos-faq/windows-7-end-support-faq-general.md
   - name: Main page
     items:
-    - name: IT Pro FAQ about the end of support for Windows 7
+    - name: IT Pro FAQ about the end of support for Windows 7
       href: ./windows-7-eos-faq/windows-7-end-support-faq.md
-  - name: Troubleshoot issues in ESU
+  - name: General information
     items:
-    - name: Troubleshoot issues in Extended Security Updates
-      href: ./windows-7-eos-faq/troubleshoot-extended-security-updates-issues.md
+    - name: FAQ about the end of support for Windows 7
+      href: ./windows-7-eos-faq/windows-7-end-support-faq-general.md
   - name: Windows 7 Extended Security Updates (ESU)
     items:
-    - name: FAQ about Extended Security Updates for Windows 7
+    - name: FAQ about Extended Security Updates for Windows 7
       href: ./windows-7-eos-faq/windows-7-extended-security-updates-faq.md
+  - name: E5 ESU offers
+    items:
+    - name: FAQ about Windows 7 ESU offers for E5 customers
+      href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.md
+  - name: Troubleshoot issues in ESU
+    items:
+    - name: Troubleshoot issues in Extended Security Updates
+      href: ./windows-7-eos-faq/troubleshoot-extended-security-updates-issues.md
 - name: Windows Security
   items:
   - name: Bitlocker
@@ -711,3 +711,7 @@
     items:
     - name: Enable diagnostic logging for Windows Security Center
       href: ./windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md
+- name: Windows Troubleshooters
+  items:
+  - name: Active and retired Windows 10 troubleshooters
+    href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
