@@ -1,6 +1,7 @@
 ---
 title: Windows client troubleshooting document
 description: This article lists troubleshooting articles for Windows client products.
+ms.prod: windows-client
 ms.topic: article
 ms.data: 09/08/2020
 ---
@@ -27,4 +28,6 @@ Browse the following content or use the search feature.
 - System Management Components
 - User Profiles and Logon
 - Virtualization
+- Windows 7 EOS FAQ
 - Windows Security
+- Windows Troubleshooters
