@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows NIC Teaming (Load Balance Failover)
-ms.technology: Networking
+ms.prod-support-area-path: Applications
+ms.technology: Performance
 ---
 # Registry values for Process Control parameters
 

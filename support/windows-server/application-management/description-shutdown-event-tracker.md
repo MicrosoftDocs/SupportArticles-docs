@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, JEFFWADE, ScottMca
-ms.prod-support-area-path: PowerShell
-ms.technology: SysManagementComponents
+ms.prod-support-area-path: Event System
+ms.technology: ApplicationCompatibility
 ---
 # Description of the Shutdown Event Tracker
 

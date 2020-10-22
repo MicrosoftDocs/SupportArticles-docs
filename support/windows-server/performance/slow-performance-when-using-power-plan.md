@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, papant, deepku
-ms.prod-support-area-path: Slow Performances
+ms.prod-support-area-path: Slow Performance
 ms.technology: Performance
 ---
 # Slow performance on Windows Server when using the Balanced power plan

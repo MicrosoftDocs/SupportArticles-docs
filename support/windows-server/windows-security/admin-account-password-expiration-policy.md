@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: CAccount lockouts
+ms.prod-support-area-path: Account lockouts
 ms.technology: WindowsSecurity
 ---
 # Administrator account password expiration behavior

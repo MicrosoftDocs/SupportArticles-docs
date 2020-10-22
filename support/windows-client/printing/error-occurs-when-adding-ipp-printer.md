@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, mattburr
-ms.prod-support-area-path: Errors and troubleshooting General issues
+ms.prod-support-area-path: 'Errors and troubleshooting: General issues'
 ms.technology: PrintFaxScan
 ---
 # When attempting to add an IPP printer over HTTPS, you receive an error

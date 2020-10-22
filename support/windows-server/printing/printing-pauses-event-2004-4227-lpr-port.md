@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Errors and troubleshooting - Print output or print failures
+ms.prod-support-area-path: 'Errors and troubleshooting: Print output or print failures'
 ms.technology: PrintFaxScan
 ---
 # Printing pauses after every 11 print jobs when you use an LPR port
