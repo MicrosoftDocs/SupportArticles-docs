@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: (Errors and troubleshooting) Print output or print failures
+ms.prod-support-area-path: 'Errors and troubleshooting: Print output or print failures'
 ms.technology: PrintFaxScan
 ---
 # Two-sided (duplex) printing options cannot be set for applications in Windows 8.1 and Windows 8

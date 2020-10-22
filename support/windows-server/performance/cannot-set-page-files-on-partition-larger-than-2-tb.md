@@ -31,7 +31,7 @@ This problem occurs when you try to set page files in the Virtual Memory user in
 
 ## Cause
 
-This problem occurs because the Virtual Memory user interface calculates incorrectly the maximum space that is required to create the page file.
+This problem occurs because the Virtual Memory user interface calculates incorrectly the maximum space that is required to create the page file.
 
 ## Workaround
 

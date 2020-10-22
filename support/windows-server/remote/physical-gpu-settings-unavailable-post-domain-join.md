@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2878821
 
 When a Windows Server 2012 Remote Desktop Virtualization Host is added to a domain and the default domain policy is applied, the option to select a physical GPU used for Remote FX (within Hyper-V settings) is unavailable.  
 
- Even if the option to select a physical GPU in the Hyper-V settings is available, you are unable to add the RemoteFX 3D Adapter to the Virtual Machines provisioned on the host server. 
+ Even if the option to select a physical GPU in the Hyper-V settings is available, you are unable to add the RemoteFX 3D Adapter to the Virtual Machines provisioned on the host server. 
 
 ## Cause
 
@@ -57,4 +57,4 @@ The same steps apply to a Domain Group policy (or any other Group policy) that n
 
 ## More information
 
-This issue is fixed in Windows Server 2012 R2.
+This issue is fixed in Windows Server 2012 R2.

@@ -9,25 +9,25 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: narafa, kaushika
-ms.prod-support-area-path: User Experience Virtualization (UE-V)
-ms.technology: UE-V
+ms.reviewer: narafa, winciccore, kaushika
+ms.prod-support-area-path: UEV 2.1
+ms.technology: User Experience Virtualization (UE-V)
 ---
 # Unexpected one-minute startup of Outlook if UE-V is enabled
 
 This article helps resolve an issue where you experience an unexpected one-minute delay for Outlook to start if UE-V is enabled in Windows 10, version 1809 or a later version of Windows.
 
-_Original product version:_ &nbsp; Windows 10 – all editions  
+_Original product version:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp; 4569308
 
 ## Symptoms
 
 Consider the following scenario:
 
-- You're using Outlook 2019 or Outlook 2016 on a computer that is running Windows 10, version 1809 or a later version of Windows.
+- You're using Outlook 2019 or Outlook 2016 on a computer that is running Windows 10, version 1809 or a later version of Windows.
 - You install a cumulative update for Windows 10 that is released after March 17, 2020.
-- You deploy User Experience Virtualization (UE-V) that has the **Sync Method** set to **None**.
-- You register the MicrosoftOutlook2016CAWinXX.xml UE-V template. For example, you register MicrosoftOutlook2016CAWin32.xml.
+- You deploy User Experience Virtualization (UE-V) that has the **Sync Method** set to **None**.
+- You register the MicrosoftOutlook2016CAWinXX.xml UE-V template. For example, you register MicrosoftOutlook2016CAWin32.xml.
 
 In this scenario, Outlook takes one minute to start and display its splash screen.
 

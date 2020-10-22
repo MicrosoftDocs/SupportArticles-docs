@@ -24,10 +24,10 @@ _Original KB number:_ &nbsp; 2787623
 
 After moving the Users directory, an individual user profile, or the ProgramData directory from their default locations, Modern Applications will no longer start. Various symptoms may be noticed. Some of the symptoms you may see are:
 
-- Clicking the tile for a Microsoft Store App or the Microsoft Store will begin to launch the app but will return to the start screen. No error is displayed. 
-- Clicking the tile for the Microsoft Store will fail to open the store. the error "We weren't able to connect to the Store. This might have happened because of a server problem or the network connection timed out. Wait a few minutes and try again. Clicking "try again"  may or may not succeed in connecting you to the Store.
-- Clicking the tile for the Microsoft Store will open the Store but attempting to purchase apps will return the error "Your purchase couldn't be completed"
-- The modern PC settings app will not open nor will any of the apps accessed from there.
+- Clicking the tile for a Microsoft Store App or the Microsoft Store will begin to launch the app but will return to the start screen. No error is displayed. 
+- Clicking the tile for the Microsoft Store will fail to open the store. the error "We weren't able to connect to the Store. This might have happened because of a server problem or the network connection timed out. Wait a few minutes and try again. Clicking "try again"  may or may not succeed in connecting you to the Store.
+- Clicking the tile for the Microsoft Store will open the Store but attempting to purchase apps will return the error "Your purchase couldn't be completed"
+- The modern PC settings app will not open nor will any of the apps accessed from there.
 - The modern Windows Update will not open however the legacy Windows Update accessed via Control Panel will.
 
 ## Cause
@@ -36,11 +36,11 @@ When the Users directory, an individual user profile, or the ProgramData directo
 
 ## Resolution
 
-Don't alter the default location of the USERS directory (c:\users by default) or any individual users profile. Don't alter the default location of the ProgramData directory (c:\ProgramData by default)
+Don't alter the default location of the USERS directory (c:\users by default) or any individual users profile. Don't alter the default location of the ProgramData directory (c:\ProgramData by default)
 
 ## More information
 
-Details on the method of relocating the Users and ProgramData directories are located at the links below. These  methods are provided as is and intended for test environments only. These methods clearly state that the Microsoft Store and Microsoft Store apps aren't supported if they're used.
+Details on the method of relocating the Users and ProgramData directories are located at the links below. These  methods are provided as is and intended for test environments only. These methods clearly state that the Microsoft Store and Microsoft Store apps aren't supported if they're used.
 
 - [Profilesdirectory](/previous-versions/windows/it-pro/windows-8.1-and-8/ff715636(v=win.10)) 
 

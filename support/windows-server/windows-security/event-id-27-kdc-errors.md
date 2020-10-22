@@ -30,7 +30,7 @@ Source: KDC
 Category: None
 Computer:
 Event Msg: While processing a TGS request for the target server krbtgt/, the account 
-\<account name> did not have a suitable key for generating a Kerberos ticket (the missing key has an ID of 8). The requested etypes were 18. The accounts available etypes were 23 -133 -128 3 1.
+\<account name> did not have a suitable key for generating a Kerberos ticket (the missing key has an ID of 8). The requested etypes were 18. The accounts available etypes were 23 -133 -128 3 1.
 
 ## Cause
 
@@ -42,6 +42,6 @@ The Event ID 27 error that is being logged on the Windows Server 2003 domain con
 It is possible to modify the default encryption type that Windows Server 2008 uses. This will prevent the error from being logged on the Windows Server 2003 domain controller. You will have to add the following registry value to the Windows Server 2008 servers.
 
 - Path: HKLM\System\CurrentControlSet\Control\LSA\Kerberos\Parameters
-- Value Name:  DefaultEncryptionType
-- Value Type:  Reg_DWORD
-- Value Data:  0x17(23)
+- Value Name:  DefaultEncryptionType
+- Value Type:  Reg_DWORD
+- Value Data:  0x17(23)

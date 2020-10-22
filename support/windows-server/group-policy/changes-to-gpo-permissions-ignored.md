@@ -32,7 +32,7 @@ This behavior is by design in AGPM 4.0 Service Pack 3 (SP3) and earlier versions
 
 To work around this issue, follow these steps:
 
-1. Install the [September 2016 servicing release for Microsoft Desktop Optimization Pack](https://support.microsoft.com/help/3168628) on the AGPM server.
+1. Install the [September 2016 servicing release for Microsoft Desktop Optimization Pack](https://support.microsoft.com/help/3168628) on the AGPM server.
 2. Set the following registry key and values on the AGPM server.
 
     |Path|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Agpm|
@@ -43,7 +43,7 @@ To work around this issue, follow these steps:
     |||
 3. Restart the AGPM server.
 
-If OverrideRemovePermissionsWithoutReadandApply is set to **1**, read permissions are saved after the policy is checked in to AGPM, but write permissions are removed.
+If OverrideRemovePermissionsWithoutReadandApply is set to **1**, read permissions are saved after the policy is checked in to AGPM, but write permissions are removed.
 
 If OverrideRemovePermissionsWithoutReadAndApply is not set or is set to any value other than **1**, AGPM behaves in the way that's described in the "Symptoms" section.
 

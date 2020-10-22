@@ -23,11 +23,11 @@ _Original KB number:_ &nbsp; 2696472
 ## Symptoms
 
 Consider the scenario:
-- You have Windows Vista, Windows 7, Windows Server 2008 or Windows Server 2008 R2 installed.
+- You have Windows Vista, Windows 7, Windows Server 2008 or Windows Server 2008 R2 installed.
 
-- The Operating System runs high number of Scheduled tasks under one user account.
+- The Operating System runs high number of Scheduled tasks under one user account.
 
-- The tasks are failing intermittently and under the LastRun option, you may see following error message
+- The tasks are failing intermittently and under the LastRun option, you may see following error message
 
  The task scheduler service is too busy 0x80041323 
 - Under the Task Scheduler operational log you may see the following event logged:
@@ -61,11 +61,11 @@ User Action: Reduce the number tasks running in the specified user context.
 Event ID 134
 Description: Task Engine <Engine_Name> for user <User_Name> is approaching its preset limit of tasks.
 User Action: Reduce the number of running tasks or increase the configured queue quota. 
- **Note** Event ID 132 and Event ID 134 are just an indicator of the approaching issue and not the issue itself. The issue may or may not happen after these events.
+ **Note** Event ID 132 and Event ID 134 are just an indicator of the approaching issue and not the issue itself. The issue may or may not happen after these events.
 
 ## Cause
 
-Based on code SCHED_E_SERVICE_TOO_BUSY, this is logged when the queue is full. The above issue occurs if: 
+Based on code SCHED_E_SERVICE_TOO_BUSY, this is logged when the queue is full. The above issue occurs if: 
 1. Task Queue quota is exceeded.
 2. Engine quota is exceeded.
 
@@ -83,7 +83,7 @@ To resolve this particular issue, increase the value for the quota keys to maxim
 |7.|In the **Value data** box, type 1000.|
 |8.|Right-click **TasksPerLeastPrivEngine**, click **Edit**, and then click **Modify**.|
 |9.|In the **Value data** box, type 1000.|
-|10.| Exit Registry Editor and reboot the machine.|
+|10.| Exit Registry Editor and reboot the machine.|
 |||
 
 ## More information
@@ -91,8 +91,8 @@ To resolve this particular issue, increase the value for the quota keys to maxim
 The Job queue quota is controlled through 'TasksInMemoryQueue' value while the Engine quota is controlled through "TasksPerHighestPrivEngine" and "TasksPerLeastPrivEngine" registry values located under following registry key:
 HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\Schedule\Configuration
 - TasksInMemoryQueue [Default = 75, Max = 1000]
-  - Determines the maximum tasks allowed to be queued in the session manager. Once this limit is exceeded, any new task instance scheduled to be executed will be discarded and you'll get the Event ID 131.
-  - This queue is shared by all tasks.
+  - Determines the maximum tasks allowed to be queued in the session manager. Once this limit is exceeded, any new task instance scheduled to be executed will be discarded and you'll get the Event ID 131.
+  - This queue is shared by all tasks.
 - TasksPerHighestPrivEngine [Default = 100, Max = 1000]
   - Determines the maximum number of task instances allowed to be in RUNNING state for an "elevated" task engine (taskeng.exe) at any given point of time.
   - One task engine exists per user session (like SYSTEM, LOCAL SERVICE, Administrator, USER1, USER2 etc.)

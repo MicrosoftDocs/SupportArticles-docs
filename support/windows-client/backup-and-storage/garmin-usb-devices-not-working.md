@@ -32,7 +32,7 @@ Although the Garmin device shows up in Device Manager and is displayed as a conn
 
 ## Cause
 
-This problem occurs because Garmin devices that are formatted with FAT12, FAT16, or FAT32 file systems are not recognized as mass storage devices by a computer or device that's running Windows 10.
+This problem occurs because Garmin devices that are formatted with FAT12, FAT16, or FAT32 file systems are not recognized as mass storage devices by a computer or device that's running Windows 10.
 
 ## Resolution
 

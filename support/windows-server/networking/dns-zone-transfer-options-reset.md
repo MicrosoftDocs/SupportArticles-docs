@@ -23,8 +23,8 @@ _Original KB number:_ &nbsp; 4050194
 ## Symptoms
 
 Consider the following scenario:
-- A domain that is named **contoso.com**  contains two domain controllers, **DC1.contoso.com** and **DC2.contoso.com**.
-- Both domain controllers are Domain Name System (DNS) servers that host the "Contoso.com" zone.
+- A domain that is named **contoso.com**  contains two domain controllers, **DC1.contoso.com** and **DC2.contoso.com**.
+- Both domain controllers are Domain Name System (DNS) servers that host the "Contoso.com" zone.
 - The zone replication scope is set to the following value:
 
 **To all domain controllers in the domain (for Windows 2000 compatibility): contoso.com**  
@@ -35,19 +35,19 @@ Consider the following scenario:
 
 ![Screenshot of setting the zone replication scope](./media/dns-zone-transfer-options-reset/set-zone-replication-scope.png)
 
-- This change is replicated to **DC2**, and then the **contoso.com** zone is reloaded by the DNS service on **DC2**.
- In this scenario, the zone transfer settings on **DC2**  are removed. The following changes occur: 
-- The **Allow zone transfers**  check box is cleared.
-- The list of servers to which zone transfer was previously allowed is removed. The server values are also removed from the registry.
+- This change is replicated to **DC2**, and then the **contoso.com** zone is reloaded by the DNS service on **DC2**.
+ In this scenario, the zone transfer settings on **DC2**  are removed. The following changes occur: 
+- The **Allow zone transfers**  check box is cleared.
+- The list of servers to which zone transfer was previously allowed is removed. The server values are also removed from the registry.
 
 ![Zone Transfer settings](./media/dns-zone-transfer-options-reset/allow-zone-transfers-server-removed.png)
 
-**Note** When this issue occurs, the zone transfers settings on **DC1**  are not affected.
+**Note** When this issue occurs, the zone transfers settings on **DC1**  are not affected.
 
 ## Cause
 
-This issue occurs because the existing zone object is deleted from the partition, and a new object is created in the corresponding partition when the replication scope is changed. This change is replicated across all domain controllers. 
- When the polling thread on **DC2** pulls the change from the new partition, the registry settings for `contoso.com` is reset. Zone transfer is disabled because the value of **SecureSecondaries**  is set to **3**. Also, any configured servers in the zone transfer list are removed because the **SecondaryServers** value is removed. From a DNS perspective, this process resembles creating a new zone in a different partition. 
+This issue occurs because the existing zone object is deleted from the partition, and a new object is created in the corresponding partition when the replication scope is changed. This change is replicated across all domain controllers. 
+ When the polling thread on **DC2** pulls the change from the new partition, the registry settings for `contoso.com` is reset. Zone transfer is disabled because the value of **SecureSecondaries**  is set to **3**. Also, any configured servers in the zone transfer list are removed because the **SecondaryServers** value is removed. From a DNS perspective, this process resembles creating a new zone in a different partition. 
 
 ## Resolution
 
@@ -65,7 +65,7 @@ Save the following code as a file that is named BackupZoneTransferSettings.ps1.
 
 #### Restore script
 
-Save the following code as a file that is named RestoreZoneTransferSettings.ps1. 
+Save the following code as a file that is named RestoreZoneTransferSettings.ps1. 
 
 ```powershell
 # Begin Script
@@ -75,7 +75,7 @@ param([string]$ZoneName = "test2.com") #Build the vars $SourceRoot = "HKCU:\DNSZ
 
 The backup script backs up the zone transfer settings for a particular zone. (For convenience, the backup is stored in the registry under the HKEY_CURRENT_USER hive.) 
  **Note**  
- You can run the **Set-ExecutionPolicy** PowerShell cmdlet to allow unsigned scripts. 
+ You can run the **Set-ExecutionPolicy** PowerShell cmdlet to allow unsigned scripts. 
 
 The second command (highlighted) in the following screenshot takes a backup of the zone transfer settings for the zone that is named "test3.com."
 
@@ -85,7 +85,7 @@ The second command (highlighted) in the following screenshot takes a backup of t
 
 ![DNS backup](./media/dns-zone-transfer-options-reset/settings-backed-up-in-resgitry.png)
 
-##### Running the script to restore the zone transfer settings (the restore script restores these two values only)
+##### Running the script to restore the zone transfer settings (the restore script restores these two values only)
 
 ![Restore script](./media/dns-zone-transfer-options-reset/script-to-restore-zone-transfer-setting.png)
 
@@ -99,7 +99,7 @@ Zone transfer settings in registry after the restore operation
 
 ![Restore key](./media/dns-zone-transfer-options-reset/settings-in-registry-after-restore.png)
 
-**Note** After you run the restore script, you must restart the DNS service to apply the changes.
+**Note** After you run the restore script, you must restart the DNS service to apply the changes.
 
 ## More information
 
@@ -109,8 +109,8 @@ The zone transfer settings are stored in the registry on the DNS server in the f
 
 `HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\DNS Server\Zones\<domain name>`
 
- When zone transfer is set to specific servers or IP addresses, the following values are populated: 
-- **SecureSecondaries** is set to **0x2**. This corresponds to the **Only to the following servers** option. 
+ When zone transfer is set to specific servers or IP addresses, the following values are populated: 
+- **SecureSecondaries** is set to **0x2**. This corresponds to the **Only to the following servers** option. 
 - A multi-string value that is named **SecondaryServers** is created by using the IP addresses of the servers. 
 
 ##### Settings
@@ -126,7 +126,7 @@ The zone transfer settings are stored in the registry on the DNS server in the f
 ### DS polling thread
 
 The DNS service maintains a DS polling thread that periodically polls partitions and retrieves the list of all zones. For more information, see [How Often Does the DNS Server Service Check AD for New or Modified Data?](https://blogs.technet.microsoft.com/askpfeplat/2013/03/22/mailbag-how-often-does-the-dns-server-service-check-ad-for-new-or-modified-data/) 
- By default, the DNS service polls Active Directory for changes every 180 seconds (3 minutes). You can control this process by using the **DsPollingInterval**  registry key or the **dnscmd /dspollinginterval**  switch. 
- **Note. The switch accepts values from 0 to 3,600 seconds. However, values from 1 to 29 are not allowed. The minimum acceptable value is 30 seconds. 
+ By default, the DNS service polls Active Directory for changes every 180 seconds (3 minutes). You can control this process by using the **DsPollingInterval**  registry key or the **dnscmd /dspollinginterval**  switch. 
+ **Note. The switch accepts values from 0 to 3,600 seconds. However, values from 1 to 29 are not allowed. The minimum acceptable value is 30 seconds. 
 
 For more information, see [Dnscmd config](https://technet.microsoft.com/library/cc756116%28v=WS.10%29.aspx#BKMK_3).

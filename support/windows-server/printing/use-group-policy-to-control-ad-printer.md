@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: (Management and Configuration) Printers via Group Policy
+ms.prod-support-area-path: 'Management and Configuration: Printers via Group Policy'
 ms.technology: PrintFaxScan 
 ---
 # Use Group Policy settings to control printers in Active Directory

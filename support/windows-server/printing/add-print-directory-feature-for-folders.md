@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: (Management and Configuration) General issues
+ms.prod-support-area-path: 'Management and Configuration: General issues'
 ms.technology: PrintFaxScan
 ---
 # How to add the Print Directory feature for folders in Windows XP, in Windows Vista, in Windows 7  

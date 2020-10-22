@@ -58,18 +58,18 @@ The default locations for the log file are listed below. Both the location and n
 
 ## Cause
 
-The error condition occurs if you attempt to configure username and password for the DSN policy using GPP. Username and password are not valid keywords when configuring a SQL Server DSN.
+The error condition occurs if you attempt to configure username and password for the DSN policy using GPP. Username and password are not valid keywords when configuring a SQL Server DSN.
 For more information about the valid SQL Server-specific keyword/value pairs for data source configuration attribute strings, visit this Microsoft [Web site](https://msdn.microsoft.com/library/aa177860%28SQL.80%29.aspx).
 
 ## Resolution
 
 When configuring SQL connections, the only way to make the connection transparent for the user is to set **Trusted_Connection** to **Yes**. Otherwise, the user will be prompted for credentials when trying to connect.
-You must also ensure that attributes not listed in the above MSDN link, including username and password, are left blank (not configured) within the policy when configuring SQL connections.
+You must also ensure that attributes not listed in the above MSDN link, including username and password, are left blank (not configured) within the policy when configuring SQL connections.
 
 ## More information
 
 For more information about using ODBC with Microsoft SQL Server, visit the following Microsoft Web sites:
 
 [Using ODBC with Microsoft SQL Server](/previous-versions/ms811006(v=msdn.10))
-[123008](https://support.microsoft.com/kb/123008)  How To Set Up ODBC Data Sources When Distributing Apps
-[229929](https://support.microsoft.com/kb/229929)  INFO: Registry Entries and Keywords for SQL Server Connection Strings
+[123008](https://support.microsoft.com/kb/123008)  How To Set Up ODBC Data Sources When Distributing Apps
+[229929](https://support.microsoft.com/kb/229929)  INFO: Registry Entries and Keywords for SQL Server Connection Strings

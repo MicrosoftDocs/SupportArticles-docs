@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: steved, delhan, christys, kaushika
-ms.prod-support-area-path: Configuring and using Backup software
-ms.technology: BackupStorage
+ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.technology: Networking
 ---
 # Periodic SMBClient event ID 30818 is logged on Windows Server 2012 R2
 

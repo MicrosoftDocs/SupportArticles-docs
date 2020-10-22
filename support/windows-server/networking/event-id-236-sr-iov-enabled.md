@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4136996
 
 ## Symptom
 
-On a Windows Server 2016, a Windows Server 2019, a Windows Server, version 1903, or a Windows Server, version 1909 computer that has Hyper-V role enabled, there's a guest virtual machine (VM) that is running Windows Server, and the VM has Single Root I/O Virtualization (SR-IOV) enabled. When the VM or the computer is restarted, event ID 236 is logged in the System log.
+On a Windows Server 2016, a Windows Server 2019, a Windows Server, version 1903, or a Windows Server, version 1909 computer that has Hyper-V role enabled, there's a guest virtual machine (VM) that is running Windows Server, and the VM has Single Root I/O Virtualization (SR-IOV) enabled. When the VM or the computer is restarted, event ID 236 is logged in the System log.
 
 The event may have description that resembles the following example:
 

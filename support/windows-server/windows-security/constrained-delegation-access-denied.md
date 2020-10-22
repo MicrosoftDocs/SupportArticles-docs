@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;2602377
 
 ## Symptoms
 
-While accessing a service that uses network shares on a middle-tier server, users are prompted for credentials, and they eventually encounter an **access denied**  error.
+While accessing a service that uses network shares on a middle-tier server, users are prompted for credentials, and they eventually encounter an **access denied**  error.
 
 ## Example scenarios
 
@@ -40,7 +40,7 @@ Scenario 2
 - The IIS application pool that accesses that share is running under the identity of service account. The domain account is trusted for delegation for the cifs service on the file server.
 - Constrained delegation configured for CIFS is configured on the service account for the file server.
 - The file server and web server types are listed in the Applies To section.
- 
+ 
 Scenario 3:
 - Any server-side application that's being accessed from a client is accessing remote shares as user.
 - The server-side application is running under the context of a service account.

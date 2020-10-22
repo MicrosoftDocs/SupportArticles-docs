@@ -43,7 +43,7 @@ To fix this problem automatically, click the **Download** button. In the **File 
 
 The version of Netlogon.dll that has tracing included is installed by default on all currently supported versions of Windows. To enable debug logging, set the debug flag that you want by using Nltest.exe, the registry, or Group Policy. To do it, follow these steps:
 
-#### For Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows Server 2003, and Windows 2000 Server
+#### For Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows Server 2003, and Windows 2000 Server
 
 > [!NOTE]
 > These steps apply to Windows 2000 Server and Windows Server 2003 only when the support tools are installed. They also apply to Windows XP (if support tools are installed), Windows Vista, Windows 7, Windows 8, Windows 8.1, and Windows 10.

@@ -31,12 +31,12 @@ Level: Error
 Description:  
 Automatic registration failed. Failed to lookup the registration service information from Active Directory. Exit code: Unknown HResult Error code: 0x801c001d. See https://go.microsoft.com/fwlink/?LinkId=623042
 
-> Log Name: Microsoft-Windows-User Device Registration/Admin  
-Source: Microsoft-Windows-User Device Registration  
-Event ID: 304  
-Level: Error  
+> Log Name: Microsoft-Windows-User Device Registration/Admin  
+Source: Microsoft-Windows-User Device Registration  
+Event ID: 304  
+Level: Error  
 Description:  
-Automatic registration failed at join phase.  Exit code: Unknown HResult Error code: 0x801c001d. Server error:. Debug Output:\r\n undefined.
+Automatic registration failed at join phase.  Exit code: Unknown HResult Error code: 0x801c001d. Server error:. Debug Output:\r\n undefined.
 
 This is an example of the event IDs:
 
@@ -44,7 +44,7 @@ This is an example of the event IDs:
 
 ## Cause
 
-These event IDs occur when the infrastructure is not prepared for [Hybrid join](/azure/active-directory/devices/hybrid-azuread-join-federated-domains). When the device tries to do Hybrid join, the registration fails, and the events are logged.
+These event IDs occur when the infrastructure is not prepared for [Hybrid join](/azure/active-directory/devices/hybrid-azuread-join-federated-domains). When the device tries to do Hybrid join, the registration fails, and the events are logged.
 
 ## Resolution
 

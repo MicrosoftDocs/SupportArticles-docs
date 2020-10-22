@@ -34,7 +34,7 @@ Note: Some GPUs do not use dedicated GPU memory. In those cases, the **Dedicated
 Note: Theses steps use an Office application as an example.
 
 1. Right-click the Task bar, and then select **Task Manager**.
-2. In Task Manager, select **Details**. On the **Details** pane, right-click a column head, select **Show columns**, and then select **Dedicated GPU memory**.
+2. In Task Manager, select **Details**. On the **Details** pane, right-click a column head, select **Show columns**, and then select **Dedicated GPU memory**.
 3. Start any Office application, create a blank document, and then maximize the application window.
 4. Start any other application, and then maximize that application window in the same monitor as the Office application (so that the new application hides the Office application).
 5. Wait approximately 30 seconds for the Office application to enter "Low Resource Mode."
@@ -44,7 +44,7 @@ In this mode, the Office application flushes its discardable caches, including t
 6. On the Task Manager **Details** pane, check the **Dedicated GPU memory** value for the Office application. You should notice that the value has dropped by approximately 100MB.
 7. Bring the Office application window back to the monitor foreground.
    - **Expected behavior:** As the Office application re-creates its resources, its **Dedicated GPU memory** value should return to approximately the same value that it had the last time that the application was active.
-   - **Actual behavior:** On systems that are affected by this issue, the new **Dedicated GPU memory** value is larger by approximately 100MB (or more) than the last time that the application was active. Every time that you hide the Office application, wait for it to flush its caches, and then reactivate it, the value increases by another 100MB (or more). However, the **Dedicated GPU memory** value that is visible on the Task Manager **Performance** pane continues to show the expected value. Additionally, tools such as Windows Performance Recorder (WPR) and Windows Performance Analyzer (WPA) show the expected value.
+   - **Actual behavior:** On systems that are affected by this issue, the new **Dedicated GPU memory** value is larger by approximately 100MB (or more) than the last time that the application was active. Every time that you hide the Office application, wait for it to flush its caches, and then reactivate it, the value increases by another 100MB (or more). However, the **Dedicated GPU memory** value that is visible on the Task Manager **Performance** pane continues to show the expected value. Additionally, tools such as Windows Performance Recorder (WPR) and Windows Performance Analyzer (WPA) show the expected value.
 
 ## More information
 

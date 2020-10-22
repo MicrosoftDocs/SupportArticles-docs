@@ -27,7 +27,7 @@ Consider the following scenario:
 - You use DirectAccess with IP-HTTPS or TEREDO to connect to the corporate network. 
 - You access and download some files from a corporate network share. 
 
-In this scenario, DirectAccess works correctly. However, you expect better network performance. 
+In this scenario, DirectAccess works correctly. However, you expect better network performance. 
 
 ## Workaround
 

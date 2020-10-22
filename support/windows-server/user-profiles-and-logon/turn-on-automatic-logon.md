@@ -59,7 +59,7 @@ To use Registry Editor to turn on automatic logon, follow these steps:
 > [!NOTE]
 >
 > - To bypass the AutoAdminLogon process and to log on as a different user, press and hold the Shift key after you log off or after Windows restarts.
-> - This registry change does not work if the Logon Banner value is defined on the server either by a Group Policy object (GPO) or by a local policy. When the policy is changed so that it does not affect the computer, the autologon feature works as expected.
+> - This registry change does not work if the Logon Banner value is defined on the server either by a Group Policy object (GPO) or by a local policy. When the policy is changed so that it does not affect the computer, the autologon feature works as expected.
 > - When Exchange Active Sync (EAS) password restrictions are active, the autologon feature does not work. This behavior is by design. This behavior is caused by a change in Windows 8.1 and does not affect Windows 8 or earlier versions. To work around this behavior in Windows 8.1 and later versions, remove the EAS policies in Control Panel.
 > - An interactive console logon that has a different user on the server changes the **DefaultUserName** registry entry as the last logged-on user indicator. AutoAdminLogon relies on the **DefaultUserName** entry to match the user and password. Therefore, AutoAdminLogon may fail. You can configure a shutdown script to set the correct **DefaultUserName**.
 > - You can use the Sysinternals tool [AutoLogon](/sysinternals/downloads/autologon) to enable this functionality easier. This tool also helps you to use an encrypted version of password.

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: (Management and Configuration) General issues
+ms.prod-support-area-path: 'Management and Configuration: General issues'
 ms.technology: PrintFaxScan
 ---
 # Consolidate print servers by using DNS alias (CNAME) records in Windows Server 2003

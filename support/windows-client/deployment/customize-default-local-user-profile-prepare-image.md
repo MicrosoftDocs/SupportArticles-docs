@@ -17,7 +17,7 @@ ms.technology: Deployment
 
 This article discusses how to customize the default local user profile settings when you create an image in Windows.
 
-_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
+_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;959753
 
 ## Introduction

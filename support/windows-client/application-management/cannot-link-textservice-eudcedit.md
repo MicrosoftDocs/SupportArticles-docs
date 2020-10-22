@@ -24,8 +24,8 @@ _Original KB number:_ &nbsp; 4568315
 
 Consider the following scenario:
 - You use Windows 10, version 2004.
-- You create or modify end-user-defined characters (EUDC) on the computer.
-- You try to link the EUDC to Microsoft Bopomofo.
+- You create or modify end-user-defined characters (EUDC) on the computer.
+- You try to link the EUDC to Microsoft Bopomofo.
 In this scenario, the EUDC editor returns the following message:  
 There is no active TextService that can link to Eudc.
 
@@ -33,13 +33,13 @@ There is no active TextService that can link to Eudc.
 
 ## Cause
 
-After you update to Windows 10, version 2004, Microsoft Bopomofo is updated. The latest version of Microsoft Bopomofo currently doesn't provide the functionality to link EUDC characters.
+After you update to Windows 10, version 2004, Microsoft Bopomofo is updated. The latest version of Microsoft Bopomofo currently doesn't provide the functionality to link EUDC characters.
 
 ## Workaround
 
 ### Method 1
 
-Turn on the Compatibility option to revert to the previous version Microsoft Bopomofo. To do this, follow these steps:
+Turn on the Compatibility option to revert to the previous version Microsoft Bopomofo. To do this, follow these steps:
 1. On the **Settings** page, select **Language**.
 
 ![Language image](./media/cannot-link-textservice-eudcedit/language.png)
@@ -60,7 +60,7 @@ Turn on the Compatibility option to revert to the previous version Microsoft Bo
 
 ### Method 2
 
-Revert to the previous version of Microsoft Bopomofo by using the following Group Policy setting:  
+Revert to the previous version of Microsoft Bopomofo by using the following Group Policy setting:  
  **User Configuration** > **Administrative Templates** > **Windows Components** > **IME** > **Configure Traditional Chinese IME version**![Group policy](./media/cannot-link-textservice-eudcedit/ime-version.png)
 
 > [!Note]
@@ -68,4 +68,4 @@ Revert to the previous version of Microsoft Bopomofo by using the following Gro
 
 ### Method 3
 
-Revert to the previous version of Microsoft Bopomofo by using MDM Policy. To do this, see [TextInput/ConfigureTraditionalChineseIMEVersion](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-textinput#textinput-configuretraditionalchineseimeversion).
+Revert to the previous version of Microsoft Bopomofo by using MDM Policy. To do this, see [TextInput/ConfigureTraditionalChineseIMEVersion](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-textinput#textinput-configuretraditionalchineseimeversion).

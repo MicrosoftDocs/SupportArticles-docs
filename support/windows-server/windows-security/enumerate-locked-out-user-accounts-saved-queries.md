@@ -20,13 +20,7 @@ This article provides some step-by-step instructions to enumerate locked out use
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 555131
 
-## Author:  
-
-Simon Geary MVP
-
-## Community Solutions Content Disclaimer
-
-Microsoft corporation and/or its respective suppliers make no representations about the suitability, reliability, or accuracy of the information and related graphics contained herein. All such information and related graphics are provided "as is" without warranty of any kind. Microsoft and/or its respective suppliers hereby disclaim all warranties and conditions with regard to this information and related graphics, including all implied warranties and conditions of merchantability, fitness for a particular purpose, workmanlike effort, title, and non-infringement. You specifically agree that in no event Microsoft and/or its suppliers be liable for any direct, indirect, punitive, incidental, special, consequential damages or any damages whatsoever including, without limitation, damages for loss of use, data or profits, arising out of or in any way connected with the use of or inability to use the information and related graphics contained herein, whether based on contract, tort, negligence, strict liability or otherwise, even if microsoft or any of its suppliers has been advised of the possibility of damages.
+This article was written by [Simon Geary](https://social.msdn.microsoft.com/profile/simon%20geary/), Microsoft MVP.
 
 ## More Information
 
@@ -41,3 +35,5 @@ Follow these step-by-step instructions to list all currently locked out accounts
     (&(objectCategory=Person)(objectClass=User)(lockoutTime>=1))
 
 6. Select OK twice and the new query appears under the Saved Queries folder in Active Directory Users & Computers.
+
+[!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]

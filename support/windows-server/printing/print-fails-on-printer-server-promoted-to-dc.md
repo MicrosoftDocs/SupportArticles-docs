@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, match
-ms.prod-support-area-path: (Errors and troubleshooting) General issues
+ms.prod-support-area-path: 'Errors and troubleshooting: General issues'
 ms.technology: PrintFaxScan
 ---
 # Not able to print with Type 4 or Type 3 XPS printer drivers after a Windows Server is promoted to a Domain Controller

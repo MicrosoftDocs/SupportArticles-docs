@@ -51,7 +51,7 @@ Scenario 2
   
 When you run sysprep operation in this scenario, the operation may fail with the following error:
 
-> System Preparation Tool 3.14  
+> System Preparation Tool 3.14  
 A fatal error occurred while trying to sysprep the machine
 
 Scenario 3
@@ -61,7 +61,7 @@ Scenario 3
 
 When you run sysprep operation in this scenario, the operation may fail with the following error:
 
-> System Preparation tool 3.14
+> System Preparation tool 3.14
 A fatal error occurred while trying to sysprep the machine
 
 Additionally, in the SetupErr.log, you may notice the following error entries:

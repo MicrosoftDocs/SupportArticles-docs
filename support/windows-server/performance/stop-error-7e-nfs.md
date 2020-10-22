@@ -29,7 +29,7 @@ A Windows Server 2016-based server that runs the Network File System (NFS) servi
 >[!Important]  
 Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.  
 
-To fix this problem, the [July 14, 2020 KB 4565511 (build 14393.3808)]()  includes an update to Nfssvr.sys. Make sure that this update is installed.
+To fix this problem, the [July 14, 2020 KB 4565511 (build 14393.3808)]()  includes an update to Nfssvr.sys. Make sure that this update is installed.
 
 ### To enable the fix
 
@@ -51,5 +51,5 @@ You can set this registry entry in Windows Server 2019. However, it is not neces
 ### To disable the fix
 
 In either Windows Server 2019 or Windows Server 2016, you can disable the fix by using either of the following methods:
-- Start Registry Editor, locate the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NfsServer\KBSwitch\769E60B7-C2FF-41B0-AD1F-14FC26F6F46B** entry, and then change the value to **0`. 
-- Delete the registry entry. To do this, open an administrative Command Prompt window, and then run the following command: **reg delete HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NfsServer\KBSwitch /v 769E60B7-C2FF-41B0-AD1F-14FC26F6F46B /f** 
+- Start Registry Editor, locate the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NfsServer\KBSwitch\769E60B7-C2FF-41B0-AD1F-14FC26F6F46B** entry, and then change the value to **0`. 
+- Delete the registry entry. To do this, open an administrative Command Prompt window, and then run the following command: **reg delete HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NfsServer\KBSwitch /v 769E60B7-C2FF-41B0-AD1F-14FC26F6F46B /f** 

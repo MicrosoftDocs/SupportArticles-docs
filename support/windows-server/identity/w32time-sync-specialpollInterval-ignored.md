@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp;3205089
 ## Symptoms
 
 Assume that you modify W32time settings to always run and that one of the following conditions is true:
- 
+ 
 - You use the default workstation settings.
 - You use custom NTP synchronization settings with a large SpecialPollInterval setting value.
 
@@ -43,10 +43,10 @@ MinPollInterval = 0xA (== 2^10 seconds == 1024 seconds)
 MaxPollInterval = 0xF (== 2^15 seconds == 32768 seconds)  
 SpecialPollInterval = 604800 seconds  
 
-Specify a SpecialPollInterval value that falls between the MinPollInterval and MaxPollInterval. An example value is 3600 seconds (== 1 hour). 
+Specify a SpecialPollInterval value that falls between the MinPollInterval and MaxPollInterval. An example value is 3600 seconds (== 1 hour). 
 
 To configure W32time with the new setting, follow these steps:
- 
+ 
 1. Start Registry Editor.
 2. Change the value of the following registry key:
 
@@ -63,7 +63,7 @@ To configure W32time with the new setting, follow these steps:
 ### Workaround 2
 
 Use the built-in poll interval adjustments based on MinPollInterval, MaxPollInterval instead of using SpecialPollInterval. This built-in tool automatically adjusts the polling interval from MinPollInterval all the way up to MaxPollInterval if the client machine keeps fairly accurate time. You need only modify a flag in the NtpServer configuration in order to switch from SpecialPollInterval to the automatic poll interval, as follows:
- 
+ 
 1. Start Registry Editor.
 2. Change the value of the following registry key:
 

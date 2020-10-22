@@ -58,7 +58,7 @@ DC-1-03 03h:14m:11s 1 / 52 1 (8333) Directory object not found.
 
 NOTE: Error 8333 translates to ERROR_DS_OBJ_NOT_FOUND or "Directory object not found."
 
-**5.**  While trying to rehost a partition on the Global catalog
+**5.**  While trying to rehost a partition on the Global catalog
 
 repadmin /rehost \<dc-name> \<partition to rehost> \<good source>
 
@@ -68,24 +68,24 @@ repadmin /rehost failed with DsReplicaAdd failed with status 8333 (0x208d)
 
 The error status 8333 "Directory Object Not Found" has multiple root causes including:
 
- **1. Database corruption with additional associated errors logged in the event log of the source domain controller:**  
+ **1. Database corruption with additional associated errors logged in the event log of the source domain controller:**  
 
 | **Source**| **Event ID**| **Description** |
 |---|---|---|
-|NTDS Replication| 2108|This event contains REPAIR PROCEDURES for the 1084 event that has previously been logged. This message indicates a specific issue with the consistency of the Active Directory Domain Services database on this replication destination. A database error occurred while applying replicated changes to the following object. The database had unexpected contents, preventing the change from being made.Object: CN=chduffey,OU=IT,OU=Corp,DC=contoso,DC=com<br/>Object GUID: 13557897-e45d-4af6-8f25-15b306d6e927<br/>Source domain controller: c4efaf4e-d652-4630-8623-afec5ebc8532._msdcs.contso.comAdditional Data<br/>Primary Error value: 8333 Directory Object Not Found.|
-|NTDS General| 1168| Error -1073741790(c0000022) has occurred (Internal ID 3000b3a). Please contact Microsoft Product Support Services for assistance.|
-| Microsoft-Windows-<br/>ActiveDirectory_DomainService| 1084|Internal event: Active Directory could not update the following object with changes received from the following source domain controller. This is because an error occurred during the application of the changes to Active Directory on the domain controller.|
-| NTDS Replication| 1699|The local domain controller failed to retrieve the changes requested for the following directory partition. As a result, it was unable to send the change requests to the domain controller at the following network address. 8446 The replication operation failed to allocate memory|
+|NTDS Replication| 2108|This event contains REPAIR PROCEDURES for the 1084 event that has previously been logged. This message indicates a specific issue with the consistency of the Active Directory Domain Services database on this replication destination. A database error occurred while applying replicated changes to the following object. The database had unexpected contents, preventing the change from being made.Object: CN=chduffey,OU=IT,OU=Corp,DC=contoso,DC=com<br/>Object GUID: 13557897-e45d-4af6-8f25-15b306d6e927<br/>Source domain controller: c4efaf4e-d652-4630-8623-afec5ebc8532._msdcs.contso.comAdditional Data<br/>Primary Error value: 8333 Directory Object Not Found.|
+|NTDS General| 1168| Error -1073741790(c0000022) has occurred (Internal ID 3000b3a). Please contact Microsoft Product Support Services for assistance.|
+| Microsoft-Windows-<br/>ActiveDirectory_DomainService| 1084|Internal event: Active Directory could not update the following object with changes received from the following source domain controller. This is because an error occurred during the application of the changes to Active Directory on the domain controller.|
+| NTDS Replication| 1699|The local domain controller failed to retrieve the changes requested for the following directory partition. As a result, it was unable to send the change requests to the domain controller at the following network address. 8446 The replication operation failed to allocate memory|
 
 Additionally you may see replication status code:
 
 | **Code**| **Sources**| **Additional Information** |
 |---|---|---|
-| 8451|Repadmin, DcPromo, as subcode in Database Corruption Events|Refer to the troubleshooting guide for 8451 in the first instance if this error is identified.<br/><br/> [2645996](https://support.microsoft.com/help/2645996) |
+| 8451|Repadmin, DcPromo, as subcode in Database Corruption Events|Refer to the troubleshooting guide for 8451 in the first instance if this error is identified.<br/><br/> [2645996](https://support.microsoft.com/help/2645996) |
 
- **2. Lingering Objects with associated errors logged:**  
+ **2. Lingering Objects with associated errors logged:**  
 
-| Source|Event ID|Description|
+| Source|Event ID|Description|
 |---|---|---|
 |NTDS Replication|1988|Active Directory Replication encountered the existence of objects in the following partition that have been deleted from the local domain controllers (DCs) Active Directory database. Not all direct or transitive replication partners replicated in the deletion before the tombstone lifetime number of days passed. Objects that have been deleted and garbage collected from an Active Directory partition but still exist in the writable partitions of other DCs in the same domain, or read-only partitions of global catalog servers in other domains in the forest are known as "lingering objects".|
 |NTDS Replication|1388|Another domain controller (DC) has attempted to replicate into this DC an object that's not present in the local Active Directory database. The object may have been deleted and already garbage collected (a tombstone lifetime or more has past since the object was deleted) on this DC. The attribute set included in the update request isn't sufficient to create the object. The object will be re-requested with a full attribute set and re-created on this DC.|
@@ -95,34 +95,34 @@ Additionally you may see the following replication status codes:
 |Source|Sources|Description|
 |---|---|---|
 |8606|Repadmin, DCPromo, sub code in NTDS Replication events|Refer to the troubleshooting guide for 8606 in the first instance if this error is identified. [2028495](https://support.microsoft.com/help/2028495) |
-|1722|Repadmin, DCPromo, sub code in NTDS Replication events|Refer to the troubleshooting guide for 1722 in the first instance if this error is identified. [2102154](https://support.microsoft.com/help/2102154) |
+|1722|Repadmin, DCPromo, sub code in NTDS Replication events|Refer to the troubleshooting guide for 1722 in the first instance if this error is identified. [2102154](https://support.microsoft.com/help/2102154) |
 
- **3. Conflict Objects.**  
- **4. Third-Party process**  
-a. Antivirus  
-b. Directory synchronization software 
+ **3. Conflict Objects.**  
+ **4. Third-Party process**  
+a. Antivirus  
+b. Directory synchronization software 
 
 ## Resolution
 
 Investigation of the 8333 "Directory Object Not Found" error message should begin on the source domain controller in the replication partnership. Referring to each of the possible causes of the issue from the "cause" section of this document, a support professional should begin their investigation on the source of the source/destination replication partnership.
 
  **1.** **Check for indications of Active Directory (JET) Database corruption:**  
-a. Review the Directory Services event log on the source and destination replication partners for JET database corruption events. Possible events include:
+a. Review the Directory Services event log on the source and destination replication partners for JET database corruption events. Possible events include:
 
 | **Source**| **Event ID**| **Description** |
 |---|---|---|
-|NTDS Replication| 2108|This event contains REPAIR PROCEDURES for the 1084 event that has previously been logged. This message indicates a specific issue with the consistency of the Active Directory Domain Services database on this replication destination. A database error occurred while applying replicated changes to the following object. The database had unexpected contents, preventing the change from being made.Object: CN=chduffey,OU=IT,OU=Corp,DC=contoso,DC=com<br/>Object GUID: 13557897-e45d-4af6-8f25-15b306d6e927<br/>Source domain controller: c4efaf4e-d652-4630-8623-afec5ebc8532._msdcs.contso.comAdditional Data<br/>Primary Error value: 8333 Directory Object Not Found.|
-|NTDS General| 1168| Error -1073741790(c0000022) has occurred (Internal ID 3000b3a). Please contact Microsoft Product Support Services for assistance.|
-| Microsoft-Windows-<br/>ActiveDirectory_DomainService| 1084|Internal event: Active Directory could not update the following object with changes received from the following source domain controller. This is because an error occurred during the application of the changes to Active Directory on the domain controller.|
-| NTDS Replication| 1699|The local domain controller failed to retrieve the changes requested for the following directory partition. As a result, it was unable to send the change requests to the domain controller at the following network address. 8446 The replication operation failed to allocate memory|
+|NTDS Replication| 2108|This event contains REPAIR PROCEDURES for the 1084 event that has previously been logged. This message indicates a specific issue with the consistency of the Active Directory Domain Services database on this replication destination. A database error occurred while applying replicated changes to the following object. The database had unexpected contents, preventing the change from being made.Object: CN=chduffey,OU=IT,OU=Corp,DC=contoso,DC=com<br/>Object GUID: 13557897-e45d-4af6-8f25-15b306d6e927<br/>Source domain controller: c4efaf4e-d652-4630-8623-afec5ebc8532._msdcs.contso.comAdditional Data<br/>Primary Error value: 8333 Directory Object Not Found.|
+|NTDS General| 1168| Error -1073741790(c0000022) has occurred (Internal ID 3000b3a). Please contact Microsoft Product Support Services for assistance.|
+| Microsoft-Windows-<br/>ActiveDirectory_DomainService| 1084|Internal event: Active Directory could not update the following object with changes received from the following source domain controller. This is because an error occurred during the application of the changes to Active Directory on the domain controller.|
+| NTDS Replication| 1699|The local domain controller failed to retrieve the changes requested for the following directory partition. As a result, it was unable to send the change requests to the domain controller at the following network address. 8446 The replication operation failed to allocate memory|
 
 Additionally you may see replication status code:
 
 | **Code**| **Sources**| **Additional Information** |
 |---|---|---|
-| 8451|Repadmin, DcPromo, as subcode in Database Corruption Events|Refer to the troubleshooting guide for 8451 in the first instance if this error is identified.<br/><br/> [2645996](https://support.microsoft.com/help/2645996) |
+| 8451|Repadmin, DcPromo, as subcode in Database Corruption Events|Refer to the troubleshooting guide for 8451 in the first instance if this error is identified.<br/><br/> [2645996](https://support.microsoft.com/help/2645996) |
 
-b. Enable advanced directory services replication logging:  
+b. Enable advanced directory services replication logging:  
     Important This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
     322756 How to back up and restore the registry in Windows  
     To increase NTDS diagnostic logging, change the following REG_DWORD values in the registry of the destination domain controller under the following registry key:  
@@ -132,40 +132,40 @@ b. Enable advanced directory services replication logging:
     9 Internal Processing  
     Note Level 5 logging is extremely verbose and the values of both subkeys should be set back to the default of 0 after the problem is resolved. Filtering the Directory Services event log should be performed to isolate and identify these events.  
 
-c. Review the event logs for the new events that were generated from the increased logging for error values that will give a definitive view of the Database Corruption.
+c. Review the event logs for the new events that were generated from the increased logging for error values that will give a definitive view of the Database Corruption.
 
-d. If database corruption has been detected, ensure that recent backups exist of each domain in the forest.
+d. If database corruption has been detected, ensure that recent backups exist of each domain in the forest.
 
-e. Restart the domain controller reporting the database corruption in directory services restore mode. (Press F8 while the server is restarting or if this isn't possible open msconfig.exe and choose "Active Directory Repair" in the "boot" options.).
+e. Restart the domain controller reporting the database corruption in directory services restore mode. (Press F8 while the server is restarting or if this isn't possible open msconfig.exe and choose "Active Directory Repair" in the "boot" options.).
 
-f. To perform an inspection of the database in Directory Services Restore Mode:
+f. To perform an inspection of the database in Directory Services Restore Mode:
 
-i. Open a command prompt  
-ii. Type "ntdsutil"  
-iii. Type "activate instance ntds"  
-iv. Type "Semantic database analysis"  
-v. Type "go"  
+i. Open a command prompt  
+ii. Type "ntdsutil"  
+iii. Type "activate instance ntds"  
+iv. Type "Semantic database analysis"  
+v. Type "go"  
 
 If errors are detected they'll be displayed to the console and written to a log file in the current working directory.  
 
-g. If database corruption errors are detected, you're advised to contact Microsoft Support Services.
+g. If database corruption errors are detected, you're advised to contact Microsoft Support Services.
 
-h. As a last option. You can demote the domain controller, and promote it again to replace the database and replicate the contents from another server in the domain.
+h. As a last option. You can demote the domain controller, and promote it again to replace the database and replicate the contents from another server in the domain.
 
 Note: If an Active Directory database has been corrupted in your environment, it's important to consider the source of the corruption to avoid issues in the future. Some of the known causes of such corruption are:
 
 i. Failing Hardware: Hard Disk or controller  
 ii. Caching: Hard Disk controller  
-iii. Out-dated Drivers: Hard Disk controller  
-iv. Out-dated Firmware: BIOS, Hard Disk controller, Hard Disk  
-v. Sudden power Loss  
+iii. Out-dated Drivers: Hard Disk controller  
+iv. Out-dated Firmware: BIOS, Hard Disk controller, Hard Disk  
+v. Sudden power Loss  
 
  **2.** **Check for the existence of and remove Lingering Objects on all domain controllers in the forest.**  
 There are multiple approaches to check for Lingering Objects including:
 
-a. Check for the existence of the following Directory Services events on domain controllers in the forest:
+a. Check for the existence of the following Directory Services events on domain controllers in the forest:
 
-| Source|Event ID|Description|
+| Source|Event ID|Description|
 |---|---|---|
 |NTDS Replication|1988|Active Directory Replication encountered the existence of objects in the following partition that have been deleted from the local domain controllers (DCs) Active Directory database. Not all direct or transitive replication partners replicated in the deletion before the tombstone lifetime number of days passed. Objects that have been deleted and garbage collected from an Active Directory partition but still exist in the writable partitions of other DCs in the same domain, or read-only partitions of global catalog servers in other domains in the forest are known as "lingering objects".|
 |NTDS Replication|1388|Another domain controller (DC) has attempted to replicate into this DC an object that's not present in the local Active Directory database. The object may have been deleted and already garbage collected (a tombstone lifetime or more has past since the object was deleted) on this DC. The attribute set included in the update request isn't sufficient to create the object. The object will be re-requested with a full attribute set and re-created on this DC.|
@@ -174,9 +174,9 @@ Additionally you may see the following replication status codes:
 
 | **Code**| **Sources**| **Additional Information** |
 |---|---|---|
-| 8451|Repadmin, DcPromo, as subcode in Database Corruption Events|Refer to the troubleshooting guide for 8451 in the first instance if this error is identified.<br/><br/> [2645996](https://support.microsoft.com/help/2645996) |
+| 8451|Repadmin, DcPromo, as subcode in Database Corruption Events|Refer to the troubleshooting guide for 8451 in the first instance if this error is identified.<br/><br/> [2645996](https://support.microsoft.com/help/2645996) |
 
-b. Use repldiag.exe to examine the forest for lingering objects.
+b. Use repldiag.exe to examine the forest for lingering objects.
 
 Repldiag may be downloaded from codeplex.com. To perform the lingering object check-in advisory mode, use the syntax:
 
@@ -190,15 +190,15 @@ For support professionals preferring to use repadmin.exe, the partial command wi
 
 If Lingering objects are detected:
 
-a. Perform a system state backup of two domain controllers in each domain in the forest.  
-b. Use repldiag.exe to perform clean-up of lingering objects:  
+a. Perform a system state backup of two domain controllers in each domain in the forest.  
+b. Use repldiag.exe to perform clean-up of lingering objects:  
 repldiag /RemoveLingeringObjects  
-c. Each domain controller will log a directory services event 1942 for each directory services partition to indicate if lingering objects have been removed.  
+c. Each domain controller will log a directory services event 1942 for each directory services partition to indicate if lingering objects have been removed.  
 
 For an alternate approach to the removal of lingering objects, you can use the built-in tool Repadmin.exe with the /removelingeringobjects switch. This approach requires multiple commands, repldiag provides an aggregate of the commands Repadmin.exe would use.
 
-**3. Check for the existence of and remove conflict objects:**  
-a. Search the relevant directory partitions for CNF-managed objects and the object that the conflict-mangled object conflicted with the following syntax:
+**3. Check for the existence of and remove conflict objects:**  
+a. Search the relevant directory partitions for CNF-managed objects and the object that the conflict-mangled object conflicted with the following syntax:
 
 repadmin /showattr localhost "dc=parent,dc=com" /subtree /filter:"((&(objectClass=*)(cn=*\0acnf:*)))" /atts:objectclass,whencreated,whenchanged
 
@@ -208,16 +208,16 @@ In most circumstances the 8333 error will indicate which directory partition(s) 
 
 repadmin /showattr localhost "cn=configuration,dc=parent,dc=com" /subtree /filter:"((&(objectClass=*)(cn=*\0acnf:*)))" /atts:objectclass,whencreated,whenchanged
 
-b. Review the attributes, attribute values and if present, subordinate objects to determine which object should remain and which should be deleted
+b. Review the attributes, attribute values and if present, subordinate objects to determine which object should remain and which should be deleted
 
-c. Ensure you have an up-to-date backup of the directory
+c. Ensure you have an up-to-date backup of the directory
 
-d. Delete the conflict mangled object / container or the object it conflicted with using LDP.EXE, ADSIEDIT or one of the Active Directory management tools.
+d. Delete the conflict mangled object / container or the object it conflicted with using LDP.EXE, ADSIEDIT or one of the Active Directory management tools.
 
  **4.** **Perform testing of the replication partners with third-party components removed.**  
 Multiple third-party products have been found to cause this issue including:
-a. Anti-Virus software  
-b. Directory Synchronization
+a. Anti-Virus software  
+b. Directory Synchronization
 
 ## More information
 

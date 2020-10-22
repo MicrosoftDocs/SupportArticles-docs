@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2003730
 
 ## Symptoms
 
-If you are running an Active Directory forest and using a file system security policy, you may see the following events logged: 
+If you are running an Active Directory forest and using a file system security policy, you may see the following events logged: 
  Windows Vista, Windows Server 2008, Windows 7, and Windows Server 2008 R2 will log this event to the Group Policy operational log: 
  Log Name: Microsoft-Windows-GroupPolicy/Operational  
  Source: Microsoft-Windows-GroupPolicy  
@@ -78,7 +78,7 @@ To avoid the problem, create a new policy at the same level that receives the se
 ## More information
 
 This section explains why in some cases the policy settings apply successfully, but in other cases they do not. 
- Security group policy is driven by the Userenv.dll library running within the Winlogon.exe process, or on Windows Vista and later, the Group Policy Service (GPSvc). This is the component that gets the list of policies that are assigned to the machine, and filters out the ones that do not apply. They may be filtered based on the permissions on the policy or a WMI filter.  
+ Security group policy is driven by the Userenv.dll library running within the Winlogon.exe process, or on Windows Vista and later, the Group Policy Service (GPSvc). This is the component that gets the list of policies that are assigned to the machine, and filters out the ones that do not apply. They may be filtered based on the permissions on the policy or a WMI filter.  
 
 Userenv/GPSvc then sorts the policies based on their priority. The first policy applied is the one with the lowest priority, the last one is the one with the highest priority. For security policy, Userenv/GPSvc calls the security policy client-side extension (SCECLI) with the policy settings file downloaded from SYSVOL.  
 
