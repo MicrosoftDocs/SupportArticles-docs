@@ -22,11 +22,11 @@ _Original KB number:_ &nbsp; 2489761
 
 ## Symptoms
 
-If you frequently view many EVT or EVTX files in Event Viewer (eventvwr.msc), you may notice a large number of files have accumulated under Saved Logs. These entries are persistent even if the original EVT and EVTX files have been deleted.
+If you frequently view many EVT or EVTX files in Event Viewer (eventvwr.msc), you may notice a large number of files have accumulated under Saved Logs. These entries are persistent even if the original EVT and EVTX files have been deleted.
 
 ## Cause
 
-Event viewer stores saved log locations in .XML format.  The .XML files can be found in the following directory.
+Event viewer stores saved log locations in .XML format.  The .XML files can be found in the following directory.
 %programdata%\Microsoft\Event Viewer\ExternalLogs
 
 ## Resolution
@@ -39,6 +39,6 @@ Note: The contents of this folder are hidden so you must turn on **Show Hidden F
 
 ## More information
 
-Event Viewer reads the saved log locations when it starts and saves them when it is closed.  The following actions should be taken to guarantee Saved Logs are deleted properly.
-- Close all instances of Event Viewer (MMC.EXE) before attempting to clear Saved Logs from a command prompt.
+Event Viewer reads the saved log locations when it starts and saves them when it is closed.  The following actions should be taken to guarantee Saved Logs are deleted properly.
+- Close all instances of Event Viewer (MMC.EXE) before attempting to clear Saved Logs from a command prompt.
 - Make sure only one instance of Event Viewer is open if you are manually deleting Saved Logs from the GUI.

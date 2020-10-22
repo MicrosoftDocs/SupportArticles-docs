@@ -30,23 +30,23 @@ This issue is typically seen in an environment using a third-party DNS server.
 
 ## Cause
 
-This error can occur when no DomainDNSName records are registered for the domain. These records are updated by the Netlogon service on domain controllers. These are the *same as parent* A records in domain's forward lookup zone.
+This error can occur when no DomainDNSName records are registered for the domain. These records are updated by the Netlogon service on domain controllers. These are the *same as parent* A records in domain's forward lookup zone.
 
 The following documentation indicates these records are not a requirement and are only used for DNS clients that do not understand SRV records:  
 [How DNS Support for Active Directory Works](/previous-versions/windows/it-pro/windows-server-2003/cc759550(v=ws.10)).
 
 DnsDomainName:
 
-Enables a non-SRV-aware client to locate any domain controller in the domain by looking up an A record. A name in this form is returned to the LDAP client through an LDAP referral. A non-SRV-aware client looks up the name; an SRV-aware client looks up the appropriate SRV resource record.
+Enables a non-SRV-aware client to locate any domain controller in the domain by looking up an A record. A name in this form is returned to the LDAP client through an LDAP referral. A non-SRV-aware client looks up the name; an SRV-aware client looks up the appropriate SRV resource record.
 
 In a network trace, you will see a DNS lookup for the DomainDNSname A record and the DNS server will respond with the SOA record if these A records do not exist.
 
 DNS lookup query:
 
-> Dns: QueryId = 0x887C, QUERY (Standard query), Query for adatum.com of type Host Addr on class Internet  
+> Dns: QueryId = 0x887C, QUERY (Standard query), Query for adatum.com of type Host Addr on class Internet  
 QRecord: adatum.com of type Host Addr on class Internet
 
-Response with the SOA record:
+Response with the SOA record:
 
 > Dns: QueryId = 0x887C, QUERY (Standard query), Response - Success  
 QRecord: adatum.com of type Host Addr on class Internet  
@@ -58,6 +58,6 @@ Update the A records on the DNS server, or create a HOSTS file on the Windows Se
 
 Sample HOSTS file:
 
-> adatum.com      192.168.2.10  
-adatum.com      192.168.3.10  
-adatum.com      192.168.4.10
+> adatum.com      192.168.2.10  
+adatum.com      192.168.3.10  
+adatum.com      192.168.4.10

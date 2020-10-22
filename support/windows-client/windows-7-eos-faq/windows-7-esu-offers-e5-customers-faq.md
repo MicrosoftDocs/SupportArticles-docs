@@ -17,9 +17,9 @@ ms.technology: Windows 7 EoS FAQ
 
 This article describes the frequently asked questions about the Extended Security Updates offers for E5 customers for Windows 7.
 
-This article is intended for use by IT professionals. If you're looking for information for home users, see [Windows 7 support ended on January 14, 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020).  
+This article is intended for use by IT professionals. If you're looking for information for home users, see [Windows 7 support ended on January 14, 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020).  
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Original product version:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 4527879
 
 ## General information
@@ -40,7 +40,7 @@ Windows 7 Year 1 ESU combined with Microsoft 365 E5 is available to Volume Licen
 
 **What are the effective dates of this program?**
 
-March 1, 2020 - December 31, 2020.  
+March 1, 2020 - December 31, 2020.  
 
 **Do customers have to maintain Microsoft 365 E5 subscriptions throughout the ESU coverage period?**
 

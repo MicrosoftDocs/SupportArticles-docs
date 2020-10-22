@@ -17,7 +17,7 @@ ms.technology: Performance
 
 This article describes an issue in which Check Point and Centrify applications stop working.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4013396
 
 ## Symptoms
@@ -26,7 +26,7 @@ Users who installed the [January 2017 Quality Update for Windows 10 Version 1607
 
 ## More information
 
-Temporary support from Microsoft to address this issue was introduced in the [March 2017 Quality Update for Windows 10 Version 1607](https://support.microsoft.com/help/4016635), and it will continue through June 2017.
+Temporary support from Microsoft to address this issue was introduced in the [March 2017 Quality Update for Windows 10 Version 1607](https://support.microsoft.com/help/4016635), and it will continue through June 2017.
 
 This support is applicable only to Windows 10 Version 1607. For long-term support for Windows 10 Version 1607 and later versions, contact [Check Point](https://www.checkpoint.com/) or [Centrify](https://www.centrify.com/) about the availability of new, Windows-compatible versions of these applications.
 

@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 2751670
 ## Symptoms
 
 We are seeing the following error
- "Event viewer cannot open the event log or custom view. Verify that the event log service is running or query is too long. Access is denied" when we try to open the security logs on some of the domain controllers with the domain admin account.
+ "Event viewer cannot open the event log or custom view. Verify that the event log service is running or query is too long. Access is denied" when we try to open the security logs on some of the domain controllers with the domain admin account.
 
 ## Cause
 

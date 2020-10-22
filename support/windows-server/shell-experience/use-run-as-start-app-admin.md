@@ -17,7 +17,7 @@ ms.technology: ShellExperience
 
 This article describes how to use the `Run as` command to start an application as an administrator.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Original product version:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 325362
 
 ## Summary

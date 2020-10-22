@@ -77,7 +77,7 @@ Replication status 1256 is logged for the following reason:
 
 When the destination DC fails to bind to the source DC using RPC a win32 error code in the Repsfrom status for that partition - usually Schema or Configuration since these partitions are replicated at a higher priority. After an RPC bind failure has occurred, a cleanup routine will run to clear the destination DCs queue from that same source DC. This is done to avoid wasting time attempting to replicate with a DC that it can't connect to. Since it hasn't attempted a sync for the partitions that have been cleared from the queue, a status 1256 is logged. In a scenario where destination DC replicates Schema, Configuration, and several GC non-writable partitions from the source DC, the win32 error status for the Schema and Configuration partitions that caused the RPC bind failure is logged. The destination DC will then cancel the pending replication tasks for the remaining partitions and log win32 error 1256 for the status.  
 
-In summary: 1256 is logged as the replication status per partition as a result of the destination DC cancelling the sync request from the source DC due to a connectivity failure previously encountered.
+In summary: 1256 is logged as the replication status per partition as a result of the destination DC cancelling the sync request from the source DC due to a connectivity failure previously encountered.
 
 ## Resolution
 
@@ -137,7 +137,7 @@ In order to determine the actual win32 error to troubleshoot,  use one of the fo
 
 ## More information
 
-The following articles contain the troubleshooting procedures for errors typically logged with win32 error 1256:
+The following articles contain the troubleshooting procedures for errors typically logged with win32 error 1256:
 
 | **Win32 error**| **Article**|
 |---|---|

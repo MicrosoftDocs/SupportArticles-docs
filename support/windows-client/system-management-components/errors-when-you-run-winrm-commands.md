@@ -17,7 +17,7 @@ ms.technology: SysManagementComponents
 
 This article provides a solution to errors that occur when you run WinRM commands to check local functionality in a Windows Server 2008 environment.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2269634
 
 ## Symptoms

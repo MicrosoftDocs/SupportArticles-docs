@@ -29,15 +29,15 @@ In some cases, you may experience degraded overall performance on a Windows Serv
 
 ## Cause
 
-This issue may occur if the **Power Options** settings are set to **Balanced**. By default, Windows Server 2008 R2 or later sets the **Balanced (recommended)** power plan, which enables energy conservation by scaling the processor performance based on current CPU utilization.
+This issue may occur if the **Power Options** settings are set to **Balanced**. By default, Windows Server 2008 R2 or later sets the **Balanced (recommended)** power plan, which enables energy conservation by scaling the processor performance based on current CPU utilization.
 
 ## Resolution
 
-- Option 1:  Recommended
+- Option 1:  Recommended
 
-    This issue is tied to interaction between the processors and the operating system not adjusting P-States and turning off Core Parking as needed. To address this, it requires both hardware and operating system updates.
+    This issue is tied to interaction between the processors and the operating system not adjusting P-States and turning off Core Parking as needed. To address this, it requires both hardware and operating system updates.
 
-    1. Update System BIOS to a current revision. Reference the hardware manufacturer for model-specific recommendations.
+    1. Update System BIOS to a current revision. Reference the hardware manufacturer for model-specific recommendations.
     2. Apply the appropriate hotfix for your operating system:
         - For Windows Server 2008 R2 and Windows Server 2008 R2 Service Pack 1
         - For Windows Server 2008, reference Option 2.
@@ -45,10 +45,10 @@ This issue may occur if the **Power Options** settings are set to **Balanced
 
 - Option 2
 
-    To work around the performance degradation issue, you can switch to the **High Performance** power plan.  However, it will disable dynamic performance scaling on the platform. Depending on the environment, if the platform is always under a heavy load, then it's a viable solution.  In most cases, however, the workload varies throughout the day and thus it's recommended to leave the power plan set to Balanced and evaluate the proper settings within the Balanced power plan for processor power management.
+    To work around the performance degradation issue, you can switch to the **High Performance** power plan.  However, it will disable dynamic performance scaling on the platform. Depending on the environment, if the platform is always under a heavy load, then it's a viable solution.  In most cases, however, the workload varies throughout the day and thus it's recommended to leave the power plan set to Balanced and evaluate the proper settings within the Balanced power plan for processor power management.
 
     > [!IMPORTANT]
-    > Today's modern processors enable scaling of performance and power based on the current activity on the system.  The different performance states are dynamically managed by Windows in conjunction with hardware and platform firmware to respond to varying workload requirements. The 3 default power plans exposed by Windows provide varying tradeoffs of performance vs. power consumption.  For example, if the High Performance power plan is selected, Windows places the system in the highest performance state and disables the dynamic scaling of performance in response to varying workload levels.  Therefore, special care should be taken before setting the power plan to High Performance as this can increase power consumption unnecessarily when the system is underutilized.
+    > Today's modern processors enable scaling of performance and power based on the current activity on the system.  The different performance states are dynamically managed by Windows in conjunction with hardware and platform firmware to respond to varying workload requirements. The 3 default power plans exposed by Windows provide varying tradeoffs of performance vs. power consumption.  For example, if the High Performance power plan is selected, Windows places the system in the highest performance state and disables the dynamic scaling of performance in response to varying workload levels.  Therefore, special care should be taken before setting the power plan to High Performance as this can increase power consumption unnecessarily when the system is underutilized.
 
     If the choice is made to change the default power plan, Windows Server 2008 R2 or later provides three power plans to maximize performance and conserve energy: **Balanced (recommended), High Performance** and **Power Saver**.
 

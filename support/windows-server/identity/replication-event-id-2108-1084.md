@@ -22,15 +22,15 @@ _Original KB number:_ &nbsp; 837932
 
 ## Symptoms
 
-When inbound replication of the Active Directory Domain Services (AD DS) occurs, a destination domain controller that is running Microsoft Windows Server 2003 Service Pack 1 (SP1) through Windows Server 2016 logs the following event in the Directory Service log:
+When inbound replication of the Active Directory Domain Services (AD DS) occurs, a destination domain controller that is running Microsoft Windows Server 2003 Service Pack 1 (SP1) through Windows Server 2016 logs the following event in the Directory Service log:
 
-> Event ID 1084: Internal event: Active Directory Domain Services could not update the following object with changes received from the following source directory service. This is because an error occurred during the application of the changes to Active Directory Domain Services on the directory service.
+> Event ID 1084: Internal event: Active Directory Domain Services could not update the following object with changes received from the following source directory service. This is because an error occurred during the application of the changes to Active Directory Domain Services on the directory service.
 >
-> Object: CN=\<cn path>
+> Object: CN=\<cn path>
 >
-> Object GUID: \<objectguid>
+> Object GUID: \<objectguid>
 >
-> Source directory service: NTDSA._msdcs.\<forst root DNS domain name>
+> Source directory service: NTDSA._msdcs.\<forst root DNS domain name>
 >
 > Synchronization of the directory service with the source directory service is blocked until this update problem is corrected.
 >
@@ -42,16 +42,16 @@ When inbound replication of the Active Directory Domain Services (AD DS) occurs,
 >
 > Additional Data:
 >
->Error value: \<error code> \<error string>
+>Error value: \<error code> \<error string>
 
 > [!NOTE]
 >
-> - In the Error value text, \<error code> and \<error string> represent the actual values that are shown in the log entry.
+> - In the Error value text, \<error code> and \<error string> represent the actual values that are shown in the log entry.
 > - Event 1804 has been logged since Windows 2000 Server.
 
-Destination domain controllers that are running Windows Server 2003 SP1 also log the following event in the Directory Service log:
+Destination domain controllers that are running Windows Server 2003 SP1 also log the following event in the Directory Service log:
 
-> Event ID 2108: This event contains REPAIR PROCEDURES for the 1084 event which has previously been logged. This message indicates a specific issue with the consistency of the Active Directory Domain Services database on this replication destination. A database error occurred while applying replicated changes to the following object. The database had unexpected contents, preventing the change from being made.
+> Event ID 2108: This event contains REPAIR PROCEDURES for the 1084 event which has previously been logged. This message indicates a specific issue with the consistency of the Active Directory Domain Services database on this replication destination. A database error occurred while applying replicated changes to the following object. The database had unexpected contents, preventing the change from being made.
 
 > [!NOTE]
 >
@@ -100,9 +100,9 @@ To resolve this problem, follow these steps. Retry the replication operation aft
 
         If the error occurs in a program partition, use the Ntdsutil.exe tool to change the replica that hosts the program partition.
 
-5. Use a third-party utility, such as the FileMon utility, to determine whether a program or a user is accessing the Active Directory database, the transaction log files, or the Edp.tmp file. If file access activity exists, stop the services that are responsible for the activity. For more information about the FileMon utility, see [FileMon for Windows v7.04](/sysinternals/downloads/filemon).
+5. Use a third-party utility, such as the FileMon utility, to determine whether a program or a user is accessing the Active Directory database, the transaction log files, or the Edp.tmp file. If file access activity exists, stop the services that are responsible for the activity. For more information about the FileMon utility, see [FileMon for Windows v7.04](/sysinternals/downloads/filemon).
 
-6. Determine whether the problem is related to the parent of the Active Directory object on the destination domain controller. To do this, follow these steps:
+6. Determine whether the problem is related to the parent of the Active Directory object on the destination domain controller. To do this, follow these steps:
 
     1. On the source domain controller, temporarily move the object that is referenced in Event 1084 to an organizational unit (OU) container. The OU must be unrelated to the current container. For example, move the object to a new container off the root of the domain.
 
@@ -150,16 +150,16 @@ To resolve this problem, follow these steps. Retry the replication operation aft
     repadmin /showmeta remote_domain_controller_name distinguished_name_path_of_reference _object
     ```
 
-    If the object is in a deleted objects container or if you cannot use the Repadmin.exe tool to find the object, use the object's GUID reference to find the object. This GUID is referenced in Event 1084. To do this, type the following at a command prompt:
+    If the object is in a deleted objects container or if you cannot use the Repadmin.exe tool to find the object, use the object's GUID reference to find the object. This GUID is referenced in Event 1084. To do this, type the following at a command prompt:
 
     ```console
     repadmin /showmeta remote_domain_controller_name "GUID_for_the_object that_is_referenced_in_Event_ID_1084"
     ```
 
-    For example, if Event 1084 and Event 2108 reference an object where the GUID is b49cd496-98a2-4500-bb08-58550c2f79ac, type `repadmin /showmeta "<GUID=b49cd496-98a2-4500-bb08-58550c2f79ac>"`.
+    For example, if Event 1084 and Event 2108 reference an object where the GUID is b49cd496-98a2-4500-bb08-58550c2f79ac, type `repadmin /showmeta "<GUID=b49cd496-98a2-4500-bb08-58550c2f79ac>"`.
 
     > [!NOTE]
-    > The quotation marks and brackets are required.
+    > The quotation marks and brackets are required.
 
 8. Obtain the most recent Ntdsutil.exe tool by installing the latest service pack for your operating system. Use the Ntdsutil.exe tool to perform an integrity check of the Active Directory database on the source domain controller.
 
@@ -200,7 +200,7 @@ To resolve this problem, follow these steps. Retry the replication operation aft
 
 11. Use the ntdsutil files compact command to perform an offline defragmentation of the Active Directory database. For more information, see [Performing offline defragmentation of the Active Directory Database ](https://support.microsoft.com/help/232122).
 
-12. At the command prompt, type the following command, and then press Enter:
+12. At the command prompt, type the following command, and then press Enter:
 
     ```console
     ntdsutil "semantic database analysis" "go"
@@ -212,6 +212,6 @@ To resolve this problem, follow these steps. Retry the replication operation aft
     If errors are reported, `type ntdsutil go fixup`, and then press Enter.
 
     > [!NOTE]
-    > The semantic database commands do not perform lossy repairs on Active Directory databases such as the pre-Windows Server 2003 Service Pack 1 Ntdsutil File Repair or `Esentutl /p` commands.
+    > The semantic database commands do not perform lossy repairs on Active Directory databases such as the pre-Windows Server 2003 Service Pack 1 Ntdsutil File Repair or `Esentutl /p` commands.
 
     [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

@@ -40,7 +40,7 @@ Editing the affected GPOs becomes impossible, reports are inaccurate. The proble
 
 ## Cause
 
-In order to generate reports or edit the GPO, the .admx file needs to be loaded as well as the appropriate .adml language file. Depending on the native language user requesting the edit / reporting operation the .adml file is searched for in the appropriate language folder (en for en, de for de, an so on). If, for example,  the querying user wants english and the GPO central store only has the german .adml files installed such an error would occur.
+In order to generate reports or edit the GPO, the .admx file needs to be loaded as well as the appropriate .adml language file. Depending on the native language user requesting the edit / reporting operation the .adml file is searched for in the appropriate language folder (en for en, de for de, an so on). If, for example,  the querying user wants english and the GPO central store only has the german .adml files installed such an error would occur.
 
 The error reporting is incorrect since it is referring to the .admx file as missing, while this file is present at the specified location.
 

@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2902739
 
 ## Symptoms
 
-On a Windows Server Virtual Machine that is running VMWare ESXi 5.0.x, you receive a "CRITICAL_STRUCTURE_CORRUPTION" Stop error code that begins as follows:
+On a Windows Server Virtual Machine that is running VMWare ESXi 5.0.x, you receive a "CRITICAL_STRUCTURE_CORRUPTION" Stop error code that begins as follows:
 >Bug check code 00000109  
 Arguments a3a01f58 \`92797517 b3b72bde \`e4f976b6 00000000 \`c0000103 00000000` 00000007
 
@@ -43,8 +43,8 @@ To work around this issue, manually create a CPUID mask for the affected virtual
 3. Click the **Options** tab.
 4. Under **Advanced**, click **CPUID Mask**.
 5. Click **Advanced**.
-6. In the Register column, locate the **edx**  register under **Level 80000001**.
-7. In the **Value** field, enter the following character string exactly:
+6. In the Register column, locate the **edx**  register under **Level 80000001**.
+7. In the **Value** field, enter the following character string exactly:
 
    ----:0---:----:----:----:----:----:---- 
 
@@ -74,11 +74,11 @@ BaseBoardVersion = None
 CRITICAL_STRUCTURE_CORRUPTION (109)
 
 This Stop error is generated when the kernel detects that critical kernel code or data has been corrupted. Typically, any of the following situations can cause this corruption:
-- A driver inadvertently or deliberately modified critical kernel code or data. For more information, see [Kernel patch protection for x64-based operating systems](https://www.microsoft.com/whdc/driver/kernel/64bitPatching.mspx).
+- A driver inadvertently or deliberately modified critical kernel code or data. For more information, see [Kernel patch protection for x64-based operating systems](https://www.microsoft.com/whdc/driver/kernel/64bitPatching.mspx).
 
-- A developer tried to set a standard kernel breakpoint by using a kernel debugger that was not attached when the system was started. Standard breakpoints (bp) can be set only if the debugger is attached at startup. Processor breakpoints (ba) can be set at any time.
+- A developer tried to set a standard kernel breakpoint by using a kernel debugger that was not attached when the system was started. Standard breakpoints (bp) can be set only if the debugger is attached at startup. Processor breakpoints (ba) can be set at any time.
 
-- A hardware corruption occurred. For example, the kernel code or data might have been stored in memory that failed.
+- A hardware corruption occurred. For example, the kernel code or data might have been stored in memory that failed.
 
 Arguments:
 Arg1: a3a01f5892797517, Reserved

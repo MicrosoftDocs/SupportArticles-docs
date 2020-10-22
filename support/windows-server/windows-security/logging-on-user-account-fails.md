@@ -38,7 +38,7 @@ The error is **STATUS_TOO_MANY_CONTEXT_IDS**.
 
 When a user logs on to a computer, the Local Security Authority (LSA, a part of the Local Security Authority Subsystem) generates an access token that represents the user's security context. The access token consists of unique security identifiers (SID) for every group that the user is a member of. These SIDs include transitive groups and SID values from SIDHistory of the user and the group accounts.
 
-The array that contains the SIDs of the user's group memberships in the access token can contain no more than 1,024 SIDs. The LSA cannot drop any SID from the token. So, if there are more SIDs, the LSA fails to create the access token and the user will be unable to log on.
+The array that contains the SIDs of the user's group memberships in the access token can contain no more than 1,024 SIDs. The LSA cannot drop any SID from the token. So, if there are more SIDs, the LSA fails to create the access token and the user will be unable to log on.
 
 When the list of SIDs is built, the LSA also inserts several generic, well-known SIDs in addition to the SIDs for the user's group memberships (evaluated transitively). Thus, if a user is a member of more than about 1,010 custom security groups, the total number of SIDs can exceed the 1,024 SID limit.
 
@@ -54,14 +54,14 @@ The list of custom SIDs will include the following:
 - The primary SIDs of the user/computer and the security groups the account is member of.
 - The SIDs in the **SIDHistory** attribute of the groups in scope of the logon.
 
-Because the **SIDHistory** attribute can contain multiple values, the limit of 1,024 SIDs can be reached quickly if accounts are migrated multiple times. The number of SIDs in the Access Token will be less than the total number of groups that the user is a member of in the following situation:
+Because the **SIDHistory** attribute can contain multiple values, the limit of 1,024 SIDs can be reached quickly if accounts are migrated multiple times. The number of SIDs in the Access Token will be less than the total number of groups that the user is a member of in the following situation:
 
 - The user is from a trusted domain where SIDHistory and SIDs are filtered out.
 - The user is from a trusted domain across a trust where SIDs are quarantined. Then, only SIDs from the same domain as the user's are included.
 - Only the Domain Local Group SIDs from the domain of the resource are included.
 - Only the Server Local Group SIDs from the resource server are included.
 
-Because of these differences, it's possible that the user can log on to a computer in one domain, but not to a computer in another domain. The user might also be able to log on to one server in a domain, but not to another server in the same domain.
+Because of these differences, it's possible that the user can log on to a computer in one domain, but not to a computer in another domain. The user might also be able to log on to one server in a domain, but not to another server in the same domain.
 
 You can find out about the domain group memberships of an affected user with NTDSUTIL. It has a Group Membership Evaluation tool that also works across forests boundaries. The tool also works for users who are well above the limit of 1,024 SIDs, or who are in so many groups that Kerberos fails ticket retrieval even with 65,535 bytes of the buffer. Follow these steps:
 
@@ -138,7 +138,7 @@ To fix this problem, use one of the following methods, as appropriate for your s
 
 ### Method 1
 
-This resolution applies to the situation in which the user who encounters the logon error is not an administrator, and administrators can successfully log on to the computer or to the domain.
+This resolution applies to the situation in which the user who encounters the logon error is not an administrator, and administrators can successfully log on to the computer or to the domain.
 
 This resolution must be performed by an administrator who has permissions to change the group memberships that the affected user is a member of. The administrator must change the user's group memberships to make sure that the user is no longer a member of more than about 1,010 security groups (considering the transitive group memberships and the local group memberships).
 
@@ -247,7 +247,7 @@ The access-token includes a SID relative to the user/computer origin, one of the
 > [!NOTE]
 >
 > - As you can see with the note at SID entry **Logon Session SID**, do not count the SIDs in the list of tool outputs and assume that they are complete for all target computers and logon types. You should consider an account is in danger of running into this limit when it has more than 1,000 SIDs. Don't forget that, depending on the computer where a token is created, server or workstation local groups can also be added.
-> - **xxxxxxxx-yyyyyyyy-zzzzzzzz** indicates the domain or workstation components of the SID.
+> - **xxxxxxxx-yyyyyyyy-zzzzzzzz** indicates the domain or workstation components of the SID.
 
 The following example illustrates which domain local security groups will show up in the user's token when the user logs on to a computer in a domain.
 

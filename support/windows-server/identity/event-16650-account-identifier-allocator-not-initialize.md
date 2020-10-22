@@ -74,7 +74,7 @@ Starting test: KnowsOfRoleHolders
 
 Role Rid Owner = CN="NTDS Settings DEL:fd615439-1ebb-4652-b16f-3f8517d25593",CN=dc01,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=com Warning: CN="NTDS Settings DEL:fd615439-1ebb-4652-b16f-3f8517d25593",CN=dc01,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=com is the Rid Owner, but is deleted.
 You may also receive other errors in the system event log that can help you to troubleshoot the problem:
- Event ID: 16647
+ Event ID: 16647
 
 Event Source: SAM
 
@@ -92,7 +92,7 @@ Description: The maximum account identifier allocated to this domain controller 
 ## Cause
 
 This problem occurs in one of the following scenarios:
- 
+ 
 - When the relative ID (RID) Master is restored from backup, it tries to synchronize with other domain controllers to verify that there are no other RID Masters online. However, the synchronization process fails if there are no domain controllers available to synchronize with, or if replication is not working.
 Note
 If the domain has always contained only one domain controller, the RID Master will not try to synchronize with other domain controllers. The domain controller has no knowledge of any other domain controllers.
@@ -120,7 +120,7 @@ DC=contoso,DC=com Default-First-Site-Name\DC02 via RPC objectGuid: 97c68f88-3864
 
 4. Restart the RID Master computer. The RID Master will initialize correctly.
 
-### Remove domain controller metadata for all other domain controllers in the domain 
+### Remove domain controller metadata for all other domain controllers in the domain 
 
 You can restore or connect a second domain controller to complete initial synchronization. If you cannot add a second domain controller, you must either perform a metadata cleanup on the non-existent domain controllers to remove them from the domain permanently or delete the replication links to the Active Directory naming contexts.
  For more information about how to remove metadata, click the following article number to view the article [Clean up Server Metadata.](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup) 
@@ -143,7 +143,7 @@ To verify that the Active Directory objects that are related to RID allocation a
 8. Click the **Select a property to view** menu, and then click **userAccountControl**.
 9. Verify that the value for **userAccountControl** is 532480. To change the **userAccountControl** value, click **Edit** on the domain controller property dialog box.
 10. In the **Integer Attribute Editor**, type **532480** in the **Value** field, and then click **OK**.
- 
+ 
 
 ### Verify that the RID Master is replicating with another domain controller
 

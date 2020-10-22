@@ -17,7 +17,7 @@ ms.technology: Deployment
 
 This article provides a solution to an error 0xC004E002 when you try to activate Windows.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions, Windows 7 Service Pack 1  
+_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 978305
 
 ## Symptoms
@@ -54,8 +54,8 @@ To resolve this issue, try the following methods in order.
 
     ```console
     tokens.dat NT AUTHORITY\SYSTEM:(I)(F)
-             BUILTIN\Administrators:(I)(F)
-             NT SERVICE\SLSVC:(I)(R,W,D)
+             BUILTIN\Administrators:(I)(F)
+             NT SERVICE\SLSVC:(I)(R,W,D)
     ```
 
     For Windows 7 or Windows Server 2008 R2:
@@ -68,8 +68,8 @@ To resolve this issue, try the following methods in order.
 
     ```console
     tokens.dat NT AUTHORITY\SYSTEM:(I)(F)
-                BUILTIN\Administrators:(I)(F)
-                NT AUTHORITY\NETWORK SERVICE:(I)(F)
+                BUILTIN\Administrators:(I)(F)
+                NT AUTHORITY\NETWORK SERVICE:(I)(F)
     ```
 
     For Windows 8, Windows Server 2012, Windows 8.1, or Windows Server 2008 R2:
@@ -82,8 +82,8 @@ To resolve this issue, try the following methods in order.
 
     ```console
     tokens.dat NT AUTHORITY\SYSTEM:(I)(F)
-             BUILTIN\Administrators:(I)(F)
-             NT SERVICE\WSService:(OI)(CI)(R,W,D)
+             BUILTIN\Administrators:(I)(F)
+             NT SERVICE\WSService:(OI)(CI)(R,W,D)
     ```
 
 4. Close the Command Prompt window.
@@ -180,4 +180,4 @@ To resolve this issue, try the following methods in order.
 
 ### Did this fix the problem
 
-Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, for Windows 7 or Windows Server 2008, you can [contact support](https://support.microsoft.com/contactus/). Assisted support is no longer available for Windows Vista.
+Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, for Windows 7 or Windows Server 2008, you can [contact support](https://support.microsoft.com/contactus/). Assisted support is no longer available for Windows Vista.

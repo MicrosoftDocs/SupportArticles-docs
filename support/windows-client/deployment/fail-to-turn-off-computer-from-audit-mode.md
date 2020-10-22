@@ -23,22 +23,22 @@ _Original KB number:_ &nbsp; 3141410
 ## Symptoms
 
 Consider the following scenario:
- 
+ 
 - You're working on a Windows 10-based computer.
 - You go into Sysprep Audit mode from the Out of Box Experience (OOBE) screen.
-- You turn off the computer by using the **Shut down**  command on the **Start**  menu, or you use one of the following **Shut down** options:
+- You turn off the computer by using the **Shut down**  command on the **Start**  menu, or you use one of the following **Shut down** options:
 
 - Log off
   - Sleep
   - Hibernate
-- You restart or wake the computer.
+- You restart or wake the computer.
 
 In this scenario, you receive the following error message on the logon screen:
- Your account has been disabled. Please see your system administrator.
+ Your account has been disabled. Please see your system administrator.
 
 ## Cause
 
-This is expected behavior because the system is using *hybrid shutdown*  (also known as "fast startup") during Audit mode. Hybrid shutdown was introduced in Windows 8. In Audit mode, the administrator account is enabled immediately before logoff and disabled immediately after logon. Therefore, the account is locked out when you turn off the computer and then turn it back on.
+This is expected behavior because the system is using *hybrid shutdown*  (also known as "fast startup") during Audit mode. Hybrid shutdown was introduced in Windows 8. In Audit mode, the administrator account is enabled immediately before logoff and disabled immediately after logon. Therefore, the account is locked out when you turn off the computer and then turn it back on.
 
 ## Workaround
 

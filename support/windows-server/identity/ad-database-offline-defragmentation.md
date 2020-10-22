@@ -34,22 +34,22 @@ To perform offline defragmentation of the Active Directory database, follow thes
 
 2. Take one of the following actions:
    - Stop the **Active Directory Domain Services** or LDS instance.
-   - Start msconfig, and go to the boot pane. Select the OS installation that you want to configure. Select **Safe Boot**  in the **Boot options** section, and also select the **Active Directory repair**  item. After you click **OK**, the tool asks you to restart. Restart the computer.
+   - Start msconfig, and go to the boot pane. Select the OS installation that you want to configure. Select **Safe Boot**  in the **Boot options** section, and also select the **Active Directory repair**  item. After you click **OK**, the tool asks you to restart. Restart the computer.
 
-3. Log on to the administrator account by using the password that is defined for the local administrator account in the Directory Service Restore Mode SAM.  
+3. Log on to the administrator account by using the password that is defined for the local administrator account in the Directory Service Restore Mode SAM.  
 
-4. Open a **Command Prompt**  window.
+4. Open a **Command Prompt**  window.
 
 5. NTDSUTIL uses the TEMP and TMP environment variables to create a temporary database during defragmentation. If the free space on your standard volume used is less than the size of the compacted database, you receive the following error:
 
     > file maintenance: compact to d:\compactDB  
     Initiating DEFRAGMENTATION mode...  
-         Source Database: D:\windows\NTDS\ntds.dit  
-         Target Database: d:\compactDB\ntds.dit  
+         Source Database: D:\windows\NTDS\ntds.dit  
+         Target Database: d:\compactDB\ntds.dit  
     >
-    > Defragmentation  Status (% complete)  
+    > Defragmentation  Status (% complete)  
     >
-    > 0    10   20   30   40   50   60   70   80   90  100
+    > 0    10   20   30   40   50   60   70   80   90  100
     >
     > |----|----|----|----|----|----|----|----|----|----|
     >
@@ -68,16 +68,16 @@ To perform offline defragmentation of the Active Directory database, follow thes
 
 6. Run NTDSUTIL.
 
-7. Type activate instance ntds  to select the Active Directory database instance. Use the LDS instance name if you want to compact an LDS database.
+7. Type activate instance ntds  to select the Active Directory database instance. Use the LDS instance name if you want to compact an LDS database.
 8. Type files, and then press Enter.
 9. Type info, and then press Enter. This displays current information about the path and size of the Active Directory database and its log files. Note the path.
 10. Establish a location that has sufficient drive space for the compacted database to be stored.
-11. Type `compact to <drive>:\<directory>`, and then press Enter. In this command, the placeholders \<drive> and \<directory> represent the path of the location that you established in the previous step.
+11. Type `compact to <drive>:\<directory>`, and then press Enter. In this command, the placeholders \<drive> and \<directory> represent the path of the location that you established in the previous step.
 
     > [!NOTE]
     > You must specify a directory path. If the path contains any spaces, the whole path must be enclosed in quotation marks. For example, type *compact to "c:\new folder"*.
 
-12. A new database that is named *Ntds.dit* or *AdamNtds.dit* is created in the path that you specified.
+12. A new database that is named *Ntds.dit* or *AdamNtds.dit* is created in the path that you specified.
 13. Type quit, and then press Enter. Type quit again to return to the command prompt.
 14. If defragmentation succeeds without errors, follow the Ntdsutil.exe on-screen instructions. Delete all the log files in the log directory by typing the following command `del drive :\ pathToLogFiles \*.log`.
 

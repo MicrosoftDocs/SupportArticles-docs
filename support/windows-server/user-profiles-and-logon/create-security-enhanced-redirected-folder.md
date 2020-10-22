@@ -17,7 +17,7 @@ ms.technology: UserProfilesAndLogon
 
 This article describes how to dynamically create security-enhanced redirected folders or home folders.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 274443
 
 ## Summary
@@ -38,7 +38,7 @@ When you redirect folders to a shared location on a network, you need both read 
 
 To make sure that only the user and the domain administrators have permissions to open a particular redirected folder, do the following steps:
 
-1. Select a central location in your environment where you would like to store Folder Redirection, and then share this folder. In this example, FLDREDIR, and HOMEDIR are used.
+1. Select a central location in your environment where you would like to store Folder Redirection, and then share this folder. In this example, FLDREDIR, and HOMEDIR are used.
 2. Set **Share Permissions** for the Everyone group to **Full Control**.
 3. Use the following settings for NTFS Permissions:
    - CREATOR OWNER - Full Control (Apply onto: Subfolders and Files Only)
@@ -54,7 +54,7 @@ To make sure that only the user and the domain administrators have permissions t
     You can also configure a home folder "HOMEDIR" in a similar manner by copying a template user with a home folder like `\\server\HOMEDIR\%username%`, or create the user and folder with that name.
 
     > [!NOTE]
-    > For home folders, the scenario isn't common, because when you add the home folder for a user, Active Directory Users and Computers will create the folder. But if you use a custom provisioning, Active Directory Users and Computers doesn't create the folder. Therefore, you have to do it by yourself.  
+    > For home folders, the scenario isn't common, because when you add the home folder for a user, Active Directory Users and Computers will create the folder. But if you use a custom provisioning, Active Directory Users and Computers doesn't create the folder. Therefore, you have to do it by yourself.  
 
 ## Why these permissions help improve the security of the share folders
 
@@ -62,20 +62,20 @@ Because the Everyone group has the Create Folder/Append Data right, the group me
 
 ## More information
 
-The article was initially written for Windows Server 2003, and the access control entry (ACE) for CreatorOwner was likely converted to:  
+The article was initially written for Windows Server 2003, and the access control entry (ACE) for CreatorOwner was likely converted to:  
 *\<Folder-User> - Full Control (Apply onto: This Folder, Subfolders, and Files)*
 
-But there's no proof that this has happened. The earlier versions of the article don't mention the result of the access control list (ACL), and the versions of the operating systems that this article was written for aren't supported any longer.
+But there's no proof that this has happened. The earlier versions of the article don't mention the result of the access control list (ACL), and the versions of the operating systems that this article was written for aren't supported any longer.
 
-By the end of May 2017, all supported operating systems converted the ACE to:  
+By the end of May 2017, all supported operating systems converted the ACE to:  
 *\<Folder-User> - Full Control (Apply onto: This Object only)*
 
-But this doesn't affect the daily operations of the folders for the users, it makes a difference when the administrator has to work on the contents of the home folders or redirected folders.
+But this doesn't affect the daily operations of the folders for the users, it makes a difference when the administrator has to work on the contents of the home folders or redirected folders.
 
-If you want to make sure the user to get the inheritable full control on all child objects, you've to:
+If you want to make sure the user to get the inheritable full control on all child objects, you've to:
 
 1. Create the folder matching for the users samaccountname by yourself.
-2. Set the permissions that are needed for the folder, omit the Everyone ACEs above, and make sure that you have the ACE:
+2. Set the permissions that are needed for the folder, omit the Everyone ACEs above, and make sure that you have the ACE:
 
     *\<Folder-User> - Full Control (Apply onto: This Folder, Subfolders, and Files)*
 

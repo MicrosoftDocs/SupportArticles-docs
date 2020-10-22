@@ -36,11 +36,11 @@ Windows Server 2008 R2 or Windows Server 2008
 
 Windows Server 2012 and later versions  
 
-At startup, the server switches to the **Choose an option**  menu that offers to continue or troubleshoot.
+At startup, the server switches to the **Choose an option**  menu that offers to continue or troubleshoot.
 
 ## Cause
 
-This issue happens because the Active Directory Domain Services role was removed from a domain controller without first demoting it. Using Dism.exe, Pkgmgr.exe, or Ocsetup.exe to remove the DirectoryServices-DomainController role will succeed, but these servicing tools do not validate whether the computer is a domain controller.
+This issue happens because the Active Directory Domain Services role was removed from a domain controller without first demoting it. Using Dism.exe, Pkgmgr.exe, or Ocsetup.exe to remove the DirectoryServices-DomainController role will succeed, but these servicing tools do not validate whether the computer is a domain controller.
 
 ## Resolution
 

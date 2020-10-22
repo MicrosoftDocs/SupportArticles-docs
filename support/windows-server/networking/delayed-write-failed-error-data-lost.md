@@ -27,10 +27,10 @@ When writing to a network share, a failure may cause the following event to be w
 
 ## Cause
 
-This error can occur if there are pending cached writes to a file located on a remote network share and the connection to that file is unexpectedly terminated.  The connection to the file could have been terminated for various reasons, including network communication failures and filter drivers on either the client or the server canceling the write I/O.  When this error occurs, the pending cached write I/O in memory cannot be written to the target file on the remote network share.  The delayed write fails and the target file may now be corrupt.  
+This error can occur if there are pending cached writes to a file located on a remote network share and the connection to that file is unexpectedly terminated.  The connection to the file could have been terminated for various reasons, including network communication failures and filter drivers on either the client or the server canceling the write I/O.  When this error occurs, the pending cached write I/O in memory cannot be written to the target file on the remote network share.  The delayed write fails and the target file may now be corrupt.  
 
 ## More information
 
-It is the responsibility of the application to handle this error.  Some applications may try to reconnect to the remote file and retry the write operation.  Other applications may ignore the error or fail altogether and leave the target file corrupted. Some applications like Windows Explorer may report the error to the user if a file copy fails.  In the scenario of a failed file copy, the source file remains unchanged and copy operation can be restarted, overwriting the corrupted targeted remote file.  
+It is the responsibility of the application to handle this error.  Some applications may try to reconnect to the remote file and retry the write operation.  Other applications may ignore the error or fail altogether and leave the target file corrupted. Some applications like Windows Explorer may report the error to the user if a file copy fails.  In the scenario of a failed file copy, the source file remains unchanged and copy operation can be restarted, overwriting the corrupted targeted remote file.  
 For more information, see the following link:  
 [https://support.microsoft.com/kb/816004](https://support.microsoft.com/kb/816004)

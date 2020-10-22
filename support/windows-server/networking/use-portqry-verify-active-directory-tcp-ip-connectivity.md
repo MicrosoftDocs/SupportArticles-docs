@@ -150,7 +150,7 @@ isGlobalCatalogReady: TRUE
 UDP port 389 is LISTENING  
 
 > [!NOTE]
-> The LDAP test over UDP might not work against domain controllers that are running Windows Server 2008 and later. One reason for this can be that you have disabled IPv6 on the Domain Controller. To enable IPv6, set the value discussed in the article below to the default of **0**:  
+> The LDAP test over UDP might not work against domain controllers that are running Windows Server 2008 and later. One reason for this can be that you have disabled IPv6 on the Domain Controller. To enable IPv6, set the value discussed in the article below to the default of **0**:  
 [929852](https://support.microsoft.com/help/929852) Guidance for configuring IPv6 in Windows for advanced users
 
 ### Example 2: Identifying services that have registered with RPC endpoint mapper

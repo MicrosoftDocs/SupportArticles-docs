@@ -2060,6 +2060,8 @@
       href: ./user-profiles-and-logon/interactive-logon-isnt-allowed.md
     - name: Turn on automatic logon
       href: ./user-profiles-and-logon/turn-on-automatic-logon.md
+    - name: Windows logs on and logs off immediately
+      href: ./user-profiles-and-logon/cannot-log-on-windows.md
   - name: User profiles
     items:
     - name: '"The filename or extension is too long" error'
@@ -2082,10 +2084,6 @@
       href: ./user-profiles-and-logon/roaming-user-profiles-versioning.md
     - name: User may not be able to Change Their Password
       href: ./user-profiles-and-logon/user-must-change-password-at-next-logon-setting.md
-  - name: User Logon fails
-    items:
-    - name: Windows logs on and logs off immediately
-      href: ./user-profiles-and-logon/cannot-log-on-windows.md
 - name: Virtualization
   items:
   - name: Backup and restore of virtual machines

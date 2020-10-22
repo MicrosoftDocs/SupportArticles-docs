@@ -41,22 +41,22 @@ Printers are designed to roam with a user's roaming profile, and this is why the
 ### Method 1
 
 Export the default printer setting for an already-installed printer, and then merge the setting into the user's profile when the user logs on to the computer:
- 
+ 
 1. Use Registry Editor (Regedit.exe) to export the following registry key: HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Windows 
 
 2. Modify the registry (.reg) file you made in step 1 with a text editor so that the only registry value name below the key is:
- " Device "=...
+ " Device "=...
 The registry file should contain a blank line at the bottom of the file.
 3. Use Registry Editor (Regedit.exe) to add a new ResetPrinter string value under the following registry key: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run 
 
 4. The value of the ResetPrinter value should be something similar to the following value
- REGEDIT.EXE -S *path* \ *File.reg*  
+ REGEDIT.EXE -S *path* \ *File.reg*  
 where *File.reg* is the name you used to store the default printer.
 
 ### Method 2
 
 If computers in a specific area contain similar computer names, you can use a .vbs script file that matches a specific set of characters in the computer name, and installs a corresponding printer. The sample code that is included in this method only requires that you modify the IF lines. For example, the first IF statement in the code translates to "if the computer name contains the text "LAB1-", then set the default printer to "\\LAB1\LaserJet". To complete this method:
- 
+ 
 1. Copy the following sample VBS code into a. vbs file, for example, Defaultprinter.vbs:
 
     ```vbs

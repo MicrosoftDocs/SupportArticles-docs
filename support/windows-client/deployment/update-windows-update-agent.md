@@ -26,7 +26,7 @@ If you have automatic updating turned on, the latest version of the Windows Upda
 
 ## Automatically download Windows Update Agent
 
-To download the Windows Update Agent automatically, follow these steps:
+To download the Windows Update Agent automatically, follow these steps:
 
 1. Turn on automatic updating. Follow these steps, for the version of Windows that you are running.
 

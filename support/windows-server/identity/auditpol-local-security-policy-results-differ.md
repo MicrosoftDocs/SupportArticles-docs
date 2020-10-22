@@ -26,7 +26,7 @@ When viewing audit policy settings with AuditPol and the Local Security Policy (
 
 ## Cause
 
-AuditPol directly calls authorization APIs to implement the changes to the granular audit policy.  Secpol.msc manipulates the Local Group Policy Object, which results in writing the changes to %SYSTEMROOT%\system32\GroupPolicy\Machine\Microsoft\Windows NT\Audit\Audit.csv.  The settings saved to the .csv file aren't applied directly to the system at the time of modification, but are instead written to the file and read later by the client-side extension (CSE).  At the next group policy refresh cycle, the CSE applies the modifications that are present in the .csv file.
+AuditPol directly calls authorization APIs to implement the changes to the granular audit policy.  Secpol.msc manipulates the Local Group Policy Object, which results in writing the changes to %SYSTEMROOT%\system32\GroupPolicy\Machine\Microsoft\Windows NT\Audit\Audit.csv.  The settings saved to the .csv file aren't applied directly to the system at the time of modification, but are instead written to the file and read later by the client-side extension (CSE).  At the next group policy refresh cycle, the CSE applies the modifications that are present in the .csv file.
 
 Secpol.msc displays what is set in the local GPO. There's no "effective settings" view in secpol.msc that will merge granular AuditPol settings and what is defined locally as seen with secpol.msc.
 

@@ -63,7 +63,7 @@ Because the Network Service account is used to obtain access to this key, there'
 
 ## Resolution
 
-Volume shadow copy and DHCP server continue to function as expected, so you can ignore the event.
+Volume shadow copy and DHCP server continue to function as expected, so you can ignore the event.
 
 If you need to avoid the event, do following steps:
 

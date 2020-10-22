@@ -26,7 +26,7 @@ You may encounter a situation where one of the DNS server's in the environment s
 
 Event ID 4000:
 
-> The DNS server was unable to open Active Directory. This DNS server is configured to obtain and use information from the directory for this zone and is unable to load the zone without it. Check that the Active Directory is functioning properly and reload the zone. The event data is the error code.
+> The DNS server was unable to open Active Directory. This DNS server is configured to obtain and use information from the directory for this zone and is unable to load the zone without it. Check that the Active Directory is functioning properly and reload the zone. The event data is the error code.
 
 Event ID 4007:
 

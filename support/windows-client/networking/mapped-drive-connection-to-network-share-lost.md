@@ -57,7 +57,7 @@ Use Registry Editor to increase the default time-out period. To do this, follow 
 5. Click **Hexadecimal**.
 6. In the **Value data** box, type *ffffffff*, and then click **OK**.
 
-The client-side session is automatically disconnected when the idling time lasts more than the duration that is set in **KeepConn**. Therefore, the session is disconnected according to the shorter set duration value between **AutoDisConnect** and **KeepConn**. To change the time-out duration in the client-side during a UNC connection, specify the arbitrary time in **KeepConn**.
+The client-side session is automatically disconnected when the idling time lasts more than the duration that is set in **KeepConn**. Therefore, the session is disconnected according to the shorter set duration value between **AutoDisConnect** and **KeepConn**. To change the time-out duration in the client-side during a UNC connection, specify the arbitrary time in **KeepConn**.
 Locate and then click the following key in the registry:
 
 - Location: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lanmanworkstation\parameters`

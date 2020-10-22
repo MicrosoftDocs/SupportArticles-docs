@@ -26,44 +26,44 @@ On Windows Server 2008 or Windows Server 2008 R2, a backup operation using Windo
 
 In the System event log, the following event is logged:
 
-> Log Name: System  
-Source: Service Control Manager  
-Event ID:      7023  
-Level:         Error  
+> Log Name: System  
+Source: Service Control Manager  
+Event ID:      7023  
+Level:         Error  
 Description:  
 The Microsoft Software Shadow Copy Provider service terminated with the following error:  
 The system cannot find the file specified.
 
 In the Application event log, the following events are logged:
 
-> Log Name:      Application  
-Source:        VSS  
-Event ID:      12292  
-Level:         Error  
+> Log Name:      Application  
+Source:        VSS  
+Event ID:      12292  
+Level:         Error  
 Description:  
 Volume Shadow Copy Service error: Error creating the Shadow Copy Provider COM class with CLSID {65ee1dba-8ff4-4a58-ac1c-3470ee2f376a} [0x80080005].  
 Operation:  
-   Obtain a callable interface for this provider  
-   Obtaining provider management interface  
+   Obtain a callable interface for this provider  
+   Obtaining provider management interface  
 Context:  
-   Provider ID: {b5946137-7b9f-4925-af80-51abd60b20d5}  
-   Class ID: {00000000-0000-0000-0000-000000000000}  
-   Snapshot Context: -1  
-   Provider ID: {b5946137-7b9f-4925-af80-51abd60b20d5}  
-Log Name:      Application  
-Source:        VSS  
-Event ID:      11  
-Level:         Error  
+   Provider ID: {b5946137-7b9f-4925-af80-51abd60b20d5}  
+   Class ID: {00000000-0000-0000-0000-000000000000}  
+   Snapshot Context: -1  
+   Provider ID: {b5946137-7b9f-4925-af80-51abd60b20d5}  
+Log Name:      Application  
+Source:        VSS  
+Event ID:      11  
+Level:         Error  
 Description:  
 Volume Shadow Copy Service information: The COM Server with CLSID {65ee1dba-8ff4-4a58-ac1c-3470ee2f376a} and name SW_PROV cannot be started. Most likely the CPU is under heavy load. [0x80080005]  
 Operation:  
-   Obtain a callable interface for this provider  
-   Obtaining provider management interface  
+   Obtain a callable interface for this provider  
+   Obtaining provider management interface  
 Context:  
-   Provider ID: {b5946137-7b9f-4925-af80-51abd60b20d5}  
-   Class ID: {00000000-0000-0000-0000-000000000000}  
-   Snapshot Context: -1  
-   Provider ID: {b5946137-7b9f-4925-af80-51abd60b20d5}  
+   Provider ID: {b5946137-7b9f-4925-af80-51abd60b20d5}  
+   Class ID: {00000000-0000-0000-0000-000000000000}  
+   Snapshot Context: -1  
+   Provider ID: {b5946137-7b9f-4925-af80-51abd60b20d5}  
 
 On Windows Server 2008, if Windows Server Backup was used to perform the backup, the backup operation fails with one of the following errors:
 

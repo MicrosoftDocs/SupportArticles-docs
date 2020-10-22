@@ -28,11 +28,11 @@ The following items may be missing from the context (right-click) menu when mult
 
 ## Cause
 
-This is by design. These context menu items won't appear if selecting more than 15 items to avoid accidentally performing these actions on a large number of files.
+This is by design. These context menu items won't appear if selecting more than 15 items to avoid accidentally performing these actions on a large number of files.
 
 ## Resolution
 
-The following registry value may be modified to choose the number of files that may be selected while maintaining the context menu options.
+The following registry value may be modified to choose the number of files that may be selected while maintaining the context menu options.
 
 ```console
 HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer
@@ -45,4 +45,4 @@ Default : 15 (decimal)
 
 The registry change will go into effect after logging off and back on, or after terminating Windows Explorer (Explorer.exe) and relaunching the process.
 
-**Note:** A value of 16 is interpreted as "unlimited" for showing the options from the context menu, however it doesn't allow the actual opening of the documents selected if selecting more than 16. To allow the opening of more than 16 documents, set this key to a decimal value greater than the number of documents you wish to open. Microsoft recommends only increasing this value to a reasonable number in a controlled environment and only where users really need this value increased.
+**Note:** A value of 16 is interpreted as "unlimited" for showing the options from the context menu, however it doesn't allow the actual opening of the documents selected if selecting more than 16. To allow the opening of more than 16 documents, set this key to a decimal value greater than the number of documents you wish to open. Microsoft recommends only increasing this value to a reasonable number in a controlled environment and only where users really need this value increased.

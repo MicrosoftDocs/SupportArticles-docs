@@ -47,7 +47,7 @@ This issue occurs because the Web Distributed Authoring and Versioning (WebDAV) 
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
  [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows
 
-To resolve this problem in Windows Vista, apply hotfix 943280. The hotfix is only for Windows Vista. For later versions of Windows, go to the next section to modify the registry keys.
+To resolve this problem in Windows Vista, apply hotfix 943280. The hotfix is only for Windows Vista. For later versions of Windows, go to the next section to modify the registry keys.
 
 > [!NOTE]
 > This hotfix applies only to Windows Vista-based systems. However, the registry changes described later in this section apply to all the operating systems in the "Applies To" section. No hotfix is required for systems that are running Windows 7, Windows 8.1, or Windows 10. The registry changes alone fix the problem on these systems.

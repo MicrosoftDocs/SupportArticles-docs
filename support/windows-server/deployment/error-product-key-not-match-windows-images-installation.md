@@ -27,7 +27,7 @@ During the installation of Windows, the setup may fail after prompting for langu
 
 ## Cause
 
-This problem can occur if the supplied product key doesn't match the media that is being used to install Windows. The supplied product key may be in an unattended file, in the EI.CFG file, in the PID.txt file, or in the firmware of the BIOS. Windows computers that come with the operating system installed ship with the product key in the firmware, and if that product key doesn't match the media, you'll see the error message above.
+This problem can occur if the supplied product key doesn't match the media that is being used to install Windows. The supplied product key may be in an unattended file, in the EI.CFG file, in the PID.txt file, or in the firmware of the BIOS. Windows computers that come with the operating system installed ship with the product key in the firmware, and if that product key doesn't match the media, you'll see the error message above.
 
 For example: Installing Windows Server on a computer than came from the manufacturer with Windows 10 installed is likely to cause this problem.
 

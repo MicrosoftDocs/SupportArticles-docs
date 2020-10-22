@@ -17,12 +17,12 @@ ms.technology: BackupStorage
 
 This article provides a solution to memory pressure and performance issues that occur in the Resilient File System (ReFS) in Windows.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2016, Windows Server 2019  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 4016173
 
 ## Symptoms
 
-You notice heavy memory usage on a computer that's running Windows 10, Windows Server 2016, Windows Server 2019, Windows Server, 1903 or Windows Server, version 1909.
+You notice heavy memory usage on a computer that's running Windows 10, Windows Server 2016, Windows Server 2019, Windows Server, 1903 or Windows Server, version 1909.
 
 ## Cause
 

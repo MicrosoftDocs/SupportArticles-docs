@@ -38,7 +38,7 @@ When a Windows operating system fails to start or restarts unexpectedly, the [Wi
     BCDEdit
     ```
 
-    In the **Windows Boot Loader** section, the drive letter of the system volume is displayed next to `osdevice`. (For example, D:)
+    In the **Windows Boot Loader** section, the drive letter of the system volume is displayed next to `osdevice`. (For example, D:)
 
 5. At the command prompt, run the following command to complete a [check disk](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc730714(v=ws.11)) for the system volume that's identified in step 4:
 
@@ -47,7 +47,7 @@ When a Windows operating system fails to start or restarts unexpectedly, the [Wi
     ```
 
     > [!NOTE]
-    > If any failures or unrepairable issues are listed in the results, you may have to investigate these further.
+    > If any failures or unrepairable issues are listed in the results, you may have to investigate these further.
 
 6. At the command prompt, run the following command to complete a [System File Check](/windows/win32/wfp/system-file-checker) (SFC) for the system volume that's identified in step 4:
 
@@ -56,7 +56,7 @@ When a Windows operating system fails to start or restarts unexpectedly, the [Wi
     ```
 
     > [!NOTE]
-    > If any failures or unrepairable issues are listed in the results, you may have to investigate these further.
+    > If any failures or unrepairable issues are listed in the results, you may have to investigate these further.
 
 7. At the command prompt, run the following command to complete an image cleanup and health restoration by using the [DISM](/windows-hardware/manufacture/desktop/repair-a-windows-image) tool:
 
@@ -72,7 +72,7 @@ When a Windows operating system fails to start or restarts unexpectedly, the [Wi
 8. At the command prompt, run the following command to revert any pending actions by using the DISM tool.
 
     > [!NOTE]
-    > If the pending actions can't be reverted, you may have to investigate these further.
+    > If the pending actions can't be reverted, you may have to investigate these further.
 
 9. Close the **Command Prompt** window, and then select **Reboot**.
 

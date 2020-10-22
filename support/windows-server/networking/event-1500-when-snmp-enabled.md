@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2002303
 
 ## Symptoms
 
-After the SNMP Feature is installed in Windows Server, the following event ID 1500 source SNMP is logged in the System Event Log and one further event is logged for every start of the SNMP Service.
+After the SNMP Feature is installed in Windows Server, the following event ID 1500 source SNMP is logged in the System Event Log and one further event is logged for every start of the SNMP Service.
 
 > Log Name: System  
 Source: SNMP  
@@ -41,9 +41,9 @@ The description for Event ID 1500 from source SNMP cannot be found. Either the c
 
 ## Cause
 
-This error is logged because the SNMP Service checks if the registry path mentioned in the Event Description is present and determines that it is not.
+This error is logged because the SNMP Service checks if the registry path mentioned in the Event Description is present and determines that it is not.
 
-This registry path is needed for the SNMP trap configuration and is created once traps are set up.
+This registry path is needed for the SNMP trap configuration and is created once traps are set up.
 
 ## Workaround
 

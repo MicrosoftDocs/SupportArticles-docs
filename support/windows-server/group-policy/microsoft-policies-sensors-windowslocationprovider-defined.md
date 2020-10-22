@@ -29,14 +29,14 @@ Scenario 1
 - You create a central store for Group Policy Administrative Template files (.admx files) on the computer. For more information, see [How to create the Central Store for Group Policy Administrative Template files in Windows Vista](https://support.microsoft.com/help/929841).
 - You join a Windows 10-based computer to the domain.
 - On the Windows 10-based computer, you copy the files under the %systemroot%\PolicyDefinitions directory, paste them to the ADMX central store, and overwrite all existing *.admx and *.adml files. Then, you open the Group Policy Management Console (GPMC) to edit a policy.
-- You click the **Policies**  node under **Computer Configuration** or **User Configuration**.
+- You click the **Policies**  node under **Computer Configuration** or **User Configuration**.
 
 Scenario 2 
 - You have a computer that's running Windows 10 RTM (Build 10240).
 - You upgrade the computer to later builds of Windows 10.
 
 In these scenarios, you receive the following error message:
- Administrative Templates
+ Administrative Templates
 
 Dialog Message text
 Namespace 'Microsoft.Policies.Sensors.WindowsLocationProvider' is already defined as the target namespace for another file in the store.
@@ -45,7 +45,7 @@ File
 \\\ **<forest.root>**\SysVol\ **\<forest.root>** \Policies\PolicyDefinitions\Microsoft-Windows-Geolocation-WLPAdm.admx, line 5, column 110
 
 > [!NOTE]
->  The < **forest.root** > placeholder represents the domain name.
+>  The < **forest.root** > placeholder represents the domain name.
 
 For example, the error message resembles the message in the following screenshot:
 

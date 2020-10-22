@@ -15,14 +15,14 @@ ms.technology: RDS
 ---
 # Force Remote Desktop Services in Windows 7 to use a custom server authentication certificate for TLS
 
-This article provides a solution to an issue where a self-signed server authentication certificate is automatically generated to support Transport Layer Security (TLS) when you make a Remote Desktop Services (RDS) connection to a Windows 7 computer.
+This article provides a solution to an issue where a self-signed server authentication certificate is automatically generated to support Transport Layer Security (TLS) when you make a Remote Desktop Services (RDS) connection to a Windows 7 computer.
 
 _Original product version:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2001849
 
 ## Symptoms
 
-When making a RDS connection to a Windows 7 computer, a self-signed server authentication certificate is automatically generated to support TLS. This allows the data to be encrypted between computers. Data is only encrypted when the following Group Policy setting is enabled on the target computer and set to **SSL (TLS 1.0)**:
+When making a RDS connection to a Windows 7 computer, a self-signed server authentication certificate is automatically generated to support TLS. This allows the data to be encrypted between computers. Data is only encrypted when the following Group Policy setting is enabled on the target computer and set to **SSL (TLS 1.0)**:
 
 `Computer Configuration\Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Security:Require use of specific security layer for remote (RDP) connections`
 
@@ -32,16 +32,16 @@ The generation of self-signed certificates for TLS over a RDS connection is enab
 
 ## Resolution
 
-Server authentication certificates are supported in Windows Vista and Windows 7. To use a custom certificate for RDS, follow the steps below:
+Server authentication certificates are supported in Windows Vista and Windows 7. To use a custom certificate for RDS, follow the steps below:
 
 1. Install a server authentication certificate from a certification authority.
 
 2. Create the following registry value containing the certificate's SHA1 hash to configure this custom certificate to support TLS instead of using the default self-signed certificate.
 
     - Location: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp`
-    - Value name:  SSLCertificateSHA1Hash
-    - Value type:  REG_BINARY
-    - Value data: \<certificate thumbprint>
+    - Value name:  SSLCertificateSHA1Hash
+    - Value type:  REG_BINARY
+    - Value data: \<certificate thumbprint>
 
     The value should be the thumbprint of the certificate separated by comma (,) and no empty spaces. For example, if you were to export that registry key the **SSLCertificateSHA1Hash** value would look like this:
 
@@ -61,7 +61,7 @@ Server authentication certificates are supported in Windows Vista and Windows 7.
     6. In the **Add or Remove Snap-ins** dialog box, click **OK**.
     7. In the **Certificates** snap-in, in the console tree, expand **Certificates (Local Computer)**, expand **Personal**, and navigate to the SSL certificate that you would like to use.
     8. Right-click the certificate, select **All Tasks**, and select **Manage Private Keys**.
-    9. In the **Permissions** dialog box, click **Add,** type **NETWORK SERVICE**, click **OK,**  select **Read** under the **Allow** checkbox, then click **OK**.
+    9. In the **Permissions** dialog box, click **Add,** type **NETWORK SERVICE**, click **OK,**  select **Read** under the **Allow** checkbox, then click **OK**.
 
 ## More information
 

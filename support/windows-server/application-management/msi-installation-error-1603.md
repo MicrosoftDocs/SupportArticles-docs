@@ -43,7 +43,7 @@ To resolve this problem, use any one of the following methods, depending on the 
 
 - Check if the app is already installed on the PC. If so, uninstall and reinstall the app.
 
-    If you previously had a desktop shortcut for an app, the shortcut may have been lost during the upgrade to Windows 10. In such cases, the app is likely still installed on the PC, resulting in this error when you attempt to reinstall the app. You can restore the shortcut by searching for the app, and if it's found, press and hold (or right-click) the app and select **Pin** to **Start**. Or you can resolve the issue by uninstalling and then reinstalling the app. To search for and uninstall apps in Windows 10:
+    If you previously had a desktop shortcut for an app, the shortcut may have been lost during the upgrade to Windows 10. In such cases, the app is likely still installed on the PC, resulting in this error when you attempt to reinstall the app. You can restore the shortcut by searching for the app, and if it's found, press and hold (or right-click) the app and select **Pin** to **Start**. Or you can resolve the issue by uninstalling and then reinstalling the app. To search for and uninstall apps in Windows 10:
 
     1. On the **Start** menu, select **Settings**.
     2. In **Settings**, select **System** > **Apps & features**.
@@ -66,10 +66,10 @@ To resolve this problem, use any one of the following methods, depending on the 
 
     1. Open File Explorer (or Windows Explorer), right-click the drive that you want to install the Windows Installer package to, and then click **Properties**.
 
-    2. Click the **Security** tab. Verify that the **Group or user names** box contains the SYSTEM user account. If the SYSTEM user account doesn't appear in the box, follow these steps to add the SYSTEM account:
+    2. Click the **Security** tab. Verify that the **Group or user names** box contains the SYSTEM user account. If the SYSTEM user account doesn't appear in the box, follow these steps to add the SYSTEM account:
 
         1. Click **Edit**. If prompted, approve the User Account Control.
-        2. Click **Add**. The **Select Users or Groups**  dialog box appears.
+        2. Click **Add**. The **Select Users or Groups**  dialog box appears.
         3. In the **Enter the object names to select** field, type **SYSTEM**, and then click **Check names**.
         4. Click **OK**.
 
@@ -78,6 +78,6 @@ To resolve this problem, use any one of the following methods, depending on the 
     5. Close the **Permissions** dialog and return to the **Properties** dialog. Click **Advanced**.
     6. Select **Change permissions**. If prompted, approve the User Account Control.
     7. In the **Permissions** tab, select the **SYSTEM** entry and click **Edit**.
-    8. Click the **Applies to** dropdown and select **This folder**, subfolder, and files. Click **OK**.
+    8. Click the **Applies to** dropdown and select **This folder**, subfolder, and files. Click **OK**.
     9. Wait for the operating system to apply the permissions that you have selected to all child folders.
     10. Run the Windows Installer package.

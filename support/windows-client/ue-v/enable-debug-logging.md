@@ -22,11 +22,11 @@ _Original KB number:_ &nbsp; 2782997
 
 ## Summary
 
-It's useful when troubleshooting issues where settings or files aren't replicating as expected. Typically, this process is run on at least two different client machines to test replication.
+It's useful when troubleshooting issues where settings or files aren't replicating as expected. Typically, this process is run on at least two different client machines to test replication.
 
 ## More information
 
-First, identify the scenario you wish to trace. The two main variations for UE-V are tracing applications and tracing desktop settings. User application traces can be collected when an executable is launched; desktop settings must be recorded during logoff and subsequent logoff.
+First, identify the scenario you wish to trace. The two main variations for UE-V are tracing applications and tracing desktop settings. User application traces can be collected when an executable is launched; desktop settings must be recorded during logoff and subsequent logoff.
 
 Traces collect data for all users logged in to a computer. If you wish to record a trace for a non-administrator account, you will need to either log into a second desktop session (in the case of a Terminal Server, for example), or else launch a command prompt in the context of a member of the machine's local Administrators group by holding down the shift key and right-clicking on a shortcut to a Command Prompt. In addition, these commands must be run in an elevated token.
 
@@ -37,7 +37,7 @@ Traces collect data for all users logged in to a computer. If you wish to record
 3. Create the trace definition by running these two commands in the elevated Command Prompt window:
 
     ```console
-    logman create trace UEV -P "Microsoft-User Experience Virtualization-App Agent" -ow  -o uevtrace.etl
+    logman create trace UEV -P "Microsoft-User Experience Virtualization-App Agent" -ow  -o uevtrace.etl
     logman update UEV -P "Microsoft-User Experience Virtualization-Agent Driver"
     ```
 
@@ -49,16 +49,16 @@ Traces collect data for all users logged in to a computer. If you wish to record
 9. Decode the trace by typing the command **netsh trace convert uevtrace_000001.etl DUMP=TXT**
 
 > [!NOTE]
-> The first trace you take will be named **uevtrace_000001.etl** by default.  Edit the command above if you take multiple traces to reflect the name of the ETL file.
+> The first trace you take will be named **uevtrace_000001.etl** by default.  Edit the command above if you take multiple traces to reflect the name of the ETL file.
 
-## Scenario 2: Tracing a Desktop Settings Issue
+## Scenario 2: Tracing a Desktop Settings Issue
 
 1. Log on to the computer as a member of the local administrators group.
 2. Launch an elevated command prompt by right-clicking on a shortcut to **Command Prompt** and selecting **Run as administrator**.
 3. Create the trace definition by running these two commands in the elevated Command Prompt window:
 
     ```console
-    logman create trace UEV -P "Microsoft-User Experience Virtualization-App Agent" -ow  -o uevtrace.etl
+    logman create trace UEV -P "Microsoft-User Experience Virtualization-App Agent" -ow  -o uevtrace.etl
     logman update UEV -P "Microsoft-User Experience Virtualization-Agent Driver"
     ```
 
@@ -71,7 +71,7 @@ Traces collect data for all users logged in to a computer. If you wish to record
 10. Decode the trace by typing the command **netsh trace convert uevtrace_000001.etl DUMP=TXT**
 
 > [!NOTE]
-> The first trace you take will be named **uevtrace_000001.etl** by default.  Edit the command above if you take multiple traces to reflect the name of the ETL file.
+> The first trace you take will be named **uevtrace_000001.etl** by default.  Edit the command above if you take multiple traces to reflect the name of the ETL file.
 
 ## Alternate Method: Event Viewer Logging
 

@@ -17,7 +17,7 @@ ms.technology: HighAvailability
 
 This article documents the logic by which groups fail from one node to another when there are three or more cluster node members.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 299631
 
 ## Summary

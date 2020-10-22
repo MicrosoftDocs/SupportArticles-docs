@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 822798
 When you try to download an ActiveX control, install an update to Windows or to a Windows component, install a service pack for Windows or for a Windows component, or install a Microsoft or third-party software program, you may experience one or more of the following symptoms:​​​​​​​
 
 > [!NOTE]
-> These problems may occur [for these reasons](#cause).
+> These problems may occur [for these reasons](#cause).
 
 - You receive the following error message when you try to install a program or update:
 
@@ -244,4 +244,4 @@ To clear the temporary file and restart the hotfix installation or the service p
 
 ## Method 6: Perform an in-place upgrade
 
-If all these methods do not resolve your problem, you may have to perform an in-place upgrade.
+If all these methods do not resolve your problem, you may have to perform an in-place upgrade.

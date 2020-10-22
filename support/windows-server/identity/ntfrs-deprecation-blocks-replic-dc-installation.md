@@ -26,10 +26,10 @@ When you install a replica-domain controller that's running Windows Server versi
 
 ## Cause
 
-This behavior is intended and by design and consistent with previous announcements about the deprecation of NTFRS in future versions of Windows. Windows Server 2016 is the initial release that ends support of NTFRS. 
+This behavior is intended and by design and consistent with previous announcements about the deprecation of NTFRS in future versions of Windows. Windows Server 2016 is the initial release that ends support of NTFRS. 
 
 ## Resolution
 
-Use the steps in the following article to migrate sysvol replication from FRS to DFSR:
+Use the steps in the following article to migrate sysvol replication from FRS to DFSR:
 
 [Sysvol replication Migration Guide: FRS to DFS replication](https://technet.microsoft.com/library/dd640019%28WS.10%29.aspx)

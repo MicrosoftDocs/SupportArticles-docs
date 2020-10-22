@@ -30,7 +30,7 @@ For more information, see the following Microsoft website: [https://www.windowss
 Microsoft supports Microsoft server software that is running in the supported virtualization environments that are listed in the "More Information" section. This support is subject to the Microsoft Support Lifecycle policy. For more information, see the following Microsoft website: [https://support.microsoft.com/?pr=lifecycle](/?pr=lifecycle) 
 
 In some cases, specific versions of Microsoft server software are required for support. These versions are noted in this article, and the supported versions may be updated as appropriate.
-SVVP doesn't apply to vendors that are hosting Windows Server or other Microsoft products through the [Microsoft Service Provider License Agreement Program (SPLA)](https://www.microsoft.com/Licensing/existing-customer/existing-customers.aspx). Support for SPLA customers is provided under the SPLA agreement by the SPLA hoster. SPLA customers should contact their SPLA hoster for support.
+SVVP doesn't apply to vendors that are hosting Windows Server or other Microsoft products through the [Microsoft Service Provider License Agreement Program (SPLA)](https://www.microsoft.com/Licensing/existing-customer/existing-customers.aspx). Support for SPLA customers is provided under the SPLA agreement by the SPLA hoster. SPLA customers should contact their SPLA hoster for support.
  **Note** Not all software applications are good candidates for running in a virtualized environment. For example, if an application has specific hardware requirements, such as access to a physical PCI card, the applications can't be supported in a virtual machine. This is true because virtual machines generally don't have access to underlying physical hardware.
 
 ## More information
@@ -74,10 +74,10 @@ Microsoft Dynamics NAV 2009 and later versions are supported.
 
 Microsoft Exchange Server 2007 Service Pack 1 and later versions are supported. For more information about the support for Exchange Server, visit the following TechNet website: [https://technet.microsoft.com/library/cc794548(v=EXCHG.80).aspx](https://technet.microsoft.com/library/cc794548%28v=exchg.80%29.aspx) 
 
-For information about how to deploy Microsoft Exchange Server 2010 in a virtualized environment, visit the following TechNet website:
+For information about how to deploy Microsoft Exchange Server 2010 in a virtualized environment, visit the following TechNet website:
  [https://technet.microsoft.com/library/jj126252(v=exchg.141).aspx](https://technet.microsoft.com/library/jj126252%28v=exchg.141%29.aspx) 
 
-For information about how to deploy Microsoft Exchange Server 2013 in a virtualized environment, visit the following TechNet website:
+For information about how to deploy Microsoft Exchange Server 2013 in a virtualized environment, visit the following TechNet website:
  [https://technet.microsoft.com/library/jj619301(v=exchg.150).aspx](https://technet.microsoft.com/library/jj619301%28v=exchg.150%29.aspx) 
 
 ### Microsoft Forefront Client Security
@@ -149,7 +149,7 @@ Windows Essential Business Server 2008 and later versions are supported.
 
 Windows Small Business Server 2008 and later versions are supported.
 
-### Microsoft SQL Server 
+### Microsoft SQL Server 
 
 For support of Microsoft SQL Server, see the following Microsoft Knowledge Base article: [https://support.microsoft.com/kb/956893](https://support.microsoft.com/help/956893) 
 
@@ -195,7 +195,7 @@ Windows Server 2003 Web Edition with Service Pack 2 is supported.
 
 ### Microsoft Windows Server Update Services (WSUS)
 
-Microsoft Windows Server Update Services 3.0 Service Pack 1 and later versions are supported. 
+Microsoft Windows Server Update Services 3.0 Service Pack 1 and later versions are supported. 
 
 ### Windows Web Server 2008
 

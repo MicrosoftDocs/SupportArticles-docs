@@ -40,7 +40,7 @@ Examples of false-positive errors include:
 3. KDC_ERR_S_PRINCIPAL_UNKNOWN may be logged for a wide variety of problems with the application client and server liaison. The cause can be:
 
     - Missing or duplicate SPNs registered in AD.
-    - Incorrect server names or DNS suffixes used by the client, for example, the client is chasing DNS CNAME records and use the resulting A record in SPNs.
+    - Incorrect server names or DNS suffixes used by the client, for example, the client is chasing DNS CNAME records and use the resulting A record in SPNs.
     - Using non-FQDN server names that need to be resolved across AD forest boundaries.
 
     Recommendation: Investigate the use of server names by the applications. It is most likely a client or server configuration problem.

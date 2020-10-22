@@ -37,7 +37,7 @@ You can use Group Policy to distribute computer programs by using the following 
 
 ## Create a distribution point
 
-To publish or assign a computer program, you must create a distribution point on the publishing server. To do this, follow these steps:
+To publish or assign a computer program, you must create a distribution point on the publishing server. To do this, follow these steps:
 
 1. Log on to the server as an administrator.
 2. Create a shared network folder where you will put the Windows Installer package (.msi file) that you want to distribute.
@@ -46,14 +46,14 @@ To publish or assign a computer program, you must create a distribution point on
 
 ## Create a Group Policy Object
 
-To create a Group Policy Object (GPO) to use to distribute the software package, follow these steps:
+To create a Group Policy Object (GPO) to use to distribute the software package, follow these steps:
 
 1. Start the Active Directory Users and Computers snap-in. To do this, click **Start**, point to **Administrative Tools**, and then click **Active Directory Users and Computers**.
 2. In the console tree, right-click your domain, and then click **Properties**.
 3. Click the **Group Policy** tab, and then click **New**.
 4. Type a name for this new policy, and then press Enter.
 5. Click **Properties**, and then click the **Security** tab.
-6. Clear the **Apply Group Policy**  check box for the security groups that you don't want this policy to apply to.
+6. Clear the **Apply Group Policy**  check box for the security groups that you don't want this policy to apply to.
 7. Select the **Apply Group Policy** check box for the groups that you want this policy to apply to.
 8. When you are finished, click **OK**.
 
@@ -78,7 +78,7 @@ To assign a program to computers that are running Windows Server 2003, Windows 2
 
 ## Publish a package
 
-To publish a package to computer users and make it available for installation from the **Add or Remove Programs** list in Control Panel, follow these steps:
+To publish a package to computer users and make it available for installation from the **Add or Remove Programs** list in Control Panel, follow these steps:
 
 1. Start the Active Directory Users and Computers snap-in. To do this, click **Start**, point to **Administrative Tools**, and then click **Active Directory Users and Computers**.
 2. In the console tree, right-click your domain, and then click **Properties**.

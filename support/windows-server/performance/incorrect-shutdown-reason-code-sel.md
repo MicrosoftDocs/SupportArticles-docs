@@ -22,16 +22,16 @@ _Original KB number:_ &nbsp; 2001061
 
 ## Symptoms
 
-After reboot from a manual shutdown (`START`->`Shutdown`), the Windows System Eventlog shows two events 1074. The first entry contains the correct reason code provided by the user, the second looks similar to:  
->Log Name:      System  
-Source:        USER32  
-Date:          7/29/2009 12:00:26 PM  
-Event ID:      1074  
+After reboot from a manual shutdown (`START`->`Shutdown`), the Windows System Eventlog shows two events 1074. The first entry contains the correct reason code provided by the user, the second looks similar to:  
+>Log Name:      System  
+Source:        USER32  
+Date:          7/29/2009 12:00:26 PM  
+Event ID:      1074  
 Task Category: None  
-Level:         Information  
-Keywords:      Classic  
-User:         Computername\Administrator  
-Computer:      Computername  
+Level:         Information  
+Keywords:      Classic  
+User:         Computername\Administrator  
+Computer:      Computername  
 Description:  
 The process C:\Windows\system32\winlogon.exe \<computername> has initiated the power off of computer \<computername> on behalf of user \<computername>\Administrator for the following reason: No title for this reason could be found  
 **Reason Code: 0x500ff**  

@@ -30,13 +30,13 @@ After a user logs on to a Windows 8.1-based computer, the logon scripts do not r
 
 ## Cause
 
-This behavior occurs because Windows 8.1 includes a new Group Policy setting, **Configure Logon Script Delay**, that controls the behavior of logon scripts. This script is stored in the following location:
+This behavior occurs because Windows 8.1 includes a new Group Policy setting, **Configure Logon Script Delay**, that controls the behavior of logon scripts. This script is stored in the following location:
 
 Computer Configuration\Administrative Templates\System\Group Policy
 
-The default value setting for the **Configure Logon Script Delay** policy is **Not Configured**. However, the default behavior of a Group Policy client is to wait five minutes before it runs logon scripts.
+The default value setting for the **Configure Logon Script Delay** policy is **Not Configured**. However, the default behavior of a Group Policy client is to wait five minutes before it runs logon scripts.
 
-The goal of the five-minute delay is to speed up the loading of the user's desktop on Windows 8.1-based computers.  
+The goal of the five-minute delay is to speed up the loading of the user's desktop on Windows 8.1-based computers.  
 
 ## Resolution
 

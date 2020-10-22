@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;3141939
 
 ## Introduction
 
-The [Lingering Object Liquidator](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475) (LOL) is a tool to automate the discovery and removal of lingering objects. The tool uses the DRSReplicaVerifyObjects method, which is leveraged by the repadmin /removelingeringobjects command and the repldiag tool in combination with the removeLingeringObject  rootDSE primitive that's used by LDP.EXE.
+The [Lingering Object Liquidator](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/introducing-lingering-object-liquidator-v2/ba-p/400475) (LOL) is a tool to automate the discovery and removal of lingering objects. The tool uses the DRSReplicaVerifyObjects method, which is leveraged by the repadmin /removelingeringobjects command and the repldiag tool in combination with the removeLingeringObject  rootDSE primitive that's used by LDP.EXE.
 
 ### Benefits and availability
 
@@ -37,20 +37,20 @@ See this ASKDS [blog post](https://aka.ms/LingeringObjectLiquidator) for detaile
 - Performs an (n * (n-1)) comparison across every DC in the forest.
 - Performs topology detection, which lets you pick and choose DCs to use for Lingering object comparison (source and target).
 - Exports a list of lingering objects as a CSV file, so that it can be edited offline and then imported back into the tool to remove the objects if necessary (useful for advanced removal operations).
-- Saves the contents of the object in a log file in case a new object must be hydrated from the lingering object. 
+- Saves the contents of the object in a log file in case a new object must be hydrated from the lingering object. 
 
 ### Tools requirements
 
 - Download and run Lingering Object Liquidator on a DC or member computer in the forest you want to remove lingering objects from.
 - The Microsoft .NET Framework 4.5.2 must be installed on the computer that's running the tool.
 - Permissions: The user account running the tool must have Domain Administrator credentials for each domain in the forest that the executing computer resides in. Members of the Enterprise Administrators group have domain administrator credentials in all domains within a forest by default. Domain Administrator credentials are sufficient in a single domain or a single domain forest.
-- You must enable the Remote Event Log Management (RPC) firewall rule on any DC that needs scanning. Otherwise, the tool returns an "Exception: The RPC server is unavailable" error.
+- You must enable the Remote Event Log Management (RPC) firewall rule on any DC that needs scanning. Otherwise, the tool returns an "Exception: The RPC server is unavailable" error.
 
     |![Firewall rule](./media/lingering-object-liquidator-tool/rpc-firewall-rule.jpg)<br/>|![RPC exception](./media/lingering-object-liquidator-tool/rpc-exception.jpg)<br/>|
     |---|---|
     |||
     
-- The liquidation of lingering objects in Active Directory Lightweight Directory Services (AD LDS / ADAM) environments isn't supported. 
+- The liquidation of lingering objects in Active Directory Lightweight Directory Services (AD LDS / ADAM) environments isn't supported. 
 
 ### Walkthrough
 
@@ -61,23 +61,23 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
 > [!NOTE]
 > You will receive error 8453 if the tool isn't run as elevated.
 
- ![Lingering Object Liquidator](./media/lingering-object-liquidator-tool/lol-window.jpg)
- 
+ ![Lingering Object Liquidator](./media/lingering-object-liquidator-tool/lol-window.jpg)
+ 
 1. In the Topology Detection section, select Fast.
     
-    Fast detection populates the Naming Context, Reference DC, and Target DC lists by querying the local DC. *Thorough* detection does a more exhaustive search of all DCs and leverages DC Locator and DSBind  calls. Be aware that Thorough detection will likely fail if one or more DCs are unreachable.
+    Fast detection populates the Naming Context, Reference DC, and Target DC lists by querying the local DC. *Thorough* detection does a more exhaustive search of all DCs and leverages DC Locator and DSBind  calls. Be aware that Thorough detection will likely fail if one or more DCs are unreachable.
     
 2. The following are the fields on the Lingering Objects tab:
 
     Naming Context 
     
-     ![Naming Context](./media/lingering-object-liquidator-tool/naming-context.jpg)
+     ![Naming Context](./media/lingering-object-liquidator-tool/naming-context.jpg)
     
     Reference DC 
     
     This is the DC you'll compare to the target DC. The reference DC hosts a writeable copy of the partition.
     
-     ![Reference DC](./media/lingering-object-liquidator-tool/reference-dc.jpg)
+     ![Reference DC](./media/lingering-object-liquidator-tool/reference-dc.jpg)
     
     > [!NOTE]
     > All DCs in the forest are displayed even if they are unsuitable as reference DCs (ChildDC2 is an RODC and is not a valid Reference DC since it doesn't host a writable copy of a DC).
@@ -86,17 +86,17 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
     
     The target DC that lingering objects are to be removed from.
     
-     ![Target DC ](./media/lingering-object-liquidator-tool/target-dc.jpg)
+     ![Target DC ](./media/lingering-object-liquidator-tool/target-dc.jpg)
     
 3. Click Detect to use these DCs for the comparison or leave all fields blank to scan the entire environment.
 
     The tool does a comparison with all DCs for all partitions in a pair-wise fashion when all fields are left blank. In a large environment, this comparison will take a great deal of time (possibly even days) as the operation targets (n * (n-1)) number of DCs in the forest for all locally held partitions. For shorter, targeted operations, select a naming context, reference DC, and target DC. The reference DC must hold a writable copy of the selected naming context. Be aware that clicking Stop doesn't actually stop the server-side API, it just stops the work in the client-side tool.
     
-     ![Detect button](./media/lingering-object-liquidator-tool/detect-button.jpg)
+     ![Detect button](./media/lingering-object-liquidator-tool/detect-button.jpg)
     
-    During the scan, several buttons are disabled, and the current count of lingering objects is displayed on the status bar at the bottom of the screen, together with the current tool status. During this execution phase, the tool is running in an advisory mode and reading the event log data that's reported on each target DC.
+    During the scan, several buttons are disabled, and the current count of lingering objects is displayed on the status bar at the bottom of the screen, together with the current tool status. During this execution phase, the tool is running in an advisory mode and reading the event log data that's reported on each target DC.
     
-     ![Current count of Lingering Objects ](./media/lingering-object-liquidator-tool/current-lingering-objects-number.jpg)
+     ![Current count of Lingering Objects ](./media/lingering-object-liquidator-tool/current-lingering-objects-number.jpg)
     
     When the scan is complete, the status bar updates, buttons are re-enabled, and total count of lingering objects is displayed. The Results pane at the bottom of the window updates with any errors encountered during the scan.
     
@@ -114,7 +114,7 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
     
     The tool leverages the Advisory Mode method exposed by DRSReplicaVerifyObjects that both repadmin /removelingeringobjects /Advisory_Mode and repldiag /removelingeringobjects use. In addition to the normal Advisory Mode-related events logged on each DC, it displays each of the lingering objects within the main content pane.
     
-       ![Display of Lingering Objects](./media/lingering-object-liquidator-tool/lingering-objects-display.jpg)
+       ![Display of Lingering Objects](./media/lingering-object-liquidator-tool/lingering-objects-display.jpg)
     
     Results of the scan are logged in the Results pane. Many more details of all operations are logged in the linger\<Date-TimeStamp>.log.txt file in the same directory as the tool's executable.
     
@@ -131,10 +131,10 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
 
     The status bar is updated with the new count of lingering objects and the status of the removal operation:
     
-     ![Status bar](./media/lingering-object-liquidator-tool/remove-status.jpg)
+     ![Status bar](./media/lingering-object-liquidator-tool/remove-status.jpg)
     
     The tool dumps a list of attributes for each object before removal and logs this along with the results of the object removal in the removedLingeringObjects.log.txt log file. This log file is in the same location as the tool's executable.
-     C:\tools\LingeringObjects\removedLingeringObjects<DATE-TIMEStamp.log.txt
+     C:\tools\LingeringObjects\removedLingeringObjects<DATE-TIMEStamp.log.txt
     
     Example contents of the log file:
     
@@ -168,7 +168,7 @@ Run the tool as a domain administrator (or as an Enterprise administrator if you
     RemoveLingeringObject returned Success
     ```
     
-    After all objects are identified, they can be bulk-removed by selecting all objects and then Remove, or exported into a CSV file. The CSV file can later be imported again to do bulk removal. Be aware that there's a Remove All  button that leverages the repadmin /removelingeringobject method of lingering object removal
+    After all objects are identified, they can be bulk-removed by selecting all objects and then Remove, or exported into a CSV file. The CSV file can later be imported again to do bulk removal. Be aware that there's a Remove All  button that leverages the repadmin /removelingeringobject method of lingering object removal
 
 **Support:** While this tool has been thoroughly tested in many environments, it's provided to you **as-is**: There will be no official Microsoft support provided.
 

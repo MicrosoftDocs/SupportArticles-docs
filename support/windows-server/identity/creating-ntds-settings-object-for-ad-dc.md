@@ -26,7 +26,7 @@ After you start Active Directory installation in Windows Server by using Server 
 
 > Creating the NTDS Settings object for this Active Directory Domain Controller on the remote AD DC dc1-full.corp.contoso.com
 
-Regardless of how long you wait, the installation never proceeds beyond this point. Additionally, when you examine the Directory Services event logs, you see the following repeated events:  
+Regardless of how long you wait, the installation never proceeds beyond this point. Additionally, when you examine the Directory Services event logs, you see the following repeated events:  
 
 - **Event 1**  
 
@@ -42,7 +42,7 @@ Regardless of how long you wait, the installation never proceeds beyond this po
     Description:  
     Internal event: The following local directory service received an exception from a remote procedure call (RPC) connection. Extensive RPC information was requested. This is intermediate information and might not contain a possible cause.
     >
-    > Process ID: 556
+    > Process ID: 556
     > Reported error information:  
     Error value:  
     **Could not find the domain controller for this domain. (1908)**  
@@ -50,13 +50,13 @@ Regardless of how long you wait, the installation never proceeds beyond this po
     `dc1-full.corp.contoso.com`
     >
     > Extensive error information:  
-    Error value:  
+    Error value:  
     **A security package specific error occurred. 1825**  
-    directory service:  
+    directory service:  
     DC2-FULL
     >
     > Additional Data
-    > Internal ID: 5000dfc
+    > Internal ID: 5000dfc
 
 - **Event 2**
 
@@ -76,7 +76,7 @@ Regardless of how long you wait, the installation never proceeds beyond this po
     `dc1-full.corp.contoso.com`
     >
     > Additional Data  
-      Error value:  
+      Error value:  
       Could not find the domain controller for this domain. (1908)
 
 - **Event 3**
@@ -96,7 +96,7 @@ Regardless of how long you wait, the installation never proceeds beyond this po
     > Domain controller:  
     `dc1-full.corp.contoso.com`
     >
-    > Additional Data  
+    > Additional Data  
     Error value:  
     1908 Could not find the domain controller for this domain.
 
@@ -122,8 +122,8 @@ To resolve this issue, follow these steps:
 
 This is a code defect in Windows Server 2012 and late.
 
-If you set different passwords on the two Administrator accounts but do not provide the domain, you receive a bad password error.
+If you set different passwords on the two Administrator accounts but do not provide the domain, you receive a bad password error.
 
-We do not recommend that you use the built-in Administrator for domain administration. Instead, we recommend that you create a new domain user for each administrator in the environment. Then, the actions of administrators can be audited individually.
+We do not recommend that you use the built-in Administrator for domain administration. Instead, we recommend that you create a new domain user for each administrator in the environment. Then, the actions of administrators can be audited individually.
 
 We strongly discourage you from using matching Administrator passwords on member servers and the domain Administrator account. Local passwords are more easily compromised than AD DS accounts, and knowledge of the matching Administrator passwords grants full enterprise administrative access.

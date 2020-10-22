@@ -47,7 +47,7 @@ fffff9bf
 Internal ID:  
 20801a4  
 
-Additionally, you receive the following error message:
+Additionally, you receive the following error message:
 
 > Windows could not start the \<ServiceName> LDS service on Local Computer.
 
@@ -55,15 +55,15 @@ Additionally, you receive the following error message:
 
 ## Cause
 
-Manually setting the **msDS-Behavior-Version** attribute value to **7** on LDS instances is not supported.
+Manually setting the **msDS-Behavior-Version** attribute value to **7** on LDS instances is not supported.
 
 ## Resolution
 
 If the LDS instance contains only one server, you must restore the server from a backup to resolve the issue.
 
-If there are multiple replica servers in that instance (for example, LDSServer1 and LDSServer2), and if one server has not yet been restarted, follow these steps:
+If there are multiple replica servers in that instance (for example, LDSServer1 and LDSServer2), and if one server has not yet been restarted, follow these steps:
 
-1. If the LDS server on which the service that does not start (for example, LDSServer1) holds the LDS Roles (for example, Schema and Domain Naming FSMO), seize the roles by running ntdsutil:
+1. If the LDS server on which the service that does not start (for example, LDSServer1) holds the LDS Roles (for example, Schema and Domain Naming FSMO), seize the roles by running ntdsutil:
 
     > C:\Windows\system32> **ntdsutil**  
     ntdsutil: **roles**  
@@ -76,8 +76,8 @@ If there are multiple replica servers in that instance (for example, LDSServer
 
     :::image type="content" source="./media/lds-service-startup-fails/role-seizure-confirmation-dialog.png" alt-text="A Role Seizure Confirmation Dialog displays.":::
 
-2. Connect to the configuration partition of the server that still runs the LDS instance (for example, LDSServer2), and then roll back the functionality level version by reverting the **msDS-Behavior-Version**  attribute value.
-3. Run a metadata cleanup of the LDS server (LDSServer1) by using **dsmgmt**:
+2. Connect to the configuration partition of the server that still runs the LDS instance (for example, LDSServer2), and then roll back the functionality level version by reverting the **msDS-Behavior-Version**  attribute value.
+3. Run a metadata cleanup of the LDS server (LDSServer1) by using **dsmgmt**:
 
     > C:\Windows\system32> **dsmgmt**  
     dsmgmt: **metadata cleanup**  
@@ -123,10 +123,10 @@ If there are multiple replica servers in that instance (for example, LDSServer
 
     :::image type="content" source="./media/lds-service-startup-fails/server-remove-confirmation-dialog.png" alt-text="Select yes in the dialog.":::
 
-4. Log on to LDSServer1, and uninstall the instance:
+4. Log on to LDSServer1, and uninstall the instance:
 
     :::image type="content" source="./media/lds-service-startup-fails/unstall-program.png" alt-text="Uninstall the instance.":::
 
     :::image type="content" source="./media/lds-service-startup-fails/select-skip-all.png" alt-text="Active Directory Lightweight Directory Services Removal Wizard.":::
 
-5. Run the "Active Directory Lightweight Directory Services Setup" (C:\Windows\ADAM\adaminstall.exe) on LDSServer1 to install a replica of the existing instance from LDSServer2.
+5. Run the "Active Directory Lightweight Directory Services Setup" (C:\Windows\ADAM\adaminstall.exe) on LDSServer1 to install a replica of the existing instance from LDSServer2.

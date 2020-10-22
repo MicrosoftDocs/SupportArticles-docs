@@ -30,7 +30,7 @@ When Debug mode is enabled and the debugger hasn't connected because of the user
 
 ## Resolution
 
-To resolve this problem, disable Debug mode using one of the following methods:
+To resolve this problem, disable Debug mode using one of the following methods:
 
 - **Using System Configuration settings**
 
@@ -52,6 +52,6 @@ To resolve this problem, disable Debug mode using one of the following methods:
 ## More information
 
 > [!NOTE]
-> Windows shouldn't be run in Debug mode permanently. Debug mode is enabled for connecting to Kernel Debug using Debuggers like Debugging Tools for Windows (WinDbg) and must be turned off once the purpose is accomplished.  
+> Windows shouldn't be run in Debug mode permanently. Debug mode is enabled for connecting to Kernel Debug using Debuggers like Debugging Tools for Windows (WinDbg) and must be turned off once the purpose is accomplished.  
 > Some Windows 7 systems might be shipped with DEBUG switch enabled, ensure to disable it.  
 > To download Debugging Tools for Windows and more information, see [Download the Windows Driver Kit (WDK)](/windows-hardware/drivers/download-the-wdk).

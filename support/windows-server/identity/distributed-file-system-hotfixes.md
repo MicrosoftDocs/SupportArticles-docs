@@ -15,7 +15,7 @@ ms.technology: ActiveDirectory
 ---
 # List of currently available hotfixes for Distributed File System (DFS) technologies in Windows Server 2012 and Windows Server 2012 R2
 
-This article lists the hotfixes that are currently available for users who have installed Distributed File System (DFS) technologies on a Windows Server 2012-based computer or a Windows Server 2012 R2-based computer.
+This article lists the hotfixes that are currently available for users who have installed Distributed File System (DFS) technologies on a Windows Server 2012-based computer or a Windows Server 2012 R2-based computer.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2951262
@@ -26,11 +26,11 @@ This Microsoft Knowledge Base articles that are listed in this article describe 
 
 Note. The two technologies in DFS are DFS Namespaces (DFS-N ) and DFS Replication (DFS-R ).
 
-A servicing approach of installing the monthly rollups provides customers with a consistent model for staying current and secure. You may substitute a more recent monthly rollup for an older monthly rollup. The remainder of the updates in this list are still required because some components in those updates were released prior to October 2016 and aren't included in a more recent monthly rollup. For more information about this servicing approach, see [https://aka.ms/rollupblog](https://aka.ms/rollupblog).
+A servicing approach of installing the monthly rollups provides customers with a consistent model for staying current and secure. You may substitute a more recent monthly rollup for an older monthly rollup. The remainder of the updates in this list are still required because some components in those updates were released prior to October 2016 and aren't included in a more recent monthly rollup. For more information about this servicing approach, see [https://aka.ms/rollupblog](https://aka.ms/rollupblog).
 
 ### Windows Server 2012 R2
 
-You can get the latest fixes for these DFS components by installing the following updates:
+You can get the latest fixes for these DFS components by installing the following updates:
 - [KB 4056895: January 8, 2018-KB4056895 (Monthly Rollup) or later]() 
 - [KB 2996883: DFSR stops replication after an unexpected shutdown in a Windows 8.1 or Windows Server 2012 R2 environment]() 
 - [KB 3000850: November 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2]() 
@@ -38,7 +38,7 @@ You can get the latest fixes for these DFS components by installing the followi
 
 ### Windows Server 2012
 
-You can get the latest fixes for these DFS components by installing the following updates:
+You can get the latest fixes for these DFS components by installing the following updates:
 - [KB 4025331: July 11, 2017-KB4025331 (Monthly Rollup) or later]() 
 - [KB 2884176: Large backlogs on Windows -based DFSR servers]() 
 - [KB 2962407: Windows RT, Windows 8, and Windows Server 2012 update rollup: June 2014]() 
@@ -72,7 +72,7 @@ Note. Some of the following tables contain blank cells to accommodate informatio
 |---|---|---|---|---|
 |April 15, 2020| [4038774]()|September 19, 2017-KB4038774 (Preview of Monthly Rollup)|This monthly rollup contains the 6.3.9600.18776 version of Dfsrs.exe for Windows Server 2012 R2.|Included in September 19, 2017-KB4038774 (Preview of Monthly Rollup) and later monthly rollups.|
 ||Not applicable||This hotfix contains the most current version of Dfsrro.sys for Windows Server 2012 R2.|To install this hotfix, you must have Windows Server 2012 R2 installed.|
-||Not applicable||This hotfix contains the most current version of Dfsrclus.dll for Windows Server 2012 R2.| |
+||Not applicable||This hotfix contains the most current version of Dfsrclus.dll for Windows Server 2012 R2.| |
 |August 31, 2014| [2996883](https://support.microsoft.com/help/2996883)|DFSR stops replication after an unexpected shutdown in a Windows 8.1 or Windows Server 2012 R2 environment|This hotfix contains the most current versions of Dfsrdiag.exe and Dfsrmig.exe for Windows Server 2012 R2.|To apply this hotfix, you must be running Windows Server 2012 R2 and April 2014 Update [2919355](https://support.microsoft.com/help/2919355).|
 ||||||
 
@@ -116,8 +116,8 @@ Note. Some of the following tables contain blank cells to accommodate informatio
 
 ## References
 
-For more information about hotfixes that are currently available for DFS technologies and File Services technologies in other Windows operating systems, see the following Knowledge Base articles:
-- [KB 958802: List of currently available hotfixes for Distributed File System (DFS) technologies in Windows Server 2003 and in Windows Server 2003 R2](https://support.microsoft.com/help/958802) 
-- [KB 968429: List of currently available hotfixes for Distributed File System (DFS) technologies in Windows Server 2008 and in Windows Server 2008 R2](https://support.microsoft.com/help/968429) 
-- [KB 2473205: List of currently available hotfixes for the File Services technologies in Windows Server 2008 and in Windows Server 2008 R2](https://support.microsoft.com/help/2473205) 
-- [KB 2899011: List of currently available hotfixes for the File Services technologies in Windows Server 2012 and in Windows Server 2012 R2](https://support.microsoft.com/help/2899011) 
+For more information about hotfixes that are currently available for DFS technologies and File Services technologies in other Windows operating systems, see the following Knowledge Base articles:
+- [KB 958802: List of currently available hotfixes for Distributed File System (DFS) technologies in Windows Server 2003 and in Windows Server 2003 R2](https://support.microsoft.com/help/958802) 
+- [KB 968429: List of currently available hotfixes for Distributed File System (DFS) technologies in Windows Server 2008 and in Windows Server 2008 R2](https://support.microsoft.com/help/968429) 
+- [KB 2473205: List of currently available hotfixes for the File Services technologies in Windows Server 2008 and in Windows Server 2008 R2](https://support.microsoft.com/help/2473205) 
+- [KB 2899011: List of currently available hotfixes for the File Services technologies in Windows Server 2012 and in Windows Server 2012 R2](https://support.microsoft.com/help/2899011) 

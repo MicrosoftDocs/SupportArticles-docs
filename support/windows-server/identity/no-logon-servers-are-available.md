@@ -27,7 +27,7 @@ You use the Virtualized Domain Controller (VDC) cloning feature introduced in Wi
 
 ## Cause
 
-The cloning process failed, and the server has started in Directory Services Repair Mode (DSRM). There's no visual indication that the domain controller has started in DSRM on the Ctrl+Alt+Delete sign-in page of Windows Server.
+The cloning process failed, and the server has started in Directory Services Repair Mode (DSRM). There's no visual indication that the domain controller has started in DSRM on the Ctrl+Alt+Delete sign-in page of Windows Server.
 
 ## Resolution
 

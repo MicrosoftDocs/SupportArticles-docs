@@ -32,15 +32,15 @@ Successfully processed 0 files; Failed processing 1 files
 
 When you print the trusts information regarding suffix routing, you see that the suffix is reported as conflicting:
 C:\>netdom trust forest3.com /namesuffixes:forest1.com
-   Name, Type, Status, Notes
+   Name, Type, Status, Notes
 1. *.forest1.com, Name Suffix, Enabled
 
 C:\>netdom trust forest3.com /namesuffixes:forest2.forest1.com
-   Name, Type, Status, Notes
+   Name, Type, Status, Notes
 1. *.forest2.forest1.com, Name Suffix, Conflicting, With forest1.com
 
 In a network trace, you can see a Kerberos Ticket request from a user in forest2.forest1.com for a resource in forest3.com fails against a DC in forest3:
-231 lsass.exe (708) \<client> \<dc forest3> KerberosV5 KerberosV5:TGS Request Realm: forest3.com Sname: cifs/fileserver.forest3.com233 Idle (0) \<dc forest3> \<client> KerberosV5 KerberosV5:KRB_ERROR  - KDC_ERR_POLICY (12)
+231 lsass.exe (708) \<client> \<dc forest3> KerberosV5 KerberosV5:TGS Request Realm: forest3.com Sname: cifs/fileserver.forest3.com233 Idle (0) \<dc forest3> \<client> KerberosV5 KerberosV5:KRB_ERROR  - KDC_ERR_POLICY (12)
 In a KDC ETL you will see something like:
 DEB_ERROR,dll,pac_cxx3792,KdcFilterSids(),"Failed to filter SIDS (LsaIFilterSids): 0xc000019b".
 
