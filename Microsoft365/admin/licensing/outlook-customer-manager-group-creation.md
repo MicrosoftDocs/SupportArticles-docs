@@ -47,12 +47,12 @@ When you assign appropriate licenses to users, you should follow these steps:
      ```
 
      In the output, the **GroupsCreationEnabled** property is set to **True**.
-   - If you disable the groups creation in the tenant level, you can set a security group in the tenant for users who can create groups, and then set the users as members of this security group. For more information about how to do this, see [Manage who can create Office 365 Groups](https://docs.microsoft.com/office365/admin/create-groups/manage-creation-of-groups?view=o365-worldwide).
+   - If you disable the groups creation in the tenant level, you can set a security group in the tenant for users who can create groups, and then set the users as members of this security group. For more information about how to do this, see [Manage who can create Office 365 Groups](https://docs.microsoft.com/office365/admin/create-groups/manage-creation-of-groups?view=o365-worldwide&preserve-view=true).
 
 For more information about Outlook Customer Manager, see the following articles:
 
-- [Get started with Outlook Customer Manager](https://support.office.com/article/get-started-with-outlook-customer-manager-48331ce0-c356-4186-8987-c86676520dc7?ui=en-US&rs=en-US&ad=US)
-- [Outlook Customer Manager FAQ](https://support.office.com/article/outlook-customer-manager-faq-88e127ca-43a1-4c9d-8d52-6ad3a80f9c32?ui=en-US&rs=en-US&ad=US)
+- [Get started with Outlook Customer Manager](https://support.microsoft.com/office/ab120d0e-f5f6-4a7d-b4d1-9b93997e5c67)
+- [Outlook Customer Manager FAQ](https://techcommunity.microsoft.com/t5/outlook-customer-manager/faq-frequently-asked-questions-about-outlook-customer-manager/m-p/29680)
 
 ## More information
 
