@@ -687,8 +687,6 @@
       href: ../office-suite-issues/file-not-found-when-open-file-from-unc.md
     - name: Can't open Click-to-run version of Office on terminal server
       href: ../office-suite-issues/click-to-run-office-on-terminal-server.md
-    - name: Can't open Excel, Word or PowerPoint file
-      href: ../office-suite-issues/cannot-open-excel-word-or-powerpoint-file.md
     - name: Can't open this add-in from localhost when loading an add-in
       href: ../office-suite-issues/cannot-open-add-in-from-localhost.md
     - name: Can't start an Office Starter program

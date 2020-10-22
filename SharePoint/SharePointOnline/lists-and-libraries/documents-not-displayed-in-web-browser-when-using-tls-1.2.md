@@ -45,7 +45,7 @@ This update changes the default encryption protocols from **SSL 3.0 or TLS 1.0**
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319]  
 "SchUseStrongCrypto"=dword:00000001  
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432N ode\Microsoft\.NETFramework\v4.0.30319]  
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319]  
 "SchUseStrongCrypto"=dword:00000001
 ```
 

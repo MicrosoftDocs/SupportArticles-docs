@@ -27,12 +27,12 @@ When you create a search folder for all mail items in Outlook 2013, Outlook 201
 
 ## More Information
 
-The PersonMetadata folder is created and used by the [Outlook Customer Manager (OCM)](https://support.office.com/article/Outlook-Customer-Manager-FAQ-88e127ca-43a1-4c9d-8d52-6ad3a80f9c32). The folder is normally hidden from other parts of the Outlook user interface. However, search folders include mail items from this folder.
+The PersonMetadata folder is created and used by the [Outlook Customer Manager (OCM)](https://techcommunity.microsoft.com/t5/outlook-customer-manager/faq-frequently-asked-questions-about-outlook-customer-manager/m-p/29680). The folder is normally hidden from other parts of the Outlook user interface. However, search folders include mail items from this folder.
 
 Although these items have a blank subject, they are actively used by OCM and should not be deleted or modified. It is a search folder limitation to include mail items from hidden folders.
 
->[!NOTE]
->OCM is being deprecated in June 2020. See [Export or delete your Outlook Customer Manager data](https://support.office.com/article/export-or-delete-your-outlook-customer-manager-data-1a421cb4-e8de-4b44-bfb8-710b92820439) for more information.
+> [!NOTE]
+> OCM is being deprecated in June 2020.
 
 Even after the deprecation, the PersonMetaData folder and the items in it will be available for a limited time.  If you change or delete the items in this folder, they may be recreated or new ones might appear.  
 
