@@ -23,7 +23,7 @@ You may also notice client connectivity issues when you use Microsoft Intune.
 
 ## Cause
 
-The service connection point uses the Intune service when it connects to [http://go.Microsoft.com](https://go.Microsoft.com) or [http://manage.Microsoft.com](https://manage.Microsoft.com). If the Baltimore CyberTrust Root certificate is missing, expired, or corrupted, the Intune connection attempt is rejected.
+The service connection point uses the Intune service when it connects to [http://go.Microsoft.com](https://go.Microsoft.com) or [https://manage.Microsoft.com](https://manage.microsoft.com). If the Baltimore CyberTrust Root certificate is missing, expired, or corrupted, the Intune connection attempt is rejected.
 
 ## Resolution
 

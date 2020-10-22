@@ -27,7 +27,7 @@ Consider the following scenario:
 - You want to enable a Remote Desktop server to provide server authentication by using a Secure Sockets Layer (SSL) certificate.
 - You configure a certificate template for Remote Desktop servers. To do this, you follow the settings that are described in the following link:
 
-    [Configuring Remote Desktop certificates](https://blogs.msdn.com/b/rds/archive/2010/04/09/configuring-remote-desktop-certificates.aspx)
+    [Configuring Remote Desktop certificates](https://techcommunity.microsoft.com/t5/microsoft-security-and/configuring-remote-desktop-certificates/ba-p/247007)
 
 In this scenario, you find that the servers are re-requesting and re-enrolling the certificates two times daily. This occurs even though the certificate template is valid for one year. Additionally, when the re-enrollment of the certificate occurs, the following event is logged in the System log:
 

@@ -531,9 +531,10 @@ The combinations that are described in the following table are not supported.
 |AH+ESP|AES-GMAC 192|AES-GMAC 192|Any supported encryption algorithm|
 |AH+ESP|AES-GMAC 256|AES-GMAC 256|Any supported encryption algorithm|
 
-For more information about Suite B, visit the following Web site: [http://www.nsa.gov/ia/programs/suiteb_cryptography/index.shtml](http://www.nsa.gov/ia/programs/suiteb_cryptography/index.shtml)  
+For more information about Suite B, visit the following Web site: [Commercial National Security Algorithm Suite](https://apps.nsa.gov/iaarchive/programs/iad-initiatives/cnsa-suite.cfm)
+
 For more information about IPsec and connection security rules, visit the following Microsoft Web site: [https://go.microsoft.com/fwlink/?linkid=96525](https://go.microsoft.com/fwlink/?linkid=96525)  
-For more information about Cryptography Next Generation in Windows Server 2008, visit the following Microsoft Web site: [https://technet2.microsoft.com/windowsserver2008/en/library/532ac164-da33-4369-bef0-8f019d5a18b81033.mspx?mfr=true](https://technet2.microsoft.com/windowsserver2008/en/library/532ac164-da33-4369-bef0-8f019d5a18b81033.mspx?mfr=true)  
- For more information, click the following article number to view the article in the Microsoft Knowledge Base:
+
+For more information, click the following article number to view the article in the Microsoft Knowledge Base:
 
 [949299](https://support.microsoft.com/help/949299) Description of the Crypto Operators security group that was added to Windows Vista Service Pack 1 to configure Windows Firewall for IPsec in Common Criteria mode

@@ -137,5 +137,4 @@ To create a new security template based on settings from a predefined template, 
 
 ## References
 
-For more information about security templates in Windows Server 2003, see the "Security Configuration Manager" topic in the Security section of the Windows 2003 Server documentation. To view this documentation, visit the following Microsoft Web site:  
-  [https://technet2.microsoft.com/WindowsServer/en/Library/74d8fed6-cf2f-4ba4-94f3-fc95bad914b01033.mspx](https://technet2.microsoft.com/windowsserver/en/library/74d8fed6-cf2f-4ba4-94f3-fc95bad914b01033.mspx)  
+For more information about security templates in Windows Server 2003, see the "Security Configuration Manager" topic in the Security section of the Windows 2003 Server documentation.
