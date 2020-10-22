@@ -1,13 +1,13 @@
 ---
 title: Access Violation of BEX or APPCRASH occurs
-description: This article provides resolutions for the Access Violation of BEX or APPCRASH occurs on Windows Server 2008 R2 with Terminal Service.
+description: This article provides resolutions for the Access Violation of BEX or APPCRASH on Windows Server 2008 R2 with Terminal Service.
 ms.date: 09/24/2020
 ms.prod-support-area-path: System Services Development
 ms.reviewer: koichm, skuzin, govm
 ---
 # Access Violation of BEX or APPCRASH occurs on Windows Server 2008 R2 with Terminal Service.
 
-This article helps you resolve the Access Violation of BEX or APPCRASH occurs on Windows Server 2008 R2 with Terminal Service.
+This article helps you resolve the Access Violation of BEX or APPCRASH on Windows Server 2008 R2 with Terminal Service.
 
 _Original product version:_ &nbsp; Winsock  
 _Original KB number:_ &nbsp; 2279689

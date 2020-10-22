@@ -77,13 +77,13 @@ However, this is a configuration that might cause problems, such as access viola
 
 MTA threads do not need to retrieve and dispatch messages because COM does not use window messages in this model to deliver calls to an object.
 
-Server that Supports the MTA Model:
+- Server that Supports the MTA Model:
 
-In the MTA model, calls to an object are not synchronized by COM. Multiple clients can concurrently call an object that supports this model on different threads, and the object must provide synchronization in its interface/method implementations using synchronization objects such as events, mutexes, semaphores, etc. MTA objects can receive concurrent calls from multiple out-of-process clients through a pool of COM-created threads belonging to the object's process. MTA objects can receive concurrent calls from multiple in-process clients on multiple threads associated with the MTA.
+    In the MTA model, calls to an object are not synchronized by COM. Multiple clients can concurrently call an object that supports this model on different threads, and the object must provide synchronization in its interface/method implementations using synchronization objects such as events, mutexes, semaphores, etc. MTA objects can receive concurrent calls from multiple out-of-process clients through a pool of COM-created threads belonging to the object's process. MTA objects can receive concurrent calls from multiple in-process clients on multiple threads associated with the MTA.
 
-Client Responsibilities in the MTA Model:
+- Client Responsibilities in the MTA Model:
 
-Client code running in a process and/or thread that uses the MTA model does not have to marshal interface pointers of an object between itself and other MTA threads. Rather, one MTA thread can use an interface pointer obtained from another MTA thread as a direct memory pointer. When a client thread makes a call to an out-of-process object, it suspends until the call has completed. Calls may arrive on objects associated with the MTA while all application-created threads associated with the MTA are blocked on out- going calls. In this case and in general, incoming calls are delivered on threads provided by the COM runtime. Message filters (`IMessageFilter`) are not available for use in the MTA model.
+    Client code running in a process and/or thread that uses the MTA model does not have to marshal interface pointers of an object between itself and other MTA threads. Rather, one MTA thread can use an interface pointer obtained from another MTA thread as a direct memory pointer. When a client thread makes a call to an out-of-process object, it suspends until the call has completed. Calls may arrive on objects associated with the MTA while all application-created threads associated with the MTA are blocked on out- going calls. In this case and in general, incoming calls are delivered on threads provided by the COM runtime. Message filters (`IMessageFilter`) are not available for use in the MTA model.
 
 ## Mixed-threading models
 
