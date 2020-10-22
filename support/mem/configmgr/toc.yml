@@ -92,6 +92,10 @@
       href: turn-on-debuglogging-key.md
     - name: Upgrade Readiness data is downloaded continuously
       href: upgrade-readiness-data-downloaded-continuously.md
+- name: Cloud-based integration and Components
+  items:
+    - name: Connectivity issues when the DigiCert Global Root G2 root cert is not installed
+      href: connectivity-issues-digicert-global-root-g2-not-installed.md
 - name: Configuration Manager console
   items:
     - name: Console appears to hang when loading drivers
