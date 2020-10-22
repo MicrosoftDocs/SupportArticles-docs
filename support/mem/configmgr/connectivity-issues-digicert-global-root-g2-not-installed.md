@@ -62,3 +62,24 @@ If you have an environment in which rules are set to allow outbound calls to onl
 - [https://crl.microsoft.com](https://crl.microsoft.com)
 - [https://oneocsp.microsoft.com](https://oneocsp.microsoft.com)
 - [http://ocsp.msocsp.com](http://ocsp.msocsp.com)
+
+## More Information
+
+Microsoft maintains the list of root certificates that are distributed by the **Windows Root Certificate Program**, on the program website.
+
+For more information about the **Windows Root Certificate Program** and the list of certification authorities (CAs) who are members, see [Release notes - Microsoft Trusted Root Certificate Program](https://docs.microsoft.com/security/trusted-root/release-notes).
+
+Root certificate update mechanisms are available in different versions of Windows. This includes the automatic root update mechanisms.
+
+ For more information about how to update the root certificate list in different versions of Windows, see [Configure Trusted Roots and Disallowed Certificates](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983%28v=ws.11%29?redirectedfrom=MSDN).
+
+By default, the automatic root update mechanism is enabled in different versions of Windows. However, if this mechanism is disabled, and  the service connection point server doesn’t have the **DigiCert Global Root G2** root certificate installed, connectivity issues with **Configuration Manager** cloud services may occur. The **Configuration Manager** on premises hierarchy may no longer be able to access the **Microsoft Configuration Manager** cloud services and other such resources.
+
+ For more information, see [Azure TLS certificate changes](https://docs.microsoft.com/azure/security/fundamentals/tls-certificate-changes) and [Azure IoT TLS: Changes are coming](https://techcommunity.microsoft.com/t5/internet-of-things/azure-iot-tls-changes-are-coming-and-why-you-should-care/ba-p/1658456).
+
+## Next steps
+
+For additional information about connectivity requirements and troubleshooting for **Configuration Manager**, see the following items:
+
+- [Internet endpoint requirements for Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/plan-design/network/internet-endpoints)
+- [Troubleshooting update and servicing issues for Configuration Manager](https://docs.microsoft.com/troubleshoot/mem/configmgr/understand-troubleshoot-updates-servicing)
