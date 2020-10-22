@@ -4,7 +4,7 @@ description: This article provides resolutions for the problem that a non-IFS LS
 ms.date: 09/24/2020
 ms.prod-support-area-path: Networking Development
 ms.reviewer: khorton, osmaner
-ms.prod: Winsock
+ms.prod: windows
 ---
 # SetFileCompletionNotificationModes API causes an I/O completion port not to work correctly if a non-IFS LSP is installed
 
