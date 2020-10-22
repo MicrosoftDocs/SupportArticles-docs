@@ -128,14 +128,14 @@ You can install the original-release version of the Windows Server 2003 Administ
 - Windows XP Professional with Service Pack 2
 - Windows XP Professional with Service Pack 1
 - Windows Server 2003, 32-bit versions
- The original-release version of the Windows Server 2003 Adminpak.msi file was repackaged on the Microsoft Web site as Adminpak.exe after the release of Windows Server 2003.
+ The original-release version of the Windows Server 2003 Adminpak.msi file was repackaged on the Microsoft Web site as Adminpak.exe after the release of Windows Server 2003.
 
 You can install the Service Pack 1 version of the Windows Server 2003 Administration Tools Pack on computers that are running the following operating systems:
 - Windows XP Professional with Service Pack 2
 - Windows XP Professional 64-bit Edition
 - Windows Server 2003, 32-bit versions
 - Windows Server 2003, 64-bit versions
- The latest revision of the Windows Server 2003 Administration Tools Pack is the Windows Server 2003 Service Pack 2 version. You can install the Service Pack 2 version of the Windows Server 2003 Administration Tools Pack on computers that are running the following operating systems:
+ The latest revision of the Windows Server 2003 Administration Tools Pack is the Windows Server 2003 Service Pack 2 version. You can install the Service Pack 2 version of the Windows Server 2003 Administration Tools Pack on computers that are running the following operating systems:
 - Windows XP Professional 64 Edition
 - Windows Server 2003 All Editions (32-bit x86)
 - Windows Server 2003 Itanium-based Edition
@@ -173,7 +173,7 @@ If the Windows Server 2003 Beta 3 version of the Administration Tools Pack is in
 ```
 
 2. Type Rrasreg.cmd at the command prompt.
- 
+ 
 4. Install the Administration Tools Pack.
 
 Adminpak.exe is a self-extracting file that creates the Adminpak-readme.txt file and the Adminpak.msi file in a folder that you specify when you install the file. To install the Administration Tools Pack, right-click the .msi file, and then click **Install**, or double-click the .msi file. Alternatively, by using Group Policy, you can use Active Directory to remotely install or to publish the file to a Windows XP-based computer or to a Windows Server 2003-based computer when a user logs on to the computer.
@@ -185,7 +185,7 @@ For more information about how to remotely install the Administration Tools Pack
 
 > [!NOTE]
 > When you upgrade a Windows 2000-based server to Windows Server 2003, the system compatibility check in Windows Server 2003 Winnt32.exe or in the Winnt32 /checkupgradeonly process may incorrectly detect that the Administration Tools Pack has been installed on your Windows 2000 domain controller. This issue occurs because the Active Directory Installation Wizard (Dcpromo.exe) on Windows 2000 uses a feature in the Windows 2000 Adminpak file to create shortcut menu items for the domain administration tools. You may safely ignore this message and continue with the upgrade process from Windows 2000 to Windows Server 2003.
- 
+ 
 
 ### What to expect from the original-release version of the Windows Server 2003 Administration Tools Pack
 

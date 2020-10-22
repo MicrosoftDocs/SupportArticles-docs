@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;2000061
 
 ## Symptoms
 
-You're running the Windows Server roles Active Directory Domain Services (AD DS) or Active Directory Lightweight Directory Services (AD LDS). Sporadically, you experience that TCP sessions created to the server ports 88, 389 and 3268 are reset. Sessions using Secure Sockets Layer (SSL) or Transport Layer Security (TLS) on ports 636 and 3269 are also affected.
+You're running the Windows Server roles Active Directory Domain Services (AD DS) or Active Directory Lightweight Directory Services (AD LDS). Sporadically, you experience that TCP sessions created to the server ports 88, 389 and 3268 are reset. Sessions using Secure Sockets Layer (SSL) or Transport Layer Security (TLS) on ports 636 and 3269 are also affected.
 
 In a trace of the network traffic, you see the frame with the TCP RESET (or RST) is sent by the server almost immediately after the session is established using the TCP three-way handshake. The client might be able to send some request data before the RESET is sent, but this request isn't responded to nor is the data acknowledged.
 
@@ -42,10 +42,10 @@ There are two problems that might occur:
 
 ## Resolution
 
-For the KDC ports, many clients, including the Windows Kerberos client, will perform a retry and then get a full timer tick to work on the session. LDAP applications have a higher chance of considering the connection reset a fatal failure.
+For the KDC ports, many clients, including the Windows Kerberos client, will perform a retry and then get a full timer tick to work on the session. LDAP applications have a higher chance of considering the connection reset a fatal failure.
 
 If you want to avoid the resets on ports 22528 and 53249, you have to exclude them from the ephemeral ports range (for example, on Windows XP using MaxUserPort). For Windows Vista and newer, see:
- [929851](https://support.microsoft.com/help/929851)  The default dynamic port range for TCP/IP has changed in Windows Vista and in Windows Server 2008
+ [929851](https://support.microsoft.com/help/929851)  The default dynamic port range for TCP/IP has changed in Windows Vista and in Windows Server 2008
 
 When you set NewConnectionTimeout to 40 or higher, you receive a time-out window of 30-90 seconds. When you use 70 or higher, you receive 60-120 seconds for the time-out. For more information about the NewConnectionTimeout registry value, click the following article number to view the article in the Microsoft Knowledge Base:
- [837361](https://support.microsoft.com/kb/837361)  Kerberos protocol registry entries and KDC configuration keys in Windows Server 2003
+ [837361](https://support.microsoft.com/kb/837361)  Kerberos protocol registry entries and KDC configuration keys in Windows Server 2003

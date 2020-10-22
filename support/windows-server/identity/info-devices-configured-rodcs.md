@@ -54,7 +54,7 @@ Domain controllers have a special flag and additional objects associated with th
 - UserAccountControl values on the domain controller's computer account
   - RWDC 0x82000 (Hex)
   - RODC 0x5011000 (Hex)
-- NTDS Settings  object in the configuration container, within the domain controller's site
+- NTDS Settings  object in the configuration container, within the domain controller's site
 
 Tools, services, and applications may query these attributes to generate a list of domain controllers and then perform an operation, such as query, that assumes a normal DC response. Riverbed devices don't implement the full set of Windows domain controller services and do not respond to normal DC queries. Microsoft is aware of the following problems that are caused by this configuration:
 

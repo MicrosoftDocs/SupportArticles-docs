@@ -23,32 +23,32 @@ _Original KB number:_ &nbsp; 4076842
 ## Symptom
 
 When a network path is specified in the **PSModulePath** environment variable, the Enter-PSSession cmdlet fails, and you receive the following error message:  
->Enter-PSSession : The 'Measure-Object' command was found in the module 'Microsoft.PowerShell.Utility', but the module 
+>Enter-PSSession : The 'Measure-Object' command was found in the module 'Microsoft.PowerShell.Utility', but the module 
 could not be loaded. For more information, run 'Import-Module Microsoft.PowerShell.Utility'.  
 At line:1 char:1  
 \+ Enter-PSSessionservername  
 \+ ~~~~~~~~~~~~~~~~~~~~~~~~  
-  + CategoryInfo : ObjectNotFound: (Measure-Object:String) [Enter-PSSession], CommandNotFoundException  
-  + FullyQualifiedErrorId : CouldNotAutoloadMatchingModule
+  + CategoryInfo : ObjectNotFound: (Measure-Object:String) [Enter-PSSession], CommandNotFoundException  
+  + FullyQualifiedErrorId : CouldNotAutoloadMatchingModule
 
 ## Cause
 
-When a PS session is created and authenticates through Kerberos, the session doesn't support double hop. Therefore, the PS session can't authenticate by using network resources.  
+When a PS session is created and authenticates through Kerberos, the session doesn't support double hop. Therefore, the PS session can't authenticate by using network resources.  
 
-When PowerShelltries to enumerate the modules in the network path, the operation fails with "Access Denied," and the command unexpectedly terminates
+When PowerShelltries to enumerate the modules in the network path, the operation fails with "Access Denied," and the command unexpectedly terminates
 
 ## Resolution
 
-To fix the issue, c reate the PS session to authenticate with CredSSP. This needs to be configured in advance. On the computer that is the target of the **Enter-PSSession** command, run this command:  
+To fix the issue, c reate the PS session to authenticate with CredSSP. This needs to be configured in advance. On the computer that is the target of the **Enter-PSSession** command, run this command:  
  Enable-WSManCredSSP -Role Server  
  On the computer on which you run the **Enter-PSSession** command, run this command:   Enable-WSManCredSSP -Role Client -DelegateComputer Servername  
 
 > [!NOTE]
  Servernameis the name of the computer that is the target of the **Enter-PSSession** command. 
 
-Every time that this command is executed, the specified Servernameis added to the list. The list is stored in the following registry subkey:  
+Every time that this command is executed, the specified Servernameis added to the list. The list is stored in the following registry subkey:  
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation\AllowFreshCredentials  
-To view the status of the CredSSP configuration, run the **Get-WSManCredSSP** command.  
+To view the status of the CredSSP configuration, run the **Get-WSManCredSSP** command.  
 After CredSSP is enabled, you can authenticate through CredSSP by using this command:  
  Enter-PSSessionservername-Authentication CredSSP -Credential (Get-Credentialusername)
 

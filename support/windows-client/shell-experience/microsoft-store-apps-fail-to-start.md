@@ -29,26 +29,26 @@ When you select a Microsoft Store App, the App begins to start, and then Windows
 
 Microsoft-Windows-Immersive-Shell event 5961 is logged under the *Applications and Services Logs\Microsoft\Windows\Apps\Microsoft-Windows-TWinUI/Operational event log* path:
 
-> Log Name:      Microsoft-Windows-TWinUI/Operational  
-Source:        Microsoft-Windows-Immersive-Shell  
-Date:          *DateTime*  
-Event ID:      5961  
+> Log Name:      Microsoft-Windows-TWinUI/Operational  
+Source:        Microsoft-Windows-Immersive-Shell  
+Date:          *DateTime*  
+Event ID:      5961  
 Task Category: (5961)  
-Level:         Error  \
-Keywords:  \
-User:          *UserName*  
-Computer:      *ComputerName*  
+Level:         Error  \
+Keywords:  \
+User:          *UserName*  
+Computer:      *ComputerName*  
 Description:  
-Activation of the app \<app name> for the Windows.Launch contract failed with error: The app didn't start.
+Activation of the app \<app name> for the Windows.Launch contract failed with error: The app didn't start.
 
 > [!NOTE]
-> The app portion of the example event, \<app name>, will change depending on the application that fails to start.
+> The app portion of the example event, \<app name>, will change depending on the application that fails to start.
 
 Possible values for \<app name> include but are not limited to:
 
 > microsoft.windowscommunicationsapps_8wekyb3d8bbwe!Microsoft.WindowsLive.Chat
 
-Prefixes for other built-in Microsoft Store Apps include:
+Prefixes for other built-in Microsoft Store Apps include:
 
 > Microsoft.BingFinance_8wekyb3d8bbwe!\<app identifier>  
 Microsoft.BingMaps_8wekyb3d8bbwe!\<app identifier>  
@@ -73,7 +73,7 @@ Microsoft.ZuneVideo_8wekyb3d8bbwe!\<app identifier>
 
 ## Issue 2
 
-You can't start a Microsoft Store App, open Start screen, and use Search in Windows. Additionally, you receive the following event log in Application logs:
+You can't start a Microsoft Store App, open Start screen, and use Search in Windows. Additionally, you receive the following event log in Application logs:
 
 > Log Name: Application  
 Source: Application Error  
@@ -110,9 +110,9 @@ If you use Process Monitor to track the Apps' executable or related files, you m
 
 ## Cause for issue 1
 
-Registry and or file system permissions may have been changed from their defaults.  
+Registry and or file system permissions may have been changed from their defaults.  
 
-The All Application Packages group (a well-known group with a predefined SID) must have specific access to certain locations of the registry and file system for Microsoft Store Apps to function properly.
+The All Application Packages group (a well-known group with a predefined SID) must have specific access to certain locations of the registry and file system for Microsoft Store Apps to function properly.
 
 ## Cause for issue 2
 
@@ -131,7 +131,7 @@ If you use Group Policy to manage permissions, or if you are unsure whether Grou
 - Add permissions where they are required per the following details.
 - Edit the Group Policy that manages to permissions so that it no longer breaks modern application.
 
-Registry and File System permission must be reverted back to a state that will allow Microsoft Store App to function. Follow this method to resolve the issue:
+Registry and File System permission must be reverted back to a state that will allow Microsoft Store App to function. Follow this method to resolve the issue:
 
 1. Determine if file system permissions have been changed. If not, see the [More information](#more-information) section below.
 2. If so, how were they changed? Manually or with Group Policy?
@@ -141,7 +141,7 @@ Registry and File System permission must be reverted back to a state that will a
 
 ### Determine if file system permissions have been changed
 
-Check the folders listed below. Determine if the All Application Packages group has the access indicated. Most but not all sub directories of Windows, Program Files, and WER also grant permissions to the All Application Packages group.
+Check the folders listed below. Determine if the All Application Packages group has the access indicated. Most but not all sub directories of Windows, Program Files, and WER also grant permissions to the All Application Packages group.
 
 - Program Files - Read, Read and Execute, List folder Contents
 - Windows - Read, Read and Execute, List folder Contents
@@ -149,7 +149,7 @@ Check the folders listed below. Determine if the All Application Packages grou
 
 ### Determine if registry permissions have changed
 
-Check the registry keys listed below. Make sure the All Applications Packages group has the Read permissions to the following registry paths:
+Check the registry keys listed below. Make sure the All Applications Packages group has the Read permissions to the following registry paths:
 
 - HKEY_CLASSES_ROOT
 - HKEY_LOCAL_MACHINE\Drivers
@@ -170,13 +170,13 @@ Most but not all of the subkeys of the registry keys listed above will grant the
     gpresult /h <path>\gpreport.html
     ```
 
-3. Open the file gpreport.html and expand the following path:
+3. Open the file gpreport.html and expand the following path:
 
     **Computer Settings** > Policies\Windows Settings\Security Settings. Look for **File System** and Registry. If these exist, then GP is assigning permission. You must edit the GP to include the necessary permissions for the All Application Packages group.
 
 ## Steps to fix the problem
 
-Depending on how the file system permissions were changed will determine how to recover from the problem. The most common ways permissions are changed manually and by Group Policy.
+Depending on how the file system permissions were changed will determine how to recover from the problem. The most common ways permissions are changed manually and by Group Policy.
 
 > [!IMPORTANT]
 > Make sure that you test your resolution in a lab before widely deploying. Always backup any important data before changing registry and file system permissions.
@@ -197,7 +197,7 @@ Depending on how the file system permissions were changed will determine how to 
 12. Check Read & Execute, List folder contents, and Read.
 13. Check the **Replace all child object permissions with inheritable permission entries from this object** checkbox.
 14. Select **Apply** and **OK**.
-15. Repeat for c:\Windows.
+15. Repeat for c:\Windows.
 16. Repeat for c:\Users but grant the All Application Packages group Full Control.
 17. Select **Apply** and **OK**.
 
@@ -209,7 +209,7 @@ Have a Group Policy administrator do the following:
 - Locate the GPO identified in the step [Determine if Group Policy is being used to manage permissions](#determine-if-group-policy-is-being-used-to-manage-permissions).
 - Right-click and select **edit**.
 - Go to the location Computer `Configuration\Policy\Windows Settings\Security Settings\File System`.
-- If there is an entry for the paths already created, you can edit it. If no entry exists, create a new entry for each path.
+- If there is an entry for the paths already created, you can edit it. If no entry exists, create a new entry for each path.
 - To create a new entry, right-click file system and select **add file**.
 - Browse to the path c:\Program Files, select **OK**.
 - Select the **Add** button.

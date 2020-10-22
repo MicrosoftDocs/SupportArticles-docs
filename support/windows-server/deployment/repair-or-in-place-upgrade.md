@@ -36,7 +36,7 @@ Doing a repair installation will restore the current Windows installation to the
 
 To do a repair installation of Windows 7, follow these steps:
 
-1. Close all the running applications.
+1. Close all the running applications.
 2. Insert the Windows 7 DVD in the computer's DVD drive.
 3. In the **Setup** window, select **Install Now**.
 
@@ -53,7 +53,7 @@ To do a repair installation of Windows 7, follow these steps:
 
 4. Select **Go online to obtain the latest updates for installation (recommended)**.
 5. Type the CD key if you're prompted to do this.
-6. Select the operating system in **Install Windows** page you want to **Upgrade** or **Inplace**.
+6. Select the operating system in **Install Windows** page you want to **Upgrade** or **Inplace**.
 7. select **Yes** to accept the Microsoft Software License Terms.
-8. On the **Which type of installation do you want?** screen, select **Upgrade**.
+8. On the **Which type of installation do you want?** screen, select **Upgrade**.
 9. When the installation is complete, restart your computer.

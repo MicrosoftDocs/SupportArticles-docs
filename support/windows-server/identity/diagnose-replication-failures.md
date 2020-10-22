@@ -41,7 +41,7 @@ Active Directory Domain Services (AD DS) replication has the following dependenc
 
 ## Resolution
 
-Use either of the following methods to view replications errors:
+Use either of the following methods to view replications errors:
 
 - Run [AD Status Replication Tool](https://www.microsoft.com/download/details.aspx?id=30005) on the DCs.
 - Read the replication status in the `repadmin /showrepl` output.
@@ -50,7 +50,7 @@ Use either of the following methods to view replications errors:
   
   - In Windows 10, version 1809 and later version of Windows 10, you can install the RSAT feature through **Settings** > **Manage optional features**.
 
-### Use repadmin to identify forest-wide Active Directory replication errors
+### Use repadmin to identify forest-wide Active Directory replication errors
 
 You can create a Microsoft Excel spreadsheet for domain controllers by using the `repadmin/showrepl` command to view replication errors. To do this, follow these steps:
 
@@ -69,12 +69,12 @@ You can create a Microsoft Excel spreadsheet for domain controllers by using the
 4. Format the spreadsheet as follows:
 
    1. Hide or delete column A and column G.
-   2. Select row 1 underneath the column header row. On the **View** tab, click **Freeze Panes**, and then click **Freeze Top Row**.
+   2. Select row 1 underneath the column header row. On the **View** tab, click **Freeze Panes**, and then click **Freeze Top Row**.
    3. Select the whole spreadsheet. On the **Data** tab, click **Filter**.
    4. In the **Last Success Time** column, click the down arrow, point to **Text Filters**, and then click **Custom Filter**.
    5. Sort the table from oldest to newest.
    6. In the **Source DC** or **Source DSA** column, click the filter down arrow, point to **Text Filters**, and then click **Custom Filter**.
    7. In the **Custom AutoFilter** dialog box, under **Show rows where**, click **does not contain**. In the adjacent text box, type **del** to eliminate deleted domain controllers from the view.
-   8. Repeat step 6 for the **Last Failure Time** column, but use the value **does not equal**, and then type the value **0**.
+   8. Repeat step 6 for the **Last Failure Time** column, but use the value **does not equal**, and then type the value **0**.
 
 5. To fix any replication failures that appear under **Last Failure Status**, see [How to troubleshoot common Active Directory replication errors](https://support.microsoft.com/help/3108513/how-to-troubleshoot-common-active-directory-replication-errors).

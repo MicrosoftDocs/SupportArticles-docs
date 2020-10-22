@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 4520146
 
 ## Check for updates
 
-Windows 10 lets you choose when and how to get the latest updates to help keep your device running smoothly and securely. To manage your options and see any available updates, select the **Start** button, and then go to **Settings** > **Update & Security** > **Windows Update** > **Check for updates**. Install any available updates, and then restart your computer if the updates require this.
+Windows 10 lets you choose when and how to get the latest updates to help keep your device running smoothly and securely. To manage your options and see any available updates, select the **Start** button, and then go to **Settings** > **Update & Security** > **Windows Update** > **Check for updates**. Install any available updates, and then restart your computer if the updates require this.
 
 For more information, see [Update Windows 10](https://support.microsoft.com/help/4027667).
 
@@ -32,10 +32,10 @@ For more information, see [Update Windows 10](https://support.microsoft.com/help
 
 Your PC automatically indexes content to deliver faster search results. [Learn more about Search indexing in Windows 10](https://support.microsoft.com/help/4098843).
 
-Use the Windows **Search and Indexing** troubleshooter to try to fix any problems that may arise. To do this, follow these steps:
+Use the Windows **Search and Indexing** troubleshooter to try to fix any problems that may arise. To do this, follow these steps:
 
 1. Select **Start**, then select **Settings**.
-2. In **Windows Settings**, select **Update & Security** > **Troubleshoot**. Under **Find and fix other problems**, select **Search and Indexing**.
+2. In **Windows Settings**, select **Update & Security** > **Troubleshoot**. Under **Find and fix other problems**, select **Search and Indexing**.
 3. Run the troubleshooter, and select any problems that apply. Windows will try to detect and solve them.
 
 You can also use a command prompt to open the troubleshooter. To do this, press Windows logo key+R, enter *cmd* in the **Open** box, and then select **OK**. At the command prompt, run the following command:
@@ -49,7 +49,7 @@ msdt.exe -ep WindowsHelp id SearchDiagnostic
 End the **SearchUI** process to restart Windows Search. To do this, follow these steps:
 
 1. Press Ctrl+Alt+Delete, and select **Task Manager**.
-2. In the **Task Manager** window, select the **Details** tab.
+2. In the **Task Manager** window, select the **Details** tab.
 3. In the **Name** column, right-click **SearchUI.exe**, and then select **End task**.
 4. When you are prompted to end SearchUI.exe, select **End process**.
 
@@ -65,9 +65,9 @@ If this doesn't fix your problem, try restarting your device. This will also ins
 
 Try resetting Windows Search. To do this, use the method that's appropriate for your version of Windows.
 
-To determine which version of Windows your device is running, follow these steps:
+To determine which version of Windows your device is running, follow these steps:
 
-1. Select **Start** > **Settings** > **System** > **About**.
+1. Select **Start** > **Settings** > **System** > **About**.
 
 2. Under **Windows specifications**, check which version of Windows your device is running.
 
@@ -83,12 +83,12 @@ If the Windows 10 October 2018 Update or an earlier update is installed, reset C
 
 ### Windows 10, version 1903 and later
 
-If the Windows 10 May 2019 Update or a later update is installed, use Windows PowerShell to reset Windows Search. To do this, follow these steps.
+If the Windows 10 May 2019 Update or a later update is installed, use Windows PowerShell to reset Windows Search. To do this, follow these steps.
 
 > [!IMPORTANT]
 > You must have administrator permissions to run this script.
 
-1. Download the *ResetWindowsSearchBox.ps1* script from the [Reset Windows Search PowerShell script](https://www.microsoft.com/download/100295), and save the file to a local folder.
+1. Download the *ResetWindowsSearchBox.ps1* script from the [Reset Windows Search PowerShell script](https://www.microsoft.com/download/100295), and save the file to a local folder.
 
 2. Right-click the file that you saved, and select **Run with PowerShell**.
 3. If you are asked **Do you want to allow this app to make changes to your device?**, select **Yes**.
@@ -121,14 +121,14 @@ If the Windows 10 May 2019 Update or a later update is installed, use Windows Po
     Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy
     ```
 
-    For example, if the policy that you noted in step 5 was **Restricted**, the command would resemble this:
+    For example, if the policy that you noted in step 5 was **Restricted**, the command would resemble this:
 
     ```powershell
     Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Restricted
     ```
 
     > [!NOTE]
-    > You'll receive a warning message that explains the security risks of an execution policy change. Press Y, and then press Enter to accept the change and revert to your previous policy setting.
+    > You'll receive a warning message that explains the security risks of an execution policy change. Press Y, and then press Enter to accept the change and revert to your previous policy setting.
 
 9. Close the PowerShell window.
 
@@ -137,7 +137,7 @@ If the Windows 10 May 2019 Update or a later update is installed, use Windows Po
 
 ## Help us improve Search in Windows 10
 
-If the previous suggestions don't fix the problem, let us know by sending feedback in the Feedback Hub. Provide details, such as a description of the problem, screenshots, log files, and any other information that might be helpful. In the Feedback Hub, select the appropriate category and subcategory. In this case, submit your feedback in the **Cortana and Search** category.
+If the previous suggestions don't fix the problem, let us know by sending feedback in the Feedback Hub. Provide details, such as a description of the problem, screenshots, log files, and any other information that might be helpful. In the Feedback Hub, select the appropriate category and subcategory. In this case, submit your feedback in the **Cortana and Search** category.
 
 ## More information
 

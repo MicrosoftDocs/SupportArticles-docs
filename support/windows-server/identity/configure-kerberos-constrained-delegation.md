@@ -10,12 +10,12 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jarrettr, wincicadsec, Jitesh.Thakur
-ms.prod-support-area-path: Windows NIC Teaming (Load Balance Failover)
-ms.technology: Networking
+ms.prod-support-area-path: Active Directory domain or forest functional level updates
+ms.technology: ActiveDirectory
 ---
 # How to configure Kerberos Constrained Delegation (S4U2Proxy or Kerberos Only) on a custom service account for Web Enrollment proxy pages
 
-The article provides step-by-step instructions to implement Service for User to Proxy (S4U2Proxy) or Kerberos Only Constrained Delegation on a custom service account for Web Enrollment proxy pages.
+The article provides step-by-step instructions to implement Service for User to Proxy (S4U2Proxy) or Kerberos Only Constrained Delegation on a custom service account for Web Enrollment proxy pages.
 
 _Original product version:_ &nbsp; Window Server 2016, Window Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4494313
@@ -25,13 +25,13 @@ _Original KB number:_ &nbsp; 4494313
 > [!NOTE]
 > The workflow that's included in this article is specific to a particular scenario. The same workflow may not work for a different situation. However, the principles remain the same.
 
-## Configuring the Delegation in Active Directory
+## Configuring the Delegation in Active Directory
 
 1. See the following image for guidance to configure the HTTP SPNs on the service account for the front-end web server.
 
     :::image type="content" source="./media/configure-kerberos-constrained-delegation/active-directory-users-computers.png" alt-text="Guidance to configure the HTTP SPNs.":::
 
-    **Note** You can also run the **setspn -s SPN Accountname**  command. For example, run the following command:
+    **Note** You can also run the **setspn -s SPN Accountname**  command. For example, run the following command:
 
     ```console
     setspn -s HTTP/webenroll2016.contoso.com web_svc
@@ -55,7 +55,7 @@ To enable web enrollment pages to work, create a domain certificate for the webs
 
 2. In the actions pane on the right, select **Create a Domain Certificate**.
 3. After the certificate is created, select **Default Web Site** on the left side, and then select **Bindings** on the right side.
-4. Add the certificate that you enrolled earlier, and bind it to port 443.
+4. Add the certificate that you enrolled earlier, and bind it to port 443.
 
     :::image type="content" source="./media/configure-kerberos-constrained-delegation/add-site-binding.png" alt-text="Add certificate and bind it to port 443":::
 
@@ -64,7 +64,7 @@ To enable web enrollment pages to work, create a domain certificate for the webs
 Make sure that the service account is part of either the **local administrators** or **IIS_Users** group on the web server.
 :::image type="content" source="./media/configure-kerberos-constrained-delegation/local-users-groups.png" alt-text="Service account":::
 
-‎After you install the web enrollment role on the server, start IIS Manager, and then configure the service account for the default App Pool.
+‎After you install the web enrollment role on the server, start IIS Manager, and then configure the service account for the default App Pool.
 
 1. Right-click **DefaultAppPool**, and then click **Advanced Settings**.
 

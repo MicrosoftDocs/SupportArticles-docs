@@ -42,10 +42,10 @@ To work around this issue, use one of the following methods:
 ## More information
 
 This issue is caused by a code defect in Microsoft components. The following explains how the issue occurs: 
-1. During startup, Windows enumerates all automatic services and tries to start them. 
-2. When Windows tries to start a service that is configured to use a group Managed Service Account (gMSA), the Service Control Manager (SCM) tries to log on by using the account information for the service. 
+1. During startup, Windows enumerates all automatic services and tries to start them. 
+2. When Windows tries to start a service that is configured to use a group Managed Service Account (gMSA), the Service Control Manager (SCM) tries to log on by using the account information for the service. 
 3. The logon request is sent to the Local Security Authority process (lsass.exe, LSASS) that is running on the computer. 
-4. LSASS receives the request. While handling the request, LSASS tries to do a Lightweight Directory Access Protocol (LDAP) search for the msDS-ManagedPassword attribute. 
+4. LSASS receives the request. While handling the request, LSASS tries to do a Lightweight Directory Access Protocol (LDAP) search for the msDS-ManagedPassword attribute. 
 5. When the LDAP request is performed on a domain controller, the LDAP query can be sent back to the local server, where it is handled by a different thread in LSASS, which is the same process that issued the query. 
-6. The LDAP server thread calls in to the Microsoft Key Distribution Service Provider (kdscli.dll), where it tries to find server components: Microsoft Key Distribution Service (KdsSvc), RPC endpoint from the RPC endpoint mapper (EPM). 
-7. Because the KdsSvc service is set to be triggered as soon as one of these RPC queries occurs, the service should start (in theory). However, because the SCM is currently blocked from starting a service and it can only start one service at a time, KdsSvc never gets started, and SCM hangs. 
+6. The LDAP server thread calls in to the Microsoft Key Distribution Service Provider (kdscli.dll), where it tries to find server components: Microsoft Key Distribution Service (KdsSvc), RPC endpoint from the RPC endpoint mapper (EPM). 
+7. Because the KdsSvc service is set to be triggered as soon as one of these RPC queries occurs, the service should start (in theory). However, because the SCM is currently blocked from starting a service and it can only start one service at a time, KdsSvc never gets started, and SCM hangs. 

@@ -34,12 +34,12 @@ The WINS name resolution service does not respond to incoming queries or registr
 
 ## Cause
 
-This behavior is by design. It occurs because NetBIOS no longer binds to IP address resources in Windows Server 2016 or later versions of the Windows Server-based Cluster service.
+This behavior is by design. It occurs because NetBIOS no longer binds to IP address resources in Windows Server 2016 or later versions of the Windows Server-based Cluster service.
 
 ## Workaround
 
 To work around this behavior, use the Cluster Management console to determine the name of the IP address resource that must be changed.  
-After you determine the IP address resource, run the following commands in an elevated PowerShell window. In the commands, substitute the name of the actual IP address resource.  
+After you determine the IP address resource, run the following commands in an elevated PowerShell window. In the commands, substitute the name of the actual IP address resource.  
 
 Get-ClusterResource"resource name"| Set-ClusterParameter EnableNetBIOS 1  
 Stop-ClusterResource"resource name"  

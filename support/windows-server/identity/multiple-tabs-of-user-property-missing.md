@@ -22,10 +22,10 @@ _Original KB number:_ &nbsp; 2028835
 
 ## Symptoms
 
-After installing the Remote Server Administration Tools for Windows 7 (Windows 7 RSAT) on a domain-joined Windows 7 client, you add the Role Administration Tools for "AD DS Snap-ins and Command-line Tools":
+After installing the Remote Server Administration Tools for Windows 7 (Windows 7 RSAT) on a domain-joined Windows 7 client, you add the Role Administration Tools for "AD DS Snap-ins and Command-line Tools":
 ![Screenshot of the AD DS Snap-ins and Command-line Tools feature](./media/multiple-tabs-of-user-property-missing/add-ad-ds-snap-ins.png)
 
-You then start **** the **Active Directory Users and Computers** snap-in **(DSA.MSC)** and examine the properties of a user. You notice that some or all of the following tabs are missing:
+You then start **** the **Active Directory Users and Computers** snap-in **(DSA.MSC)** and examine the properties of a user. You notice that some or all of the following tabs are missing:
 Published Certificates
 Password Replication
 Object
@@ -38,15 +38,15 @@ Remote Desktop Services Profile
 Personal Virtual Desktop
 UNIX Attributes
 Dial-in
-These tabs are visible when running **DSA.MSC** on the console of Windows Server 2008 R2 servers.
+These tabs are visible when running **DSA.MSC** on the console of Windows Server 2008 R2 servers.
 
 ## Cause
 
-Multiple root causes exist. See the **Resolution** section for more information.
+Multiple root causes exist. See the **Resolution** section for more information.
 
 ## Resolution
 
-1. Enable "Advanced Features" via the View menu. This will show at least the following new tabs: 
+1. Enable "Advanced Features" via the View menu. This will show at least the following new tabs: 
 Published Certificates
 Password Replication
 Object
@@ -58,4 +58,4 @@ Attribute Editor
 3. If still not seeing the "UNIX Attributes" tab, add the following RSAT feature: "Server for NIS Tools". Restart DSA.MSC with Advanced View enabled to make this tab appear.
 ![Screenshot of adding Server for NIS Tools feature](./media/multiple-tabs-of-user-property-missing/add-server-for-nis-tools-feature.png)
 
-4. The "Dial-In" tab will always be missing, as its libraries are not included in Remote Server Administration Tools for Windows 7.
+4. The "Dial-In" tab will always be missing, as its libraries are not included in Remote Server Administration Tools for Windows 7.

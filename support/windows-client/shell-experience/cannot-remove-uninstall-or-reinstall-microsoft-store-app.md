@@ -28,7 +28,7 @@ If you uninstalled Microsoft Store by any means and want to reinstall it, the on
 
 > [!IMPORTANT]
 >
-> - Uninstalling the Microsoft Store app is not supported, and uninstalling it may cause unintended consequences.
+> - Uninstalling the Microsoft Store app is not supported, and uninstalling it may cause unintended consequences.
 > - There is no supported workaround to uninstall or reinstall Microsoft Store.
 
- IT professionals can configure, limit, or block access to Microsoft Store for client computers. See [Configure access to Microsoft Store](/windows/configuration/stop-employees-from-using-microsoft-store).
+ IT professionals can configure, limit, or block access to Microsoft Store for client computers. See [Configure access to Microsoft Store](/windows/configuration/stop-employees-from-using-microsoft-store).

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: COM+ Setup
+ms.prod-support-area-path: Setup
 ms.technology: Deployment
 ---
 # You cannot upgrade a Windows-based operating system when you have Windows PowerShell 1.0 installed

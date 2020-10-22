@@ -86,11 +86,11 @@ To rebuild all performance counters including extensible and third-party counter
 
 3. Stop and restart the Performance Logs and Alerts service.
 
-4. Stop and restart the Windows Management Instrumentation service.
+4. Stop and restart the Windows Management Instrumentation service.
 
 5. Create a new Data Collector Set (don't use an existing Data Collector Set).
 
-Sometimes, running `lodctr /R` may not recover all counters. If you notice this happening, verify the file `c:\windows\system32\PerfStringBackup.INI` contains the proper information. You may be able to copy this file from an identical machine in order to restore the counters. There may be slight differences in this file from machine to machine, but if you notice a drastic difference in size, it may be missing information. Always create a backup copy before replacing, and there is no guarantee that copying this file from another machine will restore all counters. If possible, compare the file to backups of the machine to see if the file size has decreased at some point in time.
+Sometimes, running `lodctr /R` may not recover all counters. If you notice this happening, verify the file `c:\windows\system32\PerfStringBackup.INI` contains the proper information. You may be able to copy this file from an identical machine in order to restore the counters. There may be slight differences in this file from machine to machine, but if you notice a drastic difference in size, it may be missing information. Always create a backup copy before replacing, and there is no guarantee that copying this file from another machine will restore all counters. If possible, compare the file to backups of the machine to see if the file size has decreased at some point in time.
 
 For a number of counters, the location of the ini files to install perf counters is under `windows\winsxs`, for example, those for IIS:
 

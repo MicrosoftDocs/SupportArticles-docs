@@ -17,7 +17,7 @@ ms.technology: ShellExperience
 
 This article describes how to configure Windows Server 2008 as a workstation computer.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;947036
 
 ## Introduction

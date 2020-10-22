@@ -49,7 +49,7 @@ The following list describes how much RAM the various Windows versions and editi
 |Windows Server 2003 Web Edition|2 GB|
 |Windows Server 2003 Standard Edition|4 GB|
 |Windows Server 2003 Enterprise Edition|32 GB|
-|Windows Server 2003 Datacenter Edition|64 GB|
+|Windows Server 2003 Datacenter Edition|64 GB|
 |Windows Vista|4 GB|
 |Windows Server 2008 Standard|4 GB|
 |Windows Server 2008 Enterprise|64 GB|
@@ -93,11 +93,11 @@ Performance Monitor is the principle tool for monitoring system performance and 
 
 - Process, Working Set, _Total: This counter is a measure of the virtual memory in *active* use.
 
-    This counter shows how much RAM is required so that the virtual memory being used for all processes is in RAM. This value is always a multiple of 4,096, which is the page size that is used in Windows. As demand for virtual memory increases beyond the available RAM, the operating system adjusts how much of a process's virtual memory is in its Working Set to optimize available RAM usage and minimize paging.
+    This counter shows how much RAM is required so that the virtual memory being used for all processes is in RAM. This value is always a multiple of 4,096, which is the page size that is used in Windows. As demand for virtual memory increases beyond the available RAM, the operating system adjusts how much of a process's virtual memory is in its Working Set to optimize available RAM usage and minimize paging.
 
 - Paging File, %pagefile in use: This counter is a measure of how much of the pagefile is actually being used.
 
-    Use this counter to determine whether the pagefile is an appropriate size. If this counter reaches 100, the pagefile is full, and things will stop working. Depending on the volatility of your workload, you probably want the pagefile large enough so that it is no more than 50-075 percent used. If much of the pagefile is being used, having more than one on different physical disks, may improve performance.
+    Use this counter to determine whether the pagefile is an appropriate size. If this counter reaches 100, the pagefile is full, and things will stop working. Depending on the volatility of your workload, you probably want the pagefile large enough so that it is no more than 50-075 percent used. If much of the pagefile is being used, having more than one on different physical disks, may improve performance.
 
 - Memory, Pages/Sec: This counter is one of the most misunderstood measures.
 

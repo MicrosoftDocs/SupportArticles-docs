@@ -23,19 +23,19 @@ _Original KB number:_ &nbsp;2009550
 ## Symptoms
 
  When you run the **vssadmin list writers** command in Windows Server 2008 R2, no VSS writers are listed. Additionally, the following events are logged in the Application log: 
-> Log Name: Application  
+> Log Name: Application  
 Source: VSS  
-Event ID: 22  
+Event ID: 22  
 Level: Error  
 Description:  
 Volume Shadow Copy Service error: A critical component required by the Volume Shadow Copy service is not registered. This might happened if an error occurred during Windows setup or during installation of a Shadow Copy provider. The error returned from CoCreateInstance on class with CLSID {faf53cc4-bd73-4e36-83f1-2b23f46e513e} and Name VSSEvent is [0x80040154, Class not registered].  
 >
-> Log Name:     Application  
-Source:         VSS  
-Event ID:       8193  
-Level:            Error  
+> Log Name:     Application  
+Source:         VSS  
+Event ID:       8193  
+Level:            Error  
 Description:  
-Volume Shadow Copy Service error: Unexpected error calling routine CoCreateInstance.  hr = 0x80040154, Class not registered.  
+Volume Shadow Copy Service error: Unexpected error calling routine CoCreateInstance.  hr = 0x80040154, Class not registered.  
 
 If you open the Windows Server Backup snap-in, you receive the following error message: 
 
@@ -50,7 +50,7 @@ This problem occurs because the registry path of the Eventcls.dll file is incorr
 
 ## Resolution
 
-To resolve this problem, follow these steps: 
+To resolve this problem, follow these steps: 
 
 1. Click **Start**, type **regedit** in the **Search programs and files** box, and then press ENTER. 
 2. Locate and then click the following registry key:

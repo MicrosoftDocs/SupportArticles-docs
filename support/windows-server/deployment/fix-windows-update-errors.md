@@ -185,7 +185,7 @@ To manually fix corruption errors that the System Update Readiness tool detects 
 1. Open %SYSTEMROOT%\Logs\CBS\CheckSUR.log.
 
     > [!NOTE]
-    > %SYSTEMROOT% is an environment variable that saves the folder in which Windows is installed. For example, generally the %SYSTEMROOT% folder is C:\Windows.
+    > %SYSTEMROOT% is an environment variable that saves the folder in which Windows is installed. For example, generally the %SYSTEMROOT% folder is C:\Windows.
 
 2. Identify the packages that the tool can't fix. For example, you may find the following in the log file:
 

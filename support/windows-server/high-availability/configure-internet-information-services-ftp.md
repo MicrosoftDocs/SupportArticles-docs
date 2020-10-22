@@ -15,7 +15,7 @@ ms.technology: HighAvailability
 ---
 # How to configure FTP for IIS in a Windows Server failover cluster
 
-This article describes how to configure FTP for Internet Information Services (IIS) 8.0 or a later version in a Windows Server failover cluster. The procedures in this article apply only to the FTP service.  
+This article describes how to configure FTP for Internet Information Services (IIS) 8.0 or a later version in a Windows Server failover cluster. The procedures in this article apply only to the FTP service.  
 
 For more information about how to configure Web services in a failover cluster, click the following article number to view the article in the Microsoft Knowledge Base:
 
@@ -26,7 +26,7 @@ _Original KB number:_ &nbsp;974603
 
 ## Configure high availability for IIS FTP servers using Failover Clustering
 
-1. Install the Web Server role on all cluster nodes. If you're installing on Windows Server 2012, don't include the "FTP Server" role. If you're installing on Windows Server 2012 R2 or a later version, include the in-box "FTP Server" role. For more information about IIS 8 deployment guide, visit the following website: [Open IIS Manager (IIS 8)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj635847%28v=ws.11%29)
+1. Install the Web Server role on all cluster nodes. If you're installing on Windows Server 2012, don't include the "FTP Server" role. If you're installing on Windows Server 2012 R2 or a later version, include the in-box "FTP Server" role. For more information about IIS 8 deployment guide, visit the following website: [Open IIS Manager (IIS 8)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj635847%28v=ws.11%29)
 
 2. Install the Failover Clustering feature on all cluster nodes and create the cluster. For more information, visit the following website: [Failover Cluster Deployment Guide](https://technet.microsoft.com/library/dd197477%28ws.10%29.aspx)
 
@@ -138,7 +138,7 @@ For the last step to configure high availability for FTP site, set up the generi
 1. On each cluster node, copy the script at the end of this article to Windows\System32\inetsrv\Clusftp7.vbs.
 2. Navigate to **Administrative Tools**, and then select **Failover Cluster Manager**.
 3. Connect to the cluster. If you are on one of the cluster nodes, the cluster will appear on the list automatically.
-4. Do the following:
+4. Do the following:
    - For Windows Server 2012, 2012 R2 and 2016, right-click **Roles** and then select **Configure Role** to create it.
 5. Click **Generic Script**.
 6. Select the script file from the following path:%systemroot%\System32\Inetsrv\Clusftp7.vbs

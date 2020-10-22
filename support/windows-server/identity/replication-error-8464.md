@@ -30,23 +30,23 @@ This article describes the symptoms, cause, and resolution for resolving issues 
 
 |Hex error code|0x00002110|
 |---|---|
-|Dec error code|8464|
+|Dec error code|8464|
 |Symbolic Name|ERROR_DS_DRA_INCOMPATIBLE_PARTIAL_SET|
-|Error Description|Synchronization attempt failed because the destination DC is currently waiting to synchronize new partial attributes from source. This condition is normal if a recent schema change modified the partial attribute set. The destination partial attribute set is not a subset of source partial attribute set.    |
+|Error Description|Synchronization attempt failed because the destination DC is currently waiting to synchronize new partial attributes from source. This condition is normal if a recent schema change modified the partial attribute set. The destination partial attribute set is not a subset of source partial attribute set.    |
 |Header|winerror.h|
 |||
 
-Additionally, an ActiveDirectory_DomainService or NTDS Replication event 1704 entry that resembles the following is logged:
+Additionally, an ActiveDirectory_DomainService or NTDS Replication event 1704 entry that resembles the following is logged:
 
-> Log Name            Directory Service  
-Event ID               1704  
-Event Source      ActiveDirectory_DomainService / NTDS Replication  
-Task Category    Global Catalog  
-Event Text           The global catalog initiated replication of a member of the partial attribute set for the following directory partition from the following domain controller.  
+> Log Name            Directory Service  
+Event ID               1704  
+Event Source      ActiveDirectory_DomainService / NTDS Replication  
+Task Category    Global Catalog  
+Event Text           The global catalog initiated replication of a member of the partial attribute set for the following directory partition from the following domain controller.  
 Directory partition:  
 DC=\<name>,DC=\<domain>,DC=com  
 Domain controller:  
-\<fqdn>  
+\<fqdn>  
 This is a special replication cycle due to the addition of one or more attributes to the partial attribute set.
 
 **Note** It is typical to see Active Directory replication status 8464 after you extend the schema or after you add new attributes to the partial attribute set (PAS). This message states that replication is delayed temporarily. Active Directory replication status 8464 goes away after the PAS finishes the update process.
@@ -59,7 +59,7 @@ For the details, see the More Information section.
 
 ## Resolution
 
-Because this is a standard part of PAS synchronization, resolution steps are not needed. See the More Information section for troubleshooting steps if this replication status persists in the environment for more than a week. 
+Because this is a standard part of PAS synchronization, resolution steps are not needed. See the More Information section for troubleshooting steps if this replication status persists in the environment for more than a week. 
 
 ## More information  
 
@@ -67,9 +67,9 @@ The details of the cause for status 8464
 
 The Schema definition for an attribute is stored in the Schema partition as an attributeSchema object. Checking the Replicate this attribute to the Global Catalog check box sets the isMemberOfPartialAttributeSet attribute to TRUE on the attributeSchema object. Any attributeSchema object that has this attribute set to TRUE will cause the corresponding attribute to be included in the Partial Attribute Set.
 
-When PAS synchronization occurs (that results from PAS extension), there is a specialized task in the replication task queue. The DRS_SYNC_PAS flag identifies this specialized task.
+When PAS synchronization occurs (that results from PAS extension), there is a specialized task in the replication task queue. The DRS_SYNC_PAS flag identifies this specialized task.
 
-An unoptimized Active Directory topology or Active Directory replication failures may result in a significant delay in the PAS update process. It is typical to see Active Directory replication status 8464 during the PAS update process.  
+An unoptimized Active Directory topology or Active Directory replication failures may result in a significant delay in the PAS update process. It is typical to see Active Directory replication status 8464 during the PAS update process.  
  How to check Active Directory replication status 8464 
 
 The Repadmin commands and other tools that provide an Active Directory replication status report state that a replication attempt is delayed with status 8464.
@@ -130,11 +130,11 @@ repadmin /showattr fsmo_schema: ncobj:schema: /filter:"(ismemberofpartialattribu
 
 4. Check event ID 1704 and 1702 as they indicate the PAS synchronization is complete in the Directory Service event log. Here is an example of event ID 1702:
 
-> Log Name            Directory Service  
-Event ID               1702  
-Event Source      ActiveDirectory_DomainService / NTDS Replication  
-Task Category    Global Catalog  
-Event Text           The global catalog completed synchronization of the partial attribute set for the following directory partition from the following domain controller.  
+> Log Name            Directory Service  
+Event ID               1702  
+Event Source      ActiveDirectory_DomainService / NTDS Replication  
+Task Category    Global Catalog  
+Event Text           The global catalog completed synchronization of the partial attribute set for the following directory partition from the following domain controller.  
 Directory partition:  
 DC=\<name>,DC=\<domain>,DC=com  
 Domain controller:  
@@ -150,7 +150,7 @@ This is a special replication cycle due to the addition of one or more attribute
    - If the destination domain controller has the updated PAS, but the source domain controller does not, the status 8464 will not clear until the source is updated. Or, you can update the source domain controller by manually starting replication with a domain controller that is up to date.   
  Pas_domain.txt instructions 
 
-The value of interest in the output is listed after the v1.cAttrs =  text. This numeric value displays how many attributes are included in the PAS. Compare these values among each global catalog (GC) for each partition. If all GCs display the same value, all GCs are in-sync (they either all have the updated PAS, or they all do not). If all values are the same, compare them with the values from output in other partitions or the dump schema, and count the list of attributes in the PAS.
+The value of interest in the output is listed after the v1.cAttrs =  text. This numeric value displays how many attributes are included in the PAS. Compare these values among each global catalog (GC) for each partition. If all GCs display the same value, all GCs are in-sync (they either all have the updated PAS, or they all do not). If all values are the same, compare them with the values from output in other partitions or the dump schema, and count the list of attributes in the PAS.
 
 The following is a sample log, where DC1 has not updated the partial attribute set for the CHILD partition. Also DC2 has completed the PAS update process. No data is logged for ChildDC1, because the partialattributeset attribute has no data due to ChildDC1 containing a full copy of the Child domain partition.
 
@@ -180,7 +180,7 @@ To achieve a count of the attributes from the repadmin output, follow these step
 1. Open the text file in Notepad. 
 2. Delete any blank lines at the beginning and end of the file. 
 3. Delete the line at the top of the file that begins with "Repadmin: running command /showatt." 
-4. Put your pointer on the last line of text in the file, then press the Ctrl + G keyboard shortcut to open up the **Go To Line**  dialog box. The line number in this window represents the count for attributes in the partial attribute set.   
+4. Put your pointer on the last line of text in the file, then press the Ctrl + G keyboard shortcut to open up the **Go To Line**  dialog box. The line number in this window represents the count for attributes in the partial attribute set.   
  Directory Service event log 
 
 Enable diagnostic logging for global catalog events in order to view additional detail about the partial attribute set update cycle. After enabling replication event verbosity, view the Directory Services event log.

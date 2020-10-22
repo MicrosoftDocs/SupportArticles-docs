@@ -30,14 +30,14 @@ In Windows 7, the default shutdown operation puts the system into the classic sh
 
 ### Windows 10
 
-In Windows 10, the default shutdown behavior puts the system into the hybrid shutdown (also known as Fast Startup) state (S4), and all devices are put into D3. In this scenario, WOL from S4 or S5 is unsupported. Network adapters are explicitly not armed for WOL in these cases because users expect zero power consumption and battery drain in the shutdown state. This behavior removes the possibility of invalid wake-ups when an explicit shutdown is requested. Therefore, WOL is supported only from sleep (S3), or when the user explicitly requests to enter hibernate (S4) state in Windows 10. Although the target system power state is the same between hybrid shutdown and hibernates (S4), Windows will only explicitly disable WOL when it's a hybrid shutdown transition, and not during a hibernate transition.
+In Windows 10, the default shutdown behavior puts the system into the hybrid shutdown (also known as Fast Startup) state (S4), and all devices are put into D3. In this scenario, WOL from S4 or S5 is unsupported. Network adapters are explicitly not armed for WOL in these cases because users expect zero power consumption and battery drain in the shutdown state. This behavior removes the possibility of invalid wake-ups when an explicit shutdown is requested. Therefore, WOL is supported only from sleep (S3), or when the user explicitly requests to enter hibernate (S4) state in Windows 10. Although the target system power state is the same between hybrid shutdown and hibernates (S4), Windows will only explicitly disable WOL when it's a hybrid shutdown transition, and not during a hibernate transition.
 
 > [!NOTE]
-> the firmware and hardware on some systems may support arming Network Interface Cards (NIC) for wake from S4 or S5, even though Windows isn't involved in the process.
+> the firmware and hardware on some systems may support arming Network Interface Cards (NIC) for wake from S4 or S5, even though Windows isn't involved in the process.
 
 ## More information
 
-In Windows 10, hybrid shutdown (also known as Fast Startup) (S4) stops user sessions but lets the contents of kernel sessions be written to the hard disk. This enables faster startups.
+In Windows 10, hybrid shutdown (also known as Fast Startup) (S4) stops user sessions but lets the contents of kernel sessions be written to the hard disk. This enables faster startups.
 
 To disable the S4 state in Windows 10, follow these steps.
 

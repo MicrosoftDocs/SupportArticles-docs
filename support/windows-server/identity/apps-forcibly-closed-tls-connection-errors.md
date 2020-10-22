@@ -22,23 +22,23 @@ _Original KB number:_ &nbsp; 4557473
 
 ## Symptoms
 
-When an application tries to open a connection to a SQL Server,  one of the following error messages is displayed:
+When an application tries to open a connection to a SQL Server,  one of the following error messages is displayed:
 
 > A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - An existing connection was forcibly closed by the remote host.)
 
 > A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)
 
-If you enabled [SChannel logging](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn786445%28v=ws.11%29#how-to-enable-schannel-event-logging) on the Server, you'll receive [Event ID 36888 (A Fatal Alert was generated)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn786445%28v=ws.11%29#event-id-36888-a-fatal-alert-was-generated) when the issue occurs.
+If you enabled [SChannel logging](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn786445%28v=ws.11%29#how-to-enable-schannel-event-logging) on the Server, you'll receive [Event ID 36888 (A Fatal Alert was generated)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn786445%28v=ws.11%29#event-id-36888-a-fatal-alert-was-generated) when the issue occurs.
 
  **Notes** 
 
 - Depending on the provider or driver that you're using, the error message may slightly vary.
-- This issue also occurs when an application running on Windows Server 2012 R2 tries to connect to SQL Server running on Windows Server 2019.
+- This issue also occurs when an application running on Windows Server 2012 R2 tries to connect to SQL Server running on Windows Server 2019.
 - Other client-server applications may encounter a similar issue.
 
 ## Cause
 
-Windows 10, version 1511 and later versions of Windows, including Window Server 2016 or Windows 10, version 1607 that has updates released on Feb 25thor later updates installed, contains a leading zero update. Meanwhile, all Windows versions that released before that don't contain the leading zero updates. 
+Windows 10, version 1511 and later versions of Windows, including Window Server 2016 or Windows 10, version 1607 that has updates released on Feb 25thor later updates installed, contains a leading zero update. Meanwhile, all Windows versions that released before that don't contain the leading zero updates. 
 
  The TLS client and server need to calculate keys exactly the same way otherwise they get different results. TLS connections randomly fail if leading zeros are computed differently by the TLS client and TLS Servers. 
 
@@ -59,7 +59,7 @@ The following list the operating system version according to the updates that ar
   - KB 4540670: March 10, 2020-KB4540670 (OS Build 14393.3564) 
   - Updates that supersede KB4537806 and KB4540670 for the respective OS versions 
 - Windows Server 2019 RTM and later versions. 
-- Windows 10, version 1511, and later versions of Windows 10 (see [release history](https://en.wikipedia.org/wiki/Windows_10_version_history)) 
+- Windows 10, version 1511, and later versions of Windows 10 (see [release history](https://en.wikipedia.org/wiki/Windows_10_version_history)) 
 
 ### Windows versions that don't contain the leading zero fixes for TLS_DHE
 

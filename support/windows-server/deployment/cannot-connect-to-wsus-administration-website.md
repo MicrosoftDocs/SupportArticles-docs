@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 2737219
 ## Symptoms
 
 - You are unable to connect to **WSUS Administration** website while opening "**Windows Server Update Service**"
-- In addition to this when you open Windows Small Business Server Console you get error message "**An error occurred while retrieving updates information**" under "**Updates**" tab.
+- In addition to this when you open Windows Small Business Server Console you get error message "**An error occurred while retrieving updates information**" under "**Updates**" tab.
 
 **You see HTTP Error 500 in IIS log file for WSUS Administration Website:**  
 2012-07-21 20:42:13 fe80::e3a4:2b81:92b4:c6e7%11 GET /selfupdate/iuident.cab - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 - 500 24 50 3715
@@ -35,7 +35,7 @@ _Original KB number:_ &nbsp; 2737219
 2012-07-21 20:42:16 fe80::e3a4:2b81:92b4:c6e7%11 POST /SimpleAuthWebService/SimpleAuth.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 547
 2012-07-21 20:42:16 fe80::e3a4:2b81:92b4:c6e7%11 POST /DssAuthWebService/DssAuthWebService.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 483
 2012-07-21 20:43:01 fe80::e3a4:2b81:92b4:c6e7%11 POST /ApiRemoting30/WebService.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+4.0.30319.1) 500 24 50 8
- **After enabeling Failed Request Tracing on "WSUS Administration" and "ApiRemoting30" Websites  for Http status code 500, results in the following errors.** `http://<ServerName>:8530/ApiRemoting30/WebService.asmx`
+ **After enabeling Failed Request Tracing on "WSUS Administration" and "ApiRemoting30" Websites  for Http status code 500, results in the following errors.** `http://<ServerName>:8530/ApiRemoting30/WebService.asmx`
 
 App Pool WsusPool
 Authentication NOT_AVAILABLE
@@ -59,15 +59,15 @@ ConfigExceptionInfo
 Notification BEGIN_REQUEST
 ErrorCode The request is not supported. (0x80070032)
  **Errors in Application Logs**  
-Log Name:      Application
-Source:        Windows Server Update Services
-Date:          7/22/2012 2:11:15 AM
-Event ID:      7053
+Log Name:      Application
+Source:        Windows Server Update Services
+Date:          7/22/2012 2:11:15 AM
+Event ID:      7053
 Task Category: None
-Level:         Error
-Keywords:      Classic
-User:          N/A
-Computer:      ServerName.domain.local
+Level:         Error
+Keywords:      Classic
+User:          N/A
+Computer:      ServerName.domain.local
 Description:
 The WSUS administration console has encountered an unexpected error. This may be a transient error; try restarting the administration console. If this error persists,
 Try removing the persisted preferences for the console by deleting the wsus file under %appdata%\Microsoft\MMC\.
@@ -80,15 +80,15 @@ The request failed with the error message:
 Source
 System.Web.Services
 Stack Trace:
-   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
-   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
-   at Microsoft.UpdateServices.Internal.ApiRemoting.ExecuteSPGetUpdateServerStatus(Int32 updateSources, Boolean includeDownstreamComputers, String updateScopeXml, String computerTargetScopeXml, String preferredCulture, Int32 publicationState, Int32 propertiesToGet)
-   at Microsoft.UpdateServices.Internal.DatabaseAccess.AdminDataAccessProxy.ExecuteSPGetUpdateServerStatus(UpdateSources updateSources, Boolean includeDownstreamComputers, String updateScopeXml, String computerTargetScopeXml, String preferredCulture, ExtendedPublicationState publicationState, UpdateServerStatusPropertiesToGet propertiesToGet)
-   at Microsoft.UpdateServices.Internal.BaseApi.UpdateServer.GetStatus(UpdateSources updateSources, Boolean includeDownstreamComputers, UpdateScope updatesToInclude, ComputerTargetScope computersToInclude, UpdateServerStatusPropertiesToGet propertiesToGet)
-   at Microsoft.UpdateServices.Internal.BaseApi.UpdateServer.GetReplicaStatus(UpdateSources updateSources)
-   at Microsoft.UpdateServices.UI.SnapIn.Common.CachedUpdateServerStatus.GetFreshObjectForCache()
-   at Microsoft.UpdateServices.UI.AdminApiAccess.CachedObject.GetFromCache()
-   at Microsoft.UpdateServices.UI.SnapIn.Pages.ServerSummaryPage.backgroundWorker_DoWork(Object sender, DoWorkEventArgs e)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at Microsoft.UpdateServices.Internal.ApiRemoting.ExecuteSPGetUpdateServerStatus(Int32 updateSources, Boolean includeDownstreamComputers, String updateScopeXml, String computerTargetScopeXml, String preferredCulture, Int32 publicationState, Int32 propertiesToGet)
+   at Microsoft.UpdateServices.Internal.DatabaseAccess.AdminDataAccessProxy.ExecuteSPGetUpdateServerStatus(UpdateSources updateSources, Boolean includeDownstreamComputers, String updateScopeXml, String computerTargetScopeXml, String preferredCulture, ExtendedPublicationState publicationState, UpdateServerStatusPropertiesToGet propertiesToGet)
+   at Microsoft.UpdateServices.Internal.BaseApi.UpdateServer.GetStatus(UpdateSources updateSources, Boolean includeDownstreamComputers, UpdateScope updatesToInclude, ComputerTargetScope computersToInclude, UpdateServerStatusPropertiesToGet propertiesToGet)
+   at Microsoft.UpdateServices.Internal.BaseApi.UpdateServer.GetReplicaStatus(UpdateSources updateSources)
+   at Microsoft.UpdateServices.UI.SnapIn.Common.CachedUpdateServerStatus.GetFreshObjectForCache()
+   at Microsoft.UpdateServices.UI.AdminApiAccess.CachedObject.GetFromCache()
+   at Microsoft.UpdateServices.UI.SnapIn.Pages.ServerSummaryPage.backgroundWorker_DoWork(Object sender, DoWorkEventArgs e)
 
 ## Cause
 
