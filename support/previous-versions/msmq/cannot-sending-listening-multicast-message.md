@@ -4,6 +4,7 @@ description: This article provides resolutions for the problem where MSMQ not se
 ms.date: 09/24/2020
 ms.prod-support-area-path: 
 ms.reviewer: adamwich
+ms.prod: .net
 ---
 # MSMQ not sending or listening for Multicast messages
 

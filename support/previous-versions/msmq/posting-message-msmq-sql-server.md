@@ -3,6 +3,7 @@ title: Posting message to MSMQ from SQL Server
 description: This article describes how to post message to MSMQ from SQL Server.
 ms.date: 09/24/2020
 ms.prod-support-area-path: 
+ms.prod: sql
 ---
 # Posting message to MSMQ from SQL Server
 
