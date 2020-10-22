@@ -1,3 +1,5 @@
+- name: Windows Client
+  href: welcome-windows-client.md
 - name: Active Directory
   items:
   - name: Schema update - known issues, best practies, workflow review
