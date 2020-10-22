@@ -1,8 +1,9 @@
 ---
-title: Windows server troubleshooting document
+title: Windows Server troubleshooting document
 description: This article lists troubleshooting articles for Windows server products.
+ms.prod: windows-server
 ms.topic: article
-ms.date: 09/08/2020
+ms.date: 10/21/2020
 ---
 # Windows server troubleshooting
 

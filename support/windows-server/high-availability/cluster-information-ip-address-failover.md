@@ -45,10 +45,6 @@ When the driver sends these requests, Windows NT specifies the IP address being 
 
 ## More information
 
-For more information on the Address Resolution Protocol (ARP) as discussed in RFC 826, you may obtain a copy on the Internet from the following source:
-
-[RFC 826](https://www.freesoft.org/cie/rfc/826/index.htm) 
-
 For additional information about related information, click the article number below to view the article in the Microsoft Knowledge Base:
 
 [MAC Address Changes for Virtual Server During a Failover with Clustering](/troubleshoot/windows-server/virtualization/mac-address-changes-for-virtual-server)

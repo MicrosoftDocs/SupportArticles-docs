@@ -112,5 +112,5 @@ Any other method, tool, or client management solution that distributes root CA c
 - [Certutil tool](/windows-server/administration/windows-commands/certutil)
 - [Certificate Stores](/windows-hardware/drivers/install/local-machine-and-current-user-certificate-stores)
 - [System Store Locations](/windows/win32/seccrypto/system-store-locations)
-- [Group Policy Preferences](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn581922)
+- [Group Policy Preferences](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn581922(v=ws.11))
 - [CertControlStore Crypto API](/windows/win32/api/wincrypt/nf-wincrypt-certcontrolstore)

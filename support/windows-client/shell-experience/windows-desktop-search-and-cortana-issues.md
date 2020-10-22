@@ -78,8 +78,7 @@ This issue occurs when the user disables the use of caches and databases through
 #### Resolution
 
 To work around this problem, change the configuration of Desktop Search through Group Policy. To do this, follow these steps: 
-1. Press the Windows key![Windows logo key](https://res2.windows.microsoft.com/resbox/en/6.2/Main/aa922834-ed43-40f1-8830-d5507badb56c_91.jpg)
-+ R to open the Run  box.
+1. Press the Windows key + R to open the Run  box.
 2. Type gpedit.msc, and then press Enter.
 3. In the Group Policy Editor, navigate to the following location:
 

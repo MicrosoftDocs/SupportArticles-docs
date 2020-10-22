@@ -28,8 +28,6 @@ In some environments, Group Policy Objects (GPOs) may block applications from au
 
 :::image type="content" source="./media/archived-application-cant-be-restored/gpo-preventing-app-updating.png" alt-text="Message that indicates that a GPO is preventing an app from updating.":::
 
-![Message that indicates that a GPO is preventing an app from updating](/media/4574722_en_3.png)
-
 In these cases, you have to contact your system administrator to obtain an updated version of the application. The information in this article helps you to do this.
 
 ## More information

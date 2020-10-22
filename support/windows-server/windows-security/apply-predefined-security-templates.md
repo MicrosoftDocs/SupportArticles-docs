@@ -86,5 +86,4 @@ For more detailed information about all predefined templates in Windows Server 2
 
 ## References
 
-For additional information about how to define security templates, click the following article numbers to view the articles in the Microsoft Knowledge Base: [816297](/EN-US/help/816297) HOW TO: Define Security Templates By Using the Security Templates Snap-In in Windows Server 2003  
- For additional information about how to analyze system security, click the following article numbers to view the articles in the Microsoft Knowledge Base: [816580](/EN-US/help/816580) HOW TO: Analyze System Security in Windows Server 2003  
+For additional information about how to define security templates, click the following article numbers to view the articles in the Microsoft Knowledge Base: [816297](/troubleshoot/windows-server/identity/define-security-templates-using-security-templates-snap-in) HOW TO: Define Security Templates By Using the Security Templates Snap-In in Windows Server 2003
