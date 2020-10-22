@@ -37,7 +37,7 @@ Install the latest root certificates. The root certificates may not automaticall
 
 Update trusted root certificates and disallowed **Certificate Trust Lists (CTLs)** within disconnected environments.
 
-However, within disconnected environments, administrators must set up either a file share or a web server to host the files internally. Group Policy settings are also updated so that the clients and servers use the internal file share or web server instead of the internet location.
+Within disconnected environments, administrators must set up either a file share or a web server to host the files internally. Group Policy settings are also updated so that the clients and servers use the internal file share or web server instead of the internet location.
 
 Systems that are running within disconnected environments have to have the new roots added to the **Trusted Root Certification Authorities** store, and have the intermediates added to the **Intermediate Certification Authorities** store.
 
@@ -77,7 +77,7 @@ By default, the automatic root update mechanism is enabled in different versions
 
  For more information, see [Azure TLS certificate changes](https://docs.microsoft.com/azure/security/fundamentals/tls-certificate-changes) and [Azure IoT TLS: Changes are coming](https://techcommunity.microsoft.com/t5/internet-of-things/azure-iot-tls-changes-are-coming-and-why-you-should-care/ba-p/1658456).
 
-## Next steps
+### Next steps
 
 For additional information about connectivity requirements and troubleshooting for **Configuration Manager**, see the following items:
 
