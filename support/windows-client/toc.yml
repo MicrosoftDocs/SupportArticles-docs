@@ -88,7 +88,7 @@
     items:
     - name: Event ID 158 is logged for identical disk GUIDs
       href: ./backup-and-storage/event-id-158-for-identical-disk-guids.md
-    - name: Garmin USB devices don't work 
+    - name: Garmin USB devices don't work
       href: ./backup-and-storage/garmin-usb-devices-not-working.md
   - name: System Restore or resetting your computer
     items:
@@ -150,7 +150,7 @@
       href: ./deployment/error-when-you-access-usb-storage-device.md
     - name: Event ID 7000 or 7026 after starting a computer
       href: ./deployment/system-log-event-id-7000-7026.md
-    - name: Fail to attach PCI Express expansion chassis 
+    - name: Fail to attach PCI Express expansion chassis
       href: ./deployment/error-attach-pci-express-expansion-chassis.md
     - name: Firmware update failures in Windows 8.1
       href: ./deployment/firmware-updates-fail-windows-8dot1.md
@@ -198,7 +198,7 @@
       href: ./deployment/analyze-sfc-program-log-file-entries.md
     - name: Automatic Updates can't download updates
       href: ./deployment/automatic-updates-cannot-download-updates-event-16.md
-    - name: Cannot use the ImageX.exe tool for backup 
+    - name: Cannot use the ImageX.exe tool for backup
       href: ./deployment/cannot-use-imagex-tool-backup.md
     - name: Can't select the "Upgrade" option when installing Windows Vista
       href: ./deployment/unavailable-upgrade-option-install-windows.md
@@ -230,7 +230,7 @@
       href: ./deployment/address-disk-space-issues-caused-by-winsxs.md
     - name: Install Service Packs and Hotfixes
       href: ./deployment/install-service-packs-hotfixes.md
-    - name: Package Manager can install only the first package 
+    - name: Package Manager can install only the first package
       href: ./deployment/package-manager-cannot-manage-two-more-packages.md
     - name: Previously released updates are reoffered
       href: ./deployment/previously-released-updates-reoffered.md
@@ -248,7 +248,7 @@
       href: ./deployment/update-windows-update-agent.md
     - name: view system registry with 64-bit versions of Windows
       href: ./deployment/view-system-registry-with-64-bit-windows.md
-    - name: Windows Update automatically downloads and installs updates 
+    - name: Windows Update automatically downloads and installs updates
       href: ./deployment/updates-automatically-downloaded.md
     - name: Windows Update hangs
       href: ./deployment/windows-update-hangs-updates-uninstalled.md
@@ -274,7 +274,7 @@
       href: ./deployment/windows-not-parse-process-unattend-answer-file.md
     - name: HAL_INITIALIZATION_FAILED error on VMWare VM
       href: ./deployment/installation-error-hal-initialization-failed.md
-    - name: How to customize the default local user profile when creating an image 
+    - name: How to customize the default local user profile when creating an image
       href: ./deployment/customize-default-local-user-profile-prepare-image.md
     - name: How to edit the Boot.ini file in Windows 2000
       href: ./deployment/edit-boot-ini-file-windows-2000.md
@@ -292,10 +292,10 @@
       href: ./deployment/unattended-setup-parameters-for-unattend-dot-txt.md
     - name: Windows optional component setup tool
       href: ./deployment/use-ocsetup-to-install-remove-components.md
-    - name: Windows SIM can't generate a catalog
-      href: ./deployment/windows-sim-unable-generate-catalog-error.md
     - name: Windows setup log file locations
       href: ./deployment/windows-setup-log-file-locations.md
+    - name: Windows SIM can't generate a catalog
+      href: ./deployment/windows-sim-unable-generate-catalog-error.md
     - name: WinRE can't be built after deploying an image
       href: ./deployment/winre-cannot-built-deploy-image-captured-non-uefi-computer.md
 - name: Group Policy
@@ -364,10 +364,10 @@
       href: ./networking/dhcp-clients-blocked-dai-enabled-network.md
   - name: Folder redirection and Offline Files and Folders (CSC)
     items:
-    - name: Can't redirect Documents folder to the home directory 
-      href: ./networking/redirect-users-documents-folder-to-their-home-directory-fail.md
     - name: Can't open files offline
       href: ./networking/error-open-files-offline-offline-files-wip.md
+    - name: Can't redirect Documents folder to the home directory
+      href: ./networking/redirect-users-documents-folder-to-their-home-directory-fail.md
     - name: Change the location of CSC folder
       href: ./networking/change-csc-folder-location-with-cachelocation-registry.md
     - name: CSCCMD tool Version 1.1. functions and features
@@ -390,7 +390,7 @@
     items:
     - name: CMAK-based VPN client doesn't work
       href: ./networking/cmak-based-vpn-doesnt-work.md
-    - name: Default gateway route doesn't appear in Routing Table 
+    - name: Default gateway route doesn't appear in Routing Table
       href: ./networking/default-gateway-route-not-appear.md
     - name: DirectAccess clients can't connect by IP-HTTPS
       href: ./networking/error-directaccess-clients-connect-over-ip-https.md
@@ -500,7 +500,7 @@
       href: ./performance/nmi-hardware-failure-error.md
     - name: Read small memory dump files
       href: ./performance/read-small-memory-dump-file.md
-    - name: Stop error 0xE6 for a wireless device driver 
+    - name: Stop error 0xE6 for a wireless device driver
       href: ./performance/stop-error-0xe6-wireless-device-driver-dmar.md
     - name: Tablet device creates only a minidump file
       href: ./performance/tablet-device-creates-minidump-file.md
@@ -528,6 +528,10 @@
       href: ./performance/system-configuration-utility-troubleshoot-configuration-errors.md
     - name: Windows Experience Index shows 1.0
       href: ./performance/windows-experience-index-shows-1-dot-0.md
+  - name: Servicing
+    items:
+    - name: Push-button reset fails because language resources are missing
+      href: ./performance/pbr-reset-fails-language-resources-missing.md
   - name: Shutdown is slow or hangs
     items:
     - name: Shuts down slowly when set to clear the virtual memory pagefile
@@ -540,11 +544,9 @@
       href: ./performance/speed-up-your-computer.md
     - name: Memory leak in remote registry service
       href: ./performance/memory-leak-remote-registry-service.md
-    - name: Push-button reset fails because language resources are missing
-      href: ./performance/pbr-reset-fails-language-resources-missing.md
     - name: Troubleshooting slow file copying in Windows
       href: ./performance/troubleshooting-slow-file-copying-in-windows.md
-- name: Printing 
+- name: 'Printing '
   items:
   - name: 'Errors and troubleshooting: General issues'
     items:
@@ -616,10 +618,10 @@
       href: ./shell-experience/larger-windowsdotedb-file.md
   - name: Desktop Shell
     items:
-    - name:  Black screen when unlocking a computer
-      href: ./shell-experience/windows-7-black-screen-unlock-computer.md
     - name: An x in App titles in the lower-right corner
       href: ./shell-experience/x-app-titles-lower-right-corner.md
+    - name: Black screen when unlocking a computer
+      href: ./shell-experience/windows-7-black-screen-unlock-computer.md
     - name: Blank screen with no Start Menu
       href: ./shell-experience/windows-logon-process-failed-spawn-user-app.md
     - name: Fail to execute commands with RunOnce and RunOnceEx
@@ -684,6 +686,8 @@
       href: ./shell-experience/manage-lock-screen-image.md
     - name: Monitor powers off when computer is locked
       href: ./shell-experience/monitor-powers-off-when-pc-locked.md
+  - name: Modern, Inbox and Microsoft Store Apps
+    items:
     - name: Can't open Microsoft Store when making a VPN connection
       href: ./shell-experience/microsoft-store-not-open-domain-joine-computer-vpn.md
     - name: Can't play audio in a system with DisplayPort
@@ -692,7 +696,7 @@
       href: ./shell-experience/cannot-remove-uninstall-or-reinstall-microsoft-store-app.md
     - name: Can't start Microsoft Store apps
       href: ./shell-experience/error-start-store-apps.md
-    - name: Microsoft Store app removed unexpectedly 
+    - name: Microsoft Store app removed unexpectedly
       href: ./shell-experience/pre-installed-microsoft-store-app-removed-logon.md
     - name: Microsoft Store Apps fail to start
       href: ./shell-experience/microsoft-store-apps-fail-to-start.md
@@ -740,7 +744,7 @@
       href: ./system-management-components/errors-when-you-run-winrm-commands.md
     - name: How to configure WINRM for HTTPS
       href: ./system-management-components/configure-winrm-for-https.md
-  - name: WMI 
+  - name: WMI
     items:
     - name: Failed logon event when running remote WMI
       href: ./system-management-components/failed-logon-event-when-running-remote-wmi.md
@@ -812,32 +816,34 @@
       href: ./virtualization/hyper-v-not-start-vm-after-upgrade.md
 - name: Windows 7 EoS FAQ
   items:
-  - name: E5 ESU offers
-    items:
-    - name: FAQ about Windows 7 ESU offers for E5 customers
-      href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.md
-  - name: General information
-    items:
-    - name: FAQ about the end of support for Windows 7
-      href: ./windows-7-eos-faq/windows-7-end-support-faq-general.md
   - name: Main page
     items:
     - name: IT Pro FAQ about the end of support for Windows 7
       href: ./windows-7-eos-faq/windows-7-end-support-faq.md
-  - name: Troubleshoot issues in ESU
+  - name: General information
     items:
-    - name: Troubleshoot issues in Extended Security Updates
-      href: ./windows-7-eos-faq/troubleshoot-extended-security-updates-issues.md
+    - name: FAQ about the end of support for Windows 7
+      href: ./windows-7-eos-faq/windows-7-end-support-faq-general.md
   - name: Windows 7 Extended Security Updates (ESU)
     items:
     - name: FAQ about Extended Security Updates for Windows 7
       href: ./windows-7-eos-faq/windows-7-extended-security-updates-faq.md
+  - name: E5 ESU offers
+    items:
+    - name: FAQ about Windows 7 ESU offers for E5 customers
+      href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.md
+  - name: Troubleshoot issues in ESU
+    items:
+    - name: Troubleshoot issues in Extended Security Updates
+      href: ./windows-7-eos-faq/troubleshoot-extended-security-updates-issues.md
 - name: Windows Security
   items:
   - name: Account lockouts
     items:
     - name: Access computer after administrator account is disabled
       href: ./windows-security/access-computer-after-administrator-disabled.md
+  - name: Bitlocker
+    items:
     - name: Earlier Windows versions don't start after "Setup Windows and Configuration Manager"
       href: ./windows-security/earlier-versions-not-start-use-pre-provision-bitlocker.md
     - name: TPM is in reduced functionality mode
@@ -874,5 +880,7 @@
     items:
     - name: Events 14 and 17 for TPM command failure or non-recoverable error
       href: ./windows-security/tpm-device-driver-error-log.md
+  - name: Windows Firewall with Advanced Security (WFAS)
+    items:
     - name: Enable diagnostic logging for Windows Security Center
       href: ./windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md
