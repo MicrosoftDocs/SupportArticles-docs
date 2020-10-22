@@ -9,9 +9,9 @@ ms.prod-support-area-path:
 
 ## Symptoms
 
-You observe connectivity issues occur on a Microsoft Endpoint Configuration Manager service connection point role. Additionally, you may experience either of the following symptoms:
+You experience connectivity issues on a Microsoft Endpoint Configuration Manager service connection point role. When these issues occur, you experience either of the following symptoms:
 
-- During uploads or syncs to Configuration Manager cloud services, the following status message IDs that indicate a communications failure are generated:
+- During uploads or syncs to Configuration Manager cloud services, you receive the following status message IDs that indicate a communications failure:
 
   - **9605: DMP_UPLOADER_UPLOAD_FAILED**
   - **9607: DMP_UPLOADER_UPLOAD_EXCEPTION**
