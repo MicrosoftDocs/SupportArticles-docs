@@ -1,6 +1,6 @@
 ---
 title: Sysprep will not run correctly on a Windows 10 device that has been MDM enrolled
-description: Provides tips for troubleshooting when Sysprep will not run correctly on a Windows 10 device that has been MDM enrolled.
+description: Provides tips for troubleshooting when Sysprep will not run correctly on a Windows 10 device that has been enrolled in Mobile Device Management.
 author: v-miegge
 ms.author: jchornbe
 ms.reviewer: jchornbe
@@ -10,7 +10,7 @@ ms.prod-support-area-path: Windows enrollment
 
 # Sysprep will not run correctly on a Windows 10 device that has been MDM enrolled
 
-Provides tips for troubleshooting when Sysprep will not run correctly on a Windows 10 device that has been MDM enrolled.
+Provides tips for troubleshooting when Sysprep will not run correctly on a Windows 10 device that has been enrolled in Mobile Device Management (MDM).
 
 ## Symptom
 
@@ -18,11 +18,11 @@ You are told to run **System Preparation** (Sysprep) tool on an operating system
 
 However, this removal doesn't occur for several key items:
 
-- Mobile Device Management (MDM) enrollment (such as **Intune**) certificates, identifiers, settings, etc.
+- MDM enrollment (such as **Intune**) certificates, identifiers, settings, etc.
 
 - Azure Active Directory (Azure AD) Join or Azure AD device enrollment certificates and IDs.
 
-In the case of MDM, this causes significant issues as multiple devices are given the same IDs, and don't receive the necessary configuration from the MDM server.
+This issue causes significant problems for MDM as multiple devices are given the same IDs, and don't receive the necessary configuration from the MDM server.
 
 ## Cause
 
@@ -36,7 +36,7 @@ Example: If you join a Windows 10 installation to Azure AD, or enroll it in Intu
 
 Before you can duplicate or clone a Windows installation (whether physically duplicating the disk drive, or using a VM-based snapshot, or a differencing disk technique), the system must be generalized using **Sysprep.exe**.
 
-When you deploy a duplicated or imaged Windows installation, it is required that Sysprep is used before the capture of the image. Microsoft doesn't provide support for computers that are set up by using SID-duplicating tools other than Sysprep. You must re-seal, or generalize, a Windows image before you capture and deploy the image.
+When you deploy a duplicated or imaged Windows installation, it is required that Sysprep is used before the capture of the image. Microsoft doesn't provide support for computers that are set up by using SID-duplicating tools other than Sysprep. Re-seal, or generalize, a Windows image before you capture and deploy the image.
 
 For example, when you use the Sysprep tool to generalize an image, Sysprep removes all system-specific information and resets the computer. If you transfer a Windows image to a different computer, you must run the Sysprep command together with the `/generalize` option, even if the other computer has the same hardware configuration. The Sysprep `/generalize` command removes unique information from your Windows installation so that you can reuse that image on a different computer.
 
