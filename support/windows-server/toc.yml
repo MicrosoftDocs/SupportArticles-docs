@@ -2048,7 +2048,7 @@
       href: ./user-profiles-and-logon/error-sem-timeout-folder-redirection.md
     - name: Folder Redirection settings aren't applied
       href: ./user-profiles-and-logon/folder-redirection-settings-not-applied.md
-  - name: PR 612
+  - name: User Logon fails
     items:
     - name: Windows logs on and logs off immediately
       href: ./user-profiles-and-logon/cannot-log-on-windows.md
