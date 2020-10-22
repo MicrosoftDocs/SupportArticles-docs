@@ -28,7 +28,7 @@ Exchange Online supports [integration with third-party Sendmail-based filtering 
 
 A popular configuration is shown in the following figure. It involves connecting Proofpoint and Exchange Online so that Proofpoint provides the first level of email filtering and then sends email messages to Exchange Online. 
 
-:::image type="content" source="media/configure-proofpoint-with-exchange/configure-proofpoint-with-exchange.png" alt-text="Visual representation of the email workflow from Proofpoint to Exchange Online. ":::
+:::image type="content" source="media/configure-proofpoint-with-exchange/configure-proofpoint-with-exchange.png" alt-text="A popular configuration of email filtering from Proofpoint to Exchange Online. ":::
 
 In this configuration, if Proofpoint encounters a deferral from Exchange Online, its default settings prevent it for a long time from retrying the email messages. This situation causes long mail delays of an hour or more.
 
@@ -53,8 +53,8 @@ To avoid this situation, do the following:
 Exchange Online uses only two or three unique public hosts or IP addresses for each tenant (that correspond to different datacenters). These hosts or IPs are then load-balanced to hundreds of computers. If Proofpoint experiences a few **ConnectionReset** errors or other deferrals from one host, it identifies that host as bad, logs an entry in the HostStatus file, and does not retry any queued messages to that host for a long time. This situation blocks other messages in the queue to that host. In a configuration in which all incoming mail is sent to Proofpoint and then to Exchange Online, blocking mail to one of the two or three public hosts or IPs can cause a large delay in the mail delivery. 
 
 You can check the following locations to determine whether Proofpoint has identified a host as bad:
-- HostStatus file: An entry is logged in this file. 
-- SMTP log: 
+- **HostStatus file:** An entry is logged in this file. 
+- **SMTP log:** 
     - In the SMTP log, the “stat=Deferred” entry is logged instead of the “stat=Deferred: 400-series SMTP response code” entry that is usually returned by the downstream MTA or SMTP server. 
 
     - The corresponding     log lines from the SMTP log indicate that a specific message was retried only a long time after the configured message retry interval.
