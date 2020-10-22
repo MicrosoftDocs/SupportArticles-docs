@@ -1,3 +1,5 @@
+- name: Windows Server
+  href: welcome-windows-server.md
 - name: Active Directory
   items:
   - name: Active Directory backup, restore, or disaster recovery
