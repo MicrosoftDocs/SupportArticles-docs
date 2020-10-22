@@ -71,11 +71,7 @@
       href: ../email-delivery/cannot-send-mail-mepf.md
     - name: Automatically forward email in transport rule
       href: ../email-delivery/autoforward-mail-exclusions-not-honored-transport-rule.md
-<<<<<<< Updated upstream
-    - name: Configure Proofpoint Email Protection with Exchange
-=======
-    - name: Configure Proofpoint Email Protection with Exchange Online
->>>>>>> Stashed changes
+    - name: Configure Proofpoint Email Protection with Exchange Online 
       href: ../email-delivery/configure-proofpoint-with-exchange.md
     - name: Email sent to EXO deferred with ATTR35
       href: ../email-delivery/wrong-office-365-region-exo.md
