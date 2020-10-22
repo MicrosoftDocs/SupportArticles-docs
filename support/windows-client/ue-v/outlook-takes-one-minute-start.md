@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: narafa, winciccore, kaushika
-ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.prod-support-area-path: UEV 2.1
+ms.technology: User Experience Virtualization (UE-V)
 ---
 # Unexpected one-minute startup of Outlook if UE-V is enabled
 

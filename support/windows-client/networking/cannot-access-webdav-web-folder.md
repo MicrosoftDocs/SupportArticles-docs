@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, waltere
-ms.prod-support-area-path: TCP/IP communications
+ms.prod-support-area-path: WebClient and WebDAV
 ms.technology: Networking
 ---
 # You can't access a WebDAV Web folder from a Windows-based client computer
