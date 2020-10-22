@@ -54,7 +54,7 @@ To restore the **OneDrive Sharing** option, follow these steps:
 
 ## More information
 
-For more information, see the article about the [Set-SPOSite cmdlet](https://docs.microsoft.com/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps).
+For more information, see the article about the [Set-SPOSite cmdlet](https://docs.microsoft.com/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps&preserve-view=true).
 
 ### How to find the user's MySite URL
 
