@@ -43,3 +43,7 @@
       href: ../hybrid-phone-system/phone-contact-number-not-updated.md
     - name: Voicemail messages are not delivered
       href: ../hybrid-phone-system/voicemails-not-delivered.md
+  - name: Sign-in
+    items:
+    - name: Can't sign in using SSO
+      href: ../hybrid-sign-in/sso-no-longer-works.md
