@@ -51,8 +51,8 @@ When you assign appropriate licenses to users, you should follow these steps:
 
 For more information about Outlook Customer Manager, see the following articles:
 
-- [Get started with Outlook Customer Manager](https://support.office.com/article/get-started-with-outlook-customer-manager-48331ce0-c356-4186-8987-c86676520dc7?ui=en-US&rs=en-US&ad=US)
-- [Outlook Customer Manager FAQ](https://support.office.com/article/outlook-customer-manager-faq-88e127ca-43a1-4c9d-8d52-6ad3a80f9c32?ui=en-US&rs=en-US&ad=US)
+- [Get started with Outlook Customer Manager](https://support.microsoft.com/office/ab120d0e-f5f6-4a7d-b4d1-9b93997e5c67)
+- [Outlook Customer Manager FAQ](https://techcommunity.microsoft.com/t5/outlook-customer-manager/faq-frequently-asked-questions-about-outlook-customer-manager/m-p/29680)
 
 ## More information
 

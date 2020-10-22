@@ -40,4 +40,4 @@ This problem occurs because the public folder mailbox and associated user accoun
 
 ## Resolution
 
-To fix this problem, use [Active Directory Migration Tool](https://www.microsoft.com/download/details.aspx?id=56570) to move the AD account that is associated with the public folder mailbox to the same AD domain that hosts Exchange Server, and then run the **Complete-MigrationBatch** command again.
+To fix this problem, use [Active Directory Migration Tool](https://support.microsoft.com/help/4089459) to move the AD account that is associated with the public folder mailbox to the same AD domain that hosts Exchange Server, and then run the **Complete-MigrationBatch** command again.
