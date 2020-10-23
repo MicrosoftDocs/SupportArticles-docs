@@ -234,16 +234,16 @@ The compliance scan output is written to the following location to which the upd
 
 #### Hardware (driver/firmware) updates
 
-| Component| Category| 1606 Version||
-|---|---|---|---|
-|C6320|BIOS|2.1.5||
-|R620|BIOS|2.5.4||
-|R620 v2|BIOS|2.5.4||
-|R630|BIOS|2.1.6||
-|R630|SAS HBA - Internal|6.603.07.00||
+|Component| Category|1606 Version|
+|---|---|---|
+|C6320|BIOS|2.1.5|
+|R620|BIOS|2.5.4|
+|R620 v2|BIOS|2.5.4|
+|R630|BIOS|2.1.6|
+|R630|SAS HBA - Internal|6.603.07.00|
 |C6320|Chipset|10.1.2.19|
 |R630|Chipset|10.1.2.19|
-|||||
+||||
 
 #### Updates for Windows Server 2012 R2 
 

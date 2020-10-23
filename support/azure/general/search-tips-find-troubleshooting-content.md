@@ -41,7 +41,7 @@ If the error is in a log, add the log name.
 
 For example: **System log AND "a user account is required"**  
 
-:::image type="content" source="./media/search-tips-find-troubleshooting-content/4550564_en_1.png" alt-text="System log AND "a user account is required"":::
+:::image type="content" source="./media/search-tips-find-troubleshooting-content/4550564_en_1.png" alt-text="System log AND a user account is required.":::
 
 Add the product name (for Windows 10 you can narrow to a version by adding the version number to your search string. Use assets like the [Wikipedia Windows 10 version history](https://en.wikipedia.org/wiki/Windows_10_version_history) to understand the different naming conventions for a given product and use that in your query. For example: **"domain join" AND 1903**
 
