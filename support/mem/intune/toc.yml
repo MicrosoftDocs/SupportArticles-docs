@@ -154,7 +154,7 @@
       href: azure-ad-device-registration-autopilot.md
     - name: Support tip - Comparison of methods for enrolling a Windows device in Intune
       href: enroll-devices-in-intune-tip.md
-    - name: Sysprep will not run correctly on a MDM enrolled Windows 10 device
+    - name: Sysprep will not run correctly on MDM enrolled Windows 10 devices
       href: troubleshoot-sysprep-windows-10-device-enrolled-mdm.md
     - name: Troubleshoot Windows device enrollment
       href: troubleshoot-windows-enrollment-errors.md
