@@ -36,7 +36,7 @@ If you use a command such as **repadmin /replicate** to trigger inbound replicat
 
 The **krbtgt_#####** account for the RODC has been deleted.
 
-Each RODC has its own **krbtgt_#####** account in Active Directory. In the account name, ##### represents a number that identifies the RODC. Typically, you don't have to interact with the **krbtgt_#####** accounts. When you promote or demote an RODC, Windows automatically manages the accounts. However, if an RODC fails and the metadata isn't cleaned up, an "orphan" **krbtgt_#####** account may remain in Active Directory.
+Each RODC has its own **krbtgt_#####** account in Active Directory. In the account name, ##### represents a number that identifies the RODC. The RODC uses this account to provide cryptographic isolation for the tickets that it issues. Typically, you don't have to interact with the **krbtgt_#####** accounts. When you promote or demote an RODC, Windows automatically manages the accounts. However, if an RODC fails and the metadata isn't cleaned up, an "orphan" **krbtgt_#####** account may remain in Active Directory.
 
 If an administrator tries to manually clean up orphan accounts, the issue described in the Symptoms section may occur. This issue typically means that a non-orphan **krbtgt_#####** account was deleted instead of an orphan account.
 
