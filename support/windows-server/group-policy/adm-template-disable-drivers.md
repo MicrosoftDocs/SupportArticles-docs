@@ -20,10 +20,6 @@ This article describes an ADM template that allows an Administrator to disable t
 _Original product version:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 555324
 
-## Community solutions content disclaimer
-
-Microsoft corporation and/or its respective suppliers make no representations about the suitability, reliability, or accuracy of the information and related graphics contained herein. all such information and related graphics are provided "as is" without warranty of any kind. Microsoft and/or its respective suppliers hereby disclaim all warranties and conditions with regard to this information and related graphics, including all implied warranties and conditions of merchantability, fitness for a particular purpose, workmanlike effort, title, and non-infringement. you specifically agree that in no event shall Microsoft and/or its suppliers be liable for any direct, indirect, punitive, incidental, special, consequential damages or any damages whatsoever including, without limitation, damages for loss of use, data or profits, arising out of or in any way connected with the use of or inability to use the information and related graphics contained herein, whether based on contract, tort, negligence, strict liability or otherwise, even if Microsoft or any of its suppliers has been advised of the possibility of damages.
-
 ## Symptoms
 
 By default, Group Policy doesn't offer a facility to easily disable drives containing removable media, such as USB ports, CD-ROM drives, Floppy Disk drives, and high capacity LS-120 floppy drives. But Group Policy can be extended to use customized settings by applying an ADM template. The ADM template in this article allows an Administrator to disable the respective drivers of these devices, ensuring that they can't be used.
@@ -113,3 +109,5 @@ For more information about applying Administrative Template files, including ins
 This template is considered a preference rather than a true policy and will tattoo the registry of client computers with its settings. If this template is moved out of scope of the Group Policy that applies it, the registry changes that it makes will remain. If you wish to reverse the settings made by this template, reverse the options to re-enable the drivers.
 
 Preference settings are hidden by default in the Group Policy template editor. When applying this template, follow these instructions to change the view settings that allow preferences to be viewed.
+
+[!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]

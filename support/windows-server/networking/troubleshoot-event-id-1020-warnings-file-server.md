@@ -68,9 +68,9 @@ File system delays below the 15-second threshold do not produce a warning event 
 
 ### Collect trace logs
 
-In order to further diagnose whether the problem originates from inside the Windows operating system  (for example, filter drivers) or from outside (for example, hardware, hypervisor, network, storage), take a Storport Trace and check the disk response times by using tools such as StorPortPacman. StorPort traces at the lower end of the Windows Storage Stack, and the file server or any other application encounters the delays at the upper end of the stack. For more information on the StorPortPacman tool, see [Deciphering Storport Traces 101](https://docs.microsoft.com/archive/blogs/askcore/deciphering-storport-traces-101) and [StorPortPacman](https://github.com/CSS-Windows/WindowsDiag/tree/master/SHA/StorPortPacman).  
+In order to further diagnose whether the problem originates from inside the Windows operating system  (for example, filter drivers) or from outside (for example, hardware, hypervisor, network, storage), take a Storport Trace and check the disk response times by using tools such as StorPortPacman. StorPort traces at the lower end of the Windows Storage Stack, and the file server or any other application encounters the delays at the upper end of the stack. For more information on the StorPortPacman tool, see [Deciphering Storport Traces 101](https://docs.microsoft.com/archive/blogs/askcore/deciphering-storport-traces-101) and [StorPortPacman](https://github.com/CSS-Windows/WindowsDiag/tree/master/SHA/StorPortPacman).  
 
- If you observe high maximum response time at StorPort level, it indicates the cause for the performance issues resides the outside the operating system. To find what latencies the system encounters from its logical disks at application (file server) level, you can enable Perfmon or WPR tracing. This also shows latencies below the 15 second warning Threshold. For more information, see [Measuring Disk Latency with Windows Performance Monitor (Perfmon)](https://docs.microsoft.com/archive/blogs/askcore/measuring-disk-latency-with-windows-performance-monitor-perfmon).
+ If you observe high maximum response time at StorPort level, it indicates the cause for the performance issues resides the outside the operating system. To find what latencies the system encounters from its logical disks at application (file server) level, you can enable Perfmon or WPR tracing. This also shows latencies below the 15 second warning Threshold. For more information, see [Measuring Disk Latency with Windows Performance Monitor (Perfmon)](https://docs.microsoft.com/archive/blogs/askcore/measuring-disk-latency-with-windows-performance-monitor-perfmon).
 
 ### Collect kernel dump
 
@@ -84,7 +84,7 @@ If a dump was successfully created, it can be found under %SystemRoot%\LiveKerne
 
 ## More information
 
-As the Server Message Block (SMB) server is accessing the local filesystem on behalf of its SMB clients, performance issues on the SMB server directly affect the clients.  
+As the Server Message Block (SMB) server is accessing the local filesystem on behalf of its SMB clients, performance issues on the SMB server directly affect the clients.  
 
 Delays on individual operations can accumulate to huge wait times for client applications due to several operations being executed sequentially.  
 

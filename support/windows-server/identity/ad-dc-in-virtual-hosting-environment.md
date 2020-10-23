@@ -15,7 +15,7 @@ ms.technology: ActiveDirectory
 ---
 # Things to consider when you host Active Directory domain controllers in virtual hosting environments
 
-This article describes the issues that affect a Microsoft Windows Server-based domain controller (DC) that runs as a guest operating system in virtual hosting environments, and the things to consider when a DC runs in a virtual hosting environment.
+This article describes the issues that affect a Microsoft Windows Server-based domain controller (DC) that runs as a guest operating system in virtual hosting environments, and the things to consider when a DC runs in a virtual hosting environment.
 
 _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 888794
@@ -30,7 +30,7 @@ A virtual hosting environment lets you run multiple guest operating systems on a
 - Network
 - Local devices
 
-By virtualizing these resources on a physical computer, host software lets you use fewer computers to deploy operating systems for testing and development, and in production roles. However, certain restrictions apply to an Active Directory DC that runs in a virtual hosting environment. These restrictions do not apply to a DC that runs on a physical computer.
+By virtualizing these resources on a physical computer, host software lets you use fewer computers to deploy operating systems for testing and development, and in production roles. However, certain restrictions apply to an Active Directory DC that runs in a virtual hosting environment. These restrictions do not apply to a DC that runs on a physical computer.
 
 This article discusses the things to consider when a Microsoft Windows Server-based DC runs in a virtual hosting environment. Virtual hosting environments include the following:
 
@@ -40,7 +40,7 @@ This article discusses the things to consider when a Microsoft Windows Server-ba
 - Citrix family of virtualization products.
 - Any product on the hypervisor list in the [Server Virtualization Validation Program](https://www.windowsservercatalog.com/svvp.aspx) (SVVP).
 
-For updated information about the current status of system robustness and security for virtualized DCs, see [Virtualizing Domain Controllers using Hyper-V](/windows-server/identity/ad-ds/get-started/virtual-dc/virtualized-domain-controllers-hyper-v). The Virtualizing Domain Controllers article provides general recommendations that apply to all configurations. Many of the considerations that are described in that article also apply to third-party virtualization hosts. It might include recommendations and settings that are specific to the hypervisor that you are using. Topics include these:
+For updated information about the current status of system robustness and security for virtualized DCs, see [Virtualizing Domain Controllers using Hyper-V](/windows-server/identity/ad-ds/get-started/virtual-dc/virtualized-domain-controllers-hyper-v). The Virtualizing Domain Controllers article provides general recommendations that apply to all configurations. Many of the considerations that are described in that article also apply to third-party virtualization hosts. It might include recommendations and settings that are specific to the hypervisor that you are using. Topics include these:
 
 - How to configure time synchronization for DCs.
 - How to manage disk volumes for data integrity.
@@ -56,37 +56,37 @@ This article supplements the Virtualizing Domain Controllers article by providin
 
 When you deploy an Active Directory DC on a physical computer, certain requirements must be satisfied throughout the DC's lifecycle. The deployment of a DC in a virtual hosting environment adds certain requirements and considerations. These include the following requirements and considerations:
 
-- The Active Directory service helps preserve the integrity of the Active Directory database if a power loss or other failure occurs. To do this, the service runs unbuffered writes, and tries to disable the disk write cache on the volumes that host the Active Directory database and log files. Active Directory also tries to work in this manner if it's installed in a virtual hosting environment.
+- The Active Directory service helps preserve the integrity of the Active Directory database if a power loss or other failure occurs. To do this, the service runs unbuffered writes, and tries to disable the disk write cache on the volumes that host the Active Directory database and log files. Active Directory also tries to work in this manner if it's installed in a virtual hosting environment.
 
     If the virtual hosting environment software correctly supports a SCSI-emulation mode that supports forced unit access (FUA), unbuffered writes that Active Directory performs in this environment are passed to the host operating system. If FUA is not supported, you must manually disable the write cache on all volumes of the guest operating system that host the Active Directory database, the logs, and the checkpoint file.
 
     > [!NOTE]
     >
     > - You must disable the write cache for all components that use Extensible Storage Engine (ESE) as their database format. These components include Active Directory, the File Replication Service (FRS), Windows Internet Name Service (WINS), and Dynamic Host Configuration Protocol (DHCP).
-    > - As a best practice, consider installing uninterruptable power supplies on virtual machine hosts.
+    > - As a best practice, consider installing uninterruptable power supplies on virtual machine hosts.
 
-- An Active Directory DC is intended to run Active Directory mode continuously as soon as it is installed. Do not stop or pause the virtual machine for an extended time. When the DC starts, end-to-end replication of Active Directory must occur. Make sure that all the DCs do inbound replication on all locally held Active Directory partitions according to the schedule that is defined on site links and connection objects. This is especially true for the number of days that is specified by the tombstone lifetime attribute.
+- An Active Directory DC is intended to run Active Directory mode continuously as soon as it is installed. Do not stop or pause the virtual machine for an extended time. When the DC starts, end-to-end replication of Active Directory must occur. Make sure that all the DCs do inbound replication on all locally held Active Directory partitions according to the schedule that is defined on site links and connection objects. This is especially true for the number of days that is specified by the tombstone lifetime attribute.
 
-    If this replication does not occur, you might experience an inconsistency in the contents of Active Directory databases on DCs in the forest. This inconsistency occurs because knowledge of deletes persists for the number of days that is defined by the tombstone lifetime. DCs that do not transitively complete inbound replication of Active Directory changes within this number of days cause objects to linger in Active Directory. Cleaning up lingering objects can be time-consuming, especially in multi-domain forests that include many DCs.
+    If this replication does not occur, you might experience an inconsistency in the contents of Active Directory databases on DCs in the forest. This inconsistency occurs because knowledge of deletes persists for the number of days that is defined by the tombstone lifetime. DCs that do not transitively complete inbound replication of Active Directory changes within this number of days cause objects to linger in Active Directory. Cleaning up lingering objects can be time-consuming, especially in multi-domain forests that include many DCs.
 
-- To recover from user, hardware, software, or environmental problems, an Active Directory DC requires regular system state backups. The default useful life of a system state backup is 60 or 180 days, depending on the operating system version and the service pack revision that is in effect during the installation. This useful life is controlled by the tombstone lifetime attribute in Active Directory. At least one DC in every domain in the forest should be backed up on a regular cycle per the number of days that is specified in the tombstone lifetime.
+- To recover from user, hardware, software, or environmental problems, an Active Directory DC requires regular system state backups. The default useful life of a system state backup is 60 or 180 days, depending on the operating system version and the service pack revision that is in effect during the installation. This useful life is controlled by the tombstone lifetime attribute in Active Directory. At least one DC in every domain in the forest should be backed up on a regular cycle per the number of days that is specified in the tombstone lifetime.
 
     In a production environment, you should make system state backups from two different DCs on a daily basis.
 
     > [!NOTE]
-    > When the virtual machine host takes a snapshot of a virtual machine, the guest operating system does not detect this snapshot as a backup. When the host supports the Hyper-V Generation ID, this ID would be changed when the image is started from a snapshot or replica. By default, the DC would consider itself to be restored from a backup.
+    > When the virtual machine host takes a snapshot of a virtual machine, the guest operating system does not detect this snapshot as a backup. When the host supports the Hyper-V Generation ID, this ID would be changed when the image is started from a snapshot or replica. By default, the DC would consider itself to be restored from a backup.
 
 ## Things to consider when you host DC roles on clustered hosts or when you use Active Directory as a back end in a virtual hosting environment
 
-- When your DCs run on clustered host servers, you would expect that they are fault tolerant. This same expectation applies to virtual server deployments that are not from Microsoft. However, there is one problem in this assumption: In order for the nodes, disks and other resources on a clustered host computer to autostart, authentication requests from the clustered host computer must be serviced by a DC in the clustered host computer's domain. Alternatively, part of the configuration of the clustered host must be stored in Active Directory.
+- When your DCs run on clustered host servers, you would expect that they are fault tolerant. This same expectation applies to virtual server deployments that are not from Microsoft. However, there is one problem in this assumption: In order for the nodes, disks and other resources on a clustered host computer to autostart, authentication requests from the clustered host computer must be serviced by a DC in the clustered host computer's domain. Alternatively, part of the configuration of the clustered host must be stored in Active Directory.
 
-    To make sure that such DCs can be accessed during cluster system startup, deploy at least two DCs in the clustered host computer's domain on an independent hosting solution that is outside this cluster deployment. You can use physical hardware or another virtual hosting solution that doesn't have an Active Directory dependency. For more information about this scenario, see [Avoid creating single points of failure](/windows-server/identity/ad-ds/get-started/virtual-dc/virtualized-domain-controllers-hyper-v#avoid-creating-single-points-of-failure).
+    To make sure that such DCs can be accessed during cluster system startup, deploy at least two DCs in the clustered host computer's domain on an independent hosting solution that is outside this cluster deployment. You can use physical hardware or another virtual hosting solution that doesn't have an Active Directory dependency. For more information about this scenario, see [Avoid creating single points of failure](/windows-server/identity/ad-ds/get-started/virtual-dc/virtualized-domain-controllers-hyper-v#avoid-creating-single-points-of-failure).
 
-- These DCs on separate platforms should be kept online and be network-accessible (in DNS and in all required ports and protocols) to the clustered hosts. In some cases, the only DCs that can service authentication requests during cluster startup reside on a clustered host computer that is being restarted. In this situation, authentication requests fail, and you'll have to manually recover the cluster.
+- These DCs on separate platforms should be kept online and be network-accessible (in DNS and in all required ports and protocols) to the clustered hosts. In some cases, the only DCs that can service authentication requests during cluster startup reside on a clustered host computer that is being restarted. In this situation, authentication requests fail, and you'll have to manually recover the cluster.
 
     > [!NOTE]
     > Do not assume that this situation applies to Hyper-V only. Third-party virtualization solutions can also use Active Directory as a configuration store or for authentication during certain steps of VM startup or configuration changes.
 
 ## Support for Active Directory DCs in virtual hosting environments
 
-For more information about the supportability of hosting DCs in Microsoft and third-party virtual hosting environments, see [Support policy for Microsoft software that runs on non-Microsoft hardware virtualization software](https://support.microsoft.com/help/897615/support-policy-for-microsoft-software-that-runs-on-non-microsoft-hardw).
+For more information about the supportability of hosting DCs in Microsoft and third-party virtual hosting environments, see [Support policy for Microsoft software that runs on non-Microsoft hardware virtualization software](https://support.microsoft.com/help/897615/support-policy-for-microsoft-software-that-runs-on-non-microsoft-hardw).

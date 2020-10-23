@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 819108
 
 ## Summary
 
-This article describes the registry settings and the Group Policy settings that affect periodic wide area network (WAN) traffic and metered link costs. If you have a dial-on-demand link, it might be unexpectedly enabled by periodic WAN traffic. You can configure the system's components and services to minimize periodic WAN traffic and to reduce metered link costs.
+This article describes the registry settings and the Group Policy settings that affect periodic wide area network (WAN) traffic and metered link costs. If you have a dial-on-demand link, it might be unexpectedly enabled by periodic WAN traffic. You can configure the system's components and services to minimize periodic WAN traffic and to reduce metered link costs.
 
 ## Symptoms
 
@@ -40,7 +40,7 @@ The following registry settings affect WAN traffic and metered-link costs. To mi
 
 ### The Browser service
 
-In Windows Server 2016, Windows 10, and later versions, the Browser service is generally no longer used. We recommend that you disable the service on all computers in your enterprise, if it is possible. If you can't do this, we recommend you turn down the communication intervals of the service.
+In Windows Server 2016, Windows 10, and later versions, the Browser service is generally no longer used. We recommend that you disable the service on all computers in your enterprise, if it is possible. If you can't do this, we recommend you turn down the communication intervals of the service.
 
 #### The domain master browser periodicity
 
@@ -128,7 +128,7 @@ Type: **DWORD**
 Default value (decimal, number of days): ****7**** (in Windows NT), ****30**** (Windows 2000/XP/2003)
 Recommended range: ****42**** to ****70****  
 For more information about the **MaximumPasswordAge** entry, see the following Knowledge Base article:
- [175468]()  Effects of machine account replication on a domain
+ [175468]()  Effects of machine account replication on a domain
 
 ### DFS registry settings
 
@@ -139,7 +139,7 @@ Entry: ****DfsDcNameDelay****
 Type: **DWORD**  
 Default value (minutes): ****15****  
 
-The valid range for **DfsDcNameDelay** is from **15**  to **360** minutes. No restart is required for the new settings to take effect.
+The valid range for **DfsDcNameDelay** is from **15**  to **360** minutes. No restart is required for the new settings to take effect.
 
 #### The frequency of PDC queries by DFS
 
@@ -179,7 +179,7 @@ The following policy settings control the frequency of Net Logon-based traffic a
 - **Negative DC Discovery Cache Settings**  
 - **Contact PDC on logon failure**  
 - **Expected dial-up delay on logon**  
- 
+ 
 
 #### Computer Configuration/Administrative Templates/Network
 
@@ -197,9 +197,9 @@ The following table shows the packet types and their default send intervals.
 
 |Packet type|Protocol|Transport|Interval|Notes|
 |---|---|---|---|---|
-|NetLogon|Server message block (SMB)|TCP/IP|300 seconds| |
-|Browse|SMB|TCP/IP|720 seconds| |
-|KeepAlive|Network basic input/output system (NetBIOS)|TCP/IP|3,600 seconds (60 minutes)| |
+|NetLogon|Server message block (SMB)|TCP/IP|300 seconds| |
+|Browse|SMB|TCP/IP|720 seconds| |
+|KeepAlive|Network basic input/output system (NetBIOS)|TCP/IP|3,600 seconds (60 minutes)| |
 |Echo NetBIOS over TCP/IP (NetBT)|NetBIOS|TCP/IP|120 seconds|If a session is idle, the file server sends an SMB echo frame at the specified interval.|
 |Windows Explorer|SMB|TCP/IP|32 seconds|This value controls the frequency that the file server sends an SMB echo frame to the client as long as the client has an outstanding long-term request open.|
 |KeepAlive|NetBIOS|TCP/IP|300 seconds (5 minutes)|This entry corresponds to<br/> `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlServices\NetBT\parameters\SessionKeepAlive` |
@@ -214,20 +214,20 @@ For more information, see the following Knowledge Base article:
  **** [3212430](https://support.microsoft.com/help/3212430) Security setting changes on folders don't appear immediately on DFSR replication partners in Windows Server
 
 ********  
-- If there is no data transfer between the client and the server for the KeepAlive interval (120 seconds), the server sends the first keep-alive probe. After two minutes of inactivity (idle tree connects), the file server sends a 1-byte session message. The TCP payload is "02." The TCP sequence number starts in the last received acknowledgment (ACK) minus 1 and ends in the current acknowledgment.
-- If the connection against the server is made by using named pipes, the server sends a "NetBT: SS - Session Keep Alive" message to the client approximately every 300 seconds.
+- If there is no data transfer between the client and the server for the KeepAlive interval (120 seconds), the server sends the first keep-alive probe. After two minutes of inactivity (idle tree connects), the file server sends a 1-byte session message. The TCP payload is "02." The TCP sequence number starts in the last received acknowledgment (ACK) minus 1 and ends in the current acknowledgment.
+- If the connection against the server is made by using named pipes, the server sends a "NetBT: SS - Session Keep Alive" message to the client approximately every 300 seconds.
 
 The "NetBT SessionKeepAlive" entry is in the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NetBT\Parameters` 
 
-- A Common Internet File System (CIFS) TCP session keep-alive message includes a byte that has a 0x85 value, followed by three bytes that have a 0 (zero) value in the NetBT header. The keep-alive message may be sent if no messages have been sent for a client-configurable interval.
- 
+- A Common Internet File System (CIFS) TCP session keep-alive message includes a byte that has a 0x85 value, followed by three bytes that have a 0 (zero) value in the NetBT header. The keep-alive message may be sent if no messages have been sent for a client-configurable interval.
+ 
 
 ### Default values for services
 
 |Component|Default interval setting|Notes|
 |---|---|---|
-|The Net Logon domain controller discovery|3,600 seconds (60 minutes)| |
-|DFS queries for domain controllers|900 seconds (15 minutes)| |
+|The Net Logon domain controller discovery|3,600 seconds (60 minutes)| |
+|DFS queries for domain controllers|900 seconds (15 minutes)| |
 |GPO refresh interval|90 minutes|See Group Policy Description: [https://gpsearch.azurewebsites.net/#341](https://gpsearch.azurewebsites.net/#341) |
 |Time service (W32time)|17 minutes|This value is found in the following registry subkeys:<br/><br/> `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32time\Config\MaxPollInterval** **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32time\Config\MinPollInterval` <br/><br/>Also see the Group Policy settings for Windows Time Service: [https://gpsearch.azurewebsites.net/#2612](https://gpsearch.azurewebsites.net/#2612) [https://gpsearch.azurewebsites.net/#2613](https://gpsearch.azurewebsites.net/#2613) |
 ||||
@@ -235,5 +235,5 @@ The "NetBT SessionKeepAlive" entry is in the following registry subkey: `HKEY_LO
 ## References
 
 For more information, see the following Knowledge Base articles:
-- [314053](https://support.microsoft.com/help/314053)  TCP/IP and NBT configuration parameters for Windows XP
-- [3212430](https://support.microsoft.com/help/3212430)  Security setting changes on folders don't appear immediately on DFSR replication partners in Windows Server
+- [314053](https://support.microsoft.com/help/314053)  TCP/IP and NBT configuration parameters for Windows XP
+- [3212430](https://support.microsoft.com/help/3212430)  Security setting changes on folders don't appear immediately on DFSR replication partners in Windows Server

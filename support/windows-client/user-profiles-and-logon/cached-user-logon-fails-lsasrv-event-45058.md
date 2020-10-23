@@ -53,7 +53,7 @@ Once the cached logon quota has been reached, the operating system will purge th
 
     If the CachedLogonsCount registry value is 0, then the system will not cache domain user credentials. See the **More information** section below to determine the configurable range.  
 
-2. If the user's credentials have been deleted OR cached credentials are disabled, establish network connectivity and name resolution with one or more domain controllers that can authenticate the user account's domain logon (VPN, and so on), then successfully authenticate the user's logon.
+2. If the user's credentials have been deleted OR cached credentials are disabled, establish network connectivity and name resolution with one or more domain controllers that can authenticate the user account's domain logon (VPN, and so on), then successfully authenticate the user's logon.
 
     If cached logons are enabled, a successful logon will cache that user's credentials while purging the oldest cached credentials.
 
@@ -63,7 +63,7 @@ Once the cached logon quota has been reached, the operating system will purge th
 
 ## More information
 
-By default, a Windows operating system will cache 10 domain user credentials locally. When the maximum number of credentials are cached and a new domain user logs on to the system, the oldest credential is purged from its slot to store the newest credential. This LsaSrv informational event simply records when this activity takes place. Once the cached credential is removed, it doesn't imply the account cannot be authenticated by a domain controller and cached again.
+By default, a Windows operating system will cache 10 domain user credentials locally. When the maximum number of credentials are cached and a new domain user logs on to the system, the oldest credential is purged from its slot to store the newest credential. This LsaSrv informational event simply records when this activity takes place. Once the cached credential is removed, it doesn't imply the account cannot be authenticated by a domain controller and cached again.
 
 The number of "slots" available to store credentials is controlled by:
 

@@ -35,7 +35,7 @@ Remote Desktop Web Connection ActiveX control is not installed. A connection can
 
 - When you access your Remote Access Computers page by using Windows Home Server, you may receive the following error message: Add-on Disabled This Webpage is requesting an add-on that is disabled. To enable the add-on click here.
 Additionally, when you try to connect to your Windows Home Server or to a home computer, you may receive the following error message:
-This feature requires that your Windows Home Server's website address https://my.homeserver.com be added to the Trusted Sites zone in Internet Explorer. To add your Windows Home Server's website address open Internet Explorer's Internet Options dialog box, click on the Security tab. Select "Trusted sites" and click on the Sites button. Add the website address https://my.homeserver.com with the Add button and then press Close.
+This feature requires that your Windows Home Server's website address `https://my.homeserver.com` be added to the Trusted Sites zone in Internet Explorer. To add your Windows Home Server's website address open Internet Explorer's Internet Options dialog box, click on the Security tab. Select "Trusted sites" and click on the Sites button. Add the website address `https://my.homeserver.com` with the Add button and then press Close.
 > [!NOTE]
 > After you add the home server URL to the trusted sites list, you receive the same error message and you still cannot connect.
 - When you access your Windows Home Server by using Website Remote Access, you may receive the following error message: Add-on Disabled This Webpage is requesting an add-on that is disabled. To enable the add-on click here.

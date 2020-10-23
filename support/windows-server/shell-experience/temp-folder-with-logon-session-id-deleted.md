@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4506040
 
 ## Symptoms
 
-In Windows Server 2019 that has Desktop Experience installed, the `%TEMP%` folder that includes the session ID is deleted if you remain logged on to the computer for more than seven days. Therefore, some applications that have to access `%TEMP%` do not work correctly after that time.
+In Windows Server 2019 that has Desktop Experience installed, the `%TEMP%` folder that includes the session ID is deleted if you remain logged on to the computer for more than seven days. Therefore, some applications that have to access `%TEMP%` do not work correctly after that time.
 
 To determine the `%TEMP%` folder path and verify that the folder was deleted, run the following commands (example output is shown):
 
@@ -52,7 +52,7 @@ You do not experience the issue in the following scenarios:
 
 This behavior is by design.
 
-The `%TEMP%` folder is deleted by the **SilentCleanup** task (Cleanmgr.exe) when the logon session exceeds seven days. **SilentCleanup** is scheduled daily together with Automatic Maintenance.
+The `%TEMP%` folder is deleted by the **SilentCleanup** task (Cleanmgr.exe) when the logon session exceeds seven days. **SilentCleanup** is scheduled daily together with Automatic Maintenance.
 
 To work around this issue, use one of the following methods.
 
@@ -77,7 +77,7 @@ To work around this issue, use one of the following methods.
 1. Exit Registry Editor.
 
 > [!NOTE]
-> After you make this configuration, you must manually delete the `%TEMP%` folder to avoid exhausting free space.
+> After you make this configuration, you must manually delete the `%TEMP%` folder to avoid exhausting free space.
 
 ## Workaround 2: Modify the LastAccess value
 
@@ -90,8 +90,8 @@ To work around this issue, use one of the following methods.
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Temporary Files`
 
 1. Right-click **LastAccess**, and then click **Modify**.
-1. In the **Value data** box, type a value in days. The range is **7** (default) through **4294967295** (maximum).
+1. In the **Value data** box, type a value in days. The range is **7** (default) through **4294967295** (maximum).
 1. Exit Registry Editor.
 
 > [!NOTE]
-> After you make this configuration, the **LastAccess** value controls the period during which Cleanmgr.exe deletes files in all temporary folders. If the **LastAccess** value is set too high, this may exhaust free space.
+> After you make this configuration, the **LastAccess** value controls the period during which Cleanmgr.exe deletes files in all temporary folders. If the **LastAccess** value is set too high, this may exhaust free space.

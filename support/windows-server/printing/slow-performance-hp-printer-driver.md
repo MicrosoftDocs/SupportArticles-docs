@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: (Errors and troubleshooting) General issues
+ms.prod-support-area-path: 'Errors and troubleshooting: General issues'
 ms.technology: PrintFaxScan
 ---
 # Slow performance when you try to print, when you open the printer properties, or when you open the printer preferences

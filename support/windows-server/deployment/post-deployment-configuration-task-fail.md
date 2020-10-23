@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2914651
 
 ## Symptoms
 
-After you install the Windows Server Essentials Experience role on Windows Server 2012 R2, the Post-Deployment Configuration task may fail. Additionally, you receive the following error:  
+After you install the Windows Server Essentials Experience role on Windows Server 2012 R2, the Post-Deployment Configuration task may fail. Additionally, you receive the following error:  
 
 Configuration encountered some issues 
  Please Click Retry. If the issue still exists, please refer to the help link for more troubleshooting steps. 
@@ -77,13 +77,13 @@ Service: WseMediaSvc
 This service account does not have the required user right "Log on as a service."  
 
 > [!NOTE]
-> The service account names that are mentioned in these errors can sometimes have an additional number added if the account was already present in Active Directory. For example, **ServerAdmin1$** or **MediaAdmin2$** may be added. You should note these service account names because you will use the same account name in the "Resolution" section. 
+> The service account names that are mentioned in these errors can sometimes have an additional number added if the account was already present in Active Directory. For example, **ServerAdmin1$** or **MediaAdmin2$** may be added. You should note these service account names because you will use the same account name in the "Resolution" section. 
 
 ## Cause
 
 This behavior can occur if your environment has the "Log on as a Service" Group Policy setting configured.
 
-While the Post-Deployment Configuration task is running, the Windows Server Essentials Management Service is configured to use the **ServerAdmin$** account to log on as a service and perform the task. After the Essentials Configurations are complete, the service is configured to use the **Local System** account.  
+While the Post-Deployment Configuration task is running, the Windows Server Essentials Management Service is configured to use the **ServerAdmin$** account to log on as a service and perform the task. After the Essentials Configurations are complete, the service is configured to use the **Local System** account.  
 
 Similarly, the Windows Server Essentials Media Streaming Service is configured to use the **MediaAdmin$** account. 
 

@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4494462
 
 ## Symptoms
 
-You configure a Windows Server 2019 or Windows Server 2016 computer as an event collector. You also configure a source-initiated subscription (and related Group Policy Objects) for event forwarding. However, the events are not forwarded and the event source computers log event messages that resemble the following:
+You configure a Windows Server 2019 or Windows Server 2016 computer as an event collector. You also configure a source-initiated subscription (and related Group Policy Objects) for event forwarding. However, the events are not forwarded and the event source computers log event messages that resemble the following:
 
 > Log Name: Microsoft-Windows-Forwarding/Operational  
 > Event ID: 105  
@@ -69,7 +69,7 @@ SDDL: D:(A;;GX;;;S-1-5-80-569256582-2953403351-2909559716-1301513147-412116970)
 > Listen: Yes  
 > Delegate: No SDDL: D:(A;;GX;;;S-1-5-80-569256582-2953403351-2909559716-1301513147-412116970)
 
-### Default URL permissions used by Windows Server 2012 R2
+### Default URL permissions used by Windows Server 2012 R2
 
 > Reserved URL: `http://+:5985/wsman/`  
 ‎User: NT SERVICE\WinRM  

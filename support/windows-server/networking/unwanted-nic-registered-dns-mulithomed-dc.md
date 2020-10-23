@@ -22,9 +22,9 @@ _Original KB number:_ &nbsp; 2023004
 
 ## Symptoms
 
-On Domain Controllers with more than one NIC where each NIC is connected to separate Network, there's a possibility that the Host A DNS registration can occur for unwanted NICs.
+On Domain Controllers with more than one NIC where each NIC is connected to separate Network, there's a possibility that the Host A DNS registration can occur for unwanted NICs.
 
-If the client queries for DC's DNS records and gets an unwanted record or the record of a different network that is not reachable to client, the client will fail to contact the DC causing authentication and many other issues.
+If the client queries for DC's DNS records and gets an unwanted record or the record of a different network that is not reachable to client, the client will fail to contact the DC causing authentication and many other issues.
 
 ## Cause
 

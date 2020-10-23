@@ -22,34 +22,34 @@ _Original KB number:_ &nbsp; 4022522
 
 ## Symptoms
 
-On a computer that is running Windows 10, Windows Server 2019, or Windows Server 2016, the following event is logged in the system event logs.
+On a computer that is running Windows 10, Windows Server 2019, or Windows Server 2016, the following event is logged in the system event logs.
 
-> Source:        Microsoft-Windows-DistributedCOM  
-Event ID:      10016  
+> Source:        Microsoft-Windows-DistributedCOM  
+Event ID:      10016  
 Description: The application-specific permission settings do not grant Local Activation permission for the COM Server application with CLSID  
 {D63B10C5-BB46-4990-A94F-E40B9D520160}  
 and APPID  
 {9CA88EE3-ACB7-47C8-AFC4-AB702511C276}  
 to the user NT AUTHORITY\SYSTEM SID (S-1-5-18) from address LocalHost (using LRPC) running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool.d
 
-> Source:        Microsoft-Windows-DistributedCOM  
-Event ID:      10016  
+> Source:        Microsoft-Windows-DistributedCOM  
+Event ID:      10016  
 Description: The application-specific permission settings do not grant Local Activation permission for the COM Server application with CLSID  
 {260EB9DE-5CBE-4BFF-A99A-3710AF55BF1E}  
 and APPID  
 {260EB9DE-5CBE-4BFF-A99A-3710AF55BF1E}  
 to the user machine\user SID (S-1-5-21-xxxxxxxxx-xxxxxxxxxx-xxxxxxxxxx-xxxx) from address LocalHost (using LRPC) running in the application container Microsoft.Windows.ShellExperienceHost_10.0.14393.726_neutral_neutral_cw5n1h2txyewy SID (S-1-15-2-xxxxxxxxx-xxxxxxxxxx-xxxxxxxxx-xxxxxxxxxx-xxxxxxxxxx-xxxxxxxxxx-xxxxxxxxxx). This security permission can be modified using the Component Services administrative tool.
 
-> Source:        Microsoft-Windows-DistributedCOM  
-Event ID:      10016  
+> Source:        Microsoft-Windows-DistributedCOM  
+Event ID:      10016  
 Description: The machine-default permission settings do not grant Local Activation permission for the COM Server application with CLSID  
 {C2F03A33-21F5-47FA-B4BB-156362A2F239}  
 and APPID  
 {316CDED5-E4AE-4B15-9113-7055D84DCC97}  
 to the user NT AUTHORITY\LOCAL SERVICE SID (S-1-5-19) from address LocalHost (using LRPC) running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool.
 
-> Source:        Microsoft-Windows-DistributedCOM  
-Event ID:      10016  
+> Source:        Microsoft-Windows-DistributedCOM  
+Event ID:      10016  
 Description: The application-specific permission settings do not grant Local Activation permission for the COM Server application with CLSID  
 {6B3B8D23-FA8D-40B9-8DBD-B950333E2C52}  
 and APPID  
@@ -103,7 +103,7 @@ If desired, advanced users and IT professionals can suppress these events from v
 </QueryList>
 ```
 
-In this query, **param4** corresponds to the COM Server application CLSID, **param5** corresponds to the APPID, and **param8** corresponds to the security context SID, all of which are recorded in the 10016 event logs.
+In this query, **param4** corresponds to the COM Server application CLSID, **param5** corresponds to the APPID, and **param8** corresponds to the security context SID, all of which are recorded in the 10016 event logs.
 
 For more information about manually constructing Event Viewer queries, see [Consuming Events](/windows/win32/wes/consuming-events).
 

@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4557869
 
 ## Symptoms
 
-In a situation when Windows Server 2016 Hyper-V is supporting Windows Server 2019 guest VMs with CNA adapters and MPIO, when paths are disconnected the connection is intermittent. I/O starts to fail when MPIO path failover occurs.
+In a situation when Windows Server 2016 Hyper-V is supporting Windows Server 2019 guest VMs with CNA adapters and MPIO, when paths are disconnected the connection is intermittent. I/O starts to fail when MPIO path failover occurs.
 This is a known issue.
 
 ## More information
@@ -37,7 +37,7 @@ A typical system configuration is similar to those in the Repro Steps that follo
 4. Wait 30 Seconds.
 5. Enable the CNA port.
 6. Wait 2 minutes.
-7. Repeat the port disables/enables above, test failures will be intermittent.
+7. Repeat the port disables/enables above, test failures will be intermittent.
 
 An IRP field being zeroed out at a lower level is being accessed while resubmitting at the MPIO level, causing the failures.
 

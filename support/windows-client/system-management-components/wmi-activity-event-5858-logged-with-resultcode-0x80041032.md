@@ -24,10 +24,10 @@ _Original KB number:_ &nbsp; 3124914
 
 When using Windows Server 2012 R2 with applications that issue WMI queries using `IWbemServices:ExecQuery`, the administrator may observe the following event in Event Viewer:
 
-> Log Name:  Microsoft-Windows-WMI-Activity/Operational  
-Source:    WMI-Activity  
-Event ID:  5858  
-Level:     Error  
+> Log Name:  Microsoft-Windows-WMI-Activity/Operational  
+Source:    WMI-Activity  
+Event ID:  5858  
+Level:     Error  
 Id = {guid}; ClientMachine = \<computer>; User = \<user>; ClientProcessId = \<process ID>; Component = Unknown; Operation = Start IWbemServices::ExecQuery - \<WMI namespace>: \<Select Query Statement>; ResultCode = 0x80041032; PossibleCause = Unknown  
 where 0x80041032 indicates WBEM_E_CALL_CANCELLED.
 
@@ -36,13 +36,13 @@ where 0x80041032 indicates WBEM_E_CALL_CANCELLED.
 
 ## Cause
 
-WMI-Activity Error 5858 with ResultCode = 0x80041032 (WBEM_E_CALL_CANCELLED) indicates that the WMI caller has successfully issued `IWbemServices:ExecQuery`, but has released the `IWbemContext` object before retrieving the full result set using the `IEnumWbemClassObject::Next` method. If the WMI service is still holding data for the client when the client terminates the link (by releasing the `IWbemContext` object), this event will be logged.
+WMI-Activity Error 5858 with ResultCode = 0x80041032 (WBEM_E_CALL_CANCELLED) indicates that the WMI caller has successfully issued `IWbemServices:ExecQuery`, but has released the `IWbemContext` object before retrieving the full result set using the `IEnumWbemClassObject::Next` method. If the WMI service is still holding data for the client when the client terminates the link (by releasing the `IWbemContext` object), this event will be logged.
 
 This error can happen if the WMI application calls `IEnumWbemClassObject::Next` with a timeout value (lTimeout) that is not long enough to retrieve the object being queried, and is not checking for a return code of `WBEM_S_TIMEDOUT (0x40004)` in order to issue the request again.
 
 ## Resolution
 
-The WMI client application should be modified to issue calls to `IEnumWbemClassObject::Next` to retrieve the full result set, before releasing the IWbemContext object. If no objects are received, make sure that the timeout value (lTimeout) is greater than **0** and that `WBEM_S_TIMEDOUT (0x40004)` is not being returned.
+The WMI client application should be modified to issue calls to `IEnumWbemClassObject::Next` to retrieve the full result set, before releasing the IWbemContext object. If no objects are received, make sure that the timeout value (lTimeout) is greater than **0** and that `WBEM_S_TIMEDOUT (0x40004)` is not being returned.
 
 ## More information
 

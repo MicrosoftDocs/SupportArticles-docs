@@ -17,7 +17,7 @@ ms.technology: HighAvailability
 
 This article discusses the implications of starting the Cluster service by using the /forcequorum switch
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 947713
 
 ## Beta Information

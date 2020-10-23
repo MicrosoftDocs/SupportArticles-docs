@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article describes the compatibility of Microsoft Exchange with Single Label Domains, Disjoint Namespaces, and Discontiguous Namespaces.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2269838
 
 
@@ -38,7 +38,7 @@ For a description of Discontiguous Namespaces, also known as a non-contiguous na
 
 ### Exchange Server
 
-In response to customer feedback, the Exchange team has updated its testing matrix and has determined that Exchange Server 2010 will be supported on SLDs, Disjoint Namespaces, and Discontiguous Namespaces. This page contains a brief description of each of these scenarios and special considerations. If you intend to install Exchange 2010 into one of these environments, read the [Exchange Team Blog's documentation](http://msexchangeteam.com/archive/2009/10/27/452969.aspx) about the applicable subject.
+In response to customer feedback, the Exchange team has updated its testing matrix and has determined that Exchange Server 2010 will be supported on SLDs, Disjoint Namespaces, and Discontiguous Namespaces. This page contains a brief description of each of these scenarios and special considerations.
 
 > [!NOTE]
 > For information about disjoint namespace scenarios in Microsoft Exchange Server 2013, visit the following TechNet website:
@@ -74,19 +74,17 @@ For information about how to configure this, see [Understanding DNS Client Setti
 ##### Affected Exchange products include the following:
 
 
-- [Exchange Server 2013](https://office.microsoft.com/exchange/microsoft-exchange-server-2013-email-for-business-email-server-fx103765014.aspx) 
+- Exchange Server 2013
 
     For more information about Exchange 2013 system requirements, see [Exchange 2013 System Requirements](https://technet.microsoft.com/library/aa996719%28v=exchg.150%29.aspx).
-- [Exchange Server 2010](https://www.microsoft.com/exchange/2010/en/us/overview.aspx) 
+- Exchange Server 2010
 
     For more information about Exchange 2010 system requirements, see the [Exchange 2010 System Requirements](https://technet.microsoft.com/library/aa996719%28exchg.140%29.aspx) TechNet article.
-- [Exchange Server 2007](https://www.microsoft.com/exchange/2010/en/us/exchange-2007-overview.aspx) 
+- Exchange Server 2007
 
     Microsoft has changed the Setup prerequisite rule for SLDs from an Error to a Warning. This change lets the Service Pack 1 installation continue in SLD environments.
 
-    For known issues and recommendations about Exchange 2007 together with SLD, see the [Exchange Team's Blog Documentation](http://msexchangeteam.com/archive/2008/02/15/448140.aspx).
 - [Exchange Server 2003](https://technet.microsoft.com/library/bb123872%28exchg.65%29.aspx) 
-- [Exchange 2000 Server](/gp/exch2k) 
 
 ## References
 

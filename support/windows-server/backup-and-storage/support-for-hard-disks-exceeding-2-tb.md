@@ -33,7 +33,7 @@ This article outlines Microsoft support across all Windows versions since Window
 
 ### More information
 
-The management of modern storage devices is addressed by using a scheme called Logical Block Addressing (LBA). This is the arrangement of the logical sectors that constitute the media. *LBA0* represents the first logical sector of the device, and the last LBA designation represents the last logical sector of the device, one label per sector. To determine the capacity of the storage device, you multiply the number of logical sectors within the device by the size of each logical sector. The current size standard is 512 bytes. For example, to achieve a device that has a capacity of 2 TB, you must have 3,906,250,000 512-byte sectors. However, a computer system requires 32 bits (1 s and 0 s) of information to represent this large number. Therefore, any storage capacity that is greater than what can be represented by using 32 bits would require an additional bit. That is, 33 bits.
+The management of modern storage devices is addressed by using a scheme called Logical Block Addressing (LBA). This is the arrangement of the logical sectors that constitute the media. *LBA0* represents the first logical sector of the device, and the last LBA designation represents the last logical sector of the device, one label per sector. To determine the capacity of the storage device, you multiply the number of logical sectors within the device by the size of each logical sector. The current size standard is 512 bytes. For example, to achieve a device that has a capacity of 2 TB, you must have 3,906,250,000 512-byte sectors. However, a computer system requires 32 bits (1 s and 0 s) of information to represent this large number. Therefore, any storage capacity that is greater than what can be represented by using 32 bits would require an additional bit. That is, 33 bits.
 
 The problem in this computation is that the partitioning scheme that is used by most modern Windows-based computers is MBR (master boot record). This scheme sets a limit of 32 for the number of bits that are available to represent the number of logical sectors.
 
@@ -119,12 +119,12 @@ Hybrid-MBR is an alternative style of partitioning that is not supported by any 
 
 | System| >2 TB single disk - MBR| >2 TB single disk - Hybrid-MBR| >2 TB single disk - GPT |
 |---|---|---|---|
-|Windows 7|Supports up to 2 TB of addressable capacity**|Not Supported|Supports full capacity|
+|Windows 7|Supports up to 2 TB of addressable capacity**|Not Supported|Supports full capacity|
 |Windows Vista|Supports up to 2 TB of addressable capacity**|Not Supported|Supports full capacity|
 |Windows XP|Supports up to 2 TB of addressable capacity**|Not Supported|Not Supported|
 |||||
 
-Capacity beyond 2 TB cannot be addressed by Windows if the disk is initialized by using the MBR partitioning scheme. For example, for a 3 TB single disk that is initialized by using MBR, Windows can create partitions up to the first 2 TB. However, the remaining capacity cannot be addressed and, therefore, cannot be used.
+Capacity beyond 2 TB cannot be addressed by Windows if the disk is initialized by using the MBR partitioning scheme. For example, for a 3 TB single disk that is initialized by using MBR, Windows can create partitions up to the first 2 TB. However, the remaining capacity cannot be addressed and, therefore, cannot be used.
 
 ## Initialize a data disk by using GPT
 
@@ -140,7 +140,7 @@ The following steps show how to initialize a fresh disk by using the GPT partiti
 2. In the **Initialize Disk** dialog box, click **GPT (GUID Partition Table)**, and then press OK.
 
     > [!NOTE]
-    > If you select this option, this hard disk will not be recognized by Windows versions earlier than and including Windows XP.
+    > If you select this option, this hard disk will not be recognized by Windows versions earlier than and including Windows XP.
 
 3. Check the Disk Management window to verify that the disk is initialized. If it is, the status row for that disk at the bottom of the window should indicate that the disk is **Online**.
 
@@ -167,11 +167,11 @@ If you have previously initialized the disk by using the MBR partitioning scheme
 
     ![Screenshot of clicking Convert to GPT Disk](./media/support-for-hard-disks-exceeding-2-tb/convert-to-gpt-disk.jpg)
 
-5. Now that the disk is initialized to access the full storage capacity, you must create a partition, and then format that partition by using a file system. This is to be able to store data in that partition, and assign a name and a drive letter to that partition. To do this, right-click the unallocated space on the right side of the status row for that disk, and then click **New Simple Volume**. Follow the steps in the partition wizard to complete this process.
+5. Now that the disk is initialized to access the full storage capacity, you must create a partition, and then format that partition by using a file system. This is to be able to store data in that partition, and assign a name and a drive letter to that partition. To do this, right-click the unallocated space on the right side of the status row for that disk, and then click **New Simple Volume**. Follow the steps in the partition wizard to complete this process.
 
 ## Known issues or limitations
 
-Because the transition to a single-disk capacity of greater than 2 TB has occurred fairly recently, Microsoft has investigated how Windows supports these large disks. The results reveal several issues that apply to all versions of Windows earlier than and including Windows 7 with Service Pack 1 and Windows Server 2008 R2 with Service Pack 1.
+Because the transition to a single-disk capacity of greater than 2 TB has occurred fairly recently, Microsoft has investigated how Windows supports these large disks. The results reveal several issues that apply to all versions of Windows earlier than and including Windows 7 with Service Pack 1 and Windows Server 2008 R2 with Service Pack 1.
 
 To this point, the following incorrect behavior is known to occur when Windows handles single-disk storage capacity of greater than 2 TB:
 
@@ -179,7 +179,7 @@ To this point, the following incorrect behavior is known to occur when Windows h
 
 - The numeric capacity beyond 2 TB is truncated. This results in no more than 2 TB of addressable space. For example, on a 3 TB disk, the available capacity may be only 2 TB.
 
-- The storage device is not detected correctly. In this case, it is not displayed in either the Device Manager or Disk Management windows. Many storage controller manufacturers offer updated drivers that provide support for storage capacities of more than 2 TB. Contact your storage controller manufacturer or OEM to determine what downloadable support is available for single-disk capacities that are greater than 2 TB.
+- The storage device is not detected correctly. In this case, it is not displayed in either the Device Manager or Disk Management windows. Many storage controller manufacturers offer updated drivers that provide support for storage capacities of more than 2 TB. Contact your storage controller manufacturer or OEM to determine what downloadable support is available for single-disk capacities that are greater than 2 TB.
 
 ## SCSI sense data
 

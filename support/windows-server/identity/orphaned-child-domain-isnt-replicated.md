@@ -38,7 +38,7 @@ This issue may occur if the child domain is orphaned from the parent domain.
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-To resolve this issue, you must create a replication link and then enable one-way authentication instead of two-way authentication. To do this, follow these steps:
+To resolve this issue, you must create a replication link and then enable one-way authentication instead of two-way authentication. To do this, follow these steps:
 
 1. On a domain controller in the root domain, add the **Replicator Allow SPN Fallback** registry value. To do this, follow these steps on the domain controller.
     1. Select **Start** > **Run**, and then enter **regedt32**.
@@ -78,4 +78,4 @@ To resolve this issue, you must create a replication link and then enable one-w
         An incoming connection object from one or more of the child domain controllers is displayed. You may have to update the display by pressing F5.
     4. Repeat step 3 for each domain controller in the root domain.
 6. Allow replication to occur throughout the forest. Then, run the **repadmin /showreps** command on the root domain controller and on the child domain controllers. This step makes sure that Active Directory Directory Service (AD DS) replication is successful.
-The **Replication Allow SPN Fallback** registry entry enables the domain controller to use one-way authentication if two-way authentication cannot be performed because of a failure to resolve a Service Principal Name (SPN) to a computer account.
+The **Replication Allow SPN Fallback** registry entry enables the domain controller to use one-way authentication if two-way authentication cannot be performed because of a failure to resolve a Service Principal Name (SPN) to a computer account.

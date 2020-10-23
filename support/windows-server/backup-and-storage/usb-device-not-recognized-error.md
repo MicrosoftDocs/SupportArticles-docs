@@ -42,7 +42,7 @@ This issue can be caused if any of the following situations exist:
 This method resolves issues where the currently loaded USB driver has become unstable or corrupt.
 
 1. Select **Start**, type *Device Manager* in the **Search** box.
-2. Select **Device Manager** from the returned list.
+2. Select **Device Manager** from the returned list.
 3. Select Disk Drives from the list of hardware.
 4. Press and hold (or right-click) the USB external hard drive with the issue, and select Uninstall.
 5. After the hard drive is uninstalled, unplug the USB cable.
@@ -60,10 +60,10 @@ The hotfixes in this method can resolve a known conflict with a USB external har
 
 1. Go to [KB976972 You encounter problems when you move data over USB from a Windows 7-based computer that has an NVIDIA USB EHCI chipset and at least 4 GB of RAM](https://support.microsoft.com/help/976972).
 
-1. Under Update information, select **Download the update package now** that corresponds with your version of Windows 7.
+1. Under Update information, select **Download the update package now** that corresponds with your version of Windows 7.
    1. If you're unsure of which version of Windows 7 you are running, select the **Start** button, press and hold (or right-click) **Computer** > **Properties**.
       - If 64-bit Operating System is listed next to System type, you're running the 64-bit version of Windows 7.
-      - If 32-bit Operating System is listed next to System type, you're running the 32-bit (x86) version of Windows 7.
+      - If 32-bit Operating System is listed next to System type, you're running the 32-bit (x86) version of Windows 7.
 1. Select **Continue**. If a User Account Control permission prompt occurs, select **Yes**.
 1. Select **Download** > **Open**.
 1. The download should start in 30 seconds. If it does not, select **Start Download** > **Open**.

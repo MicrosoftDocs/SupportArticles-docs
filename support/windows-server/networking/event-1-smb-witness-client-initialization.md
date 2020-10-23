@@ -32,4 +32,4 @@ Description: Witness Client initialization failed with error (The system cannot 
 
 ## More information  
 
-You can safely ignore this event if this is a fresh deployment of Windows Server that has no role and no feature is enabled.
+You can safely ignore this event if this is a fresh deployment of Windows Server that has no role and no feature is enabled.

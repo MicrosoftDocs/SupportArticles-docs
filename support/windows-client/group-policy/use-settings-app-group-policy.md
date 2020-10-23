@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 4019502
 
 ## Overview
 
-Windows 10, version 1703 and later versions introduce Group Policies to manage access to the Settings app pages. This enables IT Administrators to hide pages from users that they don't want them to access while still enabling access to pages that they want or need users to access. Before Windows 10, version 1703, Administrators could only fully lock down the Settings app or enable full access.
+Windows 10, version 1703 and later versions introduce Group Policies to manage access to the Settings app pages. This enables IT Administrators to hide pages from users that they don't want them to access while still enabling access to pages that they want or need users to access. Before Windows 10, version 1703, Administrators could only fully lock down the Settings app or enable full access.
 
 ## Settings app
 
@@ -32,7 +32,7 @@ The Settings app Group Policy has two modes. An administrator can either specify
 
 ## Use Setting app Group Policy
 
-1. Open the Local Group Policy Editor and then go to **Computer Configuration** > **Administrative Templates** > **Control Panel**.
+1. Open the Local Group Policy Editor and then go to **Computer Configuration** > **Administrative Templates** > **Control Panel**.
 2. Double-click the **Settings Page Visibility** policy and then select **Enable**.
 
     ![Setting Page Visibility Group Policy](./media/use-settings-app-group-policy/enable-settings-page-visibility-policy.png)

@@ -33,7 +33,7 @@ Windows Server 2008 and Windows Server 2008 R2 support up to:
 - 128 target IDs per bus 
 - 255 LUNs per target ID 
 
-Windows Server 2012 and later versions of Windows support up to:  
+Windows Server 2012 and later versions of Windows support up to:  
 
 - 255 buses per adapter 
 - 128 target IDs per bus 
@@ -53,7 +53,7 @@ Windows Server 2012 and later versions of Windows support up to:  
 Windows Server supports Large LUNs, but the method for enabling it depends on the hardware implementation and drivers. If the storage device reports the HiSupport bit in its standard inquiry data, Windows automatically enables Large LUNs without requiring any manual registry entries. Contact the hardware vendor to determine if the storage device reports the HiSupport bit. The hardware drivers may also enable large LUN support during their installation routines.
 
 If the hardware doesn't report the HiSupport bit, or the drivers don't enable Large LUN support, a manual registry entry is required. This feature works only if the storage devices support the SCSI REPORT LUNS command. Note that editing the registry to enable Large LUNs requires detailed knowledge of the devices' hardware IDs and registry entries; this is the least-preferred method. Contact the hardware vendor for additional information. Follow these steps to configure the required registry entry:
- 
+ 
 1. Find the hardware ID of the storage device. To find the hardware ID:
     1. Start Regedit.exe, and then locate and click the following location: HKLM\SYSTEM\CurrentControlSet\Enum\SCSI 
     2. Disk and storage devices that are enumerated by the system are listed. The storage device on which you want to enable LargeLUNs should appear in the list starting with Disk&Ven_. The name of the storage device should be recognizable after the Disk&Ven_ text.
@@ -81,7 +81,7 @@ If the hardware doesn't report the HiSupport bit, or the drivers don't enable La
 
 Duplicate disks may appear after you enable Large LUN support. This can occur if the HBA driver enables Large LUN support in a proprietary fashion coupled with the manual registry entry. The issue occurs if both the Windows LargeLuns feature and the HBA's LargeLuns feature are enabled.
 
-If logical unit 0 isn't present, the REPORT LUNS  command can't be sent to the target device. Windows enumerates only eight logical units, even if more units are present in the disk array. To support large configurations, the time that is necessary to determine the size configuration needed to be minimized. Because the number of logical units can be as high as 255 on some systems (0 - 254), lots of time can be spent in sending inquiry commands to non-existent logical units. Notice that any LUN number returned from Storage should be in range of 0 - 254. 
+If logical unit 0 isn't present, the REPORT LUNS  command can't be sent to the target device. Windows enumerates only eight logical units, even if more units are present in the disk array. To support large configurations, the time that is necessary to determine the size configuration needed to be minimized. Because the number of logical units can be as high as 255 on some systems (0 - 254), lots of time can be spent in sending inquiry commands to non-existent logical units. Notice that any LUN number returned from Storage should be in range of 0 - 254. 
 Any LUN with a LUN number larger than 254 will not be recognized by the Windows operating system. Consult your hardware manufacturer about the different parameters that should be used with your particular hardware.
 
 Even though Windows can access Large LUNs, there may be other environment variables that need to be taken into consideration.
@@ -96,7 +96,7 @@ For more information, click the following article number to view the article in 
 ### Additional parameters for the SpecialTargetList key
 
 For Windows Server, there are several additional parameters that you can use under the SpecialTargetList key. They are:
- 
+ 
 - SparseLun - Allow for discontinuous LUN list.
 - OneLun - Only scan LUN zero.
 - LargeLuns - The device supports more than seven LUNs.

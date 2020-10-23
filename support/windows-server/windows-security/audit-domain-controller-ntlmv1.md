@@ -74,12 +74,12 @@ Key Length: 128
 
 This logon in the event log does not really use NTLMv1 session security. There is actually no session security, because no key material exists.
 
-The logic of the NTLM Auditing is that it will log NTLMv2-level authentication when it finds NTLMv2 key material on the logon session. It logs NTLMv1 in all other cases, which include anonymous sessions. Therefore, our general recommendation is to ignore the event for security protocol usage information when the event is logged for **ANONYMOUS LOGON**.
+The logic of the NTLM Auditing is that it will log NTLMv2-level authentication when it finds NTLMv2 key material on the logon session. It logs NTLMv1 in all other cases, which include anonymous sessions. Therefore, our general recommendation is to ignore the event for security protocol usage information when the event is logged for **ANONYMOUS LOGON**.
 
 Common sources of anonymous logon sessions are:
 
-- [Computer Browser Service](/previous-versions/windows/it-pro/windows-server-2003/cc778351(v=ws.10)): This is a legacy service from Windows 2000 and earlier versions of Windows. The service provides lists of computers and domains on the network. The service runs in the background. However, today this data is no longer used. We recommend that you disable this service across the enterprise.
+- [Computer Browser Service](/previous-versions/windows/it-pro/windows-server-2003/cc778351(v=ws.10)): This is a legacy service from Windows 2000 and earlier versions of Windows. The service provides lists of computers and domains on the network. The service runs in the background. However, today this data is no longer used. We recommend that you disable this service across the enterprise.
 
-- SID-Name mapping: It can use anonymous sessions. See [Network access: Allow anonymous SID/Name translation](/windows/security/threat-protection/security-policy-settings/network-access-allow-anonymous-sidname-translation). We recommend that you require authentication for this functionality.
+- SID-Name mapping: It can use anonymous sessions. See [Network access: Allow anonymous SID/Name translation](/windows/security/threat-protection/security-policy-settings/network-access-allow-anonymous-sidname-translation). We recommend that you require authentication for this functionality.
 
 - Client applications that do not authenticate: The application server may still create a logon session as anonymous. This is also done when there are empty strings passed for user name and password in NTLM authentication.

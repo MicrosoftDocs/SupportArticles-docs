@@ -175,13 +175,13 @@ Other Blocking Issues
 
 ## Resolution
 
-In order to resolve an issue where schema mismatch is cited, it is critical to understand the scenario in which the is error is being raised as it may influence the data collected. The common scenarios are: 
- 
+In order to resolve an issue where schema mismatch is cited, it is critical to understand the scenario in which the is error is being raised as it may influence the data collected. The common scenarios are: 
+ 
 - Recent Schema Update
 - DC Promotion
 - Normal Replication
 
-As stated previously, in the case of a recent schema update it is common for some DC's to report the schema mismatch as a normal part of processing the update. This state should only be investigated if it persists for an extended period Schema Mismatch during promotion of a DC is almost always a persistent issue that cannot be overcome without investigation and remedial steps being taken.
+As stated previously, in the case of a recent schema update it is common for some DC's to report the schema mismatch as a normal part of processing the update. This state should only be investigated if it persists for an extended period Schema Mismatch during promotion of a DC is almost always a persistent issue that cannot be overcome without investigation and remedial steps being taken.
 
 Initial Data Collection 
 
@@ -204,7 +204,7 @@ In the case where DCpromo fails with a schema mismatch the following data should
 
 Verify the Schema Versions 
 
-The current schema version can be read from two places on any given DC - the registry and in the Active Directory itself. In normal operation the two values should be in sync and should correctly reflect the Schema Version of the forest as defined by the schema  FSMO.
+The current schema version can be read from two places on any given DC - the registry and in the Active Directory itself. In normal operation the two values should be in sync and should correctly reflect the Schema Version of the forest as defined by the schema  FSMO.
 
 Note: Only Microsoft provided updates of the Active Directory Schema will update the SchemaVersion number.
 
@@ -268,9 +268,9 @@ HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Diagnostics
 
 This will log additional information to the Directory Services event log that will assist in diagnosing the issue
 
-Trigger the scenario that raises the Schema Mismatch err and review the event log data collected to try to identify:
- 
-- The object on which replication is failing either by its Distinguished Name  or ObjectGUID
+Trigger the scenario that raises the Schema Mismatch err and review the event log data collected to try to identify:
+ 
+- The object on which replication is failing either by its Distinguished Name  or ObjectGUID
 - The attribute being applied either by its ldapdisplayname or its internal ID
 - Any internal or extended error data.
 
@@ -278,9 +278,9 @@ Event ID's of interest from the Directory Service Event log include:
 
 Replication event 1173
 
-Replication  Event 1791
+Replication  Event 1791
 
-Replication  Event 1203
+Replication  Event 1203
 
 The following example events show both an internal ID and extended error data
 
@@ -299,9 +299,9 @@ Date: 12/7/2011 5:57:30 PM Event ID: 1203 Task Category: Replication Level: Warn
 
 Review the data collected 
 
-Look for correlating events  including the ones noted above which point to known trigger scenarios.
+Look for correlating events  including the ones noted above which point to known trigger scenarios.
 
-Look for events that might indicate other underlying issues on the source or destination that might be blocking replication and so causing what might be a transient mismatch failure to persist. 
+Look for events that might indicate other underlying issues on the source or destination that might be blocking replication and so causing what might be a transient mismatch failure to persist. 
 
 Examples of other causes include but are not limited to:
 
@@ -318,7 +318,7 @@ See Causes Section for details of events and related status codes for some of th
 
 Supplementary Actions 
 
-If the object triggering failure can be identified, then first use repadmin  /showobjmeta to dump the object replication metadata and on both source and destination DC. This method  can be used to identify "candidate" attributes that could be the cause of failure
+If the object triggering failure can be identified, then first use repadmin  /showobjmeta to dump the object replication metadata and on both source and destination DC. This method  can be used to identify "candidate" attributes that could be the cause of failure
 
 ```
 Repadmin /showobjmeta Target_DC "DN_of Trigger_Object"
@@ -330,9 +330,9 @@ If only the GUID of the object is known use the syntax:
 Repadmin /showobjmeta Target_DC "<GUID=ObjectGuid_of Trigger_Object>"
 ```
 
-Review the replication metadata for correctness by ensuring that all the replicated attributes display a correctly formed attribute  name
+Review the replication metadata for correctness by ensuring that all the replicated attributes display a correctly formed attribute  name
 
-Example 
+Example 
 
 The two entries fro replication metadata for a problem object as displayed by Repadmin.exe shows no ldapdisplayname:
 
@@ -340,7 +340,7 @@ The two entries fro replication metadata for a problem object as displayed by Re
 USN DSA Org USN Org. Time/Date Version Attribute 24260 f4617e99-9688-42a6-8562-43fdd2d5cda4 18085395 2002-05-24 12:00:02 2 24260 f4617e99-9688-42a6-8562-43fdd2d5cda4 18086114 2002-05-24 12:11:25 3
 ```
 
-If any of the metadata fields has no associated name try using ldp.exe  to expose the internal attributeid
+If any of the metadata fields has no associated name try using ldp.exe  to expose the internal attributeid
 
 The metadata for the same object above as displayed in LDP.exe shows the AttributeID associated with the data
 
@@ -350,7 +350,7 @@ AttID Ver Loc.USN Originating DSA Org.USN Org.Time/Date 250000 2 24260 f4617e99-
 
 The attribute ID can be used to help identify the problem attribute but requires the engagement of Microsoft Support.
 
-·         Version comparison - attributes to be replicated will have higher version numbers on the source.
+·         Version comparison - attributes to be replicated will have higher version numbers on the source.
 
 Note: In the DCpromo scenario, the destination object will most likely not yet exist.
 
@@ -366,7 +366,7 @@ If the attribute triggering failure cannot be identified by the event log data o
 
 Schema Review 
 
-Once a potential trigger attribute has been identified and other known causes eliminated then the next action is to review the schema definition for the attribute. This analysis  is best performed with the assistance  Microsoft Product Support.
+Once a potential trigger attribute has been identified and other known causes eliminated then the next action is to review the schema definition for the attribute. This analysis  is best performed with the assistance  Microsoft Product Support.
 
 Export of entire schema partition from both source and destination domain controllers:
 
@@ -379,10 +379,10 @@ Data to provide to Microsoft Support
 Be prepared to provide the following information to Microsoft Support staff to assist in diagnosing the causes of the schema mismatch
 - Export of schema partition from the source domain controller
 - DCpromo logs from destination DC (if appropriate for the scenario)
-- Repadmin /showrepl output from the source and destination domain controller
+- Repadmin /showrepl output from the source and destination domain controller
 - Directory Services Event logs with extended logging from the source and destination domain controller
 - Replication metadata of any problem object identified from the event logs
-- LDIFDE Export of any problem object identified from the event logs
+- LDIFDE Export of any problem object identified from the event logs
 
 ## More information
 

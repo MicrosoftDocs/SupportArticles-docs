@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika,  yitzhaks, manojse
-ms.prod-support-area-path: Configuration of virtual machine settings
-ms.technology: HyperV
+ms.prod-support-area-path: Bitlocker
+ms.technology: Deployment
 ---
 # Error opening Enterprise or Computer Compliance Reports in MBAM
 

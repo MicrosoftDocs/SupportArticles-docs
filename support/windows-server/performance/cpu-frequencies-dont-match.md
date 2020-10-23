@@ -17,7 +17,7 @@ ms.technology: Performance
 
 This article provides a solution to an issue where the CPU name is shown and two identical frequencies don't match on the System property page.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1903, Windows 10, version 1909, Windows 7 Service Pack 1, Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1903, Windows 10, version 1909, Windows 7 Service Pack 1, Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2878342
 
 ## Symptoms
@@ -26,7 +26,7 @@ Consider the following scenario:
 
 - You have a Windows computer with multiple Intel processors.
 - You open the System property page.
-- Under the Processor section, the CPU name is shown and two identical frequencies are listed. For example,  < CPU Name> @ 2.00 GHz 2.00 GHz.
+- Under the Processor section, the CPU name is shown and two identical frequencies are listed. For example,  < CPU Name> @ 2.00 GHz 2.00 GHz.
 - You then install the Intel Collaborative Processor Performance Control (CPPC) driver, which provides additional power management and increases battery life.
 
 After the Intel CPPC driver is installed, the second CPU frequency listed in the System properties page does not match the first one.

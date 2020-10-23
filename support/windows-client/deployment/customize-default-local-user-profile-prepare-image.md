@@ -17,7 +17,7 @@ ms.technology: Deployment
 
 This article discusses how to customize the default local user profile settings when you create an image in Windows.
 
-_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
+_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;959753
 
 ## Introduction
@@ -69,7 +69,7 @@ To use this CopyProfile setting in Windows XP SP2 together with hotfix 887816, i
 
 For more information about how to configure default local user profile settings, visit the following Microsoft website:
 
-[https://blogs.technet.com/deploymentguys/archive/2009/10/29/configuring-default-user-settings-full-update-for-windows-7-and-windows-server-2008-r2.aspx](https://blogs.technet.com/deploymentguys/archive/2009/10/29/configuring-default-user-settings-full-update-for-windows-7-and-windows-server-2008-r2.aspx) 
+[Configuring Default User Settings – Full Update for Windows 7 and Windows Server 2008 R2](/archive/blogs/deploymentguys/configuring-default-user-settings-full-update-for-windows-7-and-windows-server-2008-r2) 
 
 ## More information
 
@@ -91,4 +91,4 @@ Implement the required new or changed settings as a logon script and configure i
 
 You can automate the procedure in Knowledge Base article 284193 by using the Reg.exe command. For an alternative solution, see the "Targeted changes to the Default User Registry hive and profile folders" section on the following Microsoft website:
 
-[https://blogs.technet.com/deploymentguys/archive/2009/10/29/configuring-default-user-settings-full-update-for-windows-7-and-windows-server-2008-r2.aspx](https://blogs.technet.com/deploymentguys/archive/2009/10/29/configuring-default-user-settings-full-update-for-windows-7-and-windows-server-2008-r2.aspx)
+[Configuring Default User Settings – Full Update for Windows 7 and Windows Server 2008 R2](/archive/blogs/deploymentguys/configuring-default-user-settings-full-update-for-windows-7-and-windows-server-2008-r2)

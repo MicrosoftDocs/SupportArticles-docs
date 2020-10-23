@@ -113,28 +113,28 @@ When you troubleshoot 8606 errors, think about the following points:
 ## Resolution
 
 1. Identify the current value for the forest-wide **TombStoneLifeTime** setting
- c:\>repadmin /showattr. "CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=forest root domain,DC=TLD> /atts:tombstonelifetime
+ c:\>repadmin /showattr. "CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=forest root domain,DC=TLD> /atts:tombstonelifetime
 
 See the "Tombstone lifetime and replication of deletions" section in the following article in the Microsoft Knowledge Base: [910205](https://support.microsoft.com/help/910205) Information about lingering objects in a Windows Server Active Directory forest.
 
 2. For each destination domain controller that is logging the 8606 error, filter the Directory Service event log on NTDS Replication event 1988.
 
 3. Collect metadata for each *unique* object that is cited in the NTDS Replication event 1988.
- From each 1988 event that is logged on the destination domain controller that cites a new object, populate the following table:
+ From each 1988 event that is logged on the destination domain controller that cites a new object, populate the following table:
 
 | Object DN path| Object GUID| Source DC| Host partition| Live or deleted?| LastKnownParent| IsDeleted value |
 |---|---|---|---|---|---|---|
-| | | | | | | |
+| | | | | | | |
 
- Columns 1 through 5 of this table can be populated by reading values directly from fields in the NTDS Replication 1988 events that are logged in the Directory Service event logs of the destination domain controllers that are logging either the 1988 event or the 8606 replication status.
+ Columns 1 through 5 of this table can be populated by reading values directly from fields in the NTDS Replication 1988 events that are logged in the Directory Service event logs of the destination domain controllers that are logging either the 1988 event or the 8606 replication status.
 
 The date stamps for LastKnownParent and IsDeleted columns can be determined by running "repadmin /showobjmeta" and referencing the objectguid of the object that is cited in the NTDS replication 1988 event. To do this, use the following syntax:
- c:\>repadmin /showobjmeta <fqdn of source DC from 1988 event> "<GUID=GUID of object cited in the 1988 event>"
+ c:\>repadmin /showobjmeta <fqdn of source DC from 1988 event> "<GUID=GUID of object cited in the 1988 event>"
 
 The date stamp for LastKnownParent identifies the date on which the object was deleted. The date stamp for IsDeleted tells you when the object was last deleted or reanimated. The version number tells you whether the last modification deleted or reanimated the object. An IsDeleteted value of 1 represents an initial delete. Odd-numbered values greater than 1 indicate a reanimation following at least one deletion. For example, an **isDeleted** value of 2 represents an object that was deleted (version 1) and then later undeleted or reanimated (version 2). Later even-numbered values for IsDeleted represent later reanimations or undeletes of the object.
 
 4. Select the appropriate action based on the object metadata cited in the 1988 event.
- Error 8606 / NTDS Replication event 1988 event is most frequently caused by long-term replication failures that are preventing domain controllers from inbound-replicating knowledge of all originating deletes in the forest. This results in lingering objects on one or more source domain controllers.
+ Error 8606 / NTDS Replication event 1988 event is most frequently caused by long-term replication failures that are preventing domain controllers from inbound-replicating knowledge of all originating deletes in the forest. This results in lingering objects on one or more source domain controllers.
 
 Review the metadata for object that is listed in the table that was created in step 4 of the "Resolution" section.
 
@@ -170,7 +170,7 @@ Where:
 \<NC> is the DN path of the directory partition that is suspected of containing lingering objects, such as the partition that is specified in a 1988 event.
 
 `REPADMIN /REHOST` can be used to remove lingering-objects domain controllers that host a *read-only* copy of a domain directory partition from domain controllers that are running Windows 2000 SP4 or a later version. The syntax is as follows:
- c:\>repadmin /rehost DSA \<Naming Context> \<Good Source DSA Address>
+ c:\>repadmin /rehost DSA \<Naming Context> \<Good Source DSA Address>
 
 Where:
 DSA is the name of a domain controller that is running Windows 2000 SP4 or a later version and that hosts a read-only domain directory partition for a nonlocal domain. For example, a GC in root.contoso.com can rehost its read-only copy of child.contoso.com but cannot rehost root.contoso.com.
@@ -184,13 +184,13 @@ If the lingering object that is reported in the 1988 event is not removed by rep
 #### Repldiag
 
 > [!NOTE]
-> Lingering objects can also be removed by using [repldiag.exe.](https://activedirectoryutils.codeplex.com/releases/view/13664)  This tool automates the repadmin /removelingeringobjects process. Removing lingering objects from a forest with repldiag is as simple as running repldiag /removelingeringobjects.  However, it is usually best to exercise some control over the process in larger environments.  The option /OverRideReferenceDC allows you to select which DC is used for cleanup.  The option /outputrepadmincommandlinesyntax allows you to see what a forest-wide cleanup looks like using repadmin.
+> Lingering objects can also be removed by using [repldiag.exe.](https://activedirectoryutils.codeplex.com/releases/view/13664)  This tool automates the repadmin /removelingeringobjects process. Removing lingering objects from a forest with repldiag is as simple as running repldiag /removelingeringobjects.  However, it is usually best to exercise some control over the process in larger environments.  The option /OverRideReferenceDC allows you to select which DC is used for cleanup.  The option /outputrepadmincommandlinesyntax allows you to see what a forest-wide cleanup looks like using repadmin.
 
 Launch the following TechNet on-demand lab for guided troubleshooting practice of this and other AD replication errors:
 
 > In the lab, you use both repadmin and repldiag.exe to remove lingering objects  
  Troubleshooting Active Directory Replication Errors  
- In this lab, you'll walk through the troubleshooting, analysis and implementation phases of commonly encountered Active Directory replication errors. You'll use a combination of ADREPLSTATUS, repadmin.exe, and other tools to troubleshoot a five DC, three-domain environment.  AD replication errors encountered in the lab include -2146893022, 1256, 1908, 8453 and 8606."
+ In this lab, you'll walk through the troubleshooting, analysis and implementation phases of commonly encountered Active Directory replication errors. You'll use a combination of ADREPLSTATUS, repadmin.exe, and other tools to troubleshoot a five DC, three-domain environment.  AD replication errors encountered in the lab include -2146893022, 1256, 1908, 8453 and 8606."
 
 ### Monitoring Active Directory replication health daily
 
@@ -198,7 +198,7 @@ If error 8606 / Event 1988 was caused by the domain controller's failing to repl
 
 Domain controllers that have not inbound-replicated in 50 percent of tombstone lifetime number of days should be put in a watch list that receive priority admin attention to make replication operational. Domain controllers that cannot be made to successfully replicate should be force-demoted if they have not replicated within 90 percent of TSL.
 
-Replication failures that appear on a destination domain controller may be caused by the destination domain controller, by the source domain controller, or by the underlying network and DNS infrastructure. 
+Replication failures that appear on a destination domain controller may be caused by the destination domain controller, by the source domain controller, or by the underlying network and DNS infrastructure. 
 
 ### Check for time jumps
 
@@ -206,16 +206,16 @@ To determine whether a time jump occurred, check date stamps in Event and diagno
 - Date stamps that predate the release of an operating system (for example, date stamps from CY 2003 for an OS released in CY 2008)
 - Date stamps that predate the installation of the operating system in your forest
 - Date stamps in the future
-- Having no events that are logged in a given date range 
+- Having no events that are logged in a given date range 
 
 Microsoft Support teams have seen system time on production domain controllers incorrectly jump hours, days, weeks, years, and even tens of years in the past and future. If system time was found to be inaccurate, you should correct it and then try to determine why time jumped and what can be done to prevent inaccurate time going forward vs. just correcting the bad time. Possible questions include the following:
-- Was the forest root PDC configured by using an external time source? 
-- Are reference online time sources available on the network and resolvable in DNS? 
-- Was the Microsoft or third-party time service running and in an error-free state? 
-- Are domain controller role computers configured to use NT5DS hierarchy to source time? 
+- Was the forest root PDC configured by using an external time source? 
+- Are reference online time sources available on the network and resolvable in DNS? 
+- Was the Microsoft or third-party time service running and in an error-free state? 
+- Are domain controller role computers configured to use NT5DS hierarchy to source time? 
 - Was time rollback protection that is described in Microsoft Knowledge Base article [884776](https://support.microsoft.com/help/884776) in place?
-- Do system clocks have good batteries and accurate time in the BIOS on domain controllers on virtual host computers? 
-- Are virtual host and guest computers configured to source time according to the hosting manufacturer's recommendations? 
+- Do system clocks have good batteries and accurate time in the BIOS on domain controllers on virtual host computers? 
+- Are virtual host and guest computers configured to source time according to the hosting manufacturer's recommendations? 
 Microsoft Knowledge Base article [884776](https://support.microsoft.com/help/884776) documents steps to help protect domain controllers from "listening" to invalid time samples. More information about MaxPosPhaseCorrection and MaxNegPhaseCorrection is available in the W32Time Blog post [Configuring the Time Service: Max[Pos/Neg]PhaseCorrection](https://blogs.msdn.com/w32time/archive/2008/02/28/configuring-the-time-service-max-pos-neg-phasecorrection.aspx). Microsoft Knowledge Base article [961027](https://support.microsoft.com/help/961027) describes some helpful precision updates when you're configuring time-based settings in policy.
 
 Check for lingering objects by using "repadmin /removelingeringobjects /advisorymode," and then remove them as required.
@@ -229,7 +229,7 @@ Several options exist to manually trigger garbage collection on a specific domai
 Run "repadmin /setattr "" "" doGarbageCollection add 1"
 
 Run LDIFDE /s <server> /i /f dogarbage.ldif where dobarbage.ldif contains the text:
- dn:
+ dn:
 changetype: modify
 replace: DoGarbageCollection
 dogarbagecollection: 1

@@ -15,7 +15,7 @@ ms.technology: ActiveDirectory
 ---
 # How to configure an authoritative time server in Windows Server
 
-This article describes how to configure the Windows Time service and troubleshoot when the Windows Time service doesn't work correctly.
+This article describes how to configure the Windows Time service and troubleshoot when the Windows Time service doesn't work correctly.
 
 _Original product version:_ &nbsp; Windows Server 2012 Standard, Windows Server 2012 Essentials  
 _Original KB number:_ &nbsp; 816042
@@ -70,8 +70,8 @@ To configure the PDC in the root of an Active Directory forest to synchronize wi
    4. In **Edit DWORD Value**, type *TimeInSeconds* in the **Value data** box, and then select **OK**.
 
       > [!NOTE]
-      > **TimeInSeconds** is a placeholder for a reasonable value, such as 1 hour (3600) or 30 minutes (1800). The value that you select will depend on the poll interval, network condition, and external time source.  
-      > The default value of **MaxPosPhaseCorrection** is 48 hours in Windows Server 2008 R2 or later.
+      > **TimeInSeconds** is a placeholder for a reasonable value, such as 1 hour (3600) or 30 minutes (1800). The value that you select will depend on the poll interval, network condition, and external time source.  
+      > The default value of **MaxPosPhaseCorrection** is 48 hours in Windows Server 2008 R2 or later.
 
    5. Locate and then click the following registry subkey:  
       `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config\MaxNegPhaseCorrection`
@@ -81,7 +81,7 @@ To configure the PDC in the root of an Active Directory forest to synchronize wi
    8. In **Edit DWORD Value**, type *TimeInSeconds* in the **Value data** box, and then select **OK**.
 
       > [!NOTE]
-      > **TimeInSeconds**  is a placeholder for a reasonable value, such as 1 hour (3600) or 30 minutes (1800). The value that you select will depend on the poll interval, network condition, and external time source.  
+      > **TimeInSeconds**  is a placeholder for a reasonable value, such as 1 hour (3600) or 30 minutes (1800). The value that you select will depend on the poll interval, network condition, and external time source.  
       > The default value of **MaxNegPhaseCorrection** is 48 hours in Windows Server 2008 R2 or later.
 
 5. Close Registry Editor.

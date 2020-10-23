@@ -59,4 +59,4 @@ This issue occurs because the Hyper-V Replica feature always uses the non-autore
 
 For more information, see the following TechNet blog post:
 
-[Application consistent recovery points with Windows Server 2008/2003 guest OS](https://blogs.technet.com/b/virtualization/archive/2014/05/20/application-consistent-recovery-points-with-an-older-guest-os.aspx)
+[Application consistent recovery points with Windows Server 2008/2003 guest OS](https://techcommunity.microsoft.com/t5/virtualization/application-consistent-recovery-points-with-windows-server-2008/ba-p/382175)

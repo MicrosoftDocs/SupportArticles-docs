@@ -22,8 +22,8 @@ _Original KB number:_ &nbsp; 2008652
 
 ## Symptoms
 
-You try to join a Windows Server 2008 R2 or a Windows 7 machine to an Active Directory domain using **Computer Name/Domain Changes** under **System Properties.**  
-The destination domain has either Windows 2000, Windows Server 2003, or Windows Server 2008 domain controllers **and** may have Windows NT 4.0 domain controllers present.
+You try to join a Windows Server 2008 R2 or a Windows 7 machine to an Active Directory domain using **Computer Name/Domain Changes** under **System Properties.**  
+The destination domain has either Windows 2000, Windows Server 2003, or Windows Server 2008 domain controllers **and** may have Windows NT 4.0 domain controllers present.
 When trying to join the Windows Server 2008 R2 machine to the domain by specifying the fully qualified domain name (FQDN) in the domain join UI, the operation fails and you receive the error:
 
 > An Active Directory Domain Controller (AD DC) for the domain \<target DNS domain name> couldn't be contacted  
@@ -53,24 +53,24 @@ In the `%windir%\debug\Netsetup.log` on the client you see the following sequenc
 10/30/2009 13:23:32:998 -----------------------------------------------------------------
 10/30/2009 13:23:32:998 NetpDoDomainJoin
 10/30/2009 13:23:32:998 NetpMachineValidToJoin: 'CLIENT-NAME'
-10/30/2009 13:23:32:998  OS Version: 6.1
-10/30/2009 13:23:32:998  Build number: 7600 (7600.win7_rtm.090713-1255)
-10/30/2009 13:23:32:998  SKU: Windows Server 2008 R2 Enterprise
+10/30/2009 13:23:32:998  OS Version: 6.1
+10/30/2009 13:23:32:998  Build number: 7600 (7600.win7_rtm.090713-1255)
+10/30/2009 13:23:32:998  SKU: Windows Server 2008 R2 Enterprise
 10/30/2009 13:23:32:998 NetpDomainJoinLicensingCheck: ulLicenseValue=1, Status: 0x0
 10/30/2009 13:23:32:998 NetpGetLsaPrimaryDomain: status: 0x0
 10/30/2009 13:23:32:998 NetpMachineValidToJoin: status: 0x0
 10/30/2009 13:23:32:998 NetpJoinDomain
-10/30/2009 13:23:32:998  Machine: CLIENT-NAME
-10/30/2009 13:23:32:998  Domain: Domain_Name
-10/30/2009 13:23:32:998  MachineAccountOU: (NULL)
-10/30/2009 13:23:32:998  Account: Domain_Name\admx054085
-10/30/2009 13:23:32:998  Options: 0x27
+10/30/2009 13:23:32:998  Machine: CLIENT-NAME
+10/30/2009 13:23:32:998  Domain: Domain_Name
+10/30/2009 13:23:32:998  MachineAccountOU: (NULL)
+10/30/2009 13:23:32:998  Account: Domain_Name\admx054085
+10/30/2009 13:23:32:998  Options: 0x27
 10/30/2009 13:23:32:998 NetpLoadParameters: loading registry parameters...
 10/30/2009 13:23:32:998 NetpLoadParameters: DNSNameResolutionRequired not found, defaulting to '1' 0x2
 10/30/2009 13:23:32:998 NetpLoadParameters: DomainCompatibilityMode not found, defaulting to '0' 0x2
 10/30/2009 13:23:32:998 NetpLoadParameters: status: 0x2
 10/30/2009 13:23:32:998 NetpValidateName: checking to see if 'Domain_Name' is valid as type 3 name
-10/30/2009 13:23:32:998 NetpValidateName:  'Domain_Name' is not a valid Dns domain name: 0x2554
+10/30/2009 13:23:32:998 NetpValidateName:  'Domain_Name' is not a valid Dns domain name: 0x2554
 10/30/2009 13:23:33:107 NetpCheckDomainNameIsValid [ Exists ] for 'Domain_Name' returned 0x0
 10/30/2009 13:23:33:107 NetpValidateName: name 'Domain_Name' is valid for type 3
 10/30/2009 13:23:33:107 NetpDsGetDcName: trying to find DC in domain 'Domain_Name', flags: 0x40001010
@@ -78,22 +78,22 @@ In the `%windir%\debug\Netsetup.log` on the client you see the following sequenc
 10/30/2009 13:23:33:107 **NetpJoinDomainOnDs: NetpDsGetDcName returned: 0x54b**  
 10/30/2009 13:23:33:107 **NetpJoinDomainOnDs: Function exits with status of: 0x54b**  
 10/30/2009 13:23:33:107 **NetpDoDomainJoin: status: 0x54b**  
-Domain joins by Windows Server 2003 computers to the same target domain succeed by specifying the NetBIOS domain name in the domain join UI. Domain joins using the FQDN also fail.
-You can also successfully join the same Windows Server 2008 R2 machine to a different Active Directory domain in the same forest specifying the FQDN domain name.
+Domain joins by Windows Server 2003 computers to the same target domain succeed by specifying the NetBIOS domain name in the domain join UI. Domain joins using the FQDN also fail.
+You can also successfully join the same Windows Server 2008 R2 machine to a different Active Directory domain in the same forest specifying the FQDN domain name.
 
 ## Cause
 
-The errors occur if **NT4Emulator** is set to **0x1** in the following registry subkey of the helper domain controller used to join the target domain:
+The errors occur if **NT4Emulator** is set to **0x1** in the following registry subkey of the helper domain controller used to join the target domain:
 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters
 Value Name: NT4Emulator
-Value Type:  REG_DWORD
+Value Type:  REG_DWORD
 Value Data: 1
 
 ## Resolution
 
 To resolve this issue either delete the **NT4Emulator** registry value on the Active Directory domain controllers in the destination domain if Windows NT 4.0 domain controllers are no longer present or can be retired. Otherwise, set the following registry value on the Windows 7 or Windows Server 2008 R2 client before attempting to join the domain:
 
-1. Start Registry Editor (Regedit.exe). 
+1. Start Registry Editor (Regedit.exe). 
 
 2. Locate the following key in the registry:
 
@@ -101,13 +101,13 @@ To resolve this issue either delete the **NT4Emulator** registry value on the Ac
 
 3. If it does not exist, create a new REG_DWORD value named **NeutralizeNT4Emulator**, and set the value to **0x1**.
 
-4. Quit Registry Editor. 
+4. Quit Registry Editor. 
 
 This registry setting allows the Active Directory domain controllers with the **NT4Emulator** setting to respond normally to the requesting client (avoiding Windows NT 4.0 emulation mode).
 
 ## More information
 
-In the case of the join by FQDN, the joining client does not receive an adequate response to the LDAP pings it sends to the domain controllers at the beginning of the domain join process. The helper domain controller responds but the joining client considers the response incomplete.
+In the case of the join by FQDN, the joining client does not receive an adequate response to the LDAP pings it sends to the domain controllers at the beginning of the domain join process. The helper domain controller responds but the joining client considers the response incomplete.
 
-After receiving the same replies from all domain controllers located using DNS, it falls back to performing a NetBIOS name query for the FQDN domain name to locate a domain controller, however this gets no response and the join operation fails.
-If the NetBIOS scenario the client sends a NetLogonSamRequest to all domain controllers it receives from the WINS query for the domain name. However it receives no adequate response and fails with the second error.
+After receiving the same replies from all domain controllers located using DNS, it falls back to performing a NetBIOS name query for the FQDN domain name to locate a domain controller, however this gets no response and the join operation fails.
+If the NetBIOS scenario the client sends a NetLogonSamRequest to all domain controllers it receives from the WINS query for the domain name. However it receives no adequate response and fails with the second error.

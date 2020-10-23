@@ -58,7 +58,8 @@ Timer set by [PROCESS] \Device\HarddiskVolume1\Windows\System32\services.exe exp
 
 Any application can be scheduled a regular maintenance task to run automatically, as described by the following MSDN links.
 
-[https://blogs.msdn.com/b/windowsappdev/archive/2012/05/24/being-productive-in-the-background-background-tasks.aspx](https://blogs.msdn.com/b/windowsappdev/archive/2012/05/24/being-productive-in-the-background-background-tasks.aspx)  
+[Being productive in the background – background tasks](/archive/blogs/windowsappdev/being-productive-in-the-background-background-tasks)
+
 [https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.maintenancetrigger.aspx](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.maintenancetrigger.aspx)  
 
 The first application to make use of the Regular Maintenance task scheduling feature is Windows Update. The .NET Framework NGEN v4.0 utility has also been observed to cause the regular maintenance event to be scheduled.
