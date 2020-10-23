@@ -46,6 +46,8 @@
     href: how-to-renew-windows-azure-pack-authentication-sit.md
   - name: Update 1610 for Cloud Platform System Premium
     href: update-1610-cps-premium.md
+  - name: Update 1606 for Cloud Platform System Premium
+    href: update-1606-cps-premium.md
   - name: Update 1603 for Cloud Platform System Premium
     href: update-1603-for-cloud-platform-system-premium.md
   - name: Update 1603 for Cloud Platform System Standard
@@ -101,13 +103,19 @@
     href: sql-vm-logs.md
   - name: Recovery Services troubleshooter
     href: sdp-321382d70-df1d-4c0c-bdc6-9ba62752e851-asr.md
+  - name: SQL database data collector
+    href: sdp-342a3d014-6535-4e1f-9bd4-b0c32e71e3bf-sql.md
   - name: Support request creation process
     href: region-access-request-process.md
   - name: Troubleshoot Azure Information Protection policy issues
     href: troubleshoot-aip-issues.md
+  - name: Tips for finding Microsoft troubleshooting content
+    href: search-tips-find-troubleshooting-content.md
   - name: Virtual Network troubleshooter
     href: sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md
   - name: Troubleshoot high CPU or disk usage issues
     href: diagnose-high-cpu-disk-perfinsights.md
   - name: Use Secure File Exchange to exchange files
     href: secure-file-exchange-transfer-files.md
+
+
