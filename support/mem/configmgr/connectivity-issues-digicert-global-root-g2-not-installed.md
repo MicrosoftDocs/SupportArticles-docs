@@ -2,6 +2,9 @@
 title: Connectivity issues if the DigiCert Global Root G2 root certificate is not installed
 description: Fixes a connectivity issue in which the DigiCert Global Root G2 root certificate is not installed.
 ms.date: 10/22/2020
+author: v-miegge
+ms.author: vinpa
+ms.reviewer: vinpa
 ms.prod-support-area-path:
 ---
 
