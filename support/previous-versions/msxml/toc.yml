@@ -1,5 +1,5 @@
 
-- name: General
+- name: Microsoft Extensible Markup Language
   items:
   - name: Determine the version of MSXML parser
     href: determine-version-msxml-parser.md
