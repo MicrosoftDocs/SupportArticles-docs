@@ -60,13 +60,14 @@ You might experience one of more of the following symptoms:
     \<date> \<time> [INFO] Starting service NETLOGON
 - Repadmin.exe reports that the replication attempt has failed with status 8451. Repadmin.exe commands that commonly cite the 8451 status include but are not limited to:  
 
-    |||  
-    |---|---|  
-    |**Repadmin /kcc**|**Repadmin /showrepl**|  
-    |**Repadmin /rehost**|**Repadmin /showreps**|  
-    |**Repadmin /replicate**|**Repadmin /showutdvec**|  
-    |**Repadmin /replsum**|**Repadmin /syncall**|  
-    |||  
+  - **Repadmin /kcc**
+  - **Repadmin /rehost**
+  - **Repadmin /replicate**
+  - **Repadmin /replsum**
+  - **Repadmin /showrepl**
+  - **Repadmin /showreps**
+  - **Repadmin /showutdvec**
+  - **Repadmin /syncall**
 
     For detailed information about how to use Repadmin to troubleshoot replication problems, see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](https://go.microsoft.com/fwlink/?LinkId=122830).
 

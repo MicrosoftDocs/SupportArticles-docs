@@ -91,12 +91,12 @@ This article contains lists of Microsoft Knowledge Base articles that describe t
 
 - Server 2008 R2 Registry keys that have been introduced with hotfixes or security updates:
 
-    |Date|Knowledge Base article|Registry key|||
-    |---|---|---|---|---|
+    |Date|Knowledge Base article|Registry key|
+    |---|---|---|
     | 5/15/2009| [971277](https://support.microsoft.com/help/971277)|`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanmanServer\Parameters\ Level2Compatibility`|
     | 9/06/2010| [2345886](https://support.microsoft.com/help/2345886)|`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanmanServer\Parameters\ SmbServerNameHardeningLevel`|
     | 7/13/2012| [2732618](https://support.microsoft.com/help/2732618)|`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanmanServer\Parameters\ ABELevel`|
-    ||||||
+    ||||
 
 - Server 2008 Registry keys that have been introduced with hotfixes or security updates:
 

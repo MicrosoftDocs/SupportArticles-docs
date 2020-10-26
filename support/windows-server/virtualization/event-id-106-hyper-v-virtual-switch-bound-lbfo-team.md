@@ -78,5 +78,5 @@ Example: In the above example, you set NIC1 and NIC2 to both use processors 2, 3
 
 ## More information
 
-[Blog that discusses VMQ and LBFO settings for different LBFO configurations](http://blogs.technet.com/b/networking/archive/2013/09/24/vmq-deep-dive-2-of-3.aspx)  
-[Blog that discusses VMQ CPU assignment](http://blogs.technet.com/b/networking/archive/2016/01/05/virtual-machine-queue-vmq-cpu-assignment-tips-and-tricks.aspx)
+[Blog that discusses VMQ and LBFO settings for different LBFO configurations](https://blogs.technet.com/b/networking/archive/2013/09/24/vmq-deep-dive-2-of-3.aspx)  
+[Blog that discusses VMQ CPU assignment](https://blogs.technet.com/b/networking/archive/2016/01/05/virtual-machine-queue-vmq-cpu-assignment-tips-and-tricks.aspx)

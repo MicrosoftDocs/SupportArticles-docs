@@ -75,7 +75,7 @@ _Original KB number:_ &nbsp; 3079872
         - Use the `Set-adfssslcertificate` command to set the same certificate for SSL binding.
 
     2. Make sure that AD FS service communication certificate is trusted by the client.
-    3. If non-SNI-capable clients are trying to establish an SSL session with AD FS or WAP 2-12 R2, the attempt may fail. In this case, consider adding a Fallback entry on the AD FS or WAP servers to support non-SNI clients. For more information, see [How to support non-SNI capable clients with Web Application Proxy and AD FS 2012 R2](http://blogs.technet.com/b/applicationproxyblog/archive/2014/06/19/how-to-support-non-sni-capable-clients-with-web-application-proxy-and-ad-fs-2012-r2.aspx).
+    3. If non-SNI-capable clients are trying to establish an SSL session with AD FS or WAP 2-12 R2, the attempt may fail. In this case, consider adding a Fallback entry on the AD FS or WAP servers to support non-SNI clients. For more information, see [How to support non-SNI capable clients with Web Application Proxy and AD FS 2012 R2](https://blogs.technet.com/b/applicationproxyblog/archive/2014/06/19/how-to-support-non-sni-capable-clients-with-web-application-proxy-and-ad-fs-2012-r2.aspx).
 
 3. You may meet an "Unknown Auth method" error or errors stating that `AuthnContext` isn't supported at the AD FS or STS level when you're redirected from Office 365. It's most common when redirect to the AD FS or STS by using a parameter that enforces an authentication method. To enforce an authentication method, use one of the following methods:
    - For WS-Federation, use a WAUTH query string to force a preferred authentication method.

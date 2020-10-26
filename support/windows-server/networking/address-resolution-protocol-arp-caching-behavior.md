@@ -40,7 +40,7 @@ RFC provides the following calculated results.
 |---|---|
 |MIN_RANDOM_FACTOR|0.5|
 |MAX_RANDOM_FACTOR|1.5|
-|||
+
 Therefore, the "Reachable Time" value is somewhere between 15 seconds (30 × 0.5 seconds) and 45 seconds (30 × 1.5 seconds). If an entry is not used for a time between 15 to 45 seconds, it changes to the "Stale" state. Then, the host must send an ARP Request for IPV4 to the network when any IP datagram is sent to that destination.
 
 To see the current "Reachable Time" value, follow these steps:
