@@ -888,55 +888,55 @@
   items:
   - name: Active and retired Windows 10 troubleshooters
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
-- name: windows-media-feature-pack-for-windows-7
-  href: Windows Media Feature Pack for Windows 7 N and for Windows 7 KN.md
-- name: in-place-upgrade-to-windows-10-problems
-  href: In-place upgrade to Windows 10 problem.md
-- name: disable-screen-saver-passwords
-  href: Disable screen saver passwords by using policies.md
-- name: windows-search-4-multilingual-user-interface-pack
-  href: Windows Search 4.0 and Multilingual User Interface Pack.md
-- name: contact-system-administrator-to-upgrade-windows
-  href: Fail to upgrade Windows 10 Enterprise edition.md
-- name: computer-screen-black-during-installation
-  href: Computer screen goes black during setup.md
-- name: event-id-8-in-application-log
-  href: Event ID 8 is logged in Application log.md
-- name: disable-rpc-service-windows-process-not-work
-  href: Some Windows procedures don't work without RPC service.md
-- name: cannot-disable-microsoft-store
-  href: Can't disable Microsoft Store through Group Policy.md
-- name: windows-store-apps-not-open-event-id-5973
-  href: Event ID 5973 when you open Windows Store apps.md
-- name: system-restore-fail-error-0x8007045b
-  href: System Restore fails with error 0x8007045b.md
-- name: missing-windows-installer-cache
-  href: Restore missing Windows Installer cache files.md
-- name: system-error-126-start-windows-modules-installer
-  href: System Error 126 when you start TrustedInstaller.md
-- name: error-when-creating-single-partition
-  href: Error 0x80042468 when creating a single partition.md
-- name: cant-access-efi-system-partition
-  href: You can't access an EFI system partition.md
-- name: downgrade-from-windows-8
-  href: How to downgrade from Windows 8.md
-- name: upgrade-advisor-tool-failed-to-run
-  href: Windows 7 Upgrade Advisor tool failed to run.md
-- name: language-packs-no-longer-available-after-upgrade
-  href: Language packs no longer available.md
-- name: device-cant-connect-mobile-broadband-over-the-air
-  href: Device can't connect to mobile broadband.md
-- name: event-id-10-logged-application-log-after-install
-  href: Event ID 10 is logged in the Application log.md
-- name: operation-timed-out-error-disk-management-console
-  href: "The operation timed out" error .md
-- name: windows-connection-manager-disconnects-wlan
-  href: Windows Connection Manager disconnects WLAN.md
-- name: sms-agent-host-service-not-start
-  href: SMS Agent Host service not start.md
-- name: system-diagnostics-stackframe-performance-degrades
-  href: Performance of System.Diagnostics.StackFrame degrades.md
-- name: high-pitched-noise-is-heard
-  href: A high pitched noise is heard when using Bluetooth headphones.md
-- name: current-hotfixes-have-folder-redirection
-  href: Current hotfixes have folder redirection enabled.md
+- name: Windows Media Feature Pack for Windows 7 N and for Windows 7 KN
+  href: windows-media-feature-pack-for-windows-7.md
+- name: In-place upgrade to Windows 10 problem
+  href: in-place-upgrade-to-windows-10-problems.md
+- name: Disable screen saver passwords by using policies
+  href: disable-screen-saver-passwords.md
+- name: Windows Search 4.0 and Multilingual User Interface Pack
+  href: windows-search-4-multilingual-user-interface-pack.md
+- name: Fail to upgrade Windows 10 Enterprise edition
+  href: contact-system-administrator-to-upgrade-windows.md
+- name: Computer screen goes black during setup
+  href: computer-screen-black-during-installation.md
+- name: Event ID 8 is logged in Application log
+  href: event-id-8-in-application-log.md
+- name: Some Windows procedures don't work without RPC service
+  href: disable-rpc-service-windows-process-not-work.md
+- name: Can't disable Microsoft Store through Group Policy
+  href: cannot-disable-microsoft-store.md
+- name: Event ID 5973 when you open Windows Store apps
+  href: windows-store-apps-not-open-event-id-5973.md
+- name: System Restore fails with error 0x8007045b
+  href: system-restore-fail-error-0x8007045b.md
+- name: Restore missing Windows Installer cache files
+  href: missing-windows-installer-cache.md
+- name: System Error 126 when you start TrustedInstaller
+  href: system-error-126-start-windows-modules-installer.md
+- name: Error 0x80042468 when creating a single partition
+  href: error-when-creating-single-partition.md
+- name: You can't access an EFI system partition
+  href: cant-access-efi-system-partition.md
+- name: How to downgrade from Windows 8
+  href: downgrade-from-windows-8.md
+- name: Windows 7 Upgrade Advisor tool failed to run
+  href: upgrade-advisor-tool-failed-to-run.md
+- name: Language packs no longer available
+  href: language-packs-no-longer-available-after-upgrade.md
+- name: Device can't connect to mobile broadband
+  href: device-cant-connect-mobile-broadband-over-the-air.md
+- name: Event ID 10 is logged in the Application log
+  href: event-id-10-logged-application-log-after-install.md
+- name: '"The operation timed out" error' 
+  href: operation-timed-out-error-disk-management-console.md
+- name: Windows Connection Manager disconnects WLAN
+  href: windows-connection-manager-disconnects-wlan.md
+- name: SMS Agent Host service not start
+  href: sms-agent-host-service-not-start.md
+- name: Performance of System.Diagnostics.StackFrame degrades
+  href: system-diagnostics-stackframe-performance-degrades.md
+- name: A high pitched noise is heard when using Bluetooth headphones
+  href: high-pitched-noise-is-heard.md
+- name: Current hotfixes have folder redirection enabled
+  href: current-hotfixes-have-folder-redirection.md
