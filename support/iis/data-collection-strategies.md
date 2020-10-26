@@ -17,11 +17,11 @@ When connecting to an IIS hosted website via Https, a TLS (Transport Layer Secur
 
 ### Runtime exceptions and errors, including HTTP 4xx and 50x status codes
 
-When accessing certain resources on IIS hosted web-applications or performing certain actions while navigating these sites, the IIS web applications or websites randomly or consistently throw errors. You may receive the 500 (Internal Server error) status code errors in your browser reporting various errors exceptions in the execution of server-side code for the website or 400 status code (bad request) status code that is sent back when accessing web services such as ASP.NET Web API and trying to send data to a web service endpoint. Unexpected authentication prompts or access denied requests represented by 401 and 403 status codes may also occur.
+When accessing certain resources on IIS hosted web-applications or performing certain actions while navigating these sites, the IIS web applications or websites randomly or consistently throw errors. You may receive the 500 (Internal Server error) status code errors in your browser reporting various errors exceptions in the execution of server-side code for the website or the 400 status code (bad request) status code that is sent back when accessing web services such as ASP.NET Web API and trying to send data to a web service endpoint. Unexpected authentication prompts or access denied requests represented by 401 and 403 status codes may also occur.
 
 ### Handler-Mapping Problems
 
-Requests sent to the web server are mapped to a specific handler (for example: Managed .NET handler registered using a web application deployed to the server) aren't routed to the expected handler. The requests end up being executed by the incorrect handler (like the Static File handler) resulting in a 403.14 status code (a directory listing request isn't allowed).
+Requests sent to the web server are mapped to a specific handler (for example: Managed .NET handler registered using a web application deployed to the server) - the handler will process the requests and return an HTTP response. Some requests may end up being routed to the unexpected handler. The requests end up being executed by the incorrect handler (like the Static File handler) resulting in a 403.14 status code (a directory listing request isn't allowed).
 
 ### Http Redirection Problem
 
@@ -33,7 +33,7 @@ When accessing a website's or web application's configuration settings through t
 
 ### IIS Extensions, Tools, and Add-In Issues
 
-When adding an IIS extension to a web server, such as an Application Request and Routing (ARR) to convert your web server into a load balancer or a reverse proxy, requests sent to the Server Running IIS result in unexpected behavior.
+When adding an IIS extension to a web server, such as an Application Request and Routing (ARR) to convert your web server into a load balancer or a reverse proxy, requests sent to the Server Running IIS result in unexpected behavior such as 500 or 400 status codes being returned or responses containing incorrect content.
 
 ### FTP Service Issues
 
