@@ -1,0 +1,26 @@
+
+- name: General
+  items:
+  - name: Determine the version of MSXML parser
+    href: determine-version-msxml-parser.md
+  - name: Display HTML in XSL style sheet
+    href: display-html-xsl-style-sheet.md
+  - name: List of XML parser versions
+    href: list-of-xml-parser-versions.md
+  - name: Persist or load ADO Recordset
+    href: ado-recordset-xml-persistence.md
+  - name: Questions about XMLHTTP and ServerXMLHTTP
+    href: questions-xmlhttp-serverxmlhttp.md
+  - name: ServerXMLHTTP or XMLHTTP in async mode
+    href: serverxmlhttp-xmlhttp-ashnc-mode.md
+  - name: Specify namespace when you query DOM with XPath
+    href: specify-namespace-querying-dom-xpath.md
+  - name: Use XML notepad to create an XML document
+    href: use-xml-notepad-create-xml.md
+  - name: Use XPath to query against a default namespace
+    href: use-xpath-against-default-namespace.md
+  - name: XML encoding and DOM interface methods
+    href: xml-encoding-dom-interface-methods
+  
+- name: More products
+  href: ../index.yml
