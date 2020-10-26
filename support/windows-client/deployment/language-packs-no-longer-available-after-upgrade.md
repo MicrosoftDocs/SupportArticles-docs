@@ -71,4 +71,4 @@ There are advanced language settings that may block the download of language pac
 
 During the upgrade from Windows 8 to Windows 8.1, Windows Setup detects whether the display language is the localized language of the operating system. It then displays the following message window to indicate that you might have to reinstall any language packs that were previously installed.
 
-![attention](./media/language-packs-no-longer-available-after-upgrade/attention.jpg)
+![attention screenshot](./media/language-packs-no-longer-available-after-upgrade/attention.jpg)

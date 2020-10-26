@@ -1,6 +1,6 @@
 ---
-title: "The operation timed out" error
-description: Helps to fix the error "The operation timed out" when creating a partition using Disk Management console or DiskPart.exe.
+title: The operation timed out error
+description: Helps to fix the error The operation timed out when creating a partition using Disk Management console or DiskPart.exe.
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan 
