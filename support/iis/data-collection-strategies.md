@@ -21,7 +21,7 @@ When accessing certain resources on IIS hosted web-applications or performing ce
 
 ### Handler-Mapping Problems
 
-Requests sent to the web server are mapped to a specific handler (for example: Managed .NET handler registered using a web application deployed to the server) - the handler will process the requests and return an HTTP response. Some requests may end up being routed to the unexpected handler. The requests end up being executed by the incorrect handler (like the Static File handler) resulting in a 403.14 status code (a directory listing request isn't allowed).
+Requests sent to the web server are mapped to a specific handler (for example: Managed .NET handler registered using a web application deployed to the server) - the handler will process the requests and return an HTTP response. Some requests may end up being routed to the unexpected handler. For example, the requests end up being executed by the incorrect handler (like the Static File handler) resulting in a 403.14 status code (a directory listing request isn't allowed).
 
 ### Http Redirection Problem
 
