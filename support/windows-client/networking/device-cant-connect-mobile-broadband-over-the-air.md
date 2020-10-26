@@ -47,7 +47,7 @@ To resolve the issue that's described in the "Symptoms" section, follow these st
 8. Select **Administrators**, select the **Full Control** check box in the **Allow** column, and then click **OK**.
 9. Create or locate the following registry key, and set the DWORD value to 1 (DWORD=1):
 
-    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Control Panel\Settings\Network\ManualConnectionRetry
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Control Panel\Settings\Network\ManualConnectionRetry`
 
 10. Go to **Settings** -> **Network and Internet** -> **Cellular** -> **Connect**.
 11. A retry page that resembles as:
