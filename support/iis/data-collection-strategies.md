@@ -17,7 +17,7 @@ When connecting to an IIS hosted website via Https, a TLS (Transport Layer Secur
 
 ### Runtime exceptions and errors, including HTTP 4xx and 50x status codes
 
-When accessing certain resources on IIS hosted web-applications or performing certain actions while navigating these sites, the IIS web applications or websites randomly or consistently throw errors. You may receive the 500 (Internal Server error) status code errors in your browser reporting various errors exceptions in the execution of server-side code for the website or 400 status code (bad request) status code which is sent back when accessing web services such as ASP.NET Web API and trying to send data to a web service endpoint. Unexpected authentication prompts or access denied requests represented by 401 and 403 status codes may also occur.
+When accessing certain resources on IIS hosted web-applications or performing certain actions while navigating these sites, the IIS web applications or websites randomly or consistently throw errors. You may receive the 500 (Internal Server error) status code errors in your browser reporting various errors exceptions in the execution of server-side code for the website or 400 status code (bad request) status code that is sent back when accessing web services such as ASP.NET Web API and trying to send data to a web service endpoint. Unexpected authentication prompts or access denied requests represented by 401 and 403 status codes may also occur.
 
 ### Handler-Mapping Problems
 
@@ -45,7 +45,7 @@ When running a web application or a website on a farm consisting of several IIS 
 
 ## Resolution
 
-When reporting the types of issues described above to Microsoft Support, you must provide all the telemetry data required to diagnose the issue. If an issue occurs on an production server, a complete and timely data collection strategy will allow for a faster resolution time. Use the Microsoft LogCatcher tool for automated data collection to allow faster and more consistent telemetry data gathering of all needed data from the web-server in an automated fashion.
+When reporting the types of issues described above to Microsoft Support, you must provide all the telemetry data required to diagnose the issue. If an issue occurs on a production server, a complete and timely data collection strategy will allow for a faster resolution time. Use the Microsoft LogCatcher tool for automated data collection to allow faster and more consistent telemetry data gathering of all needed data from the web-server in an automated fashion.
 
 When Microsoft support professionals take your call about issues you may be facing with either the IIS web-server or ASP.NET Runtime, they will ask you to download the tool and to collect data. Download the tool from the GitHub repository ([LogCatcher](https://github.com/crnegule/LogCatcher)).
 
