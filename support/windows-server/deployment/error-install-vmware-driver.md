@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.prod-support-area-path: Devices and Drivers
+ms.technology: Deployment
 ---
 # You can't install a VMWare driver on Windows Server 2008 R2
 

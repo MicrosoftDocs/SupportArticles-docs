@@ -96,20 +96,10 @@ Description: Application popup: Windows - Low On Registry Space: The system has 
 
 Windows Server 2003, 2008 and 2008 R2 still honor the Registry Size Limit (RSL) functionality if the RegistrySizeLimit registry key is set to a value other than 0.
 
-This registry key is described in following Microsoft Knowledge Base article:
-
-124594 Understanding and configuring Registry Size Limit (RSL)  
- [https://support.microsoft.com/default.aspx?scid=kb;EN-US;124594](/default.aspx?scid=kb;en-us;124594) 
-
 ## Resolution
 
 If the RegistrySizeLimit key exists or is set to a value other than 0, delete the key or set it to 0. This will allow the operating system to automatically set the registry size as needed. It is recommended to delete this registry key unless it is specifically required for another reason. 
 
 If RegistrySizeLimit is not present or is set to 0, the registry size limit will be automatically set to one third of the max paged pool size.
 
-## More information
-
-302594 The System hive memory limitation is improved in Windows Server 2003  
- [https://support.microsoft.com/default.aspx?scid=kb;EN-US;302594](/[anySimpleType]/help/[anySimpleType]) 
-
-Important:  This Information also applies to client operating systems like Windows XP, Windows Vista and Windows 7.
+Important: This Information also applies to client operating systems like Windows XP, Windows Vista and Windows 7.

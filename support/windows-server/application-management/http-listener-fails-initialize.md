@@ -22,16 +22,16 @@ _Original KB number:_ &nbsp; 4570992
 
 ## Symptoms
 
-When initializing a new HTTP Listener using the HttpInitialize function or the .NET HttpListener Class, the operation fails and you receive this error message:
+When initializing a new HTTP Listener using the HttpInitialize function or the .NET HttpListener Class, the operation fails and you receive this error message:
 
-> HttpInitialize failed with 5 ( -access denied)
+> HttpInitialize failed with 5 ( -access denied)
 
 ## Cause
 
-This issue occurs when the account running the code lacks the **SeChangeNotifyPrivilege** privilege.
+This issue occurs when the account running the code lacks the **SeChangeNotifyPrivilege** privilege.
 
 ## Workaround
 
-Grant the [Bypass traverse checking](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) user right to the relevant account.
+Grant the [Bypass traverse checking](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) user right to the relevant account.
 
-This privilege is granted to the Everyone group by default.
+This privilege is granted to the Everyone group by default.

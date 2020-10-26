@@ -60,10 +60,7 @@ The object has also been significantly modified from its original form:
 
 The schema of the object determines the attributes that are removed, and the attributes that are kept after deletion. The designation of each attribute for an object class can be changed.
 
-The objects can't be seen from normal Active Directory management tools. You may configure a low-level LDAP interface like LDP to view these objects:
-
- [https://support.microsoft.com/default.aspx?scid=kb;EN-US;Q258310](/default.aspx?scid=kb;en-us;q258310) 
-
+The objects can't be seen from normal Active Directory management tools. You may configure a low-level LDAP interface like LDP to view these objects.
 
 The object moves to one of two possible states (Stage 3 or 4) when the tombstone lifetime has expired. The default tombstone lifetime is 60 days.
 

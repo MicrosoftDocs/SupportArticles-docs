@@ -30,9 +30,9 @@ These APIs may fail with "ACCESS DENIED" although the calling account has suffic
 
 One application that uses these APIs is the cluster service, and in the cluster service log you will see:
 
-00000a78.000021b8::2010/06/15-00:00:47.911 WARN [RES] Network Name \<cluster-resource1>: Couldn't determine if computer account cluster-resource1 is already disabled. status 5  
+00000a78.000021b8::2010/06/15-00:00:47.911 WARN [RES] Network Name \<cluster-resource1>: Couldn't determine if computer account cluster-resource1 is already disabled. status 5  
 
-Another symptom of this effect might be excessive audit records in the Security Eventlog of your DCs for these API calls and the objects quoted below, if successful or failure access auditing for the calling account is enabled. 
+Another symptom of this effect might be excessive audit records in the Security Eventlog of your DCs for these API calls and the objects quoted below, if successful or failure access auditing for the calling account is enabled. 
 
 ## More information
 

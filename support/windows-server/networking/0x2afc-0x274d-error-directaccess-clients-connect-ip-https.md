@@ -28,7 +28,7 @@ When you run the netsh interface http show interface command in this situation, 
 
 >Error: 0x2AFC
  Role: Client  
- URL: [https://da.contoso.com/IPHTTPS](https://da.contoso.com/iphttps)  
+ URL: `https://da.contoso.com/iphttps`  
  Last Error Code: 0x2AFC  
  Interface Status: Failed to connect to IPHTTPs server; Waiting to reconnect.  
  0x2AFC translates to:  
@@ -39,7 +39,7 @@ When you run the netsh interface http show interface command in this situation, 
 
 >Error: 0x274D  
  Role: Client  
- URL: [https://da.contoso.com/IPHTTPS](https://da.contoso.com/iphttps)  
+ URL: `https://da.contoso.com/iphttps`  
  Last Error Code: 0x274D  
  Interface Status: Failed to connect to IPHTTPs server; Waiting to reconnect.  
  0x274D translates to:  

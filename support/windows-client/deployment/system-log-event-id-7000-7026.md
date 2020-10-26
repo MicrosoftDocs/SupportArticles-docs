@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.prod-support-area-path: Devices and Drivers
+ms.technology: Deployment
 ---
 # Event ID 7000 or 7026 is logged in the System log on a computer that's running Windows 7, Windows Vista, Windows Server 2008 R2, or Windows Server 2008
 

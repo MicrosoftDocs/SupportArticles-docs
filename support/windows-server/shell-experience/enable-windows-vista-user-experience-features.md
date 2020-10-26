@@ -17,7 +17,7 @@ ms.technology: ShellExperience
 
 This article describes how to configure Windows Server 2008 as a workstation computer.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;947036
 
 ## Introduction
@@ -128,15 +128,8 @@ Windows Server 2008 supports the Windows Aero user interface experience. However
 
 #### To obtain graphics adapter drivers
 
-To obtain graphics adapter drivers, visit the following AMD Web sites:
-- [For ATI FireGL 64-bit drivers](http://ati.amd.com/support/drivers/vista64/firegl-vista64.html) 
+To obtain graphics adapter drivers, visit the [AMD Web site](https://www.amd.com/support).
 
-- [For ATI FireGL 32-bit drivers](http://ati.amd.com/support/drivers/vista32/firegl-vista32.html) 
-
-- [For ATI Radeon 64-bit drivers](http://ati.amd.com/support/drivers/vista64/common-vista64.html) 
-
-- [For ATI Radeon 32-bit drivers](http://ati.amd.com/support/drivers/vista32/common-vista32.html) 
- 
 Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft doesn't guarantee the accuracy of this third-party contact information.  
 
 > [!NOTE]

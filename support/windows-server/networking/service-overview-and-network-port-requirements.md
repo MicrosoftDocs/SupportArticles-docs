@@ -114,7 +114,7 @@ Finally, you can hard-code the port that is used for Active Directory replicatio
 
 ² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
-In addition, the Microsoft LDAP client uses ICMP pings to verify that an LDAP server it has a pending request with is still present on the network. The following settings are LDAP session options:
+In addition, the Microsoft LDAP client uses ICMP pings to verify that an LDAP server it has a pending request with is still present on the network. The following settings are LDAP session options:
 
 - [PingKeepAliveTimeout](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pingkeepalivetimeout) = 120 seconds (how long it waits after last response from server before it starts sending ping [PingLimit](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pinglimit) = 4 (how many pings are sent before connection is closed)
 - [PingWaitTimeout](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pingwaittimeout) = 2000ms (how long it waits for the ICMP response)
@@ -192,7 +192,7 @@ System service name: **ClusSvc**
 > [!NOTE]
 > Additionally, for successful validation on Windows Failover Clusters on 2008 and above, allow inbound and outbound traffic for ICMP4, ICMP6, and port 445/TCP for SMB.
 >
-> ¹ Cluster Service UDP traffic over port 3343 requires the Datagram Transport Layer Security (DTLS) protocol, version 1.0 or version 1.2. By default, DTLS is enabled. For more information, see [Protocols in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
+> ¹ Cluster Service UDP traffic over port 3343 requires the Datagram Transport Layer Security (DTLS) protocol, version 1.0 or version 1.2. By default, DTLS is enabled. For more information, see [Protocols in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
 >
 > ² For more information about how to customize these ports, see Remote Procedure Calls and DCOM in the [References](#references) section.
 >

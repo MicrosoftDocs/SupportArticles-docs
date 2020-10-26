@@ -44,7 +44,7 @@ The issue occurs because the Plug and Play (PnP) manager auto-generates unique i
 
 This event ID can safely be ignored, and no user action is required.
 
-**Note** In Windows Server 2012, Windows Server 2012 R2, and Windows Server 2016, you might see the event displayed but without the correct Description field, as shown below. However, the driver name and the child device name are correct and can be used to identify the driver involved and the name of the child device. 
+**Note** In Windows Server 2012, Windows Server 2012 R2, and Windows Server 2016, you might see the event displayed but without the correct Description field, as shown below. However, the driver name and the child device name are correct and can be used to identify the driver involved and the name of the child device. 
 
 The description for Event ID 56 from source Application Popup cannot be found. Either the component that raises this event is not installed on your local computer or the installation is corrupted. You can install or repair the component on the local computer. If the event originated on another computer, the display information had to be saved with the event. The following information was included with the event: 
  SCSI

@@ -36,10 +36,10 @@ Scenarios
   NET USE * \\CNAME\share_name
   ```
 
-  In this case, you experience the following:
+  In this case, you experience the following:
 
   - Access from a Windows Server 2008 R2 or Windows 7 client is successful.
-  - Access from a Windows Server 2012 R2, Windows 8.1 or a later version of Windows client is unsuccessful. In this case, you receive an error message that resembles the following:
+  - Access from a Windows Server 2012 R2, Windows 8.1 or a later version of Windows client is unsuccessful. In this case, you receive an error message that resembles the following:
   
     > Open Folder
     >

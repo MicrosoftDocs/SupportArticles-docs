@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2001165
 
 ## Symptoms
 
-Assume the following scenario. The server that holds the RID operations master role is no longer accessible and must be rebuilt. You attempt to seize the RID Master role with the Ntdsutil tool to a different domain controller but you receive the following error:
+Assume the following scenario. The server that holds the RID operations master role is no longer accessible and must be rebuilt. You attempt to seize the RID Master role with the Ntdsutil tool to a different domain controller but you receive the following error:
 
 Attempting safe transfer of RID FSMO before seizure.
 ldap_modify_sW error 0x34(52 (Unavailable).

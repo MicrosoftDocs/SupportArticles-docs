@@ -288,6 +288,8 @@
           href: central-administration-site-setup-fails.md
     - name: Site system roles installation and operations
       items:
+        - name: Connectivity issues when the DigiCert Global Root G2 root cert is not installed
+          href: connectivity-issues-digicert-global-root-g2-not-installed.md
         - name: Enable MFA for SMS Provider calls
           href: enable-mfa-for-sms-provider-calls.md
         - name: HTTP Error 500.19

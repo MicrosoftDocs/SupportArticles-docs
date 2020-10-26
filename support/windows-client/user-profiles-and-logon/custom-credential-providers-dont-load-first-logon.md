@@ -23,15 +23,15 @@ _Original KB number:_ &nbsp; 4073719
 ## Symptom
 
 Consider the following scenario: 
-- You have a Windows 10-based computer that is not joined to a domain. 
+- You have a Windows 10-based computer that is not joined to a domain. 
 - Custom credential providers are installed on the computer. 
-- You log on to the computer for the first time after it starts.  
+- You log on to the computer for the first time after it starts.  
 
 In this scenario, the custom credential providers are not called. 
 
 ## Cause
 
-This is by design. A Windows 10 update improves the **Use my sign in info to automatically finish setting up my device after an update** sign-in option. This feature is used for first logon. Therefore, custom credential providers do not take effects.
+This is by design. A Windows 10 update improves the **Use my sign in info to automatically finish setting up my device after an update** sign-in option. This feature is used for first logon. Therefore, custom credential providers do not take effects.
 
 ## Workaround
 

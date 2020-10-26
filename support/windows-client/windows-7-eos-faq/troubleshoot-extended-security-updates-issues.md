@@ -15,7 +15,7 @@ ms.technology: Windows 7 EoS FAQ
 ---
 # Troubleshoot issues in Extended Security Updates
 
-This article describes emerging issues that affect Extended Security Updates (ESU) deployments and the steps to troubleshoot these issues. This information is organized by task, as follows:
+This article describes emerging issues that affect Extended Security Updates (ESU) deployments and the steps to troubleshoot these issues. This information is organized by task, as follows:
 
 - Installing update prerequisites
 - Installing ESU keys
@@ -23,7 +23,7 @@ This article describes emerging issues that affect Extended Security Updates (ES
 - Installing ESU
 - Maintaining ongoing ESU compliance
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 4547184
 
 ## Installing ESU prerequisites
@@ -44,18 +44,18 @@ The package that you're trying to install isn't applicable to your Windows opera
 
 - Make sure that the package is meant for your operating system edition and architecture.
 - Restart the computer, and then try to install the package again.​
-- If you still see the error message, see [The update is not applicable to your computer](/windows/deployment/update/windows-update-troubleshooting#the-update-is-not-applicable-to-your-computer) in [Windows Update troubleshooting](/windows/deployment/update/windows-update-troubleshooting)  to see a list of the most common reasons for this message.
+- If you still see the error message, see [The update is not applicable to your computer](/windows/deployment/update/windows-update-troubleshooting#the-update-is-not-applicable-to-your-computer) in [Windows Update troubleshooting](/windows/deployment/update/windows-update-troubleshooting)  to see a list of the most common reasons for this message.
  
 **Additional steps** 
 
 If the preceding steps don't resolve the problem, do this on the affected computer:
 
-1. Copy the component-based servicing (CBS) log file (C:\Windows\Logs\CBS\CBS.log).
+1. Copy the component-based servicing (CBS) log file (C:\Windows\Logs\CBS\CBS.log).
 2. Contact [Microsoft Support](https://support.microsoft.com/contactus/), and provide this log file.  
  
 ### Installer encountered an error: 0x80096010. The digital signature of the object did not verify. 
 
-When you install an update that is required by ESU, you see a message that resembles the following: 
+When you install an update that is required by ESU, you see a message that resembles the following: 
 
 > Installer encountered an error: 0x80096010.  
 The digital signature of the object did not verify.
@@ -66,15 +66,15 @@ The computer is missing the SHA-2 updates.
 
  **Actions to take**  
 
-Install the SHA-2 updates. For a list of prerequisites and SHA-2 updates, see the "Installation prerequisites" section of [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091#).
+Install the SHA-2 updates. For a list of prerequisites and SHA-2 updates, see the "Installation prerequisites" section of [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091#).
 
 ## Installing ESU product activation keys
 
-You may encounter the following problems when you install a product activation key for ESU on a computer. This section assumes that all of the prerequisite updates for ESU are installed on the computer. 
+You may encounter the following problems when you install a product activation key for ESU on a computer. This section assumes that all of the prerequisite updates for ESU are installed on the computer. 
 
-### Run 'slui.exe 0x2a 0xC004F050' to display the error text.  Error: 0xC004F050 
+### Run 'slui.exe 0x2a 0xC004F050' to display the error text.  Error: 0xC004F050 
 
-When you install an ESU key, you see a message that resembles the following: 
+When you install an ESU key, you see a message that resembles the following: 
 
 > Run 'slui.exe 0x2a 0xC004F050' to display the error text.  
 Error: 0xC004F050
@@ -84,25 +84,25 @@ Error: 0xC004F050
 This problem may occur under any of the following conditions:
 
 - The licensing monthly rollup/security only/standalone package isn't installed on the computer.
-- The computer hasn't been restarted after installing the updates. 
-- Windows Server 2008 SP2-based computers sometimes require an additional restart. 
+- The computer hasn't been restarted after installing the updates. 
+- Windows Server 2008 SP2-based computers sometimes require an additional restart. 
  
 **Actions to take** 
 
 1. Review the update history of the computer to make sure that all the ESU prerequisites have been installed successfully. For a list of the prerequisites, see [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091#).
 2. ​​Verify that the key that you're installing is the correct key for the computer and its operating system.
-3. Restart the computer, and then install the key again.​​
+3. Restart the computer, and then install the key again.​​
  
 **Additional steps**  
 
-If the preceding steps don't resolve the problem, do this on the affected computer: 
+If the preceding steps don't resolve the problem, do this on the affected computer: 
 
-1. Copy the component-based servicing (CBS) log file (C:\Windows\Logs\CBS\CBS.log). 
+1. Copy the component-based servicing (CBS) log file (C:\Windows\Logs\CBS\CBS.log). 
 2. Contact [Microsoft Support](https://support.microsoft.com/contactus/), and provide this log file.  
  
 ### Error: 0xC004F050 The Software Licensing Service reports that the product key is invalid. 
 
-When you install the ESU product key by using **slmgr.vbs /ipk**, you receive the following Windows Script Host message: 
+When you install the ESU product key by using **slmgr.vbs /ipk**, you receive the following Windows Script Host message: 
 
 > Error: 0xC004F050 The Software Licensing Service reported that the product key is invalid.
 
@@ -111,7 +111,7 @@ When you install the ESU product key by using **slmgr.vbs /ipk**, you receive t
 This problem can occur in either of the following circumstances:
 
 - The licensing monthly rollup/security only/standalone package isn't installed on the computer.
-- You installed the prerequisite updates, but you didn't restart the computer. 
+- You installed the prerequisite updates, but you didn't restart the computer. 
  
 **Actions to take** 
 
@@ -125,19 +125,19 @@ For a list of the required updates and information about how to get them, see [O
 
 If the preceding steps don't resolve the problem, do this on the affected computer:
 
-1. Copy the component-based servicing (CBS) log file (C:\Windows\Logs\CBS\CBS.log).
+1. Copy the component-based servicing (CBS) log file (C:\Windows\Logs\CBS\CBS.log).
 2. Contact [Microsoft Support](https://support.microsoft.com/contactus/), and provide this log file.
 
 ### The Software Licensing Service reports that the product key is invalid 
 
-When you add the ESU product key to the Volume Activation Management Tool (VAMT), you receive the following message:
+When you add the ESU product key to the Volume Activation Management Tool (VAMT), you receive the following message:
 
 > Unable to verify product key  
 The specified product key is invalid, or is unsupported by this version of VAMT. An update to support additional products may be available online.
 
 **Cause**  
 
-This can occur if two of the files that support VAMT weren't updated to support ESU keys.
+This can occur if two of the files that support VAMT weren't updated to support ESU keys.
 
  **Resolution**  
 
@@ -164,7 +164,7 @@ For a list of the required updates and information about how to get them, see [O
 
 ## Activating ESU keys
 
-You may encounter the following problems when you activate the ESU key on a computer. This section assumes that the computer has the product activation key and all the prerequisite updates for ESU installed.
+You may encounter the following problems when you activate the ESU key on a computer. This section assumes that the computer has the product activation key and all the prerequisite updates for ESU installed.
 
 This section is divided into four parts. Some problems may occur during any type of activation, and some problems are specific to the activation type that your use.
 
@@ -181,13 +181,13 @@ Content decoding has failed
 
  **Cause**  
 
-This may occur if TLS 1.0 is disabled and the `HKEY_LOCAL_MACHINE\System\CurrenteControlSet\Control\SecurityProviders\Schannel\Protocols\TLS 1.0\Client` subkey is set as follows:
+This may occur if TLS 1.0 is disabled and the `HKEY_LOCAL_MACHINE\System\CurrenteControlSet\Control\SecurityProviders\Schannel\Protocols\TLS 1.0\Client` subkey is set as follows:
 
 - **DisabledByDefault:** 1
 - **Enabled:** 0
  **Actions to take**  
 
-This method forces the activation process to use TLS 1.2 by default so that TLS 1.0 can remain disabled.
+This method forces the activation process to use TLS 1.2 by default so that TLS 1.0 can remain disabled.
 
 To resolve this issue, follow these steps.
 
@@ -195,13 +195,13 @@ To resolve this issue, follow these steps.
 2. Open **regedit**, and navigate to the following registry subkey:
      `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp` 
     Create or set a **REG_DWORD** value of **DefaultSecureProtocols**, and set it to **0x800**.
-3. If the computer is X64, you must also set the following additional registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp` 
+3. If the computer is X64, you must also set the following additional registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp` 
     Create or set a **REG_DWORD** value of **DefaultSecureProtocols**, and set it to **0x800**.
-4. Restart the computer, and then try to run the **slmgr.vbs /ato**  command again.
+4. Restart the computer, and then try to run the **slmgr.vbs /ato**  command again.
 
 ### ****Slmgr activation****  
 
-This section describes problems that you might encounter when you use the Slmgr tool for activation. 
+This section describes problems that you might encounter when you use the Slmgr tool for activation. 
 
 **Product activation failed while trying to activate ESU product key.** 
 
@@ -215,7 +215,7 @@ The Windows operating system edition or architecture isn't eligible for ESU.
 
  **Actions to take**
  
-Make sure that the Windows operating system edition or architecture is in the list of editions and architectures that are supported for ESU. For a list, see [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091#).
+Make sure that the Windows operating system edition or architecture is in the list of editions and architectures that are supported for ESU. For a list, see [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091#).
 
 **Additional steps**
 
@@ -229,11 +229,11 @@ When you try to activate the product key, you get a message that resembles the f
 
 **Cause**
 
-By design, a MAK supports a limited number of activations. In this case, the MAK has exceeded its activation limit.
+By design, a MAK supports a limited number of activations. In this case, the MAK has exceeded its activation limit.
 
 **Actions to take**  
 
-To increase the number of activations that the MAK key supports, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
+To increase the number of activations that the MAK key supports, contact the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
 **Product not found while trying to activate ESU key** 
 
@@ -262,7 +262,7 @@ In this command, \<Activation ID> represents the activation ID of the ESU key.
 
 **0xC004F025 access denied: the requested action requires elevated privileges.**
 
-When you try to activate the product key, you receive a message that resembles the following:
+When you try to activate the product key, you receive a message that resembles the following:
 
 > 0xC004F025 access denied: the requested action requires elevated privileges.
 
@@ -274,7 +274,7 @@ You may be using a regular Command Prompt window instead of an elevated Command 
 
 To open an elevated Command Prompt window, do the following:
 
-- Select **Start**, right-click **Command Prompt**, and then select **Run as administrator**.
+- Select **Start**, right-click **Command Prompt**, and then select **Run as administrator**.
 
 **Error: 0x80072EE7** 
 
@@ -285,7 +285,7 @@ Error: 0x80072EE7
 
 **Cause** 
 
-The computer can't communicate with the Microsoft Activation and Validation Services (AVS) server to activate the ESU key.
+The computer can't communicate with the Microsoft Activation and Validation Services (AVS) server to activate the ESU key.
 
 **Actions to take**
 
@@ -303,7 +303,7 @@ When you try to activate the product key, you get a message that resembles the f
 
 **Possible causes**
 
-The computer can't connect to the Microsoft Activation service. It might not be connected to internet, or it might have issues with internet connectivity.
+The computer can't connect to the Microsoft Activation service. It might not be connected to internet, or it might have issues with internet connectivity.
 
  **Actions to take**
  
@@ -335,10 +335,10 @@ Collapsible element body
 
 ### Volume Activation Management Tool (VAMT) activation 
 
-This section describes problems that you might encounter when you use VAMT online or proxy activation. When you do this, use the following VAMT proxy activation URLs:
+This section describes problems that you might encounter when you use VAMT online or proxy activation. When you do this, use the following VAMT proxy activation URLs:
 
-- https://activation.sls.microsoft.com/BatchActivation/BatchActivation.asmx​
-- https://go.microsoft.com/fwlink/?LinkId=82160 (This FWLink redirects to the preceding URL.)​
+- `https://activation.sls.microsoft.com/BatchActivation/BatchActivation.asmx​`
+- `https://go.microsoft.com/fwlink/?LinkId=82160` (This FWLink redirects to the preceding URL.)​
 ​
 Alternatively, include the following domains in the computer's allow list:
 
@@ -354,7 +354,7 @@ The specified product key is invalid, or is unsupported by this version of VAMT.
 
  **Possible causes** 
 
-There may be a problem in the pkconfig files. Those files may have to be replaced.
+There may be a problem in the pkconfig files. Those files may have to be replaced.
 
  **Actions to take**
 
@@ -371,7 +371,7 @@ The download includes the following files:
 
 **Unable to connect to the WMI service on the remote machine while activating the remote machine using VAMT online/proxy activation.** 
 
-When you try to activate the product key, you receive a message that resembles the following:
+When you try to activate the product key, you receive a message that resembles the following:
 
 > Unable to connect to the WMI service on the remote machine while activating the remote machine using VAMT online/proxy activation.
 
@@ -383,8 +383,8 @@ Either of the following conditions on the affected computer may cause this probl
  
 **Actions to take**
 
-- To turn on the WMI service, select **Start** > **Services**, and right-click **Windows Management Instrumentation**. Then select **Restart​**.
-- To configure Windows Firewall, follow the instructions in the [Configure Client Computers](https://docs.microsoft.com/windows/deployment/volume-activation/configure-client-computers-vamt)  topic.
+- To turn on the WMI service, select **Start** > **Services**, and right-click **Windows Management Instrumentation**. Then select **Restart​**.
+- To configure Windows Firewall, follow the instructions in the [Configure Client Computers](https://docs.microsoft.com/windows/deployment/volume-activation/configure-client-computers-vamt)  topic.
 For more information about how to install the VAMT tool and configure client computers, see [Install and Configure VAMT](https://docs.microsoft.com/windows/deployment/volume-activation/install-configure-vamt).
  
 **Error: Access is denied.** 
@@ -401,7 +401,7 @@ You don't have permissions to access the computer.
  
 On a domain-joined VAMT client computer, verify the following:
 
-1. You (or the activating user) have permissions to access the client computer.
+1. You (or the activating user) have permissions to access the client computer.
 2. Your account (or that of the activating user) appears in the **User Accounts** list on the client computer. For more information, see [Local Accounts](https://docs.microsoft.com/windows/security/identity-protection/access-control/local-accounts).
 
 ### Phone activation
@@ -410,7 +410,7 @@ This section describes problems that you might encounter when you use phone acti
 
 **Error: 0xC004F04D The Software Licensing Service determined that the Installation ID (IID) or the Confirmation ID (CID) is invalid.****  
 
-When you try to activate the product key, you receive a message that resembles the following:
+When you try to activate the product key, you receive a message that resembles the following:
 
 > Run 'slui.exe 0x2a 0xC004F04D' to display the error text.  
 Error: 0xC004F04D  
@@ -430,7 +430,7 @@ In this command, \<Confirmation ID> represents the confirmation ID that you obta
 
 ## Installing ESU
 
-You may encounter the following problems when you install an ESU update on a computer. This section assumes that the computer has all of the prerequisite updates for ESU, and the product activation key is installed and activated.
+You may encounter the following problems when you install an ESU update on a computer. This section assumes that the computer has all of the prerequisite updates for ESU, and the product activation key is installed and activated.
 
 ### The Windows Module Installer must be updated before you can install the package. 
 
@@ -447,11 +447,11 @@ The Servicing Stack Update (SSU) with AI Changes package isn't installed on the 
 
 Verify that the SSU package is installed on the computer. To do this, on the affected computer, select **Start** > **Control Panel** > **Programs** > **Program and Features** > **View Installed updates**.
 
-If the SSU package isn't installed, install it and restart the computer. For more information about this update, see the "Installation prerequisites" section of [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091#).
+If the SSU package isn't installed, install it and restart the computer. For more information about this update, see the "Installation prerequisites" section of [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091#).
 
  **Additional steps**  
 
-If the preceding steps don't resolve the problem, on the affected computer, copy the component-based servicing (CBS) log file (C:\Windows\Logs\CBS\CBS.log). Contact [Microsoft Support](https://support.microsoft.com/contactus/), and provide this log file. 
+If the preceding steps don't resolve the problem, on the affected computer, copy the component-based servicing (CBS) log file (C:\Windows\Logs\CBS\CBS.log). Contact [Microsoft Support](https://support.microsoft.com/contactus/), and provide this log file. 
  
 ### Some updates were not installed while trying to install the security update. 
 
@@ -459,7 +459,7 @@ When you install an ESU update, you see a message that resembles the following:
 
 > Download and Install Updates
 Some updates were not installed
-For information about other error codes, refer to the [Windows Update](https://docs.microsoft.com/windows/deployment/update/windows-update-error-reference) error reference.
+For information about other error codes, refer to the [Windows Update](https://docs.microsoft.com/windows/deployment/update/windows-update-error-reference) error reference.
  
 **Possible causes**  
 
@@ -472,20 +472,20 @@ This problem may occur under any of the following conditions:
  
 **Actions to take**  
 
-In the case of a desktop client or server computer, follow these steps to verify that the computer has a valid ESU key installed and activated.
+In the case of a desktop client or server computer, follow these steps to verify that the computer has a valid ESU key installed and activated.
 
 1. Open an elevated Command Prompt window and then run one of the following commands:
-   - **slmgr /dlv**  (Windows 7 only)
+   - **slmgr /dlv**  (Windows 7 only)
    - **slmgr /dlv \<Activation ID>**  
         Note
-        In this command, **\<Activation ID>**  represents the activation ID of the ESU key that is installed on the computer.
+        In this command, **\<Activation ID>**  represents the activation ID of the ESU key that is installed on the computer.
 
 - **slmgr /dlv all** 
 2. In the command output, verify that ESU key is licensed.
 ​
     ![ESU key is licensed.](./media/troubleshoot-extended-security-updates-issues/esu-key-licensed.gif)
 
-In the case of a typical (non-embedded) computer, install the ESU key if you haven't already done so, and then activate it by using one of the following methods:
+In the case of a typical (non-embedded) computer, install the ESU key if you haven't already done so, and then activate it by using one of the following methods:
 
 - [VAMT online or proxy activation](/windows/deployment/volume-activation/install-configure-vamt).
 - Phone activation​
@@ -501,7 +501,7 @@ In the case of Windows Embedded device, see [Windows Embedded devices](#windows-
  
 **Additional steps**  
 
-If the preceding steps don't resolve the problem, on the affected computer, copy the component-based servicing (CBS) log file (C:\Windows\Logs\CBS\CBS.log). Contact [Microsoft Support](https://support.microsoft.com/contactus/), and provide this log file.  
+If the preceding steps don't resolve the problem, on the affected computer, copy the component-based servicing (CBS) log file (C:\Windows\Logs\CBS\CBS.log). Contact [Microsoft Support](https://support.microsoft.com/contactus/), and provide this log file.  
 
  
 ### Error: 80070643 - prep-check KB installation fails 
@@ -517,15 +517,15 @@ The message may reference one of the following:
 
 The CBS log may contain messages that resemble the following:
 
--  ESU: Product = 36 (0x00000024).
--  ESU: Is IMDS check needed:FALSE​
--  ESU: Pre IMDS checks failed, Not Eligible:HRESULT_FROM_WIN32(1605)
-- [1605 = ERROR_UNKNOWN_PRODUCT](/windows/win32/debug/system-error-codes--1300-1699-) 
+-  ESU: Product = 36 (0x00000024).
+-  ESU: Is IMDS check needed:FALSE​
+-  ESU: Pre IMDS checks failed, Not Eligible:HRESULT_FROM_WIN32(1605)
+- [1605 = ERROR_UNKNOWN_PRODUCT](/windows/win32/debug/system-error-codes--1300-1699-) 
  
 **Possible causes** 
 
 - The operating system edition is not supported by the prep-check KB. The prep-check KB doesn't support *V or *Core editions.
-- The most recent Servicing Stack Update (February 11, 2020, or later) and Monthly Rollup update (February 11, 2020, or later) aren't installed on the computer.
+- The most recent Servicing Stack Update (February 11, 2020, or later) and Monthly Rollup update (February 11, 2020, or later) aren't installed on the computer.
  
 **Actions to take** 
  
@@ -545,7 +545,7 @@ For example, you see the following log entries.
 
 **Possible causes**  
 
-The ESU product key isn't installed on the device.
+The ESU product key isn't installed on the device.
 
  **Actions to take**  
 
@@ -555,7 +555,7 @@ Install a valid Windows Embedded ESU key on the computer, and then try to instal
 
 You have a device that has a Windows product key that falls within the range of keys that has been defined for embedded editions of Windows. When you install an ESU update, some of the updates don't install and the CBS log contains entries that resemble the following:
 
-> ESU: Windows is not activated.  
+> ESU: Windows is not activated.  
 ESU: not eligible:HRESULT_FROM_WIN32(1633)  
 
 For example, you see the following log entries.  
@@ -575,7 +575,7 @@ Activate the Windows product key or the ESU product key (or both) and try to ins
 
 You have a device that has a Windows product key that doesn't fall within the range of keys that has been defined for embedded editions of Windows. When you install an ESU update, some of the updates don't install and the CBS log contains entries that resemble the following:
 
-> ESU: Windows is not activated.  
+> ESU: Windows is not activated.  
 ESU: not eligible:HRESULT_FROM_WIN32(1633)  
 
 For example, you see the following log entries.
@@ -594,11 +594,11 @@ Activate the ESU product key, and then try to install the ESU package again.
 
 You notice a non-compliant device in your update management and compliance toolsets. 
 
-If you have a subset of devices that are running Windows 7 Service Pack 1 (SP1) and Windows Server 2008 R2 SP1 without ESU, you notice a non-compliant device in your update management and compliance toolsets.
+If you have a subset of devices that are running Windows 7 Service Pack 1 (SP1) and Windows Server 2008 R2 SP1 without ESU, you notice a non-compliant device in your update management and compliance toolsets.
 
 
  **Cause**  
-Windows Server Update Service (WSUS) continues to scan cab files for Windows 7 SP1 and Windows Server 2008 R2 SP1.
+Windows Server Update Service (WSUS) continues to scan cab files for Windows 7 SP1 and Windows Server 2008 R2 SP1.
 
 ## More information
 
@@ -607,7 +607,7 @@ Windows Server Update Service (WSUS) continues to scan cab files for Windows 7 S
 - [Using the Activation troubleshooter](https://support.microsoft.com/en-au/help/20527/windows-10-activation-troubleshooter) 
 - [Get help with Windows activation errors](https://support.microsoft.com/help/10738/windows-10-get-help-with-activation-errors) 
 - [FAQ about Extended Security Updates for Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7) 
-- [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091)  
+- [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091)  
 - [Frequently asked questions about ESU for Windows Server and SQL Server 2008 and 2008 R2​](https://support.microsoft.com/help/4539036/faq-about-esu-for-windows-server-and-sql-server-2008-2008-r2) 
 - [How to use Windows Server 2008 and 2008 R2 extended security updates (ESU)​](/windows-server/get-started/extended-security-updates) 
 - [Extended Security Updates and Configuration Manager ​](https://techcommunity.microsoft.com/t5/configuration-manager-blog/extended-security-updates-and-configuration-manager/ba-p/825618) 

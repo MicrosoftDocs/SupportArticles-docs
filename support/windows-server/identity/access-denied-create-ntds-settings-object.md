@@ -28,14 +28,14 @@ In this situation, the administrator sees the following error message:
 
 Title: Windows Security
 Message Text: Network Credentials
- The operation failed because: Active Directory Domain Services could not configure the computer account \<hostname>$ to the remote Active Directory Domain Controller account \<fully qualified name of helper DC>. "Access is denied"
+ The operation failed because: Active Directory Domain Services could not configure the computer account \<hostname>$ to the remote Active Directory Domain Controller account \<fully qualified name of helper DC>. "Access is denied"
 
 The failure occurs when adding the NTDS Settings object for the new Domain Controller, returning the following error message:
 
 The operation failed because:
 
 Active Directory Domain Services could not create the NTDS Settings object for this Active Directory Domain Controller CN=NTDS Settings,CN=TEST-DC,CN=Servers,CN=mysite,CN=Sites,CN=Configuration,DC=domain,DC=com on the remote AD DC DCName.ChildDomain.domain.com. Ensure the provided network credentials have sufficient permissions.
- "Access is denied."
+ "Access is denied."
 
 Additionally, the DCPromo.log file shows the following errors:
 
@@ -56,8 +56,8 @@ Internal ID:
 
 ...
 DateTime[INFO] NtdsInstall for ChildDomain.domain.com returned 5 
-DateTime [INFO] DsRolepInstallDs returned 5
-DateTime [ERROR] Failed to install to Directory Service (5) 
+DateTime [INFO] DsRolepInstallDs returned 5
+DateTime [ERROR] Failed to install to Directory Service (5) 
 DateTime[ERROR] DsRolepFinishSysVolPropagation (Abort Promote) failed with 8001
 DateTime[WARNING] Failed to abort system volume installation (8001)
 DateTime[INFO] Starting service NETLOGON

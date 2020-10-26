@@ -97,7 +97,7 @@ Membership in the local Administrators group on each clustered server or an equi
 7. Move a clustered service or application (a resource group) from one node to another by running the following command: Move-ClusterGroup <clustered service> -Node nodeB 
 
 > [!TIP]
->  You can also use following command to move all groups of the node to the preferred owner of the best possible node: Get-ClusterNode NodeA | Get-ClusterGroup | Move-Cluster Group 
+>  You can also use following command to move all groups of the node to the preferred owner of the best possible node: Get-ClusterNode NodeA | Get-ClusterGroup | Move-Cluster Group 
 
 8. Install the service pack on Node A, and then restart the computer.
 9. Check the System log for errors. If you find any errors, troubleshoot them before you continue this process.
@@ -108,7 +108,7 @@ Membership in the local Administrators group on each clustered server or an equi
 12. Move a clustered service or application (a resource group) from one node to another by running the following command: Move-ClusterGroup <clustered service> -Node nodeB 
 
 > [!NOTE]
->  You can again use following command to move all groups of the node to the preferred owner of the best possible node:  
+>  You can again use following command to move all groups of the node to the preferred owner of the best possible node:  
  Get-ClusterNode NodeB | Get-ClusterGroup | Move-Cluster Group 
 
 13. Install the service pack on Node B, and then restart the computer.

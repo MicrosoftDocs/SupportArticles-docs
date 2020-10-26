@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2025703
 
 ## Symptoms
 
-Steps to reproduce the issue:  
+Steps to reproduce the issue:  
 
 1. Map a drive to a network share that contains several subfolders that contains images files or PDFs  
 
@@ -30,7 +30,7 @@ Steps to reproduce the issue:  
 
 3. Attempt to rename each folder successively, while drilling into the subfolder contents.  
 
-4. Continue step 3 until an error dialog containing the following text appears indicating that the subfolder cannot be renamed:  
+4. Continue step 3 until an error dialog containing the following text appears indicating that the subfolder cannot be renamed:  
  "The action can't be completed because the folder or a file in it is open in another program. Close the file or folder and try again." 
 
 ## Cause
@@ -51,11 +51,11 @@ To work around the issue, enable User Group Policy setting for "Turn off the cac
  [322756](https://support.microsoft.com/kb/322756) How to back up and restore the registry in Windows
 Alternatively, you can directly edit the registry with the following setting:
 
-To have us edit the registry folders for you, go to the "[Fix it for me](https://support.microsoft.com/help/2025703#x_x_x_fixitforme)" section. If you prefer to fix this problem yourself, go to the "[Let me fix it myself](https://support.microsoft.com/help/2025703#x_x_x_letmefixitmyself)" section.
+To have us edit the registry folders for you, go to the "[Fix it for me](https://support.microsoft.com/help/2025703#x_x_x_fixitforme)" section. If you prefer to fix this problem yourself, go to the "[Let me fix it myself](https://support.microsoft.com/help/2025703#x_x_x_letmefixitmyself)" section.
 
 #### **Fix it for me**  
 
-To fix this problem automatically, click the **Fix this problem** link. Then click **Run** in the **File Download** dialog box, and follow the steps in this wizard.
+To fix this problem automatically, click the **Fix this problem** link. Then click **Run** in the **File Download** dialog box, and follow the steps in this wizard.
 
 [![fixit](https://support.microsoft.com//library/images/support/KBGraphics/PUBLIC/EN-US/2297543/fixitbtn.jpg)
 ](https://go.microsoft.com/?linkid=9790365) 

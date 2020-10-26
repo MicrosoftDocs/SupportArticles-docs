@@ -27,7 +27,7 @@ Windows Identity Foundation (WIF) is a new extension to the Microsoft .NET Frame
 ### System requirements
 
 Windows Identity Foundation requires that one of the following operating systems be installed:
- 
+ 
 - Windows 7 (32-bit or 64-bit)
 - Windows Server 2008 R2 (64-bit)
 - Windows Server 2008 together with Service Pack 2 (32-bit or 64-bit)
@@ -40,7 +40,7 @@ Windows Identity Foundation requires that one of the following operating systems
 ### Supported languages
 
 Windows Identity Foundation is supported in the following languages:
- 
+ 
 - English
 - Dutch
 - French

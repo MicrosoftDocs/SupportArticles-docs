@@ -7,7 +7,7 @@ ms.author: delhan
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup and configuration of clustered services and applications

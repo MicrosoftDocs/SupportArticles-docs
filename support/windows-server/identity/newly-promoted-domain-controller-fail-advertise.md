@@ -119,17 +119,17 @@ Errors reported in the DFSR debug logs:
 
 References: 
 
-[Distributed File System Replication FAQ](https://technet.microsoft.com/library/cc773238.aspx) 
+[Distributed File System Replication FAQ](https://technet.microsoft.com/library/cc773238.aspx)
 
 Additional information on DFSR debug Logging
 
-[958893 How to configure DFSR logging](/default.aspx?scid=kb;en-us;958893) 
+[958893 How to configure DFSR logging](/troubleshoot/windows-server/networking/change-dfsr-debug-log-settings)
 
-[DCpromo](https://technet.microsoft.com/library/cc732887.aspx) aspx 
+[DCpromo](https://technet.microsoft.com/library/cc732887.aspx) aspx
 
-[322756](http://vkbexternal/vkbwebservice/viewcontent.aspx?scid=kb;en-us;322756&portalid=1) How to back up and restore the registry in Windows XP and Windows Vista
+[322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows XP and Windows Vista
 
-[DNS Server Operations Guide](https://technet.microsoft.com/library/cc816603.aspx) 
+[DNS Server Operations Guide](https://technet.microsoft.com/library/cc816603.aspx)
 
 ## Disclaimer
 

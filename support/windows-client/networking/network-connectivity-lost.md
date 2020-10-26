@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article provides a solution to an error that occurs when using the "Network Protection" feature in Windows Defender Exploit Guard in Audit or Block mode and a virtual private network (VPN).
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4560203
 
 ## Symptoms
@@ -26,11 +26,11 @@ When using the "Network Protection" feature in Windows Defender Exploit Guard in
 
 ## Cause
 
-This issue occurs because the current (4.12.x.x) antimalware platform update supporting the "Network Protection" feature is missing.
+This issue occurs because the current (4.12.x.x) antimalware platform update supporting the "Network Protection" feature is missing.
 
 ## Solution
 
-Install the latest (4.18.x.x) antimalware platform update as described here:
+Install the latest (4.18.x.x) antimalware platform update as described here:
 
 - [Update for Windows Defender antimalware platform](https://support.microsoft.com/help/4052623).
 - [Manage Windows Defender Antivirus updates and apply baselines](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/manage-updates-baselines-windows-defender-antivirus#released-platform-and-engine-versions).
@@ -38,5 +38,5 @@ Install the latest (4.18.x.x) antimalware platform update as described here:
 
 ## Workaround
 
-Set this Group Policy to **Not Configured**.
-Computer Configuration > Administrative Templates > Windows components > Windows Defender Antivirus > Windows Defender Exploit Guard > Network protection > Prevent users and apps from accessing dangerous websites.
+Set this Group Policy to **Not Configured**.
+Computer Configuration > Administrative Templates > Windows components > Windows Defender Antivirus > Windows Defender Exploit Guard > Network protection > Prevent users and apps from accessing dangerous websites.

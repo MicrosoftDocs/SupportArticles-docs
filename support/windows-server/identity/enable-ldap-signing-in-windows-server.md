@@ -22,13 +22,13 @@ _Original KB number:_ &nbsp; 935834
 
 ## Summary
 
-You can significantly improve the security of a directory server by configuring the server to reject Simple Authentication and Security Layer (SASL) LDAP binds that do not request signing (integrity verification), or to reject LDAP simple binds that are performed on a clear text (non-SSL/TLS-encrypted) connection. SASL binds may include protocols such as Negotiate, Kerberos, NTLM, and Digest.
+You can significantly improve the security of a directory server by configuring the server to reject Simple Authentication and Security Layer (SASL) LDAP binds that do not request signing (integrity verification), or to reject LDAP simple binds that are performed on a clear text (non-SSL/TLS-encrypted) connection. SASL binds may include protocols such as Negotiate, Kerberos, NTLM, and Digest.
 
-Unsigned network traffic is susceptible to replay attacks. In such attacks, an intruder intercepts the authentication attempt and the issuance of a ticket. The intruder can reuse the ticket to impersonate the legitimate user. Additionally, unsigned network traffic is susceptible to man-in-the-middle (MIM) attacks in which an intruder captures packets between the client and the server, changes the packets, and then forwards them to the server. If this occurs on an LDAP server, an attacker can cause a server to make decisions that are based on forged requests from the LDAP client.
+Unsigned network traffic is susceptible to replay attacks. In such attacks, an intruder intercepts the authentication attempt and the issuance of a ticket. The intruder can reuse the ticket to impersonate the legitimate user. Additionally, unsigned network traffic is susceptible to man-in-the-middle (MIM) attacks in which an intruder captures packets between the client and the server, changes the packets, and then forwards them to the server. If this occurs on an LDAP server, an attacker can cause a server to make decisions that are based on forged requests from the LDAP client.
 
 ## How to discover clients that do not use the Require signing option
 
-After you make this configuration change, clients that rely on unsigned SASL (Negotiate, Kerberos, NTLM, or Digest) LDAP binds or on LDAP simple binds over a non-SSL/TLS connection stop working. To help identify these clients, the directory server of Active Directory Domain Services (AD DS) or Lightweight Directory Server (LDS) logs a summary Event ID 2887 one time every 24 hours to indicate how many such binds occurred. We recommend that you configure these clients not to use such binds. After no such events are observed for an extended period, we recommend that you configure the server to reject such binds.
+After you make this configuration change, clients that rely on unsigned SASL (Negotiate, Kerberos, NTLM, or Digest) LDAP binds or on LDAP simple binds over a non-SSL/TLS connection stop working. To help identify these clients, the directory server of Active Directory Domain Services (AD DS) or Lightweight Directory Server (LDS) logs a summary Event ID 2887 one time every 24 hours to indicate how many such binds occurred. We recommend that you configure these clients not to use such binds. After no such events are observed for an extended period, we recommend that you configure the server to reject such binds.
 
 If you must have more information to identify such clients, you can configure the directory server to provide more detailed logs. This additional logging will log an Event ID 2889 when a client tries to make an unsigned LDAP bind. The log entry displays the IP address of the client and the identity that the client tried to use to authenticate. You can enable this additional logging by setting the **16 LDAP Interface Events** diagnostic setting to **2 (Basic)**. For more information about how to change the diagnostic settings, see [How to configure Active Directory and LDS diagnostic event logging](https://support.microsoft.com/help/314980).
 
@@ -41,11 +41,11 @@ For information about possible affects of changing security settings, see [Clien
 > [!NOTE]
 > Logging anomaly of Event ID 2889
 >
-> Applications that use third-party LDAP clients may cause Windows to generate incorrect Event ID 2889 entries. This occurs when you log of LDAP interface events and if `LDAPServerIntegrity` is equal to **2**. The use of sealing (encryption) satisfies the protection against the MIM attack, but Windows logs Event ID 2889 anyway.
+> Applications that use third-party LDAP clients may cause Windows to generate incorrect Event ID 2889 entries. This occurs when you log of LDAP interface events and if `LDAPServerIntegrity` is equal to **2**. The use of sealing (encryption) satisfies the protection against the MIM attack, but Windows logs Event ID 2889 anyway.
 >
 > This happens when LDAP clients use only sealing together with SASL. We have seen this in the field in association with third-party LDAP clients.
 >
-> When a connection does not use both signing and sealing, the connection security requirements check uses the flags correctly and disconnect. The check generates Error 8232 (ERROR_DS_STRONG_AUTH_REQUIRED).
+> When a connection does not use both signing and sealing, the connection security requirements check uses the flags correctly and disconnect. The check generates Error 8232 (ERROR_DS_STRONG_AUTH_REQUIRED).
 
 ### Using Group Policy
 
@@ -57,14 +57,14 @@ For information about possible affects of changing security settings, see [Clien
 4. In the **Browse for a Group Policy Object** dialog box, select **Default Domain Controller Policy** under the **Domains, OUs, and linked Group Policy Objects** area, and then select **OK**.
 5. Select **Finish**.
 6. Select **OK**.
-7. Select **Default Domain Controller Policy** > **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Local Policies**, and then select **Security Options**.
+7. Select **Default Domain Controller Policy** > **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Local Policies**, and then select **Security Options**.
 8. Right-click **Domain controller: LDAP server signing requirements**, and then select **Properties**.
-9. In the **Domain controller: LDAP server signing requirements Properties** dialog box, enable **Define this policy setting**, select **Require signing** in the **Define this policy setting** list, and then select **OK**.
+9. In the **Domain controller: LDAP server signing requirements Properties** dialog box, enable **Define this policy setting**, select **Require signing** in the **Define this policy setting** list, and then select **OK**.
 10. In the **Confirm Setting Change** dialog box, select **Yes**.
 
 #### How to set the client LDAP signing requirement by using local computer policy
 
-1. Select **Start** > **Run**, type *mmc.exe*, and then select **OK**.
+1. Select **Start** > **Run**, type *mmc.exe*, and then select **OK**.
 2. Select **File** > **Add/Remove Snap-in**.
 3. In the **Add or Remove Snap-ins** dialog box, select **Group Policy Object Editor**, and then select **Add**.
 4. Select **Finish**.
@@ -76,7 +76,7 @@ For information about possible affects of changing security settings, see [Clien
 
 #### How to set the client LDAP signing requirement by using a domain Group Policy Object
 
-1. Select **Start** > **Run**, type **mmc.exe**, and then select **OK**.
+1. Select **Start** > **Run**, type **mmc.exe**, and then select **OK**.
 2. Select **File** > **Add/Remove Snap-in**.
 3. In the **Add or Remove Snap-ins** dialog box, select **Group Policy Object Editor**, and then select **Add**.
 4. Select **Browse**, and then select **Default Domain Policy** (or the Group Policy Object for which you want to enable client LDAP signing).
@@ -85,10 +85,10 @@ For information about possible affects of changing security settings, see [Clien
 7. Select **Close**.
 8. Select **OK**.
 9. Select **Default Domain Policy** > **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Policies**, and then select **Security Options**.
-10. In the **Network security: LDAP client signing requirements Properties** dialog box, select **Require signing** in the list, and then select **OK**.
+10. In the **Network security: LDAP client signing requirements Properties** dialog box, select **Require signing** in the list, and then select **OK**.
 11. In the **Confirm Setting Change** dialog box, select **Yes**.
 
-#### How to set the client LDAP signing requirement by using registry keys
+#### How to set the client LDAP signing requirement by using registry keys
 
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
@@ -120,5 +120,5 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\\<*InstanceName>*\Paramete
 
 ## References
 
-- [ADV190023: Microsoft Guidance for Enabling LDAP Channel Binding and LDAP Signing](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190023)
+- [ADV190023: Microsoft Guidance for Enabling LDAP Channel Binding and LDAP Signing](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190023)
 - [2020 LDAP channel binding and LDAP signing requirement for Windows](https://support.microsoft.com/help/4520412)

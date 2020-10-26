@@ -68,10 +68,14 @@ Based on this determination, the Ocsetup.exe tool passes the task to the custom 
 
 ## References
 
-For more information about how to install or to remove Windows components by using the Ocsetup.exe tool, visit the following Microsoft Web site: [https://technet2.microsoft.com/WindowsVista/library/ced21f54-456d-4936-88a1-a0e42eea3ca31033.mspx?mfr=true](https://technet2.microsoft.com/windowsvista/library/ced21f54-456d-4936-88a1-a0e42eea3ca31033.mspx?mfr=true) 
-For more information about command-line options that are available for the Ocsetup.exe tool, visit the following Microsoft Web site: [https://technet2.microsoft.com/WindowsVista/library/9a9fe5ed-5cfb-47f0-99e3-af4ef1442ee71033.mspx?mfr=true](https://technet2.microsoft.com/windowsvista/library/9a9fe5ed-5cfb-47f0-99e3-af4ef1442ee71033.mspx?mfr=true) 
-For more information about command-line options that are available for Package Manager, visit the following Microsoft Web site: [https://technet.microsoft.com/library/cc749465.aspx](https://technet.microsoft.com/library/cc749465.aspx) 
-For more information about Windows Installer, visit the following Microsoft Web site: [https://technet2.microsoft.com/WindowsServer/library/9361d377-9011-4e21-8011-db371fa220ba1033.mspx?mfr=true](https://technet2.microsoft.com/windowsserver/library/9361d377-9011-4e21-8011-db371fa220ba1033.mspx?mfr=true) 
- For more information about the Sysocmgr.exe tool, click the following article number to view the article in the Microsoft Knowledge Base:
+For more information about how to install or to remove Windows components by using the Ocsetup.exe tool, visit the following Microsoft Web site: [How to use the Ocsetup.exe tool to install or to remove Windows optional components in Windows Vista](/troubleshoot/windows-client/deployment/use-ocsetup-to-install-remove-components)
+
+For more information about command-line options that are available for the Ocsetup.exe tool, visit the following Microsoft Web site: [How to use the Ocsetup.exe tool to install or to remove Windows optional components in Windows Vista](/troubleshoot/windows-client/deployment/use-ocsetup-to-install-remove-components)
+
+For more information about command-line options that are available for Package Manager, visit the following Microsoft Web site: [https://technet.microsoft.com/library/cc749465.aspx](https://technet.microsoft.com/library/cc749465.aspx)
+
+For more information about Windows Installer, visit the following Microsoft Web site: [Windows Installer](/windows/win32/msi/windows-installer-portal) 
+ 
+For more information about the Sysocmgr.exe tool, click the following article number to view the article in the Microsoft Knowledge Base:
 
 [222444](https://support.microsoft.com/help/222444) How to add or remove Windows Components by using Sysocmgr.exe

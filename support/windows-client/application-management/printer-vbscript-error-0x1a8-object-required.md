@@ -40,7 +40,7 @@ Unable to list drivers, error: 0x1A8. Object required
 Unable to print the dependent files, error: 0x1A8. Object required  
 Unable to add form, error: 0x1A8. Object required  
 Unable to delete form, error: 0x1A8. Object required  
-Unable to delete printer,  error: 0x1A8. Object required  
+Unable to delete printer,  error: 0x1A8. Object required  
 Unable to save the configuration of the printer, error: 0x1A8. Object required  
 Unable to restore the configuration of the printer, error: 0x1A8. Object required  
 Unable to get the configuration for the port, error: 0x1A8. Object required  
@@ -64,7 +64,7 @@ You must register PRNADMIN.DLL with the 32-bit version of REGSVR32.EXE, and also
 ## Resolution
 
 - Use REGSVR32.EXE located in the %windir%\syswow64 folder to register PRNADMIN.DLL.
-%windir%\syswow64\regsvr32.exe PRNADMIN.DLL 
+%windir%\syswow64\regsvr32.exe PRNADMIN.DLL 
 - Use CSCRIPT.EXE located in the %windir%\syswow64 folder to run the script
 %windir%\syswow64\cscript.exe \<vbscript>
 

@@ -43,7 +43,7 @@ This issue occurs because the NT Virtual Machine\Virtual Machines special identi
 
 ## Workaround
 
-To work around this problem, first, use the output of the `gpresult` command to identify the Group Policy Object(s), which modifies user rights settings. Then, use one of the following methods to correct the issue:
+To work around this problem, first, use the output of the `gpresult` command to identify the Group Policy Object(s), which modifies user rights settings. Then, use one of the following methods to correct the issue:
 
 ### Method 1
 
@@ -61,7 +61,7 @@ Take the following steps on the Hyper-V host machine:
 
 ### Method 3
 
-Take the following steps on a client computer running Windows 8 that supports the [Client Hyper-V](/previous-versions/windows/it-pro/windows-8.1-and-8/hh857623(v=ws.11)) feature:
+Take the following steps on a client computer running Windows 8 that supports the [Client Hyper-V](/previous-versions/windows/it-pro/windows-8.1-and-8/hh857623(v=ws.11)) feature:
 
 1. Sign in to the machine as a Domain Administrator.
 2. Install the Client Hyper-V feature.

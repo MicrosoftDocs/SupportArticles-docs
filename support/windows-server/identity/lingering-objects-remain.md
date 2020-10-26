@@ -34,22 +34,22 @@ These problems may occur if the DC or global catalog server has been offline for
 Note
 For more information about the **Tombstone-Lifetime** attribute, see [Tombstone-Lifetime attribute](https://docs.microsoft.com/windows/desktop/adschema/a-tombstonelifetime#windows-server-2012) 
 
-The **Tombstone-Lifetime** attribute defines the number of days before a deleted object is removed from the directory services. This assists in removing objects from replicated servers and preventing restores from reintroducing a deleted object. The default value is 180 days. After that time, Active Directory no longer needs to "remember" the change.
-If a DC or a global catalog server is offline for longer than the value of the **Tombstone-Lifetime** attribute, its copy of Active Directory (or the global catalog) may contain objects that have been deleted on the other DCs. However, the other DCs no longer remember that the objects have been deleted. When you bring the offline DC online, it synchronizes its copy of Active Directory  with the rest of the domain. Because the information about the deletions has been discarded, the DC replicates the affected objects (referred to as "lingering objects") back to the rest of the domain. 
-In general, AD DS uses a [loose-consistency replication model](https://docs.microsoft.com/windows/desktop/ad/features-of-the-replication-model-for-active-directory-domain-services), in which some naming contexts (also known as directory partitions) are read/write and others are read-only. When a DC that receives a replicated object that belongs to a read/write naming context and that object does not already exist in the local copy of the Directory Information Tree (DIT), the DC creates the object. As the replication process continues, the object reappears on all DCs in the domain.
-DCs and global catalog servers can also use a strict replication consistency model. Under this model, when the DC receives a replicated object that does not already exist in the local DIT, the DC stops receiving or sending replicated data and logs events such as Event ID 1084, "There is no such object on the server." For more information about strict replication consistency, including the circumstances under which DCs may use this model by default, see [KB 910205, Information about lingering objects in a Windows Server Active Directory forest](https://support.microsoft.com/help/910205/information-about-lingering-objects-in-a-windows-server-active-directo).
+The **Tombstone-Lifetime** attribute defines the number of days before a deleted object is removed from the directory services. This assists in removing objects from replicated servers and preventing restores from reintroducing a deleted object. The default value is 180 days. After that time, Active Directory no longer needs to "remember" the change.
+If a DC or a global catalog server is offline for longer than the value of the **Tombstone-Lifetime** attribute, its copy of Active Directory (or the global catalog) may contain objects that have been deleted on the other DCs. However, the other DCs no longer remember that the objects have been deleted. When you bring the offline DC online, it synchronizes its copy of Active Directory  with the rest of the domain. Because the information about the deletions has been discarded, the DC replicates the affected objects (referred to as "lingering objects") back to the rest of the domain. 
+In general, AD DS uses a [loose-consistency replication model](https://docs.microsoft.com/windows/desktop/ad/features-of-the-replication-model-for-active-directory-domain-services), in which some naming contexts (also known as directory partitions) are read/write and others are read-only. When a DC that receives a replicated object that belongs to a read/write naming context and that object does not already exist in the local copy of the Directory Information Tree (DIT), the DC creates the object. As the replication process continues, the object reappears on all DCs in the domain.
+DCs and global catalog servers can also use a strict replication consistency model. Under this model, when the DC receives a replicated object that does not already exist in the local DIT, the DC stops receiving or sending replicated data and logs events such as Event ID 1084, "There is no such object on the server." For more information about strict replication consistency, including the circumstances under which DCs may use this model by default, see [KB 910205, Information about lingering objects in a Windows Server Active Directory forest](https://support.microsoft.com/help/910205/information-about-lingering-objects-in-a-windows-server-active-directo).
 For more information about tombstone issues, see [KB216993 Useful shelf life of a system-state backup of Active Directory](https://support.microsoft.com/help/216993).
 
 ## Resolution
 
 ### 1 Determine whether Active Directory has lingering objects, and avoid future lingering objects
 
-[KB 910205, Information about lingering objects in a Windows Server Active Directory forest](https://support.microsoft.com/help/910205/information-about-lingering-objects-in-a-windows-server-active-directo), explains several ways in which to determine whether your Active Directory system has accumulated lingering objects. KB 910205 also describes steps you can take to prevent lingering objects from accumulating.
+[KB 910205, Information about lingering objects in a Windows Server Active Directory forest](https://support.microsoft.com/help/910205/information-about-lingering-objects-in-a-windows-server-active-directo), explains several ways in which to determine whether your Active Directory system has accumulated lingering objects. KB 910205 also describes steps you can take to prevent lingering objects from accumulating.
 
 ### 2 Delete lingering objects
 
 If the object should not exist in Active Directory at all (for example, if the object was reintroduced by an outdated domain controller), you can delete the objects with the standard tools (such as ADSIEdit or the Active Directory Users and Computers snap-in).
-It is easy to remove lingering objects for read/write naming contexts. In Windows Server 2003 and later versions, you can remove lingering objects by using the command **repadmin /removelingeringobjects**.  For information about how to use RepAdmin, see [KB4469619, Active Directory Replication Event ID 1388 or 1988: A lingering object is detected](https://support.microsoft.com/help/4469619), 
+It is easy to remove lingering objects for read/write naming contexts. In Windows Server 2003 and later versions, you can remove lingering objects by using the command **repadmin /removelingeringobjects**.  For information about how to use RepAdmin, see [KB4469619, Active Directory Replication Event ID 1388 or 1988: A lingering object is detected](https://support.microsoft.com/help/4469619), 
 This article describes how to remove lingering objects that have already appeared in read-only naming contexts such as directory partitions on global catalog servers or Read-Only Domain Controllers (RODCs). The functionality discussed in the "More information" section still exists in newer operating systems and might still be useful to troubleshoot unexpected RepAdmin behavior.
 
 ## More information
@@ -76,7 +76,7 @@ The best way to identify the domain in which an object is located (and from that
 Note
 In most versions of Windows, select **Start** > **Run** and enter **ldp.exe**. In older versions of Windows (such as Windows Server 2003 SP1) this tool is available as one of the Support Tools.
 
-2. Select **Connection** > **Connect**. In the **Server** box, type the name of a global catalog server. In the **Port** box, type **3268**, and then select **OK**.
+2. Select **Connection** > **Connect**. In the **Server** box, type the name of a global catalog server. In the **Port** box, type **3268**, and then select **OK**.
 3. Select **Connection** > **Bind**. Type valid credentials if your current credentials are not sufficient to query all of the global catalog contents. Select **OK**.
 4. Select **View** > **Tree**. Enter the distinguished name of the forest root and then select **OK**.
 5. In the tree list, right-click the forest root and then select **Search**.
@@ -109,7 +109,7 @@ In some versions of Ldp, you have to select **Options** to see the **Attributes*
 
 The results appear in the main Ldp window.
 10. Determine which, if any, of the objects that are listed in the results should be removed from the global catalog. One indication that you have found a bad object is that the object does not exist on a read/write copy of the naming context.
-11. If the objects that you are looking for are not included in the query results, rephrase the filter and run the search again.
+11. If the objects that you are looking for are not included in the query results, rephrase the filter and run the search again.
 12. If you have identified a lingering object, note the values of its **DN** and **objectGUID** attributes. You will need those values later.
 
 ### 2 Identify a DC in the object domain
@@ -117,7 +117,7 @@ The results appear in the main Ldp window.
 The value of the object's **DN** attribute includes the domain of the object. When you know the domain, you can identify a DC or global catalog server within the domain. To do this, follow these steps.
 1. Check the **dc=** portions of the **DN** value. Combine the **dc=** portions to obtain the domain name.
 
-For example, if an object has the **DN** value of ** cn=FirstName LastName,cn=Users,dc=name1,dc=name2,dc=com**, the object is in the **name1.name2.com**  domain.
+For example, if an object has the **DN** value of ** cn=FirstName LastName,cn=Users,dc=name1,dc=name2,dc=com**, the object is in the **name1.name2.com**  domain.
 2. To locate a DC (or a global catalog server) in this domain, open Active Directory Users and Computers, open the domain container, and then open the **Domain Controllers** container.
 3. Open an elevated Command Prompt window and enter **repadmin /showreps**dc-name****.
 Note
@@ -129,7 +129,7 @@ Repadmin produces results that resemble the following:Default-First-Site-Name\WS
 ### 3a Delete a few lingering objects from a few global catalog servers
 
 If you have only a few objects and global catalogs, follow these steps to delete the objects by using Ldp.exe:
-1. Use Enterprise Administrator credentials to sign in to each global catalog server that contains a copy of the lingering object by using .
+1. Use Enterprise Administrator credentials to sign in to each global catalog server that contains a copy of the lingering object by using .
 2. Start Ldp.exe and connect to port 389 on the local domain controller (leave the **Server** box empty).
 3. Select **Connection** > **Bind**. Leave all of the boxes empty (you are already signed in as an Enterprise Administrator).
 4. Select **Browse** > **Modify**.
@@ -144,7 +144,7 @@ If you have only a few objects and global catalogs, follow these steps to delete
 **```
 <GUID=dcGUID>: <GUID=objectGUID>**  
 Note
-In this value, **dcGUID**  represents the GUID of the DC that you identified in step 2 of this section, and **objectGUID** represents the GUID of the lingering object that you identified in step 1 of this section.
+In this value, **dcGUID**  represents the GUID of the DC that you identified in step 2 of this section, and **objectGUID** represents the GUID of the lingering object that you identified in step 1 of this section.
 
 The value should resemble the following:
 
@@ -194,13 +194,13 @@ for /f "delims=@" %%i in (object-list.txt) do cscript //NoLogo MODIFYROOTDSE.VBS
 Note
 If you start Modifyrootdse.vbs manually, make sure to enclose in quotation marks any parameters that contain spaces.
 
-5. Create a list of all of the fully qualified domain names of the global catalog servers and DCs that contain the lingering objects, and then paste the list into Server-list.txt. Use the fully qualified domain names to avoid DNS suffix searches.
-6. For each lingering object, identify a DC in the object domain that does not have a copy of the lingering object. Usually this is a DC that has a read/write naming context in which you manually deleted the lingering object. As described elsewhere in this article, use RepAdmin to obtain the **objectGUID** value of each DC.
+5. Create a list of all of the fully qualified domain names of the global catalog servers and DCs that contain the lingering objects, and then paste the list into Server-list.txt. Use the fully qualified domain names to avoid DNS suffix searches.
+6. For each lingering object, identify a DC in the object domain that does not have a copy of the lingering object. Usually this is a DC that has a read/write naming context in which you manually deleted the lingering object. As described elsewhere in this article, use RepAdmin to obtain the **objectGUID** value of each DC.
 7. In Object-list.txt, create a list of GUID pairs, using the following format:
 
 **<GUID=dcGUID> : <GUID=objectGUID>**  
 Note
-In this value, **dcGUID**  represents the GUID of the DC that does not have a copy of the lingering object, and **objectGUID** represents the GUID of the lingering object.
+In this value, **dcGUID**  represents the GUID of the DC that does not have a copy of the lingering object, and **objectGUID** represents the GUID of the lingering object.
 
 Each pair should resemble the following:
 
@@ -210,10 +210,10 @@ Important
 In the value, do not omit the spaces before and after the colon.
 
 8. Run the Walk-servers.cmd file.
-For each DC or global catalog server that is listed in Server-list.txt, the scripts generate a log file that is named Update-server-name.log. Each log file contains a line for each object that is to be deleted.
-Because the lingering objects may not exist on every listed server, errors in the log files do not necessarily indicate a problem. However, error messages of the form "operation refused" or "operation error" indicate that there is a problem with the GUIDs or with the syntax of the value. If these errors occur, verify the following:
-- Make sure that the DC GUIDs are the correct GUIDs for domain controllers that contain a read/write naming context of the domain that contains the object.
-- Make sure that the object GUIDs identify lingering objects in read-only naming contexts (global catalog servers or RODCs).
+For each DC or global catalog server that is listed in Server-list.txt, the scripts generate a log file that is named Update-server-name.log. Each log file contains a line for each object that is to be deleted.
+Because the lingering objects may not exist on every listed server, errors in the log files do not necessarily indicate a problem. However, error messages of the form "operation refused" or "operation error" indicate that there is a problem with the GUIDs or with the syntax of the value. If these errors occur, verify the following:
+- Make sure that the DC GUIDs are the correct GUIDs for domain controllers that contain a read/write naming context of the domain that contains the object.
+- Make sure that the object GUIDs identify lingering objects in read-only naming contexts (global catalog servers or RODCs).
 
 ### Error message when running Walkservers.cmd to modify many lingering objects in the environment
 
@@ -227,13 +227,13 @@ This error occurs when the script runs against the GUID of a DC that does not co
 
 #### Example
 
-In the following example, the lingering object to be removed is located in the corp.company.local domain. However, the <GUID=ae856ce5-839a-4e44-b2fb-f37082ca2555> entry in the Objects-list.txt file is associated with a DC that resides in the company.local domain. This DC does not have a read/write naming context for the corp.company.local domain.
-The following search produces multiple objects that represent the same user ("Joe"), and lists their **objectGUID** values.
+In the following example, the lingering object to be removed is located in the corp.company.local domain. However, the <GUID=ae856ce5-839a-4e44-b2fb-f37082ca2555> entry in the Objects-list.txt file is associated with a DC that resides in the company.local domain. This DC does not have a read/write naming context for the corp.company.local domain.
+The following search produces multiple objects that represent the same user ("Joe"), and lists their **objectGUID** values.
 ```
 ldap_search_s(ld, "DC=company,DC=local", 2, "(cn=User*)", attrList, 0, &msg) Result <0>: (null) Matched DNs: Getting 4 entries: >> Dn: CN=User\, Joe,OU=Exec,OU=Corporate Users,DC=corp,DC=company,DC=local 1> canonicalName: corp.company.local/Corporate Users/Exec/User, Joe; 1> cn: User, Joe; 1> description: CEO; 1> displayName: User, Joe; 1> distinguishedName: CN=User\, Joe,OU=Exec,OU=Corporate Users,DC=corp,DC=company,DC=local; 4> objectClass: top; person; organizationalPerson; user; 1> objectGUID: 814226ed-3414-4193-b96d-3a5ea4bf9351; 1> name: User, Joe; >> Dn: CN=User\, Joe,OU=Migration,DC=corp,DC=company,DC=local 1> canonicalName: corp.company.local/Migration/User, Joe; 1> cn: User, Joe; 1> description: Disabled Account; 1> displayName: User, Joe; 1> distinguishedName: CN=User\, Joe,OU=Migration,DC=corp,DC=company,DC=local; 4> objectClass: top; person; organizationalPerson; user; 1> objectGUID: 514f7510-451a-4297-8129-9b4c8ab79axx; 1> name: User, Joe;
 ```
 
-In this example, presume that there is a DC in the corp.company.local domain that is named CORP-DC-01. Running the command **repadmin /showreps CORP-DC-01** produces the **objectGUID** value c4fd9c30-b433-40a1-a862-9fdf1f804dc8. This GUID replaces the previous GUID in the Objects-list.txt file. The entry for this lingering object now appears as follows:
+In this example, presume that there is a DC in the corp.company.local domain that is named CORP-DC-01. Running the command **repadmin /showreps CORP-DC-01** produces the **objectGUID** value c4fd9c30-b433-40a1-a862-9fdf1f804dc8. This GUID replaces the previous GUID in the Objects-list.txt file. The entry for this lingering object now appears as follows:
 ```
 
 ```
@@ -242,16 +242,16 @@ In this example, presume that there is a DC in the corp.company.local domain tha
 <GUID=c4fd9c30-b433-40a1-a862-9fdf1f804dc8> : <GUID=514f7510-451a-4297-8129-9b4c8ab79a7c>
 ```
 
-The first GUID is the GUID of the domain controller in the corp.company.local domain. The second GUID is the GUID of the lingering object. After this change, the Walk-servers.cmd script runs successfully.
+The first GUID is the GUID of the domain controller in the corp.company.local domain. The second GUID is the GUID of the lingering object. After this change, the Walk-servers.cmd script runs successfully.
 
 #### Error message 87 when removing lingering objects in the environment
 
-This error might occur when you find objects are in fact not appearing on all DCs that host the naming context, but **repadmin /removelingeringobjects**  does not remove them. This can be a situation when a hub DC replicates new objects it created with global catalog servers, but not with read/write replica DCs in its own domain.
+This error might occur when you find objects are in fact not appearing on all DCs that host the naming context, but **repadmin /removelingeringobjects**  does not remove them. This can be a situation when a hub DC replicates new objects it created with global catalog servers, but not with read/write replica DCs in its own domain.
 This error is returned only in two cases:
 - The object exists on the reference DC.
-- The object is too young (compared to the current TSL value) to be lingering. 
- For an example of the second case, consider a global catalog server that has the following metadata: Loc.USN      Originating DC   Org.USN  Org.Time/Date        Ver Attribute =======       =============== ========= =============        === ========= 143543261     d20f71f3-6147-4f80-a0c2-470541ef09e6 104742409 2011-04-18 11:46:541 objectClass Up-To-Dateness Vector of a RW-replica: d20f71f3-6147-4f80-a0c2-470541ef09e6 @ USN 104583382 @ Time 2011-04-17 03:07:40 Up-To-Dateness Vector of a GC: d20f71f3-6147-4f80-a0c2-470541ef09e6 @ USN 104762881 @ Time 2011-04-18 16:22:04
+- The object is too young (compared to the current TSL value) to be lingering. 
+ For an example of the second case, consider a global catalog server that has the following metadata: Loc.USN      Originating DC   Org.USN  Org.Time/Date        Ver Attribute =======       =============== ========= =============        === ========= 143543261     d20f71f3-6147-4f80-a0c2-470541ef09e6 104742409 2011-04-18 11:46:541 objectClass Up-To-Dateness Vector of a RW-replica: d20f71f3-6147-4f80-a0c2-470541ef09e6 @ USN 104583382 @ Time 2011-04-17 03:07:40 Up-To-Dateness Vector of a GC: d20f71f3-6147-4f80-a0c2-470541ef09e6 @ USN 104762881 @ Time 2011-04-18 16:22:04
 
 In this case the DC created the object after replication with the DCs in its own domain started failing, but it still replicated with global catalog servers in other domains.
-To resolve this issue, let these objects become real lingering objects (aged beyond TSL) and then remove them using the script in this article. To make sure that the data continues to replicate, set **Allow Replication With Divergent and Corrupt Partner**   on all DCs in the forest.
+To resolve this issue, let these objects become real lingering objects (aged beyond TSL) and then remove them using the script in this article. To make sure that the data continues to replicate, set **Allow Replication With Divergent and Corrupt Partner**   on all DCs in the forest.
 If you cannot resolve the errors in the log files by using these methods, you may be experiencing a different problem. Contact Microsoft Product Support Services for additional assistance.

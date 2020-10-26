@@ -28,4 +28,4 @@ _Original KB number:_ &nbsp;2462308
 >
 > - To perform this procedure, you must be a member of the Administrators group on the local computer, or you must have been delegated the appropriate authority. If the computer is joined to a domain, members of the Domain Admins group might be able to perform this procedure. As a security best practice, consider using Run as to perform this procedure.
 > - To open System, click **Start** > **Control Panel**, and then double-click **System**.  
-> - To open System from a command line as an administrator, type **runas /user:** *computername* **\Administrator "rundll32.exe shell32.dll,Control_RunDLL sysdm.cpl"**.
+> - To open System from a command line as an administrator, type **runas /user:** *computername* **\Administrator "rundll32.exe shell32.dll,Control_RunDLL sysdm.cpl"**.

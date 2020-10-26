@@ -17,7 +17,7 @@ ms.technology: ShellExperience
 
 This article discusses an issue in which you can't open Microsoft Store after a domain-joined computer connects to a VPN connection that has force tunneling enabled.
 
-_Original product version:_ &nbsp; Windows 10 – all editions  
+_Original product version:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp; 4537233
 
 ## Symptoms
@@ -26,21 +26,21 @@ Assume that you connect a domain-joined Windows 10 computer to a VPN connection 
 
 If you do one of the following operations, Microsoft Store opens as expected:
 
-- Disconnect the computer from the domain, and then connect to the VPN connection.
+- Disconnect the computer from the domain, and then connect to the VPN connection.
 - Connect the computer to a VPN connection that has force tunneling disabled.
 - Turn off the **Windows Defender Firewall** service, and then connect the computer to the VPN connection.
 
 ## Cause
 
-The Microsoft Store app uses a security model that depends on network isolation. Specific network capabilities and boundaries must be enabled for the store app, and network access must be allowed for the app.
+The Microsoft Store app uses a security model that depends on network isolation. Specific network capabilities and boundaries must be enabled for the store app, and network access must be allowed for the app.
 
-When the Windows Firewall profile isn't **Public**, there's a default block rule that blocks all outgoing traffic that has the remote IP set as **0.0.0.0**. While the computer is connected to a VPN connection that has force tunneling enabled, the default gateway IP is set as **0.0.0.0**. Therefore, if the network access boundaries aren't set appropriately, the default block firewall rule is applied, and Microsoft Store app traffic is blocked.
+When the Windows Firewall profile isn't **Public**, there's a default block rule that blocks all outgoing traffic that has the remote IP set as **0.0.0.0**. While the computer is connected to a VPN connection that has force tunneling enabled, the default gateway IP is set as **0.0.0.0**. Therefore, if the network access boundaries aren't set appropriately, the default block firewall rule is applied, and Microsoft Store app traffic is blocked.
 
 ## Resolution
 
 To fix this issue, follow these steps to create a Group Policy object (GPO):
 
-1. Open the Group Policy Management snap-in (gpmc.msc), and open the **Default Domain Policy**  for editing.
+1. Open the Group Policy Management snap-in (gpmc.msc), and open the **Default Domain Policy**  for editing.
 2. From the Group Policy Management Editor, expand **Computer Configuration** > **Policies** > **Administrative Templates** > **Network**, and then select **Network Isolation**.
 3. In the right pane, double-click **Private network ranges for apps**.
 4. In the **Private network ranges for apps** dialog box, select **Enabled**.
@@ -50,13 +50,13 @@ To fix this issue, follow these steps to create a Group Policy object (GPO):
 6. Double-click **Subnet definitions are authoritative**, select **Enabled**, and then select **OK**.
 7. Restart the client to make sure that the GPO takes effect.
 
-After the Group Policy is applied, the IP range that was added is the only private network range that is available for network isolation. Windows will now create a firewall rule that allows the traffic, and will override the previous outbound block rule with the new rule.
+After the Group Policy is applied, the IP range that was added is the only private network range that is available for network isolation. Windows will now create a firewall rule that allows the traffic, and will override the previous outbound block rule with the new rule.
 
  **Notes** 
 
 - When your VPN address pool range changes, you should change this GPO accordingly. Otherwise, the issue will recur.
 - You can push the same GPOs from the DC to multiple computers.
-- On the individual computers, you can check the following registry location to make sure that the GPO takes effect:
+- On the individual computers, you can check the following registry location to make sure that the GPO takes effect:
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkIsolation`
 
@@ -87,6 +87,6 @@ Network Capabilities Status
     InternetClientServer          Not Used and Insecure
 ```
 
-**Note** On the same client, if you remove the computer from the domain or disconnect the VPN, you can see that **internetclient** is being used.
+**Note** On the same client, if you remove the computer from the domain or disconnect the VPN, you can see that **internetclient** is being used.
 
  For more information, see [Isolating Windows Store Apps on Your Network](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831418%28v=ws.11%29).

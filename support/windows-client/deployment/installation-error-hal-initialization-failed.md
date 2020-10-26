@@ -32,7 +32,7 @@ Your PC ran into a problem and needs to restart. We're just collecting some erro
  **Note: If you attempt to boot the x86 version of Windows PE 4.0 the system will hang.  
  **Scenario 2:**  
 
-You attempt to execute an Offline P2V using System Center Virtual Machine Manager 2012 SP1 for a virtual machine (Windows operating system) running on a VMware ESX server 4.x, you experience the symptoms as mentioned in the Scenario 1. 
+You attempt to execute an Offline P2V using System Center Virtual Machine Manager 2012 SP1 for a virtual machine (Windows operating system) running on a VMware ESX server 4.x, you experience the symptoms as mentioned in the Scenario 1. 
  **Scenario 3:**  
  Assume that you install Windows 8 or Windows Server 2012 on a VMware virtual machine. In this situation, the VM crashes while booting and you may receive the following Stop error code:
 
@@ -40,7 +40,7 @@ STOP: 0x0000005D (parameter1, parameter2, parameter3, parameter4)
 
 ## Cause
 
-VMware 4.x does not support Windows 8 or Windows Server 2012 as guest operating system. VMware 4.x also does not support an Offline P2V of a virtual machine running a windows operating system when using System Center Virtual Machine Manager 2012 SP1 because this version of SCVMM uses WinPE 4.0 when executing the Offline P2V process. 
+VMware 4.x does not support Windows 8 or Windows Server 2012 as guest operating system. VMware 4.x also does not support an Offline P2V of a virtual machine running a windows operating system when using System Center Virtual Machine Manager 2012 SP1 because this version of SCVMM uses WinPE 4.0 when executing the Offline P2V process. 
 
 ## Resolution
 
@@ -52,7 +52,7 @@ You must upgrade to later version of VMware (at least version 5.1).
 
 ## More information
 
-You can also run into this issue in other scenarios involving WDS, SCCM, or other deployment technologies.  For example, attempting to PXE boot a Windows 8 boot.wim. 
+You can also run into this issue in other scenarios involving WDS, SCCM, or other deployment technologies.  For example, attempting to PXE boot a Windows 8 boot.wim. 
 For more information on support for Windows 8 and Windows Server 2012 in VMware, see the following: [https://kb.vmware.com/selfservice/microsites/microsite.do?cmd=displayKC&docType=kc&externalId=2006859&sliceId=2&docTypeID=DT_KB_1_1](https://kb.vmware.com/selfservice/microsites/microsite.do?cmd=displayKC&docType=kc&externalId=2006859&sliceId=2&docTypeID=DT_KB_1_1) 
  [https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2006859](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2006859) 
 For more information on support for operating systems in VMware Guests, see the following: [https://www.vmware.com/resources/compatibility/search.php](https://www.vmware.com/resources/compatibility/search.php) 

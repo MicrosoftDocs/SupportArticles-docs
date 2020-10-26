@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 265090
 
 ## Summary
 
-During promotion, directory service objects are replicated in the order of the Update Sequence Number (USN) (low to high) for the schema, configuration, and domain. Internal errors can occur when a parent container for replicated child objects doesn't exist in the local directory service.
+During promotion, directory service objects are replicated in the order of the Update Sequence Number (USN) (low to high) for the schema, configuration, and domain. Internal errors can occur when a parent container for replicated child objects doesn't exist in the local directory service.
 
 This issue can occur in either of the following scenarios:
 
@@ -56,7 +56,7 @@ Follow these steps:
    - **5 Replication Events: Set the diagnostic level to **3**. 
 4. Use Registry Editor to export the **\NTDS** key from the source server to the computer that is being promoted (for example, Ntds.reg). Copy the file to the computer that is encountering the internal error when replication occurs. If the "internal error" occurs when the Active Directory Installation Wizard is running, copy the .reg file to the desktop on the problem domain controller so that the file can be easily started.
 
-    **Alternatively**, press Windows key+R, and then drag the .reg file from the staged Explorer window that is focused on that file. Select **OK**  to add the contents of the .reg file to the registry. 
+    **Alternatively**, press Windows key+R, and then drag the .reg file from the staged Explorer window that is focused on that file. Select **OK**  to add the contents of the .reg file to the registry. 
 5. When the computer that is being promoted starts replicating the schema naming context, run the Ntds.reg file to build the \NTDS\Diagnostics registry key and settings.
 
    > [!WARNING]
@@ -68,9 +68,9 @@ Follow these steps:
 
     CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,,DC= root domain ,DC=COM 
     
-    Verify that theTombstoneLifetimeattribute is present and its value is 2. If the value is less than 2, the value is invalid, and the server uses the default value of 60 days. (You can also use ADSIEDIT to change this attribute.)
+    Verify that theTombstoneLifetimeattribute is present and its value is 2. If the value is less than 2, the value is invalid, and the server uses the default value of 60 days. (You can also use ADSIEDIT to change this attribute.)
     
-    **Note**  After you wait two days for the tombstoned objects to be removed, you may have to wait an additional 60 minutes or longer before you restart the domain controller and continue the garbage collection process. 
+    **Note**  After you wait two days for the tombstoned objects to be removed, you may have to wait an additional 60 minutes or longer before you restart the domain controller and continue the garbage collection process. 
     9. Initiate garbage collection on the source domain controller. Locate and click the following registry key:
     
     `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Diagnostics key` 
