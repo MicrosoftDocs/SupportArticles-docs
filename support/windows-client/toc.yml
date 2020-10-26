@@ -888,55 +888,56 @@
   items:
   - name: Active and retired Windows 10 troubleshooters
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
+
 - name: Windows Media Feature Pack for Windows 7 N and for Windows 7 KN
-  href: windows-media-feature-pack-for-windows-7.md
+  href: ./shell-experience/windows-media-feature-pack-for-windows-7.md
 - name: In-place upgrade to Windows 10 problem
-  href: in-place-upgrade-to-windows-10-problems.md
+  href: ./deployment/in-place-upgrade-to-windows-10-problems.md
 - name: Disable screen saver passwords by using policies
-  href: disable-screen-saver-passwords.md
+  href: ./group-policy/disable-screen-saver-passwords.md
 - name: Windows Search 4.0 and Multilingual User Interface Pack
-  href: windows-search-4-multilingual-user-interface-pack.md
+  href: ./shell-experience/windows-search-4-multilingual-user-interface-pack.md
 - name: Fail to upgrade Windows 10 Enterprise edition
-  href: contact-system-administrator-to-upgrade-windows.md
+  href: ./deployment/contact-system-administrator-to-upgrade-windows.md
 - name: Computer screen goes black during setup
-  href: computer-screen-black-during-installation.md
+  href: ./deployment/computer-screen-black-during-installation.md
 - name: Event ID 8 is logged in Application log
-  href: event-id-8-in-application-log.md
+  href: ./backup-and-storage/event-id-8-in-application-log.md
 - name: Some Windows procedures don't work without RPC service
-  href: disable-rpc-service-windows-process-not-work.md
+  href: ./performance/disable-rpc-service-windows-process-not-work.md
 - name: Can't disable Microsoft Store through Group Policy
-  href: cannot-disable-microsoft-store.md
+  href: ./group-policy/cannot-disable-microsoft-store.md
 - name: Event ID 5973 when you open Windows Store apps
-  href: windows-store-apps-not-open-event-id-5973.md
+  href: ./shell-experience/windows-store-apps-not-open-event-id-5973.md
 - name: System Restore fails with error 0x8007045b
-  href: system-restore-fail-error-0x8007045b.md
+  href: ./backup-and-storage/system-restore-fail-error-0x8007045b.md
 - name: Restore missing Windows Installer cache files
-  href: missing-windows-installer-cache.md
+  href: ./deployment/missing-windows-installer-cache.md
 - name: System Error 126 when you start TrustedInstaller
-  href: system-error-126-start-windows-modules-installer.md
+  href: ./deployment/system-error-126-start-windows-modules-installer.md
 - name: Error 0x80042468 when creating a single partition
-  href: error-when-creating-single-partition.md
+  href: ./deployment/error-when-creating-single-partition.md
 - name: You can't access an EFI system partition
-  href: cant-access-efi-system-partition.md
+  href: ./deployment/cant-access-efi-system-partition.md
 - name: How to downgrade from Windows 8
-  href: downgrade-from-windows-8.md
+  href: ./deployment/downgrade-from-windows-8.md
 - name: Windows 7 Upgrade Advisor tool failed to run
-  href: upgrade-advisor-tool-failed-to-run.md
+  href: ./deployment/upgrade-advisor-tool-failed-to-run.md
 - name: Language packs no longer available
-  href: language-packs-no-longer-available-after-upgrade.md
+  href: ./deployment/language-packs-no-longer-available-after-upgrade.md
 - name: Device can't connect to mobile broadband
-  href: device-cant-connect-mobile-broadband-over-the-air.md
+  href: ./networking/device-cant-connect-mobile-broadband-over-the-air.md
 - name: Event ID 10 is logged in the Application log
-  href: event-id-10-logged-application-log-after-install.md
-- name: '"The operation timed out" error' 
-  href: operation-timed-out-error-disk-management-console.md
+  href: ./system-management-components/event-id-10-logged-application-log-after-install.md
+- name: "The operation timed out" error 
+  href: ./deployment/operation-timed-out-error-disk-management-console.md
 - name: Windows Connection Manager disconnects WLAN
-  href: windows-connection-manager-disconnects-wlan.md
+  href: ./networking/windows-connection-manager-disconnects-wlan.md
 - name: SMS Agent Host service not start
-  href: sms-agent-host-service-not-start.md
+  href: ./system-management-components/sms-agent-host-service-not-start.md
 - name: Performance of System.Diagnostics.StackFrame degrades
-  href: system-diagnostics-stackframe-performance-degrades.md
+  href: ./application-management/system-diagnostics-stackframe-performance-degrades.md
 - name: A high pitched noise is heard when using Bluetooth headphones
-  href: high-pitched-noise-is-heard.md
+  href: ./deployment/high-pitched-noise-is-heard.md
 - name: Current hotfixes have folder redirection enabled
-  href: current-hotfixes-have-folder-redirection.md
+  href: ./networking/current-hotfixes-have-folder-redirection.md
