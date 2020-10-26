@@ -24,13 +24,9 @@ _Original KB number:_ &nbsp; 321045
 
 DNSLint is a Microsoft Windows utility that helps you to diagnose common DNS name resolution issues.
 
-The following file is available for download from the Microsoft Download Center:  
+For additional information about how to download Microsoft Support files, click the following article number to view the article in the Microsoft Knowledge Base:
 
-[Download the Dnslint.exe package now.](https://files.downloadnow.com/s/software/15/75/74/76/dnslint.v204.exe?token=1602873050_a5688db078512493a28c7348462e2532&fileName=dnslint.v204.exe)
-
- For additional information about how to download Microsoft Support files, click the following article number to view the article in the Microsoft Knowledge Base:
-
- [119591](https://support.microsoft.com/help/119591) How to Obtain Microsoft Support Files from Online Services
+[119591](https://support.microsoft.com/help/119591) How to Obtain Microsoft Support Files from Online Services
 
 Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help to prevent any unauthorized changes to the file.  
 
