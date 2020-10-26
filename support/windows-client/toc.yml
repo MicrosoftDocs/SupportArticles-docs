@@ -929,7 +929,7 @@
   href: ./networking/device-cant-connect-mobile-broadband-over-the-air.md
 - name: Event ID 10 is logged in the Application log
   href: ./system-management-components/event-id-10-logged-application-log-after-install.md
-- name: "The operation timed out" error 
+- name: '"The operation timed out" error'
   href: ./deployment/operation-timed-out-error-disk-management-console.md
 - name: Windows Connection Manager disconnects WLAN
   href: ./networking/windows-connection-manager-disconnects-wlan.md
