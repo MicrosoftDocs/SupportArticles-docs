@@ -45,7 +45,7 @@ To resolve this problem, use one of the following methods.
 
 ### Method 2: Use Windows Server 2012 R2 installation media
 
-If the server can't connect to Windows Update, download the new Volume Licensing media (released on December 11, 2013) and use the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature?view=winserver2012r2-ps) PowerShell command. To do it, follow these steps:
+If the server can't connect to Windows Update, download the new Volume Licensing media (released on December 11, 2013) and use the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature?view=winserver2012r2-ps&preserve-view=true) PowerShell command. To do it, follow these steps:
 
 1. Insert the updated Windows Server 2012 R2 DVD into the computer's DVD drive.
 
