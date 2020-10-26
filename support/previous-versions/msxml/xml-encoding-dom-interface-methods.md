@@ -20,7 +20,7 @@ Under most scenarios, XML encoding errors originate from the different default e
 
 ## XML Encodings
 
-MSXML supports all encodings that are supported by Internet Explorer. Internet Explorer's support depends on which language packs are installed on the computer; this information is stored under the registry key: `HKEY_CLASSES_ROOT\MIME\Database\Charset`
+MSXML supports all encodings that are supported by Internet Explorer. Internet Explorer's support depends on which language packs are installed on the computer; this information is stored under the registry key: `HKEY_CLASSES_ROOT\MIME\Database\Charset`.
 
 MSXML has native support for the following encodings:
 

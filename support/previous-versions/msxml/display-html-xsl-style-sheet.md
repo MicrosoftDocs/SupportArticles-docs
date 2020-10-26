@@ -27,7 +27,6 @@ The following XML/XSL example demonstrates how to work with the XSL style sheets
 
 ```xml
 Here is the XML file that we want to display...
-==========================================================================
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="testHTML.xsl"?>
 <TABLE>
@@ -44,7 +43,6 @@ Here is the XML file that we want to display...
         <F2>Goto <A HREF="http://www.microsoft.com">Microsoft</A></F2>
     </ROW>
 </TABLE>
-==========================================================================
 ```
 
 The HTML data in the first `<F2>` line can be written with special character sequences and CDATA section, as demonstrated in the following examples:

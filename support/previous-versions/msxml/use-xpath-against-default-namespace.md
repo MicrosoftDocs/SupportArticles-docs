@@ -57,7 +57,7 @@ Implementation of XPath queries against the DOMDocument requires that namespaces
     End With
 
     For Each iNode In nodeList
-    msgbox iNode.xml
+        msgbox iNode.xml
     Next iNode
     ```
 

@@ -164,8 +164,9 @@ To run the code with MSXML 6.0, the following lines of code have to be changed:
 
     ```cpp
     pXMLDOMDoc.CreateInstance(__uuidof(DOMDocument60));
-    To run the code with MSXML 6.0, the following lines of code have to be changed:
     ```
+
+To run the code with MSXML 6.0, the following lines of code have to be changed:
 
 - Replace:
 

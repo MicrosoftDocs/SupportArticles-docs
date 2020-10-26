@@ -84,10 +84,9 @@ The XML parser is a Component Object Model (COM) implementation of the W3C DOM m
 |6.0 Post SP2 |Msxml6.dll|6.20.5002.0|
 |6.0 SP3|Msxml6.dll, Msxml6r.dll (the last DLL is a resource-only DLL)|6.30.7600.16385|
 ||||
- Notes
 
 - For additional information on MSXML releases and roadmap review MSXML Roadmap.
-- MSXML versions 1. **x** and 2. **x** are no longer supported by Microsoft.
+- MSXML versions 1.**x** and 2.**x** are no longer supported by Microsoft.
 - MSXML 3.0 support follows the support policy of the OS into which it is built.
 - MSXML 4.0 is no longer supported by Microsoft.
 - MSXML 5.0 is supported by the Microsoft Office lifecycle policy.
@@ -176,4 +175,6 @@ This is not a complete list of MSXML versions that are included with other Micro
 
 - [MSXML Documentation](/previous-versions/windows/desktop/ms763742(v=vs.85))
 
-- MSXML Roadmap
+- [MSXML 4.0 Specific GUIDs and ProgIDs](https://support.microsoft.com/help/305019)
+
+- [MSXML Roadmap](/previous-versions/windows/desktop/jj152146(v=vs.85))
