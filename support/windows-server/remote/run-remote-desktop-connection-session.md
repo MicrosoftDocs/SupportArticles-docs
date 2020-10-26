@@ -27,7 +27,6 @@ Running a Remote Desktop Connection session within another Remote Desktop Connec
 |Client Computer version|Remote Desktop version|Nested Remote Desktop version|Supported RDP feature for the nested Remote Desktop connection|Supported Remote Desktop connection type|
 |---|---|---|---|---|
 |<ul><li>Windows 8 </li> <li>Windows Server 2012 </li>|<ul><li>Windows 8 </li> <li>Windows Server 2012 </li>|<ul><li>Windows 8 </li> <li>Windows Server 2012 </li>|<ul><li>Basic graphics (Display) </li> <li>Keyboard and mouse input</li>|<ul><li>Full Remote Desktop</li> <li>RemoteApp</li>|
-||||||
 
 For example, the following scenarios are supported for basic graphics and keyboard and mouse input:
 
@@ -36,10 +35,10 @@ For example, the following scenarios are supported for basic graphics and keyboa
 
 ## More information
 
-Notes
-
-- Windows 7 and Windows Server 2008 R2 don't support running a Remote Desktop Connection session within another Remote Desktop Connection session.
-- Only one level of nested Remote Desktop connection is supported. Establishing a Remote Desktop connection from inside a nested Remote Desktop connection isn't supported.
-- Remote Desktop Protocol (RDP) features other than graphics, keyboard, and mouse input aren't supported (including but not limited to Smart Card redirection, Clipboard redirection, Device redirection, and Audio redirection).
-- All RDP features can be used with the first RDP connection; that is, the connection between the user's client computer and the first Remote Desktop computer.
-- Users can use the Remote Desktop Web Access portal in the first Remote Desktop to launch RemoteApp programs or Remote Desktop connections.
+> [!NOTE]
+>
+> - Windows 7 and Windows Server 2008 R2 don't support running a Remote Desktop Connection session within another Remote Desktop Connection session.
+> - Only one level of nested Remote Desktop connection is supported. Establishing a Remote Desktop connection from inside a nested Remote Desktop connection isn't supported.
+> - Remote Desktop Protocol (RDP) features other than graphics, keyboard, and mouse input aren't supported (including but not limited to Smart Card redirection, Clipboard redirection, Device redirection, and Audio redirection).
+> - All RDP features can be used with the first RDP connection; that is, the connection between the user's client computer and the first Remote Desktop computer.
+> - Users can use the Remote Desktop Web Access portal in the first Remote Desktop to launch RemoteApp programs or Remote Desktop connections.

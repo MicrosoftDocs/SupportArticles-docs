@@ -122,7 +122,7 @@ Even when there is no noticeable effect, the presence of lingering objects can c
 
 - A user or group account that was deleted remains in the global address list (GAL) on servers that are running Microsoft Exchange Server. Therefore, although the account name appears in the GAL, errors occur when users try to send e-mail messages.
 
-- Multiple copies of an object appear in the object picker or in the GAL for an object that should be unique in the forest. You sometimes see duplicate objects that have changed names. These duplicate objects cause confusion on directory searches. For example, if the relative distinguished name of two objects cannot be resolved, conflict resolution appends ***CNF:GUID** to the name. In this example, `*` represents a reserved character, **CNF** is a constant that indicates a conflict resolution, and **GUID** represents the objectGUID attribute value.
+- Multiple copies of an object appear in the object picker or in the GAL for an object that should be unique in the forest. You sometimes see duplicate objects that have changed names. These duplicate objects cause confusion on directory searches. For example, if the relative distinguished name of two objects cannot be resolved, conflict resolution appends **CNF:GUID** to the name. In this example, `*` represents a reserved character, **CNF** is a constant that indicates a conflict resolution, and **GUID** represents the objectGUID attribute value.
 
 - E-mail messages are not delivered to a user whose Active Directory account appears to be current. After an outdated domain controller or global catalog server is reconnected, both instances of the user object appear in the global catalog. Because both objects have the same e-mail address, e-mail messages cannot be delivered.
 
@@ -218,7 +218,7 @@ Windows 2000 Server
 
 Increase the TSL to 180 days by using the Adsiedit tool. To do it, follow these steps:  
 
-1. In the Adsiedit tool, expand **Configuration** **DomainControllerName**, expand **CN=Configuration**, **DC=**ForestRootDomain****, expand **CN=Services**, expand **CN=Windows NT**, right-click **CN=Directory Service**, and then click **Properties**.
+1. In the Adsiedit tool, expand **Configuration** **DomainControllerName**, expand **CN=Configuration**, **DC=ForestRootDomain**, expand **CN=Services**, expand **CN=Windows NT**, right-click **CN=Directory Service**, and then click **Properties**.
 2. Click the **Attribute** tab.
 3. In the **Select which properties to view** list, click **Optional**.
 4. In the **Select a property to view** list, click **TombstoneLifetime**.
@@ -226,7 +226,7 @@ Increase the TSL to 180 days by using the Adsiedit tool. To do it, follow these 
 
 Increase the TSL to 180 days by using the Adsiedit tool. To do it, follow these steps:  
 
-1. In the Adsiedit tool, expand **Configuration** **DomainControllerName**, expand **CN=Configuration**, **DC=**ForestRootDomain****, expand **CN=Services**, expand **CN=Windows NT**, right-click **CN=Directory Service**, and then click **Properties**.
+1. In the Adsiedit tool, expand **Configuration** **DomainControllerName**, expand **CN=Configuration**, **DC=ForestRootDomain**, expand **CN=Services**, expand **CN=Windows NT**, right-click **CN=Directory Service**, and then click **Properties**.
 2. Click the **Attribute Editor** tab.
 3. In the **Attribute** list, click **TombstoneLifetime**, and then click **Edit**.
 4. In the **Value** box, type 180, and then click **OK**.

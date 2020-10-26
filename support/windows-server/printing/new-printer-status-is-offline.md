@@ -42,20 +42,6 @@ However, this value isn't deleted by the Localspl.dll file when the print queue 
 
 ## Resolution
 
-To have us fix this problem for you, go to the [Fix it for me](#fix-it-for-me) section. If you prefer to fix this problem yourself, go to the [Let me fix it myself](#let-me-fix-it-myself) section.
-
-### Fix it for me
-
-To fix this problem automatically, select the **Download** button or link. Then select **Run** in the **File Download** dialog box, and follow the steps in the **Fix it** wizard.
-
-Notes
-
-- Run this package after you delete a print queue but before you add a new print queue of the same name.
-- This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.
-- If you aren't on the computer that has the problem, save the Fix it solution to a flash drive or a CD and then run it on the computer that has the problem. Then, go to the [Did this fix the problem](#did-this-fix-the-problem) section.
-
-### Let me fix it myself
-
 To resolve this issue, right-click the new print queue in the Printers and Faxes tool, and then clear the **Use Printer Offline** setting. This resets the registry key to the correct value. Instead, you can delete the registry key that is mentioned in the [Cause](#cause) section after you delete a print queue but before you add a new print queue of the same name.
 
 ### Did this fix the problem

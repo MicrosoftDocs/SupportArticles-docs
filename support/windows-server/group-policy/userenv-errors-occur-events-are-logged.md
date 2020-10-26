@@ -25,13 +25,13 @@ _Original KB number:_ &nbsp; 887303
 You may experience one or many errors and events if Group Policy is applied to the computers on your network. To determine the cause of the issue, you must troubleshoot the configuration of the computers on your network. Follow these steps to troubleshoot the cause of the issue:
 
 1. Examine the DNS settings and network properties on the servers and client computers.
-1. Examine the Server Message Block signing settings on the client computers.
-1. Make sure that the TCP/IP NetBIOS Helper service, the Net Logon service, and the Remote Procedure Call (RPC) service are started on all computers.
-1. Make sure that Distributed File System (DFS) is enabled on all computers.
-1. Examine the contents and the permissions of the Sysvol folder.
-1. Make sure that the Bypass traverse checking right is granted to the required groups.
-1. Make sure that the domain controllers aren't in a journal wrap state.
-1. Run the `dfsutil /purgemupcache` command.
+2. Examine the Server Message Block signing settings on the client computers.
+3. Make sure that the TCP/IP NetBIOS Helper service, the Net Logon service, and the Remote Procedure Call (RPC) service are started on all computers.
+4. Make sure that Distributed File System (DFS) is enabled on all computers.
+5. Examine the contents and the permissions of the Sysvol folder.
+6. Make sure that the Bypass traverse checking right is granted to the required groups.
+7. Make sure that the domain controllers aren't in a journal wrap state.
+8. Run the `dfsutil /purgemupcache` command.
 
 ## Symptoms
 
@@ -316,9 +316,9 @@ If you change the GPO settings on a domain controller that is running Windows Se
 
 1. Start a command prompt. To do it, select **Start**, select **Run**, type cmd in the **Open** box, and then select
  **OK**.
-1. Type **gpupdate /force**, and then press **ENTER**.
-1. Restart the affected client computers.
-1. Recheck the SMB signing values in the registry on the client computers to make sure that they did not change unexpectedly.
+2. Type **gpupdate /force**, and then press **ENTER**.
+3. Restart the affected client computers.
+4. Recheck the SMB signing values in the registry on the client computers to make sure that they did not change unexpectedly.
 
 If the SMB signing values in the registry change unexpectedly after you restart the client computers, use one of the following methods to view the applied policy settings that are applied to a client computer:
 

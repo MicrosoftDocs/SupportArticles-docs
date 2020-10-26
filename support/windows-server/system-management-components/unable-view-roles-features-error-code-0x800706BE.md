@@ -87,21 +87,23 @@ Here are the steps to fix the issue:
 Copy these files into: %systemroot\Windows\Servicing\Packages  
 
 1. You first need to gain control over that folder. In order to do this use the following commands:  
- **takeown /F c:\Windows\Servicing\Packages /D y /R**  
+ `takeown /F c:\Windows\Servicing\Packages /D y /R`
 2. Now assign full control using following command. It will grant you full control over the directory:  
- **cacls c:\Windows\Servicing\Packages /E /T /C /G "UserName": F**  
+ `cacls c:\Windows\Servicing\Packages /E /T /C /G "UserName": F`
 3. Now you need to gather the missing or corrupted files from the `checksur` log:
 Download the KB files for the missing files.
- **servicing\packages\Package_for_ KB978601 ~31bf3856ad364e35~amd64~~6.0.1.0.mum**  
+ `servicing\packages\Package_for_ KB978601 ~31bf3856ad364e35~amd64~~6.0.1.0.mum`
 4. Unpack them using the following command:  
- **Expand -F:\* UpdateKBXXXX.msu x:\DestinationDirectory**  
+ `Expand -F:\* UpdateKBXXXX.msu x:\DestinationDirectory` 
 5. After you expand, you will see an UpdateKBXXXX.cab File. Expand it as well:  
- **Expand -F:\* UpdateKBXXXX.CAB x:\DestinationDirectoryCAB**  
-Inside of this cab you will need to grab two files: update.mum and update.cat  
+ `Expand -F:\* UpdateKBXXXX.CAB x:\DestinationDirectoryCAB`
+
+   Inside of this cab you will need to grab two files: update.mum and update.cat  
 6. Rename the gathered update.mum and update.cab files exactly as they are in the checksur.log:  
 Ex.: update.mum for KB978601 will be Package_for_ KB978601 ~31bf3856ad364e35~amd64~~6.0.1.0.mum  
 Do the same for all the other missing/corrupt files and place them into the directory specified in checksur.log (/servicing/packages)  
 
-After these steps, the problem should be fixed, no reboot required.  
+After these steps, the problem should be fixed, no reboot required.
+
 >[!Note]
 >If the ServerManager is not working even after doing these steps, run the Update Readiness Tool again and double check the steps described above.

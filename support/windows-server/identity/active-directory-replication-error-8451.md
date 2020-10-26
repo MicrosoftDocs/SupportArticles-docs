@@ -30,7 +30,7 @@ You might experience one of more of the following symptoms:
 
 - You see one or more on-screen error messages, logged events, or diagnostic output that identifies a database error. Possible formats for that error include the following.
 
-    |**Decimal code**|**Hexadecimal code**|**Text code**|**Error message**|
+    |Decimal code|Hexadecimal code|Text code|Error message|
     |---|---|---|---|
     |8451|0x2103|ERROR_DS_DRA_DB_ERROR|The replication operation encountered a database error.|
     |-1018|0xfffffc06|JET_errReadVerifyFailure|Checksum error on a database page.|
@@ -60,18 +60,18 @@ You might experience one of more of the following symptoms:
     \<date> \<time> [INFO] Starting service NETLOGON
 - Repadmin.exe reports that the replication attempt has failed with status 8451. Repadmin.exe commands that commonly cite the 8451 status include but are not limited to:  
 
-  - **Repadmin /kcc**
-  - **Repadmin /rehost**
-  - **Repadmin /replicate**
-  - **Repadmin /replsum**
-  - **Repadmin /showrepl**
-  - **Repadmin /showreps**
-  - **Repadmin /showutdvec**
-  - **Repadmin /syncall**
+  - `Repadmin /kcc`
+  - `Repadmin /rehost`
+  - `Repadmin /replicate`
+  - `Repadmin /replsum`
+  - `Repadmin /showrepl`
+  - `Repadmin /showreps`
+  - `Repadmin /showutdvec`
+  - `Repadmin /syncall`
 
     For detailed information about how to use Repadmin to troubleshoot replication problems, see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](https://go.microsoft.com/fwlink/?LinkId=122830).
 
-    The following sample shows output from the **repadmin /showreps** command that indicates that inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failed and generated the "replication access was denied" message.  
+    The following sample shows output from the `repadmin /showreps` command that indicates that inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failed and generated the "replication access was denied" message.  
     >Default-First-Site-Name\CONTOSO-DC1  
     DSA Options: IS_GC  
     Site Options: (none)  
@@ -88,7 +88,7 @@ You might experience one of more of the following symptoms:
 
 - Event Viewer lists one or more events that cite the 8451 error. The following table lists the event sources and Event IDs of common events that cite the 8451 error (in event source + event ID order).
 
-    |**Event source**|**Event ID**|**Event message**|
+    |Event source|Event ID|Event message|
     |---|---|---|
     |Microsoft-Windows-ActiveDirectory_DomainService|1039 with extended error 8451|Internal event: Active Directory Domain Services could not process the following object.|
     |Microsoft-Windows-ActiveDirectory_DomainService|1084 with extended error 8451|Internal event: Active Directory could not update the following object with changes received from the following source domain controller. It is because an error occurred during the application of the changes to Active Directory on the domain controller.|
@@ -105,7 +105,7 @@ You might experience one of more of the following symptoms:
 
 - When you increase the NTDS diagnosing logging level on the domain controller, Event Viewer lists additional events that are related to the 8451 error. The following table lists the event sources and Event IDs of events that frequently accompany other events that contain the 8451 error.
 
-    |**Event source**|**Event ID**|**Event message**|
+    |Event source|Event ID|Event message|
     |---|---|---|
     |Internal Processing|1481 with error-1601|Internal error: The operation on the object failed. Additional Data: Error value: 2 000020EF: NameErr: DSID-032500E8, problem 2001 (NO_OBJECT), data -1601, best match of: "|
     |Internal Processing|1173 with error-1075|Internal event: Active Directory has encountered the following exception and associated parameters. Exception: e0010004 Parameter: 0 Additional Data Error value: -1075 Internal ID: 205086d|
@@ -249,17 +249,17 @@ If the problem recurs, collect some diagnostic data.
 2. Review the event logs for the new events that were generated from the increased logging for error values that will give a definitive view of the original 8451 error. For example, an Internal Processing Event ID 1173 that has an error value of **-1526** would indicate that we have a corruption in long-value tree.
 3. Based on the additional information from the increased logging, refer to the following table for a potential resolution.
 
-    |**Decimal code**|**Hex code**|**Text code**|**Error message**|**Potential resolutions**|
+    |Decimal code|Hex code|Text code|Error message|Potential resolutions|
     |---|---|---|---|---|
     |-1018|0xfffffc06|JET_errReadVerifyFailure|Checksum error on a database page|Check hardware, firmware, and drivers. Restore from backup.Demote/promote.|
     |-1047|0xfffffbe9|JET_errInvalidBufferSize|Data buffer doesn't match column size|832851 Inbound Replication Fails on Domain Controllers with Event ID: 1699, Error 8451 or jet error -1601  **Note:** This hotfix is no longer available.|
     |-1075|0xfffffbcd|JET_errOutOfLongValueIDs|Long-value ID counter has reached maximum value. (do offline defragmentation to reclaim free or unused```LongValueIDs```)|Do offline defragmentation.|
     |-1206|0xfffffb4a|JET_errDatabaseCorrupted|Non-database file or corrupted db|Check hardware, firmware, and drivers.Run the **[Esentutl](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh875546%28v=ws.11%29)/k** command. Run the [Ntdsutil](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc753343%28v=ws.11%29) file integrity and semantic database analysis  (SDA) commands, and then do offline defragmentation.Otherwise restore from backup or demote/promote.|
     |-1414|0xfffffa7a|JET_errSecondaryIndexCorrupted|Secondary index is corrupt. The database must be defragmented.|Do offline defragmentation.|
-    |-1526|0xfffffa0a|JET_errLVCorrupted|Corruption encountered in long-value tree|Check hardware, firmware, and drivers.Run the **Esentutl /k** command. Run the **Ntdsutil** file integrity and SDA commands, and then do offline defragmentation. Otherwise, restore from backup or demote  and promote.|
-    |-1601|0xfffff9bf|JET_errRecordNotFound|The key was not found|Check hardware, firmware, and drivers.Run the **Esentutl /k** command. Run the **Ntdsutil** file integrity and SDA commands, and then do offline defragmentation​​​​​​​.​​​​​​​Otherwise restore from backup or demote and promote.|
-    |-1603|0xfffff9bd|JET_errNoCurrentRecord|Currency not on a record|Check hardware, firmware, and drivers.Run the **Esentutl /k** command. Run the **Ntdsutil** file integrity and SDA commands, and then do offline defragmentation​​​​​​​.​​​​​​​Otherwise restore from backup or demote and promote.|
-    |8451|0x2103|ERROR_DS_DRA_DB_ERROR|The replication operation encountered a database error|Check hardware, firmware, and drivers.Run the **Esentutl /k** command. Run the **Ntdsutil** file integrity and SDA commands, and then do offline defragmentation. Otherwise restore from backup or demote/promote.|
+    |-1526|0xfffffa0a|JET_errLVCorrupted|Corruption encountered in long-value tree|Check hardware, firmware, and drivers.Run the `Esentutl /k` command. Run the Ntdsutil** file integrity and SDA commands, and then do offline defragmentation. Otherwise, restore from backup or demote  and promote.|
+    |-1601|0xfffff9bf|JET_errRecordNotFound|The key was not found|Check hardware, firmware, and drivers.Run the `Esentutl /k` command. Run the **Ntdsutil** file integrity and SDA commands, and then do offline defragmentation​​​​​​​.​​​​​​​Otherwise restore from backup or demote and promote.|
+    |-1603|0xfffff9bd|JET_errNoCurrentRecord|Currency not on a record|Check hardware, firmware, and drivers.Run the `Esentutl /`k command. Run the **Ntdsutil** file integrity and SDA commands, and then do offline defragmentation​​​​​​​.​​​​​​​Otherwise restore from backup or demote and promote.|
+    |8451|0x2103|ERROR_DS_DRA_DB_ERROR|The replication operation encountered a database error|Check hardware, firmware, and drivers.Run the `Esentutl /k` command. Run the **Ntdsutil** file integrity and SDA commands, and then do offline defragmentation. Otherwise restore from backup or demote/promote.|
     ||||||  
 
 4. If all these methods fail, restore the domain controller from a backup, or demote it and then repromote.
@@ -268,9 +268,9 @@ If the problem recurs, collect some diagnostic data.
 
 Verify the vertical jet database stack from the bottom up (proceeding up to the next layer only after the underlying layer is graded as "good"), the same as you do for TCP.  
 
-|**Layer**|**Ntdsutil command**|**Esentutl command**|
+|Layer|Ntdsutil command|Esentutl command|
 |---|---|---|
-|(1) Physical consistency|no equivalent| **Esentutl /k** |
+|(1) Physical consistency|no equivalent| `Esentutl /k` |
 |(2) Extensible Storage Engine (ESE) logical consistency| **Ntdsutil**, **files**, **integrity**| **Esentutl /g** |
 |(3) Application logical consistency| **Ntdsutil**, **semantic database analysis** + **Ntdsutil**, **compact**|no equivalent for SDA  + **Esentutl /d** |
 ||||
