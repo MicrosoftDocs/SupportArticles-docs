@@ -8,14 +8,14 @@ ms.prod: sql
 ---
 # A C++ Sample of ADO Recordset XML Persistence
 
-This article describes how to persist/load ADO Recordset to/from an external xml file, ADO IStream Object and XML DOM object.
+This article describes how to persist/load ADO Recordset to/from an external xml file, ADO `IStream` Object and XML DOM object.
 
 _Original product version:_ &nbsp; ADO Recordset  
 _Original KB number:_ &nbsp; 262450
 
 ## Summary
 
-With ADO 2.5 and later, Recordset objects can be persisted into any object that implements the IStream interface. The sample code in this article shows how to persist/load ADO Recordset to/from an external xml file, ADO IStream Object and XML DOM object.
+With ADO 2.5 and later, Recordset objects can be persisted into any object that implements the `IStream` interface. The sample code in this article shows how to persist/load ADO Recordset to/from an external xml file, ADO `IStream` Object and XML DOM object.
 
 ## More information
 

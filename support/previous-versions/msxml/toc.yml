@@ -20,7 +20,7 @@
   - name: Use XPath to query against a default namespace
     href: use-xpath-against-default-namespace.md
   - name: XML encoding and DOM interface methods
-    href: xml-encoding-dom-interface-methods
+    href: xml-encoding-dom-interface-methods.md
   
 - name: More products
   href: ../index.yml
