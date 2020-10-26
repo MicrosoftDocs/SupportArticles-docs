@@ -4,6 +4,7 @@ description: This article describes how to use XPath to query against a user-def
 ms.date: 10/20/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.prod: dotnet-visualbasic
 ---
 # Use XPath to query against a user-defined default namespace
 

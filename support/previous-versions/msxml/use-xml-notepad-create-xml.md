@@ -4,6 +4,7 @@ description: This article describes how to use XML Notepad to create an XML docu
 ms.date: 10/20/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.prod: .net
 ---
 # Use XML Notepad to create an XML document
 

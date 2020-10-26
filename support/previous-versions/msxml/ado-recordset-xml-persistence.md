@@ -4,6 +4,7 @@ description: This article describes how to persist/load ADO Recordset to/from an
 ms.date: 10/19/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.prod: sql
 ---
 # A C++ Sample of ADO Recordset XML Persistence
 

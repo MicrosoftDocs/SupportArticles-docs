@@ -3,6 +3,7 @@ title: XML encoding and DOM interface methods
 description: This article describes XML encoding and DOM interface methods.
 ms.date: 10/20/2020
 ms.prod-support-area-path: 
+ms.prod: .net
 ---
 # XML encoding and DOM interface methods
 

@@ -3,6 +3,7 @@ title: Specify namespace when you query DOM with XPath
 description: This article describes that you must use qualified names when you use XPath query with the selectSingleNode and selectNodes methods of the IXMLDOMNode object.
 ms.date: 10/20/2020
 ms.prod-support-area-path: 
+ms.prod: visual-cpp
 ---
 # Specify Namespace when you query the DOM with XPath
 

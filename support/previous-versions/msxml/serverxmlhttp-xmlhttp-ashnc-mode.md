@@ -3,6 +3,7 @@ title: ServerXMLHTTP or XMLHTTP in async mode
 description: This article describes you must use a message pump to receive and dispatch messages.
 ms.date: 10/20/2020
 ms.prod-support-area-path: 
+ms.prod: visual-cpp
 ---
 # Visual C++ application uses ServerXMLHTTP or XMLHTTP in async mode must pump messages
 

@@ -4,6 +4,7 @@ description: This article describes how to determine the version of MSXML parser
 ms.date: 10/20/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
+ms.prod: .net
 ---
 # Determine the version of MSXML parser installed on a computer
 

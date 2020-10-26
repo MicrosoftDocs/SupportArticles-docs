@@ -3,6 +3,7 @@ title: Questions about XMLHTTP and ServerXMLHTTP
 description: This article describes the frequently asked questions about the XMLHTTP and ServerXMLHTTP objects.
 ms.date: 10/20/2020
 ms.prod-support-area-path: 
+ms.prod: .net
 ---
 # Frequently asked questions about ServerXMLHTTP
 

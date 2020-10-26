@@ -4,6 +4,7 @@ description: This article describes versions of XML Core Services that are avail
 ms.date: 10/19/2020
 ms.prod-support-area-path: 
 ms.reviewer: koushikd
+ms.prod: .net
 ---
 # List of Microsoft XML parser (MSXML) versions
 
