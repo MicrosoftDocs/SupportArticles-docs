@@ -9,23 +9,23 @@ ms.reviewer: paulboc
 
 ## Symptoms
 
-Connection issues may occur when running ASP.NET, ASP.NET Core, or other kinds of websites and web applications on a IIS web server in Windows Server (Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019 are the currently supported versions). Here are Data collection strategies to troubleshoot common IIS web-server related issues:
+Connection issues may occur when running ASP.NET, ASP.NET Core, or other kinds of websites and web applications on a IIS web server on Windows Server (Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019 are the currently supported versions). This article describes Data collection strategies to troubleshoot common IIS web-server related issues:
 
 ### SSL and SSL Server Certificate Issues
 
-When a TLS connection is initiated, a server certificate is returned. The returned certificate may not be the expected certificate and may not be trusted by the browser (client) which will result in the client's inability to connect to the web-server through SSL (TLS).
+When connecting to an IIS hosted website via Https, a TLS (Transport Layer Security) connection is negotiated between client and server using a server certificate which IIS delivers to the connecting client (browser). The returned certificate may not be the expected certificate and may not be trusted by the browser (client) which will result in the client's inability to negotiate the connection to the web-server through SSL (TLS).
 
 ### Runtime exceptions and errors, including HTTP 4xx and 50x status codes
 
-When accessing certain resources or performing certain actions, web applications or websites randomly or consistently throw errors. You may receive the 500 (Internal Server error) status code on your browser reporting various errors in the execution of server-side code for the website or 400 (bad request) status code sent back when accessing web services such as ASP.NET Web API and trying to send data to a web service endpoint. Unexpected authentication prompts or access denied requests represented by 401 and 403 status codes may also occur.
+When accessing certain resources on IIS hosted web-applications or performing certain actions while navigating these sites, the IIS web applications or websites randomly or consistently throw errors. You may receive the 500 (Internal Server error) status code errors in your browser reporting various errors exceptions in the execution of server-side code for the website or 400 status code (bad request) status code which is sent back when accessing web services such as ASP.NET Web API and trying to send data to a web service endpoint. Unexpected authentication prompts or access denied requests represented by 401 and 403 status codes may also occur.
 
 ### Handler-Mapping Problems
 
-Requests sent to the web server are mapped to a specific handler (for example: Managed .NET handler registered using a web application deployed to the server) aren't routed to the expected handler. The requests are handled by the Static File handler resulting in a 403.14 status code (a directory listing request isn't allowed).
+Requests sent to the web server are mapped to a specific handler (for example: Managed .NET handler registered using a web application deployed to the server) aren't routed to the expected handler. The requests end up being executed by the incorrect handler (like the Static File handler) resulting in a 403.14 status code (a directory listing request isn't allowed).
 
 ### Http Redirection Problem
 
-A website or web application fails to redirect users accessing the website over a nonsecure connection to an encrypted channel (over TLS), or redirects of certain requests or resources to newer URLs do not return the expected content. This happens either because the client is constantly redirected between two pages until the browser displays an error message or because the client was redirected incorrectly.
+A website or web application fails to redirect users accessing the website over a nonsecure connection to an encrypted channel (over TLS), or redirections of certain requests or resources to newer URLs fail to return the expected content. This happens either because the client is constantly redirected between two pages until the browser displays an error message or because the client was redirected incorrectly by the IIS server.
 
 ### Errors in IIS management console
 
@@ -37,7 +37,7 @@ When adding an IIS extension to a web server, such as an Application Request and
 
 ### FTP Service Issues
 
-The FTP server is an important part of the Server Running IIS. It allows users to upload or download large files over HTTP connections or HTTPS (secure) connections. When using FTP server for IIS to list, download or upload files, you receive 5xx status codes (for example: FTP 550 status code that indicates that a particular command sent to the server wasn't executed).
+The FTP service is an important part of the IIS web-server. It allows users to upload or download large files over FTP (file transfer protocol) connections or FTPS (secure) connections. When using FTP server for IIS to list, download or upload files, you receive 5xx status codes (for example: FTP 550 status code that indicates that a particular command sent to the server wasn't executed).
 
 ### Server Farm Configuration Issues
 
@@ -45,21 +45,21 @@ When running a web application or a website on a farm consisting of several IIS 
 
 ## Resolution
 
-When reporting that type of issue to Microsoft Support, you must provide all the telemetry data required to diagnose the issue. If an issue occurs on an operational server, a complete and timely data collection strategy will allow for a faster resolution time. Use the Microsoft LogCatcher tool for automated data collection.
+When reporting the types of issues described above to Microsoft Support, you must provide all the telemetry data required to diagnose the issue. If an issue occurs on an production server, a complete and timely data collection strategy will allow for a faster resolution time. Use the Microsoft LogCatcher tool for automated data collection to allow faster and more consistent telemetry data gathering of all needed data from the web-server in an automated fashion.
 
-When Microsoft support professionals take your call about IIS or ASP.NET related issues, they will ask you to download the tool and to collect data. Download the tool from the GitHub repository ([LogCatcher](https://github.com/crnegule/LogCatcher)).
+When Microsoft support professionals take your call about issues you may be facing with either the IIS web-server or ASP.NET Runtime, they will ask you to download the tool and to collect data. Download the tool from the GitHub repository ([LogCatcher](https://github.com/crnegule/LogCatcher)).
 
-The welcome screen of the tool provides instructions about how to use the tool and describes the function of the user interface buttons. At the bottom of the screen, there's a list of websites hosted on the server where the tool runs, corresponding application pools, and the content location of each website.
+The welcome screen of the tool provides instructions about how to use the tool and describes the functionality exposed by the user interface buttons. After installing the tool and running it, you will be presented with a user interface like the one shown below. At the bottom of the tool's main Window, LogCatcher will display a list of websites hosted on the server where the tool is run, as well as the corresponding application pools, and the content location of each website
 
-To filter the data collected from your system, collect data only from a subset of websites from the list and only for a given duration (expressed in number of days counting back in the past from the present day).
+To filter the data collected from your system, collect data only from a subset of websites from the list and only for a given duration (expressed in number of days counting back in the past from the present day). You can use the Site IDs and Logs Age filter text boxes respectively.
 
 :::image type="content" source="media/data-collection-strategies/collect-data-in-logcatcher.jpg" alt-text="screenshot of collecting data in log catcher":::
 
-Once you've determined the filters you want to apply (for which websites and during what time period the data should be collected), press the **GENERATE ZIP** button and begin the log collection process. The status bar will confirm all required logs were collected and compressed in a (.zip) file and will provide the file location.
+Once you've determined the filters you want to apply (for which websites and during what time period the data should be collected), press the **GENERATE ZIP** button and begin the log collection process. The status bar will turn green when data collection is completed confirming all required logs were collected and compressed in a (.zip) file and will provide the file location.
 
 :::image type="content" source="media/data-collection-strategies/generate-zip-in-logcatcher.jpg" alt-text="screenshot of generating data in log catcher":::
 
-The Windows File Explorer will automatically open the folder where the logs.compressed (.zip) file was saved following the generation of the archive by the LogCatcher tool.
+The Windows File Explorer will automatically open the folder where the logs (compressed (.zip)) file was saved following the generation of the archive by the LogCatcher tool.
 
 LogCatcher collects this information:
 
