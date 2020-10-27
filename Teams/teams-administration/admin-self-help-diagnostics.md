@@ -63,6 +63,7 @@ The following diagnostics are currently available with brief scenario descriptio
 | Teams Auto-Attendant | Validates that an auto attendant is able to receive calls.	 | Diag: Teams Auto Attendant
 | We Can't Get Your Files | Validates that a Team is provisioned and accessible by the specified user.	 | Diag: Teams Files Error|
 | Teams presence | Validates that a user's Teams presence can be correctly displayed. | Diag: Teams presence |
+| Teams Live Events | Validates that a user is able to schedule Teams live events. | Diag: Teams Live Events |
 
 
 More diagnostics will be added at a future date.
