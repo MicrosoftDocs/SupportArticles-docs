@@ -28,7 +28,7 @@ additionalContent:
 
       - title: Microsoft Extensible Markup Language
         summary: Troubleshooting articles for Microsoft Extensible Markup Language
-        url: msxml/determine-version-msxml-parser.md
+        url: msxml/disable-output-escaping-style-sheet.md
 
       - title: Visual FoxPro
         summary: Troubleshooting articles for Visual FoxPro

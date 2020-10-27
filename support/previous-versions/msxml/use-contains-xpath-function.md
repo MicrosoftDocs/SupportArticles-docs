@@ -9,7 +9,7 @@ ms.prod: .net
 ---
 # Use the contains() XPath function when you are programming the MSXML DOM
 
-This article shows how to use the contains() XPath function when you are programming the MSXML DOM.
+This article shows how to use the `contains() XPath` function when you are programming the MSXML DOM.
 
 _Original product version:_ &nbsp; Microsoft XML  
 _Original KB number:_ &nbsp; 304265
@@ -20,7 +20,7 @@ When you use the Microsoft XML (MSXML) Document Object Model (DOM) in code to lo
 
 ## Step-by-Step Example
 
-1. In Notepad, create a new XML document named Books.xml, and paste the following XML:
+1. In Notepad, create a new XML document named *Books.xml*, and paste the following XML:
 
     ```xml
     <?xml version="1.0"?>
@@ -68,5 +68,5 @@ When you use the Microsoft XML (MSXML) Document Object Model (DOM) in code to lo
     Next
     ```
 
-7. The preceding code loads the XML from Books.xml into an instance of the MSXML DOMDocument object. It then runs an XPath query that uses the contains XPath function to identify all Book titles that contain the word ADO. Finally, the For loop iterates through the selected nodes and displays the matching titles that were identified by running the XPath query.
-8. The first parameter of the contains XPath function is used to specify the source node or string against which the comparison is to be executed. The second parameter is a string that specifies the word or string value to look for in the source node. It is important to remember that the string or word that is supplied as the second parameter of the contains function is case-sensitive.
+7. The preceding code loads the XML from *Books.xml* into an instance of the MSXML DOMDocument object. It then runs an XPath query that uses the `contains XPath` function to identify all Book titles that contain the word ADO. Finally, the For loop iterates through the selected nodes and displays the matching titles that were identified by running the XPath query.
+8. The first parameter of the `contains XPath` function is used to specify the source node or string against which the comparison is to be executed. The second parameter is a string that specifies the word or string value to look for in the source node. It is important to remember that the string or word that is supplied as the second parameter of the contains function is case-sensitive.

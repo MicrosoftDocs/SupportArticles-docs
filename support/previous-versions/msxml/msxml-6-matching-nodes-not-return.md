@@ -27,13 +27,13 @@ Add the default namespace declaration to the Namespace names of the DOMDocument 
 
 ## More information
 
-MSXML 6.0 no longer supports the XSLPattern query language. It only supports the XPath query language. This implies that simple tree-style hierarchical queries to access nodes in an XML document are also run as XPath queries in MSXML 6.0. When you use the MSXML 6.0 DOM to run XPath queries against an XML document that specifies a default namespace declaration, you must use the `setProperty` method of the DOMDocument object to add the default namespace declaration by specifying a namespace prefix, to the Namespace names of the DOMDocument object.
+MSXML 6.0 no longer supports the XSLPattern query language. It only supports the XPath query language. This implies that simple tree-style hierarchical queries to access nodes in an XML document are also run as XPath queries in MSXML 6.0. When you use the MSXML 6.0 DOM to run XPath queries against an XML document that specifies a default namespace declaration, you must use the `setProperty` method of the `DOMDocument` object to add the default namespace declaration by specifying a namespace prefix, to the Namespace names of the `DOMDocument` object.
 
-### Steps to Reproduce Behavior
+### Steps to reproduce behavior
 
 To recreate the problem and test the specified resolution by using a Visual Basic Standard EXE project, follow these steps:
 
-1. In Notepad, create an XML document that contains the following XML named Books.xml in the root folder of drive C:
+1. In Notepad, create an XML document that contains the following XML named Books.xml in the root folder of drive `C:`.
 
     ```xml
     <?xml version='1.0'?>
@@ -63,7 +63,7 @@ To recreate the problem and test the specified resolution by using a Visual Basi
 5. Paste the following code in the Click event procedure of the command button:
 
     > [!NOTE]
-    > This code loads the sample Books.xml document into an instance of the MSXML 6.0 DOMDocument60 object. It then uses the SelectNodes DOM method to run an XPath query against the DOMDocument60 object to identify the titles that are published by MSPress.
+    > This code loads the sample Books.xml document into an instance of the MSXML 6.0 `DOMDocument60` object. It then uses the SelectNodes DOM method to run an XPath query against the `DOMDocument60` object to identify the titles that are published by MSPress.
 
     ```vb
     Dim xmldoc As MSXML2.DOMDocument60
@@ -84,7 +84,7 @@ To recreate the problem and test the specified resolution by using a Visual Basi
 6. Save and run the project.
 7. Click the command button when the form is displayed. Although the XPath query is valid, it does not generate any results, and the matching titles are not written to the Visual Basic Immediate window.
 8. Stop the project.
-9. Uncomment the following line of code immediately after the Set xmldoc = New MSXML2.DOMDocument60 statement to add the default namespace declaration by specifying a namespace prefix to the Namespace names of the DOMDocument object:
+9. Uncomment the following line of code immediately after the `Set xmldoc = New MSXML2.DOMDocument60` statement to add the default namespace declaration by specifying a namespace prefix to the Namespace names of the `DOMDocument` object:
 
     ```vb
     'xmldoc.setProperty "SelectionNamespaces", "xmlns:bk='urn:books'"
@@ -103,6 +103,6 @@ To recreate the problem and test the specified resolution by using a Visual Basi
     ```
 
     > [!NOTE]
-    > The element names are now prefixed with the bk namespace alias that you specify when the default namespace declaration is added to the Namespace names of the DOMDocument object.
+    > The element names are now prefixed with the bk namespace alias that you specify when the default namespace declaration is added to the Namespace names of the `DOMDocument` object.
 
 12. Save and run the project. Click the command button when the form is displayed. The matching nodes are listed in the Visual Basic Immediate window.
