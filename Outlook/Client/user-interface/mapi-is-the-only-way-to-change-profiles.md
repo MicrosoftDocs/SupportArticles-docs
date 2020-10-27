@@ -20,8 +20,6 @@ search.appverid: MET150
 ---
 # MAPI is the only supported way to programmatically change profiles
 
-This article explains that the only supported way to programmatically modify Messaging API (MAPI) profiles is through Extended MAPI.
-
 _Original KB number:_ &nbsp; 266352
 
 ## Summary

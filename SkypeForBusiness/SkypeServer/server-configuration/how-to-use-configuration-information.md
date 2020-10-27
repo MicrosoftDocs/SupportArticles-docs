@@ -20,9 +20,9 @@ search.appverid: MET150
 ---
 # How to use Configuration Information in Office Communicator R2, Lync Server 2013, Lync Server 2010, or Skype for Business clients
 
-The Configuration Information feature in Microsoft Office Communicator (OC) R2, Lync Server 2013, Lync Server 2010, and Skype for Business clients can be used to troubleshoot Outlook integration and address book issues.
-
 _Original KB number:_ &nbsp; 3026442
+
+The Configuration Information feature in Microsoft Office Communicator (OC) R2, Lync Server 2013, Lync Server 2010, and Skype for Business clients can be used to troubleshoot Outlook integration and address book issues.
 
 ## More information
 

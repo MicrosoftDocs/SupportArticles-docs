@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # You can't restore a LUN drive in Exchange Server 2013
 
-This article provides a resolution to the issue that you can't restore a logical unit number (LUN) drive by using an Exchange-aware backup program in Microsoft Exchange Server 2013.
-
 _Original KB number:_ &nbsp; 2872889
 
 ## Symptoms

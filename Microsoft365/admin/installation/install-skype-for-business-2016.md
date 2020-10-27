@@ -8,7 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.prod: Office 365
+ms.prod: office 365
 ms.topic: article
 ms.author: v-six
 appliesto:

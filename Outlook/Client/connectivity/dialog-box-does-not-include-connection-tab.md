@@ -17,8 +17,6 @@ search.appverid: MET150
 ---
 # Exchange Server dialog box does not include a Connection tab in Outlook 2010
 
-This article provides troubleshooting steps and a workaround to make sure the **Connection** tab can be shown as expected in a Microsoft Exchange Server dialog box in Outlook 2010.
-
 _Original KB number:_ &nbsp; 3050278
 
 ## Summary

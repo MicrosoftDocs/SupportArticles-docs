@@ -1,81 +1,45 @@
 - name: Exchange Online Troubleshooting
   href: ../exchange-online-welcome.md
   items:
-  - name: Active Sync
-    items:
-    - name: Issues for mobile devices
-      href: ../active-sync/issues-for-mobile-devices.md
-  - name: Add Users
-    items:
-    - name: Proxy address is already being used
-      href: ../add-users/proxy-address-being-used.md
   - name: Administration
     items:
+    - name: Access is denied with Windows PowerShell
+      href: ../administration/access-denied-connect-powershell.md
+    - name: Can't connect to Exchange Online
+      href: ../administration/incorrect-settings.md
+    - name: Can't connect to Outlook using POP/IMAP
+      href: ../administration/cannot-connect-mailbox-pop-imap-outlook.md
     - name: Can't manage Send on Behalf permissions
       href: ../administration/send-on-behalf-for-shared-mailbox.md
-    - name: GetFolder requests return wrong TotalCount values
+    - name: GetFolder requests return wrong TotalCount values
       href: ../administration/getfolder-requests-return-wrong-totalcount-values.md
+    - name: Proxy address is already being used
+      href: ../administration/proxy-address-being-used.md
+    - name: Transition from D/ITAR to vNext
+      href: ../administration/modern-authentication-configuration.md
+    - name: Update contact information
+      href: ../administration/update-contact-information.md
+    - name: Validation errors for a mailbox archive GUID
+      href: ../administration/validation-errors-for-mailbox-archive-guid.md
+    - name: WinRM client cannot process the request
+      href: ../administration/winrm-cannot-process-request.md
   - name: Antispam
     items:
     - name: Cautions against bypassing spam filters
       href: ../antispam/cautions-against-bypassing-spam-filters.md
     - name: User Impersonation messages are classified as phishing
       href: ../antispam/user-impersonation-messages-are-classified-as-phishing.md
-  - name: Configure Contacts
-    items:
-    - name: Update contact information
-      href: ../configure-contacts/update-contact-information.md
-  - name: Configure Mailboxes
-    items:
-    - name: Can't remove mailbox permissions
-      href: ../configure-mailboxes/cannot-remove-mailbox-permission-office-365.md
-    - name: Enable or disable POP3, IMAP, MAPI, OWA or ActiveSync
-      href: ../configure-mailboxes/pop3-imap-owa-activesync-office-365.md
-    - name: How to create and manage resource mailboxes
-      href: ../configure-mailboxes/create-and-manage-resource-mailboxes.md
-    - name: Mailbox provision delays
-      href: ../configure-mailboxes/delays-provision-mailbox-sync-changes.md
-    - name: Restore user mailboxes by using cmdlets
-      href: ../configure-mailboxes/mailbox-recovery-in-exchange-online.md
-    - name: Set automatic replies
-      href: ../configure-mailboxes/set-automatic-replies.md
-  - name: Connecting to the Service
-    items:
-    - name: Access is denied with Windows PowerShell
-      href: ../connecting-to-the-service/access-denied-connect-powershell.md
-    - name: Can't connect to Exchange Online
-      href: ../connecting-to-the-service/incorrect-settings.md
-    - name: WinRM client cannot process the request
-      href: ../connecting-to-the-service/winrm-cannot-process-request.md
-  - name: Connectors
-    items:
-    - name: 550 5.1.1 ExRecipNotFound NDR
-      href: ../connectors/exrecipnotfound-ndr.md
-    - name: 550 5.1.10 RecipientNotFound NDR
-      href: ../connectors/recipientnotfound-ndr.md
-    - name: 550 5.2.0 BadPrimary NDR
-      href: ../connectors/badprimary-ndr.md
-    - name: 550 5.7.64 TenantAttribution
-      href: ../connectors/relay-access-denied-smtp.md
-    - name: 554 5.6.0 Invalid message NDR
-      href: ../connectors/invalid-message-ndr.md
-    - name: Email sent to EXO deferred with ATTR35
-      href: ../connectors/wrong-office-365-region-exo.md
-    - name: Important notice for Office 365
-      href: ../connectors/office-365-notice.md
-  - name: Delegates
-    items:
-    - name: Error viewing delegates in Outlook
-      href: ../delegates/no-delegate-permissions-after-migration.md
-  - name: Delete Calendar Items
+  - name: Calendars
     items:
     - name: Can't remove calendar items or emails
-      href: ../delete-calendar-items/cannot-remove-items.md
+      href: ../calendars/cannot-remove-items.md
     - name: Message store has reached its maximum size
-      href: ../delete-calendar-items/store-reached-maximum-size.md
+      href: ../calendars/store-reached-maximum-size.md
+    - name: No conference rooms with Room Finders
+      href: ../calendars/conference-rooms-not-displayed.md
   - name: Email Alias
     items:
-    - name: Remove an alias  from a contact
+    - name: Remove an alias from a contact
       href: ../email-alias/remove-an-alias-from-a-contact.md
     - name: Remove an alias from a distribution list
       href: ../email-alias/remove-an-alias-from-a-distribution-list.md
@@ -87,86 +51,96 @@
       href: ../email-alias/remove-an-alias-from-a-shared-mailbox.md
     - name: Remove an email alias
       href: ../email-alias/remove-an-email-alias.md
-  - name: Groups
+  - name: Email Delivery
+    items:
+    - name: 550 5.1.1 ExRecipNotFound NDR
+      href: ../email-delivery/exrecipnotfound-ndr.md
+    - name: 550 5.1.10 RecipientNotFound NDR
+      href: ../email-delivery/recipientnotfound-ndr.md
+    - name: 550 5.2.0 BadPrimary NDR
+      href: ../email-delivery/badprimary-ndr.md
+    - name: 550 5.7.64 TenantAttribution
+      href: ../email-delivery/relay-access-denied-smtp.md
+    - name: 550 5.7.64 TenantAttribution NDR
+      href: ../email-delivery/tenantattribution-ndr.md
+    - name: 554 5.2.0 STOREDRV.Deliver.Exception
+      href: ../email-delivery/mapiexceptionnotfound-ndr.md
+    - name: 554 5.6.0 Invalid message NDR
+      href: ../email-delivery/invalid-message-ndr.md
+    - name: 554 5.2.2 mailbox full NDR
+      href: ../email-delivery/cannot-send-mail-mepf.md
+    - name: Automatically forward email in transport rule
+      href: ../email-delivery/autoforward-mail-exclusions-not-honored-transport-rule.md
+    - name: Configure Proofpoint Email Protection with Exchange Online 
+      href: ../email-delivery/configure-proofpoint-with-exchange.md
+    - name: Email sent to EXO deferred with ATTR35
+      href: ../email-delivery/wrong-office-365-region-exo.md
+    - name: Find and fix email delivery issues
+      href: ../email-delivery/email-delivery-issues.md
+    - name: IMCEAEX non-delivery report
+      href: ../email-delivery/imceaex-ndr.md
+    - name: Important notice for Office 365
+      href: ../email-delivery/office-365-notice.md
+    - name: Inbox rule to forward emails doesn't work
+      href: ../email-delivery/inbox-rule-to-forward-messages-not-work.md
+    - name: Non-delivery report error codes
+      href: ../email-delivery/mail-issues.md
+  - name: Groups and Distribution Lists
     items:
     - name: Can't determine group type
-      href: ../groups/cannot-determine-group-type-error.md
+      href: ../groups-and-distribution-lists/cannot-determine-group-type-error.md
     - name: Common tasks to manage O365 groups
-      href: ../groups/o365-group-tasks.md
+      href: ../groups-and-distribution-lists/o365-group-tasks.md
     - name: Prevent users from creating and managing group
-      href: ../groups/prevent-users-create-manage-dg.md
+      href: ../groups-and-distribution-lists/prevent-users-create-manage-dg.md
     - name: You don't have sufficient permissions
-      href: ../groups/no-sufficient-permissions-moving-dg.md
-  - name: Mailbox Migration
+      href: ../groups-and-distribution-lists/no-sufficient-permissions-moving-dg.md
+  - name: Mobile Devices
+    items:
+    - name: Issues for mobile devices
+      href: ../mobile-devices/issues-for-mobile-devices.md
+  - name: Move/Migrate Mailboxes
     items:
     - name: "\"MAPI provider is not supported\" error in Exchange Online"
-      href: ../mailbox-migration/new-migrationendpoint-returns-error.md
-    - name: Issue with Add-RecipientPermission
-      href: ../mailbox-migration/issue-with-add-recipientpermission-cmdlet.md
-    - name: Migrate data with Admin Center
-      href: ../mailbox-migration/migrate-data-with-admin-center.md
-    - name: No smtp proxy matching
-      href: ../mailbox-migration/no-smtp-proxy-matching.md
-    - name: Troubleshoot issues with IMAP mailbox migration
-      href: ../mailbox-migration/troubleshoot-issues-with-imap-mailbox-migration.md
-    - name: Troubleshoot mailbox migration issues
-      href: ../mailbox-migration/troubleshoot-migration-issues-in-exchange-hybrid.md
-    - name: WhenCreated date is changed
-      href: ../mailbox-migration/whencreated-date-changed.md
-  - name: Mailflow
-    items:
-    - name: 550 5.7.64 TenantAttribution NDR
-      href: ../mailflow/tenantattribution-ndr.md
-    - name: Automatically forward email in transport rule
-      href: ../mailflow/autoforward-mail-exclusions-not-honored-transport-rule.md
-    - name: Inbox rule to forward emails doesn't work
-      href: ../mailflow/inbox-rule-to-forward-messages-not-work.md
-  - name: Mail Delivery
-    items:
-    - name: 554 5.2.0 STOREDRV.Deliver.Exception
-      href: ../mail-delivery/mapiexceptionnotfound-ndr.md
-    - name: Find and fix email delivery issues
-      href: ../mail-delivery/email-delivery-issues.md
-    - name: IMCEAEX non-delivery report
-      href: ../mail-delivery/imceaex-ndr.md
-    - name: Non-delivery report error codes
-      href: ../mail-delivery/mail-issues.md
-  - name: Meetings
-    items:
-    - name: No conference rooms with Room Finders
-      href: ../meetings/conference-rooms-not-displayed.md
-  - name: Modern Authentication
-    items:
-    - name: Can't connect to Outlook using POP/IMAP
-      href: ../modern-authentication/cannot-connect-mailbox-pop-imap-outlook.md
-    - name: Transition from D/ITAR to vNext
-      href: ../modern-authentication/modern-authentication-configuration.md
-  - name: Move Mailboxes
-    items:
+      href: ../move-or-migrate-mailboxes/new-migrationendpoint-returns-error.md
     - name: Can't see free/busy information
-      href: ../move-mailboxes/cannot-see-free-busy-information.md
+      href: ../move-or-migrate-mailboxes/cannot-see-free-busy-information.md
+    - name: Issue with Add-RecipientPermission
+      href: ../move-or-migrate-mailboxes/issue-with-add-recipientpermission-cmdlet.md
+    - name: Migrate data with Admin Center
+      href: ../move-or-migrate-mailboxes/migrate-data-with-admin-center.md
+    - name: No smtp proxy matching
+      href: ../move-or-migrate-mailboxes/no-smtp-proxy-matching.md
+    - name: Troubleshoot issues with IMAP mailbox migration
+      href: ../move-or-migrate-mailboxes/troubleshoot-issues-with-imap-mailbox-migration.md
+    - name: Troubleshoot mailbox migration issues
+      href: ../move-or-migrate-mailboxes/troubleshoot-migration-issues-in-exchange-hybrid.md
+    - name: WhenCreated date is changed
+      href: ../move-or-migrate-mailboxes/whencreated-date-changed.md
   - name: Outlook Issues
     items:
     - name: Can't set up profile with Autodiscover
       href: ../outlook-issues/cannot-set-up-profile-autodiscover.md
     - name: Encrypted connection unavailable
       href: ../outlook-issues/encrypted-connection-unavailable.md
+    - name: Error viewing delegates in Outlook
+      href: ../outlook-issues/no-delegate-permissions-after-migration.md
     - name: Issues with crash or stop responding
       href: ../outlook-issues/crash-issues.md
     - name: Resources to fix connection issues
       href: ../outlook-issues/office-365-troubleshooting-resources.md
     - name: Sending and receiving email
       href: ../outlook-issues/outlook-connection-issues.md
-  - name: OWA Issues
+  - name: Outlook on the web Issues
     items:
     - name: Can't open or view attachments
-      href: ../owa-issues/cannot-open-attachments.md
+      href: ../outlook-on-the-web-issues/cannot-open-attachments.md
     - name: Incorrect time zone in OWA
-      href: ../owa-issues/incorrect-setting.md
+      href: ../outlook-on-the-web-issues/incorrect-setting.md
     - name: Incorrect time zone in read receipt
-      href: ../owa-issues/read-receipt-incorrect-timezone.md
+      href: ../outlook-on-the-web-issues/read-receipt-incorrect-timezone.md
     - name: Missing search results items
-      href: ../owa-issues/items-missing-search-results.md
+      href: ../outlook-on-the-web-issues/items-missing-search-results.md
   - name: Public Folders
     items:
     - name: Can't add reviewer permission to calendars
@@ -193,9 +167,23 @@
       href: ../send-emails/ews-not-support-access-teams-data.md
     - name: Issues with OOF replies
       href: ../send-emails/understand-troubleshoot-oof-replies.md
-  - name: Shared Mailboxes
+  - name: User and Shared Mailboxes
     items:
+    - name: Can't remove mailbox permissions
+      href: ../user-and-shared-mailboxes/cannot-remove-mailbox-permission-office-365.md
+    - name: Enable or disable POP3, IMAP, MAPI, OWA or ActiveSync
+      href: ../user-and-shared-mailboxes/pop3-imap-owa-activesync-office-365.md
     - name: How to access other user's mailboxes
-      href: ../shared-mailboxes/how-to-access-other-mailboxes.md
+      href: ../user-and-shared-mailboxes/how-to-access-other-mailboxes.md
+    - name: How to create and manage resource mailboxes
+      href: ../user-and-shared-mailboxes/create-and-manage-resource-mailboxes.md
+    - name: Mailbox provision delays
+      href: ../user-and-shared-mailboxes/delays-provision-mailbox-sync-changes.md
+    - name: Private items aren't displayed
+      href: ../user-and-shared-mailboxes/private-items-not-display.md
+    - name: Restore user mailboxes by using cmdlets
+      href: ../user-and-shared-mailboxes/mailbox-recovery-in-exchange-online.md
     - name: Sent items aren't saved
-      href: ../shared-mailboxes/sent-mail-is-not-saved.md
+      href: ../user-and-shared-mailboxes/sent-mail-is-not-saved.md
+    - name: Set automatic replies
+      href: ../user-and-shared-mailboxes/set-automatic-replies.md

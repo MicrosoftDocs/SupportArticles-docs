@@ -18,8 +18,6 @@ appliesto:
 ---
 # Some cmdlets fail in PowerShell ISE after an upgrade to Exchange Server 2010 SP3
 
-This article helps you resolve the problem that some Exchange cmdlets no longer work after you upgrade to Microsoft Exchange Server 2010 Service Pack 3 (SP3).
-
 _Original KB number:_ &nbsp; 2859999
 
 ## Symptoms

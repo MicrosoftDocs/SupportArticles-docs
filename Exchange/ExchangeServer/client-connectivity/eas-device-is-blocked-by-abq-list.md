@@ -24,8 +24,6 @@ search.appverid: MET150
 ---
 # Exchange ActiveSync device is blocked unexpectedly by ABQ list
 
-This article describes a by design behavior that an Exchange ActiveSync device is blocked unexpectedly by the Allow/Block/Quarantine (ABQ) list in Microsoft Exchange Server.
-
 _Original KB number:_ &nbsp; 3013802
 
 ## Symptoms

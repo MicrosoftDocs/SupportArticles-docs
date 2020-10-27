@@ -8,7 +8,7 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
-ms.service: office-perpetual-itpro
+ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 appliesto:
@@ -53,8 +53,8 @@ Before you work with the following sample code, follow these steps:
        ' Dimension all variables.
        Dim DestFile As String
        Dim FileNum As Integer
-       Dim ColumnCount As Integer
-       Dim RowCount As Integer
+       Dim ColumnCount As Long
+       Dim RowCount As Long
     
        ' Prompt user for destination file name.
        DestFile = InputBox("Enter the destination filename" _

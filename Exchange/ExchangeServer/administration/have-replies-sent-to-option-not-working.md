@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # The Have replies sent to option does not work when your mailbox has server autoreply configured
 
-This article describes a by design behavior that the **Have replies sent to** option doesn't work as expected if the autoreply is configured in Microsoft Exchange Server 2010.
-
 _Original KB number:_ &nbsp; 2911210
 
 ## Symptoms

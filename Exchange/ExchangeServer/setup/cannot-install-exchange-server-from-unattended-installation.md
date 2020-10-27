@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # You cannot install an Exchange Server 2010 SP1 server from an unattended installation
 
-This article provides resolutions for the issue that you cannot install a Microsoft Exchange Server 2010 Service Pack 1 (SP1) server from an unattended installation.
-
 _Original KB number:_ &nbsp; 2280782
 
 ## Symptoms 1

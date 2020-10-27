@@ -21,6 +21,8 @@
       href: ./known-issues/cant-prevent-users-from-changing-profile-picture.md
     - name: Public team list doesn't display all teams
       href: ./known-issues/public-team-list-doesnt-display-all.md
+    - name: Self-help diagnostics for Teams admins
+      href: ./teams-administration/admin-self-help-diagnostics.md
     - name: User doesn't receive welcome email when added by an administrator
       href: ./known-issues/welcome-email-not-received-in-teams.md
   - name: Authentication
@@ -147,6 +149,10 @@
       href: ./known-issues/symlink-or-drivemap-causes-white-screen.md
     - name: You're missing out
       href: ./teams-sign-in/error-missing-out-sign-in-teams.md
+  - name: Sites
+    items:
+    - name: Websites aren't viewable
+      href: ./known-issues/cannot-view-website-teams-web-client.md
   - name: Tabs
     items:
     - name: Can't rename legacy OneNote tabs

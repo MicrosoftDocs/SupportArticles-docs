@@ -21,8 +21,6 @@ appliesto:
 ---
 # Performance issues or delays when you connect to Exchange Server 2013 that is running in Windows Server
 
-This article helps you resolve the performance problems that you experience when you connect to a Microsoft Exchange Server 2013 server.
-
 _Original KB number:_ &nbsp; 2995145
 
 ## Symptoms

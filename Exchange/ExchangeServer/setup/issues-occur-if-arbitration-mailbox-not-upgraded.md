@@ -21,8 +21,6 @@ search.appverid: MET150
 ---
 # Issues after Exchange Server upgrade if the arbitration mailbox isn't upgraded to the new Exchange server
 
-This article provides a resolution for the issues that occur after you install a new version of Microsoft Exchange Server.
-
 _Original KB number:_ &nbsp; 3108541
 
 ## Symptoms

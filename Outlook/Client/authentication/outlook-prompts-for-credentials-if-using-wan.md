@@ -21,8 +21,6 @@ search.appverid: MET150
 ---
 # Outlook users are prompted for credentials when they switch from a LAN to a WAN
 
-This article provides a resolution to solve the issue that Microsoft Outlook users are prompted for credentials when they switch from a LAN to a wide area network (WAN).
-
 _Original KB number:_ &nbsp; 2784787
 
 ## Symptoms

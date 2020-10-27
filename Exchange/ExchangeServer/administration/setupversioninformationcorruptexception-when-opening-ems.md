@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # SetupVersionInformationCorruptException error when you open Exchange Management Shell
 
-This article provides workarounds to solve the **Unable to determine the installed file version from the registry key** error that occurs when you open Exchange Management Shell (EMS) in Microsoft Exchange Server 2016.
-
 _Original KB number:_ &nbsp; 4056663
 
 ## Symptoms

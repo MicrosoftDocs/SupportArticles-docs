@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # 404 error and a call to makeEwsRequestAsync fails from a server that has split CAS/MBX roles in Exchange Server 2013
 
-This article provides a solution for the issue that a **404** error occurs when calling the **makeEwsRequestAsync** function in Microsoft Exchange Server 2013.
-
 _Original KB number:_ &nbsp; 4476965
 
 ## Summary

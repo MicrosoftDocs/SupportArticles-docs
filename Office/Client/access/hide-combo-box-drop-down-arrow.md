@@ -26,8 +26,6 @@ search.appverid: MET150
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-This article describes the detailed steps to hide the drop-down arrow on a combo box until the combo box is selected.
-
 _Original KB number:_ &nbsp; 325233
 
 > [!NOTE]

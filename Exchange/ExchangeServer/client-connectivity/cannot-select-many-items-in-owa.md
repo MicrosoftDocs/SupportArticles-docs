@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # You have tried to select too many rows error when selecting many items in a folder in OWA
 
-This article provides a resolution to solve the error message that occurs when selecting lots of items in Outlook Web App (OWA) in Microsoft Exchange Server 2010 Service Pack 1 (SP1).
-
 _Original KB number:_ &nbsp; 2394261
 
 ## Symptoms

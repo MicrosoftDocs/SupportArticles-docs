@@ -60,13 +60,13 @@ To use this method, follow these steps:
 
 5. Restore any custom proxy addresses and any other Exchange attributes that were stripped when the mailbox was disabled (compare to the **Get-Mailbox** command from step 1).
 
-6. (Optional) Stamp the Exchange Online GUID on the remote mailbox (required if you ever want to offboard the mailbox back to on-premises).
+6. (Optional) Stamp the Exchange Online GUID on the remote mailbox (required if you ever want to off board the mailbox back to on-premises).
 
     ```powershell
     Set-RemoteMailbox "user identity" -ExchangeGuid "Exchange guid value of Exchange Online mailbox"
     ```
 
-7. Restore the contents of the disconnected mailbox to Exchange Online. For the Credentials, you must specify an On-Premises Exchange admin account. To perform a remote restore, the administrator must have one of the following conditions:
+7. Restore the contents of the disconnected mailbox to Exchange Online. For the Credentials, you must specify an on-premises Exchange admin account. To perform a remote restore, the administrator must have one of the following conditions:
 
    - A member of the Domain Admins group in Active Directory Domain Services (AD DS) in the on-premises organization.
    - A member of the Exchange Recipients Administrators group in Active Directory in the on-premises organization.
@@ -76,6 +76,9 @@ To use this method, follow these steps:
     $cred = Get-Credential
     New-MailboxRestoreRequest -RemoteHostName "mail.contoso.com" -RemoteCredential $cred -SourceStoreMailbox "exchange guid of disconnected mailbox" -TargetMailbox "exchange guid of cloud mailbox" -RemoteDatabaseGuid "guid of on-premises database" -RemoteRestoreType DisconnectedMailbox
     ```
+
+    > [!NOTE]
+    > The remote restore isn't supported for Exchange 2010. The minimum supported version is Exchange 2013.
 
 > [!IMPORTANT]
 > Because New-MailboxRestoreRequest was designed to work in a single Exchange organization, the cross-premises restore jobs will fail due to an unavoidable mismatch between the source and target mailbox ExchangeGuid's.  The mailbox restore request will end in status "FailedOther", and the report (from `Get-MailboxRestoreRequestStatistics -IncludeReport`) will show the following error message in the final report Entry:

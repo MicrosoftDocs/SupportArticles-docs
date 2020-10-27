@@ -23,8 +23,6 @@ appliesto:
 ---
 # OWA password expiration notification when you use fine-grained password policy
 
-This article helps you resolve the problem that the password expiration notification window doesn't show your password is expired when you are assigned a fine-grained password policy.
-
 _Original KB number:_ &nbsp; 3141296
 
 ## Symptoms

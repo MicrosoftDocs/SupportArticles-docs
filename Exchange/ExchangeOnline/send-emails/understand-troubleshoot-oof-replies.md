@@ -2,16 +2,16 @@
 title: Understanding and troubleshooting Out of Office (OOF) replies
 description: Discusses how the Out of Office works and some of the main reasons why an Out of Office reply might not get delivered to users. 
 author: TobyTu
-ms.author: Daniel.Mande
+ms.author: damande
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
-ms.service: office 365
+ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
 - CI 119624
 - CSSTroubleshoot
-ms.reviewer: Daniel.Mande
+ms.reviewer: damande
 appliesto:
 - Exchange Online
 search.appverid: 
@@ -29,17 +29,19 @@ Out of Office (OOF) replies can be a bit of a mystery. How do they work? Why do 
 
 OOF — or automatic — replies are Inbox rules that are set in the user's mailbox by the client. OOF rules are server-side rules. Therefore, they are triggered regardless of whether the client is running.
 
-Automatic replies can be configured:
+Automatic replies can be configured as follows:
 
-- as an automatic reply feature from within Outlook, [like this](https://support.office.com/article/Send-automatic-out-of-office-replies-from-Outlook-9742f476-5348-4f9f-997f-5e208513bd67).
-- by using other clients, such as Outlook on the web (OWA).
-- by running a PowerShell command ([Set-MailboxAutoReplyConfiguration](https://docs.microsoft.com/powershell/module/exchange/set-mailboxautoreplyconfiguration?view=exchange-ps)).
+- By using the automatic reply feature from within Outlook [as explained here](https://support.office.com/article/Send-automatic-out-of-office-replies-from-Outlook-9742f476-5348-4f9f-997f-5e208513bd67)
+- By using other clients, such as Outlook on the web (OWA)
+- By running a PowerShell command ([Set-MailboxAutoReplyConfiguration](https://docs.microsoft.com/powershell/module/exchange/set-mailboxautoreplyconfiguration?view=exchange-ps&preserve-view=true))
 
-Admins can set up OOF replies from the M365 Admin Portal on behalf of (forgetful) users.
+Admins can set up OOF replies from the M365 Admin Portal on behalf of users.
+
+If automatic replies are enabled, only one reply is sent to each sender even if a recipient receives multiple messages from a sender.
 
 In addition to using the built-in OOF functionality in their client, people sometimes [use rules to create an Out of Office message](https://support.office.com/article/use-rules-to-create-an-out-of-office-message-9f124e4a-749e-4288-a266-2d009686b403) while they are away.
 
-By design, Exchange Online Protection uses the [high risk delivery pool](https://docs.microsoft.com/microsoft-365/security/office-365-security/high-risk-delivery-pool-for-outbound-messages?view=o365-worldwide) (HRDP) to send OOF replies. This is because OOF replies are lower-priority messages.
+By design, Exchange Online Protection uses the [high risk delivery pool](https://docs.microsoft.com/microsoft-365/security/office-365-security/high-risk-delivery-pool-for-outbound-messages?view=o365-worldwide&preserve-view=true) (HRDP) to send OOF replies. This is because OOF replies are lower-priority messages.
 
 ## Types of OOF rules
 
@@ -74,13 +76,13 @@ OOF rules in MFCMapi:
 
 OOF rules templates in MFCMapi:
 
-:::image type="content" source="media/understand-troubleshoot-oof-replies/OOF02.jpg" alt-text="Screenshot of OOF rule templates in MFCMapi.":::
+:::image type="content" source="media/understand-troubleshoot-oof-replies/OOF02.jpg" alt-text="Screenshot 1 of OOF rule templates in MFCMapi.":::
 
 ## OOF response history
 
 An OOF response is sent one time per recipient. The list of recipients to whom the OOF response is sent are stored in the OOF history, which is cleared out either when the OOF state changes (enabled or disabled) or when the OOF rule is modified. OOF history is stored in the user's mailbox, and can be viewed by using the MFCMapi tool at: **Freebusy Data** > **PR_DELEGATED_BY_RULE**.
 
-:::image type="content" source="media/understand-troubleshoot-oof-replies/OOF03.jpg" alt-text="Screenshot of OOF rule templates in MFCMapi.":::
+:::image type="content" source="media/understand-troubleshoot-oof-replies/OOF03.jpg" alt-text="Screenshot 2 of OOF rule templates in MFCMapi.":::
 
 > [!NOTE]
 > If you want to send a response to the sender every time instead of only one time, you can apply the "have server reply using a specific message" mailbox server-side rule instead of using the OOF rule. This alternative rule sends a response every time that a message is received.
@@ -93,7 +95,7 @@ The following sections discuss some of the scenarios in which OOF replies are no
 
 If an OOF reply appears not to have been sent for all users in the tenant, a transport rule is usually to blame. Check all the transport rules that may apply to the affected mailbox by using step 2 of [this article](https://support.microsoft.com/help/2866165/senders-don-t-receive-out-of-office-notifications-from-an-office-365-u).
 
-If you suspect a delivery problem, run a [message trace](https://docs.microsoft.com/microsoft-365/security/office-365-security/message-trace-scc?view=o365-worldwide) from the Office 365 tenant. For OOF messages, the sender of the original message becomes the recipient during tracking. You should be able to determine whether the OOF reply has been triggered and sent to an external or internal recipient. The message trace will clearly indicate whether a transport rule is blocking the OOF response.
+If you suspect a delivery problem, run a [message trace](https://docs.microsoft.com/microsoft-365/security/office-365-security/message-trace-scc?view=o365-worldwide&preserve-view=true) from the Office 365 tenant. For OOF messages, the sender of the original message becomes the recipient during tracking. You should be able to determine whether the OOF reply has been triggered and sent to an external or internal recipient. The message trace will clearly indicate whether a transport rule is blocking the OOF response.
 
 There is one scenario that is worth highlighting when it comes to transport rules blocking OOF replies. Let's assume that you moved the MX record to a third-party anti-spam program. You have created a transport rule to reject any email message that is sent from any IP address other than the third-party anti-spam program.
 
@@ -110,9 +112,9 @@ The transport rule will look something like this:
 Because OOF rules have a blank (<>) return path, the OOF rule unexpectedly matches the transport rule, and OOF responses get blocked.
 
 To fix this issue, change the "Match sender address in message" transport rule property to "Header or envelope" so that the checks will also be done against the **From**(also known as "Header From"), **Sender**, or **Reply-To** fields. For more information about mail flow rule conditions, see the "Senders" section of
-[this article](https://docs.microsoft.com/Exchange/policy-and-compliance/mail-flow-rules/conditions-and-exceptions?view=exchserver-2019#senders).
+[this article](https://docs.microsoft.com/Exchange/policy-and-compliance/mail-flow-rules/conditions-and-exceptions?view=exchserver-2019#senders&preserve-view=true).
 
-:::image type="content" source="media/understand-troubleshoot-oof-replies/OOF04.png" alt-text="Screenshot of OOF rule templates in MFCMapi.":::
+:::image type="content" source="media/understand-troubleshoot-oof-replies/OOF04.png" alt-text="Screenshot 3 of OOF rule templates in MFCMapi.":::
 
 ### "JournalingReportNdrTo" mailbox setting
 
@@ -122,7 +124,7 @@ For more information about how to resolve this issue, see [this article](https:/
 
 ### Forwarding SMTP address is enabled on the mailbox
 
-If the affected user mailbox has [SMTP forwarding](https://docs.microsoft.com/microsoft-365/admin/email/configure-email-forwarding?view=o365-worldwide#configure-email-forwarding) enabled, OOF replies won't be generated. This can be checked in any of the following locations:
+If the affected user mailbox has [SMTP forwarding](https://docs.microsoft.com/microsoft-365/admin/email/configure-email-forwarding?view=o365-worldwide#configure-email-forwarding&preserve-view=true) enabled, OOF replies won't be generated. This can be checked in any of the following locations:
 
 - In the user mailbox settings in the client (such as OWA):
 
@@ -153,7 +155,7 @@ There are four OOF reply types:
 - InternalLegacy
 - None
 
-For more information about these OOF types, see the **AllowedOOFType** entry in the "Parameters" section of [Set-RemoteDomain](https://docs.microsoft.com/powershell/module/exchange/set-remotedomain?view=exchange-ps#parameters).
+For more information about these OOF types, see the **AllowedOOFType** entry in the "Parameters" section of [Set-RemoteDomain](https://docs.microsoft.com/powershell/module/exchange/set-remotedomain?view=exchange-ps#parameters&preserve-view=true).
 
 You can check the OOF reply type from **Exchange Admin Center** > **Mail flow** > **Remote domains**.
 
@@ -215,10 +217,43 @@ When you create, configure, or manage OOF replies, you might also experience the
 
 ### An old or duplicate OOF message is sent
 
-If an old or duplicate OOF reply is sent, check for a duplicate Inbox rule. This issue may also occur if the OOF history limit is reached. The OOF history has a limit of 10,000 entries. If this threshold is reached, new users can't be added to the history list and OOF replies will continue to be sent to recipients who are not already in that list. All users who are already in the list will not receive duplicate OOF replies. For more information, see [this article](https://support.microsoft.com/help/3106609) or follow these steps: 
+If either an old or duplicate OOF reply is sent, check for a duplicate Inbox rule, and delete it if you find one.
+
+If there isn't an additional Inbox rule, this issue may also occur if the OOF history reaches its limit. The OOF history has a limit of 10,000 entries. If this threshold is reached, new users can't be added to the history list. In this situation, OOF replies will continue to be sent to recipients who are not already in the list – one reply for every message sent by the recipients. All users who are already in the list will not receive duplicate OOF replies.
+
+To resolve this issue, use one of the following methods.
+
+**Method 1**
+
 1. Remove the OOF rules and the OOF rules templates from the mailbox. To locate the rules, see the [OOF rule details](#oof-rule-details) section.
 2. Disable and then re-enable the OOF feature for the mailbox.
 3. Check again whether the OOF feature works as expected and the symptoms do not occur.
+
+**Method 2**
+
+If Method 1 doesn't resolve the issue, remove the OOF response history. 
+
+1. Disable automatic replies in Outlook if currently enabled and exit Outlook.
+2. Log on to the [MFCMapi](https://github.com/stephenegriffin/mfcmapi/releases)  tool and select **Tools** > **Options**.
+3. Select the following check boxes:
+
+     - **Use the MDB_ONLINE flag when calling OpenMsgStore**
+     - **Use the MAPI_NO_CACH flag when calling OpenEntry**
+
+4. Select **Session** > **Logon**.
+5. Select the Outlook profile for the mailbox and double-click to open it.
+6. Expand **Root Container** and then select **Freebusy Data**.
+7. In the **Other Names** column, right-click the **PR_DELEGATED_BY_RULE** property that has the **0x3FE30102** tag, point to **Edit as stream**, and then select **Binary**.
+8. Select all the text in the **Stream (Binary)** box and delete it.
+
+### Two different OOF messages are sent
+
+If two different OOF messages are sent, and you don't find an additional Inbox rule, the culprit is likely an OOF rule in the Outlook client. To check for and delete such a rule, follow these steps:
+
+1. In the Outlook client, select **File** > **Automatic Replies** > **Rules**.
+2. Select the OOF rule and then select **Delete Rule**.
+
+    :::image type="content" source="media/understand-troubleshoot-oof-replies/auto-reply-rule.png" alt-text="Delete auto-reply rule":::
 
 ### Automatic replies cannot be enabled and an error message is received
 

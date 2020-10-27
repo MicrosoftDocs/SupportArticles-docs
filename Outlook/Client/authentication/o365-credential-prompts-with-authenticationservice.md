@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Office 365 credential prompts with AuthenticationService registry value
 
-This article provides a resolution for the issue that you are prompted for credentials when trying to create an Outlook profile or connect to an Office 365 mailbox.
-
 _Original KB number:_ &nbsp; 2975918
 
 ## Symptoms

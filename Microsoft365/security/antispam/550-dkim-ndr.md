@@ -6,7 +6,7 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: Office 365
+ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
@@ -39,7 +39,7 @@ This issue may occur if the recipient domain doesn't comply with Domain Keys Ide
 
 Do one of the following:
 
-- Recommended method: Enable DKIM by creating a CNAME record for your domain in Office 365. For more information, see [Use DKIM to validate outbound email sent from your custom domain in Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/use-dkim-to-validate-outbound-email?view=o365-worldwide).
+- Recommended method: Enable DKIM by creating a CNAME record for your domain in Office 365. For more information, see [Use DKIM to validate outbound email sent from your custom domain in Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/use-dkim-to-validate-outbound-email?view=o365-worldwide&preserve-view=true).
 - Contact the recipient domain and suggest that they comply with DKIM RFC 6376. Consider the message to be unsigned if a DKIM authentication failure occurs.
 
 ## More information

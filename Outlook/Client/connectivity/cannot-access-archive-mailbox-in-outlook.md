@@ -20,8 +20,6 @@ search.appverid: MET150
 ---
 # Users can't access their archive mailbox in Outlook
 
-This article provides workarounds to solve the issue that users who have MAPI/HTTP enabled can't access their archive mailbox in Microsoft Outlook.
-
 _Original KB number:_ &nbsp; 3098940
 
 ## Symptoms

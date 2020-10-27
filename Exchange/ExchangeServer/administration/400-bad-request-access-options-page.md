@@ -18,8 +18,6 @@ appliesto:
 ---
 # Error when a user accesses the Options page in Exchange Server 2010: 400 Bad Request
 
-This article helps you resolve the problem that an HTTP error 400 occurs when you accesses the **Options** page.
-
 _Original KB number:_ &nbsp; 2971274
 
 ## Symptoms

@@ -41,5 +41,5 @@ To resolve this issue, change the following account setting in the Office 365 p
 > You must be an Office 365 tenant administrator.
 
 1. Go to [https://portal.office.com](https://portal.office.com/).
-1. Go to **Settings**, **Services & Add-ins**, and then **Reports**.
+1. Go to **Settings**, **Org Settings**, and then **Reports**.
 1. Disable the **Display anonymous identifiers instead of names in all reports** setting.

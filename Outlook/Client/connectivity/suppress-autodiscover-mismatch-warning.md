@@ -24,8 +24,6 @@ appliesto:
 ---
 # How to suppress the AutoDiscover mismatch warning in Outlook 2007 and later versions
 
-This article describes how to suppress the AutoDiscover mismatch warning that occurs when Microsoft Outlook performs an AutoDiscover operation and tries to connect to a service endpoint.
-
 _Original KB number:_ &nbsp; 2783881
 
 ## Summary

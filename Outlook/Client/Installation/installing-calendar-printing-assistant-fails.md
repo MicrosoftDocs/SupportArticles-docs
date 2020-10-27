@@ -20,8 +20,6 @@ appliesto:
 ---
 # Error when you try to install the Calendar Printing Assistant for Outlook: Setup cannot complete
 
-This article provides workarounds for an issue where installing the Calendar Printing Assistant for Microsoft Outlook fails.
-
 _Original KB number:_ &nbsp; 2898576
 
 ## Symptoms  
@@ -55,7 +53,7 @@ To modify the registry subkey manually, follow these steps:
 
       `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\14.0\Common\ProductVersion`
 
-   - For a 64-bit version of Office that is installed on a 64-bit version of Windows:
+   - For a 32-bit version of Office that is installed on a 64-bit version of Windows:
 
       `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\14.0\Common\ProductVersion`
 

@@ -6,7 +6,7 @@ ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: Office 365
+ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
@@ -25,10 +25,10 @@ search.appverid: MET150
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
+_Original KB number:_ &nbsp; 2860302
+
 > [!NOTE]
 > The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at [http://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
-
-_Original KB number:_ &nbsp; 2860302
 
 ## Problem
 

@@ -21,8 +21,6 @@ search.appverid: MET150
 ---
 # Outlook displays a Disconnected status when IPv6 is enabled
 
-This article provides a resolution and workaround to solve the issue that Microsoft Outlook shows a Disconnected status when IPv6 is enabled.
-
 _Original KB number:_ &nbsp; 3134780
 
 ## Symptoms

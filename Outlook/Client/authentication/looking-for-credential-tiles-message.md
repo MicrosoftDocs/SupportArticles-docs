@@ -18,8 +18,6 @@ search.appverid: MET150
 ---
 # Looking for credential tiles message when launching Outlook 2013 or 2010
 
-This article provides a resolution for the **Looking for credential tiles** message that occurs when you try to launch Microsoft Outlook 2013 or Outlook 2010.
-
 _Original KB number:_ &nbsp; 2938468
 
 ## Symptoms

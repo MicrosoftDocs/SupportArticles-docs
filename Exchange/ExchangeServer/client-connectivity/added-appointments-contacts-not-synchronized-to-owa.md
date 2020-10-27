@@ -19,8 +19,6 @@ search.appverid: MET150
 ---
 # Added appointments and contacts in Outlook for Mac do not synchronize to Outlook Web App
 
-This article describes a by design behavior that added appointments and contacts in Microsoft Outlook for Mac do not synchronize to Outlook Web App (Outlook Web App) or to your mobile devices and other mail clients.
-
 _Original KB number:_ &nbsp; 2744157
 
 ## Symptoms
