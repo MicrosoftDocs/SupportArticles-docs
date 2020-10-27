@@ -34,7 +34,7 @@ The two events resemble the following:
  File Replication Service is in an error state  
 >
 > Event 13552:  
- The File Replication Service is unable to add this computer to the following replica set: "DOMAIN SYSTEM VOLUME (SYSVOL SHARE)"  
+ The File Replication Service is unable to add this computer to the following replica set: "DOMAIN SYSTEM VOLUME (SYSVOL SHARE)"  
 
 These event logs indicate that the SYSVOL folder isn't replicated between domain controllers. Therefore, this issue causes inconsistent Group Policy settings and the incorrect policy result is set on each client computer.
 

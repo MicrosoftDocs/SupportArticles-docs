@@ -28,7 +28,7 @@ When you try to connect from a Windows 10-based client to a Terminal Services se
 
 ## Cause
 
-This issue occurs because a Windows 10-based computer cannot provide a Remote Assistance connection to a Windows Server-based computer that is configured to require FIPS-compatible encryption.
+This issue occurs because a Windows 10-based computer cannot provide a Remote Assistance connection to a Windows Server-based computer that is configured to require FIPS-compatible encryption.
 
 ## Resolution
 
@@ -66,7 +66,7 @@ To use the Group Policy Object to disable FIPS data encryption system-wide, foll
 
 > [!NOTE]
 > Encryption level settings in Terminal Server are unavailable when FIPS is enabled. For more information about scoping Group Policy Objects and troubleshooting the resultant policies on your server, click the following article number to view the article in the Microsoft Knowledge Base: 
- [818735](https://support.microsoft.com/help/818735) White Paper: Administering Group Policy by Using the Group Policy Management Console  
+ [818735](https://support.microsoft.com/help/818735) White Paper: Administering Group Policy by Using the Group Policy Management Console  
 
 ## Status
 

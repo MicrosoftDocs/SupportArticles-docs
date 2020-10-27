@@ -17,7 +17,7 @@ ms.technology: ActiveDirectory
 
 This article discusses how to use the Directory Services to help collect information to troubleshoot Directory Services issues in Windows 7 and in Windows Server 2008 R2.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2671810
 
 ## Summary

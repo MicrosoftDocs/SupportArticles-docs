@@ -7,6 +7,8 @@
     items:
     - name: An application fails to create a COM+ component
       href: client-application-error-create-com-plus-component.md
+    - name: Descriptions and workings of OLE threading models
+      href: descriptions-workings-ole-threading-models.md
     - name: Two DLL hosts start when a COM+ object is enabled
       href: two-dll-hosts-start-com-plus-enabled.md
     - name: VarI8FromCy produces incorrect value
@@ -61,6 +63,8 @@
       href: mix-gdi-and-gdi-plus-drawing.md
     - name: Modify printer settings by using SetPrinter
       href: modify-printer-settings-setprinter-api.md
+    - name: Modify printer settings with DocumentProperties
+      href: modify-printer-settings-documentproperties.md  
     - name: Printer device fonts
       href: printer-device-fonts.md
     - name: RAW data can't print
@@ -73,6 +77,8 @@
       href: wia-2-not-support-duplex.md
   - name: Networking development
     items:
+    - name: An API causes an I/O not work correctly
+      href: setfilecompletionnotificationmodes-causes-io-completion.md
     - name: The BeginRead method causes exceptions
       href: beginread-causes-invalidoperationexception.md
     - name: Header and library requirement at the IPPROTO_IP level
@@ -89,6 +95,8 @@
       href: limitation-10-smart-card-readers.md
   - name: System services development
     items:
+    - name: Access Violation of BEX or APPCRASH occurs
+      href: access-violation-bex-appcrash.md
     - name: Asynchronous disk I/O appears synchronous
       href: asynchronous-disk-io-synchronous.md
     - name: CD-ROM notifications

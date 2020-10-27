@@ -91,7 +91,7 @@ Some of the interesting parts of the certificate include the following:
 
 - PKCS7 Message
 
-    PKCS is a message format for cryptographic messages designed by RSA. For more information, see [RSA Security Web site](https://www.rsa.com/rsalabs/node.asp?id=2124).
+    PKCS is a message format for cryptographic messages designed by RSA. For more information, see [RSA Security Web site](https://www.rsa.com).
 - X509 Certificate
 
     This is the standard format of a certificate.

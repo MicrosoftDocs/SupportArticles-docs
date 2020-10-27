@@ -22,11 +22,11 @@ _Original KB number:_ &nbsp; 2478117
 
 ## Symptoms
 
-One of more of the following services may fail to start on a computer that is running Windows 7:
+One of more of the following services may fail to start on a computer that is running Windows 7:
 
-- Windows Time (W32Time)
-- Windows Event Log (eventlog)
-- Windows Firewall (MpsSvc)
+- Windows Time (W32Time)
+- Windows Event Log (eventlog)
+- Windows Firewall (MpsSvc)
 
 Additionally, when trying to start the service manually, you may receive the following error message:
 
@@ -38,15 +38,15 @@ The issue may occur if the service is started by the **Local System** account in
 
 ## Resolution
 
-Set the service and any dependent services to run under the **NT AUTHORITY\LocalService** account.
+Set the service and any dependent services to run under the **NT AUTHORITY\LocalService** account.
 
 For example, for the Windows Firewall service, follow the steps:
 
-1. Click Start, type *Services.msc* in the **Search programs and files** box, and then press **ENTER**,
-2. Locate and double-click the **Windows Firewall** service.
-3. Click the **Log On** tab,
-4. In **This account** text box, type *NT AUTHORITY\LocalService*.
-5. Set both **Password** fields blank.
-6. Click **Apply** and then **OK**,
-7. Repeat these steps for the **Base Filtering Engine** service.
-8. Restart both services.
+1. Click Start, type *Services.msc* in the **Search programs and files** box, and then press **ENTER**,
+2. Locate and double-click the **Windows Firewall** service.
+3. Click the **Log On** tab,
+4. In **This account** text box, type *NT AUTHORITY\LocalService*.
+5. Set both **Password** fields blank.
+6. Click **Apply** and then **OK**,
+7. Repeat these steps for the **Base Filtering Engine** service.
+8. Restart both services.

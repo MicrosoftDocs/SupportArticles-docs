@@ -61,7 +61,7 @@ The values of the following keys under EAP are modified from C:\System32\rastls.
 ## Resolution
 
 > [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. 
+> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. 
 
 To resolve this problem, modify the registry to correct the values of ConfigUiPath ", " IdentityPath ", " InteractiveUIPath " and " Path. To do this, follow these steps:
 
@@ -79,7 +79,7 @@ To resolve this problem, modify the registry to correct the values of ConfigUiPa
 
 7. Change the value for keys: " ConfigUiPath ", " IdentityPath ", " InteractiveUIPath " and " Path " to: C:\Windows\ System32\rastls.dll 
 
-8. Delete the following keys under  folder 13 and 25 
+8. Delete the following keys under  folder 13 and 25 
 
     KEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\13 KEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\25
 
@@ -91,4 +91,4 @@ To resolve this problem, modify the registry to correct the values of ConfigUiPa
 
     PathBack
 
-9. Exist the registry editor and then restart the computer
+9. Exist the registry editor and then restart the computer

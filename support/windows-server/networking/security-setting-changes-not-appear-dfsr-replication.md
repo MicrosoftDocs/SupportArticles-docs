@@ -22,9 +22,9 @@ _Original KB number:_ &nbsp; 3212430
 
 ## Symptoms
 
-Assume that you have the Distributed File System (DFS) Replication role service installed in Windows Server 2012 R2, Windows Server 2016 or Windows Server, version 1709, Windows Server Standard, version 1803 or Windows Server Datacenter, version 1803. When you change the security settings of a folder through Windows Explorer, the change appears only on replication partners for subordinate files but not immediately on the folder itself or its subfolders.
+Assume that you have the Distributed File System (DFS) Replication role service installed in Windows Server 2012 R2, Windows Server 2016 or Windows Server, version 1709, Windows Server Standard, version 1803 or Windows Server Datacenter, version 1803. When you change the security settings of a folder through Windows Explorer, the change appears only on replication partners for subordinate files but not immediately on the folder itself or its subfolders.
 
-For example, if you grant a user Modify permissions to a folder on a domain controller, the user can access the files on a replication partner only under the folder. The user does not immediately have permissions to access the folders (parent folder and subfolders).
+For example, if you grant a user Modify permissions to a folder on a domain controller, the user can access the files on a replication partner only under the folder. The user does not immediately have permissions to access the folders (parent folder and subfolders).
 
 >[!NOTE]
 The changes appear on replication partners for the folders after 7 to 10 minutes. 

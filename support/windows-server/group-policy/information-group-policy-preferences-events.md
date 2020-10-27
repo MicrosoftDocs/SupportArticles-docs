@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2002507
 
 ## Summary
 
-Group Policy Preferences (GPP) allow you to specify computer and user configuration settings. These settings allow granular configuration not available using regular Group Policy. GPP also provides filtering of settings using item-level targeting that allows for granular application of settings to a subset of users or computers.  
+Group Policy Preferences (GPP) allow you to specify computer and user configuration settings. These settings allow granular configuration not available using regular Group Policy. GPP also provides filtering of settings using item-level targeting that allows for granular application of settings to a subset of users or computers.  
 
 You may want to know about the possible events that can be logged by a component, in order to categorize them properly in system management solutions. Below you will find the list of events for Group Policy Preferences.
 
@@ -69,31 +69,31 @@ MessageId=0x1003 (4099)
 Severity=Warning  
 The client-side extension could not log RSoP data because it failed with error code '%1'.  
 
-MessageId=0x1004  (4100)  
+MessageId=0x1004  (4100)  
 Severity=Success  
 Service stopped.  
 
-MessageId=0x1005  (4101)  
+MessageId=0x1005  (4101)  
 Severity=Success  
 The %1 '%2' preference item in the '%3' Group Policy object was successfully removed.  
 
-MessageId=0x1006  (4102)  
+MessageId=0x1006  (4102)  
 Severity=Warning  
 ODBC diagnostic (%1), %2  
 
-MessageId=0x1007  (4103)  
+MessageId=0x1007  (4103)  
 Severity=Warning  
 The client-side extension could not %1 %2 preference items for the '%3' Group Policy object because Windows is shutting down or the user is logging out..  
 
-MessageId=0x1009  (4105)  
+MessageId=0x1009  (4105)  
 Severity=Warning  
 The %1 '%2' preference item in the '%3' Group Policy object did not apply because a targeting item failed with error code '%4'%%100790273  
 
-MessageId=0x100A  (4106)  
+MessageId=0x100A  (4106)  
 Severity=Warning  
 The %1 '%2' preference item in the '%3' Group Policy object did not apply because its targeting item failed with error code '%4'%%100790273  
 
-MessageId=0x1013  (4115)  
+MessageId=0x1013  (4115)  
 Severity=Success  
 Service started.  
 
@@ -126,7 +126,7 @@ The %1 '%2' preference item in '%3' Group Policy object did not apply because a 
 
 MessageId=0x201D (8221)  
 Severity=Warning  
-An error occured while writing to the trace file.  Error %1.  
+An error occured while writing to the trace file.  Error %1.  
 
 MessageId=0x2023 (8227)  
 Severity=Warning  

@@ -28,8 +28,8 @@ _Original KB number:_ &nbsp; 2002013
     Starting test: Replications  
     Replications Check  
     [Replications Check,\<destination DC name] A recent replication attempt failed:  
-    From \<source DC> to \<destination DC>  
-    Naming Context: \<directory partition DN path>  
+    From \<source DC> to \<destination DC>  
+    Naming Context: \<directory partition DN path>  
     The replication generated an error (5):  
     Access is denied.  
     The failure occurred at \<date> \<time>.  
@@ -40,7 +40,7 @@ _Original KB number:_ &nbsp; 2002013
 
 3. REPADMIN.EXE reports that the last replication attempt has failed with status 5.
 
-    `REPADMIN` commands that commonly cite the status 5 include but are not limited to:  
+    `REPADMIN` commands that commonly cite the status 5 include but are not limited to:  
 
     - `REPADMIN /KCC`
     - `REPADMIN /REPLICATE`
@@ -62,10 +62,10 @@ _Original KB number:_ &nbsp; 2002013
     > DC=contoso, DC=com  
     Default-First-Site-Name\CONTOSO-DC2 via RPC  
     DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2  
-    Last attempt @ \<date> \<time> failed, result 5 (0x5):  
+    Last attempt @ \<date> \<time> failed, result 5 (0x5):  
     Access is denied.  
     <#> consecutive failure(s).  
-    Last success @ \<date> \<time>.
+    Last success @ \<date> \<time>.
 
 4. NTDS KCC, NTDS General, or Microsoft-Windows-ActiveDirectory_DomainService events with the status 5 are logged in the directory service event log.
 
@@ -80,13 +80,13 @@ _Original KB number:_ &nbsp; 2002013
 
 5. The **replicate now** command in Active Directory Sites and Services returns **Access is denied**.
 
-    Right-clicking on the connection object from a source DC and choosing **replicate now** fails with **Access is denied**. The on-screen error message text and screenshot is shown below:  
+    Right-clicking on the connection object from a source DC and choosing **replicate now** fails with **Access is denied**. The on-screen error message text and screenshot is shown below:  
 
 6. Dialog title text: **Replicate Now**
 
     Dialog message text:
 
-    > The following error occurred during the attempt to synchronize naming context <%directory partition name%> from Domain Controller \<Source DC> to Domain Controller \<Destination DC>:
+    > The following error occurred during the attempt to synchronize naming context <%directory partition name%> from Domain Controller \<Source DC> to Domain Controller \<Destination DC>:
     Access is denied
     >
     > The operation will not continue
@@ -108,12 +108,12 @@ Valid root causes for error 5: **access is denied** include:
 7. Service principal names are either not registered or not present due to simple replication latency or a replication failure.
 8. UDP formatted Kerberos packets are being fragmented by network infrastructure devices like routers and switches.
 9. The secure channel on the source or destination DC is invalid.
-10. Trust relationships in the trust chain are broken or invalid.
+10. Trust relationships in the trust chain are broken or invalid.
 11. The **KDCNames** setting in the `HKLM\System\CurrentControlSet\Control\LSA\Kerberos\Domains` section of the registry incorrectly contains the local Active Directory domain name.
 12. Some network adapters have a **Large Send Offload** feature that has been known to cause this issue.
-13. Antivirus software that uses a mini-firewall network adapter filter driver on the source or destination DC has been known to cause this issue.
+13. Antivirus software that uses a mini-firewall network adapter filter driver on the source or destination DC has been known to cause this issue.
 
-Active Directory errors and events like those cited in the symptoms section of this KB can also fail with error 8453 with similar error string **Replication Access was denied**. The following root cause reasons can cause AD operations to fail with 8453: **replication access was denied** but do not cause failures with error 5: **replication is denied**:
+Active Directory errors and events like those cited in the symptoms section of this KB can also fail with error 8453 with similar error string **Replication Access was denied**. The following root cause reasons can cause AD operations to fail with 8453: **replication access was denied** but do not cause failures with error 5: **replication is denied**:
 
 1. NC head not permitted with the **replicating directory changes** permission.
 2. The security principal initiating replication not a member of a group that has been granted **replicating directory changes**.
@@ -122,13 +122,13 @@ Active Directory errors and events like those cited in the symptoms section of t
 
 ## Resolution
 
-AD Replication failing with error 5 has multiple root causes. Attack the problem initially using tools like `DCDIAG`, `DCDIAG /TEST`: CheckSecurityError, and NETDIAG that exposes common problems. If still unresolved, walk the list of known causes in most common, least complex, least disruptive order to least common, most complex, most disruptive order.
+AD Replication failing with error 5 has multiple root causes. Attack the problem initially using tools like `DCDIAG`, `DCDIAG /TEST`: CheckSecurityError, and NETDIAG that exposes common problems. If still unresolved, walk the list of known causes in most common, least complex, least disruptive order to least common, most complex, most disruptive order.
 
 ### Run DCDIAG, DCDIAG /TEST:CheckSecurityError, and NETDIAG
 
 The generic DCDIAG runs multiple tests
 
-DCDIAG /TEST:CheckSecurityErrors was written to perform specific tests (including an SPN registration check) to troubleshoot Active Directory operations replication failing with error 5: **access is denied** and error 8453: **replication access was denied** but is NOT run as part of the default execution of DCDIAG.
+DCDIAG /TEST:CheckSecurityErrors was written to perform specific tests (including an SPN registration check) to troubleshoot Active Directory operations replication failing with error 5: **access is denied** and error 8453: **replication access was denied** but is NOT run as part of the default execution of DCDIAG.
 
 1. Run DCDIAG on the destination DC
 2. Run DCDIAG /TEST:CheckSecurityError
@@ -139,7 +139,7 @@ DCDIAG /TEST:CheckSecurityErrors was written to perform specific tests (includin
 
 1. `RestrictRemoteClients` value is set to **2**
 
-    This registry value `RestrictRemoteClients` is set to a value of **0x2** in `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\RPC`.
+    This registry value `RestrictRemoteClients` is set to a value of **0x2** in `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\RPC`.
 
     To resolve this:
 
@@ -159,7 +159,7 @@ DCDIAG /TEST:CheckSecurityErrors was written to perform specific tests (includin
 
 2. Check **Access this computer from network** rights.
 
-    In a default installation of Windows, the default domain controllers policy is linked to the domain controllers OU containing  which grants the **access this computer from network** user right to the following security groups:
+    In a default installation of Windows, the default domain controllers policy is linked to the domain controllers OU containing  which grants the **access this computer from network** user right to the following security groups:
 
     |Local Policy|Default Domain controllers policy|
     |---|---|
@@ -173,13 +173,13 @@ DCDIAG /TEST:CheckSecurityErrors was written to perform specific tests (includin
     If Active Directory operations are failing with error 5: **access is denied**, verify that:
 
     - Security groups in the list above have been granted the **access this computer from network right** in default domain controllers policy.
-    - Domain controller computer accounts are located in the domain controllers OU.
-    - Default domain controllers policy is linked to the domain controllers OU or alternate OUs hosting computer accounts.  
+    - Domain controller computer accounts are located in the domain controllers OU.
+    - Default domain controllers policy is linked to the domain controllers OU or alternate OUs hosting computer accounts.  
     - Group policy is applying on the destination domain controller currently logging error 5.  
     - **Deny Access this computer from network** user right has not been enabled or does not reference failing direct or nested groups.
     - Policy precedence, blocked inheritance, WMI filtering, or the like, is NOT preventing the policy setting from applying to DC role computers.
 
-    Policy settings can be validated with RSOP.MSC but `GPRESULT /Z` is the preferred tool because it is more accurate.
+    Policy settings can be validated with RSOP.MSC but `GPRESULT /Z` is the preferred tool because it is more accurate.
 
     > [!NOTE]
     > Local policy takes precedence over policy defined in Sites, Domains, and OU.
@@ -204,7 +204,7 @@ DCDIAG /TEST:CheckSecurityErrors was written to perform specific tests (includin
     - Recreate `CrashOnAuditFail (REG_DWORD)` = **1**
     - Reboot
 
-    On seeing a `CrashOnAuditFail` value of **0** or **1**, some CSS engineers have resolved **access is denied** errors by again clearing the security event log, deleting `the CrashOnAuditFail` registry value and rebooting the destination DC.
+    On seeing a `CrashOnAuditFail` value of **0** or **1**, some CSS engineers have resolved **access is denied** errors by again clearing the security event log, deleting `the CrashOnAuditFail` registry value and rebooting the destination DC.
 
     Related Content: [Manage auditing and security log](/windows/security/threat-protection/security-policy-settings/manage-auditing-and-security-log).
 
@@ -212,9 +212,9 @@ DCDIAG /TEST:CheckSecurityErrors was written to perform specific tests (includin
 
     Kerberos policy settings in the default domain policy allow for a 5-minutes difference (default value) in system time between Key Distribution Center (KDC) domain controllers and a Kerberos target server to prevent replay attacks. Some documentation states that time between the client and the Kerberos target must have time within 5 minutes of each other. Others state that in the context of Kerberos authentication, the time that matters is the delta between the KDC used by the caller and the time on the Kerberos target. Also, Kerberos doesn't care that system time on the relevant DCs matches current time, only that relative time difference between the KDC and target DC is inside the (default 5 minutes or less) maximum time skew allowed by Kerberos policy.
 
-    In the context of Active Directory operations, the target server is the source DC being contacted by the destination DC. Every domain controller in an Active Directory forest (currently running the KDC service) is a potential KDC so you'll need to consider time accuracy on all other DCs against the source DC including time on the destination DC itself.
+    In the context of Active Directory operations, the target server is the source DC being contacted by the destination DC. Every domain controller in an Active Directory forest (currently running the KDC service) is a potential KDC so you'll need to consider time accuracy on all other DCs against the source DC including time on the destination DC itself.
 
-    Two methods to check time accuracy include  
+    Two methods to check time accuracy include  
 
     ```console
     C:\> DCDIAG /TEST: CheckSecurityError
@@ -250,7 +250,7 @@ DCDIAG /TEST:CheckSecurityErrors was written to perform specific tests (includin
 
 5. SMB signing mismatch
 
-    The best compatibility matrix for SMB signing is defined by four policy settings and their registry-based equivalents:
+    The best compatibility matrix for SMB signing is defined by four policy settings and their registry-based equivalents:
 
     |Policy setting|Registry Path|
     |---|---|
@@ -260,14 +260,14 @@ DCDIAG /TEST:CheckSecurityErrors was written to perform specific tests (includin
     | Microsoft network server: Digitally sign communications (always)|HKLM\SYSTEM\CCS\Services\Lanmanserver\Parameters\Requiresecuritysignature|
     |||
 
-    Focus on SMB signing mismatches between the destination and source domain controllers with the classic cases being the setting enabled or required on one side but disabled on the other.
+    Focus on SMB signing mismatches between the destination and source domain controllers with the classic cases being the setting enabled or required on one side but disabled on the other.
 
     > [!NOTE]
     > Internal testing showed SMB signing mismatches causing replication to fail with error 1722: **The RPC Server is unavailable**.
 
 6. UDP formatted Kerberos packet fragmentation
 
-    Network routers and switches may fragment or completely drop large UDP formatted network packets used by Kerberos and EDNS0 (DNS). Computers running Windows 2000 and Windows 2003 operating system families are vulnerable to UDP fragmentation relative to computers running Windows Server 2008 and 2008 R2.  
+    Network routers and switches may fragment or completely drop large UDP formatted network packets used by Kerberos and EDNS0 (DNS). Computers running Windows 2000 and Windows 2003 operating system families are vulnerable to UDP fragmentation relative to computers running Windows Server 2008 and 2008 R2.  
 
     User Action:
 
@@ -283,7 +283,7 @@ DCDIAG /TEST:CheckSecurityErrors was written to perform specific tests (includin
 
         OR
 
-      - Set maxpacketsize (on the destination DC) to the largest packet identified by the PING -f -l command less 8 bytes to account for the TCP header and reboot the modified DC.
+      - Set maxpacketsize (on the destination DC) to the largest packet identified by the PING -f -l command less 8 bytes to account for the TCP header and reboot the modified DC.
 
         OR
       - Set maxpacketsize (on the destination DC) to a value of "1" which triggers Kerberos to use a TCP. Reboot the modified DC to make the change take effect.  
@@ -305,22 +305,22 @@ DCDIAG /TEST:CheckSecurityErrors was written to perform specific tests (includin
       c:\>netdom resetpwd /server: server_name /userd: domain_name \administrator /passwordd: administrator_password
       ```
 
-    - Ensure that likely KDCs AND the source DC (if in the same domain) inbound replicate knowledge of the destination DCs new password.
+    - Ensure that likely KDCs AND the source DC (if in the same domain) inbound replicate knowledge of the destination DCs new password.
     - Reboot the destination DC to flush Kerberos tickets and retry the replication operation.
 
 2. Invalid trust
 
     If AD replication is failing between DCs in different domains, verify trust relationships health along the trust path
 
-    When able, use the **NETDIAG Trust Relationship** test to check for broken trusts. NETDIAG identifies broken trusts with the following text:  
+    When able, use the **NETDIAG Trust Relationship** test to check for broken trusts. NETDIAG identifies broken trusts with the following text:  
 
     > Trust relationship test. . . . . . : Failed Test to ensure DomainSid of domain \<domainname> is correct. [FATAL] Secure channel to domain \<domainname> is broken. [<%variable status code%>]
 
-    For example, if you have a multi-domain forest containing, root domain `Contoso.COM`, child domain `B.Contoso.COM`, grand child domain `C.B.Contoso.COM` and **tree domain in same forest** `Fabrikam.COM` where replication is failing between DCs in grand child domain `C.B.Contoso.COM` and tree domain `Fabrikam.COM`, then verify trust health between `C.B.Contoso.COM` and `B.Contoso.COM`, `B.Contoso.COM` and `Contoso.COM` then finally `Contoso.COM` and `Fabrikam.COM`.
+    For example, if you have a multi-domain forest containing, root domain `Contoso.COM`, child domain `B.Contoso.COM`, grand child domain `C.B.Contoso.COM` and **tree domain in same forest** `Fabrikam.COM` where replication is failing between DCs in grand child domain `C.B.Contoso.COM` and tree domain `Fabrikam.COM`, then verify trust health between `C.B.Contoso.COM` and `B.Contoso.COM`, `B.Contoso.COM` and `Contoso.COM` then finally `Contoso.COM` and `Fabrikam.COM`.
 
     If a short cut trust exists between the destination domains, the trust path chain does not have to be validated. Instead validate the short cut trust between the destination and source domain.
 
-    Check for recent password changes to the trust with `Repadmin /showobjmeta * \<DN path for TDO in question>` Trusted Domain Object (TDO) verify that the destination DC is transitively inbound replicating the writable domain directory partition where trust password changes may take place.
+    Check for recent password changes to the trust with `Repadmin /showobjmeta * \<DN path for TDO in question>` Trusted Domain Object (TDO) verify that the destination DC is transitively inbound replicating the writable domain directory partition where trust password changes may take place.
 
     Commands to reset trusts:
 

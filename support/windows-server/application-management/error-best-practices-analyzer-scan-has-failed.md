@@ -22,10 +22,10 @@ _Original KB number:_ &nbsp; 2028818
 
 ## Symptoms
 
-When you run a Best Practices Analyzer (BPA) in Windows Server 2008 R2 Server Manager, it returns the following error:  
+When you run a Best Practices Analyzer (BPA) in Windows Server 2008 R2 Server Manager, it returns the following error:  
 >The Best Practices Analyzer scan has failed.  
 There has been a Best Practice Analyzer engine error for Model Id: 'Microsoft/Windows/FileServices' during execution of the Model. (Inner Exception: One or more model documents are invalid: {0}Discovery exception occurred processing file '{0}'.  
-Windows PowerShell updated your execution policy successfully, but the setting is overridden by a policy defined at a more specific scope.  Due to the override, your shell will retain its current effective execution policy of "RemoteSigned". Type "Get-ExecutionPolicy -List" to view your execution policy settings. For more information, please see "Get-Help Set-ExecutionPolicy.")
+Windows PowerShell updated your execution policy successfully, but the setting is overridden by a policy defined at a more specific scope.  Due to the override, your shell will retain its current effective execution policy of "RemoteSigned". Type "Get-ExecutionPolicy -List" to view your execution policy settings. For more information, please see "Get-Help Set-ExecutionPolicy.")
 
 ## Cause
 
@@ -35,7 +35,7 @@ The error will not occur if the policy is set to **Allow all scripts**.
 
 ## Resolution
 
-Remove, disable, or set to "Not Configured" the following Group Policy setting that is being applied to the server with the BPA error.  
+Remove, disable, or set to "Not Configured" the following Group Policy setting that is being applied to the server with the BPA error.  
  >**Computer Configuration\Administrative Templates\Windows Components\Windows PowerShell**  
  **Turn on Script Execution**
   

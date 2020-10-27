@@ -34,7 +34,7 @@ This issue is likely to happen when you have options like "RESET of TPM from OS"
 
 ## Resolution
 
-Enable "RESET of TPM from OS" and "OS Management of TPM" option under System BIOS -> Security -> TPM Embedded Security page. Once done, this should help clear the TPM from operating system.
+Enable "RESET of TPM from OS" and "OS Management of TPM" option under System BIOS -> Security -> TPM Embedded Security page. Once done, this should help clear the TPM from operating system.
 
 ## More information
 

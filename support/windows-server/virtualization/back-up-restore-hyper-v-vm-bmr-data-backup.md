@@ -36,7 +36,8 @@ When you create a system restore (BMR) by using Windows Server Backup (WSB), it 
 ## Resolution
 
 To resolve this issue, follow these steps:
-1. Boot into the WinRE, and make sure that the **Only Restore System Drives**  option is selected, as shown [here](https://az623152.vo.msecnd.net/library/images/support/reimage_additional_restore_options.png).
+
+1. Boot into the WinRE, and make sure that the **Only Restore System Drives**  option is selected.
 2. After the BMR is restored, restore the Hyper-V-specific backup by using Windows Server Backup.  
 
 This two-step process makes sure that the VMs and the data are fully restored.

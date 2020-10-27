@@ -24,22 +24,22 @@ _Original KB number:_ &nbsp; 4576784
 
 You are stress testing or troubleshooting a wireless device driver for an OEM version of Windows 10. The driver uses direct memory access remapping (DMAr).  
 
-As part of your testing, you repeatedly disable and enable the wireless driver (for example, in Device Manager). After several such cycles, you notice that the system operations slow down. After 30 minutes of continuously disabling and enabling the driver, the device runs out of memory and stops responding completely.  
+As part of your testing, you repeatedly disable and enable the wireless driver (for example, in Device Manager). After several such cycles, you notice that the system operations slow down. After 30 minutes of continuously disabling and enabling the driver, the device runs out of memory and stops responding completely.  
 
-If you try to use the [Driver Verifier](https://docs.microsoft.com/windows-hardware/drivers/devtest/driver-verifier) tool to analyze the problem, the Windows 10 device experiences a Stop error (also known as a bugcheck or blue screen error). The error code is [0xE6: DRIVER_VERIFIER_DMA_VIOLATION](https://docs.microsoft.com/windows-hardware/drivers/debugger/bug-check-0xe6--driver-verifier-dma-violation).
+If you try to use the [Driver Verifier](https://docs.microsoft.com/windows-hardware/drivers/devtest/driver-verifier) tool to analyze the problem, the Windows 10 device experiences a Stop error (also known as a bugcheck or blue screen error). The error code is [0xE6: DRIVER_VERIFIER_DMA_VIOLATION](https://docs.microsoft.com/windows-hardware/drivers/debugger/bug-check-0xe6--driver-verifier-dma-violation).
 
 ## Cause
 
-This problem occurs because the DMA adapter allocates memory that is not deallocated correctly when DMA remapping is enabled.
+This problem occurs because the DMA adapter allocates memory that is not deallocated correctly when DMA remapping is enabled.
 
 ## Workaround
 
 >[!Important]
-You should use this workaround only in a test environment. 
+You should use this workaround only in a test environment. 
 
 To work around this issue, disable DMA remapping by following these steps:  
 
-1. Restart the computer, and access the BIOS settings by pressing F10 (or whatever key is designated by the manufacturer) during startup. 
+1. Restart the computer, and access the BIOS settings by pressing F10 (or whatever key is designated by the manufacturer) during startup. 
 2. Select **Advanced** > **System Options**, and then clear the **DMA Protection** setting. 
 
 ## Status
@@ -51,5 +51,5 @@ This is a known problem. Microsoft is developing a fix that is scheduled to be i
 
 - [Enabling DMA remapping for device drivers](https://docs.microsoft.com/windows-hardware/drivers/pci/enabling-dma-remapping-for-device-drivers) 
 - [DEVPKEY_Device_DmaRemappingPolicy](https://docs.microsoft.com/windows-hardware/drivers/install/devpkey-device-dmaremappingpolicy) 
-- [KB 244617: Using Driver Verifier to identify issues with Windows drivers for advanced users](https://support.microsoft.com/help/244617/using-driver-verifier-to-identify-issues-with-windows-drivers-for-adva) 
+- [KB 244617: Using Driver Verifier to identify issues with Windows drivers for advanced users](https://support.microsoft.com/help/244617/using-driver-verifier-to-identify-issues-with-windows-drivers-for-adva) 
 - [Bug Check 0xE6: DRIVER_VERIFIER_DMA_VIOLATION](https://docs.microsoft.com/windows-hardware/drivers/debugger/bug-check-0xe6--driver-verifier-dma-violation) 

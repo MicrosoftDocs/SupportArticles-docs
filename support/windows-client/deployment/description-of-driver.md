@@ -44,10 +44,6 @@ Obtain a WHQL-certified driver from the device manufacturer's Web site. For info
 > [!NOTE]
 > It is the responsibility of the specific hardware or software vendor to make sure that programs and device drivers are compatible with x64-based versions of Windows.
 
-For information about your hardware manufacturer, visit the following Web site: [https://support.microsoft.com/gp/vendors/en-us](/gp/vendors/en-us) 
-> [!IMPORTANT]
-> The driver and the driver Setup program must be 64-bit compatible.
-
 If you experience problems when you try to install a 64-bit driver that is not included with 64-bit versions of Windows, make sure that the driver's .inf file is correctly decorated.
  For more information about the device driver .inf file decoration requirements, click the following article number to view the article in the Microsoft Knowledge Base:
 

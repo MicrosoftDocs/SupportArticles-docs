@@ -17,20 +17,16 @@ ms.technology: Networking
 
 This article describes the DNSLint utility and its syntax.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 321045
 
 ## Summary
 
 DNSLint is a Microsoft Windows utility that helps you to diagnose common DNS name resolution issues.
 
-The following file is available for download from the Microsoft Download Center:  
+For additional information about how to download Microsoft Support files, click the following article number to view the article in the Microsoft Knowledge Base:
 
-[Download the Dnslint.exe package now.](https://download.microsoft.com/download/2/7/2/27252452-e530-4455-846a-dd68fc020e16/dnslint.v204.exe) 
-
- For additional information about how to download Microsoft Support files, click the following article number to view the article in the Microsoft Knowledge Base:
-
- [119591](https://support.microsoft.com/help/119591) How to Obtain Microsoft Support Files from Online Services
+[119591](https://support.microsoft.com/help/119591) How to Obtain Microsoft Support Files from Online Services
 
 Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help to prevent any unauthorized changes to the file.  
 

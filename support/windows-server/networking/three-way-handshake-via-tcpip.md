@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article discusses the process of the TCP three-way handshake that occurs between a client and server when initiating or terminating a TCP connection.
 
-_Original product version:_ &nbsp;  Windows Server 2012 R2  
+_Original product version:_ &nbsp;  Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 172983
 
 ## Summary

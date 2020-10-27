@@ -22,35 +22,35 @@ _Original KB number:_ &nbsp; 4563240
 
 ## Summary
 
-If you use a Personal Identity Verification (PIV) smart card or any multifunction device that uses PIV smart cards that rely on the Windows Inbox Smart Card Minidriver, you may have received an incorrect driver update. When you try to use a smart card to authenticate to Windows, you might receive error messages such as "This smart card cannot be used" or "The operation requires a different smart card."
+If you use a Personal Identity Verification (PIV) smart card or any multifunction device that uses PIV smart cards that rely on the Windows Inbox Smart Card Minidriver, you may have received an incorrect driver update. When you try to use a smart card to authenticate to Windows, you might receive error messages such as "This smart card cannot be used" or "The operation requires a different smart card."
 
-The incorrect update contains the "FEITIAN - SmartCard - 1.0.0.3" provider app that installs the Feitian xPass Smart Card driver. This is a legitimate, signed update that was published by a verified partner. However, it was inadvertently targeted to a broader set of devices than it was originally intended for.
+The incorrect update contains the "FEITIAN - SmartCard - 1.0.0.3" provider app that installs the Feitian xPass Smart Card driver. This is a legitimate, signed update that was published by a verified partner. However, it was inadvertently targeted to a broader set of devices than it was originally intended for.
 
-The driver has been pulled from the Windows Update publishing system. To mitigate any adverse effects, any user who received the update has to manually roll back to the Windows inbox driver. For more information, see the "[Resolution](#resolution)" section.
+The driver has been pulled from the Windows Update publishing system. To mitigate any adverse effects, any user who received the update has to manually roll back to the Windows inbox driver. For more information, see the "[Resolution](#resolution)" section.
 
 ## Symptoms
 
 You observe one or more of the following symptoms:
 
-- You try to sign in to Windows by using a PIV smart card or a device (such as a YubiKey) that supports PIV smart cards and relies on the [Windows Inbox Smart Card Minidriver](/windows-hardware/drivers/smartcard/windows-inbox-smart-card-minidriver). However, you can't sign in.
-- You try to sign in to Windows by using a non-Feitian-branded PIV smart card device. However, you can't sign in. If the device supports Fast Identity Online (FIDO) capabilities, such as U2F or FIDO2, those capabilities continue to work.
-- The invalid xPass Smart Card driver doesn't correctly interface with other non-Feitian devices that rely on the inbox driver. This generates error messages such as "This smart card cannot be used."
+- You try to sign in to Windows by using a PIV smart card or a device (such as a YubiKey) that supports PIV smart cards and relies on the [Windows Inbox Smart Card Minidriver](/windows-hardware/drivers/smartcard/windows-inbox-smart-card-minidriver). However, you can't sign in.
+- You try to sign in to Windows by using a non-Feitian-branded PIV smart card device. However, you can't sign in. If the device supports Fast Identity Online (FIDO) capabilities, such as U2F or FIDO2, those capabilities continue to work.
+- The invalid xPass Smart Card driver doesn't correctly interface with other non-Feitian devices that rely on the inbox driver. This generates error messages such as "This smart card cannot be used."
 
-The following example shows the results of the **certutil -scinfo** command that runs on an affected computer. The certificates were generated as part of a Microsoft AD CS enrollment. However, they're no longer able to interface with the YubiKey PIV device after the xPass Smart Card driver is installed.
+The following example shows the results of the **certutil -scinfo** command that runs on an affected computer. The certificates were generated as part of a Microsoft AD CS enrollment. However, they're no longer able to interface with the YubiKey PIV device after the xPass Smart Card driver is installed.
 
 ![Output of certutil, PIV driver issue](./media/cannot-authenticate-incorrect-piv-smart-card-driver-update/certutil-scinfo-command-result.png)
 
 ## Cause
 
-The Feitian xPass Smart Card driver version 1.0.0.3 specifies SCFILTER\CID_2777BE07-6993-4513-BD80-C184FCB0AB2D as a [compatible identifier](/windows-hardware/drivers/install/compatible-ids) in the .inf file of its driver package. However, the Windows inbox smart card minidriver for PIV smart cards (Identity Device (NIST SP 800-73 [PIV])) uses the same compatible identifier. If you connect a non-Feitian device that uses the inbox driver to your computer, Windows recognizes the Feitian driver as compatible. Windows downloads, installs, and loads the Feitian driver.
+The Feitian xPass Smart Card driver version 1.0.0.3 specifies SCFILTER\CID_2777BE07-6993-4513-BD80-C184FCB0AB2D as a [compatible identifier](/windows-hardware/drivers/install/compatible-ids) in the .inf file of its driver package. However, the Windows inbox smart card minidriver for PIV smart cards (Identity Device (NIST SP 800-73 [PIV])) uses the same compatible identifier. If you connect a non-Feitian device that uses the inbox driver to your computer, Windows recognizes the Feitian driver as compatible. Windows downloads, installs, and loads the Feitian driver.
 
 For more information about how Windows selects drivers for a device, see [Overview of the Driver Selection Process](/windows-hardware/drivers/install/overview-of-the-driver-selection-process) and [How Windows selects a driver for a device](/windows-hardware/drivers/install/how-windows-selects-a-driver-for-a-device).
 
 ## Resolution
 
-If the Feitian xPass Smart Card driver has been installed on your computer, you have to remove it to revert to the inbox Identity Device (NIST SP 800-73 [PIV]) driver. After you remove the xPass Smart Card driver, Windows automatically loads the inbox driver for the device.
+If the Feitian xPass Smart Card driver has been installed on your computer, you have to remove it to revert to the inbox Identity Device (NIST SP 800-73 [PIV]) driver. After you remove the xPass Smart Card driver, Windows automatically loads the inbox driver for the device.
 
-To do this, you can manually delete the driver, or create and run a script to delete it.
+To do this, you can manually delete the driver, or create and run a script to delete it.
 
 ### Determine whether your computer is affected
 
@@ -89,4 +89,4 @@ To automate the driver removal, create a script that can run in a batch file. Th
 
 ## More information
 
-If you've followed the steps in the "Resolution" section but you need additional help, go to the [Microsoft Support](https://support.microsoft.com/)  website.
+If you've followed the steps in the "Resolution" section but you need additional help, go to the [Microsoft Support](https://support.microsoft.com/)  website.

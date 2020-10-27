@@ -136,4 +136,4 @@ BlockSize Index Name StartingOffset
 
 ## References
 
-For more information about the Diskpart.exe tool, visit the following Microsoft Web site: [https://technet2.microsoft.com/WindowsServer/en/Library/ca099518-dde5-4eac-a1f1-38eff6e3e5091033.mspx?mfr=true](https://technet2.microsoft.com/windowsserver/en/library/ca099518-dde5-4eac-a1f1-38eff6e3e5091033.mspx?mfr=true)
+For more information about the Diskpart.exe tool, visit the following Microsoft Web site: [diskpart](/windows-server/administration/windows-commands/diskpart)

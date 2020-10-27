@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2506417
 
 ## Symptoms
 
-You have a server that is running the Remote Desktop Virtualization Host service on Windows Server. When you configure Active Directory Domain Services (AD DS) on the server to add the server as a domain controller, you experience the following symptoms:
+You have a server that is running the Remote Desktop Virtualization Host service on Windows Server. When you configure Active Directory Domain Services (AD DS) on the server to add the server as a domain controller, you experience the following symptoms:
 
 - All existing RemoteFX-enabled virtual machines (VMs) do not start.
 - An administrator cannot create a RemoteFX-enabled VM.

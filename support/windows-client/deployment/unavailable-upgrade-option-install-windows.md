@@ -17,7 +17,7 @@ ms.technology: Deployment
 
 This article contains a list of Microsoft Knowledge Base articles that you can use to help troubleshoot issues that you may experience when you try to upgrade the current version of Windows to Windows Vista.
 
-_Original product version:_ &nbsp; Windows 10 – all editions  
+_Original product version:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp; 930743
 
 ## More information

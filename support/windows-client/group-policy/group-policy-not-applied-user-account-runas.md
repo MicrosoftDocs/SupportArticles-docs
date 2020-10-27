@@ -26,7 +26,7 @@ A Windows user can run a program or application as a different user. To do this,
 
 As a best practice, users should do their usual work on their workstations by using their own credentials. They can specify the credentials of an alternate account (such as an account that has elevated permissions) to run a specific application, as necessary.  
 
-However, when a user signs in by using alternate credentials, Windows does not process Group Policy settings for the alternate account. Windows processes Group Policy settings for a user account only if the user signs in to their own desktop by using the sign-in user interface. By contrast, when a user starts an application by using Runas.exe or **Run as different user**, Windows starts a separate process that runs under the alternate credentials. Such an operation does not trigger Group Policy processing.  
+However, when a user signs in by using alternate credentials, Windows does not process Group Policy settings for the alternate account. Windows processes Group Policy settings for a user account only if the user signs in to their own desktop by using the sign-in user interface. By contrast, when a user starts an application by using Runas.exe or **Run as different user**, Windows starts a separate process that runs under the alternate credentials. Such an operation does not trigger Group Policy processing.  
 
 This behavior is by design.
 
@@ -37,7 +37,7 @@ Follow the steps in this section carefully. Serious problems might occur if you 
 
 Group Policy settings are not intended to apply to the alternate user account that is specified by Runas.exe or **Run as different user**.  
 
-Runas.exe can load the user profile that is associated with the alternate account. If a user previously signed in to Windows on that workstation by using that account, the associated user profile might contain registry keys and values that were set by Group Policy processing events at that time. However, this behavior depends on whether the user includes the **/noprofile** switch in the command. If the user starts a process or application by using **runas /noprofile**, and then specifies the alternate account, Windows does not load the alternate user profile. Therefore, the alternate user profile does not provide a reliable way to apply Group Policy settings.  
+Runas.exe can load the user profile that is associated with the alternate account. If a user previously signed in to Windows on that workstation by using that account, the associated user profile might contain registry keys and values that were set by Group Policy processing events at that time. However, this behavior depends on whether the user includes the **/noprofile** switch in the command. If the user starts a process or application by using **runas /noprofile**, and then specifies the alternate account, Windows does not load the alternate user profile. Therefore, the alternate user profile does not provide a reliable way to apply Group Policy settings.  
 
 If you want to prevent users from using Runas.exe or **Run as different user**, follow these steps.  
 >[!Important]
@@ -46,7 +46,7 @@ After you apply these settings, any functionality that depends on the "Run as" f
 1. Disable the **Secondary Logon** service (seclogon.exe).
 2. Use Software Restriction Policies or AppLocker to prevent access to the Runas.exe binary file.
 3. Use Group Policy to remove the **Run as different user** menu item. The Group Policy Object (GPO) changes to **User Configuration\Administrative Templates\Start Menu and Taskbar \Show "Run as different user" command on Start**.
-4. In the Windows registry, set the following entry:  
+4. In the Windows registry, set the following entry:  
 Subkey: **HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\**  
 Entry name: **HideRunAsVerb**  
 Type: **DWORD**  

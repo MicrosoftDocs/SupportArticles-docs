@@ -62,29 +62,29 @@ All directories that contain the following files:
 - Resilient Change Tracking file (*.rct)
 - Device state file (*.vsv)
 
-    The processes that create, open, or update the file: vmms.exe, vmwp.exe, vmcompute.exe.
+    The processes that create, open, or update the file: vmms.exe, vmwp.exe, vmcompute.exe.
 
 - Memory state file (*.bin)
 
-    The processes that create, open, or update the file: vmwp.exe
+    The processes that create, open, or update the file: vmwp.exe
 
 - VM Configuration file (*.vmcx)
 
-    The processes that create, open, or update the file: vmms.exe
+    The processes that create, open, or update the file: vmms.exe
 
 - VM Runtime State file (*.vmrs)
 
-    The processes that create, open, or update the file: vmms.exe, vmwp.exe, vmcompute.exe.
+    The processes that create, open, or update the file: vmms.exe, vmwp.exe, vmcompute.exe.
 
 - VM Guest State file (*.vmgs)
 
 ### Directory
 
-- The default virtual machine configuration directory, if it's used, and any of its subdirectories:
+- The default virtual machine configuration directory, if it's used, and any of its subdirectories:
 
     `%ProgramData%\Microsoft\Windows\Hyper-V`
 
-- The default virtual machine virtual hard disk files directory, if it's used, and any of its subdirectories: 
+- The default virtual machine virtual hard disk files directory, if it's used, and any of its subdirectories: 
 
     `%Public%\Documents\Hyper-V\Virtual Hard Disks`
 
@@ -110,7 +110,7 @@ All directories that contain the following files:
 
     This file may have to be configured as a process exclusion within the antivirus software.
 
-- Vmwp.exe (`%systemroot%\System32\Vmwp.exe`)
+- Vmwp.exe (`%systemroot%\System32\Vmwp.exe`)
 
     This file may have to be configured as a process exclusion within the antivirus software.
 

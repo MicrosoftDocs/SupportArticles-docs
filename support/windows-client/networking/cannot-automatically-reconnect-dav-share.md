@@ -23,14 +23,14 @@ _Original KB number:_ &nbsp; 2673544
 ## Symptoms
 
 Consider the following scenario on a Windows 7-based computer:
-- You used the Map Network Drive wizard or the Add Network Location wizard to connect a WebDav share or folder.
+- You used the Map Network Drive wizard or the Add Network Location wizard to connect a WebDav share or folder.
 - Basic Authentication is used for this resource.
 
-    **Note** Basic Authentication is often used for connections to third-party DAV servers, such as Apache, Oracle, and SAP.
+    **Note** Basic Authentication is often used for connections to third-party DAV servers, such as Apache, Oracle, and SAP.
 
 In this scenario, the resource isn't accessible after a system restart or a user logoff and logon.
 
-Additionally, Windows can't access the SSL WebDav folder. Instead, it returns one of the following network error messages.
+Additionally, Windows can't access the SSL WebDav folder. Instead, it returns one of the following network error messages.
 
  **Error message 1**  
 
@@ -46,7 +46,7 @@ The network path was not found.
 > System Error 1244:  
 The operation being requested was not performed because the user has not been authenticated.
 
- **Note**  Error code 1244 maps to ERROR_NOT_AUTHENTICATED.
+ **Note**  Error code 1244 maps to ERROR_NOT_AUTHENTICATED.
 
 ## Resolution
 
@@ -102,4 +102,4 @@ If no proxy is configured, WinHTTP sends credentials only to local intranet site
 
 ## References
 
-[WebDAV Redirector Registry Settings](https://blogs.msdn.com/b/robert_mcmurray/archive/2008/01/17/webdav-redirector-registry-settings.aspx)
+[WebDAV Redirector Registry Settings](/archive/blogs/robert_mcmurray/webdav-redirector-registry-settings)
