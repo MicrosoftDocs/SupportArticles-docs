@@ -332,7 +332,7 @@ The ESP lists the installation status for all enrollment methods, including:
 
 #### How can I disable the ESP if it has been configured on the device
 
-ESP policy is set on a device at the time of enrollment. To disable the ESP, you must disable the user and device Enrollment Status Page sections. To disable the sections, create custom OMA-URI settings by using the following configurations:
+ESP policy is set on a device at the time of enrollment. To disable the ESP, you must disable the user Enrollment Status Page section. To disable the section, create custom OMA-URI settings by using the following configurations:
 
 - Disable user Enrollment Status Page:
 
@@ -340,12 +340,4 @@ ESP policy is set on a device at the time of enrollment. To disable the ESP, you
   Description:  (enter a description)  
   OMA-URI:  ./Vendor/MSFT/DMClient/Provider/*ProviderID*/FirstSyncStatus/SkipUserStatusPage  
   Data type:  Boolean  
-  Value:  True
-  
-- Disable device Enrollment Status Page:
-
-   Name:  Disable Device ESP (choose any name that you want)  
-   Description:  (enter a description)  
-   OMA-URI:  ./Vendor/MSFT/DMClient/Provider/*ProviderID*/FirstSyncStatus/SkipDeviceStatusPage  
-   Data type:  Boolean  
-   Value:  True
+  Value:  True  
