@@ -32,7 +32,7 @@ If reporting was successful, you'll find entries that resemble the following exa
 
 - **NDESConnector.svclog**:
 
-  ![NDESConnector.svclog](./media/troubleshoot-scep-certificate-reporting/ndesconnector-log.png)
+  ![Intune Certificate Connector log](./media/troubleshoot-scep-certificate-reporting/ndesconnector-log.png)
 
 - **CertificateRequestStatus**:
 
@@ -48,4 +48,4 @@ Verify that the Intune Connector Service is started on the NDES server, and ther
 
 ## Next steps
 
-[How to get support for Microsoft Intune](/mem/intune/fundamentals/get-support)
+[How to get support in Microsoft Endpoint Manager](/mem/get-support)
