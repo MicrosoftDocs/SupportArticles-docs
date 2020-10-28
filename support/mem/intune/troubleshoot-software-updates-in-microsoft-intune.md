@@ -31,4 +31,4 @@ If you're running Windows 7, be sure the following update is installed: [Windows
 
 ## Next steps
 
-Get [support help from Microsoft](/mem/intune/fundamentals/get-support), or use the [community forums](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune).
+Get [support help from Microsoft](/mem/get-support), or use the [community forums](/answers/products/mem).

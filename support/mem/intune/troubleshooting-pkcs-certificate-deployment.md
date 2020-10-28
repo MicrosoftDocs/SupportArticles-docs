@@ -4,7 +4,7 @@ description: Helps you understand and solve some common issues that may occur wh
 ms.date: 06/23/2020
 ms.prod-support-area-path: Configure certificates
 ---
-# Troubleshoot PKCS certificate deployment in Microsoft Intune
+# Troubleshoot PKCS certificate profile deployment in Intune
 
 This article helps you understand and troubleshoot some of the most common issues that may be encountered when you deploy Public Key Cryptography Standards (PKCS) certificates in Microsoft Intune.
 
