@@ -4,11 +4,11 @@ description: Troubleshoot the use of private and public key pair (PKCS) profiles
 ms.date: 08/11/2020
 ms.reviewer: lacranda
 ---
-# Troubleshoot PKCS certificate profile deployment in Microsoft Intune
+# Troubleshoot PKCS certificate deployment in Microsoft Intune
 
 The information in this article can help you resolve several common issues when deploying private and public key pair (PKCS) certificates in Microsoft Intune. Before troubleshooting, ensure you’ve completed the following tasks as found in [Configure and use PKCS certificates with Intune](/mem/intune/protect/certficates-pfx-configure#export-the-root-certificate-from-the-enterprise-ca):
 
-- Review the [requirements for using PKCS certificate profiles](/mem/intune/protect/certficates-pfx-configure#requirements)
+- Review the [requirements for using PKCS certificate profiles](/mem/intune/protect/certificates-pfx-configure#requirements)
 - Export the root certificate from the Enterprise Certification Authority (CA)
 - Configure certificate templates on the certification authority
 - Install and configure the Intune Certificate Connector
@@ -51,9 +51,9 @@ Device logs depend on the device platform:
 
 ### Logs for on-premises infrastructure
   
-On-premises infrastructure that supports use of PKCS certificate profiles for certificate deployments includes the Microsoft Intune Certificate Connector, NDES that runs on a Windows Server, and the certification authority.
+On-premises infrastructure that supports use of PKCS certificate profiles for certificate deployments includes the Microsoft Intune Certificate Connector and the certification authority.
 
-Log files for these roles include Windows Event Viewer, Certificate consoles, and various log files specific to the Intune Certificate Connector, NDES, or other role and operations that are part of the on-premises infrastructure.
+Log files for these roles include Windows Event Viewer, Certificate consoles, and various log files specific to the Intune Certificate Connector, or other role and operations that are part of the on-premises infrastructure.
 
 - **NDESConnector_date_time.svclog**:
 
@@ -61,23 +61,11 @@ Log files for these roles include Windows Event Viewer, Certificate consoles, an
 
   Related registry key: *HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
-  Location: On the server that hosts NDES at *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*
-
-- **CertificateRegistrationPoint_date_time.svclog**:
-
-  This log shows the NDES policy module receiving and verifying certificate requests. You can use the [Service Trace Viewer Tool](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) to view this log file.
-
-  Location: On the server that hosts NDES at *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*
-
-- **NDESPlugin.log**:
-
-  This log shows the passing of certificate requests to the Certificate Registration Point, and the resulting verification of those requests.
-
-  Location: On the server that hosts NDES at *%program_files%\Microsoft Intune\NDESPolicyModule\logs*
+  Location: On the server that hosts the Intune Certificate Connector at *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*
 
 - **Windows Application log**:
 
-  Location: On the server that hosts NDES: Run **eventvwr.msc** to open Windows Event Viewer
+  Location: On the server that hosts the Intune Certificate Connector: Run **eventvwr.msc** to open Windows Event Viewer
 
 ### Logs for Android devices
 
@@ -113,7 +101,7 @@ On the device, open **Event Viewer** > **Applications and Services Logs** > **Mi
 
 ## Antivirus exclusions
 
-Consider adding Antivirus exclusions on servers that host NDES or the certificate connector when:
+Consider adding Antivirus exclusions on servers that host the Intune Certificate Connector when:
 
 - Certificate requests reach the server or the Intune Certificate Connector, but are not successfully processed
 - Certificates are issued slowly
@@ -138,7 +126,7 @@ The following common errors are each addressed in a following section:
 
 ### The RPC server is unavailable 0x800706ba
 
-During PFX deployment, the trusted root certificate appears on the device but the PFX certificate doesn't appear on the device. The NDESConnector log file contains the string **The RPC server is unavailable. 0x800706ba**, as seen in the first line of the following example:
+During PFX deployment, the trusted root certificate appears on the device but the PFX certificate doesn't appear on the device. The NDESConnector_date_time.svclog log file contains the string **The RPC server is unavailable. 0x800706ba**, as seen in the first line of the following example:
 
 ```
 IssuePfx - COMException: System.Runtime.InteropServices.COMException (0x800706BA): CCertRequest::Submit: The RPC server is unavailable. 0x800706ba (WIN32: 1722 RPC_S_SERVER_UNAVAILABLE)
@@ -194,15 +182,15 @@ IssuePfx - COMException: System.Runtime.InteropServices.COMException (0x80094015
 
 #### Cause - Certificate enrollment policy server name
 
-This issue occurs if the computer that hosts the Intune NDES Connector can't locate a certificate enrollment policy server.
+This issue occurs if the computer that hosts the Intune Certificate Connector can't locate a certificate enrollment policy server.
 
 **Resolution**:
 
-Manually configure the name of the certificate enrollment policy server on the computer that hosts the NDES connector. To configure the name, use the [Add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver) PowerShell cmdlet.
+Manually configure the name of the certificate enrollment policy server on the computer that hosts the Intune Certificate Connector. To configure the name, use the [Add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver) PowerShell cmdlet.
 
 ### The submission is pending
 
-After you deploy a PKCS certificate profile to mobile devices, the certificates aren't acquired, and the NDESConnector log contains the string **The submission is pending**, as seen in the following example:
+After you deploy a PKCS certificate profile to mobile devices, the certificates aren't acquired, and the NDESConnector_date_time.svclog log contains the string **The submission is pending**, as seen in the following example:
 
 ```
 IssuePfx - The submission is pending: Taken Under Submission
@@ -227,7 +215,7 @@ Edit the Policy Module properties to set: **Follow the settings in the certifica
 
 ### The parameter is incorrect 0x80070057
 
-With the Intune Certificate Connector installed and configured successfully, devices don't receive PKCS certificates and the NDESConnector log contains the string **The parameter is incorrect. 0x80070057**, as seen in the following example:
+With the Intune Certificate Connector installed and configured successfully, devices don't receive PKCS certificates and the NDESConnector_date_time.svclog log contains the string **The parameter is incorrect. 0x80070057**, as seen in the following example:
 
 ```
 CCertRequest::Submit: The parameter is incorrect. 0x80070057 (WIN32: 87 ERROR_INVALID_PARAMETER)
@@ -248,11 +236,11 @@ Verify the following configurations for the PKCS profile, and then wait for the 
 - Assigned to the correct user group
 - Users in the group have valid email addresses
 
-For more information, see [Configure and use PKCS certificates with Intune](/mem/intune/protect/certficates-pfx-configure).
+For more information, see [Configure and use PKCS certificates with Intune](/mem/intune/protect/certificates-pfx-configure).
 
 ### Denied by Policy Module
 
-When devices receive the trusted root certificate but don’t receive the PFX certificate and the NDESConnector log contains the string **The submission failed: Denied by Policy Module**, as seen in the following example:
+When devices receive the trusted root certificate but don’t receive the PFX certificate and the NDESConnector_date_time.svclog log contains the string **The submission failed: Denied by Policy Module**, as seen in the following example:
 
 ```
 IssuePfx - The submission failed: Denied by Policy Module
@@ -275,18 +263,18 @@ This issue occurs when the Computer Account of the server that hosts the Intune 
 6. In the **Certification Authority** console, right-click **Certificate Templates** > **New** > **Certificate Template to Issue**.
 7. Select the template that you modified, and then click **OK**.
 
-For more information, see [Configure certificate templates on the CA](/mem/intune/protect/certficates-pfx-configure#configure-certificate-templates-on-the-ca).
+For more information, see [Configure certificate templates on the CA](/mem/intune/protect/certificates-pfx-configure#configure-certificate-templates-on-the-ca).
 
 ### Certificate profile stuck as Pending
 
-In the Microsoft Endpoint Manager admin center, PKCS certificate profiles fail to deploy with a state of **Pending**. There are no obvious errors in the NDESConnector log file.
+In the Microsoft Endpoint Manager admin center, PKCS certificate profiles fail to deploy with a state of **Pending**. There are no obvious errors in the NDESConnector_date_time.svclog log file.
 Because the cause of this problem isn’t identified clearly in logs, work through the following causes.
 
 #### Cause 1 - Unprocessed request files
 
 Review the request files for errors that indicate why they failed to be processed.
 
-1. On the computer that hosts the NDES connector, use File Explorer to navigate to **%programfiles%\Microsoft Intune\PfxRequest**.
+1. On the server that hosts the Intune Certificate Connector, use File Explorer to navigate to **%programfiles%\Microsoft Intune\PfxRequest**.
 2. Review files in the **Failed** and **Processing** folders, using your favorite text editor.
 
    > [!div class="mx-imgBorder"]
@@ -334,12 +322,12 @@ Edit the template to resolve the configuration issue:
 
 ## Next steps
 
-If you still need a solution or you’re looking for more information about Intune, post a question in our [Microsoft Intune forum](https://social.technet.microsoft.com/Forums/en-us/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc). Many support engineers, MVPs, and members of our development team frequent the forums, so there’s a good chance that someone can help.
+If you still need a solution or you’re looking for more information about Intune, post a question in our [Microsoft Intune forum](/answers/products/mem). Many support engineers, MVPs, and members of our development team frequent the forums, so there’s a good chance that someone can help.
 
-To open a support request with the Microsoft Intune product support team, see [How to get support for Microsoft Intune](/mem/intune/fundamentals/get-support).
+To open a support request with the Microsoft Intune product support team, see [How to get support in Microsoft Endpoint Manager](/mem/get-support).
 
 For more information about PKCS certificate deployment, see the following articles:
 
-- [Configure and use PKCS certificates with Intune](/mem/intune/protect/certficates-pfx-configure)
+- [Configure and use PKCS certificates with Intune](/mem/intune/protect/certificates-pfx-configure)
 - [Configure a certificate profile for your devices in Microsoft Intune](/mem/intune/protect/certificates-configure)
 - [Remove SCEP and PKCS certificates in Microsoft Intune](/mem/intune/protect/remove-certificates)

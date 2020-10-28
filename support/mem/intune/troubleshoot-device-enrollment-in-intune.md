@@ -6,7 +6,7 @@ ms.reviewer: damionw
 ---
 # Troubleshoot device enrollment in Microsoft Intune
 
-This article provides suggestions for troubleshooting [device enrollment](/mem/intune/enrollment/device-enrollment) issues. If this information doesn't solve your problem, see [How to get support for Microsoft Intune](/mem/intune/fundamentals/get-support) to find more ways to get help.
+This article provides suggestions for troubleshooting [device enrollment](/mem/intune/enrollment/device-enrollment) issues. If this information doesn't solve your problem, see [How to get support in Microsoft Endpoint Manager](/mem/get-support) to find more ways to get help.
 
 ## Initial troubleshooting steps
 
@@ -428,7 +428,7 @@ The account certificate of the previous account is still present on the computer
 |0x80043007, 0x80CF3007|Couldn't find the certificate file in the same folder as the installer program.|Extract all files before you start the installation. Do not rename or move any of the extracted files: all files must exist in the same folder or the installation will fail.|
 |0x8024D015, 0x00240005, 0x80070BC2, 0x80070BC9, 0x80CFD015|The software can't be installed because a restart of the client computer is pending.|Restart the computer and then retry the client software installation.|
 |0x80070032|One or more prerequisites for installing the client software weren't found on the client computer.|Make sure that all required updates are installed on the client computer and then retry the client software installation.|
-|0x80043008, 0x80CF3008|Failed to start the Microsoft Online Management Updates service.|Contact Microsoft Support as described in [How to get support for Microsoft Intune](/mem/intune/fundamentals/get-support).|
+|0x80043008, 0x80CF3008|Failed to start the Microsoft Online Management Updates service.|Contact Microsoft Support as described in [How to get support in Microsoft Endpoint Manager](/mem/get-support).|
 |0x80043009, 0x80CF3009|The client computer is already enrolled into the service.|You must retire the client computer before you can re-enroll it in the service.|
 |0x8004300B, 0x80CF300B|The client software installation package can't run because the version of Windows that is running on the client isn't supported.|Intune doesn't support the version of Windows that is running on the client computer.|
 |0xAB2|The Windows Installer couldn't access VBScript run time for a custom action.|This error is caused by a custom action that is based on Dynamic-Link Libraries (DLLs).|
@@ -436,4 +436,4 @@ The account certificate of the previous account is still present on the computer
 
 ## Next steps
 
-If this troubleshooting information didn't help you, contact Microsoft Support as described in [How to get support for Microsoft Intune](/mem/intune/fundamentals/get-support).
+If this troubleshooting information didn't help you, contact Microsoft Support as described in [How to get support in Microsoft Endpoint Manager](/mem/get-support).
