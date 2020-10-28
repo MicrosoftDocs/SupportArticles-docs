@@ -55,7 +55,7 @@ When you run a web application or a website on a farm that consists of several I
 
 ## Resolution
 
-When you report these kinds of issues to Microsoft Support, you must provide all the telemetry data that is required to diagnose the issue. If an issue occurs on a production server, a complete and timely data collection strategy will enable a faster resolution time. Use the [Microsoft LogCatcher]((https://github.com/crnegule/LogCatcher)) tool for automated data collection for faster and more consistent telemetry data gathering of all necessary data from the web server. Microsoft Support agents will ask you to download the tool from its GitHub repository () and install it.
+When you report these kinds of issues to Microsoft Support, you must provide all the telemetry data that is required to diagnose the issue. If an issue occurs on a production server, a complete and timely data collection strategy will enable a faster resolution time. Use the [Microsoft LogCatcher](https://github.com/crnegule/LogCatcher) tool for automated data collection for faster and more consistent telemetry data gathering of all necessary data from the web server. Microsoft Support agents will ask you to download the tool from its GitHub repository () and install it.
 
 The welcome screen in LogCatcher provides instructions for its use. The UI resembles the following screenshot.
 
