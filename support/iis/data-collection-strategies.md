@@ -61,7 +61,7 @@ The welcome screen in LogCatcher provides instructions for its use. The UI resem
 
 :::image type="content" source="media/data-collection-strategies/collect-data-in-logcatcher.jpg" alt-text="screenshot of collecting data in log catcher":::
 
-At the bottom of the main window, LogCatcher displays a list of websites that are hosted on the server that the tool is running on, and also the corresponding application pools and content location of each website
+At the bottom of the main window, LogCatcher displays a list of websites that are hosted on the server that the tool is running on, and also the corresponding application pools and content location of each website.
 
 To filter the data that is collected from your system, collect data from only a subset of websites from the list, and only for a given duration (expressed in number of days counting backward from today). You can use the **Site IDs** and **Logs Age** filter text boxes, respectively.
 
