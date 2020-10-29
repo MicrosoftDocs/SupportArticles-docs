@@ -33,6 +33,5 @@ The broker infrastructure service of the call functionality is disabled on the f
 Set the startup type of the broker infrastructure service to **Automatic** or add this line to the dockerfile:  
 
 ```dockerfile
-RUN powershell -Command Set-Itemproperty -path  
-'HKLM:\SYSTEM\CurrentControlSet\Services\BrokerInfrastructure' -Name 'Start' -value 2
+RUN powershell -Command Set-Itemproperty -path 'HKLM:\SYSTEM\CurrentControlSet\Services\BrokerInfrastructure' -Name 'Start' -value 2
 ```  
