@@ -212,8 +212,6 @@
     - name: Error when trying to approve a SharePoint Approval Workflow task
       href: ../sharing-and-permissions/approval-workflow-access-denied-error.md
     - name: '"Everyone except external users" group is re-added to Visitors or Members group on Office 365 public group website'
-      href: ../sharing-and-permissions/everyone-except-external-users-group-readded.md
-    - name: '"Everyone except external users" group is removed'
       href: ../sharing-and-permissions/everyone-except-external-user-removed.md
     - name: '"External sharing is disabled for the site" error with Online Admin Center'
       href: ../sharing-and-permissions/troubleshoot-error-when-tries-to-access-center.md
