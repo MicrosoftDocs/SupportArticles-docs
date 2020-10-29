@@ -241,8 +241,6 @@
       href: ../licensing/subscription-automatic-license-renew-fails.md
     - name: Office 365 subscription automatic license renewal fails
       href: ../licensing/subscription-license-renewal-fail.md
-    - name: Outlook Customer Manager group
-      href: ../licensing/outlook-customer-manager-group-creation.md
     - name: Use Office 365 PowerShell to manage Microsoft Planner licenses
       href: ../licensing/how-to-use-office-365-powershell-to-manage-microsoft-planner-licenses.md
   - name: Miscellaneous
