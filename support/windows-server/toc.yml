@@ -2094,6 +2094,10 @@
       href: ./virtualization/back-up-hyper-v-vm-from-parent-partition.md
     - name: Can't export a virtual machine
       href: ./virtualization/error-occurred-attempt-export-virtual-machine.md
+  - name: Container
+    items:
+    - name: API call of performance counters is delayed
+      href: ./virtualization/api-call-performance-counters-delay-container.md
   - name: Configuration of virtual machine settings
     items:
     - name: Caching in the virtual storage stack
