@@ -75,5 +75,5 @@ For help with specific errors, try [Resolve common errors for the Intune Exchang
 
 To get support, or to get help from the Intune community:
 
-- See [Get support](/mem/intune/fundamentals/get-support) to use the Intune console to troubleshoot the issue or to open a support case with Microsoft.
-- Post your issue in the [Microsoft Intune forums](https://social.technet.microsoft.com/Forums/en-us/home?forum=microsoftintuneprod).
+- See [Get support](/mem/get-support) to use the Intune console to troubleshoot the issue or to open a support case with Microsoft.
+- Post your issue in the [Microsoft Intune forums](/answers/products/mem).

@@ -105,4 +105,4 @@ To resolve this issue, use bootable media to re-install Windows 10 on the device
 
 ## Next steps
 
-Get [support help from Microsoft](/mem/intune/fundamentals/get-support), or use the [community forums](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune).
+Get [support help from Microsoft](/mem/get-support), or use the [community forums](/answers/products/mem).
