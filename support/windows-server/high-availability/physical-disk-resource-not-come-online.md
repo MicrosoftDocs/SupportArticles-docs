@@ -26,37 +26,38 @@ On a cluster node that is running Windows Server 2003, Windows Server 2008 or Wi
 
 When this problem occurs, the following entries are logged in the Windows Server 2003 Cluster log for the physical disk resource that entered the **failed** state:
 
-000020cc.000014d0::2010/01/23-19:40:39.929 ERR Physical Disk \<Disk Q:>:
-DiskspCheckPath: GetFileAttrs(Q:) returned status of 87.
-000020cc.000014d0::2010/01/23-19:40:39.929 WARN Physical Disk \<Disk Q:>:
+> 000020cc.000014d0::2010/01/23-19:40:39.929 ERR Physical Disk \<Disk Q:>:  
+DiskspCheckPath: GetFileAttrs(Q:) returned status of 87.  
+000020cc.000014d0::2010/01/23-19:40:39.929 WARN Physical Disk \<Disk Q:>:  
 DiskspCheckDriveLetter: Checking drive name (Q:) returns 87
-Additionally, the following events are logged in the Windows Server 2003 System Event log: 
 
-Event Type: Error
-Event Source: ClusSvc
-Event Category: Physical Disk Resource
-Event ID: 1066
-Date: <date>
-Time: <time>
-User: N/A
-Computer: <node name>
+Additionally, the following events are logged in the Windows Server 2003 System Event log:
+
+> Event Type: Error  
+Event Source: ClusSvc  
+Event Category: Physical Disk Resource  
+Event ID: 1066  
+Date: \<date>  
+Time: \<time>  
+User: N/A  
+Computer: \<node name>  
 Description: Cluster disk resource "Disk Q:" is corrupt. Run 'ChkDsk /F' to repair problems. The volume name for this resource is "<\\?\Volume{4323d41e-1379-11dd-9538-001e0b20dfe6}\>". If available, ChkDsk output will be in the file "C:\WINDOWS\Cluster\ChkDsk_Disk2_SigB05E593B.log". ChkDsk may write information to the Application Event Log with Event ID 26180.
-
-Event Type: Error
-Event Source: ClusSvc
-Event Category: Physical Disk Resource
-Event ID: 1035
-Date: <date>
-Time: <time>
-User: N/A
-Computer: <node name>
+>
+> Event Type: Error  
+Event Source: ClusSvc  
+Event Category: Physical Disk Resource  
+Event ID: 1035  
+Date: \<date>  
+Time: \<time>  
+User: N/A  
+Computer: \<node name>  
 Description: Cluster disk resource 'Disk Q:' could not be mounted.
 
 Similarly, on a Windows Server 2008 or Windows Server 2008 R2 cluster nodes you may see following entries are logged in the Cluster log:
 
-00000db0.00000868::2011/12/06-00:43:00.683 WARN [RES] Physical Disk <Cluster Disk 1>: OnlineThread: Failed to get volume guid for device \\?\GLOBALROOT\Device\Harddisk15\Partition1\. Error 3
-00000db0.00000868::2011/12/06-00:43:04.683 WARN [RES] Physical Disk <Cluster Disk 1>: OnlineThread: Failed to set volguid \??\Volume{3cb36133-0d0b-11df-afcf-005056ab58b9}. Error: 183.
-00000db0.00000868::2011/12/06-00:43:04.686 INFO [RES] Physical Disk <Cluster Disk 1>: VolumeIsNtfs: Volume \\?\GLOBALROOT\Device\Harddisk15\Partition1\ has FS type NTFS
+> 00000db0.00000868::2011/12/06-00:43:00.683 WARN [RES] Physical Disk \<Cluster Disk 1>: OnlineThread: Failed to get volume guid for device \\?\GLOBALROOT\Device\Harddisk15\Partition1\. Error 3  
+00000db0.00000868::2011/12/06-00:43:04.683 WARN [RES] Physical Disk \<Cluster Disk 1>: OnlineThread: Failed to set volguid \??\Volume{3cb36133-0d0b-11df-afcf-005056ab58b9}. Error: 183.  
+00000db0.00000868::2011/12/06-00:43:04.686 INFO [RES] Physical Disk \<Cluster Disk 1>: VolumeIsNtfs: Volume \\?\GLOBALROOT\Device\Harddisk15\Partition1\ has FS type NTFS
 
 Additionally, following event is logged in the System Event log of Windows Server 2008 or Windows Server 2008 R2:
 
@@ -64,30 +65,31 @@ Additionally, following event is logged in the System Event log of Windows Serve
 
 This problem is known to occur when antivirus software that is not cluster-aware is installed, upgraded, or reconfigured. For example, this problem is known to occur after you install or migrate to Symantec Endpoint Protection 11.0 Release Update 5 (RU5) on the cluster nodes.
 
-For more information about this problem, visit the following Symantec Web site: [http://service1.symantec.com/SUPPORT/ent-security.nsf/docid/2009102815324448](http://service1.symantec.com/support/ent-security.nsf/docid/2009102815324448) 
-
 ## Resolution
 
 To resolve this problem, follow these steps:
+
 1. Verify that this problem is caused by Symantec Endpoint Protection (SEP) 11.0 Release Update 5 (RU5). To do this, run the Handle.exe utility immediately after the issue occurs on the cluster node where the physical disk resource did not come online.
 
-At an elevated command prompt, type the following command, and then press ENTER: Handle.exe -a -u **drive_letter**  
-> [!NOTE]
-> The **drive_letter** placeholder is the drive designation for the cluster drive that did not come online.
+    At an elevated command prompt, type the following command, and then press ENTER: `Handle.exe -a -u drive_letter`.
 
-For example, assume that the drive designation for the cluster drive that did not come online is drive Q. To run the Handle.exe utility in this scenario, type the following command, and then press ENTER: Handle.exe -a -u Q: 
-The problem is caused by the Symantec application if you receive the following message that identifies the Smc.exe process as the process that owns the handle:Handle v3.42
-Copyright (C) 1997-2008 Mark Russinovich
-Sysinternals - www.sysinternals.com
+    > [!NOTE]
+    > The **drive_letter** placeholder is the drive designation for the cluster drive that did not come online.
 
-Smc.exe pid: 856 NT AUTHORITY\SYSTEM 66C: Q:
+    For example, assume that the drive designation for the cluster drive that did not come online is drive Q. To run the Handle.exe utility in this scenario, type the following command, and then press ENTER: `Handle.exe -a -u Q:`.
 
-2. If the problem is caused by the Symantec application, contact Symantec to obtain Symantec Endpoint Protection 11 Release Update 6 (RU6), which was released to resolve this issue. For more information, visit the following Symantec website: [http://service1.symantec.com/support/ent-security.nsf/854fa02b4f5013678825731a007d06af/2c62c4ee0e697aae882573b000034ded?OpenDocument](http://service1.symantec.com/support/ent-security.nsf/854fa02b4f5013678825731a007d06af/2c62c4ee0e697aae882573b000034ded?opendocument) 
+    The problem is caused by the Symantec application if you receive the following message that identifies the Smc.exe process as the process that owns the handle:
 
+    > Handle v3.42  
+    Copyright (C) 1997-2008 Mark Russinovich  
+    Sysinternals - www.sysinternals.com
+
+    `Smc.exe pid: 856 NT AUTHORITY\SYSTEM 66C: Q:`
+
+2. If the problem is caused by the Symantec application, contact Symantec to obtain Symantec Endpoint Protection 11 Release Update 6 (RU6), which was released to resolve this issue.
 
 ## More information
 
-For more information about the Handle.exe utility, visit the following Microsoft TechNet Web site: [https://technet.microsoft.com/sysinternals/bb896655.aspx](https://technet.microsoft.com/sysinternals/bb896655.aspx) 
- The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products. 
+For more information about the Handle.exe utility, see [Handle v4.22](/sysinternals/downloads/handle).
 
-Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
+The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
