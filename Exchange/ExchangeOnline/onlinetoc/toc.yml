@@ -121,6 +121,8 @@
     items:
     - name: Can't set up profile with Autodiscover
       href: ../outlook-issues/cannot-set-up-profile-autodiscover.md
+    - name: Control PST use and creation
+      href: ../outlook-issues/control-pst-use.md
     - name: Encrypted connection unavailable
       href: ../outlook-issues/encrypted-connection-unavailable.md
     - name: Error viewing delegates in Outlook

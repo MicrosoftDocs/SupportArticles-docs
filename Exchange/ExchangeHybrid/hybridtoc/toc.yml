@@ -1,49 +1,43 @@
 - name: Hybrid Deployment Troubleshooting
   href: ../exchange-hybrid-welcome.md
   items:
-  - name: Accessing Email Data
-    items:
-    - name: RPC over HTTP reaches end of support
-      href: ../accessing-email-data/rpc-over-http-end-of-support.md
-  - name: Calendaring
-    items:
-    - name: Can't dismiss calendar reminders
-      href: ../calendaring/cannot-dismiss-outlook-calendar-reminders.md
-    - name: Policy not allow granting permissions
-      href: ../calendaring/policy-permissions-issue.md
-    - name: 'Troubleshoot free/busy issues'
-      href: ../calendaring/troubleshoot-freebusy-issues-in-exchange-hybrid.md
-  - name: Delegates
-    items:
-    - name: Requirements to configure delegation
-      href: ../delegates/overview-delegation-office-365-hybrid.md
-  - name: Distribution Groups
-    items:
-    - name: Owners can't manage distribution groups
-      href: ../distribution-groups/cannot-manage-dg.md
-  - name: Federation
+  - name: Administration
     items:
     - name: Online attributes aren't written back to on-premises
-      href: ../federation/attribute-not-written-to-azure-ad.md
+      href: ../administration/attribute-not-written-to-azure-ad.md
+    - name: RPC over HTTP reaches end of support
+      href: ../administration/rpc-over-http-end-of-support.md
+  - name: Calendars
+    items:
+    - name: Can't dismiss calendar reminders
+      href: ../calendars/cannot-dismiss-outlook-calendar-reminders.md
+    - name: Policy not allow granting permissions
+      href: ../calendars/policy-permissions-issue.md
+    - name: 'Troubleshoot free/busy issues'
+      href: ../calendars/troubleshoot-freebusy-issues-in-exchange-hybrid.md
+  - name: Groups and Distribution Lists
+    items:
+    - name: Owners can't manage distribution groups
+      href: ../groups-and-distribution-lists/cannot-manage-dg.md
   - name: Move Mailboxes
     items:
     - name: Error when you move mailboxes to or from Office 365
       href: ../move-mailboxes/error-move-mailboxes-to-from-o365.md
-    - name: LitigationHoldEnabled property mismatch
-      href: ../move-mailboxes/litigationholdenabled-property-differs-onpremises-cloud.md
-    - name: Mailbox exists in both Exchange Online and on-premises
-      href: ../move-mailboxes/mailbox-exists-exo-onpremises.md
     - name: Mailbox Move to the cloud fails with error
       href: ../move-mailboxes/mailbox-move-to-cloud-fail-with-error.md
     - name: Move mailbox operation fails
       href: ../move-mailboxes/hybrid-move-fails.md
     - name: Offboarding mailbox fails with error
       href: ../move-mailboxes/offboarding-mailbox-fails-homemdb-homemta.md
-  - name: Outlook Policy
+  - name: Send Emails
     items:
-    - name: Control PST use and creation
-      href: ../outlook-policy/control-pst-use.md
-  - name: Shared Mailboxes
+    - name: Requirements to configure delegation
+      href: ../send-emails/overview-delegation-office-365-hybrid.md
+  - name: User and Shared Mailboxes
     items:
     - name: Can't access a shared mailbox
-      href: ../shared-mailboxes/cannot-access-mailbox.md
+      href: ../user-and-shared-mailboxes/cannot-access-mailbox.md
+    - name: LitigationHoldEnabled property mismatch
+      href: ../user-and-shared-mailboxes/litigationholdenabled-property-differs-onpremises-cloud.md
+    - name: Mailbox exists in both Exchange Online and on-premises
+      href: ../user-and-shared-mailboxes/mailbox-exists-exo-onpremises.md
