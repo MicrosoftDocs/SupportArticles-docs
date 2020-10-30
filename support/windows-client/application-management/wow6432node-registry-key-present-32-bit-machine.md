@@ -1,5 +1,5 @@
 ---
-title: WOW6432Node listed in 32 bit version of Windows
+title: WOW6432Node listed in 32-bit version of Windows
 description: Fixes an issue in which a registry subkey labeled Wow6432Node is listed in system registry on x86 machines.
 ms.data: 09/08/2020
 author: Deland-Han
@@ -51,10 +51,10 @@ There are a number of tools that you can use to identify which platform is insta
 
 1. Click on the **Start** button.
 2. In the **Search** box, type the command `MSINFO32` without the quotes.
-3. In the left-hand pane click **System Summary**.
+3. In the left-hand pane, click **System Summary**.
 4. In the right-hand pane, view the entry labeled **System Type**.
 
-    If the entry states **x86-Based PC**, this is 32 bit platform. If the entry states **x64-Based PC**, this is 64 bit platform.
+    If the entry states **x86-Based PC**, this is 32-bit platform. If the entry states **x64-Based PC**, this is 64-bit platform.
 
 ### Method 2: Use the Set command to display Processor Architecture
 
@@ -65,7 +65,7 @@ There are a number of tools that you can use to identify which platform is insta
     set processor_architecture
     ```
 
-    If the result is **PROCESSOR_ARCHITECTURE=x86**, this is 32 bit platform. If the result is **PROCESSOR_ARCHITECTURE=AMD64** this is 64 bit platform.
+    If the result is **PROCESSOR_ARCHITECTURE=x86**, this is 32-bit platform. If the result is **PROCESSOR_ARCHITECTURE=AMD64** this is 64-bit platform.
 
 ## References
 
