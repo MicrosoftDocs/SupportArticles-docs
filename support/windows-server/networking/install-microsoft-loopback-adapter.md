@@ -32,7 +32,7 @@ To quickly install the Microsoft Loopback Adapter in Microsoft Windows Server 20
 
 1. Download the DevCon compressed file, and then extract the files:
       1. Visit the following Microsoft Web site:  
-      [https://download.microsoft.com/download/1/1/f/11f7dd10-272d-4cd2-896f-9ce67f3e0240/devcon.exe](https://download.microsoft.com/download/1/1/f/11f7dd10-272d-4cd2-896f-9ce67f3e0240/devcon.exe)  
+      [Windows Device Console (Devcon.exe)](/windows-hardware/drivers/devtest/devcon)  
 
       2. Save the Devcon.exe file to a folder on your computer, and then open the folder.
       3. Double-click **Devcon.exe**. A **WinZip Self-Extractor** dialog box appears.

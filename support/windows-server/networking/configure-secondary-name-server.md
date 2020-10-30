@@ -127,4 +127,4 @@ This issue may occur if zone transfers are disabled. To resolve this issue, foll
 
 To troubleshoot and obtain information about the DNS configuration, use the [Nslookup](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc725991(v=ws.11)) utility.
 
-For more information about how to install and configure DNS, see [How To Install and Configure DNS Server in Windows Server 2003](https://.support.microsoft.com/help/814591).
+For more information about how to install and configure DNS, see [How To Install and Configure DNS Server in Windows Server 2003](https://support.microsoft.com/help/814591).
