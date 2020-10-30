@@ -106,7 +106,7 @@ For on-premises environments that use Exchange Server 2013 (cumulative update 21
 Create an on-premises object for the cloud mailbox by using the **New-RemoteMailbox** cmdlet in the Exchange Management Shell.
 
 > [!NOTE]
-> This object must have the same name, alias, and user principal name (UPN) as the cloud mailbox. For more information, see [New-RemoteMailbox](https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/New-RemoteMailbox?view=exchange-ps).
+> This object must have the same name, alias, and user principal name (UPN) as the cloud mailbox. For more information, see [New-RemoteMailbox](https://docs.microsoft.com/powershell/module/exchange/federation-and-hybrid/New-RemoteMailbox?view=exchange-ps&preserve-view=true).
 
 For example, run the following command:  
 
