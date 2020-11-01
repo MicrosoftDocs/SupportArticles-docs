@@ -2,6 +2,13 @@
 
 
 
+## Week of October 26, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+
+
 ## Week of October 19, 2020
 
 
@@ -39,11 +46,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 9/30/2020 | [Search-AdminAuditLog or Search-MailboxAuditLog with parameter returns empty results in Exchange Server](/exchange/troubleshoot/compliance/search-adminauditlog-mailboxauditlog-return-no-result) | modified |
-
-
-## Week of September 21, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/22/2020 | [Understanding and troubleshooting Out of Office (OOF) replies](/exchange/troubleshoot/send-emails/understand-troubleshoot-oof-replies) | modified |
