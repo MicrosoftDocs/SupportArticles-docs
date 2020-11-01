@@ -2,6 +2,14 @@
 
 
 
+## Week of October 26, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/29/2020 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
+
+
 ## Week of October 19, 2020
 
 
@@ -132,12 +140,3 @@
 | 9/28/2020 | [Third-party installed font does not appear in the font list in Word for Mac](/office/troubleshoot/third-party-add-ins/third-party-installed-font-fails-appearing) | modified |
 | 9/29/2020 | [How to recover a lost Word document](/office/troubleshoot/word/recover-lost-document) | modified |
 | 9/30/2020 | How to use common Data Definition Language (DDL) SQL statements for the Jet database engine | removed |
-
-
-## Week of September 21, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/23/2020 | [Another account is already signed in computer when signing in to Office 2013](/office/troubleshoot/office-suite-issues/another-account-already-signed-in) | modified |
-| 9/24/2020 | [Another account is already signed in computer when signing in to Office 2013](/office/troubleshoot/office-suite-issues/another-account-already-signed-in) | modified |
