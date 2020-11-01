@@ -2,6 +2,14 @@
 
 
 
+## Week of October 26, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/26/2020 | [How to repair personal folder file (.pst)](/outlook/troubleshoot/data-files/how-to-repair-personal-folder-file) | modified |
+
+
 ## Week of October 19, 2020
 
 
@@ -37,11 +45,3 @@
 |------|------------|--------|
 | 9/28/2020 | [Folder names are incorrect or displayed in an incorrect language in Outlook](/outlook/troubleshoot/user-interface/incorrect-folder-names) | modified |
 | 9/30/2020 | [Can't send or receive email and Metered Connection Warning is triggered](/outlook/troubleshoot/profiles-and-accounts/metered-connection-warning) | modified |
-
-
-## Week of September 21, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/21/2020 | [Can't install Calendar Printing Assistant](/outlook/troubleshoot/installation/installing-calendar-printing-assistant-fails) | modified |
