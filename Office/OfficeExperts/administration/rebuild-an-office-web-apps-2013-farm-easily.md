@@ -1,5 +1,5 @@
 ﻿---
-title: Rebuild an Microsoft Office Web Apps 2013 server farm easily
+title: Rebuild an Microsoft Office Web Apps server farm easily
 author: AmandaAZ
 ms.author: brbering
 manager: dcscontentpm
@@ -11,20 +11,20 @@ ms.topic: article
 ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot
 appliesto:
-- Office Web Apps 2013
+- Office Web Apps
 ---
-# Rebuild an Microsoft Office Web Apps 2013 server farm easily
+# Rebuild an Microsoft Office Web Apps server farm easily
 
 This article was written by [Tom Schauer](https://social.technet.microsoft.com/profile/Tom+Schauer+-+MSFT), Technical Specialist.
 
-You can rebuild Microsoft Microsoft Office Web Apps 2013 server farm with a few easy steps. To do this, follow these steps:
+You can rebuild Microsoft Microsoft Office Web Apps server farm with a few easy steps. To do this, follow these steps:
 
 > [!NOTE]
 >- Because there is a minimal configuration from an Office Web Apps perspective and zero data loss, there is little risk to rebuild an Office Web Apps farm.
 >- These steps can be used for fixing technical issues with Office Web Apps.
 
-1. Take the Microsoft Office Web Apps 2013 server farm offline if there is a load balancer.
-1. Collect the current farm information through PowerShell by using the following command on an Microsoft Office Web Apps 2013 (WAC) Server(s):
+1. Take the Microsoft Office Web Apps server farm offline if there is a load balancer.
+1. Collect the current farm information through PowerShell by using the following command on an Microsoft Office Web Apps (WAC) Server(s):
 
    **Get-OfficeWebAppsFarm > c:\MyWACfarm.txt**
 
@@ -54,9 +54,9 @@ You can rebuild Microsoft Microsoft Office Web Apps 2013 server farm with a few 
 
    **New-SPWOPIBinding –ServerName "WACServer.corp.contoso.com" -AllowHttp**
 
-To verify that your Microsoft Office Web Apps 2013 server farm was configured correctly, go to **https://servername/hosting/discovery** in a web browser.
+To verify that your Microsoft Office Web Apps server farm was configured correctly, go to **https://servername/hosting/discovery** in a web browser.
 
-If Office Web Apps 2013 server is working as expected, you should see a **Web Application Open Platform Interface Protocol (WOPI)-discovery** XML file in your web browser.
+If Office Web Apps server is working as expected, you should see a **Web Application Open Platform Interface Protocol (WOPI)-discovery** XML file in your web browser.
 
 For example:
 ```
@@ -68,4 +68,4 @@ For example:
 > [!NOTE]
 > You need to replace **WACServer.corp.contoso.com** in previous steps with the correct information from your farm.
 
-For more information about how to configure Microsoft Office Web Apps 2013, see [Configure Microsoft Office Web Apps 2013 for SharePoint 2013](https://technet.microsoft.com/library/ff431687).
+For more information about how to configure Microsoft Office Web Apps, see [Configure Office Online Server for SharePoint Server](https://technet.microsoft.com/library/ff431687).
