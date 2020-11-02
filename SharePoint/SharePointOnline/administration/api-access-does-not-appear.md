@@ -26,7 +26,7 @@ description: How to resolve an issue where "API access" and the "Advanced" tab d
 
 The **Advanced** and **API Access** options do not appear in the navigation pane of the SharePoint Online Modern admin center. 
 
-:::image type="content" source="media/api-access-does-not-appear/api-access-does-not-appear-1.png" alt-text="SharePoint admin center with Advanced and API access showing.":::
+:::image type="content" source="media/api-access-does-not-appear/api-access-does-not-appear-3.png" alt-text="SharePoint admin center with Advanced and API access showing.":::
 
 ## Cause
 
@@ -38,8 +38,10 @@ To resolve this issue, follow these steps:
 1.	Go to the admin center, and select **More features**.
 2.	Under **Apps**, select **Open**. 
 
-    :::image type="content" source="media/api-access-does-not-appear/api-access-does-not-appear-2.png" alt-text="In the App Catalog Site, create a new app catalog.":::
+    :::image type="content" source="media/api-access-does-not-appear/api-access-does-not-appear-1.png" alt-text="Under Apps, select Open.":::
 3.	Select **App Catalog**, and then select **Create a new app catalog site**. Enter the necessary information, including title, URL, and administrator, as appropriate.
+
+    :::image type="content" source="media/api-access-does-not-appear/api-access-does-not-appear-2.png" alt-text="In the App Catalog Site, create a new app catalog.":::
 4.	Copy the URL of the app catalog site, and save it to a separate location (such as Notepad, a Word doc, or another program). 
 5.	Wait for the site to finish provisioning.
 Note: This process may take up to 10 minutes.
