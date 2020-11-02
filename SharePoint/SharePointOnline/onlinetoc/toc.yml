@@ -5,6 +5,8 @@
     items:
     - name: '"Access denied" error for PIM-managed accounts in SharePoint or OneDrive admin center'
       href: ../administration/access-denied-to-pim-user-accounts.md
+    - name: '"API access" does not appear in the Modern admin center'
+      href: ../administration/api-access-does-not-appear.md
     - name: Temporary changes in process schedule for SharePoint Online services 
       href: ../administration/temporary-adjustments-in-sharepoint-online.md
     - name: '"Sync to Outlook" button and "Task" link are missing'
