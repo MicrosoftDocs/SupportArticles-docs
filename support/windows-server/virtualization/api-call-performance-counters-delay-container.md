@@ -26,11 +26,11 @@ Application calls to API performance counters inside a container running a Windo
 
 ## Cause
 
-The broker infrastructure service of the call functionality is disabled on the full container image.  
+The broker infrastructure service is disabled on the full container image.  
 
 ## Resolution
 
-Set the startup type of the broker infrastructure service to **Automatic** or add this line to the dockerfile:  
+Set the startup type of the broker infrastructure service to **Automatic** by adding this line to the dockerfile:  
 
 ```dockerfile
 RUN powershell -Command Set-Itemproperty -path 'HKLM:\SYSTEM\CurrentControlSet\Services\BrokerInfrastructure' -Name 'Start' -value 2
