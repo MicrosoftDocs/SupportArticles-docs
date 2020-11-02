@@ -26,7 +26,7 @@ description: How to resolve an issue where "API access" and the "Advanced" tab d
 
 The **Advanced** and **API Access** options do not appear in the navigation pane of the SharePoint Online Modern admin center. 
 
-:::image type="content" source="media/api-access-does-not-appear/api-access-does-not-appear-3.png" alt-text="SharePoint admin center with Advanced and API access showing.":::
+:::image type="content" source="media/api-access-does-not-appear/api-access-does-not-appear-3.jpg" alt-text="SharePoint admin center with Advanced and API access showing.":::
 
 ## Cause
 
