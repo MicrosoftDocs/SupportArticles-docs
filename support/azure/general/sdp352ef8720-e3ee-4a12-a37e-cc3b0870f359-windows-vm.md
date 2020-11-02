@@ -1,5 +1,5 @@
 ---
-title: Microsoft Azure PaaS VM Logs
+title: Microsoft Azure PaaS VM logs
 description: Describes how to gather the most common log files and diagnostics information from an Azure PaaS VM.
 ms.date: 08/14/2020
 ms.prod-support-area-path: 
@@ -8,7 +8,7 @@ ms.author: genli
 author: genli
 ms.reviewer: 
 ---
-# [SDP3][52ef8720-e3ee-4a12-a37e-cc3b0870f359] Microsoft Azure PaaS VM Logs
+# [SDP3][52ef8720-e3ee-4a12-a37e-cc3b0870f359] Microsoft Azure PaaS VM logs
 
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles)  
 _Original KB number:_ &nbsp; 2772488
@@ -33,16 +33,16 @@ You will be prompted by IE to Add a trusted website.
 
 If you receive an IE Security Alert saying `Your current security settings do not allow this file to be downloaded.`, then you did not add https://*.support.microsoft.com to the list of trusted sites.
 
-### Information Collected
+### Information collected
 
-#### General Information
+#### General information
 
 | Description| File name |
 |---|---|
 |Basic System Information including machine name, service pack, computer model and processor name and speed<br/>|resultreport.xml<br/>|
 |||
 
-#### LogFiles in System32 and Azure Logs
+#### LogFiles in System32 and Azure logs
 
 | Description| File name |
 |---|---|
@@ -72,7 +72,7 @@ If you receive an IE Security Alert saying `Your current security settings do no
 |All other event logs in evtx format<br/>|{ComputerName}_*evt_*.evtx<br/>|
 |||
 
-#### File Version Information (Chksym)
+#### File version information (Chksym)
 
 | Description| File name |
 |---|---|
