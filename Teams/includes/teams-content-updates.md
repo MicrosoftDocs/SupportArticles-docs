@@ -2,6 +2,14 @@
 
 
 
+## Week of October 26, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/26/2020 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
+
+
 ## Week of October 19, 2020
 
 
@@ -26,11 +34,3 @@
 | 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/microsoftteams/troubleshoot/index) | modified |
 | 10/8/2020 | [Troubleshoot Microsoft Teams and Exchange Server interaction issues](/microsoftteams/troubleshoot/known-issues/teams-exchange-interaction-issue) | modified |
 | 10/9/2020 | [Troubleshoot Microsoft Teams and Exchange Server interaction issues](/microsoftteams/troubleshoot/known-issues/teams-exchange-interaction-issue) | modified |
-
-
-## Week of September 21, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/21/2020 | [Troubleshoot Microsoft Teams and Exchange Server interaction issues](/microsoftteams/troubleshoot/known-issues/teams-exchange-interaction-issue) | modified |

@@ -2,6 +2,15 @@
 
 
 
+## Week of October 26, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 10/28/2020 | [PowerPivot for SharePoint 2016 scheduled data refresh fails with the error The operation has timed out](/sharepoint/troubleshoot/administration/powerpivot-scheduled-data-refresh-fails) | modified |
+| 10/29/2020 | Everyone except external users group is re-added to Visitors or Members group on Office 365 public group website | removed |
+
+
 ## Week of October 19, 2020
 
 
@@ -36,10 +45,3 @@
 |------|------------|--------|
 | 9/28/2020 | [SharePoint Online service process schedule temporary change](/sharepoint/troubleshoot/administration/temporary-adjustments-in-sharepoint-online) | modified |
 | 9/28/2020 | [SharePoint Online Public Websites to be discontinued](/sharepoint/troubleshoot/sites/public-websites-be-discontinued) | modified |
-
-
-## Week of September 21, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
