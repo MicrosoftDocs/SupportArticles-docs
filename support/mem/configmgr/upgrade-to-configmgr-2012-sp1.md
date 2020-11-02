@@ -37,7 +37,7 @@ We recommend that you uninstall Windows AIK. This is because Windows Assessment 
 
 You must download and install Windows ADK before you run the System Center 2012 Configuration Manager SP1 setup. Windows ADK must be installed on the site server and on any server that is running the SMS Provider.
 
-To download Windows ADK, go to [Windows Assessment and Deployment Kit (ADK) for Windows 8](/windows-hardware/get-started/adk-install).
+To download Windows ADK, go to [Download and install the Windows ADK](/windows-hardware/get-started/adk-install).
 
 When you run the Windows ADK setup, select the following features:
 

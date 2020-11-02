@@ -62,10 +62,6 @@ REG ADD "HKLM\System\CurrentControlSet\Services\CSC\Parameters" /v FormatDatabas
 > - The actual value of the new registry key is ignored.
 > - This registry change requires a restart. When the computer is restarting, the shell will re-initialize the CSC cache, and then delete the registry key if the registry entry exists.
 
-### Did this fix the problem?
-
-Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus/).
-
 ## Status
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.

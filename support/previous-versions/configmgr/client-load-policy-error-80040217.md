@@ -102,3 +102,7 @@ To resolve the issue, add a new network access account in the Admin console usi
 3. In the Computer Client Agent Properties dialog box, on the **General** tab, for the network access account, click **Set**.
 4. In the Windows User Account dialog box, specify an existing Windows domain user account and password, and then click **OK**.
 5. Click **OK**.
+
+## More information
+
+[About the Network Access Account](/mem/configmgr/core/plan-design/hierarchy/accounts#network-access-account)
