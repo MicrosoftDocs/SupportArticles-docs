@@ -30,10 +30,6 @@ On a Windows Vista-based or Windows 7-based client computer, you can still acces
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
 [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
 
-If you prefer to fix this problem yourself, go to the "[Let me fix it myself](#let-me-fix-it-myself)" section.
-
-### Let me fix it myself
-
 To resolve this problem, reinitialize the cache of offline files. To do this, follow these steps:
 
 1. Click **Start**, type *regedit* in the **Start Search** box, and then press Enter.
@@ -68,8 +64,7 @@ REG ADD "HKLM\System\CurrentControlSet\Services\CSC\Parameters" /v FormatDatabas
 
 ### Did this fix the problem?
 
-- Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus/).
-- We would appreciate your feedback. To provide feedback or to report any issues with this solution, please leave a comment on the "[Fix it for me](https://support.microsoft.com/help/2970908/)" blog or send us an [email](mailto:fixit4me@microsoft.com?subject=kb).
+Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus/).
 
 ## Status
 
