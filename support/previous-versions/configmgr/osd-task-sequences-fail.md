@@ -83,7 +83,7 @@ To resolve the issue, the ConfigMgr 2007 site will need to be reinstalled from s
 
 7. Perform a site reset on the server.
 
-8. Once the site reset is complete, in the ConfigMgr 2007 Admin console, navigate to **Site Management** \> **<Site_Code>** > **Site Settings** > **Client Agents**. In the right-hand pane, right-click **Computer Client Agent** and choose **Properties**.
+8. Once the site reset is complete, in the ConfigMgr 2007 Admin console, navigate to **Site Management** > **<Site_Code>** > **Site Settings** > **Client Agents**. In the right-hand pane, right-click **Computer Client Agent** and choose **Properties**.
 
 9. In the **Computer Client Agent Properties** window, select the **General** tab and examine the account being used under the **Network Access Account** section. Make sure that the account being used is noted and that the password for the account is known.
 
