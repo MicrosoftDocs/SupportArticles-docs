@@ -18,7 +18,7 @@ ms.technology: windows-troubleshooters
 This article provides a list of active and retired troubleshooters for Windows 10, including a description of what the troubleshooter does, the problem that it addresses, and which devices it applies to. To learn more about troubleshooters, see [keep your device running smoothly with recommended troubleshooting](https://support.microsoft.com/help/4487232/).
 
 ## Files On-Demand troubleshooter
-- Text displayed in Settings:  
+Text displayed in Settings:  
 You may have lost access to your Files On-Demand. This troubleshooter restores access or prevents the loss of access from happening in the near future. Important: Please reboot your device once the troubleshooter is finished.
 
 ### Description
@@ -29,11 +29,11 @@ Devices that successfully ran the "Hardware and Devices" troubleshooter will be 
 
 |Activation date|Retirement date|More information|
 |---|---|---|
-|9/30/20|\-|[https://aka.ms/AA8vtwr](https://aka.ms/AA8vtwr)|
+|6/30/2020|9/30/2020|[https://aka.ms/AA8vtwr](https://aka.ms/AA8vtwr)|
 
 ## Hardware and Devices troubleshooter
 
-- Text displayed in Settings:
+Text displayed in Settings:
 Automatically repair system files and settings to fix a problem on your device.
 
 ### Description
@@ -48,11 +48,11 @@ This troubleshooter runs automatically on devices that meet the following criter
 
 |Activation date|Retirement date|More information|
 |---|---|---|
-|9/30/20|\-|[https://aka.ms/AA8vtwr](https://aka.ms/AA8vtwr)|
+|6/30/2020|9/30/2020|[https://aka.ms/AA8vtwr](https://aka.ms/AA8vtwr)|
 
 ## Storage Spaces cleanup troubleshooter
 
-- Text displayed in Settings:  
+Text displayed in Settings:  
 Automatically restore your previous settings and environment for Storage Spaces.
 
 ### Description
@@ -66,11 +66,11 @@ Successfully ran the "Hardware and Devices" or "Storage Spaces" troubleshooter
 
 |Activation date|Retirement date|More information|
 |---|---|---|
-|7/30/2020|\-|[https://aka.ms/AA8uojg](https://aka.ms/AA8uojg)|
+|7/30/2020|10/30/2020|[https://aka.ms/AA8uojg](https://aka.ms/AA8uojg)|
 
 ## Storage space troubleshooter
 
-- Text displayed in Settings:  
+Text displayed in Settings:  
 Data corruption was detected on your parity storage space. This troubleshooter takes actions to prevent further corruption. It also restores write access if the space was previously marked read-only. For more information and recommended actions please see the link below.
 
 ### Description
@@ -84,11 +84,11 @@ Successfully ran the "Hardware and Devices" or "Storage Spaces" troubleshooter.
 
 |Activation date|Retirement date|More information|
 |---|---|---|
-|10/2/2020|\-|[https://aka.ms/AA8uojg](https://aka.ms/AA8uojg)|
+|7/2/2020|10/2/2020|[https://aka.ms/AA8uojg](https://aka.ms/AA8uojg)|
 
 ## Hardware and Devices troubleshooter
 
-- Text displayed in Settings:  
+Text displayed in Settings:  
 Automatically change system settings to fix a problem on your device.
 
 ### Description
@@ -104,11 +104,11 @@ The first time, the troubleshooter runs automatically. The second time, it notif
 
 |Activation date|Retirement date|More information|
 |---|---|---|
-|9/26/2020|\-|[https://aka.ms/AA8uojg](https://aka.ms/AA8uojg)|
+|6/26/2020|9/26/2020|[https://aka.ms/AA8uojg](https://aka.ms/AA8uojg)|
 
 ## Windows Update troubleshooter
 
-- Text displayed in Settings:  
+Text displayed in Settings:  
 Automatically change system settings to fix a problem on your device.
 
 ### Description
