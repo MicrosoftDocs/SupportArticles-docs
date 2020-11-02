@@ -38,7 +38,7 @@ To work around this issue, use one of the following methods.
 
 Cumulative Update 9 for Exchange Server 2013 introduced a new feature that lets administrators configure the Sent Items folder to which a message is copied. For more information, see [Exchange Blog - Want more control over Sent Items when using shared mailboxes?](https://techcommunity.microsoft.com/t5/exchange-team-blog/want-more-control-over-sent-items-when-using-shared-mailboxes/ba-p/611106)
 
-Using [Exchange PowerShell](/powershell/exchange/?view=exchange-ps), for emails Sent As the shared mailbox, run the following cmdlet:
+Using [Exchange PowerShell](/powershell/exchange/?view=exchange-ps&preserve-view=true), for emails Sent As the shared mailbox, run the following cmdlet:
 
 ```powershell
 set-mailbox <mailbox name> -MessageCopyForSentAsEnabled $True
