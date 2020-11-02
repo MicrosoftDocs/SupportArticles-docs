@@ -30,7 +30,7 @@ The **Advanced** and **API Access** options do not appear in the navigation pane
 
 ## Cause
 
-These options may not available if an app catalog site is created and registered on the tenant incorrectly.
+These options may not available if an app catalog site is not created or is incorrectly registered on the tenant.
 
 ## Resolution
 
@@ -42,6 +42,9 @@ To resolve this issue, follow these steps:
 3.	Select **App Catalog**, and then select **Create a new app catalog site**. Enter the necessary information, including title, URL, and administrator, as appropriate.
 
     :::image type="content" source="media/api-access-does-not-appear/api-access-does-not-appear-2.png" alt-text="In the App Catalog Site, create a new app catalog.":::
+
+    > [!note]
+    > If you have already created an app catalog site, proceed to step 7. 
 4.	Copy the URL of the app catalog site, and save it to a separate location (such as Notepad, a Word doc, or another program). 
 5.	Wait for the site to finish provisioning.
 Note: This process may take up to 10 minutes.
