@@ -48,6 +48,8 @@ There are currently nine diagnostics covering various areas within Sharepoint an
 7.	**Site collection deletion**. Diagnose issues that may occur during the deletion of a site.
 8.	**Modernization**. Evaluates whether a view can be rendered in Modern mode.
 9.	**Access denied to a site or the web**. Diagnose permission-related issues when accessing a site or the web.
+10. **Unable to synchronize OneDrive with a sync client**. Validates that the document library is configured properly to allow synchronization of files.
+11. **Unable to synchornize a SharePoint Document Library with sync client**. Validates that the OneDrive library can be synchronized via the sync client.
 
 ### How do I run these diagnostics?
 
@@ -77,6 +79,8 @@ Currently, these diagnostics are only available for administrators and can be ac
     - Diag: Site Collection Deletion
     - Diag: Classic View to Modern
     - Diag: Access Denied to Site
+    - Diag: OneDrive Sync
+    - Diag: Library Sync
 
 ## Location of diagnostics 
 
