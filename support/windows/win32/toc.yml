@@ -113,6 +113,8 @@
       href: evtformatmessage-formatted-string-event.md
     - name: Guidelines for dates and times handling
       href: handle-dates-and-times-dst.md
+    - name: MSXML is not supported in .NET applications
+      href: msxml-not-support-dotnet-application.md
     - name: SetSystemTimeAdjustment loses adjustments
       href: setsystemtimeadjustment-less-than-16.md
     - name: Troubleshoot errors in Event Viewer
