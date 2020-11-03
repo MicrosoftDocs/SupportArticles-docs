@@ -121,7 +121,7 @@ To resolve scenarios 4 and 5, Microsoft provides the following script to help ch
 #
 # PowerShell Source Code
 #
-aram([Parameter(Mandatory = $false)]
+param([Parameter(Mandatory = $false)]
 [string]$TenantCloudDomain,
 [Parameter(Mandatory = $false)]
 [string]$Domain,
