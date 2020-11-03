@@ -10,7 +10,7 @@ ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot
-- `Associated content asset:` 4555317
+- 'Associated content asset: 4555317'
 ms.reviewer: benjak
 appliesto: 
 - Microsoft Business Productivity Online Dedicated

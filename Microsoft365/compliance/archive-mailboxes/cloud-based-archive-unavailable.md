@@ -10,7 +10,7 @@ ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot
-- `Associated content asset:` 4555324
+- 'Associated content asset: 4555324'
 ms.reviewer: chrisbur, jhayes
 appliesto: 
 - Exchange Online Archiving
