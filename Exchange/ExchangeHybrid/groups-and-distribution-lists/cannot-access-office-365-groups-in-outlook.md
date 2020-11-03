@@ -46,6 +46,6 @@ Set-UnifiedGroup Alias -PrimarySmtpAddress <Office365GroupName>@contoso.mail.onm
 
 ## More information
 
-For more information, see [Manage Office 365 Groups with PowerShell](/microsoft-365/enterprise/manage-microsoft-365-groups-with-powershell?view=o365-worldwide).
+For more information, see [Manage Office 365 Groups with PowerShell](/microsoft-365/enterprise/manage-microsoft-365-groups-with-powershell?view=o365-worldwide&preserve-view=true).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

@@ -43,6 +43,6 @@ The Exchange admin center lists the domains that you added to your account throu
 
 For more information about accepted domains, see [Accepted domains in Exchange Server](/Exchange/mail-flow/accepted-domains/accepted-domains)
 
-For more information about hybrid deployment, see [Exchange Server Deployment Assistant](/exchange/exchange-deployment-assistant?view=exchserver-2019)
+For more information about hybrid deployment, see [Exchange Server Deployment Assistant](/exchange/exchange-deployment-assistant?view=exchserver-2019&preserve-view=true)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

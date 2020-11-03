@@ -48,7 +48,7 @@ To troubleshoot preauthentication issues on a perimeter device, see [Configure F
 
 ### Firewall is blocking required IP addresses from accessing on-premises servers
 
-Review the IP address and URL requirements for Office 365 at [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide).
+Review the IP address and URL requirements for Office 365 at [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide&preserve-view=true).
 
 ### You have an internal DNS domain that's configured to block forwarding
 

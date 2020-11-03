@@ -56,7 +56,7 @@ If you have an Exchange Server 2013 hybrid server, use the `Set-RemoteDomain` cm
 - Set-RemoteDomain Contoso -AllowedOOFType External
 - Set-RemoteDomain Contoso -AllowedOOFType ExternalLegacy
 
-For more information about the `Set-RemoteDomain` cmdlet, see [Set-RemoteDomain](/powershell/module/exchange/set-remotedomain?view=exchange-ps).
+For more information about the `Set-RemoteDomain` cmdlet, see [Set-RemoteDomain](/powershell/module/exchange/set-remotedomain?view=exchange-ps&preserve-view=true).
 
 For more information about how to configure this setting in Exchange Server 2013, see [Configure remote domain out-of-office replies](/exchange/configure-remote-domain-out-of-office-replies-exchange-2013-help).
 

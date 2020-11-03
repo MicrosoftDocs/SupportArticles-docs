@@ -47,7 +47,7 @@ To do this, follow these steps:
 
 1. Retrieve the values of the attributes from Exchange Online. To do this, follow these steps:
    1. Connect to Exchange Online by using remote Windows PowerShell. For more information, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
-   2. Run the [Get-Mailbox](/powershell/module/exchange/get-mailbox?view=exchange-ps) cmdlet to retrieve the values for these attributes from Exchange Online.
+   2. Run the [Get-Mailbox](/powershell/module/exchange/get-mailbox?view=exchange-ps&preserve-view=true) cmdlet to retrieve the values for these attributes from Exchange Online.
    3. Examine the output, and note the values that are returned for the `ResourceCapacity` and `ResourceCustom` properties.
 2. Use the values that you obtained in step 1 to update the `msExchResourceCapacity` and `msExchResourceDisplay` attributes of the objects in the on-premises Active Directory.
 

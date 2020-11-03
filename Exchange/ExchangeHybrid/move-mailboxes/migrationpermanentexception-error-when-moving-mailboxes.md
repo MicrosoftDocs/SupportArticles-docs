@@ -55,7 +55,7 @@ After you run the command, perform the mailbox move request.
 
 ## More information
 
-For more information about the `Set-Mailbo`x cmdlet and the `ImListMigrationCompleted` parameter, see [Set-Mailbox](/powershell/module/exchange/set-mailbox?view=exchange-ps).
+For more information about the `Set-Mailbo`x cmdlet and the `ImListMigrationCompleted` parameter, see [Set-Mailbox](/powershell/module/exchange/set-mailbox?view=exchange-ps&preserve-view=true).
 
 If you experience issues when you move mailboxes to Exchange Online in Office 365, you can run the Troubleshoot Office 365 Mailbox Migration tool. This diagnostic is an automated troubleshooting tool. If you're experiencing a known issue, you receive a message that states what went wrong. The message includes a link to an article that contains the solution. Currently, the tool is supported only in Internet Explorer.
 

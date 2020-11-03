@@ -36,7 +36,7 @@ The external URL is not set up for Exchange Web Services.
 Configure the Exchange Web Services external URL for the Autodiscover service. For more information about how to do this, see the following resources:
 
 - [Configure Exchange Services for the Autodiscover Service](/previous-versions/office/exchange-server-2010/bb201695(v=exchg.141))
-- [Set-WebServicesVirtualDirectory](/powershell/module/exchange/set-webservicesvirtualdirectory?view=exchange-ps)
+- [Set-WebServicesVirtualDirectory](/powershell/module/exchange/set-webservicesvirtualdirectory?view=exchange-ps&preserve-view=true)
 
 ## More information
 

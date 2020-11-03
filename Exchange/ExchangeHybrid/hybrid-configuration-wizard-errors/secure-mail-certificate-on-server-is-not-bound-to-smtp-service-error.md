@@ -42,7 +42,7 @@ The Simple Mail Transfer Protocol (SMTP) service is not bound to the correct cer
 
 Use the `Enable-ExchangeCertificate` cmdlet to bind the certificate to the SMTP service.
 
-For more information about this cmdlet, see [Enable-ExchangeCertificate](/powershell/module/exchange/enable-exchangecertificate?view=exchange-ps).
+For more information about this cmdlet, see [Enable-ExchangeCertificate](/powershell/module/exchange/enable-exchangecertificate?view=exchange-ps&preserve-view=true).
 
 ## More information
 

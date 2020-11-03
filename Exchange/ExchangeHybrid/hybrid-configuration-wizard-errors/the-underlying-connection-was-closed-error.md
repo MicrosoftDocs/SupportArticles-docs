@@ -38,7 +38,7 @@ This can occur if proxy settings are configured incorrectly. For example, this c
 
 ## Resolution
 
-1. Configure the settings on the proxy server to allow access to the endpoints that are used by the service. For a list of IP addresses and URLs that are used by Microsoft Exchange Online, see the Exchange Online section of [Office 365 URLs and IP addresses](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#bkmk_exo).
+1. Configure the settings on the proxy server to allow access to the endpoints that are used by the service. For a list of IP addresses and URLs that are used by Microsoft Exchange Online, see the Exchange Online section of [Office 365 URLs and IP addresses](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#bkmk_exo&preserve-view=true).
 
 2. Make sure that proxy settings are configured correctly on the Exchange servers in your environment by doing the following:
    1. Set the proxy in Internet Explorer.
@@ -49,7 +49,7 @@ This can occur if proxy settings are configured incorrectly. For example, this c
         Set-ExchangeServer NameOfServer -InternetWebProxy Http://proxyURL:Port
         ```
 
-       For more information, see [Set-ExchangeServer](/powershell/module/exchange/set-exchangeserver?view=exchange-ps).
+       For more information, see [Set-ExchangeServer](/powershell/module/exchange/set-exchangeserver?view=exchange-ps&preserve-view=true).
 3. Rerun the Hybrid Configuration wizard.
 
 ## More information

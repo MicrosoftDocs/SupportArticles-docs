@@ -9,7 +9,7 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- CSSTroubleshoot
 ms.reviewer: kellybos
 appliesto:
 - Exchange Online
@@ -35,7 +35,7 @@ In Microsoft Office 365, you can't add a security group or user to the permissio
 
 - When you select **Apply** or **OK** and then return to the **Permissions** tab, the user or security group is no longer listed:
 
-  :::image type="content" source="media/cannot-add-permissions-to-user-or-room-mailbox-in-another-forest/permissions-tab-with-no-user-or-security-group.png" alt-text="screenshot of the permissions tab":::
+  :::image type="content" source="media/cannot-add-permissions-to-user-or-room-mailbox-in-another-forest/permissions-tab-with-no-user-or-security-group.png" alt-text="screenshot of the permissions tab 2":::
 
 > [!NOTE]
 > This issue can be reproduced if the room mailbox is on-premises and the user is in Exchange Online. This issue also occurs if the room mailbox was moved to Exchange Online and the user has a mailbox on-premises.
@@ -52,7 +52,7 @@ This issue occurs if the mailbox account isn't added to the profile correctly. T
 
 To work around this issue, use one of the following methods:
 
-- Add folder-level permissions to a room mailbox by using the [Add-MailboxFolderPermission](/powershell/module/exchange/add-mailboxfolderpermission?view=exchange-ps) cmdlet.
+- Add folder-level permissions to a room mailbox by using the [Add-MailboxFolderPermission](/powershell/module/exchange/add-mailboxfolderpermission?view=exchange-ps&preserve-view=true) cmdlet.
 - A user in the same forest as the room mailbox can add permissions in Outlook.
 
 If the mailbox is a user or a shared mailbox, add the mailbox as an additional email account. To do this, follow these steps:
