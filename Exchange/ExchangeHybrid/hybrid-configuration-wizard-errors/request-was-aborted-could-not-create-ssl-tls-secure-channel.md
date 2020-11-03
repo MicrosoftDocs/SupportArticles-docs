@@ -1,0 +1,61 @@
+---
+title: Could not create SSL/TLS secure channel error
+description: Describes an issue in which you receive a Could not create SSL/TLS secure channel error when running Hybrid Configuration wizard.
+author: simonxjx
+ms.author: v-six
+manager: dcscontentpm
+audience: ITPro
+ms.topic: troubleshooting
+ms.prod: exchange-server-it-pro
+localization_priority: Normal
+ms.custom: 
+  - CSSTroubleshoot
+ms.reviewer: scotro
+appliesto:
+- Exchange Online
+- Exchange Server 2013 Standard Edition
+- Exchange Server 2013 Enterprise
+search.appverid: MET150
+---
+# Could not create SSL/TLS secure channel error when running Hybrid Configuration wizard
+
+_Original KB number:_ &nbsp; 3067292
+
+## Symptoms
+
+You want to set up a hybrid deployment between your on-premises Microsoft Exchange Server organization and Microsoft Exchange Online in Microsoft 365. However, when you run the Hybrid Configuration wizard, the wizard doesn't complete successfully, and you receive a **The request was aborted: Could not create SSL/TLS secure channel** error message. The full text of the message resembles the following:
+
+> ERROR:Updating hybrid configuration failed with error 'Subtask Configure execution failed: Creating Organization Relationships.  
+Execution of the Set-FederatedOrganizationIdentifier cmdlet had thrown an exception. This may indicate invalid parameters in your Hybrid Configuration settings.  
+An error occurred while attempting to provision Exchange to the Partner STS. Detailed Information: "An error occurred accessing Windows Live." Detailed information: ""The request was aborted: Could not create SSL/TLS secure channel.""."".  
+at Microsoft.Exchange.Management.Hybrid.RemotePowershellSession.RunCommand(String cmdlet, Dictionary`2 parameters, Boolean ignoreNotFoundErrors)
+
+## Cause
+
+This issue can occur if firewall settings or proxy server settings are configured incorrectly.
+
+## Resolution
+
+1. Configure the settings on the proxy server to allow access to the endpoints that are used by the service. For a list of IP addresses and URLs that are used by Exchange Online, see the Exchange Online section of [Office 365 URLs and IP addresses](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#bkmk_exo&preserve-view=tru).
+
+2. Make sure that proxy settings are configured correctly on the Exchange servers in your environment by doing the following:
+
+   1. Set the proxy in Internet Explorer.
+   2. Set the proxy by using the netsh command-line tool. For more information, see [Netsh Commands in for Windows Hypertext Transfer Protocol](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10)).
+   3. Set the proxy by using the `Set-ExchangeServer` cmdlet. For example, run the following command:
+
+        ```powershell
+        Set-ExchangeServer NameOfServer -InternetWebProxy Http://proxyURL:Port
+        ```
+
+        For more information, see [Set-ExchangeServer](/powershell/module/exchange/set-exchangeserver).
+
+3. Rerun the Hybrid Configuration wizard.
+
+If issue persists, contact [Microsoft Support](https://support.microsoft.com/contactus/), and reference this article.
+
+## More information
+
+If you experience issues with the Hybrid Configuration wizard, you can run the [Exchange Hybrid Configuration Diagnostic](https://aka.ms/hcwcheck). This diagnostic is an automated troubleshooting experience. Run it on the same server on which the Hybrid Configuration wizard failed. Doing this collects the Hybrid Configuration wizard logs and parses them for you. If you're experiencing a known issue, a message is displayed that tells you what went wrong. The message includes a link to an article that contains the solution. Currently, the diagnostic is supported only in Internet Explorer.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
