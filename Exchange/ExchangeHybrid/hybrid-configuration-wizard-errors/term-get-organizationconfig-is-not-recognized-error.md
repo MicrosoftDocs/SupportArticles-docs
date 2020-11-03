@@ -1,0 +1,54 @@
+---
+title: The term Get-OrganizationConfig is not recognized
+description: Describes that you receive a Get-OrganizationConfig is not recognized error when you run the Hybrid Configuration wizard to set up a hybrid deployment between your on-premises Exchange Server environment and Exchange Online.
+author: simonxjx
+ms.author: v-six
+manager: dcscontentpm
+audience: ITPro
+ms.topic: troubleshooting
+ms.prod: exchange-server-it-pro
+localization_priority: Normal
+ms.custom: 
+  - CSSTroubleshoot
+ms.reviewer: scotro
+appliesto:
+- Exchange Online
+- Exchange Server 2013 Enterprise
+- Exchange Server 2013 Standard Edition
+search.appverid: MET150
+---
+# The term Get-OrganizationConfig is not recognized error when you run the Hybrid Configuration wizard
+
+_Original KB number:_ &nbsp; 3067676
+
+## Symptoms
+
+You want to set up a hybrid deployment between your on-premises Microsoft Exchange Server organization and Exchange Online in Office 365. However, when you run the Hybrid Configuration wizard, the wizard doesn't complete successfully, and you receive a **Get-OrganizationConfig is not recognized** error message. The full text of this message resembles the following:
+
+> ERROR : Subtask CheckPrereqs execution failed: Check Tenant Prerequisites  
+Execution of the Get-OrganizationConfig cmdlet has thrown an exception. This may indicate invalid parameters in your hybrid configuration settings.  
+The term 'Get-OrganizationConfig' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.  
+at System.Management.Automation.PowerShell.CoreInvokeRemoteHelper[TInput,TOutput](PSDataCollection\`1 input, PSDataCollection\`1 output, PSInvocationSettings settings)  
+at System.Management.Automation.PowerShell.CoreInvoke[TInput,TOutput](PSDataCollection\`1 input, PSDataCollection\`1 output, PSInvocationSettings settings)  
+at System.Management.Automation.PowerShell.CoreInvoke[TOutput](IEnumerable input, PSDataCollection\`1 output, PSInvocationSettings settings)  
+at System.Management.Automation.PowerShell.Invoke(IEnumerable input, PSInvocationSettings settings)  
+at Microsoft.Exchange.Management.Hybrid.RemotePowershellSession.RunCommand(String cmdlet, SessionParameters parameters, Boolean ignoreNotFoundErrors)
+
+## Cause
+
+The Hybrid Configuration wizard depends on the availability of an Office 365 plan that can access the `Get-HybridMailflowDatacenterIPs` cmdlet. The error message indicates that the subscriptions that you currently have can't access this cmdlet.
+
+## Workaround
+
+Add a trial subscription of Office 365 Enterprise E3 to your account. After you add the Office 365 Enterprise E3 plan, the Hybrid Configuration wizard will complete successfully. To add a trial subscription, follow these steps:
+
+1. Sign in to the [Office 365 portal](https://www.office.com/?auth=2).
+2. Select **Admin** to open the Office 365 admin center.
+3. In the navigation pane, expand **Billing**, select **Subscriptions**, and then select **New Subscription**.
+4. Under **Office 365 Enterprise E3**, select **Trial**, and then follow the steps that are displayed on the screen.For more help to work around this issue, contact [Microsoft Support](https://support.microsoft.com/contactus/).
+
+## More information
+
+If you experience issues with the Hybrid Configuration wizard, you can run the [Exchange Hybrid Configuration Diagnostic](https://aka.ms/hcwcheck). This diagnostic is an automated troubleshooting experience. Run it on the same server on which the Hybrid Configuration wizard failed. Doing this collects the Hybrid Configuration wizard logs and parses them for you. If you're experiencing a known issue, a message is displayed that tells you what went wrong. The message includes a link to an article that contains the solution. Currently, the diagnostic is supported only in Internet Explorer.
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Q&A](/answers/products/?WT.mc_id=msdnredirect-web-msdn).
