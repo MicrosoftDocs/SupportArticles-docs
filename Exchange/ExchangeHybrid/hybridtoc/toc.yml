@@ -3,8 +3,6 @@
   items:
   - name: Administration
     items:
-    - name:  Mail user who has proxy addresses isn't synced
-      href: ../administration/mail-user-who-has-proxy-addresses-that-use-non-verified-domains-not-synced.md
     - name: Can't add and verify a domain in hybrid
       href: ../administration/cannot-add-and-verify-domain.md
     - name: Cookies are disabled when clicking hybrid
@@ -13,6 +11,8 @@
       href: ../administration/delay-when-outlook-retrieves-autodiscover-information.md
     - name: Invalid Product Key when activating
       href: ../administration/invalid-product-key-error-when-activating-hybrid-edition-of-exchange-2013.md
+    - name: Mail user who has proxy addresses isn't synced
+      href: ../administration/mail-user-who-has-proxy-addresses-that-use-non-verified-domains-not-synced.md
     - name: Missing certificate from Hybrid Configuration Wizard
       href: ../administration/missing-certificate-on-the-last-page-of-hybrid-configuration-wizard.md
     - name: OAuth authentication configuration fails
