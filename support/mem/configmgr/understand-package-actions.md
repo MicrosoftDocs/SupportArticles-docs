@@ -9,7 +9,6 @@ ms.prod-support-area-path:
 This article helps you understand package actions in content distribution.
 
 _Original product version:_ &nbsp; Configuration Manager current branch, Microsoft System Center 2012 Configuration Manager, Microsoft System Center 2012 R2 Configuration Manager  
-_Original KB number:_ &nbsp; 4482728
 
 ## Introduction
 
