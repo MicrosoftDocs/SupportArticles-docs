@@ -80,9 +80,6 @@
     href: start-vm-last-known-good.md
   - name: Swap file is not re-created
     href: swap-file-not-recreated-linux-vm-restart.md
-  - name: WSUS client computers restart without any notification
-    href: wsus-client-computers-restart-automatically.md
-
 
 - name: VM extension issues
   items:

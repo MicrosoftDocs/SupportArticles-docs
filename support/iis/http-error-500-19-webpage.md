@@ -24,13 +24,31 @@ Error message:
 > Description of HRESULT  
 > The requested page cannot be accessed because the related configuration data for the page is invalid.
 
-### Cause for HResult code 0x8007000d
+Cause
 
 This problem occurs because the *ApplicationHost.config* file or the *Web.config* file contains a malformed XML element.
 
-### Resolution for HResult code 0x8007000d
+Resolution
 
 Delete the malformed XML element from the *ApplicationHost.config* file or from the *Web.config* file.
+
+## HResult code 0x80070021
+
+Error message:
+
+> Server Error in Application "application name"  
+> HTTP Error 500.19 – Internal Server Error  
+> HRESULT: 0x80070021  
+> Description of HRESULT  
+> The requested page cannot be accessed because the related configuration data for the page is invalid.
+
+Cause
+
+This problem can occur when the specified portion of the IIS configuration file is locked at a higher configuration level.
+
+Resolution
+
+To resolve this problem, unlock the specified section, or do not use it at that level. For more information on configuration locking, see [How to Use Locking in IIS 7.0 Configuration](/iis/get-started/planning-for-security/how-to-use-locking-in-iis-configuration).
 
 ## HResult code 0x80070005
 
@@ -42,14 +60,14 @@ Error message:
 > Description of HRESULT  
 The requested page cannot be accessed because the related configuration data for the page is invalid.
 
-### Cause for HResult code 0x80070005
+Cause
 
 This problem occurs for one of the following reasons:
 
 - You're using IIS on a computer that is running Windows. Additionally, you configure the Web site to use UNC Pass-through authentication to access a remote Universal Naming Convention (UNC) share.
 - The IIS_IUSRS group doesn't have the appropriate permissions for the *ApplicationHost.config* file, for the *Web.config* file, or for the virtual/application directories of IIS.
 
-### Resolution for HResult code 0x80070005
+Resolution
 
 To resolve this problem, use one of the following methods:
 
@@ -92,11 +110,11 @@ Error message:
 > Description of HResult  
 > The requested page cannot be accessed because the related configuration data for the page is invalid.
 
-### Cause for HResult code 0x800700b7
+Cause
 
 This problem may occur if there's a duplicate entry for the specified configuration section setting at a higher level in the configuration hierarchy (for example, in a parent site/folder's *Web.Config* or *ApplicationHost.Config* file). The error message itself points out the location of duplicate entry or entries.
 
-### Resolution for HResult code 0x800700b7
+Resolution
 
 Examine the specified configuration file and compare it with its parent *ApplicationHost.Config* and/or *Web.Config* files to check for duplicate entries as suggested by the error message. Either remove the duplicate entry, or make the entry unique. For example, this problem may occur because the *ApplicationHost.Config* file has a duplicate entry for the following code.
 
@@ -129,11 +147,11 @@ Error message:
 > Description of HResult  
 > The requested page cannot be accessed because the related configuration data for the page is invalid.
 
-### Cause for HResult code 0x8007007e
+Cause
 
 This problem occurs because the *ApplicationHost.config* file or the *Web.config* file references a module or a DLL that is invalid or that does not exist.
 
-### Resolution for HResult code 0x8007007e
+Resolution
 
 In the *ApplicationHost.config* file or in the *Web.config* file, locate the module reference or the DLL reference that is invalid, and then fix the reference. To determine which module reference is incorrect, enable Failed Request Tracing, and then reproduce the problem.
 
@@ -147,11 +165,11 @@ Error message:
 > Description of HRESULT  
 > The requested page cannot be accessed because the related configuration data for the page is invalid.
 
-### Cause for HResult code 0x800700c1
+Cause
 
 This problem can occur if the bitness of the specified module is different than that of the application pool hosting the application. For example, you are attempting to load a 32-bit component into a 64-bit application pool. This problem may also occur if the specified module is corrupted.
 
-### Resolution for HResult code 0x800700c1
+Resolution
 
 Ensure that the specified module's bitness is the same as the hosting application pool, and make sure that the module is not corrupt.
 
@@ -165,11 +183,11 @@ Error message:
 > Description of HRESULT  
 > The requested page cannot be accessed because the related configuration data for the page is invalid.
 
-### Cause for HResult code 0x8007010b
+Cause
 
 This problem can occur if the specified content directory cannot be accessed.
 
-### Resolution for HResult code 0x8007010b
+Resolution
 
 Verify that the file path exists, is properly named, has correct file-level permissions set, and is pointing to a valid file system type. If you are not sure what the file path is, use the Process Monitor tool or Failed Request Tracing to identify it.
 
@@ -183,24 +201,6 @@ Error message:
 > Description of HRESULT  
 The requested page cannot be accessed because the related configuration data for the page is invalid.
 
-### Cause for HResult code 0x8007052e
+Cause
 
 The default process identity in IIS does not have sufficient permissions to open the *Web.config* file on a remote share.
-
-## HResult code 0x80070021
-
-Error message:
-
-> Server Error in Application "application name"  
-> HTTP Error 500.19 – Internal Server Error  
-> HRESULT: 0x80070021  
-> Description of HRESULT  
-> The requested page cannot be accessed because the related configuration data for the page is invalid.
-
-### Cause for HResult code 0x80070021
-
-This problem can occur when the specified portion of the IIS configuration file is locked at a higher configuration level.
-
-### Resolution for HResult code 0x80070021
-
-To resolve this problem, unlock the specified section, or do not use it at that level. For more information on configuration locking, see [How to Use Locking in IIS 7.0 Configuration](/iis/get-started/planning-for-security/how-to-use-locking-in-iis-configuration).
