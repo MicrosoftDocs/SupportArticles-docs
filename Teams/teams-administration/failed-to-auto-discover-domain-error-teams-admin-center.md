@@ -59,9 +59,9 @@ If there is an Office 365 E5 plan, expand the available products list, and then 
 
 This fix can take 24 hours for synchronization to take effect.
 
-### IP and URLs are not whitelisted
+### IP and URLs are not allowed
 
-To resolve this issue, follow the guidance in [Skype for Business Online and Microsoft Teams](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams) to allow (or whitelist) IPs and URLs that are required for Teams portal access.​
+To resolve this issue, follow the guidance in [Skype for Business Online and Microsoft Teams](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams) to allow (or allowlist) IPs and URLs that are required for Teams portal access.​
 
 ### A Skype for Business hybrid connection is not set up for Skype for Business on-premises and Teams interoperability (hybrid configuration only)
 
