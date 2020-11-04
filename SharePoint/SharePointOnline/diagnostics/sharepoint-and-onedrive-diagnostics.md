@@ -77,5 +77,4 @@ Currently, these diagnostics are only available for administrators and can be ac
 
 Microsoft would like to store these diagnostics in a new area and realize that having them behind the “Service Request” section is not ideal. We look forward to any and all feedback regarding these scenarios. Feel free to leave a comment on the current state of these tools or any features you would like to see.
 
-
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
