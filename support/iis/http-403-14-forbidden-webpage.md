@@ -1,12 +1,12 @@
 ---
 title: HTTP Error 403.14 when you open IIS webpages
-description: This article provides resolutions for HTTP Error 403.14 that occurs when you visit a Web site that is hosted on IIS 7.0.
+description: This article provides resolutions for HTTP Error the web server is configured to not list the contents of this directory that occurs when you visit a Web site.
 ms.date: 04/16/2020
 ms.prod-support-area-path: Health, diagnostic, and performance features
 ---
 # HTTP Error 403.14 - Forbidden when you open an IIS Webpage
 
-This article helps you resolve the error (HTTP Error 403.14 - Forbidden) that occurs when you open a Microsoft Internet Information Services (IIS) Webpage.
+This article helps you resolve the error `HTTP Error 403.14 - Forbidden the web server is configured to not list the contents of this directory` that occurs when you open a Microsoft Internet Information Services (IIS) Webpage.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0 and later versions  
 _Original KB number:_ &nbsp; 942062
@@ -31,7 +31,7 @@ If you are an end user, you should contact the website administrators in order t
 
 This problem occurs because the Web site does not have the Directory Browsing feature enabled, and the default document is not configured. To resolve this problem, use one of the following methods:
 
-### Method 1: Enable the Directory Browsing feature in IIS (Recommended)
+**Method 1: Enable the Directory Browsing feature in IIS (Recommended)**
 
 To resolve this problem, follow these steps:
 
@@ -40,7 +40,7 @@ To resolve this problem, follow these steps:
 3. In the **Features** view, double-click **Directory Browsing**.
 4. In the **Actions** pane, select **Enable**.
 
-### Method 2: Add a default document
+**Method 2: Add a default document**
 
 To resolve this problem, follow these steps:
 
@@ -50,7 +50,7 @@ To resolve this problem, follow these steps:
 4. In the **Actions** pane, select **Enable**.
 5. In the **File Name** box, type the name of the default document, and then select **OK**.
 
-### Method 3: Enable the Directory Browsing feature in IIS Express
+**Method 3: Enable the Directory Browsing feature in IIS Express**
 
 > [!NOTE]
 > This method is for the web developers who experience the issue when they use IIS Express.

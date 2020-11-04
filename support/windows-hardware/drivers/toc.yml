@@ -29,6 +29,8 @@
     href: sha2-not-supported.md
   - name: System Restore is unable to complete Restoration
     href: system-restore-not-complete-restoration.md
+  - name: Target server that has AMD processor and CISCO VIC cannot start if KDNET debugging is enabled
+    href: target-server-amd-proc-cisco-vic-cannot-start-during-kdnet.md
   - name: Volume Copy Service Provider is absent
     href: volume-copy-service-provider-absent.md
   - name: WEDU reoffers downloaded updates

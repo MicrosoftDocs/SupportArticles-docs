@@ -21,10 +21,6 @@ _Original KB number:_ &nbsp; 928957
 
     This download installs the service pack for Microsoft Visual Studio 2005 Standard, Professional, Team Editions.
 
-- [Microsoft® Visual Studio® 2005 Team Foundation Server Service Pack 1](https://www.microsoft.com/download/details.aspx?id=15789)
-
-    This download installs the service pack for Microsoft Visual Studio 2005 Team Foundation Server.
-
 - [Microsoft® Visual Studio® 2005 Express Editions Service Pack 1](https://www.microsoft.com/download/details.aspx?id=804)
 
     This download installs the service pack for Microsoft Visual Studio 2005 Express Editions.

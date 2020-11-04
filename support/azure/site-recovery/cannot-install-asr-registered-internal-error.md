@@ -23,7 +23,7 @@ When you try to install and register the Microsoft Azure Site Recovery Provider 
 
 The Azure Site Recovery Provider Setup log (located at *%PROGRAMDATA%\ASRLogs*) also contains an error that resembles the following:
 
-> RegistrationClient called with acsUrl https://eus2pod01rrp1users01.accesscontrol.windows.net/ relyingParty http://windowscloudbackup/m3 10:46:23:Exception while initializing RegisterActionProcessor: Threw Exception.Type: Microsoft.DisasterRecovery.Registration.DRRegistrationException, Exception.Message: Azure Site Recovery installation is incomplete. Please uninstall and reinstall again to proceed.
+> RegistrationClient called with acsUrl `https://eus2pod01rrp1users01.accesscontrol.windows.net/` relyingParty `http://windowscloudbackup/m3` 10:46:23:Exception while initializing RegisterActionProcessor: Threw Exception.Type: Microsoft.DisasterRecovery.Registration.DRRegistrationException, Exception.Message: Azure Site Recovery installation is incomplete. Please uninstall and reinstall again to proceed.
 
 ## Cause
 

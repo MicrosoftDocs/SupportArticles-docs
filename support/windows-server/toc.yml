@@ -2306,6 +2306,8 @@
       href: ./windows-security/event-id-27-kdc-errors.md
     - name: KDC event  16 or 27 if DES for Kerberos is disabled
       href: ./windows-security/kdc-event-16-27-des-encryption-disabled.md
+    - name: KDC service on an RODC can't start and generates error 1450
+      href: ./windows-security/kdc-service-on-rodc-cant-start-error-1450.md
     - name: Kerberos authentication fails when a user belongs to many groups
       href: ./windows-security/kerberos-authentication-problems-if-user-belongs-to-groups.md
     - name: Kerberos SPN is on wrong account
