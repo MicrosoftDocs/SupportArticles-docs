@@ -6,7 +6,7 @@ manager: dcscontentpm
 localization_priority: Normal
 ms.audience: Admin
 ms.topic: article
-ms.service: sharepoint-2010
+ms.service: sharepoint-powershell
 ms.custom: CSSTroubleshoot
 search.appverid:
 - SPO160

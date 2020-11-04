@@ -6,7 +6,7 @@ ms.author: kellybos
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
-ms.service: microsoft-teams
+ms.service: msteams
 localization_priority: Normal
 ms.custom: 
 - CI 121589

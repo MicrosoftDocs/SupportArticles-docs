@@ -6,7 +6,6 @@ author: McCoyBot
 manager: dcscontentpm
 ms.date: 8/27/2019
 audience: ITPro
-ms.service: skype
 ms.topic: article
 ms.prod: skype-for-business-itpro
 localization_priority: Normal
