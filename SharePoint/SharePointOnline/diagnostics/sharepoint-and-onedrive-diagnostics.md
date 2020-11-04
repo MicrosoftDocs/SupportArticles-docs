@@ -55,6 +55,9 @@ There are currently nine diagnostics covering various areas within Sharepoint an
 
 ### How do I run these diagnostics?
 
+> [!note]
+> You must be an M365 Administrator to run diagnostics.
+
 Currently, these diagnostics are only available for administrators and can be accessed through the service request section of the M365 Admin Center. To access this area, follow the steps below.
 
 1. Go to https://admin.microsoft.com.
