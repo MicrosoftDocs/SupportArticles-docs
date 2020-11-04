@@ -156,7 +156,7 @@ For support of Microsoft SQL Server, see the following Microsoft Knowledge Base 
 ### Microsoft System Center Configuration Manager
 
 Configuration Manager, current branch, is supported. 
-System Center Configuration Manager 2007 Service Pack 1 (both server and agents) and later versions are supported. For more information about support for Configuration Manager 2007, visit the following Microsoft website: [https://technet.microsoft.com/library/bb680717.aspx](https://technet.microsoft.com/library/bb680717.aspx) 
+System Center Configuration Manager 2007 Service Pack 1 (both server and agents) and later versions are supported.
 
 ### Microsoft System Center Data Protection Manager
 

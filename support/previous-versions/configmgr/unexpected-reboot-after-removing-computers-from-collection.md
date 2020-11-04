@@ -75,5 +75,3 @@ This behavior is by design in ConfigMgr 2007.
 In the current version of ConfigMgr 2007, we need to pay attention when moving computers between collections that have a maintenance window setting because the maintenance window setting means that the computers cannot perform change outside of the maintenance window.
 
 It's recommended that administrators follow the best practice of naming the collections in a specific manner (such as `MW-<window name>`), then the administrator know the collections that have a maintenance window and thus will not remove operations outside of the Maintenance window.
-
-For more information, see [Best Practice Recommendations](/previous-versions/system-center/configuration-manager-2007/bb694295(v=technet.10)#best-practice-recommendations).
