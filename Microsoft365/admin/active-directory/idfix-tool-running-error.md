@@ -5,7 +5,7 @@ author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.prod: offic 365
+ms.prod: office 365
 ms.topic: article
 ms.author: v-six
 ms.reviewer: v-chblod
