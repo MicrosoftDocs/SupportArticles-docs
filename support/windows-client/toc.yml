@@ -30,6 +30,8 @@
     items:
     - name: .NET Framework 3.5 installation errors
       href: ./application-management/dotnet-framework-35-installation-error.md
+    - name: Performance of System.Diagnostics.StackFrame degrades
+      href: ./application-management/system-diagnostics-stackframe-performance-degrades.md
   - name: 1st Party Applications
     items:
     - name: 64-bit versions of Windows don't support 16-bit applications
@@ -94,10 +96,16 @@
     items:
     - name: How to use System Restore to log on
       href: ./backup-and-storage/system-restore-log-on-lose-access-account.md
+    - name: System Restore fails with error 0x8007045b
+      href: ./backup-and-storage/system-restore-fail-error-0x8007045b.md
   - name: Volume Shadow Copy Service (VSS)
     items:
     - name: Event IDs for Volsnap
       href: ./backup-and-storage/e2e-event-ids-volsnap.md
+  - name: Partition and volume management
+    items:
+    - name: Event ID 8 is logged in Application log
+      href: ./backup-and-storage/event-id-8-in-application-log.md
 - name: Deployment
   items:
   - name: Activation
@@ -174,6 +182,10 @@
       href: ./deployment/uninstalling-driver-not-remove-associated-files.md
     - name: WSD devices icons show incorrectly
       href: ./deployment/icons-wsd-devices-incorrectly-devices-printers.md
+    - name: '"The operation timed out" error'
+      href: ./deployment/operation-timed-out-error-disk-management-console.md
+    - name: A high pitched noise is heard when using Bluetooth headphones
+      href: ./deployment/high-pitched-noise-is-heard.md
   - name: Power Management
     items:
     - name: Desktop wakes up unexpectedly from sleep or hibernation
@@ -200,8 +212,6 @@
       href: ./deployment/automatic-updates-cannot-download-updates-event-16.md
     - name: Cannot use the ImageX.exe tool for backup
       href: ./deployment/cannot-use-imagex-tool-backup.md
-    - name: Can't select the "Upgrade" option when installing Windows Vista
-      href: ./deployment/unavailable-upgrade-option-install-windows.md
     - name: Command-line switches for software update packages
       href: ./deployment/command-line-switches-deploy-update-packages.md
     - name: Command-line switches supported by Self-Extractor packages
@@ -252,6 +262,14 @@
       href: ./deployment/updates-automatically-downloaded.md
     - name: Windows Update hangs
       href: ./deployment/windows-update-hangs-updates-uninstalled.md
+    - name: In-place upgrade to Windows 10 problem
+      href: ./deployment/in-place-upgrade-to-windows-10-problems.md
+    - name: Restore missing Windows Installer cache files
+      href: ./deployment/missing-windows-installer-cache.md
+    - name: System Error 126 when you start TrustedInstaller
+      href: ./deployment/system-error-126-start-windows-modules-installer.md
+    - name: How to downgrade from Windows 8
+      href: ./deployment/downgrade-from-windows-8.md
   - name: Setup
     items:
     - name: .NET Framework 4.5.1 (web installer)
@@ -298,6 +316,18 @@
       href: ./deployment/windows-sim-unable-generate-catalog-error.md
     - name: WinRE can't be built after deploying an image
       href: ./deployment/winre-cannot-built-deploy-image-captured-non-uefi-computer.md
+    - name: Fail to upgrade Windows 10 Enterprise edition
+      href: ./deployment/contact-system-administrator-to-upgrade-windows.md
+    - name: Computer screen goes black during setup
+      href: ./deployment/computer-screen-black-during-installation.md
+    - name: Error 0x80042468 when creating a single partition
+      href: ./deployment/error-when-creating-single-partition.md
+    - name: You can't access an EFI system partition
+      href: ./deployment/cant-access-efi-system-partition.md
+    - name: Windows 7 Upgrade Advisor tool failed to run
+      href: ./deployment/upgrade-advisor-tool-failed-to-run.md
+    - name: Language packs no longer available
+      href: ./deployment/language-packs-no-longer-available-after-upgrade.md
 - name: Group Policy
   items:
   - name: AppLocker or software restriction policies
@@ -314,6 +344,8 @@
       href: ./group-policy/logon-scripts-not-run-for-long-time.md
     - name: Use Settings app Group Policy
       href: ./group-policy/use-settings-app-group-policy.md
+    - name: Can't disable Microsoft Store through Group Policy
+      href: ./group-policy/cannot-disable-microsoft-store.md
   - name: Problems applying Group Policy objects to users or computers
     items:
     - name: Can't open gpedit.msc after updating ADML and ADMX file
@@ -328,6 +360,8 @@
       href: ./group-policy/point-print-restrictions-policies-ignored.md
     - name: Save documents to OneDrive by default
       href: ./group-policy/save-documents-to-onedrive-by-default.md
+    - name: Disable screen saver passwords by using policies
+      href: ./group-policy/disable-screen-saver-passwords.md
 - name: High Availability
   items:
   - name: Nested Virtualization
@@ -382,6 +416,8 @@
       href: ./networking/move-client-side-caching-folder.md
     - name: Offline file synchronization issues
       href: ./networking/offline-file-synchronization-issue.md
+    - name: Current hotfixes have folder redirection enabled
+      href: ./networking/current-hotfixes-have-folder-redirection.md
   - name: IP Address Management (IPAM)
     items:
     - name: Intranet site is identified as Internet site
@@ -408,6 +444,8 @@
       href: ./networking/modern-apps-cannot-connect-check-point-vpn.md
     - name: Troubleshoot L2TP/IPSec VPN client connection
       href: ./networking/l2tp-ipsec-vpn-client-connection-issue.md
+    - name: Windows Connection Manager disconnects WLAN
+      href: ./networking/windows-connection-manager-disconnects-wlan.md
   - name: TCP/IP communications
     items:
     - name: Additional gateways appear in persistent routes
@@ -436,6 +474,8 @@
       href: ./networking/tcpip-addressing-and-subnetting.md
     - name: Unwanted wake-up events when you enable WOL
       href: ./networking/unwanted-wake-up-events.md
+    - name: Device can't connect to mobile broadband
+      href: ./networking/device-cant-connect-mobile-broadband-over-the-air.md
   - name: Web Application Proxy (WAP) role service
     items:
     - name: Fail to use apps that connect to Internet
@@ -492,6 +532,8 @@
       href: ./performance/running-exe-starts-another-program.md
     - name: SuperFetch(SysMain) service consumes CPU
       href: ./performance/superfetch-sysmain-service-spikes-cpu.md
+    - name: Some Windows procedures don't work without RPC service
+      href: ./performance/disable-rpc-service-windows-process-not-work.md
   - name: Blue Screen/Bugcheck
     items:
     - name: Computers crash with error code 0x113
@@ -706,12 +748,20 @@
       href: ./shell-experience/apps-not-start-without-user-profile-programdata.md
     - name: Store app used by multiple users won't open after update
       href: ./shell-experience/store-app-not-start-after-update.md
+    - name: Event ID 5973 when you open Windows Store apps
+      href: ./shell-experience/windows-store-apps-not-open-event-id-5973.md
   - name: Windows Media Player
     items:
     - name: Toggle between full screen mode and Windows mode
       href: ./shell-experience/toggle-full-mode-and-windows-mode.md
     - name: Videos don't play in Windows Media Player 11
       href: ./shell-experience/media-player-11-not-play-video.md
+    - name: Windows Media Feature Pack for Windows 7 N and for Windows 7 KN
+      href: ./shell-experience/windows-media-feature-pack-for-windows-7.md
+  - name: Windows Search
+    items:
+    - name: Windows Search 4.0 and Multilingual User Interface Pack
+      href: ./shell-experience/windows-search-4-multilingual-user-interface-pack.md
 - name: System Management Components
   items:
   - name: Event Viewer
@@ -750,6 +800,10 @@
       href: ./system-management-components/failed-logon-event-when-running-remote-wmi.md
     - name: WMI-Activity Event ID 5858 logged with ResultCode = 0x80041032
       href: ./system-management-components/wmi-activity-event-5858-logged-with-resultcode-0x80041032.md
+    - name: Event ID 10 is logged in the Application log
+      href: ./system-management-components/event-id-10-logged-application-log-after-install.md
+    - name: SMS Agent Host service not start
+      href: ./system-management-components/sms-agent-host-service-not-start.md
 - name: UE-V
   items:
   - name: UEV 2.1
@@ -884,60 +938,9 @@
     items:
     - name: Enable diagnostic logging for Windows Security Center
       href: ./windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md
-- name: Windows Troubleshooters
+- name: windows-troubleshooters
   items:
-  - name: Active and retired Windows 10 troubleshooters
-    href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
-
-- name: Windows Media Feature Pack for Windows 7 N and for Windows 7 KN
-  href: ./shell-experience/windows-media-feature-pack-for-windows-7.md
-- name: In-place upgrade to Windows 10 problem
-  href: ./deployment/in-place-upgrade-to-windows-10-problems.md
-- name: Disable screen saver passwords by using policies
-  href: ./group-policy/disable-screen-saver-passwords.md
-- name: Windows Search 4.0 and Multilingual User Interface Pack
-  href: ./shell-experience/windows-search-4-multilingual-user-interface-pack.md
-- name: Fail to upgrade Windows 10 Enterprise edition
-  href: ./deployment/contact-system-administrator-to-upgrade-windows.md
-- name: Computer screen goes black during setup
-  href: ./deployment/computer-screen-black-during-installation.md
-- name: Event ID 8 is logged in Application log
-  href: ./backup-and-storage/event-id-8-in-application-log.md
-- name: Some Windows procedures don't work without RPC service
-  href: ./performance/disable-rpc-service-windows-process-not-work.md
-- name: Can't disable Microsoft Store through Group Policy
-  href: ./group-policy/cannot-disable-microsoft-store.md
-- name: Event ID 5973 when you open Windows Store apps
-  href: ./shell-experience/windows-store-apps-not-open-event-id-5973.md
-- name: System Restore fails with error 0x8007045b
-  href: ./backup-and-storage/system-restore-fail-error-0x8007045b.md
-- name: Restore missing Windows Installer cache files
-  href: ./deployment/missing-windows-installer-cache.md
-- name: System Error 126 when you start TrustedInstaller
-  href: ./deployment/system-error-126-start-windows-modules-installer.md
-- name: Error 0x80042468 when creating a single partition
-  href: ./deployment/error-when-creating-single-partition.md
-- name: You can't access an EFI system partition
-  href: ./deployment/cant-access-efi-system-partition.md
-- name: How to downgrade from Windows 8
-  href: ./deployment/downgrade-from-windows-8.md
-- name: Windows 7 Upgrade Advisor tool failed to run
-  href: ./deployment/upgrade-advisor-tool-failed-to-run.md
-- name: Language packs no longer available
-  href: ./deployment/language-packs-no-longer-available-after-upgrade.md
-- name: Device can't connect to mobile broadband
-  href: ./networking/device-cant-connect-mobile-broadband-over-the-air.md
-- name: Event ID 10 is logged in the Application log
-  href: ./system-management-components/event-id-10-logged-application-log-after-install.md
-- name: '"The operation timed out" error'
-  href: ./deployment/operation-timed-out-error-disk-management-console.md
-- name: Windows Connection Manager disconnects WLAN
-  href: ./networking/windows-connection-manager-disconnects-wlan.md
-- name: SMS Agent Host service not start
-  href: ./system-management-components/sms-agent-host-service-not-start.md
-- name: Performance of System.Diagnostics.StackFrame degrades
-  href: ./application-management/system-diagnostics-stackframe-performance-degrades.md
-- name: A high pitched noise is heard when using Bluetooth headphones
-  href: ./deployment/high-pitched-noise-is-heard.md
-- name: Current hotfixes have folder redirection enabled
-  href: ./networking/current-hotfixes-have-folder-redirection.md
+  - name: Windows Troubleshooters
+    items:
+    - name: Active and retired Windows 10 troubleshooters
+      href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
