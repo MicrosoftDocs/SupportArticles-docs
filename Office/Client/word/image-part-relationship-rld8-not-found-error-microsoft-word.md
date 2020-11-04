@@ -2,7 +2,7 @@
 title: The image part with relationship rID8 was not found in Microsoft Word
 description: 
 author: McCoyBot
-ms.author: v-todmc, Shuvojit.Ray
+ms.author: v-todmc, shraycha
 ms.reviewer: Shuvojit.Ray
 manager: dcscontentpm
 localization_priority: Normal

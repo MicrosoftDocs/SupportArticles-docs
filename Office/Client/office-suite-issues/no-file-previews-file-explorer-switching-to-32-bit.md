@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.date: 02/13/2020
 audience: ITPro
 ms.topic: article
-ms.prod: office
+ms.prod: office-perpetual-itpro
 localization_priority: Normal
 search.appverid:
 - SPO160

@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.date: 3/19/2020
 audience: ITPro
 ms.topic: article
-ms.prod: Teams
+ms.prod: msteams
 localization_priority: Normal
 search.appverid:
 - SPO160
@@ -25,8 +25,6 @@ description: Methods to resolve the error FAILED_TO_AUTO_DISCOVER_DOMAIN in the 
 ## Summary
 
 You see a FAILED_TO_AUTO_DISCOVER_DOMAIN error message when you try to connect to the Microsoft Teams admin center.
-
-## More information
 
 The following situations might cause this error to occur.
 
