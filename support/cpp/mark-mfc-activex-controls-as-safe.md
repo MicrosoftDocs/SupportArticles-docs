@@ -178,19 +178,13 @@ Follow these steps to mark your MFC ActiveX Control as Safe for Scripting and Sa
 
     After compiling and registering your control, you should find the following entries in the registry:
 
-    ```cpp
-    HKEY_CLASSES_ROOT\Component
-    Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}
+    - `HKEY_CLASSES_ROOT\Component Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}`
 
-    HKEY_CLASSES_ROOT\Component
-    Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}
+    - `HKEY_CLASSES_ROOT\Component Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}`
 
-    HKEY_CLASSES_ROOT\CLSID\{"your controls GUID"}\Implemented
-    Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}
+    - `HKEY_CLASSES_ROOT\CLSID\{"your controls GUID"}\Implemented Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}`
 
-    HKEY_CLASSES_ROOT\CLSID\{"your controls GUID"}\Implemented
-    Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}
-    ```
+    - `HKEY_CLASSES_ROOT\CLSID\{"your controls GUID"}\Implemented Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}`
 
 ## References
 

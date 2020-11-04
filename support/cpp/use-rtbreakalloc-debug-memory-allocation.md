@@ -9,7 +9,7 @@ ms.topic: how-to
 
 This article describes how to use `_crtBreakAlloc` to debug a memory allocation.
 
-_Original product version:_ &nbsp; C-Runtime  
+_Original product version:_ &nbsp; Visual C++  
 _Original KB number:_ &nbsp; 151585
 
 ## Summary

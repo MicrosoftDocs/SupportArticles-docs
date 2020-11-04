@@ -8,7 +8,7 @@ ms.prod-support-area-path: C and C++ Libraries
 
 This article helps you resolve the problem that occurs when the menu is attached to a dialog box in Visual C++.
 
-_Original product version:_ &nbsp; Visual C++ .NET 2002  
+_Original product version:_ &nbsp; Visual C++, .NET 2002  
 _Original KB number:_ &nbsp; 242577
 
 ## Symptoms
@@ -150,10 +150,10 @@ CTestCmdUI state;
 state.m_nID = nID;
 OnCmdMsg(nID, CN_UPDATE_COMMAND_UI, &state, NULL);
 if (!state.m_bEnabled)
-    {
-        TRACE1("Warning: not executing disabled command %d\n", nID);
-        return TRUE;
-    }
+{
+    TRACE1("Warning: not executing disabled command %d\n", nID);
+    return TRUE;
+}
 ```
 
 ## Steps to reproduce the behavior

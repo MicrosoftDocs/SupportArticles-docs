@@ -9,7 +9,7 @@ ms.topic: how-to
 
 This article describes how to use the C Run-time.
 
-_Original product version:_ &nbsp; C Run-time  
+_Original product version:_ &nbsp; Visual C++  
 _Original KB number:_ &nbsp; 94248
 
 ## Section 1: Three Forms of C Run-Time (CRT) Libraries Are Available
@@ -28,11 +28,11 @@ Microsoft Visual C++ 32-bit edition contains these three forms as well, however,
 
 When building a DLL that uses any of the C Run-time libraries, in order to ensure that the CRT is properly initialized, either
 
-1. the initialization function must be named `DllMain()` and the entry point must be specified with the linker option `-entry:_DllMainCRTStartup@12`
+1. The initialization function must be named `DllMain()` and the entry point must be specified with the linker option `-entry:_DllMainCRTStartup@12`
 
    or
 
-2. the DLL's entry point must explicitly call `CRT_INIT()` on process attach and process detach
+2. The DLL's entry point must explicitly call `CRT_INIT()` on process attach and process detach.
 
 This permits the C Run-time libraries to properly allocate and initialize C Run-time data when a process or thread is attaching to the DLL, to properly clean up C Run-time data when a process is detaching from the DLL, and for global C++ objects in the DLL to be properly constructed and destructed.
 
@@ -40,11 +40,11 @@ The Win32 SDK samples all use the first method. Use them as an example. Also ref
 
 If you wish to use the second method and call the CRT initialization code yourself, instead of using `DllMainCRTStartup()` and `DllMain()`, there are two techniques:
 
-1. if there is no entry function that performs initialization code, specify `CRT_INIT()` as the entry point of the DLL. Assuming that you've included NTWIN32.MAK, which defines `DLLENTRY` as **@12**, add the option to the DLL's link line:`-entry:_CRT_INIT$(DLLENTRY)`.
+1. If there is no entry function that performs initialization code, specify `CRT_INIT()` as the entry point of the DLL. Assuming that you've included NTWIN32.MAK, which defines `DLLENTRY` as **@12**, add the option to the DLL's link line:`-entry:_CRT_INIT$(DLLENTRY)`.
 
    or
 
-2. if you do have your own DLL entry point, do the following in the entry point:
+2. If you do have your own DLL entry point, do the following in the entry point:
 
     1. Use this prototype for `CRT_INIT()`: `BOOL WINAPI _CRT_INIT(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpReserved);`
 

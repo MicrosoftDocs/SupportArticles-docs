@@ -8,7 +8,7 @@ ms.prod-support-area-path: Language or Compilers
 
 This article describes redirecting error messages from Command Prompt.
 
-_Original product version:_ &nbsp; Command Prompt  
+_Original product version:_ &nbsp; Visual C++  
 _Original KB number:_ &nbsp; 110930
 
 ## Summary

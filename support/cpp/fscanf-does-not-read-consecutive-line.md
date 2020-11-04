@@ -21,7 +21,7 @@ When a file is open in text mode, an attempt to read lines of text by using the 
     fscanf(stream, "%[^\n]%*c", line)
     ```
 
-The `%*c` format specifier reads one character from the input stream but does not assign it to any of the parameters in the `fscanf` function call.
+    The `%*c` format specifier reads one character from the input stream but does not assign it to any of the parameters in the `fscanf` function call.
 
 - Call the `Fgetc` function after the `Fscanf` function call to move the file pointer beyond the `\n` character.
 
