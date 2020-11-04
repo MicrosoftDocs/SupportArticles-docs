@@ -30,7 +30,7 @@ The broker infrastructure service is disabled on the full container image.
 
 ## Resolution
 
-Set the startup type of the broker infrastructure service to **Automatic** by adding this line to the dockerfile:  
+Set the startup type of the broker infrastructure service (display name of the service is **Background Tasks Infrastructure Service**) to **Automatic** before starting the API call, you can do this by adding this line to the dockerfile:  
 
 ```dockerfile
 RUN powershell -Command Set-Itemproperty -path 'HKLM:\SYSTEM\CurrentControlSet\Services\BrokerInfrastructure' -Name 'Start' -value 2
