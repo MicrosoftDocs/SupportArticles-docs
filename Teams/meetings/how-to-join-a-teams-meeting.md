@@ -6,7 +6,7 @@ ms.author: v-zolu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: microsoft-teams
+ms.service: msteams
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot

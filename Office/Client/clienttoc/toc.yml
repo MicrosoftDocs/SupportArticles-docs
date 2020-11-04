@@ -3,22 +3,6 @@
   items:
   - name: Access
     items:
-    - name: "\"ActiveX component can't create object\" error"
-      href: ../access/activex-component-cannot-create-object.md
-    - name: "\"Ambiguous name detected\" error"
-      href: ../access/ambiguous-name-detected.md
-    - name: "\"Database or object is read-only\" error"
-      href: ../access/error-query-against-linked-sharepoint-view.md
-    - name: "\"Enter Parameter Value\" dialog box appears"
-      href: ../access/enter-parameter-value-when-run-query.md
-    - name: "\"File already in use\" error"
-      href: ../access/error-opening-database.md
-    - name: "\"Linked table connection failed\" when using Azure AD"
-      href: ../access/linked-table-connection-failed.md
-    - name: "\"No current record\" error"
-      href: ../access/print-preview-error.md
-    - name: "\"ODBC--call failed\" error"
-      href: ../access/error-opening-sql-linked-table.md
     - name: .LDB files
       href: ../access/ldb-file-description.md
     - name: 0x80004005 Microsoft Jet Database Engine cannot open the file
@@ -29,18 +13,18 @@
       href: ../access/access-2010-crashes.md
     - name: Access database engine cannot find input table
       href: ../access/database-engine-not-find-input-table.md
-    - name: Access error "Your network access was interrupted" when using a mapped drive
-      href: ../access/your-network-access-was-interrupted-error.md
     - name: Access freezes when opening a linked table
       href: ../access/access-freezes-when-open-linked-table.md
+    - name: ActiveX component can't create object
+      href: ../access/activex-component-cannot-create-object.md
     - name: ADODB code errors with adBiglnt data
       href: ../access/adBigInt-data-type-errors.md
+    - name: Ambiguous name detected
+      href: ../access/ambiguous-name-detected.md
     - name: Automate the process of selecting printer for a report
       href: ../access/automate-selecte-printer-for-report.md
     - name: Build a dynamic query with values from a search form
       href: ../access/build-dynamic-query-from-search-form.md
-    - name: Can't update. Database or object is read-only
-      href: ../access/database-or-object-is-read-only.md
     - name: Can't add new records programmatically
       href: ../access/adding-new-record-fails.md
     - name: Can't add or delete records with ADO methods
@@ -73,6 +57,8 @@
       href: ../access/too-many-fields-defined-error.md
     - name: Can't update or delete data in a linked table
       href: ../access/update-delete-query-unsuccessful.md
+    - name: Can't update. Database or object is read-only
+      href: ../access/database-or-object-is-read-only.md
     - name: Can't use CDec() function in Access query
       href: ../access/cdec-function-error.md
     - name: Can't use ODBC driver or OLEDB provider
@@ -109,6 +95,8 @@
       href: ../access/database-unexpected-state.md
     - name: Database normalization basics
       href: ../access/database-normalization-description.md
+    - name: Database or object is read-only
+      href: ../access/error-query-against-linked-sharepoint-view.md
     - name: Database requires a newer version of Access
       href: ../access/database-requires-newer-access.md
     - name: Database user-defined function isn't displayed
@@ -125,14 +113,10 @@
       href: ../access/display-images-using-custom-function.md
     - name: Enforce or disable startup options in a database
       href: ../access/disable-database-startup-options.md
+    - name: Enter Parameter Value dialog box appears
+      href: ../access/enter-parameter-value-when-run-query.md
     - name: Error 2950 when running a macro
       href: ../access/error-running-macro.md
-    - name: Error when compiling modules or running procedures
-      href: ../access/error-compiling-module-running-procedure.md
-    - name: Error when inserting table record
-      href: ../access/error-inserting-table-record-autonumber.md
-    - name: Error when using built-in wizards
-      href: ../access/error-using-built-in-wizards.md
     - name: Error loading DLL
       href: ../access/access-wizard-fails-loading-dll.md
     - name: Error running query with UniqueValues property
@@ -141,6 +125,12 @@
       href: ../access/running-wizard-error-loading-dll.md
     - name: Error using special characters
       href: ../access/error-using-special-characters.md
+    - name: Error when compiling modules or running procedures
+      href: ../access/error-compiling-module-running-procedure.md
+    - name: Error when inserting table record
+      href: ../access/error-inserting-table-record-autonumber.md
+    - name: Error when using built-in wizards
+      href: ../access/error-using-built-in-wizards.md
     - name: Error when you work in Access table linked to a list
       href: ../access/cant-update-database-or-object-error.md
     - name: Errors during importing/exporting to Excel
@@ -151,6 +141,8 @@
       href: ../access/extra-access-report-page-prints.md
     - name: Features incompatible with current Access version
       href: ../access/fail-editing-database.md
+    - name: File already in use
+      href: ../access/error-opening-database.md
     - name: File association errors when opening databases
       href: ../access/error-double-clicking-database.md
     - name: Find a record by using ADO and Jet OLE DB provider
@@ -173,6 +165,8 @@
       href: ../access/create-a-running-totals-query.md
     - name: How to loop through references to view properties
       href: ../access/how-to-loop-through-references-view-properties.md
+    - name: How to parse City, State, Zip to separate values
+      href: ../access/how-to-parse-city-state-zip-to-separate-values.md
     - name: ID is increment when adding a new field
       href: ../access/id-field-increment-by-one.md
     - name: Incorrect FirstDay property value
@@ -191,6 +185,8 @@
       href: ../access/jet-compact-utility-download.md
     - name: Linked Excel data is truncated
       href: ../access/linked-table-data-truncated.md
+    - name: Linked table connection failed when using Azure AD
+      href: ../access/linked-table-connection-failed.md
     - name: Linked table to a SharePoint list returns
       href: ../access/access-linked-table-return-deleted.md
     - name: Linked table to SQL Server database returns
@@ -205,12 +201,16 @@
       href: ../access/database-contain-missing-reference.md
     - name: Move to a specific record from Combo Box selection
       href: ../access/move-to-specific-record-from-combo-box-selection.md
+    - name: No current record
+      href: ../access/print-preview-error.md
     - name: No license to start Access
       href: ../access/error-launching-access.md
     - name: Not a valid Teradata SQL token when running outer join queries
       href: ../access/invalid-teradata-token.md
     - name: ODBC Data Source Administrator crashes when adding a system DSN
       href: ../access/odbc-administrator-crashes.md
+    - name: ODBC--call failed
+      href: ../access/error-opening-sql-linked-table.md
     - name: OLE DB Provider for Jet and ODBC driver
       href: ../access/jet-odbc-driver-available-32-bit-version.md
     - name: Optimize Access when using ODBC data sources
@@ -253,7 +253,7 @@
       href: ../access/sql-server-native-client-drivers.md
     - name: Stop responding when creating MDE, ACCDE, or ADE files
       href: ../access/stop-responding-when-create-mde-accde-ade-files.md
-    - name: Store items from multiple selection list box as comma-delimited string
+    - name: Store items from multiple selection list box as comma-delimited string
       href: ../access/retrieve-items-in-multiple-selection-list-box.md
     - name: Store, calculate, and compare Date/Time data
       href: ../access/store-calculate-compare-datetime-data.md
@@ -265,10 +265,10 @@
       href: ../access/sync-combo-boxes.md
     - name: Text of text box control displays incorrectly
       href: ../access/text-box-control-information-incorrectly.md
-    - name: Troubleshooting corruption in database
-      href: ../access/troubleshoot-database-corruption.md
     - name: Troubleshoot errors updating queries or forms
       href: ../access/errors-updating-query-form-data.md
+    - name: Troubleshooting corruption in database
+      href: ../access/troubleshoot-database-corruption.md
     - name: Unable to connect to FoxPro databases
       href: ../access/fails-connecting-foxpro-databases.md
     - name: Unable to create an MDE, ACCDE, or ADE database
@@ -287,6 +287,8 @@
       href: ../access/sqlconfigdatasource-access-system-dsn.md
     - name: Use the Workgroup Administrator utility
       href: ../access/use-workgroup-administrator-utility.md
+    - name: Your network access was interrupted when using a mapped drive
+      href: ../access/your-network-access-was-interrupted-error.md
   - name: Activation
     items:
     - name: Can't activate Office on a new computer
@@ -311,10 +313,6 @@
       href: ../support/2013-versions-of-office-365.md
   - name: Excel
     items:
-    - name: "\"Center Across Columns\" does not appear on the toolbar"
-      href: ../excel/center-across-columns-button-disappear.md
-    - name: "\"Margins do not fit page size\" error with print"
-      href: ../excel/fails-printing-a-workbook.md
     - name: .SpecialCells(xlCellTypeBlanks) VBA function doesn't work
       href: ../excel/specialcells(xlcelltypeblanks)-vba-function.md
     - name: A file is updated without user interaction
@@ -339,8 +337,6 @@
       href: ../excel/calculate-age-before-1-1-1900.md
     - name: Calculate interpolation step value
       href: ../excel/calculate-interpolation-step-value.md
-    - name: Can't use object linking and embedding
-      href: ../excel/cant-use-object-linking-and-embedding-error.md
     - name: Can't add refedit control to VBA userform
       href: ../excel/cant-add-refedit-control-to-vba-userform..md
     - name: Can't create a PivotTable in Excel 2013
@@ -355,6 +351,10 @@
       href: ../excel/cannot-paste-attributes.md
     - name: Can't remove error tracing arrow
       href: ../excel/removing-error-tracing-arrow-fails.md
+    - name: Can't use object linking and embedding
+      href: ../excel/cant-use-object-linking-and-embedding-error.md
+    - name: Center Across Columns does not appear on the toolbar
+      href: ../excel/center-across-columns-button-disappear.md
     - name: Chart trendline formula is inaccurate
       href: ../excel/inaccurate-chart-trendline-formula.md
     - name: CHIINV statistical functions
@@ -507,6 +507,8 @@
       href: ../excel/macros-run-slowly.md
     - name: Make Paste Options button disappear
       href: ../excel/make-paste-options-button-disappear.md
+    - name: Margins do not fit page size when printing
+      href: ../excel/fails-printing-a-workbook.md
     - name: Memory usage in the 32-bit edition of Excel
       href: ../excel/memory-usage-32-bit-edition-of-excel.md
     - name: Misleading labels in the output of Analysis ToolPak t-Test tools
@@ -635,8 +637,6 @@
       href: ../installation/windows-installer-service-not-be-accesse.md
   - name: Office for Mac
     items:
-    - name: "\"wkresources\" files in Trash"
-      href: ../office-for-mac/wkresources-files-moved-to-trash.md
     - name: Can't pass the Welcome Screen in Office for Mac
       href: ../office-for-mac/office-for-mac-welcome-screen.md
     - name: Error when you open files from SharePoint in Office client
@@ -651,68 +651,60 @@
       href: ../office-for-mac/o365-e3-setup-incomplete.md
     - name: PowerPoint for Mac is closed unexpectedly
       href: ../office-for-mac/powerpoint-mac-closes-unexpectedly.md
+    - name: wkresources files in Trash
+      href: ../office-for-mac/wkresources-files-moved-to-trash.md
   - name: Office Suite Issues
     items:
-    - name: "\"0x80004005: General Error Unable to Open Registry Key\""
+    - name: '0x80004005: General Error Unable to Open Registry Key'
       href: ../office-suite-issues/fails-accessing-page-connected-access-database.md
-    - name: "\"Compile Error: Procedure too large\""
-      href: ../office-suite-issues/compile-error-procedure-too-large.md
-    - name: "\"Do you want to download the converter\" error"
-      href: ../office-suite-issues/error-do-you-want-download-converter.md
-    - name: "\"Missing file\" error with a web page file"
-      href: ../office-suite-issues/web-page-missing-file-error.md
-    - name: "\"No default mail client\" error"
-      href: ../office-suite-issues/no-default-mail-client-error.md
-    - name: "\"Run-time Error 13: Type Mismatch\""
-      href: ../office-suite-issues/run-time-error-13-type-mismatch.md
-    - name: "\"This file can't be previewed\" error"
-      href: ../office-suite-issues/this-file-cant-be-previewed.md
-    - name: "\"Your system is low on virtual memory\" error"
-      href: ../office-suite-issues/your-system-is-low-on-virtual-memory.md
-    - name: 0x80041015 when starting an Office application
+    - name: 0x80041015 when starting an Office application
       href: ../office-suite-issues/0x80041015-start-office-program.md
     - name: AD FS sites are slow to open
       href: ../office-suite-issues/slow-open-adfs-sites.md
-    - name: Another account is already signed in
+    - name: Another account is already signed in
       href: ../office-suite-issues/another-account-already-signed-in.md
     - name: Applications crash when opening IRM document
       href: ../office-suite-issues/office-applications-crash-when-open-irm-doc.md
-    - name: Apps for Office don't start
+    - name: Apps for Office don't start
       href: ../office-suite-issues/apps-for-office-not-start.md
-    - name: Background task activation is spurious
+    - name: Background task activation is spurious
       href: ../office-suite-issues/background-task-activation-spurious.md
     - name: Can't change the number of places in Recent Places
       href: ../office-suite-issues/change-number-of-recent-places.md
+    - name: Can't create user name that contains special characters
+      href: ../office-suite-issues/username-contains-special-character.md
     - name: Can't embed Adobe OpenType fonts
       href: ../office-suite-issues/fails-embedding-adobe-opentype-font.md
     - name: Can't install 64-bit Office with 32-bit
       href: ../office-suite-issues/cannot-install-64-bit-office-with-32-bit.md
+    - name: Can't install 64-bit version of Office with Click-to-Run
+      href: ../office-suite-issues/64-bit-cant-install-with-click-to-run.md
     - name: Can't install Office Starter 2010 on Windows 8
       href: ../office-suite-issues/cant-install-office-on-windows-8.md
-    - name: Can't use "Convert bibliography to static text"
-      href: ../office-suite-issues/convert-bibliography-to-static-text.md
-    - name: Can't create user name that contains special characters
-      href: ../office-suite-issues/username-contains-special-character.md
-    - name: Can't install 64-bit version of Office with Click-to-Run
-      href: ../office-suite-issues/64-bit-cant-install-with-click-to-run.md
-    - name: Can't locate proxy server when clicking hyperlink
+    - name: Can't locate proxy server when clicking hyperlink
       href: ../office-suite-issues/cannot-locate-server-when-click-hyperlink.md
-    - name: Can't open a file from UNC share
+    - name: Can't open a file from UNC share
       href: ../office-suite-issues/file-not-found-when-open-file-from-unc.md
-    - name: Can't open Click-to-run version of Office on terminal server
+    - name: Can't open Click-to-run version of Office on terminal server
       href: ../office-suite-issues/click-to-run-office-on-terminal-server.md
-    - name: Can't open Excel, Word or PowerPoint file
-      href: ../office-suite-issues/cannot-open-excel-word-or-powerpoint-file.md
-    - name: Can't open this add-in from localhost when loading an add-in
+    - name: Can't open this add-in from localhost when loading an add-in
       href: ../office-suite-issues/cannot-open-add-in-from-localhost.md
-    - name: Can't start an Office Starter program
+    - name: Can't start an Office Starter program
       href: ../office-suite-issues/cannot-be-opened-error-when-start.md
     - name: Can't start in Windows safe mode
       href: ../office-suite-issues/office-not-start-safe-mode-windows.md
-    - name: Can't uninstall Office
+    - name: Can't uninstall Office
       href: ../office-suite-issues/error-when-uninstall-office.md
+    - name: Can't use Convert bibliography to static text
+      href: ../office-suite-issues/convert-bibliography-to-static-text.md
+    - name: 'Compile Error: Procedure too large'
+      href: ../office-suite-issues/compile-error-procedure-too-large.md
+    - name: Complete repair of corrupted files isn't guaranteed
+      href: ../office-suite-issues/cannot-guarantee-complete-repair-corrupted-files.md
     - name: Connection to a network document is lost
       href: ../office-suite-issues/connect-to-network-document-lost.md
+    - name: Do you want to download the converter
+      href: ../office-suite-issues/error-do-you-want-download-converter.md
     - name: Document files in Office Document Cache not deleted
       href: ../office-suite-issues/office-temporary-files-not-delete.md
     - name: Document Information Panel is deprecated
@@ -721,13 +713,13 @@
       href: ../office-suite-issues/dsofile.dll-allow-edit-document-property.md
     - name: Enable Office 2010 to run on a terminal server
       href: ../office-suite-issues/office-pro-plus-2010-terminal-server.md
-    - name: Error 25090 with an Office application
+    - name: Error 25090 with an Office application
       href: ../office-suite-issues/error-25090-starting-office-program.md
-    - name: Error when editing an equation in Office
+    - name: Error when editing an equation in Office
       href: ../office-suite-issues/issue-when-edit-equation-in-office.md
-    - name: Error when installing Office 2013
+    - name: Error when installing Office 2013
       href: ../office-suite-issues/office-2013-installation-error.md
-    - name: Error when installing VS2010 Toos for Office Runtime
+    - name: Error when installing VS2010 Toos for Office Runtime
       href: ../office-suite-issues/generic-trust-failure-(0x800b010b)-error.md
     - name: Error when opening a document
       href: ../office-suite-issues/error-open-document.md
@@ -735,27 +727,27 @@
       href: ../office-suite-issues/faq-about-office-activation-wizard.md
     - name: Features to enable collaboration
       href: ../office-suite-issues/enable-collaboration.md
-    - name: Files necessary to run the Office Customization Tool were not found
+    - name: Files necessary to run the Office Customization Tool were not found
       href: ../office-suite-issues/fails-running-office-customization-tool.md
     - name: How to determine retail or volume license
       href: ../office-suite-issues/determine-retail-volume-license.md
-    - name: Incorrect function with saving to a CD-RW or DVD/CD-RW drive
+    - name: Incorrect function with saving to a CD-RW or DVD/CD-RW drive
       href: ../office-suite-issues/incorrect-function-saving-office-file.md
     - name: Information about Office Click-to-Run installation
       href: ../office-suite-issues/office-click-to-run-installation.md
-    - name: Installing Office 2010 from Office 365 Subscription fails
+    - name: Installing Office 2010 from Office 365 Subscription fails
       href: ../office-suite-issues/install-office-from-office-365-subscription.md
     - name: Introduce Click-to-Run for Office 2010
       href: ../office-suite-issues/office-click-to-run-faq.md
-    - name: Invalid product key or license mismatch
+    - name: Invalid product key or license mismatch
       href: ../office-suite-issues/invalid-product-key-or-license-mismatch-error.md
-    - name: Issue when launching Office in Microsoft Store app
+    - name: Issue when launching Office in Microsoft Store app
       href: ../office-suite-issues/windows-cannot-access-device.md
-    - name: Issue when Office 365 activates Skype for Business
+    - name: Issue when Office 365 activates Skype for Business
       href: ../office-suite-issues/office-365-activates-skype.md
-    - name: Issue when opening a file with a long folder name
+    - name: Issue when opening a file with a long folder name
       href: ../office-suite-issues/fails-opening-long-folder-name-files.md
-    - name: Issue with starting Office applications
+    - name: Issue with starting Office applications
       href: ../office-suite-issues/microsoft-program-cannot-be-opened.md
     - name: Issues when you click hyperlink to SSO Web site in a document
       href: ../office-suite-issues/click-hyperlink-to-sso-website.md
@@ -763,39 +755,45 @@
       href: ../office-suite-issues/office-docuemnt-image-quality-loss.md
     - name: Manage templates in Office program
       href: ../office-suite-issues/manage-office-program-templates.md
+    - name: Missing file error with a web page file
+      href: ../office-suite-issues/web-page-missing-file-error.md
     - name: Missing fonts issue in documents
       href: ../office-suite-issues/missing-fonts-opening-documents.md
-    - name: Mobile viewing PDF files with Office Web Apps
+    - name: Mobile viewing PDF files with Office Web Apps
       href: ../office-suite-issues/mobile-viewing-pdf-files.md
+    - name: No default mail client
+      href: ../office-suite-issues/no-default-mail-client-error.md
     - name: No Office entitlement found on device
       href: ../office-suite-issues/office-not-entitled-on-device.md
     - name: Numbering Schema for Office 2013
       href: ../office-suite-issues/numbering-scheme-product-code-guids.md
     - name: Numbering Schema for Office 2016
       href: ../office-suite-issues/numbering-scheme-for-product-guid.md
+    - name: Office 2010 installation doesn't finish
+      href: ../office-suite-issues/install-and-use-this-product-error.md
     - name: Office 2010 Setup program not restart
       href: ../office-suite-issues/office-suite-setup-not-restart.md
     - name: Office End User License Agreement always appears
       href: ../office-suite-issues/office-end-user-license-agreement.md
+    - name: Office file previews in Windows Explorer may not show after switching from 64-bit Office to 32-bit Office
+      href: ../office-suite-issues/no-file-previews-file-explorer-switching-to-32-bit.md
     - name: Office files with RMS protection crash
       href: ../office-suite-issues/rms-protected-files-crash.md
+    - name: Office has detected a problem with this file
+      href: ../office-suite-issues/office-file-fails-validation.md
     - name: Office installation Error 1401, 1402 or 1406
       href: ../office-suite-issues/office-install-error-1401-1402-1406.md
     - name: Office stops responding when you open a file
       href: ../office-suite-issues/office-stops-responding.md
-    - name: Office 2010 installation doesn't finish
-      href: ../office-suite-issues/install-and-use-this-product-error.md
-    - name: Office file previews in Windows Explorer may not show after switching from 64-bit Office to 32-bit Office
-      href: ../office-suite-issues/no-file-previews-file-explorer-switching-to-32-bit.md
-    - name: Office has detected a problem with this file
-      href: ../office-suite-issues/office-file-fails-validation.md
     - name: Prevent Office 2010 from disabling printers
       href: ../office-suite-issues/prevent-office-from-disabling-printers.md
-    - name: Repair process of click-to-run app
+    - name: Repair process of click-to-run app
       href: ../office-suite-issues/click-to-run-app-repair-process.md
+    - name: 'Run-time Error 13: Type Mismatch'
+      href: ../office-suite-issues/run-time-error-13-type-mismatch.md
     - name: Saving documents to network server is slow
       href: ../office-suite-issues/saving-file-to-network-server-slow.md
-    - name: Selected a single-byte font to replace a double-byte font with Japanese
+    - name: Selected a single-byte font to replace a double-byte font with Japanese
       href: ../office-suite-issues/single-byte-font-replace-error.md
     - name: Services display incorrectly in Research pane
       href: ../office-suite-issues/duplicate-service-listed.md
@@ -803,8 +801,10 @@
       href: ../office-suite-issues/set-default-font.md
     - name: Some VB Editor settings disabled in Office 2010
       href: ../office-suite-issues/vb-editor-settings-disabled.md
-    - name: The document caused a serious error the last time it was opened
+    - name: The document caused a serious error the last time it was opened
       href: ../office-suite-issues/error-open-word-excel.md
+    - name: This file can't be previewed
+      href: ../office-suite-issues/this-file-cant-be-previewed.md
     - name: Unable to create DSN for Office System Driver
       href: ../office-suite-issues/cant-create-dsn-for-office-system-driver.md
     - name: Updates are offered for nonexistent Office programs
@@ -813,13 +813,15 @@
       href: ../office-suite-issues/use-multiple-versions-of-office.md
     - name: Use GetObject and CreateObject with automation server
       href: ../office-suite-issues/getobject-createobject-behavior.md
-    - name: View error signatures for Office
+    - name: View error signatures for Office
       href: ../office-suite-issues/view-error-signatures.md
     - name: Win32API_PtrSafe with 64-bit Support
       href: ../office-suite-issues/win32api_ptrsafe-with-64-bit-support.md
+    - name: Your system is low on virtual memory
+      href: ../office-suite-issues/your-system-is-low-on-virtual-memory.md
   - name: OneNote
     items:
-    - name: "\"Content Not Yet Available\" error"
+    - name: Content Not Yet Available
       href: ../onenote/onenote-error-content-not-yet-available.md
     - name: Errors when you sync a notebook
       href: ../onenote/error-sync-notebook.md
@@ -827,7 +829,7 @@
       href: ../onenote/temp-change-onenote-file-size-download.md
     - name: Warning when a notebook is in an offline location
       href: ../onenote/notebook-offline-location.md
-    - name: "\"We couldn't start OneNote the last time we tried\" error"
+    - name: We couldn't start OneNote the last time we tried
       href: ../onenote/couldnt-start-onenote-the-last-time-error.md
   - name: Performance
     items:
@@ -865,14 +867,14 @@
       href: ../powerpoint/damaged-presentation.md
   - name: Project
     items:
-    - name: "\"Can not save to global.mpt\" when existing Project"
-      href: ../project/cant-save-to-global.mpt-error.md
     - name: Calculate work and duration with resource assignment changes
       href: ../project/calculate-work-duration-assignment.md
     - name: Can't add or edit resources in Enterprise Resource Pool
       href: ../project/error-when-add-edit-resource.md
     - name: Can't enter User Logon Account for new resource
       href: ../project/cannot-enter-user-logon-account.md
+    - name: Can't save to global.mpt when existing Project
+      href: ../project/cant-save-to-global.mpt-error.md
     - name: Can't view a timesheet in PWA
       href: ../project/iexplorer.exe-encountered-problem.md
     - name: Circular relationship error when indenting task
@@ -957,8 +959,6 @@
       href: ../third-party-add-ins/third-party-installed-font-fails-appearing.md
   - name: Visio
     items:
-    - name: "\"Fit to Drawing\" not working"
-      href: ../visio/fit-to-drawing-command-not-work.md
     - name: Can't add visio drawing control
       href: ../visio/cannot-add-visio-drawing-control.md
     - name: Can't change text or shape fill color
@@ -971,6 +971,8 @@
       href: ../visio/data-graphics-not-displayed.md
     - name: Enable Windows Search service to use Search for Shapes
       href: ../visio/search-for-shapes-use-windows-search.md
+    - name: Fit to Drawing not working
+      href: ../visio/fit-to-drawing-command-not-work.md
     - name: Search for Shapes feature is discontinued
       href: ../visio/cannot-search-shapes-feature.md
     - name: Text not displayed when the drawing opens in a browser
@@ -987,10 +989,6 @@
       href: ../visio/cannot-load-visio-web-drawing.md
   - name: Word
     items:
-    - name: "\"End tag\" error when opening docx file"
-      href: ../word/end-tag-error-when-open-docx.md
-    - name: "\"relationship rID8 was not found\" in Word"
-      href: ../word/image-part-relationship-rld8-not-found-error-microsoft-word.md
     - name: A connector doesn't move when moving a shape
       href: ../word/connector-not-move-with-shapes.md
     - name: Can't open documents with unsupported XML elements
@@ -1009,6 +1007,10 @@
       href: ../word/spelling-grammar-checker-underline-color.md
     - name: Damaged documents in Word
       href: ../word/damaged-documents-in-word.md
+    - name: End tag error when opening docx file
+      href: ../word/end-tag-error-when-open-docx.md
+    - name: Headers and footers remain after removing sensitivity label
+      href: ../word/headers-footers-remain-after-remove-sensitivity-label.md
     - name: Image DPI is changed after you print to PDF
       href: ../word/image-dpi-change-after-print-to-pdf.md
     - name: In-place edit of an embedded Word document with ActiveX control causes flickering
@@ -1031,6 +1033,8 @@
       href: ../word/print-failures-in-word.md
     - name: Recover a lost Word document
       href: ../word/recover-lost-document.md
+    - name: relationship rID8 was not found
+      href: ../word/image-part-relationship-rld8-not-found-error-microsoft-word.md
     - name: Reset user options and registry settings in Word
       href: ../word/reset-options-and-settings-in-word.md
     - name: Spell checker doesn't check text in the form fields

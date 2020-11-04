@@ -6,7 +6,7 @@ ms.author: v-weizhu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: exchange-online
+ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: arindamt
 ms.custom:

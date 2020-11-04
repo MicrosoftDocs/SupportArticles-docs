@@ -217,6 +217,8 @@
       href: ../online-sign-in/sfb-online-sign-in-error.md
     - name: Troubleshoot admin sign-in issues
       href: ../online-sign-in/troubleshoot-sign-in-issues-for-admins.md
+    - name: Troubleshoot issues related to Skype for Business sign-in
+      href: ../online-sign-in/troubleshoot-issues-related-skype-for-business-sign-in.md
     - name: Troubleshoot Lync for Mac sign in issues
       href: ../online-sign-in/sign-in-issues-lync-for-mac.md
     - name: Troubleshoot user sign-in issues

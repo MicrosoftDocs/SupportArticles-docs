@@ -37,21 +37,19 @@ Diagnostic capabilities first appeared within the M365 Admin Center support port
 
 ### What scenarios are currently covered?
 
-There are currently nine diagnostics covering various areas within Sharepoint and OneDrive. Each diagnostic is listed below with a brief description of its function and shortcut command:
+There are currently nine diagnostics covering various areas within Sharepoint and OneDrive. Each diagnostic is listed below with a brief description of its function.
 
-| Diagnostic | Description | Shortcut cmd |
-| --- | --- | -- |
-| **External sharing** | Diagnose issues with sharing, such as determining why external users are unable to access content. | Diag: External Sharing |
-| **OneDrive provisioning** | Diagnose issues that may occur during the provisioning of a OneDrive site collection. | Diag: OneDrive Provisioning |
-| **Site and page performance** | Diagnose why a site or page may be loading slowly. | Diag: SharePoint Site and Page Performance |
-| **Sharepoint picture synchronization** | Diagnose why a picture may not be showing up in the user’s profile or via the People Web Part. | Diag: Picture Synchronization to SharePoint |
-| **OneDrive storage quota** | Diagnose issues that may occur during a quota change for a OneDrive for Business site. | Diag: OneDrive Storage Quota  |
-| **Site collection creation** | Diagnose issues that may occur during the creation of a site. | Diag: Site Collection Creation |
-| **Site collection deletion** | Diagnose issues that may occur during the deletion of a site. | Diag: Site Collection Deletion |
-| **Modernization** | Evaluates whether a view can be rendered in Modern mode. | Diag: Classic View to Modern |
-| **Access denied to a site or the web** |  Diagnose permission-related issues when accessing a site or the web. | Diag: Access Denied to Site |
-| **Unable to synchronize OneDrive with a sync client** | Validates that the OneDrive library can be synchronized via the sync client. | Diag: OneDrive Sync |
-| **Unable to synchronize a SharePoint Document Library with sync client** |   Validates that the SharePoint document library is configured properly to allow synchronization of files. | Diag: Library Sync |
+1. **External sharing**. Diagnose issues with sharing, such as determining why external users are unable to access content.
+2.	**OneDrive provisioning**. Diagnose issues that may occur during the provisioning of a OneDrive site collection.
+3.	**Site and page performance**. Diagnose why a site or page may be loading slowly.
+4.	**Sharepoint picture synchronization**. Diagnose why a picture may not be showing up in the user’s profile or via the People Web Part.
+5.	**OneDrive storage quota**. Diagnose issues that may occur during a quota change for a OneDrive for Business site.
+6.	**Site collection creation**. Diagnose issues that may occur during the creation of a site.
+7.	**Site collection deletion**. Diagnose issues that may occur during the deletion of a site.
+8.	**Modernization**. Evaluates whether a view can be rendered in Modern mode.
+9.	**Access denied to a site or the web**. Diagnose permission-related issues when accessing a site or the web.
+10. **Unable to synchronize OneDrive with a sync client**. Validates that the document library is configured properly to allow synchronization of files.
+11. **Unable to synchornize a SharePoint Document Library with sync client**. Validates that the OneDrive library can be synchronized via the sync client.
 
 ### How do I run these diagnostics?
 
@@ -68,10 +66,21 @@ Currently, these diagnostics are only available for administrators and can be ac
     :::image type="content" source="media/sharepoint-and-onedrive-diagnostics/sharepoint-and-onedrive-diagnostics-3.jpg" alt-text="The Need Help? screen.":::
 
     > [!NOTE]
-    > Diagnostics can also be rendered in O365 assistant. However, the queries may be different.
+    > Diagnostics can also be rendered in O365 assistant. However the queries may be different.
  
-5.	If you would like to render one of our specific diagnostics, enter one of the queries listed in the table above under "Shortcut cmd" into the “Need help?” text box.
+5.	If you would like to render one of our specific diagnostics, enter one of the queries listed below into the “Need help?” text box.
 
+    - Diag: External Sharing
+    - Diag: OneDrive Provisioning
+    - Diag: OneDrive Storage Quota
+    - Diag: SharePoint Site and Page Performance
+    - Diag: Picture Synchronization to SharePoint
+    - Diag: Site Collection Creation
+    - Diag: Site Collection Deletion
+    - Diag: Classic View to Modern
+    - Diag: Access Denied to Site
+    - Diag: OneDrive Sync
+    - Diag: Library Sync
 
 ## Location of diagnostics 
 

@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.date: 9/9/2019
 ms.audience: Admin
 ms.topic: article
-ms.service: teams
+ms.service: msteams
 localization_priority: Normal
 search.appverid:
 - SPO160

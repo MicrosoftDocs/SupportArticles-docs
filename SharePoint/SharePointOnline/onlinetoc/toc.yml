@@ -5,6 +5,8 @@
     items:
     - name: '"Access denied" error for PIM-managed accounts in SharePoint or OneDrive admin center'
       href: ../administration/access-denied-to-pim-user-accounts.md
+    - name: '"API access" does not appear in the Modern admin center'
+      href: ../administration/api-access-does-not-appear.md
     - name: Temporary changes in process schedule for SharePoint Online services 
       href: ../administration/temporary-adjustments-in-sharepoint-online.md
     - name: '"Sync to Outlook" button and "Task" link are missing'
@@ -73,8 +75,6 @@
       href: ../InfoPath/fails-connecting-infopath-form.md
   - name: Lists and Libraries
     items:
-    - name: Lists and Libraries Modern View Compatibility check
-      href: ../lists-and-libraries/modern-view-compatibility-checklist.md
     - name: '"drag files here" option is missing for a list'
       href: ../lists-and-libraries/drag-files-here-option-missing.md
     - name: 0x80070005 error for an online list sync
@@ -93,8 +93,12 @@
       href: ../lists-and-libraries/error-share-break-inheritance.md
     - name: Can't sync files or folders
       href: ../lists-and-libraries/cannot-sync-files-folders.md
+    - name: Can't sync recurring Calendar items with error 0x80004005
+      href: ../lists-and-libraries/outlook-not-sync-recurring-calendar-items.md
     - name: Changes to default versioning setting for document libraries
       href: ../lists-and-libraries/library-versioning-setting-changes.md
+    - name: Check for Know Folder Move eligibility
+      href: ../lists-and-libraries/determine-know-folder-move-eligibility.md
     - name: Content Organizer doesn't comply with specified interval
       href: ../lists-and-libraries/content-organizer-not-comply-with-interval.md
     - name: Document IDs aren't assigned to items
@@ -125,6 +129,8 @@
       href: ../lists-and-libraries/fails-filtering-sharepoint-column.md
     - name: Issues with Open with Explorer
       href: ../lists-and-libraries/troubleshoot-issues-using-open-with-explorer.md
+    - name: Lists and Libraries Modern View Compatibility check
+      href: ../lists-and-libraries/modern-view-compatibility-checklist.md
     - name: Minimal Download Strategy feature isn't used for a list or library
       href: ../lists-and-libraries/mds-functionality-unaffect-library.md
     - name: Modified time isn't displayed correctly for an online list item
@@ -186,7 +192,7 @@
     - name: Can't force Modern Authentication with using Connect-SPOService
       href: ../security/cannot-force-modern-authentication.md
     - name: Documents deleted by retention policy after workload is removed
-      href: ../../OneDrive/sync/retention-policies-deleting-documents-after-workload-removal.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+      href: ../../OneDrive/security/retention-policies-deleting-documents-after-workload-removal.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Handling ransomware in SharePoint Online
       href: ../security/handling-ransomware-in-sharepoint-online.md
     - name: Migrated accounts aren't resolved
@@ -207,8 +213,6 @@
       href: ../sharing-and-permissions/access-requests-list-error-access-denied.md
     - name: Error when trying to approve a SharePoint Approval Workflow task
       href: ../sharing-and-permissions/approval-workflow-access-denied-error.md
-    - name: '"Everyone except external users" group is re-added to Visitors or Members group on Office 365 public group website'
-      href: ../sharing-and-permissions/everyone-except-external-users-group-readded.md
     - name: '"Everyone except external users" group is removed'
       href: ../sharing-and-permissions/everyone-except-external-user-removed.md
     - name: '"External sharing is disabled for the site" error with Online Admin Center'

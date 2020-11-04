@@ -52,7 +52,7 @@ To resolve this issue, configure the user's mailbox database to use the same pub
 1. Assign the public folder database for the user's mailbox database by using the `Set-MailboxDatabase` cmdlet, as follows:
 
     ```powershell
-    Set-MailboxDatabase (Get-Mailbox <User>).Database -PublicFolderDatabase (Get-MailboxDatabase (Get- Mailbox <ProxyMailbox>).Database).PublicFolderDatabase
+    Set-MailboxDatabase (Get-Mailbox <User>).Database -PublicFolderDatabase (Get-MailboxDatabase (Get-Mailbox <ProxyMailbox>).Database).PublicFolderDatabase
     ```
 
 1. Run the following cmdlet to restart the Microsoft Exchange Rpc Client Access service on the server that's running Exchange Server that hosts the public folders:

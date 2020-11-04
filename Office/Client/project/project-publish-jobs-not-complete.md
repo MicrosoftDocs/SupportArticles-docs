@@ -7,7 +7,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.prod: project-server-itpr
+ms.prod: project-server-itpro
 ms.topic: article
 ms.author: v-six
 ms.custom: CSSTroubleshoot

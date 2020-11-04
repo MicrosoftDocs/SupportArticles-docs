@@ -467,6 +467,8 @@
       href: ../migration/error-move-mailbox-to-database-exchange-2010.md
     - name: Can't move mailboxes to Exchange Online
       href: ../migration/user-is-already-being-moved-error.md
+    - name: Can't move mailboxes due to Exchange Online limits
+      href: ../migration/save-changes-made-item-store-migrate-mailbox.md
     - name: Can't replicate public folder
       href: ../migration/cannot-replicate-public-folder-to-exchange-server.md
     - name: Can't see free/busy info after a mailbox move
@@ -487,6 +489,8 @@
       href: ../migration/new-move-request-remains-queued-status.md
     - name: Public folder replication fails
       href: ../migration/public-folders-not-replicate.md
+    - name: Error when migrating public folder batch
+      href: ../migration/subscription-wasnt-found-for-user-error.md
   - name: Public Folders
     items:
     - name: How to disable conflict message
