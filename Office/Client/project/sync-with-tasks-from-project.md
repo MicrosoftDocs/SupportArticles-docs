@@ -92,7 +92,7 @@ The plan may save to the tasks list, but the .mpp is not saved to the Site Asset
 
  If there are resources assigned in your plan that are not resources in SharePoint, you receive a warning message stating that these resources will not be added to the SharePoint tasks list but that the tasks will sync to the list. This error message resembles the following:
 
-    We can't sync resource <resource name> to the tasks list because the resource does not exist on the SharePoint server. This resource, and any other resource that doesn't exist in SharePoint, will remain assigned to the tasks in your project plan.  
+> We can't sync resource \<resource name> to the tasks list because the resource does not exist on the SharePoint server. This resource, and any other resource that doesn't exist in SharePoint, will remain assigned to the tasks in your project plan.  
 
 To add these users to SharePoint, contact your SharePoint administrator. It's a best practice to always use the People Picker when you assign users to tasks.
 
@@ -108,12 +108,12 @@ To add these users to SharePoint, contact your SharePoint administrator. It's a 
 
  Only the fields that are mapped between the two products will synchronize. The following fields sync between your SharePoint list and Project by default:
 
-     Task Name
-     Start date
-     Finish (due) date
-     % Complete
-     Resource Name
-     Predecessors 
+- Task Name  
+- Start date  
+- Finish (due) date  
+- % Complete  
+- Resource Name  
+- Predecessors
 
  If you want to map more fields to be synced between Project and SharePoint, you can do this on the **Info** tab on the **File** menu with in Project. Specifically, open the **Map Fields** dialog box, and then select the new fields that you want to sync. This way, you can have your team members report on other custom fields, or you can generate reports based on non-default SharePoint columns.
 
@@ -121,9 +121,9 @@ To add these users to SharePoint, contact your SharePoint administrator. It's a 
 
  If you sync to an existing tasks list that has already been linked to another plan (or if the original sync did not copy the .mpp to site assets), you receive the following error message:
 
-    The tasks list is linked to a different project plan. If you continue with the synchronization the task list link will be changed to the current project plan.
-
-    Would you like to continue with the synchronization?
+> The tasks list is linked to a different project plan. If you continue with the synchronization the task list link will be changed to the current project plan.
+>
+> Would you like to continue with the synchronization?
 
 **Conflict resolution**
 

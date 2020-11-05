@@ -25,11 +25,11 @@ appliesto:
 
 When you attempt to open a Visual Report in Project 2010 with Visio 2013 installed you may receive the following error message:
 
-    "This operation requires that you have Visio Professional 2007 or later installed on your computer."
+> "This operation requires that you have Visio Professional 2007 or later installed on your computer."
 
 When you attempt to open a Visual Report in Project 2010 with Excel 2013 installed you may receive the following error message:
 
-    "The operation requires that you have Excel 2003 or later installed on your computer."
+> "The operation requires that you have Excel 2003 or later installed on your computer."
 
 Project 2010 Visual Reports feature CANNOT work with either Visio 2013 or Excel 2013. You must use Office 2010 versions or lower for the reports to generate. 
 

@@ -29,11 +29,11 @@ appliesto:
 
 In Microsoft Project, if two tasks are linked in a predecessor/successor relationship and you indent the successor to make it a subtask and the predecessor of a summary task, you may receive the following error message:
 
-    This outline change would create a circular relationship.
-
-    Indenting these tasks would create an illogical relationship with other tasks.
-
-    Check the task dependencies for the tasks from which you are indenting, and then try again.
+> This outline change would create a circular relationship.
+>
+> Indenting these tasks would create an illogical relationship with other tasks.
+>
+> Check the task dependencies for the tasks from which you are indenting, and then try again.
 
 ##  Cause
 

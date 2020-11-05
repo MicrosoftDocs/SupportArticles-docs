@@ -44,6 +44,10 @@ After the diagnostic checks finish and the configuration issue is found, the sys
 :::image type="content" source="media/admin-self-help-diagnostics/admin-self-help-diagnostics-2.png" alt-text="Example diagnostics response screen.":::
  
 ### What scenarios are currently covered?
+
+> [!note]
+> You must be an M365 Administrator to run diagnostics.
+
 The following diagnostics are currently available with brief scenario descriptions and shortcut commands:
 
 | Diagnostic | Description | Shortcut cmd |
