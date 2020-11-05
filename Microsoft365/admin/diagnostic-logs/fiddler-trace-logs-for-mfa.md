@@ -30,20 +30,21 @@ This article introduces the Fiddler trace log for the following multifactor auth
 - For a blocked account 
 - When MFA is used for managed accounts 
 
-
 ##  More Information
 
-If a user account is federated, the user is redirected to the Service Token Server (STS) for authentication and to login.microsoftonline.com, and the SAML token is issued by the STS. If the user is managed, login.microsoftonline.com authenticates the user by way of the user's password. 
+If a user account is federated, the user is redirected to the Service Token Server (STS) for authentication and to login.microsoftonline.com, and the SAML token is issued by the STS. If the user is managed, login.microsoftonline.com authenticates the user by way of the user's password.
 
-MFA starts after the user's password has been verified by Azure AD or STS. The SANeeded=1 cookie will be set if the user is enabled for MFA authentication in Office 365 or Azure directory. The communication between the client and login.microsoftonline.com after the user password authentication resembles the following: 
+MFA starts after the user's password has been verified by Azure AD or STS. The `SANeeded=1` cookie will be set if the user is enabled for MFA authentication in Office 365 or Azure directory. The communication between the client and login.microsoftonline.com after the user password authentication resembles the following:
 
-    POST https://login.microsoftonline.com/login.srf HTTP/1.1
-    Host: login.microsoftonline.com
+> POST `https://login.microsoftonline.com/login.srf` HTTP/1.1  
+> Host: login.microsoftonline.com
+>
+> HTTP/1.1 302 Found
+>
+> Set-Cookie: SANeeded=1; domain=login.microsoftonline.com;secure= ;path=/;HTTPOnly= ;version=1
 
-    HTTP/1.1 302 Found
+### Scenario 1: Working MFA scenarios
 
-    Set-Cookie: SANeeded=1; domain=login.microsoftonline.com;secure= ;path=/;HTTPOnly= ;version=1 
-### Scenario 1: Working MFA scenarios 
 The SANeeded=1 cookie is set after password authentication. Network traffic is then redirected to the endpoint: `https://login.microsoftonline.com/StrongAuthCheck.srf`, and available authentication methods are requested.
 
 ![authentication method](./media/fiddler-trace-logs-for-mfa/authentication-method.png)

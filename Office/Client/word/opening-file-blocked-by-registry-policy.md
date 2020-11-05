@@ -28,15 +28,15 @@ Error messages you may receive when you open a file in Microsoft Word. 
 
 Error message 1
 
-    You are attempting to open a file type that is blocked by your registry policy setting.
+> You are attempting to open a file type that is blocked by your registry policy setting.
 
 Error message 2
 
-    You are attempting to open a file that was created in an earlier version of Microsoft Office. This file type is blocked from opening in this version by your registry policy setting.
+> You are attempting to open a file that was created in an earlier version of Microsoft Office. This file type is blocked from opening in this version by your registry policy setting.
 
-Error message 3 
-    
-    You are attempting to open a file type File_Type that has been blocked by your File Block settings in the Trust Center. 
+Error message 3
+
+> You are attempting to open a file type File_Type that has been blocked by your File Block settings in the Trust Center.
 
 ##  Resolution
 
@@ -230,7 +230,9 @@ The following table contains the DWORD values that an administrator can add to t
 |TextFiles|.txt |
 |InternalFiles|All Word file types that have a non-RTM nFib value |
 |FilesBeforeVersion|All Word files that have an nFib value lower than the minimum nFib value as set by an administrator |
- Notes 
+|||
+
+Notes 
  
 - To download the 2007 Office System Administrative Templates, go to the following Microsoft website:    
 - For more specific information about how to use settings to block the opening and saving of file formats in the 2007 Office programs, go to the following Microsoft website, and then see the "Enforce settings by using Group Policy in the 2007 Office system" topic.
@@ -262,6 +264,8 @@ To download the Office 2003 Service Pack 3 Administrative Template (ADM), OPAs, 
 |WllFiles|.wll |
 |InternalFiles|All Word file types that have a non-RTM nFib value |
 |FilesBeforeVersion|All Word files that have an nFib value lower than the minimum nFib value as set by an administrator |
+|||
+
 To enable the FileOpenBlock subkey settings, follow these steps: 
  
 1. Exit Word 2003.    

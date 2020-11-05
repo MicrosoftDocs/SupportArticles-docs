@@ -23,7 +23,7 @@ appliesto:
 
 Customers reported that after installing [October 4, 2016, update for Excel 2016](https://support.microsoft.com/help/3118373). Some Excel 2016 workbooks stopped responding and returned the error.
 
-    "Microsoft Excel has stopped working"
+> "Microsoft Excel has stopped working"
 
 ##  Cause
 

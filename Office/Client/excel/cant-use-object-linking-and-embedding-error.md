@@ -23,7 +23,7 @@ appliesto:
 
 In Microsoft Excel 2016 for Mac, you receive the following error message:
 
-    Cannot use object linking and embedding
+> Cannot use object linking and embedding
 
 ##  Workaround
 

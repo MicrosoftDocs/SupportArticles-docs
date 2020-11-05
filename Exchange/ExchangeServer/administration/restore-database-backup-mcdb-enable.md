@@ -32,7 +32,9 @@ MCDB becomes linked to the primary database when the database is backed up. Beca
 
 To fix this issue, run ESEutil on the database by using the following commands:
 
-    Eseutil /r E01 /d "E:\Databases\RDB1" /i
+```console
+Eseutil /r E01 /d "E:\Databases\RDB1" /i
+```
 
 This example shows a log generation prefix of E01 and a recovery database path of `E:\Databases\RDB1`.
 

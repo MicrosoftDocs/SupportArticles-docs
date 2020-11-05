@@ -44,8 +44,9 @@ To illustrate the RSQ function, follow these steps:
 
 1. Create a blank Excel worksheet, and then copy the following table.
 
-   |1||= 3 + 10^$D$2|Power of 10 to add to data|
+   |A|B|C|D|
    |---|---|---|---|
+   |1||= 3 + 10^$D$2|Power of 10 to add to data|
    |2|=4 + 10^$D$2||0|
    |3|=2 + 10^$D$2|||
    |4|=5 + 10^$D$2|||

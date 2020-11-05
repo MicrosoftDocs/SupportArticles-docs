@@ -27,19 +27,21 @@ When you try to open a Microsoft Word 2007, 2010 or 2013 document, you may recei
 
 **In Word 2007 and Word 2010:**
 
-    The file <document filename> cannot be opened because there are problems with the contents.
- 
+> The file \<document filename> cannot be opened because there are problems with the contents.
+
 Clicking the **Details** button provides this additional information:
 
-    The name in the end tag of the element must match the element type in the start tag. 
- ![The name in the end tag of the element must match the element type in the start tag](./media/end-tag-error-when-open-docx/the-name-in-the-end-tag-of-the-element-must-match.jpg)
+> The name in the end tag of the element must match the element type in the start tag.
+
+![The name in the end tag of the element must match the element type in the start tag](./media/end-tag-error-when-open-docx/the-name-in-the-end-tag-of-the-element-must-match.jpg)
 
 **In Word 2013:**
 
-    We're sorry. We can't open <document filename.docx> because we found a problem with its contents. 
- Clicking the **Details** button provides this additional information:
- 
-    The name in the end tag of the element must match the element type in the start tag.
+> We're sorry. We can't open \<document filename.docx> because we found a problem with its contents.
+
+Clicking the **Details** button provides this additional information:
+
+> The name in the end tag of the element must match the element type in the start tag.
 
 ![The name in the end tag of the element must match the element type in the start tag](./media/end-tag-error-when-open-docx/the-name-in-the-end-tag-of-the-element-must-match.png) 
 

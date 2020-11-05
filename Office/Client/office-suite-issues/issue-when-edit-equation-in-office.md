@@ -10,7 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.custom: CSSTroubleshoot
 ms.topic: article
-ms.author: v-six, v-todmc
+ms.author: v-six
 appliesto:
 - Microsoft Office
 ---

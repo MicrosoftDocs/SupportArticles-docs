@@ -28,7 +28,7 @@ appliesto:
 
 When a federated user signs out of a Microsoft cloud service such as Office 365, Microsoft Intune, or Microsoft Azure, the user receives the following error message on login.microsoftonline.com:
 
-    There is a problem with this website's security certificate
+> There is a problem with this website's security certificate
 
 ## Cause
 

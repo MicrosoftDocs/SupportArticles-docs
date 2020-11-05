@@ -31,7 +31,7 @@ Starting in Microsoft Office 2013, the Office suite of applications takes advant
 
 The following Intel graphics driver versions cause this problem.
 
-|   |
+|Version |
 | - |
 |26.20.100.6951|
 |26.20.100.6952|
@@ -39,6 +39,7 @@ The following Intel graphics driver versions cause this problem.
 |26.20.100.6999|
 |26.20.100.7000|
 |26.20.100.7063|
+||
 
 ## Resolution
 
@@ -62,13 +63,14 @@ Office has shipped a fix for specific Office versions. The fix will detect wheth
 
 The versions of Office that contain this fix are the following.
 
-|   |   |
+| Release  | Version  |
 | - | - |
 | 1911 (November 2019) | 16.0.12325.20120 |
 | 1910 (October 2019) | 16.0.12228.20364 |
 | 1907 (July 2019) | 16.0.11929.20516 |
 | 1901 (January 2019) | 16.0.11328.20492 |
 | Office Insiders | 16.0.12406.20000 |
+|||
 
 To fix the problem, update your Office installation.
 

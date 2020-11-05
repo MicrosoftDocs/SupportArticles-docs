@@ -25,8 +25,8 @@ appliesto:
 
 Assume that you enable the Open From universal naming convention (UNC) feature in Microsoft Office Web Apps Server or Office Online Server. When you try to open an Office file from a UNC share by using Office Online, you receive the following error message:
 
-    File not found 
-    The URL of the original file is not valid or the document is not publically assessable.  Verify the URL is correct, then contact the document owner
+> File not found  
+> The URL of the original file is not valid or the document is not publically assessable.  Verify the URL is correct, then contact the document owner
 
 ##  Resolution
 

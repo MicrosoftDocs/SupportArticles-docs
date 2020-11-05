@@ -37,6 +37,8 @@ The following table shows the Default print quality in Word 2013 and Word 2010:
 |--|--|
 |Word 2013|Medium|
 |Word 2010|High|
+|||
+
 Note If the printer can only handle a single tile at the time, the print quality is automatically set to Low.
 
 ##  Workaround
