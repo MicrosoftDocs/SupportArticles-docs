@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2383895
 
 ## Symptoms
 
-When you open a list (.cil) in VAMT 2.0 on a Windows 7-based computer, you may receive the following error message:
+When you open a list (`.cil`) in VAMT 2.0 on a Windows 7-based computer, you may receive the following error message:
 
 An item with the same key has already been added.
 
@@ -40,23 +40,7 @@ If you open the CIL file in this situation, you see an entry that resembles the 
 
 ## Resolution
 
-To have us delete the duplicate entries from the CIL file for you, go to the "Fix it for me" section. If you prefer to delete the duplicate entries from the CIL file yourself, go to the "Let me fix it myself" section.
-
-### Fix it for me
-
-To fix this problem automatically, click the **Fix it** button or link. Then click **Run** in the **File Download** dialog box, and follow the steps in the Fix it wizard.
-
-> [!NOTE]
->
-> - Select a CIL file which you want to delete the duplicate entries for.
-> - The Fix it solution doesn't work if the VAMT(Volume Activation Management Tool) 2.0 isn't installed in the default path.
-> - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.
-> - If you aren't on the computer that has the problem, save the Fix it solution to a flash drive or a CD and then run it on the computer that has the problem.
-Then, go to the "Did this fix the problem?" section.
-
-### Let me fix it myself
-
-To work around this problem, manually delete the duplicate entries from the CIL or to automate this process, use the following source code to create a PowerShell script to automate.  
+To resolve this problem, manually delete the duplicate entries from the CIL or to automate this process, use the following source code to create a PowerShell script to automate.  
 
 ```powershell
 
@@ -171,16 +155,14 @@ Then, follow these steps on a Windows 7 computer:
 1. Copy your saved CIL file to c:\script. For example, c:\script\saved.cil
 2. Copy the included source code from this KB article into the clipboard
 3. Click Start, All Programs, Accessories, Windows PowerShell, "Windows PowerShell ise"
-4. In Windows PowerShell click in the Untitled1.ps1 window
+4. In Windows PowerShell, click in the Untitled1.ps1 window
 5. Paste in contents of the script from this article
 6. Click File, save as, c:\script\ScrubCil.ps1
 7. Click Start > All Programs > Accessories > Windows PowerShell, right-click "Windows PowerShell" and choose "Run as Administrator"
-8. At the PowerShell prompt type, the following commands
-cd \script
-set-executionpolicy unrestricted
-.\ScrubCil.ps1 saved.cil
+8. At the PowerShell prompt type, the following commands  
 
-### Did this fix the problem
-
-- Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus/).
-- We would appreciate your feedback. To provide feedback or to report any issues with this solution, leave a comment on the "[Fix it for me](https://support.microsoft.com/help/2970908)" blog or send us an [email](mailto:fixit4me@microsoft.com?subject=kb).
+    ```powershell
+    cd\script
+    set-executionpolicy unrestricted
+    .\ScrubCil.ps1 saved.cil
+    ```
