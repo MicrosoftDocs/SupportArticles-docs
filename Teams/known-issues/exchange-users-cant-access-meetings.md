@@ -17,7 +17,7 @@ ms.custom:
 - CI 113425
 - CSSTroubleshoot 
 ms.reviewer: scapero
-description: Describes a resolution to an issue with Safari's Intelligent Tracking Prevention in Teams.
+description: Describes a resolution to an issue in which you can't access meetings or connectors when you have actively blocked EWS from services within Exchange Online.
 ---
 
 # Users with Exchange Online mailboxes can't access meetings or connectors 
