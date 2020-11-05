@@ -26,22 +26,18 @@ For these types of errors, Application events include information about the RPC 
 
 Snippet from the Application error event seen in the previous image:
 
-    Log Name:      Application
-    Source:        Directory Synchronization
-    Date:          8/10/2020 11:00:39 AM
-    Event ID:      611
-    Task Category: None
-    Level:         Error
-    Keywords:      Classic
-    User:          N/A
-    Computer:      server1.contoso.com
-    Description:
-    Password hash synchronization failed for domain: riantu.local, domain controller hostname: <not available>, domain controller IP address: <not available>. Details: 
-    Microsoft.Online.PasswordSynchronization.SynchronizationManagerException: Unable to open connection to domain: contoso.com. Error: There was an error establishing a connection to the directory replication service. Domain  
-    controller hostname: server1.contoso.com, domain controller IP address: 20.0.0.202 ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.DrsCommunicationException: There was an error establishing a  
-    connection to the directory replication service. Domain controller hostname: server1.contoso.com, domain controller IP address: 20.0.0.202 ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.  
-    DrsException: There was an error creating the connection context. ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.DrsCommunicationException: RPC Error 1722 : The RPC server is unavailable. Error  
-    creating the RPC binding handle
+Log Name:      Application<br>
+Source:        Directory Synchronization<br>
+Date:          8/10/2020 11:00:39 AM<br>
+Event ID:      611<br>
+Task Category: None<br>
+Level:         Error<br>
+Keywords:      Classic<br>
+User:          N/A<br>
+Computer:      server1.contoso.com<br>
+Description:   Password hash synchronization failed for domain: riantu.local, domain controller hostname: <not available>, domain controller IP address: <not available>.<br>
+Details:       Microsoft.Online.PasswordSynchronization.SynchronizationManagerException: Unable to open connection to domain: contoso.com. Error: There was an error establishing a connection to the directory replication service. Domain controller hostname: server1.contoso.com, domain controller IP address: 20.0.0.202 ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.DrsCommunicationException: There was an error establishing a connection to the directory replication service. Domain controller hostname: server1.contoso.com, domain controller IP address: 20.0.0.202 ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.<br>
+DrsException:  There was an error creating the connection context. ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.DrsCommunicationException: RPC Error 1722 : The RPC server is unavailable. Error creating the RPC binding handle
 
 In this case, the RPC communication failed with error **"1722 : The RPC server is unavailable"**.
 
@@ -59,7 +55,7 @@ In this scenario, investigating a network trace reveals retransmit packets being
 
 These errors can manifest intermittently, which adds complexity to the process of collecting data, like a network trace, for investigation and troubleshooting.
 
-The following steps allow to automatically collect a network trace, when the error event id is generated.
+The following steps allow you to automatically collect a network trace, when the error event id is generated.
 
 > [!NOTE]
 > To automatically collect an network trace, **Microsoft Network Monitor** must be installed on the AADConnect server.
@@ -92,18 +88,18 @@ The following steps allow to automatically collect a network trace, when the err
 
 Snippet from the Application error event seen in the previous image:
 
-    Log Name:      Application
-    Source:        Directory Synchronization
-    Date:          8/3/2020 8:17:55 PM
-    Event ID:      611
-    Task Category: None
-    Level:         Error
-    Keywords:      Classic
-    User:          N/A
-    Computer:      server1.contoso.com
-    Description:
-    Password hash synchronization failed for domain: contoso.com, domain controller hostname: server1.contoso.com, domain controller IP address: 184.198.0.0. Details: 
-    Microsoft.Online.PasswordSynchronization.SynchronizationManagerException: Recovery task failed. ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.DrsException: RPC Error 8333 : Directory object not found. There was an error calling _IDL_DRSGetNCChanges.
+Log Name:      Application<br>
+Source:        Directory Synchronization<br>
+Date:          8/3/2020 8:17:55 PM<br>
+Event ID:      611<br>
+Task Category: None<br>
+Level:         Error<br>
+Keywords:      Classic<br>
+User:          N/A<br>
+Computer:      server1.contoso.com<br>
+Description:   Password hash synchronization failed for domain: contoso.com, domain controller hostname: server1.contoso.com, domain controller IP address: 184.198.0.0.<br>
+Details:       Microsoft.Online.PasswordSynchronization.SynchronizationManagerException: Recovery task failed. ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.<br>
+DrsException:  RPC Error 8333 : Directory object not found. There was an error calling _IDL_DRSGetNCChanges.
 
 Other infrastructure configuration issues may contribute to Remote Procedure Call problems, such as DNS name resolution, Authentication problems, etc.
 
@@ -125,32 +121,31 @@ More detailed information and troubleshooting guidance can be found in [Windows 
 
 Snippet from the Application error event seen in the previous image:
 
-    Log Name:      Application
-    Source:        ADSync
-    Date:          7/28/2020 7:07:20 PM
-    Event ID:      6329
-    Task Category: Server
-    Level:         Error
-    Keywords:      Classic
-    User:          N/A
-    Computer:      server1.contoso.com
-    Description:
-    An unexpected error has occurred during a password set operation. 
-    "BAIL: MMS(4984): ..\dnutils.cpp(1341): 0x800700b7 (Cannot create a file when that file already exists.)
-    ERR_: MMS(4984): X:\bt\1016372\repo\src\dev\sync\ma\shared\inc\MAUtils.h(58): Failed getting registry value 'ADMADoNormalization', 0x2
-    BAIL: MMS(4984): X:\bt\1016372\repo\src\dev\sync\ma\shared\inc\MAUtils.h(59): 0x80070002 (The system cannot find the file specified.): Win32 API failure: 2
-    BAIL: MMS(4984): X:\bt\1016372\repo\src\dev\sync\ma\shared\inc\MAUtils.h(114): 0x80070002 (The system cannot find the file specified.)
-    ERR_: MMS(4984): X:\bt\1016372\repo\src\dev\sync\ma\shared\inc\MAUtils.h(58): Failed getting registry value 'ADMARecursiveUserDelete', 0x2
-    BAIL: MMS(4984): X:\bt\1016372\repo\src\dev\sync\ma\shared\inc\MAUtils.h(59): 0x80070002 (The system cannot find the file specified.): Win32 API failure: 2
-    BAIL: MMS(4984): X:\bt\1016372\repo\src\dev\sync\ma\shared\inc\MAUtils.h(114): 0x80070002 (The system cannot find the file specified.)
-    ERR_: MMS(4984): X:\bt\1016372\repo\src\dev\sync\ma\shared\inc\MAUtils.h(58): Failed getting registry value 'ADMARecursiveComputerDelete', 0x2
-    BAIL: MMS(4984): X:\bt\1016372\repo\src\dev\sync\ma\shared\inc\MAUtils.h(59): 0x80070002 (The system cannot find the file specified.): Win32 API failure: 2
-    BAIL: MMS(4984): X:\bt\1016372\repo\src\dev\sync\ma\shared\inc\MAUtils.h(114): 0x80070002 (The system cannot find the file specified.)
-    ERR_: MMS(4984): admaexport.cpp(2939): Failed to acquire user information: 0x6ba
-    BAIL: MMS(4984): admaexport.cpp(2963): 0x80004005 (Unspecified error)
-    BAIL: MMS(4984): admaexport.cpp(3296): 0x80004005 (Unspecified error)
-    ERR_: MMS(4984): ..\ma.cpp(8000): ExportPasswordSet failed with 0x80004005
-    Azure AD Sync 1.4.18.0"
+Log Name:      Application<br>
+Source:        ADSync<br>
+Date:          7/28/2020 7:07:20 PM<br>
+Event ID:      6329<br>
+Task Category: Server<br>
+Level:         Error<br>
+Keywords:      Classic<br>
+User:          N/A<br>
+Computer:      server1.contoso.com<br>
+Description:   An unexpected error has occurred during a password set operation.<br>
+"BAIL: MMS(4984): ..\dnutils.cpp(1341): 0x800700b7 (Cannot create a file when that file already exists.)<br>
+ERR_: MMS(4984): X:\bt\1016372\repo\src\dev\sync\ma\shared\inc\MAUtils.h(58): Failed getting registry value 'ADMADoNormalization', 0x2<br>
+BAIL: MMS(4984): X:\bt\1016372\repo\src\dev\sync\ma\shared\inc\MAUtils.h(59): 0x80070002 (The system cannot find the file specified.): Win32 API failure: 2<br>
+BAIL: MMS(4984): X:\bt\1016372\repo\src\dev\sync\ma\shared\inc\MAUtils.h(114): 0x80070002 (The system cannot find the file specified.)<br>
+ERR_: MMS(4984): X:\bt\1016372\repo\src\dev\sync\ma\shared\inc\MAUtils.h(58): Failed getting registry value 'ADMARecursiveUserDelete', 0x2<br>
+BAIL: MMS(4984): X:\bt\1016372\repo\src\dev\sync\ma\shared\inc\MAUtils.h(59): 0x80070002 (The system cannot find the file specified.): Win32 API failure: 2<br>
+BAIL: MMS(4984): X:\bt\1016372\repo\src\dev\sync\ma\shared\inc\MAUtils.h(114): 0x80070002 (The system cannot find the file specified.)<br>
+ERR_: MMS(4984): X:\bt\1016372\repo\src\dev\sync\ma\shared\inc\MAUtils.h(58): Failed getting registry value 'ADMARecursiveComputerDelete', 0x2<br>
+BAIL: MMS(4984): X:\bt\1016372\repo\src\dev\sync\ma\shared\inc\MAUtils.h(59): 0x80070002 (The system cannot find the file specified.): Win32 API failure: 2<br>
+BAIL: MMS(4984): X:\bt\1016372\repo\src\dev\sync\ma\shared\inc\MAUtils.h(114): 0x80070002 (The system cannot find the file specified.)<br>
+ERR_: MMS(4984): admaexport.cpp(2939): Failed to acquire user information: 0x6ba<br>
+BAIL: MMS(4984): admaexport.cpp(2963): 0x80004005 (Unspecified error)<br>
+BAIL: MMS(4984): admaexport.cpp(3296): 0x80004005 (Unspecified error)<br>
+ERR_: MMS(4984): ..\ma.cpp(8000): ExportPasswordSet failed with 0x80004005<br>
+Azure AD Sync 1.4.18.0"<br>
 
 It’s important to know that errors can be represented in their hexadecimal code, like in this example.
 

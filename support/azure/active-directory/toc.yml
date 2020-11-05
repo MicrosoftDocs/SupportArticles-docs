@@ -112,7 +112,7 @@
   - name: ProxyAddresses attribute in Azure AD
     href: proxyaddresses-attribute-populate.md
   - name: RPC errors affecting AADConnect
-    href: rcp-errors-affecting-aadconnect.md
+    href: rpc-errors-affecting-aadconnect.md
   - name: Scripts cannot be loaded
     href: cannot-run-scripts-powershell.md
   - name: Separate passwords required
