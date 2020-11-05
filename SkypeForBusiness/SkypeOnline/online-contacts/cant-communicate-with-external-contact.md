@@ -60,9 +60,9 @@ This method allows for a quick resolution if Skype for Business Online users are
 
 The Skype for Business Online administrator must add the correct Service (SRV) Federation records to the Domain Name System (DNS) host for the Skype for Business Online environment. The domain owner for the external contact's custom domain must also add an SRV record that resembles the following example:
 
-    sipfederationtls._tcp.live-contoso.com
-    port = 5061
-    server hostname = federation.messenger.msn.com
+> sipfederationtls._tcp.live-contoso.com  
+> port = 5061  
+> server hostname = federation.messenger.msn.com
 
 Administrators can let Skype for Business Online users add contacts without having to use the special format that was discussed in the "Microsoft Lync 2010" section. To do this, administrators must add an SRV Federation record that Skype for Business Online users can access to add contacts to the Windows Live EASI domain.
 

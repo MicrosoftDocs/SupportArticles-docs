@@ -32,20 +32,20 @@ appliesto:
 
 When you try to install Microsoft Office 2010, the installation does not finish, and you receive the following error message:
 
-    To install and use this product, you must be running one of the following operating systems:
-
-x86 Platform
-
-- Windows 7   
-- Windows Vista sp1   
-- Windows XP Sp3   
-- Windows Server 2003 Sp2    
-
-x64 Platform
-
-- Windows 7   
-- Windows Vista Sp1   
-- Windows Server 2008   
+> To install and use this product, you must be running one of the following operating systems:
+>
+> x86 Platform
+>
+> - Windows 7
+> - Windows Vista sp1
+> - Windows XP Sp3
+> - Windows Server 2003 Sp2
+>
+> x64 Platform
+>
+> - Windows 7
+> - Windows Vista Sp1
+> - Windows Server 2008
 
 **Note** Office 2010 x64 does not support Windows XP and Windows Server 2003.
 

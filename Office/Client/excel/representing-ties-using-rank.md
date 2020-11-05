@@ -47,7 +47,7 @@ To illustrate this use of RANK, create a blank Excel worksheet, copy the followi
 > [!NOTE]
 > In Microsoft Office Excel 2007, the **Paste** command is in the **Clipboard** group on the **Home** tab.
 
-|||||||
+|A|B|C|D|E|F|
 |---|---|---|---|---|---|
 |10|=RANK(A1,$A$1:$A$12,1)|=B1 + (COUNT($A$1:$A$12) + 1 - RANK($A1,$A$1:$A$12,0) - RANK($A1,$A$1:$A$12,1))/2||=RANK(A1,$A$1:$A$12,0)|=E1 + (COUNT($A$1:$A$12) + 1 - RANK($A1,$A$1:$A$12,0) - RANK($A1,$A$1:$A$12,1))/2|
 |21|=RANK(A2,$A$1:$A$12,1)|=B2 + (COUNT($A$1:$A$12) + 1 - RANK($A2,$A$1:$A$12,0) - RANK($A2,$A$1:$A$12,1))/2||=RANK(A2,$A$1:$A$12,0)|=E2 + (COUNT($A$1:$A$12) + 1 - RANK($A2,$A$1:$A$12,0) - RANK($A2,$A$1:$A$12,1))/2|

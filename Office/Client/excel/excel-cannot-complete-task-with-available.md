@@ -24,7 +24,8 @@ appliesto:
 
 You receive the following error message:
 
-    Excel cannot complete this task with available resources. Choose less data or close other applications.
+> Excel cannot complete this task with available resources. Choose less data or close other applications.
+
 The error occurs when you:
 
 - Open or save an Excel workbook   

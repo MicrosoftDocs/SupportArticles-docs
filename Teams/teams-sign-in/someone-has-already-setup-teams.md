@@ -2,7 +2,7 @@
 title: Someone has already setup Teams for your organization error in Microsoft Teams
 description: Resolves an issue in which Microsoft Teams returns an error message when you try to set up your account. 
 author: TobyTu
-ms.author: Bill.Kaupp
+ms.author: billkau
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - CI 116762
 - CSSTroubleshoot
-ms.reviewer: Bill.Kaupp
+ms.reviewer: billkau
 appliesto:
 - Microsoft Teams
 search.appverid: 

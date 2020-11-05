@@ -2,7 +2,7 @@
 title: Public folders are displayed in GAL despite having been cleaned up
 description: Public folders remain on the global address list (GAL) even though you have removed them. This article provides a resolution.
 author: TobyTu
-ms.author: Bhalchandra.Atre
+ms.author: batre
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - CI 116313
 - CSSTroubleshoot
-ms.reviewer: Bhalchandra.Atre
+ms.reviewer: batre
 appliesto:
 - Exchange Online
 search.appverid: 

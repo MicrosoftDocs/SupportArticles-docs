@@ -16,7 +16,7 @@ appliesto:
 - Excel 2010
 ---
 
-# Unable to add refedit control to VBA userform.
+# Unable to add refedit control to VBA userform
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -24,9 +24,9 @@ appliesto:
 
 When trying to add a refedit control on a VBA userform the following error messages are received: 
 
-    "%1 Could not be found". 
-
-    "Element Could not be found". 
+> "%1 Could not be found".
+>
+> "Element Could not be found".
 
 ##  Cause
 

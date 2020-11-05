@@ -2,7 +2,7 @@
 title: Teams owner unable to create a Planner tab
 description: Describes an issue in which Teams owner unable to create a Planner tab in Teams client.
 author: TobyTu
-ms.author: Colin.Witkowski
+ms.author: cowitkow
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - CI 120274
 - CSSTroubleshoot
-ms.reviewer: Colin.Witkowski
+ms.reviewer: cowitkow
 appliesto:
 - Microsoft Teams
 search.appverid: 
@@ -32,7 +32,7 @@ The owner isn't a member of the Microsoft 365 group associated with the team. Th
 
 ## Resolution
 
-Add the owner as a member of the Microsoft 365 group. For more information, see [Add or remove members from Microsoft 365 groups using the admin center](https://docs.microsoft.com/microsoft-365/admin/create-groups/add-or-remove-members-from-groups?view=o365-worldwide).
+Add the owner as a member of the Microsoft 365 group. For more information, see [Add or remove members from Microsoft 365 groups using the admin center](https://docs.microsoft.com/microsoft-365/admin/create-groups/add-or-remove-members-from-groups?view=o365-worldwide&preserve-view=true).
 
 ## More information
 

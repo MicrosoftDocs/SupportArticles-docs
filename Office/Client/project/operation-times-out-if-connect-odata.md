@@ -22,8 +22,8 @@ appliesto:
 ## Symptoms
 
 When you use Microsoft SQL Server Integration Services (SSIS) packages to download data from your Project Online OData feeds, you receive the following error message:  
-   
-    The operation has timed out.     
+
+> The operation has timed out.
 
 ## Status
 

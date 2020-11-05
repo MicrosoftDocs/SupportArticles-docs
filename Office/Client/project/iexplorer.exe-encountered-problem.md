@@ -23,19 +23,16 @@ appliesto:
 ##  Symptoms
 
 When you try to view a timesheet in Microsoft Project Web Access, Microsoft Internet Explorer quits, and you receive the following error message:
- 
-    Iexplorer.exe has encountered a problem and needs to close
+
+> Iexplorer.exe has encountered a problem and needs to close
 
 When you click **more information**, you receive the following error message where **x.x.xxxx.xxxx** is the version of Internet Explorer, and **yyyyyyy** is the offset:
 
-    AppName: iexplore.exe
-
-    AppVer: x.x.xxxx.xxxx
-    ModName: pjgrid.ocx
-
-    ModVer: 9.0.2000.224
-
-    Offset: yyyyyyy
+> AppName: iexplore.exe  
+> AppVer: x.x.xxxx.xxxx  
+> ModName: pjgrid.ocx  
+> ModVer: 9.0.2000.224  
+> Offset: yyyyyyy
 
 ##  Cause
 

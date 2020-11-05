@@ -41,20 +41,21 @@ For example, if you have a 2-day (2d) duration task where a resource (R1) is ass
 
 Resource R1 Work:
 
-     21.33h = 32h Total Work * (200% R1 Units/300% Total Units)
+`21.33h = 32h Total Work * (200% R1 Units/300% Total Units)`
 
- Resource R2 Work:
+Resource R2 Work:
 
-     10.67 = 32h Total Work * (100% R2 Units/300% Total Units)
+`10.67 = 32h Total Work * (100% R2 Units/300% Total Units)`
 
  **NOTE:** Total Units (300%) are calculated by adding the R1 resource unit (200%) and the R2 resource unit (100%).
 
 Task T1 Duration Calculation:
 
-    2.67d = 21.33h (R1 Total Work)/100% (R1 Units based on 8 hour day)
+`2.67d = 21.33h (R1 Total Work)/100% (R1 Units based on 8 hour day)`
 
-    1.33d = 10.67h (R2 Total Work)/100% (R2 Units based on 8 hour day)
- The duration of the task changes from 2d to 2.67d due to the length of time necessary for the driving resource to complete it's assigned work. The driving resource for a task is determined to be the highest ratio of Work/Units for all resource assignments on a task. In this example, R1 is the driving resource because 2.67d is higher than 1.33d. Based on an 8-hour day, it will take R1 2.67d to complete 21.33 h of work.
+`1.33d = 10.67h (R2 Total Work)/100% (R2 Units based on 8 hour day)`
+ 
+The duration of the task changes from 2d to 2.67d due to the length of time necessary for the driving resource to complete it's assigned work. The driving resource for a task is determined to be the highest ratio of Work/Units for all resource assignments on a task. In this example, R1 is the driving resource because 2.67d is higher than 1.33d. Based on an 8-hour day, it will take R1 2.67d to complete 21.33 h of work.
 
 ### Steps to Reproduce Behavior in Project 2013
 

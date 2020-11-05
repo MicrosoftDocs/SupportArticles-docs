@@ -47,9 +47,7 @@ If a user is receiving email in their Outlook on the web mailbox but not on the 
 
 If a single user in your organization is having trouble receiving email, it could be due to a licensing issue, a profile problem, the wrong version of Outlook, or a mix of other issues. Fortunately, Support and Recovery Assistant finds and helps you fix most issues with Outlook or Office 365. As a first step in troubleshooting email delivery problems for Office 365 for business, we recommend that you download and run Microsoft Support and Recovery Assistant on the affected machine. Note that if you are experiencing issues with Outlook for Mac or are having mobile access issues, you can use the app to check your account settings, but you need to install it on a PC. After you sign in with the affected account, the app will check for issues. Users can typically download and run Support and Recovery Assistant without help from their Office 365 admin.
 
-|||
-|:-----|:-----|
-|![Get started](./media/email-delivery-issues/8226d576-eac7-40df-89cb-28c1634067c5.png)|**Let us fix your issue** [Download and run Microsoft Support and Recovery Assistant](https://AKA.MS/SaRASetup)|
+![Get started](./media/email-delivery-issues/8226d576-eac7-40df-89cb-28c1634067c5.png) **Let us fix your issue** [Download and run Microsoft Support and Recovery Assistant](https://AKA.MS/SaRASetup)
 
 ## If the Support and Recovery Assistant app doesn't fix the email delivery issue, try these admin tools
 

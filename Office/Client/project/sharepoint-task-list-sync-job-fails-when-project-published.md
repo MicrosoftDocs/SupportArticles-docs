@@ -6,16 +6,16 @@ manager: dcscontentpm
 ms.date: 11/20/2019
 audience: ITPro
 ms.topic: article
-ms.prod: 
-- project-server-2019
-- project-server-2016
-- project-server-2013
+ms.prod: project-server-itpro
 localization_priority: Normal
 search.appverid:
 - SPO160
 - MET150
 appliesto:
 - SharePoint Server
+- Project Server 2019
+- Project Server 2016
+- Project Server 2013
 ms.custom: 
 - CI 109543
 - CSSTroubleshoot 
