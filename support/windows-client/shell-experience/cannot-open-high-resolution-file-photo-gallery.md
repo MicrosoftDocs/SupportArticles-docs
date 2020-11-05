@@ -47,20 +47,18 @@ When scanning an image, reduce the size of the image by scanning a smaller area 
 Alternately, you can override Windows Photo Gallery's image size limit by editing the registry:
 
 1. Click Start, type regedit in the Start Search box, and then click regedit.exe in the Programs list. If you are prompted for an administrator password or for confirmation, type a valid password, or click Continue.
-2. Locate and then click the following subkey in the registry:
- HKEY_CURRENT_USER\Software\Microsoft\Windows Photo Gallery\Viewer 
+2. Locate and then click the following subkey in the registry:  
+ `HKEY_CURRENT_USER\Software\Microsoft\Windows Photo Gallery\Viewer`  
 3. Click Edit, click New, and then click DWORD (32-bit) Value.
 4. Type MaximumFrameSizeMegapixels for the value name, and then press ENTER.
 5. Double-click the MaximumFrameSizeMegapixels value, click Decimal, enter a new value in the Value data box, and then click OK.
 6. Exit Registry Editor.
 7. Restart Windows Photo Gallery. The Value data to enter is the maximum image size that Windows Photo Gallery will be able to open, in megapixels. For example, entering a value of 150 will allow Windows Photo Gallery to open files of up to 150 megapixels in size. This value would be sufficient to allow viewing of 1200 dpi full-page scans.
 
-Note: Entering a value of 0 will disable the image size limit. However, this is not recommended, because if Windows Photo Gallery then attempts to open an large or corrupt file, it could potentially result in a hang or crash.
+Note: Entering a value of 0 will disable the image size limit. However, this is not recommended, because if Windows Photo Gallery then attempts to open a large or corrupt file, it could potentially result in a hang or crash.
 
 ## More information
 
 You may also encounter problems opening high-resolution images in Microsoft Paint. For more information, please see the following article in the Microsoft Knowledge Base:
 
-[Unable to scan or open high resolution file in Paint on Windows Vista or Windows 7](https://support.microsoft.com/help/2722535) 
-
-**
+[Unable to scan or open high resolution file in Paint on Windows Vista or Windows 7](https://support.microsoft.com/help/2722535)
