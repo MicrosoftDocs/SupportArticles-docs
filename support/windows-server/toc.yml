@@ -2278,6 +2278,8 @@
       href: ./virtualization/back-up-hyper-v-vm-from-parent-partition.md
     - name: Can't export a virtual machine
       href: ./virtualization/error-occurred-attempt-export-virtual-machine.md
+    - name: Error 0x80070005 when exporting VMs to network share
+      href: ./virtualization/error-0x80070005-export-vms.md
   - name: Container
     items:
     - name: API call of performance counters is delayed
