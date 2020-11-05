@@ -74,6 +74,8 @@
     href: convert-systemstring-char.md
   - name: Copy image from database to PictureBox control
     href: copy-image-database-picturebox.md
+  - name: Create a SQL Server Database programmatically
+    href: create-sql-server-database-programmatically.md
   - name: Fail to connect to SQL Server instance
     href: fail-connect-sql-server-instance.md
   - name: Navigate XML with XPathNavigator
