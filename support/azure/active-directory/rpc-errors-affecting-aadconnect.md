@@ -107,7 +107,7 @@ It’s important to note the error number for appropriate investigation and trou
 
 ### Troubleshooting Example 2
 
-In Example 2 the Remote Procedure Call returned error is **833**, an error for **"Directory object not found"**
+In Example 2 the Remote Procedure Call returned error is **8333**, an error for **"Directory object not found"**
 
 [System Error Codes 8200-8999](https://docs.microsoft.com/windows/win32/debug/system-error-codes--8200-8999-)
 
