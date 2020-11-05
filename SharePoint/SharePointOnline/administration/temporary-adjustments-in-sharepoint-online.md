@@ -48,7 +48,7 @@ Migration, DLP, and Backup solutions might achieve limited throughput during reg
 The following documents provide best practice guidance for getting maximize throughput:
 
 - [General migration performance guidance](https://docs.microsoft.com/sharepointmigration/sharepoint-online-and-onedrive-migration-speed). (This includes an [FAQ & Troubleshooting section](https://docs.microsoft.com/sharepointmigration/sharepoint-online-and-onedrive-migration-speed#faq-and-troubleshooting).
-- For DLP, apps that scan the service and Backup apps: [Best practices for discovering files and detecting changes at scale](https://docs.microsoft.com/onedrive/developer/rest-api/concepts/scan-guidance?view=odsp-graph-online).
+- For DLP, apps that scan the service and Backup apps: [Best practices for discovering files and detecting changes at scale](https://docs.microsoft.com/onedrive/developer/rest-api/concepts/scan-guidance).
 
 ### File management 
 

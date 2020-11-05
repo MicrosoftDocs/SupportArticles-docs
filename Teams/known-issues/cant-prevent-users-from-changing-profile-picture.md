@@ -1,5 +1,5 @@
 ---
-title: Safari Intelligent Tracking Prevention errors in Teams
+title: Teams can't prevent users from changing photos
 ms.author: v-todmc
 author: McCoyBot
 ms.date: 4/9/2020

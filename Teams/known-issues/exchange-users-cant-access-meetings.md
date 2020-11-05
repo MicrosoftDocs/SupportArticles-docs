@@ -1,5 +1,5 @@
 ---
-title: Safari Intelligent Tracking Prevention errors in Teams
+title: Can't access meetings or connectors with blocked EWS
 ms.author: v-todmc
 author: McCoyBot
 ms.date: 4/9/2020

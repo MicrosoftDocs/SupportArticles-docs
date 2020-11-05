@@ -48,7 +48,7 @@ To fix this issue, disable the restriction on opening documents of certain types
 1. Click the **File** tab.    
 2. Under **Help**, click **Options**.
 
-   ![Options](./media/opening-file-blocked-by-registry-policy/options.png)    
+   ![Screenshot of locating Options button](./media/opening-file-blocked-by-registry-policy/options.png)
 1. Click **Trust Center**, and then click **Trust Center Settings**.
 
    ![Trust Center Settings](./media/opening-file-blocked-by-registry-policy/trust-center-settings.png)    

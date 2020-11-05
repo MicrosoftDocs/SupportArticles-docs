@@ -222,8 +222,8 @@ Try the following options to help determine the root cause of your problem in Wo
 | %userprofile%\AppData\Roaming\Microsoft\Word\Startup |
 ||
 
-| Windows XP ||
-|---|---|
+| Windows XP |
+|---|
 | %userprofile%\Application Data\Microsoft\Word\Startup |
 ||
 

@@ -33,7 +33,7 @@ Clicking the **Details** button provides this additional information:
 
 > The name in the end tag of the element must match the element type in the start tag.
 
-![The name in the end tag of the element must match the element type in the start tag](./media/end-tag-error-when-open-docx/the-name-in-the-end-tag-of-the-element-must-match.jpg)
+![Screenshot of error message](./media/end-tag-error-when-open-docx/the-name-in-the-end-tag-of-the-element-must-match.jpg)
 
 **In Word 2013:**
 
@@ -43,7 +43,7 @@ Clicking the **Details** button provides this additional information:
 
 > The name in the end tag of the element must match the element type in the start tag.
 
-![The name in the end tag of the element must match the element type in the start tag](./media/end-tag-error-when-open-docx/the-name-in-the-end-tag-of-the-element-must-match.png) 
+![Screenshot of the name error](./media/end-tag-error-when-open-docx/the-name-in-the-end-tag-of-the-element-must-match.png)
 
 ##  Cause
 
