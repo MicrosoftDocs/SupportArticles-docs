@@ -4,7 +4,7 @@ description: This article provides a workaround for the problem when you use Win
 ms.date: 10/27/2020
 ms.prod-support-area-path: General
 ---
-# Compatibility issue when you use RIA Services V1.0 SP2 together with Entity Framework 5
+# Compatibility issue when you use RIA Services V1.0 SP2
 
 This article helps you resolve the problem when you use Windows Communication Foundation (WCF) RIA Services V1.0 SP2 and Entity Framework (EF) 5 together in an application.
 
@@ -38,4 +38,4 @@ The second way (NuGet) is recommended when you use the later versions of Entity 
 
 ## Third-party solution disclaimer
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
