@@ -3,10 +3,6 @@ title: WSUS client computers restart automatically without any notification when
 description: Describes the issue in which Windows Server Update Services (WSUS) client computers restart automatically without any notification when updates are installed on the client computers. A resolution is provided.
 ms.date: 10/10/2020
 ms.prod-support-area-path: 
-ms.service: virtual-machines-windows
-ms.author: genli
-author: genli
-ms.reviewer: genli
 ---
 # WSUS client computers restart automatically without any notification when updates are installed on the client computers
 
@@ -25,9 +21,6 @@ Consider the following scenario:
 
 In this scenario, the WSUS client computers restart automatically without any notification even though the WSUS client computers are configured not to restart automatically without a notification.
 
-When the WSUS client computer restarts automatically, you will see the entries that resemble the following in the `%windir%\WindowsUpdate` log file:
-> Note %windir% represents the path of the Windows system folder. Typically, C:\Windows is the path of the Windows system folder.
-
 ## Cause
 
 This issue occurs because the updates that are deployed on the WSUS client computers require that Windows Installer 3.1 is present on the WSUS client computers.
@@ -43,12 +36,12 @@ Installation of Windows Installer 3.1 on the WSUS client computers causes the WS
 
 To resolve this issue, follow these steps on the WSUS client computers:
 
-1. Select **Start**, select **Run**, type regedit, and then select **OK**.
+1. Select **Start**, select **Run**, type `regedit`, and then select **OK**.
 2. Locate and then select the following registry subkey:
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU`
 
 3. In the details pane, right-click **NoAutoRebootWithLoggedOnUsers**, and then select **Modify**.
-4. Type 1 in the **Value data** box, and then select **OK**.
+4. Type **1** in the **Value data** box, and then select **OK**.
 5. Exit Registry Editor.
 6. Restart the WSUS client computers.

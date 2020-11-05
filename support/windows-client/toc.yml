@@ -30,6 +30,8 @@
     items:
     - name: .NET Framework 3.5 installation errors
       href: ./application-management/dotnet-framework-35-installation-error.md
+    - name: Performance of System.Diagnostics.StackFrame degrades
+      href: ./application-management/system-diagnostics-stackframe-performance-degrades.md
   - name: 1st Party Applications
     items:
     - name: 64-bit versions of Windows don't support 16-bit applications
@@ -84,6 +86,10 @@
       href: ./backup-and-storage/error-0x81000031-back-up-files-backup-restore-wizard.md
     - name: System Image Recovery fails with 0x80070002 error
       href: ./backup-and-storage/system-image-restore-failed-error-0x80070002.md
+  - name: Partition and volume management
+    items:
+    - name: Event ID 8 is logged in Application log
+      href: ./backup-and-storage/event-id-8-in-application-log.md
   - name: Storage hardware
     items:
     - name: Event ID 158 is logged for identical disk GUIDs
@@ -94,6 +100,8 @@
     items:
     - name: How to use System Restore to log on
       href: ./backup-and-storage/system-restore-log-on-lose-access-account.md
+    - name: System Restore fails with error 0x8007045b
+      href: ./backup-and-storage/system-restore-fail-error-0x8007045b.md
   - name: Volume Shadow Copy Service (VSS)
     items:
     - name: Event IDs for Volsnap
@@ -138,8 +146,12 @@
       href: ./deployment/requested-key-id-is-invalid.md
   - name: Devices and Drivers
     items:
+    - name: '"The operation timed out" error'
+      href: ./deployment/operation-timed-out-error-disk-management-console.md
     - name: A description of the driver support
       href: ./deployment/description-of-driver.md
+    - name: A high pitched noise is heard when using Bluetooth headphones
+      href: ./deployment/high-pitched-noise-is-heard.md
     - name: Create a user-defined service
       href: ./deployment/create-user-defined-service.md
     - name: Desktop icon isn't visible in Extended mode
@@ -200,8 +212,6 @@
       href: ./deployment/automatic-updates-cannot-download-updates-event-16.md
     - name: Cannot use the ImageX.exe tool for backup
       href: ./deployment/cannot-use-imagex-tool-backup.md
-    - name: Can't select the "Upgrade" option when installing Windows Vista
-      href: ./deployment/unavailable-upgrade-option-install-windows.md
     - name: Command-line switches for software update packages
       href: ./deployment/command-line-switches-deploy-update-packages.md
     - name: Command-line switches supported by Self-Extractor packages
@@ -220,6 +230,8 @@
       href: ./deployment/errors-in-checksur-log.md
     - name: Get the latest Skype version by Microsoft Update
       href: ./deployment/skype-for-microsoft-update.md
+    - name: How to downgrade from Windows 8
+      href: ./deployment/downgrade-from-windows-8.md
     - name: How to get updates via Windows Update
       href: ./deployment/get-updates-through-windows-update.md
     - name: How to keep Windows up to date
@@ -228,12 +240,16 @@
       href: ./deployment/how-to-use-automatic-updates-feature.md
     - name: How to solve disk space issues caused by WinSxS directory
       href: ./deployment/address-disk-space-issues-caused-by-winsxs.md
+    - name: In-place upgrade to Windows 10 problem
+      href: ./deployment/in-place-upgrade-to-windows-10-problems.md
     - name: Install Service Packs and Hotfixes
       href: ./deployment/install-service-packs-hotfixes.md
     - name: Package Manager can install only the first package
       href: ./deployment/package-manager-cannot-manage-two-more-packages.md
     - name: Previously released updates are reoffered
       href: ./deployment/previously-released-updates-reoffered.md
+    - name: Restore missing Windows Installer cache files
+      href: ./deployment/missing-windows-installer-cache.md
     - name: SFC detects Opencl.dll as corrupted
       href: ./deployment/sfc-detects-opencl-dot-dll-corrupted.md
     - name: Standard terminology that defines software updates
@@ -242,6 +258,8 @@
       href: ./deployment/switches-with-xcopy-and-xcopy32-command.md
     - name: Sysprep fails after you remove or update Microsoft Store apps
       href: ./deployment/sysprep-fails-remove-or-update-store-apps.md
+    - name: System Error 126 when you start TrustedInstaller
+      href: ./deployment/system-error-126-start-windows-modules-installer.md
     - name: The same update is offered repeately
       href: ./deployment/repeatedly-offer-the-same-update.md
     - name: Update Windows Update Agent to latest version
@@ -264,14 +282,20 @@
       href: ./deployment/fail-to-turn-off-computer-from-audit-mode.md
     - name: Can't upgrade Windows when PowerShell is installed
       href: ./deployment/cannot-upgrade-windows-with-powershell-installed.md
+    - name: Computer screen goes black during setup
+      href: ./deployment/computer-screen-black-during-installation.md
     - name: Customize default local user profile
       href: ./deployment/customize-default-local-user-profile.md
     - name: Download and burn an ISO file from VLSC
       href: ./deployment/iso-file-on-vlsc.md
+    - name: Error 0x80042468 when creating a single partition
+      href: ./deployment/error-when-creating-single-partition.md
     - name: Event ID 10 is logged in Application log
       href: ./deployment/event-10-is-logged-in-application-log.md
     - name: Fail to perform an in-place upgrade
       href: ./deployment/windows-not-parse-process-unattend-answer-file.md
+    - name: Fail to upgrade Windows 10 Enterprise edition
+      href: ./deployment/contact-system-administrator-to-upgrade-windows.md
     - name: HAL_INITIALIZATION_FAILED error on VMWare VM
       href: ./deployment/installation-error-hal-initialization-failed.md
     - name: How to customize the default local user profile when creating an image
@@ -280,6 +304,8 @@
       href: ./deployment/edit-boot-ini-file-windows-2000.md
     - name: Installation File Location not behave on the Explain tab
       href: ./deployment/installation-file-location-service-pack-not-behave.md
+    - name: Language packs no longer available
+      href: ./deployment/language-packs-no-longer-available-after-upgrade.md
     - name: Operations fail if Windows 8 is improperly identified as a WTG installation
       href: ./deployment/windows-8-incorrectly-reported-as-wtg-installation.md
     - name: Running Sysprep /generalize returns error
@@ -296,8 +322,12 @@
       href: ./deployment/windows-setup-log-file-locations.md
     - name: Windows SIM can't generate a catalog
       href: ./deployment/windows-sim-unable-generate-catalog-error.md
+    - name: Windows 7 Upgrade Advisor tool failed to run
+      href: ./deployment/upgrade-advisor-tool-failed-to-run.md
     - name: WinRE can't be built after deploying an image
       href: ./deployment/winre-cannot-built-deploy-image-captured-non-uefi-computer.md
+    - name: You can't access an EFI system partition
+      href: ./deployment/cant-access-efi-system-partition.md
 - name: Group Policy
   items:
   - name: AppLocker or software restriction policies
@@ -308,6 +338,8 @@
     items:
     - name: .admx errors when running Local Group Policy Editor
       href: ./group-policy/admx-errors-when-local-group-policy-editor.md
+    - name: Can't disable Microsoft Store through Group Policy
+      href: ./group-policy/cannot-disable-microsoft-store.md
     - name: How to create and manage Central Store for registry-based policies
       href: ./group-policy/create-and-manage-central-store.md
     - name: Logon scripts don't run for five minutes
@@ -320,6 +352,8 @@
       href: ./group-policy/resource-stringid-win7only-not-found.md
     - name: Clients fail to apply group policy at startup
       href: ./group-policy/fail-to-apply-group-policy-at-startup.md
+    - name: Disable screen saver passwords by using policies
+      href: ./group-policy/disable-screen-saver-passwords.md
     - name: Group Policy is not applied to a user account
       href: ./group-policy/group-policy-not-applied-user-account-runas.md
     - name: Group Policy Screensaver setting isn't working
@@ -372,6 +406,8 @@
       href: ./networking/change-csc-folder-location-with-cachelocation-registry.md
     - name: CSCCMD tool Version 1.1. functions and features
       href: ./networking/client-side-caching-command-line-options-v1dot1.md
+    - name: Current hotfixes have folder redirection enabled
+      href: ./networking/current-hotfixes-have-folder-redirection.md
     - name: Errors when having a large "Folder Redirection" policy settings file
       href: ./networking/errors-work-large-folder-redirection-policy-settings-file.md
     - name: Folder redirection doesn't work correctly
@@ -408,6 +444,8 @@
       href: ./networking/modern-apps-cannot-connect-check-point-vpn.md
     - name: Troubleshoot L2TP/IPSec VPN client connection
       href: ./networking/l2tp-ipsec-vpn-client-connection-issue.md
+    - name: Windows Connection Manager disconnects WLAN
+      href: ./networking/windows-connection-manager-disconnects-wlan.md
   - name: TCP/IP communications
     items:
     - name: Additional gateways appear in persistent routes
@@ -418,6 +456,8 @@
       href: ./networking/ping-exe-check-microsoft-broadband-network-adapter.md
     - name: Configure client proxy server settings
       href: ./networking/configure-client-proxy-server-settings-by-registry-file.md
+    - name: Device can't connect to mobile broadband
+      href: ./networking/device-cant-connect-mobile-broadband-over-the-air.md
     - name: error "WSAENOBUFS (10055)"
       href: ./networking/connect-tcp-greater-than-5000-error-wsaenobufs-10055.md
     - name: Error 0x80071779 when removing network components
@@ -490,6 +530,8 @@
       href: ./performance/flight-simulator-x-stops-responding.md
     - name: Running an.exe file starts different program
       href: ./performance/running-exe-starts-another-program.md
+    - name: Some Windows procedures don't work without RPC service
+      href: ./performance/disable-rpc-service-windows-process-not-work.md
     - name: SuperFetch(SysMain) service consumes CPU
       href: ./performance/superfetch-sysmain-service-spikes-cpu.md
   - name: Blue Screen/Bugcheck
@@ -696,6 +738,8 @@
       href: ./shell-experience/cannot-remove-uninstall-or-reinstall-microsoft-store-app.md
     - name: Can't start Microsoft Store apps
       href: ./shell-experience/error-start-store-apps.md
+    - name: Event ID 5973 when you open Windows Store apps
+      href: ./shell-experience/windows-store-apps-not-open-event-id-5973.md
     - name: Microsoft Store app removed unexpectedly
       href: ./shell-experience/pre-installed-microsoft-store-app-removed-logon.md
     - name: Microsoft Store Apps fail to start
@@ -712,6 +756,12 @@
       href: ./shell-experience/toggle-full-mode-and-windows-mode.md
     - name: Videos don't play in Windows Media Player 11
       href: ./shell-experience/media-player-11-not-play-video.md
+    - name: Windows Media Feature Pack for Windows 7 N and for Windows 7 KN
+      href: ./shell-experience/windows-media-feature-pack-for-windows-7.md
+  - name: Windows Search
+    items:
+    - name: Windows Search 4.0 and Multilingual User Interface Pack
+      href: ./shell-experience/windows-search-4-multilingual-user-interface-pack.md
 - name: System Management Components
   items:
   - name: Event Viewer
@@ -746,8 +796,12 @@
       href: ./system-management-components/configure-winrm-for-https.md
   - name: WMI
     items:
+    - name: Event ID 10 is logged in the Application log
+      href: ./system-management-components/event-id-10-logged-application-log-after-install.md
     - name: Failed logon event when running remote WMI
       href: ./system-management-components/failed-logon-event-when-running-remote-wmi.md
+    - name: SMS Agent Host service not start
+      href: ./system-management-components/sms-agent-host-service-not-start.md
     - name: WMI-Activity Event ID 5858 logged with ResultCode = 0x80041032
       href: ./system-management-components/wmi-activity-event-5858-logged-with-resultcode-0x80041032.md
 - name: UE-V
@@ -884,7 +938,9 @@
     items:
     - name: Enable diagnostic logging for Windows Security Center
       href: ./windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md
-- name: Windows Troubleshooters
+- name: windows-troubleshooters
   items:
-  - name: Active and retired Windows 10 troubleshooters
-    href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
+  - name: Windows Troubleshooters
+    items:
+    - name: Active and retired Windows 10 troubleshooters
+      href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md

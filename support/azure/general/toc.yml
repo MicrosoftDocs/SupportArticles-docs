@@ -2,8 +2,6 @@
   items:
   - name: Automation modifications aren't reflected in the portal
     href: modifications-not-reflect-portal.md
-  - name: Capture debug stream
-    href: capture-debug-stream.md
   - name: Capture diagnostics information
     href: automation-scripted-diagnostic-capture.md
   - name: Find-AzureRmResource returns error
@@ -93,6 +91,8 @@
 
 - name:  Support Diagnostic Packages
   items:
+  - name: Azure PaaS VM logs
+    href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
   - name: Azure Service Fabric troubleshooter
     href: fabric-logs.md
   - name: Container support policy

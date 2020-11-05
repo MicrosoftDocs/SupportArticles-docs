@@ -179,7 +179,7 @@ To start the WUAUSERV service, run the following commands from a Command Prompt:
 sc start wuauserv
 ```
 
-If the client agent fails to start and run properly, [check the Windows Update Agent version](/previous-versions/system-center/configuration-manager-2007/bb680319(v=technet.10)). If the agent is not up to date, [update the Windows Update Agent to the latest version](https://support.microsoft.com/help/949104). For more information, see [How to Install the Windows Update Agent on Client Computers](/previous-versions/system-center/configuration-manager-2007/bb932139(v=technet.10)).
+If the client agent fails to start and run properly, check the Windows Update Agent version. If the agent is not up to date, [update the Windows Update Agent to the latest version](https://support.microsoft.com/help/949104).
 
 You can also [reset Windows Update components](/windows/deployment/update/windows-update-resources#how-do-i-reset-windows-update-components).
 

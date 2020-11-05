@@ -9,7 +9,6 @@ ms.prod-support-area-path:
 This article provides some advanced troubleshooting tips to help you identify and solve content distribution issues.
 
 _Original product version:_ &nbsp; Configuration Manager current branch, Microsoft System Center 2012 Configuration Manager, Microsoft System Center 2012 R2 Configuration Manager  
-_Original KB number:_ &nbsp; 4482728
 
 ## Enable verbose logging
 
