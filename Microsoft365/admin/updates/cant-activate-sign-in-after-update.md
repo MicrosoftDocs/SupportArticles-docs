@@ -24,26 +24,28 @@ appliesto:
 
 When you try to activate or sign in to any of the Microsoft Office 2016 applications after you install the version 15.33 update, you receive a blank authentication screen.
   
-Additionally, you may see any of the following symptoms. 
+Additionally, you may see any of the following symptoms.
+
 ### Symptom 1
 
 The following issues occur in the Unified Logging Service (ULS) log:  
- 
+
 - The server has redirected to a non-https URL.    
 - Errors occur in Azure Active Directory Authentication Library (ADAL) authentication.    
- 
-To locate the ULS log, open **Finder** and browse to the following path:
- 
-    ~/Library/Containers/com.microsoft.<Application>/Data/Library/Caches/Microsoft/uls/com.microsoft.<Application>/logs 
 
-**Note** \<Application> represents the name of the application that you are troubleshooting. 
+To locate the ULS log, open **Finder** and browse to the following path:
+
+~/Library/Containers/com.microsoft.\<Application>/Data/Library/Caches/Microsoft/uls/com.microsoft.\<Application>/logs
+
+**Note** \<Application> represents the name of the application that you are troubleshooting.
+
 ### Symptom 2
 
 You notice that in an HTTP trace, the server response includes multiple WWW-Authenticate headers, such as the following:
- 
-    WWW-Authenticate: Negotiate
 
-    WWW-Authenticate: NTLM 
+WWW-Authenticate: Negotiate
+
+WWW-Authenticate: NTLM 
 
 ## Cause
 

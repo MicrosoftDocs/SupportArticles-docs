@@ -88,12 +88,11 @@ Example
 
 A message is sent from Bob (bob@fabrikam.com) to John's mailbox (john.onprem@contoso.com) on his company's own server that is running Exchange Server. John has set up autoforwarding to his home email address (john.home@example.com).
 
-||Original message|Relayed message received by Office 365|Relayed message sent from Office 365|
+|Type|Original message|Relayed message received by Office 365|Relayed message sent from Office 365|
 |---|---|---|---|
 |Recipient|john.onprem@contoso.com|john.home@example.com|john.home@example.com|
 |P1 From|bob@fabrikam.com|bob@fabrikam.com|bounces+SRS=44ldt=IX@contoso.com|
 |From header|bob@fabrikam.com|bob@fabrikam.com|bob@fabrikam.com|
-
 
 
 Microsoft provides third-party contact information to help you find additional information about this topic. This contact information may change without notice. Microsoft does not guarantee the accuracy of third-party contact information.

@@ -38,7 +38,7 @@ Problems with misleading labels are illustrated and discussed in this article.
 
 To illustrate the t-Test tools, create a blank Excel worksheet, copy the following table, and then select cell A1 in your blank Excel worksheet. Then, paste the entries so that the following table fills cells A1:C20 in your worksheet.
 
-||||
+|A|B|C|
 |---|---|---|
 |200|220||
 |190|210||

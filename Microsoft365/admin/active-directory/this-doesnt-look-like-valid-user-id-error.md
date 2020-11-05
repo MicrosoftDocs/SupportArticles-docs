@@ -24,9 +24,9 @@ appliesto:
 
 When a user tries to sign in to Office 365, the user receives the following error message:
 
-    Sorry, that didn't work 
-
-    This doesn't look like a valid user ID. Make sure you typed the user ID assigned to you by your organization. It usually looks like someone@example.com or someone@example.onmicrosoft.com.
+> Sorry, that didn't work
+>
+> This doesn't look like a valid user ID. Make sure you typed the user ID assigned to you by your organization. It usually looks like someone@example.com or someone@example.onmicrosoft.com.
 
 ## Cause 
 

@@ -29,7 +29,7 @@ appliesto:
 
 When you exit Microsoft Project while the Global.mpt template is opened as read-only, you receive the following error message:
 
-    Cannot save to 'Global.mpt'. This is a read-only file. You can view and copy information but you cannot save changes to this file under its current name. If you want to save changes to the file, choose Save As and rename the file.
+> Cannot save to 'Global.mpt'. This is a read-only file. You can view and copy information but you cannot save changes to this file under its current name. If you want to save changes to the file, choose Save As and rename the file.
 
 ## Cause
 

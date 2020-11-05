@@ -37,9 +37,8 @@ In an Office 365 environment, users don't receive SharePoint Online alert notifi
 
 Investigate the user's permissions for the list, for the library, or for the task list. Make sure that the user account has at least Read permissions on the object.
 
-    - If these permissions are present, go to Solution 2.
-
-    - If these permissions aren't present, direct the user to the site administrator to have these permissions corrected.
+- If these permissions are present, go to Solution 2.
+- If these permissions aren't present, direct the user to the site administrator to have these permissions corrected.
 
 For more information about Permission Levels, see [Understanding Permission Levels](https://docs.microsoft.com/sharepoint/understanding-permission-levels).
 
@@ -47,9 +46,8 @@ For more information about Permission Levels, see [Understanding Permission Leve
 
 Verify that new alerts work. To do this, create a new alert on a test library or on a test list. Perform an action to generate the alert. For example, add, edit, or delete an item. Then, wait 15 minutes. If the alert isn't received, collect the following information, and then contact Microsoft Office 365 technical support:
 
-    - Verify the last known time that alerts were received.
-
-    - Record the exact steps to reproduce the issue in the new alert.
+- Verify the last known time that alerts were received.
+- Record the exact steps to reproduce the issue in the new alert.
 
 ### Solution 3
 

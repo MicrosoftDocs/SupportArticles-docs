@@ -30,8 +30,4 @@ Tasks buckets in Microsoft Teams Class Schedule do not show up in the Class Sche
 
 Microsoft is researching this problem and will post more information as it becomes available.
 
-
-
-## More information
-
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

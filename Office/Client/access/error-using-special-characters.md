@@ -115,7 +115,7 @@ Microsoft Access does not restrict the use of special characters such as a numbe
 
 When you work with Access or with some other application such as a Microsoft Visual Basic application or an Active Server Pages (ASP) application, you must avoid the following special characters:
 
-|||
+|Name|Symbol|
 |---|---|
 |Space||
 |Apostrophe|'|
