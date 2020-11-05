@@ -53,7 +53,7 @@ Before you begin, sign in to the [Exchange admin center](http://outlook.office36
 2. To create a room mailbox, select **New+** > **Room mailbox**. To create an equipment mailbox, select **New+** > **Equipment mailbox**.
 3. Use the options on the page to specify the settings for the new resource mailbox.
 
-After you create a room mailbox or equipment mailbox, you manage its settings by editing the resource mailbox using EAC. For detailed information about the available settings for resource mailboxes, see [Create and Manage Room Mailboxes](/exchange/recipients-in-exchange-online/manage-room-mailboxes) and [Manage Equipment Mailboxes](/exchange/recipients-in-exchange-online/manage-equipment-mailboxes).
+After you create a room mailbox or equipment mailbox, you manage its settings by editing the resource mailbox using EAC. For detailed information about the available settings for resource mailboxes, see [Create and Manage Room Mailboxes](/exchange/recipients/room-mailboxes?view=exchserver-2019) and [Manage Equipment Mailboxes](/exchange/recipients/equipment-mailboxes?view=exchserver-2019).
 
 **Did this solve your problem?**
 
@@ -78,7 +78,7 @@ Before you begin, sign in to the [Exchange admin center](https://outlook.office3
 
 3. Use the options on the page to specify the settings for the new resource mailbox.
 
-After you create a room mailbox or equipment mailbox, you manage its settings by editing the resource mailbox using EAC. For detailed information about the available settings for resource mailboxes, see [Create and Manage Room Mailboxes](/exchange/recipients-in-exchange-online/manage-room-mailboxes) and [Manage Equipment Mailboxes](/exchange/recipients-in-exchange-online/manage-equipment-mailboxes).
+After you create a room mailbox or equipment mailbox, you manage its settings by editing the resource mailbox using EAC. For detailed information about the available settings for resource mailboxes, see [Create and Manage Room Mailboxes](/exchange/recipients/room-mailboxes?view=exchserver-2019) and [Manage Equipment Mailboxes](/exchange/recipients/equipment-mailboxes?view=exchserver-2019).
 
 **Did this solve your problem?**
 
