@@ -27,7 +27,7 @@ appliesto:
 
 You open a Microsoft Excel workbook that was digitally signed in an earlier version of Excel than the one that you are using. In this situation, the signature is no longer valid, and the following warning message is displayed in the Trust Bar:
 
-    This document contains invalid signatures. [View Signatures]
+> This document contains invalid signatures. [View Signatures]
 
 > [!NOTE]
 > When you open the digitally signed workbook in same program version that it was created in, the workbook opens as expected without an error message.

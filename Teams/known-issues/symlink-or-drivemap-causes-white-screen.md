@@ -34,8 +34,4 @@ When Microsoft Teams is installed to Program Files using installation scripts ra
 
 This is by design. Make sure you install the application in the default location: `user\Appdata`. If the mapping must exist, use the web version of Microsoft Teams instead.
 
-
-
-## More information
-
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

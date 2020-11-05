@@ -34,7 +34,7 @@ Multiple users... (but not a single user) ...from outside our organization...Can
 
 Be aware that each column and each row are mutually exclusive. That is, the issue affects either a single user or multiple users, and the issue can be reproduced either on one computer or on multiple computers.
 
-|     |A single user from inside our organization |A single user from outside our organization|Multiple single user from inside our organization|Multiple users from outside our organization|Multiple users from both inside and outside our organization
+|   Issue  |A single user from inside our organization |A single user from outside our organization|Multiple single user from inside our organization|Multiple users from outside our organization|Multiple users from both inside and outside our organization
 |---|---|---|---|---|---|
 |Can't join a Skype for Business Online meeting from a single computer   |Client issue   |Client issue   |Client issue   |Client issue  |Client issue  |
 |Can't join a Skype for Business Online meeting from multiple computers   |User identity issue or provisioning issue   |Lync federation issue or external network issue     |Network issue or Service outage         |Lync federation issue or external network issue|Service outage or network issue|

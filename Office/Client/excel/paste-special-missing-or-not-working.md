@@ -40,8 +40,8 @@ To see if Paste Special is enabled:
 3. If Paste Special works in the Safe Mode as follows, enable your Add-ins one at a time until you hit that one that is causing the conflict. Leave that one disabled or uninstall it.
 
    **Note:** Find out more on [ Adding or Removing Add-ins.](https://office.microsoft.com/excel-help/add-or-remove-add-ins-HP010342658.aspx) Find out more on [ Working with Office Safe Modes.](https://office.microsoft.com/excel-help/work-with-office-safe-modes-HP010354300.aspx)    
-  
 
-|![paste special](./media/paste-special-missing-or-not-working/paste-special.jpg)<|![paste special settings](./media/paste-special-missing-or-not-working/paste-special-settings.jpg) |
-|---|---|
-   You can also get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/search/) or [Windows Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
+    ![paste special](./media/paste-special-missing-or-not-working/paste-special.jpg)  
+    ![paste special settings](./media/paste-special-missing-or-not-working/paste-special-settings.jpg) |
+
+You can also get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/search/) or [Windows Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.

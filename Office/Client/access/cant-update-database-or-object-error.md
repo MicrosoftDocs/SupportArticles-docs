@@ -25,9 +25,9 @@ appliesto:
 
 ##  Symptoms
 
-When you work in a Microsoft Access table that is linked to a Microsoft SharePoint list that contains a hidden metadata column, you receive the following error message: 
+When you work in a Microsoft Access table that is linked to a Microsoft SharePoint list that contains a hidden metadata column, you receive the following error message:
 
-    Cannot update. Database or object is read-only
+> Cannot update. Database or object is read-only
 
 ##  Cause
 

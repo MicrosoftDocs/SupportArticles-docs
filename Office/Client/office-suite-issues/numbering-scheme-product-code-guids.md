@@ -72,6 +72,8 @@ The following table describes the characters of the GUID.
 |000|Reserved for future use, currently 0|0|
 |D|1 for debug, 0 for ship|0-1|
 |000000FF1CE|Office Family ID|0-9|
+|||
+
 To view the GUIDs for the Office 2013 suites and programs that are installed on a computer, follow these steps: 
 
 1.  Click **Start**, click **Run**, type regedit, and then click **OK**.    

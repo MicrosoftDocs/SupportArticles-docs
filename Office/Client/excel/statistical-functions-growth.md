@@ -86,8 +86,9 @@ An Excel worksheet example is provided to illustrate the following key concepts:
 
 To illustrate the GROWTH function, create a blank Excel worksheet, copy the following table, select cell A1 in your blank Excel worksheet and then paste the entries so that the table following fills cells A1:K35 in your worksheet.
 
-|y:|x's:||||||||||
+|A|B|C|D|E|F|G|H|I|J|K|
 |---|---|---|---|---|---|---|---|---|---|---|
+|y:|x's:||||||||||
 |=EXP(F2)|1|2|1||1||||||
 |=EXP(F3)|3|4|1||2||||||
 |=EXP(F4)|4|5|1||3||||||

@@ -43,8 +43,9 @@ CHIINV(p, df)
 
 To illustrate the CHIINV function, create a blank Excel worksheet, copy the following table, select cell A1 in your blank Excel worksheet, and then paste the entries so that the table fills cells A1:F21 in your worksheet.
 
-|||actual|sales|||
+|A|B|C|D|E|F|
 |---|---|---|---|---|---|
+|||actual|sales|||
 ||0|1|2|3 or more||
 |before|13|8|5|4|=SUM(B3:E3)|
 |during|8|10|6|6|=SUM(B4:E4)|

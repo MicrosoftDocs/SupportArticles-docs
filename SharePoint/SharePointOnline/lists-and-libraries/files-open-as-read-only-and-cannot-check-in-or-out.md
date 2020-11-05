@@ -10,7 +10,6 @@ search.appverid:
 - SPO160
 audience: ITPro
 ms.topic: article
-ms.service: sharepoint-online
 ms.custom: 
 - CSSTroubleshoot
 - CI 113561

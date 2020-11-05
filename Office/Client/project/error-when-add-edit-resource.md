@@ -24,7 +24,7 @@ appliesto:
 
 When you attempt to Save a resource to the Enterprise Resource Pool, you may receive the following error message:
 
-    "The resource could not be saved due to the following reasons: The resource account is already in use."
+> "The resource could not be saved due to the following reasons: The resource account is already in use."
 
 ##  Cause
 
