@@ -67,7 +67,7 @@ These issues may occur when your Office 365 subscription has been compromised. I
 
 For more information about phishing scams and fraudulent email messages, go to the following websites:
 
-- [Internet Crime Complaint Center](https://www.ic3.gov/preventiontips.aspx)
+- [Internet Crime Complaint Center](https://www.ic3.gov/)
 - [Securities and Exchange Commission - "Phishing" Fraud](https://www.sec.gov/investor/pubs/phishing.htm)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
