@@ -17,11 +17,11 @@ ms.technology: Windows 7 EoS FAQ
 
 This article describes the frequently asked questions about the Extended Security Updates offers for E5 customers for Windows 7.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp; 4527879
-
 > [!NOTE]
 > This article is intended for use by IT professionals. If you're looking for information for home users, see [Windows 7 support ended on January 14, 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020).  
+
+_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp; 4527879
 
 ## General information
 
