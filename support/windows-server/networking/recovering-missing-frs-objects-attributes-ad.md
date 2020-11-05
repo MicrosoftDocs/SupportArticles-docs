@@ -212,8 +212,7 @@ If you have to recover the replica set by restoring the system state, follow the
 1. Start the domain controller where you have a valid system state backup in the Directory Services Restore Mode.
 
     For more information, visit the following Microsoft Web site:  
-    Performing an Authoritative Restore of Active Directory objects
-     [https://technet2.microsoft.com/WindowsServer/en/Library/690730c7-83ce-4475-b9b4-46f76c9c7c901033.mspx?mfr=true](https://technet2.microsoft.com/windowsserver/en/library/690730c7-83ce-4475-b9b4-46f76c9c7c901033.mspx?mfr=true)  
+    [Performing an Authoritative Restore of Active Directory objects](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816878(v=ws.10)?redirectedfrom=MSDN)
 
 2. After restoring the system state backup in the Directory Restore Mode, *do not* restart the DC. At a command prompt, use NTDSUTIL to perform an authoritative restore on the deleted `SYSVOL` replica set by using the following ndtsutil syntax:  
 
@@ -301,8 +300,7 @@ To restore nTFRSSubscription objects by restoring a system state backup, follow 
 1. Start the Domain Controller where you have a recent, valid system state backup in the Directory Services Restore Mode.
 
     For more information, visit the following Microsoft Web site:  
-    Performing an Authoritative Restore of Active Directory Objects
-     [https://technet2.microsoft.com/WindowsServer/en/Library/690730c7-83ce-4475-b9b4-46f76c9c7c901033.mspx?mfr=true](https://technet2.microsoft.com/windowsserver/en/library/690730c7-83ce-4475-b9b4-46f76c9c7c901033.mspx?mfr=true)  
+    [Performing an Authoritative Restore of Active Directory objects](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816878(v=ws.10)?redirectedfrom=MSDN)  
 
 2. After you restore the system state backup in the Directory Restore Mode, *do not* restart the DC. Open a command prompt to restore the deleted subscription object. If DC the where you restored the object is running Windows Server 2003 with SP1 or later versions, you can use the following ndtsutil syntax:  
 ntdsutil "authoritative restore" "restore object \"CN=DC1,CN=Domain System Volume (`SYSVOL` Share),CN=File Replication Service,CN=System, **DC=A,DC=COM**\\"" q q  

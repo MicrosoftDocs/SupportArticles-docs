@@ -54,7 +54,7 @@ Solution
 
 This issue is fixed in USMT 5.0. The recommended solution is to use USMT 5.0 for migrations instead of USMT 4.0. USMT 5.0 is part of the Windows Assessment and Deployment Kit (ADK):
 
-[Windows Assessment and Deployment Kit (ADK) for Windows 8](https://www.microsoft.com/download/details.aspx?id=30652) 
+[Windows Assessment and Deployment Kit (ADK) for Windows 8](/windows-hardware/get-started/adk-install) 
 
 Workaround 
 

@@ -40,34 +40,39 @@ There is a code defect in how ADMT interoperates with SQL Express 2008 SP1 on do
 
 ## Resolution
 
-**Workaround 1:**  
+**Workaround 1:**
+
 The standard practice is to install ADMT on a member computer in the target domain. Install SQL Express 2008 SP1 on a Windows 2008 R2 member server in the target domain and then install ADMT 3.2 on that same member server.
- **Workaround 2:**  
+
+**Workaround 2:**
+
 If you have a requirement to install ADMT 3.2 on a domain controller in order to use command-line or scripted user migrations with SID History, install SQL 2008 SP1 (non-Express edition) on a Windows Server 2008 R2 member server in the target domain and select that remote instance when installing ADMT 3.2 on the domain controller. Alternatively, you can install SQL Express 2005 SP3 on the domain controller.
- **Workaround 3:**  
+
+**Workaround 3:**
+
 If you have a requirement to install ADMT 3.2 and SQL Express 2008 SP1 on the same domain controller, use the following steps on the target domain's domain controller:
+
 1. Install the Cumulative Update Package 4 for SQL Server 2008 on the domain controller.
 
-[963036](https://support.microsoft.com/kb/963036) Cumulative update package 4 for SQL Server 2008.
+   [963036](https://support.microsoft.com/kb/963036) Cumulative update package 4 for SQL Server 2008.
 
 2. Install SQL Express 2008 SP1 on the domain controller. Note the SQL instance name created during the install (default is SQLEXPRESS).
 
- [Microsoft® SQL Server® 2008 Express Edition Service Pack 1](https://www.microsoft.com/download/details.aspx?id=26729) 
-3. Create a domain local group with the format of "SQLServerMSSQLUser$<DCComputerName>$<InstanceName>". For example, if the domain controller is named "DC1" and the SQL instance was "SQLEXPRESS" you would run the following command in an elevated command prompt:
+3. Create a domain local group with the format of "SQLServerMSSQLUser$\<DCComputerName>$\<InstanceName>". For example, if the domain controller is named "DC1" and the SQL instance was "SQLEXPRESS" you would run the following command in an elevated command prompt:
 
-**NET LOCALGROUP SQLServerMSSQLUser$DC1$SQLEXPRESS /ADD**  
+   `NET LOCALGROUP SQLServerMSSQLUser$DC1$SQLEXPRESS /ADD`
 
 4. Retrieve the SQL service SID using the SC.EXE command with the name of the SQL service instance. For example, if the SQL instance was "SQLEXPRESS" you would run the following command in an elevated command prompt and note the returned SERVICE SID value:
 
-**SC SHOWSID MSSQL$SQLEXPRESS**  
+   `SC SHOWSID MSSQL$SQLEXPRESS`
 
 5. In the Windows directory, create the "ADMT" subfolder and a subfolder beneath that named "Data". For example, you would run the following command in an elevated command prompt:
 
-**MD %SystemRoot%\ADMT\Data**  
+   `MD %SystemRoot%\ADMT\Data**`
 
 6. Using the SID retrieved in Step 4, set FULL CONTROL permissions on the %SystemRoot%\ADMT\Data folder. For example, if the SID returned in Step 4 was "S-1-5-80-3880006512-4290199581-3569869737-363123133" you would run the following command in an elevated command prompt:
 
-**ICACLS %systemroot%\ADMT\Data /grant *S-1-5-80-3880006512-4290199581-3569869737-363123133:F**  
+   `ICACLS %systemroot%\ADMT\Data /grant *S-1-5-80-3880006512-4290199581-3569869737-363123133:F`
 
 7. Install ADMT 3.2 on the domain controller while selecting the local SQL Express 2008 instance.
 

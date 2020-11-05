@@ -35,7 +35,7 @@ For more information about how to disable or to permanently remove the programs 
 ### Advanced troubleshooting
 
 These troubleshooting steps are intended for advanced computer users. If you are not comfortable with advanced troubleshooting, you might want to ask someone for help or to contact support. For information about how to contact support, visit the following Microsoft Web site:  
-[https://support.microsoft.com/contactus/](/contactus/)  
+[Microsoft Support](https://support.microsoft.com/contactus/)  
 The System Configuration utility automates the routine troubleshooting steps that Microsoft Customer Support Services professionals use when they diagnose system configuration issues.
 
 When you use this utility, you can select options to temporarily prevent services and programs from loading during the Windows startup process. With this process, you can reduce the risk of making typing errors when you use Registry Editor. Additionally, when you use the utility, it is easy to restore the original configuration.

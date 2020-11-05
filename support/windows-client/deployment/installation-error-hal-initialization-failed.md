@@ -53,7 +53,7 @@ You must upgrade to later version of VMware (at least version 5.1).
 ## More information
 
 You can also run into this issue in other scenarios involving WDS, SCCM, or other deployment technologies.  For example, attempting to PXE boot a Windows 8 boot.wim. 
-For more information on support for Windows 8 and Windows Server 2012 in VMware, see the following: [https://kb.vmware.com/selfservice/microsites/microsite.do?cmd=displayKC&docType=kc&externalId=2006859&sliceId=2&docTypeID=DT_KB_1_1](https://kb.vmware.com/selfservice/microsites/microsite.do?cmd=displayKC&docType=kc&externalId=2006859&sliceId=2&docTypeID=DT_KB_1_1) 
+For more information on support for Windows 8 and Windows Server 2012 in VMware, see the following:
  [https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2006859](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2006859) 
 For more information on support for operating systems in VMware Guests, see the following: [https://www.vmware.com/resources/compatibility/search.php](https://www.vmware.com/resources/compatibility/search.php) 
 Hardware requirements for Windows 8 and Windows Server 2012: [https://msdn.microsoft.com/library/windows/hardware/hh975398.aspx <!--ERROR-->](https://msdn.microsoft.com/library/windows/hardware/hh975398.aspx)
