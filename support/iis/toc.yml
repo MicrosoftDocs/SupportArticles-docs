@@ -87,6 +87,8 @@
   items:
   - name: An application pool exceeds time limits
     href: application-pool-exceed-time-limits.md
+  - name: Data collection strategies of Web Server issues
+    href: data-collection-strategies.md
   - name: DebugDiag 1.2 installation and data collector
     href: debugdiag-collected-information.md
   - name: ETW logs diagnostic

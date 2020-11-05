@@ -204,6 +204,11 @@
       "source_path": "support/previous-versions/iis/index.md",
       "redirect_url": "/support/previous-versions/iis/force-ssl-specific-pages",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/capture-debug-stream.md",
+      "redirect_url": "https://docs.microsoft.com/azure/automation/troubleshoot/runbooks",
+      "redirect_document_id": false
     }
   ]
 }

@@ -9,7 +9,6 @@ ms.prod-support-area-path:
 This article describes distribution points installation, upgrade, configuration changes, removal and how these operations work. It's important to understand these flows to properly identify and diagnose the issue.
 
 _Original product version:_ &nbsp; Configuration Manager current branch, Microsoft System Center 2012 Configuration Manager, Microsoft System Center 2012 R2 Configuration Manager  
-_Original KB number:_ &nbsp; 4482728
 
 ## Introduction
 

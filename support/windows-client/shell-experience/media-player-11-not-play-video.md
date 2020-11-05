@@ -69,7 +69,7 @@ Obtain and install the codec. To do this, follow these steps in Windows Media Pl
 2. Install the codec. To do this, follow these steps:
 
     1. If you receive an error message when you try to play the file, click **Web Help**. If you do not receive an error message when you try to play the file, go to step 3.
-    2. On the Microsoft Web site, click the link to the Wmplugins Web site. If this link is not present, visit [Wmplugins](https://www.wmplugins.com/itemlist.aspx?typeid=8).
+    2. On the Microsoft Web site, click the link to the Wmplugins Web site.
 
     3. Follow the instructions on the Web site to download and install the codec for the file. If the Web site does not automatically find a codec for the file, and if either of the following conditions is true, go to step 3:
           - You did not note a codec in step 1b.

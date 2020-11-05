@@ -42,9 +42,9 @@ Most Active Directory Federated Services (AD FS) 2.0 problems belong to one of t
 
     You can't access the following IDP-initiated sign-on page and AD FS metadata:
 
-    [https://ADFSServiceName/federationmetadata/2007-06/federationmetadata.xml](https://ADFSServiceName/federationmetadata/2007-06/federationmetadata.xml)
+    `https://ADFSServiceName/federationmetadata/2007-06/federationmetadata.xml`
 
-    [https://ADFSServiceName/adfs/ls/idpinitiatedsignon.aspx](https://ADFSServiceName/adfs/ls/idpinitiatedsignon.aspx)
+    `https://ADFSServiceName/adfs/ls/idpinitiatedsignon.aspx`
 
 ## Resolution
 

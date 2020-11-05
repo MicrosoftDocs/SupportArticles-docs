@@ -402,6 +402,8 @@
           href: wsus-and-windows-update-agent-diagnostics.md
         - name: WSUS best practices
           href: windows-server-update-services-best-practices.md
+        - name: WSUS client computers restart without any notification
+          href: wsus-client-computers-restart-automatically.md
         - name: WSUS client takes too long to finish an update scan
           href: wsus-client-long-time-finish-update-scan.md
         - name: WSUS maintenance guide

@@ -30,7 +30,7 @@ For the following reasons, the best practice is to create new Active Directory d
 - Client computers and domain controllers that are joined to single-label domains require additional configuration to dynamically register DNS records in single-label DNS zones.
 - Client computers and domain controllers may require additional configuration to resolve DNS queries in single-label DNS zones.
 - Some server-based applications are incompatible with single-label domain names. Application support may not exist in the initial release of an application, or support may be dropped in a future release.
-- Transitioning from a single-label DNS domain name to a fully qualified DNS name is non-trivial and consists of two options. Either [migrate](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc974332(v=ws.10)) users, computers, groups, and other states to a new forest. Or, do a domain rename of the existing domain. Some server-based applications are incompatible with the domain rename feature that is supported in Windows Server 2003 and newer domain controllers. These incompatibilities either block the domain rename feature or make the use of the domain rename feature more difficult when you try to rename a single-label DNS name to a fully qualified domain name.
+- Transitioning from a single-label DNS domain name to a fully qualified DNS name is non-trivial and consists of two options. Either [migrate](https://www.microsoft.com/download/details.aspx?id=19188) users, computers, groups, and other states to a new forest. Or, do a domain rename of the existing domain. Some server-based applications are incompatible with the domain rename feature that is supported in Windows Server 2003 and newer domain controllers. These incompatibilities either block the domain rename feature or make the use of the domain rename feature more difficult when you try to rename a single-label DNS name to a fully qualified domain name.
 
 - The Active Directory Installation Wizard (Dcpromo.exe) in Windows Server 2008 warns against creating new domains that have single-label DNS names. Because there's no business or technical reason to create new domains that have single-label DNS names, the Active Directory Installation Wizard in Windows Server 2008 R2 explicitly blocks creating such domains.
 
@@ -221,6 +221,6 @@ Root servers may be created by the DCpromo Wizard. If the "." zone exists, a roo
 
 - [Warnings installing Active Directory Domain Services on Windows Server 2008 and Windows Server 2008 R2 in domains with single-label DNS names](https://support.microsoft.com/help/2002634)
 
-- [ADMT Guide: Migrating and Restructuring Active Directory Domains](/windows/it-pro/windows-server-2008-R2-and-2008/cc974332(v=ws.10))
+- [ADMT Guide: Migrating and Restructuring Active Directory Domains](https://www.microsoft.com/download/details.aspx?id=19188)
 
 - [Active Directory Migration Tool (ADMT) Guide: Migrating and Restructuring Active Directory Domains](https://www.microsoft.com/download/details.aspx?id=19188)

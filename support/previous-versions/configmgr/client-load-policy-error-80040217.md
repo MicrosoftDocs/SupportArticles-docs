@@ -105,5 +105,4 @@ To resolve the issue, add a new network access account in the Admin console usi
 
 ## More information
 
-- [Client Custom Error Codes](/previous-versions/system-center/configuration-manager-2007/bb632794(v=technet.10)#client-custom-error-codes)
-- [About the Network Access Account](/previous-versions/system-center/configuration-manager-2007/bb680398(v=technet.10))
+[About the Network Access Account](/mem/configmgr/core/plan-design/hierarchy/accounts#network-access-account)
