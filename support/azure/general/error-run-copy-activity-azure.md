@@ -2,7 +2,8 @@
 title: Error when you try to copy content to Azure
 description: This article provides a resolution for the problem that occurs when you try to copy content to Microsoft Azure by using a Java-based tool or program.
 ms.date: 10/22/2020
-ms.prod-support-area-path: Azure/Data FactoryAzure/Data Factory/V2 - Azure-SSIS Integration Runtime
+ms.prod-support-area-path: Data Factory, V2 - Azure-SSIS Integration Runtime
+ms.prod: azure
 ---
 # UserErrorJreNotFound error message when you run a copy activity to Azure
 
@@ -29,7 +30,6 @@ By default, Integration Runtime resolves the JRE path by using registry entries.
 
 ## Resolution
 
-**Important**  
 Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 To fix this issue, follow these steps to verify the status of the JRE installation:

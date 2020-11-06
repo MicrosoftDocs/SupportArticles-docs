@@ -21,9 +21,9 @@ This article describes how to back up a Visual SourceSafe database.
 1. Make sure that no one is using the database and that Analyze will not begin to run while you are backing up the database.
 2. Copy the following folders:
 
-    - *\DATA*
-    - *\Temp
-    - *\USERS**
+    - `\DATA`
+    - `\Temp`
+    - `\USERS`
 
 3. Copy the *User.txt* and *Srcsafe.ini* files.
 
