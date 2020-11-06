@@ -256,7 +256,7 @@ There are two different options here:
 
 1. Reinstall WSUS with a fresh database. There are a number of caveats related to this, including length of initial sync, and full client scans against SUSDB, versus differential scans.
 
-2. Ensure you have a [backup](#back-up-the-wsus-database) of the SUSDB database, then run a [reindex](#reindex-the-wsus-database). When that completes, run the following SQL Server Management Studio or SQL Server Management Studio Express. After this finishes, follow all of the above instructions for running maintenance. This last step is necessary because the stored procedure here only removes unused updates and update revisions.
+2. Ensure you have a [backup](#back-up-the-wsus-database) of the SUSDB database, then run a [reindex](#reindex-the-wsus-database). When that completes, run the following script in SQL Server Management Studio or SQL Server Management Studio Express. After it finishes, follow all of the above instructions for running maintenance. This last step is necessary because the `spDeleteUpdate` stored procedure only removes unused updates and update revisions.
 
     ```sql
     DECLARE @var1 INT
@@ -282,6 +282,7 @@ There are two different options here:
 
     DROP TABLE #results
     ```
+For slow performance issue of the `spDeleteUpdate` stored procedure, see [The spDeleteUpdate stored procedure is running slowly](spdeleteupdate-slow-performance.md).
 
 ### Running the Decline-SupersededUpdatesWithExclusionPeriod.ps1 script times out when connecting to the WSUS server, or a 401 error occurs while running
 
