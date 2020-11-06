@@ -68,6 +68,10 @@
   - name: Optimize CreateFile function
     href: optimize-createfile-function.md
 
+- name: General
+  items:
+  - name: Error when you try to copy content to Azure
+    href: error-run-copy-activity-azure.md
 
 - name: Other common issues
   items:
