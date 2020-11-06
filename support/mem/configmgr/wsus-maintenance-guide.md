@@ -54,8 +54,6 @@ The basic steps necessary for proper WSUS maintenance include the following:
 3. [Reindex the WSUS database](#reindex-the-wsus-database)
 4. [Decline superseded updates](#decline-superseded-updates)
 5. [Run the WSUS Server Cleanup Wizard](#run-the-wsus-server-cleanup-wizard)
-6. [Troubleshooting](#troubleshooting)
-7. [Automating WSUS maintenance](#automating-wsus-maintenance)
 
 ### Back up the WSUS database
 
@@ -250,9 +248,9 @@ After it reports the number of items it has removed, the cleanup finishes. If yo
 
 After superseded updates have been declined, for best performance, SUSDB should be reindexed again. See the [Reindex the WSUS database](#reindex-the-wsus-database) section for related information.
 
-### Troubleshooting
+## Troubleshooting
 
-#### HELP! My WSUS has been running for years without ever having maintenance done and the cleanup wizard keeps timing out!
+### HELP! My WSUS has been running for years without ever having maintenance done and the cleanup wizard keeps timing out!
 
 There are two different options here:
 
@@ -285,7 +283,7 @@ There are two different options here:
     DROP TABLE #results
     ```
 
-#### Running the Decline-SupersededUpdatesWithExclusionPeriod.ps1 script times out when connecting to the WSUS server, or a 401 error occurs while running
+### Running the Decline-SupersededUpdatesWithExclusionPeriod.ps1 script times out when connecting to the WSUS server, or a 401 error occurs while running
 
 If errors occur when you attempt to use the PS script to decline superseded updates, an alternative SQL script can be run against SUDB.
 
@@ -338,7 +336,7 @@ If errors occur when you attempt to use the PS script to decline superseded upda
 
 5. To check progress, monitor the **Messages** tab in the **Results** pane.
 
-#### What if I find out I needed one of the updates that I declined?
+### What if I find out I needed one of the updates that I declined?
 
 If you decide you need one of these declined updates in Configuration Manager, you can get it back in WSUS by right-clicking the update, and selecting **Approve**. Change the approval to **Not Approved**, and then resync the SUP to bring the update back in.
 
@@ -348,7 +346,7 @@ If the update is no longer in WSUS, it can be imported from the Microsoft Update
 
 :::image type="content" source="./media/wsus-maintenance-guide/import-updates.jpg" alt-text="How to import updates in WSUS.":::
 
-### Automating WSUS maintenance
+## Automating WSUS maintenance
 
 > [!NOTE]
 > If you are using Configuration Manager version1906 or a later version, automate the cleanup procedures by enabling the **WSUS Maintenance** options in the software update point configuration of the top-level site. These options handle all cleanup operations that are performed by the WSUS Server Cleanup Wizard. However, you should still automatically back up and reindex the WSUS database on a schedule.
@@ -368,7 +366,7 @@ Needed/helpful links:
 - [Agent XPs Server Configuration Option](/sql/database-engine/configure-windows/agent-xps-server-configuration-option)
 - [Weekend Scripter: Use the Windows Task Scheduler to Run a Windows PowerShell Script](https://devblogs.microsoft.com/scripting/weekend-scripter-use-the-windows-task-scheduler-to-run-a-windows-powershell-script/)
 
-#### Setting up the WSUS Cleanup task in Task Scheduler
+### Setting up the WSUS Cleanup task in Task Scheduler
 
 > [!NOTE]
 > As mentioned previously, if you are using Configuration Manager current branch version 1906 or a later version, automate the cleanup procedures by enabling the **WSUS Maintenance** options in the software update point configuration of the top-level site. For standalone WSUS servers or older versions of Configuration Manager, you can continue to use the following steps.
@@ -407,7 +405,7 @@ The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/
 
 5. You can also use these steps to configure the [Decline-SupersededUpdatesWithExclusionPeriod.ps1](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/69/06/Decline-SupersededUpdates.txt) script to run every 3 months. I usually set this to run before the other cleanup steps, but only after I have run it manually and ensured it completed successfully. I run at 12:00 AM on the first Sunday every 3 months.
 
-#### Setting up the SUSDB reindex for WID using SQLCMD and Task Scheduler
+### Setting up the SUSDB reindex for WID using SQLCMD and Task Scheduler
 
 1. Save the script [here](https://gallery.technet.microsoft.com/scriptcenter/6f8cde49-5c52-4abd-9820-f1d270ddea61) as a .sql file (for example, *SUSDBMaint.sql*).
 2. Create a basic task and give it a name:
@@ -457,7 +455,7 @@ The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/
 
 6. While creating the maintenance plan, consider adding a backup of the SUSDB into the plan as well. I usually back up first, then reindex. This may add additional time to the schedule.
 
-#### Putting it all together
+### Putting it all together
 
 When running this in a hierarchy, the WSUS cleanup run should be done from the bottom of the hierarchy up. However, when using the script to decline superseded updates, the run should be done from the top down. This is because declining superseded updates is really a type of addition to an update rather than a removal. You're actually adding a type of **approval** in this case.
 
