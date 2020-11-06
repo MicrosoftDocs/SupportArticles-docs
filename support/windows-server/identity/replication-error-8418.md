@@ -17,11 +17,11 @@ ms.technology: ActiveDirectory
 
 This article describes the symptoms, cause, and resolution for resolving Active Directory replication failing with Win32 error 8418.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 2734946
-
 > [!NOTE]
 > **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com/en-us).
+
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2734946
 
 ## Symptoms
 
@@ -85,19 +85,19 @@ Replication of any Active Directory data between domain controllers in a forest 
 
     > \--------------------------- Replicate Now --------------------------- The following error occurred during the attempt to synchronize naming context \<Naming context> from Domain Controller \<source DC> to Domain Controller \<destination DC>: The replication operation failed because of a schema mismatch between the servers involved. This operation will not continue. --------------------------- OK ---------------------------
 
-5. REPADMIN.EXE shows the following errors:
+5. `REPADMIN.EXE` shows the following errors:
 
-    REPADMIN /SHOWREPS
+    `REPADMIN /SHOWREPS`
 
     > Last attempt @ YYYY-MM-DD HH:MM:SS failed, result 8418 (0x20e2): The replication operation failed because of a schema mismatch between the servers involved.
 
-    REPADMIN /SYNCALL
+    `REPADMIN /SYNCALL`
 
-    > C:\Users\administrator.LEGEND>repadmin /syncall /AePdq Syncing all NC's held on \<DC Name>. Syncing partition: DC=contoso,DC=com SyncAll reported the following errors: Error issuing replication: 8418 (0x20e2): The replication operation failed because of a schema mismatch between the servers involved.
+    > repadmin /syncall /AePdq Syncing all NC's held on \<DC Name>. Syncing partition: DC=contoso,DC=com SyncAll reported the following errors: Error issuing replication: 8418 (0x20e2): The replication operation failed because of a schema mismatch between the servers involved.
 
-    REPADMIN /REPLSUM
+    `REPADMIN /REPLSUM`
 
-    > C:\Users\itsadmin>repadmin /replsummary Replication Summary Start Time: YYYY-MM-DD HH:MM:SS Beginning data collection for replication summary, this may take a while: ..... Source DSA largest delta fails/total %% error \<Source DC> xxh:yym:zzs 4 / 5 80 (8418) The replication operation failed because of a schema mismatch between the servers involved. Destination DSA largest delta fails/total %% error \<dest DC> 04h:02m:16s 4 / 5 80 (8418) The replication operation failed because of a schema mismatch between the servers involved.
+    > repadmin /replsummary Replication Summary Start Time: YYYY-MM-DD HH:MM:SS Beginning data collection for replication summary, this may take a while: ..... Source DSA largest delta fails/total %% error \<Source DC> xxh:yym:zzs 4 / 5 80 (8418) The replication operation failed because of a schema mismatch between the servers involved. Destination DSA largest delta fails/total %% error \<dest DC> 04h:02m:16s 4 / 5 80 (8418) The replication operation failed because of a schema mismatch between the servers involved.
 
 ## Cause
 
@@ -173,7 +173,7 @@ Collecting replication data for all DC's in the forest is advised particularly i
 
 `Repadmin showrepl * /csv > allrepl.csv`
 
-Once all the DC's experiencing replication failures, of ANY form, have been identified from the repadmin /showrepl data focus cam move to specific DC's.
+Once all the DC's experiencing replication failures, of ANY form, have been identified from the `repadmin /showrepl` data focus cam move to specific DC's.
 
 In the case where DCpromo fails with a schema mismatch the following data should be collected:
 
@@ -334,7 +334,7 @@ Review the replication metadata for correctness by ensuring that all the replica
 
 Example  
 
-The two entries fro replication metadata for a problem object as displayed by Repadmin.exe shows no ldapdisplayname:
+The two entries fro replication metadata for a problem object as displayed by `Repadmin.exe` shows no ldapdisplayname:
 
 > USN DSA Org USN Org. Time/Date Version Attribute  
 24260 f4617e99-9688-42a6-8562-43fdd2d5cda4 18085395 2002-05-24 12:00:02 2  
@@ -355,9 +355,11 @@ The attribute ID can be used to help identify the problem attribute but requires
 > [!NOTE]
 In the DCpromo scenario, the destination object will most likely not yet exist.
 
-If ONLY the object can be identified from the event data dump the attribute values of the trigger object.
+If ONLY the object can be identified from the event data, dump the attribute values of the trigger object.
 
-> Ldifde -f results.txt> -d "DN_of Trigger_Object" -s Target_DC Ldifde -f  \<results.txt> -d "<GUID=ObjectGuid_of Trigger_Object>" -s Target_DC Repadmin /showattr Target_DC "DN_of Trigger_Object" Repadmin /showattr Target_DC "DN_of Trigger_Object"
+```console
+Ldifde -f results.txt> -d "DN_of Trigger_Object" -s Target_DC Ldifde -f  \<results.txt> -d "<GUID=ObjectGuid_of Trigger_Object>" -s Target_DC Repadmin /showattr Target_DC "DN_of Trigger_Object" Repadmin /showattr Target_DC "DN_of Trigger_Object"
+```
 
 If the replication events citing 8418 yielded any Extended or Internal errors use those values to try to match against known issues.
 
@@ -369,7 +371,9 @@ Once a potential trigger attribute has been identified and other known causes el
 
 Export of entire schema partition from both source and destination domain controllers:
 
-> Ldifde -f schema _TargetDC.ldf -d cn=schema,cn=configuration,dc=contoso,dc=com -s Target_DC
+```console
+Ldifde -f schema _TargetDC.ldf -d cn=schema,cn=configuration,dc=contoso,dc=com -s Target_DC
+```
 
 Data to provide to Microsoft Support  
 
@@ -377,7 +381,7 @@ Be prepared to provide the following information to Microsoft Support staff to a
 
 - Export of schema partition from the source domain controller
 - DCpromo logs from destination DC (if appropriate for the scenario)
-- Repadmin /showrepl output from the source and destination domain controller
+- `Repadmin /showrepl` output from the source and destination domain controller
 - Directory Services Event logs with extended logging from the source and destination domain controller
 - Replication metadata of any problem object identified from the event logs
 - LDIFDE Export of any problem object identified from the event logs

@@ -26,14 +26,14 @@ Consider the following scenario:
 
 You administer an AD environment. There may be a mixture of Windows Server 2003, Windows Server 2003 R2, Windows Server 2008, and Windows Server 2008 R2 DCs.
 
-When running **DCDIAG.EXE /E** (or `/A` or `/C`) on Windows Server 2008 or Windows Server 2008 R2 (included with the operating systems), you see the following errors against all Windows Server 2003 DCs:
+When running `DCDIAG.EXE /E` (or `/A` or `/C`) on Windows Server 2008 or Windows Server 2008 R2 (included with the operating systems), you see the following errors against all Windows Server 2003 DCs:
 
 > Starting test: Services  
             Invalid service type: RpcSs on DCDIAG-2003, current value  
             WIN32_OWN_PROCESS, expected value WIN32_SHARE_PROCESS  
          ......................... DCDIAG-2003 failed test Services
 
-When running **DCDIAG.EXE /E** (or `/A` or `/C`) on Windows Server 2008 or Windows Server 2008 R2 (included with the operating systems), you see the following errors against all Win2008 and Win2008 R2 DCs:
+When running `DCDIAG.EXE /E` (or `/A` or `/C`) on Windows Server 2008 or Windows Server 2008 R2 (included with the operating systems), you see the following errors against all Win2008 and Win2008 R2 DCs:
 
 > Starting test: FrsEvent  
          The event log File Replication Service on server  
@@ -59,11 +59,11 @@ When running **DCDIAG.EXE /E** (or `/A` or `/C`) on Windows Server 2008 or Windo
          "The RPC server is unavailable."  
          ......................... dcdiag-2008 failed test SystemLog  
 
-When running **DCDIAG.EXE /E**  (or /A or /C) on Windows Server 2003 (included with the Support Tools out-of-band install):
+When running `DCDIAG.EXE /E`  (or /A or /C) on Windows Server 2003 (included with the Support Tools out-of-band install):
 
 - No errors are logged for any of the DCs, regardless of OS.  
 
-When running **DCDIAG.EXE /C** (which includes `/test:verifyenterprisereferences`) on Windows Server 2008 or Windows Server 2008 R2, and the Domain Functional Mode is Windows Server 2008 or higher, and FRS is still being used to replicate SYSVOL, you see the following errors:
+When running `DCDIAG.EXE /C` (which includes `/test:verifyenterprisereferences`) on Windows Server 2008 or Windows Server 2008 R2, and the Domain Functional Mode is Windows Server 2008 or higher, and FRS is still being used to replicate SYSVOL, you see the following errors:
 
 > Starting test: VerifyEnterpriseReferences  
     The following problems were found while verifying various important DN references.  Note, that  these problems  
@@ -85,7 +85,7 @@ When running **DCDIAG.EXE /C** (which includes `/test:verifyenterprisereferences
        LDAP Error 0x20 (32) - No Such Object.  
     ......................... SRV-01 failed test VerifyEnterpriseReferences  
 
-When running **DCDIAG.EXE /C** (which includes `/test:outboundsecurechannels`) and you specify **/testdomain:\<your trusted domain>** on Windows Server 2008, or on Windows Server 2008 R2 you see the following errors:
+When running `DCDIAG.EXE /C` (which includes `/test:outboundsecurechannels`) and you specify `/testdomain:<your trusted domain>` on Windows Server 2008, or on Windows Server 2008 R2 you see the following errors:
 
 > Testing server: Default-First-Site-Name\SRV-01  
  Starting test: OutboundSecureChannels  
@@ -123,7 +123,7 @@ There are multiple workarounds to these issues:
     Remote Event Log Management (RPC)  
     Remote Event Log Management (RPC-EPMAP)**  
    >
-   > This can be done through the "Windows Firewall with Advanced Security" snap-in (**WF.MSC**), using the firewall group policy (**Computer Configuration \ Policies \ Windows Settings \ Security Settings \ Windows Firewall with Advanced Security**), or by using **NETSH.EXE ADVFIREWALL**.
+   > This can be done through the "Windows Firewall with Advanced Security" snap-in (**WF.MSC**), using the firewall group policy (**Computer Configuration\ Policies\ Windows Settings\ Security Settings\ Windows Firewall with Advanced Security**), or by using `NETSH.EXE ADVFIREWALL`.
 - To stop the RPCSS service error, you can opt out of the test with `/SKIP:SERVICES`. There are caveats to this, see More Information. It's better to ignore this specific error altogether when it's returned from Win2003 DCs.
 
     It's expected and normal for this service's behavior type to be 0x10 (isolated) on Windows Server 2003 and 0x20 (shared) on Windows Server 2008 and later. Don't change it based on what DCDIAG says unless you're running the version of DCDIAG that goes with that OS. Between Windows Server 2003 and Windows Server 2008, the behavior changed for the RPC service, but there was nothing yet to share in that svchost.exe process. In Windows Server 2008 R2, the new RPCEptMapper service was added to that shared svchost process. You can see who would launch in that same process by looking for this value in the service registry keys:  
@@ -131,7 +131,7 @@ There are multiple workarounds to these issues:
     Do not change the service type on Windows Server 2003 to stop the error. There may be unexpected issues long-term as this isn't a tested  configuration. These issues would be difficult to identify or trace back to this root cause.
     Long-term solution to the RPCSS service issue: replace the remaining Windows Server 2003 servers with a later operating system.
 
-- To stop the OutboundSecureChannels errors, use `/skip:outboundsecurechannels`. The tests aren't valid and can be instead tested with **NETDOM.EXE** and **NLTEST.EXE**.
+- To stop the OutboundSecureChannels errors, use `/skip:outboundsecurechannels`. The tests aren't valid and can be instead tested with `NETDOM.EXE` and `NLTEST.EXE`.
 
 - To stop the VerifyEnterpriseReferences errors, migrate your SYSVOL from FRS to DFSR. Since you are using a native Windows Server 2008 or later domain, FRS is no longer recommended for SYSVOL replication and nothing is preventing you from replacing the deprecated FRS system. See [https://technet.microsoft.com/library/dd640019.aspx](https://technet.microsoft.com/library/dd640019.aspx).
 

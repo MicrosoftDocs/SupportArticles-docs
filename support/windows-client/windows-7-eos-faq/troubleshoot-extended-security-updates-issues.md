@@ -102,7 +102,7 @@ If the preceding steps don't resolve the problem, do this on the affected comput
 
 ### Error: 0xC004F050 The Software Licensing Service reports that the product key is invalid  
 
-When you install the ESU product key by using **slmgr.vbs /ipk**, you receive the following Windows Script Host message:  
+When you install the ESU product key by using `slmgr.vbs /ipk`, you receive the following Windows Script Host message:  
 
 > Error: 0xC004F050 The Software Licensing Service reported that the product key is invalid.
 
@@ -197,7 +197,7 @@ To resolve this issue, follow these steps.
     Create or set a **REG_DWORD** value of **DefaultSecureProtocols**, and set it to **0x800**.
 3. If the computer is X64, you must also set the following additional registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp`  
     Create or set a **REG_DWORD** value of **DefaultSecureProtocols**, and set it to **0x800**.
-4. Restart the computer, and then try to run the **slmgr.vbs /ato**  command again.
+4. Restart the computer, and then try to run the `slmgr.vbs /ato`  command again.
 
 ### Slmgr activation  
 
@@ -248,13 +248,13 @@ The activation ID that you used in the activation command isn't correct.
 To get the activation ID, follow these steps:
 
 1. Open an elevated Command Prompt window.
-2. Run the following command: **cscript /h:cscript**  
+2. Run the following command: `cscript /h:cscript`  
 3. Run one of the following commands, depending on your version of Windows.
-   - For Windows 7: **slmgr /dlv**  
-   - For Windows Server 2008 SP2: **slmgr /dlv all**
+   - For Windows 7: `slmgr /dlv`  
+   - For Windows Server 2008 SP2: `slmgr /dlv all`
 4. In the command output, copy the activation ID of the ESU key.
 
-To use the activation ID, run the following command: **slmgr /ato \<Activation ID>**
+To use the activation ID, run the following command: `slmgr /ato <Activation ID>`
 
 > [!NOTE]
 > In this command, \<Activation ID> represents the activation ID of the ESU key.
@@ -318,11 +318,11 @@ You appear to have successfully activated the ESU key. However, the key still do
 
 #### Possible cause
 
-The **slmgr /ato** command didn't correctly pass the ESU activation ID.
+The `slmgr /ato` command didn't correctly pass the ESU activation ID.
 
 #### Action to take
 
-To use the activation ID, run the following command: **slmgr /ato \<Activation ID>**
+To use the activation ID, run the following command: `slmgr /ato <Activation ID>`
 
 > [!NOTE]
 > In this command, \<Activation ID> represents the activation ID of the ESU key.
@@ -421,7 +421,7 @@ The confirmation ID is incorrect.
 ##### Actions to take
 
 1. Call the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers) again. They'll walk you through the steps to get a confirmation ID.
-2. In an elevated Command Prompt window, run the following command: **slmgr /atp \<Confirmation ID> \<ESU Activation ID>**
+2. In an elevated Command Prompt window, run the following command: `slmgr /atp <Confirmation ID> <ESU Activation ID>`
 
 > [!NOTE]
 > In this command, \<Confirmation ID> represents the confirmation ID that you obtained in step 1, and \<ESU Activation ID> represents the activation ID of the ESU product key.
@@ -473,12 +473,12 @@ This problem may occur under any of the following conditions:
 In the case of a desktop client or server computer, follow these steps to verify that the computer has a valid ESU key installed and activated.
 
 1. Open an elevated Command Prompt window and then run one of the following commands:
-   - **slmgr /dlv**  (Windows 7 only)
-   - **slmgr /dlv \<Activation ID>**  
+   - `slmgr /dlv`  (Windows 7 only)
+   - `slmgr /dlv <Activation ID>`  
         > [!Note]
         > In this command, **\<Activation ID>**  represents the activation ID of the ESU key that is installed on the computer.
 
-   - **slmgr /dlv all**  
+   - `slmgr /dlv all`  
 
 2. In the command output, verify that ESU key is licensed.  
 
@@ -488,13 +488,13 @@ In the case of a desktop client or server computer, follow these steps to verify
 
     - [VAMT online or proxy activation](/windows/deployment/volume-activation/install-configure-vamt)
     - Phone activation​
-    - By using the **slmgr /ato** command. To do this, follow these steps:
+    - By using the `slmgr /ato` command. To do this, follow these steps:
           1. Open an elevated Command Prompt window.
-          2. Run **slmgr /ipk \<ESU key>** and wait for the success message.
+          2. Run `slmgr /ipk <ESU key>` and wait for the success message.
             Note
             In this command, **\<ESU key>** represents the ESU product key for the computer.
 
-3. Run **slmgr /ato \<Activation ID>**.
+3. Run `slmgr /ato <Activation ID>`.
 
 In the case of Windows Embedded device, see [Windows Embedded devices](#windows-embedded-devices) for appropriate actions to take.​
 
@@ -589,7 +589,7 @@ Activate the ESU product key, and then try to install the ESU package again.
 
 ## Maintaining ongoing ESU compliance  
 
-You notice a non-compliant device in your update management and compliance toolsets. 
+You notice a non-compliant device in your update management and compliance toolsets.  
 
 If you have a subset of devices that are running Windows 7 Service Pack 1 (SP1) and Windows Server 2008 R2 SP1 without ESU, you notice a non-compliant device in your update management and compliance toolsets.
 
