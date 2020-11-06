@@ -228,7 +228,7 @@ ByVal lcTableName AsString, ByValParamArray loParameters() As SqlParameter) As D
         EndIf
     EndTry
 
-EndFunction
+  EndFunction
 
 EndModule
 ```
