@@ -57,7 +57,8 @@ You want to force the non-authoritative synchronization of sysvol replication on
 
 ## How to perform an authoritative synchronization of DFSR-replicated sysvol replication (like D4 for FRS)
 
-1. In the ADSIEDIT.MSC tool, modify the following DN and two attributes on the domain controller you want to make authoritative (preferably the PDC Emulator, which is usually the most up to date for sysvol replication contents):
+1. Set the DFS Replication service Startup Type to Manual, and stop the service on all domain controllers in the domain.
+2. In the ADSIEDIT.MSC tool, modify the following DN and two attributes on the domain controller you want to make authoritative (preferably the PDC Emulator, which is usually the most up to date for sysvol replication contents):
 
     ```console
     CN=SYSVOL Subscription,CN=Domain System Volume,CN=DFSR-LocalSettings,CN=<the server name>,OU=Domain Controllers,DC=<domain>
@@ -66,7 +67,7 @@ You want to force the non-authoritative synchronization of sysvol replication on
     msDFSR-options=1
     ```
 
-2. Modify the following DN and single attribute on **all** other domain controllers in that domain:
+3. Modify the following DN and single attribute on **all** other domain controllers in that domain:
 
     ```console
     CN=SYSVOL Subscription,CN=Domain System Volume,CN=DFSR-LocalSettings,CN=<each other server name>,OU=Domain Controllers,DC=<domain>
@@ -74,20 +75,20 @@ You want to force the non-authoritative synchronization of sysvol replication on
     msDFSR-Enabled=FALSE
     ```
 
-3. Force Active Directory replication throughout the domain and validate its success on all DCs.
-4. Start the DFSR service set as authoritative.
-5. You will see Event ID 4114 in the DFSR event log indicating sysvol replication is no longer being replicated.
-6. On the same DN from Step 1, set **msDFSR-Enabled=TRUE**.
-7. Force Active Directory replication throughout the domain and validate its success on all DCs.
-8. Run the following command from an elevated command prompt on the same server that you set as authoritative:
+4. Force Active Directory replication throughout the domain and validate its success on all DCs.
+5. Start the DFSR service on the domain controller that was set as authoritative in Step 2.
+6. You will see Event ID 4114 in the DFSR event log indicating sysvol replication is no longer being replicated.
+7. On the same DN from Step 1, set **msDFSR-Enabled=TRUE**.
+8. Force Active Directory replication throughout the domain and validate its success on all DCs.
+9. Run the following command from an elevated command prompt on the same server that you set as authoritative:
 
     ```console
     DFSRDIAG POLLAD
     ```
 
-9. You will see Event ID 4602 in the DFSR event log indicating sysvol replication has been initialized. That domain controller has now done a **D4** of sysvol replication.
-10. Start the DFSR service on the other non-authoritative DCs. You will see Event ID 4114 in the DFSR event log indicating sysvol replication is no longer being replicated on each of them.
-11. Modify the following DN and single attribute on **all** other domain controllers in that domain:
+10. You will see Event ID 4602 in the DFSR event log indicating sysvol replication has been initialized. That domain controller has now done a **D4** of sysvol replication.
+11. Start the DFSR service on the other non-authoritative DCs. You will see Event ID 4114 in the DFSR event log indicating sysvol replication is no longer being replicated on each of them.
+12. Modify the following DN and single attribute on **all** other domain controllers in that domain:
 
     ```console
     CN=SYSVOL Subscription,CN=Domain System Volume,CN=DFSR-LocalSettings,CN=<each other server name>,OU=Domain Controllers,DC=<domain>
@@ -95,11 +96,13 @@ You want to force the non-authoritative synchronization of sysvol replication on
     msDFSR-Enabled=TRUE
     ```
 
-12. Run the following command from an elevated command prompt on all non-authoritative DCs (that is, all but the formerly authoritative one):
+13. Run the following command from an elevated command prompt on all non-authoritative DCs (that is, all but the formerly authoritative one):
 
     ```console
     DFSRDIAG POLLAD
     ```
+
+14. Return the DFSR service to its original Startup Type (Automatic) on all DCs.
 
 ## More information
 

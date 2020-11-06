@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2834250
 
 ## Summary
 
-Check [NET: DNS: DNS client resolution timeouts](https://support.`microsoft.com`/kb/2834226) for more information about DNS client resolution timeouts.
+Check [NET: DNS: DNS client resolution timeouts](https://support.microsoft.com/kb/2834226) for more information about DNS client resolution timeouts.
 
 Similarly to DNS clients, configuring DNS servers with more than one Forwarder or Conditional Forwarder adds additional fault tolerance to your DNS infrastructure. Adding multiple DNS Servers as Forwarders or Conditional Forwarders allows DNS names to continue to be resolved in the event of failures of the only configured Server, of the underlying network link or the supporting network infrastructure.
 

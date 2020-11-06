@@ -74,5 +74,4 @@ In ASP.NET, you can also use the `IsAuthenticated` property of the `Request` obj
 
 ## References
 
-- [ASP.NET Web Application Security](https://msdn.microsoft.com/vstudio/330a99hc(v=vs.103).aspx)
 - [INFO: ASP.NET Security Overview](https://support.microsoft.com/help/306590)

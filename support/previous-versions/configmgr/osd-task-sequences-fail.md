@@ -35,10 +35,7 @@ hrReturn, HRESULT=80040101 (e:\nts_sms_fre\sms\client\tasksequence\tsmbootstrap\
 Reviewing the above SMSTS.log file seems to reveal that the network access account isn't set. The network access account is needed by the task sequence to access network resources since the client computer while in Windows Preinstallation Environment (WinPE) is the equivalent of a non-domain joined workgroup computer.
 
 > [!NOTE]
-> For more information about the the network access account, see the following articles:
->
-> - [About the Network Access Account](/previous-versions/system-center/configuration-manager-2007/bb680398(v=technet.10))
-> - [How to Configure the Network Access Account](/previous-versions/system-center/configuration-manager-2007/bb632397(v=technet.10))
+> For more information about the network access account, see [Network access account](/mem/configmgr/core/plan-design/hierarchy/accounts#network-access-account).
 
 Reviewing the **Properties** of the **Computer Client Agent** in the ConfigMgr 2007 admin console under **Site Settings** > **Client Agents** reveals that the network access account is set. Resetting the network access account in the **Properties** of the **Computer Client Agent** by reentering the network access account's username and password seems to resolve the error, but then causes a new error in SMSTS.log. Reviewing SMSTS.log on the failed client computer reveals the following error:
 
@@ -64,10 +61,7 @@ When a Windows OS is freshly installed, either via a reinstall of the OS or inst
 
 This issue can also cause problems in other areas of ConfigMgr 2007 other than task sequences and OSD. Service accounts aren't normally used in ConfigMgr 2007 since most operations use the SYSTEM/site server's computer account. The only exception to this rule is the network access account that's needed by task sequences when running in WinPE and is the reason why this issue most prominently affects OSD.
 
-Service accounts can be used instead of the SYSTEM/site server's computer account in other areas of ConfigMgr 2007 other than task sequences and OSD. For a list of the different areas in ConfigMgr 2007 that can be optionally configured to use service accounts, and may be affected by this issue, see the following articles:
-
-- [Accounts Configured in the Configuration Manager Console](/previous-versions/system-center/configuration-manager-2007/bb693849(v=technet.10))
-- [How to Configure Configuration Manager 2007 Accounts](/previous-versions/system-center/configuration-manager-2007/bb680323(v=technet.10))
+Service accounts can be used instead of the SYSTEM/site server's computer account in other areas of ConfigMgr 2007 other than task sequences and OSD.
 
 The two other areas that would most likely be affected by this problem other than OSD would be the use of Site Address Accounts (leading to sites can't communicate with one another) and database access accounts (leading to site roles can't access the database). The issue is mostly seen with OSD since a service account (the network access account) is always needed and used.
 
@@ -81,15 +75,15 @@ To resolve the issue, the ConfigMgr 2007 site will need to be reinstalled from s
 
 3. Before restoring from the backup created via the **Backup ConfigMgr Site Server** maintenance task, manually copy, and backup the **srvacct** folder located at the root level of the ConfigMgr 2007, install location to a location where it can be later restored.
 
-4. Using normal procedures restore from the backup created via the **Backup ConfigMgr Site Server** maintenance task. For more information, see [How to Repair a Central Site](/previous-versions/system-center/configuration-manager-2007/bb680474(v=technet.10)).
+4. Using normal procedures restore from the backup created via the **Backup ConfigMgr Site Server** maintenance task.
 
 5. Once the restore of the backup is complete, rename the restored **srvacct** folder located at the root level of where ConfigMgr 2007 is installed.
 
 6. Copy the **srvacct** folder backed up in Step 3 to the root level of where ConfigMgr 2007 is installed.
 
-7. Perform a site reset on the server using the instructions in [How to Perform a Site Reset](/previous-versions/system-center/configuration-manager-2007/bb694286(v=technet.10)).
+7. Perform a site reset on the server.
 
-8. Once the site reset is complete, in the ConfigMgr 2007 Admin console, navigate to **Site Management** \> **<Site_Code>** > **Site Settings** > **Client Agents**. In the right-hand pane, right-click **Computer Client Agent** and choose **Properties**.
+8. Once the site reset is complete, in the ConfigMgr 2007 Admin console, navigate to **Site Management** > **<Site_Code>** > **Site Settings** > **Client Agents**. In the right-hand pane, right-click **Computer Client Agent** and choose **Properties**.
 
 9. In the **Computer Client Agent Properties** window, select the **General** tab and examine the account being used under the **Network Access Account** section. Make sure that the account being used is noted and that the password for the account is known.
 
@@ -113,7 +107,7 @@ To resolve the issue using this tool:
     > [!NOTE]
     > This tool needs to complete Successfully. If it fails, verify it's running as the local SYSTEM account.
 
-2. Perform a site reset on the server using the instructions in [How to Perform a Site Reset](/previous-versions/system-center/configuration-manager-2007/bb694286(v=technet.10)).
+2. Perform a site reset on the server.
 
 3. Once the site reset is complete, in the ConfigMgr 2007 Admin console, navigate to **Site Management** > **<Site_Code>** > **Site Settings** > **Client Agents**. In the right-hand pane, right-click **Computer Client Agent** and choose **Properties**.
 

@@ -32,7 +32,7 @@ This problem occurs because the system detects a Critical MSR modification, and 
 
 ## Resolution
 
-To resolve this problem, go to the following VMWare website: [Windows 8.1/Windows Server 2012 virtual machines fail with a blue screen and report the error: CRITICAL_STRUCTURE_CORRUPTION (2060019)](https://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&docType=kc&externalId=2060019&sliceId=1&docTypeID=DT_KB_1_1&dialogID=158133794&stateId=0%200%20158145165) 
+To resolve this problem, go to the following VMWare website: [Windows 8.1/Windows Server 2012 virtual machines fail with a blue screen and report the error: CRITICAL_STRUCTURE_CORRUPTION (2060019)](https://kb.vmware.com/s/article/2060019) 
 
 This is a known issue that affects ESXi 5.0.x. For more information, contact VMWare.
 

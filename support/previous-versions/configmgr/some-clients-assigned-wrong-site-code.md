@@ -39,10 +39,4 @@ Remove or correct the site that contains objects using the same boundaries. To i
 
 ## More information
 
-In many cases, this situation occurs because a site is deleted instead of being deinstalled. Doing this leaves the Active Directory objects behind which results in a duplicate boundary if another site is later added that contains the boundary used in the previously deleted site.  
-
-- [How to Verify That Site Information Is Published to Active Directory Domain Services](/previous-versions/system-center/configuration-manager-2007/bb693614(v=technet.10))
-
-- [How to Publish Configuration Manager Site Information to Active Directory Domain Services](/previous-versions/system-center/configuration-manager-2007/bb680711(v=technet.10))
-
-- [How to Stop Publishing Site Information to Active Directory Domain Services](/previous-versions/system-center/configuration-manager-2007/bb680429(v=technet.10))
+In many cases, this situation occurs because a site is deleted instead of being deinstalled. Doing this leaves the Active Directory objects behind which results in a duplicate boundary if another site is later added that contains the boundary used in the previously deleted site.

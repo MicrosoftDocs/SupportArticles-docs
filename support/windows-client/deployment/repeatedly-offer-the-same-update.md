@@ -44,6 +44,6 @@ To check your update history, follow these steps.
     1. Start Windows Update. To do this, click **Start**, type *Update* in the search box, and then, in the list of results, click **Windows Update**.
     2. In the navigation pane, click **View update history**.
     3. Click **Status** to sort by status, and then look for any updates that have a status of **Failed**.
-    4. Right-click an update that has a status of **Failed**, and then select **View Details**. The window that opens displays the error code for that update. If this problem persists, post this issue to the [Microsoft Communities](https://answers.microsoft.com/windows/forum/windows_update).
+    4. Right-click an update that has a status of **Failed**, and then select **View Details**. The window that opens displays the error code for that update. If this problem persists, post this issue to the [Microsoft Communities](https://answers.microsoft.com/?auth=1).
 
     You can also check the [telephone number to contact Microsoft Support](https://support.microsoft.com/contactus/) for help. Charges may apply.

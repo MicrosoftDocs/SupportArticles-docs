@@ -44,7 +44,7 @@ Medium
 CVSS Base Score:5.0  
 CVSS2#AV:N/AC:L/Au:N/C:P/I:N/A:N  
 See also:  
-http://www.rootsecure.net/content/downloads/pdf/dns_cache_snooping.pdf  
+`http://www.rootsecure.net/content/downloads/pdf/dns_cache_snooping.pdf`  
 Solution:  
 Contact the vendor of the DNS software for a fix.
 
@@ -82,4 +82,4 @@ The decision to disable recursion (or not) must be made based on what role the D
 - [Disable recursion on the DNS server](/previous-versions/windows/it-pro/windows-server-2003/cc787602(v=ws.10))
 - [How DNS query works](/previous-versions/windows/it-pro/windows-server-2003/cc775637(v=ws.10))
 - [Recursive and Iterative Queries](/previous-versions/windows/it-pro/windows-2000-server/cc961401(v=technet.10))
-- [Recursive Name Resolution](/windows/it-pro/windows-server-2003/cc755941(v=ws.10))
+- [Recursive Name Resolution](/windows-server/identity/ad-ds/plan/reviewing-dns-concepts#recursive-name-resolution)
