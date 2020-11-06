@@ -5,6 +5,8 @@
 
 - name: General
   items:
+  - name: Back up a Visual SourceSafe database
+    href: back-up-visual-sourcesafe-database.md
   - name: Visual Studio 2005 Service Pack 1 release notes
     href: vs-2005-service-pack-1-release-notes.md
 

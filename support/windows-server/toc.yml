@@ -2280,6 +2280,10 @@
       href: ./virtualization/error-occurred-attempt-export-virtual-machine.md
     - name: Error 0x80070005 when exporting VMs to network share
       href: ./virtualization/error-0x80070005-export-vms.md
+  - name: Container
+    items:
+    - name: API call of performance counters is delayed
+      href: ./virtualization/api-call-performance-counters-delay-container.md
   - name: Configuration of virtual machine settings
     items:
     - name: Caching in the virtual storage stack

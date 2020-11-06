@@ -22,6 +22,8 @@
     href: break-memory-leak-debugbreak-wpf.md
   - name: Can't build projects on MSBuild
     href: sgen-mixed-mode-assembly-built-v2-0-50727.md
+  - name: Can't build a .NET Framework-based project
+    href: cannot-load-interop-assembly.md
   - name: Can't consume web services
     href: cannot-consume-web-service-via-http-proxy.md
   - name: Can't call COM with multiple AppDomains
@@ -40,6 +42,8 @@
     href: comexception-error-from-wpf-app.md
   - name: COMException when you create WeakReference<T> object
     href: comexception-weakreference-object.md
+  - name: Compatibility issue when you use RIA Services
+    href: compatibility-issue-use-ria-services.md
   - name: Compatibility when you use RIA V1.0 SP2 and EF 5
     href: compatibility-issue-ria-sp2-ef-5.md
   - name: Computer stops responding
@@ -88,6 +92,8 @@
     href: issues-dotnet-framework-451-preview.md
   - name: Memory corruption in the managed process
     href: citrix-virtual-memory-optimization-80131506-error.md
+  - name: Memory optimization for HTTP POST or PUT
+    href: memory-optimization-large-httpwebrequest.md
   - name: MSDTC transaction requires Full Trust
     href: msdtc-transaction-requires-full-trust.md
   - name: New Japanese era updates
@@ -143,6 +149,8 @@
   items:
   - name: Can't deploy applications in Terminal Server
     href: clickonce-cannot-deploy-app-terminal-server.md
+  - name: Can't run .NET Framework based applications
+    href: cannot-run-dotnet-framework-based-applications.md
   - name: ClickOnce applications fail to update
     href: clickonce-application-fails-update.md
   - name: ClickOnce deployment isn't supported with Roaming Profiles
