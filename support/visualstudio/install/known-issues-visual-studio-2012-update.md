@@ -8,7 +8,7 @@ ms.prod-support-area-path: installation
 
 This article describes the known issues that you may experience after you install Microsoft Visual Studio 2012 and updates.
 
-_Original product version:_ &nbsp; Visual Studio Ultimate 2012
+_Original product version:_ &nbsp; Visual Studio Ultimate 2012  
 _Original KB number:_ &nbsp; 2851303
 
 ## Summary
