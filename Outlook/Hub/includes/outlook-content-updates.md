@@ -2,6 +2,15 @@
 
 
 
+## Week of November 02, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/2/2020 | [From in meeting request not lists all accounts](/outlook/troubleshoot/calendaring/from-field-in-meeting-request-not-list-all-accounts) | modified |
+| 11/3/2020 | [Calendar items for the next year may display an incorrect time in Outlook](/outlook/troubleshoot/calendaring/calendar-items-display-incorrect-time) | modified |
+
+
 ## Week of October 26, 2020
 
 
@@ -36,12 +45,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/outlook/troubleshoot/index) | modified |
-
-
-## Week of September 28, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/28/2020 | [Folder names are incorrect or displayed in an incorrect language in Outlook](/outlook/troubleshoot/user-interface/incorrect-folder-names) | modified |
-| 9/30/2020 | [Can't send or receive email and Metered Connection Warning is triggered](/outlook/troubleshoot/profiles-and-accounts/metered-connection-warning) | modified |
