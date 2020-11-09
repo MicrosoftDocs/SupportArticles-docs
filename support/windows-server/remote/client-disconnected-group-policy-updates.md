@@ -26,9 +26,10 @@ When you use the Remote Desktop Services role to enable clients to connect remot
 
 ## Cause
 
-This issue may occur if the following conditions are true:
+This issue may occur if the following conditions are true:  
+
 - You have configured the Don't allow connections to this computer Remote Desktop setting on the server. Or, you have installed the unattended Remote Desktop role, without configuring the allowed connections.
-- You have configured the Allow users to connect remotely using Terminal Services  Group Policy setting to override the setting on the server. 
+- You have configured the Allow users to connect remotely using Terminal Services  Group Policy setting to override the setting on the server.  
 When the policy is refreshed (by default, every 90 minutes, or manually through GPUPDATE), the policy settings are deleted and then reset. During this period, the configuration on the server is temporarily valid. Therefore, all sessions may be disconnected.
 
 ## Resolution
@@ -36,12 +37,12 @@ When the policy is refreshed (by default, every 90 minutes, or manually through 
 To resolve this issue, set the fDenyTSConnections registry value to 0. (See the "More information" section.)
 
 > [!NOTE]
-> When Remote Desktop Services is installed, the default setting is Allow connections only from computers running Remote Desktop with Network Level Authentication (more secure). 
+> When Remote Desktop Services is installed, the default setting is Allow connections only from computers running Remote Desktop with Network Level Authentication (more secure).  
 
 ## More information
 
 This setting is controlled by the following registry subkey:
 
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server
-fDenyTSConnections
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server
+fDenyTSConnections`  
 When this value is set to 1, no connections are allowed. However, Group Policy can override this setting. During the Group Policy refresh process, this local setting may be temporarily valid.

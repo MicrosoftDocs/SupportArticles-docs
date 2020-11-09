@@ -24,9 +24,9 @@ _Original KB number:_ &nbsp; 4527873
 
 Get answers to common questions about the following end-of-support topics for Windows 7:
 
-- [General information](https://support.microsoft.com/help/4527875) 
-- [Windows 7 Extended Security Updates (ESU)](https://support.microsoft.com/help/4527878) 
+- [General information](https://support.microsoft.com/help/4527875)  
+- [Windows 7 Extended Security Updates (ESU)](https://support.microsoft.com/help/4527878)  
   - ESU purchasing
   - ESU coverage
   - ESU deployment
-- [FAQ about Windows 7 ESU offers for E5 customers](https://support.microsoft.com/help/4527879) 
+- [FAQ about Windows 7 ESU offers for E5 customers](https://support.microsoft.com/help/4527879)  
