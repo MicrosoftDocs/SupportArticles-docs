@@ -600,6 +600,8 @@
       href: ./application-management/run-logon-script-once-new-user-logs.md
 - name: Backup and Storage
   items:
+  - name: Overview
+    href: ./backup-and-storage/backup-and-storage-overview.md
   - name: Active Directory backup and restore, or disaster recovery
     items:
     - name: Shelf life of a system-state backup of AD

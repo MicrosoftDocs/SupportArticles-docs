@@ -16,7 +16,7 @@ Browse the following content or use the search feature.
 - [Active Directory](./identity/active-directory-overview.md)
 - [Admin Development](./admin-development/admin-development-overview.md)
 - [Application Management](./application-management/application-management-overview.md)
-- Backup and Storage
+- [Backup and Storage](./backup-and-storage/backup-and-storage-overview.md)
 - Deployment
 - Group Policy
 - High Availability
