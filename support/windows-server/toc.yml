@@ -1,6 +1,7 @@
 - name: Windows Server
   href: welcome-windows-server.md
 - name: Active Directory
+  href: ./identity/active-directory-overview.md
   items:
   - name: Overview
     href: ./identity/active-directory-overview.md
