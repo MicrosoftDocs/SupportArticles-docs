@@ -14,7 +14,7 @@ Browse the following content or use the search feature.
 
 ## In this library
 - [Active Directory](./identity/active-directory-overview.md)
-- Admin Development
+- [Admin Development](./admin-development/admin-development-overview.md)
 - Application Management
 - Backup and Storage
 - Deployment
