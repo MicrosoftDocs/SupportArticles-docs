@@ -2,6 +2,24 @@
 
 
 
+## Week of November 02, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/3/2020 | [Can't open Office files from SharePoint Online or OneDrive for Business](/sharepoint/troubleshoot/administration/cant-open-office-files) | modified |
+| 11/3/2020 | [PowerPivot for SharePoint 2016 Gallery Snapshots Fail for SSL Host Header Sites](/sharepoint/troubleshoot/administration/troubleshooting-powerpivot-gallery-snapshot) | modified |
+| 11/3/2020 | [Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive](/sharepoint/troubleshoot/diagnostics/sharepoint-and-onedrive-diagnostics) | modified |
+| 11/3/2020 | [Access Denied error when a SharePoint 2010 workflow sends an email to a group](/sharepoint/troubleshoot/workflows/access-denied-error-sharepoint-2010-when-workflow-sends-email-to-group) | modified |
+| 11/3/2020 | [Unable to configure and register a workflow manager](/sharepoint/troubleshoot/workflows/response-returned-did-not-come-from-workflow-manager-error) | modified |
+| 11/4/2020 | [Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive](/sharepoint/troubleshoot/diagnostics/sharepoint-and-onedrive-diagnostics) | modified |
+| 11/5/2020 | [How to delete a content type from the SharePoint Content Type Hub](/sharepoint/troubleshoot/administration/deleting-content-type-from-hub) | modified |
+| 11/5/2020 | [SharePoint Online service process schedule temporary change](/sharepoint/troubleshoot/administration/temporary-adjustments-in-sharepoint-online) | modified |
+| 11/5/2020 | [Unable to delete items in SharePoint and OneDrive](/sharepoint/troubleshoot/administration/unable-to-delete-files) | modified |
+| 11/5/2020 | [SharePoint files open as read-only](/sharepoint/troubleshoot/lists-and-libraries/files-open-as-read-only-and-cannot-check-in-or-out) | modified |
+| 11/5/2020 | [Users don't receive SharePoint Online alert notifications](/sharepoint/troubleshoot/sites/no-alert-notifications) | modified |
+
+
 ## Week of October 26, 2020
 
 
@@ -36,12 +54,3 @@
 |------|------------|--------|
 | 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/sharepoint/troubleshoot/index) | modified |
 | 10/8/2020 | [Everyone except external users group is removed on Office 365](/sharepoint/troubleshoot/sharing-and-permissions/everyone-except-external-user-removed) | modified |
-
-
-## Week of September 28, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/28/2020 | [SharePoint Online service process schedule temporary change](/sharepoint/troubleshoot/administration/temporary-adjustments-in-sharepoint-online) | modified |
-| 9/28/2020 | [SharePoint Online Public Websites to be discontinued](/sharepoint/troubleshoot/sites/public-websites-be-discontinued) | modified |
