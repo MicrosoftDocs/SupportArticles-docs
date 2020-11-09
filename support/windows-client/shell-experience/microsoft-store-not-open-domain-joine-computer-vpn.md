@@ -52,14 +52,13 @@ To fix this issue, follow these steps to create a Group Policy object (GPO):
 
 After the Group Policy is applied, the IP range that was added is the only private network range that is available for network isolation. Windows will now create a firewall rule that allows the traffic, and will override the previous outbound block rule with the new rule.
 
- **Notes** 
+> [!NOTE]
+> 
+>- When your VPN address pool range changes, you should change this GPO accordingly. Otherwise, the issue will recur.
+>- You can push the same GPOs from the DC to multiple computers.
+>- On the individual computers, you can check the following registry location to make sure that the GPO takes effect:
 
-- When your VPN address pool range changes, you should change this GPO accordingly. Otherwise, the issue will recur.
-- You can push the same GPOs from the DC to multiple computers.
-- On the individual computers, you can check the following registry location to make sure that the GPO takes effect:
-
-    `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkIsolation`
-
+ `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkIsolation`
 
 ## More information
 
@@ -76,17 +75,18 @@ Summary Report
 
 Network Capabilities Status
 ----------------------------------------------------------------------
-    InternetClient                Not Used and Insecure 
-    InternetClientServer          Not Used and Insecure 
+    InternetClient                Not Used and Insecure  
+    InternetClientServer          Not Used and Insecure  
     PrivateNetworkClientServer    Missing, maybe intended  
 
- 
+
 Network Capabilities Status
 ----------------------------------------------------------------------
     InternetClient                Used and Declared
     InternetClientServer          Not Used and Insecure
 ```
 
-**Note** On the same client, if you remove the computer from the domain or disconnect the VPN, you can see that **internetclient** is being used.
+> [!NOTE]
+> On the same client, if you remove the computer from the domain or disconnect the VPN, you can see that **internetclient** is being used.
 
- For more information, see [Isolating Windows Store Apps on Your Network](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831418%28v=ws.11%29).
+For more information, see [Isolating Windows Store Apps on Your Network](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831418%28v=ws.11%29).

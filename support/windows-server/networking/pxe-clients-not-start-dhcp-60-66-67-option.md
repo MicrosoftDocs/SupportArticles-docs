@@ -22,10 +22,11 @@ _Original KB number:_ &nbsp; 259670
 
 ## Symptoms
 
-When you try to start a PXE client computer, you may receive one of the following error messages: No reply from Server
-TFTP download failed
-No boot Filename Received
-PXE-E55 Proxy DHCP Service did not reply to request on port 4011
+When you try to start a PXE client computer, you may receive one of the following error messages:  
+>No reply from Server  
+TFTP download failed  
+No boot Filename Received  
+PXE-E55 Proxy DHCP Service did not reply to request on port 4011  
 
 ## Cause
 
@@ -50,9 +51,3 @@ PXE uses the following to determine which offer to use:
 
 - DHCP/Bootp in same offer
 - DHCP with IP only Proxy Boot Servers, such as Remote installation services (RIS) and ADS.
-
-## References
-
-For more information about PXE client DHCP conversation, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[244036](https://support.microsoft.com/help/244036) Description of PXE Interaction Among PXE Client, DHCP, and RIS Server

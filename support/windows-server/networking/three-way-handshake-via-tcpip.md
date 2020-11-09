@@ -24,11 +24,6 @@ _Original KB number:_ &nbsp; 172983
 
 This article is intended for audiences who are familiar with Transmission Control Protocol/Internet Protocol (TCP/IP) and discusses the process of the TCP three-way handshake that occurs between a client and server when initiating or terminating a TCP connection.
 
-For more information on TCP/IP, see the following white paper available on the Microsoft anonymous ftp server:
-
-File Name: Tcpipimp2.doc  
-Location: [ftp://ftp.microsoft.com/bussys/winnt/winnt-docs/papers/](ftp://ftp.microsoft.com/bussys/winnt/winnt-docs/papers/)"Microsoft Windows NT 3.5/3.51/4.0: TCP/IP Implementation Details TCP/IP Protocol Stack and Services, Version 2.0"
-
 ## More information
 
 The Transmission Control Protocol (TCP) level of the TCP/IP transport protocol is connection-oriented. Connection-oriented means that, before any data can be transmitted, a reliable connection must be obtained and acknowledged. TCP level data transmissions, connection establishment, and connection termination maintain specific control parameters that govern the entire process. The control bits are listed as follows:
@@ -345,10 +340,6 @@ The client ACKing the FIN notification from the server identifies a graceful clo
 
 ## References
 
-For more information on ICMP, see the following article in the Microsoft Knowledge Base:
-
-[170292](https://support.microsoft.com/help/170292) Internet Control Message Protocol (ICMP) Basics
--or-
 Obtain RFC 793.
 
 RFCs may be obtained through the Internet as follows:
