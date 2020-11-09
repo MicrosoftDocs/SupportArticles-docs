@@ -3,7 +3,7 @@
 - name: Active Directory
   href: ./identity/active-directory-overview.md
   items:
-  - name: Overview
+  - name: Active Directory
     href: ./identity/active-directory-overview.md
   - name: Active Directory backup, restore, or disaster recovery
     items:
