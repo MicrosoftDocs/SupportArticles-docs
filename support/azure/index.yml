@@ -51,10 +51,10 @@ additionalContent:
       items:
         # Card
         - title: Azure Government
-          itemType: Learn
-          summary: A dedicated cloud for U.S. government agencies and their partners.
-          url: azure-government/index.yml
-        - title: Azure Germany
-          summary: A dedicated cloud that adheres to German data-handling regulations.
-          url: germany/index.yml
+        linkLists:
+          - linkListType: how-to-guide
+            links:
+          - text: Troubleshoot allocation failures when you create, restart, or resize VMs in Azure
+            url: allocation-failure.md
+
 
