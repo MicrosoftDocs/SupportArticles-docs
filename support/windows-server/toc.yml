@@ -2,6 +2,8 @@
   href: welcome-windows-server.md
 - name: Active Directory
   items:
+  - name: Overview
+    href: ./identity/active-directory-overview.md
   - name: Active Directory backup, restore, or disaster recovery
     items:
     - name: c00002e2 error or "Choose an option" is displayed
@@ -516,6 +518,8 @@
       href: ./identity/windows-time-service-values-reverted.md
 - name: Admin Development
   items:
+  - name: Overview
+    href: ./admin-development/admin-development-overview.md
   - name: Active Directory Services Interface (ADSI)
     items:
     - name: Convert string formatted GUID to hexadecimal string form
