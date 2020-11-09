@@ -49,19 +49,3 @@ productDirectory:
       text: Use Secure File Exchange to exchange files with Microsoft Support
     - url: https://docs.microsoft.com/azure/azure-portal/supportability/how-to-create-azure-support-request
       text: Create an Azure support request
-additionalContent:
-  sections:
-    - title: Need help?
-      items:
-        # Card
-        - title: 
-          summary: Advanced search tips for finding Microsoft troubleshooting content
-          url:  general/secure-file-exchange-transfer-files.md
-        # Card
-        - title: 
-          summary: Use Secure File Exchange to exchange files with Microsoft Support
-          url: general/secure-file-exchange-transfer-files.md
-        # Card
-        - title: 
-          summary: Create an Azure support request
-          url: https://docs.microsoft.com/azure/azure-portal/supportability/how-to-create-azure-support-request
