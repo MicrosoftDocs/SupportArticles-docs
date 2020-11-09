@@ -45,16 +45,7 @@ productDirectory:
     links:
     - url: general/welcome-general.md
       text: Troubleshooting articles for other Azure Services
-additionalContent:
-  sections:
-    - title: Need help?
-      items:
-        # Card
-        - title: Azure Government
-          linkLists:
-              - linkListType: how-to-guide
-                links:
-                  - text: Troubleshoot allocation failures when you create, restart, or resize VMs in Azure
-                    url: allocation-failure.md
+    - url: general/welcome-general.md
+      text: Hello World
 
 
