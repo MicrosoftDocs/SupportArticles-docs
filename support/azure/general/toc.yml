@@ -88,16 +88,19 @@
 
 - name: General
   items:
+  - name: Container support policy
+    href: support-policy-containers.md
+  - name: Deploy TLS 1.2 in Azure Pack
+    href: tls-support-deployment-guide.md 
   - name: Error when you try to copy content to Azure
     href: error-run-copy-activity-azure.md
+  - name: Support request creation process
+    href: region-access-request-process.md
   - name: Tips for finding Microsoft troubleshooting content
     href: search-tips-find-troubleshooting-content.md
   - name: Use Secure File Exchange to exchange files
     href: secure-file-exchange-transfer-files.md
-  - name: Support request creation process
-    href: region-access-request-process.md
-  - name: Container support policy
-    href: support-policy-containers.md
+
   - name: Deploy TLS 1.2 in Azure Pack
     href: tls-support-deployment-guide.md
 
