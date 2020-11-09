@@ -15,7 +15,7 @@ Browse the following content or use the search feature.
 ## In this library
 - [Active Directory](./identity/active-directory-overview.md)
 - [Admin Development](./admin-development/admin-development-overview.md)
-- Application Management
+- [Application Management](./application-management/application-management-overview.md)
 - Backup and Storage
 - Deployment
 - Group Policy

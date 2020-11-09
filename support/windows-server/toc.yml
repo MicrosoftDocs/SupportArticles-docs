@@ -540,6 +540,8 @@
       href: ./admin-development/events-not-forwarded-by-windows-server-collector.md
 - name: Application Management
   items:
+  - name: Overview
+    href: ./application-management/application-management-overview.md
   - name: .NET Framework installation
     items:
     - name: Services depending on ASP.NET State Service don't start
