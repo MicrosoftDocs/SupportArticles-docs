@@ -56,5 +56,7 @@ additionalContent:
             links:
           - text: Troubleshoot allocation failures when you create, restart, or resize VMs in Azure
             url: allocation-failure.md
+          - text: Troubleshoot allocation failures when you create, restart, or resize VMs in Azure
+            url: allocation-failure.md
 
 
