@@ -317,6 +317,8 @@
       href: ../excel/specialcells(xlcelltypeblanks)-vba-function.md
     - name: A file is updated without user interaction
       href: ../excel/file-updated-without-user-interaction.md
+    - name: 'A formula returns "#VALUE!" Error'
+      href: ../excel/formula-returns-value-error.md
     - name: Access data connections are slow to refresh
       href: ../excel/access-data-connections-refresh-slowly.md
     - name: Algorithm is used by the XIRR() function
