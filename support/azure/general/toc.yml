@@ -57,6 +57,22 @@
   - name: Update 2.1 for Cloud Platform System Premium
     href: update-2.1-for-cloud-platform-system-premium.md
 
+- name: Azure information Protection
+  items:
+  - name: Troubleshoot Azure Information Protection policy issues
+    href: troubleshoot-aip-issues.md
+
+- name: Azure Virtual Network
+  items:
+  - name: Virtual Network troubleshooter
+    href: sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md
+
+- name: Azure Service Fabric
+  items:
+  - name: Azure Service Fabric troubleshooter
+    href: fabric-logs.md
+
+
 - name: Azure Storage
   items:
   - name: Embedded application error when install Azure backup agent
@@ -67,11 +83,23 @@
     href: request-body-large.md
   - name: Optimize CreateFile function
     href: optimize-createfile-function.md
+  - name: Troubleshoot high CPU or disk usage issues
+    href: diagnose-high-cpu-disk-perfinsights.md
 
 - name: General
   items:
   - name: Error when you try to copy content to Azure
     href: error-run-copy-activity-azure.md
+  - name: Tips for finding Microsoft troubleshooting content
+    href: search-tips-find-troubleshooting-content.md
+  - name: Use Secure File Exchange to exchange files
+    href: secure-file-exchange-transfer-files.md
+  - name: Support request creation process
+    href: region-access-request-process.md
+  - name: Container support policy
+    href: support-policy-containers.md
+  - name: Deploy TLS 1.2 in Azure Pack
+    href: tls-support-deployment-guide.md
 
 - name: Other common issues
   items:
@@ -92,34 +120,10 @@
   - name: WebUI "Oops" error message in StorSimple
     href: storsimple-user-receives-web-ui-error.md
 
-
 - name:  Support Diagnostic Packages
   items:
-  - name: Azure PaaS VM logs
-    href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
-  - name: Azure Service Fabric troubleshooter
-    href: fabric-logs.md
-  - name: Container support policy
-    href: support-policy-containers.md
-  - name: Deploy TLS 1.2 in Azure Pack
-    href: tls-support-deployment-guide.md
   - name: Diagnostic logs for SQL Server 
     href: sql-vm-logs.md
-  - name: Recovery Services troubleshooter
-    href: sdp-321382d70-df1d-4c0c-bdc6-9ba62752e851-asr.md
   - name: SQL database data collector
     href: sdp-342a3d014-6535-4e1f-9bd4-b0c32e71e3bf-sql.md
-  - name: Support request creation process
-    href: region-access-request-process.md
-  - name: Troubleshoot Azure Information Protection policy issues
-    href: troubleshoot-aip-issues.md
-  - name: Tips for finding Microsoft troubleshooting content
-    href: search-tips-find-troubleshooting-content.md
-  - name: Virtual Network troubleshooter
-    href: sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md
-  - name: Troubleshoot high CPU or disk usage issues
-    href: diagnose-high-cpu-disk-perfinsights.md
-  - name: Use Secure File Exchange to exchange files
-    href: secure-file-exchange-transfer-files.md
-
 
