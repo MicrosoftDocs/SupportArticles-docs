@@ -1,10 +1,10 @@
 ---
-title: "Title goes here"
+title: Update to how lists are named in Lists, Teams, and SharePoint
 ms.author: v-todmc
 author: mccoybot
 manager: dcscontentpm
-ms.date: xx/xx/xxxx
-audience: Admin|ITPro|Developer
+ms.date: 11/9/2020
+audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
@@ -12,12 +12,12 @@ search.appverid:
 - SPO160
 - MET150
 appliesto:
-- ADD PRODUCT
+- SharePoint Online
 ms.custom: 
-- CI ID
+- CI 124631
 - CSSTroubleshoot 
 ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft.com".  
-description: "How to resolve the error "Virus Found" in SharePoint Server 2013 when the antivirus scanner is unavailable ."
+description: Describes a change to how lists are named in Microsoft Lists, Teams, and SharePoint.
 ---
 
 # Change to how lists are named in Lists, Teams, and SharePoint
