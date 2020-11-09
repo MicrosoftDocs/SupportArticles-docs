@@ -32,12 +32,14 @@ Users update previously created lists by following these steps:
 2.	Select **Add from existing site content types**.
 3.	Select and add the “Item” content type.
 4.	Select **Add**.
+
     :::image type="content" source="media/change-to-how-lists-are-named/change-to-how-lists-are-named-1.png" alt-text="Select and add the Item content type.":::
  
 ## Step 2. Make "Item” the default, and hide the old default content type.
 
 1.	Select **Change new button order and default content type**.
 2.	Set the position of “Item” as **1**. Clear the check box beneath **Visible** for any other content type to hide that content type (such as “Content scheduler” in the example below).
+
     :::image type="content" source="media/change-to-how-lists-are-named/change-to-how-lists-are-named-2.png" alt-text="Set the position of Item as 1.":::
  
 ## Step 3. Copy all fields from the old default content type to the new default content type.
@@ -48,6 +50,7 @@ Users update previously created lists by following these steps:
 ## Step 4. Move all items from the old default content type to the new "Item” default content type.
 
 To do this, bulk edit all list items. 
+
 :::image type="content" source="media/change-to-how-lists-are-named/change-to-how-lists-are-named-3.gif" alt-text="Bulk move all the old content types to the new default content types.":::
 
 
