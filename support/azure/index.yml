@@ -49,7 +49,12 @@ additionalContent:
   sections:
     - title: Need help?
       items:
-    # Card
-    - title: Build your skills with Microsoft Learn
-      itemType: learn
-      url: https://docs.microsoft.com/learn/browse/?products=azure&resource_type=learning%20path
+        # Card
+        - title: Azure Government
+          itemType: Learn
+          summary: A dedicated cloud for U.S. government agencies and their partners.
+          url: azure-government/index.yml
+        - title: Azure Germany
+          summary: A dedicated cloud that adheres to German data-handling regulations.
+          url: germany/index.yml
+
