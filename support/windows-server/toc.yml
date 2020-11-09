@@ -1,9 +1,8 @@
 - name: Windows Server
   href: welcome-windows-server.md
 - name: Active Directory
-  href: ./identity/active-directory-overview.md
   items:
-  - name: Active Directory
+  - name: Overview
     href: ./identity/active-directory-overview.md
   - name: Active Directory backup, restore, or disaster recovery
     items:
@@ -601,8 +600,6 @@
       href: ./application-management/run-logon-script-once-new-user-logs.md
 - name: Backup and Storage
   items:
-  - name: Backup and Storage
-    href: ./application-management/application-management-overview.md
   - name: Active Directory backup and restore, or disaster recovery
     items:
     - name: Shelf life of a system-state backup of AD
