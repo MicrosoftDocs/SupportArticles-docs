@@ -29,7 +29,7 @@ Customers encountered these common issues in creating a dynamic group or rule.
 
 - You can't find the attribute to create a rule: See [Create a dynamic membership rule](#7).
 
-- You receive a **"max groups allowed"** error when trying to create a Dynamic Group in PowerShell: You have reached 5,000 groups, the maximum limit for Dynamic groups in your tenant. To create new Dynamic groups, first delete existing Dynamic groups. Note that there's no way to increase the maximum limit.
+- You receive a **"max groups allowed"** error when trying to create a Dynamic Group in PowerShell: You have reached 5,000 groups, the maximum limit for Dynamic groups in your tenant. To create new Dynamic groups, first delete existing Dynamic groups. There's no way to increase the maximum limit.
 
 ### Dynamic Membership Update Issues
 
@@ -45,7 +45,7 @@ Existing members of the rule are removed.
 
 You don’t see membership changes instantly after adding or changing a rule.
 
-- Membership evaluation is performed periodically in an background process. The duration of the process is determined by the number of users in your directory, and the size of the group is created as a result of the rule. Typically, directories with small numbers of users will see group membership changes within a few minutes. Directories with a large number of users can take 24 hours or longer to populate.
+- Membership evaluation is performed periodically in a background process. The duration of the process is determined by the number of users in your directory, and the size of the group is created as a result of the rule. Typically, directories with small numbers of users will see group membership changes within a few minutes. Directories with a large number of users can take 24 hours or longer to populate.
 
 - Check the [membership processing status](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-create-rule#check-processing-status-for-a-rule) to confirm whether the process is complete. Check the last updated date on the group **Overview** page in Azure portal to confirm that the page is updated.
 
@@ -63,7 +63,7 @@ You receive an error when deleting a group.
 
 You restored a deleted group but did not see any updated.
 
-- When a dynamic group is deleted and restored, it's seen as a new group and re-populated according to the rule. This process might take up to 24 hours.
+- When a dynamic group is deleted and restored, it's seen as a new group and repopulated according to the rule. This process might take up to 24 hours.
 
 Get help with case.
 
@@ -164,7 +164,7 @@ Check that the specific user is in the list of users that can create a group.
 
 8. The Simple Rule builder supports up to five (5) expressions. To add more than five expressions to the rule, the text box must be used.
 
-### You get a max groups allowed error when creating a Dynamic group in Powershell<a id="8"></a>
+### You get a max groups allowed error when creating a Dynamic group in PowerShell<a id="8"></a>
 
 This error means you have reached the max limit for Dynamic groups in your tenant.
 
@@ -176,8 +176,8 @@ This error means you have reached the max limit for Dynamic groups in your tenan
 Recommended reference documents for group creation:
 
 - [Create a new group and add members in Azure portal](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
-- [Create groups in Powershell MSOnline](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#create-groups)
-- [Disable groups creation in Powershell](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#disable-group-creation-by-your-users)
+- [Create groups in PowerShell MSOnline](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#create-groups)
+- [Disable groups creation in PowerShell](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#disable-group-creation-by-your-users)
 - [Azure AD administrative roles](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)
 
 ## Troubleshoot dynamic membership update issues<a id="9"></a>
@@ -203,13 +203,13 @@ Customers have created a dynamic group and configured a rule, but encountered on
 
 4. Verify that processing status is not impacted by the issue of guest user addition disallowed by policy, see [Check whether a tenant processing is impacted by a guest user addition disallowed by policy](#12).
 
-   - If the roup is an Office365 group and the user is a guest user, the guest user can't be added to a group if the directory setting does not allow a guest user addition in the tenant.
+   - If the group is an Office365 group and the user is a guest user, the guest user can't be added to a group if the directory setting does not allow a guest user addition in the tenant.
 
    - A guest user addition error in one group will block the updates of the same and other groups in the same tenant. you can choose to:
 
       - Allow a guest user addition by following the **Manage guest user** setting for groups in a tenant.
       - Change the group rule to exclude a guest user by adding: `(user.userType -eq "member”)`.
-      - The least preferred option is to set the `GroupMembershipState` to **RuleIsInvalid**. This disables the processing of the group and leaves no impact to other groups in the same tenant. Escalate this issue to an engineering team on-call to perform this action and provide both the < tenant-id > and < group-id > data.
+      - The least preferred option is to set the `GroupMembershipState` to **RuleIsInvalid**. This option disables the processing of the group and leaves no impact to other groups in the same tenant. Escalate this issue to an engineering team on-call to perform this action and provide both the < tenant-id > and < group-id > data.
 
     A new feature will soon be deployed to address the guest user blocking issues. No specific release date is available yet.
 
@@ -231,7 +231,7 @@ You have two options to evaluate whether a user or device satisfies the rule to 
 
 #### Manual validation
 
-Validatethe values for user or device attributes (In Azure Support Center, [Azure Portal](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal?context=azure%2Factive-directory%2Fusers-groups-roles%2Fcontext%2Fugr-context#to-add-or-change-profile-information), or using [PowerShell](https://docs.microsoft.com/powershell/module/azuread/get-azureaduser)) in the rule.
+Validate the values for user or device attributes (In Azure Support Center, [Azure Portal](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal?context=azure%2Factive-directory%2Fusers-groups-roles%2Fcontext%2Fugr-context#to-add-or-change-profile-information), or using [PowerShell](https://docs.microsoft.com/powershell/module/azuread/get-azureaduser)) in the rule.
 
 - Ensure that there are users that satisfy the rule.
 - For devices, check the device properties to ensure that synchronized attributes contain the expected values.
@@ -258,10 +258,10 @@ Have the **tenant-id**, **group-id**, and the **object-id** of the user or devic
 
 2. Select the appropriate environment:
 
-   - **Public** : Prod
-   - **Mooncake** : Mooncake
-   - **FairFax** : FairFax
-   - **BlackForest** : BlackForest
+   - **Public**: Prod
+   - **Mooncake**: Mooncake
+   - **FairFax**: FairFax
+   - **BlackForest**: BlackForest
 
 3. Log in using Microsoft credentials.
 
@@ -271,9 +271,9 @@ Have the **tenant-id**, **group-id**, and the **object-id** of the user or devic
 
 5. Type the **tenant-id** and the **object-id**, and the group **objectid** or group rule.
 
-   - To evaluate the given object against a certain group, fill in the group id.
+   - To evaluate the given object against a certain group, fill in the group ID.
    - To evaluate the given object against a specific rule (there may not be any group with this rule), fill in the group rule.
-   - Note that the group id and group rule cannot be specified at the same time.
+   - The group ID and group rule cannot be specified at the same time.
 
 If you just want to know the overall evaluation result, don't check the checkbox "Include Detailed Diagnostic Information", otherwise check it.
 
@@ -316,7 +316,7 @@ Ask the customer to provide or collect the following data before checking audit 
 
 #### Check audit logs
 
-1. Query MSODS audit log in Kusto:
+1. Query MSODS audit login Kusto:
 
    ```
    Execute: [Web] [Web (Lens)] [Desktop] [Desktop (SAW)] https://msodsuswest.kusto.windows.net:443/MSODS
@@ -332,7 +332,7 @@ Ask the customer to provide or collect the following data before checking audit 
 
    ![Audit log output](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-msods-audit-log-output.png)
 
-   In this example, the issue is between two services, **Intune** and **AD Connect**. AD Connect gets the information from Computer Object on-premises, and synchronizes. The device is enrolled in Intune, and Intune overwrites those two attributes. On the next sync cycle, AD Connect checks the attributes and corrects them. Intune then overwrites again. This continues until the issue is fixed by the external services.
+   In this example, the issue is between two services, **Intune** and **AD Connect**. AD Connect gets the information from Computer Object on-premises, and synchronizes. The device is enrolled in Intune, and Intune overwrites those two attributes. On the next sync cycle, AD Connect checks the attributes and corrects them. Intune then overwrites again. This behavior continues until the issue is fixed by the external services.
 
 2. Use Azure Support Center:
 
@@ -380,7 +380,7 @@ If the last tenant update is still slow after being reset, escalate the issue to
    - In the log_message, the membership change processed in the system with `"<group_id>,<user_id>,ACTION"`. Where the action is either add or remove.
    - If the correct membership change is logged by the system, then the system processed correctly, but encountered a throttling or permission issue when trying to update to graph.  Allow time for the transient throttling issue to be resolved. To double-check with throttling issue, you can use another Kusto Query.
 
-2. Check whether the dynamic group encountering a transient throttling issue which blocks the tenant update with a given group_id:
+2. Check whether the dynamic group encountering a transient throttling issue that blocks the tenant update with a given group_id:
 
    ```
     Execute: [Web] [Desktop] [Web (Lens)] [Desktop (SAW)] https://idsharedwus.kusto.windows.net:443/aadssgmprod
@@ -400,7 +400,7 @@ If the last tenant update is still slow after being reset, escalate the issue to
 
 ### Existing members of the rule are removed<a id="16"></a>
 
-This is expected behavior. Existing members of the group are removed when a rule is enabled or changed or attributes are changed. The users returned from evaluation of the rule are added as members to the group.
+This behavior is expected. Existing members of the group are removed when a rule is enabled or changed or attributes are changed. The users returned from evaluation of the rule are added as members to the group.
 
 ### You don't see membership changes instantly after updating a rule<a id="17"></a>
 
@@ -433,7 +433,7 @@ Before attempting to delete a group in Azure Active Directory, ensure you have [
 
 ### Delete a group<a id="21"></a>
 
-1. Groups can be deleted from the directory [using the Remove-AzureADGroup cmdlet in the Azure AD Powershell module](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#delete-groups).
+1. Groups can be deleted from the directory [using the Remove-AzureADGroup cmdlet in the Azure AD PowerShell module](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#delete-groups).
 2. Before attempting to delete a group in Azure Active Directory, ensure you have [deleted all assigned licenses  to avoid errors](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-group-advanced#deleting-a-group-with-an-assigned-license).
 
 ### Restore a deleted group<a id="22"></a>
@@ -495,7 +495,7 @@ For CSS members, make sure that you're part of the group **Azure Identity – 20
 
 For **Azure Gov.** customers, you must use Jarvis ([example query](https://jarvis-west.dc.ad.msft.net/277895BE))
 
-1. Create a connection to the [idshared kusto cluster](https://idsharedwus.kusto.windows.net:443):
+1. Create a connection to the [idshared Kusto cluster](https://idsharedwus.kusto.windows.net:443):
 
    ![Create a connection to the cluster](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-edit-connection.png)
 
@@ -614,14 +614,14 @@ Get sufficient data in support request for dynamic group in a support request su
 
 #### Dynamic membership rules configuration Scoping questions<a id="38"></a>
 
-Help the customer with with the **Assigned Plan** and **Device rules**:
+Help the customer with the **Assigned Plan** and **Device rules**:
 
-- Environment used (UX, Browser, API, PowerShell etc)
+- Environment used (example: UX, Browser, API, PowerShell)
 - Tenant ID
 - Group Object ID
 - Rule
 - User/Device Object ID
-- Error Message (Screen shot etc)
+- Error Message ((example: Screenshot)
 - Time when issue occurred
 - User performing the operation
 
