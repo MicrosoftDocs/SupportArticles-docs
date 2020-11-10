@@ -95,7 +95,7 @@
       href: ../lists-and-libraries/cannot-sync-files-folders.md
     - name: Can't sync recurring Calendar items with error 0x80004005
       href: ../lists-and-libraries/outlook-not-sync-recurring-calendar-items.md
-    - name: Change to how lists are named in Lists, Teams, and SharePoint
+    - name: Change to default content type setting for new lists 
       href: ../lists-and-libraries/change-to-how-lists-are-named.md
     - name: Changes to default versioning setting for document libraries
       href: ../lists-and-libraries/library-versioning-setting-changes.md
