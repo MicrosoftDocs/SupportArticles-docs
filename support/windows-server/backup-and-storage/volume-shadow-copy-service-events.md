@@ -1,5 +1,5 @@
 ---
-title: Various issues may occur on a Windows Server 2003-based computer running the Volume Shadow Copy Service
+title: Issues occur on computer running the Volume Shadow Copy Service
 description: Describes issues in which Event ID 8019, Event ID 20, Event ID 8193, or Event ID 12302 may be logged in the Application log. You may receive an Error 0x8004230F error message or an Error 0x80004002 error message.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,8 +17,8 @@ ms.technology: BackupStorage
 
 This article describes issues in which Event ID 8019, 20, 8193, or 12302 is logged in the Application log. You receive an Error 0x8004230F or 0x80004002 error message.
 
-_Original product version:_ &nbsp;Windows Server 2003  
-_Original KB number:_ &nbsp;940032
+_Original product version:_ &nbsp; Windows Server 2003  
+_Original KB number:_ &nbsp; 940032
 
 ## Symptoms
 
@@ -74,11 +74,7 @@ This issue occurs because the VSS system files aren't registered.
 ## Resolution
 
 > [!NOTE]
-> This article isN't for use with Windows Vista, with Windows Server 2008, or with later operating systems. Starting with Windows Vista and with Windows Server 2008, Windows component installation is manifest based. If you try to manually register specific components, such as those that are described in this "Resolution" section, in the operating systems that are mentioned in this note, unexpected results may occur that may require reinstalling Windows to resolve.
-
-If you prefer to fix this problem yourself, go to the "[Let me fix it myself](#let-me-fix-it-myself)" section.
-
-### Let me fix it myself
+> This article isn't for use with Windows Vista, with Windows Server 2008, or with later operating systems. Starting with Windows Vista and with Windows Server 2008, Windows component installation is manifest based. If you try to manually register specific components, such as those that are described in this "Resolution" section, in the operating systems that are mentioned in this note, unexpected results may occur that may require reinstalling Windows to resolve.
 
 To resolve this issue, follow these steps:
 
@@ -86,29 +82,24 @@ To resolve this issue, follow these steps:
 
 2. Type the following commands at a command prompt. Press ENTER after you type each command.
 
-    - cd /d %windir%\system32
-    - Net stop vss  
-    - Net stop swprv  
-    - regsvr32 ole32.dll
-    - regsvr32 oleaut32.dll
-    - regsvr32 vss_ps.dll  
-    - vssvc /register  
-    - regsvr32 /i swprv.dll  
-    - regsvr32 /i eventcls.dll  
-    - regsvr32 es.dll
-    - regsvr32 stdprov.dll
-    - regsvr32 vssui.dll
-    - regsvr32 msxml.dll
-    - regsvr32 msxml3.dll
-    - regsvr32 msxml4.dll
+    - `cd /d %windir%\system32`
+    - `Net stop vss`  
+    - `Net stop swprv`  
+    - `regsvr32 ole32.dll`
+    - `regsvr32 oleaut32.dll`
+    - `regsvr32 vss_ps.dll`  
+    - `vssvc /register`  
+    - `regsvr32 /i swprv.dll`  
+    - `regsvr32 /i eventcls.dll`  
+    - `regsvr32 es.dll`
+    - `regsvr32 stdprov.dll`
+    - `regsvr32 vssui.dll`
+    - `regsvr32 msxml.dll`
+    - `regsvr32 msxml3.dll`
+    - `regsvr32 msxml4.dll`
     > [!NOTE]
     > The last command may not run successfully.
 3. Perform a backup operation to verify that the issue is resolved.
-
-### Did this fix the problem?
-
-- Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus/?ws=support).
-- We would appreciate your feedback. To provide feedback or to report any issues with this solution, please leave a comment on the "[Fix it for me](https://support.microsoft.com/help/2970908)" blog or send us an [email](mailto:fixit4me@microsoft.com?subject=kb) message.
 
 ## More information
 

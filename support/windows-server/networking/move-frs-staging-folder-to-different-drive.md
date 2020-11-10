@@ -1,5 +1,5 @@
 ---
-title: How to reset the File Replication service staging folder to a different logical drive
+title: reset the File Replication service staging folder to a different logical drive
 description: Describes how to reset the File Replication service (FRS) staging folder to a different logical drive or folder for existing FRS replica members.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,13 +17,14 @@ ms.technology: Networking
 
 This article describes how to reset the File Replication service (FRS) staging folder to a different logical drive or folder for existing FRS replica members.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;291823
+_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 291823
 
 ## More information
 
 > [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows.
+> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
+[322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows.
 
 The FRS is a multi-threaded, multi-master replication engine that replaces the LMRepl service in Microsoft Windows NT version 3.0 and Windows NT version 4.0. Whistler-based and Microsoft Windows 2000-based domain controllers use FRS to replicate policies and logon scripts that reside in the System Volume (SYSVOL) for Whistler-based and down-level clients.
 
@@ -50,9 +51,9 @@ To modify the FrsStagingPath attribute using the Adsiedit.msc tool that is inclu
 1. Start the Adsiedit program.
 2. Under Domain NC, locate the NTFRS subscriber object under the host computer account in Active Directory. The generic path for this attribute is: CN= **Replica Set Name**, CN=NTFRS Subscriptions, CN= **Computername**, DC= **Domain Name**,DC=COM
 
-    For example, to reset the staging path for the SYSVOL replica set of domain controller \\DC1 in the A.com domain, the Distinguished Name (DN) path for the FrsStagingPath attribute is:
+    For example, to reset the staging path for the SYSVOL replica set of domain controller `\\DC1` in the `A.com` domain, the Distinguished Name (DN) path for the FrsStagingPath attribute is:
 
-    CN=Domain System Volume (SYSVOL share), CN=NTFRS Subscriptions, CN=DC1, DC=A,DC=COM
+    > CN=Domain System Volume (SYSVOL share), CN=NTFRS Subscriptions, CN=DC1, DC=A,DC=COM
 
     Where (when you read the DN path from right to left):
 
@@ -70,30 +71,30 @@ To modify the FrsStagingPath attribute using the Adsiedit.msc tool that is inclu
 
 8. Locate the replica set you are updating the staging area for. All replica sets are displayed as a GUID. If you click a GUID, one of the values on the right is Replica Set Name. After you locate the correct replica set, change the value of Replica Set Stage to the new staging area path. When the service detects a change in the staging path, the following Event 13563 is logged with a series of self-explanatory steps on how to proceed:
 
-> Event Type:Warning  
-Event Source:NtFrs  
-Event Category:None  
-Event ID:13563  
-Date:3/6/2001  
-Time:7:13:01 PM  
-User:N/A  
-Computer:AC2  
-Description: The File Replication service has detected that the staging path for the replica set DOMAIN SYSTEM VOLUME (SYSVOL SHARE) has changed.  
->
-> Current staging path = E:\Windows\Sysvol\Staging\Domain  
-New staging path = E:\Frsstage  
->
-> The service will start using the new staging path after it restarts. The service is set to restart after every restart.  
->
-> It is recommended that you manually restart the service to prevent loss of data in the staging folder.  
->
-> To manually restart the service do the following:  
->
-> [1] Run "net stop ntfrs" or use the Services snap-in to stop File Replication service.  
-[2] Move all the staging files corresponding to replica set DOMAIN SYSTEM VOLUME (SYSVOL SHARE) to the new staging location. If more than one replica set are sharing the current staging folder then it is safer to copy the staging files to the new staging folder.  
-[3] Run "net start ntfrs" or use the Services snap-in to start File Replication service, followed by "net start ntfrs".  
->
-> For more information, visit Help and Support Services at `http://search.support.microsoft.com/search/?adv=1`.  
+    > Event Type:Warning  
+    Event Source:NtFrs  
+    Event Category:None  
+    Event ID:13563  
+    Date:3/6/2001  
+    Time:7:13:01 PM  
+    User:N/A  
+    Computer:AC2  
+    Description: The File Replication service has detected that the staging path for the replica set DOMAIN SYSTEM VOLUME (SYSVOL SHARE) has changed.  
+    >
+    > Current staging path = E:\Windows\Sysvol\Staging\Domain  
+    New staging path = E:\Frsstage  
+    >
+    > The service will start using the new staging path after it restarts. The service is set to restart after every restart.  
+    >
+    > It is recommended that you manually restart the service to prevent loss of data in the staging folder.  
+    >
+    > To manually restart the service do the following:  
+    >
+    > [1] Run "net stop ntfrs" or use the Services snap-in to stop File Replication service.  
+    [2] Move all the staging files corresponding to replica set DOMAIN SYSTEM VOLUME (SYSVOL SHARE) to the new staging location. If more than one replica set are sharing the current staging folder then it is safer to copy the staging files to the new staging folder.  
+    [3] Run "net start ntfrs" or use the Services snap-in to start File Replication service, followed by "net start ntfrs".  
+    >
+    > For more information, visit Help and Support Services at `http://search.support.microsoft.com/search/?adv=1`.  
 
 Microsoft recommends that you follow step 2 in the preceding event message because the FRS staging folder may contain thousands or tens of thousands of files in the original staging folder all of which may be destined for one or more downstream partners. In Windows Explorer, you can view the files in the staging folder. On the Folder Options menu, click the View tab, and then click to select the **Show hidden files and folders** check box. Copy the files to the new staging folder, and then follow the remaining steps in the event log message.
 
@@ -115,7 +116,8 @@ To set the staging area path, follow these steps:
 
 1. Click **Start**, click **Run**, type Adsiedit.msc and press ENTER.
 
-2. Locate the following object, as follows: **CN=Domain System Volume(SYSVOL share)**  
+2. Locate the following object, as follows:  
+    **CN=Domain System Volume(SYSVOL share)**  
 
     1. Expand **Domain [**ComputerName**.**DomainName**.**suffix**]**  
     2. Expand **DC=**DomainName**, DC=**suffix****  
@@ -127,17 +129,14 @@ To set the staging area path, follow these steps:
 5. Locate and then click **fRSStagingPath** in the list of attributes, and then click **Edit**  
 6. Type the complete path of where you want to locate the **Staging Area** folder, and then click OK.
 
-This path is the path of the new folder that you created earlier. Include the drive letter.
-7. At a command prompt, change the directory to %systemroot%\SYSVOL\staging areas.
-8. Type dir in the list the contents. Verify that **\<JUNCTION>** appears in the DIR output.
-9. Update the junction so that the junction points to the new location. Type the following command: linkd **junctionname** **Newpath**  
+    This path is the path of the new folder that you created earlier. Include the drive letter.
+7. At a command prompt, change the directory to `%systemroot%\SYSVOL\staging` areas.
+8. Type dir in the list the contents. Verify that `<JUNCTION>` appears in the DIR output.
+9. Update the junction so that the junction points to the new location. Type the following command:  
+    `linkd junctionname Newpath`  
     > [!NOTE]
     > **Newpath** is the same value that you entered for fRSStagingPath.
 10. Press ENTER.
 
 > [!NOTE]
 > The Active Directory Product Operations Guide includes these procedures.
-
-For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base: [221111](https://support.microsoft.com/help/221111) Description of FRS entries in the registry
-
-[265085](https://support.microsoft.com/help/265085) Moving FRSStagingPath requires non-authoritative restore

@@ -1,5 +1,5 @@
 ---
-title: Active Directory Replication Error 1127 While accessing the hard disk, a disk operation failed even after retries
+title: Active Directory Replication Error 1127
 description: Describes an issue where AD operations fail with Win32 error 1127 (While accessing the hard disk, a disk operation failed even after retries).
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,8 +17,8 @@ ms.technology: ActiveDirectory
 
 This article describes an issue where Active Directory Replications fail with Win32 error 1127: "While accessing the hard disk, a disk operation failed even after retries."
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2025726
+_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2025726
 
 ## Symptoms
 
@@ -106,8 +106,8 @@ This article describes symptoms, cause, and resolution steps for cases where AD 
 
 Active Directory is unable to write to the Active Directory database or log files. Root causes include:
 
-1. Software on the local machine is interfering with Active Directory's ability to write changes to the Active Directory database and / or log files
-2. A defect exists in the disk subsystem including the motherboard / driver controller, firmware, driver, physical drives.
+1. Software on the local machine is interfering with Active Directory's ability to write changes to the Active Directory database and/ or log files
+2. A defect exists in the disk subsystem including the motherboard/ driver controller, firmware, driver, physical drives.
 
 ## Resolution
 
@@ -140,14 +140,14 @@ Active Directory is unable to write to the Active Directory database or log file
 
 4. **If the Jet error in the NTDS replication event is NOT in table above, validate the vertical Jet database stack**  
 
-If the 2108 event logs a jet error NOT cited in the table, use the [Microsoft Exchange Server Error Code Look-up](https://www.microsoft.com/download/details.aspx?id=100432) utility to resolve the jet error to its symbolic and friendly error string using the syntax "err \<jet error>". It is critical that you add the leading "-" prefix character when resolving jet errors using ERR.EXE. (for example, "c:\\>err -1018").
+    If the 2108 event logs a jet error NOT cited in the table, use the [Microsoft Exchange Server Error Code Look-up](https://www.microsoft.com/download/details.aspx?id=100432) utility to resolve the jet error to its symbolic and friendly error string using the syntax "err \<jet error>". It is critical that you add the leading "-" prefix character when resolving jet errors using ERR.EXE. (for example, "c:\\>err -1018").
 
-The event message text in NTDS Replication event 2108 contains a partial user action for the NTDS Replication 1084 event.
+    The event message text in NTDS Replication event 2108 contains a partial user action for the NTDS Replication 1084 event.
 
-The NTDS Replication 2108 user action is documented in the linked KB article MSKB [837932](https://support.microsoft.com/?id=837932). If the user action for your event isn't cited in the table above, execute a modified version of the action plan in MSKB [837932](https://support.microsoft.com/?id=837932)  by validating the vertical jet database stack from the bottom up (proceeding up to the next layer only when the underlying layer checks out "good"), just like you do with TCP.
+    The NTDS Replication 2108 user action is documented in the linked KB article MSKB [837932](https://support.microsoft.com/help/837932). If the user action for your event isn't cited in the table above, execute a modified version of the action plan in MSKB [837932](https://support.microsoft.com/help/837932)  by validating the vertical jet database stack from the bottom up (proceeding up to the next layer only when the underlying layer checks out "good"), just like you do with TCP.
 
-| **Layer**| **NTDSUTIL command**| **ESENTTUL command** |
-|---|---|---|
-| **(1.) Physical consistency**| no equivalent| ESENTUTL /K |
-| **(2.) ESE Logical consistency**| NTDSUTIL FILES INTEGRITY| ESENTUTL /G |
-| **(3.) Application logical consistency**| NTDSUTIL ->Semantic database analysis<br/><br/>+<br/><br/>NTDSUTIL -> Offline Defrag| no equivalent for SDA<br/><br/><br/>+<br/><br/>ESENTUTL / D |
+    | **Layer**| **NTDSUTIL command**| **ESENTTUL command** |
+    |---|---|---|
+    | **(1.) Physical consistency**| no equivalent| ESENTUTL /K |
+    | **(2.) ESE Logical consistency**| NTDSUTIL FILES INTEGRITY| ESENTUTL /G |
+    | **(3.) Application logical consistency**| NTDSUTIL ->Semantic database analysis<br/><br/>+<br/><br/>NTDSUTIL -> Offline Defrag| no equivalent for SDA<br/><br/><br/>+<br/><br/>ESENTUTL / D |

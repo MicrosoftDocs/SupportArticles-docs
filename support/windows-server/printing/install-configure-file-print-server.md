@@ -1,5 +1,5 @@
 ---
-title: How to install and configure a file and print server in Windows Server 2003
+title: Install and configure a file and print server
 description: Describes how to configure your Windows Server 2003 as a file and print server.
 ms.date: 09/21/2020
 author: Deland-Han
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: 'Management and Configuration: Installing Print drivers'
 ms.technology: PrintFaxScan
 ---
-# How to install and configure a file and print server in Windows Server 2003
+# How to install and configure a file and print server
 
 This step-by-step article describes how to configure your Windows Server 2003 as a file and print server.
 
@@ -35,8 +35,8 @@ You can create a Windows Server 2003 file server and print server manually, or y
 2. Click Next.
 3. Click Next.
 4. Click **File server** in the **Server role** box, and then click Next.
-5. On the "File Server Disk Quotas" page, configure any quotas you need to control disk-space usage on the server, and then click Next.
-6. On the "File Server Indexing Service" page, click the indexing configuration that is appropriate for your server, and then click Next.
+5. On the **File Server Disk Quotas** page, configure any quotas you need to control disk-space usage on the server, and then click Next.
+6. On the **File Server Indexing Service** page, click the indexing configuration that is appropriate for your server, and then click Next.
 7. Click Next.
 8. Click Finish.
 9. The Share a Folder Wizard starts. Click Next.
@@ -61,14 +61,13 @@ You can create a Windows Server 2003 file server and print server manually, or y
 
 ### How to install a print server on Windows Server 2003 by using the Configure Your Server Wizard
 
-
 1. Click Start, point to Administrative Tools, and then click **Configure Your Server Wizard**.
 2. Click Next.
 3. Click Next.
 4. Click **Print server** in the **Server role** box, and then click Next.
-5. On the "Printers and Printer Drivers" page, click the types of Windows clients that your print server will support, and then click Next.
+5. On the **Printers and Printer Drivers** page, click the types of Windows clients that your print server will support, and then click Next.
 6. Click Next.
-7. On the "Add Printer Wizard Welcome" page, click Next.
+7. On the **Add Printer Wizard Welcome** page, click Next.
 8. Click **Local printer attached to this computer**, click to clear the **Automatically detect and install my Plug and Play printer** check box, and then click Next.
 9. Click the port for your printer, and then click Next.
 10. Click the printer make and model or provide the drivers from the printer manufacturer media, and then click Next.

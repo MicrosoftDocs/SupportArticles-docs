@@ -26,9 +26,9 @@ After installing the RemoteFX 3D Video Adapter on a VDI-based physical machine o
 
 Remote Desktop can't connect to the remote computer for one of these reasons:
 
-1) Remote access to the server is not enabled
-2) The remote computer is turned off
-3) The remote computer is not available on the network
+1. Remote access to the server is not enabled
+2. The remote computer is turned off
+3. The remote computer is not available on the network
 
 Make sure the remote computer is turned on and connected to the network, and that remote access is enabled.
 
@@ -63,24 +63,31 @@ Alternatively, if you enable Remote Desktop by using the System properties windo
 1. Click the Start button, and then click Control Panel.
 2. Click on System  icon.
 3. Under Control Panel Home, click Remote settings.
-4. Click the Remote tab. Under Remote Desktop, Select Don't allow connections to this computer and the click Apply 
+4. Click the Remote tab. Under Remote Desktop, Select Don't allow connections to this computer and the click Apply  
 5. Now select either option depending on your security requirements:
 6.
    - Allow connections from computers running any version of Remote Desktop (less secure)
-   - Allow connections only from computers running Remote Desktop with Network Level Authentication (more secure)
+   - Allow connections only from computers running Remote Desktop with Network Level Authentication (more secure)  
+
 7. Click on Apply and the OK.
 
 ## More information
 
 You must enable the RemoteFX Windows Firewall rule manually if you enable Remote Desktop of VDI machine using either of the methods:
 
-1. Using WMI command:
- wmic rdtoggle where (AllowTSConnections=0) call SetAllowTSConnections 1 
+1. Using WMI command:  
 
-2. Toggling the registry:
- **REG.exe ADD "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0**  
-3. Enabling firewall exceptions for Remote desktop using netsh  command or Windows Firewall APIs:
- netsh advfirewall firewall set rule group="remote desktop" new enable=Yes 
+    ```console
+     wmic rdtoggle where (AllowTSConnections=0) call SetAllowTSConnections 1  
+    ```
+
+2. Toggling the registry:  
+     `REG.exe ADD "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0`  
+3. Enabling firewall exceptions for Remote desktop using `netsh`  command or Windows Firewall APIs:  
+
+    ```console
+     netsh advfirewall firewall set rule group="remote desktop" new enable=Yes  
+    ```
 
 4. Using PowerShell script provided on [Microsoft TechNet Script Center](https://go.microsoft.com/fwlink/?linkid=184804) to configure VDI desktops.
 5. Upgrading to Windows 7 with SP1 on a virtual desktop that already had Remote Desktop enabled.

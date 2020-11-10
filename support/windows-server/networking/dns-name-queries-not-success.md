@@ -1,5 +1,5 @@
 ---
-title: Some DNS name queries are unsuccessful after you deploy a Windows-based DNS server
+title: Some DNS name queries are unsuccessful
 description: Describes an issue that occurs because of the Extension Mechanisms for DNS (EDNS0) functionality that is supported in Windows Server DNS. Provides a resolution and workaround.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,8 +17,8 @@ ms.technology: Networking
 
 This article describes an issue where DNS queries to some domains may not be resolved successfully after you deploy a Windows-based DNS server.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;832223
+_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 832223
 
 ## Symptoms
 
@@ -34,24 +34,24 @@ EDNS0 allows larger User Datagram Protocol (UDP) packet sizes. However, some fir
 
 To resolve this issue, update the firewall program to recognize and allow UDP packets that are larger than 512 bytes. For more information about how to do this, contact the manufacturer of your firewall program.
 
- Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.  
+Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.  
 
 ## Workaround
 
 To work around this issue, turn off the EDNS0 feature on Windows-based DNS servers. To do this, take the following action:
 
-- At a command prompt, type the following command, and then press Enter:
+At a command prompt, type the following command, and then press Enter:
 
-    ```console
-    dnscmd /config /enableednsprobes 0
-    ```
+```console
+dnscmd /config /enableednsprobes 0
+```
 
-    > [!NOTE]
-    > Type a 0 (zero) and not the letter "O" after "enableednsprobes" in this command.
+> [!NOTE]
+> Type a 0 (zero) and not the letter "O" after "enableednsprobes" in this command.
 
-    The following information appears:
+ The following information appears:
 
-    > Registry property enableednsprobes successfully reset.  
+> Registry property enableednsprobes successfully reset.  
     Command completed successfully.
 
 > [!NOTE]
