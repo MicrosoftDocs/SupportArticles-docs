@@ -62,9 +62,9 @@ After the Kerberos authentication fails, the client tries to fall back to NTLM 
 
 To resolve this problem, use one of the following methods:  
 
-- Method 1:Configure the trust to support AES128 and AES 256 encryption in addition to RC4 encryption.
-- Method 2:Configure the client to support RC4 encryption in addition to AES128 and AES256 encryption.
-- Method 3:Configure the trust to support AES128 and AES 256 encryption instead of RC4 encryption.  
+- Method 1: Configure the trust to support AES128 and AES 256 encryption in addition to RC4 encryption.
+- Method 2: Configure the client to support RC4 encryption in addition to AES128 and AES256 encryption.
+- Method 3: Configure the trust to support AES128 and AES 256 encryption instead of RC4 encryption.
 
 The choice depends on your security needs and your need to minimize disruption or maintain backward compatibility.
 
