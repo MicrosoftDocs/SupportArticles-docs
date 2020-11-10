@@ -17,7 +17,7 @@ appliesto:
 - Microsoft Word 2007
 ---
 
-Error (file cannot be opened because there are problems with the contents. The name in the end tag of the element must match the element type in the start tag) when you open a DOCX file in Word 2013, 2010, or 2007
+# (end tag) error occurs when you open a DOCX file in Word 2013, 2010, or 2007
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
