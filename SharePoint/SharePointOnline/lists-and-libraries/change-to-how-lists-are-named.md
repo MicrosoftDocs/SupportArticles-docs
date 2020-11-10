@@ -22,7 +22,7 @@ description: Describes a change to how lists are named in Microsoft Lists, Teams
 
 # Change to default content type setting for new lists in Modern Lists, Teams, and SharePoint
 
-Modern List creation is an update to the Microsoft Lists, Microsoft Teams, and SharePoint appwebs. The default content type of new lists will be set to the name of the list instead of to “Item.” This change will be rolled out to standard release tenants by the end of November 2020.
+Modern List creation is an update to the Microsoft Lists, Microsoft Teams, and SharePoint appwebs. The default content type of new lists is currently set to the name of the list instead of “Item.” A fix is scheduled to be rolled out by the end of this month (November 2020) that will set the default content type to “Item” instead.
 
 Users update previously created lists by following these steps:
 
