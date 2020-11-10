@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4036954
 
 ## Symptoms
 
-Assume that you use the inbox Windows Internal Database (WID) in Windows Server. If you disable Transport Layer Security (TLS) 1.0 when you configure security settings, you experience the following issues:
+Assume that you use the inbox Windows Internal Database (WID) in Windows Server. If you disable Transport Layer Security (TLS) 1.0 when you configure security settings, you experience the following issues:
 
 - The Remote Desktop service (RDS) may fail.
 - An existing RDS deployment that uses Remote Desktop Connection Broker and WID may fail.
@@ -31,14 +31,14 @@ Assume that you use the inbox Windows Internal Database (WID) in Windows Server.
 
   > The Remote Desktop Management service on Local Computer started and then stopped. Some services stop automatically if they are not in use by other services or programs.
 
-- The Remote Desktop Connection Broker role can't be installed.
+- The Remote Desktop Connection Broker role can't be installed.
 
 ## Cause
 
-This is expected behavior. This is because of the current dependencies between RDS and Windows Internal Database. RDMS and Connection Broker depend on TLS 1.0 to authenticate with the database. WID doesn't currently support TLS 1.2. So, disabling TLS 1.0 breaks this communication.
+This is expected behavior. This is because of the current dependencies between RDS and Windows Internal Database. RDMS and Connection Broker depend on TLS 1.0 to authenticate with the database. WID doesn't currently support TLS 1.2. So, disabling TLS 1.0 breaks this communication.
 
 > [!NOTE]
-> RDS deployments that use Connection Broker have to establish an encrypted channel to WID by using one of the following methods:
+> RDS deployments that use Connection Broker have to establish an encrypted channel to WID by using one of the following methods:
 >
 > - TLS
 > - SSL 3.0
@@ -48,9 +48,9 @@ This is expected behavior. This is because of the current dependencies between R
 
 To fix this issue, use one of the following methods:
 
-- Set up RDS without Connection Broker for a single-server installation.
+- Set up RDS without Connection Broker for a single-server installation.
 - Don't disable TLS 1.0 on a single Connection Broker deployment.
 - Configure a high availability Connection Broker deployment that uses dedicated SQL Server.
 
 > [!NOTE]
-> Microsoft has released [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244) to enable SQL Server communication to use TLS 1.2.
+> Microsoft has released [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244) to enable SQL Server communication to use TLS 1.2.

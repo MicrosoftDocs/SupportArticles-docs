@@ -17,7 +17,7 @@ ms.technology: Networking
 
 This article describes how to troubleshoot Workplace Join issues by collecting and reviewing log information through Event Viewer.
 
-_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
+_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3045377
 
 ## Summary

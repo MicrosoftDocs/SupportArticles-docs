@@ -17,18 +17,19 @@ ms.technology: WindowsSecurity
 
 This article describes an issue where the TPM device driver is recorded in the system log when it encounters an unrecoverable error.
 
-_Original product version:_ &nbsp; Windows 10 – all editions  
+_Original product version:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp; 4562894
 
 ## Symptoms
 
-On a Trusted Platform Module (TPM) device, you experience issues with BitLocker, logging to applications using Modern Authentication or Next Generation Credentials. These messages are logged in the event logs:
+On a Trusted Platform Module (TPM) device, you experience issues with BitLocker, logging to applications using Modern Authentication or Next Generation Credentials. These messages are logged in the event logs:  
+
 - The Trusted Platform Module (TPM) hardware failed to execute a TPM command.
 - The device driver for the Trusted Platform Module (TPM) encountered a non-recoverable error in the TPM hardware, which prevents TPM services (such as data encryption) from being used.
 
 See the following log examples for detailed information:
 
-### Event ID 14 
+### Event ID 14
 
 > Log Name:      System  
 Source:        TPM  
@@ -64,7 +65,7 @@ Event Xml:
   \</EventData>  
 \</Event>  
 
-### Event ID 17 
+### Event ID 17
 
 > Log Name:      System  
 Source:        TPM  
@@ -74,7 +75,7 @@ Task Category: None
 Level:         Information  
 Keywords:  
 User:          SYSTEM  
-Computer:      WIN10PC.CONTOSO.COM  
+Computer:      `WIN10PC.CONTOSO.COM`  
 Description:  
 The Trusted Platform Module (TPM) hardware failed to execute a TPM command.  
 Event Xml:  
@@ -103,12 +104,13 @@ Event Xml:
 
 ## Cause
 
-This issue occurs because of an issue with the TPM device preventing Windows from communicating and using the TPM device for the functionalities that reply on TPM such as BitLocker, Modern Authentication, and Next Generation Credentials. 
+This issue occurs because of an issue with the TPM device preventing Windows from communicating and using the TPM device for the functionalities that reply on TPM such as BitLocker, Modern Authentication, and Next Generation Credentials.  
 
 ## Workaround
 
-Make sure the following updates are installed:
-- [Latest Servicing Stack Update (SSU)](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV990001) and [monthly Cumulative Update (CU) in Windows](https://www.catalog.update.microsoft.com/Search.aspx?q=windows%2010%20cumulative%20update) 
+Make sure the following updates are installed:  
+
+- [Latest Servicing Stack Update (SSU)](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV990001) and [monthly Cumulative Update (CU) in Windows](https://www.catalog.update.microsoft.com/Search.aspx?q=windows%2010%20cumulative%20update)  
 - Available update of the BIOS Firmware or TPM Device Firmware on manufacturer's support websites.
 
-If the issue persists, contact the hardware vendor or the device manufacturer to diagnose your TPM device. For more information, see [TPM Recommendations](/windows/security/information-protection/tpm/tpm-recommendations).
+If the issue persists, contact the hardware vendor or the device manufacturer to diagnose your TPM device. For more information, see [TPM Recommendations](/windows/security/information-protection/tpm/tpm-recommendations).

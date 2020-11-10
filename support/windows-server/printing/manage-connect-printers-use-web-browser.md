@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: v-lanac, jamirc, kaushika
-ms.prod-support-area-path: Management and Configuration - Installing Print drivers
+ms.prod-support-area-path: 'Management and Configuration: Installing Print drivers'
 ms.technology: PrintFaxScan
 ---
 # HOW TO: Configure Internet printing in Windows Server 2003

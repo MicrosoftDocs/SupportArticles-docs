@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot AD replication error 8446
-description: Describes the symptoms, cause, and resolution steps for issues when Active Directory replication fails with error 8446.
+description: Describes the symptoms, cause, and resolution steps for issues when Active Directory replication fails with error 8446.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,7 +15,7 @@ ms.technology: ActiveDirectory
 ---
 # Troubleshooting AD Replication error 8446: The replication operation failed to allocate memory
 
-This article describes the symptoms, cause, and resolution steps for issues when Active Directory replication fails with error 8446.
+This article describes the symptoms, cause, and resolution steps for issues when Active Directory replication fails with error 8446.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2693500
@@ -26,35 +26,35 @@ _Original KB number:_ &nbsp; 2693500
 
 ## Symptoms
 
-This article describes the symptoms, cause, and resolution steps for issues when Active Directory replication fails with error 8446: "The replication operation failed to allocate memory".
+This article describes the symptoms, cause, and resolution steps for issues when Active Directory replication fails with error 8446: "The replication operation failed to allocate memory".
 
 **1. REPADMIN.exe reports that replication attempt has failed with error "8446" - The Replication operation failed to allocate memory**  
 
  DC=Contoso,DC=com  
-    Default-First-Site-Name\DomainController via RPC  
-        DC object GUID: \<source DCs ntds settings object object guid>
-        Last attempt @ \<Date Time> failed, result 8446 (0x20fe):
-            The replication operation failed to allocate memory.
-        1359 consecutive failure(s).
-        Last success @ \<Date & Time>.
+    Default-First-Site-Name\DomainController via RPC  
+        DC object GUID: \<source DCs ntds settings object object guid>
+        Last attempt @ \<Date Time> failed, result 8446 (0x20fe):
+            The replication operation failed to allocate memory.
+        1359 consecutive failure(s).
+        Last success @ \<Date & Time>.
  CN=Configuration,DC=Contoso,DC=com  
-    Default-First-Site-Name\DomainController via RPC   
-        DC object GUID: \<source DCs ntds settings object object guid>
-        Last attempt @ \<Date Time> failed, result 8446 (0x20fe):
-            The replication operation failed to allocate memory.
-        1358 consecutive failure(s).
-        Last success @ \<Date & Time>.
+    Default-First-Site-Name\DomainController via RPC   
+        DC object GUID: \<source DCs ntds settings object object guid>
+        Last attempt @ \<Date Time> failed, result 8446 (0x20fe):
+            The replication operation failed to allocate memory.
+        1358 consecutive failure(s).
+        Last success @ \<Date & Time>.
 Source: Default-First-Site-Name\DomainController
 ******* 1359 CONSECUTIVE FAILURES since \<Date Time>
 Last error: 8446 (0x20fe):
-  The replication operation failed to allocate memory.  
+  The replication operation failed to allocate memory.  
  **2. DCPROMO fails with error 1130**  
 06/05 09:55:33 [INFO] Error - Active Directory could not replicate the directory partition CN=Configuration,DC=contoso,DC=com from the remote domain controller 5thWardDC1.contoso.com. (1130)
 06/05 09:55:33 [INFO] NtdsInstall for domain.net returned 1130
 06/05 09:55:33 [INFO] DsRolepInstallDs returned 1130
 06/05 09:55:33 [ERROR] Failed to install to Directory Service (1130)
 Non critical replication returned 1130
-err.exe 1130 
+err.exe 1130 
 ERROR_NOT_ENOUGH_SERVER_MEMORY / Not enough server storage is available to process this command.
  **3. NTDS Replication, NTDS General Events with the 8466 status are logged in the directory service event log.**  
 
@@ -66,7 +66,7 @@ ERROR_NOT_ENOUGH_SERVER_MEMORY / Not enough server storage is available to proce
 ||||  
 
 **4. When you try to manually initiate replication using Repadmin or Active Directory Sites and Services, you get the following error message:**  
- The following error occurred during the attempt to synchronize naming context Contoso.com from domain controller <Source DC > to domain controller \<Destination DC>: 
+ The following error occurred during the attempt to synchronize naming context Contoso.com from domain controller <Source DC > to domain controller \<Destination DC>: 
  The replication Operation failed to allocate memory. This operation will not continue.  
 
 **5. The domain controller may become unresponsive and a reboot will provide a temporary workaround.**  
@@ -86,7 +86,7 @@ The 8446 (operation failed to allocate memory. This operation will not continue)
 
 - The Virtual Memory depletion could be a leak inside the LSASS User mode Process, or the Database Cache (ESE Cache) may be consuming all the available memory.  
 
- **The following information is important to understand:**  
+ **The following information is important to understand:**  
  Lsass.exe memory usage on domain controllers has two major components: one fixed and one variable. 
  The fixed component is made up of the code, the stacks, the heaps, and various fixed size data structures (for example, the schema cache). The amount of memory that LSASS uses may vary, depending on the load on the computer. As the number of running threads increases, so does the number of memory stacks. Lsass.exe usually uses 100 MB to 300 MB of memory. Lsass.exe uses the same amount of memory no matter how much RAM is installed in the computer. 
  The variable component is the database buffer cache. The size of the cache can range from less than 1 MB to the size of the entire database. Because a larger cache improves performance, the database engine for AD (ESENT) attempts to keep the cache as large as possible. While the size of the cache varies with memory pressure in the computer, the maximum size of the cache is limited by both the amount of physical RAM installed in the computer and by the amount of available virtual address space (VA). AD uses only a portion of total VA space for the cache. 
@@ -113,9 +113,9 @@ Determine if there is depletion of following resources and fix the underlying ca
 
 - Database - "Database Cache Size" 
 
-Note: By default you will not be able to view the database counters on a Windows 2003 Domain controller.  Use the following steps to add the database counters on Windows Server 2003. **These steps are not needed for Window Server 2008 and later.**  
+Note: By default you will not be able to view the database counters on a Windows 2003 Domain controller.  Use the following steps to add the database counters on Windows Server 2003. **These steps are not needed for Window Server 2008 and later.**  
 
-1. Import the following registry settings: (copy the following text to notepad and save as a .reg file, and then import the settings on the DC)
+1. Import the following registry settings: (copy the following text to notepad and save as a .reg file, and then import the settings on the DC)
 
 Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ESENT]
@@ -126,14 +126,14 @@ Windows Registry Editor Version 5.00
 "Library"="C:\\Windows\\System32\\esentprf.dll"
 "Show Advanced Counters"=dword:00000001
 2. 
-Run the following command from a command prompt to back up your existing performance counters:
+Run the following command from a command prompt to back up your existing performance counters:
 Lodctr /s: backup.ini
 3. 
 Run the following command from a command prompt to register the database counters:
 Lodctr c:\windows\system32\esentprf.ini
 Open Perfmon or restart performance monitor if already open.
 You should by now be able to view a new performance object in Perfmon called Database 
- Add the "Database Cache Size" counter.   In the following example, the database cache size grows at an increasing trend of Virtual Bytes and Working Set of the LSASS Process eventually consuming all 2 GB of available virtual memory allocated to the LSASS process.  You will encounter the 8446 replication failure once this virtual address space is consumed.  Refer to the " LSASS ESE Database cache is not limited by default" section of the article for detailed instructions on how to avoid this condition.  
+ Add the "Database Cache Size" counter.   In the following example, the database cache size grows at an increasing trend of Virtual Bytes and Working Set of the LSASS Process eventually consuming all 2 GB of available virtual memory allocated to the LSASS process.  You will encounter the 8446 replication failure once this virtual address space is consumed.  Refer to the " LSASS ESE Database cache is not limited by default" section of the article for detailed instructions on how to avoid this condition.  
 
 :::image type="content" source="./media/replication-error-8446/memory.jpg" alt-text="Screenshot of database cache size increasing trend.":::
 

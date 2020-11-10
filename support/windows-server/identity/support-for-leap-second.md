@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2722715
 
 ## Summary
 
-This article contains information about Microsoft support for the leap second. The leap second is a one-second adjustment, which is occasionally applied to Coordinated Universal Time (UTC) in order to keep its time of day close to the mean solar time, or UT1.
+This article contains information about Microsoft support for the leap second. The leap second is a one-second adjustment, which is occasionally applied to Coordinated Universal Time (UTC) in order to keep its time of day close to the mean solar time, or UT1.
 
 >[!Note]
 Windows Server 2019 and Windows 10 October 2018 Update do support leap seconds in the platform. However, this article does not apply strictly to these or later operating systems. For more information, see:  

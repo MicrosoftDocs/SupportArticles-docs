@@ -15,14 +15,14 @@ ms.technology: SysManagementComponents
 ---
 # Error when enabling analytic or debug event log: The requested operation cannot be performed over an enabled direct channel. The channel must first be disabled before performing the requested operation
 
-This article helps fix an error that occurs when you enable analytic or debug event log.
+This article helps to fix an error that occurs when you enable analytic or debug event log.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2488055
 
 ## Symptoms
 
-You may receive the following error when you attempt to enable or change the properties of an analytic or debug event login Event Viewer:
+You may receive the following error when you attempt to enable or change the properties of an analytic or debug event login Event Viewer:
 
 > Query Error  
 > One or more logs in the query have errors.  
@@ -36,13 +36,13 @@ When attempting changes with the Wevtutil tool, you may receive the following er
 > Failed to save configuration or activate log \<log name>.  
 > The requested operation cannot be performed over an enabled direct channel. The channel must first be disabled before performing the requested operation.
 
-You must first select **View**, **Show Analytic and Debug Logs** in Event Viewer to make analytic and debug logs visible in Event Viewer. For example, the **WMI-Activity** log (full name **Microsoft-Windows-WMI-Activity/Trace**) is located in **Applications and Services Logs\Microsoft\Windows\WMI-Activity\Trace**.
+You must first select **View**, **Show Analytic and Debug Logs** in Event Viewer to make analytic and debug logs visible in Event Viewer. For example, the **WMI-Activity** log (full name **Microsoft-Windows-WMI-Activity/Trace**) is located in **Applications and Services Logs\Microsoft\Windows\WMI-Activity\Trace**.
 
 ## Cause
 
-For analytic and debug logs, Event Viewer doesn't allow events to be queried or viewed if the log is both enabled and has **Overwrite events as needed (oldest events first)** configured.
+For analytic and debug logs, Event Viewer doesn't allow events to be queried or viewed if the log is both enabled and has **Overwrite events as needed (oldest events first)** configured.
 
-This isn't the case for administrative and operational logs such as System, Application and Security logs, which can be viewed when **Overwrite events as needed (oldest events first)** is configured.
+This isn't the case for administrative and operational logs such as System, Application and Security logs, which can be viewed when **Overwrite events as needed (oldest events first)** is configured.
 
 Analytic and debug logs by default are configured for **Do not overwrite events (Clear logs manually)**. For circular logging where old events are discarded when the maximum log size is reached, you would enable **Overwrite events as needed (oldest events first)**.
 

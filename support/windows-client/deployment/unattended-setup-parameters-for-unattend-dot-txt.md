@@ -471,9 +471,7 @@ The AutoConfirm key indicates whether the graphics device should be configured u
 ```
 
 If the Video card installed cannot use the defined settings or are invalid, defaults may be used for install. You can install third party video drivers if your video card is not detected by Windows NT and is an OEM Video card.
- For additional information, click the article number below to view the article in the Microsoft Knowledge Base:
 
-[166028](/EN-US/help/166028) Installing 3rd-Party Video drivers with Txtsetup.oem Unattended  
 You can use the next three parameters instead of the [DisplayDriver], [OemBootFiles] sections and custom Txtsetup.oem files to install third- party video drivers. The drivers and files required by the video adapter should exist in the $OEM$\Display directory on the distribution share point.
 
 ```

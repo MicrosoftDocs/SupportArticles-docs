@@ -17,7 +17,7 @@ ms.technology: Deployment
 
 This article provides a solution to an error that occurs when you try to boot a Microsoft Deployment Toolkit 2012 Update 1 media deployment USB drive on a x86 UEFI-based system.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2845990
 
 ## Symptoms
@@ -30,7 +30,7 @@ If you create media using MDT that selects both x86 and x64 platforms, MDT will 
 
 ## Resolution
 
-To boot an MDT media deployment on x86 UEFI-based system, you must uncheck x64 when building the MDT media.  To resolve this, do the following:
+To boot an MDT media deployment on x86 UEFI-based system, you must uncheck x64 when building the MDT media.  To resolve this, do the following:
 
 1. In the deployment share navigate to Advanced Configuration, Media
 2. Right-click the Media and choose properties
@@ -42,8 +42,8 @@ The USB drive should appear as bootable in the boot order.
 
 ## More information
 
-UEFI systems can only boot operating systems and Windows PE boot images that match the computer's CPU architecture.  For example, Intel Atom-based systems support only x86 while Intel Core-based systems support only x64 (without using legacy BIOS compatibility).
+UEFI systems can only boot operating systems and Windows PE boot images that match the computer's CPU architecture.  For example, Intel Atom-based systems support only x86 while Intel Core-based systems support only x64 (without using legacy BIOS compatibility).
 
-Due to limitations in the UEFI boot process, it isn't possible to create media that works with both x86 and x64 UEFI systems.  So for MDT media that specifies both x86 and x64 architecture support, MDT can only support one architecture for UEFI booting.  (Both x86 and x64 work fine for non-UEFI systems.)  Rather than generating an error, MDT logs a message indicating that the resulting media will only support x64 UEFI systems.
+Due to limitations in the UEFI boot process, it isn't possible to create media that works with both x86 and x64 UEFI systems.  So for MDT media that specifies both x86 and x64 architecture support, MDT can only support one architecture for UEFI booting.  (Both x86 and x64 work fine for non-UEFI systems.)  Rather than generating an error, MDT logs a message indicating that the resulting media will only support x64 UEFI systems.
 
 To support UEFI x86 systems, you need to have separate media that selects only the x86 architecture.

@@ -33,7 +33,7 @@ Event ID: 1083
 Description:
 Replication warning: The directory is busy. It couldn't update object CN=... with changes made by directory GUID._msdcs.domain. Will try again later.
 This indicates that the unsuccessful attempt of the remotely triggered update that will be retried later:
- Event Type: Warning
+ Event Type: Warning
 Event Source: NTDS Replication
 Event Category: Replication
 Event ID: 1061
@@ -41,7 +41,7 @@ Description:
 Internal error: The directory replication agent (DRA) call returned error 8438.
 (decimal 8438 / hex 0x20f6: ERROR_DS_DRA_BUSY, winerror.h)
 If advanced NTDS logging is enabled, the following error ID may also be logged:
- Event Type: Warning
+ Event Type: Warning
 Event Source: NTDS General
 Event Category: Internal Processing
 Event ID: 1173
@@ -57,7 +57,7 @@ The following object changes were not applied to the local Active Directory data
  [285858](https://support.microsoft.com/help/285858) Error message: The replication system encountered an internal error 
 
 If the remotely triggered update wins against the local update, the following system event may be logged for a user account lockout:
- Event Type: Error
+ Event Type: Error
 Event Source: SAM
 Event Category: None
 Event ID: 12294
@@ -68,7 +68,7 @@ Data: 0000: c00002a5
 You must analyze the error data to receive the correct error condition. DWord data hexadecimal 0xc00002a5 = decimal -1073741147: STATUS_DS_BUSY, ntstatus.h).
 
 After the warnings, an NTDS information event is logged that reports that the queued update has already been made (with the same version ID) and is be ignored as redundant:
- Event Type: Information
+ Event Type: Information
 Event Source: NTDS Replication
 Event Category: Replication
 Event ID: 1413

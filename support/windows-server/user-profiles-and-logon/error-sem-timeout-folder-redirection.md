@@ -1,6 +1,6 @@
 ---
 title: ERROR_SEM_TIMEOUT in Folder Redirection
-description: Helps fix an ERROR_SEM_TIMEOUT error that occurs when you find out the Folder Redirection policy isn't working on the client machine.
+description: Helps fix an ERROR_SEM_TIMEOUT error that occurs when you find out the Folder Redirection policy isn't working on the client machine.
 ms.date: 09/15/2020
 author: Deland-Han 
 ms.author: delhan
@@ -15,14 +15,14 @@ ms.technology: UserProfilesAndLogon
 ---
 # Folder Redirection fails with the error ERROR_SEM_TIMEOUT or the semaphore timeout period has expired
 
-This article helps fix an ERROR_SEM_TIMEOUT error that occurs when you find out the Folder Redirection policy isn't working on the client machine.
+This article helps fix an ERROR_SEM_TIMEOUT error that occurs when you find out the Folder Redirection policy isn't working on the client machine.
 
 _Original product version:_ &nbsp; Windows Vista, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2570355
 
 ## Symptoms
 
-You have a computer running Windows Vista or Windows 7 in a domain. You find out the Folder Redirection policy is not working on the client machine. When you look at the event log, you see following event logged:
+You have a computer running Windows Vista or Windows 7 in a domain. You find out the Folder Redirection policy is not working on the client machine. When you look at the event log, you see following event logged:
 
 > Log Name: Application  
 Source: Microsoft-Windows-Folder Redirection  

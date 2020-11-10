@@ -70,13 +70,13 @@ This article describes symptoms, cause, and resolution steps for AD operations t
     |---|---|---|
     |Microsoft-Windows-ActiveDirectory_DomainService|2023|This directory server was unable to replicate changes to the following remote directory server for the following directory partition<br/><br/>|
     |NTDS General|1655|Active Directory attempted to communicate with the following global catalog and the attempts were unsuccessful.<br/><br/>|
-    |NTDS KCC|1308|The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following directory service has consistently failed.<br/><br/> |
-    |NTDS KCC|1865|The Knowledge Consistency Checker (KCC) was unable to form a complete spanning tree network topology. As a result, the following list of sites can't be reached from the local site <br/><br/>|
-    |NTDS KCC|1925|The attempt to establish a replication link for the following writable directory partition failed. <br/><br/>|
+    |NTDS KCC|1308|The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following directory service has consistently failed.<br/><br/> |
+    |NTDS KCC|1865|The Knowledge Consistency Checker (KCC) was unable to form a complete spanning tree network topology. As a result, the following list of sites can't be reached from the local site <br/><br/>|
+    |NTDS KCC|1925|The attempt to establish a replication link for the following writable directory partition failed. <br/><br/>|
     |NTDS KCC|1926|The attempt to establish a replication link to a read-only directory partition with the following parameters failed<br/><br/>|
     ||||
 
-4. Domain controllers log NTDS Replication event 2087 and/or NTDS Replication event 2088 in their Directory Service event log:
+4. Domain controllers log NTDS Replication event 2087 and/or NTDS Replication event 2088 in their Directory Service event log:
 
     > Log Name: Directory Service  
     Source: Microsoft-Windows-ActiveDirectory_DomainService  
@@ -93,15 +93,15 @@ This article describes symptoms, cause, and resolution steps for AD operations t
 
     Rest of event truncated, see MSKB [824449](https://support.microsoft.com/?kbid=824449) for full text.
 
-    > Log Name:      Directory Service  
-    Source:        Microsoft-Windows-ActiveDirectory_DomainService  
-    Date:          \<date> \<time>  
-    Event ID:      2088  
+    > Log Name:      Directory Service  
+    Source:        Microsoft-Windows-ActiveDirectory_DomainService  
+    Date:          \<date> \<time>  
+    Event ID:      2088  
     Task Category: DS RPC Client  
-    Level:         Warning  
-    Keywords:      Classic  
-    User:          ANONYMOUS LOGON  
-    Computer:      \<dc name>.\<domain name>  
+    Level:         Warning  
+    Keywords:      Classic  
+    User:          ANONYMOUS LOGON  
+    Computer:      \<dc name>.\<domain name>  
     Description:
 
     Active Directory Domain Services couldn't use DNS to resolve the IP address of the source domain controller listed below. To maintain the consistency of Security groups, group policy, users, and computers and their passwords, Active Directory Domain Services successfully replicated using the NetBIOS or fully qualified computer name of the source domain controller.
@@ -114,7 +114,7 @@ This article describes symptoms, cause, and resolution steps for AD operations t
 
 ## Cause
 
-Error Status 8524 maps to error string "The DSA operation is unable to proceed because of a DNS lookup failure." This is a catch-all error for all possible DNS failures affecting Active Directory on post Windows Server 2003 SP1 domain controllers.
+Error Status 8524 maps to error string "The DSA operation is unable to proceed because of a DNS lookup failure." This is a catch-all error for all possible DNS failures affecting Active Directory on post Windows Server 2003 SP1 domain controllers.
 
 Microsoft-Windows-ActiveDirectory_DomainService event 2087 is a partner event to other Active Directory events that cite the 8524 status if an Active Directory domain controller is unable to resolve a remote DC by its fully qualified CNAME record (\<object guid for source DCs NTDS Settings object>._msdcs.\<forest root domain>) using DNS.
 
@@ -122,22 +122,22 @@ Microsoft-Windows-ActiveDirectory_DomainService event 2088 is logged when a sour
 
 The presence of the 8524 status and the Microsoft-Windows-ActiveDirectory_DomainService event 2088 or 2087 events all indicate that DNS name resolution is failing Active Directory.
 
-In summary, the 8524 replication status is logged when a destination DC is unable to resolve the source DC by its CNAME and Host "A" or Host "AAAA" records using DNS. Specific root causes include:
+In summary, the 8524 replication status is logged when a destination DC is unable to resolve the source DC by its CNAME and Host "A" or Host "AAAA" records using DNS. Specific root causes include:
 
 1. The source DC is offline, or no longer exists but its NTDS Settings object still exist in the destination DCs' copy of Active Directory.
 2. The source DC failed to register the CNAME or host records on one or more DNS Servers either because the registration attempts failed or DNS client settings on the source don't point to DNS Servers that either host, forwarded or delegate its _msdcs.\<forest root domain zone and (or) primary DNS suffix domain zones>.
-3. DNS client settings on the destination DC don't point to DNS Servers that either host, forward or delegate the DNS zones containing the CNAME or host records for the source DC
+3. DNS client settings on the destination DC don't point to DNS Servers that either host, forward or delegate the DNS zones containing the CNAME or host records for the source DC
 4. CNAME and host records registered by the source DC don't exist on DNS servers queried by the destination DC because of simple replication latency, a replication failure, or a zone transfer failure.
 5. Invalid forwarders or delegations are preventing the destination DC from resolving CNAME or Host records for DCs in other domains in the forest.
 6. DNS Servers used by destination DC, source DC, or intermediate DNS Servers aren't functioning properly.
 
 ## Resolution
 
-### Verify whether the 8524 is caused by an offline DC or stale DC metadata
+### Verify whether the 8524 is caused by an offline DC or stale DC metadata
 
 If the 8524 error/event refers to a DC that is currently offline but still a valid DC in the forest, make it operational.
 
-If the 8524 error/event refers to an inactive DC  - a DC install that no longer exists on the network but whose NTDS Settings object still exists in the destination DCs' copy of Active Directory - remove the stale metadata for that DC from the destination DCs' copy of Active Directory.
+If the 8524 error/event refers to an inactive DC  - a DC install that no longer exists on the network but whose NTDS Settings object still exists in the destination DCs' copy of Active Directory - remove the stale metadata for that DC from the destination DCs' copy of Active Directory.
 
 Microsoft CSS regularly finds stale metadata for nonexistent DCs, or stale metadata from previous promotions of a DC with the same computer name that hasn't been removed from Active Directory.  
 
@@ -147,7 +147,7 @@ Microsoft CSS regularly finds stale metadata for nonexistent DCs, or stale metad
 
 1. Start the Windows 2008 or Windows Server 2008 R2 or W2K8 R2 Active Directory Sites and Services snap-in (DSSITE.MSC).
 
-    This can also be done by starting the Active Directory Sites and Services on a Windows Vista or Windows 7 computer that has been installed as part of the Remote Server Administration Tools (RSAT) package.
+    This can also be done by starting the Active Directory Sites and Services on a Windows Vista or Windows 7 computer that has been installed as part of the Remote Server Administration Tools (RSAT) package.
 
 2. Focus the DSSITE.MSC snap-in on the destination DCs' copy of Active Directory.
 
@@ -159,7 +159,7 @@ Microsoft CSS regularly finds stale metadata for nonexistent DCs, or stale metad
 
     A DCs NTDS Settings object appears below the Sites, Site Name, Servers container, and %server name% container and above the inbound connection object displayed in the right-hand pane of Active Directory Sites and Services.
 
-    The red highlight in the screenshot below shows the NTDS Settings object for CONTOSO-DC2 located below the Default-First-Site-Name site.
+    The red highlight in the screenshot below shows the NTDS Settings object for CONTOSO-DC2 located below the Default-First-Site-Name site.
 
     ![NTDS Settings selected](./media//replication-error-8524/ntds-settings.jpg)
 
@@ -176,17 +176,17 @@ The legacy or command-line method of deleting stale NTDS Settings objects using 
 DCDIAG /TEST:DNS performs seven different tests to quickly vet the DNS health of a domain controller. This test is NOT run as part of the default execution of DCDIAG.
 
 1. Sign in to the console of the destination domain controllers logging the 8524 events with Enterprise Admin credentials.
-2. Open an administrative privileged CMD prompt and run "DCDIAG /TEST:DNS /F on the DC logging the 8424 status AND the source DC that the destination DC is replicating from.
+2. Open an administrative privileged CMD prompt and run "DCDIAG /TEST:DNS /F on the DC logging the 8424 status AND the source DC that the destination DC is replicating from.
 
     To run DCDIAG against all DCs in a forest, type "DCDIAG /TEST:DNS /V /E /F:\<File name.txt>.
 
-    To run DCDIAG TEST:DNS against a specific DC type "DCDIAG /TEST:DNS /V /S:\<DC NAME> /F:\<File name.txt>.
+    To run DCDIAG TEST:DNS against a specific DC type "DCDIAG /TEST:DNS /V /S:\<DC NAME> /F:\<File name.txt>.
 3. Locate the summary table at the end of the DCDIAG /TEST:DNS output. Identify and reconcile warning or failure conditions on the relevant DCs of the report.
 4. If DCDIAG doesn't identify the root cause, take "the long way around" using the steps below.
 
 ### Check Active Directory Name Resolution using PING
 
-Destination DCs resolve source DCs in DNS by their fully qualified CNAME records that are derived from the object GUID of the remote DCs NTDS Settings object (the parent object to connection objects visible in the Active Directory Sites and Services snap-in). You can test a given DCs' ability to resolve a source DC fully qualified CNAME record using the PING command.
+Destination DCs resolve source DCs in DNS by their fully qualified CNAME records that are derived from the object GUID of the remote DCs NTDS Settings object (the parent object to connection objects visible in the Active Directory Sites and Services snap-in). You can test a given DCs' ability to resolve a source DC fully qualified CNAME record using the PING command.
 
 1. Locate the objectGUID of the source DCs NTDS Settings object in the source DCs' copy of Active Directory.
 
@@ -237,15 +237,15 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
 
 3. Compare the object GUID from #2 and #3.
 
-    If the object GUIDS are the same, then the source DC and destination DC know about the same instantiation (the same promotion) of the source DC. If they're different, then figure which one was created later. The NTDS setting object with the earlier create date is likely stale and should be removed.
+    If the object GUIDS are the same, then the source DC and destination DC know about the same instantiation (the same promotion) of the source DC. If they're different, then figure which one was created later. The NTDS setting object with the earlier create date is likely stale and should be removed.
 
 4. PING the source DC by its fully qualified CNAME.  
 
-    From the console of the destination DC, test Active Directory's name resolution with a PING of the source DCs fully qualified CNAME record:
+    From the console of the destination DC, test Active Directory's name resolution with a PING of the source DCs fully qualified CNAME record:
 
      `c:\>ping <ObjectGUID> from source DCs NTDS Settings object._msdcs.<DNS name for Active Directory forest root domain>`
 
-     Using our example of the **8a7baee5...** objectGUID from the repadmin /showreps output above from the contoso-dc1 DC in the `contoso.com` domain, the PING syntax would be:
+     Using our example of the **8a7baee5...** objectGUID from the repadmin /showreps output above from the contoso-dc1 DC in the `contoso.com` domain, the PING syntax would be:
 
      `c:\>ping 8a7baee5-cd81-4c8c-9c0f-b10030574016. _msdcs.contoso.com`
 
@@ -253,17 +253,17 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
 
 ### Resolve the 8524 DNS lookup failure: The long way around
 
-If the 8524 error/events aren't caused by stale DC metadata and the CNAME PING test fails, vet the DNS health of the source DC, the destination DC, and the DNS Servers used by the source and destination DCs. In summary, verify that:
+If the 8524 error/events aren't caused by stale DC metadata and the CNAME PING test fails, vet the DNS health of the source DC, the destination DC, and the DNS Servers used by the source and destination DCs. In summary, verify that:
 
 - The source DC has registered the CNAME and host records with a valid DNS.
-- The destination DC points to valid DNS Servers.
-- That the records of interest registered by source DCs are resolvable by destination DCs.
+- The destination DC points to valid DNS Servers.
+- That the records of interest registered by source DCs are resolvable by destination DCs.
 
 The error message text in DS RPC Client event 2087 documents a user action for resolving the 8524 error. A more detailed action plan follows:
 
 1. **Verify that the source DC points to valid DNS Servers**  
 
-    On the source DC, verify that DNS Client settings point exclusively to operational DNS Severs that either host, forward or delegate the_msdcs.\<forest root domain> zone (that is, All DCs in the contoso.com forest register CNAME records in the_msdcs.contoso.com zone)
+    On the source DC, verify that DNS Client settings point exclusively to operational DNS Severs that either host, forward or delegate the_msdcs.\<forest root domain> zone (that is, All DCs in the contoso.com forest register CNAME records in the_msdcs.contoso.com zone)
 
     AND
 
@@ -284,25 +284,25 @@ The error message text in DS RPC Client event 2087 documents a user action for r
         c:\>ipconfig /all
         …
         DNS Servers . . . . . . . . . . . : 10.45.42.99 <- Primary DNS Server IP>
-                                                   10.45.42.101<- Secondary DNS Server IP>
+                                                   10.45.42.101<- Secondary DNS Server IP>
         ```
 
         Run the following NSLOOKUP queries:
 
         ```console
-        c:\>nslookup -type=soa  <Source DC DNS domain name> <source DCs primary DNS Server IP >
-        c:\>nslookup -type=soa  < Source DC DNS domain name > <source DCs secondary DNS Server IP >
-        c:\>nslookup -type=soa  <_msdcs.<forest root DNS domain> <source DCs primary DNS Server IP >
-        c:\>nslookup -type=soa  <_msdcs.<forest root DNS domain> <source DCs secondary DNS Server IP >
+        c:\>nslookup -type=soa  <Source DC DNS domain name> <source DCs primary DNS Server IP >
+        c:\>nslookup -type=soa  < Source DC DNS domain name > <source DCs secondary DNS Server IP >
+        c:\>nslookup -type=soa  <_msdcs.<forest root DNS domain> <source DCs primary DNS Server IP >
+        c:\>nslookup -type=soa  <_msdcs.<forest root DNS domain> <source DCs secondary DNS Server IP >
         ```
 
         For example, if a DC in the `CHILD.CONTOSO.COM` domain of the `contoso.com` forest is configured with the primary and secondary DNS Server IPs "10.45.42.99" and "10.45.42.101", the NSLOOKUP syntax would be:
 
         ```console
-        c:\>nslookup -type=soa  child.contoso.com 10.45.42.99
-        c:\>nslookup -type=soa  child.contoso.com 10.45.42.101
-        c:\>nslookup -type=soa  _msdcs.contoso.com 10.45.42.99
-        c:\>nslookup -type=soa  _msdcs.contoso.com 10.45.42.101
+        c:\>nslookup -type=soa  child.contoso.com 10.45.42.99
+        c:\>nslookup -type=soa  child.contoso.com 10.45.42.101
+        c:\>nslookup -type=soa  _msdcs.contoso.com 10.45.42.99
+        c:\>nslookup -type=soa  _msdcs.contoso.com 10.45.42.101
         ```
 
     Notes:
@@ -311,7 +311,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     CNAME records are always registered in the _msdcs.\<forest root zone>, even for DC in non-root domains.
 
-    Configuring the DNS client of a DC or member computer to point to an ISP DNS Server for name resolution is invalid unless that ISP has been contracted (that is, paid) and is currently hosting, forwarding, or delegating DNS queries for your Active Directory forest.
+    Configuring the DNS client of a DC or member computer to point to an ISP DNS Server for name resolution is invalid unless that ISP has been contracted (that is, paid) and is currently hosting, forwarding, or delegating DNS queries for your Active Directory forest.
 
     ISP DNS Servers typically don't accept dynamic DNS updates so CNAME, Host, and SRV records may have to be manually registered.
 
@@ -324,8 +324,8 @@ The error message text in DS RPC Client event 2087 documents a user action for r
     ```console
     c:\>ipconfig /all
     …
-    DNS Servers . . . . . . . . . . . : 10.45.42.99                        <primary DNS Server IP
-                                               10.45.41.101                      <secondary DNS Server IP
+    DNS Servers . . . . . . . . . . . : 10.45.42.99                        <primary DNS Server IP
+                                               10.45.41.101                      <secondary DNS Server IP
     ```
 
     Use NSLOOKUP to query the current DNS Servers for the source DCs' cname record (found via the procedure in "Check Active Directory Name Resolution using PING").
@@ -335,11 +335,11 @@ The error message text in DS RPC Client event 2087 documents a user action for r
     c:\>nslookup -type=cname <fully qualified cname of source DC> <source DCs secondary DNS Server IP>
     ```
 
-    Continuing the example where the NTDS Settings objectGUID for contoso-dc2 in the contoso.com domain is 8a7baee5-cd81-4c8c-9c0f-b10030574016 and points to "10.45.42.99" as primary for DNS name resolution, the NSLOOKUP syntax would be:
+    Continuing the example where the NTDS Settings objectGUID for contoso-dc2 in the contoso.com domain is 8a7baee5-cd81-4c8c-9c0f-b10030574016 and points to "10.45.42.99" as primary for DNS name resolution, the NSLOOKUP syntax would be:
 
     ```console
-    c:\>nslookup -type=cname 8a7baee5-cd81-4c8c-9c0f-b10030574016._msdcs.contoso.com 10.45.42.99
-    c:\>nslookup -type=cname 8a7baee5-cd81-4c8c-9c0f-b10030574016._msdcs.contoso.com 10.45.42.101
+    c:\>nslookup -type=cname 8a7baee5-cd81-4c8c-9c0f-b10030574016._msdcs.contoso.com 10.45.42.99
+    c:\>nslookup -type=cname 8a7baee5-cd81-4c8c-9c0f-b10030574016._msdcs.contoso.com 10.45.42.101
     ```
 
     If the source DC hasn't registered its CNAME record on the DNS Servers it points to for name resolution, run the following command from the command prompt of the source DC then recheck the registration of the CNAME record:
@@ -358,11 +358,11 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     Timing issues during OS startup can delay successful Dynamic DNS registration.
 
-    If a DCs CNAME record was successfully registered but later disappears, check MSKB [953317](https://support.microsoft.com/help/953317), duplicate DNS zones in different replication scopes or overly aggressive DNS scavenging by the DNS Server.
+    If a DCs CNAME record was successfully registered but later disappears, check MSKB [953317](https://support.microsoft.com/help/953317), duplicate DNS zones in different replication scopes or overly aggressive DNS scavenging by the DNS Server.
 
     If the CNAME record registration is failing on the DNS servers that the source DC points to for name resolution, review NETLOGN events in the SYSTEM event log for DNS registration failures.
 
-3. **Verify that the source DC has registered its host records**
+3. **Verify that the source DC has registered its host records**
 
     From the console of the source DC, run ipconfig /all to determine which DNS Servers the source DC points to for name resolution.
 
@@ -370,21 +370,21 @@ The error message text in DS RPC Client event 2087 documents a user action for r
     c:\>ipconfig /all
     …
     DNS Servers . . . . . . . . . . . : 10.45.42.99 <- Primary DNS Server IP>
-                                               10.45.42.101<- Secondary DNS Server IP>
+                                               10.45.42.101<- Secondary DNS Server IP>
     ```
 
     Use NSLOOKUP to query the current DNS Servers for the host record.
 
     ```console
-    c:\>nslookup -type=A+AAAA  <fully qualified hostname of source DC> <source DCs primary DNS Server IP >
+    c:\>nslookup -type=A+AAAA  <fully qualified hostname of source DC> <source DCs primary DNS Server IP >
     c:\>nslookup -type=A+AAAA <fully qualified hostname of source DC> <source DCs secondary DNS Server IP>
     ```
 
-    Continuing the example for the hostname for contoso-dc2 in the contoso.com domain is 8a7baee5-cd81-4c8c-9c0f-b10030574016 and points to self (127.0.0.1) as primary for DNS name resolution, the NSLOOKUP syntax would be:
+    Continuing the example for the hostname for contoso-dc2 in the contoso.com domain is 8a7baee5-cd81-4c8c-9c0f-b10030574016 and points to self (127.0.0.1) as primary for DNS name resolution, the NSLOOKUP syntax would be:
 
     ```console
-    c:\>nslookup -type=A+AAAA contoso-dc1.contoso.com 10.45.42.99
-    c:\>nslookup -type=A+AAAA contoso-dc1.contoso.com 10.45.42.101
+    c:\>nslookup -type=A+AAAA contoso-dc1.contoso.com 10.45.42.99
+    c:\>nslookup -type=A+AAAA contoso-dc1.contoso.com 10.45.42.101
     ```
 
     Repeat the NSLOOKUP command against the source DCs secondary DNS Server IP address.
@@ -411,7 +411,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
 4. **Verify that the destination DC points to valid DNS Servers**  
 
-    On the destination DC, verify that DNS Client settings point exclusively to currently online DNS Severs that either host, forward and delegate the _msdcs.\<forest root domain> zone  (that is, all DCs in the contoso.com forest register CNAME records in the_msdcs.contoso.com zone).
+    On the destination DC, verify that DNS Client settings point exclusively to currently online DNS Severs that either host, forward and delegate the _msdcs.\<forest root domain> zone  (that is, all DCs in the contoso.com forest register CNAME records in the_msdcs.contoso.com zone).
 
     AND
 
@@ -419,7 +419,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     AND
 
-    The computers primary DNS suffix domain if different from the Active Directory domain name (see Technet article [Disjoint Namespace](https://technet.microsoft.com/library/cc731125%28WS.10%29.aspx)).
+    The computers primary DNS suffix domain if different from the Active Directory domain name (see Technet article [Disjoint Namespace](https://technet.microsoft.com/library/cc731125%28WS.10%29.aspx)).
 
     Options to validate that a DNS Server hosts, forwards, or delegates (that is, "can resolve") such zones include:
 
@@ -435,25 +435,25 @@ The error message text in DS RPC Client event 2087 documents a user action for r
         c:\>ipconfig /all
         …
         DNS Servers . . . . . . . . . . . : 10.45.42.102 <- Primary DNS Server IP>
-                                                              10.45.42.103<- Secondary DNS Server IP>
+                                                              10.45.42.103<- Secondary DNS Server IP>
         ```
 
-        Run the following NSLOOKUP queries from the console of the destination DC:  
+        Run the following NSLOOKUP queries from the console of the destination DC:  
 
         ```console
-        c:\>nslookup -type=soa  <Source DC DNS domain name> <destinatin DCs primary DNS Server IP >
-        c:\>nslookup -type=soa  < Source DC DNS domain name > <destination DCs secondary DNS Server IP >
-        c:\>nslookup -type=soa  _msdcs.<forest root DNS domain> <destination DCs primary DNS Server IP >
-        c:\>nslookup -type=soa  _msdcs.<forest root DNS name> <destination DCs secondary DNS Server IP>
+        c:\>nslookup -type=soa  <Source DC DNS domain name> <destinatin DCs primary DNS Server IP >
+        c:\>nslookup -type=soa  < Source DC DNS domain name > <destination DCs secondary DNS Server IP >
+        c:\>nslookup -type=soa  _msdcs.<forest root DNS domain> <destination DCs primary DNS Server IP >
+        c:\>nslookup -type=soa  _msdcs.<forest root DNS name> <destination DCs secondary DNS Server IP>
         ```
 
-    For example, if a DC in the CHILD.CONTOSO.COM domain of the contoso.com forest is configured with the primary and secondary DNS Server IPs "10.45.42.102" and "10.45.42.103", the NSLOOKUP syntax would be  
+    For example, if a DC in the CHILD.CONTOSO.COM domain of the contoso.com forest is configured with the primary and secondary DNS Server IPs "10.45.42.102" and "10.45.42.103", the NSLOOKUP syntax would be  
 
     ```console
-    c:\>nslookup -type=soa  child.contoso.com 10.45.42.102
-    c:\>nslookup -type=soa  child.contoso.com 10.45.42.103
-    c:\>nslookup -type=soa  _msdcs.contoso.com 10.45.42.102
-    c:\>nslookup -type=soa  _msdcs.contoso.com 10.45.42.103
+    c:\>nslookup -type=soa  child.contoso.com 10.45.42.102
+    c:\>nslookup -type=soa  child.contoso.com 10.45.42.103
+    c:\>nslookup -type=soa  _msdcs.contoso.com 10.45.42.102
+    c:\>nslookup -type=soa  _msdcs.contoso.com 10.45.42.103
     ```
   
     Notes:
@@ -462,7 +462,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     CNAME records are always registered in the _msdcs.\<forest root zone>, even for DC in non-root domains.
 
-    Configuring the DNS client of a DC or member computer to point to an ISP DNS Server for name resolution is invalid unless that ISP has been contracted (that is, paid) and is currently hosting, forwarding, or delegating DNS queries for your Active Directory forest.
+    Configuring the DNS client of a DC or member computer to point to an ISP DNS Server for name resolution is invalid unless that ISP has been contracted (that is, paid) and is currently hosting, forwarding, or delegating DNS queries for your Active Directory forest.
 
     ISP DNS Servers typically don't accept dynamic DNS updates so CNAME, Host, and SRV records may have to be manually registered.
 
@@ -479,26 +479,26 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     c:\>ipconfig /all
     …
-      DNS Servers . . . . . . . . . . . : 10.45.42.102 <- Primary DNS Server IP>
-                                                 10.45.42.103<- Secondary DNS Server IP>
+      DNS Servers . . . . . . . . . . . : 10.45.42.102 <- Primary DNS Server IP>
+                                                 10.45.42.103<- Secondary DNS Server IP>
     ```
 
     From the console of the destination DC, use NSLOOKUP to query the DNS Servers configured on the destination DC for the source DCs cname and host records:
 
-    ```console  
-    c:\>nslookup -type=cname <fully qualified CNAME of source DC> <destination DCs primary DNS Server IP >
+    ```console  
+    c:\>nslookup -type=cname <fully qualified CNAME of source DC> <destination DCs primary DNS Server IP >
     c:\>nslookup -type=cname <fully qualified CNAME of source DC> <destination DCs secondary DNS Server IP>
-    c:\>nslookup -type=host <fully qualified hostname of source DC> <destination DCs primary DNS Server IP >
+    c:\>nslookup -type=host <fully qualified hostname of source DC> <destination DCs primary DNS Server IP >
     c:\>nslookup -type=host <fully qualified hostname of source DC> <destination DCs secondary DNS Server IP>
     ```
 
-    Continuing the example where contoso-dc2 in the contoso.com domain with GUID 8a7baee5-cd81-4c8c-9c0f-b10030574016 in the Contoso.com forest root domain points to DNS Servers "10.45.42.102" and "10.45.42.103", the NSLOOKUP syntax would be:  
+    Continuing the example where contoso-dc2 in the contoso.com domain with GUID 8a7baee5-cd81-4c8c-9c0f-b10030574016 in the Contoso.com forest root domain points to DNS Servers "10.45.42.102" and "10.45.42.103", the NSLOOKUP syntax would be:  
 
     ```console
-    c:\>nslookup -type=cname 8a7baee5-cd81-4c8c-9c0f-b10030574016._msdcs.contoso.com 10.45.42.102
-    c:\>nslookup -type=cname 8a7baee5-cd81-4c8c-9c0f-b10030574016._msdcs.contoso.com 10.45.42.103
-    c:\>nslookup -type=A+AAAA contoso-dc1.contoso.com 10.45.42.102
-    c:\>nslookup -type=A+AAAA contoso-dc1.contoso.com 10.45.42.102  
+    c:\>nslookup -type=cname 8a7baee5-cd81-4c8c-9c0f-b10030574016._msdcs.contoso.com 10.45.42.102
+    c:\>nslookup -type=cname 8a7baee5-cd81-4c8c-9c0f-b10030574016._msdcs.contoso.com 10.45.42.103
+    c:\>nslookup -type=A+AAAA contoso-dc1.contoso.com 10.45.42.102
+    c:\>nslookup -type=A+AAAA contoso-dc1.contoso.com 10.45.42.102  
     ```
 
 6. **Review the relationship between the DNS Servers used by the source and destination DCs**  

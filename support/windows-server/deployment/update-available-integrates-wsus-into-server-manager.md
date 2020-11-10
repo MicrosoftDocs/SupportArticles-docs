@@ -35,13 +35,10 @@ If you do not plan to install the WSUS 3.0 SP1 Full server installation that inc
 
 The following files are available for download from the Microsoft Download Center:  
 
-Windows Server 2008, 32-bit editions  
- ![Download ](./media/update-available-integrates-wsus-into-server-manager/download.gif)
- [Download the update for Windows Server 2008 Server Manager (KB940518) package now.](https://www.microsoft.com/download/details.aspx?familyid=66778cdf-23fe-406c-aab2-65f78d564b6d)  
+Windows Server 2008
 
-Windows Server 2008, 64-bit editions  
- ![Download ](./media/update-available-integrates-wsus-into-server-manager/download.gif)
- [Download the update for Windows Server 2008 Server Manager x64 Edition (KB940518) package now.](https://www.microsoft.com/download/details.aspx?familyid=0196bf69-e2c9-46bb-86fd-a43146168ef5) 
+![Download ](./media/update-available-integrates-wsus-into-server-manager/download.gif)
+ [Download the update for Windows Server 2008 Server Manager (KB940518) package now.](https://www.catalog.update.microsoft.com/Search.aspx?q=940518)  
 
 For more information about how to download Microsoft support files, click the following article number to view the article in the Microsoft Knowledge Base:  
  [119591](https://support.microsoft.com/help/119591) How to obtain Microsoft support files from online services

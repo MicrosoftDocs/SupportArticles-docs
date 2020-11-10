@@ -35,6 +35,8 @@
     href: cannot-use-mfa-signin-lose-phone.md
   - name: Federation service identifier is already in use
     href: federation-service-identifier-specified.md
+  - name: The MFA status is displayed incorrectly
+    href: user-displayed-disabled-or-enabled-mfa.md
   - name: Troubleshooting MFA issues
     href: troubleshoot-azure-mfa-issue.md
   - name: User name or password is incorrect
@@ -47,6 +49,8 @@
   items:
   - name: Administrator credentials error
     href: admin-credentials-supplied-not-valid.md
+  - name: Azure AD Connect hangs during importing
+    href: aad-management-agent-hangs-during-import.md
   - name: Azure AD Connect won't work after upgrading
     href: cannot-work-automatic-upgrade.md
   - name: Can't connect to Azure RMS
@@ -107,6 +111,8 @@
     href: pwd-hash-sync-stops-work.md
   - name: ProxyAddresses attribute in Azure AD
     href: proxyaddresses-attribute-populate.md
+  - name: RPC errors affecting AADConnect
+    href: rpc-errors-affecting-aadconnect.md
   - name: Scripts cannot be loaded
     href: cannot-run-scripts-powershell.md
   - name: Separate passwords required

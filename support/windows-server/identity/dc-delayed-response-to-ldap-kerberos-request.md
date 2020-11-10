@@ -46,14 +46,14 @@ The typical setup when stepping into this issue is a Client- with a trusting Res
 
 There was an update released that allows turning off this DNS lookup:
 
-[2922852](https://support.microsoft.com/help/2922852)    Update resolves a problem in which LDAP, Kerberos, and DC locator responses are slow or time out with Windows
+[2922852](https://support.microsoft.com/help/2922852)    Update resolves a problem in which LDAP, Kerberos, and DC locator responses are slow or time out with Windows
 
 You may apply the workaround:
 
 -create matching subnet/sites, avoid Netlogon 5807 with a high number of unmapped connections
 
 -increase MaxPoolThreads to 10 (counts per core)
-Ref. "315071 How to view and set LDAP policy in Active Directory by using Ntdsutil.exe", https://support.microsoft.com/help/315071
+Ref. "315071 How to view and set LDAP policy in Active Directory by using Ntdsutil.exe", https://support.microsoft.com/help/315071
 
 -optimize DC Name resolution, disable Netbios or use P-Node when WINS is required
 Ref. "Chapter 11 - NetBIOS over TCP/IP - Microsoft TechNet: Resources", https://technet.microsoft.com/library/bb727013.aspx

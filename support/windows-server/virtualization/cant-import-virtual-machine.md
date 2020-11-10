@@ -78,8 +78,6 @@ For Each VM In VMList
 Next  
 ```
 
-For more information about the script, visit the following Web site: [https://social.technet.microsoft.com/Forums/winserverhyperv/thread/5b731f1a-f495-4d88-a875-0eea77ecd6b4/](https://social.technet.microsoft.com/forums/winserverhyperv/thread/5b731f1a-f495-4d88-a875-0eea77ecd6b4/) 
-
 ## Status
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.

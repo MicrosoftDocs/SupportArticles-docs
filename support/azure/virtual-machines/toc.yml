@@ -72,13 +72,19 @@
   items:
   - name: Can't restart after applying kernel changes
     href: kernel-related-boot issues.md
-  - name: Fails to restart or be provisioned
+  - name: Fail to access Generation 2 Linux VM
+    href: unable-access-g2-linux-vm-reboot.md
+  - name: Fail to restart or be provisioned
     href: linux-kernel-fails-restart-provision.md
   - name: Start VM with Last Known Good Configuration
     href: start-vm-last-known-good.md
+  - name: Swap file is not re-created
+    href: swap-file-not-recreated-linux-vm-restart.md
 
 - name: VM extension issues
   items:
+  - name: Azure cloud-init support for Linux VMs
+    href: cloud-init-support-linux-vms.md
   - name: Can't enable Azure Disk Encryption
     href: extension-version-2.2-not-supported.md
   - name: Can't process extensions
@@ -95,6 +101,11 @@
     href: support-agent-extensions.md
   - name: Supported operating systems
     href: extension-supported-os.md
+  - name: The host keys of Linux VM are written to ec2 
+    href: cloud-init-writes-vm-host-keys-as-ec2.md
+  - name: Update awareness for Linux Image Provisioning Agent 
+    href: linux-image-provisioning-agent-update-awareness.md
+
 
 - name: VM performance issues
   items:
@@ -130,3 +141,5 @@
     href: updates-included-windows-server-images.md
   - name: Windows Server 2003 on Azure
     href: run-win-server-2003.md
+
+

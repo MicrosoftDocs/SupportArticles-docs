@@ -51,7 +51,7 @@ or
 - **Office: Microsoft Excel**'
 
     filename.xls' cannot be accessed. The file may be read-only, or you may be trying to access a read-only location. Or, the server the document is stored on may not be responding. 
-     
+     
     or
     
     Could not open 'filename.xls'. 
@@ -97,7 +97,7 @@ Same action on a Windows 7 client with SMBv2 protocol works
 - tested on Windows 7 client with SMB2: OK
 - tested on Windows 7 client with SMB1: failed (SMB2 disabled using info from KB
 2696547 How to enable and disable SMBv1, SMBv2, and SMBv3 in Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2, Windows 8, and Windows Server 2012
-https://support.microsoft.com/kb/2696547) 
+https://support.microsoft.com/kb/2696547) 
 
 **Workaround:**
 
@@ -192,7 +192,7 @@ Info re. Deduplication on Microsoft Server 2012
 
  [Introduction to Data Deduplication in Windows Server 2012](https://blogs.technet.com/b/filecab/archive/2012/05/21/introduction-to-data-deduplication-in-windows-server-2012.aspx) 
 
- [Data Deduplication Overview](https://technet.microsoft.com/library/hh831602.aspx)  
+ [Data Deduplication Overview](https://technet.microsoft.com/library/hh831602.aspx)  
 
  [Data Deduplication Interoperability](https://technet.microsoft.com/library/hh831454.aspx) 
 

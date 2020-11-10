@@ -28,18 +28,19 @@ For more information on Windows Server 2003, click the following article number 
 
 [325856](https://support.microsoft.com/help/325856)  How to specify regional and language settings for an unattended installation of Windows MultiLanguage Version in Windows Server 2003
 
-##### Sample XML answer file
+### Sample XML answer file
 
-```
+```xml
+
 <gs:GlobalizationServices xmlns:gs="urn:longhornGlobalizationUnattend">
 
-<!-- user list --> 
+<!-- user list -->  
  <gs:UserList>
- <gs:User UserID="Current" CopySettingsToDefaultUserAcct="true" CopySettingsToSystemAcct="true"/> 
+ <gs:User UserID="Current" CopySettingsToDefaultUserAcct="true" CopySettingsToSystemAcct="true"/>  
  </gs:UserList>
 
 <!-- GeoID -->
- <gs:LocationPreferences> 
+ <gs:LocationPreferences>  
  <gs:GeoID Value="244"/>
  </gs:LocationPreferences>
 
@@ -97,29 +98,27 @@ For more information on Windows Server 2003, click the following article number 
 
 ## Syntax
 
-
 - UserList - This setting specifies the user account for which we need to do the change settings. CopySettingsToDefaultUserAcct and CopySettingsToSystemAcct are the parameters that can be used to copy the settings to all users and also the system account(logonUI screen)
 - GeoID/Location Preferences  - Updates the current location field under the location tab. Some software, including Windows may provide additional information passed on this, such as weather
-- MUILanguagePreference - Supports setting the display language and, if appropriate, the display language fallbacks for the system. Set by using a child element <gs:MUILanguage> with an attribute containing the language string. To set the fallback language of the language set using <gs:MUILanguage>, use the element <gs:MUIFallback>. Using this XML entity does NOT install the display languages. It should only be used for selecting display languages after they have been installed.
+- MUILanguagePreference - Supports setting the display language and, if appropriate, the display language fallbacks for the system. Set by using a child element \<gs:MUILanguage> with an attribute containing the language string. To set the fallback language of the language set using \<gs:MUILanguage>, use the element \<gs:MUIFallback>. Using this XML entity does NOT install the display languages. It should only be used for selecting display languages after they have been installed.
 - SystemLocale - This setting enables programs that do not use Unicode to run and display menus and dialog boxes in the localized language. If a localized program does not display correctly on the computer, setting the system locale to match the language of the localized program may resolve the problem. However, this setting is system-wide, so it is not possible to support simultaneously the localized programs that do not use Unicode for multiple languages.
 - InputPreferences - This setting specifies the input locale and keyboard layout combinations. Note: Unlike in 2003/XP, for some complex languages, the usage of KLIDs to identify keyboard layouts have been replaced by GUIDs. The following link gives a table for the replacement: [From KLID to GUID (aka KLIDoral stimulation, it feels GUID)](http://archives.miloush.net/michkap/archive/2009/09/15/9894707.html)
 - UserLocale - This setting controls the settings for sorting numbers, time, currency, and dates. To use .xml answer file to set language preferences:
 
+1. Create an xml file with the required settings and save it as a file (for example: c:\unattend.xml). The .xml file should at minimum include the following:  
 
-1. Create an xml file with the required settings and save it as a file (for example: c:\unattend.xml). The .xml file should at minimum include the following:
-```
-<gs:GlobalizationServices xmlns:gs="urn:longhornGlobalizationUnattend">
- <gs:UserList>
- <gs:User UserID="Current"/> 
- </gs:UserList>
- </gs:GlobalizationServices>
-```
+    ```xml
+    <gs:GlobalizationServices xmlns:gs="urn:longhornGlobalizationUnattend">
+     <gs:UserList>
+     <gs:User UserID="Current"/>  
+     </gs:UserList>
+     </gs:GlobalizationServices>
+    ```
 
-2. Create a batch file by using the following command line to apply the answer file settings:
- control.exe intl.cpl,,/f:"c:\Unattend.xml" 
-
+2. Create a batch file by using the following command line to apply the answer file settings:  
+`control.exe intl.cpl,,/f:"c:\Unattend.xml"`  
 
 ## References
 
-Guide to Windows Vista Multilingual User Interface
+Guide to Windows Vista Multilingual User Interface  
  [https://technet.microsoft.com/library/cc721887(WS.10).aspx](https://technet.microsoft.com/library/cc721887%28ws.10%29.aspx)

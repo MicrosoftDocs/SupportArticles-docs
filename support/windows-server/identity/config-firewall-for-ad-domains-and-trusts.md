@@ -31,7 +31,7 @@ _Original KB number:_ &nbsp; 179442
 |Client Port(s)|Server Port|Service|
 |---|---|---|
 |1024-65535/TCP|135/TCP|RPC Endpoint Mapper|
-|1024-65535/TCP|1024-65535/TCP|RPC for LSA, SAM, NetLogon (*)|
+|1024-65535/TCP|1024-65535/TCP|RPC for LSA, SAM, NetLogon (*)|
 |1024-65535/TCP/UDP|389/TCP/UDP|LDAP|
 |1024-65535/TCP|636/TCP|LDAP SSL|
 |1024-65535/TCP|3268/TCP|LDAP GC|
@@ -53,7 +53,7 @@ For more information about how to define RPC server ports that are used by the L
 
 Windows Server 2008 newer versions of Windows Server have increased the dynamic client port range for outgoing connections. The new default start port is 49152, and the default end port is 65535. Therefore, you must increase the RPC port range in your firewalls. This change was made to comply with Internet Assigned Numbers Authority (IANA) recommendations. This differs from a mixed-mode domain that consists of Windows Server 2003 domain controllers, Windows 2000 server-based domain controllers, or legacy clients, where the default dynamic port range is 1025 through 5000.
 
-For more information about the dynamic port range change in Windows Server 2012 and Windows Server 2012 R2, see:
+For more information about the dynamic port range change in Windows Server 2012 and Windows Server 2012 R2, see:
 
 - [The default dynamic port range for TCP/IP has changed](https://support.microsoft.com/help/929851).
 - [Dynamic Ports in Windows Server](https://techcommunity.microsoft.com/t5/Ask-the-Directory-Services-Team/Dynamic-Ports-in-Windows-Server-2008-and-Windows-Vista-or-How-I/ba-p/394893).
@@ -99,7 +99,7 @@ The Windows Redirector also uses ICMP Ping messages to verify that a server IP i
 
 Unlike the TCP protocol layer and the UDP protocol layer, ICMP does not have a port number. This is because ICMP is directly hosted by the IP layer.
 
-By default, Windows Server 2003 and Windows 2000 Server DNS servers use ephemeral client-side ports when they query other DNS servers. However, this behavior may be changed by a specific registry setting. Or, you can establish a trust through the Point-to-Point Tunneling Protocol (PPTP) compulsory tunnel. This limits the number of ports that the firewall has to open. For PPTP, the following ports must be enabled.  
+By default, Windows Server 2003 and Windows 2000 Server DNS servers use ephemeral client-side ports when they query other DNS servers. However, this behavior may be changed by a specific registry setting. Or, you can establish a trust through the Point-to-Point Tunneling Protocol (PPTP) compulsory tunnel. This limits the number of ports that the firewall has to open. For PPTP, the following ports must be enabled.  
 
 |Client Ports|Server Port|Protocol|
 |---|---|---|
@@ -116,6 +116,6 @@ In addition, you would have to enable IP PROTOCOL 47 (GRE).
 
 ## Reference
 
-[Service overview and network port requirements for Windows](https://support.microsoft.com/help/832017) is a valuable resource outlining the required network ports, protocols, and services that are used by Microsoft client and server operating systems, server-based programs, and their subcomponents in the Microsoft Windows Server system. Administrators and support professionals may use the article as a roadmap to determine which ports and protocols Microsoft operating systems and programs require for network connectivity in a segmented network.
+[Service overview and network port requirements for Windows](https://support.microsoft.com/help/832017) is a valuable resource outlining the required network ports, protocols, and services that are used by Microsoft client and server operating systems, server-based programs, and their subcomponents in the Microsoft Windows Server system. Administrators and support professionals may use the article as a roadmap to determine which ports and protocols Microsoft operating systems and programs require for network connectivity in a segmented network.
 
 You should not use the port information in [Service overview and network port requirements for Windows](https://support.microsoft.com/help/832017) to configure Windows Firewall. For information about how to configure Windows Firewall, see [Windows Firewall with Advanced Security](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008).

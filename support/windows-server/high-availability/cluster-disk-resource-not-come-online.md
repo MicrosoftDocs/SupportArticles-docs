@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2590305
 
 ## Symptoms
 
-If the name of a Cluster disk resource has an invalid character in it from an NTFS perspective '\' '/' character and there is some file on the root of the drive where the cluster doesn't have READ permission or if the file is in use, then the disk resource fails to come online. 
+If the name of a Cluster disk resource has an invalid character in it from an NTFS perspective '\' '/' character and there is some file on the root of the drive where the cluster doesn't have READ permission or if the file is in use, then the disk resource fails to come online. 
 
 ## Cause
 
@@ -34,10 +34,10 @@ To fix this issue, install hotfix [3033918](https://support.microsoft.com/kb/303
 
 ### Workaround  
 
-To work around this issue, either remove the invalid character(s) in resource names for 'Physical Disk' resource types OR have 'Local System' account at least ' **Read** ' permission to files at the root of the drive. After making the changes, you should be able to bring the disk resource online.  
+To work around this issue, either remove the invalid character(s) in resource names for 'Physical Disk' resource types OR have 'Local System' account at least ' **Read** ' permission to files at the root of the drive. After making the changes, you should be able to bring the disk resource online.  
 
 > [!NOTE]
-> It is not recommended to store files at the root of a clustered disk as the cluster needs to open handles to files and folders as part of the health detection mechanism used to determine possible access issues to storage. Since the cluster service runs in the context of the 'Local System' account, if that account does not have permission to files at the root of a drive, the health check may fail.  
+> It is not recommended to store files at the root of a clustered disk as the cluster needs to open handles to files and folders as part of the health detection mechanism used to determine possible access issues to storage. Since the cluster service runs in the context of the 'Local System' account, if that account does not have permission to files at the root of a drive, the health check may fail.  
 
 ## More information
 

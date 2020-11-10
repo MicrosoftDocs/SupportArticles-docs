@@ -114,7 +114,7 @@ In that article, this naming convention applies to computer, OU, and site names.
 
     More rules are:
 
-  - All characters preserve their case formatting except for American Standard Code for Information Interchange (ASCII) characters.
+  - All characters preserve their case formatting except for American Standard Code for Information Interchange (ASCII) characters.
   - The first character must be alphabetical or numeric.
   - The last character must not be a minus sign or a period.
   - 2-character SDDL user strings that are listed in [well-known SIDs list](/windows/win32/secauthz/sid-strings) cannot be used. Otherwise, *import*, *export*, and *take control* operations fail.
@@ -126,7 +126,7 @@ In that article, this naming convention applies to computer, OU, and site names.
 
 - Minimum name length: 2 characters
 
-- Maximum name length: 63 characters
+- Maximum name length: 63 characters
 
     The maximum length of the host name and of the fully qualified domain name (FQDN) is 63 bytes per label and 255 bytes per FQDN.
 
@@ -156,7 +156,7 @@ In that article, this naming convention applies to computer, OU, and site names.
   - Choose computer names that are easy for users to remember.
   - Identify the owner of the computer in the computer name.
   - Choose a name that describes the purpose of the computer.
-  - For ASCII characters, do not use character case to indicate the owner or the purpose of a computer. For ASCII characters, DNS is not case-sensitive, and Windows and windows applications are not case-preserving in all places.
+  - For ASCII characters, do not use character case to indicate the owner or the purpose of a computer. For ASCII characters, DNS is not case-sensitive, and Windows and windows applications are not case-preserving in all places.
   - Match the Active Directory domain name to the primary DNS suffix of the computer name. For more information, see the [Disjointed namespaces](#disjointed-namespaces) section below.
   - Use a unique name for every computer in your organization. Avoid the same computer name for computers in different DNS domains.
   - Use ASCII characters. This guarantees interoperability with computers that are running versions of Windows that are earlier than Windows 2000.
@@ -250,7 +250,7 @@ Here are details for NetBIOS domain names and DNS domain names.
 
     More rules are:
 
-  - All characters preserve their case formatting except for ASCII characters.
+  - All characters preserve their case formatting except for ASCII characters.
   - The first character must be alphabetical or numeric.
   - The last character must not be a minus sign or a period.
 
@@ -258,15 +258,15 @@ Here are details for NetBIOS domain names and DNS domain names.
 
 - Maximum name length: 255 characters
 
-    The maximum length of the host name and of the fully qualified domain name (FQDN) is 63 bytes per label and 255 characters per FQDN. The latter is based on the maximum path length possible with an Active Directory Domain name with the paths needed in SYSVOL, and this needs to obey to the 260 character `MAX_PATH` limitation.
+    The maximum length of the host name and of the fully qualified domain name (FQDN) is 63 bytes per label and 255 characters per FQDN. The latter is based on the maximum path length possible with an Active Directory Domain name with the paths needed in SYSVOL, and this needs to obey to the 260 character `MAX_PATH` limitation.
 
     An example path in SYSVOL contains:
 
-    `\\<FQDN domain name>\sysvol\<FQDN domain name>\policies\{<policy GUID>}\[user|machine]\<CSE-specific path>`
+    `\\<FQDN domain name>\sysvol\<FQDN domain name>\policies\{<policy GUID>}\[user|machine]\<CSE-specific path>`
 
     The \<CSE-specific path> might contain user input such as the logon script file name, thus it can also reach a significant length.
 
-    The AD FQDN domain name appears in the path twice, due to that the length of an AD FQDN domain name is restricted to 64 characters.
+    The AD FQDN domain name appears in the path twice, due to that the length of an AD FQDN domain name is restricted to 64 characters.
 
     In Windows 2000 and in Windows Server 2003, the maximum host name and the FQDN use the standard length limitations that are mentioned earlier, with the addition of UTF-8 (Unicode) support. Because some UTF-8 characters exceed one octet in length, you cannot determine the size by counting the characters.
 
@@ -385,13 +385,13 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
 
     More rules are:
 
-  - All characters preserve their case formatting except for ASCII characters.
+  - All characters preserve their case formatting except for ASCII characters.
   - The first character must be alphabetical or numeric.
   - The last character must not be a minus sign or a period.
 
 - Minimum name length: 1 character
 
-- Maximum name length: 63 characters
+- Maximum name length: 63 characters
 
     The maximum length of the DNS name is 63 bytes per label.
 

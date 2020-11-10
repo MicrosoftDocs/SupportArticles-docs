@@ -1,6 +1,6 @@
 ---
 title: DCPROMO demotion fails
-description: This article provides help to solve an issue where the demotion of a Microsoft Windows Server computer hosting the Active Directory Domain Services (AD DS) or domain controller server role fails.
+description: This article provides help to solve an issue where the demotion of a Microsoft Windows Server computer hosting the Active Directory Domain Services (AD DS) or domain controller server role fails.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,14 +15,14 @@ ms.technology: ActiveDirectory
 ---
 # DCPROMO demotion fails if it's unable to contact the DNS infrastructure master
 
-This article provides help to solve an issue where the demotion of a Microsoft Windows Server computer hosting the Active Directory Domain Services (AD DS) or domain controller server role fails.
+This article provides help to solve an issue where the demotion of a Microsoft Windows Server computer hosting the Active Directory Domain Services (AD DS) or domain controller server role fails.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2694933
 
 ## Symptoms
 
-The graceful demotion of a Windows Server computer hosting the Active Directory Domain Services (AD DS) or domain controller server role fails with the on-screen error:
+The graceful demotion of a Windows Server computer hosting the Active Directory Domain Services (AD DS) or domain controller server role fails with the on-screen error:
 
 > Title bar text: Active Directory Domain Services Installation Wizard  
 > Message Text:  
@@ -36,7 +36,7 @@ The relevant part of the DCPROMO.LOG file contains the following text:
 
 > \<date> \<time> [INFO] Transferring operations master roles owned by this Active Directory Domain Controller in directory partition  
 > DC=DomainDnsZones,DC=contoso,DC=com to Active Directory Domain Controller \\\\<DNS name of helper DC...  
-> \<date> \<time>  [INFO] EVENTLOG (Warning): NTDS Replication / Replication : 2091
+> \<date> \<time>  [INFO] EVENTLOG (Warning): NTDS Replication / Replication : 2091
 
 A review of the infrastructure object and attributes for the DNS application partition referenced in the on-screen DCPROMO error and DCPROMO.LOG:
 
@@ -45,7 +45,7 @@ Getting 1 entries:
 Dn: CN=Infrastructure,DC=DomainDnsZones,DC=contoso,DC=com  
 cn: Infrastructure;  
 distinguishedName: CN=Infrastructure,DC=DomainDnsZones,DC=contoso,DC=corp,DC=microsoft,DC=com;  
-dSCorePropagationData: 0x0 = (  );  
+dSCorePropagationData: 0x0 = (  );  
 fSMORoleOwner: CN=NTDS Settings\0ADEL:\<NTDS Settings objet GUID>,CN=\<hostname of last DC to host the partition infrastructure role>,CN=Servers,CN=\<active directory site name>,CN=Sites,CN=Configuration,DC=contoso,DC=com;  
 instanceType: 0x4 = ( WRITE );  
 isCriticalSystemObject: TRUE;  
@@ -66,15 +66,15 @@ Where distinguishing elements in the LDAP output taken from the sample domain `C
 
 2. The `fSMORoleOwner` attribute contains a 32-character alpha-numeric GUID of the owning DCs NTDS Settings object in the format of xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.
 
-3. The name of the default DNS application partition for which the `fSMORoleOwner` attribute is assigned to a DC with a deleted NTDS Settings object. In this case, the error referenced the DomainDNSZones. This same error may also occur for the ForestDNSZones application partition.
+3. The name of the default DNS application partition for which the `fSMORoleOwner` attribute is assigned to a DC with a deleted NTDS Settings object. In this case, the error referenced the DomainDNSZones. This same error may also occur for the ForestDNSZones application partition.
 
 ## Cause
 
-The error above occurs when the domain controller being demoted cannot outbound replicate changes to the DC that owns the infrastructure FSMO or operational role for the partition referenced in the DCPROMO [log] error.
+The error above occurs when the domain controller being demoted cannot outbound replicate changes to the DC that owns the infrastructure FSMO or operational role for the partition referenced in the DCPROMO [log] error.
 
-Specifically, the demotion attempt is aborted to safeguard against data loss. In the case of DNS application partitions, the demotion is blocked to ensure that live and deleted DNS records, their ACLS, and metadata such as registration and deletion dates are replicated
+Specifically, the demotion attempt is aborted to safeguard against data loss. In the case of DNS application partitions, the demotion is blocked to ensure that live and deleted DNS records, their ACLS, and metadata such as registration and deletion dates are replicated
 
-DN paths for partitions where the error in the [Symptoms](#symptoms) section may occur include:
+DN paths for partitions where the error in the [Symptoms](#symptoms) section may occur include:
 
 - CN=Infrastructures,DC=DomainDNSZones....
 - CN=Infrastructures,DC=ForestDNSZones....

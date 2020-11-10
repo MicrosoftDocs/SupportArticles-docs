@@ -23,15 +23,15 @@ _Original KB number:_ &nbsp; 4560600
 ## Symptoms
 
 > [!IMPORTANT]
-> Untrusted root Certificate Authority (CA) certificate problems can be caused by numerous PKI configuration issues. This article illustrates only one of the possible causes of untrusted root CA certificate.
+> Untrusted root Certificate Authority (CA) certificate problems can be caused by numerous PKI configuration issues. This article illustrates only one of the possible causes of untrusted root CA certificate.
 
-Various applications using certificates and Public Key Infrastructure (PKI) might experience intermittent problems such as connectivity errors, one or two times per day/week, because of failed verification of end entity certificate. Affected applications might return different connectivity errors, but they will all have untrusted root certificate errors in common. The following is an example of such an error:
+Various applications using certificates and Public Key Infrastructure (PKI) might experience intermittent problems such as connectivity errors, one or two times per day/week, because of failed verification of end entity certificate. Affected applications might return different connectivity errors, but they will all have untrusted root certificate errors in common. The following is an example of such an error:
 
 |Hex|Decimal|Symbolic|Text version|
 |---|---|---|---|
 |0x800b0109|-2146762487|(CERT_E_UNTRUSTEDROOT)|A certificate chain processed, but terminated in a root certificate|
 
-Any PKI-enabled application that uses [CryptoAPI System Architecture](/windows/win32/seccrypto/cryptoapi-system-architecture) can be affected with an intermittent loss of connectivity, or a failure in PKI/Certificate dependent functionality. As of April  2020, the list of applications known to be affected by this issue includes, but are not likely limited to:
+Any PKI-enabled application that uses [CryptoAPI System Architecture](/windows/win32/seccrypto/cryptoapi-system-architecture) can be affected with an intermittent loss of connectivity, or a failure in PKI/Certificate dependent functionality. As of April  2020, the list of applications known to be affected by this issue includes, but are not likely limited to:
 
 - Citrix
 - Remote Desktop Service (RDS)
@@ -46,7 +46,7 @@ Focus your troubleshooting efforts on **Build Chain/Verify Chain Policy** errors
 > Error 4/10/2020 8:58:46 AM CAPI2 30 Verify Chain Policy
 >
 > Result A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.  
-> [value] 800b0109
+> [value] 800b0109
 
 ## Cause
 
@@ -56,7 +56,7 @@ Untrusted root CA certificate problems might occur if the root CA certificate is
 
 ### Root cause details
 
-When distributing the root CA certificate using GPO, the contents of `HKLM\SOFTWARE\Policies\Microsoft\SystemCertificates\Root\Certificates` will be deleted and written again. This deletion is by design, as this is how the GP applies registry changes.
+When distributing the root CA certificate using GPO, the contents of `HKLM\SOFTWARE\Policies\Microsoft\SystemCertificates\Root\Certificates` will be deleted and written again. This deletion is by design, as this is how the GP applies registry changes.
 
 Changes in the area of the Windows registry reserved for root CA certificates will notify the [Crypto API component](/windows/win32/api/wincrypt/nf-wincrypt-certcontrolstore) of the client application, and the application will start synchronizing with the registry changes. This synchronization is how the applications are kept up-to-date and made aware of the most current list of valid root CA certificates.
 
@@ -64,19 +64,19 @@ In some cases, such as scenarios when large number of root CA certificates are d
 
 Because of this, end entity certificates that chain to those missing root CA certificates will be rendered as untrusted, and various certificate-related problems will start to occur. This problem is intermittent and can be temporarily resolved by reenforcing GPO processing or reboot.
 
-If the root CA certificate is published using alternative methods, the problems might not occur, due to the afore-mentioned situation. 
+If the root CA certificate is published using alternative methods, the problems might not occur, due to the afore-mentioned situation. 
 
 ## Workaround
 
 Microsoft is aware of this issue and is working to improve the certificate and Crypto API experience in a future version of Windows.
 
-To address this issue, avoid distributing the root CA certificate using GPO. This might include targeting the registry location (such as `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\Root\Certificates`) to deliver the root CA certificate to the client.
+To address this issue, avoid distributing the root CA certificate using GPO. This might include targeting the registry location (such as `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\Root\Certificates`) to deliver the root CA certificate to the client.
 
 When storing root CA certificate in a different, physical, root CA certificate store, the problem should be resolved.
 
 ### Examples of alternative methods for publishing root CA certificates
 
-**Method 1:**  Use the command line tool certutil and root the CA certificate stored in the file *rootca.cer*:
+**Method 1:**  Use the command line tool certutil and root the CA certificate stored in the file *rootca.cer*:
 
 ```console
 certutil -addstore root c:\tmp\rootca.cer
@@ -90,11 +90,11 @@ certutil -addstore root c:\tmp\rootca.cer
 ![Registry certificates](./media/valid-root-ca-certificates-untrusted/root-ca-certificate-in-registry.jpg)
 
 > [!NOTE]
-> The certlm.msc console can be started only by local administrators. Also, the import will affect only single machine.
+> The certlm.msc console can be started only by local administrators. Also, the import will affect only single machine.
 
-**Method 3:** Use GPO preferences to publish the root CA certificate as described in [Group Policy Preferences](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn581922%28v=ws.11%29)
+**Method 3:** Use GPO preferences to publish the root CA certificate as described in [Group Policy Preferences](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn581922%28v=ws.11%29)
 
-To publish the root CA certificate, follow these steps:
+To publish the root CA certificate, follow these steps:
 
 1. Manually import the root certificate on a machine using the `certutil -addstore root c:\tmp\rootca.cer` command (see Method 1).
 2. Open GPMC.msc on that machine where you have imported the root certificate.
@@ -112,5 +112,5 @@ Any other method, tool, or client management solution that distributes root CA c
 - [Certutil tool](/windows-server/administration/windows-commands/certutil)
 - [Certificate Stores](/windows-hardware/drivers/install/local-machine-and-current-user-certificate-stores)
 - [System Store Locations](/windows/win32/seccrypto/system-store-locations)
-- [Group Policy Preferences](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn581922)
+- [Group Policy Preferences](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn581922(v=ws.11))
 - [CertControlStore Crypto API](/windows/win32/api/wincrypt/nf-wincrypt-certcontrolstore)
