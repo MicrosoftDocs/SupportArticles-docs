@@ -6,24 +6,20 @@ ms.prod-support-area-path:
 ---
 # Troubleshoot dynamic groups
 
-This troubleshooting guide helps a support engineer to diagnose and solve customer cases for dynamic groups in Azure Active Directory. To use this document, visit these steps in sequence.
-
-- **Step 1**: Verify that the case is in scope for this TSG, and what to do if it’s not.
-- **Steps 2-4**: Identify and solve common usability problems encountered by customers.
-- **Steps 5-6**: Use additional resources to solve the issue.
+This troubleshooting guide helps a support engineer to diagnose and solve customer cases for dynamic groups in Azure Active Directory. 
 
 ## Dynamic Groups Docs Reference
 
 - Public information on the Dynamic groups feature can be referenced here: [Creating Dynamic Membership Rules](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#other-properties-and-common-rules).
-- Public general groups troubleshooting information can be referenced at [Troubleshooting groups](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-troubleshooting?view=azureadps-2.0).
+- Public general groups troubleshooting information can be referenced at [Troubleshooting groups](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-troubleshooting).
 
-## Troubleshooting steps
+## Dynamic groups identification and management
 
 To verify whether your group is a dynamic group, see [Evaluate whether a group is a dynamic group](#1).
 
 - **Yes**: proceed to the next troubleshooting steps.
 
-- **No**: [Create a basic group and add members using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or other applicable groups TSG for additional troubleshooting information.
+- **No**: [Create a basic group and add members using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or other applicable groups troubleshooting guide for additional troubleshooting information.
 
 ### Dynamic Group Creation Issues
 
@@ -190,7 +186,7 @@ Customers have created a dynamic group and configured a rule, but encountered on
 
 - There are no members listed in the group.
 - Some users or devices don't appear in the group.
-- Incorrect users or devices don't appear in the group.
+- Incorrect users or devices appear in the group.
 
 ### Members are not added or removed as expected<a id="10"></a>
 
@@ -235,7 +231,7 @@ You have two options to evaluate whether a user or device satisfies the rule to 
 
 #### Manual validation
 
-Validatethe values for user or device attributes (In Azure Support Center, [Azure Portal](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal?context=azure%2Factive-directory%2Fusers-groups-roles%2Fcontext%2Fugr-context#to-add-or-change-profile-information), or using [PowerShell](https://docs.microsoft.com/powershell/module/azuread/get-azureaduser?view=azureadps-2.0)) in the rule.
+Validatethe values for user or device attributes (In Azure Support Center, [Azure Portal](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal?context=azure%2Factive-directory%2Fusers-groups-roles%2Fcontext%2Fugr-context#to-add-or-change-profile-information), or using [PowerShell](https://docs.microsoft.com/powershell/module/azuread/get-azureaduser)) in the rule.
 
 - Ensure that there are users that satisfy the rule.
 - For devices, check the device properties to ensure that synchronized attributes contain the expected values.
@@ -252,7 +248,7 @@ In Azure Support Center:
 
 3. Read user attributes to check whether they satisfy the rule.
 
-   ![TEXT](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-search-and-user-properties.png)
+   ![Read user attributes to check whether they satisfy the rule](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-search-and-user-properties.png)
 
 #### Validation using Geneva Action
 
@@ -271,7 +267,7 @@ Have the **tenant-id**, **group-id**, and the **object-id** of the user or devic
 
 4. Navigate to **IAM-SSGM** -> **Global Data Management** -> **Evaluate Object DynamicGroup Membership**.
 
-   ![TEXT](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-evalulate-object-dynamicgroup-membership.png)
+   ![Evaluate Object DynamicGroup Membership](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-evalulate-object-dynamicgroup-membership.png)
 
 5. Type the **tenant-id** and the **object-id**, and the group **objectid** or group rule.
 
@@ -281,7 +277,7 @@ Have the **tenant-id**, **group-id**, and the **object-id** of the user or devic
 
 If you just want to know the overall evaluation result, don't check the checkbox "Include Detailed Diagnostic Information", otherwise check it.
 
-   ![TEXT](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-tenantid-objectid-groupid.png)
+   ![Include Detailed Diagnostic Information](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-tenantid-objectid-groupid.png)
 
 ## Check whether tenant processing is impacted by a guest user addition disallowed by policy<a id="12"></a>
 
@@ -308,7 +304,7 @@ First, [install the Azure AD PowerShell module](https://docs.microsoft.com/azure
    1. Read the directory setting of the tenant: [Read settings at the directory level](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-cmdlets#read-settings-at-the-directory-level).
    2. Check the guest user setting: As shown in the following image, if **AllowToAddGuests** is **true**, check the setting in that particular group. If **AllowToAddGuests** is **false**, no matter what group level setting is, guest users can't be added.
 
-   ![TEXT](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-allow-to-add-guests.png)
+   ![Check user setting Allow-to-add-guests](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-allow-to-add-guests.png)
 
 3. Update the setting at the tenant level. To change the guest user setting at the tenant level, visit: [How to update setting at tenant level using PowerShell](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-cmdlets#update-settings-at-the-directory-level).
 
@@ -316,7 +312,7 @@ First, [install the Azure AD PowerShell module](https://docs.microsoft.com/azure
 
 ### Check audit logs for more information<a id="14"></a>
 
-Ask the customer to provide or collect the following data before checking audit logs: the **Tenant-id**, the **Group-id**, the **Object-id** of the **user/device**, and the **timestamp** where the problem occurred.
+Ask the customer to provide or collect the following data before checking audit logs: the **Tenant-id**, the **Group-id**, the **Object-id** of the **user/device**, and the **timestamp** when the problem occurred.
 
 #### Check audit logs
 
@@ -334,7 +330,7 @@ Ask the customer to provide or collect the following data before checking audit 
 
    Here is an example of the output:
 
-   ![TEXT](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-msods-audit-log-output.png)
+   ![Audit log output](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-msods-audit-log-output.png)
 
    In this example, the issue is between two services, **Intune** and **AD Connect**. AD Connect gets the information from Computer Object on-premises, and synchronizes. The device is enrolled in Intune, and Intune overwrites those two attributes. On the next sync cycle, AD Connect checks the attributes and corrects them. Intune then overwrites again. This continues until the issue is fixed by the external services.
 
@@ -345,7 +341,7 @@ Ask the customer to provide or collect the following data before checking audit 
     3. Set the time range to that which corresponds to the time when the customer indicated the problem began.
     4. Filter the columns with corresponding values if applicable. For example, add a filter in activity column to get **add member to group** logs.
 
-    ![TEXT](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-audit-logs.png)
+    ![Audit logs](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-audit-logs.png)
 
 ### Use Kusto Log Analysis to get more information<a id="15"></a>
 
@@ -364,7 +360,7 @@ Check latest processing status of the tenant with a given tenant_id:
     | take 1
 ```
 
-   ![TEXT](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-log-message.png)
+   ![Log message](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-log-message.png)
 
 If the last tenant update is still slow after being reset, escalate the issue to an engineering team to perform a root-cause and fix the problem. This problem may be a system capacity, machine issue, or bug.
 
@@ -398,7 +394,7 @@ If the last tenant update is still slow after being reset, escalate the issue to
     | where Actor_TenantId contains "<tenant-id>"
    ```
 
-    ![TEXT](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-log-level-warning.png)
+    ![Log level warning](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-log-level-warning.png)
 
 - There is a transient throttling issue which blocked the tenant update. Allow time for the transient throttling issue to be resolved. Escalate and/or create an IcM incident if the issue lasts for hours.
 
@@ -458,7 +454,7 @@ When a dynamic group is deleted and restored, it's seen as a new group and re-po
 2. Log in with your Microsoft account.
 3. Enter the support request ID.
 
-    ![TEXT](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-enter-support-request-id.png)
+    ![Enter the support request ID](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-enter-support-request-id.png)
 
 ### Find audit logs in Azure Support Center<a id="25"></a>
 
@@ -469,7 +465,7 @@ When a dynamic group is deleted and restored, it's seen as a new group and re-po
 5. Set the time range that corresponds to the time when the customer indicated the problem began.
 6. Filter the columns with corresponding values if applicable. For example, add a filter in activity column to get **add member to group** logs.
 
-   ![TEXT](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-audit-logs-2)
+   ![Filter the columns with corresponding values](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-audit-logs-2.png)
 
 ### Read group data using Azure Support Center<a id="26"></a>
 
@@ -479,7 +475,7 @@ When a dynamic group is deleted and restored, it's seen as a new group and re-po
 4. Go to **Azure AD explorer** tab at the top, then navigate to **Groups** in the left panel.
 1. You can get **group properties**, **Members**, **Owners** and **Dynamic Rules** information with the corresponding inner panel, in the Group properties.
 
-    ![TEXT](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-groups-profile.png)
+    ![Groups profile](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-groups-profile.png)
 
 ### Kusto for diagnostic and log analysis<a id="27"></a>
 
@@ -501,7 +497,7 @@ For **Azure Gov.** customers, you must use Jarvis ([example query](https://jarvi
 
 1. Create a connection to the [idshared kusto cluster](https://idsharedwus.kusto.windows.net:443):
 
-   ![TEXT](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-edit-connection.png)
+   ![Create a connection to the cluster](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-edit-connection.png)
 
 2. Access the Dynamic Group prod data in the database: `aadssgmprod`
 
@@ -593,7 +589,7 @@ IncrementalUpdateGroupProcessor_|
 |2019-03-03 00:04:07.9983645|Tenant info. IntuneTenant: False, State: FullUpdateCompleted, LastIncrementalDeltaUpdateTime ElapsedMinutes: 2.22 LastTenantFullUpdateTime ElapsedMinutes: 1475.10|_|
 |2019-03-03 00:04:07.9983645|Loading all the groups started|_|
 
-#### Check error and warning of a tenant processing<a id="35"></a>
+#### Check for errors or warnings within tenant processing<a id="35"></a>
 
 For a given tenant objectId < tenant_id >, run the following **Kusto Query** to get diagnostic logs in the last 24 hours:
 
@@ -608,13 +604,13 @@ For a given tenant objectId < tenant_id >, run the following **Kusto Query** to 
 
 ### Scoping question and sufficient data for support request<a id="36"></a>
 
-Ask customers to provide data for a set of scoping questions depending on factors such as area. If data is missing, ask customers to provides accordingly.
+Ask the customers to provide data for a set of scoping questions depending on factors such as area. If data is missing, ask customers to provide accordingly.
 
 #### Get sufficient data in support request for dynamic group<a id="37"></a>
 
 Get sufficient data in support request for dynamic group in a support request submitted similar to the following example.
 
-![TEXT](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-new-support-request.png)
+![New support request](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-new-support-request.png)
 
 #### Dynamic membership rules configuration Scoping questions<a id="38"></a>
 
