@@ -77,9 +77,9 @@ After this parameter is enabled, you are prompted by a dialog box when you selec
 > [!NOTE]
 > If you receive an Internet Explorer Security message that says, "A website wants to open web content using this program on your computer," it's likely that SharePoint Online isn't added to the trusted sites zone in Internet Explorer. See the "Add your SharePoint Online sites to trusted sites" section of this article for more information about how to add SharePoint Online to your trusted sites.
 
-For more information about the  **UsePersistentCookiesForExplorerView** parameter and the persistent cookie, go to [Set-SPOTenant](https://docs.microsoft.com/powershell/module/sharepoint-online/Set-SPOTenant?view=sharepoint-ps).
+For more information about the  **UsePersistentCookiesForExplorerView** parameter and the persistent cookie, go to [Set-SPOTenant](https://docs.microsoft.com/powershell/module/sharepoint-online/Set-SPOTenant?view=sharepoint-ps&preserve-view=true).
 
-For more information about the SharePoint Online Management Shell, go to [What is the SharePoint Online Management Shell?](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps)
+For more information about the SharePoint Online Management Shell, go to [What is the SharePoint Online Management Shell?](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps&preserve-view=true)
 
 ### Add your SharePoint Online sites or Open with Explorer URL to trusted sites
 
