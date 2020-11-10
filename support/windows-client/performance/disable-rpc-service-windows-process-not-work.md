@@ -82,4 +82,4 @@ The following services depend on the RPC service:
 
 ## References
 
-For more information about how to use the Recovery Console in Windows XP, in Windows 2000, or in Windows Server 2003, see [What are the system recovery options in Windows?](/windows/what-are-the-system-recovery-options-in-windows-bd88ffdf-1e8e-34a0-d76f-39a71fb4ed4d) and [How To Use the Recovery Console on a Windows Server 2003-Based Computer That Does Not Start](https://support.microsoft.com/help/326215).
+For more information about how to use the Recovery Console in Windows XP, in Windows 2000, or in Windows Server 2003, see [What are the system recovery options in Windows?](https://support.microsoft.com/windows/bd88ffdf-1e8e-34a0-d76f-39a71fb4ed4d) and [How To Use the Recovery Console on a Windows Server 2003-Based Computer That Does Not Start](https://support.microsoft.com/help/326215).
