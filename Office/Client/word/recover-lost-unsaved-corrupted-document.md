@@ -1,6 +1,6 @@
 ---
-title: How to recover a lost Word document
-description: Describes a range of options to locate and recover lost Microsoft Word documents. Discusses Word 2019, Word 2016, Word 2013, and Word 2010 under various versions of Windows.
+title: How to recover a lost, unsaved, or corrupted Word document
+description: Describes a range of options to locate and recover lost, unsaved, or corrupted Microsoft Word documents. Discusses Word 2019, Word 2016, Word 2013, and Word 2010 under various versions of Windows.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -22,12 +22,12 @@ appliesto:
 ms.date: 5/28/2020
 ---
 
-# Recover a lost Word document
+# Recover a lost, unsaved, or corrupted Word document
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 > [!NOTE]
-> This article suggests ways in which you can recover a lost Microsoft Word document.<br /><br />
+> This article suggests ways in which you can recover a lost, unsaved, or corrupted Microsoft Word document.<br /><br />
 > If you're looking for information about how to recover recent Office documents, see the following articles:
 > - [Recover your Office files](https://support.office.com/article/recover-your-office-files-dc901de2-acae-47f2-9175-fb5a91e9b3c8) (for Word versions through Office 2019)
 > - [Find lost files after the upgrade to Windows 10](https://support.microsoft.com/help/12386/)
@@ -38,7 +38,7 @@ ms.date: 5/28/2020
 
 ## Quick resolution
 
-Try the following options to help recover your Word document. Select the image at the left or the option heading to see more detailed instructions about that option.
+Try the following options to help recover your lost, unsaved, or corrupted Word document. Select the image at the left or the option heading to see more detailed instructions about that option.
 
 <table align="left">
 <tr>
@@ -98,7 +98,7 @@ Try the following options to help recover your Word document. Select the image a
 
 </a>
 
-1. Right-click the taskbar, and select **Task Manager**.
+1. Right-click the taskbar and select **Task Manager**.
 2. On the **Processes** tab, select any instance of **Winword.exe** or **Microsoft Word**, and then select **End Task** or **End Process**. Repeat this step until you have exited all instances of Winword.exe and Microsoft Word.
 3. Close the **Windows Task Manager** dialog box, and then start Word.
 
@@ -240,7 +240,7 @@ If you find any files that have the name "Backup of" followed by the name of the
 
 <a id="option3">
 
-## Option 3: Search for AutoRecover files
+## Option 3: Search for AutoRecover unsaved or corrupted files
 
 </a>
 
