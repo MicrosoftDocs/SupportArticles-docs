@@ -55,16 +55,16 @@ For information about how to facilitate the distribution of trusted or untrusted
 
 If you have an environment in which rules are set to allow outbound calls to only specific **Certificate Revocation List (CRL)** downloads, or **Online Certificate Status Protocol (OCSP)** verification locations, you must allow the following CRL and OCSP URLs:
 
-- [http://crl3.digicert.com](http://crl3.digicert.com)
-- [http://crl4.digicert.com](http://crl4.digicert.com)
-- [http://ocsp.digicert.com](http://ocsp.digicert.com)
-- [http://www.d-trust.net](http://www.d-trust.net)
-- [http://root-c3-ca2-2009.ocsp.d-trust.net](http://root-c3-ca2-2009.ocsp.d-trust.net)
-- [http://ctldl.windowsupdate.com](http://ctldl.windowsupdate.com)
-- [https://mscrl.microsoft.com](https://mscrl.microsoft.com)
-- [https://crl.microsoft.com](https://crl.microsoft.com)
-- [https://oneocsp.microsoft.com](https://oneocsp.microsoft.com)
-- [http://ocsp.msocsp.com](http://ocsp.msocsp.com)
+- `http://crl3.digicert.com`
+- `http://crl4.digicert.com`
+- `http://ocsp.digicert.com`
+- `http://www.d-trust.net`
+- `http://root-c3-ca2-2009.ocsp.d-trust.net`
+- `http://ctldl.windowsupdate.com`
+- `https://mscrl.microsoft.com`
+- `https://crl.microsoft.com`
+- `https://oneocsp.microsoft.com`
+- `http://ocsp.msocsp.com`
 
 ## More Information
 
