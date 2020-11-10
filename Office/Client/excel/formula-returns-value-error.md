@@ -88,6 +88,8 @@ The SUMIF function uses the following syntax:
 
 > =SUMIF(range, criteria, sum_range).
 
+See [How to correct a #VALUE! error](https://support.microsoft.com/office/15e1b616-fbf2-4147-9c0b-0a11a20e409e) for more information.
+
 ## Reference
 
 For more information about a wizard that can help you create these functions, click **Microsoft Excel Help** on the **Help** menu, type **summarize values that meet conditions by using the conditional sum wizard** in the Office Assistant or the Answer Wizard, and then click **Search** to view the topic.
