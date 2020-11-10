@@ -1033,8 +1033,8 @@
           href: ../word/performance-issue-on-autorecover-location.md
         - name: Print failures in Word
           href: ../word/print-failures-in-word.md
-        - name: Recover a lost Word document
-          href: ../word/recover-lost-document.md
+        - name: Recover a lost, unsaved, or corrupted Word document
+          href: ../word/recover-lost-unsaved-corrupted-document.md
         - name: relationship rID8 was not found
           href: ../word/image-part-relationship-rld8-not-found-error-microsoft-word.md
         - name: Reset user options and registry settings in Word
