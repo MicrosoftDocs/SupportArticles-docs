@@ -64,7 +64,8 @@ To resolve this problem, use one of the following methods:
 
 - [Method 1:Configure the trust to support AES128 and AES 256 encryption in addition to RC4 encryption](#Method1).
 - [Method 2:Configure the client to support RC4 encryption in addition to AES128 and AES256 encryption](#Method2).
-- [Method 3:Configure the trust to support AES128 and AES 256 encryption instead of RC4 encryption](#Method3).
+- [Method 3:Configure the trust to support AES128 and AES 256 encryption instead of RC4 encryption](#Method3).  
+
 The choice depends on your security needs and your need to minimize disruption or maintain backward compatibility.
 
 ### Method 1: Configure the trust to support AES128 and AES 256 encryption in addition to RC4 encryption
