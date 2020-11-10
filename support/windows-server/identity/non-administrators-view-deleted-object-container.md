@@ -39,14 +39,15 @@ For Windows 2000 and Server 2003 you can get this done by obtaining and installi
 
 1. Download the ADAM retail package.
 
-    For more information about how to download Microsoft Support files, click the following article number to view the article in the Microsoft Knowledge Base: [119591](https://support.microsoft.com/help/119591) How to obtain Microsoft support files from online services
+    For more information about how to download Microsoft Support files, click the following article number to view the article in the Microsoft Knowledge Base:  
+    [119591](https://support.microsoft.com/help/119591) How to obtain Microsoft support files from online services
     Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file.  
 
     > [!NOTE]
     > This version of the ADAM Administration Tools is an upgrade from the version in the Windows Server 2003 Support Tools. This version of the ADAM Administration Tools is supported by Microsoft Windows Server 2003, Standard Edition; Microsoft Windows Server 2003, Enterprise Edition; Microsoft Windows Server 2003, Datacenter Edition; and Microsoft Windows XP Professional.
 
 2. To extract the contents of the file that you downloaded in step 1, double-click the file, and then specify a directory when you are prompted.
-3. In the directory that you extracted the file to in step 2, double-click the Adamsetup.exe program to start the Active Directory Application Mode Setup Wizard, and then click **Next**.
+3. In the directory that you extracted the file to in step 2, double-click the `Adamsetup.exe` program to start the Active Directory Application Mode Setup Wizard, and then click **Next**.
 4. Review and accept the license terms, and then click **Next**.
 5. Select **ADAM administration tools only**, and then click **Next**.
 6. Review your selections, and then click **Next**.
@@ -93,7 +94,7 @@ After you have installed the ADAM Administration Tools, you can modify the permi
     Allow BUILTIN\Administrators SPECIAL ACCESS  
      LIST CONTENTS  
      READ PROPERTY  
-    Allow NT AUTHORITY\SYSTEM SPECIAL ACCESS  
+     Allow NT AUTHORITY\SYSTEM SPECIAL ACCESS  
      DELETE  
      READ PERMISSONS  
      WRITE PERMISSIONS  
@@ -104,7 +105,7 @@ After you have installed the ADAM Administration Tools, you can modify the permi
      WRITE SELF  
      WRITE PROPERTY  
      READ PROPERTY  
-    Allow CONTOSO\EricLang SPECIAL ACCESS  
+     Allow CONTOSO\EricLang SPECIAL ACCESS  
      LIST CONTENTS  
      READ PROPERTY  
     The command completed successfully

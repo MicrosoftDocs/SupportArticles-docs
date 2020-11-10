@@ -40,9 +40,8 @@ On a typical user's computer, the Indexer indexes fewer than 30,000 items. On a 
 
 The Indexer can index up to 1 million items. If the Indexer tries to index beyond that limit, it may fail or cause resource problems on the computer (such as high usage of CPU, memory, or disk space).
 
-Note
-
-By default, the Indexer indexes any Outlook mailboxes on the computer. If a mailbox contains more than 6 million items, the performance of the Indexer may degrade. For more information, go to the "Change Outlook settings" section.
+> [!NOTE]
+> By default, the Indexer indexes any Outlook mailboxes on the computer. If a mailbox contains more than 6 million items, the performance of the Indexer may degrade. For more information, go to the "Change Outlook settings" section.
 
 To check the number of items that are indexed, select **Settings** > **Search** > **Searching Windows**, and then check the value of **Indexed items**.
 
@@ -52,38 +51,36 @@ To check the number of items that are indexed, select **Settings** > **Search** 
 
 As the number of indexed items grows beyond 400,000, the index database grows considerably regardless of the size of those items. However, the size of the items also affects database size. A database that contains either a few large files or a large number of smaller files can affect performance. Both factors together can compound the problem. The Indexer tries to compress the index data. However, this approach becomes less effective as the index database grows.
 
-Important
-
-To check the size of the index database, use the **Size on disk** property of the Windows.edb file instead of relying on the **Size** property or the file size that's listed in Explorer. Because of the compression algorithms that the Indexer uses on sparse ESE and NTFS files, the value that's listed in Explorer may not be accurate. Additionally, this **Size** value might include space that was used by or allocated to the file in the past, instead of using the current size.
+> [!IMPORTANT]
+> To check the size of the index database, use the **Size on disk** property of the Windows.edb file instead of relying on the **Size** property or the file size that's listed in Explorer. Because of the compression algorithms that the Indexer uses on sparse ESE and NTFS files, the value that's listed in Explorer may not be accurate. Additionally, this **Size** value might include space that was used by or allocated to the file in the past, instead of using the current size.
 
 By default, Windows.edb is located in the C:\ProgramData\Microsoft\Search\Data\Applications\Windows folder. To check the size of the file, follow these steps:
 
 1. Right-click Windows.edb, and select **Properties**.
 2. Check the **Size on disk** value. This property reflects the actual disk space that the database uses.
 
-![Size on disk property of the Windows.edb file](./media/windows-search-performance-issues/disk-size.png)
+    ![Size on disk property of the Windows.edb file](./media/windows-search-performance-issues/disk-size.png)
 
 #### Tuning methods
 
 You can use any of several approaches to improve the performance of Search and the Search Indexer.
 
-Important
-
-To make sure that the index reflects your changes, select **Settings** > **Search** > **Searching Windows >** **Advanced Search Indexer Settings** > **Advanced** > **Rebuild**.
+> [!IMPORTANT]
+> To make sure that the index reflects your changes, select **Settings** > **Search** > **Searching Windows >** **Advanced Search Indexer Settings** > **Advanced** > **Rebuild**.
 
 Let the Indexer run for up to 24 hours to rebuild the index database.
 
-**Exclude folders**  
+##### Exclude folders  
 
 You can use this approach to reduce the number of items that are indexed and to reduce the size of the index database. To exclude whole folders from the index, select **Settings** > **Search** > **Searching Windows** > **Add an excluded folder**, and then select a folder to exclude.
 
 For a more granular method to include or exclude items, open **Searching Windows**, and select **Advanced Search Indexer Settings**. In **Indexing Options**, select **Modify**, and then select or deselect locations to index.
 
-**Change how the Indexer treats specific file types**  
+##### Change how the Indexer treats specific file types  
 
 To control how the indexer treats specific file types, open **Indexing Options**, and select **Advanced** > **File Types**. You can change how the Indexer treats specific file types (identified by file extension) or add and configure new file types.
 
-**Defragment the index database**  
+##### Defragment the index database  
 
 You can use this approach to reclaim empty space within the index database. Open an administrative Command Prompt window, and then run the following commands in the given order: **Sc config wsearch start=disable Net stop wsearch EsentUtl.exe /d %AllUsersProfile%\Microsoft\Search\Data\Applications\Windows\Windows.edb Sc config wsearch start=delayed-auto Net start wsearch**  
 
@@ -91,7 +88,7 @@ For more information about how to defragment the index database, see the followi
 
  [2952967](https://support.microsoft.com/help/2952967/windows-edb-bets-big-when-a-pst-file-is-indexed-in-windows-10-8-1-8)  Windows.edb larger than expected when a PST file is indexed in Windows
 
-**Change Outlook settings**
+##### Change Outlook settings
 
 To help reduce the content of an Outlook mailbox, you can change the synchronization window to a shorter time interval than the default interval of one year. For more information about how to do this, see the following Knowledge Base article:
 
@@ -114,7 +111,7 @@ If a different message appears, refer to the following table for more informatio
 |Indexing is paused to conserve battery power.|The Indexer has stopped adding new items to the index because of low battery power. Search results may not be complete.|Connect the device to power, and charge the battery. After the battery has sufficiently charged, indexing resumes.|
 |Your group policy is set to pause indexing while on battery power.|Your IT department has configured the Indexer pause while the device uses battery power.|To finish indexing, connect the device to power. Contact your IT team if you want to change the policy.|
 |Indexing is paused.|The Indexer has been paused from the Windows Search settings page.|Indexing resumes 15 minutes after it pauses. To resume indexing more quickly, restart the Windows Search service (wsearch). You can do this by using the **Services** tab of Task Manager or by using Services.msc.|
-|Indexing is not running.|Indexer hasn't started or is disabled.|If you have just upgraded Windows on the device, wait five minutes for the Windows Search service to start. The service automatically pauses during an upgrade. The service should have the following configuration:<br/>- **Status**: Running<br/>- **Startup Type**: Automatic (Delayed Start) Otherwise, make sure that the Windows Search service (wsearch) is configured correctly. To do this, open Services.msc, and scroll to the Windows Search service. To change the Windows Search service settings, right-click **Windows Search**, and then select **Properties**.NoteSome anti-virus programs and "Optimize your PC" applications disable the Windows Search service. We recommend that users who want to use Search either don't run such applications or, if they do run them, check the status of the service afterward.<br/>|
+|Indexing is not running.|Indexer hasn't started or is disabled.|If you have upgraded Windows on the device, wait five minutes for the Windows Search service to start. The service automatically pauses during an upgrade. The service should have the following configuration:  <br/>- **Status**: Running<br/>- **Startup Type**: Automatic (Delayed Start) Otherwise, make sure that the Windows Search service (`wsearch`) is configured correctly. To do this, open Services.msc, and scroll to the Windows Search service. To change the Windows Search service settings, right-click **Windows Search**, and then select **Properties**.NoteSome anti-virus programs and "Optimize your PC" applications disable the Windows Search service. We recommend that users who want to use Search either don't run such applications or, if they do run them, check the status of the service afterward.<br/>|
 |Insufficient memory to continue indexing. Search results might not be complete.|The Indexer detected a low memory state and stopped to preserve the user experience.|Use Task Manager to discover applications that use a large amount of memory. If possible, close those applications. Install more memory in the device.|
 |Insufficient disk space to continue indexing. Search results might not be complete.|There's not enough space on the disk to continue indexing. The Indexer stops before it fills the entire disk. The index is generally 10 percent of the size of the content that is being indexed.|Make sure that there's more than 1 GB of free space on the disk. Reduce the size of the database index, as described in this article.|
 |Waiting the receive indexing status...|The Indexer hasn't replied to the status query.|Wait for the Indexer to reply. This should take about one minute. In Task manager, confirm that the searchindexer.exe process is running.|
