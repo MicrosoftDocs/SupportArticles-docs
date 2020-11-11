@@ -33,7 +33,6 @@ If article 938923 is referenced during the setup compatibility report, the serve
 
 ### How to install and to start the Print Management snap-in in Windows Vista
 
-
 1. Click **Start**, type MMC in the **Start Search** box, and then click **MMC** in the **Programs** list.
 2. On the **File** menu, click **Add/Remove Snap-in**.
 
@@ -47,7 +46,6 @@ If article 938923 is referenced during the setup compatibility report, the serve
 ### How to back up the printers by using the Print Management snap-in in Windows Server 2008 or in Windows Vista
 
 #### Windows Server 2008
-
 
 1. Click **Start**, click **Administrative Tools**, and then double-click **Server Manager**.
 
@@ -68,22 +66,20 @@ If article 938923 is referenced during the setup compatibility report, the serve
 
 10. In the **Review the list of items to be exported** window, click **Next**.
 
-11. In the **Select the file location** window, type a location to which you want to back up the printers. For example, type the following location: **system_drive** :\backup\remoteservername.printerExport 
+11. In the **Select the file location** window, type a location to which you want to back up the printers. For example, type the following location: `system_drive:\backup\remoteservername.printerExport`  
 
 12. Click **Finish**.
 
 #### Windows Vista
 
-
 1. In the Print Management snap-in, right-click the remote server, and then click **Export Printers to a file**.
 
-2. In the **Select the file location** window, type a location to which you want to back up the printers in the **Export printer data to** field. For example, type the following location: **system_drive** :\backup\remoteservername.printerExport 
+2. In the **Select the file location** window, type a location to which you want to back up the printers in the **Export printer data to** field. For example, type the following location: `system_drive:\backup\remoteservername.printerExport`  
 Then, click **Next**.
 
 3. Click **Finish**.
 
 ### How to restore printers in Windows Server 2008
-
 
 1. Click **Start**, click **Administrative Tools**, and then double-click **Server Manager**.
 
@@ -98,7 +94,7 @@ Then, click **Next**.
 7. In the **Print Management** window, right-click **Print Management**, and then click **Migrate Printers**.
 8. Click **Import printer queues and printer drivers from a file**, and then click **Next**.
 
-9. In the **Select the File Location** window, type a location to which you want to restore the printers. For example, type the following location: **system_drive** :\backup\remoteservername.printerExport 
+9. In the **Select the File Location** window, type a location to which you want to restore the printers. For example, type the following location: `system_drive:\backup\remoteservername.printerExport`  
 
 10. Click **Next** two times.
 
@@ -109,23 +105,21 @@ Then, click **Next**.
 > [!NOTE]
 > We recommend that you review the Application events that have a PrintBRM source to determine whether any more actions are needed. The restored printers are shared in the same manner in which they were shared previously.
 
-
 ### How to migrate printers by using the command prompt in Windows Server 2008 or in Windows Vista
 
 1. Start an elevated command prompt. To do this, click **Start**, type cmd in the **Start Search** box, right-click **cmd** in the **Programs** list, and then click **Run as administrator**.
 
-    User Account Control permission
-    
     If you are prompted for an administrator password or for confirmation, type your password, or click **Continue**.
 
-2. Perform a remote print backup. To do this, type the following command in the %WINDIR%\System32\Spool\Tools folder at the command prompt:
- Printbrm -s \\ **Universal Naming Convention (UNC) name of the source or destination computer** -b -f **File name for the printer settings file** printerExport 
+2. Perform a remote print backup. To do this, type the following command in the `%WINDIR%\System32\Spool\Tools` folder at the command prompt:  
+ `Printbrm -s \\Universal Naming Convention (UNC) name of the source or destination computer -b -f File name for the printer settings file printerExport`  
 
-3. Restore the printers. To do this, type the following command in the %WINDIR%\System32\Spool\Tools folder at the command prompt:
- Printbrm -s \\ **UNC name of the destination computer** -r -f **File name for the printer settings file**.printerExport 
+3. Restore the printers. To do this, type the following command in the `%WINDIR%\System32\Spool\Tools` folder at the command prompt:  
+ `Printbrm -s \\UNC name of the destination computer -r -f File name for the printer settings file.printerExport`  
+
 > [!NOTE]
-> To view the complete syntax for this command, type Printbrm /? at a command prompt.
+> To view the complete syntax for this command, type `Printbrm /?` at a command prompt.
 
 We do not recommend that you create the backup by using the Printer Migration Wizard (PrintMig.exe). Additionally, the Printer Migration Wizard and the Printbrm.exe tool do not support .cab file backups that were created by using the Printer Migration Wizard.
 
-For more information about how to install, to view, and to manage all the printers in your organization by using the Print Management snap-in, visit the following Microsoft TechNet Web site: [https://technet.microsoft.com/windowsvista/aa905094.aspx](https://technet.microsoft.com/windowsvista/aa905094.aspx) 
+For more information about how to install, to view, and to manage all the printers in your organization by using the Print Management snap-in, visit the following Microsoft TechNet Web site: [Microsoft documentation and learning for developers and technology professionals](https://technet.microsoft.com/windowsvista/aa905094.aspx)  

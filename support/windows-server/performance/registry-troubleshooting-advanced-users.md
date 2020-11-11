@@ -22,14 +22,20 @@ _Original KB number:_ &nbsp; 822705
 
 ## Summary
 
-If your computer does not restart, the registry hives may be corrupted. The error messages may vary. They can include any of the following: 
+If your computer does not restart, the registry hives may be corrupted. The error messages may vary. They can include any of the following:  
 
 > Windows could not start because the following file is missing or corrupt:\WINNT\SYSTEM32\CONFIG\SYSTEM.ced  
-Windows could not start because the following file is missing or corrupt:\WINNT\SYSTEM32\CONFIG\SYSTEM  
-Windows could not start because the following file is missing or corrupt:\WINNT\SYSTEM32\CONFIG\SOFTWARE
-System hive error
-Stop 0xc0000218 (0xe11a30e8, 0x00000000, 0x000000000, 0x00000000)   UNKNOWN_HARD_ERROR  
-Stop: 0xc0000218 {Registry File Failure} The registry cannot load the hive (file): \SystemRoot\System32\Config\ **CorruptHive** or its log or alternate. It is corrupt, absent, or not writable.
+
+> Windows could not start because the following file is missing or corrupt:\WINNT\SYSTEM32\CONFIG\SYSTEM  
+
+> Windows could not start because the following file is missing or corrupt:\WINNT\SYSTEM32\CONFIG\SOFTWARE  
+
+> System hive error  
+
+> Stop 0xc0000218 (0xe11a30e8, 0x00000000, 0x000000000, 0x00000000)   UNKNOWN_HARD_ERROR  
+
+> Stop: 0xc0000218 {Registry File Failure} The registry cannot load the hive (file):  
+\SystemRoot\System32\Config\ **CorruptHive** or its log or alternate. It is corrupt, absent, or not writable.
 
 ## More information
 
@@ -56,20 +62,17 @@ If one or two registries hives consistently become corrupted for no reason, the 
 
 To troubleshoot this issue, follow these steps.
 
-1. Restore the computer to a previous state before registry corruption occurred. If you cannot start the computer, see the following Microsoft Knowledge Base article: [307545](https://support.microsoft.com/help/307545) How to recover from a corrupted registry that prevents Windows XP from starting  
-
+1. Restore the computer to a previous state before registry corruption occurred.  
     One tool that you can use to back up registry hives is Recovery Console. For more information about how to back up and restore the registry, click the following article numbers to view the articles in the Microsoft Knowledge Base:
-    
+
     [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows XP and Windows Vista  
-    
+
     [307654](https://support.microsoft.com/help/307654) How to install and use the Recovery Console in Windows XP  
-    
-    [216417](https://support.microsoft.com/help/216417) How to install the Windows Recovery Console  
 
 2. Check the hardware, the disk, the firmware drivers, and the BIOS. To do this, follow these steps. These steps may require downtime for the computer.
    1. Make sure that the CPU is not being over-clocked.
    2. Make sure that system event logs do not contain event ID 9, event ID 11, or event ID 15 (or any combination of these events). These events may indicate hardware problems that must be addressed.
-   3. Run the chkdsk command-line command together with the /r switch on the disk that contains the registry hive files. This command helps verify that the area of the disk that contains the registry hive files is not involved in the problem.
+   3. Run the `chkdsk` command-line command together with the /r switch on the disk that contains the registry hive files. This command helps verify that the area of the disk that contains the registry hive files is not involved in the problem.
    4. Apply the latest firmware revisions to disk controllers, and use the matching driver versions. Make sure that the drivers are signed drivers and that you have the appropriate firmware revisions installed.
    5. Make sure that you apply the latest basic input/output system (BIOS) updates to the computer.
 3. After you complete step 2, you may not see any change in behavior. To prevent the corruption, try to close all running processes before you shut down the computer. You may be able to narrow the scope to a single process that is involved. Even if you determine the process, you may be unable to prevent a component from being unloaded before the registry hive is written to. However, if you make sure that you stop the process before shut down, you may be able to prevent registry hive corruption.

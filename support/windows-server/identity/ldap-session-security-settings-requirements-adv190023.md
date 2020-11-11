@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4563239
 
 ## Summary
 
-This article introduces the functional changes that are provided by security advisory [ADV190023](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV190023). Additionally, this article describes the security settings for each kind of Lightweight Directory Access Protocol (LDAP) session, and what is required to operate the LDAP sessions in a secure way. 
+This article introduces the functional changes that are provided by security advisory [ADV190023](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV190023). Additionally, this article describes the security settings for each kind of Lightweight Directory Access Protocol (LDAP) session, and what is required to operate the LDAP sessions in a secure way.  
 
 ADV190023 discusses settings for both LDAP session signing and additional client security context verification (Channel Binding Token, CBT). In the implementation, there are two separate items:
 
@@ -33,7 +33,8 @@ When you determine the best path to improve security according to ADV190023, the
 
 The new Channel Binding Token (CBT) option is the LDAP TLS implementation of the [Extended Protection for Authentication](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview) (EPA) scheme that is described in RFC 5056.
 
- **Note** "EPA" and "CBT" can be used interchangeably in this context.
+> [!NOTE]
+> "EPA" and "CBT" can be used interchangeably in this context.
 
 ## More information
 
@@ -52,8 +53,8 @@ The following policy guidelines apply:
 
 - The **LDAPServerIntegrity=2** setting is important for this session option because it enforces the use of signing by the client. When you encrypt the sessions, this requirement is also met.
 - The **LdapEnforceChannelBinding** setting has no bearing on this session option.
- 
-### LDAP sessions using TLS/SSL and simple bind for user authentication 
+
+### LDAP sessions using TLS/SSL and simple bind for user authentication  
 
 There's no CBT information added for these sessions. The quality of the TLS client implementation governs whether the client can detect an MITM attack (through server certificate name checking, verification of CRL, and so on).
 
@@ -62,7 +63,7 @@ The following policy guidelines apply:
 - The requirement for **LDAPServerIntegrity** is met because the TLS channel provides signing. The level of security that the TLS channel provides depends on the TLS client implementation.
 - The **LdapEnforceChannelBinding** setting has no bearing on this session option.
 
-### LDAP sessions using TLS/SSL, binding by using certificate for user authentication 
+### LDAP sessions using TLS/SSL, binding by using certificate for user authentication  
 
 Currently, there's no CBT information added for these sessions. The quality of the TLS client implementation governs whether the client can detect an MITM attack (through server certificate name checking, verification of CRL, and so on). Client certificate authentication is sufficient to block MITM attacks, but it doesn't prevent other categories of attacks that can be mitigated only by appropriate client-side validation of the TLS certificate that is presented by the server.
 
@@ -70,9 +71,8 @@ The following policy guidelines apply:
 
 - The requirement for **LDAPServerIntegrity** is met because the TLS channel provides signing. The level of security that the TLS channel provides depends on the TLS client implementation.
 - The **LdapEnforceChannelBinding** setting has no bearing on this session option.
- 
 
-### LDAP Sessions using TLS/SSL, binding with SASL for user authentication 
+### LDAP Sessions using TLS/SSL, binding with SASL for user authentication
 
 In this scenario, TLS provides the session security for encryption, and the encryption keys are based on the server certificate. Specifically for SASL authentication that uses NTLM, the NTLM authentication data may have been relayed from the session that was held by the MITM attacker. In the case of such an attack, there's no proof that the client has a valid password hash.
 The CBT information is protected against tampering through signing or encryption (depending on the authentication protocol) by using a session key that can be obtained only by knowing the user's or server's credentials. The MITM attacker wouldn't have this password hash if it intercepted an NTLM authentication.
@@ -86,6 +86,6 @@ The following policy guidelines apply:
 
 For more information, see the following articles:
 
- [Extended Protection for Authentication](https://msrc-blog.microsoft.com/2009/12/08/extended-protection-for-authentication/) 
+[Extended Protection for Authentication](https://msrc-blog.microsoft.com/2009/12/08/extended-protection-for-authentication/)  
 
 [Control Extended Protection for Authentication using Security Policy](/archive/blogs/askds/control-extended-protection-for-authentication-using-security-policy)

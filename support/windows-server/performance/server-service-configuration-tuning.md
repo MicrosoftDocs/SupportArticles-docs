@@ -17,16 +17,14 @@ ms.technology: Performance
 
 This article describes how to configure and tuning Windows Server service.
 
-For a Microsoft Windows XP version of this article, see [314498](https://support.microsoft.com/help/314498).  
-
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 128167
 
 ## Summary
 
-Although the Windows Server service is self-tuning, it can also be configured manually through Control Panel Service. Normally, the server configuration parameters are auto-configured (calculated and set) each time you boot Windows. However, if you run NET CONFIG SERVER in conjunction with the /AUTODISCONNECT, /SERVCOMMENT OR /HIDDEN switches the current values for the automatically tuned parameters are displayed and written to the registry. Once these parameters are written to the registry, you can't tune the Server service using Control Panel Networks.
+Although the Windows Server service is self-tuning, it can also be configured manually through Control Panel Service. Normally, the server configuration parameters are auto-configured (calculated and set) each time you boot Windows. However, if you run NET CONFIG SERVER in conjunction with the `/AUTODISCONNECT`, `/SERVCOMMENT` OR `/HIDDEN` switches the current values for the automatically tuned parameters are displayed and written to the registry. Once these parameters are written to the registry, you can't tune the Server service using Control Panel Networks.
 
-If you add or remove system memory, or change the server size setting minimize/balance/maximize), Windows doesn't automatically tune the Server service for your new configuration. For example, if you run NET CONFIG SRV /SRVCOMMENT, and then add more memory to the computer, Windows doesn't increase the calculated value of autotuned entries.
+If you add or remove system memory, or change the server size setting minimize/balance/maximize), Windows doesn't automatically tune the Server service for your new configuration. For example, if you run `NET CONFIG SRV /SRVCOMMENT`, and then add more memory to the computer, Windows doesn't increase the calculated value of autotuned entries.
 
 Typing NET CONFIG SERVER at the cmd prompt without additional parameters leaves auto tuning intact while displaying useful configuration information about the server.
 
@@ -46,11 +44,10 @@ To restore the LAN Manager Server parameters to the defaults, or to reconfigure 
 
 1. Run Registry Editor (REGEDT32.EXE).
 
-2. From the HKEY_LOCAL_MACHINE subtree, go to the following key:
-    
+2. From the HKEY_LOCAL_MACHINE subtree, go to the following key:  
     `\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters`
 
-3. Remove all entries except the following:
+3. Remove all entries except the following:  
     EnableSharedNetDrives  
     Lmannounce  
     NullSessionPipes  
