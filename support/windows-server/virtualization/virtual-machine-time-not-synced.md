@@ -1,5 +1,5 @@
 ---
-title: Hyper-V Time Synchronization can't correct the system clock in the virtual machine if it's over five seconds ahead of the host clock
+title: Hyper-V Time Synchronization can't correct system clock
 description: Discusses an issue in which The Hyper-V Time Synchronization Service won't correct the system clock in the virtual machine if the system clock in the VM is running more than five seconds ahead of the system clock on the host machine.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -15,8 +15,8 @@ ms.technology: HyperV
 ---
 # Hyper-V Time Synchronization doesn't correct the system clock in the virtual machine if it's more than five seconds ahead of the host clock
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2618634
+_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2618634
 
 ## Symptoms
 
@@ -34,9 +34,9 @@ There's no flag/property/setting that you can set to work around the timesync lo
 
 1. Pause and resume the virtual machine.
 2. Power off and power on the virtual machine.
-3. Disable and enable the Time Synchronization option in the virtual machine settings (via the Hyper-V Manager console).
-4. Disable the Hyper-V Time Synchronization option, then use another time sync source and configure the PhaseCorrectRate, MaxPollInterval, MinPollInterval, and UpdateInterval values appropriately to get the Time Sync more closely. MaxpollInterval and MinPollInterval are the minimum and maximum interval between the polls respectively. The value in each is a time in log2 seconds (that is, 2^n, so if you specify 5 then the actual time would be 2^5 = 32 seconds). The default value for domain controllers for each of them respectively is 6 (64 seconds) and 10 (1,024 seconds).
+3. Disable and enable the **Time Synchronization** option in the virtual machine settings (via the Hyper-V Manager console).
+4. Disable the Hyper-V **Time Synchronization** option, then use another time sync source and configure the **PhaseCorrectRate**, **MaxPollInterval**, **MinPollInterval**, and **UpdateInterval** values appropriately to get the Time Sync more closely. **MaxpollInterval** and **MinPollInterval** are the minimum and maximum interval between the polls respectively. The value in each is a time in log2 seconds (that is, 2^n, so if you specify 5 then the actual time would be 2^5 = 32 seconds). The default value for domain controllers for each of them respectively is 6 (64 seconds) and 10 (1,024 seconds).
 
 See the below article to know more about Time Sync settings and how to configure them appropriately:
 
-[Windows Time Service Tools and Settings](https://technet.microsoft.com/library/cc773263%28ws.10%29.aspx)
+[Windows Time Service Tools and Settings](/previous-versions/windows/it-pro/windows-server-2003/cc773263(v=ws.10))

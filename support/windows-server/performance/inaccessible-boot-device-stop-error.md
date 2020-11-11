@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Blue Screen/Bugcheck
 ms.technology: Performance
 ---
-# "INACCESSIBLE_BOOT_DEVICE" Stop error code after you reconfigure critical hardware devices
+# Stop error (INACCESSIBLE_BOOT_DEVICE) after you reconfigure critical hardware devices
 
 This article helps fix the Stop error code 0x00000007B that occurs after you reconfigure critical hardware devices.
 
@@ -30,7 +30,8 @@ Consider the following scenario:
 - You change the computer hardware configuration. For example, you replace the PCI slot on an SAS controller to which the boot-up hard disk drive is attached. After you make this change, a device that is required to start the machine may require driverB.sys, which is now set to Demand Start instead of Boot Start.
 
 In this scenario, the system does not load driverB.sys, and STOP Error code 0x00000007B is generated. When this occurs, you receive the following error message:
-INACCESSIBLE_BOOT_DEVICE (Stop 0x7B)
+
+> INACCESSIBLE_BOOT_DEVICE (Stop 0x7B)
 
 ## Cause
 
@@ -44,15 +45,11 @@ Because of this feature, drivers that are necessary to start the system under al
 
 To resolve this issue, restart the system in safe mode. In safe mode, any change to a driver's Start Type setting is reversed, and the values are re-created.
 
-For more information about how to start in safe mode, see the following Microsoft Knowledge Base article:
-
-[2809468](https://support.microsoft.com/help/2809468) How to easily enter safe mode in windows 8? (One-click series)
+For more information about how to start in safe mode, see [How to easily enter safe mode in windows 8? (One-click series)](https://support.microsoft.com/help/2809468).
 
 ## More information
 
-For more information about how to troubleshoot Stop error 0x7B, go to the following Server and Tools Team blog article:
-
-[Troubleshooting a Stop 0x7B in Windows](https://blogs.technet.com/b/askcore/archive/2013/08/05/troubleshooting-a-stop-0x7b-in-windows.aspx) 
+For more information about how to troubleshoot Stop error 0x7B, see [Troubleshooting a Stop 0x7B in Windows](/archive/blogs/askcore/troubleshooting-a-stop-0x7b-in-windows).
 
 ## Status
 

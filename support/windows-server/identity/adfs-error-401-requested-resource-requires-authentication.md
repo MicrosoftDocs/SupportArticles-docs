@@ -1,5 +1,5 @@
 ---
-title: ADFS 2.0 error 401 The requested resource requires user authentication
+title: ADFS 2.0 error 401
 description: Discusses that you can't authenticate an account in AD FS 2.0, that you're prompted for credentials, and that event 111 is logged. Provides a resolution.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -15,10 +15,10 @@ ms.technology: ActiveDirectory
 ---
 # ADFS 2.0 error: 401 The requested resource requires user authentication
 
-This article discusses that you can't authenticate an account in AD FS 2.0, that you're prompted for credentials, and that event 111 is logged.
+This article discusses an issue where you're prompted for credentials and event 111 is logged when you authenticate an account in Active Directory Federation Services (AD FS) 2.0.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;3044976
+_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 3044976
 
 ## Summary
 
@@ -69,26 +69,26 @@ Locate the Federation Service Name, and check whether the name is registered und
 
 1. Locate the HOST/**\<Federation Service Name>** name:
     1. Open AD FS 2.0 Manager.
-    1. Right-click **ADFS 2.0**, and then select **Edit Federation Service Properties**.
-    1. On the **General** tab, locate the Federation Service name field to see the name.
+    2. Right-click **ADFS 2.0**, and then select **Edit Federation Service Properties**.
+    3. On the **General** tab, locate the Federation Service name field to see the name.
 
         ![The screenshot for ADFS service name ](./media/adfs-error-401-requested-resource-requires-authentication/federation-service-name.jpg)
 
 2. Check whether HOST/**\<Federation Service Name>**  name is registered under the AD FS service account:
     1. Open the Management snap-in. To do this, click **Start**, click **All Programs**, click **Administrative Tools**, and then click **Services**.
-    1. Double-click **AD FS (2.0) Windows Service**.
-    1. On the **Log On** tab, note the service account that's displayed in the **This account** field.
+    2. Double-click **AD FS (2.0) Windows Service**.
+    3. On the **Log On** tab, note the service account that's displayed in the **This account** field.
   
         ![The screenshout about service account ](./media/adfs-error-401-requested-resource-requires-authentication/service-account-name.jpg)
   
-    1. Click **Start**, click **All Programs**, click **Accessories**, right-click **Command Prompt**, and then click **Run as administrator**.
-    1. Run the following command:
+    4. Click **Start**, click **All Programs**, click **Accessories**, right-click **Command Prompt**, and then click **Run as administrator**.
+    5. Run the following command:
   
         ```console
         SETSPN -L domain\<ADFS Service Account>
         ```  
 
-        ![The screenshot for the result of setspn ](./media/adfs-error-401-requested-resource-requires-authentication/setspn-result.jpg)
+        ![The screenshot for the result of setspn](./media/adfs-error-401-requested-resource-requires-authentication/setspn-result.jpg)
 
 If the Federation Service name doesn't already exist, run the following command to add the service principal name (SPN) to the AD FS account:
 
@@ -132,8 +132,8 @@ For more information about the Local Authentication Type, see the following Tech
 
 Make sure that the AD FS virtual directories are configured correctly for authentication in Internet Information Services (IIS).
 
-- In the "Default Web Site/adfs" node, open the **Authentication** setting, and then make sure the **Anonymous Authentication** is enabled.
-- In the "Default Web Site/adfs/ls" node, open the **Authentication** setting, and then make sure that both **Anonymous** and **Windows Authentication** are enabled.
+- In the **Default Web Site/adfs** node, open the **Authentication** setting, and then make sure the **Anonymous Authentication** is enabled.
+- In the **Default Web Site/adfs/ls** node, open the **Authentication** setting, and then make sure that both **Anonymous** and **Windows Authentication** are enabled.
 
 ### Step 7: Check proxy trust settings
 
@@ -148,9 +148,9 @@ To resolve this problem, try to run the AD FS proxy configuration wizard again. 
 - Use domain credentials that have local administrative rights on the AD FS servers.
 - Use the AD FS service account credentials
 
-### Step 8: Check IIS "extended protection" settings
+### Step 8: Check IIS extended protection settings
 
-Certain browsers can't authenticate if "extended protection" (that is, Windows Authentication) is enabled in IIS as shown in Step 5. Try to disable Windows Authentication to determine whether this resolves the problem.
+Certain browsers can't authenticate if extended protection (that is, Windows Authentication) is enabled in IIS as shown in Step 5. Try to disable Windows Authentication to determine whether this resolves the problem.
 
 You would also see Extended protection not allowing Windows Authentication when SSL proxy is being done by tools like Fiddler or some intelligent load balancers.
 
@@ -203,7 +203,7 @@ If the response is anything other than "success," you must troubleshoot the netl
 
 ### Step 10: Check for bottlenecks
 
-Check whether you're experiencing authentication-related bottlenecks per the "MaxconcurrentAPI" setting on the AD FS server or on the DCs. For more information about how to check this setting, see the following Knowledge Base article:
+Check whether you're experiencing authentication-related bottlenecks per the **MaxconcurrentAPI** setting on the AD FS server or on the DCs. For more information about how to check this setting, see the following Knowledge Base article:
 
 [How to do performance tuning for NTLM authentication by using the MaxConcurrentApi setting](https://support.microsoft.com/help/2688798)
 
@@ -225,6 +225,6 @@ The Proxy server automatically renews trust with AD FS Federation Service. If th
 
 To resolve this problem, try to run the AD FS proxy configuration wizard again. As the wizard runs, make sure that valid domain user name and passwords are used. These credentials aren't stored on the AD FS Proxy server.
 
-### Step 13: Enable ADFS auditing together with "Audit logon events" - success and failure
+### Step 13: Enable ADFS auditing together with Audit logon events - success and failure
 
 For more information, see [Configuring ADFS Servers for Troubleshooting](https://technet.microsoft.com/library/cc738766%28v=ws.10%29.aspx).
