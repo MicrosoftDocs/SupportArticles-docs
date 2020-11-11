@@ -17,7 +17,7 @@ This article illustrates how images of an ImageList control can be accessed by T
 
 ## More information
 
-This section has two code examples. The first example illustrates how ImageList images can be assigned to a TreeView control. In this example if Leaves are added to a Node of the TreeView, then a Closed Folder icon is assigned to the Node. If a node containing leaves is expanded, its icon changes to an Open Folder, and upon collapse, it changes back to the Closed Folder.
+This section has two code examples. The first example illustrates how ImageList images can be assigned to a TreeView control. In this example, if leaves are added to a Node of the TreeView, then a Closed Folder icon is assigned to the Node. If a node containing leaves is expanded, its icon changes to an Open Folder, and upon collapse, it changes back to the Closed Folder.
 
 The second example shows how ImageList images can be assigned to a ListView control. In this example, when a List Item is created it is assigned a large icon. The item icons can then be toggled between a small and a large icon. For each type of icon--large and small--separate ImageList controls are used; otherwise, both types of icons appear as same size.
 
