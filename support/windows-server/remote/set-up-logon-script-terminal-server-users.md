@@ -27,31 +27,22 @@ _Original KB number:_ &nbsp; 195461
 
 You may want to have a logon script that only runs for users when they connect to a Terminal Server through the Terminal Server client or by the console.
 
+Create your logon script and place it in the %SystemRoot%\System32 folder.  
 
-1. Create your logon script and place it in the %SystemRoot%\System32 folder.
 > [!WARNING]
 > Using Registry Editor incorrectly can cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that problems resulting from the incorrect use of Registry Editor can be solved. Use Registry Editor at your own risk.
 
 For information about how to edit the registry, view the "Changing Keys And Values" Help topic in Registry Editor (Regedit.exe) or the "Add and Delete Information in the Registry" and "Edit Registry Data" Help topics in Regedt32.exe. You should back up the registry before you edit it. If you are running Windows NT, you should also update your Emergency Repair Disk (ERD).
 
-
 1. Run Regedt32.exe and go to the following value:
 
-```console
-HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion
- \Winlogon\Appsetup
-```
+    `HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion
+    \Winlogon\Appsetup`
 
-2. After the last entry in the Appsetup value, place a comma and a space and then enter the name and extension of the logon script you placed in the %SystemRoot%\System32 folder. For example, if the value of Appsetup is:
+2. After the last entry in the Appsetup value, place a comma and a space and then enter the name and extension of the logon script you placed in the %SystemRoot%\System32 folder. For example, if the value of Appsetup is:  
+`Usrlogon.cmd, Rmvlinks.exe`
 
-```console
- Usrlogon.cmd, Rmvlinks.exe
-```
-
-After adding an entry for Termlogon.cmd, the value would look like:
-
-```console
- Usrlogon.cmd, Rmvlinks.exe, Termlogon.cmd
-```
+    After adding an entry for Termlogon.cmd, the value would look like:  
+    `Usrlogon.cmd, Rmvlinks.exe, Termlogon.cmd`
 
 Termlogon.cmd will now run every time a user logs into the Terminal Server.

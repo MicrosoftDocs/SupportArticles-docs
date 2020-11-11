@@ -15,7 +15,7 @@ ms.technology: SysManagementComponents
 ---
 # Error when enabling analytic or debug event log: The requested operation cannot be performed over an enabled direct channel. The channel must first be disabled before performing the requested operation
 
-This article helps fix an error that occurs when you enable analytic or debug event log.
+This article helps to fix an error that occurs when you enable analytic or debug event log.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2488055

@@ -32,11 +32,12 @@ To work around this behavior, use one of the following methods.
 
 ### Method 1
 
-Create a subfolder under the redirected folder in the Universal Naming Convention (UNC) path. For example, use the following UNC path:\\ **server** \ **users** \ **username** \Documents
+Create a subfolder under the redirected folder in the Universal Naming Convention (UNC) path. For example, use the following UNC path:\\\\**server**\\**users**\\**username**\Documents
 
 ### Method 2
 
-Grant the user exclusive rights to the redirected folder. To do this, follow these steps:
+Grant the user exclusive rights to the redirected folder. To do this, follow these steps:  
+
 1. Log on to the computer by using domain administrator credentials.
 2. In the **Start Search** box, type gpmc.msc, right-click **gpmc.msc**, and then click **Run as administrator**.
 
@@ -65,23 +66,22 @@ Do not grant the Read permission to the administrator for the Desktop.ini files 
 1. Right-click the **Desktop.ini** file, click **Properties**, and then click the **Security** tab.
 2. In the **Group or user names** pane, click **Administrators**.
 3. Click to select the **Deny** check box for the **Read** permission.
-4. Click **OK**.For more information, visit the following Microsoft Web site: [https://www.microsoft.com/technet/scriptcenter/default.mspx](https://www.microsoft.com/technet/scriptcenter/default.mspx)
+4. Click **OK**.
 
 > [!NOTE]
 > Method 2 works only for new users. To update the names of the existing folders on the server, we recommend that you use Method 3.
 
 ## Status
 
-This behavior is by design. 
+This behavior is by design.  
 
 ## More information
 
 ### Steps to reproduce the behavior
 
-
 1. Right-click the **Documents** folder, and then click **Properties**.
 2. Under the **Location** tab, enter the UNC path of the network share to which you want to redirect the folder.
 
-For example, enter a UNC path that resembles the following:\\ **server** \ **users** \ **username**  
+For example, enter a UNC path that resembles the following:\\\\**server**\\**users**\\**username**  
 
 After you do this, the name of the Documents folder is supposed to change to the user name.

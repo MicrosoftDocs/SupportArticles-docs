@@ -25,7 +25,6 @@ _Original KB number:_ &nbsp; 2536487
 When you run an application from a mapped drive, the application becomes unresponsive or crashes for a user (or multiple users) when another user logs off. This issue occurs in Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 Service Pack 1 (SP1), and Windows Server 2008.
 For example, this issue may occur in the following scenario:
 
-
 - One server is a file server and another is a Remote Session Host server (terminal server).
 - A folder on the file server is mapped for use by remote users connecting to the RDS server.
 - An application on the mapped share is launched by multiple users.
@@ -34,18 +33,19 @@ For example, this issue may occur in the following scenario:
   - In Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008, this issue occurs when the first user who logged on logs off.
   - In Windows Server 2008 R2 SP1, this issue occurs when the last user who logged on logs off.
 
-**Note** In Windows Server 2008 R2 SP1, this behavior changes to the same as that of Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 after you install [hotfix 2559767](https://support.microsoft.com/help/2559767). 
+> [!NOTE]
+> In Windows Server 2008 R2 SP1, this behavior changes to the same as that of Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 after you install [hotfix 2559767](https://support.microsoft.com/help/2559767).  
 
 ## Cause
 
 This issue occurs because of the way that the redirector handles the File Control Block (FCB) for the binary in question.
 
-In Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008, the FCB is owned by the first user who opened the file, and this FCB is used by subsequent users. When the first user logs off, the FCB is orphaned. This causes the application to crash or become unresponsive on subsequent uses. 
- In Windows Server 2008 R2, the FCB is owned by the last user who opened the file, and previous users experience the issue when the last user logs off.  
+In Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008, the FCB is owned by the first user who opened the file, and this FCB is used by subsequent users. When the first user logs off, the FCB is orphaned. This causes the application to crash or become unresponsive on subsequent uses.  
+In Windows Server 2008 R2, the FCB is owned by the last user who opened the file, and previous users experience the issue when the last user logs off.  
 
 Technically the FCB is not owned by any specific user. It's just a shared structure that represents a file. The FCB is created when the first handle to the file is opened, and it's destroyed when the last handle to the file is closed. Therefore, it is not tied to a user.  
 
-The orphaned entity is the file object that belongs to the user who logs off. If that file object backs the file system cache or a mapped section, you experience these I/O errors. 
+The orphaned entity is the file object that belongs to the user who logs off. If that file object backs the file system cache or a mapped section, you experience these I/O errors.  
 
 ## Resolution
 
