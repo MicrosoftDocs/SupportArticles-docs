@@ -139,7 +139,7 @@ Yes. Windows 7 ESU will include support for the .NET Framework 4.5.2-4.8 release
 
 ### Do Windows 7 Embedded products qualify
 
-Yes, there is an ESU program specifically for embedded devices. For more information, see [ESU for Windows 7 Embedded](https://docs.microsoft.com/en-us/lifecycle/products/windows-7).  
+Yes, there is an ESU program specifically for embedded devices. For more information, see [ESU for Windows 7 Embedded](https://docs.microsoft.com/lifecycle/products/windows-7).  
 
 ### Can Windows 7 Pro OEM customers purchase Windows 7 ESU
 
@@ -327,9 +327,9 @@ Yes. For detailed instructions, see [Obtaining Extended Security Updates for eli
 
 Yes, there is an ESU program specifically for embedded devices. This program includes:
 
-- [Windows 7 for Embedded Systems](https://docs.microsoft.com/en-us/lifecycle/products/windows-7)
-- [Windows Embedded Standard 7](https://docs.microsoft.com/en-us/lifecycle/products/windows-embedded-standard-7)
-- [Windows Embedded POSReady 7](https://docs.microsoft.com/en-us/lifecycle/products/windows-embedded-posready-7)
+- [Windows 7 for Embedded Systems](https://docs.microsoft.com/lifecycle/products/windows-7)
+- [Windows Embedded Standard 7](https://docs.microsoft.com/lifecycle/products/windows-embedded-standard-7)
+- [Windows Embedded POSReady 7](https://docs.microsoft.com/lifecycle/products/windows-embedded-posready-7)
 
 The ESU for Windows 7 Embedded also includes Windows Server 2008 R2 for Embedded Systems and Microsoft SQL Server 2008 R2 for Embedded Systems. You should direct all embedded ESU requests to the original equipment manufacturer (OEM) of the device.
 
