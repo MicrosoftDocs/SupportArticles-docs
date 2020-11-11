@@ -42,9 +42,7 @@
     href: comexception-error-from-wpf-app.md
   - name: COMException when you create WeakReference<T> object
     href: comexception-weakreference-object.md
-  - name: Compatibility issue when you use RIA Services
-    href: compatibility-issue-use-ria-services.md
-  - name: Compatibility when you use RIA V1.0 SP2 and EF 5
+  - name: Compatibility when you use RIA Services
     href: compatibility-issue-ria-sp2-ef-5.md
   - name: Computer stops responding
     href: computer-stops-responding-mscorsvw.md
