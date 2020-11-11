@@ -1,19 +1,19 @@
 ---
 title: Slow performance of the spDeleteUpdate procedure
-description: Resolve the slow performance issue when executing the `spDeleteUpdate` procedure
+description: Resolves the slow performance issue when executing the `spDeleteUpdate` procedure.
 ms.date: 11/04/2020
 author: helenclu
 ms.author: luche
 ms.reviewer: lamosley
 ms.prod-support-area-path:
 ---
-# The spDeleteUpdate stored procedure is running slowly
+# The spDeleteUpdate stored procedure runs slowly
 
-When the `spDeleteUpdate` stored procedure is executed, it may take tens of seconds to delete a single update. When you use it to delete hundreds or thousands of updates during Windows Server Update Services (WSUS) maintenance, it may take days to complete.
+When the `spDeleteUpdate` stored procedure runs, it may take tens of seconds for it to delete a single update. When you use `spDeleteUpdate` to delete hundreds or thousands of updates during Windows Server Update Services (WSUS) maintenance, it may take days to finish.
 
 ## Cause
 
-The slow performance occurs because a primary key isn't set on a temporary table that's created by the `spDeleteUpdate` procedure.
+The slow performance occurs because a primary key isn't set on a temporary table that's created by `spDeleteUpdate`.
 
 ## Resolution
 
