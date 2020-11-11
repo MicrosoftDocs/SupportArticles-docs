@@ -283,7 +283,7 @@ There are two different options here:
     DROP TABLE #results
     ```
 
-   For slow performance issue of the `spDeleteUpdate` stored procedure, see [The spDeleteUpdate stored procedure is running slowly](spdeleteupdate-slow-performance.md).
+   For slow performance issue of the `spDeleteUpdate` stored procedure, see [The spDeleteUpdate stored procedure runs slowly](spdeleteupdate-slow-performance.md).
 
 ### Running the Decline-SupersededUpdatesWithExclusionPeriod.ps1 script times out when connecting to the WSUS server, or a 401 error occurs while running
 
