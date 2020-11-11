@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 3097192
 
 Consider the following scenario:
 
-- You have a computer that's running Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, or Windows Server 2019.  
+- You have a computer that's running Windows Server.  
 - You have the Remote Desktop Connection Broker (RDCB) role configured on this computer.
 - You try to secure the RDP connections to the target computers by using SSL encryption (Transport Layer Security (TLS)).
 
