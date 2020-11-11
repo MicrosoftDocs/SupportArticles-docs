@@ -84,7 +84,7 @@ These are step to install and configure PHP with Web Platform Installer:
 
 ## Testing
 
-To check whether the installation and configuration are successful, we can test it by following these steps:
+To check whether the installation and configuration are successful, we can test it by following steps:
 
 1. Create *info.php* file and type this code below as content.
 
