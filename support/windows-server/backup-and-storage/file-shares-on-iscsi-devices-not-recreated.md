@@ -93,7 +93,6 @@ Use one of the following methods to make the Server service dependent on the iSC
 
     If you have administrative access to the server, you can run this command from a network computer. Type the following command, and then press ENTER: sc \\\\**computer_name**  config LanManServer depend= Samss/Srv/MSiSCSI  
 
-
 #### Method 2: Use Registry Editor
 
 > [!IMPORTANT]
@@ -121,28 +120,33 @@ You can script the procedures that are described in the "Resolution" section by 
 
 Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but isn't limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you're familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure. However, they won't modify these examples to provide added functionality or construct procedures to meet your specific requirements.  
 
-To script the whole operation that is described in the "Resolution" section, create a batch file that contains the following text:
-> sc config LanManServer depend= Samss/Srv/MSiSCSI  
+To script the whole operation that is described in the "Resolution" section, create a batch file that contains the following text:  
+
+```console
+sc config LanManServer depend= Samss/Srv/MSiSCSI  
 iscsicli BindPersistentVolumes
+```
 
 The issue could also happen to non-iscsi storage if server service is started before the storage has been initialized. In that case, we can use the below workaround, assuming G is the drive letter we want to monitor:
 
 1. Save the script as a `*.bat` file.
 
-    > :Start  
-    dir G: /AH  
-    if %errorlevel% equ 0 goto :OK  
-    ping 127.0.0.1 /n 5  
-    goto :Start  
-    :OK  
-    net stop browser  
-    net stop netlogon  
-    net stop dfs  
-    net stop lanmanserver /y  
-    net start lanmanserver  
-    net start dfs  
-    net start netlogon  
-    net start browser  
+      ```console
+       :Start  
+        dir G: /AH  
+        if %errorlevel% equ 0 goto :OK  
+        ping 127.0.0.1 /n 5  
+        goto :Start  
+        :OK  
+        net stop browser  
+        net stop netlogon  
+        net stop dfs  
+        net stop lanmanserver /y  
+        net start lanmanserver  
+        net start dfs  
+        net start netlogon  
+        net start browser  
+      ```
 
 2. We can add the bat file to "Start Script":  
 

@@ -55,7 +55,8 @@ Alternately, you can override Windows Photo Gallery's image size limit by editin
 6. Exit Registry Editor.
 7. Restart Windows Photo Gallery. The Value data to enter is the maximum image size that Windows Photo Gallery will be able to open, in megapixels. For example, entering a value of 150 will allow Windows Photo Gallery to open files of up to 150 megapixels in size. This value would be sufficient to allow viewing of 1200 dpi full-page scans.
 
-Note: Entering a value of 0 will disable the image size limit. However, this is not recommended, because if Windows Photo Gallery then attempts to open a large or corrupt file, it could potentially result in a hang or crash.
+> [!Note]
+> Entering a value of 0 will disable the image size limit. However, this is not recommended, because if Windows Photo Gallery then attempts to open a large or corrupt file, it could potentially result in a hang or crash.
 
 ## More information
 
