@@ -34,7 +34,7 @@ Task Category: (2)
 Level:         Warning  
 Keywords:      Classic  
 User:          SYSTEM  
-Computer:      server.fabrikam.com  
+Computer:      `server.fabrikam.com`  
 Description:  
 The user 'HP Printer' preference item in the 'Define Printers {XXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}' Group Policy object did not apply because it failed with error code '0x80070709 The printer name is invalid.' This error was suppressed.
 
@@ -48,7 +48,7 @@ The printer connection registry values will only be created by the Spooler Servi
 
 There is currently no hotfix available for this issue. Possible work-arounds include:
 
-1. Force a group policy update after logon using the GPUPDATE /FORCE command
+1. Force a group policy update after logon using the `GPUPDATE /FORCE` command
 2. Restart the Print Spooler (spooler) service after user logon
 3. Use a Scheduled Task to run a script after logon to define the default printer
 4. Use Registry Preferences to configure the default printer

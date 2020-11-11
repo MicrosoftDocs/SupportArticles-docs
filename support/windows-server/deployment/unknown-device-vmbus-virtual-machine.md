@@ -26,10 +26,10 @@ On a Windows Server 2012 R2 Datacenter Hyper-V host, you may see two **unknown d
 
 If you view the properties of these devices and check driver details, Hardware IDs, or Compatible IDs, they'll show the following:
 
-- vmbus\{4487b255-b88c-403f-bb51-d1f69cf17f87}
-- vmbus\{3375baf4-9e15-4b30-b765-67acb10d607b}
-- vmbus\{99221fa0-24ad-11e2-be98-001aa01bbf6e}
-- vmbus\{f8e65716-3cb3-4a06-9a60-1889c5cccab5}
+- vmbus\\{4487b255-b88c-403f-bb51-d1f69cf17f87}
+- vmbus\\{3375baf4-9e15-4b30-b765-67acb10d607b}
+- vmbus\\{99221fa0-24ad-11e2-be98-001aa01bbf6e}
+- vmbus\\{f8e65716-3cb3-4a06-9a60-1889c5cccab5}
 
 ## Cause
 

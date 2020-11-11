@@ -40,3 +40,12 @@ productDirectory:
     links:
     - url: general/welcome-general.md
       text: Troubleshooting articles for other Azure Services
+  - title: Need help?
+    imageSrc: "https://static.docs.com/ui/media/product/azure/sentinel.svg"
+    links:
+    - url: general/search-tips-find-troubleshooting-content.md
+      text: Advanced search tips for finding Microsoft troubleshooting content
+    - url: general/secure-file-exchange-transfer-files.md
+      text: Use Secure File Exchange to exchange files with Microsoft Support
+    - url: https://docs.microsoft.com/azure/azure-portal/supportability/how-to-create-azure-support-request
+      text: Create an Azure support request

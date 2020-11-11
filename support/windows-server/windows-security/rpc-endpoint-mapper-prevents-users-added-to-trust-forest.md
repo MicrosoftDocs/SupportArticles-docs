@@ -17,10 +17,11 @@ ms.technology: WindowsSecurity
 
 This article helps fix an error that occurs when you try to add a user or a group from a trusted forest into a local domain group of a domain in a trusting forest.
 
-Enabling RPC Endpoint Mapper client authentication prevents security principals (that is, users and groups from trusted forests) from being added to a local domain group in the trusting forest. For information about other components and operations that are affected by enabling RPC Endpoint Mapper client authentication, see the following ASKDS blog post: [Restrictions for Unauthenticated RPC Clients: The group policy that punches your domain in the face](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/restrictions-for-unauthenticated-rpc-clients-the-group-policy/ba-p/399128)
-
 _Original product version:_ &nbsp;  Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3073942
+
+Enabling RPC Endpoint Mapper client authentication prevents security principals (that is, users and groups from trusted forests) from being added to a local domain group in the trusting forest. For information about other components and operations that are affected by enabling RPC Endpoint Mapper client authentication, see the following ASKDS blog post:  
+[Restrictions for Unauthenticated RPC Clients: The group policy that punches your domain in the face](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/restrictions-for-unauthenticated-rpc-clients-the-group-policy/ba-p/399128)  
 
 ## Symptoms
 
@@ -32,11 +33,11 @@ Consider the following scenario:
 
 In this scenario, you receive the following error message:
 
-The Active Directory Domain Controllers required to find the selected objects in the following domains are not available:
-
-\<trusted-forest>
-
-Ensure the Active Directory Controllers are available, and try to select the objects again.
+>The Active Directory Domain Controllers required to find the selected objects in the following domains are not available:
+>
+>\<trusted-forest>
+>
+>Ensure the Active Directory Controllers are available, and try to select the objects again.
 
 You receive this message as in the following screenshot:
 
@@ -51,10 +52,9 @@ When RPC Endpoint Mapper client authentication is enabled, unauthenticated RPC t
 ## Resolution
 
 > [!IMPORTANT]
-> 
-Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756)  in case problems occur. 
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756)  in case problems occur.  
 
-To resolve this issue, use one of the following methods. 
+To resolve this issue, use one of the following methods.  
 
 ### Method 1
 
@@ -74,13 +74,13 @@ After you make this change, all domain controllers in the trusting forest must b
 
 Remove the following registry entry from every domain controller in the trusting forest:
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Rpc\RestrictRemoteClients` 
+`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Rpc\RestrictRemoteClients`  
 If it exists, also remove the following registry entry:
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Rpc\EnableAuthEpResolution` 
-Verify that Group Policy settings do not override these changes. All domain controllers in the trusting forest must be restarted after these settings are changed for the changes to take effect. 
+`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Rpc\EnableAuthEpResolution`  
+Verify that Group Policy settings do not override these changes. All domain controllers in the trusting forest must be restarted after these settings are changed for the changes to take effect.  
 
 ## More information
 
-Read the following blog about the problems that may result from enabling RPC Endpoint Mapper client authentication, especially on domain controllers:
+Read the following blog about the problems that may result from enabling RPC Endpoint Mapper client authentication, especially on domain controllers:  
  [Restrictions for Unauthenticated RPC Clients: The group policy that punches your domain in the face](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/restrictions-for-unauthenticated-rpc-clients-the-group-policy/ba-p/399128)
