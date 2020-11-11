@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 2819022
 
 ## Problem description
 
-If we want to run web application base on PHP platform, we must ensure our computer has IIS 8.0 as web server and PHP engine. By default, Windows 8 does not have one of them. But user can easily to activate IIS 8.0 feature and install PHP engine in Windows 8.
+If we want to run web application based on PHP platform, we must ensure our computer has IIS 8.0 as web server and PHP engine. By default, Windows 8 does not have one of them. But user can easily to activate IIS 8.0 feature and install PHP engine in Windows 8.
 
 ## Solutions
 
@@ -84,7 +84,7 @@ These are step to install and configure PHP with Web Platform Installer:
 
 ## Testing
 
-To check whether the installation and configuration are success, we can test it by follow these steps:
+To check whether the installation and configuration are successful, we can test it by following these steps:
 
 1. Create *info.php* file and type this code below as content.
 
