@@ -11,7 +11,6 @@ The content library is a new concept that was introduced in System Center 2012 C
 For more information, see [Understanding the Configuration Manager Content Library](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/Understanding-the-Configuration-Manager-Content-Library/ba-p/273349).
 
 _Original product version:_ &nbsp; Configuration Manager current branch, Microsoft System Center 2012 Configuration Manager, Microsoft System Center 2012 R2 Configuration Manager  
-_Original KB number:_ &nbsp; 4482728
 
 ## Content Library Explorer
 

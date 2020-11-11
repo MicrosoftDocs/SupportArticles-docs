@@ -1,5 +1,5 @@
 ---
-title: Can't authenticate because of an incorrect PIV smart card driver update
+title: Can't authenticate because of incorrect PIV 
 description: Describes how to resolve a problem that is caused by an incorrect driver update. The user can't sign in to Windows until the incorrect driver is removed.
 ms.date: 09/21/2020
 author: Deland-Han
@@ -60,31 +60,33 @@ In Settings, select **Updates & Security** > **View update history**. You should
 
 ### Manually delete the driver
 
-To manually remover the driver, follow these steps:
+To manually remover the driver, follow these steps:  
+
 1. Connect the smart card device to the computer.
 2. Start Device Manager. You can start Device Manager from Control Panel, or by pressing **Windows** + **R**, and then entering **devmgmt.msc**.
 3. Select **Smart cards**, right-click **xPass Smart Card**, and then select **Uninstall device**.
-    
+
     ![Uninstall a smart card driver by using Device Manager.](./media/cannot-authenticate-incorrect-piv-smart-card-driver-update/uninstall-device.png)
-    
+
 4. When you're prompted, select **Delete the driver software for this device**, and then select **Uninstall**.
 
     ![Uninstall the driver while you uninstall the device](./media/cannot-authenticate-incorrect-piv-smart-card-driver-update/select-uninstall.png)
 
-
 ### Create a script to delete the driver
 
-To automate the driver removal, create a script that can run in a batch file. The script identifies the driver .inf file name and uses PnPUtil.exe to delete the driver. The script can delete the driver even if a smart card or smart card device isn't connected to the computer. To create and use such a script, follow these steps:
+To automate the driver removal, create a script that can run in a batch file. The script identifies the driver .inf file name and uses PnPUtil.exe to delete the driver. The script can delete the driver even if a smart card or smart card device isn't connected to the computer. To create and use such a script, follow these steps:  
+
 1. Create a batch file that contains the following command sequence:
 
     ```console
     @echo off
-     
-    for /r %windir%\System32\DriverStore\FileRepository %%i in (*eps_piv_csp11.inf*) do (@echo %%i 
+
+    for /r %windir%\System32\DriverStore\FileRepository %%i in (*eps_piv_csp11.inf*) do (@echo %%i  
     pnputil /delete-driver %%i /uninstall /force)
-     
+
     pause
-    ``` 
+    ```
+
 2. On the affected computer, run the batch file in an administrative Command Prompt window.
 
 ## More information

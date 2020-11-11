@@ -1,5 +1,5 @@
 ---
-title: A list of Microsoft Knowledge Base articles is available to help troubleshoot error messages that you may receive when you upgrade to Windows Vista within Windows
+title: troubleshoot error messages when upgrading
 description: Contains a list of Knowledge Base articles to help troubleshoot error messages that you may receive when you upgrade Windows Vista.
 ms.date: 09/21/2020
 author: Deland-Han

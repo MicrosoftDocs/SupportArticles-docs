@@ -9,7 +9,6 @@ ms.prod-support-area-path:
 This guide helps you diagnose and resolve performance issues with the admin console in System Center 2016 Data Protection Manager (DPM 2016) and System Center 2012 Data Protection Manager (DPM 2012 or DPM 2012 R2).
 
 _Original product version:_ &nbsp; System Center 2016 Data Protection Manager, System Center 2012 Data Protection Manager, System Center 2012 R2 Data Protection Manager  
-_Original KB number:_ &nbsp; 10057
 
 This guide focuses on the most common database-related issues. If general performance issues are observed across the server as a whole, then the server may be overused. A performance monitor trace is a good place to start if you suspect server-wide performance issues. While server performance evaluation is something best left to experts, we have some general instructions for server performance analysis at [Use PerfMon to diagnose common server performance problems](/previous-versions/technet-magazine/cc718984(v=msdn.10)).
 
