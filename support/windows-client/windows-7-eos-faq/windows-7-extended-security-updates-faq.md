@@ -35,15 +35,15 @@ Windows 7 Extended Security Updates (ESU) include security updates for critical 
 
 ESU is available for Windows 7 Professional and Windows 7 Enterprise.  
 
-### When will the ESU offer be available?
+### When will the ESU offer be available
 
 ESU has been available in the Volume Licensing Service Center (VLSC) since April 1, 2019, and from Cloud Solution Providers (CSPs) since Monday, December 2, 2019.
 
-### Where can I find out more information about purchasing and installing Windows 7 ESU in Year 2? 
+### Where can I find out more information about purchasing and installing Windows 7 ESU in Year 2
 
 The process for purchasing and installing ESU in Year 2 is identical to the process for Year 1. For more details, see [Year two of Extended Security Updates for Windows 7 and Windows Server 2008](https://aka.ms/ESU-Year2).
 
-### Do Windows 7 Embedded products qualify for Windows 7 ESU?
+### Do Windows 7 Embedded products qualify for Windows 7 ESU
 
 To obtain Windows 7 ESU for Windows 7 Embedded products, you have to have an Ecosystem Partner Servicing Offering (EPSO) support contract. You can't purchase Embedded ESU through Volume Licensing. Extended Support end dates for Windows 7 Embedded vary by edition. For more information, go to the following websites:
 
@@ -55,12 +55,12 @@ Direct requests for ESU for Windows Server 2008 R2 for Embedded Systems and SQL 
 
 ## ESU purchasing  
 
-### Is there a deadline for organizations to purchase ESU for Windows 7?
+### Is there a deadline for organizations to purchase ESU for Windows 7
 
 Organizations can purchase ESU at any time during the three years that the offer is available (2020, 2021, and 2022). If an organization waits and purchases ESU for the first time in year two or year three, they'll have to pay for the preceding years also. It is because the security updates that are offered under the ESU program are cumulative.
 Although organizations can purchase ESU at any time, they should be aware that without ESU, they won't have received bug fixes or security updates since January 14, 2020. Additionally, Microsoft Support no longer provides any form of support for these customers. 
 
-### If an organization waits and purchases ESU for the first time in Year 2 or Year 3, do they have to purchase licenses for the preceding year(s) as well?
+### If an organization waits and purchases ESU for the first time in Year 2 or Year 3, do they have to purchase licenses for the preceding year(s) as well
 
 Yes. Because the updates are cumulative, organizations do have to pay for the preceding years if they purchase Windows 7 ESU for the first time in year two or year three. That is, customers must have purchased coverage for year 1 of Extended Security Updates in order to buy year 2, and coverage for year 2 in order to buy year 3. Customers may buy coverage for previous years at the same time they buy coverage for a current period. It is not necessary to buy a certain period of coverage within that coverage period.
 
@@ -235,7 +235,7 @@ For instructions to install and activate Windows 7 ESU MAK keys on multiple devi
 > [!Note]
 > Installing MAK keys adds the ability to receive ESU. It doesn't replace the current product activation key (for example, OEM, KMS), nor does it reactivate the system. Organizations will have to install a new MAK key for every year that they deploy ESU.
 
-### Do I need to uninstall the Windows 7 ESU Year 1 MAK key in order to install the Year 2 key?  
+### Do I need to uninstall the Windows 7 ESU Year 1 MAK key in order to install the Year 2 key
 
 No. Nothing needs to be done to the Year 1 key in order to install the Year 2 key. The installation process for Year 2 is identical to Year 1 (see previous question, above).
 
@@ -260,7 +260,7 @@ For more information about how to use MAK for VL customers, see the VLSC [Produc
 
 Yes. Organizations have to purchase, install, and activate new keys for each of the three years. 
 
-### How can I determine when my ESU key will expire?
+### How can I determine when my ESU key will expire
 
 The yearly ESU MAK keys do not expire. However, they do not enable the device to install updates beyond their designated time frame. For example, a device with only a Year 1 ESU MAK key would continue to be able to install updates made available during Year 1 even after the Year 1 time frame ends, but it would not receive any further updates in Year 2.
 
@@ -323,7 +323,7 @@ Yes. For detailed instructions, see [Obtaining Extended Security Updates for eli
 
 ## ESU for Windows 7 Embedded
 
-### Do Windows 7 Embedded products qualify for ESU?
+### Do Windows 7 Embedded products qualify for ESU
 
 Yes, there is an ESU program specifically for embedded devices. This program includes:
 
@@ -333,22 +333,22 @@ Yes, there is an ESU program specifically for embedded devices. This program inc
 
 The ESU for Windows 7 Embedded also includes Windows Server 2008 R2 for Embedded Systems and Microsoft SQL Server 2008 R2 for Embedded Systems. You should direct all embedded ESU requests to the original equipment manufacturer (OEM) of the device.
 
-### Where can I find more information about the embedded ESU program?
+### Where can I find more information about the embedded ESU program
 
 Contact your OEM for all Windows 7 Embedded ESU questions.
 
-### Why isn’t ESU for Windows Embedded Standard 7 available via CSP or volume licensing?
+### Why isn’t ESU for Windows Embedded Standard 7 available via CSP or volume licensing
 
 Windows Embedded Standard 7 is an embedded-only OS and is exclusively available from OEMs.
 
-### How much does ESU for Windows Embedded Standard 7 cost?
+### How much does ESU for Windows Embedded Standard 7 cost
 
 Contact your OEM for ESU pricing.
 
-### Will my customer’s devices running Windows Embedded Standard 7 be unprotected after October 13, 2020?
+### Will my customer’s devices running Windows Embedded Standard 7 be unprotected after October 13, 2020
 
 When security updates are available, Microsoft releases these monthly – on the second Tuesday of each month. If there are no critical or important updates released between October 14, 2020 and November 9, 2020, those devices will have the most current security updates from Microsoft. However, when the November 10, 2020 security updates are released, devices running WES will be unprotected and a security risk. 
 
-### How are “critical” and “important” updates defined?
+### How are “critical” and “important” updates defined
 
 Visit by the Microsoft Security Response Center (MSRC) for more information on security update ratings: https://aka.ms/msrc_ratings.
