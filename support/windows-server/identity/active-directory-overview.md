@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: smondal, kaushika
+ms.reviewer: kaushika
 ms.technology: ActiveDirectory
 ---
 # Active Directory documentation
@@ -18,6 +18,7 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Active Directory sub categories
 
+- Active Directory
 - Active Directory backup, restore, or disaster recovery
 - Active Directory Certificate Services
 - Active Directory database issues and domain controller boot failures
@@ -32,7 +33,7 @@ The topics in this section provide solutions and scenario guides to help you tro
 - Domain controller scalability or performance (including LDAP)
 - Domain join issues
 - LDAP configuration and interoperability
-- Schema update - known issues, best practices, workflow review
+- Schema update - known issues, best practies, workflow review
 - Schema update failure or conflict
 - Transport Layer Security (TLS)
 - User, computer, group, and object management
