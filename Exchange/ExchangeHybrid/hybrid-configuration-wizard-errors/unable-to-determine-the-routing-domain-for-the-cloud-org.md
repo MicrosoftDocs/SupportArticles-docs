@@ -17,7 +17,7 @@ appliesto:
 - Exchange Server 2013 Standard Edition 
 search.appverid: MET150
 ---
-# Unable to determine the routing domain for the cloud organization error when running Hybrid Configuration wizard
+# (Unable to determine the routing domain for the cloud organization) error when running Hybrid Configuration wizard
 
 _Original KB number:_ &nbsp; 3068010
 

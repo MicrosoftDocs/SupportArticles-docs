@@ -15,7 +15,7 @@ appliesto:
 - Exchange Online
 search.appverid: MET150
 ---
-# The user name or password is incorrect error when you run the Hybrid Configuration wizard
+# (The user name or password is incorrect) error when you run the Hybrid Configuration wizard
 
 _Original KB number:_ &nbsp; 3067290
 

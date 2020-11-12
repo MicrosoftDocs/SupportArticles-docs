@@ -17,7 +17,7 @@ appliesto:
 - Exchange Server 2013 Standard Edition
 search.appverid: MET150
 ---
-# The underlying connection was closed error when running Hybrid Configuration wizard
+# (The underlying connection was closed) error when running Hybrid Configuration wizard
 
 _Original KB number:_ &nbsp; 3068838
 

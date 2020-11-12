@@ -17,10 +17,10 @@ search.appverid: MET150
 ---
 # Office 365 users don't receive out-of-office notifications from on-premises users in a hybrid deployment
 
+_Original KB number:_ &nbsp; 2871053
+
 > [!NOTE]
 > The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
-
-_Original KB number:_ &nbsp; 2871053
 
 ## Symptoms
 
@@ -53,8 +53,8 @@ For more information about how to configure this setting in Exchange 2010, see [
 
 If you have an Exchange Server 2013 hybrid server, use the `Set-RemoteDomain` cmdlet to change the `-AllowedOOFType` property of the Office 365 remote domain. Here are two examples:
 
-- Set-RemoteDomain Contoso -AllowedOOFType External
-- Set-RemoteDomain Contoso -AllowedOOFType ExternalLegacy
+- `Set-RemoteDomain Contoso -AllowedOOFType External`
+- `Set-RemoteDomain Contoso -AllowedOOFType ExternalLegacy`
 
 For more information about the `Set-RemoteDomain` cmdlet, see [Set-RemoteDomain](/powershell/module/exchange/set-remotedomain?view=exchange-ps&preserve-view=true).
 
