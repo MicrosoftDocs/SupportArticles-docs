@@ -18,7 +18,6 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## System Management Components sub categories
 
-- System Management Components
 - Help and Support
 - Microsoft Management Console (MMC)
 - PowerShell

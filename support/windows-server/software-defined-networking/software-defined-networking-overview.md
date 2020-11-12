@@ -14,9 +14,8 @@ ms.technology: SDN
 ---
 # Software Defined Networking documentation
 
-The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve Software Defined Networking-related issues. The topics are divided into subcategories. Browse the content or use the search feature to find relevant content.
+The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve Software Defined Networking-related issues. Browse the content or use the search feature to find relevant content.
 
-## Software Defined Networking sub categories
+## Software Defined Networking sub category
 
-- Software Defined Networking
 - Internal DNS Server for SDN

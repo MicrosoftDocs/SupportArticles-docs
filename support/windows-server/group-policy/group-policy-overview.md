@@ -18,7 +18,6 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Group Policy sub categories
 
-- Group Policy
 - AppLocker or software restriction policies
 - Deploying software through Group Policy
 - Group Policy management - GPMC or AGPM

@@ -18,7 +18,6 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Active Directory sub categories
 
-- Active Directory
 - Active Directory backup, restore, or disaster recovery
 - Active Directory Certificate Services
 - Active Directory database issues and domain controller boot failures

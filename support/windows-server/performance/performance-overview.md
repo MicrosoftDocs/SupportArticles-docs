@@ -18,7 +18,6 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Performance sub categories
 
-- Performance
 - Applications
 - Blue Screen/Bugcheck
 - Boot is slow

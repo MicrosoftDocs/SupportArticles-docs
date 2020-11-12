@@ -14,8 +14,8 @@ ms.technology: windows-troubleshooters
 ---
 # windows-troubleshooters documentation
 
-The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve windows-troubleshooters-related issues. The topics are divided into subcategories. Browse the content or use the search feature to find relevant content.
+The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve windows-troubleshooters-related issues. Browse the content or use the search feature to find relevant content.
 
-## windows-troubleshooters sub categories
+## windows-troubleshooters sub category
 
 - Windows Troubleshooters

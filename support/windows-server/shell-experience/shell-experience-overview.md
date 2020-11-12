@@ -18,7 +18,6 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Shell Experience sub categories
 
-- Shell Experience
 - 1st Party Applications
 - Cortana and Search
 - Desktop Shell

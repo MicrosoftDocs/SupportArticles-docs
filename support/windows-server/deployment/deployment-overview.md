@@ -18,7 +18,6 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Deployment sub categories
 
-- Deployment
 - Activation
 - Bitlocker
 - Devices and Drivers

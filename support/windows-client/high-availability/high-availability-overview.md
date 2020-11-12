@@ -14,8 +14,8 @@ ms.technology: HighAvailability
 ---
 # High Availability documentation
 
-The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve High Availability-related issues. The topics are divided into subcategories. Browse the content or use the search feature to find relevant content.
+The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve High Availability-related issues. Browse the content or use the search feature to find relevant content.
 
-## High Availability sub categories
+## High Availability sub category
 
 - Nested Virtualization

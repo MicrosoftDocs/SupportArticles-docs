@@ -18,7 +18,6 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## High Availability sub categories
 
-- High Availability
 - Cannot bring a resource online
 - Cannot failover a group
 - Cluster node is hanging

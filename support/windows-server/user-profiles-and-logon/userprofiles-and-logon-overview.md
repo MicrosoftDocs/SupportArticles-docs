@@ -18,7 +18,6 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## UserProfiles and Logon sub categories
 
-- UserProfiles and Logon
 - Folder redirection
 - User Logon fails
 - User profiles

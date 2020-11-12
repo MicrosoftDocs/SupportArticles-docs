@@ -18,7 +18,6 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Backup and Storage sub categories
 
-- Backup and Storage
 - Active Directory backup and restore, or disaster recovery
 - Configuring and using Backup software
 - Data corruption and disk errors

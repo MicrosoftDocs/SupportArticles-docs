@@ -18,7 +18,6 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Networking sub categories
 
-- Networking
 - Access to remote file shares (SMB or DFS Namespace)
 - Background Intelligent Transfer Service (BITS)
 - DFSR

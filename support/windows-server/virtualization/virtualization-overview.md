@@ -18,7 +18,6 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Virtualization sub categories
 
-- Virtualization
 - Backup and restore of virtual machines
 - Container
 - Configuration of virtual machine settings

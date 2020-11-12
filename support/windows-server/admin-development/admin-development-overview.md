@@ -18,7 +18,6 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Admin Development sub categories
 
-- Admin Development
 - Active Directory Services Interface (ADSI)
 - Windows Management Instrumentation (WMI)
 - Windows PowerShell

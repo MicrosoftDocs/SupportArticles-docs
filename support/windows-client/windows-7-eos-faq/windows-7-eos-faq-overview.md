@@ -14,9 +14,9 @@ ms.technology: Windows 7 EoS FAQ
 ---
 # Windows 7 EoS FAQ documentation
 
-The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve Windows 7 EoS FAQ-related issues. The topics are divided into subcategories. Browse the content or use the search feature to find relevant content.
+The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve Windows 7 EoS FAQ-related issues. Browse the content or use the search feature to find relevant content.
 
-## Windows 7 EoS FAQ sub categories
+## Windows 7 EoS FAQ
 
 - Main page
 - General information

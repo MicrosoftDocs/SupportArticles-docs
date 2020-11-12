@@ -18,7 +18,6 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Application Management sub categories
 
-- Application Management
 - .NET Framework installation
 - 1st Party Applications
 - Application Compatibility Toolkit (ACT)

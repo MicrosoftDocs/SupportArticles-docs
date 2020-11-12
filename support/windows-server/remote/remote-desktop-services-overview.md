@@ -18,7 +18,6 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Remote Desktop Services sub categories
 
-- Remote Desktop Services
 - Administration
 - Application compatibility
 - Authentication
