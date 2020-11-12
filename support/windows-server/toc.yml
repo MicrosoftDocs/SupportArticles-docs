@@ -936,6 +936,8 @@
       href: ./deployment/why-prompted-restart-computer.md
     - name: Windows Server 2008 Service Pack 2
       href: ./deployment/windows-server-2008-service-pack-2.md
+    - name: WSUS 3.0 installation package is available
+      href: ./deployment/wsus-3-installation-package.md
     - name: WSUS 3.0 SP2 Dynamic Install for Server Manager
       href: ./deployment/windows-server-update-services-3-sp2.md
     - name: WSUS SelfUpdate doesn't send automatic updates
@@ -998,14 +1000,6 @@
       href: ./deployment/error-install-windows-internal-database.md
     - name: WSUS clients can't install updates
       href: ./deployment/wsus-clients-cant-install-updates.md
-- name: Depolyment
-  items:
-  - name: Depolyment
-    href: ./deployment/depolyment-overview.md
-  - name: Servicing
-    items:
-    - name: WSUS 3.0 installation package is available
-      href: ./deployment/wsus-3-installation-package.md
 - name: Group Policy
   items:
   - name: Group Policy
