@@ -17,7 +17,7 @@ appliesto:
 - Exchange Server 2013 Standard Edition
 search.appverid: MET150
 ---
-# The WSMan client cannot process the request error when you run Hybrid Configuration wizard
+# (The WSMan client cannot process the request) error when you run Hybrid Configuration wizard
 
 _Original KB number:_ &nbsp; 3067680
 

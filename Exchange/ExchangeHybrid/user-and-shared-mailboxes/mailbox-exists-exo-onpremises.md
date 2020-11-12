@@ -20,7 +20,6 @@ appliesto:
 - Exchange Server 2016
 - Exchange Server 2013
 ---
-
 # How to recover when a mailbox exists in both Exchange Online and on-premises
 
 ## Description
@@ -58,7 +57,7 @@ To use this method, follow these steps:
     Enable-RemoteMailbox "user identity" -RemoteRoutingAddress "user@contoso.mail.onmicrosoft.com"
     ```
 
-5. Restore any custom proxy addresses and any other Exchange attributes that were stripped when the mailbox was disabled (compare to the **Get-Mailbox** command from step 1).
+5. Restore any custom proxy addresses and any other Exchange attributes that were stripped when the mailbox was disabled (compare to the `Get-Mailbox` command from step 1).
 
 6. (Optional) Stamp the Exchange Online GUID on the remote mailbox (required if you ever want to off board the mailbox back to on-premises).
 
@@ -81,9 +80,9 @@ To use this method, follow these steps:
     > The remote restore isn't supported for Exchange 2010. The minimum supported version is Exchange 2013.
 
 > [!IMPORTANT]
-> Because New-MailboxRestoreRequest was designed to work in a single Exchange organization, the cross-premises restore jobs will fail due to an unavoidable mismatch between the source and target mailbox ExchangeGuid's.  The mailbox restore request will end in status "FailedOther", and the report (from `Get-MailboxRestoreRequestStatistics -IncludeReport`) will show the following error message in the final report Entry:
+> Because `New-MailboxRestoreRequest` was designed to work in a single Exchange organization, the cross-premises restore jobs will fail due to an unavoidable mismatch between the source and target mailbox ExchangeGuid's.  The mailbox restore request will end in status "FailedOther", and the report (from `Get-MailboxRestoreRequestStatistics -IncludeReport`) will show the following error message in the final report Entry:
 
-```
+```powershell
 Get-MailboxRestoreRequest "<mailbox's ID>" | `
 Get-MailboxRestoreRequestStatistics -IncludeReport | `
 select -ExpandProperty Report | `
@@ -125,7 +124,7 @@ ObjectState                : New
 
 This failure can be disregarded and the job instead treated as a success, as long as the second to last entry in the report shows the correct number of items having been copied (e.g. Copy Progress: 5000/5000 messages, 2.34 GB/2.34 GB).  For example:
 
-```
+```powershell
 Get-MailboxRestoreRequest "<mailbox's ID>" | `
 Get-MailboxRestoreRequestStatistics -IncludeReport | `
 select -ExpandProperty Report | `
@@ -162,7 +161,7 @@ LocalizedString            : mmmm/dddd/yyyy 12:16:36 AM [YTBPR01MB4016] Copy pro
                              (26,215,094 bytes)/25 MB (26,215,094 bytes), 0/0 folders completed.
 ```
 
-Any items reported in the BadItemsEncountered, LargeItemsEncountered, or MissingItemsEncountered properties (from `Get-MailboxRestoreRequestStatistics`) should be treated normally, as these would have been encountered regardless of whether the mailbox was migrated via migration batch / move request, or via New-MailboxRestoreRequest. 
+Any items reported in the BadItemsEncountered, LargeItemsEncountered, or MissingItemsEncountered properties (from `Get-MailboxRestoreRequestStatistics`) should be treated normally, as these would have been encountered regardless of whether the mailbox was migrated via migration batch / move request, or via New-MailboxRestoreRequest.
 
 ### Scenario 2: Remove Exchange Online mailbox data
 
