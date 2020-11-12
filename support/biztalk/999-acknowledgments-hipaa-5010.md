@@ -1,5 +1,5 @@
 ---
-title: 999 acknowledgments for HIPAA 5010
+title: 999 Acknowledgments for HIPAA 5010
 description: This article describes how to generate 999 functional acknowledgments using a custom pipeline with this new 999 schema.
 ms.date: 09/27/2020
 ms.prod-support-area-path: Accelerators
@@ -7,16 +7,16 @@ ms.reviewer: anandsi, MQuian
 ms.topic: how-to
 ms.prod: biztalk-server
 ---
-# Generate 999 acknowledgments for HIPAA 5010 in BizTalk Server 2010
+# Generate 999 Acknowledgments for HIPAA 5010 in BizTalk Server 2010
 
-This article describes how to generate 999 functional acknowledgments using a custom pipeline with this new 999 schema.
+This article describes how to generate 999 functional Acknowledgments using a custom pipeline with this new 999 schema.
 
 _Original product version:_ &nbsp; BizTalk Server Branch 2010, BizTalk Server Developer 2010, BizTalk Server Enterprise 2010, BizTalk Server Standard 2010  
 _Original KB number:_ &nbsp; 2669948
 
 ## Summary
 
-BizTalk Server 2010 cumulative update 3 includes a schema that allows 999 acknowledgments for HIPAA 5010.
+BizTalk Server 2010 cumulative update 3 includes a schema that allows 999 Acknowledgments for HIPAA 5010.
 
 ## Steps to extract the new 999 schema
 
@@ -78,7 +78,7 @@ BizTalk Server 2010 cumulative update 3 includes a schema that allows 999 acknow
 
     1. Create a party and the agreement. The specific steps are available at [Configuring EDI Properties.](/biztalk/core/configuring-edi-properties)
 
-    1. Configure the sending and receiving of the acknowledgments, including enabling the 997 acknowledgment. The specific steps are available at [Configuring the Sending and Receiving of EDI Acknowledgments](/biztalk/core/configuring-the-sending-and-receiving-of-edi-acknowledgments). The goal is to create the acknowledgment as if you were receiving a 997.
+    1. Configure the sending and receiving of the Acknowledgments, including enabling the 997 acknowledgment. The specific steps are available at [Configuring the Sending and Receiving of EDI Acknowledgments](/biztalk/core/configuring-the-sending-and-receiving-of-edi-acknowledgments). The goal is to create the acknowledgment as if you were receiving a 997.
 
    When the 997 acknowledgment is enabled, BizTalk EDI assumes that 997 Acknowledgment must be generated for the incoming message from the party. With the `Override997With999` property set to **True**, a 999 is returned *instead* of a 997. If you don't want a 997 or 999, uncheck the 997 Expected property in the agreement. A 997 and 999 acknowledgment cannot be generated simultaneously. If this is the goal, a custom pipeline component is needed.
 
@@ -87,9 +87,9 @@ BizTalk Server 2010 cumulative update 3 includes a schema that allows 999 acknow
 
 ## Key Points
 
-- When the EDIReceive pipeline is used in a receive location, the `Override997With999` option is not available. To generate 999 acknowledgments, you must create a custom receive pipeline and set the Use 999 Acknowledgment Instead of 997 option to **True**; as described above.
+- When the EDIReceive pipeline is used in a receive location, the `Override997With999` option is not available. To generate 999 Acknowledgments, you must create a custom receive pipeline and set the Use 999 Acknowledgment Instead of 997 option to **True**; as described above.
 
-- Use the `Override997With999` option in the pipeline configuration setting in BizTalk Administration to enable or disable generating 999 acknowledgments.
+- Use the `Override997With999` option in the pipeline configuration setting in BizTalk Administration to enable or disable generating 999 Acknowledgments.
 
 - Do not use the Extended Validation property in Validation in the agreement. Otherwise, 999 acknowledgment messages will suspend.
 

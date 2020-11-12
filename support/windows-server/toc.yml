@@ -2520,6 +2520,8 @@
       href: ./windows-security/kerberos-authentication-problems-if-user-belongs-to-groups.md
     - name: Kerberos SPN is on wrong account
       href: ./windows-security/kerberos-event-4-access-denied.md
+    - name: Kerberos Unsupported etype error
+      href: ./windows-security/unsupported-etype-error-accessing-trusted-domain.md
     - name: KRB_AP_ERR_MODIFIED error on Kerberos client
       href: ./windows-security/kerberos-client-krb-ap-err-modified-error.md
     - name: Logging on a user account fails

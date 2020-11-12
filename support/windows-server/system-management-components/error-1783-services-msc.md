@@ -22,10 +22,10 @@ _Original KB number:_ &nbsp; 2028588
 
 ## Symptoms
 
-When you open Services.msc, you may get the following error: 
+When you open Services.msc, you may get the following error:  
 
-*The system encountered the following error while reading the list of services on:*  
-** *Error 1783: The stub received bad data*  
+>The system encountered the following error while reading the list of services on:  
+Error 1783: The stub received bad data  
 
 Accessing Services remotely may yield the same error. You may be able to Start and Stop the services using sc start and sc stop commands.
 
@@ -41,8 +41,9 @@ Reduce the Number of Services. You can do this by:
 
 2. Uninstall unneeded services manually:
 
-a. Go to Registry Editor 
- b. Browse to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services Key.
- c. Back up the Services registry key and remove unwanted keys to reduce the number of items.
+    1. Go to Registry Editor  
+    2. Browse to `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services` Key.
+    3. Back up the Services registry key and remove unwanted keys to reduce the number of items.
 
-NOTE: It is not recommended to remove services manually as unintended side-effects could occur.
+> [!NOTE]
+> It is not recommended to remove services manually as unintended side-effects could occur.

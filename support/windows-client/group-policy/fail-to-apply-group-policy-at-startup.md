@@ -24,9 +24,7 @@ _Original KB number:_ &nbsp; 2421599
 
 Windows 7 clients intermittently fail group policy processing at startup or reboot. The following events are logged in the System event log:
 
-```
-Error 9/9/2010 2:43:29 PM NETLOGON 5719 Error 9/9/2010 2:43:31 PM GroupPolicy 1055
-```
+> Error 9/9/2010 2:43:29 PM NETLOGON 5719 Error 9/9/2010 2:43:31 PM GroupPolicy 1055
 
 ## Cause
 
@@ -34,44 +32,40 @@ The behavior is caused by a race condition between network initialization, locat
 
 The following sequence of events reflects the condition:
 
-```
-Information 8/9/2010 2:42:11 PM EventLog 6006 indicates system shutdown
-Information 8/9/2010 2:43:10 PM e1kexpress 33 indicates that your network connection link has been established with <speed/duplex>
-Information 8/9/2010 2:43:20 PM EventLog 6005 indicates event log service has started 
-Information 8/9/2010 2:43:25 PM Dhcp-Client 50036 indicates dhcp client service has started
-Error 8/9/2010 2:43:29 PM NETLOGON 5719 indicates netlogon unable to reach any of the domain controllers
-Error 8/9/2010 2:43:31 PM GroupPolicy 1055 indicates group policy processing failed 
-Information 8/9/2010 2:59:07 PM GroupPolicy 1503 indicates group policy processing succeeded
-```
+> Information 8/9/2010 2:42:11 PM EventLog 6006 indicates system shutdown  
+Information 8/9/2010 2:43:10 PM e1kexpress 33 indicates that your network connection link has been established with \<speed/duplex>  
+Information 8/9/2010 2:43:20 PM EventLog 6005 indicates event log service has started  
+Information 8/9/2010 2:43:25 PM Dhcp-Client 50036 indicates dhcp client service has started  
+Error 8/9/2010 2:43:29 PM NETLOGON 5719 indicates netlogon unable to reach any of the domain controllers  
+Error 8/9/2010 2:43:31 PM GroupPolicy 1055 indicates group policy processing failed  
+Information 8/9/2010 2:59:07 PM GroupPolicy 1503 indicates group policy processing succeeded  
 
 This can be confirmed via the netlogon logs as well:
 
-```
-8/09 14:43:29 [SESSION] \Device\NetBT_Tcpip_{53267BA1-EB8C-4348-BD81-41C3FF162EE9}: Transport Added (169.254.214.170) 08/09 14:43:29 [SESSION] Winsock Addrs: 169.254.214.170 (1) Address changed. 8/09 14:43:29 [CRITICAL] NetpDcGetDcNext: _ldap._tcp.dc._msdcs.contoso.com.: Cannot Query DNS. 1460 0x5b4 08/09 14:43:29 [CRITICAL] NetpDcGetNameIp: contoso.com.: No data returned from DnsQuery. 08/09 14:43:29 [CRITICAL] DBG: NlDiscoverDc: Cannot find DC. 08/09 14:43:29 [CRITICAL] DBG: NlSessionSetup: Session setup: cannot pick trusted DC 08/09 14:43:29 [SESSION] DBG: NlSetStatusClientSession: Set connection status to c000005e 08/09 14:43:29 [SESSION] DBG: NlSessionSetup: Session setup Failed
-```
+>8/09 14:43:29 [SESSION] \Device\NetBT_Tcpip_{53267BA1-EB8C-4348-BD81-41C3FF162EE9}: Transport Added (169.254.214.170) 08/09 14:43:29 [SESSION] Winsock Addrs: 169.254.214.170 (1) Address changed. 8/09 14:43:29 [CRITICAL] NetpDcGetDcNext: _ldap._tcp.dc._msdcs.contoso.com.: Cannot Query DNS. 1460 0x5b4 08/09 14:43:29 [CRITICAL] NetpDcGetNameIp: `contoso.com`.: No data returned from DnsQuery. 08/09 14:43:29 [CRITICAL] DBG: NlDiscoverDc: Cannot find DC. 08/09 14:43:29 [CRITICAL] DBG: NlSessionSetup: Session setup: cannot pick trusted DC 08/09 14:43:29 [SESSION] DBG: NlSetStatusClientSession: Set connection status to c000005e 08/09 14:43:29 [SESSION] DBG: NlSessionSetup: Session setup Failed
 
 ## Resolution
 
 To work around the issue, you can set a registry value to delay the application of Group Policy:
 
-1. Click Start, click Run, type regedit, and then click OK. 
+1. Click Start, click Run, type regedit, and then click OK.  
 
 2. Expand the following subkey:
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon 
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon`  
 
-3. Right-click Winlogon, point to New, and then click DWORD Value. 
+3. Right-click Winlogon, point to New, and then click DWORD Value.  
 
-4. To name the new entry, type GpNetworkStartTimeoutPolicyValue, and then press ENTER. 
+4. To name the new entry, type GpNetworkStartTimeoutPolicyValue, and then press ENTER.  
 
-5. Right-click GpNetworkStartTimeoutPolicyValue, and then click Modify. 
+5. Right-click GpNetworkStartTimeoutPolicyValue, and then click Modify.  
 
-6. Under Base, click Decimal. 
+6. Under Base, click Decimal.  
 
-7. In the Value data box, type 60, and then click OK. 
+7. In the Value data box, type 60, and then click OK.  
 
-8. Quit Registry Editor, and then restart the computer. 
+8. Quit Registry Editor, and then restart the computer.  
 
-9. If the Group Policy startup script does not run, increase the value of the GpNetworkStartTimeoutPolicyValue registry entry. 
+9. If the Group Policy startup script does not run, increase the value of the GpNetworkStartTimeoutPolicyValue registry entry.  
 
 ## More information
 
@@ -81,12 +75,13 @@ This can also be defined via a group policy:
 
 Policy Location: Computer Configuration > Policies > Admin Templates > System > Group Policy
 Setting Name: Startup policy processing wait time
-Registry Key: HKLM\Software\Policies\Microsoft\Windows\System!GpNetworkStartTimeoutPolicyValue
+Registry Key: `HKLM\Software\Policies\Microsoft\Windows\System!GpNetworkStartTimeoutPolicyValue`
 
 If you define the Group policy setting, then it would override the manual setting. However, if neither manual or group policy setting has been defined then the value is picked from the following registry location:
 
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\History
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\History`
 
 Since there is no time-out period defined, the system now uses its own algorithm to calculate and arrive at an Average time out period and this value is stored in the above registry location. This could vary system to system and depends on various factors like previous login attempts.
 
-(Note: The Group Policy description for "Startup Policy processing wait time" is not verbose and doesn't cover all scenarios. Just because we don't have the policy configured currently doesn't mean that we are going to use a default time-out value of 30 seconds.)
+> [!Note]
+> The Group Policy description for "Startup Policy processing wait time" is not verbose and doesn't cover all scenarios. Just because we don't have the policy configured currently doesn't mean that we are going to use a default time-out value of 30 seconds.

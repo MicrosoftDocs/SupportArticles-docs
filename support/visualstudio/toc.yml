@@ -18,6 +18,8 @@
     href: ./silverlight/run-configuration-tool.md
   - name: Slsvcutil.exe crashes
     href: ./silverlight/slsvcutil-tool-crashes.md
+  - name: An update is available for Silverlight 5
+    href: ./silverlight/update-available.md
 - name: Subscriptions
   items:
   - name: Opt out of dev essentials

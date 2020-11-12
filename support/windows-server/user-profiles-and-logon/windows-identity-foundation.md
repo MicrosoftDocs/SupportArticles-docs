@@ -22,25 +22,27 @@ _Original KB number:_ &nbsp; 974405
 
 ## Introduction
 
-Windows Identity Foundation (WIF) is a new extension to the Microsoft .NET Framework that makes it easy for developers to enable advanced identity capabilities in the .NET Framework applications. Based on interoperable, standard protocols, Windows Identity Foundation and the claims-based identity model can be used to enable single sign-on (SSO), personalization, federation, strong authentication, identity delegation, and other identity capabilities in ASP.NET and Windows Communication Foundation (WCF) applications that run on-premises or in the cloud.
+Windows Identity Foundation (WIF) is a new extension to the Microsoft .NET Framework that makes it easy for developers to enable advanced identity capabilities in the .NET Framework applications. Based on interoperable, standard protocols, Windows Identity Foundation and the claims-based identity model can be used to enable single sign-on (SSO), personalization, federation, strong authentication, identity delegation, and other identity capabilities in `ASP.NET` and Windows Communication Foundation (WCF) applications that run on-premises or in the cloud.
 
 ### System requirements
 
 Windows Identity Foundation requires that one of the following operating systems be installed:
- 
+
 - Windows 7 (32-bit or 64-bit)
 - Windows Server 2008 R2 (64-bit)
 - Windows Server 2008 together with Service Pack 2 (32-bit or 64-bit)
 - Windows Vista together with Service Pack 2 (32-bit or 64-bit)
 - Windows Server 2003 together with Service Pack 2 (32-bit or 64-bit)
-- Windows Server 2003 R2 (32-bit or 64-bit) Windows Identity Foundation requires the following to be installed:
+- Windows Server 2003 R2 (32-bit or 64-bit)  
 
-  - The Microsoft .NET Framework 3.5 together with Service Pack 1
+Windows Identity Foundation requires the following to be installed:
+
+- The Microsoft .NET Framework 3.5 together with Service Pack 1
 
 ### Supported languages
 
 Windows Identity Foundation is supported in the following languages:
- 
+
 - English
 - Dutch
 - French
@@ -51,7 +53,7 @@ Windows Identity Foundation is supported in the following languages:
 
 ### Download information
 
-The following files are available for download from the Microsoft Download Center. 
+The following files are available for download from the Microsoft Download Center.  
 
 |Package name|Supported operating system|Platform|Download file size|
 |---|---|---|---|
@@ -62,46 +64,33 @@ The following files are available for download from the Microsoft Download Cente
 |Windows5.2-KB974405-x64.exe|Windows Server 2003 SP2|x64|1.2 MB|
 |Windows5.2-KB974405-x86.exe|Windows Server 2003 SP2|x86|1.2 MB|
 
-
 #### Windows Vista SP2, Windows Server 2008 SP2, Windows 7 and Windows Server 2008 R2
 
-[Download the Windows Identity Foundation packages for Windows Vista SP2, Windows Server 2008 SP2, Windows 7 and Windows Server 2008 R2 package now.](https://www.microsoft.com/download/details.aspx?familyid=eb9c345f-e830-40b8-a5fe-ae7a864c4d76) 
+[Download the Windows Identity Foundation packages for Windows Vista SP2, Windows Server 2008 SP2, Windows 7 and Windows Server 2008 R2 package now.](https://www.microsoft.com/download/details.aspx?familyid=eb9c345f-e830-40b8-a5fe-ae7a864c4d76)  
 
 Release Date: November 16, 2009
 
-For more information about how to download Microsoft support files, click the following article number to view the article in the Microsoft Knowledge Base: [119591](https://support.microsoft.com/help/119591) How to obtain Microsoft support files from online services 
- Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file. 
-
-For more information about how to download Microsoft support files, click the following article number to view the article in the Microsoft Knowledge Base: [119591](https://support.microsoft.com/help/119591) How to obtain Microsoft support files from online services 
- Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file. 
+For more information about how to download Microsoft support files, click the following article number to view the article in the Microsoft Knowledge Base:  
+[119591](https://support.microsoft.com/help/119591) How to obtain Microsoft support files from online services  
+ Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file.  
 
 ## More information
 
-For more information about technical details and white papers, go to the following Microsoft websites: [https://msdn.microsoft.com/security/aa570351.aspx](https://msdn.microsoft.com/security/aa570351.aspx) 
+For more information about technical details and white papers, go to the following Microsoft websites:  
+[Microsoft Security Response Center](https://msdn.microsoft.com/security/aa570351.aspx)  
 
-[https://msdn.microsoft.com/library/ee748484.aspx](https://msdn.microsoft.com/library/ee748484.aspx) 
+[Microsoft documentation and learning for developers and technology professionals](https://msdn.microsoft.com/library/ee748484.aspx)  
 
 ### Windows operating system upgrade information
 
 If you have Windows Identity Foundation installed on Windows Server 2008 or on Windows Server 2003, Windows Identity Foundation will be automatically uninstalled when you upgrade your Windows operating system to Windows Server 2008 R2. You have to install the Windows Identity Foundation installation package for Windows Server 2008 R2 after your Windows operating system upgrade.
 
 If you have Windows Identity Foundation installed on Windows Server 2003, Windows Identity Foundation will remain on the upgraded operating system when you upgrade your Windows operating system to Windows Server 2008. We recommend that you uninstall the Windows Identity Foundation before you upgrade your Windows operating system and then reinstall Windows Identity Foundation for Windows Server 2008. You can use the following command to silently uninstall Windows Identity Foundation on Windows Server 2003:
-
-```console
-%windir%\\$NtUninstallKB974405$\\spuninst\\spuninst.exe /quiet
-```  
+`%windir%\\$NtUninstallKB974405$\\spuninst\\spuninst.exe /quiet`
 
 If an error occurs when you run this command, we recommend that you uninstall Windows Identity Foundation by using Programs and Features in Control Panel.
 
-### Privacy statement information
-
-Windows Identity Foundation is covered by the following Windows Server privacy statements:
-
-- For Windows Vista, go to the following Microsoft website: [https://www.microsoft.com/windowsvista/privacy/vistartm_full.mspx](https://www.microsoft.com/windowsvista/privacy/vistartm_full.mspx) 
-
-- For Windows 7, go to the following Microsoft website: [https://windows.microsoft.com/en-US/windows7/windows-7-privacy-statement-highlights](https://windows.microsoft.com/windows7/windows-7-privacy-statement-highlights) 
-
-## TECHNICAL REVISIONS
+## Technical revisions
 
 The following table lists significant technical revisions to this article.
 

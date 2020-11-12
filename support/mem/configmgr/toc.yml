@@ -390,8 +390,8 @@
           href: high-network-bandwidth-usage.md
         - name: Optimize WSUS client performance
           href: optimize-wsus-client-performance.md
-        - name: WSUS console crashes
-          href: wsus-console-crashes.md
+        - name: The spDeleteUpdate stored procedure runs slowly
+          href: spdeleteupdate-slow-performance.md          
         - name: Troubleshoot issues with WSUS client agents
           href: troubleshoot-issues-with-wsus-client-agents.md
         - name: Troubleshoot WSUS connection failures
@@ -406,6 +406,8 @@
           href: wsus-client-computers-restart-automatically.md
         - name: WSUS client takes too long to finish an update scan
           href: wsus-client-long-time-finish-update-scan.md
+        - name: WSUS console crashes
+          href: wsus-console-crashes.md
         - name: WSUS maintenance guide
           href: wsus-maintenance-guide.md
         - name: WSUS sync fails in Windows Server 2008 R2

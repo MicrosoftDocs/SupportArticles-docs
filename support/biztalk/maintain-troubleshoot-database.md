@@ -216,7 +216,7 @@ Consider the following scenarios.
 
   - Ready-to-run instances
   - Active instances
-  - Dehydrated instancesBizTalk Server needs time to "catch up" and process the instances.
+  - Dehydrated instances BizTalk Server needs time to "catch up" and process the instances.
 
   This table can grow when the incoming rate of processing outpaces the outgoing rate of processing. This scenario can occur when another problem occurs, such as a large `BizTalkDTADb` database or SQL Server disk delays.
 

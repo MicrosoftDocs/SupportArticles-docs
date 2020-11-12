@@ -26,7 +26,7 @@ When you use a third-party virtual private network (VPN) client to connect to a 
 
 ## Cause
 
-A time lag in some third-party VPN clients sometimes causes this issue. The lag occurs when the client adds the necessary routes to the domain network. 
+A time lag in some third-party VPN clients sometimes causes this issue. The lag occurs when the client adds the necessary routes to the domain network.  
 
 ## Resolution
 
@@ -34,36 +34,35 @@ To fix this issue, we recommend that you contact the VPN provider for a solution
 
 For VPN providers, you can use callback APIs to add routes as soon as the VPN adapter arrives at Windows. For example:
 
-- **NotifyUnicastIpAddressChange**: Alerts callers of any changes to any IP address, including changes in DAD state. 
-- **NotifyIpInterfaceChange**: Registers a callback for notification of changes to all IP interfaces. 
+- **NotifyUnicastIpAddressChange**: Alerts callers of any changes to any IP address, including changes in DAD state.  
+- **NotifyIpInterfaceChange**: Registers a callback for notification of changes to all IP interfaces.  
 
-In user mode, there are IpHelper APIs. For example: 
+In user mode, there are IpHelper APIs. For example:  
 
-- **NotifyAddrChanget**: Notifies the user about address changes. 
+- **NotifyAddrChanget**: Notifies the user about address changes.  
 
-## Workaround
+## Workaround  
 
-**Important**  
-
-Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+> [!IMPORTANT]
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 To work around this issue, disable negative cache to help the NLA service when it retries domain detection. To do this, use the following methods.
 
 - First, disable Domain Discovery negative cache by adding the **NegativeCachePeriod** registry key to following subkey:
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NetLogon\Parameters`  
-    
+
     Name: **NegativeCachePeriod**  
     Type: **REG_DWORD**  
     Value Data: **0** (default value: **45** seconds; set to **0** to disable caching)  
 - If issue doesn't resolve, further disable DNS negative cache by adding the **MaxNegativeCacheTtl**  registry key to the following subkey:
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters`  
-    
-    Name: ** MaxNegativeCacheTtl**  
+
+    Name: **MaxNegativeCacheTtl**  
     Type: **REG_DWORD**  
-    Value Data: **0** (default value: 5 seconds; set to **0** to disable caching)
-    
+    Value Data: **0** (default value: **5** seconds; set to **0** to disable caching)
+
 ## More information
 
 When the issue occurs, the flow of events is as follows:

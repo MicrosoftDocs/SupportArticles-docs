@@ -28,6 +28,7 @@ Consider the following scenario:
 - You log on by using the local administrator account instead of the built-in Administrator account and then configure the server to be the first domain controller in a new domain or forest. As expected, this local account becomes a domain account.
 - You use this domain account to log on.
 - You try to perform various Active Directory Domain Services (AD DS) operations.
+
 In this scenario, you receive access denied errors.
 
 ## Cause

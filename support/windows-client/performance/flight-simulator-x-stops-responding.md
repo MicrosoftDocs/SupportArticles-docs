@@ -27,9 +27,10 @@ When you start Flight Simulator X, the game stops responding (hangs) on the load
 ## Resolution
 
 To resolve this issue, rename the Logbook.bin file. To do this, follow these steps:
+
 1. Click **Start**.
 2. Click **My Documents** or **Documents**.
 3. Double-click the Microsoft Flight Simulator X Files folder to open it.
 4. Right-click the Logbook.bin file, and then click **Rename**.
-5. Rename the file to Logbook.OLD, and then press ENTER.
-6. Start *Flight Simulator X* to create a new Logbook file.
+5. Rename the file to *Logbook.OLD*, and then press ENTER.
+6. Start Flight Simulator X to create a new Logbook file.
