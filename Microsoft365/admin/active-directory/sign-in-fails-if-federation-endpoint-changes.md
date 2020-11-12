@@ -24,20 +24,20 @@ appliesto:
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-## Problem 
+## Problem
 
-After you change Active Directory Federation Services (AD FS) service endpoint settings in the AD FS Management Console, single sign-on (SSO) authentication to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune fails, and you experience one of the following symptoms: 
- 
-- Federated users can't sign-in to Office 365, Azure, or Intune by using rich client applications.    
-- Browser applications repeatedly prompt users for credentials when they try to authenticate to AD FS during SSO authentication.    
-  
+After you change Active Directory Federation Services (AD FS) service endpoint settings in the AD FS Management Console, single sign-on (SSO) authentication to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune fails, and you experience one of the following symptoms:
+
+- Federated users can't sign-in to Office 365, Azure, or Intune by using rich client applications.
+- Browser applications repeatedly prompt users for credentials when they try to authenticate to AD FS during SSO authentication.
+
 
 ## Cause
 
 This issue may occur if one of the following conditions is true:
 
-- The AD FS service endpoints are inappropriately configured.   
-- Kerberos authentication on the AD FS server is broken.   
+- The AD FS service endpoints are inappropriately configured.
+- Kerberos authentication on the AD FS server is broken.
 
 
 ## Solution
@@ -45,8 +45,8 @@ This issue may occur if one of the following conditions is true:
 To resolve this issue, use one of the following methods, as appropriate for your situation.
 
 ### Resolution 1: Restore the default AD FS service endpoint configuration
- To restore AD FS default service endpoint settings, follow these steps on the primary AD FS server: 
- 
+To restore AD FS default service endpoint settings, follow these steps on the primary AD FS server:
+
 1. Open the AD FS Management Console, and in the left navigation pane, browse to **AD FS**, then **Service**, and then **Endpoints**.
 
    ![ADFS Endpoints](./media/sign-in-fails-if-federation-endpoint-changes/adfs-endpoints.png)
@@ -74,16 +74,17 @@ To resolve this issue, use one of the following methods, as appropriate for your
 
 3. If an item in the list doesn't match the default settings in the previous table, right-click the entry, and then select **Enable** or **Enable on Proxy** as necessary.
 
-   **Note**   
-   WS-Trust Windows endpoints (/adfs/services/trust/2005/windowstransport and/adfs/services/trust/13/windowstransport) are meant only to be intranet facing endpoints that use WIA binding on HTTPS.
+   > [!NOTE]
+   > WS-Trust Windows endpoints (/adfs/services/trust/2005/windowstransport and /adfs/services/trust/13/windowstransport) are meant only to be intranet facing endpoints that use WIA binding on HTTPS.
 
-   These endpoints should always be kept disabled on the proxy (i.e. disabled from extranet) to protect AD account lockouts.         
- 
+   These endpoints should always be kept disabled on the proxy (i.e. disabled from extranet) to protect AD account lockouts.
+
 ### Resolution 2: Troubleshoot Kerberos authentication issues
- For more info about how to troubleshoot Kerberos authentication issues, see the following Microsoft Knowledge Base article:
 
- [2461628](https://support.microsoft.com/help/2461628) A federated user is repeatedly prompted for credentials during sign-in to Office 365, Azure, or Intune   
+For more info about how to troubleshoot Kerberos authentication issues, see the following Microsoft Knowledge Base article:
 
-## More Information 
+[2461628](https://support.microsoft.com/help/2461628) A federated user is repeatedly prompted for credentials during sign-in to Office 365, Azure, or Intune
+
+## More Information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
