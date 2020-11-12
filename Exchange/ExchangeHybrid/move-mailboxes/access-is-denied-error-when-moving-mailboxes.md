@@ -15,7 +15,7 @@ appliesto:
 - Exchange Online
 search.appverid: MET150
 ---
-# Access is denied error when you try to move mailboxes to Exchange Online in a hybrid deployment
+# (Access is denied) error when you try to move mailboxes to Exchange Online in a hybrid deployment
 
 _Original KB number:_ &nbsp; 2975731
 

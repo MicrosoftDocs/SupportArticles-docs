@@ -19,10 +19,10 @@ search.appverid: MET150
 ---
 # Execution failed Configure Legacy Exchange Support error when you run the Hybrid Configuration wizard
 
+_Original KB number:_ &nbsp; 2816904
+
 > [!NOTE]
 > The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
-
-_Original KB number:_ &nbsp; 2816904
 
 ## Symptoms
 

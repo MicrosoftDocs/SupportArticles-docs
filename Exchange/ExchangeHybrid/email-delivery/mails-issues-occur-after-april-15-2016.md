@@ -21,7 +21,7 @@ search.appverid: MET150
 
 _Original KB number:_ &nbsp; 3156771
 
-## PROBLEM
+## Problem
 
 Consider the following scenario:
 
@@ -32,7 +32,7 @@ Consider the following scenario:
 In this scenario, you experience one or more of the following symptoms after April 15, 2016:
 
 - Email messages from Exchange Online users to on-premises users are missing Skype for Business presence information.
-- Email messages from Exchange Online users to on-premises users display the sender name as \<FirstName> \<LastName \<SMTPaddress> instead of as \<FirstName> \<LastName>.
+- Email messages from Exchange Online users to on-premises users display the sender name as \<FirstName> \<LastName> \<SMTPaddress> instead of as \<FirstName> \<LastName>.
 - If you disabled any receive connectors other than the Default FrontEnd connector, and you enabled domain validation on the Default Frontend connector in your environment, the following error message is shown when Exchange Online users send mail to on-premises users. This message is displayed in the deferral message in the **Message Tracking** dialog box in the Exchange admin center.
 
   > 451 4.7.0 Temporary server error. Please try again later. PRX5
