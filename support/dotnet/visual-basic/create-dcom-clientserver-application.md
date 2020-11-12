@@ -98,7 +98,7 @@ Package the client by using the following steps:
 
    You should now be in the Included Files dialog box.
 
-4. Deselect the server's executable file, DCOMDemo_Svr.exe, because you do note want to distribute the server's executable, and then click the Add button.
+4. Deselect the server's executable file, DCOMDemo_Svr.exe, because you don't want to distribute the server's executable, and then click the Add button.
 5. Change the Files of Type combo box to Remote Server Files (*.vbr).
 6. Point to the folder where you have your Server's project (in this case `c:\DCOMDemo\Server`), and select the related VBR file, *DCOMDemo_Svr.VBR*. Click **Open**, and the **Add File** dialog box closes.
 

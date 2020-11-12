@@ -20,11 +20,11 @@ This article demonstrates how to determine if your program is running in the Vis
 
 There are two methods you can use to determine if your program is running from the IDE or the EXE.
 
-- Method 1: EXE File Name Differs from Project Name
+- Method 1: EXE file name differs from project name
 
   The App object contains general information about the program, such as the executable file name. If the project name and the compiled version of the project have different file names, then you can use the `App.EXEName` property to determine if the EXE is running or if your project is running in the IDE. If the program is running from the Visual Basic IDE, the `EXEName` property returns the project name. When a program is running from an executable, the `EXEName` property contains the EXE file name.
 
-- Method 2: EXE File Name and the Project Name Are the Same
+- Method 2: EXE file name and the project name are the same
 
   If the project name and the compiled version share the same name, then use the `GetModuleFileName` API function to determine if your program is running from the IDE or from a compiled version. `GetModuleFileName` retrieves the full path and filename for the executable file containing the specified module. If the function returns a path to the Visual Basic file, VB5.EXE, then the program is running in the IDE. Otherwise, the program is running from an executable file.
 
