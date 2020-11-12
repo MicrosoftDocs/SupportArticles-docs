@@ -2,8 +2,6 @@
   href: welcome-windows-server.md
 - name: Active Directory
   items:
-  - name: Overview
-    href: ./identity/active-directory-overview.md
   - name: Active Directory backup, restore, or disaster recovery
     items:
     - name: c00002e2 error or "Choose an option" is displayed
@@ -518,8 +516,6 @@
       href: ./identity/windows-time-service-values-reverted.md
 - name: Admin Development
   items:
-  - name: Overview
-    href: ./admin-development/admin-development-overview.md
   - name: Active Directory Services Interface (ADSI)
     items:
     - name: Convert string formatted GUID to hexadecimal string form
@@ -540,8 +536,6 @@
       href: ./admin-development/events-not-forwarded-by-windows-server-collector.md
 - name: Application Management
   items:
-  - name: Overview
-    href: ./application-management/application-management-overview.md
   - name: .NET Framework installation
     items:
     - name: Services depending on ASP.NET State Service don't start
@@ -600,8 +594,6 @@
       href: ./application-management/run-logon-script-once-new-user-logs.md
 - name: Backup and Storage
   items:
-  - name: Overview
-    href: ./backup-and-storage/backup-and-storage-overview.md
   - name: Active Directory backup and restore, or disaster recovery
     items:
     - name: Shelf life of a system-state backup of AD
