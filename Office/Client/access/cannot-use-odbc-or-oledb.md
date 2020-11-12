@@ -65,10 +65,9 @@ Use the following table to understand if additional components are necessary to 
 | Office 2010/2013/2016 MSI |	No |	- |
 | No Office installation |	Yes |	[Microsoft 365 Access Runtime](https://support.microsoft.com/en-us/office/download-and-install-microsoft-365-access-runtime-185c5a32-8ba9-491e-ac76-91cbe3ea09c9) |
 
-
-**Note** The [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920) is not provided as a recommended solution for the indicated scenarios as both the Access Database Engine 2016 and M365 Apps use the same major version identifier (16.0) which may introduce unexpected behaviors. Office side-by-side detection will also prevent the installation from proceeding if this scenario is detected.
-
-**Note2** The [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255) is no longer suggested as a recommended solution because Office 2010 has reached the end of the Microsoft Support Lifecycle.
+> [!NOTE]
+> - The [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920) is not provided as a recommended solution for the indicated scenarios as both the Access Database Engine 2016 and M365 Apps use the same major version identifier (16.0) which may introduce unexpected behaviors. Office side-by-side detection will also prevent the installation from proceeding if this scenario is detected.
+> - The [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255) is no longer suggested as a recommended solution because Office 2010 has reached the end of the Microsoft Support Lifecycle.
 
 ### Additional information for creating ODBC connections 
 
