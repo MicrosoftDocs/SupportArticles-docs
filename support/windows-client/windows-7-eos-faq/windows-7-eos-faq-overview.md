@@ -14,12 +14,12 @@ ms.technology: Windows 7 EoS FAQ
 ---
 # Windows 7 EoS FAQ documentation
 
-The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve Windows 7 EoS FAQ-related issues. Browse the content or use the search feature to find relevant content.
+The topics in this section provide Windows 7 EoS FAQs. Browse the content or use the search feature to find relevant content.
 
 ## Windows 7 EoS FAQ
 
-- Main page
-- General information
-- Windows 7 Extended Security Updates (ESU)
-- E5 ESU offers
-- Troubleshoot issues in ESU
+- [IT Pro FAQ about the end of support for Windows 7](./windows-7-end-support-faq.md)
+- [FAQ about the end of support for Windows 7](./windows-7-end-support-faq-general.md)
+- [FAQ about Extended Security Updates for Windows 7](./windows-7-extended-security-updates-faq.md)
+- [FAQ about Windows 7 ESU offers for E5 customers](./windows-7-esu-offers-e5-customers-faq.md)
+- [Troubleshoot issues in Extended Security Updates](./troubleshoot-extended-security-updates-issues.md)

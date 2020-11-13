@@ -902,6 +902,8 @@
       href: ./virtualization/hyper-v-not-start-vm-after-upgrade.md
 - name: Windows 7 EoS FAQ
   items:
+  - name: Windows 7 EoS FAQ
+    href: ./windows-7-eos-faq/windows-7-eos-faq-overview.md
   - name: IT Pro FAQ about the end of support for Windows 7
     href: ./windows-7-eos-faq/windows-7-end-support-faq.md
   - name: FAQ about the end of support for Windows 7
