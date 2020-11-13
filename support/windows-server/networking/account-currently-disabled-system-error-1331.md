@@ -22,9 +22,10 @@ _Original KB number:_ &nbsp; 263936
 
 ## Symptoms
 
-When you attempt to connect to a share, you may receive the following error message:
- **Share path/Name** is not accessible.
-Logon failure: account currently disabled.
+When you attempt to connect to a share, you may receive the following error message:  
+> **Share path/Name** is not accessible.  
+Logon failure: account currently disabled.  
+
 The computer may also display a "System error 1331" error message, which is the equivalent of the preceding "Logon failure: account currently disabled" error message.
 
 > [!NOTE]
@@ -46,5 +47,5 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 
 ## More information
 
-The resolution in this article has also been documented to resolve the problem that causes the following error message:
-Access is denied; account is currently disabled.
+The resolution in this article has also been documented to resolve the problem that causes the following error message:  
+> Access is denied; account is currently disabled.

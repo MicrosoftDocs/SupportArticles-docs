@@ -1,5 +1,5 @@
 ---
-title: How to configure FTP for IIS in a Windows Server failover cluster
+title: Configure FTP for IIS in a Windows Server failover cluster
 description: Describes how to configure FTP for IIS in a Windows Server failover cluster.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,12 +17,13 @@ ms.technology: HighAvailability
 
 This article describes how to configure FTP for Internet Information Services (IIS) 8.0 or a later version in a Windows Server failover cluster. The procedures in this article apply only to the FTP service.  
 
+> [!NOTE]
 For more information about how to configure Web services in a failover cluster, click the following article number to view the article in the Microsoft Knowledge Base:
+>
+> [970759](https://support.microsoft.com/help/970759) Configuring IIS World Wide Web Publishing Service in a Windows Server failover cluster
 
- [970759](https://support.microsoft.com/help/970759) Configuring IIS World Wide Web Publishing Service in a Windows Server failover cluster
-
-_Original product version:_ &nbsp;Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;974603
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 974603
 
 ## Configure high availability for IIS FTP servers using Failover Clustering
 
@@ -47,7 +48,7 @@ _Original KB number:_ &nbsp;974603
     - On the same failover cluster that will host the high availability FTP site, create a high availability file share. For more information, visit the following Microsoft website: [Failover Cluster Step-by-Step Guide: Configuring a Two-Node File Server Failover Cluster](https://technet.microsoft.com/library/cc731844.aspx)
 
 3. Set the permissions on the share that you created in step 2. Give the user whom you created in step 1 Full Control permissions to the file share and NTFS permissions.
-4. Confirm that all cluster nodes can browse to the file share. The path of the file share is \\\\\<fileservername>\\\<sharename>.
+4. Confirm that all cluster nodes can browse to the file share. The path of the file share is `\\<fileservername>\<sharename>`.
 
 ## Configure the IIS shared configuration on all cluster nodes
 
@@ -55,9 +56,9 @@ On one of the cluster nodes, export the shared configuration to the file share:
 
 1. Navigate to **Administrative Tools**, and then select **Internet Information Services (IIS) Manager**.
 2. In the left pane, select the server name node.
-3. Double-click the **Shared Configuration** **** icon.
+3. Double-click the **Shared Configuration** icon.
 4. On the Shared Configuration page, select **Export Configuration** in the **Actions** pane (the right pane) to export the configuration files from the local computer to another location.
-5. In the **Export Configuration** dialog box, type the path of the file share (\\\\\<fileservername>\\\<sharename>) in the **Physical path** box.
+5. In the **Export Configuration** dialog box, type the path of the file share (`\\<fileservername>\<sharename>`) in the **Physical path** box.
 6. Select **Connect As**, and then type the user name and the password for the user account that has access to the share in which the shared configuration is stored, and then select **OK**. This account will be used to access the share. You should use a restricted Active Directory account that's not the domain administrator.
 7. In the **Export Configuration** dialog box, type a password that will be used to protect the encryption keys, and then select **OK**.
 8. On the **Shared Configuration** page, select the **Enable shared configuration** check box.
@@ -72,13 +73,13 @@ On each of the other cluster nodes, use the shared configuration that you just e
 2. Select the server name node.
 3. Double-click the **Shared Configuration** icon.
 4. On the **Shared Configuration** page, select the **Enable shared configuration** check box.
-5. Type the physical path of the file share (\\\<fileservername>\\\<sharename>), the user account, and the password that you entered previously, and then select **Apply** in the **Actions** pane.
+5. Type the physical path of the file share (`\\<fileservername>\<sharename>`), the user account, and the password that you entered previously, and then select **Apply** in the **Actions** pane.
 6. In the **Encryption Keys Password** dialog box, type the encryption key password that you set earlier, and then select **OK**.
 7. In the Shared Configuration dialog box, select **OK**.
 8. Select **OK**.
 
 > [!NOTE]
->*For more information about how to set up shared configurations in IIS, visit the following Microsoft website: [Shared Configuration](http://learn.iis.net/page.aspx/264/shared-configuration)
+> For more information about how to set up shared configurations in IIS, visit the following Microsoft website: [Shared Configuration](https://learn.iis.net/page.aspx/264/shared-configuration)
 
 ## Configure Offline Files for IIS Shared Configuration on all cluster nodes
 
@@ -92,8 +93,8 @@ On each cluster node, enable Offline Files:
     4. Do one of the following, as appropriate for your Windows version:
        - For Windows Server 2016, go to the [Install Server with Desktop Experience](https://docs.microsoft.com/windows-server/get-started/getting-started-with-server-with-desktop-experience) topic on the Microsoft Docs website.
        - For Windows Server 2102 and 2012 R2, choose **Desktop Experience** under **User Interfaces and Infrastructures** in the features list
-2. Do the following:
-   - For Windows Server 2012, 2012 R2 and 2016, select **Sync Center** in Control Panel, and then select **Manage offline files.**
+2. Do the following:  
+   For Windows Server 2012, 2012 R2 and 2016, select **Sync Center** in Control Panel, and then select **Manage offline files.**
 3. Select **Enable Offline Files**. Don't restart the computer at this point.
 4. Ensure that the cache is set to read-only. To do this, run the following command at an elevated cmd prompt:
 
@@ -110,7 +111,7 @@ On each cluster node, enable Offline Files:
 8. Schedule an offline file sync for every day or according to your requirements. You can also configure the offline sync to run every few minutes. Even if you don't set up a scheduler, when you change something in the Applicationhost.config file, the change is reflected on the Web server.
 
 > [!NOTE]
-> For more information about how to configure offline files for a shared configuration in IIS, visit the following Microsoft website: [Offline Files for Shared Configuration](http://learn.iis.net/page.aspx/212/offline-files-for-shared-configuration)
+> For more information about how to configure offline files for a shared configuration in IIS, visit the following Microsoft website: [Offline Files for Shared Configuration](https://learn.iis.net/page.aspx/212/offline-files-for-shared-configuration)
 
 ## Configure the FTP site and specify the location of its content on one cluster node
 
@@ -135,24 +136,26 @@ On the cluster node on which the resource is online, configure the FTP server to
 
 For the last step to configure high availability for FTP site, set up the generic script resource that will be used to monitor the FTP service:
 
-1. On each cluster node, copy the script at the end of this article to Windows\System32\inetsrv\Clusftp7.vbs.
+1. On each cluster node, copy the script at the end of this article to `Windows\System32\inetsrv\Clusftp7.vbs`.
 2. Navigate to **Administrative Tools**, and then select **Failover Cluster Manager**.
 3. Connect to the cluster. If you are on one of the cluster nodes, the cluster will appear on the list automatically.
-4. Do the following:
-   - For Windows Server 2012, 2012 R2 and 2016, right-click **Roles** and then select **Configure Role** to create it.
+4. Do the following:  
+For Windows Server 2012, 2012 R2 and 2016, right-click **Roles** and then select **Configure Role** to create it.
 5. Click **Generic Script**.
-6. Select the script file from the following path:%systemroot%\System32\Inetsrv\Clusftp7.vbs
+6. Select the script file from the following path:  
+`%systemroot%\System32\Inetsrv\Clusftp7.vbs`
 7. Set the Client Access Point (CAP) name to the FTP site name that clients will use to connect to the high availability FTP site. Specify the static IPs to use for the FTP site CAP. If you're using Dynamic Host Configuration Protocol (DHCP), this option won't be displayed.
 8. In the **Select Storage** step, select the cluster shared disk on which the FTP site content files reside. The storage should be unused by any other high availability application on the cluster. If the file share that is used for the IIS shared configuration is hosted on the same cluster, a different disk resource should be used here.
 9. After you confirm the settings, the wizard will create the cluster group, cluster resources, and the dependencies between the resources, and then bring the resources online.
 
 > [!NOTE]
-> To host multiple high availability FTP sites on the same failover cluster, follow the same steps that are mentioned earlier. You can point to the same script file for all FTP sites on the cluster if you did not customize the script. However, if you make changes that are specific to the individual FTP sites, use a different script file for each FTP site and different clustered shared storage. For example, in %systemroot%\System32\Inetsrv, useClusftp7.vbsfor the first FTP site,Clftp7-2.vbsfor the second,Clftp7-3.vbsfor the third, and so on. Each script file monitors a different FTP site.
+> To host multiple high availability FTP sites on the same failover cluster, follow the same steps that are mentioned earlier. You can point to the same script file for all FTP sites on the cluster if you did not customize the script. However, if you make changes that are specific to the individual FTP sites, use a different script file for each FTP site and different clustered shared storage. For example, in `%systemroot%\System32\Inetsrv, useClusftp7.vbs` for the first FTP site,Clftp7-2.vbsfor the second,Clftp7-3.vbsfor the third, and so on. Each script file monitors a different FTP site.
 
 > [!IMPORTANT]
 > The following script is for sample purposes only and is not explicitly supported by Microsoft. Use of this script in an IIS 8.0 FTP clustered environment is done at your own risk.
 
-```console
+```vbscript
+
 '<begin script sample>
 
 'This script provides high availability for IIS FTP websites

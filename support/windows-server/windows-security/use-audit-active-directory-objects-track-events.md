@@ -1,5 +1,5 @@
 ---
-title: How to enable Audit Active Directory objects in Windows Server 2003
+title: How to enable Audit Active Directory objects
 description: Describes how to use Windows Server 2003 auditing to track user activities and system-wide events in Active Directory.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -13,14 +13,12 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Permissions, access control, and auditing
 ms.technology: WindowsSecurity
 ---
-# How to: Audit Active Directory objects in Windows Server 2003
+# Audit Active Directory objects in Windows Server 2003
 
 This step-by-step article describes how to use Windows Server 2003 auditing to track user activities and system-wide events in Active Directory.
 
-For a Microsoft Windows 2000 version of this article, see the following Knowledge Base article: [314955](https://support.microsoft.com/help/314955) HOW TO: Audit Active Directory Objects in Windows 2000  
-
-_Original product version:_ &nbsp;Windows Server 2003  
-_Original KB number:_ &nbsp;814595
+_Original product version:_ &nbsp; Windows Server 2003  
+_Original KB number:_ &nbsp; 814595
 
 ## Summary
 
@@ -45,10 +43,12 @@ To enable auditing of Active Directory objects:
 
 By default, auditing is turned off. For domain controllers, an audit policy setting is configured for all domain controllers in the domain. To audit events that occur on domain controllers, configure an audit policy setting that applies to all domain controllers in a non-local Group Policy object (GPO) for the domain. You can access this policy setting through the Domain Controllers organizational unit. To audit user access to Active Directory objects, configure the Audit Directory Service Access event category in the audit policy setting.
 
-### NOTES
+> [!NOTE]
+>
+> - You must grant the Manage Auditing And Security Log user right to the computer where you want to either configure an audit policy setting or review an audit log. By default, Windows Server 2003 grants these rights to the Administrators group.
+> - The files and folders that you want to audit must be on Microsoft Windows NT file system (NTFS) volumes.  
 
-- You must grant the Manage Auditing And Security Log user right to the computer where you want to either configure an audit policy setting or review an audit log. By default, Windows Server 2003 grants these rights to the Administrators group.
-- The files and folders that you want to audit must be on Microsoft Windows NT file system (NTFS) volumes. To configure an audit policy setting for a domain controller:
+To configure an audit policy setting for a domain controller:
 
 1. Click **Start**, point to **Programs**, point to **Administrative Tools**, and then click **Active Directory Users and Computers**.
 2. On the **View** menu, click **Advanced Features**.

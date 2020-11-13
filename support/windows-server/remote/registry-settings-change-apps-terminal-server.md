@@ -17,18 +17,14 @@ ms.technology: RDS
 
 This article discusses the registry settings that can be used to modify application behavior on a Terminal Server computer.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;186499
-
-## More information
-
-For more information on MSI (Microsoft Windows Installer) Behavior based on Terminal Server Versions 2003 and later, go to [KB 2002357](https://support.microsoft.com/help/2002357?wa=wsignin1.0).
+_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 186499
 
 ## Controlling Application Execution in Execute Mode
 
 Several compatibility bits can be set for an application, registry path, or .ini file to change how a Terminal Server computer handles the merging of application initialization data when a session is in execute mode. These compatibility bits are set in the registry under the following subkey:
 
-HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Compatibility
+`HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Compatibility`
 
 There are three separate keys for applications, .ini files, and registry entries under this registry path.
 
@@ -45,7 +41,8 @@ To determine the String Value, add the values of the bits that you want to set. 
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
 
 1. Start Registry Editor.
-2. Locate the following registry subkey: HKEY_LOCAL_MACHINE \Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Compatibility\Applications\Myapp
+2. Locate the following registry subkey:  
+`HKEY_LOCAL_MACHINE \Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Compatibility\Applications\Myapp`
 
 3. On the Edit menu, click Add Value, and type the following information:
 
@@ -57,7 +54,7 @@ To determine the String Value, add the values of the bits that you want to set. 
 
 The following compatibility bits affect the application when it's running. They're located in the following registry subkey (where *Appname* is the name of the application's executable file):
 
-HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Compatibility\Applications\ *Appname*  
+`HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Compatibility\Applications\\Appname`  
 
 ### Compatibility Bits
 
@@ -81,7 +78,7 @@ If the "Do not substitute user Windows directory" bit is set, it retains the Sys
 
 The following compatibility bits control .ini file propagation. They're located in the following registry subkey (where **Inifile** is the name of the .ini file):
 
-HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Compatibility\IniFiles\ **Inifile**  
+`HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Compatibility\IniFiles\\Inifile`  
 
 ### Compatibility Bits
 
@@ -96,9 +93,9 @@ If the "Do not substitute user Windows directory" bit is set, it retains the Sys
 
 ## Registry Paths
 
-The following compatibility bits control registry propagation. They're located in the following registry subkey (where **PathName** is the registry path under the key HKEY_CURRENT_USER\Software): 
+The following compatibility bits control registry propagation. They're located in the following registry subkey (where **PathName** is the registry path under the key HKEY_CURRENT_USER\Software):  
 
-HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Compatibility\RegistryEntries\\**PathName**  
+`HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Compatibility\RegistryEntries\\PathName`  
 
 ### Compatibility Bits
 
@@ -106,7 +103,3 @@ HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\
 - Disable registry mapping for application: 0x00000100
 
 If the "Disable registry mapping for application" bit is set, new entries from the system master registry image aren't added to the user's registry. Additionally, the system doesn't delete any existing data in the user's registry. If this bit isn't set, the system deletes and overwrites the user's registry data if the data is older than the system master registry data. If the bit isn't set, the system also adds any new keys not in the user's registry.
-
-For additional information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[186514](https://support.microsoft.com/help/186514) Terminal Server does not support sentinel devices

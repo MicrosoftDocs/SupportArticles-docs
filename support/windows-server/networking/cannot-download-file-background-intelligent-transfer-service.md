@@ -1,5 +1,5 @@
 ---
-title: Content file download failed error when you try to download a file by using the Background Intelligent Transfer Service
+title: Fail to download a file by using BITS
 description: Describes a problem that occurs if you're behind a proxy server or behind a firewall that doesn't support HTTP 1.1 range requests.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -13,12 +13,12 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Background Intelligent Transfer Service (BITS)
 ms.technology: Networking
 ---
-# Error message when you try to download a file by using the Background Intelligent Transfer Service: Content file download failed
+# Error when you download a file by using the Background Intelligent Transfer Service: Content file download failed
 
 This article describes a problem that occurs if you're behind a proxy server or behind a firewall that doesn't support HTTP 1.1 range requests.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;922330
+_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 922330
 
 ## Symptoms
 
@@ -81,17 +81,13 @@ Modify the proxy server settings to support HTTP 1.1 range requests. If you can'
     ```
 
 2. Restart the Update Services service. To do this, follow these steps:
-    1. Click **Start**, click **Run**, type services.msc, and then click **OK**.
-    1. In the **Services** dialog box, right-click **Update Services**, and then click **Restart**.
+    1. Click **Start**, click **Run**, type *services.msc*, and then click **OK**.
+    2. In the **Services** dialog box, right-click **Update Services**, and then click **Restart**.
   
 ## Resolution 2: The Enable HTTP Byte-Range request with Gateway AV setting isn't enabled
 
 Click to select the **Enable HTTP Byte-Range request with Gateway AV** check box on the **Internal Settings** page of the SonicWALL configuration tool. For more information about how to modify the SonicWALL firewall features, contact SonicWALL support. To do this, visit the following SonicWALL Web site:
 
-[SonicWALL support](http://www.sonicwall.com/support)
+[SonicWALL support](https://www.sonicwall.com/support)
 
-Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.  
-
-## More information
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.

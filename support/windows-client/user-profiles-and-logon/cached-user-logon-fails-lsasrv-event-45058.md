@@ -1,5 +1,5 @@
 ---
-title: Cached user logon fails when LSASRV event 45058 indicates FIFO deletion of cached credential
+title: Cached user logon fails with LSASRV event 45058
 description: Fixes an issue that occurs when logging on to a domain-joined Windows Vista or Windows 7 computer using cached credentials.
 ms.data: 09/08/2020
 author: Deland-Han
@@ -17,12 +17,13 @@ ms.technology: UserProfilesAndLogon
 
 This article fixes a logon failure that occurs when logging on to a domain-joined Windows Vista or Windows 7 computer using cached credentials.
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp;2555663
+_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp; 2555663
 
 ## Symptoms
 
 1. Users receive the following error when logging on to a domain-joined Windows Vista or Windows 7 computer using cached credentials:
+
     > There are currently no logon servers available to service the logon request.
 
 2. LsaSrv Event 45058, logged in the System event log of a domain-joined workstation, indicates that the operating system has deleted the cached credential for the user specified in the event:
@@ -65,20 +66,17 @@ Once the cached logon quota has been reached, the operating system will purge th
 
 By default, a Windows operating system will cache 10 domain user credentials locally. When the maximum number of credentials are cached and a new domain user logs on to the system, the oldest credential is purged from its slot to store the newest credential. This LsaSrv informational event simply records when this activity takes place. Once the cached credential is removed, it doesn't imply the account cannot be authenticated by a domain controller and cached again.
 
-The number of "slots" available to store credentials is controlled by:
+The number of slots available to store credentials is controlled by:
 
-```console
-Registry path: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
-Setting Name: CachedLogonsCount
-Data Type: REG_SZ
-Value: Default value = 10 decimal, max value = 50 decimal, minimum value = 1
-```
+- Registry path: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows` NT\CurrentVersion\Winlogon
+- Setting Name: CachedLogonsCount
+- Data Type: REG_SZ
+- Value: Default value = 10 decimal, max value = 50 decimal, minimum value = 1
 
 Cached credentials can also be managed with group policy by configuring:
 
-```console
 Group Policy Setting path: Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\Security Options.
+
 Group Policy Setting: Interactive logon: Number of previous logons to cache (in case domain controller is not available)
 
 The workstation the user needs access to must have physical connectivity with the domain and the user must authenticate with a domain controller to cache their credentials again.
-```

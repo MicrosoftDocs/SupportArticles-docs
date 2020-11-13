@@ -1,5 +1,5 @@
 ---
-title: Unable to access ClusterStorage folder on a passive node in a server 2008 R2 cluster
+title: Unable to access ClusterStorage folder
 description: Describes an issue where you can't access a CSV volume from a passive (non-coordinator) node and receive event ID 5120 or 5142.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,8 +17,8 @@ ms.technology: BackupStorage
 
 This article describes an issue where you can't access a CSV volume from a passive (non-coordinator) node and receive event ID 5120 or 5142.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2008795
+_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2008795
 
 ## Symptoms
 

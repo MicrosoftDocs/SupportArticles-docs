@@ -1,5 +1,5 @@
 ---
-title: Poor network performance on virtual machines on a Windows Server 2012 Hyper-V host if VMQ is enabled
+title: Poor network performance on virtual machines
 description: Describes an issue that may occur if you have a Windows Server 2012 Hyper-V host that uses a Broadcom network adapter. Provides a workaround.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,8 +17,8 @@ ms.technology: Networking
 
 This article provides a workaround for an issue that occurs if you have a Windows Server 2012 Hyper-V host that uses a Broadcom network adapter.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2902166
+_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2902166
 
 ## Symptoms  
 
@@ -54,8 +54,8 @@ Broadcom is aware of this issue and will release a driver update to resolve the 
 
 - Change the Media Access Control (MAC) address of the virtual switch.
 
-> [!NOTE]
-> IP address of the Hyper-V host may change if DHCP is used.
+    > [!NOTE]
+    > IP address of the Hyper-V host may change if DHCP is used.
 
 If you use System Center Virtual machine Manager (SCVMM), SCVMM can automatically assign a new MAC address.
 
@@ -69,12 +69,12 @@ To manually assign a MAC address, follow these steps:
 
 2. Assign a dynamically generated MAC address by using the following Windows PowerShell cmdlet:
 
-```powershell
-Set-VMNetworkAdapter -ManagementOS -Name <VirtualNetworkAdapterName> -DynamicMacAddress
-```
+    ```powershell
+    Set-VMNetworkAdapter -ManagementOS -Name <VirtualNetworkAdapterName> -DynamicMacAddress
+    ```
 
 - If there's another unaffected network adapter on the Hyper-V host, bind the virtual switch to that network adapter.
 
 Third-party information disclaimer
 
- The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.

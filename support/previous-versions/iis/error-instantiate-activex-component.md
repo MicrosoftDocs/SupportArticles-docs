@@ -109,7 +109,7 @@ Make sure the database files and the folders containing the database files provi
 2. Make sure all DLLs are registered with `Regsvr32`.
 3. Make sure there are not multiple versions of the DLL registered and the registry entry points to the correct one.
 4. Make sure any DLLs are using the Apartment Threading Model and are not Single Threaded (See Note 2 below).
-5. Confirm that the Primary Domain Controller (PDC) has given Everyone **Access this computer from the network** rights. If IIS is a PDC assure that the `IUSR_<machine>` also has these rights as well as **Log on Locally** rights.
+5. Confirm that the Primary Domain Controller (PDC) has given everyone **Access this computer from the network** rights. If IIS is a PDC assure that the `IUSR_<machine>` also has these rights as well as **Log on Locally** rights.
 
 ## Quick permissions check steps
 

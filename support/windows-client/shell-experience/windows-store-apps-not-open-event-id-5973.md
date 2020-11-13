@@ -42,7 +42,7 @@ Abnormal shutdown may corrupt the user application cache in `C:\Users\<username>
 
 ## Resolution
 
-To test if you have the issue, [create a new user account](/windows/create-a-user-account-in-windows-4fac6fd5-74c0-9737-69b8-6e77e00422dc) and sign into the new account. If the problem disappears, recreate your user profile to resolve the problem.
+To test if you have the issue, [create a new user account](https://support.microsoft.com/windows/20de74e0-ac7f-3502-a866-32915af2a34d) and sign into the new account. If the problem disappears, recreate your user profile to resolve the problem.
 
 1. Back up the user profile data files on the old user account:
 

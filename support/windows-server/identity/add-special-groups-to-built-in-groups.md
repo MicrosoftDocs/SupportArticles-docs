@@ -26,28 +26,29 @@ If you, as the administrator, delete one of the memberships of a special group, 
 
 For example, use the following command to add the Authenticated Users group back to the Built-in Domain Local Users group on a domain controller:
 
-net localgroup users "nt authority\authenticated users" /add 
+`net localgroup users "nt authority\authenticated users" /add`  
 
 ## More information
 
 In Windows 2000, there are certain special groups that are created by the system and that are used for special purposes. A list of these special groups in Windows 2000 includes:
 
-Authenticated Users
-Anonymous Logon
-Batch
-Creator Owner
-Creator Group
-Dialup
-Enterprise Domain Controllers
-Everyone
-Interactive
-Network
-Proxy
-Restricted
-Self
-Service
-System
-Terminal Server User
-Because you cannot alter the membership of these groups, the groups are not listed in Active Directory Users and Computers (Dsa.msc). However, these groups are useful for operations such as assigning permissions to directories, files, shared network directories, or printers.
+Authenticated Users  
+Anonymous Logon  
+Batch  
+Creator Owner  
+Creator Group  
+Dialup  
+Enterprise Domain Controllers  
+Everyone  
+Interactive  
+Network  
+Proxy  
+Restricted  
+Self  
+Service  
+System  
+Terminal Server User  
+
+Because you cannot alter the membership of these groups, the groups are not listed in Active Directory Users and Computers (`Dsa.msc`). However, these groups are useful for operations such as assigning permissions to directories, files, shared network directories, or printers.
 
 Users become members of these special groups depending on the operation that they're trying to perform. For example, a user gains the Interactive group membership in their token whenever they use a computer locally. The Network group would be added to a user's token anytime that a user connects over the network to a computer.
