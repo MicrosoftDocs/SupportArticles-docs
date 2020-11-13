@@ -22,7 +22,7 @@ Browse the following content or use the search feature.
 - [High Availability](./high-availability/high-availability-overview.md)
 - [Networking](./networking/networking-overview.md)
 - [Performance](./performance/performance-overview.md)
-- [Printing ](./printing/printing--overview.md)
+- [Printing ](./printing/printing-overview.md)
 - [Remote Desktop Services](./remote/remote-desktop-services-overview.md)
 - [Security and Malware](./security-and-malware/security-and-malware-overview.md)
 - [Shell Experience](./shell-experience/shell-experience-overview.md)

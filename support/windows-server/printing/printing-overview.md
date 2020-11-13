@@ -18,7 +18,7 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Printing  sub categories
 
-- (Management and Configuration) Installing Print drivers
+- Management and Configuration of installing Print drivers
 - Errors and troubleshooting General issues
 - Errors and troubleshooting: General issues
 - Errors and troubleshooting: Print output or print failures

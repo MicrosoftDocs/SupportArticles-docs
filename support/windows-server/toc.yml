@@ -1808,7 +1808,7 @@
   items:
   - name: 'Printing '
     href: ./printing/printing--overview.md
-  - name: (Management and Configuration) Installing Print drivers
+  - name: Management and Configuration of installing print drivers
     items:
     - name: Print Spooler errors
       href: ./printing/third-party-print-driver-print-spooler-error.md
