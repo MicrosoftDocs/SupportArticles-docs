@@ -1804,9 +1804,9 @@
       href: ./performance/enable-debug-mode-causes-hang.md
     - name: The computer stops responding
       href: ./performance/computer-stops-responding.md
-- name: 'Printing '
+- name: 'Printing'
   items:
-  - name: 'Printing '
+  - name: 'Printing'
     href: ./printing/printing-overview.md
   - name: Management and Configuration of installing print drivers
     items:
