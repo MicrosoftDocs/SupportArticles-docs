@@ -58,10 +58,10 @@ Additionally, the output may show that the domain controller did not pass the ad
     > [!NOTE]
     > The description for event ID 1265 may vary. Several possibilities will cause event ID 1265 to be recorded. These possibilities also cause the Knowledge Consistency Checker (KCC) not to build a replication link. The following are some typical possibilities:  
     >
-        > - The DSA operation cannot continue because of a DNS lookup failure. Resolve the DNS problem, or remove the metadata if the source DSA address represents a stale domain controller.
-        > - The RPC server is unavailable. This typically indicates a network connectivity issue. Determine whether the target domain controller is offline or whether a network port is blocked.
-        > - The target principal name is incorrect. Examine the security channel between the source and target domain controllers.
-        > - You receive an "Access Denied" error message.  
+      > - The DSA operation cannot continue because of a DNS lookup failure. Resolve the DNS problem, or remove the metadata if the source DSA address represents a stale domain controller.
+      > - The RPC server is unavailable. This typically indicates a network connectivity issue. Determine whether the target domain controller is offline or whether a network port is blocked.
+      > - The target principal name is incorrect. Examine the security channel between the source and target domain controllers.
+      > - You receive an "Access Denied" error message.  
   
 - The following Error event message is logged every hour:
 
@@ -144,7 +144,7 @@ To confirm that the domain controller is a global catalog server, follow these s
 
 1. Click **Start**, click **Run**, type cmd, and then click **OK**.
 
-2. Type `nltest /dsgetdc`: **Domain_name /server: Server_Name**, and then press ENTER.
+2. Type `nltest /dsgetdc: Domain_name /server: Server_Name`, and then press ENTER.
 
 3. Verify that the server is advertising the "GC" (global catalog) flag. For example, when you type the command in step 2, you will receive a message that is similar to the following if the GC flag is present:  
 
