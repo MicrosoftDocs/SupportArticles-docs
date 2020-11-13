@@ -31,8 +31,8 @@ The computer may then save a memory dump file, and may automatically reboot, dep
 ## Cause
 
 The behavior when an NMI is encountered has changed compared to earlier versions of Windows. In Windows 7, Windows Server 2008 R2, and earlier versions, the response when the system encountered an NMI was dependent on the configuration of the "NMICrashDump" registry value.
-For more information about the NMICrashDump registry value and handling of NMIs in earlier Windows versions, click the following article number to view the article in the Microsoft Knowledge Base:
- [927069](https://support.microsoft.com/kb/927069)  How to generate a complete crash dump file or a kernel crash dump file by using an NMI on a Windows-based system
+For more information about the NMICrashDump registry value and handling of NMIs in earlier Windows versions, click the following article number to view the article in the Microsoft Knowledge Base:  
+[927069](https://support.microsoft.com/kb/927069)  How to generate a complete crash dump file or a kernel crash dump file by using an NMI on a Windows-based system
 In Windows 8 and Windows Server 2012, this behavior is not configurable. An NMI will always result in a bugcheck 0x80 (NMI_HARDWARE_FAILURE). This is equivalent to the behavior on earlier Windows versions where the "NMICrashDump" registry value was present and set to a value of 1.
 
 ## More information

@@ -25,17 +25,22 @@ _Original KB number:_ &nbsp; 2473489
 On a computer that is running Windows Vista, Windows Server 2008, Windows 7, or Windows Server 2008 R2, you may experience one of the following issues:
 
 - IP address and default gateway settings are assigned incorrectly.
-- After you configure additional IP addresses, the IP addresses are displayed incorrectly when you run the ipconfig command.
-- After you restart the computer, IP address settings revert to previous settings. 
+- After you configure additional IP addresses, the IP addresses are displayed incorrectly when you run the `ipconfig` command.
+- After you restart the computer, IP address settings revert to previous settings.  
 
 ## Cause
 
-These issues occur because of conflicts between TCP/IP registry settings and data that is managed by Network Input Output (NetIO). In Windows Vista or in later versions of Windows, IP address and default gateway settings are managed by both TCP/IP registry settings and NetIO components. TCP/IP registry settings are under the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\Tcpip` 
+These issues occur because of conflicts between TCP/IP registry settings and data that is managed by Network Input Output (NetIO). In Windows Vista or in later versions of Windows, IP address and default gateway settings are managed by both TCP/IP registry settings and NetIO components. TCP/IP registry settings are under the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\Tcpip`  
 
 ## Workaround
 
-To work around this issue, run the following command to resolve the conflict: netsh interface ip reset  
- After you run the command, previous IP address and default gateway settings are reset, and you can reconfigure to the correct settings. 
+To work around this issue, run the following command to resolve the conflict:  
+
+ ```console
+netsh interface ip reset  
+  ```
+
+ After you run the command, previous IP address and default gateway settings are reset, and you can reconfigure to the correct settings.  
 
 ## Status
 

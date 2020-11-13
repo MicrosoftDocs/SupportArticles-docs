@@ -35,46 +35,49 @@ When you install the NDES service on a Windows Server 2008 server, it requires y
 
 However, since the "Subject Type" of the certificate template "Exchange Enrollment Agent (Offline request)" is set to "User", we won't be able to renew the certificate template "Exchange Enrollment Agent (Offline request)" in MMC console (computer certificate store) due to mismatched type of subject. The error "Status: unavailable" would be returned in this situation.
 
-Note: This issue doesn't happen when trying to renew "CEP Encryption" certificate template, because its subject type is set to "Computer or other Device". Therefore, renewal of this certificate can succeed as long as you have sufficient permission on the system and certificate template. 
+Note: This issue doesn't happen when trying to renew "CEP Encryption" certificate template, because its subject type is set to "Computer or other Device". Therefore, renewal of this certificate can succeed as long as you have sufficient permission on the system and certificate template.  
 
 ## Resolution
 
-Use the certreq.exe tool to renew the Exchange Enrollment Agent (Offline request) certificate with the following steps:
+Use the `certreq.exe` tool to renew the Exchange Enrollment Agent (Offline request) certificate with the following steps:
 
-1. Create a file named Request.inf with the following contents: 
+1. Create a file named Request.inf with the following contents:  
 
-*[Version]*  
-*Signature="$Windows NT$"*  
-*[NewRequest]*  
-*RenewalCert="\<Certificate Hash>"*  
-*MachineKeySet=TRUE*  
+    > *[Version]*  
+    *Signature="$Windows NT$"*  
+    *[NewRequest]*  
+    *RenewalCert="\<Certificate Hash>"*  
+    *MachineKeySet=TRUE*  
 
-Note: The INF file contains input options that define the certificate request parameters. In the above INF file, it tells the command-line tool certreq.exe to renew the certificate with the specified Certificate Hash. You can get the Exchange Enrollment Agent (Offline request) certificate's certificate hash by copying the value of the certificate's "*t* *h* *umbprint* " extension retrieved from certificate's "Details tab". For example, if the certificate's Thumbprint is "*5* *3 60 8f 10 49 1d 50 bf a2 9f 06 17 96 8a 93 05 13 cc b9 55*", we will need to edit the contents to the lines below:
+    > [!Note]
+    > The INF file contains input options that define the certificate request parameters. In the above INF file, it tells the command-line tool certreq.exe to renew the certificate with the specified Certificate Hash. You can get the Exchange Enrollment Agent (Offline request) certificate's certificate hash by copying the value of the certificate's "*t* *h* *umbprint* " extension retrieved from certificate's "Details tab". For example, if the certificate's Thumbprint is "*5* *3 60 8f 10 49 1d 50 bf a2 9f 06 17 96 8a 93 05 13 cc b9 55*", we will need to edit the contents to the lines below:
 
-*[Version]*  
- *Signature="$Windows NT$"*  
- *[NewRequest]*  
- **RenewalCert="53 60 8f 10 49 1d 50 bf a2 9f 06 17 96 8a 93 05 13 cc b9 55"**  
- *MachineKeySet=TRUE*  
+    > *[Version]*  
+     *Signature="$Windows NT$"*  
+     *[NewRequest]*  
+     *RenewalCert="53 60 8f 10 49 1d 50 bf a2 9f 06 17 96 8a 93 05 13 cc b9 55"*  
+     *MachineKeySet=TRUE*  
 
-Note: MachineKeySet set to "True" so the certificate and its private key will be stored in computer certificate store.
+    > [!Note]
+    > MachineKeySet set to "True" so the certificate and its private key will be stored in computer certificate store.
 
-Note: to open the computer certificate store, please refer to the following technet article:
-Add the Certificates Snap-in to an MMC
- [https://technet.microsoft.com/library/cc754431(v=ws.10).aspx#BKMK_computer](https://technet.microsoft.com/library/cc754431%28v=ws.10%29.aspx#bkmk_computer) 
+   > [!Note]
+     to open the computer certificate store, please refer to the following technet article:
+    Add the Certificates Snap-in to an MMC
+    [Add the Certificates Snap-in to an MMC](https://technet.microsoft.com/library/cc754431%28v=ws.10%29.aspx#bkmk_computer)  
 
-2. Run the following three commands to renew that old Enrollment Agent certificate: 
+2. Run the following three commands to renew that old Enrollment Agent certificate:  
 
-CertReq.exe -New Request.inf Certnew.req
-CertReq.exe -Submit Certnew.req Certnew.cer
-CertReq.exe -Accept Certnew.cer
+    ```console
+    CertReq.exe -New Request.inf Certnew.req  
+    CertReq.exe -Submit Certnew.req Certnew.cer  
+    CertReq.exe -Accept Certnew.cer  
+    ```
 
-Note:
-
-
-- You will need administrative permissions and certificate enrollment permission to perform the actions above. If your enrollment request needs to wait for CA manager's approval, please contact your CA manager to approve the request. Or, provide the request file generated in first command to your CA manager, and ask for a certificate so we can use the third command to install the certificate.
-- The steps above apply to the situation where the default certificate template is used for NDES. In the case that NDES is configured to use specific template, please change the inf file contents accordingly. For more Information about the syntax of the request file, please refer to the following article:
-Appendix 3: Certreq.exe Syntax
- [https://technet.microsoft.com/library/cc736326(v=ws.10).aspx](https://technet.microsoft.com/library/cc736326%28v=ws.10%29.aspx) 
-- When running first command above, a dialog box will pop up to let us confirm the certificate that needs be renewed. Ensure the old Enrollment Agent certificate is selected, and click OK.
-- At the second command, another dialog box will pop up to let us choose the CA server for issuing the renewed Enrollment Agent certificate. Please select the proper CA, and click OK.
+    > [!Note]
+    >
+    > - You will need administrative permissions and certificate enrollment permission to perform the actions above. If your enrollment request needs to wait for CA manager's approval, please contact your CA manager to approve the request. Or, provide the request file generated in first command to your CA manager, and ask for a certificate so we can use the third command to install the certificate.
+    > - The steps above apply to the situation where the default certificate template is used for NDES. In the case that NDES is configured to use specific template, please change the inf file contents accordingly. For more Information about the syntax of the request file, please refer to the following article:  
+    [Appendix 3: Certreq.exe Syntax](https://technet.microsoft.com/library/cc736326%28v=ws.10%29.aspx)  
+    > - When running first command above, a dialog box will pop up to let us confirm the certificate that needs be renewed. Ensure the old Enrollment Agent certificate is selected, and click OK.
+    > - At the second command, another dialog box will pop up to let us choose the CA server for issuing the renewed Enrollment Agent certificate. Please select the proper CA, and click OK.

@@ -28,8 +28,8 @@ _Original KB number:_ &nbsp; 240992
 
 When you log on to a computer running Terminal Server Edition, you may receive the following error message:
 
-An application error has occurred and an application error log is being generated.
-Userinit.exe
+> An application error has occurred and an application error log is being generated.
+Userinit.exe  
 Exception: access violation (0xc0000005), Address: 0x77f901b3
 
 > [!NOTE]
@@ -52,10 +52,8 @@ To resolve this problem, obtain the latest service pack for Windows NT Server 4.
 
 To work around this issue, delete the invalid registry value:
 
-
-1. Start Registry Editor (Regedt32.exe).
-2. Locate the following registry key:HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Install\IniFile Times
-
+1. Start Registry Editor (`Regedt32.exe`).
+2. Locate the following registry key: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Install\IniFile Times`
 3. Locate the invalid value (this is usually a value with no name).
 4. Click the invalid value.
 5. On the Edit menu, click Delete, and then click Yes.

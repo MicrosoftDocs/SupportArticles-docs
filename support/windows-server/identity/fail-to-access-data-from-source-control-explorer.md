@@ -20,19 +20,19 @@ This article provides help to solve an error that occurs when you access Active 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 957969
 
-## RAPID PUBLISHING
+## Rapid publishing
 
-RAPID PUBLISHING ARTICLES PROVIDE INFORMATION DIRECTLY FROM WITHIN THE MICROSOFT SUPPORT ORGANIZATION. THE INFORMATION CONTAINED HEREIN IS CREATED IN RESPONSE TO EMERGING OR UNIQUE TOPICS, OR IS INTENDED SUPPLEMENT OTHER KNOWLEDGE BASE INFORMATION.
+Rapid publishing articles provide information directly from within the Microsoft support organization. The information contained herein is created in response to emerging or unique topics, or is intended supplement other knowledge base information.  
 
 ## Action
 
 Create a Windows group in Active Directory (AD), and assign AD users to the group, then...
 
 1. Open Visual Studio as a TFS Administrator
-2. Open "Source Control Explorer"
-3. Right+click on a version control folder and select Properties
+2. Open **Source Control Explorer**
+3. Right-click on a version control folder and select Properties
 4. Click the Security tab on the Properties dialog
-5. Select the "Windows User or Group" option and click the Add button
+5. Select the **Windows User or Group** option and click the Add button
 6. Browse for the AD group; and attempt to add the group
 
 ## Result
@@ -41,24 +41,24 @@ Error: Object reference not set to an instance of an object.
 
 ## Cause
 
-This issue is caused by a bug in the version control permission dialog window in Visual Studio 2008 \ Team Explorer 2008.
+This issue is caused by a bug in the version control permission dialog window in Visual Studio 2008\ Team Explorer 2008.
 
 ## Resolution
 
 This problem is resolved in Visual Studio 2008 SP1. If you are using Visual Studio 2008 RTM, there are two workarounds:
 
-1. Assign version control permissions with commandline tool: tf.exe
+1. Assign version control permissions with command-line tool: `tf.exe`
 
-You can enter "tf perm /?" or review the MSDN documentation for this command [TF Permission command](https://msdn.microsoft.com/library/0dsd05ft.aspx)  for more information about how to assign version control permissions from command line.
+    You can enter `tf perm /?` or review the MSDN documentation for this command [TF Permission command](https://msdn.microsoft.com/library/0dsd05ft.aspx)  for more information about how to assign version control permissions from command line.
 
 2. Explicitly make the AD group in question a valid TFS identity:
 
-a. Create a new user group on the server.
- b. Add the AD group in question to this group.
- c. You should now be able to assign version control permissions to the AD group.
+     1. Create a new user group on the server.
+     2. Add the AD group in question to this group.
+     3. You should now be able to assign version control permissions to the AD group.
 
-## DISCLAIMER
+## Disclaimer
 
-MICROSOFT AND/OR ITS SUPPLIERS MAKE NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY, RELIABILITY OR ACCURACY OF THE INFORMATION CONTAINED IN THE DOCUMENTS AND RELATED GRAPHICS PUBLISHED ON THIS WEBSITE (THE "MATERIALS") FOR ANY PURPOSE. THE MATERIALS MAY INCLUDE TECHNICAL INACCURACIES OR TYPOGRAPHICAL ERRORS AND MAY BE REVISED AT ANY TIME WITHOUT NOTICE.
+Microsoft and/or its suppliers make no representations or warranties about the suitability, reliability, or accuracy of the information contained in the documents and related graphics published on this website (the "materials") for any purpose. The materials may include technical inaccuracies or typographical errors and may be revised at any time without notice.
 
-TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, MICROSOFT AND/OR ITS SUPPLIERS DISCLAIM AND EXCLUDE ALL REPRESENTATIONS, WARRANTIES, AND CONDITIONS WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT LIMITED TO REPRESENTATIONS, WARRANTIES, OR CONDITIONS OF TITLE, NON INFRINGEMENT, SATISFACTORY CONDITION OR QUALITY, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, WITH RESPECT TO THE MATERIALS.
+To the maximum extent permitted by applicable law, Microsoft and/or its suppliers disclaim and exclude all representations, warranties, and conditions whether express, implied or statutory, including but not limited to representations, warranties, or conditions of title, non infringement, satisfactory condition or quality, merchantability and fitness for a particular purpose, with respect to the materials.

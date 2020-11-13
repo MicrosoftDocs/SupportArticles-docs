@@ -26,81 +26,86 @@ _Original KB number:_ &nbsp; 2737219
 - In addition to this when you open Windows Small Business Server Console you get error message "**An error occurred while retrieving updates information**" under "**Updates**" tab.
 
 **You see HTTP Error 500 in IIS log file for WSUS Administration Website:**  
-2012-07-21 20:42:13 fe80::e3a4:2b81:92b4:c6e7%11 GET /selfupdate/iuident.cab - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 - 500 24 50 3715
-2012-07-21 20:42:13 fe80::e3a4:2b81:92b4:c6e7%11 POST /reportingwebservice/reportingwebservice.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 422
-2012-07-21 20:42:13 fe80::e3a4:2b81:92b4:c6e7%11 POST /ApiRemoting30/WebService.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 6
-2012-07-21 20:42:14 fe80::e3a4:2b81:92b4:c6e7%11 POST /ServerSyncWebService/serversyncwebservice.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 601
-2012-07-21 20:42:14 fe80::e3a4:2b81:92b4:c6e7%11 POST /ClientWebService/Client.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 508
-2012-07-21 20:42:14 fe80::e3a4:2b81:92b4:c6e7%11 POST /ReportingWebService/ReportingWebService.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Windows-Update-Agent 500 24 50 12078
-2012-07-21 20:42:16 fe80::e3a4:2b81:92b4:c6e7%11 POST /SimpleAuthWebService/SimpleAuth.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 547
-2012-07-21 20:42:16 fe80::e3a4:2b81:92b4:c6e7%11 POST /DssAuthWebService/DssAuthWebService.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 483
-2012-07-21 20:43:01 fe80::e3a4:2b81:92b4:c6e7%11 POST /ApiRemoting30/WebService.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+4.0.30319.1) 500 24 50 8
- **After enabeling Failed Request Tracing on "WSUS Administration" and "ApiRemoting30" Websites  for Http status code 500, results in the following errors.** `http://<ServerName>:8530/ApiRemoting30/WebService.asmx`
+> 2012-07-21 20:42:13 fe80::e3a4:2b81:92b4:c6e7%11 GET /selfupdate/iuident.cab - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 - 500 24 50 3715  
+2012-07-21 20:42:13 fe80::e3a4:2b81:92b4:c6e7%11 POST /reportingwebservice/reportingwebservice.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 422  
+2012-07-21 20:42:13 fe80::e3a4:2b81:92b4:c6e7%11 POST /ApiRemoting30/WebService.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 6  
+2012-07-21 20:42:14 fe80::e3a4:2b81:92b4:c6e7%11 POST /ServerSyncWebService/serversyncwebservice.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 601  
+2012-07-21 20:42:14 fe80::e3a4:2b81:92b4:c6e7%11 POST /ClientWebService/Client.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 508  
+2012-07-21 20:42:14 fe80::e3a4:2b81:92b4:c6e7%11 POST /ReportingWebService/ReportingWebService.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Windows-Update-Agent 500 24 50 12078  
+2012-07-21 20:42:16 fe80::e3a4:2b81:92b4:c6e7%11 POST /SimpleAuthWebService/SimpleAuth.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 547  
+2012-07-21 20:42:16 fe80::e3a4:2b81:92b4:c6e7%11 POST /DssAuthWebService/DssAuthWebService.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 483  
+2012-07-21 20:43:01 fe80::e3a4:2b81:92b4:c6e7%11 POST /ApiRemoting30/WebService.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+4.0.30319.1) 500 24 50 8  
 
-App Pool WsusPool
-Authentication NOT_AVAILABLE
-User from token 
-Activity ID {00000000-0000-0000-9000-0080000000D3}
+ **After enabling Failed Request Tracing on "WSUS Administration" and "ApiRemoting30" Websites  for Http status code 500, results in the following errors.**  
+> `http://<ServerName>:8530/ApiRemoting30/WebService.asmx`
+>
+> App Pool WsusPool
+Authentication NOT_AVAILABLE  
+User from token  
+Activity ID {00000000-0000-0000-9000-0080000000D3}  
+>
+> Site 1572271583  
+Process 6860  
+Failure Reason STATUS_CODE  
+Trigger Status 500.24  
+Final Status 500.24  
+Time Taken 16 msec  
+>
+> ModuleName ConfigurationValidationModule  
+Notification 1  
+HttpStatus 500  
+HttpReason Internal Server Error  
+HttpSubStatus 24  
+ErrorCode 2147942450  
+ConfigExceptionInfo  
+Notification BEGIN_REQUEST  
+ErrorCode The request is not supported. (0x80070032)  
 
-Site 1572271583
-Process 6860
-Failure Reason STATUS_CODE
-Trigger Status 500.24
-Final Status 500.24
-Time Taken 16 msec
+### Errors in Application Logs
 
-ModuleName ConfigurationValidationModule
-Notification 1
-HttpStatus 500
-HttpReason Internal Server Error
-HttpSubStatus 24
-ErrorCode 2147942450
-ConfigExceptionInfo 
-Notification BEGIN_REQUEST
-ErrorCode The request is not supported. (0x80070032)
- **Errors in Application Logs**  
-Log Name:      Application
-Source:        Windows Server Update Services
-Date:          7/22/2012 2:11:15 AM
-Event ID:      7053
-Task Category: None
-Level:         Error
-Keywords:      Classic
-User:          N/A
-Computer:      ServerName.domain.local
-Description:
+> Log Name:      Application  
+Source:        Windows Server Update Services  
+Date:          7/22/2012 2:11:15 AM  
+Event ID:      7053  
+Task Category: None  
+Level:         Error  
+Keywords:      Classic  
+User:          N/A  
+Computer:      ServerName.domain.local  
+Description:  
 The WSUS administration console has encountered an unexpected error. This may be a transient error; try restarting the administration console. If this error persists,
-Try removing the persisted preferences for the console by deleting the wsus file under %appdata%\Microsoft\MMC\.
-
-System.InvalidOperationException -- Client found response content type of 'text/html; charset=utf-8', but expected 'text/xml'.
-The request failed with the error message:
-.
-.
-.
-Source
-System.Web.Services
-Stack Trace:
-   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
-   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
-   at Microsoft.UpdateServices.Internal.ApiRemoting.ExecuteSPGetUpdateServerStatus(Int32 updateSources, Boolean includeDownstreamComputers, String updateScopeXml, String computerTargetScopeXml, String preferredCulture, Int32 publicationState, Int32 propertiesToGet)
-   at Microsoft.UpdateServices.Internal.DatabaseAccess.AdminDataAccessProxy.ExecuteSPGetUpdateServerStatus(UpdateSources updateSources, Boolean includeDownstreamComputers, String updateScopeXml, String computerTargetScopeXml, String preferredCulture, ExtendedPublicationState publicationState, UpdateServerStatusPropertiesToGet propertiesToGet)
+Try removing the persisted preferences for the console by deleting the wsus file under %appdata%\Microsoft\MMC\\.  
+>
+> System.InvalidOperationException -- Client found response content type of 'text/html; charset=utf-8', but expected 'text/xml'.  
+The request failed with the error message:  
+.  
+.  
+.  
+Source  
+System.Web.Services  
+Stack Trace:  
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)  
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)  
+   at Microsoft.UpdateServices.Internal.ApiRemoting.ExecuteSPGetUpdateServerStatus(Int32 updateSources, Boolean includeDownstreamComputers, String updateScopeXml, String computerTargetScopeXml, String preferredCulture, Int32 publicationState, Int32 propertiesToGet)  
+   at Microsoft.UpdateServices.Internal.DatabaseAccess.AdminDataAccessProxy.  ExecuteSPGetUpdateServerStatus(UpdateSources updateSources, Boolean includeDownstreamComputers, String updateScopeXml, String computerTargetScopeXml, String preferredCulture, ExtendedPublicationState publicationState, UpdateServerStatusPropertiesToGet propertiesToGet)  
    at Microsoft.UpdateServices.Internal.BaseApi.UpdateServer.GetStatus(UpdateSources updateSources, Boolean includeDownstreamComputers, UpdateScope updatesToInclude, ComputerTargetScope computersToInclude, UpdateServerStatusPropertiesToGet propertiesToGet)
-   at Microsoft.UpdateServices.Internal.BaseApi.UpdateServer.GetReplicaStatus(UpdateSources updateSources)
-   at Microsoft.UpdateServices.UI.SnapIn.Common.CachedUpdateServerStatus.GetFreshObjectForCache()
-   at Microsoft.UpdateServices.UI.AdminApiAccess.CachedObject.GetFromCache()
-   at Microsoft.UpdateServices.UI.SnapIn.Pages.ServerSummaryPage.backgroundWorker_DoWork(Object sender, DoWorkEventArgs e)
+   at Microsoft.UpdateServices.Internal.BaseApi.UpdateServer.GetReplicaStatus(UpdateSources updateSources)  
+   at Microsoft.UpdateServices.UI.SnapIn.Common.CachedUpdateServerStatus.GetFreshObjectForCache()  
+   at Microsoft.UpdateServices.UI.AdminApiAccess.CachedObject.GetFromCache()  
+   at Microsoft.UpdateServices.UI.SnapIn.Pages.ServerSummaryPage.backgroundWorker_DoWork(Object sender, DoWorkEventArgs e)  
 
 ## Cause
 
-The above behavior is experienced due to incorrect settings on the WSUS Administration Website. By default we do not have "**ASP.NET Impersonation"** **Enabled** for any of the **WSUS Administration** Websites.
+The above behavior is experienced due to incorrect settings on the WSUS Administration Website. By default we do not have "`ASP.NET Impersonation`" **Enabled** for any of the **WSUS Administration** Websites.
 
 ## Resolution
 
-Open IIS Console
+Open IIS Console  
+
 - Highlight WSUS Administration Website
 - Double-click "**Authentication**"
-- Highlight **ASP.NET Impersonation**, on the right under "**Action**" pane click on "**Disable**"
-- Check the following websites under WSUS Administration and make sure **ASP.NET Impersonation** is **Disabled.** If any of the below Web Applications have **ASP.NET Authentication** Enabled,** then disable them.
+- Highlight **`ASP.NET Impersonation`**, on the right under "**Action**" pane click on "**Disable**"
+- Check the following websites under WSUS Administration and make sure **`ASP.NET Impersonation`** is **Disabled.** If any of the below Web Applications have **`ASP.NET Authentication`** Enabled,** then disable them.
   - ApiRemoting30
   - ClientWebService
   - Content

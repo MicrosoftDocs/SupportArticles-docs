@@ -1,5 +1,5 @@
 ---
-title: Errors connecting to Windows Server 2008 R2 or Windows Server 2012 Device Manager remotely
+title: Errors connecting to Device Manager remotely
 description: Fixes an issue where you can't connect remotely to Device Manager from a Windows-based computer.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -15,13 +15,15 @@ ms.technology: SysManagementComponents
 ---
 # Errors connecting to Windows Server 2008 R2 or Windows Server 2012 Device Manager remotely
 
-This article helps fix an issue where you can't connect remotely to Device Manager from a Windows-based computer.
-_Original product version:_ &nbsp;Windows Server 2012 R2, Window 10 – all editions  
-_Original KB number:_ &nbsp;2781106
+This article helps fix an issue where you can't connect remotely to Device Manager from a Windows-based computer.  
+
+_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1, Window 10 – all editions  
+_Original KB number:_ &nbsp; 2781106
 
 ## Symptoms
 
-Consider the following scenario:
+Consider the following scenario:  
+
 - You're unable to connect remotely to Windows Server 2012 Device Manager from a Windows 8-based computer
 - You're unable to connect remotely to Windows Server 2012 Device Manager from a Windows 7-based computer
 - You're unable to connect remotely to Windows Server 2008 R2 Device Manager from a Windows 8-based computer
@@ -34,7 +36,8 @@ Make sure that this computer is on the network, has remote administration enable
 >
 > The error was: Access is denied  
 
-Note: Other various errors may occur depending on if you're connecting from Windows 8 or Windows 7 client computer.
+> [!Note]
+> Other various errors may occur depending on if you're connecting from Windows 8 or Windows 7 client computer.
 
 ## Cause
 
@@ -48,8 +51,9 @@ You must log in to the computer locally to use Device Manager.
 
 Previously, a Windows 7-based computer could connect to a Windows Server 2008 R2 computer. Access to Device Manager on a remote computer is "read-only." You can't make any changes to devices or their settings.
 
-To open Device Manager on a remote computer:
-1. Open Computer Management (compmgmt.msc)
+To open Device Manager on a remote computer:  
+
+1. Open Computer Management (`compmgmt.msc`)
 2. On the Action menu, click Connect to another computer.
 3. In the Select Computer dialog box, do one of the following:
    - In the Another computer text box, type the name of the computer to access, and then click OK.

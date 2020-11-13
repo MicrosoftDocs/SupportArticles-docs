@@ -17,14 +17,14 @@ ms.technology: RDS
 
 This article provides a resolution for an issue that prevents the Microsoft Edge browser from working correctly with websites or apps that require ActiveX controls.
 
-_Original product version:_ &nbsp;Windows 10 - all editions  
-_Original KB number:_ &nbsp;3092523
+_Original product version:_ &nbsp; Windows 10 - all editions  
+_Original KB number:_ &nbsp; 3092523
 
 ## Symptoms
 
 Microsoft Edge is the new default web browser for Windows 10. However, if you're running Remote Desktop Web Access (RDWEB) or web apps that require ActiveX controls, the Edge browser may not work, and we recommend that you continue to use Internet Explorer 11.
 
-As seen in the following side-by-side images, the **Connect to a remote PC**  tab is missing from the Edge UI (the image on the left), but in Internet Explorer (the image on the right) this tab is still displayed. 
+As seen in the following side-by-side images, the **Connect to a remote PC**  tab is missing from the Edge UI (the image on the left), but in Internet Explorer (the image on the right) this tab is still displayed.  
 
 When Internet Explorer is configured to work in this scenario, the MsRdpClientShell - MsRdpWebAccess.dll  add-on is loaded as an ActiveX control.
 
@@ -42,7 +42,7 @@ If you have specific websites and apps that have compatibility issues with Micro
 
 To download the Enterprise Mode Site List Manager tool from the Internet Explorer Download Center, go to [Enterprise Mode Site List Manager](https://go.microsoft.com/fwlink/?linkid=394378).
 
-To add sites to your Enterprise Mode site list, see [https://technet.microsoft.com/library/mt270205.aspx#fix_specific_sites](https://technet.microsoft.com/library/mt270205.aspx#fix_specific_sites).
+To add sites to your Enterprise Mode site list, see [Use Enterprise Mode to improve compatibility](https://technet.microsoft.com/library/mt270205.aspx#fix_specific_sites).
 
 ## More information
 
