@@ -1,5 +1,5 @@
 ---
-title: Log-off problems on a Windows XP-based, Windows Server 2003-based, Windows 2000-based, or Windows NT 4.0-based computer
+title: Log-off problems 
 description: Discusses log off problems in Windows XP, in Windows Server 2003, in Windows 2000, and in Windows NT 4.0.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,30 +17,14 @@ ms.technology: UserProfilesAndLogon
 
 This article contains a step-by-step method to help you resolve the log-off problems in Windows XP, in Windows Server 2003, in Windows 2000, and in Windows NT 4.0.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10  
-_Original KB number:_ &nbsp;837115
+_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10  
+_Original KB number:_ &nbsp; 837115
 
 ## Introduction
 
 When you try to log off from your computer, you can't log off, or event messages that are logged in the Application log indicate that the user profile wasn't unloaded. This problem may occur if Microsoft Windows or third-party programs don't stop running when you try to log off from your computer. This article contains a step-by-step method to help you resolve this problem.
 
 If you're viewing this Web content on the computer that has the problem, you can use the automatic detection and fix tool that this content contains. The tool will help make the troubleshooting process faster, more accurate, and much easier for you. If you're not on the computer that has the problem, print this Web content, and use it on the computer that has the problem.
-
-> [!NOTE]
-> Many shutdown problems are not caused by user profile unloading errors. For more information about shutdown problems, click the following article numbers to view the articles in the Microsoft Knowledge Base:
-
-[308029](https://support.microsoft.com/help/308029) Advanced troubleshooting for shutdown problems in Windows XP  
-
-[324268](https://support.microsoft.com/help/324268) How to troubleshoot shutdown problems in Windows Server 2003  
-
-[315409](https://support.microsoft.com/help/315409) How to troubleshoot shutdown problems in Windows 2000  
-
-> [!NOTE]
-> Windows Vista and Windows Server 2008 include the functionality of the automatic detection and fix tool (UPHClean) that this content contains. If you are experiencing prooblems logging off Windows Vista and Windows Server 2008, vist the following Microsoft Web sites.
-
-- For more information about Windows Vista, visit the Windows Vista Solution Center: [https://support.microsoft.com/ph/11732](https://support.microsoft.com/ph/11732)
-
-- For more information about Windows Server 2008, visit the Windows Server 2008 Solution Center: [https://support.microsoft.com/ph/12925](https://support.microsoft.com/ph/12925)
 
 ## Symptoms
 
@@ -168,7 +152,7 @@ To view the Application log, do the following:
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type the following text, and then click **OK**.
 
-    eventvwr.msc
+    `eventvwr.msc`
 3. In Event Viewer, click **Application**.
 
 #### Windows Vista and Windows Server 2008
@@ -188,6 +172,6 @@ When the User Profile Service takes action to prevent a user profile from unload
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type the following text, and then click **OK**.
 
-    appwiz.cpl
+    `appwiz.cpl`
 3. In **Add/Remove Programs**, click **User Profile Hive Cleanup Service**, and then click **Remove**.
 4. Click **Yes**.

@@ -1,5 +1,5 @@
 ---
-title: How to move Terminal Services CALs from one license server to another in Windows 2000, Windows Server 2003 and Windows Server 2008
+title: Move Terminal Services CALs from one license server to another
 description: Describes how to move Terminal Services CALs from one license server to another in Windows 2000, Windows 2003, and Windows 2008. You must have the original license documents to perform this operation.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,10 +17,10 @@ ms.technology: RDS
 
 This article describes how to move Terminal Services Client Access Licenses (CALs) from one Terminal Services license server to another in Windows 2000, Windows Server 2003, and Windows Server 2008.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;953918
+_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 953918
 
-## How to
+## Introduction
 
 To move Terminal Services CALs from one Terminal Services license server to another, follow the procedures in the following sections.
 
@@ -37,11 +37,6 @@ To move the CALs, follow these steps.
 
 1. Install Terminal Services Licensing on the target server.
 2. Activate the license server.
-
-    For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-    [325869](https://support.microsoft.com/help/325869) How to activate a License Server by using Terminal Server Licensing in Windows Server 2003  
-
 3. On the new Terminal Services license server, click **Start**, click **Administrative Tools**, and then click **Terminal Server Licensing**.
 4. In the Terminal Server Licensing snap-in, right-click the Terminal Services license server, and then click **Properties**. In the **Installation method** list, click **Telephone**, and then click **OK**.
 5. Right-click the Terminal Services license server, and then click **Install Licenses**. The **Welcome to the Terminal Server CAL Installation Wizard** dialog box appears.

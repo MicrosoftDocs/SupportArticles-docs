@@ -1,5 +1,5 @@
 ---
-title: How to use the backup feature to back up and restore data in Windows Server 2003
+title: use backup feature to back up and restore data
 description: Describes how to use the Backup feature to back up and restore data on your Windows Server 2003-based computer.
 ms.date: 09/21/2020
 author: Deland-Han
@@ -13,7 +13,7 @@ ms.reviewer: johnf, wellsluo, kaushika
 ms.prod-support-area-path: Configuring and using Backup software
 ms.technology: BackupStorage
 ---
-# How to use the backup feature to back up and restore data in Windows Server 2003  
+# How to use the backup feature to back up and restore data
 
 This step-by-step article describes how to use the Backup feature to back up and restore data on your Windows Server 2003-based computer.
 
@@ -41,7 +41,7 @@ You can manually back up data or use the Backup Wizard, which is included in the
 
     - If you want to back up files and folders to a file, click File.
     - If you want to back up to tape, click a tape device.
-    
+
     > [!NOTE]
     > If a tape device is not connected to your computer, File is the only backup media type that is available in the **Backup destination** box.
 7. In the **Backup media or file name** box, do one of the following:
@@ -68,7 +68,7 @@ To back up the system state (including the registry hives system, software, secu
 
     - If you want to back up files and folders to a file, click File.
     - If you want to back up to tape, click a tape device.
-    
+
     > [!NOTE]
     > If a tape device is not connected to your computer, File is the only backup media type that is available in the **Backup destination** box.
 8. In the **Backup media or file name** box, do one of the following:
@@ -97,7 +97,7 @@ You may want to run a backup operation when there's low system usage. However, s
 
     - If you want to back up files and folders to a file, click File.
     - If you want to back up to tape, click a tape device.
-    
+
     > [!NOTE]
     > If a tape device is not connected to your computer, File is the only backup media type that is available in the **Backup destination** box.
 7. In the **Backup media or file name** box, do one of the following:
@@ -137,7 +137,6 @@ If a data loss occurs, you can restore your backup data manually or by using the
 
 ### To restore selected files from a file or tape
 
-
 1. Click Start, point to All Programs, point to Accessories, point to System Tools, and then click Backup. The Backup or Restore Wizard starts.
 2. Click Advanced Mode.
 3. Click the **Restore and Manage Media** tab.
@@ -146,9 +145,10 @@ If a data loss occurs, you can restore your backup data manually or by using the
 
     - If you want to restore the files or folders to the same location in which they were when you backed up the data, click **Original location**, and then go to step 7.
     - If you want to restore the files or folders to a new location, click **Alternate location**.
-    
+
         This option preserves the folder structure of the backed-up data.
-   - If you want to restore the files and folders to a single location, click **Single folder**.
+    - If you want to restore the files and folders to a single location, click **Single folder**.  
+
 6. If you selected **Alternate location** or **Single folder**, type the location in which you want the data to be restored, or click Browse and select the location, and then click OK.
 7. On the Tools menu, click Options. Click the Restore tab, specify the restore option that you want, and then click OK.
 8. Click Start Restore.
@@ -166,10 +166,9 @@ If a data loss occurs, you can restore your backup data manually or by using the
 
     - If you want to restore the files or folders to the same location in which they were when you backed up the data, click **Original location**, and then go to step 8.
     - If you want to restore the files or folders to a new location, click **Alternate location**.
-    
         This option preserves the folder structure of the backed-up data.
     - If you want to restore the files and folders to a single location, click **Single folder**.
-    
+
     > [!NOTE]
     > If you do not designate an alternate location for the restored data, the restore operation erases the current system state data and replaces it with the information that you are restoring.
 7. If you selected **Alternate location** or **Single folder**, type the location in which you want the data to be restored, or click Browse and select the location.

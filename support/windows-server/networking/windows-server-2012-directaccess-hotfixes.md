@@ -1,5 +1,5 @@
 ---
-title: Recommended hotfixes and updates for Windows Server 2012 DirectAccess and Windows Server 2012 R2 DirectAccess
+title: Recommended hotfixes and updates for Windows Server 2012 
 description: Lists the recommended hotfixes and updates for Windows Server 2012 DirectAccess and Windows Server 2012 R2 DirectAccess.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,8 +17,8 @@ ms.technology: Networking
 
 This article documents recommended hotfixes and product updates that are currently available for Windows Server 2012-based and Windows Server 2012 R2-based DirectAccess deployments. It also includes some known issues for Windows Server 2012 and Windows 2012 R2 DirectAccess that don't require a hotfix to resolve.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10  
-_Original KB number:_ &nbsp;2883952
+_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10  
+_Original KB number:_ &nbsp; 2883952
 
 ## Summary
 
@@ -47,7 +47,6 @@ The updates are listed by the operating systems that they apply to. Some of the 
 |September 6, 2013| [2859347](https://support.microsoft.com/help/2859347)|IPv6 address of a DirectAccess server binds to the wrong network interface in Windows Server 2012|DirectAccess administration components|We recommend this when you use an External Load Balancer with DirectAccess servers.|
 |September 6, 2013| [2788525](https://support.microsoft.com/help/2788525)|You cannot enable external load balancing on a Windows Server 2012-based DirectAccess server|DirectAccess administration components|We recommend this when you use an External Load Balancer with DirectAccess servers.|
 |September 6, 2013| [2782560](https://support.microsoft.com/help/2782560)|Clients cannot connect to IPv4-only resources when you use DirectAccess and external load balancing in Windows Server 2012|DirectAccess-related drivers|We recommend this when you use an External Load Balancer with DirectAccess servers.|
-|September 6, 2013| [2748603](https://support.microsoft.com/help/2748603)|The process may fail when you try to enable Network Load Balancing in DirectAccess in Window Server 2012|NLB|If you are deploying Network Load Balancing (NLB) with DirectAccess, you should read this article.|
 |September 6, 2013| [2836232](https://support.microsoft.com/help/2836232)|Subnet mask changes to an incorrect value and the server goes offline in DirectAccess in Windows Server 2012|DirectAccess administration components|You are using Network Load Balancing (NLB) with DirectAccess.|
 |September 6, 2013| [2849568](https://support.microsoft.com/help/2849568)|MS13-064: Vulnerability in the Windows NAT driver could allow denial of service: August 13, 2013|Windows NAT driver used by DirectAccess|This is a recommended security update.|
 |September 6, 2013| [2765809](https://support.microsoft.com/help/2765809)|MS12-083: Vulnerability in IP-HTTPS component could allow security feature bypass: December 11, 2012|DirectAccess-related drivers|This is a recommended security update.|
@@ -59,7 +58,7 @@ The updates are listed by the operating systems that they apply to. Some of the 
 |September 6, 2013| [2769240](https://support.microsoft.com/help/2769240)|You cannot connect a DirectAccess client to a corporate network in Windows 8 or Windows Server 2012|Kerberos|If you deployed DirectAccess to use a Kerberos Key Distribution Center (KDC) proxy service.|
 |September 6, 2013| [2779768](https://support.microsoft.com/help/2779768)|Windows 8 and Windows Server 2012 update rollup: December 2012|IPSec|If you adjust the IPSec DSOP settings and experience a bugcheck.|
 
-##### Windows 8.1
+## Windows 8.1
 
 | Date added| Knowledge Base article| Title| Component| Why we recommend this hotfix |
 |---|---|---|---|---|
@@ -91,17 +90,13 @@ The updates are listed by the operating systems that they apply to. Some of the 
 |February 28, 2014| [2912883](https://support.microsoft.com/help/2912883)|Remote Assistance connection to a Windows 7 SP1-based Direct Access client computer fails|Remote Assistance related|Apply this hotfix if you use Windows 7 SP1 and use Remote Assistance.|
 |February 28, 2014| [2882659](https://support.microsoft.com/help/2882659)|FIX: "Corporate connectivity is not working" tooltip is displayed for the DirectAccess Assistant 2.0 tray icon in the French version of Windows 7 SP1|DirectAccess Assistance related|Apply this hotfix if you use a French version of Windows 7 SP1.|
 |September 6, 2013| [2796313](https://support.microsoft.com/help/2796313)|Long reconnection time after a DirectAccess server disconnects a Windows 7-based DirectAccess client|DirectAccess-related drivers|DirectAccess clients may be unable to connect.|
-|September 6, 2013| [2758949](https://support.microsoft.com/help/2758949)|You cannot build an IP-HTTPS protocol-based connection on a computer that is running Windows 7 or Windows Server 2008 R2|DirectAccess-related drivers|DirectAccess clients may be unable to connect.|
 |September 6, 2013| [2718654](https://support.microsoft.com/help/2718654)|You are prompted to enter credentials when you try to access a SharePoint server on a Windows 7 SP1-based or Windows Server 2008 R2 SP1-based computer|DNS Client|If you encounter this issue on DirectAccess clients.|
 |September 6, 2013| [2680464](https://support.microsoft.com/help/2680464)|Location detection feature in DirectAccess is disabled intermittently in Windows 7 or in Windows Server 2008 R2|Network Location components|DirectAccess clients may be unable to connect.|
 |September 6, 2013| [2535133](https://support.microsoft.com/help/2535133)|IP-HTTPS clients may disconnect from Windows Server 2008 R2-based web servers intermittently after two minutes of idle time|DirectAccess-related drivers|If you are using IP-HTTPS.|
 |September 6, 2013| [2288297](https://support.microsoft.com/help/2288297)|You are unexpectedly prompted to enter your credentials when you try to access a WebDAV resource in a corporate network by using a DirectAccess connection in Windows 7 or in Windows Server 2008 R2|WebDAV client|If you encounter this issue on DirectAccess clients.|
 |September 6, 2013| [979373](https://support.microsoft.com/help/979373)|The DirectAccess connection is lost on a computer that is running Windows 7 or Windows Server 2008 R2 that has an IPv6 address|DirectAccess-related drivers|DirectAccess clients may be unable to connect.|
-|September 6, 2013| [978738](https://support.microsoft.com/help/978738)|You cannot use DirectAccess to connect to a corporate network from a computer that is running Windows 7 or Windows Server 2008 R2|DNS Client|DirectAccess clients may be unable to connect.|
 
 ## References
-
-[End-to-end configuring and troubleshooting DirectAccess](https://support.microsoft.com/help/3012789)
 
 [DirectAccess clients may be unable to connect when a static proxy is configured](https://support.microsoft.com/help/3017472)
 
@@ -114,8 +109,6 @@ The updates are listed by the operating systems that they apply to. Some of the 
 [DirectAccess clients can connect over Teredo, but are unable to connect by using IP-HTTPS](https://support.microsoft.com/help/2980660)
 
 [DirectAccess clients may not be able to connect to DirectAccess server with error code 0x103, 0x2AFC, or 0x2AF9 when using IP-HTTPS](https://support.microsoft.com/help/2980635)
-
-[DirectAccess clients unable to connect with error 0x4BE](https://support.microsoft.com/help/2980627)
 
 [DirectAccess clients may not be able to connect with error 0x80092013](https://support.microsoft.com/help/2980672)
 

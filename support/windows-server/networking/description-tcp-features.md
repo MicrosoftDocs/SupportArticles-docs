@@ -22,7 +22,8 @@ _Original KB number:_ &nbsp; 224829
 
 ## Summary
 
-This article describes the following TCP features in Microsoft Windows 2000 and Microsoft Windows Server 2003:
+This article describes the following TCP features in Microsoft Windows 2000 and Microsoft Windows Server 2003:  
+
 - TCP Window Size
 - TCP Options Now Supported
 - Windows Scaling - RFC 1323
@@ -45,7 +46,8 @@ The TCP receive window size is the amount of receive data (in bytes) that can be
 
 Instead of using a hard-coded default receive window size; TCP adjusts to even increments of the maximum segment size (MSS), which is negotiated during connection setup. Adjusting the receive window to even increments of the MSS increases the percentage of full-sized TCP segments utilized during bulk data transmissions.
 
-The receive window size is determined in the following manner:
+The receive window size is determined in the following manner:  
+
 1. The first connection request sent to a remote host advertises a receive window size of 16K (16,384 bytes).
 2. When the connection is established, the receive window size is rounded up to an even increment of the MSS.
 3. The window size is adjusted to four times the MSS, to a maximum size of 64 K, unless the window scaling option (RFC 1323) is used.
@@ -57,14 +59,15 @@ For Ethernet connections, the window size will normally be set to 17,520 bytes (
 
 In previous versions of Windows NT, the window size for an Ethernet connection was 8,760 bytes, or six 1460-byte segments.
 
-To set the receive window size to a specific value, add the TcpWindowSize value to the registry subkey specific to your version of Windows. To do this, follow these steps:
+To set the receive window size to a specific value, add the TcpWindowSize value to the registry subkey specific to your version of Windows. To do this, follow these steps:  
+
 1. Click **Start**, click **Run**, type Regedit, and then click **OK**.
 2. Expand the registry subkey specific to your version of Windows:
     - For Windows 2000, expand the following subkey:
         `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces`
-    
+
     - For Windows Server 2003, expand the following subkey:
-        `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters` 
+        `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`  
 
 3. On the **Edit** menu, point to **New**, and then click **DWORD Value**.
 4. Type TcpWindowSize in the **New Value** box, and then press Enter
@@ -150,12 +153,12 @@ TCP: Sequence Number = 725163 (0xB10AB)
 TCP: Acknowledgement Number = 0 (0x0)  
 TCP: Data Offset = 44 (0x2C)  
 TCP: Reserved = 0 (0x0000)  
-+ TCP: Flags = 0x02 : ....S.  
+\+ TCP: Flags = 0x02 : ....S.  
  TCP: Window = 65535 (0xFFFF)  
 TCP: Checksum = 0x8565  
 TCP: Urgent Pointer = 0 (0x0)  
 TCP: Options  
-+ TCP: Maximum Segment Size Option  
+\+ TCP: Maximum Segment Size Option  
 TCP: Option Nop = 1 (0x1)  
  TCP: Window Scale Option  
 TCP: Option Type = Window Scale  
@@ -163,10 +166,10 @@ TCP: Option Length = 3 (0x3)
 TCP: Window Scale = 3 (0x3)  
 TCP: Option Nop = 1 (0x1)  
 TCP: Option Nop = 1 (0x1)  
-+ TCP: Timestamps Option  
+\+ TCP: Timestamps Option  
 TCP: Option Nop = 1 (0x1)  
 TCP: Option Nop = 1 (0x1)  
-+ TCP: SACK Permitted Option  
+\+ TCP: SACK Permitted Option  
 
 It's important to note that the window size used in the actual three-way handshake is NOT the window size that is scaled. This is per RFC 1323 section 2.2, "The Window field in a SYN (for example, a [SYN] or [SYN,ACK]) segment itself is never scaled."
 
@@ -195,10 +198,11 @@ For Example:
 
 If the window size in the registry is entered as 269000000 (269M) in decimal, the scaling factor during the 3-way handshake is 13, because a scaling factor of 12 only allows a window size up to 268,431,360 bytes (268M).
 
-The initial window size in this example would be calculated as follows:
-65,535 bytes with a window scale factor of 13.
-True window size = 65535*2^13
-True window size = 536,862,720
+The initial window size in this example would be calculated as follows:  
+65,535 bytes with a window scale factor of 13.  
+True window size = 65535*2^13  
+True window size = 536,862,720  
+
 When the value for window size is added to the registry and its size is larger than the default value, Windows attempts to use a scale value that accommodates the new window size.
 
 The Tcp1323Opts value in the following registry key can be added to control scaling windows and timestamp:
@@ -207,7 +211,8 @@ The Tcp1323Opts value in the following registry key can be added to control scal
 
 1. On the toolbar click Start, click Run, and then type Regedit to start the Registry Editor.
 2. In the Registry Editor, click Edit, point to New, and then click DWORD Value.
-3. In the New Value box, type Tcp1323Opts, press ENTER, and then on the Edit menu, click Modify.
+3. In the New Value box, type Tcp1323Opts, press ENTER, and then on the Edit menu, click Modify.  
+
     > [!NOTE]
     > The valid range is 0,1,2 or 3 where:  
     0 (disable RFC 1323 options)  
@@ -232,12 +237,12 @@ TCP Timestamps Option (TSopt):
 |1 byte|1 byte|4 bytes|4 bytes|
 |||||
 
-The timestamp option field can be viewed in a Network Monitor trace by expanding the TCP options field, as shown below:
-TCP: Timestamps Option
-TCP: Option Type = Timestamps
-TCP: Option Length = 10 (0xA)
-TCP: Timestamp = 2525186 (0x268802)
-TCP: Reply Timestamp = 1823192 (0x1BD1D8)
+The timestamp option field can be viewed in a Network Monitor trace by expanding the TCP options field, as shown below:  
+> TCP: Timestamps Option  
+TCP: Option Type = Timestamps  
+TCP: Option Length = 10 (0xA)  
+TCP: Timestamp = 2525186 (0x268802)  
+TCP: Reply Timestamp = 1823192 (0x1BD1D8)  
 
 ### Protection against Wrapped Sequence Numbers (PAWS)
 
@@ -255,7 +260,7 @@ The second TCP option, TCP Sack Option, contains acknowledgment for one or more 
 
 Kind 4 is TCP Sack-Permitted Option, Kind 5 is TCP Sack Option. Length is the length in bytes of this TCP option.
 
-Tcp Sack Permitted:
+Tcp SACK Permitted:
 
 |Kind = 4|Length = 2|
 |---|---|
@@ -277,12 +282,12 @@ The SackOpts value in the following registry key can be edited to control the us
 
 1. On the toolbar click Start, click Run, and then type Regedit to start the Registry Editor.
 2. Locate and click the above key in the Registry Editor, and then click Modify on the Edit menu.
-3. Type the desired value in the Value data box.
+3. Type the desired value in the Value data box.  
+
 > [!NOTE]
 > The valid binary value is 0 or 1, the default value is 1. This parameter controls whether or not Selective ACK (SACK - RFC 2018) support is enabled.
 
 The following Network Monitor trace illustrates a host acknowledging all data up to sequence number 54857341, plus the data from sequence number 54858789-54861685. The missing data is from 54857341 to 54858788.
-
 
 > TCP: .A...., len:0, seq:925104-925104, ack:54857341, win:32722, src:1242 dst:139  
 TCP: Source Port = 0x04DA  
@@ -291,14 +296,14 @@ TCP: Sequence Number = 925104 (0xE1DB0)
  TCP: Acknowledgement Number = 54857341 (0x3450E7D)  
 TCP: Data Offset = 44 (0x2C)  
 TCP: Reserved = 0 (0x0000)  
-+ TCP: Flags = 0x10 : .A....  
+\+ TCP: Flags = 0x10 : .A....  
 TCP: Window = 32722 (0x7FD2)  
 TCP: Checksum = 0x4A72  
 TCP: Urgent Pointer = 0 (0x0)  
 TCP: Options  
 TCP: Option Nop = 1 (0x1)  
 TCP: Option Nop = 1 (0x1)  
-+ TCP: Timestamps Option  
+\+ TCP: Timestamps Option  
 TCP: Option Nop = 1 (0x1)  
 TCP: Option Nop = 1 (0x1)  
 TCP: SACK Option  
@@ -317,9 +322,9 @@ The retransmission timeout (RTO) is adjusted continuously to match the character
 
 Fast Retransmit
 
-TCP retransmits data before the retransmission timer expires under some circumstances. The most common of these occurs due to a feature known as fast retransmit. When a receiver that supports fast retransmits receives data with a sequence number beyond the current expected one, and then it is likely that some data was dropped. To help inform the sender of this event, the receiver immediately sends an ACK, with the ACK number set to the sequence number that it was expecting. It will continue to do this for each additional TCP segment that arrives. When the sender starts to receive a stream of ACKs that is acknowledging the same sequence number, it is likely that a segment has been dropped. The sender will immediately resend the segment that the receiver is expecting, without waiting for the retransmission timer to expire. This optimization greatly improves performance when packets are frequently dropped.
+TCP retransmits data before the retransmission timer expires under some circumstances. The most common of these occur due to a feature known as fast retransmit. When a receiver that supports fast retransmits receives data with a sequence number beyond the current expected one, and then it is likely that some data was dropped. To help inform the sender of this event, the receiver immediately sends an ACK, with the ACK number set to the sequence number that it was expecting. It will continue to do this for each additional TCP segment that arrives. When the sender starts to receive a stream of ACKs that is acknowledging the same sequence number, it is likely that a segment has been dropped. The sender will immediately resend the segment that the receiver is expecting, without waiting for the retransmission timer to expire. This optimization greatly improves performance when packets are frequently dropped.
 
-By default, Windows resends a segment if it receives three ACKs for the same sequence number, (one ACK and two duplicates) and that sequence number lags the current one. This is controllable with the TcpMaxDupAcks registry parameter.
+By default, Windows resends a segment if it receives three ACKs for the same sequence number (one ACK and two duplicates) and that sequence number lags the current one. This is controllable with the TcpMaxDupAcks registry parameter.
 
 The TcpMaxDupAcks value in the following registry key can be edited to control the number of ACKs necessary to start a fast retransmits:
 
@@ -327,8 +332,9 @@ The TcpMaxDupAcks value in the following registry key can be edited to control t
 
 1. On the toolbar click Start, click Run, and then type Regedit to start the Registry Editor.
 2. Locate and click the above key in the Registry Editor, and then click Modify on the Edit menu.
-3. Type the desired value in the Value data box.
+3. Type the desired value in the Value data box.  
+
 > [!NOTE]
 > The valid range is 1-3, the default value is 2.
 
-This parameter determines the number of duplicate ACKs that must be received for the same sequence number of sent data before "fast retransmit" is triggered to resend the segment that has been dropped in transit.
+This parameter determines the number of duplicate ACKs that must be received for the same sequence number of sent data before `fast retransmit` is triggered to resend the segment that has been dropped in transit.

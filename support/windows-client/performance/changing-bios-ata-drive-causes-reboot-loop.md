@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: No Boot (not BugChecks)
 ms.technology: Performance
 ---
-# Changing the ATA Drive setting in System Bios causes reboot loop in Windows 8
+# Changing the ATA Drive setting in System Bios causes reboot loop
 
 This article provides a solution to a reboot loop issue that's caused by changing the ATA Drive setting.
 
@@ -22,8 +22,9 @@ _Original KB number:_ &nbsp; 2751461
 
 ## Symptoms
 
-Consider the following scenario:
-- The BIOS setting for the drive is set to ATA Mode. 
+Consider the following scenario:  
+
+- The BIOS setting for the drive is set to ATA Mode.  
 - Install or upgrade the system to Windows 8.
 - You boot into the BIOS and changed the ATA setting from ATA Mode to AHCI Mode pressed enter to accept the change.
 - You click Yes to the Warning about the detected mode change on the embedded ATA controller.
@@ -36,12 +37,14 @@ This is due to changes in Windows 8 PnP in which Boot Start Drivers are not inst
 
 ## Resolution
 
-In order to correct this issue, please walk through the following steps;
+In order to correct this issue, please walk through the following steps:  
+
 1. Power down or restart the computer and enter the system BIOS.
 2. Change the ATA Drive setting back to ATA Mode, press enter to accept the change and restart the computer.
 3. Click Yes to the Warning about the detected mode change on the embedded ATA controller.
 4. The system will boot normally to the Modern App Start Menu.
- NOTE: Be sure you know the Local Admin account and password and are able to boot successfully before proceeding.
+    > [!NOTE]
+    > Be sure you know the Local Admin account and password and are able to boot successfully before proceeding.
 5. Open an elevated command prompt and run the following command to enable SafeMode boot:
 bcdedit /set {current} safeboot minimal
 6. Restart the computer and boot to the system BIOS.
@@ -49,9 +52,12 @@ bcdedit /set {current} safeboot minimal
 8. Click Yes to the Warning about the detected mode change on the embedded ATA controller.
 9. The system will boot normally to the Modern App Start Menu in SafeMode.
 10. Open an elevated command prompt and run the following command to remove the SafeMode boot option:
-bcdedit /deletevalue {current} safeboot
-11. Restart the computer and boot normally, the system will boot successfully to the Modern App Start Menu.
 
+    ```console
+    bcdedit /deletevalue {current} safeboot
+    ```
+
+11. Restart the computer and boot normally, the system will boot successfully to the Modern App Start Menu.
 
 ## More information
 

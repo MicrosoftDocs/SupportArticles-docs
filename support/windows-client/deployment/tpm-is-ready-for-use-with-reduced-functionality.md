@@ -32,15 +32,15 @@ On the operating systems that are listed in the Applies To section, TPM 2.0 is s
 
 TPM 2.0 is designed to be fully functional in UEFI mode. Systems must be in UEFI mode with TPM enabled and secure boot configured and enabled in order to attain the security status that's described in the following TechNet article:
 
-[Secure the Windows 8.1 boot process](https://technet.microsoft.com/windows/dn168167.aspx) 
+[Secure the Windows 8.1 boot process](https://technet.microsoft.com/windows/dn168167.aspx)  
 
 For more information about secure boot and TPM, see the following resources:
 
 [Windows hardware certification requirements for Client and Server systems](https://msdn.microsoft.com/library/windows/hardware/jj128256)
 
-[UEFI implications for Windows Server (pdf)](https://members.uefi.org/learning_center/UEFI_PlugFest_UEFI_implications_for_Windows_Server_Microsoft_March_2013.pdf) 
+[UEFI implications for Windows Server (pdf)](https://members.uefi.org/learning_center/UEFI_PlugFest_UEFI_implications_for_Windows_Server_Microsoft_March_2013.pdf)  
 
-[https://www.trustedcomputinggroup.org](https://www.trustedcomputinggroup.org/)  
+[Trusted computing group](https://www.trustedcomputinggroup.org/)  
 
-Third-party information disclaimer 
- Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
+Third-party information disclaimer  
+Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.

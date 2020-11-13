@@ -1,5 +1,5 @@
 ---
-title: Netlogon service doesn't keep settings after in-place upgrade to Windows Server
+title: Netlogon doesn't keep settings
 description: Describes an issue that prevents the Netlogon service on domain controllers from starting automatically after you upgrade to Windows Server 2016 or Windows Server 2019. Provides a resolution.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,14 +17,15 @@ ms.technology: ActiveDirectory
 
 This article provides a resolution for an issue that prevents the Netlogon service on domain controllers from starting automatically after you upgrade to Windows Server 2016 or Windows Server 2019.
 
-_Original product version:_ &nbsp;Windows Server 2019, Windows Server 2016  
-_Original KB number:_ &nbsp;3201247
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Original KB number:_ &nbsp; 3201247
 
 ## Symptoms
 
 Assume that you have one or more computers that are running Windows Server 2012 or Windows Server 2012 R2 and configured as domain controllers or member servers in an Active Directory domain. You decide to do an in-place upgrade on the domain controllers to Windows Server 2016 or Windows Server 2019.
 
 After you upgrade the domain controllers, you notice that one or more of the following symptoms occur:
+
 - User logon failures
 - SID to name translation fails in object picker UIs
 - RDP connection failures
@@ -51,13 +52,16 @@ This issue occurs because the in-place upgrade process doesn't set the startup v
 
 ## Resolution
 
-This issue can be avoided by letting the setup process install the latest updates during the in-place upgrade. 
+This issue can be avoided by letting the setup process install the latest updates during the in-place upgrade.
 
 If the issue already occurs, to resolve this problem, change the Netlogon service Startup type to Automatic. To do this, follow these steps:
-1. Click Start, type services.msc in the Start Search box, and then click Services Desktop app.
-2. Locate and double-click Netlogon, and then click Automatic in the Startup type box.
-3. Click OK, and then start the Netlogon service. Although this action doesn't require a restart, we recommend that you restart the computer to make sure that all services that depend on Netlogon are started and correctly registered on the Network.
+
+1. Click **Start**, type *services.msc* in the **Start Search** box, and then click **Services Desktop** app.
+2. Locate and double-click Netlogon, and then click **Automatic** in the **Startup type** box.
+3. Click **OK**, and then start the Netlogon service.
+
+Although this action doesn't require a restart, we recommend that you restart the computer to make sure that all services that depend on Netlogon are started and correctly registered on the Network.
 
 ## References
 
-[3201265](https://support.microsoft.com/help/3201265) Time server registry setting is disabled on Domain Controllers after upgrading to Windows Server 2016
+[Windows Time Service settings aren't preserved during an in-place upgrade to Windows Server 2016 or Windows 10 Version 1607](/troubleshoot/windows-server/identity/windows-time-service-values-reverted)
