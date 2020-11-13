@@ -17,14 +17,14 @@ ms.technology: RDS
 
 This article provides a solution to an issue where SSL (TLS 1.0) is displayed as the Security Layer protocol instead of the actual TLS 1.2 protocol.
 
-_Original product version:_ &nbsp; Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
+_Original product version:_ &nbsp; Windows Server 2012 R2
 _Original KB number:_ &nbsp; 3097192
 
 ## Symptoms
 
 Consider the following scenario:
 
-- You have a computer that's running Windows Server.  
+- You have a computer that's running Windows Server operating system.
 - You have the Remote Desktop Connection Broker (RDCB) role configured on this computer.
 - You try to secure the RDP connections to the target computers by using SSL encryption (Transport Layer Security (TLS)).
 
