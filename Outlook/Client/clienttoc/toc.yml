@@ -659,6 +659,8 @@
       href: ../user-interface/outlook-application-icon-missing-from-windows-taskbar.md
     - name: Outlook Object Model can't run in a Windows service
       href: ../user-interface/outlook-object-model-unsuitable-to-run-in-windows-service.md
+    - name: PersonMetadata error in Search Folder
+      href: ../user-interface/personmetadata-items.md
     - name: Presence icons do not show in Outlook
       href: ../user-interface/presence-icons-do-not-show-in-outlook.md
     - name: Reminders in Outlook do not appear
@@ -683,8 +685,6 @@
       href: ../user-interface/some-instant-messaging-client-features-not-available.md
     - name: Support limitations for open standards
       href: /exchange/troubleshoot/development/public-protocols-support-limitations?context=/outlook/troubleshoot/context/client-context
-    - name: Unexpected mail items
-      href: ../user-interface/personmetadata-items.md
     - name: WebBrowser control content isn't displayed correctly
       href: ../user-interface/wpf-webbrowser-control-content-not-display-correctly.md
     - name: Windows Search service setting results in no matches found
