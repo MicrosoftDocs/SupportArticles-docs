@@ -24,7 +24,7 @@ When you create a Search Folder for all mail items in Microsoft Outlook 2019, Ou
 
 > In folder: PersonMetadata
 
-The PersonMetadata folder was created and used by [Outlook Customer Manager (OCM)](https://techcommunity.microsoft.com/t5/outlook-customer-manager/faq-frequently-asked-questions-about-outlook-customer-manager/m-p/29680) was deprecated in June 2020, Outlook still uses this folder. When new items are created in the Contacts folder or the Recipient Cache folder (a hidden folder under the Contacts folder), related items are created in the PersonMetadata folder.
+The PersonMetadata folder was created and used by [Outlook Customer Manager (OCM)](https://techcommunity.microsoft.com/t5/outlook-customer-manager/faq-frequently-asked-questions-about-outlook-customer-manager/m-p/29680). Although the OCM service was deprecated in June 2020, Outlook still uses this folder. When new items are created in the Contacts folder or the Recipient Cache folder (a hidden folder under the Contacts folder), related items are created in the PersonMetadata folder.
 
 The PersonMetadata folder is usually hidden from other parts of the Outlook user interface. However, mail items from the PersonMetadata folder may be included in Search Folders. You can identify such items by their empty subject line.
 
@@ -32,7 +32,7 @@ The PersonMetadata folder and the items that are created in it will be removed f
 
 ## Workaround 1
 
-Do not include mail items from the PersonMetadata folder in your Search Folders.
+To prevent mail items in the PersonMetadata folder from showing up in your Search Folders, follow these steps:
 
 1. Right-click the Search Folder and select **Customize This Search Folder**.
 2. Select **Browse** and clear the **Search Subfolders** option.
@@ -51,7 +51,7 @@ Folder item limit notification:
 Use this method if only a few users are experiencing the issue. If there many affected users, use [Method 2](#method-2-run-the-ews-script-as-an-administrator).
 
 1. Exit Outlook.
-2. Download the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi) tool. 
+2. Download the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi) tool.
 3. Start the MfcMapi.exe program and select **OK**.
 4. On the **Tools** menu, select **Options**, specify the following options, then select **OK**:
 
@@ -65,10 +65,10 @@ Use this method if only a few users are experiencing the issue. If there many af
 
     > [!NOTE]
     > The text for the **Top of Information Store** node might be localized in another language, depending on the regional settings of the mailbox.
-9. Right-click on **PersonMetadata** > **Advanced** > **Empty items and subfolders from folder...**.
+9. Right-click **PersonMetadata** > **Advanced** > **Empty items and subfolders from folder...**.
 10. In the **Delete Items and Subfolders** dialog box, select **Hard Deletion** and then select **OK**.
 
-Notice that MFCMAPI may seem to stop responding for an extended time while it performs the delete operation. You can monitor its progress by running the Get-MailboxFolderStatistics cmdlet, if it's necessary.
+Notice that MFCMAPI may seem to stop responding for an extended time while it performs the delete operation. You can monitor its progress by running the Get-MailboxFolderStatistics cmdlet.
 
 ### Method 2: Run the EWS script as an administrator
 
