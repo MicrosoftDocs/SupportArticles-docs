@@ -964,11 +964,9 @@
     items:
     - name: Enable diagnostic logging for Windows Security Center
       href: ./windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md
-- name: windows-troubleshooters
+- name: Windows Troubleshooters
   items:
-  - name: windows-troubleshooters
-    href: ./windows-troubleshooters/windows-troubleshooters-overview.md
   - name: Windows Troubleshooters
-    items:
-    - name: Active and retired Windows 10 troubleshooters
-      href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
+    href: ./windows-troubleshooters/windows-troubleshooters-overview.md
+  - name: Active and retired Windows 10 troubleshooters
+    href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md

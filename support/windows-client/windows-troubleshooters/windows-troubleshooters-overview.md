@@ -1,6 +1,6 @@
 ---
-title: windows-troubleshooters overview
-description: Overview of windows-troubleshooters troubleshooting articles.
+title: Windows Troubleshooters overview
+description: Overview of Windows Troubleshooters troubleshooting articles.
 ms.date: 11/09/2020
 author: Deland-Han
 ms.author: delhan
@@ -12,10 +12,10 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.technology: windows-troubleshooters
 ---
-# windows-troubleshooters documentation
+# Windows Troubleshooters documentation
 
-The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve windows-troubleshooters-related issues. Browse the content or use the search feature to find relevant content.
+The topic in this section provide information about Windows Troubleshooters.
 
-## windows-troubleshooters sub category
+## Windows Troubleshooters topic
 
-- Windows Troubleshooters
+- Active and retired Windows 10 troubleshooters
