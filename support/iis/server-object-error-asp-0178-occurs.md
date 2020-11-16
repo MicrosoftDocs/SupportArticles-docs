@@ -37,4 +37,4 @@ You need to give the IUSR_\<machine_name> account permissions to launch and acce
 3. Add the IUSR_\<machine_name> account and the INTERACTIVE account to the Registry Value Permissions dialog box, and click **OK**.
 4. In the **Default Security** tab, click the **Edit Default** in the Default Launch Permissions frame. The Registry Value Permissions dialog box appears.
 
-5. Add the IUSR_\<machine_name> account to the Registry Value Permissions dialog box0, and click **OK**.
+5. Add the IUSR_\<machine_name> account to the Registry Value Permissions dialog box, and click **OK**.

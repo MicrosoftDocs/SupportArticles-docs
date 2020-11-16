@@ -61,7 +61,7 @@ This article assumes that you are familiar with the following topics:
     ```
 
 4. Save the file as *Product.dtd* in the same folder as your XML document.
-5. Reopen *Product.xml* in Visual Studio 2005 or in Visual Studio .NET; to do this, point to Open on the File menu, and then click **File**. Add a DOCTYPE statement (below the "?xml version="1.0" line), as follows. This links the XML document to the DTD file).
+5. Reopen *Product.xml* in Visual Studio 2005 or in Visual Studio .NET; to do this, point to Open on the File menu, and then click **File**. Add a DOCTYPE statement (below the `?xml version="1.0"` line), as follows. This links the XML document to the DTD file).
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -72,7 +72,7 @@ This article assumes that you are familiar with the following topics:
 
 ## Perform validation by using a DTD
 
-1. In Visual Studio 2005 or in Visual Studio .NET, create a new Visual Basic Console Application project named ValidateXmlUsingVB.
+1. In Visual Studio 2005 or in Visual Studio .NET, create a new Visual Basic Console Application project named *ValidateXmlUsingVB*.
 2. Visual Studio 2005 or Visual Studio .NET displays a new file named *Module1.vb*. At the beginning of this file, add two Imports statements, as follows:
 
     ```vbnet
