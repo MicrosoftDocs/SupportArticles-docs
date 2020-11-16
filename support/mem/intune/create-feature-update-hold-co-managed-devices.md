@@ -19,15 +19,15 @@ The [`./Vendor/MSFT/Policy/Config/Update/TargetReleaseVersion` Policy CSP](/wind
 
 Setting the `TargetReleaseVersion` Open Mobile Alliance Uniform Resource Identifier (OMA-URI) will configure devices to apply the Windows 10 feature update version that's specified in its value. There are several considerations when setting the `TargetReleaseVersion` policy:
 
-- Existing devices that are at an older feature update version will be updated to the specified feature update version the next time the Windows Update client checks for updates.
-- Existing devices that are at a later feature update version will remain at their current version.
+- Existing devices that have an older feature update version installed will be updated to the specified feature update version the next time the Windows Update client checks for updates.
+- Existing devices that have a later feature update version installed will stay on their current version.
 - Newly added devices will receive the feature update the first time they check for updates.
-- Devices will stay at the feature update version specified in the policy when new Windows 10 feature update versions are released.
-- This policy doesn't override [safeguard holds](/windows/deployment/update/safeguard-holds). If the `TargetReleaseVersion` policy is successfully applied to a device but the device doesn't update, check if any safeguard holds exist.
+- Devices will stay on the feature update version that's specified in the policy when new Windows 10 feature update versions are released.
+- This policy doesn't override [safeguard holds](/windows/deployment/update/safeguard-holds). If the `TargetReleaseVersion` policy is successfully applied to a device but the device doesn't update to the specified version, check if any safeguard holds exist.
 
 ## Set the `TargetReleaseVersion` policy
 
-To configure a target release version policy setting, follow these steps:
+To configure the target release version policy setting, follow these steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
@@ -47,6 +47,6 @@ To configure a target release version policy setting, follow these steps:
 
 Intune-managed devices will receive the policy setting the next time they sync with the Intune service. The policy will be effective for the Windows Update client after the sync completes.
 
-To verify if the setting is successfully applied to a Windows 10 device,  check the value of the following registry value:
+To verify if the setting is successfully applied to a Windows 10 device, check the value of the following registry value:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\Update\TargetReleaseVersion`
