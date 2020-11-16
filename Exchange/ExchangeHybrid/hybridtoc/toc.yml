@@ -226,16 +226,16 @@
     - name: Can't access a shared mailbox
       href: ../user-and-shared-mailboxes/cannot-access-mailbox.md
     - name: Can't access hidden mailbox after migration
-      href: ../user-and-shared-mailboxs/cannot-access-hidden-mailbox-in-outlook-after-migration.md
+      href: ../user-and-shared-mailboxes/cannot-access-hidden-mailbox-in-outlook-after-migration.md
     - name: Can't add permissions to user or room mailbox in another forest
-      href: ../user-and-shared-mailboxs/cannot-add-permissions-to-user-or-room-mailbox-in-another-forest.md
+      href: ../user-and-shared-mailboxes/cannot-add-permissions-to-user-or-room-mailbox-in-another-forest.md
     - name: LitigationHoldEnabled property mismatch
       href: ../user-and-shared-mailboxes/litigationholdenabled-property-differs-onpremises-cloud.md
     - name: Mailbox exists in both Exchange Online and on-premises
       href: ../user-and-shared-mailboxes/mailbox-exists-exo-onpremises.md
     - name: Name error when adding a Room or Resource mailbox
-      href: ../user-and-shared-mailboxs/cannot-add-room-or-resource-mailbox.md
+      href: ../user-and-shared-mailboxes/cannot-add-room-or-resource-mailbox.md
     - name: Shared mailboxes are unexpectedly converted to user mailboxes
-      href: ../user-and-shared-mailboxs/shared-mailboxes-unexpectedly-converted-to-user-mailboxes.md
+      href: ../user-and-shared-mailboxes/shared-mailboxes-unexpectedly-converted-to-user-mailboxes.md
     - name: Still can access a moved mailbox
-      href: ../user-and-shared-mailboxs/still-can-access-mailbox-after-moved.md
+      href: ../user-and-shared-mailboxes/still-can-access-mailbox-after-moved.md

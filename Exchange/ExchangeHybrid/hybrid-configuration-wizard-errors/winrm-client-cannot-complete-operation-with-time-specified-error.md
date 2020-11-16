@@ -17,7 +17,7 @@ appliesto:
 - Exchange Server 2013 Standard Edition
 search.appverid: MET150
 ---
-# The WinRM client cannot complete the operation within the time specified error when you run Hybrid Configuration wizard
+# (The WinRM client cannot complete the operation within the time specified) error when you run Hybrid Configuration wizard
 
 _Original KB number:_ &nbsp; 3067913
 

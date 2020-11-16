@@ -15,7 +15,7 @@ appliesto:
 - Exchange Online 
 search.appverid: MET150
 ---
-# MigrationPermanentException Cannot find a recipient that has mailbox GUID error when moving mailboxes
+# (MigrationPermanentException Cannot find a recipient that has mailbox GUID) error when moving mailboxes
 
 _Original KB number:_ &nbsp; 2956029
 

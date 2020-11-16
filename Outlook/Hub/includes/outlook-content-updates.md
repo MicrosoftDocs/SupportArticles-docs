@@ -2,6 +2,15 @@
 
 
 
+## Week of November 09, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/11/2020 | [Open Shared Calendar option is unavailable](/outlook/troubleshoot/calendars/cannot-open-a-shared-calendar-in-outlook-2016) | modified |
+| 11/12/2020 | [Outlook Search Folders show unexpected mail items with empty subject lines](/outlook/troubleshoot/user-interface/personmetadata-items) | modified |
+
+
 ## Week of November 02, 2020
 
 
@@ -37,11 +46,3 @@
 | 10/15/2020 | [Outlook crashes in KERNELBASE.dll due to corrupt data file](/outlook/troubleshoot/performance/outlook-2013-crashes-in-kernelbase-dll) | modified |
 | 10/15/2020 | [Stability issues in Citrix environment with AppSense](/outlook/troubleshoot/performance/possible-stability-issues-in-citrix-enviconment-with-appsense) | modified |
 | 10/15/2020 | [Resources for the top Outlook issues](/outlook/troubleshoot/user-interface/resources-for-the-top-outlook-issues-in-microsoft-365) | modified |
-
-
-## Week of October 05, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/outlook/troubleshoot/index) | modified |

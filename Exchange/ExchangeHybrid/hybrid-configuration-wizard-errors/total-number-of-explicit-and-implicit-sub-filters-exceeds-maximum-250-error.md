@@ -15,7 +15,7 @@ appliesto:
 - Exchange Online
 search.appverid: MET150
 ---
-# Total number of explicit and implicit sub filters exceeds maximum allowed number of 250 error in Hybrid Configuration Wizard
+# (Total number of explicit and implicit sub filters exceeds maximum allowed number of 250) error in Hybrid Configuration Wizard
 
 _Original KB number:_ &nbsp; 3001493
 
