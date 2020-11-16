@@ -15,11 +15,20 @@
     - name: Empty IEM is reported as winning
       href: empty-ie-policy-shown-as-winning.md
 
+    - name: Enhanced Protected Mode add-on compatibility
+      href: enhanced-protected-mode-add-on-compatibility.md
+
     - name: How to change homepage and search provider
       href: change-homepage-and-search-provider.md
 
+    - name: How to set Internet Explorer to open Office documents in Office program
+      href: how-to-set-ie-to-open-office-documents-in-office-program.md
+
     - name: How to check version
       href: check-ie-version.md
+
+    - name: How to set Group Policy Preference settings
+      href: how-to-configure-group-policy-preference-settings.md
 
     - name: How to set advanced settings via GPOs
       href: advanced-settings.md
@@ -32,6 +41,9 @@
 
     - name: PAC file isn't read
       href: cannot-read-pac-file.md
+
+    - name: 32-bit browser applications don't work as expected
+      href: 32-bit-browser-applications-not-working-as-expected.md
 
 - name: Connectivity and Navigation
   items:
@@ -70,6 +82,9 @@
 
     - name: Persistent cookies lost between Internet Explorer and Office
       href: cookies-not-shared-with-office.md
+
+    - name: Repeatedly prompted for credentials to use proxy server
+      href: repeatedly-prompted-to-enter-credentials-to-use-proxy-server.md
 
     - name: Session variables are missing
       href: variables-not-persist-between-requests.md
@@ -283,6 +298,9 @@
     - name: How to create all-inclusive deployment package
       href: create-all-inclusive-deploy-package.md
 
+    - name: How to repair or reinstall Internet Explorer
+      href: how-to-repair-or-reinstall-ie.md
+
     - name: Internet Explorer 11 installation fails
       href: ie-installation-fails.md
 
@@ -300,6 +318,9 @@
 
     - name: Troubleshoot Internet Explorer 9 installation issues
       href: troubleshoot-installation-problems-ie-9.md
+
+    - name: Can't uninstall Internet Explorer 9
+      href: what-to-do-if-you-cannot-uninstall-internet-explorer-9.md
 
 - name: Security and Privacy
   items:
@@ -327,11 +348,20 @@
     - name: Https site can't be displayed
       href: cannot-display-https-site.md
 
+    - name: Internet Explorer security zones registry entries
+      href: ie-security-zones-registry-entries.md
+
+    - name: Information about the Unsafe File List
+      href: information-about-the-unsafe-file-list.md
+
     - name: Java security setup
       href: how-to-set-java-security.md
 
     - name: Prompt for a password when using authentication
       href: prompt-for-username-and-password.md
+
+    - name: Protect yourself from spoofed Web sites
+      href: steps-to-identify-and-protect-from-spoofed-web-sites.md
 
     - name: Smart card pin prompt appears in Internet Explorer 9
       href: smartcard-pin-behind-dialog-box.md
@@ -353,6 +383,9 @@
     - name: Flickers when showing animated content
       href: ie-flickers-with-hybrid-graphics.md
 
+    - name: Internet Explorer opens, flashes, and closes immediately when starting
+      href: ie-opens-flashes-and-closes-immediately-when-starting.md
+
     - name: Memory usage rises due to iframes
       href: memory-usage-rises-with-iframes.md
 
@@ -364,3 +397,6 @@
 
     - name: Slow rendering for document mode
       href: document-modes-slow-rendering.md
+
+    - name: We were unable to return you to your webpage error
+      href: we-were-unable-to-return-you-to-your-webpage-error.md
