@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 954357
 
 ## Error message description
 
-When you use the Virtual Machine Connection tool (`Vmconnect.exe`) to connect to a virtual machine on a Windows Server 2008 Hyper-V-based computer, you may receive the following error message:  
+When you use the Virtual Machine Connection tool (Vmconnect.exe) to connect to a virtual machine on a Windows Server 2008 Hyper-V-based computer, you may receive the following error message:  
 > A connection will not be made because credentials may not be sent to the remote computer. For assistance, contact your system administrator.
 >
 > Would you like to try connecting again?
@@ -81,7 +81,7 @@ Follow these steps, and then quit Registry Editor:
 
 To enable authentication of remote credentials, you can use the Gpedit tool to configure Group Policy settings on the Windows Server 2008 Hyper-V-based computer. To do this, follow these steps:  
 
-1. Start `Gpedit.msc`.
+1. Start Gpedit.msc.
 2. Expand **Computer Configuration**, and then expand **Administrative Templates**.
 3. Expand **System**, and then click **Credentials Delegation**.
 4. In the Details pane, double-click **Allow Delegating Default Credentials**.
@@ -90,7 +90,7 @@ To enable authentication of remote credentials, you can use the Gpedit tool to c
     > If you are using NTLM authentication, use the **Allow Default Credentials with NTLM-only Server Authentication** entry.  
 
 5. Click **Enabled**, and then click to select the **Concatenate OS defaults with inputs above** check box.
-6. Click **Show**, and then verify that the computer of the remote user is included in the list. If it is necessary, click **Add**, and then include the computer of the remote user. You can also use wildcard characters. For example, to select all computers, add the following wildcard character: `*`
+6. Click **Show**, and then verify that the computer of the remote user is included in the list. If it is necessary, click **Add**, and then include the computer of the remote user. You can also use wildcard characters. For example, to select all computers, add the following wildcard character: *
 7. Click **OK** two times.
 8. Close Group Policy.
 

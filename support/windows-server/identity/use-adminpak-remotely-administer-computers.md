@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 304718
 
 ## Summary
 
-This article describes options to administer computers that are running Windows Server 2003, Windows XP, or Microsoft Windows 2000. Additionally, this article discusses how to download the Windows Server 2003 Administration Tools Pack (`Adminpak`). This article also discusses the various compatibility issues that occur when you remotely administer Windows 2000-based computers from Windows XP-based computers and from Windows Server 2003-based computers and vice versa.
+This article describes options to administer computers that are running Windows Server 2003, Windows XP, or Microsoft Windows 2000. Additionally, this article discusses how to download the Windows Server 2003 Administration Tools Pack (Adminpak). This article also discusses the various compatibility issues that occur when you remotely administer Windows 2000-based computers from Windows XP-based computers and from Windows Server 2003-based computers and vice versa.
 
 ## Introduction
 
@@ -45,25 +45,25 @@ To remotely administer computers that are running Windows Server 2003 or Windows
 
 - Install and use graphical administrative tools that are packaged in the Administration Tools Pack to remotely administer computers that are running Windows Server 2003, Windows XP, or Windows 2000. Where interoperability problems exist between operating systems, perform administrative tasks on the console of the target computer or on a computer that is running the same operating system as the computer that is being remotely administered.
 - Use Terminal Services to remotely administer computers that have command-line and graphical user interface (GUI) administration tools locally installed. To avoid the two-session limit, you can use Application Server mode to create a Windows Server 2003-based or Windows 2000-based installation that is running Terminal Server or Terminal Services. Where interoperability problems exist between operating systems, perform administrative tasks from a server that has Terminal Server or Terminal Services enabled and that is running the same operating system as the remote computer that is being administered.
-- Use command-line tools and scripts to locally and remotely administer computers that are running Windows Server 2003, Windows XP, or Windows 2000. These tools and scripts include Active Directory Service Interfaces (ADSI), Windows Net.exe commands, and the tools that are packaged with `Suptools.msi`. Where interoperability problems exist between operating systems, perform administrative tasks on the console of the target computer or on a designated computer for administrative tasks that is running the same operating system as the remote computer that is being administered. For example, the Windows Server 2003 Service Pack 2 (SP2) Support Tools will install on a computer that is running Windows XP Professional. However, the tools are not guaranteed to work correctly in this scenario. Tools that are known to have issues include the following:  
+- Use command-line tools and scripts to locally and remotely administer computers that are running Windows Server 2003, Windows XP, or Windows 2000. These tools and scripts include Active Directory Service Interfaces (ADSI), Windows Net.exe commands, and the tools that are packaged with Suptools.msi. Where interoperability problems exist between operating systems, perform administrative tasks on the console of the target computer or on a designated computer for administrative tasks that is running the same operating system as the remote computer that is being administered. For example, the Windows Server 2003 Service Pack 2 (SP2) Support Tools will install on a computer that is running Windows XP Professional. However, the tools are not guaranteed to work correctly in this scenario. Tools that are known to have issues include the following:  
 
-  - `Dfsutil.exe`
-  - `Netdiag.exe`
-  - `Netcap.exe`
-  - `Ntfrsutil.exe`  
+  - Dfsutil.exe
+  - Netdiag.exe
+  - Netcap.exe
+  - Ntfrsutil.exe  
   
 If you want to run these tools against a Windows Server 2003 SP2-based computer, we recommend that you run them from a computer that is running Windows Server 2003 SP2. You can use the Remote Desktop feature to connect to a Windows Server 2003 SP2-based computer that is running the Support Tools.
 
 ### Windows Server 2003 and Windows 2000 Server Administration Tools Packs
 
-To make the remote management of your servers easier, Microsoft has included typically used graphical administrative tools in a self-extracting file that is named `Adminpak.msi` (Adminpak).
+To make the remote management of your servers easier, Microsoft has included typically used graphical administrative tools in a self-extracting file that is named Adminpak.msi (Adminpak).
 
 > [!NOTE]
-> On 64-bit versions of Windows Server 2003, this file is called `Wadminpak.msi`.
+> On 64-bit versions of Windows Server 2003, this file is called Wadminpak.msi.
 
 The Windows 2000 Administration Tools Pack is located in the I386 folder on the Windows 2000 Server-family CD and installs on computers that are running Windows 2000. Most of the tools in the Windows 2000 Adminpak can remotely administer Windows 2000 in addition to the 32-bit and 64-bit versions of Windows XP Professional and the 32-bit and 64-bit versions of Windows Server 2003.
 
-The Windows Server 2003 Administration Tools Pack is located in the I386 folder of the Windows Server 2003 CD and is available as a free download on `www.microsoft.com`. The following table summarizes the operating systems on which you can install the Adminpak from Windows 2000, from Windows Server 2003 original (RTM), from Windows Server 2003 Service Pack 1 (SP1), or from Windows Server 2003 Service Pack 2. Additionally, the table summarizes the operating systems that the `Adminpaks` from these sources can remotely administer.
+The Windows Server 2003 Administration Tools Pack is located in the I386 folder of the Windows Server 2003 CD and is available as a free download on `www.microsoft.com`. The following table summarizes the operating systems on which you can install the Adminpak from Windows 2000, from Windows Server 2003 original (RTM), from Windows Server 2003 Service Pack 1 (SP1), or from Windows Server 2003 Service Pack 2. Additionally, the table summarizes the operating systems that the Adminpaks from these sources can remotely administer.
 
 |Windows 2000 Server Adminpak|Windows Server 2003 original (RTM) Adminpak|Windows Server 2003 SP1 Adminpak|Windows Server 2003 SP2 Adminpak|Remote Server Administration Tool (RSAT)|
 |---|---|---|---|---|
@@ -157,13 +157,13 @@ You can install the Service Pack 1 version of the Windows Server 2003 Administra
 - Windows Server 2003 for Small Business Servers R2 Edition
 
 > [!NOTE]
-> The version of Adminpak that is included in the I386 folder of the installation media for the 64-bit versions of Windows Server 2003 is called `Wadminpak.msi`. The `Wadminpak.msi` file is identical to and interchangeable with the Adminpak.msi file that can be downloaded from `www.microsoft.com` and that is included with 32-bit versions of Windows Server 2003 Service Pack 2. For ease of installation, you can install the Windows Server 2003 SP2 Adminpak.msi file on 32-bit or 64-bit versions of Windows XP Professional or on 32-bit or 64-bit versions of Windows Server 2003. Similarly, you can install `Wadminpak.msi` on 32-bit or 64-bit versions of Windows XP Professional or on 32-bit or 64-bit versions of Windows Server 2003.
+> The version of Adminpak that is included in the I386 folder of the installation media for the 64-bit versions of Windows Server 2003 is called Wadminpak.msi. The Wadminpak.msi file is identical to and interchangeable with the Adminpak.msi file that can be downloaded from `www.microsoft.com` and that is included with 32-bit versions of Windows Server 2003 Service Pack 2. For ease of installation, you can install the Windows Server 2003 SP2 Adminpak.msi file on 32-bit or 64-bit versions of Windows XP Professional or on 32-bit or 64-bit versions of Windows Server 2003. Similarly, you can install Wadminpak.msi on 32-bit or 64-bit versions of Windows XP Professional or on 32-bit or 64-bit versions of Windows Server 2003.
 
 To install the Windows Server 2003 Administration Tools Pack, follow these steps:  
 
 1. Download the Windows Server 2003 Service Pack 2 Administration Tools Pack. To do this, visit the following Microsoft Web site: [Microsoft Download Center](https://www.microsoft.com/download/search.aspx?displaylang=en)  
 
-    Perform a keyword search for "`adminpak`" for the "Windows XP" or "Windows Server" operating system.
+    Perform a keyword search for "adminpak" for the "Windows XP" or "Windows Server" operating system.
 
 2. Log on to the local computer by using administrator credentials.
 
@@ -175,7 +175,7 @@ To install the Windows Server 2003 Administration Tools Pack, follow these steps
 
     If the Windows Server 2003 Beta 3 version of the Administration Tools Pack is installed, follow these steps:  
 
-    1. Save the following text as a file that is named `Rrasreg.cmd`:
+    1. Save the following text as a file that is named Rrasreg.cmd:
 
         ```console
         rem  
@@ -200,7 +200,7 @@ To install the Windows Server 2003 Administration Tools Pack, follow these steps
      [816102](https://support.microsoft.com/help/816102) How to use Group Policy to remotely install software in Windows Server 2003  
 
     > [!NOTE]
-    > When you upgrade a Windows 2000-based server to Windows Server 2003, the system compatibility check in Windows Server 2003 `Winnt32.exe` or in the `Winnt32 /checkupgradeonly` process may incorrectly detect that the Administration Tools Pack has been installed on your Windows 2000 domain controller. This issue occurs because the Active Directory Installation Wizard (`Dcpromo.exe`) on Windows 2000 uses a feature in the Windows 2000 Adminpak file to create shortcut menu items for the domain administration tools. You may safely ignore this message and continue with the upgrade process from Windows 2000 to Windows Server 2003.
+    > When you upgrade a Windows 2000-based server to Windows Server 2003, the system compatibility check in Windows Server 2003 Winnt32.exe or in the Winnt32 /checkupgradeonly process may incorrectly detect that the Administration Tools Pack has been installed on your Windows 2000 domain controller. This issue occurs because the Active Directory Installation Wizard (Dcpromo.exe) on Windows 2000 uses a feature in the Windows 2000 Adminpak file to create shortcut menu items for the domain administration tools. You may safely ignore this message and continue with the upgrade process from Windows 2000 to Windows Server 2003.
 
 ### What to expect from the original-release version of the Windows Server 2003 Administration Tools Pack
 
@@ -211,7 +211,7 @@ To install the Windows Server 2003 Administration Tools Pack, follow these steps
 
 ### What to do when you experience remote administration problems
 
-1. Confirm that you are using the latest supported version of the Adminpak.msi snap-ins and DLL files that are available from the Microsoft Web site. You can use the APVer.vbs script that is included with the original-release version of the Adminpak Web download package to determine the version of the Administration Tools Pack that you have installed on your computer. To do this, change to the folder where you expanded Adminpak.exe, and then type `apver /?` to see a list of options for this diagnostic script.
+1. Confirm that you are using the latest supported version of the Adminpak.msi snap-ins and DLL files that are available from the Microsoft Web site. You can use the APVer.vbs script that is included with the original-release version of the Adminpak Web download package to determine the version of the Administration Tools Pack that you have installed on your computer. To do this, change to the folder where you expanded Adminpak.exe, and then type apver /? to see a list of options for this diagnostic script.
 
 2. See the known compatibility issues that are described in this article to determine whether the issue is known.
 
@@ -223,9 +223,9 @@ To install the Windows Server 2003 Administration Tools Pack, follow these steps
 
 #### Installation and upgrade issues
 
-Windows Server 2003 `Winnt32.exe` and the `Winnt32 /checkupgradeonly` process on Windows 2000 domain controllers report that Adminpak.msi is installed when it was never installed or when it has already been removed.
+Windows Server 2003 Winnt32.exe and the Winnt32 /checkupgradeonly process on Windows 2000 domain controllers report that Adminpak.msi is installed when it was never installed or when it has already been removed.
 
-This issue occurs because the Active Directory Installation Wizard (`Dcpromo.exe`) in Windows 2000 uses an internal feature of the Windows 2000 version of Adminpak.msi to install menu shortcuts on domain controllers. You can safely ignore this warning in Winnt32.exe and continue the upgrade. After the upgrade is complete, install the Windows Server 2003 version of Adminpak.msi from the I386 folder of the installation media to make sure that you have the latest version of the domain administration tools.
+This issue occurs because the Active Directory Installation Wizard (Dcpromo.exe) in Windows 2000 uses an internal feature of the Windows 2000 version of Adminpak.msi to install menu shortcuts on domain controllers. You can safely ignore this warning in Winnt32.exe and continue the upgrade. After the upgrade is complete, install the Windows Server 2003 version of Adminpak.msi from the I386 folder of the installation media to make sure that you have the latest version of the domain administration tools.
 
 #### Active Directory Domains and Trusts
 
@@ -249,7 +249,7 @@ If you use a Windows 2000-based computer to administer Windows Server 2003-based
 
 - When the Service Pack 1 version of Active Directory Sites and Services is started on 64-bit systems, it may not edit Group Policy. Additionally, you receive the following error message:
 
-    Windows cannot find `gpedit.msc`. Make sure you typed the name correctly, and then try again. To search for a file, click the Start button, and then click Search.
+    Windows cannot find gpedit.msc. Make sure you typed the name correctly, and then try again. To search for a file, click the Start button, and then click Search.
 
     Modify the syntax of your command line or shortcut to use the following syntax: `%windir%\syswow64\mmc.exe %systemroot%\system32\dssite.msc -32`  
 
@@ -290,11 +290,11 @@ There are many challenges that are introduced when you are deploying more than o
 
 You can configure the remote access policy administration model in the **Remote Access Policies** node of the Routing and Remote Access snap-in when the domain is configured in Windows 2000 native mode or a later version. To remotely manage the remote access dial-in tab in Active Directory Users or Computers or in Internet Authentication Server (IAS) from a Windows XP-based computer, use Terminal Services or Remote Desktop to access a Windows Server 2003-based or Windows 2000-based computer. Or, log on to the console of a Windows Server 2003-based computer or of a Windows 2000-based computer to configure these settings directly.
 
-- Windows XP-based computers that are joined to Windows 2000-based domain controller domains do not support the enhanced functionality to select multiple users and to make bulk edits for attributes such as the home folder and the profile path. The multiple-select functionality is supported in forests where the schema version is 15 or later versions. For example, executing the Windows Server 2003 `ADDPREP /ForestPrep and /DomainPrep` in a Windows 2000-based forest and domain would enable multiple-selection support on systems that have the Windows Server 2003 Active Directory Users and Computers snap-in installed.
+- Windows XP-based computers that are joined to Windows 2000-based domain controller domains do not support the enhanced functionality to select multiple users and to make bulk edits for attributes such as the home folder and the profile path. The multiple-select functionality is supported in forests where the schema version is 15 or later versions. For example, executing the Windows Server 2003 ADDPREP /ForestPrep and /DomainPrep in a Windows 2000-based forest and domain would enable multiple-selection support on systems that have the Windows Server 2003 Active Directory Users and Computers snap-in installed.
 
 - When the Service Pack 1 version of Active Directory Users and Computers is started on 64-bit systems, it may not always edit Group Policy. Additionally, you receive the following error message:
 
-Windows cannot find `gpedit.msc`. Make sure you typed the name correctly, and then try again. To search for a file, click the Start button, and then click Search.
+Windows cannot find gpedit.msc. Make sure you typed the name correctly, and then try again. To search for a file, click the Start button, and then click Search.
 
 Modify the syntax of your command line or shortcut to use the following syntax: `%windir%\syswow64\mmc.exe %systemroot%\system32\dsa.msc -32 back`  
 
@@ -328,7 +328,7 @@ No known issues.
 
 - Adds ring, hub and spoke, and custom topology support for File Replication Service (FRS) replication of DFS roots and links.
 
-- Configures connection priority in the Q321557 and SP3 release of Windows 2000 `Ntfrs.exe`.
+- Configures connection priority in the Q321557 and SP3 release of Windows 2000 Ntfrs.exe.
 
 - If you are using a Windows XP-based client, you must use the Windows XP SP1 update to administer Windows Server 2003 DFS.
 
@@ -363,7 +363,7 @@ In the Windows Server 2003 SP2 version of Adminpak.msi, two new options are avai
     > [892777](https://support.microsoft.com/help/892777) Updates to the Windows Server 2003 Support Tools are included in Windows Server 2003 Service Pack 2  
 
     1. If you have the Active Directory Users and Computers snap-in or the Active Directory Sites and Services snap-in open, close the snap-ins.  
-    2. Click **Start**, click **Run**, type `adsiedit.msc` in the **Open** box, and then click **OK**.  
+    2. Click **Start**, click **Run**, type adsiedit.msc in the **Open** box, and then click **OK**.  
     3. Expand **Configuration**.
     4. Expand **CN=Configuration,DC=**ForestRootName****.
     5. Right-click **CN=DisplaySpecifiers**, and then click **Properties**.
@@ -374,38 +374,38 @@ In the Windows Server 2003 SP2 version of Adminpak.msi, two new options are avai
 
 #### Microsoft Exchange
 
-- The Microsoft Exchange Simple Mail Transfer Protocol (SMTP) and Network News Transfer Protocol (NNTP) DLL files were added to Adminpak.msi. The additional `Staxmem.dll`, `Smtpapi.dll`, `Smtpadm.dll`, `Smtpsnap.hlp`, and `Nntpsnap.hlp` files were added to `Adminpak.msi` to allow 32-bit Windows XP Professional-based clients to administer the release of Exchange after Microsoft Exchange 2000.
+- The Microsoft Exchange Simple Mail Transfer Protocol (SMTP) and Network News Transfer Protocol (NNTP) DLL files were added to Adminpak.msi. The additional Staxmem.dll, Smtpapi.dll, Smtpadm.dll, Smtpsnap.hlp, and Nntpsnap.hlp files were added to Adminpak.msi to allow 32-bit Windows XP Professional-based clients to administer the release of Exchange after Microsoft Exchange 2000.
 
 - Administration of Exchange-based servers after the Exchange 2000 version from 64-bit clients is not supported.
 
 #### Help
 
-- The `Ntcmds.chm` Help file was added to support command-line administration.
-- The Windows XP Professional Help files are reinstalled when the Administration Tools Pack is removed. Windows XP Professional versions of the `Ntart.chm` and `Ntcmds.chm` files are backed up during the installation of the Administration Tools Pack and are restored during removal.
+- The Ntcmds.chm Help file was added to support command-line administration.
+- The Windows XP Professional Help files are reinstalled when the Administration Tools Pack is removed. Windows XP Professional versions of the Ntart.chm and Ntcmds.chm files are backed up during the installation of the Administration Tools Pack and are restored during removal.
 
 #### Internet Information Services command-line utilities
 
 This section applies to the following utilities:  
 
-- `IisApp.vbs`
+- IisApp.vbs
 
-- `Iisback.vbs`
+- Iisback.vbs
 
-- `IisCnfg.vbs`
+- IisCnfg.vbs
 
-- `IisFtp.vbs`
+- IisFtp.vbs
 
-- `IisFtpdr.vbs`
+- IisFtpdr.vbs
 
-- `Iisvdir.vbs`
+- Iisvdir.vbs
 
-- `Iisweb.vbs`
+- Iisweb.vbs
 
 The following issues have been reported:  
 
 - All scripts are compatible with Microsoft Internet Information Services (IIS) 6.0 only.
 
-- IISCnfg: When you use the `iiscnfg /export` command, the destination file (the file that you specify after the `/f` switch) is created on the remote computer (the Windows Server-based computer). For example, to export the metabase, type the following command:
+- IISCnfg: When you use the `iiscnfg /export` command, the destination file (the file that you specify after the /f switch) is created on the remote computer (the Windows Server-based computer). For example, to export the metabase, type the following command:
 
     ```console
     iiscnfg /s RemoteServer /u UserName /p UserPwd /export /f d:\Config.xml /sp /LM/W3SVC/1
@@ -420,7 +420,7 @@ The following issues have been reported:
     > [!NOTE]
     > These commands are one line each. They have been wrapped for readability.
 
-    IISCnfg checks that the `D:\Config.xml` file (the file that you specify after the `/f` switch) exists on both the local and the remote computer (RemoteServer). However, the actual import uses only the file on the remote server. When you import or copy the `Config.xml` file from the remote server, use the same path on the local computer.
+    IISCnfg checks that the D:\Config.xml file (the file that you specify after the /f switch) exists on both the local and the remote computer (RemoteServer). However, the actual import uses only the file on the remote server. When you import or copy the Config.xml file from the remote server, use the same path on the local computer.
 
 #### Internet Authentication Service
 
@@ -460,7 +460,7 @@ The Internet Authentication Service (IAS) snap-in has been removed from the Admi
 
 #### Ntdsutil.exe
 
-The authoritative restore command in Ntdsutil depends on `Ntdsbsrv.dll`. `Ntdsbsrv.dll` is not included in Windows XP Professional or in the Windows Server 2003 Administration Tools Pack. Perform authoritative restores from the console of Active Directory-based domain controllers. If you must run this command on Windows XP-based clients, copy the Ntdsbsrv.dll file from a release version of a Windows Server 2003 installation.
+The authoritative restore command in Ntdsutil depends on Ntdsbsrv.dll. Ntdsbsrv.dll is not included in Windows XP Professional or in the Windows Server 2003 Administration Tools Pack. Perform authoritative restores from the console of Active Directory-based domain controllers. If you must run this command on Windows XP-based clients, copy the Ntdsbsrv.dll file from a release version of a Windows Server 2003 installation.
 
 #### Object Picker
 
@@ -528,7 +528,7 @@ Use the following commands to start the snap-ins, and then modify the GPOs:
 
 The OOB version of GPMC must be run on 32-bit platforms. The OOB version of GPMC is not supported on 64-bit versions of Microsoft Windows. There are no plans to update the OOB version of GPMC to support 64-bit versions of Microsoft Windows for Windows Server 2003 or Windows XP Service Pack 2 (SP2). In 64-bit versions of Windows Vista and of Windows Server 2008. the 64-bit version of GPMC is supported. However, GPMC Reporting cannot be installed on all 64-bit versions of Microsoft Windows. This version of GPMC is not part of any current Administration Tools package.  
 
-Also, you may receive the following error message when you try to open GPMC:Windows cannot find `GPEDIT.MSC`.
+Also, you may receive the following error message when you try to open GPMC:Windows cannot find GPEDIT.MSC.
 This problem occurs even though you use the following command to open GPMC:  `%windir%\syswow64\mmc.exe %windir%\system32\gpmc.msc -32`  
 For more information, click the following article number to view the article in the Microsoft Knowledge Base:
 

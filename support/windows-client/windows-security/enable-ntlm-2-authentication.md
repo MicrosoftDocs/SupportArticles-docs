@@ -37,13 +37,13 @@ For additional information about installing the appropriate Active Directory Cli
 
 [288358](https://support.microsoft.com/help/288358) How to install the Active Directory client extension  
 
-When you install Active Directory Client Extensions on a computer that is running Windows 98, the system files that provide NTLM 2 support are also automatically installed. These files are `Secur32.dll`, `Msnp32.dll`, `Vredir.vxd`, and `Vnetsup.vxd`. If you remove Active Directory Client Extension, the NTLM 2 system files are not removed because the files provide both enhanced security functionality and security-related fixes.
+When you install Active Directory Client Extensions on a computer that is running Windows 98, the system files that provide NTLM 2 support are also automatically installed. These files are Secur32.dll, Msnp32.dll, Vredir.vxd, and Vnetsup.vxd. If you remove Active Directory Client Extension, the NTLM 2 system files are not removed because the files provide both enhanced security functionality and security-related fixes.
 
 By default, NTLM 2 session security encryption is restricted to a maximum key length of 56 bits. Optional support for 128-bit keys is automatically installed if the system satisfies United States export regulations. To enable 128-bit NTLM 2 session security support, you must install Microsoft Internet Explorer 4.x or 5 and upgrade to 128-bit secure connection support before you install the Active Directory Client Extension.
 
 To verify your installation version:
 
-1. Use Windows Explorer to locate the `Secur32.dll` file in the `%SystemRoot%\System` folder.
+1. Use Windows Explorer to locate the Secur32.dll file in the %SystemRoot%\System folder.
 2. Right-click the file, and then click **Properties**.
 3. Click the **Version** tab. The description for the 56-bit version is "Microsoft Win32 Security Services (Export Version)." The description for the 128-bit version is "Microsoft Win32 Security Services (US and Canada Only)."  
 
@@ -57,7 +57,7 @@ Before you enable NTLM 2 authentication for Windows 98 clients, verify that all 
 
 To enable a Windows 95, Windows 98, or Windows 98 Second Edition client for NTLM 2 authentication, install the Directory Services Client. To activate NTLM 2 on the client, follow these steps:
 
-1. Start Registry Editor (`Regedit.exe`).
+1. Start Registry Editor (Regedit.exe).
 2. Locate and click the following key in the registry: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control`
 
 3. Create an LSA registry key in the registry key listed above.
@@ -90,7 +90,7 @@ For reference, the full range of values for the LMCompatibilityLevel value that 
 
 You can configure the minimum security that is used for programs that use the NTLM Security Support Provider (SSP) by modifying the following registry key. These values are dependent on the LMCompatibilityLevel value:
 
-1. Start Registry Editor (`Regedit.exe`).
+1. Start Registry Editor (Regedit.exe).
 2. Locate the following key in the registry: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\control\LSA\MSV1_0`
 
 3. On the Edit menu, click Add Value, and then add the following registry value:  

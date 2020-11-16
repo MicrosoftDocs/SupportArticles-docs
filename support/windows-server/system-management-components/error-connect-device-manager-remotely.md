@@ -53,7 +53,7 @@ Previously, a Windows 7-based computer could connect to a Windows Server 2008 R2
 
 To open Device Manager on a remote computer:  
 
-1. Open Computer Management (`compmgmt.msc`)
+1. Open Computer Management (compmgmt.msc)
 2. On the Action menu, click Connect to another computer.
 3. In the Select Computer dialog box, do one of the following:
    - In the Another computer text box, type the name of the computer to access, and then click OK.

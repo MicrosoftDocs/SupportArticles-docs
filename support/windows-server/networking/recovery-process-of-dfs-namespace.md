@@ -26,11 +26,11 @@ Rapid publishing articles provide information directly from within the Microsoft
 
 ## More information
 
-The recovery process of a DFS Namespace depends on how the namespace configuration data was lost, the type of Namespace (domain or standalone), and what types of backups exist of the data. The data may have been inappropriately modified through the DFS management tools, deleted directly within Active Directory or the registry, or corrupted. Backups types of the configuration data include System-state backups of a domain controller, backups of `DFS Roots/Namespace servers`, exported data via the `dfsutil.exe` utility, and DFS service registry keys.
+The recovery process of a DFS Namespace depends on how the namespace configuration data was lost, the type of Namespace (domain or standalone), and what types of backups exist of the data. The data may have been inappropriately modified through the DFS management tools, deleted directly within Active Directory or the registry, or corrupted. Backups types of the configuration data include System-state backups of a domain controller, backups of DFS Roots/Namespace servers, exported data via the dfsutil.exe utility, and DFS service registry keys.
 
 Background:
 
-Before beginning the recovery process, determine if the loss of the DFS Namespace was due to accidental administrative deletion of the namespace contents or by `loss/corruption` of the DFS configuration data.  
+Before beginning the recovery process, determine if the loss of the DFS Namespace was due to accidental administrative deletion of the namespace contents or by loss/corruption of the DFS configuration data.  
 
 > DFSN Recovery options:  
 Standalone DFSN  
@@ -64,7 +64,7 @@ The following chart details how the data (Active Directory or registry of a DFS 
 |<br/><br/>Domain/Standalone<br/>|<br/><br/>Shared folders<br/>|<br/><br/>File System, Registry<br/>|
 ||||
 
-Utilize the dfsutil.exe utility to view the contents of the DFS configuration. Dfsutil is available within the Windows Server 2003 and the Windows XP Support Tools package, and it is included with Windows Server 2008 once the Distributed File System Role Service is installed via Server Manager. The following data lists the configuration for the `DFS namespace/root` named "DATA" after running the commands `dfsutil /root:\\contoso.com\DATA /view` (on 2003) or `dfsutil root \\contoso.com\DATA` (on 2008):
+Utilize the dfsutil.exe utility to view the contents of the DFS configuration. Dfsutil is available within the Windows Server 2003 and the Windows XP Support Tools package, and it is included with Windows Server 2008 once the Distributed File System Role Service is installed via Server Manager. The following data lists the configuration for the DFS namespace/root named "DATA" after running the commands `dfsutil /root:\\contoso.com\DATA /view` (on 2003) or `dfsutil root \\contoso.com\DATA` (on 2008):
 
 > DFS Utility Version 5.2 (built on 5.2.3790.3959)
 >
@@ -86,18 +86,18 @@ Utilize the dfsutil.exe utility to view the contents of the DFS configuration. D
 >
 > Root with 1 Links [Blob Size: 704 bytes]
 
-This DFS namespace contains a single folder/link called "Documentation" and contains two folder/link targets, `\\2003server1\documentation` and `\\2003server2\documentation`.
+This DFS namespace contains a single folder/link called "Documentation" and contains two folder/link targets, \\\\2003server1\documentation and \\\\2003server2\documentation.
 
 The DFS configuration Data queried by DFSUtil is stored within the following location within Active Directory:  
 
 > CN=Dfs-Configuration,CN=System,DC=\<domain DN>
 
-In Windows Server 2003, each Domain DFS Root/Namespace is stored within an "fTDfs" object that contains an attribute "pKT" containing the configuration data (namespace settings, namespace servers, folder targets, etc). For instance, the "DATA" namespace listed in the `dfsutil.exe` output above is located with an fTDfs object at this location: CN=DATA,CN=Dfs-Configuration,CN=System,DC=\<domain DN>. No parts of this object should ever be modified directly.  
+In Windows Server 2003, each Domain DFS Root/Namespace is stored within an "fTDfs" object that contains an attribute "pKT" containing the configuration data (namespace settings, namespace servers, folder targets, etc). For instance, the "DATA" namespace listed in the dfsutil.exe output above is located with an fTDfs object at this location: CN=DATA,CN=Dfs-Configuration,CN=System,DC=\<domain DN>. No parts of this object should ever be modified directly.  
 
 > CN=Dfs-Configuration,CN=System,DC=\<domain DN>
  |_fTDfs
 
-In Windows Server 2008, Domain DFS Roots/Namespaces may be configured in "Windows Server 2008 mode". In this mode, configuration data is stored under an `msDFS-NamespaceAnchor` class object. An object of class "msDFS-Namespacev2" represents each root, and each root contains an `msDFS-Linkv2` object representing each hosted link.  
+In Windows Server 2008, Domain DFS Roots/Namespaces may be configured in "Windows Server 2008 mode". In this mode, configuration data is stored under an msDFS-NamespaceAnchor class object. An object of class "msDFS-Namespacev2" represents each root, and each root contains an msDFS-Linkv2 object representing each hosted link.  
 
 >CN=Dfs-Configuration,CN=System,DC=\<domain DN>  
  |_msDFS-NamespaceAnchor  
@@ -185,7 +185,7 @@ Windows Server 2008:
 
 1. At the Windows logon screen, click Switch User, and then click Other User.
 
-2. Type `.\administrator` as the user name, type the DSRM password for the server, and then press ENTER.
+2. Type .\administrator as the user name, type the DSRM password for the server, and then press ENTER.
 
 3. Click Start, right-click Command Prompt, and then click Run as Administrator.
 
@@ -217,9 +217,9 @@ Windows Server 2008:
 
 Marking the DFS configuration data authoritative:  
 
-It is important to know the distinguished name of the namespace(s) to be restored so that the DFS root object(s) may be marked authoritatively. It should be in the format `CN=<rootname>,CN=DFS-Configuration,CN=System,DC=` and may need to be enclosed in quotation marks if spaces exist within any labels.
+It is important to know the distinguished name of the namespace(s) to be restored so that the DFS root object(s) may be marked authoritatively. It should be in the format "CN=\<rootname>,CN=DFS-Configuration,CN=System,DC=" and may need to be enclosed in quotation marks if spaces exist within any labels.
 
-1. In Directory Services Restore Mode, click Start, click Run, type `ntdsutil`, and then press ENTER.
+1. In Directory Services Restore Mode, click Start, click Run, type ntdsutil, and then press ENTER.
 
 2. At the ntdsutil: prompt, type authoritative restore, and then press ENTER.
 
@@ -229,13 +229,13 @@ It is important to know the distinguished name of the namespace(s) to be restore
 
     For example, to restore all DFS Namespace objects in the domain `contoso.com`, type:
 
-    restore subtree `CN=Dfs-Configuration,CN=System,DC=contoso,dc=com`
+    restore subtree "CN=Dfs-Configuration,CN=System,DC=contoso,dc=com"
     > [!Warning]
     > All DFS namespaces will be affected by this operation, returning them to the state contained in the backup.
 
     To restore a single DFS Namespace object for a root named "DATA" in the domain `contoso.com`, type:
 
-    restore subtree `CN=DATA,CN=Dfs-Configuration,CN=System,DC=contoso,dc=com`
+    restore subtree "CN=DATA,CN=Dfs-Configuration,CN=System,DC=contoso,dc=com"
 
     Restoring a subtree of objects ensures the operation will complete successfully for both v1 and v2 namespaces.
 
@@ -269,7 +269,7 @@ For example, to create the "LogicalShare" and "RootShare" for a DFS Namespace na
 
 Option 2 - Import the DFS configuration if an export is available  
 
-An export of the DFS configuration consists of a text file generated via `dfsutil.exe` and the following command:  
+An export of the DFS configuration consists of a text file generated via dfsutil.exe and the following command:  
 
 Windows Server 2003:  
 
@@ -285,7 +285,7 @@ Windows Server 2008:
 
 To recover a namespace via an export file, perform the following:
 
-1. If the root doesn't already exist, create it using DFS Management. Add all appropriate root targets. `Dfsutil.exe` will fail to import the configuration if the root itself doesn't already exist and will not add root targets as defined in the file. However, you may review the contents of the export file to identify which root targets should be manually added.  
+1. If the root doesn't already exist, create it using DFS Management. Add all appropriate root targets. Dfsutil.exe will fail to import the configuration if the root itself doesn't already exist and will not add root targets as defined in the file. However, you may review the contents of the export file to identify which root targets should be manually added.  
 
 2. Import the configuration file to create all of the hosted links via the commands:
 Windows Server 2003:  
@@ -352,7 +352,7 @@ If a standalone DFS namespace/root server experiences configuration data loss, i
 
 Option 2 - Import the DFS configuration if an export is available  
 
-If a `DFSUTIL.EXE` export exists for the root, it may be imported via the commands:
+If a DFSUTIL.EXE export exists for the root, it may be imported via the commands:
 
 Windows Server 2003:  
 

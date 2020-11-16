@@ -52,7 +52,7 @@ To resolve this problem, obtain the latest service pack for Windows NT Server 4.
 
 To work around this issue, delete the invalid registry value:
 
-1. Start Registry Editor (`Regedt32.exe`).
+1. Start Registry Editor (Regedt32.exe).
 2. Locate the following registry key: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Install\IniFile Times`
 3. Locate the invalid value (this is usually a value with no name).
 4. Click the invalid value.

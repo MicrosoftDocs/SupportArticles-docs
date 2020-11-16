@@ -68,11 +68,11 @@ To change the URL that is included in the error message, use an `ASP.NET` applic
 
 To change the URL that is included in the error message, you can edit the Web.config file for the TS Web Access website. To do this, follow these steps:  
 
-1. Open the `Web.config` file for the TS Web Access website in Notepad.
+1. Open the Web.config file for the TS Web Access website in Notepad.
 
     > [!NOTE]
     > By default, the Web.config file for the TS Web Access website is located in the Web\ts folder.
-2. Locate the \<appSettings> section in the `Web.config` file.
+2. Locate the \<appSettings> section in the Web.config file.
 3. In the \<appSettings> section, add the following entry:
 
     > \<add key="rdcInstallUrl" value="`http://URL`" />

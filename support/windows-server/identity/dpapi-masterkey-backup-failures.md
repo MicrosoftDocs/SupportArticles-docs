@@ -72,7 +72,7 @@ _Original KB number:_ &nbsp; 3205778
         adamsetup D20.10F8 0256 15:30:22.002 Type a valid user name and password for the selected service account.  
         adamsetup D20.10F8 0257 15:30:22.002 ADAMERR_SERVICE_INVALID_CREDS
 
-    2. A sample network trace taken during the failure shows that ADLDS is sending an incorrect password and Kerberos TGT request fails with `KDC_ERR_PREAUTH_FAILED`:
+    2. A sample network trace taken during the failure shows that ADLDS is sending an incorrect password and Kerberos TGT request fails with KDC_ERR_PREAUTH_FAILED:
 
         |Source|Destination|Protocol|Description|
         |---|---|---|---|
@@ -141,7 +141,7 @@ The problem occurs only if there's no MasterKey present and when the user has no
     nltest /dsgetdc:<domain> /writable [/force]
     ```
 
-    Use `NETLOGON.LOG` and a network trace with the provided log examples in this article to verify name resolution and connectivity to an RWDC.  
+    Use NETLOGON.LOG and a network trace with the provided log examples in this article to verify name resolution and connectivity to an RWDC.  
     To determine whether you're experiencing this issue, try opening CREDMAN in Control Panel. If the attempt fails with a 0x80090345 error, you have verified this.  
 2. If possible, take the computer to a site where an RWDC exists and then log on there for the first time. After this, the DPAPI MasterKey will be created, and the issue will be resolved.
 3. If you have no access to an RWDC and if the user will not be roaming between machines, the following registry entry can be used to resolve the issue.

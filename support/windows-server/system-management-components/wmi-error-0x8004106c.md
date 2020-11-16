@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2404366
 
 ## Symptoms
 
-You're unable to run WMI queries. You may receive an error similar to the following if you run a query. In this example, the following query was run from the `root\cimv2` namespace:  
+You're unable to run WMI queries. You may receive an error similar to the following if you run a query. In this example, the following query was run from the root\cimv2 namespace:  
 
 ```console
 Select * From Win32_LogicalDisk Where FreeSpace > 200000
@@ -40,17 +40,17 @@ This error can occur if the WMI Provider service has reached its quota limit.
 
 Raise the memory quota of the WMI Provider service by carrying out the following steps:
 
-- Go to Start--> Run and type `wbemtest.exe`.
+- Go to Start--> Run and type wbemtest.exe.
 - Click **Connect**.  
 - In the namespace text box type "root" (without quotes).
 - Click **Connect.**  
 - Click **Enum Instances...**  
-- In the Class Info dialog box, enter Superclass Name as `__ProviderHostQuotaConfiguration` (without quotes) and press **OK**.  
+- In the Class Info dialog box, enter Superclass Name as __ProviderHostQuotaConfiguration (without quotes) and press **OK**.  
 
     > [!Note]
     > the Superclass name includes a double underscore at the front.  
 
-- In the **Query Result** window, double-click `__ProviderHostQuotaConfiguration=@`
+- In the **Query Result** window, double-click __ProviderHostQuotaConfiguration=@
 - In the **Object Editor** window, double-click whichever Property name you wish to modify the quota for.
 - In the **Value** dialog, type in 536870912 (512 MB) for XP and Windows 2003, for Vista a newer start with new value of 805306368 (768), then move to 1073741824 (1024) if still needing room. If this does not resolve quotat violation issue, then need to troubleshoot cause of high memory usage
 - Click **Save Property.**  

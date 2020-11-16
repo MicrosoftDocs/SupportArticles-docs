@@ -33,7 +33,7 @@ This article discusses the following topics:
 
 When you try to promote a Microsoft Windows Server 2003 domain controller or a Microsoft Windows 2000 domain controller to a global catalog server, the domain controller may not advertise itself as a global catalog. This is true if you promote the domain controller programmatically or by clicking to select the **Global Catalog** option. When this problem occurs, event messages are logged in the Directory Services log.
 
-Additionally, the output may show that the domain controller did not pass the advertising test and is not advertising the global catalog. This output occurs when a domain controller logs event ID 1578 and when you run a domain controller diagnostic check (`Dcdiag.exe`) on that domain controller.
+Additionally, the output may show that the domain controller did not pass the advertising test and is not advertising the global catalog. This output occurs when a domain controller logs event ID 1578 and when you run a domain controller diagnostic check (Dcdiag.exe) on that domain controller.
 
 > [!NOTE]
 > To run a domain controller diagnostic check, do the following:
@@ -128,7 +128,7 @@ Remove all stale metadata for any domain controllers and domains in the forest t
 
 [216498](https://support.microsoft.com/help/216498) How to remove data in Active Directory after an unsuccessful domain controller demotion  
 
-After you have verified that the replication between domain controllers is working correctly, determine whether there is an orphaned domain object. You can use the `Ntdsutil.exe` utility to clear the orphaned domain object. If there is any orphaned domain controller object for that domain, you must also delete the domain controller object. For more information about how to remove an orphaned domain, click the following article number to view the article in the Microsoft Knowledge Base:
+After you have verified that the replication between domain controllers is working correctly, determine whether there is an orphaned domain object. You can use the Ntdsutil.exe utility to clear the orphaned domain object. If there is any orphaned domain controller object for that domain, you must also delete the domain controller object. For more information about how to remove an orphaned domain, click the following article number to view the article in the Microsoft Knowledge Base:
 
 [230306](https://support.microsoft.com/help/230306) How to remove orphaned domains from Active Directory  
 
@@ -161,7 +161,7 @@ To confirm that the domain controller is a global catalog server, follow these s
     > Flags: PDC GC DS LDAP KDC TIMESERV WRITABLE DNS_FOREST CLOSE_SITE The command completed successfully  
 
     > [!NOTE]
-    > The `Nltest` tool is included with Windows 2000 Support Tools. To install Windows 2000 Support Tools, open the `Support\Tools` folder on the Windows 2000 startup disk, and then run the Setup program. You must log on as a member of the Administrators group to install these tools.  
+    > The Nltest tool is included with Windows 2000 Support Tools. To install Windows 2000 Support Tools, open the Support\Tools folder on the Windows 2000 startup disk, and then run the Setup program. You must log on as a member of the Administrators group to install these tools.  
 
 For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:
 

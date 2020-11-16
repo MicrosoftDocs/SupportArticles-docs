@@ -43,7 +43,7 @@ Because of the different time intervals that are used to update site-related inf
     > [!NOTE]
     > The Nltest tool can be obtained from the Microsoft Windows Server 2003 support tools.
 
-    To speed up adoption of new sites especially for System Volume (`SYSVOL`) access, you can use the logon server as the preferred DFS server.
+    To speed up adoption of new sites especially for System Volume (SYSVOL) access, you can use the logon server as the preferred DFS server.
 
 - When client computers search for domain-based DFS volumes, the DFS namespace servers or domain controllers examine the IP address of the client computers and their local site information. When the DFS namespace servers or domain controllers examine the IP address, they can determine the site that the client computers are in. You can also perform this mapping from the client site cache. DFS may run a query for the best alternative site by using the Windows Server 2003 closest site selection mode. The DFS server then examines the target site cache to find the servers for the site that the client computer is in, and the next best sites. Because of the delay to update the caches, the DFS server may not find the new site names in the target site cache. The DFS server then returns an incorrectly ordered list of servers to the client computer. Therefore, the client computer may contact slow servers for files. This causes poor performance.
 

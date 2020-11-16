@@ -28,16 +28,16 @@ Calls to the `CryptAcquireContext` function can include various flags. It is imp
 
 ### Private key operations are not performed
 
-When you are not using a persisted private key, the `CRYPT_VERIFYCONTEXT` (0xF0000000) flag can be used when CryptAcquireContext is called. This tells CryptoAPI to create a key container in memory that will be released when `CryptReleaseContext` is called. When this flag is used, the `pszContainer` parameter must be NULL. The `CRYPT_VERIFYCONTEXT` flag can be used in the following scenarios:
+When you are not using a persisted private key, the CRYPT_VERIFYCONTEXT (0xF0000000) flag can be used when CryptAcquireContext is called. This tells CryptoAPI to create a key container in memory that will be released when CryptReleaseContext is called. When this flag is used, the pszContainer parameter must be NULL. The CRYPT_VERIFYCONTEXT flag can be used in the following scenarios:
 
 - You are creating a hash.
 - You are generating a symmetric key to encrypt or decrypt data.
 - You are deriving a symmetric key from a hash to encrypt or decrypt data.
-- You are verifying a signature. It is possible to import a public key from a `PUBLICKEYBLOB` or from a certificate by using `CryptImportKey` or `CryptImportPublicKeyInfo`.
+- You are verifying a signature. It is possible to import a public key from a PUBLICKEYBLOB or from a certificate by using CryptImportKey or CryptImportPublicKeyInfo.
 - You plan to export a symmetric key, but not import it within the crypto context's lifetime.
 
     > [!NOTE]
-    > A context can be acquired by using the `CRYPT_VERIFYCONTEXT` flag if you only plan to import the public key for the last two scenarios.
+    > A context can be acquired by using the CRYPT_VERIFYCONTEXT flag if you only plan to import the public key for the last two scenarios.
 
 - You are performing private key operations, but you are not using a persisted private key that is stored in a key container.
 
@@ -45,7 +45,7 @@ When you are not using a persisted private key, the `CRYPT_VERIFYCONTEXT` (0xF00
 
 If you plan to perform private key operations, there are many issues that you must consider.
 
-The best way to acquire a context is to try to open the container. If this attempt fails with "NTE_BAD_KEYSET", then create the container by using the `CRYPT_NEWKEYSET` flag.
+The best way to acquire a context is to try to open the container. If this attempt fails with "NTE_BAD_KEYSET", then create the container by using the CRYPT_NEWKEYSET flag.
 
 > [!NOTE]
 > Applications must not use the default key container by passing *NULL* for the container name to store private keys. When multiple applications use the same container, one application can change or destroy the keys that another application needs to have available. If applications use key containers with a unique name, the risk is reduced of other applications tampering with keys that are necessary for proper function.
@@ -95,11 +95,11 @@ if (!CryptAcquireContext(&hProv,
 
 ### Using the CRYPT_MACHINE_KEYSET flag
 
-If you are not performing private key operations on a per-user basis and you need global private key operations, then `CRYPT_MACHINE_KEYSET` should be used. This method creates the private/public key pair on a per-computer basis. Some specific scenarios in which `CRYPT_MACHINE_KEYSET` should be used are:
+If you are not performing private key operations on a per-user basis and you need global private key operations, then CRYPT_MACHINE_KEYSET should be used. This method creates the private/public key pair on a per-computer basis. Some specific scenarios in which CRYPT_MACHINE_KEYSET should be used are:
 
 - You are writing a service.
 - Your component is running under an Active Server Pages (ASP) page.
-- Your component is a Microsoft Transaction Server (MTS) component. For these examples, `CRYPT_MACHINE_KEYSET` is used because the security context in which the application is running does not have access to a user profile. For example, an MTS client may impersonate a user but the user's profile is not available because the user is not logged on. The same is true for a component that is running under an ASP page.
+- Your component is a Microsoft Transaction Server (MTS) component. For these examples, CRYPT_MACHINE_KEYSET is used because the security context in which the application is running does not have access to a user profile. For example, an MTS client may impersonate a user but the user's profile is not available because the user is not logged on. The same is true for a component that is running under an ASP page.
 
 ### Providing access to your container
 
@@ -107,9 +107,9 @@ By default, when a key container is created, the local system and the creator ar
 
 If your code will run under more than one security context, you must give the appropriate users access to your container.
 
-To set the security on the container, call the `CryptSetProvParam` function with the `PP_KEYSET_SEC_DESCR` flag after the container is created. This method allows you to set the security descriptor on the container.  
+To set the security on the container, call the CryptSetProvParam function with the PP_KEYSET_SEC_DESCR flag after the container is created. This method allows you to set the security descriptor on the container.  
 
-The following code demonstrates how to call `CryptSetProvParam`. This is done immediately after creation of the key container.
+The following code demonstrates how to call CryptSetProvParam. This is done immediately after creation of the key container.
 
 ```cpp
 // Acquire Context  

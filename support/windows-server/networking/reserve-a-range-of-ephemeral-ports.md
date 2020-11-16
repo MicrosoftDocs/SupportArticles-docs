@@ -33,7 +33,7 @@ To reserve a range of ports so that only a program or process that specifically 
 
 ### Windows Server 2003 or Windows XP Professional
 
-1. Start Registry Editor (`Regedit.exe`).
+1. Start Registry Editor (Regedit.exe).
 2. Locate and then click the following registry subkey:   `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`  
 
 3. On the **Edit** menu, point to **New**, and then click **Multi-string Value**.
@@ -52,7 +52,7 @@ To reserve a range of ports so that only a program or process that specifically 
 
 ### Windows 2000
 
-1. Start Registry Editor (`Regedt32.exe`).
+1. Start Registry Editor (Regedt32.exe).
 2. Locate and then click the following registry key:   `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`  
 
 3. On the **Edit** menu, click **Add Value**.

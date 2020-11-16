@@ -36,7 +36,7 @@ Don't turn off your computer
 
 This is an expected message. However, the system appears to stop responding (hangs) for about 15 minutes. After this time, the system does restart. However, the updates that you installed are now uninstalled.
 
-Additionally, an entry that resembles the following may be logged in the `CBS.log` file under `%SystemRoot%\Logs\CBS`:
+Additionally, an entry that resembles the following may be logged in the CBS.log file under %SystemRoot%\Logs\CBS:
 
 > Shtd: Timed out waiting for shutdown processing to complete - no progress detected in last 900000 milliseconds
 

@@ -39,7 +39,7 @@ Note: This issue doesn't happen when trying to renew "CEP Encryption" certificat
 
 ## Resolution
 
-Use the `certreq.exe` tool to renew the Exchange Enrollment Agent (Offline request) certificate with the following steps:
+Use the certreq.exe tool to renew the Exchange Enrollment Agent (Offline request) certificate with the following steps:
 
 1. Create a file named Request.inf with the following contents:  
 

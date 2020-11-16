@@ -32,7 +32,7 @@ _Original KB number:_ &nbsp; 283193
 Use these steps to change the location of the certificate server database and log files:
 
 1. Stop the Certificate Services service.
-2. Copy the database files and log files to new location. The default database path is:  `%SystemRoot%\System32\CertLog`
+2. Copy the database files and log files to new location. The default database path is:  %SystemRoot%\System32\CertLog
 
 3. Modify the database paths in the following registry entries to reflect the new path:  
 

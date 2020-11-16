@@ -47,7 +47,7 @@ This issue is caused by a bug in the version control permission dialog window in
 
 This problem is resolved in Visual Studio 2008 SP1. If you are using Visual Studio 2008 RTM, there are two workarounds:
 
-1. Assign version control permissions with command-line tool: `tf.exe`
+1. Assign version control permissions with command-line tool: tf.exe
 
     You can enter `tf perm /?` or review the MSDN documentation for this command [TF Permission command](https://msdn.microsoft.com/library/0dsd05ft.aspx)  for more information about how to assign version control permissions from command line.
 

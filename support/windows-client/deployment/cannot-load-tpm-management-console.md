@@ -30,7 +30,7 @@ To fix this issue, use one of the following methods, depending on the situation:
 
 ### Method 1: TPM is cleared in BIOS
 
-If the TPM is cleared through the BIOS settings, close and then restart the TPM Management console (`TPM.msc`) again.
+If the TPM is cleared through the BIOS settings, close and then restart the TPM Management console (TPM.msc) again.
 
 ### Method 2: TPM is disabled in BIOS
 

@@ -68,14 +68,14 @@ This problem occurs because the LTIApply.wsf script fails to check for the exist
 
 To work around this problem, edit the following files:  
 
-- `%DeployRoot%\Scripts\LTIApply.wsf`
+- %DeployRoot%\Scripts\LTIApply.wsf
 
     > [!NOTE]
-    > `%DeployRoot%` is the path that you specified when the deployment share was created.
+    > %DeployRoot% is the path that you specified when the deployment share was created.
 
-- `C:\Program files\Microsoft Deployment Toolkit\Templates\Distribution\Scripts\LTIApply.wsf`  
+- C:\Program files\Microsoft Deployment Toolkit\Templates\Distribution\Scripts\LTIApply.wsf  
 
-Locate the "Copy bootmgr" section in `LTIApply.wsf`, and then add the following code above the existing code under the "Copy bootmgr" section:
+Locate the "Copy bootmgr" section in LTIApply.wsf, and then add the following code above the existing code under the "Copy bootmgr" section:
 
 ```vbscript
 If not oFSO.FolderExists(sBootDrive & "\Boot") then
@@ -87,4 +87,4 @@ End if
 
 This issue doesn't occur if you capture a Windows 8 or Windows 8.1 image that was originally deployed by using MDT 2012 Update 1. This is because when Windows 8 or Windows 8.1 is deployed by using MDT, a System Reserved partition is created that has a size of 499 megabytes (MB). There is enough free space in the System Reserved partition to apply the WinPE image that is required for the capture.
 
-If the Windows 8 or Windows 8.1 image that you are trying to capture with the Sysprep and Capture task sequence was originally deployed from a Windows 8 or Windows 8.1 media, the System Reserved partition that is created has a size of 350 MB. And because it already contains the WinRE image, it does not have enough free space for MDT to apply the WinPE image. In this case, the LTIApply script automatically selects the System Partition to apply the WinPE image. As part of this process, the LTIApply script changes ownership on the `bootmgr` file and the boot folder on the System Partition. The problem occurs because the LTIApply script doesn't check for the existence of the boot folder on the System Partition before it runs the `takeown.exe` command to change ownership.
+If the Windows 8 or Windows 8.1 image that you are trying to capture with the Sysprep and Capture task sequence was originally deployed from a Windows 8 or Windows 8.1 media, the System Reserved partition that is created has a size of 350 MB. And because it already contains the WinRE image, it does not have enough free space for MDT to apply the WinPE image. In this case, the LTIApply script automatically selects the System Partition to apply the WinPE image. As part of this process, the LTIApply script changes ownership on the bootmgr file and the boot folder on the System Partition. The problem occurs because the LTIApply script doesn't check for the existence of the boot folder on the System Partition before it runs the `takeown.exe` command to change ownership.

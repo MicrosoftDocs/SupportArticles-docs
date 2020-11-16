@@ -68,7 +68,7 @@ When you try to start a virtual machine by using Hyper-V Manager, you receive th
 
 ## Cause
 
-There is a timing issue with FSDepends.sys and with `VHDMP.sys`. This timing issue occurs when certain backup programs are installed on computers that are running Windows Server 2008. By default, the FSDepends.sys start value in the registry is set to **Manual**. When any third-party backup software loads its tape device driver, the software can sometimes result in FSDepends.sys and VHDMP.sys not initializing correctly.  
+There is a timing issue with FSDepends.sys and with VHDMP.sys. This timing issue occurs when certain backup programs are installed on computers that are running Windows Server 2008. By default, the FSDepends.sys start value in the registry is set to **Manual**. When any third-party backup software loads its tape device driver, the software can sometimes result in FSDepends.sys and VHDMP.sys not initializing correctly.  
 
 ## Resolution  
 
@@ -94,4 +94,4 @@ As soon as the computer is restarted, FSDepends.sys starts immediately and the t
 Or, you can try one of the following two workarounds. **Neither of these methods is recommended.** However, they work to correct the problems if editing the registry is not possible or desirable:  
 
 - Turn off any attached tape device and restart the server. As soon as the server is started, turn on the tape device.  
-- Disable the device driver that's named `TPFilter.sys`.  
+- Disable the device driver that's named TPFilter.sys.  

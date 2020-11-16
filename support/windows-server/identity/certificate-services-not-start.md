@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 3205641
 
 ## Symptoms
 
-After you perform an in-place upgrade of Windows Server 2012 or Windows Server 2012 R2 to Windows Server 2016, Active Directory Certificate Services (`certsvc`) may not start. If you try to manually start the service from Services Management Console (`services.msc`), the attempt may fail with the following error message:
+After you perform an in-place upgrade of Windows Server 2012 or Windows Server 2012 R2 to Windows Server 2016, Active Directory Certificate Services (certsvc) may not start. If you try to manually start the service from Services Management Console (services.msc), the attempt may fail with the following error message:
 
 Windows could not start the Active Directory Certificate Services service on Local Computer.
 Error 1058: The service cannot be started, either because it is disabled or because it has not enabled devices associated with it.

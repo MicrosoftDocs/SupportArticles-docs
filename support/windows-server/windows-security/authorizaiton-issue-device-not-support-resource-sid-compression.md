@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2774190
 
 When accessing file shares hosted on devices that don't support Resource SID compression, after deploying Windows Server 2012 domain controllers, the following symptoms may be observed.
 
-Connections to mapped network drives using the format `\\servername\sharename\subfolder` fail with Access Denied.
+Connections to mapped network drives using the format \\\servername\sharename\subfolder fail with Access Denied.
 
 > [!Note]
 > Connecting to the same path by using the IP address will always work.
@@ -97,7 +97,7 @@ This resolution should be used only when resolution one can't be used.
 
 This resolution disables resource SID compression on an individual Windows Server 2012 domain controller (KDC).  You must apply this setting to each Windows Server 2012 domain controller to ensure the domain controllers don't issue tickets that use resource group SID compression.
 
-Resource SID compression is on by default; however, you can disable it. You disable resource SID compression on a Windows Server 2012 KDC using the **DisableResourceGroupsFields** registry value under the `HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kdc\Parameters` registry key. This registry value has a `DWORD` registry value type. You completely disable resource SID compression when you set the registry value to 1. The KDC reads this configuration when building a service ticket. With the bit enabled, the KDC doesn't use resource SID compression when building the service ticket.
+Resource SID compression is on by default; however, you can disable it. You disable resource SID compression on a Windows Server 2012 KDC using the **DisableResourceGroupsFields** registry value under the `HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\Kdc\Parameters` registry key. This registry value has a DWORD registry value type. You completely disable resource SID compression when you set the registry value to 1. The KDC reads this configuration when building a service ticket. With the bit enabled, the KDC doesn't use resource SID compression when building the service ticket.
 
 ## More information
 
