@@ -591,6 +591,8 @@
       href: ../user-interface/emails-not-show-in-cached-mode-inbox-after-synchronized.md
     - name: Emails sent by an .oft file aren't received
       href: ../user-interface/sending-email-by-template-fails.md
+    - name: Encrypted and restricted message in shared mailbox
+      href: ../user-interface/encrypted-restricted-message-shared-mailbox.md
     - name: Event 4096 is logged if WarmUp set for VSTO add-ins
       href: ../user-interface/event-4096-is-logged-if-warmup-set-for-vsto-add-ins.md
     - name: Extensibility support for Outlook 2010
@@ -691,4 +693,3 @@
       href: ../user-interface/windows-search-service-setting-results-in-no-matches-found.md
     - name: Wrong search results due to missing MapiPH.dll
       href: ../user-interface/search-results-are-incorrect-due-to--missing-mapiph-dll.md
-
