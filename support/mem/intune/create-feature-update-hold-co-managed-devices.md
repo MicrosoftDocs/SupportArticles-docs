@@ -1,6 +1,6 @@
 ---
-title: How to create a feature update hold for co-managed devices
-description: Describes how to use the TargetReleaseVersion Policy CSP to specify Windows 10 feature update setting for co-managed devices.
+title: How to create a feature update hold for co-managed Windows 10 devices
+description: Describes how to use the TargetReleaseVersion Policy CSP to specify Windows 10 feature update versions for co-managed devices.
 author: helenclu
 ms.author: luche
 ms.reviewer: markstan
@@ -15,14 +15,14 @@ This article describes an alternative method to restrict the Windows 10 feature 
 
 ## The `TargetReleaseVersion` Policy CSP
 
-The [`./Vendor/MSFT/Policy/Config/Update/TargetReleaseVersion` Policy CSP](/windows/client-management/mdm/policy-csp-update#update-targetreleaseversion) setting enables IT administrators to specify a Windows 10 feature update level to meet and stay at.
+The [`./Vendor/MSFT/Policy/Config/Update/TargetReleaseVersion` Policy CSP](/windows/client-management/mdm/policy-csp-update#update-targetreleaseversion) setting enables IT administrators to specify a Windows 10 feature update version to meet and stay at.
 
-Setting the `TargetReleaseVersion` Open Mobile Alliance Uniform Resource Identifier (OMA-URI) will configure devices to apply the Windows 10 feature update level that's specified in its value setting. There are several considerations when setting the `TargetReleaseVersion` policy:
+Setting the `TargetReleaseVersion` Open Mobile Alliance Uniform Resource Identifier (OMA-URI) will configure devices to apply the Windows 10 feature update version that's specified in its value. There are several considerations when setting the `TargetReleaseVersion` policy:
 
-- Existing devices that are at a lower feature update level will be updated to the specified feature update level the next time the Windows Update client checks for updates.
-- Existing devices that are at a higher feature update level will remain at their current feature update level.
+- Existing devices that are at an older feature update version will be updated to the specified feature update version the next time the Windows Update client checks for updates.
+- Existing devices that are at a later feature update version will remain at their current version.
 - Newly added devices will receive the feature update the first time they check for updates.
-- Devices will stay at the feature update level specified in the policy when new Windows 10 feature update versions are released.
+- Devices will stay at the feature update version specified in the policy when new Windows 10 feature update versions are released.
 - This policy doesn't override [safeguard holds](/windows/deployment/update/safeguard-holds). If the `TargetReleaseVersion` policy is successfully applied to a device but the device doesn't update, check if any safeguard holds exist.
 
 ## Set the `TargetReleaseVersion` policy
