@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 241201
 
 Use the recovery agent's private key to recover data in situations when the copy of the EFS private key that is located on the local computer is lost. This article contains information about how to use the Certificate Export Wizard to export the recover agent's private key from a computer that is a member of a workgroup, and from a Windows Server 2003-based, Windows 2000-based, Windows Server 2008-based or Windows Server 2008 R2-based domain controller.
 
-## INTRODUCTION
+## Introduction
 
 This article describes how to back up the recovery agent Encrypting File System (EFS) private key in Windows Server 2003, in Windows 2000, in Windows XP, in Windows Vista, in Windows 7, in Windows Server 2008, and in Windows Server 2008 R2. You can use the recovery agent's private key to recover data in situations when the copy of the EFS private key that is located on the local computer is lost.
 
@@ -35,7 +35,6 @@ If your EFS private key is lost, you can use a recovery agent to recover encrypt
 By default, if a computer that is running Microsoft Windows 2000 Professional is a member of a workgroup or is a member of a Microsoft Windows NT 4.0 domain, the local administrator who first logs on to the computer is designated as the default recovery agent. By default, if a computer that is running Windows XP or Windows 2000 is a member of a Windows Server 2003 domain or a Windows 2000 domain, the built-in Administrator account on the first domain controller in the domain is designated as the default recovery agent.
 
 A computer that is running Windows XP and that is a member of a workgroup does not have a default recovery agent. You have to manually create a local recovery agent.
- For more information, click the following article number to view the article in the Microsoft Knowledge Base: [255026](https://support.microsoft.com/help/255026) The local administrator is not always the default Encrypting File System recovery agent  
 
 > [!IMPORTANT]
 > After you export the private key to a floppy disk or other removable media , store the floppy disk or media in a secure location. If someone gains access to your EFS private key, that person can gain access to your encrypted data.
@@ -61,19 +60,19 @@ To export the recovery agent's private key from a computer that is a member of a
 11. Click **Yes, export the private key**, and then click **Next**.
 12. Click **Personal Information Exchange - PKCS #12 (.PFX).**  
 
-> [!NOTE]
-> We strongly recommend that you also click to select the
- **Enable strong protection (requires IE 5.0, NT 4.0 SP4 or above** check box to protect your private key from unauthorized access.
+    > [!NOTE]
+    > We strongly recommend that you also click to select the
+     **Enable strong protection (requires IE 5.0, NT 4.0 SP4 or above** check box to protect your private key from unauthorized access.
 
-If you click to select the **Delete the private key if the export is successful** check box, the private key is removed from the computer and you will not be able to decrypt any encrypted files.
-13. Click **Next**.
+    If you click to select the **Delete the private key if the export is successful** check box, the private key is removed from the computer and you will not be able to decrypt any encrypted files.  
+13. Click **Next**.  
 14. Specify a password, and then click **Next**.
-
 15. Specify a file name and location where you want to export the certificate and the private key, and then click
  **Next**.
 
-> [!NOTE]
-> We recommend that you back up the file to a disk or to a removable media device, and then store the backup in a location where you can confirm the physical security of the backup.
+    > [!NOTE]
+    > We recommend that you back up the file to a disk or to a removable media device, and then store the backup in a location where you can confirm the physical security of the backup.  
+
 16. Verify the settings that are displayed on the Completing the Certificate Export Wizard page, and then click **Finish**.
 
 ### Export the domain recovery agent's private key
@@ -102,25 +101,16 @@ To export the domain recovery agent's private key, follow these steps:
 12. Click **Yes, export the private key**, and then click **Next**.
 13. Click **Personal Information Exchange - PKCS #12 (.PFX).**  
 
-> [!NOTE]
-> We strongly recommend that you click to select the **Enable strong protection (requires IE 5.0, NT 4.0 SP4 or above** check box to protect your private key from unauthorized access.
+    > [!NOTE]
+    > We strongly recommend that you click to select the **Enable strong protection (requires IE 5.0, NT 4.0 SP4 or above** check box to protect your private key from unauthorized access.
 
-If you click to select the **Delete the private key if the export is successful** check box, the private key is removed from the domain controller. As a best practice, we recommend that you use this option. Install the recovery agent's private key only in situations when you need it to recover files. At all other times, export, and then store the recovery agent's private key offline to help maintain its security.
+    If you click to select the **Delete the private key if the export is successful** check box, the private key is removed from the domain controller. As a best practice, we recommend that you use this option. Install the recovery agent's private key only in situations when you need it to recover files. At all other times, export, and then store the recovery agent's private key offline to help maintain its security.  
 14. Click **Next**.
 15. Specify a password, and then click **Next**.
 
 16. Specify a file name and location where you want to export the certificate and the private key, and then click
  **Next**.
 
-> [!NOTE]
-> We recommend that you back up the file to a disk or to a removable media device, and then store the backup in a location where you can confirm the physical security of the backup.
+    > [!NOTE]
+    > We recommend that you back up the file to a disk or to a removable media device, and then store the backup in a location where you can confirm the physical security of the backup.  
 17. Verify the settings that are displayed on the Completing the Certificate Export Wizard page, and then click **Finish**.
-
-
-## References
-
-For more information about how to determine who the recovery agent is for an encrypted file, click the following article number to view the article in the Microsoft Knowledge Base: [243026](https://support.microsoft.com/help/243026) Using Efsinfo.exe to determine information about encrypted files  
-
-For more information about EFS, click the following article number to view the article in the Microsoft Knowledge Base: [223316](https://support.microsoft.com/help/223316) Best practices for Encrypting File System  
-
-For more information about EFS in Windows Server, visit the following Microsoft Web site: [https://www.microsoft.com/technet/security/guidance/cryptographyetc/efs.mspx](https://www.microsoft.com/technet/security/guidance/cryptographyetc/efs.mspx) 

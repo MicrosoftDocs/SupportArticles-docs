@@ -1,5 +1,5 @@
 ---
-title: Resource SID Compression in Windows Server 2012 may cause Authorization problems on devices that don't support Resource SID compression
+title: Resource SID Compression causes Authorization problems on devices
 description: Fixes an access denied error when accessing file shares hosted on devices that don't support Resource SID compression.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,8 +17,8 @@ ms.technology: WindowsSecurity
 
 This article helps fix an issue that occurs when accessing file shares hosted on devices that don't support Resource SID compression.
 
-_Original product version:_ &nbsp;Windows Server 2003 R2  
-_Original KB number:_ &nbsp;2774190
+_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2774190
 
 ## Symptoms
 
@@ -26,7 +26,8 @@ When accessing file shares hosted on devices that don't support Resource SID com
 
 Connections to mapped network drives using the format \\\servername\sharename\subfolder fail with Access Denied.
 
-Note: Connecting to the same path by using the IP address will always work.
+> [!Note]
+> Connecting to the same path by using the IP address will always work.
 
 Access to resources that are controlled by membership of Resource group will fail.
 
@@ -55,7 +56,7 @@ To produce the correct value, you need to:
 
 Alternatively, you can use the following Windows PowerShell script to disable resource SID compression on the given security principal:
 
-```console
+```powershell
 DisableKerbGroupCompression.ps1
 
 #
@@ -70,7 +71,7 @@ break
 $msgBefore =$msgAfter = "Resource group compression status on principal {0}: " -f $principalName
 ```
 
-```console
+```powershell
 if( ($value -band 0x0080000) -eq 0)
 {$msgBefore += "Enabled"}
 else
@@ -84,13 +85,13 @@ else
 }
 else
 { Write-Host "Resource group compression did not change."}
-
-#### Syntax
-
-DisableKerbGroupCompression.ps1objectName
 ```
 
-### Resolution 2:
+### Syntax
+
+`DisableKerbGroupCompression.ps1 objectName`
+
+### Resolution 2
 
 This resolution should be used only when resolution one can't be used.
 
@@ -106,7 +107,7 @@ Kerberos authentication inserts security identifiers (SIDs) of the security prin
 
 Windows Server 2012 KDCs help reduce the size of the PAC by taking advantage of resource SID compression. By default, a Windows Server 2012 KDC will always compress resource SIDs. To compress resource SIDs, the KDC stores SID of the resource domain to which the target resource is a member. Then, it inserts only the RID portion of each resource SID into the **ResourceGroupIds** portion of the authentication data.
 
-Resource SID Compression reduces the size of each stored instance of a resource SID because the domain SID is stored once rather than with each instance. Without resource SID Compression, the KDC inserts all the SIDs added by the resource domain in the **Extra-SID** portion of the PAC structure, which is a list of SIDs. [MS-KILE](https://msdn.microsoft.com/library/cc233855%28v=prot.13%29]
+Resource SID Compression reduces the size of each stored instance of a resource SID because the domain SID is stored once rather than with each instance. Without resource SID Compression, the KDC inserts all the SIDs added by the resource domain in the **Extra-SID** portion of the PAC structure, which is a list of SIDs. [[MS-KILE]: Kerberos Protocol Extensions](https://msdn.microsoft.com/library/cc233855%28v=prot.13%29)
 
 #### Interoperability
 

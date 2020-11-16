@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, kimmar
 ms.prod-support-area-path: Servicing
-ms.technology: Depolyment
+ms.technology: Deployment
 ---
 # The Windows Server Update Services 3.0 installation package is available
 
