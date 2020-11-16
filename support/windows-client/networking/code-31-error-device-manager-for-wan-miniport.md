@@ -54,4 +54,4 @@ If you have already installed the operating system and are currently receiving a
 7. In the **Update Driver Warning** dialog box, click **Yes** to continue installing this driver.
 8. After the driver is installed, right-click the device, and then click **Uninstall**.
 9. After the device is uninstalled, right-click the computer name in Device Manager, and then click **Scan for hardware changes**.
-10. On the **View** menu, click **Show hidden devices. The WAN Miniport (Network monitor) device should now be started and no longer have a yellow exclamation mark next to it.
+10. On the **View** menu, click **Show hidden devices**. The WAN Miniport (Network monitor) device should now be started and no longer have a yellow exclamation mark next to it.

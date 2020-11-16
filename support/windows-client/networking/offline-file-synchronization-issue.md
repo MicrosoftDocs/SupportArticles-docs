@@ -28,19 +28,20 @@ If the user accesses network resources in Windows Explorer, some network resourc
 
 You provide a file share and subfolders for every user like in the following example:
 
-\\ServerName\ShareName$\dir1\dir2
+\\\ServerName\ShareName$\dir1\dir2
 
 A user with the appropriate permissions can access subfolders dir1 and dir2 but do not have permissions to view the content of the share ShareName$.
 
 ## Cause
 
-This behavior is caused by the way Windows Vista and Windows 7 handle remote file operations. The UNC path is parsed and every part is checked for availability. In the case described in the sections above, Windows Vista or Windows 7 checks for the prefix \\ServerName. If this is successful, it checks if the \ShareName$\ is available. Due to missing access rights on this level, the remote file operation fails and the Client Side Cache (CSC) provides files from the offline content if the UNC path was made available offline.
+This behavior is caused by the way Windows Vista and Windows 7 handle remote file operations. The UNC path is parsed and every part is checked for availability. In the case described in the sections above, Windows Vista or Windows 7 checks for the prefix \\\ServerName. If this is successful, it checks if the \\\ShareName$\ is available. Due to missing access rights on this level, the remote file operation fails and the Client Side Cache (CSC) provides files from the offline content if the UNC path was made available offline.
 
-Note: if you are using DFS Namespace (AD integrated or stand alone) \\domain\folder1\folder2 CSC will also check folder1 and folder2 on the DFS Namespace server.
+> [!Note]
+> if you are using DFS Namespace (AD integrated or stand alone) \\\domain\folder1\folder2 CSC will also check folder1 and folder2 on the DFS Namespace server.
 
 ## Resolution
 
-To solve this issue with the offline file synchronization ensure that all parts of an UNC path are accessible by a user. On an UNC path like \\ServerName\ShareName$\dir1\dir2 (where ServerName can be a file server or DFSN server) the following permissions are required on ShareName$ when the user synchronizes the subfolder dir1:
+To solve this issue with the offline file synchronization ensure that all parts of an UNC path are accessible by a user. On an UNC path like \\\ServerName\ShareName$\dir1\dir2 (where ServerName can be a file server or DFSN server) the following permissions are required on ShareName$ when the user synchronizes the subfolder dir1:
 
 Share level (SMB) Permissions for the offline files share ShareName$:
 
@@ -51,7 +52,7 @@ Share level (SMB) Permissions for the offline files share ShareName$:
 
 In this example Everyone is removed from the share permissions and a global group containing the user account is used to set share level permissions.
 
-NTFS permissions needed for the root folder ShareName$ for offline file synchronization: 
+NTFS permissions needed for the root folder ShareName$ for offline file synchronization:  
 
 | User Account| Minimum Permissions Required |
 |---|---|
@@ -61,9 +62,8 @@ NTFS permissions needed for the root folder ShareName$ for offline file synchron
 |Everyone|No Permissions|
 |Local System|Full Control, This Folder, Subfolders and Files|
 
-
 On the subfolders \dir1 and \dir2, the following permissions are required:
- NTFS permissions needed for the folders dir1 and dir2 for offline file synchronization: 
+ NTFS permissions needed for the folders dir1 and dir2 for offline file synchronization:  
 
 | User Account| Default Permissions| Minimum permissions required |
 |---|---|---|
@@ -71,7 +71,6 @@ On the subfolders \dir1 and \dir2, the following permissions are required:
 |Local System|Full Control|Full Control|
 |Administrators|No Permissions|No Permissions|
 |Everyone|No Permissions|No Permissions|
-
 
 ## More information
 
