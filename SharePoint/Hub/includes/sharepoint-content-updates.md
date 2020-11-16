@@ -2,6 +2,15 @@
 
 
 
+## Week of November 09, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/9/2020 | [Troubleshoot "Open with Explorer" issues in SharePoint Online](/sharepoint/troubleshoot/lists-and-libraries/troubleshoot-issues-using-open-with-explorer) | modified |
+| 11/10/2020 | [Update to default content type setting for new lists in Modern Lists, Teams, and SharePoint](/sharepoint/troubleshoot/lists-and-libraries/change-to-how-lists-are-named) | modified |
+
+
 ## Week of November 02, 2020
 
 
@@ -45,12 +54,3 @@
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-
-
-## Week of October 05, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/sharepoint/troubleshoot/index) | modified |
-| 10/8/2020 | [Everyone except external users group is removed on Office 365](/sharepoint/troubleshoot/sharing-and-permissions/everyone-except-external-user-removed) | modified |
