@@ -47,6 +47,6 @@ To configure the target release version policy setting, follow these steps:
 
 Intune-managed devices will receive the policy setting the next time they sync with the Intune service. The policy will be effective for the Windows Update client after the sync completes.
 
-To verify if the setting is successfully applied to a Windows 10 device, check the value of the following registry value:
+To verify that the setting is successfully applied to a Windows 10 device, check the value of the following registry value:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\Update\TargetReleaseVersion`
