@@ -34,15 +34,15 @@ The PersonMetadata folder and the items that are created in it will be removed f
 
 To prevent mail items in the PersonMetadata folder from showing up in your Search Folders, follow these steps:
 
-1. Right-click the Search Folder and select **Customize This Search Folder**.
-2. Select **Browse** and clear the **Search Subfolders** option.
+1. Right-click the Search Folder, and select **Customize This Search Folder**.
+2. Select **Browse**, and clear the **Search Subfolders** option.
 3. Manually select the folders that you want to include.
 
 ## Workaround 2
 
 If you receive a "folder item limit" notification that states that the PersonMetadata folder is approaching the 1-million-item limit, use one of the following methods to delete all the items in the folder.
 
-Folder item limit notification:
+Folder item limit notification
 
 :::image type="content" source="media/personmetadata-items/personmetadata-limit-notification.png" alt-text="{alt-text}":::
 
@@ -52,8 +52,8 @@ Use this method if only a few users are experiencing the issue. If there many af
 
 1. Exit Outlook.
 2. Download the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi) tool.
-3. Start the MfcMapi.exe program and select **OK**.
-4. On the **Tools** menu, select **Options**, specify the following options, then select **OK**:
+3. Start the MfcMapi.exe program, and select **OK**.
+4. On the **Tools** menu, select **Options**, specify the following options, and then select **OK**:
 
     - **Use the MDB_Online flag when calling OpenMsgStore**
     - **Use the MAPI_NO_CACHE flag when calling OpenEntry**
@@ -65,7 +65,7 @@ Use this method if only a few users are experiencing the issue. If there many af
 
     > [!NOTE]
     > The text for the **Top of Information Store** node might be localized in another language, depending on the regional settings of the mailbox.
-9. Right-click **PersonMetadata** > **Advanced** > **Empty items and subfolders from folder...**.
+9. Right-click **PersonMetadata** > **Advanced** > **Empty items and subfolders from folder**.
 10. In the **Delete Items and Subfolders** dialog box, select **Hard Deletion** and then select **OK**.
 
 Notice that MFCMAPI may seem to stop responding for an extended time while it performs the delete operation. You can monitor its progress by running the Get-MailboxFolderStatistics cmdlet.
