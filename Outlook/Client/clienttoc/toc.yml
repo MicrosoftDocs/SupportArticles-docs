@@ -543,6 +543,8 @@
       href: ../user-interface/cannot-delete-default-outlook-folders.md
     - name: Can't import an XLS or CSV file into the Hebrew version
       href: ../user-interface/cannot-map-custom-fields.md
+    - name: Can't open mutiple Excel attachements
+      href: ../user-interface/only-two-excel-attachments-can-open.md
     - name: Can't open Outlook items from Windows Search results
       href: ../user-interface/cannot-open-outlook-items-from-windows-search-results.md
     - name: Can't perform instant searches
