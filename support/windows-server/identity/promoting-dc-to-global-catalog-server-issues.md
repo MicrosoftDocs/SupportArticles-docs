@@ -24,10 +24,10 @@ _Original KB number:_ &nbsp; 910204
 
 This article discusses the following topics:
 
-- *The event messages that are logged in the Directory Services log for Windows 2000 Server and for Windows Server 2003*  
-- *The possible causes of the global catalog promotion failure*  
-- *Ways to determine the cause of the global catalog promotion failure*  
-- *Ways to resolve the global catalog promotion failure* 
+- The event messages that are logged in the Directory Services log for Windows 2000 Server and for Windows Server 2003  
+- The possible causes of the global catalog promotion failure  
+- Ways to determine the cause of the global catalog promotion failure  
+- Ways to resolve the global catalog promotion failure  
 
 ## Symptoms
 
@@ -39,46 +39,48 @@ Additionally, the output may show that the domain controller did not pass the ad
 > To run a domain controller diagnostic check, do the following:
 
 1. Click **Start**, click **Run**, type cmd, and then click **OK**.
-2. At the command prompt, type dcdiag /v /f: logfile.txt, and then press ENTER. The following sections describe the event messages that are logged in the Directory Services log when this problem occurs.
+2. At the command prompt, type `dcdiag /v /f: logfile.txt`, and then press ENTER. The following sections describe the event messages that are logged in the Directory Services log when this problem occurs.
 
-#### Windows 2000 event messages
-
+### Windows 2000 event messages
 
 - Informational event messages that are similar to the following are logged every 30 minutes:
-  - Event ID 1559 
+  - Event ID 1559  
   - Event ID 1578
 
-> [!NOTE]
-> Although the "Global Catalog Partition Occupancy" registry subkey is mentioned in this event message, you should not reduce the occupancy level to artificially accelerate global catalog promotion. We strongly recommend that you first resolve the Directory Service replication issue so that the global catalog is automatically advertised.
-  - Event ID 1110 
-- Warning event messages that are similar to the following may be logged every 15 minutes:
+    > [!NOTE]
+    > Although the "Global Catalog Partition Occupancy" registry subkey is mentioned in this event message, you should not reduce the occupancy level to artificially accelerate global catalog promotion. We strongly recommend that you first resolve the Directory Service replication issue so that the global catalog is automatically advertised.
+  - Event ID 1110  
+    > [!Warning]
+    > event messages that are similar to the following may be logged every 15 minutes:  
+
   - Event ID 1265
 
-> [!NOTE]
-> The description for event ID 1265 may vary. Several possibilities will cause event ID 1265 to be recorded. These possibilities also cause the Knowledge Consistency Checker (KCC) not to build a replication link. The following are some typical possibilities:
-    - The DSA operation cannot continue because of a DNS lookup failure. Resolve the DNS problem, or remove the metadata if the source DSA address represents a stale domain controller.
-    - The RPC server is unavailable. This typically indicates a network connectivity issue. Determine whether the target domain controller is offline or whether a network port is blocked.
-    - The target principal name is incorrect. Examine the security channel between the source and target domain controllers.
-    - You receive an "Access Denied" error message.
+    > [!NOTE]
+    > The description for event ID 1265 may vary. Several possibilities will cause event ID 1265 to be recorded. These possibilities also cause the Knowledge Consistency Checker (KCC) not to build a replication link. The following are some typical possibilities:  
+    >
+      > - The DSA operation cannot continue because of a DNS lookup failure. Resolve the DNS problem, or remove the metadata if the source DSA address represents a stale domain controller.
+      > - The RPC server is unavailable. This typically indicates a network connectivity issue. Determine whether the target domain controller is offline or whether a network port is blocked.
+      > - The target principal name is incorrect. Examine the security channel between the source and target domain controllers.
+      > - You receive an "Access Denied" error message.  
+  
 - The following Error event message is logged every hour:
 
-Event ID 1126 Event ID: 1126
-
-Event Source: NTDS General
-
-Event type: Informational
-
-Description: Unable to establish connection with global catalog
-
+    Event ID 1126  
+    > Event ID: 1126
+    >
+    > Event Source: NTDS General
+    >
+    > Event type: Informational
+    >
+    > Description: Unable to establish connection with global catalog
 
 #### Windows Server 2003 event messages
 
+- Event ID 1559  
+- Event ID 1578  
+- If you enable diagnostic logging for the Knowledge Consistency Checker (KCC) at level 1, the following event is logged.  
 
-- Event ID 1559 
-- Event ID 1578 
-- If you enable diagnostic logging for the Knowledge Consistency Checker (KCC) at level 1, the following event is logged.
-
-Event ID 1801 
+    Event ID 1801  
 
 ## Cause
 
@@ -86,7 +88,8 @@ A global catalog must replicate inbound copies of all objects from all domain pa
 
 When a domain controller is selected to host the global catalog, the KCC on the domain controller that is being promoted uses its discretion to build connection objects from source domain controllers that host the required partitions. These source domain controllers may consist of existing global catalogs in the forest or domain controllers that host writable copies of every domain partition that resides in its forest. The contents of each domain partition are then inbound replicated from source domain controllers that are designated by the KCC. The contents are replicated to the newly promoted global catalog over existing or newly created connection links.
 
-Global catalog promotion may fail if one of the following conditions is true:
+Global catalog promotion may fail if one of the following conditions is true:  
+
 1. The configuration partition on one or more domain controllers contains a cross-reference object to a stale or orphaned domain, but no domain controllers for that domain are located in the forest.
 
 2. Metadata for a source domain controller that is designated by the KCC is located in the configuration partition of one or more domain controllers but does not represent a domain controller currently present in the forest.
@@ -101,20 +104,21 @@ Global catalog promotion may fail if one of the following conditions is true:
 
 6. The global catalog that is being promoted cannot build a connection link from the selected source domain controller because of the error status that is logged in one of the events that are listed in the Summary section.
 
-An orphaned domain will prevent the domain controller from finishing the replication. The domain controller cannot advertise itself as a global catalog server until replication is completed. There are several issues that could lead to an orphaned domain:
+An orphaned domain will prevent the domain controller from finishing the replication. The domain controller cannot advertise itself as a global catalog server until replication is completed. There are several issues that could lead to an orphaned domain:  
+
 1. Active Directory was removed from all the domain controllers of a domain, but the domain partition cross-reference object still remains.
 
 2. Active Directory was removed from a domain controller, and the directory partition of the domain controller was removed. The domain controller was then re-created before replication was completed. These events caused lingering phantoms that a cross-reference object incorrectly references.
 
 3. The domain-naming update for the domain has not reached the domain controller that is experiencing the problem. Or, the domain-naming update for a domain that is newly promoted may not have reached any domain controllers outside that domain. This issue would be a temporary problem.
 
-
 ## Resolution
 
 > [!WARNING]
 > You should not enable a reduced occupancy level to artificially accelerate global catalog promotion. We strongly recommend that you first resolve the Directory Service replication issue so that the global catalog is automatically advertised.
 
-To resolve this problem, first identify the root cause of the replication issue, and resolve that problem. Determine whether the replication issue is caused by one of the following conditions:
+To resolve this problem, first identify the root cause of the replication issue, and resolve that problem. Determine whether the replication issue is caused by one of the following conditions:  
+
 - A replication delay
 - An orphaned domain that is located in the forest environment
 - An inability to build the connection link
@@ -136,30 +140,31 @@ For more information about how to remove orphaned domain controller objects, cli
 
 After you promote the domain controller to a global catalog server, domain partitions in the forest will be replicated to the new global catalog server. When all partitions have successfully replicated to the new global catalog server, event ID 1119 will be logged in the Directory Services log on the domain controller. The event description states that the computer is now advertising itself as a global catalog server.
 
-To confirm that the domain controller is a global catalog server, follow these steps:
+To confirm that the domain controller is a global catalog server, follow these steps:  
+
 1. Click **Start**, click **Run**, type cmd, and then click **OK**.
 
-2. Type nltest /dsgetdc: **Domain_name /server: Server_Name**, and then press ENTER.
+2. Type `nltest /dsgetdc: Domain_name /server: Server_Name`, and then press ENTER.
 
-3. Verify that the server is advertising the "GC" (global catalog) flag. For example, when you type the command in step 2, you will receive a message that is similar to the following if the GC flag is present:
-DC: \\ **Server_Name**  
-Address: \\ **IP Address**  
-Dom Guid: 47bc7d87-309e-4a2a-bac3-c9866a66bab8
+3. Verify that the server is advertising the "GC" (global catalog) flag. For example, when you type the command in step 2, you will receive a message that is similar to the following if the GC flag is present:  
 
-Dom Name: **Domain_name**  
-Forest Name: **Domain_name .com**  
-Dc Site Name: Default-First-Site-Name
+    > DC: \\\\ **Server_Name**  
+    >Address: \\\\ **IP Address**  
+    >Dom Guid: 47bc7d87-309e-4a2a-bac3-c9866a66bab8
+    >
+    > Dom Name: **Domain_name**  
+    > Forest Name: **Domain_name .com**  
+    > Dc Site Name: Default-First-Site-Name
+    >
+    > Our Site Name: Default-First-Site-Name
+    >
+    > Flags: PDC GC DS LDAP KDC TIMESERV WRITABLE DNS_FOREST CLOSE_SITE The command completed successfully  
 
-Our Site Name: Default-First-Site-Name
+    > [!NOTE]
+    > The Nltest tool is included with Windows 2000 Support Tools. To install Windows 2000 Support Tools, open the Support\Tools folder on the Windows 2000 startup disk, and then run the Setup program. You must log on as a member of the Administrators group to install these tools.  
 
-Flags: PDC GC DS LDAP KDC TIMESERV WRITABLE DNS_FOREST CLOSE_SITE The command completed successfully
-> [!NOTE]
-> The Nltest tool is included with Windows 2000 Support Tools. To install Windows 2000 Support Tools, open the Support\Tools folder on the Windows 2000 startup disk, and then run the Setup program. You must log on as a member of the Administrators group to install these tools. For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:
-
-[842208](https://support.microsoft.com/help/842208) You cannot promote a Windows 2000-based domain controller to a global catalog server  
+For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:
 
 [889711](https://support.microsoft.com/help/889711) You cannot promote a Windows Server 2003-based domain controller to be a global catalog server  
-
-[810089](https://support.microsoft.com/help/810089) Cannot promote new global catalog when conflict naming contexts exist  
 
 [230306](https://support.microsoft.com/help/230306) How to remove orphaned domains from Active Directory

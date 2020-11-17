@@ -32,7 +32,7 @@ Display LUs/Pools assigned to the TN3270 server can be configured as "specific d
 ITN3270 clients that specify an invalid TN3270 LU/Pool name cannot connect to any TN3270 session. The TN3270 clients that specify an invalid TN3270 LU/Pool name cannot connect to any TN3270 session.
 
 > [!NOTE]
-> This information also applies to printer sessions assigned to the TN3270 server. Printers can be "associated printers." Associated printers are print sessions associated with a display session. (This means that a TN3270 client is allocated the print session at the same time they are it is allocated the display session.)
+> This information also applies to printer sessions assigned to the TN3270 server. Printers can be "associated printers." Associated printers are print sessions associated with a display session. (This means that a TN3270 client is allocated the print session at the same time it is allocated the display session.)
 
 Configuring TN3270 LUs/Pools as specific or generic to control access is used in environments where some TN3270 clients (for example, managed clients) require the use of specific TN3270 resources, while other clients (for example, unmanaged clients), should connect to "default" TN3270 resources.
 

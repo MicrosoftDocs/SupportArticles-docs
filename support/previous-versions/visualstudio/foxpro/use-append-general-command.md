@@ -53,7 +53,7 @@ The following steps are necessary to use the `APPEND GENERAL` command to place a
 > [!NOTE]
 > The above command should be all on one line. It is shown here as three lines due to space limitations. Your general field name and path to the PICT file may vary.
 
-This PICT file should Append with no problems. However, it is small. PICT files larger than the samples shipped with Visual FoxPro may require more memory to be allocated to Imager before they can be successfully Appended. By default, Imager has 4096K allocated to it. Increasing this to 8192 K will allow larger PICT files to be inserted into the general field with the APPEND GENERAL command or by going through the interface and choosing the Insert Object command from the Edit menu when the general field has been opened (MODIFY GENERAL olefield).
+This PICT file should append with no problems. However, it is small. PICT files that are larger than the samples shipped with Visual FoxPro may require more memory to be allocated to Imager before they can be successfully appended. By default, Imager has 4096K allocated to it. Increasing this to 8192 K will allow larger PICT files to be inserted into the general field with the APPEND GENERAL command or by going through the interface and choosing the Insert Object command from the Edit menu when the general field has been opened (MODIFY GENERAL olefield).
 
 The following program can be used to automate changing the creator of the PICT file to Imager and appending the PICTS into a general field. The program assumes that the Picts.sea file found in the Microsoft Visual FoxPro:Samples:Graphics folder has been unstuffed and the following is the folder path to the Outline PICT files:
 

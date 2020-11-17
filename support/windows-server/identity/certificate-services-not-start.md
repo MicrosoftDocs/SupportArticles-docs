@@ -29,13 +29,14 @@ Error 1058: The service cannot be started, either because it is disabled or beca
 
 Additionally, when you try to start Active Directory Certificate Services from the Certificate Services snap-in, it may fail, and then you receive the following error message:
 
-Title: Microsoft Active Directory Certificate Services
-The service cannot be started, either because it is disabled or because it has not enabled devices associated with it.
+> Title: Microsoft Active Directory Certificate Services  
+The service cannot be started, either because it is disabled or because it has not enabled devices associated with it.  
 0x422 (WIN32: 1058 ERROR_SERVICE_DISABLED)
 
-Notes
-- No event is recorded in the System or Application logs when the service fails to start.
-- This issue may occur on different configurations. For example: Domain joined, Non-Domain joined, Enterprise Certificate Authority, and Standalone Certificate Authority
+> [!Note]
+>
+> - No event is recorded in the System or Application logs when the service fails to start.
+> - This issue may occur on different configurations. For example: Domain joined, Non-Domain joined, Enterprise Certificate Authority, and Standalone Certificate Authority
 
 ## Workaround
 
