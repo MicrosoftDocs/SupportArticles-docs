@@ -27,7 +27,7 @@ The resolution to this issue is to retry the same sequence of operations, namely
 1. `InternetWriteFile`
 1. `HttpEndRequest`
 
-Until `HttpEndRequest` doesn't return **FALSE** and `GetLastError()` doesn't report back 12032 (or there's some other error). If IIS is presented with wrong authentication information, then IIS will keep returning an HTTP error 401 for each retry. So, you'll need to keep track of how many times the `HttpEndRequest` function returns back error 12032 and so prevent running into an infinite loop.
+Until `HttpEndRequest` doesn't return **FALSE** and `GetLastError()` doesn't report back 12032 (or there's some other error). If IIS is presented with wrong authentication information, then IIS will keep returning an HTTP error 401 for each retry. So, you'll need to keep track of how many times the `HttpEndRequest` function returns back error 12032 and prevent running into an infinite loop.
 
 If there's Windows NTLM Authentication, `HttpEndRequest` will return back error 12032 for a maximum of two times to satisfy the three-way NTLM handshake. The first error 12032 will indicate an HTTP error 401 response from the server and the second error 12032 will indicate the Type-2 NTLM handshake message from the server, which, if valid authentication info is passed to IIS, the user will be authenticated correctly and the upload will be successful.
 
