@@ -125,10 +125,12 @@
     items:
     - name: "\"There is a problem with the proxy server's security certificate\" error"
       href: ../connectivity/error-when-outlook-uses-rpc-https-connect-server.md
-    - name: Can't open a mailbox using MAPI over HTTP
-      href: ../connectivity/cannot-open-mailbox-using-mapi-over-http.md
     - name: Can't access archive mailbox in Outlook
       href: ../connectivity/cannot-access-archive-mailbox-in-outlook.md
+    - name: Can't open a mailbox using MAPI over HTTP
+      href: ../connectivity/cannot-open-mailbox-using-mapi-over-http.md
+    - name: Can't sign in or activate Microsoft 365 applications 
+      href: ../connectivity/outlook-cannot-signin-activate.md
     - name: Connection fails when certificate is required
       href: ../connectivity/outlook-cannot-connect-to-exchange-certificate-validation.md
     - name: Connection issues when MAPI is disabled
@@ -327,6 +329,8 @@
       href: ../message-body/no-subject-content-in-automatically-email.md
     - name: Pictures are not shown but displayed as red X
       href: ../message-body/pictures-not-displayed-and-shown-as-red-x.md
+    - name: Strange characters in message body
+      href: ../message-body/strange-characters-display-message-body.md
     - name: Specified Message Identity is Invalid error when opening delivery reports
       href: ../message-body/specified-message-identity-is-invalid-error-when-opening-delivery-reports.md
     - name: The image in an HTML-formatted email not shown
@@ -541,6 +545,8 @@
       href: ../user-interface/cannot-delete-default-outlook-folders.md
     - name: Can't import an XLS or CSV file into the Hebrew version
       href: ../user-interface/cannot-map-custom-fields.md
+    - name: Can't open mutiple Excel attachements
+      href: ../user-interface/only-two-excel-attachments-can-open.md
     - name: Can't open Outlook items from Windows Search results
       href: ../user-interface/cannot-open-outlook-items-from-windows-search-results.md
     - name: Can't perform instant searches
