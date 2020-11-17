@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.author: robert.schaffer
+ms.author: rschaffr
 ms.custom: 
 - CSSTroubleshoot
 - CI 124895
