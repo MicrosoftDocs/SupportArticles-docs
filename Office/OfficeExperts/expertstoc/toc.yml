@@ -13,6 +13,8 @@
     items:
     - name: 0xC004F038 computer could not be activated in KMS
       href: ../administration/0xc004f038-computer-not-activate.md
+    - name: Can't check in files when LAN doesn't have Internet
+      href: ../administration/cannot-check-in-files-when-lan-does-not-have-internet.md
     - name: Can't open file from recently used document list
       href: ../administration/cant-open-files-most-recently-used-list.md
     - name: Check the size of this month's Office ProPlus update

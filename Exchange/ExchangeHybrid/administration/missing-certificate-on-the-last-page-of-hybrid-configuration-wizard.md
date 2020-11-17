@@ -46,8 +46,8 @@ If it instead returns a value of either **Registry** or **None**, reimport the c
 
 The `RootCAType` property can have any of the following values:
 
-- Registry: An internal, private PKI root CA that has been manually installed in the certificate store.
-- ThirdParty: A public, third-party root CAIf the property's value is **Registry**, the certificate is not listed when you run the Hybrid Configuration Wizard.
+- **Registry**: An internal, private PKI root CA that has been manually installed in the certificate store.
+- **ThirdParty**: A public, third-party root CAIf the property's value is **Registry**, the certificate is not listed when you run the Hybrid Configuration Wizard.
 
 In the case of a private CA, the Hybrid Configuration Wizard can't be completed successfully. Self-signed certificates can't be used for Exchange services in a hybrid deployment. You have to install and assign Exchange services to a valid digital certificate that is purchased from a trusted CA.
 

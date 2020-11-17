@@ -2,6 +2,15 @@
 
 
 
+## Week of November 09, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/11/2020 | [Sign in to Office 365, Azure, or Intune fails after you change the federation service endpoint](/office365/troubleshoot/active-directory/sign-in-fails-if-federation-endpoint-changes) | modified |
+| 11/11/2020 | [Office 365 users aren't signed in to Office through AD accounts](/office365/troubleshoot/sign-in/office-365-users-not-signed-in-office) | modified |
+
+
 ## Week of November 02, 2020
 
 
@@ -56,13 +65,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 10/15/2020 | [Unable to sign in to Office 365, Azure, or Intune](/office365/troubleshoot/sign-in/sign-in-to-office-365-azure-intune) | modified |
-
-
-## Week of October 05, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/6/2020 | [No Add-ins loaded due to group policy settings](/office365/troubleshoot/group-policy/office-add-in-not-loaded) | modified |
-| 10/6/2020 | [O365 reports show anonymous instead of actual user names](/office365/troubleshoot/miscellaneous/reports-show-anonymous-user-name) | modified |
-| 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/office365/troubleshoot/index) | modified |

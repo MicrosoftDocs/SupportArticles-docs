@@ -17,7 +17,7 @@ appliesto:
 - Exchange Server 2013 Standard Edition
 search.appverid: MET150
 ---
-# The term Get-OrganizationConfig is not recognized error when you run the Hybrid Configuration wizard
+# (The term Get-OrganizationConfig is not recognized) error when you run the Hybrid Configuration wizard
 
 _Original KB number:_ &nbsp; 3067676
 
