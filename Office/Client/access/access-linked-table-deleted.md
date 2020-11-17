@@ -54,8 +54,8 @@ You can enable or disable the **Date & Time Extended** data type for linking and
 
 For earlier versions of Access, use one of the following methods to work around this issue:
 
-- Change the compatibility level of the database to 120 (the compatibility level for SQL Server 2014) or less.   
-- Remove fractional seconds from the **datetime** columns.    
-- Make sure that the **datetime** columns aren't part of the primary key. Add a **timestamp** column to the table, and then use the Linked Table Manager in Access to update the linked table.    
-- If editing data isn't requested, create a query and change the **RecordsetType** property to **Snapshot**.
+- Change the compatibility level of the database to 120 (the compatibility level for SQL Server 2014) or less.
+- Remove fractional seconds from the **datetime** columns. 
+- Make sure that the **datetime** columns aren't part of the primary key. Add a **timestamp** column to the table, and then use the Linked Table Manager in Access to update the linked table.
+- If editing data isn't necessary, you may create a query and change the **RecordsetType** property to **Snapshot** which will return a read-only recordset that’s not affected by this issue.
 
