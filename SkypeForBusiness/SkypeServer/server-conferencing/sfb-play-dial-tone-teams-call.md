@@ -33,28 +33,13 @@ This issue occurs because new changes have been made in the HID feature for Isla
 
 ### Method 1
 
-Turn off the dial tone for Skype for Business in Windows settings:
-
-1. Open **Settings** app.
-2. Select **System**.
-3. Select **Sound**.
-4. Select **Sound Control Panel**.
-5. Select the **Sounds** tab.
-6. Scroll down to Skype for Business.
-7. Select the **Dial Tone** sound.
-8. Select the **(None)** option at the top of the drop down menu.
-
-:::image type="content" source="media/sfb-play-dial-tone-teams-call/sounds-setting.jpg" alt-text="Select the Sounds tab" border="false":::
-
-### Method 2
-
 Set **PlayAbbreviatedDialTone** to "true" in the client policy. If PlayAbbreviatedDialTone is set to True, a 3-seconds dial tone will be played when a Skype for Business-compatible handset is taken off the hook. To learn more, read [Set-CsClientPolicy](https://docs.microsoft.com/powershell/module/skype/set-csclientpolicy?view=skype-ps). To set the value, run the following command:
 
 ```powershell
 Set-CsClientPolicy -Identity RedmondClientPolicy  -PlayAbbreviatedDialTone $True
 ```
 
-### Method 3
+### Method 2
 
 Another option is to enable HID interop features in the Skype for Business client. To learn how to do that, see [EnableTeamsHIDInterop for coordination of HID device usage in Microsoft Teams and Skype for Business 2016 in Islands mode](https://support.microsoft.com/help/4559449).
 
