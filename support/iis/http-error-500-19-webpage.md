@@ -5,7 +5,7 @@ ms.date: 11/9/2020
 ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.reviewer: mlaing
 ---
-# HTTP Error 500.19 when you open an IIS Webpage
+# HTTP Error 500.19 - internal server error when you open an IIS Webpage
 
 This article resolves a problem in which you receive an "HTTP 500.19" error message on a web application in Internet Information Services (IIS) 7.0 and later versions.
 
