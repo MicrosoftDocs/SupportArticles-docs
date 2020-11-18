@@ -23,7 +23,7 @@ appliesto:
 
 ## Symptoms
 
-In Microsoft Exchange Server 2013, 2016 or 2019, you are trying to add a mailbox database copy by using `Add-MailboxDatabaseCopy` cmdlet. When the source and target Exchange Server is pointed to a different Domain Controller, you receive an error message that resembles the following in Exchange Management Shell:
+In Microsoft Exchange Server 2013, 2016 or 2019, you are trying to add a mailbox database copy by using `Add-MailboxDatabaseCopy` cmdlet. When the source and target Exchange Server is pointed to a different Domain Controller, you receive an error message in Exchange Management Shell that resembles the following:
 
 > The seeding operation failed. Error: An error occurred while running prerequisite checks. Error: The specified database isn't configured for replication and therefore cannot be used to perform seed operations. [Database: DB01, Server:  Contoso-E16B.Contoso.local]  
     + CategoryInfo          : InvalidOperation: (DB01:String) [Add-MailboxDatabaseCopy],   InvalidDbForSeedSpecifiedException  
@@ -58,4 +58,4 @@ To determine which Domain Controller being used by the Exchange Server, run this
 Get-ExchangeServer -Identity <ServerName> -Status | ft *CurrentDomainControllers*
 ```
 
-For more information about Add-MailboxDatabaseCopy, see [this article](https://docs.microsoft.com/powershell/module/exchange/add-mailboxdatabasecopy?view=exchange-ps).
+For more information about `Add-MailboxDatabaseCopy` cmdlet, see [this article](https://docs.microsoft.com/powershell/module/exchange/add-mailboxdatabasecopy?view=exchange-ps&preserve-view=true).
