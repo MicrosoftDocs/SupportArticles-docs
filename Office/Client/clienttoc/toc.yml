@@ -501,6 +501,8 @@
           href: ../excel/link-visio-drawing-to-a-specific-region.md
         - name: LOGEST statistical functions
           href: ../excel/statistical-functions-logest.md
+        - name: Long numbers are displayed incorrectly
+          href: ../excel/long-numbers-incorrectly-in-excel.md
         - name: Loop through a list of data by using macros
           href: ../excel/loop-through-data-using-macro.md
         - name: Macro to extract data from a chart
@@ -1013,6 +1015,8 @@
           href: ../word/end-tag-error-when-open-docx.md
         - name: Headers and footers remain after removing sensitivity label
           href: ../word/headers-footers-remain-after-remove-sensitivity-label.md
+        - name: How to merge multiple documents
+          href: ../word/merge-word-documents.md
         - name: Image DPI is changed after you print to PDF
           href: ../word/image-dpi-change-after-print-to-pdf.md
         - name: In-place edit of an embedded Word document with ActiveX control causes flickering
