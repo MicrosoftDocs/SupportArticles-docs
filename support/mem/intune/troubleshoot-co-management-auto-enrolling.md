@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot auto-enrolling existing devices 
-description: Helps you understand and troubleshoot issues that you may encounter when you set up co-management by taking Path 1 - Auto-enroll existing Configuration Manager-managed devices into Intune.
+description: Helps you understand and troubleshoot issues when you set up co-management by taking Path 1 - Auto-enroll existing Configuration Manager-managed devices into Intune.
 ms.date: 04/16/2020
 ms.prod-support-area-path: Co-management with Configuration Manager
 ms.reviewer: luche
@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4519160
 
 ## Before you start
 
-Before you start troubleshooting, it's important to collect some basic information about the issue and make sure that you follow all required configuration steps. This helps you better understand the problem and reduce the time to find a resolution. To do this, follow this checklist of pre-troubleshooting questions:
+Before you start troubleshooting, it's important to collect some basic information about the issue and make sure that you follow all required configuration steps. It helps you better understand the problem and reduce the time to find a resolution. To do this, follow this checklist of pre-troubleshooting questions:
 
 - Did you have the required [permissions and roles](/mem/configmgr/comanage/overview#permissions-and-roles) to configure co-management?
 - Which [Azure AD hybrid identity option](/azure/active-directory/hybrid/plan-connect-user-signin#choosing-the-user-sign-in-method-for-your-organization) did you select?
@@ -87,9 +87,9 @@ When this issue occurs, you also notice the following symptoms:
 
   > Error: 0xCAA2000C The request requires user interaction.  
   > Code: interaction_required  
-  > Description: AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access
+  > Description: AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access.
 
-This issue occurs when multi-factor authentication (MFA) is **Enforced**. This prevents the Configuration Manager client agent from enrolling the device by using the logged-in user credentials.
+This issue occurs when multi-factor authentication (MFA) is **Enforced**. It prevents the Configuration Manager client agent from enrolling the device by using the logged-in user credentials.
 
 > [!NOTE]
 > There is a difference between having MFA **Enabled** and **Enforced**. This scenario works by having MFA **Enabled** but not having MFA **Enforced**.
@@ -97,7 +97,33 @@ This issue occurs when multi-factor authentication (MFA) is **Enforced**. This 
 To fix the issue, use one of the following methods:
 
 - Set MFA to **Enabled** but not **Enforced**. For more information, see [Set up multi-factor authentication](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication).
-- Temporarily disable MFA during enrollment in [Trusted IPs](/azure/active-directory/conditional-access/location-condition#trusted-ips).  
+- Temporarily disable MFA during enrollment in [Trusted IPs](/azure/active-directory/authentication/howto-mfa-mfasettings#trusted-ips).  
+
+### Devices fail to sync after auto-enrollment
+
+Starting in Configuration Manager version 1906 or a later version, a co-managed device running Windows 10 version 1803 or a later version automatically enrolls to the Microsoft Intune service based on its Azure Active Directory (Azure AD) device tokens. However, the device fails to sync, and you receive the following error message in **Settings** > **Accounts** > **Access work or school**:
+
+> Sync wasn't fully successful because we weren't able to verify your credentials. Select Sync to sign in and try again.
+
+:::image type="content" source="media/troubleshoot-co-management-auto-enrolling/device-sync-failure.png" alt-text="Device sync fails":::
+
+When this issue occurs, the following error message is logged in **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Admin log** in the Event Viewer:
+
+> MDM Session: Failed to get AAD Token for sync session User Token: (Unknown Win32 Error code: 0xcaa2000c) Device Token: (Incorrect function).
+
+The following error message is logged in **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD** > **Operational log** in the Event Viewer:
+
+> Error: 0xCAA2000C The request requires user interaction.  
+> Code: interaction_required  
+> Description: AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access.
+
+This issue occurs when MFA is **Enforced**, or Azure AD Conditional Access policies that require MFA are applied to all cloud apps.
+
+To fix the issue, use one of the following methods:
+
+- Set MFA to **Enabled** but not **Enforced**. For more information, see [Set up multi-factor authentication](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication).
+- Skip MFA in [Trusted IPs](/azure/active-directory/authentication/howto-mfa-mfasettings#trusted-ips).
+- Exclude the Microsoft Intune app from the Azure AD Conditional Access policies that require MFA to allow device sync by using the user credentials.
 
 ### A hybrid Azure AD joined Windows 10 device fails to enroll in Intune with error 0x800706D9 or 0x80180023
 
