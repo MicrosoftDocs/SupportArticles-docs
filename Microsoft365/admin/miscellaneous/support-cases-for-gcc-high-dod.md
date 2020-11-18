@@ -23,6 +23,7 @@ appliesto:
 
 Office 365 Support is available only to users with Administrator roles associated with a valid email address.  Therefore, only user accounts marked in the Office 365 admin center as an administrator will be able to contact support and/or create a support incident.  Visit your Office 365 admin center to manage your user accounts and define who has permissions to contact support.  
 If a user does not need any specialized administrative access you can grant them the role of Service Administrator, which will provide them view-only access and the ability to contact support to create an incident.  
+To get started creating a new service request, browse to [https://portal.office365.us/adminportal](https://portal.office365.us/adminportal).  After login, navigate to Show all > Support > New Service Request and use the subject to briefly describe the problem for the new service request.
 
 **Note** Users cannot change their own account permissions and their account needs to be updated by another administrator.
 
