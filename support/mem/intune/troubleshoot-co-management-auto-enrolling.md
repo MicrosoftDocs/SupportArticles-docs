@@ -101,7 +101,7 @@ To fix the issue, use one of the following methods:
 
 ### Devices fail to sync after auto-enrollment
 
-Starting in Configuration Manager version 1906 or a later version, a co-managed device running Windows 10 version 1803 or a later version automatically enrolls to the Microsoft Intune service based on its Azure Active Directory (Azure AD) device tokens. However, the device fails to sync, and you receive the following error message in **Settings** > **Accounts** > **Access work or school**:
+Starting in Configuration Manager version 1906, a co-managed device running Windows 10 version 1803 or a later version automatically enrolls to the Microsoft Intune service based on its Azure Active Directory (Azure AD) device tokens. However, the device fails to sync, and you receive the following error message in **Settings** > **Accounts** > **Access work or school**:
 
 > Sync wasn't fully successful because we weren't able to verify your credentials. Select Sync to sign in and try again.
 
@@ -253,6 +253,6 @@ For more information about Intune and Configuration Manager co-management, see t
 
 If you have a question or want to get involved with our online community, visit our [Intune forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).
 
-You can also submit feedback and ideas to the Intune development team through our [uservoice site](https://microsoftintune.uservoice.com/forums/291681-ideas).
+You can also submit feedback and ideas to the Intune development team through our [user voice site](https://microsoftintune.uservoice.com/forums/291681-ideas).
 
 If all else fails and you'd like to open a support case with the Intune support team, see [How to get support for Microsoft Intune](/mem/intune/fundamentals/get-support).
