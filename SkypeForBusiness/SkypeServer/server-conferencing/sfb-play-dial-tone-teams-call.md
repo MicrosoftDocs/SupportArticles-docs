@@ -46,7 +46,7 @@ Another option is to enable HID interop features in the Skype for Business clien
 ## More information
 
 To improve the user's experience, Microsoft has rolled out a new HID feature to enable **Mute/Unmute** for Island mode users in Teams. Here are a few notes and requirements regarding this new feature:
- 
+
 1. This feature applies to Windows (32 bit) only. macOS experience is unchanged.
 2. You must update Skype for Business client to version 16.0.11020.10000 or higher. If you don't, HID will remain disabled in Teams.
 3. The new feature allows the use of the **Mute/Unmute** HID controls. The **Hook/OffHook** and other HID controls won't work. Volume control and ring tone aren't affected.

@@ -134,4 +134,4 @@ For more information about how to address the connector setting requirement, see
 
 For more information about how to relay messages through Office 365, see the "[Setting up mail flow where some mailboxes are in Office 365 and some mailboxes are on your organization's mail servers](https://docs.microsoft.com/exchange/mail-flow-best-practices/mail-flow-best-practices#bkmk_hybridmailflowbestpractices)" section of [Mail flow best practices for Exchange Online and Office 365](https://docs.microsoft.com/exchange/mail-flow-best-practices/mail-flow-best-practices). 
 
-Still need help? Go to[Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to[Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).
