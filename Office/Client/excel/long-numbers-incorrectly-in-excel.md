@@ -44,7 +44,7 @@ To do this, follow these steps:
 
 2. On the **Number** tab, select **Text**, and then click **OK**.
 
-    ![Number](./media/long-numbers-incorrectly-in-excel/number.png)
+    ![Number image](./media/long-numbers-incorrectly-in-excel/number.png)
 
 3. Then type a long number. (Be sure to set the cell format before you type the number)
 
