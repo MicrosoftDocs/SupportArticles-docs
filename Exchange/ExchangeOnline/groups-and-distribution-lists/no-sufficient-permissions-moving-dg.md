@@ -95,4 +95,4 @@ To learn about managing distribution groups that are synced to Office 365 from t
 
 [2417592](https://support.microsoft.com/help/2417592) Owners of an on-premises distribution group that's synced to Office 365 can't manage the distribution group in Exchange Online
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

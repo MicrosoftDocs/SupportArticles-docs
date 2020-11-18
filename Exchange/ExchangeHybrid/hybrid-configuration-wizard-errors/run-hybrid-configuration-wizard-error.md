@@ -64,4 +64,4 @@ For more information about how to manage certificates in Exchange Server 2010, g
 - [Remove-ExchangeCertificate](/powershell/module/exchange/remove-exchangecertificate)
 - [Managing SSL for a Client Access Server](/previous-versions/office/exchange-server-2010/bb310795(v=exchg.141))
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

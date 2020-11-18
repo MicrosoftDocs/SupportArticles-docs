@@ -20,7 +20,10 @@ appliesto:
 
 This article is written and maintained by [Eric Splichal](https://social.technet.microsoft.com/profile/Splic-MSFT), Support Escalation Engineer and [Matt Philipenko](https://social.technet.microsoft.com/profile/MattPhil+-+MSFT), Sr Premier Field Engineer.
 
-It's very common for users to switch devices or for an enterprise to add or change M365 or O365 tenants. Another scenario is when enterprise organizations roam licenses or credentials to simplify the sign-in process. After a user is activated, multiple locations must be cleared to reset the application to a clean state.
+It's common for users to switch devices or for an enterprise to add or change M365 or O365 tenants. Another scenario is when enterprise organizations roam licenses or credentials to simplify the sign-in process. After a user is activated, multiple locations must be cleared to reset the application to a clean state.
+
+> [!NOTE]
+> To automatically perform all of the checks listed below and run the appropriate scripts needs to reset the activation state, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-OfficeActivation-Reset).
 
 ## Step 1: Remove Office 365 license for subscription -based installations
 
@@ -47,7 +50,7 @@ Here's how to remove the Office 365 license:
    cd "C:\Program Files\Microsoft Office\Office16"
    ```
 
-1. Run the following cscript command:
+1. Run the following script command:
 
    ```vbs
    cscript ospp.vbs /dstatus
