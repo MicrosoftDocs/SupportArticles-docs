@@ -17,8 +17,8 @@ ms.technology: WindowsSecurity
 
 This article helps fix an **access denied** error that occurs when you access a service that uses network shares on a middle-tier server.
 
-_Original product version:_ &nbsp;Window 10 – all editions, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
-_Original KB number:_ &nbsp;2602377
+_Original product version:_ &nbsp; Window 10 – all editions, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
+_Original KB number:_ &nbsp; 2602377
 
 ## Symptoms
 
@@ -35,13 +35,15 @@ The user is prompted for credentials, and access eventually fails with an access
 - The domain account is trusted for delegation for the cifs service on the file server.
 - The file server and web server are running an operating system that's listed in the Applies To section.
 
-Scenario 2
+Scenario 2  
+
 - The web app is trying to access a file server as a user.
 - The IIS application pool that accesses that share is running under the identity of service account. The domain account is trusted for delegation for the cifs service on the file server.
 - Constrained delegation configured for CIFS is configured on the service account for the file server.
 - The file server and web server types are listed in the Applies To section.
- 
-Scenario 3:
+
+Scenario 3:  
+
 - Any server-side application that's being accessed from a client is accessing remote shares as user.
 - The server-side application is running under the context of a service account.
 - The Service account is trusted for delegation and configured for CIFS delegation for the file server.
@@ -71,7 +73,8 @@ To do this on the domain controller for your web servers domain, follow these st
 
 If you must use the identity of applications as a service account and/or domain account, use the following workaround.
 
- **Note** This workaround is not recommended because it requires Use any authentication protocol delegation on the computer account. If the **Use any authentication protocol** option is selected, the account is using constrained delegation with protocol transition.
+> [!Note]
+> This workaround is not recommended because it requires Use any authentication protocol delegation on the computer account. If the **Use any authentication protocol** option is selected, the account is using constrained delegation with protocol transition.
 
 1. Click Start, click Administrative Tools, and then click Active Directory Users and Computers.
 2. Expand domain, and then expand the Computers folder.

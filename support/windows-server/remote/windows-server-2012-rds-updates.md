@@ -1,5 +1,5 @@
 ---
-title: Available updates for Remote Desktop Services in Windows Server 2012
+title: Available updates for Remote Desktop Services 
 description: Lists the available updates for Remote Desktop Services in Windows Server 2012.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -13,24 +13,25 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Administration
 ms.technology: RDS
 ---
-# Available updates for Remote Desktop Services in Windows Server 2012
+# Available updates for Remote Desktop Services
 
 This article lists the available updates for Remote Desktop Services in Windows Server 2012.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2821526
+_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2821526
 
 ## Summary
 
-This article summarizes the available hotfixes and updates for issues that can occur in Remote Desktop Services for Windows Server 2012 environments. 
+This article summarizes the available hotfixes and updates for issues that can occur in Remote Desktop Services for Windows Server 2012 environments.  
 
 For Windows Server 2008 R2 Remote Desktop Services updates, see [KB2601888](https://support.microsoft.com/help/2601888)
 
-For Windows Server 2012 R2 Remote Desktop Services updates, see [KB2933664](https://support.microsoft.com/help/2933664) 
+For Windows Server 2012 R2 Remote Desktop Services updates, see [KB2933664](https://support.microsoft.com/help/2933664)  
 
-Many of the updates listed later in this article are already included in the normal Windows Update monthly rollups. Select the "Recommended Updates" Windows Update setting to obtain these. 
+Many of the updates listed later in this article are already included in the normal Windows Update monthly rollups. Select the "Recommended Updates" Windows Update setting to obtain these.  
 
-Note If you believe you're experiencing an issue listed later in this article, install just the hotfix for that specific issue, or use the monthly rollups option as mentioned previously.
+> [!Note]
+> If you believe you're experiencing an issue listed later in this article, install just the hotfix for that specific issue, or use the monthly rollups option as mentioned previously.
 
 The hotfixes and updates are arranged by component areas within Remote Desktop Services 2012 environments and could also apply to Windows XP, Windows Vista, Windows 7, Windows 8, and Windows 8.1 Remote Desktop Clients.
 
@@ -86,8 +87,6 @@ The hotfixes and updates are arranged by component areas within Remote Desktop S
 
 [2959626](https://support.microsoft.com/help/2959626) Reliability improvements for Remote Desktop Session Host and RemoteApp
 
-[2925336](https://support.microsoft.com/help/2925336) Shortcut menu items flicker as you move the mouse pointer over them in a RemoteApp in Windows 8 or Windows Server 2012
-
 [2862077](https://support.microsoft.com/help/2862077) Error when you try to change the properties of a published RemoteApp in Windows Server 2012
 
 [2862019](https://support.microsoft.com/help/2862019) A RemoteApp application main window takes the focus after the applications windows are maximized in Windows
@@ -118,4 +117,4 @@ The hotfixes and updates are arranged by component areas within Remote Desktop S
 
 [3069129](https://support.microsoft.com/help/3069129) Blank page is displayed when you try to access RemoteApps on a Windows-based RD Web Access server
 
-[2793072](https://support.microsoft.com/help/2793072)  Generic error message when you change your password on a RD Web Access website in Windows Server 2012
+[2793072](https://support.microsoft.com/help/2793072)  Generic error message when you change your password on an RD Web Access website in Windows Server 2012

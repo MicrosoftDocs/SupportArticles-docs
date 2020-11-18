@@ -24,13 +24,13 @@ _Original KB number:_ &nbsp; 2462468
 
 While managing cluster using failover cluster management console, we receive the following error:
 
-Error
-The operation has failed.
-An error occurred connecting to the cluster '.'.
-
-[Expanded Information]
-An error occurred trying to display the cluster information.
-Connection to the cluster is not allowed since you are not an administrator on the cluster node(s) (Node name)
+> Error  
+The operation has failed.  
+An error occurred connecting to the cluster '.'.  
+>
+> [Expanded Information]  
+An error occurred trying to display the cluster information.  
+Connection to the cluster is not allowed since you are not an administrator on the cluster node(s) (Node name)  
 
 ![error that we get when we try to manage cluster ](./media/cannot-manage-cluster-with-failover-cluster-manager/error-message-dialog.png)
 
@@ -38,11 +38,12 @@ or
 
 When you run the Cluster validation, you receive the following error:
 
-*Unable to determine if you have administrator privileges on server "Node name" . Ensure sure that the server service and remote registry services are enabled, and that the firewall is properly configured for remote access.*  
+> Unable to determine if you have administrator privileges on server "Node name" . Ensure sure that the server service and remote registry services are enabled, and that the firewall is properly configured for remote access.  
 
 Managing cluster using command prompt will still work and will be able to list groups (cluster group), resources (cluster. res) and even be able to do failover of groups (cluster group "cluster group" /move) but will error out while managing cluster using GUI (Failover Cluster Management console).
 
-Note: Command to list group & resources, move group are given in bracket.
+> [!Note]
+> Command to list group & resources, move group are given in bracket.
 
 ## Cause
 

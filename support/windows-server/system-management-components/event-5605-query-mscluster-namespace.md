@@ -1,5 +1,5 @@
 ---
-title: Warning Event ID 5605 is Logged in Application log when querying MSCluster namespace through WMI
+title: Warning Event ID 5605 is Logged in Application log
 description: Describes an issue that Warning Event ID 5605 is Logged in Application log when querying MSCluster namespace through WMI.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,8 +17,8 @@ ms.technology: SysManagementComponents
 
 This article describes an issue where Warning Event ID 5605 is Logged in Application log when querying MSCluster namespace through WMI.
 
-_Original product version:_ &nbsp;Windows Server 2008 R2 Service Pack 1  
-_Original KB number:_ &nbsp;2590230
+_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Original KB number:_ &nbsp; 2590230
 
 ## Symptoms
 
@@ -46,7 +46,8 @@ For this, follow the steps:
 
 1. open C:\Windows\system32\wbem\ClusWMI.mof for editing and set [RequiresEncryption(FALSE)]
 2. recompile the ClusWMI.mof file by running "mofcomp C:\Windows\system32\wbem\ClusWMI.mof"
-3. restart the winmgmt service
+3. restart the winmgmt service  
+
 > [!NOTE]
 > This workaround will have to be reapplied if the ClusWMI.mof file is updated through hotfix or service pack.
 >
@@ -75,8 +76,8 @@ By applying the Workaround mentioned under a), querying information from the Clu
 
 By applying the Workaround mentioned under b), the connect call to the namespace is already done with packet privacy and thus as a result, the event 5605 isn't logged.
 
-[Setting the Default Process Security Level Using VBScript](https://msdn.microsoft.com/library/aa393618%28vs.85%29.aspx) 
+[Setting the Default Process Security Level Using VBScript](https://msdn.microsoft.com/library/aa393618%28vs.85%29.aspx)  
 
-[Securing Remote WMI connection](https://msdn.microsoft.com/library/aa393266.aspx) 
+[Securing Remote WMI connection](https://msdn.microsoft.com/library/aa393266.aspx)  
 
 [Requiring an Encrypted Connection to a Namespace](https://msdn.microsoft.com/library/aa393068%28vs.85%29.aspx)

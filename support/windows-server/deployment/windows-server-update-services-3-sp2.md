@@ -1,5 +1,5 @@
 ---
-title: Windows Server Update Services 3.0 SP2 Dynamic Installer for Server Manager
+title: Windows Server Update Services 3.0 SP2 Dynamic Installer
 description: Describes the Windows Server Update Services 3.0 SP2 Dynamic Installer for Server Manager.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,8 +17,8 @@ ms.technology: Deployment
 
 This article describes the Windows Server Update Services 3.0 SP2 Dynamic Installer for Server Manager.
 
-_Original product version:_ &nbsp;Windows Server 2008 R2 Service Pack 1  
-_Original KB number:_ &nbsp;972493
+_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Original KB number:_ &nbsp; 972493
 
 ## Introduction
 
@@ -56,26 +56,24 @@ The WSUS 3.0 SP2 package has the following Microsoft Update detection logic and 
 - Supersedes: WSUS 3.0 SP1
 - This package is applicable only to the following Windows Server operating systems with the WSUS-Server Manager integration:
 
-    - Windows Server 2008 SP1 with Server Manager
-    
-    For more information, click the following article number to view the article in the Microsoft Knowledge Base: [940518](https://support.microsoft.com/help/940518) An update is available that integrates Windows Server Update Services (WSUS) 3.0 into Server Manager in Windows Server 2008  
-    
-    - Windows Server 2008 SP2
-    - Windows Server 2008 R2, x64 edition only
+  - Windows Server 2008 SP1 with Server Manager
+
+       For more information, click the following article number to view the article in the Microsoft Knowledge Base: [940518](https://support.microsoft.com/help/940518) An update is available that integrates Windows Server Update Services (WSUS) 3.0 into Server Manager in Windows Server 2008  
+
+  - Windows Server 2008 SP2
+  - Windows Server 2008 R2, x64 edition only  
+
 - Applicability rules:
 
-    - Is installed = No
-    - Is installable
+  - Is installed = No
+  - Is installable  
+
 - Download Center:
 
-    - The WSUS 3.0 SP2 Download Center Web site includes the RTM Microsoft user license terms.
-    - Pre-3.0 SP1 versions of WSUS 3.0 are no longer available for download.
+  - The WSUS 3.0 SP2 Download Center Web site includes the RTM Microsoft user license terms.
+  - Pre-3.0 SP1 versions of WSUS 3.0 are no longer available for download.
 
 After WSUS 3.0 is detected as installed by Server Manager, it can be configured and managed within the Server Manager user interface or the WSUS 3.0 snap-in. To install WSUS 3.0 SP2 on a server that runs Windows Server 2008 SP2 that is being updated by a WSUS 3.0 server, approve the Windows Server Update Services 3.0 SP2 Dynamic Install for Windows Server 2008, and then install WSUS role by using Server Manager.
-
-For detailed installation instructions, see the WSUS 3.0 SP2 Step by Step Guide at the following Microsoft Web site:
-
-[https://go.microsoft.com/fwlink/?LinkId=139836](https://go.microsoft.com/fwlink/?linkid=139836) 
 
 ## How to determine whether the service pack is installed
 
@@ -96,5 +94,3 @@ To remove WSUS 3.0 SP2 by using Server Manager, follow these steps:
 7. On the **Confirm Installation Selections** page, click **Remove**.
 8. On the **Remove Windows Server Update Services 3.0 SP2** page, select any additional items to be removed, and then click **Next**.
 9. Click **Finish** to exit the wizard when the WSUS 3.0 SP2 Removal Wizard is finished.
-
-For more information about the WSUS 3.0 SP2 Release Notes, visit the following Microsoft Web site: [https://go.microsoft.com/fwlink/?LinkId=139840](https://go.microsoft.com/fwlink/?linkid=139840)

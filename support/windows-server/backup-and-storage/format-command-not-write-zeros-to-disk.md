@@ -17,7 +17,7 @@ ms.technology: BackupStorage
 
 This article discusses a change in the behavior of the format command in Windows Vista and later Windows versions.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Window 10 – all editions  
+_Original product version:_ &nbsp; Windows Server 2012 R2, Window 10 – all editions  
 _Original KB number:_ &nbsp; 941961
 
 ## Introduction
@@ -32,9 +32,9 @@ In the on-demand scenario, zeros don't have to be written to the whole disk beca
 
 You can use four methods to format a volume in Windows Vista and later versions. You can use the quick format option for these four methods:
 
-- Command line: Use the format /q command.
+- Command line: Use the format `/q` command.
 
-- Diskpart: Use the format command together with the *quick*  parameter. 
+- Diskpart: Use the format command together with the *quick*  parameter.  
 
 - Windows Explorer: Click to select the **Perform a quick format** check box.
 

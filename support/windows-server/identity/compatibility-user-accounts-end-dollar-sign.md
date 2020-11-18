@@ -1,5 +1,5 @@
 ---
-title: Compatibility with user accounts ending with the dollar sign ($)
+title: Compatibility with user accounts ending with the dollar sign
 description: Starting in Windows 7/2008R2, there are potential compatibility issues with using domain user accounts ending with the dollar sign ($).  Managed service accounts are identified by ending in a dollar sign ($) and there can be confusion on a system when setting a service to run under an account that ends with the dollar sign ($).
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,8 +17,8 @@ ms.technology: ActiveDirectory
 
 This article describes the potential compatibility issues in using domain user accounts ending with the dollar sign ($) as a service account.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp;2666116
+_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp; 2666116
 
 ## Summary
 

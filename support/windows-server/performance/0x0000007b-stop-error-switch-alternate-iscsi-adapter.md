@@ -1,5 +1,5 @@
 ---
-title: 0x0000007B Stop error after replacing or switching to an alternate iSCSI boot adapter on a Windows Server 2008 R2-based or Windows 7-based computer
+title: 0x0000007B Stop error after replacing or switching to an alternate iSCSI boot adapter
 description: Describes an issue where you receive a STOP 0X0000007B error when you switch to an alternate iSCSI boot adapter on a Windows Server 2008 R2-based or Windows 7-based computer.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,8 +17,8 @@ ms.technology: Performance
 
 This article describes an issue where you receive a STOP 0X0000007B error when you switch to an alternate iSCSI boot adapter on a Windows Server 2008 R2-based or Windows 7-based computer.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp;2507616
+_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp; 2507616
 
 ## Symptoms
 
@@ -35,10 +35,10 @@ In this scenario, you may receive the following stop error message:
 >
 > INACCESSIBLE_BOOT_DEVICE
 
-Notes
-
-- The four parameters in this stop error message may vary, depending on the configuration of the computer.
-- Not all "0x0000007B" stop error messages are caused by this problem.
+> [!NOTE]
+>
+> - The four parameters in this stop error message may vary, depending on the configuration of the computer.
+> - Not all "0x0000007B" stop error messages are caused by this problem.
 
 ## Cause
 
@@ -55,14 +55,14 @@ You can recover a non-bootable system with the following steps.
 3. At the next screen, select 'Repair your computer'.
 4. At the 'System Recovery Options' screen, ensure the correct operating system is highlighted and select 'Next'.
 5. At the 'Choose a recovery tool' screen, select 'Command Prompt'.
-6. At the command prompt, type 'regedit' and press enter.
+6. At the command prompt, type `regedit` and press enter.
 7. From the registry editor, highlight HKEY_LOCAL_MACHINE, then from the 'File' menu select 'Load Hive'.
 8. From the 'Load Hive' dialog, browse to the following directory on the drive where Windows is installed: %windir%\system32\config
 9. Select the file named SYSTEM and click 'Open'.
 10. Provide a key name of your choice (for example, temp).
 11. Navigate to the following registry location in the hive that was loaded in step 10.
 
-    HKEY_LOCAL_MACHINE\\<name from step 10>\ControlSet001\Control\ Network\\{4d36e974-e325-11ce-bfc1-08002be10318}\\{B70D6460-3635-4D42-B866-B8AB1A24454C}\Ndi
+    `HKEY_LOCAL_MACHINE\<name from step 10>\ControlSet001\Control\Network\{4d36e974-e325-11ce-bfc1-08002be10318}\{B70D6460-3635-4D42-B866-B8AB1A24454C}\Ndi`
 
 12. Double-click the FilterRunType value in the right-hand pane, and change the value to 2.
 13. Highlight the registry hive loaded in step 10, and then from the 'File' menu select 'Unload Hive'.

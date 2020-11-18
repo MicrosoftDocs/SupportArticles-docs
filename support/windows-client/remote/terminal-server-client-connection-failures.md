@@ -17,8 +17,8 @@ ms.technology: RDS
 
 This article describes various symptoms for Remote Desktop Client connection failures.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;186645
+_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 186645
 
 ## Summary
 
@@ -37,10 +37,10 @@ The following are some of the commonly seen symptoms:
 
 All the steps are documented in these articles, based on the server operating system:
 
-- Server 2003: [Remote Desktop disconnected or can't connect to remote computer or Remote Desktop server (Terminal Server) that is running Windows Server 2003](https://support.microsoft.com/help/2477023) 
-- Server 2008: [General Remote Desktop connection troubleshooting](https://support.microsoft.com/help/2477133) 
-- Server 2008 R2: [Troubleshoot "Remote desktop disconnected" errors in Windows Server 2008 R2](https://support.microsoft.com/help/2477176) 
+- Server 2003: [Remote Desktop disconnected or can't connect to remote computer or Remote Desktop server (Terminal Server) that is running Windows Server 2003](https://support.microsoft.com/help/2477023)  
+- Server 2008: [General Remote Desktop connection troubleshooting](https://support.microsoft.com/help/2477133)  
+- Server 2008 R2: [Troubleshoot "Remote desktop disconnected" errors in Windows Server 2008 R2](https://support.microsoft.com/help/2477176)  
 
-Additionally, we have more symptoms documented in the following Microsoft TechNet article: 
+Additionally, we have more symptoms documented in the following Microsoft TechNet article:  
 
 [Troubleshooting General Remote Desktop Error messages](https://technet.microsoft.com/library/cc780927%28ws.10%29.aspx)

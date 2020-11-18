@@ -1,5 +1,5 @@
 ---
-title: Windows PowerShell 1.0 installation package for Windows Vista
+title: Windows PowerShell 1.0 installation package
 description: This article contains links and information for the installation packages for Windows PowerShell 1.0 for Windows Vista.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -13,18 +13,16 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Windows PowerShell
 ms.technology: WindowsAdministrationManagementDevelopment
 ---
-# Windows PowerShell 1.0 installation package for Windows Vista
+# Windows PowerShell 1.0 installation package
 
 This article contains links and information for the installation packages for Windows PowerShell 1.0 for Windows Vista.
 
-_Original product version:_ &nbsp;Windows Vista  
-_Original KB number:_ &nbsp;928439
+_Original product version:_ &nbsp; Windows Vista  
+_Original KB number:_ &nbsp; 928439
 
-## Notice
-
+> [!NOTE]
 Support for Windows Vista without any service packs installed ended on April 13, 2010. To continue receiving security updates for Windows, make sure that you're running Windows Vista with Service Pack 2 (SP2). For more information, see the following Microsoft website:
-
-[Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs) 
+[Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs)  
 
 ## Introduction
 
@@ -32,7 +30,7 @@ This article describes the installation package for Microsoft Windows PowerShell
 
 ## More information
 
-Windows PowerShell 1.0 is a new task-based command-line shell and scripting language that is designed specifically for system administration. Built on the Microsoft .NET Framework, Windows PowerShell helps IT professionals and expert users control and automate the administration of the Windows operating system and the applications that run on Windows. 
+Windows PowerShell 1.0 is a new task-based command-line shell and scripting language that is designed specifically for system administration. Built on the Microsoft .NET Framework, Windows PowerShell helps IT professionals and expert users control and automate the administration of the Windows operating system and the applications that run on Windows.  
 
 By using Windows PowerShell, administrators can manage their systems by typing individual commands or by running scripts that automate management tasks. Microsoft Exchange Server 2007, Microsoft System Center Operations Manager 2007, System Center Data Protection Manager V2, and System Center Virtual Machine Manager use Windows PowerShell to improve efficiency and productivity.
 
@@ -55,12 +53,11 @@ Windows PowerShell includes the following:
 
 For more information about Windows PowerShell, visit the following Microsoft websites:
 
-- [Windows PowerShell website](https://www.microsoft.com/powershell) 
+- [Windows PowerShell website](https://www.microsoft.com/powershell)  
 
-- [Windows PowerShell Blog](https://devblogs.microsoft.com/powershell/) 
+- [Windows PowerShell Blog](https://devblogs.microsoft.com/powershell/)  
 
-- [Windows PowerShell Software Development Kit (SDK)](https://msdn2.microsoft.com/library/aa830112.aspx) 
-
+- [Windows PowerShell Software Development Kit (SDK)](https://msdn2.microsoft.com/library/aa830112.aspx)  
 
 ### System requirements
 
@@ -76,7 +73,8 @@ This installation package is designed for all language versions of Windows Vista
 
 The Component-Based Servicing installation package for Windows PowerShell 1.0 automatically installs the Windows PowerShell 1.0 language pack that matches the locale that is selected for the operating system.
 
-Windows PowerShell 1.0 is fully localized in the following languages:
+Windows PowerShell 1.0 is fully localized in the following languages:  
+
 - Chinese-Simplified
 - Chinese-Traditional
 - English
@@ -87,37 +85,24 @@ Windows PowerShell 1.0 is fully localized in the following languages:
 - Korean
 - Portuguese (Brazil)
 - Russian
-- Spanish
+- Spanish  
+
 > [!NOTE]
 > In locales that are associated with other languages, the Windows PowerShell 1.0 user interface appears in the fallback language or in English.
 
 #### How to uninstall Windows PowerShell
 
-To uninstall Windows PowerShell 1.0 in Windows Vista, follow these steps:
+To uninstall Windows PowerShell 1.0 in Windows Vista, follow these steps:  
+
 1. Click **Start**, in the **Start Search** box, type appwiz.cpl, and then press ENTER.
 2. In the list of tasks, click **View Installed Updates**.
 3. In the **Uninstall an update** list, right-click **Windows PowerShell(TM) 1.0 (KB928439)**, click Uninstall, and then follow the instructions to remove Windows PowerShell 1.0.
 
-To disable Windows PowerShell 1.0, follow these steps:
+To disable Windows PowerShell 1.0, follow these steps:  
+
 1. Click **Start**, in the **Start Search** box, type appwiz.cpl, and then press ENTER.
 2. In the list of tasks, click **Turn Windows features on or off**.
 3. Click to clear the check box for **Windows PowerShell**.
-
-### How to download Windows PowerShell
-
-To download Windows PowerShell 1.0 for Windows Vista, select the installation package for your platform.
-
-The following files are available for download from the Microsoft Download Center:  
-
-#### Windows PowerShell 1.0 for Windows Vista, x86-based versions
-
- [Download the Windows PowerShell 1.0 for Windows Vista - x86 package now.](https://go.microsoft.com/fwlink/?linkid=79516) 
-
-#### Windows PowerShell 1.0 for Windows Vista, x64-based versions
-
- [Download the Windows PowerShell 1.0 for Windows Vista - x64 package now.](https://go.microsoft.com/fwlink/?linkid=79517) 
-
-Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file.
 
 ### Windows PowerShell 1.0 for earlier versions of Windows
 
@@ -126,14 +111,6 @@ For more information about Windows PowerShell 1.0 for earlier versions of Window
 #### For Windows Server 2003 and for Windows XP (English-language)
 
 [928439](https://support.microsoft.com/help/928439) Windows PowerShell 1.0 English Language Installation Packages for Windows Server 2003 and for Windows XP  
-
-#### For Windows Server 2003 and for Windows XP (localized)
-
-[926140](https://support.microsoft.com/help/926140) Windows PowerShell 1.0 Localized Installation Package for Windows Server 2003 and for Windows XP  
-
-#### For Windows Server 2003 and for Windows XP (MUI)
-
-[926141](https://support.microsoft.com/help/926141) Windows PowerShell 1.0 Multilingual User Interface (MUI) Language Pack for Windows Server 2003 and for Windows XP  
 
 > [!NOTE]
 > Windows PowerShell 1.0 is part of the operating system in Windows Server 2008. No installation is required.
@@ -144,7 +121,7 @@ Windows PowerShell 1.0 is installed in the following folders. The location of th
 
 > [!NOTE]
 > In the following examples, %windir% represents the Windows system folder. Typically, this folder is C:\Windows. In 32-bit versions of Windows, Windows PowerShell 1.0 is installed in the following folder: %windir%\System32\WindowsPowerShell\V1.0
->    
+>
 > In 64-bit versions of Windows, Windows PowerShell 1.0 is installed in the following folder: %windir%\Syswow64\WindowsPowerShell\V1.0
 >
 > Resource files are installed in a locale-specific subfolder of the installation folder. For example, the resource files for the German version of Windows PowerShell 1.0 are installed in the following folder: %windir%\System32\WindowsPowerShell\v1.0\de-DE
@@ -153,7 +130,8 @@ Windows PowerShell 1.0 is installed in the following folders. The location of th
 
 #### Files that are installed
 
-The following files are installed when you install Windows PowerShell 1.0:
+The following files are installed when you install Windows PowerShell 1.0:  
+
 - About_alias.help.txt
 - About_arithmetic_operators.help.txt
 - About_array.help.txt

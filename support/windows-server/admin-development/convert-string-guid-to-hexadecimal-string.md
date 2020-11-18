@@ -24,20 +24,20 @@ To convert a string formatted GUID to its hexadecimal string form, follow these 
 
 1. Paste the following code into a .vbs file.
 
-    ```vbs
+    ```vbscript
     '================================================================
     ' Replace the value of strGUID with an actual GUID
     '================================================================
-    strGUID = "{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}" 
+    strGUID = "{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}"  
     Set obj = GetObject("LDAP://<GUID=" & ConvertStringGUIDToHexStringGUID(strGUID) & ">")
     MsgBox "The octet guid for " & obj.Get("displayname") & " is " & obj.GUID
-    
+
     '================================================================
     ' ConvertGUIDtoOCTET function
     '================================================================
     Function ConvertStringGUIDToHexStringGUID(strGUID)
      Dim octetStr, tmpGUID
-    
+
     For i = 0 To Len(strGUID)
      t = Mid(strGUID, i + 1, 1)
      Select Case t
@@ -48,7 +48,7 @@ To convert a string formatted GUID to its hexadecimal string form, follow these 
      tmpGUID = tmpGUID + t
      End Select
      Next
-    
+
     octetStr = Mid(tmpGUID, 7, 2)' 0
      octetStr = octetStr + Mid(tmpGUID, 5, 2)' 1
      octetStr = octetStr + Mid(tmpGUID, 3, 2)' 2
@@ -58,7 +58,7 @@ To convert a string formatted GUID to its hexadecimal string form, follow these 
      octetStr = octetStr + Mid(tmpGUID, 15, 2)' 6
      octetStr = octetStr + Mid(tmpGUID, 13, 2)' 7
      octetStr = octetStr + Mid(tmpGUID, 17, Len(tmpGUID))
-    
+
     ConvertGUIDtoOCTET = octetStr
     End Function
     ```
