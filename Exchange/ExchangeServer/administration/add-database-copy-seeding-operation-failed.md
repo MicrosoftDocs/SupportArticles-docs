@@ -52,10 +52,10 @@ This example seeds a copy of the database DB01 on the Mailbox server Contoso-E16
 
 ## More information
 
-To determine which Domain Controller being used by the Exchange Server, run this cmdlet:
+To determine which Domain Controller being used by the Exchange Server, run the following cmdlet separately on the local machine:
 
 ```powershell
-Get-ExchangeServer -Status | Format-Table Fqdn,CurrentConfigDomainController,StaticStaticDomainController
+Get-ExchangeServer -Status | Format-Table CurrentDomainController
 ```
 
 For more information about `Add-MailboxDatabaseCopy` cmdlet, see [this article](https://docs.microsoft.com/powershell/module/exchange/add-mailboxdatabasecopy?view=exchange-ps&preserve-view=true).
