@@ -26,7 +26,7 @@ search.appverid:
 
 When you apply permissions to a public folder and its subfolders by selecting the **Apply changes to this public folder and all its subfolders** check box in the Exchange admin center (EAC), the permissions are not applied to all or some subfolders.
 
-![public-folder-permission](./media/can't-apply-permissions-public-folder-subfolders/public-folder-permission.png)
+![Screenshot of applying permissions](./media/can't-apply-permissions-public-folder-subfolders/public-folder-permission.png)
 
 ## Cause
 
