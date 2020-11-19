@@ -258,32 +258,33 @@ There are two different options here:
 
 2. Ensure you have a [backup](#back-up-the-wsus-database) of the SUSDB database, then run a [reindex](#reindex-the-wsus-database). When that completes, run the following script in SQL Server Management Studio or SQL Server Management Studio Express. After it finishes, follow all of the above instructions for running maintenance. This last step is necessary because the `spDeleteUpdate` stored procedure only removes unused updates and update revisions.
 
-    ```sql
-    DECLARE @var1 INT
-    DECLARE @msg nvarchar(100)
+  > [!NOTE]
+  > Before you run the script, follow the steps in [The spDeleteUpdate stored procedure runs slowly](spdeleteupdate-slow-performance.md) to improve the performance of the execution of `spDeleteUpdate`.
 
-    CREATE TABLE #results (Col1 INT)
-    INSERT INTO #results(Col1) EXEC spGetObsoleteUpdatesToCleanup
+```sql
+DECLARE @var1 INT
+DECLARE @msg nvarchar(100)
 
-    DECLARE WC Cursor
-    FOR
-    SELECT Col1 FROM #results
+CREATE TABLE #results (Col1 INT)
+INSERT INTO #results(Col1) EXEC spGetObsoleteUpdatesToCleanup
 
-    OPEN WC
-    FETCH NEXT FROM WC
-    INTO @var1
-    WHILE (@@FETCH_STATUS > -1)
-    BEGIN SET @msg = 'Deleting' + CONVERT(varchar(10), @var1)
-    RAISERROR(@msg,0,1) WITH NOWAIT EXEC spDeleteUpdate @localUpdateID=@var1
-    FETCH NEXT FROM WC INTO @var1 END
+DECLARE WC Cursor
+FOR
+SELECT Col1 FROM #results
 
-    CLOSE WC
-    DEALLOCATE WC
+OPEN WC
+FETCH NEXT FROM WC
+INTO @var1
+WHILE (@@FETCH_STATUS > -1)
+BEGIN SET @msg = 'Deleting' + CONVERT(varchar(10), @var1)
+RAISERROR(@msg,0,1) WITH NOWAIT EXEC spDeleteUpdate @localUpdateID=@var1
+FETCH NEXT FROM WC INTO @var1 END
 
-    DROP TABLE #results
-    ```
+CLOSE WC
+DEALLOCATE WC
 
-   For slow performance issue of the `spDeleteUpdate` stored procedure, see [The spDeleteUpdate stored procedure runs slowly](spdeleteupdate-slow-performance.md).
+DROP TABLE #results
+```
 
 ### Running the Decline-SupersededUpdatesWithExclusionPeriod.ps1 script times out when connecting to the WSUS server, or a 401 error occurs while running
 
