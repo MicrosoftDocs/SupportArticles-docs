@@ -104,4 +104,4 @@ For more information about the `Set-DistributionGroup` cmdlet, see [Set-Distrib
 
 To learn about managing distribution groups that are synced to Office 365 from the on-premises environment, see [Owners of an on-premises distribution group synced to O365 can't manage the distribution group in Exchange Online](/exchange/troubleshoot/groups-and-distribution-lists/cannot-manage-dg).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://docs.microsoft.com/answers/topics/office-exchange-server-itpro.html).
