@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 328890
 
 ## Summary
 
-**TcpAckFrequency** is a new registry entry in Microsoft Windows XP and Microsoft Windows Server 2003 that determines the number of TCP acknowledgments (ACKs) that will be outstanding before the delayed ACK timer is ignored.
+**TcpAckFrequency** is a registry entry that determines the number of TCP acknowledgments (ACKs) that will be outstanding before the delayed ACK timer is ignored.
 
 ## More information
 
