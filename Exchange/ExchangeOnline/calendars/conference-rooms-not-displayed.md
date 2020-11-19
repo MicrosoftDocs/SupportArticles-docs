@@ -50,4 +50,4 @@ To create a room list and to add existing rooms to the room list, follow these s
 
 For more information, see [Create a room list distribution group](https://technet.microsoft.com/library/ee633471%28v=exchg.141%29.aspx) and [Create and manage room mailboxes](https://technet.microsoft.com/library/jj215781%28v=exchg.160%29.aspx).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://docs.microsoft.com/answers/topics/office-exchange-server-itpro.html).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

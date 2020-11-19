@@ -120,4 +120,4 @@ For more info about how to edit an email address policy, see [Edit an email addr
 
 For more info about the coexistence domain that's added by the Hybrid Configuration wizard, see the "Domains" entry at [Hybrid Configuration wizard](/exchange/hybrid-configuration-wizard).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet forums](https://docs.microsoft.com/answers/topics/office-exchange-server-itpro.html).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet forums](/answers/topics/office-exchange-server-itpro.html).

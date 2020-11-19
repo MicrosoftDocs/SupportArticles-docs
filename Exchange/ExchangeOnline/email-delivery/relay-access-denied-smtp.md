@@ -71,4 +71,4 @@ Get-SendConnector "outbound to office 365").SourceTransportServers | foreach {ge
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://docs.microsoft.com/answers/topics/office-exchange-server-itpro.html).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).
