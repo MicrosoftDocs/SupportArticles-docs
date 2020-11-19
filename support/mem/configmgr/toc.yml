@@ -144,8 +144,6 @@
           href: understand-package-actions.md
         - name: Troubleshoot content distribution
           href: troubleshoot-content-distribution.md
-        - name: Troubleshoot dynamic groups
-          href: troubleshoot-dynamic-groups.md
         - name: Advanced troubleshooting tips for content distribution
           href: advanced-troubleshooting-tips.md
 - name: Data transfer between sites
