@@ -92,7 +92,7 @@ When this issue occurs, you also notice the following symptoms:
 This issue occurs when multi-factor authentication (MFA) is **Enforced**. It prevents the Configuration Manager client agent from enrolling the device by using the logged-in user credentials.
 
 > [!NOTE]
-> There is a difference between having MFA **Enabled** and **Enforced**. This scenario works by having MFA **Enabled** but not having MFA **Enforced**.
+> There is a difference between having MFA **Enabled** and **Enforced**. For more information about the difference, see [Azure AD Multi-Factor Authentication user states](/azure/active-directory/authentication/howto-mfa-userstates#azure-ad-multi-factor-authentication-user-states). This scenario works by having MFA **Enabled** but not having MFA **Enforced**. 
 
 To fix the issue, use one of the following methods:
 
@@ -117,13 +117,16 @@ The following error message is logged in **Applications and Services Logs** > *
 > Code: interaction_required  
 > Description: AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access.
 
-This issue occurs when MFA is **Enforced**, or Azure AD Conditional Access policies that require MFA are applied to all cloud apps.
+This issue occurs when MFA is **Enabled** or **Enforced**, or Azure AD Conditional Access policies that require MFA are applied to all cloud apps. It prevents user association with the device in the portal.
+
+:::image type="content" source="media/troubleshoot-co-management-auto-enrolling/user-association-blocked.png" alt-text="User association is prevented":::
 
 To fix the issue, use one of the following methods:
 
-- Set MFA to **Enabled** but not **Enforced**. For more information, see [Set up multi-factor authentication](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication).
-- Skip MFA in [Trusted IPs](/azure/active-directory/authentication/howto-mfa-mfasettings#trusted-ips).
-- Exclude the Microsoft Intune app from the Azure AD Conditional Access policies that require MFA to allow device sync by using the user credentials.
+- If MFA is **Enabled** or **Enforced**:
+    - Set MFA to **Disabled**. For more information, see [Turn off legacy per-user MFA](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication#turn-off-legacy-per-user-mfa).
+    - Bypass MFA by using [Trusted IPs](/azure/active-directory/authentication/howto-mfa-mfasettings#trusted-ips).
+- If Azure AD Conditional Access policies are used, exclude the Microsoft Intune app from the policies that require MFA to allow device sync by using the user credentials.
 
 ### A hybrid Azure AD joined Windows 10 device fails to enroll in Intune with error 0x800706D9 or 0x80180023
 
