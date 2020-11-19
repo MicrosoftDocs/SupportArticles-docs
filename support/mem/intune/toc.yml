@@ -300,3 +300,9 @@
   items:
   - name: Software distribution tips and practices
     href: software-distribution-best-practices.md
+- name: Update management
+  items:
+  - name: Windows Update
+    items:
+    - name: Manage Windows 10 feature updates for co-managed devices
+      href: create-feature-update-hold-co-managed-devices.md
