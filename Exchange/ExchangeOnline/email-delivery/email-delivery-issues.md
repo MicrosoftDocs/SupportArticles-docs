@@ -28,7 +28,6 @@ manager: dcscontentpm
 appliesto:
 - Exchange Online
 ---
-
 # Find and fix email delivery issues as an Office 365 for business admin
 
 When users report that they aren't getting email, it can be hard to find what's wrong. You might run through several troubleshooting scenarios in your mind. Is something wrong with Outlook? Is the Office 365 service down? Is there a problem with mail flow or spam filter settings? Or is the problem due to something that's outside your control, like the sender is on a global block list? Fortunately, Office 365 provides powerful automated tools that can help you find and fix a variety of problems.
@@ -53,7 +52,7 @@ If a single user in your organization is having trouble receiving email, it coul
 
 As an Office 365 for business admin, you have access to several tools that can help you investigate why users can't get email. The following video gives a brief overview of the tools available to you.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/8b10af9a-455c-410a-8c17-24d5e5be098a?autoplay=false]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/8b10af9a-455c-410a-8c17-24d5e5be098a]
 
 The following tools are listed from the quickest to the most in-depth option.
 
@@ -95,7 +94,7 @@ If you're an Office 365 Midsize Business, Office 365 Business, or Office 365 Ent
 
 3. Go to **Exchange**.
 
-    ![Sceenshot of the admin center with Exchange selected.](./media/email-delivery-issues/239c294e-4f04-4c52-bd87-bbf343cb66b9.png)
+    ![Screenshot of the admin center with Exchange selected.](./media/email-delivery-issues/239c294e-4f04-4c52-bd87-bbf343cb66b9.png)
 
 4. Under **mail flow**, go to **message trace**.
 
@@ -119,7 +118,7 @@ By default, message trace is set to search for all messages sent or received by 
 
 4. The **message trace results** page shows all the messages that match the criteria that you selected. Typical messages are marked **Delivered** under the status column.
 
-    ![Screenshot showing an example of messge trace resuls.](./media/email-delivery-issues/3be193fe-9c71-4525-aea7-e154ea412533.png)
+    ![Screenshot showing an example of message trace results.](./media/email-delivery-issues/3be193fe-9c71-4525-aea7-e154ea412533.png)
 
 5. To see details about a message, choose the message and select ![Pencil icon](./media/email-delivery-issues/ebd57d01-04da-4dfd-b232-1015d627dc91.png) ( **Details**).
 

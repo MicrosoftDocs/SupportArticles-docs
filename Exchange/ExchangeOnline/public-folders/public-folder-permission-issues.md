@@ -17,7 +17,6 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-
 # How to diagnose and fix public folder permission issues
 
 ## Symptoms
@@ -52,11 +51,11 @@ This issue typically occurs because the public folder hierarchy replication isn'
 
     This cmdlet returns the following output:
 
-    ```
+    ```output
     There is no existing permission entry found for user: user1.
         + CategoryInfo          : NotSpecified: (:) [Get-PublicFolderClientPermission], UserNotFoundInPermissionEntryExcep
        tion
-        + FullyQualifiedErrorId : [Server=DM6PR01MB4009,RequestId=2559dc80-9fa2-42d6-bf86-fac92f561891,TimeStamp=3/19/2020
+        + FullyQualifiedErrorId : [Server=<*ServerName*>,RequestId=<*RequestId*>,TimeStamp=3/19/2020
         5:22:40 AM] [FailureCategory=Cmdlet-UserNotFoundInPermissionEntryException] 91D3F338,Microsoft.Exchange.Managemen
       t.StoreTasks.GetPublicFolderClientPermission
     + PSComputerName        : outlook.office365.com
@@ -124,4 +123,3 @@ If you have to contact Microsoft Support, export the report to XML format, and t
 ```powershell
 Get-PublicFolderMailboxDiagnostics <pf mailbox failing to sync> -IncludeHierarchyInfo |Export-Clixml epf.xml
 ```
-

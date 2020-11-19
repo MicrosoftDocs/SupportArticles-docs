@@ -19,7 +19,6 @@ ms.assetid: 27deff23-8ab0-42e6-b827-5b9ce38f03f8
 ROBOTS: NOINDEX
 description: Get help for solving email connection and delivery problems.
 ---
-
 # Non-delivery report error codes
 
 When Office 365 can't deliver email you sent, you'll receive an email notification called a [non-delivery report](https://go.microsoft.com/fwlink/p/?LinkId=524931). Find your error code for specific help with getting your email delivered:

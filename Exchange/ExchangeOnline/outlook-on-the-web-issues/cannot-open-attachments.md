@@ -14,7 +14,6 @@ search.appverid:
 appliesto:
 - Exchange Online
 ---
-
 # Office 365 users can't open or view attachments in Outlook Web App
 
 ## Problem

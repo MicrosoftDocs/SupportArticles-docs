@@ -20,7 +20,6 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-
 # Troubleshooting mail enabled public folder synchronization failures when using PowerShell script
 
 ## Symptoms
@@ -66,6 +65,7 @@ For example:
 ```powershell
 Get-MailPublicFolder \Marketing | Set-MailPublicFolder -Name Marketing_PF
 ```
+
 > [!NOTE]
 > Changing the name of MEPF doesn't affect the email address or the actual name of the public folder it's associated with.
 
@@ -82,6 +82,7 @@ To fix the second issue, follow these steps:
     ```powershell
     Get-Recipient |?{$_.EmailAddresses -like "*X500:/O=BAT2/OU=EXCHANGE ADMINISTRATIVE GROUP (FYDIBOHF23SPDXX)/CN=RECIPIENTS/CN=E1DBD36E5BEF784A97A5CD66299952D8-00008991FDA8*"}
     ```
+
 2. If the object returned isn't a MEPF, remove the object if you don't want to keep it.
 3. If you only see the MEPF object returned with the same proxy, there are duplicate MEPFs in on-premises. Find the duplicate MEPFs and then remove them. To find the duplicate MEPFs, run the following cmdlet in on-premises:
 
@@ -94,4 +95,5 @@ To fix the second issue, follow these steps:
     ```powershell
     Get-MailPublicFolder | ?{ $_.EmailAddresses -like "*hr*"}
     ```
+
 4. If multiple objects are returned, make sure a single object is kept and remove the other objects.

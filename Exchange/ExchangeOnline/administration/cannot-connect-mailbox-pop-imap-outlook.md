@@ -17,7 +17,6 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-
 # Can't connect to Outlook by using POP/IMAP and Modern authentication
 
 Microsoft recently announced the Exchange Online capability to use OAuth authentication for [POP](https://techcommunity.microsoft.com/t5/exchange-team-blog/announcing-oauth-support-for-pop-in-exchange-online/ba-p/1406600) and [IMAP and SMTP](https://techcommunity.microsoft.com/t5/exchange-team-blog/announcing-oauth-2-0-support-for-imap-and-smtp-auth-protocols-in/ba-p/1330432) protocols. Also, tenants are encouraged to disable [Basic authentication](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-april-2020-update/ba-p/1275508), and move to a [Modern authentication](https://techcommunity.microsoft.com/t5/exchange-team-blog/improving-security-together/ba-p/805892) tenant for modern clients.
@@ -61,7 +60,7 @@ To enable Basic authentication, run the following command to revert the value to
 Set-TransportConfig -SmtpClientAuthenticationDisabled $False
 ```
 
-For more information about the **Set-TransportConfig** command, see [Set-TransportConfig](https://docs.microsoft.com/powershell/module/exchange/set-transportconfig?view=exchange-ps&preserve-view=true).
+For more information about the `Set-TransportConfig` command, see [Set-TransportConfig](https://docs.microsoft.com/powershell/module/exchange/set-transportconfig).
 
 ### Mailbox level
 
@@ -81,4 +80,4 @@ To enable Basic authentication, run the following command to revert the value to
 Set-CasMailbox <mailbox account> -SmtpClientAuthenticationDisabled $False
 ```
 
-For more information about the **Set-CasMailbox** command, see [Set-CasMailbox](https://docs.microsoft.com/powershell/module/exchange/set-casmailbox?view=exchange-ps&preserve-view=true).
+For more information about the `Set-CasMailbox` command, see [Set-CasMailbox](https://docs.microsoft.com/powershell/module/exchange/set-casmailbox).

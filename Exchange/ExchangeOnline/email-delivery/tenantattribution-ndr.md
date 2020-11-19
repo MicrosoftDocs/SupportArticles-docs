@@ -21,8 +21,7 @@ appliesto:
 - Exchange Server 2010 Standard
 search.appverid: MET150
 ---
-
-# "550 5.7.64 TenantAttribution; Relay Access Denied SMTP" error when sending mail through Exchange Online Protection
+# (550 5.7.64 TenantAttribution; Relay Access Denied SMTP) error when sending mail through Exchange Online Protection
 
 _Original KB number:_ &nbsp; 3212877
 
@@ -41,7 +40,7 @@ Senders receive a non-delivery report (NDR) that contains this error code. Or, y
 
 Additionally, if you enabled CAPI2 operational logging in Event Viewer, the following entry is logged:
 
-```console
+```xml
 <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
  <System>
  <Provider Name="Microsoft-Windows-CAPI2" Guid="{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}" />
