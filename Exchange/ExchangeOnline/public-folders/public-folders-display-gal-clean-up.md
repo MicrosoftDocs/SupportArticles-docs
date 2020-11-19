@@ -17,7 +17,6 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-
 # Public folders are displayed in GAL despite having been cleaned up
 
 ## Symptoms
@@ -50,8 +49,7 @@ If the stale entry appears in OWA and Outlook online mode as well:
 
     You may get the following warning, which is expected if the public folder is not present:
 
-    *WARNING: Failed to locate the public folder <name of public folder> because the following error occurred: Microsoft.Exchange.Data.StoreObjects.ObjectNotFoundException: No active public folder mailboxes were found. This happens when no public folder mailboxes are provisioned or they are provisioned in 'HoldForMigration' mode. If you're not currently performing a migration, create a public folder mailbox.*
-
+    > WARNING: Failed to locate the public folder \<name of public folder> because the following error occurred: Microsoft.Exchange.Data.StoreObjects.ObjectNotFoundException: No active public folder mailboxes were found. This happens when no public folder mailboxes are provisioned or they are provisioned in 'HoldForMigration' mode. If you're not currently performing a migration, create a public folder mailbox.
 
     > [!NOTE]
     > Make Sure the MEPF's are no longer needed before removing them.

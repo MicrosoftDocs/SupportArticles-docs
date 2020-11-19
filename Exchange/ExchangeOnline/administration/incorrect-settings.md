@@ -14,23 +14,22 @@ search.appverid:
 appliesto:
 - Exchange Online
 ---
-
 # Office 365 users can't connect to Exchange Online because of incorrect service settings
 
-## Problem 
+## Problem
 
-Office 365 users in your organization who connect to Exchange Online by using incorrect hardcoded service settings (or IP addresses) will be unable to connect to the service after these outdated service settings are discontinued on July 8, 2015. (The original date was June 26, 2015). 
+Office 365 users in your organization who connect to Exchange Online by using incorrect hardcoded service settings (or IP addresses) will be unable to connect to the service after these outdated service settings are discontinued on July 8, 2015. (The original date was June 26, 2015).
 
 The services for which users may be using incorrect settings include the following:
 
-- Autodiscover: A feature that's used to automatically discover server names for connectivity   
-- Exchange ActiveSync (EAS): A protocol that's used by email client applications on mobile devices   
-- POP3 and IMAP4: Protocols that are used by email client applications on desktop and mobile devices   
-- SMTP: Protocol that's used for sending email messages   
+- Autodiscover: A feature that's used to automatically discover server names for connectivity
+- Exchange ActiveSync (EAS): A protocol that's used by email client applications on mobile devices
+- POP3 and IMAP4: Protocols that are used by email client applications on desktop and mobile devices
+- SMTP: Protocol that's used for sending email messages
 
-If users continue to use the outdated, hardcoded service settings, they will be unable to connect to the service after July 8, 2015. Use the information that's provided in this article to make sure that these settings are set correctly for users in your organization. 
+If users continue to use the outdated, hardcoded service settings, they will be unable to connect to the service after July 8, 2015. Use the information that's provided in this article to make sure that these settings are set correctly for users in your organization.
 
-## Solution 
+## Solution
 
 The following table lists the features, protocols, and expected server settings that must be set, and provides links to the articles that contain instructions to configure these settings.
 

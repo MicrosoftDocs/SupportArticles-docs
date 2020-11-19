@@ -14,7 +14,6 @@ search.appverid:
 appliesto:
 - Exchange Online
 ---
-
 # Error viewing delegates in Outlook after a migration from on-premises to Exchange Online
 
 ## Symptoms
@@ -27,9 +26,7 @@ Assume that your mailbox is migrated from an on-premises Exchange environment to
 
 - When you try to remove or add a delegate, you receive the following error message:
 
-  ```asciidoc
-  The Delegates settings were not saved correctly. Unable to activate send-on-behalf-of list. You do not have sufficient permission to perform this operation on this object.
-  ```
+  > The Delegates settings were not saved correctly. Unable to activate send-on-behalf-of list. You do not have sufficient permission to perform this operation on this object.
 
 ## Resolution
 

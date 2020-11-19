@@ -17,7 +17,6 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-
 # Delays in provisioning of user/mailbox or synchronizing changes in Exchange Online
 
 ## Symptoms
