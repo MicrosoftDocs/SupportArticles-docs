@@ -20,9 +20,6 @@ This article helps fix a slow network performance issue that can occur when you 
 _Original product version:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 829700
 
-> [!NOTE]
-> This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. For more information, see the [Microsoft Support Lifecycle Policy](https://docs.microsoft.com/lifecycle).
-
 ## Symptoms
 
 When you use Windows Explorer to connect to a shared folder on a remote computer on your network, and you double-click a file in that shared folder to open it, it may take a longer time than expected to open the file. For example, you may experience this issue when you open a Microsoft Office document over a slow connection, such as a 64-kilobits-per-second (kbps) Integrated Services Digital Network (ISDN) connection on a wide area network (WAN).
@@ -32,16 +29,6 @@ When you use Windows Explorer to connect to a shared folder on a remote computer
 This issue occurs because Windows Explorer tries to obtain detailed information about the remote share and about the file that you are opening. This operation may take a long time over a slow connection.
 
 ## Resolution
-
-### Windows XP and Windows 7
-
-To resolve this issue for Microsoft Windows XP, follow the directions in the "Changing the registry" section.
-
-### Windows 2000
-
-To resolve this issue for Microsoft Windows 2000, first obtain and install the latest service pack for Windows 2000, and then follow the directions in the "Changing the registry" section. To resolve this problem, obtain the latest service pack for Windows 2000.  
-
-### Changing the registry
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
