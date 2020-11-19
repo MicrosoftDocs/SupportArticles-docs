@@ -14,7 +14,6 @@ search.appverid:
 appliesto:
 - Exchange Online
 ---
-
 # Messages sent from a shared mailbox aren't saved to the Sent Items folder of the shared mailbox in Outlook
 
 ## Problem
@@ -38,7 +37,7 @@ To work around this issue, use one of the following methods.
 
 Cumulative Update 9 for Exchange Server 2013 introduced a new feature that lets administrators configure the Sent Items folder to which a message is copied. For more information, see [Exchange Blog - Want more control over Sent Items when using shared mailboxes?](https://techcommunity.microsoft.com/t5/exchange-team-blog/want-more-control-over-sent-items-when-using-shared-mailboxes/ba-p/611106)
 
-Using [Exchange PowerShell](/powershell/exchange/?view=exchange-ps&preserve-view=true), for emails Sent As the shared mailbox, run the following cmdlet:
+Using [Exchange PowerShell](/powershell/exchange/), for emails Sent As the shared mailbox, run the following cmdlet:
 
 ```powershell
 set-mailbox <mailbox name> -MessageCopyForSentAsEnabled $True
@@ -80,7 +79,7 @@ For more information about this hotfix package, see the following Microsoft Know
 1. Click **Start**, click **Run**, type regedit, and then click **OK**.
 2. Locate and then click the following registry subkey:
 
-    **HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\Outlook\Preferences**
+    `HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\Outlook\Preferences`
 
     > [!NOTE]
     > The **x.0** placeholder represents your version of Office (16.0 = Office 2016, 15.0 = Office 2013, 14.0 = Office 2010).

@@ -32,7 +32,7 @@ This is a known architecture limitation. The issue occurs because the public fol
 
 To work around this limitation, use the [ExtendedFieldURI](/exchange/client-developer/web-service-reference/extendedfielduri) element to include [PR_CONTENT_COUNT](/office/client-developer/outlook/mapi/pidtagcontentcount-canonical-property) in the requested set of properties.
 
-To include the [PR_CONTENT_COUNT](/office/client-developer/outlook/mapi/pidtagcontentcount-canonical-property) property, set the property tag to  PropertyTag="0x3602" and the property type is PropertyType="Integer".
+To include the [PR_CONTENT_COUNT](/office/client-developer/outlook/mapi/pidtagcontentcount-canonical-property) property, set the property tag to PropertyTag="0x3602" and the property type is PropertyType="Integer".
 
 ```console
 <ExtendedFieldURI PropertyTag="0x3602" PropertyType=" Integer"/>

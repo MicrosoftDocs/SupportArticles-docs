@@ -17,7 +17,6 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-
 # A transport rule doesn't match if user mailbox rules automatically forward messages
 
 ## Symptoms

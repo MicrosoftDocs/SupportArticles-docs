@@ -20,7 +20,6 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-
 # Can't apply permissions to public folder subfolders in EAC
 
 ## Symptom
@@ -37,7 +36,7 @@ The issue occurs if the parent folder and its subfolders reside in different pub
 
 To apply permissions to the parent folder and subfolders of the public folder, use the [Update-PublicFolderPermissions.ps1](https://www.microsoft.com/download/details.aspx?id=48689) script.
 
-**Example**
+### Example
 
 ```powershell
 .\Update-PublicFolderPermissions.ps1 -IncludeFolders "\MyFolder" -AccessRights "Owner" -Users "John", "Administrator" -Recurse -Confirm:$false

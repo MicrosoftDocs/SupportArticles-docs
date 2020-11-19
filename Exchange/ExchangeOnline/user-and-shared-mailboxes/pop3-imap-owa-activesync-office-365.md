@@ -14,23 +14,22 @@ search.appverid:
 appliesto:
 - Exchange Online
 ---
-
 # Enable or disable POP3, IMAP, MAPI, Outlook Web App or Exchange ActiveSync in Office 365
 
 ## Summary
 
 This article identifies the commands to use to enable or disable the following items for a mailbox in Exchange Online in Office 365:
 
-- Post Office Protocol (POP)    
-- Internet Message Access Protocol (IMAP)   
-- Messaging Application Programming Interface (MAPI)   
-- Outlook Web App    
-- Microsoft Exchange ActiveSync   
- 
+- Post Office Protocol (POP)
+- Internet Message Access Protocol (IMAP)
+- Messaging Application Programming Interface (MAPI)
+- Outlook Web App
+- Microsoft Exchange ActiveSync
+
 ## More information
 
 > [!NOTE]
-> Before you run any of the commands in the following steps, you have to first connect to Exchange Online by using remote PowerShell. For more info about how to do this, see [Connect to Exchange Online Using Remote PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell). 
+> Before you run any of the commands in the following steps, you have to first connect to Exchange Online by using remote PowerShell. For more info about how to do this, see [Connect to Exchange Online Using Remote PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell).
 
 ### Enable or disable POP3 for an Exchange Online mailbox
 
