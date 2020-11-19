@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 138497
 
 Many Windows-based applications display a startup screen or splash screen during the initialization phase of the application. This startup screen provides a means of displaying information such as product name, product logo, product version information, company name, and so on. In addition, it gives the user the perception of quicker application startup time.
 
-This article gives the steps for creating a custom application startup screen that will display for a specified interval of time during application initialization. This form will not suppress the FoxPro system menu or the FoxPro title bar when run within an executable file.
+This article gives the steps for creating a custom application startup screen that will display for a specified interval of time during application initialization. This form will not suppress the FoxPro system menu or the FoxPro title bar when running within an executable file.
 
 ## Step-by-Step Procedure for Creating a Custom Startup Screen
 

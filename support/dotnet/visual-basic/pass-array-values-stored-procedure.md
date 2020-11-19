@@ -22,7 +22,7 @@ Current version of Microsoft SQL Server does not have any support of array datat
 
 ## Resolution
 
-One of the solutions to this problem is to pass array of the values to then stored procedure as an XML string parameter and use `OPENXML rowset` provider inside of the stored procedure to select values from the provided XML. Using of the `OPENXML` provider in conjunction with the Transact-SQL statements provides flexible and simple way to manipulate data in a database based on a passed array of values.
+One of the solutions to this problem is to pass array of the values to the stored procedure as an XML string parameter and use `OPENXML rowset` provider inside of the stored procedure to select values from the provided XML. Using of the `OPENXML` provider in conjunction with the Transact-SQL statements provides flexible and simple way to manipulate data in a database based on a passed array of values.
 
 ## Create the project  
 

@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 130601
 
 ## Summary
 
-Visual FoxPro has a new index type, Primary. The Primary index, however, cannot be created in a program by using the `INDEX` command. This article shows by example how to add or modify a Primary index in a program.
+Visual FoxPro has a new index type, Primary. The Primary index, however, cannot be created in a program by using the `INDEX` command. This article shows how to add or modify a Primary index in a program.
 
 ## More information
 
