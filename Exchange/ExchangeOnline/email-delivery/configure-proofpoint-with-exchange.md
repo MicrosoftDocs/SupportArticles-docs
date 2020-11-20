@@ -16,6 +16,7 @@ search.appverid:
 appliesto:
 - Exchange Online
 ms.custom: 
+- Exchange Online
 - CI 123370
 - CSSTroubleshoot 
 ms.reviewer: stanalek

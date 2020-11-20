@@ -6,7 +6,9 @@ audience: ITPro
 ms.service: exchange-online
 ms.topic: article
 ms.author: v-six
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Exchange Online
+- CSSTroubleshoot
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

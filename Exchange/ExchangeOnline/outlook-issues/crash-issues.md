@@ -9,6 +9,7 @@ ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
+- Exchange Online
 - CSSTroubleshoot
 - SaRA-OutlookWontStart
 - OutlookAdvDiagnostics
