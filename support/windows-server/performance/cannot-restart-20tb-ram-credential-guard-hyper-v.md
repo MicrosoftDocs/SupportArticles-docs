@@ -27,8 +27,8 @@ You have a computer that has 20 terabytes or more of RAM, and runs Windows Serve
 
 |   |Credential Guard enabled |Credential Guard disabled |
 |---|---|---|
-|**Hyper-V role enabled** |Computer restarts repeatedly |Computer restarts three times, and then hangs at the Windows startup screen |
-|**Hyper-V role disabled** |Computer restarts, and then hangs at the Windows startup screen |Computer restarts correctly |
+|**Hyper-V role&nbsp;enabled** |Computer restarts repeatedly |Computer restarts three times, and then hangs at the Windows startup screen |
+|**Hyper-V role&nbsp;disabled** |Computer restarts, and then hangs at the Windows startup screen |Computer restarts correctly |
 
 This issue was originally observed in Lenovo SR950 servers that use 20 TB or more of type 3DS 2933-MHz RAM. It is presumed to occur in servers from other manufacturers that use 20 TB or more of RAM (including servers that use non-3DS RAM).
 
