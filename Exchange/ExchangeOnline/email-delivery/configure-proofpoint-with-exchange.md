@@ -5,7 +5,7 @@ author: mccoybot
 manager: dcscontentpm
 ms.date: 10/22/2020
 audience: Admin
-ms.topic: article
+ms.topic: troubleshooting
 ms.service: exchange-online
 localization_priority: Normal
 ms.collection: 
@@ -16,6 +16,7 @@ search.appverid:
 appliesto:
 - Exchange Online
 ms.custom: 
+- Exchange Online
 - CI 123370
 - CSSTroubleshoot 
 ms.reviewer: stanalek

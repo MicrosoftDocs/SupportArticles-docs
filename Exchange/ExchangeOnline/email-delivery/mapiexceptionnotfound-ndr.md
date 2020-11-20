@@ -4,9 +4,11 @@ description: Describes an issue that returns a "554.5.2.0 Cannot get ID from nam
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Exchange Online
+- CSSTroubleshoot
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

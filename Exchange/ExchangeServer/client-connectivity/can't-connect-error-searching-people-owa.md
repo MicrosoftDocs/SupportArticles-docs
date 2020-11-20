@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
+- Exchange Server
 - CI 116313
 - CSSTroubleshoot
 ms.reviewer: jcoiffin

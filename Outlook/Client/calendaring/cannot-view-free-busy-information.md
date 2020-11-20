@@ -9,8 +9,9 @@ ms.topic: troubleshooting
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
-  - CI 122615
+- Outlook for Windows
+- CSSTroubleshoot
+- CI 122615
 ms.reviewer: meshel
 appliesto:
 - Exchange Online

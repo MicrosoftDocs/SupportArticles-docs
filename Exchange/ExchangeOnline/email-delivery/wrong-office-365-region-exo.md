@@ -4,9 +4,11 @@ description: Mail sent to EOP or EXO is deferred with the ATTR35 temporary respo
 author: simonxjx
 audience: ITPro
 ms.prod: exchange-server-it-pro
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Exchange Online
+- CSSTroubleshoot
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

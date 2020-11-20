@@ -10,7 +10,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Online
+- CSSTroubleshoot
 ms.reviewer: catagh
 appliesto:
 - Exchange Online

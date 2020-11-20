@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: aruiz, gregmans, tsimon, laurentc, amkanade, doakm, randyto, gbratton, bobcool
-ms.custom:
+ms.custom: 
+- Outlook for Windows
 - CSSTroubleshoot
 search.appverid: 
 - MET150

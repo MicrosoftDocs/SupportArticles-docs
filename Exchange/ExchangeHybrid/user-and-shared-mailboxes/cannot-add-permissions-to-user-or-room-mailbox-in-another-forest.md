@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
+- Exchange Hybrid
 - CSSTroubleshoot
 ms.reviewer: kellybos
 appliesto:

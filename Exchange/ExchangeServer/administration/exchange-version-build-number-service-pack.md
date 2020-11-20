@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
+- Exchange Server
 - CI 119623
 - CSSTroubleshoot
 ms.reviewer: pattim

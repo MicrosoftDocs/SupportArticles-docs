@@ -10,7 +10,9 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Outlook for Windows
+- CSSTroubleshoot
 appliesto:
 - Microsoft Exchange Server
 - Microsoft Outlook

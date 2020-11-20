@@ -11,6 +11,7 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: aruiz
 ms.custom: 
+- Outlook for Windows
 - CSSTroubleshoot
 - CI 124876
 appliesto:
