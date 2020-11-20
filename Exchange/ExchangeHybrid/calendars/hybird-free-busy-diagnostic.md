@@ -9,7 +9,8 @@ ms.topic: article
 ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer: farshadt
 appliesto:
 - Exchange Online 

@@ -6,7 +6,9 @@ ms.author: v-zolu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: troubleshooting 
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.service: exchange-online
 localization_priority: Normal
 ms.reviewer: kellybos

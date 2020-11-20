@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
+- Exchange Online
 - CI 120173
 - CSSTroubleshoot
 ms.reviewer: agallego

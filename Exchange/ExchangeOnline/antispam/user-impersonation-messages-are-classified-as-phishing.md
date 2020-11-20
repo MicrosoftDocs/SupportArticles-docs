@@ -7,7 +7,9 @@ ms.prod: office 365
 ms.topic: troubleshooting
 ms.author: scottlan
 manager: dcscontentpm
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Exchange Online
+- CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
 - MET150

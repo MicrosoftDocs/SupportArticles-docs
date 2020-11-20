@@ -9,6 +9,7 @@ ms.topic: article
 ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
+- Exchange Hybrid
 - CI 109236
 - CSSTroubleshoot
 ms.reviewer: alinastr, ninob

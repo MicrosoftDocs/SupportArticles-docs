@@ -8,6 +8,7 @@ ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 ms.custom: 
+- Exchange Online
 - CSSTroubleshoot
 - OutlookSetupProfile
 localization_priority: Normal

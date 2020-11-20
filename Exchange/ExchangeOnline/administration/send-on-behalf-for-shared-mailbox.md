@@ -9,7 +9,9 @@ ms.prod: office 365
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: kellybos, ninob
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Exchange Online
+- CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:

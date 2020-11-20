@@ -6,8 +6,10 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.prod: office 365
-ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
+ms.custom: 
+- Exchange Online
+- CSSTroubleshoot
 ms.author: v-six
 search.appverid: 
 - MET150
