@@ -5,10 +5,11 @@ author: TobyTu
 ms.author: batre
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
+ms.topic: troubleshooting 
 ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
+- Exchange Online
 - CI 114868
 - CSSTroubleshoot
 ms.reviewer: batre

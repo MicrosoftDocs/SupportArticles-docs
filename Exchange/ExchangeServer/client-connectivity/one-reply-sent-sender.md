@@ -7,7 +7,9 @@ ms.service: exchange-powershell
 ms.topic: article
 ms.author: v-six
 manager: dcscontentpm
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Exchange Server
+- CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
 - MET150

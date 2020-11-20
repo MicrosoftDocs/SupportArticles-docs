@@ -4,8 +4,10 @@ description: Describes an issue in which an incorrect user name or password is e
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
-ms.custom: CSSTroubleshoot
+ms.topic: troubleshooting
+ms.custom: 
+- Exchange Online
+- CSSTroubleshoot
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal

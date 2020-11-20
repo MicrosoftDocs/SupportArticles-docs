@@ -4,10 +4,11 @@ description: Describes an issue that blocks Outlook from setting up a new profil
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 ms.custom: 
+- Exchange Online
 - CSSTroubleshoot
 - OutlookSetupProfile
 localization_priority: Normal

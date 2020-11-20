@@ -5,7 +5,9 @@ author: kwekua
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Exchange Online
+- CSSTroubleshoot
 f1_keywords:
 - 'O365P_AdminUsers_TSAlias'
 - 'O365M_AdminUsers_TSAlias'

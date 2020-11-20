@@ -9,6 +9,7 @@ ms.topic: article
 ms.service: o365-proplus-itpro
 localization_priority: Normal
 ms.custom: 
+- Outlook for Windows
 - CI 114394
 - CSSTroubleshoot
 ms.reviewer: sfellman

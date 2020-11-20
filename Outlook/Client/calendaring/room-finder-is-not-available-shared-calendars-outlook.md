@@ -8,7 +8,8 @@ audience: ITPro 
 ms.topic: article 
 ms.prod: office 365
 localization_priority: Normal
-ms.custom:
+ms.custom: 
+- Outlook for Windows
 - CI 111779
 - CSSTroubleshoot 
 ms.reviewer: gabesl, aruiz
