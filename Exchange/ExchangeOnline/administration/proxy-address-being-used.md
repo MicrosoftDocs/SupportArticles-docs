@@ -4,7 +4,7 @@ description: Describes an issue in which a mailbox isn't created for a user in E
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.custom: 
 - Exchange Online
 - CSSTroubleshoot

@@ -141,7 +141,7 @@
       href: ./known-issues/sign-in-error-after-password-change.md
     - name: Someone has already setup Teams for your organization
       href: ./teams-sign-in/someone-has-already-setup-teams.md
-    - name: Stuck in login loop in Edge or Internet Explorer
+    - name: Stuck in login loop
       href: ./teams-sign-in/sign-in-loop.md
     - name: Teams does not automatically update
       href: ./known-issues/teams-doesnt-automatically-update.md

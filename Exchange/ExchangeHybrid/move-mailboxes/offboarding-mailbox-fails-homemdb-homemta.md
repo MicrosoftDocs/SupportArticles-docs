@@ -4,7 +4,7 @@ description: Describes an error message that you receive when you Offboard mailb
 author: TobyTu
 audience: ITPro
 ms.prod: office 365
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: rrajan
 manager: dcscontentpm
 ms.custom: 

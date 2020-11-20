@@ -5,7 +5,7 @@ author: lucciz
 ms.author: v-zolu
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
+ms.topic: troubleshooting 
 ms.custom: 
 - Exchange Hybrid
 - CSSTroubleshoot

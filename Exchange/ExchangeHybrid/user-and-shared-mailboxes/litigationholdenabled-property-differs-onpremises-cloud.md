@@ -5,7 +5,7 @@ author: TobyTu
 ms.author: alinastr
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
+ms.topic: article
 ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 

@@ -4,7 +4,7 @@ description: Resolves an issue in which you receive a "WinRM client cannot proce
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.custom: 
 - Exchange Online
 - CSSTroubleshoot
