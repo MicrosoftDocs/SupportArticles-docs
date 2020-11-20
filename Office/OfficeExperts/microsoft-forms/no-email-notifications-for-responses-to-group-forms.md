@@ -18,9 +18,9 @@ appliesto:
 
 This article was written by [Zakir Haveliwala](https://social.technet.microsoft.com/profile/Zakir+H+-+MSFT), Senior Support Escalation Engineer.
 
-You may not receive email notifications for responses that you submit to a Group Form, such as a Form that you create in Microsoft Teams. To receive email notifications, use one of the following methods:
+You may not receive email notifications for responses that you submit to a Group Form, such as a Form that you create in Microsoft Teams. Here's how to receive email notifications:
 
-## Method 1: For client users
+## Method 1: Client users
 
 1. Sign in to Forms at [https://forms.office.com](https://forms.office.com), and then click **Group forms**.
 
@@ -52,9 +52,9 @@ You may not receive email notifications for responses that you submit to a Group
 
 All the users in the group will receive email notifications when a response is submitted to the Form.
 
-## Method 2: For global administrators
+## Method 2: Global administrators
 
-1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com), and then go to **Groups** > **Active groups**.
+1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com) and go to **Groups** > **Active groups**.
 2. Select the appropriate group from the list, and then select the **Settings** tab.
 3. Select the **Allow external senders to email this group** and **Send copies of group conversations and events to group members** check boxes.
 
