@@ -114,7 +114,7 @@
     - name: Excel survey doesn't have full functionality
       href: ../lists-and-libraries/excel-survey-does-not-have-full-functionality-when-click-new.md
     - name: File post-processing may take up to 24 hours
-      href: ../performance/file-post-processing-takes-up-to-24-hours.md
+      href: ../lists-and-libraries/file-post-processing-takes-up-to-24-hours.md
     - name: Filtering doesn't work for Managed Metadata in SharePoint
       href: ../lists-and-libraries/managed-metadata-column-fails-filtering.md
     - name: Information about dragging files into document libraries
