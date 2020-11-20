@@ -4,7 +4,7 @@ description: Describes an issue that triggers a "maximum size" error message whe
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 manager: dcscontentpm

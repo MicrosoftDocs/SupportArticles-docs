@@ -4,7 +4,7 @@ description: Describes a scenario in which Office 365 users who connect to Excha
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-six
 manager: dcscontentpm

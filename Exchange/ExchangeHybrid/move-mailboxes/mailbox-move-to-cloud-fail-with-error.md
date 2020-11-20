@@ -4,7 +4,7 @@ description: Describes an error message that you receive when you move mailboxes
 author: simonxjx
 audience: ITPro
 ms.prod: office 365
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 ms.custom: CSSTroubleshoot

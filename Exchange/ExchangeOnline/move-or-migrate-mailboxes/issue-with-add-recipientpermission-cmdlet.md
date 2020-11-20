@@ -4,7 +4,7 @@ description: Describes an error message that you receive when you run the Add-Re
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 ms.custom: CSSTroubleshoot

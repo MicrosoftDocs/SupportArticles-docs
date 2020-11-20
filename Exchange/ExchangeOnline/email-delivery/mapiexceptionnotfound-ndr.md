@@ -4,7 +4,7 @@ description: Describes an issue that returns a "554.5.2.0 Cannot get ID from nam
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 manager: dcscontentpm

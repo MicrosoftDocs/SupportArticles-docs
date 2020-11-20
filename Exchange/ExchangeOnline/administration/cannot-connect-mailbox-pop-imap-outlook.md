@@ -5,7 +5,7 @@ author: TobyTu
 ms.author: nriera
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
+ms.topic: troubleshooting 
 ms.prod: office 365
 localization_priority: Normal
 ms.custom: 

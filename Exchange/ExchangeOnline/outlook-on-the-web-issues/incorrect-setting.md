@@ -4,7 +4,7 @@ description: Explains why a user's time zone may be set incorrectly when the use
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal

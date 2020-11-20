@@ -9,7 +9,7 @@ search.appverid:
 ms.custom: CSSTroubleshoot
 audience: ITPro
 ms.prod: office 365
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 appliesto:
 - Office Products

@@ -4,7 +4,7 @@ description: Describes an issue in which an incorrect user name or password is e
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-six
 manager: dcscontentpm

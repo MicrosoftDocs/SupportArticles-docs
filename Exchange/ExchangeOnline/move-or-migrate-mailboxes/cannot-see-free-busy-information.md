@@ -4,7 +4,7 @@ description: Describes an issue in which on-premises users can't see free/busy i
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal

@@ -4,7 +4,7 @@ description: Describes an issue in which users in an Exchange hybrid deployment 
 author: simonxjx
 audience: ITPro
 ms.prod: exchange-server-it-pro
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 manager: dcscontentpm

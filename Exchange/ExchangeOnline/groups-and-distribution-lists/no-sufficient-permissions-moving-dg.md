@@ -5,7 +5,7 @@ author: simonxjx
 audience: ITPro
 ms.service: exchange-online
 ms.custom: CSSTroubleshoot
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
