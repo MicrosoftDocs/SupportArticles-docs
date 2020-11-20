@@ -5,7 +5,9 @@ author: simonxjx
 audience: ITPro
 ms.prod: office 365
 ms.topic: article
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal

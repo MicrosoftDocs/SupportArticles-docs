@@ -9,6 +9,7 @@ ms.topic: article
 ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
+- Exchange Online
 - CI 111919
 - CSSTroubleshoot
 ms.reviewer: batre

@@ -7,7 +7,9 @@ ms.prod: exchange-server-it-pro
 ms.topic: article
 ms.author: v-six
 manager: dcscontentpm
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Exchange Hybrid
+- CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
 - MET150

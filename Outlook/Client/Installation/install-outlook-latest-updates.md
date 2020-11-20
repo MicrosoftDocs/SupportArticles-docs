@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
+- Outlook for Windows
 - CI 116784
 - CSSTroubleshoot
 ms.reviewer: aruiz, gregmans, tasitae
