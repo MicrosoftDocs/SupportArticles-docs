@@ -9,10 +9,12 @@ ms.topic: troubleshooting
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-  - Exchange Server 2016 Enterprise Edition
-  - Exchange Server 2016 Standard Edition
+- Outlook for Windows
+- CSSTroubleshoot
 ms.reviewer:
 appliesto:
+- Exchange Server 2016 Enterprise Edition
+- Exchange Server 2016 Standard Edition
 - Microsoft Outlook 2010
 search.appverid: MET150
 ---

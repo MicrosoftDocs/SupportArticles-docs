@@ -4,8 +4,10 @@ description: Users can create and manage distribution groups in Office 365, but 
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
-ms.custom: CSSTroubleshoot
+ms.topic: troubleshooting
+ms.custom: 
+- Exchange Online
+- CSSTroubleshoot
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal

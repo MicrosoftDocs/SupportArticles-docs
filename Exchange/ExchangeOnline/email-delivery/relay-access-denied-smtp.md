@@ -4,10 +4,12 @@ description: 550 5.7.64 TenantAttribution; Relay Access Denied SMTP bounce backs
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Exchange Online
+- CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
 - MET150
@@ -55,7 +57,7 @@ Make sure that the new certificate is sent from on-premises Exchange to Exchange
 **For Exchange 2013 and later versions**
 
 ```powershell
-Get-SendConnector "outbound to office 365").SourceTransportServers | foreach {get-transportservice $_.name} | Select-Object name,SendProtocolLogPath
+(Get-SendConnector "outbound to office 365").SourceTransportServers | foreach {get-transportservice $_.name} | Select-Object name,SendProtocolLogPath
 ```
 
 1. In the send connector log, you can check for the thumbprint of the certificate that is given to Exchange Online. The following is a code example from send connector logs.

@@ -5,10 +5,11 @@ author: TobyTu
 ms.author: haembab
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
+ms.topic: troubleshooting 
 ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
+- Exchange Online
 - CI 123399
 - CSSTroubleshoot
 ms.reviewer: haembab

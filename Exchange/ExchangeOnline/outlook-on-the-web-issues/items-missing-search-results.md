@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Online
+- CSSTroubleshoot
 ms.reviewer: alinastr
 appliesto: 
 - Exchange Online

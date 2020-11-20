@@ -4,8 +4,10 @@ description: Describes an issue that triggers an error when you try to remove a 
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.custom: CSSTroubleshoot
-ms.topic: article
+ms.topic: troubleshooting
+ms.custom: 
+- Exchange Online
+- CSSTroubleshoot
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal

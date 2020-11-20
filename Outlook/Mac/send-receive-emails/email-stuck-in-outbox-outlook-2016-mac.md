@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Outlook for Mac
+- CSSTroubleshoot
 ms.reviewer: monish
 appliesto:
 - Outlook 2016 for Mac
