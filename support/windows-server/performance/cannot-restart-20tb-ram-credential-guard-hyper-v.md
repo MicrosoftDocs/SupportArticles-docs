@@ -25,10 +25,10 @@ _Original KB number:_ &nbsp; 4575723
 
 You have a computer that has 20 terabytes or more of RAM, and runs Windows Server 2019 or Windows Server 2016. On this computer, you enable the Hyper-V role and/or Credential Guard. Depending on the settings, you see the behavior that is described in the following table:
 
-| &nbsp; |Credential Guard enabled |Credential Guard disabled |
+|   |Credential Guard enabled |Credential Guard disabled |
 |---|---|---|
-|Hyper-V role enabled |Computer restarts repeatedly |Computer restarts three times, and then hangs at the Windows startup screen |
-|Hyper-V role disabled |Computer restarts, and then hangs at the Windows startup screen |Computer restarts correctly |
+|**Hyper-V role enabled** |Computer restarts repeatedly |Computer restarts three times, and then hangs at the Windows startup screen |
+|**Hyper-V role disabled** |Computer restarts, and then hangs at the Windows startup screen |Computer restarts correctly |
 
 This issue was originally observed in Lenovo SR950 servers that use 20 TB or more of type 3DS 2933-MHz RAM. It is presumed to occur in servers from other manufacturers that use 20 TB or more of RAM (including servers that use non-3DS RAM).
 
