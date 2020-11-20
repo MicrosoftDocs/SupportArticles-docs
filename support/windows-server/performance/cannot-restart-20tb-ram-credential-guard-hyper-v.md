@@ -18,7 +18,7 @@ ms.technology: Performance
 
 This article summarizes an issue that prevents a Windows Server computer from restarting correctly when the server has 20 TB or more RAM (or more), Credential Guard enabled, and the Hyper-V role enabled.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4575723
 
 ## Symptoms
