@@ -22,7 +22,7 @@ description: Explains why post-processing of files in SharePoint Online can take
 
 # SharePoint file post-processing may take up to 24 hours
 
-## Symptoms
+## Summary
 
 When Microsoft SharePoint runs analyses on files, the post-processing may take up to 24 hours depending on the file type (including images, videos, audio files, and PDF files). Office files, however, typically take only a few hours to finish and may complete first.
 

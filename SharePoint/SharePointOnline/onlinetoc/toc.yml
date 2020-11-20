@@ -113,6 +113,8 @@
       href: ../lists-and-libraries/error-when-view-or-edit-in-browser.md
     - name: Excel survey doesn't have full functionality
       href: ../lists-and-libraries/excel-survey-does-not-have-full-functionality-when-click-new.md
+    - name: File post-processing may take up to 24 hours
+      href: ../performance/file-post-processing-takes-up-to-24-hours.md
     - name: Filtering doesn't work for Managed Metadata in SharePoint
       href: ../lists-and-libraries/managed-metadata-column-fails-filtering.md
     - name: Information about dragging files into document libraries
@@ -165,8 +167,6 @@
     items:
     - name: Can't reach the server when sharing files
       href: ../Performance/share-file-unable-reach-the-server.md
-    - name: File post-processing may take up to 24 hours
-      href: ../performance/file-post-processing-takes-up-to-24-hours.md
     - name: Performance troubleshooter for SharePoint Online
       href: ../Performance/sharepoint-online-performance-troubleshooter.md
     - name: Publishing pages take longer than expected to load
