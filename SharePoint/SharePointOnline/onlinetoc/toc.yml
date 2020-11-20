@@ -165,6 +165,8 @@
     items:
     - name: Can't reach the server when sharing files
       href: ../Performance/share-file-unable-reach-the-server.md
+    - name: File post-processing may take up to 24 hours
+      href: ../performance/file-post-processing-takes-up-to-24-hours.md
     - name: Performance troubleshooter for SharePoint Online
       href: ../Performance/sharepoint-online-performance-troubleshooter.md
     - name: Publishing pages take longer than expected to load
