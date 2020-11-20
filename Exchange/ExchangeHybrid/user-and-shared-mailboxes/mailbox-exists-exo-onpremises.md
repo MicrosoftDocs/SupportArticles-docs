@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
+- Exchange Hybrid
 - CI 105380
 - CSSTroubleshoot
 ms.reviewer: benwinz, EXOL_Triage

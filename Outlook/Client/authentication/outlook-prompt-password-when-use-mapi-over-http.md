@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Outlook for Windows
+- CSSTroubleshoot
 ms.reviewer: cjiang, todla
 appliesto:
 - Microsoft Outlook 2010

@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Outlook for Mac
+- CSSTroubleshoot
 ms.reviewer: tsimon, tasitae
 appliesto:
 - Outlook for Mac for Office 365

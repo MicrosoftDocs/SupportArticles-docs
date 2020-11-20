@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
+- Exchange Online
 - CI 120630
 - CSSTroubleshoot
 ms.reviewer: rroddy

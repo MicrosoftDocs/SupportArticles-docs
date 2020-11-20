@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
+- Exchange Online
 - CSSTroubleshoot
 - 'Associated content asset: 4555315'
 appliesto: 

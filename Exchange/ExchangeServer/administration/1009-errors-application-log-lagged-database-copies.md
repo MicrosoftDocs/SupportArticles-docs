@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Server
+- CSSTroubleshoot
 ms.reviewer: v-six, genli, christys, meerak, anthonge, ninob
 appliesto:
 - Exchange Server 2016 Standard Edition
