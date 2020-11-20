@@ -11,6 +11,7 @@ ms.service: exchange-online
 ms.topic: article
 ms.author: kellybos
 ms.custom: 
+- Outlook for Windows
 - CSSTroubleshoot
 - CI 124859
 appliesto:

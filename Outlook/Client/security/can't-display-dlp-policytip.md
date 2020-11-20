@@ -11,6 +11,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 ms.custom: 
+- Outlook for Windows
 - CI 106436
 - CSSTroubleshoot
 ms.reviewer: aruiz, EXOL_Triage

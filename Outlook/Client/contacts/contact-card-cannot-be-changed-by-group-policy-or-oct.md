@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Outlook for Windows
+- CSSTroubleshoot
 ms.reviewer: mchen, aruiz, gregmans, tsimon, laurentc, amkanade, doakm, randyto, gbratton, bobcool, AlonB, LianWang
 appliesto:
 - Microsoft Outlook 2010

@@ -11,7 +11,9 @@ ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
 ms.editor: v-jesits
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Outlook for Windows
+- CSSTroubleshoot
 appliesto:
 - Outlook for Microsoft 365
 - Outlook 2016
