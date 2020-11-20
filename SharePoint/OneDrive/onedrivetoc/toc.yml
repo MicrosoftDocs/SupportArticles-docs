@@ -10,7 +10,7 @@
     - name: Can't open OneDrive on images using Sysprep
       href: ../lists-and-libraries/cannot-open-onedrive-on-images-using-sysprep.md
     - name: File post-processing may take up to 24 hours
-      href: ../../SharePoint/SharePointOnline/lists-and-libraries/file-post-processing-takes-up-to-24-hours.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+      href: ../../SharePointOnline/lists-and-libraries/file-post-processing-takes-up-to-24-hours.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Security
     items:
     - name: Documents deleted by retention policy after workload is removed
