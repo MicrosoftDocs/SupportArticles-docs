@@ -4,7 +4,7 @@ description: Describes an issue in which Outlook Web App attachments can't be vi
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal

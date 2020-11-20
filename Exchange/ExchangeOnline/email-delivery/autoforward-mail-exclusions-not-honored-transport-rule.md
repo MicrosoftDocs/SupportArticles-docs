@@ -5,7 +5,7 @@ author: TobyTu
 ms.author: arindamt
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
+ms.topic: troubleshooting 
 ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 

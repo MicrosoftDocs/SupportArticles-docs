@@ -4,7 +4,7 @@ description: Describes an issue in which you can't remove a meeting request or a
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: 
 - Exchange Online

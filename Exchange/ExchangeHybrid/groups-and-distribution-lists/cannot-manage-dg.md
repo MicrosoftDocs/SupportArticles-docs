@@ -4,7 +4,7 @@ description: Describes an issue in which the owner of a distribution group that'
 author: simonxjx
 audience: ITPro
 ms.prod: exchange-server-it-pro
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 ms.custom: 

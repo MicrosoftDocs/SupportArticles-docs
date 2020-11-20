@@ -4,7 +4,7 @@ description: Describes an issue in Office 365 in which email messages that you s
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
