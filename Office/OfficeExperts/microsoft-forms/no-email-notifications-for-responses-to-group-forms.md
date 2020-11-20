@@ -9,24 +9,25 @@ search.appverid:
 audience: ITPro
 ms.service: o365-solutions
 ms.custom: CSSTroubleshoot
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: zakirh
 appliesto:
 - Microsoft Forms
 ---
-
 # No email notifications for responses to Group Forms
 
 This article was written by [Zakir Haveliwala](https://social.technet.microsoft.com/profile/Zakir+H+-+MSFT), Senior Support Escalation Engineer.
 
-You may not receive email notifications for responses that you submit to a Group Form, such as a Form that you create in Microsoft Teams. To receive email notifications, follow these steps:
+You may not receive email notifications for responses that you submit to a Group Form, such as a Form that you create in Microsoft Teams. To receive email notifications, use one of the following methods:
+
+## Method 1: For client users
 
 1. Sign in to Forms at [https://forms.office.com](https://forms.office.com), and then click **Group forms**.
-   
+
    ![Selecting Group forms tab](./media/no-email-notifications-for-responses-to-group-forms/group-forms.png)
 
 2. Click **Recent group forms**.
-   
+
    ![Selecting Recent group forms field](./media/no-email-notifications-for-responses-to-group-forms/recent-group-forms.png)
 
 3. Select your group. In this example, the test group is selected.
@@ -49,5 +50,12 @@ You may not receive email notifications for responses that you submit to a Group
 
     :::image type="content" source="media/no-email-notifications-for-responses-to-group-forms/no-email-notifications-for-responses-to-group-forms-3.png" alt-text="Select the ellipsis button, then Settings, then Get email notification of each response.":::
 
-
 All the users in the group will receive email notifications when a response is submitted to the Form.
+
+## Method 2: For global administrators
+
+1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com), and then go to **Groups** > **Active groups**.
+2. Select the appropriate group from the list, and then select the **Settings** tab.
+3. Select the **Allow external senders to email this group** and **Send copies of group conversations and events to group members** check boxes.
+
+![Enable settings for global administrators](./media/no-email-notifications-for-responses-to-group-forms/active-groups.png)
