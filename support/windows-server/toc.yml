@@ -1794,6 +1794,8 @@
       href: ./performance/slow-performance-when-using-power-plan.md
   - name: System Hang
     items:
+    - name: Cannot restart a Windows Server that has 20TB RAM (or more), Credential Guard enabled, and Hyper-V role enabled
+      href: ./performance/cannot-restart-20tb-ram-credential-guard-hyper-v.md
     - name: Compress large registry hives
       href: ./performance/compress-bloated-registry.md
     - name: Description of Windows registry
