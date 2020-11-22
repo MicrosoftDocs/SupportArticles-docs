@@ -2,6 +2,15 @@
 
 
 
+## Week of November 16, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/17/2020 | [Microsoft Teams is stuck in a login loop in Edge or Internet Explorer](/microsoftteams/troubleshoot/teams-sign-in/sign-in-loop) | modified |
+| 11/20/2020 | [Microsoft Teams is stuck in a login loop in Edge, Internet Explorer or Google Chrome](/microsoftteams/troubleshoot/teams-sign-in/sign-in-loop) | modified |
+
+
 ## Week of November 02, 2020
 
 
@@ -41,20 +50,3 @@
 |------|------------|--------|
 | 10/19/2020 | [Multi-factor authentication error in Microsoft Teams](/microsoftteams/troubleshoot/known-issues/modern-authentication-failure-teams) | modified |
 | 10/20/2020 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
-
-
-## Week of October 12, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-
-
-## Week of October 05, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/microsoftteams/troubleshoot/index) | modified |
-| 10/8/2020 | [Troubleshoot Microsoft Teams and Exchange Server interaction issues](/microsoftteams/troubleshoot/known-issues/teams-exchange-interaction-issue) | modified |
-| 10/9/2020 | [Troubleshoot Microsoft Teams and Exchange Server interaction issues](/microsoftteams/troubleshoot/known-issues/teams-exchange-interaction-issue) | modified |
