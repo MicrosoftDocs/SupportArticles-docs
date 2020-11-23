@@ -1,6 +1,6 @@
 ---
 title: Can't open documents in a local client from Chrome
-description: Describes an issue that occurs when you open SharePoint-based files in the Chrome browser. Because Chrome has deprecated NPAPI support, SharePoint integration with Chrome has been disrupted. A workaround is provided.
+description: Describes an issue that occurs when you open SharePoint Server hosted files in the Chrome browser. Because Chrome has deprecated NPAPI support, SharePoint integration with Chrome has been disrupted. A workaround is provided.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -21,7 +21,7 @@ appliesto:
 
 ## Symptoms
 
-When you try to open a file from an on-premises installation of Microsoft SharePoint or from SharePoint Online, the browser defaults to either downloading a local copy or trying to open the file in the browser. This issue occurs regardless of your library settings.
+When you try to open a file from an on-premises installation of Microsoft SharePoint Server or from SharePoint Online in classic view, the browser defaults to either downloading a local copy or trying to open the file in the browser. This issue occurs regardless of your library settings.
 
 Additionally, many other SharePoint integration features don't work. These include the following:
 
@@ -37,26 +37,15 @@ Additionally, many other SharePoint integration features don't work. These inclu
 
 ## Cause
 
-This problem occurs when Netscape Plugin API (NPAPI) support is disabled.
-
-## Workaround
-
-The following workaround lets you temporarily enable NPAPI plug-ins:
-
-1. Start the Chrome browser, and then enter the following path into the Address bar:
-
-    chrome://flags/#enable-npapi   
-2. Find the Enable NPAPI plug-in, and then enable it.   
-3. At the bottom of the page, select **relaunch now**.   
-4. Check to see whether you have your old functionality back.   
-
-**Note** This workaround will not work after the end of September 2015, per the following Google blog post:
+This problem occurs when Netscape Plugin API (NPAPI) support is disabled. In September 2015 NPAPI support was permanently removed from Chrome and Chromium based browsers (such as Microsoft Edge). Installed extensions that require NPAPI plugins are no longer able to load those plugins. More information is available from the following Google blog post:
 
 [The final countdown for NPAPI](https://blog.chromium.org/2014/11/the-final-countdown-for-npapi.html)
 
-*In September 2015 we will remove the override and NPAPI support will be permanently removed from Chrome. Installed extensions that require NPAPI plugins will no longer be able to load those plugins.*
+## Workarounds
 
-Alternatively, you can open the file in the browser by using Office Web Apps, and then click the button from the web editor to open in a rich client application. For example, click **Edit in Word** in this situation.
+- Internet Explorer 11 relies on ActiveX controls instead of NPAPI and will open Office files in a Office rich client application.
+- You can open the file in the browser by using Office Web Apps, and then click the **Edit in Word** button from the web editor to open in a rich client application. 
+- You can also open the file in the rich Office client application from the Document library directly in Chrome or Microsoft Edge with the **Edit** button from the document library's file ellipsis menu, in the preview pane.
 
 **Third-party information disclaimer**
 
@@ -64,9 +53,13 @@ Microsoft provides third-party contact information to help you find technical su
 
 ## More Information
 
-The fix for this issue has been rolled out as of August 11, 2015, and it should be in build 15.0.4745.1000 and later.
+SharePoint 2013 has reached the end of its support lifecycle and is no longer recieving feature fixes or new functionality. Microsoft is providing [extended support](https://docs.microsoft.com/en-us/lifecycle/policies/fixed#extended-support) for [SharePoint 2013 until April 11, 2023.](https://docs.microsoft.com/en-us/lifecycle/products/?alpha=sharepoint%202013&products=office&terms=SharePoint%202013)
 
-Concerning Lync presence information on a SharePoint page, Chrome is deprecating the plug-in technology that made this feature work. We are currently working on a replacement. In the meantime, if you must access presence information in SharePoint, use Internet Explorer.  
+Microsoft previously notified customers via the [Microsoft Lifecycle website](https://docs.microsoft.com/en-us/lifecycle/) and the  [Product Servicing Policy for SharePoint 2013](https://docs.microsoft.com/en-gb/SharePoint/product-servicing-policy/updated-product-servicing-policy-for-sharepoint-2013) that the end of mainstream support was approaching. We will be updating these articles with details about the support extension and your upgrade and migration options.
+
+Microsoft recommends that customers migrate to current product versions before the support end dates. This lets them take advantage of the latest product innovations and ensure uninterrupted support from Microsoft.
+
+We encourage customers to evaluate transitioning to Office 365 with the help of their Microsoft representatives or technology partner.
 
 **Third-party information disclaimer**
 
