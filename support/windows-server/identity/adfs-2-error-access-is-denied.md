@@ -24,11 +24,10 @@ _Original KB number:_ &nbsp; 3044977
 
 Most AD FS 2.0 problems belong to one of the following main categories. This article contains step-by-step instructions to troubleshoot claims rules problems.
 
-- [Connectivity problems (KB 3044971)](https://support.microsoft.com/help/3044971) 
-- [ADFS service problems (KB 3044973)](https://support.microsoft.com/help/3044973) 
-- [Certificate problems (KB 3044974)](https://support.microsoft.com/help/3044974) 
-- [Authentication problems (KB 3044976)](https://support.microsoft.com/help/3044976) 
-- Claim rules problems (KB 3044977) 
+- [Connectivity problems (KB 3044971)](https://support.microsoft.com/help/3044971)  
+- [ADFS service problems (KB 3044973)](https://support.microsoft.com/help/3044973)  
+- [Certificate problems (KB 3044974)](https://support.microsoft.com/help/3044974)  
+- [Authentication problems (KB 3044976)](https://support.microsoft.com/help/3044976)  
 
 ## Symptoms
 
@@ -39,8 +38,8 @@ Most AD FS 2.0 problems belong to one of the following main categories. This art
 
 - If you enable AD FS auditing by using the [Configuring ADFS Servers for Troubleshooting](https://technet.microsoft.com/library/cc738766%28v=ws.10%29.aspx) TechNet topic, you see the following error logged in the event log:
 
-> Event ID 325  
-> The Federation Service could not authorize token issuance for the caller.
+    > Event ID 325  
+    > The Federation Service could not authorize token issuance for the caller.
 
 ## Resolution
 
@@ -48,21 +47,22 @@ To resolve this problem, follow these steps in the order given. These steps will
 
 ### Step 1: Obtain details about required claims
 
-
 - Determine which claim types are required in the SAML token from the relying party owner.
 - Determine which claims provider was used to authenticate the user.
- For example: 
+
+For example:  
+
 - A relying party provider may indicate that it wants the **Email**, **Name**, and **Role**  values of the user to be provided.
 - If the claim provider in this situation is "Active Directory," you should configure an Acceptance claim rule at the "Active Directory" level.
 
-> [!NOTE]
-> If the claim provider is another Security Token Service (STS), we must create a Pass Through or Transform claim rule to accept the claim values store in locally defined claims types that are to be passed to the relying party.
+    > [!NOTE]
+    > If the claim provider is another Security Token Service (STS), we must create a Pass Through or Transform claim rule to accept the claim values store in locally defined claims types that are to be passed to the relying party.
 - Create a Pass Through claim for these claims at the relying party level.
-
 
 ### Step 2: Check whether AD FS is denying the token based on Authorization rules
 
-To do this, right-click the relying party, click **Edit Claim Rules**, and then click the **Issuance Authorization Rules** tab. When you examine the rules information, consider the following guidelines:
+To do this, right-click the relying party, click **Edit Claim Rules**, and then click the **Issuance Authorization Rules** tab. When you examine the rules information, consider the following guidelines:  
+
 - All authorization claims rules are processed.
 - If no rules are defined, the AD FS server denies all users.
 - The whitelist approach can also be used instead of using a Permit All rule. In this situation, you define a set of rules that specify the conditions under which the user must be issued a token.
@@ -70,39 +70,38 @@ To do this, right-click the relying party, click **Edit Claim Rules**, and then 
 - A Deny rule always overrides an Allow rule. This means that if both the Allow and Deny claim conditions are true for the user, the Deny rule will be followed.
 - For authorization rules that are based on other claim values to allow or deny a token, those claims should already be pushed into the claim pipeline from the claim provider trust level.
 
-
 ### Step 3: Capture a Fiddler trace
 
 Capture a Fiddler Web Debugger trace to capture the communication to the AD FS service and determine whether a SAML token was issued. If a SAML token was issued, decode the token to determine whether the correct set of claims is being issued.
 
 For more information about this process, see [AD FS 2.0: How to Use Fiddler Web Debugger to Analyze a WS-Federation Passive Sign-In](https://social.technet.microsoft.com/wiki/contents/articles/3286.ad-fs-2-0-how-to-use-fiddler-web-debugger-to-analyze-a-ws-federation-passive-sign-in.aspx).
 
-To find the SAML token that is issued by the AD FS service:
+To find the SAML token that is issued by the AD FS service:  
+
 - In a fiddler trace, review the response from AD FS to determine where the AD FS service is setting the MSISAuth and MSISAuthenticated cookies. Or, review the request after AD FS sets the MSISAuth and MSISAuthenticated cookies.
-- Select the token, and then start TextWizard in Fiddler. Use URLDecode for a RSTR (WS-Fed) or FromDeflatedSAML for a SAML 2.0 protocol response.
-- Try the following URL for to decode the SAML 2.0 response:
+- Select the token, and then start TextWizard in Fiddler. Use URLDecode for an RSTR (WS-Fed) or FromDeflatedSAML for a SAML 2.0 protocol response.
 
-`https://rnd.feide.no/simplesaml/module.php/saml2debug/debug.php`
- 
+### Step 4: Enable ADFS Auditing and to check if the Token was issued or denied, along with the list of claims being processed
 
-### Step 4: Enable ADFS Auditing and to check if the Token was issued or denied, along with the list of claims being processed.
+Configure the AD FS servers to record the auditing of AD FS events to the Security log. To configure the Windows Security log to support auditing of AD FS events, follow these steps:  
 
-Configure the AD FS servers to record the auditing of AD FS events to the Security log. To configure the Windows Security log to support auditing of AD FS events, follow these steps:
 1. Click **Start**, point to **Administrative Tools**, and then click **Local Security Policy**.
 2. Double-click **Local Policies**, and then click **Audit Policy**.
 3. In the details pane, double-click **Audit object access**.
 4. On the **Audit object access Properties** page, select either **Success** or **Failure** or both, and then click OK.
 5. Close the Local Security Settings snap-in.
-6. At a command prompt, type `gpupdate /force`, and then press Enter to immediately refresh the local policy. You can also use the following GPO to configure the Windows Security Log:
+6. At a command prompt, type `gpupdate /force`, and then press Enter to immediately refresh the local policy.  
 
-Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\Audit Application Generated - Success and Failure Configure ADFS 
+You can also use the following GPO to configure the Windows Security Log:
 
-This is helpful in a scenario in which AD FS denied a token to the user. The AD FS auditing process will report the event and the claims that were generated before the token was denied. This helps you determine which claim caused the Deny rule to be applied. Examine the Security event log particularly for Event ID 299, 500, 501 and 325. 
+Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\Audit Application Generated - Success and Failure Configure ADFS  
+
+This is helpful in a scenario in which AD FS denied a token to the user. The AD FS auditing process will report the event and the claims that were generated before the token was denied. This helps you determine which claim caused the Deny rule to be applied. Examine the Security event log particularly for Event ID 299, 500, 501 and 325.  
 
 ### Step 5: Determine whether you require a custom claim
 
 If the claim issuance requirements cannot be fulfilled by the default claim rule templates, you may need to write a custom claim. For more information, see [Understanding Claim Rule Language in AD FS 2.0 & Higher](https://social.technet.microsoft.com/wiki/contents/articles/4792.understanding-claim-rule-language-in-ad-fs-2-0-higher.aspx).
 
-##### Third-party information disclaimer
+## Third-party information disclaimer
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.

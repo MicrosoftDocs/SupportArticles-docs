@@ -24,29 +24,29 @@ _Original KB number:_ &nbsp; 2253680
 
 The following event is recorded in the Application log:
 
-Event Type: Error
-Event Source: Crypt32
-Event Category: None
-Event ID: 8
-Date: 3/15/2010
-Time: 11:27:57 AM
-User: N/A
-Computer: SERVER1
-Description:
-Failed auto update retrieval of third-party root list sequence number from: `http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt` with error: The server name or address could not be resolved.
+> Event Type: Error  
+Event Source: Crypt32  
+Event Category: None  
+Event ID: 8  
+Date: 3/15/2010  
+Time: 11:27:57 AM  
+User: N/A  
+Computer: SERVER1  
+Description:  
+Failed auto update retrieval of third-party root list sequence number from: `http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt` with error: The server name or address could not be resolved.  
 
 The following similar event may also be recorded:
 
-Event Type: Error
-Event Source: Crypt32
-Event Category: None
-Event ID: 8
-Date: 3/15/2010
-Time: 11:27:57 AM
-User: N/A
-Computer: SERVER1
-Description:
-Failed auto update retrieval of third-party root list sequence number from: `http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt` with error: This network connection does not exist.
+> Event Type: Error  
+Event Source: Crypt32  
+Event Category: None  
+Event ID: 8  
+Date: 3/15/2010  
+Time: 11:27:57 AM  
+User: N/A  
+Computer: SERVER1  
+Description:  
+Failed auto update retrieval of third-party root list sequence number from: `http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt` with error: This network connection does not exist.  
 
 These events may be recorded at continuously, at regular intervals (for example, every 10 minutes) or they may only be recorded when you start a particular application.
 
@@ -58,7 +58,6 @@ These events are recorded despite the fact that no applications or services inst
 
 This behavior is expected under the following conditions:
 
-
 - The computer is unable to access the Windows Update web site due to router or proxy configuration.
 - An application has been installed that has been designed to interact with the Windows Security Center (WSC) on Windows Vista or higher. Example applications include third-party virus software, malware scanners, or firewall products.
 
@@ -66,15 +65,13 @@ This behavior is expected under the following conditions:
 
 There are three options for handling these events.
 
-
 1. Disregard these events. They are benign and can be safely ignored.
 2. Modify router or proxy configuration to allow computers recording these events to connect to Windows Update.
 3. Disable Automatic Root Updates on computers recording these events.
-4. 
-  1. In Control Panel, double-click Add/Remove Programs.
-  2. Click Add/Remove Windows Components.
-  3. Click to clear the Update Root Certificates check box, and then continue with the Windows Components Wizard.
-
+4.  
+   1. In Control Panel, double-click Add/Remove Programs.
+   2. Click Add/Remove Windows Components.
+   3. Click to clear the Update Root Certificates check box, and then continue with the Windows Components Wizard.
 
 ## More information
 

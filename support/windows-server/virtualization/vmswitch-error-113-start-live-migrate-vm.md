@@ -63,13 +63,14 @@ To resolve this problem, install [hotfix 3031598](https://support.microsoft.com/
 
 ## More information
 
-There is another source of Hyper-V VmSwitch Error 113 that is not related to the problem that is mentioned in the [Symptoms](#symptoms) section. This error occurs when your Hyper-V server has more running virtual machines than the number of VMQ queues that are available on the physical network adapters. In this situation, the Error 113 description text resembles the following:
+There is another source of Hyper-V VmSwitch Error 113 that is not related to the problem that is mentioned in the Symptoms section. This error occurs when your Hyper-V server has more running virtual machines than the number of VMQ queues that are available on the physical network adapters. In this situation, the Error 113 description text resembles the following:
 
 > Description:  
-Failed to allocate VMQ for NIC EDCED345-4C96-4C75-92A0-0C4FC5688F73--35BEB899-5BE9-4128-900A-6FE0BBFC7B22
+Failed to allocate VMQ for NIC  
+EDCED345-4C96-4C75-92A0-0C4FC5688F73--35BEB899-5BE9-4128-900A-6FE0BBFC7B22  
 (Friendly Name: Network Adapter) on switch DE4F3664-68D9-4781-825B-882A540FAB08 (Friendly Name: VM Switch).  
-Reason - Maximum number of VMQs supported on the Protocol NIC is exceeded. Status = Insufficient system
-resources exist to complete the API.
+Reason - Maximum number of VMQs supported on the Protocol NIC is exceeded. Status = Insufficient system  
+resources exist to complete the API.  
 
 > [!NOTE]
 > In this event description, the **Reason** text clearly states **Maximum number of VMQs supported on the Protocol NIC is exceeded**.

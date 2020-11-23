@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, herbertm
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
 ms.technology: WindowsSecurity
 ---
@@ -29,7 +29,8 @@ Next, the last request is sent with the PaData type **PA-FOR-USER** (type 129) w
 
 This request now also fails with error **KDC_ERR_C_PRINCIPAL_UNKNOWN** (error code 6). This is a fatal error.
 
-**Note** It will be helpful to run the network trace through frame reassembly in Network Monitor 3.x.
+> [!Note]
+> It will be helpful to run the network trace through frame reassembly in Network Monitor 3.x.
 
 ## Cause
 
@@ -46,4 +47,4 @@ If you have also changed the permissions of **Windows Authorization Access Group
 This behavior is independent of how the public key infrastructure (PKI) is set up for the certificate logon case. It is also independent of whether both the server and user are in the same forest or in different forests. If they are in different forests, it would work with or without selective authentication enabled. The user needs "allowed to authenticate" access for the server if selective authentication is enabled.
 In the certificate logon case, the server application would get a handle to an access token when the Kerberos transaction is successful. This access token is not good for Kerberos delegation.
 You can get KDC warning Event ID 25 when the S4U2Self request fails. You need to set **KdcExtraLogLevel** to **0x08**. For more information about this registry entry, click the following article number to view the article in the Microsoft Knowledge Base:
- [837361](https://support.microsoft.com/kb/837361)  Kerberos protocol registry entries and KDC configuration keys in Windows Server 2003
+[837361](https://support.microsoft.com/kb/837361)  Kerberos protocol registry entries and KDC configuration keys in Windows Server 2003

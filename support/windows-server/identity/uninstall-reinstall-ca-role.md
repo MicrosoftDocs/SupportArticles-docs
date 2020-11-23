@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, AshishSu, luche, LavinK, v-jesits
 ms.prod-support-area-path: Active Directory Certificate Services
 ms.technology: ActiveDirectory
 ---
@@ -32,14 +32,13 @@ _Original KB number:_ &nbsp; 2795825
 8. Repeat steps 1 through 3.
 9. On the **Remove server roles** page, click to clear the **Active Directory Certificate Services** check box.
 
-> [!NOTE]
-> When you are prompted to remove **Remote Server Administration Tools**, click **Remove Features**, and then click **Next**.
+    > [!NOTE]
+    > When you are prompted to remove **Remote Server Administration Tools**, click **Remove Features**, and then click **Next**.
 10. On the **Remove features** page, click **Next**.
 11. On the **Confirm removal selections** page, verify the information, and then click **Remove**.
 12. After the removal is complete, click **Close**, and then restart the server.
 
 ## Reinstall the CA server role
-
 
 1. In Server Manager, click **Manage**, and then click **Add Roles and Features**.
 2. On the **Before you begin** page, click **Next**.
@@ -70,20 +69,18 @@ _Original KB number:_ &nbsp; 2795825
 
 ## Verify the installation
 
-
 1. In Server Manager, click **Tools**, and then click **Certification Authority**.
 2. Right-click the name of the CA, and then click **Properties**.
 3. In the **Properties** dialog box, click the **Extensions** tab.
 4. In the list that is displayed, click `http://<ServerDNSName>/CertEnroll/<CaName><CRLNameSuffix><DeltaCRLAllowed>.crl`.
 5. Make sure that the following options are selected:
    - **Include in CRLs. Clients use this to find Delta CRL locations.**  
-   - **Include in the CDP extension of issued certificates.** 
+   - **Include in the CDP extension of issued certificates.**  
 6. Click **OK** to save your changes.
 7. When you are prompted to restart Active Directory Certificate Services, click **Yes**.
 8. Close the **Certification Authority** console.
 
 ## Add a certificate template to the CA
-
 
 1. In Server Manager, click **Tools**, and then click **Certification Authority**.
 2. Double-click the name of the CA to expand the item.
@@ -101,7 +98,6 @@ _Original KB number:_ &nbsp; 2795825
 6. Re-run the connector installation on all client computers.
 
 ### Bind the certificate to the Internet Information Services (IIS) websites
-
 
 1. Open IIS Manager.
 2. Choose all the websites that use the old machine certificates, and then replace them by using the new certificates.

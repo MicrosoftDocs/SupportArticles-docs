@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 3060058
 
 ## Symptoms
 
-Computers running Windows 8 and later versions may not apply Folder Redirection Group Policy objects (GPOs) as expected. This issue can occur if the computers are domain clients and are managed by System Center 2012 Configuration Manager Service Pack 1 (ConfigMgr 2012 SP1) or later. 
+Computers running Windows 8 and later versions may not apply Folder Redirection Group Policy objects (GPOs) as expected. This issue can occur if the computers are domain clients and are managed by System Center 2012 Configuration Manager Service Pack 1 (ConfigMgr 2012 SP1) or later.  
 
 ## Resolution
 
