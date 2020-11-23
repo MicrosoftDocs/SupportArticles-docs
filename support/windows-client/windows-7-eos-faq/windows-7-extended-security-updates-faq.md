@@ -13,7 +13,7 @@ ms.reviewer: v-elj, chawong, winciccore, kaushika
 ms.prod-support-area-path: Windows 7 Extended Security Updates (ESU)
 ms.technology: Windows 7 EoS FAQ
 ---
-# FAQ about Extended Security Updates for Windows 7
+# FAQ about Windows 7 ESU
 
 This article describes the frequently asked questions about the extended security updates for Windows 7.
 
