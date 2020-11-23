@@ -31,5 +31,5 @@ Get answers to common questions about the following end-of-support topics for Wi
   - ESU purchasing
   - ESU coverage
   - ESU deployment
-- [FAQ about Windows 7 ESU offers for E5 customers](./windows-7-esu-offers-e5-customers-faq.md)
-- [Troubleshoot issues in Extended Security Updates](./troubleshoot-extended-security-updates-issues.md)
+- [Windows 7 ESU offers for E5 customers](./windows-7-esu-offers-e5-customers-faq.md)
+- [Troubleshoot issues in ESU](./troubleshoot-extended-security-updates-issues.md)
