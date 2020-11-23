@@ -17,14 +17,15 @@ ms.technology: GroupPolicy
 
 This article provides a solution to a Group Policy error (The given Key was not present in the dictionary) that occurs when you run the Group Policy Modeling Wizard against a new Group Policy setting.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2692409
 
 ## Symptoms
 
-Consider the following scenario:
-- You create a new Group Policy setting and configure some registry items under **Preferences (user or Computer)**. To do this, you use the registry wizard to add keys or values to the registry. For example, under **Computer configuration \ Preferences \ Registry**, you right-click and then select **New**  -> **Registry Wizard**. This opens a user interface that enables you to manipulate registry items.
-- On Windows Server 2008 R2 and Windows Server 2008, you run the Group Policy Modeling Wizard against the new Group Policy setting. In this scenario, you experience one of the following symptoms, depending on your version of Internet Explorer: 
+Consider the following scenario:  
+
+- You create a new Group Policy setting and configure some registry items under **Preferences (user or Computer)**. To do this, you use the registry wizard to add keys or values to the registry. For example, under `Computer configuration\Preferences\Registry`, you right-click and then select **New** -> **Registry Wizard**. This opens a user interface that enables you to manipulate registry items.
+- On Windows Server 2008 R2 and Windows Server 2008, you run the Group Policy Modeling Wizard against the new Group Policy setting. In this scenario, you experience one of the following symptoms, depending on your version of Internet Explorer:  
 - In Internet Explorer 8, you receive the following error message and error code 80131577: An error occurred while generating report. The given Key was not present in the dictionary
 
 - In Internet Explorer 9, the wizard runs but does not report any registry settings. Additionally, the **Registry Preferences** section is empty.

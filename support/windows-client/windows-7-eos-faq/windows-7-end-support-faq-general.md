@@ -13,71 +13,73 @@ ms.reviewer: v-elj, chawong, winciccore, kaushika
 ms.prod-support-area-path: General information
 ms.technology: Windows 7 EoS FAQ
 ---
-# Frequently asked questions about the end of support for Windows 7
+# Frequently asked questions about the Windows 7 end of support
 
 This article describes the frequently asked questions about the end of support for Windows 7.
-
-This article is intended for use by IT professionals. If you're looking for information for home users, see [Windows 7 support will end on January 14, 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020).  
 
 _Original product version:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 4527875
 
-## General information
+> [!NOTE]
+> This article is intended for use by IT professionals. If you're looking for information for home users, see [Windows 7 support will end on January 14, 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020).  
 
-**When is the End of Support for Windows 7?**
+## When is the End of Support for Windows 7
 
 [Support for Windows 7](https://www.microsoft.com/microsoft-365/windows/end-of-windows-7-support) ended on January 14, 2020.  
- 
-**What does end of support mean?**
+
+## What does end of support mean
 
 Microsoft Lifecycle Policy offers five years of Mainstream Support. Depending on the product, it also offers a period of Extended Support. For Windows operating systems, the Extended Support period is five years.
+
 As defined in the policy, after the Extended Support period for a product ends, Microsoft no longer publishes updates or security updates for that product. This may create security and compliance issues and expose an organization's applications and business to serious security risks. Learn more at [Microsoft Lifecycle Policy](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy).  
- 
-**What is the recommended upgrade path for Windows 7 users?**
 
-**Recommended path:** Enroll in Microsoft 365 or upgrade directly to the latest version of Windows 10. If you experience any application compatibility issues after you update to Windows 10, go to [Desktop App Assure](https://aka.ms/DesktopAppAssureRequest)  for assistance. 
- 
- **Fallback path:** Enroll in Windows Virtual Desktop in Azure. After you enroll, you can get free Extended Security Updates to protect on-premises servers and desktops for three more years.
+## What is the recommended upgrade path for Windows 7 users
 
- **Last resort path:** Buy Extended Security Updates to protect on-premises servers and desktops for three more years.  
+**Recommended path:** Enroll in Microsoft 365 or upgrade directly to the latest version of Windows 10. If you experience any application compatibility issues after you update to Windows 10, go to [Desktop App Assure](https://aka.ms/DesktopAppAssureRequest) for assistance.
 
-**If an organization can't transition from Windows 7 before the end of support deadline, what are its options?**
+**Fallback path:** Enroll in Windows Virtual Desktop in Azure. After you enroll, you can get free Extended Security Updates to protect on-premises servers and desktops for three more years.
+
+**Last resort path:** Buy Extended Security Updates to protect on-premises servers and desktops for three more years.  
+
+## If an organization can't transition from Windows 7 before the end of support deadline, what are its options
 
 To help organizations protect data and applications during the end of support transition, especially those that can't complete the transition before the end-of-support date, we offer the following options:
 
 - **Windows Virtual Desktop**. An appropriate option for organizations that can use a virtualization solution. Windows Virtual Desktop is the only cloud-based service that delivers a multi-user Windows 10 experience and is optimized for Microsoft 365 Apps for enterprise. This option includes free Windows 7 ESU.
+
 - **Windows 7 Extended Security Updates (ESU)**. A last-resort option. Organizations can purchase Windows 7 ESU for their devices. ESU are also available for Windows Server 2008, Windows Server 2008 R2, SQL Server 2008, and SQL Server 2008 R2. For more information about Windows Server ESU offerings, see [Extended Security Updates frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates).
 
 ESU aren't available for Office 2010.  
 
-**What assistance is available for organizations that are affected by the end of support for Windows 7?**
+## What assistance is available for organizations that are affected by the end of support for Windows 7
 
 To help reduce security risks and continue to get regular security updates, we recommend that you upgrade to the latest versions of our software in the cloud.
 
 - If your organization has access to cloud transition SKUs or Software Assurance (SA), talk to your account manager about your transition path. The Microsoft FastTrack program includes a large portfolio of deployment offers and tools that can help you reduce the time and cost that you require to upgrade. This portfolio includes remediation services such as Desktop App assure, Desktop Analytics, and others.
+
 - If your organization doesn't have access to programs such as SA, talk to your account manager or Microsoft Partner about finding licensing offers that meet your needs.  
- 
-**What is Windows Virtual Desktop?**
+
+## What is Windows Virtual Desktop
 
 Windows Virtual Desktop is a cloud-based service that is delivered on Azure. It's the best virtualized Windows and Office experience. It delivers a multi-user Windows 10 experience that is optimized for Microsoft 365 Apps for enterprise. For customers who are upgrading from Windows 7, Windows Virtual Desktop includes free Windows 7 ESU through 2023. You can use Windows Virtual Desktop to deploy and scale Windows and Office on Azure in minutes, including appropriate security and compliance measures.  
- 
-**When is Windows Virtual Desktop an appropriate solution?**
+
+## When is Windows Virtual Desktop an appropriate solution
 
 Windows Virtual Desktop is an appropriate option for organizations that can use a virtualization solution. Windows Virtual Desktop delivers a multi-user Windows 10 experience that is optimized for Microsoft 365 Apps for enterprise. For customers who are upgrading from Windows 7, Windows Virtual Desktop includes free Windows 7 ESU through 2023.  
- 
-**Where can I find information about the end of support for Windows Server 2008 or Windows 2008 R2?**
+
+## Where can I find information about the end of support for Windows Server 2008 or Windows 2008 R2
 
 Support for Windows Server 2008 and Windows Server 2008 R2 ended on January 14, 2020. [Learn more here](https://www.microsoft.com/cloud-platform/windows-sql-server-2008).  
- 
-**What happens to Windows 7 virtual machines (VMs) that are hosted on Azure after January 2023? Will Microsoft remove them?**
+
+## What happens to Windows 7 virtual machines (VMs) that are hosted on Azure after January 2023? Will Microsoft remove them
 
 Organizations that have Windows 7 VMs in Azure will continue to have access to those VMs after January 2023. Microsoft won't delete those VMs or block access to them. However, Microsoft will stop maintaining those VMs through updates. Therefore, the affected VMs will quickly fall out of compliance.  
 
-**If an organization experiences an issue that requires a new feature, what support can the organization expect?**
+## If an organization experiences an issue that requires a new feature, what support can the organization expect
 
 We'll investigate the issue. If the issue can be resolved by a product enhancement that is available in a recent release, we recommend that the organization upgrade to that release (or a later release).  
 
-**What tools and programs are available for organizations that have application compatibility concerns in moving from Windows 7 to Windows 10?**
+## What tools and programs are available for organizations that have application compatibility concerns in moving from Windows 7 to Windows 10
 
 **Windows Autopilot** simplifies the process of deploying new Windows 10 devices by providing an alternative to creating, maintaining, and loading custom images. Windows Autopilot lets you deliver new off-the-shelf Windows 10 devices directly to your users. Through a few simple clicks, the device transforms into a fully business-ready state, dramatically reducing the time required to get users up and running on new devices.
 
@@ -91,7 +93,7 @@ We'll investigate the issue. If the issue can be resolved by a product enhanceme
 
  **Ready for Microsoft 365**: The [Ready for Microsoft 365](https://developer.microsoft.com/windows/ready-for-windows/#/) directory lists software solutions that are supported and in use on commercial devices running Windows 10 and Microsoft 365 Apps for enterprise. The directory is intended for IT managers at companies and organizations worldwide who are considering the latest versions of Windows 10 and Office 365 for their deployments.  
 
-**What happens if I use Microsoft 365 Apps for enterprise on Windows 7?**
+## What happens if I use Microsoft 365 Apps for enterprise on Windows 7
 
 After January 2020, if you use Microsoft 365 Apps for enterprise on a Windows 7-based computer, Microsoft 365 Apps for enterprise won't receive any new feature updates. However, to provide some more time to make the transition to Windows 10 or other supported Windows operating system, Microsoft 365 Apps for enterprise will receive security updates through 2023.
 
@@ -99,15 +101,15 @@ Windows 7 ESU will have no effect on support for Microsoft 365 Apps for enterpri
 
 We strongly advise against using Microsoft 365 Apps for enterprise on Windows 7. Using a modern cloud-backed client on an older, unsupported operating system may, over time, cause performance and reliability issues. [Learn more](/deployoffice/windows-7-support) about the relationship between Microsoft 365 Apps for enterprise and Windows 7 end of support.
 
-Note
+> [!NOTE]
+> This information also applies to Office 365 Business. This is the version of Office that is included together with certain business plans, such as the Microsoft 365 Business and Office 365 Business Premium.  
 
-This information also applies to Office 365 Business. This is the version of Office that is included together with certain business plans, such as the Microsoft 365 Business and Office 365 Business Premium.  
- 
-**Why did some users in my organization receive a notification about Windows 7?**
+## Why did some users in my organization receive a notification about Windows 7
 
 Support for Windows 7 ended on January 14, 2020. Windows 7 users may receive notifications to remind them that their device is no longer supported and is no longer receiving security updates.
 
 We designed these notifications so that they wouldn't appear on devices in managed organizations. More specifically, notifications are designed to exclude devices that have the following characteristics:
+
 - Devices that run Enterprise or Server editions of Windows 7
 - Devices that run any edition of Windows 7 from a Volume Licensing program
 - Domain-joined devices
@@ -116,6 +118,6 @@ We designed these notifications so that they wouldn't appear on devices in manag
 
 Any devices in your organization that aren't covered by the listed criteria would see a notification. For more information about notifications, see [You received a notification, "Your Windows 7 PC is out of support."](https://support.microsoft.com/help/3163589/)  
 
-**Did Windows 7 devices receive security updates on January 14, 2020?**  
+## Did Windows 7 devices receive security updates on January 14, 2020
 
 Updates were released on January 14, 2020 and all Windows 7 devices were eligible for those updates. Any security updates released after the end of support date apply only to Windows 7 devices that are covered by Windows 7 ESU.

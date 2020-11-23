@@ -54,4 +54,4 @@ The .NET Framework 4 is required to install all components in the SDK. If .NET F
 
 All other components will still install as long as .NET Framework 2.0 is installed prior to installing the SDK.
 
-Installation will fail if Visual Studio 2010 SP1 is installed on the system. No error will be presented during install. You can determine that the install failed would either by reviewing the SDK setup logfile or through failing functionality. The workaround is to uninstall Visual Studio 2010 SP1 before installing the SDK.
+Installation will fail if Visual Studio 2010 SP1 is installed on the system. No error will be presented during install. You can determine that the installation failed would either by reviewing the SDK setup logfile or through failing functionality. The workaround is to uninstall Visual Studio 2010 SP1 before installing the SDK.

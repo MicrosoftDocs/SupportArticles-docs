@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 275883
 
 ## Summary
 
-One major advantage of Extensible Markup Language (XML) data is that it is platform independent. However, correct encoding must be specified to ensure proper transfer of XML data between different platforms. The white paper *How to Encode XML Data* addresses general XML encoding issues in detail: [How to Encode XML Data](/previous-versions/aa468560(v=msdn.10)).
+One major advantage of Extensible Markup Language (XML) data is that it is an independent platform. However, correct encoding must be specified to ensure proper transfer of XML data between different platforms. The white paper *How to Encode XML Data* addresses general XML encoding issues in detail: [How to Encode XML Data](/previous-versions/aa468560(v=msdn.10)).
 
 Under most scenarios, XML encoding errors originate from the different default encoding settings of the XML parser (MSXML) methods and interfaces. A clear understanding of these default settings will help in preventing the encoding errors.
 

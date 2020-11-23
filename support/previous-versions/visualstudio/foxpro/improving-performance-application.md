@@ -72,9 +72,9 @@ Antivirus software configuration
 
 Antivirus software can drastically impact the performance of VFP applications. While no one disputes the need for antivirus software, if the software scans VFP data files, your performance may suffer. While we are not experts on all possible configuration settings of antivirus software, we can provide some general suggestions:
 
-Disable autoscan
-Prevent the antivirus software from scanning VFP data files.
-Ensure you have the most recent build of antivirus software.
+- Disable autoscan.
+- Prevent the antivirus software from scanning VFP data files.
+- Ensure you have the most recent build of antivirus software.
 
 Local area network performance
 

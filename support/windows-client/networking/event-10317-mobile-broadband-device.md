@@ -24,29 +24,29 @@ _Original KB number:_ &nbsp; 2981681
 
 You have a device that has a mobile broadband connection. When you turn on the device or resume it from sleep, one of the following errors is logged in the System log:
 
-Log Name: System
-Source: Microsoft-Windows-NDIS
-Date: < *Date and Time* >
-Event ID: 10317
-Task Category: PnP
-Level: Error
-Keywords: (16384),(16),(4),(2)
-User: < *User Name* >
-Computer: < *Computer Name* >
-Description:
-Miniport < *Mobile broadband device name* >, { *GUID* }, had event Fatal error: The miniport has detected an internal error
+> Log Name: System  
+Source: Microsoft-Windows-NDIS  
+Date: <*Date and Time*>  
+Event ID: 10317  
+Task Category: PnP  
+Level: Error  
+Keywords: (16384),(16),(4),(2)  
+User: <*User Name*>  
+Computer: <*Computer Name*>  
+Description:  
+Miniport <*Mobile broadband device name*>, {*GUID*}, had event Fatal error: The miniport has detected an internal error  
 
-Log Name: System
-Source: Microsoft-Windows-NDIS
-Date: < *Date and Time* >
-Event ID: 10317
-Task Category: PnP
-Level: Error
-Keywords: (16384),(16),(4),(2)
-User: < *User Name* >
-Computer: < *Computer Name* >
-Description:
-Miniport < *Mobile broadband device name* >, { *GUID* }, had event Fatal error: The miniport has failed a power transition to operational power
+>Log Name: System  
+Source: Microsoft-Windows-NDIS  
+Date: <*Date and Time*>  
+Event ID: 10317  
+Task Category: PnP  
+Level: Error  
+Keywords: (16384),(16),(4),(2)  
+User: <*User Name*>  
+Computer: <*Computer Name*>  
+Description:  
+Miniport <*Mobile broadband device name*>, {*GUID*}, had event Fatal error: The miniport has failed a power transition to operational power  
 
 ## Cause
 

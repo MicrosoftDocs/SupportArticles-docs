@@ -1,5 +1,5 @@
 ---
-title: Backup fails with VSS event ID 12292 and 11 on Windows Server 2008 and Windows Server 2008 R2
+title: Backup fails with VSS event ID 12292 and 11
 description: Fixes an issue in which backup operation using Windows Server Backup or a third-party backup application fails.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,8 +17,8 @@ ms.technology: BackupStorage
 
 This article discusses an issue where backup operation using Windows Server Backup or a third-party backup application fails.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2009513
+_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2009513
 
 ## Symptoms
 
@@ -95,13 +95,15 @@ To resolve this issue, perform the following steps:
 1. Click Start, type regedit in the Start Search box, and hit Enter.
 2. Locate and then click the following registry key:
  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\swprv\Parameters`  
-    **Note:** If the Parameters registry key is missing, perform the following steps:
+    > [!Note]
+    > If the Parameters registry key is missing, perform the following steps:
     Right-click the swprv registry key, select New, select Key, type Parameters and hit Enter.
 3. Once the Parameters registry key is selected, verify that the ServiceDll registry value has the following value:
-     **%Systemroot%\System32\swprv.dll**  
-     **Note:** If the ServiceDll registry value is missing, perform the following steps:
+     `%Systemroot%\System32\swprv.dll`  
+     > [!Note]
+     > If the ServiceDll registry value is missing, perform the following steps:
     1. Right-click the Parameters registry key, select New, and then select Expandable String Value.
     2. For the value name, type ServiceDll and hit Enter.
     3. Double-click the ServiceDll registry value.
-    4. In the Value Data box, type %Systemroot%\System32\swprv.dll, and then click OK.
+    4. In the Value Data box, type `%Systemroot%\System32\swprv.dll`, and then click OK.
 4. Perform a backup operation to verify that the issue is resolved.

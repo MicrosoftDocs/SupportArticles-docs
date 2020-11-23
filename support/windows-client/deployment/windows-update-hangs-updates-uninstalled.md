@@ -22,23 +22,23 @@ _Original KB number:_ &nbsp; 3064434
 
 ## Symptoms
 
-Consider the following scenario:
+Consider the following scenario:  
+
 - You have a computer that is running Windows Server 2012 R2, Windows 8.1, Windows Server 2012, or Windows 8.
 - You install updates from Windows Update.
 - You restart Windows when you are prompted to do this.
 
 In this scenario, you see the following message during the restart process:
 
-Working on updates
-13% complete
-Don't turn off your computer
+> Working on updates  
+13% complete  
+Don't turn off your computer  
 
 This is an expected message. However, the system appears to stop responding (hangs) for about 15 minutes. After this time, the system does restart. However, the updates that you installed are now uninstalled.
 
-Additionally, an entry that resembles the following may be logged in the CBS.log file under **%SystemRoot%\Logs\CBS**:
+Additionally, an entry that resembles the following may be logged in the CBS.log file under %SystemRoot%\Logs\CBS:
 
 > Shtd: Timed out waiting for shutdown processing to complete - no progress detected in last 900000 milliseconds
-
 
 ## Cause
 
@@ -46,11 +46,11 @@ This issue occurs because the Trusted Installer service did not finish the insta
 
 ## Workaround
 
-To work around this issue, set the time-out value to a larger value in the registry, and then reapply the hotfix. To do this, follow these steps:
-1. Start Registry Editor.
-2. Locate the following subkey:
+To work around this issue, set the time-out value to a larger value in the registry, and then reapply the hotfix. To do this, follow these steps:  
 
-    `HKLM\System\CurrentControlSet\Services\TrustedInstaller` 
+1. Start Registry Editor.
+2. Locate the following subkey:  
+    `HKLM\System\CurrentControlSet\Services\TrustedInstaller`  
 3. Right-click the **TrustedInstaller** key, and then click **Permissions**.
 4. Grant the **Full Control** user right to the Administrators group.
 5. Change the **BlockTimeIncrement** value to 2a30 (Hexadecimal).

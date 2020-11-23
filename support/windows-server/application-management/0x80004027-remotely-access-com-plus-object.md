@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 3182294
 
 After you upgrade from an earlier release of Windows Server to Windows Server 2016, applications cannot remotely access a COM+ object, and you receive the following error message:
 
-0x80004027-CO_E_CLASS_DISABLED
+> 0x80004027-CO_E_CLASS_DISABLED
 
 ## Cause
 

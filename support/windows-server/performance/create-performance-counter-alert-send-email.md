@@ -40,7 +40,7 @@ _Original KB number:_ &nbsp; 2424491
 
 1. Click start Administrative tools>Task Scheduler.
 
-2. Right click Task Scheduler Library-select create task.
+2. Right-click Task Scheduler Library-select create task.
 
 3. Enter the task name.
 

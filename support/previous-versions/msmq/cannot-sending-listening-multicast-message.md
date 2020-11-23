@@ -8,7 +8,7 @@ ms.prod: .net
 ---
 # MSMQ not sending or listening for Multicast messages
 
-This article helps you resolve the problem where MSMQ not sending or listening for Multicast messages.
+This article helps you resolve the problem where MSMQ is not sending or listening for Multicast messages.
 
 _Original product version:_ &nbsp; Microsoft Message Queuing  
 _Original KB number:_ &nbsp; 2000902
@@ -44,4 +44,4 @@ There were a couple of symptoms found in testing:
 
     > "The queue cannot listen/bind to the multicast address 234.1.1.1:8001 (Error:273c)." 0x273C translates to 10044 - WSAESOCKTNOSUPPORT - "The support for the specified socket type does not exist in this address family."
 
-1. Unable to send multicast messages In Computer Management, the outgoing queue would stay in a 'waiting to connect' state.  What made the troubleshooting tricky was that the multicasting driver (*RMCAST.SYS*) seemed to be installed. At the command prompt, we could execute `NET STOP RMCAST` and `NET START RMCAST` without error. Also, the Message Queuing service had a dependency on RMCAST so if the Multicast driver was down, MSMQ would not have started anyway.
+1. Unable to send multicast messages in Computer Management, the outgoing queue would stay in a 'waiting to connect' state.  What made the troubleshooting tricky was that the multicasting driver (*RMCAST.SYS*) seemed to be installed. At the command prompt, we could execute `NET STOP RMCAST` and `NET START RMCAST` without error. Also, the Message Queuing service had a dependency on RMCAST so if the Multicast driver was down, MSMQ would not have started anyway.

@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Devices and Drivers
 ms.technology: Deployment
 ---
-# "Cannot load management console" error when you try to run the TPM Management console in Windows 10
+# "Cannot load management console" error when you try to run the TPM Management console
 
 This article provides solutions to fix an error that occurs when you try to run the TPM Management console in Windows 10.
 
@@ -41,13 +41,14 @@ $tpm = gwmi -n root\cimv2\security\microsofttpm win32_tpm
 $tpm.SetPhysicalPresenceRequest(6)
 ```
 
-**Note** After you run the command, you must restart the operating system and accept any BIOS prompts.
+> [!Note]
+> After you run the command, you must restart the operating system and accept any BIOS prompts.
 
 ## Status
 
-Microsoft is researching this problem and will post more information in this article when the information becomes available. 
+Microsoft is researching this problem and will post more information in this article when the information becomes available.  
 
 ## References
 
 For more information, see the following Windows Dev Center article:
- [SetPhysicalPresenceRequest method of the Win32_Tpm class](https://msdn.microsoft.com/library/windows/desktop/aa376478%28v=vs.85%29.aspx)
+[SetPhysicalPresenceRequest method of the Win32_Tpm class](https://msdn.microsoft.com/library/windows/desktop/aa376478%28v=vs.85%29.aspx)

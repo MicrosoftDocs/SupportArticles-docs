@@ -29,9 +29,10 @@ Because of an increased dependence on Active Directory Domain Services, Microsof
 
 Although you can move a Microsoft Windows 2000-based server cluster or a Windows Server 2003-based server cluster from one domain to another, we recommend that you rebuild the cluster in the new domain so that all installed services and applications are configured correctly in the new domain. You can use the steps in this article to enable the cluster service to start and operate in a new domain. However, these steps will not make sure that all resources will be available in the new domain.
 
-Notes 
-- Microsoft does not provide support to administrators who try to move resources from one domain to another if the underlying operation is unsupported. For example, Microsoft does not provide support to administrators who try to move a Microsoft Exchange server from one domain to another.
-- You cannot move Windows NT 4.0-based clusters from one domain to another if any of the nodes in the cluster are domain controllers.
+> [!Note]  
+>
+> - Microsoft does not provide support to administrators who try to move resources from one domain to another if the underlying operation is unsupported. For example, Microsoft does not provide support to administrators who try to move a Microsoft Exchange server from one domain to another.  
+> - You cannot move Windows NT 4.0-based clusters from one domain to another if any of the nodes in the cluster are domain controllers.
 
 > [!WARNING]
 > We recommend that you perform a full backup of all data on all shared hard disks on each node in the cluster before you try to move the cluster.
@@ -51,12 +52,7 @@ To move the cluster:
    - Restore files and directories.
    - Adjust memory quotas for a process (Windows Server 2003).
 
-For more information about the Cluster service account, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[269229](https://support.microsoft.com/help/269229) How to manually re-create the Cluster service account  
-
-
- In addition, the Cluster service account must have administrative permissions on all nodes in the cluster.
+    In addition, the Cluster service account must have administrative permissions on all nodes in the cluster.
 
 2. Set the Startup value for the Cluster service to Manual on all nodes in the cluster:
 
@@ -66,25 +62,21 @@ For more information about the Cluster service account, click the following arti
     4. Click OK.
 3. Stop the Cluster service on all cluster nodes:
 
-1. Click Start, point to Settings, click Control Panel, and then double-click Services.
-  2. Click **Cluster Service**, and then click Stop.
+    1. Click Start, point to Settings, click Control Panel, and then double-click Services.
+    2. Click **Cluster Service**, and then click Stop.
 4. Turn off all nodes except one.
 5. Move the node into the new domain by using procedures that are appropriate to your operating system. Complete the process, and then restart the node.
 6. On the node, change the service account that is used by the Cluster service to log on to the domain to the user account that you created.
 7. Start the Cluster service on that node.
 8. Use Cluster Administrator to verify that there are no issues. Try to bring all resources online. Test the functionality of all resources from client computers, and then check the Event Viewer System log for error messages.
 
-> [!NOTE]
-> At this point, you can still cancel the move by moving this node back into the old domain and starting the nodes that are not moved.
+    > [!NOTE]
+    > At this point, you can still cancel the move by moving this node back into the old domain and starting the nodes that are not moved.
 
 9. If the first node move is successful, continue to migrate the other nodes in the cluster to the new domain starting with step 5 for each node.
 
 > [!WARNING]
 > If you move a computer that has a Virtual Microsoft SQL Server 7.0 instance to another domain, and you do not first uncluster SQL Server 7.0, the SQL cluster resources may fail. Because of the failure of the SQL Server 7.0, you may have to work with Microsoft CSS to manually uncluster SQL Server 7.0. After you have unclustered SQL Server 7.0, you must use the SQL Cluster Failover Wizard to reestablish your clustered SQL Server computers. You may also have to completely remove SQL Server 7.0, and then reinstall it.
-
-For more information about what to do if you must move a clustered SQL Server 2000 instance to a new domain, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[319016](https://support.microsoft.com/help/319016) How to change domains for a SQL Server 2000 failover cluster  
 
 > [!NOTE]
 > If your DNS server is in a secure zone, DNS registrations may be affected. In a secure DNS zone, the credentials of the account performing the registration are captured and stored with the records. This protects them from being maliciously replaced with incorrect values. For a cluster virtual server, the original cluster service account would be used for this purpose. You may see DNS registration failures in the System Event logs, typically error 9005 (refused). If this occurs, delete the records on the DNS server, and bring the Network Name offline, then online again so that the new credentials can be recorded with the registration.

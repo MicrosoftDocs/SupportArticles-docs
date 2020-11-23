@@ -83,7 +83,7 @@ You must define an ESSO Affiliate Application, in order to use Windows-initiated
 13. In the **Enterprise Single Sign-On** scope pane, of the ENTSSO MMC snap-in, click the **Affiliate Applications** folder, verify the newly created **Affiliate Application** (for example "SYS1") is Enabled. Click the **Affiliate Application** (for example "SYS1"), and verify in the results pane (list of Windows users on right side of dialog) is enabled.
 
 To define a DB2 connection string for Windows-initiated SSO
-You must define a DB2 connection string in order to use Windows-initiated SSO. You can define a connection string using the ADO.NET Data Provider for DB2 ConnectionString Builder. You can define a string manually with a text editor. You can define a connection string using OLE DB Data Links. You can define a connection string using the Data Source Wizard (DSW), within the Data Access Tool (DAT) or Visual Studio Server Explorer. In this task, we will use the latter approach of the DSW in the DAT.
+You must define a DB2 connection string in order to use Windows-initiated SSO, you can define a connection string using the ADO.NET Data Provider for DB2 ConnectionString Builder. You can define a string manually with a text editor. You can define a connection string using OLE DB Data Links. You can define a connection string using the Data Source Wizard (DSW), within the Data Access Tool (DAT) or Visual Studio Server Explorer. In this task, we will use the latter approach of the DSW in the DAT.
 
 1. On the **Start** menu, point to **All Programs**, point to **HIS 2010**, and click **Data Access Tool**. When prompted by **User Access Control**, click **Yes**.
 2. In the **Data Access Tool**, click the **Data Sources**, click the **File** menu, and then click **New Data Source**.
@@ -117,7 +117,7 @@ You must define a DB2 connection string in order to use Windows-initiated SSO. Y
 
     > Provider=DB2OLEDB;Initial Catalog=DSN1D037;Network Transport Library=TCPIP;Host CCSID=37;PC Code Page=1252;Network Address=SYS1;Network Port=446;Package Collection=HISDEMO;Default Schema=HISDEMO;Process Binary as Character=False;Connect Timeout=15;Units of Work=RUW;Default Qualifier=HISDEMO;DBMS Platform=DB2/MVS;Affiliate Application=SYS1;Use Early Metadata=False;Defer Prepare=False;DateTime As Char=False;Rowset Cache Size=0;Max Pool Size=100;Datetime As Date=False;AutoCommit=True;Authentication=Server;Integrated Security=SSPI;Persist Security Info=False;Cache Authentication=False;Connection Pooling=True;Derive Parameters=False;
 
-To define an ESSO Affiliate Application for storing DB2 connection string. You must have access to an ESSO installation, in order to store a DB2 connection securely for use by multiple client programs and users.
+To define an ESSO Affiliate Application for storing DB2 connection string, you must have access to an ESSO installation, in order to store a DB2 connection securely for use by multiple client programs and users.
 
 1. On the **Start** menu, point to **All Programs**, point to **Enterprise Single Sign-On**, and click **SSO Administration**. When prompted by **User Access Control**, click **Yes**.
 2. In the **Enterprise Single Sign-On** scope pane, of the ENTSSO MMC snap-in, click the **Affiliate Applications** folder; click the **Action** menu, and then **Create Application**.
@@ -133,8 +133,7 @@ To define an ESSO Affiliate Application for storing DB2 connection string. You m
 12. In the **Set Credentials** dialog, enter a valid DB2 server password (for example "HISDEMO") in the **Password and Confirm** edit boxes, paste the DB2 connection string from the Data Access Tool into the **ConnString** edit box, and then click **OK**.
 13. In the **Enterprise Single Sign-On** scope pane, of the ENTSSO MMC snap-in, click the **Affiliate Applications** folder, verify the newly created **Affiliate Application** (for example **SYS1_DSN1D037_ConnectionString**) is Enabled. Click the **Affiliate Application** (for example **SYS1_DSN1D037_ConnectionString**), and verify in the results pane (list of Windows users on right side of dialog) is enabled.
 
-To define a DB2 connection that retrieves connection string from SSO
-You must define a DB2 connection string in order to use Windows-initiated SSO. You can define a connection string using the ADO.NET Data Provider for DB2 ConnectionString Builder. You can define a string manually with a text editor. You can define a connection string using OLE DB Data Links. You can define a connection string using the Data Source Wizard (DSW), within the Data Access Tool (DAT) or Visual Studio Server Explorer. In this task, we will use the latter approach of the DSW in the DAT.
+To define a DB2 connection that retrieves connection string from SSO, you must define a DB2 connection string in order to use Windows-initiated SSO. You can define a connection string using the ADO.NET Data Provider for DB2 ConnectionString Builder. You can define a string manually with a text editor. You can define a connection string using OLE DB Data Links. You can define a connection string using the Data Source Wizard (DSW), within the Data Access Tool (DAT) or Visual Studio Server Explorer. In this task, we will use the latter approach of the DSW in the DAT.
 
 1. On the **Start** menu, point to **All Programs**, point to HIS 2010, and click **Data Access Tool**. When prompted by **User Access Control**, click **Yes**.
 2. In the **Data Access Tool**, click the **Data Sources**, click the **File** menu, and then click **New Data Source**.

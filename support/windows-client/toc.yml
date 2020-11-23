@@ -2,6 +2,8 @@
   href: welcome-windows-client.md
 - name: Active Directory
   items:
+  - name: Active Directory
+    href: ./identity/active-directory-overview.md
   - name: Schema update - known issues, best practies, workflow review
     items:
     - name: Error when checking domain object property
@@ -20,12 +22,16 @@
       href: ./identity/w32time-not-start-on-workgroup.md
 - name: Admin Development
   items:
+  - name: Admin Development
+    href: ./admin-development/admin-development-overview.md
   - name: Active Directory Services Interface (ADSI)
     items:
     - name: User authentication issues with ADSI WinNT provider
       href: ./admin-development/adsi-winnt-provider-user-authentication-issues.md
 - name: Application Management
   items:
+  - name: Application Management
+    href: ./application-management/application-management-overview.md
   - name: .NET Framework installation
     items:
     - name: .NET Framework 3.5 installation errors
@@ -78,6 +84,8 @@
       href: ./application-management/change-registry-values-permissions.md
 - name: Backup and Storage
   items:
+  - name: Backup and Storage
+    href: ./backup-and-storage/backup-and-storage-overview.md
   - name: Configuring and using Backup software
     items:
     - name: Backup fails when you create system image
@@ -108,6 +116,8 @@
       href: ./backup-and-storage/e2e-event-ids-volsnap.md
 - name: Deployment
   items:
+  - name: Deployment
+    href: ./deployment/deployment-overview.md
   - name: Activation
     items:
     - name: Can't activate Windows 7 with KMS
@@ -330,6 +340,8 @@
       href: ./deployment/cant-access-efi-system-partition.md
 - name: Group Policy
   items:
+  - name: Group Policy
+    href: ./group-policy/group-policy-overview.md
   - name: AppLocker or software restriction policies
     items:
     - name: Archived application can't be restored
@@ -364,12 +376,16 @@
       href: ./group-policy/save-documents-to-onedrive-by-default.md
 - name: High Availability
   items:
+  - name: High Availability
+    href: ./high-availability/high-availability-overview.md
   - name: Nested Virtualization
     items:
     - name: Retrieve data from Windows XP Mode VM
       href: ./high-availability/retrieve-data-from-windows-xp-mode-vm.md
 - name: Networking
   items:
+  - name: Networking
+    href: ./networking/networking-overview.md
   - name: Access to remote file shares (SMB or DFS Namespace)
     items:
     - name: '"User has not been authenticated" error when accessing a network drive'
@@ -520,6 +536,8 @@
       href: ./networking/wireless-devices-disabled-airplane-mode-off.md
 - name: Performance
   items:
+  - name: Performance
+    href: ./performance/performance-overview.md
   - name: Applications
     items:
     - name: Check Point and Centrify apps stop working
@@ -590,6 +608,8 @@
       href: ./performance/troubleshooting-slow-file-copying-in-windows.md
 - name: 'Printing '
   items:
+  - name: 'Printing '
+    href: ./printing/printing--overview.md
   - name: 'Errors and troubleshooting: General issues'
     items:
     - name: Can't install a Secure WSD printer from Print Management Console
@@ -626,6 +646,8 @@
       href: ./printing/print-modern-app-creates-large-file.md
 - name: Remote Desktop Services
   items:
+  - name: Remote Desktop Services
+    href: ./remote/remote-desktop-services-overview.md
   - name: Administration
     items:
     - name: Description of Remote Server Administration Tools
@@ -646,6 +668,8 @@
       href: ./remote/terminal-server-client-connection-failures.md
 - name: Shell Experience
   items:
+  - name: Shell Experience
+    href: ./shell-experience/shell-experience-overview.md
   - name: Cortana and Search
     items:
     - name: Can't start Windows Search service and error occurs
@@ -764,6 +788,8 @@
       href: ./shell-experience/windows-search-4-multilingual-user-interface-pack.md
 - name: System Management Components
   items:
+  - name: System Management Components
+    href: ./system-management-components/system-management-components-overview.md
   - name: Event Viewer
     items:
     - name: Delete saved logs from Event Viewer
@@ -806,6 +832,8 @@
       href: ./system-management-components/wmi-activity-event-5858-logged-with-resultcode-0x80041032.md
 - name: UE-V
   items:
+  - name: UE-V
+    href: ./ue-v/ue-v-overview.md
   - name: UEV 2.1
     items:
     - name: '%username% is unavailable that has OneDrive for Business installed'
@@ -822,6 +850,8 @@
       href: ./ue-v/ue-v-registry-settings.md
 - name: UserProfiles and Logon
   items:
+  - name: UserProfiles and Logon
+    href: ./user-profiles-and-logon/userprofiles-and-logon-overview.md
   - name: Slow logon
     items:
     - name: Slow logon with a blank screen
@@ -848,6 +878,8 @@
       href: ./user-profiles-and-logon/renaming-user-account-not-change-profile-path.md
 - name: Virtualization
   items:
+  - name: Virtualization
+    href: ./virtualization/virtualization-overview.md
   - name: Configuration of virtual machine settings
     items:
     - name: Office prompts for activation in Azure
@@ -870,28 +902,20 @@
       href: ./virtualization/hyper-v-not-start-vm-after-upgrade.md
 - name: Windows 7 EoS FAQ
   items:
-  - name: Main page
-    items:
-    - name: IT Pro FAQ about the end of support for Windows 7
-      href: ./windows-7-eos-faq/windows-7-end-support-faq.md
-  - name: General information
-    items:
-    - name: FAQ about the end of support for Windows 7
-      href: ./windows-7-eos-faq/windows-7-end-support-faq-general.md
-  - name: Windows 7 Extended Security Updates (ESU)
-    items:
-    - name: FAQ about Extended Security Updates for Windows 7
-      href: ./windows-7-eos-faq/windows-7-extended-security-updates-faq.md
-  - name: E5 ESU offers
-    items:
-    - name: FAQ about Windows 7 ESU offers for E5 customers
-      href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.md
+  - name: Windows 7 EoS FAQ
+    href: ./windows-7-eos-faq/windows-7-eos-faq-overview.md
+  - name: Windows 7 end of support
+    href: ./windows-7-eos-faq/windows-7-end-support-faq-general.md
+  - name: Windows 7 ESU
+    href: ./windows-7-eos-faq/windows-7-extended-security-updates-faq.md
+  - name: Windows 7 ESU offers for E5 customers
+    href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.md
   - name: Troubleshoot issues in ESU
-    items:
-    - name: Troubleshoot issues in Extended Security Updates
-      href: ./windows-7-eos-faq/troubleshoot-extended-security-updates-issues.md
+    href: ./windows-7-eos-faq/troubleshoot-extended-security-updates-issues.md
 - name: Windows Security
   items:
+  - name: Windows Security
+    href: ./windows-security/windows-security-overview.md
   - name: Account lockouts
     items:
     - name: Access computer after administrator account is disabled
@@ -938,9 +962,9 @@
     items:
     - name: Enable diagnostic logging for Windows Security Center
       href: ./windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md
-- name: windows-troubleshooters
+- name: Windows Troubleshooters
   items:
   - name: Windows Troubleshooters
-    items:
-    - name: Active and retired Windows 10 troubleshooters
-      href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
+    href: ./windows-troubleshooters/windows-troubleshooters-overview.md
+  - name: Active and retired Windows 10 troubleshooters
+    href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md

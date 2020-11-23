@@ -1,6 +1,6 @@
 ---
 title: Incorrect TLS is displayed
-description: Describes an issue in which SSL (TLS 1.0) is displayed as the Security Layer protocol instead of the actual TLS 1.2 protocol. This issue affects Windows Server 2008 and Windows Server 2012 environments. A resolution is provided.
+description: Describes an issue in which SSL (TLS 1.0) is displayed as the Security Layer protocol instead of the actual TLS 1.2 protocol. A resolution is provided.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 3097192
 
 Consider the following scenario:
 
-- You have a computer that's running Windows Server 2008 R2, Windows Server 2012, or Windows Server 2012 R2.  
+- You have a computer that's running Windows Server operating system.
 - You have the Remote Desktop Connection Broker (RDCB) role configured on this computer.
 - You try to secure the RDP connections to the target computers by using SSL encryption (Transport Layer Security (TLS)).
 
@@ -43,7 +43,7 @@ Computer Configuration\Policies\Administrative Templates\Windows Components\Remo
 
 ## Resolution
 
-This issue is caused by a bug in the Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2 GUIs. You can safely ignore the TLS version that's displayed in the GUI because this does not reflect the version of TLS that's being used for client connections.
+This issue is caused by a bug in the Windows Server GUIs. You can safely ignore the TLS version that's displayed in the GUI because this does not reflect the version of TLS that's being used for client connections.
 
 ## More information
 

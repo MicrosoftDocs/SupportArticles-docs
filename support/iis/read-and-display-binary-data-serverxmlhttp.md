@@ -25,7 +25,7 @@ Response.ContentType = "image/gif"
 ```
 
 > [!NOTE]
-> For Adobe Acrobat files use `application/pdf`, or for .jpg images use `image/jpg`.
+> For Adobe Acrobat files, use `application/pdf`, or for .jpg images, use `image/jpg`.
 
 The default behavior for MIME types is to open the document in Microsoft Internet Explorer. Adding the following code prompts the user to save the file or open the file with the associated program:
 

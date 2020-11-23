@@ -13,7 +13,7 @@ ms.reviewer: v-elj, chawong, squin, scottmca, winciccore, kaushika
 ms.prod-support-area-path: Troubleshoot issues in ESU
 ms.technology: Windows 7 EoS FAQ
 ---
-# Troubleshoot issues in Extended Security Updates
+# Troubleshoot issues in ESU
 
 This article describes emerging issues that affect Extended Security Updates (ESU) deployments and the steps to troubleshoot these issues. This information is organized by task, as follows:
 

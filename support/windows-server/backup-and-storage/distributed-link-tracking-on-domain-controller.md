@@ -35,19 +35,23 @@ When a file that is referenced by a link is moved to another volume (on the same
 
 ## Distributed Link Tracking and Active Directory
 
-Distributed Link Tracking objects are replicated among all domain controllers in the domain that is hosting the computer account and all global catalog servers in the forest. The Distributed Link Tracking Server service creates objects in the following distinguished name path:CN=FileLinks,CN=System,DC= **domain name** container of Active Directory
+Distributed Link Tracking objects are replicated among all domain controllers in the domain that is hosting the computer account and all global catalog servers in the forest. The Distributed Link Tracking Server service creates objects in the following distinguished name path:  
+
+CN=FileLinks,CN=System,DC= **domain name** container of Active Directory
 
 Distributed Link Tracking objects exist in the following two tables under the CN=FileLinks,CN=System folder:
 
-- CN=ObjectMoveTable,CN=FileLinks,CN=System,DC= **domain name:
+- CN=ObjectMoveTable,CN=FileLinks,CN=System,DC= **domain name**:
 
 This object stores information about linked files that have been moved in the domain.
 
-- CN=VolumeTable,CN=FileLinks,CN=System,DC= **domain name:
+- CN=VolumeTable,CN=FileLinks,CN=System,DC= **domain name**:
 
-    This object stores information about each NTFS volume in the domain.Distributed Link Tracking objects consume little space individually, but they can consume large amounts of space in Active Directory when they are allowed to accumulate over time.
+    This object stores information about each NTFS volume in the domain.  
 
-    If you disable Distributed Link Tracking and delete the Distributed Link Tracking objects from Active Directory, the following behavior may occur:
+Distributed Link Tracking objects consume little space individually, but they can consume large amounts of space in Active Directory when they are allowed to accumulate over time.
+
+If you disable Distributed Link Tracking and delete the Distributed Link Tracking objects from Active Directory, the following behavior may occur:
 
 - Active Directory database size may be reduced (this behavior occurs after the objects have been tombstoned and garbage collected, and after you perform an offline defragmentation procedure).
 - Replication traffic between domain controllers may be reduced.
@@ -65,27 +69,27 @@ Microsoft recommends that you use the following settings with Distributed Link T
 1. Turn off the Distributed Link Tracking Server service on all domain controllers (this is the default configuration on all Windows Server 2003-based servers).
 
     Because of replication overhead and the space that FileLinks tables uses in Active Directory, Microsoft recommends that you turn off the Distributed Link Tracking Server service on Active Directory domain controllers. To stop the service, use any of the following methods:
-    
+
    - In the Services snap-in (Services.msc or compmgmt.msc), double-click the **Distributed Link Tracking Server** service, and then click **Disabled** in the **Startup type** box.
    - Define the Startup value in the Computer Configuration/Windows Settings/System Services node of Group policy.
-    
+
    - Define the policy settings on an organizational unit that hosts all Windows 2000 domain controllers.
-    
+
     Restart the domain controllers after the policy has replicated so that the policy will be applied. If you do not restart the domain controllers, you will have to manually stop the service on each domain controller.
 2. Delete Distributed Link Tracking objects from Active Directory domain controllers.
 
     See the "How to Delete Distributed Link Tracking Object" section of this article for more information about how to delete Distributed Link Tracking objects. It is recommended that you delete objects after you disable the Distributed Link Tracking Server service.
-    
+
     > [!NOTE]
     > The Directory Information Tree (DIT) size on domain controllers is not reduced until the following actions are completed:
 
     1. Objects are deleted from the directory service.
-    
-    > [!NOTE]
-    > Deleted objects are stored in the Deleted Objects container until the tombstone lifetime expires. The default value for a tombstone lifetime is 60 days. The minimum value is two days. By default, the value is 180 days for new forests that are installed together with Windows Server 2003 Service Pack 1 or a later version of Windows Server 2003.
-    
-    Unless you have strong Active Directory replication monitoring, we recommend that you use the 180-day value. Do not reduce this value to handle DIT size problems. If you have problems with database size, contact Microsoft Customer Support Services.
-    
+
+        > [!NOTE]
+        > Deleted objects are stored in the Deleted Objects container until the tombstone lifetime expires. The default value for a tombstone lifetime is 60 days. The minimum value is two days. By default, the value is 180 days for new forests that are installed together with Windows Server 2003 Service Pack 1 or a later version of Windows Server 2003.
+
+        Unless you have strong Active Directory replication monitoring, we recommend that you use the 180-day value. Do not reduce this value to handle DIT size problems. If you have problems with database size, contact Microsoft Customer Support Services.
+
     2. Garbage collection has run to completion.
     3. You use Ntdsutil.exe to defragment the Ntds.dit file in Dsrepair mode.
 
@@ -95,21 +99,24 @@ It is not critical that you manually delete the Distributed Link Tracking object
 
 When you run the Dltpurge.vbs VBScript, all Active Directory objects that are used by the Distributed Link Tracking Server service are deleted from the domain where the script is run. You must run the script on one domain controller for each domain in a forest. To run Dltpurge.vbs:
 
-1. Obtain the Dltpurge.vbs script from Microsoft Product Support. A text version of Dltpurge.vbs is located in the following Microsoft Knowledge Base article: [315229](https://support.microsoft.com/help/315229) Text version of Dltpurge.vbs for Microsoft Knowledge Base article Q312403  
-
+1. Obtain the Dltpurge.vbs script from Microsoft Product Support.  
 2. Stop the Distributed Link Tracking Server service on all domain controllers in the domain that is being targeted by Dltpurge.vbs.
 3. Use administrator privileges to log on to the console of a domain controller or a member computer in the domain that is being targeted by Dltpurge.vbs.
-4. Use the following syntax to run Dltpurge.vbs from a command line: cscript dltpurge.vbs -s myserver -d dc=mydomain,dc=mycompany,dc=com 
-In this command line:
+4. Use the following syntax to run Dltpurge.vbs from a command line:  
 
-- -s is the DNS host name of the domain controller on which you want to delete Distributed Link Tracking objects.
-   - -d is the distinguished name path of the domain on which you want to delete Distributed Link Tracking objects.
+    ```vbscript
+    cscript dltpurge.vbs -s myserver -d dc=mydomain,dc=mycompany,dc=com  
+    ```
+
+    In this command line:
+
+    - -s is the DNS host name of the domain controller on which you want to delete Distributed Link Tracking objects.
+    - -d is the distinguished name path of the domain on which you want to delete Distributed Link Tracking objects.  
+
 5. Perform an offline defragmentation procedure of the Ntds.dit file after the objects have been tombstoned and garbage collected.
  For more information about the garbage collection process, click the following article number to view the article in the Microsoft Knowledge Base:
 
-[198793](https://support.microsoft.com/help/198793) The Active Directory database garbage collection process  
-
-
+    [198793](https://support.microsoft.com/help/198793) The Active Directory database garbage collection process  
 
 ## A sample customer experience
 
@@ -129,13 +136,10 @@ Trey Research wants to deploy Windows Server 2003 within the next 10 days but ne
 - Condition 6: When the CN=FileLinks,CN=System,DC= **domain name** container in the largest domain was reviewed, it revealed over 700,000 Distributed Link Tracking objects. The security descriptor on each Distributed Link Tracking object was approximately 2 kilobytes (KBs). Each of these conditions was evaluated for its contribution to the 17-GB .dit file:
 
 - Condition 1: Trey Research decided not to deploy new drives because of the cost and the time it would take to do so. Also, they only needed the disk space temporarily because they expected the Active Directory Database to shrink after they upgraded to Windows Server 2003 and the Single Instance Store (SIS) process was completed (SIS implements a more efficient storage of permissions in Active Directory databases).
-- Conditions 2 and 3: Trey Research decided that these conditions were the best practices; however, even if Trey Research implemented them, they would not achieve the needed results. They decided to enable DNS scavenging because it is easily implemented. For more information about how to identify unused computer accounts, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[197478](https://support.microsoft.com/help/197478) How to detect and remove inactive machine accounts  
-
+- Conditions 2 and 3: Trey Research decided that these conditions were the best practices; however, even if Trey Research implemented them, they would not achieve the needed results. They decided to enable DNS scavenging because it is easily implemented.  
 - Condition 4: Trey Research realized that if they redefined security descriptors and system access control lists (SACLs), they would achieve the results they are looking for, but they decided that this procedure would be time consuming to implement until they could thoroughly test the size reduction, replication overhead and, most importantly, program/administration compatibility in the lab scenario that mirrors the production environment.
 
-Because Trey Research has deployed Windows 2000 SP2 and a few hotfixes, they expected that the incremental inherited aces that were added by Adprep (to objects in the domain NC) could be as small as 300 megabytes (MBs). They could verify this behavior in a lab environment that is used to test upgrades of the production forest.
+    Because Trey Research has deployed Windows 2000 SP2 and a few hotfixes, they expected that the incremental inherited aces that were added by Adprep (to objects in the domain NC) could be as small as 300 megabytes (MBs). They could verify this behavior in a lab environment that is used to test upgrades of the production forest.
 - Condition 5: Trey Research realized that if they performed an offline defragmentation procedure, they might not recover "whitespace" in the Ntds.dit file. In fact, Trey Research administrators noticed an increase in database size immediately after they completed the offline defragmentation procedure. This behavior occurred because of an inefficiency in the Windows 2000 database engine; this engine is enhanced in Windows Server 2003.
 
 - Condition 6: Trey Research agreed that the obvious course of action would be to perform a simple bulk deletion of all of the Distributed Link Tracking objects from the CN=FileLinks,CN=System,DC= **domain name** container on a domain controller in each domain in the forest. However, they realized that if they did so, additional disk space would not be freed up until the objects had been tombstoned and garbage collected, and until they completed an offline defragmentation procedure on each domain controller in that domain. While the tombstone lifetime value can be set to values as low as two days, several domain controllers in the Trey Research forest were offline as they awaited hardware and software updates. If objects are tombstoned before end-to-end replication can take place, deleted objects may be reanimated or inconsistent data may be reported among global catalog servers in the forest. To provide immediate relief, Trey Research performed the following procedure:

@@ -1,5 +1,5 @@
 ---
-title: Error code 0x81000031 occurs when you try to back up files by using the Backup and Restore Wizard on a Windows 7-based computer
+title: Error code 0x81000031 occurs 
 description: Describes a problem that occurs when you use the Backup and Restore Wizard in Windows 7 to back up files to an external hard disk drive. A workaround is provided.
 ms.date: 09/21/2020
 author: Deland-Han
@@ -62,12 +62,13 @@ To work around this problem, follow the appropriate steps for your scenario.
 
 ### Scenario 1: Custom libraries are unavailable
 
-To reset your libraries to the default libraries (Documents, Music, Pictures, and Videos), follow these steps:
+To reset your libraries to the default libraries (Documents, Music, Pictures, and Videos), follow these steps:  
+
 1. Click Start, and then click **Computer**.
 2. Right-click **Libraries** from the navigation pane on the left side of the Explorer window, and then click **Restore Default Libraries**.
     > [!NOTE]
     > This operation removes any custom libraries that are in your libraries location. You can restore these libraries when the library locations become available again.
-    
+
 3. Start the Backup and Restore Wizard to back up your files and data.
 
 ### Scenario 2: BitLocker Drive Encryption is enabled
@@ -81,14 +82,15 @@ To disable and re-enable BitLocker Drive Encryption, follow these steps:
       3. Follow the instructions on the screen to create the disc.
     > [!NOTE]
     > You must have a CD or DVD burner to create a system repair disc.
-1. Start an elevated command prompt. To do this, follow these steps:
+3. Start an elevated command prompt. To do this, follow these steps:
       1. Click **Start**, and then type command prompt in the **Start Search** box.
       2. In the **Programs** list, right-click **Command Prompt**, and then click **Run as administrator**.
 4. At the elevated command prompt, type the following command, and then press ENTER:
 
     ```console
     C:\Windows\System32\REAgentC.exe /disable
-    ```
+    ```  
+
 5. Disconnect the external hard disk drive.
 6. At the elevated command prompt, type the following command, and then press ENTER:
 
@@ -106,7 +108,7 @@ To disable and re-enable BitLocker Drive Encryption, follow these steps:
 
 For more information about how to create and use a system repair disc, visit the following Microsoft Web site:
 
-[Create a system repair disc](https://windows.microsoft.com/windows7/create-a-system-repair-disc) 
+[Create a system repair disc](https://windows.microsoft.com/windows7/create-a-system-repair-disc)  
 
 ## Status
 
