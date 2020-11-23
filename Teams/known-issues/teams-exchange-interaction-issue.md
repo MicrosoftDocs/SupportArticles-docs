@@ -63,7 +63,7 @@ To integrate the Microsoft Teams service with your installation of Exchange Serv
   - The account is hidden from the Exchange address book. It's a best practice to hide the account from the address book because it's a disabled user account.
   - The account has an Exchange management role assignment of **UserApplication**.
 
-    To complete the integration, follow Steps 1-3 in [this article](https://docs.microsoft.com/skypeforbusiness/deploy/integrate-with-exchange-server/oauth-with-online-and-on-premises). Step 2 in the article includes the role assignment for **ArchiveApplication**. Although this isn't required for Teams delegation, it's required to archive Skype for Business Online Chat to an Exchange mailbox.
+    To complete the integration, follow Steps 1-5 in [this article](https://docs.microsoft.com/skypeforbusiness/deploy/integrate-with-exchange-server/oauth-with-online-and-on-premises). Step 1 is usually done the Exchange Hybrid Configuration wozard, Step 2 in the article includes the role assignment for **ArchiveApplication**.
 
     > [!NOTE]
     > This requirement applies to only the Teams delegation issue.
