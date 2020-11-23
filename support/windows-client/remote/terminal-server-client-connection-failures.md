@@ -17,8 +17,8 @@ ms.technology: RDS
 
 This article describes various symptoms for Remote Desktop Client connection failures.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 186645
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;186645
 
 ## Summary
 

@@ -17,8 +17,8 @@ ms.technology: ActiveDirectory
 
 This article describes the Lingering Object Liquidator (LoL) tool for finding and removing lingering objects.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 3141939
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;3141939
 
 ## Introduction
 

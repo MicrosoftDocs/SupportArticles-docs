@@ -17,8 +17,8 @@ ms.technology: ActiveDirectory
 
 This article helps resolve an issue in which the SYSVOL folder isn't replicated between domain controllers that are running Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 2986364
+_Original product version:_ &nbsp;Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Original KB number:_ &nbsp;2986364
 
 ## Symptoms
 

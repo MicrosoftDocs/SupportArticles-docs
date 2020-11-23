@@ -17,8 +17,8 @@ ms.technology: HighAvailability
 
 This article provides a solution to fix an error that you receive when managing cluster by using failover cluster management console.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 2462468
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;2462468
 
 ## Symptoms
 

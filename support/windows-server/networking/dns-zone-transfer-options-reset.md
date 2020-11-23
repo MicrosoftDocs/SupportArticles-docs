@@ -17,8 +17,8 @@ ms.technology: Networking
 
 This article provides help to solve an issue where DNS zone transfer options are reset after you change the zone replication scope.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 4050194
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;4050194
 
 ## Symptoms
 

@@ -1,6 +1,6 @@
 ---
 title: The LsaLookupSids function may return the old user name
-description: Describes a cache update delay in OS - Windows XP - Windows Server 2003 - Windows Vista - Windows Server 2008 - Windows 7 - Windows Server 2008 R2.
+description: Describes a cache update delay in OS.
 ms.data: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -17,8 +17,8 @@ ms.technology: ActiveDirectory
 
 This article describes a cache update delay in Windows.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 946358
+_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp;946358
 
 ## Symptoms
 
@@ -41,9 +41,9 @@ To work around this issue, disable the local SID cache on the domain member comp
 
 1. Open Registry Editor.
 
-    To do this in Windows XP or in Windows Server 2003, click **Start**, click **Run**, type `regedit`, and then click **OK**.
+    To do this in Windows XP or in Windows Server 2003, click **Start**, click **Run**, type **regedit**, and then click **OK**.
 
-    To do this in Windows Vista and newer, Click **Start**, type regedit in the **Start Search** box, and then press ENTER.
+    To do this in Windows Vista and newer, Click **Start**, type **regedit** in the **Start Search** box, and then press ENTER.
 2. Locate and then right-click the following registry subkey:
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa`  
 3. Point to **New**, and then click **DWORD Value**.

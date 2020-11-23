@@ -17,8 +17,8 @@ ms.technology: Performance
 
 This article discusses the compatibility considerations and limitations for 32-bit programs that are running on 64-bit versions of Windows Server 2003 and Windows XP.
 
-_Original product version:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 896456
+_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp;896456
 
 ## Summary
 

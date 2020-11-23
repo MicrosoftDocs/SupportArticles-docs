@@ -1,5 +1,5 @@
 ---
-title: Features and functions in version 1.1 of the Client-Side Caching Command-Line
+title: Features and functions in version 1.1 of the Client-Side Caching Command-Line Options command-line tool
 description: Provides information about the features and functions that are available in the offline file management tool CSCCMD 1.1.
 ms.data: 09/08/2020
 author: Deland-Han
@@ -17,8 +17,8 @@ ms.technology: Networking
 
 This article provides information about the features and functions that are available in the offline file management tool CSCCMD 1.1.
 
-_Original product version:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 884739
+_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp;884739
 
 ## Introduction
 

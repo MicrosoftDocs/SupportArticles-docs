@@ -17,8 +17,8 @@ ms.technology: WindowsAdministrationManagementDevelopment
 
 This article contains links and information for the installation packages for Windows PowerShell 1.0 for Windows Vista.
 
-_Original product version:_ &nbsp; Windows Vista  
-_Original KB number:_ &nbsp; 928439
+_Original product version:_ &nbsp;Windows Vista  
+_Original KB number:_ &nbsp;928439
 
 > [!NOTE]
 Support for Windows Vista without any service packs installed ended on April 13, 2010. To continue receiving security updates for Windows, make sure that you're running Windows Vista with Service Pack 2 (SP2). For more information, see the following Microsoft website:
@@ -94,13 +94,13 @@ Windows PowerShell 1.0 is fully localized in the following languages:
 
 To uninstall Windows PowerShell 1.0 in Windows Vista, follow these steps:  
 
-1. Click **Start**, in the **Start Search** box, type appwiz.cpl, and then press ENTER.
+1. Click **Start**, in the **Start Search** box, type **appwiz.cpl**, and then press ENTER.
 2. In the list of tasks, click **View Installed Updates**.
 3. In the **Uninstall an update** list, right-click **Windows PowerShell(TM) 1.0 (KB928439)**, click Uninstall, and then follow the instructions to remove Windows PowerShell 1.0.
 
 To disable Windows PowerShell 1.0, follow these steps:  
 
-1. Click **Start**, in the **Start Search** box, type appwiz.cpl, and then press ENTER.
+1. Click **Start**, in the **Start Search** box, type **appwiz.cpl**, and then press ENTER.
 2. In the list of tasks, click **Turn Windows features on or off**.
 3. Click to clear the check box for **Windows PowerShell**.
 

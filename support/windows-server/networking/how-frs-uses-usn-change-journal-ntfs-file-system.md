@@ -20,8 +20,8 @@ This article discusses how to troubleshoot journal_wrap errors on Sysvol and DFS
 > [!NOTE]
 > This article applies to Microsoft Windows 2000. Be aware that support for Windows 2000 ended on July 13, 2010. For more information about the Microsoft Support Lifecycle policy, see the following Microsoft website: [Microsoft Support Lifecycle Policy](https://docs.microsoft.com/lifecycle)
 
-_Original product version:_ &nbsp; Windows 2000  
-_Original KB number:_ &nbsp; 292438
+_Original product version:_ &nbsp;Windows 2000  
+_Original KB number:_ &nbsp;292438
 
 ## Summary
 

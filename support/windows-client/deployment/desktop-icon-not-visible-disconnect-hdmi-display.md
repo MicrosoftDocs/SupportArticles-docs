@@ -17,8 +17,8 @@ ms.technology: Deployment
 
 This article helps work around an issue where the Desktop icons aren't visible if the HDMI display is disconnected and the computer is rebooted.
 
-_Original product version:_ &nbsp; Windows 8  
-_Original KB number:_ &nbsp; 2864242
+_Original product version:_ &nbsp;Windows 8  
+_Original KB number:_ &nbsp;2864242
 
 ## Symptoms
 

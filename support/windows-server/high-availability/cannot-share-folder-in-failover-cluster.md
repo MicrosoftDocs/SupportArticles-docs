@@ -17,8 +17,8 @@ ms.technology: HighAvailability
 
 This article provides a solution to an error that occurs when you provision a shared folder on a cluster physical disk resource.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 947051
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;947051
 
 ## Beta Information
 

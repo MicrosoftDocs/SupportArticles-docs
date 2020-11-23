@@ -17,8 +17,8 @@ ms.technology: PrintFaxScan
 
 This article helps fix an issue where printing pauses after every 11 print jobs when printing through a line printer remote (LPR) port and event IDs 2004 and 4227 are logged.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 2003449
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;2003449
 
 ## Symptoms
 
