@@ -13,7 +13,7 @@ ms.reviewer: kaushika, tode
 ms.prod-support-area-path: Boot is slow
 ms.technology: Performance
 ---
-# Http <-> Crypto deadlock causes slow boot and service start failure on SSL-enabled W2K8 computers
+# Http <-> Crypto deadlock causes slow boot and service start failure on SSL-enabled
 
 This article provides a workaround for an issue that causes slow boot and services fail to start.
 
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2004121
 
 The following symptoms may occur:
 
-- Windows Server 2008 hangs after boot at Applying Computer Settings or Applying Security Policy
+- Windows Server hangs after boot at Applying Computer Settings or Applying Security Policy
 - Once the server finishes booting a user attempting to log on may hang at Applying User Settings
 - You may notice that services that are set to a **Start Type** of "Automatic" may not start  
 

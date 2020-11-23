@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 828760
 
 ## Symptoms
 
-When you run GPMC in a Microsoft Windows Server 2003 domain or in a Microsoft Windows 2000 domain, and then you click either **Default Domain Policy** or **Default Domain Controllers Policy**, you receive one of the following messages:
+When you run GPMC in a Microsoft Windows Server domain, and then you click either **Default Domain Policy** or **Default Domain Controllers Policy**, you receive one of the following messages:
 
 - If you have permissions to modify security on the Group Policy objects (GPOs), you receive the following message:  
     > The permissions for this GPO in the sysvol folder are inconsistent with those in Active Directory. It is recommended that these permissions be consistent. To change the permissions in SYSVOL to those in Active Directory, click OK
@@ -33,14 +33,6 @@ When you run GPMC in a Microsoft Windows Server 2003 domain or in a Microsoft Wi
 ## Cause
 
 This issue occurs because the access control list (ACL) on the Sysvol portion of the Group Policy object is set to inherit permissions from the parent folder.
-
-## Resolution
-
-### Windows Server 2003
-
-To resolve this problem on a Windows Server 2003-based computer, install Windows Server 2003 Service Pack 1 (SP1). For more information about how to download Windows Server 2003 Service Pack 1, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[889100](https://support.microsoft.com/help/889100) How to obtain the latest service pack for Windows Server 2003  
 
 ## Status
 

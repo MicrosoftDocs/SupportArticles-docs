@@ -17,9 +17,6 @@ ms.technology: RDS
 
 This article discusses the Terminal Server Administration tool, Connection Configuration.
 
-> [!NOTE]
-This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. For more information, see the [Microsoft Support Lifecycle Policy](https://docs.microsoft.com/lifecycle).  
-
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 186566
 
@@ -33,7 +30,7 @@ You can have one connection defined per transport per type per adapter. So, in a
 
 Citrix's Metaframe product may be installed on the Terminal Server so Citrix's ICA clients rather than Microsoft's RDP client can be used to connect to Terminal Server. In this tool and in User Manager, you will find options that do not apply unless Metaframe is installed on the Terminal Server.
 
-On a Citrix Winframe Server (based on Windows NT 3.51) or on a Terminal Server with Metaframe installed, customers have the option of creating different connection types for different ICA clients (for example, Macintosh clients, asynch clients, SPX clients).
+On a Citrix Winframe Server or on a Terminal Server with Metaframe installed, customers have the option of creating different connection types for different ICA clients (for example, Macintosh clients, asynch clients, SPX clients).
 
 Right-clicking a defined connection brings up a menu that allows you to edit the connection configuration
 
@@ -84,7 +81,7 @@ Setting these values here affects every Client that uses this connection. If you
 
 Low encryption = Microsoft 40-bit encryption from client to server only. Medium encryption = Same as low but applies in both directions. High encryption (Non-export) = 128-bit standard RC4 encryption High encryption (Export) = 40-bit standard RC4 encryption
 
-Use Default NT Authentication: This forces any Client on this connection to use Windows NT's MSGINA. Otherwise, a third-party GINA might be used.
+Use Default NT Authentication: This forces any Client on this connection to use MSGINA. Otherwise, a third-party GINA might be used.
 
 ### Autologon
 

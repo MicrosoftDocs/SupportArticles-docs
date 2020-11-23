@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
 ms.technology: WindowsSecurity
 ---
-# Crypt32 8 events continuously reported on Windows Server 2003, Windows Server 2003 R2, or Windows XP
+# Crypt32 8 events continuously reported
 
 This article provides help to solve an issue where Crypt32 event 8 is continuously reported in the Application log.
 
@@ -75,11 +75,11 @@ There are three options for handling these events.
 
 ## More information
 
-On Windows Vista and higher, Microsoft requires that any software registers and interacts with the Windows Security Center (WSC) that's signed with a digital certificate that chains up to an internal Microsoft code signing root certification authority (CA). This CA is called the Microsoft Code Verification Root CA (MSCV). Microsoft has cross-certified the MSCV with multiple third-party code-signing CAs allowing these vendors to continue issuing valid code-signing certificates to their customers.
+Microsoft requires that any software registers and interacts with the Windows Security Center (WSC) that's signed with a digital certificate that chains up to an internal Microsoft code signing root certification authority (CA). This CA is called the Microsoft Code Verification Root CA (MSCV). Microsoft has cross-certified the MSCV with multiple third-party code-signing CAs allowing these vendors to continue issuing valid code-signing certificates to their customers.
 
-The MSCV certificate is embedded in the kernel on Windows Vista and higher, but it is not available as part of the Automatic Trusted Root Update service. Whenever the digital signature on one of these applications is checked on Windows XP, Windows Server 2003 or Windows Server 2003 R2, the chain of the vendor's code signing certificate is built up to both the root CA of the third-party that issued the code signing certificate and, by virtue of the cross-CA certificate issued by Microsoft, also to the MSCV. In short, two chains are built and the validity of both are verified.
+The MSCV certificate is embedded in the kernel, but it is not available as part of the Automatic Trusted Root Update service. Whenever the digital signature on one of these applications is checked, the chain of the vendor's code signing certificate is built up to both the root CA of the third-party that issued the code signing certificate and, by virtue of the cross-CA certificate issued by Microsoft, also to the MSCV. In short, two chains are built and the validity of both are verified.
 
-The MSCV certificate is not embedded in the kernel on Windows XP, Windows Server 2003 or Windows Server 2003 R2 so Windows determines that that CA is not trusted. If Automatic Trusted Root Updates are enabled, then Windows will attempt to contact Windows Update to determine if the MSCV certificate is published by Microsoft as part of the Trusted Root Program. The MSCV is not available through that program, so this lookup fails.
+The MSCV certificate is not embedded in the kernel so Windows determines that that CA is not trusted. If Automatic Trusted Root Updates are enabled, then Windows will attempt to contact Windows Update to determine if the MSCV certificate is published by Microsoft as part of the Trusted Root Program. The MSCV is not available through that program, so this lookup fails.
 
 Windows quickly determines that the MSCV isn't trusted and that chain is eliminated. This leaves the other chain that leads to a third-party root CA, which is probably valid, allowing the application's signature to be successfully validated. Thus, there are no errors or failures associated with the application.
 

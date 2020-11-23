@@ -13,12 +13,9 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Desktop Shell
 ms.technology: ShellExperience
 ---
-# Disabling Autoplay through Group Policy or the registry will cause HotStart buttons to not function on Microsoft Windows 7 and Microsoft Windows Vista
+# Disabling Autoplay through Group Policy or the registry will cause HotStart buttons to not function
 
 This article provides a solution to an issue where HotStart buttons doesn't work when Autoplay is disabled.
-
-> [!NOTE]
-> Support for Windows Vista Service Pack 1 (SP1) ends on July 12, 2011. To continue receiving security updates for Windows, make sure you're running Windows Vista with Service Pack 2 (SP2). For more information, see this Microsoft web page: [Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs).  
 
 _Original product version:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2328787
@@ -27,7 +24,7 @@ _Original KB number:_ &nbsp; 2328787
 
 Consider the following scenario:
 
-- You have a Windows 7 or Vista system running on a laptop with Hotstart buttons
+- You have a Windows 7 system running on a laptop with Hotstart buttons
 
 - There is a policy set in Group Policy to disable Autoplay on all drives
 
