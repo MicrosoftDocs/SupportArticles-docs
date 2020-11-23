@@ -904,15 +904,13 @@
   items:
   - name: Windows 7 EoS FAQ
     href: ./windows-7-eos-faq/windows-7-eos-faq-overview.md
-  - name: IT Pro FAQ about the end of support for Windows 7
-    href: ./windows-7-eos-faq/windows-7-end-support-faq.md
-  - name: FAQ about the end of support for Windows 7
+  - name: Windows 7 end of support
     href: ./windows-7-eos-faq/windows-7-end-support-faq-general.md
-  - name: FAQ about Extended Security Updates for Windows 7
+  - name: Windows 7 ESU
     href: ./windows-7-eos-faq/windows-7-extended-security-updates-faq.md
-  - name: FAQ about Windows 7 ESU offers for E5 customers
+  - name: Windows 7 ESU offers for E5 customers
     href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.md
-  - name: Troubleshoot issues in Extended Security Updates
+  - name: Troubleshoot issues in ESU
     href: ./windows-7-eos-faq/troubleshoot-extended-security-updates-issues.md
 - name: Windows Security
   items:
