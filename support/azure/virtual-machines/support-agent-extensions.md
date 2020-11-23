@@ -25,8 +25,8 @@ Support for third-party VM agent extensions is provided directly by the vendor.
 |MSEnterpriseApplication|System Center Role Authoring Extension|Supported by Microsoft| [https://manage.windowsazure.com/?getsupport=true](https://manage.windowsazure.com/?getsupport=true) |
 |BGInfo|Background Info extension|Supported by Microsoft| [https://manage.windowsazure.com/?getsupport=true](https://manage.windowsazure.com/?getsupport=true) |
 |VMAccessagent|VM Extension to enable Remote Desktop and password reset|Supported by Microsoft| [https://manage.windowsazure.com/?getsupport=true](https://manage.windowsazure.com/?getsupport=true) |
-|Chefclient|Chef software agent|Supported by Chef software|http://www.getchef.com/support/|
-|PuppetEnterpriseAgent|PuppetLabs agent|Supported by PuppetLabs| [http://puppetlabs.com/solutions/microsoft](http://puppetlabs.com/solutions/microsoft) |
+|Chefclient|Chef software agent|Supported by Chef software|[https://www.chef.io/support/](https://www.chef.io/support/)|
+|PuppetEnterpriseAgent|PuppetLabs agent|Supported by PuppetLabs| [https://support.puppet.com/hc/](https://support.puppet.com/hc/)|
 |Symantec Endpoint Protection|Symantec antivirus|Supported by Symantec| [http://www.symantec.com/business/support/index?page=contactsupport&key=54619](http://www.symantec.com/business/support/index?page=contactsupport&key=54619) |
 |Trend Micro Deep Security Agent|Trend Micro antivirus|Supported by Trend Micro| [http://www.trendmicro.com/us/business/saas/deep-security-as-a-service/index.html](http://www.trendmicro.com/us/business/saas/deep-security-as-a-service/index.html) |
 |||||
