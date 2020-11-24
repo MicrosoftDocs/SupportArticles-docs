@@ -30,7 +30,7 @@ This article provides step-by-step instructions for how to implement Service for
 
 > [!NOTE]  
 > The workflows that are described in this article are is specific to a particular environment. The same workflows may not work for a different situation. However, the principles remain the same. The following figure summarizes this environment:
-> :::image type="content" source="./media/configure-kerberos-constrained-delegation/constrained-delegation-environment.png" alt-text="temporary":::
+> :::image type="content" source="./media/configure-kerberos-constrained-delegation/constrained-delegation-environment.png" alt-text="Types of servers in the example environment.":::
 
 ## Scenario 1: Configure constrained delegation for a custom service account
 
@@ -70,13 +70,13 @@ To enable the web enrollment pages, create a domain certificate for the website,
 2. In the actions pane, select **Create a Domain Certificate**.
 3. After the certificate is created, select **Default Web Site**, and then select **Bindings**.
 4. Make sure that **Port** is set to **443**, and then under **SSL certificate**, select the certificate that you created in step 2. Select **OK** to bind the certificate to port 443.
-    :::image type="content" source="./media/configure-kerberos-constrained-delegation/add-site-binding.png" alt-text="Add certificate and bind it to port 443":::
+    :::image type="content" source="./media/configure-kerberos-constrained-delegation/add-site-binding.png" alt-text="Add certificate and bind it to port 443 for scenario 1":::
 
 ### 4. Configure the Web Enrollment front-end server to use the service account
 
 > [!IMPORTANT]  
 > Make sure that the service account is part of either the **local administrators** or **IIS_Users** group on the web server.
-> :::image type="content" source="./media/configure-kerberos-constrained-delegation/local-users-groups.png" alt-text="Service account":::
+> :::image type="content" source="./media/configure-kerberos-constrained-delegation/local-users-groups.png" alt-text="Groups for the service account":::
 
 1. Right-click **DefaultAppPool**, and then select **Advanced Settings**.
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/advanced-settings.png" alt-text="Configure Application pool Advanced Settings.":::
@@ -141,7 +141,7 @@ To enable the web enrollment pages, create a domain certificate for the website,
 ### 3. Configure the Web Enrollment front-end server to use the NetworkService account
 
 1. Right-click **DefaultAppPool**, and then select **Advanced Settings**.
-   :::image type="content" source="media/constrained-delegation-iis-apppool.png" alt-text="temporary":::
+   :::image type="content" source="./media/configure-kerberos-constrained-delegation/advanced-settings.png" alt-text="Select Advanced Settings  of the default app pool.":::
 2. Select **Process Model** > **Identity**. Make sure that **Built-in account** is selected, and then select **NetworkService**.
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/iis-apppool-id-netserv.png" alt-text="Configure the Application Pool Identity as the built-in NetworkService account.":::
 3. Select **Load User Profile**, and then make sure that it is set to **True**.
