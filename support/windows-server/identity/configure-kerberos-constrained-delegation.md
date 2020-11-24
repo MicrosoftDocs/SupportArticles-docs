@@ -1,9 +1,9 @@
 ---
-title: Configure Kerberos Constrained Delegation
-description: Discusses how to implement S4U2Proxy and Constrained Delegation on a custom service account for Web Enrollment proxy pages.
-ms.date: 09/18/2020
-author: Deland-Han 
-ms.author: delhan
+title: How to configure Kerberos Constrained Delegation for Web Enrollment proxy pages
+description: Discusses how to implement S4U2Proxy and Constrained Delegation on a custom service account or the NetworkServices account for Web Enrollment proxy pages.
+ms.date: 11/24/2020
+author: Teresa-Motiv
+ms.author: v-tea
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,8 +12,9 @@ localization_priority: medium
 ms.reviewer: kaushika, jarrettr, wincicadsec, Jitesh.Thakur
 ms.prod-support-area-path: Active Directory domain or forest functional level updates
 ms.technology: ActiveDirectory
+keywords: KCD, Kerberos constrained delegation, s4u2proxy, s4u2self, service account, computer account, machine account
 ---
-# How to configure Kerberos Constrained Delegation (S4U2Proxy or Kerberos Only) on a custom service account for Web Enrollment proxy pages
+# How to configure Kerberos Constrained Delegation for Web Enrollment proxy pages
 
 The article provides step-by-step instructions to implement Service for User to Proxy (S4U2Proxy) or Kerberos Only Constrained Delegation on a custom service account for Web Enrollment proxy pages.
 
@@ -22,72 +23,137 @@ _Original KB number:_ &nbsp; 4494313
 
 ## Summary
 
-> [!NOTE]
-> The workflow that's included in this article is specific to a particular scenario. The same workflow may not work for a different situation. However, the principles remain the same.
+This article provides step-by-step instructions for how to implement Service for User to Proxy (S4U2Proxy) or Kerberos-only constrained delegation for Web Enrollment proxy pages. This article describes two configuration scenarios:
 
-## Configuring the Delegation in Active Directory
+- Configuring delegation for a custom service account
+- Configuring delegation to the **NetworkService** account
 
-1. See the following image for guidance to configure the HTTP SPNs on the service account for the front-end web server.
+> [!NOTE]  
+> The workflows that are described in this article are is specific to a particular environment. The same workflows may not work for a different situation. However, the principles remain the same. The following figure summarizes this environment:
+> :::image type="content" source="./media/configure-kerberos-constrained-delegation/constrained-delegation-environment.png" alt-text="temporary":::
 
-    :::image type="content" source="./media/configure-kerberos-constrained-delegation/active-directory-users-computers.png" alt-text="Guidance to configure the HTTP SPNs.":::
+## Scenario 1: Configure constrained delegation for a custom service account
 
-    **Note** You can also run the **setspn -s SPN Accountname**  command. For example, run the following command:
+This section describes how to implement Service for User to Proxy (S4U2Proxy) or Kerberos-only constrained delegation when you use a custom service account for the Web Enrollment proxy pages.
 
-    ```console
-    setspn -s HTTP/webenroll2016.contoso.com web_svc
-    ```
+### 1. Add an SPN to the service account
 
-2. Configure S4U2Proxy (Kerberos Only) Constrained Delegation on the service account.
+Associate the service account with a service principle name (SPN). To do this, follow these steps:
 
-    :::image type="content" source="./media/configure-kerberos-constrained-delegation/web-svc-settings.png" alt-text="Configure web_svc properties":::
+1. In Active Directory Users and Computers, connect to the domain, and then select **PKI** > **PKI Users**.
+2. Right-click the service account (for example, web_svc) and then select **Properties**.
+3. Select **Attribute Editor** > **servicePrincipalName**.
+4. Type the new SPN string, and then select **Add** (as shown in the following figure). When finished, select **OK**.
+   :::image type="content" source="./media/configure-kerberos-constrained-delegation/active-directory-users-computers.png" alt-text="Guidance to configure the HTTP SPNs.":::
+   > [!NOTE]  
+   > You can also use Windows PowerShell to configure the SPN. to do this, open an elevated PowerShell window and then run **setspn -s SPN Accountname**. For example, run the following command:
+   > ```powershell
+   > setspn -s HTTP/webenroll2016.contoso.com web_svc
+   > ```
 
-3. On the Machine Account, set S4U2Self (Protocol Transition) Constrained Delegation.‎
+### 2. Configure the delegation
 
-    :::image type="content" source="./media/configure-kerberos-constrained-delegation/set-s4u2self-contained-delegation.png" alt-text="Set up delegation":::
+1. In the Properties of the service account (as described in the previous procedure), select **Delegation** > **Trust this user for delegation to specified services only**. Make sure that **Use Kerberos only** is selected.
+   :::image type="content" source="./media/configure-kerberos-constrained-delegation/web-svc-settings.png" alt-text="Configure web_svc properties":::
+   This step configures S4U2Proxy (Kerberos only) constrained delegation on the service account.
+2. Close the dialog box, and in the console tree, select **Computers**, and then select the computer account of the Web Enrollment front-end server. This account is also known as the machine account.
+3. Right-click the computer account, and then select **Properties** > **Delegation** > **Trust this computer for delegation to specified services only**. Select **Use any authentication protocol**.
+   :::image type="content" source="./media/configure-kerberos-constrained-delegation/set-s4u2self-contained-delegation.png" alt-text="Set up delegation":::
+   This step configures S4U2self (Protocol Transition) constrained delegation on the computer account.
 
-## Configuring web enrollment for HTTPS
+### 3. Create and bind the SSL certificate for web enrollment
 
-To enable web enrollment pages to work, create a domain certificate for the website, and then bind it to the default first site. To do this, follow these steps:
+To enable the web enrollment pages, create a domain certificate for the website, and then bind it to the default first site. To do this, open Internet Information Services (IIS) Manager and follow these steps:
 
-1. Click \<HOSTNAME>, and select **Server Certificates**.
-
-    :::image type="content" source="./media/configure-kerberos-constrained-delegation/select-server-certificate.png" alt-text="Add certificate":::
-
-2. In the actions pane on the right, select **Create a Domain Certificate**.
-3. After the certificate is created, select **Default Web Site** on the left side, and then select **Bindings** on the right side.
-4. Add the certificate that you enrolled earlier, and bind it to port 443.
-
+1. In the console tree, select ***HostName***, and then in the actions pane, select **Server Certificates**. *HostName* is the name of the front-end web server.
+   :::image type="content" source="./media/configure-kerberos-constrained-delegation/select-server-certificate.png" alt-text="Add certificate":::
+2. In the actions pane, select **Create a Domain Certificate**.
+3. After the certificate is created, select **Default Web Site**, and then select **Bindings**.
+4. Make sure that **Port** is set to **443**, and then under **SSL certificate**, select the certificate that you created in step 2. Select **OK** to bind the certificate to port 443.
     :::image type="content" source="./media/configure-kerberos-constrained-delegation/add-site-binding.png" alt-text="Add certificate and bind it to port 443":::
 
-## Configuring the service account on the front end (web server)
+### 4. Configure the Web Enrollment front-end server to use the service account
 
-Make sure that the service account is part of either the **local administrators** or **IIS_Users** group on the web server.
-:::image type="content" source="./media/configure-kerberos-constrained-delegation/local-users-groups.png" alt-text="Service account":::
+> [!IMPORTANT]  
+> Make sure that the service account is part of either the **local administrators** or **IIS_Users** group on the web server.
+> :::image type="content" source="./media/configure-kerberos-constrained-delegation/local-users-groups.png" alt-text="Service account":::
 
-‎After you install the web enrollment role on the server, start IIS Manager, and then configure the service account for the default App Pool.
-
-1. Right-click **DefaultAppPool**, and then click **Advanced Settings**.
-
-    :::image type="content" source="./media/configure-kerberos-constrained-delegation/advanced-settings.png" alt-text="Configure Application pools":::
-
-2. In the **Process Model** > **Identity** section of the setting, add the service account.
-
-    :::image type="content" source="./media/configure-kerberos-constrained-delegation/add-custom-account.png" alt-text="Application Pool Identity":::
-
-3. Set the **Load User Profile** setting to **True**.
-
-    :::image type="content" source="./media/configure-kerberos-constrained-delegation/load-user-profile.png" alt-text="Set Load User Profile setting to True":::
-
+1. Right-click **DefaultAppPool**, and then select **Advanced Settings**.
+   :::image type="content" source="./media/configure-kerberos-constrained-delegation/advanced-settings.png" alt-text="Configure Application pool Advanced Settings.":::
+2. Select **Process Model** > **Identity**, select **Custom account**, and then select **Set**. Select the service account.
+   :::image type="content" source="./media/configure-kerberos-constrained-delegation/add-custom-account.png" alt-text="Configure the Application Pool Identity as the custom service account.":::
+3. Select **Load User Profile**, and then make sure that it is set to **True**.
+   :::image type="content" source="./media/configure-kerberos-constrained-delegation/load-user-profile.png" alt-text="Set the Load User Profile setting to True.":::
 4. Restart the computer.
 
-## References
+## Scenario 2: Configure constrained delegation on the NetworkService account
 
-For more information, see the following articles:
+This section describes how to implement S4U2Proxy or Kerberos-only constrained delegation when your use the NetworkService account for the Web Enrollment proxy pages.
 
-[Authenticating Web Application Users](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759501%28v%3dws.10%29)
+### Optional step: Configure a name to use for connections
 
-For more information about Depth S4U protocol, see the following articles:
+You can assign a name to the Web Enrollment role for clients to use to connect. This configuration means that incoming requests do not need to know the computer name of the Web Enrollment front-end server, or other routing information such as the DNS canonical name (CNAME).
 
-[[MS-SFU]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol](https://docs.microsoft.com/openspecs/windows_protocols/ms-sfu/3bff5864-8135-400e-bdd9-33b552051d94)  
-[4.1 S4U2self Single Realm Example](https://docs.microsoft.com/openspecs/windows_protocols/ms-sfu/6a8dfc0c-2d32-478a-929f-5f9b1b18a169)  
-[4.3 S4U2Proxy Example](https://docs.microsoft.com/openspecs/windows_protocols/ms-sfu/c920c148-8a9c-42e9-b8e9-db5755cd281b)
+For example, suppose the computer name of your Web Enrollment server is WEBENROLLMAC (in the Contoso domain). You want incoming connections to use the name ContosoWebEnroll instead. In this case, the connection URL would be the following:
+
+> https://contosowebenroll.contoso.com/certsrv
+
+Instead of the following:
+
+> https://WEBENROLLMAC.contoso.com/certsrv
+
+To use such a configuration, follow these steps:
+
+1. In the DNS zone file for the domain, create an alias record or a host name record that maps the new connection name to the Web Enrollment role IP address. Use the Ping utility to test the routing configuration.
+   In the example that was previously discussed, the contoso.com zone file has an alias record that maps ContosoWebEnroll to the IP address of the Web Enrollment role.
+2. Configure the new name as a service principle name for the Web Enrollment front-end server. To do this, follow these steps:
+   1. In Active Directory Users and Computers, connect to the domain, and then select **Computers**.
+   2. Right-click the computer account of the Web Enrollment front-end server, and then select **Properties**. This account is also known as the machine account.
+   3. Select **Attribute Editor** > **servicePrincipalName**.
+   4. Type **HTTP/*ConnectionName*.*DomainName*.com**, select **Add**, and then select **OK**.
+        > [!NOTE]  
+        > In this string, *ConnectionName* is the new name that you have defined, and *DomainName* is the name of the domain.
+        > In the example, the string is **HTTP/ContosoWebEnroll.contoso.com**.
+        :::image type="content" source="./media/configure-kerberos-constrained-delegation/aduc-editor-add-spn.png" alt-text="Add an SPN to the front-end server computer account.":::
+
+### 1. Configure the delegation
+
+1. If you haven't already done so, in Active Directory Users and Computers, connect to the domain, and then select **Computers**.
+2. Right-click the computer account of the Web Enrollment front-end server, and then select **Properties**. This account is also known as the machine account.
+3. Select **Delegation**, and then select **Trust this computer for delegation to specified services only**.
+   > [!NOTE]  
+   > If you can guarantee that clients will always use Kerberos authentication when they connect to this server, then select **Use Kerberos only**.
+   > If some clients will use other authentication methods, such as NTLM or forms-based authentication, select **Use any authentication protocol**.
+
+   :::image type="content" source="./media/configure-kerberos-constrained-delegation/aduc-props-delegation.png" alt-text="Configure delegation on the web server computer account.":::
+
+### 2. Create and bind the SSL certificate for web enrollment
+
+To enable the web enrollment pages, create a domain certificate for the website, and then bind it to the default first site. To do this, open Internet Information Services (IIS) Manager and follow these steps:
+
+1. In the console tree, select ***HostName***, and then in the actions pane, select **Server Certificates**. *HostName* is the name of the front-end web server.
+   :::image type="content" source="./media/configure-kerberos-constrained-delegation/select-server-certificate.png" alt-text="Add certificate":::
+2. In the actions pane, select **Create a Domain Certificate**.
+3. After the certificate is created, select **Default Web Site**, and then select **Bindings**.
+4. Make sure that **Port** is set to **443**, and then under **SSL certificate**, select the certificate that you created in step 2. Select **OK** to bind the certificate to port 443.
+   :::image type="content" source="./media/configure-kerberos-constrained-delegation/bind-server-cert.png" alt-text="Add certificate and bind it to port 443":::
+
+### 3. Configure the Web Enrollment front-end server to use the NetworkService account
+
+1. Right-click **DefaultAppPool**, and then select **Advanced Settings**.
+   :::image type="content" source="media/constrained-delegation-iis-apppool.png" alt-text="temporary":::
+2. Select **Process Model** > **Identity**. Make sure that **Built-in account** is selected, and then select **NetworkService**.
+   :::image type="content" source="./media/configure-kerberos-constrained-delegation/iis-apppool-id-netserv.png" alt-text="Configure the Application Pool Identity as the built-in NetworkService account.":::
+3. Select **Load User Profile**, and then make sure that it is set to **True**.
+   :::image type="content" source="./media/configure-kerberos-constrained-delegation/netserv-loaduserprf.png" alt-text="Set Load User Profile to True.":::
+4. Restart the IIS Service.
+
+## Related topics
+
+For more information about these processes, see [Authenticating Web Application Users](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759501%28v%3dws.10%29).
+
+For more information about the S4U2self and S4U2proxy protocol extensions, see the following articles:
+
+- [[MS-SFU]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol](https://docs.microsoft.com/openspecs/windows_protocols/ms-sfu/3bff5864-8135-400e-bdd9-33b552051d94)  
+- [4.1 S4U2self Single Realm Example](https://docs.microsoft.com/openspecs/windows_protocols/ms-sfu/6a8dfc0c-2d32-478a-929f-5f9b1b18a169)  
+- [4.3 S4U2proxy Example](https://docs.microsoft.com/openspecs/windows_protocols/ms-sfu/c920c148-8a9c-42e9-b8e9-db5755cd281b)
