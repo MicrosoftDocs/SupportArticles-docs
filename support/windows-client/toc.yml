@@ -903,7 +903,7 @@
 - name: Windows 7 EoS FAQ
   items:
   - name: Windows 7 EoS FAQ
-    href: ./windows-7-eos-faq/windows-7-eos-faq-overview.md
+    href: ./windows-7-eos-faq/windows-7-end-support-faq.md
   - name: Windows 7 end of support
     href: ./windows-7-eos-faq/windows-7-end-support-faq-general.md
   - name: Windows 7 ESU
