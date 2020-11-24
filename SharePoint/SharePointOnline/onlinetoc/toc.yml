@@ -209,6 +209,8 @@
       href: ../Security/problem-with-your-account.md
   - name: Sharing and Permissions
     items:
+    - name: '"Access Denied due to organizational policies" error in SharePoint or OneDrive'
+      href: ../sharing-and-permissions/access-denied-due-to-org-policies.md
     - name: Error when trying to access SharePoint Online or OneDrive for Business
       href: ../sharing-and-permissions/access-denied-sharepoint-error.md
     - name: Error when an external user tries to access SharePoint Online or OneDrive for Business
