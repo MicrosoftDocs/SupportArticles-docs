@@ -29,7 +29,7 @@ This article provides step-by-step instructions for how to implement Service for
 - Configuring delegation to the **NetworkService** account
 
 > [!NOTE]  
-> The workflows that are described in this article are is specific to a particular environment. The same workflows may not work for a different situation. However, the principles remain the same. The following figure summarizes this environment:
+> The workflows that are described in this article are is specific to a particular environment. The same workflows may not work for a different situation. However, the principles remain the same. The following figure summarizes this environment:  
 > :::image type="content" source="./media/configure-kerberos-constrained-delegation/constrained-delegation-environment.png" alt-text="Types of servers in the example environment.":::
 
 ## Scenario 1: Configure constrained delegation for a custom service account
@@ -43,7 +43,7 @@ Associate the service account with a service principle name (SPN). To do this, f
 1. In Active Directory Users and Computers, connect to the domain, and then select **PKI** > **PKI Users**.
 2. Right-click the service account (for example, web_svc) and then select **Properties**.
 3. Select **Attribute Editor** > **servicePrincipalName**.
-4. Type the new SPN string, and then select **Add** (as shown in the following figure). When finished, select **OK**.
+4. Type the new SPN string, and then select **Add** (as shown in the following figure). When finished, select **OK**.  
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/active-directory-users-computers.png" alt-text="Guidance to configure the HTTP SPNs.":::
    > [!NOTE]  
    > You can also use Windows PowerShell to configure the SPN. to do this, open an elevated PowerShell window and then run **setspn -s SPN Accountname**. For example, run the following command:
@@ -53,11 +53,11 @@ Associate the service account with a service principle name (SPN). To do this, f
 
 ### 2. Configure the delegation
 
-1. In the Properties of the service account (as described in the previous procedure), select **Delegation** > **Trust this user for delegation to specified services only**. Make sure that **Use Kerberos only** is selected.
+1. In the Properties of the service account (as described in the previous procedure), select **Delegation** > **Trust this user for delegation to specified services only**. Make sure that **Use Kerberos only** is selected.  
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/web-svc-settings.png" alt-text="Configure web_svc properties":::
-   This step configures S4U2Proxy (Kerberos only) constrained delegation on the service account.
+   This step configures S4U2proxy (Kerberos only) constrained delegation on the service account.
 2. Close the dialog box, and in the console tree, select **Computers**, and then select the computer account of the Web Enrollment front-end server. This account is also known as the machine account.
-3. Right-click the computer account, and then select **Properties** > **Delegation** > **Trust this computer for delegation to specified services only**. Select **Use any authentication protocol**.
+3. Right-click the computer account, and then select **Properties** > **Delegation** > **Trust this computer for delegation to specified services only**. Select **Use any authentication protocol**.  
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/set-s4u2self-contained-delegation.png" alt-text="Set up delegation":::
    This step configures S4U2self (Protocol Transition) constrained delegation on the computer account.
 
@@ -65,24 +65,24 @@ Associate the service account with a service principle name (SPN). To do this, f
 
 To enable the web enrollment pages, create a domain certificate for the website, and then bind it to the default first site. To do this, open Internet Information Services (IIS) Manager and follow these steps:
 
-1. In the console tree, select ***HostName***, and then in the actions pane, select **Server Certificates**. *HostName* is the name of the front-end web server.
+1. In the console tree, select ***HostName***, and then in the actions pane, select **Server Certificates**. *HostName* is the name of the front-end web server.  
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/select-server-certificate.png" alt-text="Add certificate":::
 2. In the actions pane, select **Create a Domain Certificate**.
 3. After the certificate is created, select **Default Web Site**, and then select **Bindings**.
-4. Make sure that **Port** is set to **443**, and then under **SSL certificate**, select the certificate that you created in step 2. Select **OK** to bind the certificate to port 443.
+4. Make sure that **Port** is set to **443**, and then under **SSL certificate**, select the certificate that you created in step 2. Select **OK** to bind the certificate to port 443.  
     :::image type="content" source="./media/configure-kerberos-constrained-delegation/add-site-binding.png" alt-text="Add certificate and bind it to port 443 for scenario 1":::
 
 ### 4. Configure the Web Enrollment front-end server to use the service account
 
 > [!IMPORTANT]  
-> Make sure that the service account is part of either the **local administrators** or **IIS_Users** group on the web server.
+> Make sure that the service account is part of either the **local administrators** or **IIS_Users** group on the web server.  
 > :::image type="content" source="./media/configure-kerberos-constrained-delegation/local-users-groups.png" alt-text="Groups for the service account":::
 
-1. Right-click **DefaultAppPool**, and then select **Advanced Settings**.
+1. Right-click **DefaultAppPool**, and then select **Advanced Settings**.  
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/advanced-settings.png" alt-text="Configure Application pool Advanced Settings.":::
-2. Select **Process Model** > **Identity**, select **Custom account**, and then select **Set**. Select the service account.
+2. Select **Process Model** > **Identity**, select **Custom account**, and then select **Set**. Select the service account.  
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/add-custom-account.png" alt-text="Configure the Application Pool Identity as the custom service account.":::
-3. Select **Load User Profile**, and then make sure that it is set to **True**.
+3. Select **Load User Profile**, and then make sure that it is set to **True**.  
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/load-user-profile.png" alt-text="Set the Load User Profile setting to True.":::
 4. Restart the computer.
 
