@@ -290,8 +290,6 @@
       href: ./deployment/cant-enter-uefi-firmware-setup.md
     - name: Can't turn off a computer from Audit mode
       href: ./deployment/fail-to-turn-off-computer-from-audit-mode.md
-    - name: Can't upgrade Windows when PowerShell is installed
-      href: ./deployment/cannot-upgrade-windows-with-powershell-installed.md
     - name: Computer screen goes black during setup
       href: ./deployment/computer-screen-black-during-installation.md
     - name: Customize default local user profile
