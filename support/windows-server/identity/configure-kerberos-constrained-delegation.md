@@ -54,7 +54,7 @@ Associate the service account with a service principle name (SPN). To do this, f
 ### 2. Configure the delegation
 
 1. In the Properties of the service account (as described in the previous procedure), select **Delegation** > **Trust this user for delegation to specified services only**. Make sure that **Use Kerberos only** is selected.  
-   :::image type="content" source="./media/configure-kerberos-constrained-delegation/web-svc-settings.png" alt-text="Configure web_svc properties":::
+   :::image type="content" source="./media/configure-kerberos-constrained-delegation/web-svc-settings.png" alt-text="Configure web_svc properties":::  
    This step configures S4U2proxy (Kerberos only) constrained delegation on the service account.
 2. Close the dialog box, and in the console tree, select **Computers**, and then select the computer account of the Web Enrollment front-end server. This account is also known as the machine account.
 3. Right-click the computer account, and then select **Properties** > **Delegation** > **Trust this computer for delegation to specified services only**. Select **Use any authentication protocol**.  
@@ -83,7 +83,7 @@ To enable the web enrollment pages, create a domain certificate for the website,
 2. Select **Process Model** > **Identity**, select **Custom account**, and then select **Set**. Select the service account.  
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/add-custom-account.png" alt-text="Configure the Application Pool Identity as the custom service account.":::
 3. Select **Load User Profile**, and then make sure that it is set to **True**.  
-   :::image type="content" source="./media/configure-kerberos-constrained-delegation/load-user-profile.png" alt-text="Set the Load User Profile setting to True.":::
+   :::image type="content" source="./media/configure-kerberos-constrained-delegation/load-user-profile.png" alt-text="Set the Load User Profile setting to True.":::  
 4. Restart the computer.
 
 ## Scenario 2: Configure constrained delegation on the NetworkService account
@@ -125,7 +125,7 @@ To use such a configuration, follow these steps:
    > If you can guarantee that clients will always use Kerberos authentication when they connect to this server, then select **Use Kerberos only**.
    > If some clients will use other authentication methods, such as NTLM or forms-based authentication, select **Use any authentication protocol**.
 
-   :::image type="content" source="./media/configure-kerberos-constrained-delegation/aduc-props-delegation.png" alt-text="Configure delegation on the web server computer account.":::
+   :::image type="content" source="./media/configure-kerberos-constrained-delegation/aduc-props-delegation.png" alt-text="Configure delegation on the web server computer account.":::  
 
 ### 2. Create and bind the SSL certificate for web enrollment
 
