@@ -17,8 +17,8 @@ ms.technology: PrintFaxScan
 
 This article provides workarounds for an issue where two-sided (duplex) printing options can't be set for applications.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
-_Original KB number:_ &nbsp; 3022505
+_Original product version:_ &nbsp;Windows 10 - all editions  
+_Original KB number:_ &nbsp;3022505
 
 ## Symptoms
 

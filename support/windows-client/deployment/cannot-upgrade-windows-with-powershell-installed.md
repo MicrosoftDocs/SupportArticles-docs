@@ -20,8 +20,8 @@ This article provides a workaround for an issue where you can't upgrade a Window
 > [!NOTE]
 > Support for Windows Vista Service Pack 1 (SP1) ends on July 12, 2011. To continue receiving security updates for Windows, make sure you're running Windows Vista with Service Pack 2 (SP2). For more information, see this Microsoft web page: [Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs).  
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 950376
+_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp;950376
 
 ## Symptoms
 
@@ -47,7 +47,7 @@ To uninstall Windows PowerShell 1.0, follow the steps that are appropriate to yo
 
 #### Windows Vista
 
-1. Click **Start**, type appwiz.cpl in the **Start Search** box, and then press ENTER.
+1. Click **Start**, type **appwiz.cpl** in the **Start Search** box, and then press ENTER.
 2. In the list of tasks, click **View Installed Updates**.
 3. In the **Uninstall an update** list, right-click **Windows PowerShell(TM) 1.0 (KB928439)**, and then click **Uninstall**.
 4. Follow the instructions to uninstall Windows PowerShell 1.0.
@@ -57,7 +57,7 @@ To uninstall Windows PowerShell 1.0, follow the steps that are appropriate to yo
 
 #### Windows Server 2003
 
-1. Click **Start**, click **Run**, type appwiz.cpl, and then click **OK**.
+1. Click **Start**, click **Run**, type **appwiz.cpl**, and then click **OK**.
 2. Click to select the **Show updates** check box.
 3. In the **Currently installed programs and updates** list, find the entry for the hotfix that installed Windows PowerShell 1.0. Depending on the installation package that was used, this entry resembles one of the following:
    - Hotfix for Windows Server 2003 (KB926139)
@@ -75,7 +75,7 @@ C:\WINNT\$NtUninstallKB926139$\spuninst\spuninst.exe. Note You may have to resta
 
 #### Windows XP
 
-1. Click **Start**, click **Run**, type appwiz.cpl, and then click **OK**.
+1. Click **Start**, click **Run**, type **appwiz.cpl**, and then click **OK**.
 2. Click to select the **Show updates** check box.
 3. In the **Currently installed programs and updates** list, click **Windows PowerShell(TM) 1.0**, and then click **Remove**.
 4. Follow the instructions to uninstall Windows PowerShell 1.0.  

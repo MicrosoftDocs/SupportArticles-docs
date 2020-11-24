@@ -17,8 +17,8 @@ ms.technology: HighAvailability
 
 This article describes how to use Windows Server cluster nodes as domain controllers.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 281662
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;281662
 
 ## Summary
 

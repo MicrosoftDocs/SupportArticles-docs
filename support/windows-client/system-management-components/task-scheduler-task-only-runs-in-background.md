@@ -17,8 +17,8 @@ ms.technology: SysManagementComponents
 
 This article provides solutions to an issue where task scheduler runs tasks as background processes after you use sysprep to create the master image.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
-_Original KB number:_ &nbsp; 253942
+_Original product version:_ &nbsp;Windows 10 - all editions  
+_Original KB number:_ &nbsp;253942
 
 ## Symptoms
 

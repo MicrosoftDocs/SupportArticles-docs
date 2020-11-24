@@ -17,8 +17,8 @@ ms.technology: ShellExperience
 
 This article provides a solution to an issue where HotStart buttons doesn't work when Autoplay is disabled.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp; 2328787
+_Original product version:_ &nbsp;Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp;2328787
 
 ## Symptoms
 

@@ -17,8 +17,8 @@ ms.technology: Deployment
 
 This article describes the consistent set of command-line switches that Microsoft is adopting for deploying packages that contain software updates.
 
-_Original product version:_ &nbsp; Windows 10 – all editions  
-_Original KB number:_ &nbsp; 824687
+_Original product version:_ &nbsp;Windows 10 – all editions  
+_Original KB number:_ &nbsp;824687
 
 ## Summary
 

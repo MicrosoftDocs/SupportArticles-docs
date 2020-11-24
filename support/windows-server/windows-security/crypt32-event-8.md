@@ -17,8 +17,8 @@ ms.technology: WindowsSecurity
 
 This article provides help to solve an issue where Crypt32 event 8 is continuously reported in the Application log.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 2253680
+_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp;2253680
 
 ## Symptoms
 

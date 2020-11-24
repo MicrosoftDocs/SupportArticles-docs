@@ -17,8 +17,8 @@ ms.technology: Networking
 
 This article describes how to change the location of the client-side caching (CSC) folder by configuring the CacheLocation registry value.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
-_Original KB number:_ &nbsp; 937475
+_Original product version:_ &nbsp;Windows 10 - all editions  
+_Original KB number:_ &nbsp;937475
 
 ## Introduction
 
@@ -37,7 +37,7 @@ To change the location of the CSC folder, follow these steps.
 > [!NOTE]
 > There is only one cache folder in Windows Vista. Therefore, you do not have to repeat these steps for additional users.
 
-1. Click **Start**, type regedit in the **Search** box, and then press ENTER.
+1. Click **Start**, type **regedit** in the **Search** box, and then press ENTER.
 2. Locate the following registry subkey, and then and right-click it:  
 `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\CSC`  
 

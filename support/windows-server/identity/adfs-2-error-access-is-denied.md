@@ -17,8 +17,8 @@ ms.technology: ActiveDirectory
 
 This article provides a solution to fix the Active Directory Federated Services (AD FS) 2.0 error.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 3044977
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;3044977
 
 ## Summary
 
@@ -65,8 +65,8 @@ To do this, right-click the relying party, click **Edit Claim Rules**, and then 
 
 - All authorization claims rules are processed.
 - If no rules are defined, the AD FS server denies all users.
-- The whitelist approach can also be used instead of using a Permit All rule. In this situation, you define a set of rules that specify the conditions under which the user must be issued a token.
-- In the Blacklisting approach, you will need one Permit all Rule, along with one or more Deny rules that are based on a condition.
+- The allowlist approach can also be used instead of using a Permit All rule. In this situation, you define a set of rules that specify the conditions under which the user must be issued a token.
+- In the blocklist approach, you will need one Permit all Rule, along with one or more Deny rules that are based on a condition.
 - A Deny rule always overrides an Allow rule. This means that if both the Allow and Deny claim conditions are true for the user, the Deny rule will be followed.
 - For authorization rules that are based on other claim values to allow or deny a token, those claims should already be pushed into the claim pipeline from the claim provider trust level.
 

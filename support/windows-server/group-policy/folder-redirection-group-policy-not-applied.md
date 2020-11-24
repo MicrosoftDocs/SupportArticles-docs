@@ -17,8 +17,8 @@ ms.technology: GroupPolicy
 
 This article helps fix an issue that prevents folder redirection policy from working in Microsoft System Center Configuration Manager (SCCM).
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1809, Windows 10, version 1803, Windows 10, version 1709  
-_Original KB number:_ &nbsp; 3060058
+_Original product version:_ &nbsp;Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1809, Windows 10, version 1803, Windows 10, version 1709  
+_Original KB number:_ &nbsp;3060058
 
 ## Symptoms
 

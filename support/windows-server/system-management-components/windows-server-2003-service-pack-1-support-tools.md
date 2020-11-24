@@ -17,8 +17,8 @@ ms.technology: SysManagementComponents
 
 This article describes updates to the Microsoft Windows Server 2003 Support Tools that are included in Microsoft Windows Server 2003 Service Pack 1 (SP1).
 
-_Original product version:_ &nbsp; Windows Server 2003  
-_Original KB number:_ &nbsp; 892777
+_Original product version:_ &nbsp;Windows Server 2003  
+_Original KB number:_ &nbsp;892777
 
 ## Introduction
 

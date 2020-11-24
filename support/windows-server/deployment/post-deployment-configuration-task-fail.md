@@ -17,8 +17,8 @@ ms.technology: Deployment
 
 This article provides a solution to an issue where the Post-Deployment Configuration task fails after you install the Windows Server Essentials Experience role.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 2914651
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;2914651
 
 ## Symptoms
 

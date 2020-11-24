@@ -17,8 +17,8 @@ ms.technology: ApplicationCompatibility
 
 This article provides help to fix the 0x80070BC9 error that occurs when you're installing an MSI package during Windows setup or hotfix installation.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp; 3024471
+_Original product version:_ &nbsp;Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp;3024471
 
 ## Symptoms
 

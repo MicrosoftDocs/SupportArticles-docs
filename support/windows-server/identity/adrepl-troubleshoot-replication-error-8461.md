@@ -18,8 +18,8 @@ ms.technology: ActiveDirectory
 This article describes symptoms, cause, and resolution steps for cases in which AD Replication is delayed and generates Win32 error 8461:  
 > The replication operation was preempted.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 2981628
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;2981628
 
 ## Symptoms
 
@@ -102,7 +102,8 @@ The specific symptoms are as follows:
     replication workload on this domain controller is  
     too large or the replication interval is too small.
 
-    > [!Note]  Event 1580 is also logged when long-running replication tasks complete if verbose replication diagnostics logging has been set to a value of 0x1 or greater.
+    > [!Note]  
+    > Event 1580 is also logged when long-running replication tasks complete if verbose replication diagnostics logging has been set to a value of 0x1 or greater.
 
     [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\NTDS\Diagnostics]
     "5 Replication Events"=dword:00000001
@@ -173,7 +174,8 @@ The domain controller has too many replication partners or under too great a rep
 
 - A replication queue that never clears even though replication tasks are processed in a timely fashion
 
-    > [!Note] You can use `repadmin /queue` over time and correlate this with performance data to identify this scenario.
+    > [!Note]  
+    > You can use `repadmin /queue` over time and correlate this with performance data to identify this scenario.
 - Frequent occurrence of replication status 8461
 - Resolution: Reduce inbound connections (balance connections amongst hub-site DCs (ADLB.exe is useful here), add new DCs and rebalance the connections, deploy RODC in spoke sites, and decrease excessive replication of changes.
 

@@ -17,8 +17,8 @@ ms.technology: Performance
 
 This article provides help to fix an issue where the report generation process stops responding when you run Perfmon.exe with the Active Directory Diagnostics template to generate a report.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 971714
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;971714
 
 ## Symptoms
 

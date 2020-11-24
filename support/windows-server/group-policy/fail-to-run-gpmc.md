@@ -17,8 +17,8 @@ ms.technology: GroupPolicy
 
 This article provides help to fix errors that occur when you run Group Policy Management Console (GPMC).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 828760
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;828760
 
 ## Symptoms
 

@@ -17,8 +17,8 @@ ms.technology: Deployment
 
 This article provides workarounds for errors that occur when you attach a PCI Express expansion chassis to a computer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 942959
+_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp;942959
 
 > [!IMPORTANT]
 > This article contains information about how to modify the registry. Make sure that you back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
@@ -57,7 +57,7 @@ This issue may occur if the operating system runs out of Peripheral Component In
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk. To work around this issue, follow these steps:  
 
-1. Click **Start**, type regedit in the **Start Search** box, and then click **regedit** in the **Programs** list.
+1. Click **Start**, type **regedit** in the **Start Search** box, and then click **regedit** in the **Programs** list.
 
     If you are prompted for an administrator password or for confirmation, type the password, or click **Continue**.
 2. Locate the following registry subkey, and then click it:  
@@ -82,7 +82,7 @@ This issue may occur if the operating system runs out of Peripheral Component In
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk. To work around this issue, follow these steps:  
 
-1. Click **Start**, type regedit in the **Start Search** box, and then click **regedit** in the **Programs** list.
+1. Click **Start**, type **regedit** in the **Start Search** box, and then click **regedit** in the **Programs** list.
 
     If you are prompted for an administrator password or for confirmation, type the password, or click **Continue**.
 2. Locate the following registry subkey, and then click it:  
@@ -106,7 +106,7 @@ This issue may occur if the operating system runs out of Peripheral Component In
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.  
 
-1. Click **Start**, type regedit in the **Start Search** box, and then click **regedit** in the **Programs** list.
+1. Click **Start**, type **regedit** in the **Start Search** box, and then click **regedit** in the **Programs** list.
 
     If you are prompted for an administrator password or for confirmation, type the password, or click **Continue**.
 2. Locate the following registry subkey, and then click it:  

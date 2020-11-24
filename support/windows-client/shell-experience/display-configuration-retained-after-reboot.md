@@ -17,8 +17,8 @@ ms.technology: ShellExperience
 
 This article explains an issue where the display configuration is retained after reboot when you use USB-attached monitor.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp; 2465368
+_Original product version:_ &nbsp;Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp;2465368
 
 ## Symptoms
 
