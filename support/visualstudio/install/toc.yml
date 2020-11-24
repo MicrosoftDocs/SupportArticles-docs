@@ -25,7 +25,7 @@
     href: msiapplymultiplepatches-error-1601.md
   - name: Known issues for Visual Studio 2012 and updates
     href: known-issues-visual-studio-2012-update.md
-  - name: Secondary Installer uninstall instructions
+  - name: Secondary Installer uninstallation instructions
     href: secondary-installer-third-party-app.md
   - name: Setup crashes due to certain fonts
     href: fonts-cause-setup-crash.md
