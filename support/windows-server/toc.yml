@@ -530,10 +530,6 @@
       href: ./admin-development/hotfixes-for-wmi-issues.md
     - name: Windows Installer reconfigured all applications
       href: ./admin-development/windows-installer-reconfigured-all-applications.md
-  - name: Windows PowerShell
-    items:
-    - name: Windows PowerShell 1.0 for Windows Vista package
-      href: ./admin-development/windows-powershell-installation-package-vista.md
   - name: Windows Remote Management (WinRM)
     items:
     - name: Event collector doesn't forward events
