@@ -15,6 +15,9 @@ appliesto:
 - Microsoft Word 2010
 - Microsoft Excel 2010
 - Microsoft PowerPoint 2010
+- - Microsoft Word 2007
+- Microsoft Excel 2007
+- Microsoft PowerPoint 2007
 ms.reviewer: jenl
 ---
 # Error message while trying to open a file (.xslx, .docx, .pptx) in Excel 2010, Word 2010, or PowerPoint 2010
