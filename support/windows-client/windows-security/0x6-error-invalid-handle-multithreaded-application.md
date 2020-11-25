@@ -27,18 +27,19 @@ Consider the following scenario:
 
 In this scenario, you receive an 0x6 **ERROR_INVALID_HANDLE** error.
 
-> [!Note]
-> An application that produces high load on the basecsp smart card can reach the limit of 10000 contexts before the winscard component (wincard.dll) stops accepting new contexts even when old contexts are destroyed. In this scenario, this error is expected to happen if the application is stressing basecsp calls in extremely short burst instead of extended period. 
->
-> This situation can be identified by checking the number of handles assigned to the application that is using the smart card. If the number of handles nears 10000, it indicates the situation happens.
+Additionally, an application that produces high load on the basecsp smart card can reach the limit of 10000 contexts before the winscard component (wincard.dll) stops accepting new contexts even when old contexts are destroyed. In this scenario, this error is expected to happen as well if the application is stressing basecsp calls in extremely short burst instead of extended period. 
+
+This situation can be identified by checking the number of handles assigned to the application that is using the smart card. If the number of handles nears 10000, it indicates the situation happens.
+
+## Cause
+
+This issue occurs because basecsp is not designed for high load scenarios so basecsp smart cards are neither thread safe nor supported in high load scenarios.
 
 ## More information 
 
 The most frequently affected Crypto API functions are `CryptGetKeyParam()` and `CryptGetUserKey()`. Other Crypto APIs can have this issue as well.
 
 The **ERROR_INVALID_HANDLE** error does not appear immediately. Depending on the load, it takes time for threads to run into the synchronization issue.
-
-Basecsp is not designed for high load scenarios so basecsp smart cards are neither thread safe nor supported in high load scenarios.
 
 Basecsp can only achieve thread safety in normal usage scenarios, for example, single user, smart card logon, email encryption or decryption, code signing and other similar scenarios. In normal usage scenarios, basecsp should be thread safe per context.
 
