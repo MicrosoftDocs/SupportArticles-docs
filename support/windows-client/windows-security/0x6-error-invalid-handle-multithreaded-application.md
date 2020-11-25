@@ -61,7 +61,7 @@ Develop a vendor CSP or KSP provider and implement transaction manager in it. In
 Shorter transaction timeout can reduce frequency of the problem. This can be achieved by changing the **TransactionTimeoutMilliseconds** value under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\<provider_name>`.
 
 > [!Note]
-> \<Provider name\> is the basecsp or ksp, depending on the provider.
+> \<provider_name\> is the basecsp or ksp, depending on the provider.
 
 For detailed registry description, see [Base CSP and Smart Card KSP registry keys](/windows/security/identity-protection/smart-cards/smart-card-group-policy-and-registry-settings#base-csp-and-smart-card-ksp-registry-keys).
 
