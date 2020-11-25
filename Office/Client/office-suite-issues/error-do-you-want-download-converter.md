@@ -1,6 +1,6 @@
 ---
 title: Error (Do you want to download the converter) in Office
-description: Discusses an issue in which you receive an error message to download a converter when you try to open an Excel 2010 workbook (.xlsx), a Word 2010 document (.docx), or a PowerPoint 2010 presentation (.pptx). Error message.
+description: Discusses an issue in which you receive an error message to download a converter when you try to open an Excel 2010 workbook (.xlsx), a Word 2010 document (.docx), or a PowerPoint 2010 presentation (.pptx).
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -16,6 +16,9 @@ appliesto:
 - Microsoft Word 2010
 - Microsoft Excel 2010
 - Microsoft PowerPoint 2010
+- Microsoft Word 2007
+- Microsoft Excel 2007
+- Microsoft PowerPoint 2007
 ms.reviewer: jenl
 ---
 # Error message (Do you want to download the converter?) when you try to open a file in Excel, Word or PowerPoint
@@ -24,11 +27,14 @@ _Original KB number:_ &nbsp; 967950
 
 ## Symptoms
 
+> [!note]
+> This issue doesn't apply to Office 2013 and newer versions as they support the standard Open XML formats. For more information, see [Open XML Formats and file name extensions](https://support.microsoft.com/office/open-xml-formats-and-file-name-extensions-5200d93c-3449-4380-8e11-31ef14555b18).
+
 When you try to open a Microsoft Office Excel workbook (.xlsx), a Microsoft Office Word document (.docx), or a Microsoft Office PowerPoint presentation (.pptx), you may receive one of the following error messages and you may not be able to open the file:
 
-This file was created by a newer version of Microsoft Excel and a converter is needed to open it. Do you want to download the converter from the Microsoft Office Web site?
+> This file was created by a newer version of Microsoft Excel and a converter is needed to open it. Do you want to download the converter from the Microsoft Office Web site?
 
-This file cannot be opened by using Microsoft Excel. Do you want to search the Microsoft Office Online Web site for a converter that can open the file?
+> This file cannot be opened by using Microsoft Excel. Do you want to search the Microsoft Office Online Web site for a converter that can open the file?
 
 > [!NOTE]
 > The above messages are displayed when you try to open an Excel file. When you try to open a Word or PowerPoint file, the product names in the message are replaced accordingly.
