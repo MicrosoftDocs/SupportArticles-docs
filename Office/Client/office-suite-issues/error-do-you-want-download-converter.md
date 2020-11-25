@@ -45,9 +45,6 @@ To resolve this issue, follow these steps:
 
 ### For Excel 2010, Word 2010, or PowerPoint 2010
 
-> [!note]
-> This issue does not apply to Office 2013 or newer versions as they support the standard Open XML formats. For more information, see [Open XML Formats and file name extensions](https://support.microsoft.com/office/open-xml-formats-and-file-name-extensions-5200d93c-3449-4380-8e11-31ef14555b18).
-
 1. Go to the Microsoft Download Center to download and install the [OOXML Strict Converter for Office 2010](https://www.microsoft.com/download/details.aspx?id=38828).
 2. Open the file in Excel 2010, Word 2010 or PowerPoint 2010.
 3. Click **Open** when the following message appears.
