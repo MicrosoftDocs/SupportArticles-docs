@@ -12,6 +12,7 @@ ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 appliesto:
+- Microsoft Office
 - Microsoft Word 2010
 - Microsoft Excel 2010
 - Microsoft PowerPoint 2010
