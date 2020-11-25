@@ -1,6 +1,6 @@
 ---
 title: VM shutdown actions don't run
-description: Describes a problem that prevents virtual machine shutdown actions from running in Windows Server 2012 and Windows 8. Occurs when shutdowns are triggered by the OS because of a low battery condition.
+description: Describes a problem that prevents virtual machine shutdown actions from running in Windows Server 2012. Occurs when shutdowns are triggered by the OS because of a low battery condition.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, raackley
 ms.prod-support-area-path: Virtual machine state
 ms.technology: HyperV
 ---
@@ -17,8 +17,8 @@ ms.technology: HyperV
 
 This article helps solve a problem that prevents virtual machine shutdown actions from running.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 3058418
+_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp;3058418
 
 ## Symptoms
 
@@ -28,19 +28,21 @@ Consider the following scenario:
 - This Windows Server 2012 R2-based system has the Hyper-V role installed and is hosting virtual machines.
 - The battery is running out of power.
 - The host operating system shuts down because of the low battery condition.
-- After you restart the computer, you notice the virtual machines are in a Stopped state and that errors are logged in the virtual machine event logs. In this scenario, the configured host shutdown actions for the virtual machine (Stop VM, Save VM state, Shut down VM) don't run as expected, and the virtual machines are not gracefully shut down or saved. This behavior may be indicated by the following event log entries on the guest VMs:
+- After you restart the computer, you notice the virtual machines are in a Stopped state and that errors are logged in the virtual machine event logs.  
 
-Log Name: Microsoft-Windows-Hyper-V-Worker-Admin
-Source: Microsoft-Windows-Hyper-V-Worker
-Event ID: 18590
-Level: Critical
-Description:
+In this scenario, the configured host shutdown actions for the virtual machine (Stop VM, Save VM state, Shut down VM) don't run as expected, and the virtual machines are not gracefully shut down or saved. This behavior may be indicated by the following event log entries on the guest VMs:
+
+> Log Name: Microsoft-Windows-Hyper-V-Worker-Admin  
+Source: Microsoft-Windows-Hyper-V-Worker  
+Event ID: 18590  
+Level: Critical  
+Description:  
 '*Guestname*' has encountered a fatal error. The guest operating system reported that it failed with the following error codes: ErrorCode0: 0xEF, *[additional variable information]*  
 
-Event ID: 6008 
-Source: Event Log 
-Type: Error
-Description: 
+> Event ID: 6008  
+Source: Event Log  
+Type: Error  
+Description:  
 The previous system shutdown at *Time* on *Date* was unexpected.
 
 ## Cause
