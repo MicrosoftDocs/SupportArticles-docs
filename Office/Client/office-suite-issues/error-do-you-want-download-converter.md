@@ -15,6 +15,9 @@ appliesto:
 - Microsoft Word 2010
 - Microsoft Excel 2010
 - Microsoft PowerPoint 2010
+- - Microsoft Word 2007
+- Microsoft Excel 2007
+- Microsoft PowerPoint 2007
 ms.reviewer: jenl
 ---
 # Error message while trying to open a file (.xslx, .docx, .pptx) in Excel 2010, Word 2010, or PowerPoint 2010
@@ -22,6 +25,9 @@ ms.reviewer: jenl
 _Original KB number:_ &nbsp; 967950
 
 ## Symptoms
+
+> [!note]
+> This issue does not apply to Office 2013 or newer versions as they support the standard Open XML formats. For more information, see [Open XML Formats and file name extensions](https://support.microsoft.com/office/open-xml-formats-and-file-name-extensions-5200d93c-3449-4380-8e11-31ef14555b18).
 
 When you try to open a file (.xlsx, .docx, .pptx) in Microsoft Excel 2010, Word 2010, or PowerPoint 2010, you receive one of the following error messages:
 

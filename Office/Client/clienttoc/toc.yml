@@ -707,7 +707,7 @@
           href: ../office-suite-issues/cannot-guarantee-complete-repair-corrupted-files.md
         - name: Connection to a network document is lost
           href: ../office-suite-issues/connect-to-network-document-lost.md
-        - name: Do you want to download the converter
+        - name: Error when opening a file in Excel, Word, or PowerPoint
           href: ../office-suite-issues/error-do-you-want-download-converter.md
         - name: Document files in Office Document Cache not deleted
           href: ../office-suite-issues/office-temporary-files-not-delete.md
