@@ -27,13 +27,13 @@ Consider the following scenario:
 
 In this scenario, you receive an 0x6 **ERROR_INVALID_HANDLE** error.
 
-Additionally, an application that produces high load on the basecsp smart card can reach the limit of 10000 contexts before the winscard component (wincard.dll) stops accepting new contexts even when old contexts are destroyed. In this scenario, this error is expected to happen as well if the application is stressing basecsp calls in extremely short burst instead of extended period. 
+Additionally, an application that produces high load on the BaseCSP smart card can reach the limit of 10000 contexts before the winscard component (wincard.dll) stops accepting new contexts even when old contexts are destroyed. In this scenario, this error is expected to happen as well if the application is stressing BaseCSP calls in extremely short burst instead of extended period. 
 
 This situation can be identified by checking the number of handles assigned to the application that is using the smart card. If the number of handles nears 10000, it indicates the situation happens.
 
 ## Cause
 
-This issue occurs because basecsp is not designed for high load scenarios so basecsp smart cards are neither thread safe nor supported in high load scenarios.
+This issue occurs because BaseCSP is not designed for high load scenarios so BaseCSP smart cards are neither thread safe nor supported in high load scenarios.
 
 ## More information 
 
@@ -41,7 +41,7 @@ The most frequently affected Crypto API functions are `CryptGetKeyParam()` and `
 
 The **ERROR_INVALID_HANDLE** error does not appear immediately. Depending on the load, it takes time for threads to run into the synchronization issue.
 
-Basecsp can only achieve thread safety in normal usage scenarios, for example, single user, smart card logon, email encryption or decryption, code signing and other similar scenarios. In normal usage scenarios, basecsp should be thread safe per context.
+BaseCSP can only achieve thread safety in normal usage scenarios, for example, single user, smart card logon, email encryption or decryption, code signing and other similar scenarios. In normal usage scenarios, BaseCSP should be thread safe per context.
 
 In high load scenarios, there are two areas in which the issue starts to occur:
 
@@ -61,14 +61,14 @@ Develop a vendor CSP or KSP provider and implement transaction manager in it. In
 Shorter transaction timeout can reduce frequency of the problem. This can be achieved by changing the **TransactionTimeoutMilliseconds** value under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Defaults\Provider\<provider_name>`.
 
 > [!Note]
-> \<provider_name\> is the basecsp or ksp, depending on the provider.
+> \<provider_name\> is the BaseCSP or ksp, depending on the provider.
 
 For detailed registry description, see [Base CSP and Smart Card KSP registry keys](/windows/security/identity-protection/smart-cards/smart-card-group-policy-and-registry-settings#base-csp-and-smart-card-ksp-registry-keys).
 
 For example, reducing **TransactionTimeoutMilliseconds** from its default value 1500 ms to 100 ms could reduce the frequency of the problem. 
 
 > [!Important]
-> This is just a recommendation based on limited test results. There is no guarantee that **TransactionTimeoutMilliseconds** change will help. Additionally, changing default value for **TransactionTimeoutMilliseconds** might cause some other problems with basecsp cards. Make sure to thoroughly test your card with the relevant application and load before deploying this change.
+> This is just a recommendation based on limited test results. There is no guarantee that **TransactionTimeoutMilliseconds** change will help. Additionally, changing default value for **TransactionTimeoutMilliseconds** might cause some other problems with BaseCSP cards. Make sure to thoroughly test your card with the relevant application and load before deploying this change.
 
 ## References
 
