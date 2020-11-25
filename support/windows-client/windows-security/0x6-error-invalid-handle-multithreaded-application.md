@@ -27,9 +27,9 @@ Consider the following scenario:
 
 In this scenario, you receive an 0x6 **ERROR_INVALID_HANDLE** error.
 
-Additionally, an application that produces high load on the BaseCSP smart card can reach the limit of 10000 contexts before the winscard component (wincard.dll) stops accepting new contexts even when old contexts are destroyed. In this scenario, this error is expected to happen as well if the application is stressing BaseCSP calls in extremely short burst instead of extended period. 
+This issue occurs if any Crypto API that use transaction manager, such as `CryptGetKeyParam()` and `CryptGetUserKey()`, are call to precedes another call that releases the context.
 
-This situation can be identified by checking the number of handles assigned to the application that is using the smart card. If the number of handles nears 10000, it indicates the situation happens.
+The **ERROR_INVALID_HANDLE** error does not appear immediately. Depending on the load, it takes time for threads to run into the synchronization issue.
 
 ## Cause
 
@@ -37,15 +37,11 @@ This issue occurs because BaseCSP is not designed for high load scenarios so Bas
 
 ## More information 
 
-The most frequently affected Crypto API functions are `CryptGetKeyParam()` and `CryptGetUserKey()`. Other Crypto APIs can have this issue as well.
-
-The **ERROR_INVALID_HANDLE** error does not appear immediately. Depending on the load, it takes time for threads to run into the synchronization issue.
-
 BaseCSP can only achieve thread safety in normal usage scenarios, for example, single user, smart card logon, email encryption or decryption, code signing and other similar scenarios. In normal usage scenarios, BaseCSP should be thread safe per context.
 
 In high load scenarios, there are two areas in which the issue starts to occur:
 
-- In basecsp’s transaction manager synchronization
+- In BaseCSP’s transaction manager synchronization
 - Winscard context exhaustion (winscard stops accepting new context after smart card application reaches limit of about 10000 contexts.)
 
 ## Workarounds
@@ -54,7 +50,7 @@ To work around this issue, follow one of these methods.
 
 ### Method 1
 
-Develop a vendor CSP or KSP provider and implement transaction manager in it. In this way, smart card subsystem will not use transaction manager that is implemented in basecsp. 
+Develop a vendor CSP or KSP provider and implement transaction manager in it. In this way, smart card subsystem will not use transaction manager that is implemented in BaseCSP. 
 
 ### Method 2
 
