@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika;milanmil
+ms.reviewer: kaushika;milanmil;herbertm
 ms.prod-support-area-path: Smart card logon
 ms.technology: WindowsSecurity
 ---
