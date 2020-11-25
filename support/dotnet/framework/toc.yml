@@ -140,6 +140,8 @@
     href: wcf-net-tcp-service-stop-response.md
   - name: Windows Forms applications throw SecurityException
     href: winform-app-securityexception.md
+  - name: WPF render thread failures
+    href: wpf-render-thread-failures.md
   - name: WPF XBAPs crash during startup
     href: wpf-browser-hosted-applications-xbaps-crash.md
 
