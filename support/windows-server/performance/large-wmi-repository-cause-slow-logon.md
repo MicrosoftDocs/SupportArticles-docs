@@ -86,27 +86,3 @@ To disable RSoP logging, enable the following Group Policy setting:
 
  After you enable this policy, run **gpupdate /force** on the computer, and then restart the computer. Measure the impact on user logon duration. 
  **Note** By disabling RSoP logging, you prevent the RSoP snap-in (rsop.msc) from running on that computer. You can get RSoP modeling information by using the Group Policy Management Console (GPMC), if it is necessary.  
-
-## More information
-
-Article edited on April 4, 2014 by AJAYPS - Initial author sanmanp is no longer in the company
-
-From case 109120272304694:
-What the log tells me is only that RSoP is writing to the repository quite a bit.  I can't say why but you can see where RSoP related instances and classes are being written to the WMI repository by looking for the following in the wbemcore.log: 
-Wed Dec 09 11:06:19 2009.2309671): CALL CWbemNamespace::PutClass
-   long lFlags = 0x0
-   IWbemClassObject *pObj = 0x48D17C0
-   __CLASS=RSOP_IEToolbarButtonLink
-
-(Wed Dec 09 11:06:19 2009.2309671): CALL CWbemNamespace::PutClass
-   long lFlags = 0x0
-   IWbemClassObject *pObj = 0x35C4CBF0
-   __CLASS=RSOP_GPO
-You will see these entries over and over again in the log. There are many activities to the WMI repository from RSoP but these are verbose logs so we will see just about everything that is done.  The above is an execution of the PutClass method and there are tons of these in the log.  I don't know how to tell if the method being executed is writing a new Class to the repository or updating an old one, but RSoP just seems to be busy. 
-
-IWbemServices::PutClass Method
-The IWbemServices::PutClass method creates a new class or updates an existing one. The class specified by the pObject parameter must have been correctly initialized with all of the required property values.
-The user may not create classes with names that begin or end with an underscore (_). This is reserved for system classes.
-This log is huge though and there is RSoP related stuff all over it, so I can only tell you what it is doing, I do not really know why.  I think it is because of how their profiles and policies are structured, and looking at the following case it seems that the only workaround here is to delete the repository from time to time when the size starts to affect logon performance or simply disable RSoP logging.  I'm sure they don't need to have RSoP logging enabled all the time for any other reason other than to troubleshoot a problem.
-
-Recommendation will be to disable RSoP logging.

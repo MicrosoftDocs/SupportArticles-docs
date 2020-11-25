@@ -13,7 +13,7 @@ ms.reviewer: v-elj, chawong, winciccore, kaushika
 ms.prod-support-area-path: General information
 ms.technology: Windows 7 EoS FAQ
 ---
-# Frequently asked questions about the end of support for Windows 7
+# Frequently asked questions about the Windows 7 end of support
 
 This article describes the frequently asked questions about the end of support for Windows 7.
 

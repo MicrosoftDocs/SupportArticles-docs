@@ -1,7 +1,7 @@
 ---
 title: System Center vNext DPM error codes
 description: Lists error codes that may occur in System Center vNext Data Protection Manager.
-ms.date: 07/23/2020
+ms.date: 11/19/2020
 ms.prod-support-area-path: 
 ms.reviewer: aaronmax, jchornbe, DPMTechReview
 ---
@@ -2472,6 +2472,9 @@ _Original KB number:_ &nbsp; 3041345
 |100238|System State backup failed because Azure Backup agent failed to mount the staging disk.|Retry the backup.|
 |100239|System State backup failed because multiple staging disks are mounted.|Open disk management and unmount all unnecessary disks and retry the backup.|
 |100240|Failed to set Offline Seeding Policy as the required ARM Certificate XML file required for this policy could not be found.|Ensure that you have generated and imported the Certificate XML using the Microsoft Azure Offline Backup AD App and Certificate Generation Utility. For more information, see [Prerequisites](/azure/backup/backup-azure-backup-server-import-export#prerequisites).|
+|100241|Offline Backup policy cannot be saved as the provided Import Job name has already been configured with a different storage account name "%StorageAccountName;" as part of another Backup policy configured on this server.|Reconfigure Offline Backup, with the same Import Job Name and storage account pair or choose a different Resource Group or Import Job Name.|
+|100242|Unable to create Offline Backup policy for the current Azure account as this server’s authentication information could not be uploaded to Azure.|Login using a different Azure account or refer to the steps listed at https://go.microsoft.com/fwlink/?linkid=2051112. If the issue persists, please contact Microsoft support.|
+|100262|The encryption passphrase has not been validated to meet requirements. This is required to ensure successful online restores.|Please validate the encryption passphrase at the earliest by launching PassphraseValidator.exe from the `%ProgramFiles%\Microsoft Azure Recovery Services Agent\bin\` folder.|
 |120001|The operation was performed successfully.| |
 |120002|Operation failed.| |
 |120003|Operation is in progress.| |
