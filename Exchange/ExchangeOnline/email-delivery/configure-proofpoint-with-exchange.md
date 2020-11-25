@@ -28,7 +28,7 @@ Exchange Online supports [integration with third-party Sendmail-based filtering 
 
 A popular configuration is shown in the following figure. It involves connecting Proofpoint and Exchange Online so that Proofpoint provides the first level of email filtering and then sends email messages to Exchange Online.
 
-:::image type="content" source="media/configure-proofpoint-with-exchange/configure-proofpoint-with-exchange.png" alt-text="A popular configuration of email filtering from Proofpoint to Exchange Online. ":::
+:::image type="content" source="media/configure-proofpoint-with-exchange/configure-proofpoint-with-exchange.png" alt-text="A popular configuration for email filtering using Proofpoint and Exchange Online. ":::
 
 In this configuration, if Proofpoint encounters a deferral from Exchange Online, its default settings prevent it for a long time from retrying the email messages. This situation causes long mail delays of an hour or more.
 
