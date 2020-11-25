@@ -35,14 +35,11 @@ The **ERROR_INVALID_HANDLE** error does not appear immediately. Depending on the
 
 This issue occurs because BaseCSP is not designed for high load scenarios so BaseCSP smart cards are neither thread safe nor supported in high load scenarios.
 
-## More information 
+## More information
 
-BaseCSP can only achieve thread safety in normal usage scenarios, for example, single user, smart card logon, email encryption or decryption, code signing and other similar scenarios. In normal usage scenarios, BaseCSP should be thread safe per context.
+BaseCSP can only achieve thread safety in normal usage scenarios, for example, single user, smart card logon, email encryption or decryption, code signing and other similar scenarios.
 
-In high load scenarios, there are two areas in which the issue starts to occur:
-
-- In BaseCSP’s transaction manager synchronization
-- Winscard context exhaustion (winscard stops accepting new context after smart card application reaches limit of about 10000 contexts.)
+In normal usage scenarios, BaseCSP should be thread safe per context. In high load scenarios, BaseCSP smart cards will run into transaction manager synchronization issues.
 
 ## Workarounds
 
@@ -50,7 +47,7 @@ To work around this issue, follow one of these methods.
 
 ### Method 1
 
-Develop a vendor CSP or KSP provider and implement transaction manager in it. In this way, smart card subsystem will not use transaction manager that is implemented in BaseCSP. 
+Develop a vendor CSP or KSP provider and implement transaction manager in it. In this way, smart card subsystem will not use transaction manager that is implemented in BaseCSP.
 
 ### Method 2
 
@@ -61,7 +58,7 @@ Shorter transaction timeout can reduce frequency of the problem. This can be ach
 
 For detailed registry description, see [Base CSP and Smart Card KSP registry keys](/windows/security/identity-protection/smart-cards/smart-card-group-policy-and-registry-settings#base-csp-and-smart-card-ksp-registry-keys).
 
-For example, reducing **TransactionTimeoutMilliseconds** from its default value 1500 ms to 100 ms could reduce the frequency of the problem. 
+For example, reducing **TransactionTimeoutMilliseconds** from its default value 1500 ms to 100 ms could reduce the frequency of the problem.
 
 > [!Important]
 > This is just a recommendation based on limited test results. There is no guarantee that **TransactionTimeoutMilliseconds** change will help. Additionally, changing default value for **TransactionTimeoutMilliseconds** might cause some other problems with BaseCSP cards. Make sure to thoroughly test your card with the relevant application and load before deploying this change.
@@ -77,5 +74,3 @@ For example, reducing **TransactionTimeoutMilliseconds** from its default value 
 [CryptGetKeyParam function (wincrypt.h)](/windows/win32/api/wincrypt/nf-wincrypt-cryptgetkeyparam)
 
 [CryptGetUserKey function (wincrypt.h)](/windows/win32/api/wincrypt/nf-wincrypt-cryptgetuserkey)
-
-
