@@ -52,7 +52,7 @@ To resolve this issue, follow these steps:
 
     ![This is the screenshot for this step. ](./media/error-do-you-want-download-converter/screenshot.png)
 
-4. When the file opens, click **Save As** to save the file in Excel 2010, Word 2010, or PowerPoint 2010 default format.
+4. When the file opens, select **Save As** to save the file in Excel 2010, Word 2010, or PowerPoint 2010 default format.
 
     > [!NOTE]
     > If your issue wasn't resolved by the download, see one of the following Office Blogs:
