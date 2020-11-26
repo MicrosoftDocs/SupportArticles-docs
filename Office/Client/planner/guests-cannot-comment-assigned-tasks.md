@@ -10,8 +10,10 @@ ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
+  - CI 124798
 ms.reviewer: arvaradh, sadhil
-appliesto: Office 365 Planner
+appliesto: 
+- Office 365 Planner
 search.appverid: MET150
 ---
 # Guests can't add comments to assigned Planner tasks
