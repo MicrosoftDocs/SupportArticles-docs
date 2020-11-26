@@ -841,6 +841,10 @@
           href: ../performance/office-applications-not-responding.md
         - name: Open network file slow or stop responding
           href: ../performance/office-slow-or-stop-responding.md
+    - name: Planner
+      items:
+        - name: Guest users have no access to assigned tasks
+          href: ../planner/guests-cannot-comment-assigned-tasks.md
     - name: PowerPoint
       items:
         - name: Can't edit video or audio in a presentation
