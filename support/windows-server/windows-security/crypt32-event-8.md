@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
 ms.technology: WindowsSecurity
 ---
-# Crypt32 8 events continuously reported
+# Crypt32 8 events continuously reported in Windows
 
 This article provides help to solve an issue where Crypt32 event 8 is continuously reported in the Application log.
 
@@ -67,8 +67,7 @@ There are three options for handling these events.
 
 1. Disregard these events. They are benign and can be safely ignored.
 2. Modify router or proxy configuration to allow computers recording these events to connect to Windows Update.
-3. Disable Automatic Root Updates on computers recording these events.
-4.  
+3. Disable Automatic Root Updates on computers recording these events. 
    1. In Control Panel, double-click Add/Remove Programs.
    2. Click Add/Remove Windows Components.
    3. Click to clear the Update Root Certificates check box, and then continue with the Windows Components Wizard.

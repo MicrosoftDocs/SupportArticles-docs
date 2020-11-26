@@ -32,11 +32,9 @@ This issue occurs because the Reliability and Performance Monitor (Perfmon.exe) 
 
 To resolve this issue, copy your files to a different computer that has same server role and that has enough hardware resources. Then, run TraceRpt.exe with the files. To do this, follow these steps:
 
-1. In the Reliability and Performance Monitor (Perfmon.exe) console, click **Data Collector Sets**, and then click
- **System**.
+1. In the Reliability and Performance Monitor (Perfmon.exe) console, click **Data Collector Sets**, and then click **System**.
 2. Right-click **Active Directory Diagnostics**, and then click **Start**. The file collection process starts on the Windows Server domain controller.
-3. After the report status changes to **generating report** from **collecting data for
-**\<time>**, copy the files to the second Windows Server domain controller.
+3. After the report status changes to **generating report** from **collecting data for**\<time>**, copy the files to the second Windows Server domain controller.
 
     > [!NOTE]
     > You can find the files at the following location: %systemdrive%\Perflogs\ADDS\ **date report generation run** \\*

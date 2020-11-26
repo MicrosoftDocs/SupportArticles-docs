@@ -67,10 +67,10 @@ To resolve this problem, use one of the following methods.
 If one or two domain controllers experience the problem, and other domain controllers in the same domain do not experience the problem, you must demote and then promote the domain controllers that are experiencing the problem. To do this, follow these steps:  
 
 1. Log on to the Windows Server domain controller by using an account that has domain administrator permissions.
-2. Click **Start**, click **Run**, type `dcpromo`, and then click **OK**.
+2. Click **Start**, click **Run**, type *dcpromo*, and then click **OK**.
 3. Follow the instructions in the wizard to demote the domain controller.
 4. After you demote the domain controller, restart the Windows Server computer.
-5. Click **Start**, click **Run**, type `dcpromo`, and then click **OK**.
+5. Click **Start**, click **Run**, type *dcpromo*, and then click **OK**.
 6. Follow the instructions in the wizard to promote the Windows Server domain controller.
 
 ### Method 2

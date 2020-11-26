@@ -24,10 +24,10 @@ _Original KB number:_ &nbsp;3044977
 
 Most AD FS 2.0 problems belong to one of the following main categories. This article contains step-by-step instructions to troubleshoot claims rules problems.
 
-- [Connectivity problems (KB 3044971)](https://support.microsoft.com/help/3044971)  
-- [ADFS service problems (KB 3044973)](https://support.microsoft.com/help/3044973)  
-- [Certificate problems (KB 3044974)](https://support.microsoft.com/help/3044974)  
-- [Authentication problems (KB 3044976)](https://support.microsoft.com/help/3044976)  
+- [Connectivity problems (KB 3044971)](this-page-cant-displayed.md)  
+- [ADFS service problems (KB 3044973)](adfs-2-service-fails-to-start.md)  
+- [Certificate problems (KB 3044974)](adfs-2-certificate-error-build-chain.md)  
+- [Authentication problems (KB 3044976)](adfs-error-401-requested-resource-requires-authentication.md)  
 
 ## Symptoms
 
@@ -36,7 +36,7 @@ Most AD FS 2.0 problems belong to one of the following main categories. This art
 
     > Access is Denied
 
-- If you enable AD FS auditing by using the [Configuring ADFS Servers for Troubleshooting](https://technet.microsoft.com/library/cc738766%28v=ws.10%29.aspx) TechNet topic, you see the following error logged in the event log:
+- If you enable AD FS auditing by using the [Configuring ADFS Servers for Troubleshooting](/previous-versions/windows/it-pro/windows-server-2003/cc738766(v=ws.10)) topic, you see the following error logged in the event log:
 
     > Event ID 325  
     > The Federation Service could not authorize token issuance for the caller.
@@ -90,7 +90,7 @@ Configure the AD FS servers to record the auditing of AD FS events to the Securi
 3. In the details pane, double-click **Audit object access**.
 4. On the **Audit object access Properties** page, select either **Success** or **Failure** or both, and then click OK.
 5. Close the Local Security Settings snap-in.
-6. At a command prompt, type `gpupdate /force`, and then press Enter to immediately refresh the local policy.  
+6. At a command prompt, type *gpupdate /force*, and then press Enter to immediately refresh the local policy.  
 
 You can also use the following GPO to configure the Windows Security Log:
 

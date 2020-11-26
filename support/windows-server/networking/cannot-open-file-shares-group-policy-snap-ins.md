@@ -61,7 +61,7 @@ In a network trace, if SMB signing is enabled and required at the client and is 
 
 The domain controller logs the following events in the application event log every five minutes:
 When you log on to the domain controller locally and then try to open file shares on the domain controller, you receive an error message that resembles the following:  
-> \\\ *Server_Name*\\*Share_Name* is not accessible. You might not have permission to use this network resource. Contact the administrator of this server to find out if you have access permissions.
+> \\\\*Server_Name*\\*Share_Name* is not accessible. You might not have permission to use this network resource. Contact the administrator of this server to find out if you have access permissions.
 >
 > The account is not authorized to log in from this station.
 
@@ -78,7 +78,7 @@ When you try to open Group Policy snap-ins on the domain controller, you receive
 
 The domain controller logs the following event in the application event log:
 When you log on to the domain controller locally and then try to open file shares on the domain controller, you receive an error message that is similar to the following:  
-> \\\ *Server_Name*\\*Share_Name* is not accessible.
+> \\\\*Server_Name*\\*Share_Name* is not accessible.
 >
 > The account is not authorized to log in from this station.
 

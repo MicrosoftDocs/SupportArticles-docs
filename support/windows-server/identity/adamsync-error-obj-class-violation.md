@@ -28,8 +28,6 @@ This error occurs because of class definition differences between the Active Dir
 - Steps to resolve the problem when attributes belong to the TOP class
 - Steps to resolve the problem when attributes do not belong to the TOP class  
 
-Contact Microsoft Support if you cannot resolve the issue.
-
 ## Symptoms
 
 You try to use the Active Directory Application Mode (ADAM) Synchronizer (Adamsync.exe) tool to synchronize the Active Directory objects to an ADAM instance on a Windows Server. However, an error message that resembles the following is
@@ -67,9 +65,7 @@ To resolve this problem, follow these steps.
 
 ### Steps to resolve the problem when attributes belong to the TOP class
 
-You will find that the TOP class in the Active Directory schema contains the DisplayNamePrintable, Flags, or ExtensionName attribute. However,
-
-these attributes are not contained in the TOP class in ADAM. However, you cannot change the TOP class in ADAM. Therefore, use one of the following methods, to resolve the issue:  
+You will find that the TOP class in the Active Directory schema contains the DisplayNamePrintable, Flags, or ExtensionName attribute. However, these attributes are not contained in the TOP class in ADAM. However, you cannot change the TOP class in ADAM. Therefore, use one of the following methods, to resolve the issue:  
 
 - Exclude these attributes by using the \<exclude> section in the XML configuration file.
 - By using the MMC schema, manually add these attributes to the list of Optional attributes for the relevant class in the ADAM schema. For example, in the error message that is mentioned in the "Symptoms" section, the failing object is of the Group class. Therefore, you must add these attributes to the Optional attributes list for the Group class in ADAM.
@@ -154,10 +150,12 @@ these attributes are not contained in the TOP class in ADAM. However, you cannot
 10. Import the LDF file into the ADAM schema by using the command that is provided at the beginning of the LDF file.
 11. View the report that is displayed by the Ldifde utility. Ldifde will now report the errors that occur with the attributes that were not imported. The error information will resemble the following sample information:
 
-    > C:\WINDOWS\ADAM>ldifde -i -u -f c:\data\problem\KBtest_modified.ldf  
-    -s localhost:50010 -j .-c "cn=Configuration,dc=X" #configurationNamingContext  
-    Connecting to "localhost:50010"  
-    Logging in as current user using SSPI  
+    ```console
+    ldifde -i -u -f c:\data\problem\KBtest_modified.ldf -s localhost:50010 -j .-c "cn=Configuration,dc=X" #configurationNamingContext  
+    Connecting to "localhost:50010"
+    ```
+
+    > Logging in as current user using SSPI  
     Importing directory from file "c:\data\problem\KBtest_modified.ldf"  
     Loading entries.  
     Add error on line 15: Already Exists  
@@ -183,8 +181,7 @@ When you find the problem attribute, it may not be obvious what is wrong with it
 
 different DisplayName entry. When a problem attribute is not imported, you can obtain more information about the failure by turning on debug logging for the LDAP interface. To do this, follow these steps:  
 
-1. To obtain more information about the Ldifde failure, turn on LDAP logging in ADAM. To do this, change the value for the **Category 16 LDAP Interface events** registry entry to 5. This registry entry is located under the following registry subkey: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services`  
-`\ADAM_instanceName\Diagnostics`
+1. To obtain more information about the ldifde failure, turn on LDAP logging in ADAM. To do this, change the value for the **Category 16 LDAP Interface events** registry entry to 5. This registry entry is located under the following registry subkey: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\ADAM_instanceName\Diagnostics`
 
 2. Import the LDF file again.
 3. Look at the event log for errors.
@@ -207,13 +204,8 @@ To synchronize data from Active Directory to ADAM by using the Adamsync tool, fo
 
 ### Why you cannot import the LDF file directly into ADAM
 
-If you import the LDF file that you created in step 1 under the "Steps to resolve the problem when attributes do not belong to the TOP class" section
-into ADAM, these attributes are still not added to the attribute list in ADAM. You can verify this behavior by using the ADAM schema MMC or ADSIEDIT
-to examine the schema. This behavior occurs because the Ldifde import operation fails silently. Currently, Ldifde does not report errors. It fails silently because of the way that ADSchemaAnalyzer constructs the LDF file. ADSchemaAnalyzer uses the `ntdsschemaadd` and `ntdsSchemamodify` commands. These commands turn on permissive LDAP control. This means that any failure is silent.
+If you import the LDF file that you created in step 1 under the "Steps to resolve the problem when attributes do not belong to the TOP class" section into ADAM, these attributes are still not added to the attribute list in ADAM. You can verify this behavior by using the ADAM schema MMC or ADSIEDIT to examine the schema. This behavior occurs because the Ldifde import operation fails silently. Currently, Ldifde does not report errors. It fails silently because of the way that ADSchemaAnalyzer constructs the LDF file. ADSchemaAnalyzer uses the **ntdsschemaadd** and **ntdsSchemamodify** commands. These commands turn on permissive LDAP control. This means that any failure is silent.
 
-Additionally, for each class, all attributes to be added into the Optional attributes list are added in one add/modify operation. Therefore, if there is a problem adding one of the attributes, the whole operation fails, and no attributes in the list are added. Therefore, additional steps must be taken to
-find the problem attribute.
+Additionally, for each class, all attributes to be added into the Optional attributes list are added in one add/modify operation. Therefore, if there is a problem adding one of the attributes, the whole operation fails, and no attributes in the list are added. Therefore, additional steps must be taken to find the problem attribute.
 
-Usually, the likely reason for failure is a duplicate object identifier of an attribute or some other difference in the attribute definitions in Active Directory
-and ADAM.  
-This means that duplicate OIDs may be missed, and an attribute may be seen as a new attribute if the LDapDisplayName does not exist in ADAM.  
+Usually, the likely reason for failure is a duplicate object identifier of an attribute or some other difference in the attribute definitions in Active Directory and ADAM. This means that duplicate OIDs may be missed, and an attribute may be seen as a new attribute if the LDapDisplayName does not exist in ADAM.  

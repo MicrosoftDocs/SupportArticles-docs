@@ -59,10 +59,10 @@ Trying to manually start services with a Startup type of "Automatic" may result 
 The problems described in the symptoms section occur because of a lock on the Service Control Manager (SCM) database. As a result of the lock, none of the services can access the SCM database to initialize their service start requests. To verify that a Windows computer is affected by the problem discussed in this article, run the `sc querylock` command from the command Prompt,
 
 The output below would indicate that the SCM database is locked:
-QueryServiceLockstatus - Success
-IsLocked: True
-LockOwner: .\NT Service Control Manager
-LockDuration: 1090 (seconds since acquired)
+> QueryServiceLockstatus - Success  
+IsLocked: True  
+LockOwner: .\NT Service Control Manager  
+LockDuration: 1090 (seconds since acquired)  
 There is no additional information in the Event Logs beyond those from the Service Control Manager indicating that Service startup requests have timed out. The underlying root cause is a deadlock between the Service Control Manager and HTTP.SYS.
 
 ## Resolution

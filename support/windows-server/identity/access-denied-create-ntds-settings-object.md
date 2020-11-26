@@ -34,13 +34,13 @@ The failure occurs when adding the NTDS Settings object for the new Domain Contr
 
 The operation failed because:  
 
-Active Directory Domain Services could not create the NTDS Settings object for this Active Directory Domain Controller CN=NTDS Settings,CN=TEST-DC,CN=Servers,CN=mysite,CN=Sites,CN=Configuration,DC=domain,DC=com on the remote AD DC `DCName.ChildDomain.domain.com`. Ensure the provided network credentials have sufficient permissions.
+Active Directory Domain Services could not create the NTDS Settings object for this Active Directory Domain Controller CN=NTDS Settings,CN=TEST-DC,CN=Servers,CN=mysite,CN=Sites,CN=Configuration,DC=domain,DC=com on the remote AD DC **DCName.ChildDomain.domain.com**. Ensure the provided network credentials have sufficient permissions.
 > "Access is denied."
 
 Additionally, the DCPromo.log file shows the following errors:  
 
 2705DateTime[INFO]  
-> Error - Active Directory Domain Services could not create the NTDS Settings object for this Active Directory Domain Controller CN=NTDS Settings,CN=TEST-DC,CN=Servers,CN=mysite,CN=Sites,CN=Configuration,DC=domain,DC=com on the remote AD DC `DCName.ChildDomain.domain.com`. Ensure the provided network credentials have sufficient permissions. (5)  
+> Error - Active Directory Domain Services could not create the NTDS Settings object for this Active Directory Domain Controller CN=NTDS Settings,CN=TEST-DC,CN=Servers,CN=mysite,CN=Sites,CN=Configuration,DC=domain,DC=com on the remote AD DC **DCName.ChildDomain.domain.com**. Ensure the provided network credentials have sufficient permissions. (5)  
 
 DateTime[INFO] EVENTLOG (Error): NTDS General / Internal Processing: 1168
 Internal error: An Active Directory Domain Services error has occurred.
@@ -78,7 +78,7 @@ This issue occurs because the Add/Remove Replica In Domain permission is missing
 
 To resolve this issue, follow these steps:  
 
-1. Verify that all the steps and conditions in the "Resolution" section of Knowledge Base article [2002413](https://support.microsoft.com/help/2002413) are true for your environment. 
+1. Verify that all the steps and conditions in the "Resolution" section of Knowledge Base article [2002413](https://support.microsoft.com/help/2002413) are true for your environment.
 
 2. If domain controller promotion still fails even after you make sure that the user also has the SeEnableDelegationPrivilege permission, check ADSIEdit.msc to verify the user's effective permissions for the domain partition:  
 

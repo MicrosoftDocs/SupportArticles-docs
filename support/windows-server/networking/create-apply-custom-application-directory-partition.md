@@ -14,6 +14,7 @@ ms.prod-support-area-path: DNS
 ms.technology: Networking
 ---
 # How to create and apply a custom application directory partition on an Active Directory integrated DNS zone
+
 This article describes how to create a custom application directory partition by using the DnsCmd.exe command.
 
 _Original product version:_ &nbsp;Windows Server 2003  
@@ -48,7 +49,7 @@ To create an application directory partition that is named CustomDNSPartition on
 
 When the application directory partition has been successfully created, the following information appears:
 
-> DNS Server DC-1 created directory partition: `CustomDNSPartition.contoso.com` Command completed successfully.
+> DNS Server DC-1 created directory partition: CustomDNSPartition.contoso.com Command completed successfully.
 
 ### Configure an additional domain controller DNS server to host the application directory partition
 
@@ -67,7 +68,7 @@ To configure the example domain controller that is named DC-2 to host this custo
 
 The following information appears:
 
-> DNS Server DC-2 enlisted directory partition: `CustomDNSPartition.contoso.com` Command completed successfully.
+> DNS Server DC-2 enlisted directory partition: CustomDNSPartition.contoso.com Command completed successfully.
 
 ### Verify that the application directory partition was created successfully
 
@@ -196,7 +197,7 @@ Use the DNS management tool, Dnsmgmt.msc, to configure the replication scope of 
 2. Under **DNS**, expand **DC-1**, expand **Forward Lookup Zones**, and then click your Active Directory integrated DNS zone.
 3. On the **Action** menu, click **Properties**.
 4. Click the **Change** button that corresponds to **Replication**.
-5. Click **To all domain controllers specified in the scope of the following application directory partition**, click **`CustomDNSPartition.contoso.com`** in the **Application directory partition name** list, and then click **OK**.
+5. Click **To all domain controllers specified in the scope of the following application directory partition**, click **CustomDNSPartition.contoso.com** in the **Application directory partition name** list, and then click **OK**.
 
     > [!NOTE]
     > This new application directory partition is also available when you create a new Active Directory integrated DNS zone.

@@ -31,8 +31,10 @@ On a computer that is running Windows Server 2012, when you try to install the R
 > [!NOTE]
 > After a reboot the RDS Server may work. If it does not, the following powershell commands will complete the failed action:
 >
+> ```powershell
 > $tss = Get-WmiObject -namespace root\cimv2\terminalservices -class Win32_TerminalServiceSetting  
 > $tss.SetAllowTSConnections(1,0)
+> ```
 
 ## Cause
 

@@ -47,11 +47,11 @@ Multiple root causes exist. See the **Resolution** section for more information.
 ## Resolution
 
 1. Enable "Advanced Features" via the View menu. This will show at least the following new tabs:  
-Published Certificates
-Password Replication
-Object
-Security
-Attribute Editor  
+Published Certificates  
+Password Replication  
+Object  
+Security  
+Attribute Editor
 2. If still not seeing the "Environment", "Sessions", "Remote Control", "Personal Virtual Desktop", and "Remote Desktop Services Profile" tabs, add the following RSAT feature: "Remote Desktop Services Tools". Then restart DSA.MSC and enable the Advanced View to make these tabs appear.  
 ![Screenshot of adding Remote Desktop Services Tools feature](./media/multiple-tabs-of-user-property-missing/add-remote-desktop-services-tools-feature.png)
 
