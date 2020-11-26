@@ -25,10 +25,10 @@ _Original KB number:_ &nbsp;828760
 When you run GPMC in a Microsoft Windows Server domain, and then you click either **Default Domain Policy** or **Default Domain Controllers Policy**, you receive one of the following messages:
 
 - If you have permissions to modify security on the Group Policy objects (GPOs), you receive the following message:  
-    > The permissions for this GPO in the sysvol folder are inconsistent with those in Active Directory. It is recommended that these permissions be consistent. To change the permissions in SYSVOL to those in Active Directory, click OK
+  > The permissions for this GPO in the sysvol folder are inconsistent with those in Active Directory. It is recommended that these permissions be consistent. To change the permissions in SYSVOL to those in Active Directory, click OK
 
 - If you do not have permission to modify security on the Group Policy objects (GPOs), you receive the following message:  
-    > The permissions for this GPO in the sysvol folder are inconsistent with those in Active Directory. It is recommended that these permissions be consistent. Contact an administrator who has rights to modify security on this GPO.
+  > The permissions for this GPO in the sysvol folder are inconsistent with those in Active Directory. It is recommended that these permissions be consistent. Contact an administrator who has rights to modify security on this GPO.
 
 ## Cause
 
@@ -36,7 +36,7 @@ This issue occurs because the access control list (ACL) on the Sysvol portion of
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section of this article.  
+Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section of this article.
 
 ## Workaround
 

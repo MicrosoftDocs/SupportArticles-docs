@@ -13,7 +13,7 @@ ms.reviewer: kaushika, v-sanair
 ms.prod-support-area-path: Devices and Drivers
 ms.technology: Deployment 
 ---
-# Error message when you attach a PCI Express expansion chassis to a computer: "Code 12" or "Code 31"
+# Error message when you attach a PCI Express expansion chassis to a Windows-based computer: "Code 12" or "Code 31"
 
 This article provides workarounds for errors that occur when you attach a PCI Express expansion chassis to a computer.
 
@@ -32,12 +32,10 @@ Consider the following scenario:
 
 In this scenario, the devices may not be enumerated correctly, or they may not start correctly. Additionally, you may receive one of the following error messages when you view the device properties in Device Manager:  
 
-- Error 1:
-
+- Error 1:  
   > This device cannot find enough free resources that it can use. (Code 12)
 
-- Error 2:
-
+- Error 2:  
   > The device is not working properly because Windows cannot load the drivers required for this device. (Code 31)
 
 ## Cause
@@ -112,13 +110,13 @@ This issue may occur if the operating system runs out of Peripheral Component In
 2. Locate the following registry subkey, and then click it:  
   `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PnP\Pci`  
 
-3. If the HackFlags registry entry is not present, follow these steps:  
-
+3. If the HackFlags registry entry is not present, follow these steps:
    1. On the **Edit** menu, point to **New**, and then click **DWORD (32-bit) Value**.
    2. Type HackFlags, and then press ENTER.
    3. On the **Edit** menu, click **Modify**.
    4. In the **Value data** box, type 600, click **Hexadecimal** in the **Base** area, and then click **OK**.
    5. Exit Registry Editor.
+
 4. If the HackFlags registry entry is present, follow these steps:
    1. Right-click **HackFlags**, and then click **Modify**.
    2. In the **Value data** box, type 600, click **Hexadecimal** in the **Base** area, and then click **OK**.

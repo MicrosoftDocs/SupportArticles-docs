@@ -13,7 +13,7 @@ ms.reviewer: kaushika, fmu
 ms.prod-support-area-path: Managing Internet Explorer settings through Group Policy
 ms.technology: GroupPolicy  
 ---
-# "Allow active content to run files on My Computer" Group Policy Setting Does Not Work as Expected
+# "Allow active content to run files on My Computer" Group Policy setting does not work as expected
 
 This article provides help to solve an issue where the **Allow active content to run files on My Computer** Group Policy setting doesn't work.
 
@@ -22,9 +22,9 @@ _Original KB number:_ &nbsp;2002093
 
 ## Symptoms
 
-The Group Policy Preference setting **Allow active content to run files on My Computer** remain disabled when the policy is applied on the client computers. If you disable the policy setting, you will find that it gets enabled on the client computers after the next Group Policy refresh.
+If you use Windows or the Remote Server Administration Tools (RSAT) for Windows to enable he Group Policy Preference setting **Allow active content to run files on My Computer** remain disabled when the policy is applied on the client computers. If you disable the policy setting, you will find that it gets enabled on the client computers after the next Group Policy refresh.
 
-The **Allow active content to run files on My Computer** is configured in the Group Policy Management Editor by navigating to **User Configuration\Preferences\Control Panel Settings\Internet Settings** and selecting **New**, then **Internet Explorer**. On the **Advanced** tab, scroll down to the **Security** section to view the **Allow active content to run files on My Computer** setting.
+The **Allow active content to run files on My Computer** is configured in the Group Policy Management Editor by navigating to **User Configuration\Preferences\Control Panel Settings\Internet Settings** and selecting **New**, then **Internet Explorer 7**. On the **Advanced** tab, scroll down to the **Security** section to view the **Allow active content to run files on My Computer** setting.
 
 ## Cause
 
@@ -40,7 +40,9 @@ When you configure this setting, the value will be written as **"iexplore.exe"=d
 
 The wrong value is written from the Group Policy Preferences XML setting file:  
 
-\<Reg id="LocalMachineFilesUnlock" type="REG_DWORD" hive="HKEY_CURRENT_USER" key="SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN" name="iexplore.exe" value="00000001"/>
+```xml
+<Reg id="LocalMachineFilesUnlock" type="REG_DWORD" hive="HKEY_CURRENT_USER" key="SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_LOCALMACHINE_LOCKDOWN" name="iexplore.exe" value="00000001"/>
+```
 
 The default location of the Group Policy Preferences XML setting file is:
 

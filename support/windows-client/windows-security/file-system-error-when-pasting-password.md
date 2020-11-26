@@ -17,7 +17,7 @@ ms.technology: WindowsSecurity
 
 This article provides help to fix a File system error that occurs when you paste password into a credential dialog box.
 
-_Original product version:_ &nbsp;Windows 10, version 1809, Windows 10, version 1803, Windows 10, version 1709  
+_Original product version:_ &nbsp;Windows 10  
 _Original KB number:_ &nbsp;4092998
 
 ## Symptoms
@@ -30,9 +30,9 @@ Consider the following scenario:
 
 In this scenario, you receive the following error messages:  
 
-> This program does not have a program associated with it for performing this action.  
+> This program does not have a program associated with it for performing this action.
 
-> File system error (-1073741189).  
+> File system error (-1073741189).
 
 During investigation, you notice that Consent.exe crashes when the issue occurs. The error maps to the following information:
 
@@ -48,6 +48,7 @@ During investigation, you notice that Consent.exe crashes when the issue occurs.
 ## Cause
 
 Pasting the contents of the clipboard into a secure input box is intentionally blocked in Windows 10. However, the Consent.exe crash is a software problem.
+
 Windows 10 introduces a security change that blocks clipboard access from the Winlogon desktop (also known as the secure desktop). This change prevents an unauthorized user from seeing information on the clipboard. For example, consider the following scenario:  
 
 - Authorized user A copies some information to the clipboard and then locks the computer.
@@ -68,6 +69,8 @@ To work around this issue, display the UAC elevation prompt on the standard user
 
 ## More information
 
-Changing the desktop when UAC is displayed might raise security concerns. However, the copy/paste mechanism of moving the password from password vault software to a UAC prompt invalidates the security protection that is provided by the Winlogon desktop.  
+Changing the desktop when UAC is displayed might raise security concerns. However, the copy/paste mechanism of moving the password from password vault software to a UAC prompt invalidates the security protection that is provided by the Winlogon desktop.
+
 The reason why UAC prompts are displayed by default on the Winlogon desktop is so that no nonsecure process (for example, one that is not already running as SYSTEM) can spy on passwords or other information that is input into the UAC dialog box. However, as soon as the password is copied and on the clipboard on the standard user desktop, any process that is running in that desktop can read that data in plain text. In effect, the potential security breach has already occurred with no need for any process to try to read the password information from a UAC dialog box.
+
 Microsoft has verified that the security fix that is implemented in Windows 10 to enforce the correct security boundary from the standard desktop to the Winlogon desktop is the desired behavior, and this will likely remain the behavior in future versions of Windows.

@@ -28,8 +28,7 @@ Two or more non-volatile memory expresses (NVMe) devices of the same make / mode
 
 ### Scenario 2
 
-Multiple paths are available to a disk in Windows Server.
-In these scenarios, you receive event ID 56 in the System log.
+Multiple paths are available to a disk in Windows Server. In these scenarios, you receive event ID 56 in the System log.
 > Log Name: System  
 Source: Application Popup  
 Event ID: 56  

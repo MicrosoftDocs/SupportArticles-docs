@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Task Scheduler
 ms.technology: SysManagementComponents
 ---
-# Task Only Runs in the Background After You Use Sysprep to Create Master Image
+# Task scheduler task only runs in the background after you use sysprep to create master image
 
 This article provides solutions to an issue where task scheduler runs tasks as background processes after you use sysprep to create the master image.
 
@@ -49,19 +49,23 @@ If you are not using SP1 yet, then you should use Sysprep version 1.1 with the -
 
 1. Add the following to your Sysprep.inf file:
 
-    [Unattended]  
-    InstallFilesPath="%systemdrive%\sysprep\i386"  
+   ```inf
+   [Unattended]  
+   InstallFilesPath="%systemdrive%\sysprep\i386"  
+   ```
 
-    Create the \i386\$OEM$ directory structure below the sysprep directory (for example, c:\sysprep\i386\$OEM$)
+   Create the \i386\$OEM$ directory structure below the sysprep directory (for example, c:\sysprep\i386\$OEM$)
 
-    or
+   or
 
-    drive:\distribution\$OEM$\$1\sysprep\i386\$OEM$ (for a distribution share that already contains Sysprep).
-2. Create a Cmdlines.txt file in %systemdrive%\sysprep\i386\$OEM$
-(or drive:\distribution\$OEM$\$1\sysprep\i386\$OEM$), which contains the following:
+   drive:\distribution\$OEM$\$1\sysprep\i386\$OEM$ (for a distribution share that already contains Sysprep).
 
-    [Commands]  
-    "%systemdrive%\sysprep\sysprep.exe -clean"  
+2. Create a Cmdlines.txt file in %systemdrive%\sysprep\i386\$OEM$ (or drive:\distribution\$OEM$\$1\sysprep\i386\$OEM$), which contains the following:
+
+   ```inf
+   [Commands]  
+   "%systemdrive%\sysprep\sysprep.exe -clean"  
+   ```
 
 > [!NOTE]
 > Running sysprep from the audit mode or the [GUIRunOnce] section of the Unattend.txt file is still required. This method ensures that sysprep -CLEAN runs separately during the mini-setup.

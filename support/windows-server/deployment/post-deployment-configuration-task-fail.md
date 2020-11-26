@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp;2914651
 After you install the Windows Server Essentials Experience role on Windows Server 2012 R2, the Post-Deployment Configuration task may fail. Additionally, you receive the following error:  
 
 > Configuration encountered some issues  
- Please Click Retry. If the issue still exists, please refer to the help link for more troubleshooting steps.  
+Please Click Retry. If the issue still exists, please refer to the help link for more troubleshooting steps.  
 
 You may also receive one of the following error messages in the System log:  
 
@@ -98,5 +98,5 @@ To resolve this issue, follow these steps to add the service accounts that are m
 5. Make sure that the **Define these policy settings** check box is selected, and then click **Add User or Group**.
 6. Type the name of the service account that is mentioned in Event ID 7041 For example, type **DOMAIN\ServerAdmin$** or **DOMAIN\MediaAdmin$**. Or, click **Browse** to locate the account with the **Select Users, Computers, or Groups** dialog box, and then click **OK**.
 7. After you have the account name entered, click **OK** in the **Add User or Group** dialog box, and then click **OK** in the **Allow log on locally Properties** dialog box.
-8. To update the modified Group Policy manually, at command prompt, type `gpupdate`, and then press Enter.
+8. To update the modified Group Policy manually, at command prompt, type **gpupdate**, and then press Enter.
 9. Rerun the Post-Deployment Configuration task.
