@@ -150,6 +150,6 @@ ADSI function [AdsopenObject](https://docs.microsoft.com/windows/win32/api/winld
 
 ADSI [AuthenticationEnum](https://docs.microsoft.com/windows/win32/api/iads/ne-iads-ads_authentication_enum) with the ADS_SERVER_BIND value  
 
-S.DS [AuthenticationTypes](https://docs.microsoft.com/dotnet/api/system.directoryservices.authenticationtypes?view=dotnet-plat-ext-5.0) Enum with the ServerBind value
+S.DS [AuthenticationTypes](https://docs.microsoft.com/dotnet/api/system.directoryservices.authenticationtypes) Enum with the ServerBind value
 
-S.DS.P [LdapDirectoryIdentifier](https://docs.microsoft.com/dotnet/api/system.directoryservices.protocols.ldapdirectoryidentifier.-ctor?view=dotnet-plat-ext-5.0#System_DirectoryServices_Protocols_LdapDirectoryIdentifier__ctor_System_String___System_Boolean_System_Boolean_) constructor with the fullyQualifiedDnsHostName flag
+S.DS.P [LdapDirectoryIdentifier](https://docs.microsoft.com/dotnet/api/system.directoryservices.protocols.ldapdirectoryidentifier.-ctor) constructor with the fullyQualifiedDnsHostName flag
