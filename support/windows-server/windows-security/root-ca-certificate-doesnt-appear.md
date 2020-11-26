@@ -33,7 +33,7 @@ Consider the following scenario:
 
 In this scenario, the certificate is missing in the GPO settings report.
 
-Example settings and screenshots
+Example settings and screenshots:
 
 You set the following CA certificates to be used by the authentication:
 

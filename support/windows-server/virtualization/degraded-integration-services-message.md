@@ -1,5 +1,5 @@
 ---
-title: Degraded integration services message
+title: Fail to run non-Windows guest on Hyper-V
 description: While running a non-Windows guest such as Linux on Hyper-V, the Hyper-V management console may display messages that indicate that the integration services for the non-Windows guest are degraded and no formal support will be provided unless the integration services are updated.
 ms.date: 09/24/2020
 author: Deland-Han 
@@ -15,7 +15,7 @@ ms.technology: HyperV
 ---
 # Degraded integration services message for non-Windows guests
 
-This article provides a solution to an error that occurs when running a non-Windows guest such as Linux on Hyper-V.
+This article provides a solution to an error that occurs when you run a non-Windows guest such as Linux on Hyper-V.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2956569
@@ -44,6 +44,6 @@ The various messages shown in the symptoms section occur because the non-Windows
 
 ## Resolution
 
-Users are hereby advised to ignore all messages and warnings that seem to indicate that no technical support will be provided because integration services for a non-Windows guest virtual machine are degraded. Microsoft will provide technical support even if when such messages are visible while running supported non-Windows guests on Hyper-V. Linux users may review a list of supported distributions on Hyper-V on the following page: [Linux Virtual Machines on Hyper-V](https://technet.microsoft.com/library/dn531030.aspx)
+Users are hereby advised to ignore all messages and warnings that seem to indicate that no technical support will be provided because integration services for a non-Windows guest virtual machine are degraded. Microsoft will provide technical support even if when such messages are visible while running supported non-Windows guests on Hyper-V. Linux users may review a list of supported distributions on Hyper-V in this article: [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](/windows-server/virtualization/hyper-v/Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows).
 
 It's safe to ignore these messages because Hyper-V protocols are implemented to be backward compatible. Therefore, even if a certain non-Windows guest has integration services that were based off earlier Hyper-V protocols, the guest is expected to run flawlessly on newer Hyper-V releases.

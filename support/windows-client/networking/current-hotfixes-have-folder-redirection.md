@@ -32,11 +32,11 @@ In specific, the components of relevance here are:
 
 For other components (client and server) like Srv.sys, mrxsmb.sys, rdbss.sys, ntfs.sys, dfssvc.exe, see the following up-to-date articles:
 
-[2473205](https://support.microsoft.com/help/2473205) : List of currently available hotfixes for the File Services technologies in Windows Server 2008 and in Windows Server 2008 R2
+- [List of currently available hotfixes for the File Services technologies in Windows Server 2008 and in Windows Server 2008 R2](/troubleshoot/windows-server/backup-and-storage/file-services-hotfixes-in-windows-server-2008)
 
-[2899011](https://support.microsoft.com/help/2899011) : List of currently available hotfixes for the File Services technologies in Windows Server 2012 and in Windows Server 2012 R2
+- [List of currently available hotfixes for the File Services technologies](/troubleshoot/windows-server/networking/hotfixes-for-file-services-technologies)
 
-[968429](https://support.microsoft.com/help/968429) : List of currently available hotfixes for Distributed File System (DFS) technologies in Windows Server 2008 and in Windows Server 2008 R2
+- [List of currently available hotfixes for Distributed File System (DFS) technologies in Windows Server 2008 and in Windows Server 2008 R2](https://support.microsoft.com/help/968429)
 
 This article contains a list of Microsoft Knowledge Base articles that describe the currently available fixes. Each section is divided into subsections for different component drivers:  
 DFS Namespace, Offline Files, Shell, Folder Redirection, and Group Policy Preferences.
@@ -57,13 +57,13 @@ DFS Namespace, Offline Files, Shell, Folder Redirection, and Group Policy Prefer
 |---|---|---|---|---|
 | 07/11/2014| [3015999](https://support.microsoft.com/help/3015999)|Stop Error 0x27 occurs when you try to move a folder on a network share from one place to another|This hotfix contains the most current version of csc.sys (6.1.7601.22863).|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
 | 07/11/2014| [3015999](https://support.microsoft.com/help/3015999)|Stop Error 0x27 occurs when you try to move a folder on a network share from one place to another|This hotfix contains the most current version of cscsvc.dll  (6.1.7601.22863).|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
-| 23/01/2014| [2831206](https://support.microsoft.com/help/2831206)|DFS network path goes offline in Windows 7 or Windows Server 2008 R2 when Transparent Caching Group Policy setting is enabled<br/>|This hotfix contains the most current version of cscdll.dll and cscapi.dll.|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
+| 23/01/2014| [2831206](https://support.microsoft.com/help/2831206)|DFS network path goes offline in Windows 7 or Windows Server 2008 R2 when Transparent Caching Group Policy setting is enabled|This hotfix contains the most current version of cscdll.dll and cscapi.dll.|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
 |23/05/2014| [2967567](https://support.microsoft.com/help/2967567)|Cannot access DFS root when the DFS path is offline and you log on to a Windows-based computer for the first time|This hotfix contains the most current version of cscui.dll.|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
 ||||||
 
 ## Shell component
 
-|Date added|Knowledge Base article|Title|Why we recommend<br/> this hotfix|Hotfix type and availability|
+|Date added|Knowledge Base article|Title|Why we recommend this hotfix|Hotfix type and availability|
 |---|---|---|---|---|
 | 09/05/2015| [3009986](https://support.microsoft.com/help/3009986)|A copy or move operation is unsuccessful if a symbolic link is included|This hotfix contains the most current version of Shell32.dll.|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
 ||||||
@@ -74,7 +74,7 @@ Currently this binary is the latest available in SP1 for Windows 7.
 
 ## Group Policy Preferences
 
-|Date added|Knowledge Base article|Title|Why we recommend<br/> this hotfix|Hotfix type and availability|
+|Date added|Knowledge Base article|Title|Why we recommend this hotfix|Hotfix type and availability|
 |---|---|---|---|---|
 | 07/04/2014| [2953722](https://support.microsoft.com/help/2953722)|Drive Maps preferences are still displayed in Group Policy RSoP after they are removed or disabled|This hotfix contains the most current version of Gpprefcl.dll. (*)|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
 ||||||
@@ -83,7 +83,7 @@ Currently this binary is the latest available in SP1 for Windows 7.
 
 For Windows 8.1, install [Offline Files network shares might not be available in Windows 8.1](https://support.microsoft.com/help/3078627).
 
-Under some circumstances, it might be necessary to reset the Offline Files database to reestablish the sync partnerships. These KB articles describe how to do it, or you can run the reg.exe commandline to set the key followed by a reboot.
+Under some circumstances, it might be necessary to reset the Offline Files database to reestablish the sync partnerships. These KB articles describe how to do it, or you can run the reg.exe command line to set the key followed by a reboot.
 
 |OS|Knowledge Base article|Reg.Exe command|
 |---|---|---|

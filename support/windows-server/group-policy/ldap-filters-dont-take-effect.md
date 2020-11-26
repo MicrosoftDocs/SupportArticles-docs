@@ -35,14 +35,13 @@ In this scenario, the LDAP filters in the Group Policy preference settings do no
 
 A supported hotfix is available from Microsoft. However, this hotfix is intended to correct only the problemP1 that P2 described in this article. Apply this hotfix only to systems that are experiencing the problemP1 described in this article. This hotfix might receive additional testing. Therefore, if you are not severely affected by this problem, we recommend that you wait for the next software update that contains this hotfix.
 
-If the hotfix is available for download, there is a "Hotfix download available" section at the top of this Knowledge Base article. If this section does not appear, contact Microsoft Customer Service and Support to obtain the hotfix.
+If the hotfix is available for download, there is a Hotfix download available section at the top of this Knowledge Base article. If this section does not appear, contact Microsoft Customer Service and Support to obtain the hotfix.
 
 > [!NOTE]
-> If additional issues occur or if any troubleshooting is required, you might have to create a separate service request. The usual support costs will apply to additional support questions and issues that do not qualify for this specific hotfix. For a complete list of Microsoft Customer Service and Support telephone numbers or to create a separate service request, visit the following Microsoft Web site:  
-[https://support.microsoft.com/home/expcontact/](https://support.microsoft.com/home/expcontact/)
+> If additional issues occur or if any troubleshooting is required, you might have to create a separate service request. The usual support costs will apply to additional support questions and issues that do not qualify for this specific hotfix. For a complete list of Microsoft Customer Service and Support telephone numbers or to create a separate service request, [contact Microsoft Support](https://support.microsoft.com/home/expcontact/).
 
 > [!NOTE]
-> The "Hotfix download available" form displays the languages for which the hotfix is available. If you do not see your language, it is because a hotfix is not available for that language.
+> The **Hotfix download available** form displays the languages for which the hotfix is available. If you do not see your language, it is because a hotfix is not available for that language.
 
 #### Prerequisites
 
@@ -73,7 +72,6 @@ The English (United States) version of this hotfix installs files that have the 
 |---|---|---|---|---|---|
 |Gpprefcl.dll|6.1.7600.20555|582,656|22-Oct-2009|06:19|x86|
 
-
 ##### For all supported x64-based versions of Windows 7 and of Windows Server 2008 R2
 
 |File name|File version|File size|Date|Time|Platform|Service branch|
@@ -81,14 +79,12 @@ The English (United States) version of this hotfix installs files that have the 
 |Gpprefcl.dll|6.1.7600.20555|781,824|22-Oct-2009|06:48|x64|Not Applicable|
 |Gpprefcl.dll|6.1.7600.20555|582,656|22-Oct-2009|06:19|x86|WOW|
 
-
 ##### For all supported IA-64-based versions of Windows Server 2008 R2
 
 |File name|File version|File size|Date|Time|Platform|
 |---|---|---|---|---|---|
 |Gpprefcl.dll|6.1.7600.20555|1,498,112|22-Oct-2009|05:06|IA-64|
   
-
 ## Status
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
@@ -108,8 +104,7 @@ To use LDAP filters to configure the Group Policy preference settings, follow th
 6. Click **Targeting**, select **New item**, and then click **LDAP Query** in the **Targeting Editor** window. Now, you can edit LDAP filters.
 
 For more information about software update terminology, click the following article number to view the article in the Microsoft Knowledge Base:  
-[824684](https://support.microsoft.com/help/824684)  
-Description of the standard terminology that is used to describe Microsoft software updates  
+[824684](https://support.microsoft.com/help/824684) Description of the standard terminology that is used to describe Microsoft software updates  
 
 ### Additional file information
 
