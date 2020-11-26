@@ -9,20 +9,21 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, Dpracht, v-tea
 ms.prod-support-area-path: DNS
 ms.technology: Networking
 ---
 # Root hints reappear after they are removed
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 818020
+_Original product version:_ &nbsp;Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Original KB number:_ &nbsp;818020
 
 ## Symptoms
 
 When you use DNS Manager or the **dnscmd** command to delete the last root hint from a Microsoft DNS server, one or more of the deleted root hints may reappear after about 15 minutes. You do not receive a warning that the root hints are not deleted permanently.
-Note
-Microsoft does not support the removal of all root hints from a Microsoft DNS server. A Microsoft DNS server must have at least one root hint. However, you can replace the existing root hints with new root hints. When you replace root hints, the change is permanent, and the old root hints do not reappear. If the DNS server if forwarding, click to select the **Do not use recursion for this domain** check box on the **Forwarders** tab in DNS Manager to make sure that the root hints will not be used.
+
+> [!Note]
+> Microsoft does not support the removal of all root hints from a Microsoft DNS server. A Microsoft DNS server must have at least one root hint. However, you can replace the existing root hints with new root hints. When you replace root hints, the change is permanent, and the old root hints do not reappear. If the DNS server if forwarding, click to select the **Do not use recursion for this domain** check box on the **Forwarders** tab in DNS Manager to make sure that the root hints will not be used.
 
 ## Cause
 
@@ -30,7 +31,7 @@ The root hints can be removed permanently and completely by removing the root hi
 
 ## Status
 
-This behavior is by design. 
+This behavior is by design.
 
 ## More information
 
@@ -42,16 +43,11 @@ To update root hints on the DNS server, follow these steps:
 
 1. Click **Start**, click **Administrative Tools**, and then click **DNS**.
 2. In the console tree, click the applicable DNS server.
-3. On the **Action** menu, click
- **Properties**.
+3. On the **Action** menu, click **Properties**.
 4. Click the **Root Hints** tab.
 5. Use any of the following methods to modify server root hints:
 
-- To add a root server to the list, click
- **Add**, and then specify the name and the IP address of the server that you want to add to the list.
-   - To modify a root server in the list, click
- **Edit**, and then specify the name and the IP address of the server that you want to modify in the list.
+   - To add a root server to the list, click **Add**, and then specify the name and the IP address of the server that you want to add to the list.
+   - To modify a root server in the list, click **Edit**, and then specify the name and the IP address of the server that you want to modify in the list.
    - To remove a root server from the list, select it in the list, and then click **Remove**.
-   - To copy root hints from a DNS server, click
- **Copy from server**, and then specify the IP address of the appropriate DNS server that you want to copy for a list of root servers to use in resolving queries. These root hints will not overwrite any existing root hints.
-
+   - To copy root hints from a DNS server, click **Copy from server**, and then specify the IP address of the appropriate DNS server that you want to copy for a list of root servers to use in resolving queries. These root hints will not overwrite any existing root hints.
