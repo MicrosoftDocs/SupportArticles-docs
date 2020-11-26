@@ -13,7 +13,7 @@ ms.reviewer: kaushika, arichard, kimnich
 ms.prod-support-area-path: File Explorer/Windows Explorer
 ms.technology: ShellExperience
 ---
-# Support for Whitespace characters in File and Folder names
+# Support for Whitespace characters in File and Folder names for Windows 8, Windows RT and Windows Server 2012
 
 This article describes support for whitespace characters in file and folder names.
 

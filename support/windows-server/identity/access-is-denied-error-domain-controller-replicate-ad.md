@@ -17,8 +17,8 @@ ms.technology: ActiveDirectory
 
 This article helps to fix the error "access is denied" on a domain controller when you try to replicate the Active Directory directory service.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
-_Original KB number:_ &nbsp; 895085
+_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10 - all editions  
+_Original KB number:_ &nbsp;895085
 
 > [!IMPORTANT]
 > This article contains information about modifying the registry. Before you modify the registry, make sure to back it up and make sure that you understand how to restore the registry if a problem occurs. For information about how to back up, restore, and edit the registry, click the following article number to view the article in the Microsoft Knowledge Base: [256986](https://support.microsoft.com/help/256986) Description of the Microsoft Windows Registry  
@@ -37,7 +37,7 @@ Windows Server 2003 SP1 and x64-based versions of Windows Server 2003 read remot
 ## Resolution
 
 > [!WARNING]
-> If you use Registry Editor incorrectly, you may cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk. 
+> If you use Registry Editor incorrectly, you may cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk.  
 
 To resolve this problem, enable port 135 on Windows Firewall, and then use one of the following methods:
 
@@ -57,54 +57,49 @@ To do this, follow these steps.
 
     For example, type TCP 135.
 4. In the **Port number** box, type
- 135.
+    135.
 5. Click **TCP**, and then click
  **OK**.
 
     The new port appears on the
  **Exceptions** tab.
 6. Click to select the check box next to the new port, and then click **OK**.
-7. Click **Start**, click **Run**, type regedit, and then click
+7. Click **Start**, click **Run**, type **regedit**, and then click
  **OK**.
-8. Use one of the following methods:
+8. Use one of the following methods:  
 
-    - Set the value of the RestrictRemoteClients registry entry to 0 or 1. To do this, follow these steps:
+- Set the value of the RestrictRemoteClients registry entry to 0 or 1. To do this, follow these steps:
 
-      1. Locate and then click the following registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Rpc` 
+    1. Locate and then click the following registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Rpc`  
 
-      2. In the right pane, click the RestrictRemoteClients entry.
+    2. In the right pane, click the RestrictRemoteClients entry.
 
           > [!NOTE]
-          > If this entry does not exist, follow these steps:
-          >1. On the **Edit** menu, point to **New**, and then click **DWORD Value**.  
-          >2. Type
- RestrictRemoteClients , and then press ENTER.
-       3. On the **Edit** menu, click
- **Modify**.
-       4. In the **Value data** box, type
- 0 or 1, and then click
- **OK**.
-       5. Quit Registry Editor.
-   - Use Group Policy Object Editor to disable the Restrictions for Unauthenticated RPC Clients Group Policy object. To do this, follow these steps:
+          > If this entry does not exist, follow these steps:  
+          >
+          > 1. On the **Edit** menu, point to **New**, and then click **DWORD Value**.  
+          > 2. Type
+                 RestrictRemoteClients , and then press ENTER.  
 
-      1. Click **Start**, click
- **Run**, type gpedit.msc, and then click
- **OK**.
-      2. In the console tree, double-click **Computer Configuration**, double-click **Administrative Templates**, double-click **System**, and then click **Remote Procedure Call**.
-      3. Double-click **Restrictions for Unauthenticated RPC clients**, click **Disable**, and then click **OK**.
-      4. Quit Group Policy Object Editor.
+    3. On the **Edit** menu, click **Modify**.
+    4. In the **Value data** box, type 0 or 1, and then click **OK**.
+    5. Quit Registry Editor.  
+
+- Use Group Policy Object Editor to disable the Restrictions for Unauthenticated RPC Clients Group Policy object. To do this, follow these steps:
+
+    1. Click **Start**, click **Run**, type **gpedit.msc**, and then click **OK**.
+    2. In the console tree, double-click **Computer Configuration**, double-click **Administrative Templates**, double-click **System**, and then click **Remote Procedure Call**.
+    3. Double-click **Restrictions for Unauthenticated RPC clients**, click **Disable**, and then click **OK**.
+    4. Quit Group Policy Object Editor.
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section. 
+Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.  
 
 ## More information
 
-For additional information about the RestrictRemoteClients registry entry, visit the following Microsoft Web site: [https://technet.microsoft.com/library/209d02c4-877c-4128-8e22-30bcd4aae6d3.aspx](https://technet.microsoft.com/library/209d02c4-877c-4128-8e22-30bcd4aae6d3.aspx) 
+For additional information about the RestrictRemoteClients registry entry, visit the following Microsoft Web site: [RestrictRemoteClients registry key is enabled](https://technet.microsoft.com/library/209d02c4-877c-4128-8e22-30bcd4aae6d3.aspx)  
 
-### Technical support for Windows x64 editions
+## Technical support for Windows x64 editions
 
 Your hardware manufacturer provides technical support and assistance for Microsoft Windows x64 editions. Your hardware manufacturer provides support because a Windows x64 edition was included with your hardware. Your hardware manufacturer might have customized the Windows x64 edition installation with unique components. Unique components might include specific device drivers or might include optional settings to maximize the performance of the hardware. Microsoft will provide reasonable-effort assistance if you need technical help with your Windows x64 edition. However, you might have to contact your manufacturer directly. Your manufacturer is best qualified to support the software that your manufacturer installed on the hardware.
-
-For product information about Microsoft Windows XP Professional x64 Edition, visit the following Microsoft Web site: [https://www.microsoft.com/windowsxp/64bit/default.mspx](https://www.microsoft.com/windowsxp/64bit/default.mspx)  
-For product information about Microsoft Windows Server 2003 x64 editions, visit the following Microsoft Web site: [https://www.microsoft.com/windowsserver2003/64bit/x64/editions.mspx](https://www.microsoft.com/windowsserver2003/64bit/x64/editions.mspx)

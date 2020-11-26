@@ -13,7 +13,7 @@ ms.reviewer: kaushika, sashalon
 ms.prod-support-area-path: Sysvol access or replication issues
 ms.technology: GroupPolicy
 ---
-# How to change the default permissions on GPOs
+# How to change the default permissions on GPOs in Windows Server 2008 R2, Windows Server 2008, Windows Server 2003, and Windows 2000 Server
 
 This article discusses how to change the default permissions on Group Policy objects (GPOs).
 

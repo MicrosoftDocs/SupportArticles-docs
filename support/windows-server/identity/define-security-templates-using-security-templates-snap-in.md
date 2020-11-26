@@ -9,16 +9,16 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-lanac
 ms.prod-support-area-path: User, computer, group, and object management
 ms.technology: ActiveDirectory
 ---
-# Define Security Templates By Using the Security Templates Snap-In   
+# Define Security Templates By Using the Security Templates Snap-In
 
 This article provides some steps to define Security Templates by using the Security Templates Snap-In.
 
-_Original product version:_ &nbsp; Windows Server 2003  
-_Original KB number:_ &nbsp; 816297
+_Original product version:_ &nbsp;Windows Server 2003  
+_Original KB number:_ &nbsp;816297
 
 ## Summary
 
@@ -58,7 +58,7 @@ To add the Security Templates snap-in to an MMC console, follow these steps:
 6. In the console tree, expand **Security Templates**, and then expand
  **%SystemRoot%\Security\Templates**.
 
-   A list of predefined security templates and their descriptions appears in the right pane. 
+   A list of predefined security templates and their descriptions appears in the right pane.  
 
 ### Create and Define a New Security Template
 
@@ -79,14 +79,14 @@ To define a new security template, follow these steps:
     For example, to set a maximum password age policy, expand **Account Policies**.
    2. In the right-pane, double-click the security setting that you want to configure.
     For example, to set the maximum password age policy, double-click **Password Policy**, and then double-click **Maximum password age**.
-    3. Click to select the **Define this policy setting in the template** check box, specify the option or setting that you want as appropriate to the security setting, and then click
+   3. Click to select the **Define this policy setting in the template** check box, specify the option or setting that you want as appropriate to the security setting, and then click
  **OK**.
 5. To define a Restricted Groups policy, follow these steps:
    1. Right-click **Restricted Groups**, and then click **Add Group**.
    2. Click **Browse**.
    3. In the **Select Groups** dialog box, type the name of the group that you want to restrict access, click
  **OK**, and then click **OK**.
-   4. In the ****GroupName**Properties** dialog box, under **Members of this group**, click **Add Members** to add the members that you want to the group.  
+   4. In the **GroupName Properties** dialog box, under **Members of this group**, click **Add Members** to add the members that you want to the group.  
    To add this group as a member of another group, under
  **This group is a member of**, click **Add Groups**.
    5. Click **OK**.
@@ -110,7 +110,7 @@ To define a new security template, follow these steps:
  **OK**.
    3. In the **Database Security for
 **FileName or FolderName**** dialog box, specify the permissions that you want, click **OK**, and then click
- **OK**. 
+ **OK**.  
 
 ### Copy Security Settings from a Predefined Template to Another Template
 
@@ -120,8 +120,7 @@ To copy security settings from a predefined template to your custom template, fo
 2. In the console tree, expand your custom template, right-click the appropriate component, and then click
  **Paste**.
 
-   For example, to use the Account Policies settings from the Hisecdc template in your custom template, expand
- **Hisecdc**, right-click **Account Policies**, and then click **Copy**. Expand your custom template, right-click
+   For example, to use the Account Policies settings from the Hisecdc template in your custom template, expand **Hisecdc**, right-click **Account Policies**, and then click **Copy**. Expand your custom template, right-click
  **Account Policies**, and then click
  **Paste**.  
 
@@ -133,7 +132,7 @@ To create a new security template based on settings from a predefined template, 
 2. In the **Save As** dialog box, type a name for the security template in the **File name** box, and then click
  **Save**.
 
-   The new security template appears in the list of security templates. Configure the template with the settings that you want.   
+   The new security template appears in the list of security templates. Configure the template with the settings that you want.  
 
 ## References
 
