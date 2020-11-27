@@ -35,6 +35,6 @@ For example:
 - User A logins to Computer A.
 - Computer A asks for BitLocker Recovery Key due to some changes done on the machine.
 - User A goes to Computer B and logins to Windows.
-- Open MBAM 2.0 Self Service Portal.
+- Open [MBAM 2.0 Self Service Portal](http://mbamserver/selfservice).
 - Enters the first eight digits of recovery key ID and MBAM 2.0 SSP page will show the user the recovery key.
 - Let's say if user A never logged in to computer A, then we won't show the user the key and will throw the above message.

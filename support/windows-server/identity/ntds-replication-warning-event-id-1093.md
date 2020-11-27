@@ -138,7 +138,7 @@ You may use this method to export the user data of the user object who reach the
 
 3. Prepare the script doit.bat with following commands:
 
-    ```cmd
+    ```console
     cscript LDF2Certs.vbs /LDFFile:user_data.txt  
     dir /B Cert*.* > listofcerts.txt  
     FOR /F %%i IN (listofcerts.txt) DO echo %%i >> allcerts.txt && certutil -dump %%i >> allcerts.txt
