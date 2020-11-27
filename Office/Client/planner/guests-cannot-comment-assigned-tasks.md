@@ -20,18 +20,17 @@ search.appverid: MET150
 
 ## Symptoms
 
-When [guests are assigned tasks](https://support.microsoft.com/office/guest-access-in-microsoft-planner-cc5d7f96-dced-4da4-ab62-08c72d9759c6) in Microsoft Planner, they see the following error message if they try to add a comment to the tasks:
+When [users with guest access are assigned tasks](https://support.microsoft.com/office/guest-access-in-microsoft-planner-cc5d7f96-dced-4da4-ab62-08c72d9759c6) in Microsoft Planner, they see the following error message if they try to add a comment to the tasks:
 
 > You no longer have access to <*task GUID*>.
 
-> [!NOTE]
-> In this message, <*task GUID*> represents the GUID of the actual task GUID.
+**Note** In this message, <*task GUID*> represents the GUID of the actual task GUID.
 
 ![Screenshot of the no access error](./media/guests-cannot-comment-assigned-tasks/task-error.png)
 
 ## Cause
 
-When a task is assigned to a guest in Planner, an Exchange Online recipient is created by using the guest's SMTP address. The error occurs if this SMTP address is already assigned to another Exchange Online recipient in the O365 tenant. In most such cases, the recipient is a mail contact.
+When a task in Planner is assigned to a user with guest access, an Exchange Online recipient is created by using the guest's SMTP address. The error occurs if this SMTP address is already assigned to another Exchange Online recipient in the O365 tenant. In most such cases, the recipient is a mail contact.
 
 ## Resolution
 
