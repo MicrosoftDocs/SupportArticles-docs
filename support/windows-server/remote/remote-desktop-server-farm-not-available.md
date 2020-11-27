@@ -1,5 +1,5 @@
 ---
-title: Remote Desktop Server farm is unavailable over DirectAccess (single/multisite)
+title: Remote Desktop Server farm is unavailable over DirectAccess
 description: Fixes an issue makes a Remote Desktop Server (RDS) farm unavailable in a Windows Server 2008 environment.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -24,7 +24,6 @@ _Original KB number:_ &nbsp;3123137
 
 Consider the following scenario:
 
-
 - You have a DirectAccess environment (two network adapters on Edge, two network adapters behind Edge, or a single network adapter behind Edge), including Force Tunnel.
 - You have users who connect to a Remote Desktop Services deployment from an external network through the DirectAccess tunnel.
 - Session redirection is enabled on the RDS farm through the Connection Broker role.
@@ -33,7 +32,7 @@ In this scenario, all redirected RDS connections fail.
 
 ## Cause
 
-The issue occurs because the Remote Desktop Services roles and services aren't IPv6-aware. When the client tries to connect to the RDS deployment, the Connection Broker returns a redirection packet, and this contains the IP address of the endpoint RDSH that the client will be redirected to. If the RDSH servers have only an IPv4 address assigned, the connection broker returns only this IPv4 address. Therefore, clients try to connect to the IPv4 address over the DA tunnel, and this fails. 
+The issue occurs because the Remote Desktop Services roles and services aren't IPv6-aware. When the client tries to connect to the RDS deployment, the Connection Broker returns a redirection packet, and this contains the IP address of the endpoint RDSH that the client will be redirected to. If the RDSH servers have only an IPv4 address assigned, the connection broker returns only this IPv4 address. Therefore, clients try to connect to the IPv4 address over the DA tunnel, and this fails.  
 
 ## Resolution
 
@@ -50,7 +49,7 @@ To resolve the issue, IPv6 IP addresses must be enabled and applied, and the int
 
 ## More information
 
-For more DA-related fixes, see [Recommended hotfixes and updates for Windows Server 2012 DirectAccess and Windows Server 2012 R2 DirectAccess](https://support.microsoft.com/help/2883952).
+For more DA-related fixes, see [Recommended hotfixes and updates for Windows Server 2012 DirectAccess and Windows Server 2012 R2 DirectAccess](https://support.microsoft.com/help/2883952)  
 
 ## Workaround
 
@@ -58,23 +57,24 @@ To work around this issue, follow these steps:
 
 1. At an administrative PowerShell prompt on the DA server, run the following command:
 
-    ```console
+    ```powershell
     Get-NetNatTransitionConfiguration
     ```
+
     > [!NOTE]
     > Make a note of the prefix (it usually has :7777:: embedded in it).
-    
-2. Inject the prefix into the following script, as appropriate for your version of Windows Server. For multiple DA deployments, add each suffix separated by a comma (, ). Also, the quotation marks ("") are required.
+
+2. Inject the prefix into the following script, as appropriate for your version of Windows Server. For multiple DA deployments, add each suffix separated by a comma (,). Also, the quotation marks ("") are required.
 
     **For Windows Server 2012 and later versions**  
-    
-    ```console
+
+    ```powershell
     $prefix = ""
     $add = Get-NetIPAddress -AddressFamily IPv4 -Type Unicast -PrefixOrigin Manual
     foreach ($a in $add)
     {
-   
-    
+
+
     $n = ($a.IPAddress).Split(".")
     Clear-Variable c -ErrorAction SilentlyContinue
     $c;
@@ -88,21 +88,21 @@ To work around this issue, follow these steps:
     New-NetIPAddress -IPAddress $ip -InterfaceAlias $a.InterfaceAlias -AddressFamily IPv6 -PrefixLength 64 -Type Unicast
     }
     ```
-    
+
     **For Windows Server 2008 R2**  
-    
-    ```console
+
+    ```powershell
     $prefix = ""
     $addresses = get-wmiObject -Class Win32_NetworkAdapterConfiguration | Where-Object { ($_.IPEnabled -eq $true) } | Select-object IPAddress,InterfaceIndex
-    
+
     Write-Host "Prefix: $prefix" -ForegroundColor Yellow
-    
+
     foreach ($address in $addresses)
     {
-    
+
     $a = $address.IPAddress[0];
     $idx = $address.InterfaceIndex;
-    
+
     $n = $a.ToString().Split(".")
     foreach($num in $n)
     {
