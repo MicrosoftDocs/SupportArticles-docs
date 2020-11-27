@@ -15,7 +15,7 @@ ms.technology: WindowsSecurity
 ---
 # Code 31 in Device Manager when Microsoft Usbccid Smartcard Reader is in a problem state
 
-_Original product version:_ &nbsp; Windows 10 - all editions
+_Original product version:_ &nbsp; Windows 10
 
 ## Symptoms
 
