@@ -1,5 +1,5 @@
 ---
-title: Event IDs 13552 and 13555 are logged in File Replication Service
+title: Event IDs 13552 and 13555 are logged in the File Replication Service log on a Windows-based domain controller
 description: Resolves an issue in which the SYSVOL folder isn't replicated between domain controllers that are running Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003.
 ms.date: 09/08/2020
 author: Deland-Han

@@ -32,7 +32,7 @@ In the on-demand scenario, zeros don't have to be written to the whole disk beca
 
 You can use four methods to format a volume in Windows Vista and later versions. You can use the quick format option for these four methods:
 
-- Command line: Use the format `/q` command.
+- Command line: Use the `format /q` command.
 
 - Diskpart: Use the format command together with the *quick*  parameter.  
 

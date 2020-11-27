@@ -44,11 +44,13 @@ AWE is a set of application programming interfaces (APIs) to the memory manager 
 
 The following is an example of a Boot.ini file where the PAE switch has been added:
 
-> [boot loader]  
+```ini
+[boot loader]  
 timeout=30  
 default=multi(0)disk(0)rdisk(0)partition(2)\WINDOWS  
 [operating systems]  
 multi(0)disk(0)rdisk(0)partition(2)\WINDOWS="Windows Server 2003, Enterprise" /fastdetect /PAE  
+```
 
 > [!WARNING]
 > The contents of your Boot.ini file will vary based upon your configuration.  

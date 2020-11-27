@@ -28,7 +28,9 @@ The Active Directory database incorporates a garbage collection process that run
 
 Garbage collection is a housekeeping process that is designed to free space within the Active Directory database. This process runs on every domain controller in the enterprise with a default lifetime interval of 12 hours. You can change this interval by modifying the garbageCollPeriod attribute in the enterprise-wide DS configuration object (NTDS).
 
-The path of the object in the `Contoso.com` domain would resemble the following:CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=CONTOSO,DC=COM
+The path of the object in the `Contoso.com` domain would resemble the following:  
+CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=CONTOSO,DC=COM
+
 Use an Active Directory editing tool to set the garbageCollPeriod attribute. Supported tools include Adsiedit.msc, Ldp.exe, and Active Directory Service Interfaces (ADSI) scripts.
 
 When an object is deleted, it is not removed from the Active Directory database. Instead, the object is instead marked for deletion at a later date. This mark is then replicated to other domain controllers. Therefore, the garbage collection process starts by removing the remains of previously deleted objects from the database. These objects are known as *tombstones*. Next, the garbage collection process deletes unnecessary log files. Finally, the process starts a defragmentation thread to claim additional free space.

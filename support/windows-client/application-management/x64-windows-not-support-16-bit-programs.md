@@ -1,6 +1,6 @@
 ---
 title: 64-bit versions of Windows don't support 16-bit components, 16-bit processes, or 16-bit applications
-description: Discusses the lack of support for 16-bit components, 16-bit processes, or 16-bit applications in x64-based versions Windows Server 2003 and Windows XP Professional x64 Edition.
+description: Discusses the lack of support for 16-bit components, 16-bit processes, or 16-bit applications in x64-based versions Windows.
 ms.data: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,14 +15,14 @@ ms.technology: ApplicationCompatibility
 ---
 # 64-bit versions of Windows don't support 16-bit components, 16-bit processes, or 16-bit applications
 
-This article discusses the lack of support for 16-bit components, 16-bit processes, or 16-bit applications in x64-based versions Windows Server 2003 and Windows XP Professional x64 Edition.
+This article discusses the lack of support for 16-bit components, 16-bit processes, or 16-bit applications in x64-based versions Windows.
 
-_Original product version:_ &nbsp;Window 10 – all editions, Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Original product version:_ &nbsp;Window 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;896458
 
 ## Summary
 
-The x64-based versions of the Microsoft Windows Server 2003 operating systems and Microsoft Windows XP Professional x64 Edition don't support 16-bit programs, 16-bit processes, or 16-bit components. However, these 64-bit versions of Windows may recognize some 16-bit installers and automatically convert the 16-bit installer to a 32-bit installer.
+The x64-based versions of Windows don't support 16-bit programs, 16-bit processes, or 16-bit components. However, 64-bit versions of Windows may recognize some 16-bit installers and automatically convert the 16-bit installer to a 32-bit installer.
 
 ## More information
 

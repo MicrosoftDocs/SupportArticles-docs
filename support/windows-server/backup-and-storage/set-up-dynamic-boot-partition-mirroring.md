@@ -54,86 +54,63 @@ Before you start the following procedure, make sure that you have another basic 
 
    The following are the commands that you type at the command prompt. The commands are formatted in bold, and the comments about the command or about the contents of the screen display are formatted in plain text.  
 
-      ```console
-      DISKPART> Select disk 1  
-      ```  
+   ```console
+   DISKPART> Select disk 1
+   Disk 1 is now the selected disk.
 
-     Disk 1 is now the selected disk.
+   DISKPART> Convert GPT  
+   Diskpart successfully converted the selected disk to GPT format.
 
-     ```console
-     DISKPART> Convert GPT  
-     ```
+   DISKPART> List partition  
 
-     Diskpart successfully converted the selected disk to GPT format.
+   Partition ###   Type             Size      Offset  
+   --------------- ---------------- --------- -------  
+   Partition 1     Reserved         128 MB    17 KB
+   ```
 
-    ```console
-      DISKPART> List partition  
+   > [!NOTE]
+   > If you notice that more than one partition is displayed, you have selected the wrong drive, or you did not start with a raw drive. Correct this before you continue, or data loss may occur.
 
-     Partition ###   Type             Size      Offset  
-     --------------- ---------------- --------- -------  
-     Partition 1     Reserved         128 MB    17 KB
-     ```
-
-    > [!NOTE]
-    > If you notice that more than one partition is displayed, you have selected the wrong drive, or you did not start with a raw drive. Correct this before you continue, or data loss may occur.
 3. Select partition 1 on disk 1, and then delete it. You must use the override command to delete the Microsoft Reserved (MSR) partition. You'll re-create a new MSR partition after you create the required EFI partition.
 
-     ```console
-     DISKPART> Select partition 1  
-     ```
-  
-     Partition 1 is now the selected partition.  
+   ```console
+   DISKPART> Select partition 1  
+   Partition 1 is now the selected partition.  
 
-     ```console
-     DISKPART> Delete partition override  
-     ```
-
-     Diskpart successfully deleted the selected partition.  
+   DISKPART> Delete partition override  
+   Diskpart successfully deleted the selected partition.  
+   ```
 
 4. Select disk 0, and then list the partitions that are on disk 0. With the output of the list command, create new EFI and MSR partitions on disk 1 that are the same sizes as the EFI and MSR partitions on disk 0.
 
-     ```console
-     DISKPART> Select disk 0  
-     ```
+   ```console
+   DISKPART> Select disk 0  
+   Disk 0 is now the selected disk.  
 
-     Disk 0 is now the selected disk.  
+   DISKPART> List partition  
 
-     ```console
-     DISKPART> List partition  
+   Partition ###       Type             Size     Offset  
+   ----------------- ---------------- --------- -------  
+   Partition 1  System                 200 MB   1024 KB <- EFI PARTITION  
+   Partition 2  Reserved               128 MB   201 MB <- MSR PARTITION  
+   Partition 3  Primary                50 GB    329 MB
 
-     Partition ###       Type             Size     Offset  
-     ----------------- ---------------- --------- -------  
-     Partition 1  System                 200 MB   1024 KB <- EFI PARTITION  
-     Partition 2  Reserved               128 MB   201 MB <- MSR PARTITION  
-     Partition 3  Primary                50 GB    329 MB
-     ```
+   DISKPART> select disk 1  
+   Disk 1 is now the selected disk.  
 
-     ```console
-     DISKPART> select disk 1  
-     ```  
+   DISKPART> create partition efi size=200  
+   Diskpart succeeded in creating the specified partition.  
 
-     Disk 1 is now the selected disk.  
-  
-     ```console
-     DISKPART> create partition efi size=200  
-     ```
+   DISKPART> create partition msr size=128  
+   Diskpart succeeded in creating the specified partition  
 
-     Diskpart succeeded in creating the specified partition.  
-  
-     ```console
-     DISKPART> create partition msr size=128  
-     ```
+   DISKPART> list partition  
 
-     Diskpart succeeded in creating the specified partition  
-
-     ```console
-     DISKPART> list partition  
-
-     Partition ### Type              Size   Offset
-     ------------- ---------------- ------- -------
-     Partition 1   System           200 MB  1024 KB
-     *Partition 2  Reserved         128 MB  201 MB
-     ```
+   Partition ### Type              Size   Offset
+   ------------- ---------------- ------- -------
+   Partition 1   System           200 MB  1024 KB
+   *Partition 2  Reserved         128 MB  201 MB
+   ```
 
 ### Convert the primary and secondary drives to dynamic disks
 
@@ -141,53 +118,36 @@ Before you can create a mirror, both the primary (source) drive (disk 0) and the
 
 When you use the Diskpart.exe utility, select the drive that you want to convert to a dynamic disk, and then convert the drive to a dynamic disk. You must follow this step on both the secondary and primary GPT drives. To convert both the primary and secondary drives to dynamic disks, follow these steps:
 
-   ```console
-    DISKPART> Select disk 1  
-   ```
+```console
+DISKPART> Select disk 1  
+Disk 1 is now the selected disk  
 
-   Disk 1 is now the selected disk  
+DISKPART> Convert dynamic  
+Diskpart successfully converted the selected disk to Dynamic format.  
 
-   ```console
-   DISKPART> Convert dynamic  
-   ```
+DISKPART> Select disk 0  
+Disk 0 is now the selected disk  
 
-   Diskpart successfully converted the selected disk to Dynamic format.  
+DISKPART> Convert dynamic  
+DiskPart successfully converted the selected disk to dynamic format.  
 
-   ```console
-   DISKPART> Select disk 0  
-   ```  
-
-   Disk 0 is now the selected disk  
-
-   ```console
-   DISKPART> Convert dynamic  
-   ```  
-
-   DiskPart successfully converted the selected disk to dynamic format.  
-
-   ```console
-   DISKPART> Exit  
-   ```
-
-   Leaving Diskpart...  
+DISKPART> Exit  
+Leaving Diskpart...  
+```
 
 ### Establish a mirror from the boot volume to the secondary drive
 
 After you convert both the primary drive (disk 0) and secondary drive (disk 1) to dynamic disks, you can establish a mirror from the boot volume to the secondary drive. To do this, you can use either the Disk management console or the Diskpart.exe utility. To do this by using the Diskpart.exe utility, follow these steps.  
 
-1. At the DISKPART> prompt, select the boot volume (C:), and then mirror the volume to the secondary drive (disk 1).  
+1. At the DISKPART> prompt, select the boot volume (C:), and then mirror the volume to the secondary drive (disk 1).
 
-     ```console
-     DISKPART> Select volum
-     ```
+   ```console
+   DISKPART> Select volum
+   Volume 1 is the selected volume.  
 
-     Volume 1 is the selected volume.  
-
-     ```console
-     DISKPART> add disk=1  
-     ```  
-
-     Diskpart succeeded in adding a mirror to the volume.  
+   DISKPART> add disk=1  
+   Diskpart succeeded in adding a mirror to the volume.  
+   ```
 
 2. Wait for the volume synchronization to complete, and then exit Diskpart.exe. You can check the progress of the synchronization in the Diskmgmt.msc console.
 
@@ -200,55 +160,41 @@ You must now copy the BCD store and the contents of the EFI partition from the p
 
 Use the Diskpart.exe utility to select the EFI partition on the secondary drive, and then assign a letter to the EFI partition so that it can be formatted. In the following example, the drive letter "S" is assigned to the EFI partition on the secondary drive. You can use any available drive letter for this step.  
 
-   ```console
-   DISKPART> Select disk 1  
-   ```
+```console
+DISKPART> Select disk 1  
+Disk 1 is now the selected disk.  
 
-   Disk 1 is now the selected disk.  
+DISKPART> Select partition 1  
+Partition 1 is now the selected partition.  
 
-   ```console
-   DISKPART> Select partition 1  
-   ```
-
-   Partition 1 is now the selected partition.  
-
-   ```console
-   DISKPART> Assign letter=S  
-   ```  
-
-   DiskPart successfully assigned the drive letter or mount point.  
+DISKPART> Assign letter=S  
+DiskPart successfully assigned the drive letter or mount point.  
+```
 
 Use Diskpart to format the "S" partition to use the FAT32 file system. The system can't start from an EFI partition unless it's formatted to use the FAT32 file system. To do this, type the following command, and then press ENTER:  
 
-   ```console
-   DISKPART> format fs=FAT32 quick  
-   ```
+```console
+DISKPART> format fs=FAT32 quick  
+```
 
 Select the EFI partition on the primary drive (disk 0), and then assign a drive letter to that EFI partition. In this example, the drive letter "P" is assigned to the primary EFI partition on disk 0. You can use any available drive letter for this step.
 
-   ```console
-   DISKPART> Select disk 0  
-   ```  
-
-   Disk 0 is now the selected disk.  
+```console
+DISKPART> Select disk 0  
+Disk 0 is now the selected disk.  
   
-   ```console
-   DISKPART> Select partition 1  
-   ```
+DISKPART> Select partition 1  
+Partition 1 is now the selected partition.  
 
-   Partition 1 is now the selected partition.  
-
-   ```console
-   DISKPART> Assign letter=P  
-   ```
-
-   DiskPart successfully assigned the drive letter or mount point.  
+DISKPART> Assign letter=P  
+DiskPart successfully assigned the drive letter or mount point.  
+```
 
 Exit Diskpart.
 
 ### Use Bcdedit.exe to configure boot entries for the mirrored disk
 
-Use the `BCDedit` command to view the current Windows boot entries. During the "add disk" operation to create the mirror, the Volume Disk Service (VDS) created a secondary entry in the Windows Server 2008 boot configuration, also known as the BCD store, for the Windows Boot Loader on disk 1. To view the current Windows boot entries, follow these steps:   
+Use the `BCDedit` command to view the current Windows boot entries. During the "add disk" operation to create the mirror, the Volume Disk Service (VDS) created a secondary entry in the Windows Server 2008 boot configuration, also known as the BCD store, for the Windows Boot Loader on disk 1. To view the current Windows boot entries, follow these steps:
 
 1. Open a command prompt.
 2. At the command prompt, type `P:`, and then press ENTER to change to drive P.
@@ -577,9 +523,13 @@ If there's a failure of the primary drive (disk 0), you must start the computer 
 >
 > 1. Start DiskPart.
 > 2. Select the EFI partition on disk 0, and assign to it the drive letter "P":
-    DISKPART> select disk 0  
-    DISKPART> select partition 1  
-    DISKPART> assign letter=p  
+>
+>    ```console
+>    DISKPART> select disk 0
+>    DISKPART> select partition 1
+>    DISKPART> assign letter=p
+>    ```
+>
 > 3. Exit DiskPart.
 > 4. Run the command `bcdedit /import P:\EFI\Microsoft\Boot\BCD /clean` to import the store from the EFI partition on disk 0.
 

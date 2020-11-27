@@ -68,7 +68,8 @@ The approaches to avoid this problem are:
 
 You can automate setting the permissions on using Registry Security Policy when the machine is member of the domain. For workgroup machines you can import this text as rpc-pol.inf file:
 
->\---------------------------  
+```inf
+---------------------------  
 [Unicode]  
 Unicode=yes  
 [Version]  
@@ -76,7 +77,8 @@ signature="$CHICAGO$"
 Revision=1  
 [Registry Keys]  
 "MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\rpc",0,"D:PAR(A;CIIO;KA;;;CO)(A;CI;KA;;;SY)(A;CI;KA;;;BA)(A;CI;KR;;;S-1-5-7)(A;CI;KR;;;BU)"  
-\------------------------------
+------------------------------
+```
 
 You can apply it using:
 
