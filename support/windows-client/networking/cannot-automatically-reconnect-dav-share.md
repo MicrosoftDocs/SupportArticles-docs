@@ -9,13 +9,13 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: waltere, kaushika
+ms.reviewer: waltere, kaushika,v-jesits
 ms.prod-support-area-path: WebClient and WebDAV
 ms.technology: Networking
 ---
 # Windows 7 can't automatically reconnect a DAV share when Basic Authentication is used
 
-This article describe a by-design behavior where Windows 7 can't automatically reconnect a DAV share when Basic Authentication is used.
+This article describes a by-design behavior where Windows 7 can't automatically reconnect a DAV share when Basic Authentication is used.
 
 _Original product version:_ &nbsp;Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2673544
@@ -23,36 +23,39 @@ _Original KB number:_ &nbsp; 2673544
 ## Symptoms
 
 Consider the following scenario on a Windows 7-based computer:
+
 - You used the Map Network Drive wizard or the Add Network Location wizard to connect a WebDav share or folder.
 - Basic Authentication is used for this resource.
 
-    **Note** Basic Authentication is often used for connections to third-party DAV servers, such as Apache, Oracle, and SAP.
+    > [!Note]
+    > Basic Authentication is often used for connections to third-party DAV servers, such as Apache, Oracle, and SAP.
 
 In this scenario, the resource isn't accessible after a system restart or a user logoff and logon.
 
 Additionally, Windows can't access the SSL WebDav folder. Instead, it returns one of the following network error messages.
 
- **Error message 1**  
+### Error message 1  
 
 > Windows cannot access \\\`server.company.com`@SSL\davWWWRoot\folder1\folder2\folder3\docs.  
 Check the spelling of the name. Otherwise, there might be a problem with your network. To try to identify and resolve network problems, click diagnose.  
 Error code: 0x80070035  
 The network path was not found.  
 
- **Note** Error code 0x80070035 maps to ERROR_BAD_NETPATH.
+ > [!Note] Error code 0x80070035 maps to ERROR_BAD_NETPATH.
 
- **Error message 2**  
+### Error message 2  
 
 > System Error 1244:  
 The operation being requested was not performed because the user has not been authenticated.
 
- **Note**  Error code 1244 maps to ERROR_NOT_AUTHENTICATED.
+ > [!Note]
+ > Error code 1244 maps to ERROR_NOT_AUTHENTICATED.
 
 ## Resolution
 
 Starting in Windows 7, Basic Authentication cannot be persisted by the Credential Manager. The only method to reconnect in Basic Authentication mode is to disconnect and reconnect the drive. This is because WinHttp can't retrieve saved Basic Authentication or Digest Authentication credentials.  
 
- For persistent connections, make sure that an authentication scheme is selected that enables persistent credentials through a restart. For example, Kerberos enables persistent credentials for authentication or certificate-based authentication.  
+For persistent connections, make sure that an authentication scheme is selected that enables persistent credentials through a restart. For example, Kerberos enables persistent credentials for authentication or certificate-based authentication.  
 
 ## Workaround
 
@@ -62,11 +65,12 @@ net use X: `http://server.company.com@8080/folder1/folder2/docs` /persistent:no
 
 net use X: \\\\`server.company.com`@SSL\davWWWRoot\folder1\folder2\docs  
 
-**Note** 8080 is the TCP port number for the SSL connection to the DAV server. 
+> [!Note]
+> 8080 is the TCP port number for the SSL connection to the DAV server.
 
 ## Status
 
-This behavior is by design in Basic Authentication mode in Windows 7. 
+This behavior is by design in Basic Authentication mode in Windows 7.
 
 ## More information
 
@@ -88,18 +92,15 @@ Basic authentication in Windows 7 isn't enabled by default if you're trying to c
 
 [841215](https://support.microsoft.com/help/841215) You cannot connect to a document library in Windows SharePoint Services 3.0 or Windows SharePoint Services 2.0 by using Windows shell commands or by using Explorer View  
 
-If no proxy is configured, WinHTTP sends credentials only to local intranet sites. If an HTTP proxy program is running on the client, or if no proxy server entry is configured, and you try to connect to a resource by using an FQDN such as `http://server.company.com`, you should use the **AuthForwardServerList** registry key as described in [KB 943280](https://support.microsoft.com/help/943280) to explicitly list the servers that you want to be treated as internal so that you can pass credentials for them. 
+If no proxy is configured, WinHTTP sends credentials only to local intranet sites. If an HTTP proxy program is running on the client, or if no proxy server entry is configured, and you try to connect to a resource by using an FQDN such as `http://server.company.com`, you should use the **AuthForwardServerList** registry key as described in [KB 943280](https://support.microsoft.com/help/943280) to explicitly list the servers that you want to be treated as internal so that you can pass credentials for them.
 
 [943280](https://support.microsoft.com/help/943280) Prompt for Credentials When Accessing FQDN Sites From a Windows Vista or Windows 7 Computer
 
 [941050](https://support.microsoft.com/help/941050) Error message on a Windows Vista-based computer when you try to access a network drive that is mapped to a Web share: "The operation being requested was not performed because the user has not been authenticated"
 
-[960646](https://support.microsoft.com/help/960646) If the "Reconnect at logon" option is selected, a network drive that is mapped to a Web share is displayed as a red X after you restart a computer that is running Windows Vista or Windows Server 2008 
+[960646](https://support.microsoft.com/help/960646) If the "Reconnect at logon" option is selected, a network drive that is mapped to a Web share is displayed as a red X after you restart a computer that is running Windows Vista or Windows Server 2008
 
-[2560598](https://support.microsoft.com/help/2560598) "The folder you entered does not appear to be valid. Please choose another" error when you use "Add a network connection" to connect to a nested WebDAV subfolder in Windows 7 or Windows Server 2008 R2 
+[2560598](https://support.microsoft.com/help/2560598) "The folder you entered does not appear to be valid. Please choose another" error when you use "Add a network connection" to connect to a nested WebDAV subfolder in Windows 7 or Windows Server 2008 R2
 
-**Note** If you follow the steps in KB 2560598, make sure that you don't activate the **[x] Reconnect at logon** option because this option doesn't work for Basic Authentication. If you've selected this option inadvertently, you should purge all saved credentials by using the Credential Manager UI. 
-
-## References
-
-[WebDAV Redirector Registry Settings](/archive/blogs/robert_mcmurray/webdav-redirector-registry-settings)
+> [!Note]
+> If you follow the steps in KB 2560598, make sure that you don't activate the **[x] Reconnect at logon** option because this option doesn't work for Basic Authentication. If you've selected this option inadvertently, you should purge all saved credentials by using the Credential Manager UI.

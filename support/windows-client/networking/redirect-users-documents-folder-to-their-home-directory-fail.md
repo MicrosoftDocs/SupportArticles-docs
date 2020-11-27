@@ -43,13 +43,12 @@ Failed to apply policy and redirect folder "Documents" to "\\\\`contoso.com`\hom
 
 ## Cause
 
-
-1. You have a computer running Vista SP1 or Windows 7 
+1. You have a computer running Vista SP1 or Windows 7
 2. Folder Redirection Policy is configured to redirect the Documents folder to the user's home directory
 3. "Grant the user exclusive rights to Documents" - enabled
 4. "Also apply redirection policy to Windows 2000, Windows 200 Server, Windows XP, and Windows Server 2003 operating systems" - disabled
 
-In this configuration, the Synchronization Partnership isn't created and therefore the documents in the home directory and local profile aren't merged. 
+In this configuration, the Synchronization Partnership isn't created and therefore the documents in the home directory and local profile aren't merged.
 
 ## Resolution
 
@@ -57,6 +56,6 @@ Do one of the following:
 
 1. Enable both "Grant the user exclusive rights to Documents" and "Also apply redirection policy to Windows 2000, Windows 200 Server, Windows XP, and Windows Server 2003 operating systems". When both are enabled, then the Synchronization Partnership is successfully created and documents are synchronized between the local profile and the home directory.
 
--- OR -- 
+    -- OR --
 
 2. Disable both "Grant the user exclusive rights to Documents" and "Also apply redirection policy to Windows 2000, Windows 200 Server, Windows XP, and Windows Server 2003 operating systems". When both are disabled, then the Synchronization Partnership is successfully created and documents are synchronized between the local profile and the home directory.

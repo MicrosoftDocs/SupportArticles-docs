@@ -20,14 +20,13 @@ This article describes the errors that occur when you migrate a Virtual Machine 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;969726
 
-
 ## Symptoms
 
 When you try to migrate a Virtual Machine (VM) from one Host to another from the SCVMM 2008 Console, it may fail with the following error:
 
 > "Unable to migrate the virtual machine \<virtual Machine Name> because the processor is not compatible with the host \<Host Name>"  
 >
-> "Unable to migrate the virtual machine \<name> because the processor is not compatible with the host \<host>." 
+> "Unable to migrate the virtual machine \<name> because the processor is not compatible with the host \<host>."
 
 This error appears in the Migrate Virtual Machine Wizard in the "Rating Explanation" section, where the rating was zero.
 
@@ -65,7 +64,8 @@ If any of these values are different between the two hosts, then that host isn't
 
 As a workaround, you can delete the Snapshots/Checkpoints and shutdown the VM. Once you do this, you should be able to migrate it from one host to another.
 
-Note: In VMM 2008 R2, you can set the Allow migration to a virtual machine host with a different processor property to allow a virtual machine to run on a host that has a different processor version than the host on which the virtual machine was created. The virtual machine must be stopped to set this property.
+> [!Note]
+> In VMM 2008 R2, you can set the Allow migration to a virtual machine host with a different processor property to allow a virtual machine to run on a host that has a different processor version than the host on which the virtual machine was created. The virtual machine must be stopped to set this property.
 
 > [!IMPORTANT]
 > Setting the Allow migration to a virtual machine host with a different processor property allows for greater flexibility in live or saved-state migrations; however, it reduces the functionality of the virtual machine's processor. So you should use this only when necessary, such as to facilitate live migration between clustered hosts that have different processor versions.Setting the Allow migration to a virtual machine host with a different processor property allows for greater flexibility in live or saved-state migrations; however, it reduces the functionality of the virtual machine's processor. So you should use this only when necessary, such as to facilitate live migration between clustered hosts that have different processor versions.

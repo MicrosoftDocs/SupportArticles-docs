@@ -36,7 +36,7 @@ Additionally, if you run an FSRM storage report, you receive the following error
 
 >Error: RunFileQueries, 0x8004532c, A volume shadow copy could not be created or was unexpectedly deleted.
 >
-> File Server Resource Manager encountered an unexpected error during volume scan of volumes mounted at '\\?\Volume{Volume_PID}\' ('**Volume_Letter** :'). To find out more information about the root cause for this error please consult the Application/System event log for other FSRM, VSS or VOLSNAP errors related with these volumes. Also, you might want to make sure that you can create shadow copies on these volumes by using the VSSADMIN command like this: VSSADMIN CREATE SHADOW /For= **Volume_Letter** :
+> File Server Resource Manager encountered an unexpected error during volume scan of volumes mounted at '\\?\Volume{Volume_PID}\' ('\***Volume_Letter** :'). To find out more information about the root cause for this error please consult the Application/System event log for other FSRM, VSS or VOLSNAP errors related with these volumes. Also, you might want to make sure that you can create shadow copies on these volumes by using the VSSADMIN command like this: VSSADMIN CREATE SHADOW /For= \***Volume_Letter** :
 >
 > Error generating report job with the task name '**Task_name**'.
 
@@ -63,9 +63,9 @@ Before you run a full classification of a volume for the first time, increase th
 
     If you're prompted for an administrator password, type the password. If you're prompted for confirmation, click **Continue**.
 3. At the command prompt, type the following command, and then press ENTER:
-    
+
     ```console
-     vssadmin list shadowstorage /for=Volume_Letter: 
+     vssadmin list shadowstorage /for=Volume_Letter:
     ```
 
 4. Note the **Maximum Shadow Copy Storage Space** value.

@@ -47,8 +47,8 @@ To resolve this issue, follow these steps:
 6. After the virtual machine is restarted, open Device Manager, and then verify that all Integration Services devices are installed.
 7. In Device Manager, expand **Computer**, and then verify that an APIC-based PC HAL is listed. For x86 virtual machines, this item will be listed as **APIC x86-based PC**. For x64 virtual machines, this item will be listed as **APIC x64-based PC**.
 
-> [!NOTE]
-> You can clear the **Detect HAL** check box that you selected in step 4. If the **Detect HAL** check box is selected, the virtual machine takes a slightly longer time to start.
+    > [!NOTE]
+    > You can clear the **Detect HAL** check box that you selected in step 4. If the **Detect HAL** check box is selected, the virtual machine takes a slightly longer time to start.
 
 ## More information
 
