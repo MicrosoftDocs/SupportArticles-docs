@@ -15,7 +15,7 @@ ms.technology: ActiveDirectory
 ---
 # How to troubleshoot Event ID 1311 messages on a Windows domain
 
-This article describes how to troubleshoot event ID 1311 messages in the Directory Service event log on a Microsoft Windows domain.
+This article describes how to troubleshoot event ID 1311 messages in the Directory Service event log on a Windows domain.
 
 _Original product version:_ &nbsp; Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 307593
@@ -256,7 +256,7 @@ The `repadmin /failcache` command differs from the `repadmin /showreps` command 
 
 The following example shows sample output from the `repadmin /failcache` command.
 
-> Z:\>repadmin /failcache   
+> Z:\>repadmin /failcache
 > ==== KCC CONNECTION FAILURES > ============================  
 > (none)  
 >

@@ -134,7 +134,3 @@ Setting the maximum log file size for Netlogon logs:
 
 For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:  
     [247811](https://support.microsoft.com/help/247811) How domain controllers are located in Windows
-
-### Did this fix the problem
-
-Check whether the problem is fixed. If the problem is fixed, you're finished with this article. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/home/expcontact/).

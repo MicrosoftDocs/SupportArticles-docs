@@ -1,6 +1,6 @@
 ---
-title: Disk Defragmenter Limitations
-description: Describes the Disk Defragmenter Limitations.
+title: Disk Defragmenter limitations
+description: Describes the Disk Defragmenter limitations.
 ms.date: 09/21/2020
 author: Deland-Han 
 ms.author: delhan
@@ -13,16 +13,16 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Partition and volume management
 ms.technology: BackupStorage
 ---
-# Disk Defragmenter Limitations in Windows
+# Disk Defragmenter limitations in Windows
 
-This article describes the Disk Defragmenter Limitations.
+This article describes the Disk Defragmenter limitations.
 
 _Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 227463
 
 ## Summary
 
-The Disk Defragmenter tool is based on the full retail version of Diskeeper by Diskeeper Corporation. The version that is included with Microsoft Windows 10/Windows Server 2012 R2 and later provides limited functionality in maintaining disk performance by defragmenting volumes that use the FAT, the FAT32, or the NTFS file system.
+The Disk Defragmenter tool is based on the full retail version of Diskeeper by Diskeeper Corporation. The version that is included with Windows provides limited functionality in maintaining disk performance by defragmenting volumes that use the FAT, the FAT32, or the NTFS file system.
 
 ## More information
 
