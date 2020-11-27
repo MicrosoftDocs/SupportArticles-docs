@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, tonnyp
 ms.prod-support-area-path: Active Directory Migration Tool (ADMT)
 ms.technology: ActiveDirectory
 ---
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;2004090
 
 ## Symptoms
 
-Configuring the Password Export Server (PES) service on Active Directory Migration Tool version 3.1 on the source domain PDC Emulator role holder using the **ADMT KEY** command shown below fails with the following on-screen error:
+Configuring the Password Export Server (PES) service on Active Directory Migration Tool version 3.1 on the source domain PDC Emulator role holder using the `ADMT KEY` command shown below fails with the following on-screen error:
 
 Command-line syntax:
 
@@ -36,21 +36,21 @@ On-screen error:
 
 ## Cause
 
-The supplied password was correct, but Windows Installer (msiexec.exe) failed to open a handle to the policy object on the domain controller for saving the password that will be used by the PES service. The failure indicates that the user account didn't have the required permission. 
+The supplied password was correct, but Windows Installer (msiexec.exe) failed to open a handle to the policy object on the domain controller for saving the password that will be used by the PES service. The failure indicates that the user account didn't have the required permission.  
 
- The user who installs the PES service must be a member of the domain's built-in Administrators group. 
+ The user who installs the PES service must be a member of the domain's built-in Administrators group.  
 
- In addition, if the user account isn't a member of the built-in Administrators account, and User Account Control (UAC) is enabled on the domain controller, the user runs with least user privileges after logon. To access the policy object on the domain controller for installing the PES service, the user must launch the Pwdmig.msi setup file with full privileges. 
+ In addition, if the user account isn't a member of the built-in Administrators account, and User Account Control (UAC) is enabled on the domain controller, the user runs with least user privileges after logon. To access the policy object on the domain controller for installing the PES service, the user must launch the Pwdmig.msi setup file with full privileges.  
 
 ## Resolution
 
-Ensure the user account who installs the PES service is a member of the domain's built-in Administrators group by running the **whoami /groups** command, and run the Pwdmig.msi setup file in an elevated command-prompt window launched with the **Run as administrator** option. 
+Ensure the user account who installs the PES service is a member of the domain's built-in Administrators group by running the **whoami /groups** command, and run the Pwdmig.msi setup file in an elevated command-prompt window launched with the **Run as administrator** option.  
 
 ## More information
 
-If you see that the output of the command whoami /groups looks like the following, it means the user logged in with least user privileges. Although they're a member of the built-in Administrators group, they don't have permissions to perform administrative tasks with this token. 
+If you see that the output of the command whoami /groups looks like the following, it means the user logged in with least user privileges. Although they're a member of the built-in Administrators group, they don't have permissions to perform administrative tasks with this token.  
 
-Whoami /groups output: 
+Whoami /groups output:  
 
 | Group Name| Type| SID| Attributes |
 |---|---|---|---|

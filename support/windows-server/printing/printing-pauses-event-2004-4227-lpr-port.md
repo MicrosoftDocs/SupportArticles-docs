@@ -50,15 +50,13 @@ LPR ports use the default LPR RFC source and destination ports (TCP: 721-731, TC
 
 We recommend that you use standard TCP\IP ports instead of LPR ports. If you must use LPR ports, you can still use TCP\IP ports. However, you should set them to LPR mode. The following articles describe standard TCP\IP ports in more detail.
 
-[The standard port monitor for TCP/IP in Windows Server 2003](https://support.microsoft.com/kb/814586) 
+[The standard port monitor for TCP/IP in Windows Server 2003](standard-port-monitor-for-tcpip.md)  
 
-[https://technet.microsoft.com/library/cc728404(WS.10).aspx](https://technet.microsoft.com/library/cc728404%28WS.10%29.aspx) 
-
-To work around the 11-port RFC default for LPR ports, follow these steps: 
+To work around the 11-port RFC default for LPR ports, follow these steps:  
 
  1. Set the following registry key (REG_DWORD):
 
-    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\LPDSVC\lpr  
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\LPDSVC\lpr`  
     Value name: UseNonRFCSourcePorts  
     Value Data: 1  
     Value Type: Binary  
