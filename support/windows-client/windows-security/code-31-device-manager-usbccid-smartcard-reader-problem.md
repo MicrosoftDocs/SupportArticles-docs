@@ -27,7 +27,7 @@ The requested operation was unsuccessful.
 
 ## Cause
 
-During initialization, the smartcard driver attempts to create an instance of smart card class extension. The attempt failed and the driver isn’t ready yet.
+During initialization, the smartcard driver attempts to create an instance of smart card class extension. The attempt failed and the driver is not loaded.
 
 ## Resolution
 
