@@ -1,6 +1,6 @@
 ---
-title: Trusted Domains don't appear
-description: Provides a solution to an issue where trusted domains don't Appear in the Available List for Domain Logon or Setting Security Permissions.
+title: Trusted domains don't appear in Available List
+description: Provides a solution to an issue where trusted domains don't appear in the Available List for domain logon or setting security permissions.
 ms.date: 09/21/2020
 author: Deland-Han 
 ms.author: delhan
@@ -13,9 +13,9 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Domain and forest trusts
 ms.technology: WindowsSecurity
 ---
-# Trusted Domains do not Appear in the Available List for Domain Logon or Setting Security Permissions
+# Trusted domains don't appear in the Available List for domain logon or setting security permissions
 
-This article provides a solution to an issue where trusted domains don't Appear in the Available List for Domain Logon or Setting Security Permissions.
+This article provides a solution to an issue where trusted domains don't appear in the Available List for domain logon or setting security permissions.
 
 _Original product version:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 310611

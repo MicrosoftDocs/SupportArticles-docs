@@ -145,7 +145,7 @@ To resolve this problem, follow these steps:
     ntdsutil "sem d a" go
     ```
 
-11. If the semantic database analysis indicates no errors, continue to the following steps. If the analysis reports any errors, type the following command at the command prompt, including the quotation marks: 
+11. If the semantic database analysis indicates no errors, continue to the following steps. If the analysis reports any errors, type the following command at the command prompt, including the quotation marks:
 
     ```console
     ntdsutil "sem d a" "go f"
