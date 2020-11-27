@@ -2,23 +2,15 @@
 title: The Path My Documents contains an invalid character
 description: Fixes an issue in which you can't install the AVIcode agent because of an invalid character in the user profile.
 ms.date: 08/13/2020
-author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
-audience: itpro
-ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
-ms.reviewer: kaushika, jfanjoy
-ms.prod-support-area-path: Domain controller scalability or performance (including LDAP)
-ms.technology: ActiveDirectory
+ms.prod-support-area-path: 
+ms.reviewer: jfanjoy
 ---
 # AVIcode agent installation fails with error: 1324 Error The Path contains an invalid character
 
 This article helps you fix an issue in which you can't install the AVIcode agent because of an invalid character in the user profile.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2625330
+_Original product version:_ &nbsp; AVIcode, Inc.  
+_Original KB number:_ &nbsp; 2625330
 
 ## Symptoms
 
