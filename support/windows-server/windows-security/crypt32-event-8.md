@@ -13,40 +13,40 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
 ms.technology: WindowsSecurity
 ---
-# Crypt32 8 events continuously reported on Windows Server 2003, Windows Server 2003 R2, or Windows XP
+# Crypt32 8 events continuously reported in Windows
 
 This article provides help to solve an issue where Crypt32 event 8 is continuously reported in the Application log.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 2253680
+_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp;2253680
 
 ## Symptoms
 
 The following event is recorded in the Application log:
 
-Event Type: Error
-Event Source: Crypt32
-Event Category: None
-Event ID: 8
-Date: 3/15/2010
-Time: 11:27:57 AM
-User: N/A
-Computer: SERVER1
-Description:
-Failed auto update retrieval of third-party root list sequence number from: `http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt` with error: The server name or address could not be resolved.
+> Event Type: Error  
+Event Source: Crypt32  
+Event Category: None  
+Event ID: 8  
+Date: 3/15/2010  
+Time: 11:27:57 AM  
+User: N/A  
+Computer: SERVER1  
+Description:  
+Failed auto update retrieval of third-party root list sequence number from: `http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt` with error: The server name or address could not be resolved.  
 
 The following similar event may also be recorded:
 
-Event Type: Error
-Event Source: Crypt32
-Event Category: None
-Event ID: 8
-Date: 3/15/2010
-Time: 11:27:57 AM
-User: N/A
-Computer: SERVER1
-Description:
-Failed auto update retrieval of third-party root list sequence number from: `http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt` with error: This network connection does not exist.
+> Event Type: Error  
+Event Source: Crypt32  
+Event Category: None  
+Event ID: 8  
+Date: 3/15/2010  
+Time: 11:27:57 AM  
+User: N/A  
+Computer: SERVER1  
+Description:  
+Failed auto update retrieval of third-party root list sequence number from: `http://www.download.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootseq.txt` with error: This network connection does not exist.  
 
 These events may be recorded at continuously, at regular intervals (for example, every 10 minutes) or they may only be recorded when you start a particular application.
 
@@ -58,7 +58,6 @@ These events are recorded despite the fact that no applications or services inst
 
 This behavior is expected under the following conditions:
 
-
 - The computer is unable to access the Windows Update web site due to router or proxy configuration.
 - An application has been installed that has been designed to interact with the Windows Security Center (WSC) on Windows Vista or higher. Example applications include third-party virus software, malware scanners, or firewall products.
 
@@ -66,23 +65,20 @@ This behavior is expected under the following conditions:
 
 There are three options for handling these events.
 
-
 1. Disregard these events. They are benign and can be safely ignored.
 2. Modify router or proxy configuration to allow computers recording these events to connect to Windows Update.
-3. Disable Automatic Root Updates on computers recording these events.
-4. 
-  1. In Control Panel, double-click Add/Remove Programs.
-  2. Click Add/Remove Windows Components.
-  3. Click to clear the Update Root Certificates check box, and then continue with the Windows Components Wizard.
-
+3. Disable Automatic Root Updates on computers recording these events. 
+   1. In Control Panel, double-click Add/Remove Programs.
+   2. Click Add/Remove Windows Components.
+   3. Click to clear the Update Root Certificates check box, and then continue with the Windows Components Wizard.
 
 ## More information
 
-On Windows Vista and higher, Microsoft requires that any software registers and interacts with the Windows Security Center (WSC) that's signed with a digital certificate that chains up to an internal Microsoft code signing root certification authority (CA). This CA is called the Microsoft Code Verification Root CA (MSCV). Microsoft has cross-certified the MSCV with multiple third-party code-signing CAs allowing these vendors to continue issuing valid code-signing certificates to their customers.
+Microsoft requires that any software registers and interacts with the Windows Security Center (WSC) that's signed with a digital certificate that chains up to an internal Microsoft code signing root certification authority (CA). This CA is called the Microsoft Code Verification Root CA (MSCV). Microsoft has cross-certified the MSCV with multiple third-party code-signing CAs allowing these vendors to continue issuing valid code-signing certificates to their customers.
 
-The MSCV certificate is embedded in the kernel on Windows Vista and higher, but it is not available as part of the Automatic Trusted Root Update service. Whenever the digital signature on one of these applications is checked on Windows XP, Windows Server 2003 or Windows Server 2003 R2, the chain of the vendor's code signing certificate is built up to both the root CA of the third-party that issued the code signing certificate and, by virtue of the cross-CA certificate issued by Microsoft, also to the MSCV. In short, two chains are built and the validity of both are verified.
+The MSCV certificate is embedded in the kernel, but it is not available as part of the Automatic Trusted Root Update service. Whenever the digital signature on one of these applications is checked, the chain of the vendor's code signing certificate is built up to both the root CA of the third-party that issued the code signing certificate and, by virtue of the cross-CA certificate issued by Microsoft, also to the MSCV. In short, two chains are built and the validity of both are verified.
 
-The MSCV certificate is not embedded in the kernel on Windows XP, Windows Server 2003 or Windows Server 2003 R2 so Windows determines that that CA is not trusted. If Automatic Trusted Root Updates are enabled, then Windows will attempt to contact Windows Update to determine if the MSCV certificate is published by Microsoft as part of the Trusted Root Program. The MSCV is not available through that program, so this lookup fails.
+The MSCV certificate is not embedded in the kernel so Windows determines that that CA is not trusted. If Automatic Trusted Root Updates are enabled, then Windows will attempt to contact Windows Update to determine if the MSCV certificate is published by Microsoft as part of the Trusted Root Program. The MSCV is not available through that program, so this lookup fails.
 
 Windows quickly determines that the MSCV isn't trusted and that chain is eliminated. This leaves the other chain that leads to a third-party root CA, which is probably valid, allowing the application's signature to be successfully validated. Thus, there are no errors or failures associated with the application.
 

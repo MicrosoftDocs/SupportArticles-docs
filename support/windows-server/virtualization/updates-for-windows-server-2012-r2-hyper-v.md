@@ -17,10 +17,10 @@ ms.technology: HyperV
 
 This article documents recommended hotfixes, product updates, and known solutions that are currently available for Windows Server 2012 R2 Hyper-V environments.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 3135020
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;3135020
 
-## Recommended hotfixes for all Hyper V environments
+## More information
 
 The following Microsoft Knowledge Base articles describe the currently available fixes that are highly recommended for all Hyper V environments. These updates are considered important to install to make sure you experience the highest level of reliability.
 

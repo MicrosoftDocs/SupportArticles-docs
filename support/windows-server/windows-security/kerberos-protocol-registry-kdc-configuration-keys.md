@@ -239,7 +239,7 @@ The registry entries that are listed in this section must be added to the follow
     This value indicates whether session keys are exported with initial or with cross realm TGT authentication. The default value is false for security reasons.
 
     > [!NOTE]
-    > With active Credential Guard in Windows 10 and later versions of Windows, you cannot enable sharing the TGT session keys with applications anymore. For more information, see [Registry Key to Allow Session Keys to Be Sent in Kerberos Ticket-Granting-Ticket](https://support.microsoft.com/en-US/help/308339).
+    > With active Credential Guard in Windows 10 and later versions of Windows, you cannot enable sharing the TGT session keys with applications anymore.  
 
 ## Registry entries and values under the Kdc key
 

@@ -17,10 +17,8 @@ ms.technology: RDS
 
 This article discusses the Terminal Server Administration tool, Connection Configuration.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 186566
-
-This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. For more information, see the [Microsoft Support Lifecycle Policy](https://docs.microsoft.com/lifecycle).
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;186566
 
 ## More information
 
@@ -32,7 +30,7 @@ You can have one connection defined per transport per type per adapter. So, in a
 
 Citrix's Metaframe product may be installed on the Terminal Server so Citrix's ICA clients rather than Microsoft's RDP client can be used to connect to Terminal Server. In this tool and in User Manager, you will find options that do not apply unless Metaframe is installed on the Terminal Server.
 
-On a Citrix Winframe Server (based on Windows NT 3.51) or on a Terminal Server with Metaframe installed, customers have the option of creating different connection types for different ICA clients (for example, Macintosh clients, asynch clients, SPX clients).
+On a Citrix Winframe Server or on a Terminal Server with Metaframe installed, customers have the option of creating different connection types for different ICA clients (for example, Macintosh clients, asynch clients, SPX clients).
 
 Right-clicking a defined connection brings up a menu that allows you to edit the connection configuration
 
@@ -60,9 +58,10 @@ Below is a description of the various advanced options:
 
 If you disable Logon, you're disabling client connections. This doesn't keep non-client users from connecting to the server (for that you would have to pause or stop the Server or Netlogon services). If you want to keep clients from connecting and establishing terminal sessions, this is where you do it.
 
-NOTE: If you're used to pausing or stopping the Server or Netlogon services to keep users from connecting to the server, you'll be tempted to try to stop the Terminal Server service. This service can't be stopped. You can change it to manual or disabled, but when you restart the server, this service will return to automatic and will start. This is by design. This service is integral to Terminal Server's operation.
-
-NOTE: Stopping the Server or Netlogon services doesn't keep Terminal Server clients from connecting. These connections use a different connection path. Again, disabling logon here in Connection Configuration is the way to deny client connections. It's also possible to deny connections based on permissions (more detail below).
+> [!NOTE]
+> If you're used to pausing or stopping the Server or Netlogon services to keep users from connecting to the server, you'll be tempted to try to stop the Terminal Server service. This service can't be stopped. You can change it to manual or disabled, but when you restart the server, this service will return to automatic and will start. This is by design. This service is integral to Terminal Server's operation.
+>
+> Stopping the Server or Netlogon services doesn't keep Terminal Server clients from connecting. These connections use a different connection path. Again, disabling logon here in Connection Configuration is the way to deny client connections. It's also possible to deny connections based on permissions (more detail below).
 
 ### Timeout Settings (in Minutes)
 
@@ -82,7 +81,7 @@ Setting these values here affects every Client that uses this connection. If you
 
 Low encryption = Microsoft 40-bit encryption from client to server only. Medium encryption = Same as low but applies in both directions. High encryption (Non-export) = 128-bit standard RC4 encryption High encryption (Export) = 40-bit standard RC4 encryption
 
-Use Default NT Authentication: This forces any Client on this connection to use Windows NT's MSGINA. Otherwise, a third-party GINA might be used.
+Use Default NT Authentication: This forces any Client on this connection to use MSGINA. Otherwise, a third-party GINA might be used.
 
 ### Autologon
 
@@ -129,7 +128,6 @@ This permits logging on and logging off only. Guests cannot disconnect sessions 
 ### User Access
 
 This allows users to:
-
 
 - Log on or log off.
 - Query information through Terminal Server Administrator or at a command prompt with the Query command.
