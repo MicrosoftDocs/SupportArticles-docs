@@ -582,6 +582,8 @@
       href: ./performance/gpu-process-memory-counters-report-wrong-value.md
     - name: Task Manager shows incorrect CPU speed
       href: ./performance/task-manager-shows-incorrect-cpu-speed.md
+    - name: User-defined data collector set doesn't run as scheduled
+      href: ../windows-server/performance/user-defined-dcs-doesnt-run-as-scheduled.md
     - name: Use the System Configuration utility to troubleshoot
       href: ./performance/system-configuration-utility-troubleshoot-configuration-errors.md
     - name: Windows Experience Index shows 1.0
