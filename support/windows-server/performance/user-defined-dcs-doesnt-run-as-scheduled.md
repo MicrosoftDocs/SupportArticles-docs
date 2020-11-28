@@ -24,11 +24,11 @@ _Original product version:_ &nbsp; Windows Server 2019 - all editions, Windows 1
 
 Using one of the affected versions of Windows, you create a data collector set in the **Performance** > **Data Collector Sets** > **User Defined** folder in Computer Management. You configure a schedule as part of the data collector set definition.
 
-However, at the scheduled time, Performance Monitor does not start collecting data. If you configured the data collector set to save data to a file, the file is not created and no data is saved. In Task Scheduler, the task history indicates that the task ran successfully. However, the task did not actually do anything.
+You note that at the scheduled time, Performance Monitor does not start collecting data. If you configured the data collector set to save data to a file, the file is not created and no data is saved. In Task Scheduler, the task history indicates that the task ran successfully. However, the task did not actually do anything.
 
 In Task Scheduler, if you open the scheduled task and then select **Actions**, the actions list contains **Custom Handler**.
 
-:::image type="content" source="./media/user-defined-dcs-doesnt-run-as-scheduled/scheduled-task-action.png" alt-text="The action of the scheduled task is not configured correctly.":::
+:::image type="content" source="./media/user-defined-dcs-doesnt-run-as-scheduled/scheduled-task-action.png" alt-text="The action of the scheduled task isn't configured correctly.":::
 
 The expected action, **Start a program**, which includes the specific commands and arguments, is missing.
 
@@ -37,7 +37,7 @@ The expected action, **Start a program**, which includes the specific commands a
 
 ## Cause
 
-Starting in version 1703, the way that scheduled tasks are automatically created for data collector sets changed. As a result of the change, the actions for these tasks are not created correctly.
+Starting in version 1703, the way that scheduled tasks are automatically created for data collector sets changed. As a result of the change, the actions for these tasks aren't created correctly.
 
 ## Resolution
 
@@ -49,7 +49,7 @@ You can manually fix the scheduled task that is associated with a data collector
 
 1. In Task Scheduler, do one of the following to open the Properties of the affected task:  
   
-   - If the task appears in the Task Scheduler **Active tasks** list, double-click the task. Then right-click the task an select **Properties**.
+   - If the task appears in the Task Scheduler **Active tasks** list, double-click the task. Then right-click the task and select **Properties**.
    - Go to **Task Scheduler Library** > **Microsoft** > **Windows** > **PLA**, right-click the task, and then select **Properties**.
   
 2. Select **Actions**, select **Custom Handler**, and then select **Delete**.
