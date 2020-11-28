@@ -1766,6 +1766,8 @@
       href: ./performance/task-manager-display-incorrect-memory-info.md
     - name: Unable to allocate memory from the system paged pool
       href: ./performance/unable-allocate-memory-system-paged-pool.md
+    - name: User-defined data collector set doesn't run as scheduled
+      href: ./performance/user-defined-dcs-doesnt-run-as-scheduled.md
     - name: Virtual memory in 32-bit version of Windows
       href: ./performance/ram-virtual-memory-pagefile-management.md
   - name: Shutdown is slow or hangs
