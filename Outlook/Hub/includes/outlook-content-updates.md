@@ -2,6 +2,13 @@
 
 
 
+## Week of November 23, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+
+
 ## Week of November 16, 2020
 
 
@@ -387,12 +394,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 10/26/2020 | [How to repair personal folder file (.pst)](/outlook/troubleshoot/data-files/how-to-repair-personal-folder-file) | modified |
-
-
-## Week of October 19, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/19/2020 | [The Outlook meeting tracking tab is not updated](/outlook/troubleshoot/calendaring/meeting-tracking-tab-not-updated) | modified |
-| 10/21/2020 | [Outlook search folders show unexpected mail items with an empty subject](/outlook/troubleshoot/user-interface/personmetadata-items) | modified |
