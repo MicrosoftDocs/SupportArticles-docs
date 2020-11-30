@@ -44,14 +44,15 @@ If you do not use any USB 2.0 devices on the computer, another workaround is to 
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed at the beginning of this article. 
+Microsoft has confirmed that this is a problem in the Microsoft products that are listed at the beginning of this article.
 
 ## More information
 
 After you apply the hotfix that is mentioned earlier in this article, the following behaviors change:
 
 - If you try to use a USB 1.x storage device immediately after you resume your computer, the problem may still occur. However, the problem does not occur if you then try to use the storage device again in a few seconds.
-- Soon after you resume your computer, you may receive an "Unsafe Removal of Device" message that mentions the USB 1.x device. You can safely close this box. This message occurs because of a Windows 2000 timing issue that involves powering up both the USB companion controller driver stack and the Enhanced Host Controller interface (EHCI) stack after resuming from suspend.
+
+- Soon after you resume your computer, you may receive a **Unsafe Removal of Device** message that mentions the USB 1.x device. You can safely close this box. This message occurs because of a Windows timing issue that involves powering up both the USB companion controller driver stack and the Enhanced Host Controller interface (EHCI) stack after resuming from suspend.
 
     If the companion controller root hub driver powers up first, the USB 1.x devices that were attached to the root hub ports when the computer entered suspend are no longer attached. Therefore, the driver informs Plug and Play that the device has been removed. This occurs because the devices were routed to the EHCI controller when the Configure Flag was set, but they are not currently attached to the companion controller.
 

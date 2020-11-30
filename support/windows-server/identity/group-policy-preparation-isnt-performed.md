@@ -13,7 +13,7 @@ ms.reviewer: kaushika, nedpyle
 ms.prod-support-area-path: DCPromo and the installation of domain controllers
 ms.technology: ActiveDirectory
 ---
-# Group Policy preparation isn't performed when you automatically prepare an existing domain for Windows Server 2012
+# Group Policy preparation isn't performed when you automatically prepare an existing domain for Windows Server 2012 R2
 
 This article describes an issue that Group Policy preparation isn't performed when you automatically prepare an existing domain.
 
@@ -22,11 +22,10 @@ _Original KB number:_ &nbsp; 2737129
 
 ## Symptoms
 
-When you automatically prepare an existing domain for Windows Server 2012 by using Windows Server 2012 Server Manager or the Install-AddsDomainController Windows PowerShell cmdlet, Group Policy preparation isn't performed. Additionally, the following output is displayed briefly when you use Install-AddsDomainController:
+When you automatically prepare an existing domain for Windows Server 2012 R2 by using Server Manager or the `Install-AddsDomainController` Windows PowerShell cmdlet, Group Policy preparation isn't performed. Additionally, the following output is displayed briefly when you use `Install-AddsDomainController`:
 
-Adprep successfully updated the forest-wide information.
-
-Adprep successfully updated the domain-wide information.
+> Adprep successfully updated the forest-wide information.  
+> Adprep successfully updated the domain-wide information.
 
 The new cross domain planning functionality for Group Policy, RSOP Planning Mode, requires file system and Active Directory Domain Services permissions to be updated for existing Group Policy Objects (GPOs).
 
@@ -41,7 +40,7 @@ Gpprep adds cross-domain planning functionality for Group Policy and Resultant S
 
 ## Resolution
 
-Domain administrators must run adprep.exe /domainprep /gpprep manually, just as they had to do in Windows Server 2003, Windows Server 2008, and Windows Server 2008 R2.
+Domain administrators must run `adprep.exe /domainprep /gpprep` manually, just as they had to do in Windows Server 2003, Windows Server 2008, and Windows Server 2008 R2.
 
 ## More information
 
@@ -49,5 +48,4 @@ Administrators should run Gpprep only one time in the history of a domain. They 
 
 The Adprep.exe tool is included on the Windows Server 2012 media at \support\adprep. This version of Adprep.exe supports remote preparation and doesn't have to run on the infrastructure master operations master (also known as flexible single master operations or FSMO) role, as it did in previous server operating systems.
 
-For more information about legacy Adprep.exe commands, go to the following Microsoft TechNet website:  
-[Prepare Your Infrastructure for Upgrade](https://technet.microsoft.com/library/cc783495%28v=ws.10%29.aspx)
+For more information about legacy Adprep.exe commands, see [Prepare Your Infrastructure for Upgrade](/previous-versions/windows/it-pro/windows-server-2003/cc783495(v=ws.10)).
