@@ -40,7 +40,7 @@ To fix this issue, follow these steps:
 
 If your MX record must point to its current location, you have to take additional steps to have your email forwarded to your Office 365 users. Use one of the following methods:
 
-- Set up a hybrid deployment. For more information, see [Exchange Server Deployment Assistant](/exchange/exchange-deployment-assistant?view=exchserver-2019).
+- Set up a hybrid deployment. For more information, see [Exchange Server Deployment Assistant](/exchange/exchange-deployment-assistant?view=exchserver-2019&preserve-view=true).
 
   For more information about mail flow setup options in a hybrid deployment, see the following Microsoft resources:
 

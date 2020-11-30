@@ -170,7 +170,7 @@
     - name: Delegate can't accept meeting request in OWA
       href: ../calendars/delegate-cannot-accept-meeting-request-using-owa.md
     - name: Delegate only sees free/busy if manager in another forest
-      href: ../calendars/delegate-only-see-freebusy-info-if-manager-is-in-another-forest.md
+      href: ../calendars/delegate-only-sees-freebusy-info-if-manager-is-in-another-forest.md
     - name: Delegates accept meetings automatically
       href: ../calendars/delegates-accept-meetings-automatically.md
     - name: Meeting requests are added to resource delegate's calendar

@@ -51,7 +51,7 @@ This issue occurs if the user isn't the mailbox owner. Only mailbox owners can p
 
 For more information about the `Set-MailboxCalendarFolder` and `Get-MailboxCalendarFolder` cmdlets, see the following Microsoft websites:
 
-- [Set-MailboxCalendarFolder](/powershell/module/exchange/set-mailboxcalendarfolder?view=exchange-ps)
-- [Get-MailboxCalendarFolder](/powershell/module/exchange/get-mailboxcalendarfolder?view=exchange-ps)
+- [Set-MailboxCalendarFolder](/powershell/module/exchange/set-mailboxcalendarfolder?view=exchange-ps&preserve-view=true)
+- [Get-MailboxCalendarFolder](/powershell/module/exchange/get-mailboxcalendarfolder?view=exchange-ps&preserve-view=true)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

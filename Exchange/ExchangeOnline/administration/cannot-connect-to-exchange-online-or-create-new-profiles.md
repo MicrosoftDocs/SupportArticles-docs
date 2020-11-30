@@ -46,7 +46,7 @@ Network proxy configuration redirects clients to one particular Microsoft 365 IP
 
 To resolve this issue, open port 443 in the network environment through which the user accesses Outlook and Exchange Online.
 
-Restricted network access may affect all the Microsoft 365 connectivity. For more information about the ports that are used in Microsoft 365, the addresses ranges, and ports that are used in Exchange Online, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide).
+Restricted network access may affect all the Microsoft 365 connectivity. For more information about the ports that are used in Microsoft 365, the addresses ranges, and ports that are used in Exchange Online, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide&preserve-view=true).
 
 ## Resolution for scenario 2
 

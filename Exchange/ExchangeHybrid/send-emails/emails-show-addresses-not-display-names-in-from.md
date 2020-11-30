@@ -72,7 +72,7 @@ To fix this issue, follow these steps:
    3. In the output, make sure that the `TrustedMailnboundEnabled` attribute is set to **True**.
    4. If the attribute in step 3C isn't set to **True**, use the `Set-RemoteDomain` command to change the value to **True**.
 
-4. Make sure that Transport Layer Security (TLS) is implemented and enabled in both environments and that the fully qualified domain name (FQDN) is set correctly. Check the on-premises send connector and the EOP inbound connector by using the Exchange Server Deployment Assistant at [Exchange Deployment Assistant](/exchange/exchange-deployment-assistant?view=exchserver-2019).
+4. Make sure that Transport Layer Security (TLS) is implemented and enabled in both environments and that the fully qualified domain name (FQDN) is set correctly. Check the on-premises send connector and the EOP inbound connector by using the Exchange Server Deployment Assistant at [Exchange Deployment Assistant](/exchange/exchange-deployment-assistant?view=exchserver-2019&preserve-view=true).
 
 5. Check the Exchange certificate of the send connector on the on-premises Exchange servers that are responsible for delivering mail to EOP. The Exchange certificate should have Simple Mail Transfer Protocol (SMTP) enabled and should match the FQDN of the send connector.
 

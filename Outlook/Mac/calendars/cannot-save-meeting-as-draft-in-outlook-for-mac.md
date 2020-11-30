@@ -45,7 +45,7 @@ To set the property, follow these steps:
 3. Query or listen for calendar events:
     1. EWS: [Subscribe](/exchange/client-developer/exchange-web-services/how-to-synchronize-items-by-using-ews-in-exchange) to the created event
     2. REST: [Subscribe](/previous-versions/office/office-365-api/api/version-2.0/notify-rest-operations#SubscribeOperation) to the created notification, and filter based on the extended property
-    3. Graph: [Subscribe](/graph/api/subscription-post-subscriptions?view=graph-rest-1.0&tabs=http) to the created notification, and filter based on the extended property
+    3. Graph: [Subscribe](/graph/api/subscription-post-subscriptions?view=graph-rest-1.0&tabs=http&preserve-view=true) to the created notification, and filter based on the extended property
 
 4. Find the corresponding extended property on Exchange:
     1. EWS:

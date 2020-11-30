@@ -37,7 +37,7 @@ To work around this issue, do one of the following:
 
   Make sure that you use UTC format when you specify the time.
 
-- Use the `Set-MailboxRegionalConfiguration` cmdlet to set the `DateFormat` property of users to the MM/DD/YY format. For more information about this cmdlet, see [Set-MailboxRegionalConfiguration](/powershell/module/exchange/set-mailboxregionalconfiguration?view=exchange-ps).
+- Use the `Set-MailboxRegionalConfiguration` cmdlet to set the `DateFormat` property of users to the MM/DD/YY format. For more information about this cmdlet, see [Set-MailboxRegionalConfiguration](/powershell/module/exchange/set-mailboxregionalconfiguration?view=exchange-ps&preserve-view=true).
 
 ## Status
 

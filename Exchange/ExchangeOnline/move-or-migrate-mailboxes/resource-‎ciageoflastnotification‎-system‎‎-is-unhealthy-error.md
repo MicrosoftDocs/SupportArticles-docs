@@ -57,7 +57,7 @@ After indexing is completed, perform the mailbox move request.
 For more information, see the following Microsoft resources:
 
 - [Exchange Search](/exchange/exchange-search-exchange-2013-help)
-- [Update-MailboxDatabaseCopy](/powershell/module/exchange/update-mailboxdatabasecopy?view=exchange-ps)
-- [Get-MailboxDatabaseCopyStatus](/powershell/module/exchange/get-mailboxdatabasecopystatus?view=exchange-ps)
+- [Update-MailboxDatabaseCopy](/powershell/module/exchange/update-mailboxdatabasecopy?view=exchange-ps&preserve-view=true)
+- [Get-MailboxDatabaseCopyStatus](/powershell/module/exchange/get-mailboxdatabasecopystatus?view=exchange-ps&preserve-view=true)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Q&A](/answers/products/?WT.mc_id=msdnredirect-web-msdn).

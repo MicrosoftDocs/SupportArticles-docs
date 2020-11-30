@@ -108,7 +108,7 @@ Export the federation certificates from the Internet-facing Exchange servers, an
 
 For more information about how to export certificates in Exchange Server, see the following resources:
 
-- [Import-ExchangeCertificate](/powershell/module/exchange/import-exchangecertificate?view=exchange-ps)
-- [Export-ExchangeCertificate](/powershell/module/exchange/export-exchangecertificate?view=exchange-ps)
+- [Import-ExchangeCertificate](/powershell/module/exchange/import-exchangecertificate?view=exchange-ps&preserve-view=true)
+- [Export-ExchangeCertificate](/powershell/module/exchange/export-exchangecertificate?view=exchange-ps&preserve-view=true)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Q&A](/answers/products/?WT.mc_id=msdnredirect-web-msdn).

@@ -37,7 +37,7 @@ To resolve this issue, use the following processes.
 
 ### Transfer the content from the original mailbox
 
-Restore the content from the inactive mailbox to the newly provisioned mailbox by using the [New-MailboxRestoreRequest](/powershell/module/exchange/new-mailboxrestorerequest?view=exchange-ps) cmdlet. This lets you continue to use the new mailbox and copy the original content.
+Restore the content from the inactive mailbox to the newly provisioned mailbox by using the [New-MailboxRestoreRequest](/powershell/module/exchange/new-mailboxrestorerequest?view=exchange-ps&preserve-view=true) cmdlet. This lets you continue to use the new mailbox and copy the original content.
 
 ### Reconnect the original inactive mailbox
 

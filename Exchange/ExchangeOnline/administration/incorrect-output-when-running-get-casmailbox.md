@@ -47,6 +47,6 @@ Get-Mailbox <Mailbox> | fl AdminDisplayVersion
 
 The `RecalculateHasActiveSyncDevicePartnership` parameter recalculates the value of the `HasActiveSyncDevicePartnership` attribute on the mailbox. The value is automatically updated if it's determined to be incorrect. You don't have to specify a value for the `HasActiveSyncDevicePartnership` attribute.
 
-For more information, see [Get-CASMailbox](/powershell/module/exchange/get-casmailbox?view=exchange-ps).
+For more information, see [Get-CASMailbox](/powershell/module/exchange/get-casmailbox?view=exchange-ps&preserve-view=true).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

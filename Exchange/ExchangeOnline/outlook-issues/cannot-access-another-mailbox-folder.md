@@ -48,6 +48,6 @@ For more information about how to manage another user's mailbox data in your Out
 
 ## More information
 
-In Office 365, Exchange Online admins can also grant mailbox folder permissions by using Exchange Online PowerShell. The `Add-MailboxFolderPermission` cmdlet can be used to grant access to specific folders in a user's mailbox. For more information about how to use this cmdlet, see [Add-MailboxFolderPermission](/powershell/module/exchange/add-mailboxfolderpermission?view=exchange-ps).
+In Office 365, Exchange Online admins can also grant mailbox folder permissions by using Exchange Online PowerShell. The `Add-MailboxFolderPermission` cmdlet can be used to grant access to specific folders in a user's mailbox. For more information about how to use this cmdlet, see [Add-MailboxFolderPermission](/powershell/module/exchange/add-mailboxfolderpermission?view=exchange-ps&preserve-view=true).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

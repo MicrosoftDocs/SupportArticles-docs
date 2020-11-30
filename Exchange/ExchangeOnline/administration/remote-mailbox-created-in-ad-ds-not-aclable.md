@@ -37,8 +37,8 @@ You can also use the `ACLableSyncedObjectEnabled` parameter in the `New-RemoteMa
 
 For more information about the cmdlets, see the following articles:
 
-- [New-RemoteMailbox](/powershell/module/exchange/new-remotemailbox?view=exchange-ps)
-- [Enable-RemoteMailbox](/powershell/module/exchange/enable-remotemailbox?view=exchange-ps)
+- [New-RemoteMailbox](/powershell/module/exchange/new-remotemailbox?view=exchange-ps&preserve-view=true)
+- [Enable-RemoteMailbox](/powershell/module/exchange/enable-remotemailbox?view=exchange-ps&preserve-view=true)
 
 ## Status
 

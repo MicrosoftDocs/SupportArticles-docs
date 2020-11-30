@@ -48,4 +48,4 @@ The features that are available to your Office 365 organization are determined b
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-information-disclaimer.md)]

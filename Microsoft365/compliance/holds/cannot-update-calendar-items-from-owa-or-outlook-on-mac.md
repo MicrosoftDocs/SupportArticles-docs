@@ -56,7 +56,7 @@ Because the user's mailbox is on hold, the items in the Versions folder are very
 
 3. Create a custom retention policy for mailboxes on hold, and then move the items from the Versions folder to the archive mailbox. To do this, follow the steps that are mentioned in the **Step 1: Create a custom retention tag for the Recoverable Items folder** section of the following Docs article:
 
-   [Increase the Recoverable Items quota for mailboxes on hold](/microsoft-365/compliance/increase-the-recoverable-quota-for-mailboxes-on-hold?redirectSourcePath=%252fen-us%252farticle%252fincrease-the-recoverable-items-quota-for-mailboxes-on-hold-a8bdcbdd-9298-462f-b889-df26037a990c&view=o365-worldwide#step-1-create-a-custom-retention-tag-for-the-recoverable-items-folder)
+   [Increase the Recoverable Items quota for mailboxes on hold](/microsoft-365/compliance/increase-the-recoverable-quota-for-mailboxes-on-hold?redirectSourcePath=%252fen-us%252farticle%252fincrease-the-recoverable-items-quota-for-mailboxes-on-hold-a8bdcbdd-9298-462f-b889-df26037a990c&view=o365-worldwide#step-1-create-a-custom-retention-tag-for-the-recoverable-items-folder&preserve-view=true)
 
 ## More information
 

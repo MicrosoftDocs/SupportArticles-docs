@@ -47,7 +47,7 @@ Export the contents of the existing mailbox to a .pst file for backup. To do thi
 
 To rename the existing mailbox, follow these steps:
 
-1. Sign in to the Office 365 portal ([http://portal.office.com](http://portal.office.com)) as an administrator.
+1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)) as an administrator.
 2. In the header, select **Admin**, and then, under **Management** in the left navigation pane, select **Users**.
 3. In the list of users, select the user whose mailbox you want to re-create, and then select **Details**. In this example, the user name is *John Smith*.
 4. In the **Display name** box, change the display name of the user, and then click **Save**. For example, change *John Smith* to *John Smith2*.

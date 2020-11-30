@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 3063045
 
 When you try to offboard or move mailboxes from Microsoft Exchange Online to Microsoft Exchange Server 2010 in the on-premises environment, the move operation doesn't progress past a certain percentage. For example, the operation appears to stop at 10 percent, and eventually fails.
 
-When you run the [Get-MoveRequestStatistics](/powershell/module/exchange/get-moverequeststatistics?view=exchange-ps) cmdlet together with the **-IncludeReport** parameter to obtain the move report, you may see the following TransientException errors:
+When you run the [Get-MoveRequestStatistics](/powershell/module/exchange/get-moverequeststatistics?view=exchange-ps&preserve-view=true) cmdlet together with the **-IncludeReport** parameter to obtain the move report, you may see the following TransientException errors:
 
 > Timestamp: \<Date>\<Time>  
 FailureType: RestartMoveCorruptSyncStateTransientException  
@@ -72,7 +72,7 @@ Reset Search Folders, and then restore the default views for the user's profile 
 
 ## More information
 
-To obtain the move request report and confirm this issue, you can run the following command while connected to [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps):
+To obtain the move request report and confirm this issue, you can run the following command while connected to [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true):
 
 ```console
 $stats = Get-MoveRequestStatistics -identity [user@contoso.com](mailto:user@contoso.com) -IncludeReport

@@ -47,7 +47,7 @@ For example:
 Add-PublicFolderClientPermission -Identity \SalesFolder -AccessRights EditAllItems -User CrossForestUser
 ```
 
-For more information about this cmdlet, see [Add-PublicFolderClientPermission](/powershell/module/exchange/add-publicfolderclientpermission?view=exchange-ps).
+For more information about this cmdlet, see [Add-PublicFolderClientPermission](/powershell/module/exchange/add-publicfolderclientpermission?view=exchange-ps&preserve-view=true).
 
 ## More information
 

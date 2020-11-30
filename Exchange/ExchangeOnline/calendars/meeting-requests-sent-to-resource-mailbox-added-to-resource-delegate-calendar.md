@@ -77,4 +77,4 @@ Migrate the room mailbox from on-premises to cloud, and then migrate all other d
 
 For more information about TNEF, see [Manage TNEF Message Formatting with Remote Domains](/previous-versions/exchange-server/exchangeserver-149/gg263346(v=exchsrvcs.149)).
 
-For more information about the `Set-remotedomain` cmdlet, see [Set-RemoteDomain](/powershell/module/exchange/set-remotedomain?view=exchange-ps).
+For more information about the `Set-remotedomain` cmdlet, see [Set-RemoteDomain](/powershell/module/exchange/set-remotedomain?view=exchange-ps&preserve-view=true).

@@ -42,7 +42,7 @@ For more information about Exchange Online PowerShell, see [Exchange Online Powe
 
 For more information about the `Get-Mailbox` and `Add-MailboxPermission` Windows PowerShell cmdlets, see:
 
-- [Get-Mailbox](/powershell/module/exchange/get-mailbox?view=exchange-ps)
-- [Add-MailboxPermission](/powershell/module/exchange/add-mailboxpermission?view=exchange-ps)
+- [Get-Mailbox](/powershell/module/exchange/get-mailbox?view=exchange-ps&preserve-view=true)
+- [Add-MailboxPermission](/powershell/module/exchange/add-mailboxpermission?view=exchange-ps&preserve-view=true)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

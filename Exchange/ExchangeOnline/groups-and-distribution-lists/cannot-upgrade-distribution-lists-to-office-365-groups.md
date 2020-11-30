@@ -33,4 +33,4 @@ This issue occurs if a custom email address policy is applied to the tenant for
 
 To resolve this issue, you have to remove the email address policy for the distribution groups. Then, try again to upgrade the distribution lists to Office 365 groups. For more information about how to remove the email address policy, see [Remove an email address policy](/exchange/remove-an-email-address-policy-exchange-2013-help).
 
-For more information about how to upgrade distribution lists, see [Upgrade distribution lists to Office 365 Groups in Outlook](/microsoft-365/admin/manage/upgrade-distribution-lists?view=o365-worldwide).
+For more information about how to upgrade distribution lists, see [Upgrade distribution lists to Office 365 Groups in Outlook](/microsoft-365/admin/manage/upgrade-distribution-lists?view=o365-worldwide&preserve-view=true).

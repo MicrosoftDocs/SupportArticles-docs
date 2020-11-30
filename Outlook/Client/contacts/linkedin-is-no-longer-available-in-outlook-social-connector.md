@@ -39,6 +39,6 @@ The LinkedIn Social Connector feature for Outlook 2013, Outlook 2010, and Outloo
 
 ## More information
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

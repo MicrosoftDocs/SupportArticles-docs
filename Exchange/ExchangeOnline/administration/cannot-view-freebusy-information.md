@@ -84,7 +84,7 @@ To resolve this issue, follow these steps.
 
 For more information about the cmdlets used in this article, see the following Microsoft TechNet resources:
 
-- [Get-AuthConfig](/powershell/module/exchange/get-authconfig?view=exchange-ps)
-- [Set-AuthConfig](/powershell/module/exchange/set-authconfig?view=exchange-ps)
-- [Get-PartnerApplication](/powershell/module/exchange/get-partnerapplication?view=exchange-ps)
-- [Set-PartnerApplication](/powershell/module/exchange/set-partnerapplication?view=exchange-ps)
+- [Get-AuthConfig](/powershell/module/exchange/get-authconfig?view=exchange-ps&preserve-view=true)
+- [Set-AuthConfig](/powershell/module/exchange/set-authconfig?view=exchange-ps&preserve-view=true)
+- [Get-PartnerApplication](/powershell/module/exchange/get-partnerapplication?view=exchange-ps&preserve-view=true)
+- [Set-PartnerApplication](/powershell/module/exchange/set-partnerapplication?view=exchange-ps&preserve-view=true)

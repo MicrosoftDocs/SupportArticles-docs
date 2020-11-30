@@ -54,7 +54,7 @@ foreach($m in $mailboxes) {Get-MailboxPermission $m.Identity.ToString() | Where 
 
 For more information, see the following Microsoft TechNet resources:
 
-- [Invoke-Command](/powershell/module/microsoft.powershell.core/invoke-command?view=powershell-7)
-- [Start-Sleep](/powershell/module/microsoft.powershell.utility/start-sleep?view=powershell-7)
+- [Invoke-Command](/powershell/module/microsoft.powershell.core/invoke-command?view=powershell-7&preserve-view=true)
+- [Start-Sleep](/powershell/module/microsoft.powershell.utility/start-sleep?view=powershell-7&preserve-view=true)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

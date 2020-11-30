@@ -106,6 +106,6 @@ To search for **IMAP** in the test results, follow these steps:
 
    Additionally, near the end of the Remote Connectivity Analyzer test, you'll likely see a reference to Apache, UNIX, or Linux.  
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 Still need help? [Microsoft Community](https://go.microsoft.com/fwlink/?linkid=2003907) website.

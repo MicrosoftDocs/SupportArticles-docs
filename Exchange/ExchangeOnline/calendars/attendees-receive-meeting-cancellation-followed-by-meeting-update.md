@@ -38,7 +38,7 @@ An update to Exchange ActiveSync (EAS) that was intended to improve general prot
 
 ## Workaround
 
-Make the hidden contact visible in the global address list by using the [Set-MailContact](/powershell/module/exchange/set-mailcontact?view=exchange-ps) cmdlet. To do this, do one of the following:
+Make the hidden contact visible in the global address list by using the [Set-MailContact](/powershell/module/exchange/set-mailcontact?view=exchange-ps&preserve-view=true) cmdlet. To do this, do one of the following:
 
 - In Exchange Online, follow these steps:
 

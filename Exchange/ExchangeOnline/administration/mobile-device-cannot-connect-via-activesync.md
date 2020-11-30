@@ -78,7 +78,7 @@ To troubleshoot this issue further, run the Exchange ActiveSync Autodiscover tes
 
    - If the test passes, set up the mobile device.
    - If the test fails, confirm that the Autodiscover service is set up correctly. For more information, see the following resources:
-     - If all mailboxes in your organization are in Exchange Online, add an Autodiscover CNAME record. For more information, see [Add DNS records to connect your domain](/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide) and [External Domain Name System records for Microsoft 365](/microsoft-365/enterprise/external-domain-name-system-records?view=o365-worldwide).
+     - If all mailboxes in your organization are in Exchange Online, add an Autodiscover CNAME record. For more information, see [Add DNS records to connect your domain](/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide&preserve-view=true) and [External Domain Name System records for Microsoft 365](/microsoft-365/enterprise/external-domain-name-system-records?view=o365-worldwide&preserve-view=true).
      - If you have an Exchange hybrid deployment, set up the Autodiscover public DNS records for your existing SMTP domains to point to an on-premises Exchange server. For more information, see [Hybrid deployment prerequisites](/exchange/hybrid-deployment-prerequisites).
 
 ## Resolution - Step 4: Set up the mobile device without using Autodiscover (if you don't want to use Autodiscover)

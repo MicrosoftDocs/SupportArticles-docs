@@ -37,7 +37,7 @@ To troubleshoot this issue, re-create the ActiveSync relationship on the mobile 
 
 2. Remove the ActiveSync relationship from Outlook Web App. To do this, follow these steps:
    1. Sign in to Outlook Web App.
-   2. Select **Settings** (![Screen shot of Settings button ](./media/calendar-on-mobile-device-isn't-synced-to-online-mailbox/settings-button.jpg)), and then select **Options**.
+   2. Select **Settings** (![Screen shot of Settings button ](./media/calendar-on-mobile-device-not-synced-to-online-mailbox/settings-button.jpg)), and then select **Options**.
    3. In the left navigation pane, select **Phone**, and then select **Mobile Phones** or **Mobile Devices**.
    4. In the list, select the ActiveSync relationship, and then select **Delete**.
 
