@@ -30,7 +30,7 @@ When [users with guest access are assigned tasks](https://support.microsoft.com/
 
 ## Cause
 
-When a task in Planner is assigned to a user with guest access, an Exchange Online recipient is created by using the guest's SMTP address. The error occurs if this SMTP address is already assigned to another Exchange Online recipient in the O365 tenant. In most such cases, the recipient is a mail contact.
+When a task in Planner is assigned to a user with guest access, an Exchange Online recipient is created by using the guest's SMTP address. The error occurs if this SMTP address is already assigned to another Exchange Online recipient in the Office 365 tenant. In most such cases, the recipient is a mail contact.
 
 ## Resolution
 
