@@ -72,18 +72,18 @@ In such scenario, the **Get-MailPublicFolder** command won't list the folders de
 
 ## Workaround
 
-To work around this issue, use one of these options:
+There are two ways to work around this issue:
 
-### Option 1: Use script to detect issues with on-premises mail-enabled public folders
+### Method 1: Use script to detect issues with on-premises mail-enabled public folders
 
 1. Download and run the [ValidateMailPublicFolders](https://aka.ms/ValidateMEPF) script on Exchange Server on-premises.
 
-   The script reports orphaned mail-enabled public folders, reports mail-enabled public folders found under the NON_IPM_Subtree folder, and also suggests using a command to fix the issue.
+   The script reports orphaned mail-enabled public folders and mail-enabled public folders found under the NON_IPM_Subtree folder. It also suggests using a command to fix the issue.
 
 2. Run the command suggested by the script.
-3. After fixing issues reported by the script, run the script one more time and make sure there are no issues reported with mail-enabled public folders.
+3. After fixing the issues reported by the script, run the script again and make sure no issue is reported for mail-enabled public folders.
 
-### Option 2: Use commands to detect issues with on-premises mail-enabled public folders
+### Method 2: Use commands to detect issues with on-premises mail-enabled public folders
 
 1. List the public folders that still have the **MailEnabled** property set to **True**. To do this, run the following command:
 
