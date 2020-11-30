@@ -183,6 +183,8 @@
       href: ../contacts/how-to-hide-columns-in-address-book.md
     - name: Information about the Outlook AutoComplete list
       href: ../contacts/information-about-the-outlook-autocomplete-list.md
+    - name: LinkedIn is no longer available in Outlook Social Connector
+      href: ../contacts/linkedin-is-no-longer-available-in-outlook-social-connector.md
     - name: No permission error when adding contacts
       href: ../contacts/you-donnot-have-permission-to-create-an-entry-error.md
     - name: No Offline Address Book is downloaded
@@ -275,6 +277,8 @@
       href: ../installation/outlook-is-unable-to-start-in-windows-7-or-8.md
     - name: DisablePST and PSTDisableGrow policies are ignored
       href: ../installation/disablepst-and-pstdisablegrow-policies-are-ignored.md
+    - name: How to update Outlook to solve  connection issues
+      href: ../installation/fix-outlook-connection-problems-by-upgrading.md
     - name: Install Calendar Printing Assistant fails
       href: ../installation/installing-calendar-printing-assistant-fails.md
     - name: Install Outlook latest applicable updates
