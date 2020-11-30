@@ -78,7 +78,7 @@ To work around this issue, use one of these options:
 
 1. Download and run the [ValidateMailPublicFolders](https://aka.ms/ValidateMEPF) script on Exchange Server on-premises.
 
-   The script reports orphaned mail-enabled public folders, reports mail-enabled public folders found under the NON_IPM_Subtree folder, and also suggests a command to fix the issue.
+   The script reports orphaned mail-enabled public folders, reports mail-enabled public folders found under the NON_IPM_Subtree folder, and also suggests using a command to fix the issue.
 
 2. Run the command suggested by the script.
 3. After fixing issues reported by the script, run the script one more time and make sure there are no issues reported with mail-enabled public folders.
