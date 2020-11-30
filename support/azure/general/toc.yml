@@ -6,9 +6,10 @@
     href: automation-scripted-diagnostic-capture.md
   - name: Find-AzureRmResource returns error
     href: find-azurermresource-fails.md
+  - name: How to capture debug stream
+    href: capture-debug-stream-automation-runbook.md
   - name: Reinstall Operations Management Suite Agent
     href: reinstall-oms-agent-linux.md
-
 
 - name: Azure API Management
   items:
@@ -88,6 +89,8 @@
 
 - name: General
   items:
+  - name: Associate a custom domain with Azure websites
+    href: associate-custom-domain-secure-communication.md
   - name: Azure region access request process
     href: region-access-request-process.md
   - name: Container support policy
@@ -100,9 +103,6 @@
     href: search-tips-find-troubleshooting-content.md
   - name: Use Secure File Exchange to exchange files
     href: secure-file-exchange-transfer-files.md
-
-  - name: Deploy TLS 1.2 in Azure Pack
-    href: tls-support-deployment-guide.md
 
 - name: Other common issues
   items:
@@ -122,6 +122,8 @@
     href: cannot-see-users-groups-list-iam.md
   - name: WebUI "Oops" error message in StorSimple
     href: storsimple-user-receives-web-ui-error.md
+  - name: Connection status is incorrect on portal
+    href: connection-status-not-display-correctly-portal.md
 
 - name:  Support Diagnostic Packages
   items:
