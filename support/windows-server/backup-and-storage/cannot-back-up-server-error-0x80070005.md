@@ -53,11 +53,11 @@ Set a registry key to exclude the files that are mentioned in the event from fil
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
 
 1. In Registry Editor, locate the following registry subkey:
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\BackupRestore\FilesNotToBackup` 
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\BackupRestore\FilesNotToBackup`  
 
 2. Right-Click **FilesNotToBackup**, point to **New**, and then click **Multi-String Value**.
-3. Type IgnoreNTFS, and then press Enter.
-4. Right-click IgnoreNTFS, and then click Modify.
-5. In the **Value data** box, type \$Extend\\* /s.
+3. Type *IgnoreNTFS*, and then press Enter.
+4. Right-click **IgnoreNTFS**, and then click **Modify**.
+5. In the **Value data** box, type *\\$Extend\\\* /s*.
 6. Click **OK**, and then close Registry Editor.
 7. Restart the server.

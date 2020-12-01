@@ -22,13 +22,14 @@ _Original KB number:_ &nbsp;2754259
 
 ## Summary
 
-MBAM can encrypt the communication between the MBAM Recovery and Hardware Database, the Administration and Monitoring servers and the MBAM clients. If you decide to encrypt the communication, you're asked to select the certification authority-provisioned certificate that will be used for encryption.
+MBAM can encrypt the communication between the MBAM Recovery and Hardware Database, the Administration, and Monitoring servers and the MBAM clients. If you decide to encrypt the communication, you're asked to select the certification authority-provisioned certificate that will be used for encryption.
 
 The channel between MBAM Administration & Monitoring Server and SQL SSRS can also be encrypted. An Administrator needs a certificate approved from CA (Certificate Authority) or a Self-Signed Certificate before deploying MBAM.
 
-Note: If you decide to go with SSL, make sure you have the correct certificate to configure SSL before running MBAM Setup on your server.
+> [!Note]
+> If you decide to go with SSL, make sure you have the correct certificate to configure SSL before running MBAM Setup on your server.
 
-Step 1: Encrypt Channel between MBAM Client and Administration & Monitoring Server. 
+Step 1: Encrypt Channel between MBAM Client and Administration & Monitoring Server.  
 
 1. Using Self Signed Certificate.
       1. Connect to Server where MBAM Administration & Monitoring Role will be installed.
@@ -39,22 +40,24 @@ Step 1: Encrypt Channel between MBAM Client and Administration & Monitoring Serv
       6. Under Actions Pane, Select Self-Signed Certificate.
       7. On the Create Self-Signed Certificate page, type a friendly name for the certificate in the Specify a friendly name for the certificate box, and then click OK.
 
-      Notes:
-       - This procedure generates a self-signed certificate that doesn't originate from a generally trusted source; therefore, you shouldn't use this certificate to help secure data transfers between Internet clients and your server.
-       - Self-signed certificates may cause your Web browser to issue phishing warnings.
-2. Using Certificate Approved by Certificate Authority 
+      > [!Note]
+      >
+      > - This procedure generates a self-signed certificate that doesn't originate from a generally trusted source; therefore, you shouldn't use this certificate to help secure data transfers between Internet clients and your server.
+      > - Self-signed certificates may cause your Web browser to issue phishing warnings.  
+
+2. Using Certificate Approved by Certificate Authority  
 
 There are two ways to import a certificate
 
   1. Request or Import a certificate from a CA using IIS:
-      - [Request an Internet Server Certificate in IIS](https://technet.microsoft.com/library/cc732906%28v=ws.10%29.aspx) 
-      - [Import a Server Certificate in IIS](https://technet.microsoft.com/library/cc732785%28v=ws.10%29.aspx) 
+      - [Request an Internet Server Certificate in IIS](https://technet.microsoft.com/library/cc732906%28v=ws.10%29.aspx)  
+      - [Import a Server Certificate in IIS](https://technet.microsoft.com/library/cc732785%28v=ws.10%29.aspx)  
   2. Request or Import a certificate into the Personal Certificate Store using Certificate Manager:
-     [https://windows.microsoft.com/windows-vista/Request-or-renew-a-certificate](https://windows.microsoft.com/windows-vista/request-or-renew-a-certificate) 
+     [https://windows.microsoft.com/windows-vista/Request-or-renew-a-certificate](https://windows.microsoft.com/windows-vista/request-or-renew-a-certificate)  
 
      Certificate Templates to be used:
 
-     MBAM Client to MBAM Administration & Monitoring Server: Use Standard Web Server Template .
+     MBAM Client to MBAM Administration & Monitoring Server: Use Standard Web Server Template.
 
      After you have certificate ready, when you execute MBAM Setup, we will show you the thumbprint of the certificate in "Configure Network Communication Security" wizard for MBAM Setup.
 
@@ -72,9 +75,10 @@ When you execute MBAM Setup Program on a server where you'll install MBAM Recove
 
 ![The thumbprint in "Configure Network Communication Security" wizard.](./media/mbam-secure-network-communication/certificate-thumbprint.png)
 
-Step 3: How to Configure SSL for SQL Compliance and Audit DB Server. 
+Step 3: How to Configure SSL for SQL Compliance and Audit DB Server.  
 
-Note: You'll have to configure SSL for SQL before you run MBAM Setup on your server.
+> [!Note]
+> You'll have to configure SSL for SQL before you run MBAM Setup on your server.
 
 1. Open SQL Reporting Services Configuration Manager on Server where you installed MBAM Audit Reports Role.
 2. Connect to your Server and Click Web Service URL.
@@ -87,7 +91,7 @@ Note: You'll have to configure SSL for SQL before you run MBAM Setup on your ser
 4. Repeat "Step 3" for Report Manager URL in SQL Reporting Services Configuration Manager.
 5. Now when you open MBAM Reports it will use SSL to connect to SQL SSRS.
 
-Step 4: Configure SQL to force encryption on all protocols 
+Step 4: Configure SQL to force encryption on all protocols  
 
 1. Log in to SQL Server and Open SQL Server Configuration Manager.
 2. Expand SQL Server Network Configuration and select "Protocols for MSSQLSERVER".
@@ -106,6 +110,5 @@ Step 4: Configure SQL to force encryption on all protocols
 
 ## More information
 
-- [Create a Self-Signed Server Certificate in IIS](https://technet.microsoft.com/library/cc753127%28v=ws.10%29.aspx) 
-- [Configuring a Report Server for Secure Sockets Layer (SSL) Connections](https://msdn.microsoft.com/library/ms345223%28v=sql.105%29.aspx) 
-- [You cannot view some of your SSL Certificates in Reporting Services Configuration Manager](https://support.microsoft.com/help/2418246) 
+- [Create a Self-Signed Server Certificate in IIS](https://technet.microsoft.com/library/cc753127%28v=ws.10%29.aspx)  
+- [Configuring a Report Server for Secure Sockets Layer (SSL) Connections](https://msdn.microsoft.com/library/ms345223%28v=sql.105%29.aspx)

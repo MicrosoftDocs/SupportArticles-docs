@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, rolandw, herbertm
 ms.prod-support-area-path: Domain controller scalability or performance (including LDAP)
 ms.technology: ActiveDirectory
 ---
@@ -17,8 +17,8 @@ ms.technology: ActiveDirectory
 
 This article provides help to solve performance issues (such as logon delays and Outlook hangs) that occur after you upgrade your Domain Controllers (DCs).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 2668820
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;2668820
 
 ## Symptoms
 
@@ -26,15 +26,15 @@ After upgrading your DCs to Windows Server 2008 or Windows Server 2008 R2, you m
 
 A more obvious indicator is Event Warning Netlogon 5807 on the slow responding DC with a high number of clients, like the following:
 
-Event Type: Warning
-Event Source: NETLOGON
-Event Category: None
-Event ID: 5807
-User: N/A
-Computer: \<MyW2k8R2DC1> 
-
-Description:
-During the past 4.23 hours, there have been 123450 connections to this Domain Controller from client machines whose IP addresses don't map to any of the existing sites in the enterprise. Those clients, therefore, have undefined sites and may connect to any Domain Controller including those that are in far distant locations from the clients. A client's site is determined by the mapping of its subnet to one of the existing sites. To move the above clients to one of the sites, consider creating subnet object(s) covering the above IP addresses with mapping to one of the existing sites. The names and IP addresses of the clients in question have been logged on this computer in the following log file '%SystemRoot%\debug\netlogon.log' and, potentially, in the log file '%SystemRoot%\debug\netlogon.bak' created if the former log becomes full. The log(s) may contain additional unrelated debugging information. To filter out the needed information, search for lines that contain text'NO_CLIENT_SITE:'. The first word after this string is the client name and the second word is the client IP address. The maximum size of the log(s) is controlled by the following registry DWORD value 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters\LogFileMaxSize'; the default is 20000000 bytes. The current maximum size is 20,000,000 bytes. To set a different maximum size, create the above registry value and set the desired maximum size in bytes. 
+> Event Type: Warning  
+Event Source: NETLOGON  
+Event Category: None  
+Event ID: 5807  
+User: N/A  
+Computer: \<MyW2k8R2DC1>  
+>
+> Description:
+During the past 4.23 hours, there have been 123450 connections to this Domain Controller from client machines whose IP addresses don't map to any of the existing sites in the enterprise. Those clients, therefore, have undefined sites and may connect to any Domain Controller including those that are in far distant locations from the clients. A client's site is determined by the mapping of its subnet to one of the existing sites. To move the above clients to one of the sites, consider creating subnet object(s) covering the above IP addresses with mapping to one of the existing sites. The names and IP addresses of the clients in question have been logged on this computer in the following log file '%SystemRoot%\debug\netlogon.log' and, potentially, in the log file '%SystemRoot%\debug\netlogon.bak' created if the former log becomes full. The log(s) may contain additional unrelated debugging information. To filter out the needed information, search for lines that contain text'NO_CLIENT_SITE:'. The first word after this string is the client name and the second word is the client IP address. The maximum size of the log(s) is controlled by the following registry DWORD value `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters\LogFileMaxSize`; the default is 20000000 bytes. The current maximum size is 20,000,000 bytes. To set a different maximum size, create the above registry value and set the desired maximum size in bytes.  
 
 ## Cause
 
@@ -53,10 +53,10 @@ You may apply the workaround:
 -create matching subnet/sites, avoid Netlogon 5807 with a high number of unmapped connections
 
 -increase MaxPoolThreads to 10 (counts per core)
-Ref. "315071 How to view and set LDAP policy in Active Directory by using Ntdsutil.exe", https://support.microsoft.com/help/315071
+Ref. [315071 How to view and set LDAP policy in Active Directory by using Ntdsutil.exe](https://support.microsoft.com/help/315071)
 
 -optimize DC Name resolution, disable Netbios or use P-Node when WINS is required
-Ref. "Chapter 11 - NetBIOS over TCP/IP - Microsoft TechNet: Resources", https://technet.microsoft.com/library/bb727013.aspx
+Ref. [Chapter 11 - NetBIOS over TCP/IP - Microsoft TechNet: Resources](https://technet.microsoft.com/library/bb727013.aspx)
 
 ## More information
 

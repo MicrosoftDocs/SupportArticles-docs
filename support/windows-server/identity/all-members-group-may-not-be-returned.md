@@ -31,7 +31,7 @@ When you enumerate members of a group by using the Active Directory Service Inte
 
 You can use the GetObject method to obtain the full member list. The GetObject method uses the credentials for the currently logged on user. The following code example demonstrates this.
 
-```console
+```vb
 GetObject("WinNT://<server>/<group>,group")
 ```
 
@@ -41,9 +41,7 @@ If the account that you want to use for enumerating the group is not the current
 
 This behavior is by design.
 
-## More information
-
-### Steps to reproduce the problem
+## Steps to reproduce the problem
 
 The Active Directory Service Interfaces WinNT provider does not connect to more than one server to compile the member list. This problem occurs if explicit credentials are passed. Therefore, only a partial member list is returned. For example, if you run the following script to enumerate a local group that contains a group from a trusted domain, all members of the group are returned, except the group from the trusted domain.
 
@@ -60,7 +58,7 @@ Set oTargetGroup = oRoot.OpenDSObject("WinNT://<server>/<group>,group", "<domain
 msgbox oTargetGroup.ADSPath
 
 For Each oMember in oTargetGroup.Members
-msgbox oMember.ADsPath
+    msgbox oMember.ADsPath
 Next
 'End of the script
 ```
@@ -68,11 +66,8 @@ Next
 > [!IMPORTANT]
 > We do not recommend that you pass credentials in Active Directory Service Interfaces by using the Active Directory Service Interfaces WinNT provider.
 
-For additional information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[218497](https://support.microsoft.com/help/218497) How to impersonate a user from Active Server Pages  
+For more information, see [User authentication issues with the Active Directory Service Interfaces WinNT provider](/troubleshoot/windows-client/admin-development/adsi-winnt-provider-user-authentication-issues).
 
 ## References
-
-For additional information about programming with Active Directory Service Interfaces, visit the following Microsoft Developer Network (MSDN) Web site:  
-[https://msdn.microsoft.com/library/aa772170.aspx](https://msdn.microsoft.com/library/aa772170.aspx)
+ 
+[Active Directory Service Interfaces](/windows/win32/adsi/active-directory-service-interfaces-adsi)

@@ -13,22 +13,20 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Desktop Shell
 ms.technology: ShellExperience
 ---
-# Disabling Autoplay through Group Policy or the registry will cause HotStart buttons to not function on Microsoft Windows 7 and Microsoft Windows Vista
+# Disabling Autoplay through Group Policy or the registry will cause HotStart buttons to not function
 
 This article provides a solution to an issue where HotStart buttons doesn't work when Autoplay is disabled.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp; 2328787
-
-Support for Windows Vista Service Pack 1 (SP1) ends on July 12, 2011. To continue receiving security updates for Windows, make sure you're running Windows Vista with Service Pack 2 (SP2). For more information, see this Microsoft web page: [Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs).
+_Original product version:_ &nbsp;Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp;2328787
 
 ## Symptoms
 
 Consider the following scenario:
 
-· You have a Windows 7 or Vista system running on a laptop with Hotstart buttons
+- You have a Windows 7 system running on a laptop with Hotstart buttons
 
-· There is a policy set in Group Policy to disable Autoplay on all drives
+- There is a policy set in Group Policy to disable Autoplay on all drives
 
 In this scenario, the HotStart buttons do not function
 
@@ -56,19 +54,9 @@ How to open Group Policy settings as follows:
 
 3. In the Details pane, double-click Turn off Autoplay.
 
-If you are experiencing this on a system that has been joined to a domain, you will need to contact the domain administrator for assistance. Your system settings synchronize to the domain server.
- **  
-For operating systems that do not include Gpedit.msc and for an optional resolution, you can directly check and change the NoDriveTypeAutoRun entry value in the following registry key other than 0xFF.
+    If you are experiencing this on a system that has been joined to a domain, you will need to contact the domain administrator for assistance. Your system settings synchronize to the domain server.  
 
-HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Polic []() es\Explorer\
-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\policies\Explorer\
+    For operating systems that do not include Gpedit.msc and for an optional resolution, you can directly check and change the NoDriveTypeAutoRun entry value in the following registry key other than 0xFF.
 
-For more information on disabling specific Autorun features, please see the following knowledge base article:
-
-[https://support.microsoft.com/kb/967715/en-us](https://support.microsoft.com/help/en-us) 
-
-## More information
-
-See the following white paper for more information:
-
-[https://www.microsoft.com/whdc/system/platform/firmware/hotstart.mspx](https://www.microsoft.com/whdc/system/platform/firmware/hotstart.mspx)
+    `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Polic []() es\Explorer\
+    HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\policies\Explorer\`

@@ -29,6 +29,6 @@ Browse the following content or use the search feature.
 - [UE-V](./ue-v/ue-v-overview.md)
 - [UserProfiles and Logon](./user-profiles-and-logon/userprofiles-and-logon-overview.md)
 - [Virtualization](./virtualization/virtualization-overview.md)
-- [Windows 7 EoS FAQ](./windows-7-eos-faq/windows-7-eos-faq-overview.md)
+- [Windows 7 EoS FAQ](./windows-7-eos-faq/windows-7-end-support-faq.md)
 - [Windows Security](./windows-security/windows-security-overview.md)
 - [windows-troubleshooters](./windows-troubleshooters/windows-troubleshooters-overview.md)

@@ -20,21 +20,21 @@ This article describes the options that are available for upgrading or migrating
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 957256
 
-## INTRODUCTION
+## Introduction
 
-For Windows Server 2008 Failover Clusters that are running virtual machines, see the "Upgrade guidance for virtual machines on failover clusters" section of this article.
+For Windows Server 2008 Failover Clusters that are running virtual machines, see the [Upgrade guidance for virtual machines on failover clusters](#upgrade-guidance-for-virtual-machines-on-failover-clusters) section of this article.
 
 ## More information
 
-### Method 1
-
-Perform an upgrade of the parent partition from Windows Server 2008 to Windows Server 2008 R2.
+### Method 1: Perform an upgrade of the parent partition from Windows Server 2008 to Windows Server 2008 R2.
 
 > [!NOTE]
 > During the upgrade, the compatibility report will inform you that you must remove the Hyper-V role by using Server Manager before you continue with the upgrade. This is not necessary. However, before continuing with the upgrade we suggest that you back up your virtual machines or export them using Hyper-V Manager. Additionally, consider the following before you upgrade:
 
 - Hyper-V must be at RTM (KB 950050) or later. If this requirement is not met, you will be blocked from continuing with the upgrade.
+
 - All virtual machines must be shut down prior to the upgrade. Saved states are not compatible between Windows Server 2008 and Windows Server 2008 R2. If the parent partition is upgraded with any virtual machines in a saved state, you must right-click the virtual machine, and then select **Discard saved state** to turn on the virtual machine.
+
 - Because Online Snapshot functionality uses saved states, Online Snapshots are not fully compatible between Windows Server 2008 and Windows Server 2008 R2. Online Snapshots are snapshots taken when a virtual machine was turned on. Offline Snapshots are snapshots that are taken when a virtual machine was turned off. Offline Snapshots are fully compatible with Windows Server 2008 R2. Virtual machines will start successfully to the online snapshot that was applied when the virtual machine was shut down before the upgrade. This is shown in Hyper-V Manager by the green arrow under the snapshot that points to **Now**.
 
     To turn on the virtual machine with any other snapshot, follow these steps.
@@ -42,23 +42,23 @@ Perform an upgrade of the parent partition from Windows Server 2008 to Windows S
     > [!NOTE]
     > The following steps assume that you have to continue using all snapshots that are configured for the virtual machine. If you no longer require snapshots, you can delete your snapshots by using Hyper-V Manager, and then shut down the virtual machine for the data to merge with the parent virtual hard disk.
 
-    For more information, see the following Microsoft Web site:
-
-    Hyper-V Virtual Machine Snapshots: FAQ
-
-    [https://technet.microsoft.com/library/dd560637.aspx](https://technet.microsoft.com/library/dd560637.aspx)
+    For more information, see [Hyper-V Virtual Machine Snapshots: FAQ](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd560637(v=ws.10)).
 
     1. Using Hyper-V Manager, right-click the snapshot that you want to apply, and then click **Take Snapshot and Apply**. This action will take a new snapshot from the currently applied snapshot. This new snapshot will now be compatible with Windows Server 2008 R2. We recommend that you rename the snapshot to reflect this. If you select this option, any changes that you may have made to the state of the virtual machine since the last start will be saved.
+
     2. After the new R2 snapshot is taken, the snapshot that you selected in step 1 will be applied, and the virtual machine will go into a saved state. Right-click the virtual machine, and then click **Delete saved state**.
+
     3. Turn on the virtual machine.
+
     4. Take a new snapshot to capture the current state of the virtual machine to have a Windows Server 2008 R2-compatible snapshot.
+
     5. Repeat these steps for each snapshot from Windows Server 2008. Once you have completed these steps on all required snapshots, delete the snapshots that were created on Windows Server 2008, and then shut down the virtual machine to allow the merge process to begin.
 
 - After the upgrade, update the Integration Services. To do this, open the **Virtual Machine Connection** window, and then click **Insert Integration Services Setup Disk** on the
  **Action** menu.
 
     > [!NOTE]
-    > On a Windows Server 2008 R2-based computer, the Integration Services for Windows Vista and Windows Server 2008 will be listed in **Programs and Features** as "KB955484."
+    > On a Windows Server 2008 R2-based computer, the Integration Services for Windows Vista and Windows Server 2008 will be listed in **Programs and Features** as KB955484.
 
 ### Method 2
 
@@ -79,7 +79,7 @@ Using backup software that leverages the Hyper-V VSS Writer, back up a virtual m
 After you restore the virtual machine, update the Integration Services. To do this, open the **Virtual Machine Connection** window, and then click **Insert Integration Services Setup Disk** on the **Action** menu.
 
 > [!NOTE]
-> On a Windows Server 2008 R2-based computer, the Integration Services for Windows Vista and Windows Server 2008 will be listed in **Programs and Features** as "KB955484."
+> On a Windows Server 2008 R2-based computer, the Integration Services for Windows Vista and Windows Server 2008 will be listed in **Programs and Features** as KB955484.
 
 ### Upgrade guidance for virtual machines on failover clusters
 
@@ -87,7 +87,7 @@ When you have highly available virtual machines that are configured as clustered
 
 > [!NOTE]
 > If you are running any other clustered services or applications in the parent partition, visit the following Microsoft Web site for information about how to move these resources to Windows Server 2008 R2:  
-[https://go.microsoft.com/fwlink/?LinkID=142796](https://go.microsoft.com/fwlink/?linkid=142796)
+[Migrating to a Failover Cluster Running Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730990(v=ws.11))
 
 We do not recommend running any additional services or applications in the parent partition for Hyper-V servers.
 
@@ -106,6 +106,7 @@ We do not recommend running any additional services or applications in the paren
     - If the virtual machine is in a **Saved** state, use Hyper-V Manager to start from the saved state and then shut down the virtual machine. Saved states are not supported when you upgrade your host to Windows Server 2008 R2.
 
     - If the virtual machine has an online snapshot that you need, apply the relevant snapshot, and then shut down the virtual machines.
+
 5. Follow one of these steps to prepare your virtual machine for upgrading:
 
     > [!IMPORTANT]
@@ -114,6 +115,7 @@ We do not recommend running any additional services or applications in the paren
     1. Export the virtual machines. If you are going to use the same SAN storage for the Windows Server 2008 R2 cluster, you can use a configuration-only export. Export the virtual machine from Windows Server 2008 Hyper-V Manager by selecting **Export** on the **Action** menu. Make sure to select the **Export only the virtual machine configuration** check box.
 
     2. Back up the virtual machines by using a backup application of your choice.
+
 6. Open Failover Cluster Manager on the original cluster, and then take the virtual machine configuration resources Offline.
 
 7. If you are going to reuse the same storage for the new cluster, mask it from the original cluster, and then make it available to the new (Windows Server 2008 R2) cluster.
@@ -121,21 +123,25 @@ We do not recommend running any additional services or applications in the paren
 8. Depending on what you did in step 5, follow one of these steps to move the virtual machines into the new Windows Server 2008 R2 Cluster.
 
     > [!IMPORTANT]
-    > If you are moving your virtual machines to a CSV disk, follow the steps in the "Migrate a virtual machine from a non-CSV disk to a CSV disk" section.
-    1. If you used step 5a to export the virtual machines above, import the virtual machines back to the cluster nodes. To import the virtual machines, follow the steps in the "Exporting and importing virtual machines in clustered environments" section.
+    > If you are moving your virtual machines to a CSV disk, follow the steps in the [Migrate a virtual machine from a non-CSV disk to a CSV disk](#migrate-a-virtual-machine-from-a-non-csv-disk-to-a-csv-disk) section.
+    1. If you used step 5a to export the virtual machines above, import the virtual machines back to the cluster nodes. To import the virtual machines, follow the steps in the [Export and import virtual machines in clustered environments](#export-and-import-virtual-machines-in-clustered-environments) section.
     2. If you use step 5b to back up the virtual machines, use a backup application to restore the virtual machine to the clustered disk.
 
 9. For each of the virtual machines that are now in this Windows Server 2008 R2 cluster, update the Integration Services. To do this, turn on the virtual machine, open the Virtual Machine Connection window, and then click **Insert Integration Services Setup Disk** on the **Action** menu.
 
     > [!NOTE]
-    > On Windows Server 2008 R2, the Integration Services for Windows Vista and Windows Server 2008 will be listed in Programs and Features as "KB955484."
+    > On Windows Server 2008 R2, the Integration Services for Windows Vista and Windows Server 2008 will be listed in Programs and Features as KB955484.
+
 10. When all virtual machines are running on the Windows Server 2008 R2 cluster and everything has been tested and verified as fully functional, use Failover Cluster Manager to remove the old cluster. To do this, **right-click** the cluster in Failover Cluster Manager, click **More Actions**, and then click **Destroy Cluster**.
+
 11. For the remaining nodes that were in the old cluster, perform a clean installation of Windows Server 2008 R2, and then enable the Hyper-V role and the Failover Clustering feature as required. Join these nodes to the new cluster.
 
 ### Migrate a virtual machine from a non-CSV disk to a CSV disk
 
 1. Export the virtual machines. Use one of the following options, depending on how much control you want over where your virtual hard disks are stored:
+
     1. If you want Hyper-V Manager to move the virtual hard disks along with the virtual machine configuration, select **Export** on the **Action** menu in Hyper-V Manager, and then specify the folder that you want to export the virtual machine to. If you are running Windows Server 2008 Hyper-V, make sure that the **Export only the virtual machine configuration** check box is not selected.
+
     2. If you want complete control over where the virtual hard disks are placed during the migration, export the virtual machine to the CSV Folder by selecting **Export** on the **Action** menu in Hyper-V Manager. Select **Export only the virtual machine configuration**.
 
 2. From Virtual Machine Manager, delete the virtual machine.
@@ -146,85 +152,82 @@ We do not recommend running any additional services or applications in the paren
 
 5. From Failover Cluster Manager, make the virtual machine highly available
 
-### Exporting and importing virtual machines in clustered environments
+### Export and import virtual machines in clustered environments
 
 To export virtual machines, follow these steps:
 
-1. If you perform a configuration-only export of the virtual machines, run the GetAssociatedVHDLocations script to get the list of snapshot .avhd files and the .vhd files that are associated with the virtual machine. To obtain this script, visit the following Microsoft Web site:  
-[https://gallery.technet.microsoft.com/ScriptCenter/ece86b35-3730-4c7e-8177-b52213d09fb7](https://gallery.technet.microsoft.com/scriptcenter/ece86b35-3730-4c7e-8177-b52213d09fb7)
-Use the following command to run the script:  
-    cscript GetAssociatedVHDLocations.vbs /VMName: **NameOfVM**  
-For example, run the following:  
-cscript GetAssociatedVHDLocations.vbs /VMName:VM3
+1. If you perform a configuration-only export of the virtual machines, run the [GetAssociatedVHDLocations.vbs](https://gallery.technet.microsoft.com/scriptcenter/ece86b35-3730-4c7e-8177-b52213d09fb7) script to get the list of snapshot .avhd files and the .vhd files that are associated with the virtual machine.
+
+    Use the following command to run the script:
+
+    ```console
+    cscript GetAssociatedVHDLocations.vbs /VMName: NameOfVM
+    ```
+
+    For example, run the following:
+
+    ```console
+    cscript GetAssociatedVHDLocations.vbs /VMName:VM3
+    ```
 
     The output will be as follows:
 
-    ```console
-    ##########
-    ParentPath
-    ##########
-    K:\HarddiskTempStorage0\fixed.vhd
+    > ##########  
+    ParentPath  
+    ##########  
+    K:\HarddiskTempStorage0\fixed.vhd  
+    >
+    > ##########  
+    ChildPaths  
+    ##########  
+    C:\ProgramData\Microsoft\Windows\Hyper-V\Snapshots\<Snapshot_GUID>\fixed_<snapshot_GUID>.avhd  
+    C:\ProgramData\Microsoft\Windows\Hyper-V\Snapshots\<Snaoshot_GUID>\fixed_<Snapshot_GUID>.avhd  
+    >
+    > Former Resource Path =  
+    "K:\HarddiskTempStorage0\fixed.vhd";  "K:\HarddiskTempStorage0\fixed_diff.vhd";  "K:\HarddiskTempStorage0\fixed1.vhd";  "K:\HarddiskTempStorage0\expanding.vhd"
 
-    ##########
-    ChildPaths
-    ##########
-    C:\ProgramData\Microsoft\Windows\Hyper-V\Snapshots\<Snapshot_GUID>\fixed_<snapshot_GUID>.avhd
-    C:\ProgramData\Microsoft\Windows\Hyper-V\Snapshots\<Snaoshot_GUID>\fixed_<Snapshot_GUID>.avhd
-
-    Former Resource Path =
-    "K:\HarddiskTempStorage0\fixed.vhd";"K:\HarddiskTempStorage0\fixed_diff.vhd";"K:\HarddiskTempStorage0\fixed1.vhd";"K:\HarddiskTempStorage0\expanding.vhd"
-    ```
-
-2. Copy the .avhd files that are listed under "ChildPaths" in the script output to the same folder as the .vhd folder that is specified under "ParentPath" in the output.
+2. Copy the .avhd files that are listed under **ChildPaths** in the script output to the same folder as the .vhd folder that is specified under **ParentPath** in the output.
 
 To import virtual machines, follow these steps:
 
-1. Obtain the importVM script from the following Microsoft Web site:  
-    [https://gallery.technet.microsoft.com/ScriptCenter/cca0fd27-8142-45f4-b4d7-21a92e278743](https://gallery.technet.microsoft.com/scriptcenter/cca0fd27-8142-45f4-b4d7-21a92e278743) 
+1. Obtain the [ImportVM](https://gallery.technet.microsoft.com/scriptcenter/cca0fd27-8142-45f4-b4d7-21a92e278743) script.
 
-2. Import the virtual machine by passing the **Export Path** that is specified after you select **Export** on the **Action** menu. Specify the Former Resource Path output that is shown in step 1 of the export procedure as input parameters to the importVM script. For example, assume that the Former Resource Path output is:
+2. Import the virtual machine by passing the **Export Path** that is specified after you select **Export** on the **Action** menu. Specify the **Former Resource Path** output that is shown in step 1 of the export procedure as input parameters to the importVM script. For example, assume that the **Former Resource Path** output is:
 
-    ```console
-    "K:\HarddiskTempStorage0\fixed.vhd";"K:\HarddiskTempStorage0\fixed_diff.vhd";"K:\HarddiskTempStorage0\fixed1.vhd";"K:\HarddiskTempStorage0\expanding.vhd"
-    ```
+    > "K:\HarddiskTempStorage0\fixed.vhd";  
+    "K:\HarddiskTempStorage0\fixed_diff.vhd";  
+    "K:\HarddiskTempStorage0\fixed1.vhd";  
+    "K:\HarddiskTempStorage0\expanding.vhd"
 
-    If you are migrating from a non-CSV to a non-CSV environment, replace the "K" with the new drive letter assigned to the storage that is now mounted in the new cluster. If the volume was mounted as "K:" and now it is mounted as "Z:", the Resource Path becomes:
+    If you are migrating from a non-CSV to a non-CSV environment, replace the **K** with the new drive letter assigned to the storage that is now mounted in the new cluster. If the volume was mounted as **K:** and now it is mounted as **Z:**, the Resource Path becomes:
 
-    ```console
-    "Z:\HarddiskTempStorage0\fixed.vhd";"Z:\HarddiskTempStorage0\fixed_diff.vhd";"Z:\HarddiskTempStorage0\fixed1.vhd";"Z:\HarddiskTempStorage0\expanding.vhd"
-    ```
+    > "Z:\HarddiskTempStorage0\fixed.vhd";"Z:\HarddiskTempStorage0\fixed_diff.vhd";"Z:\HarddiskTempStorage0\fixed1.vhd";"Z:\HarddiskTempStorage0\expanding.vhd"
 
-    If you are migrating from a non-CSV to a CSV environment, replace the "K:\" with "C:\ClusterStorage\Volume4 " so that the Resource Paths become the following:
+    If you are migrating from a non-CSV to a CSV environment, replace the `K:\` with *C:\ClusterStorage\Volume4* so that the Resource Paths become the following:
 
-    ```console
-    "C:\ClusterStorage\Volume4\HarddiskTempStorage0\fixed.vhd";
-    "C:\ClusterStorage\Volume4:\HarddiskTempStorage0\fixed_diff.vhd";
-    "C:\ClusterStorage\Volume4\HarddiskTempStorage0\fixed1.vhd";
-    "C:\ClusterStorage\Volume4\HarddiskTempStorage0\expanding.vhd"
-    ```
+    > "C:\ClusterStorage\Volume4\HarddiskTempStorage0\fixed.vhd";  
+    "C:\ClusterStorage\Volume4:\HarddiskTempStorage0\fixed_diff.vhd";  "C:\ClusterStorage\Volume4\HarddiskTempStorage0\fixed1.vhd"  
+"C:\ClusterStorage\Volume4\HarddiskTempStorage0\expanding.vhd"
 
     In this example, after you run the script, you should see the following output:
 
-    ```console
-    >ImportVM.vbs /ImportDirectory:C:\ClusterStorage\Volume4\vm3Export\MyVM /ResourcePaths:
-    "C:\ClusterStorage\Volume4\HarddiskTempStorage0\fixed.vhd";
-    "C:\ClusterStorage\Volume4:\HarddiskTempStorage0\fixed_diff.vhd";
-    "C:\ClusterStorage\Volume4\HarddiskTempStorage0\fixed1.vhd";
+    > \>ImportVM.vbs /ImportDirectory:C:\ClusterStorage\Volume4\vm3Export\MyVM /ResourcePaths:  
+    "C:\ClusterStorage\Volume4\HarddiskTempStorage0\fixed.vhd";  
+    "C:\ClusterStorage\Volume4:\HarddiskTempStorage0\fixed_diff.vhd";  
+    "C:\ClusterStorage\Volume4\HarddiskTempStorage0\fixed1.vhd";  
     " C:\ClusterStorage\Volume4\HarddiskTempStorage0\expanding.vhd"
-
-    Microsoft (R) Windows Script Host Version 5.8
+    >
+    > Microsoft (R) Windows Script Host Version 5.8
     Copyright (C) Microsoft Corporation. All rights reserved.
-
-    Resource Paths
-    C:\ClusterStorage\Volume4\HarddiskTempStorage0\fixed.vhd
-    C:\ClusterStorage\Volume4:\HarddiskTempStorage0\fixed_diff.vhd
-    C:\ClusterStorage\Volume4\HarddiskTempStorage0\fixed1.vhd
+    >
+    > Resource Paths  
+    C:\ClusterStorage\Volume4\HarddiskTempStorage0\fixed.vhd  
+    C:\ClusterStorage\Volume4:\HarddiskTempStorage0\fixed_diff.vhd  
+    C:\ClusterStorage\Volume4\HarddiskTempStorage0\fixed1.vhd  
     C:\ClusterStorage\Volume4\HarddiskTempStorage0\expanding.vhd
-
-    In progress... 10% completed.
+    >
+    > In progress... 10% completed.  
     Done
-    ```
 
     > [!NOTE]
-    > The Former Resource Paths must be enclosed in quotation marks. For example, use:  
-    "C:\ClusterStorage\Volume4\MyVM\MyVM.vhd"
+    > The **Former Resource Paths** must be enclosed in quotation marks. For example, use C:\ClusterStorage\Volume4\MyVM\MyVM.vhd.
