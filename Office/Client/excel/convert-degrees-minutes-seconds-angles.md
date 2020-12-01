@@ -90,7 +90,7 @@ Function Convert_Decimal(Degree_Deg As String) As Double
     ' of the text string for the variable Degree_Deg divided by
     ' 60. The Val function converts the text string to a number.
     minutes = Val(Mid(Degree_Deg, InStr(1, Degree_Deg, "°") + 2, _
-    InStr(1, Degree_Deg, "'") - InStr(1, Degree_Deg, _
+    InStr(1, Degree_Deg, " '") - InStr(1, Degree_Deg, _
     "°") - 2)) / 60
     ' Set seconds to the number to the right of "'" that is
     ' converted to a value and then divided by 3600.

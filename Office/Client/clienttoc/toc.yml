@@ -707,7 +707,7 @@
           href: ../office-suite-issues/cannot-guarantee-complete-repair-corrupted-files.md
         - name: Connection to a network document is lost
           href: ../office-suite-issues/connect-to-network-document-lost.md
-        - name: Do you want to download the converter
+        - name: Error when opening a file in Excel, Word, or PowerPoint
           href: ../office-suite-issues/error-do-you-want-download-converter.md
         - name: Document files in Office Document Cache not deleted
           href: ../office-suite-issues/office-temporary-files-not-delete.md
@@ -841,6 +841,10 @@
           href: ../performance/office-applications-not-responding.md
         - name: Open network file slow or stop responding
           href: ../performance/office-slow-or-stop-responding.md
+    - name: Planner
+      items:
+        - name: Guest users have no access to assigned tasks
+          href: ../planner/guests-cannot-comment-assigned-tasks.md
     - name: PowerPoint
       items:
         - name: Can't edit video or audio in a presentation
@@ -947,6 +951,8 @@
           href: ../settings/office-display-issues.md
         - name: Error in Office when file is blocked
           href: ../settings/file-blocked-in-office.md
+        - name: How to use Problem Steps Recorder
+          href: ../settings/how-to-use-problem-steps-recorder.md
         - name: Task panes in Office
           href: ../settings/office-program-task-panes.md
         - name: Use registry to clear the most recently used files list

@@ -1,0 +1,58 @@
+---
+title: Cannot save meeting as draft in Outlook for Mac
+description: This article provides a workaround for saving a meeting as a draft in the Outlook for Mac using Office JS API.
+author: simonxjx
+ms.author: v-six
+manager: dcscontentpm
+audience: ITPro
+ms.topic: troubleshooting
+ms.prod: exchange-server-it-pro
+localization_priority: Normal
+ms.custom: 
+- Outlook for Mac
+- CSSTroubleshoot
+ms.reviewer: elizs
+appliesto:
+- Outlook 2019 for Mac
+- Outlook for Mac for Office 365
+- Outlook 2016 for Mac
+search.appverid: MET150
+---
+# Cannot save a meeting as a draft in Outlook for Mac by using Office JS API
+
+_Original KB number:_ &nbsp; 4505745
+
+## Symptoms
+
+Microsoft Outlook for Mac does not support [saveAsync](/office/dev/add-ins/reference/objectmodel/preview-requirement-set/office.context.mailbox.item#saveasyncoptions-callback) on a meeting in Compose mode. Outlook add-ins cannot get the item identifier. This means that the add-ins cannot uniquely identify and communicate with Microsoft Exchange to update or listen for changes on the item.
+
+## Workaround
+
+To work around this issue, you can set an extended property ([customProperty](/office/dev/add-ins/reference/objectmodel/preview-requirement-set/office.context.mailbox.item#loadcustompropertiesasynccallback-usercontext): Office JS API) on the item. An extended property is part of the item and will be available on Exchange as soon as the item is sent. Therefore, the add-in can query or listen to items that have this extended property set.
+
+To set the property, follow these steps:
+
+1. Choose one of the following API sets to use:
+    1. EWS
+    2. REST
+    3. Graph
+
+2. Get a valid token for each API set:
+    1. EWS: Use [getCallbackScopedAsync](/office/dev/add-ins/reference/objectmodel/preview-requirement-set/office.context.mailbox#getcallbacktokenasyncoptions-callback)
+    2. REST: Use [getCallbackScopedAsync](/office/dev/add-ins/reference/objectmodel/preview-requirement-set/office.context.mailbox#getcallbacktokenasyncoptions-callback) with **options.isRest** = **true**
+    3. Graph: Use onBehalfOf token
+
+3. Query or listen for calendar events:
+    1. EWS: [Subscribe](/exchange/client-developer/exchange-web-services/how-to-synchronize-items-by-using-ews-in-exchange) to the created event
+    2. REST: [Subscribe](/previous-versions/office/office-365-api/api/version-2.0/notify-rest-operations#SubscribeOperation) to the created notification, and filter based on the extended property
+    3. Graph: [Subscribe](/graph/api/subscription-post-subscriptions?view=graph-rest-1.0&tabs=http&preserve-view=true) to the created notification, and filter based on the extended property
+
+4. Find the corresponding extended property on Exchange:
+    1. EWS:
+
+       ExtendedFieldURI {PropertySet = PS_PUBLIC_STRINGS, PropertyName = cecp-\<add-in id from manifest>}
+    2. REST/Graph:
+
+       SingleValueExtendedProperties { PropertyId = String {00020329-0000-0000-c000-000000000046} Name cecp-\<add-in id from manifest>}
+
+5. Use the notification that's sent to the webhook to update the backend with **itemId** when the subscription is successful.

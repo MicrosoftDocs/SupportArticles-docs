@@ -2,6 +2,27 @@
 
 
 
+## Week of November 23, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/26/2020 | [This feature has been disabled by your administrator error in Microsoft Office](/office365/troubleshoot/access-management/office-feature-disabled) | modified |
+
+
+## Week of November 16, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/16/2020 | [Connection issues in sign-in after update to Office 2016 build 16.0.7967](/office365/troubleshoot/authentication/connection-issue-when-sign-in-office-2016) | modified |
+| 11/17/2020 | [(Your archive appears to be unavailable) in a hybrid deployment.](/office365/troubleshoot/archive-mailboxes/cloud-based-archive-unavailable) | modified |
+| 11/17/2020 | [Issue when you enable mailbox archiving in an Exchange hybrid deployment.](/office365/troubleshoot/archive-mailboxes/issue-when-enable-mailbox-archiving) | modified |
+| 11/17/2020 | [How to restore In-Place Hold and Litigation Hold settings in an Exchange hybrid deployment](/office365/troubleshoot/holds/restore-in-place-litigation-hold) | modified |
+| 11/17/2020 | [Install and maintain SaRA tool from a network share](/office365/troubleshoot/installation/install-sara-from-network-share) | modified |
+| 11/19/2020 | [Open Support cases for GCC High and DoD](/office365/troubleshoot/miscellaneous/support-cases-for-gcc-high-dod) | modified |
+
+
 ## Week of November 09, 2020
 
 
@@ -48,20 +69,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 10/29/2020 | Outlook Customer Manager group creation in admin portal | removed |
-
-
-## Week of October 19, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/21/2020 | [Install and maintain SaRA tool from a network share](/office365/troubleshoot/installation/install-sara-from-network-share) | modified |
-| 10/21/2020 | [Outlook Customer Manager group creation in admin portal](/office365/troubleshoot/licensing/outlook-customer-manager-group-creation) | modified |
-
-
-## Week of October 12, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/15/2020 | [Unable to sign in to Office 365, Azure, or Intune](/office365/troubleshoot/sign-in/sign-in-to-office-365-azure-intune) | modified |
