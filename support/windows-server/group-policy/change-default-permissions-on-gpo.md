@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;321476
 
 ## Summary
 
-You may want to strengthen security on GPOs to prevent all but a trusted group of administrators from changing group policy. You can do so by modifying the DefaultSecurityDescriptor attribute on the Group Policy container classScema object. However, the change only affects newly created GPOs. For existing GPOs, you can modify permissions directly on the Group Policy container (CN={GPO_GUID},CN=System,DC=domain...) and Group Policy template (\\\domain\SYSVOL\Policies\{GPO_GUID}). This procedure can also help prevent administrative templates (ADM files) in the Group Policy templates from being inadvertently updated by the ADM files on unmanaged workstations.
+You may want to strengthen security on GPOs to prevent all but a trusted group of administrators from changing group policy. You can do so by modifying the DefaultSecurityDescriptor attribute on the Group Policy container classScema object. However, the change only affects newly created GPOs. For existing GPOs, you can modify permissions directly on the Group Policy container (CN={GPO_GUID},CN=System,DC=domain...) and Group Policy template (\\\\domain\SYSVOL\Policies\{GPO_GUID}). This procedure can also help prevent administrative templates (ADM files) in the Group Policy templates from being inadvertently updated by the ADM files on unmanaged workstations.
 
 ## More information
 

@@ -122,11 +122,10 @@ These examples show that the partition is not aligned correctly for a 256-KB str
 To find the starting offset for a given partition, follow these steps:  
 
 1. Click **Start**, click **Run**, type cmd, and then click **OK**.
-2. Type the following command, and then press Enter: wmic partition gets BlockSize, StartingOffset, Name, Index  
+2. Type the following command, and then press Enter: wmic partition gets BlockSize, StartingOffset, Name, Index
+  
+    After you run the command, you receive output that resembles the following:
 
-    > [!NOTE]
-    > After you run the command, you receive output that resembles the following:
-    >
     > BlockSize Index Name StartingOffset  
     512 0 Disk #1, Partition #0 32256  
     512 0 Disk #2, Partition #0 32256  

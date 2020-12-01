@@ -20,11 +20,7 @@ This article describes the event log entries the File Replication Service (FRS) 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;308406
 
-## More information
-
-Windows Server 2003 and later events:  
-
-==
+## Windows Server 2003 and later events  
 
 > Event ID=13500  
 Severity=Error  
@@ -64,9 +60,7 @@ The File Replication Service has stopped after taking an assertion failure.
 
 > Event ID=13506  
 Severity=Error  
-The File Replication Service failed a consistency check  
- (%3)  
-in "%1" at line %2.  
+The File Replication Service failed a consistency check (%3) in "%1" at line %2.  
 
 The File Replication Service will restart automatically at a later time.
 If this problem persists, a subsequent entry in this event log describes the
@@ -76,8 +70,6 @@ For more information about the automatic restart, right click on
 My Computer and then click on Manage, System Tools, Services,
 File Replication Service, and Recovery.
 
-==
-
 > Event ID=13507  
 Severity=Error  
 The File Replication Service can't start replica set %1 on computer %2
@@ -86,8 +78,6 @@ for directory %3 because the type of volume %4 isn't NTFS 5.0 or later.
 The volume's type can be found by typing "chkdsk %4".
 
 The volume can be upgraded to NTFS 5.0 or later by typing "chkntfs /E %4".
-
-==
 
 > Event ID=13508  
 Severity=Warning  
@@ -104,8 +94,6 @@ this replica has not yet replicated to all the Domain Controllers.
 This event log message will appear once per connection.  After the problem is fixed, you'll see another event log message indicating that the connection
 has been established.
 
-==
-
 > Event ID=13509  
 Severity=Warning  
 The File Replication Service has enabled replication from %1 to %2 for %3  
@@ -121,10 +109,10 @@ the File Replication Service on the computer %2.
 Verify that the computer %2 is up and running.
 
 Verify that the File Replication Service is running on %2 by
-typing **net start ntfrs** on %2.
+typing *net start ntfrs* on %2.
 
 Verify that the network is functioning between %1 and %2 by
-typing "ping %1" on %2 and "ping %2" on %1.
+typing `ping %1` on %2 and `ping %2` on %1.
 If the pings succeed, then retry the failed operation.
 If the pings fail, then there may be problems with the DNS server.
 
@@ -133,9 +121,9 @@ The commands `ipconfig` and `nslookup` help diagnose problems with the
 DNS server.
 
 Typing `ipconfig /all` will list the computer's IP address and the IP
-address of the computer's DNS servers. Type "ping \<DNS server's IP address>"
+address of the computer's DNS servers. Type `ping <DNS server's IP address>`
 to verify that a DNS server is available. The DNS mapping for %2 or %1
-can be verified by typing `nslookup` and then typing "%2" and then "%1"
+can be verified by typing `nslookup` and then typing *%2* and then *%1*
 on %1 and %2. Be sure to check out the DNS server on both %1 and %2;
 a DNS problem on either computer will prevent proper communication.
 
@@ -143,25 +131,23 @@ Some network problems between %1 and %2 can be cleared up by flushing
 the DNS Resolver Cache. Type `ipconfig /flushdns`.
 
 Some network problems between %1 and %2 can be cleared up by renewing
-the IP address. Type `ipconfig /release` followed by "ipconfig /renew".
+the IP address. Type `ipconfig /release` followed by `ipconfig /renew`.
 
 Some network problems between %1 and %2 can be cleared up by resetting
-the computer's DNS entry. Type "net stop NetLogon" followed by
-"net start NetLogon".
+the computer's DNS entry. Type `net stop NetLogon` followed by
+`net start NetLogon`.
 
 Some problems between %1 and %2 can be cleared up by restarting
-the File Replication Service. Type **net stop ntfrs** followed by
-**net start ntfrs**.
+the File Replication Service. Type `net stop ntfrs` followed by
+`net start ntfrs`.
 
 Some problems between %1 and %2 can be cleared up by restarting
-the computers %1 and %2 AFTER CLOSING RUNNING APPLIATIONS,
+the computers %1 and %2 after closing running applications,
 especially dcpromo. Click on Start, Shutdown, select Restart, and
 click on OK.
 
 Other network and computer problems are beyond the scope of
 this event log message.
-
-==
 
 > Event ID=13511  
 Severity=Error  
@@ -169,21 +155,19 @@ The File Replication Service is stopping on computer %1 because there is no free
 space on the volume containing %2.  
 
 The available space on the volume can be found by typing
-"dir %2".
+*dir %2*.
 
 Once free space is made available on the volume containing %2,
 the File Replication Service can be restarted immediately by typing
-**net start ntfrs**. Otherwise, the File Replication Service will
+`net start ntfrs`. Otherwise, the File Replication Service will
 restart automatically at a later time.
 
 For more information about the automatic restart, right click on
 My Computer and then click on Manage, System Tools, Services, File
 Replication Service, and Recovery.
 
-For more information about managing space on a volume type "copy /?",
-"rename /?", "del /?", "rmdir /?", and "dir /?".
-
-==
+For more information about managing space on a volume type *copy /?*,
+*rename /?*, *del /?*, *rmdir /?*, and *dir /?*.
 
 > Event ID=13512  
 Severity=Warning  
@@ -193,8 +177,6 @@ on the drive containing the directory %2 on the computer %1.
 The File Replication Service might not recover when power to the  
 drive is interrupted and critical updates are lost.  
 
-==
-
 > Event ID=13513  
 Severity=Error  
 The File Replication Service on computer %1 is stopping because the  
@@ -203,9 +185,7 @@ database %2 is corrupted.
 The database can be recovered by typing `esentutl /d %2`.
 
 Once the database has been successfully recovered, the
-File Replication Service can be restarted by typing "net start ntfrs".
-
-==
+File Replication Service can be restarted by typing `net start ntfrs`.
 
 > Event ID=13514  
 Severity=Warning  
@@ -213,8 +193,7 @@ File Replication Service is initializing the system volume with data from anothe
 domain controller. Computer %1 cannot become a domain controller until this process  
 is complete. The system volume will then be shared as SYSVOL.  
 
-To check for the SYSVOL share, at the command prompt, type:
-net share
+To check for the SYSVOL share, at the command prompt, type: `net share`
 
 When File Replication Service completes the initialization process, the SYSVOL
 share will appear.
@@ -224,15 +203,13 @@ The time is dependent on the amount of data in the system volume,
 the availability of other domain controllers, and the replication
 interval between domain controllers.
 
-==
-
 > Event ID=13515  
 Severity=Warning  
 The File Replication Service may be preventing the computer %1 from becoming a  
 domain controller while the system volume is being initialized and then  
 shared as SYSVOL.  
 
-Type "net share" to check for the SYSVOL share. The File Replication
+Type `net share` to check for the SYSVOL share. The File Replication
 Service has stopped preventing the computer from becoming a domain
 controller once the SYSVOL share appears.
 
@@ -240,7 +217,7 @@ The initialization of the system volume can take some time.
 The time is dependent on the amount of data in the system volume.
 
 The initialization of the system volume can be bypassed by first typing
-**regedit** and setting the value of SysvolReady to 1 and then restarting
+*regedit* and setting the value of SysvolReady to 1 and then restarting
 the Netlogon service.
 
 WARNING - BYPASSING THE SYSTEM VOLUME INITIALIZATION IS NOT RECOMMENDED.
@@ -250,8 +227,8 @@ The value SysvolReady is located by clicking on HKEY_LOCAL_MACHINE
 and then clicking on System, CurrentControlSet, Services, Netlogon,
 and Parameters.
 
-The Netlogon service can be restarted by typing **net stop netlogon**
-followed by **net start netlogon**.
+The Netlogon service can be restarted by typing `net stop netlogon`
+followed by `net start netlogon`.
 
 ==
 
@@ -262,7 +239,7 @@ becoming a domain controller. The system volume has been successfully
 initialized and the Netlogon service has been notified that the system  
 volume is now ready to be shared as SYSVOL.  
 
-Type "net share" to check for the SYSVOL share.
+Type `net share` to check for the SYSVOL share.
 
 ==
 
@@ -270,9 +247,9 @@ Type "net share" to check for the SYSVOL share.
 Severity=Warning  
 The File Replication Service won't check access to the API "%1".  
 
-Access checks can be enabled for "%1" by running **regedit**.
+Access checks can be enabled for "%1" by running *regedit*.
 
-Click on Start, Run, and type **regedit**.
+Click on Start, Run, and type *regedit*.
 
 Expand HKEY_LOCAL_MACHINE, SYSTEM, CurrentControlSet, Services, NtFrs, Parameters,
 Access Checks, "%1", and "%2". Change the string to Enabled.
@@ -280,16 +257,14 @@ Access Checks, "%1", and "%2". Change the string to Enabled.
 Permissions can be changed by highlighting "%1" and then clicking on the
 toolbar option Security and then Permissions...
 
-==
-
 > Event ID=13518  
 Severity=Warning  
 The File Replication Service did not grant the user "%3" access to the  
 API "%1".  
 
-Permissions for "%1" can be changed by running **regedit**.
+Permissions for "%1" can be changed by running *regedit*.
 
-Click on Start, Run, and type **regedit**.
+Click on Start, Run, and type *regedit*.
 
 Expand HKEY_LOCAL_MACHINE, SYSTEM, CurrentControlSet, Services, NtFrs, Parameters,
 Access Checks, and highlight "%1".
@@ -298,24 +273,20 @@ Click on the toolbar option Security and then Permissions...
 Access checks can be disabled for "%1". Double-click on "%2" and
 change the string to Disabled.
 
-==
-
 > Event ID=13519  
 Severity=Error  
 The File Replication Service could not grant an unknown user access to the  
 API "%1".  
 
-Access checks can be disabled for "%1" by running **regedit**.
+Access checks can be disabled for "%1" by running *regedit*.
 
-Click on Start, Run, and type **regedit**.
+Click on Start, Run, and type *regedit*.
 
 Expand HKEY_LOCAL_MACHINE, SYSTEM, CurrentControlSet, Services, NtFrs, Parameters,
 Access Checks, "%1", and "%2". Change the string to Disabled.
 
 Permissions can be changed by highlighting "%1" and then clicking on the
 toolbar option Security and then Permissions...
-
-==
 
 > Event ID=13520  
 Severity=Warning  
@@ -349,19 +320,16 @@ local administrator before proceeding further.
 The computer can be rebooted by clicking on Start, Shutdown, and
 selecting Restart.
 
-WARNING - DELETING THE REGISTRY KEY IS NOT RECOMMENDED!
-Applications may fail in unexpected ways.
-
-The registry key can be deleted by running **regedit**.
-
-Click on Start, Run, and type **regedit**.
-
-Expand HKEY_LOCAL_MACHINE, SYSTEM, CurrentControlSet, Services, NtFrs, Parameters,
+> [!NOTE]
+> Deleting the registry key is not recommended.Applications may fail in unexpected ways.
+The registry key can be deleted by running *regedit*.
+>
+> Click on Start, Run, and type *regedit*.
+>
+> Expand HKEY_LOCAL_MACHINE, SYSTEM, CurrentControlSet, Services, NtFrs, Parameters,
 Backup/Restore,"Stop NtFrs from Starting". On the toolbar, click on Edit and select
 Delete. Be careful! Deleting a key other than "Stop NtFrs From Starting"
 can have unexpected side effects.
-
-==
 
 > Event ID=13522  
 Severity=Warning  
@@ -382,9 +350,9 @@ sufficient window of time to accommodate the number of files being replicated.
 Consider increasing the staging area to improve system performance.
 
 The current value of the staging space limit is %1 KB. To change the staging
-space limit, run **regedit**:
+space limit, run *regedit*:
 
-Click on Start -> Run and type **REGEDT**. Expand HKEY_LOCAL_MACHINE, SYSTEM,
+Click on Start -> Run and type *regedit*. Expand HKEY_LOCAL_MACHINE, SYSTEM,
 CurrentControlSet, Services, NtFrs, Parameters, and the value "Staging Space
 Limit in KB".
 
@@ -398,9 +366,9 @@ is increased.
 
 The staging space limit is %1 KB and the file size is %2 KB.
 
-To change the staging space limit, run **regedit**.
+To change the staging space limit, run *regedit*.
 
-Click on Start, Run, and type **regedit**.
+Click on Start, Run, and type *regedit*.
 
 Expand HKEY_LOCAL_MACHINE, SYSTEM, CurrentControlSet, Services, NtFrs, Parameters,
 and the value "Staging Space Limit in KB".
@@ -629,9 +597,9 @@ The allowed range for this parameter is %5
 The data units for this parameter value are %6.
 The File Replication Service is using a default value of "%7".
 
-To change this parameter, run **regedit**.
+To change this parameter, run *regedit*.
 
-Click on Start, Run, and type **regedit**.
+Click on Start, Run, and type *regedit*.
 
 Expand `HKEY_LOCAL_MACHINE`.
 Click down the key path: "%8"
@@ -664,9 +632,9 @@ the time zone and the system time are correctly set on both computers.
 If necessary, the default value used to test for computer time consistency
 may be changed in the registry on this computer. (Note: This is not recommended.)
 
-To change this parameter, run **regedit**.
+To change this parameter, run *regedit*.
 
-Click on Start, Run, and type **regedit**.
+Click on Start, Run, and type *regedit*.
 
 Expand `HKEY_LOCAL_MACHINE`.
 Click down the key path:
@@ -875,8 +843,6 @@ or other replica sets with replication enabled:
     > If this error message is in the eventlog of all the members of a particular replica set, then perform steps (4-a) and (4-e) above on only
     one of the members.
 
-==
-
 > Event ID=13556  
 Severity=Error  
 The File Replication Service has detected what appears to be an attempt
@@ -976,8 +942,7 @@ they are needed or not.
 > Event ID=13560  
 Severity=Warning  
 The File Replication Service is deleting this computer from the replica set "%1" as an attempt to recover from the error state,  
-Error status = %2. At the next poll, which will occur in %3 minutes, this computer will be readded to the
-replica set. The readdition will trigger a full tree sync for the replica set.
+Error status = %2. At the next poll, which will occur in %3 minutes, this computer will be readded to the replica set. The readdition will trigger a full tree sync for the replica set.
 
 ==
 
@@ -1114,9 +1079,9 @@ change the contents of the file.
 2. Setting the same ACLs on a file multiple times.
 3. Restoring an identical copy of the file over an existing one.
 
-Suppression of updates can be disabled by running **regedit**.
+Suppression of updates can be disabled by running *regedit*.
 
-Click on Start, Run, and type **regedit**.
+Click on Start, Run, and type *regedit*.
 
 Expand HKEY_LOCAL_MACHINE, SYSTEM, CurrentControlSet, Services, NtFrs, Parameters,
 and create or update the value "Suppress Identical Updates To Files" to 0 (Default is 1) to force
@@ -1160,9 +1125,9 @@ You should reset the registry parameter described above to 0 to prevent
 automatic recovery from making the data unexpectedly unavailable if this
 error condition occurs again.
 
-To change this registry parameter, run **regedit**.
+To change this registry parameter, run *regedit*.
 
-Click on Start, Run, and type **regedit**.
+Click on Start, Run, and type *regedit*.
 
 Expand `HKEY_LOCAL_MACHINE`.
 Click down the key path:
@@ -1202,8 +1167,8 @@ made available on this volume.
 The available space on the volume can be found by typing
 "dir /a %1".
 
-For more information about managing space on a volume type "copy /?",
-"rename /?", "del /?", "rmdir /?", and "dir /?".
+For more information about managing space on a volume type *copy /?*,
+*rename /?*, *del /?*, *rmdir /?*, and *dir /?*.
 
 ==
 
@@ -1217,7 +1182,7 @@ until this conflict is resolved.
 Volume Serial Number: %1
  List of volumes that have this Volume Serial Number: %2
 
-The output of "dir" command displays the Volume Serial Number
+The output of `dir` command displays the Volume Serial Number
 before listing the contents of the folder.
 
 ==

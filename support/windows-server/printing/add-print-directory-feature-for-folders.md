@@ -106,7 +106,7 @@ To do this, follow these steps:
 1. Click **Start**, click **Run**, type **Notepad,** and then click **OK**.
 2. Type the following commands in Notepad.
 
-    ```console
+    ```registry
     Windows Registry Editor Version 5.00  
     [HKEY_CLASSES_ROOT\Directory\Shell] @="none"  
     [HKEY_CLASSES_ROOT\Directory\Shell\Print_Directory_Listing] @="Print Directory Listing"  
@@ -114,7 +114,8 @@ To do this, follow these steps:
     [HKEY_CLASSES_ROOT\SOFTWARE\Classes\Directory] "BrowserFlags"=dword:00000008  
     [HKEY_CLASSES_ROOT\SOFTWARE\Classes\Directory\shell\Print_Directory_Listing] @="Print Directory  
     Listing"[HKEY_CLASSES_ROOT\SOFTWARE\Classes\Directory\shell\Print_Directory_Listing\command]  
-    @="Printdir.bat \"%1\""[HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\AttachmentExecute\  
+    @="Printdir.bat \"%1\""  
+    [HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\AttachmentExecute\  
     {0002DF01-0000-0000-C000-000000000046}] @=""[HKEY_CLASSES_ROOT\SOFTWARE\Classes\Directory]  
     "EditFlags"="000001d2"
     ```

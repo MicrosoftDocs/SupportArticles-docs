@@ -50,7 +50,7 @@ Certain functionality may be blocked from working on Windows To Go Installations
 
 To resolve this problem, change the PortableOperatingSystem registry by editing the Windows registry.
 
-> [!Caution]
+> [!NOTE]
 > This section contains information about how to modify the registry. Make sure that you back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, click the following article number to view the article in the Microsoft Knowledge Base:
 [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows
 
@@ -72,7 +72,7 @@ To change the PortableOperatingSystem registry, follow these steps:
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control`
 
-3. From the right-side pane, **double-click** on **PortableOperatingSystem** Dword value
+3. From the right-side pane, double-click on **PortableOperatingSystem** Dword value
 4. Change the value data to **0** (The default value is 1)
 5. Close the registry editor
 6. Restart the computer.

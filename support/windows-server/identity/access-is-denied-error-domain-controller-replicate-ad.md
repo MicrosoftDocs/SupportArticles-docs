@@ -49,23 +49,17 @@ To do this, follow these steps.
 > [!NOTE]
 > By default, port 135 is blocked in Windows Server 2003 SP1 and in x64-based versions of Windows Server 2003.
 
-1. Click **Start**, click **Run**, type firewall.cpl, and then click
- **OK**.
-2. Click the **Exceptions** tab, and then click
- **Add Port**.
+1. Click **Start**, click **Run**, type *firewall.cpl*, and then click **OK**.
+2. Click the **Exceptions** tab, and then click **Add Port**.
 3. In the **Name** box, type a name for the port.
 
-    For example, type TCP 135.
-4. In the **Port number** box, type
-    135.
-5. Click **TCP**, and then click
- **OK**.
+    For example, type *TCP 135*.
+4. In the **Port number** box, type *135*.
+5. Click **TCP**, and then click **OK**.
 
-    The new port appears on the
- **Exceptions** tab.
+    The new port appears on the **Exceptions** tab.
 6. Click to select the check box next to the new port, and then click **OK**.
-7. Click **Start**, click **Run**, type **regedit**, and then click
- **OK**.
+7. Click **Start**, click **Run**, type *regedit*, and then click **OK**.
 8. Use one of the following methods:  
 
 - Set the value of the RestrictRemoteClients registry entry to 0 or 1. To do this, follow these steps:
@@ -78,8 +72,7 @@ To do this, follow these steps.
           > If this entry does not exist, follow these steps:  
           >
           > 1. On the **Edit** menu, point to **New**, and then click **DWORD Value**.  
-          > 2. Type
-                 RestrictRemoteClients , and then press ENTER.  
+          > 2. Type *RestrictRemoteClients* , and then press ENTER.  
 
     3. On the **Edit** menu, click **Modify**.
     4. In the **Value data** box, type 0 or 1, and then click **OK**.

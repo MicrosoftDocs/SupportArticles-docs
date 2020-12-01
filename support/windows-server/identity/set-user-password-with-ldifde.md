@@ -44,10 +44,11 @@ unicodePwd::IgBuAGUAdwBQAGEAcwBzAHcAbwByAGQAIgA=
 
 To import the chPwd.ldif file, use the following command:  
 
-SSL/TLS:  
- ldifde -i -f chPwd.ldif -t 636 -s **dcname** -b **username** **domain** **password**  
-SASL:  
-ldifde -i -f chPwd.ldif -h -s ***dcname***  -b ***username** **domain** **password***  
+- SSL/TLS:  
+ ldifde -i -f chPwd.ldif -t 636 -s \<dcname> -b \<username> \<domain> \<password>  
+- SASL:  
+ldifde -i -f chPwd.ldif -h -s \<dcname>  -b \<username> \<domain> \<password>  
+
 If the password does not fulfill the criteria of the enforced Password Policies, then it will throw an error:  
 > Add error on entry starting on line 1: Unwilling To Perform The server-side error is "A device attached to the system is not functioning
 

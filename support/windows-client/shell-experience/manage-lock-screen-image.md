@@ -40,32 +40,32 @@ Requirements:
 
 To deploy the new "Force a specific default lock screen image" GP the following requirements must be met:
 
-1. The update "Windows 8 and Windows Server 2012 cumulative update: November 2012" must be applied to all Windows 8 and Windows Server 2012 computers that you want to deploy customer lock screen images to. This is required as the Control Panel group policy client-side extension must be updated to enforce the group policy
+1. The update "Windows 8 and Windows Server 2012 cumulative update: November 2012" must be applied to all Windows 8 and Windows Server 2012 computers that you want to deploy customer lock screen images to. This is required as the Control Panel group policy client-side extension must be updated to enforce the group policy.
 
-2. The group policy used to deploy the custom lock screen image must be edited on a machine that has been patched with "Windows 8 and Windows Server 2012 cumulative update: November 2012"  
+2. The group policy used to deploy the custom lock screen image must be edited on a machine that has been patched with "Windows 8 and Windows Server 2012 cumulative update: November 2012".  
 
 Restrictions  
 
-- Windows 8 Enterprise or Windows Server 2012 can use the new GP "Force a specific default lock screen image" via Domain GP or via local GP
-- Windows 8 Pro can also be a target of the GP if the machine is joined to a domain
+- Windows 8 Enterprise or Windows Server 2012 can use the new GP "Force a specific default lock screen image" via Domain GP or via local GP.
+- Windows 8 Pro can also be a target of the GP if the machine is joined to a domain.
 
 Implementation Steps for Domain Based Group Policy  
 
-1. Patch all system with update "Windows 8 and Windows Server 2012 cumulative update: November 2012" KB 2770917
+1. Patch all system with update "Windows 8 and Windows Server 2012 cumulative update: November 2012" KB 2770917.
 
 2. Create a GPO and link it to the OU where the computer accounts are located that you want to deploy the custom lock screen image to. Alternatively you can use an existing GPO.
 
-    1. Open the Group Policy Management Console (GPMC)
+    1. Open the Group Policy Management Console (GPMC).
 
-    2. Create and link a GPO to an OU or Locate an existing GPO that you want to use
+    2. Create and link a GPO to an OU or Locate an existing GPO that you want to use.
 
-3. Create and link a GPO to an OU or Locate an existing GPO that you want to use
+3. Create and link a GPO to an OU or Locate an existing GPO that you want to use.
 
-    1. In GPMC right-click the GPO from step 2b and select edit
+    1. In GPMC right-click the GPO from step 2b and select edit.
 
-    2. Go this path "Computer Configuration\Policies\Administrative Templates\Control Panel\Personalization"
+    2. Go this path "Computer Configuration\Policies\Administrative Templates\Control Panel\Personalization".
 
-    3. Enable the GP "Force a specific default lock screen image"
+    3. Enable the GP "Force a specific default lock screen image".
 
     4. Specify the path to the image file. It's recommended to use a DFS network path to provide redundancy.
 
@@ -73,18 +73,18 @@ Implementation Steps for Domain Based Group Policy
 
 Implementation Steps for Local Group Policy  
 
-1. Patch the system with update "Windows 8 and Windows Server 2012 cumulative update: November 2012" KB 2770917
+1. Patch the system with update "Windows 8 and Windows Server 2012 cumulative update: November 2012" KB 2770917.
 
-2. Edit Local Policy
+2. Edit Local Policy.
 
-    1. Run GPEDIT.MSC  
+    1. Run GPEDIT.MSC.  
 
-    2. Go this path "Computer Configuration\Policies\Administrative Templates\Control Panel\Personalization"
+    2. Go this path "Computer Configuration\Policies\Administrative Templates\Control Panel\Personalization".
 
-    3. Enable the GP "Force a specific default lock screen image"
+    3. Enable the GP "Force a specific default lock screen image".
 
     4. Specify the path to the image file.  
 
-    5. Click OK  
+    5. Click OK.  
 
 3. Policy will be enforced as the next GP background refresh.

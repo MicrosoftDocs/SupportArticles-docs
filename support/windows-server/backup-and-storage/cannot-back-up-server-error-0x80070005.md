@@ -56,8 +56,8 @@ Set a registry key to exclude the files that are mentioned in the event from fil
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\BackupRestore\FilesNotToBackup`  
 
 2. Right-Click **FilesNotToBackup**, point to **New**, and then click **Multi-String Value**.
-3. Type IgnoreNTFS, and then press Enter.
-4. Right-click IgnoreNTFS, and then click Modify.
-5. In the **Value data** box, type \\$Extend\\* /s.
+3. Type *IgnoreNTFS*, and then press Enter.
+4. Right-click **IgnoreNTFS**, and then click **Modify**.
+5. In the **Value data** box, type *\\$Extend\\\* /s*.
 6. Click **OK**, and then close Registry Editor.
 7. Restart the server.

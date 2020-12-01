@@ -84,8 +84,10 @@ You will see any of the following errors/warning when troubleshooting Active Dir
 3. REPADMIN.EXE reports that the last replication attempt has failed with status 8589
 
     `REPADMIN` commands that commonly cite the 8589 status include but are not limited to:
-    - `REPADMIN /SHOWREPL` `REPADMIN /SHOWREPS`
-    - `REPADMIN /REPLSUM` `REPADMIN /SYNCALL`
+    - `REPADMIN /SHOWREPL`
+    - `REPADMIN /SHOWREPS`
+    - `REPADMIN /REPLSUM`
+    - `REPADMIN /SYNCALL`
 
     Repadmin /showrepl returns the following error:
 

@@ -13,7 +13,7 @@ ms.reviewer: henrche, kaushika
 ms.prod-support-area-path: Devices and Drivers
 ms.technology: Deployment
 ---
-# VMware driver installation fails
+# VMware driver installation fails in Windows Server 2008 R2 SP1
 
 This article helps resolve an issue in which you can't install drivers in virtual machines that are hosted on VMware. This issue occurs if you don't select the "Allow service to interact with desktop" checkbox.
 

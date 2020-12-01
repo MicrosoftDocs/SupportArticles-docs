@@ -45,11 +45,7 @@ When network DTC access is disabled, clients that try to gain access to DTC on t
 
 If you are running Windows Server 2003 Service Pack 1 (SP1), you must follow these additional steps:  
 
-1. Click  
-    **Start**, click  
-    **Run**, type  
-    comexp.msc, and then click  
-    **OK** to open Component Services.  
+1. Click **Start**, click **Run**, type *comexp.msc*, and then click **OK** to open Component Services.  
 2. Expand **Component Services**, expand **Computers**, right-click **My Computer**, and then click **Properties**.
 3. On the **MSDTC** tab, click **Security Configuration** under **Transaction Configuration**, click to select the **Network DTC Access** check box under **Security Settings**, and then click to select the following check boxes under **Transaction Manager Communication**:
    - **Allow Inbound**  

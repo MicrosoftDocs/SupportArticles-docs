@@ -22,7 +22,8 @@ _Original KB number:_ &nbsp;929829
 
 ## Symptoms
 
-When you run the Slmgr.vbs script on a Key Management Server (KMS) computer, you verify that the number of client computers does not increase when you add new Windows-based client computers to the network. Additionally, you may see the following event in the Key Management Service event log for each new Windows-based client computer that you add to the network.  
+When you run the Slmgr.vbs script on a Key Management Server (KMS) computer, you verify that the number of client computers does not increase when you add new Windows-based client computers to the network. Additionally, you may see the following event in the Key Management Service event log for each new Windows-based client computer that you add to the network.
+  
 When you run the Slmgr.vbs script together with the `-dli` argument, the client computer count information does not increase as expected. In the following event that is logged in the Key Management Service event log, the current count remains the same.
 
 ## Cause
