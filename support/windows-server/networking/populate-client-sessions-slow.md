@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2454039
 
 ## Symptoms
 
-When trying to view the information about client sessions by clicking Shared Folders -> Sessions in the Computer Management console, it may take a long time to populate the information, and the console may stop responding or appear to hang.
+When trying to view the information about client sessions by clicking **Shared Folders** > **Sessions** in the Computer Management console, it may take a long time to populate the information, and the console may stop responding or appear to hang.
 
 ## Cause
 
@@ -32,12 +32,12 @@ Computer Management will try to resolve the client IP address to user-friendly N
 
 1. Disable NetBIOS over TCP/IP:
 
-    1. Run ncpa.cpl
-    2. Right-click the NIC 
-    3. select properties
-    4. click TCPIPV4
-    5. click advanced
-    6. click WINS
-    7. choose Disable Netbios over TCPIP
+    1. Run ncpa.cpl.
+    2. Right-click the NIC.
+    3. Select properties.
+    4. Click TCPIPV4.
+    5. Click advanced.
+    6. Click WINS.
+    7. Choose Disable Netbios over TCPIP.
 
 2. Configure reverse lookup zone in DNS server. It is useful to computers that are added in domain.

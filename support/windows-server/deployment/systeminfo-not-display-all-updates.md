@@ -28,7 +28,7 @@ When using SystemInfo.exe in Windows Server 2003 to display a list of installed 
 
 There is a buffer size limitation that does not allow all system update hotfixes to be displayed.
 
-## Resolution
+## Workaround
 
 Microsoft is currently aware of this issue. To work around this issue, run the following command at a Windows command prompt:
 

@@ -1,5 +1,5 @@
 ---
-title: What to do when a Windows SMB server is unresponsive
+title: Windows SMB server is unresponsive
 description: Provides recommendations from Escalation Engineering about what to do when a Windows SMB server is unresponsive
 ms.date: 09/21/2020
 author: Deland-Han
@@ -13,7 +13,7 @@ ms.reviewer: kaushika, tatec, amanjain
 ms.prod-support-area-path: TCP/IP communications 
 ms.technology: Networking
 ---
-# What to do when a Windows SMB server is unresponsive
+# Windows SMB server is unresponsive
 
 This article explains why a Windows Server Message Block (SMB) server becomes unresponsive and how to troubleshoot the problem.  
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 3061415
 
 ## Symptoms
 
-When \\\ **servername** \share does not work, what do you do next?
+When \\\ **servername**\share does not work, what do you do next?
 
 ## Cause
 
@@ -30,7 +30,7 @@ Incoming SMB traffic is handled in the kernel through the Srv2.sys driver (smb2)
 
 Because obtaining a memory dump of the box is an extreme troubleshooting step, you must make sure that you've completed all other appropriate troubleshooting steps first. The following flow chart explains what you must do before dumping the box.
 
-![Troubleshooting flow chart ](./media/smb-server-unresponsive/flow-chart.jpg)
+![Troubleshoot flow chart](./media/smb-server-unresponsive/flow-chart.jpg)
 
 ## Resolution
 
@@ -40,4 +40,4 @@ By examining the memory dump file through the Debugging Tools for Windows (WinDb
 
 For detailed information about how to dump a kernel, see [How to generate a kernel or a complete memory dump file in Windows Server 2008 and Windows Server 2008 R2](https://support.microsoft.com/help/969028).
 
-To test our automated memory.dmp analysis site, which can identify most Microsoft hotfixes for crashes and Stop errors, go to [https://home.diagnostics.support.microsoft.com/SelfHelp?knowledgebaseArticleFilter=2027760](https://home.diagnostics.support.microsoft.com/selfhelp?knowledgebasearticlefilter=2027760).
+To test our automated memory.dmp analysis site, which can identify most Microsoft hotfixes for crashes and Stop errors, go to [Support Diagnostics](https://home.diagnostics.support.microsoft.com/selfhelp?knowledgebasearticlefilter=2027760).

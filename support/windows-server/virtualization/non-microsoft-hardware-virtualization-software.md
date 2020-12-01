@@ -23,6 +23,7 @@ _Original KB number:_ &nbsp; 944987
 ## Summary
 
 Microsoft has established a joint support relationship for non-Microsoft hardware virtualization software with the following vendors:
+
 - Cisco Systems, Inc.
 - Citrix Systems, Inc.
 - Novell, Inc.

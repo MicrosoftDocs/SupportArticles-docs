@@ -1,5 +1,5 @@
 ---
-title: DirectAccess clients connection error 0x274d 
+title: DirectAccess clients unable to connect over IP-HTTPS
 description: Provides a solution to the error 0x274d that occurs when DirectAccess clients connect to DirectAccess Server by using Internet Protocol over Secure Hypertext Transfer Protocol (IP-HTTPS).
 ms.date: 09/18/2020
 author: Deland-Han
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Configuring and using Backup software
 ms.technology: BackupStorage
 ---
-# DirectAccess clients unable to connect over IPHTTPS error 0x274d
+# DirectAccess clients are unable to connect over IP-HTTPS with error 0x274d or 0x2afc
 
 This article provides a solution to the error 0x274d that occurs when DirectAccess clients connect to DirectAccess Server by using Internet Protocol over Secure Hypertext Transfer Protocol (IP-HTTPS).
 
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 3052855
 
 DirectAccess clients may not be able to connect to DirectAccess Server by using IP-HTTPS connections or resolve the DirectAccess public hostname.
 
-When you run the **netsh interface http show interface** command, the output is as follows:
+When you run the `netsh interface http show interface` command, the output is as follows:
 
 > **Error:** 0x274d or 0x2afc  
 **Translates to** : The requested name is valid, but no data of the requested type was found
@@ -33,9 +33,9 @@ or
 
 > No connection could be made because the target machine actively refused it.
 
-Removing the DirectAccess GPO allows the client to resolve the DirectAccess public hostname
+Removing the DirectAccess GPO allows the client to resolve the DirectAccess public hostname.
 
-Running the command **netsh namespace show policy** on a client will display a policy for the .contoso.com namespace. 
+Running the command `netsh namespace show policy` on a client will display a policy for the .contoso.com namespace.
 
 In this policy the DirectAccess (DNS Servers) entry will be set to the internal IPv6 interface of the DirectAccess server, typically ending with 3333::1.
 
@@ -69,7 +69,8 @@ Interface Status: Failed to connect to IPHTTPs server; Waiting to reconnect.
 WSAECONNREFUSED  
 \# No connection could be made because the target machine actively refused it.
 
-This error is caused by:
+This error is caused by the following causes:
+
 - Inability to resolve the name of the IP-HTTPS server (DirectAccess server) mentioned in the IP-HTTPS interface URL
 - Incorrectly configured Name Resolution Policy Table (NRPT)
 - Client-side Firewall may be blocking the IP-HTTPS connection
@@ -79,7 +80,7 @@ This error is caused by:
 
 To resolve this issue, we must add an entry to the NRPT instructing the client to use its internet DNS to resolve the public hostname of the DirectAcess server. To do this, on the DirectAcess server, open the Remote Access Management Console, under Configuration select DirectAccess and VPN, find the Infrastructure Servers section under Step 3 and click Edit.
 
-In the Infrastructure Server Setup window, select DNS on the left-hand side to view the NRPT settings of the DirectAccess deployment. The last row will show an asterisk (*) on the left-hand side, right-click this row and select new. In the DNS Server Addresses window, enter the public hostname of the DirectAccess server as the DNS suffix (for example, DA.contoso.com), do not attempt to detect or validate the suffix. Instead leave the rest of the information blank and click apply.
+In the Infrastructure Server Setup window, select DNS on the left-hand side to view the NRPT settings of the DirectAccess deployment. The last row will show an asterisk (*) on the left-hand side, right-click this row and select new. In the DNS Server Addresses window, enter the public hostname of the DirectAccess server as the DNS suffix (for example, DA.contoso.com), don't attempt to detect or validate the suffix. Instead leave the rest of the information blank and click apply.
 
 This will create an entry with a Name Suffix and no DNS Server Address, telling the clients to use their own internet DNS to resolve that name. Finish the Infrastructure setup process and update the GPO by clicking Finish in the Remote Access Setup window. Apply the new GPO to the clients and attempt to resolve the hostname of the DirectAccess server.
 
