@@ -2,6 +2,14 @@
 
 
 
+## Week of November 23, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/24/2020 | [Configure Proofpoint Email Protection with Exchange Online](/exchange/troubleshoot/email-delivery/configure-proofpoint-with-exchange) | modified |
+
+
 ## Week of November 16, 2020
 
 
@@ -641,13 +649,3 @@
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-
-
-## Week of October 19, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/19/2020 | [Outlook can't access public folders hosted on legacy Exchange servers](/exchange/troubleshoot/client-connectivity/outlook-cannot-access-legacy-public-folders) | modified |
-| 10/21/2020 | [Unable to access shared mailboxes through POP/IMAP](/exchange/troubleshoot/client-connectivity/accessing-shared-mailboxes-fails) | modified |
-| 10/21/2020 | [Migration batch fails with error message "No active public folder mailboxes were found" at Complete-MigrationBatch command](/exchange/troubleshoot/public-folders/migrationbatch-fails-no-public-folder-mailboxes) | modified |

@@ -2,6 +2,13 @@
 
 
 
+## Week of November 23, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+
+
 ## Week of November 16, 2020
 
 
@@ -43,14 +50,3 @@
 |------|------------|--------|
 | 10/28/2020 | [PowerPivot for SharePoint 2016 scheduled data refresh fails with the error The operation has timed out](/sharepoint/troubleshoot/administration/powerpivot-scheduled-data-refresh-fails) | modified |
 | 10/29/2020 | Everyone except external users group is re-added to Visitors or Members group on Office 365 public group website | removed |
-
-
-## Week of October 19, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/19/2020 | [Error message when you try to modify or to delete an alternate access mapping in Windows SharePoint Services 3.0](/sharepoint/troubleshoot/security/update-conflict-when-modify-or-delete-alternate-access-mapping) | modified |
-| 10/21/2020 | [Everyone except external users group is removed on Office 365](/sharepoint/troubleshoot/sharing-and-permissions/everyone-except-external-user-removed) | modified |
-| 10/22/2020 | [Documents aren't displayed in web browser when you're using TLS 1.2](/sharepoint/troubleshoot/lists-and-libraries/documents-not-displayed-in-web-browser-when-using-tls-1.2) | modified |
-| 10/22/2020 | [Listing some issues for OneDrive for Business](/sharepoint/troubleshoot/onedrive-welcome) | modified |

@@ -2,6 +2,18 @@
 
 
 
+## Week of November 23, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/23/2020 | [Can't open a file (.xslx, .docx, .pptx) in Excel 2010, Word 2010, or PowerPoint 2010](/office/troubleshoot/office-suite-issues/error-do-you-want-download-converter) | modified |
+| 11/23/2020 | [Office Online Server and Office Web Apps Server limitations and features with Information Rights Management (IRM)](/office/troubleshoot/administration/office-online-limitations-and-features-with-information-rights-management) | modified |
+| 11/24/2020 | [Can't open a file (.xslx, .docx, .pptx) in Excel 2010, Word 2010, or PowerPoint 2010](/office/troubleshoot/office-suite-issues/error-do-you-want-download-converter) | modified |
+| 11/24/2020 | [Error (Do you want to download the converter) in Office](/office/troubleshoot/office-suite-issues/error-do-you-want-download-converter) | modified |
+| 11/26/2020 | [Guests have no access to assigned Planner tasks](/office/troubleshoot/planner/guests-cannot-comment-assigned-tasks) | modified |
+
+
 ## Week of November 16, 2020
 
 
@@ -103,12 +115,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 10/29/2020 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
-
-
-## Week of October 19, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/21/2020 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
-| 10/21/2020 | Excel, Word or PowerPoint file does not open because of file associations | removed |
