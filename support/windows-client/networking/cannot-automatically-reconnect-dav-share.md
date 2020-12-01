@@ -41,7 +41,8 @@ Check the spelling of the name. Otherwise, there might be a problem with your ne
 Error code: 0x80070035  
 The network path was not found.  
 
- > [!Note] Error code 0x80070035 maps to ERROR_BAD_NETPATH.
+> [!Note]
+> Error code 0x80070035 maps to ERROR_BAD_NETPATH.
 
 ### Error message 2  
 
