@@ -49,7 +49,7 @@ To align a disk partition on a RAID that has a 2,048-sector offset, follow these
 1. At a command prompt, type diskpart, and then press ENTER.
 2. Type the following commands at the DISKPART prompt, and then press ENTER:  
 
-   - list disk  
+   - `list disk`
 
        You receive output that resembles the following:  
        > Disk ### Status Size Free Dyn Gpt  
@@ -66,7 +66,7 @@ To align a disk partition on a RAID that has a 2,048-sector offset, follow these
         Disk 9 Online 17 GB 8 MB \*  
         Disk 10 Online 17 GB 8033 KB  
 
-      The list disk command provides summary information about each disk that is installed on the computer. The disk that has the asterisk (*) mark has the current focus. Only fixed disks and removable disks are listed. Fixed disks include integrated device electronics [IDE] and SCSI disks. Removable disks include 1394 and USB disks.  
+      The `list disk` command provides summary information about each disk that is installed on the computer. The disk that has the asterisk (*) mark has the current focus. Only fixed disks and removable disks are listed. Fixed disks include integrated device electronics [IDE] and SCSI disks. Removable disks include 1394 and USB disks.  
 
    - select disk  
 
