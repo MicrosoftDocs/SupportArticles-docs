@@ -12,13 +12,9 @@ ms.prod: office-perpetual-itpro
 ms.topic: troubleshooting
 ms.author: v-six
 appliesto:
-- Microsoft Office
 - Microsoft Word 2010
 - Microsoft Excel 2010
 - Microsoft PowerPoint 2010
-- Microsoft Word 2007
-- Microsoft Excel 2007
-- Microsoft PowerPoint 2007
 ms.reviewer: jenl
 ---
 # Error message (Do you want to download the converter?) when trying to open a file in Word, Excel, or PowerPoint
