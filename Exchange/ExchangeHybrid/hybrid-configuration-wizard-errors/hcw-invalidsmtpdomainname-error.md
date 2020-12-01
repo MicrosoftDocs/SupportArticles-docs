@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 3132123
 
 ## Problem
 
-When you run the [Office 365 Hybrid Configuration wizard](http://aka.ms/HybridWizard), you receive the following error message when the wizard tries to connect to your on-premises Exchange environment:
+When you run the [Office 365 Hybrid Configuration wizard](https://aka.ms/HybridWizard), you receive the following error message when the wizard tries to connect to your on-premises Exchange environment:
 
 > DataStrings.InvalidSmtpDomainName(domain)
 
