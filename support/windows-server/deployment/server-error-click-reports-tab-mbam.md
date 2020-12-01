@@ -45,28 +45,30 @@ If the DNS isn't able to resolve the local host correctly, you'll see the error 
 3. Open web.config file using notepad.
 4. Modify the following line in the webconfig file:
 
-    \<add key="Microsoft.Mbam.Reports.Url" value="http://servername:portnumber/reports/Pages/ReportViewer.aspx?/Microsoft+
+    > \<add key="Microsoft.Mbam.Reports.Url"  
+     value="http://servername:portnumber/reports/Pages/ReportViewer.aspx?/Microsoft+  
     BitLocker+Administration+and+Monitoring/">\</add>
-    
+
     to
-    
-    \<add key="Microsoft.Mbam.Reports.Url" value="http://servername:portnumber/reports/Pages/Report.aspx?ItemPath=%2fMicrosoft+BitLocker+Administration+and+Monitoring%2f">\</add>
+
+    > \<add key="Microsoft.Mbam.Reports.Url"  
+    value="http://servername:portnumber/reports/Pages/Report.aspx?ItemPath=%2fMicrosoft+BitLocker+Administration+and+Monitoring%2f">\</add>
 
 5. Save the web.config file.
 6. Restart the IIS services on the server.
 
-Now you can view the Reports in MBAM.
+    Now you can view the Reports in MBAM.
 
-![MBAM reports](./media/server-error-click-reports-tab-mbam/mbam-reports.png)
+    ![MBAM reports](./media/server-error-click-reports-tab-mbam/mbam-reports.png)
 
 ## More information
 
 For more information on MBAM, see the following documentation.
 
-[Planning Guide](https://onlinehelp.microsoft.com/mdop/hh285653.aspx) 
+[Planning Guide](https://onlinehelp.microsoft.com/mdop/hh285653.aspx)
 
-[hDeployment Guide](https://onlinehelp.microsoft.com/mdop/hh285644.aspx) 
+[hDeployment Guide](https://onlinehelp.microsoft.com/mdop/hh285644.aspx)
 
-[Operations Guide](https://onlinehelp.microsoft.com/mdop/hh285664.aspx) 
+[Operations Guide](https://onlinehelp.microsoft.com/mdop/hh285664.aspx)
 
 [Troubleshooting MBAM](https://onlinehelp.microsoft.com/mdop/hh352745.aspx)

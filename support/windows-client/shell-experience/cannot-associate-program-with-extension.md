@@ -31,8 +31,9 @@ This may occur if the program you are attempting to associate with is not regist
 ## Resolution
 
 Follow the steps below:
-1. Type "regedit" in the Run line or from an elevated CMD prompt.
-2. Navigate to Computer\HKEY_CLASSES_ROOT\Applications and find your .exe name.
-3. Navigate under its name to shell>open>command.
+
+1. Type *regedit* in the Run line or from an elevated CMD prompt.
+2. Navigate to `Computer\HKEY_CLASSES_ROOT\Applications` and find your .exe name.
+3. Navigate under its name to shell> open> command.
 4. Under Default, make sure the application location points to the actual location of the executable.
 5. Press OK and then try to reassociate the file type as you normally would.

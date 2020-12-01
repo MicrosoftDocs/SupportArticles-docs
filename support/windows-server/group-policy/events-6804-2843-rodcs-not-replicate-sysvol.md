@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-jesits
 ms.prod-support-area-path: Sysvol access or replication issues
 ms.technology: GroupPolicy
 ---
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 3212965
 
 ## Symptoms
 
-One or more read-only domain controllers (RODC) do not replicate inbound the system volume (SYSVOL) shared directory. This issue occurs even though multiple inbound Active Directory connections are listed when Active Directory Sites and Services (Dssite.msc) is pointed at an affected RODC. 
+One or more read-only domain controllers (RODC) do not replicate inbound the system volume (SYSVOL) shared directory. This issue occurs even though multiple inbound Active Directory connections are listed when Active Directory Sites and Services (Dssite.msc) is pointed at an affected RODC.
 
 When this issue occurs, the following entry is logged in the DFSR event log:
 
@@ -42,7 +42,7 @@ Event ID: 2843
 Task Category: Knowledge Consistency Checker  
 Level: Error  
 Description:  
-The Knowledge Consistency Checker was unable to locate a replication connection for the read-only local directory service. A replication connection with the following option must exist in the forest for correct FRS system behavior. 
+The Knowledge Consistency Checker was unable to locate a replication connection for the read-only local directory service. A replication connection with the following option must exist in the forest for correct FRS system behavior.
 >
 > Additional Data  
 Option: 64  
@@ -57,7 +57,6 @@ When this issue occurs, new RODCs that are promoted work correctly. Also, demoti
 ## Cause
 
 This issue occurs because an administrator has deleted the automatically generated "RODC Connection (FRS)" objects for these affected RODCs. This action may have been done for one of the following reasons:
-
 
 - A customer notices that the connections are named "FRS" and, therefore, believes that the connections are no longer required because DFSR is replicating SYSVOL.
 - The administrator created manual connection objects per local processes.RODCs require a special flag on their connection objects in order for SYSVOL replication to work. If the flag is not present, SYSVOL does not work for FRS or DFSR.
@@ -97,4 +96,4 @@ The NTDSCONN_OPT_RODC_TOPOLOGY bit in the options attribute indicates whether th
 
 ## References
 
-[7.1.1.2.2.1.2.1.3 RODC NTFRS Connection Object](https://msdn.microsoft.com/library/dd340911%28prot.10%29.aspx)
+[7.1.1.2.2.1.2.1.3 RODC NTFRS Connection Object](https://docs.microsoft.com/openspecs/windows_protocols/ms-adts/6c846dd8-cbaf-43bb-8354-44cfd2195c4c)

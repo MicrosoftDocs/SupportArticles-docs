@@ -30,20 +30,20 @@ Consider the following scenario:
 In this scenario, you may end up with a disk partition that doesn't have a drive letter assigned to it. The partition is unusable and you may receive errors when attempting to format the partition. You can successfully delete the partition, but you receive errors when trying to recreate a new partition in its place.
 
 For example:
+
 - In Disk Management, if you try to format the partition, you may receive the error message: "An unexpected error has occurred. Check the System Event Log for more information on the error. Close the Disk Management console, then restart Disk Management or restart the computer."
 - In Disk Management, you can successfully choose "Delete Volume." However, if you then try to recreate it, by choosing "New Simple Volume," Disk Management hangs for a long time. After several minutes, you receive the error message: "The operation failed to complete because the Disk Management console view isn't up to date. Refresh the view by using the refresh task. If the problem persists close the Disk Management console, then restart Disk Management or restart the computer."
 
-The disk partition gets successfully recreated, but the volume never gets formatted, or associated with a drive letter.
+    The disk partition gets successfully recreated, but the volume never gets formatted, or associated with a drive letter.
 
-- In DiskPart, you can use the "select partition" command to select the problematic partition, and the "delete partition" command to successfully delete it. However, if you then use a command such as "create partition primary" to recreate the partition, DiskPart hangs for a long time. After several minutes, you receive the following error message:
+- In DiskPart, you can use the `select partition` command to select the problematic partition, and the `delete partition` command to successfully delete it. However, if you then use a command such as "create partition primary" to recreate the partition, DiskPart hangs for a long time. After several minutes, you receive the following error message:
 
-> Virtual Disk Service error:  
-The operation timed out.
-> 
-> DiskPart has referenced an object which is not up-to-date.  
-Refresh the object by using the RESCAN command.  
-If the problem persists exit DiskPart, then restart DiskPart or restart the computer.  
-
+    > Virtual Disk Service error:  
+    The operation timed out.
+    >
+    > DiskPart has referenced an object which is not up-to-date.  
+    Refresh the object by using the RESCAN command.  
+    If the problem persists exit DiskPart, then restart DiskPart or restart the computer.  
 
 ## Cause
 

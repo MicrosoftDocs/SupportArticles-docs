@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-dgit
 ms.prod-support-area-path: Servicing 
 ms.technology: Deployment
 ---
@@ -24,10 +24,6 @@ _Original KB number:_ &nbsp; 823398
 
 This article describes how to install the Microsoft Product Support Reporting Tool for Microsoft Software Update Services. The Microsoft Product Support Reporting Tool (also known as MPS_REPORTS) is a compressed software package that contains scripts and utilities that you can use to capture critical system, diagnostic, and configuration information about your computer. This tool includes the Software Update Services edition that is described in this article and other editions that are designed for specific support issues.
 
-For additional information about the Microsoft Product Support Reporting Tool, including information about the system requirements to run the tool, the specialty editions of the tool, and where to obtain the tool, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[818742](https://support.microsoft.com/help/818742) Overview of the Microsoft Configuration Capture Utility (MPS_REPORTS)  
-
 ## More information
 
 You can use the Microsoft Product Support Reporting Tool for Software Update Services to gather detailed information about the current configuration of a computer. The information you collect helps a Microsoft Support Professional isolate the problem.
@@ -37,6 +33,7 @@ The Microsoft Product Support Reporting Tool for Software Update Services works 
 ### How to Use the Microsoft Product Support Reporting Tool for Software Update Services
 
 To use the Microsoft Product Support Reporting Tool for Software Update Services, follow these steps:
+
 1. Download Mpsrpt_sus.exe.
 2. Double-click the copy of Mpsrpt_sus.exe that you saved to your computer, and then click **Yes** to accept the End User License Agreement (EULA).
 

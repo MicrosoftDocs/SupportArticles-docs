@@ -15,7 +15,7 @@ ms.technology: Deployment
 ---
 # Package Manager can install only the first package when you extract two or more packages to the same folder in Windows Vista
 
-This article describes a problem that occurs because Package Manager can't manage two or more packages in the same sandbox. 
+This article describes a problem that occurs because Package Manager can't manage two or more packages in the same sandbox.
 
 _Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;932224
@@ -25,18 +25,20 @@ _Original KB number:_ &nbsp;932224
 In Windows Vista, the Package Manager tool can install only the first package when you extract two or more packages to the same folder.
 
 For example, consider the following scenario:
+
 - On a computer that is running Windows Vista, you create a C:\Temp folder.
 - You download the following hotfix packages to this folder:
-    - Windows6.0-KB929761-x86.msu
-    - Windows6.0-KB932590-x86.msu
-    
+
+  - Windows6.0-KB929761-x86.msu
+  - Windows6.0-KB932590-x86.msu
+
     These hotfix packages are for hotfix 929761 and hotfix 932590.
 - You run the following commands to expand the hotfix packages:
 
     ```console
     c:\temp>expand c:\temp\Windows6.0-KB929761-x86.msu -F:Windows6.0-KB929761-x86.cab c:\temp
 
-    c:\temp>expand c:\temp\Windows6.0-KB932590-x86.msu -F:Windows6.0-KB932590-x86.cab c:\temp 
+    c:\temp>expand c:\temp\Windows6.0-KB932590-x86.msu -F:Windows6.0-KB932590-x86.cab c:\temp
     ```
 
 - You run the following commands to install the packages:
@@ -44,7 +46,7 @@ For example, consider the following scenario:
     ```console
     start /w Pkgmgr /ip /m:c:\temp\Windows6.0-KB929761-x86.cab
 
-    start /w Pkgmgr /ip /m:c:\temp\Windows6.0-KB932590-x86.cab 
+    start /w Pkgmgr /ip /m:c:\temp\Windows6.0-KB932590-x86.cab
     ```
 
 In this scenario, Package Manager installs only the package for hotfix 929761.
@@ -77,14 +79,14 @@ Mkdir c:\temp\sandbox2
 
 Start /w pkgmgr /ip /m:c:\temp\ **CabFile** /s:c:\temp\sandbox1
 
-Start /w pkgmgr /ip /m:c:\temp\ **CabFile** /s:c:\temp\sandbox2 
+Start /w pkgmgr /ip /m:c:\temp\ **CabFile** /s:c:\temp\sandbox2
 ```
 
 In these commands, **CabFile** represents the .cab file for the hotfix package.
 
 Method 2:
 
-Another workaround is to use DISM to service Windows Vista SP1 and Windows Server 2008 offline images. 
+Another workaround is to use DISM to service Windows Vista SP1 and Windows Server 2008 offline images.
 
 Considerations of using DISM with Windows Server 2008/Vista SP1 Images:  
 
@@ -93,18 +95,17 @@ Considerations of using DISM with Windows Server 2008/Vista SP1 Images:
 - Only offline scenarios are supported
 - DISM is pre-installed with Windows 7 and Windows Server 2008 R2, and is included in the Windows Automated Installation Kit for Windows 7. The Windows Automated Installation Kit can be installed on Windows Vista and Windows 2008.
 
-*Editor note: download link for Win7 waik: [The Windows Automated Installation Kit (AIK) for Windows 7](https://www.microsoft.com/download/details.aspx?id=5753)*
-
 Add the Packages to an Offline Image by Using DISM
 
 1. At an elevated command prompt, navigate to the OPK servicing folder, and type the following command to retrieve the name or index number for the image you want to modify.
-    
+
     ```console
     Dism /Get-WIMInfo /WimFile:C:\test\images\install.wim
     ```
 
-    NOTE: An index or name value is required for most operations that specify a Windows imaging (WIM) file.
-    
+    > [!NOTE]
+    > An index or name value is required for most operations that specify a Windows imaging (WIM) file.
+
 2. Type the following command to mount the offline Windows image.
 
     ```console
@@ -116,7 +117,9 @@ Add the Packages to an Offline Image by Using DISM
     ```console
     Dism /Image:C:\test\offline /Add-Package /PackagePath:C:\packages\package1.cab /PackagePath:C:\packages\package2.cab
     ```
-    Note: .cab is extracted from .msu file.
+
+    > [!NOTE]
+    > .cab is extracted from .msu file.
 
 4. At a command prompt, type the following command to commit the changes and unmount the image.
 
@@ -124,8 +127,6 @@ Add the Packages to an Offline Image by Using DISM
     Dism /Unmount-WIM /MountDir:C:\test\offline /Commit
     ```
 
-    *Editor note: The above was taken from [Add or Remove Packages Offline](/previous-versions/windows/it-pro/windows-7/dd744559(v=ws.10)?redirectedfrom=MSDN)*
-    
 ## Status
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
