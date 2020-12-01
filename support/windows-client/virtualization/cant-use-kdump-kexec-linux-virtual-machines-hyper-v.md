@@ -1,5 +1,5 @@
 ---
-title: Can't use kdump or kexec for Linux virtual machines on Hyper-V
+title: Can't use kdump or kexec for Linux virtual machines
 description: Provides a resolution for the issue that kdump or kexec cannot be used for Linux virtual machines on Hyper-V.
 ms.date: 09/21/2020
 author: Deland-Han
@@ -67,7 +67,7 @@ To change the contents of /etc/kdump.conf, follow these steps:
 
    > path /var/crash
 
-2. Black list the Linux Integration Services drivers in /etc/kdump.conf, which prevents the drivers from loading in to the kexec kernel. To do so, run the following command:
+2. Block list the Linux Integration Services drivers in /etc/kdump.conf, which prevents the drivers from loading in to the kexec kernel. To do so, run the following command:
 
     > blacklist hv_vmbus hv_storvsc hv_utils hv_netvsc hid-hyperv
 
@@ -108,7 +108,7 @@ To change the contents of /etc/kdump.conf, follow these steps:
 
    > extra_modules ata_piix sr_mod sd_mod
 
-3. Black list Linux Integration Services drivers in etc/kdump.conf. This prevents the drivers from loading into the kexec kernel:
+3. Block list Linux Integration Services drivers in etc/kdump.conf. This prevents the drivers from loading into the kexec kernel:
 
    > blacklist hv_vmbus hv_storvsc hv_utils hv_netvsc hid-hyperv
 
