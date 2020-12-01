@@ -332,7 +332,7 @@
     - name: Remote mailbox isn't moved when the move shows as Completed
       href: ../move-or-migrate-mailboxes/remote-mailbox-not-moved-when-move-shows-completed.md
     - name: Resource ‎CiAgeOfLastNotification‎(System)‎ is unhealthy error
-      href: ../move-or-migrate-mailboxes/resource-ciageoflastnotification-system-is-unhealthy-error.md
+      href: ../move-or-migrate-mailboxes/resource-ciageoflastnotification-system-is-unhealthy.md
     - name: Server name doesn't update in a new region
       href: ../move-or-migrate-mailboxes/server-name-not-update-after-moved-new-region.md
     - name: Target mailbox unlock operation was not replicated error
