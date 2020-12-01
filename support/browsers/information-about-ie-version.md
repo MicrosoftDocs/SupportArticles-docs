@@ -70,13 +70,13 @@ Every update has an associated Knowledge base article (for example, [KB4586768](
 
 For example, if the first update for Internet Explorer 9 has been installed, the **About Internet Explorer** dialog box will have a link to **Update versions: 9.0.1 ([KB2530548](https://support.microsoft.com/help/2530548))**.
 
-:::image type="content" source="media/information-about-ie-version/About-Internet-Explorer-3.png" alt-text="screenshot of the About Internet Explorer page" border="false":::
+:::image type="content" source="media/information-about-ie-version/About-Internet-Explorer-3.png" alt-text="screenshot of the About Internet Explorer page for Internet Explorer 9" border="false":::
 
 ## Changes to the About Internet Explorer dialog box in Internet Explorer 11 on Windows 10 version 1809 and later
 
 You can open the **About Internet Explorer** dialog box by clicking **Help** and then clicking **About Internet Explorer**. Or, press Alt + X and then press A.
 
-:::image type="content" source="media/information-about-ie-version/About-Internet-Explorer-2.png" alt-text="screenshot of the About Internet Explorer page" border="false":::
+:::image type="content" source="media/information-about-ie-version/About-Internet-Explorer-2.png" alt-text="screenshot of the About Internet Explorer page in Windows 10" border="false":::
 
 On Windows 10 version 1809 and later, the About Dialog has been updated to use a more modern dialog which reflects the latest installed Operating System updates to provide better accuracy. The updated dialog will reflect the same version information as seen in winver.exe. Update Version is no longer used.
 
