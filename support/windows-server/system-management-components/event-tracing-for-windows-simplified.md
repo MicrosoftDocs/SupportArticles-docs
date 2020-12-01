@@ -17,8 +17,8 @@ ms.technology: SysManagementComponents
 
 This article describes simplified Event Tracing for Windows (ETW).
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
-_Original KB number:_ &nbsp; 2593157
+_Original product version:_ &nbsp;Windows Server 2008 R2 Service Pack 1  
+_Original KB number:_ &nbsp;2593157
 
 ## Summary
 
@@ -26,7 +26,7 @@ ETW was first introduced in Windows 2000. It serves the purpose of providing com
 
 *A tracing mechanism for events raised by both user-mode applications and kernel-mode device drivers. Additionally, ETW gives you the ability to enable and disable logging dynamically, making it easy to perform detailed tracing in production environments without requiring reboots or application restarts. This allows large-scale server applications to write events with minimum disturbance*.
 
-As a quick overview: an *event provider*  writes events to an ETW session (it can be any user-mode application, managed application, driver etc). When events are written, ETW adds more information about the time it took place, process, and thread ID that generated it, processor number, and CPU usage data of the logging thread. This info is used by the *event consumers;*  application that reads log files or listen to a session for real-time events and processes them.
+As a quick overview: an *event provider*  writes events to an ETW session (it can be any user-mode application, managed application, driver etc.). When events are written, ETW adds more information about the time it took place, process, and thread ID that generated it, processor number, and CPU usage data of the logging thread. This info is used by the *event consumers;*  application that reads log files or listen to a session for real-time events and processes them.
 
 A sample output from the *logman query providers* command:
 
@@ -80,7 +80,7 @@ Save the above mentioned script as a batch file (.bat) and run it with elevated 
 > [!NOTE]
 > This script can be modified to generate traces for any provider depending on the need. You can get the provider name from the logman query providers command as mentioned above.You may replace the highlighted field with any *event provider*, and it will generate an issue-specific trace within minutes.
 
-In order to parse the resultant .etl trace, use the built-in tracerpt.exe utility to generate an .evtx file that can be used for further interpretation. 
+In order to parse the resultant .etl trace, use the built-in tracerpt.exe utility to generate an .evtx file that can be used for further interpretation.  
 
 An example of this command is:
 

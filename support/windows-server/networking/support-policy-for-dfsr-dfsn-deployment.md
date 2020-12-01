@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, luche
 ms.prod-support-area-path: DFSR
 ms.technology: Networking
 ---
@@ -17,12 +17,13 @@ ms.technology: Networking
 
 This article describes a Distributed File System Replication (DFS-R) and Distributed File System Namespace (DFS-N) deployment scenario that Microsoft does not support.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 2533009
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;2533009
 
 ## Unsupported scenario
 
-When you deploy DFS-R and DFS-N together with user home folders or with roaming user profiles, the following scenario is not supported by Microsoft:
+When you deploy DFS-R and DFS-N together with user home folders or with roaming user profiles, the following scenario is not supported by Microsoft:  
+
 - You deploy a single file server for each branch office. User home folders and roaming user profiles of users in the branch office are stored on the branch office file server.
 - You use DFS-R over WAN links from multiple branch office file servers to a central hub server for centralized backup. You configure the hub server with read-only replicated folders or read/write replicated folders.
 - You configure a DFS namespace to create a unified namespace.
@@ -34,7 +35,8 @@ When you deploy DFS-R and DFS-N together with user home folders or with roaming 
 
 ## Technical reasons that Microsoft does not support the scenario
 
-We do not support the deployment scenario for the following reasons:
+We do not support the deployment scenario for the following reasons:  
+
 - User home folders or user profiles that are replicated by using DFS-R between the branch office file servers and the central file server may not be up to date. The issue may occur for one of the following reasons:
   - Large replication backlogs
   - Heavy system load
@@ -47,7 +49,8 @@ We do not support the deployment scenario for the following reasons:
 
 ## Potential data consistency or data staleness issues that may occur in the unsupported scenario
 
-If the replicated folder of the central file server is a read/write replica, one of the following issues may occur:
+If the replicated folder of the central file server is a read/write replica, one of the following issues may occur:  
+
 - Roaming user profiles may be corrupted because all the changes that were made by the users during their last logon may not have been replicated to the central file server. Therefore, the users may change a stale or an incomplete copy of the roaming profile during their next logon. This may cause user profile corruption.
 - A user may experience data loss or data corruption because the data on the central file server may be stale or out-of-sync with the data on the branch office file server. The user data becomes stale because the latest modification of the user data is not yet replicated.
 - When a user edits a stale copy of the user data on the central file server, the data on the central file server will overwrite the fresher data on the branch office file server. This issue occurs because DFS-R is a multi-master replication engine that uses a conflict-resolution heuristic of last writer wins for files that are in conflict. If the replicated folder of the central file server is a read-only replica, one of the following issues may occur:
