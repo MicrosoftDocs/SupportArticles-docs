@@ -36,7 +36,6 @@ appliesto:
 - PowerPoint 2013
 - Publisher 2013
 ---
-
 # (This feature has been disabled by your administrator) error in Microsoft Office
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
@@ -53,7 +52,7 @@ The actions that trigger this error message may include the following:
 - On the **File** menu, you click **Share**, and then you click **Present Online**.
 - On Microsoft SharePoint Server or in OneDrive for Business, you click **Sync Now**.
 
-In Office 2013, Office 2016, and Office 2019, this error affects connected experience. In Office 365 ProPlus, this error affects Office licensing.
+In Office 2013, Office 2016, and Office 2019, this error affects connected experience. In Office 365 ProPlus, this error affects Office licensing and connected experience.
 
 ## Cause
 
@@ -138,6 +137,4 @@ The `SignInOptions` setting controls whether users can provide credentials to Of
 - 3 = Users can't sign in by using either ID (see the note below)
 
 > [!NOTE]
->
-> - We don't recommend using options **1** and **3** for Office 365 ProPlus. Either of these options will block sign-ins that use work accounts or Azure Active Directory (AAD) accounts and users won't be able to access Office clients.
-> - Blocking sign-in access by setting the `SignInOptions` value to **1** or **3** will affect Office 365 ProPlus activation. Based on the [recent license improvements](https://techcommunity.microsoft.com/t5/office-365-blog/office-365-client-licensing-and-activation-improvements/ba-p/763694), users still have to sign in to activate Office on their devices.
+> Based on the [recent license improvements](https://techcommunity.microsoft.com/t5/office-365-blog/office-365-client-licensing-and-activation-improvements/ba-p/763694), users are required to sign in to activate Office on their devices. We don't recommend using options **1** and **3** for `SignInOptions` in Office 365 ProPlus. Either of these options will block sign-ins that use work accounts or Azure Active Directory (AAD) accounts and users won't be able to access Office clients.
