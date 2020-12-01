@@ -15,7 +15,7 @@ search.appverid:
 - SPO160
 - MET150
 ms.assetid: 
-description: 'Describe a resolution to an "Access Denied due to organizational policies" error in SharePoint and OneDrive'
+description: Describe a resolution to an (Access Denied due to organizational policies) error in SharePoint and OneDrive
 appliesto:
 - SharePoint Online
 - OneDrive for Business
