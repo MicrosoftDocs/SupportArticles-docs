@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, arrenc
 ms.prod-support-area-path: User profiles
 ms.technology: UserProfilesAndLogon
 ---
@@ -17,8 +17,8 @@ ms.technology: UserProfilesAndLogon
 
 This article provides help to solve an issue where profile loading fails when the ntuser.dat or usrclass.dat file is defined as read-only, or the profile user lacks the appropriate permissions for these two .dat files.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 3048895
+_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp;3048895
 
 ## Symptoms  
 
@@ -26,8 +26,8 @@ After you install the update in [Vulnerability in Windows User Profile service c
 
 - Profiles don't load when users log on to a computer for the first time. Or, you log on to a computer where policy then deletes the cached profile after a date interval when you log off.
 
-> [!NOTE]
-> Logons that use mandatory user profiles or Virtual Desktop Infrastructure (VDI) may also be affected.
+    > [!NOTE]
+    > Logons that use mandatory user profiles or Virtual Desktop Infrastructure (VDI) may also be affected.
 
 - Profiles don't load when users log on by using cached user profiles.
 - Services don't start because of profile load failures. Affected services include but aren't limited to the following:
@@ -49,18 +49,19 @@ Update 3021674 adds checks for access to the Ntuser.dat and the Usrclass.dat fil
 
 ## Resolution
 
-To resolve this issue, follow these steps:
+To resolve this issue, follow these steps:  
+
 1. Check whether the READ ONLY flag is set on the NTUSER.DAT or USERCLASS.DAT file for the profile that fails to load.
 
-New user profiles are derived from C:\users\default\ during first-time account logons. If profiles fail to load with signatures that match those that are described in the "Symptoms" section, check whether the Read-Only bit is enabled on the NTUSER.DAT and USRCLASS.DAT files in the profile directory for the users or service accounts in question.
+    New user profiles are derived from C:\users\default\ during first-time account logons. If profiles fail to load with signatures that match those that are described in the "Symptoms" section, check whether the Read-Only bit is enabled on the NTUSER.DAT and USRCLASS.DAT files in the profile directory for the users or service accounts in question.
 
-NTUSER.DAT in Windows Vista and later versions of Windows is located in C:\users\default\ntuser.dat. Earlier operating systems have other paths, such as C:\Documents and Settings\\\<username>\ntuser.dat.
+    NTUSER.DAT in Windows Vista and later versions of Windows is located in C:\users\default\ntuser.dat. Earlier operating systems have other paths, such as C:\Documents and Settings\\\<username>\ntuser.dat.
 
-The USRCLASS.DAT file is typically located along a path like C:\Documents and Settings\< **user_name** >\Local Settings\Application Data\Microsoft\Windows\UsrClass.dat or C:\Users\< **user_name** >\AppData\Local\Microsoft\Windows.
+    The USRCLASS.DAT file is typically located along a path like C:\Documents and Settings\< **user_name** >\Local Settings\Application Data\Microsoft\Windows\UsrClass.dat or C:\Users\< **user_name** >\AppData\Local\Microsoft\Windows.
 
-In Windows Explorer, right-click the NTUSER.DAT or USRCLASS file for the relevant default user or cached user profile. The **Read-only** check box should be cleared. It this check box is selected, it will cause profile load failures.
+    In Windows Explorer, right-click the NTUSER.DAT or USRCLASS file for the relevant default user or cached user profile. The **Read-only** check box should be cleared. It this check box is selected, it will cause profile load failures.
 
-![Ntuser.dat properties](./media/desktop-location-unavailable/clear-read-only--in-ntuser-properties.jpg)
+    ![Ntuser.dat properties](./media/desktop-location-unavailable/clear-read-only--in-ntuser-properties.jpg)
 
 2. Check the NTFS File System permissions setting on the NTUSER.DAT or USERCLASS.DAT file in the cached profile directory that fails to load.
 
@@ -69,8 +70,6 @@ In the following screenshot, the test user, CONTOSO/testUser, has full control o
 |NTFS File System ACLS on DAT files|Advanced NTFS File System ACLS on DAT files|
 |---|---|
 |![UsrClass.dat Properties](./media/desktop-location-unavailable/ntfs-file-system-permissions-on-ntuser.png)<br/>|![NTFS file system](./media/desktop-location-unavailable/ntfs-file-system-permissions-on-usrclass.png)<br/>|
-
-
 
 ## Status
 
@@ -93,7 +92,7 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 
 ProMon detailsThe following message is displayed in Process Monitor:
 
-**Desired Access: Generic Read/Write, Disposition: Open, Options: Synchronous IO Non-Alert, Non-Directory File, Attributes: H, ShareMode: Read, Write, AllocationSize: n/a, Impersonating: \<SID>**  
+> Desired Access: Generic Read/Write, Disposition: Open, Options: Synchronous IO Non-Alert, Non-Directory File, Attributes: H, ShareMode: Read, Write, AllocationSize: n/a, Impersonating: \<SID>  
 
 The following screenshot shows the Process Monitor details:
 

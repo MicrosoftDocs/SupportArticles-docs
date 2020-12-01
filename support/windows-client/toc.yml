@@ -954,6 +954,8 @@
     items:
     - name: Can't authenticate because of an incorrect PIV smart card driver update
       href: ./windows-security/cannot-authenticate-incorrect-piv-smart-card-driver-update.md
+    - name: 0x6 ERROR_INVALID_HANDLE error when a multithreaded application accesses a smart card
+      href: ./windows-security/0x6-error-invalid-handle-multithreaded-application.md
   - name: TPM
     items:
     - name: Events 14 and 17 for TPM command failure or non-recoverable error

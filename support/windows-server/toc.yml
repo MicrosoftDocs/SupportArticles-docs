@@ -1291,7 +1291,7 @@
     - name: DFS Namespaces service and its configuration data
       href: ./networking/dfs-namespaces-service-configuration-data.md
     - name: DNS CNAME alias fails to connect a SMB file server share
-      href: ./networking/dns-chame-alias-cannot-access-smb-file-server-share.md
+      href: ./networking/dns-cname-alias-cannot-access-smb-file-server-share.md
     - name: Error messages on SMB connections
       href: ./networking/error-messages-smb-connections.md
     - name: Event 1 about SMB witness client initialization

@@ -17,12 +17,12 @@ ms.technology: Performance
 
 This article provides a workaround for an issue where the system experiences CPU spike for 1-2 minutes when a 64-bit application runs in the 64-bit version of Windows.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp; 2723033
+_Original product version:_ &nbsp;Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp;2723033
 
 ## Symptoms
 
-When a 64-bit application compiled with `/LARGEADDRESSAWARE:NO` option is running in the 64-bit versions of Windows Vista or in the 64-bit versions of Windows 7, the system may experience CPU spike for 1-2 minutes and this goes on in-definitely. In this situation, the Task Manager shows the svchost.exe process hosting the SysMain(SuperFetch) service is consuming the CPU utilization.
+When a 64-bit application compiled with /LARGEADDRESSAWARE:NO option is running in the 64-bit versions of Windows Vista or in the 64-bit versions of Windows 7, the system may experience CPU spike for 1-2 minutes and this goes on in-definitely. In this situation, the Task Manager shows the svchost.exe process hosting the SysMain(SuperFetch) service is consuming the CPU utilization.
 
 ## Cause
 
@@ -30,6 +30,7 @@ Windows creates a single read-only Virtual Address Descriptor (VAD) for the addr
 
 ## Workaround
 
-To work around this issue, avoid option `/LARGEADDRESSAWARE:NO` while compiling the applications.
+To work around this issue, avoid option /LARGEADDRESSAWARE:NO while compiling the applications.
 
-Note: By default a 64-bit application makes use of the Extended Address Space (8 terabytes per process).
+> [!Note]
+> By default a 64-bit application makes use of the Extended Address Space (8 terabytes per process).
