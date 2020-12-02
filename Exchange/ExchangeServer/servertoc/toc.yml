@@ -410,7 +410,7 @@
   - name: Distribution Lists
     items:
     - name: Get-DistributionGroupMember not return all members
-      href: ../distribution-list/get-distributiongroupmember-not-return-memebers.md
+      href: ../distribution-list/get-distributiongroupmember-not-return-members.md
   - name: Mailflow
     items:
     - name: 451 4.4.0 DNS query failed
@@ -471,8 +471,6 @@
     items:
     - name: Can't move a mailbox to a database
       href: ../migration/error-move-mailbox-to-database-exchange-2010.md
-    - name: Can't move mailboxes to Exchange Online
-      href: ../migration/user-is-already-being-moved-error.md
     - name: Can't move mailboxes due to Exchange Online limits
       href: ../migration/save-changes-made-item-store-migrate-mailbox.md
     - name: Can't replicate public folder
