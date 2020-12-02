@@ -60,7 +60,7 @@ You can open the **About Internet Explorer** dialog box by clicking **Help** and
 
 The Update Versions field is updated every time Internet Explorer 9 or Internet Explorer 11 is updated. The version number has the following components:
 
-- The App Major version field will remain **9** or **10**.
+- The App Major version field will remain **9** or **11**.
 - The App Minor version field will remain **0**.
 - The **Update revision** field will increment by **1** for each Internet Explorer update that is released.
 
