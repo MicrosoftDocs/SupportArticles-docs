@@ -13,8 +13,8 @@ search.appverid:
 - SPO160
 - MET150
 appliesto:
-- OneDrive
-- Teams
+- Microsoft OneDrive for Business
+- Microsoft Teams
 ms.custom: 
 - CI 125301
 - CSSTroubleshoot 
