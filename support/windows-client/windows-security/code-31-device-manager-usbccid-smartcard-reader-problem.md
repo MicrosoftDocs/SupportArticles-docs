@@ -27,11 +27,11 @@ The requested operation was unsuccessful.
 
 ## Cause
 
-During initialization, the smartcard driver attempts to create an instance of smart card class extension. The attempt failed and the driver is not loaded.
+During initialization, the smartcard driver attempts to create an instance of smart card class extension. The attempt failed and the driver isn't loaded.
 
 ## Resolution
 
-Add the **RetryDeviceInitialize** registry key and restart the computer to make sure the driver initialization is successful.
+To ensure a successful driver initialization, add the **RetryDeviceInitialize** registry key and restart the computer.
 
 > [!Note]
 > The registry key is available for Windows 10, version 1903 (19H1) and later versions.
