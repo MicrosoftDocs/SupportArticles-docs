@@ -46,13 +46,6 @@ The file you’re trying to open (.docx, .xlsx, or .pptx) may have been created 
 
 To resolve this issue, follow the steps below.
 
-> [!NOTE]
-> If this procedure doesn't resolve your issue, see one of the following Office blogs:
->
-> - [Microsoft Office Word Support Team Blog](https://blogs.technet.microsoft.com/wordonenotesupport/2016/11/02/do-you-want-to-download-the-converter-when-you-try-to-open-a-file-in-excel-word-or-powerpoint-kb-article/)
-> - [The Microsoft Excel Support Team Blog](https://blogs.technet.microsoft.com/the_microsoft_excel_support_team_blog/2016/11/02/do-you-want-to-download-the-converter-when-you-try-to-open-a-file-in-excel-word-or-powerpoint-kb-article/)
-> - [Business Graphics Products - Support Blog](https://blogs.technet.microsoft.com/bgp/2016/11/02/do-you-want-to-download-the-converter-when-you-try-to-open-a-file-in-excel-word-or-powerpoint-kb-article/)
-
 1. Go to the Microsoft Download Center to download and install the [OOXML Strict Converter for Office 2010](https://www.microsoft.com/download/details.aspx?id=38828).
 2. Open the file again in Word 2010, Excel 2010,  or PowerPoint 2010.
 3. Select **Open** when the following message appears:
@@ -61,7 +54,12 @@ To resolve this issue, follow the steps below.
 
 4. When the file opens, select **Save As** to save the file in the Word 2010, Excel 2010, or PowerPoint 2010 default format.
 
-
+    > [!NOTE]
+    > If you are still experiencing issues after running this procedure, see one of the following Office blogs:
+    >
+    > - [Microsoft Office Word Support Team Blog](https://blogs.technet.microsoft.com/wordonenotesupport/2016/11/02/do-you-want-to-download-the-converter-when-you-try-to-open-a-file-in-excel-word-or-powerpoint-kb-article/)
+    > - [The Microsoft Excel Support Team Blog](https://blogs.technet.microsoft.com/the_microsoft_excel_support_team_blog/2016/11/02/do-you-want-to-download-the-converter-when-you-try-to-open-a-file-in-excel-word-or-powerpoint-kb-article/)
+    > - [Business Graphics Products Support Team Blog](https://blogs.technet.microsoft.com/bgp/2016/11/02/do-you-want-to-download-the-converter-when-you-try-to-open-a-file-in-excel-word-or-powerpoint-kb-article/)
 
 ## More information
 
