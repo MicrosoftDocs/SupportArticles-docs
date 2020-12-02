@@ -31,7 +31,7 @@ Excel begins with a default width of 8 characters and translates this into a giv
 A column width of 8.43 means that 8.43 of the default font's characters fit into a cell. The default font for the worksheet is the font that is assigned to the Normal style. Excel 2000 uses a factory default font of Arial 10. 
 
 > [!NOTE]
-> Changing Printer DPI can affect the font metrics and can adjust the column widths.Microsoft Office Excel 2007 uses a default theme that is named Office. This default theme has Cambria as the default heading font and Calibri 11 as the default body font.
+> Changing Printer DPI can affect the font metrics and can adjust the column widths. Microsoft Office Excel 2007 uses a default theme that is named Office. This default theme has Cambria as the default heading font and Calibri 11 as the default body font.
 
 To determine the default font on your worksheet, follow these steps: 
 
