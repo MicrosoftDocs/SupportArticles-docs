@@ -49,13 +49,13 @@ To fix this issue, use the following steps.
 
 ### Step 1: Identify the move request for the affected user
 
-- In [Exchange Management Shell](/powershell/exchange/exchange-server/open-the-exchange-management-shell?view=exchange-ps), run the following command: 
+- In [Exchange Management Shell](/powershell/exchange/exchange-server/open-the-exchange-management-shell?view=exchange-ps&preserve-view=true), run the following command: 
 
     ```powershell
     Get-MoveRequest -Identity 'user@contoso.com'
     ```
 
-- In [Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps), run the following command:
+- In [Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true), run the following command:
 
     ```powershell
     Get-MoveRequest -Identity 'user@contoso.com'

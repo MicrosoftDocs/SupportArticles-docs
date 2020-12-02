@@ -209,10 +209,12 @@
       href: ../hybrid-configuration-wizard-errors/winrm-client-cannot-complete-operation-with-time-specified-error.md
   - name: Move Mailboxes
     items:
+    - name: 403 forbidden error when moving mailboxes to Exchange Online
+      href: ../move-mailboxes/remote-server-returned-error-403-forbidden.md
     - name: Access is denied error when moving mailboxes
       href: ../move-mailboxes/access-is-denied-error-when-moving-mailboxes.md
     - name: Can't move mailboxes to Exchange Online
-      href: ../move-mailboxes/remote-server-returned-error-403-forbidden.md
+      href: ../move-mailboxes/user-is-already-being-moved-error.md
     - name: Can't use OWA move items in a hybrid deployment
       href: ../move-mailboxes/cannot-move-items-using-owa.md
     - name: Can't find a recipient that has mailbox GUID error
