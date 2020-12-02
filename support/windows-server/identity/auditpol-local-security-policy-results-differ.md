@@ -34,7 +34,7 @@ Secpol.msc displays what is set in the local GPO. There's no "effective settings
 
 From an administrative command prompt, you can use AuditPol to view the defined auditing settings by running:
 
-```cosole
+```console
 auditpol /get /category:*
 ```
 

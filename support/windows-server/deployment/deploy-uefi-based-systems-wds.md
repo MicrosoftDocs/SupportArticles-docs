@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: scottmca, kaushika
+ms.reviewer: scottmca, kaushika, scottmca
 ms.prod-support-area-path: Devices and Drivers
 ms.technology: Deployment
 ---
