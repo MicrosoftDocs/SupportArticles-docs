@@ -1,6 +1,6 @@
 ---
 title: Disconnect incoming VPN connection
-description: Describes how to disconnect an incoming VPN connection when an option to disconnect the incoming VPN connection is not displayed in the View Available Networks dialog box. This issue occurs.
+description: Describes how to disconnect an incoming VPN connection when an option to disconnect the incoming VPN connection is not displayed in the View Available Networks dialog box.
 ms.data: 09/08/2020
 author: Deland-Han
 ms.author: delhan

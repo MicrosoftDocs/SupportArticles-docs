@@ -32,11 +32,12 @@ If you create media using MDT that selects both x86 and x64 platforms, MDT will 
 
 To boot an MDT media deployment on x86 UEFI-based system, you must uncheck x64 when building the MDT media.  To resolve this, do the following:
 
-1. In the deployment share navigate to Advanced Configuration, Media
-2. Right-click the Media and choose properties
-3. Under platforms uncheck "Generate x64 boot image"
+1. In the deployment share, navigate to **Advanced Configuration** > **Media**.
+2. Right-click the **Media** and choose properties.
+3. Under platforms, uncheck Generate x64 boot image.
 
-**Note**: Make sure the drive is formatted FAT32 also.
+> [!NOTE]
+> Make sure the drive is also formatted FAT32.
 
 The USB drive should appear as bootable in the boot order.
 
@@ -44,6 +45,6 @@ The USB drive should appear as bootable in the boot order.
 
 UEFI systems can only boot operating systems and Windows PE boot images that match the computer's CPU architecture.  For example, Intel Atom-based systems support only x86 while Intel Core-based systems support only x64 (without using legacy BIOS compatibility).
 
-Due to limitations in the UEFI boot process, it isn't possible to create media that works with both x86 and x64 UEFI systems.  So for MDT media that specifies both x86 and x64 architecture support, MDT can only support one architecture for UEFI booting.  (Both x86 and x64 work fine for non-UEFI systems.)  Rather than generating an error, MDT logs a message indicating that the resulting media will only support x64 UEFI systems.
+Due to limitations in the UEFI boot process, it isn't possible to create media that works with both x86 and x64 UEFI systems. So for MDT media that specifies both x86 and x64 architecture support, MDT can only support one architecture for UEFI booting. (Both x86 and x64 work fine for non-UEFI systems.) Rather than generating an error, MDT logs a message indicating that the resulting media will only support x64 UEFI systems.
 
 To support UEFI x86 systems, you need to have separate media that selects only the x86 architecture.

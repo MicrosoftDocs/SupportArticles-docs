@@ -9,29 +9,29 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-jesits, robertvi
 ms.prod-support-area-path: Installation and configuration of Hyper-V
 ms.technology: HyperV
 ---
-# Hyper-V VMM service fails and Event ID 14050 is logged when dynamicportrange is changed in Windows Server 2012
+# Hyper-V VMM service fails and Event ID 14050 is logged when dynamicportrange is changed
 
 This article provides a solution to issues where Hyper-V VMM service fails and event ID 14050 is logged when the dynamicportrange setting is changed.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 2761899
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;2761899
 
 ## Symptoms
 
 Assume that you have a computer that is running Windows Server 2012 with Hyper-V installed. If you try to manage the Hyper-V hosts either by using System Center Virtual Machine Manager 2012 Service Pack 1 (SP1) or remotely by using Hyper-V Manager, the attempt fails. Additionally, an event may be logged in the event log that resembles the following:
 
-> Log Name: Microsoft-Windows-Hyper-V-VMMS-Admin
-> Source: Microsoft-Windows-Hyper-V-VMMS
-> Date: \<Date> \<Time>
-> Event ID: 14050
-> Level: Error
-> Description: Failed to register service principal name.
-> Event Xml: ...
-> \<Parameter0>Hyper-V Replica Service\</Parameter0>
+> Log Name: Microsoft-Windows-Hyper-V-VMMS-Admin  
+> Source: Microsoft-Windows-Hyper-V-VMMS  
+> Date: \<Date> \<Time>  
+> Event ID: 14050  
+> Level: Error  
+> Description: Failed to register service principal name.  
+> Event Xml: ...  
+> \<Parameter0>Hyper-V Replica Service\</Parameter0>  
 
 ## Cause
 
@@ -51,42 +51,44 @@ For more information, click the following article number to go to the article in
 
 ## Resolution
 
-To resolve this problem, run the following script one time on each affected Hyper-V host. This script adds a custom port range to enable Vmms.exe to communicate over an additional port range of 9000 to 9999. The script can be modified as necessary. 
+To resolve this problem, run the following script one time on each affected Hyper-V host. This script adds a custom port range to enable Vmms.exe to communicate over an additional port range of 9000 to 9999. The script can be modified as necessary.  
 
-To configure a script to add the custom port range, follow these steps:
+To configure a script to add the custom port range, follow these steps:  
+
 1. Start a text editor, such as Notepad.
 2. Copy the following code, and then paste the code into the text file:
 
-    ```vbs
-    'This VBScript adds a port range from 9000 to 9999 for outgoing traffic 
+    ```vbscript
+
+    'This VBScript adds a port range from 9000 to 9999 for outgoing traffic  
     'run as cscript addportrange.vbs on the hyper-v host
-    
+
     option explicit
-    
+
     'IP protocols
     const NET_FW_IP_PROTOCOL_TCP = 6
     const NET_FW_IP_PROTOCOL_UDP = 17
-    
+
     'Action
     const NET_FW_ACTION_BLOCK = 0
     const NET_FW_ACTION_ALLOW = 1
-    
+
     'Direction
     const NET_FW_RULE_DIR_IN = 1
     const NET_FW_RULE_DIR_OUT = 2
-    
+
     'Create the FwPolicy2 object.
     Dim fwPolicy2
     Set fwPolicy2 = CreateObject("HNetCfg.FwPolicy2")'Get the Service Restriction object for the local firewall policy.
     Dim ServiceRestriction
     Set ServiceRestriction = fwPolicy2.ServiceRestriction
-    
+
     'If the service requires sending/receiving certain type of traffic, then add "allow" WSH rules as follows
     'Get the collection of Windows Service Hardening networking rules
-    
+
     Dim wshRules
     Set wshRules = ServiceRestriction.Rules
-    
+
     'Add outbound WSH allow rules
     Dim NewOutboundRule
     Set NewOutboundRule = CreateObject("HNetCfg.FWRule")
@@ -99,7 +101,7 @@ To configure a script to add the custom port range, follow these steps:
     NewOutboundRule.Direction = NET_FW_RULE_DIR_OUT
     NewOutboundRule.Enabled = true
     wshRules.Add NewOutboundRule
-    
+
     'end of script
     ```
 
