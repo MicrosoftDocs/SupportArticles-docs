@@ -129,24 +129,22 @@
       href: ../administration/winrm-cannot-process-request.md
     - name: Wrong output if running Get-CASMailbox for HasActiveSyncDevicePartnership
       href: ../administration/incorrect-output-when-running-get-casmailbox.md
-  - name: Antispam
-    items:
-    - name: ATP notifications are shown in foreign languages
-      href: ../antispam/atp-notifications-shown-in-foreign-languages.md
-    - name: Cautions against bypassing spam filters
-      href: ../antispam/cautions-against-bypassing-spam-filters.md
-    - name: How to reduce malware threats via file attachment blocking
-      href: ../antispam/how-to-reduce-malware-threats-via-file-attachment-blocking.md
-    - name: User Impersonation messages are classified as phishing
-      href: ../antispam/user-impersonation-messages-are-classified-as-phishing.md
   - name: Antispam and protection
     items:
+    - name: ATP notifications are shown in foreign languages
+      href: ../antispam-and-protection/atp-notifications-shown-in-foreign-languages.md
     - name: Can't send emails to an external recipient
       href: ../antispam-and-protection/cannot-send-emails-to-external-recipients.md
+    - name: Cautions against bypassing spam filters
+      href: ../antispam-and-protection/cautions-against-bypassing-spam-filters.md
     - name: Domains on Outlook Safe Senders list not recognized
       href: ../antispam-and-protection/domains-on-outlook-safe-senders-list-not-recognized.md
+    - name: How to reduce malware threats via file attachment blocking
+      href: ../antispam-and-protection/how-to-reduce-malware-threats-via-file-attachment-blocking.md
     - name: SMTPSEND.BareLineFeedsAreIllegal NDR when tracing a message
       href: ../antispam-and-protection/smtpsend-barelinefeedsareillegal-when-tracing-messages.md
+    - name: User Impersonation messages are classified as phishing
+      href: ../antispam-and-protection/user-impersonation-messages-are-classified-as-phishing.md
   - name: Calendars
     items:
     - name: ActiveSync can't download attachments to Calendar items
