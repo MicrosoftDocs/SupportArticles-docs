@@ -1,6 +1,6 @@
 ---
 title: Event ID 7000 or 7026 in System log
-description: Describes a problem in which event ID 7000 or event ID 7026 may be logged after you start a computer that's running Windows 7, Windows Vista, Windows Server 2008, or Windows Server 2008 R2.
+description: Describes a problem in which event ID 7000 or event ID 7026 may be logged after you start a computer that's running Windows 7 Service Pack 1 and Windows Server 2012 R2.
 ms.data: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,9 +13,9 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Devices and Drivers
 ms.technology: Deployment
 ---
-# Event ID 7000 or 7026 is logged in the System log on a computer that's running Windows 7, Windows Vista, Windows Server 2008 R2, or Windows Server 2008
+# Event ID 7000 or 7026 is logged in the System log on a computer that's running Windows 7 Service Pack 1 and Windows Server 2012 R2
 
-This article describes a problem in which event ID 7000 or event ID 7026 is logged after you start a computer that's running Windows 7, Windows Vista, Windows Server 2008, or Windows Server 2008 R2.
+This article describes a problem in which event ID 7000 or event ID 7026 is logged after you start a computer that's running Windows 7 Service Pack 1 and Windows Server 2012 R2.
 
 _Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 933757
@@ -24,16 +24,12 @@ _Original KB number:_ &nbsp; 933757
 
 Event ID 7000 or event ID 7026 is logged in the System log on a computer that's running one of the following operating systems:
 
-- Windows 7
-- Windows Server 2008 R2
-- Windows Vista
-- Windows Server 2008
+- Windows 7 Service Pack 1
+- Windows Server 2012 R2
 
 This problem may occur if a device isn't connected to the computer but the driver service of the device is enabled. For example, the following events are logged when the computer doesn't have a parallel port, a DVD drive, or a CD drive.
 
-On a Windows 7-based or Windows Server 2008 R2-based computer
-
-On a Windows Vista-based or Windows Server 2008-based computer
+On a Windows 7 Service Pack 1 or Windows Server 2012 R2 computer
 
 ## Workaround
 

@@ -26,7 +26,7 @@ _Original KB number:_ &nbsp; 328890
 
 ## More information
 
-As specified in RFC 1122, TCP uses delayed acknowledgments to reduce the number of packets that are sent on the media. Instead of sending an acknowledgment for each TCP segment received, TCP in Windows 2000 and later takes a common approach to implementing delayed acknowledgments. As data is received by TCP on a particular connection, it sends an acknowledgment back only if one of the following conditions is true:
+As specified in RFC 1122, TCP uses delayed acknowledgments to reduce the number of packets that are sent on the media. Instead of sending an acknowledgment for each TCP segment received, TCP in Windows and Windows Server takes a common approach to implementing delayed acknowledgments. As data is received by TCP on a particular connection, it sends an acknowledgment back only if one of the following conditions is true:
 
 - No acknowledgment was sent for the previous segment received.
 - A segment is received, but no other segment arrives within 200 milliseconds for that connection.

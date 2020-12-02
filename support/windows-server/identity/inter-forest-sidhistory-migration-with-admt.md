@@ -35,8 +35,6 @@ The basic requirements for inter-forest migration operations are:
 #### Wizard-based basic user and group account migration without sIDHistory
 
 - The source domain must trust the target domain.
-- The source domain must be running Microsoft Windows NT 4.0 Service Pack 4 (SP4) or later.
-- The target domain must be in Microsoft Windows 2000 Native mode or later.
 - The user account that is running ADMTv2 must have Administrator rights in the source domain.
 - The ADMT user account must have delegated permissions to create user or group objects in the target container.
 - DNS (hostname) and NetBIOS name resolution between the domains must exist.
@@ -44,13 +42,13 @@ The basic requirements for inter-forest migration operations are:
 #### sIDHistory migration requires the following additional dependencies
 
 - Success and failure auditing of account management for both source and target domains.
-- Windows NT 4.0 source domains call this user and group management auditing.
+- Windows source domains call this user and group management auditing.
 - An empty local group in the source domain that is named *{SourceNetBIOSDom}$$$*.
 - The `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\LSA\TcpipClientSupport`registry key must be set to 1 on the source domain primary domain controller.
 - You must restart the source domain primary domain controller after the registry configuration.
-- If the target domain is a Windows 2000 domain, Windows security requires user credentials with administrator rights in the target domain. You add these credentials in the wizard when sIDHistory migration is turned on.
+- If the target domain is a Windows domain, Windows security requires user credentials with administrator rights in the target domain. You add these credentials in the wizard when sIDHistory migration is turned on.
 
-To delegate the MigrateSidHistory extended right on a Microsoft Windows Server domain controller or on a computer that has the Windows Server 2003 Administration Tools pack installed, follow these steps:
+To delegate the MigrateSidHistory extended right on a Microsoft Windows Server domain controller or on a computer that has the Windows Server Administration Tools pack installed, follow these steps:
 
 1. Click **Start**, click **Administrative Tools**, and then click **Active Directory Users and Computers**.
 2. Right-click the name of the domain that you want to delegate the MigrateSidHistory extended right from, and then click **Delegate Control** to open the **Delegation of Control Wizard** window.
@@ -60,7 +58,7 @@ To delegate the MigrateSidHistory extended right on a Microsoft Windows Server d
 6. Make sure that the **General** option is selected, click **Migrate SID History** in the
 **Permissions** list, and then click **Next**.
 7. Verify that the information is correct, and then click **Finish**.
-    - If the target domain is a Windows Server 2003 domain, Windows security requires user credentials with the delegated MigratesIDHistory extended right or administrator rights in the target domain.
+    - If the target domain is a Windows Server domain, Windows security requires user credentials with the delegated MigratesIDHistory extended right or administrator rights in the target domain.
     - No sID to be migrated may exist in the target forest, either as a primary sID or as an sIDHistory attribute of another object.
 
 #### Additional requirements for migrating sIDHistory with the command line or scripting interfaces
@@ -107,7 +105,7 @@ This error in the Migration.log file after a migration with sIDHistory typically
 
 ## Additional sIDHistory information
 
-The sIDHistory is a multivalued attribute of security principals in the Active Directory that may hold up to 850 values. To provide backward-compatibility with domain controllers that are running earlier versions of Windows, the sIDHistory attribute is only available in domains that are operating at the functional level of Windows 2000 Native mode or later.
+The sIDHistory is a multivalued attribute of security principals in the Active Directory that may hold up to 850 values. To provide backward-compatibility with domain controllers that are running earlier versions of Windows, the sIDHistory attribute is only available in domains that are operating at the functional level of Windows.
 
 Some third-party vendor products make it possible to turn on sIDHistory in mixed mode domains. These claims do not represent the legitimate use of public APIs. Domain administrators that use such tools risk putting their Active Directory deployment in an unsupported state.
 
@@ -117,4 +115,4 @@ In both cases, migrated objects are assigned a new sID by the target domain. The
 
 Note that the sIDHistory is a transitional tool and is not meant to exist indefinitely attached to security principals. Although migrating the sIDHistory can significantly ease and simplify the domain migration process, there are important security ramifications that must be considered before you implement the sIDHistory in a production enterprise.
 
-A Windows 2000 security token can hold a maximum of 1,023 sIDs, including sIDHistory and group sIDs. Kerberos is also limited because Windows 2000 Kerberos has a 73-sID buffer. After you apply Windows 2000 Service Pack 2 (SP2), this size can be doubled by an enterprise-wide registry change. Exceeding these limits violates the MaxTokenSize restriction and can lead to unpredictable results, including failure of Kerberos authentication and erratic or nonexistent application of policies. To prevent these issues, use Security Translation instead of sIDHistory as the long-term solution to maintaining resource access after a domain migration.
+A Windows security token can hold a maximum of 1,023 sIDs, including sIDHistory and group sIDs. Kerberos is also limited because Windows Kerberos has a 73-sID buffer. This size can be doubled by an enterprise-wide registry change. Exceeding these limits violates the MaxTokenSize restriction and can lead to unpredictable results, including failure of Kerberos authentication and erratic or nonexistent application of policies. To prevent these issues, use Security Translation instead of sIDHistory as the long-term solution to maintaining resource access after a domain migration.
