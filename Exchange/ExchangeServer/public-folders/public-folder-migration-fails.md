@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
+- Exchange Server
 - CI 112320
 - CSSTroubleshoot
 ms.reviewer: batre
@@ -20,7 +21,6 @@ appliesto:
 - Exchange Online via Office 365 P Plans
 search.appverid: MET150
 ---
-
 # Exchange public folder migration stops at 95% with error "There are [xx] Public Folders that could not be mail-enabled"
 
 ## Symptoms
@@ -72,7 +72,18 @@ In such scenario, the **Get-MailPublicFolder** command won't list the folders de
 
 ## Workaround
 
-To work around this issue, follow these steps:
+There are two ways to work around this issue:
+
+### Method 1: Use script to detect issues with on-premises mail-enabled public folders
+
+1. Download and run the [ValidateMailPublicFolders](https://aka.ms/ValidateMEPF) script on Exchange Server on-premises.
+
+   The script reports orphaned mail-enabled public folders and mail-enabled public folders found under the NON_IPM_Subtree folder. It also suggests using a command to fix the issue.
+
+2. Run the command suggested by the script.
+3. After fixing the issues reported by the script, run the script again and make sure no issue is reported for mail-enabled public folders.
+
+### Method 2: Use commands to detect issues with on-premises mail-enabled public folders
 
 1. List the public folders that still have the **MailEnabled** property set to **True**. To do this, run the following command:
 
@@ -87,6 +98,6 @@ To work around this issue, follow these steps:
 
    ```powershell
    $pf=Get-PublicFolder \ -recurse -ResultSize Unlimited | ? { $_.MailEnabled }; ForEach ($i in $pf) {$mesoObj = Get-MailPublicFolder $i.identity; if ($mesoObj -eq $null) { Disable-MailPublicFolder $i -confirm:$False} }
-   ``` 
+   ```
 
 3. Resume the failed migration batch in Exchange Online.

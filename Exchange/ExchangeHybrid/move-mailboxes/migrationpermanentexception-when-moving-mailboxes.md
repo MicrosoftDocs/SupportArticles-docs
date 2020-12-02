@@ -9,13 +9,14 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer: hbohl
 appliesto:
 - Exchange Online 
 search.appverid: MET150
 ---
-# MigrationPermanentException Cannot find a recipient that has mailbox GUID error when moving mailboxes
+# (MigrationPermanentException Cannot find a recipient that has mailbox GUID) error when moving mailboxes
 
 _Original KB number:_ &nbsp; 2956029
 
@@ -71,4 +72,4 @@ To prevent this scenario from occurring, create the mailbox in the on-premises o
 
 For more information, see [Move mailboxes between on-premises and Exchange Online organizations in hybrid deployments](/exchange/hybrid-deployment/move-mailboxes).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

@@ -125,10 +125,12 @@
     items:
     - name: "\"There is a problem with the proxy server's security certificate\" error"
       href: ../connectivity/error-when-outlook-uses-rpc-https-connect-server.md
-    - name: Can't open a mailbox using MAPI over HTTP
-      href: ../connectivity/cannot-open-mailbox-using-mapi-over-http.md
     - name: Can't access archive mailbox in Outlook
       href: ../connectivity/cannot-access-archive-mailbox-in-outlook.md
+    - name: Can't open a mailbox using MAPI over HTTP
+      href: ../connectivity/cannot-open-mailbox-using-mapi-over-http.md
+    - name: Can't sign in or activate Microsoft 365 applications 
+      href: ../connectivity/outlook-cannot-signin-activate.md
     - name: Connection fails when certificate is required
       href: ../connectivity/outlook-cannot-connect-to-exchange-certificate-validation.md
     - name: Connection issues when MAPI is disabled
@@ -181,6 +183,8 @@
       href: ../contacts/how-to-hide-columns-in-address-book.md
     - name: Information about the Outlook AutoComplete list
       href: ../contacts/information-about-the-outlook-autocomplete-list.md
+    - name: LinkedIn is no longer available in Outlook Social Connector
+      href: ../contacts/linkedin-is-no-longer-available-in-outlook-social-connector.md
     - name: No permission error when adding contacts
       href: ../contacts/you-donnot-have-permission-to-create-an-entry-error.md
     - name: No Offline Address Book is downloaded
@@ -273,7 +277,9 @@
       href: ../installation/outlook-is-unable-to-start-in-windows-7-or-8.md
     - name: DisablePST and PSTDisableGrow policies are ignored
       href: ../installation/disablepst-and-pstdisablegrow-policies-are-ignored.md
-    - name: Instal Calendar Printing Assistant fails
+    - name: How to update Outlook to solve  connection issues
+      href: ../installation/fix-outlook-connection-problems-by-upgrading.md
+    - name: Install Calendar Printing Assistant fails
       href: ../installation/installing-calendar-printing-assistant-fails.md
     - name: Install Outlook latest applicable updates
       href: ../installation/install-outlook-latest-updates.md
@@ -327,6 +333,8 @@
       href: ../message-body/no-subject-content-in-automatically-email.md
     - name: Pictures are not shown but displayed as red X
       href: ../message-body/pictures-not-displayed-and-shown-as-red-x.md
+    - name: Strange characters in message body
+      href: ../message-body/strange-characters-display-message-body.md
     - name: Specified Message Identity is Invalid error when opening delivery reports
       href: ../message-body/specified-message-identity-is-invalid-error-when-opening-delivery-reports.md
     - name: The image in an HTML-formatted email not shown
@@ -541,6 +549,8 @@
       href: ../user-interface/cannot-delete-default-outlook-folders.md
     - name: Can't import an XLS or CSV file into the Hebrew version
       href: ../user-interface/cannot-map-custom-fields.md
+    - name: Can't open mutiple Excel attachements
+      href: ../user-interface/only-two-excel-attachments-can-open.md
     - name: Can't open Outlook items from Windows Search results
       href: ../user-interface/cannot-open-outlook-items-from-windows-search-results.md
     - name: Can't perform instant searches
@@ -591,6 +601,8 @@
       href: ../user-interface/emails-not-show-in-cached-mode-inbox-after-synchronized.md
     - name: Emails sent by an .oft file aren't received
       href: ../user-interface/sending-email-by-template-fails.md
+    - name: Encrypted and restricted message in shared mailbox
+      href: ../user-interface/encrypted-restricted-message-shared-mailbox.md
     - name: Event 4096 is logged if WarmUp set for VSTO add-ins
       href: ../user-interface/event-4096-is-logged-if-warmup-set-for-vsto-add-ins.md
     - name: Extensibility support for Outlook 2010
@@ -659,6 +671,8 @@
       href: ../user-interface/outlook-application-icon-missing-from-windows-taskbar.md
     - name: Outlook Object Model can't run in a Windows service
       href: ../user-interface/outlook-object-model-unsuitable-to-run-in-windows-service.md
+    - name: PersonMetadata error in Search Folder
+      href: ../user-interface/personmetadata-items.md
     - name: Presence icons do not show in Outlook
       href: ../user-interface/presence-icons-do-not-show-in-outlook.md
     - name: Reminders in Outlook do not appear
@@ -683,12 +697,9 @@
       href: ../user-interface/some-instant-messaging-client-features-not-available.md
     - name: Support limitations for open standards
       href: /exchange/troubleshoot/development/public-protocols-support-limitations?context=/outlook/troubleshoot/context/client-context
-    - name: Unexpected mail items
-      href: ../user-interface/personmetadata-items.md
     - name: WebBrowser control content isn't displayed correctly
       href: ../user-interface/wpf-webbrowser-control-content-not-display-correctly.md
     - name: Windows Search service setting results in no matches found
       href: ../user-interface/windows-search-service-setting-results-in-no-matches-found.md
     - name: Wrong search results due to missing MapiPH.dll
       href: ../user-interface/search-results-are-incorrect-due-to--missing-mapiph-dll.md
-

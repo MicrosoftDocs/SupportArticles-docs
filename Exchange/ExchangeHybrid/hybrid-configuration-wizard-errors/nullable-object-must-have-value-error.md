@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer:
 appliesto:
 - Exchange Online
@@ -80,4 +81,4 @@ To work around this issue, follow these steps:
 
 The Hybrid Configuration wizard is expecting the value of the `TNEFEnabled` parameter to be either **true** or **false**. However, in some cases, the value can be null. For more information, see [Set-RemoteDomain](/powershell/module/exchange/set-remotedomain).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

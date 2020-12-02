@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer: scotro
 appliesto:
 - Exchange Online
@@ -17,7 +18,7 @@ appliesto:
 - Exchange Server 2013 Standard Edition
 search.appverid: MET150
 ---
-# State of runspace is not valid for this operation error when running Hybrid Configuration wizard
+# (State of runspace is not valid for this operation) error when running Hybrid Configuration wizard
 
 _Original KB number:_ &nbsp; 3067613
 
@@ -34,7 +35,7 @@ You want to set up a hybrid deployment between your on-premises Exchange Server 
 > Cannot perform operation because the runspace pool is not in the 'Opened' state. The current state is 'Broken'.  
 at System.Management.Automation.Runspaces.Internal.RunspacePoolInternal.AssertPoolIsOpen  
 at System.Management.Automation.Runspaces.RunspacePool.AssertPoolIsOpen  
-at System.Management.Automation.PowerShell.CoreInvokeAsync[TInput,TOutput](PSDataCollection`1 input, PSDataCollection`1 output, PSInvocationSettings settings, AsyncCallback callback, Object state, PSDataCollection`1 asyncResultOutput)
+at System.Management.Automation.PowerShell.CoreInvokeAsync[TInput,TOutput](PSDataCollection\`1 input, PSDataCollection\`1 output, PSInvocationSettings settings, AsyncCallback callback, Object state, PSDataCollection\`1 asyncResultOutput)
 
 ## Resolution
 

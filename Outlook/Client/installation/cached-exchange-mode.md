@@ -7,7 +7,9 @@ audience: ITPro
 ms.topic: get-started-article
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Outlook for Windows
+- CSSTroubleshoot
 ms.collection: Ent_Office_Outlook
 description: Helps IT Pros learn about planning and configuring Cached Exchange Mode in Outlook 2016 for Windows
 search.appverid: 

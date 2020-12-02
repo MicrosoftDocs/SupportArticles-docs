@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer: scotro
 appliesto:
 - Exchange Online
@@ -19,12 +20,12 @@ appliesto:
 - Exchange Server 2010 Standard
 search.appverid: MET150
 ---
-# Get-HybridMailflowDatacenterIPs is not recognized error when running Hybrid Configuration wizard
+# (Get-HybridMailflowDatacenterIPs is not recognized) error when running Hybrid Configuration wizard
+
+_Original KB number:_ &nbsp; 3063646
 
 > [!NOTE]
 > The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
-
-_Original KB number:_ &nbsp; 3063646
 
 ## Symptoms
 

@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Outlook for Mac
+- CSSTroubleshoot
 ms.reviewer: tasitae, jmckinn
 appliesto:
 - Outlook 2016 for Mac

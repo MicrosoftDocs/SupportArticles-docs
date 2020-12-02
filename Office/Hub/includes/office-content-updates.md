@@ -2,141 +2,116 @@
 
 
 
+## Week of November 23, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/23/2020 | [Can't open a file (.xslx, .docx, .pptx) in Excel 2010, Word 2010, or PowerPoint 2010](/office/troubleshoot/office-suite-issues/error-do-you-want-download-converter) | modified |
+| 11/23/2020 | [Office Online Server and Office Web Apps Server limitations and features with Information Rights Management (IRM)](/office/troubleshoot/administration/office-online-limitations-and-features-with-information-rights-management) | modified |
+| 11/24/2020 | [Can't open a file (.xslx, .docx, .pptx) in Excel 2010, Word 2010, or PowerPoint 2010](/office/troubleshoot/office-suite-issues/error-do-you-want-download-converter) | modified |
+| 11/24/2020 | [Error (Do you want to download the converter) in Office](/office/troubleshoot/office-suite-issues/error-do-you-want-download-converter) | modified |
+| 11/26/2020 | [Guests have no access to assigned Planner tasks](/office/troubleshoot/planner/guests-cannot-comment-assigned-tasks) | modified |
+
+
+## Week of November 16, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/17/2020 | [Access linked table to SQL Server database returns Deleted](/office/troubleshoot/access/access-linked-table-deleted) | modified |
+| 11/17/2020 | [Long numbers are displayed incorrectly in Excel](/office/troubleshoot/excel/long-numbers-incorrectly-in-excel) | added |
+| 11/17/2020 | [How to merge multiple Word documents into one](/office/troubleshoot/word/merge-word-documents) | added |
+| 11/17/2020 | [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state) | modified |
+| 11/19/2020 | [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state) | modified |
+
+
+## Week of November 09, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/9/2020 | [Formula returns "#VALUE!" error](/office/troubleshoot/excel/formula-returns-value-error) | modified |
+| 11/9/2020 | [You receive an end tag error when you open a DOCX file in Word 2013, 2010, or 2007](/office/troubleshoot/word/end-tag-error-when-open-docx) | modified |
+| 11/11/2020 | [Can't use the Access ODBC driver or OLEDB provider outside Office Click-to-Run](/office/troubleshoot/access/cannot-use-odbc-or-oledb) | modified |
+
+
+## Week of November 02, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/2/2020 | [Microsoft Offices Online 2013 and VMWare](/office/troubleshoot/administration/office-web-apps-and-vmware) | modified |
+| 11/2/2020 | [Rebuild an Microsoft Office Web Apps 2013 server farm easily](/office/troubleshoot/administration/rebuild-an-office-web-apps-2013-farm-easily) | modified |
+| 11/2/2020 | [Test viewing Office documents by using Microsoft Offices Online or Office Online Server viewer](/office/troubleshoot/administration/test-viewing-documents-by-using-office-online-server-viewer) | modified |
+| 11/2/2020 | [Microsoft Office Online and VMWare](/office/troubleshoot/administration/office-web-apps-and-vmware) | modified |
+| 11/2/2020 | [Rebuild an Microsoft Office Web Apps server farm easily](/office/troubleshoot/administration/rebuild-an-office-web-apps-2013-farm-easily) | modified |
+| 11/3/2020 | [Disabling code-behind prompt for InfoPath forms](/office/troubleshoot/infopath/disabling-code-behind-prompt-for-infopath-forms) | modified |
+| 11/3/2020 | [Starting third-party add-in causes "Access Denied" error](/office/troubleshoot/installation/access-denied-error-when-starting-third-party-apps) | modified |
+| 11/3/2020 | [How to download and run Office 2019 installation files not in VLSC](/office/troubleshoot/installation/how-to-download-office-install-not-in-vlsc) | modified |
+| 11/3/2020 | [Office file previews in Windows Explorer may not show after switching from 64-bit Office to 32-bit Office](/office/troubleshoot/office-suite-issues/no-file-previews-file-explorer-switching-to-32-bit) | modified |
+| 11/3/2020 | [Cannot enter User Logon Account for new resource](/office/troubleshoot/project/cannot-enter-user-logon-account) | modified |
+| 11/3/2020 | [Project Publish jobs process remains at 80 percent for a long time](/office/troubleshoot/project/project-publish-jobs-not-complete) | modified |
+| 11/3/2020 | [SharePoint task list sync job fails when Project is published](/office/troubleshoot/project/sharepoint-task-list-sync-job-fails-when-project-published) | modified |
+| 11/3/2020 | [Project Server Sync Jobs take a long time to complete](/office/troubleshoot/project/sync-jobs-take-long-time-to-complete) | modified |
+| 11/3/2020 | [The image part with relationship rID8 was not found in Microsoft Word](/office/troubleshoot/word/image-part-relationship-rld8-not-found-error-microsoft-word) | modified |
+| 11/3/2020 | [PivotTable operation failed when click a slicer in Excel Online](/office/troubleshoot/excel/excel-online-pivottable-operation-failed) | modified |
+| 11/3/2020 | [No email notifications for responses to Group Forms](/office/troubleshoot/microsoft-forms/no-email-notifications-for-responses-to-group-forms) | modified |
+| 11/4/2020 | [How to troubleshoot database corruption](/office/troubleshoot/access/troubleshoot-database-corruption) | modified |
+| 11/4/2020 | [How to refresh data to a SQL Azure Database in Excel Online](/office/troubleshoot/excel/excel-online-refreshing-data-to-a-sql-azure-database) | modified |
+| 11/5/2020 | [Unable to add a new record programmatically](/office/troubleshoot/access/adding-new-record-fails) | modified |
+| 11/5/2020 | [Cannot update. Database or object is read-only error in linked SharePoint list in Access](/office/troubleshoot/access/cant-update-database-or-object-error) | modified |
+| 11/5/2020 | [Errors using special characters in Access databases](/office/troubleshoot/access/error-using-special-characters) | modified |
+| 11/5/2020 | [Cannot activate Office 2013 on a new computer](/office/troubleshoot/activation/cant-activate-on-new-computer) | modified |
+| 11/5/2020 | [Unable to export to Excel from SharePoint Online](/office/troubleshoot/excel/cannot-export-to-excel) | modified |
+| 11/5/2020 | [Unable to add refedit control to VBA userform](/office/troubleshoot/excel/cant-add-refedit-control-to-vba-userform.) | modified |
+| 11/5/2020 | [Cannot use object linking and embedding error in Excel 2016 for Mac](/office/troubleshoot/excel/cant-use-object-linking-and-embedding-error) | modified |
+| 11/5/2020 | [Create a dynamic defined range in a worksheet](/office/troubleshoot/excel/create-dynamic-defined-range) | modified |
+| 11/5/2020 | [Document contains invalid signatures error if opening digitally signed in newer version Excel file](/office/troubleshoot/excel/document-contains-invalid-signatures-error) | modified |
+| 11/5/2020 | [Excel cannot complete this task with available resources error in Excel 2010](/office/troubleshoot/excel/excel-cannot-complete-task-with-available) | modified |
+| 11/5/2020 | [Error message Microsoft Excel has stopped working after installing KB3118373](/office/troubleshoot/excel/excel-has-stopped-working-error) | modified |
+| 11/5/2020 | [Index outside bounds of array error](/office/troubleshoot/excel/index-outside-bounds-of-array-error) | modified |
+| 11/5/2020 | [Misleading labels in the output of Excel Analysis ToolPak t-Test tools](/office/troubleshoot/excel/output-misleading-labels) | modified |
+| 11/5/2020 | [Paste Special option is missing or not working in Microsoft Office](/office/troubleshoot/excel/paste-special-missing-or-not-working) | modified |
+| 11/5/2020 | [Excel statistical functions Representing ties by using RANK](/office/troubleshoot/excel/representing-ties-using-rank) | modified |
+| 11/5/2020 | [Excel statistical functions CHIINV](/office/troubleshoot/excel/statistical-functions-chiinv) | modified |
+| 11/5/2020 | [Differences between Excel statistical functions STDEVPA and STDEVP](/office/troubleshoot/excel/statistical-functions-differences) | modified |
+| 11/5/2020 | [Excel statistical functions GROWTH](/office/troubleshoot/excel/statistical-functions-growth) | modified |
+| 11/5/2020 | [Excel statistical functions INTERCEPT](/office/troubleshoot/excel/statistical-functions-intercept) | modified |
+| 11/5/2020 | [Excel statistical functions LOGEST](/office/troubleshoot/excel/statistical-functions-logest) | modified |
+| 11/5/2020 | [Excel statistical functions RSQ](/office/troubleshoot/excel/statistical-functions-rsq) | modified |
+| 11/5/2020 | [Excel statistical functions STEYX](/office/troubleshoot/excel/statistical-functions-steyx) | modified |
+| 11/5/2020 | [Office files in SharePoint fail to open from an Office 2016 client](/office/troubleshoot/office-for-mac/files-fail-to-open) | modified |
+| 11/5/2020 | [Error messages when you try to uninstall Microsoft Office 2013](/office/troubleshoot/office-suite-issues/error-when-uninstall-office) | modified |
+| 11/5/2020 | [FAQ about Office Activation Wizard](/office/troubleshoot/office-suite-issues/faq-about-office-activation-wizard) | modified |
+| 11/5/2020 | [File not found error when you try to open an Office file from a UNC share](/office/troubleshoot/office-suite-issues/file-not-found-when-open-file-from-unc) | modified |
+| 11/5/2020 | [Generic Trust Failure (0x800B010B) error](/office/troubleshoot/office-suite-issues/generic-trust-failure-(0x800b010b)-error) | modified |
+| 11/5/2020 | [To install and use this product error when you install Office 2010](/office/troubleshoot/office-suite-issues/install-and-use-this-product-error) | modified |
+| 11/5/2020 | [Invalid product key or license mismatch error when you activate Office 2013](/office/troubleshoot/office-suite-issues/invalid-product-key-or-license-mismatch-error) | modified |
+| 11/5/2020 | [Error when editing an equation in Office](/office/troubleshoot/office-suite-issues/issue-when-edit-equation-in-office) | modified |
+| 11/5/2020 | [Description of the numbering scheme for product code GUIDs in Office 2013](/office/troubleshoot/office-suite-issues/numbering-scheme-product-code-guids) | modified |
+| 11/5/2020 | [Some Office applications are not responding](/office/troubleshoot/performance/office-applications-not-responding) | modified |
+| 11/5/2020 | [How work and duration are calculated with assignment changes](/office/troubleshoot/project/calculate-work-duration-assignment) | modified |
+| 11/5/2020 | [Cannot save to Global.mpt error when exiting Microsoft Project](/office/troubleshoot/project/cant-save-to-global.mpt-error) | modified |
+| 11/5/2020 | [Circular Relationship Error when indenting Task](/office/troubleshoot/project/circular-relationship-error-when-indenting-task) | modified |
+| 11/5/2020 | [Error occurs when accessing Project Web App](/office/troubleshoot/project/error-accessing-project-web-app) | modified |
+| 11/5/2020 | [Error when you add or edit a resource in Enterprise Resource Pool](/office/troubleshoot/project/error-when-add-edit-resource) | modified |
+| 11/5/2020 | [Error when you click on the Projects link in the top navigation bar in Project Online](/office/troubleshoot/project/error-when-click-on-project-links) | modified |
+| 11/5/2020 | [Error when opening a Visual Report in Project 2010 with Office 2013](/office/troubleshoot/project/error-when-open-visual-report-in-project) | modified |
+| 11/5/2020 | [Iexplorer.exe encountered a problem error when viewing timesheet in PWA](/office/troubleshoot/project/iexplorer.exe-encountered-problem) | modified |
+| 11/5/2020 | [Importing a Task Outline Structure into Project](/office/troubleshoot/project/import-task-outline-structure) | modified |
+| 11/5/2020 | [The operation has timed out when connecting to OData by using SSIS in Project Online](/office/troubleshoot/project/operation-times-out-if-connect-odata) | modified |
+| 11/5/2020 | [Sync with SharePoint tasks list from Project Professional](/office/troubleshoot/project/sync-with-tasks-from-project) | modified |
+| 11/5/2020 | [Display issues in Office client applications.](/office/troubleshoot/settings/office-display-issues) | modified |
+| 11/5/2020 | [You receive an end tag error when you open a DOCX file in Word 2013, 2010, or 2007](/office/troubleshoot/word/end-tag-error-when-open-docx) | modified |
+| 11/5/2020 | [Image DPI is changed after you print to PDF from Word 2013 or 2010](/office/troubleshoot/word/image-dpi-change-after-print-to-pdf) | modified |
+| 11/5/2020 | [How to troubleshoot problems that occur when you start or use Word](/office/troubleshoot/word/issues-when-start-or-use-word) | modified |
+| 11/5/2020 | [Opening a file is blocked by your registry policy setting or File Block settings in Word](/office/troubleshoot/word/opening-file-blocked-by-registry-policy) | modified |
+
+
 ## Week of October 26, 2020
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 10/29/2020 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
-
-
-## Week of October 19, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/21/2020 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
-| 10/21/2020 | Excel, Word or PowerPoint file does not open because of file associations | removed |
-
-
-## Week of October 12, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/12/2020 | [Unable to open an Access database on a server](/office/troubleshoot/access/error-opening-database) | modified |
-| 10/14/2020 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
-| 10/15/2020 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
-
-
-## Week of October 05, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/office/troubleshoot/index) | modified |
-| 10/8/2020 | [Export a text file with both comma and quote delimiters in Excel](/office/troubleshoot/excel/export-text-file-with-comma-quote) | modified |
-| 10/9/2020 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
-| 10/9/2020 | [Convert degrees/minutes/seconds angles to or from decimal angles](/office/troubleshoot/excel/convert-degrees-minutes-seconds-angles) | modified |
-
-
-## Week of September 28, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/28/2020 | [Error 80004005 when using ADO or ODBC to connect an Access database](/office/troubleshoot/access/error-80004005-connecting-access-database) | modified |
-| 9/28/2020 | [OLE DB Provider for Jet and ODBC driver are 32-bit versions only](/office/troubleshoot/access/jet-odbc-driver-available-32-bit-version) | modified |
-| 9/28/2020 | [Description of LDB File](/office/troubleshoot/access/ldb-file-description) | modified |
-| 9/28/2020 | [Runtime error 2147319779 (8002801d) when setting a company as default](/office/troubleshoot/access/library-unregistered-runtime-error) | modified |
-| 9/28/2020 | [Office 2010 product key change error step by step](/office/troubleshoot/activation/office-2010-product-key-change-error) | modified |
-| 9/28/2020 | [Description of the algorithm used by the XIRR function in Excel](/office/troubleshoot/excel/algorithm-of-xirr-funcation) | modified |
-| 9/28/2020 | [Use macro to apply cell shading format to every other row in a selected range](/office/troubleshoot/excel/apply-cell-shading-format-by-macro) | modified |
-| 9/28/2020 | [Apply different passwords or permissions to separate ranges in workbooks](/office/troubleshoot/excel/apply-password-to-separate-range) | modified |
-| 9/28/2020 | [Description of the limitations for working with arrays in Excel](/office/troubleshoot/excel/arrays-limitations) | modified |
-| 9/28/2020 | [Auto-Complete may not work](/office/troubleshoot/excel/autocomplete-not-work) | modified |
-| 9/28/2020 | [How to calculate ages before 1/1/1900 in Excel](/office/troubleshoot/excel/calculate-age-before-1-1-1900) | modified |
-| 9/28/2020 | [Center Across Columns button doesn't appear in Excel](/office/troubleshoot/excel/center-across-columns-button-disappear) | modified |
-| 9/28/2020 | [That command cannot be used on multiple selections](/office/troubleshoot/excel/command-cannot-be-used-on-selections) | modified |
-| 9/28/2020 | [The conditional formatting is set incorrectly when using VBA in Excel](/office/troubleshoot/excel/conditional-formatting-set-incorrectly) | modified |
-| 9/28/2020 | [The following connection failed to refresh in Excel 2013](/office/troubleshoot/excel/connection-failed-to-refresh) | modified |
-| 9/28/2020 | [Copy all range names programmatically](/office/troubleshoot/excel/copy-range-names) | modified |
-| 9/28/2020 | [Create application-level event handlers in Excel](/office/troubleshoot/excel/create-application-level-event-handler) | modified |
-| 9/28/2020 | [How to create and use two-input data tables in Excel](/office/troubleshoot/excel/create-two-input-data-tables) | modified |
-| 9/28/2020 | [Custom function may not calculate correct value](/office/troubleshoot/excel/custom-function-calculate-wrong-value) | modified |
-| 9/28/2020 | [How column widths are determined in Excel](/office/troubleshoot/excel/determine-column-widths) | modified |
-| 9/28/2020 | [Unexpected behavior when using different print quality for Excel sheets](/office/troubleshoot/excel/different-print-quality) | modified |
-| 9/28/2020 | [Digital signatures and code signing in workbooks in Excel](/office/troubleshoot/excel/digital-signatures-code-signing) | modified |
-| 9/28/2020 | [An error message when you sort a range that contains merged cells in Excel](/office/troubleshoot/excel/error-sort-a-range-merged-cell) | modified |
-| 9/28/2020 | [Export a text file with both comma and quote delimiters in Excel](/office/troubleshoot/excel/export-text-file-with-comma-quote) | modified |
-| 9/28/2020 | [Cannot access Excel through ADO and ODBC](/office/troubleshoot/excel/fails-accessing-excel-through-odbc) | modified |
-| 9/28/2020 | [Margins do not fit page size when printing an Excel workbook](/office/troubleshoot/excel/fails-printing-a-workbook) | modified |
-| 9/28/2020 | [Unable to start Excel for Mac](/office/troubleshoot/excel/fails-starting-excel-mac) | modified |
-| 9/28/2020 | [Registry keys that control the File Repair feature](/office/troubleshoot/excel/file-repair-registry-key) | modified |
-| 9/28/2020 | [Sample user-defined function to hide formula errors](/office/troubleshoot/excel/hide-formula-error) | modified |
-| 9/28/2020 | [Hide sheets and use xlVeryHidden constant in a macro](/office/troubleshoot/excel/hide-sheet-and-use-xlveryhidden) | modified |
-| 9/28/2020 | [Date format that's convert a CSV text file by using VBA is not correct](/office/troubleshoot/excel/incorrect-date-format-converted-csv-file) | modified |
-| 9/28/2020 | [The result is false when you use the ISBLANK function](/office/troubleshoot/excel/isblank-function-return-false) | modified |
-| 9/28/2020 | [How to link a Visio drawing to a specific region in an Excel worksheet](/office/troubleshoot/excel/link-visio-drawing-to-a-specific-region) | modified |
-| 9/28/2020 | [Sample macro to insert and delete rows or columns on multiple sheets](/office/troubleshoot/excel/macro-insert-delete-rows-columns) | modified |
-| 9/28/2020 | [Macro to extract data from a chart in Excel](/office/troubleshoot/excel/macro-retrieves-chart-data) | modified |
-| 9/28/2020 | [Make Paste Options button disappear after you paste](/office/troubleshoot/excel/make-paste-options-button-disappear) | modified |
-| 9/28/2020 | [Columns and rows are labeled numerically](/office/troubleshoot/excel/numeric-columns-and-rows) | modified |
-| 9/28/2020 | [Misleading labels in the output of Excel Analysis ToolPak t-Test tools](/office/troubleshoot/excel/output-misleading-labels) | modified |
-| 9/28/2020 | [Programmatically print all embedded charts on a worksheet](/office/troubleshoot/excel/print-embedded-charts) | modified |
-| 9/28/2020 | [Formatted text is limited to 240 characters per line](/office/troubleshoot/excel/prn-file-limited-to-240-characters) | modified |
-| 9/28/2020 | [How To query and update Excel data using ADO from ASP](/office/troubleshoot/excel/query-update-data) | modified |
-| 9/28/2020 | [Excel process still runs after quitting using a VBA macro programmatically](/office/troubleshoot/excel/quitting-process-continues-running) | modified |
-| 9/28/2020 | [You cannot remove error tracing arrow in Excel](/office/troubleshoot/excel/removing-error-tracing-arrow-fails) | modified |
-| 9/28/2020 | [Excel statistical functions Representing ties by using RANK](/office/troubleshoot/excel/representing-ties-using-rank) | modified |
-| 9/28/2020 | [Unable to make changes to legend entries in a chart in Excel](/office/troubleshoot/excel/run-time-error-1004) | modified |
-| 9/28/2020 | [Programmatically save an excel file to a network drive](/office/troubleshoot/excel/save-file-to-network-drive) | modified |
-| 9/28/2020 | [Use Saved property to determine if workbook has changed](/office/troubleshoot/excel/saved-property-determine-workbook-is-changed) | modified |
-| 9/28/2020 | [Set page setup attributes for more than one sheet](/office/troubleshoot/excel/set-page-setup-attributes) | modified |
-| 9/28/2020 | [How to set up and use the RTD function in Excel](/office/troubleshoot/excel/set-up-realtimedata-function) | modified |
-| 9/28/2020 | [The SpecialCells(xlCellTypeBlanks) VBA function doesn't work as expected](/office/troubleshoot/excel/specialcells(xlcelltypeblanks)-vba-function) | modified |
-| 9/28/2020 | [Excel statistical functions CHIINV](/office/troubleshoot/excel/statistical-functions-chiinv) | modified |
-| 9/28/2020 | [Differences between Excel statistical functions STDEVPA and STDEVP](/office/troubleshoot/excel/statistical-functions-differences) | modified |
-| 9/28/2020 | [Excel statistical functions GROWTH](/office/troubleshoot/excel/statistical-functions-growth) | modified |
-| 9/28/2020 | [Excel statistical functions INTERCEPT](/office/troubleshoot/excel/statistical-functions-intercept) | modified |
-| 9/28/2020 | [Excel statistical functions LOGEST](/office/troubleshoot/excel/statistical-functions-logest) | modified |
-| 9/28/2020 | [Excel statistical functions RSQ](/office/troubleshoot/excel/statistical-functions-rsq) | modified |
-| 9/28/2020 | [Excel statistical functions STEYX](/office/troubleshoot/excel/statistical-functions-steyx) | modified |
-| 9/28/2020 | [Excel/Outlook for Mac border missing when pasting table in email](/office/troubleshoot/excel/table-border-missing) | modified |
-| 9/28/2020 | [Unable to cast COM object when exporting to Excel from Team Explorer 2008](/office/troubleshoot/excel/team-explorer-export-fails) | modified |
-| 9/28/2020 | [Display more digits in trendline equation coefficients](/office/troubleshoot/excel/trendline-equation-coefficient-digits) | modified |
-| 9/28/2020 | [How to turn off Function Argument ToolTips in Excel](/office/troubleshoot/excel/turn-off-function-argument-tooltips) | modified |
-| 9/28/2020 | [Excel works with two-digit year numbers](/office/troubleshoot/excel/two-digit-year-numbers) | modified |
-| 9/28/2020 | [How to use cell references and defined names in criteria in Excel](/office/troubleshoot/excel/use-cell-references-defined-names) | modified |
-| 9/28/2020 | [Delete cells by using a For Each Next loop](/office/troubleshoot/excel/use-for-each-next-loop-to-delete-cell) | modified |
-| 9/28/2020 | [Use the left, right, mid, and len functions in visual basic for applications](/office/troubleshoot/excel/use-left-right-mid-len-function) | modified |
-| 9/28/2020 | [Use OnEntry macro to create a running total in a cell comment](/office/troubleshoot/excel/use-onentry-to-create-running-total) | modified |
-| 9/28/2020 | [Use shared workbooks with different versions of Excel](/office/troubleshoot/excel/use-shared-workbook) | modified |
-| 9/28/2020 | [How to use startup folders in Excel](/office/troubleshoot/excel/use-startup-folders) | modified |
-| 9/28/2020 | [Use a worksheet function in a Visual Basic macro](/office/troubleshoot/excel/worksheet-function-in-vb-macro) | modified |
-| 9/28/2020 | [Known issues with Office for Mac on MacOS 10.7 (Lion) and Higher](/office/troubleshoot/office-for-mac/office-for-mac-issues-macos-10-7) | modified |
-| 9/28/2020 | [Cannot pass the Welcome Screen in Office for Mac](/office/troubleshoot/office-for-mac/office-for-mac-welcome-screen) | modified |
-| 9/28/2020 | [Powerpoint for Mac closes unexpectedly](/office/troubleshoot/office-for-mac/powerpoint-mac-closes-unexpectedly) | modified |
-| 9/28/2020 | [Error 25090 when you start an Office program](/office/troubleshoot/office-suite-issues/error-25090-starting-office-program) | modified |
-| 9/28/2020 | [Error when you open a Word document or an Excel worksheet](/office/troubleshoot/office-suite-issues/error-open-word-excel) | modified |
-| 9/28/2020 | [0x80004005 General Error Unable to Open Registry Key](/office/troubleshoot/office-suite-issues/fails-accessing-page-connected-access-database) | modified |
-| 9/28/2020 | [Cannot embed an Adobe OpenType font in an Office document](/office/troubleshoot/office-suite-issues/fails-embedding-adobe-opentype-font) | modified |
-| 9/28/2020 | [Can't open an Office file that has a long folder name](/office/troubleshoot/office-suite-issues/fails-opening-long-folder-name-files) | modified |
-| 9/28/2020 | [Unable to open the Office Customization Tool](/office/troubleshoot/office-suite-issues/fails-running-office-customization-tool) | modified |
-| 9/28/2020 | [Incorrect function when saving an Office file to a CD-RW or a DVD/CD-RW drive](/office/troubleshoot/office-suite-issues/incorrect-function-saving-office-file) | modified |
-| 9/28/2020 | [Microsoft program cannot be opened because of a problem](/office/troubleshoot/office-suite-issues/microsoft-program-cannot-be-opened) | modified |
-| 9/28/2020 | [Mobile viewing PDF files with Office Web Apps](/office/troubleshoot/office-suite-issues/mobile-viewing-pdf-files) | modified |
-| 9/28/2020 | [Run-Time Error 13 Type Mismatch when setting FW company as default](/office/troubleshoot/office-suite-issues/run-time-error-13-type-mismatch) | modified |
-| 9/28/2020 | [A single-byte font to replace a double-byte font error in PowerPoint 2010](/office/troubleshoot/office-suite-issues/single-byte-font-replace-error) | modified |
-| 9/28/2020 | [View error signatures if Office programs experience a serious error and quits](/office/troubleshoot/office-suite-issues/view-error-signatures) | modified |
-| 9/28/2020 | [Can't view or change an Office document that's saved as a Web page](/office/troubleshoot/office-suite-issues/web-page-missing-file-error) | modified |
-| 9/28/2020 | [Unable to start PowerPoint for Mac](/office/troubleshoot/powerpoint/fails-starting-powerpoint-mac) | modified |
-| 9/28/2020 | [Not enough printer memory available to print page](/office/troubleshoot/powerpoint/not-enought-printer-memory-available) | modified |
-| 9/28/2020 | [PowerPoint cannot load an add-in when you lower macro security level](/office/troubleshoot/powerpoint/powerpoint-fails-loading-add-in) | modified |
-| 9/28/2020 | [PowerPoint stops responding (spinning wheel)](/office/troubleshoot/powerpoint/powerpoint-stops-responding) | modified |
-| 9/28/2020 | [Error messages when you view a PowerPoint  presentation](/office/troubleshoot/powerpoint/viewing-presentation-fails) | modified |
-| 9/28/2020 | [How to edit Windows registry to clear the list of most recently used files](/office/troubleshoot/settings/clear-most-recently-used-file) | modified |
-| 9/28/2020 | [Description of task panes in Office programs](/office/troubleshoot/settings/office-program-task-panes) | modified |
-| 9/28/2020 | [Third-party installed font does not appear in the font list in Word for Mac](/office/troubleshoot/third-party-add-ins/third-party-installed-font-fails-appearing) | modified |
-| 9/29/2020 | [How to recover a lost Word document](/office/troubleshoot/word/recover-lost-document) | modified |
-| 9/30/2020 | How to use common Data Definition Language (DDL) SQL statements for the Jet database engine | removed |

@@ -10,7 +10,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer: 
 appliesto:
 - Microsoft 365
@@ -580,7 +581,7 @@ To verify that the remote routing address is set, follow these steps:
 
 Verify that the Org Relationship settings are configured correctly to enable Free/busy for the users.
 
-#### For Online Settings
+#### For online settings
 
 Connect to Exchange Online by using Windows PowerShell. For more information about how to do this, see [Connect Windows PowerShell to the Service](http://help.outlook.com/140/cc952755.aspx).
 
@@ -600,7 +601,7 @@ The output should resemble the following:
 
 If a value must be changed, use the `set-OrganizationRelationship` cmdlet to fix the property. For more information about syntax and options to do this, see [Set-OrganizationRelationship](/powershell/module/exchange/set-organizationrelationship).
 
-#### For On-Premises settings
+#### For on-premises settings
 
 From the Exchange 2010/2013 CAS, run the following command in Exchange Management Shell:
 

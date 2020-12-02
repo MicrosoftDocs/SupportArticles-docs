@@ -9,7 +9,8 @@ ms.topic: article
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer: kellybos, aruiz, kerbo
 appliesto:
 - Exchange Online

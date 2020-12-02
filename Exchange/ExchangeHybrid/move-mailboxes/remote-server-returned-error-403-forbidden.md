@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer: 
 appliesto:
 - Exchange Online
@@ -122,4 +123,4 @@ For more information, see the following resources:
 - [Move mailboxes between on-premises and Exchange Online organizations in 2013 hybrid deployments](/exchange/hybrid-deployment/move-mailboxes)
 - [Start the MRSProxy Service on a Remote Client Access server](/previous-versions/office/exchange-server-2010/ee732395(v=exchg.141))
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

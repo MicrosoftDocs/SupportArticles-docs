@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer: minhng
 appliesto:
 - Exchange Online
@@ -81,4 +82,4 @@ The remote server returned an error: (413) Request Entity Too Large...
 
 For more information, see [User contact photos in Lync aren't displayed correctly](/SkypeForBusiness/troubleshoot/online-contacts/user-contact-photos-not-correct).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).
