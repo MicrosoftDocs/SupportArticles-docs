@@ -19,7 +19,6 @@ appliesto:
 ms.reviewer: 
 ---
 # The Get-DistributionGroupMember command does not return all the members of distribution group if there are multiple Active Directory domains in your topology environment
-
 _Original KB number:_ &nbsp; 975555
 
 ## Symptoms
