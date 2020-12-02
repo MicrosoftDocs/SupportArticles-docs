@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, cenki
+ms.reviewer: kaushika, cenki, v-jesits
 ms.prod-support-area-path: DST and Timezones
 ms.technology: ShellExperience
 ---
@@ -24,12 +24,12 @@ _Original KB number:_ &nbsp; 2905782
 
 Versions of Windows and Windows Server that are earlier than Windows 8 and Windows Server 2012 use the following date formats:
 
-Short Date: dd.MM.yyyy
+Short Date: dd.MM.yyyy  
 Long Date: dd MMMM yyyy dddd
 
 Starting in Windows 8 and Windows Server 2012, the date formats are changed to the following:
 
-Short Date: d.M.yyyy
+Short Date: d.M.yyyy  
 Long Date: d MMMM yyyy dddd
 
 This change may cause some tools or programs that depend on the earlier date formats to fail.
