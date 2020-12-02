@@ -47,7 +47,7 @@ When this problem occurs, DCDiag validates the reference object for DFSR. Also, 
 
 ## Cause
 
-This problem occurs because there's no File System Replication(FRS) reference in the Active Directory database under the domain controller object when DFSR is used for sysvol replication. Instead, there's only an object for DFSR.
+This problem occurs because there's no File Replication Service (FRS) reference in the Active Directory database under the domain controller object when DFSR is used for sysvol replication. Instead, there's only an object for DFSR.
 
 This logic isn't included in earlier versions of DCDiag, such as DCDiag for Windows Server 2008 or DCDiag installed together with Windows Server 2003 Support Tools. So these versions search for the FRS member reference, and it generates a false error in DCDiag.
 
