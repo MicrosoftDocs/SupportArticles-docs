@@ -33,7 +33,7 @@ One of the following situations occurs:
 
 Either situation can be caused by one of the following conditions:
 
-- The TLS certificate is not the minimum required version of TLS 1.2.
+- The TLS connection is not using the minimum required version of TLS 1.2.
 - The SBC certificate is self-signed or not assigned by a trusted CA.
 
 ## Resolution
