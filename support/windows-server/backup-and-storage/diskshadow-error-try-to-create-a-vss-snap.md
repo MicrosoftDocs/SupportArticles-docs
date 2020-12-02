@@ -1,5 +1,5 @@
 ---
-title: Diskshadow error when you try to create a Volume Shadow Services (VSS) snapshot
+title: Diskshadow error when you create VSS snapshot
 description: Describes an issue that triggers an error message when you try to create a VSS diskshadow snapshot. The error message reflects a benign condition that doesn't disrupt the backup operation.
 ms.date: 09/14/2020
 author: Deland-Han
@@ -22,17 +22,13 @@ _Original KB number:_ &nbsp; 3025158
 
 ## Symptoms  
 
-When you open an administrator command prompt and create a VSS diskshadow snapshot in Windows Server 2012 or Windows Server 2012 R2, the output may contain an error:  
+When you open an administrator command prompt and create a VSS diskshadow snapshot in Windows Server 2012 R2, the output may contain an error:  
 
-====================================  
-DISKSHADOW> add volume c:
-
-DISKSHADOW> create
-
+> ====================================  
+DISKSHADOW> add volume c:  
+DISKSHADOW> create  
 COM call "lvssObject4->GetRootAndLogicalPrefixPaths" failed.  
-
 ...  
-
 ====================================
 
 ## Cause

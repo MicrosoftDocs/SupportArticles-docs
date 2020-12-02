@@ -34,49 +34,45 @@ The names of the administrative and technical contacts for registered domains ar
 
 The information contained in the InterNIC database can be especially valuable if there is a problem with internetworking between two domains. For example, WHOIS can help determine who to contact if there is a problem with Internet mail that cannot be resolved through e-mail. WHOIS can show the Exchange Server administrator the name and phone number of the administrator at a destination host.
 
-ACCESSING WHOIS:
+## Access WHOIS
 
-WHOIS Client:
+- WHOIS client:
 
-The WHOIS client program accesses the InterNIC database directly and is included with UNIX systems. There are also clients available for other platforms including Windows and Windows NT.
+    The WHOIS client program accesses the InterNIC database directly and is included with UNIX systems. There are also clients available for other platforms including Windows and Windows NT.
 
-If you have shell account access to the Internet that includes the WHOIS client, type the following: whois domain.com 
-"domain.com" is the name of the Internet domain of the host that you are interested in. The InterNIC registers secondary domain names only. For best results DO NOT include Fully Qualified Domain Name (FQDN) on the query. FQDNs include the higher-level domains associated with an Internet site. Only secondary domain names will return contact information.
+    If you have shell account access to the Internet that includes the WHOIS client, type `whois domain.com`.
 
-Example:
+    domain.com is the name of the Internet domain of the host that you are interested in. The InterNIC registers secondary domain names only. For best results DO NOT include Fully Qualified Domain Name (FQDN) on the query. FQDNs include the higher-level domains associated with an Internet site. Only secondary domain names will return contact information.
 
-Wrong: `www.microsoft.com`
-Correct: `microsoft.com`
+    Example:
 
-Direct Telnet Session:
+    Wrong: `www.microsoft.com`
+    Correct: `microsoft.com`
 
-All systems that have access to the Internet should have the ability to use a standard telnet client to connect to the InterNIC to run the WHOIS client from their system. Networks that restrict access to the Internet through use of a firewall will not be able to use this method if tcp port 23 (standard telnet port) access is blocked.
+- Direct Telnet session
 
-Exchange Server administrators may run the Windows NT Telnet client from the computer that is running the IMC. Any telnet client from any host connected to the Internet should work.
+    All systems that have access to the Internet should have the ability to use a standard telnet client to connect to the InterNIC to run the WHOIS client from their system. Networks that restrict access to the Internet through use of a firewall will not be able to use this method if tcp port 23 (standard telnet port) access is blocked.
 
-In telnet, connect to "internic.net". Once connected you may run WHOIS commands as listed in the client instructions above.
+    Exchange Server administrators may run the Windows NT Telnet client from the computer that is running the IMC. Any telnet client from any host connected to the Internet should work.
 
-World Wide Web:
+    In telnet, connect to `internic.net`. Once connected you may run WHOIS commands as listed in the client instructions above.
 
-The Web Interface to WHOIS is a searchable database through a Web page. To access WHOIS using any World Wide Web (WWW) client, connect to:
- [InterNIC WHOIS](https://www.internic.net/whois.html) Electronic Mail:
+- World Wide Web
 
-If you cannot access the previous methods, but you have access to Internet mail, you can send your query to mailserv@internic.net. Enter your command in the subject line or as the first line of the body of the message. All other text is ignored. You must prefix your command with the word "WHOIS" just like the client examples above. Requests through electronic mail are processed automatically once per day.
+    The Web Interface to WHOIS is a searchable database through a Web page. To access WHOIS using any World Wide Web (WWW) client, connect to [InterNIC WHOIS](https://www.internic.net/whois.html) Electronic Mail.
 
-OTHER TOP LEVEL DOMAINS:
+    If you cannot access the previous methods, but you have access to Internet mail, you can send your query to `mailserv@internic.net`. Enter your command in the subject line or as the first line of the body of the message. All other text is ignored. You must prefix your command with the word WHOIS just like the client examples above. Requests through electronic mail are processed automatically once per day.
 
-The InterNIC provides registration information for COM, .EDU, .NET, .ORG, and .GOV domains only. However, the WHOIS client works with other top-level domains. Top-level domains that do not provide compatibility with WHOIS may provide other tools to research domains.
+- Other top level domains:
 
-Other Registries:
+    The InterNIC provides registration information for COM, .EDU, .NET, .ORG, and .GOV domains only. However, the WHOIS client works with other top-level domains. Top-level domains that do not provide compatibility with WHOIS may provide other tools to research domains.
 
-[.US Domain Registry - Internet Assigned Numbers Authority (IANA)](https://www.iana.org/numbers.htm)
+Other registries:
 
-[.CA Domain - CA*net Canadian IP Address Registry and the Canadian Domain Name Registry.](https://www.cadns.ca/) 
-
-[NIC-Mexico - Mexico Registration Mexico](https://www.nicmexico.mx/) 
-
-[RIPE NCC Europe Registration](https://www.ripe.net/) 
-
-[APNIC (Asia Pacific Network Information Center)](https://www.apnic.net/) 
+- [.US Domain Registry - Internet Assigned Numbers Authority (IANA)](https://www.iana.org/numbers.htm)
+- [.CA Domain - CA*net Canadian IP Address Registry and the Canadian Domain Name Registry.](https://www.cadns.ca/)
+- [NIC-Mexico - Mexico Registration Mexico](https://www.nicmexico.mx/)
+- [RIPE NCC Europe Registration](https://www.ripe.net/)
+- [APNIC (Asia Pacific Network Information Center)](https://www.apnic.net/)
 
 Some information above was provided by Network Solutions, Inc., the sponsor of InterNIC registration services. Additional information is available on the [InterNIC web page](https://www.internic.net) and [RFC 1400 - "Transition and Modernization of the Internet Registration Service"](https://tools.ietf.org/html/rfc1400).

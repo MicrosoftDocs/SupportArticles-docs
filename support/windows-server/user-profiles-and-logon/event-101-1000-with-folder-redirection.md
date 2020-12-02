@@ -13,9 +13,9 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Folder redirection
 ms.technology: UserProfilesAndLogon 
 ---
-# Event ID 101 and Event ID 1000 Messages May Be Displayed When Folder Redirection Is Set Up with Group Policy
+# Event ID 101 and Event ID 1000 may be displayed When Folder Redirection is set up with Group Policy
 
-This article provides a solution to solve an issue where you fail to set up Folder Redirection component of Group Policy and Event ID 1000 and 101 are logged.
+This article provides a solution to an issue where you fail to set up Folder Redirection component of Group Policy and Event ID 1000 and 101 are logged.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 291087
@@ -48,12 +48,12 @@ This problem can occur when you use Group Policy to set up its Folder Redirectio
 
 ## Resolution
 
-To resolve this problem:
+To resolve this problem, follow these steps:
 
 1. Load the appropriate Group Policy from the domain.
-2. Click User Configuration, click Windows Setting, and then click Folder Redirection.
-3. Right-click the appropriate Folder Redirection component, and then click Properties.
-4. Click the Basic setting in the Target tab, and then under Settings, click to clear the **Grant the user exclusive rights to the folder name** check box.
+2. Click **User Configuration**, click **Windows Setting**, and then click **Folder Redirection**.
+3. Right-click the appropriate Folder Redirection component, and then click **Properties**.
+4. Click the **Basic setting** in the **Target** tab, and then under **Settings**, clear the **Grant the user exclusive rights to the folder name** check box.
 5. Save the settings, and then quit.
 
 ## Status

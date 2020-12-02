@@ -15,14 +15,16 @@ ms.technology: SysManagementComponents
 ---
 # Windows PowerShell cmdlet Grant-DfsnAccess doesn't change inheritance on DFS links
 
+This article provides workarounds for an issue where Windows PowerShell cmdlet `Grant-DfsnAccess` can't change inheritance on Distributed File System (DFS) links.
+
 _Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2 Standard, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2938148
 
 ## Symptoms
 
-You use the Windows PowerShell cmdlet Grant-DfsnAccess to set permissions on Distributed File System (DFS) links in a DFS namespace in order to have the links filtered by Access Based Enumeration, as in the following example:
+You use the Windows PowerShell cmdlet `Grant-DfsnAccess` to set permissions on DFS links in a DFS namespace in order to have the links filtered by Access Based Enumeration, as in the following example:
 
-```console
+```powershell
 Grant-DfsnAccess -Path "\\Contoso.com\Software\Projects" -AccountName "Contoso\SarahJones"
 ```
 
@@ -30,25 +32,21 @@ Although the command is completed successfully and the result of the cmdlet show
 
 ## Cause
 
-Although the Grant-DfsnAccess  cmdlet successfully configures the view permissions for individual groups or users, the cmdlet doesn't change the inheritance mode from use inherited to set explicit. Therefore, the permissions that are set on the link don't take effect.
+Although the `Grant-DfsnAccess` cmdlet successfully configures the view permissions for individual groups or users, the cmdlet doesn't change the inheritance mode from use inherited to set explicit. Therefore, the permissions that are set on the link don't take effect.
 
-Microsoft is aware of this problem with the Windows PowerShell cmdlet Grant-DfsnAccess.
+Microsoft is aware of this problem with the Windows PowerShell cmdlet `Grant-DfsnAccess`.
 
 ## Workaround
 
 To work around this problem, use one of the following methods.
 
-Method 1  
+- Manually disable inheritance in the DFS Management Console by selecting the **Set explicit view permissions** option.
 
-Manually disable inheritance in the DFS Management Console by selecting the Set explicit view permissions option.
+- Use the dfsutil `property sd grant` command instead, as in the following example:
 
-Method 2  
-
-Use the dfsutil property sd grant command instead, as in the following example:
-
-```console
-dfsutil property sd grant \\Contoso.com\Software\Projects Contoso\SarahJones:RX protect
-```
+    ```powershell
+    dfsutil property sd grant \\Contoso.com\Software\Projects Contoso\SarahJones:RX protect
+    ```
 
 ## More information
 

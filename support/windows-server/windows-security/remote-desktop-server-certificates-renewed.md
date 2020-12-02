@@ -39,8 +39,7 @@ The underlying cause of this behavior is related to the RDS component and to a m
 
 ## Resolution
 
-To resolve this problem, you must set the certificate template's attribute's template display name and template name to the same value, such as RemoteDesktopComputer. This procedure is suggested in the following Microsoft article:
- [Security](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771869(v=ws.10))
+To resolve this problem, you must set the certificate template's attribute's template display name and template name to the same value, such as RemoteDesktopComputer. This procedure is suggested in [Security](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771869(v=ws.10)).
 
 Then, you must update the GPO setting Computer Configuration\Policies\Administrative Templates\Windows Components\Terminal Services\Terminal Server\Security\Server Authentication Certificate Template based on the new template name, such as RemoteDesktopComputer. After the server receives the new GPO setting during the processing of the background GPO redraw, the certificates are no longer renewed on a twice-daily basis.
 

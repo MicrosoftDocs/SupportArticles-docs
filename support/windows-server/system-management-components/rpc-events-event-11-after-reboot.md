@@ -24,23 +24,23 @@ _Original KB number:_ &nbsp; 974814
 
 When you run the servermanager.msc for extended periods of time or start the rhs.exe hosting FileServer Resource, the following Application event log warning is written:
 
-For DHCP Servers you may notice the following event description:
+- For DHCP Servers, you may notice the following event description:
 
-Log Name: Application
-Source: Microsoft-Windows-RPC-Events
-Event ID: 11
-Task Category: None
-Level: Warning
-Keywords:
-User: CONTOSO\Administrator
-Computer: contoso.com
-Description:
-Possible Memory Leak. Application ("C:\WINDOWS\SYSTEM32\MMC.EXE" "C:\WINDOWS\SYSTEM32\SERVERMANAGER.MSC") (PID: 584) has passed a non-NULL pointer to RPC for an [out] parameter marked [allocate(all_nodes)]. [allocate(all_nodes)] parameters are always reallocated; if the original pointer contained the address of valid memory, that memory will be leaked. The call originated on the interface with UUID ({6bffd098-a112-3610-9833-46c3f874532d}), Method number (2). User Action: Contact your application vendor for an updated version of the application.
+    > Log Name: Application  
+    Source: Microsoft-Windows-RPC-Events  
+    Event ID: 11  
+    Task Category: None  
+    Level: Warning  
+    Keywords:  
+    User: CONTOSO\Administrator  
+    Computer: contoso.com  
+    Description:  
+    Possible Memory Leak. Application ("C:\WINDOWS\SYSTEM32\MMC.EXE" "C:\WINDOWS\SYSTEM32\SERVERMANAGER.MSC") (PID: 584) has passed a non-NULL pointer to RPC for an [out] parameter marked [allocate(all_nodes)]. [allocate(all_nodes)] parameters are always reallocated; if the original pointer contained the address of valid memory, that memory will be leaked. The call originated on the interface with UUID ({6bffd098-a112-3610-9833-46c3f874532d}), Method number (2). User Action: Contact your application vendor for an updated version of the application.
 
-For FileServer resource: 
+- For FileServer resource:
 
-Description:
-Possible Memory Leak. Application (C:\Windows\Cluster\rhs.exe -key SYSTEM\CurrentControlSet\Services\ClusSvc\Parameters\Rhs\\\<GUID> -parentPid \<ParentPid> -initEvent \<initEvent> -replyEndpoint \<replyEndpoint>) (PID: \\\<PID>) has passed a non-NULL pointer to RPC for an [out] parameter marked [allocate(all_nodes)]. [allocate(all_nodes)] parameters are always reallocated; if the original pointer contained the address of valid memory, that memory will be leaked. The call originated on the interface with UUID ({4B324FC8-1670-01D3-1278-5A47BF6EE188}), Method number \<Method number>). User Action: Contact your application vendor for an updated version of the application.
+    > Description:  
+    Possible Memory Leak. Application (C:\Windows\Cluster\rhs.exe -key SYSTEM\CurrentControlSet\Services\ClusSvc\Parameters\Rhs\\\<GUID> -parentPid \<ParentPid> -initEvent \<initEvent> -replyEndpoint \<replyEndpoint>) (PID: \\\<PID>) has passed a non-NULL pointer to RPC for an [out] parameter marked [allocate(all_nodes)]. [allocate(all_nodes)] parameters are always reallocated; if the original pointer contained the address of valid memory, that memory will be leaked. The call originated on the interface with UUID ({4B324FC8-1670-01D3-1278-5A47BF6EE188}), Method number \<Method number>). User Action: Contact your application vendor for an updated version of the application.
 
 ## Cause
 
@@ -52,4 +52,4 @@ There is no memory leak or functional impact to this specific condition. This wa
 
 ## More information
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
+Microsoft has confirmed that this is a problem in the Microsoft products that are listed at the beginning of this article.

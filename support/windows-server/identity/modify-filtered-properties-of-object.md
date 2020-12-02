@@ -15,12 +15,18 @@ ms.technology: ActiveDirectory
 ---
 # How to modify the filtered properties of an object in ACL Editor for Directory Services objects
 
-This article describes how to modify the filtered properties of an object.
+This article describes how to modify the filtered properties of an object in ACL Editor for Directory Services objects.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 296490
 
-The Per-Property Permissions tab for a user object that you view through Active Directory Users and Computers may not display every property of the user object. This is because the user interface for access control filters out object and property types to make the list easier to manage. While the properties of an object are defined in the schema, the list of filtered properties that are displayed is stored in the Dssec.dat file that is located in the %systemroot%\System32 folder on all domain controllers. You can edit the entries for an object in the file to display the filtered properties through the user interface. A filtered property looks like this in the Dssec.dat file:
+## Summary
+
+The **Per-Property Permissions** tab for a user object that you view through Active Directory Users and Computers may not display every property of the user object. This is because the user interface for access control filters out object and property types to make the list easier to manage. While the properties of an object are defined in the schema, the list of filtered properties that are displayed is stored in the Dssec.dat file that is located in the %systemroot%\System32 folder on all domain controllers. You can edit the entries for an object in the file to display the filtered properties through the user interface.
+
+## Filtered properties in the Dssec.dat file
+
+A filtered property looks like this in the Dssec.dat file:
 
 [User]  
 propertyname=7

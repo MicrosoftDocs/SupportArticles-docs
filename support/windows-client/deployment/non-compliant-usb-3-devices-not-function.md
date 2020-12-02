@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Devices and Drivers
 ms.technology: Deployment 
 ---
-# Some non-compliant USB 3.0 devices may not function when connected to USB 3.0 ports on Windows 8
+# Some non-compliant USB 3.0 devices may not function when connected to USB 3.0 ports in Windows 8
 
 This article provides a solution to an issue where some non-compliant USB 3.0 devices don't function when connected to USB 3.0 ports.
 

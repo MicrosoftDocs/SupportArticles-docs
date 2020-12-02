@@ -1,5 +1,5 @@
 ---
-title: Save documents to OneDrive by default
+title: Inaccurate policy name in OneDrive Administrative Templates
 description: Describes a discrepancy in the policy name in Microsoft OneDrive Group Policy Administrative Templates.
 ms.date: 09/16/2020
 author: Deland-Han
@@ -13,7 +13,7 @@ ms.reviewer: kaushika, ryanman
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
 ms.technology: GroupPolicy
 ---
-# "Save documents to OneDrive by default" is a OneDrive Group Policy Administrative Templates discrepancy in Windows 8.1
+# Save documents to OneDrive by default is a OneDrive Group Policy Administrative Templates discrepancy in Windows 8.1
 
 This article explains a discrepancy in the policy name in Microsoft OneDrive Group Policy Administrative Templates.
 
@@ -26,9 +26,11 @@ In the OneDrive Group Policy Administrative Templates that are dated September 1
 
 ## More information
 
-Currently, the inaccurate policy name is as follows: **Save documents to OneDrive by default**  
+Currently, the inaccurate policy name is: **Save documents to OneDrive by default**.
 
-And the policy description is as follows: This policy setting lets you disable OneDrive as the default save location. It does not prevent apps and users from saving files on OneDrive. If you disable this policy setting, files will be saved locally by default. Users will still be able to change the value of this setting to save to OneDrive by default. They will also be able to open and save files on OneDrive using the OneDrive app and file picker, and Microsoft Store apps will still be able to access OneDrive using the WinRT API. If you enable or do not configure this policy setting, users with a connected account will save documents to OneDrive by default.
+And the policy description is as follows:
+
+This policy setting lets you disable OneDrive as the default save location. It does not prevent apps and users from saving files on OneDrive. If you disable this policy setting, files will be saved locally by default. Users will still be able to change the value of this setting to save to OneDrive by default. They will also be able to open and save files on OneDrive using the OneDrive app and file picker, and Microsoft Store apps will still be able to access OneDrive using the WinRT API. If you enable or do not configure this policy setting, users with a connected account will save documents to OneDrive by default.
 
 Actually, the policy name should be: **Save documents to the local PC by default**  
 
