@@ -152,15 +152,15 @@
   - name: SIP OPTIONS
     items:
     - name: 200 OK message not received by SBC
-      href: ../sip-options/sbc-did-not-receive-200-ok.md
+      href: ./sip-options/sbc-did-not-receive-200-ok.md
     - name: 200 OK message received but not SIP OPTIONS
-      href: ../sip-options/sbc-receives-200-ok-but-not-sip-options.md
+      href: ./sip-options/sbc-receives-200-ok-but-not-sip-options.md
     - name: FQDN doesn't match the CN or SAN certificates
-      href: ../sip-options/fqdn-does-not-match-cn-or-san-cert.md
+      href: ./sip-options/fqdn-does-not-match-cn-or-san-cert.md
     - name: SBC is inactive or is not responding
-      href: ../sip-options/sbc-inactive-or-ms-does-not-respond.md
+      href: ./sip-options/sbc-inactive-or-ms-does-not-respond.md
     - name: The domain not fully activated on the Microsoft server
-      href: ../sip-options/domain-name-not-activated-on-ms-server.md
+      href: ./sip-options/domain-name-not-activated-on-ms-server.md
   - name: Sites
     items:
     - name: Websites aren't viewable
@@ -202,12 +202,12 @@
   - name: TLS Certificates
     items:
     - name: Hello message doesn't contain SBC or required certificates
-      href: ../tls-certificates/certs-missing-in-tls-hello-message.md
+      href: ./tls-certificates/certs-missing-in-tls-hello-message.md
     - name: Connection closes and sending SIP OPTIONS fails
-      href: ../tls-certificates/connection-closes-sip-options-fails.md
+      href: ./tls-certificates/connection-closes-sip-options-fails.md
     - name: SBC certificate is not valid
-      href: ../tls-certificates/sbc-certificate-is-invalid.md
+      href: ./tls-certificates/sbc-certificate-is-invalid.md
     - name: SBC connection is interrupted
-      href: ../tls-certificates/sbc-connection-is-interrupted.md
+      href: ./tls-certificates/sbc-connection-is-interrupted.md
     - name: SBC doesn't trust SIP proxy certificate 
-      href: ../tls-certificates/sbc-does-not-trust-sip-proxy-cert.md
+      href: ./tls-certificates/sbc-does-not-trust-sip-proxy-cert.md
