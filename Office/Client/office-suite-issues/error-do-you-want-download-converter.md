@@ -55,7 +55,7 @@ To resolve this issue, follow the steps below.
 4. When the file opens, select **Save As** to save the file in the Word 2010, Excel 2010, or PowerPoint 2010 default format.
 
     > [!NOTE]
-    > If you are still experiencing issues after running this procedure, see one of the following Office blogs:
+    > If you are still experiencing issues after running this procedure, see the following Office Blogs for additional resources that may be useful:
     >
     > - [Microsoft Office Word Support Team Blog](https://blogs.technet.microsoft.com/wordonenotesupport/2016/11/02/do-you-want-to-download-the-converter-when-you-try-to-open-a-file-in-excel-word-or-powerpoint-kb-article/)
     > - [The Microsoft Excel Support Team Blog](https://blogs.technet.microsoft.com/the_microsoft_excel_support_team_blog/2016/11/02/do-you-want-to-download-the-converter-when-you-try-to-open-a-file-in-excel-word-or-powerpoint-kb-article/)
