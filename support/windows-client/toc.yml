@@ -4,7 +4,7 @@
   items:
   - name: Active Directory
     href: ./identity/active-directory-overview.md
-  - name: Schema update - known issues, best practies, workflow review
+  - name: Schema update - known issues, best practices, workflow review
     items:
     - name: Error when checking domain object property
       href: ./identity/error-when-checking-domain-object-property.md
