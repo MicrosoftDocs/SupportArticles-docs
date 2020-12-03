@@ -26,7 +26,7 @@ The NTFS file system contains at its core, a file called the master file table (
 
 Because utilities that defragment NTFS volumes cannot move MFT entries, and because excessive fragmentation of the MFT can impact performance, NTFS reserves space for the MFT in an effort to keep the MFT as contiguous as possible as it grows.
 
-In Windows and in Windows Server, the defrag utility defrags the MFT.
+In Windows, the defrag utility defrags the MFT.
 
 ## The defrag utility
 

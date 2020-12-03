@@ -46,9 +46,9 @@ The basic requirements for inter-forest migration operations are:
 - An empty local group in the source domain that is named *{SourceNetBIOSDom}$$$*.
 - The `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\LSA\TcpipClientSupport`registry key must be set to 1 on the source domain primary domain controller.
 - You must restart the source domain primary domain controller after the registry configuration.
-- If the target domain is a Windows domain, Windows security requires user credentials with administrator rights in the target domain. You add these credentials in the wizard when sIDHistory migration is turned on.
+- Windows security requires user credentials with the delegated MigratesIDHistory extended right or administrator rights in the target domain. You add these credentials in the wizard when sIDHistory migration is turned on.
 
-To delegate the MigrateSidHistory extended right on a Windows Server domain controller or on a computer that has the Windows Server Administration Tools pack installed, follow these steps:
+To delegate the MigrateSidHistory extended right on a domain controller or on a computer that has the Windows Server Administration Tools pack installed, follow these steps:
 
 1. Click **Start**, click **Administrative Tools**, and then click **Active Directory Users and Computers**.
 2. Right-click the name of the domain that you want to delegate the MigrateSidHistory extended right from, and then click **Delegate Control** to open the **Delegation of Control Wizard** window.
@@ -58,7 +58,6 @@ To delegate the MigrateSidHistory extended right on a Windows Server domain cont
 6. Make sure that the **General** option is selected, click **Migrate SID History** in the
 **Permissions** list, and then click **Next**.
 7. Verify that the information is correct, and then click **Finish**.
-    - If the target domain is a Windows Server domain, Windows security requires user credentials with the delegated MigratesIDHistory extended right or administrator rights in the target domain.
     - No sID to be migrated may exist in the target forest, either as a primary sID or as an sIDHistory attribute of another object.
 
 #### Additional requirements for migrating sIDHistory with the command line or scripting interfaces
