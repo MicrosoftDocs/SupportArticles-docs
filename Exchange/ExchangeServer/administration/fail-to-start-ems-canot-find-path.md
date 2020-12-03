@@ -8,7 +8,9 @@ ms.topic: article
 ms.author: batre
 manager: dcscontentpm
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Exchange Server
+- CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:

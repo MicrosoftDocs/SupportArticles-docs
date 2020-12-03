@@ -9,14 +9,14 @@ ms.topic: troubleshooting
 ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
+- Exchange Online
 - CSSTroubleshoot
 - 'Associated content asset: 4555315'
 appliesto: 
 - Exchange Online
 search.appverid: MET150
 ---
-
-# "554 5.6.0 Invalid message content" NDR when an Office 365 user sends a message that contains an Excel attachment
+# (554 5.6.0 Invalid message content) NDR when an Office 365 user sends a message that contains an Excel attachment
 
 _Original KB number:_&nbsp;2984127
 

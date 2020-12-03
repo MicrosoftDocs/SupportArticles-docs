@@ -5,10 +5,11 @@ author: TobyTu
 ms.author: haembab
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
+ms.topic: troubleshooting 
 ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
+- Exchange Online
 - CI 123399
 - CSSTroubleshoot
 ms.reviewer: haembab
@@ -17,7 +18,6 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-
 # Error when sending email to mail-enabled public folders in Office 365: 554 5.2.2 mailbox full
 
 ## Symptoms
@@ -34,8 +34,8 @@ STOREDRV.Deliver.Exception:QuotaExceededException.MapiExceptionQuotaExceeded'
 
 This issue occurs when any of these conditions is met:
 
-- The organization's default public folder post quota (*DefaultPublicFolderProhibitPostQuota*) has been reached.
-- The individual public folder post quota (*PublicFolderProhibitPostQuota*) has been reached.
+- The organization's default public folder post quota (`DefaultPublicFolderProhibitPostQuota`) has been reached.
+- The individual public folder post quota (`PublicFolderProhibitPostQuota`) has been reached.
 - The Content Public Folder mailbox hosting the mail-enabled public folder has reached its quota.
 
 ## Resolution
@@ -44,50 +44,50 @@ Here's how to identify which quota has been reached and take corrective steps:
 
 ### Step 1: Check individual public folder quota
 
-1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
-2. Check the value of *TotalItemSize* for the affected mail-enabled public folder:
+1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+2. Check the value of `TotalItemSize` for the affected mail-enabled public folder:
 
     ```powershell
     Get-PublicFolderStatistics \pfname | FL TotalItemSize
     ```
 
-3. Check if the value of *TotalItemSize* has reached or exceeded the value of *ProhibitPostQuota*.
+3. Check if the value of `TotalItemSize` has reached or exceeded the value of `ProhibitPostQuota`.
 
     ```powershell
     Get-PublicFolder \pfname | FL *quota*
     ```
 
-    If that's the case,  increase the *ProhibitPostQuota* value of that mail-enabled public folder or set it to **Unlimited**.
+    If that's the case, increase the `ProhibitPostQuota` value of that mail-enabled public folder or set it to **Unlimited**.
 
     > [!NOTE]
-    > If the default value of *prohibitpostquota* is set to **Unlimited**, the value that was configured for *DefaultPublicFolderProhibitPostQuota* at the organization level applies. If the *PublicFolderProhibitPostQuota* value has been configured on the public folder, this value will take precedence over the value set at the organization level.
+    > If the default value of `prohibitpostquota` is set to **Unlimited**, the value that was configured for `DefaultPublicFolderProhibitPostQuota` at the organization level applies. If the `PublicFolderProhibitPostQuota` value has been configured on the public folder, this value will take precedence over the value set at the organization level.
 
     For more information, read [Understanding modern public folder quotas](https://techcommunity.microsoft.com/t5/Exchange-Team-Blog/Understanding-modern-public-folder-quotas/ba-p/607463).
 
-4. Check if the value of *TotalItemSize* has exceeded the value of *DefaultPublicFolderProhibitPostQuota*:
+4. Check if the value of `TotalItemSize` has exceeded the value of `DefaultPublicFolderProhibitPostQuota`:
 
     ```powershell
     Get-OrganizationConfig | FL *quota*
     ```
 
-    A *TotalItemSize* larger than *DefaultPublicFolderProhibitPostQuota* prevents mail-enabled public folders from accepting new emails.
+    A `TotalItemSize` larger than `DefaultPublicFolderProhibitPostQuota` prevents mail-enabled public folders from accepting new emails.
 
 Here are two ways to resolve this issue:
 
-1. Increase the *ProhibitPostQuota* of the public folder at the user level if there are only a few affected public folders.
+1. Increase the `ProhibitPostQuota` of the public folder at the user level if there are only a few affected public folders.
 
     ```powershell
     Set-PublicFolder \pfname -ProhibitPostQuota 5GB -IssueWarningQuota 4GB
     ```
 
-2. Increase the *DefaultPublicFolderProhibitPostQuota* for all public folders at the organization level.
+2. Increase the `DefaultPublicFolderProhibitPostQuota` for all public folders at the organization level.
 
     ```powershell
     Set-OrganizationConfig -DefaultPublicFolderProhibitPostQuota 5GB -DefaultPublicFolderIssueWarningQuota 4GB
     ```
 
 > [!NOTE]
-> Avoid a large increase of the individual public folder *Prohibitpostquota*. Setting this value too high will impact the auto-split process negatively.
+> Avoid a large increase of the individual public folder `Prohibitpostquota`. Setting this value too high will impact the auto-split process negatively.
 
 If this quota hasn't been exceeded, proceed to the next step.
 
@@ -95,20 +95,20 @@ If this quota hasn't been exceeded, proceed to the next step.
 
 If the public folder hasn't exceeded the individual or organizational quota as shown in Step 1, check if the public folder mailbox hosting the public folder content has exceeded its quota.
 
-1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
+1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. Find the content public folder mailbox's name for the mail-enabled public folder:
 
     ```powershell
     Get-PublicFolder \pfname |FL name, *content*
     ```
 
-3. Check the value of *TotalItemSize* for the content public folder mailbox:
+3. Check the value of `TotalItemSize` for the content public folder mailbox:
 
     ```powershell
     Get-MailboxStatistics pfmbx | FL TotalItemSize
     ```
 
-4. Check if the value of *TotalItemSize* has exceeded the value of *ProhibitSendRecieveQuota*:
+4. Check if the value of `TotalItemSize` has exceeded the value of `ProhibitSendRecieveQuota`:
 
     ```powershell
     Get-Mailbox -PublicFolder pfmbx | FL *quota*

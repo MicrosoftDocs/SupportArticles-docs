@@ -5,7 +5,9 @@ author: TobyTu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Exchange Server
+- CSSTroubleshoot
 ms.prod: exchange-server-it-pro
 ms.topic: article
 ms.author: batre

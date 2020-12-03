@@ -10,7 +10,8 @@ ms.author: v-weizhu
 localization_priority: Normal
 search.appverid: 
 - MET150
-ms.custom:
+ms.custom: 
+- Outlook for Mac
 - CSSTroubleshoot
 appliesto:
 - Microsoft Outlook for Mac

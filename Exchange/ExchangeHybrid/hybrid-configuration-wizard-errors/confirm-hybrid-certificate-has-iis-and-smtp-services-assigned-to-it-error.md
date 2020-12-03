@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer: scotro
 appliesto:
 - Exchange Online
@@ -45,10 +46,10 @@ Make sure that the certificate that you specified in the Hybrid Configuration wi
 
 3. In the Hybrid Configuration wizard, you specified a certificate that was to be used for secure mail transport.Locate the information for that certificate.
 4. Make sure that the following parameter values are set for the certificate:
-   - *IsSelfSigned* parameter: This parameter value should be **False**.
-   - *RootCAType* parameter: This parameter value should be **Third Party**.
-   - *Services* parameter: This parameter value should be **IIS, SMTP (at a minimum)**.
-   - *NotAfter* parameter: This parameter value is the certificate expiration date. The date should not be expired.
+   - `IsSelfSigned` parameter: This parameter value should be **False**.
+   - `RootCAType` parameter: This parameter value should be **Third Party**.
+   - `Services` parameter: This parameter value should be **IIS, SMTP (at a minimum)**.
+   - `NotAfter` parameter: This parameter value is the certificate expiration date. The date should not be expired.
 
     > [!NOTE]
     > If IIS, SMTP, or both are missing from the *Services* parameter, enable the services. To do this, run the following command:

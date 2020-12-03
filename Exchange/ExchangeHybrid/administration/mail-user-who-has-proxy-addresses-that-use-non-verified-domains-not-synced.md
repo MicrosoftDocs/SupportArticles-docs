@@ -1,5 +1,5 @@
 ---
-title: Mail user who has proxy addresses is not synced
+title: Mail user who has proxy addresses isn't synced
 description: Describes an issue in which a mail user who has proxy addresses that use non-verified domains isn't synced to Exchange Online in an Exchange hybrid deployment.
 author: simonxjx
 ms.author: v-six
@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer: jbower, jmartin
 appliesto:
 - Exchange Online

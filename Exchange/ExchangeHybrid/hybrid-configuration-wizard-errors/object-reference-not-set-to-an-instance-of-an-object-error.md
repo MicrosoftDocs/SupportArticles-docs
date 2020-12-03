@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer: timothyh
 appliesto:
 - Exchange Online
@@ -32,7 +33,7 @@ Object reference not set to an instance of an object.
 
 The hybrid object is missing from the Active Directory domain. For example, this can occur if the object was deleted.
 
-## Resolution Method 1 - Rerun setup /prepareAD
+## Resolution 1 - Rerun setup /prepareAD
 
 1. On the server that is running Microsoft Exchange Server, open a Command Prompt window as an administrator, and then change to the folder in which the Exchange installation files are stored.
 
@@ -45,7 +46,7 @@ The hybrid object is missing from the Active Directory domain. For example, this
 3. Restart the server.
 4. Rerun the Hybrid Configuration wizard.
 
-## Resolution Method 2 - Perform an authoritative restore of the hybrid object
+## Resolution 2 - Perform an authoritative restore of the hybrid object
 
 Restore the hybrid object that was deleted from the following location:
 

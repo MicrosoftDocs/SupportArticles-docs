@@ -5,10 +5,11 @@ author: TobyTu
 ms.author: batre
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
+ms.topic: troubleshooting 
 ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
+- Exchange Online
 - CI 111727
 - CSSTroubleshoot
 ms.reviewer: batre, EXOL_Triage
@@ -17,16 +18,13 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-
-# "The mailbox is not found in the local forest" error when you access public folders
+# (The mailbox is not found in the local forest) error when you access public folders
 
 ## Symptom
 
 When you try to access public folders by using EAC or Exchange Online PowerShell, you receive an error message that resembles the following:
 
-```
-The mailbox 'Mailbox GUID' is not found in the local forest. Please connect using ConnectionUri as https://outlook.office365.com/powershell-liveid?email=<emailaddressofthemailbox> while running New-PSSession
-```
+> The mailbox 'Mailbox GUID' is not found in the local forest. Please connect using ConnectionUri as `https://outlook.office365.com/powershell-liveid?email=<emailaddressofthemailbox>` while running New-PSSession
 
 ## Cause
 
@@ -54,5 +52,4 @@ Microsoft is researching this problem and will post more information in this art
 
 ## More information
 
-In this situation, it's possible that either the administrator's mailbox or public folder mailbox was redistributed among different forests. This may have been done as part of the [go-local](https://docs.microsoft.com/office365/enterprise/moving-data-to-new-datacenter-geos) initiative or to load balance mailboxes. Currently, there's no option available in EAC to administer the public folders that are in different forests.
-
+In this situation, it's possible that either the administrator's mailbox or public folder mailbox was redistributed among different forests. This may have been done as part of the [go-local](/microsoft-365/enterprise/moving-data-to-new-datacenter-geos) initiative or to load balance mailboxes. Currently, there's no option available in EAC to administer the public folders that are in different forests.

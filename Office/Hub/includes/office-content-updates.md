@@ -2,6 +2,40 @@
 
 
 
+## Week of November 23, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/23/2020 | [Can't open a file (.xslx, .docx, .pptx) in Excel 2010, Word 2010, or PowerPoint 2010](/office/troubleshoot/office-suite-issues/error-do-you-want-download-converter) | modified |
+| 11/23/2020 | [Office Online Server and Office Web Apps Server limitations and features with Information Rights Management (IRM)](/office/troubleshoot/administration/office-online-limitations-and-features-with-information-rights-management) | modified |
+| 11/24/2020 | [Can't open a file (.xslx, .docx, .pptx) in Excel 2010, Word 2010, or PowerPoint 2010](/office/troubleshoot/office-suite-issues/error-do-you-want-download-converter) | modified |
+| 11/24/2020 | [Error (Do you want to download the converter) in Office](/office/troubleshoot/office-suite-issues/error-do-you-want-download-converter) | modified |
+| 11/26/2020 | [Guests have no access to assigned Planner tasks](/office/troubleshoot/planner/guests-cannot-comment-assigned-tasks) | modified |
+
+
+## Week of November 16, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/17/2020 | [Access linked table to SQL Server database returns Deleted](/office/troubleshoot/access/access-linked-table-deleted) | modified |
+| 11/17/2020 | [Long numbers are displayed incorrectly in Excel](/office/troubleshoot/excel/long-numbers-incorrectly-in-excel) | added |
+| 11/17/2020 | [How to merge multiple Word documents into one](/office/troubleshoot/word/merge-word-documents) | added |
+| 11/17/2020 | [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state) | modified |
+| 11/19/2020 | [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state) | modified |
+
+
+## Week of November 09, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/9/2020 | [Formula returns "#VALUE!" error](/office/troubleshoot/excel/formula-returns-value-error) | modified |
+| 11/9/2020 | [You receive an end tag error when you open a DOCX file in Word 2013, 2010, or 2007](/office/troubleshoot/word/end-tag-error-when-open-docx) | modified |
+| 11/11/2020 | [Can't use the Access ODBC driver or OLEDB provider outside Office Click-to-Run](/office/troubleshoot/access/cannot-use-odbc-or-oledb) | modified |
+
+
 ## Week of November 02, 2020
 
 
@@ -81,33 +115,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 10/29/2020 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
-
-
-## Week of October 19, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/21/2020 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
-| 10/21/2020 | Excel, Word or PowerPoint file does not open because of file associations | removed |
-
-
-## Week of October 12, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/12/2020 | [Unable to open an Access database on a server](/office/troubleshoot/access/error-opening-database) | modified |
-| 10/14/2020 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
-| 10/15/2020 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
-
-
-## Week of October 05, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/office/troubleshoot/index) | modified |
-| 10/8/2020 | [Export a text file with both comma and quote delimiters in Excel](/office/troubleshoot/excel/export-text-file-with-comma-quote) | modified |
-| 10/9/2020 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
-| 10/9/2020 | [Convert degrees/minutes/seconds angles to or from decimal angles](/office/troubleshoot/excel/convert-degrees-minutes-seconds-angles) | modified |

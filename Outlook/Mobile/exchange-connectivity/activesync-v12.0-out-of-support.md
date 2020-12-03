@@ -9,6 +9,7 @@ ms.topic: article
 ms.service: o365-proplus-itpro
 localization_priority: Normal
 ms.custom: 
+- Outlook for iOS and Android
 - CI 114951
 - CSSTroubleshoot
 ms.reviewer: grtaylor
