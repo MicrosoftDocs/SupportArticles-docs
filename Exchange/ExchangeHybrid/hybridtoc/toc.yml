@@ -75,6 +75,8 @@
       href: ../email-delivery/email-messages-incorrectly-quarantined.md
     - name: Emails are rejected and senders receive NDRs
       href: ../email-delivery/emails-are-rejected-and-receive-ndrs.md
+    - name: Emails are stuck in queues
+      href: ../../ExchangeServer/mailflow/email-stuck-queues.md
     - name: Exchange 2013-based hybrid deployment mail issues after April 15, 2016
       href: ../email-delivery/mails-issues-occur-after-april-15-2016.md
     - name: Exchange Online Mail Flow Diagnostic

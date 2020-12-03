@@ -439,6 +439,8 @@
       href: ../mailflow/edge-transport-servers-reject-messages.md
     - name: Email body part is shown incorrectly as an attachment
       href: ../mailflow/message-body-shown-as-attachment.md
+    - name: Emails are stuck in queues
+      href: ../mailflow/email-stuck-queues.md
     - name: Emails aren't delivered to all recipients
       href: ../mailflow/emails-not-delivered-dynamic-distribution-group.md
     - name: Emails sent to Exchange Online appear external
