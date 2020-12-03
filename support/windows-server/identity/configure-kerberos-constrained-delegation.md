@@ -42,10 +42,12 @@ Associate the service account with a Service Principle Name (SPN). To do this, f
 
 1. In **Active Directory Users and Computers**, connect to the domain, and then select **PKI** > **PKI Users**.  
 
-1. Right-click the service account (for example, web_svc), and then select **Properties**.
-1. Select **Attribute Editor** > **servicePrincipalName**.
-1. Type the new SPN string, select **Add** (as shown in the following figure), and then select **OK**.  
+2. Right-click the service account (for example, web_svc), and then select **Properties**.
+3. Select **Attribute Editor** > **servicePrincipalName**.
+4. Type the new SPN string, select **Add** (as shown in the following figure), and then select **OK**.  
+
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/active-directory-users-computers.png" alt-text="Guidance to configure the HTTP SPNs.":::
+
    > [!NOTE]  
    > You can also use Windows PowerShell to configure the SPN. To do this, open an elevated PowerShell window, and then run **setspn -s *SPN* *Accountname***. For example, run the following command:
    >  
