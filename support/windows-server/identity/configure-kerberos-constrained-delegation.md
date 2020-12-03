@@ -63,6 +63,7 @@ Associate the service account with a Service Principle Name (SPN). To do this, f
    > [!NOTE]  
    > This account is also known as the "machine account."
 4. Configure S4U2self (Protocol Transition) constrained delegation on the computer account. To do this, right-click the computer account, and then select **Properties** > **Delegation** > **Trust this computer for delegation to specified services only**. Select **Use any authentication protocol**.  
+
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/set-s4u2self-contained-delegation.png" alt-text="Set up delegation":::
 
 ### 3. Create and bind the SSL certificate for web enrollment
@@ -78,6 +79,7 @@ To enable the web enrollment pages, create a domain certificate for the website,
 3. In the **Actions** menu, select **Create a Domain Certificate**.
 4. After the certificate is created, select **Default Web Site** in the console tree, and then select **Bindings**.
 5. Make sure that **Port** is set to **443**. Then under **SSL certificate**, select the certificate that you created in step 3.  
+
     :::image type="content" source="./media/configure-kerberos-constrained-delegation/add-site-binding.png" alt-text="Add certificate and bind it to port 443 for scenario 1":::  
 6. Select **OK** to bind the certificate to port 443.  
 
@@ -91,9 +93,11 @@ To enable the web enrollment pages, create a domain certificate for the website,
 
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/advanced-settings.png" alt-text="Configure Application pool Advanced Settings.":::
 2. Select **Process Model** > **Identity**, select **Custom account**, and then select **Set**. Specify the name and password of the service account.  
+
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/add-custom-account.png" alt-text="Configure the Application Pool Identity as the custom service account.":::
 3. Select **OK** in the **Set Credentials** and **Application Pool Identity** dialog boxes.
 4. In **Advanced Settings**, locate **Load User Profile**, and make sure that it's set to **True**.  
+
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/load-user-profile.png" alt-text="Set the Load User Profile setting to True.":::  
 5. Restart the computer.
 
@@ -156,6 +160,7 @@ To enable the web enrollment pages, create a domain certificate for the website,
 3. In the **Actions** menu, select **Create a Domain Certificate**.
 4. After the certificate is created, select **Default Web Site**, and then select **Bindings**.
 5. Make sure that **Port** is set to **443**. Then, under **SSL certificate**, select the certificate that you created in step 3. Select **OK** to bind the certificate to port 443.  
+
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/bind-server-cert.png" alt-text="Add certificate and bind it to port 443":::
 
 ### 3. Configure the Web Enrollment front-end server to use the NetworkService account
@@ -164,8 +169,10 @@ To enable the web enrollment pages, create a domain certificate for the website,
 
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/advanced-settings.png" alt-text="Select Advanced Settings  of the default app pool.":::
 2. Select **Process Model** > **Identity**. Make sure that **Built-in account** is selected, and then select **NetworkService**. Then, select **OK**.  
+
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/iis-apppool-id-netserv.png" alt-text="Configure the Application Pool Identity as the built-in NetworkService account.":::
 3. In **Advanced Properties**, locate **Load User Profile**, and then make sure that it's set to **True**.  
+
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/netserv-loaduserprf.png" alt-text="Set Load User Profile to True.":::
 4. Restart the IIS service.
 
