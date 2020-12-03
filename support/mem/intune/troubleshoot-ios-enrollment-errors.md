@@ -1,30 +1,7 @@
 ---
 title: Troubleshooting iOS/iPadOS device enrollment problems in Microsoft Intune
-titleSuffix: Microsoft Intune
 description: Suggestions for troubleshooting some of the most common problems when you enroll iOS/iPadOS devices in Intune.
-keywords:
-author: v-miegge
-ms.author: erikje
-manager: dougeby
-ms.date: 12/03/2020
-ms.topic: troubleshooting
-ms.service: microsoft-intune
-ms.subservice: enrollment
-ms.localizationpriority: medium
-ms.technology:
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mghadial
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
-ms.collection: M365-identity-device-management
 ---
 
 # Troubleshoot iOS/iPadOS device enrollment problems in Microsoft Intune
