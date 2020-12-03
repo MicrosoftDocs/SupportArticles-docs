@@ -15,6 +15,7 @@ ms.custom:
 - CI 124314
 - Exchange Server
 appliesto:
+- Exchange Online
 - Exchange Server 2019
 - Exchange Server 2016
 - Exchange Server 2013
