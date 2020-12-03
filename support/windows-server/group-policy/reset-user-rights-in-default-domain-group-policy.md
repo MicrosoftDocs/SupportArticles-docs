@@ -38,15 +38,16 @@ To edit the Gpttmpl.inf file, follow these steps.
 > [!IMPORTANT]
 > Back up the Gpttmpl.inf file before you perform this procedure.
 
-1. Start Windows Explorer and open the following folder, where **Sysvol_path** is the path of the Sysvol folder:  
-**Sysvol_path**\\Sysvol\\**DomainName**\\Policies\\{31B2F340-016D-11D2-945F-00C04FB984F9}\\Machine\Microsoft\\Windows NT\\SecEdit
+1. Start Windows Explorer and open the following folder, where **Sysvol_path** is the path of the Sysvol folder:
+  
+    **Sysvol_path**\\Sysvol\\**DomainName**\\Policies\\{31B2F340-016D-11D2-945F-00C04FB984F9}\\Machine\Microsoft\\Windows NT\\SecEdit
 
     > [!NOTE]
-    > The default path of the Sysvol folder is %SystemRoot%\Sysvol.
+    > The default path of the Sysvol folder is %SystemRoot%\\Sysvol.
 2. Right-click **Gpttmpl.inf**, and then click **Open**.
 3. To completely reset the user rights to the default settings, replace the existing information in the Gpttmpl.inf file with the following default user-rights information. To do so, paste the following text in the appropriate section of your current Gpttmpl.inf file:
 
-    > [Unicode]  
+    ```inf
     Unicode=yes  
     [System Access]  
     MinimumPasswordAge = 0  
@@ -67,6 +68,7 @@ To edit the Gpttmpl.inf file, follow these steps.
     [Version]  
     signature="$CHICAGO$"  
     Revision=1
+    ```
 
 4. On the **File** menu, click **Save**, and then click **Exit**.
 
@@ -77,9 +79,11 @@ To edit the Gpttmpl.inf file, follow these steps.
 
 The Gpt.ini file controls the GPO template version numbers. You must edit the Gpt.ini file to increase the GPO template version number. To do so:
 
-1. Start Windows Explorer and open the following folder, where **Sysvol_path** is the path of the Sysvol folder: **Sysvol_path** \Sysvol\Domain\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}
-> [!NOTE]
-> The default path of the Sysvol folder is %SystemRoot%\Sysvol.
+1. Start Windows Explorer and open the following folder, where **Sysvol_path** is the path of the Sysvol folder:
+    **Sysvol_path**\\Sysvol\\Domain\\Policies\\{31B2F340-016D-11D2-945F-00C04FB984F9}
+
+    > [!NOTE]
+    > The default path of the Sysvol folder is %SystemRoot%\\Sysvol.
 
 2. Right-click **Gpt.ini**, and then click **Open**.
 3. Increase the version number to a number that is sufficient to guarantee that typical replication does not outdate the new version number before the policy is reset. Increment the number either by adding the number "0" to the end of the version number or the number "1" to the beginning of the version number.
@@ -91,20 +95,16 @@ Apply the new GPO by using the GPUpdate tool to manually reapply all policy sett
 
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type cmd, and then click **OK**.
-3. At the command prompt, type the following line, and then press ENTER: GPUpdate /Force 
+3. At the command prompt, type the following line, and then press ENTER: GPUpdate /Force
 
 4. Type exit and then press ENTER to quit the command prompt.
 
-> [!NOTE]
-> To look for errors in policy processing, review the event log.Use Event Viewer to verify that the GPO was successfully applied. To do so:
+    > [!NOTE]
+    > To look for errors in policy processing, review the event log.
+
+Use Event Viewer to verify that the GPO was successfully applied. To do so:
 
 1. Click **Start**, point to **Administrative Tools**, and then click **Event Viewer**.
 2. Click **Application**.
 
 Look for Event ID 1704 to verify that the GPO was successfully applied.
-
-## References
-
-For additional information about refreshing policy settings, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[298444](https://support.microsoft.com/help/298444) A Description of the Group Policy Update Utility

@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika, nedpyle
+ms.reviewer: kaushika, nedpyle, qianyu
 ms.prod-support-area-path: Administration
 ms.technology: RDS
 ---
