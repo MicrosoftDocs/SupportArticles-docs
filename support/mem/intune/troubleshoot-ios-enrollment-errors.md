@@ -101,8 +101,8 @@ Collect the following information about the problem:
 
 #### Resolution
 
-- If the MDM push certificate isn't configured, follow the steps in [Get an Apple MDM push certificate](apple-mdm-push-certificate-get.md#steps-to-get-your-certificate).
-- If the MDM push certificate is invalid, follow the steps in [Renew Apple MDM push certificate](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
+- If the MDM push certificate isn't configured, follow the steps in [Get an Apple MDM push certificate](/mem/intune/enrollment/apple-mdm-push-certificate-get#steps-to-get-your-certificate).
+- If the MDM push certificate is invalid, follow the steps in [Renew Apple MDM push certificate](/mem/intune/enrollment/apple-mdm-push-certificate-get#renew-apple-mdm-push-certificate).
 
 ### Company Portal Temporarily Unavailable. The Company Portal app encountered a problem. If the problem persists, contact your system administrator.
 
@@ -171,7 +171,7 @@ Collect the following information about the problem:
 **Cause:** The Apple Push Notification Service (APNs) certificate is missing, invalid, or expired.
 
 #### Resolution
-Verify that a valid APNs certificate is added to Intune. For more information, see [Set up iOS/iPadOS enrollment](ios-enroll.md).
+Verify that a valid APNs certificate is added to Intune. For more information, see [Set up iOS/iPadOS enrollment](/mem/intune/enrollment/ios-enroll).
 
 ### AccountNotOnboarded
 
@@ -183,7 +183,7 @@ Renew the APNs certificate, and then re-enroll the device.
 > [!IMPORTANT]
 > Make sure that you renew the APNs certificate. Don't replace the APNs certificate. If you replace the certificate, you have to re-enroll all iOS/iPadOS devices in Intune. 
 
-- To renew the APNs certificate in Intune standalone, see [Renew Apple MDM push certificate](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
+- To renew the APNs certificate in Intune standalone, see [Renew Apple MDM push certificate](/mem/intune/enrollment/apple-mdm-push-certificate-get#renew-apple-mdm-push-certificate).
 - To renew the APNs certificate in Microsoft 365, see [Create an APNs Certificate for iOS/iPadOS devices](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
 
 ### XPC_TYPE_ERROR Connection invalid
@@ -322,7 +322,7 @@ Open the **Settings** app and select Company Portal. In the Company Portal setti
 ## Next steps
 
 - [Troubleshoot device enrollment in Intune](troubleshoot-device-enrollment-in-intune.md)
-- [Ask a question on the Intune forum](/answers/products/mem)
+- [Ask a question on the Intune forum](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
 - [Check the Microsoft Intune Support Team Blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Check the Microsoft Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
 - [Overall Token Sync errors](https://developer.apple.com/documentation/devicemanagement/device_assignment/authenticating_with_a_device_enrollment_program_dep_server/interpreting_error_codes)
