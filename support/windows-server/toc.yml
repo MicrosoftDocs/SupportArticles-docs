@@ -384,7 +384,7 @@
       href: ./identity/use-online-dbdump-feature-ldp-dot-exe.md
     - name: View and set LDAP policy by using Ntdsutil
       href: ./identity/view-set-ldap-policy-using-ntdsutil.md
-  - name: Schema update - known issues, best practies, workflow review
+  - name: Schema update - known issues, best practices, workflow review
     items:
     - name: How to find the current Schema Version
       href: ./identity/find-current-schema-version.md
