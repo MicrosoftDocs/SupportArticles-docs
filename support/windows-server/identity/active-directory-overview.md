@@ -32,7 +32,7 @@ The topics in this section provide solutions and scenario guides to help you tro
 - Domain controller scalability or performance (including LDAP)
 - Domain join issues
 - LDAP configuration and interoperability
-- Schema update - known issues, best practies, workflow review
+- Schema update - known issues, best practices, workflow review
 - Schema update failure or conflict
 - Transport Layer Security (TLS)
 - User, computer, group, and object management
