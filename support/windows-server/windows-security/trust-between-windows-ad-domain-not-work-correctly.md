@@ -384,36 +384,36 @@ The following list of Group Policy objects (GPOs) provides the location of the c
   - Windows 2000 and Windows Server 2003 registry location:
          `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\LSA`
   - Windows 2000 Group Policy: **Computer Configuration\\Windows Settings\\Security Settings\\ Security Options Additional restrictions for anonymous connections**  
-  - Windows Server 2003 Group Policy: Computer Configuration \\Windows Settings\\Security Settings\\Security Options Network access: Do not allow anonymous enumeration of SAM accounts and shares
+  - Windows Server 2003 Group Policy: **Computer Configuration\\Windows Settings\\Security Settings\\Security Options Network access: Do not allow anonymous enumeration of SAM accounts and shares**
 
 - The RestrictAnonymousSAM GPO:
 
   - Windows Server 2003 registry location:
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\LSA`
-  - Windows Server 2003 Group Policy: **Computer Configuration \\Windows Settings \\ Security Settings  Security Options Network access: Do not allow anonymous enumeration of SAM accounts and shares**  
+  - Windows Server 2003 Group Policy: **Computer Configuration\\Windows Settings\\Security Settings  Security Options Network access: Do not allow anonymous enumeration of SAM accounts and shares**  
 
 - The EveryoneIncludesAnonymous GPO:
 
   - Windows Server 2003 registry location:
         `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\LSA`
-  - Windows Server 2003 Group Policy: **Computer Configuration \\ Windows Settings \\ Security Settings \\ Security Options Network access: Let Everyone permissions apply to anonymous users**
+  - Windows Server 2003 Group Policy: **Computer Configuration\\Windows Settings\\Security Settings\\Security Options Network access: Let Everyone permissions apply to anonymous users**
 - The LM Compatibility GPO:
 
   - Windows NT, Windows 2000, and Windows Server 2003 registry location: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\LMCompatibilityLevel`  
 
-  - Windows 2000 Group Policy: **Computer Configuration \\ Windows Settings \\ Security Settings \\ Security Options: LAN Manager authentication level**  
-  - Windows Server 2003 Group Policy: **Computer Configuration \\ Windows Settings \\ Security Settings \\ Security Options\\Network security: LAN Manager authentication level**
+  - Windows 2000 Group Policy: **Computer Configuration\\Windows Settings\\Security Settings\\Security Options: LAN Manager authentication level**  
+  - Windows Server 2003 Group Policy: **Computer Configuration\\Windows Settings\\Security Settings\\Security Options\\Network security: LAN Manager authentication level**
 - The EnableSecuritySignature (client) GPO:
 
   - Windows 2000 and Windows Server 2003 registry location: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation\Parameters\EnableSecuritySignature`
-  - Windows 2000 Group Policy: ****Computer Configuration \\ Windows Settings \\ Security Settings \\ Security Options: Digitally sign client communication (when possible)****  
-  - Windows Server 2003 Group Policy: **Computer Configuration \\ Windows Settings \\ Security Settings \\Security Options \\ Microsoft network client: Digitally sign communications (if server agrees)**
+  - Windows 2000 Group Policy: **Computer Configuration\\Windows Settings\\Security Settings \\Security Options: Digitally sign client communication (when possible)**  
+  - Windows Server 2003 Group Policy: **Computer Configuration\\Windows Settings\\Security Settings\\Security Options\\Microsoft network client: Digitally sign communications (if server agrees)**
 - The RequireSecuritySignature (client) GPO:
 
   - Windows 2000 and Windows Server 2003 registry location:
     `HKey_Local_Machine\System\CurrentControlSet\Services\LanManWorkstation\Parameters\RequireSecuritySignature`  
-  - Windows 2000 Group Policy: **Computer Configuration \ Windows Settings \ Security Settings \ Security Options: Digitally sign client communication (always)**  
-  - Windows Server 2003: **Computer Configuration \ Windows Settings \ Security Settings \ Security Options\ Microsoft network client: Digitally sign communications (always)**
+  - Windows 2000 Group Policy: **Computer Configuration\Windows Settings\Security Settings\Security Options: Digitally sign client communication (always)**  
+  - Windows Server 2003: **Computer Configuration\Windows Settings\Security Settings\Security Options\Microsoft network client: Digitally sign communications (always)**
 - The EnableSecuritySignature (server) GPO:
 
   - Windows NT registry location:
