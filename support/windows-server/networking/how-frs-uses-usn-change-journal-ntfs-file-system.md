@@ -1,5 +1,5 @@
 ---
-title: How to troubleshoot journal_wrap errors on Sysvol and DFS replica sets
+title: Troubleshoot journal_wrap errors on Sysvol and DFS replica sets
 description: Discusses how to troubleshoot journal_wrap errors on Sysvol and DFS replica sets.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,7 +17,8 @@ ms.technology: Networking
 
 This article discusses how to troubleshoot journal_wrap errors on Sysvol and DFS replica sets.
 
-This article applies to Microsoft Windows 2000. Be aware that support for Windows 2000 ended on July 13, 2010. For more information about the Microsoft Support Lifecycle policy, see the following Microsoft website: [Microsoft Support Lifecycle Policy](https://docs.microsoft.com/lifecycle)
+> [!NOTE]
+> This article applies to Microsoft Windows 2000. Be aware that support for Windows 2000 ended on July 13, 2010. For more information about the Microsoft Support Lifecycle policy, see the following Microsoft website: [Microsoft Support Lifecycle Policy](https://docs.microsoft.com/lifecycle)
 
 _Original product version:_ &nbsp;Windows 2000  
 _Original KB number:_ &nbsp;292438
@@ -28,7 +29,7 @@ The File Replication Service (FRS) is a multithreaded, multi-master replication 
 
 FRS can also replicate content between Windows 2000 servers that host the same fault-tolerant Distributed File System (DFS) roots or child-node replicas.
 
-This article describes how FRS uses and relies on the USN change journal for the NTFS file system. 
+This article describes how FRS uses and relies on the USN change journal for the NTFS file system.  
 
 ## More information
 
@@ -41,7 +42,8 @@ To perform maintenance on FRS replica set members, administrators may stop the F
 
 To recover, the affected replica member must be reinitialized with a nonauthoritative restore (BURFLAGS=D2) where it will synchronize files from an existing inbound partner. This reinitialization can be time-consuming for large replica sets.
 
-Consider the scenario where computers run versions of the Ntfrs.exe file on the following system versions:
+Consider the scenario where computers run versions of the Ntfrs.exe file on the following system versions:  
+
 - Windows 2000 (2195 binary)
 - Windows 2000 Service Pack 1 (SP1)
 - SP1 Hotfix (WINSE build 5298)
@@ -51,6 +53,7 @@ In these scenarios, the nonauthoritative restore process must be invoked manuall
 For Windows 2000 computers that use versions of the Ntfrs.exe file from Windows 2000 Service Pack 2 (SP2) or from Windows 2000 SP2 hotfix (WINSE 11773), the service performs a programmatic nonauthoritative restore when the journal_wrap_error is detected.
 
 By default, versions of the Ntfrs.exe file from Windows 2000 Service Pack 3 (SP3) and from Windows 2000 SP3 hotfix don't perform an automatic nonauthoritative restore (for example, SP3 leaves content in place as 2195 and SP1 left the context in place) when journal wrap errors are detected. SP3 versions of NTFRS may be configured to function like SP2 when the "Enable journal wrap automatic restore" registry entry is set to 1 in the following registry subkey: `HKLM\System\Ccs\Services\Ntfrs\Parameters`  
+
 > [!IMPORTANT]
 > We don't recommend that you use this registry setting, and this setting should not be used versions of Windows after the Service Pack 3 version of Windows 2000. The recommended method for performing a nonauthoritative restore on FRS members of DFS or SYSVOL replica sets is to use the FRS BurFlags registry value. For more information about how to use the BurFlags registry value, click the following article number to see the article in the Microsoft Knowledge Base: [290762](https://support.microsoft.com/help/290762) Using the BurFlags registry key to reinitialize File Replication service replica sets
 
@@ -63,7 +66,7 @@ The following are appropriate options to reduce journal wrap errors:
 
 FRS is a service that must always be running on Windows domain controllers and members of FRS-replicated DFS sets.
 
-If you increase the USN journal size, and therefore you increase the number of changes that the journal can hold before the journal "wraps," this reduces the possibility that the USN journal wrap will occur. The USN journal size can be changed by setting the following registry key: **HKLM\System\CCS\Services\NTFRS\Parameters\"Ntfs Journal size in MB" (REG_DWORD)**  
+If you increase the USN journal size, and therefore you increase the number of changes that the journal can hold before the journal "wraps," this reduces the possibility that the USN journal wrap will occur. The USN journal size can be changed by setting the following registry key: `HKLM\System\CCS\Services\NTFRS\Parameters\"Ntfs Journal size in MB" (REG_DWORD)`  
 
 Valid settings range from 8 megabytes to 128 megabytes (MB). The default is 32 MB. This setting applies to all volumes that are hosting an FRS replica tree. You have to stop and then restart the NTFRS service for the increases to the USN journal size to occur. However, to decrease the USN journal size, you must reformat all volumes that contain FRS-replicated content.
 
@@ -74,8 +77,6 @@ In Windows 2000 Service Pack 2, valid settings range between 8 MB and 128 MB, an
 
 As a guideline, Microsoft suggests that you configure 128 MB of journal for every 100,000 files that are managed by replication on that volume.
 
- For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base: [221111](https://support.microsoft.com/help/221111) Description of FRS entries in the registry  
+ For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:  
 
 [290762](https://support.microsoft.com/help/290762) Using the BurFlags registry key to reinitialize File Replication service replica sets  
-
-[291165](https://support.microsoft.com/help/291165) FRS asserts on primary member that contains large number of files or directories

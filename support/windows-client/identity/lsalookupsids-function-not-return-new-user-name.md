@@ -1,6 +1,6 @@
 ---
 title: The LsaLookupSids function may return the old user name instead of the new user name if the user name has changed
-description: Describes a cache update delay in OS - Windows XP - Windows Server 2003 - Windows Vista - Windows Server 2008 - Windows 7 - Windows Server 2008 R2.
+description: Describes a cache update delay in Windows.
 ms.data: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -17,12 +17,13 @@ ms.technology: ActiveDirectory
 
 This article describes a cache update delay in Windows.
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1  
+_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;946358
 
 ## Symptoms
 
-Consider the following scenario:
+Consider the following scenario:  
+
 - On the domain member computer, an application calls the LsaLookupSids function to translate a security identifier (SID) to a user name.
 - The user name has been changed on a domain controller.
 
@@ -40,11 +41,12 @@ To work around this issue, disable the local SID cache on the domain member comp
 
 1. Open Registry Editor.
 
-    To do this in Windows XP or in Windows Server 2003, click **Start**, click **Run**, type regedit, and then click **OK**.
-    
-    To do this in Windows Vista and newer, Click **Start**, type regedit in the **Start Search** box, and then press ENTER.
-2. Locate and then right-click the following registry subkey:
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa` 
+   To do this in Windows XP or in Windows Server 2003, click **Start**, click **Run**, type *regedit*, and then click **OK**.
+
+   To do this in Windows Vista and newer, Click **Start**, type *regedit* in the **Start Search** box, and then press ENTER.
+
+2. Locate and then right-click the following registry subkey:  
+   `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa`
 3. Point to **New**, and then click **DWORD Value**.
 4. Type LsaLookupCacheMaxSize, and then press ENTER.
 5. Right-click **LsaLookupCacheMaxSize**, and then click **Modify**.
@@ -68,8 +70,8 @@ The local SID cache helps reduce domain controller workload and network traffic.
 
 TechNet has an article that covers Sid-Name resolution approaches, including a detailed description of this cache:
 
-[How SIDs and Account Names Can Be Mapped in Windows](https://technet.microsoft.com/library/ff428139%28ws.10%29.aspx) 
+[How SIDs and Account Names Can Be Mapped in Windows](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff428139(v=ws.10))  
 
 For more information about the LsaLookupSids function, visit the following Microsoft Web site:
 
-[LsaLookupSids function](https://msdn2.microsoft.com/library/ms721799.aspx)
+[LsaLookupSids function](/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupsids)

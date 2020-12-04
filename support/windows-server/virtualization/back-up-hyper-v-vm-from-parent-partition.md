@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, jeffpatt
 ms.prod-support-area-path: Backup and restore of virtual machines
 ms.technology: HyperV
 ---
@@ -17,40 +17,24 @@ ms.technology: HyperV
 
 This article describes how to back up Hyper-V virtual machines from the parent partition on a Windows Server 2008-based computer by using Windows Server Backup.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 958662
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;958662
 
 ## Problem description
 
 To back up Hyper-V virtual machines from the parent partition on Windows Server 2008 by using Windows Server Backup, you must register the Microsoft Hyper-V VSS writer with Windows Server Backup.
 
-To have us register the Microsoft Hyper-V VSS writer with Windows Server Backup for you, go to the "Fix it for me" section. To register the Microsoft Hyper-V VSS writer with Windows Server Backup yourself, go to the "Let me fix it myself" section.
-
-## Fix it for me
-
-To register the Microsoft Hyper-V VSS writer with Windows Server Backup automatically, click the
- **Fix it** button or link. Click
- **Run** in the
- **File Download** dialog box, and then follow the steps in the Fix it wizard.
-
-> [!NOTE]
-> this wizard may be in English only; however, the automatic fix also works for other language versions of Windows.
-
-> [!NOTE]
-> if you are not on the computer that has the problem, save the Fix it solution to a flash drive or a CD and then run it on the computer that has the problem.
-
-Next, go to the "Did this fix the problem?" section.
-
-## Let me fix it myself
+## Resolution
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
 
-To register the Hyper-V VSS writer with Windows Server Backup, follow these steps:
-1. Click **Start**, click **Run**, type regedit, and then click **OK**.
+To register the Hyper-V VSS writer with Windows Server Backup, follow these steps:  
+
+1. Click **Start**, click **Run**, type **regedit**, and then click **OK**.
 
 2. Locate the following registry key:
- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion` 
+ `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion`  
 
 3. Right-click **CurrentVersion**, point to **New**, and then click **Key**.
 
@@ -62,7 +46,7 @@ To register the Hyper-V VSS writer with Windows Server Backup, follow these step
 
 7. Right-click **Application Support**, point to **New**, and then click **Key**.
 
-8. Type {66841CD4-6DED-4F4B-8F17-FD23F8DDC3DE}, and then press ENTER.
+8. Type **{66841CD4-6DED-4F4B-8F17-FD23F8DDC3DE}**, and then press ENTER.
 
 9. Right-click **{66841CD4-6DED-4F4B-8F17-FD23F8DDC3DE}**, point to **New**, and then click **String Value**.
 
@@ -74,15 +58,9 @@ To register the Hyper-V VSS writer with Windows Server Backup, follow these step
 
 13. On the **File** menu, click **Exit**.
 
-
-## Did this fix the problem?
-
-Check whether the problem is fixed. If the problem is fixed, you are finished with this article. If the problem is not fixed, you can contact support.
-
 ## More information about Hyper-V virtual machine backups
 
-#### Back up the virtual machines by using Windows Server Backup
-
+### Back up the virtual machines by using Windows Server Backup
 
 - When you perform a backup of the virtual machines, you must back up all volumes that host files for the virtual machine, including the InitialStore.xml file (in C:\ProgramData\Microsoft\Windows\Hyper-V, by default) and the volume(s) containing the VHD(s) and configuration XML files. For example, if the virtual machine configuration files are stored on the D: volume, and the virtual machine virtual hard disk (VHD) files are stored on the E: volume, and InitialStore.xml file is stored on the C: volume, you must back up the C:, D: and E: volumes.
 - Virtual machines that do not have Integration Services installed will be put in a saved state while the VSS snapshot is created.
@@ -94,9 +72,10 @@ Check whether the problem is fixed. If the problem is fixed, you are finished wi
 > [!NOTE]
 > Windows Server Backup does not support backing up Hyper-V virtual machines on Cluster Shared Volumes (CSV volumes).
 
-#### Restore virtual machines by using Windows Server Backup
+### Restore virtual machines by using Windows Server Backup
 
-To restore the virtual machines, follow these steps:
+To restore the virtual machines, follow these steps:  
+
 1. Start Windows Server Backup in Administrative Tools.
 2. On the **Actions** menu, click **Recover**.
 3. Select the server that you want to recover data from, and then click **Next**.
@@ -105,10 +84,11 @@ To restore the virtual machines, follow these steps:
 6. Select **Hyper-V**, and then click **Next**.
 7. Select the restore location, and then click **Next**.
 8. Click **Recover** to start the restore process.
-> [!NOTE]
-> All volumes that host files for the virtual machine will be restored. Individual virtual machines cannot be restored by using Windows Server Backup.
+    > [!NOTE]
+    > All volumes that host files for the virtual machine will be restored. Individual virtual machines cannot be restored by using Windows Server Backup.
 
-Virtual machines that contain two or more snapshots will not be restored. To work around this issue, follow these steps:
+Virtual machines that contain two or more snapshots will not be restored. To work around this issue, follow these steps:  
+
 1. Start Hyper-V Manager in Administrative Tools.
 2. Delete the virtual machine that was not restored.
 3. Start Windows Server Backup in Administrative Tools.
@@ -118,8 +98,8 @@ Virtual machines that contain two or more snapshots will not be restored. To wor
 7. Select the **Files and folders** recovery type, and then click **Next**.
 8. Select the directory where the snapshots are stored, and then click **Next**.
 
-> [!NOTE]
-> By default, the snapshots are located in the following directory:C:\ProgramData\Microsoft\Windows\Hyper-V\Snapshots
+    > [!NOTE]
+    > By default, the snapshots are located in the following directory:C:\ProgramData\Microsoft\Windows\Hyper-V\Snapshots
 
 9. Select the location where the snapshots should be restored, and then click **Next**.
 10. Click **Recover** to start the restore process.

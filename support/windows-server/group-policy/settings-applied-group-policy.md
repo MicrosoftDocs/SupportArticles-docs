@@ -1,5 +1,5 @@
 ---
-title: Settings are applied from Group Policy
+title: Folder redirection settings are applied from Group Policy
 description: This article describes a problem that you experience when you turn on loopback processing in Group Policy and notice that the folder redirection settings are being applied from the Group Policy settings that are deployed to the user's computer.
 ms.date: 09/21/2020
 author: Deland-Han 
@@ -13,9 +13,9 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
 ms.technology: GroupPolicy
 ---
-# You turn on loopback processing in Group Policy, but the folder redirection settings are still applied from the Group Policy settings that are deployed to the user's computer
+# Folder redirection settings are still applied from Group Policy settings even though you turn on loopback processing in Group Policy
 
-This article provides a solution to an issue that you turn on loopback processing in Group Policy, you notice that folder redirection settings are being applied from the Group Policy settings that are deployed to the user's computer.
+This article provides a solution to an issue that folder redirection settings are being applied from the Group Policy settings that are deployed to the user's computer even though you turn on loopback processing in Group Policy.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 328008

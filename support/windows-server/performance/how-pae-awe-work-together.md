@@ -22,7 +22,8 @@ _Original KB number:_ &nbsp;283037
 
 ## More information
 
-PAE is the added ability of the IA32 processor to address more than 4 GB of physical memory. The following operating systems can use PAE to take advantage of physical memory beyond 4 GB:
+PAE is the added ability of the IA32 processor to address more than 4 GB of physical memory. The following operating systems can use PAE to take advantage of physical memory beyond 4 GB:  
+
 - Microsoft Windows 2000 Advanced Server
 - Microsoft Windows 2000 Datacenter Server
 - Microsoft Windows Server 2003, Enterprise Edition
@@ -43,35 +44,21 @@ AWE is a set of application programming interfaces (APIs) to the memory manager 
 
 The following is an example of a Boot.ini file where the PAE switch has been added:
 
+```ini
 [boot loader]  
 timeout=30  
 default=multi(0)disk(0)rdisk(0)partition(2)\WINDOWS  
 [operating systems]  
 multi(0)disk(0)rdisk(0)partition(2)\WINDOWS="Windows Server 2003, Enterprise" /fastdetect /PAE  
+```
 
 > [!WARNING]
-> The contents of your Boot.ini file will vary based upon your configuration. For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[317526](https://support.microsoft.com/help/317526) How to edit the Boot.ini file in Windows Server 2003  
+> The contents of your Boot.ini file will vary based upon your configuration.  
 
 To summarize, PAE is a function of the Windows 2000 and Windows Server 2003 memory managers that provides more physical memory to a program that requests memory. The program isn't aware that any of the memory that it uses resides in the range greater than 4 GB, just as a program isn't aware that the memory it has requested is actually in the page file.
 
-AWE is an API set that enables programs to reserve large chunks of memory. The reserved memory is non-pageable and is only accessible to that program. For more information about AWE and PAE, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[268363](https://support.microsoft.com/help/268363) Intel Physical Addressing Extensions (PAE) in Windows 2000  
-
-For more information, visit the following Microsoft Web sites:
-
-[https://msdn2.microsoft.com/library/aa213764(SQL.80).aspx](https://msdn2.microsoft.com/library/aa213764%28sql.80%29.aspx)
-
-[https://msdn2.microsoft.com/library/ms810461.aspx](https://msdn2.microsoft.com/library/ms810461.aspx)
+AWE is an API set that enables programs to reserve large chunks of memory. The reserved memory is non-pageable and is only accessible to that program.  
 
 If you add more memory to the system, it's possible that the BIOS will recognize the full amount of physical RAM that is installed in the server but that Windows will recognize only a part of the RAM. If the server has a redundant memory feature or a memory mirroring feature that is enabled, the full complement of memory may not be visible to Windows. Redundant memory provides the system with a failover memory bank when a memory bank fails. Memory mirroring splits the memory banks into a mirrored set. Both features are enabled or disabled in the BIOS and can't be accessed through Windows. To modify the settings for these features, you may have to refer to the system user manual or the OEM Web site. Alternatively, you may have to contact the hardware vendor.
 
 For example, if you're running a system that has 4 GB of RAM installed and you then add 4 GB of additional RAM, Windows may recognize only 4 GB of physical memory or possibly 6 GB instead of the full 8 GB. The redundant memory feature or the memory mirroring feature may be enabled on the new memory banks without your knowledge. These symptoms are similar to the symptoms that occur when you don't add the /PAE switch to the Boot.ini file.
-
-## References
-
-For more information, visit the following Microsoft Web site:
-
-[Operating Systems and PAE Support](https://www.microsoft.com/whdc/system/platform/server/pae/pae_os.mspx)

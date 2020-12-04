@@ -17,8 +17,8 @@ ms.technology: ApplicationCompatibility
 
 This article describes an issue where the communications port (COM port) settings revert to the default when you restart the computer.
 
-_Original product version:_ &nbsp;Windows 2000  
-_Original KB number:_ &nbsp;293762
+_Original product version:_ &nbsp; Windows 2000  
+_Original KB number:_ &nbsp; 293762
 
 ## Symptoms
 
@@ -32,7 +32,7 @@ Baud rate=9600; Parity=None; Data Bits=8; Stop Bits=1
 
 You can manually set com 1 to function at the settings you want by using this command:
 
-Mode Com1: 9600,n,8,1 
+Mode Com1: 9600,n,8,1  
 
 However, when you restart the system, you find that the setting reverts back to the default:
 

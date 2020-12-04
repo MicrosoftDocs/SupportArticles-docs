@@ -17,12 +17,12 @@ ms.technology: ActiveDirectory
 
 This article describes how to modify the default intra-site domain controller replication interval.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 214678
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;214678
 
 > [!IMPORTANT]
 > This article contains information about modifying the registry. Before you modify the registry, make sure to back it up and make sure that you understand how to restore the registry if a problem occurs. For information about how to back up, restore, and edit the registry, click the following article number to view the article in the Microsoft Knowledge Base:
- [256986](https://support.microsoft.com/help/256986) Description of the Microsoft Windows Registry  
+[256986](https://support.microsoft.com/help/256986) Description of the Microsoft Windows Registry  
 
 ## More information
 
@@ -33,17 +33,17 @@ When a domain controller writes a change to its local copy of the Active Directo
 
 To change the delay between the change to the Active Directory and first replication partner notification, use Registry Editor to change the value data for the "Replicator notify pause after modify (secs)" DWORD value in the following registry key:
 
-Path: HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters
-Key: Replicator notify pause after modify (secs)
-Value: REG_DWORD
+Path: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
+Key: Replicator notify pause after modify (secs)  
+Value: REG_DWORD  
 
 The default value data for the "Replicator notify pause after modify (secs)" DWORD value in Windows 2000 is 0x12c. This hexadecimal format is equal to a decimal value of 300 that is equal to 5 minutes. In Windows Server 2003 and in later versions, the default value data is 15 seconds.
 
-To change the notification delay between domain controllers, use Registry Editor to change the value data for the "Replicator notify pause between DSAs (secs)" DWORD value in the following registry key:
+To change the notification delay between domain controllers, use Registry Editor to change the value data for the "Replicator notify pause between DSAs (secs)" DWORD value in the following registry key:  
 
-Path: HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters
-Key: Replicator notify pause between DSAs (secs)
-Value: REG_DWORD
+Path: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
+Key: Replicator notify pause between DSAs (secs)  
+Value: REG_DWORD  
 
 The default value data for the "Replicator notify pause between DSAs (secs)" DWORD value in Windows 2000 is 0x1e. This hexadecimal format is equal to a decimal value of 30 that is equal to 30 seconds. The default value in Windows Server 2003 and in later versions is decreased to 3 seconds when the forest functional level is Windows Server 2003 or a higher functional level.
 
