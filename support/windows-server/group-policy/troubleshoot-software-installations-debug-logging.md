@@ -50,7 +50,7 @@ To enable diagnostic logging of Group Policy Software Installation processing, f
 5. Double-click **AppMgmtDebugLevel**, type *4b* in the **Value data** box, and then click **OK**.
 6. Quit Registry Editor.
 
-After you make this registry modification, a log file named Appmgmt.log is created when Group Policy processing occurs. The Appmgmt.log file is located in the %SystemRoot%\Debug\UserMode folder on the computer where the AppMgmtDebugLevel registry value is enabled.
+After you make this registry modification, a log file named Appmgmt.log is created when Group Policy processing occurs. The Appmgmt.log file is located in the %SystemRoot%\\Debug\\UserMode folder on the computer where the AppMgmtDebugLevel registry value is enabled.
 
 > [!Note]
 >

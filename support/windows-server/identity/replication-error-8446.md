@@ -30,7 +30,7 @@ This article describes the symptoms, cause, and resolution steps for issues when
 1. REPADMIN.exe reports that replication attempt has failed with error "8446" - The Replication operation failed to allocate memory  
 
     > DC=Contoso,DC=com  
-        Default-First-Site-Name\DomainController via RPC  
+        Default-First-Site-Name\\DomainController via RPC  
             DC object GUID: \<source DCs ntds settings object object guid>  
             Last attempt @ \<Date Time> failed, result 8446 (0x20fe):  
                 The replication operation failed to allocate memory.  
@@ -38,14 +38,14 @@ This article describes the symptoms, cause, and resolution steps for issues when
             Last success @ \<Date & Time>.  
     >
     > CN=Configuration,DC=Contoso,DC=com  
-        Default-First-Site-Name\DomainController via RPC  
+        Default-First-Site-Name\\DomainController via RPC  
             DC object GUID: \<source DCs ntds settings object object guid>  
             Last attempt @ \<Date Time> failed, result 8446 (0x20fe):  
                 The replication operation failed to allocate memory.  
             1358 consecutive failure(s).  
             Last success @ \<Date & Time>.  
     >
-    > Source: Default-First-Site-Name\DomainController  
+    > Source: Default-First-Site-Name\\DomainController  
     ******* 1359 CONSECUTIVE FAILURES since \<Date Time>  
     >
     > Last error: 8446 (0x20fe):  
@@ -140,7 +140,7 @@ These steps are not needed for Window Server 2008 and later.
     "Open"="OpenPerformanceData"  
     "Collect"="CollectPerformanceData"  
     "Close"="ClosePerformanceData"  
-    "Library"="C:\\\Windows\\\System32\\\esentprf.dll"  
+    "Library"="C:\\\\Windows\\\\System32\\\\esentprf.dll"  
     "Show Advanced Counters"=dword:00000001
 
 2. Run the following command from a command prompt to back up your existing performance counters:

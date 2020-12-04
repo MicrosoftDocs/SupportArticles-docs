@@ -1,6 +1,6 @@
 ---
 title: Event ID 1053 is logged when you use the 
-description: Provides a resolution for the issue that Event ID 1053 is logged when you use the `Gpupdate /force` command, or you restart a domain controller
+description: Provides a resolution for the issue that Event ID 1053 is logged when you use the Gpupdate /force command, or you restart a domain controller
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
@@ -29,7 +29,7 @@ When you use the `Gpupdate /force` command on a Microsoft Windows Server 2003-ba
  Event ID: 1053  
  Date: **Date**  
  Time: **Time**  
- User: NT AUTHORITY\SYSTEM  
+ User: NT AUTHORITY\\SYSTEM  
  Computer: **Computername**  
  Description:  
 Windows cannot determine the user or computer name. (Not enough storage is available to complete this operation. ). Group Policy processing aborted. For more information, see [Help and Support Center](https://go.microsoft.com/fwlink/events.asp).  

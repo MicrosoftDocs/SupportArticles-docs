@@ -40,7 +40,7 @@ If the DNS isn't able to resolve the local host correctly, you'll see the error 
 
 ## Resolution
 
-1. Open Windows Explorer and scroll to C:\inetpub\Malta BitLocker Management Solution\Help Desk Website.
+1. Open Windows Explorer and scroll to C:\\inetpub\\Malta BitLocker Management Solution\\Help Desk Website.
 2. Take a backup of web.config file.
 3. Open web.config file using notepad.
 4. Modify the following line in the webconfig file:

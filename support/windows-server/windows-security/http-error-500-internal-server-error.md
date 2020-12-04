@@ -39,7 +39,7 @@ Keywords: Classic
 User: N/A  
 Computer: computer name  
 Description:  
- The Network Device Enrollment Service cannot be started (0x800700ea). More data is available. 
+The Network Device Enrollment Service cannot be started (0x800700ea). More data is available.
 
 ## Workaround
 

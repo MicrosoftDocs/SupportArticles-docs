@@ -72,7 +72,7 @@ A common reason for seeing this delay is that this object is especially large, e
 If you wish to change the warning limit, the registry key is included below. A value of zero will disable the check.  
 Additional Data  
 Warning Limit (secs): 10  
-Limit Registry Key: System\CurrentControlSet\Services\NTDS\Parameters\Replicator maximum wait for update object (secs)  
+Limit Registry Key: System\\CurrentControlSet\\Services\\NTDS\\Parameters\\Replicator maximum wait for update object (secs)  
 Log Name:      Directory Service  
 Source:        Microsoft-Windows-ActiveDirectory_DomainService  
 Event ID:      1083  

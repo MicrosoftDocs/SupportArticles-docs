@@ -57,12 +57,12 @@ To resolve this problem, follow these steps:
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EventSystem\\{26c409cc-ae86-11d1-b616-00805fc79216}\EventClasses\\{FAF53CC4-BD73-4E36-83F1-2B23F46E513E}-{00000000-0000-0000-0000-000000000000}-{00000000-0000-0000-0000-000000000000}`  
 3. Double-click the **TypeLib** registry value.
-4. In the **Value Data** box, type **%systemroot%\system32\EVENTCLS.DLL**, and then click **OK**.
+4. In the **Value Data** box, type *%systemroot%\\system32\\EVENTCLS.DLL*, and then click **OK**.
 5. Exit Registry Editor.
-6. Click **Start**, type **services.msc** in the **Search programs and files** box, and then press ENTER.
+6. Click **Start**, type *services.msc* in the **Search programs and files** box, and then press ENTER.
 7. Right-click the following services, one at a time. Click **Restart** for each service.
     - **COM+ Event System**
     - **Volume Shadow Copy**  
 8. Exit the Services snap-in.
-9. Open an elevated command prompt, type **vssadmin list writers**, and then press ENTER.
+9. Open an elevated command prompt, type *vssadmin list writers*, and then press ENTER.
 10. Verify that the VSS writers are now listed.

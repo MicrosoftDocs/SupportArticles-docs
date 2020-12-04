@@ -79,20 +79,16 @@ The Ntkrnlmp.exe file that is included in hotfix 840987 includes a sequence of i
 
 To work around this problem, prevent the processor from entering the C1 idle state. To do this, follow these steps:
 
-1. Start Registry Editor. To do this, click **Start**, click **Run**, type regedt32, and then click
- **OK**.
+1. Start Registry Editor. To do this, click **Start**, click **Run**, type *regedt32*, and then click **OK**.
 2. Locate and then click the following registry subkey: `HKEY_LOCAL_MACHINE\System\CurrentControlset\Control\Session Manager\Power`
 
-3. Click **Edit**, point to **New**, click **DWORD Value**, and then type
- IdleFrom0IdlePercent.
-4. Right-click **IdleFrom0IdlePercent**, and then click
- **Modify**. In the **Edit DWORD Value** dialog box, type a number that is more than 100 in the **Value data** box, click **Decimal** under **Base**, and then click
- **OK**.
+3. Click **Edit**, point to **New**, click **DWORD Value**, and then type *IdleFrom0IdlePercent*.
+4. Right-click **IdleFrom0IdlePercent**, and then click **Modify**. In the **Edit DWORD Value** dialog box, type a number that is more than 100 in the **Value data** box, click **Decimal** under **Base**, and then click **OK**.
     > [!NOTE]
     > The following two registry subkeys control when Windows causes the processor to enter a C1 idle state:
     `HKEY_LOCAL_MACHINE\System\CurrentControlset\Control\Session Manager\Power\IdleFrom0Delay`
     `HKEY_LOCAL_MACHINE\System\CurrentControlset\Control\Session Manager\Power\IdleFrom0IdlePercent`  
-For example, assume that you have set the IdleFrom0IdlePercent value to 10 and the IdleFrom0Delay value to 5. In this case, the system must be 10 percent idle over a period of 5 micrososeconds before the CPU enters the C1 idle state. Therefore, if you set the IdleFrom0IdlePercent value to a number that is more than 100, the CPU will never enter the C1 idle state.
+    For example, assume that you have set the IdleFrom0IdlePercent value to 10 and the IdleFrom0Delay value to 5. In this case, the system must be 10 percent idle over a period of 5 micrososeconds before the CPU enters the C1 idle state. Therefore, if you set the IdleFrom0IdlePercent value to a number that is more than 100, the CPU will never enter the C1 idle state.
 
 ## Status
 

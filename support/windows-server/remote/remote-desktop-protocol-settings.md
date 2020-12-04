@@ -32,7 +32,7 @@ When you use the Remote Desktop Protocol (RDP) to connect to a remote computer, 
 
 When you use RDP to connect to a remote computer, you can use the Remote Desktop Connection **Options** dialog box to configure many of the connection settings. To configure these settings, follow these steps:  
 
-1. Click **Start**, click **Run**, type mstsc.exe, and then click **OK**.
+1. Click **Start**, click **Run**, type *mstsc.exe*, and then click **OK**.
 2. In the **Remote Desktop Connection** dialog box, click **Options**.
 
 You can save *.rdp files with different settings if you connect to multiple remote computers. To save a new configuration, click **Save As** on the **General** tab in **Options**.

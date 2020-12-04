@@ -36,9 +36,9 @@ Keywords:
 User: `contoso.com\jim`  
 Computer: `Win7-1.contoso.com`  
 Description:  
-Failed to apply policy and redirect folder "Documents" to "\\\\`contoso.com`\home\jim\".  
- Redirection options=0x1211.  
- The following error occurred: "Can not create folder "\\\\`contoso.com`\home\jim".  
+Failed to apply policy and redirect folder "Documents" to "\\\\`contoso.com`\\home\\jim\\".  
+Redirection options=0x1211.  
+The following error occurred: "Can not create folder "\\\\`contoso.com`\\home\\jim".  
  Error details: "This security ID may not be assigned as the owner of this object."  
 
 ## Cause

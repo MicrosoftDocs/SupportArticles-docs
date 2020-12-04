@@ -251,7 +251,7 @@ Microsoft Windows 2000 Server Resource Kit includes the WINS Replication Network
 
 To download the updated version of the Wins.dll file, see "Supplement One" of the Windows 2000 Server Resource Kit. To use the WINS replication parser:
 
-1. Copy the WINS replication parser (Wins.dll) to the System32\NetmonFull\Parsers folder.
+1. Copy the WINS replication parser (Wins.dll) to the System32\\NetmonFull\\Parsers folder.
 2. Add the following line to the [PARSERS] section in the Parser.ini file:
 
     ```ini
@@ -268,7 +268,7 @@ To download the updated version of the Wins.dll file, see "Supplement One" of th
     ```
 
     > [!NOTE]
-    > The Parser.ini file is located in the System32\NetmonFull folder.
+    > The Parser.ini file is located in the System32\\NetmonFull folder.
 4. Add the following line to the [TCP_HandoffSet] section in the Tcpip.ini file:
 
     ```ini
@@ -276,7 +276,7 @@ To download the updated version of the Wins.dll file, see "Supplement One" of th
     ```
 
     > [!NOTE]
-    > The Tcpip.ini file is located in the System32\NetmonFull\Parsers folder.
+    > The Tcpip.ini file is located in the System32\\NetmonFull\\Parsers folder.
 
 #### Example of a WINS Replication Frame
 

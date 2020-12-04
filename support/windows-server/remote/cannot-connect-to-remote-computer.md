@@ -106,7 +106,7 @@ Once the registry keys are removed, exit and restart Internet Explorer, and try 
 If this does not resolve the issue, you can re-register the mstscax.dll file. To do this, follow these steps:
 
 1. Exit Internet Explorer.
-2. Click **Start**, click **Run**, and the type or copy and paste the following text in the **Open** box, and click **OK**: *%windir%\system32\regsvr32 mstscax.dll*
+2. Click **Start**, click **Run**, and the type or copy and paste the following text in the **Open** box, and click **OK**: *%windir%\\system32\\regsvr32 mstscax.dll*
 
 3. At the confirmation prompt, click **OK**.
 4. Restart Internet Explorer, and try to connect to the remote computer or start the remote application.

@@ -77,9 +77,9 @@ Mkdir c:\temp\sandbox1
 
 Mkdir c:\temp\sandbox2
 
-Start /w pkgmgr /ip /m:c:\temp\ **CabFile** /s:c:\temp\sandbox1
+Start /w pkgmgr /ip /m:c:\temp\ CabFile /s:c:\temp\sandbox1
 
-Start /w pkgmgr /ip /m:c:\temp\ **CabFile** /s:c:\temp\sandbox2
+Start /w pkgmgr /ip /m:c:\temp\ CabFile /s:c:\temp\sandbox2
 ```
 
 In these commands, **CabFile** represents the .cab file for the hotfix package.
@@ -94,6 +94,8 @@ Considerations of using DISM with Windows Server 2008/Vista SP1 Images:
 - If you're servicing a Windows Vista with SP1 or Windows Server 2008 image, DISM will translate the DISM command to the equivalent Package Manager command so that the image can be updated. DISM provides functional parity to Package Manager.
 - Only offline scenarios are supported
 - DISM is pre-installed with Windows 7 and Windows Server 2008 R2, and is included in the Windows Automated Installation Kit for Windows 7. The Windows Automated Installation Kit can be installed on Windows Vista and Windows 2008.
+
+*Editor note: download link for Win7 waik: [The Windows Automated Installation Kit (AIK) for Windows 7](https://www.microsoft.com/download/details.aspx?id=5753)*
 
 Add the Packages to an Offline Image by Using DISM
 

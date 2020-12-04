@@ -96,4 +96,4 @@ The NTDSCONN_OPT_RODC_TOPOLOGY bit in the options attribute indicates whether th
 
 ## References
 
-[7.1.1.2.2.1.2.1.3 RODC NTFRS Connection Object](https://docs.microsoft.com/openspecs/windows_protocols/ms-adts/6c846dd8-cbaf-43bb-8354-44cfd2195c4c)
+[7.1.1.2.2.1.2.1.3 RODC NTFRS Connection Object](/openspecs/windows_protocols/ms-adts/6c846dd8-cbaf-43bb-8354-44cfd2195c4c)

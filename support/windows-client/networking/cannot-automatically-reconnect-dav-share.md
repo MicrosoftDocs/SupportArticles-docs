@@ -36,7 +36,7 @@ Additionally, Windows can't access the SSL WebDav folder. Instead, it returns on
 
 ### Error message 1  
 
-> Windows cannot access \\\`server.company.com`@SSL\davWWWRoot\folder1\folder2\folder3\docs.  
+> Windows cannot access \\\\`server.company.com`@SSL\\davWWWRoot\\folder1\\folder2\\folder3\\docs.  
 Check the spelling of the name. Otherwise, there might be a problem with your network. To try to identify and resolve network problems, click diagnose.  
 Error code: 0x80070035  
 The network path was not found.  
@@ -64,7 +64,7 @@ Use a logon script that reconnects the DAV share at user logon. For example, inc
 
 net use X: `http://server.company.com@8080/folder1/folder2/docs` /persistent:no  
 
-net use X: \\\\`server.company.com`@SSL\davWWWRoot\folder1\folder2\docs  
+net use X: \\\\`server.company.com`@SSL\\davWWWRoot\\folder1\\folder2\\docs  
 
 > [!Note]
 > 8080 is the TCP port number for the SSL connection to the DAV server.
@@ -105,3 +105,7 @@ If no proxy is configured, WinHTTP sends credentials only to local intranet site
 
 > [!Note]
 > If you follow the steps in KB 2560598, make sure that you don't activate the **[x] Reconnect at logon** option because this option doesn't work for Basic Authentication. If you've selected this option inadvertently, you should purge all saved credentials by using the Credential Manager UI.
+
+## References
+
+[WebDAV Redirector Registry Settings](/archive/blogs/robert_mcmurray/webdav-redirector-registry-settings)

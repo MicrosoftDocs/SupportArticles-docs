@@ -62,7 +62,7 @@ Before you upgrade Windows 2000 domain controllers to Windows Server 2003 or bef
 
     If software updates can't be installed on affected domain controllers that are running Windows 95, Windows NT 4.0, or other clients that were installed before the introduction of Windows Server 2003, temporarily disable the SMB service signing requirements in Group Policy until you can deploy updated client software.
 
-    You can disable SMB service signing in the following node of Default Domain Controllers policy on the domain controllers organizational unit: Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options\Microsoft Network Server:
+    You can disable SMB service signing in the following node of Default Domain Controllers policy on the domain controllers organizational unit: Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options\\Microsoft Network Server:
 
     Digitally sign communications (always)
 
@@ -225,7 +225,7 @@ If Exchange 2000 schema changes have already been installed but you have NOT run
 4. Confirm that there is no space at the end of each line.
 5. On the **File** menu, click **Save**. In the **Save As** dialog box, follow these steps:
     1. In the **File name** box, type the following:
-        *\%userprofile%\InetOrgPersonPrevent.ldf*
+        *\\%userprofile%\\InetOrgPersonPrevent.ldf*
     2. In the **Save as type** box, click **All Files**.
     3. In the **Encoding** box, click **Unicode**.
     4. Click **Save**.
@@ -241,8 +241,13 @@ If Exchange 2000 schema changes have already been installed but you have NOT run
     ```
 
     Syntax notes:
-          - DC=X is a case-sensitive constant.
-          - The domain name path for the root domain must be enclosed in quotation marks. For example, the command syntax for an Active Directory forest whose forest root domain is TAILSPINTOYS.COM would be: c:\documents and settings\administrator>ldifde -i -f inetorgpersonprevent.ldf -v -c DC=X "dc=tailspintoys,dc=com"
+
+    - DC=X is a case-sensitive constant.
+    - The domain name path for the root domain must be enclosed in quotation marks.
+
+    For example, the command syntax for an Active Directory forest whose forest root domain is `TAILSPINTOYS.COM` would be:
+
+    c:\\documents and settings\\administrator>ldifde -i -f inetorgpersonprevent.ldf -v -c DC=X "dc=tailspintoys,dc=com"
     > [!NOTE]
     > You may need to change the **Schema Update Allowed** registry subkey if you receive the following error message:
     > Schema update is not allowed on this DC because the registry key is not set or the DC is not the schema FSMO Role Owner.
@@ -258,7 +263,7 @@ If Exchange 2000 schema changes have already been installed but you have NOT run
 
 If you run the Windows Server 2003 `adprep /forestprep` command in a Windows 2000 forest that contains the Exchange 2000 schema changes, the LDAPDisplayName attributes for houseIdentifier, secretary, and labeledURI will become mangled. To identify mangled names, use Ldp.exe to locate the affected attributes:
 
-1. Install Ldp.exe from the Support\Tools folder of the Microsoft Windows 2000 or Windows Server 2003 media.
+1. Install Ldp.exe from the Support\\Tools folder of the Microsoft Windows 2000 or Windows Server 2003 media.
 2. Start Ldp.exe from a domain controller or member computer in the forest.
       1. On the **Connection** menu, click **Connect**, leave the **Server** box empty, type *389* in the **Port** box, and then click **OK**.
       2. On the **Connection** menu, click **Bind**, leave all the boxes empty, and then click **OK**.
@@ -275,9 +280,9 @@ If you run the Windows Server 2003 `adprep /forestprep` command in a Windows 200
     LDAPDisplayName: DUP-houseIdentifier-354b0ca8-9b6c-4722-aae7-e66906cc9eef  
 
 7. If the LDAPDisplayNames for labeledURI, secretary, and houseIdentifier were mangled in step 6, run the Windows Server 2003 InetOrgPersonFix.ldf script to recover, and then go to the "Upgrading Windows 2000 domain controllers with Winnt32.exe" section.
-      1. Create a folder named %Systemdrive%\IOP, and then extract the InetOrgPersonFix.ldf file to this folder.
+      1. Create a folder named %Systemdrive%\\IOP, and then extract the InetOrgPersonFix.ldf file to this folder.
       2. At a command prompt, type `cd %systemdrive%\iop`.
-      3. Extract the InetOrgPersonFix.ldf file from the Support.cab file that is located in the Support\Tools folder of the Windows Server 2003 installation media.
+      3. Extract the InetOrgPersonFix.ldf file from the Support.cab file that is located in the Support\\Tools folder of the Windows Server 2003 installation media.
       4. From the console of the schema operations master, load the InetOrgPersonFix.ldf file by using Ldifde.exe to correct the LdapDisplayName attribute of the houseIdentifier, secretary, and labeledURI attributes. To do so, type the following command, where \<X> is a case-sensitive constant and \<dn path for forest root domain> is the domain name path for the root domain of the forest:
 
           ```console  
@@ -294,7 +299,7 @@ If you run the Windows Server 2003 `adprep /forestprep` command in a Windows 200
 
 ## Overview: Upgrading Windows 2000 domain controllers to Windows Server 2003
 
-The Windows Server 2003 `adprep` command that you run from the \I386 folder of the Windows Server 2003 media prepares a Windows 2000 forest and its domains for the addition of Windows Server 2003 domain controllers. The Windows Server 2003 `adprep /forestprep` command adds the following features:
+The Windows Server 2003 `adprep` command that you run from the \\I386 folder of the Windows Server 2003 media prepares a Windows 2000 forest and its domains for the addition of Windows Server 2003 domain controllers. The Windows Server 2003 `adprep /forestprep` command adds the following features:
 
 - Improved default security descriptors for object classes
 
@@ -316,7 +321,7 @@ You can't perform either of the following actions unless the /forestprep and the
 > You can upgrade the Windows 2000 member servers and computers to Windows Server 2003 member computers whenever you want.
 > Promote new Windows Server 2003 domain controllers into the domain by using Dcpromo.exe.The domain that hosts the schema operations master is the only domain where you must run both `adprep /forestprep` and `adprep /domainprep`. In all other domains, you only have to run `adprep /domainprep`.
 
-The `adprep /forestprep` and the `adprep /domainprep` commands don't add attributes to the global catalog partial attribute set or cause a full synchronization of the global catalog. The RTM version of `adprep /domainprep` does cause a full sync of the \Policies folder in the Sysvol tree. Even if you run forestprep and domainprep several times, completed operations are performed only one time.
+The `adprep /forestprep` and the `adprep /domainprep` commands don't add attributes to the global catalog partial attribute set or cause a full synchronization of the global catalog. The RTM version of `adprep /domainprep` does cause a full sync of the \\Policies folder in the Sysvol tree. Even if you run forestprep and domainprep several times, completed operations are performed only one time.
 
 After the changes from `adprep /forestprep` and `adprep /domainprep` completely replicate, you can upgrade the Windows 2000 domain controllers to Windows Server 2003 by running Winnt32.exe from the \I386 folder of the Windows Server 2003 media. Also, you can add new Windows Server 2003 domain controllers to the domain by using Dcpromo.exe.
 
@@ -333,7 +338,7 @@ To prepare a Windows 2000 forest and domains to accept Windows Server 2003 domai
 3. Verify that the schema FSMO has performed inbound replication of the schema partition by typing the following at a Windows NT command prompt:
     `repadmin /showreps`
 
-    ( repadmin is installed by the Support\Tools folder of Active Directory.)
+    ( repadmin is installed by the Support\\Tools folder of Active Directory.)
 4. Early Microsoft documentation recommends that you isolate the schema operations master on a private network before you run `adprep /forestprep`. Real-world experience suggests that this step isn't necessary and may cause a schema operations master to reject schema changes when it's restarted on a private network.
 
 5. Run `adprep` on the schema operations master. To do so, click **Start**, click **Run**, type *cmd*, and then click **OK**. On the schema operations master, type the following command:
@@ -342,7 +347,7 @@ To prepare a Windows 2000 forest and domains to accept Windows Server 2003 domai
      X:\I386\adprep /forestprep
     ```
 
-    where **X:\I386\\** is the path of the Windows Server 2003 installation media. This command runs the forest-wide schema upgrade.
+    where **X:\\I386\\** is the path of the Windows Server 2003 installation media. This command runs the forest-wide schema upgrade.
 
     > [!NOTE]
     > Events with event ID 1153 that are logged in the Directory Service event log, such as the sample that follows, can be ignored:
@@ -350,7 +355,7 @@ To prepare a Windows 2000 forest and domains to accept Windows Server 2003 domai
        - The `adprep /forestprep` command completed without error.
        - The CN=Windows2003Update object is written under CN=ForestUpdates,CN=Configuration,DC= **forest_root_domain**. Record the value of the Revision attribute.
        - (Optional) The schema version incremented to version 30. To do so, see the ObjectVersion attribute under CN=Schema,CN=Configuration,DC= **forest_root_domain**.If `adprep /forestprep` doesn't run, verify the following items:
-      - The fully qualified path for Adprep.exe located in the \I386 folder of the installation media was specified when `adprep` ran. To do so, type the following command:
+      - The fully qualified path for Adprep.exe located in the \\I386 folder of the installation media was specified when `adprep` ran. To do so, type the following command:
 
         ```console
         x:\i386\adprep /forestprep
@@ -358,7 +363,7 @@ To prepare a Windows 2000 forest and domains to accept Windows Server 2003 domai
 
         where **x** is the drive that hosts the installation media.
       - The logged on user who runs adprep has membership to the Schema Admins security group. To verify this, use the `whoami /all` command.
-      - If `adprep` still doesn't work, view the Adprep.log file in the %systemroot%\System32\Debug\Adprep\Logs\ **Latest_log** folder.
+      - If `adprep` still doesn't work, view the Adprep.log file in the %systemroot%\\System32\\Debug\\Adprep\\Logs\\**Latest_log** folder.
 7. If you disabled outbound replication on the schema operations master in step 4, enable replication so that the schema changes that were made by `adprep /forestprep` can propagate. To do this, following these steps:
       1. Click **Start**, click **Run**, type *cmd*, and then click **OK**.
       2. Type the following, and then press ENTER: repadmin /options -DISABLE_OUTBOUND_REPL
@@ -380,7 +385,7 @@ Run `adprep /domainprep` after the /forestprep changes fully replicate to the in
     > [!NOTE]
     > The enterprise administrator may not be a member of the Domain Admins security group in child domains of the forest.
 2. Run `adprep /domainprep` on the Infrastructure master. To do so, click Start, click Run, type *cmd*, and then on the Infrastructure master type the following command: `X:\I386\adprep /domainprep`
-where X:\I386\ is the path of the Windows Server 2003 installation media. This command runs domain-wide changes in the target domain.
+where X:\\I386\\ is the path of the Windows Server 2003 installation media. This command runs domain-wide changes in the target domain.
 
     > [!NOTE]
     > The `adprep /domainprep` command modifies files permissions in the Sysvol share. These modifications cause a full synchronization of files in that directory tree.
@@ -388,9 +393,9 @@ where X:\I386\ is the path of the Windows Server 2003 installation media. This c
       - The `adprep /domainprep` command completed without error.
       - The CN=Windows2003Update,CN=DomainUpdates,CN=System,DC= **dn path of domain you are upgrading** existsIf `adprep /domainprep` doesn't run, verify the following items:
       - The logged on user who runs `adprep` has membership to the Domain Admins security group in the domain being you're upgrading. To do so, use the `whoami /all` command.
-      - The fully qualified path for Adprep.exe located in the \I386 directory of the installation media was specified when you ran `adprep`. To do so, at a command prompt type the following command: `x :\i386\adprep /forestprep`
+      - The fully qualified path for Adprep.exe located in the \\I386 directory of the installation media was specified when you ran `adprep`. To do so, at a command prompt type the following command: `x :\i386\adprep /forestprep`
     where **x** is the drive that hosts the installation media.
-      - If `adprep` still doesn't work, view the Adprep.log file in the %systemroot%\System32\Debug\Adprep\Logs\ **Latest_log** folder.
+      - If `adprep` still doesn't work, view the Adprep.log file in the %systemroot%\\System32\\Debug\\Adprep\\Logs\\ **Latest_log** folder.
 4. Verify that the `adprep /domainprep` changes have replicated. To do so, for the remaining domain controllers in the domain, verify the following items:
        - The CN=Windows2003Update,CN=DomainUpdates,CN=System,DC= **dn path of domain you are upgrading** object exists and the value for the Revision attribute matches the value of the same attribute on the infrastructure master of the domain.
        - (Optional) Look for objects, attributes, or access control list (ACL) changes that `adprep /domainprep` added. Repeat steps 1-4 on the infrastructure master of the remaining domains in bulk or as you add or upgrade DCs in those domains to Windows Server 2003. Now you can promote new Windows Server 2003 computers into the forest by using DCPROMO. Or, you can upgrade existing Windows 2000 domain controllers to Windows Server 2003 by using WINNT32.EXE.
@@ -407,12 +412,12 @@ The following computers must be among the first domain controllers that run Wind
 
 1. Before you use WINNT32 to upgrade Windows 2000 member computers and domain controllers, remove Windows 2000 Administration Tools. To do so, use the Add/Remove Programs tool in Control Panel. (Windows 2000 upgrades only.)
 2. Install any hotfix files or other fixes that either Microsoft or the administrator determines is important.
-3. Check each domain controller for possible upgrade issues. To do so, run the following command from the \I386 folder of the installation media: `winnt32.exe /checkupgradeonly`
+3. Check each domain controller for possible upgrade issues. To do so, run the following command from the \\I386 folder of the installation media: `winnt32.exe /checkupgradeonly`
 Resolve any issues that the compatibility check identifies.
-4. Run WINNT32.EXE from the \I386 folder of the installation media, and the restart the upgraded 2003 domain controller.
+4. Run WINNT32.EXE from the \\I386 folder of the installation media, and the restart the upgraded 2003 domain controller.
 5. Lower the security settings for earlier-version clients as required.
 
-    If Windows NT 4.0 clients don't have NT 4.0 SP6 or Windows 95 clients don't have the directory service client installed, disable SMB Service signing on the Default Domain Controllers policy on the Domain Controllers organizational unit, and then link this policy to all organizational units that host domain controllers. Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options\Microsoft Network Server: Digitally sign communications (always)
+    If Windows NT 4.0 clients don't have NT 4.0 SP6 or Windows 95 clients don't have the directory service client installed, disable SMB Service signing on the Default Domain Controllers policy on the Domain Controllers organizational unit, and then link this policy to all organizational units that host domain controllers. Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options\\Microsoft Network Server: Digitally sign communications (always)
 
 6. Verify the health of the upgrade using the following data points:
    - The upgrade completed successfully.
@@ -424,7 +429,7 @@ Resolve any issues that the compatibility check identifies.
     > [!NOTE]
     > You may receive the following event message after you upgrade:
     You can safely ignore this event message.
-7. Install the Windows Server 2003 Administration Tools (Windows 2000 upgrades and Windows Server 2003 non-domain controllers only). Adminpak.msi is in the \I386 folder of the Windows Server 2003 CD-ROM. Windows Server 2003 media contains updated support tools in the Support\Tools\Suptools.msi file. Make sure that you reinstall this file.
+7. Install the Windows Server 2003 Administration Tools (Windows 2000 upgrades and Windows Server 2003 non-domain controllers only). Adminpak.msi is in the \\I386 folder of the Windows Server 2003 CD-ROM. Windows Server 2003 media contains updated support tools in the Support\\Tools\\Suptools.msi file. Make sure that you reinstall this file.
 8. Make new backups of at least the first two Windows 2000 domain controllers that you upgraded to Windows Server 2003 in each domain in the forest. Locate the backups of the Windows 2000 computers that you upgraded to Windows Server 2003 in locked storage so you don't accidentally use them to restore a domain controller that now runs Windows Server 2003.
 9. (Optional) Perform an offline defragmentation of the Active Directory database on the domain controllers that you upgraded to Windows Server 2003 after the single instance store (SIS) has completed (Windows 2000 upgrades only).
 
@@ -503,9 +508,9 @@ On domain controllers with insufficient disk space, use the following steps to f
     del *.dmp /s  
     ```
 
-3. Temporarily remove or relocate files that you can access from other servers or easily reinstall. Files that you can remove and easily replace include ADMINPAK, Support Tools, and all the files in the %systemroot%\System32\Dllcache folder.
+3. Temporarily remove or relocate files that you can access from other servers or easily reinstall. Files that you can remove and easily replace include ADMINPAK, Support Tools, and all the files in the %systemroot%\\System32\\Dllcache folder.
 4. Delete old or unused user profiles. To do so, click **Start**, right-click **My Computer**, click **Properties**, click the **User Profiles** tab, and then delete all the profiles that are for old and unused accounts. Don't delete any profiles that may be for service accounts.
-5. Delete the symbols at %systemroot%\Symbols. To do so, type the following command: `rd /s %systemroot%\symbols`
+5. Delete the symbols at %systemroot%\\Symbols. To do so, type the following command: `rd /s %systemroot%\symbols`
 Depending on whether the servers have a full or small symbol set, this may gain approximately 70 MB to 600 MB.
 6. Perform an offline defragmentation. An offline defragmentation of the Ntds.dit file may free up space but temporarily requires double the space of the current DIT file. Perform the offline defrag by using other local volumes if one is available. Or, use space on a best connected network server to perform the offline defragmentation. If the disk space is still not sufficient, incrementally delete unnecessary user accounts, computer accounts, DNS records, and DLT objects from Active Directory.
 

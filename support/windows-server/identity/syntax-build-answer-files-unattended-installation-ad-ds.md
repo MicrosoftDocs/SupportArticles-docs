@@ -276,7 +276,7 @@ This section describes the fields and the entries that you can use in the answer
 
 ##### DatabasePath
 
-- %systemroot%\NTDS
+- %systemroot%\\NTDS
 - This entry is the path of the fully qualified, non-Universal Naming Convention (UNC) directory on a hard disk of the local computer. This directory will host the AD DS database (NTDS.DIT). If the directory exists, it must be empty. If it doesn't exist, it will be created. Free disk space on the logical drive that is selected must be 200 megabytes (MB). To accommodate rounding errors or all objects in the domain, free disk space may have to be larger. For best performance, locate the directory on a dedicated hard disk.
 
 ##### DelegatedAdmin
@@ -334,7 +334,7 @@ You must not use this entry when you install a new domain controller in an exist
 
 ##### LogPath
 
-- %systemroot%\NTDS
+- %systemroot%\\NTDS
 - This is the path of the fully qualified, non-UNC directory on a hard disk on the local computer that will host the AD DS log files. If the directory exists, it must be empty. If it doesn't exist, it will be created.
 
 ##### NewDomain
@@ -426,7 +426,7 @@ You must not use this entry when you install a new domain controller in an exist
 
 ##### SYSVOLPath
 
-- %systemroot%\SYSVOL
+- %systemroot%\\SYSVOL
 - This entry specifies a fully qualified, non-UNC directory on the hard disk of the local computer. This directory will host the AD DS log files. If the directory already exists, it must be empty. If it doesn't exist it will be created. The directory must be located on a partition that was formatted by using the NTFS 5.0 file system. Locate the directory on a different physical hard disk than the operating system for best performance.
 
 ##### TransferIMRoleIfNeeded

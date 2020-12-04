@@ -125,8 +125,8 @@ Recommended value (seconds): 600
 Specifies how frequently the system changes the computer account password of the local computer. This entry is used only when the system is configured to change the computer password automatically at set intervals. That is, this entry is used only when the value of the **DisablePasswordChange** entry is **0**. For more information, see [Domain member: Disable machine account password changes](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/domain-member-disable-machine-account-password-changes).
   
 Subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters`  
-Entry: **MaximumPasswordAge**  
-Type: **DWORD**  
+Entry: MaximumPasswordAge  
+Type: DWORD  
 Default value (decimal, number of days): 7 (in Windows NT), 30 (Windows 2000/XP/2003)
 Recommended range: 42 to 70  
 
@@ -166,7 +166,7 @@ Default value (seconds): 900 (15 minutes)
 
 ### Group Policy settings
 
-The following policy settings control the frequency of Net Logon-based traffic and of DFS-based traffic. To locate these settings, click **Start**, click ***Run**, type **gpedit.msc**, and then click **OK**. Or, edit them in a domain-based Group Policy Object.
+The following policy settings control the frequency of Net Logon-based traffic and of DFS-based traffic. To locate these settings, click **Start**, click **Run**, type *gpedit.msc*, and then click **OK**. Or, edit them in a domain-based Group Policy Object.
 
 #### Computer Configuration/Administrative Templates/System/Net Logon
 

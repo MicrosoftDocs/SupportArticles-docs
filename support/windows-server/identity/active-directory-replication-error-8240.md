@@ -29,7 +29,7 @@ _Original KB number:_ &nbsp;2680976
 
 Output of the Repadmin /ShowReps command:
 
-> SiteName\DCName via RPC  
+> SiteName\\DCName via RPC  
 objectGuid: \<GUID>  
 Last attempt @ \<Time> failed, result 8240:  
 There is no such object on the server.  
@@ -58,7 +58,7 @@ Event Category: Global Catalog
 Event ID: 1126  
 Date: 5/2/2009  
 Time: 10:51:48 AM  
-User: NT AUTHORITY\ANONYMOUS LOGON  
+User: NT AUTHORITY\\ANONYMOUS LOGON  
 Computer: ComputerName  
 Description:  
 Active Directory was unable to establish a connection with the global catalog.

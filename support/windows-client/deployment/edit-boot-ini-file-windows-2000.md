@@ -17,6 +17,9 @@ ms.technology: Deployment
 
 This article describes the steps to edit the Boot.ini file in a Windows 2000 environment.
 
+> [!NOTE]
+> This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).
+
 _Original product version:_ &nbsp;Windows 2000  
 _Original KB number:_ &nbsp;311578
 
@@ -77,7 +80,9 @@ multi(0)disk(0)rdisk(0)partition(2)\WINNT="Windows XP Professional" /fastdetect
 
 1. In Notepad, select the line that contains information about the operating system you want to remove, and then press DELETE. Example of the line to select:
 
+    ```ini
     multi(0)disk(1)rdisk(0)partition(2)\Windows="Windows 98" /fastdetect  
+    ```
 
 2. On the File menu, click Save.
 
@@ -92,15 +97,21 @@ The default represents the operating system that will be loaded if no selection 
 
 1. In Notepad, modify the following line to reflect the operating system that is to be the default:
 
+    ```ini
     default=multi(0)disk(0)rdisk(0)partition(1)\WINNT  
+    ```
 
-    For example, changing the default from Windows 2000 Server to Microsoft Windows 95  
-
+    For example, changing the default from Windows 2000 Server to Microsoft Windows 95
+  
+    ```ini
     default=multi(0)disk(0)rdisk(0)partition(1)\WINNT  
+    ```
 
-    would be modified to:  
-
+    would be modified to:
+  
+    ```ini
     default=multi(0)disk(0)rdisk(1)partition(2)\Windows  
+    ```
 
 2. On the File menu, click Save.
 
