@@ -13,16 +13,16 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: User, computer, group, and object management
 ms.technology: ActiveDirectory
 ---
-# Troubleshoot Directory Services issues in Windows 7 and in Windows Server 2008 R2
+# Troubleshoot Directory Services issues
 
-This article discusses how to use the Directory Services to help collect information to troubleshoot Directory Services issues in Windows 7 and in Windows Server 2008 R2.
+This article discusses how to use the Directory Services to help collect information to troubleshoot Directory Services issues.
 
 _Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2671810
 
 ## Summary
 
-The "Directory Services" troubleshooter collects information to help you troubleshoot common issues that are related to Directory Services technologies in Windows 7 and in Windows Server 2008 R2. This troubleshooter is integrated with the Microsoft Fix it Center Pro service. This service can perform automated diagnostic analysis to identify solutions.
+The Directory Services troubleshooter collects information to help you troubleshoot common issues that are related to Directory Services technologies. This troubleshooter is integrated with the Microsoft Fix it Center Pro service. This service can perform automated diagnostic analysis to identify solutions.
 
 To run this troubleshooter, follow these steps:
 

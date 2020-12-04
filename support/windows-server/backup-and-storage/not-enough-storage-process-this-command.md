@@ -1,6 +1,6 @@
 ---
-title: Not enough storage to process this command
-description: Describes an issue that occurs when you try to access file shares on an SMB server that has the Scale-Out File Server role configured. Provides a resolution.
+title: Fail to access file shares on SOFS-configured server
+description: Describes an issue that occurs when you try to access file shares on a SMB server that has the Scale-Out File Server role configured, and provides a resolution.
 ms.date: 09/24/2020
 author: Deland-Han 
 ms.author: delhan
@@ -13,9 +13,9 @@ ms.reviewer: kaushika, nedpyle, kapilth, robhind, jgerend, kumud
 ms.prod-support-area-path: File Server Resource Manager (FSRM)
 ms.technology: BackupStorage
 ---
-# "Not enough server storage is available to process this command" error when you try to access file shares on an SOFS-configured server
+# Error when you access file shares on a SOFS-configured server: Not enough server storage is available to process this command
 
-This article provides a solution to an issue that occurs when you try to access file shares on an SMB server that has the Scale-Out File Server role configured.
+This article provides a solution to an issue that occurs when you access file shares on a SMB server that has the Scale-Out File Server role configured.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3101545
@@ -24,9 +24,11 @@ _Original KB number:_ &nbsp; 3101545
 
 Consider the following scenario:
 
-- You configure the [Scale-Out File Server](https://technet.microsoft.com/library/hh831349.aspx)  (SOFS) role on a server that's running Window Server 2012 R2.
+- You configure the [Scale-Out File Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831349(v=ws.11)) (SOFS) role on a server that's running Window Server 2012 R2.
 - You have server applications and clients that access file shares frequently.
-- The applications and clients open many short-lived sessions in which they connect, authenticate, change files, and close the session immediately. In this scenario, after some time, access to the file shares is unsuccessful, and a STATUS_INSUFF_SERVER_RESOURCES error is recorded in a network capture.
+- The applications and clients open many short-lived sessions in which they connect, authenticate, change files, and close the session immediately.
+
+In this scenario, after some time, access to the file shares is unsuccessful, and a STATUS_INSUFF_SERVER_RESOURCES error is recorded in a network capture.
 
 Additionally, when users try to connect to SOFS shares, they receive the following error message:
 

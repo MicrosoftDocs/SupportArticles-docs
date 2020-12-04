@@ -1,5 +1,5 @@
 ---
-title: You receive DFSR event ID 2212 after you restart the DFSR service in Windows Server 2008
+title: DFSR event ID 2212 after you restart the DFSR service
 description: Describes an issue in which you receive the DFS Replication event 2212, and DFSR stops after you restart Windows Server 2008. A short time later, event 2214 is logged in the DFS Replication log.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -62,10 +62,10 @@ String 20000 milliseconds (default value)
 
 To specify the wait time, follow these steps:
 
-1. Click **Start**, click **Run**, type regedit, and then click **OK**.
+1. Click **Start**, click **Run**, type `regedit`, and then click **OK**.
 
 2. Locate and then click the following key in the registry:
- `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control` 
+ `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control`  
 
 3. On the **Edit** menu, point to **New**, and then click **String Value**.
 4. Type WaitToKillServiceTimeout, and then press ENTER.
@@ -85,10 +85,4 @@ If the time interval is something other than 60 seconds, you can set the value o
 
 Make sure to install KB 2549760 to ensure proper performance of the WaitToKillServiceTimeout registry value
 
- [2549760 WaitToKillServiceTimeout registry value does not work in Windows 7 or in Windows Server 2008 R2](https://support.microsoft.com/help/en-us) 
-
-## References
-
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[146092](https://support.microsoft.com/help/146092) How to Increase shutdown time for services to close properly
+ [2549760 WaitToKillServiceTimeout registry value does not work in Windows 7 or in Windows Server 2008 R2](https://support.microsoft.com/help/2549760)  

@@ -17,8 +17,8 @@ ms.technology: ActiveDirectory
 
 This article provides a solution to fix an error (Access is denied) that occurs when you promote new Windows Server 2012 R2 domain controllers in an existing domain.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 3207962
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;3207962
 
 ## Symptoms
 
@@ -26,43 +26,45 @@ When you try to promote new Windows Server 2012 R2 domain controllers in an exis
 
 In this situation, the administrator sees the following error message:
 
-Title: Windows Security
-Message Text: Network Credentials
- The operation failed because: Active Directory Domain Services could not configure the computer account \<hostname>$ to the remote Active Directory Domain Controller account \<fully qualified name of helper DC>. "Access is denied"
+Title: Windows Security  
+Message Text: Network Credentials  
+> The operation failed because: Active Directory Domain Services could not configure the computer account \<hostname>$ to the remote Active Directory Domain Controller account \<fully qualified name of helper DC>. "Access is denied"
 
-The failure occurs when adding the NTDS Settings object for the new Domain Controller, returning the following error message:
+The failure occurs when adding the NTDS Settings object for the new Domain Controller, returning the following error message:  
 
-The operation failed because:
+The operation failed because:  
 
-Active Directory Domain Services could not create the NTDS Settings object for this Active Directory Domain Controller CN=NTDS Settings,CN=TEST-DC,CN=Servers,CN=mysite,CN=Sites,CN=Configuration,DC=domain,DC=com on the remote AD DC DCName.ChildDomain.domain.com. Ensure the provided network credentials have sufficient permissions.
- "Access is denied."
+Active Directory Domain Services could not create the NTDS Settings object for this Active Directory Domain Controller CN=NTDS Settings,CN=TEST-DC,CN=Servers,CN=mysite,CN=Sites,CN=Configuration,DC=domain,DC=com on the remote AD DC **DCName.ChildDomain.domain.com**. Ensure the provided network credentials have sufficient permissions.
+> "Access is denied."
 
-Additionally, the DCPromo.log file shows the following errors:
+Additionally, the DCPromo.log file shows the following errors:  
 
-2705DateTime[INFO]Error - Active Directory Domain Services could not create the NTDS Settings object for this Active Directory Domain Controller CN=NTDS Settings,CN=TEST-DC,CN=Servers,CN=mysite,CN=Sites,CN=Configuration,DC=domain,DC=com on the remote AD DC DCName.ChildDomain.domain.com. Ensure the provided network credentials have sufficient permissions. (5)
+2705DateTime[INFO]  
+> Error - Active Directory Domain Services could not create the NTDS Settings object for this Active Directory Domain Controller CN=NTDS Settings,CN=TEST-DC,CN=Servers,CN=mysite,CN=Sites,CN=Configuration,DC=domain,DC=com on the remote AD DC **DCName.ChildDomain.domain.com**. Ensure the provided network credentials have sufficient permissions. (5)  
+
 DateTime[INFO] EVENTLOG (Error): NTDS General / Internal Processing: 1168
 Internal error: An Active Directory Domain Services error has occurred.
 
 Additional Data
 
 Error value (decimal):  
- -1073741823 
+> -1073741823  
 
 Error value (hex):  
- c0000001 
+> c0000001  
 
 Internal ID:
 30017c6
 
-...
-DateTime[INFO] NtdsInstall for ChildDomain.domain.com returned 5 
-DateTime [INFO] DsRolepInstallDs returned 5
-DateTime [ERROR] Failed to install to Directory Service (5) 
-DateTime[ERROR] DsRolepFinishSysVolPropagation (Abort Promote) failed with 8001
-DateTime[WARNING] Failed to abort system volume installation (8001)
-DateTime[INFO] Starting service NETLOGON
-DateTime[INFO] Configuring service NETLOGON to 2 returned 0
-DateTime[INFO] The attempted domain controller operation has completed
+...  
+DateTime[INFO] NtdsInstall for `ChildDomain.domain.com` returned 5  
+DateTime [INFO] DsRolepInstallDs returned 5  
+DateTime [ERROR] Failed to install to Directory Service (5)  
+DateTime[ERROR] DsRolepFinishSysVolPropagation (Abort Promote) failed with 8001  
+DateTime[WARNING] Failed to abort system volume installation (8001)  
+DateTime[INFO] Starting service NETLOGON  
+DateTime[INFO] Configuring service NETLOGON to 2 returned 0  
+DateTime[INFO] The attempted domain controller operation has completed  
 
 Where the errors map to the following:
 
@@ -74,26 +76,29 @@ This issue occurs because the Add/Remove Replica In Domain permission is missing
 
 ## Resolution
 
-To resolve this issue, follow these steps:
-1. Verify that all the steps and conditions in the "Resolution" section of Knowledge Base article [2002413](https://support.microsoft.com/help/2002413) are true for your environment. 
+To resolve this issue, follow these steps:  
 
-2. If domain controller promotion still fails even after you make sure that the user also has the SeEnableDelegationPrivilege permission, check ADSIEdit.msc to verify the user's effective permissions for the domain partition:
-  1. Click Start, click Run, and then type adsiedit.msc.
-  2. Expand Default naming context, right-click *DC=domain,DC=com*, and then click **Properties**.
-  3. On the **Security** tab, click the **Advanced** button.
-  4. On the Effective Access tab, enter the user or group name of the user who is performing the operation that's failing in DCPromo.
-  5. Confirm whether the Add/remove replica in domain control access permission has been granted.
+1. Verify that all the steps and conditions in the "Resolution" section of Knowledge Base article [2002413](https://support.microsoft.com/help/2002413) are true for your environment.
 
-  :::image type="content" source="./media/access-denied-create-ntds-settings-object/add-remove-replica-in-domain.jpg" alt-text="Screenshot of Add/remove replica in domain.":::
+2. If domain controller promotion still fails even after you make sure that the user also has the SeEnableDelegationPrivilege permission, check ADSIEdit.msc to verify the user's effective permissions for the domain partition:  
 
-3. If the Add/Remove Replica In Domain permission is missing for the user or group, add it by using ADSIEdit.msc:
-  1. Click Start, click Run, and then type adsiedit.msc.
-  2. Expand Default naming context, right-click *DC=domain,DC=com*, and then click **Properties**.
-  3. On the **Security** tab, click the **Advanced** button.
-  4. On the Permissions tab, add the Add/remove replica in domain control access permission for the desired user or group as follows:
+   1. Click Start, click Run, and then type adsiedit.msc.
+   2. Expand Default naming context, right-click *DC=domain,DC=com*, and then click **Properties**.
+   3. On the **Security** tab, click the **Advanced** button.
+   4. On the Effective Access tab, enter the user or group name of the user who is performing the operation that's failing in DCPromo.
+   5. Confirm whether the Add/remove replica in domain control access permission has been granted.
 
-  Type: Allow  
-  Applies to: This object only 
+      :::image type="content" source="./media/access-denied-create-ntds-settings-object/add-remove-replica-in-domain.jpg" alt-text="Screenshot of Add/remove replica in domain.":::
+
+3. If the Add/Remove Replica In Domain permission is missing for the user or group, add it by using ADSIEdit.msc:  
+
+   1. Click Start, click Run, and then type adsiedit.msc.
+   2. Expand Default naming context, right-click *DC=domain,DC=com*, and then click **Properties**.
+   3. On the **Security** tab, click the **Advanced** button.
+   4. On the Permissions tab, add the Add/remove replica in domain control access permission for the desired user or group as follows:
+
+      Type: Allow  
+      Applies to: This object only  
 
 ## More information
 

@@ -13,7 +13,7 @@ ms.reviewer: kaushika, sagiv, wincicadsec
 ms.prod-support-area-path: Active Directory Lightweight Directory Services (AD LDS) and Active Directory Application Mode (ADAM)
 ms.technology: ActiveDirectory
 ---
-# LDS service startup fails after you manually change msDS-Behavior-Version in Windows Server 2019
+# LDS service startup fails after you manually change msDS-Behavior-Version in Windows Server 2019 and 2016
 
 This article provides a solution to an error that LDS service startup fails after you manually change msDS-Behavior-Version.
 
@@ -35,7 +35,7 @@ Task Category: Internal Processing
 Level: Error  
 Keywords: Classic  
 User: ANONYMOUS LOGON  
-Computer: LDS.CONTOSO.COM  
+Computer: `LDS.CONTOSO.COM`  
 Description:  
 Internal error: An Active Directory Lightweight Directory Services error has occurred.
 >
@@ -76,7 +76,8 @@ If there are multiple replica servers in that instance (for example, LDSServer1 
 
     :::image type="content" source="./media/lds-service-startup-fails/role-seizure-confirmation-dialog.png" alt-text="A Role Seizure Confirmation Dialog displays.":::
 
-2. Connect to the configuration partition of the server that still runs the LDS instance (for example, LDSServer2), and then roll back the functionality level version by reverting the **msDS-Behavior-Version**  attribute value.
+2. Connect to the configuration partition of the server that still runs the LDS instance (for example, LDSServer2), and then roll back the functionality level version by reverting the **msDS-Behavior-Version** attribute value.
+
 3. Run a metadata cleanup of the LDS server (LDSServer1) by using **dsmgmt**:
 
     > C:\Windows\system32> **dsmgmt**  
@@ -129,4 +130,4 @@ If there are multiple replica servers in that instance (for example, LDSServer1 
 
     :::image type="content" source="./media/lds-service-startup-fails/select-skip-all.png" alt-text="Active Directory Lightweight Directory Services Removal Wizard.":::
 
-5. Run the "Active Directory Lightweight Directory Services Setup" (C:\Windows\ADAM\adaminstall.exe) on LDSServer1 to install a replica of the existing instance from LDSServer2.
+5. Run the Active Directory Lightweight Directory Services Setup (C:\Windows\ADAM\adaminstall.exe) on LDSServer1 to install a replica of the existing instance from LDSServer2.
