@@ -111,7 +111,7 @@ If the file doesn't populate the cache correctly, make sure that LMHOSTS lookup 
 3. Click the **WINS Address** tab, and then click to select the **Enable LMHOSTS Lookup** check box.
 4. Restart the computer.
 5. Repeat the steps in the "Load the LMHOSTS file into the cache" section.
-6. If the file doesn't populate the cache correctly, make sure that the LMHOSTS file is in the **%SystemRoot%** \\System32\\Drivers\\Etc folder and that the file is formatted correctly.
+6. If the file doesn't populate the cache correctly, make sure that the LMHOSTS file is in the **%SystemRoot%**\\System32\\Drivers\\Etc folder and that the file is formatted correctly.
 
 For example, the file must be formatted similar to the following example formatting:
 
