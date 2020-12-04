@@ -29,7 +29,7 @@ In Microsoft Exchange Server 2019, 2016, or 2013, email messages may be stuck in
 
 ## Cause
 
-Exchange Server is designed to create concurrent or parallel connections to send messages to multiple destinations. To make sure that those connections are not exhausted by sending to a single destination at the expense of others, the Exchange Server default settings restrict sending lots of mail to a single destination (FQDN of SendConnector/NextHopDomain), such as Exchange Online. If a server that is running Exchange Server is configured to send all messages to Exchange Online for relaying or as part of hybrid coexistence configuration, these settings limit the number of parallel and total connections that are created. This, in turn, limits the throughput of messages to Exchange Online.
+Exchange Server is designed to create concurrent or parallel connections to send messages to multiple destinations. To make sure that those connections are not exhausted by sending to a single destination at the expense of others, the Exchange Server default settings restrict sending lots of mail to a single destination (FQDN of SendConnector/NextHopDomain), such as Exchange Online. If a server that is running Exchange Server is configured to send all messages to Exchange Online for relaying or as part of hybrid configuration, these settings limit the number of parallel and total connections that are created. This, in turn, limits the throughput of messages to Exchange Online.
 
 ## Resolution
 
