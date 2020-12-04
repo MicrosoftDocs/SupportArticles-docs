@@ -157,17 +157,19 @@ These steps are not needed for Window Server 2008 and later.
 
     ![Screenshot of database cache size increasing trend](./media/replication-error-8446/memory.jpg)
 
-    LSASS ESE Database cache is not limited by default, so if you determine it is the database cache that is consuming memory using performance monitor you can add the following registry value to limit the database cache.
+### LSASS ESE Database cache is not limited by default
 
-    You can use the "EDB max buffers" registry value for limiting ESE cache allocation (number of pages is 8912 bytes) to prevent the conditions.
-     **Value Name:** EDB max buffers  
-     **Type:** reg_dword  
-     **Setting:** \<refer to the values below>  
-     **Registry key:** `HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`  
+If you determine it is the database cache that is consuming memory using performance monitor, you can add the following registry value to limit the database cache.
 
-    > [!CAUTION]
-    > Ensure that you set an optimal value to the registry value (EDB max buffers), if the cache limit is too low then it might cause performance degradation.
-    You may apply the following values as start for an optimization, depending is the /3GB boot.ini switch is use or not:
-    >
-    > Without /3GB switch: "EDB max buffers", Reg_DWord: 157286 (1.2 GB); expected LSASS consumption ~1.5 GB  
-    With /3GB switch: "EDB max buffers", Reg_DWord: 235929 (1.8 GB); expected LSASS consumption ~2.1 GB
+You can use the "EDB max buffers" registry value for limiting ESE cache allocation (number of pages is 8912 bytes) to prevent the conditions.
+
+**Value Name:** EDB max buffers  
+**Type:** reg_dword  
+**Setting:** \<refer to the values below>  
+**Registry key:** `HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`  
+
+> [!CAUTION]
+> Ensure that you set an optimal value to the registry value (EDB max buffers), if the cache limit is too low then it might cause performance degradation.
+You may apply the following values as start for an optimization, depending is the /3GB boot.ini switch is use or not:
+>
+> Without /3GB switch: "EDB max buffers", Reg_DWord: 157286 (1.2 GB); expected LSASS consumption ~1.5 GB With /3GB switch: "EDB max buffers", Reg_DWord: 235929 (1.8 GB); expected LSASS consumption ~2.1 GB

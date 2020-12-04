@@ -99,7 +99,7 @@ Once Internet Explorer has been reset to a default configuration, try to connect
 
 Remove the following registry keys, if they exist:
 
- `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Ext\Settings\{7584C670-2274-4EFB-B00B-D6AABA6D3850}  HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Ext\Settings\{971127BB-259F-48C2-BD75-5F97A3331551}  HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Ext\Settings\{9059F30F-4EB1-4BD2-9FDC-36F43A218F4A}  HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Ext\Settings\{4EB89FF4-7F78-4A0F-8B8D-2BF02E94E4B2}  HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Ext\Settings\{4EDCB26C-D24C-4e72-AF07-B576699AC0DE}  HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Ext\Settings\{7390F3D8-0439-4C05-91E3-CF5CB290C3D0}`  
+ `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Ext\Settings\{7584C670-2274-4EFB-B00B-D6AABA6D3850}`  `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Ext\Settings\{971127BB-259F-48C2-BD75-5F97A3331551}`  `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Ext\Settings\{9059F30F-4EB1-4BD2-9FDC-36F43A218F4A}`  `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Ext\Settings\{4EB89FF4-7F78-4A0F-8B8D-2BF02E94E4B2}`  `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Ext\Settings\{4EDCB26C-D24C-4e72-AF07-B576699AC0DE}`  `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Ext\Settings\{7390F3D8-0439-4C05-91E3-CF5CB290C3D0}`  
 
 Once the registry keys are removed, exit and restart Internet Explorer, and try to connect to the remote computer or start the remote application again.
 
