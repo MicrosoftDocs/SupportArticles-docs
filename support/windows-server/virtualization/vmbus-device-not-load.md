@@ -40,7 +40,7 @@ When a virtual machine is created by using Virtual Server or Virtual PC, the Adv
 To resolve this issue, follow these steps:
 
 1. Start the virtual machine.
-2. Click **Start**, click **Run**, type *Msconfig.exe*, and then click **OK**.
+2. Click **Start**, click **Run**, type Msconfig.exe, and then click **OK**.
 3. In the **System Configuration** dialog box, click the **Boot** tab, and then click **Advanced Options**.
 4. In the **BOOT Advanced Options** dialog box, click to select the **Detect HAL** check box, and then click **OK**.
 5. Click **Yes** to restart the virtual machine.
