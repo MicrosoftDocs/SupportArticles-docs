@@ -1,5 +1,5 @@
 ---
-title: Error when you connect to a Web site
+title: Error 403 or 500 when you connect to a Web site
 description: Describes a problem that occurs if the user tries to connect to a computer that is running ISA Server 2004 SP2 and that requires Basic, RADIUS, or OWA Forms-Based authentication. A script is available to work around this issue.
 ms.date: 09/21/2020
 author: Deland-Han 
@@ -13,7 +13,7 @@ ms.reviewer: kaushika, v-jomcc, jobarner
 ms.prod-support-area-path: Legacy authentication (NTLM)
 ms.technology: WindowsSecurity
 ---
-# Error message when you try to connect to a Web site that is published by using ISA Server 2004 Service Pack 2: "403" or "500"
+# Error code 403 or 500 when you connect to a Web site that is published by using ISA Server 2004 Service Pack 2
 
 This article provides a solution to an error that occurs when try to connect to a Web site that is published by using Microsoft Internet Security and Acceleration (ISA) Server 2004 Service Pack 2 (SP2).
 
@@ -26,10 +26,12 @@ _Original KB number:_ &nbsp; 912122
 ## Symptoms
 
 When you try to connect to a Web site that is published by using Microsoft Internet Security and Acceleration (ISA) Server 2004 Service Pack 2 (SP2), you receive an error message. If the ISA Server Web listener has Basic authentication enabled, you receive the following error message:
+
 > Error Code: 403 Forbidden.  
 The page must be viewed over a secure channel (Secure Sockets Layer (SSL)). Contact the server administrator. (12211)
 
 If the ISA Server Web listener has RADIUS authentication or Microsoft Outlook Web Access Forms-Based authentication (Cookie-auth) enabled, you receive the following error message:
+
 > Error Code: 500 Internal Server Error.  
 An internal error occurred. (1359)
 
@@ -41,8 +43,11 @@ This issue occurs if all the following conditions are true:
   - Basic
   - RADIUS
   - Outlook Web Access Forms-Based
+
 - The ISA Server 2004 Web listener is configured to listen for HTTP traffic.
+
 - The **Require all users to authenticate** check box is selected for the Web listener or the Web publishing rules apply to a user set other than the default **All users** user set.
+
 - You connect to the published Web site by using HTTP instead of by using HTTPS.
 
 This issue occurs because of a security modification that is included in ISA Server 2004 SP2. When you use HTTP-to-HTTP bridging, ISA Server 2004 SP2 does not enable traffic on the external HTTP port if the Web listener is configured to request one or more of the following kinds of credentials:
@@ -62,21 +67,9 @@ ISA Server 2004 SP2 prevents you from entering credentials in clear text. When y
 > [!WARNING]
 > This workaround may make your computer or your network more vulnerable to attack by malicious users or by malicious software such as viruses. We do not recommend this workaround but are providing this information so that you can implement this workaround at your own discretion. Use this workaround at your own risk.
 
-To work around this issue, configure ISA Server 2004 SP2 to behave like earlier versions of ISA Server 2004. To do this, you may either run the Microsoft Fix it solution discussed in the [Fix it for me](#fix-it-for-me) section or the Microsoft Visual Basic script discussed in the [Let me fix it myself](#let-me-fix-it-myself) section. The Fix it solution and the script both set a value that is named **AllowAskBasicAuthOverNonSecureConnection** in a new vendor parameters set under the root of the ISA Server 2004 array.
+To work around this issue, configure ISA Server 2004 SP2 to behave like earlier versions of ISA Server 2004.
 
-### Fix it for me
-
-To fix this problem automatically, click the **Fix it** button or link. Click **Run** in the **File Download** dialog box, and then follow the steps in the Fix it wizard.
-
-> [!NOTE]
-> this wizard may be in English only; however, the automatic fix also works for other language versions of Windows.
-
-> [!NOTE]
-> If you are not on the computer that has the problem, you can save the automatic fix to a flash drive or to a CD, and then you can run it on the computer that has the problem.
-
-### Let me fix it myself
-
-To fix this problem yourself, run the following script on the ISA Server 2004 where you want to change the configuration.
+To do this, run the following script on the ISA Server 2004 where you want to change the configuration. The script sets a value that is named **AllowAskBasicAuthOverNonSecureConnection** in a new vendor parameters set under the root of the ISA Server 2004 array.
 
 Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements.
 
@@ -158,7 +151,3 @@ End Sub
 
 AddAllowAskBasicAuthOverNonSecureConnection
 ```
-
-## More information
-
-For more information about ISA Server 2004, visit the following Microsoft Web site: [https://www.microsoft.com/isaserver/default.mspx](https://www.microsoft.com/isaserver/default.mspx)

@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, bjwhalen
 ms.prod-support-area-path: Sysvol access or replication issues
 ms.technology: GroupPolicy
 ---
@@ -17,39 +17,26 @@ ms.technology: GroupPolicy
 
 This article provides help to fix errors that occur when you run Group Policy Management Console (GPMC).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 828760
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;828760
 
 ## Symptoms
 
-When you run GPMC in a Microsoft Windows Server 2003 domain or in a Microsoft Windows 2000 domain, and then you click either **Default Domain Policy** or **Default Domain Controllers Policy**, you receive one of the following messages:
+When you run GPMC in a Microsoft Windows Server domain, and then you click either **Default Domain Policy** or **Default Domain Controllers Policy**, you receive one of the following messages:
 
-- If you have permissions to modify security on the Group Policy objects (GPOs), you receive the following message: The permissions for this GPO in the sysvol folder are inconsistent with those in Active Directory. It is recommended that these permissions be consistent. To change the permissions in SYSVOL to those in Active Directory, click OK
+- If you have permissions to modify security on the Group Policy objects (GPOs), you receive the following message:  
+  > The permissions for this GPO in the sysvol folder are inconsistent with those in Active Directory. It is recommended that these permissions be consistent. To change the permissions in SYSVOL to those in Active Directory, click OK
 
-- If you do not have permission to modify security on the Group Policy objects (GPOs), you receive the following message: The permissions for this GPO in the sysvol folder are inconsistent with those in Active Directory. It is recommended that these permissions be consistent. Contact an administrator who has rights to modify security on this GPO.
-
+- If you do not have permission to modify security on the Group Policy objects (GPOs), you receive the following message:  
+  > The permissions for this GPO in the sysvol folder are inconsistent with those in Active Directory. It is recommended that these permissions be consistent. Contact an administrator who has rights to modify security on this GPO.
 
 ## Cause
 
 This issue occurs because the access control list (ACL) on the Sysvol portion of the Group Policy object is set to inherit permissions from the parent folder.
 
-## Resolution
-
-### Windows Server 2003
-
-To resolve this problem on a Windows Server 2003-based computer, install Windows Server 2003 Service Pack 1 (SP1). For more information about how to download Windows Server 2003 Service Pack 1, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[889100](https://support.microsoft.com/help/889100) How to obtain the latest service pack for Windows Server 2003  
-
-### Windows 2000
-
-To resolve this problem on a Windows 2000-based computer, install Windows 2000 Service Pack 4 (SP4). For additional information about how to download Windows 2000 Service Pack 4, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[260910](https://support.microsoft.com/help/260910) How to Obtain the Latest Windows 2000 Service Pack  
-
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section of this article. 
+Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section of this article.
 
 ## Workaround
 
@@ -59,4 +46,4 @@ If you have permissions to modify security on the default GPOs, click **OK** in 
 
 Each Group Policy object (GPO) is stored partly in the Sysvol folder on the domain controller and partly in the Active Directory directory service. GPMC, Group Policy Object Editor, and the old Group Policy user interface that is provided in the Active Directory snap-ins present and manage a GPO as a single unit. For example, when you set permissions on a GPO in GPMC, GPMC sets permissions on objects both in Active Directory and in the Sysvol folder. For each GPO, the permissions in Active Directory must be consistent with the permissions in the Sysvol folder. You must not change these separate objects outside GPMC and Group Policy Object Editor. If you do so, this may cause Group Policy processing on the client to fail, or certain users who generally have access may no longer be able to edit a GPO.
 
-Additionally, file system objects and directory service objects do not have the same available permissions because they are different types of objects. When permissions mismatch, it may not be easy to make them consistent. To help you make sure that the security for the Active Directory and for the Sysvol components of a GPO is consistent, GPMC automatically checks the consistency of the permissions of any GPO when you click the GPO in GPMC. If GPMC detects a problem with a GPO, you receive one of the messages that is described in the "Symptoms" section, depending on whether or not you have permissions to modify security on that GPO:
+Additionally, file system objects and directory service objects do not have the same available permissions because they are different types of objects. When permissions mismatch, it may not be easy to make them consistent. To help you make sure that the security for the Active Directory and for the Sysvol components of a GPO is consistent, GPMC automatically checks the consistency of the permissions of any GPO when you click the GPO in GPMC. If GPMC detects a problem with a GPO, you receive one of the messages that is described in the "Symptoms" section, depending on whether or not you have permissions to modify security on that GPO.

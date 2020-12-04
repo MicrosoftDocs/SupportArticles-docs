@@ -9,16 +9,16 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-dgit
 ms.prod-support-area-path: 'Management and Configuration: General issues'
 ms.technology: PrintFaxScan
 ---
-# The standard port monitor for TCP/IP in Windows Server 2003
+# The standard port monitor for TCP/IP
 
 This article describes how the standard port monitor works in Microsoft Windows Server 2003 and compares it with the LPR port monitor.
 
-_Original product version:_ &nbsp; Windows Server 2003  
-_Original KB number:_ &nbsp; 814586
+_Original product version:_ &nbsp;Windows Server 2003  
+_Original KB number:_ &nbsp;814586
 
 ## Summary
 
@@ -37,7 +37,6 @@ You can use a Web-based interface from any Internet-connected client to view the
 
 ## Install the standard port monitor
 
-
 1. Click **Start**, and then click **Printers and Faxes**.
 2. Double-click **Add Printer**.
 3. When the Add New Printer Wizard starts, click **Next**.
@@ -51,7 +50,8 @@ For network-connected print devices, the standard port monitor is the optimal ch
 
 The standard port monitor uses either the RAW or the LPR printing protocols to send documents to a printer. Together, these protocols support most current TCP/IP printers. Do not confuse these print protocols with transport protocols, such as TCP/IP or Data Link Control (DLC).
 
-By default, the standard port monitor deviates from the LPR port monitor in two ways:
+By default, the standard port monitor deviates from the LPR port monitor in two ways:  
+
 - The standard port monitor does not comply with the RFC 1179 requirement that the source TCP port lie between port 721 and port 731. Standard port monitor uses ports from the general, unreserved pool of ports. This pool includes ports 1024 and greater.
 - The LPR port monitor requires that print jobs include information about the size of print jobs. When you send a print job with job size information, the port monitor must spool the job two times, one time to determine size and one time to send the job to the spooler. Printing performance improves if the job is spooled only one time. Therefore, standard port monitor sends the job to the spooler without determining the actual job size. Standard port monitor claims the job is a default size, regardless of the job's actual size. The following table compares the standard port monitor to the LPR port monitor:
 

@@ -65,6 +65,8 @@
     href: windows-boot-failure.md
   - name: Can't boot after a host node upgrade
     href: linux-kernel-panics-upgrade.md
+  - name: Linux VM does not start after an LIS upgrade
+    href: linux-vm-not-start-kernel-lis.md
   - name: OS isn't found
     href: os-not-found.md
 
@@ -125,6 +127,8 @@
 
 - name: Support statements
   items:
+  - name: Azure VM logs
+    href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
   - name: Citrix services support policy
     href: support-policy-citrix-services.md
   - name: Changes to Windows Server images default size
@@ -141,7 +145,7 @@
     href: updates-included-windows-server-images.md
   - name: Windows Server 2003 on Azure
     href: run-win-server-2003.md
-- name: Azure VM logs
-  href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
+  - name: Windows Virtual Desktop guides
+    href: how-to-videos-windows-virtual-desktop.md
 
 

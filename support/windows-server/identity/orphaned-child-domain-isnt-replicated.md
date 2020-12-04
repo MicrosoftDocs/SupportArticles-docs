@@ -1,6 +1,6 @@
 ---
-title: Orphaned child domain isn't replicated
-description: Describes an issue in which an orphaned child domain controller can't replicate information to other domain controllers in a domain. Provides a resolution.
+title: Orphaned child domain controller isn't replicated
+description: Describes an issue in which an orphaned child domain controller can't replicate information to other domain controllers in a domain, and provides a resolution.
 ms.date: 09/21/2020
 author: Deland-Han 
 ms.author: delhan
@@ -15,7 +15,7 @@ ms.technology: ActiveDirectory
 ---
 # Orphaned child domain controller information is not replicated to other domain controllers
 
-This article provides a solution to an issue where an orphaned child domain controller can't replicate information to other domain controllers in a domain.
+This article provides a solution to an issue where an orphaned child domain controller can't be replicated to other domain controllers.
 
 _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 887430
@@ -44,11 +44,11 @@ To resolve this issue, you must create a replication link and then enable one-wa
     1. Select **Start** > **Run**, and then enter **regedt32**.
     2. Select the following registry subkey:  
         `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`
-
     3. Select **Edit** > **New** > **DWORD Value**.
     4. Enter **Replicator Allow SPN Fallback**.
     5. In the right pane, double-click **Replicator Allow SPN Fallback**, type **1** in the **Value data** box, and then select **OK**.
     6. Restart the domain controller.
+
 2. Open a Command Prompt window, and run the following commands:
 
     ```console
@@ -60,9 +60,9 @@ To resolve this issue, you must create a replication link and then enable one-wa
     A successful incoming connection should be displayed for the configuration naming context from the child domain controller.
 
     > [!NOTE]
-    > For information about the Repadmin.exe tool, see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc811551%28v=ws.10%29).
+    > For information about the Repadmin.exe tool, see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](/previous-versions/windows/it-pro/windows-server-2003/cc811551%28v=ws.10%29).
 
-3. At the command prompt, run the following command: **repadmin /options FQDN_of_the_root_domain_controller -DISABLE_NTDSCONN_XLATE**  
+3. At the command prompt, run the command: `repadmin /options FQDN_of_the_root_domain_controller -DISABLE_NTDSCONN_XLATE`.
 
 4. Remove the **Replicator Allow SPN Fallback** registry entry. To do this, follow these steps:
 
@@ -70,6 +70,7 @@ To resolve this issue, you must create a replication link and then enable one-wa
 
         `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`
     2. Right-click **Replicator Allow SPN Fallback**, select **Delete**, and then select **OK**.
+
 5. Force replication between all domain controllers in the root domain. To do this, follow these steps:
     1. On a domain controller in the root domain, select **Start** > **Programs** > **Administrative Tools** > **Active Directory Sites and Services**.
     2. Expand **Sites** > **Servers**, expand your **Server_Name** folder, and then select **NTDS Settings**.
@@ -77,5 +78,7 @@ To resolve this issue, you must create a replication link and then enable one-wa
 
         An incoming connection object from one or more of the child domain controllers is displayed. You may have to update the display by pressing F5.
     4. Repeat step 3 for each domain controller in the root domain.
-6. Allow replication to occur throughout the forest. Then, run the **repadmin /showreps** command on the root domain controller and on the child domain controllers. This step makes sure that Active Directory Directory Service (AD DS) replication is successful.
+
+6. Allow replication to occur throughout the forest. Then, run the `repadmin /showreps` command on the root domain controller and on the child domain controllers. This step makes sure that Active Directory Directory Service (AD DS) replication is successful.
+
 The **Replication Allow SPN Fallback** registry entry enables the domain controller to use one-way authentication if two-way authentication cannot be performed because of a failure to resolve a Service Principal Name (SPN) to a computer account.

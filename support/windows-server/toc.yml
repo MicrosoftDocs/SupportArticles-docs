@@ -384,7 +384,7 @@
       href: ./identity/use-online-dbdump-feature-ldp-dot-exe.md
     - name: View and set LDAP policy by using Ntdsutil
       href: ./identity/view-set-ldap-policy-using-ntdsutil.md
-  - name: Schema update - known issues, best practies, workflow review
+  - name: Schema update - known issues, best practices, workflow review
     items:
     - name: How to find the current Schema Version
       href: ./identity/find-current-schema-version.md
@@ -530,10 +530,6 @@
       href: ./admin-development/hotfixes-for-wmi-issues.md
     - name: Windows Installer reconfigured all applications
       href: ./admin-development/windows-installer-reconfigured-all-applications.md
-  - name: Windows PowerShell
-    items:
-    - name: Windows PowerShell 1.0 for Windows Vista package
-      href: ./admin-development/windows-powershell-installation-package-vista.md
   - name: Windows Remote Management (WinRM)
     items:
     - name: Event collector doesn't forward events
@@ -1120,8 +1116,6 @@
       href: ./group-policy/configure-group-policies-set-security.md
     - name: Group Policy Preferences Events
       href: ./group-policy/information-group-policy-preferences-events.md
-    - name: LDAP filters don't take effect
-      href: ./group-policy/ldap-filters-dont-take-effect.md
   - name: Sysvol access or replication issues
     items:
     - name: Change the default permissions on GPOs
@@ -1297,7 +1291,7 @@
     - name: DFS Namespaces service and its configuration data
       href: ./networking/dfs-namespaces-service-configuration-data.md
     - name: DNS CNAME alias fails to connect a SMB file server share
-      href: ./networking/dns-chame-alias-cannot-access-smb-file-server-share.md
+      href: ./networking/dns-cname-alias-cannot-access-smb-file-server-share.md
     - name: Error messages on SMB connections
       href: ./networking/error-messages-smb-connections.md
     - name: Event 1 about SMB witness client initialization

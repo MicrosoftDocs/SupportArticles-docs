@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2989058
 
 Consider the following scenario:
 
-- You have a system that is running Windows 8, Windows 8.1 or Windows 10.
+- You have a system that is running Windows 10.
 - You have a document open in a Modern App that contains images and text on multiple pages, for example a PDF file.
 - You try to print the file by using a PostScript or PCL6-based printer driver.
 - Within the printer properties, you select the print feature to include more than one page per sheet.

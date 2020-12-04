@@ -17,8 +17,8 @@ ms.technology: HighAvailability
 
 This article describes how to use Windows Server cluster nodes as domain controllers.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 281662
+_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original KB number:_ &nbsp;281662
 
 ## Summary
 
@@ -31,21 +31,25 @@ There are instances when you can deploy cluster nodes in an environment where th
 
 ## More information
 
-Depending on the workload deployed on the Failover Cluster, there are different support policies and recommendations:
-- Microsoft Exchange Server - Is not supported in a clustered configuration where the cluster nodes are domain controllers. For more information, click the following article number to view the article in the Microsoft Knowledge Base: [898634](https://support.microsoft.com/help/281662) Active Directory domain controllers are not supported as Exchange Server cluster nodes
-- Microsoft SQL Server - Is not supported in a clustered configuration where the cluster nodes are domain controllers. For more information, click the following to view more information: [Installing SQL Server on a Domain Controller](https://msdn.microsoft.com/library/ms143506%28v=sql.100%29.aspx#dc_support) 
-- Windows Server Hyper-V - It is not recommended to run other workloads (including the domain controller role) in the hypervisor parent partition. If you have a cluster deployment in which there is no link with a domain, you must configure the cluster nodes as domain controllers prior to setting up the cluster. If the connectivity between cluster nodes and domain controllers is such that the link is either slow or unreliable, consider having a domain controller co-located at the same site or location as the cluster. 
+Depending on the workload deployed on the Failover Cluster, there are different support policies and recommendations:  
 
-Consider the following important points when you are deploying Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, or Windows Server 2012 Failover Clustering nodes as domain controllers: 
+- Microsoft Exchange Server - Is not supported in a clustered configuration where the cluster nodes are domain controllers. For more information, click the following article number to view the article in the Microsoft Knowledge Base: [898634](https://support.microsoft.com/help/281662) Active Directory domain controllers are not supported as Exchange Server cluster nodes.
+- Microsoft SQL Server - Is not supported in a clustered configuration where the cluster nodes are domain controllers. For more information, click the following to view more information: [Installing SQL Server on a Domain Controller](/previous-versions/sql/sql-server-2008/ms143506(v=sql.100))  
+- Windows Server Hyper-V - It is not recommended to run other workloads (including the domain controller role) in the hypervisor parent partition.  
+
+If you have a cluster deployment in which there is no link with a domain, you must configure the cluster nodes as domain controllers prior to setting up the cluster. If the connectivity between cluster nodes and domain controllers is such that the link is either slow or unreliable, consider having a domain controller co-located at the same site or location as the cluster.  
+
+Consider the following important points when you are deploying Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, or Windows Server 2012 Failover Clustering nodes as domain controllers:  
+
 - It is not recommended to combine the Active Directory Domain Services role and the Failover Cluster feature on Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2
 - It is not supported for a Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2 node in a Failover Cluster to be a Read-Only Domain Controller (RODC)
 - It is not supported for a Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2 Failover Cluster running Microsoft Exchange Server or Microsoft SQL Server to be a domain controller
 - It is not supported to combine the Active Directory Domain Services role and the Failover Cluster feature on Windows Server 2012
-- It is recommended that at least two nodes be configured as domain controllers and potentially all nodes for consistency if cluster nodes are configured as domain controllers. 
+- It is recommended that at least two nodes be configured as domain controllers and potentially all nodes for consistency if cluster nodes are configured as domain controllers.
 - There is overhead that is associated with the running of a domain controller. A domain controller that is idle can use anywhere between 130 to 140 megabytes (MB) of RAM, which includes the running of Failover Clustering. There is also replication traffic if these domain controllers have to replicate with other domain controllers within the domain and across domains. Most corporate deployments of clusters include nodes with gigabytes (GB) of memory so this is not generally an issue.
 - If the Windows Server 2003 cluster nodes are the only domain controllers, they each have to be DNS servers as well, and they should point to themselves for primary DNS resolution, and to each other for secondary DNS resolution. You must address the problem of the ability to not register the private interface in DNS, especially if it is connected by way of a crossover cable (two-node only). For additional information about how to configure the heartbeat interface, click the following article number to view the article in the Microsoft Knowledge Base: [258750](https://support.microsoft.com/help/258750) Recommended private "heartbeat" configuration on a cluster server  
 
-However, before you can accomplish step 12 in article 258750, you must first modify other configuration settings, which are outlined in the following article in the Microsoft Knowledge Base:
+    However, before you can accomplish step 12 in article 258750, you must first modify other configuration settings, which are outlined in the following article in the Microsoft Knowledge Base:
  [275554](https://support.microsoft.com/help/275554) The host's "A" record is registered in DNS after you choose not to register the connection's address  
 
 - If the cluster nodes are the only domain controllers, they must each be global catalog servers, or you must implement domainlets.
@@ -58,7 +62,8 @@ However, before you can accomplish step 12 in article 258750, you must first mod
 
 ## References
 
-For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base: [255913](https://support.microsoft.com/help/255913) Integrating Windows 2000 DNS into an existing BIND or Windows NT 4.0-based DNS namespace  
+For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:  
+[255913](https://support.microsoft.com/help/255913) Integrating Windows 2000 DNS into an existing BIND or Windows NT 4.0-based DNS namespace  
 
 [258750](https://support.microsoft.com/help/258750) Recommended private "heartbeat" configuration on cluster server  
 
@@ -67,20 +72,7 @@ For more information, click the following article numbers to view the articles i
 [223787](https://support.microsoft.com/help/223787) Flexible single master operation transfer and seizure process  
 
 [197132](https://docs.microsoft.com/troubleshoot/windows-server/identity/fsmo-roles) Windows 2000 Active Directory FSMO roles  
- [223346](https://support.microsoft.com/help/223346) FSMO placement and optimization on Windows 2000 domain controllers  
 
-[269229](https://support.microsoft.com/help/269229) How to manually re-create the Cluster service account  
+[223346](https://support.microsoft.com/help/223346) FSMO placement and optimization on Windows 2000 domain controllers  
 
 [234790](https://support.microsoft.com/help/234790) How to find servers that hold flexible single master operations roles  
-
-[171390](https://support.microsoft.com/help/171390) Cluster service may not start if domain controller Is unavailable  
-
-[298570](https://support.microsoft.com/help/298570) Virtual SQL Server 2000 installations may fail if installed to Windows 2000 domain controllers  
-
-For additional information about Quorum drive configuration information, click the following article number to view the article in the Microsoft Knowledge Base: [280345](https://support.microsoft.com/help/280345) Quorum drive configuration information  
-
-For more information, click the following article number to view the article in the Microsoft Knowledge Base: [834231](https://support.microsoft.com/help/834231) When a Windows Server 2003 cluster node is a domain controller, you may receive an error message when you add domain users to the cluster file share  
-
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[898634](https://support.microsoft.com/help/898634) Active Directory domain controllers are not supported as Exchange Server cluster nodes

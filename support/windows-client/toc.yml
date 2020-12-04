@@ -4,7 +4,7 @@
   items:
   - name: Active Directory
     href: ./identity/active-directory-overview.md
-  - name: Schema update - known issues, best practies, workflow review
+  - name: Schema update - known issues, best practices, workflow review
     items:
     - name: Error when checking domain object property
       href: ./identity/error-when-checking-domain-object-property.md
@@ -290,8 +290,6 @@
       href: ./deployment/cant-enter-uefi-firmware-setup.md
     - name: Can't turn off a computer from Audit mode
       href: ./deployment/fail-to-turn-off-computer-from-audit-mode.md
-    - name: Can't upgrade Windows when PowerShell is installed
-      href: ./deployment/cannot-upgrade-windows-with-powershell-installed.md
     - name: Computer screen goes black during setup
       href: ./deployment/computer-screen-black-during-installation.md
     - name: Customize default local user profile
@@ -903,7 +901,7 @@
 - name: Windows 7 EoS FAQ
   items:
   - name: Windows 7 EoS FAQ
-    href: ./windows-7-eos-faq/windows-7-eos-faq-overview.md
+    href: ./windows-7-eos-faq/windows-7-end-support-faq.md
   - name: Windows 7 end of support
     href: ./windows-7-eos-faq/windows-7-end-support-faq-general.md
   - name: Windows 7 ESU
@@ -954,6 +952,8 @@
     items:
     - name: Can't authenticate because of an incorrect PIV smart card driver update
       href: ./windows-security/cannot-authenticate-incorrect-piv-smart-card-driver-update.md
+    - name: 0x6 ERROR_INVALID_HANDLE error when a multithreaded application accesses a smart card
+      href: ./windows-security/0x6-error-invalid-handle-multithreaded-application.md
   - name: TPM
     items:
     - name: Events 14 and 17 for TPM command failure or non-recoverable error
