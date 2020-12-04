@@ -26,7 +26,7 @@ In Windows Vista, the Package Manager tool can install only the first package wh
 
 For example, consider the following scenario:
 
-- On a computer that is running Windows Vista, you create a C:\Temp folder.
+- On a computer that is running Windows Vista, you create a C:\\Temp folder.
 - You download the following hotfix packages to this folder:
 
   - Windows6.0-KB929761-x86.msu
