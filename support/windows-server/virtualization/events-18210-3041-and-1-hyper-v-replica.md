@@ -1,5 +1,5 @@
 ---
-title: Events 18210 and 3041 with Hyper-V Replica
+title: Events 18210 and 3041 when Hyper-V Replica is configured
 description: Describes an issue that triggers events in the Application log when you have a Hyper-V host that's running Windows Server 2012 R2. This issue involves the Hyper-V Replica feature. The events can be safely ignored.
 ms.date: 09/14/2020
 author: Deland-Han
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Hyper-V Replica
 ms.technology: HyperV
 ---
-# Events 18210, 3041, and 1 are logged when Hyper-V replica is configured
+# Events 18210, 3041, and 1 are logged when Hyper-V Replica is configured
 
 This article describes an issue that triggers events in the Application log when you have a Hyper-V host and the Hyper-V Replica feature is configured.
 
@@ -46,7 +46,7 @@ Message: BACKUP failed to complete the command BACKUP DATABASE \<DB Name>. Check
 Source: SQLVDI  
 Event ID: 1  
 Level: Error  
-Message: SQLVDI: Loc=TriggerAbort. Desc=invoked. ErrorCode=(0). Process=\<PID>. Thread=\<TID>. Server. Instance=\<InstanceName>. VD=Global\{\<GUID>}5_SQLVDIMemoryName_0.
+Message: SQLVDI: Loc=TriggerAbort. Desc=invoked. ErrorCode=(0). Process=\<PID>. Thread=\<TID>. Server. Instance=\<InstanceName>. VD=Global\\{\<GUID>}5_SQLVDIMemoryName_0.
 
 > [!NOTE]
 > The same errors may also occur during a genuine backup failure. In that case, you should promptly address the issue. Those errors should not be ignored except after careful review of the error message pattern in the SQL error log.

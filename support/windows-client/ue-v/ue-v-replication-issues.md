@@ -55,13 +55,13 @@ The checklist below provides a general framework for isolating problem users, co
 
     1. Open a PowerShell window and navigate to the appropriate subfolder under %localappdata%\Microsoft\UEV\%computername%. For each monitored template, there will be a folder that corresponds to the application's TemplateID (as reported by the `Get-UEVTemplate` command). Beneath this folder, the most current settings package file will be contained in a folder named *Current*.
 
-    2. Check the date modified information (type `dir` in PowerShell and note the **LastWriteTime** column, or navigate to the folder in Explorer and reference the Date Modified setting).  This should roughly correspond to the time of the last modification of the application.
+    2. Check the date modified information (type `dir` in PowerShell and note the **LastWriteTime** column, or navigate to the folder in Explorer and reference the Date Modified setting). This should roughly correspond to the time of the last modification of the application.
 
     3. Compare the modified date of the file and the file size with the current package in the user's Settings Storage Path.(Get-UevConfiguration).settingsstoragepath data.
 
 4. Run simultaneous traces on both machines to determine the point of failure. For more information, see [How to enable debug logging in Microsoft User Experience Virtualization (UE-V)](/troubleshoot/windows-client/ue-v/enable-debug-logging).
 
-5. If the UE-V synchronization method (`SynMethod`) is set to **OfflineFiles** (the default), verify that Client-Side Caching (also known as Offline Files) is enabled and working properly.  See [Managing Files and Folders](/previous-versions/windows/it-pro/windows-xp/bb457104(v=technet.10)) for general information on how to implement and troubleshoot Client-Side Caching.
+5. If the UE-V synchronization method (`SynMethod`) is set to **OfflineFiles** (the default), verify that Client-Side Caching (also known as Offline Files) is enabled and working properly. See [Managing Files and Folders](/previous-versions/windows/it-pro/windows-xp/bb457104(v=technet.10)) for general information on how to implement and troubleshoot Client-Side Caching.
 
 ## General troubleshooting notes
 

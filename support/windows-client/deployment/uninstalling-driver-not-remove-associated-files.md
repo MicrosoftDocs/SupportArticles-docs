@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Devices and Drivers
 ms.technology: Deployment
 ---
-# Uninstalling a driver through device manager may not remove associated files or applications with that driver in all supported versions of Windows
+# in all supported versions of Windows, Uninstalling a driver through device manager may not remove associated files or applications with that driver
 
 This article provides help to solve an issue where uninstalling a driver through device manager doesn't remove associated files or applications with that driver.
 

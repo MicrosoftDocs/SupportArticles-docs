@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: iSCSI
 ms.technology: BackupStorage
 ---
-# The iSCSI virtual disk size limits in Server Manager GUI are incorrect
+# iSCSI virtual disk size limits in Server Manager GUI are incorrect
 
 This article provides help to solve issues that occur when you provision new iSCSI Target virtual disks through the **New iSCSI Target Virtual Disk** wizard by using Server Manager File and Storage Services GUI.
 

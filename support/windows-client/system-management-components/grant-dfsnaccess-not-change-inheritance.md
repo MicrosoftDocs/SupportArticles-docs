@@ -1,5 +1,5 @@
 ---
-title: Grant-DfsnAccess doesn't change inheritance mode
+title: Grant-DfsnAccess cmdlet doesn't change inheritance on DFS links
 description: Describes a problem in which the Windows PowerShell cmdlet Grant-DfsnAccess doesn't change inheritance on DFS links. Provides a workaround.
 ms.date: 09/15/2020
 author: Deland-Han
@@ -15,7 +15,7 @@ ms.technology: SysManagementComponents
 ---
 # Windows PowerShell cmdlet Grant-DfsnAccess doesn't change inheritance on DFS links
 
-This article provides workarounds for an issue where Windows PowerShell cmdlet `Grant-DfsnAccess` can't change inheritance on Distributed File System (DFS) links.
+This article provides workarounds for an issue where Windows PowerShell cmdlet `Grant-DfsnAccess` doesn't change inheritance on Distributed File System (DFS) links.
 
 _Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2 Standard, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2938148
@@ -42,9 +42,9 @@ To work around this problem, use one of the following methods.
 
 - Manually disable inheritance in the DFS Management Console by selecting the **Set explicit view permissions** option.
 
-- Use the dfsutil `property sd grant` command instead, as in the following example:
+- Use the `dfsutil property sd grant` command instead, as in the following example:
 
-    ```powershell
+    ```console
     dfsutil property sd grant \\Contoso.com\Software\Projects Contoso\SarahJones:RX protect
     ```
 

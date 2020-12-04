@@ -13,7 +13,7 @@ ms.reviewer: kaushika, prachank
 ms.prod-support-area-path: Wireless networking and 802.1X authentication
 ms.technology: Networking
 ---
-# Microsoft: Protected EAP (PEAP) option is missing while the Wireless Profile is created
+# Microsoft: Protected EAP (PEAP) option is missing while creating the Wireless Profile
 
 This article provides a solution to an issue where Microsoft: Protected EAP (PEAP) option is missing in some cases.
 
@@ -37,7 +37,7 @@ These 2 registry hives are affected:
 - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\25`
 - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\13`
 
-The values of the following keys under EAP are modified from C:\System32\rastls.dll to C:\Program Files\Symantec\Symantec Endpoint Protection \ SymRasMan.dll.
+The values of the following keys under EAP are modified from C:\System32\rastls.dll to C:\Program Files\Symantec\Symantec Endpoint Protection\SymRasMan.dll.
 
 - ConfigUiPath
 - IdentityPath
@@ -78,4 +78,4 @@ To resolve this problem, modify the registry to correct the values of ConfigUiPa
     - InteractiveUIPathBack
     - PathBack
 
-9. Exist the registry editor and then restart the computer
+9. Exist the registry editor and then restart the computer.

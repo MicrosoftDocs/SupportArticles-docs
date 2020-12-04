@@ -38,11 +38,11 @@ Another symptom of this effect might be excessive audit records in the Security 
 
 The implementation of the APIs uses multiple RPC calls directed at the Domain Controller, to set up the session and verify the domain. It accesses the following objects with read access:
 
-- **Domain Root Object: It looks up the primary domain of the Domain Controller and opens the domain for reading, which in turn opens the AD object for the domain, like DC=contoso,dc=com.
+- Domain Root Object: It looks up the primary domain of the Domain Controller and opens the domain for reading, which in turn opens the AD object for the domain, like DC=contoso,dc=com.
 
-- **Builtin container: This is the root object of the builtin domain. It is opened as the caller wants to verify its existence. Thus the caller needs read access to the container CN=Builtin,DC=contoso,dc=com.
+- Builtin container: This is the root object of the builtin domain. It is opened as the caller wants to verify its existence. Thus the caller needs read access to the container CN=Builtin,DC=contoso,dc=com.
 
-- **SAM server object: This object stores general permissions about general SAM account access and enumeration. It will be used on certain calls only. The object name is cn=server,cn=system,DC=contoso,dc=com.
+- SAM server object: This object stores general permissions about general SAM account access and enumeration. It will be used on certain calls only. The object name is cn=server,cn=system,DC=contoso,dc=com.
 
 In most Active Directory domains, permissions to these objects are granted based on the membership in generic groups like Authenticated Users, Everyone or the Pre-Windows 2000 Compatible Access group. The change to trigger the problem may have been that the user was removed from the last group (maybe together with Everyone, and/or the permissions on the objects listed were removed in a move to harden the Active Directory permissions.
 

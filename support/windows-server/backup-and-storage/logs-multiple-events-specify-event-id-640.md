@@ -1,5 +1,5 @@
 ---
-title: Events that specify Event ID 640
+title: System logs events that specify Event ID 640
 description: Describes a situation in which system logs many instances of Event ID 640
 ms.date: 09/21/2020
 author: Deland-Han
@@ -36,15 +36,15 @@ Event ID 640 indicates that the Extensible Storage Engine (ESE) has detected tha
 
 A future release of Windows is expected to include a change that prevents the system from logging Event ID 640 in the benign case.
 
-## More information
+## Determine the cause of Event ID 640
 
-To determine the cause of Event ID 640, examine the ...FromDb fields in the event data, and consider the following situations:
+To determine the cause of Event ID 640, examine the "...FromDb" fields in the event data, and consider the following situations:
 
 - All or some of these fields are not initialized and, therefore, have values of zero. In this case, Event ID 640 was caused by the creation of a new database. This is a benign case. You do not have to take any action to mitigate it.
 
-- All the ...FromDb fields have non-zero values. In this case, you should investigate the problem.
+- All the "...FromDb" fields have non-zero values. In this case, you should investigate the problem.
 
-The ...FromDb fields appear in bold in the following example of an event log entry:  
+The "...FromDb" fields appear in bold in the following example of an event log entry:  
 
 > services (836,D,35) Error -1919 validating header page on flush map file '\<Drive>:\\\<Path>\\\<FileName>.jfm'. The flush map file will be invalidated. Additional information: **[SignDbHdrFromDb:Create time:00/00/1900 00:00:00.000 Rand:0 Computer:] [SignFmHdrFromDb:Create time:00/00/1900 00:00:00.000 Rand:0 Computer:]** [SignDbHdrFromFm:Create time:12/03/2019 06:18:40.407 Rand:559408839 Computer:] [SignFmHdrFromFm:Create time:12/03/2019 06:18:40.751 Rand:4291821429 Computer:]
 

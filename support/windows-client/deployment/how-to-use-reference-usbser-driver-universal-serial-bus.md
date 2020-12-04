@@ -1,5 +1,5 @@
 ---
-title: Use Usbser.sys driver from USB modem .inf files
+title: Use or reference Usbser.sys driver from USB modem .inf files
 description: Describes how to use or reference the system-supplied Usbser.sys driver file from a third-party modem .inf file. We recommend different configurations, depending on how the driver is distributed.
 ms.date: 09/14/2020
 author: Deland-Han
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Devices and Drivers
 ms.technology: Deployment
 ---
-# How to use or reference the Usbser.sys driver from USB modem .inf files
+# How to use or reference the Usbser.sys driver from universal serial bus (USB) modem .inf files
 
 This article describes how to use or reference the system-supplied Usbser.sys driver file from a third-party modem .inf file.
 
@@ -57,4 +57,4 @@ The following sections appear in the Mdmcpq.inf file:
 
 ## References
 
-For more information, see the Device Installation topic in the Microsoft Windows Driver Development Kit documentation.
+For more information, see the "Device Installation" topic in the Microsoft Windows Driver Development Kit documentation.

@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Folder redirection
 ms.technology: UserProfilesAndLogon 
 ---
-# Event ID 101 and Event ID 1000 may be displayed When Folder Redirection is set up with Group Policy
+# Event ID 101 and Event ID 1000 may be displayed when Folder Redirection is set up with Group Policy
 
 This article provides a solution to an issue where you fail to set up Folder Redirection component of Group Policy and Event ID 1000 and 101 are logged.
 
@@ -32,15 +32,16 @@ Date: Date
 Time: Time  
 User: Nt Authority\System  
 Computer: Computername  
-Description: The Group Policy client-side extension Folder Redirection was passed flags (0) and returned a failure status code of (1307).  
-Event Type: Error  
+Description: The Group Policy client-side extension Folder Redirection was passed flags (0) and returned a failure status code of (1307).
+
+> Event Type: Error  
 Event Source: Folder Redirection  
 Event Category: None Event ID: 101  
 Date: Date  
 Time: Time  
 User: Domain\User  
 Computer: Computername  
-Description: Failed to perform redirection of folder Desktop. The new directories for the redirected folder could not be created. The folder is configured to be redirected to \\Computername\Redirected shared folder, the final expanded path was \\Computername\Redirected shared folder. The following error occurred: This security ID may not be assigned as the owner of this object.
+Description: Failed to perform redirection of folder Desktop. The new directories for the redirected folder could not be created. The folder is configured to be redirected to \\\\Computername\Redirected shared folder, the final expanded path was \\\\Computername\Redirected shared folder. The following error occurred: This security ID may not be assigned as the owner of this object.
 
 ## Cause
 

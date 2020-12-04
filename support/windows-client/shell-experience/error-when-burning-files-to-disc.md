@@ -13,9 +13,9 @@ ms.reviewer: kaushika, match
 ms.prod-support-area-path: File Explorer/Windows Explorer
 ms.technology: ShellExperience
 ---
-# You may receive an error when you burn files to disc
+# You may receive an error when burning files to disc
 
-This article provides a resolution to an error that occurs when you burn files to disc.
+This article provides a resolution to an error that occurs when burning files to disc.
 
 _Original product version:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp; 2748977

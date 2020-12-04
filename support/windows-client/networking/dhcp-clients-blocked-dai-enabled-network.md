@@ -53,7 +53,7 @@ To work around this problem, use one of the following methods:
 
 To provide redundancy, some organizations prefer to configure dual relays (two routers that each point to two DHCP servers). This configuration is common when Virtual Router Redundancy Protocol (VRRP) is used.
 
-In a typical VRRP configuration that uses one IP address, one router is designated as the active device and the other one is set to standby mode. A heartbeat is exchanged between the routers. If the active router doesn't respond, the standby router takes over the shared IP address.
+In a typical VRRP configuration that uses one IP address, one router is designated as the "active" device and the other one is set to "standby" mode. A heartbeat is exchanged between the routers. If the active router doesn't respond, the standby router takes over the shared IP address.
 
 DHCP snooping enables a switch device to inspect DHCP traffic and to track which IP addresses are assigned to which host switch ports. This information can be useful to DAI. As soon as the DHCP lease duration expires, the traffic information is removed from the device database. A DAI-enabled switch will then block the ports.
 

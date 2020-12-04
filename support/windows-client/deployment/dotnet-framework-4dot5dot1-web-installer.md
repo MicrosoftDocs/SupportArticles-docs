@@ -1,5 +1,5 @@
 ---
-title: .NET Framework 4.5.1 (web installer)
+title: .NET Framework 4.5.1 (web installer) for Windows 7 SP1 and Windows Server 2008 R2 SP1
 description: Describes the Microsoft .NET Framework 4.5.1 (web installer) for Windows 7 SP1 and Windows Server 2008 R2 SP1.
 ms.date: 09/15/2020
 author: Deland-Han
@@ -15,7 +15,7 @@ ms.technology: Deployment
 ---
 # The .NET Framework 4.5.1 (web installer) for Windows 7 SP1 and Windows Server 2008 R2 SP1
 
-This article provides information about the Microsoft .NET Framework 4.5.1 (web installer).
+This article provides information about the Microsoft .NET Framework 4.5.1 (web installer) for Windows 7 Service Pack 1 and Windows Server 2008 R2 Service Pack 1.
 
 _Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2859818

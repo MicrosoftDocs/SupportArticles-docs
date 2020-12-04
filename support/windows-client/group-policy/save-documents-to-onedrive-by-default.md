@@ -1,5 +1,5 @@
 ---
-title: Inaccurate policy name in OneDrive Administrative Templates
+title: Inaccurate policy name (Save documents to OneDrive by default) in OneDrive Administrative Templates
 description: Describes a discrepancy in the policy name in Microsoft OneDrive Group Policy Administrative Templates.
 ms.date: 09/16/2020
 author: Deland-Han

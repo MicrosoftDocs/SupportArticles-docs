@@ -1,5 +1,5 @@
 ---
-title: Error with a one-way trust
+title: Security identifier could not be resolved error with a one-way trust
 description: Fixes an error (Security identifier could not be resolved) that occurs with a one-way trust.
 ms.date: 09/15/2020
 author: Deland-Han
@@ -26,7 +26,7 @@ Consider the following scenario:
 
 - Remote Desktop Connection Broker (RDCB) and Remote Desktop Virtualization Host (RDVH) are in Domain A.
 - Remote Desktop users are in DomainB\RD_USER_GROUP.
-- RD_USER_GROUP is a Security Group - Universal group.
+- RD_USER_GROUP is a "Security Group - Universal" group.
 - Domain A and Domain B are in different forests.
 - Domain A one-way trusts Domain B.
 

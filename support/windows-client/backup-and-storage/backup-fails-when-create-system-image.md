@@ -15,7 +15,7 @@ ms.technology: BackupStorage
 ---
 # Backup fails when you try to create a system image
 
-This article provides a solution to an issue where backup fails when you create a system image.
+This article provides a solution to an issue where backup fails when you try to create a system image.
 
 _Original product version:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2696906
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 2696906
 Consider the following scenario:
 
 - You are running Windows 7 Service Pack 1.
-- In the Backup and Restore Control Panel applet, you click on the link to create a system image.
+- In the Backup and Restore Control Panel applet, you click on the link to "Create a system image".
 - The source volume that you are imaging is 2 terabytes in size or larger.
 
 In this scenario, after the backup process has started, you may see an error similar to the following:

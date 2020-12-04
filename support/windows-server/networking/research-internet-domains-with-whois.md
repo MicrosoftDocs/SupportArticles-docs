@@ -46,7 +46,7 @@ The information contained in the InterNIC database can be especially valuable if
 
     Example:
 
-    Wrong: `www.microsoft.com`
+    Wrong: `www.microsoft.com`  
     Correct: `microsoft.com`
 
 - Direct Telnet session

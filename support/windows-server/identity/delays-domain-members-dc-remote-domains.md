@@ -1,5 +1,5 @@
 ---
-title: Delays when domain members access domain DCs
+title: Delays when domain members are required to communicate to DCs on remote domains
 description: Discusses a problem that causes delays when domain members try to access domain controllers in other domains.
 ms.date: 09/21/2020
 author: Deland-Han
@@ -15,7 +15,7 @@ ms.technology: ActiveDirectory
 ---
 # Delays when domain members are required to communicate to DCs on remote domains
 
-This article provides some recommendations to solving the delays that occur when domain members are required to communicate to DCs on remote domains.
+This article provides help to solve the delays that occur when domain members are required to communicate to DCs on remote domains.
 
 _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4550655

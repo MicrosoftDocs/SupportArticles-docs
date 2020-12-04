@@ -1,5 +1,5 @@
 ---
-title: System Partition goes offline
+title: System Partition goes offline after installing third-party disk or Storage Management Software
 description: Provides a resolution to an issue where System Partition goes offline after installing some third-Party Disk or Storage Management Software.
 ms.date: 09/14/2020
 author: Deland-Han
@@ -13,9 +13,9 @@ ms.reviewer: kaushika, adityah
 ms.prod-support-area-path: Servicing
 ms.technology: Deployment
 ---
-# System Partition goes offline after installing some third-Party Disk or Storage Management Software
+# System Partition goes offline after installing some third-party disk or Storage Management Software
 
-This article provides a resolution to an issue where System Partition goes offline after installing some third-Party Disk or Storage Management Software.
+This article provides a resolution to an issue where System Partition goes offline after installing some third-party disk or Storage Management Software.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2419286
@@ -55,7 +55,7 @@ _Original KB number:_ &nbsp; 2419286
 
 ## Cause  
 
-If some third-party storage Disk or Storage Management software is installed, it may bring all the volume without drive letter offline.
+If some third-party storage disk or Storage Management software is installed, it may bring all the volume without drive letter offline.
 
 Generally, 100-MB partition is system partition that contains Boot configuration Database and does not have a drive letter assigned.  
 
@@ -79,7 +79,7 @@ To solve this issue, use one of the following methods:
 
     > C:\>Diskmgmt.msc
 
-    Select the 100-MB volume; Right click on the volume Change drive letter & Path, Assign a drive letter.
+    Select the 100-MB volume; Right click on the volume Change drive letter & Path, assign a drive letter.
 
     Assigning the drive letter will ensure the volume not offline again after a reboot.
 

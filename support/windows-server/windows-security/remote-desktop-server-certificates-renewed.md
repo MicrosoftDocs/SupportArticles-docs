@@ -1,5 +1,5 @@
 ---
-title: Certificates are renewed two times daily
+title: Remote Desktop server certificates are renewed two times
 description: Solves an issue where the Remote Desktop server certificates are renewed two times a day despite being valid for one year.
 ms.date: 09/14/2020
 author: Deland-Han
@@ -29,9 +29,9 @@ Consider the following scenario:
 
     [Configuring Remote Desktop certificates](https://techcommunity.microsoft.com/t5/microsoft-security-and/configuring-remote-desktop-certificates/ba-p/247007)
 
-In this scenario, you find that the servers are re-requesting and re-enrolling the certificates two times daily. This occurs even though the certificate template is valid for one year. Additionally, when the re-enrollment of the certificate occurs, the following event is logged in the System log:
+In this scenario, you find that the servers are re-requesting and re-enrolling the certificates two times daily. This occurs even though the certificate template is valid for one year. Additionally, when the re-enrollment of the certificate occurs, some events are logged in the System log.
 
-Additionally, if you have these enrolled certificates automatically published to Active Directory, the size of the Active Directory database will increase significantly because of the constant re-enrollment of the certificate. And, the Active Directory replication may pause and report the following Warning event:
+Additionally, if you have these enrolled certificates automatically published to Active Directory, the size of the Active Directory database will increase significantly because of the constant re-enrollment of the certificate. And, the Active Directory replication may pause and report warning events.
 
 ## Cause
 

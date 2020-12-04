@@ -13,7 +13,7 @@ ms.reviewer: kaushika, robertvi
 ms.prod-support-area-path: Remote desktop sessions
 ms.technology: RDS
 ---
-# Can't remove an RD Host from an RDS deployment
+# Cannot remove an RD Host from an RDS deployment
 
 This article helps to fix the error that occurs when you remove an RD Host that no longer exists in Active Directory from an RDS deployment.
 
@@ -32,7 +32,7 @@ This issue occurs because the removal operation tries to contact the server in o
 
 ## Resolution
 
-To safely remove the server from your RDS deployment, contact Microsoft Customer Support Services. For a complete list of Microsoft Customer Support Services telephone numbers and information about support costs, [contact us](https://support.microsoft.com/home/expcontact/).
+To safely remove the server from your RDS deployment, contact Microsoft Customer Support Services. For a complete list of Microsoft Customer Support Services telephone numbers and information about support costs,visit [contact us](https://support.microsoft.com/home/expcontact/).
 
 > [!IMPORTANT]
 > We do not recommend that you manually edit the database that is used by the RDS deployment.
