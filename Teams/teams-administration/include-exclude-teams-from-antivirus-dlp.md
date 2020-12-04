@@ -17,8 +17,8 @@ appliesto:
 ms.custom: 
 - CI 106370
 - CSSTroubleshoot
-ms.reviewer: 
-description: "How to add Teams to antivirus or DLP to allow Teams to start correctly."
+ms.reviewer: davidsle
+description: How to add Teams to antivirus or DLP to allow Teams to start correctly.
 ---
 
 # How to include or exclude Teams from antivirus or DLP applications
