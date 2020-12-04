@@ -24,13 +24,13 @@ _Original product version:_ &nbsp; Windows Server 2019 - all editions, Windows 1
 
 In the Computer Management console in one of the affected versions of Windows, you create a data collector set in the **Performance** > **Data Collector Sets** > **User Defined** folder. You configure a schedule as part of the data collector set definition.
 
-During the scheduled running time, you notice that Performance Monitor does not start collecting data. If you configured the data collector set to save data to a file, the file is not created and no data is saved. In Task Scheduler, the task history indicates that the task ran successfully. However, the task did not actually do anything.
+During the scheduled running time, you notice that Performance Monitor does not start collecting data. If you configured the data collector set to save data to a file, the file isn't created and no data is saved. In Task Scheduler, the task history indicates that the task ran successfully. However, the task didn't actually do anything.
 
 In Task Scheduler, if you open the scheduled task and then select **Actions**, the actions list contains **Custom Handler**.
 
 :::image type="content" source="./media/user-defined-dcs-doesnt-run-as-scheduled/scheduled-task-action.png" alt-text="The action of the scheduled task isn't configured correctly.":::
 
-The list does not contain the expected action, **Start a program**, which includes the specific commands and arguments.
+The list doesn't contain the expected action, **Start a program**, which includes the specific commands and arguments.
 
 > [!NOTE]  
 > In the Task Scheduler Library, tasks for data collector sets appear by default in **Microsoft** > **Windows** > **PLA**.
