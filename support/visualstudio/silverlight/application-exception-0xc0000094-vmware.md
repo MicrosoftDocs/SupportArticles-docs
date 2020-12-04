@@ -1,20 +1,20 @@
 ---
 title: 0xC0000094 exception in Silverlight 5 app
-description: This article introduces that in the VMWare environment, Silverlight application that uses client network stack may crash due to an unhandled divide by zero exception.
+description: This article introduces that in the VMware environment, Silverlight application that uses client network stack may crash due to an unhandled divide by zero exception.
 ms.date: 04/30/2020
 ms.prod-support-area-path: Silverlight
 ms.reviewer: enamulkh, tref, ppratap, huanchix
 ---
-# Integer divide by zero exception (0xC0000094) may occur in a Silverlight 5 application that's running in VMWare
+# Integer divide by zero exception (0xC0000094) may occur in a Silverlight 5 application that's running in VMware
 
-This article helps you resolve the problem where a Silverlight application that runs in a VMWare environment crashes with a divide by zero exception (0xC0000094) when you enable client HTTP handling in it.
+This article helps you resolve the problem where a Silverlight application that runs in a VMware environment crash with a divide by zero exception (0xC0000094) when you enable client HTTP handling in it.
 
 _Original product version:_ &nbsp; Silverlight 5  
 _Original KB number:_ &nbsp; 2756614
 
 ## Symptoms
 
-With Silverlight, you can specify whether the browser or the client provides HTTP handling for your applications. By default, HTTP handling is performed by the browser and you must opt-in to client HTTP handling. When you enable client HTTP handling in your Silverlight application that is running in a VMWare environment, your application may crash with an unhandled divide by zero exception (0xC0000094). You may see an Application Event log like the following:
+With Silverlight, you can specify whether the browser or the client provides HTTP handling for your applications. HTTP handling is performed by the browser and you must opt in to client HTTP handling by default. When you enable client HTTP handling in your Silverlight application that is running in a VMware environment, your application may crash with an unhandled divide by zero exception (0xC0000094). You may see an Application Event log like below:
 
 > Log Name: Application  
 > Source: Application Error  
@@ -29,7 +29,7 @@ With Silverlight, you can specify whether the browser or the client provides HTT
 
 ## Cause
 
-When downloading a network resource using a client HTTP Stack, Silverlight tries to calculate the download speeds to adjust the buffer size. When running under VMWare, the time difference between start time and end time for a network operation is zero, causing a divide by zero exception.
+When downloading a network resource using a client HTTP Stack, Silverlight tries to calculate the download speeds to adjust the buffer size. When running under VMware, the time difference between start time and end time for a network operation is zero, causing a divide by zero exception.
 
 ## Resolution
 
