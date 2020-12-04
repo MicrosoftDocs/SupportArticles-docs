@@ -74,14 +74,14 @@ After you create the LMHOSTS file, follow these steps:
 1. Modify the file so that it contains text that is similar to the following text:
 
     1.1.1.1 \<NT_4_PDC_Name> #DOM:\<NT_4_Domain_Name>#PRE  
-    1.1.1.1 "\<NT_4_Domain> \0x1b"#PRE  
+    1.1.1.1 "\<NT_4_Domain> \\0x1b"#PRE  
     2.2.2.2 \<Windows_2000_PDC_Name> #DOM:\<Windows_2000_Domain_Name>#PRE  
-    2.2.2.2 "<2000_Domain> \0x1b"#PRE  
+    2.2.2.2 "<2000_Domain> \\0x1b"#PRE  
 
     > [!NOTE]
-    > There must be a total of 20 characters and spaces between the quotation marks (" ") for the \0x1b entry. Add spaces after the domain name so that it uses 15 characters. The 16th character is the backslash that is followed by the "0x1b" value, and this makes a total of 20 characters.
+    > There must be a total of 20 characters and spaces between the quotation marks (" ") for the \\0x1b entry. Add spaces after the domain name so that it uses 15 characters. The 16th character is the backslash that is followed by the "0x1b" value, and this makes a total of 20 characters.
 
-2. When you finish the changes to the LMHOSTS file, save the file to the **%SystemRoot%** \System32\Drivers\Etc folder on the domain controllers. For more information about the LMHOSTS file, view the Lmhosts.sam sample file that is located in the **%SystemRoot%** \System32\Drivers\Etc folder.
+2. When you finish the changes to the LMHOSTS file, save the file to the **%SystemRoot%** \\System32\\Drivers\\Etc folder on the domain controllers. For more information about the LMHOSTS file, view the Lmhosts.sam sample file that is located in the **%SystemRoot%** \\System32\\Drivers\\Etc folder.
 
 #### Step 2: Load the LMHOSTS file into the cache
 
@@ -111,17 +111,17 @@ If the file doesn't populate the cache correctly, make sure that LMHOSTS lookup 
 3. Click the **WINS Address** tab, and then click to select the **Enable LMHOSTS Lookup** check box.
 4. Restart the computer.
 5. Repeat the steps in the "Load the LMHOSTS file into the cache" section.
-6. If the file doesn't populate the cache correctly, make sure that the LMHOSTS file is in the **%SystemRoot%** \System32\Drivers\Etc folder and that the file is formatted correctly.
+6. If the file doesn't populate the cache correctly, make sure that the LMHOSTS file is in the **%SystemRoot%** \\System32\\Drivers\\Etc folder and that the file is formatted correctly.
 
 For example, the file must be formatted similar to the following example formatting:
 
 1.1.1.1 NT4PDCName #DOM:NT4DomainName#PRE  
-1.1.1.1 "NT4DomainName \0x1b"#PRE  
+1.1.1.1 "NT4DomainName \\0x1b"#PRE  
 2.2.2.2 W2KPDCName #DOM:W2KDomainName#PRE  
-2.2.2.2 "W2KDomainName \0x1b"#PRE  
+2.2.2.2 "W2KDomainName \\0x1b"#PRE  
 
 > [!NOTE]
-> There must be a total of 20 characters and spaces inside the quotations marks (" ") for the Domain name and \0x1b entry.
+> There must be a total of 20 characters and spaces inside the quotations marks (" ") for the Domain name and \\0x1b entry.
 
 #### Step 4: Use the Ping command to test connectivity
 
@@ -383,31 +383,31 @@ The following list of Group Policy objects (GPOs) provides the location of the c
          `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Rdr\Parameters`
   - Windows 2000 and Windows Server 2003 registry location:
          `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\LSA`
-  - Windows 2000 Group Policy: **Computer Configuration \ Windows Settings \ Security Settings \ Security Options Additional restrictions for anonymous connections**  
-  - Windows Server 2003 Group Policy: Computer Configuration \ Windows Settings \ Security Settings \ Security Options Network access: Do not allow anonymous enumeration of SAM accounts and shares
+  - Windows 2000 Group Policy: **Computer Configuration\\Windows Settings\\Security Settings\\ Security Options Additional restrictions for anonymous connections**  
+  - Windows Server 2003 Group Policy: Computer Configuration \\Windows Settings\\Security Settings\\Security Options Network access: Do not allow anonymous enumeration of SAM accounts and shares
 
 - The RestrictAnonymousSAM GPO:
 
   - Windows Server 2003 registry location:
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\LSA`
-  - Windows Server 2003 Group Policy: **Computer Configuration \ Windows Settings \ Security Settings \ Security Options Network access: Do not allow anonymous enumeration of SAM accounts and shares**  
+  - Windows Server 2003 Group Policy: **Computer Configuration \\Windows Settings \\ Security Settings  Security Options Network access: Do not allow anonymous enumeration of SAM accounts and shares**  
 
 - The EveryoneIncludesAnonymous GPO:
 
   - Windows Server 2003 registry location:
         `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\LSA`
-  - Windows Server 2003 Group Policy: **Computer Configuration \ Windows Settings \ Security Settings \ Security Options Network access: Let Everyone permissions apply to anonymous users**
+  - Windows Server 2003 Group Policy: **Computer Configuration \\ Windows Settings \\ Security Settings \\ Security Options Network access: Let Everyone permissions apply to anonymous users**
 - The LM Compatibility GPO:
 
   - Windows NT, Windows 2000, and Windows Server 2003 registry location: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\LMCompatibilityLevel`  
 
-  - Windows 2000 Group Policy: **Computer Configuration \ Windows Settings \ Security Settings \ Security Options: LAN Manager authentication level**  
-  - Windows Server 2003 Group Policy: **Computer Configuration \ Windows Settings \ Security Settings \ Security Options\Network security: LAN Manager authentication level**
+  - Windows 2000 Group Policy: **Computer Configuration \\ Windows Settings \\ Security Settings \\ Security Options: LAN Manager authentication level**  
+  - Windows Server 2003 Group Policy: **Computer Configuration \\ Windows Settings \\ Security Settings \\ Security Options\\Network security: LAN Manager authentication level**
 - The EnableSecuritySignature (client) GPO:
 
   - Windows 2000 and Windows Server 2003 registry location: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation\Parameters\EnableSecuritySignature`
-  - Windows 2000 Group Policy: ****Computer Configuration \ Windows Settings \ Security Settings \ Security Options: Digitally sign client communication (when possible)****  
-  - Windows Server 2003 Group Policy: **Computer Configuration \ Windows Settings \ Security Settings \ Security Options \ Microsoft network client: Digitally sign communications (if server agrees)**
+  - Windows 2000 Group Policy: ****Computer Configuration \\ Windows Settings \\ Security Settings \\ Security Options: Digitally sign client communication (when possible)****  
+  - Windows Server 2003 Group Policy: **Computer Configuration \\ Windows Settings \\ Security Settings \\Security Options \\ Microsoft network client: Digitally sign communications (if server agrees)**
 - The RequireSecuritySignature (client) GPO:
 
   - Windows 2000 and Windows Server 2003 registry location:
