@@ -1,5 +1,5 @@
 ---
-title: Group Policy Preferences events
+title: Information about Group Policy Preferences events
 description: Provides some information about Group Policy Preferences events.
 ms.date: 09/21/2020
 author: Deland-Han

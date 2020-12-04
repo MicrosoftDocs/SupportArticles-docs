@@ -13,7 +13,7 @@ ms.reviewer: jburrage, kaushika
 ms.prod-support-area-path: Errors when running the Validation Wizard
 ms.technology: HighAvailability
 ---
-# Cluster validation makes the SCSI-3 Persistent Reservation test fail in Windows Server 2008 R2 Service Pack 1
+# Cluster validation fails the SCSI-3 Persistent Reservation test in Windows Server
 
 This article provides a solution to an issue where the SCSI-3 Persistent Reservation test fails when you run the Failover Cluster Validation report.
 

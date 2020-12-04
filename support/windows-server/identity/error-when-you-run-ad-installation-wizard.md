@@ -15,7 +15,7 @@ ms.technology: ActiveDirectory
 ---
 # Error when you run the Active Directory Installation Wizard: The version of the Active Directory schema of the source forest is not compatible with the version of Active Directory on this computer
 
-This article provides a solution to an error that occurs when you run the Active Directory Installation Wizard.
+This article provides a solution to an error that occurs when you try to run the Active Directory Installation Wizard.
 
 _Original product version:_ &nbsp; Window Server 2003  
 _Original KB number:_ &nbsp; 917385

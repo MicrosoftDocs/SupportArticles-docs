@@ -33,7 +33,7 @@ This issue can occur in either of the following scenarios:
 
     If there is a live (or deleted) object that has a phantom parent, Active Directory temporarily accepts the live object because of out-of-order replication requirements. Disk cleanup procedures, such as garbage collection, shouldn't be able to convert a deleted object into a phantom if the parent has child objects. The Ntdsa.dll file as of Windows 2000 Service Pack 2 (SP2) prevents this situation in the directory service. However, this file doesn't fix the issue after it has already occurred.
 
-- You use the **authoritative restore** command when you use Windows Server 2012 R2 or a later version of the Ntdsutil tool. Ntdsutil.exe increases the USN of specified containers and child objects in Active Directory. Beta versions of Ntdsutil.exe may incorrectly increase the USN for the Lost and Found container. When objects that are destined for the Lost and Found container are replicated before the container is created in the local directory service, the following event is reported:
+- You use the **authoritative restore** command when you use Windows Server 2003 or a later version of the Ntdsutil tool. Ntdsutil.exe increases the USN of specified containers and child objects in Active Directory. Beta versions of Ntdsutil.exe may incorrectly increase the USN for the Lost and Found container. When objects that are destined for the Lost and Found container are replicated before the container is created in the local directory service, the following event is reported:
 
     > Event 1084: Replication failed with an internal error
 
@@ -91,13 +91,13 @@ Internal errors can also occur on existing Active Directory domain controllers d
 10. To verify that the object has been deleted, run the following command:
 
     ```console
-    repadmin /showmeta"<"GUID for deleted object">"
+    repadmin /showmeta "<"GUID for deleted object">"
     ```
 
     If you receive a message: no such object, the object has already been successfully deleted, and you can now successfully run the Active Directory Installation Wizard. If the object has not yet undergone the garbage collection process, there should be metadata for the isDeleted attribute. The time stamp that's associated with the isDeleted attribute is the deletion time. Verify that the deletion time is set for at least two days ago, for example:
 
     ```console
-    repadmin /showmeta "\<GUID=b2d605a4-b9e6-4505-ba59-895e91a9a7b>"
+    repadmin /showmeta "<GUID=b2d605a4-b9e6-4505-ba59-895e91a9a7b>"
     ```
 
 11. When this issue is resolved, reset the diagnostics logging levels to **0** and set the tombstone lifetime back to what it was previously, or remove the value altogether to prompt the computer to use the default values. The TombstoneLifetime setting is critical in defining the useful life of system state and Active Directory backups. When TombstoneLifetime is set to **2**, backup tapes that are older than two days are unusable. Any domain controller that has been down for two or more days must be either restored from backup or reinstalled.
@@ -118,7 +118,7 @@ Property 0 (objectClass) of object CN="NTDS Settings DEL:51c6913c-9221-4ac4-8513
 > Event Type: Warning Event Source: NTDS General Event Category: Internal Processing Event ID: 1173 Date: MM/DD/YY Time: HH:MM:SS AM|PM User: S-1-5-21-1151542997-2719369742-1698538726-500 Computer: computer_source
 Description: Internal event: Exception e0010002 has occurred with parameters 8442 and 20a0 (Internal ID 11003a1).
 
-The following text is reported in the Active Directory Installation Wizard log on the computer that is being promoted. In this sample Dcpromo.log file, the computer that is being promoted, \\ computer_promoted, is encountering the "internal error" in the Active Directory Installation Wizard when it's sourcing from \\ computer_source. Note the error 8442 that occurs while one of three naming contexts is being replicated ("The replication system encountered an internal error"). This example shows that the error occurs on the configuration naming context:
+The following text is reported in the Active Directory Installation Wizard log on the computer that is being promoted. In this sample Dcpromo.log file, the computer that is being promoted, \\\\computer_promoted, is encountering the "internal error" in the Active Directory Installation Wizard when it's sourcing from \\\\computer_source. Note the error 8442 that occurs while one of three naming contexts is being replicated ("The replication system encountered an internal error"). This example shows that the error occurs on the configuration naming context:
 
 > MM/DD HH:MM:SS [INFO] Replicating CN=Configuration,DC=win2ktest,DC=A,DC=com: received 917 out of 1783 objects.  
 MM/DD HH:MM:SS [INFO] Replicating CN=Configuration,DC=win2ktest,DC=A,DC=com: received 1049 out of 1783 objects.  

@@ -15,14 +15,14 @@ ms.technology: Networking
 ---
 # Windows SMB server is unresponsive
 
-This article explains why a Windows Server Message Block (SMB) server becomes unresponsive and how to troubleshoot the problem.  
+This article explains why a Windows Server Message Block (SMB) server becomes unresponsive and how to troubleshoot the problem.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 3061415
 
 ## Symptoms
 
-When \\\ **servername**\share does not work, what do you do next?
+When \\\\ **servername**\share does not work, what do you do next?
 
 ## Cause
 

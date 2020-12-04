@@ -1,5 +1,5 @@
 ---
-title: Local policy blocks interactive logon
+title: Local policy doesn't permit you to log on interactively
 description: Provides a resolution to an issue where Local Policy does not permit you to log on interactively.
 ms.date: 09/21/2020
 author: Deland-Han

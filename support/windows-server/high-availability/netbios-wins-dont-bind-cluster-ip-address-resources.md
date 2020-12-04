@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4556018
 
 ## Symptoms
 
-Assume that you have an environment in which cluster servers are running Microsoft Windows Server 2016 or a later version of Windows. You notice the following issues:
+Assume that you have an environment in which cluster servers are running Windows Server 2016 or a later version of Windows. You notice the following issues:
 
 - Issue 1
 

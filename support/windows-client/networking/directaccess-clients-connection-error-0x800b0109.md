@@ -22,9 +22,9 @@ _Original KB number:_ &nbsp; 2980667
 
 ## Symptoms
 
-DirectAccess clients may not be able to connect to a DirectAccess server by using IP-HTTPS. When you run the netsh interface http `show interface` command, the output is as follows:
+DirectAccess clients may not be able to connect to a DirectAccess server by using IP-HTTPS. When you run the `netsh interface http show interface` command, the output is as follows:
 
-> URL: `https://da.contoso.com:443/IPHTTPS` 
+> URL: `https://da.contoso.com:443/IPHTTPS`
 Error: 0x800b0109  
 Interface Status: Failed to connect to the IPHTTPS server. Waiting to reconnect
 >

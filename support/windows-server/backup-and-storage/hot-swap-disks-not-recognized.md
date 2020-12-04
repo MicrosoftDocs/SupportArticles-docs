@@ -15,7 +15,7 @@ ms.technology: BackupStorage
 ---
 # Hot-swap disks are not recognized
 
-This article provides some workarounds for the issue Hot-swap disks are not recognized.
+This article provides some workarounds for the issue where Hot-swap disks are not recognized.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2992869

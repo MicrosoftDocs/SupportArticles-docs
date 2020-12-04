@@ -1,5 +1,5 @@
 ---
-title: Can't use kdump or kexec for Linux virtual machines
+title: Can't use kdump or kexec for Linux virtual machines on Hyper-V
 description: Provides a resolution for the issue that kdump or kexec cannot be used for Linux virtual machines on Hyper-V.
 ms.date: 09/21/2020
 author: Deland-Han
@@ -135,7 +135,7 @@ In Ubuntu 12.04(. **x**), you have to pass the prefer_ms_hyper_v parameter to th
 
 To change the contents of the /etc/init.d/kdump file, append ata_piix. prefer_ms_hyper_v=0 to the kdump command-line options:
 
-```java
+```bash
 do_start {}
 {
     ....  

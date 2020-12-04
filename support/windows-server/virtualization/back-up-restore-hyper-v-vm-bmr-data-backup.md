@@ -1,5 +1,5 @@
 ---
-title: Back up and restore VM with BMR and data backup
+title: Back up and restore Hyper-V VM with BMR and data backup
 description: Describes behavior that occurs when you use Windows Server Backup on your VM data and bare metal recovery (BMR). Specifically, only critical volumes are backed up, and the VM enters an inconsistent state and fails to start. A resolution is provided.
 ms.date: 09/21/2020
 author: Deland-Han

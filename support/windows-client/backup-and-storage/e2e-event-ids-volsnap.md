@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
 ms.technology: BackupStorage
 ---
-# Event IDs for Volsnap
+# e2e: Event IDs for Volsnap
 
 This article provides some information about Event IDs for Volsnap.
 

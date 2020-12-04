@@ -1,6 +1,6 @@
 ---
-title: FSRM quota usage is incorrect
-description: Resolves an issue in which the FSRM quota usage is incorrect.
+title: FSRM quota usage is incorrect when you change the size of the page file
+description: Resolves an issue in which the FSRM quota usage is incorrect when you change the size of the page file.
 ms.date: 09/17/2020
 author: Deland-Han
 ms.author: delhan

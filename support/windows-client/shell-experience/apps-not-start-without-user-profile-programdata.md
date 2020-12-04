@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2787623
 
 ## Symptoms
 
-After moving the Users directory, an individual user profile, or the ProgramData directory from their default locations, modern applications will no longer start. Various symptoms may be noticed. Some of the symptoms you may see are:
+After moving the Users directory, an individual user profile, or the ProgramData directory from their default locations, Microsoft Store Apps will no longer start. Various symptoms may be noticed. Some of the symptoms you may see are:
 
 - Clicking the tile for a Microsoft Store App or the Microsoft Store will begin to launch the app but will return to the start screen. No error is displayed.
 
@@ -40,7 +40,7 @@ After moving the Users directory, an individual user profile, or the ProgramData
 
 ## Cause
 
-When the Users directory, an individual user profile, or the ProgramData directory is moved to another location other than their default locations modern apps are no longer supported or expected to work.
+When the Users directory, an individual user profile, or the ProgramData directory is moved to another location other than their default locations, Microsoft Store Apps are no longer supported or expected to work.
 
 ## Resolution
 

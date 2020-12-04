@@ -1,5 +1,5 @@
 ---
-title: DirectAccess clients unable to connect over IP-HTTPS
+title: DirectAccess clients connection error 0x274d 
 description: Provides a solution to the error 0x274d that occurs when DirectAccess clients connect to DirectAccess Server by using Internet Protocol over Secure Hypertext Transfer Protocol (IP-HTTPS).
 ms.date: 09/18/2020
 author: Deland-Han

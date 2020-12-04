@@ -1,5 +1,5 @@
 ---
-title: SSO with pre-logon fails during user logon
+title: SSO with pre-logon fails during user logon after a restart
 description: Wireless and Wired 802.1x Authentication may fail on the first logon after a restart if the client system is configured to use a Single Sign On (SSO) profile with pre-logon.
 ms.date: 09/18/2020
 author: Deland-Han 

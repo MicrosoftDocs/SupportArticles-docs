@@ -37,7 +37,7 @@ Consider the following scenario:
 In this scenario, a backlog is reported from the Read-Only member to the Read/Write partner because the DFSR service has two local changes that are not replicated to its partner. The first report entry is for the local change when DFSR introduces the file as a new object. The second entry is created when DFSR generates a tombstone for the file version from the Read/Write partner that lost the conflict resolution. It does this by deleting that file version.
 
 > [!NOTE]
-> When the same file is later changed on the Read/Write member, the Read-Only member reuses the tombstone record in its database by reporting it as **Remote version dominate**s and then providing its own UID version. This action generates conflict event 4412. Additionally, the Read-Only member clears its backlog.
+> When the same file is later changed on the Read/Write member, the Read-Only member reuses the tombstone record in its database by reporting it as "Remote version dominates" and then providing its own UID version. This action generates conflict event 4412. Additionally, the Read-Only member clears its backlog.
 
 ## Cause
 
