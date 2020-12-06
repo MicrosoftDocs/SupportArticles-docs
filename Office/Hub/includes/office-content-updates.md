@@ -2,6 +2,18 @@
 
 
 
+## Week of November 30, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/30/2020 | [Convert degrees/minutes/seconds angles to or from decimal angles](/office/troubleshoot/excel/convert-degrees-minutes-seconds-angles) | modified |
+| 12/1/2020 | [How column widths are determined in Excel](/office/troubleshoot/excel/determine-column-widths) | modified |
+| 12/1/2020 | [You receive an error when accessing Project Web App](/office/troubleshoot/project/error-when-access-pwa) | modified |
+| 12/3/2020 | [No email notifications for responses to Group Forms](/office/troubleshoot/microsoft-forms/no-email-notifications-for-responses-to-group-forms) | modified |
+| 12/3/2020 | [Error (Do you want to download the converter) in Office](/office/troubleshoot/office-suite-issues/error-do-you-want-download-converter) | modified |
+
+
 ## Week of November 23, 2020
 
 
@@ -107,11 +119,3 @@
 | 11/5/2020 | [Image DPI is changed after you print to PDF from Word 2013 or 2010](/office/troubleshoot/word/image-dpi-change-after-print-to-pdf) | modified |
 | 11/5/2020 | [How to troubleshoot problems that occur when you start or use Word](/office/troubleshoot/word/issues-when-start-or-use-word) | modified |
 | 11/5/2020 | [Opening a file is blocked by your registry policy setting or File Block settings in Word](/office/troubleshoot/word/opening-file-blocked-by-registry-policy) | modified |
-
-
-## Week of October 26, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/29/2020 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
