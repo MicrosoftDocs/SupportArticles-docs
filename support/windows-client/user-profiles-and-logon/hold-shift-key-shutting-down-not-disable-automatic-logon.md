@@ -26,7 +26,8 @@ Consider the following scenario:
 
 - You connect a USB keyboard to a computer that is running Windows 7 or Windows 8.
 - Automatic logon is enabled.
-     Note: To enable automatic logon, set the AutoAdminLogon registry value to 1 by using Registry Editor. For more information, see the More information section at the end of this KB article.
+    > [!Note]
+    > To enable automatic logon, set the AutoAdminLogon registry value to 1 by using Registry Editor. For more information, see the More information section at the end of this KB article.
 - You log off from the computer to log on with a different user account, holding down the Shift key on the USB keyboard after logging off to override the automatic logon setting.
 
 In this scenario, the Secure Attention Sequence (logon) dialog box doesn't appear.
