@@ -54,18 +54,18 @@ Additionally, exclude all items from the following locations:
 
 #### Source servers 
 
-Exclude the following:
+Exclude the following situation:
 
-- The installation path of the Scout agent; by default, this is `C:\Program Files (x86)\InMage Systems`.
-- The Application cache directory; by default, this goes under the installation path. If configured separately, please check here. By default, the path is `C:\Program Files (x86)\InMage Systems\hostconfigwxcommon.exe`. Check the Application cache on the **Agent** tab.
+- The installation path of the Scout agent; by default, this location is `C:\Program Files (x86)\InMage Systems`.
+- The Application cache directory; by default, it goes under the installation path. If configured separately, check here. By default, the path is `C:\Program Files (x86)\InMage Systems\hostconfigwxcommon.exe`. Check the Application cache on the **Agent** tab.
 - In case of MSCS cluster volumes, exclude the InMageClusterLog folder under every cluster volume.
 
 #### Master-target (MT) servers 
 
-Exclude the following:
+Exclude the following situation:
 
-- The installation path of Scout MT; by default, this is `C:\Program Files (x86)\InMage Systems`.
-- The target cache directory; by default, this goes under the installation path. If configured separately, please check here. By default, the path is `C:\Program Files (x86)\InMage Systems\hostconfigwxcommon.exe`. Check the Application cache on the **Agent** tab.
+- The installation path of Scout MT; by default, this location is `C:\Program Files (x86)\InMage Systems`.
+- The target cache directory; by default, it goes under the installation path. If configured separately, check here. By default, the path is `C:\Program Files (x86)\InMage Systems\hostconfigwxcommon.exe`. Check the Application cache on the **Agent** tab.
 - All Retention log volumes.
 - The `C:\SRV` path and all subfolders.
 
@@ -73,10 +73,10 @@ Exclude the following:
 
 #### Source servers (Configuration Server, Process Server, Master Target) 
 
-Exclude the installation path of the Azure Site Recovery agent; by default, this is `C:\Program Files(x86)\Azure Site Recovery`.
+Exclude the installation path of the Azure Site Recovery agent; by default, this location is `C:\Program Files(x86)\Azure Site Recovery`.
 
-Exclude the installation path of the Recovery Services agent; by default, this is `C:\Program Files\Microsoft Azure Recovery Services Agent`.
+Exclude the installation path of the Recovery Services agent; by default, this location is `C:\Program Files\Microsoft Azure Recovery Services Agent`.
 
 #### Protected VMs  
 
-Guest virtual machines (VMs) that are protected by ASR should exclude the installation folder where the guest agent is installed. By default, this is `C:\Program Files (x86)\Azure Site Recovery`.
+Guest virtual machines (VMs) that are protected by ASR should exclude the installation folder where the guest agent is installed. By default, it is `C:\Program Files (x86)\Azure Site Recovery`.
