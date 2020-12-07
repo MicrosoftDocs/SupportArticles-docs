@@ -1,7 +1,7 @@
 - name: Microsoft Azure
   href: index.yml
   items:
-  - name: Azure Active Directory
+  - name: Azure Identity
     href: active-directory/welcome-azure-ad.md
   - name: Cloud Services
     href: cloud-services/welcome-cloud-services.md
