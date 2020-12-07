@@ -71,6 +71,8 @@
     href: os-bootmgr-missing.md
   - name: OS isn't found
     href: os-not-found.md
+  - name: Troubleshoot Windows VM OS boot failure
+    href: os-bucket-boot-failure.md
 
 - name: VM restart issues
   items:
