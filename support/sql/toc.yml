@@ -430,7 +430,7 @@
 
 - name: MDAC and ADO
   items:
-  - name: 80020009 Error when you retrieve data
+  - name: 80020009 error when you retrieve data
     href: connect/80020009-error-retrieve-data.md
   - name: Can't correctly translate character data
     href: connect/cannot-correctly-translate-character-data.md
