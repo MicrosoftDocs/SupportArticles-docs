@@ -54,7 +54,12 @@ productDirectory:
     imageSrc: "media/hub-landing/app-service-web.svg"
     summary: Troubleshooting articles for Web Apps
     url: webapps/welcome-webapps.md
-      
+
+  - title: SQL Server 
+    imageSrc: "media/hub-landing/sql-database-blue.svg"
+    summary: Troubleshooting articles for SQL Server
+    url: sql/welcome-sql-server.md
+
   - title: Microsoft Endpoint Manager
     imageSrc: "media/hub-landing/MEM.jpg"
     summary: Troubleshooting articles for Microsoft Endpoint Manager

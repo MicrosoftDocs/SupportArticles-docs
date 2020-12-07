@@ -20,7 +20,6 @@ This article describes how to troubleshoot Windows Internet Name Service (WINS) 
 _Original product version:_ &nbsp;Window Server 2003  
 _Original KB number:_ &nbsp;321208
 
-
 > [!NOTE]
 > You may receive different WINS event log messages, depending on the version of Microsoft Windows and the service pack that you have installed on your computer. The Microsoft Knowledge Base contains information about all the changes to event log messages. Always note the error message and the event ID. An event ID alone may mislead you.
 
@@ -75,7 +74,7 @@ To perform a Network Monitor trace:
 3. Filter for SYN (Synchronize Sequence numbers) packets.
 
 4. Search the trace for frames where the TCP Flags property includes "Synchronize Sequence numbers," and then determine if all these frames were answered.
-5. An *obsolete replication partner* is a server that sends a TCP Reset packet or a server that doesn't answer. Remove the obsolete replication partners from the list of replication partners for your WINS server. If Windows 2000 WINS server clusters are involved, use only the virtual IP resource for each WINS server cluster as a replication partner. On all WINS servers, remove the Windows 2000 physical nodes from the replication partner list for Windows 2000 WINS server clusters.
+5. An obsolete replication partner is a server that sends a TCP Reset packet or a server that doesn't answer. Remove the obsolete replication partners from the list of replication partners for your WINS server. If Windows 2000 WINS server clusters are involved, use only the virtual IP resource for each WINS server cluster as a replication partner. On all WINS servers, remove the Windows 2000 physical nodes from the replication partner list for Windows 2000 WINS server clusters.
 
 ### WINS Event ID 4102 Event Message
 
@@ -126,30 +125,31 @@ The following event ID message is an example of an event ID 4286 event message. 
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
+
 To resolve this issue, you can either wait for the issue to resolve by itself or follow these troubleshooting steps:
 
 1. Examine your replication topology, and make sure that you're configured for a true Hub-and-Spokes replication topology.
 2. Verify that there isn't a TCP connection shortage. Before the TCP packet is sent, the computer verifies that it has sufficient resources, for example free outgoing TCP ports. To verify that there isn't a TCP connection shortage, follow these steps:
 
-1. Run the following command on the failing computer (at the time that this computer is logging the event ID 4286 errors), and then save the output to a file. To do so, run the following command from a command prompt: 
+    1. Run the following command on the failing computer (at the time that this computer is logging the event ID 4286 errors), and then save the output to a file. To do so, run the following command from a command prompt:
 
-    ```console
-    netstat -a 
-    ```
+        ```console
+        netstat -a
+        ```
 
-2. Look for total number of sessions and used ports, examine the state of the sessions to determine whether the number of sessions has reached the maximum value. By default, the maximum value is 5000.
- 
+    2. Look for total number of sessions and used ports, examine the state of the sessions to determine whether the number of sessions has reached the maximum value. By default, the maximum value is 5000.
+
 For additional information, click the following article number to view the article in the Microsoft Knowledge Base:
 
 [137984](https://support.microsoft.com/help/137984) TCP connection states and Netstat output  
-    
+
 If the output indicates that the server has exhausted all the ports between 1024 and 5000, the server has run out of ephemeral ports. To resolve this issue, follow these steps:
 
 1. Start Registry Editor.
-2. Locate the MaxUserPort value under the following key in the registry: 
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters` 
+2. Locate the MaxUserPort value under the following key in the registry:
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 
-3. Double-click the MaxUserPort value, type 65534 in the **Value data** box, and then click **OK**.
+3. Double-click the MaxUserPort value, type *65534* in the **Value data** box, and then click **OK**.
     > [!NOTE]
     > 65534 is the maximum value for the MaxUserPort value.
 4. Quit Registry Editor.
@@ -162,7 +162,7 @@ The following event ID message is an example of Windows 2000 event ID 4121 error
 > [!NOTE]
 > The corresponding event ID on a Windows NT4-based computer is 4116.
 
-Data Words:  
+> Data Words:  
 00000f58 0a080b73 0000164e 00000000 00001652 00000000  
 00000f58 0a05f0c6 00005fcf 00000000 000061ac 00000000  
 00000f58 dc0f05c9 00005c76 00000000 000068c8 00000000  
@@ -181,21 +181,25 @@ Otherwise, you may receive the WINS 4121 event log event message if both of the 
 - You have two WINS servers: one push partner and one pull partner.
 - When the pull partner initiates a replication (for example, a pull request), the following behavior may occur:
 
-> [!NOTE]
-> the arrow indicates the direction of traffic.
+    > [!NOTE]
+    > the arrow indicates the direction of traffic.
 
 1. Pull partner -> Push partner
+
     The pull partner sends to the push partner a query for a list of WINS servers and the highest version ID.
-  2. Pull partner <- Push partner
+2. Pull partner <- Push partner
+
     The push partner sends back the list of WINS servers and the highest version ID. The push partner returns a list because the push partner may also be a pull partner of other WINS servers and have in its database IP addresses that other WINS servers own.
-  3. Pull partner <- Push partner
+3. Pull partner <- Push partner
+
     On the push partner: For each WINS server, compare the highest version ID with the latest version ID that was replicated. If the highest version ID is higher than the one replicated, the push partner issues a query to the pull partner with the highest version ID.
-  4. Pull partner -> Push partner
+4. Pull partner -> Push partner
+
     The pull partner sends a list of entries. If the list is empty, all the new records no longer exist and a 4121 WINS event (or on Windows NT4, a 4116 WINS event) is logged with the IP address of the WINS server that owns the records. (This can be the pull partner or any partner. The partner is in its turn a pull partner of this pull partner).
 
 This event is informational only and doesn't report a problem. Use the following guide to help you to interpret the data that is included in the event message:
 
-Each line in the "Data Words" section of the event message has the following structure  
+> Each line in the "Data Words" section of the event message has the following structure  
 4 bytes = Line number in the source code (only used by Microsoft for debugging purposes)  
 4 bytes = IP address of a WINS Server (the pull partner or any WINS server that replicates with the pull partner)  
 8 bytes = 64-bits number for the minimum version ID  
@@ -204,7 +208,7 @@ Each line in the "Data Words" section of the event message has the following str
 In the previous example, the three lines of data words translate as:
 
 IP-Address, Min-Version, Max-Version  
----------- ----------- -------------  
+\------------- -------------- -------------  
  **10.8.11.115**, 164E 0, 1652 0 (The difference of hex1652 - 164E = 4 is the number of records to replicate)  
 
 **10.5.240.198**, 5fcf 0, 61ac 0 (477 records to replicate)  
@@ -233,70 +237,61 @@ For additional information, click the following article numbers to view the arti
 
 [150737](https://support.microsoft.com/help/150737) Setting primary and secondary WINS server options  
 
-[185786](https://support.microsoft.com/help/185786) Recommended practices for WINS  
-
-[235609](https://support.microsoft.com/help/235609) Recovering a WINS database from other backup sources  
-
 For more information, see the white paper "Windows Internet Naming Service (WINS): Architecture and Capacity Planning". To do so, visit the following Microsoft Web site:
 
-[Windows 2000 Server Windows Internet Naming Service (WINS) Overview](https://technet.microsoft.com/library/bb742607.aspx) 
+[Windows 2000 Server Windows Internet Naming Service (WINS) Overview](https://technet.microsoft.com/library/bb742607.aspx)
 
 ### Running WINS on a Cluster
-
-For additional information about the correct WINS setup for a cluster, click the following article numbers to view the articles in the Microsoft Knowledge Base:
-
-[226796](https://support.microsoft.com/help/226796) Using WINS and DHCP with the Windows 2000 Cluster service  
-
-[290880](https://support.microsoft.com/help/290880) How WINS functions on a cluster server  
-
-[193890](https://support.microsoft.com/help/193890) Recommend WINS configuration for Microsoft Cluster Server  
 
 On a Windows 2000 server cluster, configure all WINS replication partners to replicate with the virtual server on the server cluster. On a Windows NT 4.0 server cluster, you must configure the single nodes as replication partners because the failover feature isn't available for the WINS service on Windows NT 4.0 server clusters.
 
 ### How to Configure Network Monitor to Use the WINS Parser
 
 Microsoft Windows 2000 Server Resource Kit includes the WINS Replication Network Monitor parser (Wins.dll) that can be useful for troubleshooting issues.
- For additional information about the WINS Replication Network Monitor parser, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[280503](https://support.microsoft.com/help/280503) Network Monitor parsers included in the server resource kit  
 
 To download the updated version of the Wins.dll file, see "Supplement One" of the Windows 2000 Server Resource Kit. To use the WINS replication parser:
 
-1. Copy the WINS replication parser (Wins.dll) to the System32\NetmonFull\Parsers folder.
+1. Copy the WINS replication parser (Wins.dll) to the System32\\NetmonFull\\Parsers folder.
 2. Add the following line to the [PARSERS] section in the Parser.ini file:
 
+    ```ini
     wins.dll =0: WINS
+    ```
 
 3. Add the following section to the Parser.ini file:
-    
+
+    ```ini
     [WINS]  
     Comment="WINS Protocol"  
     FollowSet=  
     HelpFile=  
-    
+    ```
 
     > [!NOTE]
-    > The Parser.ini file is located in the System32\NetmonFull folder.
+    > The Parser.ini file is located in the System32\\NetmonFull folder.
 4. Add the following line to the [TCP_HandoffSet] section in the Tcpip.ini file:
 
+    ```ini
     42 = WINS; added
-
+    ```
 
     > [!NOTE]
-    > The Tcpip.ini file is located in the System32\NetmonFull\Parsers folder.
-    
+    > The Tcpip.ini file is located in the System32\\NetmonFull\\Parsers folder.
+
 #### Example of a WINS Replication Frame
 
-After you configure the WINS parser, you can see the details of each WINS replication package when you run a Network Monitor trace. For example: #2725 10:05:01.208 00307B967C50 0002A56BB95B WINS Replication Packet
+After you configure the WINS parser, you can see the details of each WINS replication package when you run a Network Monitor trace. For example:
 
-IP: Source Address = 10.46.4.201  
+> #2725 10:05:01.208 00307B967C50 0002A56BB95B WINS Replication Packet
+>
+> IP: Source Address = 10.46.4.201  
 IP: Destination Address = 10.12.49.23 IP  
-
-TCP: .AP..., len: 45, seq: 44355679-44355724, ack: 799772100, win: 8760, src: 2874 dst: 42  
+>
+> TCP: .AP..., len: 45, seq: 44355679-44355724, ack: 799772100, win: 8760, src: 2874 dst: 42  
 TCP: Source Port = 0x0B79  
 TCP: Destination Port = Host Name Server  
-
-WINS: WINS Replication Packet  
+>
+> WINS: WINS Replication Packet  
 WINS: WINS Data Size = 41 (0x29)  
 WINS: WINS Opcode = Non NBT Frame  
 WINS: WINS Association Context = 0 (0x0)  
@@ -311,18 +306,19 @@ To determine whether the replication partner is running a Windows NT 4.0-based c
 
 The WINS server that initiates the replication and sends this frame records the WINS Error 4102 in the system event log.2330 10:04:57.896 0002A56BB95B CISCO 07AC45 WINS Replication Packet **Source Address** -> **Destination Address** IP
 
-IP: Source Address = **IP Address**  
+> IP: Source Address = **IP Address**  
 IP: Destination Address = **IP Address**  
-
-TCP: .AP..., len: 44, seq: 498801786-498801830, ack: 522782479, win: 17475, src: 2937 dst: 42  
+>
+> TCP: .AP..., len: 44, seq: 498801786-498801830, ack: 522782479, win: 17475, src: 2937 dst: 42  
 TCP: Source Port = 0x0B79  
 TCP: Destination Port = Host Name Server  
-
-WINS: WINS Replication Packet  
+>
+> WINS: WINS Replication Packet  
 WINS: WINS Data Size = 40 (0x28)  
 WINS: WINS Opcode = Non NBT Frame  
 WINS: WINS Association Context = 942499842 (0x382D6802)  
 WINS: WINS Message Type = Stop Association Message  
 WINS: Stop Reason = User Initiated  
+
 > [!NOTE]
 > If you see this frame in a Network Monitor trace it does not automatically imply an error because this frame is also sent after a successful replication.
