@@ -28,7 +28,6 @@ This article describes how phantoms are used in Microsoft Windows 2000 and in Mi
 
 Phantom objects are low-level database objects that Active Directory uses for internal management operations. Two common instances of phantom objects are as follows:
 
-
 - An object that has been deleted.
 
     The tombstone lifetime has passed, but references to the object are still present in the directory database.
@@ -47,7 +46,6 @@ The object moves to Stage 2 when the object is deleted by an administrator or th
 #### Stage 2: Deleted objects before the tombstone lifetime expires
 
 The object now exists as a Tombstone object for the length of the tombstone lifetime interval. While the object maintains some of its original form:
-
 
 - Object is still a typical (non-phantom) object.
 - The objectGUID attribute has not changed.
@@ -81,14 +79,15 @@ You can't view these phantom objects through any LDAP or ADSI interface.
 
 Certain types of groups in an active directory domain can contain accounts from trusted domains. To make sure that the names in the group's membership are accurate, the user object's GUID is referenced in the membership of the group. When Active Directory Tools displays these groups that have users from foreign domains, they must be able to display the accurate and current name of the foreign user without relying on immediate contact with a domain controller for the foreign domain or a global catalog.
 
-Active Directory uses a phantom object for cross-domain group-to-user references on Domain Controllers that aren't Global Catalogs. This phantom object is a special kind of object that can't be viewed through any LDAP interface. 
+Active Directory uses a phantom object for cross-domain group-to-user references on Domain Controllers that aren't Global Catalogs. This phantom object is a special kind of object that can't be viewed through any LDAP interface.
 
 Phantom records contain a minimal amount of information to let a domain controller refer to the location in which the original object exists. The index of phantom objects contains the following information about the cross-referenced object:
 
-
 - Distinguished name of the object
 - Object GUID
-- Object SIDDuring the addition of a member from a different domain to a local user group, the local domain controller that is performing the addition to the group creates the phantom object for the remote user.
+- Object SID
+
+During the addition of a member from a different domain to a local user group, the local domain controller that is performing the addition to the group creates the phantom object for the remote user.
 
 If you change the foreign user's name or delete the foreign user, the phantoms must be updated or removed in the group's domain from every domain controller in the domain. The domain controller holding the infrastructure master (IM) role for the group's domain handles any updates to the phantom objects.
 
@@ -100,7 +99,7 @@ If the object to which a phantom object refers has been deleted, the phantom obj
 
 The IM compares the information about the phantom objects against the latest versions on a global catalog server and makes changes to the phantoms as needed. The interval can be customized by adding the Days per database phantom scan registry entry to the following registry subkey:
 
-`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters` 
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`
 
 To make this change, note the following:
 
@@ -116,11 +115,10 @@ To make this change, note the following:
 
 After the IM determines that the original object that the phantom object refers to has changed or been deleted:
 
-
 - The IM creates an infrastructureUpdate object in the CN=Infrastructure,DC=DomainName,DC=... container and immediately deletes it.
 - This (tombstone) object is replicated by special proxy to the other domain controllers in the domain that aren't global catalog servers.
 
-If the original object is renamed, the value in the DNReferenceUpdate attribute of the infrastructureUpdate contains the new name. If the original object was deleted, the deleted objects DN is changed so that (esc)DEL:GUID is appended to the original DN.
+    If the original object is renamed, the value in the DNReferenceUpdate attribute of the infrastructureUpdate contains the new name. If the original object was deleted, the deleted objects DN is changed so that (esc)DEL:GUID is appended to the original DN.
 
 - The domain controllers then take the information in the infrastructureUpdate objects and apply the changes to the local copies of their phantom objects accordingly.
 
@@ -142,11 +140,7 @@ There are two conditions where placing the Infrastructure Master role on a Globa
 1. All Domain Controllers in the Domain are Global Catalog. In this situation, there can't be any phantoms to clean up.
 2. The Forest Mode is "Windows Server 2008 R2" and the Recycle Bin feature is activated. In this mode, removed object links aren't phantomized but set to a different state, and still present in the database.
 
-For information on the AD Recycle Bin, see: [https://technet.microsoft.com/library/dd379542(WS.10).aspx](https://technet.microsoft.com/library/dd379542%28ws.10%29.aspx) 
-
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[251095](https://support.microsoft.com/help/251095) Event ID 1419 generated on a domain controller  
+For information on the AD Recycle Bin, see: [Scenario Overview for Restoring Deleted Active Directory Objects](https://technet.microsoft.com/library/dd379542%28ws.10%29.aspx)
 
 For more information about FSMO role placement in the domain and how to transfer an FSMO role to another domain controller, click the following article numbers to view the articles in the Microsoft Knowledge Base:
 
