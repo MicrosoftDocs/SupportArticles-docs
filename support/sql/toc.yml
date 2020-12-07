@@ -45,11 +45,6 @@
   - name: WMI Provider Error and 0x80004005 code
     href: analysis-services/wmi-provider-error-0x80004005-code.md
 
-- name: Azure SQL virtual machine
-  items:
-  - name: SQL Server on Azure VM logs and diagnostics
-    href: azure-sql/azure-sql-vm-logs.md
-
 - name: Database Engine
   items:
   - name: Administration and Management
@@ -276,8 +271,6 @@
       href: performance/performance-consistency-issues.md
     - name: Filter drivers cause performance and consistency issues
       href: performance/filter-drivers-lead-to-sql-performance-consistency.md
-    - name: Increased CPU when you access FileTable share
-      href: performance/increased-cpu-access-filetable-share.md
     - name: Non-yielding Resource Monitor
       href: performance/resource-monitor-nonyielding-condition.md
     - name: Performance degradation with new CE
