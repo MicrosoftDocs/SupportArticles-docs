@@ -952,10 +952,12 @@
       href: ./windows-security/tpm-is-not-recognized.md
   - name: Smart card logon
     items:
-    - name: Can't authenticate because of an incorrect PIV smart card driver update
-      href: ./windows-security/cannot-authenticate-incorrect-piv-smart-card-driver-update.md
     - name: 0x6 ERROR_INVALID_HANDLE error when a multithreaded application accesses a smart card
       href: ./windows-security/0x6-error-invalid-handle-multithreaded-application.md
+    - name: Can't authenticate because of an incorrect PIV smart card driver update
+      href: ./windows-security/cannot-authenticate-incorrect-piv-smart-card-driver-update.md
+    - name: Code 31 for Microsoft USB CCID smart card reader
+      href: ./windows-security/code-31-device-manager-usbccid-smartcard-reader-problem
   - name: TPM
     items:
     - name: Events 14 and 17 for TPM command failure or non-recoverable error
