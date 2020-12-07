@@ -67,6 +67,8 @@
     href: linux-kernel-panics-upgrade.md
   - name: Linux VM does not start after an LIS upgrade
     href: linux-vm-not-start-kernel-lis.md
+  - name: Troubleshoot Windows VM OS with missing boot manager
+    href: os-bootmgr-missing.md
   - name: OS isn't found
     href: os-not-found.md
 
