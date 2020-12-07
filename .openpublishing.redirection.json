@@ -71,6 +71,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/sql/index.md",
+      "redirect_url": "/support/sql/welcome-sql-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/host-integration-server/index.md",
       "redirect_url": "/support/host-integration-server/welcome-host-integration-server",
       "redirect_document_id": false

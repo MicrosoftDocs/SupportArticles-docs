@@ -1,8 +1,9 @@
 ---
 title: Resource Monitor nony-ielding condition
-description:This article provides more information regarding non yielding Resource Monitor..
-ms.technology: performance-monitor
+description: This article provides more information regarding non yielding Resource Monitor..
 ms.date: 02/12/2020
+ms.prod-support-area-path: Performance
+ms.reviewer: ramakoni
 ms.prod: sql
 ---
 # Resource Monitor enters a non-yielding condition on a server running SQL Server
