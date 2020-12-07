@@ -518,13 +518,13 @@
     items:
     - name: Cannot connect to WMI provider error in Configuration manager
       href: tools/error-message-when-you-open-configuration-manager.md
-    - name: New data not uploaded to MDW database after configuring collection set
+    - name: New data isn't uploaded to MDW database after configuring collection set
       href: tools/data-collector-collection-set-upload-fail.md
     - name: PowerShell issue when RemoteSigned is not set
       href: tools/powershell-issue-remotesigned-not-set.md
     - name: Replay Markup Language Utilities
       href: tools/replay-markup-language-utility.md
-    - name: Request failed or the service did not respond in a timely fashion error starting SQL Agent
+    - name: Request failed or the service did not respond in a timely fashion error when you start SQL Agent
       href: tools/error-use-configuration-manager-restart-agent-service.md
     - name: The SQLDMO Application object failed to initialize when using Sqlmaint
       href: tools/error-you-run-sqlmaint-utility.md
