@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 942055
 
 To resolve this error, check the following sections for the appropriate error code information.
 
-## HResult code 0x8007000d
+## HRESULT code 0x8007000d
 
 Error message:
 
@@ -32,7 +32,7 @@ Resolution
 
 Delete the malformed XML element from the ApplicationHost.config or Web.config file.
 
-## HResult code 0x80070021
+## HRESULT code 0x80070021
 
 Error message:
 
@@ -50,7 +50,7 @@ Resolution
 
 Unlock the specified section, or do not use it at the higher level. For more information about configuration locking, see [How to Use Locking in IIS 7.0 Configuration](/iis/get-started/planning-for-security/how-to-use-locking-in-iis-configuration).
 
-## HResult code 0x80070005
+## HRESULT code 0x80070005
 
 Error message:
 
@@ -64,7 +64,7 @@ Cause
 
 This problem occurs for one of the following reasons:
 
-- You're using IIS on a computer that is running Windows. Additionally, you configure the website to use UNC pass-through authentication to access a remote Universal Naming Convention (UNC) share.
+- You're using IIS on a computer that is running Windows. Additionally, you configure the website to use Universal Naming Convention (UNC) pass-through authentication to access a remote UNC share.
 - The IIS_IUSRS group doesn't have the appropriate permissions for the ApplicationHost.config file, the Web.config file, or the virtual or application directories of IIS.
 
 Resolution
@@ -100,7 +100,7 @@ Use one of the following methods:
         > [!NOTE]
         > Make sure that the folder properties are inherited by the ApplicationHost.config and Web.config files so that IIS_IUSRS has the Read permission for those files.
 
-## HResult code 0x800700b7
+## HRESULT code 0x800700b7
 
 Error message:
 
@@ -137,7 +137,7 @@ To resolve this problem, delete the duplicate entry in the ApplicationHost.confi
     <add accessType="Allow" users="*" />
     ```
 
-## HResult code 0x8007007e
+## HRESULT code 0x8007007e
 
 Error message:
 
@@ -155,7 +155,7 @@ Resolution
 
 In the ApplicationHost.config or Web.config file, locate the module reference or the DLL reference that is invalid, and then fix the reference. To determine which module reference is incorrect, enable Failed Request Tracing, and then reproduce the problem.
 
-## HResult code 0x800700c1
+## HRESULT code 0x800700c1
 
 Error message:
 
@@ -173,7 +173,7 @@ Resolution
 
 Make sure that the specified module's bitness is the same as that of the hosting application pool. Also,  make sure that the module is not corrupted.
 
-## HResult code 0x8007010b
+## HRESULT code 0x8007010b
 
 Error message:
 
@@ -191,7 +191,7 @@ Resolution
 
 Verify that the file path exists, is correctly named, has the correct file-level permissions set, and is pointing to a valid file system type. If you are not sure what the file path is, use the Process Monitor or Failed Request Tracing tool to identify it.
 
-## HResult code 0x8007052e
+## HRESULT code 0x8007052e
 
 Error message:
 
