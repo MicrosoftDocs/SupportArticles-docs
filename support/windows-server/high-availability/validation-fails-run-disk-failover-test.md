@@ -23,20 +23,21 @@ _Original KB number:_ &nbsp; 3020013
 ## Symptoms
 
 When you run the Cluster Validation report on a Windows Server 2012 failover cluster, the Validate Disk Failover test may fail, and you may receive errors that resemble the following:
-Node 2012N2.burragevmlab.com holds the SCSI PR on Test Disk 1 but has failed in its attempt to bring the disk online. The device is not ready.
+
+> Node `2012N2.burragevmlab.com` holds the SCSI PR on Test Disk 1 but has failed in its attempt to bring the disk online. The device is not ready.
 
 ## Cause
 
-This issue occurs because the Automount feature is turned off. To determine whether this option is turned off, follow these steps:
-1. Open an administrative command prompt, and then run the following command: Diskpart 
+This issue occurs because the `Automount` feature is turned off. To determine whether this option is turned off, follow these steps:
 
-2. At the Diskpart prompt, run the following command: Automount 
+1. Open an administrative command prompt, and then run the following command: `Diskpart`
+2. At the `Diskpart` prompt, run the following command: `Automount`
 
-The results will tell you whether Automount is enabled or disabled.
+The results will tell you whether `Automount` is enabled or disabled.
 
 ## Resolution
 
-To resolve this issue, enable Automount. To do this, run the following command from an administrative command prompt: Mountvol.exe /E 
+To resolve this issue, enable `Automount`. To do this, run the following command from an administrative command prompt: `Mountvol.exe /E`
 
 No restart is required for this to take effect.
 

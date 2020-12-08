@@ -28,8 +28,7 @@ In Windows 7 or Windows 8.1, Remote Desktop and console users experience a slow 
 
 In this situation, you might notice that the logon times increase continually. A blank screen may be displayed during this delay period. You may also notice that Explorer.exe consumes excessive CPU resources.
 
-Additionally, Procmon shows that affected computers are busy accessing the following registry key:
-
+Additionally, Procmon shows that affected computers are busy accessing the following registry key:  
 `HKEY_USERS\S-1-5-21-xxxxxxx\Software\Microsoft\Windows\CurrentVersion\UFH\SHC`
 (or `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\UFH\SHC`)
 
@@ -38,7 +37,6 @@ You may also notice frequent changes or additions to shortcuts on the desktop. T
 ## Workaround
 
 To work around this issue, configure a logon script to delete the following registry key during logon:
-
 `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\UFH\SHC`
 
 You can also use Group Policy preferences to work around this issue.

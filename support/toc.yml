@@ -40,3 +40,6 @@
 - name: Welcome
   href: azure/index.yml
 
+- name: Welcome
+  href: sql/welcome-sql-server.md
+

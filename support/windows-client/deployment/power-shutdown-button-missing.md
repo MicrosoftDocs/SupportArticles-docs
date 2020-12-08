@@ -15,7 +15,7 @@ ms.technology: Deployment
 ---
 # Power/shutdown button may be missing from the Windows 8.1 start screen
 
-This article describes when the power/shutdown button will be present on the start screen after you install or upgrade to Windows 8.1.
+This article describes an issue where the power/shutdown button is missing from the start screen after you install or upgrade to Windows 8.1.
 
 _Original product version:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp; 2959188
@@ -38,9 +38,10 @@ The following table summarizes when the power/shutdown button should be present 
 ||||||
 
 > [!NOTE]
-> An entry of "Slate" in the **Device type** column means that the hardware reported a [Power_Platform_Role](https://msdn.microsoft.com/library/windows/desktop/aa373174%28v=vs.85%29.aspx) of **PlatformRoleSlate**. To determine what a system is reporting, run the powercfg /energy command, and then notice what is listed for **Platform Role** in the output.
+> An entry of Slate in the **Device type** column means that the hardware reported a [Power_Platform_Role](/windows/win32/api/winnt/ne-winnt-power_platform_role) of **PlatformRoleSlate**. To determine what a system is reporting, run the `powercfg /energy` command, and then notice what is listed for **Platform Role** in the output.
 
-Example Microsoft Surface behavior for new installations is as follows:
+Example of Microsoft Surface behavior for new installations is as follows:
+
 - Surface RT or Surface 2: No power button on start screen
 - Surface 3: No power button on start screen
 - Surface Pro or Surface Pro 2: Power button on start screen
@@ -49,4 +50,4 @@ Example Microsoft Surface behavior for new installations is as follows:
 > [!NOTE]
 > The images that ship with the Surface 3 and Surface Pro 3 are configured to show the power button. This is a customization that is included with the image.
 
-To change the default behavior when Windows images are being deployed, IT professionals should set the Microsoft-Windows-Shell-Setup | [ShowPowerButtonOnStartScreen](https://technet.microsoft.com/library/dn660972.aspx) Unattend.xml setting for new installations.
+To change the default behavior when Windows images are being deployed, IT professionals should set the Microsoft-Windows-Shell-Setup [ShowPowerButtonOnStartScreen](/windows-hardware/customize/desktop/unattend/microsoft-windows-shell-setup-showpowerbuttononstartscreen) setting for new installations.

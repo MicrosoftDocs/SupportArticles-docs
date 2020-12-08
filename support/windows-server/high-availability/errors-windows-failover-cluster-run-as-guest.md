@@ -47,10 +47,10 @@ These messages are registered because of the new functionality in Windows Server
 
 To resolve the warning message, install the Hyper-V role Remote Server Administration tools. To add the Hyper-V Remote Server Administration tools, follow these steps:  
 
-1. Click **Start**, click **Administrative Tools**, and then click **Server Manager**. 
-2. In the navigation pane, click **Features**, and then click **Add Features**. 
+1. Click **Start**, click **Administrative Tools**, and then click **Server Manager**.
+2. In the navigation pane, click **Features**, and then click **Add Features**.
 3. Expand **Remote Server Administration Tools.**  
-4. Click **Hyper-V Tools**, click **Next**, and then click **Install**. 
+4. Click **Hyper-V Tools**, click **Next**, and then click **Install**.
 
 There's no workaround or resolution for the error message. However, you can safely ignore this error message in this scenario.
 

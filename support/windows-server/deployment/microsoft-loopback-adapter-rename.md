@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;2777200
 
 ## Symptoms
 
-You're trying to install the Microsoft Loopback Adapter, but are unable to find it. 
+You're trying to install the Microsoft Loopback Adapter, but are unable to find it.
 
 ## Cause
 

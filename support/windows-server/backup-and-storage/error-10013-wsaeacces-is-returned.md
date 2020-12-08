@@ -22,15 +22,20 @@ _Original KB number:_ &nbsp; 3039044
 
 ## Symptoms
 
-Assume that you exclude a port by running the following command on a computer that is running Windows Server 2012 R2, Windows Server 2012, or Windows Server 2008 R2: netsh int ipv4 add excludedportrange protocol = tcp startport = **Integer** numberofports = 1 
+Assume that you exclude a port by running the following command on a computer that is running Windows Server 2012 R2, Windows Server 2012, or Windows Server 2008 R2:
+
+```console
+netsh int ipv4 add excludedportrange protocol = tcp startport = Integer numberofports = 1
+```
 
 Additionally, assume that you bind the SO_REUSEADDR socket to a specific TCP port on the computer. In this situation, when you try to bind the SO_REUSEADDR socket to the TCP port again, the bind fails, and you receive the "WSAEACCES (10013)" error.
 
 Therefore, if you use an application that calls the two binds in Windows Server 2012 R2, Windows Server 2012, or Windows Server 2008 R2, it cannot work correctly.
 
-Notes 
-- By default, Windows Server 2008 R2 cannot use the netsh command to exclude ports. However, after you apply [hotfix 2665809](https://support.microsoft.com/help/2665809), the operating system supports this function.
-- This issue does not occur in Windows Server 2008 or Windows Server 2003.
+> [!Note]
+>
+> - By default, Windows Server 2008 R2 cannot use the `netsh` command to exclude ports. However, after you apply [hotfix 2665809](https://support.microsoft.com/help/2665809), the operating system supports this function.
+> - This issue does not occur in Windows Server 2008 or Windows Server 2003.
 
 ## Cause
 
@@ -38,13 +43,14 @@ This issue occurs because of a problem in the tcpip.sys driver. Specifically, th
 
 ## Workaround
 
-To work around this issue, use one of the following methods: 
-- Use a port that is not included in the default dynamic port range (from 49,152 to 65,535), and do not specify the port as an excluded port by running the netsh command.
+To work around this issue, use one of the following methods:
+
+- Use a port that is not included in the default dynamic port range (from 49,152 to 65,535), and do not specify the port as an excluded port by running the `netsh` command.
 - Use the [CreatePersistentTcpPortReservation](https://msdn.microsoft.com/library/windows/desktop/gg696068%28v=vs.85%29.aspx) and [LookupPersistentTcpPortReservation](https://msdn.microsoft.com/library/windows/desktop/gg696072%28v=vs.85%29.aspx) functions to reserve a port.
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section. 
+Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
 
 ## More information
 
