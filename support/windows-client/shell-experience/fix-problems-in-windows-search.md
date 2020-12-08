@@ -118,7 +118,7 @@ If the Windows 10 May 2019 Update or a later update is installed, use Windows Po
     > [!IMPORTANT]
     > You'll receive a warning message that explains the security risks of an execution policy change. Press Y, and then press Enter to accept the change.
 
-    To learn more about PowerShell execution policies, see [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7).
+    To learn more about PowerShell execution policies, see [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 7. After the policy change is completed, close the window, and then repeat steps 2-4. However, when the **Done** message appears this time, DON'T close the PowerShell window. Instead, press any key to continue.
 
