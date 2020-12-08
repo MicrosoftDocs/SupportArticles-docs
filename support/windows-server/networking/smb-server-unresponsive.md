@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 3061415
 
 ## Symptoms
 
-When \\\\**servername**\share does not work, what do you do next?
+When \\\\**servername**\\share does not work, what do you do next?
 
 ## Cause
 

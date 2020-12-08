@@ -69,7 +69,7 @@ The CBS.log file shows one of the following two errors:
 - Error 1
 
     > 2014-11-19 06:38:42, Info CBS Session: 30409734_2213032090 initialized by client WindowsUpdateAgent.  
-    2014-11-19 06:38:42, Info CBS Opened cabinet package, package directory: \\?  \C:\Windows\SoftwareDistribution\Download\ea6d57731136ce0c61adfa2056bd76ba\, sandbox location: \\?  \C:\Windows\SoftwareDistribution\Download\ea6d57731136ce0c61adfa2056bd76ba\, cabinet location: \\?  \C:\Windows\SoftwareDistribution\Download\ea6d57731136ce0c61adfa2056bd76ba\windows8.1-kb3000850-x64-express.cab, manifest location: \\?  \C:\Windows\SoftwareDistribution\Download\ea6d57731136ce0c61adfa2056bd76ba\update.mum  
+    2014-11-19 06:38:42, Info CBS Opened cabinet package, package directory: \\\\?  \C:\Windows\SoftwareDistribution\Download\ea6d57731136ce0c61adfa2056bd76ba\, sandbox location: \\\\?  \C:\Windows\SoftwareDistribution\Download\ea6d57731136ce0c61adfa2056bd76ba\, cabinet location: \\\\?  \C:\Windows\SoftwareDistribution\Download\ea6d57731136ce0c61adfa2056bd76ba\windows8.1-kb3000850-x64-express.cab, manifest location: \\\\?  \C:\Windows\SoftwareDistribution\Download\ea6d57731136ce0c61adfa2056bd76ba\update.mum  
     . . .  
     . . .  
     . . .  
