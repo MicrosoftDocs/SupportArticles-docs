@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 4520146
 
 ## Check for updates
 
-Windows 10 lets you choose when and how to get the latest updates to keep your device running smoothly and securely. To manage your options and see any available updates, select the **Start** button, and then go to **Settings** > **Update & Security** > **Windows Update** > **Check for updates**. Install any available updates, and then restart your computer if the updates require this restart.
+Windows 10 lets you choose when and how to get the latest updates to keep your device running smoothly and securely. To manage your options and see any available updates, select the **Start** button, and then go to **Settings** > **Update & Security** > **Windows Update** > **Check for updates**. Install any available updates, and then restart your computer if the updates require it.
 
 For more information, see [Update Windows 10](https://support.microsoft.com/help/4027667).
 
@@ -56,7 +56,7 @@ End the **SearchUI** process to restart Windows Search by following these steps:
 > [!NOTE]
 > The Windows Search process will automatically restart the next time that you search.
 
-If this solution doesn't fix your problem, try restarting your device. This restart will also install any pending updates.
+If this solution doesn't fix your problem, try restarting your device. Restarting will also install any pending updates.
 
 > [!NOTE]
 > You may want to bookmark this page before you restart.
@@ -91,7 +91,7 @@ If the Windows 10 May 2019 Update or a later update is installed, use Windows Po
 1. Download the *ResetWindowsSearchBox.ps1* script from the [Reset Windows Search PowerShell script](https://www.microsoft.com/download/100295), and save the file to a local folder.
 
 2. Right-click the file that you saved, and select **Run with PowerShell**.
-3. If you're asked by the following message, select **Yes**.
+3. If you're asked the following question, select **Yes**.
 
     > Do you want to allow this app to make changes to your device?
 
@@ -128,7 +128,7 @@ If the Windows 10 May 2019 Update or a later update is installed, use Windows Po
     Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy
     ```
 
-    For example, if the policy that you noted in step 5 was **Restricted**, the command would resemble the following PowerShell command:
+    For example, if the policy that you noted in step 5 was **Restricted**, the command would resemble the following one:
 
     ```powershell
     Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Restricted

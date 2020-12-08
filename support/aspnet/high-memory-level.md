@@ -26,11 +26,11 @@ Obviously, this question is going to be dependent on volume and activity of spec
 
 In general terms, a comfortable level would be under 600 MB in the default 2-GB user memory address space. Once the memory level is higher than that comfortable level, we're doing less than we should be. This behavior may affect other applications that are running on the system.
 
-The key is to understand some applications require more memory than others. If you're exceeding these limits, you may add more memory or add another server to your Web farm (or consider a Web farm). Also, profiling is recommended in these cases, which can enable developers to create leaner applications. In this article, we're looking at a situation where you consistently see memory rise until the server stops running.
+The key is to understand some applications require more memory than others. If you're exceeding these limits, you may add more memory or add another server to your Web farm (or consider a Web farm). Also, profiling is recommended in these cases, which can enable developers to create leaner applications. In this article, we're looking at a situation where you consistently see memory rise until the server stops performing.
 
 ## Application set up for debugging
 
-One reason for high memory that we see here in Support a lot is when you have debugging, tracing, or both enabled for your application. While you're developing your application, this debugging is a necessity. By default, when you create your application in Visual Studio .NET, you'll see the following attribute set in your *Web.config* file:
+One reason for high memory that we see here in Support a lot is when you have debugging, tracing, or both enabled for your application. Enabling debugging and tracing is a necessity when you develop your application. By default, when you create your application in Visual Studio .NET, you'll see the following attribute set in your *Web.config* file:
 
 ```xml
 <compilation
@@ -48,19 +48,19 @@ and/or
  />
 ```
 
-Also, when you do a final build of your application, make sure that you do this build in Release mode, not Debug mode. Once you're in production, this debugging should no longer be necessary. It can really slow down your performance and eat up your memory. Setting this attribute means you change a few things about how you handle your application.
+Also, when you do a final build of your application, make sure that you do it in Release mode, not Debug mode. Once you're in production, debugging should no longer be necessary. It can really slow down your performance and eat up your memory. Setting this attribute means you change a few things about how you handle your application.
 
 First, batch compile will be disabled, even if it's set in this `compilation` element. What this means is that you create an assembly for every page in your application so that you can break into it. These assemblies can be scattered randomly across your memory space, making it more and more difficult for you to find the contiguous space to allocate memory.
 
-Second, the `executionTimeout` attribute ([\<httpRuntime> Element](/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71))) is set to a high number, overriding the default of 90 seconds. You can't have the application time out while you patiently step through the code to find your blunders. So, this attribute setting is fine when you debug. However, it's a significant risk in production. This risk means that should you have a rogue request for whatever reason, it will hold on to a thread and continue any detrimental behavior for days rather than just a minute and a half.
+Second, the `executionTimeout` attribute ([\<httpRuntime> Element](/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71))) is set to a high number, overriding the default of 90 seconds. It's fine when debugging, because you can't have the application time out while you patiently step through the code to find your blunders. However, it's a significant risk in production. It means that should you have a rogue request for whatever reason, it will hold on to a thread and continue any detrimental behavior for days rather than just a minute and a half.
 
 Finally, you'll be creating more files in your *Temporary ASP.NET* files folder, and the `System.Diagnostics.DebuggableAttribute` ([System.Diagnostics Namespace](https://docs.microsoft.com/dotnet/api/system.diagnostics?view=dotnet-plat-ext-3.1&preserve-view=true) gets added to all generated code, which can cause performance degradation.
 
-If you get nothing else from this article, I do hope you get this experience. Leaving debugging enabled is bad. We see this behavior all too often, and it's so easy to change. Remember that this debugging can be set at the page level. So make sure that all of your pages aren't setting this debugging.
+If you get nothing else from this article, I do hope you get this information. Leaving debugging enabled is bad. We see this behavior all too often, and it's so easy to change. Also, remember that it can be set at the page level. So, make sure that all of your pages aren't setting it.
 
 ## String concatenation
 
-There are applications that build HTML output by using server-side code and by just building one large HTML string to send to the browser. This behavior is fine, but if you're building the string by using `+` and `&` concatenation, you may not be aware of how many large strings you're building. For example:
+There are applications that build HTML output by using server-side code and by just building one large HTML string to send to the browser. It's fine, but if you're building the string by using `+` and `&` concatenation, you may not be aware of how many large strings you're building. For example:
 
 ```csharp
 string mystring = "<html>";
@@ -80,11 +80,11 @@ This code seems harmless enough, but here's what you're storing in memory:
 <html><table><tr><td>First Cell</td></tr></table></html>
 ```
 
-You may think that you're just storing the last line, but you're storing *all* of these lines. You can see how this thing could get out of hand, especially when you're building a large table, perhaps by looping through a large recordset. If this thing is what you're doing, use our `System.Text.StringBuilder` class, so that you just store the one large string. See [Use Visual C# to improve string concatenation performance](/troubleshoot/dotnet/csharp/string-concatenation)
+You may think that you're just storing the last line, but you're storing *all* of these lines. You can see how it could get out of hand, especially when you're building a large table, perhaps by looping through a large recordset. If it's what you're doing, use our `System.Text.StringBuilder` class, so that you just store the one large string. See [Use Visual C# to improve string concatenation performance](/troubleshoot/dotnet/csharp/string-concatenation)
 
 ## .NET Framework Service Pack 1 (SP1)
 
-If you're not running the .NET Framework SP1 yet, install this SP1 if you're experiencing memory issues. I won't go into great detail, but basically, with SP1 we're now allocating memory in a much more efficient manner. Basically, we're allocating 16 MB at a time for large objects rather than 64 MB at a time. We've all moved, and we all know that we can pack a lot more into a car or truck if we're using many small boxes rather than a few large boxes. That SP1 is the idea here.
+If you aren't running the .NET Framework SP1 yet, install this SP if you're experiencing memory issues. I won't go into great detail, but basically, with SP1 we're now allocating memory in a much more efficient manner. Basically, we're allocating 16 MB at a time for large objects rather than 64 MB at a time. We've all moved, and we all know that we can pack a lot more into a car or truck if we're using many small boxes rather than a few large boxes. It's the idea here.
 
 ## Don't be afraid to recycle periodically
 
@@ -98,7 +98,7 @@ The previous were all things that you can fix quickly. However, if you're experi
 
 - Am I storing objects in Session state? These objects are going to stay in memory for much longer than if you use and dispose them.
 
-- Am I using the `Cache` object? When it's used wisely, this object is a great benefit to performance. But when it's used unwisely, you wind up with much memory used that is never released.
+- Am I using the `Cache` object? When it's used wisely, it's a great benefit to performance. But when it's used unwisely, you wind up with much memory used that is never released.
 
 - Am I returning `recordsets` too large for a Web application? No one wants to look at 1,000 records on a Web page. You should be designing your application so that you never get more than 50 to 100 records in one trip.
 
