@@ -1,0 +1,32 @@
+---
+title: VM Integration Services status reports protocol version mismatch on pre-Windows 10, Windows Server 2016 or Windows Server 2019 VM guests
+description: Discusses an issue in which virtual machines that run pre-Windows 10, Windows Server 2016 or Windows Server 2019 display a .
+ms.date: 12/07/2020
+ms.prod-support-area-path: 
+ms.technology: [Replace with your value]
+ms.reviewer: 
+---
+# VM Integration Services status reports protocol version mismatch on pre-Windows 10, Windows Server 2016 or Windows Server 2019 VM guests
+
+_Original product version:_ &nbsp; Windows 10, version 1809, all editions, Windows Server 2019, all editions, Windows Server 2016 Datacenter, Windows Server 2016 Standard, Windows 10  
+_Original KB number:_ &nbsp; 4014894
+
+## Symptoms
+
+When you enable Integration Services on a pre-Windows 10, Windows Server 2016, or Windows Server 2019 virtual machine, and then you verify the status of the Integration Services service state by using a command such as **Get-vmintegrationservice**, you receive an error message that resembles the following: **Get-vmintegrationservice-vmname <VMName>**  
+
+The protocol version of the component installed in the virtual machine does not match the version expected by the hosting system
+
+## Resolution
+
+This is expected behavior that can be safely ignored. 
+
+## More Information
+
+Windows Server 2016, Windows Server 2019 and Windows 10 include an updated Hyper-V Time Sync service and a new VMIC channel handshake or protocol that is intentionally not backported to previous operating system releases. 
+
+In the reported issue, the down-level guest is behaving correctly. The secondary status that is reported through WMI or Windows PowerShell includes an error string that sounds alarming but that you can safely ignore. 
+
+## Status
+
+This behavior is by design.

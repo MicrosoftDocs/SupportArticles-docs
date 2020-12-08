@@ -1,0 +1,26 @@
+---
+title: F5 doesn't refresh Explorer in Windows PE of Windows 10
+description: Describes how to work around F5 not refreshing file and folder list in Windows 10 Creators Update.
+ms.date: 12/07/2020
+ms.prod-support-area-path: 
+ms.technology: [Replace with your value]
+ms.reviewer: 
+---
+# F5 doesn't refresh Explorer in Windows PE of Windows 10 Creators Update
+
+_Original product version:_ &nbsp; Windows 10, version 1903, all editions, Windows 10, version 1809, all editions, Windows 10, version 1703, all editions  
+_Original KB number:_ &nbsp; 4033241
+
+## Symptoms
+
+Consider the following scenario:
+- You start Windows 10 in Windows Preinstallation Environment (PE) mode.
+- You create a folder or rename a folder.
+- You press the F5 key.
+In this scenario, the folder and file list does not refresh.
+
+## Workaround
+
+To refresh the files, use one of the following methods:
+- Click another folder, and then click the previous folder.
+- Move the mouse cursor over the folder and file list.
