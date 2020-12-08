@@ -35,13 +35,15 @@ At line:1 char:1
 
 When a PowerShell session is created and authenticates through Kerberos, the session doesn't support double hop. Therefore, the PowerShell session can't authenticate by using network resources.  
 
-When PowerShelltries to enumerate the modules in the network path, the operation fails with "Access Denied," and the command unexpectedly terminates.
+When PowerShell tries to enumerate the modules in the network path, the operation fails with "Access Denied," and the command unexpectedly terminates.
 
 ## Resolution
 
 To fix the issue, create the PowerShell session to authenticate with CredSSP. It needs to be configured in advance. On the computer that is the target of the **Enter-PSSession** command, run this command:  
  Enable-WSManCredSSP -Role Server  
- On the computer on which you run the **Enter-PSSession** command, run this command:   <Enable-WSManCredSSP -Role Client -DelegateComputer Servername>  
+ On the computer on which you run the **Enter-PSSession** command, run this command:
+
+ `Enable-WSManCredSSP -Role Client -DelegateComputer Servername` 
 
 > [!NOTE]
  Servernameis the name of the computer that is the target of the **Enter-PSSession** command. 
@@ -54,7 +56,7 @@ After CredSSP is enabled, you can authenticate through CredSSP by using this com
 
 ## Workaround
 
-To work around this issue, map the network share to a drive letter such as **S:** and then put the drive letter in the **PSModulePath**. Having a drive letter that points to a network share will not cause the unexpected termination of **Enter-PSSession**.  
+To work around this issue, map the network share to a drive letter such as **S:**, and then put the drive letter in the **PSModulePath**. Having a drive letter that points to a network share will not cause the unexpected termination of **Enter-PSSession**.  
 
  However, inside the remote PowerShell session the mapped drive letter won't be available, and the modules on the network share will still not be available. Only the local modules will be available.  
 
