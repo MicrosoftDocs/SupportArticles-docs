@@ -68,4 +68,4 @@ In this configuration, Exchange Server requires Send As permissions to send the 
 
 ## Resolution
 
-Grant Send As permission to the user for the shared mailbox. For information about how to do this in the EAC or by using PowerShell, see [Manage permissions for recipients](/Exchange/recipients/mailbox-permissions?redirectedfrom=MSDN&view=exchserver-2019).
+Grant Send As permission to the user for the shared mailbox. For information about how to do this in the EAC or by using PowerShell, see [Manage permissions for recipients](/Exchange/recipients/mailbox-permissions?redirectedfrom=MSDN&view=exchserver-2019&preserve-view=true).
