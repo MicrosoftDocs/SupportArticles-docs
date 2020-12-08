@@ -1,0 +1,58 @@
+---
+title: Loss of functionality for some Intel SMBus Controller devices after you update your system through Windows Update
+description: Describes an issue that triggers a loss of functionality for some Intel SMBus Controller devices after you update your system from Windows Update. Provides several methods to resolve this issue.
+ms.date: 12/03/2020
+ms.prod-support-area-path: 
+ms.technology: [Replace with your value]
+ms.reviewer: davidroc
+---
+# Loss of functionality for some Intel SMBus Controller devices after you update your system through Windows Update
+
+_Original product version:_ &nbsp; Windows Server 2012 R2 Datacenter, Windows Server 2012 R2 Standard, Windows 8.1, Windows 8.1 Enterprise, Windows 8.1 Pro, Windows Server 2012 Datacenter, Windows Server 2012 Standard, Windows 8 Enterprise, Windows 8 Pro, Windows 8, Windows Server 2008 R2 Enterprise, Windows Server 2008 R2 Datacenter, Windows Server 2008 R2 Standard, Windows 7 Enterprise, Windows 7 Ultimate, Windows 7 Starter, Windows 7 Home Premium, Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp; 4011290
+
+## Symptoms
+
+When you update your computer through Windows Update, some Intel SMBus Controller device drivers are unexpectedly overwritten with Intel Chipset Device software. This causes loss of functionality for some affected Intel SMBus Controller devices. This issue applies to the following Windows operating systems: 
+- Windows 7 
+- Windows Server 2008 R2 
+- Windows 8 
+- Windows Server 2012 
+- Windows 8.1 
+- Windows Server 2012 R2  
+
+
+## Cause
+
+The existing Intel SMBus Controller device provides the operating system with information about the device and hardware. This enables the operating system to display the correct product name for that piece of hardware in Device Manager. 
+ The Intel Chipset Device software does not install device drivers for the Intel SMBus Controller. This causes a loss of device functionality.  
+
+## Resolution
+
+To resolve this issue, use one of the following methods. 
+ **Method 1:** Roll back to the previous Intel SMBus Controller device driver. To do this, follow these steps: 
+1. Open Device Manager. To do this, click **Start**, click **Control Panel**, and then click **Device Manager**. 
+2. Select **View**, choose **Devices by Type**, and then expand **System Devices**. 
+3. Double-click the SMBus device, and then click the **Driver** tab. 
+4. Click **Roll Back Driver** to restore the SMBus Controller device driver. 
+5. Restart the system. 
+ **Method 2:** Reinstall the SMBus device driver. To do this, do one of the following: 
+- For Intel Desktop or Server Boards, download and install [Intel Desktop Utilities](https://communities.intel.com/external-link.jspa?url=https://downloadcenter.intel.com/download/20488). 
+- Contact your computer manufacturer for the SMBus driver appropriate for your system. 
+ **Method 3 (optional):** Install the updated Intel Chipset Device software or the Intel Server Chipset driver from Windows Update. To do this, follow these steps: 
+1. Open Device Manager. To do this, click **Start**, click **Control Panel**, and then click **Device Manager**. 
+2. Select **View**, choose **Devices by Type**, and then expand **System Devices**. 
+3. Double-click the Intel chipset device from the list. 
+4. Click the **Driver** tab, and then click **Update Driver**. 
+ **Method 4 (optional):** Install the updated Intel Chipset Device software or the Intel Server Chipset driver from the Intel Download Center. To do this, follow these steps: 
+1. Go to the [Intel Download Center](https://communities.intel.com/external-link.jspa?url=https://downloadcenter.intel.com). 
+2. Search for **Intel Chipset Device Software (INF Update Utility)** or **Intel Server Chipset Driver**. 
+3. Follow the installation instructions.  
+
+
+## References  
+
+Third-party information disclaimer 
+
+Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information. 
+ The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
