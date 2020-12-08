@@ -51,7 +51,7 @@ An individual user can also use Windows settings.
 
 ### Method 2
 
-Set `PlayAbbreviatedDialTone` to **True** in the client policy. If `PlayAbbreviatedDialTone` is set to **True**, a 3-seconds dial tone will be played when a Skype for Business-compatible handset is taken off the hook. To learn more, read [Set-CsClientPolicy](https://docs.microsoft.com/powershell/module/skype/set-csclientpolicy?view=skype-ps). To set the value, run the following command:
+Set `PlayAbbreviatedDialTone` to **True** in the client policy. If `PlayAbbreviatedDialTone` is set to **True**, a 3-seconds dial tone will be played when a Skype for Business-compatible handset is taken off the hook. To learn more, read [Set-CsClientPolicy](https://docs.microsoft.com/powershell/module/skype/set-csclientpolicy). To set the value, run the following command:
 
 ```powershell
 Set-CsClientPolicy -Identity RedmondClientPolicy  -PlayAbbreviatedDialTone $True
