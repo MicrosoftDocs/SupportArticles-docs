@@ -1,5 +1,5 @@
 ---
-title: SSO with pre-logon fails during user logon
+title: SSO with pre-logon fails during user logon after a restart
 description: Wireless and Wired 802.1x Authentication may fail on the first logon after a restart if the client system is configured to use a Single Sign On (SSO) profile with pre-logon.
 ms.date: 09/18/2020
 author: Deland-Han 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 3063910
 
 ## Symptoms
 
-Wireless and Wired 802.1 **x** Authentication fails on the first logon attempt after a system restart if the client system is configured to use a Single Sign On (SSO) profile with pre-logon. In this situation, the user receives the following error message:
+Wireless and Wired 802.1**x** Authentication fails on the first logon attempt after a system restart if the client system is configured to use a SSO profile with pre-logon. In this situation, the user receives the following error message:
 
 > There are currently no logon servers available to service the logon request.
 
@@ -36,11 +36,11 @@ This problem is caused by a race-condition that occurs during the boot sequence 
 
 ## Workaround
 
-To work around this problem, connect users through a non-802.1 **x** -protected network to cache their credentials during the first logon.
+To work around this problem, connect users through a non-802.1**x** -protected network to cache their credentials during the first logon.
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
+Microsoft has confirmed that this is a problem in the Microsoft products that are listed at the beginning of this article.
 
 ## More information
 
@@ -61,6 +61,4 @@ This problem doesn't usually occur. However, if you do encounter this problem, w
     netsh trace stop
     ```  
 
-    This generates the following trace file:
-
-    `c:\net_plap.etl`
+    This generates the trace file: c:\net_plap.etl.

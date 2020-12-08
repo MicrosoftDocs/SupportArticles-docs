@@ -13,7 +13,7 @@ ms.reviewer: kaushika, fszita, v-jomcc
 ms.prod-support-area-path: Schema update failure or conflict
 ms.technology: ActiveDirectory
 ---
-# Error message when you run the Active Directory Installation Wizard: "The version of the Active Directory schema of the source forest is not compatible with the version of Active Directory on this computer"
+# Error when you run the Active Directory Installation Wizard: The version of the Active Directory schema of the source forest is not compatible with the version of Active Directory on this computer
 
 This article provides a solution to an error that occurs when you try to run the Active Directory Installation Wizard.
 
@@ -34,19 +34,18 @@ This issue may occur when Active Directory has not been updated with the Windows
 
 ## Resolution
 
-To resolve this issue, run the adprep.exe /forestprep command from the Windows Server 2003 R2 installation disk 2 on the schema master. To do this, insert the Windows Server 2003 R2 installation disk 2, and then type the following command:  
-    **Drive** :\CMPNENTS\R2\ADPREP\adprep.exe /forestprep
+To resolve this issue, run the `adprep.exe /forestprep` command from the Windows Server 2003 R2 installation disk 2 on the schema master. To do this, insert the Windows Server 2003 R2 installation disk 2, and then type the command: `<Drive>:\CMPNENTS\R2\ADPREP\adprep.exe /forestprep`.
 
 ## More information
 
 The correct version of the ADPrep.exe tool for Windows Server 2003 R2 is 5.2.3790.2075.
 
 You can verify the operating system support level of the schema by looking at the value of the **Schema Version** registry subkey on a domain controller. You can find this subkey in the following location:  
-    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`
+`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`
 
 You can also verify the operating system support level of the schema by using the Adsiedit.exe utility or the Ldp.exe utility to view the objectVersion attribute in the properties of the cn=schema,cn=configuration,dc= **\<domain>** partition. The value of the **Schema Version** registry subkey and the objectVersion attribute are in decimal.
 
-Schema Version ObjectVersion values and corresponding operating system support level
+Schema Version ObjectVersion values and corresponding operating system support level:
 
 - 13=Microsoft Windows 2000
 - 30=Original release version of Microsoft Windows Server 2003 and Microsoft Windows Server 2003 Service Pack 1 (SP1)
