@@ -25,7 +25,7 @@ description: How to run self-help diagnostics in Microsoft Teams
 
 ## Summary
 
-As Microsoft Teams usage grows, Microsoft has developed 17 Teams-specific diagnostic scenarios that cover top support topics and the most common tasks for which administrators request configuration help. It is important to note that while these diagnostics cannot make changes to your tenant, they do provide insight into known issues and the instructions that you’ll need to fix the issues quickly. 
+As Microsoft Teams usage grows, Microsoft has developed Teams-specific diagnostic scenarios that cover top support topics and the most common tasks for which administrators request configuration help. It is important to note that while these diagnostics cannot make changes to your tenant, they do provide insight into known issues and the instructions that you’ll need to fix the issues quickly. 
 
 ## More information
 
@@ -68,6 +68,7 @@ The following diagnostics are currently available with brief scenario descriptio
 | We Can't Get Your Files | Validates that a Team is provisioned and accessible by the specified user.	 | Diag: Teams Files Error|
 | Teams presence | Validates that a user's Teams presence can be correctly displayed. | Diag: Teams presence |
 | Teams Live Events | Validates that a user is able to schedule Teams live events. | Diag: Teams Live Events |
+| Teams Meeting Recordings | Validates that the user is properly configured to record a meeting in Teams | Diag: Meeting Recording
 
 
 More diagnostics will be added at a future date.

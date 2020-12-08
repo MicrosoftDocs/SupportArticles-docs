@@ -2,6 +2,38 @@
 
 
 
+## Week of November 30, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/30/2020 | [(Your archive appears to be unavailable) in a hybrid deployment.](/office365/troubleshoot/archive-mailboxes/cloud-based-archive-unavailable) | modified |
+| 11/30/2020 | [Issue when you enable mailbox archiving in an Exchange hybrid deployment.](/office365/troubleshoot/archive-mailboxes/issue-when-enable-mailbox-archiving) | modified |
+| 11/30/2020 | [Mail access issues in a hybrid Exchange deployment with cloud-based archive](/office365/troubleshoot/archive-mailboxes/mail-access-issues) | modified |
+| 11/30/2020 | [This feature has been disabled by your administrator error in Microsoft Office](/office365/troubleshoot/access-management/office-feature-disabled) | modified |
+
+
+## Week of November 23, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/26/2020 | [This feature has been disabled by your administrator error in Microsoft Office](/office365/troubleshoot/access-management/office-feature-disabled) | modified |
+
+
+## Week of November 16, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/16/2020 | [Connection issues in sign-in after update to Office 2016 build 16.0.7967](/office365/troubleshoot/authentication/connection-issue-when-sign-in-office-2016) | modified |
+| 11/17/2020 | [(Your archive appears to be unavailable) in a hybrid deployment.](/office365/troubleshoot/archive-mailboxes/cloud-based-archive-unavailable) | modified |
+| 11/17/2020 | [Issue when you enable mailbox archiving in an Exchange hybrid deployment.](/office365/troubleshoot/archive-mailboxes/issue-when-enable-mailbox-archiving) | modified |
+| 11/17/2020 | [How to restore In-Place Hold and Litigation Hold settings in an Exchange hybrid deployment](/office365/troubleshoot/holds/restore-in-place-litigation-hold) | modified |
+| 11/17/2020 | [Install and maintain SaRA tool from a network share](/office365/troubleshoot/installation/install-sara-from-network-share) | modified |
+| 11/19/2020 | [Open Support cases for GCC High and DoD](/office365/troubleshoot/miscellaneous/support-cases-for-gcc-high-dod) | modified |
+
+
 ## Week of November 09, 2020
 
 
@@ -40,28 +72,3 @@
 | 11/5/2020 | [We're having trouble signing you in error when accessing mail](/office365/troubleshoot/sign-in/we-are-having-trouble-signing-you-in-error) | modified |
 | 11/5/2020 | [You can't activate or sign-in after you update to Office 2016 for Mac version 15.33](/office365/troubleshoot/updates/cant-activate-sign-in-after-update) | modified |
 | 11/5/2020 | [Sender Rewriting Scheme (SRS) in Office 365](/office365/troubleshoot/antispam/sender-rewriting-scheme) | modified |
-
-
-## Week of October 26, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/29/2020 | Outlook Customer Manager group creation in admin portal | removed |
-
-
-## Week of October 19, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/21/2020 | [Install and maintain SaRA tool from a network share](/office365/troubleshoot/installation/install-sara-from-network-share) | modified |
-| 10/21/2020 | [Outlook Customer Manager group creation in admin portal](/office365/troubleshoot/licensing/outlook-customer-manager-group-creation) | modified |
-
-
-## Week of October 12, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/15/2020 | [Unable to sign in to Office 365, Azure, or Intune](/office365/troubleshoot/sign-in/sign-in-to-office-365-azure-intune) | modified |

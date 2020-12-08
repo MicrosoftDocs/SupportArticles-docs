@@ -113,6 +113,8 @@
       href: ../lists-and-libraries/error-when-view-or-edit-in-browser.md
     - name: Excel survey doesn't have full functionality
       href: ../lists-and-libraries/excel-survey-does-not-have-full-functionality-when-click-new.md
+    - name: File post-processing may take up to 24 hours
+      href: ../lists-and-libraries/file-post-processing-takes-up-to-24-hours.md
     - name: Filtering doesn't work for Managed Metadata in SharePoint
       href: ../lists-and-libraries/managed-metadata-column-fails-filtering.md
     - name: Information about dragging files into document libraries
@@ -207,6 +209,8 @@
       href: ../Security/problem-with-your-account.md
   - name: Sharing and Permissions
     items:
+    - name: '"Access Denied due to organizational policies" error'
+      href: ../sharing-and-permissions/access-denied-due-to-org-policies.md
     - name: Error when trying to access SharePoint Online or OneDrive for Business
       href: ../sharing-and-permissions/access-denied-sharepoint-error.md
     - name: Error when an external user tries to access SharePoint Online or OneDrive for Business

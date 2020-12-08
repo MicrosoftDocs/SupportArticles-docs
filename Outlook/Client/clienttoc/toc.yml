@@ -183,6 +183,8 @@
       href: ../contacts/how-to-hide-columns-in-address-book.md
     - name: Information about the Outlook AutoComplete list
       href: ../contacts/information-about-the-outlook-autocomplete-list.md
+    - name: LinkedIn is no longer available in Outlook Social Connector
+      href: ../contacts/linkedin-is-no-longer-available-in-outlook-social-connector.md
     - name: No permission error when adding contacts
       href: ../contacts/you-donnot-have-permission-to-create-an-entry-error.md
     - name: No Offline Address Book is downloaded
@@ -275,7 +277,9 @@
       href: ../installation/outlook-is-unable-to-start-in-windows-7-or-8.md
     - name: DisablePST and PSTDisableGrow policies are ignored
       href: ../installation/disablepst-and-pstdisablegrow-policies-are-ignored.md
-    - name: Instal Calendar Printing Assistant fails
+    - name: How to update Outlook to solve  connection issues
+      href: ../installation/fix-outlook-connection-problems-by-upgrading.md
+    - name: Install Calendar Printing Assistant fails
       href: ../installation/installing-calendar-printing-assistant-fails.md
     - name: Install Outlook latest applicable updates
       href: ../installation/install-outlook-latest-updates.md
@@ -581,8 +585,6 @@
       href: ../user-interface/click-here-to-view-more-on-microsoft-exchange-hyperlink-is-missing.md
     - name: Compact Navigation options aren't saved
       href: ../user-interface/compact-navigation-options-not-saved.md
-    - name: Create recurring reminder email
-      href: ../user-interface/create-recurring-email.md
     - name: Customization options for Today view
       href: ../user-interface/customization-options-for-outlook-today-view.md
     - name: Default Office Add-in icon is displayed
@@ -597,6 +599,8 @@
       href: ../user-interface/emails-not-show-in-cached-mode-inbox-after-synchronized.md
     - name: Emails sent by an .oft file aren't received
       href: ../user-interface/sending-email-by-template-fails.md
+    - name: Encrypted and restricted message in shared mailbox
+      href: ../user-interface/encrypted-restricted-message-shared-mailbox.md
     - name: Event 4096 is logged if WarmUp set for VSTO add-ins
       href: ../user-interface/event-4096-is-logged-if-warmup-set-for-vsto-add-ins.md
     - name: Extensibility support for Outlook 2010
@@ -697,4 +701,3 @@
       href: ../user-interface/windows-search-service-setting-results-in-no-matches-found.md
     - name: Wrong search results due to missing MapiPH.dll
       href: ../user-interface/search-results-are-incorrect-due-to--missing-mapiph-dll.md
-

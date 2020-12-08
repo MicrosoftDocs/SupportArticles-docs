@@ -91,7 +91,7 @@ Project Web App can use either Project Server permission mode or SharePoint perm
 > Switching between Project Server permission mode and SharePoint permission mode deletes all security-related settings. 
 
 Group Names:
-When using SharePoint Permissions mode the gourd name is appended with For Project Web App.  when using Project Server permission mode the group name is appended with (Project Web App Synchronized)
+When using SharePoint Permissions mode the group name is appended with For Project Web App.  when using Project Server permission mode the group name is appended with (Project Web App Synchronized)
 
 Enterprise Resource Pool - User accounts added to the Enterprise Resource Pool are not automatically given permissions to log into the Project Web App home page. This is new behavior in 2013 from earlier versions of Project Server, regardless of security mode. This prevents users from having access to Project Web App home page automatically. The PWA Admin must "Share" the site with specific users or groups for users to have access. To get more information and best practices see the following article: 
 

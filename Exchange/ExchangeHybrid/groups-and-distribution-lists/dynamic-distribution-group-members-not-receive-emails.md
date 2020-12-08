@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer: 
 appliesto:
 - Exchange Online
@@ -28,7 +29,8 @@ You have a hybrid deployment of Exchange Online in Microsoft 365 and on-premises
 Additionally, if you run a command such as the following to return a list of recipients in the dynamic distribution group, the user doesn't appear in the list:
 
 ```console
-$list = Get-DynamicDistributionGroup sales@contoso.com Get-Recipient -RecipientPreviewFilter $list.RecipientFilter
+$list = Get-DynamicDistributionGroup sales@contoso.com  
+Get-Recipient -RecipientPreviewFilter $list.RecipientFilter
 ```
 
 ## Cause

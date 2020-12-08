@@ -2,6 +2,34 @@
 
 
 
+## Week of November 30, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/30/2020 | [Someone has already set up Teams for your organization error in Microsoft Teams](/microsoftteams/troubleshoot/teams-sign-in/someone-has-already-setup-teams) | modified |
+| 12/3/2020 | [How to include or exclude Teams from antivirus or DLP applications](/microsoftteams/troubleshoot/teams-administration/include-exclude-teams-from-antivirus-dlp) | modified |
+
+
+## Week of November 23, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/23/2020 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
+| 11/23/2020 | [Troubleshoot Microsoft Teams and Exchange Server interaction issues](/microsoftteams/troubleshoot/known-issues/teams-exchange-interaction-issue) | modified |
+| 11/24/2020 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
+
+
+## Week of November 16, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/17/2020 | [Microsoft Teams is stuck in a login loop in Edge or Internet Explorer](/microsoftteams/troubleshoot/teams-sign-in/sign-in-loop) | modified |
+| 11/20/2020 | [Microsoft Teams is stuck in a login loop in Edge, Internet Explorer or Google Chrome](/microsoftteams/troubleshoot/teams-sign-in/sign-in-loop) | modified |
+
+
 ## Week of November 02, 2020
 
 
@@ -24,37 +52,3 @@
 | 11/5/2020 | [Teams Class Schedule does not show task buckets](/microsoftteams/troubleshoot/known-issues/task-buckets-do-not-appear-in-planner) | modified |
 | 11/5/2020 | [Teams defaults to domain-joined account](/microsoftteams/troubleshoot/known-issues/teams-defaults-to-domain-joined-account) | modified |
 | 11/5/2020 | [Unable to create a team in Teams](/microsoftteams/troubleshoot/known-issues/users-cant-create-team) | modified |
-
-
-## Week of October 26, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/26/2020 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
-
-
-## Week of October 19, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/19/2020 | [Multi-factor authentication error in Microsoft Teams](/microsoftteams/troubleshoot/known-issues/modern-authentication-failure-teams) | modified |
-| 10/20/2020 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
-
-
-## Week of October 12, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-
-
-## Week of October 05, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/microsoftteams/troubleshoot/index) | modified |
-| 10/8/2020 | [Troubleshoot Microsoft Teams and Exchange Server interaction issues](/microsoftteams/troubleshoot/known-issues/teams-exchange-interaction-issue) | modified |
-| 10/9/2020 | [Troubleshoot Microsoft Teams and Exchange Server interaction issues](/microsoftteams/troubleshoot/known-issues/teams-exchange-interaction-issue) | modified |

@@ -10,7 +10,9 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.author: v-six
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Outlook for Windows
+- CSSTroubleshoot
 appliesto:
 - Outlook 2019
 - Outlook 2016
@@ -67,8 +69,8 @@ Use Outlook Web App to reset the default folder names:
 
 1. Exit Outlook.    
 2. Log on to [Outlook Web App](https://support.office.com/article/Sign-in-to-Outlook-Web-App-e08eb8ac-ac27-49f4-a400-a47311e1ee7e) by using your credentials.    
-3. Select **Settings** (the gear icon on the right) > **Options **> **General** (expand the list in the navigation pane) > **Region and time zone**.
-4. On the **Regional and time zone settings** page, change the language, select the date and time format that you want to use, select the **Rename default folders so their names match the specified language** option, and then select **Save**.    
+3. Select **Settings** (the gear icon on the right) > **Options **> **General** (expand the list in the navigation pane) > **Language and time**.
+4. On the **Language and time** page, change the language, select the date and time format that you want to use, select the **Rename default folders so their names match the specified language** option, and then select **Save**.    
 5. Exit Outlook Web App.
 
     > [!NOTE]

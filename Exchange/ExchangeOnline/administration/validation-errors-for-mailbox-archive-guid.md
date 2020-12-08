@@ -31,7 +31,7 @@ In this situation, updates to other property values cannot be synchronized from 
 
 ## Resolution
 
-To resolve the errors, update the **msExchArchiveGUID** (**ArchiveGUID**) property value in the on-premises environment to match the value in the cloud.
+To resolve the errors, update the `msExchArchiveGUID` (`ArchiveGUID`) property value in the on-premises environment to match the value in the cloud.
 
 If you have a hybrid environment that has Exchange on-premises, run the following command to update the value:
 
