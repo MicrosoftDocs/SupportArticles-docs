@@ -1,5 +1,5 @@
 ---
-title: Error during cluster setup
+title: Error (The cluster node already exists) occurs during cluster setup
 description: Provides a solution to the error (The cluster node already exists) that occurs during cluster setup.
 ms.date: 09/14/2020
 author: Deland-Han

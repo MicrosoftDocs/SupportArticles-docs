@@ -31,7 +31,7 @@ A Windows Server 2019-based server or a Windows Server 2016-based server that ru
 
 To fix this problem, the [July 14, 2020 KB 4565511 (build 14393.3808)](https://support.microsoft.com/help/4565511/windows-10-update-kb4565511) includes an update to Nfssvr.sys. Make sure that this update is installed.
 
-### enable the fix
+### Enable the fix
 
 On computers that run Windows Server 2019, the fix is enabled automatically. No further action is necessary.  
 
