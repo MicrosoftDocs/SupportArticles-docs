@@ -2,6 +2,17 @@
 
 
 
+## Week of November 30, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/30/2020 | [(Your archive appears to be unavailable) in a hybrid deployment.](/office365/troubleshoot/archive-mailboxes/cloud-based-archive-unavailable) | modified |
+| 11/30/2020 | [Issue when you enable mailbox archiving in an Exchange hybrid deployment.](/office365/troubleshoot/archive-mailboxes/issue-when-enable-mailbox-archiving) | modified |
+| 11/30/2020 | [Mail access issues in a hybrid Exchange deployment with cloud-based archive](/office365/troubleshoot/archive-mailboxes/mail-access-issues) | modified |
+| 11/30/2020 | [This feature has been disabled by your administrator error in Microsoft Office](/office365/troubleshoot/access-management/office-feature-disabled) | modified |
+
+
 ## Week of November 23, 2020
 
 
@@ -61,11 +72,3 @@
 | 11/5/2020 | [We're having trouble signing you in error when accessing mail](/office365/troubleshoot/sign-in/we-are-having-trouble-signing-you-in-error) | modified |
 | 11/5/2020 | [You can't activate or sign-in after you update to Office 2016 for Mac version 15.33](/office365/troubleshoot/updates/cant-activate-sign-in-after-update) | modified |
 | 11/5/2020 | [Sender Rewriting Scheme (SRS) in Office 365](/office365/troubleshoot/antispam/sender-rewriting-scheme) | modified |
-
-
-## Week of October 26, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/29/2020 | Outlook Customer Manager group creation in admin portal | removed |
