@@ -35,7 +35,7 @@ In Microsoft Exchange Server 2019, 2016, or 2013, you run the `Add-MailboxDataba
 
 This error occurs if the source and target servers point to different domain controllers.
 
-When the source server creates a copy of the mailbox database, the target server flushes its cache and updates its content. The cache has to be flushed during the default time-out that occurs between running the Add-MailboxDatabaseCopy cmdlet and starting the seeding process. If the cache is not flushed within this timeframe, the target server doesn't see the updated information. This situation generates the error message.
+When the source server creates a copy of the mailbox database, the target server flushes its cache and updates its content. The cache has to be flushed during the default time-out that occurs between running the `Add-MailboxDatabaseCopy` cmdlet and starting the seeding process. If the cache is not flushed within this timeframe, the target server doesn't see the updated information. This situation generates the error message.
 
 Eventually, the cache is flushed within the appropriate timeframe, and the copy of the mailbox server is seeded on the target server.
 
