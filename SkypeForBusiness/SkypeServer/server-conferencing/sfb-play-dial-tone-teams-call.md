@@ -9,7 +9,7 @@ ms.topic: article
 ms.prod: skype-for-business-itpro
 localization_priority: Normal
 ms.custom: 
-- CI 115787
+- CI 115787, CI 125216
 - CSSTroubleshoot
 ms.reviewer: splette
 appliesto:
@@ -18,7 +18,6 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-
 # Skype for Business plays a dial tone while a user is active on a Teams call
 
 ## Symptoms
@@ -33,13 +32,32 @@ This issue occurs because new changes have been made in the HID feature for Isla
 
 ### Method 1
 
-Set **PlayAbbreviatedDialTone** to "true" in the client policy. If PlayAbbreviatedDialTone is set to True, a 3-seconds dial tone will be played when a Skype for Business-compatible handset is taken off the hook. To learn more, read [Set-CsClientPolicy](https://docs.microsoft.com/powershell/module/skype/set-csclientpolicy?view=skype-ps). To set the value, run the following command:
+Set the dial tone to **None** for Skype for Business by using registry or Windows settings.
+
+#### Using registry
+
+Clear the key data in `HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Communicator\LYNC_dialtone\.Current\Default`.
+
+#### Using Windows settings
+
+An individual user can also use Windows settings.
+
+1. Open the **Settings** app, select **System** > **Sound** > **Sound Control Panel**.
+2. In the **Program Events** section under the **Sounds** tab, scroll down to **Skype for Business**.
+3. Select the **Dial Tone** sound.
+4. In the **Sounds** section, select the **None** option at the top of the drop-down menu.
+
+![Screenshot of setting the Dial Tone sound to None](./media/sfb-play-dial-tone-teams-call/sound-setting.png)
+
+### Method 2
+
+Set `PlayAbbreviatedDialTone` to **True** in the client policy. If `PlayAbbreviatedDialTone` is set to **True**, a 3-seconds dial tone will be played when a Skype for Business-compatible handset is taken off the hook. To learn more, read [Set-CsClientPolicy](https://docs.microsoft.com/powershell/module/skype/set-csclientpolicy?view=skype-ps). To set the value, run the following command:
 
 ```powershell
 Set-CsClientPolicy -Identity RedmondClientPolicy  -PlayAbbreviatedDialTone $True
 ```
 
-### Method 2
+### Method 3
 
 Another option is to enable HID interop features in the Skype for Business client. To learn how to do that, see [EnableTeamsHIDInterop for coordination of HID device usage in Microsoft Teams and Skype for Business 2016 in Islands mode](https://support.microsoft.com/help/4559449).
 
