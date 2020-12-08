@@ -26,7 +26,7 @@ Microsoft Skype for Business client broadcasts a dial tone to all participants o
 
 ## Cause
 
-This issue occurs because new changes have been made in the HID feature for Island mode users.
+This issue is caused by changes in the HID feature for Island mode users.
 
 ## Workaround
 
@@ -40,7 +40,7 @@ Clear the key data in `HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Communicator\LYN
 
 #### Using Windows settings
 
-An individual user can also use Windows settings.
+Individual users can also use Windows settings.
 
 1. Open the **Settings** app, select **System** > **Sound** > **Sound Control Panel**.
 2. In the **Program Events** section under the **Sounds** tab, scroll down to **Skype for Business**.
