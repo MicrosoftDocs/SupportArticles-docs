@@ -43,7 +43,7 @@ To work around this issue, manually create a CPUID mask for the affected virtual
 3. Click the **Options** tab.
 4. Under **Advanced**, click **CPUID Mask**.
 5. Click **Advanced**.
-6. In the Register column, locate the **edx**  register under **Level 80000001**.
+6. In the Register column, locate the **`edx`**  register under **Level 80000001**.
 7. In the **Value** field, enter the following character string exactly:
 
    ----:0---:----:----:----:----:----:---- 
@@ -52,23 +52,40 @@ To work around this issue, manually create a CPUID mask for the affected virtual
 
 ## More information
 
-0: kd>. bugcheck
-Bugcheck code 00000109
+0: kd>. bug check
+
+Bug check code 00000109
+
 Arguments a3a01f58`92797517 b3b72bde`e4f976b6 00000000`c0000103 00000000`00000007
-0: kd> !sysinfo machineid
+
+0: kd> !sysinfo machine id
+
 Machine ID Information [From Smbios 2.4, DMIVersion 0, Size=10150]
+
 BiosMajorRelease = 4
+
 BiosMinorRelease = 6
+
 FirmwareMajorRelease = 0
+
 FirmwareMinorRelease = 0
+
 BiosVendor = Phoenix Technologies LTD
+
 BiosVersion = 6.00
+
 BiosReleaseDate = 07/09/2012
+
 SystemManufacturer = VMware, Inc.
+
 SystemProductName = VMware Virtual Platform
+
 SystemVersion = None
+
 BaseBoardManufacturer = Intel Corporation
+
 BaseBoardProduct = 440BX Desktop Reference Platform
+
 BaseBoardVersion = None
 
 CRITICAL_STRUCTURE_CORRUPTION (109)
