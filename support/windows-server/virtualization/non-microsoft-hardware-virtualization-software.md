@@ -1,5 +1,5 @@
 ---
-title: Supported partners for virtualization software
+title: Supported partners for non-Microsoft hardware virtualization software
 description: Explains that Novell, Inc. has partnered with Microsoft to provide support for virtualized software.
 ms.date: 09/18/2020
 author: Deland-Han
@@ -23,6 +23,7 @@ _Original KB number:_ &nbsp; 944987
 ## Summary
 
 Microsoft has established a joint support relationship for non-Microsoft hardware virtualization software with the following vendors:
+
 - Cisco Systems, Inc.
 - Citrix Systems, Inc.
 - Novell, Inc.
