@@ -29,8 +29,6 @@ Event ID 7000 or event ID 7026 is logged in the System log on a computer that's 
 
 This problem may occur if a device isn't connected to the computer but the driver service of the device is enabled.
 
-On a Windows 7 Service Pack 1 or Windows Server 2012 R2 computer
-
 ## Workaround
 
 > [!IMPORTANT]
