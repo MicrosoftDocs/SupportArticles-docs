@@ -79,10 +79,10 @@ To do it, append the below entry to the default value of `CustomSD` under the ev
 - For Windows Authentication on IIS and ASP.NET impersonation turned on with a specific user account, find the SID for that impersonated account and then create an SDDL string, which looks like: **`(A;;0x3;;;S-1-5-21-1985444312-785446638-2839930158-1121)`** where the last field is the SID for the impersonated account.
 
 To give your group read permissions, add the following to the `CustomSD` value at the end of the current `CustomSD` string:  
-**`(A;;0x1;;; [Your Group Name/user account SID])`**
+**`(A;;0x1;;;[Your Group Name/user account SID])`**
 
 To give your group read and write permissions, add the following to the `CustomSD` value at the end of the current `CustomSD` string:  
-**`(A;;0x3;;; [Your Group Name/user account SID])`**
+**`(A;;0x3;;;[Your Group Name/user account SID])`**
 
 *Windows Server 2008*
 
