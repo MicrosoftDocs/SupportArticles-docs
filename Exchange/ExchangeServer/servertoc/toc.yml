@@ -153,6 +153,8 @@
       href: ../administration/exchange-transaction-logs-grow-rapidly.md
     - name: Extend AD schema to use Hierarchical Address Book
       href: ../administration/extend-ad-schema-to-use-hab.md
+    - name: Fail to add mailbox database copy
+      href: ../administration/add-database-copy-seeding-operation-failed.md
     - name: Fail to change the ownership of a distribution group
       href: ../administration/cannot-change-distribution-group-ownership.md
     - name: Fail to configure Out of Office messages in OWA
