@@ -1,5 +1,5 @@
 ---
-title: HTTP Error 500.19 on IIS webpages
+title: HTTP Error 500.19 on Internet Information Services (IIS) webpages
 description: Resolves the HTTP 500.19 error that occurs when you visit a website that is hosted on IIS 7.0 and later versions.
 ms.date: 11/9/2020
 ms.prod-support-area-path: Health, diagnostic, and performance features
@@ -7,7 +7,7 @@ ms.reviewer: mlaing
 ---
 # HTTP Error 500.19 - internal server error when you open an IIS Webpage
 
-This article resolves a problem in which you receive an "HTTP 500.19" error message on a web application in Internet Information Services (IIS) 7.0 and later versions.
+This article resolves a problem in which you receive an "HTTP 500.19" error message on a web application in IIS 7.0 and later versions.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0 and later versions
 _Original KB number:_ &nbsp; 942055
@@ -73,7 +73,7 @@ Use one of the following methods:
 
 - Do not configure the website to use UNC pass-through authentication to access the remote UNC share. Instead, specify a user account that has the appropriate permissions to access the remote UNC share.
 
-- Grant the Read permission to the IIS_IUSRS group for the ApplicationHost.config or Web.config file. To do this, follow these steps:
+- Grant the Read permission to the IIS_IUSRS group for the ApplicationHost.config or Web.config file. To do it, follow these steps:
 
     1. In Windows Explorer, locate the folder that contains the ApplicationHost.config file that is associated with the website, or locate the virtual directories or the application directories that contain the Web.config file that is associated with the website.
 
@@ -122,7 +122,7 @@ Examine the specified configuration file, and compare it with its parent Applica
 <add accessType="Allow" users="*" />
 ```
 
-To resolve this problem, delete the duplicate entry in the ApplicationHost.config file for the authorization rule. To do this, follow these steps:
+To resolve this problem, delete the duplicate entry in the ApplicationHost.config file for the authorization rule. To do it, follow these steps:
 
 1. Select **Start**, type **Notepad** in the **Start Search** box, right-click **Notepad**, and then select **Run as administrator**.
 
