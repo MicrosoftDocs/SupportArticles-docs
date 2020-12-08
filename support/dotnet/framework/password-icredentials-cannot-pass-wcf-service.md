@@ -22,7 +22,7 @@ It is a known issue that was introduced in the Microsoft .NET Framework 4.0 when
 
 ## Resolution
 
-To fix this issue, you have to pass the username and password information to the service independently of the network credential. You can do it by creating an application-defined object. So that you can hold the credentials and pass the credentials to a new WCF service method that accepts the object as a method argument. Because this application-defined object contains sensitive information, we recommend that you send the data over an encrypted connection to the WCF service by using either https transport security or message layer security.
+To fix this issue, you have to pass the username and password information to the service independently of the network credential. You can do it by creating an application-defined object to hold the credentials. Then, pass the credentials to a new WCF service method that accepts the object as a method argument. Because this application-defined object contains sensitive information, we recommend that you send the data over an encrypted connection to the WCF service by using either https transport security or message layer security.
 
 ## Code that reproduces the issue
 
