@@ -38,7 +38,7 @@ IT administrators can also use Group Policy to disable Wi-Fi Sense and Paid Wi-F
 
 ### For Windows 10 Version 1511 or later versions of Windows
 
-Configure the Group Policy Object Allow Windows to automatically connect to suggested open hotspots, to networks shared by contacts, and to hotspots offering paid services under **Computer Configuration\\Administrative Templates\\Network\\WLAN Service\\WLAN Settings\\**.
+Configure the Group Policy Object **Allow Windows to automatically connect to suggested open hotspots, to networks shared by contacts, and to hotspots offering paid services** under **Computer Configuration\\Administrative Templates\\Network\\WLAN Service\\WLAN Settings\\**.
 
 ### For earlier versions of Windows than Windows 10 Version 1511
 

@@ -71,9 +71,10 @@ CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=MYDOMAIN,DC=COM
     - To disable both intra-site and inter-site topology generation, use value 17 (decimal).
 
 15. In the Operation box, click Replace, click Enter, and then click Run.
-16. In the right pane, the output should look similar to the following example if the operation is successful:***Call Modify...
-ldap_modify_s(ld,'CN=NTDS Site Settings,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=MYDOMAIN,DC=COM',[1] attrs);
-Modified "CN=NTDS Site Settings,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=MYDOMAIN,DC=COM".
+16. In the right pane, the output should look similar to the following example if the operation is successful:
+    > ***Call Modify...
+    ldap_modify_s(ld,'CN=NTDS Site Settings,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=MYDOMAIN,DC=COM',[1] attrs);  
+    Modified "CN=NTDS Site Settings,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=MYDOMAIN,DC=COM".
 
 > [!NOTE]
 > To re-enable KCC generation, delete the value that you entered in step 14 in this section.

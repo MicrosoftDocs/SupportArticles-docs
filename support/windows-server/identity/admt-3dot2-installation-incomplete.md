@@ -38,17 +38,15 @@ CLSID: {E1975D70-3F8E-11D3-99EE-00C04F39BD92}
 
 There is a code defect in how ADMT interoperates with SQL Express 2008 SP1 on domain controllers resulting in the "SQLServerMSSQLUser$ComputerName$InstanceName" group not being created. This group is required by ADMT to configure specific permissions during the ADMT install and allows the ADMT database to be created in the SQL instance. ADMT expects the group to be present, which leads to the blank dialog and an incomplete installation.
 
-## Resolution
-
-### Workaround 1
+## Workaround 1
 
 The standard practice is to install ADMT on a member computer in the target domain. Install SQL Express 2008 SP1 on a Windows 2008 R2 member server in the target domain and then install ADMT 3.2 on that same member server.
 
-### Workaround 2
+## Workaround 2
 
 If you have a requirement to install ADMT 3.2 on a domain controller in order to use command-line or scripted user migrations with SID History, install SQL 2008 SP1 (non-Express edition) on a Windows Server 2008 R2 member server in the target domain and select that remote instance when installing ADMT 3.2 on the domain controller. Alternatively, you can install SQL Express 2005 SP3 on the domain controller.
 
-### Workaround 3
+## Workaround 3
 
 If you have a requirement to install ADMT 3.2 and SQL Express 2008 SP1 on the same domain controller, use the following steps on the target domain's domain controller:
 

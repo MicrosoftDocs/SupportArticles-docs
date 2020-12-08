@@ -21,7 +21,7 @@ _Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1
 _Original KB number:_ &nbsp; 2545685
 
 > [!NOTE]
-> We recommend that you evaluate each fix to determine whether it applies to your environment. If you determine that Failover Clusters in your environment may be affected by the problem(s) that a fix addresses, install the fix on each cluster node by using the procedures that are described in [How to update Windows Server failover clusters](https://docs.microsoft.com/troubleshoot/windows-server/high-availability/windows-server-failover-clusters-service-packs-hotfixes).
+> We recommend that you evaluate each fix to determine whether it applies to your environment. If you determine that Failover Clusters in your environment may be affected by the problem(s) that a fix addresses, install the fix on each cluster node by using the procedures that are described in [How to update Windows Server failover clusters](/troubleshoot/windows-server/high-availability/windows-server-failover-clusters-service-packs-hotfixes).
 >
 > Use the information in the More information section to help you determine whether a particular fix applies to the cluster. Before you install a particular fix, we recommend that you review the original Microsoft Knowledge Base (KB) article that describes the fix.
 
@@ -37,4 +37,4 @@ _Original KB number:_ &nbsp; 2545685
 |June 14, 2011| [2545850](https://support.microsoft.com/help/2545850)|Users cannot access an IIS-hosted website after the computer password for the server is changed in Windows 7 or in Windows Server 2008 R2|Multiple Authentication DLL's|Prevents CNO and VCO objects from failing to register in DNS because of Kerberos authentication failure after the computer password is changed.|
 ||||||
 
-To see the latest list of hotfixes for Windows Server 2008 R2 Hyper-V configurations, see [Hyper-V Update List for Windows Server 2008 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff394763(v=ws.10)?redirectedfrom=MSDN).
+To see the latest list of hotfixes for Windows Server 2008 R2 Hyper-V configurations, see [Hyper-V Update List for Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff394763(v=ws.10)).
