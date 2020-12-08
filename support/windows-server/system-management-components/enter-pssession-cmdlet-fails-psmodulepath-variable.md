@@ -35,15 +35,21 @@ At line:1 char:1
 
 When a PowerShell session is created and authenticates through Kerberos, the session doesn't support double hop. Therefore, the PowerShell session can't authenticate by using network resources.  
 
-When PowerShell tries to enumerate the modules in the network path, the operation fails with "Access Denied," and the command unexpectedly terminates.
+When PowerShell tries to enumerate the modules in the network path, the operation fails with the Access Denied error, and the command unexpectedly terminates.
 
 ## Resolution
 
-To fix the issue, create the PowerShell session to authenticate with CredSSP. It needs to be configured in advance. On the computer that is the target of the **Enter-PSSession** command, run this command:  
- Enable-WSManCredSSP -Role Server  
- On the computer on which you run the **Enter-PSSession** command, run this command:
+To fix the issue, create the PowerShell session to authenticate with CredSSP. It needs to be configured in advance. On the computer that is the target of the `Enter-PSSession` command, run this command:
 
- `Enable-WSManCredSSP -Role Client -DelegateComputer Servername` 
+```powershell
+Enable-WSManCredSSP -Role Server
+```
+
+On the computer on which you run the `Enter-PSSession` command, run this command:
+
+```powershell
+Enable-WSManCredSSP -Role Client -DelegateComputer Servername  
+```
 
 > [!NOTE]
  Servernameis the name of the computer that is the target of the **Enter-PSSession** command. 
