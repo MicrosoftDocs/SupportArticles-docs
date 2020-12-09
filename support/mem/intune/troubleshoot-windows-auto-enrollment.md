@@ -111,7 +111,7 @@ Event ID 75 isn't logged in the following situations:
   > [!NOTE]
   > You can use the task scheduler log to check whether auto-enrollment is triggered. However, you can't use the log to determine whether auto-enrollment succeeded.
 
-  The **Schedule created by enrollment client for automatically enrolling in MDM from AAD** task may not start in one of the following situations:
+  The **Schedule created by enrollment client for automatically enrolling in MDM from AAD** task may not start in the following situations:
 
   - The device is already enrolled in another MDM solution. In this case, Event ID 7016 together with error code 2149056522 is logged in the **Applications and Services Logs** > **Microsoft** > **Windows** > **Task Scheduler** > **Operational** event log.
 
@@ -122,7 +122,3 @@ Event ID 75 isn't logged in the following situations:
     `gpupdate /force`
 
     If the issue persists, do additional troubleshooting in Active Directory.
-
-## Next steps
-
-[Troubleshoot Windows device enrollment](troubleshoot-windows-enrollment-errors.md)
