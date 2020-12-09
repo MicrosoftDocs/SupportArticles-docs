@@ -75,4 +75,6 @@ To do this, follow these steps:
 2. Search for **Intel Chipset Device Software (INF Update Utility)** or **Intel Server Chipset Driver**.
 3. Follow the installation instructions.
 
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
+
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

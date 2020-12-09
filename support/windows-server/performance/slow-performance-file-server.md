@@ -88,8 +88,6 @@ If you installed Open Transaction Manager separately, contact Columbia Data Prod
 
 For more information about how to contact VERITAS, visit [VERITAS support](https://support.veritas.com/)
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
-
 ## More information
 
 > [!IMPORTANT]
@@ -131,3 +129,5 @@ To troubleshoot this issue, use any of the following methods:
 - [Slow network performance when you open a file that is located in a shared folder on a remote network computer](/troubleshoot/windows-client/networking/slow-network-performance-remote-computer)
 
 - [How to temporarily deactivate the kernel mode filter driver in Windows](/troubleshoot/windows-server/performance/deactivate-kernel-mode-filter-driver)
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

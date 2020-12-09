@@ -43,7 +43,7 @@ To resolve the issue and continue using root hints, change the MaxCacheTTL regis
 
     - Value: MaxCacheTTL
     - Data type: DWORD
-    - Data value: 0x2A300 (172,800 seconds in decimal, or 2 days)
+    - Data value: 0x2A300 (172,800 seconds in decimal, or two days)
 
 4. Select **OK**.
 5. Quit Registry Editor.
@@ -51,3 +51,11 @@ To resolve the issue and continue using root hints, change the MaxCacheTTL regis
 
 > [!NOTE]
 > The .biz top level has a TTL of 6 days for its NS and A records. Thus, you may need to set the MaxCacheTTL to 518400 for 6 days or even 604800 for 7 days.
+
+## Disclaimer
+
+Rapid publishing articles provide information directly from within the Microsoft support organization. The information contained herein is created in response to emerging or unique topics, or is intended supplement other knowledge base information.
+
+Microsoft and/or its suppliers make no representations or warranties about the suitability, reliability, or accuracy of the information contained in the documents and related graphics published on this website (the "materials") for any purpose. The materials may include technical inaccuracies or typographical errors and may be revised at any time without notice.
+
+To the maximum extent permitted by applicable law, Microsoft and/or its suppliers disclaim and exclude all representations, warranties, and conditions whether express, implied, or statutory, including but not limited to representations, warranties, or conditions of title, non-infringement, satisfactory condition or quality, merchantability and fitness for a particular purpose, with respect to the materials.
