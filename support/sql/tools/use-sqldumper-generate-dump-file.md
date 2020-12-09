@@ -288,7 +288,7 @@ You can use the ALTER SERVER CONFIGURATION (T-SQL) command to modify these prope
 ```console
 ALTER SERVER CONFIGURATION   set FAILOVER CLUSTER PROPERTY SqlDumperDumpTimeOut =0;
 ALTER SERVER CONFIGURATION   set FAILOVER CLUSTER PROPERTY SqlDumperDumpPath ='C:\temp\';
-ALTER SERVER CONFIGURATION   set FAILOVER CLUSTER PROPERTY SqlDumperDumpPath =296;
+ALTER SERVER CONFIGURATION   set FAILOVER CLUSTER PROPERTY SqlDumperDumpFlags =296;
 ```
 
 Alternatively, you can use PowerShell scripts. For example, for a named instance SQL2017A:
@@ -365,13 +365,13 @@ To remove the Sqldumper.exe utility properties for cluster failover, follow thes
      - Named instance  
      cluster resource "SQL Server (INSTANCE1)" /priv:SqlDumperDumpFlags /usedefault
 
-   - The **SqlDumperDumpPath** property
+   - The `SqlDumperDumpPath` property
      - Default instance  
     cluster resource "SQL Server" /priv:SqlDumperDumpPath /usedefault
      - Named instance  
     cluster resource "SQL Server (INSTANCE1)" /priv:SqlDumperDumpPath /usedefault
 
-   - The **SqlDumperDumpTimeOut** property
+   - The `SqlDumperDumpTimeOut` property
      - Default instance  
     cluster resource "SQL Server" /priv:SqlDumperDumpTimeOut /usedefault
      - Named instance  
