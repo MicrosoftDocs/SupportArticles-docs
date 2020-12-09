@@ -22,7 +22,7 @@ search.appverid:
 
 ## Symptoms
 
-Microsoft Skype for Business client broadcasts a dial tone to all participants of a call for 30 seconds if the Hook button on a Human Interface Device (HID) supporting flash is pressed when using Microsoft Teams with Skype for Business client with HID controls enabled in Islands mode.
+The Microsoft Skype for Business client broadcasts a dial tone to all participants of a call for 30 seconds if the Hook button on a Human Interface Device (HID) that supports the Flash feature is pressed when using Microsoft Teams with Skype for Business client with HID controls enabled in Islands mode.
 
 ## Cause
 
@@ -32,15 +32,15 @@ This issue is caused by changes in the HID feature for Island mode users.
 
 ### Method 1
 
-Set the dial tone to **None** for Skype for Business by using registry or Windows settings.
+Set the dial tone to **None** for Skype for Business by using either the Registry editor or Windows settings.
 
-#### Using registry
+#### Using Registry editor
 
-Clear the key data in `HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Communicator\LYNC_dialtone\.Current\Default`.
+Clear the data in the following registry key:
+
+`HKEY_CURRENT_USER\AppEvents\Schemes\Apps\Communicator\LYNC_dialtone\.Current\Default`
 
 #### Using Windows settings
-
-Individual users can also use Windows settings.
 
 1. Open the **Settings** app, select **System** > **Sound** > **Sound Control Panel**.
 2. In the **Program Events** section under the **Sounds** tab, scroll down to **Skype for Business**.
@@ -65,6 +65,6 @@ Another option is to enable HID interop features in the Skype for Business clien
 
 To improve the user's experience, Microsoft has rolled out a new HID feature to enable **Mute/Unmute** for Island mode users in Teams. Here are a few notes and requirements regarding this new feature:
 
-1. This feature applies to Windows (32 bit) only. macOS experience is unchanged.
-2. You must update Skype for Business client to version 16.0.11020.10000 or higher. If you don't, HID will remain disabled in Teams.
-3. The new feature allows the use of the **Mute/Unmute** HID controls. The **Hook/OffHook** and other HID controls won't work. Volume control and ring tone aren't affected.
+1. This feature applies to Windows (32 bit) only. The MacOS experience is unchanged.
+2. You must update the Skype for Business client to version 16.0.11020.10000 or higher. If you don't, the HID feature will remain disabled in Teams.
+3. With the availability of the **Mute/Unmute** HID controls, previously available controls such as **Hook/OffHook** aren't supported. However, volume control and ring tone aren't affected.
