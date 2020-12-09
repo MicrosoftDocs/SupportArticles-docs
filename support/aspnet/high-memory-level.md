@@ -26,7 +26,7 @@ Obviously, this question is going to be dependent on volume and activity of spec
 
 In general terms, a comfortable level would be under 600 MB in the default 2-GB user memory address space. Once the memory level is higher than that comfortable level, we're doing less than we should be. This behavior may affect other applications that are running on the system.
 
-The key is to understand some applications require more memory than others. If you're exceeding these limits, you may add more memory or add another server to your Web farm (or consider a Web farm). Also, profiling is recommended in these cases, which can enable developers to create leaner applications. In this article, we're looking at a situation where you consistently see memory rise until the server stops performing.
+The key is to understand some applications require more memory than others. If you're exceeding these limits, you may add more memory or add another server to your Web farm (or consider a Web farm). Profiling is also recommended in these cases, which can enable developers to create leaner applications. In this article, we're looking at a situation where you consistently see memory rise until the server stops performing.
 
 ## Application set up for debugging
 
@@ -56,7 +56,7 @@ Second, the `executionTimeout` attribute ([\<httpRuntime> Element](/previous-ver
 
 Finally, you'll be creating more files in your *Temporary ASP.NET* files folder, and the `System.Diagnostics.DebuggableAttribute` ([System.Diagnostics Namespace](https://docs.microsoft.com/dotnet/api/system.diagnostics?view=dotnet-plat-ext-3.1&preserve-view=true) gets added to all generated code, which can cause performance degradation.
 
-If you get nothing else from this article, I do hope you get this information. Leaving debugging enabled is bad. We see this behavior all too often, and it's so easy to change. Also, remember that it can be set at the page level. So, make sure that all of your pages aren't setting it.
+If you get nothing else from this article, I do hope you get this information. Leaving debugging enabled is bad. We see this behavior all too often, and it's so easy to change. Remember it can be set at the page level. Make sure all of your pages aren't setting it.
 
 ## String concatenation
 
@@ -88,7 +88,7 @@ If you aren't running the .NET Framework SP1 yet, install this SP if you're expe
 
 ## Don't be afraid to recycle periodically
 
-In IIS, by default, we recycle application pools every 29 hours. The Aspnet_wp.exe process will keep going until you end the task, restart IIS, or restart the computer. This behavior means that this process could be running for months. For some applications, it's a good idea to just restart the worker process every couple of days or so, at a convenient time.
+We recycle application pools in IIS every 29 hours by default. The Aspnet_wp.exe process will keep going until you end the task, restart IIS, or restart the computer. This behavior means that this process could be running for months. It's a good idea for some applications to just restart the worker process every couple of days or so, at a convenient time.
 
 ## Questions to ask
 
