@@ -27,14 +27,14 @@ Consider the following scenario:
 1. You install the Hyper-V role on a computer that is running Windows Server 2008 or Windows Server 2008 R2.
 2. You create a virtual machine and attempt to start the virtual machine.
 3. You may see the following event ID:
-    
+
     > Log Name: Microsoft-Windows-Hyper-V-Worker-Admin  
     Source: Microsoft-Windows-Hyper-V-Worker  
     Event ID: 3112  
     Level: Error  
     Description:  
     The virtual machine could not be started because the hypervisor is not running.  
-    
+
 In this scenario, you're unable to start the virtual machine and receive the error message below:
 
 > Virtual machine could not start because the hypervisor is not running.

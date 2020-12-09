@@ -34,7 +34,7 @@ When you run the netsh interface http show interface command, the output is as f
 
 > Error: 0x103  
 Role: Client  
-URL: https://da.contoso.com/IPHTTPS  
+URL: `https://da.contoso.com/IPHTTPS`  
 Last Error Code: 0x103  
 Interface Status: No usable certificate found  
 0x103 translates to:  
@@ -50,7 +50,7 @@ This error is seen in the following scenarios:
 
 > Error: 0x2AFC  
 Role: Client  
-URL: https://da.contoso.com/IPHTTPS  
+URL: `https://da.contoso.com/IPHTTPS`  
 Last Error Code: 0x2AFC  
 Interface Status: Failed to connect to IPHTTPs server; Waiting to reconnect.  
 0x2AFC translates to:  
@@ -69,7 +69,7 @@ There are several reasons this error may occur:
 
 > Error: 0x2AF9  
 Role: Client  
-URL: https://da.contoso.com/IPHTTPS  
+URL: `https://da.contoso.com/IPHTTPS`  
 Last Error Code: 0x2AF9  
 Interface Status: Failed to connect to the IPHTTPS server; waiting to reconnect  
 0x2AF9 translates to:  

@@ -1,6 +1,6 @@
 ---
 title: Error 0x800f0922 when the Multipath I/O (MPIO) feature installation fails
-description: Resolves an issue in which the Multipath I/O (MPIO) feature installation fails
+description: Resolves an issue in which the Multipath I/O (MPIO) feature installation fails.
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
@@ -15,19 +15,21 @@ ms.technology: Deployment
 ---
 # Error 0x800f0922 when the MPIO feature installation fails
 
-This article helps to fix the error 0x800f0922 when the Multipath I/O (MPIO) feature installation fails.
+This article helps to fix the error 0x800f0922 that occurs when the Microsoft Multipath I/O (MPIO) feature installation fails.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 3008079
 
 ## Symptoms
 
-When you try to install the Microsoft Multipath I/O (MPIO) feature by using the graphical user interface (GUI) or Windows PowerShell, you receive the following error message:  
->The request to add or remove features on the specified server failed.
+When you try to install the MPIO feature by using the graphical user interface (GUI) or Windows PowerShell, you receive the following error message:
+  
+> The request to add or remove features on the specified server failed.  
 Installation of one or more roles, role services, or features failed. Error: 0x800f0922.
 
-Additionally, information that resembles the following is logged in the Component Based Servicing log (CBS.log):  
->2014-10-01 22:11:50, Info CSI 00000029 Begin executing advanced installer phase 32 (0x00000020) index 11 (0x000000000000000b) (sequence 41)  
+Additionally, information that resembles the following is logged in the Component Based Servicing log (CBS.log):
+  
+> 2014-10-01 22:11:50, Info CSI 00000029 Begin executing advanced installer phase 32 (0x00000020) index 11 (0x000000000000000b) (sequence 41)  
 Old component: [l:0]""  
 New component: [ml:344{172},l:342{171}]"Microsoft-Windows-MultipathDeviceSpecificModule, Culture=neutral, Version=6.2.9200.16384,  
 PublicKeyToken=31bf3856ad364e35, ProcessorArchitecture=amd64, versionScope=NonSxS"  
@@ -70,7 +72,8 @@ CSIPERF:AIDONE;{3d07d150-2f3d-4184-9793-d0fd59b0c885};Microsoft-Windows-Multipat
 2014-10-01 22:11:50, Info CSI 00000031 End executing advanced installer (sequence 41)
 Completion status: HRESULT_FROM_WIN32(ERROR_ADVANCED_INSTALLER_FAILED)  
 
-Also, the following information is logged in the device installation text log (SetupAPI.dev.log):  
+Also, the following information is logged in the device installation text log (SetupAPI.dev.log):
+
 >\>>> [Setup Root Device - Install]  
 \>>> Section start 2014/10/01 21:57:01.843  
 set: {Install Root Device: ROOT\MPIO\0001} 21:57:01.843  
@@ -85,15 +88,14 @@ This issue occurs because of some stale entries in the registry key for the MPIO
 
 ## Resolution
 
-To resolve this issue, remove the following key from the registry: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\MPIO\0001**
+To resolve this issue, remove the following key from the registry:  
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\MPIO\0001`
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section. 
+Microsoft has confirmed that this is a problem in the Microsoft products listed at the beginning of this article.
 
-## More information
-
-### Explanation of the error codes
+## Explanation of the error codes
 
 |Error Code|Symbol|File|Description|
 |---|---|---|---|

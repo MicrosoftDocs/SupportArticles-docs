@@ -1,6 +1,6 @@
 ---
 title: Error 0x000000D1 when you enabled storage controller
-description: Discusses that Windows Server 2012 runs a bugcheck and you receive Step error 0x000000D1 when you enable a storage controller.
+description: Discusses that Windows Server 2012 R2 runs a bugcheck and you receive Step error 0x000000D1 when you enable a storage controller.
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2916984
 
 Consider the following scenario:
 
-- You have a computer that is running Windows Server 2012 R2 or Windows Server 2012.
+- You have a computer that is running Windows Server 2012 R2.
 - The system is configured by having hot pluggable Solid State Drives (SSDs).
 - You disable the storage controller for one or more of the SSDs through Device Manager.
 - You physically eject the SSDs that are attached to the disabled controllers.
@@ -36,18 +36,18 @@ In this scenario, Windows Server runs a bugcheck. Additionally, you receive a St
 
 This problem has also been seen in scenarios in which a surprise removal is performed on the SSD when the storage controller driver is being installed or enabled.
 
-Notes：
-
-- This Stop error describes a DRIVER_IRQL_NOT_LESS_OR_EQUAL error.
-- The parameters in this Stop error message vary, depending on the configuration of the computer.
-- Not all "Stop 0x000000D1" errors are caused by this issue.
+> [!NOTE]
+>
+> - This Stop error describes a DRIVER_IRQL_NOT_LESS_OR_EQUAL error.
+> - The parameters in this Stop error message vary, depending on the configuration of the computer.
+> - Not all Stop 0x000000D1 errors are caused by this issue.
 
 ## Cause
 
-This problem occurs because the StorPort driver forwards a Plug'n'Plug (PnP) IRP to the storage controller that is no longer initialized.
+This problem occurs because the StorPort driver forwards a Plug and Play (PnP) IRP to the storage controller that is no longer initialized.
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
+Microsoft has confirmed that this is a problem in the Microsoft products that are listed at the beginning of this article.
 
 Microsoft regularly releases software updates to address specific bugs. If Microsoft releases a software update to resolve this bug, this article will be updated with additional information.
