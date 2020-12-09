@@ -184,7 +184,7 @@
   - name: Troubleshoot MFA issues
     href: troubleshoot-azure-mfa-issue.md
   - name: Unable to register a device
-    href: cant-connect-service-error-register-device.md
+    href: cant-connect-service-error-register-device.md 
   - name: Unexpected error when resetting password
     href: unexpected-error-reset-pwd.md
   - name: Verify account error when resetting password
