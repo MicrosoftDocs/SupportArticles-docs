@@ -153,6 +153,8 @@
       href: ../administration/exchange-transaction-logs-grow-rapidly.md
     - name: Extend AD schema to use Hierarchical Address Book
       href: ../administration/extend-ad-schema-to-use-hab.md
+    - name: Fail to add mailbox database copy
+      href: ../administration/add-database-copy-seeding-operation-failed.md
     - name: Fail to change the ownership of a distribution group
       href: ../administration/cannot-change-distribution-group-ownership.md
     - name: Fail to configure Out of Office messages in OWA
@@ -287,14 +289,16 @@
       href: ../client-connectivity/activesync-clients-not-connect-sync-delay.md
     - name: Attendees get a meeting update without changes
       href: ../client-connectivity/attendees-meeting-update-without-changes.md
-    - name: Cannot access archive mailboxes with Full Access permission
+    - name: Can't access archive mailbox in Outlook
+      href: ../client-connectivity/cannot-access-archive-mailbox-in-outlook.md
+    - name: Can't access archive mailboxes with Full Access permission
       href: ../client-connectivity/cannot-access-archive-mailbox-with-full-access.md
-    - name: Cannot connect to POP3 or IMAP4
-      href: ../client-connectivity/cannot-connect-to-pop3-or-imap4.md
     - name: Can't access calendar in OWA
       href: ../client-connectivity/cannot-access-calendar-outlook-web-app.md
     - name: Can't access shared mailboxes via POP/IMAP
       href: ../client-connectivity/accessing-shared-mailboxes-fails.md
+    - name: Can't connect to POP3 or IMAP4
+      href: ../client-connectivity/cannot-connect-to-pop3-or-imap4.md
     - name: Can't create appointment or all day event
       href: ../client-connectivity/cannot-create-appointment.md
     - name: Can't open documents on a network file share

@@ -125,8 +125,6 @@
     items:
     - name: "\"There is a problem with the proxy server's security certificate\" error"
       href: ../connectivity/error-when-outlook-uses-rpc-https-connect-server.md
-    - name: Can't access archive mailbox in Outlook
-      href: ../connectivity/cannot-access-archive-mailbox-in-outlook.md
     - name: Can't open a mailbox using MAPI over HTTP
       href: ../connectivity/cannot-open-mailbox-using-mapi-over-http.md
     - name: Can't sign in or activate Microsoft 365 applications 

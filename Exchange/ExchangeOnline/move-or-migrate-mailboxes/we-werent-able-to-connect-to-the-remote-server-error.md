@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2903050
 
 When you try to perform a cutover migration from an on-premises Exchange organization that uses Outlook Anywhere (also known as **RPC over HTTP**) to Exchange Online, the migration engine doesn't create a migration endpoint. Additionally, you receive an error message that resembles the following:
 
-> Microsoft.Exchange.Data.Storage.Management.MigrationTransientException: We weren't able to connect to the remote server. Please verify that the migration endpoint settings are correct and your certificate is valid, and then try again. Consider using the Exchange Remote Connectivity Analyzer ([https://testexchangeconnectivity.com](https://testexchangeconnectivity.com/)) to diagnose the connectivity issues. ---> Microsoft.Exchange.Rpc.ServerUnavailableException: Error 0x6ba (The RPC server is unavailable) from cli_NspiBind
+> Microsoft.Exchange.Data.Storage.Management.MigrationTransientException: We weren't able to connect to the remote server. Please verify that the migration endpoint settings are correct and your certificate is valid, and then try again. Consider using the [Exchange Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/tests/o365) to diagnose the connectivity issues. ---> Microsoft.Exchange.Rpc.ServerUnavailableException: Error 0x6ba (The RPC server is unavailable) from cli_NspiBind
 
 ## Cause
 
