@@ -21,26 +21,26 @@ Before you start troubleshooting, it's best to verify that everything is configu
 
    ![Verify auto-enrollment](./media/troubleshoot-windows-auto-enrollment/verify-auto-enrollment.png)
 
-   - Verify that **MDM user scope** is set to **All** to allow all users to enroll a device in Intune.
-   - Verify that **MAM User scope** is set to **None**. Otherwise, this setting will have precedence over the MDM scope and cause issues.
-   - Verify that **MDM discovery URL** is set to **https://enrollment.manage.microsoft.com/enrollmentserver/discovery**.
+  - Verify that **MDM user scope** is set to **All** to allow all users to enroll a device in Intune.
+  - Verify that **MAM User scope** is set to **None**. Otherwise, this setting will have precedence over the MDM scope and cause issues.
+  - Verify that **MDM discovery URL** is set to **`https://enrollment.manage.microsoft.com/enrollmentserver/discovery`**.
 
 - Verify that the device is running Windows 10, version 1709 or a later version.
 
 - Verify that the devices are set to **hybrid Azure AD joined**. This setting means that the devices are both domain-joined and Azure AD-joined.
 
-   To verify the settings, run `dsregcmd /status` at the command line. Then, verify the following status values in the output:
+  To verify the settings, run `dsregcmd /status` at the command line. Then, verify the following status values in the output:
 
-   - Device State
- 
-     ```asciidoc
+  - Device State
+
+     ```output
      AzureAdJoined: YES
      DomainJoined: YES
      ```
 
-   - SSO State
+  - SSO State
 
-     ```asciidoc
+     ```output
      AzureAdPrt: YES
      ```
 
@@ -59,18 +59,18 @@ Before you start troubleshooting, it's best to verify that everything is configu
 - Make sure that the device isn't enrolled in Intune by using the classic PC agent.
 - Verify the following settings in Azure AD and Intune:
 
-   **In Azure AD Device settings:**
+  **In Azure AD Device settings:**
 
    ![Azure AD Device settings](./media/troubleshoot-windows-auto-enrollment/device-setting.png)
 
-   - The **Users may join devices to Azure AD** setting is set to **All**.
-   - The number of devices that a user has in Azure AD doesn't exceed the **Maximum number of devices per user** quota.
-   
-   **In Intune enrollment restrictions:**
+  - The **Users may join devices to Azure AD** setting is set to **All**.
+  - The number of devices that a user has in Azure AD doesn't exceed the **Maximum number of devices per user** quota.
+  
+  **In Intune enrollment restrictions:**
 
-   - Enrollment of Windows devices is allowed.
+  - Enrollment of Windows devices is allowed.
 
-     ![Allowed Enrollment of Windows devices](./media/troubleshoot-windows-auto-enrollment/restrictions.png)
+    ![Allowed Enrollment of Windows devices](./media/troubleshoot-windows-auto-enrollment/restrictions.png)
 
 ## Troubleshooting
 
@@ -90,7 +90,11 @@ Event ID 75 isn't logged in the following situations:
 
 - The enrollment wasn't triggered at all. In this case, event ID 75 and event ID 76 aren't logged.
   
-  The auto-enrollment process is triggered by the **Schedule created by enrollment client for automatically enrolling in MDM from AAD** task. This task is located under **Microsoft** > **Windows** > **EnterpriseMgmt** in Task Scheduler.
+  The auto-enrollment process is triggered by the following task:
+
+    **Schedule created by enrollment client for automatically enrolling in MDM from AAD**
+
+  This task is located under **Microsoft** > **Windows** > **EnterpriseMgmt** in Task Scheduler.
 
   ![Enrollment wasn't triggered](./media/troubleshoot-windows-auto-enrollment/trigger.png)
 
@@ -107,7 +111,7 @@ Event ID 75 isn't logged in the following situations:
   > [!NOTE]
   > You can use the task scheduler log to check whether auto-enrollment is triggered. However, you can't use the log to determine whether auto-enrollment succeeded.
 
-  The following situation may cause the Schedule created by enrollment client for automatically enrolling in MDM from AAD task not to be started:
+  The **Schedule created by enrollment client for automatically enrolling in MDM from AAD** task may not start in one of the following situations:
 
   - The device is already enrolled in another MDM solution. In this case, Event ID 7016 together with error code 2149056522 is logged in the **Applications and Services Logs** > **Microsoft** > **Windows** > **Task Scheduler** > **Operational** event log.
 
@@ -120,4 +124,5 @@ Event ID 75 isn't logged in the following situations:
     If the issue persists, do additional troubleshooting in Active Directory.
 
 ## Next steps
+
 [Troubleshoot Windows device enrollment](troubleshoot-windows-enrollment-errors.md)
