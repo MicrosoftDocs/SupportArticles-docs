@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Schema update - known issues, best practies, workflow review
+ms.prod-support-area-path: Schema update - known issues, best practices, workflow review
 ms.technology: ActiveDirectory
 ---
 # How to find the current Schema Version

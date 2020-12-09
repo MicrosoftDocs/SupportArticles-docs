@@ -23,6 +23,7 @@ _Original KB number:_ &nbsp; 2879602
 ## Symptoms
 
 Consider the following scenario:
+
 - You have a PC that is running Windows 7/Server 2008 R2 or later and is booting in uEFI mode.
 - You add a second hard disk to the PC and start a second install of Windows using uEFI bootable media. A new EFI System Partition (ESP) is created on the second disk in addition to the existing ESP on the primary hard disk.
 

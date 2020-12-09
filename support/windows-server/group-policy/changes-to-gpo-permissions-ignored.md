@@ -1,5 +1,5 @@
 ---
-title: Changes to GPO permissions aren't saved
+title: Changes to GPO permissions through AGPM aren't saved
 description: Describes an issue that blocks you from changing Group Policy object permissions in Advanced Group Policy Management (AGPM). A workaround is provided.
 ms.date: 09/17/2020
 author: Deland-Han
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 3174540
 
 ## Symptoms
 
-To change permissions on a Group Policy object that's controlled in AGPM, you first check out the policy in AGPM, and then you edit the permissions on the **Security** tab of the policy object. For example, you add the Read only permission to Authenticated Users. However, after you check in the policy to save your changes, and then you view the **Security**  tab on the policy, you see that your changes are not saved as expected.
+To change permissions on a Group Policy object that's controlled in AGPM, you first check out the policy in AGPM, and then you edit the permissions on the **Security** tab of the policy object. For example, you add the Read only permission to Authenticated Users. However, after you check in the policy to save your changes, and then you view the **Security** tab on the policy, you see that your changes are not saved as expected.
 
 ## Cause
 
@@ -35,26 +35,22 @@ To work around this issue, follow these steps:
 1. Install the [September 2016 servicing release for Microsoft Desktop Optimization Pack](https://support.microsoft.com/help/3168628) on the AGPM server.
 2. Set the following registry key and values on the AGPM server.
 
-    |Path|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Agpm|
-    |---|---|
-    |Setting|OverrideRemovePermissionsWithoutReadAndApply|
-    |Data Type|String REG_SZ|
-    |Setting|1|
-    |||
+    - Path: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Agpm`
+    - Value name: OverrideRemovePermissionsWithoutReadAndApply
+    - Value type: String REG_SZ
+    - Value data: 1
+
 3. Restart the AGPM server.
 
 If OverrideRemovePermissionsWithoutReadandApply is set to **1**, read permissions are saved after the policy is checked in to AGPM, but write permissions are removed.
 
-If OverrideRemovePermissionsWithoutReadAndApply is not set or is set to any value other than **1**, AGPM behaves in the way that's described in the "Symptoms" section.
+If OverrideRemovePermissionsWithoutReadAndApply is not set or is set to any value other than **1**, AGPM behaves in the way that's described in the [Symptoms](#symptoms) section.
 
 > [!IMPORTANT]
-> After you set this registry key, you must also apply the hotfix in the following Microsoft Knowledge Base article: [3168628](https://support.microsoft.com/help/3168628) September 2016 servicing release for Microsoft Desktop Optimization Pack
+> After you set this registry key, you must also apply the hotfix in [September 2016 servicing release for Microsoft Desktop Optimization Pack](https://support.microsoft.com/help/3168628).
 
-## More information
+## References
 
-For more information about Microsoft Advanced Group Policy Management (AGPM), see the following resources:
-
-
-- [Step-By-Step Guide for Advanced Group Policy Management](https://technet.microsoft.com/itpro/mdop/agpm/step-by-step-guide-for-microsoft-advanced-group-policy-management-40 ) 
-- [Overview Series: Advanced Group Policy Management](https://technet.microsoft.com/library/cc749396%28v=ws.10%29.aspx) 
-- [Operations guide for Microsoft AGPM 4.0](https://technet.microsoft.com/itpro/mdop/agpm/operations-guide-for-microsoft-advanced-group-policy-management-40) 
+- [Step-by-Step Guide for Microsoft Advanced Group Policy Management 4.0](/microsoft-desktop-optimization-pack/agpm/step-by-step-guide-for-microsoft-advanced-group-policy-management-40)
+- [Overview Series: Advanced Group Policy Management](/previous-versions/windows/it-pro/windows-vista/cc749396(v=ws.10))
+- [Operations guide for Microsoft AGPM 4.0](/microsoft-desktop-optimization-pack/agpm/operations-guide-for-microsoft-advanced-group-policy-management-40)

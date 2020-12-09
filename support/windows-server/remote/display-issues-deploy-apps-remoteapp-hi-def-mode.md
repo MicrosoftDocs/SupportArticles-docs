@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-jesits
 ms.prod-support-area-path: RemoteApp applications
 ms.technology: RDS
 ---
@@ -32,7 +32,7 @@ Consider the following scenario:
 
 In this scenario, when you try to switch from the child window to the main window, artifacts of the child window obstruct the main window even though the main window is made active.
 
-Also, when you hover over or try to click the visible child window, the movements and clicks are actually received by the active main window. 
+Also, when you hover over or try to click the visible child window, the movements and clicks are actually received by the active main window.
 
 The following screenshot shows this issue. In this example, the Microsoft Dynamics NAV application is deployed as a remote app.
 
@@ -45,14 +45,14 @@ The following screenshot shows this issue. In this example, the Microsoft Dynami
 
 To work around this issue, disable Hi-Def mode on the RDP client computer. To do this, follow these steps:
 
-1. Click **Start**, type regedit, and then click **regedit.exe**.
+1. Click **Start**, type *regedit*, and then click **regedit.exe**.
 2. In Registry Editor, locate the following subkey:
 
-    `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Terminal Server Client` 
+    `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Terminal Server Client`
 3. On the **Edit** menu, point to **New**, and then click **DWORD Value**.
-4. In the **New Value #1** box, type **EnableAdvancedRemoteFXRemoteAppSupport**, and then press Enter.
+4. In the **New Value #1** box, type *EnableAdvancedRemoteFXRemoteAppSupport*, and then press Enter.
 5. Right-click **EnableAdvancedRemoteFXRemoteAppSupport**, and then click **Modify**.
-6. In the **Value data** box, type 0, and then click **OK**.
+6. In the **Value data** box, type *0*, and then click **OK**.
 7. Exit Registry Editor.
 
 ## More information

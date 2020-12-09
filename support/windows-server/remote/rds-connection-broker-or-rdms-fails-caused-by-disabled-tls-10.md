@@ -1,7 +1,7 @@
 ---
 title: RDS Connection Broker or RDMS fails
 description: Addresses an issue in which RDS Connection Broker or RDMS fails after you disable TLS 1.0 in Windows Server.
-ms.date: 09/08/2020
+ms.date: 12/2/2020
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -51,6 +51,7 @@ To fix this issue, use one of the following methods:
 - Set up RDS without Connection Broker for a single-server installation.
 - Don't disable TLS 1.0 on a single Connection Broker deployment.
 - Configure a high availability Connection Broker deployment that uses dedicated SQL Server.
+- Upgrade the computers that run the RDS services to Windows Server 2019.
 
 > [!NOTE]
 > Microsoft has released [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244) to enable SQL Server communication to use TLS 1.2.

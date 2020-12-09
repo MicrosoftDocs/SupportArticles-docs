@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-jesits
 ms.prod-support-area-path: Active Directory replication
 ms.technology: ActiveDirectory
 ---
@@ -37,17 +37,17 @@ The registry key that is discussed in this article should be applied only to dom
 When you delete Active Directory objects that contain many forward links, you may encounter replication failure. For example, you delete groups with large membership sets, or you demote and then delete RODC computer accounts that have many links to users accounts that have their password exposed on the RODC.
 
 The following conditions are the key indicators that this solution applies to the issue:
- 
+
 - The forest functional level is Windows Server 2003 or later version of Windows Server, so link value replication is used.
 - Event 2094 (replication delay) occurs several times, referencing the same deleted object.
 - Events 1083 and 1955 (Write conflict) are logged in close time proximity to the logging of the 2094 event referencing the same deleted object.
 - The affected domain controller (DC) may also report that the version store is exhausted (Event ID 623). Exhaustion of version store doesn't always occur in this scenario. Other factors that increase the likelihood of version store exhaustion include a high rate of changes to Active Directory objects, both local and replicated, as well as other long running operations such as deep queries.
-- Active Directory replication fails with error 8409, error "A database error has occurred", or other events cite related status codes that are mentioned in the following table: 
+- Active Directory replication fails with error 8409, error "A database error has occurred", or other events cite related status codes that are mentioned in the following table:
 
-|Hex|Decimal|Symbolic|Friendly|
-|---|---|---|---|
-|000020D9|8409|ERROR_DS_DATABASE_ERROR|A database error has occurred|
-|||||
+    |Hex|Decimal|Symbolic|Friendly|
+    |---|---|---|---|
+    |000020D9|8409|ERROR_DS_DATABASE_ERROR|A database error has occurred|
+    |||||
 
 If the Active Directory recycle bin is enabled, the replication errors may not occur for 60 to 180 days (deleted object lifetime) after the object is deleted. The issues occur when the object transitions from the deleted status to the recycled status.
 
@@ -72,7 +72,7 @@ A common reason for seeing this delay is that this object is especially large, e
 If you wish to change the warning limit, the registry key is included below. A value of zero will disable the check.  
 Additional Data  
 Warning Limit (secs): 10  
-Limit Registry Key: System\CurrentControlSet\Services\NTDS\Parameters\Replicator maximum wait for update object (secs)  
+Limit Registry Key: System\\CurrentControlSet\\Services\\NTDS\\Parameters\\Replicator maximum wait for update object (secs)  
 Log Name:      Directory Service  
 Source:        Microsoft-Windows-ActiveDirectory_DomainService  
 Event ID:      1083  
@@ -105,30 +105,27 @@ By default, when you delete an Active Directory object that has an exceptionally
 
 While this update is pending, admins may see write conflicts and transaction failure events. Also, as additional objects are processed by replication, more and more version store is allocated because the pending large transaction doesn't release its allocated versions store until the deletion transaction is finished. This can cause version store errors and replication warnings events.
 
-Notes 
- 
-- Garbage collection isn't related to the processing of group membership link deletions.
-- Decreasing TSL isn't a valid method of accelerating link deletions.
-- The legacy value for **Links process batch size**  is 1,000 in versions before Windows Server 2008 R2. In later versions, the batch size is increased to 10,000 to improve the performance of undeleting in forests that have the Recycle Bin enabled.
-- Check values of the **Links process batch size** parameter. If it's nondefault, set the value back to its default or an even smaller value such as 1,000, 100, or even 10.
-
-Smaller values decrease version store usage by deleting a smaller number of objects per deleting thereby reducing the total time to perform a single delete transaction. This has the positive side effect of reducing version store and time window for write conflicts while you increase the time that's required to accurately reflect the group membership in the directory.
+> [!Note]
+>
+> - Garbage collection isn't related to the processing of group membership link deletions.
+> - Decreasing TSL isn't a valid method of accelerating link deletions.
+> - The legacy value for **Links process batch size**  is 1,000 in versions before Windows Server 2008 R2. In later versions, the batch size is increased to 10,000 to improve the performance of undeleting in forests that have the Recycle Bin enabled.
+> - Check values of the **Links process batch size** parameter. If it's nondefault, set the value back to its default or an even smaller value such as 1,000, 100, or even 10.
+>
+> Smaller values decrease version store usage by deleting a smaller number of objects per deleting thereby reducing the total time to perform a single delete transaction. This has the positive side effect of reducing version store and time window for write conflicts while you increase the time that's required to accurately reflect the group membership in the directory.
 
 Active Directory services check for the following registry key.
 
-For AD DS: 
+For AD DS:
 
-`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Links process batch size` 
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Links process batch size`
 
-For AD LDS: 
+For AD LDS:
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\<adam instance>\Parameters\Links process batch size`  
-
-Type: DWORD  
-
-Min Value: 1000  
-
-Max Value: 10000  
+**Type**: DWORD  
+**Min Value**: 1000  
+**Max Value**: 10000  
 
 This value overrides the default value of 10,000 as the number of atomic links to process at one time. You don't have to restart the NTDS or LDS instance service, or restart the computer to make the setting effective.
 
@@ -136,9 +133,8 @@ After each atomic operation, the corresponding version store is released. The ve
 
 For more information, see the following articles:
 
-
-- [The Version Store Called, and They're All Out of Buckets](https://blogs.technet.microsoft.com/askds/2016/06/14/the-version-store-called-and-theyre-all-out-of-buckets/) 
-- [The domain controller runs slower or stops responding when the garbage collection process runs](https://support.microsoft.com/help/974803/) 
+- [The Version Store Called, and They're All Out of Buckets](https://blogs.technet.microsoft.com/askds/2016/06/14/the-version-store-called-and-theyre-all-out-of-buckets/)
+- [The domain controller runs slower or stops responding when the garbage collection process runs](https://support.microsoft.com/help/974803/)
 
 ## Workaround
 
@@ -148,5 +144,5 @@ To work around this issue, set the value of **Links process batch size** lower t
 
 For more information, see the following articles:
 
-- [Introduction to credential roaming](https://social.technet.microsoft.com/wiki/contents/articles/11483.credential-roaming.aspx) 
-- [Introduction to Read-Only DCs](https://technet.microsoft.com/library/dd734758%28v=ws.10%29.aspx) 
+- [Introduction to credential roaming](https://social.technet.microsoft.com/wiki/contents/articles/11483.credential-roaming.aspx)
+- [Introduction to Read-Only DCs](https://technet.microsoft.com/library/dd734758%28v=ws.10%29.aspx)

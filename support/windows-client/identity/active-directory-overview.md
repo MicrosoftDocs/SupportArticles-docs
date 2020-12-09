@@ -18,6 +18,6 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Active Directory sub categories
 
-- Schema update - known issues, best practies, workflow review
+- Schema update - known issues, best practices, workflow review
 - User, computer, group, and object management
 - Windows Time Service

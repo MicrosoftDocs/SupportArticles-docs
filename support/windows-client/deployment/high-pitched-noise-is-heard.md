@@ -1,5 +1,5 @@
 ---
-title: A high pitched noise is heard
+title: A high pitched noise is heard when using Bluetooth headphones
 description: Provides a solution to an issue where a high pitched noise is heard when using Bluetooth headphones.
 ms.date: 10/23/2020
 author: Deland-Han 
@@ -32,7 +32,7 @@ In this scenario, you may hear a high pitched noise coming from the Bluetooth A2
 
 ## Resolution
 
-This issue is fixed by going to Windows Update and installing the latest important updates for your computer. If Windows Update is unavailable for your computer, a stand-alone cumulative update package for Windows 8 that has fixes to address this issue and others can be found on the [Microsoft Download Center](https://download.microsoft.com/)  and then searching for KB2785094.
+This issue is fixed by going to Windows Update and installing the latest important updates for your computer. If Windows Update is unavailable for your computer, a stand-alone cumulative update package for Windows 8 that has fixes to address this issue and others can be found on the [Microsoft Download Center](https://download.microsoft.com/) and then searching for KB2785094.
 
 ## More information
 

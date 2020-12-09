@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Data corruption and disk errors
 ms.technology: BackupStorage
 ---
-# How to set the Partmgr Attributes registry value using PowerShell
+# How to set the Partmgr Attributes registry value by using PowerShell
 
 This article describes how to set the Partmgr Attributes registry value by using PowerShell.
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2849097
 
 ## Summary
 
-The partmgr.sys Attributes registry key affects the onlining behavior of a given disk, and the value corresponds to the SAN policy values in VDS as documented on [VDS_SAN_POLICY enumeration](/windows/win32/api/vds/ne-vds-vds_san_policy). 
+The partmgr.sys Attributes registry key affects the online behavior of a given disk, and the value corresponds to the SAN policy values in VDS as documented on [VDS_SAN_POLICY enumeration](/windows/win32/api/vds/ne-vds-vds_san_policy).
 
 ```cpp
 typedef enum _VDS_SAN_POLICY {
@@ -35,26 +35,24 @@ typedef enum _VDS_SAN_POLICY {
 
 This value is initially set when a disk is identified based on the SAN Policy value in place at the time. The SAN policy determines whether a newly discovered disk is brought online or remains offline, and whether it is made read/write or remains read-only. When a disk is offline, the disk layout can be read, but no volume devices are surfaced through Plug and Play (PnP). This means that no file system can be mounted on the disk. When a disk is online, one or more volume devices are installed for the disk.
 
-This policy can be viewed using the DISKPART utility as follows:
+This policy can be viewed by using the DISKPART utility as follows:
 
-1. Click Start, click Run, type cmd, and then press ENTER.
-2. In the command-line window, type diskpart, and then press ENTER.
-3. Type SAN, and then press ENTER. This command will return the current set SAN policy.
-4. Type exit, and then press ENTER.
+1. Click **Start**, click **Run**, type *cmd*, and then press ENTER.
+2. In the command-line window, type *diskpart*, and then press ENTER.
+3. Type `SAN`, and then press ENTER. This command will return the current set SAN policy.
+4. Type `exit`, and then press ENTER.
 
-Setting a value of 0 (VDS_SP_UNKNOWN) will be mapped to VDS_SP_ONLINE, so a value of 0 or 1 may be used to bring a disk online.
+Setting a value of 0 (`VDS_SP_UNKNOWN`) will be mapped to `VDS_SP_ONLINE`, so a value of 0 or 1 may be used to bring a disk online.
 
-This script modifies the Attributes registry value located at `HKLM\System\CurrentControlSet\Enum\SCSI\<device>\<instance>\Device Parameters\Partmgr`.
+This script modifies the Attributes registry value located at `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Enum\SCSI\<device>\<instance>\Device Parameters\Partmgr`.
 
-For more information about how to write scripts for Windows PowerShell, visit the following Microsoft website:
+For more information about how to write scripts for Windows PowerShell, see [General information about how to write scripts for Windows PowerShell](https://technet.microsoft.com/scriptcenter/dd742419).
 
-[General information about how to write scripts for Windows PowerShell](https://technet.microsoft.com/scriptcenter/dd742419) 
-
-Registry information 
+## Registry information
 
 > [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:
- [322756](https://support.microsoft.com/help/322756)  How to back up and restore the registry in Windows
+> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see
+ [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
 The vendor string variable is used to restrict the value change to a subset of disks matching a specific vendor's identifier. Check the registry for the Disk&Ven_ string to verify what value should be used.
 
