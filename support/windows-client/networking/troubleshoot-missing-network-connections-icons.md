@@ -41,11 +41,11 @@ To know which method you should try first to resolve your problem, review the fo
 - Only the **New Connection Wizard** icon appears. Or, one or more dial-up connections also appear.
 - If you click the **Advanced** menu and then click **Advanced Settings**, only the **Remote Access connections** entry appears in the **Connections** list.
 
-If this case describes your situation, you should first try [Method 1](#method-1-let-Windows-automatically-detect-and-install-network-adapters) in the "General troubleshooting" section to let Windows automatically detect and install network adapters.
+If this case describes your situation, you should first try [Method 1](#method-1-let-windows-automatically-detect-and-install-network-adapters) in the "General troubleshooting" section to let Windows automatically detect and install network adapters.
 
 ### Case 2: Only the "Dial-up Connection" icons are missing
 
-If this case describes your situation, you should first try [Method 5](#method-5-If-only-the-Dial-up-connection-icons-are-missing-temporarily-add-a-new-modem) in the "General troubleshooting methods" section to add a generic standard modem.
+If this case describes your situation, you should first try [Method 5](#method-5-if-only-the-dial-up-connection-icons-are-missing-temporarily-add-a-new-modem) in the "General troubleshooting methods" section to add a generic standard modem.
 
 ### Case 3: The Network Connections window stops responding (hangs) or closes immediately after you select a network connection and then click "Properties"
 
