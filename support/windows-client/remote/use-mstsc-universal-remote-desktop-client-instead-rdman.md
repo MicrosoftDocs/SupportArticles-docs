@@ -2,13 +2,22 @@
 title: Use MSTSC or universal Remote Desktop client instead of RDMan in Windows 10
 description: Discusses why you should use MSTSC or universal Remote Desktop client instead of RDMan in Windows 10.
 ms.date: 12/03/2020
-ms.prod-support-area-path:  Windows\Windows 10\Windows 10\Remote Desktop Services and Terminal Services\Remote Desktop Connection (RDC) client (includes UWP app)
-ms.technology: [Replace with your value]
-ms.reviewer: jomukher
+author: Deland-Han
+ms.author: delhan 
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-client
+localization_priority: medium
+ms.reviewer: kaushika, jomukher, v-jesits
+ms.prod-support-area-path: Connecting to a session or desktop
+ms.technology: RDS
 ---
 # Use MSTSC or universal Remote Desktop client instead of RDMan in Windows 10
 
-_Original product version:_ &nbsp; Windows 10  
+This article provides some information about using MSTSC or universal Remote Desktop client instead of RDMan in Windows 10.
+
+_Original product version:_ &nbsp; Window 10 - all editions  
 _Original KB number:_ &nbsp; 4512838
 
 ## Summary
@@ -17,6 +26,8 @@ Virtualization and remote desktops are an important part of your infrastructure
 
 ## More information
 
-We're increasing our investments in virtualization and remote desktops, such as Windows Virtual Desktop and RDS on Microsoft Azure. 
+We're increasing our investments in virtualization and remote desktops, such as Windows Virtual Desktop and RDS on Microsoft Azure.
+
 RDCMan is a client that is widely used to manage multiple remote desktop connections because it's a convenient option. However, RDCMan has not kept pace with the level of advanced technology that we're pursuing.
- Instead, we have two great supported client options: MSTSC and Universal Client for Windows 10. These clients offer increased security, and they are a key part of our engineering roadmap moving forward. In the future, you can expect even more capabilities, such as the ability to better manage multiple connections.
+
+Instead, we have two great supported client options: MSTSC and Universal Client for Windows 10. These clients offer increased security, and they are a key part of our engineering roadmap moving forward. In the future, you can expect even more capabilities, such as the ability to better manage multiple connections.
