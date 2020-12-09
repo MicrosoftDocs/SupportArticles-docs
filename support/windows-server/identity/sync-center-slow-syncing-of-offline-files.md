@@ -30,10 +30,11 @@ Microsoft Sync Center compares the local system's directory list against a list 
 
 Many underlying file systems do not maintain sorted lists. This includes the file systems that are used by most third-party SMB protocol implementers and Microsoft file systems such as FAT32. Therefore, most third-party file servers exhibit performance delays when they sync offline files by using Sync Center.
 
-Note The SMB protocol does not require query directory results to be sorted.
+> [!NOTE]
+> The SMB protocol does not require query directory results to be sorted.
 
 Just how significantly performance is affected depends on several factors, including the number of files, the length of the file names (both properties affect the total size of the file metadata), and how unsorted the results are. When there are lots of files (hundreds or thousands) with large file names that are profoundly out of order, more directory queries of the local file system and more remote directory queries on the remote file server are required.
 
 You can ease this problem by using smaller folders (either in terms of file count or file name size). It also helps if you can increase the extent to which files are recorded in sorted order on the underlying file system.
 
-The scenario that's described in the "Symptoms" section affects performance only. Offline file syncing otherwise occurs successfully and correctly.
+The scenario affects performance only. Offline file syncing otherwise occurs successfully and correctly.

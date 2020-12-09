@@ -1,5 +1,5 @@
 ---
-title: Certificates are renewed two times daily
+title: Remote Desktop server certificates are renewed two times daily
 description: Solves an issue where the Remote Desktop server certificates are renewed two times a day despite being valid for one year.
 ms.date: 09/14/2020
 author: Deland-Han
@@ -29,9 +29,9 @@ Consider the following scenario:
 
     [Configuring Remote Desktop certificates](https://techcommunity.microsoft.com/t5/microsoft-security-and/configuring-remote-desktop-certificates/ba-p/247007)
 
-In this scenario, you find that the servers are re-requesting and re-enrolling the certificates two times daily. This occurs even though the certificate template is valid for one year. Additionally, when the re-enrollment of the certificate occurs, the following event is logged in the System log:
+In this scenario, you find that the servers are re-requesting and re-enrolling the certificates two times daily. This occurs even though the certificate template is valid for one year. Additionally, when the re-enrollment of the certificate occurs, some events are logged in the System log.
 
-Additionally, if you have these enrolled certificates automatically published to Active Directory, the size of the Active Directory database will increase significantly because of the constant re-enrollment of the certificate. And, the Active Directory replication may pause and report the following Warning event:
+Additionally, if you have these enrolled certificates automatically published to Active Directory, the size of the Active Directory database will increase significantly because of the constant re-enrollment of the certificate. And, the Active Directory replication may pause and report warning events.
 
 ## Cause
 
@@ -39,8 +39,7 @@ The underlying cause of this behavior is related to the RDS component and to a m
 
 ## Resolution
 
-To resolve this problem, you must set the certificate template's attribute's template display name and template name to the same value, such as RemoteDesktopComputer. This procedure is suggested in the following Microsoft article:
- [Security](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771869(v=ws.10))
+To resolve this problem, you must set the certificate template's attribute's template display name and template name to the same value, such as RemoteDesktopComputer. This procedure is suggested in [Security](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771869(v=ws.10)).
 
 Then, you must update the GPO setting Computer Configuration\Policies\Administrative Templates\Windows Components\Terminal Services\Terminal Server\Security\Server Authentication Certificate Template based on the new template name, such as RemoteDesktopComputer. After the server receives the new GPO setting during the processing of the background GPO redraw, the certificates are no longer renewed on a twice-daily basis.
 
