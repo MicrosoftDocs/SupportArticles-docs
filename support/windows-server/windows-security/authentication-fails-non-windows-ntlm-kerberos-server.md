@@ -26,10 +26,10 @@ Windows 7 and Windows Server 2008 R2 support Extended Protection for Integrated 
 
 You may experience one or more of the following symptoms:
 
-1. Windows clients that support channel binding fail to be authenticated by a non-Windows Kerberos server.
-2. NTLM authentication failures from Proxy servers.
-3. NTLM authentication failures from non-Windows NTLM servers.
-4. NTLM authentication failures when there's a time difference between the client and DC or workgroup server.
+- Windows clients that support channel binding fail to be authenticated by a non-Windows Kerberos server.
+- NTLM authentication failures from Proxy servers.
+- NTLM authentication failures from non-Windows NTLM servers.
+- NTLM authentication failures when there's a time difference between the client and DC or workgroup server.
 
 ## Cause
 
