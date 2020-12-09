@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, davidroc
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Depolyment
+ms.technology: Deployment
 ---
 # Loss of functionality for some Intel SMBus Controller devices after you update your system through Windows Update
 

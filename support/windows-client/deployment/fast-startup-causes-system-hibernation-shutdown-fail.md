@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Power Management
-ms.technology: Depolyment
+ms.technology: Deployment
 ---
 # Fast startup causes hibernation or shutdown to fail in Windows 10 or Windows 8.1
 
