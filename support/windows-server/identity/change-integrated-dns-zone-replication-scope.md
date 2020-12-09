@@ -17,7 +17,7 @@ ms.technology: ActiveDirectory
 
 This article provides a solution to an error that occurs when you change the replication scope of an Active Directory integrated domain name system (DNS) zone.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 842560
 
 ## Symptoms

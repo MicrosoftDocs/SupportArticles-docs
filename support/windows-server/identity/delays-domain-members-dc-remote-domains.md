@@ -1,6 +1,6 @@
 ---
-title: Domain Member communication requirements to DC on remote domains
-description: Discusses a problem that causes delays when domain members try to access domain controllers in other domains
+title: Delays when domain members are required to communicate to DCs on remote domains
+description: Discusses a problem that causes delays when domain members try to access domain controllers in other domains.
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
@@ -15,7 +15,7 @@ ms.technology: ActiveDirectory
 ---
 # Delays when domain members are required to communicate to DCs on remote domains
 
-This article provides some recommendations for the delays when domain members are required to communicate to DCs on remote domains.
+This article provides help to solve the delays that occur when domain members are required to communicate to DCs on remote domains.
 
 _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4550655
@@ -31,6 +31,7 @@ In this scenario, you notice that domain members access domain controllers (DCs)
 This activity causes frequent delays and errors when the member computer tries unsuccessfully to access the server ports of the other domain DCs.  
 
 When this problem occurs, you receive an error message that's based on the protocol that's used, as follows:  
+
 - RPC: error code 1722 (RPC_S_SERVER_UNAVAILABLE)
 - LDAP: error code 85 (LDAP_TIMEOUT)
 - WinSock: error code 10060 (WSAETIMEDOUT)
@@ -44,6 +45,7 @@ However, domain members sometimes reach outside their own domain. They may do th
 Examples of such communication requirements:  
 
 - The configuration can be Group Policy settings that are linked to the scope of policy settings for the domain members. Or, it can be policy settings on the Active Directory site that the computer is in.
+
 - There may be applications that want to search or synchronize objects from all the domains that they find. For example, the SharePoint topology discovery.  
 
 There is also the group of applications that search a domain root object by using LDAP searches and that allow and receive continuation referrals. This means that they redirect referrals to all child NCs (application partitions and child domains). Therefore, they require access to child domain DCs.  
@@ -56,12 +58,11 @@ Microsoft does not have documentation about how to determine which DCs of any do
 
 You must expect any domain member to reach out to all DCs of all forests. If you want to restrict the domain members, you have to use a trial and error approach. If you find that delays occur because additional DCs are contacted, you have to adopt firewall rules that allow access to those DCs.  
 
-If you are not sure which ports are available or blocked by the firewall, use the PortQry tool to test the settings. For more information, see the following Knowledge Base article:  
- [New features and functionality in PortQry version 2.0]()  
+If you are not sure which ports are available or blocked by the firewall, use the PortQry tool to test the settings. For more information, see [New features and functionality in PortQry version 2.0](/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2).
 
 ## References
 
-[ADConnection Overview](https://docs.microsoft.com/openspecs/windows_protocols/ms-adts/f460470c-8923-4836-95e3-cc09ef00a1a4)  
- [LDAP Referrals](https://docs.microsoft.com/openspecs/windows_protocols/ms-adts/5cf1457f-b812-4e8c-afb4-e48505e19ca2)  
- [Handling and following referrals](https://docs.microsoft.com/openspecs/windows_protocols/ms-adts/b2edefdd-16f9-413d-88c5-a2f5c137bafe)  
- [Service overview and network port requirements for Windows]()
+- [ADConnection Overview](/openspecs/windows_protocols/ms-adts/f460470c-8923-4836-95e3-cc09ef00a1a4)  
+- [LDAP Referrals](/openspecs/windows_protocols/ms-adts/5cf1457f-b812-4e8c-afb4-e48505e19ca2)  
+- [Handling and following referrals](/openspecs/windows_protocols/ms-adts/b2edefdd-16f9-413d-88c5-a2f5c137bafe)  
+- [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements)
