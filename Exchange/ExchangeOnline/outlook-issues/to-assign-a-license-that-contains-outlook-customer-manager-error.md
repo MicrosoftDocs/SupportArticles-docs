@@ -19,7 +19,7 @@ search.appverid: MET150
 # To assign a license that contains Outlook Customer Manager error when creating a new user
 
 > [!NOTE]
-> Outlook Customer Manager has been retired in June 2020. You won't be able to use Outlook Customer Manager after June 2020, but you'll be able to export or delete your data. For more information, see [Export or delete your Outlook Customer Manager data](https://support.microsoft.com/office/export-or-delete-your-outlook-customer-manager-data-1a421cb4-e8de-4b44-bfb8-710b92820439).
+> Outlook Customer Manager has been retired in June 2020. You won't be able to use Outlook Customer Manager after June 2020, but you'll be able to export or delete your data.).
 
 _Original KB number:_ &nbsp; 3209493
 

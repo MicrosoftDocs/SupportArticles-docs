@@ -42,4 +42,4 @@ These countries are blocked for the Unified Messaging online feature.
 
 ## More information
 
-For the complete list of countries in which Exchange Online Core Features are available, see [International availability](/microsoft-365/business/international-availability).
+For the complete list of countries in which Exchange Online Core Features are available, see [International availability](https://www.microsoft.com/microsoft-365/business/international-availability).
