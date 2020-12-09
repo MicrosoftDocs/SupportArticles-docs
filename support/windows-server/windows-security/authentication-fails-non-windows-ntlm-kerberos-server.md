@@ -84,3 +84,11 @@ CBT is a property of the outer secure channel used to bind authentication to the
 Extended protection is accomplished by the client communicating the SPN and the CBT to the server in a tamperproof fashion. The server validates the extended protection information in accordance with its policy and rejects authentication attempts for which it does not believe itself to have been the intended target. This way, the two channels become cryptographically bound together.
 
 Extended protection is now supported in Windows XP, Windows Vista, Windows Server 2003, and Windows Server 2008.
+
+## Disclaimer
+
+Rapid publishing articles provide information directly from within the Microsoft support organization. The information contained herein is created in response to emerging or unique topics, or is intended supplement other knowledge base information.
+
+Microsoft and/or its suppliers make no representations or warranties about the suitability, reliability or accuracy of the information contained in the documents and related graphics published on this website (the "materials") for any purpose. The materials may include technical inaccuracies or typographical errors and may be revised at any time without notice.
+
+To the maximum extent permitted by applicable law, Microsoft and/or its suppliers disclaim and exclude all representations, warranties, and conditions whether express, implied or statutory, including but not limited to representations, warranties, or conditions of title, non infringement, satisfactory condition or quality, merchantability and fitness for a particular purpose, with respect to the materials.
