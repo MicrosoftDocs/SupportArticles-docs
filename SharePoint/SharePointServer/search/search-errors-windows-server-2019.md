@@ -57,7 +57,7 @@ To work around this problem, create a rule that allows port 808 for any applicat
 1. In the New Rule wizard, select **Port** and then select **Next**.
 1. Select the **TCP** check box, select the **Specific local ports** check box, enter **808**, and then select **Next**.
 1. Select **Allow the connection** and then select **Next**.
-1. Check that your networks are connected.
+1. Select which profiles to apply the rule to. (The default is to have all three selected.)
 1. Enter a rule name and select **Finish**. 
 
 ## More information
