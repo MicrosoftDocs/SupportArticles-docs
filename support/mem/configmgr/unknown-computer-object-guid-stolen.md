@@ -178,7 +178,7 @@ To delete the extra Unknown Computer objects, follow these steps:
      > Remember to delete all of the Unknown Computer objects for the affected site, both x64 and x86, even if only one of them was duplicated.
 
 
-17. Follow the section [Recreate Unknown Computer objects in case of accidental deletion](#recreate-Unknown-Computer-objects-in-case-of-accidental-deletion) to create new Unknown Computer objects for the affected site.
+17. Follow the section [Recreate Unknown Computer objects in case of accidental deletion](#recreate-unknown-computer-objects-in-case-of-accidental-deletion) to create new Unknown Computer objects for the affected site.
 
 18. Return to the Configuration Manager console, and then go to **Assets and Compliance** > **Overview** > **Device Collections**.
 
