@@ -2,6 +2,15 @@
 
 
 
+## Week of November 30, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/30/2020 | [Someone has already set up Teams for your organization error in Microsoft Teams](/microsoftteams/troubleshoot/teams-sign-in/someone-has-already-setup-teams) | modified |
+| 12/3/2020 | [How to include or exclude Teams from antivirus or DLP applications](/microsoftteams/troubleshoot/teams-administration/include-exclude-teams-from-antivirus-dlp) | modified |
+
+
 ## Week of November 23, 2020
 
 
@@ -43,11 +52,3 @@
 | 11/5/2020 | [Teams Class Schedule does not show task buckets](/microsoftteams/troubleshoot/known-issues/task-buckets-do-not-appear-in-planner) | modified |
 | 11/5/2020 | [Teams defaults to domain-joined account](/microsoftteams/troubleshoot/known-issues/teams-defaults-to-domain-joined-account) | modified |
 | 11/5/2020 | [Unable to create a team in Teams](/microsoftteams/troubleshoot/known-issues/users-cant-create-team) | modified |
-
-
-## Week of October 26, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/26/2020 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
