@@ -37,11 +37,9 @@ The existing Intel SMBus Controller device provides the operating system with in
 
 The Intel Chipset Device software does not install device drivers for the Intel SMBus Controller. This causes a loss of device functionality.  
 
-## Resolution
-
 To resolve this issue, use one of the following methods.
 
-### Method 1: Roll back to the previous Intel SMBus Controller device driver
+## Resolution 1: Roll back to the previous Intel SMBus Controller device driver
 
 To do this, follow these steps:
 
@@ -51,14 +49,14 @@ To do this, follow these steps:
 4. Click **Roll Back Driver** to restore the SMBus Controller device driver.
 5. Restart the system.
 
-### Method 2: Reinstall the SMBus device driver
+## Resolution 2: Reinstall the SMBus device driver
 
 To do this, do one of the following:
 
 - For Intel Desktop or Server Boards, download and install Intel Desktop Utilities.
 - Contact your computer manufacturer for the SMBus driver appropriate for your system.
 
-### Method 3 (optional): Install the updated Intel Chipset Device software or the Intel Server Chipset driver from Windows Update
+## Resolution 3 (optional): Install the updated Intel Chipset Device software or the Intel Server Chipset driver from Windows Update
 
 To do this, follow these steps:
 
@@ -67,7 +65,7 @@ To do this, follow these steps:
 3. Double-click the Intel chipset device from the list.
 4. Click the **Driver** tab, and then click **Update Driver**.
 
-### Method 4 (optional): Install the updated Intel Chipset Device software or the Intel Server Chipset driver from the Intel Download Center
+## Resolution 4 (optional): Install the updated Intel Chipset Device software or the Intel Server Chipset driver from the Intel Download Center
 
 To do this, follow these steps:
 
