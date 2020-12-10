@@ -1,6 +1,6 @@
 ---
-title: "Access is denied" error message appears when permissions are correct
-description: Provides a solution for "access is denied" error message when permissions are correct.
+title: Access is denied error message appears when permissions are correct
+description: Provides a solution for access is denied error message when permissions are correct.
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan 
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Partition and volume management
 ms.technology: BackupStorage
 ---
-# "Access is denied" error message appears when permissions are correct
+# Access is denied error message appears when permissions are correct
 
 This article provides a solution for "access is denied" error message when permissions are correct.
 

@@ -50,6 +50,7 @@ The following Windows Server 2008 and 2008 R2 products are approaching End of Su
 | Windows Server 2008 Standard| 1/14/2020 |
 | Windows Server 2008 Standard without Hyper-V| 1/14/2020 |
 |||
+
 We recommend that you migrate to Azure or upgrade to the current product versions before the support end dates. This lets you take advantage of the latest product innovations and make sure you have uninterrupted support from Microsoft.
 
 > [!Note]
