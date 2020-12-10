@@ -26,9 +26,9 @@ The NTFS file system contains at its core, a file called the master file table (
 
 Because utilities that defragment NTFS volumes cannot move MFT entries, and because excessive fragmentation of the MFT can impact performance, NTFS reserves space for the MFT in an effort to keep the MFT as contiguous as possible as it grows.
 
-### Change in Windows XP and in Windows Server 2003
+In Windows, the defrag utility defrags the MFT.
 
-In Windows XP and in Windows Server 2003, the defrag utility defrags the MFT.
+## The defrag utility
 
 A defrag operation on the MFT combines an MFT file into 1 and prevents it from being stored in multiple places that are not sequential on disk. In this class of operation, the MFT file is more sequential. However, it is exactly the size that the MFT file was before the defrag operation.
 
@@ -45,21 +45,20 @@ As files are added to an NTFS volume, more entries are added to the MFT and so t
 Because of the importance of the MFT to NTFS and the possible impact on performance if this file becomes highly fragmented, NTFS makes a special effort to keep this file contiguous. NTFS reserves 12.5 percent of the volume for exclusive use of the MFT until and unless the remainder of the volume is used up. Thus, space for files and directories is not allocated from this MFT zone until all other space is allocated first.
 
 > [!NOTE]
-> You can change the **NtfsMFTZoneReservation** registry key to increase the volume in Windows NT 4.0 Service Pack 4.
-
-For more information about the MFT, please see the **Key elements in the disk defragmentation process** section of  [Maintaining Windows 2000 Peak Performance Through Defragmentation](/previous-versions/windows/it-pro/windows-2000-server/bb742585(v=technet.10)).
+> You can change the **NtfsMFTZoneReservation** registry key to increase the volume in Windows.
+> For more information about the MFT, please see the **Key elements in the disk defragmentation process** section of  [Maintaining Windows 2000 Peak Performance Through Defragmentation](/previous-versions/windows/it-pro/windows-2000-server/bb742585(v=technet.10)).
 
 Depending on the average file size and other variables, either the reserved MFT zone or the unreserved space on the disk may be used up before the other as the disk fills to capacity.
 
 Volumes with a small number of relatively large files exhaust the unreserved space first, while volumes with a large number of relatively small files exhaust the MFT zone space first. In either case, fragmentation of the MFT starts to take place when one region or the other becomes full. If the unreserved space becomes full, space for user files and directories starts to be allocated from the MFT zone competing with the MFT for allocation. If the MFT zone becomes full, space for new MFT entries is allocated from the remainder of the disk, again competing with other files.
 
-A new registry parameter was introduced in Service Pack 4 for Windows NT 4.0 that can increase the percentage of a volume that NTFS reserves for its master file table. **NtfsMftZoneReservation** is a REG_DWORD value that can take on a value between 1 and 4, where 1 corresponds to the minimum MFT zone size and 4 corresponds to the maximum. If the parameter is not specified or an invalid value is supplied, NTFS uses a default value of 1 for this parameter. The exact ratios that correspond to each setting are undocumented because they are not standardized and may change in future releases. In order to know what setting is best for your environment, it may be necessary to experiment with different values.
+A new registry parameter can increase the percentage of a volume that NTFS reserves for its master file table. **NtfsMftZoneReservation** is a REG_DWORD value that can take on a value between 1 and 4, where 1 corresponds to the minimum MFT zone size and 4 corresponds to the maximum. If the parameter is not specified or an invalid value is supplied, NTFS uses a default value of 1 for this parameter. The exact ratios that correspond to each setting are undocumented because they are not standardized and may change in future releases. In order to know what setting is best for your environment, it may be necessary to experiment with different values.
 
-To determine the current size of the MFT on a Windows NT-based computer, type the `dir /a $mft` command on an NTFS volume.
+To determine the current size of the MFT on a Windows computer, type the `dir /a $mft` command on an NTFS volume.
 
-To determine the current size of the MFT on a Microsoft Windows 2000-based computer, use Disk Defragmenter to analyze the NTFS drive, and then click **View Report**. This displays the drive statistics, including the current MFT size and number of fragments.
+To determine the current size of the MFT on a Windows computer, use Disk Defragmenter to analyze the NTFS drive, and then click **View Report**. This displays the drive statistics, including the current MFT size and number of fragments.
 
-The Windows 2000 version of Disk Defragmenter displays *green* for what is called *system files* and on an NTFS formatted volume this is simply the combination of the MFT, pagefile.sys (if one exists on this volume) and what is called the "MFT Zone" or reserved space for *MFT Expansion*. The defragmentation report only displays information about the pagefile and MFT; it does not mention the MFT Zone because it does not affect in any way disk utilization or capacity.
+The Disk Defragmenter displays *green* for what is called *system files* and on an NTFS formatted volume this is simply the combination of the MFT, pagefile.sys (if one exists on this volume) and what is called the "MFT Zone" or reserved space for *MFT Expansion*. The defragmentation report only displays information about the pagefile and MFT; it does not mention the MFT Zone because it does not affect in any way disk utilization or capacity.
 
 The MFT Zone is not subtracted from available (free) drive space used for user data files, it is only space that is used last. When the MFT needs to increase in size, for example, you created new files and directories, it is taken from the MFT Zone first, thus decreasing MFT fragmentation and optimizing MFT performance.
 
