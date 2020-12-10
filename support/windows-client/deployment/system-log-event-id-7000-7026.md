@@ -52,7 +52,3 @@ To do this, change the value of the following registry subkeys to 3 (Manual) or 
 
 > [!NOTE]
 > If the above registry is changed to 4 (Disabled), the related device isn't usable because a driver used in the device isn't loaded. So if the device will be used in the future, the above registry should be set as 3 (Manual).
-
-### Did this fix the problem
-
-Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus/).
