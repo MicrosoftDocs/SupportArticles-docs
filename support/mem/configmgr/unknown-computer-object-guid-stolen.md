@@ -42,7 +42,7 @@ Despite applying the update rollup in Configuration Manager current branch versi
 
 This issue may continue to occur because the fix in the update rollup for Configuration Manager current branch version 1702 and later Configuration Manager current branch versions prevents the issue from occurring only going forward. It doesn't fix the issue if the issue currently exists in the environment.
 
-Therefore, the issue can continue to occur in Configuration Manager current branch version 1702 even after the version 1702 update rollup or a later version is applied. This is true unless the following steps are taken:
+Therefore, the issue can continue to occur in Configuration Manager current branch version 1702 or newer even after the version 1702 update rollup or a later version is applied. This is true unless the following steps are taken:
 
 - Update the boot images on distribution points.
 - Recreate the boot media by using the updated images.
@@ -110,7 +110,7 @@ To correctly clean the client that stole the GUID, follow these steps:
 
 ## Remove duplicate Unknown Computer objects
 
-If the Unknown Computer objects have been recreated at the site when you tried to fix the problem, the extra Unknown Computer objects should be deleted. You should use only the steps in the previous section to fix this issue. Deleting extra Unknown Computer objects can be completed only from the SQL Server database. It cannot be done from the Configuration Manager console.
+If the Unknown Computer objects have been recreated at the site when you tried to fix the problem, the extra Unknown Computer objects should be deleted. To accomplish this, all of the current Unknown Computer objects should be deleted for the affected site followed by creating a brand new set of Unknown Computer objects for the site. Deleting Unknown Computer objects can be completed only from the SQL Server database. It cannot be done from the Configuration Manager console.
 
 > [!NOTE]
 > It's acceptable to have multiple Unknown Computer objects if there are multiple primary sites. However, each site should have only one Unknown Computer object per architecture. For example, there should be only one x64 object that's labeled **x64 Unknown Computer** and only one x86 object that's labeled **x86 Unknown Computer**.
@@ -131,14 +131,16 @@ To delete the extra Unknown Computer objects, follow these steps:
 
 7. If there are multiple **x64 Unknown Computer** objects or **x86 Unknown Computer** objects for any individual site, right-click the columns in the results pane, and add **Resource ID** to the list of columns.
 
-8. Determine the lowest **Resource ID** value for each **x64 Unknown Computer** object or each **x86 Unknown Computer** object for any one site. In most cases, for the first primary site in an environment, the resource IDs for the original Unknown Computer objects for the sites will be **2046820352** (**x86 Unknown Computer**) and **2046820353** (**x64 Unknown Computer**).
+8. Determine the **Resource ID** value for each **x64 Unknown Computer** object and each **x86 Unknown Computer** object for any one site. Make sure to note the resource ID for all of the Unknown Computer objects even if only one of the Unknown Computer objects is duplicated.
 
-9. After you determine the lowest **Resource ID**, all other **x64 Unknown Computer** objects or **x86 Unknown Computer** objects for any site can be deleted. Note all the **Resource ID**s that can be deleted and which site they belong to.
+9. After you determine the **Resource IDs** of the Unknown Computer objects for a site, the **x64 Unknown Computer** objects and the **x86 Unknown Computer** objects for the site can be deleted.
 
 10. Open **SQL Server Management Studio**, and then connect to the database for the site that hosts the extra Unknown Computer objects.
 
 11. Expand the **Databases** node, and select the Configuration Manager database (usually **CM_Site_Code**).
+
 12. On the toolbar, select **New Query**.
+
 13. Make sure that the correct database is selected in the drop-down menu to the left of the **Execute** button on the toolbar.
 
 14. In the query pane, run the following SQL query:
@@ -147,15 +149,15 @@ To delete the extra Unknown Computer objects, follow these steps:
     SELECT C.CollectionID, C.SiteID, C.CollectionName, CM.MachineID, CM.Name FROM Collections C JOIN CollectionMembers CM ON C.SiteID = CM.SiteID JOIN UnknownSystem_DISC USD ON USD.ItemKey = CM.MachineID
     ```
 
-    This query displays all the collections that all the Unknown Computer objects belong to. Use this query to determine which collections the Unknown Computer objects that are being kept have to be added to. This should be based on the memberships of the Unknown Computer objects that are being deleted. The **Resource ID** is listed in the **MachineID** column.
+    This query displays all the collections that all the Unknown Computer objects belong to. Use this query to determine which collections the Unknown Computer objects are members of. Make a note of this information so that when the new set of Unknown Computer objects are created, they can be added back to the appropriate collections. The **Resource ID** is listed in the **MachineID** column.
 
 15. In the query pane, run the following SQL query:
 
     ```sql
-    SELECT * FROM UnknownSystem_DISC WHERE ItemKey IN ('Extra_Resource_ID_1','Extra_Resource_ID_2', 'Extra_Resource_ID_3')
+    SELECT * FROM UnknownSystem_DISC WHERE ItemKey IN ('Resource_ID_1','Resource_ID_2', 'Resource_ID_3')
     ```
 
-    In this query, `Extra_Resource_ID_x` is the Resource ID of each of the extra Unknown Computer objects, as determined in step 9. For example, if the extra Resource IDs are **2046820354** and **2046820355**, the query would be as follows:  
+    In this query, `Resource_ID_x` is the Resource ID of each of the Unknown Computer objects for the site, as determined in step 9. For example, if the Resource IDs are **2046820354** and **2046820355**, the query would be as follows:  
 
     ```sql
     SELECT * FROM UnknownSystem_DISC WHERE ItemKey IN ('2046820354','2046820355')
@@ -164,22 +166,29 @@ To delete the extra Unknown Computer objects, follow these steps:
 16. Verify that the records that are returned by the query in step 15 are correct. If they are, then run the following query to delete the records:
 
     ```sql
-    DELETE FROM UnknownSystem_DISC WHERE ItemKey IN ('Extra_Resource_ID_1','Extra_Resource_ID_2', 'Extra_Resource_ID_3')
+    DELETE FROM UnknownSystem_DISC WHERE ItemKey IN ('Resource_ID_1','Resource_ID_2', 'Resource_ID_3')
     ```
 
-    In this query, `Extra_Resource_ID_x` is the Resource ID of each of the extra Unknown Computer objects, as determined in step 9. For example, if the extra Resource IDs are **2046820354** and **2046820355**, the delete query would be as follows:
+    In this query, `Resource_ID_x` is the Resource ID of each of the Unknown Computer objects for the site, as determined in step 9. For example, if the Resource IDs are **2046820354** and **2046820355**, the delete query would be as follows:
 
     ```sql
     DELETE FROM UnknownSystem_DISC WHERE ItemKey IN ('2046820354', '2046820355')
     ```
+     > [!NOTE]
+     > Remember to delete all of the Unknown Computer objects for the affected site, both x64 and x86, even if only one of them was duplicated.
 
-17. Wait a few minutes, return to the Configuration Manager console, and then go to **Assets and Compliance** > **Overview** > **Device Collections**.
 
-18. Right-click the **All Unknown Computers** collection, and then select **Update Membership**.
+17. Follow the section [Recreate Unknown Computer objects in case of accidental deletion](#recreate-Unknown-Computer-objects-in-case-of-accidental-deletion) to create new Unknown Computer objects for the affected site.
 
-19. Wait a few minutes, and then select **Refresh**. Verify that only one **x64 Unknown Computer** object or **x86 Unknown Computer** object exists for each site.
+18. Return to the Configuration Manager console, and then go to **Assets and Compliance** > **Overview** > **Device Collections**.
 
-20. Repeat steps 10-19 for all additional primary sites, as necessary.
+19. Right-click the **All Unknown Computers** collection, and then select **Update Membership**.
+
+20. Wait a few minutes, and then select **Refresh**. Verify that only one **x64 Unknown Computer** object or **x86 Unknown Computer** object exists for each site. If the objects do not display, wait a few more minutes and try again.
+
+21. Once the new Unknown Computer objects appear, add them back to the appropriate collections as determined in step 14.
+
+22. Repeat steps 10-21 for all additional primary sites, as necessary.
 
 ## Recreate Unknown Computer objects in case of accidental deletion
 
