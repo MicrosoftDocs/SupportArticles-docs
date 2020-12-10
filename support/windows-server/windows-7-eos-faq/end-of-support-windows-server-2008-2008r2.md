@@ -2,31 +2,38 @@
 title: End of support for Windows Server 2008 and Windows Server 2008 R2
 description: Windows Server 2008 and Windows Server 2008 R2 are approaching their end of support lifecycle.
 ms.date: 12/03/2020
+author: Deland-Han
+ms.author: delhan 
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-server
+localization_priority: medium
+ms.reviewer: kaushika, squin, suehar, v-jeffbo
 ms.prod-support-area-path: 
-ms.technology: [Replace with your value]
-ms.reviewer: 
+ms.technology: Windows 7 EoS FAQ
 ---
 # End of support for Windows Server 2008 and Windows Server 2008 R2
 
-_Original product version:_ &nbsp; Windows Server 2008 R2, Windows Server 2008  
+This article provides some information about end of support for Windows Server 2008 and Windows Server 2008 R2.
+
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4456235
 
 ## Summary
 
-Windows Server 2008 and Windows Server 2008 R2 are approaching the end of their [support lifecycle](https://support.microsoft.com/lifecycle). This means that as of the dates in the table below there will be no additional: 
-- 
- F ree security updates on-premises 
-- 
- N on-security updates 
-- 
- F ree support options 
-- 
- O nline technical content update 
- Customers who use Windows Server 2008 or Windows Server 2008 R2 products and services should migrate to Microsoft Azure to take advantage of 3 additional years of **Critical** and **Important** security updates at no additional charge and modernize when ready. For environments other than Azure, we recommend customers upgrade to the latest version before the deadline. For customers who cannot meet the end-of-support deadline may purchase Extended Security Updates to keep server workloads protected until they upgrade (some restrictions apply). 
+Windows Server 2008 and Windows Server 2008 R2 are approaching the end of their [support lifecycle](/lifecycle/). This means that as of the dates in the table below there will be no additional:
+
+- Free security updates on-premises
+- Non-security updates
+- Free support options
+- Online technical content update
+
+Customers who use Windows Server 2008 or Windows Server 2008 R2 products and services should migrate to Microsoft Azure to take advantage of three additional years of **Critical** and **Important** security updates at no additional charge and modernize when ready. For environments other than Azure, we recommend customers upgrade to the latest version before the deadline. For customers who cannot meet the end-of-support deadline may purchase Extended Security Updates to keep server workloads protected until they upgrade (some restrictions apply).
 
 ## More information
 
-The following Windows Server 2008 and 2008 R2 products are approaching End of Support: 
+The following Windows Server 2008 and 2008 R2 products are approaching End of Support:
 
 | **Product**| **End of Extended Support** |
 |---|---|
@@ -43,8 +50,10 @@ The following Windows Server 2008 and 2008 R2 products are approaching End of Su
 | Windows Server 2008 Standard| 1/14/2020 |
 | Windows Server 2008 Standard without Hyper-V| 1/14/2020 |
 |||
- We recommend that you migrate to Azure or upgrade to the current product versions before the support end dates. This lets you take advantage of the latest product innovations and make sure you have uninterrupted support from Microsoft. 
- **Note** The following Server products are NOT eligible for Extended Security Updates: 
+We recommend that you migrate to Azure or upgrade to the current product versions before the support end dates. This lets you take advantage of the latest product innovations and make sure you have uninterrupted support from Microsoft.
+
+> [!Note]
+> The following Server products are NOT eligible for Extended Security Updates.
 
 | **Product**| **End of Extended Support** |
 |---|---|
@@ -72,10 +81,10 @@ The following Windows Server 2008 and 2008 R2 products are approaching End of Su
 
 ## Resources
 
-[Windows Server 2008 and 2008 R2 EOS site](https://www.microsoft.com/cloud-platform/windows-server-2008) 
- [Windows Server 2008 and 2008 R2 EOS brochure](https://download.microsoft.com/download/A/D/9/AD9380CD-7282-4848-85CD-F6F62BDC129B/Windows_Server_2008_End_of_Support_Brochure.pdf) 
- [Windows Server 2008 and 2008 R2 documentation](https://docs.microsoft.com/windows-server/get-started/modernize-windows-server-2008) 
+[Windows Server 2008 and 2008 R2 EOS site](https://www.microsoft.com/cloud-platform/windows-server-2008)  
+[Windows Server 2008 and 2008 R2 EOS brochure](https://download.microsoft.com/download/A/D/9/AD9380CD-7282-4848-85CD-F6F62BDC129B/Windows_Server_2008_End_of_Support_Brochure.pdf)  
+[Windows Server 2008 and 2008 R2 documentation](/windows-server/get-started/modernize-windows-server-2008)  
 
-### Migration assistance with the Azure Migration Center 
+### Migration assistance with the Azure Migration Center
 
 The [Azure Migration Center](https://azure.microsoft.com/migration/windows-server/) has a full range of tools available to help you assess your current on-premises environment, migrate your workloads onto Azure, and optimize your Azure usage to best suit your needs. Microsoft also works with many Partners, who are available to help you at every step of the journey.

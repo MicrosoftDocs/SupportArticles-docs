@@ -1,14 +1,23 @@
 ---
-title: 
-description: 
+title: "Access is denied" error message appears when permissions are correct
+description: Provides a solution for "access is denied" error message when permissions are correct.
 ms.date: 12/03/2020
-ms.prod-support-area-path: 
-ms.technology: [Replace with your value]
-ms.reviewer: 
+author: Deland-Han
+ms.author: delhan 
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-client
+localization_priority: medium
+ms.reviewer: kaushika
+ms.prod-support-area-path: Partition and volume management
+ms.technology: BackupStorage
 ---
-# "Access Is Denied" Error Message Appears When Permissions Are Correct
+# "Access is denied" error message appears when permissions are correct
 
-_Original product version:_ &nbsp; Microsoft Windows Server 2003 Standard Edition (32-bit x86), Microsoft Windows Server 2003 Enterprise Edition (32-bit x86)  
+This article provides a solution for "access is denied" error message when permissions are correct.
+
+_Original product version:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 250494
 
 ## Symptoms
@@ -31,7 +40,7 @@ This behavior is by design.
 
 To determine if a file has been encrypted:
 
-1. Start Windows Explorer, and then click Detail on the View menu to view the details of the folder's contents.
-2. Click Choose Columns from the View menu, and then click to select the Attributes check box to add the Attributes column to the current view, and to view the file attributes.
+1. Start **Windows Explorer**, and then click **Detail** on the **View** menu to view the details of the folder's contents.
+2. Click **Choose Columns** from the **View** menu, and then click to select the **Attributes** check box to add the **Attributes** column to the current view, and to view the file attributes.
 
-If there is an "E" in the Attributes column for that file, the file is encrypted.
+If there is an "E" in the **Attributes** column for that file, the file is encrypted.
