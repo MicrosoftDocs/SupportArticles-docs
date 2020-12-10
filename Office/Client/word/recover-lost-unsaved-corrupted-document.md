@@ -259,7 +259,7 @@ If you find any files that have the name "Backup of" followed by the name of the
 
 <a id="option3">
 
-## Option 3: Search for the original document
+## Option 3: Check the Recycle Bin
 
 </a>
 
@@ -270,7 +270,8 @@ If you deleted a Word document without emptying the recycle bin, you may be able
 1. Double-click the Recycle Bin on the Desktop. 
 1. Search through the list of documents to see if the deleted word file is still there. If you don't know the name, look for file types such as DOC, DOCX, DOT, etc.
 1. Right-click the Word file and select **Restore** to recover it.
- 
+
+    :::image type="content" source="media/recover-lost-document/recover-lost-document-6.png" alt-text="Select Restore to recover the document. ":::
 If you have emptied the recycle bin after deleting files, the deleted Word file may have been permanently removed. If so, go to Option 4. 
 
 **Restore a SharePoint item from the Microsoft 365 site collection Recycle Bin**
@@ -278,19 +279,23 @@ If you have emptied the recycle bin after deleting files, the deleted Word file 
 1. Open the Recycle Bin, depending on the type of site you are using:
 
     1. **Modern Team and Classic sites (or subsites)**: In the left pane, select **Recycle Bin**.
+          :::image type="content" source="media/recover-lost-document/recover-lost-document-1.jpg" alt-text="Select Restore to recover the document. ":::
     1. **Modern Communication sites**: Select **Site contents**, and then select **Recycle Bin** in the top navigation bar. 
     
        > [!note]
        > If you don't see the Recycle Bin, follow these steps:
        > 
        > 1. Select **Settings** > **Site settings**. (If you don't see **Site settings**, select **Site information** > **View all site settings**. Some pages might require you to select **Site contents** > **Site settings**.)
-       > 1. On **Site settings**, under **Site Collection Administration**, select **Recycle Bin**.
- 
+       > 1. On **Site settings**, under **Site Collection Administration**, select **Recycle bin**.
+       > :::image type="content" source="media/recover-lost-document/recover-lost-document-3.png" alt-text="Select Recycle bin. ":::
+
 2.	At the bottom of the Recycle Bin page, select **Second-stage recycle bin**.
+    :::image type="content" source="media/recover-lost-document/recover-lost-document-4.png" alt-text="Select Second-stage recycle bin. ":::
  
     > [!Note]
     > You need administrator or owner permissions to use the site collection Recycle Bin. If you don't see it, then either you don't have permission to access it or it may have been disabled.
 3.	Select the check icon to the right of each document to recover, and then select **Restore**.
+    :::image type="content" source="media/recover-lost-document/recover-lost-document-5.png" alt-text="Select Restore to recover the document. ":::
  
 If you restore an item that was originally located in a deleted folder, the folder is recreated in its original location and the item is restored in that folder.
 
