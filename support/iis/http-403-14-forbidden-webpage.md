@@ -12,7 +12,8 @@ _Original product version:_ &nbsp; Internet Information Services 7.0 and later v
 _Original KB number:_ &nbsp; 942062
 
 > [!NOTE]
-> The target audience for this article is website administrators and web developers.
+> - The target audience for this article is website administrators and web developers.
+> - This article only applies to traditional ASP.Net Form applications.
 
 ## Symptoms
 

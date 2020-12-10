@@ -160,6 +160,8 @@
       href: troubleshoot-sysprep-windows-10-device-enrolled-mdm.md
     - name: Troubleshoot Windows device enrollment
       href: troubleshoot-windows-enrollment-errors.md
+    - name: Troubleshoot Windows 10 group policy-based auto-enrollment
+      href: troubleshoot-windows-auto-enrollment.md
     - name: Understand and troubleshoot the Enrollment Status Page
       href: understand-troubleshoot-esp.md
     - name: Unexpected error signing in to Intune Connector
