@@ -279,7 +279,7 @@ If you have emptied the recycle bin after deleting files, the deleted Word file 
 1. Open the Recycle Bin, depending on the type of site you are using:
 
     1. **Modern Team and Classic sites (or subsites)**: In the left pane, select **Recycle Bin**.
-          :::image type="content" source="media/recover-lost-document/recover-lost-document-1.jpg" alt-text="Select Restore to recover the document. ":::
+          :::image type="content" source="media/recover-lost-document/recover-lost-document-1.jpg" alt-text="Select Recycle Bin, and then Recycle Bin. ":::
     1. **Modern Communication sites**: Select **Site contents**, and then select **Recycle Bin** in the top navigation bar. 
     
        > [!note]
@@ -295,7 +295,7 @@ If you have emptied the recycle bin after deleting files, the deleted Word file 
     > [!Note]
     > You need administrator or owner permissions to use the site collection Recycle Bin. If you don't see it, then either you don't have permission to access it or it may have been disabled.
 3.	Select the check icon to the right of each document to recover, and then select **Restore**.
-    :::image type="content" source="media/recover-lost-document/recover-lost-document-5.png" alt-text="Select Restore to recover the document. ":::
+    :::image type="content" source="media/recover-lost-document/recover-lost-document-5.png" alt-text="Select Restore to recover your document. ":::
  
 If you restore an item that was originally located in a deleted folder, the folder is recreated in its original location and the item is restored in that folder.
 
