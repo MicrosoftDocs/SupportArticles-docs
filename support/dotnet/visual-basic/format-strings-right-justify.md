@@ -8,7 +8,7 @@ ms.prod: visual-basic-6
 ---
 # Format strings to Right-Justify when an application calls printing
 
-This article introduces how to format strings to Right-Justify when application calls printing.
+This article introduces how to format strings to Right-Justify when an application calls printing.
 
 _Original product version:_ &nbsp; Visual Basic  
 _Original KB number:_ &nbsp; 217012
