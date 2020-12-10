@@ -443,6 +443,8 @@
       href: ../outlook-on-the-web-issues/you-may-have-already-signed-in-to-outlook-web-app-error.md
   - name: Public Folders
     items:
+    - name: Can't add or expand public folders
+      href: ../public-folders/cannot-expand-add-public-folder.md
     - name: Can't add reviewer permission to calendars
       href: ../public-folders/add-reviewer-permission-public-folder-calendar-powershell.md
     - name: Can't apply permissions to subfolders
