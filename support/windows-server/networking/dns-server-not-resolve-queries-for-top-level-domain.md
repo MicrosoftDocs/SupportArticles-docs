@@ -1,58 +1,61 @@
 ---
-title: Windows Server 2008 and Windows Server 2008 R2 DNS Servers may fail to resolve queries for some top-level domains
-description: 
+title: DNS Servers may fail to resolve queries for some top-level domains
+description: Provides a solution to an issue where DNS Servers may fail to resolve queries for names in certain top-level domains.
 ms.date: 12/03/2020
-ms.prod-support-area-path: 
-ms.technology: [Replace with your value]
-ms.reviewer: 
+author: Deland-Han
+ms.author: delhan
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-server
+localization_priority: medium
+ms.reviewer: kaushika
+ms.prod-support-area-path: DNS
+ms.technology: Networking 
 ---
 # Windows Server 2008 and Windows Server 2008 R2 DNS Servers may fail to resolve queries for some top-level domains
 
-Source: Microsoft Support
+This article provides a solution to an issue where Domain Name System (DNS) Servers may fail to resolve queries for names in certain top-level domains when name resolution is provided by root hints.
 
-_Original product version:_ &nbsp; Windows Server 2008 Datacenter without Hyper-V, Windows Server 2008 Enterprise without Hyper-V, Windows Server 2008 Standard without Hyper-V, Windows Server 2008 Datacenter, Windows Server 2008 Enterprise, Windows Server 2008 Standard, Windows Small Business Server 2008 Premium, Windows Small Business Server 2008 Standard, Windows Server 2008 R2 Standard, Windows Small Business Server 2011 Essentials, Windows Small Business Server 2011 Standard, Windows Small Business Server 2011 Premium Add-On  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 968372
-
-## RAPID PUBLISHING
-
-RAPID PUBLISHING ARTICLES PROVIDE INFORMATION DIRECTLY FROM WITHIN THE MICROSOFT SUPPORT ORGANIZATION. THE INFORMATION CONTAINED HEREIN IS CREATED IN RESPONSE TO EMERGING OR UNIQUE TOPICS, OR IS INTENDED SUPPLEMENT OTHER KNOWLEDGE BASE INFORMATION.
 
 ## Symptom
 
-When name resolution is provided by root hints, Windows Server 2008 DNS and Windows Server 2008 R2 DNS Servers may fail to resolve queries for names in certain top-level domains. When this happens, the problem will continue until the DNS Server cache is cleared or the DNS Server service is restarted. The problem can be seen with domains like .co.uk, .cn, .biz, and .br, but is not limited to these domains. 
+When name resolution is provided by root hints, Windows Server 2008 DNS and Windows Server 2008 R2 DNS Servers may fail to resolve queries for names in certain top-level domains. When this problem happens, it will continue until the DNS Server cache is cleared or the DNS Server service is restarted. The problem can be seen with domains like .co.uk, .cn, .biz, and .br, but isn't limited to these domains.
 
-When the problem is happening, an nslookup command issued for an affected name will return the error "server failed". A network trace will show that the DNS server does not send any traffic for such a request to the Internet. No events related to a problem are reported in the DNS Event Log.
+When the problem is happening, a nslookup command issued for an affected name will return the error "server failed". A network trace will show that the DNS server doesn't send any traffic for such a request to the Internet. No events related to a problem are reported in the DNS Event Log.
 
-This problem does not happen if DNS Server is configured to use forwarders for Internet name resolution instead of root hints.
+This problem doesn't happen if DNS Server is configured to use forwarders for Internet name resolution instead of root hints.
 
 ## Resolution
 
-To resolve the issue and continue using root hints, change the MaxCacheTTL registry value to 2 days or greater.
+To resolve the issue and continue using root hints, change the MaxCacheTTL registry value to two days or greater.
 
-Warning: Serious problems might occur if you modify the registry incorrectly by using Registry Editor or another method. These problems might require you to reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
+> [!NOTE]
+> Serious problems might occur if you modify the registry incorrectly by using Registry Editor or another method. These problems might require you to reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
 
 1. Start Registry Editor (regedit.exe).
+2. Locate the following registry key:  
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNS\Parameters`
 
-2. Locate the following registry key:
+3. On the **Edit** menu, select **New**, select **DWORD (32-bit) Value**, and then add the following value:
 
-3. HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNS\Parameters
+    - Value: MaxCacheTTL
+    - Data type: DWORD
+    - Data value: 0x2A300 (172,800 seconds in decimal, or two days)
 
-4. On the Edit menu, click New, click DWORD (32-bit) Value, and then add the following value:
+4. Select **OK**.
+5. Quit Registry Editor.
+6. Restart the DNS Server service.
 
-- Value: MaxCacheTTL
-- Data Type: DWORD
-- Data value: 0x2A300 (172800 seconds in decimal, or 2 days)
+> [!NOTE]
+> The .biz top level has a TTL of 6 days for its NS and A records. Thus, you may need to set the MaxCacheTTL to 518400 for 6 days or even 604800 for 7 days.
 
-5. Click OK.
+## Disclaimer
 
-6. Quit Registry Editor.
+Rapid publishing articles provide information directly from within the Microsoft support organization. The information contained herein is created in response to emerging or unique topics, or is intended supplement other knowledge base information.
 
-7. Restart the DNS Server service.
+Microsoft and/or its suppliers make no representations or warranties about the suitability, reliability, or accuracy of the information contained in the documents and related graphics published on this website (the "materials") for any purpose. The materials may include technical inaccuracies or typographical errors and may be revised at any time without notice.
 
-Note: The .biz top level has a TTL of 6 days for its NS and A records. Thus, you may need to set the MaxCacheTTL to 518400 for 6 days or even 604800 for 7 days.
-
-## DISCLAIMER
-
-MICROSOFT AND/OR ITS SUPPLIERS MAKE NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY, RELIABILITY OR ACCURACY OF THE INFORMATION CONTAINED IN THE DOCUMENTS AND RELATED GRAPHICS PUBLISHED ON THIS WEBSITE (THE "MATERIALS") FOR ANY PURPOSE. THE MATERIALS MAY INCLUDE TECHNICAL INACCURACIES OR TYPOGRAPHICAL ERRORS AND MAY BE REVISED AT ANY TIME WITHOUT NOTICE.
-
-TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, MICROSOFT AND/OR ITS SUPPLIERS DISCLAIM AND EXCLUDE ALL REPRESENTATIONS, WARRANTIES, AND CONDITIONS WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT LIMITED TO REPRESENTATIONS, WARRANTIES, OR CONDITIONS OF TITLE, NON INFRINGEMENT, SATISFACTORY CONDITION OR QUALITY, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, WITH RESPECT TO THE MATERIALS.
+To the maximum extent permitted by applicable law, Microsoft and/or its suppliers disclaim and exclude all representations, warranties, and conditions whether express, implied, or statutory, including but not limited to representations, warranties, or conditions of title, non-infringement, satisfactory condition or quality, merchantability and fitness for a particular purpose, with respect to the materials.
