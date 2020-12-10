@@ -43,7 +43,7 @@ The following code sample formats several numbers using seven @ characters and a
 The output is;
 
 ```console
-| $1.50|
+|  $1.50|
 | $12.50|
 |$123.50|
 ```
