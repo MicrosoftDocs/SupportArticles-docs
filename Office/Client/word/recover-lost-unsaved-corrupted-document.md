@@ -94,6 +94,26 @@ Try the following options to help recover your lost, unsaved, or corrupted Word 
 </td>
 <td><a href="#option3">
 
+**Check the Recycle Bin**
+
+</a>
+
+Check the Desktop Recycle Bin to see if your document is there.
+- **Commercial customers**: Check the  Sharepoint Recycle Bin. For more information, see [Restore deleted items from the site collection recycle bin](https://support.microsoft.com/en-us/office/restore-deleted-items-from-the-site-collection-recycle-bin-5fa924ee-16d7-487b-9a0a-021b9062d14b).  
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+<a href="#option4">
+
+![Option 4](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-4.png)
+
+</a>
+</td>
+<td><a href="#option4">
+
 **Search for auto-recover files**
 
 </a>
@@ -108,13 +128,13 @@ Try the following options to help recover your lost, unsaved, or corrupted Word 
 </tr>
 <tr>
 <td valign="top">
-<a href="#option4">
+<a href="#option5">
 
-![Option 4](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-4.png)
+![Option 5](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-5.png)
 
 </a>
 </td>
-<td><a href="#option4">
+<td><a href="#option5">
 
 **Search for temporary files**
 
@@ -129,13 +149,13 @@ Try the following options to help recover your lost, unsaved, or corrupted Word 
 </tr>
 <tr>
 <td valign="top">
-<a href="#option5">
+<a href="#option6">
 
-![Option 5](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-5.png)
+![Option 6](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-6.png)
 
 </a>
 </td>
-<td><a href="#option5">
+<td><a href="#option6">
 
 **Search for "~" files**
 
@@ -153,13 +173,13 @@ Try the following options to help recover your lost, unsaved, or corrupted Word 
 </tr>
 <tr>
 <td valign="top">
-<a href="#option6">
+<a href="#option7">
 
-![Option 6](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-6.png)
+![Option 7](media/print-failures-word-for-office-365-on-win-10/print-failures-word-for-office-365-on-win-10-7.png)
 
 </a>
 </td>
-<td><a href="#option6">
+<td><a href="#option7">
 
 **How to troubleshoot damaged documents**
 
@@ -169,7 +189,6 @@ For information about how to troubleshoot damaged Word documents, see [How to tr
 
 </td>
 </tr>
-
 </table>
 
 ## Additional resources
@@ -208,7 +227,7 @@ Word backup file names end with the .wbk extension. If you have the option **Alw
 > - **Word for Office 365**, **Word 2019**, **Word 2016**, and **Word 2013**:
  Select File, then **Options**, and then **Advanced**. Scroll down to the **Save** section and select **Always create backup copy**.
 > - **Word 2010**:
- Select File, then Options. In the **Save** tab, select **Always create backup copy**.
+ Select **File**, then **Options**. In the **Save** tab, select **Always create backup copy**.
 
 To find the backup copy of the file, follow these steps:
 
@@ -221,7 +240,7 @@ If there are no .wbk files in the original folder, search the computer for any .
 1. Select Start, type ***.wbk** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows). Then, press **Enter**.
 
 - If the **File** list contains the backup file, repeat the steps in Option 2 to open the file. 
-- If the **File** list does not contain the backup file, go to Option 3.
+- If the **File** list does not contain the backup file, go to Option 4.
 
 
 If you find any files that have the name "Backup of" followed by the name of the missing file, use one of the following procedures, as appropriate for the version of Word that you're running.
@@ -240,7 +259,45 @@ If you find any files that have the name "Backup of" followed by the name of the
 
 <a id="option3">
 
-## Option 3: Search for AutoRecover unsaved or corrupted files
+## Option 3: Search for the original document
+
+</a>
+
+**Recovering deleted Word documents from the Recycle Bin**
+
+If you deleted a Word document without emptying the recycle bin, you may be able to restore the document.
+
+1. Double-click the Recycle Bin on the Desktop. 
+1. Search through the list of documents to see if the deleted word file is still there. If you don't know the name, look for file types such as DOC, DOCX, DOT, etc.
+1. Right-click the Word file and select **Restore** to recover it.
+ 
+If you have emptied the recycle bin after deleting files, the deleted Word file may have been permanently removed. If so, go to Option 4. 
+
+**Restore a SharePoint item from the Microsoft 365 site collection Recycle Bin**
+
+1. Open the Recycle Bin, depending on the type of site you are using:
+
+    1. **Modern Team and Classic sites (or subsites)**: In the left pane, select **Recycle Bin**.
+    1. **Modern Communication sites**: Select **Site contents**, and then select **Recycle Bin** in the top navigation bar. 
+    
+       > [!note]
+       > If you don't see the Recycle Bin, follow these steps:
+       > 
+       > 1. Select **Settings** > **Site settings**. (If you don't see **Site settings**, select **Site information** > **View all site settings**. Some pages might require you to select **Site contents** > **Site settings**.)
+       > 1. On **Site settings**, under **Site Collection Administration**, select **Recycle Bin**.
+ 
+2.	At the bottom of the Recycle Bin page, select **Second-stage recycle bin**.
+ 
+    > [!Note]
+    > You need administrator or owner permissions to use the site collection Recycle Bin. If you don't see it, then either you don't have permission to access it or it may have been disabled.
+3.	Select the check icon to the right of each document to recover, and then select **Restore**.
+ 
+If you restore an item that was originally located in a deleted folder, the folder is recreated in its original location and the item is restored in that folder.
+
+
+<a id="option4">
+
+## Option 4: Search for AutoRecover unsaved or corrupted files
 
 </a>
 
@@ -284,7 +341,7 @@ If you can't locate an auto-recovered file in the location that is identified in
 
 Type **.asd** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press **Enter**.
 
-   - If the **File** list does not contain auto-recovered files, go to Option 4.
+   - If the **File** list does not contain auto-recovered files, go to Option 5.
   
    - If you find any files that have the .asd extension, use one of the following procedures, as appropriate for the version of Word that you're running:
 
@@ -301,9 +358,9 @@ Type **.asd** in the **Search** box (in Windows 10, Windows 8.1, or Windows 8) o
    > [!NOTE]
    > In the **Recovery** pane, if you find an auto-recovered file that does not open correctly, go to Option 6 for more information about how to open damaged files.
 
-<a id="option4">
+<a id="option5">
 
-## Option 4: Search for temporary files
+## Option 5: Search for temporary files
 
 </a>
 
@@ -311,11 +368,11 @@ Temporary file names end in a .tmp extension. To find these files, follow these 
 
 1.	Type **.tmp** in the Search box (in Windows 10, Windows 8.1, or Windows 8) or in the **Start Search** box on the **Start** menu (in earlier versions of Windows), and then press **Enter**.
 2. On the **Show only** toolbar, select **Other**.
-3. Scroll through the files and search for files that match the last few dates and times that you edited the document. If you find the document that you're looking for, go to Option 6 to find out how to recover information from the file.
+3. Scroll through the files and search for files that match the last few dates and times that you edited the document. If you find the document that you're looking for, go to Option 7 to find out how to recover information from the file.
 
-<a id="option5">
+<a id="option6">
 
-## Option 5: Search for "~" files
+## Option 6: Search for "~" files
 
 </a>
 
@@ -326,13 +383,13 @@ Some temporary file names start in a tilde (~) character. To find these files, f
 
 3. Scroll through the files, and look for any that match the last few dates and times that you edited the document. 
 
-If you find the document that you're looking for, go to Option 6 to find out how to recover information from the file.
+If you find the document that you're looking for, go to Option 7 to find out how to recover information from the file.
 
 For more information about how Word creates and uses temporary files, see [Description of how Word creates temporary files](https://support.microsoft.com/help/211632).
 
-<a id="option6">
+<a id="option7">
 
-## Option 6: How to troubleshoot damaged documents
+## Option 7: How to troubleshoot damaged documents
 
 </a>
 
