@@ -301,6 +301,9 @@
     - name: How to repair or reinstall Internet Explorer
       href: how-to-repair-or-reinstall-ie.md
 
+    - name: How to troubleshoot Internet Explorer 9 installation issues
+      href: how-to-successfully-install-internet-explorer-9.md
+
     - name: Internet Explorer 11 installation fails
       href: ie-installation-fails.md
 
