@@ -24,7 +24,7 @@ This problem occurs because the Visual Basic 6.0 IDE does not have built-in supp
 
 To work around this problem, use one of the following methods:
 
-### Method 1
+## Method 1
 
 Download the VB6 Mouse Wheel.exe file that includes the add-in DLL and the code that is used to create the add-in DLL.
 

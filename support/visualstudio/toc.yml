@@ -38,7 +38,7 @@
       href: ../dotnet/visual-basic/create-dcom-clientserver-application.md
     - name: Create SQL Server database programmatically
       href: ../dotnet/visual-basic/create-database-programmatically.md
-    - name: Format strings to Right-Justify when printing
+    - name: Format strings to Right-Justify when an application calls printing
       href: ../dotnet/visual-basic/format-strings-right-justify.md
     - name: Navigate XML with XPathNavigator class
       href: ../dotnet/visual-basic/navigate-xml-xpathnavigator-class.md

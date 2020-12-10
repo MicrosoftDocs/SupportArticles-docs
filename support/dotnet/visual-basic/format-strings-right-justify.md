@@ -1,14 +1,14 @@
 ---
-title: Format strings to Right-Justify when printing
-description: This article describes how to format strings to Right-Justify when printing.
+title: Format strings to Right-Justify when an app calls printing
+description: This article describes how to format strings to Right-Justify when an application calls printing.
 ms.date: 12/10/2020
 ms.prod-support-area-path: Visual Basic
 ms.topic: how-to
 ms.prod: visual-basic-6
 ---
-# Format strings to Right-Justify when printing
+# Format strings to Right-Justify when an application calls printing
 
-This article introduces how to format strings to Right-Justify when printing.
+This article introduces how to format strings to Right-Justify when application calls printing.
 
 _Original product version:_ &nbsp; Visual Basic  
 _Original KB number:_ &nbsp; 217012
@@ -66,7 +66,7 @@ x$123.50x
 x $1.50x
 ```
 
-## Workarounds using the Format$ function:
+## Workarounds using the Format$ function
 
 > [!NOTE]
 > These techniques are only effective with `monospace` fonts, such as `Courier New`.
@@ -122,7 +122,7 @@ Private Function LPad(ValIn As Variant, nDec As Integer, _
 End Function
 ```
 
-## Step by Step Sample
+## Step by step sample
 
 1. Start a new Visual Basic Standard EXE project. Form1 is created by default.
 
