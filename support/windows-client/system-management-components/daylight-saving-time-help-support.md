@@ -17,11 +17,11 @@ ms.technology: SysManagementComponents
 
 This article describes the Microsoft policy in response to daylight saving time (DST) and time zone changes.
 
-_Original product version:_ &nbsp; Window 10 - all editions  
-_Original KB number:_ &nbsp; 22803
-
 > [!NOTE]
 > Subscribe to the [Microsoft Daylight Saving Time & Time Zone Blog](https://techcommunity.microsoft.com/t5/Daylight-Saving-Time-Time-Zone/bg-p/DSTBlog) to receive the latest updates on changes around the world.
+
+_Original product version:_ &nbsp; Window 10 - all editions  
+_Original KB number:_ &nbsp; 22803
 
 ## Microsoft policy in response to daylight saving time and time zone changes
 
@@ -31,17 +31,17 @@ Many applications and cloud services reference the underlying Windows operating 
 
 In order for Microsoft to provide an update at the earliest and ensure a seamless transition to new DST and TZ policies, Microsoft recommends that governments provide the following:
 
-- Ample advance notice (1 year or more) of the planned change
+- Ample advance notice (one year or more) of the planned change
 - Official published confirmation of planned changes to DST or time zones
 - Concentrated efforts to promote the change to affected citizens
 
 ### Standalone
 
-[KB 914387](https://support.microsoft.com/kb/914387)  provides a list of DST updates that have been released. It also includes a short summary of the content that is included in each update. This allows a consistent means for customers and partners to be informed whenever such an update is made available.
+[KB 914387](https://support.microsoft.com/kb/914387) provides a list of DST updates that have been released. It also includes a short summary of the content that is included in each update. This allows a consistent means for customers and partners to be informed whenever such an update is made available.
 
 ### Monthly rollups
 
-DST updates are also included in monthly rollup releases.  You can find more information about our monthly rollup releases here:
+DST updates are also included in monthly rollup releases. You can find more information about our monthly rollup releases here:
 
 [Windows 10 update history](https://support.microsoft.com/help/4529964)  
 [Windows 8.1 and Windows Server 2012 R2 update history](https://support.microsoft.com/help/4009470)  
