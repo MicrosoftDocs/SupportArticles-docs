@@ -319,9 +319,6 @@
     - name: Sysprep fails when Internet Explorer 10 is installed
       href: sysprep-fail-after-ie-10-installed.md
 
-    - name: Troubleshoot Internet Explorer 9 installation issues
-      href: troubleshoot-installation-problems-ie-9.md
-
     - name: Can't uninstall Internet Explorer 9
       href: what-to-do-if-you-cannot-uninstall-internet-explorer-9.md
 
