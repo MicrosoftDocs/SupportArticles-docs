@@ -43,11 +43,11 @@ This issue occurs if the user has explicit permissions, such as **Full Access**,
 To verify this condition, run the following cmdlets:
 
 ```powershell
-Get-Mailbox <affected email address> | FL *public*
+Get-Mailbox <affected user's email address> | FL *public*
 ```
 
 ```powershell
-Get-MailboxPermission <EffectiveDefaultPublicFolderMailbox name>
+Get-MailboxPermission <EffectiveDefaultPublicFolderMailbox's name>
 ```
 
 For example:
