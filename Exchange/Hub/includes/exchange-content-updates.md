@@ -2,6 +2,18 @@
 
 
 
+## Week of November 30, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/30/2020 | [Only see availability info of resource when scheduling](/exchange/troubleshoot/calendars/only-can-see-availability-info-of-resource-when-scheduling-meeting) | modified |
+| 11/30/2020 | [InvalidSmtpDomainName(domain) error connecting to on-premises Exchange](/exchange/troubleshoot/hybrid-configuration-wizard-errors/hcw-invalidsmtpdomainname-error) | modified |
+| 11/30/2020 | [Cross-forest or Hybrid free/busy lookups fail](/exchange/troubleshoot/administration/cross-forest-or-hybrid-free-busy-lookups-fail) | modified |
+| 11/30/2020 | [Exchange public folder migration stops at 95%](/exchange/troubleshoot/public-folders/public-folder-migration-fails) | modified |
+| 12/3/2020 | [Email messages are stuck in Exchange Server queues for several minutes](/exchange/troubleshoot/mailflow/email-stuck-queues) | modified |
+
+
 ## Week of November 23, 2020
 
 
@@ -642,10 +654,3 @@
 | 11/4/2020 | [Create and manage resource mailboxes](/exchange/troubleshoot/user-and-shared-mailboxes/create-and-manage-resource-mailboxes) | modified |
 | 11/5/2020 | [Find and fix email delivery issues as an Office 365 for business admin](/exchange/troubleshoot/email-delivery/email-delivery-issues) | modified |
 | 11/5/2020 | [Can't restore a database from a backup if MCDB is enabled in Exchange Server 2019](/exchange/troubleshoot/administration/restore-database-backup-mcdb-enable) | modified |
-
-
-## Week of October 26, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|

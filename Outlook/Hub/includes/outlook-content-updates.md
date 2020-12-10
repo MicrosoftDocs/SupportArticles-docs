@@ -2,6 +2,14 @@
 
 
 
+## Week of November 30, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/2/2020 | How to create a recurring e-mail message in Outlook | removed |
+
+
 ## Week of November 23, 2020
 
 
@@ -386,11 +394,3 @@
 |------|------------|--------|
 | 11/2/2020 | [From in meeting request not lists all accounts](/outlook/troubleshoot/calendaring/from-field-in-meeting-request-not-list-all-accounts) | modified |
 | 11/3/2020 | [Calendar items for the next year may display an incorrect time in Outlook](/outlook/troubleshoot/calendaring/calendar-items-display-incorrect-time) | modified |
-
-
-## Week of October 26, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/26/2020 | [How to repair personal folder file (.pst)](/outlook/troubleshoot/data-files/how-to-repair-personal-folder-file) | modified |
