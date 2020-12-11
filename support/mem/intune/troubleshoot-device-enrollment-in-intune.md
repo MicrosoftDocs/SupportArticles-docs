@@ -237,7 +237,7 @@ There are two certificate stores in Android devices:
 
 Staring in Android 7.0, apps ignore user certificates by default, unless the apps explicitly opt in. For more information, see [Changes to Trusted Certificate Authorities in Android Nougat](https://android-developers.googleblog.com/2016/07/changes-to-trusted-certificate.html).
 
-To fix this issue, use a certificate that chains to a publicly trusted root in your AD FS server. A list of public CAs on Android can be found at [https://android.googlesource.com/platform/system/ca-certificates/+/master/files/](https://android.googlesource.com/platform/system/ca-certificates/+/master/files/).
+To fix this issue, use a certificate that chains to a publicly trusted root CA in your AD FS server. A list of public CAs on Android can be found at [https://android.googlesource.com/platform/system/ca-certificates/+/master/files/](https://android.googlesource.com/platform/system/ca-certificates/+/master/files/).
 
 ## iOS/iPadOS issues
 
