@@ -70,6 +70,8 @@ database_id = 5, file_id = 1, database page_id = 4144
 
 Page latches are common in every system because they ensure physical page protection. A clustered index orders the data by the leading key column. For this reason, when you create the index on a sequential column, this causes all new data inserts to occur on the same page at the end of the index until that page is filled. However, under high load, the concurrent INSERT operations may cause contention on the last page of the B-tree. This contention can occur on clustered and nonclustered indexes. This is because the nonclustered index orders the leaf-level pages by the leading key. This issue is also known as last-page insert contention.
 
+For more information, see [Diagnosing and Resolving Latch Contention on SQL Server](/sql/relational-databases/diagnose-resolve-latch-contention).
+
 ## Resolution
 
 To resolve this contention, the overall strategy is to prevent all concurrent INSERT operations from accessing the same database page. Instead, make each INSERT operation access a different page and increase concurrency. Therefore, any of the following methods that organize the data by a column other than the sequential column achieves this goal.

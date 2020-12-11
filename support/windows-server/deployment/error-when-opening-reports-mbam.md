@@ -1,5 +1,5 @@
 ---
-title: Error when opening reports in MBAM
+title: Error when you open Enterprise or Computer Compliance Reports in MBAM
 description: Provides a solution to an error that occurs when you open Enterprise or Computer Compliance Reports in MBAM.
 ms.date: 09/18/2020
 author: Deland-Han 
@@ -13,16 +13,16 @@ ms.reviewer: kaushika,  yitzhaks, manojse
 ms.prod-support-area-path: Bitlocker
 ms.technology: Deployment
 ---
-# Error opening Enterprise or Computer Compliance Reports in MBAM
+# Error when you open Enterprise or Computer Compliance Reports in MBAM
 
-This article provides a solution to an error that occurs when you open Enterprise or Computer Compliance Reports in MBAM.
+This article provides a solution to an error that occurs when you open Enterprise or Computer Compliance Reports in Microsoft BitLocker Administration and Monitoring (MBAM).
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2639518
 
 ## Symptoms
 
-When a user uses a specific account for SQL Server Reporting Service (SSRS) in Microsoft BitLocker Administration and Monitoring (MBAM) wizard, they may not open any reports for MBAM and it fails with the below error message.
+When a user uses a specific account for SQL Server Reporting Service (SSRS) in the MBAM wizard, they may not open any reports for MBAM and it fails with the below error message.
 
 :::image type="content" source="./media/error-when-opening-reports-mbam/error-message.png" alt-text="Error message displays in BitLocker Administration and Monitoring.":::
 
@@ -34,16 +34,17 @@ The above error occurs when the MBAM SSRS password that was used during MBAM set
 
 To resolve this issue, follow the steps from below:
 
-1. Open web browser and go to http://servername/Reports/Pages/Folder.aspx
+1. Open web browser and go to `http://servername/Reports/Pages/Folder.aspx`.
 
-    Note: If your password is expired, then you might get an access denied error message when you try to open the above web page.  
+    > [!NOTE]
+    > If your password is expired, then you might get an access denied error message when you try to open the above web page.  
     In this case, you will first have to connect to SQL Reporting Services using SQL Management Studio with your new password and you will be able to access the above webpage.
 
-2. Click Microsoft BitLocker Administration and Monitoring
-3. Click Malta Data Source (see screenshot below).
+2. Click Microsoft BitLocker Administration and Monitoring.
+3. Click **Malta Data Source** (see screenshot below).
 
     :::image type="content" source="./media/error-when-opening-reports-mbam/malta-data-source-setting.png" alt-text="Click Malta Data Source.":::
 
 4. Make sure you have Windows-integrated security selected.
-5. Click Test Connection and then click Apply.
+5. Click **Test Connection** and then click **Apply**.
 6. Now you can view the MBAM Enterprise and Computer Compliance Reports successfully.

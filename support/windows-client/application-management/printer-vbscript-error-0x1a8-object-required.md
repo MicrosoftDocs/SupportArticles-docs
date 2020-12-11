@@ -24,38 +24,38 @@ _Original KB number:_ &nbsp; 2466246
 
 You may receive a message similar to one of the following if you attempt to use the print-related Visual Basic script files on a 64-bit Windows operating system.
 
-Unable to enumerate printers, error: 0x1A8. Object required  
-Unable to enumerate printers on server, error: 0x1A8. Object required  
-Unable to enumerate forms, error: 0x1A8. Object required  
-Unable to enumerate ports, error: 0x1A8. Object required  
-Unable to enumerate drivers, error: 0x1A8. Object required  
-Unable to add printer connection, error: 0x1A8. Object required  
-Unable to delete printer connection, error: 0x1A8. Object required  
-Unable to get the default printer, error: 0x1A8. Object required  
-Unable to set the default printer, error: 0x1A8. Object required  
-Unable to add driver, error: 0x1A8. Object required  
-Unable to delete driver, error: 0x1A8. Object required  
-Unable to delete drivers on server, error: 0x1A8. Object required  
-Unable to list drivers, error: 0x1A8. Object required  
-Unable to print the dependent files, error: 0x1A8. Object required  
-Unable to add form, error: 0x1A8. Object required  
-Unable to delete form, error: 0x1A8. Object required  
-Unable to delete printer,  error: 0x1A8. Object required  
-Unable to save the configuration of the printer, error: 0x1A8. Object required  
-Unable to restore the configuration of the printer, error: 0x1A8. Object required  
-Unable to get the configuration for the port, error: 0x1A8. Object required  
-Unable to convert the port, error: 0x1A8. Object required  
-Unable to add the TCP port, error: 0x1A8. Object required  
-Unable to list ports, error: 0x1A8. Object required  
-Unable to get port configuration, error: 0x1A8. Object required  
-Unable to update port settings, error: 0x1A8. Object required  
-Unable to get the printer config, error: 0x1A8. Object required  
-Unable to configure printer, error: 0x1A8. Object required  
-Unable to pause printer, error: 0x1A8. Object required  
-Unable to resume printer, error: 0x1A8. Object required  
-Unable to purge printer, error: 0x1A8. Object required  
-Unable to send test page to printer, error: 0x1A8. Object required  
-Unable to list printers, error: 0x1A8. Object required
+- Unable to enumerate printers, error: 0x1A8. Object required
+- Unable to enumerate printers on server, error: 0x1A8. Object required
+- Unable to enumerate forms, error: 0x1A8. Object required
+- Unable to enumerate ports, error: 0x1A8. Object required
+- Unable to enumerate drivers, error: 0x1A8. Object required
+- Unable to add printer connection, error: 0x1A8. Object required
+- Unable to delete printer connection, error: 0x1A8. Object required
+- Unable to get the default printer, error: 0x1A8. Object required
+- Unable to set the default printer, error: 0x1A8. Object required
+- Unable to add driver, error: 0x1A8. Object required
+- Unable to delete driver, error: 0x1A8. Object required
+- Unable to delete drivers on server, error: 0x1A8. Object required
+- Unable to list drivers, error: 0x1A8. Object required
+- Unable to print the dependent files, error: 0x1A8. Object required
+- Unable to add form, error: 0x1A8. Object required
+- Unable to delete form, error: 0x1A8. Object required
+- Unable to delete printer,  error: 0x1A8. Object required
+- Unable to save the configuration of the printer, error: 0x1A8. Object required
+- Unable to restore the configuration of the printer, error: 0x1A8. Object required
+- Unable to get the configuration for the port, error: 0x1A8. Object required
+- Unable to convert the port, error: 0x1A8. Object required
+- Unable to add the TCP port, error: 0x1A8. Object required
+- Unable to list ports, error: 0x1A8. Object required
+- Unable to get port configuration, error: 0x1A8. Object required
+- Unable to update port settings, error: 0x1A8. Object required
+- Unable to get the printer config, error: 0x1A8. Object required
+- Unable to configure printer, error: 0x1A8. Object required
+- Unable to pause printer, error: 0x1A8. Object required
+- Unable to resume printer, error: 0x1A8. Object required
+- Unable to purge printer, error: 0x1A8. Object required
+- Unable to send test page to printer, error: 0x1A8. Object required
+- Unable to list printers, error: 0x1A8. Object required
 
 ## Cause
 
@@ -64,9 +64,16 @@ You must register PRNADMIN.DLL with the 32-bit version of REGSVR32.EXE, and also
 ## Resolution
 
 - Use REGSVR32.EXE located in the %windir%\syswow64 folder to register PRNADMIN.DLL.
-%windir%\syswow64\regsvr32.exe PRNADMIN.DLL 
-- Use CSCRIPT.EXE located in the %windir%\syswow64 folder to run the script
-%windir%\syswow64\cscript.exe \<vbscript>
+
+    ```console
+    %windir%\syswow64\regsvr32.exe PRNADMIN.DLL
+    ```
+
+- Use CSCRIPT.EXE located in the %windir%\syswow64 folder to run the script:
+
+    ```console
+    %windir%\syswow64\cscript.exe <vbscript>
+    ```
 
 ## More information
 
@@ -86,8 +93,6 @@ The following visual basic scripts for manipulating printers are included with t
 - prndata.vbs - printer data configuration script for Windows .NET Server 2003
 - prnmgr.vbs - printer script for Windows .NET Server 2003
 
-Resource Kit Support Policy
+## Resource Kit support policy
 
-The SOFTWARE supplied in the Windows Resource Kit Tools is not supported under any Microsoft standard support program or service. Customers can, however, report issues and bugs by sending e-mail to rkinput@microsoft.com. Microsoft will, at its sole discretion, address issues, and bugs reported in this manner, and responses are not guaranteed. This e-mail address is only for issues related to the Windows Resource Kit Tools and the Windows Deployment and Resource Kits.
-
-The SOFTWARE (including instructions for its use and all printed and online documentation) is provided "AS IS" without warranty of any kind. Microsoft further disclaims all implied warranties including, without limitation, any implied warranties of merchantability or of fitness for a particular purpose. The entire risk arising out of the use or performance of the SOFTWARE and documentation remains with you.
+The software supplied in the Windows Resource Kit Tools is not supported under any Microsoft standard support program or service. The software (including instructions for its use and all printed and online documentation) is provided as is without warranty of any kind. Microsoft further disclaims all implied warranties including, without limitation, any implied warranties of merchantability or of fitness for a particular purpose. The entire risk arising out of the use or performance of the SOFTWARE and documentation remains with you.
