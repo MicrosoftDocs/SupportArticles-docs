@@ -84,74 +84,15 @@ REG add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-T
 
 ## Troubleshooting
 
-1. Create and access a Repair VM.
-1. Verify that the OS partition is active.
-1. Troubleshoot Domain-joined VMs.
-1. Troubleshoot standalone VMs.
-1. Enable serial console and memory dump collection.
-1. Rebuild the VM.
+1. [Troubleshoot Domain-joined VMs.](#1)
+2. [Troubleshoot standalone VMs.](#2)
 
-### Create and access a repair VM
-
-1. Use steps 1-3 of the [VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands) to prepare a Repair VM.
-1. Using Remote Desktop Connection, connect to the Repair VM.
-
-### Verify that the OS partition is active
-
-> [!NOTE]
-> This mitigation applies only for Generation 1 VMs. Generation 2 VMs (using UEFI) does not use an active partition.
-
-Verify the OS partition that holds the BCD store for the disk is marked as active.
-
-   1. Open an elevated command prompt and open the DISKPART tool.
-
-      `diskpart`
-
-   2. List the disks on the system and look for added disks and proceed to select the new disk. In this example, the new disk is Disk 1.
-
-      ```ps
-      list disk
-      sel disk 1
-      ```
-
-      ![Disk 1](media/cannot-connect-rdp-azure-vm/11-Gen2-1.png)
-
-   3. List all of the partitions on the disk and then proceed to select the partition you want to check. Usually System Managed partitions are smaller and around 350 Mb in size. In the image below, this partition is Partition 1.
-
-      ```ps
-      list partition
-      sel partition 1
-      ```
-
-      ![Partition 1](media/cannot-connect-rdp-azure-vm/12-Gen2-2.png)
-
-   4. Check the status of the partition. In our example, Partition 1 is not active.
-
-      `detail partition`
-
-      ![Detail Partition](media/cannot-connect-rdp-azure-vm/13-Gen2-3.png)
-
-      1. If the partition isn't active:
-
-         1. Set the Active flag and then recheck that the change was done properly.
-
-            ```ps
-            active
-            detail partition
-            ```
-
-            ![Active Flag](media/cannot-connect-rdp-azure-vm/14-Gen2-4.png)
-
-   5. Now exit the DISKPART tool.
-
-      `exit`
-
-### Troubleshoot Domain-joined VMs
+### Troubleshoot Domain-joined VMs<a id="1"></a>
 
 To troubleshoot this problem:
 
 1. Check whether the VM can connect to a DC.
-1. Check the health of the DC.
+2. Check the health of the DC.
 
 > [!NOTE]
 > To test the DC health, you can use another VM that is in the same VNET, subnet, and uses the same logon server.
@@ -164,7 +105,7 @@ Connect to the VM that has the problem by using [Serial console, remote CMD, or 
    set | find /i "LOGONSERVER"
    ```
 
-1. Test the health of the secure channel between the VM and the DC. To do this, run the `Test-ComputerSecureChannel` command in an elevated PowerShell instance. This command returns True or False indicating whether the secure channel is alive:
+2. Test the health of the secure channel between the VM and the DC. To do this, run the `Test-ComputerSecureChannel` command in an elevated PowerShell instance. This command returns True or False indicating whether the secure channel is alive:
 
    ```ps
    Test-ComputerSecureChannel -verbose
@@ -176,7 +117,7 @@ Connect to the VM that has the problem by using [Serial console, remote CMD, or 
    Test-ComputerSecureChannel -repair
    ```
 
-1. Make sure that the computer account password in Active Directory is updated on the VM and the DC:
+3. Make sure that the computer account password in Active Directory is updated on the VM and the DC:
 
    ```ps
    Reset-ComputerMachinePassword -Server "<COMPUTERNAME>" -Credential <DOMAIN CREDENTIAL WITH DOMAIN ADMIN LEVEL>
@@ -192,9 +133,9 @@ If the preceding commands did not fix the communication problem to the domain, y
    cmd /c "netdom remove <<MachineName>> /domain:<<DomainName>> /userD:<<DomainAdminhere>> /passwordD:<<PasswordHere>> /reboot:10 /Force"
    ```
 
-This script forcibly removes the VM from the domain and restarts the VM 10 seconds later. Then, you need to clean up the Computer object on the domain side.
+   This script forcibly removes the VM from the domain and restarts the VM 10 seconds later. Then, you need to clean up the Computer object on the domain side.
 
-1. After the cleanup is done, rejoin this VM to the domain. To do this, create a script that is named JoinDomain.ps1 by using the following content, and then deploy the script as a Custom Script Extension on the Azure portal:
+2. After the cleanup is done, rejoin this VM to the domain. To do this, create a script that is named JoinDomain.ps1 by using the following content, and then deploy the script as a Custom Script Extension on the Azure portal:
 
    ```cmd
    cmd /c "netdom join <<MachineName>> /domain:<<DomainName>> /userD:<<DomainAdminhere>> /passwordD:<<PasswordHere>> /reboot:10"
@@ -213,7 +154,7 @@ REG query "HKLM\SYSTEM\CurrentControlSet\Control\Lsa" /v disabledomaincreds
 
 If the key is set to 1, this means that the server was set up not to allow domain credentials. Change this key to 0.
 
-### Troubleshoot standalone VMs
+### Troubleshoot standalone VMs<a id="2"></a>
 
 #### Check MinEncryptionLevel
 
@@ -296,61 +237,8 @@ reg query "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP
 
 Restart the VM so that the changes to the registry take effect.
 
-### Enable the Serial Console and memory dump collection
-
-**Recommended**: Before you rebuild the VM, enable the Serial Console and memory dump collection by running the following script:
-
-1. Open an elevated command prompt session as an Administrator.
-1. Run the following commands:
-
-   **Enable the Serial Console**:
-
-   ```ps
-   bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /ems {<BOOT LOADER IDENTIFIER>} ON 
-   bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
-   ```
-
-1. Verify that the free space on the OS disk is larger than the memory size (RAM) on the VM.
-
-   If there's not enough space on the OS disk, change the location where the memory dump file will be created, and refer that location to any data disk attached to the VM that has enough free space. To change the location, replace **%SystemRoot%** with the drive letter of the data disk, such as **F:**, in the following commands.
-
-   Suggested configuration to enable OS Dump:
-
-    **Load the broken OS Disk:**
-
-   ```ps
-   REG LOAD HKLM\BROKENSYSTEM <VOLUME LETTER OF BROKEN OS DISK>:\windows\system32\config\SYSTEM 
-   ```
-
-   **Enable on ControlSet001**:
-
-   ```ps
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
-   ```
-
-   **Enable on ControlSet002**:
-
-   ```ps
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
-   ```
-
-   **Unload Broken OS Disk**:
-
-   ```ps
-   REG UNLOAD HKLM\BROKENSYSTEM
-   ```
-
-### Rebuild the VM
-
-Use [step 5 of the VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to rebuild the VM.
-
 ## Next steps
 
 - [SetEncryptionLevel method of the Win32_TSGeneralSetting class](https://docs.microsoft.com/windows/desktop/termserv/win32-tsgeneralsetting-setencryptionlevel)
 - [Configure Server Authentication and Encryption Levels](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770833(v=ws.11))
 - [Win32_TSGeneralSetting class](https://docs.microsoft.com/windows/desktop/termserv/win32-tsgeneralsetting)
-
