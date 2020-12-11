@@ -28,7 +28,7 @@ The implementation of the protocol suite should perform correctly and efficientl
 
 There may be some unusual circumstances in customer installations where changes to certain default values are appropriate. To handle these cases, optional registry parameters can be created to modify the default behavior of some parts of the protocol drivers.
 
-> [!CAUTION]
+> [!NOTE]
 > The Windows XP TCP/IP implementation is largely self-tuning. Adjusting registry parameters without careful study may reduce your computer's performance.
 
 ## How to change parameters
