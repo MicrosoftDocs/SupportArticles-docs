@@ -33,14 +33,13 @@ _Original KB number:_ &nbsp; 321185
 
   |Version|Most recent service pack|Latest cumulative update|Complete version information|
   |---|---|---|---|
-  |SQL Server 2019|None| [CU7 for 2019](https://support.microsoft.com/help/4570012) (15.0.4063.15 - September 2020)| [SQL Server 2019 builds](https://support.microsoft.com/help/4518398) |
-  |SQL Server 2017|None| [CU22 for 2017](https://support.microsoft.com/help/4577467) (14.0.3356.20  - September 2020)| [SQL Server 2017 builds](https://support.microsoft.com/help/4047329) |
-  |SQL Server 2016| [SQL Server 2016 SP2](https://support.microsoft.com/help/4052908)  (13.0.5026.0 - April 2018)|[CU15 for 2016 SP2](https://support.microsoft.com/help/4577775) (13.0.5850.14– September 2020)<br/> [CU15 + GDR for 2016 SP1](https://support.microsoft.com/help/4505221) (13.0.4604.0 - July 2019) <br/>[CU15 for 2016 SP1](https://support.microsoft.com/help/4495257) (13.0.4574.0 - May 2019)<br/>[CU14 for 2016 SP2](https://support.microsoft.com/help/4564903)  (13.0.5830.85- August 2020)<br/>  [CU9 for 2016 RTM](https://support.microsoft.com/help/4037357)  (13.0.2216.0 - November 2017)| [SQL Server 2016 builds](https://support.microsoft.com/help/3177312) |
+  |SQL Server 2019|None| [CU8 for 2019](https://support.microsoft.com/help/4577194) (15.0.4073.23 - September 2020)| [SQL Server 2019 builds](https://support.microsoft.com/help/4518398) |
+  |SQL Server 2017|None| [CU22 for 2017](https://support.microsoft.com/help/4577467) (14.0.3356.20 - September 2020)| [SQL Server 2017 builds](https://support.microsoft.com/help/4047329) |
+  |SQL Server 2016| [SQL Server 2016 SP2](https://support.microsoft.com/help/4052908)  (13.0.5026.0 - April 2018)|[CU15 for 2016 SP2](https://support.microsoft.com/help/4577775) (13.0.5850.14 - September 2020)<br/> [CU15 + GDR for 2016 SP1](https://support.microsoft.com/help/4505221) (13.0.4604.0 - July 2019) <br/>[CU15 for 2016 SP1](https://support.microsoft.com/help/4495257) (13.0.4574.0 - May 2019)<br/>[CU14 for 2016 SP2](https://support.microsoft.com/help/4564903)  (13.0.5830.85- August 2020)<br/>  [CU9 for 2016 RTM](https://support.microsoft.com/help/4037357)  (13.0.2216.0 - November 2017)| [SQL Server 2016 builds](https://support.microsoft.com/help/3177312) |
   |SQL Server 2014| [SQL Server 2014 SP3](https://support.microsoft.com/help/4022619)  (12.0.6024.0 - October 2018)| [CU4 for 2014 SP3](https://support.microsoft.com/help/4022619)  (12.0.6329.1 - July 2019)<br/>  [CU18 for 2014 SP2](https://support.microsoft.com/help/4500180)  (12.0.5687.1 - July 2019) [CU13 for 2014 SP1](https://support.microsoft.com/help/4019099)  (12.0.4522.0 - August 2017)| [SQL Server 2014 builds](https://support.microsoft.com/help/321185/#sqlserver2014) |
   |SQL Server 2012| [SQL Server 2012 SP4](https://support.microsoft.com/help/4018073) (11.0.7001.0 - September 2017)<br/>| [CU10 for 2012 SP3](https://support.microsoft.com/help/4025925)  (11.0.6607.3 - August 2017)<br/><br/> [CU16 for 2012 SP2](https://support.microsoft.com/help/3205054)  (11.0.5678.0 - January 2017)<br/><br/> [CU16 for 2012 SP1](https://support.microsoft.com/help/3052476) (11.0.3487.0 - May 2015)| [SQL Server 2012 builds](https://support.microsoft.com/help/321185/#sqlserver2012) |
   |SQL Server 2008 R2| [SQL Server 2008 R2 SP3](https://support.microsoft.com/help/2979597) (10.50.6000.34 - September 2014)<br/><br/> **Note** Latest and final release for this version|None| [SQL Server 2008 R2 builds](https://support.microsoft.com/help/321185/#sqlserver2008r2) |
   |SQL Server 2008| [SQL Server 2008 SP4](https://support.microsoft.com/help/2979596) (10.0.6000.29 - September 2014)<br/><br/> **Note** Latest and final release for this version|None| [SQL Server 2008 builds](https://support.microsoft.com/help/321185/#sqlserver2008) |
-  |SQL Server 2005| [SQL Server 2005 SP4](https://support.microsoft.com/help/2463332) (9.00.5000.00 - December 2010)|None| [SQL Server 2005 builds](https://support.microsoft.com/help/321185/#sqlserver2005) |
   |||||  
 
   > [!NOTE]
@@ -373,6 +372,7 @@ For more information, go to the following websites:
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
+|15.0.4073.23|None|CU8| [4577194](https://support.microsoft.com/help/4577194)|September 30, 2020|
 |15.0.4063.15|None|CU7| [4570012](https://support.microsoft.com/help/4570012)|September 02, 2020|
 |15.0.4053.23|None|CU6| [4563110](https://support.microsoft.com/help/4563110)|August 04, 2020|
 |15.0.4043.16|None|CU5| [4552255](https://support.microsoft.com/help/4552255)|June 22, 2020|
