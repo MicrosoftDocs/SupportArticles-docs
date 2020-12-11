@@ -1,6 +1,6 @@
 ---
-title: Cluster IP address resources fail on both nodes of a two-node multi-site cluster when one node disconnects
-description: This article describes the behavior that occurs when one node of a two-node multi-site cluster disconnects from the public cluster network. In this case, the IP address resources on the remaining node fail and that node shuts down.
+title: Cluster IP address resources fail on both nodes of a two-node multi-site cluster when one node disconnects from the public VLAN
+description: This article describes the behavior that occurs when one node of a two-node multi-site cluster disconnects from the public cluster VLAN. In this case, the IP address resources on the remaining node fail and that node shuts down.
 ms.date: 12/22/2020
 author: Teresa-Motiv
 ms.author: v-tea
@@ -14,9 +14,9 @@ ms.prod-support-area-path: node removed from the cluster
 ms.technology: high-availability
 keywords: multi-site,multisite,cluster,disconnect,cross-subnet,stretched,vlan
 ---
-# Cluster IP address resources fail on both nodes of a two-node multi-site cluster when one node disconnects
+# Cluster IP address resources fail on both nodes of a two-node multi-site cluster when one node disconnects from the public VLAN
 
-This article describes the behavior that occurs when one node of a two-node multi-site cluster disconnects from the public cluster network. In this case, the IP address resources on the remaining node fail and that node shuts down.
+This article describes the behavior that occurs when one node of a two-node multi-site cluster disconnects from the public cluster VLAN. In this case, the IP address resources on the remaining node fail and that node shuts down.
 
 _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
