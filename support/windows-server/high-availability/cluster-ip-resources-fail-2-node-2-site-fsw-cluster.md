@@ -49,13 +49,13 @@ Because the two sites cannot communicate across the public VLAN, the cluster als
 >  
 > 000012dc.00001664::2020/09/19-19:41:51.796 WARN  [RES] IP Address \<*Cluster IP Address x.x.x.x*>: WorkerThread: NetInterface 1ee3567e-84f7-459a-a39e-a5c44de643fa has failed. Failing resource.
 
-The end result of this network disconnect is that the cluster groups on both nodes are in a failed state. You have to manually bring them online again.
+In the end, because of the disconnected node, the cluster groups on both nodes are in a failed state. You have to manually bring them online again.
 
 If the two cluster nodes were in the same site, a similar network disconnect would cause the public VLAN NIC on Node 2 would fail in the same way. However, in that case all the cluster groups on Node 2 would fail over to Node 1.
 
 ## Cause
 
-This is the expected response for this scenario. We recommend that you use four nodes for multi-site clusters instead of two nodes. [Azure AzS HCI](https://docs.microsoft.com/azure-stack/hci/overview) clusters require four nodes.
+In this scenario, this behavior is expected. We recommend that you use four nodes for multi-site clusters instead of two nodes. [Azure AzS HCI](https://docs.microsoft.com/azure-stack/hci/overview) clusters require four nodes.
 
 ## Resolution
 
