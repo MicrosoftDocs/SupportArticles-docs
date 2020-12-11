@@ -20,69 +20,55 @@ This article describes the event log entries the File Replication Service (FRS) 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;308406
 
-## Windows Server 2003 and later events  
+## Event ID 13500, 13501, 13502, 13503, 13504, 13505, and 13506
 
 > Event ID=13500  
 Severity=Error  
-File Replication Service  
-
-==
+File Replication Service
 
 > Event ID=13501  
 Severity=Informational  
 The File Replication Service is starting.  
 
-==
-
 >Event ID=13502  
 Severity=Informational  
 The File Replication Service is stopping.  
 
-==
-
 > Event ID=13503  
 Severity=Informational  
-The File Replication Service has stopped.  
-
-==
+The File Replication Service has stopped.
 
 >Event ID=13504  
 Severity=Error  
-The File Replication Service stopped without cleaning up.  
-
-==
+The File Replication Service stopped without cleaning up.
 
 > Event ID=13505  
 Severity=Error  
-The File Replication Service has stopped after taking an assertion failure.  
-
-==
+The File Replication Service has stopped after taking an assertion failure.
 
 > Event ID=13506  
 Severity=Error  
-The File Replication Service failed a consistency check (%3) in "%1" at line %2.  
+The File Replication Service failed a consistency check (%3) in "%1" at line %2.
 
-The File Replication Service will restart automatically at a later time.
-If this problem persists, a subsequent entry in this event log describes the
-recovery procedure.
+When these event logs appears, the File Replication Service will restart automatically at a later time. If this problem persists, a subsequent entry in this event log describes the recovery procedure.
 
-For more information about the automatic restart, right click on
-My Computer and then click on Manage, System Tools, Services,
-File Replication Service, and Recovery.
+For more information about the automatic restart, press Win + R, run *compmgmt.msc* to open **Computer Management**, **System Tools**, **Services**, **File Replication Service**, and **Recovery**.
+
+## Event ID 13507
 
 > Event ID=13507  
 Severity=Error  
-The File Replication Service can't start replica set %1 on computer %2
-for directory %3 because the type of volume %4 isn't NTFS 5.0 or later.  
+The File Replication Service can't start replica set %1 on computer %2 for directory %3 because the type of volume %4 isn't NTFS 5.0 or later.
 
-The volume's type can be found by typing "chkdsk %4".
+The volume's type can be found by running `chkdsk %4`.
 
-The volume can be upgraded to NTFS 5.0 or later by typing "chkntfs /E %4".
+The volume can be upgraded to NTFS 5.0 or later by running `chkntfs /E %4` command.
+
+## Event ID 13508
 
 > Event ID=13508  
 Severity=Warning  
-The File Replication Service is having trouble enabling replication  
-from %1 to %2 for %3 using the DNS name %4. FRS will keep retrying.  
+The File Replication Service is having trouble enabling replication from %1 to %2 for %3 using the DNS name %4. FRS will keep retrying.
 
 Following are some of the reasons you would see this warning.
 
@@ -94,98 +80,71 @@ this replica has not yet replicated to all the Domain Controllers.
 This event log message will appear once per connection.  After the problem is fixed, you'll see another event log message indicating that the connection
 has been established.
 
+## Event ID 13509, 13510
+
 > Event ID=13509  
 Severity=Warning  
-The File Replication Service has enabled replication from %1 to %2 for %3  
-after repeated retries.  
-
-==
+The File Replication Service has enabled replication from %1 to %2 for %3 after repeated retries.
 
 > Event ID=13510  
 Severity=Error  
-The File Replication Service on the computer %1 can't communicate with  
-the File Replication Service on the computer %2.  
+The File Replication Service on the computer %1 can't communicate with the File Replication Service on the computer %2.  
 
-Verify that the computer %2 is up and running.
+To troubleshoot the issues, follow these steps:
 
-Verify that the File Replication Service is running on %2 by
-typing *net start ntfrs* on %2.
+1. Verify that the computer %2 is up and running.
 
-Verify that the network is functioning between %1 and %2 by
-typing `ping %1` on %2 and `ping %2` on %1.
-If the pings succeed, then retry the failed operation.
-If the pings fail, then there may be problems with the DNS server.
+2. Verify that the File Replication Service is running on %2 by typing *net start ntfrs* on %2.
 
-The DNS server is responsible for mapping computer names to IP addresses.
-The commands `ipconfig` and `nslookup` help diagnose problems with the
-DNS server.
+3. Verify that the network is functioning between %1 and %2 by typing `ping %1` on %2 and `ping %2` on %1.  
+   If the pings succeed, then retry the failed operation.  
+   If the pings fail, then there may be problems with the DNS server.
 
-Typing `ipconfig /all` will list the computer's IP address and the IP
-address of the computer's DNS servers. Type `ping <DNS server's IP address>`
-to verify that a DNS server is available. The DNS mapping for %2 or %1
-can be verified by typing `nslookup` and then typing *%2* and then *%1*
-on %1 and %2. Be sure to check out the DNS server on both %1 and %2;
-a DNS problem on either computer will prevent proper communication.
+The DNS server is responsible for mapping computer names to IP addresses. The commands `ipconfig` and `nslookup` help diagnose problems with the DNS server.
 
-Some network problems between %1 and %2 can be cleared up by flushing
-the DNS Resolver Cache. Type `ipconfig /flushdns`.
+Typing `ipconfig /all` will list the computer's IP address and the IP address of the computer's DNS servers. Type `ping <DNS server's IP address>` to verify that a DNS server is available. The DNS mapping for %2 or %1 can be verified by typing `nslookup` and then typing *%2* and then *%1* on %1 and %2. Be sure to check out the DNS server on both %1 and %2; a DNS problem on either computer will prevent proper communication.
 
-Some network problems between %1 and %2 can be cleared up by renewing
-the IP address. Type `ipconfig /release` followed by `ipconfig /renew`.
+- Some network problems between %1 and %2 can be cleared up by flushing the DNS Resolver Cache. Type `ipconfig /flushdns`.
+- Some network problems between %1 and %2 can be cleared up by renewing the IP address. Type `ipconfig /release` followed by `ipconfig /renew`.
+- Some network problems between %1 and %2 can be cleared up by resetting the computer's DNS entry. Type `net stop NetLogon` followed by `net start NetLogon`.
+- Some problems between %1 and %2 can be cleared up by restarting the File Replication Service. Type `net stop ntfrs` followed by `net start ntfrs`.
+- Some problems between %1 and %2 can be cleared up by restarting the computers %1 and %2 after closing running applications, especially dcpromo. Click on Start, Shutdown, select Restart, and click on OK.
 
-Some network problems between %1 and %2 can be cleared up by resetting
-the computer's DNS entry. Type `net stop NetLogon` followed by
-`net start NetLogon`.
+Other network and computer problems are beyond the scope of this event log message.
 
-Some problems between %1 and %2 can be cleared up by restarting
-the File Replication Service. Type `net stop ntfrs` followed by
-`net start ntfrs`.
-
-Some problems between %1 and %2 can be cleared up by restarting
-the computers %1 and %2 after closing running applications,
-especially dcpromo. Click on Start, Shutdown, select Restart, and
-click on OK.
-
-Other network and computer problems are beyond the scope of
-this event log message.
+## Event ID 13511
 
 > Event ID=13511  
 Severity=Error  
-The File Replication Service is stopping on computer %1 because there is no free  
-space on the volume containing %2.  
+The File Replication Service is stopping on computer %1 because there is no free space on the volume containing %2.
 
-The available space on the volume can be found by typing
-*dir %2*.
+The available space on the volume can be found by typing *dir %2*.
 
-Once free space is made available on the volume containing %2,
-the File Replication Service can be restarted immediately by typing
-`net start ntfrs`. Otherwise, the File Replication Service will
-restart automatically at a later time.
+Once free space is made available on the volume containing %2, the File Replication Service can be restarted immediately by typing `net start ntfrs`. Otherwise, the File Replication Service will restart automatically at a later time.
 
-For more information about the automatic restart, right click on
-My Computer and then click on Manage, System Tools, Services, File
-Replication Service, and Recovery.
+For more information about the automatic restart, press Win + R, run *compmgmt.msc* to open **Computer Management**, **System Tools**, **Services**, **File Replication Service**, and **Recovery**.
 
-For more information about managing space on a volume type *copy /?*,
-*rename /?*, *del /?*, *rmdir /?*, and *dir /?*.
+For more information about managing space on a volume type `copy /?`, `rename /?`, `del /?`, `rmdir /?`, and `dir /?`.
+
+## Event ID 13512
 
 > Event ID=13512  
 Severity=Warning  
-The File Replication Service has detected an enabled disk write cache  
-on the drive containing the directory %2 on the computer %1.  
+The File Replication Service has detected an enabled disk write cache on the drive containing the directory %2 on the computer %1.
 
-The File Replication Service might not recover when power to the  
-drive is interrupted and critical updates are lost.  
+The File Replication Service might not recover when power to the drive is interrupted and critical updates are lost.  
+
+## Event ID 13513
 
 > Event ID=13513  
 Severity=Error  
-The File Replication Service on computer %1 is stopping because the  
-database %2 is corrupted.  
+The File Replication Service on computer %1 is stopping because the database %2 is corrupted.  
 
 The database can be recovered by typing `esentutl /d %2`.
 
-Once the database has been successfully recovered, the
-File Replication Service can be restarted by typing `net start ntfrs`.
+Once the database has been successfully recovered, the File Replication Service can be restarted by typing `net start ntfrs`.
+
+## Event ID 13514
 
 > Event ID=13514  
 Severity=Warning  
@@ -193,44 +152,32 @@ File Replication Service is initializing the system volume with data from anothe
 domain controller. Computer %1 cannot become a domain controller until this process  
 is complete. The system volume will then be shared as SYSVOL.  
 
-To check for the SYSVOL share, at the command prompt, type: `net share`
+To check for the SYSVOL share, at the command prompt, type: `net share`.
 
-When File Replication Service completes the initialization process, the SYSVOL
-share will appear.
+When File Replication Service completes the initialization process, the SYSVOL share will appear.
 
-The initialization of the system volume can take some time.
-The time is dependent on the amount of data in the system volume,
-the availability of other domain controllers, and the replication
-interval between domain controllers.
+The initialization of the system volume can take some time. The time is dependent on the amount of data in the system volume, the availability of other domain controllers, and the replication interval between domain controllers.
+
+## Event ID 13515
 
 > Event ID=13515  
 Severity=Warning  
-The File Replication Service may be preventing the computer %1 from becoming a  
-domain controller while the system volume is being initialized and then  
-shared as SYSVOL.  
+The File Replication Service may be preventing the computer %1 from becoming a domain controller while the system volume is being initialized and then shared as SYSVOL.  
 
-Type `net share` to check for the SYSVOL share. The File Replication
-Service has stopped preventing the computer from becoming a domain
-controller once the SYSVOL share appears.
+Type `net share` to check for the SYSVOL share. The File Replication Service has stopped preventing the computer from becoming a domain controller once the SYSVOL share appears.
 
-The initialization of the system volume can take some time.
-The time is dependent on the amount of data in the system volume.
+The initialization of the system volume can take some time. The time is dependent on the amount of data in the system volume.
 
-The initialization of the system volume can be bypassed by first typing
-*regedit* and setting the value of SysvolReady to 1 and then restarting
-the Netlogon service.
+The initialization of the system volume can be bypassed by first typing *regedit* and setting the value of SysvolReady to 1 and then restarting the Netlogon service.
 
-WARNING - BYPASSING THE SYSTEM VOLUME INITIALIZATION IS NOT RECOMMENDED.
-Applications may fail in unexpected ways.
+> [!NOTE]
+> Bypassing the system volume initialization is not recommended. Applications may fail in unexpected ways.
 
-The value SysvolReady is located by clicking on HKEY_LOCAL_MACHINE
-and then clicking on System, CurrentControlSet, Services, Netlogon,
-and Parameters.
+The value **SysvolReady** is located at `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters`.
 
-The Netlogon service can be restarted by typing `net stop netlogon`
-followed by `net start netlogon`.
+The Netlogon service can be restarted by typing `net stop netlogon` followed by `net start netlogon`.
 
-==
+## Event ID 13516
 
 > Event ID=13516  
 Severity=Informational  
@@ -241,349 +188,223 @@ volume is now ready to be shared as SYSVOL.
 
 Type `net share` to check for the SYSVOL share.
 
-==
+## Event ID 13517
 
 > Event ID=13517  
 Severity=Warning  
 The File Replication Service won't check access to the API "%1".  
 
-Access checks can be enabled for "%1" by running *regedit*.
+Access checks can be enabled for %1 by running *regedit*.
 
-Click on Start, Run, and type *regedit*.
+1. Press Win + R, type *regedit* in **Run** box and press Enter.
+2. Expand `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NtFrs\Parameters\Access Checks`, change %1 and %2 strings to **Enabled**.
 
-Expand HKEY_LOCAL_MACHINE, SYSTEM, CurrentControlSet, Services, NtFrs, Parameters,
-Access Checks, "%1", and "%2". Change the string to Enabled.
+Permissions can be changed by right clicking %1 and then clicking **Permissions...**.
 
-Permissions can be changed by highlighting "%1" and then clicking on the
-toolbar option Security and then Permissions...
+## Event ID 13518
 
 > Event ID=13518  
 Severity=Warning  
-The File Replication Service did not grant the user "%3" access to the  
-API "%1".  
+The File Replication Service did not grant the user "%3" access to the API "%1".  
 
-Permissions for "%1" can be changed by running *regedit*.
+Permissions for %1 can be changed by running *regedit*.
 
-Click on Start, Run, and type *regedit*.
+1. Press Win + R, type *regedit* in **Run** box and press Enter.
+2. Expand `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NtFrs\Parameters\Access Checks`.
+3. Right click %1, and then click **Permissions...**.
 
-Expand HKEY_LOCAL_MACHINE, SYSTEM, CurrentControlSet, Services, NtFrs, Parameters,
-Access Checks, and highlight "%1".
-Click on the toolbar option Security and then Permissions...
+Access checks can be disabled for %1. Double-click on %2 and change the string to Disabled.
 
-Access checks can be disabled for "%1". Double-click on "%2" and
-change the string to Disabled.
+## Event ID 13519
 
 > Event ID=13519  
 Severity=Error  
-The File Replication Service could not grant an unknown user access to the  
-API "%1".  
+The File Replication Service could not grant an unknown user access to the   API "%1".
 
 Access checks can be disabled for "%1" by running *regedit*.
 
-Click on Start, Run, and type *regedit*.
+1. Press Win + R, type *regedit* in **Run** box and press Enter.
+2. Expand `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NtFrs\Parameters\Access Checks`, change %1 and %2 strings to **Enabled**.
 
-Expand HKEY_LOCAL_MACHINE, SYSTEM, CurrentControlSet, Services, NtFrs, Parameters,
-Access Checks, "%1", and "%2". Change the string to Disabled.
+Permissions can be changed by right clicking %1 and then clicking **Permissions...**.
 
-Permissions can be changed by highlighting "%1" and then clicking on the
-toolbar option Security and then Permissions...
+## Event ID 13520
 
 > Event ID=13520  
 Severity=Warning  
 The File Replication Service moved the pre-existing files in %1 to %2.  
 
-The File Replication Service may delete the files in %2 at any time.
-Files can be saved from deletion by copying them out of %2. Copying
-the files into %1 may lead to name conflicts if the files already exist
-on some other replicating partner.
+The File Replication Service may delete the files in %2 at any time. Files can be saved from deletion by copying them out of %2. Copying the files into %1 may lead to name conflicts if the files already exist on some other replicating partner.
 
-In some cases, the File Replication Service may copy a file
-from %2 into %1 instead of replicating the file from some other
-replicating partner.
+In some cases, the File Replication Service may copy a file from %2 into %1 instead of replicating the file from some other replicating partner.
 
 Space can be recovered at any time by deleting the files in %2.
 
-==
+## Event ID 13521
 
 > Event ID=13521  
 Severity=Error  
-The File Replication Service cannot enable replication on the comptuer %1  
-until a backup/restore application completes.  
+The File Replication Service cannot enable replication on the comptuer %1   until a backup/restore application completes.  
 
-A backup/restore application has set a registry key that
-prevents the File Replication Service from starting until the registry
-key is deleted or the system is rebooted.
+A backup/restore application has set a registry key that prevents the File Replication Service from starting until the registry key is deleted or the system is rebooted.
 
-The backup/restore application may still be running. Check with your
-local administrator before proceeding further.
+The backup/restore application may still be running. Check with your local administrator before proceeding further.
 
-The computer can be rebooted by clicking on Start, Shutdown, and
-selecting Restart.
-
-> [!NOTE]
-> Deleting the registry key is not recommended.Applications may fail in unexpected ways.
 The registry key can be deleted by running *regedit*.
->
-> Click on Start, Run, and type *regedit*.
->
-> Expand HKEY_LOCAL_MACHINE, SYSTEM, CurrentControlSet, Services, NtFrs, Parameters,
-Backup/Restore,"Stop NtFrs from Starting". On the toolbar, click on Edit and select
-Delete. Be careful! Deleting a key other than "Stop NtFrs From Starting"
-can have unexpected side effects.
+
+> [!Caution]
+> Deleting the registry key is not recommended. Applications may fail in unexpected ways.
+
+1. Press Win + R, type *regedit* in **Run** box and press Enter.
+2. Expand `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NtFrs\Parameters\Backup/Restore`.
+3. Delete **Stop NtFrs from Starting**.
+
+## Event ID 13522
 
 > Event ID=13522  
 Severity=Warning  
-The File Replication Service paused because the staging area is full. Staging files
-are used to replicate created, deleted, or modified files between partners. FRS will
-automatically remove least recently used files from this staging area (in the order
-of the longest time since the last access) until the amount of space in use has
-dropped below 60% of the staging space-limit, after which replication will resume.
+The File Replication Service paused because the staging area is full. Staging files are used to replicate created, deleted, or modified files between partners. FRS will automatically remove least recently used files from this staging area (in the order of the longest time since the last access) until the amount of space in use has dropped below 60% of the staging space-limit, after which replication will resume.
 
-If this condition occurs frequently:
+If this condition occurs frequently, check the following information:
 
-Confirm that all direct outbound replication partners receiving updates from this
-member are online and receiving updates.
+- Confirm that all direct outbound replication partners receiving updates from this member are online and receiving updates.
+- Verify that the replication schedule for receiving partners is open or "on" for a sufficient window of time to accommodate the number of files being replicated.
+- Consider increasing the staging area to improve system performance.
 
-Verify that the replication schedule for receiving partners is open or "on" for a
-sufficient window of time to accommodate the number of files being replicated.
+To change the staging space limit, run *regedit*:
 
-Consider increasing the staging area to improve system performance.
+1. Press Win + R, type *regedit* in **Run** box and press Enter.
+2. Expand `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NtFrs\Parameters`.
+3. Change the value **Staging Space Limit in KB**.
 
-The current value of the staging space limit is %1 KB. To change the staging
-space limit, run *regedit*:
-
-Click on Start -> Run and type *regedit*. Expand HKEY_LOCAL_MACHINE, SYSTEM,
-CurrentControlSet, Services, NtFrs, Parameters, and the value "Staging Space
-Limit in KB".
-
-==
+## Event ID 13523
 
 > Event ID=13523  
 Severity=Warning  
-The File Replication Service paused because the size of a file exceeds the  
-staging space limit. Replication will resume only if the staging space limit  
-is increased.  
+The File Replication Service paused because the size of a file exceeds the   staging space limit. Replication will resume only if the staging space limit is increased.  
 
-The staging space limit is %1 KB and the file size is %2 KB.
+<!-- The staging space limit is %1 KB and the file size is %2 KB. -->
 
-To change the staging space limit, run *regedit*.
+To change the staging space limit, run *regedit*:
 
-Click on Start, Run, and type *regedit*.
+1. Press Win + R, type *regedit* in **Run** box and press Enter.
+2. Expand `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NtFrs\Parameters`.
+3. Change the value **Staging Space Limit in KB**.
 
-Expand HKEY_LOCAL_MACHINE, SYSTEM, CurrentControlSet, Services, NtFrs, Parameters,
-and the value "Staging Space Limit in KB".
-
-==
+## Event ID 13524
 
 > Event ID=13524  
 Severity=Error  
-The File Replication Service is stopping on the computer %1 because
-a universally unique ID (UUID) cannot be created.
+The File Replication Service is stopping on the computer %1 because a universally unique ID (UUID) cannot be created.
 
-The SDK function UuidCreate() returned the error "%2".
+The SDK function `UuidCreate()` returned the error.
 
-The problem may be the lack of an Ethernet address,
-token ring address, or network address. The lack of a network
-address implies an unsupported `netcard`.
+The problem may be the lack of an Ethernet address, token ring address, or network address. The lack of a network address implies an unsupported `netcard`.
 
-The File Replication Service will restart automatically at a later time.
-For more information about the automatic restart right click on
-My Computer and then click on Manage, System Tools, Services,
-File Replication Service, and Recovery.
+The File Replication Service will restart automatically at a later time. 
 
-==
+For more information about the automatic restart, press Win + R, run *compmgmt.msc* to open **Computer Management**, **System Tools**, **Services**, **File Replication Service**, and **Recovery**.
+
+## Event ID 13525
 
 > Event ID=13525  
 Severity=Warning  
-The File Replication Service cannot find the DNS name for the computer %1
-because the "%2" attribute could not be read from the distinguished
-name "%3".  
+The File Replication Service cannot find the DNS name for the computer %1 because the "%2" attribute could not be read from the distinguished name "%3".
 
-The File Replication Service will try using the name "%1" until the
+The File Replication Service will try using the name %1 until the
 computer's DNS name appears.
 
-==
+## Event ID 13526
 
 > Event ID=13526  
 Severity=Error  
-The File Replication Service cannot replicate %1 with the computer
-%2 because the computer's SID cannot be determined from the distinguished
-name "%3".  
+The File Replication Service cannot replicate %1 with the computer %2 because the computer's SID cannot be determined from the distinguished name "%3".
 
 The File Replication Service will retry later.
-
-==
+ ## Event ID 13527 to 13546
 
 > Event ID=13527  
 Severity=Error  
-The RPC binding failed in the Open function of the FileReplicaSet Object. The
-counter data for this object will not be available. The FileReplicaSet object
-contains the performance counters of the Replica sets whose files are being
-replicated by the File Replication Service.  
-
-==
+The RPC binding failed in the Open function of the FileReplicaSet Object. The counter data for this object will not be available. The FileReplicaSet object contains the performance counters of the Replica sets whose files are being replicated by the File Replication Service.
 
 > Event ID=13528  
 Severity=Error  
-The RPC binding failed in the Open function of the FileReplicaConn Object. The
-counter data for this object will not be available. The FileReplicaConn object
-contains the performance counters of the connections over which files are being
-replicated by the File Replication Service.  
-
-==
+The RPC binding failed in the Open function of the FileReplicaConn Object. The counter data for this object will not be available. The FileReplicaConn object contains the performance counters of the connections over which files are being replicated by the File Replication Service.
 
 > Event ID=13529  
 Severity=Error  
-The RPC call failed in the Open function of the FileReplicaSet Object. The
-counter data for this object will not be available. The FileReplicaSet object
-contains the performance counters of the Replica sets whose files are being
-replicated by the File Replication Service.
-
-==
+The RPC call failed in the Open function of the FileReplicaSet Object. The counter data for this object will not be available. The FileReplicaSet object contains the performance counters of the Replica sets whose files are being replicated by the File Replication Service.
 
 > Event ID=13530  
 Severity=Error  
-The RPC call failed in the Open function of the FileReplicaConn Object. The
-counter data for this object will not be available. The FileReplicaConn object
-contains the performance counters of the connections over which files are being
-replicated by the File Replication Service.  
-
-==
+The RPC call failed in the Open function of the FileReplicaConn Object. The counter data for this object will not be available. The FileReplicaConn object contains the performance counters of the connections over which files are being replicated by the File Replication Service.
 
 > Event ID=13531  
 Severity=Error  
-The RPC binding failed in the Collect function of the FileReplicaSet Object. The
-counter data for this object will not be available until the binding succeeds.
-The FileReplicaSet object contains the performance counters of the Replica sets
-whose files are being replicated by the File Replication Service.
-
-==
+The RPC binding failed in the Collect function of the FileReplicaSet Object. The counter data for this object will not be available until the binding succeeds. The FileReplicaSet object contains the performance counters of the Replica sets whose files are being replicated by the File Replication Service.
 
 > Event ID=13532  
 Severity=Error  
-The RPC binding failed in the Collect function of the FileReplicaConn Object.
-The counter data for this object will not be available until the binding
-succeeds. The FileReplicaConn object contains the performance counters of the
-connections over which files are being replicated by the File Replication
-Service.  
-
-==
+The RPC binding failed in the Collect function of the FileReplicaConn Object. The counter data for this object will not be available until the binding succeeds. The FileReplicaConn object contains the performance counters of the connections over which files are being replicated by the File Replication Service.
 
 > Event ID=13533  
 Severity=Error  
-The RPC call failed in the Collect function of the FileReplicaSet Object. The
-counter data for this object will not be available until the call succeeds. The
-FileReplicaSet object contains the performance counters of the Replica sets
-whose files are being replicated by the File Replication Service.
-
-==
+The RPC call failed in the Collect function of the FileReplicaSet Object. The counter data for this object will not be available until the call succeeds. The FileReplicaSet object contains the performance counters of the Replica sets whose files are being replicated by the File Replication Service.
 
 > Event ID=13534  
 Severity=Error  
-The RPC call failed in the Collect function of the FileReplicaConn Object. The
-counter data for this object will not be available until the call succeeds. The
-FileReplicaConn object contains the performance counters of the connections over
-which files are being replicated by the File Replication Service.
-
-==
+The RPC call failed in the Collect function of the FileReplicaConn Object. The counter data for this object will not be available until the call succeeds. The FileReplicaConn object contains the performance counters of the connections over which files are being replicated by the File Replication Service.
 
 > Event ID=13535  
 Severity=Error  
-The call to VirtualAlloc failed in the Open function of the FileReplicaSet
-Object. The counter data for this object will not be available. The
-FileReplicaSet object contains the performance counters of the Replica sets
-whose files are being replicated by the File Replication Service.
-
-==
+The call to VirtualAlloc failed in the Open function of the FileReplicaSet Object. The counter data for this object will not be available. The FileReplicaSet object contains the performance counters of the Replica sets whose files are being replicated by the File Replication Service.
 
 > Event ID=13536  
 Severity=Error  
-The call to VirtualAlloc failed in the Open function of the FileReplicaConn
-Object. The counter data for this object will not be available. The
-FileReplicaConn object contains the performance counters of the connections over
-which files are being replicated by the File Replication Service.
-
-==
+The call to VirtualAlloc failed in the Open function of the FileReplicaConn Object. The counter data for this object will not be available. The FileReplicaConn object contains the performance counters of the connections over which files are being replicated by the File Replication Service.
 
 > Event ID=13537  
 Severity=Error  
-The call to the Registry failed in the Open function of the FileReplicaSet
-Object. The counter data for this object will not be available. The
-FileReplicaSet object contains the performance counters of the Replica sets
-whose files are being replicated by the File Replication Service.
+The call to the Registry failed in the Open function of the FileReplicaSet Object. The counter data for this object will not be available. The FileReplicaSet object contains the performance counters of the Replica sets whose files are being replicated by the File Replication Service.
 
-==
-
-> Event ID=13538
-Severity=Error  
-The call to the Registry failed in the Open function of the FileReplicaConn
-Object. The counter data for this object will not be available. The
-FileReplicaConn object contains the performance counters of the connections over
-which files are being replicated by the File Replication Service.
-
-==
+> Event ID=13538 Severity=Error  
+The call to the Registry failed in the Open function of the FileReplicaConn Object. The counter data for this object will not be available. The FileReplicaConn object contains the performance counters of the connections over which files are being replicated by the File Replication Service.
 
 > Event ID=13539  
 Severity=Error  
-The File Replication Service cannot replicate %1 because the
-pathname of the replicated directory is not the fully qualified
-pathname of an existing, accessible local directory.  
-
-==
+The File Replication Service cannot replicate %1 because the pathname of the replicated directory is not the fully qualified pathname of an existing, accessible local directory.  
 
 > Event ID=13540  
 Severity=Error  
-The File Replication Service cannot replicate %1 because the pathname
-of the customer designated staging directory:
-%2
-is not the fully qualified pathname of an existing, accessible local directory.
-
-==
+The File Replication Service cannot replicate %1 because the pathname of the customer designated staging directory: %2 is not the fully qualified pathname of an existing, accessible local directory.
 
 > Event ID=13541  
 Severity=Error  
-The File Replication Service cannot replicate %1 because it overlaps
-the File Replication Service's logging pathname %2.  
-
-==
+The File Replication Service cannot replicate %1 because it overlaps the File Replication Service's logging pathname %2.  
 
 > Event ID=13542  
 Severity=Error  
-The File Replication Service cannot replicate %1 because it overlaps
-the File Replication Service's working directory %2.
-
-==
+The File Replication Service cannot replicate %1 because it overlaps the File Replication Service's working directory %2.
 
 > Event ID=13543  
 Severity=Error  
-The File Replication Service cannot replicate %1 because it overlaps
-the staging directory %2.  
-
-==
+The File Replication Service cannot replicate %1 because it overlaps the staging directory %2.  
 
 > Event ID=13544  
 Severity=Error  
-The File Replication Service cannot replicate %1 because it overlaps
-the replicating directory %2.  
-
-==
+The File Replication Service cannot replicate %1 because it overlaps the replicating directory %2.  
 
 > Event ID=13545  
 Severity=Error  
-The File Replication Service cannot replicate %1 because it overlaps
-the staging directory %2 of the replicating directory %3.  
+The File Replication Service cannot replicate %1 because it overlaps the staging directory %2 of the replicating directory %3.  
 
 > Event ID=13546  
 Severity=Error  
-The File Replication Service could not prepare the root directory
-%1 for replication. This is likely due to a problem creating the
-root directory or a problem removing pre-existing files in the root
-directory.  
+The File Replication Service could not prepare the root directory %1 for replication. This is likely due to a problem creating the root directory or a problem removing pre-existing files in the root directory.  
 
-Check that the path leading up to the root directory exists and is
-accessible.
+Check that the path leading up to the root directory exists and is accessible.
 
-==
+## Event ID 13547
 
 > Event ID=13547  
 Severity=Warning  
@@ -611,7 +432,7 @@ under the Edit Menu item. Type the value name exactly as shown above using the
 above registry data type. Make sure you observe the data units and allowed range
 when entering the value.
 
-==
+## Event ID 13548
 
 > Event ID=13548  
 Severity=Error  
@@ -646,7 +467,7 @@ and update the value.
 If the value name is not present, you may add it with the New->DWORD Value function
 under the Edit Menu item. Type the value name exactly as shown above.
 
-==
+## Event ID 13549
 
 > Event ID=13549  
 Severity=Error  
@@ -668,7 +489,7 @@ computer while the computer was set to the incorrect time zone when its
 computer time was initially set. Check that the timezone and time are
 correctly set on the partner computer.
 
-==
+## Event ID 13550
 
 > Event ID=13550  
 Severity=Error  
@@ -691,7 +512,7 @@ possible errors to check are:
 Correct the problem and the service will attempt to restart replication
 automatically at a later time.
 
-==
+## Event ID 13551
 
 > Event ID=13551  
 Severity=Error  
@@ -715,7 +536,7 @@ possible errors to check are:
 Correct the problem and the service will attempt to restart replication
 automatically at a later time.
 
-==
+## Event ID 13552
 
 > Event ID=13552  
 Severity=Error  
@@ -743,7 +564,7 @@ Other event log messages may also help determine the problem. Correct the
 problem and the service will attempt to restart replication automatically at
 a later time.
 
-==
+## Event ID 13553
 
 > Event ID=13553  
 Severity=Informational  
@@ -758,7 +579,7 @@ Replica set root path is "%4"
 Replica staging directory path is "%5"
 Replica working directory path is "%6"
 
-==
+## Event ID 13554
 
 > Event ID=13554  
 Severity=Informational  
@@ -776,7 +597,7 @@ to the replica set:
 
 More information may appear in subsequent event log messages.
 
-==
+## Event ID 13555
 
 > Event ID=13555  
 Severity=Error  
@@ -843,6 +664,8 @@ or other replica sets with replication enabled:
     > If this error message is in the eventlog of all the members of a particular replica set, then perform steps (4-a) and (4-e) above on only
     one of the members.
 
+## Event ID 13556
+
 > Event ID=13556  
 Severity=Error  
 The File Replication Service has detected what appears to be an attempt
@@ -865,7 +688,7 @@ The current Replica set root path is "%4"
 The desired new Replica set root path is "%5"
 Replica staging directory path is "%6"
 
-==
+## Event ID 13557
 
 > Event ID=13557  
 Severity=Error  
@@ -889,7 +712,7 @@ following the steps below:
 3. Look for duplicate connections from "%1" in site "%8".
 4. Delete all but one of the connections.
 
-==
+## Event ID 13558
 
 > Event ID=13558  
 Severity=Error  
@@ -916,7 +739,7 @@ Look for the FRS member object "%6" under the subtree for replica set "%2".
 5. Under "%6" look for duplicate connections from "%1".
 6. Delete all but one of the connections.
 
-==
+## Event ID 13559
 
 > Event ID=13559  
 Severity=Error  
@@ -937,14 +760,12 @@ sync for the replica set. At the end of the sync, all the files will be at the n
 location. The files may or may not be deleted from the old location depending on whether
 they are needed or not.
 
-==
+## Event ID 13560 and 13561
 
 > Event ID=13560  
 Severity=Warning  
 The File Replication Service is deleting this computer from the replica set "%1" as an attempt to recover from the error state,  
 Error status = %2. At the next poll, which will occur in %3 minutes, this computer will be readded to the replica set. The readdition will trigger a full tree sync for the replica set.
-
-==
 
 > Event ID=13561  
 Severity=Error  
@@ -971,7 +792,7 @@ deleted from the replica set.
 2. At the poll following the deletion this computer will be readded to the
 replica set. The readdition will trigger a full tree sync for the replica set.
 
-==
+## Event ID 13562 and 13563
 
 > Event ID=13562  
 Severity=Warning  
@@ -979,8 +800,6 @@ Following is the summary of warnings and errors encountered by File Replication 
 while polling the Domain Controller %1 for FRS replica set configuration information.
 >
 > %2
-
-==
 
 > Event ID=13563  
 Severity=Warning  
@@ -1001,7 +820,7 @@ location. If more than one replica set are sharing the current staging directory
 is safer to copy the staging files to the new staging directory.
 3. Run "net start ntfrs" or use the Services snap-in to start File Replication Service.
 
-==
+## Event ID 13564
 
 > Event ID=13564  
 Severity=Warning  
@@ -1025,7 +844,7 @@ Debug Log File REG_SZ %windir%\debug
 
 Changes to the registry values will take effect at the next polling cycle.
 
-==
+## Event ID 13565
 
 > Event ID=13565  
 Severity=Warning  
@@ -1044,7 +863,7 @@ The time is dependent on the amount of data in the system volume,
 the availability of other domain controllers, and the replication
 interval between domain controllers.
 
-==
+## Event ID 13566
 
 > Event ID=13566  
 Severity=Warning  
@@ -1061,7 +880,7 @@ share will appear.
 The initialization of the system volume can take some time.
 The time is dependent on the amount of data in the system volume.
 
-==
+## Event ID 13567
 
 > Event ID=13567  
 Severity=Warning  
@@ -1087,7 +906,7 @@ Expand HKEY_LOCAL_MACHINE, SYSTEM, CurrentControlSet, Services, NtFrs, Parameter
 and create or update the value "Suppress Identical Updates To Files" to 0 (Default is 1) to force
 identical updates to replicate.
 
-==
+## Event ID 13568
 
 > Event ID=13568  
 Severity=Error  
@@ -1139,7 +958,7 @@ and update the value.
 If the value name is not present, you may add it with the New->DWORD Value function
 under the Edit Menu item. Type the value name exactly as shown above.
 
-==
+## Event ID 13569
 
 > Event ID=13569  
 Severity=Error  
@@ -1156,7 +975,7 @@ Skipped file list: "%2"
 Files are skipped during primary load if FRS is not able to open the file. Check if these
 files are open. These files will replicate the next time they are modified.
 
-==
+## Event ID 13570
 
 > Event ID=13570  
 Severity=Error  
@@ -1170,7 +989,7 @@ The available space on the volume can be found by typing
 For more information about managing space on a volume type *copy /?*,
 *rename /?*, *del /?*, *rmdir /?*, and *dir /?*.
 
-==
+## Event ID 13571
 
 > Event ID=13571  
 Severity=Error  
@@ -1185,7 +1004,7 @@ Volume Serial Number: %1
 The output of `dir` command displays the Volume Serial Number
 before listing the contents of the folder.
 
-==
+## Event ID 13572
 
 > Event ID=13572  
 Severity=Error  
@@ -1193,7 +1012,7 @@ The File Replication Service was unable to create the directory "%1" to store de
 
 If this directory doesn't exist, then FRS will be unable to write debug logs. Missing debug logs make it difficult, if not impossible, to diagnose FRS problems.
 
-==
+## Event ID 13573
 
 > Event ID=13573  
 Severity=Warning  
@@ -1207,7 +1026,7 @@ application holds a file open, blocking FRS from updating it. Blockage caused by
 result in out-of-date replicated content. FRS will continue to retry this update, but will be blocked
 until the sharing violations are eliminated. For more information on troubleshooting, refer to [Microsoft Support](https://support.microsoft.com/?id=822300).
 
-Windows Server 2008 R2 and later events:  
+## Event ID 13574
 
 > Event ID=13574  
 Severity=Error  
@@ -1217,7 +1036,7 @@ deprecated and therefore, the service has been stopped. The DFS Replication serv
 recommended for replication of folders, the SYSVOL share on domain controllers and DFS
 link targets.
 
-==
+## Event ID 13575
 
 > Event ID=13575  
 Severity=Error  
@@ -1227,7 +1046,7 @@ sets has been deprecated and therefore, the service has been stopped. The DFS Re
 service is recommended for replication of folders, the SYSVOL share on domain controllers
 and DFS link targets.
 
-==
+## Event ID 13576
 
 > Event ID=13576  
 Severity=Error  
