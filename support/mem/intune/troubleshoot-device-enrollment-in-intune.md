@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot device enrollment
 description: Suggestions for troubleshooting device enrollment issues in Microsoft Intune.
-ms.date: 11/09/2018
+ms.date: 12/11/2020
 ms.reviewer: damionw
 ---
 # Troubleshoot device enrollment in Microsoft Intune
@@ -101,7 +101,7 @@ To avoid hitting device caps, be sure to remove stale device records.
 
 ### Unable to sign in or enroll devices when you have multiple verified domains
 
-**Issue:** This problem may occur when you add a second verified domain to your ADFS. Users with the user principal name (UPN) suffix of the second domain may not be able to log into the portals or enroll devices.
+**Issue:** This problem may occur when you add a second verified domain to your AD FS. Users with the user principal name (UPN) suffix of the second domain may not be able to log into the portals or enroll devices.
 
 **Resolution:** Microsoft 365 customers are required to deploy a separate instance of the AD FS 2.0 Federation Service for each suffix if they:
 
@@ -121,7 +121,7 @@ The following table lists errors that end users might see while enrolling Androi
 |**IT admin needs to assign license for access**<br>Your IT admin hasn't given you access to use this app. Get help from your IT admin or try again later.|The device can't be enrolled because the user's account doesn't have the necessary license.|Before users can enroll their devices, they must have been assigned the necessary license. This message means that they have the wrong license type for the mobile device management authority. For example, they'll see this error if both of the following are true:<ol><li>Intune has been set as the mobile device management authority</li><li>They're using a System Center 2012 R2 Configuration Manager license.</li></ol>For more information, see [Assign Intune licenses to your user accounts](/mem/intune/fundamentals/licenses-assign).|
 |**IT admin needs to set MDM authority**<br>Looks like your IT admin hasn't set an MDM authority. Get help from your IT admin or try again later.|The mobile device management authority hasn't been defined.|The mobile device management authority hasn't been set in Intune. See information about how to [set the mobile device management authority](/mem/intune/fundamentals/mdm-authority-set).|
 
-### Devices fail to check in with the Intune service and display as "Unhealthy" in the Intune admin console
+### Devices fail to check in with the Intune service and display as **Unhealthy** in the Intune admin console
 
 **Issue:** Some Samsung devices that are running Android versions 4.4.x and 5.x might stop checking in with the Intune service. If devices don't check in:
 
@@ -131,20 +131,20 @@ The following table lists errors that end users might see while enrolling Androi
 
 Samsung Smart Manager software, which ships on certain Samsung devices, can deactivate the Intune Company Portal and its components. When the Company Portal is in a deactivated state, it can't run in the background and can't contact the Intune service.
 
-**Resolution #1:**
+**Resolution 1:**
 
 Tell your users to start the Company Portal app manually. Once the app restarts, the device checks in with the Intune service.
 
 > [!IMPORTANT]
 > Opening the Company Portal app manually is a temporary solution, because Samsung Smart Manager may deactivate the Company Portal app again.
 
-**Resolution #2:**
+**Resolution 2:**
 
 Tell your users to try upgrading to Android 6.0. The deactivation issue doesn't occur on Android 6.0 devices. To check if an update is available, go to **Settings** > **About device** > **Download updates manually** > follow the prompts.
 
-**Resolution #3:**
+**Resolution 3:**
 
-If Resolution #2 doesn't work, have your users follow these steps to make Smart Manager exclude the  Company Portal app:
+If Resolution 2 doesn't work, have your users follow these steps to make Smart Manager exclude the  Company Portal app:
 
 1. Launch the Smart Manager app on the device.
 
@@ -187,7 +187,7 @@ If Resolution #2 doesn't work, have your users follow these steps to make Smart 
 ### Android certificate issues
 
 **Issue**: Users receive the following message on their device:
-*You can't sign in because your device is missing a required certificate.*
+**You can't sign in because your device is missing a required certificate.**
 
 **Resolution 1**:
 
@@ -201,7 +201,7 @@ The certificate error occurs because Android devices require intermediate certif
 
 To fix the issue, import the certificates into the Computers Personal Certificates on the AD FS server or proxies as follows:
 
-1. On the ADFS and proxy servers, right-click **Start** > **Run** > **certlm.msc** to launch the Local Machine Certificate Management Console.
+1. On the AD FS and proxy servers, right-click **Start** > **Run** > **certlm.msc** to launch the Local Machine Certificate Management Console.
 2. Expand **Personal** and choose **Certificates**.
 3. Find the certificate for your AD FS service communication (a publicly signed certificate), and double-click to view its properties.
 4. Choose the **Certification Path** tab to see the certificate's parent certificate/s.
@@ -213,7 +213,7 @@ To fix the issue, import the certificates into the Computers Personal Certificat
 10. Restart the AD FS servers.
 11. Repeat the above steps on all of your AD FS and proxy servers.
 
-To verify a proper certificate installation, you can use the diagnostics tool available on [https://www.digicert.com/help/](https://www.digicert.com/help/). In the **Server Address** box, enter your ADFS server's FQDN (IE: sts.contso.com) and click **Check Server**.
+To verify a proper certificate installation, you can use the diagnostics tool available on [https://www.digicert.com/help/](https://www.digicert.com/help/). In the **Server Address** box, enter your AD FS server's FQDN, such as `sts.contoso.com`, and then click **Check Server**.
 
 **To validate that the certificate installed correctly**:
 
@@ -222,7 +222,22 @@ The follow steps describe just one of many methods and tools that you can use to
 1. Go to the [free Digicert tool](https://www.digicert.com/help/).
 2. Enter your AD FS server's fully qualified domain name (for example, sts.contoso.com) and select **CHECK SERVER**.
 
-If the Server certificate is installed correctly, you see all check marks in the results. If the problem above exists, you see a red X in the "Certificate Name Matches" and the "SSL Certificate is correctly Installed" sections of the report.
+If the Server certificate is installed correctly, you see all check marks in the results. If the problem above exists, you see a red X in the **Certificate Name Matches** and the **SSL Certificate is correctly Installed** sections of the report.
+
+**Resolution 3**:
+
+The users are unable to authenticate in Company Portal. But they can authenticate in Microsoft Authenticator and web browsers.
+
+This issue occurs if your AD FS server uses a user certificate rather than a certificate issued by a public certificate authority (CA).
+
+There are two certificate stores in Android devices:
+
+- The user certificate store
+- The system certificate store
+
+Staring in Android 7.0, apps ignore user certificates by default, unless the apps explicitly opt in. For more information, see [Changes to Trusted Certificate Authorities in Android Nougat](https://android-developers.googleblog.com/2016/07/changes-to-trusted-certificate.html).
+
+To fix this issue, use a certificate that chains to a publicly trusted root in your AD FS server. A list of public CAs on Android can be found at [https://android.googlesource.com/platform/system/ca-certificates/+/master/files/](https://android.googlesource.com/platform/system/ca-certificates/+/master/files/).
 
 ## iOS/iPadOS issues
 
@@ -232,13 +247,13 @@ The following table lists errors that end users might see while enrolling iOS/iP
 
 |Error message|Issue|Resolution|
 |-------------|-----|----------|
-|NoEnrollmentPolicy|No enrollment policy found|Check that all enrollment prerequisites, like the Apple Push Notification Service (APNs) certificate, have been set up and that "iOS/iPadOS as a platform" is enabled. For instructions, see [Set up iOS/iPadOS and Mac device management](/mem/intune/enrollment/ios-enroll).|
+|NoEnrollmentPolicy|No enrollment policy found|Check that all enrollment prerequisites, like the Apple Push Notification Service (APNs) certificate, have been set up and that **iOS/iPadOS as a platform** is enabled. For instructions, see [Set up iOS/iPadOS and Mac device management](/mem/intune/enrollment/ios-enroll).|
 |DeviceCapReached|Too many mobile devices are enrolled already.|The user must remove one of their currently enrolled mobile devices from the Company Portal before enrolling another. See the instructions for the type of device you're using: [Android](/mem/intune/user-help/unenroll-your-device-from-intune-android), [iOS/iPadOS](/mem/intune/user-help/unenroll-your-device-from-intune-ios), [Windows](/mem/intune/user-help/unenroll-your-device-from-intune-windows).|
 |APNSCertificateNotValid|There's a problem with the certificate that lets the mobile device communicate with your company's network.<br /><br />|The Apple Push Notification Service (APNs) provides a channel to contact enrolled iOS/iPadOS devices. Enrollment will fail and this message will appear if:<ul><li>The steps to get an APNs certificate weren't completed, or</li><li>The APNs certificate has expired.</li></ul>Review the information about how to set up users in [Sync Active Directory and add users to Intune](/mem/intune/fundamentals/users-add) and [organizing users and devices](/mem/intune/fundamentals/groups-add).|
 |AccountNotOnboarded|There's a problem with the certificate that lets the mobile device communicate with your company's network.<br /><br />|The Apple Push Notification Service (APNs) provides a channel to contact enrolled iOS/iPadOS devices. Enrollment will fail and this message will appear if:<ul><li>The steps to get an APNs certificate weren't completed, or</li><li>The APNs certificate has expired.</li></ul>For more information, review [Set up iOS/iPadOS and Mac management with Microsoft Intune](/mem/intune/enrollment/ios-enroll).|
 |DeviceTypeNotSupported|The user might have tried to enroll using a non-iOS device. The mobile device type that you're trying to enroll isn't supported.<br /><br />Confirm that device is running iOS/iPadOS version 8.0 or later.<br /><br />|Make sure that your user's device is running iOS/iPadOS version 8.0 or later.|
 |UserLicenseTypeInvalid|The device can't be enrolled because the user's account isn't yet a member of a required user group.<br /><br />|Before users can enroll their devices, they must be members of the right user group. This message means that they have the wrong license type for the mobile device management authority. For example, they'll see this error if both of the following are true:<ol><li>Intune has been set as the mobile device management authority</li><li>they'e using a System Center 2012 R2 Configuration Manager license.</li></ol>Review the following articles for more information:<br /><br />Review [Set up iOS/iPadOS and Mac management with Microsoft Intune](/mem/intune/enrollment/ios-enroll) and information about how to set up users in [Sync Active Directory and add users to Intune](/mem/intune/fundamentals/users-add) and [organizing users and devices](/mem/intune/fundamentals/groups-add).|
-|MdmAuthorityNotDefined|The mobile device management authority hasn't been defined.<br /><br />|The mobile device management authority hasn't been set in Intune.<br /><br />Review item #1 in the "Step 6: Enroll mobile devices and install an app" section in [Get started with a 30-day trial of Microsoft Intune](/mem/intune/fundamentals/free-trial-sign-up).|
+|MdmAuthorityNotDefined|The mobile device management authority hasn't been defined.<br /><br />|The mobile device management authority hasn't been set in Intune.<br /><br />Review item #1 in the **Step 6: Enroll mobile devices and install an app** section in [Get started with a 30-day trial of Microsoft Intune](/mem/intune/fundamentals/free-trial-sign-up).|
 
 ### Devices are inactive or the admin console can't communicate with them
 
@@ -262,7 +277,7 @@ If the sync is unsuccessful, users see an **Unable to sync** inline notification
 
   ![Unable to sync notification](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_unable_to_sync_notification.png)
 
-To fix the issue, users must select the **Set up** button, which is to the right of the **Unable to sync** notification. The Set up button takes users to the Company Access Setup flow screen, where they can follow the prompts to enroll their device.
+To fix the issue, users must select the **Set up** button, which is to the right of the **Unable to sync** notification. The **Set up** button takes users to the Company Access Setup flow screen, where they can follow the prompts to enroll their device.
 
   ![Company Access Setup screen](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_company_access_setup.png)
 
@@ -280,10 +295,10 @@ Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 
 For more information, see [Get-AdfsEndpoint documentation](/powershell/module/adfs/get-adfsendpoint).
 
-For more information, see [Best practices for securing Active Directory Federation Services](/windows-server/identity/ad-fs/deployment/Best-Practices-Securing-AD-FS). For help in determining if WS-Trust 1.3 Username/Mixed is enabled in your identity federation provider:
+For more information, see [Best practices for securing Active Directory Federation Services](/windows-server/identity/ad-fs/deployment/Best-Practices-Securing-AD-FS). For help with determining if WS-Trust 1.3 Username/Mixed is enabled in your identity federation provider:
 
-- contact Microsoft Support if you use ADFS
-- contact your third party identity vendor.
+- contact Microsoft Support if you use AD FS
+- contact your third-party identity vendor.
 
 ### Profile installation failed
 
