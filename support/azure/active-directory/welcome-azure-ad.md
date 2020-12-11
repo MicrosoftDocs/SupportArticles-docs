@@ -2,7 +2,7 @@
 title: Azure Active Directory troubleshooting documentation
 description: This article lists Knowledge Base (KB) and other Support articles for Azure Active Directory.
 ms.topic: landing-page
-feedback: none
+feedback_system: None
 ms.date: 07/15/2020
 ---
 # Azure Active Directory troubleshooting
