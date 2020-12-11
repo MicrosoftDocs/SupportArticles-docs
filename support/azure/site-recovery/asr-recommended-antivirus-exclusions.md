@@ -1,6 +1,6 @@
 ---
 title: Recommended antivirus exclusions for Azure Recovery Services
-description: Describes recommended antivirus (AV) settings for servers that have Microsoft Azure Recovery Services (ASR) software installed. The various exclusion sets for each role are described.
+description: Describes recommended antivirus (AV) settings for servers that have Microsoft Azure Recovery Services software installed. The various exclusion sets for each role are described.
 ms.date: 10/10/2020
 ms.prod-support-area-path: 
 ms.service: backup
@@ -15,11 +15,11 @@ _Original KB number:_ &nbsp; 3186955
 
 ## Summary
 
-This article describes recommended antivirus (AV) settings for servers that have Microsoft Azure Recovery Services (ASR) software installed. The various exclusion sets for each role are described.
+This article describes recommended antivirus (AV) settings for servers that have Microsoft Azure Recovery Services software installed. The various exclusion sets for each role are described.
 
 ## More information
 
-### Azure Site recovery (ASR) SCVMM to Azure Deployment: Antivirus exclusion guidance
+### Azure Site Recovery SCVMM to Azure Deployment: Antivirus exclusion guidance
 
 #### System Center 2012 R2 Virtual Machine Manager (SC 2012 R2 VMM) servers 
 
@@ -31,15 +31,15 @@ Additionally, exclude items from the following location:
 
 `%ProgramData%\ASRLogs`
 
-#### Clustered Services (VMM and ASR Agent installed on Hyper-V clusters) 
+#### Clustered Services (VMM and Azure Recovery Services Agent installed on Hyper-V clusters) 
 
 For information about recommended exclusions for Cluster Services, see the following KB article:
 
 [250355](https://support.microsoft.com/help/250355) Antivirus software that is not cluster-aware may cause problems with Cluster Services
 
-#### Azure Site recovery (ASR) Hyper-V to Azure deployment: Antivirus exclusion guidance
+#### Azure Site Recovery Hyper-V to Azure deployment: Antivirus exclusion guidance
 
-#### Hyper-V Servers (ASR Agent) 
+#### Hyper-V Servers (Azure Recovery Services Agent) 
 
 Exclude all items that are listed in the following KB article:
 
@@ -50,33 +50,33 @@ Additionally, exclude all items from the following locations:
 `%ProgramFiles%\Microsoft Azure Recovery Services Agent\Scratch`  
 `%ProgramFiles%\Microsoft Azure Recovery Services Agent\Temp`
 
-### Azure Site recovery (ASR) VMware to VMware deployment: Antivirus exclusion guidance
+### Azure Site Recovery VMware to VMware deployment: Antivirus exclusion guidance
 
 #### Source servers 
 
-Exclude the following:
+Exclude the following directories:
 
-- The installation path of the Scout agent; by default, this is `C:\Program Files (x86)\InMage Systems`.
-- The Application cache directory; by default, this goes under the installation path. If configured separately, please check here. By default, the path is `C:\Program Files (x86)\InMage Systems\hostconfigwxcommon.exe`. Check the Application cache on the **Agent** tab.
+- The installation path of the Scout agent; by default, it is `C:\Program Files (x86)\InMage Systems`.
+- The Application cache directory; by default, it goes under the installation path. If configured separately, check here. By default, the path is `C:\Program Files (x86)\InMage Systems\hostconfigwxcommon.exe`. Check the Application cache on the **Agent** tab.
 - In case of MSCS cluster volumes, exclude the InMageClusterLog folder under every cluster volume.
 
 #### Master-target (MT) servers 
 
-Exclude the following:
+Exclude the following directories:
 
-- The installation path of Scout MT; by default, this is `C:\Program Files (x86)\InMage Systems`.
-- The target cache directory; by default, this goes under the installation path. If configured separately, please check here. By default, the path is `C:\Program Files (x86)\InMage Systems\hostconfigwxcommon.exe`. Check the Application cache on the **Agent** tab.
+- The installation path of Scout MT; by default, it is `C:\Program Files (x86)\InMage Systems`.
+- The target cache directory; by default, it goes under the installation path. If configured separately, check here. By default, the path is `C:\Program Files (x86)\InMage Systems\hostconfigwxcommon.exe`. Check the Application cache on the **Agent** tab.
 - All Retention log volumes.
 - The `C:\SRV` path and all subfolders.
 
-### Azure Site recovery (ASR) VMware to Azure deployment: Antivirus exclusion guidance
+### Azure Site Recovery VMware to Azure deployment: Antivirus exclusion guidance
 
 #### Source servers (Configuration Server, Process Server, Master Target) 
 
-Exclude the installation path of the Azure Site Recovery agent; by default, this is `C:\Program Files(x86)\Azure Site Recovery`.
+Exclude the installation path of the Azure Site Recovery agent; by default, it is `C:\Program Files(x86)\Azure Site Recovery`.
 
-Exclude the installation path of the Recovery Services agent; by default, this is `C:\Program Files\Microsoft Azure Recovery Services Agent`.
+Exclude the installation path of the Recovery Services agent; by default, it is `C:\Program Files\Microsoft Azure Recovery Services Agent`.
 
 #### Protected VMs  
 
-Guest virtual machines (VMs) that are protected by ASR should exclude the installation folder where the guest agent is installed. By default, this is `C:\Program Files (x86)\Azure Site Recovery`.
+Guest virtual machines (VMs) that are protected by Azure Recovery Services should exclude the installation folder where the guest agent is installed. By default, it is `C:\Program Files (x86)\Azure Site Recovery`.
