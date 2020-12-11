@@ -84,7 +84,7 @@ In the **Value data** box for the new entry, you can enter a list of URLs, such 
 
 - `https://*.Contoso.com`
 - `http://*.dns.live.com`
-- *.microsoft.com
+- `*.microsoft.com`
 
 This URL list enables the WebClient service to send credentials through the following channels:
 
@@ -121,7 +121,7 @@ This URL list enables the WebClient service to send credentials through the foll
 - Do not use IPv6 in the URL list.
 
 > [!IMPORTANT]
-> Essential information required for user successThis URL list does not affect the security zone settings. This URL list is used only for the specific purpose of forwarding the credentials to WebDAV servers. The list should be created as restrictively as possible to avoid any security issues. Also, because there is no specific deny list, the credentials are forwarded to all the servers that match this list.
+> This URL list does not affect the security zone settings. This URL list is used only for the specific purpose of forwarding the credentials to WebDAV servers. The list should be created as restrictively as possible to avoid any security issues. Also, because there is no specific deny list, the credentials are forwarded to all the servers that match this list.
 
 ## Status
 
