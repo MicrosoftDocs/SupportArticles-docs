@@ -185,7 +185,11 @@ For systems without a locally defined IPSec policy enabled, follow these steps t
     ipsecpol -w REG -p "Block Protocol PortNumber Filter" -r "Block Inbound Protocol PortNumber Rule" -f *=0: PortNumber: Protocol -n BLOCK -x
     ```
 
-    For example, to block network traffic from any IP address and any source port to destination port UDP 1434 on a Windows 2000-based computer, type the following. This policy is sufficient to help protect computers that run Microsoft SQL Server 2000 from the "Slammer" worm. ipsecpol -w REG -p "Block UDP 1434 Filter" -r "Block Inbound UDP 1434 Rule" -f *=0:1434:UDP -n BLOCK -x 
+    For example, to block network traffic from any IP address and any source port to destination port UDP 1434 on a Windows 2000-based computer, type the following. This policy is sufficient to help protect computers that run Microsoft SQL Server 2000 from the "Slammer" worm.
+
+    ```console
+    ipsecpol -w REG -p "Block UDP 1434 Filter" -r "Block Inbound UDP 1434 Rule" -f *=0:1434:UDP -n BLOCK -x
+    ```
 
     The following example blocks inbound access to TCP port 80 but still allows outbound TCP 80 access. This policy is sufficient to help protect computers that run Microsoft Internet Information Services (IIS) 5.0 from the "Code Red" and "Nimda" worms.
 
@@ -194,7 +198,7 @@ For systems without a locally defined IPSec policy enabled, follow these steps t
     ```
 
     > [!NOTE]
-    > The -x switch assigns the policy immediately. If you enter this command, the "Block UDP 1434 Filter" policy is unassigned, and the "Block TCP 80 Filter" is assigned. To add but not assign the policy, type the command without the `-x` switch at the end .
+    > The `-x` switch assigns the policy immediately. If you enter this command, the "Block UDP 1434 Filter" policy is unassigned, and the "Block TCP 80 Filter" is assigned. To add but not assign the policy, type the command without the `-x` switch at the end .
 
 4. To add an additional filtering rule to the existing "Block UDP 1434 Filter" policy that blocks network traffic that originates *from* your Windows 2000-based computer to any IP address, use the following command, where **Protocol** and **PortNumber** are variables:
 

@@ -40,4 +40,4 @@ However, for some cases, when the system tries to load the driver, Windows Drive
 
 The driver that Windows tries to load will be retried. Unless the events are logged continuously there is no need to do anything, the events are safe to ignore.
 
-You can confirm the driver is loaded successfully in the System Information, and you can confirm the devices are running correctly in the Device Manager.
+You can confirm the driver is loaded successfully in the **System Information**, and you can confirm the devices are running correctly in the **Device Manager**.
