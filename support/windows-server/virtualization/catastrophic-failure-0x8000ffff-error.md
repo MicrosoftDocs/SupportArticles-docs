@@ -13,7 +13,7 @@ ms.reviewer: kaushika, shenry, liexgu
 ms.prod-support-area-path: Virtual machine will not boot
 ms.technology: HyperV
 ---
-# "'Catastrophic failure' (0x8000FFFF)" error when you start a VM on a Windows Server 2012 R2-based Hyper-V server
+# Catastrophic failure (0x8000FFFF) error when you start a VM on a Windows Server 2012 R2-based Hyper-V server
 
 This article provides a solution to fix the 0x8000FFFF error that occurs when you start a Virtual Machine (VM) on a Windows Server 2012 R2-based Hyper-V server.
 
@@ -23,11 +23,15 @@ _Original KB number:_ &nbsp; 2960802
 ## Symptoms
 
 Consider the following scenario:
+
 - You have a Windows Server 2012-based Hyper-V server.
 - You have RemoteFX 3D Adapter (vGPU) enabled on a VM.
 - You put the VM in saved state, and then upgrade the host server to Windows Server 2012 R2.
 - You start the saved vGPU VM after the upgrade.
-- You connect to the vGPU VM, and then restart the VM.In this scenario, the vGPU VM cannot start. The following error message is received:'**\<hostname>**' Microsoft Video Monitor (Instance ID BA8735EF-E3A9-4F1B-BADD-DBF3A5909915): Failed to restore with Error 'Catastrophic failure' (0x8000FFFF). (Virtual machine ID 65DDF80E-B83D-4967-84A6-96BB935D66CF)
+- You connect to the vGPU VM, and then restart the VM.
+
+In this scenario, the vGPU VM cannot start. The following error message is received:
+> '**\<hostname>**' Microsoft Video Monitor (Instance ID BA8735EF-E3A9-4F1B-BADD-DBF3A5909915): Failed to restore with Error 'Catastrophic failure' (0x8000FFFF). (Virtual machine ID 65DDF80E-B83D-4967-84A6-96BB935D66CF)
 
 ## Resolution
 

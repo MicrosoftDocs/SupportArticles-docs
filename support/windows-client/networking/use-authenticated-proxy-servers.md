@@ -28,33 +28,31 @@ Proxy servers that require authentication either require a username and password
 
 Depending on your proxy configuration, you may encounter one of the following problems when you use Microsoft Store apps:
 
-
 - You cannot install updates that are available in the Microsoft Store, and you may receive one of the following error messages:
 
-- This app wasn't installed - view details.
+  - > This app wasn't installed - view details.
 
-- Something happened and this app couldn't be installed. Try again. Error code: 0x8024401c
+  - > Something happened and this app couldn't be installed. Try again. Error code: 0x8024401c
 
 - You cannot install new apps and may receive one of the following error messages:
 
-- Your purchase couldnt be completed. Something happened and your purchase cant be completed.
+  - > Your purchase couldnt be completed. Something happened and your purchase cant be completed.
 
-- Something happened and this app couldn't be installed. Try again. Error code: 0x8024401c
+  - > Something happened and this app couldn't be installed. Try again. Error code: 0x8024401c
 
 - When you start the Microsoft Store app, you may receive the following error message:
 
-- Your network proxy doesn't work with the Microsoft Store. Contact your system administrator for more information.
+  - > Your network proxy doesn't work with the Microsoft Store. Contact your system administrator for more information.
 
 - Apps that are included with Windows 8 may indicate that you are not connected to the Internet. If you installed other apps from the Microsoft Store while you were connected to a different network, those apps may also indicate that you are not connected to the Internet. The apps may display one of the following error messages:
 
-- There was a problem signing you in.
+  - > There was a problem signing you in.
 
-- You are not connected to the Internet.
+  - > You are not connected to the Internet.
 
 - Live Tiles for some apps may not update their content or may never show live content.
 - Windows Update may not check for updates or download updates, and you receive error code 8024401C or the following error message:
-  - There was a problem checking for updates.
-
+  - > There was a problem checking for updates.
 
 ## Resolution
 
@@ -62,9 +60,10 @@ The issues that are discussed in this article are resolved in Windows 8.1 and Wi
 
 ## More information
 
-If you are using Windows 8 or Windows Server 2012, you can reduce the effect of these issues by enabling unauthenticated access through the proxy server. We recommend that you enable unauthenticated access only for connections to URL addresses that are used by each app that has a problem. Some proxy servers may suggest that you create an allow list (also known as a "whitelist") of URL addresses.
+If you are using Windows 8 or Windows Server 2012, you can reduce the effect of these issues by enabling unauthenticated access through the proxy server. We recommend that you enable unauthenticated access only for connections to URL addresses that are used by each app that has a problem. Some proxy servers may suggest that you create an allow list of URL addresses.
 
-To resolve these issues as they relate to using Microsoft Store apps or to using Microsoft apps that are included with Windows 8 or Windows Update, you can include the following addresses in an allow list on the proxy server and enable HTTP and HTTPS access to them: 
+To resolve these issues as they relate to using Microsoft Store apps or to using Microsoft apps that are included with Windows 8 or Windows Update, you can include the following addresses in an allow list on the proxy server and enable HTTP and HTTPS access to them:
+
 - login.live.com
 - account.live.com
 - clientconfig.passport.net
@@ -74,4 +73,6 @@ To resolve these issues as they relate to using Microsoft Store apps or to using
 - *.hotmail.com
 - *.outlook.com
 - *.microsoft.com
-- *.msftncsi.com/ncsi.txt To resolve these issues for other apps, you may have to contact the application vendor for information about the URL addresses that you should include in your allow list.
+- *.msftncsi.com/ncsi.txt
+
+To resolve these issues for other apps, you may have to contact the application vendor for information about the URL addresses that you should include in your allow list.

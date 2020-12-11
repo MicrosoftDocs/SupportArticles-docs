@@ -37,12 +37,13 @@ This behavior is by design in Windows 8. By default, when the console is locked,
 
 Using the PowerCfg.exe utility, you can configure the display timeout used when the PC is in an unlocked state as well as when it is at a locked screen. From an administrative command prompt, the following commands can be used to control the display timeout:
 
-powercfg.exe /setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE \<time in seconds>
- 
-powercfg.exe /setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOCONLOCK \<time in seconds>
+- `powercfg.exe /setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE \<time in seconds>`
 
-powercfg.exe /setactive SCHEME_CURRENT
+- `powercfg.exe /setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOCONLOCK \<time in seconds>`
+
+- `powercfg.exe /setactive SCHEME_CURRENT`
 
 The VIDEOIDLE timeout is used when the PC is unlocked and the VIDEOCONLOCK timeout is used when the PC is at a locked screen.
 
-Note: These commands set the timeout used when the system is plugged in and using AC power. To set the timeouts used when on DC (battery) power, use the /setdcvalueindex switch instead of /setacvalueindex.
+> [!NOTE]
+> These commands set the timeout used when the system is plugged in and using AC power. To set the timeouts used when on DC (battery) power, use the /setdcvalueindex switch instead of /setacvalueindex.

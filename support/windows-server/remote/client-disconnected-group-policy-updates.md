@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Remote desktop sessions
 ms.technology: RDS
 ---
-# Remote Desktop sessions may be disconnected during Group Policy updates in Windows Server 2008
+# Remote Desktop sessions may be disconnected during Group Policy updates in Windows Server
 
 This article provides a solution to an issue where clients are disconnected from Remote Desktop sessions during Group Policy updates.
 

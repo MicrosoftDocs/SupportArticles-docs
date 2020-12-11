@@ -13,7 +13,7 @@ ms.reviewer: jburrage, kaushika
 ms.prod-support-area-path: Errors when running the Validation Wizard
 ms.technology: HighAvailability
 ---
-# Cluster validation fails the SCSI-3 Persistent Reservation test in Windows Server 2008 and Windows Server 2008 R2
+# Cluster validation fails the SCSI-3 Persistent Reservation test in Windows Server
 
 This article provides a solution to an issue where the SCSI-3 Persistent Reservation test fails when you run the Failover Cluster Validation report.
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2822335
 
 ## Symptoms
 
-When running the Failover Cluster Validation report on an existing cluster configured in Windows Server 2008 or Windows Server 2008 R2, the SCSI-3 Persistent Reservation test may fail with the following error:
+When running the Failover Cluster Validation report on an existing cluster configured in Windows Server 2008 R2 Service Pack 1, the SCSI-3 Persistent Reservation test may fail with the following error:
 
 > Failed to access cluster disk 0 from node \<node name> status 31  
 > Cluster Disk 0 does not support Persistent Reservations. Some storage devices require specific firmware versions or settings to function properly with failover clusters. Please contact your storage administrator or storage vendor to check the configuration of the storage to allow it to function properly with failover clusters.

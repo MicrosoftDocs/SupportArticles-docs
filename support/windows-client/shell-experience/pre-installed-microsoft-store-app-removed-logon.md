@@ -26,4 +26,4 @@ You use a DISM command to deploy a Microsoft Store app in Windows 10, version 18
 
 ## Workaround
 
-To work around this issue, add the **/Region:"All"** switch when you use the DISM command to deploy the app.
+To work around this issue, add the `/Region:"All"` switch when you use the DISM command to deploy the app.

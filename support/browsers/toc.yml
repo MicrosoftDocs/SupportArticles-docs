@@ -383,6 +383,9 @@
     - name: Flickers when showing animated content
       href: ie-flickers-with-hybrid-graphics.md
 
+    - name: Internet Explorer 11 stops responding when selecting strings
+      href: ie-11-stops-responding-selecting-strings-selection-gripper.md
+
     - name: Internet Explorer opens, flashes, and closes immediately when starting
       href: ie-opens-flashes-and-closes-immediately-when-starting.md
 
