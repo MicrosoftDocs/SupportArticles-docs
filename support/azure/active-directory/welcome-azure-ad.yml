@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
 title: Azure Active Directory troubleshooting documentation # < 60 chars
-summary: Learn how to determine, diagnose, and fix Azure Active Directory issues.
+summary: Learn how to determine, diagnose, and fix common issues with Azure Active Directory.
 metadata:
   title: Troubleshoot Azure Active Directory issues
-  description: Documentation for troubleshooting Azure Active Directory issues. # Required; article description that is displayed in search results. < 160 chars.
+  description: Documentation for troubleshooting common issues with Azure Active Directory. # Required; article description that is displayed in search results. < 160 chars.
   services: active-directory
   ms.service: active-directory  #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
