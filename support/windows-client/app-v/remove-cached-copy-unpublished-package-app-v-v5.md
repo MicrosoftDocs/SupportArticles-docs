@@ -27,7 +27,7 @@ When a previously published package is unpublished from the Microsoft Applicatio
 Also when a new version of a previously cached package is streamed, the older version of the cache is not removed. Instead, hard links are between the package files that have remained unchanged between the different versions.
 
 > [!NOTE]
-> The folder %programdata%\App-V is the default path for PackageInstallationRoot. To check the path run `Get-AppvClientConfiguration` and examine the value of PackageInstallationRoot.
+> The folder %programdata%\\App-V is the default path for PackageInstallationRoot. To check the path run `Get-AppvClientConfiguration` and examine the value of PackageInstallationRoot.
 
 At times, you might want to remove unpublished packages from the computer (for example, to reclaim lost disk space). You can remove packages by running the PowerShell command `Remove-AppvClientPackage`. Much like uninstall native applications, the `Remove-AppvClientPackage` must be run with administrative rights.
 

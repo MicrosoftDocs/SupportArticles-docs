@@ -114,7 +114,7 @@ On a server that runs Windows XP or Windows Server 2003, follow these steps:
 2. Locate and then click the following registry subkey:
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\<Interface GUID>`  
 3. On the **Edit** menu, point to **New**, and then click **DWORD Value**.
-4. Name the new value *TcpAckFrequency, and assign it a value of 1.
+4. Name the new value *TcpAckFrequency*, and assign it a value of 1.
 5. Quit **Registry Editor**.
 6. Restart Windows for this change to take effect.
 

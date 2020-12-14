@@ -24,26 +24,26 @@ _Original KB number:_ &nbsp; 2778168
 
 Perform the steps listed below to troubleshoot this issue.
 
-### Step 1: Verify the Publishing Server URL configured on the client
+### Step 1: Verify the publishing server URL configured on the client
 
-To verify the Publishing Server URL, perform the following steps:
+To verify the publishing server URL, perform the following steps:
 
 1. On the App-V Client, open an elevated PowerShell command prompt.
 2. Type *Get-AppvPublishingServer* and hit enter.
 3. Verify the URL listed in the output is correct.
 
-    If the Publishing Server name is PubSvr and the publishing server port is 82, the URL listed in the `Get-AppvPublishingServer` output should be: `http://PubSvr:82`or `https://PubSvr:82`
+    If the publishing server name is PubSvr and the publishing server port is 82, the URL listed in the `Get-AppvPublishingServer` output should be: `http://PubSvr:82`or `https://PubSvr:82`
 
-If the Publishing Server URL is incorrect, use the `Remove-AppvPublishingServer` cmdlet to remove the Publishing Server. Then use the `Add-AppvPublishingServer` cmdlet to add the Publishing Server with the correct URL.
+If the publishing server URL is incorrect, use the `Remove-AppvPublishingServer` cmdlet to remove the publishing server. Then use the `Add-AppvPublishingServer` cmdlet to add the publishing server with the correct URL.
 
-Sample commands to remove and readd the Publishing Server:
+Sample commands to remove and readd the publishing server:
 
 ```powershell
 Remove-AppvPublishingServer -ServerId 1
 Add-AppvPublishingServer -Name PublishingSever -URL http://PubSvr:82
 ```
 
-Common errors that are logged on the App-V client if the Publishing Server URL is incorrect:
+Common errors that are logged on the App-V client if the publishing server URL is incorrect:
 
 - PowerShell
     > Sync-AppvPublishingServer: Application Virtualization Service failed to complete requested operation.  
@@ -99,17 +99,17 @@ Common errors that are logged on the App-V client if the Publishing Server URL i
     URL: `http://PubSvr:82/`  
     Error code: 0x3E501105 - 0x90001
 
-### Step 2: Add Windows Firewall exception on the Publishing Server  
+### Step 2: Add Windows Firewall exception on the publishing server  
 
-If the Windows Firewall is enabled on the Publishing Server, an Inbound Rule must be added to allow inbound connections on the port used by the Publishing Server.
+If the Windows Firewall is enabled on the publishing server, an Inbound Rule must be added to allow inbound connections on the port used by the publishing server.
 
 To add an **Inbound Rule**, perform the following steps:
 
-1. On the Publishing Server, open the **Windows Firewall**.
+1. On the publishing server, open the **Windows Firewall**.
 2. Click **Advanced Settings**.
 3. Right-click on **Inbound Rules** and select **New Rule**.
 4. Select **Port** and click **Next**.
-5. Select **TCP**, specify the port used by the Publishing Server and click **Next**.
+5. Select **TCP**, specify the port used by the publishing server and click **Next**.
 6. Select the appropriate connection condition for your environment and click **Next**.
 7. Select the appropriate profile and click **Next**.
 8. Provide a name for the **Inbound Rule** and click **Finish**.
@@ -142,15 +142,15 @@ Common errors that are logged on the App-V client if the firewall port is blocke
     URL: `http://PubSvr:82/`  
     Error code: 0x45500D27 - 0x80072EE2
 
-### Step 3: Verify the Publishing Server site is started on the Publishing Server  
+### Step 3: Verify the publishing server site is started on the publishing server  
 
-To verify the Publishing Server site is started, perform the following steps:
+To verify the publishing server site is started, perform the following steps:
 
-1. On the Publishing Server, open the **IIS Manager** console.
+1. On the publishing server, open the **IIS Manager** console.
 2. Click **Sites**.
 3. Verify the **Microsoft App-V Publishing Service** site is **Started**.
 
-Common errors that are logged on the App-V client if the Publishing Server site is not started:
+Common errors that are logged on the App-V client if the publishing server site is not started:
 
 - PowerShell
     > Sync-AppvPublishingServer : Application Virtualization Service failed to complete requested operation.  
@@ -180,11 +180,11 @@ Common errors that are logged on the App-V client if the Publishing Server site 
     URL: `http://PubSvr:82/`
     Error code: 0x45500D27 - 0x80072EE2
 
-### Step 4: Verify the Publishing Server application pool is started on the Publishing Server
+### Step 4: Verify the publishing server application pool is started on the publishing server
 
-To verify the **Publishing Server application pool** is started, perform the following steps:
+To verify the publishing server application pool is started, perform the following steps:
 
-1. On the Publishing Server, open the **IIS Manager** console.
+1. On the publishing server, open the **IIS Manager** console.
 2. Click **Application Pools**.
 3. Verify the **AppVPublishing application pool** is **Started**.
 
@@ -218,9 +218,9 @@ Common errors that are logged on the App-V client if the **AppVPublishing applic
     URL: `http://PubSvr:82/`  
     Error code: 0x45500D27 - 0x801901F7
 
-### Step 5: Verify the Publishing Server URL is accessible using a web browser  
+### Step 5: Verify the publishing server URL is accessible using a web browser  
 
-On the App-V client, access the publishing server URL (for example, `http://PubSvr:82/`) using a web browser. If the publishing server is working properly and is accessible, an XML output will be displayed which lists the applications published on the Publishing Server:
+On the App-V client, access the publishing server URL (for example, `http://PubSvr:82/`) using a web browser. If the publishing server is working properly and is accessible, an XML output will be displayed which lists the applications published on the publishing server:
 
 ```xml
 - <Publishing Protocol="1.0">
@@ -233,7 +233,7 @@ On the App-V client, access the publishing server URL (for example, `http://PubS
   </Publishing>
 ```
 
-In the example above, Office 2013 is the only package currently published on the Publishing Server.
+In the example above, Office 2013 is the only package currently published on the publishing server.
 
 ### Step 6: Perform a publishing server refresh  
 

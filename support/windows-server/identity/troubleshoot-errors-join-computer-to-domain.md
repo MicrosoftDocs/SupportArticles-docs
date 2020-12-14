@@ -26,7 +26,7 @@ This article describes several common error messages that can occur when you joi
 
 ## Where to find the Netsetup.log file
 
-Windows clients log the details of domain join operations in the %windir%\debug\Netsetup.log file.
+Windows clients log the details of domain join operations in the %windir%\\debug\\Netsetup.log file.
 
 ## Networking error messages and resolutions
 
