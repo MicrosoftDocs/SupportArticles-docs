@@ -1,6 +1,6 @@
 ---
 title: Cluster IP address resources fail on both nodes of a two-node multi-site cluster when one node disconnects from the public VLAN
-description: This article describes the behavior that occurs when one node of a two-node multi-site cluster disconnects from the public cluster VLAN. In this case, the IP address resources and their corresponding cluster groups on both nodes fail.
+description: This article describes the behavior that occurs when one node of a two-node multi-site cluster disconnects from the public cluster VLAN. In this case, the IP address resources and their corresponding cluster groups fail on both nodes.
 ms.date: 12/22/2020
 author: Teresa-Motiv
 ms.author: v-tea
@@ -16,7 +16,7 @@ keywords: multi-site,multisite,cluster,disconnect,cross-subnet,stretched,vlan
 ---
 # Cluster IP address resources fail on both nodes of a two-node multi-site cluster when one node disconnects from the public VLAN
 
-This article describes the behavior that occurs when one node of a two-node multi-site cluster disconnects from the public cluster VLAN. In this case, the IP address resources and their corresponding cluster groups on both nodes fail.
+This article describes the behavior that occurs when one node of a two-node multi-site cluster disconnects from the public cluster VLAN. In this case, the IP address resources and their corresponding cluster groups fail on both nodes.
 
 _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
@@ -33,13 +33,13 @@ In this scenario, one of the nodes disconnects from the public VLAN. The followi
 
  :::image type="content" source=".\media\cluster-ip-resources-fail-2-node-2-site-fsw-cluster\disconnect-nodes-in-different-sites.png" alt-text="Two node cluster across two sites, with disconnected public VLAN":::
 
-Using the diagram as an example, the cluster detects the interruption, and marks the public VLAN NIC on Node 2 as "Failed." As a result, all of the cluster IP address resources on Node 2 fail, and the cluster generates messages that resemble the following:
+The cluster detects the interruption and marks the public VLAN NIC on Node 2 as "Failed." As a result, all the cluster IP address resources on Node 2 fail. The cluster groups that are associated with those resources also fail. The cluster generates messages that resemble the following:
 
 > 000005ec.000011e4::2020/09/19-19:41:51.777 DBG   [IM - public-1.0.0] Adding interface states for cross-subnet-route-only interfaces
 >  
 > 000005ec.000011e4::2020/09/19-19:41:51.777 DBG   [IM - public-1.0.0] Interface 1ee3567e-84f7-459a-a39e-a5c44de643fa has no up cross-subnet routes. Marking it as failed
 
-Because the two sites cannot communicate across the public VLAN, the cluster also marks the public VLAN NIC on Node 1 as "Failed." As a result, all the cluster IP Address resources on Node 1 also fail.
+Because the two sites cannot communicate across the public VLAN, the cluster also marks the public VLAN NIC on Node 1 as "Failed." As a result, all the cluster IP Address resources and the associated cluster groups on Node 1 fail.
 
 > 00001790.000006ac::2020/09/19-19:41:51.780 INFO  [IM] Changing the state of adapters according to result: \<*class mscs::InterfaceResult*>
 >  
