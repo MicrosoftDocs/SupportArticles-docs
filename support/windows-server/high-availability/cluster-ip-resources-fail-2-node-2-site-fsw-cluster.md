@@ -71,7 +71,3 @@ If you have the configuration that the "Symptoms" section describes and you have
 - Shut down all the cluster nodes except one.
 
 When you are ready to resume typical operations, start by enabling the networks (or restarting the nodes).
-
-## More information
-
-- [Windows clustering and geographically separate sites](https://support.microsoft.com/office/windows-clustering-and-geographically-separate-sites-851893e6-0ef9-95a2-6b80-88d6635233fe?ui=en-us&rs=en-us&ad=us)
