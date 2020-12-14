@@ -31,7 +31,7 @@ It is common for IT administrators to want to disable IPv6. This is often becaus
 > [!IMPORTANT]
 > IPv6 is a mandatory part of Windows Vista and Windows Server 2008 and newer versions. We do not recommend that you disable IPv6 or its components. If you do, some Windows components may not function.
 
-We recommend that you use **Prefer IPv4 over IPv6** in prefix policies instead of disabling IPV6. By default, the 6to4 tunneling protocol is enabled in Windows Vista, Windows Server 2008, or later versions when an interface is assigned a public IPv4 address (that is, an IPv4 address that is not in the ranges 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16). 6to4 automatically assigns an IPv6 address to the 6to4 tunneling interface for each such address that is assigned, and 6to4 dynamically registers these IPv6 addresses on the assigned DNS server. If this behavior is not desired, we recommend that you disable IPv6 tunnel interfaces on the affected hosts.
+We recommend that you use **Prefer IPv4 over IPv6** in prefix policies instead of disabling IPV6.
 
 ## Use registry key to configure IPv6
 
@@ -42,11 +42,11 @@ We recommend that you use **Prefer IPv4 over IPv6** in prefix policies instead o
 
 To configure IPv6, modify the following registry value based on the following table.
 
-> **Location**: HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip6\\Parameters\\  
-**Name**:        DisabledComponents  
-**Type**:        REG_DWORD  
-**Min Value**:   0x00  
-**Max Value**:   0xFF (IPv6 disabled)
+**Location**: HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip6\\Parameters\\  
+**Name**: DisabledComponents  
+**Type**: REG_DWORD  
+**Min Value**: 0x00  
+**Max Value**: 0xFF (IPv6 disabled)
 
 |IPv6 Functionality|Registry value and comments|
 |---|---|
@@ -66,6 +66,8 @@ To configure IPv6, modify the following registry value based on the following ta
 > - Administrators must create an .admx file to expose the settings in step 5 in a Group Policy setting.
 > - You must restart your computer for these changes to take effect.
 > - Value other than 0 or 32 causes the Routing and Remote Access service to fail after this change takes effect.
+
+By default, the 6to4 tunneling protocol is enabled in Windows Vista, Windows Server 2008, or later versions when an interface is assigned a public IPv4 address (that is, an IPv4 address that is not in the ranges 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16). 6to4 automatically assigns an IPv6 address to the 6to4 tunneling interface for each such address that is assigned, and 6to4 dynamically registers these IPv6 addresses on the assigned DNS server. If this behavior is not desired, we recommend that you disable IPv6 tunnel interfaces on the affected hosts.
 
 ### Method 2: Use Command Prompt to configure IPv6
 
