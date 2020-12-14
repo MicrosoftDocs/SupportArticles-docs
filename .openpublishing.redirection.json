@@ -1,6 +1,451 @@
 {
   "redirections": [
     {
+      "source_path": "support/previous-versions/configmgr/advanced-client-not-work.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/configmgr/advanced-client-not-work",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/configmgr/backups-fail-with-vss-provider-issue.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/configmgr/backups-fail-with-vss-provider-issue",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/configmgr/client-load-policy-error-80040217.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/configmgr/client-load-policy-error-80040217",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/configmgr/osd-task-sequences-fail.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/configmgr/osd-task-sequences-fail",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/configmgr/setup-fails-with-incorrect-webdav-settings.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/configmgr/setup-fails-with-incorrect-webdav-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/configmgr/site-component-manager-log-status-messages.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/configmgr/site-component-manager-log-status-messages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/configmgr/some-clients-assigned-wrong-site-code.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/configmgr/some-clients-assigned-wrong-site-code",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/configmgr/troubleshoot-advanced-client-push-installation-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/configmgr/troubleshoot-advanced-client-push-installation-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/configmgr/unexpected-reboot-after-removing-computers-from-collection.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/configmgr/unexpected-reboot-after-removing-computers-from-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/dotnet/framework/64-bit-app-fails-access-violation-clr-marshaling.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/dotnet/framework/64-bit-app-fails-access-violation-clr-marshaling",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/dotnet/framework/dotnet-2-updates-cause-applications-crash.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/dotnet/framework/dotnet-2-updates-cause-applications-crash",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/dotnet/framework/dotnet-framework-patch-install-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/dotnet/framework/dotnet-framework-patch-install-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/dotnet/framework/graphics-measurestring-hangs.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/dotnet/framework/graphics-measurestring-hangs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/dotnet/framework/socket-select-not-block.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/dotnet/framework/socket-select-not-block",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/iis/error-403-asp-request.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/iis/error-403-asp-request",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/iis/error-instantiate-activex-component.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/iis/error-instantiate-activex-component",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/iis/force-ssl-specific-pages.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/iis/force-ssl-specific-pages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/iis/install-configure-php.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/iis/install-configure-php",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msmq/cannot-sending-listening-multicast-message.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msmq/cannot-sending-listening-multicast-message",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msmq/clustering-support-msmq.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msmq/clustering-support-msmq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msmq/error-ram-exceeds-allocated-memory.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msmq/error-ram-exceeds-allocated-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msmq/msmq-cluster-takes-long-to-fail-over.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msmq/msmq-cluster-takes-long-to-fail-over",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msmq/msmq-functions-over-nlb.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msmq/msmq-functions-over-nlb",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msmq/optimize-message-queuing-performance.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msmq/optimize-message-queuing-performance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msmq/posting-message-msmq-sql-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msmq/posting-message-msmq-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msmq/service-unavailable-clustered-application.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msmq/service-unavailable-clustered-application",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msmq/stored-procedures-reverse-order-db2.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msmq/stored-procedures-reverse-order-db2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msmq/transaction-remote-receive-access-denied.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msmq/transaction-remote-receive-access-denied",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msmq/uninstall-message-queue-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msmq/uninstall-message-queue-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msmq/write-read-msmq-visual-csharp.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msmq/write-read-msmq-visual-csharp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msxml/ado-recordset-xml-persistence.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msxml/ado-recordset-xml-persistence",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msxml/disable-output-escaping-style-sheet.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msxml/disable-output-escaping-style-sheet",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msxml/display-html-xsl-style-sheet.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msxml/display-html-xsl-style-sheet",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msxml/error-when-xml-contains-low-order-ascii.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msxml/error-when-xml-contains-low-order-ascii",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msxml/hresult-c00ce56e-error-occurs.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msxml/hresult-c00ce56e-error-occurs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msxml/list-of-xml-parser-versions.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msxml/list-of-xml-parser-versions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msxml/msxml-6-matching-nodes-not-return.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msxml/msxml-6-matching-nodes-not-return",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msxml/serverxmlhttp-xmlhttp-ashnc-mode.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msxml/serverxmlhttp-xmlhttp-ashnc-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msxml/specify-namespace-querying-dom-xpath.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msxml/specify-namespace-querying-dom-xpath",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msxml/use-contains-xpath-function.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msxml/use-contains-xpath-function",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msxml/use-starts-with-xpath-function.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msxml/use-starts-with-xpath-function",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msxml/use-xml-notepad-create-xml.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msxml/use-xml-notepad-create-xml",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msxml/use-xpath-against-default-namespace.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msxml/use-xpath-against-default-namespace",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/msxml/xml-encoding-dom-interface-methods.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/msxml/xml-encoding-dom-interface-methods",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/access-imagelist-treeview-listview.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/access-imagelist-treeview-listview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/add-database-sql-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/add-database-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/apply-rich-text-effects.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/apply-rich-text-effects",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/c0000005-error-troubleshoot.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/c0000005-error-troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/c0000006-error-troubleshooting-suggestion.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/c0000006-error-troubleshooting-suggestion",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/capture-input-in-a-combo-box.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/capture-input-in-a-combo-box",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/check-for-existence-of-directory.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/check-for-existence-of-directory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/convert-function-gets-date-sql-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/convert-function-gets-date-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/create-primary-index.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/create-primary-index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/create-startup-screen.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/create-startup-screen",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/create-stored-procedures.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/create-stored-procedures",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/cursor-based-grid-blank.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/cursor-based-grid-blank",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/determining-version-you-use.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/determining-version-you-use",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/error-print-report-contents-of-editing-window.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/error-print-report-contents-of-editing-window",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/export-record-memo-fields.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/export-record-memo-fields",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/format-date-or-time-value-query-table.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/format-date-or-time-value-query-table",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/improving-performance-application.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/improving-performance-application",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/list-bugs-fixed-service-pack-1.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/list-bugs-fixed-service-pack-1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/locate-value-closest-match.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/locate-value-closest-match",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/pass-parameters-sql-server-stored-procedure.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/pass-parameters-sql-server-stored-procedure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/prevent-printing-report-preview.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/prevent-printing-report-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/programmatically-modify-report-fields.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/programmatically-modify-report-fields",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/query-fails-if-not-american-date.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/query-fails-if-not-american-date",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/receive-data-from-the-serial-port.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/receive-data-from-the-serial-port",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/refreshed-grid-does-not-display-data.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/refreshed-grid-does-not-display-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/register-activex-control-manually.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/register-activex-control-manually",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/send-serial-port-using-mscomm32.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/send-serial-port-using-mscomm32",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/service-pack-1-visual-foxpro-9.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/service-pack-1-visual-foxpro-9",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/sql-server-distributed-queries.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/sql-server-distributed-queries",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/transmit-receive-binary-data.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/transmit-receive-binary-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/troubleshoot-resolve-suspected-corruption.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/troubleshoot-resolve-suspected-corruption",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/use-append-general-command.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/use-append-general-command",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/use-datetimepicker-control.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/use-datetimepicker-control",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/use-keypress-event-form-control.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/use-keypress-event-form-control",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/use-null-values.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/use-null-values",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/use-set-printer-to-name-command-print.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/use-set-printer-to-name-command-print",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/foxpro/use-wildcard-characters-sql-statement.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/foxpro/use-wildcard-characters-sql-statement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/general/back-up-visual-sourcesafe-database.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/general/back-up-visual-sourcesafe-database",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/general/jlca-available-download.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/general/jlca-available-download",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/general/redistribution-shared-c-runtime-component.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/general/redistribution-shared-c-runtime-component",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/general/vs-2005-service-pack-1-release-notes.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/general/vs-2005-service-pack-1-release-notes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/install/vcredist-installs-temporary-files-root-directory.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/install/vcredist-installs-temporary-files-root-directory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/visualstudio/silverlight/consume-wcf-service-tcp-transport.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/visualstudio/silverlight/consume-wcf-service-tcp-transport",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/index.yml",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/previous-versions/welcome-previous-versions.md",
+      "redirect_url": "/previous-versions/troubleshoot/previous-versions/welcome-previous-versions",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/browsers/index.md",
       "redirect_url": "/support/browsers/welcome-browsers",
       "redirect_document_id": false
