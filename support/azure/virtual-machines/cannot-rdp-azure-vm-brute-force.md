@@ -1,12 +1,12 @@
 ---
-title: Cannot RDP to an Azure VM due to a brute force attack
-description: Troubleshoot RDP failures due to brute force attack in Microsoft Azure.
+title: Cannot RDP into Azure VM because of a brute force attack
+description: Troubleshoot RDP failures because of brute force attack in Microsoft Azure.
 ms.date: 12/14/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 
-# Cannot RDP to an Azure VM due to a brute force attack
+# Cannot RDP into Azure VM because of a brute force attack
 
 Open ports on Internet-facing virtual machines are targets for brute force attacks. This article describes general errors you may experience when your Azure virtual machine (VM) is under attack and its resolution.
 
@@ -17,11 +17,11 @@ Open ports on Internet-facing virtual machines are targets for brute force attac
     - An internal error has occurred.
     - Remote Desktop Services session has ended. Your network administrator might have ended the connection. Try connecting again, or contact technical support for assistance.
 
-2. You are unable to RDP using the Public IP address, and you may be able to RDP using the Private IP address. This will depend on whether you have a performance spike due to the attack.
+2. You're unable to RDP using the Public IP address, but you may be able to RDP using the Private IP address. This issue will depend on whether you have a performance spike because of the attack.
 
 3. There are too many Audit Failure Messages in Security Event Logs:
 
-   - Events 4625 from logon is logged almost every second, with the failure reason **Bad Username Or Password**.
+   - Events 4625 from the logon is logged almost every second, with the failure reason **Bad Username Or Password**.
 
    ![Events Log](./media/cannot-rdp-azure-vm-brute-force/events-log-1.png)
 
@@ -42,9 +42,9 @@ To mitigate the issue, reinforce security in your environment:
 
    Check whether the network security group for **RDP port 3389** is unsecured (open). If it's unsecured and it shows * as the source IP address for inbound, [restrict the RDP port to a specific user's IP address](https://docs.microsoft.com/azure/virtual-network/network-security-groups-overview#security-rules), and then test RDP access again.
 
-2. If the IPs are dynamic for the end-users, introduce an intermediate server into your setup, which can be used to login to the destination machine.
+2. If the IPs are dynamic for the end users, introduce an intermediate server into your setup, which can be used to log in to the destination machine.
 
-3. Use **Run Command** to change the default RDP port from 3389 to any port number which is less common.
+3. Use **Run Command** to change the default RDP port from 3389 to a less common port number.
 
    ![Run Command](./media/cannot-rdp-azure-vm-brute-force/run-command-1.png)
 
