@@ -592,7 +592,7 @@ Recovery Steps:
    2. Copy the data from step above to the original location after the service has initialized (5 minutes is a safe waiting time).
 
       > [!Note]
-      > If this error message is in the eventlog of all the members of a particular replica set, then perform steps above on only one of the members.
+      > If this error message is in the event log of all the members of a particular replica set, then perform steps above on only one of the members.
 
 ## Event ID 13556
 
@@ -662,7 +662,7 @@ the creation of the NTFRS_CMD_FILE_MOVE_ROOT file.
 
 1. At the first poll that will occur in %4 minutes this computer will be
 deleted from the replica set.
-2. At the poll following the deletion this computer will be readded to the replica set with the new root path. This readdition will trigger a full tree sync for the replica set. At the end of the sync, all the files will be at the new location. The files may or may not be deleted from the old location depending on whether they are needed or not.
+2. At the poll following the deletion this computer will be re-added to the replica set with the new root path. This re-addition will trigger a full tree sync for the replica set. At the end of the sync, all the files will be at the new location. The files may or may not be deleted from the old location depending on whether they are needed or not.
 
 ## Event ID 13560 and 13561
 
@@ -670,7 +670,7 @@ deleted from the replica set.
 Severity=Warning  
 The File Replication Service is deleting this computer from the replica set "%1" as an attempt to recover from the error state,  
 Error status = %2.  
-At the next poll, which will occur in %3 minutes, this computer will be readded to the replica set. The readdition will trigger a full tree sync for the replica set.
+At the next poll, which will occur in %3 minutes, this computer will be re-added to the replica set. The re-addition will trigger a full tree sync for the replica set.
 
 > Event ID=13561  
 Severity=Error  
@@ -693,7 +693,7 @@ This can occur because of one of the following reasons.
 Following recovery steps will be taken to automatically recover from this error state.
 
 1. At the first poll that will occur in %4 minutes this computer will be deleted from the replica set.
-2. At the poll following the deletion this computer will be readded to the replica set. The readdition will trigger a full tree sync for the replica set.
+2. At the poll following the deletion this computer will be re-added to the replica set. The re-addition will trigger a full tree sync for the replica set.
 
 ## Event ID 13562 and 13563
 
@@ -811,7 +811,7 @@ A Replica set hits JRNL_WRAP_ERROR when the record that it is trying to read fro
 Setting the "Enable Journal Wrap Automatic Restore" registry parameter to 1 will cause the following recovery steps to be taken to automatically recover from this error state.  
 
 1. At the first poll, which will occur in %4 minutes, this computer will be deleted from the replica set. If you do not want to wait %4 minutes, then run "net stop ntfrs" followed by "net start ntfrs" to restart the File Replication Service.
-2. At the poll following the deletion this computer will be readded to the replica set. The readdition will trigger a full tree sync for the replica set.
+2. At the poll following the deletion this computer will be re-added to the replica set. The re-addition will trigger a full tree sync for the replica set.
 
 > [!WARNING]
 > During the recovery process data in the replica tree may be unavailable. You should reset the registry parameter described above to 0 to prevent automatic recovery from making the data unexpectedly unavailable if this error condition occurs again.
