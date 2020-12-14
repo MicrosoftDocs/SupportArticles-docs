@@ -1,8 +1,7 @@
 ### YamlMime:Landing
 
 title: Azure Active Directory troubleshooting documentation # < 60 chars
-summary: Welcome to Azure Active Directory troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Active Directory.In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
-
+summary: Learn how to determine, diagnose, and fix Azure Active Directory issues.
 metadata:
   title: Troubleshoot Azure Active Directory issues
   description: Documentation for troubleshooting Azure Active Directory issues. # Required; article description that is displayed in search results. < 160 chars.
@@ -17,14 +16,3 @@ metadata:
 
 landingContent:
 
- # Card
-  - title: Enroll Surface Duo in MDM management
-    linkLists:
-      - linkListType: deploy
-        links:
-          - text: Enroll Android Enterprise work profile devices
-            url: https://docs.microsoft.com/mem/intune/enrollment/android-work-profile-enroll
-          - text: Enroll fully managed devices
-            url: https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll
-          - text: Enroll dedicated devices
-            url: https://docs.microsoft.com/mem/intune/enrollment/android-kiosk-enroll
