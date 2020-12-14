@@ -16,3 +16,14 @@ metadata:
 
 landingContent:
 
+ # Card
+  - title: Sign-in and Multi-factor authentication
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Authorization_RequestDenied error when changing password
+            url: ./authorization-request-denied-graph-api.md
+          - text: Can't authenticate using ADAL
+            url: ./adal-authenticate-android-devices-fail.md
+          - text: Code 403 Forbidden error when using SSO
+            url: ./code-403-azure-seamless-sso-win10.md
