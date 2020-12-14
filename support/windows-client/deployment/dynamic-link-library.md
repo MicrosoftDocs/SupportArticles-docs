@@ -15,7 +15,7 @@ ms.technology: Deployment
 ---
 # What is a DLL
 
-This article describes what a dynamic link library (DLL) is and the various issues that may occur when you use DLLs. It also describes some advanced issues that you should consider when you develop your own DLLs.
+This article describes what a dynamic link library (DLL) is and the various issues that may occur when you use DLLs. It also describes some advanced issues that you should consider when developing your own DLLs.
 
 _Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 815065
@@ -28,7 +28,7 @@ This article finishes with a high-level comparison of DLLs to the Microsoft .NET
 
 For the Windows operating systems, much of the functionality of the operating system is provided by DLL. Additionally, when you run a program on one of these Windows operating systems, much of the functionality of the program may be provided by DLLs. For example, some programs may contain many different modules, and each module of the program is contained and distributed in DLLs.
 
-The use of DLLs helps promote modularization of code, code reuse, efficient memory usage, and reduced disk space. Therefore, the operating system and the programs load faster, run faster, and take less disk space on the computer.
+The use of DLLs helps promote modularization of code, code reuse, efficient memory usage, and reduced disk space. So, the operating system and the programs load faster, run faster, and take less disk space on the computer.
 
 When a program uses a DLL, an issue that is called dependency may cause the program not to run. When a program uses a DLL, a dependency is created. If another program overwrites and breaks this dependency, the original program may not successfully run.
 
@@ -36,9 +36,9 @@ With the introduction of the .NET Framework, most dependency problems have been 
 
 ## More information
 
-A DLL is a library that contains code and data that can be used by more than one program at the same time. For example, in Windows operating systems, the Comdlg32 DLL performs common dialog box related functions. Therefore, each program can use the functionality that is contained in this DLL to implement an **Open** dialog box. This helps promote code reuse and efficient memory usage.
+A DLL is a library that contains code and data that can be used by more than one program at the same time. For example, in Windows operating systems, the Comdlg32 DLL performs common dialog box related functions. Each program can use the functionality that is contained in this DLL to implement an **Open** dialog box. It helps promote code reuse and efficient memory usage.
 
-By using a DLL, a program can be modularized into separate components. For example, an accounting program may be sold by module. Each module can be loaded into the main program at run time if that module is installed. Because the modules are separate, the load time of the program is faster, and a module is only loaded when that functionality is requested.
+By using a DLL, a program can be modularized into separate components. For example, an accounting program may be sold by module. Each module can be loaded into the main program at run time if that module is installed. Because the modules are separate, the load time of the program is faster. And a module is only loaded when that functionality is requested.
 
 Additionally, updates are easier to apply to each module without affecting other parts of the program. For example, you may have a payroll program, and the tax rates change each year. When these changes are isolated to a DLL, you can apply an update without needing to build or install the whole program again.
 
@@ -62,11 +62,11 @@ The following list describes some of the advantages that are provided when a pro
 
 - Uses fewer resources
 
-    When multiple programs use the same library of functions, a DLL can reduce the duplication of code that is loaded on the disk and in physical memory. This can greatly influence the performance of not just the program that is running in the foreground, but also other programs that are running on the Windows operating system.
+    When multiple programs use the same library of functions, a DLL can reduce the duplication of code that is loaded on the disk and in physical memory. It can greatly influence the performance of not just the program that is running in the foreground, but also other programs that are running on the Windows operating system.
 
 - Promotes modular architecture
 
-    A DLL helps promote developing modular programs. This helps you develop large programs that require multiple language versions or a program that requires modular architecture. An example of a modular program is an accounting program that has many modules that can be dynamically loaded at run time.
+    A DLL helps promote developing modular programs. It helps you develop large programs that require multiple language versions or a program that requires modular architecture. An example of a modular program is an accounting program that has many modules that can be dynamically loaded at run time.
 
 - Eases deployment and installation
 
@@ -74,7 +74,7 @@ The following list describes some of the advantages that are provided when a pro
 
 ## DLL dependencies
 
-When a program or a DLL uses a DLL function in another DLL, a dependency is created. Therefore, the program is no longer self-contained, and the program may experience problems if the dependency is broken. For example, the program may not run if one of the following actions occurs:
+When a program or a DLL uses a DLL function in another DLL, a dependency is created. The program is no longer self-contained, and the program may experience problems if the dependency is broken. For example, the program may not run if one of the following actions occurs:
 
 - A dependent DLL is upgraded to a new version.
 - A dependent DLL is fixed.
@@ -87,11 +87,11 @@ The following list describes the changes that have been introduced in Windows 20
 
 - Windows File Protection
 
-    In Windows File Protection, the operating system prevents system DLLs from being updated or deleted by an unauthorized agent. Therefore, when a program installation tries to remove or update a DLL that is defined as a system DLL, Windows File Protection will look for a valid digital signature.
+    In Windows File Protection, the operating system prevents system DLLs from being updated or deleted by an unauthorized agent. When a program installation tries to remove or update a DLL that is defined as a system DLL, Windows File Protection will look for a valid digital signature.
 
 - Private DLLs
 
-    Private DLLs let you isolate a program from changes that are made to shared DLLs. Private DLLs use version-specific information or an empty .local file to enforce the version of the DLL that is used by the program. To use private DLLs, locate your DLLs in the program root folder. Then, for new programs, add version-specific information to the DLL. For old programs, use an empty .local file. Each method tells the operating system to use the private DLLs that are located in the program root folder.
+    Private DLLs let you isolate a program from changes that are made to shared DLLs. Private DLLs use version-specific information or an empty `.local` file to enforce the version of the DLL that is used by the program. To use private DLLs, locate your DLLs in the program root folder. Then, for new programs, add version-specific information to the DLL. For old programs, use an empty `.local` file. Each method tells the operating system to use the private DLLs that are located in the program root folder.
 
 ## DLL troubleshooting tools
 
@@ -99,7 +99,7 @@ Several tools are available to help you troubleshoot DLL problems. The following
 
 ### Dependency Walker
 
-The Dependency Walker tool can recursively scan for all dependent DLLs that are used by a program. When you open a program in Dependency Walker, Dependency Walker performs the following checks:
+The Dependency Walker tool can recursively scan for all dependent DLLs that are used by a program. When you open a program in Dependency Walker, Dependency Walker does the following checks:
 
 - Dependency Walker checks for missing DLLs.
 - Dependency Walker checks for program files or DLLs that are not valid.
@@ -107,7 +107,7 @@ The Dependency Walker tool can recursively scan for all dependent DLLs that are 
 - Dependency Walker checks for circular dependency errors.
 - Dependency Walker checks for modules that are not valid because the modules are for a different operating system.
 
-By using Dependency Walker, you can document all the DLLs that a program uses. This may help prevent and correct DLL problems that may occur in the future. Dependency Walker is located in the following directory when you install Visual Studio 6.0:
+By using Dependency Walker, you can document all the DLLs that a program uses. It may help prevent and correct DLL problems that may occur in the future. Dependency Walker is located in the following directory when you install Visual Studio 6.0:
 
 `drive\Program Files\Microsoft Visual Studio\Common\Tools`
 
@@ -163,7 +163,7 @@ The following list describes the application criteria for when to use load-time 
 
 - Application logic
 
-    In run-time dynamic linking, an application can branch to load different modules as required. This is important when you develop multiple-language versions.
+    In run-time dynamic linking, an application can branch to load different modules as required. It is important when you develop multiple-language versions.
 
 ### The DLL entry point
 
@@ -330,7 +330,7 @@ The following list describes some of the features of assemblies compared to the 
 
 - Versioning
 
-    In an assembly manifest, version information is recorded and enforced by the CLR. Additionally, version policies let you enforce version-specific usage. In Win32 DLLs, versioning cannot be enforced by the operating system. Instead, you must make sure that DLLs are backward compatible.
+    In an assembly manifest, version information is recorded and enforced by the CLR. Additionally, version policies let you enforce version-specific usage. In Win32 DLLs, versioning can't be enforced by the operating system. You must make sure that DLLs are backward compatible.
 
 - Side-by-side deployment
 

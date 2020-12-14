@@ -47,14 +47,14 @@ The Windows NT 4.0 Service Pack 6 Microsoft TLS/SSL Security Provider supports t
 
 |SSL 3.0|Cipher suite|
 |---|---|
-|SSL_RSA_EXPORT_WITH_RC4_40_MD5|{ 0x00,0x03 }|
-|SSL_RSA_WITH_RC4_128_MD5|{ 0x00,0x04 }|
-|SSL_RSA_WITH_RC4_128_SHA|{ 0x00,0x05 }|
-|SSL_RSA_EXPORT_WITH_RC2_CBC_40_MD5|{ 0x00,0x06 }|
-|SSL_RSA_WITH_DES_CBC_SHA|{ 0x00,0x09 }|
-|SSL_RSA_WITH_3DES_EDE_CBC_SHA|{ 0x00,0x0A }|
-|SSL_RSA_EXPORT1024_WITH_DES_CBC_SHA|{ 0x00,0x62 }|
-|SSL_RSA_EXPORT1024_WITH_RC4_56_SHA|{ 0x00,0x64 }|
+|SSL_RSA_EXPORT_WITH_RC4_40_MD5|`{ 0x00,0x03 }`|
+|SSL_RSA_WITH_RC4_128_MD5|`{ 0x00,0x04 }`|
+|SSL_RSA_WITH_RC4_128_SHA|`{ 0x00,0x05 }`|
+|SSL_RSA_EXPORT_WITH_RC2_CBC_40_MD5|`{ 0x00,0x06 }`|
+|SSL_RSA_WITH_DES_CBC_SHA|`{ 0x00,0x09 }`|
+|SSL_RSA_WITH_3DES_EDE_CBC_SHA|`{ 0x00,0x0A }`|
+|SSL_RSA_EXPORT1024_WITH_DES_CBC_SHA|`{ 0x00,0x62 }`|
+|SSL_RSA_EXPORT1024_WITH_RC4_56_SHA|`{ 0x00,0x64 }`|
 |||
 
 > [!NOTE]
@@ -64,14 +64,14 @@ Windows NT 4.0 Service Pack 6 Microsoft TLS/SSL Security Provider also supports 
 
 |TLS 1.0|Cipher suite|
 |---|---|
-|TLS_RSA_EXPORT_WITH_RC4_40_MD5|{ 0x00,0x03 }|
-|TLS_RSA_WITH_RC4_128_MD5|{ 0x00,0x04 }|
-|TLS_RSA_WITH_RC4_128_SHA|{ 0x00,0x05 }|
-|TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5|{ 0x00,0x06 }|
-|TLS_RSA_WITH_DES_CBC_SHA|{ 0x00,0x09 }|
-|TLS_RSA_WITH_3DES_EDE_CBC_SHA|{ 0x00,0x0A }|
-|TLS_RSA_EXPORT1024_WITH_DES_CBC_SHA|{ 0x00,0x62 }|
-|TLS_RSA_EXPORT1024_WITH_RC4_56_SHA|{ 0x00,0x64 }|
+|TLS_RSA_EXPORT_WITH_RC4_40_MD5|`{ 0x00,0x03 }`|
+|TLS_RSA_WITH_RC4_128_MD5|`{ 0x00,0x04 }`|
+|TLS_RSA_WITH_RC4_128_SHA|`{ 0x00,0x05 }`|
+|TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5|`{ 0x00,0x06 }`|
+|TLS_RSA_WITH_DES_CBC_SHA|`{ 0x00,0x09 }`|
+|TLS_RSA_WITH_3DES_EDE_CBC_SHA|`{ 0x00,0x0A }`|
+|TLS_RSA_EXPORT1024_WITH_DES_CBC_SHA|`{ 0x00,0x62 }`|
+|TLS_RSA_EXPORT1024_WITH_RC4_56_SHA|`{ 0x00,0x64 }`|
 |||
 
 > [!NOTE]
@@ -194,7 +194,7 @@ Create the SCHANNEL Ciphers subkey in the format: `SCHANNEL\(VALUE)\(VALUE/VALUE
 
   Ciphers subkey: `SCHANNEL\Ciphers\RC4 40/128`
 
-  This refers to 40-bit RC4.
+  This registry key refers to 40-bit RC4.
 
   To allow this cipher algorithm, change the DWORD value data of the **Enabled** value to **0xffffffff**. Otherwise, change the DWORD value data to **0x0**. If you do not configure the **Enabled** value, the default is enabled.
 
