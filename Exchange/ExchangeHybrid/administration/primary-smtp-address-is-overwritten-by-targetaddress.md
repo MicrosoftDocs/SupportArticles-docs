@@ -24,8 +24,8 @@ _Original KB number:_ &nbsp; 4459261
 
 Consider the following scenario:
 
-- In a hybrid environment, the primary SMTP proxy address of a user's mailbox is set to **SMTP:FirstName.LastName@domain.com**.
-- The `targetAddress` attribute of the user is set to **SMTP:FirstName.LastName@ExternalDomain.com**.
+- In a hybrid environment, the primary SMTP proxy address of a user's mailbox is set to **SMTP:FirstName.LastName\@domain.com**.
+- The `targetAddress` attribute of the user is set to **SMTP:FirstName.LastName\@ExternalDomain.com**.
 - The email address policy in the hybrid environment is set as follows:
 
   - **EnabledPrimarySMTPAddressTemplate**: @domain.com
