@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2769827
 
 Sysprep is a tool for IT administrators who want to prepare an installation of Windows for duplication, auditing, and customer delivery. The guidance in this article is intended for use by support agents and IT professionals. If you are a home user who is encountering issues while using Microsoft Store apps, see [Fix problems with apps from Microsoft Store in Windows 10](https://support.microsoft.com/help/4027498).
 
-Several Microsoft Store apps include built-in Windows 10 and Windows 8 images. These include the Mail, Maps, Messaging, Bing, Travel, and News apps, among others. These are known as *provisioned* apps. Provisioned apps are staged in the image and are scheduled to be installed for every user of the Windows image at first logon. In addition to the built-in apps, you can side-load your own line of business Microsoft Store apps into the Windows image without having to publish them to the Microsoft Store. You can side-load Appx packages by using online or offline servicing commands that are available in DISM.exe or through the DISM PowerShell module.
+Several Microsoft Store apps include built-in Windows 10 and Windows 8 images. These apps include the Mail, Maps, Messaging, Bing, Travel, and News apps, among others. These apps are known as *provisioned* apps. Provisioned apps are staged in the image and are scheduled to be installed for every user of the Windows image at first logon. In addition to the built-in apps, you can side-load your own line of business Microsoft Store apps into the Windows image without having to publish them to the Microsoft Store. You can side-load `Appx` packages by using online or offline servicing commands that are available in DISM.exe or through the DISM PowerShell module.
 
 ## Symptoms
 
@@ -33,8 +33,8 @@ Consider the following scenarios:
 Scenario 1
 
 - You are creating a custom Windows 10 reference computer that you want to sysprep and capture.
-- You want to remove some of the provisioned Microsoft Store apps (Appx packages) from this reference computer.
-- You run `dism -online /Remove-ProvisionedAppxPackage /PackageName:\<packagename>` to deprovision the Appx packages.
+- You want to remove some of the provisioned Microsoft Store apps (`Appx` packages) from this reference computer.
+- You run `dism -online /Remove-ProvisionedAppxPackage /PackageName:\<packagename>` to deprovision the `Appx` packages.
 
 When you run sysprep operation in this scenario, the operation may fail with the following error:
 
@@ -44,8 +44,8 @@ A fatal error occurred while trying to sysprep the machine
 Scenario 2
 
 - You have an existing Windows image, and several Microsoft Store apps are side-loaded in the image.
-- You want to remove some of the side-loaded Appx packages from your image and customize it further.
-- You boot into the reference computer and run one of the following PowerShell commands to remove the provisioning of the Appx package:
+- You want to remove some of the side-loaded `Appx` packages from your image and customize it further.
+- You boot into the reference computer and run one of the following PowerShell commands to remove the provisioning of the `Appx` package:
   - Remove-AppxProvisionedPackage -PackageName \<PackageName>
   - Remove-ProvisionedAppxPackage -PackageName \<PackageName>
   
@@ -79,10 +79,10 @@ Additionally, in the SetupErr.log, you may notice the following error entries:
 
 ## Cause
 
-Sysprep has an additional provider that's added in Windows 10 to clean Appx packages and to generalize the image. The provider works only if the Appx package is a per-user package or an all-user provisioned package.
+Sysprep has an additional provider that's added in Windows 10 to clean `Appx`packages and to generalize the image. The provider works only if the Appx package is a per-user package or an all-user provisioned package.
 
-- *Per-user package* means that the Appx package is installed for a particular user account and is not available for other users of the computer.
-- *All-user package* means that the Appx has been provisioned into the image so that all users who use this image can access the app.
+- *Per-user package* means that the `Appx` package is installed for a particular user account and is not available for other users of the computer.
+- *All-user package* means that the `Appx` has been provisioned into the image so that all users who use this image can access the app.
 
 If an all-user package that's provisioned into the image was manually deprovisioned from the image but not removed for a particular user, the provider will encounter an error while cleaning out this package during sysprep. The provider will also fail if an all-user package that's provisioned into the image was updated by one of the users on this reference computer.
 
