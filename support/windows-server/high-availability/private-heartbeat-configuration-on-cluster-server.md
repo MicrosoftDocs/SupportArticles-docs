@@ -1,14 +1,23 @@
 ---
-title: Recommended private 
-description: 
+title: Recommended private heartbeat configuration on a cluster server
+description: Describes recommended configuration for the private adapter on a cluster server.
 ms.date: 12/04/2020
-ms.prod-support-area-path: 
-ms.technology: [Replace with your value]
-ms.reviewer: ELDENC, dewitth
+author: Deland-Han
+ms.author: delhan
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-server
+localization_priority: medium
+ms.reviewer: kaushika, ELDENC, dewitth
+ms.prod-support-area-path: Setup and configuration of clustered services and applications
+ms.technology: HighAvailability
 ---
-# Recommended private "Heartbeat" configuration on a cluster server  
+# Recommended private heartbeat configuration on a cluster server
 
-_Original product version:_ &nbsp; Microsoft Windows Server 2003 Enterprise Edition (32-bit x86), Microsoft Windows Server 2003 Datacenter Edition (32-bit x86)  
+This article describes recommended configuration for the private adapter on a cluster server.
+
+_Original product version:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 258750
 
 ## Summary
@@ -27,167 +36,159 @@ To eliminate possible communication issues, remove all unnecessary network traff
 - Defines the proper network adapter speed and mode.
 - Configures TCP/IP correctly.
 - Disable the Media Sense feature (in Windows 2000 only).
+
 > [!NOTE]
-> The information in this article does not apply to Windows Server 2008 or Windows Server 2008 R2 failover clusters. The recommendations for network configuration for the newer versions of Failover Cluster in non-CSV environments are noted at [https://technet.microsoft.com/library/dd197454(WS.10).aspx#BKMK_Account_Infrastructure](https://technet.microsoft.com/library/dd197454%28ws.10%29.aspx#bkmk_account_infrastructure). The scenario where the settings in this article are likely to cause adverse behavior on Windows Server 2008 or Windows Server 2008 R2, is with a CSV environment. Recommendations with CSV is located at [https://technet.microsoft.com/library/ff182358(WS.10).aspx](https://technet.microsoft.com/library/ff182358%28ws.10%29.aspx).
+> The information in this article does not apply to Windows Server 2008 or Windows Server 2008 R2 failover clusters. The recommendations for network configuration for the newer versions of Failover Cluster in non-CSV environments are noted at [Appendix A: Failover Cluster Requirements](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197454(v=ws.10)). The scenario where the settings in this article are likely to cause adverse behavior on Windows Server 2008 or Windows Server 2008 R2, is with a CSV environment. Recommendations with CSV is located at [Requirements for Using Cluster Shared Volumes in a Failover Cluster in Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff182358(v=ws.10)).
 
-## More Information
+## Recommended configuration for the private adapter in Windows 2000 and Windows 2003
 
-### Recommended configuration for the private adapter in Windows 2000 and Windows 2003
+1. Click **Start**, point to **Settings**, click **Control Panel**, and then double-click **Network and Dial-up Connections**.
 
+2. On the **Advanced** menu, click **Advanced Settings**.
 
-1. Click **Start**, point to
- **Settings**, click **Control Panel**, and then double-click **Network and Dial-up Connections**.
-2. On the **Advanced** menu, click
- **Advanced Settings**.
-3. In the **Connections** box, make sure that your bindings are in the following order, and then click **OK** :
+3. In the **Connections** box, make sure that your bindings are in the following order, and then click **OK**:
 
-- External public network
-   - Internal private network (Heartbeat)
-   - [Remote Access Connections]
+    - External public network
+    - Internal private network (Heartbeat)
+    - [Remote Access Connections]
+
 4. Right-click the network connection for your heartbeat adapter, and then click **Properties**.
 
-> [!NOTE]
-> You may want to rename this connection for simplicity (for example, rename it to "Private").
+    > [!NOTE]
+    > You may want to rename this connection for simplicity (for example, rename it to "Private").
+
 5. Use one of the following procedures:
+
    - If the server is using a quorum type other than Majority Node Set (MNS), click to select **Internet Protocol (TCP/IP)**, and then click to clear all other options.
+
    - If the server is using a MNS quorum, click to select **Internet Protocol (TCP/IP)** and at least one other file-sharing network protocol, and then click to clear all other options.
 
-> [!NOTE]
-> If the server is using a MNS quorum, you must have at least one network that has file-sharing capabilities for the MNS quorum to function. We strongly recommend that you have multiple networks on the cluster that have file sharing enabled to avoid a single point of failure for the quorum resource.
+    > [!NOTE]
+    > If the server is using a MNS quorum, you must have at least one network that has file-sharing capabilities for the MNS quorum to function. We strongly recommend that you have multiple networks on the cluster that have file sharing enabled to avoid a single point of failure for the quorum resource.
+
 6. If you have a network adapter that can transmit at multiple speeds, and the adapter can specify a speed and duplex mode, manually specify a speed and duplex mode.
 
-With network adapters that can manually specify a speed and duplex mode, make sure that you hard set them to the same on all nodes and according to the manufacturers' specifications. For network adapters that do not support manual settings, follow the card manufacturer's specifications.
+    With network adapters that can manually specify a speed and duplex mode, make sure that you hard set them to the same on all nodes and according to the manufacturers' specifications. For network adapters that do not support manual settings, follow the card manufacturer's specifications.
 
-The information that is traveling across the heartbeat network is small, but latency is critical for communication. If you have the same the speed and duplex settings, this helps to make sure that you have reliable communication.
+    The information that is traveling across the heartbeat network is small, but latency is critical for communication. If you have the same the speed and duplex settings, this helps to make sure that you have reliable communication.
 
-If you are not sure of the supported speed of your card and connecting devices, or your manufacturer's recommended settings, Microsoft recommends that you set all the devices on that path of 10 MB/Sec and Half Duplex . This configuration will provide sufficient bandwidth and reliable communication.
- For more information, click the following article number to view the article in the Microsoft Knowledge Base:
+    If you are not sure of the supported speed of your card and connecting devices, or your manufacturer's recommended settings, Microsoft recommends that you set all the devices on that path of 10 MB/Sec and Half Duplex. This configuration will provide sufficient bandwidth and reliable communication.
 
-[174812](https://support.microsoft.com/help/174812) The effects of using Autodetect setting on cluster network interface card  
+    > [!NOTE]
+    > Microsoft does not recommend the use of any type of fault-tolerant adapter or "Teaming" for the heartbeat. If you require redundancy for your heartbeat connection, use multiple network adapters set to Internal Communication Only and define their network priority in the Cluster configuration. Issues seen with early multi-ported network adapters, verify that your firmware and driver are at the most current revision if you use this technology.
 
-> [!NOTE]
-> : Microsoft does not recommend the use of any type of fault-tolerant adapter or "Teaming" for the heartbeat. If you require redundancy for your heartbeat connection, use multiple network adapters set to Internal Communication Only and define their network priority in the Cluster configuration. Issues seen with early multi-ported network adapters, verify that your firmware and driver are at the most current revision if you use this technology.
-
-Contact your network adapter manufacturer for information about compatibility on a Server Cluster. For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[254101](https://support.microsoft.com/help/254101) Network adapter teaming and server clustering  
+    Contact your network adapter manufacturer for information about compatibility on a Server Cluster.
 
 7. Click **Internet Protocol (TCP/IP)**, and then click **Properties**.
-8. On the **General** tab, verify that you have selected a static IP address that is not on the same subnet or network as another one of the public network adapters. An example of good IP addresses to use for the private adapters is 10.10.10.10 on node 1 and 10.10.10.11 on node 2 with a subnet mask of 255.0.0.0. If your public network uses the 10. *x.x.x* network and 255.0.0.0 subnet mask please use an alternate private network IP and subnet. For more information about valid IP addressing for a private network, click the following article number to view the article in the Microsoft Knowledge Base:
 
-[142863](https://support.microsoft.com/help/142863) Valid IP addressing for a private network  
+8. On the **General** tab, verify that you have selected a static IP address that is not on the same subnet or network as another one of the public network adapters. An example of good IP addresses to use for the private adapters is 10.10.10.10 on node 1 and 10.10.10.11 on node 2 with a subnet mask of 255.0.0.0. If your public network uses the 10.x.x.x network and 255.0.0.0 subnet mask, use an alternate private network IP and subnet.
 
 9. Make sure that there is no value set in the **Default Gateway** box.
+
 10. Verify that there are no values defined in the **Use the following DNS server addresses** box.
 
-> [!NOTE]
-> If the cluster nodes are also DNS servers, "127.0.0.1" is displayed in the **Use the following DNS server addresses** box (the box will not be blank); this is acceptable.
+    > [!NOTE]
+    > If the cluster nodes are also DNS servers, "127.0.0.1" is displayed in the **Use the following DNS server addresses** box (the box will not be blank); this is acceptable.
+
 11. Click **Advanced**.
+
 12. On the **DNS** tab, verify that there are no values defined. Make sure that the **Register this connection's addresses in DNS** and **Use this connection's DNS suffix in DNS registration** check boxes are cleared.
-13. When you close the dialog box, you may receive the following prompt. If you receive this prompt, click **Yes** :This connection has an empty primary WINS address. Do you want to continue?
+
+13. When you close the dialog box, you may receive the following prompt. If you receive this prompt, click **Yes**:
+
+    > This connection has an empty primary WINS address. Do you want to continue?
 
 14. If you are using a crossover cable for your private heartbeat interconnect, disable the TCP/IP stack destruction feature of Media Sense.
 
-> [!NOTE]
-> Do not perform this step on a Windows Server 2003 Cluster.
+    > [!NOTE]
+    > Do not perform this step on a Windows Server 2003 Cluster.
 
-To have us disable the TCP/IP stack destruction feature of Media Sense for you, go to the "[Fix it for me](#fixitformealways)" section. To disable the TCP/IP stack destruction feature of Media Sense yourself, go to the "[Let me fix it myself](#letmefixitmyselfalways)" section.
+    To disable the TCP/IP stack destruction feature of Media Sense, add the following registry value to each node:  `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters`
 
-### Fix it for me
-
-To disable the TCP/IP stack destruction feature of Media Sense automatically, click the
- **Fix this problem** link. Click
- **Run** in the
- **File Download** dialog box, and follow the steps in this wizard.
-
-> [!NOTE]
-> this wizard may be in English only; however, the automatic fix also works for other language versions of Windows.
-
-> [!NOTE]
-> If you are not on the computer that has the problem, you can save the automatic fix to a flash drive or to a CD, and then you can run it on the computer that has the problem.
-
-Now continue to the next step.
-
-### Let me fix it myself
-
-To disable the TCP/IP stack destruction feature of Media Sense add the following registry value to each node: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters` 
-
-**Value Name** : DisableDHCPMediaSense
- **Data Type** : REG_DWORD
- **Data** : 1
- For more information about this, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[254651](https://support.microsoft.com/help/254651) Cluster network role changes automatically  
+    - Value Name: DisableDHCPMediaSense
+    - Data Type: REG_DWORD
+    - Data: 1
 
 15. Complete the previous steps on all other nodes in the cluster.
+
 16. Start Cluster Administrator.
-17. Click the cluster name at the root of Administrator. On the
- **File** menu, click **Properties**.
+
+17. Click the cluster name at the root of Administrator. On the **File** menu, click **Properties**.
+
 18. On the **Network Priority** tab, verify that the private network is listed at the top. If it is not, use the **Move Up** button to increase its priority.
-19. Click the private network, and then click
- **Properties**.
+
+19. Click the private network, and then click **Properties**.
+
 20. Click to select the **Enable this network for cluster use** check box.
-21. Click **Internal cluster communications only (private Network)**. For more information, click the following article number to view the article in the Microsoft Knowledge Base:
 
-[281662](https://support.microsoft.com/help/281662) Windows 2000 and Windows Server 2003 cluster nodes as domain controllers  
+21. Click **Internal cluster communications only (private Network)**. For more information, see [How to use Windows Server cluster nodes as domain controllers](/troubleshoot/windows-server/high-availability/use-cluster-nodes-as-domain-controllers).
 
-### Recommended configuration for the private adapter in Windows NT 4.0
+## Recommended configuration for the private adapter in Windows NT 4.0
 
+1. Click **Start**, point to **Settings**, click **Control Panel**, and then double-click **Network**.
 
-1. Click **Start**, point to
- **Settings**, click **Control Panel**, and then double-click **Network**.
 2. On the **Protocols** tab, click **TCP/IP Protocol**, and then click **Properties**.
-3. In the **Adapter** box, click the private network adapter.
-4. On the **IP Address** tab, verify that you have selected a static IP address that is not on the same subnet or network as another one of the public network adapters. An example of good IP addresses to use for the private adapters is 10.10.10.10 on node 1 and 10.10.10.11 on node 2 with a subnet mask of 255.0.0.0.
-5. Make sure that there is no value set in the **Default Gateway** box.
-6. On the **WINS Address** tab, click the heartbeat adapter in the **Adapter** box.
-7. Verify that there are no values defined for the WINS server entries.
-8. When you close the dialog box, you may receive the following prompt. If you receive this prompt, click **Yes** :At least one of the adapter cards has an empty primary WINS address. Do you want to continue?
 
-9. On the **Routing** tab, verify that the
- **Enable IP Forwarding** check box is cleared.
+3. In the **Adapter** box, click the private network adapter.
+
+4. On the **IP Address** tab, verify that you have selected a static IP address that is not on the same subnet or network as another one of the public network adapters. An example of good IP addresses to use for the private adapters is 10.10.10.10 on node 1 and 10.10.10.11 on node 2 with a subnet mask of 255.0.0.0.
+
+5. Make sure that there is no value set in the **Default Gateway** box.
+
+6. On the **WINS Address** tab, click the heartbeat adapter in the **Adapter** box.
+
+7. Verify that there are no values defined for the WINS server entries.
+
+8. When you close the dialog box, you may receive the following prompt. If you receive this prompt, click **Yes**:
+
+    > At least one of the adapter cards has an empty primary WINS address. Do you want to continue?
+
+9. On the **Routing** tab, verify that the **Enable IP Forwarding** check box is cleared.
+
 10. Click **OK**.
+
 11. If you have a network adapter that can transmit at multiple speeds and can specify a speed and duplex mode, manually specify a speed and duplex mode.
 
-With network adapters that can manually specify a speed and duplex mode, make sure that you hard set them to the same on all nodes and according to the manufacturer's specifications. For network adapters that do not support manual settings, follow the card manufacturer's specifications.
+    With network adapters that can manually specify a speed and duplex mode, make sure that you hard set them to the same on all nodes and according to the manufacturer's specifications. For network adapters that do not support manual settings, follow the card manufacturer's specifications.
 
-The information that is traveling across the heartbeat network is small, but latency is critical for communication. If you have the same speed and duplex settings, you can help make sure that you have reliable communication.
+    The information that is traveling across the heartbeat network is small, but latency is critical for communication. If you have the same speed and duplex settings, you can help make sure that you have reliable communication.
 
-If you do not know the supported speed of your card and connecting devices, Microsoft recommends you set all devices on that path to 10 MB/Sec and Half Duplex . This configuration provides sufficient bandwidth and reliable communication. For more information, click the following article number to view the article in the Microsoft Knowledge Base:
+    If you do not know the supported speed of your card and connecting devices, Microsoft recommends you set all devices on that path to 10 MB/Sec and Half Duplex. This configuration provides sufficient bandwidth and reliable communication.
 
-[174812](https://support.microsoft.com/help/174812) The effects of using Autodetect setting on cluster network interface card  
+    > [!NOTE]
+    > Microsoft does not recommend that you use any type of fault-tolerant adapter or "Teaming" for the heartbeat. If you require redundancy for your heartbeat connection, use multiple network adapters set to Internal Communication Only and define their network priority in the Cluster configuration. Issues seen with early multi-ported network adapters, verify that your firmware and driver are at the most current revision if you use this technology.
 
-> [!NOTE]
-> Microsoft does not recommend that you use any type of fault-tolerant adapter or "Teaming" for the heartbeat. If you require redundancy for your heartbeat connection, use multiple network adapters set to Internal Communication Only and define their network priority in the Cluster configuration. Issues seen with early multi-ported network adapters, verify that your firmware and driver are at the most current revision if you use this technology.
-
-Contact your network adapter manufacturer for information about compatibility on a Server Cluster. For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[254101](https://support.microsoft.com/help/254101) Network adapter teaming and server clustering  
+    Contact your network adapter manufacturer for information about compatibility on a Server Cluster.
 
 12. On the **Bindings** tab, click **All Adapters** in the **Show Bindings For** box.
-13. Click the **plus sign** (+) next to the adapter used for the private interconnect.
-14. Click **WINS Client (TCP/IP)**, and then click
- **Disable**.> [!NOTE]
-> No protocols other than TCP/IP should be enabled on the heartbeat adapter. Verify that all others are disabled (including such items as Network Monitor).
-15. In the **Show Bindings For** box, click
- **All Protocols**.
-16. Click the **plus sign** (+) next to
- **TCP/IP Protocol**.
-17. Make sure that the public network adapter is the first binding (at the top of the binding list). To do this, click the private network adapter and use the **Move Down** button. If you have multiple public network adapters, make sure the heartbeat adapter is listed last.
- For more information, click the following article number to view the article in the Microsoft Knowledge Base:
 
-[193890](https://support.microsoft.com/help/193890) Recommend WINS configuration for Microsoft cluster server  
+13. Click the **plus sign** (+) next to the adapter used for the private interconnect.
+
+14. Click **WINS Client (TCP/IP)**, and then click **Disable**.
+
+    > [!NOTE]
+    > No protocols other than TCP/IP should be enabled on the heartbeat adapter. Verify that all others are disabled (including such items as Network Monitor).
+
+15. In the **Show Bindings For** box, click **All Protocols**.
+
+16. Click the **plus sign** (+) next to **TCP/IP Protocol**.
+
+17. Make sure that the public network adapter is the first binding (at the top of the binding list). To do this, click the private network adapter and use the **Move Down** button. If you have multiple public network adapters, make sure the heartbeat adapter is listed last.
 
 18. Click **OK** to finish modifying the network properties and accept the changes.
-19. Reboot the node for the changes to take effect.
-20. Complete the previous steps on all other nodes in the cluster.
-21. Start Cluster Administrator.
-22. Click the cluster name at the root of Administrator. On the
- **File** menu, click **Properties**.
-23. On the **Network Priority** tab, verify that the private network is listed at the top. If it is not, use the **Move Up** button to increase its priority.
-24. Click the private network, and then click
- **Properties**.
-25. Click to select the **Enable this network for cluster use** check box.
-26. Click **Internal cluster communications only (private Network)**. For more information, click the following article number to view the article in the Microsoft Knowledge Base:
 
-[281662](https://support.microsoft.com/help/281662) Windows 2000 cluster nodes as domain controllers
+19. Reboot the node for the changes to take effect.
+
+20. Complete the previous steps on all other nodes in the cluster.
+
+21. Start Cluster Administrator.
+
+22. Click the cluster name at the root of Administrator. On the **File** menu, click **Properties**.
+
+23. On the **Network Priority** tab, verify that the private network is listed at the top. If it is not, use the **Move Up** button to increase its priority.
+
+24. Click the private network, and then click **Properties**.
+
+25. Click to select the **Enable this network for cluster use** check box.
+
+26. Click **Internal cluster communications only (private Network)**. For more information, see [How to use Windows Server cluster nodes as domain controllers](/troubleshoot/windows-server/high-availability/use-cluster-nodes-as-domain-controllers).

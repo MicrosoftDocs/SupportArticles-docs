@@ -1,26 +1,35 @@
 ---
-title: Using Telnet to Test Port 3389 Functionality
-description: 
+title: Use Telnet to test port 3389 functionality
+description: Describes how to use Telnet to test port 3389 functionality.
 ms.date: 12/04/2020
-ms.prod-support-area-path: 
-ms.technology: [Replace with your value]
-ms.reviewer: 
+author: Deland-Han
+ms.author: delhan
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-client
+localization_priority: medium
+ms.reviewer: kaushika
+ms.prod-support-area-path: TCP/IP communications
+ms.technology: Networking
 ---
-# Using Telnet to Test Port 3389 Functionality
+# Use Telnet to test port 3389 functionality
 
-_Original product version:_ &nbsp;   
+This article describes how to use Telnet to test port 3389 functionality.
+
+_Original product version:_ &nbsp; Windows 10 - all editions
 _Original KB number:_ &nbsp; 187628
 
 ## Summary
 
 Terminal Server Clients use TCP port 3389 to communicate with Terminal Server. A common problem in a WAN environment is that a firewall or other network filter prevents connectivity with this port. You can run a simple troubleshooting test to make sure the Client can connect to the port. Just try to telnet to the port from the Client.
 
+## Test the functionality of port 3389 by using Telnet
+
 To test the functionality of port 3389, use this command from the Client:
 
-```
-
+```console
 Telnet tserv 3389
-
 ```
 
 where "tserv" is the host name of your Terminal Server.
@@ -31,8 +40,9 @@ The Terminal Server should disconnect the connection after a few minutes. Or, yo
 
 This test tells you that you can connect over the port.
 
-If Telnet reports that you cannot connect, there are several possible reasons:
+## Why does Telnet reports that you cannot connect?
 
+If Telnet reports that you cannot connect, there are several possible reasons:
 
 1. If you can connect by replacing "tserv" with the Terminal Server's IP address but not the host name, you may have a DNS or WINS resolution problem.
 
