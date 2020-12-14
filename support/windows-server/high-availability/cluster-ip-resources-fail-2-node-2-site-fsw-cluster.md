@@ -1,6 +1,6 @@
 ---
 title: Cluster IP address resources fail on both nodes of a two-node multi-site cluster when one node disconnects from the public VLAN
-description: This article describes the behavior that occurs when one node of a two-node multi-site cluster disconnects from the public cluster VLAN. In this case, the IP address resources on the remaining node fail and that node shuts down.
+description: This article describes the behavior that occurs when one node of a two-node multi-site cluster disconnects from the public cluster VLAN. In this case, the IP address resources and their corresponding cluster groups on both nodes fail.
 ms.date: 12/22/2020
 author: Teresa-Motiv
 ms.author: v-tea
@@ -16,7 +16,7 @@ keywords: multi-site,multisite,cluster,disconnect,cross-subnet,stretched,vlan
 ---
 # Cluster IP address resources fail on both nodes of a two-node multi-site cluster when one node disconnects from the public VLAN
 
-This article describes the behavior that occurs when one node of a two-node multi-site cluster disconnects from the public cluster VLAN. In this case, the IP address resources on the remaining node fail and that node shuts down.
+This article describes the behavior that occurs when one node of a two-node multi-site cluster disconnects from the public cluster VLAN. In this case, the IP address resources and their corresponding cluster groups on both nodes fail.
 
 _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
@@ -33,13 +33,13 @@ In this scenario, one of the nodes disconnects from the public VLAN. The followi
 
  :::image type="content" source=".\media\cluster-ip-resources-fail-2-node-2-site-fsw-cluster\disconnect-nodes-in-different-sites.png" alt-text="Two node cluster across two sites, with disconnected public VLAN":::
 
-Using the diagram as an example, the cluster detects the interruption, and marks the public VLAN NIC on Node 2 as "Failed." As a result, all of the cluster IP address resources on Node 2 shut down, and the cluster generates messages that resemble the following:
+Using the diagram as an example, the cluster detects the interruption, and marks the public VLAN NIC on Node 2 as "Failed." As a result, all of the cluster IP address resources on Node 2 fail, and the cluster generates messages that resemble the following:
 
 > 000005ec.000011e4::2020/09/19-19:41:51.777 DBG   [IM - public-1.0.0] Adding interface states for cross-subnet-route-only interfaces
 >  
 > 000005ec.000011e4::2020/09/19-19:41:51.777 DBG   [IM - public-1.0.0] Interface 1ee3567e-84f7-459a-a39e-a5c44de643fa has no up cross-subnet routes. Marking it as failed
 
-Because the two sites cannot communicate across the public VLAN, the cluster also marks the public VLAN NIC on Node 1 as "Failed." As a result, all of the cluster IP Address resources on Node 1 also shut down.
+Because the two sites cannot communicate across the public VLAN, the cluster also marks the public VLAN NIC on Node 1 as "Failed." As a result, all of the cluster IP Address resources on Node 1 also fail.
 
 > 00001790.000006ac::2020/09/19-19:41:51.780 INFO  [IM] Changing the state of adapters according to result: \<*class mscs::InterfaceResult*>
 >  
@@ -51,7 +51,7 @@ Because the two sites cannot communicate across the public VLAN, the cluster als
 
 In the end, because of the disconnected node, the cluster groups on both nodes are in a failed state. You have to manually bring them online again.
 
-If the two cluster nodes were in the same site, a similar network disconnect would cause the public VLAN NIC on Node 2 would fail in the same way. However, in that case all the cluster groups on Node 2 would fail over to Node 1.
+If the two cluster nodes were in the same site, a similar network disconnect would cause the public VLAN NIC on Node 2 to fail in the same way. However, in that case all the cluster groups on Node 2 would fail over to Node 1 and the cluster IP address resources on Node 1 would not fail.
 
 ## Cause
 
@@ -61,7 +61,7 @@ In this scenario, this behavior is expected. We recommend that you use four node
 
 To prevent this behavior, you can change your cluster configuration in the following ways:
 
-- Add at least one cluster node to each site. In this configuration, if one node on a site disconnects, the remaining node continues to communicate with the other site. The cluster resources remain online.
+- Add at least one cluster node to each site. In this configuration, if one node on a site disconnects, the remaining node continues to communicate with the other site. The cluster resources on that remaining node and on the nodes in the unaffected site remain online.
 - Add another cluster node at a third site. In this configuration, if one node disconnects, the two remaining nodes remain online and cross-site communication continues.
 - Change the private cluster network to a non-stretched VLAN. In this configuration, if one node disconnects, the cluster starts the arbitration algorithm to determine resource and quorum ownership.
 
