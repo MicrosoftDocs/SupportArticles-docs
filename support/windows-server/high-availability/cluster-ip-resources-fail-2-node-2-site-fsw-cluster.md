@@ -39,7 +39,7 @@ Using the diagram as an example, the cluster detects the interruption, and marks
 >  
 > 000005ec.000011e4::2020/09/19-19:41:51.777 DBG   [IM - public-1.0.0] Interface 1ee3567e-84f7-459a-a39e-a5c44de643fa has no up cross-subnet routes. Marking it as failed
 
-Because the two sites cannot communicate across the public VLAN, the cluster also marks the public VLAN NIC on Node 1 as "Failed." As a result, all of the cluster IP Address resources on Node 1 also fail.
+Because the two sites cannot communicate across the public VLAN, the cluster also marks the public VLAN NIC on Node 1 as "Failed." As a result, all the cluster IP Address resources on Node 1 also fail.
 
 > 00001790.000006ac::2020/09/19-19:41:51.780 INFO  [IM] Changing the state of adapters according to result: \<*class mscs::InterfaceResult*>
 >  
@@ -51,7 +51,7 @@ Because the two sites cannot communicate across the public VLAN, the cluster als
 
 In the end, because of the disconnected node, the cluster groups on both nodes are in a failed state. You have to manually bring them online again.
 
-If the two cluster nodes were in the same site, a similar network disconnect would cause the public VLAN NIC on Node 2 to fail in the same way. However, in that case all the cluster groups on Node 2 would fail over to Node 1 and the cluster IP address resources on Node 1 would not fail.
+If the two cluster nodes were in the same site, a similar network disconnect would cause the public VLAN NIC on Node 2 to fail in the same way. However, in that case all the cluster groups on Node 2 would fail over to Node 1. The cluster IP address resources on Node 1 wouldn't fail.
 
 ## Cause
 
@@ -70,4 +70,4 @@ If you have the configuration that the "Symptoms" section describes and you have
 - Disable all networks except for the public cluster VLAN.
 - Shut down all the cluster nodes except one.
 
-When you are ready to resume typical operations, start by enabling the networks (or restarting the nodes).
+When you're ready to resume typical operations, start by enabling the networks (or restarting the nodes).
