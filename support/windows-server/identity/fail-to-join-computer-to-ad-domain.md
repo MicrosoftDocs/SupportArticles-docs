@@ -72,11 +72,11 @@ To eliminate the error, use one of the following methods:
 
 - Verify that NetBIOS over TCP/IP is enabled.
 
-    a. Click **Start**, click **Run**, type *ncpa.cpl*, and then click **OK**.
-    b. In **Network Connections**, right-click **Local Area Connection**, and then click **Properties**.
-    c. Click **Internet Protocol Version 4 (TCP/IPv4)**, and then click **Properties**.
-    d. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, click **Advanced**.
-    e. On the **WINS** tab, verify **Enable NetBIOS Over TCP/IP** is enabled, and then click **OK** three times.
+    1. Click **Start**, click **Run**, type *ncpa.cpl*, and then click **OK**.
+    2. In **Network Connections**, right-click **Local Area Connection**, and then click **Properties**.
+    3. Click **Internet Protocol Version 4 (TCP/IPv4)**, and then click **Properties**.
+    4. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, click **Advanced**.
+    5. On the **WINS** tab, verify **Enable NetBIOS Over TCP/IP** is enabled, and then click **OK** three times.
 
 - Verify end-to-end network connectivity over UDP port 137 over the network path connecting the client being and the helper DC serving the join operation.
 

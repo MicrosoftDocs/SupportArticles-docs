@@ -55,7 +55,7 @@ The update introduces a new Group Policy policy setting in the NETLOGON.ADMX fil
 
 |Policy name|Use lowercase DNS host names when registering domain controller SRV records |
 |---|---|
-|Policy path| **Computer Configuration\Policies\Administrative Templates\System\Net Logon\DC Locator DNS Records\** |
+|Policy path| Computer Configuration\\Policies\\Administrative Templates\\System\Net Logon\\DC Locator DNS Records\\|
 |Policy values|<ul><li>**1** (default). The policy is enabled. The policy purges duplicate DNS SRV records. When you install the update on a DC, this becomes part of that DC's default local configuration.</li> <li>**0**. The policy is disabled. Under this setting, the problematic behavior continues, and DCs that have computer names that include uppercase characters continue to register SRV records that include those uppercase characters. The value of **0** is supported for only emergency or testing use. It should not be used under typical conditions. </li> </ul> If the policy is not configured or the value is missing, the DC falls back to the new default local configuration and treats the policy as enabled.|
 |||
 
@@ -108,7 +108,7 @@ You can use the following methods to prevent Windows DNS from creating duplicate
 
 To work around this issue after you encounter it, you have to rename your DCs by using all lowercase characters. Depending on the details of your deployment, you may have to manually reconfigure settings or remove files. This section provides the following workaround methods, in order of complexity:
 
-- [Method 1: Rename a DC in a single-DC domain](#method-1 rename-a-dc-in-a-single-dc-domain)
+- [Method 1: Rename a DC in a single-DC domain](#method-1-rename-a-dc-in-a-single-dc-domain)
 - [Method 2: Rename DCs in a multi-DC domain](#method-2-rename-dcs-in-a-multi-dc-domain)
 - [Method 3: Rename DCs and remove all stored SRV records](#method-3-rename-dcs-and-remove-all-stored-srv-records)
 
