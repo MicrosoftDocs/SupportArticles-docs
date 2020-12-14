@@ -15,14 +15,10 @@ ms.technology: ActiveDirectory
 ---
 # How to troubleshoot errors that occur when you join Windows-based computers to a domain
 
-This article describes how to troubleshoot errors that occur when you join Windows-based computers to a domain.
+This article describes several common error messages that can occur when you join client computers that are running Windows to a domain. This article also provides troubleshooting suggestions for these errors.
 
 _Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4341920
-
-## Summary
-
-This article describes several common error messages that can occur when you join client computers that are running Windows to a domain. This article also provides troubleshooting suggestions for these errors.
 
 ## Where to find the Netsetup.log file
 
@@ -102,6 +98,7 @@ nltest /dsgetdc:<DNS domain name>/force
 ```
 
 When you type the domain name, make sure that you type the DNS name and not the NetBIOS name.
+
 Additionally, you can update the network adapter driver.
 
 ### Error 6
