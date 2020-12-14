@@ -56,7 +56,7 @@ Server name: ServerName
 
 #### Guidance
 
-This event indicates that the server tried to log on the user as an unauthenticated guest but was denied by the client. Guest logons do not support standard security features such as signing and encryption. Therefore, guest logons are vulnerable to man-in-the-middle attacks that can expose sensitive data on the network. Windows disables **insecure** (nonsecure) guest logons by default. Microsoft recommends that you do not enable insecure guest logons.
+This event indicates that the server tried to log on the user as an unauthenticated guest but was denied by the client. Guest logons do not support standard security features such as signing and encryption. So, guest logons are vulnerable to man-in-the-middle attacks that can expose sensitive data on the network. Windows disables **insecure** (nonsecure) guest logons by default. We recommend that you don't enable insecure guest logons.
 
 ### Log entry 2
 
@@ -79,13 +79,13 @@ Configured registry value:
 
 #### Guidance
 
-This event indicates that an administrator has enabled insecure guest logons. An insecure guest logon occurs when a server logs on the user as an unauthenticated guest. It typically occurs in response to an authentication failure. Guest logons do not support standard security features, such as signing and encryption. So, allowing guest logons makes the client vulnerable to man-in-the-middle attacks that can expose sensitive data on the network. Windows disables insecure guest logons by default. Microsoft recommends that you do not enable insecure guest logons.
+This event indicates that an administrator has enabled insecure guest logons. An insecure guest logon occurs when a server logs on the user as an unauthenticated guest. It typically occurs in response to an authentication failure. Guest logons do not support standard security features, such as signing and encryption. So, allowing guest logons makes the client vulnerable to man-in-the-middle attacks that can expose sensitive data on the network. Windows disables insecure guest logons by default. We recommend that you don't enable insecure guest logons.
 
 ## Cause
 
 This change in default behavior is by design and is recommended by Microsoft for security.
 
-A malicious computer that impersonates a legitimate file server could allow users to connect as guests without their knowledge. Microsoft recommends that you do not change this default setting. If a remote device is configured to use guest credentials, an administrator should disable guest access to that remote device and configure correct authentication and authorization.
+A malicious computer that impersonates a legitimate file server could allow users to connect as guests without their knowledge. We recommend that you don't change this default setting. If a remote device is configured to use guest credentials, an administrator should disable guest access to that remote device and configure correct authentication and authorization.
 
 Windows and Windows Server have not enabled guest access or allowed remote users to connect as guest or anonymous users since Windows 2000. Only third-party remote devices might require guest access by default. Microsoft-provided operating systems do not.
 
