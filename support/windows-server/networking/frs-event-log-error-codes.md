@@ -1,6 +1,6 @@
 ---
 title: FRS event log error codes
-description: Describes a list of events that are caused by File Replication Service (FRS). These events are displayed in the FRS log.
+description: Introduces a list of events that are caused by File Replication Service (FRS). These events are displayed in the FRS log.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,7 +15,7 @@ ms.technology: Networking
 ---
 # FRS event log error codes
 
-This article describes the event log entries the File Replication Service (FRS) generates.
+This article introduces the event log entries that the File Replication Service (FRS) generates.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;308406
