@@ -65,7 +65,7 @@ Copy all files from the PolicyDefinitions folder on a source computer to the new
 
 The PolicyDefinitions folder on the Windows domain controller stores all .admx files and .adml files for all languages that are enabled on the client computer.
 
-The .adml files are stored in a language-specific folder. For example, English (United States).adml files are stored in a folder that is named *en-US*, Korean .adml files are stored in a folder that is named *ko_KR*, and so on.
+The .adml files are stored in a language-specific folder. For example, English (United States).adml files are stored in a folder that is named *en-US*. Korean .adml files are stored in a folder that is named *ko_KR*, and so on.
 
 If .adml files for additional languages are required, you must copy the folder that contains the .adml files for that language to the Central Store. When you have copied all .admx and .adml files, the PolicyDefinitions folder on the domain controller should contain the .admx files and one or more folders that contain language-specific .adml files.
 
@@ -76,7 +76,7 @@ When the operating system collection is completed, merge any OS extension or app
 
 When this is finished, rename the current PolicyDefinitions folder to reflect that it's the previous version, such as PolicyDefinitions-1709. Then, rename the new folder (such as PolicyDefinitions-1803) to the production name.
 
-We suggest this approach as you can revert to the old folder in case you experience a severe problem with the new set of files. When you don't experienced any problems with the new set of files, you can move the older PolicyDefinitions folder to an archive location outside sysvol folder.
+We suggest this approach as you can revert to the old folder in case you experience a severe problem with the new set of files. When you don't experience any problems with the new set of files, you can move the older PolicyDefinitions folder to an archive location outside sysvol folder.
 
 ## Group Policy administration
 
@@ -101,7 +101,7 @@ You can also use this setting to:
 
 - Issue 1
 
-  After you copy the Windows 10 .admx templates to the sysvol folder Central Store and overwrite all existing .admx and .adml files, select the **Policies** node under **Computer Configuration** or **User Configuration**. When you do this, you may receive the following error message:
+  After you copy the Windows 10 .admx templates to the sysvol folder Central Store and overwrite all existing .admx and .adml files, select the **Policies** node under **Computer Configuration** or **User Configuration**. In this situation, you may receive the following error message:
 
   > Namespace 'Microsoft.Policies.Sensors.WindowsLocationProvider' is already defined as the target namespace for another file in the store.  
   > File  
