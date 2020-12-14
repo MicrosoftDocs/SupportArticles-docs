@@ -34,7 +34,7 @@ At line:1 char:1
 
 ## Cause
 
-When a PS session is created and authenticates through Kerberos, the session doesn't support double hop. Therefore, the PS session can't authenticate by using network resources.  
+When a PowerShell session is created and authenticates through Kerberos, the session doesn't support double hop. Therefore, the PowerShell session can't authenticate by using network resources.  
 
 When PowerShell tries to enumerate the modules in the network path, the operation fails with the Access Denied error, and the command unexpectedly terminates.
 
