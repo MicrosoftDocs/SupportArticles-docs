@@ -79,7 +79,7 @@ Configured registry value:
 
 #### Guidance
 
-This event indicates that an administrator has enabled insecure guest logons. An insecure guest logon occurs when a server logs on the user as an unauthenticated guest. This typically occurs in response to an authentication failure. Guest logons do not support standard security features such as signing and encryption. Therefore, allowing guest logons makes the client vulnerable to man-in-the-middle attacks that can expose sensitive data on the network. Windows disables insecure guest logons by default. Microsoft recommends that you do not enable insecure guest logons.
+This event indicates that an administrator has enabled insecure guest logons. An insecure guest logon occurs when a server logs on the user as an unauthenticated guest. It typically occurs in response to an authentication failure. Guest logons do not support standard security features, such as signing and encryption. So, allowing guest logons makes the client vulnerable to man-in-the-middle attacks that can expose sensitive data on the network. Windows disables insecure guest logons by default. Microsoft recommends that you do not enable insecure guest logons.
 
 ## Cause
 
