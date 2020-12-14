@@ -40,7 +40,7 @@ To resolve this issue, follow these steps:
 > When encountering this error, the Guest OS isn't operational. You'll be troubleshooting in offline mode to resolve this issue.
 
 ### Step 1: Create and access a repair VM
-1.	Follow steps 1-3 of the VM [Repair process overview](https://docs.microsoft.com/en-us/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-overview) to prepare a Repair VM.
+1.	Follow steps 1-3 of the VM [Repair process overview](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-overview) to prepare a Repair VM.
 2.	Use Remote Desktop Connection connect to the Repair VM.
 
 For more information, see [Unable to reach the key vault for Standard VM type machines](https://supportability.visualstudio.com/AzureVMPOD/_wiki/wikis/AzureVMPOD/266229/Azure_Virtual-Machine_Features_Disk-Encryption_TSG_Unable-to-reach-the-key-vault-for-Standard-VM-type-machines).
