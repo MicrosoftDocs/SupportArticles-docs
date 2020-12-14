@@ -79,7 +79,7 @@ Additionally, in the SetupErr.log, you may notice the following error entries:
 
 ## Cause
 
-Sysprep has an additional provider that's added in Windows 10 to clean `Appx`packages and to generalize the image. The provider works only if the `Appx` package is a per-user package or an all-user provisioned package.
+Sysprep has an additional provider that's added in Windows 10 to clean `Appx` packages and to generalize the image. The provider works only if the `Appx` package is a per-user package or an all-user provisioned package.
 
 - *Per-user package* means that the `Appx` package is installed for a particular user account and is not available for other users of the computer.
 - *All-user package* means that the `Appx` has been provisioned into the image so that all users who use this image can access the app.
