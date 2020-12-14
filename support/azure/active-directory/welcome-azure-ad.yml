@@ -16,3 +16,15 @@ metadata:
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
+
+ # Card
+  - title: Enroll Surface Duo in MDM management
+    linkLists:
+      - linkListType: deploy
+        links:
+          - text: Enroll Android Enterprise work profile devices
+            url: https://docs.microsoft.com/mem/intune/enrollment/android-work-profile-enroll
+          - text: Enroll fully managed devices
+            url: https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll
+          - text: Enroll dedicated devices
+            url: https://docs.microsoft.com/mem/intune/enrollment/android-kiosk-enroll
