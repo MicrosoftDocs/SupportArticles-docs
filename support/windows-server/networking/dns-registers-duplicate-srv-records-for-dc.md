@@ -122,7 +122,7 @@ To work around this issue after you encounter it, you have to rename your DCs by
 > [!NOTE]
 > If you encounter any issues after you rename a DC, revert the DC name to its original content.
 
-### Method 1: Rename a DC in a single-DC domain
+### Method 1: Rename a DC in a single-DC domain
 
 If you have one DC, use the steps in [Renaming a Domain Controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794951%28v=ws.10%29) to change the DC's computer name to a new name that contains only lowercase characters. In the case of a single DC, you do not have to demote and repromote it.
 
