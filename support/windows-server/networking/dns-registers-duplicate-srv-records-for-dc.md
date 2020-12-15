@@ -138,6 +138,7 @@ If you have more than one DC in your domain, follow these steps for each affecte
 2. Rename the computer, giving it a name that contains only lowercase characters.
 
 3. Promote the computer to a DC again.
+
 By the time all the DCs are back online, the duplicate (mixed-case) SRV records should be gone.
 
 ### Method 3: Rename DCs and remove all stored SRV records

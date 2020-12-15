@@ -74,10 +74,12 @@ To install Windows Server on a computer that uses AMD EPYC 7xx2 (AMD Rome) proc
 
     :::image type="content" source="./media/windows-server-support-installation-for-amd-role-family-processor/screenshot-of-l2-l3-cache-size.jpg" alt-text="L2 and L3 cache display issue.":::
 
-- **Task Manager displays an incorrect number of sockets.**  
-For example, for a single-CPU one-socket system, Task Manager displays two sockets. For a two-socket system, Task Manager displays four sockets.
+- **Task Manager displays an incorrect number of sockets.**
 
-- **Task manager displays an incorrect number of Numa nodes.**  
+    For example, for a single-CPU one-socket system, Task Manager displays two sockets. For a two-socket system, Task Manager displays four sockets.
+
+- **Task manager displays an incorrect number of Numa nodes.**
+
     For example, for a one-socket system, Task Manager displays two Numa nodes. For a two-socket system, Task Manager displays four Numa nodes.
 
     ![Task manager](./media/windows-server-support-installation-for-amd-role-family-processor/screenshot-of-numa-nodes.png)

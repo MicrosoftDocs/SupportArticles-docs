@@ -86,3 +86,5 @@ To create a file share on a server cluster, follow these steps:
 > - The **User Limit** dialog can be used to limit the number of simultaneous users.
 > - Click the **Permissions** button to set share level permissions. Only domain level groups should be used in defining share level permissions because local groups and user accounts do not reside on the other node, and the permissions will not take effect when the file share is failed over. The only exception to this is if all nodes in the cluster are domain controllers. It is recommended to use NTFS permissions instead of share level permissions on a server cluster.
 > - The **Advanced** dialog can be used to create a Dynamic file share or a DFS Root. The **Advanced** button was a feature that was added in Windows NT 4.0 Service Pack 4. If you are running Windows NT 4.0, but you do not see the **Advanced** button, reapply Windows NT 4.0 Service Pack 4 or higher.
+
+When browsing the file share, file shares for other virtual servers on the same cluster may be visible. If you are going to create a large number of file share resources, it may be easier to script the creation using Cluster.exe.

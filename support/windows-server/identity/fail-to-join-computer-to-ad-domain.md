@@ -24,8 +24,7 @@ _Original KB number:_ &nbsp; 2018583
 
 Using the domain join UI to join a Windows 7 or Windows Server 2008 R2 workgroup computer to an Active Directory domain by specifying the target DNS domain name fails with the following on-screen error:
 
-> Changing the Primary Domain DNS name of this computer to "" failed. The name will  
-remain "\<DNS domain>.\<top level domain>".  
+> Changing the Primary Domain DNS name of this computer to "" failed. The name will remain "\<DNS domain>.\<top level domain>".  
 The error was:  
 >
 > The specified server cannot perform the required operation.
@@ -84,8 +83,8 @@ To eliminate the error, use one of the following methods:
 
 - Add Domain DNS Suffix in the TCP/IP Properties.
 
-    a. Click **Start**, click **Run**, type *ncpa.cpl*, and then click **OK**.
-    b. In **Network Connections**, right-click **Local Area Connection**, and then click **Properties**.
-    c. Click **Internet Protocol Version 4 (TCP/IPv4)**, and then click **Properties**.
-    d. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, click **Advanced**.
-    e. On the **DNS** tab, select these DNS Suffixes, click **Add**, type the FQDN of the domain in the **DNS Server** dialog box, **click Add**, and then click **OK three times**.
+    1. Click **Start**, click **Run**, type *ncpa.cpl*, and then click **OK**.
+    2. In **Network Connections**, right-click **Local Area Connection**, and then click **Properties**.
+    3. Click **Internet Protocol Version 4 (TCP/IPv4)**, and then click **Properties**.
+    4. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, click **Advanced**.
+    5. On the **DNS** tab, select these DNS Suffixes, click **Add**, type the FQDN of the domain in the **DNS Server** dialog box, **click Add**, and then click **OK three times**.
