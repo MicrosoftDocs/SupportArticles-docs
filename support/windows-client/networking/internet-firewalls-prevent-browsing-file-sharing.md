@@ -1,6 +1,6 @@
 ---
 title: Internet firewalls prevent file sharing
-description: Explains that turning on a firewall may keep you from searching or sharing files with other computers on a home network.
+description: Explains that using a firewall may keep you from searching or sharing files with other computers on a home network.
 ms.date: 09/22/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,26 +15,26 @@ ms.technology: Networking
 ---
 # Internet firewalls can prevent browsing and file sharing
 
-This article discusses a behavior where turning on a firewall prevents you from searching or sharing files with other computers on a home network, and provides a solution.
+This article discusses a behavior that turning on a firewall prevents you from searching or sharing files with other computers on a home network. It also provides a solution.
 
 _Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 298804
 
 ## Symptoms
 
-After you enable an Internet firewall, you may not be able to search, or browse, for other computers on your home or office network, and you may not be able to share files with other computers on your home or office network. For example, when you enable the Internet Connection Firewall (ICF) feature in Windows XP, you find that you cannot browse your network by using My Network Places. Also, if you use the `net view \\ computername` command to view shares on a computer on your home or office network, you may receive the following error message:
+After you enable an Internet firewall, you may not be able to search, or browse, for other computers on your home or office network. And you may not be able to share files with other computers on your home or office network. For example, when you enable the Internet Connection Firewall (ICF) feature in Windows XP, you find that you can't browse your network by using My Network Places. Also, if you use the `net view \\computername` command to view shares on a computer on your home or office network, you may receive the following error message:
 
 > System error 6118 has occurred. The list of servers for this workgroup is not currently available.
 
 ## Cause
 
-This behavior may occur if you enable a firewall on the network connection that you use for your home or office network. By default, a firewall closes the ports that are used for file and print sharing to prevent Internet computers from connecting to file and print shares on your computer.
+This behavior may occur if you enable a firewall on the network connection that you use for your home or office network. By default, a firewall closes the ports that are used for file and print sharing. The purpose is to prevent Internet computers from connecting to file and print shares on your computer.
 
 ## Resolution
 
 To resolve this behavior, use a firewall only for network connections that you use to connect directly to the Internet. For example, use a firewall on a single computer that is connected to the Internet directly through a cable modem, a DSL modem, or a dial-up modem. If you use the same network connection to connect to both the Internet and a home or office network, use a router or firewall that prevents Internet computers from connecting to the shared resources on the home or office computers.
 
-Don't use a firewall on network connections that you use to connect to your home or office network unless the firewall can be configured to open ports only for your home or office network. If you connect to the Internet by using your home or office network, a firewall can be used only on the computer or the other device, such as a router, that provides the connection to the Internet. For example, if you connect to the Internet through a network that you manage, and that network uses connection sharing to provide Internet access to multiple computers, you can install or enable a firewall only on the shared Internet connection. If you connect to the Internet through a network that you do not manage, verify that your network administrator is using a firewall.
+Don't use a firewall on network connections that you use to connect to your home or office network, unless the firewall can be configured to open ports only for your home or office network. If you connect to the Internet by using your home or office network, a firewall can be used only on the computer or the other device, such as a router, that provides the connection to the Internet. For example, if you connect to the Internet through a network that you manage, and that network uses connection sharing to provide Internet access to multiple computers, you can install or enable a firewall only on the shared Internet connection. If you connect to the Internet through a network that you do not manage, verify that your network administrator is using a firewall.
 
 ## Status
 
