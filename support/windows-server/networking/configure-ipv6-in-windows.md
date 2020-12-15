@@ -26,50 +26,54 @@ A prefix table is used to determine which address to use when multiple addresses
 
 By default, Windows favors IPv6 global unicast addresses over IPv4 addresses.
 
-It is common for IT administrators to want to disable IPv6. This is often because of some unknown, networking-related issue, such as a name resolution issue.
+It is common for IT administrators to disable IPv6 to troubleshoot networking-related issues such as name resolution issues.
 
 > [!IMPORTANT]
-> IPv6 is a mandatory part of Windows Vista and Windows Server 2008 and newer versions. We do not recommend that you disable IPv6 or its components. If you do, some Windows components may not function.
+> IPv6 is a mandatory part of Windows Vista and Windows Server 2008 and newer versions. We don't recommend disabling IPv6 or its components. If you do, some Windows components may not function.
 
-We recommend that you use **Prefer IPv4 over IPv6** in prefix policies instead of disabling IPV6.
+We recommend using **Prefer IPv4 over IPv6** in prefix policies instead of disabling IPV6.
 
 ## Use registry key to configure IPv6
 
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-To configure IPv6, modify the following registry value based on the following table.
+### Method 1: Use registry value to configure IPv6
 
-> Location:    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\  
-Name:        DisabledComponents  
-Type:        REG_DWORD  
-Min Value:   0x00  
-Max Value:   0xFF (IPv6 disabled)
+To configure IPv6, modify this registry value based on the table below:
 
-|IPv6 Functionality|Registry value|Comments|
-|---|---|---|
-|Prefer IPv4 over IPv6|Dec 32 Hex 0x20Bin xx1x xxxx|Recommended instead of disabling it.|
-|Disable IPv6|Dec 255 Hex 0xFFBin 1111 1111|See [startup delay occurs after you disable IPv6 in Windows](https://support.microsoft.com/help/3014406) if you encounter startup delay after you disable IPv6 in Windows 7 SP1 or Windows Server 2008 R2 SP1. <br/><br/> Additionally, system startup will be delayed for 5 seconds if IPv6 is disabled by incorrectly, setting the Disabled Components registry setting to a value of 0xfffffff. The correct value should be 0xff. For more information, see [Internet Protocol Version 6 (IPv6) Overview](/previous-versions/windows/it-pro/windows-8.1-and-8/hh831730(v=ws.11)). <br/><br/>  The Disabled Components registry value does not affect the state of the check box. Therefore, even if the Disabled Components registry key is set to disable IPv6, the check box in the Networking tab for each interface can still be checked. This is expected behavior.|
-|disable IPv6 on all nontunnel interfaces|Dec 16 Hex 0x10Bin xxx1 xxxx| |
-|disable IPv6 on all tunnel interfaces|Dec 1 Hex 0x01Bin xxxx xxx1| |
-|disable IPv6 on all nontunnel interfaces (except the loopback) and on IPv6 tunnel interface|Dec 17 Hex 0x11Bin xxx1 xxx1| |
-|prefer IPv6 over IPv4|Bin xx0x xxxx| |
-|re-enable IPv6 on all nontunnel interfaces|Bin xxx0 xxxx| |
-|re-enable IPv6 on all tunnel interfaces|Bin xxx xxx0| |
-|Re-enable IPv6 on nontunnel interfaces and on IPv6 tunnel interfaces|Bin xxx0 xxx0| |
-||||
+**Location**: HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip6\\Parameters\\  
+**Name**: DisabledComponents  
+**Type**: REG_DWORD  
+**Min Value**: 0x00  
+**Max Value**: 0xFF (IPv6 disabled)
+
+|IPv6 Functionality|Registry value and comments|
+|---|---|
+|Prefer IPv4 over IPv6|Dec 32<br/>Hex 0x20<br/>Bin xx1x xxxx<br/><br/>Recommended instead of disabling IPv6.|
+|Disable IPv6|Dec 255<br/>Hex 0xFF<br/>Bin 1111 1111<br/><br/>See [startup delay occurs after you disable IPv6 in Windows](https://support.microsoft.com/help/3014406) if you encounter startup delay after disabling IPv6 in Windows 7 SP1 or Windows Server 2008 R2 SP1. <br/><br/> Additionally, system startup will be delayed for five seconds if IPv6 is disabled by incorrectly, setting the Disabled Components registry setting to a value of 0xfffffff. The correct value should be 0xff. For more information, see [Internet Protocol Version 6 (IPv6) Overview](/previous-versions/windows/it-pro/windows-8.1-and-8/hh831730(v=ws.11)). <br/><br/>  The Disabled Components registry value doesn't affect the state of the check box. Even if the Disabled Components registry key is set to disable IPv6, the check box in the Networking tab for each interface can be checked. This is an expected behavior.|
+|Disable IPv6 on all nontunnel interfaces|Dec 16<br/> Hex 0x10<br/>Bin xxx1 xxxx|
+|Disable IPv6 on all tunnel interfaces|Dec 1<br/> Hex 0x01<br/>Bin xxxx xxx1|
+|Disable IPv6 on all nontunnel interfaces (except the loopback) and on IPv6 tunnel interface|Dec 17<br/> Hex 0x11<br/>Bin xxx1 xxx1|
+|Prefer IPv6 over IPv4|Bin xx0x xxxx|
+|Re-enable IPv6 on all nontunnel interfaces|Bin xxx0 xxxx|
+|Re-enable IPv6 on all tunnel interfaces|Bin xxx xxx0|
+|Re-enable IPv6 on nontunnel interfaces and on IPv6 tunnel interfaces|Bin xxx0 xxx0|
+|||
 
 >[!NOTE]
 >
 > - Administrators must create an .admx file to expose the settings in step 5 in a Group Policy setting.
 > - You must restart your computer for these changes to take effect.
-> - Value other than 0 or 32 causes the Routing and Remote Access service to fail after this change takes effect.
+> - Values other than 0 or 32 causes the Routing and Remote Access service to fail after this change takes effect.
 
-By default, the 6to4 tunneling protocol is enabled in Windows Vista, Windows Server 2008, or later versions when an interface is assigned a public IPv4 address (that is, an IPv4 address that is not in the ranges 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16). 6to4 automatically assigns an IPv6 address to the 6to4 tunneling interface for each such address that is assigned, and 6to4 dynamically registers these IPv6 addresses on the assigned DNS server. If this behavior is not desired, we recommend that you disable IPv6 tunnel interfaces on the affected hosts.
+By default, the 6to4 tunneling protocol is enabled in Windows Vista, Windows Server 2008, or later versions when an interface is assigned a public IPv4 address (any IPv4 address that isn’t in the ranges 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16). 6to4 automatically assigns an IPv6 address to the 6to4 tunneling interface for each address, and 6to4 dynamically registers these IPv6 addresses on the assigned DNS server. If this behavior isn’t desired, we recommend disabling the IPv6 tunnel interfaces on the affected hosts.
+
+### Method 2: Use Command Prompt to configure IPv6
 
 You can also follow these steps to modify the registry key:
 
-1. Open an administrative Command Prompt window.
+1. Open an administrative **Command Prompt** window.
 2. Run the following command:
 
     ```console
@@ -81,9 +85,9 @@ You can also follow these steps to modify the registry key:
 
 ### How to calculate the registry value
 
-Windows use bitmasks to check the **Disabled Components** values and determine whether a component should be disabled.
+Windows uses bitmasks to check the **Disabled Components** values and determine whether a component should be disabled.
 
-To learn which component each bit (from low to high) controls, refer to the following table.
+This table lists what component each bit controls (from low to high):
 
 |Tunnel|Disable tunnel interfaces|
 |---|---|
@@ -96,9 +100,9 @@ To learn which component each bit (from low to high) controls, refer to the foll
 |TunnelIpTls|Disable IP-TLS interfaces|
 |||
 
-For each bit, 0 means false and one means true. Refer to the following table for an example.
+For each bit, **0** means false and **1** means true. Refer to this table for an example:
 
-|Prefer IPv4 over IPv6 in prefix policies|Disable IPv6 on all nontunnel interfaces|Disable IPv6 on all tunnel interfaces|Disable IPv6 on nontunnel interfaces (except the loopback) and on IPv6 tunnel interface|
+||Prefer IPv4 over IPv6 in prefix policies|Disable IPv6 on all nontunnel interfaces|Disable IPv6 on all tunnel interfaces|Disable IPv6 on nontunnel interfaces (except the loopback) and on IPv6 tunnel interface|
 |---|---|---|---|---|
 |Disable tunnel interfaces|0|0|1|1|
 |Disable 6to4 interfaces|0|0|0|0|
@@ -120,18 +124,16 @@ For more information about how to set IPv4 precedence over IPv6, see [Using SIO_
 
 For information about RFC 4291, see [IP Version 6 Addressing Architecture](https://tools.ietf.org/html/rfc4291).
 
-For more information about the related issues, see:
+For more information about related issues, see:
 
-- On Domain Controllers, you might run into where LDAP over UDP 389 will stop working,
-see [How to use Portqry to troubleshoot Active Directory connectivity issues](https://support.microsoft.com/help/816103).
-- Exchange Server 2010, you might run into problems where Exchange will stop working,
-see [Arguments against disabling IPv6](/archive/blogs/netro/arguments-against-disabling-ipv6) and [Disabling IPv6 And Exchange - Going All The Way](https://blog.rmilne.ca/2014/10/29/disabling-ipv6-and-exchange-going-all-the-way/).
-- Failover Clusters, see [What is a Microsoft Failover Cluster Virtual Adapter anyway?](/archive/blogs/askcore/what-is-a-microsoft-failover-cluster-virtual-adapter-anyway) and [Failover Clustering and IPv6 in Windows Server 2012 R2](https://techcommunity.microsoft.com/t5/failover-clustering/failover-clustering-and-ipv6-in-windows-server-2012-r2/ba-p/371912).
+- On Domain Controllers, LDAP over UDP 389 stops working. See [How to use Portqry to troubleshoot Active Directory connectivity issues](https://support.microsoft.com/help/816103).
+- Exchange Server 2010 stops working. See [Arguments against disabling IPv6](/archive/blogs/netro/arguments-against-disabling-ipv6) and [Disabling IPv6 And Exchange - Going All The Way](https://blog.rmilne.ca/2014/10/29/disabling-ipv6-and-exchange-going-all-the-way/).
+- Failover Clusters. See [What is a Microsoft Failover Cluster Virtual Adapter anyway?](/archive/blogs/askcore/what-is-a-microsoft-failover-cluster-virtual-adapter-anyway) and [Failover Clustering and IPv6 in Windows Server 2012 R2](https://techcommunity.microsoft.com/t5/failover-clustering/failover-clustering-and-ipv6-in-windows-server-2012-r2/ba-p/371912).
 
-For more information about tools to help with network trace, see:
+For more information about network trace tools, see:
 
 - [Microsoft Message Analyzer Operating Guide](/message-analyzer/microsoft-message-analyzer-operating-guide)
-- [Microsoft Network Monitor 3.4 (archive)](https://docs.microsoft.com/windows/client-management/troubleshoot-tcpip-netmon)
+- [Microsoft Network Monitor 3.4 (archive)](/windows/client-management/troubleshoot-tcpip-netmon)
 
-> [!WARNING]
-> Netmon 3.4 is not compatible with Windows Server 2012 or newer OS when LBFO NIC teaming is enabled. Instead, use **Message Analyzer**.
+    > [!WARNING]
+    > Netmon 3.4 isn't compatible with Windows Server 2012 or newer OS when LBFO NIC teaming is enabled. Use **Message Analyzer** instead.
