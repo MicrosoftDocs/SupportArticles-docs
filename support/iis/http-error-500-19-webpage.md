@@ -7,7 +7,7 @@ ms.reviewer: mlaing
 ---
 # HTTP Error 500.19 - internal server error when you open an IIS Webpage
 
-This article resolves a problem in which you receive an "HTTP 500.19" error message on a web application in IIS 7.0 and later versions.
+This article resolves a problem in which you receive an "HTTP 500.19" error message on a web application in Internet Information Services (IIS) 7.0 and later versions.
 
 _Original product version:_ &nbsp; Internet Information Services 7.0 and later versions
 _Original KB number:_ &nbsp; 942055
@@ -48,7 +48,7 @@ This problem can occur if the specified portion of the IIS configuration file is
 
 Resolution
 
-Unlock the specified section, or do not use it at the higher level. For more information about configuration locking, see [How to Use Locking in IIS 7.0 Configuration](/iis/get-started/planning-for-security/how-to-use-locking-in-iis-configuration).
+Unlock the specified section, or don't use it at the higher level. For more information about configuration locking, see [How to Use Locking in IIS 7.0 Configuration](/iis/get-started/planning-for-security/how-to-use-locking-in-iis-configuration).
 
 ## HRESULT code 0x80070005
 
@@ -71,7 +71,7 @@ Resolution
 
 Use one of the following methods:
 
-- Do not configure the website to use UNC pass-through authentication to access the remote UNC share. Instead, specify a user account that has the appropriate permissions to access the remote UNC share.
+- Don't configure the website to use UNC pass-through authentication to access the remote UNC share. Instead, specify a user account that has the appropriate permissions to access the remote UNC share.
 
 - Grant the Read permission to the IIS_IUSRS group for the ApplicationHost.config or Web.config file. To do it, follow these steps:
 
@@ -112,7 +112,7 @@ Error message:
 
 Cause
 
-This problem may occur if there's a duplicate entry for the specified configuration section setting at a higher level in the configuration hierarchy (for example, in a parent site or folder ApplicationHost.config or Web.config file). The error message itself points out the location of the duplicate entries.
+This problem may occur if there's a duplicate entry for the specified configuration section setting at a higher level in the configuration hierarchy (for example, ApplicationHost.config or Web.config file in a parent site or folder). The error message itself points out the location of the duplicate entries.
 
 Resolution
 
@@ -127,7 +127,7 @@ To resolve this problem, delete the duplicate entry in the ApplicationHost.confi
 1. Select **Start**, type **Notepad** in the **Start Search** box, right-click **Notepad**, and then select **Run as administrator**.
 
     > [!NOTE]
-    > If you are prompted for an administrator password or for a confirmation, type the password, or select **Continue**.
+    > If you're prompted for an administrator password or for a confirmation, type the password, or select **Continue**.
 
 2. On the **File** menu, select **Open**, type **%windir%\System32\inetsrv\config\applicationHost.config** in the **File name** box, and then select **Open**.
 
@@ -149,7 +149,7 @@ Error message:
 
 Cause
 
-This problem occurs because the ApplicationHost.config or Web.config file references a module or a DLL that is invalid or does not exist.
+This problem occurs because the ApplicationHost.config or Web.config file references a module or a DLL that is invalid or doesn't exist.
 
 Resolution
 
@@ -167,11 +167,11 @@ Error message:
 
 Cause
 
-This problem can occur if the bitness of the specified module is different than that of the application pool hosting the application. For example, you are trying to load a 32-bit component into a 64-bit application pool. This problem may also occur if the specified module is corrupted.
+This problem can occur if the bitness of the specified module is different than that of the application pool hosting the application. For example, you're trying to load a 32-bit component into a 64-bit application pool. This problem may also occur if the specified module is corrupted.
 
 Resolution
 
-Make sure that the specified module's bitness is the same as that of the hosting application pool. Also,  make sure that the module is not corrupted.
+Make sure that the specified module's bitness is the same as that of the hosting application pool. Also, make sure that the module is not corrupted.
 
 ## HRESULT code 0x8007010b
 
@@ -189,7 +189,12 @@ This problem can occur if the specified content directory cannot be accessed.
 
 Resolution
 
-Verify that the file path exists, is correctly named, has the correct file-level permissions set, and is pointing to a valid file system type. If you are not sure what the file path is, use the Process Monitor or Failed Request Tracing tool to identify it.
+- Verify that the file path exists.
+- Verify that the file path is correctly named.
+- Verify that the file path has the correct file-level permissions set.
+- Verify that the file path is pointing to a valid file system type.
+
+If you aren't sure what the file path is, use the Process Monitor or Failed Request Tracing tool to identify it.
 
 ## HRESULT code 0x8007052e
 
@@ -203,4 +208,4 @@ The requested page cannot be accessed because the related configuration data for
 
 Cause
 
-The default process identity in IIS does not have sufficient permissions to open the Web.config file on a remote share.
+The default process identity in IIS doesn't have sufficient permissions to open the Web.config file on a remote share.
