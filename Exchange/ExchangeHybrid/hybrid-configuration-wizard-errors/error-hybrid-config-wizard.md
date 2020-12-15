@@ -35,7 +35,7 @@ Please install the updated version of [Hybrid Configuration Wizard](https://aka.
 
 ## More information
 
-Hybrid Configuration Wizard is aware of this change, which was released in September 2020.
+Hybrid Configuration Wizard, which is aware of this change, was released in September 2020.
 
 To resolve this problem, update your HCW. If you are running **Version 16.x** of HCW or older, HCW will not update by itself, and a manual uninstall and reinstall will be needed to update HCW to the latest version.
 
