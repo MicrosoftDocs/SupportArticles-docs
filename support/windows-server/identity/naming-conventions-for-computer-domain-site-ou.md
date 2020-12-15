@@ -90,7 +90,7 @@ In that article, this naming convention applies to computer, OU, and site names.
 
     DNS names can contain only alphabetical characters (A-Z), numeric characters (0-9), the minus sign (-), and the period (.). Period characters are allowed only when they are used to delimit the components of domain style names.
 
-    In the Windows 2000 domain name system (DNS) and in the Windows Server 2003 DNS, the use of Unicode characters is supported. Other implementations of DNS do not support Unicode characters. Avoid Unicode characters if queries will be passed to the servers that use non-Microsoft implementations of DNS.
+    In the Windows 2000 domain name system (DNS) and the Windows Server 2003 DNS, Unicode characters are supported. Other implementations of DNS do not support Unicode characters. Avoid Unicode characters if queries will be passed to the servers that use non-Microsoft implementations of DNS.
 
     For more information, see the following websites:
 
@@ -224,7 +224,7 @@ Here are details for NetBIOS domain names and DNS domain names.
 
     DNS names can contain only alphabetical characters (A-Z), numeric characters (0-9), the minus sign (-), and the period (.). Period characters are allowed only when they are used to delimit the components of domain style names.
 
-    In the Windows 2000 domain name system (DNS) and in the Microsoft Windows Server 2003 DNS, the use of Unicode characters is supported. Other implementations of DNS do not support Unicode characters. Avoid Unicode characters if queries will be passed to the servers that use non-Microsoft implementations of DNS.
+    In the Windows 2000 domain name system (DNS) and the Windows Server 2003 DNS, Unicode characters are supported. Other implementations of DNS do not support Unicode characters. Avoid Unicode characters if queries will be passed to the servers that use non-Microsoft implementations of DNS.
 
     For more information, visit the following web sites:
 
@@ -276,7 +276,7 @@ Here are details for NetBIOS domain names and DNS domain names.
 
     The AD FQDN domain name appears in the path twice, due to that the length of an AD FQDN domain name is restricted to 64 characters.
 
-    In Windows 2000 and in Windows Server 2003, the maximum host name and the FQDN use the standard length limitations that are mentioned earlier, with the addition of UTF-8 (Unicode) support. Because some UTF-8 characters exceed one octet in length, you can't determine the size by counting the characters.
+    In Windows 2000 and Windows Server 2003, the maximum host name and the FQDN use the standard length limitations that are mentioned earlier, with the addition of UTF-8 (Unicode) support. Because some UTF-8 characters exceed one octet in length, you can't determine the size by counting the characters.
 
 - Single-label domain namespaces
 
@@ -361,7 +361,7 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
 
     DNS names can contain only alphabetical characters (A-Z), numeric characters (0-9), the minus sign (-), and the period (.). Period characters are allowed only when they are used to delimit the components of domain style names.
 
-    In the Windows 2000 domain name system (DNS) and in the Windows Server 2003 DNS, the use of Unicode characters is supported. Other implementations of DNS do not support Unicode characters. Avoid Unicode characters if queries will be passed to the servers that use non-Microsoft implementations of DNS.
+    In the Windows 2000 domain name system (DNS) and the Windows Server 2003 DNS, Unicode characters are supported. Other implementations of DNS do not support Unicode characters. Avoid Unicode characters if queries will be passed to the servers that use non-Microsoft implementations of DNS.
 
     For more information, visit the following web sites:
 
@@ -421,7 +421,7 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
 
 ### Special issues
 
-When the OU at the domain root level has the same name as a future child domain, you might encounter database problems. Consider a scenario where you delete an OU named *marketing* to create a child domain with the same name, for example, `marketing.contoso.com` (leftmost label of the child domain FQDN name has the same name).
+When the OU at the domain root level has the same name as a future child domain, you might experience database problems. Consider a scenario where you delete an OU named *marketing* to create a child domain with the same name, for example, `marketing.contoso.com` (leftmost label of the child domain FQDN name has the same name).
 
 The OU is deleted and during the tombstone lifetime of the OU you create a child domain that has the same name is created, deleted, and created again. In this scenario, a duplicate record name in the ESE database causes a phantom-phantom name collision when the child domain is re-created. This problem prevents the configuration container from replicating.
 
