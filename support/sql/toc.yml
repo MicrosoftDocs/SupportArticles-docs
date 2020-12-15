@@ -434,6 +434,8 @@
     href: connect/80020009-error-retrieve-data.md
   - name: Can't correctly translate character data
     href: connect/cannot-correctly-translate-character-data.md
+  - name: Check for MDAC version
+    href: connect/check-mdac-version.md
   - name: Error when you use client cursor to add record
     href: connect/error-when-you-use-client-cursor-add-record.md
   - name: Fail to run a large batch of SQL statements
