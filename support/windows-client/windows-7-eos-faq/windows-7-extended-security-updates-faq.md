@@ -1,5 +1,5 @@
 ---
-title: FAQ about Extended Security Updates for Windows 7
+title: FAQ about Extended Security Updates (ESU) for Windows 7
 description: After January 14, 2020, Microsoft no longer provides extended security updates or support for computers that run Windows 7.
 ms.date: 09/21/2020
 author: Deland-Han
@@ -26,7 +26,7 @@ _Original KB number:_ &nbsp; 4527878
 
 ### What do Windows 7 ESU include?
 
-Windows 7 Extended Security Updates (ESU) include security updates for critical and important issues as defined by Microsoft Security Response Center (MSRC) for a maximum of three years after January 14, 2020. After January 14, 2020, if your PC is running Windows 7 and you haven't purchased Extended Security Updates, the computer will no longer receive security updates.
+Windows 7 Extended Security Updates (ESU) include security updates for critical and important issues as defined by Microsoft Security Response Center (MSRC) for a maximum of three years after January 14, 2020. After January 14, 2020, if your PC is running Windows 7, and you haven't purchased Extended Security Updates, the computer will no longer receive security updates.
 
 > [!NOTE]
 > There won't be an ESU offering or an extension of support for Office 2010.  
@@ -41,7 +41,7 @@ ESU has been available in the Volume Licensing Service Center (VLSC) since April
 
 ### Where can I find out more information about purchasing and installing Windows 7 ESU in Year 2?
 
-The process for purchasing and installing ESU in Year 2 is identical to the process for Year 1. For more details, see [Year two of Extended Security Updates for Windows 7 and Windows Server 2008](https://aka.ms/ESU-Year2).
+The process for purchasing and installing ESU in Year 2 is identical to the process for Year 1. For more information, see [Year two of Extended Security Updates for Windows 7 and Windows Server 2008](https://aka.ms/ESU-Year2).
 
 ### Do Windows 7 Embedded products qualify for Windows 7 ESU?
 
@@ -57,8 +57,9 @@ Direct requests for ESU for Windows Server 2008 R2 for Embedded Systems and SQL 
 
 ### Is there a deadline for organizations to purchase ESU for Windows 7?
 
-Organizations can purchase ESU at any time during the three years that the offer is available (2020, 2021, and 2022). If an organization waits and purchases ESU for the first time in year two or year three, they'll have to pay for the preceding years also. It is because the security updates that are offered under the ESU program are cumulative.
-Although organizations can purchase ESU at any time, they should be aware that without ESU, they won't have received bug fixes or security updates since January 14, 2020. Additionally, Microsoft Support no longer provides any form of support for these customers. 
+Organizations can purchase ESU at any time during the three years that the offer is available (2020, 2021, and 2022). If an organization waits and purchases ESU for the first time in year two or year three, they'll also have to pay for the preceding years. It is because the security updates that are offered under the ESU program are cumulative.
+
+Although organizations can purchase ESU at any time, they should be aware that without ESU, they won't have received bug fixes or security updates since January 14, 2020. Additionally, Microsoft Support no longer provides any form of support for these customers.
 
 ### If an organization waits and purchases ESU for the first time in Year 2 or Year 3, do they have to purchase licenses for the preceding year(s) as well?
 
@@ -192,7 +193,7 @@ We continue to work to fully automate the validation process. If a customer purc
 
 ### What type of response should customers expect if they encounter an issue that requires a new feature?
 
-No new product enhancements will be made for Windows 7. ESU helps keep Windows 7 devices secure for a limited time, and assist customers during the transition to a supported version of Windows. If an investigation into a customer issue determines that a product enhancement that is available in a recent release (such as Windows 10) resolves the issue, Microsoft Support will recommend that the customer upgrade to the most recent release.  
+No new product enhancements will be made for Windows 7. ESU helps keep Windows 7 devices secure for a limited time, and assist customers during the transition to a supported version of Windows. If an investigation into a customer issue determines that a product enhancement that is available in a recent release (such as Windows 10) resolves the issue, Microsoft Support will recommend that the customers upgrade to the most recent release.  
 
 ### After customers purchase ESU, will Microsoft help troubleshoot issues that aren't related to an extended security update?
 
