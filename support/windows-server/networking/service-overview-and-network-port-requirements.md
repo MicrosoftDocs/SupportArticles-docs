@@ -49,7 +49,13 @@ The Windows Server system includes a comprehensive and integrated infrastructure
 
 The following list provides an overview of the information that this article contains:
 
-- The [System services ports](#system-services-ports) section contains a brief description of each service, displays the logical name of that service, and indicates the ports and protocols that each service requires for correct operation. Use this section to help identify the ports and protocols that a particular service uses.
+- The [System services ports](#system-services-ports) section:
+
+  - Contains a brief description of each service.
+  - Displays the logical name of that service.
+  - Indicates the ports and protocols that each service requires for correct operation.
+
+  Use this section to help identify the ports and protocols that a particular service uses.
 - The [Ports and protocols](#ports-and-protocols) section includes a table that summarizes the information from the System services ports section. The table is sorted by the port number instead of by the service name. Use this section to quickly determine which services listen on a particular port.
 
 This article uses certain terms in specific ways. To help avoid confusion, make sure that you understand how the article uses these terms:
@@ -59,9 +65,9 @@ This article uses certain terms in specific ways. To help avoid confusion, make 
 - Protocol: TCP/IP protocols are standard formats for communicating between devices on a network. TCP/IP protocols operate at a lower level than the application protocols. The TCP/IP suite of protocols includes TCP, User Datagram Protocol (UDP), and Internet Control Message Protocol (ICMP).
 - Port: This is the network port that the system service listens on for incoming network traffic.
 
-This article does not specify which services rely on other services for network communication. For example, many services rely on the remote procedure call (RPC) or DCOM features in Microsoft Windows to assign them dynamic TCP ports. The Remote Procedure Call service coordinates requests by other system services that use RPC or DCOM to communicate with client computers. Many other services rely on network basic input/output system (NetBIOS) or SMBs, protocols that are provided by the Server service. Other services rely on HTTP or on Hypertext Transfer Protocol Secure (HTTPS). These protocols are provided by Internet Information Services (IIS). A full discussion of the architecture of the Windows operating systems is beyond the scope of this article. However, detailed documentation on this subject is available on Microsoft TechNet and on the Microsoft Developer Network (MSDN) websites. Although many services may rely on a particular TCP or UDP port, only one service or process at a time can listen on that port.
+This article does not specify which services rely on other services for network communication. For example, many services rely on the Remote Procedure Call (RPC) or DCOM features in Microsoft Windows to assign them dynamic TCP ports. The Remote Procedure Call service coordinates requests by other system services that use RPC or DCOM to communicate with client computers. Many other services rely on network basic input/output system (NetBIOS) or SMBs, protocols that are provided by the Server service. Other services rely on HTTP or on Hypertext Transfer Protocol Secure (HTTPS). These protocols are provided by Internet Information Services (IIS). A full discussion of the architecture of the Windows operating systems is beyond the scope of this article. However, detailed documentation on this subject is available on Microsoft TechNet and on the Microsoft Developer Network (MSDN) websites. Although many services may rely on a particular TCP or UDP port, only one service or process at a time can listen on that port.
 
-When you use RPC with TCP/IP or with UDP/IP as the transport, incoming ports are frequently dynamically assigned to system services as required; TCP/IP and UDP/IP ports that are higher than port 1024 are used. These are also informally known as *random RPC ports*. In these cases, RPC clients rely on the RPC endpoint mapper to tell them which dynamic port or ports were assigned to the server. For some RPC-based services, you can configure a specific port instead of letting RPC dynamically assign a port. You can also restrict the range of ports that RPC dynamically assigns to a small range, regardless of the service. For more information about this topic, see the [References](#references) section.
+When you use RPC with TCP/IP or with UDP/IP as the transport, incoming ports are frequently dynamically assigned to system services as required. TCP/IP and UDP/IP ports that are higher than port 1024 are used. These are also informally known as *random RPC ports*. In these cases, RPC clients rely on the RPC endpoint mapper to tell them which dynamic port or ports were assigned to the server. For some RPC-based services, you can configure a specific port instead of letting RPC dynamically assign a port. You can also restrict the range of ports that RPC dynamically assigns to a small range, regardless of the service. For more information about this topic, see the [References](#references) section.
 
 This article includes information about the system services roles and the server roles for the Microsoft products that are listed in the Applies to section. Although this information may also apply to Windows XP and to Microsoft Windows 2000 Professional, this article is focused on server-class operating systems. Therefore, this describes the ports that a service listens on instead of the ports that client programs use to connect to a remote system.
 
@@ -100,7 +106,7 @@ Finally, you can hard-code the port that is used for Active Directory replicatio
 |Global Catalog|TCP|3269|
 |Global Catalog|TCP|3268|
 |ICMP||No port number|
-|LDAP Server|TCP|389|
+|Lightweight Directory Access Protocol (LDAP) Server|TCP|389|
 |LDAP Server|UDP|389|
 |LDAP SSL|TCP|636|
 |IPsec ISAKMP|UDP|500|
@@ -116,8 +122,8 @@ Finally, you can hard-code the port that is used for Active Directory replicatio
 
 In addition, the Microsoft LDAP client uses ICMP pings to verify that an LDAP server it has a pending request with is still present on the network. The following settings are LDAP session options:
 
-- [PingKeepAliveTimeout](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pingkeepalivetimeout) = 120 seconds (how long it waits after last response from server before it starts sending ping [PingLimit](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pinglimit) = 4 (how many pings are sent before connection is closed)
-- [PingWaitTimeout](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pingwaittimeout) = 2000ms (how long it waits for the ICMP response)
+- [PingKeepAliveTimeout](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pingkeepalivetimeout) = 120 seconds (how long it waits after last response from server before it starts sending ping [PingLimit](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pinglimit)) = 4 (how many pings are sent before connection is closed)
+- [PingWaitTimeout](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pingwaittimeout) = 2000 ms (how long it waits for the ICMP response)
 - Reference: [LdapSessionOptions Class](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions)
 
 ### Application Layer Gateway service
@@ -230,7 +236,7 @@ System service name: **DHCPServer**
 
 ### Distributed File System Namespaces
 
-The Distributed File System Namespaces (DFSN) integrates different file shares that are located on a local area network (LAN) or wide area network (WAN) into a single logical namespace. The DFSN service is required for Active Directory domain controllers to advertise the SYSVOL shared folder.
+The Distributed File System Namespaces (DFSN) integrates different file shares that are located on a local area network (LAN) or wide area network (WAN) into a single logical namespace. The DFSN service is required for Active Directory domain controllers to advertise the sysvol shared folder.
 
 System service name: **Dfs**
 
@@ -350,7 +356,7 @@ System service name: **Fax**
 
 ### File Replication
 
-The File Replication service (FRS) is a file-based replication engine that automatically copies updates to files and folders between computers that are participating in a common FRS replica set. FRS is the default replication engine that is used to replicate the contents of the SYSVOL folder between Windows 2000-based domain controllers and Windows Server 2003-based domain controllers that are located in a common domain. You can use the DFS Administration tool to configure FRS to replicate files and folders between targets of a DFS root or link.
+The File Replication service (FRS) is a file-based replication engine that automatically copies updates to files and folders between computers that are participating in a common FRS replica set. FRS is the default replication engine that is used to replicate the contents of the sysvol folder between Windows 2000-based domain controllers and Windows Server 2003-based domain controllers that are located in a common domain. You can use the DFS Administration tool to configure FRS to replicate files and folders between targets of a DFS root or link.
 
 System service name: **NtFrs**
 
@@ -551,9 +557,9 @@ System service name: **MSMQ**
 |RPC|TCP|135|
 ||||
 
-### Microsoft Exchange MTA stacks
+### Microsoft Exchange Message Transfer Agent (MTA) stacks
 
-In Microsoft Exchange 2000 Server and Exchange Server 2003, the Message Transfer Agent (MTA) is frequently used to provide backward-compatible message transfer services between Exchange 2000 Server-based servers and Exchange Server 5.5-based servers in a mixed-mode environment.
+In Microsoft Exchange 2000 Server and Exchange Server 2003, the MTA is frequently used to provide backward-compatible message transfer services between Exchange 2000 Server-based servers and Exchange Server 5.5-based servers in a mixed-mode environment.
 
 System service name: **MSExchangeMTA**
 
@@ -1260,8 +1266,8 @@ The list of services on which Active Directory depends:
 - Active Directory / LSA
 - Computer Browser
 - Distributed File System Namespaces
-- Distributed File System Replication (if not using FRS for SYSVOL replication)
-- File Replication Service (if not using DFSR for SYSVOL replication)
+- Distributed File System Replication (if not using FRS for sysvol replication)
+- File Replication Service (if not using DFSR for sysvol replication)
 - Kerberos Key Distribution Center
 - Net Logon
 - Remote Procedure Call (RPC)
