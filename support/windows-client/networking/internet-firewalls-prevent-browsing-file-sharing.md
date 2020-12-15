@@ -1,6 +1,6 @@
 ---
 title: Internet firewalls prevent file sharing
-description: Explains that using a firewall may keep you from searching or sharing files with other computers on a home network.
+description: Explains that a firewall may keep you from searching or sharing files with other computers on a home network.
 ms.date: 09/22/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,7 +15,7 @@ ms.technology: Networking
 ---
 # Internet firewalls can prevent browsing and file sharing
 
-This article discusses a behavior that turning on a firewall prevents you from searching or sharing files with other computers on a home network. It also provides a solution.
+Turning on a firewall may prevent you from searching or sharing files with other computers on a home network.
 
 _Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 298804

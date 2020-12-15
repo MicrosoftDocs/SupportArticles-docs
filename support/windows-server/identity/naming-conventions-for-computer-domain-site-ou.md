@@ -30,7 +30,7 @@ This article discusses the following topics:
 - Names that we do not recommend
 - General recommendations that are based on supporting Active Directory in small, medium, and large deployments
 
-All objects that are named within Active Directory or within AD/AM and LDS are subject to name matching based on the algorithm described in [You cannot add a user name or an object name that only differs by a character with a diacritic mark](https://support.microsoft.com/help/938447).
+All objects that are named within Active Directory, or within AD/AM and LDS, are subject to name matching based on the algorithm described in [You cannot add a user name or an object name that only differs by a character with a diacritic mark](https://support.microsoft.com/help/938447).
 
 In that article, this naming convention applies to computer, OU, and site names.
 
@@ -116,7 +116,7 @@ In that article, this naming convention applies to computer, OU, and site names.
   - underscore (_)
   - white space (blank)
 
-    The underscore has a special role. It is permitted for the first character in SRV records by RFC definition, but newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
+    The underscore has a special role. It is permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
 
     More rules are:
 
@@ -207,7 +207,7 @@ Here are details for NetBIOS domain names and DNS domain names.
 
     See [Table of reserved words](#table-of-reserved-words).
 
-    The names of an upgraded domain can include a reserved word. However, trust relationships with other domains fail when this is true.
+    The names of an upgraded domain can include a reserved word. However, trust relationships with other domains fail in this situation.
 
 - Special characters: Period (.).
 
@@ -250,7 +250,7 @@ Here are details for NetBIOS domain names and DNS domain names.
   - underscore (_)
   - white space (blank)
 
-    The underscore has a special role, as it is permitted for the first character in SRV records by RFC definition, but newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
+    The underscore has a special role. It is permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
 
     When promoting a new domain, you get a warning that an underscore character might cause problems with some DNS servers. But it still lets you create the domain.
 
@@ -264,7 +264,7 @@ Here are details for NetBIOS domain names and DNS domain names.
 
 - Maximum name length: 255 characters
 
-    The maximum length of the host name and of the fully qualified domain name (FQDN) is 63 bytes per label and 255 characters per FQDN. The latter is based on the maximum path length possible with an Active Directory Domain name with the paths needed in `SYSVOL`, and this needs to obey to the 260 character `MAX_PATH` limitation.
+    The maximum length of the host name and of the fully qualified domain name (FQDN) is 63 bytes per label and 255 characters per FQDN. The latter is based on the maximum path length possible with an Active Directory Domain name with the paths needed in `SYSVOL`, and it needs to obey to the 260 character `MAX_PATH` limitation.
 
     An example path in `SYSVOL` contains:
 
@@ -280,7 +280,7 @@ Here are details for NetBIOS domain names and DNS domain names.
 
     Single-label DNS names are names that do not contain a suffix such as `.com`, `.corp`, `.net`, `.org`, or *`companyname`*. For example, *host* is a single-label DNS name. Most Internet registrars do not allow the registration of single-label DNS names.
 
-    Generally, we recommend that you register DNS names for internal and external namespaces with an Internet registrar. This includes the DNS names of Active Directory domains, unless such names are subdomains of DNS names that are registered by your organization name. For example, `corp.example.com` is a subdomain of `example.com`. Registering your DNS name with an Internet registrar may help prevent a name collision. A name collision may occur if another organization tries to register the same DNS name or if your organization merges with another organization that uses the same DNS name.
+    Generally, we recommend that you register DNS names for internal and external namespaces with an Internet registrar. This includes the DNS names of Active Directory domains, unless such names are subdomains of DNS names that are registered by your organization name. For example, `corp.example.com` is a subdomain of `example.com`. Registering your DNS name with an Internet registrar may help prevent a name collision. A name collision may occur if another organization tries to register the same DNS name, or if your organization merges with another organization that uses the same DNS name.
 
     Problems that are associated with single-label namespaces include:
 
@@ -341,7 +341,7 @@ For more information about a disjoint namespace, see the following articles:
 
   - Do not use an acronym or an abbreviation as a domain name. Users may have difficulty recognizing the business unit that an acronym represents.
 
-  - Avoid the use of underscores (_) in domain names as applications might be very RFC obedient and reject the name, and will not install or work in your domain, and you might experience problems with older DNS servers.
+  - Avoid the use of underscores (_) in domain names. Applications might be very RFC obedient and reject the name, and will not install or work in your domain. And you might experience problems with older DNS servers.
 
   - Do not use the name of a business unit or of a division as a domain name. Business units and other divisions will change, and these domain names can be misleading or become obsolete.
 
@@ -387,7 +387,7 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
   - underscore (_)
   - white space (blank)
 
-    The underscore has a special role, as it is permitted for the first character in SRV records by RFC definition, but newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
+    The underscore has a special role. It is permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
 
     More rules are:
 
@@ -401,7 +401,7 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
 
     The maximum length of the DNS name is 63 bytes per label.
 
-    In Windows 2000 and in Windows Server 2003, the maximum host name and the FQDN use the standard length limitations that are mentioned earlier, with the addition of UTF-8 (Unicode) support. Because some UTF-8 characters exceed one octet in length, you can't determine the size by counting the characters.
+    In Windows 2000 and Windows Server 2003, the maximum host name and the FQDN use the standard length limitations that are mentioned earlier, with the addition of UTF-8 (Unicode) support. Because some UTF-8 characters exceed one octet in length, you can't determine the size by counting the characters.
 
 ## OU names
 
@@ -419,7 +419,7 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
 
 ### Special issues
 
-When the OU at the domain root level has the same name as a future child domain, you might encounter database problems. To illustrate this, consider a scenario where you delete an OU named *marketing* to create a child domain with the same name, for example, `marketing.contoso.com` (leftmost label of the child domain FQDN name has the same name).
+When the OU at the domain root level has the same name as a future child domain, you might encounter database problems. Consider a scenario where you delete an OU named *marketing* to create a child domain with the same name, for example, `marketing.contoso.com` (leftmost label of the child domain FQDN name has the same name).
 
 The OU is deleted and during the tombstone lifetime of the OU you create a child domain that has the same name is created, deleted, and created again. In this scenario, a duplicate record name in the ESE database causes a phantom-phantom name collision when the child domain is re-created. This problem prevents the configuration container from replicating.
 
