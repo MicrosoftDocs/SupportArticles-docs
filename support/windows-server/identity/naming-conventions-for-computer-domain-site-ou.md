@@ -30,7 +30,9 @@ This article discusses the following topics:
 - Names that we do not recommend
 - General recommendations that are based on supporting Active Directory in small, medium, and large deployments
 
-All objects that are named within Active Directory, or within AD/AM and LDS, are subject to name matching based on the algorithm described in [You cannot add a user name or an object name that only differs by a character with a diacritic mark](https://support.microsoft.com/help/938447).
+All objects that are named within Active Directory, or within AD/AM and LDS, are subject to name matching based on the algorithm described in the following article:
+
+[You cannot add a user name or an object name that only differs by a character with a diacritic mark](https://support.microsoft.com/help/938447).
 
 In that article, this naming convention applies to computer, OU, and site names.
 
@@ -46,7 +48,7 @@ In that article, this naming convention applies to computer, OU, and site names.
 
     NetBIOS computer names can't contain the following characters:
 
-  - backslash (\)
+  - backslash (\\)
   - slash mark (/)
   - colon (:)
   - asterisk (*)
@@ -77,7 +79,7 @@ In that article, this naming convention applies to computer, OU, and site names.
 
     A period character separates the name into a NetBIOS scope identifier and the computer name. The NetBIOS scope identifier is an optional string of characters that identify logical NetBIOS networks that run on the same physical TCP/IP network. For NetBIOS to work between computers, the computers must have the same NetBIOS scope identifier and unique computer names.
 
-    The use of NetBIOS scopes in names is a legacy configuration and should not be used with Active Directory forests. For more information about NetBIOS scopes, see the following web sites:
+    The use of NetBIOS scopes in names is a legacy configuration. It should not be used with Active Directory forests. For more information about NetBIOS scopes, see the following web sites:
 
   - [rfc1001](https://www.ietf.org/rfc/rfc1001.txt)
   - [rfc1002](https://www.ietf.org/rfc/rfc1002.txt)
@@ -176,13 +178,13 @@ Here are details for NetBIOS domain names and DNS domain names.
 
 - Allowed characters
 
-    NetBIOS domain names can contain all alphanumeric characters except for the extended characters that are listed in **Disallowed characters**. Names can contain a period, but names cannot start with a period.
+    NetBIOS domain names can contain all alphanumeric characters except for the extended characters that are listed in **Disallowed characters**. Names can contain a period, but names can't start with a period.
 
 - Disallowed characters
 
     NetBIOS computer names can't contain the following characters:
 
-  - backslash (\)
+  - backslash (\\)
   - slash mark (/)
   - colon (:)
   - asterisk (*)
@@ -214,7 +216,7 @@ Here are details for NetBIOS domain names and DNS domain names.
     A period character separates the name into a NetBIOS scope identifier and the computer name. The NetBIOS scope identifier is an optional string of characters that identify logical NetBIOS networks that run on the same physical TCP/IP network. For NetBIOS to work between computers, the computers must have the same NetBIOS scope identifier and unique computer names.
 
     > [!WARNING]
-    > The use of NetBIOS scopes in names is a legacy configuration and should not be used with Active Directory forests. There is no inherent problem with this, but there may be applications that filter the name and assume a DNS name when a period is found.
+    > The use of NetBIOS scopes in names is a legacy configuration. It should not be used with Active Directory forests. There is no inherent problem with this, but there may be applications that filter the name and assume a DNS name when a period is found.
 
 ### DNS domain names
 
@@ -250,7 +252,7 @@ Here are details for NetBIOS domain names and DNS domain names.
   - underscore (_)
   - white space (blank)
 
-    The underscore has a special role. It is permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
+    The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
 
     When promoting a new domain, you get a warning that an underscore character might cause problems with some DNS servers. But it still lets you create the domain.
 
@@ -278,7 +280,7 @@ Here are details for NetBIOS domain names and DNS domain names.
 
 - Single-label domain namespaces
 
-    Single-label DNS names are names that do not contain a suffix such as `.com`, `.corp`, `.net`, `.org`, or *`companyname`*. For example, *host* is a single-label DNS name. Most Internet registrars do not allow the registration of single-label DNS names.
+    Single-label DNS names are names that do not contain a suffix, such as `.com`, `.corp`, `.net`, `.org`, or *`companyname`*. For example, *host* is a single-label DNS name. Most Internet registrars do not allow the registration of single-label DNS names.
 
     Generally, we recommend that you register DNS names for internal and external namespaces with an Internet registrar. This includes the DNS names of Active Directory domains, unless such names are subdomains of DNS names that are registered by your organization name. For example, `corp.example.com` is a subdomain of `example.com`. Registering your DNS name with an Internet registrar may help prevent a name collision. A name collision may occur if another organization tries to register the same DNS name, or if your organization merges with another organization that uses the same DNS name.
 
@@ -387,7 +389,7 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
   - underscore (_)
   - white space (blank)
 
-    The underscore has a special role. It is permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
+    The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
 
     More rules are:
 
