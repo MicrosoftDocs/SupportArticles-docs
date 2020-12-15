@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 4053483
 
 When an administrator sign into Microsoft 365 admin center or Azure Active Directory, the administrator may receive these validation errors for some users:
 
-> "Failed to sync the ArchiveGuid <GUID> of mailboxMailboxGuid because one cloud archiveCloudArchiveGuid exists."
+> "Failed to sync the ArchiveGuid \<GUID> of mailboxMailboxGuid because one cloud archiveCloudArchiveGuid exists."
 
 > "Failed to enable the new cloud archiveCloudArchiveGuid of mailboxMailboxGuid because a different archiveArchiveGuid exists. To enable the new archive, first disable the archive on-premises. After the next Dirsync sync cycle, enable the archive on-premises again."
 
