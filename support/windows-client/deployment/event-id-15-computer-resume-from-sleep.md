@@ -41,9 +41,6 @@ You can safely ignore these errors, because Windows will fall back to the same m
 
 ## References
 
-For information about a similar problem on a computer that is running Windows Server 2008 or Windows Vista, click the following article number to view the article in the Microsoft Knowledge Base:  
-[950330](https://support.microsoft.com/help/en-us) Event ID 13 and event ID 516 may be logged every 40 minutes after a computer that is running Windows Server 2008 or Windows Vista Service Pack 1 resumes from sleep
-
 For information about the TPM specification, see the Trusted Computing Group (TCG) TPM Specification, Version 1.2, and the TCG PC Client TPM Interface Specification, Version 1.2. To do this, visit the following Trusted Computing Group website:
 [http://www.trustedcomputinggroup.org/developers/pc_client/specifications](http://www.trustedcomputinggroup.org/developers/pc_client/specifications)  
 
