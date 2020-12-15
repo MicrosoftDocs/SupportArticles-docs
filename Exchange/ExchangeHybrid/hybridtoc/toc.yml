@@ -109,6 +109,8 @@
       href: ../hybrid-configuration-wizard-errors/1007-accessdenied-or-ensure-your-system-time-is-correct-error.md
     - name: 550 5.7.64 Relay Access Denied ATTR36
       href: ../hybrid-configuration-wizard-errors/relay-access-denied-attr36-ndr.md
+    - name: ADSTS50011 error when running the Hybrid Configuration Wizard
+      href: ../hybrid-configuration-wizard-errors/error-hybrid-config-wizard.md
     - name: Active Directory operation failed on DomainController error
       href: ../hybrid-configuration-wizard-errors/active-directory-operation-failed-on-domaincontroller-error.md
     - name: Can't add more than 250 domains in Hybrid Configuration Wizard 
