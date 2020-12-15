@@ -89,17 +89,17 @@ To use Remote Connectivity Analyzer to test whether Exchange Autodiscover is wor
 
 1. In a web browser, browse to the Microsoft Remote Connectivity Analyzer tool at the following website:
 
-    [Remote Connectivity Analyzer](https://www.testconnectivity.microsoft.com/?testid=o365easautodiscover)
+    [Remote Connectivity Analyzer Outlook Autodiscover test](https://testconnectivity.microsoft.com/tests/O365Ola/input)
 2. Complete all the required fields on the form, and then click **Perform Test**.
 
-    ![Screen shot of enter test credentials](./media/cannot-set-up-profile-autodiscover/credentials.png)
+    ![Screen shot of enter test credentials](./media/cannot-set-up-profile-autodiscover/credentials.jpg)
 
 3. When the test is finished, determine whether it's successful.
 
    - If the test is successful, Autodiscover is working correctly.
    - If the test fails, verify that the Autodiscover service is set up correctly. For more information, see the following resources:
 
-     - If all mailboxes in your organization are in Exchange Online, add an Autodiscover CNAME record. For more information, see [Create DNS records for Office 365 at any DNS hosting provider](https://support.office.com/article/create-dns-records-for-office-365-at-any-dns-hosting-provider-7b7b075d-79f9-4e37-8a9e-fb60c1d95166) and [External Domain Name System records for Office 365](https://support.office.com/article/external-domain-name-system-records-for-office-365-c0531a6f-9e25-4f2d-ad0e-a70bfef09ac0).
+     - If all mailboxes in your organization are in Exchange Online, add an Autodiscover CNAME record that points to "autodiscover.outlook.com". For more information, see [Create DNS records for Office 365 at any DNS hosting provider](https://support.office.com/article/create-dns-records-for-office-365-at-any-dns-hosting-provider-7b7b075d-79f9-4e37-8a9e-fb60c1d95166) and [External Domain Name System records for Office 365](https://support.office.com/article/external-domain-name-system-records-for-office-365-c0531a6f-9e25-4f2d-ad0e-a70bfef09ac0).
 
      - If you have an Exchange hybrid deployment, set up the Autodiscover public DNS records for your existing SMTP domains to point to an on-premises Exchange server. For more information, see [Hybrid deployment prerequisites](/exchange/hybrid-deployment-prerequisites).
 
