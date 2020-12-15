@@ -79,7 +79,7 @@ Here's how to keep the ArchiveGuid property value consistent:
 
 ### Scenario 2: You no longer have any Exchange server running in on-premises, but you still have Exchange-related attributes in Active Directory
 
-Install an Exchange Server to manage the Exchange-related attributes for synchronized users.
+In this scenario, you must install an Exchange Server to manage the Exchange-related attributes for synchronized users.
 
 > [!NOTE]
 > Managing the Exchange attributes for cloud users from Active Directory PowerShell or from ADSIEDIT isn't supported. We strongly recommend keeping at least one active Exchange Server in Active Directory to manage the Exchange attributes for synchronized users. For more information, see the "Can third-party management tools be used?" section in [How and when to decommission your on-premises Exchange servers in a hybrid deployment](https://docs.microsoft.com/exchange/decommission-on-premises-exchange?redirectedfrom=MSDN#can-third-party-management-tools-be-used).
