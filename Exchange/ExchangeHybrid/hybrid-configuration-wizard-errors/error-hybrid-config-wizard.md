@@ -31,7 +31,7 @@ One of the old reply URLs used by the wizard has been removed from the service, 
 
 ## Resolution
 
-Please install the updated version of [Hybrid Configuration Wizard](http://aka.ms/hybridwizard).
+Please install the updated version of [Hybrid Configuration Wizard](https://aka.ms/hybridwizard).
 
 ## More information
 
