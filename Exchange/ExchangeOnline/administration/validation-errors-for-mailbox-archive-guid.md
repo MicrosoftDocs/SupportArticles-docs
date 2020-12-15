@@ -21,7 +21,7 @@ _Original KB number:_ &nbsp; 4053483
 
 ## Symptoms
 
-When you as an administrator sign into Microsoft 365 admin center or Azure Active Directory, you receive these validation errors for some users:
+When an administrator sign into Microsoft 365 admin center or Azure Active Directory, the administrator may receive these validation errors for some users:
 
 > "Failed to sync the ArchiveGuid <GUID> of mailboxMailboxGuid because one cloud archiveCloudArchiveGuid exists."
 
