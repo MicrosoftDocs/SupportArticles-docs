@@ -37,6 +37,6 @@ Please install the updated version of [Hybrid Configuration Wizard](https://aka.
 
 Hybrid Configuration Wizard, which is aware of this change, was released in September 2020.
 
-To resolve this problem, update your HCW. If you are running **Version 16.x** of HCW or older, HCW will not update by itself, and a manual uninstall and reinstall will be needed to update HCW to the latest version.
+To resolve this problem, update your HCW. If you are running **Version 16.*x*** of HCW or earlier, HCW will not update by itself, and a manual uninstall and reinstall will be needed to update HCW to the latest version.
 
 See [March 2020 significant update to Hybrid Configuration Wizard](https://techcommunity.microsoft.com/t5/exchange-team-blog/march-2020-significant-update-to-hybrid-configuration-wizard/ba-p/1238753) for more information.
