@@ -18,7 +18,7 @@
     - name: Password prompt at every start or can't create profile
       href: ../authentication/password-prompt-at-every-start-or-cannot-create-profile.md
     - name: Permission isn't exposed to OAuth tokens
-      href: ../extended-mapi-solutions/expose-permissions-issue-with-mapi-oauth-tokens.md
+      href: ../authentication/expose-permissions-issue-with-mapi-oauth-tokens.md
     - name: Prevent saving credentials policy doesn't work
       href: ../authentication/prevent-saving-credentials.md
     - name: Prompts for credentials when using WAN
