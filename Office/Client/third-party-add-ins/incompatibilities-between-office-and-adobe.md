@@ -154,10 +154,7 @@ Select the Office program that you're having problems with, and then use the app
 
 3. Exit the Registry Editor and open Visio.   
 
-
-#### Third-party information disclaimer
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 ## Other resources
 

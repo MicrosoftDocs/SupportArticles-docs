@@ -61,8 +61,6 @@ Microsoft is researching this issue and will update this article when more infor
 - [3097592 You can't join a meeting from outside Lync 2013, Lync 2010, or Skype for Business on iOS 9 or 9.1 ](https://support.microsoft.com/help/3097592)
 - [3193474 You can't join a meeting from outside Lync 2013, Lync 2010, or Skype for Business on iOS 10.0 and later ](https://support.microsoft.com/help/3193474/you-can-t-join-a-meeting-from-outside-lync-2013-lync-2010-or-skype-for)
 
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

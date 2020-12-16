@@ -49,8 +49,6 @@ This issue occurs because the Lync Meeting add-in for Outlook 2013 doesn't encod
 
 When Outlook tries to read the RTF message, there is no UTF-8 flag before this message. Therefore, Outlook considers the UTF-8 invitation message to be in ANSI code, and the message is garbled.
 
-**Third-party information disclaimer**
-
-Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
