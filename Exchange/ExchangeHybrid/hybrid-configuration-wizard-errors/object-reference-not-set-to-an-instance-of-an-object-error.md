@@ -54,8 +54,4 @@ CN=Configuration,DC=\<DOMAIN>,DC=\<COM>,CN=Services,CN=Microsoft Exchange,CN=\<O
 
 For more information about how to do this, see [Performing Authoritative Restore of Active Directory Objects](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816878(v=ws.10)).
 
-## More information
-
-If you experience issues with the Hybrid Configuration wizard, you can run the [Exchange Hybrid Configuration Diagnostic](https://aka.ms/hcwcheck). This diagnostic is an automated troubleshooting experience. Run it on the same server on which the Hybrid Configuration wizard failed. Doing this collects the Hybrid Configuration wizard logs and parses them for you. If you're experiencing a known issue, a message is displayed that tells you what went wrong. The message includes a link to an article that contains the solution. Currently, the diagnostic is supported only in Internet Explorer.
-
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Q&A](/answers/products/?WT.mc_id=msdnredirect-web-msdn).
