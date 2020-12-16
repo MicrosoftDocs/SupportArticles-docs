@@ -19,7 +19,7 @@ keywords: managed devices, certificates, WSUS, MECM
 
 This article provides workarounds for an issue in which a device loses its system and user certificates after an update.
 
-_Original product version:_ &nbsp;Windows 10, version 20H2; Windows 10, version 2004; Windows 10, version 1909; Windows 10, version 1903; Server: Windows Server, version 20H2; Windows Server, version 2004; Windows Server, version 1909; Windows Server, version 1903
+_Original product version:_ &nbsp;Windows 10, version 20H2; Windows 10, version 2004; Windows 10, version 1909; Windows 10, version 1903
 
 ## Symptoms
 
@@ -96,7 +96,7 @@ To add the latest LCU to the update source, follow these steps:
    ```
 
    > [!NOTE]  
-   > In this command, \<*Source*> is the location of the files that you intend to build into an image and \<*Target.iso*> is the name of the .iso image file.
+   > In this command, \<*Source*> is the location of the files that you intend to build into an image and \<*Target.iso*> is the name of the ISO image file.
 
 ## More information
 

@@ -222,6 +222,8 @@
       href: ./deployment/automatic-updates-cannot-download-updates-event-16.md
     - name: Cannot use the ImageX.exe tool for backup
       href: ./deployment/cannot-use-imagex-tool-backup.md
+    - name: Certificates are missing after you update a device to a newer version of Windows 10
+      href: ./deployment/certs-missing-after-device-update.md
     - name: Command-line switches for software update packages
       href: ./deployment/command-line-switches-deploy-update-packages.md
     - name: Command-line switches supported by Self-Extractor packages
