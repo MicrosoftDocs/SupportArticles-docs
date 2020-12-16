@@ -37,6 +37,11 @@ To fix this issue, remove the ampersand (&) from the site that contains the cale
 1. Remove the ampersand (&) from the **Web Site Address** field, and then click **OK**.
 1. Create the calendar overlay by using the new URL.
 
+> [!note]
+> - To change the URL while at the root level of a classic or modern site, you must change the site address. For more information, see [Change a site address](https://docs.microsoft.com/sharepoint/change-site-address). (Note that navigation on a Modern site is not shown by default.)
+> - The title, description, and logo settings page can be accessed directly by browsing to https://contoso.sharepoint.com/_layouts/15/prjsetng.aspx (where "contoso" is your website).
+
+
 ## More information
 
 This issue occurs when the site that contains the calendar that you're creating the calendar overlay from contains an ampersand (&) in the URL.
