@@ -31,10 +31,9 @@ Error 0xC0000102 is a STATUS_FILE_CORRUPT_ERROR, which means a corrupted file is
 To resolve this issue, follow these steps:
 
 1.	Create and Access a Repair VM
-2.	Replace the corrupt file
-3.	Repair the file system corruption
-4.	Enable serial console and memory dump collection
-5.	Rebuild the VM
+2.	Repair or replace the corrupt file
+3.	Enable serial console and memory dump collection
+4.	Rebuild the VM
 
 > [!NOTE]
 > When encountering this error, the Guest OS isn't operational. You'll be troubleshooting in offline mode to resolve this issue.
@@ -45,18 +44,28 @@ To resolve this issue, follow these steps:
 
 For more information, see [Unable to reach the key vault for Standard VM type machines](https://supportability.visualstudio.com/AzureVMPOD/_wiki/wikis/AzureVMPOD/266229/Azure_Virtual-Machine_Features_Disk-Encryption_TSG_Unable-to-reach-the-key-vault-for-Standard-VM-type-machines).
 
-### Step 2: Replace the corrupt file
+### Step 2: Repair or replace the corrupt file
 
-1.	 Use boot diagnostics to view the screenshot of the VM. Note the file that is displayed in the error.
-2.	To replace the corrupt binary, take the following steps:
+- **Repair the corrupt file**
 
-      1. Browse to the location of the binary that was displayed in the screenshot.
-      1. Note the version of the file. (Right-click **Properties** and select the **Details** tab.)
+   Open an elevated CMD prompt and run **chkdsk** on the disk:
+
+   ```cmd
+   chkdsk <<DRIVE LETTER>: /F
+   ```
+
+- **Replace the corrupt file**
+
+   1.	 Use boot diagnostics to view the screenshot of the VM. Note the file that is displayed in the error.
+   2.	To replace the corrupt binary, take the following steps:
+
+         1. Browse to the location of the binary that was displayed in the screenshot.
+         1. Note the version of the file. (Right-click **Properties** and select the **Details** tab.)
     
-         :::image type="content" source="media/error-code-0xC0000102-status-file-corrupt/error-code-0xC0000102-status-file-corrupt-3.png" alt-text="Right-click Properties and then the Details tab.":::
+            :::image type="content" source="media/error-code-0xC0000102-status-file-corrupt/error-code-0xC0000102-status-file-corrupt-3.png" alt-text="Right-click Properties and then the Details tab.":::
  
-      1.	Rename the file as <FILENAME.EXT>.OLD. For example, the file shown in the image above would be renamed from ***\windows\system32\drivers\cng.sys*** to ***\windows\system32\drivers\cng.sys.old***.
-3.	Restore this file from the internal repository.
+         1.	Rename the file as <FILENAME.EXT>.OLD. For example, the file shown in the image above would be renamed from ***\windows\system32\drivers\cng.sys*** to ***\windows\system32\drivers\cng.sys.old***.
+   3.	Restore this file from the internal repository.
 
        1. Launch a CMD session and locate the volume holding your Windows directory. 
        1. Browse to **\windows\winsxs** and search for the binary displayed on your screenshot:
@@ -72,15 +81,10 @@ For more information, see [Unable to reach the key vault for Standard VM type ma
             <<drive>>:\Windows\WinSxS\<<directory_where_file_is>>\<<binary_with_extension>> <<drive>>:\Windows\System32\Drivers\ 
             ```
 
-### Step 3: Repair the file system corruption
 
-Open an elevated CMD prompt and run **chkdsk** on the disk:
 
-```cmd
-chkdsk <<DRIVE LETTER>: /F
-```
 
-### Step 4: Enable the Serial Console and memory dump collection
+### Step 3: Enable the Serial Console and memory dump collection
 
 Before rebuilding the VM, it is recommended to enable memory dump collection and Serial Console. To do so, run the following script: 
 
@@ -144,6 +148,6 @@ Before rebuilding the VM, it is recommended to enable memory dump collection and
     ```
 
 
-### Step 5: Rebuild the VM
+### Step 4: Rebuild the VM
 
 Use [step 5 of the VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands) to rebuild the VM.
