@@ -10,7 +10,7 @@ ms.reviewer:
 
 ## Symptoms
 
-1. When you pull the screenshot of the VM, the screenshots shows the message:
+1. When you pull the screenshot of the VM, the screenshot shows the message:
 
    - Working on features
    - ##% complete
@@ -24,12 +24,12 @@ A role for feature was added or removed from Windows.
 
 ## Solution
 
-Refresh the screenshot in boot diagnostics a few times to monitor if there's any progress or if the VM is stuck, only intercede if the machine is indeed stuck otherwise, you could break the role/feature further.
+Refresh the screenshot in boot diagnostics a few times to monitor if there's any progress or if the VM is stuck. Only intercede if the machine is indeed stuck otherwise, you could break the role/feature further.
 
 ### Process Overview
 
 1. [Create and Access a Repair VM](#1)
-2. [Use Dism to rollback the change](#2)
+2. [Use DISM to rollback the change](#2)
 3. [Enable Serial Console and Memory Dump Collection](#3)
 4. [Rebuild the VM](#4)
 
@@ -38,9 +38,9 @@ Refresh the screenshot in boot diagnostics a few times to monitor if there's any
 1. Use [steps 1-3 of the VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to prepare a Repair VM.
 2. Use Remote Desktop Connection connect to the Repair VM.
 
-### Use Dism to roll back the change<a id="2"></a>
+### Use DISM to roll back the change<a id="2"></a>
 
-1. To know which is/are the change/s the machine is/are trying to cope with, check the setup.evtx logs and look for events 7 like the following:
+1. To determine the changes that the machine is trying to cope with, check the `setup.evtx` logs and look for events `7` as seen in this example:
 
    (these logs are located at `<drive letter>:\Windows\System32\winevt\Logs\Setup.evtx`)
 
@@ -121,4 +121,4 @@ Use [step 5 of the VM Repair Commands](https://docs.microsoft.com/azure/virtual-
 
 If you still cannot determine the cause of the issue and need more help, you can open a support ticket with Microsoft Customer Support.
 
-If you need more help at any point in this article, you can contact the Azure experts on the [MSDN Azure and Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/), and select **Get support**. For information about using Azure support, read the [Microsoft Azure support FAQ](https://azure.microsoft.com/support/faq/).
+If you need more help at any point in this article, you can contact the Azure experts on the [MSDN Azure and Stack Overflow forums](https://azure.microsoft.com/support/forums/). You can also file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/), and select **Get support**. For information about using Azure support, read the [Microsoft Azure support FAQ](https://azure.microsoft.com/support/faq/).
