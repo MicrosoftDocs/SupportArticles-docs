@@ -27,7 +27,7 @@ You have a device that runs Windows 10, version 1809 or later. The device also h
 
 ## Cause
 
-This behavior might occur when the installation source or media that was used to update the device is out-of-date. The update doesn't include an LCU that was released on October 13, 2020, or later. It typically affects managed devices in environments in which an update management tool such as Windows Server Update Services (WSUS) or Microsoft Endpoint Configuration Manager downloads updates and then distributes them to devices. It also affects devices that are updated by using outdated physical media or ISO images.
+This behavior might occur when the installation source or media that was used to update the device is out-of-date. The update doesn't include an LCU that was released on October 13, 2020, or later. The behavior typically affects managed devices in environments in which an update management tool such as Windows Server Update Services (WSUS) or Microsoft Endpoint Configuration Manager downloads updates and then distributes them to devices. It also affects devices that are updated by using outdated physical media or ISO images.
 
 This behavior doesn't affect devices that use Windows Update for Business or that connect directly to Windows Update. Any device that connects to Windows Update should always receive the latest versions of the feature update, including the latest LCU, without any extra steps.  
 
