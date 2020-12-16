@@ -63,9 +63,7 @@ The following table lists the features that are provided in this firmware update
 |QoE|Quality of Experience (QoE) upload metrics|
 |Modern authentication support|For improved and secured authentication against Skype for Business and Microsoft Exchange Server|
 
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 ## More information
 

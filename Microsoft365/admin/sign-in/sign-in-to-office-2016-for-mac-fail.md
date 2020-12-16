@@ -40,7 +40,6 @@ To resolve this issue, use the Keychain Access app to delete any password entrie
 
 This behavior is expected. It occurs if you're already signed in to Office 2016 for Mac through a different Office 365 user account in the same organization. 
 
-### Third-party information disclaimer
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
-Sign out of the first account that signed in, then restart that computer. If this solution does not resolve the issue, try the workaround below. 
+Sign out of the first account that signed in, then restart that computer. If this solution does not resolve the issue, try the workaround below.
