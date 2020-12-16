@@ -104,7 +104,7 @@ To transfer the logins, use one of the following methods, as appropriate for you
       IF (@login_name IS NULL)
       DECLARE login_curs CURSOR FOR
 
-      SELECT p.sid, p.name, p.type, p.is_disabled, p.default_database_name, l.hasaccess, l.denylogin FRO
+      SELECT p.sid, p.name, p.type, p.is_disabled, p.default_database_name, l.hasaccess, l.denylogin FROM
       sys.server_principals p LEFT JOIN sys.syslogins l
       ON ( l.name = p.name ) WHERE p.type IN ( 'S', 'G', 'U' ) AND p.name <> 'sa'
       ELSE
