@@ -1008,7 +1008,7 @@ Windows Media Services in Windows Server 2003 and later versions replaces the fo
 
 Windows Media Services is now a single service that runs on Windows Server. Its core components were developed by using COM, and it has a flexible architecture that you can customize for specific programs. Windows Media Services supports a larger variety of control protocols. These include Real Time Streaming Protocol (RTSP), Microsoft Media Server (MMS) protocol, and HTTP.
 
-System service name: **WMServer**
+System service name: `WMServer`
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
