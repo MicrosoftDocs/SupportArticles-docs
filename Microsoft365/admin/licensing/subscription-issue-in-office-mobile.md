@@ -23,24 +23,24 @@ appliesto:
 
 When you use Office Mobile for iPhone, you receive one of the following error messages:  
 
-**Can't Verify Subscription**
+> Can't Verify Subscription
 
-**Please sign in to reactivate this app.**
+> Please sign in to reactivate this app.
 
-**No Subscription Found**
+> No Subscription Found
 
-**We couldn't find a subscription connected to your account.** 
+> We couldn't find a subscription connected to your account.
 
 ## Cause
 
-This issue occurs because a previously activated version of Office Mobile exists on the device, possibly from another subscription. Therefore, the new Office Professional Plus license cannot be applied. 
+This issue occurs because a previously activated version of Office Mobile exists on the device, possibly from another subscription. Therefore, the new Office Professional Plus license cannot be applied.
 
 ## Solution
 
 To resolve this issue, follow these steps:
 
 1. Verify that you have a license assigned to youin the Office 365 portal. To do this, follow these steps:
-    
+
     > [!NOTE]
     > If you cannot sign in or do not see the **Settings** button, then you may not have administrative permissions or may not have a license assigned to you.
    1. Sign in to the [Office 365 portal](https://portal.office.com/account/#subscriptions).
@@ -52,11 +52,11 @@ To resolve this issue, follow these steps:
         > [!NOTE]
         > If you don't see a vertical scroll bar, hover the pointer over the list, press and hold the left mouse button, and then scroll.
 
-        ![Office status](./media/subscription-issue-in-office-mobile/office-status.png)    
+        ![Office status](./media/subscription-issue-in-office-mobile/office-status.png)
    4. If an entry for **The latest desktop version of Office** does not appear in the list, contact your administrator or go to the following website:
 
-        - [Assign or remove licenses, or view a list of unlicensed users](https://docs.microsoft.com/office365/admin/subscriptions-and-billing/assign-licenses-to-users?redirectSourcePath=%252fen-us%252farticle%252fassign-licenses-to-users-in-office-365-for-business-997596b5-4173-4627-b915-36abac6786dc&view=o365-worldwide)         
-     
+        - [Assign or remove licenses, or view a list of unlicensed users](https://docs.microsoft.com/office365/admin/subscriptions-and-billing/assign-licenses-to-users?redirectSourcePath=%252fen-us%252farticle%252fassign-licenses-to-users-in-office-365-for-business-997596b5-4173-4627-b915-36abac6786dc&view=o365-worldwide&preserve-view=true)
+
 2. Verify the status of the service health for the Office Subscription service.
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]

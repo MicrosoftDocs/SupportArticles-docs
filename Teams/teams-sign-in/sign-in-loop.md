@@ -80,6 +80,6 @@ Change Microsoft Edge, Internet Explorer or Google Chrome settings using adminis
     - [*.]sfbassets.com
     - [*.]skypeforbusiness.com
 
-[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
+[!INCLUDE [Third-party information disclaimer](../../includes/third-party-information-disclaimer.md)]
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
