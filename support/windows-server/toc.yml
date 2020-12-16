@@ -1218,7 +1218,7 @@
       href: ./high-availability/cannot-join-a-node-into-a-cluster.md
   - name: Node removed from the cluster
     items:
-    - name: Cluster IP address resources fail on both nodes of a two-node multi-site cluster when one node disconnects
+    - name: Cluster IP address resources fail on both nodes when one node disconnects
       href: ./high-availability/cluster-ip-resources-fail-2-node-2-site-fsw-cluster.md
   - name: Print clusters and High Availability Printing
     items:
