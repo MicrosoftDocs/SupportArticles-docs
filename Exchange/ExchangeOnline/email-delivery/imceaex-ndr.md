@@ -40,6 +40,11 @@ To create an X500 proxy address for the old `LegacyExchangeDN` attribute for the
 - Replace "+20" with a blank space.
 - Replace "+28" with an opening parenthesis character.
 - Replace "+29" with a closing parenthesis character.
+- Replace "+2C" with a comma character.
+- Replace "+3F" with a question mark character.
+- Replace "+5F" with an underscore character
+- Replace "+40" with an @ character
+- Replace "+2E" with a period character.
 - Delete the "IMCEAEX-" string.
 - Delete the "@mgd.domain.com" string.
 - Add "X500:" at the beginning.
