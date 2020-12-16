@@ -52,7 +52,7 @@ Missing netlogon and sysvol shares typically occur on replica domain controllers
     REPADMIN /SHOWREPS %DOWNSTREAMCOMPUTER%
     ```
 
-    FRS replication is dependent on the Active Directory to replicate the necessary configuration information between domain controllers in the domain. If replication is suspect, examine replication events in Event Viewer after setting the "replication events" entry in `HKEY_LOCAL_MACHINE\system\ccs\services\ntds\diagnostics\`to 5 on potential source computers (\\\\M1) and the destination computer (\\\\M2), then forcing replication from \\\\M1 to \\\\M2 and \\\\M2 to \\\\M1 using the "replicate now" command in Dssite.msc or its equivalent in REPLMON.
+    FRS replication is dependent on the Active Directory to replicate the necessary configuration information between domain controllers in the domain. If replication is suspect, examine replication events in Event Viewer after setting the "replication events" entry in `HKEY_LOCAL_MACHINE\system\ccs\services\ntds\diagnostics\` to 5 on potential source computers (\\\\M1) and the destination computer (\\\\M2), then forcing replication from \\\\M1 to \\\\M2 and \\\\M2 to \\\\M1 using the "replicate now" command in Dssite.msc or its equivalent in REPLMON.
 
 3. The server used to source the Active Directory and SYSVOL folder should have created NETLOGON and SYSVOL shares itself.
 

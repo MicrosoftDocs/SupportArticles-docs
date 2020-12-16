@@ -22,9 +22,9 @@ _Original KB number:_ &nbsp; 2555789
 
 ## Symptoms
 
-After upgrading a network driver and reentering static IPv4 address information within the **Local Area Connection Properties** / **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, or when using the `netsh interface ipv4 [add | set] address` command, network connectivity may not work correctly. The following behavior may be observed:
+After upgrading a network driver and reentering static IPv4 address information within the **Local Area Connection Properties**/**Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, or when using the `netsh interface ipv4 [add | set] address` command, network connectivity may not work correctly. The following behavior may be observed:
 
-- When viewing **Local Area Connection Properties** / **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, the **Default gateway** entry will be blank, though the previously entered IP address and Subnet mask will display correctly.
+- When viewing **Local Area Connection Properties**/**Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, the **Default gateway** entry will be blank, though the previously entered IP address and Subnet mask will display correctly.
 
 - If ipconfig.exe is run from a command prompt, the Local Area Connection "Autoconfiguration IPv4 Address" will begin with "169.254...."
 

@@ -33,7 +33,7 @@ Microsoft defines the supported host configurations in the following terms:
 
 - **Docker engine**: Docker is a third-party application for managing containers. Docker Enterprise runs on Windows Server; Docker Desktop for Windows runs in Windows 10. For more information about Docker, see [Docker on Windows](/virtualization/windowscontainers/manage-docker/configure-docker-daemon).
 
-- **Container type.** Microsoft supports Windows Server containers, Hyper-V containers, and Linux containers. However, not all host configurations can support all of the container types. For general information about Windows containers and container types, see [Containers on Windows](/virtualization/windowscontainers/about/index).
+- **Container type**: Microsoft supports Windows Server containers, Hyper-V containers, and Linux containers. However, not all host configurations can support all of the container types. For general information about Windows containers and container types, see [Containers on Windows](/virtualization/windowscontainers/about/index).
 
 > [!NOTE]
 > The Linux Containers on Windows (LCOW) feature is under active development. For more information, see [Linux Containers on Windows](/virtualization/windowscontainers/deploy-containers/linux-containers). You can track ongoing progress in the [Moby](https://github.com/moby/moby/issues/33850) project on GitHub.
@@ -61,23 +61,23 @@ To deploy containers in Windows Server, you must install Docker Enterprise (see 
 
 On these versions of Windows, the types of containers that Microsoft supports depends on whether your host is a physical computer or a virtual machine, and whether Windows is running with Hyper-V enabled.
 
-- Supported container types on a physical container host
+### Supported container types on a physical container host
 
-    |Hypervisor|Supported container types|
-    |---|---|
-    |None|Windows Server containers|
-    |Hyper-V| <ul><li>Windows Server containers</li> <li>Hyper-V containers</li> <li>Linux containers</li> </ul>|
-    |||
+|Hypervisor|Supported container types|
+|---|---|
+|None|Windows Server containers|
+|Hyper-V| <ul><li>Windows Server containers</li> <li>Hyper-V containers</li> <li>Linux containers</li> </ul>|
+|||
 
-- Supported container types on a virtual machine container host
+### Supported container types on a virtual machine container host
 
-    |VM host hypervisor|Guest OS|Guest hypervisor|Supported container types|
-    |---|---|---|---|
-    |Hyper-V|Windows Server (full or core)|None|Windows Server containers|
-    |Hyper-V|Windows Server (full or core)|Hyper-V  (must be running in nested virtualization mode)|Windows Server containers Hyper-V containers|
-    |Hyper-V|Linux|Linux|Linux containers|
-    |VMWare ESX|Windows Server (full or core)|None (Hyper-V not supported on VMWare ESX)|Windows Server containers|
-    |||||
+|VM host hypervisor|Guest OS|Guest hypervisor|Supported container types|
+|---|---|---|---|
+|Hyper-V|Windows Server (full or core)|None|Windows Server containers|
+|Hyper-V|Windows Server (full or core)|Hyper-V  (must be running in nested virtualization mode)|Windows Server containers Hyper-V containers|
+|Hyper-V|Linux|Linux|Linux containers|
+|VMWare ESX|Windows Server (full or core)|None (Hyper-V not supported on VMWare ESX)|Windows Server containers|
+|||||
 
 ## Supported configurations for Windows 10 container hosts
 

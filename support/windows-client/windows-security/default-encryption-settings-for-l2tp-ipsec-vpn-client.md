@@ -33,7 +33,9 @@ The following list contains the default encryption settings for the Microsoft L2
 The client does not support the following settings:
 
 - Tunnel mode
-- AH (Authentication Header) These values are hard-coded in the client and you cannot change them.
+- AH (Authentication Header)
+
+These values are hard-coded in the client and you cannot change them.
 
 ## Data Encryption Standard
 

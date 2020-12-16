@@ -76,7 +76,7 @@ A recent update to the Microsoft Activation and Validation unintentionally cau
 
 Windows 7 devices that have [KB971033](https://support.microsoft.com/help/971033) installed but did not experience this issue between the time of the change (10:00:00 UTC, January 8, 2019) and the time of the reversion of that change (4:30:00 UTC, January 9, 2019)  should not experience the issue that is described in this article.
 
-[KB 971033]((https://support.microsoft.com/help/971033) (Description of the up date for Windows Activation Technologies) contains the following text:
+[KB 971033](https://support.microsoft.com/help/971033) contains the following text:
 
 "Note For an Enterprise customer who uses Key Management Service (KMS) or Multiple Activation Key (MAK) volume activation, we generally recommend to NOT install this update in their reference image or already deployed computers. This update is targeted at consumer installs of Windows using RETAIL activation."
 
