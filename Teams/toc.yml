@@ -105,6 +105,8 @@
     items:
     - name: How to join a Microsoft Teams meeting
       href: ./meetings/how-to-join-a-teams-meeting.md
+    - name: Troubleshoot Teams meeting recording
+      href: ./meetings/troubleshoot-meeting-recording-issues.md
   - name: Mobile
     items:
     - name: Can't see auto-favorited channels in mobile app
