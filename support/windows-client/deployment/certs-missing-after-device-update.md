@@ -27,16 +27,16 @@ You have a device that runs Windows 10, version 1809 or later. The device also h
 
 ## Cause
 
-This behavior might occur when the installation source or media that was used to update the device is out-of-date. The update does not include an LCU that was released on October 13, 2020, or later. It typically affects managed devices in environments in which an update management tool such as Windows Server Update Services (WSUS) or Microsoft Endpoint Configuration Manager downloads updates and then distributes them to devices. It also affects devices that are updated by using outdated physical media or ISO images.
+This behavior might occur when the installation source or media that was used to update the device is out-of-date. The update doesn't include an LCU that was released on October 13, 2020, or later. It typically affects managed devices in environments in which an update management tool such as Windows Server Update Services (WSUS) or Microsoft Endpoint Configuration Manager downloads updates and then distributes them to devices. It also affects devices that are updated by using outdated physical media or ISO images.
 
-This behavior does not affect devices that use Windows Update for Business or that connect directly to Windows Update. Any device that connects to Windows Update should always receive the latest versions of the feature update, including the latest LCU, without any extra steps.  
+This behavior doesn't affect devices that use Windows Update for Business or that connect directly to Windows Update. Any device that connects to Windows Update should always receive the latest versions of the feature update, including the latest LCU, without any extra steps.  
 
 ## Workaround
 
 To mitigate this issue, do one of the following:
 
-- Download a new source image from the Microsoft Update Catalog or from the Volume Licensing Service Center to replace your previous source image, and then use that image to update the device.
-- Roll the device back to the previous Windows version, add the missing LCU to the update, and then re-install the update.
+- Download a new source image from the Microsoft Update Catalog or from the Volume Licensing Service Center to replace your previous source image. Then use that image to update the device.
+- Roll the device back to the previous Windows version, add the missing LCU to the update, and then reinstall the update.
 
 > [!IMPORTANT]  
 >  
@@ -61,7 +61,7 @@ To add the latest LCU to the update source, follow these steps:
    > [!NOTE]  
    > If the image has an install.esd file instead of an install.wim file, use the [**Dism /Export-Image**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14#export-image) command to convert the .esd file to a .wim file.
 
-1. Go to [Windows 10 update history](https://support.microsoft.com/help/4581839/windows-10-update-history) and look upd the correct LCU number for your system version.
+1. Go to [Windows 10 update history](https://support.microsoft.com/help/4581839/windows-10-update-history) and look up the correct LCU number for your system version.
 
 1. Go to [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx), and then download the LCU.
 
