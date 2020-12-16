@@ -127,8 +127,6 @@ If you suspect that your users are using a Chrome version 76 or a later version 
 
 For the 77–79 versions of Chrome, check the `Chrome://flags` in the browser to see whether they have the flags enabled. The setting default will begin to change in Chrome version 80 on a graduated release.
 
-**Third-party information disclaimer**
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
-
-Microsoft provides third-party contact information to help you find additional information about this topic. This contact information may change without notice. Microsoft does not guarantee the accuracy of third-party contact information.
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]

@@ -99,9 +99,7 @@ These issues may also be caused by third-party applications that access MAPISVC.
 
 Use [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to see the processes that are accessing MAPISVC.inf. If a process displays a **SHARING_VIOLATION on MAPISVC.inf**, it indicates that the associated application is likely to be responsible for the issues. For instance, RepMgr.exe (C:\Program Files\Confer\RepMgr.exe) is an application that is known to cause these issues. Stop this process if you see it in Process Monitor.
 
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 ### For Outlook 2013
 
