@@ -8,7 +8,7 @@ ms.reviewer: jarrettr
 
 # Windows stop error 0xC0000102 Status File Corrupt
 
-This article provides steps to resolve issues where the operating system (OS) encounters stop error 0xC0000102, which keeps an Azure virtual machine (VM) from booting.
+This article provides steps to resolve issues where the Windows operating system (OS) encounters the stop error 0xC0000102, which keeps an Azure virtual machine (VM) from booting.
 
 ## Symptoms
 
@@ -148,4 +148,3 @@ Before rebuilding the VM, it is recommended to enable memory dump collection and
 ### Step 5: Rebuild the VM
 
 Use [step 5 of the VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands) to rebuild the VM.
-
