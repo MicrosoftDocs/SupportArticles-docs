@@ -77,7 +77,7 @@ For more information, see [Unable to reach the key vault for Standard VM type ma
 Open an elevated CMD prompt and run **chkdsk** on the disk:
 
 ```cmd
-chkdsk <<DRIVE LETTER>: /<drive letter>
+chkdsk <<DRIVE LETTER>: /F
 ```
 
 ### Step 4: Enable the Serial Console and memory dump collection
