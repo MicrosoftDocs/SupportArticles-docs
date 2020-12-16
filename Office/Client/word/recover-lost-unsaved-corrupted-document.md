@@ -427,8 +427,6 @@ For more information about AutoRecover, see the following articles:
 - [WD2000: Automatically Saving Current Work (Open Document)](https://support.microsoft.com/help/211762)
 - [How Word creates and recovers the AutoRecover files](https://support.microsoft.com/help/107686)
 
-#### Third-party information disclaimer
-
-The third-party products that are discussed in this article are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, regarding the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

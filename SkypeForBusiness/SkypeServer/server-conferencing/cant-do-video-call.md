@@ -24,9 +24,7 @@ appliesto:
 
 The firmware update of Logitech BRIO Webcam (version**2.0.12**) introduces an additional video steam to enable Windows Hello face authentication. However, you cannot start a Skype for Business video call in a Logitech BRIO Webcam because of the additional stream.
 
-**Third-party information disclaimer** 
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.  
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 ## More information
 
