@@ -28,14 +28,6 @@ Restoring a domain controller may cause an Event ID: 1587, indicating inconsiste
 
 This problem occurs because the domain controller assigns a new invocation ID, but uses the original highwater mark.
 
-## Resolution
-
-To resolve this problem, obtain the latest service pack for Windows 2000. For additional information, click the following article number to view the article in the Microsoft Knowledge Base:
- [260910](https://support.microsoft.com/help/260910) How to Obtain the Latest Windows 2000 Service Pack  
-To resolve this issue, obtain the hotfix that is described in the following Microsoft Knowledge Base article:
-
-[299687](https://support.microsoft.com/help/299687) MS01-036: Function Exposed By Using LDAP over SSL Could Enable Passwords to Be Changed  
-
 ## Workaround
 
 To work around this problem, demote and then promote the restored domain controller. Before you demote the affected server, force a full replication of the affected server to another domain controller. (The full synchronization can be resource-intensive for larger domains.) Perform the full synchronization on the domain partition and on the configuration partition. The following line shows the syntax of the Repadmin command that you use to perform the synchronization: repadmin /sync <Naming Context> <Dest DC> <Source DC GUID> [/force] [/full] 
