@@ -64,8 +64,7 @@ For more information, see [Unable to reach the key vault for Standard VM type ma
            ```cmd
            dir <<binary from the screenshot with extension>> /s
            ````
-            > [!note]
-            The following command will list all the different versions of that very same file the machine contains and will give you the path history of that component. You could then choose the latest of the list and proceed to copy that one to the windows\system32 folder path described in the screenshot:
+            d. The following command will list all the different versions of the specified file that the VM contains and will give you the path history of that component. You should choose the most recent of the same version from the list and proceed to copy that file to the folder path described in the screenshot.
 
             ```cmd
             copy
