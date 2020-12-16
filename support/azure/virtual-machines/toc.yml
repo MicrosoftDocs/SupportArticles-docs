@@ -32,6 +32,10 @@
       href: credssp-encryption-oracle-remediation.md
     - name: No Internet access
       href: no-internet-access-multi-ip.md
+  - name: RDP
+    items:
+    - name: Cannot RDP into Azure VM
+      href: cannot-connect-rdp-azure-vm.md
 
 - name: VM is not booting
   items:
