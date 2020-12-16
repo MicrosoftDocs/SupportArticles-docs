@@ -41,7 +41,7 @@ If the diagnostic reports that your organization is on the Microsoft Stream stor
 - Use OneDrive for Business or SharePoint storage to replace the Stream storage. To do this, see [Use OneDrive for Business and SharePoint or Stream for meeting recordings](/microsoftteams/tmr-meeting-recording-change).
 - Set the meeting policy to save recordings outside the local region through the `-AllowRecordingStorageOutsideRegion` attribute in the [Set-CsTeamsMeetingPolicy](/powershell/module/skype/set-csteamsmeetingpolicy) cmdlet.
 
-  **Note** This option allows users to still use Stream but has their recordings stored outside the local region.
+  **Note** This option allows users to still use the Stream storage but has their recordings stored outside the local region.
 
 If the diagnostic shows that the affected users meet the conditions, here's how to guide them:
 
