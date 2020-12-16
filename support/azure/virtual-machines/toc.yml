@@ -36,6 +36,8 @@
     items:
     - name: Cannot RDP into Azure VM
       href: cannot-connect-rdp-azure-vm.md
+    - name: Azure VM cannot RDP SSH - driver IRQL not less or equal
+      href: azure-vm-cannot-rdp-ssh-driver-irql-not-less-equal.md
 
 - name: VM is not booting
   items:
