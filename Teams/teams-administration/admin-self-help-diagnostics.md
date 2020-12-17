@@ -69,7 +69,7 @@ The following diagnostics are currently available with brief scenario descriptio
 | Teams presence | Validates that a user's Teams presence can be correctly displayed. | Diag: Teams presence |
 | Teams Live Events | Validates that a user is able to schedule Teams live events. | Diag: Teams Live Events |
 | Teams Meeting Recordings | Validates that the user is properly configured to record a meeting in Teams | Diag: Meeting Recording
-| Teams Voicemail | Validates that a user is properly configured to use Voicemail in Teams | Diag: Voicemail 
+| Teams Voicemail | Validates that a user is properly configured to use Voicemail in Teams | Diag: Voicemail |
 
 More diagnostics will be added at a future date.
 
