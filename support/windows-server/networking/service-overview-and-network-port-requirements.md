@@ -293,7 +293,7 @@ System service name: **TrkSvr**
 
 ### Distributed Transaction Coordinator
 
-The Distributed Transaction Coordinator (DTC) system service coordinates transactions that are distributed across multiple computer systems and resource managers, such as databases, message queues, file systems, or other transaction-protected resource managers. The DTC system service is required if transactional components are configured through Component Object Model (COM)+. It's also required for transactional queues in Message Queuing (also known as MSMQ) and SQL Server operations that span multiple systems.
+The Distributed Transaction Coordinator (DTC) system service coordinates transactions that are distributed across multiple computer systems and resource managers, such as databases, message queues, file systems, or other transaction-protected resource managers. The DTC system service is required if transactional components are configured through Component Object Model Plus (COM+). It's also required for transactional queues in Message Queuing (also known as MSMQ) and SQL Server operations that span multiple systems.
 
 System service name: **MSDTC**
 
