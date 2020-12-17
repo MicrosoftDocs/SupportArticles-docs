@@ -158,7 +158,7 @@ To turn off a switch of the current value, you need to set the related bit to 0.
   <value> -band 0xEE
   ```
 
-For example, if the current value is 255, to configure "Prefer IPv6 over IPv4", run:
+For example, if the current value is 255, to configure "Prefer IPv6 over IPv4", run the following command:
 
 ```powershell
 255 -band 0xDF
