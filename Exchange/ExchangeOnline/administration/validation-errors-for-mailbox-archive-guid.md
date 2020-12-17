@@ -21,33 +21,31 @@ _Original KB number:_ &nbsp; 4053483
 
 ## Symptoms
 
-When an administrator sign into Microsoft 365 admin center or Azure Active Directory, the administrator may receive these validation errors for some users:
+An administrator who signs in to Microsoft 365 admin center or Azure Active Directory (Azure AD) may receive the following validation errors for some users:
 
 > "Failed to sync the ArchiveGuid \<GUID> of mailboxMailboxGuid because one cloud archiveCloudArchiveGuid exists."
 
 > "Failed to enable the new cloud archiveCloudArchiveGuid of mailboxMailboxGuid because a different archiveArchiveGuid exists. To enable the new archive, first disable the archive on-premises. After the next Dirsync sync cycle, enable the archive on-premises again."
 
-In this situation, updates to other property values of those users can't be synchronized from Azure Active Directory to Exchange Online.
+In this situation, updates to other property values of these users can't be synchronized from Azure AD to Exchange Online.
 
 ## Resolution
 
-Update the `msExchArchiveGUID` (`ArchiveGUID`) property value in the on-premises to match the Exchange Online value.
-
-Follow the steps listed under the scenario that corresponds to your on-premises configuration.
+Update the `msExchArchiveGUID` (`ArchiveGUID`) property value in the on-premises organization to match the Exchange Online value. To do this, follow the steps for the scenario that corresponds to your on-premises configuration.
 
 ### Scenario 1: You still have an Exchange server running in the on-premises organization
 
-Here's how to keep the ArchiveGuid property value consistent:
+Here's how to keep the `ArchiveGuid` property value consistent between Exchange environments:
 
-1. Run these cmdlets from Exchange Management PowerShell to retrieve information about `ArchiveGuid` and `RecipientTypeDetails`:
+1. Run the following cmdlets from the Exchange Management Shell to retrieve information about `ArchiveGuid` and `RecipientTypeDetails`:
 
     ```powershell
     Get-Recipient -Identity user@contoso.com | fl ArchiveGuid, RecipientTypeDetails
     ```
 
-2. Run theses cmdlets to update the value based on different situations:
+2. Run these cmdlets to update the value based on different situations, as follows:
 
-    - **Situation 1**: The `RecipientTypeDetails` property is set to `RemoteUserMailbox` and the `ArchiveGuid` property isn't set (is zero):
+    - **Situation 1**: The `RecipientTypeDetails` property is set to `RemoteUserMailbox` and the `ArchiveGuid` property is set to **0**:
 
         ```powershell
          Enable-RemoteMailbox user@contoso.com -Archive
@@ -63,7 +61,7 @@ Here's how to keep the ArchiveGuid property value consistent:
          Set-RemoteMailbox -Identity user@contoso.com -ArchiveGuid <Cloud ArchiveGUID>
         ```
 
-    - **Situation 3**: The `RecipientTypeDetails` property isn't `RemoteUserMailbox`. That means no remote mailbox is enabled for the affected user:
+    - **Situation 3**: The `RecipientTypeDetails` property value isn't `RemoteUserMailbox` (no remote mailbox is enabled for the affected user):
 
         ```powershell
          Enable-RemoteMailbox user@contoso.com -RemoteRoutingAddress user@contoso.mail.onmicrosoft.com
@@ -77,14 +75,14 @@ Here's how to keep the ArchiveGuid property value consistent:
          Set-RemoteMailbox -Identity user@contoso.com -ArchiveGuid <Cloud ArchiveGUID>
         ```
 
-### Scenario 2: You no longer have any Exchange server running in on-premises, but you still have Exchange-related attributes in Active Directory
+### Scenario 2: You no longer have any Exchange server running in on-premises, but you still have Exchange-related attributes in AD
 
 In this scenario, you must install an Exchange Server to manage the Exchange-related attributes for synchronized users.
 
 > [!NOTE]
-> Managing the Exchange attributes for cloud users from Active Directory PowerShell or from ADSIEDIT isn't supported. We strongly recommend keeping at least one active Exchange Server in Active Directory to manage the Exchange attributes for synchronized users. For more information, see the "Can third-party management tools be used?" section in [How and when to decommission your on-premises Exchange servers in a hybrid deployment](https://docs.microsoft.com/exchange/decommission-on-premises-exchange?redirectedfrom=MSDN#can-third-party-management-tools-be-used).
+> Managing the Exchange attributes for cloud users from the Active Directory PowerShell or from ADSIEDIT isn't supported. We strongly recommend that you keep at least one active Exchange server in AD to manage the Exchange attributes for synchronized users. For more information, see the "Can third-party management tools be used?" section of [How and when to decommission your on-premises Exchange servers in a hybrid deployment](https://docs.microsoft.com/exchange/decommission-on-premises-exchange?redirectedfrom=MSDN#can-third-party-management-tools-be-used).
 
-To update the `ArchiveGuid` property value, run these cmdlets from Active Directory PowerShell in a domain controller:
+To update the `ArchiveGuid` property value, run the following cmdlets from Active Directory PowerShell in a domain controller:
 
 ```powershell
 Import-Module ActiveDirectory
