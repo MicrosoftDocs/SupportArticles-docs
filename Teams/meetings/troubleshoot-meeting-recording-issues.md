@@ -22,7 +22,7 @@ search.appverid:
 This article helps Microsoft Teams administrators guide users to troubleshoot meeting recording issues such as:
 
 - The meeting recording button is missing.
-- The meeting recording link isn’t included or visible in a chat.
+- The meeting recording link isn't included or visible in a chat.
 
 ## Run the Meeting Recording Support Diagnostic
 
@@ -72,7 +72,7 @@ Here's how to disable the new meeting experience:
 
 If the issue still isn't resolved, the administrator should open a support ticket with Microsoft.
 
-## The meeting recording link isn’t included or visible in a chat
+## The meeting recording link isn't included or visible in a chat
 
 **Note** In high volume meeting chats, a known issue prevents the meeting recording link from appearing for one or more users.
 
