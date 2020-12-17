@@ -68,10 +68,6 @@ The following features that are currently available in Microsoft Lync 2013 for i
 
 We are working to address this difference in feature sets and to update the capabilities of Skype for Business for iOS as quickly as possible.
 
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
-
-## More information
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
