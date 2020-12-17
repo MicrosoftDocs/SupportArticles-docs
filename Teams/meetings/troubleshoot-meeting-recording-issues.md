@@ -34,6 +34,8 @@ If users can't record Teams meetings, the administrator should run the [Meeting 
 
 To start the diagnostic, sign in to Microsoft 365 admin center and type **Diag: Meeting Recording** in the **Need Help** dialogue box.
 
+:::image type="content" source="./media/troubleshoot-meeting-recording-issues/diagnostic.png" alt-text="Screenshot of start the Meeting Recording Support Diagnostic.":::
+
 For more information about user requirements for Teams meeting recording, see [Prerequisites for Teams cloud meeting recording](/microsoftteams/cloud-recording#prerequisites-for-teams-cloud-meeting-recording).
 
 If the diagnostic reports that your organization is on the Microsoft Stream storage but you're in a region or country that isn't supported by Stream yet, the administrator can use one of the following options:
