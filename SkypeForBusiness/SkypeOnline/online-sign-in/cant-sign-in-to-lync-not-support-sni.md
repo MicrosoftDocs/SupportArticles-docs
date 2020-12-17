@@ -61,8 +61,6 @@ This issue occurs when the following conditions are true:
 > [!NOTE]
 > If you need help configuring ADFS 3.0, we recommend that you contact ADFS 3.0 technical support. We also recommended that you run the most recent versions of the ADFS 3.0 components. 
 
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
