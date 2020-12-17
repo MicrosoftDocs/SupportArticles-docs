@@ -9,7 +9,7 @@ ms.reviewer: mlaing
 
 This article resolves a problem in which you receive an "HTTP 500.19" error message on a web application in Internet Information Services (IIS) 7.0 and later versions.
 
-_Original product version:_ &nbsp; Internet Information Services 7.0 and later versions
+_Original product version:_ &nbsp; Internet Information Services 7.0 and later versions  
 _Original KB number:_ &nbsp; 942055
 
 To resolve this error, check the following sections for the appropriate error code information.
@@ -209,3 +209,30 @@ The requested page cannot be accessed because the related configuration data for
 Cause
 
 The default process identity in IIS doesn't have sufficient permissions to open the Web.config file on a remote share.
+
+Resolution
+
+Verify that the application pool identity account of this web application has sufficient permissions to open the *Web.config* file.
+
+## HRESULT code 0x80070003
+
+Error message:
+
+> Server Error in Application "application name"  
+> HTTP Error 500.19 – Internal Server Error  
+> HRESULT: 0x80070003  
+> Description of HRESULT  
+> Cannot read configuration file.
+
+Cause
+
+This error is caused by a lack of permission or by a physical path that doesn’t match the path for the virtual directory. For example, no *Web.config* exists under the web app physical root path.
+
+Resolution
+
+- Verify that the *Web.config* path exists and has correct permissions set.
+- Collect Process Monitor logs to get more information about the error.
+
+## Fix break IIS configuration file issue when you update windows
+
+As a general safety rule, all configuration files (not limited to IIS) should be backup before installing any update. If you use Virtual Machines, take a snapshot of the Virtual Machine before you update it. This advice isn’t limited to Windows updates.
