@@ -2,25 +2,33 @@
 title: Overview of Server Message Block signing
 description: Describes how to configure SMB signing and how to determine whether SMB signing is enabled. This article also describes the default configuration for SMB signing and also provides different examples of SMB signing scenarios.
 ms.date: 12/04/2020
-ms.prod-support-area-path: 
-ms.technology: [Replace with your value]
-ms.reviewer: bbenson
+author: Deland-Han
+ms.author: delhan 
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-server
+localization_priority: medium
+ms.reviewer: kaushika, bbenson
+ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.technology: Networking
 ---
 # Overview of Server Message Block signing
 
-_Original product version:_ &nbsp; Microsoft Windows Server 2003 Standard Edition (32-bit x86), Microsoft Windows Server 2003 Enterprise Edition (32-bit x86), Microsoft Windows XP Professional, Microsoft Windows XP Home Edition  
+This article describes Server Message Block (SMB) signing, and how to determine whether SMB signing is enabled.
+
+_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 887429
 
-## INTRODUCTION
+## Introduction
 
-This article describes Server Message Block (SMB) signing. SMB signing is a security mechanism in the SMB protocol and is also known as security signatures. SMB signing is designed to help improve the security of the SMB protocol. SMB signing was first available in Microsoft Windows NT 4.0 Service Pack 3 (SP3) and Microsoft Windows 98.
+SMB signing is a security mechanism in the SMB protocol and is also known as security signatures. SMB signing is designed to help improve the security of the SMB protocol. SMB signing was first available in Microsoft Windows NT 4.0 Service Pack 3 (SP3) and Microsoft Windows 98.
 
 The following SMB topics are described in this article:
 
 - The default configuration of SMB signing.
 - How to configure SMB signing in Microsoft Windows Server 2003, Microsoft Windows XP, Microsoft Windows 2000, Windows NT 4.0, and Windows 98.
 - How to determine whether SMB signing is enabled in a Network Monitor trace.
-
 - Example SMB signing scenarios.
 
 ## More Information
@@ -35,11 +43,15 @@ When SMB signing is enabled, it is possible for clients that support SMB signing
 - Windows XP
 - Windows 2000
 - Windows NT 4.0
-- Windows 98By default, SMB signing is enabled for incoming SMB sessions on the following operating systems:
+- Windows 98
+
+By default, SMB signing is enabled for incoming SMB sessions on the following operating systems:
 
 - Windows Server 2003-based domain controllers
 - Windows 2000 Server-based domain controllers
-- Windows NT 4.0 Server-based domain controllersBy default, SMB signing is required for incoming SMB sessions on Windows Server 2003-based domain controllers.
+- Windows NT 4.0 Server-based domain controllers
+
+By default, SMB signing is required for incoming SMB sessions on Windows Server 2003-based domain controllers.
 
 ### Configuring SMB signing
 
@@ -48,186 +60,173 @@ We recommend that you use Group Policies to configure SMB signing because a loca
 #### Policy locations for SMB signing
 
 > [!NOTE]
-> The following Group Policy settings are located in the "Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options" Group Policy Object Editor path.
+> The following Group Policy settings are located in the "Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options" Group Policy Object Editor path.
 
 ##### Windows Server 2003 - default domain controllers Group Policy
 
-Workstation/Client
+###### Workstation/Client
+
 Microsoft network client: Digitally sign communications (always) Policy Setting: not defined
 
 Microsoft network client: Digitally sign communications (if server agrees) Policy Setting: not defined Effective Setting: enabled (because of local policy)
 
-Server
+###### Server
+
 Microsoft network server: Digitally sign communications (always) Policy Setting: enabled
 
 Microsoft network server: Digitally sign communications (if client agrees) Policy Setting: enabled
 
 ##### Windows XP and 2003 - local computer Group Policy
 
-Workstation/Client
+###### Workstation/Client
+
 Microsoft network client: Digitally sign communications (always) Security Setting: disabled
 
 Microsoft network client: Digitally sign communications (if server agrees) Security Setting: enabled
 
-Server
+###### Server
+
 Microsoft network server: Digitally sign communications (always) Security Setting: disabled
 
 Microsoft network server: Digitally sign communications (if client agrees) Security Setting: disabled
 
 ##### Windows 2000 - default domain controllers Group Policy
 
-Workstation/Client
-Digitally sign client communication (always)Computer Setting: not defined
+###### Workstation/Client
+
+Digitally sign client communication (always) Computer Setting: not defined
 
 Digitally sign client communication (when possible) Computer Setting: not defined
 
-Server
-Digitally sign server communication (always)Computer Setting: not defined
+###### Server
 
-Digitally sign server communication (when possible)Computer Setting: enabled
+Digitally sign server communication (always) Computer Setting: not defined
+
+Digitally sign server communication (when possible) Computer Setting: enabled
 
 ##### Windows 2000 - local computer Group Policy
 
-Workstation/Client
-Digitally sign client communication (always)Local Setting: Disabled Effective Setting: disabled
+###### Workstation/Client
+
+Digitally sign client communication (always) Local Setting: Disabled Effective Setting: disabled
 
 Digitally sign client communication (when possible) Local Setting: Enabled Effective Setting: enabled
 
-Server
-Digitally sign server communication (always)Local Setting: Disabled Effective Setting: disabled
+###### Server
 
-Digitally sign server communication (when possible)Local Setting: Disabled Effective Setting: disabled
+Digitally sign server communication (always) Local Setting: Disabled Effective Setting: disabled
+
+Digitally sign server communication (when possible) Local Setting: Disabled Effective Setting: disabled
 
 #### Registry values associated with Group Policy configuration for Windows Server 2003, Windows XP, and Windows 2000
 
 ##### Client
 
-In Windows Server 2003 and Windows XP, the "Microsoft network client: Digitally sign communications (if server agrees)" Group Policy, and in Windows 2000, the "Digitally sign client communication (when possible)" Group Policy map to the following registry subkey:
+In Windows Server 2003 and Windows XP, the "Microsoft network client: Digitally sign communications (if server agrees)" Group Policy, and in Windows 2000, the "Digitally sign client communication (when possible)" Group Policy map to the following registry subkey:  
+`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation\Parameters`
 
-`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation\Parameters` 
-Value Name: EnableSecuritySignature
-
-Data Type: REG_DWORD
-
-Data: 0 (disable), 1 (enable)
+**Value Name**: EnableSecuritySignature  
+**Data Type**: REG_DWORD  
+**Data**: 0 (disable), 1 (enable)  
 
 > [!NOTE]
 > The default value in Windows Server 2003, Windows XP, and Windows 2000 is 1 (enabled).
 
-In Windows Server 2003 and Windows XP, the "Microsoft network client: Digitally sign communications (always)" Group Policy, and in Windows 2000, the "Digitally sign client communication (always)" Group Policy map to the following registry subkey:
+In Windows Server 2003 and Windows XP, the "Microsoft network client: Digitally sign communications (always)" Group Policy, and in Windows 2000, the "Digitally sign client communication (always)" Group Policy map to the following registry subkey:  
+`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation\Parameters`
 
-`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation\Parameters` 
-
-Value Name: RequireSecuritySignature
-
-Data Type: REG_DWORD
-
-Data: 0 (disable), 1 (enable)
+**Value Name**: RequireSecuritySignature  
+**Data Type**: REG_DWORD  
+**Data**: 0 (disable), 1 (enable)
 
 > [!NOTE]
 > The default value in Windows Server 2003, Windows XP, and Windows 2000 is 0 (not required).
 
 ##### Server
 
-In Windows Server 2003 and Windows XP, the Group Policy named "Microsoft network client: Digitally sign communications (if client agrees)", and in Windows 2000, the Group Policy named "Digitally sign server communication (when possible)" map to the following registry key:
+In Windows Server 2003 and Windows XP, the Group Policy named "Microsoft network client: Digitally sign communications (if client agrees)", and in Windows 2000, the Group Policy named "Digitally sign server communication (when possible)" map to the following registry key:  
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters`
 
-`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters` 
-
-Value Name: EnableSecuritySignature
-
-Data Type: REG_DWORD
-
-Data: 0 (disable), 1 (enable)
+**Value Name**: EnableSecuritySignature  
+**Data Type**: REG_DWORD  
+**Data**: 0 (disable), 1 (enable)
 
 > [!NOTE]
 > The default value in Windows Server 2003 domain controllers and Windows 2000 domain controllers is 1 (enabled). The default value in Windows NT 4.0 domain controllers is 0 (disabled).
 Windows Server 2003 and Windows XP policy is named "Microsoft network server: Digitally sign communications (always)"
 
-Windows 2000 policy is named "Digitally sign server communication (always)" and both map to the following registry key:
+Windows 2000 policy is named "Digitally sign server communication (always)" and both map to the following registry key:  
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters`
 
-`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters` 
-
-Value Name: RequireSecuritySignature
-
-Data Type: REG_DWORD
-
-Data: 0 (disable), 1 (enable)
+**Value Name**: RequireSecuritySignature  
+**Data Type**: REG_DWORD  
+**Data**: 0 (disable), 1 (enable)
 
 > [!NOTE]
 > The default value in Windows Server 2003 domain controllers and Windows 2000 domain controllers is 1 (required). The default value in Windows NT 4.0 domain controllers is 0 (not required).
-For Windows NT 4.0-based computers to be able to connect to Windows 2000-based computers by using SMB signing, you must create the following registry value on the Windows 2000-based computers:Value Name: enableW9xsecuritysignature
 
-Data Type: REG_DWORD
+For Windows NT 4.0-based computers to be able to connect to Windows 2000-based computers by using SMB signing, you must create the following registry value on the Windows 2000-based computers:  
+**Value Name**: enableW9xsecuritysignature  
+**Data Type**: REG_DWORD  
+**Data**: 0 (disable), 1 (enable)
 
-Data: 0 (disable), 1 (enable)
 > [!NOTE]
 > There is no Group Policy associated with the EnableW9xsecuritysignature registry value.
 
 #### Configuring SMB signing in Windows NT 4.0
 
-Digitally sign client: (Notice that this is the RDR key - not LanmanWorkstation as in Windows 2000)
+Digitally sign client:
+> [!Note]
+> This is the RDR key - not LanmanWorkstation as in Windows 2000
 
-`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Rdr\Parameters` 
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Rdr\Parameters`
 
-Value Name: EnableSecuritySignature
-
-Data Type: REG_DWORD
-
-Data: 0 (disable), 1 (enable)
+**Value Name**: EnableSecuritySignature  
+**Data Type**: REG_DWORD  
+**Data**: 0 (disable), 1 (enable)
 
 > [!NOTE]
 > The default value is 1 (enabled) on computers that are running Windows NT 4.0 SP3 or later versions of Windows.
-Value Name: RequireSecuritySignature
 
-Data Type: REG_DWORD
-
-Data: 0 (disable), 1 (enable)
+**Value Name**: RequireSecuritySignature  
+**Data Type**: REG_DWORD  
+**Data**: 0 (disable), 1 (enable)
 
 > [!NOTE]
 > The default value is 0 (not required) on computers that are running Windows NT 4.0 SP3 or later versions of Windows.
-"Digitally sign server" in the policy maps to the following registry key:
 
-`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters` 
+"Digitally sign server" in the policy maps to the following registry key:  
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters`
 
-Value Name: EnableSecuritySignature
-
-Data Type: REG_DWORD
-
-Data: 0 (disable), 1 (enable)
+**Value Name**: EnableSecuritySignature  
+**Data Type**: REG_DWORD  
+**Data**: 0 (disable), 1 (enable)
 
 > [!NOTE]
 > The default value is 1 (enabled) on Windows Server 2003 domain controllers, Windows 2000 domain controllers, and Windows NT 4.0 domain controllers. The default value for all other computers that are running Windows NT 4.0 SP3 or later versions of Windows is 0 (disabled).
-Value Name: RequireSecuritySignature
 
-Data Type: REG_DWORD
-
-Data: 0 (disable), 1 (enable)
+**Value Name**: RequireSecuritySignature  
+**Data Type**: REG_DWORD  
+**Data**: 0 (disable), 1 (enable)
 
 > [!NOTE]
 > The default value is 1 (required) on Windows Server 2003 domain controllers. The default value for all other computers that are running Windows NT 4.0 SP3 or later versions of Windows is 0 (not required).
 
-For additional information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[161372](https://support.microsoft.com/help/161372) How to Enable SMB signing in Windows NT  
-
 #### Configuring SMB signing in Windows 98
 
-`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\VxD\VNetsup` 
-Add the following two registry values to this registry subkey:
+Add the following two registry values to this registry subkey:  
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\VxD\VNetsup`
 
-Value Name: EnableSecuritySignature
-
-Data Type: REG_DWORD
-
-Data: 0 (disable), 1 (enable)
+**Value Name**: EnableSecuritySignature  
+**Data Type**: REG_DWORD  
+**Data**: 0 (disable), 1 (enable)
 
 > [!NOTE]
 > The default value in Windows 98 is 1 (enable).
-Value Name: RequireSecuritySignature
 
-Data Type: REG_DWORD
-
-Data: 0 (disable), 1 (enable)
+**Value Name**: RequireSecuritySignature  
+**Data Type**: REG_DWORD  
+**Data**: 0 (disable), 1 (enable)
 
 > [!NOTE]
 > The default value in Windows 98 is 0 (disabled).
@@ -236,21 +235,16 @@ Data: 0 (disable), 1 (enable)
 
 To determine whether SMB signing is enabled, required at the server, or both, view the Negotiate Dialect Response from the server:
 
-```
-SMB: R negotiate, Dialect # = 5
- SMB: Command = R negotiate
- SMB: Security Mode Summary (NT) = [a value of 3, 7 or 15]
- SMB: .......1 = User level security
- SMB: ......1. = Encrypt passwords
-```
+> SMB: R negotiate, Dialect # = 5  
+    SMB: Command = R negotiate  
+        SMB: Security Mode Summary (NT) = [a value of 3, 7 or 15]  
+          SMB: .......1 = User level security  
+            SMB: ......1. = Encrypt passwords  
 
-In this Response the "Security Mode Summary (NT) =" field represents the configured options on the Server. This value will be either 3, 7 or 15.
+In this Response, the "Security Mode Summary (NT) =" field represents the configured options on the Server. This value will be either 3, 7 or 15.
 
-For additional information about how to use Network Monitor, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[812953](https://support.microsoft.com/help/812953) How to use Network Monitor to capture network traffic  
-
-The following information helps explain what the Negotiate Dialect Response numbers represent:UCHAR SecurityMode; Security mode:
+The following information helps explain what the Negotiate Dialect Response numbers represent:  
+UCHAR SecurityMode; Security mode:
 
 bit 0: 0 = share
 
@@ -272,8 +266,9 @@ If SMB signing is enabled and not required at the server, the value is 7.
 
 If SMB signing is enabled and required at the server, the value is 15.
 
-"SMB: Security Mode Summary (NT) = 15 (0xF)"
-For additional information about CIFS, visit the following Microsoft Web site: [https://msdn2.microsoft.com/library/Aa302188.aspx](https://msdn2.microsoft.com/library/aa302188.aspx) 
+"SMB: Security Mode Summary (NT) = 15 (0xF)"  
+For additional information about CIFS, visit the following Microsoft Web site:  
+[CIFS](/previous-versions/aa302188(v=msdn.10))
 
 ### SMB signing scenarios
 
@@ -281,6 +276,7 @@ The behavior of the SMB session after the Dialect Negotiation shows the client c
 
 If SMB Signing is enabled and required at both the client and the server, or if SMB signing is disabled at both the client and the server, the connection is successful.
 
-If SMB signing is enabled and required at the client and disabled at the server, the connection to the TCP session is gracefully closed after the Dialect Negotiation, and the client receives the following "1240 (ERROR_LOGIN_WKSTA_RESTRICTION)" error message:
-System error 1240 has occurred. The account is not authorized to log in from this station.
+If SMB signing is enabled and required at the client and disabled at the server, the connection to the TCP session is gracefully closed after the Dialect Negotiation, and the client receives the following "1240 (ERROR_LOGIN_WKSTA_RESTRICTION)" error message:  
+> System error 1240 has occurred. The account is not authorized to log in from this station.
+
 If SMB signing is disabled at the client and enabled and required at the server, the client receives the "STATUS_ACCESS_DENIED" error message when it receives a response to a Tree Connect or Transact2 for DFS referrals.
