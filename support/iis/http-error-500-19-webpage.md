@@ -226,7 +226,7 @@ Error message:
 
 Cause
 
-This error is caused by a lack of permission or by a physical path that doesn’t match the path for the virtual directory. For example, no *Web.config* exists under the web app physical root path.
+This error is caused by a lack of permission or by a physical path that doesn't match the path for the virtual directory. For example, no *Web.config* exists under the web app physical root path.
 
 Resolution
 
