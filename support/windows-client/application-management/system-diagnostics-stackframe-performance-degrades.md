@@ -26,7 +26,7 @@ Starting in October 2017, after you upgrade to Windows 10 or .NET Framework 4.
 
 Applications typically rely on `StackFrame` when they throw .NET exceptions. If this occurs at a high rate (more than 10 incidents per second), applications can slow down significantly (tenfold) and run noticeably slower than before.
 
-To determine your version of Windows, see [Which Windows operating system am I running?](https://support.microsoft.com/help/13443/windows-which-operating-system).
+To determine your version of Windows, see [Which Windows operating system am I running?](https://support.microsoft.com/help/13443/windows-which-operating-system)
 
 ## Resolution
 

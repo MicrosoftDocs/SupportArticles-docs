@@ -40,15 +40,11 @@ This issue occurs because several system core files have to be updated when they
 
 ## Workaround
 
-To work around the issue, reinstall the following updates, depending on the error that you receive:
-
-- When you receive the Inetres.admx error, reinstall the update 3021952 that is described in [Description of the security update for Internet Explorer: February 10, 2015 (MS15-009)](https://support.microsoft.com/help/3021952).
-- When you receive the Printing.admx error, reinstall the update 2934018 that is one of the updates available in [Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 update: April 2014 (2919355)](https://support.microsoft.com/help/en-us).
+To work around the issue, reinstall the following update, depending on the error that you receive:  
+When you receive the Inetres.admx error, reinstall the update 3021952 that is described in [Description of the security update for Internet Explorer: February 10, 2015 (MS15-009)](https://support.microsoft.com/help/3021952).
 
 >[!NOTE]  
->  
->- When you install this update (2919355) from Windows Update, updates 2932046, 2937592, 2938439, 2934018, and 2959977 are included in the installation.
->- We recommend that you download and install any needed language pack before you install updates.
+> We recommend that you download and install any needed language pack before you install updates.
 
 ## Status
 

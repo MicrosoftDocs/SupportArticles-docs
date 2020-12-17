@@ -36,7 +36,7 @@ This problem may be caused by any one of several different situations. The two m
 
 ## Resolution
 
-To resolve this problem if multiple paths are available to the physical disk devices, enable MPIO. If MPIO is enabled, the system can claim the drives and expose only one instance of each disk device when the computer is restarted.
+To resolve this problem, if multiple paths are available to the physical disk devices, enable MPIO. If MPIO is enabled, the system can claim the drives and expose only one instance of each disk device when the computer is restarted.
 
 ## More Information
 

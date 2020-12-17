@@ -36,7 +36,7 @@ In this scenario, folder redirection fails to apply and the below event is logge
 > 
 > Source:        Microsoft-Windows-Folder Redirection
 >
-> Date:          6/5/2013 5:35:27 PM
+> Date:          \<DateTime>
 >
 > Event ID:      502
 >

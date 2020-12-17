@@ -38,7 +38,7 @@ The document makes the following points:
 
 To see how the BitLocker device encryption workflow works, follow these steps:
 
-1. On a new Windows 8 RT-based system, create a Guest account, and then long on by using that account.  
+1. On a new Windows 8 RT-based system, create a Guest account, and then log on by using that account.  
 
 2. Check the BitLocker status in Control Panel. The Guest user can't invoke BitLocker encryption.
 
