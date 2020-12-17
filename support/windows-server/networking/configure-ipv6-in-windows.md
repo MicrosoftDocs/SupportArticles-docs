@@ -35,9 +35,12 @@ It is common for IT administrators to disable IPv6 to troubleshoot networking-re
 
 ## Registry key for IPv6 configuration
 
+> [!IMPORTANT]
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+
 The IPv6 functionality can be configured by modifying the following registry key:
 
-**Location**: HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip6\\Parameters\\  
+**Location**: `HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip6\\Parameters\\`  
 **Name**: DisabledComponents  
 **Type**: REG_DWORD  
 **Min Value**: 0x00  
@@ -91,7 +94,7 @@ The following lists the values for some common settings:
 
 > [!NOTE]
 >
-> - Administrators must create an .admx file to expose the settings below in a Group Policy setting.
+> - Administrators must create an .admx file to expose these settings in a Group Policy setting.
 > - You must restart your computer for these changes to take effect.
 > - Values other than 0 or 32 causes the Routing and Remote Access service to fail after this change takes effect.
 
@@ -117,7 +120,7 @@ From low to high, this table lists the component each bit controls:
 |7|Disable IP-TLS interfaces|
 |||
 
-For each bit, 0 means false and 1 means true. To calculate the value, set 0 and for each bit as you required, combine them in to a binary number, and then convert it to a hexadecimal or decimal number.
+For each bit, set it to 0 to turn off the switch, or set it to 1 to turn the switch on. To calculate the value, set 0 or 1 for each bit of a eight-bit binary number, and then convert it to a hexadecimal or decimal number.
 
 Here are some examples:
 
@@ -129,7 +132,7 @@ Here are some examples:
 |Disable IPv6 on nontunnel interfaces (except the loopback) and on IPv6 tunnel interface|0|0|0|1|0|0|0|1|00010001|0x11|
 ||||||||||||
 
-To turn off a switch of the current value, you need to set the approach bit to 0 \(false\). You can use PowerShell to do the calculation. Here are some common operations.
+To turn off a switch of the current value, you need to set the related bit to 0. You can use PowerShell to do the calculation. Here are some common operations.
 
 - Prefer IPv6 over IPv4
 
