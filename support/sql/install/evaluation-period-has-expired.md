@@ -63,7 +63,7 @@ The problem usually occurs when you are running an evaluation instance of SQL Se
 
     If the database size is less than 10 gigabytes (GB), you can follow these steps:
 
-    1. [Install an express edition](https://www.microsoft.com/server-cloud/products/sql-server-editions/sql-server-express.aspx#fbid=y9-1y2iqvin) of the product.
+    1. [Install an express edition](https://www.microsoft.com/Download/details.aspx?id=101064) of the product.
     2. Locate the data files (mdf and ldf) files for your database.
     3. [Attach these files](https://technet.microsoft.com/library/ms190794%28v=sql.120%29.aspx) to the SQL express edition.
 
