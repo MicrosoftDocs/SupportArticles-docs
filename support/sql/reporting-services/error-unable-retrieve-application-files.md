@@ -45,7 +45,7 @@ You must restart your computer after you install this package, and then restart 
 ## More information
 
 - For more information about the .NET Framework, see: [.NET](https://dotnet.microsoft.com/)
-- For more information about the prerequisites for SQL Server 2012 Report Builder, see: [Prerequisites for SQL Server 2012 Report Builder](https://www.microsoft.com/download/details.aspx?id=29072)
+- For more information about the prerequisites for SQL Server Report Builder, see: [Prerequisites for Tutorials (Report Builder)](/sql/reporting-services/prerequisites-for-tutorials-report-builder)
 
 ## Applies to
 
