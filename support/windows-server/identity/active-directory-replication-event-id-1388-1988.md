@@ -44,7 +44,7 @@ Task Category: Replication
 Level: Error  
 Keywords: Classic  
 User: ANONYMOUS LOGON  
-Computer: `DC3.contoso.com` 
+Computer: `DC3.contoso.com`
 Description: Another domain controller (DC) has attempted to replicate into this DC an object which is not present in the local Active Directory Domain Services database. The object may have been deleted and already garbage collected (a tombstone lifetime or more has past since the object was deleted) on this DC. The attribute set included in the update request is not sufficient to create the object. The object will be re-requested with a full attribute set and re-created on this DC.
 >
 > Source DC (Transport-specific network address):  
@@ -59,7 +59,7 @@ User Action:
 Verify the continued desire for the existence of this object. To discontinue re-creation of future similar objects, the following registry key should be created.
 >
 > Registry Key:  
-`HKLM\\System\\CurrentControlSet\\Services\\NTDS\\Parameters\\Strict Replication Consistency`
+`HKLM\System\CurrentControlSet\Services\NTDS\Parameters\Strict Replication Consistency`
 
 ## Event ID 1988
 
@@ -263,7 +263,7 @@ Membership in **Enterprise Admins**, or equivalent, is the minimum required to c
     |---|---|
     |`-i`|Specifies the import mode. If the import mode is not specified, the default mode is export.|
     |`-f`|Identifies the import or export file name.|
-    |\<Path>\\<FileName>|The path and name of the import file that you created in step 1, for example, C:\\ldifde.txt.|
+    |\<Path>\\\<FileName>|The path and name of the import file that you created in step 1, for example, C:\\ldifde.txt.|
     |||
 
     For information about using Ldifde, see [LDIFDE](/previous-versions/orphan-topics/ws.10/cc755456(v=ws.10)).
