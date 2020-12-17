@@ -53,7 +53,7 @@ To fix this issue, take one of the following actions, as appropriate for your si
 3. Run the following command:
 
     ```powershell
-    Get-MsolServicePrincipal -ServicePrincipalName "00000002-0000-0ff1-ce00-000000000000").ServicePrincipalNames
+    (Get-MsolServicePrincipal -ServicePrincipalName "00000002-0000-0ff1-ce00-000000000000").ServicePrincipalNames
     ```
 
     Check whether the domain names that are listed for the endpoints are returned.

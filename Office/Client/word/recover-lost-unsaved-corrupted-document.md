@@ -271,7 +271,7 @@ If you deleted a Word document without emptying the recycle bin, you may be able
 1. Search through the list of documents to see if the deleted word file is still there. If you don't know the name, look for file types such as DOC, DOCX, DOT, etc.
 1. Right-click the Word file and select **Restore** to recover it.
 
-    :::image type="content" source="media/recover-lost-document/recover-lost-document-6.png" alt-text="Select Restore to recover the document. ":::
+    :::image type="content" source="media/recover-lost-document/Word_Recycle.png" alt-text="Select Restore to recover the document. ":::
 
     If you have emptied the recycle bin after deleting files, the deleted Word file may have been permanently removed. If so, go to Option 4. 
 
