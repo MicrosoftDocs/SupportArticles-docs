@@ -1,16 +1,16 @@
 ---
-title: Azure VM cannot RDP SSH - driver IRQL not less or equal
-description: Troubleshoot Azure VM cannot RDP SSH - driver IRQL not less or equal.
+title: Azure VM cannot RDP - driver IRQL not less or equal
+description: Troubleshoot Azure VM cannot RDP - driver IRQL not less or equal.
 ms.date: 12/16/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 
-# Azure VM cannot RDP SSH - driver IRQL not less or equal
+# Azure VM cannot RDP - driver IRQL not less or equal
 
 ## Symptoms
 
-1. When you pull the screenshot of the virtual machine (VM), the operating system (OS) is stopping with the error `0x000000D1` also known as `DRIVER_IRQL_NOT_LESS_OR_EQUAL:`
+1. When you pull the screenshot of the virtual machine (VM), the operating system (OS) is stopped with the error `0x000000D1` also known as `DRIVER_IRQL_NOT_LESS_OR_EQUAL:`
 
    `Your PC ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you.`
    `(%% complete)`
@@ -21,7 +21,7 @@ ms.reviewer:
 
    `What failed: myfault.sys`
 
-   ![Error messages](./media/azure-vm-cannot-rdp-ssh-driver-irql-not-less-equal/1-error.png)
+   ![Error messages](./media/azure-vm-cannot-rdp-driver-irql-not-less-equal/1-error.png)
 
 ## Cause
 
@@ -33,17 +33,18 @@ ms.reviewer:
 
    |SKU|Known Issue KB|Resolved in KB|
    |---|---|---|
-   |Windows 10 RS4|KB4338819|KB4345421|
-   |Windows 10 RS3|KB4338825|KB4345419|
-   |Windows 10 RS2|KB4338825|KB4345419|
-   |Windows 10 RS1|KB4338814|KB44345418|
-   |WS 12 R2 (Security Only)|KB4338824|KB4345424|
-   |WS 12 R2 (Monthly Roll-up Only)|KB4338830|KB4338816|
-   |Windows Server 2012 (Security Only)|KB4338820|KB4345425|
-   |Windows Server 2012 (Monthly Roll-up Only)|KB44338830|KB4338816|
-   |Win7 / W2K8 R2 (Security Only)|KB4338823|KB4345459|
-   |Win7 / W2K8 R2 (Monthly roll-up)|KB4338818|KB4338821|
-   |Windows Server 2008|-|KB4345397|
+   |Windows 10 RS5| - |
+   |Windows 10 RS4|[KB4338819](https://support.microsoft.com/help/4338819)|[KB4345421](https://support.microsoft.com/help/4345421)|
+   |Windows 10 RS3|[KB4338825](https://support.microsoft.com/help/4338825)|[KB4345419](https://support.microsoft.com/help/4345419)|
+   |Windows 10 RS2|[KB4338825](https://support.microsoft.com/help/4338825)|[KB4345419](https://support.microsoft.com/help/4345419)|
+   |Windows 10 RS1|[KB4338814](https://support.microsoft.com/help/4338814)|[KB44345418](https://support.microsoft.com/help/4345418)|
+   |WS 12 R2 (Security Only)|[KB4338824](https://support.microsoft.com/help/4338824)|[KB4345424](https://support.microsoft.com/help/4345424/)|
+   |WS 12 R2 (Monthly Roll-up Only)|[KB4338830](https://support.microsoft.com/help/4338830)|[KB4338816](https://support.microsoft.com/help/4338816)|
+   |Windows Server 2012 (Security Only)|[KB4338820](https://support.microsoft.com/help/4338820)|[KB4345425](https://support.microsoft.com/help/4345425/)|
+   |Windows Server 2012 (Monthly Roll-up Only)|[KB44338830](https://support.microsoft.com/help/4338830)|[KB4338816](https://support.microsoft.com/help/4338816)|
+   |Win7 / W2K8 R2 (Security Only)|[KB4338823](https://support.microsoft.com/help/4338823)|[KB4345459](https://support.microsoft.com/help/4345459/)|
+   |Win7 / W2K8 R2 (Monthly roll-up)|[KB4338818](https://support.microsoft.com/help/4338818)|[KB4338821](https://support.microsoft.com/help/4338821)|
+   |Windows Server 2008|-|[KB4345397](https://support.microsoft.com/help/4345397/)|
 
 2. If the cause is not due to one of the above KBs having been recently installed, then a memory dump analysis will be required to determine the cause.
 
@@ -66,12 +67,12 @@ ms.reviewer:
 
 1. Open an elevated command prompt session (Run as administrator).
 
-   1. Now query its patch level to get the package name so you can remove it with DISM tool
+   1. Now query the patch level to get the package name so you can remove it with the DISM tool
    `dism /image:<<BROKEN DISK LETTER>>:\ /get-packages > c:\temp\Patch_level.txt`.
 
    2. Now open the file `c:\temp\Patch_level.txt` and read it from the bottom up, looking for the KB that was installed in this VM based on the table described on the **Symptom** section and get its **package name**.
 
-   3. Remove the problematic package, perform this for each of the packages:
+   3. Remove the problematic packages, perform this for each of the packages:
 
       `dism /Image:<<BROKEN DISK LETTER>>:\ /Remove-Package /PackageName:<<PACKAGE NAME TO DELETE>>`
 
@@ -82,7 +83,7 @@ ms.reviewer:
       > [!NOTE]
       > DISM is not a fast tool. Every time that you run it, and depending on the size of the package being removed, this operation could last quite some time, up to approximately 16 minutes. As the process continues, you will see a percentage process of the operation.
 
-   Proceed to rebuild the VM.
+   Use [step 5 of the VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to reassemble the VM.
 
 2. If the above fix doesn't apply, then a memory dump analysis will be required.
 
