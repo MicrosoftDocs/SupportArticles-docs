@@ -100,7 +100,7 @@ The FIPS mode must be set before SQL Server 2014 is started. SQL Server reads th
 
 - With the FIPS mode in Windows turned on, in all areas in which the user has a choice of whether to use encryption, SQL Server 2014 will either enable only FIPS 140-2–compliant encryption or won't enable any encryption.
 
-- **Important information for software developers**: in all areas in which the developer or the user writes their own code for encryption or hashing, they must be instructed to use only CryptoAPI (and therefore only the certified instances) and to specify only the algorithms that are allowed by FIPS 140-2. For the official National Institute of Standards and Technology (NIST) list of FIPS 140-2 approved cryptographic algorithms, go to Annexes A, C, and D in [Cryptographic Module Validation Program](https://csrc.nist.gov/groups/stm/cmvp/standards.html).
+- **Important information for software developers**: in all areas in which the developer or the user writes their own code for encryption or hashing, they must be instructed to use only CryptoAPI (and therefore only the certified instances) and to specify only the algorithms that are allowed by FIPS 140-2. For the official National Institute of Standards and Technology (NIST) list of FIPS 140-2 approved cryptographic algorithms, go to Annexes A, C, and D in [Cryptographic Module Validation Program](https://csrc.nist.gov/Projects/Cryptographic-Module-Validation-Program).
 
 ## What is the effect of running SQL Server 2014 in FIPS 140-2–compliant mode?
 

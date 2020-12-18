@@ -246,7 +246,7 @@ You can use one of the following methods to determine the version of the full-te
 
   `%ProgramFiles%\Microsoft SQL Server\<nnn>\Setup Bootstrap\LOG\Summary.txt`
 
-  For values of \<nnn> that correlate to your version review [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/.file-locations-for-default-and-named-instances-of-sql-server).
+  For values of \<nnn> that correlate to your version review [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server).
 
   For SQL Server 2008, this file is located in the following folder:
 
@@ -310,7 +310,7 @@ To find the version of your instance of SQL Azure and related information, see t
 
 To find the version of your instance of SQL Server CE and related information, see the following resources:
 
-- [Description of the various build versions of SQL Server Compact Edition](/help/950550/description-of-the-various-build-versions-of-sql-server-compact-editio)
+- [Description of the various build versions of SQL Server Compact Edition](https://support.microsoft.com/help/950550)
 
 - [SQL Server CE previous versions documentation](/previous-versions/sql/compact/)
 

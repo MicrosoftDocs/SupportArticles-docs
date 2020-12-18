@@ -56,7 +56,7 @@ For a complete background of how SQL Server Engine uses NTFS sparse files and al
 
 - [How Database Snapshots Work](/sql/relational-databases/databases/database-snapshots-sql-server)
 
-- [DBCC CHECKDB (Transact-SQL) [See Remarks section for "Internal Database Snapshot"]](/t-sql/database-console-commands/dbcc-checkdb-transact-sql)
+- [DBCC CHECKDB (Transact-SQL) [See "Internal Database Snapshot" section]](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)
 
 - [New extended event to track writes to the snapshot sparse file](/archive/blogs/psssql/new-extended-event-to-track-writes-to-the-snapshot-sparse-file)  
 
