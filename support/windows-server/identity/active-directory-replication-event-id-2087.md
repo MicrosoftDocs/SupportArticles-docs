@@ -15,7 +15,7 @@ ms.technology: ActiveDirectory
 ---
 # Active Directory replication Event ID 2087: DNS lookup failure caused replication to fail
 
-This article provides a solution to the Active Directory replication Event ID 2087 that's logged the Directory Service event log when a Domain Name System (DNS) lookup failure causes replication to fail.
+This article provides a solution to the Active Directory replication Event ID 2087 that occurs when a Domain Name System (DNS) lookup failure causes replication to fail.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4469661
@@ -101,7 +101,7 @@ Requirements:
 
 - Membership in the **Domain Users** group in the domain of the domain controller, or equivalent, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
-- Tools: Net view
+- Tool: Net view
 
 To confirm that the domain controller is running AD DS and is accessible on the network, at a command prompt type the following command, and then press ENTER:
 
@@ -124,7 +124,7 @@ The process for cleaning up metadata is improved in the version of Ntdsutil that
 Requirements:
 
 - Membership in Enterprise Admins, or equivalent, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
-- Tools: Ntdsutil (System32 command-line tool)
+- Tool: Ntdsutil (System32 command-line tool)
 
 #### Steps to clean up server metadata
 
@@ -199,7 +199,7 @@ When you use the enhanced SP1 version of Dcdiag for DNS testing, there are speci
 Requirements:
 
 - Membership in **Enterprise Admins**, or equivalent, is the minimum required to complete the new DNS tests that are available in the SP1 version of Dcdiag. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
-- Tools: Dcdiag.exe
+- Tool: Dcdiag.exe
 - Operating system:
   - You can run the enhanced version of Dcdiag on computers running the following operating systems:
 
@@ -264,11 +264,12 @@ The destination domain controller uses the DNS alias (CNAME) resource record to 
 
 You can use Dcdiag to verify registration of all resource records that are essential for domain controller location by using the `dcdiag /test:dns /DnsRecordRegistration` test. This test verifies registration of the following resource records in DNS:
 
-- alias (CNAME) (the GUID-based resource record that locates a replication partner)
-- host (A) (the host resource record that contains the IP address of the domain controller)
+- The alias (CNAME) (the GUID-based resource record that locates a replication partner)
+- The host (A) (the host resource record that contains the IP address of the domain controller)
 - LDAP SRV (the service (SRV) resource records that locate LDAP servers)
 - GC SRV (the service (SRV) resource records that locate global catalog servers)
 - PDC SRV (the service (SRV) resource records that locate primary domain controller (PDC) emulator operations masters)
+
 As an alternative, you can use the following procedure to check for only the alias (CNAME) resource record.
 
 ##### Steps to verify alias (CNAME) resource record registration
@@ -371,19 +372,19 @@ Requirements:
 1. Click **Start**, click **Run**, type **Ldp**, and then click **OK**.
 2. On the **Connection** menu, click **Connect**.
 3. In the **Connect** dialog box, leave the **Server** box empty.
-4. In **Port**, type **389**, and then click **OK**.
+4. In **Port**, type *389*, and then click **OK**.
 5. On the **Connection** menu, click **Bind**.
 6. In the **Bind** dialog box, provide Enterprise Admins credentials. If it is not already selected, click **Domain**.
 7. In **Domain**, type the name of the forest root domain, and then click **OK**.
 8. On the **View** menu, click **Tree**.
-9. In the **Tree View** dialog box, type **CN=Configuration,DC=Forest_Root_Domain** and then click **OK**.
+9. In the **Tree View** dialog box, type *CN=Configuration,DC=Forest_Root_Domain* and then click **OK**.
 10. Navigate to the object CN=NTDS Settings,CN=SourceServerName,CN=Servers,CN=SiteName, CN=Sites,CN=configuration,DC=ForestRootDomain.
 11. Double-click the **NTDS Settings** object. In the details pane, view the value for the attribute **objectGUID**. Right-click that value, and then copy it to Notepad.
 12. On the **Connection** menu, click **Disconnect**.
 13. Repeat steps 2 through 11, but in step 3, type the name of the source domain controller, for example, DC03.
 14. In Notepad, compare the values of the two GUIDs.
 15. If the values do not match, the destination domain controller must receive replication of the valid GUID. Check the GUID value on other domain controllers and attempt replication on the destination domain controller with a different domain controller that has the correct GUID.
-16. If the values match, verify that the GUID matches the GUID in theDsa_Guid._msdcs.Dns_Domain_Nameresource record for the source domain controller, as follows:
+16. If the values match, verify that the GUID matches the GUID in the Dsa_Guid._msdcs.Dns_Domain_Nameresource record for the source domain controller, as follows:
     1. Note the primary DNS servers that each domain controller identifies in the TCP/IP properties in their Network Settings. All the DNS servers that are listed in the respective TCP/IP properties should be able to indirectly or directly resolve this alias (CNAME) resource record.
     2. From the servers that are listed, identify the authoritative name server or servers for this domain zone by looking at the server names that are listed for the name server (NS) resource records at the root of the zone. (In the DNS snap-in, select the forward lookup zone for the root domain, and then view the name server (NS) records in the details pane.)
     3. On the name server or servers obtained in step b, open the DNS snap-in, and double-click the forward lookup zone for the forest root domain name. Double-click the _msdcs folder, and note the alias (CNAME) resource records that exist for your server name.

@@ -1,5 +1,5 @@
 ---
-title: Copy and paste don't work when you connect to a Hyper-V virtual machine by using VMConnect Enhanced Session Mode
+title: Copy-and-paste operations don't work when you connect to a Hyper-V virtual machine by using VMConnect Enhanced Session Mode
 description: Describes an issue in which clipboard file copy redirection may not work as expected when you connect to a Hyper-V virtual machine by using VMConnect Enhanced Session Mode. Provides a resolution.
 ms.date: 12/07/2020
 author: Deland-Han
@@ -13,9 +13,9 @@ ms.reviewer: kaushika, stevepar, eltons
 ms.prod-support-area-path: Configuration of virtual machine settings
 ms.technology: HyperV
 ---
-# Copy and paste don't work when you connect to a Hyper-V virtual machine by using VMConnect Enhanced Session Mode
+# Copy-and-paste operations don't work when you connect to a Hyper-V virtual machine by using VMConnect Enhanced Session Mode
 
-This article provides a solution to an issue where copy and paste may not work as expected when you connect to a Hyper-V virtual machine by using VMConnect Enhanced Session Mode.
+This article provides a solution to an issue where copy-and-paste operations may not work as expected when you connect to a Hyper-V virtual machine by using VMConnect Enhanced Session Mode.
 
 _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4090037
@@ -26,7 +26,7 @@ You can't copy and paste files between a system that is running [Virtual Machine
 
 ## Cause
 
-Enhanced Session Mode enables the transfer of files to and from virtual machines through the Clipboard copy and paste operations. However, if you enable the **Do not allow drive redirection policy** option, you disable copying and pasting files through the Clipboard.
+Enhanced Session Mode enables the transfer of files to and from virtual machines through the Clipboard copy-and-paste operations. However, if you enable the **Do not allow drive redirection policy** option, you disable copying and pasting files through the Clipboard.
 
 ## Resolution
 
