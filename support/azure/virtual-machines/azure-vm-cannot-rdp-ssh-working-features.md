@@ -1,12 +1,12 @@
 ---
-title: Azure VM cannot RDP - SSH working on features
-description: Troubleshoot Azure VM cannot RDP - SSH working on features.
+title: Azure VM cannot RDP - working on features
+description: Troubleshoot Azure VM cannot RDP - working on features.
 ms.date: 12/16/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 
-# Azure VM cannot RDP - SSH working on features
+# Azure VM cannot RDP - working on features
 
 ## Symptoms
 
@@ -20,7 +20,7 @@ ms.reviewer:
 
 ## Cause
 
-A role for feature was added or removed from Windows.
+A role or feature was added or removed from Windows.
 
 ## Solution
 
@@ -40,7 +40,7 @@ Refresh the screenshot in boot diagnostics a few times to monitor if there's any
 
 ### Use DISM to roll back the change<a id="2"></a>
 
-1. To determine the changes that the machine is trying to cope with, check the `setup.evtx` logs and look for events `7` as seen in this example:
+1. To determine the changes that the machine is trying to apply, check the `setup.evtx` logs and look for events `ID: 7` as seen in this example:
 
    (these logs are located at `<drive letter>:\Windows\System32\winevt\Logs\Setup.evtx`)
 
@@ -74,7 +74,7 @@ Refresh the screenshot in boot diagnostics a few times to monitor if there's any
 
    **Enable the Serial Console**:
 
-   ```ps
+   ```cmd
    bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /ems {<BOOT LOADER IDENTIFIER>} ON 
    bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
    ```
@@ -87,13 +87,13 @@ Refresh the screenshot in boot diagnostics a few times to monitor if there's any
 
     **Load the broken OS Disk:**
 
-   ```ps
+   ```cmd
    REG LOAD HKLM\BROKENSYSTEM <VOLUME LETTER OF BROKEN OS DISK>:\windows\system32\config\SYSTEM 
    ```
 
    **Enable on ControlSet001**:
 
-   ```ps
+   ```cmd
    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
@@ -101,7 +101,7 @@ Refresh the screenshot in boot diagnostics a few times to monitor if there's any
 
    **Enable on ControlSet002**:
 
-   ```ps
+   ```cmd
    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
@@ -109,7 +109,7 @@ Refresh the screenshot in boot diagnostics a few times to monitor if there's any
 
    **Unload Broken OS Disk**:
 
-   ```ps
+   ```cmd
    REG UNLOAD HKLM\BROKENSYSTEM
    ```
 
