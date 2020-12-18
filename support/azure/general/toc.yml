@@ -1,3 +1,5 @@
+- name: Azure troubleshooting documentation
+  href: welcome-general.yml
 - name: Azure Automation
   items:
   - name: Automation modifications aren't reflected in the portal
