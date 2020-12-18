@@ -99,6 +99,4 @@ For these users, updating Office to a version that has the fix will not help. Th
 
 Some computers have third-party software that dictates how the Nvidia Optimus driver operates. It might be possible to configure these computers not to use the Intel graphics adapter. Contact the third-party vendor for instructions about how to do this.
 
-### Third-party information disclaimer
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]

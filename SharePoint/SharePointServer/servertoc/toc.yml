@@ -193,6 +193,8 @@
       href: ../search/privilege-not-exist-service-account-configuration.md
     - name: Search box removed if Suite Navigation search control turned off
       href: ../search/search-box-removed-from-suite-nav.md
+    - name: Search errors on Windows Server 2019
+      href: ../search/search-errors-windows-server-2019.md
     - name: SharePoint search crawler ignores directives in Robots.txt
       href: ../search/crawler-ignores-directives-for-user-agent.md
   - name: Security

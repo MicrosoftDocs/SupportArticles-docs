@@ -279,7 +279,17 @@ Set-CASMailbox <UserPincipalName> -EwsAllowList @{Add="MicrosoftNinja/*","*Teams
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to **True**. Otherwise, the Teams service will also be blocked from accessing EWS.
 
-#### Step 5: Escalate the issue
+#### Step 5: Verify that the Microsoft Teams Calendar App test is successful
+
+1. Ask the user to go to the [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/tests/TeamsCalendarMissing/input).
+2. Input the requested information.
+3. Select the **Perform Test** button to start the Microsoft Teams Calendar App test.
+
+If the test fails, you should attempt to resolve the issue and rerun the test.
+
+:::image type="content" source="media/teams-exchange-interaction-issue/calendar-test.png" alt-text="Screenshot of testing calendar":::
+
+#### Step 6: Escalate the issue
 
 If you verified that there's no problem with the prerequisites and configurations mentioned in this article, submit a service request toMicrosoft Support with this information:
 
