@@ -1,14 +1,23 @@
 ---
-title: 
-description: Describes an issue that triggers a Stop error on a blue screen after you upgrade your system to Windows 10 Version 1607. This issue occurs if you have Hitachi HIBUN installed. Workarounds are provided.
+title: PROCESS1_INITIALIZATION_FAILED stop error after you upgrade to Windows 10 Version 1607
+description: Describes an issue that triggers a stop error on a blue screen after you upgrade your system to Windows 10 Version 1607. This issue occurs if you have Hitachi HIBUN installed. Workarounds are provided.
 ms.date: 12/07/2020
-ms.prod-support-area-path: 
-ms.technology: [Replace with your value]
-ms.reviewer: 
+author: Deland-Han
+ms.author: delhan 
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-client
+localization_priority: medium
+ms.reviewer: kaushika
+ms.prod-support-area-path: No Boot (not BugChecks)
+ms.technology: Performance
 ---
-# "PROCESS1_INITIALIZATION_FAILED" Stop error after you upgrade to Windows 10 Version 1607
+# PROCESS1_INITIALIZATION_FAILED stop error after you upgrade to Windows 10 Version 1607
 
-_Original product version:_ &nbsp; Windows 10, version 1607, all editions  
+This article describes an issue that triggers a stop error on a blue screen after you upgrade your system to Windows 10 Version 1607.
+
+_Original product version:_ &nbsp; Windows 10, version 1607  
 _Original KB number:_ &nbsp; 3083796
 
 ## Symptoms  
@@ -21,8 +30,7 @@ This issue occurs if you have the HIBUN application from Hitachi installed. Hita
 
 ## Workaround
 
-To work around this issue, roll back the system to the previous OS, uninstall Hitachi HIBUN, and then upgrade to Windows 10 Version 1607. To do this, follow these steps: 
-
+To work around this issue, roll back the system to the previous OS, uninstall Hitachi HIBUN, and then upgrade to Windows 10 Version 1607. To do this, follow these steps:
 
 1. Reboot the computer, and wait for the Windows Recovery Environment (WinRE) to start.
 2. Click **Troubleshoot**, select **Advanced Options**, and then select **Go back to the previous build**.
@@ -31,5 +39,6 @@ To work around this issue, roll back the system to the previous OS, uninstall Hi
 
 ## More Information  
 
-Third-party information disclaimer 
- The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+### Third-party information disclaimer
+
+The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
