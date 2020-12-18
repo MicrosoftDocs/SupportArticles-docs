@@ -27,7 +27,7 @@ The SQL RS Diagnostics Collector supports the following versions of SQL Server:
 
 ## Prerequisite software
 
-There are different prerequisites to run diagnostic packages, depending on the operating system of the destination computer. The diagnostic package will automatically check your computer for these prerequisites, and then start if the prerequisites are already installed. If the prerequisites are not already available on the computer, you are prompted to install them. The Automated Troubleshooting Service (MATS) can also install the required software for you. For example, if Windows PowerShell is not present on the destination computer, MATS will install it automatically. For more information, see [Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform](/help/2598970/information-about-microsoft-automated-troubleshooting-services-and-sup).
+There are different prerequisites to run diagnostic packages, depending on the operating system of the destination computer. The diagnostic package will automatically check your computer for these prerequisites, and then start if the prerequisites are already installed. If the prerequisites are not already available on the computer, you are prompted to install them. The Automated Troubleshooting Service (MATS) can also install the required software for you. For example, if Windows PowerShell is not present on the destination computer, MATS will install it automatically. For more information, see [Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform](https://support.microsoft.com/help/2598970).
 
 ## Required Windows rights
 

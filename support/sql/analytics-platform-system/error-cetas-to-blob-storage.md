@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 3210540
 
 ## Symptoms
 
-When you do a [CREATE EXTERNAL TABLE (Transact-SQL)](/sql/t-sql/statements/create-external-table-transact-sql&view=sql-server-ver15&preserve-view=true) operation to Azure blob storage by using [What is PolyBase?](/sql/relational-databases/polybase/polybase-guide&view=sql-server-ver15&preserve-view=true) from the Microsoft SQL Server Parallel Data Warehouse (PDW) appliance, the Azure service returns the following error message:
+When you do a [CREATE EXTERNAL TABLE (Transact-SQL)](/sql/t-sql/statements/create-external-table-transact-sql) operation to Azure blob storage by using [What is PolyBase?](/sql/relational-databases/polybase/polybase-guide) from the Microsoft SQL Server Parallel Data Warehouse (PDW) appliance, the Azure service returns the following error message:
 
 ```console
 Msg 105005, Level 16, State 1, Server [Server name], LineLineNumber
