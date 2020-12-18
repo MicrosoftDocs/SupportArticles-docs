@@ -17,7 +17,7 @@ ms.technology: Performance
 
 This article describes an issue in which Task Manager shows the memory speed to be higher or lower than the speed that is reported in the BIOS.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10 – all editions  
+_Original product version:_ &nbsp;  
 _Original KB number:_ &nbsp;3070928
 
 ## Symptoms
