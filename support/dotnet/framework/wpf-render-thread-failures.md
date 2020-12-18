@@ -9,6 +9,8 @@ ms.reviewer: tatkins, sambent, davean
 
 This document discusses failures in WPF's render thread, with particular attention to those that cause an exception in `SyncFlush` or `NotifyPartitionIsZombie` or that cause applications to hang in `WaitForNextMessage` or `SynchronizeChannel`.
 
+_Original product version:_ &nbsp; .NET Framework 4.8  
+
 ## Failures in SyncFlush, WaitForNextMessage, SynchronizeChannel, and NotifyPartitionIsZombie
 
 Developers often face problems related to render thread failures with Windows Presentation Foundation (WPF) applications. Users may report their application throws exceptions such as:

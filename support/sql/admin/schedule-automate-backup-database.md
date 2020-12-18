@@ -57,14 +57,14 @@ In a text editor, create a batch file that is named *Sqlbackup.bat*, and then co
 > [!NOTE]
 > The folder for the `SQLCMD` executable is generally in the Path variables for the server after SQL Server is installed or after you install it as stand-alone tool. But if the Path variable does not list this folder, you can either add its location to the Path variable or specify the complete path to the utility.
 
-**Example1:** Full backups ofalldatabases in the local named instance of SQLEXPRESS by using Windows Authentication.
+**Example 1:** Full backups of all databases in the local named instance of SQLEXPRESS by using Windows Authentication.
 
 ```sql
  // Sqlbackup.bat
- sqlcmd -S .\EXPRESS -E -Q "EXEC sp_BackupDatabases @backupLocation='D:\SQLBackups\', @backupType='F'"
+ sqlcmd -S .\SQLEXPRESS -E -Q "EXEC sp_BackupDatabases @backupLocation='D:\SQLBackups\', @backupType='F'"
 ```
 
-**Example2:** Differential backups ofalldatabases in the local named instance of SQLEXPRESS by using a SQLLogin and its password.
+**Example 2:** Differential backups of all databases in the local named instance of SQLEXPRESS by using a SQLLogin and its password.
 
 ```sql
  // Sqlbackup.bat
@@ -74,7 +74,7 @@ sqlcmd -U <YourSQLLogin> -P <StrongPassword> -S .\SQLEXPRESS -Q "EXEC sp_BackupD
 > [!NOTE]
 > The SQLLogin should have at least the Backup Operator role in SQL Server.
 
-**Example 3:** Log backups ofalldatabases in local named instance of SQLEXPRESS by using Windows Authentication
+**Example 3:** Log backups of all databases in local named instance of SQLEXPRESS by using Windows Authentication
 
 ```sql
  // Sqlbackup.bat
