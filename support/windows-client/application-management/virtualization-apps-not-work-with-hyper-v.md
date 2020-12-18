@@ -1,6 +1,6 @@
 ---
 title: Disable Hyper-V to run virtualization software
-description: Discusses an issue in which virtualization applications do not work together with Hyper-V, Device Guard, and Credential Guard. Provides a resolution.
+description: Discusses an issue in which virtualization applications don't work together with Hyper-V, Device Guard, and Credential Guard. Provides a resolution.
 ms.data: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: 1st Party Applications
 ms.technology: ApplicationCompatibility
 ---
-# Virtualization applications do not work together with Hyper-V, Device Guard, and Credential Guard
+# Virtualization applications don't work together with Hyper-V, Device Guard, and Credential Guard
 
 This article provides solutions to disable Hyper-V, Device Guard, and Credential Guard to help you use virtualized applications.
 
@@ -22,9 +22,9 @@ _Original KB number:_ &nbsp; 3204980
 
 ## Symptoms
 
-Many third-party virtualization applications do not work together with Hyper-V. Affected applications include VMWare Workstation and VirtualBox. These applications might not start virtual machines, or they may fall back to a slower, emulated mode.
+Many third-party virtualization applications don't work together with Hyper-V. Affected applications include VMware Workstation and VirtualBox. These applications might not start virtual machines, or they may fall back to a slower, emulated mode.
 
-These symptoms are introduced when the Hyper-V Hypervisor is running. Some security solutions are also dependent on the hypervisor, such as the following:
+These symptoms are introduced when the Hyper-V Hypervisor is running. Some security solutions are also dependent on the hypervisor, such as:
 
 - Device Guard
 - Credential Guard
@@ -43,11 +43,11 @@ To determine whether the Hyper-V hypervisor is running, follow these steps:
 
 This behavior occurs by design.
 
-Many virtualization applications depend on hardware virtualization extensions that are available on most modern processors. This includes Intel VT-x and AMD-V. Only one software component can use this hardware at a time. The hardware cannot be shared between virtualization applications.
+Many virtualization applications depend on hardware virtualization extensions that are available on most modern processors. It includes Intel VT-x and AMD-V. Only one software component can use this hardware at a time. The hardware cannot be shared between virtualization applications.
 
 ## Resolution
 
-To use other virtualization software, you must disable Hyper-V Hypervisor, Device Guard, and Credential Guard. If you are using Hyper-V to run virtual machines or containers, disable Hyper-V Hypervisor in Control Panel or by using Windows PowerShell. To do this, use the following methods, as appropriate.
+To use other virtualization software, you must disable Hyper-V Hypervisor, Device Guard, and Credential Guard. If you're using Hyper-V to run virtual machines or containers, disable Hyper-V Hypervisor in Control Panel or by using Windows PowerShell. Use the following methods, as appropriate.
 
 ### Method 1: Disable Hyper-V in Control Panel
 
@@ -72,6 +72,6 @@ To disable Hyper-V by using Windows PowerShell, follow these steps:
 
 ### Method 3: Disable Device Guard and Credential Guard
 
-Disable Device Guard and Credential Guard by using registry keys or group policy. To do this, see [Manage Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-manage).
+Disable Device Guard and Credential Guard by using registry keys or group policy. To do it, see [Manage Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-manage).
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
