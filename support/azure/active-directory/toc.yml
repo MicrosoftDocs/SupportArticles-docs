@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-azure-ad.md
+  href: welcome-azure-ad.yml
   
 - name: Sign-in and Multi-factor authentication
   items:

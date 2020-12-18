@@ -1,0 +1,30 @@
+### YamlMime:Landing
+
+title: Azure Virtual Machines troubleshooting documentation
+summary: Welcome to Azure Virtual Machines troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Virtual Machines. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot common issues with Azure Virtual Machines
+  description: Documentation for troubleshooting common issues with Azure Virtual Machines. # Required; article description that is displayed in search results. < 160 chars.
+  services: virtual-machine
+  ms.service: virtual-machine #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 12/18/2020
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: VM is not booting
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Windows boot error INACCESSIBLE_BOOT_DEVICE
+            url: ./windows-boot-failure.md
+          - text: Troubleshoot Windows VM OS with missing boot manager
+            url: ./os-bootmgr-missing.md
+          - text: Troubleshoot Windows VM OS boot failure
+            url: ./os-bucket-boot-failure.md

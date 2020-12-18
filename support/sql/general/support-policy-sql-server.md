@@ -43,7 +43,7 @@ The host operating system vendors publish supported hypervisors for their syste
 
 - [Ubuntu Server Guide Changes, errors and bugs](https://ubuntu.com/server/docs)
 
-- [SUSE Hypervisor Support](https://www.suse.com/products/hypervisor-support/)
+- [Supported SUSE virtual machines on Hyper-V](/windows-server/virtualization/hyper-v/supported-suse-virtual-machines-on-hyper-v)
 
 Look in the operating system documentation for the current and updated hypervisor that is supported on specific versions of the operating system.
 
