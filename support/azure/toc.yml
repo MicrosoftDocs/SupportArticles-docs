@@ -4,8 +4,8 @@
   - name: Azure Active Directory
     href: active-directory/welcome-azure-ad.yml
   - name: Cloud Services
-    href: cloud-services/welcome-cloud-services.md
+    href: cloud-services/welcome-cloud-services.yml
   - name: Virtual Machines
-    href: virtual-machines/welcome-virtual-machines.md
+    href: virtual-machines/welcome-virtual-machines.yml
   - name: Azure DevOps
-    href: devops/welcome-azure-devops.md
+    href: devops/welcome-azure-devops.yml
