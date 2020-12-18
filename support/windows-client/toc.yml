@@ -898,8 +898,6 @@
     items:
     - name: Earlier Windows versions don't start after "Setup Windows and Configuration Manager"
       href: ./windows-security/earlier-versions-not-start-use-pre-provision-bitlocker.md
-    - name: Suspend BitLocker protection for non-Microsoft software updates
-      href: ./windows-security/suspend-bitlocker-protection-non-microsoft-updates.md
     - name: TPM is in reduced functionality mode
       href: ./windows-security/trusted-platform-module-reduced-functionality-mode.md
     - name: BitLocker could not be enabled
@@ -922,6 +920,8 @@
       href: ./deployment/parameter-is-incorrect.md
     - name: Specified Account not exist when enabling BitLocker
       href: ./deployment/specified-account-not-exist-enable-bitlocker.md
+    - name: Suspend BitLocker protection for non-Microsoft software updates
+      href: ./windows-security/suspend-bitlocker-protection-non-microsoft-updates.md
     - name: The recovery password for BitLocker isn't available when FIPS compliant policy is set
       href: ./deployment/bitlocker-recovery-password-not-fips-compliant.md
     - name: The requested Key ID is invalid
