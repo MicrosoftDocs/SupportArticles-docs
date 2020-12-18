@@ -1,4 +1,4 @@
-- name: Azure troubleshooting documentation
+- name: Welcome
   href: welcome-general.yml
 - name: Azure Automation
   items:
