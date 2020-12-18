@@ -83,6 +83,7 @@ Remember that it is not a good idea to use this header globally across the entir
 - If you're using CGI/ISAPI/Servlets on the server side, are you following the HTTP 1.1 specification exactly, particularly in respect to CRLF termination of HTTP headers? In the interest of performance, Internet Explorer is typically unforgiving of responses that violate the HTTP 1.1 specification. This usually results in ignored headers or reports of unexpected server errors.
 - Are the HTTP headers spelled correctly?
 
-## References
+## See Also
 
-For more information about HTTP/1.1, see [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616.html).
+- For more information about HTTP/1.1, see [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616.html).
+- [Client Cache in IIS](https://docs.microsoft.com/iis/configuration/system.webserver/staticcontent/clientcache)
