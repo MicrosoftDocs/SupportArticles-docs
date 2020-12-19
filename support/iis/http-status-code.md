@@ -242,7 +242,7 @@ The following table describes the causes of some common HTTP status codes.
 |403.5|SSL 128 required|The server is configured to require a 128-bit SSL connection. But, the request is not sent by using 128-bit encryption.|
 |403.6|IP address rejected|The server is configured to deny access to the current IP address.|
 |403.7|Client certificate required|The server is configured to require a certificate for client authentication. But the client browser does not have an appropriate client certificate installed. For more information, see [HTTP error 403.7 when you run a web application that's hosted on a server that is running IIS 7.0](/troubleshoot/iis/http-error-403-7-forbidden-web-app).|
-|403.8|Site access denied|The server is configured to deny requests based on the Domain Name System (DNS) name of the client computer.|
+|403.8|Site access denied|The server is configured to deny requests based on the Domain Name System (DNS) name of the client computer. See [Dynamic IP Address restrictions](https://docs.microsoft.com/iis/get-started/whats-new-in-iis-8/iis-80-dynamic-ip-address-restrictions)|
 |403.12|Mapper denied access|The page that you want to access requires a client certificate. But, the user ID that is mapped to the client certificate is denied access to the file.|
 |403.13|Client certificate revoked|The client browser tries to use a client certificate that was revoked by the issuing certification authority.|
 |403.14|Directory listing denied|The server is not configured to display a content directory listing, and a default document is not set. see [HTTP Error 403.14 - Forbidden when you open an IIS Webpage](/troubleshoot/iis/http-403-14-forbidden-webpage).|
