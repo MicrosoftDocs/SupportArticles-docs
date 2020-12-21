@@ -2,13 +2,22 @@
 title: A service does not start, and events 7000 and 7011 are logged in Windows Server
 description: Describes a problem in which a service times out before it starts. Explains how to work around this problem by increasing the value of the ServicesPipeTimeout registry entry.
 ms.date: 12/07/2020
-ms.prod-support-area-path: 
-ms.technology: [Replace with your value]
-ms.reviewer: pfazekas
+author: Deland-Han
+ms.author: delhan 
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-server
+localization_priority: medium
+ms.reviewer: kaushika, pfazekas, v-dgit
+ms.prod-support-area-path: Microsoft Management Console (MMC)
+ms.technology: SysManagementComponents
 ---
 # A slow service does not start due to time-out error in Window
 
-_Original product version:_ &nbsp; Windows 10, version 1909, all editions, Windows Server, version 1903, all editions, Windows Server 2019, all editions, Windows 10, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 Enterprise, Windows Server 2008 R2 Foundation, Windows Server 2008 R2 Datacenter, Windows Server 2008 R2 Standard, Windows Server 2008 Foundation, Windows Server 2008 Standard, Windows Server 2008 Enterprise, Windows Server 2008 Datacenter, Microsoft Windows Server 2003 Standard Edition (32-bit x86), Microsoft Windows Server 2003 Enterprise Edition (32-bit x86), Microsoft Windows Server 2003 Datacenter Edition (32-bit x86), Microsoft Windows Server 2003 Web Edition  
+
+
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 922918
 
 ## Symptoms

@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-jesits
 ms.prod-support-area-path: Management and Configuration Installing Print drivers
 ms.technology: PrintFaxScan
 ---
@@ -39,7 +39,7 @@ Windows searches for driver .inf files through Windows Update only for printers
 
 ## Workaround
 
-On the **Printer Driver Selection**  page, click the Windows Update button to download the list of drivers that are available on Windows Update, and then select the make and model of your printer.
+On the **Printer Driver Selection**  page, click the **Windows Update** button to download the list of drivers that are available on Windows Update, and then select the make and model of your printer.
 
 ## More Information
 
@@ -53,6 +53,9 @@ For example, change the value data from the default entry (%systemroot%\inf) to 
 %systemroot%\\inf;\\\\server\\DriverShare
 
 In addition, the .inf file must have an entry that lists only the HWID of the printer. For example:
-[Manufacturer] "Contoso"=Model,NTamd64 [Model.NTamd64] "Contoso Model 1 V4 PS" = INSTALL_SECTION_1,usbprint\Contoso_Laser_1 "Contoso Model 1 V4 PS" = INSTALL_SECTION_1,wsdprint\Contoso_Laser_1 "Contoso Model 1 V4 PS" = INSTALL_SECTION_1,Contoso_Laser_1 // this line is needed for "TCP/IP device"-installed printers.
 
-You must contact the printer manufacturer for an updated driver that has an updated .inf file. After you obtain and store the correct file, the Add Printer Wizard can preselect the driver that is associated with the printer's HWID .
+```inf
+[Manufacturer] "Contoso"=Model,NTamd64 [Model.NTamd64] "Contoso Model 1 V4 PS" = INSTALL_SECTION_1,usbprint\Contoso_Laser_1 "Contoso Model 1 V4 PS" = INSTALL_SECTION_1,wsdprint\Contoso_Laser_1 "Contoso Model 1 V4 PS" = INSTALL_SECTION_1,Contoso_Laser_1 // this line is needed for "TCP/IP device"-installed printers.
+```
+
+You must contact the printer manufacturer for an updated driver that has an updated .inf file. After you obtain and store the correct file, the Add Printer Wizard can preselect the driver that is associated with the printer's HWID.
