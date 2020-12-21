@@ -17,11 +17,11 @@ ms.technology: ActiveDirectory
 
 This article provides a solution to an error that occurs when you manually replicate data between domain controllers.
 
-> [!NOTE]
-> This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).
-
 _Original product version:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 288167
+
+> [!NOTE]
+> This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).
 
 ## Symptoms
 
@@ -36,13 +36,17 @@ Or
 In addition, the following event ID messages may be logged in the system log:
 
 > Event Source: Netlogon  
-Event Category: None Event ID: 3210  
-User: N/A Event Description:  
+Event Category: None  
+Event ID: 3210  
+User: N/A  
+Event Description:  
 Failed to authenticate with \\\\**DOMAINDC**, a Windows NT domain controller for domain **DOMAIN**.
 
 > Event Source: Netlogon  
 Event ID: 5722  
-Event Category: None User: N/A Event Description:  
+Event Category: None  
+User: N/A  
+Event Description:  
 The session setup from the computer **1** failed to authenticate. The name of the account referenced in the security database is **2**. The following error occurred: **n3**
 
 ## Resolution
@@ -82,16 +86,16 @@ After the computers have finished restarting, start the Services program, restar
 
 If there are multiple domain controllers in the domain, the error message that you receive when this issue occurs varies depending on which way replication is being attempted, and if one of the domain controllers that is involved is also the PDC Emulator operations master role holder.
 
-In some cases, when you use the `net view \\computername`to attempt to connect to the domain controller that has the PDC Emulator operations master role from another domain controller, you may receive an "Access denied" error message. However, if you use the Internet protocol (IP) address, the command may succeed.
+In some cases, when you use the `net view \\computername` to attempt to connect to the domain controller that has the PDC Emulator operations master role from another domain controller, you may receive an "Access denied" error message. However, if you use the Internet protocol (IP) address, the command may succeed.
 
 When this problem occurs, numerous errors may be reported in the event logs. These errors vary depending on any of the following conditions:
 
 - The domain controller was not fully functional before the problem occurred.
 - The domain controller did not successfully completed the Active Directory Installation Wizard process.
 - The Sysvol folder on the domain controller was not shared out.
-- The domain controller did not have the full file structure under the **Domain_name** folder and the Policies folder that is located in %SystemRoot%\\Sysvol\\Sysvol\\**Domain_name** \\Policies. The following event is an example of an event that may be reported:
+- The domain controller did not have the full file structure under the **Domain_name** folder and the Policies folder that is located in %SystemRoot%\\Sysvol\\Sysvol\\**Domain_name**\\Policies. The following event is an example of an event that may be reported:
 
-> Event ID: 3034  
-Type: Warning  
-Source: MRxSmb  
-Description: The redirector was unable to initialize security context or query context attributes.
+    > Event ID: 3034  
+    Type: Warning  
+    Source: MRxSmb  
+    Description: The redirector was unable to initialize security context or query context attributes.

@@ -15,7 +15,7 @@ ms.technology: Networking
 ---
 # Error message when you try to access a server locally by using its FQDN or its CNAME alias after you install Windows Server 2003 Service Pack 1: Access denied or No network provider accepted the given network path
 
-This article provides a solution to an issue where you may receive an error message when you try to access a server locally by using its FQDN or its CNAME alias.
+This article provides a solution to an error that occurs when you try to access a server locally by using its FQDN or its CNAME alias.
 
 _Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 926642

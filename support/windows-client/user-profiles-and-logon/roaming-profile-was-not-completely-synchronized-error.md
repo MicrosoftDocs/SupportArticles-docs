@@ -41,7 +41,7 @@ Additionally, the system may log the following entries in the event log.
     > Windows cannot copy file \\\\?\\C:\\Users\\UserName\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\\MicrosoftEdge.exe to location \\\\?\\UNC\\WS2016DC1\\rup\\UserName.V6\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdge.exe. This error may be caused by network problems or insufficient security rights.  
     DETAIL - The file cannot be accessed by the system.
     >
-    > Windows cannot copy file \\\\?\\C:\\Users\\UserName\\AppData\\Local\\Microsoft\\WindowsApps\\MicrosoftEdge.exe to location \\\\?\\UNC\\WS2016DC1\\rup\\UserName.V6\\AppData\\Local\\Microsoft\\WindowsApps\\MicrosoftEdge.exe. This error may be caused by network problems or insufficient security rights.  
+    > Windows cannot copy file \\\\?\\C:\\Users\\UserName\\AppData\\Local\\Microsoft\\WindowsApps\\MicrosoftEdge.exe to location \\\\?\\UNC\\WS2016DC1\\rup\\UserName.V6\\AppData\\Local\\Microsoft\\WindowsApps\\MicrosoftEdge.exe. This error may be caused by network problems or insufficient security rights.  
     DETAIL - The file cannot be accessed by the system.
 
 - Event 1504 (source: User Profile General)

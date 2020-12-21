@@ -15,14 +15,14 @@ ms.technology: Application Virtulization (App-V)
 ---
 # How to launch processes inside the App-V 5.0 virtualized environment
 
-This article describes how to launch processes inside the App-V 5.0 virtualized environment.
+This article describes how to launch processes inside the Microsoft Application Virtualization 5.0 client (App-V 5.0) virtualized environment.
 
 _Original product version:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2848278
 
 ## Summary
 
-A common troubleshooting task for the Microsoft Application Virtualization 5.0 client (App-V 5.0) is to investigate or modify a local package by opening a process inside the context of an App-V application. This is also known as opening a process "in the App-V bubble".  App-V 5.0 offers several alternative methods to perform this task that differ significantly from techniques available in previous versions of the product. Each method detailed below accomplishes essentially the same task, but some methods may be better suited for some applications than others depending on whether the virtualized application is already running.
+A common troubleshooting task for the App-V 5.0 is to investigate or modify a local package by opening a process inside the context of an App-V application. This is also known as opening a process "in the App-V bubble".  App-V 5.0 offers several alternative methods to perform this task that differ significantly from techniques available in previous versions of the product. Each method detailed below accomplishes essentially the same task, but some methods may be better suited for some applications than others depending on whether the virtualized application is already running.
 
 ## Get-AppvClientPackage PowerShell cmdlet
 
@@ -35,7 +35,7 @@ Start-AppvVirtualProcess -AppvClientObject $AppVName cmd.exe
 
 If you do not know the exact name of your package, you can use the command line `Get-AppvClientPackage executable`, substituting the name of the application for "executable"; for example: `Get-AppvClientPackage Word`.
 
-This method allows you launch any command within the context of an App-V package whether the package is currently running or not. This is similar to using the sfttray /exe and cmd.exe `/launch "App-V Application"` syntax in App-V 4.6.
+This method allows you launch any command within the context of an App-V package whether the package is currently running or not. This is similar to using the `sfttray /exe cmd.exe /launch "App-V Application"` syntax in App-V 4.6.
 
 ## The command-line switch /appvpid:\<PID>
 
@@ -49,11 +49,7 @@ To obtain the process ID (PID) of your App-V process, use the command tasklist.e
 
 ## The command-line hook switch /appvve:\<GUID>
 
-Where the `/appvpid` switch requires the virtual process to already be running, this switch allows you to start a local command and allow it to run within the virtual environment of an App-V package and will initialize it. The syntax is as follows:
-
-```console
-cmd.exe /appvve:<PACKAGEGUID_VERSIONGUID>
-```
+Where the `/appvpid` switch requires the virtual process to already be running, this switch allows you to start a local command and allow it to run within the virtual environment of an App-V package and will initialize it. The syntax is `cmd.exe /appvve: <PACKAGEGUID_VERSIONGUID>`.
 
 For example:
 
@@ -81,13 +77,15 @@ If you are working within RDS environments, and have a package that is published
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\AppV\Client\RunVirtual`
 
-For example, if you have a locally installed application named MyApp.exe and would like this application to run within the virtual environment, create a subkey called MyApp.exe. Edit the (Default) REG_SZ value that contains the package GUID and the version GUID separated by an underscore (for example, \<GUID>_\<GUID>).
+For example, if you have a locally installed application named MyApp.exe and would like this application to run within the virtual environment, create a subkey called MyApp.exe. Edit the (Default) REG_SZ value that contains the package GUID and the version GUID separated by an underscore (for example, \<GUID>_\<GUID>).
 
 For example, the application listed in the previous example would yield a registry export (.reg file) like the following:
 
 ```registry
-Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\AppV\Client\RunVirtual]
-@=""[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\AppV\Client\RunVirtual\MyApp.exe]
+Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\AppV\Client\RunVirtual]
+@=""
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\AppV\Client\RunVirtual\MyApp.exe]
 @="aaaaaaaa-bbbb-cccc-dddd-eeeeeeee_11111111-2222-3333-4444-55555555"
 ```
 

@@ -54,7 +54,7 @@ To resolve this problem, set the value of the SupportedEncryptionTypes attribute
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in Windows Server 2012 R2.
+Microsoft has confirmed that this is a problem in Windows Server 2012 R2.
 
 ## References
 
