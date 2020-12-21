@@ -1,5 +1,5 @@
 ---
-title: Force synchronization for Distributed File System Replication (DFSR)replicated sysvol replication
+title: Force synchronization for Distributed File System Replication (DFSR) replicated sysvol replication
 description: Describes how to restart DFSR on a server, either authoritatively or non-authoritative.
 ms.date: 09/08/2020
 author: Deland-Han
