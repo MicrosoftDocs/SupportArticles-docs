@@ -139,6 +139,7 @@ You can visit the Microsoft Web sites in the following sections for more informa
 ### Installing multiple updates with only one restart
 
 The hotfix installer that is included with Windows XP and with Windows 2000 post-Service Pack 3 (SP3) updates includes functionality to support multiple hotfix installations. For earlier versions of Windows 2000, the command-line tool that is named "QChain.exe" is available for download.
+
 For more information about how to install multiple updates or multiple hotfixes without restarting the computer between each installation, click the following article number to view the article in the Microsoft Knowledge Base:  
 [296861](https://support.microsoft.com/help/296861) How to install multiple Windows updates or hotfixes with only one reboot
 
