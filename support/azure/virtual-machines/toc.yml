@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-virtual-machines.md
+  href: welcome-virtual-machines.yml
 
 - name: Troubleshoot deployment issues
   items:
