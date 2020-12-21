@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika, v-jefen
+ms.reviewer: kaushika, v-jefen, xingrli
 ms.prod-support-area-path: windows-security
 ms.technology: bitlocker
 ---
@@ -24,14 +24,14 @@ You must temporarily disable BitLocker protection by using the **Suspend protect
 - Non-Microsoft application updates that modify boot components
 
 > [!Important]
-> If BitLocker protection isn’t suspended, the system won’t recognize the BitLocker key and you’ll be prompted to enter the recovery key to proceed next time the system restarts. Not having a recovery key will cause data loss or an unnecessary operating system reinstallation. This will happen on each restart.
+> If BitLocker protection isn’t suspended, the system won’t recognize the BitLocker key and you’ll be prompted to enter the recovery key to proceed next time the system restarts. Not having a recovery key will cause data loss or an unnecessary operating system reinstallation. This will happen every time you restart the system.
 
 Suspending BitLocker protection on a system drive prevents certain problems and allows successful firmware and hardware updates. You can suspend BitLocker protection and resume it at any time by using the **Control Panel** or **PowerShell**.
 
 > [!Note]
 > BitLocker protection will remain disabled for a particular drive until you manually resume it.
 
-## Suspend and resume BitLocker protection by using Control Panel
+## Suspend and resume BitLocker protection by using the Control Panel
 
 Here’s how to suspend BitLocker protection:
 
