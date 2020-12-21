@@ -20,7 +20,7 @@ This step-by-step article describes how to uninstall the SQL Server Management S
 > Setup has detected a version of SQL Server Management Studio on this machine. SQL Server Management Studio and SQL Server Management Studio Express cannot be installed on the same machine. To install SQL Server Management Studio Express, you must first uninstall SQL Server Management Studio, and then, rerun SQL Server Management Studio Express Edition Setup. For more information, see article 909953 in the Microsoft Knowledge Base.
 
 > [!NOTE]
-> Starting with SQL Server 2016, SQL Server management studio is offered as a separate download and hence can be installed as a standalone application. As such you can you can use any of the processes documented in [Uninstall or remove apps and programs in Windows 10](/windows/uninstall-or-remove-apps-and-programs-in-windows-10-4b55f974-2cc6-2d2b-d092-5905080eaf98). The steps below are only applicable to SQL Server 2014 and earlier versions, wherein SSMS may have been installed as a shared feature during setup.
+> Starting with SQL Server 2016, SQL Server management studio is offered as a separate download and hence can be installed as a standalone application. As such you can you can use any of the processes documented in [Uninstall or remove apps and programs in Windows 10](https://support.microsoft.com/windows/uninstall-or-remove-apps-and-programs-in-windows-10-4b55f974-2cc6-2d2b-d092-5905080eaf98). The steps below are only applicable to SQL Server 2014 and earlier versions, wherein SSMS may have been installed as a shared feature during setup.
 
 ## Windows 10 / 2016 +
 
