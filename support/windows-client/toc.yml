@@ -128,32 +128,6 @@
       href: ./deployment/validate-oem-activation-key.md
     - name: KMS current count doesn't increase
       href: ./deployment/kms-current-count-not-increase.md
-  - name: Bitlocker
-    items:
-    - name: BitLocker could not be enabled
-      href: ./deployment/bitlocker-not-enabled-usb-drive-not-found.md
-    - name: Can't retrieve BitLocker Recovery key
-      href: ./deployment/cant-retrieve-bitlocker-recovery-key.md
-    - name: Disk partition requirement for using Windows RE tools on a UEFI-based computer
-      href: ./deployment/disk-partition-requirement-use-windows-re-tool.md
-    - name: Error after you enter BitLocker PIN at startup
-      href: ./deployment/bitlocker-too-many-pin-entry-attempts.md
-    - name: Error when BIOS is in legacy mode with TPM 2.0
-      href: ./deployment/tpm-is-ready-for-use-with-reduced-functionality.md
-    - name: Event ID 15 when a computer resumes from sleep
-      href: ./deployment/event-id-15-computer-resume-from-sleep.md
-    - name: How to enable BitLocker device encryption
-      href: ./deployment/enable-bitlocker-device-encryption-local-hard-disk.md
-    - name: MBAM client fails with error 0x8004100E
-      href: ./deployment/mbam-client-fails-event-id-4-0x8004100e.md
-    - name: Parameter is incorrect when you enable  BitLocker
-      href: ./deployment/parameter-is-incorrect.md
-    - name: Specified Account not exist when enabling BitLocker
-      href: ./deployment/specified-account-not-exist-enable-bitlocker.md
-    - name: The recovery password for BitLocker isn't available when FIPS compliant policy is set
-      href: ./deployment/bitlocker-recovery-password-not-fips-compliant.md
-    - name: The requested Key ID is invalid
-      href: ./deployment/requested-key-id-is-invalid.md
   - name: Devices and Drivers
     items:
     - name: '"The operation timed out" error'
@@ -928,6 +902,30 @@
       href: ./windows-security/earlier-versions-not-start-use-pre-provision-bitlocker.md
     - name: TPM is in reduced functionality mode
       href: ./windows-security/trusted-platform-module-reduced-functionality-mode.md
+    - name: BitLocker could not be enabled
+      href: ./deployment/bitlocker-not-enabled-usb-drive-not-found.md
+    - name: Can't retrieve BitLocker Recovery key
+      href: ./deployment/cant-retrieve-bitlocker-recovery-key.md
+    - name: Disk partition requirement for using Windows RE tools on a UEFI-based computer
+      href: ./deployment/disk-partition-requirement-use-windows-re-tool.md
+    - name: Error after you enter BitLocker PIN at startup
+      href: ./deployment/bitlocker-too-many-pin-entry-attempts.md
+    - name: Error when BIOS is in legacy mode with TPM 2.0
+      href: ./deployment/tpm-is-ready-for-use-with-reduced-functionality.md
+    - name: Event ID 15 when a computer resumes from sleep
+      href: ./deployment/event-id-15-computer-resume-from-sleep.md
+    - name: How to enable BitLocker device encryption
+      href: ./deployment/enable-bitlocker-device-encryption-local-hard-disk.md
+    - name: MBAM client fails with error 0x8004100E
+      href: ./deployment/mbam-client-fails-event-id-4-0x8004100e.md
+    - name: Parameter is incorrect when you enable  BitLocker
+      href: ./deployment/parameter-is-incorrect.md
+    - name: Specified Account not exist when enabling BitLocker
+      href: ./deployment/specified-account-not-exist-enable-bitlocker.md
+    - name: The recovery password for BitLocker isn't available when FIPS compliant policy is set
+      href: ./deployment/bitlocker-recovery-password-not-fips-compliant.md
+    - name: The requested Key ID is invalid
+      href: ./deployment/requested-key-id-is-invalid.md
   - name: Kerberos authentication
     items:
     - name: '"Not enough storage is available to complete this operation" error'
@@ -959,7 +957,7 @@
     - name: Can't authenticate because of an incorrect PIV smart card driver update
       href: ./windows-security/cannot-authenticate-incorrect-piv-smart-card-driver-update.md
     - name: Code 31 for Microsoft USB CCID smart card reader
-      href: ./windows-security/code-31-device-manager-usbccid-smartcard-reader-problem
+      href: ./windows-security/code-31-device-manager-usbccid-smartcard-reader-problem.md
   - name: TPM
     items:
     - name: Events 14 and 17 for TPM command failure or non-recoverable error

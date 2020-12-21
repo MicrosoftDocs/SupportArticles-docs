@@ -26,7 +26,7 @@ When you rename a user account in on a computer that is running Windows 7 or Win
 
 ## Status
 
-Microsoft has confirmed this to be by design in Windows.
+Microsoft has confirmed it to be by design in Windows.
 
 ## Workaround
 

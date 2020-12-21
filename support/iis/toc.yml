@@ -65,8 +65,12 @@
   items:
   - name: Changes in FTP 7.5
     href: changes-in-ftp-7-5.md
+  - name: Download session fails when connection is closed
+    href: ftp-download-session-fails.md
   - name: Error when you create an FTP site
     href: error-create-ftp-site.md
+  - name: Status codes in IIS 7.0 and later versions
+    href: ftp-status-codes-iis-7-and-later-versions.md
 
 - name: General
   items:
@@ -91,6 +95,8 @@
     href: data-collection-strategies.md
   - name: DebugDiag 1.2 installation and data collector
     href: debugdiag-collected-information.md
+  - name: Enable Schannel event logging in Windows
+    href: enable-schannel-event-logging.md
   - name: ETW logs diagnostic
     href: etw-log-diagnostic.md
   - name: Hidden static files return HTTP 404 error
@@ -99,20 +105,24 @@
     href: clm-http-bad-request.md
   - name: HTTP error 403 or 404 when you access FRx WebPort
     href: http-error-403-404-frx-webport.md
+  - name: HTTP error 403.14
+    href: http-403-14-forbidden-webpage.md
+  - name: HTTP error 403.16
+    href: http-403-forbidden-access-website.md
   - name: HTTP error 403.7
     href: http-error-403-7-forbidden-web-app.md
   - name: HTTP error 404.13
     href: http-404-13-website.md
-  - name: HTTP error 403.16
-    href: http-403-forbidden-access-website.md
-  - name: HTTP error 403.14
-    href: http-403-14-forbidden-webpage.md
+  - name: HTTP error 404.17 when you visit a Web site
+    href: error-message-you-visit-web-site.md
   - name: HTTP error 405.0
     href: http-error-405-website.md
   - name: HTTP error 500.19
     href: http-error-500-19-webpage.md
   - name: HTTP error 501 - Not Implemented
     href: http-error-501-not-implemented.md
+  - name: Logs contain dots instead of logging field value
+    href: iis-logs-contain-dots.md
   - name: Pages can't be displayed
     href: cannot-access-site-using-https.md
   - name: SSL Diagnostic tool for SDP
@@ -121,11 +131,15 @@
     href: time-taken-field-http-log.md
   - name: Troubleshoot ABO Mapper errors
     href: troubleshoot-abo-mapper-errors.md
+  - name: Web application Performance Data Collector
+    href: web-application-performance-data-collector.md
 
 - name: IISAdmin service and Inetinfo process operation
   items:
   - name: Admin cmdlets slow in PowerShell 4.0
     href: administration-cmdlets-slow.md
+  - name: Error when you use IISReset.exe to restart IIS
+    href: using-iisreset-restart-iis-result-error.md
   - name: FIM is unable to reset passwords
     href: fim-password-reset-issue.md
   - name: HTTP services can't be stopped
@@ -155,8 +169,12 @@
     href: authorization-fails-default-documents.md
   - name: Can't view websites over SSL
     href: cannot-view-website-using-ssl.md
+  - name: Calling PostCompletion twice may cause crash
+    href: calling-postcompletion-cause-crash.md
   - name: Can't call MTS COM from ASP
     href: server-execution-fail-call-mts-com-asp.md
+  - name: Event handles may leak
+    href: event-handles-leaked.md
   - name: Event ID 115 when you connect HTTPS websites
     href: event-115-connect-https-website.md
   - name: Expression Encoder crashes
@@ -171,6 +189,10 @@
     href: http-500-response-binarywrite.md
   - name: Internet printing fails
     href: internet-printing-fails.md
+  - name: Page can't be displayed when you connect through SSL
+    href: page-cannot-displayed-when-you-connect-ssl.md
+  - name: Stale content when you store the content on a VHD
+    href: stale-content-when-content-store-vhd.md
   - name: Worker Process takes much memory
     href: work-process-takes-much-memory.md
 
