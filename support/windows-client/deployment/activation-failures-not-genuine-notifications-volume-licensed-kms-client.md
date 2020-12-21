@@ -41,21 +41,21 @@ For Windows editions that experience activation and "not genuine" errors that 
 
 1. You receive a **Windows is not genuine** error message after you log on.
 
-    ![Screenshot of error message](./media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/error-message-for-step-1.jpg)
+    :::image type="content" source="./media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/error-message-for-step-1.jpg" alt-text="Screenshot of error message." border="false":::
 
 2. A **This copy of windows is not genuine** watermark appears in the bottom-right corner of the Windows desktop on a black background.
 
-    ![Screenshot of the watermark](./media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/screenshot-of-the-watermark.jpg)
+    :::image type="content" source="./media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/screenshot-of-the-watermark.jpg" alt-text="Screenshot of the watermark." border="false":::
 
 3. The `slmgr /dlv` output reports error 0xC004F200.
 
-    ![Screenshot of the command output](./media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/command-output-error-0xc004f200.png)
+    :::image type="content" source="./media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/command-output-error-0xc004f200.png" alt-text="Screenshot of the command output." border="false":::
 
 4. Activations that are made by using the `slmgr /ato` command fails and return the following message:
 
     > Windows is running within the non-genuine notification period. Run 'slui.exe' to go online and validate Windows.
 
-    ![Screenshot of the error](./media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/activation-failure.jpg)
+    :::image type="content" source="./media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/activation-failure.jpg" alt-text="Screenshot of the error." border="false":::
 
 5. The following events are logged in the event log.
 

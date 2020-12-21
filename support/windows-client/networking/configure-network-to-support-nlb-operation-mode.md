@@ -66,7 +66,7 @@ netsh interface ipv4 show int
 
 The output of this command lists the interfaces on the computer, as follows.
 
-![The output of the netsh interface ipv4 show int command lists the indexes and names of all of the network interfaces](./media/configure-network-to-support-nlb-operation-mode/output-of-the-netsh-interface-ipv4-show-int-command.png)
+:::image type="content" source="./media/configure-network-to-support-nlb-operation-mode/output-of-the-netsh-interface-ipv4-show-int-command.png" alt-text="The output of the netsh interface ipv4 show int command lists the indexes and names of all of the network interfaces." border="false":::
 
 In the Command Prompt window, run the following command:
 
@@ -86,7 +86,7 @@ In this command, \<Cluster Idx> represents the index of the cluster interface.
 
 The output shows that forwarding is now enabled.
 
-![The Forwarding parameter is now set to Enabled](./media/configure-network-to-support-nlb-operation-mode/show-enabled-forwarding.png)
+:::image type="content" source="./media/configure-network-to-support-nlb-operation-mode/show-enabled-forwarding.png" alt-text="The Forwarding parameter is now set to Enabled." border="false":::
 
 ### Configure virtual environments in unicast mode
 
@@ -157,7 +157,7 @@ NLB IP2MAC <VIP of NLB>
 
 In this command, \<VIP of NLB> represents the NLB virtual IP address.
 
-![The NLB IP2MAC tool produces a list of MAC addresses for a given cluster IP](./media/configure-network-to-support-nlb-operation-mode/mac-addresses-for-a-given-cluster-ip.png)
+:::image type="content" source="./media/configure-network-to-support-nlb-operation-mode/mac-addresses-for-a-given-cluster-ip.png" alt-text="The NLB IP2MAC tool produces a list of MAC addresses for a given cluster IP." border="false":::
 
 As the screenshot shows, you can get the MAC address for each mode easily by using this command. As an alternative, you can do your math, considering the following guidelines (the numbers correspond to the red numbers in the screenshot):
 

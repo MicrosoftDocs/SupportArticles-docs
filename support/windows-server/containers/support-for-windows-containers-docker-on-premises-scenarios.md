@@ -127,6 +127,7 @@ To run Hyper-V containers, the container host must meet the requirements for run
 - At least 4 GB of RAM. More memory is better. You'll need enough memory for the host and all virtual machines that you want to run at the same time.
 
 - Virtualization support turned on in the BIOS or UEFI.
+
 For more information, see [System requirements for Hyper-V on Windows Server](/windows-server/virtualization/hyper-v/system-requirements-for-hyper-v-on-windows#general-requirements).
 
 ## Supported container orchestrators
