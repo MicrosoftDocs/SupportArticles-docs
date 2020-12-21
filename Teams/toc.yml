@@ -3,6 +3,8 @@
   items:
   - name: Administration
     items:
+    - name: "Failed to send" error when sending messages to a group chat
+      href: ./teams-administration/failed-send-message-group-chat.md
     - name: '"FAILED_TO_AUTO_DISCOVER_DOMAIN" error in admin center'
       href: ./teams-administration/failed-to-auto-discover-domain-error-teams-admin-center.md
     - name: "\"We couldn't add member\" error when adding users"
