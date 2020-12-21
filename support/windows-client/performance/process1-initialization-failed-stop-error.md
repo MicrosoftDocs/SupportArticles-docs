@@ -15,7 +15,7 @@ ms.technology: Performance
 ---
 # PROCESS1_INITIALIZATION_FAILED stop error after you upgrade to Windows 10 Version 1607
 
-This article describes an issue that triggers a stop error on a blue screen after you upgrade your system to Windows 10 Version 1607.
+This article provides a workaround to an issue that triggers a stop error on a blue screen after you upgrade your system to Windows 10 Version 1607.
 
 _Original product version:_ &nbsp; Windows 10, version 1607  
 _Original KB number:_ &nbsp; 3083796

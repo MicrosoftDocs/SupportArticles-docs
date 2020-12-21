@@ -15,7 +15,7 @@ ms.technology: ActiveDirectory
 ---
 # Active Directory replication Event ID 1925: attempt to establish a replication link failed due to DNS lookup problem
 
-This article helps to resolve the issue where you get Event ID 1925.
+This article helps to resolve the issue where you get Event ID 1925 with the error message that DNS lookup failed, inbound replication of a directory partition has failed on the destination domain controller.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4469659

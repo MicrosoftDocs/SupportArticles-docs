@@ -15,7 +15,7 @@ ms.technology: PrintFaxScan
 ---
 # A printer driver cannot be installed through Windows Update in Windows Server 2016 and Windows Server 2019
 
-This article discusses an issue in which a printer drive cannot be installed from Windows Update in Windows Server 2016 and Windows Server 2019.
+This article provides a workaround to an issue in which a printer drive cannot be installed from Windows Update in Windows Server 2016 and Windows Server 2019.
 
 _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4033208
@@ -49,7 +49,7 @@ For enterprises that use the **TCP/IP device** option, the desired drivers can b
 `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\DevicePath`
 2. Update the subkey to add value data for the local path for the driver installation.
 
-For example, change the value data from the default entry (%systemroot%\inf) to the following path:  
+For example, change the value data from the default entry (%systemroot%\\inf) to the following path:  
 %systemroot%\\inf;\\\\server\\DriverShare
 
 In addition, the .inf file must have an entry that lists only the HWID of the printer. For example:

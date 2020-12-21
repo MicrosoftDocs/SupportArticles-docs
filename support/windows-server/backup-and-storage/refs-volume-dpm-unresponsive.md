@@ -15,7 +15,7 @@ ms.technology: BackupStorage
 ---
 # ReFS volume using DPM becomes unresponsive on Windows Server 2016
 
-This article describes an issue in which DPM or ReFS volume becomes unresponsive on Windows Server 2016.
+This article helps to resolve an issue in which DPM or ReFS volume becomes unresponsive on Windows Server 2016.
 
 _Original product version:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4035951
