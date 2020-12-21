@@ -24,7 +24,7 @@ description: Resolves an issue where the domain isn't fully activated on a Micro
 
 ## Symptoms
 
-The domain isn’t fully activated on the Microsoft server side.
+After the successful addition and verification of a domain to the Microsoft tenant, there is no response to SIP messages (including SIP OPTIONS). Further investigation reveals that there are no users with valid licenses assigned to the tenant.
 
 ## Resolution
 

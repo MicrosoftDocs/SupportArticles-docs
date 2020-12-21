@@ -24,7 +24,7 @@ description: Resolves an issue where the SBC certificate is expired or revoked.
 
 ## Symptoms
 
-You find that the SBC certificate is invalid (for example, expired or revoked).
+Teams SIP proxy is rejecting incoming and/or outgoing connection attempts. After packet capture or certificate inspection, you find that the SBC certificate is invalid (for example, expired or revoked).
 
 ## Resolution
 

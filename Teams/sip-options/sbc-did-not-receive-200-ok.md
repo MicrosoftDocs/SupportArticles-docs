@@ -24,7 +24,7 @@ description: Resolution to an issue where the SBC didn't receive the 200 OK mess
 
 ## Summary
 
-SBC didn't receive the expected "200 OK" from MS Teams SIP proxy.
+SBC didn't receive the expected "200 OK" from MS Teams SIP proxy in response to sent SIP Options.
 
 ## Cause
 

@@ -28,7 +28,7 @@ The SBC receives the “200 OK” message, but doesn't receive the SIP OPTIONS t
 
 ## Resolution
 
-Although the “200 OK” message is returned by using the same connection that the SIP OPTIONS used, when the SIP proxy sends the SIP OPTIONS back to SBC it uses the FQDN from the **Record-Route** header (if it exists) or from the contact header. To resolve this issue, make sure that the domain name is correct and that the FQDN DNS resolves to the correct IP address. 
+Although the “200 OK” message is returned by using the same connection that the SIP OPTIONS sent from SBC used, when the SIP proxy sends the SIP OPTIONS back to SBC it uses the FQDN from the **Record-Route** header (if it exists) or from the **Contact** header. To resolve this issue, make sure that the domain name is correct and that the FQDN DNS resolves to the correct IP address. 
 
 Another possible cause of this issue is that the firewall rules don't allow an incoming connection from outside. Check the firewall rules to make sure that they allow incoming connections.
 

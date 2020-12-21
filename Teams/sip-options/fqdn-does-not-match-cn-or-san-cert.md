@@ -24,7 +24,7 @@ description: Describes a resolution to an issue where the FQDN may not match the
 
 ## Symptoms
 
-The FQDN doesn’t match the contents of common name (CN) or subject alternate name (SAN)  certificates (for example. a wildcard does not match lower-level subdomain names).
+MS Teams SIP proxy doesn't respond to SIP messages from SBC. Upon SIP message inspection, the FQDN doesn’t match the contents of common name (CN) or subject alternate name (SAN) certificates. (For example, a wildcard doesn't match lower-level subdomain names.)
 
 ## Resolution
 
