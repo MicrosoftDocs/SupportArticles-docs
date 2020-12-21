@@ -27,7 +27,7 @@ Spell Checker does not recognize misspelled words in Word 2010.
 
 ### Symptom 2
 
-When you click the **Spelling & Grammar** button in the **Proofing** group on the **Review **tab in Word 2010, you receive one of the following messages: 
+When you click the **Spelling & Grammar** button in the **Proofing** group on the **Review** tab in Word 2010, you receive one of the following messages: 
 
 - The spelling and grammar check is complete.   
 - Proofing Tools are not installed for **default language**, try re-installing proofing tools.   

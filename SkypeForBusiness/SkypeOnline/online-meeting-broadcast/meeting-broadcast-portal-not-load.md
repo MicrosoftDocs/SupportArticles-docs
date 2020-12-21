@@ -41,8 +41,6 @@ To resolve this issue, use one of the following methods, as appropriate for your
 
 This issue is related to authentication behavior in the Skype Meeting Broadcast portal and to how cached files are updated.  
 
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

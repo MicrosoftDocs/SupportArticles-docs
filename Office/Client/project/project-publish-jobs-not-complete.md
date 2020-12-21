@@ -68,9 +68,9 @@ Steps to remove the Tasks List from the associated Project site
 1. Log on to Project Web App (PWA), and move to **Server Settings** > **Connected SharePoint Sites**.   
 2. In the **Site Address** column, locate the associated Project site for your Project plan that is taking a long time to publish, and then click on the link to move to it.    
 3. On the Project site, click the **Tasks** link in the left navigation pane.  
-4. On the top ribbon bar, select the **List **tab. This will open the ribbon for the tab.   
+4. On the top ribbon bar, select the **List** tab. This will open the ribbon for the tab.   
 5. Click **List Settings**.   
-6. In the Settings page for this specific Tasks list, click the option **Delete this list**. If you are prompted, click **Yes **to send the list to the recycle bin.   
+6. In the Settings page for this specific Tasks list, click the option **Delete this list**. If you are prompted, click **Yes** to send the list to the recycle bin.   
 
 **How to Restore the Tasks List**
 
@@ -78,7 +78,7 @@ If you need to use the Task List after deleting it, you can recover it by going 
 
 1. Browse to the Project site where you deleted the Task List. On the left navigation pane, click **Site Contents**.   
 2. On the upper-right section of the **Site Content** page, click **Recycle Bin**.   
-3. Select the recently deleted **Tasks List**, and then click **Restore Selection **to restore it.   
+3. Select the recently deleted **Tasks List**, and then click **Restore Selection** to restore it.   
 
 **How to configure a new EPT**
 

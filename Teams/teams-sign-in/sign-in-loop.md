@@ -57,12 +57,12 @@ Change Microsoft Edge, Internet Explorer or Google Chrome settings using adminis
 4. In the Internet Options window, select **Security** > **Trusted Sites** > **Sites**.
 5. Add the following sites:
 
-    - https://*.microsoft.com
-    - https://*.microsoftonline.com
-    - https://*.teams.skype.com
-    - https://*.teams.microsoft.com
-    - https://*.sfbassets.com
-    - https://*.skypeforbusiness.com
+    - `https://*.microsoft.com`
+    - `https://*.microsoftonline.com`
+    - `https://*.teams.skype.com`
+    - `https://*.teams.microsoft.com`
+    - `https://*.sfbassets.com`
+    - `https://*.skypeforbusiness.com`
 
 > [!NOTE]
 > It's always good to validate and enable all trusted URLs for Teams and review the requirements in this article: [Office 365 URLs and IP address ranges](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges?redirectSourcePath=%252farticle%252fOffice-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_teams).
@@ -73,17 +73,13 @@ Change Microsoft Edge, Internet Explorer or Google Chrome settings using adminis
 2. In the Internet Options window, select **Security** > **Trusted Sites** > **Sites**.
 3. Add the following sites:
 
-    - https://*.microsoft.com
-    - https://*.microsoftonline.com
-    - https://*.teams.skype.com
-    - https://*.teams.microsoft.com
-    - https://*.sfbassets.com
-    - https://*.skypeforbusiness.com
+    - [*.]microsoft.com
+    - [*.]microsoftonline.com
+    - [*.]teams.skype.com
+    - [*.]teams.microsoft.com
+    - [*.]sfbassets.com
+    - [*.]skypeforbusiness.com
 
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
-
-## More information
+[!INCLUDE [Third-party information disclaimer](../../includes/third-party-information-disclaimer.md)]
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
