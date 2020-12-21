@@ -33,7 +33,7 @@ This section describes the FTP status codes that IIS uses.
 > [!NOTE]
 > This article does not list every possible FTP status code as dictated in the FTP specification. This article includes only the FTP status codes that IIS can send.
 
-### 1**xx** - Positive Preliminary Reply
+### 1**xx** - Positive preliminary reply
 
 These status codes indicate that an action has started successfully, but the client expects another reply before it continues with a new command.
 
@@ -42,7 +42,7 @@ These status codes indicate that an action has started successfully, but the cli
 - 125 - Data connection already open; transfer starting.
 - 150 - File status okay; about to open data connection.
 
-### 2**xx** - Positive Completion Reply
+### 2**xx** - Positive completion reply
 
 An action has successfully completed. The client can execute a new command.
 
@@ -66,7 +66,7 @@ An action has successfully completed. The client can execute a new command.
 - 250 - Requested file action okay, completed.
 - 257 - "PATHNAME" created.
 
-### 3**xx** - Positive Intermediate Reply
+### 3**xx** - Positive intermediate reply
 
 The command was successful, but the server needs additional information from the client to complete processing the request.
 
@@ -77,7 +77,7 @@ The command was successful, but the server needs additional information from the
 - 336 - Username okay, need password.
 - 350 - Requested file action pending further information.
 
-### 4**xx** - Transient Negative Completion Reply
+### 4**xx** - Transient negative completion reply
 
 The command was not successful, but the error is temporary. If the client retries the command, it may succeed.
 
@@ -89,7 +89,7 @@ The command was not successful, but the error is temporary. If the client retrie
 - 451 - Requested action aborted. Local error in processing.
 - 452 - Requested action not taken. Insufficient storage space in system.
 
-### 5**xx** - Permanent Negative Completion Reply
+### 5**xx** - Permanent negative completion reply
 
 The command was not successful, and the error is permanent. If the client retries the command, it receives the same error.
 
@@ -112,7 +112,7 @@ The command was not successful, and the error is permanent. If the client retrie
 - 552 - Requested file action aborted. Exceeded storage allocation (for current directory or dataset).
 - 553 - Requested action not taken. File name not allowed.
 
-### 6**xx** - Protected Reply
+### 6**xx** - Protected reply
 
 These status codes indicate a Protected Reply from FTP.
 

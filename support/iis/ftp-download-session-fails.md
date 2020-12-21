@@ -8,7 +8,7 @@ ms.prod-support-area-path: FTP Service and Svchost or Inetinfo Process Operation
 
 This article helps you resolve the FTP download session fails problem that occurs when FTP control connection is closed.
 
-_Original product version:_ &nbsp; FTP  
+_Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 254722
 
 ## Symptoms

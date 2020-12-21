@@ -122,9 +122,9 @@ In the case of ASP.NET, there may be many handlers configured for a *.aspx resou
 
 1. Create a directory that contains two files.  
 
-    - Test.aspx with the content `<%Response.Write("Hello World")%>`
+    - *Test.aspx* with the content `<%Response.Write("Hello World")%>`
   
-    - Web.config with the content:
+    - *Web.config* with the content:
   
         ```xml
         <?xml version="1.0" encoding="UTF-8"?>
@@ -147,7 +147,7 @@ In the case of ASP.NET, there may be many handlers configured for a *.aspx resou
         </configuration>
         ```
 
-2. Create an IIS 7.0 or 7.5 application that points to the directory with these two files.
+2. Create an IIS 7.0 or later versions application that points to the directory with these two files.
 
 3. Configure the new application to run in an application pool that is configured for integrated mode.
 
