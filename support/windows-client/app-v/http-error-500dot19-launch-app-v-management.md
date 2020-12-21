@@ -30,7 +30,7 @@ Notification Unknown
 Handler Not yet determined  
 Error Code 0x80070005  
 Config Error Cannot read configuration file due to insufficient permissions  
-Config File \\\\?\E:\\Program Files\\Microsoft Application Virtualization Server\\ManagementService\\web.config
+Config File \\\\?\\E:\\Program Files\\Microsoft Application Virtualization Server\\ManagementService\\web.config
 
 ## Cause
 

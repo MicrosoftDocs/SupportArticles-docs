@@ -74,8 +74,7 @@ The following are supported methods that you can use to roll back the contents o
 
 - Use an Active Directory-aware backup and restoration utility that uses Microsoft-provided and Microsoft-tested APIs. These APIs non-authoritatively or authoritatively restore a system state backup. The backup that is restored should originate from the same operating system installation and from the same physical or virtual computer that is being restored.
 
-- Use an Active Directory-aware backup and restoration utility that uses Microsoft Volume Shadow Copy Service APIs. These APIs back up and restore the domain controller system state. The Volume Shadow Copy Service supports creating single point-in-time shadow copies of single or multiple volumes on computers that are running Windows
--  Server 2003, Windows Server 2008, or Windows Server 2008 R2. Single point-in-time shadow copies are also known as snapshots. For more information, search "Volume Shadow Copy Service" in [Microsoft Support](https://support.microsoft.com/).
+- Use an Active Directory-aware backup and restoration utility that uses Microsoft Volume Shadow Copy Service APIs. These APIs back up and restore the domain controller system state. The Volume Shadow Copy Service supports creating single point-in-time shadow copies of single or multiple volumes on computers that are running Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2. Single point-in-time shadow copies are also known as snapshots. For more information, search "Volume Shadow Copy Service" in [Microsoft Support](https://support.microsoft.com/).
 
 - Restore the system state. Evaluate whether valid system state backups exist for this domain controller. If a valid system state backup was made before the rolled-back domain controller was incorrectly restored, and if the backup contains recent changes that were made on the domain controller, restore the system state from the most recent backup.
 

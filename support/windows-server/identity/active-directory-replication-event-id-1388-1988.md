@@ -99,7 +99,7 @@ To remove lingering objects, do the following:
 1. Use the event text to identify the following:
     1. The directory partition of the object
     2. The source domain controller that attempted replication of the lingering object
-2. [Use Repadmin to identify the GUID of an authoritative domain controller](#use-repadmin-to-identify-the-guid-of-an-authoritative-domain-controller) .
+2. [Use Repadmin to identify the GUID of an authoritative domain controller](#use-repadmin-to-identify-the-guid-of-an-authoritative-domain-controller).
 3. [Use Repadmin to remove lingering objects](#use-repadmin-to-remove-lingering-objects).
 4. [Enable strict replication consistency](#enable-strict-replication-consistency), if necessary.
 5. [Ensure that strict replication consistency is enabled for newly promoted domain controllers](#ensure-that-strict-replication-consistency-is-enabled-for-newly-promoted-domain-controllers), if necessary.
@@ -154,8 +154,8 @@ Requirements:
     |---|---|
     |`/removelingeringobjects`|Removes lingering objects from the domain controller that is specified by \<ServerName> for the directory partition that is specified by \<DirectoryPartition>.|
     |\<ServerName>|The name of the domain controller that has lingering objects, as identified in the event message (Event ID 1388 or Event ID 1988). You can use the Domain Name System (DNS) name or the distinguished name, for example, the distinguished name CN=DC5,OU=Domain Controllers,DC=contoso,DC=com or the DNS name `DC5.contoso.com`.|
-    \<ServerGUID>|The GUID of a domain controller that has an up-to-date, writable replica of the directory partition that contains the lingering object.|
-    \<DirectoryPartition>|The distinguished name of the directory partition that is identified in the event message, for example:<ul><li>For the Sales domain directory partition in the `contoso.com` forest: DC=sales,DC=contoso,DC=com</li> <li>For the configuration directory partition in the `contoso.com` forest: CN=configuration,DC=contoso,DC=com</li> <li> For the schema directory partition in the `contoso.com` forest: CN=schema,CN=configuration,DC=contoso,DC=com</li> </ul>|
+    |\<ServerGUID>|The GUID of a domain controller that has an up-to-date, writable replica of the directory partition that contains the lingering object.|
+    |\<DirectoryPartition>|The distinguished name of the directory partition that is identified in the event message, for example:<ul><li>For the Sales domain directory partition in the `contoso.com` forest: DC=sales,DC=contoso,DC=com</li> <li>For the configuration directory partition in the `contoso.com` forest: CN=configuration,DC=contoso,DC=com</li> <li> For the schema directory partition in the `contoso.com` forest: CN=schema,CN=configuration,DC=contoso,DC=com</li> </ul>|
     |`/advisory_mode`|Logs the lingering objects that will be removed so that you can review them, but does not remove them.|
     |||
 
