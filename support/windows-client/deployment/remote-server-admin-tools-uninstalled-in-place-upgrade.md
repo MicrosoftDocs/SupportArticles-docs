@@ -17,7 +17,7 @@ ms.technology: Deployment
 
 This article provides a resolution to an issue in which Windows 10 Remote Server Admin Tools (RSAT) is uninstalled during an in-place upgrade.
 
-_Original product version:_ &nbsp; Window 10 - all editions  
+_Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4090941
 
 ## Symptom

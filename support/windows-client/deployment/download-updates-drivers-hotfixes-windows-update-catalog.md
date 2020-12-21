@@ -17,7 +17,7 @@ ms.technology: Deployment
 
 This article discusses how to download updates from the Windows Update Catalog.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Window 10 - all editions  
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 323166
 
 ## Introduction
