@@ -300,7 +300,7 @@ System service name: **MSDTC**
 |Application protocol|Protocol|Ports|
 |---|---|---|
 |RPC|TCP|135|
-|Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
+|Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 5000**<br/>**random port number between 49152 - 65535**²|
 ||||
 
 ¹ For more information about how to customize this port, see Distributed Transaction Coordinator in the [References](#references) section.
