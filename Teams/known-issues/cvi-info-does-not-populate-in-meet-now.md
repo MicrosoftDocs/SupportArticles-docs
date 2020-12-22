@@ -17,14 +17,16 @@ ms.custom:
 - CI 113425
 - CSSTroubleshoot 
 ms.reviewer: scapero
-description: Describes why some Meet Now instances to not autopopulate with CVI information.
+description: Describes why some Meet Now CVI coordinates do not work.
 ---
 
-# CVI information does not autopopulate in a Teams Meet Now instance 
+# CVI information autopopulated in a Teams Meet Now instance does not work
 
 ## Summary
 
-Cloud Video Interop (CVI) information does not automatically populate in a Meet Now instance of a meeting in Microsoft Teams with an existing CVI license.
+Cloud Video Interop (CVI) information populated in a Meet Now instance of a meeting in Microsoft Teams, with an existing CVI license, will not work.
+
+To meet right away, users can click New Meeting in Microsoft Teams, instead of Meet Now, and type in a meeting name and optionally invite a guest. This will schedule a meeting in your calendar with working CVI coordinates. 
 
 ## More information
 
