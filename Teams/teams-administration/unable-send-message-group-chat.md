@@ -27,3 +27,4 @@ The chat creator will receive the following error message if more than 200 membe
 This behavior is by design. Group chats can have up to 250 members but a maximum of 200 members can be added at a time.
 
 To avoid this error, add no more than 200 members to the group chat at once.
+
