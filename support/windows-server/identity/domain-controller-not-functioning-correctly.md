@@ -102,11 +102,11 @@ Modify the Gpttmpl.inf file to confirm that the appropriate users have the **Acc
 
     For Windows Server 2003 domain controllers:
 
-    SeNetworkLogonRight = *S-1-5-32-554,*S-1-5-9,*S-1-5-32-544,*S-1-1-0  
+    SeNetworkLogonRight = \*S-1-5-32-554,\*S-1-5-9,\*S-1-5-32-544,\*S-1-1-0  
 
     For Windows 2000 Server domain controllers:
 
-    SeNetworkLogonRight = *S-1-5-11,*S-1-5-32-544,*S-1-1-0  
+    SeNetworkLogonRight = \*S-1-5-11,\*S-1-5-32-544,\*S-1-1-0  
 
     > [!NOTE]
     > Administrators (S-1-5-32-544), Authenticated Users (S-1-5-11), Everyone (S-1-1-0), and Enterprise Controllers (S-1-5-9) use well-known security identifiers that are the same in every domain.

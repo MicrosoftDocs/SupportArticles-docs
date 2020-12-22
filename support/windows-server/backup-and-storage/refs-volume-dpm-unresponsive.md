@@ -47,7 +47,7 @@ This issue is resolved in the [July 18, 2017 cumulative update](https://support.
 > [!IMPORTANT]
 > Before you follow these steps, make sure that you have read and implemented the three registry parameters as described in [KB article 4016173](https://support.microsoft.com/help/4016173/fix-heavy-memory-usage-in-refs-on-windows-server-2016-and-windows-10). If these don't adequately address any issues that you encounter,do not disable these registry parameters. These parameters and the ones described in this section do not overlap functionally, so they can be used together.  
 
-This update describes more registry parameters that help address the latency issues described in the "Symptoms" section. These parameters can be used in any combination.  
+This update describes additional registry parameters that help address the latency issues described in the "Symptoms" section. These parameters can be used in any combination.  
 
 > [!Warning]
 > Serious problems might occur if you change the registry incorrectly by using Registry Editor or by using another method. These problems might require you to reinstall the operating system. Microsoft cannot guarantee that these problems can be resolved. Change the registry at your own risk.  

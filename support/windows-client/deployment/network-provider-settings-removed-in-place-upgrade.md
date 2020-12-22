@@ -52,8 +52,8 @@ To verify the network providers list, follow these steps:
 
 1. Open the **Run** box. To do this, press the Windows logo key (:::image type="content" source="./media/network-provider-settings-removed-in-place-upgrade/windows-logo-key.jpg" alt-text="Windows logo key" border="false":::)
 +R).
-2. Type *ncpa.cpl*, and then press **Enter**.
-3. Press the **Alt** key to open the menu bar.
+2. Type *ncpa.cpl*, and then press Enter.
+3. Press the Alt key to open the menu bar.
 4. Select **Advanced**, and then click **Advanced Settings**.
 
     :::image type="content" source="./media/network-provider-settings-removed-in-place-upgrade/advanced-settings.png" alt-text="Advanced Settings" border="false":::
