@@ -15,12 +15,16 @@ ms.technology: WindowsSecurity
 ---
 # Introduction to Account Lockout and Management Tools
 
-This article introduces [Account Lockout and Management Tools](https://www.microsoft.com/download/details.aspx?id=18465). This set of tools helps you manage accounts and troubleshoot account lockouts.
+This article introduces [Account Lockout and Management Tools](https://www.microsoft.com/download/details.aspx?id=18465) for Windows Server.
 
 _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4469275
 
-## Files in the Account Lockout and Management Tools package
+## Summary
+
+This article introduces Account Lockout and Management Tools. This set of tools helps you manage accounts and troubleshoot account lockouts.
+
+## More information
 
 The following files are included in the Account Lockout and Management Tools package:
 

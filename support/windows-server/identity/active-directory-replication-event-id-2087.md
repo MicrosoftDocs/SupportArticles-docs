@@ -109,7 +109,7 @@ To confirm that the domain controller is running AD DS and is accessible on the
 net view \\<SourceDomainControllerName>
 ```
 
-where \<SourceDomainControllerName> is the NetBIOS name of the domain controller.
+Where \<SourceDomainControllerName> is the NetBIOS name of the domain controller.
 
 This command displays the Netlogon and SYSVOL shares, indicating that the server is functioning as a domain controller. If this test shows that the domain controller is not functioning on the network, determine the nature of the disconnection and whether the domain controller can be recovered or whether its metadata must be removed from AD DS manually. If the domain controller is not functioning and cannot be restored, use the procedure in the following section, [Clean up domain controller metadata](#clean-up-domain-controller-metadata), to delete the data that is associated with that server from AD DS.
 
@@ -245,7 +245,7 @@ The basic DNS test checks the following:
     dcdiag /test:dns /s:<SourceDomainControllerName> /DnsBasic
     ```
 
-    where \<SourceDomainControllerName> is the distinguished name, NetBIOS name, or DNS name of the domain controller.
+    Where \<SourceDomainControllerName> is the distinguished name, NetBIOS name, or DNS name of the domain controller.
 
     As an alternative, you can test all domain controllers in the forest by typing `/e:` instead of `/s:`.
 
@@ -297,7 +297,7 @@ To verify dynamic updates, at a command prompt, type the following command, and 
 dcdiag /test:dns /s:<SourceDomainControllerName> /DnsDynamicUpdate
 ```
 
-where \<SourceDomainControllerName> is the distinguished name, NetBIOS name, or DNS name of the domain controller.
+Where \<SourceDomainControllerName> is the distinguished name, NetBIOS name, or DNS name of the domain controller.
 
 As an alternative, you can test all domain controllers by using the `/e:` switch instead of the `/s:` switch.
 

@@ -26,7 +26,7 @@ You can't copy and paste files between a system that is running [Virtual Machine
 
 ## Cause
 
-Enhanced Session Mode enables the transfer of files to and from virtual machines through the Clipboard copy-and-paste operations. However, if you enable the **Do not allow drive redirection policy** option, you disable copying and pasting files through the Clipboard.
+Enhanced Session Mode enables the transfer of files to and from virtual machines through the Clipboard copy-and-paste operations. However, if the **Do not allow drive redirection policy** option is enabled, copying and pasting files through the Clipboard is disabled.
 
 ## Resolution
 
@@ -35,7 +35,7 @@ To successfully copy files to and from Hyper-V virtual machines when you use VMC
 - Policy path: Computer Configuration\\Policies\\Administrative Templates\\Windows Components\\Terminal Services\\Terminal Server\\Device and Resource Redirection
 
     > [!NOTE]
-    > If you use the Local Group Policy Editor, the Policies folder is not part of the node path.  
+    > If you use the Local Group Policy Editor, the Policies folder is not part of the node path.
 
 - Policy setting: Do not allow drive redirection
 

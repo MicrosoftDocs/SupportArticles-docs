@@ -20,11 +20,9 @@ This article describes how to use the EventCombMT utility (EventCombmt.exe) to s
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 824209
 
-## Summary
+## More information
 
 EventCombMT is a multithreaded tool that you can use to search the event logs of several different computers for specific events, all from one central location. You can configure EventCombMT to search the event logs in a very detailed fashion.
-
-## Search parameters
 
 The following are some of the search parameters that you can specify:
 
@@ -37,11 +35,9 @@ The following are some of the search parameters that you can specify:
 
 Some specific search categories are built-in, such as Account Lockouts. The Account Lockouts search is preconfigured to include event IDs 529, 644, 675, 676, and 681. Additionally, you can add event ID 12294 to search for potential attacks against the Administrator account.
 
-## Download EventCombMT
-
 To download the EventCombMT utility, download [Account Lockout and Management Tools](https://www.microsoft.com/download/details.aspx?id=18465). The EventCombMT utility is included in the Account Lockout and Management Tools download (ALTools.exe).
 
-## Steps tp search the event logs for account lockouts
+To search the event logs for account lockouts, follow these steps:
 
 1. Start EventCombMT.
 2. On the **Options** menu, click **Set Output Directory**, select an existing folder, or click **New Folder** to create a new folder to save the output to, and then click **OK**.
