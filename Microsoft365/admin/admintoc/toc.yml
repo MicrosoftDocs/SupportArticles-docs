@@ -203,6 +203,10 @@
       href: ../installation/install-sara-from-intune.md
     - name: Desktop Setup Tool logging errors description
       href: ../installation/desktop-setup-tool-logging-errors.md
+    - name: Error 12 when installing Office Click-to-Run
+      href: ../installation/click-to-run-installation-error-12.md
+    - name: Error 30050-1039 (0) when installing M365 Apps for enterprise
+      href: ../installation/error-30050-1039-0.md
     - name: Error when uninstalling O365 Pro Plus
       href: ../installation/something-went-wrong-30016-4-error.md
     - name: Install Office 365 apps
@@ -239,8 +243,6 @@
       href: ../licensing/subscription-automatic-license-renew-fails.md
     - name: Office 365 subscription automatic license renewal fails
       href: ../licensing/subscription-license-renewal-fail.md
-    - name: Outlook Customer Manager group
-      href: ../licensing/outlook-customer-manager-group-creation.md
     - name: Use Office 365 PowerShell to manage Microsoft Planner licenses
       href: ../licensing/how-to-use-office-365-powershell-to-manage-microsoft-planner-licenses.md
   - name: Miscellaneous

@@ -9,7 +9,9 @@ search.appverid:
 audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Outlook for Windows
+- CSSTroubleshoot
 ms.author: v-six
 appliesto:
 - Outlook 2010

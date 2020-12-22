@@ -31,7 +31,7 @@ appliesto:
 
 You experience sign-in issues in a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune. Specifically, you see a pop-up dialog box that contains the following error message:
 
-    There was a problem that caused parts of the Microsoft Online Services Sign-in Assistant to be disabled. The problem may have been caused by a program that was recently installed.
+> There was a problem that caused parts of the Microsoft Online Services Sign-in Assistant to be disabled. The problem may have been caused by a program that was recently installed.
 
 ## Cause
 

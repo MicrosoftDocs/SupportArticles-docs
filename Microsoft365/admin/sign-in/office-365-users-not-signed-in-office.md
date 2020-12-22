@@ -19,28 +19,30 @@ appliesto:
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-## Problem 
+## Problem
 
-An Office 365 who is signed in to an Office app through their Active Directory account from a domain-joined computer signs out of the Office app. The next time that the user opens the Office app, they aren't automatically signed in. The user has to manually sign in to the Office app. 
+An Office 365 who is signed in to an Office app through their Active Directory account from a domain-joined computer signs out of the Office app. The next time that the user opens the Office app, they aren't automatically signed in. The user has to manually sign in to the Office app.
 
 ## Cause
 
-This is the expected behavior. When a user logs on to the on-premises environment by using their Active Directory account, the user is signed in to an Office app by using the same credentials. When the user signs out of an Office app, a registry key is set that prevents the user from being signed in automatically the next time that they open the Office app. 
+This is the expected behavior. When a user logs on to the on-premises environment by using their Active Directory account, the user is signed in to an Office app by using the same credentials. When the user signs out of an Office app, a registry key is set that prevents the user from being signed in automatically the next time that they open the Office app.
 
 ## Workaround
 
-Important Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration ](https://support.microsoft.com/help/322756) in case problems occur.
+> [!IMPORTANT]
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 Delete the SignedOutADUser registry key. To do this, follow these steps:
 
-1. Open Registry Editor.   
-2. Locate, and then click the following registry key:
+1. Open Registry Editor.
+1. Locate, and then click the following registry key:
 
-    **HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Common\Identity** 
-    
-    **Note** The <x.0> placeholder represents your version of Office (16.0= Office 2016, 15.0= Office 2013, 14.0 = Office 2010)
-1. Right-click the **SignedOutADUser** registry key, and then click **Delete**.    
-1. When you're prompted to confirm the deletion, click **Yes.**   
+    **HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Common\Identity**
+
+    > [!NOTE]
+    > The <x.0> placeholder represents your version of Office (16.0= Office 2016, 15.0= Office 2013, 14.0 = Office 2010)
+1. Right-click the **SignedOutADUser** registry key, and then click **Delete**.
+1. When you're prompted to confirm the deletion, click **Yes.**
 
 ## More information
 

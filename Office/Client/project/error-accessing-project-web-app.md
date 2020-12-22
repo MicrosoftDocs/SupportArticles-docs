@@ -24,9 +24,9 @@ appliesto:
 
 When you attempt to navigate to a PWA site, you may receive one of the following error messages:
 
-    Sorry this site has not been shared with you
-    Access denied
-    Let us know why you need access to this site
+> Sorry this site has not been shared with you  
+> Access denied  
+> Let us know why you need access to this site
 
 Subsequently, you cannot access Project Web App.
 

@@ -11,6 +11,7 @@ localization_priority: Normal
 search.appverid: 
 - MET150
 ms.custom: 
+- Outlook for Windows
 - CI 106387
 - CSSTroubleshoot
 ms.reviewer: Andrei.Ghita

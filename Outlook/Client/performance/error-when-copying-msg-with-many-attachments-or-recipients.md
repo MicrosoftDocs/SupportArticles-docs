@@ -14,6 +14,7 @@ search.appverid:
 appliesto:
 - All versions of Outlook
 ms.custom: 
+- Outlook for Windows
 - CI 111840
 - CSSTroubleshoot 
 ms.reviewer: sgriffin 

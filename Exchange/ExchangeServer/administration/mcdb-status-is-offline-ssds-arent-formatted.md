@@ -2,16 +2,17 @@
 title: MCDB status is Offline and SSDs aren't formatted in Exchange Server 2019
 description: Describes an issue in which Microsoft Exchange Server 2019 MCDB status is "Offline" and SSDs are not formatted when you use the Manage-MetaCacheDatabase.ps1 script to enable MCDB. Provides a workaround.
 author: TobyTu
-ms.author: Ralf.Leistner
+ms.author: ralfle
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
+- Exchange Server
 - CI 107238
 - CSSTroubleshoot
-ms.reviewer: Ralf.Leistner, EXOL_Triage
+ms.reviewer: ralfle
 appliesto:
 - Exchange Server 2019
 search.appverid: 
@@ -22,7 +23,7 @@ search.appverid:
 
 ## Symptoms
 
-Assume that you deploy Microsoft Exchange Server 2019 in Windows Server 2019. You use the **Manage-MetaCacheDatabase.ps1** script to enable [MetaCacheDatabase (MCDB)](https://docs.microsoft.com/exchange/high-availability/database-availability-groups/metacachedatabase-setup?view=exchserver-2019).
+Assume that you deploy Microsoft Exchange Server 2019 in Windows Server 2019. You use the **Manage-MetaCacheDatabase.ps1** script to enable [MetaCacheDatabase (MCDB)](https://docs.microsoft.com/exchange/high-availability/database-availability-groups/metacachedatabase-setup?view=exchserver-2019&preserve-view=true).
 
 For example:
 

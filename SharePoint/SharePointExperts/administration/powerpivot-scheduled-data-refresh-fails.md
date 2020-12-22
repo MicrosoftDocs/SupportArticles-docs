@@ -52,26 +52,28 @@ This issue occurs because SharePoint 2016 limits a single PowerPivot data source
 1. Add hardware to your data source to process queries faster.
 1. Use PowerShell to increase the default time out setting.
 
-   - Run the following commands in a SharePoint 2016 Administrator enabled PowerShell prompt.
+   - Run the following commands in a SharePoint 2016 Administrator enabled PowerShell prompt, modifying the "new_time_out_value" section to the desired timeout value.
      ```
      $farm = Get-SPFarm
      
-     #The time out value is in milliseconds, so be very careful to not set it too low!!!
+     #The time out value "new_time_out_value" is in milliseconds, so be very careful to not set it too low!!!
 
-     $farm.Properties.Add("WopiProxyRequestTimeout", 'new time out value');
+     $farm.Properties.Add("WopiProxyRequestTimeout", new_time_out_value);
 
      $farm.Update();
 
-     #to double-check the setting
+     #to double-check the setting (make sure it is of type Int32, otherwise you will need to remove the property an add it again
 
-     $farm.properties
+     $farm.Properties["WopiProxyRequestTimeout"].GetType()
      ```
 
-   - Run the following command to set a different value in the future.
+   - Run the following command to set a different value in the future or if you are having issues with the setting.
      ```
      $farm = Get-SPFarm
-
-     $farm.Properties.WopiProxyRequestTimeout = 'new time out value'
+     
+     $farm.properties.Remove("WopiProxyRequestTimeout")
+      
+     $farm.Properties.Add("WopiProxyRequestTimeout", new_time_out_value);
 
      $farm.update()
      ```

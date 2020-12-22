@@ -15,16 +15,18 @@
       href: ../authentication/manage-the-google-sign-in-prompt-in-outlook-2016.md
   - name: Calendars
     items:
-    - name: Can't open a shared Calendar folder
-      href: ../calendars/you-do-not-have-permission-error.md
-    - name: Can't propose a new meeting time
-      href: ../calendars/cannot-propose-a-new-time-for-a-meeting.md
     - name: Can't accept new meeting time proposals
       href: ../calendars/cannot-accept-new-meeting-time-proposals.md
     - name: Can't move a meeting between calendars
       href: ../calendars/cannot-move-meetings-between-calendars.md
     - name: Can't open a shared calendar
       href: ../calendars/cannot-open-shared-calendar.md
+    - name: Can't open a shared Calendar folder
+      href: ../calendars/you-do-not-have-permission-error.md
+    - name: Can't propose a new meeting time
+      href: ../calendars/cannot-propose-a-new-time-for-a-meeting.md
+    - name: Can't save a meeting as draft in Outlook for Mac via Office JS API
+      href: ../calendars/cannot-save-meeting-as-draft-in-outlook-for-mac.md
     - name: The Open Shared Calendar option is unavailable
       href: ../calendars/cannot-open-a-shared-calendar-in-outlook-2016.md
     - name: User with Free/Busy permission can't open another calendar
@@ -51,18 +53,20 @@
     items:
     - name: Font size differs from the original email
       href: ../email-messages/font-size-may-differ-from-original-email.md
-  - name: Files Folders
+  - name: Files and Folders
     items:
     - name: Outlook 2016 for Mac freezes on email folders
-      href: ../files-folders/outlook-2016-for-mac-freezes-on-email-folders.md
-  - name: Import Export
+      href: ../files-and-folders/outlook-2016-for-mac-freezes-on-email-folders.md
+  - name: Import/Export
     items:
     - name: Can't import .olm files into Outlook for Windows
-      href: ../import-export/cannot-import-olm-file-into-outlook-for-windows.md
+      href: ../import-and-export/cannot-import-olm-file-into-outlook-for-windows.md
     - name: Can't import an ANSI .pst file
-      href: ../import-export/cannot-import-ansi-pst-file.md
+      href: ../import-and-export/cannot-import-ansi-pst-file.md
+    - name: How to export contacts by using OWA
+      href: ../import-and-export/how-to-export-contacts-via-owa.md
     - name: Permissions error when importing Outlook 2011 identity
-      href: ../import-export/permissions-error-when-importing-outlook-2011-identity.md
+      href: ../import-and-export/permissions-error-when-importing-outlook-2011-identity.md
   - name: Installation
     items:
     - name: Outlook 2016 for Mac crashes after startup

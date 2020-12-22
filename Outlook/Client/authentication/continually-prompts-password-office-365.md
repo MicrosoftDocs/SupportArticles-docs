@@ -10,6 +10,7 @@ audience: ITPro
 ms.prod: office-perpetual-itpro
 ms.topic: article
 ms.custom: 
+- Outlook for Windows
 - CSSTroubleshoot
 - OutlookPwdPrompt
 ms.author: v-six

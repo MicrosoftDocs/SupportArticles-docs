@@ -4,8 +4,10 @@ description: Describes an issue in which an incorrect user name or password is e
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
-ms.custom: CSSTroubleshoot
+ms.topic: troubleshooting
+ms.custom: 
+- Exchange Online
+- CSSTroubleshoot
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
@@ -14,12 +16,11 @@ search.appverid:
 appliesto:
 - Exchange Online
 ---
+# (Access is denied) error when you connect to Exchange Online by using remote Windows PowerShell
 
-# "Access is denied" error when you connect to Exchange Online by using remote Windows PowerShell
+## Problem
 
-## Problem 
-
-When you try to connect to Microsoft Exchange Online by using remote Windows PowerShell, you receive the following error message: 
+When you try to connect to Microsoft Exchange Online by using remote Windows PowerShell, you receive the following error message:
 
 ```asciidoc
 [outlook.office365.com] Connecting to remote server failed with the following error message: Access is
@@ -43,23 +44,23 @@ At D:\Users\Connect.ps1:7 char:21
 ParameterArgumentValidationError,Microsoft.PowerShell.Commands.ImportPSSessionCommand
 ```
 
-## Cause 
+## Cause
 
-This issue occurs for one of the following reasons: 
+This issue occurs for one of the following reasons:
 
-- You enter an incorrect user name or password.   
-- You try to sign in to the service by using an account that doesn't have access to Exchange Online.   
+- You enter an incorrect user name or password.
+- You try to sign in to the service by using an account that doesn't have access to Exchange Online.
 
-## Solution 
+## Solution
 
 To resolve this issue, use the Exchange admin center in Office 365 to add the user as a member of the administrator role group. To do this, follow these steps:
 
-1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)) as an administrator.    
-2. Click **Admin**, and then click **Exchange**.    
-3. Click **permissions**, and then click  **admin roles**.    
-4. Double-click the role group to which you want to add the user. For example, if you want the user to have full access that includes Windows PowerShell, double-click **Organization Management**.    
-5. To add the user to the list, click **Add** (![Add icon](./media/access-denied-connect-powershell/add.png)) under **Members**.   
-6. Click **Save**.   
+1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)) as an administrator.
+2. Click **Admin**, and then click **Exchange**.
+3. Click **permissions**, and then click **admin roles**.
+4. Double-click the role group to which you want to add the user. For example, if you want the user to have full access that includes Windows PowerShell, double-click **Organization Management**.
+5. To add the user to the list, click **Add** (![Add icon](./media/access-denied-connect-powershell/add.png)) under **Members**.
+6. Click **Save**.
 
 ## More information
 

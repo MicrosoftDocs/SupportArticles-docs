@@ -86,7 +86,7 @@ To illustrate LOGEST with the third argument set to FALSE, follow these steps:
    - In Microsoft Office Excel 2007, click the **Home** tab, click **Format** in the **Cells** group, and then click **AutoFit Column Width**.
    - In Excel 2003 and in earlier versions of Excel, point to **Column** on the **Format** menu, and then click **AutoFit Selection**.
 
-|Third argument set to FALSE||||||||
+|Third argument set to FALSE|B|C|D|E|F|G|H|
 |---|---|---|---|---|---|---|---|
 ||||Excel 2002 and earlier versions of Excel
 |||Excel 2003 and later versions of Excel||
@@ -130,8 +130,9 @@ To illustrate LOGEST collinearity, follow these steps:
    - In Excel 2007, click the **Home** tab, click **Format** in the **Cells** group, and then click **AutoFit Column Width**.
    - In Excel 2003 and in earlier versions of Excel, point to **Column** on the **Format** menu, and then click **AutoFit Selection**.
 
-|Y's|X's||||||||||
+|A|B|C|D|E|F|G|H|I|J|K|
 |---|---|---|---|---|---|---|---|---|---|---|
+|Y's|X's||||||||||
 |=EXP(A23)|1|2|1||||||||
 |=EXP(A24)|3|4|1||||||||
 |=EXP(A25)|4|5|1||||||||

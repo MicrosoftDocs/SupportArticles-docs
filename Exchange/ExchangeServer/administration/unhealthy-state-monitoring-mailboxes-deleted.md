@@ -2,13 +2,14 @@
 title: Unhealthy state of Exchange servers when monitoring mailboxes are deleted
 description: Get-ServerHealth shows health sets in an Unhealthy state because the monitoring mailboxes are deleted. Provides a resolution.
 author: TobyTu
-ms.author: chris.mcgurk
+ms.author: cmcgurk
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
+- Exchange Server
 - CI 115307
 - CSSTroubleshoot
 ms.reviewer: chris.mcgurk

@@ -8,7 +8,9 @@ ms.topic: article
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Exchange Server
+- CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
@@ -66,4 +68,4 @@ In this configuration, Exchange Server requires Send As permissions to send the 
 
 ## Resolution
 
-Grant Send As permission to the user for the shared mailbox. For information about how to do this in the EAC or by using PowerShell, see [Manage permissions for recipients](https://technet.microsoft.com/library/jj919240%28v=exchg.160%29.aspx).
+Grant Send As permission to the user for the shared mailbox. For information about how to do this in the EAC or by using PowerShell, see [Manage permissions for recipients](/Exchange/recipients/mailbox-permissions?redirectedfrom=MSDN&view=exchserver-2019&preserve-view=true).

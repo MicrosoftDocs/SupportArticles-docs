@@ -27,9 +27,9 @@ appliesto:
 
 When you try to set up additional security verification settings for Microsoft Azure Multi-Factor Authentication, you receive the following message:
 
-    Sorry! We can't process your request. Your session is invalid or expired.
-
-    There was an error processing your request because your session is invalid or expired. Please try again.
+> Sorry! We can't process your request. Your session is invalid or expired.
+>
+> There was an error processing your request because your session is invalid or expired. Please try again.
 
 This issue occurs if you waited too long to complete the Azure Multi-Factor Authentication set up process for the user. 
 

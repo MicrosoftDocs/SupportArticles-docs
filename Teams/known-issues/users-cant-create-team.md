@@ -32,6 +32,4 @@ Your company may have set a policy restricting who can create Office 365 groups 
 
 Check with your IT admin to understand your company's policy for creating groups and teams. 
 
-## More information
-
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -41,6 +41,8 @@
       href: ../server-configuration/central-management-store-replication-failures.md
     - name: Check the version of Skype for Business 2016
       href: ../server-configuration/check-version-of-skype-for-business-2016.md
+    - name: Collect log files from Skype for Business Client
+      href: ../server-configuration/collect-log-files.md
     - name: Disable Automatic Gain Control
       href: ../server-configuration/disable-automatic-gain-control.md
     - name: Disable contextual tips
@@ -87,6 +89,8 @@
     items:
     - name: Contact card shows phone number instead of name
       href: ../server-contacts/contact-card-not-display-phone-number.md
+    - name: Didn't find an organizational chart
+      href: ../server-contacts/not-find-organizational-chart-error.md
     - name: Duplicated working numbers for contacts
       href: ../server-contacts/duplicated-working-numbers-for-contacts.md
     - name: Maximum Followers Reached in contact card
@@ -209,3 +213,9 @@
       href: ../server-sign-in/registry-settings-overwritten-when-sign-in.md
     - name: Newly created users can't sign in 
       href: ../server-sign-in/newly-created-users-cant-sign-in.md
+    - name: SideBySide event ID 35 is logged
+      href: ../server-sign-in/sidebyside-event-id-35-logged.md
+    - name: Sign-in error when creating or joining a meeting
+      href: ../server-sign-in/create-join-meeting-sign-in-error.md
+    - name: Troubleshoot issues related to Skype for Business sign-in
+      href: ../../SkypeOnline/online-sign-in/troubleshoot-issues-related-skype-for-business-sign-in.md?toc=/SkypeforBusiness/troubleshoot/servertoc/toc.json&bc=/SkypeforBusiness/troubleshoot/breadcrumb/toc.json

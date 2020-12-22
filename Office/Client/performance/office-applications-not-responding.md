@@ -31,7 +31,7 @@ Starting in Microsoft Office 2013, the Office suite of applications takes advant
 
 The following Intel graphics driver versions cause this problem.
 
-|   |
+|Version |
 | - |
 |26.20.100.6951|
 |26.20.100.6952|
@@ -39,6 +39,7 @@ The following Intel graphics driver versions cause this problem.
 |26.20.100.6999|
 |26.20.100.7000|
 |26.20.100.7063|
+||
 
 ## Resolution
 
@@ -62,13 +63,14 @@ Office has shipped a fix for specific Office versions. The fix will detect wheth
 
 The versions of Office that contain this fix are the following.
 
-|   |   |
+| Release  | Version  |
 | - | - |
 | 1911 (November 2019) | 16.0.12325.20120 |
 | 1910 (October 2019) | 16.0.12228.20364 |
 | 1907 (July 2019) | 16.0.11929.20516 |
 | 1901 (January 2019) | 16.0.11328.20492 |
 | Office Insiders | 16.0.12406.20000 |
+|||
 
 To fix the problem, update your Office installation.
 
@@ -97,6 +99,4 @@ For these users, updating Office to a version that has the fix will not help. Th
 
 Some computers have third-party software that dictates how the Nvidia Optimus driver operates. It might be possible to configure these computers not to use the Intel graphics adapter. Contact the third-party vendor for instructions about how to do this.
 
-### Third-party information disclaimer
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]

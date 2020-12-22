@@ -4,17 +4,18 @@ description: Describes an issue in which Outlook Web App attachments can't be vi
 author: simonxjx
 audience: ITPro
 ms.service: exchange-online
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Exchange Online
+- CSSTroubleshoot
 search.appverid: 
 - MET150
 appliesto:
 - Exchange Online
 ---
-
 # Office 365 users can't open or view attachments in Outlook Web App
 
 ## Problem

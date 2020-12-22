@@ -9,15 +9,16 @@ ms.topic: troubleshooting
 ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Online
+- CSSTroubleshoot
+- 'Associated content asset: 4555312'
 ms.reviewer: jmartin
 appliesto: 
 - Exchange Online
 - Microsoft 365 Apps for enterprise
 search.appverid: MET150
 ---
-
-# "550 5.1.1 RESOLVER.ADR.ExRecipNotFound" NDR error message when you send email messages by using Outlook in Office 365
+# (550 5.1.1 RESOLVER.ADR.ExRecipNotFound) NDR error message when you send email messages by using Outlook in Office 365
 
 _Original KB number:_ &nbsp; 2784785
 
@@ -54,16 +55,12 @@ These issues may occur if one of the following conditions is true:
 
 To resolve these issues, follow these steps:
 
-1. Reset the nickname and the autocomplete caches in Outlook. For more information about how to do this, click the following article number to view the article in the Microsoft Knowledge Base:
-
-   > [2199226](https://support.microsoft.com/help/2199226) Information about the Outlook AutoComplete list
+1. Reset the nickname and the autocomplete caches in Outlook. For more information about how to do this, see [Information about the Outlook AutoComplete list](/outlook/troubleshoot/contacts/information-about-the-outlook-autocomplete-list).
 1. If you reply to a migrated message, type the whole email address of the recipient again. If the Autocomplete feature tries to input the recipient name or address for you, click the 'X' to delete the entry, and then manually type the whole email address again.
 
    ![A screen shot of the To line, showing the auto-populated address and the ](./media/exrecipnotfound-ndr/delete-entry.jpg)
 
-1. Make sure that the Offline Address Book is operating correctly. For more information about how to troubleshoot the Offline Address Book, click the following article number to view the article in the Microsoft Knowledge Base:
-
-   > [2429946](https://support.microsoft.com/help/2429946) How to troubleshoot the Outlook Offline Address Book in an Office 365 environment
+1. Make sure that the Offline Address Book is operating correctly. For more information about how to troubleshoot the Offline Address Book, see [How to troubleshoot the Outlook Offline Address Book in a Microsoft 365 environment](https://support.microsoft.com/office/how-to-troubleshoot-the-outlook-offline-address-book-in-a-microsoft-365-environment-af66162b-92ad-4e41-bf08-2b597c34d7a8).
 
 ## More information
 

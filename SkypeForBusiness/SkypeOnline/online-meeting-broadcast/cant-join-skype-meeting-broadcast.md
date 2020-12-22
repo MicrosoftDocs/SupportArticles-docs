@@ -51,8 +51,6 @@ For more information, see the following Microsoft websites:
 - [Set up your network for Skype Meeting Broadcast](https://support.office.com/article/set-up-skype-meeting-broadcast-dfa736b9-4920-4f48-b8c0-b5487ec6086f)   
 - [Office 365 URLs and IP address ranges](https://go.microsoft.com/fwlink/?linkid=512957&clcid=0x409)
 
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

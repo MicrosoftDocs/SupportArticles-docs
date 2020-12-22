@@ -25,11 +25,11 @@ appliesto:
 
 When you try to install [Visual Studio 2010 Tools for Office Runtime](https://www.microsoft.com/download/details.aspx?id=48217), you receive the following error message:
 
-    Generic Trust Failure (0x800B010B)
+> Generic Trust Failure (0x800B010B)
 
 Additionally, an error message that resembles the following is logged in the MSI log:
 
-    c:\<temp folder>\vstor40\vstor40_x64.exe - Signature verification for file vstor40\vstor40_x64.exe (c:\<temp folder>\vstor40\vstor40_x64.exe) failed with error 0x800b010a (A certificate chain could not be built to a trusted root authority.) No FileHash provided. Cannot perform FileHash verification for vstor40\vstor40_x64.exe File vstor40\vstor40_x64.exe (c:\<temp folder>\vstor40\vstor40_x64.exe), failed authentication. (Error = -2146762486). It is recommended that you delete this file and retry setup again. ServiceControl operation succeeded! Final Result: Installation failed with error code: (0x800B010B), "Generic trust failure."
+> c:\\\<temp folder>\vstor40\vstor40_x64.exe - Signature verification for file vstor40\vstor40_x64.exe (c:\\\<temp folder>\vstor40\vstor40_x64.exe) failed with error 0x800b010a (A certificate chain could not be built to a trusted root authority.) No FileHash provided. Cannot perform FileHash verification for vstor40\vstor40_x64.exe File vstor40\vstor40_x64.exe (c:\\\<temp folder>\vstor40\vstor40_x64.exe), failed authentication. (Error = -2146762486). It is recommended that you delete this file and retry setup again. ServiceControl operation succeeded! Final Result: Installation failed with error code: (0x800B010B), "Generic trust failure."
 
 ##  Cause
 

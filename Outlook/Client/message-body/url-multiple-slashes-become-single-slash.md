@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
+- Outlook for Windows
 - CI 106818
 - CSSTroubleshoot
 ms.reviewer: gbratton

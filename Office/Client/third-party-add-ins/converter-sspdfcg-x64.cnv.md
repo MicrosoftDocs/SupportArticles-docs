@@ -33,6 +33,4 @@ Word cannot start the converter SSPDFCG_X64.cnv
 
 This issue may occur if you have Nuance software installed on your computer. For information about how to resolve this issue, see the [Nuance website](http://nuance.custhelp.com/app/answers/detail/a_id/6639/~/a-word-cannot-start-the-converter-sspdfcg_x64.cnv-message-appears-when):
 
-**Third-party information disclaimer**
-
- Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]

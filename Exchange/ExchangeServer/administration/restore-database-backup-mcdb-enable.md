@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
+- Exchange Server
 - CI 111330
 - CSSTroubleshoot
 ms.reviewer: jeffrem,robwhal
@@ -32,12 +33,14 @@ MCDB becomes linked to the primary database when the database is backed up. Beca
 
 To fix this issue, run ESEutil on the database by using the following commands:
 
-    Eseutil /r E01 /d "E:\Databases\RDB1" /i
+```console
+Eseutil /r E01 /d "E:\Databases\RDB1" /i
+```
 
 This example shows a log generation prefix of E01 and a recovery database path of `E:\Databases\RDB1`.
 
 ## More information
 
-MCDB is a new feature in Exchange Server 2019 that enables solid state drives to cache the most frequently used data from a database. For more information, see [MetaCacheDatabase (MCDB) setup](https://docs.microsoft.com/exchange/high-availability/database-availability-groups/metacachedatabase-setup?view=exchserver-2019).
+MCDB is a new feature in Exchange Server 2019 that enables solid state drives to cache the most frequently used data from a database. For more information, see [MetaCacheDatabase (MCDB) setup](https://docs.microsoft.com/exchange/high-availability/database-availability-groups/metacachedatabase-setup).
 
 For detailed steps about how to recover a database, see [Restore data using a recovery database](https://docs.microsoft.com/exchange/restore-data-using-a-recovery-database-exchange-2013-help#use-the-shell-to-recover-data-using-a-recovery-database)
