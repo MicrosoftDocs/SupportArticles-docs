@@ -20,8 +20,9 @@ search.appverid:
 
 # User information isn't updated in Microsoft Teams
 
-When Microsoft Teams users' attributes like display name, phone number, manager, or profile photo have been updated, the users still see the old information in the Teams client. This behavior is by design.
+After user attributes are updated in Microsoft Teams, users continue to see the old information in the Teams client. User attributes include such information as display name, telephone number, manager, and profile photo.
 
-## More information
+This behavior is by design. 
 
-The Teams service caches general user information for up to three days. The Teams client also caches general user information locally. For data like display names and phone numbers, it can up to 28 days. For profile picture, it can up to 60 days.   This architecture is designed for capacity and performance optimization.
+Teams has a caching scheme that is designed for capacity and performance optimization. The Teams service caches general user information for up to three days. The Teams client also caches general user information locally. Some data, such as display name and telephone number, can be cached up to 28 days. Profile photos can be cached up to 60 days.
+
