@@ -66,6 +66,8 @@
       href: ./known-issues/organizer-cant-start-teams-meeting.md
     - name: PSTN callers with the same "From" number are shown as the same user
       href: ./known-issues/pstn-callers-shown-with-same-call-in-number.md
+    - name: Skype for Business broadcasts a dial tone
+      href: /skypeforbusiness/troubleshoot/server-conferencing/sfb-play-dial-tone-teams-call?context=/MicrosoftTeams/troubleshoot/context/context
     - name: Skype for Business required for some meetings instead of Teams
       href: ./known-issues/meeting-requires-skype-instead-of-teams.md
     - name: Static conference ID not supported for Teams meetings
