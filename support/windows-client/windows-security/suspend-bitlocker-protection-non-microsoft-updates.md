@@ -51,7 +51,7 @@ Here’s how to suspend BitLocker protection:
 
 1. Go to Start.
 2. Go to Search, enter the word *PowerShell*, press and hold (or right-click) **Windows PowerShell**, and then select **Run as administrator**.
-3. In the **Administrator: Windows PowerShell** window, enter the following command and press **Enter**:
+3. In the **Administrator: Windows PowerShell** window, enter the following command and press Enter:
 
     ```powershell
     Suspend-BitLocker -MountPoint "C:" -RebootCount 0 
@@ -64,7 +64,7 @@ Here’s how to resume BitLocker protection:
 
 1. Go to Start.
 2. Go to Search, enter the word *PowerShell*, press and hold (or right-click) **Windows PowerShell**, and then select **Run as administrator**.
-3. In the **Administrator: Windows PowerShell** window, enter the following command and press **Enter**:
+3. In the **Administrator: Windows PowerShell** window, enter the following command and press Enter:
 
     ```powershell
     Resume-BitLocker -MountPoint "C:" 
