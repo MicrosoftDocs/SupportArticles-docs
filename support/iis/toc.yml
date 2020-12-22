@@ -86,6 +86,8 @@
     href: express-not-supported-production-environment.md
   - name: Instances where HTTP.sys doesn't cache
     href: instances-httpsys-not-cache.md
+  - name: Can't access Web sites when security event log is full
+    href: users-cannot-access-web-sites-when-log-full.md
 
 - name: Health, diagnostic, and performance features
   items:
@@ -198,14 +200,22 @@
 
 - name: WWW administration and management
   items:
+  - name: Access to remote resources fails
+    href: remote-resources-fails-requested-iis.md
   - name: Content types for HTTP compression
     href: content-types-http-compression.md
   - name: Enable SSL for all customers
     href: enable-ssl-all-customers.md
+  - name: Error when you configure 32-bit managed handlers
+    href: error-when-you-configure-32-bit-handlers.md
   - name: HTTP error 400 when you send requests
     href: http-bad-request-response-kerberos.md
   - name: HTTP status code
     href: http-status-code.md
+  - name: HTTPS connections fail and SSL bindings are deleted
+    href: https-connections-fail-ssl-bindings-deleted.md
+  - name: IIS events are not displayed remotely
+    href: iis-events-not-display-remotely.md
 
 - name: WWW authentication and authorization
   items:
@@ -237,6 +247,12 @@
     href: 401-error-preauthentication-header.md
   - name: HTTP error 403.7
     href: http-403-forbidden-open-webpage.md
+  - name: IIS authenticates browser clients
+    href: iis-authenticates-browser-client.md
+  - name: IIS may reject requests with HTTP 403.7 or 403.16 errors
+    href: errors-403-7-reject-client-certificate-rquest.md
+  - name: Information associated with IIS site isn't deleted
+    href: information-associated-iis-site-is-not-deleted.md
   - name: Impersonation fails when UAC is enabled
     href: impersonation-fails-uac-enabled.md
   - name: Read and analyze a client certificate
