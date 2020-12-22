@@ -109,6 +109,7 @@ For more information, see [Description of the way that Excel saves files](https:
 > [!NOTE]
 > Other processes that occur on your computer may disrupt the Excel save process. These issues may occur if the Excel temporary file is accessed before the Excel save process is completed. For example, the local antivirus software locks the temporary file for scanning before the file can be renamed. Therefore, you must keep track of any new software installations or updates that are performed before you have problems when you try to save workbooks. This information will be helpful if this article does not fix your issue and you have to contact [Microsoft Support](https:/support.microsoft.com).
 
+---
 
 ## Quick resolution
 
