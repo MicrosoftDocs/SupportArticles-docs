@@ -356,8 +356,8 @@
       href: ./identity/dcpromo-replication-phase-error.md
     - name: Move Windows Server to a domain fails
       href: ./identity/wizard-not-gain-access-to-domain.md
-    - name: DCPromo and the installation of domain controllers
-      href: ./identity/NETLOGON share isn't present after you install AD DS on a new full or read-only domain controller.md
+    - name: NETLOGON share isn't present after you install AD DS on a new full or read-only domain controller
+      href: ./identity/netlogon-share-not-present-after-install-ad-ds-on-full-read-only-domain-controller.md
     - name: Newly promoted domain controller fails to advertise after DCpromo
       href: ./identity/newly-promoted-domain-controller-fail-advertise.md
   - name: Domain controller scalability or performance (including LDAP)

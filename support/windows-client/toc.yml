@@ -666,8 +666,6 @@
       href: ./performance/read-small-memory-dump-file.md
     - name: Stop error 0xE6 for a wireless device driver
       href: ./performance/stop-error-0xe6-wireless-device-driver-dmar.md
-    - name: Stop error code 0x000000E3
-      href: ./performance/stop-error-code-0x000000e3-resource-not-owned.md
     - name: Stop error on Lenovo ThinkPad with KB4568831 update
       href: ./performance/stop-error-lenovo-thinkpad-kb4568831-uefi.md
     - name: Tablet device creates only a minidump file
