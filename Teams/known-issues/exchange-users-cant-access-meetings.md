@@ -1,5 +1,5 @@
 ---
-title: Safari Intelligent Tracking Prevention errors in Teams
+title: Can't access meetings or connectors with blocked EWS
 ms.author: v-todmc
 author: McCoyBot
 ms.date: 4/9/2020
@@ -17,7 +17,7 @@ ms.custom:
 - CI 113425
 - CSSTroubleshoot 
 ms.reviewer: scapero
-description: Describes a resolution to an issue with Safari's Intelligent Tracking Prevention in Teams.
+description: Describes a resolution to an issue in which you can't access meetings or connectors when you have actively blocked EWS from services within Exchange Online.
 ---
 
 # Users with Exchange Online mailboxes can't access meetings or connectors 
@@ -47,6 +47,6 @@ Set-organizationconfig -EwsAllowList @{Add="MicrosoftNinja/*","SkypeSpaces/*"}
 
 ## More information
 
-For more information, see the Microsoft article on [Set-OrganizationConfig](https://docs.microsoft.com/powershell/module/exchange/organization/Set-OrganizationConfig?view=exchange-ps).
+For more information, see the Microsoft article on [Set-OrganizationConfig](https://docs.microsoft.com/powershell/module/exchange/organization/Set-OrganizationConfig).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

@@ -2,16 +2,17 @@
 title: An item with the specified id wasn't found in the store error when adding reviewer permission to public folder calendar
 description: This article provides three workarounds that help you fix an issue where you are unable to add Reviewer permission by using PowerShell commands.
 author: TobyTu
-ms.author: Bhalchandra.Atre
+ms.author: batre
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
+ms.topic: troubleshooting 
 ms.service: exchange-online
 localization_priority: Normal
 ms.custom: 
+- Exchange Online
 - CI 114868
 - CSSTroubleshoot
-ms.reviewer: Bhalchandra.Atre
+ms.reviewer: batre
 appliesto:
 - Exchange Online
 search.appverid: 
@@ -24,16 +25,15 @@ search.appverid:
 
 When you try to add a reviewer permission to a public folder calendar by using Exchange Online PowerShell, you receive the following error message:
 
-```
+```powershell
 Add-PublicFolderClientPermission -Identity "\publiccalendartest" -User "User" -AccessRights Reviewer
-
-An item with the specified id 'LgAAAAAaRHOQqmYRzZvIAKoAL8RaAwBUKPrqV1IcSb2sevrqOMn6AAAAAAAkAAAB' wasn't found in the store.
-    + CategoryInfo          : NotSpecified: (:) [Add-PublicFolderClientPermission], ObjectNotFoundException
-    + FullyQualifiedErrorId : [Server=DM6PR01MB4009,RequestId=46aec6d8-b520-4c95-902e-c94959c7cf71,TimeStamp=3/12/2020
-    6:09:26 AM] [FailureCategory=Cmdlet-ObjectNotFoundException] 3B5600ED,Microsoft.Exchange.Management.StoreTasks.Ad
-  dPublicFolderClientPermission
-    + PSComputerName        : outlook.office365.com
 ```
+
+> An item with the specified id 'LgAAAAAaRHOQqmYRzZvIAKoAL8RaAwBUKPrqV1IcSb2sevrqOMn6AAAAAAAkAAAB' wasn't found in the store.  
+    + CategoryInfo          : NotSpecified: (:) [Add-PublicFolderClientPermission], ObjectNotFoundException  
+    + FullyQualifiedErrorId : [Server=<*ServerName*>,RequestId=<*RequestId*>,TimeStamp=3/12/2020
+    6:09:26 AM] [FailureCategory=Cmdlet-ObjectNotFoundException] 3B5600ED,Microsoft.Exchange.Management.StoreTasks.AddPublicFolderClientPermission  
+    + PSComputerName        : outlook.office365.com
 
 ## Workarounds
 

@@ -54,5 +54,4 @@ Prevent Access from using outer joins in queries, or run outer joins within pass
 
 - [Process SQL on a database server by using a pass-through query](https://support.office.com/article/Process-SQL-on-a-database-server-by-using-a-pass-through-query-B775AC23-8A6B-49B2-82E2-6DAC62532A42)
 
-[**Third-party information disclaimer**](https://support.microsoft.com/help/303968)  
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]

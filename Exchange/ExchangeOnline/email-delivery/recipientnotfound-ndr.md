@@ -9,14 +9,14 @@ ms.topic: troubleshooting
 ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Online
+- CSSTroubleshoot
 ms.reviewer: neozhu
 appliesto: 
 - Exchange Online
 search.appverid: MET150
 ---
-
-# "550 5.1.10 RESOLVER.ADR.RecipientNotFound" NDR error when an Office 365 user tries to send mail to on-premises users in a hybrid deployment
+# (550 5.1.10 RESOLVER.ADR.RecipientNotFound) NDR error when an Office 365 user tries to send mail to on-premises users in a hybrid deployment
 
 _Original KB number:_&nbsp;3197393
 
@@ -50,24 +50,28 @@ To resolve this problem, create a remote mailbox in the on-premises environment 
 
         For more information, see [Connect to Exchange Online PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.160%29.aspx).
 
-   1. Use the Get-Mailbox cmdlet to retrieve the value of the ExchangeGuid property of the cloud mailbox. For example, run the following command:
+   1. Use the Get-Mailbox cmdlet to retrieve the value of the `ExchangeGuid` property of the cloud mailbox. For example, run the following command:
 
-        `Get-Mailbox <MailboxName>| FL ExchangeGuid`
+        ```powershell
+        Get-Mailbox <MailboxName>| FL ExchangeGuid
+        ```
 
         For more information, see [Get-Mailbox](https://technet.microsoft.com/library/bb123685%28v=exchg.160%29.aspx).
 
    1. Open the Exchange Management Shell on the on-premises Exchange server.
-   1. Use the Set-RemoteMailbox cmdlet to set the value of the ExchangeGuid property on the on-premises object to the value that you retrieved in step 2b. For example, run the following command:
+   1. Use the `Set-RemoteMailbox` cmdlet to set the value of the `ExchangeGuid` property on the on-premises object to the value that you retrieved in step 2b. For example, run the following command:
 
-    `Set-RemoteMailbox <MailboxName> -ExchangeGuid <GUID>`
+      ```powershell
+      Set-RemoteMailbox <MailboxName> -ExchangeGuid <GUID>
+      ```
 
-    For more information, see [Set-RemoteMailbox](https://technet.microsoft.com/library/ff607302%28v=exchg.160%29.aspx).
+      For more information, see [Set-RemoteMailbox](https://technet.microsoft.com/library/ff607302%28v=exchg.160%29.aspx).
 
 1. Wait for directory synchronization to occur. Or, force directory synchronization.
 
     For more information, see [Synchronize your directories](https://technet.microsoft.com/library/jj151771.aspx).
 
-1. Make sure that the Office 365 user object is displayed as "Synced with Active Directory."
+1. Make sure that the Office 365 user object is displayed as **Synced with Active Directory**.
 
 ## More information
 

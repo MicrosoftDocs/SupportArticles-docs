@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Outlook for Windows
+- CSSTroubleshoot
 ms.reviewer: sercast
 appliesto:
 - Outlook 2016
@@ -42,18 +43,18 @@ To start the Inbox Repair tool manually, locate one of the folders by using Micr
 
 | Typical location| Remark |
 |---|---|
-| \<disk drive>\Program Files(x86)\Microsoft Office\root\Office16| For Outlook 2016 Click-to-Run installation on a 64-bit version of Windows |
-| \<disk drive>\Program Files\Microsoft Office\root\Office16| For Outlook 2016 Click-to-Run installation on a 32-bit version of Windows |
-| \<disk drive>\Program Files(x86)\Microsoft Office\Office16| For Outlook 2016 MSI-based installation on a 64-bit version of Windows |
-| \<disk drive>\Program Files\Microsoft Office\Office16| For Outlook 2016 MSI-based installation on a 32-bit version of Windows |
-| \<disk drive>\Program Files\Microsoft Office 15\root\office15| For Outlook 2013 Click-to-Run installation on a 32-bit version of Windows |
-| \<disk drive>\Program Files(x86)\Microsoft Office 15\root\office15| For Outlook 2013 Click-to-Run installation on a 64-bit version of Windows |
-| \<disk drive>\Program Files\Microsoft Office\Office15| For Outlook 2013 MSI-based installation on a 32-bit version of Windows |
-| \<disk drive>\Program Files(x86)\Microsoft Office\Office15| For Outlook 2013 MSI-based installation on a 64-bit version of Windows |
-| \<disk drive>:\Program Files\Microsoft Office\Office14| For Outlook 2010 on a 32-bit version of Windows |
-| \<disk drive>:\Program Files\Microsoft Office(x86)\Office14| For Outlook 2010 on a 64-bit version of Windows |
-| \<disk drive>:\Program Files\Microsoft Office\Office12| For Outlook 2007 on a 32-bit version of Windows |
-| \<disk drive>:\Program Files(x86)\Microsoft Office\Office12| For Outlook 2007 on a 64-bit version of Windows |
+| \<disk drive>\Program Files(x86)\Microsoft Office\root\Office16| For Outlook 2016 Click-to-Run installation on a 32-bit version of Windows |
+| \<disk drive>\Program Files\Microsoft Office\root\Office16| For Outlook 2016 Click-to-Run installation on a 64-bit version of Windows |
+| \<disk drive>\Program Files(x86)\Microsoft Office\Office16| For Outlook 2016 MSI-based installation on a 32-bit version of Windows |
+| \<disk drive>\Program Files\Microsoft Office\Office16| For Outlook 2016 MSI-based installation on a 64-bit version of Windows |
+| \<disk drive>\Program Files\Microsoft Office 15\root\office15| For Outlook 2013 Click-to-Run installation on a 64-bit version of Windows |
+| \<disk drive>\Program Files(x86)\Microsoft Office 15\root\office15| For Outlook 2013 Click-to-Run installation on a 32-bit version of Windows |
+| \<disk drive>\Program Files\Microsoft Office\Office15| For Outlook 2013 MSI-based installation on a 64-bit version of Windows |
+| \<disk drive>\Program Files(x86)\Microsoft Office\Office15| For Outlook 2013 MSI-based installation on a 32-bit version of Windows |
+| \<disk drive>:\Program Files\Microsoft Office\Office14| For Outlook 2010 on a 64-bit version of Windows |
+| \<disk drive>:\Program Files\Microsoft Office(x86)\Office14| For Outlook 2010 on a 32-bit version of Windows |
+| \<disk drive>:\Program Files\Microsoft Office\Office12| For Outlook 2007 on a 64-bit version of Windows |
+| \<disk drive>:\Program Files(x86)\Microsoft Office\Office12| For Outlook 2007 on a 32-bit version of Windows |
 | \<disk drive>:\Program Files\Common Files\System\Mapi\1033\| Other typical location |
 | \<disk drive>:\Program Files\Common Files\System\MSMAPI\1033| Other typical location |
 | \<disk drive>:\Program Files\Common Files\System\Mapi\1033\NT| Other typical location (for Windows NT and Windows 2000) |

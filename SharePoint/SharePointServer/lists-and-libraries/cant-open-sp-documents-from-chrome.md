@@ -58,9 +58,7 @@ The following workaround lets you temporarily enable NPAPI plug-ins:
 
 Alternatively, you can open the file in the browser by using Office Web Apps, and then click the button from the web editor to open in a rich client application. For example, click **Edit in Word** in this situation.
 
-**Third-party information disclaimer**
-
-Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
 ## More Information
 
@@ -68,8 +66,6 @@ The fix for this issue has been rolled out as of August 11, 2015, and it should 
 
 Concerning Lync presence information on a SharePoint page, Chrome is deprecating the plug-in technology that made this feature work. We are currently working on a replacement. In the meantime, if you must access presence information in SharePoint, use Internet Explorer.  
 
-**Third-party information disclaimer**
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

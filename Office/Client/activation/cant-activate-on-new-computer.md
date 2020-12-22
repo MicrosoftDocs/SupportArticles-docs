@@ -28,13 +28,13 @@ appliesto:
 
 When you enter a product key and then click **Activate** to active Microsoft Office 2013 for the first time on a new computer, you receive the following error message:
 
-    This product key is for Microsoft Office <Edition Name> 2013, which isn't currently installed
+> This product key is for Microsoft Office <Edition Name> 2013, which isn't currently installed
 
 ##  Cause
 
 This issue may occur if you install KB2760624, KB2760621, or KB2752100 before you activate Office. If you do this, the following folder may be removed:
 
-    <system drive>\ProgramData\Microsoft\OEMOffice15
+\<*system drive*>\ProgramData\Microsoft\OEMOffice15
 
 ##  Resolution
 

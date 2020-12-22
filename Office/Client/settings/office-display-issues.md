@@ -68,15 +68,15 @@ The resolution varies depending on your version of Windows and the symptom you a
 If your symptom is "Poorly Displayed Text in Office Documents," try the following solutions first. Otherwise, skip to the next section titled All Other Symptoms.
 
 #### Step 1: Use the "ClearType Text Tuner" Setting
- 
-1.    Search for **ClearType**.
 
-    Windows 10, Windows 8.1, and Windows 8: On the Start Screen, search for **ClearType**.
+1. Search for **ClearType**.
 
-    Windows 7: Click **Start**, and then enter **ClearType** in the **Search Programs and Files** box.
-2.    Select **Adjust ClearType Text**.
-3.    In the **ClearType Text Tuner**, enable the **Turn on ClearType** option, and then click **Next**.
-4.    Tune your monitor by following the steps in the **ClearType Text Tuner**, and then click **Finish**.
+   Windows 10, Windows 8.1, and Windows 8: On the Start Screen, search for **ClearType**.
+
+   Windows 7: Click **Start**, and then enter **ClearType** in the **Search Programs and Files** box.
+2. Select **Adjust ClearType Text**.
+3. In the **ClearType Text Tuner**, enable the **Turn on ClearType** option, and then click **Next**.
+4. Tune your monitor by following the steps in the **ClearType Text Tuner**, and then click **Finish**.
 
 If you are still experiencing a problem after you adjust the ClearType settings, go to Step 2.
 

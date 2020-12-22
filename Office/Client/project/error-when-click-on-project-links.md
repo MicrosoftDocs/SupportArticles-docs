@@ -23,17 +23,18 @@ appliesto:
 
 When you click the Projects link from the Office 365 ribbon to get to Project Web Access, you receive one of the following errors:
 
-    Error
-    An unexpected error has occurred.
-    Troubleshoot issues with Microsoft SharePoint Foundation.
-    Correlation ID: ########-####-####-############
-    Date and Time: <date and time>
+> Error  
+> An unexpected error has occurred.  
+> Troubleshoot issues with Microsoft SharePoint Foundation.  
+> Correlation ID: ########-####-####-############  
+> Date and Time: \<date and time>
+
 Or
 
-    Sorry, this site isn't available right now.
-    Give us a few minutes and try again. If it still doesn't work, contact your administrator.
-    -------------------------------------------------------------------------------
-    GO BACK TO SITE
+> Sorry, this site isn't available right now.  
+> Give us a few minutes and try again. If it still doesn't work, contact your administrator.  
+> \-------------------------------------------------------------------------------  
+> GO BACK TO SITE
 
 You can still navigate to Project Web App by manually entering the URL in the address bar or with admin permissions go to SharePoint admin center, click the link to the PWA site collection once, when the dialog comes up click the link again.
 

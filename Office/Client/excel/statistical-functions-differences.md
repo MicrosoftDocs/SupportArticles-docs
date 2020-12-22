@@ -56,8 +56,9 @@ Use STDEVP instead of STDEVPA unless you are sure that you want the function to 
 
 To illustrate the difference between STDEVPA and STDEVP, create a blank Excel worksheet, copy the table below, select cell A1 in your blank Excel worksheet, and then click **Paste** on the **Edit** menu so that the entries in the table below fill cells A1:D12 in your worksheet.
 
-|Data|0|||
+|A|B|C|D|
 |---|---|---|---|
+|Data|0|||
 |||||
 |6|6|Sample Mean for STDEVP, STDEV|=AVERAGE(A1:A8)|
 |4|4|Sample Size for STDEVP, STDEV|=COUNT(A1:A8)|

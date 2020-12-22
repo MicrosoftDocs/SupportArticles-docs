@@ -5,10 +5,11 @@ author: TobyTu
 ms.author: rroddy
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
+ms.topic: troubleshooting 
 ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
+- Exchange Online
 - CI 120630
 - CSSTroubleshoot
 ms.reviewer: rroddy
@@ -17,7 +18,6 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-
 # Delays in provisioning of user/mailbox or synchronizing changes in Exchange Online
 
 ## Symptoms

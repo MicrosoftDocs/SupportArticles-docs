@@ -97,7 +97,7 @@ In Access 2007, Excel 2007, PowerPoint 2007, and Word 2007
    - **Show the Microsoft Application privacy statement**   
    - **Microsoft Office Online privacy statement**   
 
-   ![](./media/faq-about-office-activation-wizard/open-trusted-center.png)
+   ![Screenshot of the Trust Center settings](./media/faq-about-office-activation-wizard/open-trusted-center.png)
 
 All other 2007 Office system programs
 

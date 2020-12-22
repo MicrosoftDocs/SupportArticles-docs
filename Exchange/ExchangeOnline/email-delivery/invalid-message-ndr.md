@@ -9,13 +9,14 @@ ms.topic: troubleshooting
 ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Online
+- CSSTroubleshoot
+- 'Associated content asset: 4555315'
 appliesto: 
 - Exchange Online
 search.appverid: MET150
 ---
-
-# "554 5.6.0 Invalid message content" NDR when an Office 365 user sends a message that contains an Excel attachment
+# (554 5.6.0 Invalid message content) NDR when an Office 365 user sends a message that contains an Excel attachment
 
 _Original KB number:_&nbsp;2984127
 
@@ -37,7 +38,7 @@ This issue may occur if the following conditions are true:
 To work around this issue, do one of the following:
 
 - Password-protect the message before you send it.
-- Disable the **Defer the message if rule processing doesn't complete** option in the transport rule. Be aware that this option may be set on any rule in the rules list. For more info about how to modify transport rules in Exchange Online, see [Manage transport rules](https://technet.microsoft.com/library/jj657505%28v=exchg.150%29.aspx).
+- Disable the **Defer the message if rule processing doesn't complete** option in the transport rule. This option may be set on any rule in the rules list. For more info about how to modify transport rules in Exchange Online, see [Manage transport rules](https://technet.microsoft.com/library/jj657505%28v=exchg.150%29.aspx).
 - Review the message itself (obtain it if you are troubleshooting for someone else) and obtain a message trace to see if that provides additional insight.
 
 ## More information

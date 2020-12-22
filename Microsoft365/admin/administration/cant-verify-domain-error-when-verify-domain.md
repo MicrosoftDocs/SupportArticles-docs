@@ -13,7 +13,6 @@ search.appverid:
 - MET150
 appliesto:
 - office 365
-
 ---
 
 # "Can't verify domain" error message when you try to verify a domain in Office 365
@@ -24,9 +23,9 @@ appliesto:
 
 When you try to verify a domain in Microsoft Office 365, you receive the following error message:
 
-    Can't verify domain 
-
-    We can't verify the domain because it is associated with another Microsoft hosted service. A domain can be associated with only one service. To use this domain, first remove it from the other service, and then try again to verify the domain. If you still can't verify the domain, contact Microsoft Online Services Support to resolve the issue 
+> Can't verify domain 
+>
+> We can't verify the domain because it is associated with another Microsoft hosted service. A domain can be associated with only one service. To use this domain, first remove it from the other service, and then try again to verify the domain. If you still can't verify the domain, contact Microsoft Online Services Support to resolve the issue 
 
 ## Cause 
 

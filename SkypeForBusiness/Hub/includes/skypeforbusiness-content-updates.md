@@ -2,53 +2,32 @@
 
 
 
-## Week of August 10, 2020
+## Week of December 14, 2020
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 8/14/2020 | [Can't add yourself to Members list in the "Event team" area](/skypeforbusiness/troubleshoot/online-meeting-broadcast/cant-add-yourself-to-members-list) | modified |
-| 8/14/2020 | [Troubleshoot sign-in issues for Lync for Mac 2011 in Skype for Business Online](/skypeforbusiness/troubleshoot/online-sign-in/sign-in-issues-lync-for-mac) | modified |
+| 12/15/2020 | [Can't join a Skype Meeting Broadcast as an Event team member](/skypeforbusiness/troubleshoot/online-meeting-broadcast/cant-join-skype-meeting-broadcast) | modified |
+| 12/15/2020 | [Skype Meeting Broadcast portal doesn't load completely in the browser](/skypeforbusiness/troubleshoot/online-meeting-broadcast/meeting-broadcast-portal-not-load) | modified |
+| 12/15/2020 | [Special characters don't display correctly in footer of meeting invitations](/skypeforbusiness/troubleshoot/online-meetings/special-characters-not-display-correctly) | modified |
+| 12/15/2020 | [Deployment of Cloud Connector Edition in Amazon Web Services fails](/skypeforbusiness/troubleshoot/online-phone-system/deployment-of-cloud-connector-edition) | modified |
+| 12/15/2020 | [You can't sign in to Lync clients on devices that don't support SNI](/skypeforbusiness/troubleshoot/online-sign-in/cant-sign-in-to-lync-not-support-sni) | modified |
+| 12/15/2020 | [Troubleshoot sign-in issues for Lync for Mac 2011 in Skype for Business Online](/skypeforbusiness/troubleshoot/online-sign-in/sign-in-issues-lync-for-mac) | modified |
+| 12/15/2020 | [Video calls not working with Logitech BRIO Webcam](/skypeforbusiness/troubleshoot/server-conferencing/cant-do-video-call) | modified |
+| 12/15/2020 | [Stops responding when receiving a toast notification in Citrix VDI environment](/skypeforbusiness/troubleshoot/server-configuration/not-responding-receive-toast-notification) | modified |
+| 12/15/2020 | [Skype for Business 2016 freezes on computer that has Malware bytes is installed](/skypeforbusiness/troubleshoot/server-configuration/skype-for-business-2016-freeze-malwarebytes) | modified |
+| 12/15/2020 | [How to do a clean uninstallation of Skype for Business on Mac](/skypeforbusiness/troubleshoot/server-install-or-uninstall/clean-uninstallation) | modified |
+| 12/15/2020 | [Can't join a meeting on iOS 10.0 and later](/skypeforbusiness/troubleshoot/server-meetings/cant-join-meeting-on-ios-10-later) | modified |
+| 12/15/2020 | [Can't join a meeting on iOS 9.2 and later](/skypeforbusiness/troubleshoot/server-meetings/cant-join-meeting-on-ios-9-2) | modified |
+| 12/15/2020 | [Lync 2013 for iPhone/iPad features are missing in Skype for Business for iOS](/skypeforbusiness/troubleshoot/server-mobile-devices/lync-2013-iphone-features-missing-ios-client) | modified |
+| 12/15/2020 | [New features in the firmware update for Polycom VVX IP phones](/skypeforbusiness/troubleshoot/server-phone-system/new-features-in-firmware-update) | modified |
+| 12/15/2020 | [You can't sign in with this version of Lync](/skypeforbusiness/troubleshoot/server-sign-in/you-cant-sign-in-with-this-version-of-lync) | modified |
+| 12/17/2020 | [Skype for Business plays a dial tone during a Teams call](/skypeforbusiness/troubleshoot/server-conferencing/sfb-play-dial-tone-teams-call) | modified |
 
 
-## Week of August 17, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 8/21/2020 | [Lync can't verify that the server is trusted during client sign-in](/skypeforbusiness/troubleshoot/server-sign-in/cannot-verify-the-server-is-trusted) | modified |
-
-
-## Week of August 24, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 8/26/2020 | [Client does not start when click a meeting link if default browser is Chrome](/skypeforbusiness/troubleshoot/server-sign-in/client-not-start-click-meeting-link) | modified |
-
-
-## Week of August 31, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/2/2020 | [Lync conferencing feature fails for a mandatory user profile](/skypeforbusiness/troubleshoot/server-conferencing/conferencing-feature-fails-for-mandatory-user) | modified |
-
-
-## Week of September 28, 2020
+## Week of November 16, 2020
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 9/28/2020 | [Audio or video connections are of poor quality or fail in Lync Mobile 2013](/skypeforbusiness/troubleshoot/online-conferencing/audio-or-video-connections-fail) | modified |
-| 9/28/2020 | [Skype for Business Online users can't communicate with external contacts](/skypeforbusiness/troubleshoot/online-im-presence/cannot-communicate-with-external-contacts) | modified |
-| 9/28/2020 | [Cannot sign in after PIC or External Communications is enabled](/skypeforbusiness/troubleshoot/online-sign-in/cannot-sign-in-pic-is-enabled) | modified |
-
-
-## Week of October 05, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 10/6/2020 | [Disable contextual tips in Skype for Business 2016](/skypeforbusiness/troubleshoot/server-configuration/disable-contextual-tips) | modified |
-| 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/skypeforbusiness/troubleshoot/index) | modified |
+| 11/17/2020 | [Skype for Business plays a dial tone while a user is active on a Teams call](/skypeforbusiness/troubleshoot/server-conferencing/sfb-play-dial-tone-teams-call) | modified |

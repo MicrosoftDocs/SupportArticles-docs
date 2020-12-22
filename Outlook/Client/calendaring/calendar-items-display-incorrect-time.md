@@ -2,13 +2,14 @@
 title: Calendar items for the next year may display an incorrect time in Outlook
 description: After time zone or daylight savings time changes, some calendar items scheduled for the next year may appear with an incorrect time in Outlook.
 author: TobyTu
-ms.author: Tasita Ebacher
+ms.author: tasitae
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: article 
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
+- Outlook for Windows
 - CI 109336
 - CSSTroubleshoot
 ms.reviewer: tasitae, sbradley, randyto, gbratton

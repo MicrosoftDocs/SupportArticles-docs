@@ -2,54 +2,40 @@
 
 
 
-## Week of August 10, 2020
+## Week of December 14, 2020
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 8/11/2020 | [Microsoft Teams is stuck in a login loop in Edge or Internet Explorer](/microsoftteams/troubleshoot/teams-sign-in/sign-in-loop) | modified |
-| 8/13/2020 | [Troubleshoot Microsoft Teams and Exchange Server interaction issues](/microsoftteams/troubleshoot/known-issues/teams-exchange-interaction-issue) | modified |
-| 8/13/2020 | [Information about Teams known issues](/microsoftteams/troubleshoot/teams-welcome) | modified |
-| 8/14/2020 | [Information about Teams known issues](/microsoftteams/troubleshoot/teams-welcome) | modified |
+| 12/14/2020 | [Troubleshoot Microsoft Teams and Exchange Server interaction issues](/microsoftteams/troubleshoot/known-issues/teams-exchange-interaction-issue) | modified |
+| 12/15/2020 | [Microsoft Teams is stuck in a login loop in Edge, Internet Explorer or Google Chrome](/microsoftteams/troubleshoot/teams-sign-in/sign-in-loop) | modified |
+| 12/16/2020 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
+| 12/17/2020 | [When deleting a team in Teams the group is also deleted](/microsoftteams/troubleshoot/known-issues/deleting-team-also-deletes-group) | modified |
 
 
-## Week of August 17, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 8/20/2020 | [Known issues in Rooms](/microsoftteams/troubleshoot/teams-rooms/known-issues) | modified |
-
-
-## Week of September 07, 2020
+## Week of November 30, 2020
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 9/10/2020 | [Profile picture can't be saved in Teams](/microsoftteams/troubleshoot/known-issues/cant-save-profile-picture) | modified |
-| 9/10/2020 | [Automatic update not working in Teams](/microsoftteams/troubleshoot/known-issues/teams-doesnt-automatically-update) | modified |
+| 11/30/2020 | [Someone has already set up Teams for your organization error in Microsoft Teams](/microsoftteams/troubleshoot/teams-sign-in/someone-has-already-setup-teams) | modified |
+| 12/3/2020 | [How to include or exclude Teams from antivirus or DLP applications](/microsoftteams/troubleshoot/teams-administration/include-exclude-teams-from-antivirus-dlp) | modified |
 
 
-## Week of September 21, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 9/21/2020 | [Troubleshoot Microsoft Teams and Exchange Server interaction issues](/microsoftteams/troubleshoot/known-issues/teams-exchange-interaction-issue) | modified |
-
-
-## Week of October 05, 2020
+## Week of November 23, 2020
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 10/8/2020 | [Office troubleshooting for admins and IT professionals # < 60 chars](/microsoftteams/troubleshoot/index) | modified |
-| 10/8/2020 | [Troubleshoot Microsoft Teams and Exchange Server interaction issues](/microsoftteams/troubleshoot/known-issues/teams-exchange-interaction-issue) | modified |
-| 10/9/2020 | [Troubleshoot Microsoft Teams and Exchange Server interaction issues](/microsoftteams/troubleshoot/known-issues/teams-exchange-interaction-issue) | modified |
+| 11/23/2020 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
+| 11/23/2020 | [Troubleshoot Microsoft Teams and Exchange Server interaction issues](/microsoftteams/troubleshoot/known-issues/teams-exchange-interaction-issue) | modified |
+| 11/24/2020 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
 
 
-## Week of October 12, 2020
+## Week of November 16, 2020
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
+| 11/17/2020 | [Microsoft Teams is stuck in a login loop in Edge or Internet Explorer](/microsoftteams/troubleshoot/teams-sign-in/sign-in-loop) | modified |
+| 11/20/2020 | [Microsoft Teams is stuck in a login loop in Edge, Internet Explorer or Google Chrome](/microsoftteams/troubleshoot/teams-sign-in/sign-in-loop) | modified |

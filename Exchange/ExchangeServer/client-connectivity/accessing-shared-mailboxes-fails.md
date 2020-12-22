@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
+- Exchange Server
 - CI 113906
 - CSSTroubleshoot
 ms.reviewer: cmcgurk
@@ -63,7 +64,7 @@ Add a primary SMTP address to the proxyAddresses attribute for the service accou
 7. Find the **proxyAddresses** attribute, and then select **Edit**.
 8. In the **Value to add** text box, add the following text to set a primary SMTP address, and then select the **Add** button:
 
-   **SMTP:serviceaccount01@contoso.com**
+   **SMTP:serviceaccount01\@contoso.com**
 
 9. Select **OK** two times, and then close Active Directory Users and Computers.
 

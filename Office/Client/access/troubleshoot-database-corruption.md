@@ -49,10 +49,6 @@ For additional information, visit the Action Front Data Recovery Labs Web site:
 
 [http://www.actionfront.com/](https://www.seagate.com/sg/en/services-software/recover/)
 
-For additional information, visit the PK Solutions Web site:
-
-[http://www.pksolutions.com/](https://pksolutions.com/)
-
 For additional information, visit the OfficeRecovery.com Web site:
 
 [http://www.officerecovery.com/access/index.htm](https://www.officerecovery.com/access/index.htm)

@@ -76,7 +76,7 @@ Follow the steps below depending on which area you are receiving the error:
 ### When accessing a OneDrive site 
 
 - **If the user is the owner of the OneDrive site:**
-  - This issue most frequently occurs when a user is deleted and re-created with the same user principal name (UPN). The new account is created by using a different Passport Unique ID (PUID) value. When the user tries to access a site collection or their OneDrive, the user has an incorrect PUID. A second scenario involves directory synchronization with an Active Directory organizational unit (OU). If users have already signed into SharePoint, are moved to a different OU that is not currently synchronized with Office365 and then resynced with SharePoint, they may experience this problem.
+  - This issue most frequently occurs when a user is deleted and re-created with the same user principal name (UPN). The new account is created by using a different Unique ID value. When the user tries to access a site collection or their OneDrive, the user has an incorrect ID. A second scenario involves directory synchronization with an Active Directory organizational unit (OU). If users have already signed into SharePoint, are moved to a different OU that is not currently synchronized with Office365 and then resynced with SharePoint, they may experience this problem.
     - To resolve this issue, you will need to delete the new UPN (if it exists) and restore the original UPN.
       - To delete the new UPN, follow the steps in [this article](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user).
       - Once the new user has been deleted, you can restore the original user using [these steps](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-restore).
@@ -84,13 +84,13 @@ Follow the steps below depending on which area you are receiving the error:
     - If you cannot restore the original user and are still in this state,  create a support request using the following steps:
       - Navigate to <a href="https://admin.microsoft.com" target="_blank">https://admin.microsoft.com</a>.
       - In the left navigation pane, select **Support** and then **New Service Request**. This will activate the **Need Help?** pane on the right-hand side of your screen.
-      - In the **Briefly describe your issue** area, enter **"PUID Mismatch on OneDrive Site"**.
+      - In the **Briefly describe your issue** area, enter **"OneDrive Site User ID Mismatch"**.
       - Select **Contact Support**.
 
         > [!NOTE]
         > If you are using the old M365 admin center, you can skip the "Description" step listed below as that field will not exist.
 
-      - Under **Description** enter **"PUID Mismatch on OneDrive Site"**. Fill out the remaining information and select **Contact me**.
+      - Under **Description** enter **"OneDrive Site User ID Mismatch"**. Fill out the remaining information and select **Contact me**.
       - Once the ticket has been opened please provide the support agent with the UPN and OneDrive URL that is having the issue.
 
 - **If the user is attempting to access another user's OneDrive site:**

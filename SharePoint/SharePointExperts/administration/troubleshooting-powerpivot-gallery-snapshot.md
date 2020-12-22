@@ -1,12 +1,13 @@
 ﻿---
 title: PowerPivot for SharePoint 2016 Gallery Snapshots Fail for SSL Host Header Sites
+description: Describes an issue in which PowerPivot Gallery Snapshots Fail for SSL Host Header Sites.
 author: AmandaAZ  
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
 - MET150
 audience: ITPro
-ms.service: sharepoint
+ms.service: sharepoint-powershell
 ms.topic: article
 ms.custom: CSSTroubleshoot
 ms.author: randring
@@ -106,7 +107,7 @@ During our multiple attempts to narrow this down, we could see the snapshot proc
         2.  Click "Library" \> "Library Settings" from the ribbon menu.  
             ![SharePoint menu showing Library Settings menu item](media/troubleshooting-powerpivot-gallery-snapshot/LibSettings2.png)        
         3.  Scroll down to the "Views" section and click on any of the 3 PowerPivot Silverlight views "Gallery", "Theatre" and "Carousel".  
-            ![SharePoint Library Settings options](media/troubleshooting-powerpivot-gallery-snapshot/ClickPPIVViews.png)        
+            ![SharePoint Library Settings options 2](media/troubleshooting-powerpivot-gallery-snapshot/ClickPPIVViews.png)        
         4.  Click "Delete".  
             ![SharePoint Delete button image](media/troubleshooting-powerpivot-gallery-snapshot/ClickDelete.png)
 

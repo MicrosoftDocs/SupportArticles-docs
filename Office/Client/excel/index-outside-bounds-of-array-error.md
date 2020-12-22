@@ -32,7 +32,7 @@ Consider the following scenario in which you try to import data from a Microsoft
   
 In this scenario, you receive the following error message:
 
-    We couldn't get data from the Data Model. Here's the error we got: Index was outside the bounds of the array.
+> We couldn't get data from the Data Model. Here's the error we got: Index was outside the bounds of the array.
 
 ##  Cause
 

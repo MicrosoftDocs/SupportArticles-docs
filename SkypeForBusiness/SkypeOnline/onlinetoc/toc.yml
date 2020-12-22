@@ -89,6 +89,8 @@
       href: ../online-im-presence/lastactive-attribute-gives-wrong-user-status-info-.md
     - name: Lync presence unavailable in SharePoint sites
       href: ../online-im-presence/lync-presence-unavailable-in-sharepoint.md
+    - name: Only the first IM received in Skype for Business 2015 when Mac hibernating 
+      href: ../online-im-presence/only-first-im-received-when-locked.md
     - name: Presence is unavailable in Office 365
       href: ../online-im-presence/sfb-presence-unavailable.md
   - name: Install/Uninstall
@@ -217,6 +219,8 @@
       href: ../online-sign-in/sfb-online-sign-in-error.md
     - name: Troubleshoot admin sign-in issues
       href: ../online-sign-in/troubleshoot-sign-in-issues-for-admins.md
+    - name: Troubleshoot issues related to Skype for Business sign-in
+      href: ../online-sign-in/troubleshoot-issues-related-skype-for-business-sign-in.md
     - name: Troubleshoot Lync for Mac sign in issues
       href: ../online-sign-in/sign-in-issues-lync-for-mac.md
     - name: Troubleshoot user sign-in issues

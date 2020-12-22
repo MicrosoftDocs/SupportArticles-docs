@@ -63,7 +63,7 @@ To integrate the Microsoft Teams service with your installation of Exchange Serv
   - The account is hidden from the Exchange address book. It's a best practice to hide the account from the address book because it's a disabled user account.
   - The account has an Exchange management role assignment of **UserApplication**.
 
-    To complete the integration, follow Steps 1-3 in [this article](https://docs.microsoft.com/skypeforbusiness/deploy/integrate-with-exchange-server/oauth-with-online-and-on-premises). Step 2 in the article includes the role assignment for **ArchiveApplication**. Although this isn't required for Teams delegation, it's required to archive Skype for Business Online Chat to an Exchange mailbox.
+    To complete the integration, follow Steps 1-5 in [this article](https://docs.microsoft.com/skypeforbusiness/deploy/integrate-with-exchange-server/oauth-with-online-and-on-premises). Step 1 is usually for the Exchange Hybrid Configuration Wizard and step 2 in the article includes the role assignment for **ArchiveApplication**.
 
     > [!NOTE]
     > This requirement applies to only the Teams delegation issue.
@@ -279,7 +279,17 @@ Set-CASMailbox <UserPincipalName> -EwsAllowList @{Add="MicrosoftNinja/*","*Teams
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to **True**. Otherwise, the Teams service will also be blocked from accessing EWS.
 
-#### Step 5: Escalate the issue
+#### Step 5: Verify that the Microsoft Teams Calendar App test is successful
+
+1. Ask the user to go to the [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/tests/TeamsCalendarMissing/input).
+2. Input the requested information.
+3. Select the **Perform Test** button to start the Microsoft Teams Calendar App test.
+
+If the test fails, you should attempt to resolve the issue and rerun the test.
+
+:::image type="content" source="media/teams-exchange-interaction-issue/calendar-test.png" alt-text="Screenshot of testing calendar":::
+
+#### Step 6: Escalate the issue
 
 If you verified that there's no problem with the prerequisites and configurations mentioned in this article, submit a service request toMicrosoft Support with this information:
 

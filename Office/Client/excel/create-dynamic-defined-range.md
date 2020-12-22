@@ -38,7 +38,7 @@ To do this, follow these steps, as appropriate for the version of Excel that you
 
 1. In a new worksheet, enter the following data.
 
-    ||A|B|
+    |Number|A|B|
     |---|---|---|
     |1|Month|Sales|
     |2|Jan|10|
@@ -72,7 +72,7 @@ Sales.
 
 1. In a new worksheet, enter the following data: 
 
-    ||A|B|
+    |Number|A|B|
     |---|---|---|
     |1|Month|Sales|
     |2|Jan|10|

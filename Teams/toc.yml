@@ -25,6 +25,9 @@
       href: ./teams-administration/admin-self-help-diagnostics.md
     - name: User doesn't receive welcome email when added by an administrator
       href: ./known-issues/welcome-email-not-received-in-teams.md
+    - name: User information isn't updated
+      href: ./teams-administration/user-information-not-updated.md
+
   - name: Authentication
     items:
     - name: Always log into the domain-joined PC account
@@ -63,6 +66,8 @@
       href: ./known-issues/organizer-cant-start-teams-meeting.md
     - name: PSTN callers with the same "From" number are shown as the same user
       href: ./known-issues/pstn-callers-shown-with-same-call-in-number.md
+    - name: Skype for Business broadcasts a dial tone
+      href: /skypeforbusiness/troubleshoot/server-conferencing/sfb-play-dial-tone-teams-call?context=/MicrosoftTeams/troubleshoot/context/context
     - name: Skype for Business required for some meetings instead of Teams
       href: ./known-issues/meeting-requires-skype-instead-of-teams.md
     - name: Static conference ID not supported for Teams meetings
@@ -85,6 +90,8 @@
       href: ./known-issues/teams-exchange-interaction-issue.md
   - name: Files
     items:
+    - name: Can't open files in a chat window
+      href: ./known-issues/do-not-have-access-to-this-file-teams.md
     - name: Downloaded documents open in protected view
       href: ./known-issues/download-documents-open-in-protected-view.md
   - name: Forms
@@ -141,7 +148,7 @@
       href: ./known-issues/sign-in-error-after-password-change.md
     - name: Someone has already setup Teams for your organization
       href: ./teams-sign-in/someone-has-already-setup-teams.md
-    - name: Stuck in login loop in Edge or Internet Explorer
+    - name: Stuck in login loop
       href: ./teams-sign-in/sign-in-loop.md
     - name: Teams does not automatically update
       href: ./known-issues/teams-doesnt-automatically-update.md

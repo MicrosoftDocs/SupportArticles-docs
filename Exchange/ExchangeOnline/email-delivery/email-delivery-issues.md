@@ -28,7 +28,6 @@ manager: dcscontentpm
 appliesto:
 - Exchange Online
 ---
-
 # Find and fix email delivery issues as an Office 365 for business admin
 
 When users report that they aren't getting email, it can be hard to find what's wrong. You might run through several troubleshooting scenarios in your mind. Is something wrong with Outlook? Is the Office 365 service down? Is there a problem with mail flow or spam filter settings? Or is the problem due to something that's outside your control, like the sender is on a global block list? Fortunately, Office 365 provides powerful automated tools that can help you find and fix a variety of problems.
@@ -47,15 +46,13 @@ If a user is receiving email in their Outlook on the web mailbox but not on the 
 
 If a single user in your organization is having trouble receiving email, it could be due to a licensing issue, a profile problem, the wrong version of Outlook, or a mix of other issues. Fortunately, Support and Recovery Assistant finds and helps you fix most issues with Outlook or Office 365. As a first step in troubleshooting email delivery problems for Office 365 for business, we recommend that you download and run Microsoft Support and Recovery Assistant on the affected machine. Note that if you are experiencing issues with Outlook for Mac or are having mobile access issues, you can use the app to check your account settings, but you need to install it on a PC. After you sign in with the affected account, the app will check for issues. Users can typically download and run Support and Recovery Assistant without help from their Office 365 admin.
 
-|||
-|:-----|:-----|
-|![Get started](./media/email-delivery-issues/8226d576-eac7-40df-89cb-28c1634067c5.png)|**Let us fix your issue** [Download and run Microsoft Support and Recovery Assistant](https://AKA.MS/SaRASetup)|
+![Get started](./media/email-delivery-issues/8226d576-eac7-40df-89cb-28c1634067c5.png) **Let us fix your issue** [Download and run Microsoft Support and Recovery Assistant](https://AKA.MS/SaRASetup)
 
 ## If the Support and Recovery Assistant app doesn't fix the email delivery issue, try these admin tools
 
 As an Office 365 for business admin, you have access to several tools that can help you investigate why users can't get email. The following video gives a brief overview of the tools available to you.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/8b10af9a-455c-410a-8c17-24d5e5be098a?autoplay=false]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/8b10af9a-455c-410a-8c17-24d5e5be098a]
 
 The following tools are listed from the quickest to the most in-depth option.
 
@@ -97,7 +94,7 @@ If you're an Office 365 Midsize Business, Office 365 Business, or Office 365 Ent
 
 3. Go to **Exchange**.
 
-    ![Sceenshot of the admin center with Exchange selected.](./media/email-delivery-issues/239c294e-4f04-4c52-bd87-bbf343cb66b9.png)
+    ![Screenshot of the admin center with Exchange selected.](./media/email-delivery-issues/239c294e-4f04-4c52-bd87-bbf343cb66b9.png)
 
 4. Under **mail flow**, go to **message trace**.
 
@@ -121,7 +118,7 @@ By default, message trace is set to search for all messages sent or received by 
 
 4. The **message trace results** page shows all the messages that match the criteria that you selected. Typical messages are marked **Delivered** under the status column.
 
-    ![Screenshot showing an example of messge trace resuls.](./media/email-delivery-issues/3be193fe-9c71-4525-aea7-e154ea412533.png)
+    ![Screenshot showing an example of message trace results.](./media/email-delivery-issues/3be193fe-9c71-4525-aea7-e154ea412533.png)
 
 5. To see details about a message, choose the message and select ![Pencil icon](./media/email-delivery-issues/ebd57d01-04da-4dfd-b232-1015d627dc91.png) ( **Details**).
 
