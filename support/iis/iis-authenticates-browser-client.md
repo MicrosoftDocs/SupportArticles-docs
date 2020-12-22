@@ -22,14 +22,14 @@ Anonymous - No logon is required and anyone is allowed to gain access to data th
 
 - Browsers Supported: Any
 - Limitations: None
-- User Rights Required: The anonymous user account defined on the server must have "log on Locally" permissions.
+- User Rights Required: The anonymous user account defined on the server must have **log on Locally** permissions.
 - Encryption Type: None
 
 Basic (Clear Text) - The server requests the user to log on and a dialog box appears in the browser that allows the user to enter the credentials that are needed. These credentials must match the user credentials defined on the files that the user is attempting to access.
 
 - Browsers Supported: Any
 - Limitations: Not secure. Passwords are easily deciphered.
-- User Rights Required: The user account must have "log on Locally" permissions.
+- User Rights Required: The user account must have **log on Locally** permissions.
 - Encryption Type: Base 64 Encoding (not true encryption)
 
 Windows NT Challenge/Response - The server requests the user to log on. If the browser supports Windows NT Challenge/Response, it automatically sends the user's credentials if the user is logged on. If the domain that the user is on is different than the server's domain, or if the user is not logged on, a dialog box appears to request the credentials to send. Windows NT Challenge/Response uses an algorithm to generate a hash based on the user's credentials and the computer that the user is using. It then sends this hash to the server. The browser does not send the user's password across to the server.
@@ -63,7 +63,7 @@ Basic (Clear Text) - The server requests the user to log on and a dialog box app
 
 - Browsers Supported: Any
 - Limitations: Not secure. Passwords are easily deciphered.
-- User Rights Required: The user account must have "Log on Locally" rights
+- User Rights Required: The user account must have **log on Locally** rights
 - Encryption Type: Base 64 Encoding (not true encryption)
 
 Digest - The server requests the user to log on and also sends a NONCE used to encrypt the password. The browser uses the NONCE to encrypt the password and sends this to the server. The server then encrypts its own copy of the user's password and compares the two. If they match and the user has permissions, access is granted.
@@ -87,7 +87,7 @@ Kerberos uses tickets generated at a Ticket Granting Server (KDC) to authenticat
 
 - Browsers Supported: Internet Explorer versions 5.0 and above
 - Limitations: the server must have access to an Active Directory server. Both the server and the client must have a trusted connection to a KDC.
-- User Rights Required: The Anonymous user account defined on the server must have "log on Locally" permissions.
+- User Rights Required: The Anonymous user account defined on the server must have **log on Locally** permissions.
 - Encryption type: Encrypted ticket.
 
 Windows NT Challenge/Response - The server requests the user to log on. If the browser supports Windows NT Challenge/Response, it automatically sends the user's credentials if the user is logged on. If the domain that the user is on is different than the server's domain, or if the user is not logged on, a dialog box appears in Internet Explorer requesting the credentials to send. Windows NT Challenge/Response uses an algorithm to generate a hash based on the user's credentials and the computer that the user is using. It then sends this hash to the server. The browser does not send the user's password across to the server.
@@ -97,7 +97,7 @@ Windows NT Challenge/Response - The server requests the user to log on. If the b
 - User Rights Required: The user account accessing the server must have "Access this computer from the network" permissions.
 - Encryption Type: NTLM Hash algorithm that is also unencoded.
 
-*Orders of precedence:* When the browser makes a request, it always considers the first request to be Anonymous. Therefore, it does not send any credentials. If the server does not accept Anonymous or if the Anonymous user account set on the server does not have permissions to the file being requested, the IIS server responds with an "Access Denied" error message and sends a list of the authentication types that are supported by using one of the following scenarios:
+*Orders of precedence:* When the browser makes a request, it always considers the first request to be Anonymous. Therefore, it does not send any credentials. If the server does not accept Anonymous or if the Anonymous user account set on the server does not have permissions to the file being requested, the IIS server responds with an **Access Denied** error message and sends a list of the authentication types that are supported by using one of the following scenarios:
 
 - If Windows Integrated is the only supported method (or if Anonymous fails), then the browser must support this method to communicate with the server. If this fails, the server does not try any of the other methods.
 - If Basic is the only supported method (or if Anonymous fails), then a dialog box appears in the to get the credentials, and then passes these to the server. It attempts to send the credentials up to three times. If these all fail, the browser does not connect to the server.

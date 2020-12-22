@@ -17,7 +17,7 @@ When using Server Manager on a full installation of Windows Server 2012 to view 
 
 ## Cause
 
-The `WebServer.Events.xml` file is missing from the `Microsoft\ServerManager\Events directory` on the Windows Server 2012 Server Core machine.
+The *WebServer.Events.xml* file is missing from the `Microsoft\ServerManager\Events directory` on the Windows Server 2012 Server Core machine.
 
 ## Workaround
 
