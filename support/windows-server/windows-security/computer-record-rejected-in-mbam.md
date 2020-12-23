@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: manojse, kaushika
 ms.prod-support-area-path: Bitlocker
-ms.technology: Deployment
+ms.technology: WindowsSecurity
 ---
 # Computer Record is Rejected in MBAM
 
@@ -60,7 +60,7 @@ Process information:
 
 Exception information:  
  Exception type: FaultException  
- Exception message: The computer record is rejected. The request from machine "DOMAIN\COMPUTERNAME$" contains invalid machine name "COMPUTER.FQDN". 
+ Exception message: The computer record is rejected. The request from machine "DOMAIN\COMPUTERNAME$" contains invalid machine name "COMPUTER.FQDN".
 
 Request information:  
  Request URL:  
@@ -105,19 +105,19 @@ This is a known issue with the product specified.
 Follow steps below to create a new registry key on MBAM Server where you have MBAM Administration and Monitoring Server role installed.  
 
 WARNING: If you use Registry Editor incorrectly, you may cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk.
-For information about how to back up, restore, and edit the registry, click the following article: 
+For information about how to back up, restore, and edit the registry, click the following article:
 
 [256986](https://support.microsoft.com/help/en-us) Description of the Microsoft Windows Registry
 
 a. Start Registry Editor.  
 b. Navigate to following registry key:
- HKEY_LOCAL_MACHINE\Software\Microsoft 
+ HKEY_LOCAL_MACHINE\Software\Microsoft
 
 c. On the Edit menu, click New -> Key, and add the following registry key value:
- MBAM 
+ MBAM
 
 d. Under the newly created registry key name, on the Edit menu, click New -> DWORD (32-bit) Value and name it as:
- DisableMachineVerification 
+ DisableMachineVerification
 
 e. Set the value to 1.  
 f. Exit Registry Editor.
@@ -130,10 +130,10 @@ Note: The above registry key has nothing to do with hardware compatibility check
 
 For further information on MBAM and how it can help your environment, please consult the following documentation.
 
-Planning Guide: [https://onlinehelp.microsoft.com/mdop/hh285653.aspx](https://onlinehelp.microsoft.com/mdop/hh285653.aspx) 
+Planning Guide: [https://onlinehelp.microsoft.com/mdop/hh285653.aspx](https://onlinehelp.microsoft.com/mdop/hh285653.aspx)
 
-Deployment Guide: [https://onlinehelp.microsoft.com/mdop/hh285644.aspx](https://onlinehelp.microsoft.com/mdop/hh285644.aspx) 
+Deployment Guide: [https://onlinehelp.microsoft.com/mdop/hh285644.aspx](https://onlinehelp.microsoft.com/mdop/hh285644.aspx)
 
-Operations Guide: [https://onlinehelp.microsoft.com/mdop/hh285664.aspx](https://onlinehelp.microsoft.com/mdop/hh285664.aspx) 
+Operations Guide: [https://onlinehelp.microsoft.com/mdop/hh285664.aspx](https://onlinehelp.microsoft.com/mdop/hh285664.aspx)
 
 Troubleshooting MBAM: [https://onlinehelp.microsoft.com/mdop/hh352745.aspx](https://onlinehelp.microsoft.com/mdop/hh352745.aspx)
