@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: arrenc, toddmax, manojse, kaushika
 ms.prod-support-area-path: Bitlocker
-ms.technology: Deployment
+ms.technology: WindowsSecurity
 ---
 # How to enable BitLocker device encryption on Windows 8 RT
 
