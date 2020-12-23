@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 3093586
 
 ## Symptoms
 
-When you try to configure protection group settings in Microsoft Azure Site Recovery (ASR), the **Storage Account** list may be blank. This prevents the wizard from being able to finish.
+When you try to configure protection group settings in Microsoft Azure Site Recovery, the **Storage Account** list may be blank. This issue prevents the wizard from being able to finish.
 
 :::image type="content" source="./media/blank-storage-account-setting-asr/3093587.PNG" alt-text="Specify Protection Group Settings Blank.":::
 
@@ -30,6 +30,6 @@ This error may occur if the storage account isn't configured to be geo-redundant
 To fix this issue, follow these steps:
 
 1. Cancel the Create Protection Group wizard.
-2. Either create a new storage account or change the replication setting to **geo redundant**. This setting is located in the Azure Portal under the storage account settings properties on the Configure tab.
+2. Either create a new storage account or change the replication setting to **geo redundant**. This setting is located under the storage account settings properties on the **Configure** tab in the Azure portal.
 3. Click Save to commit the change.
 4. Restart the Create Protection Group wizard.

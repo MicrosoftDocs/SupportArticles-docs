@@ -27,11 +27,12 @@ Consider the following scenario:
 - You've two or more computers running Windows.
 - The computers are set up in a workgroup or domain environment.
 - You run a remote WMI query using an application that makes WMI calls from one computer to another computer.
-In this scenario, if you review the Security log on the remote computer you'll notice an Event ID 4625 with regards to failure audit events for failed logon with bad username or password. You'll also note that subsequently there is a successful logon with the credentials specified on the remote WMI query.
+
+In this scenario, if you review the Security log on the remote computer, you'll notice an Event ID 4625 that's for a failed logon with bad username or password. You'll also note then there's a successful logon with the credentials specified on the remote WMI query.
 
 ## Cause
 
-This is due to the fact that pass-through authentication is always attempted first even if specific credentials are specified in the tool being used.
+This issue occurs because that pass-through authentication is always attempted first, even if specific credentials are specified in the tool being used.
 
 ## Resolution
 
