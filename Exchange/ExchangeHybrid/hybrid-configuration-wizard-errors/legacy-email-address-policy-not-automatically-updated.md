@@ -35,7 +35,7 @@ This issue occurs if you don't upgrade the legacy email address policy before yo
 To resolve this issue, upgrade the legacy email address policy. To do this, run the following cmdlet in Microsoft Exchange Management Shell (EMS):
 
 ```powershell
-get-emailaddesspolicy|update-emailaddresspolicy
+Get-EmailAddressPolicy | Update-EmailAddressPolicy
 ```
 
 ## More information
