@@ -30,7 +30,7 @@ Configuration
 Scenarios
 
 - When an application or user uses the actual storage name (the NetBIOS name or the FQDN) for files or other resources on the server that's using SMB, access is successful.
-- When an application or user uses the CNAME alias for files or other resources on the server that's using SMB, and you try to connect to a share on the file server with its DNS CNAME alias. For example, you try to connect to a share on the file server by using its DNS CNAME alias as in the following example:
+- When an application or user uses the CNAME alias for files or other resources on the server that's using SMB, and you try to connect to a share on the file server with its DNS CNAME alias. For example, you try to connect to a share on the file server by using its DNS CNAME alias:
 
   ```console
   NET USE * \\CNAME\share_name
@@ -75,7 +75,13 @@ Scenarios
   > [!NOTE]
   > This try would fail on older SMB implementations (Like AIX Samba 3.5.8), that cannot be configured for Kerberos authentication and does not listen to SMB direct host port 445, but only on NetBIOS port 139.
 
-- If the file server name was resolved through some other mechanism such as NetBIOS or Link-Local Multicast Name Resolution (LLMNR) or Peer Name Resolution Protocol (PNRP) processes, the SMB client uses the user supplied name such as the following one:
+- If the file server name was resolved through some other mechanism such as
+  
+  - NetBIOS
+  - Link-Local Multicast Name Resolution (LLMNR)
+  - Peer Name Resolution Protocol (PNRP) processes
+  
+  the SMB client uses the user supplied name such as the following one:
 
   ```console
   CNAME\share_name
@@ -95,7 +101,7 @@ DWORD value: 1
 >
 > This command automatically registers SPNs for the alternate names.
 
-We don't recommend that you resolve this issue for a file server that is not Windows-based by typing the following commands in an elevated Command Prompt window on a Windows-based computer. You would have to be logged on with Domain Administrator credentials and then press Enter at the command prompt to register the SPN for the CNAME of the non-Windows-based File Server storage device:
+We don't recommend that you resolve this issue for a file server that isn't Windows-based by typing the following commands in an elevated Command Prompt window on a Windows-based computer. You would have to be logged on with Domain Administrator credentials. Then press Enter at the command prompt to register the SPN for the CNAME of the non-Windows-based File Server storage device:
 
 ```console
 SETSPN -a host/alias_name targetserver

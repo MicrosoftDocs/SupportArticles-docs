@@ -15,7 +15,7 @@ ms.technology: Networking
 ---
 # Understand TCP/IP addressing and subnetting basics
 
-This article is intended as a general introduction to the concepts of IP networks and subnetting. A glossary is included at the end of article.
+This article is intended as a general introduction to the concepts of Internet Protocol (IP) networks and subnetting. A glossary is included at the end of article.
 
 _Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 164015
@@ -30,11 +30,11 @@ When you configure the TCP/IP protocol on a Windows computer, the TCP/IP configu
 
 To configure TCP/IP correctly, it's necessary to understand how TCP/IP networks are addressed and divided into networks and subnetworks.
 
-The success of TCP/IP as the network protocol of the Internet is largely because of its ability to connect together networks of different sizes and systems of different types. These networks are arbitrarily defined into three main classes (along with a few others) that have predefined sizes, each of which can be divided into smaller subnetworks by system administrators. A subnet mask is used to divide an IP address into two parts. One part identifies the host (computer), the other part identifies the network to which it belongs. To better understand how IP addresses and subnet masks work, look at an IP (Internet Protocol) address and see how it's organized.
+The success of TCP/IP as the network protocol of the Internet is largely because of its ability to connect together networks of different sizes and systems of different types. These networks are arbitrarily defined into three main classes (along with a few others) that have predefined sizes. Each of them can be divided into smaller subnetworks by system administrators. A subnet mask is used to divide an IP address into two parts. One part identifies the host (computer), the other part identifies the network to which it belongs. To better understand how IP addresses and subnet masks work, look at an IP address and see how it's organized.
 
 ## IP addresses: Networks and hosts
 
-An IP address is a 32-bit number that uniquely identifies a host (computer or other device, such as a printer or router) on a TCP/IP network.
+An IP address is a 32-bit number. It uniquely identifies a host (computer or other device, such as a printer or router) on a TCP/IP network.
 
 IP addresses are normally expressed in dotted-decimal format, with four numbers separated by periods, such as 192.168.123.132. To understand how subnet masks are used to distinguish between hosts, networks, and subnetworks, examine an IP address in binary notation.
 
@@ -57,7 +57,7 @@ Lining up the IP address and the subnet mask together, the network, and host por
 11000000.10101000.01111011.10000100 - IP address (192.168.123.132)  
 11111111.11111111.11111111.00000000 - Subnet mask (255.255.255.0)
 
-The first 24 bits (the number of ones in the subnet mask) are identified as the network address, with the last 8 bits (the number of remaining zeros in the subnet mask) identified as the host address. It gives you the following addresses:
+The first 24 bits (the number of ones in the subnet mask) are identified as the network address. The last 8 bits (the number of remaining zeros in the subnet mask) identified as the host address. It gives you the following addresses:
 
 11000000.10101000.01111011.00000000 - Network address (192.168.123.0)  
 00000000.00000000.00000000.10000100 - Host address (000.000.000.132)
@@ -80,10 +80,10 @@ Internet addresses are allocated by the [InterNIC](https://www.internic.net), th
 
 - Class C networks use a default subnet mask of 255.255.255.0 and have 192-223 as their first octet. The address 192.168.123.132 is a class C address. Its first octet is 192, which is between 192 and 223, inclusive.
 
-In some scenarios, the default subnet mask values don't fit the needs of the organization for one of the following reasons:
+In some scenarios, the default subnet mask values don't fit the organization needs for one of the following reasons:
 
-The physical topology of the network
-The numbers of networks (or hosts) don't fit within the default subnet mask restrictions.
+- The physical topology of the network
+- The numbers of networks (or hosts) don't fit within the default subnet mask restrictions.
 
 The next section explains how networks can be divided using subnet masks.
 
@@ -91,7 +91,7 @@ The next section explains how networks can be divided using subnet masks.
 
 A Class A, B, or C TCP/IP network can be further divided, or subnetted, by a system administrator. It becomes necessary as you reconcile the logical address scheme of the Internet (the abstract world of IP addresses and subnets) with the physical networks in use by the real world.
 
-A system administrator who is allocated a block of IP addresses may be administering networks that aren't organized in a way that easily fits these addresses. For example, you have a wide area network with 150 hosts on three networks (in different cities) that are connected by a TCP/IP router. Each of these three networks has 50 hosts. You are allocated the class C network 192.168.123.0. (For illustration, this address is actually from a range that isn't allocated on the Internet.) It means that you can use the addresses 192.168.123.1 to 192.168.123.254 for your 150 hosts.
+A system administrator who is allocated a block of IP addresses may be administering networks. The networks aren't organized in a way that easily fits these addresses. For example, you have a wide area network with 150 hosts on three networks (in different cities) that are connected by a TCP/IP router. Each of these three networks has 50 hosts. You are allocated the class C network 192.168.123.0. (For illustration, this address is actually from a range that isn't allocated on the Internet.) It means that you can use the addresses 192.168.123.1 to 192.168.123.254 for your 150 hosts.
 
 Two addresses that can't be used in your example are 192.168.123.0 and 192.168.123.255 because binary addresses with a host portion of all ones and all zeros are invalid. The zero address is invalid because it's used to specify a network without specifying a host. The 255 address (in binary notation, a host address of all ones) is used to broadcast a message to every host on a network. Just remember that the first and last address in any network or subnet can't be assigned to any individual host.
 

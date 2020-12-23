@@ -23,7 +23,7 @@ The setup process is described in the following article: [Set up protection betw
 
 ## Cause
 
-This error may occur if the storage account isn't configured to be geo-redundant. By default, storage accounts are geo-redundant. However, you can manually disable geo-redundancy during account setup.
+This error may occur if the storage account isn't configured to be geo-redundant. Storage accounts are geo-redundant by default. You can manually disable geo-redundancy during account setup.
 
 ## Resolution
 

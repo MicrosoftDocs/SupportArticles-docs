@@ -32,7 +32,7 @@ In this scenario, if you review the Security log on the remote computer, you'll 
 
 ## Cause
 
-This issue occurs because that pass-through authentication is always attempted first, even if specific credentials are specified in the tool being used.
+The pass-through authentication is always attempted first, even if specific credentials are specified in the tool being used.
 
 ## Resolution
 
