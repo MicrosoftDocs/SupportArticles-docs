@@ -2,6 +2,16 @@
 
 
 
+## Week of December 14, 2020
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/14/2020 | [Folder names are incorrect or displayed in an incorrect language in Outlook](/outlook/troubleshoot/user-interface/incorrect-folder-names) | modified |
+| 12/15/2020 | [Can't send or receive email and Metered Connection Warning is triggered](/outlook/troubleshoot/profiles-and-accounts/metered-connection-warning) | modified |
+| 12/15/2020 | [Invitations forwarded by attendee for existing meeting](/outlook/troubleshoot/exchange-activesync/invitations-forwarded-by-attendee-for-existing-meeting) | modified |
+
+
 ## Week of November 30, 2020
 
 
@@ -376,21 +386,3 @@
 | 11/19/2020 | [Outlook 2016 for Mac repeatedly prompts for authentication](/outlook/troubleshoot/sign-in/repeated-prompts-authentication) | modified |
 | 11/19/2020 | [How to set Outlook 2016 for Mac to delay trying to renew a Kerberos ticket](/outlook/troubleshoot/sign-in/set-delay-renew-kerberos-ticket) | modified |
 | 11/19/2020 | [Exchange ActiveSync protocol v12.0 is out-of-support for Outlook for iOS and Android](/outlook/troubleshoot/exchange-connectivity/activesync-v12.0-out-of-support) | modified |
-
-
-## Week of November 09, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/11/2020 | [Open Shared Calendar option is unavailable](/outlook/troubleshoot/calendars/cannot-open-a-shared-calendar-in-outlook-2016) | modified |
-| 11/12/2020 | [Outlook Search Folders show unexpected mail items with empty subject lines](/outlook/troubleshoot/user-interface/personmetadata-items) | modified |
-
-
-## Week of November 02, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/2/2020 | [From in meeting request not lists all accounts](/outlook/troubleshoot/calendaring/from-field-in-meeting-request-not-list-all-accounts) | modified |
-| 11/3/2020 | [Calendar items for the next year may display an incorrect time in Outlook](/outlook/troubleshoot/calendaring/calendar-items-display-incorrect-time) | modified |
