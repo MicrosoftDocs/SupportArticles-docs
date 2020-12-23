@@ -242,7 +242,7 @@ No. Nothing needs to be done to the Year 1 key in order to install the Year 2 ke
 
 ### Can Windows 7 ESU Year 1 updates be applied to a device after January 12, 2021 if the Year 1 key is installed on the device?
 
-Yes, updates can be installed at any time. That allows you to maintain your existing patch rollout process when the Year 1 key is installed and activated on a device. The same applies for Year 2 and Year 3. For more information, see [What are the coverage dates for the three Windows 7 ESU SKUs](#what-are-the-coverage-dates-for-the-three-windows-7-esu-skus) .
+Yes, updates can be installed at any time. That allows you to maintain your existing patch rollout process when the Year 1 key is installed and activated on a device. The same applies for Year 2 and Year 3. For more information, see [What are the coverage dates for the three Windows 7 ESU SKUs](#what-are-the-coverage-dates-for-the-three-windows-7-esu-skus).
 
 ### Why are the ESU License Preparation Packages necessary?
 
