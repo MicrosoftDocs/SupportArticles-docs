@@ -71,7 +71,7 @@ Add-PSSnapin Microsoft.SharePoint.PowerShell -ea silentlycontinue
 # Enable the global setting for the farm. You must do this part only once.
 $farm = get-spfarm
 $farm.Properties
-$farm.Properties["disable-netbios-dc-resolve"] = $true
+$farm.Properties["disable-netbios-dc-resolve"] = 'true'
 $farm.Properties
 $farm.Update()
 

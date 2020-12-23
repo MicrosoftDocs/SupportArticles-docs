@@ -27,6 +27,9 @@
       href: ./teams-administration/admin-self-help-diagnostics.md
     - name: User doesn't receive welcome email when added by an administrator
       href: ./known-issues/welcome-email-not-received-in-teams.md
+    - name: User information isn't updated
+      href: ./teams-administration/user-information-not-updated.md
+
   - name: Authentication
     items:
     - name: Always log into the domain-joined PC account
