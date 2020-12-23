@@ -18,13 +18,14 @@ search.appverid:
 - MET150
 ---
 
-# Error when sending messages to a group chat in Microsoft Teams: Failed to send
+# Error when sending messages to a group chat in Teams: Failed to send
 
-The chat creator will receive the following error message if more than 200 members are added to the chat group at once during the creation of the chat:
+In Microsoft Teams, the chat creator receives the following error message if more than 200 members are added concurrently to the chat group when the chat is created:
+
+> Failed to send
 
 :::image type="content" source="./media/unable-send-message-group-chat/teams-error.png" alt-text="Screenshot of Teams error":::
 
-This behavior is by design. Group chats can have up to 250 members but a maximum of 200 members can be added at a time.
+This behavior is by design. Although group chats can have up to 250 members, no more than 200 members can be added at the same time.
 
-To avoid this error, add no more than 200 members to the group chat at once.
-
+To avoid this error, add no more than 200 members to the group chat at the same time.
