@@ -97,7 +97,7 @@
     href: performance-call-web-service.md
   - name: Troubleshoot OutOfMemoryException
     href: troubleshoot-outofmemoryexception.md
-  - name: Troubleshooting the View state is invalid error
+  - name: Troubleshoot the View state is invalid error
     href: troubleshooting-view-state-is-invalid-error.md
 
 - name: IISAdmin service and Inetinfo process operation

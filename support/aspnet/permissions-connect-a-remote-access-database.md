@@ -24,7 +24,7 @@ This article does not include how to configure database connections.
 
 ## More information
 
-When users browse to an ASP.NET Web site, they request that some code run on the server. All processes run within the security context of a specific account. By default, IIS uses the system account. The system account has full access to the IIS server computer but is not allowed to access shared folders on other computers (which are sometimes called NTFS resources). Therefore, you must configure the IIS computer so that it uses an account other than the system account. The [Configure the IIS Server](#Configure-the-IIS-Server) section describes several ways to select an alternate account.
+When users browse to an ASP.NET Web site, they request that some code run on the server. All processes run within the security context of a specific account. By default, IIS uses the system account. The system account has full access to the IIS server computer but is not allowed to access shared folders on other computers (which are sometimes called NTFS resources). Therefore, you must configure the IIS computer so that it uses an account other than the system account. The [Configure the IIS Server](#configure-the-iis-server) section describes several ways to select an alternate account.
 
 After IIS is set to run under another account, you must give that account permission to all of the files and folders that are needed to use the remote Access database, including:
 
@@ -34,7 +34,7 @@ After IIS is set to run under another account, you must give that account permis
 - Access to the remote computer from the network.
 - Permission to log on to the remote computer.
 
-The [Configure the Access Server](#Configure-the-Access-Server) section describes how to set these permissions on the account.
+The [Configure the Access Server](#configure-the-access-server) section describes how to set these permissions on the account.
 
 ## Configure the IIS Server
 
@@ -143,7 +143,7 @@ Like NTFS file system permissions, you must also set share permissions to allow 
 
 You may be tempted to use the administrative shares, which Windows creates for each drive (such as the C drive). However, it is better to create a new share because the administrative shares require that you add all users who use the share to the Administrators group.
 
-If the database is stored on a platform other than a Microsoft Windows platform, you must configure this share appropriately for the destination platform. For more information on how to use Access databases through a Novell file share, see the [REFERENCES](#references) section.
+If the database is stored on a platform other than a Microsoft Windows platform, you must configure this share appropriately for the destination platform.
 
 ### Replicate the IIS Computer's local user accounts
 

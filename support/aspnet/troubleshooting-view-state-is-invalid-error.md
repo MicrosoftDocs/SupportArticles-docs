@@ -1,12 +1,10 @@
 ---
-title: Troubleshooting the View state is invalid error
+title: Troubleshoot the View state is invalid error
 description: This article describes techniques for debugging and for resolving problems with view state. View state is a feature of ASP.NET that allows pages to automatically preserve state without relying on server state.
 ms.date: 12/11/2020
 ms.prod-support-area-path: 
-ms.technology: [Replace with your value]
-ms.reviewer: 
 ---
-# Troubleshooting the View state is invalid error with ASP.NET
+# Troubleshoot the View state is invalid error with ASP.NET
 
 This article introduces techniques for debugging and for resolving problems with view state in Microsoft ASP.NET applications.
 
