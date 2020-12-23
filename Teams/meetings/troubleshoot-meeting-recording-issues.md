@@ -1,114 +1,113 @@
 ---
 title: Troubleshoot Teams meeting recording issues
-description: Provides guides for administrators to help and guide users to troubleshoot meeting recording issues. For example, the meeting recording button is missing, or the meeting recording link isn't included or visible in a chat.
+description: Provides guides to troubleshoot meeting recording issues. For example, the meeting recording button is missing, or the meeting recording link isn't included or visible in a chat.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: troubleshooting 
-ms.prod: skype-for-business-itpro
+ms.service: msteams
 localization_priority: Normal
 ms.custom: 
 - CI 125645
 - CSSTroubleshoot
 ms.reviewer: corbinm
 appliesto:
-- Teams
+- Microsoft Teams
 search.appverid: 
 - MET150
 ---
 # Troubleshooting Teams meeting recording issues
 
-This article helps Microsoft Teams administrators guide users to troubleshoot meeting recording issues such as:
+You experience one of the following issues in Microsoft Teams:
 
 - The meeting recording button is missing.
-- The meeting recording link isn't included or visible in a chat.
+- The meeting recording link isn't included or visible in a chat window.
 
-## Run the Meeting Recording Support Diagnostic
+To troubleshoot the issue, begin by asking your administrator to run the [Meeting Recording Support Diagnostic](https://techcommunity.microsoft.com/t5/microsoft-teams-support/new-diagnostic-for-teams-meeting-recording/ba-p/1918982) that's available in the Microsoft 365 admin center.
 
-If users can't record Teams meetings, the administrator should run the [Meeting Recording Support Diagnostic](https://techcommunity.microsoft.com/t5/microsoft-teams-support/new-diagnostic-for-teams-meeting-recording/ba-p/1918982) available in the Microsoft 365 admin portal first to check if users meet these conditions:
+The diagnostic can check the following prerequisites for Teams meeting recordings:
 
-- User licenses
-- Meeting policies
-- Storage locations
-
-To start the diagnostic, sign in to Microsoft 365 admin center and type **Diag: Meeting Recording** in the **Need Help** dialogue box.
-
-:::image type="content" source="./media/troubleshoot-meeting-recording-issues/diagnostic.png" alt-text="Screenshot of start the Meeting Recording Support Diagnostic.":::
+- You must be assigned the correct license.
+- You must have the correct meeting policies.
+- You must have a supported storage location (Stream, OneDrive for Business, or SharePoint).
 
 For more information about user requirements for Teams meeting recording, see [Prerequisites for Teams cloud meeting recording](/microsoftteams/cloud-recording#prerequisites-for-teams-cloud-meeting-recording).
 
-If the diagnostic reports that your organization is on the Microsoft Stream storage but you're in a region or country that isn't supported by Stream yet, the administrator can use one of the following options:
+## Run the Meeting Recording Support Diagnostic
 
-- Use OneDrive for Business or SharePoint storage to replace the Stream storage. To do this, see [Use OneDrive for Business and SharePoint or Stream for meeting recordings](/microsoftteams/tmr-meeting-recording-change).
-- Set the meeting policy to save recordings outside the local region through the `-AllowRecordingStorageOutsideRegion` attribute in the [Set-CsTeamsMeetingPolicy](/powershell/module/skype/set-csteamsmeetingpolicy) cmdlet.
+1. Sign in to Microsoft 365 admin center, and type **Diag: Meeting Recording** in the **Need Help?** search box.
+2. Enter the Session Initiation Protocol (SIP) address, and select **Run Tests**.
 
-  **Note** This option allows users to still use the Stream storage but has their recordings stored outside the local region.
+:::image type="content" source="./media/troubleshoot-meeting-recording-issues/diagnostic.png" alt-text="Screenshot of start the Meeting Recording Support Diagnostic.":::
 
-If the diagnostic shows that the affected users meet the conditions, here's how to guide them:
+If the diagnostic reports that your organization is configured for Microsoft Stream storage, but you're in a region or country that isn't supported yet by Stream, use one of the following options:
 
-## The Meeting recording button is missing
+- Replace the Stream storage with OneDrive for Business or SharePoint. For more information, see [Use OneDrive for Business and SharePoint or Stream for meeting recordings](/microsoftteams/tmr-meeting-recording-change).
+- Set the meeting policy to save recordings outside the local region by using the `-AllowRecordingStorageOutsideRegion` attribute in the [Set-CsTeamsMeetingPolicy](/powershell/module/skype/set-csteamsmeetingpolicy) cmdlet.
 
-**Note** A known issue with the [New Meeting Experience](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/new-meeting-and-calling-experience-in-microsoft-teams/ba-p/1537581) in Teams prevents some users from recording meetings. Microsoft has rolled out an update to fix this issue globally. First, instruct users to [check and make sure they have the latest Teams updates](https://support.microsoft.com/office/update-microsoft-teams-535a8e4b-45f0-4f6c-8b3d-91bca7a51db1). Administrators can also [control how often their tenants get updates](/microsoft-365/admin/manage/release-options-in-office-365), which may affect when their users can receive new features.
+## Workaround
 
-If the issue isn't resolved, here's how users can work around this issue:
+Begin by making sure that you have the [latest Teams updates](https://support.microsoft.com/office/update-microsoft-teams-535a8e4b-45f0-4f6c-8b3d-91bca7a51db1) installed.
 
-- Leave the meeting and join the meeting again. The recording function might be restored.
-- Use the [Teams Web client](https://teams.microsoft.com/) to join and record the meeting.
-- Disable the new meeting experience, restart Teams, and try to record the meeting again.
+If the issue isn't resolved by an update, use the following workaround for the appropriate issue.
 
-Here's how to disable the new meeting experience:
+### Issue 1: The Meeting recording button is missing
 
-1. Select the profile picture at the top of the Teams app, and then select **Settings** > **General**.
-2. Uncheck the **Turn on new meeting experience (New meetings and calls will open in separate windows. That requires restarting Teams)** checkbox.
+- Leave and rejoin the meeting. This might restore the recording functionality.
+- Use the [Teams web client](https://teams.microsoft.com/) to join and record the meeting.
+- Disable the new meeting experience:
 
-   :::image type="content" source="./media/troubleshoot-meeting-recording-issues/feature.png" alt-text="Screenshot of disabling the new experience.":::
+  1. Select the profile picture at the top of the Teams app, and then select **Settings**.
+  2. On the **General** tab, clear the **Turn on new meeting experience (New meetings and calls will open in separate windows. Requires restarting Teams.)** check box.
 
-3. Restart Teams by following these steps:
+     :::image type="content" source="./media/troubleshoot-meeting-recording-issues/feature.png" alt-text="Screenshot of disabling the new experience.":::
 
-    1. Right-click or Cmd-click the Teams icon in the Windows task bar or Mac System Tray.
-    2. Select **Quit**.
-    3. Start Teams again.
+  3. Right-click the Teams icon in the Windows task bar or Cmd-click the Teams icon in the Mac dock.
+  4. Select **Quit**.
+  5. Restart Teams.
 
-If the issue still isn't resolved, the administrator should open a support ticket with Microsoft.
+Try again to record the meeting. If the issue still isn't resolved, ask your administrator to open a support ticket with Microsoft.
 
-## The meeting recording link isn't included or visible in a chat
+### Issue 2: The meeting recording link isn't visible in a chat window
 
-**Note** In high volume meeting chats, a known issue prevents the meeting recording link from appearing for one or more users.
+In high-volume chat sessions, a known issue prevents the meeting recording link from appearing for one or more users.
 
-Instruct affected users to scroll up to the top of the meeting chat and then scroll back to the bottom. This action may trigger a chat service event and restore the meeting recording link.
+Try scrolling up to the top of the chat window and then scrolling back to the bottom. This action might trigger a chat service event and restore the meeting recording link.
 
-If the meeting recording link still can't be found, direct users to one of the two following methods depending on [the report of the diagnostic](#run-the-meeting-recording-support-diagnostic).
+If the meeting recording link still isn't visible, use either of the following methods to locate the recording, depending on your storage location. The location is provided in the diagnostic report.
 
-### Method 1: Meeting recordings are stored in Stream
+**Method 1: Meeting recordings are stored in Stream**
 
-1. Sign in to Microsoft Stream.
-2. In the Stream navigation bar, go to **My content** > **Meetings**.
+1. Sign in to [Microsoft Stream](https://stream.microsoft.com).
+2. In the Stream navigation bar, select **My content** > **Meetings** to open the Meetings page.
 
    ![Screenshot of the Meeting button under My content](./media/troubleshoot-meeting-recording-issues/stream-meetings.png)
 
-3. You can also pivot to Teams meeting recordings from your other pages under **My content**.
+   The options from the **My content** menu appear on a bar at the top of each page. You can pivot to Teams meeting recordings from any page by selecting the **Meetings** tab on the bar.
 
    ![Screenshot of the Meeting button from other pages under My content](./media/troubleshoot-meeting-recording-issues/tabs.png)
 
 For more information, see [Find meetings in Microsoft Stream](/stream/portal-filter-meetings).
 
-### Method 2: Meeting recordings are stored in OneDrive for Business or in SharePoint
+**Method 2: Meeting recordings are stored on OneDrive for Business or in SharePoint**
 
-- For non-channel meetings, the recording is stored in a folder named **Recordings** in **My files** at the top level of the OneDrive for Business window.
+- For non-channel meetings, the recording is stored in the **Recordings** folder under **My files**.
 
-  Example: *Recorder's OneDrive for Business*/My files/Recordings
+  Example: <*Recording user's OneDrive for Business*>/My files/Recordings
 
   ![Screenshot of the OneDrive location for storing meeting recordings](./media/troubleshoot-meeting-recording-issues/onedrive-location.png)
 
-- For channel meetings, the recording is stored in the Teams site documentation library in a folder named **Recordings** in SharePoint. In the Teams channel, select **Files** > **Recordings**, and then select **Open in SharePoint** to find the recording link.
+- For channel meetings, the recording is stored in the Teams site documentation library in the **Recordings** folder in SharePoint.
 
-  Example in Teams: *Teams name - Channel name*/Files/Recordings
+  To find the recording link in the Teams channel, select **Files** > **Recordings** > **Open in SharePoint**.
+
+  Example in Teams: <*Teams channel name*>/Files/Recordings
 
   ![Screenshot of the Teams location for storing meeting recordings](./media/troubleshoot-meeting-recording-issues/teams-way.png)
 
-  Alternatively, the administrator can find the recording link directly in SharePoint for users from the **Recordings** folder in **Documents**.
+  Administrators can also find the recording link for users directly in SharePoint from the **Recordings** folder under **Documents**.
 
-  Example in SharePoint: SharePoint/Documents/*Channel name*/Recordings
-  
-  ![Screenshot of the SharePoint location for storing meeting recordings](./media/troubleshoot-meeting-recording-issues/sharepoint-location.png)
+  Example in SharePoint: <*SharePoint/Documents/Channel name*>/Recordings
+
+  ![Screenshot of the Teams location for storing meeting recordings](./media/troubleshoot-meeting-recording-issues/sharepoint-location.png)
