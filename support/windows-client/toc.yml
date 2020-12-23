@@ -874,15 +874,15 @@
     items:
     - name: Hyper-V can't start VM after upgrade
       href: ./virtualization/hyper-v-not-start-vm-after-upgrade.md
-- name: Windows 7 End of Support FAQ
+- name: Windows 7 End of Support (EOS) FAQ
   items:
-  - name: Windows 7 End of Support FAQ
+  - name: Windows 7 Eos FAQ
     href: ./windows-7-eos-faq/windows-7-end-support-faq.md
   - name: Windows 7 end of support
     href: ./windows-7-eos-faq/windows-7-end-support-faq-general.md
   - name: Windows 7 Extended Security Updates (ESU)
     href: ./windows-7-eos-faq/windows-7-extended-security-updates-faq.md
-  - name: Windows 7 Extended Security Updates (ESU) offers for E5 customers
+  - name: Windows 7 ESU offers for E5 customers
     href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.md
   - name: Troubleshoot issues in ESU
     href: ./windows-7-eos-faq/troubleshoot-extended-security-updates-issues.md
