@@ -110,4 +110,4 @@ For more information, see [Find meetings in Microsoft Stream](/stream/portal-fil
 
   Example in SharePoint: <*SharePoint/Documents/Channel name*>/Recordings
 
-  ![Screenshot of the Teams location for storing meeting recordings](./media/troubleshoot-meeting-recording-issues/sharepoint-location.png)
+  ![Screenshot of the SharePoint location for storing meeting recordings](./media/troubleshoot-meeting-recording-issues/sharepoint-location.png)

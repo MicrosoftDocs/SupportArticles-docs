@@ -112,7 +112,7 @@
     items:
     - name: How to join a Microsoft Teams meeting
       href: ./meetings/how-to-join-a-teams-meeting.md
-    - name: Troubleshoot Teams meeting recording
+    - name: Troubleshoot Teams meeting recording issues
       href: ./meetings/troubleshoot-meeting-recording-issues.md
   - name: Mobile
     items:
