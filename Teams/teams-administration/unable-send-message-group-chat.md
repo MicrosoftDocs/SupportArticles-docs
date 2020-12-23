@@ -20,7 +20,7 @@ search.appverid:
 
 # Error when sending messages to a group chat in Teams: Failed to send
 
-In Microsoft Teams, the chat creator receives the following error message if more than 200 members are added concurrently to the chat group when the chat is created:
+In Microsoft Teams, the chat creator receives the following error message if more than 200 members are added concurrently to the chat group:
 
 > Failed to send
 
