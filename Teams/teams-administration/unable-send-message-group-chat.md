@@ -28,4 +28,3 @@ In Microsoft Teams, the chat creator receives the following error message if mor
 
 This behavior is by design. Although group chats can have up to 250 members, no more than 200 members can be added at the same time.
 
-To avoid this error, add no more than 200 members to the group chat at the same time.
