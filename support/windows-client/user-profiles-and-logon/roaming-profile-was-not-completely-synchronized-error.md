@@ -35,7 +35,7 @@ Additionally, the system may log the following entries in the event log.
 
 - Event 509 (source: User Profile General)
 
-    > Windows cannot copy file \\\\?\\C:\Users\\UserName\\AppData\\Local\\Microsoft\\Windows\\UPPS\\UPPS.bin to location \\\\?\\UNC Path\\UserName.V6\\AppData\\Local\\Microsoft\\Windows\\UPPS\\UPPS.bin. This error may be caused by network problems or insufficient security rights.  
+    > Windows cannot copy file \\\\?\\C:\\Users\\UserName\\AppData\\Local\\Microsoft\\Windows\\UPPS\\UPPS.bin to location \\\\?\\UNC Path\\UserName.V6\\AppData\\Local\\Microsoft\\Windows\\UPPS\\UPPS.bin. This error may be caused by network problems or insufficient security rights.  
     DETAIL - Access is denied.
     >
     > Windows cannot copy file \\\\?\\C:\\Users\\UserName\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\\MicrosoftEdge.exe to location \\\\?\\UNC\\WS2016DC1\\rup\\UserName.V6\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdge.exe. This error may be caused by network problems or insufficient security rights.  
@@ -50,7 +50,7 @@ Additionally, the system may log the following entries in the event log.
 
 ## Cause
 
-This problem occurs because of a change that was made in Windows 10, version 1803. This change inadvertently caused folders that are excluded from roaming to be synchronized by roaming user profiles when you log on or log off.
+This problem occurs because of a change that was made in Windows 10, version 1803. This change inadvertently caused folders that are usually excluded from roaming to be synchronized by roaming user profiles when you log on or log off.
 
 ## Resolution
 

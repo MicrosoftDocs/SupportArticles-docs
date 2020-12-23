@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2848278
 
 A common troubleshooting task for the App-V 5.0 is to investigate or modify a local package by opening a process inside the context of an App-V application. This is also known as opening a process "in the App-V bubble".  App-V 5.0 offers several alternative methods to perform this task that differ significantly from techniques available in previous versions of the product. Each method detailed below accomplishes essentially the same task, but some methods may be better suited for some applications than others depending on whether the virtualized application is already running.
 
-## Get-AppvClientPackage PowerShell cmdlet
+## PowerShell cmdlet: Get-AppvClientPackage
 
 You can use the `Start-AppVVirtualProcess` cmdlet to retrieve the package name and then start a process within the specified package's virtual environment (substitute the name of your package for \<Package>):
 
