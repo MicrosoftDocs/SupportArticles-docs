@@ -131,7 +131,7 @@ The following is a detailed list of steps that are performed in a hub or branch 
 
     1. Verify that the following folders exist in the SYSVOL tree:
 
-        - \SYSVOL
+        - \\SYSVOL
         - \\SYSVOL\\domain
         - \\SYSVOL\\staging\\domain
         - \\SYSVOL\\staging areas
@@ -141,9 +141,11 @@ The following is a detailed list of steps that are performed in a hub or branch 
 
     2. Verify that the following reparse points exist:
 
-        - \\SYSVOL\\SYSVOL\\**DNS Domain Name**  
+        - \\SYSVOL\\SYSVOL\\**DNS Domain Name**
+
             This reparse point must be linked to the \\SYSVOL\\domain folder.
         - \\SYSVOL\\staging areas\\**DNS Domain Name**  
+
             This reparse point must be linked to the \\SYSVOL\\staging\\domain folder.
 
         The default path for the SYSVOL tree is under the \\WINDOWS or \\WINNT folder on the partition where the operating system is installed. However, the SYSVOL tree may be installed on any partition that is formatted by using the NTFS file system.
@@ -155,8 +157,10 @@ The SYSVOL tree contains reparse points to other folders in the SYSVOL tree. The
 The following two reparse points for a SYSVOL tree are installed in the C:\\WINNT\\SYSVOL folder:
 
 - C:\\WINNT\\SYSVOL\\SYSVOL\\**DNS Domain Name**.
+
     This reparse point is linked to the C:\\WINNT\\SYSVOL\\domain folder.
 - C:\\WINNT\\SYSVOL\\staging areas\\**DNS Domain Name**  
+
     This reparse point is linked to C:\\WINNT\\SYSVOL\\staging\\domain folder.
 
 On each domain controller in the domain, follow these steps:
@@ -185,6 +189,8 @@ On each domain controller in the domain, follow these steps:
     C:\>ntfrsutl ds |findstr /i "root stage"
     ```
 
+    Output:
+
     > Root: C:\\windows\\sysvol\\domain  
      Stage: C:\\windows\\sysvol\\staging\\domain
 
@@ -192,11 +198,15 @@ On each domain controller in the domain, follow these steps:
     C:\>Linkd %systemroot%\SYSVOL\SYSVOL\Contoso.com
     ```
 
+    Output:
+
     > Source domain.com is linked to C:\\WINDOWS\\SYSVOL\\domain
 
     ```console
     C:\>linkd "%systemroot%\SYSVOL\<staging areas>\Contoso.com
     ```
+
+    Output:
 
     > Source domain.com is linked to C:\\WINDOWS\\SYSVOL\\staging\\domain
 

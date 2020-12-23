@@ -17,11 +17,11 @@ ms.technology: SysManagementComponents
 
 This article provides a workaround for an issue where the Windows Trace Session Manager service doesn't start in the specified time.
 
-> [!IMPORTANT]
-> This article contains information about modifying the registry. Before you modify the registry, make sure to back it up and make sure that you understand how to restore the registry if a problem occurs. For information about how to back up, restore, and edit the registry, see [Windows registry information for advanced users](/troubleshoot/windows-server/performance/windows-registry-advanced-users).
-
 _Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 839803
+
+> [!IMPORTANT]
+> This article contains information about modifying the registry. Before you modify the registry, make sure to back it up and make sure that you understand how to restore the registry if a problem occurs. For information about how to back up, restore, and edit the registry, see [Windows registry information for advanced users](/troubleshoot/windows-server/performance/windows-registry-advanced-users).
 
 ## Symptoms
 

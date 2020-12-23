@@ -59,7 +59,7 @@ To resolve this issue, follow the steps for your operating system.
 
     6. Click the **General** tab, and then in the **Startup Type** box, verify that the service is not disabled. If the service is disabled, click **Automatic** to have it start when you start the computer.
 
-        :::image type="content" source="./media/error-1058-displayed-when-service-stops/verify-service-startup-type.png" alt-text="Screenshot of the Log on tab." border="false":::
+        :::image type="content" source="./media/error-1058-displayed-when-service-stops/verify-service-startup-type.png" alt-text="Verify the service Startup type." border="false":::
 
     7. Click **OK**.
 

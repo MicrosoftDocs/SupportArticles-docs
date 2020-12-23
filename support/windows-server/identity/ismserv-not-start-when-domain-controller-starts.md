@@ -32,7 +32,7 @@ Description:​
 The IsmServ service terminated with the following error:  
 The specified server cannot perform the requested operation.​  
 Event Xml:​  
-\<Event xmlns="`http://schemas.microsoft.com/win/2004/08/events/event`">  ​
+\<Event xmlns="`http://schemas.microsoft.com/win/2004/08/events/event`">  
 \...​  
   \<EventData>​  
     \<Data Name="param1">IsmServ</Data>​  

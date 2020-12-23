@@ -15,7 +15,7 @@ ms.technology: PrintFaxScan
 ---
 # Not all printer drivers downloaded from Windows Update are listed in Add Printer wizard
 
-This article provides a workaround for an issue in which not all printer drivers that are downloaded from Windows Update are listed when in the Add Printer wizard.
+This article provides a workaround for an issue in which not all printer drivers that are downloaded from Windows Update are listed in the Add Printer wizard.
 
 _Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4508350
@@ -59,7 +59,7 @@ To work around this issue, manually download and install the printer driver to b
 5. Do steps 1 through 6 in the [Symptoms](#symptoms) section.
 6. On the **Install the printer driver** screen, select **Have disk**.
 
-    :::image type="content" source="./media/not-all-printer-drivers-from-windows-update-in-add-printer-wizard/select-have-disk-button.png" alt-text="Microsoft catalog.":::
+    :::image type="content" source="./media/not-all-printer-drivers-from-windows-update-in-add-printer-wizard/select-have-disk-button.png" alt-text="Select Have disk button.":::
 
 7. Browse to the folder that was extracted in step 4, and then select the **OK**.
 
