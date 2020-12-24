@@ -47,7 +47,7 @@ To start the computer by using Last Known Good Configuration, follow these steps
 
 1. Click Start, and then click Shut Down.
 2. Click Restart, and then click OK.
-3. When you see the **Please select the operating system to start** message, press the F8 key.
+3. When you see the "Please select the operating system to start" message, press the F8 key.
 4. Use the arrow keys to select **Last Known Good Configuration**, and then press Enter.
 
     > [!NOTE]
@@ -72,7 +72,7 @@ To troubleshoot startup problems in safe mode, follow these steps:
 
 1. Click Start, and then click Shut Down.
 2. Click Restart, and then click OK.
-3. When you see the **Please select the operating system to start** message, press F8.
+3. When you see the "Please select the operating system to start" message, press F8.
 4. On the **Windows Advanced Option Menu**, use the arrow keys to select Safe Mode, and then press Enter.
 
     > [!NOTE]
