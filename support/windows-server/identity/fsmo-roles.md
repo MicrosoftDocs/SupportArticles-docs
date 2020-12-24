@@ -26,7 +26,7 @@ Active Directory is the central repository in which all objects in an enterprise
 
 ## Multi-master model
 
-A multi-master enabled database, such as the Active Directory, provides the flexibility of allowing changes to occur at any DC in the enterprise. But it also introduces the possibility of conflicts that can potentially lead to problems once the data is replicated to the rest of the enterprise. One way Windows deals with conflicting updates is by having a conflict resolution algorithm handle discrepancies in values. It's done by resolving to the DC to which changes were written last, that is, the **last writer wins**, while discarding the changes in all other DCs. Although this resolution method may be acceptable in some cases, there are times when conflicts are too difficult to resolve using the **last writer wins** approach. In such cases, it's best to prevent the conflict from occurring rather than to try to resolve it after the fact.
+A multi-master enabled database, such as the Active Directory, provides the flexibility of allowing changes to occur at any DC in the enterprise. But it also introduces the possibility of conflicts that can potentially lead to problems once the data is replicated to the rest of the enterprise. One-way Windows deals with conflicting updates is by having a conflict resolution algorithm handle discrepancies in values. It's done by resolving to the DC to which changes were written last, which is the **last writer wins**. The changes in all other DCs are discarded. Although this method may be acceptable in some cases, there are times when conflicts are too difficult to resolve using the **last writer wins** approach. In such cases, it's best to prevent the conflict from occurring rather than to try to resolve it after the fact.
 
 For certain types of changes, Windows incorporates methods to prevent conflicting Active Directory updates from occurring.
 
@@ -70,21 +70,30 @@ The PDC emulator of a domain is authoritative for the domain. The PDC emulator a
 In a Windows domain, the PDC emulator role holder retains the following functions:
 
 - Password changes done by other DCs in the domain are replicated preferentially to the PDC emulator.
-- Authentication failures that occur at a given DC in a domain because of an incorrect password are forwarded to the PDC emulator before a bad password failure message is reported to the user.
+- When authentication failures occur at a given DC because of an incorrect password, the failures are forwarded to the PDC emulator before a bad password failure message is reported to the user.
 - Account lockout is processed on the PDC emulator.
 - The PDC emulator performs all of the functionality that a Windows NT 4.0 Server-based PDC or earlier PDC performs for Windows NT 4.0-based or earlier clients.
 
-This part of the PDC emulator role becomes unnecessary when all workstations, member servers, and domain controllers (DCs) that are running Windows NT 4.0 or earlier are all upgraded to Windows 2000. The PDC emulator still does the other functions as described in a Windows 2000 environment.
+This part of the PDC emulator role becomes unnecessary under the following situation:  
+All workstations, member servers, and domain controllers (DCs) that are running Windows NT 4.0 or earlier are all upgraded to Windows 2000.
+
+The PDC emulator still does the other functions as described in a Windows 2000 environment.
 
 The following information describes the changes that occur during the upgrade process:
 
-- Windows clients (workstations and member servers) and down-level clients that have installed the distributed services client package don't perform directory writes, such as password changes, preferentially at the DC that has advertised itself as the PDC. They use any DC for the domain.
+- Windows clients (workstations and member servers) and down-level clients that have installed the distributed services client package don't perform directory writes (such as password changes) preferentially at the DC that has advertised itself as the PDC. They use any DC for the domain.
 - Once backup domain controllers (BDCs) in down-level domains are upgraded to Windows 2000, the PDC emulator receives no down-level replica requests.
 - Windows clients (workstations and member servers) and down-level clients that have installed the distributed services client package use the Active Directory to locate network resources. They don't require the Windows NT Browser service.
 
 ### Infrastructure master FSMO role
 
-When an object in one domain is referenced by another object in another domain, it represents the reference by the GUID, the SID (for references to security principals), and the DN of the object being referenced. The infrastructure FSMO role holder is the DC responsible for updating an object's SID and distinguished name in a cross-domain object reference.
+When an object in one domain is referenced by another object in another domain, it represents the reference by:
+
+- The GUID
+- The SID (for references to security principals)
+- The DN of the object being referenced
+
+The infrastructure FSMO role holder is the DC responsible for updating an object's SID and distinguished name in a cross-domain object reference.
 
 > [!NOTE]
 > The Infrastructure Master (IM) role should be held by a DC that is not a Global Catalog server(GC). If the Infrastructure Master runs on a Global Catalog server it will stop updating object information because it does not contain any references to objects that it does not hold. This is because a Global Catalog server holds a partial replica of every object in the forest. As a result, cross-domain object references in that domain will not be updated and a warning to that effect will be logged on that DC's event log.
