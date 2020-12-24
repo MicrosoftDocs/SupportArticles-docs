@@ -22,17 +22,17 @@ _Original KB number:_ &nbsp; 197132
 
 ## Summary
 
-Active Directory is the central repository in which all objects in an enterprise and their respective attributes are stored. It's a hierarchical, multi-master enabled database that can store millions of objects. Because it's multi-master, changes to the database can be processed at any given domain controller (DC) in the enterprise, regardless of whether the DC is connected or disconnected from the network.
+Active Directory is the central repository in which all objects in an enterprise and their respective attributes are stored. It's a hierarchical, multi-master enabled database that can store millions of objects. Changes to the database can be processed at any given domain controller (DC) in the enterprise, regardless of whether the DC is connected or disconnected from the network.
 
 ## Multi-master model
 
-A multi-master enabled database, such as the Active Directory, provides the flexibility of allowing changes to occur at any DC in the enterprise. But it also introduces the possibility of conflicts that can potentially lead to problems once the data is replicated to the rest of the enterprise. One-way Windows deals with conflicting updates are by having a conflict resolution algorithm handle discrepancies in values by resolving to the DC to which changes were written last (that is, the **last writer wins**), while discarding the changes in all other DCs. Although this resolution method may be acceptable in some cases, there are times when conflicts are too difficult to resolve using the **last writer wins** approach. In such cases, it's best to prevent the conflict from occurring rather than to try to resolve it after the fact.
+A multi-master enabled database, such as the Active Directory, provides the flexibility of allowing changes to occur at any DC in the enterprise. But it also introduces the possibility of conflicts that can potentially lead to problems once the data is replicated to the rest of the enterprise. One way Windows deals with conflicting updates is by having a conflict resolution algorithm handle discrepancies in values. It's done by resolving to the DC to which changes were written last, that is, the **last writer wins**, while discarding the changes in all other DCs. Although this resolution method may be acceptable in some cases, there are times when conflicts are too difficult to resolve using the **last writer wins** approach. In such cases, it's best to prevent the conflict from occurring rather than to try to resolve it after the fact.
 
 For certain types of changes, Windows incorporates methods to prevent conflicting Active Directory updates from occurring.
 
 ## Single-master model
 
-To prevent conflicting updates in Windows, the Active Directory performs updates to certain objects in a single-master fashion. In a single-master model, only one DC in the entire directory is allowed to process updates. It's similar to the role given to a primary domain controller (PDC) in earlier versions of Windows, such as Microsoft Windows NT 3.51 and 4.0, in which the PDC is responsible for processing all updates in a given domain.
+To prevent conflicting updates in Windows, the Active Directory performs updates to certain objects in a single-master fashion. In a single-master model, only one DC in the entire directory is allowed to process updates. It's similar to the role given to a primary domain controller (PDC) in earlier versions of Windows, such as Microsoft Windows NT 3.51 and 4.0. In Windows NT 3.51 and 4.0, the PDC is responsible for processing all updates in a given domain.
 
 Active Directory extends the single-master model found in earlier versions of Windows to include multiple roles, and the ability to transfer roles to any DC in the enterprise. Because an Active Directory role isn't bound to a single DC, it's referred to as an FSMO role. Currently in Windows there are five FSMO roles:
 
@@ -54,7 +54,10 @@ The domain naming master FSMO role holder is the DC responsible for making chang
 
 The RID master FSMO role holder is the single DC responsible for processing RID Pool requests from all DCs within a given domain. It's also responsible for removing an object from its domain and putting it in another domain during an object move.
 
-When a DC creates a security principal object, such as a user or group, it attaches a unique Security ID (SID) to the object. This SID consists of a domain SID that's the same for all SIDs created in a domain, and a relative ID (RID) that's unique for each security principal SID created in a domain.
+When a DC creates a security principal object, such as a user or group, it attaches a unique Security ID (SID) to the object. This SID consists of:
+
+- A domain SID that's the same for all SIDs created in a domain.
+- A relative ID (RID) that's unique for each security principal SID created in a domain.
 
 Each Windows DC in a domain is allocated a pool of RIDs that it's allowed to assign to the security principals it creates. When a DC's allocated RID pool falls below a threshold, that DC issues a request for additional RIDs to the domain's RID master. The domain RID master responds to the request by retrieving RIDs from the domain's unallocated RID pool, and assigns them to the pool of the requesting DC. There's one RID master per domain in a directory.
 
@@ -66,16 +69,16 @@ The PDC emulator of a domain is authoritative for the domain. The PDC emulator a
 
 In a Windows domain, the PDC emulator role holder retains the following functions:
 
-- Password changes performed by other DCs in the domain are replicated preferentially to the PDC emulator.
+- Password changes done by other DCs in the domain are replicated preferentially to the PDC emulator.
 - Authentication failures that occur at a given DC in a domain because of an incorrect password are forwarded to the PDC emulator before a bad password failure message is reported to the user.
 - Account lockout is processed on the PDC emulator.
-- The PDC emulator performs all of the functionality that a Microsoft Windows NT 4.0 Server-based PDC or earlier PDC performs for Windows NT 4.0-based or earlier clients.
+- The PDC emulator performs all of the functionality that a Windows NT 4.0 Server-based PDC or earlier PDC performs for Windows NT 4.0-based or earlier clients.
 
-This part of the PDC emulator role becomes unnecessary when all workstations, member servers, and domain controllers (DCs) that are running Windows NT 4.0 or earlier are all upgraded to Windows 2000. The PDC emulator still performs the other functions as described in a Windows 2000 environment.
+This part of the PDC emulator role becomes unnecessary when all workstations, member servers, and domain controllers (DCs) that are running Windows NT 4.0 or earlier are all upgraded to Windows 2000. The PDC emulator still does the other functions as described in a Windows 2000 environment.
 
 The following information describes the changes that occur during the upgrade process:
 
-- Windows clients (workstations and member servers) and down-level clients that have installed the distributed services client package don't perform directory writes,  such as password changes, preferentially at the DC that has advertised itself as the PDC. They use any DC for the domain.
+- Windows clients (workstations and member servers) and down-level clients that have installed the distributed services client package don't perform directory writes, such as password changes, preferentially at the DC that has advertised itself as the PDC. They use any DC for the domain.
 - Once backup domain controllers (BDCs) in down-level domains are upgraded to Windows 2000, the PDC emulator receives no down-level replica requests.
 - Windows clients (workstations and member servers) and down-level clients that have installed the distributed services client package use the Active Directory to locate network resources. They don't require the Windows NT Browser service.
 
