@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, squin, suehar, v-jeffbo
 ms.prod-support-area-path: 
-ms.technology: Windows 7 EoS FAQ
+ms.technology: Windows Server EoS FAQ
 ---
 # End of support for Windows Server 2008 and Windows Server 2008 R2
 
