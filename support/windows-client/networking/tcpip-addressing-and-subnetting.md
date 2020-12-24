@@ -50,14 +50,14 @@ For this process to work, an IP address has two parts. The first part of an IP a
 
 The second item, which is required for TCP/IP to work, is the subnet mask. The subnet mask is used by the TCP/IP protocol to determine whether a host is on the local subnet or on a remote network.
 
-In TCP/IP, the parts of the IP address that are used as the network and host addresses aren't fixed. Unless you have more information, the network and host addresses above can't be determined. This information is supplied in another 32-bit number called a subnet mask. The subnet mask is 255.255.255.0 in this example. It isn't obvious what this number means unless you know 255 in binary notation equals 11111111. so, the subnet mask is 11111111.11111111.11111111.0000000.
+In TCP/IP, the parts of the IP address that are used as the network and host addresses aren't fixed. Unless you have more information, the network and host addresses above can't be determined. This information is supplied in another 32-bit number called a subnet mask. The subnet mask is 255.255.255.0 in this example. It isn't obvious what this number means unless you know 255 in binary notation equals 11111111. So, the subnet mask is 11111111.11111111.11111111.0000000.
 
 Lining up the IP address and the subnet mask together, the network, and host portions of the address can be separated:
 
 11000000.10101000.01111011.10000100 - IP address (192.168.123.132)  
 11111111.11111111.11111111.00000000 - Subnet mask (255.255.255.0)
 
-The first 24 bits (the number of ones in the subnet mask) are identified as the network address. The last 8 bits (the number of remaining zeros in the subnet mask) identified as the host address. It gives you the following addresses:
+The first 24 bits (the number of ones in the subnet mask) are identified as the network address. The last 8 bits (the number of remaining zeros in the subnet mask) are identified as the host address. It gives you the following addresses:
 
 11000000.10101000.01111011.00000000 - Network address (192.168.123.0)  
 00000000.00000000.00000000.10000100 - Host address (000.000.000.132)
@@ -91,7 +91,7 @@ The next section explains how networks can be divided using subnet masks.
 
 A Class A, B, or C TCP/IP network can be further divided, or subnetted, by a system administrator. It becomes necessary as you reconcile the logical address scheme of the Internet (the abstract world of IP addresses and subnets) with the physical networks in use by the real world.
 
-A system administrator who is allocated a block of IP addresses may be administering networks. The networks aren't organized in a way that easily fits these addresses. For example, you have a wide area network with 150 hosts on three networks (in different cities) that are connected by a TCP/IP router. Each of these three networks has 50 hosts. You are allocated the class C network 192.168.123.0. (For illustration, this address is actually from a range that isn't allocated on the Internet.) It means that you can use the addresses 192.168.123.1 to 192.168.123.254 for your 150 hosts.
+A system administrator who is allocated a block of IP addresses may be administering networks that aren't organized in a way that easily fits these addresses. For example, you have a wide area network with 150 hosts on three networks (in different cities) that are connected by a TCP/IP router. Each of these three networks has 50 hosts. You are allocated the class C network 192.168.123.0. (For illustration, this address is actually from a range that isn't allocated on the Internet.) It means that you can use the addresses 192.168.123.1 to 192.168.123.254 for your 150 hosts.
 
 Two addresses that can't be used in your example are 192.168.123.0 and 192.168.123.255 because binary addresses with a host portion of all ones and all zeros are invalid. The zero address is invalid because it's used to specify a network without specifying a host. The 255 address (in binary notation, a host address of all ones) is used to broadcast a message to every host on a network. Just remember that the first and last address in any network or subnet can't be assigned to any individual host.
 
@@ -123,7 +123,7 @@ Incorrect Subnet Mask: If a network uses a subnet mask other than the default ma
 
 Incorrect IP Address: If you put computers with IP addresses that should be on separate subnets on a local network with each other, they won't be able to communicate. They'll try to send packets to each other through a router that can't forward them correctly. A symptom of this problem is a computer that can talk to hosts on remote networks, but can't communicate with some or all computers on their local network. To correct this problem, make sure all computers on the same physical network have IP addresses on the same IP subnet. If you run out of IP addresses on a single network segment, there are solutions that go beyond the scope of this article.
 
-Incorrect Default Gateway: A computer configured with an incorrect default gateway can communicate with hosts on its own network segment. But it will fail to communicate with hosts on some or all remote networks. A host can communicate with some remote networks but not others if the following conditions occur:
+Incorrect Default Gateway: A computer configured with an incorrect default gateway can communicate with hosts on its own network segment. But it will fail to communicate with hosts on some or all remote networks. A host can communicate with some remote networks but not others if the following conditions are true:
 
 - A single physical network has more than one router.
 - The wrong router is configured as a default gateway.
@@ -157,7 +157,7 @@ It is recommended that a system administrator responsible for TCP/IP networks ha
 
 - Network address--An IP address with a host portion that is all zeros.
 
-- Octet--An 8-bit number, 4 of which include a 32-bit IP address. They have a range of 00000000-11111111 that correspond to the decimal values 0- 255.
+- Octet--An 8-bit number, 4 of which comprise a 32-bit IP address. They have a range of 00000000-11111111 that correspond to the decimal values 0-255.
 
 - Packet--A unit of data passed over a TCP/IP network or wide area network.
 

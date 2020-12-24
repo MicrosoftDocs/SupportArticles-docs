@@ -46,7 +46,7 @@ Assume that you install Windows 8 or Windows Server 2012 on a VMware virtual mac
 
 ## Cause
 
-VMware 4.x doesn't support Windows 8 or Windows Server 2012 as guest operating system. VMware 4.x also doesn't support an Offline P2V of a virtual machine running a windows operating system when using System Center Virtual Machine Manager (VMM) 2012 SP1. This version of VMM uses WinPE 4.0 when executing the Offline P2V process.
+VMware 4.x doesn't support Windows 8 or Windows Server 2012 as guest operating system. VMware 4.x also doesn't support an Offline P2V of a virtual machine running a Windows operating system when using System Center Virtual Machine Manager (VMM) 2012 SP1. This version of VMM uses WinPE 4.0 when executing the Offline P2V process.
 
 ## Resolution
 

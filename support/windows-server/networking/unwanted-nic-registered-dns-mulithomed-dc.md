@@ -1,5 +1,5 @@
 ---
-title: Avoid registering Network Interface Controllers (NICs) in Domain Name System (DNS)
+title: Avoid registering unwanted Network Interface Controllers (NICs) in Domain Name System (DNS)
 description: This article provides a solution to an issue where unwanted NICs are registered in DNS on a multihomed domain controller.
 ms.date: 09/08/2020
 author: Deland-Han
