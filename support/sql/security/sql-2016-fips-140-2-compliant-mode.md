@@ -109,6 +109,6 @@ You can verify that the server is running in FIPS mode by looking for these mess
 
 ## Where can I learn more about FIPS 140-2?
 
-For more information about FIPS 140-2 and how to download it, go to the [NIST website](https://csrc.nist.gov/groups/STM/cmvp/standards.html).
+For more information about FIPS 140-2, see [CMVP FIPS 140-2 Standards and Documents](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/fips-140-2).
 
 Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft doesn't guarantee the accuracy of this third-party contact information.
