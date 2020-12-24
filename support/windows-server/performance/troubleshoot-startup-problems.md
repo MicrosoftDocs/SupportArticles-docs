@@ -350,7 +350,7 @@ For more information about how to test and repair a damaged hard disk by using C
 > [!NOTE]
 > If Chkdsk reports that it can't access your hard disk, you may have a hardware failure. Examine all cable connections and any jumper settings on your drive. Contact a computer repair professional or the manufacturer of your computer for more assistance.
 
-If Chkdsk reports that it can't fix all hard disk problems, your file system or MBR may be damaged or no longer accessible. Try to use the appropriate Recovery Console commands, such as Fixmbr and Fixboot, contact a data recovery service, or repartition and then reformat your hard disk.
+If Chkdsk reports that it can't fix all hard disk problems, your file system or MBR may be damaged or no longer accessible. Try to use the appropriate Recovery Console commands, such as `Fixmbr` and `Fixboot`, contact a data recovery service, or repartition and then reformat your hard disk.
 
 > [!WARNING]
 > If you repartition and reformat your hard disk, you lose all information on the disk.
