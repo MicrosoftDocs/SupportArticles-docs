@@ -48,7 +48,7 @@ To avoid this problem, disable **Offline Files**  by using the **Local Group Po
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
+Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the beginning of the article.
 
 ## More Information
 
