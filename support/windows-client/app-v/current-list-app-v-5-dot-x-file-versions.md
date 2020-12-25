@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2940578
 
 This article provides a quick reference to determine Microsoft Application Virtualization (App-V) 5.x file versions. This is helpful for support personnel in determining whether an environment is using the latest binaries.
 
-## More Information
+## More information
 
 To identify the build number of the App-V client, go to the **Programs and Features** item in **Control Panel**, and then click one of the following items, as appropriate:
 
