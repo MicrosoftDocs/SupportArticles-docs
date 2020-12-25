@@ -34,13 +34,17 @@ We have reports of the following symptoms impacting Windows Server Update Servic
 
 ## Issue details  
 
-### Scenario 1: WSUS/SCCM Administrators that synced the Delta Package versions of KB4041676 or KB4041691 before 4pm PDT October 10 may still have these KBs cached
+### Scenario 1
+
+WSUS/SCCM Administrators that synced the Delta Package versions of KB4041676 or KB4041691 before 4pm PDT October 10 may still have these KBs cached.
 
 #### Workaround
 
 WSUS/SCCM administrators should rescan for updates to automatically resolve the publishing issue. The issue is already resolved in WSUS hierarchies that have scanned since 4PM on October 10. Ensure your upstream and downstream servers are in sync.
 
-### Scenario 2: WSUS/SCCM managed devices that have downloaded and staged the Delta Package versions of KB4041676 or KB4041691 but have not rebooted to install
+### Scenario 2
+
+WSUS/SCCM managed devices that have downloaded and staged the Delta Package versions of KB4041676 or KB4041691 but have not rebooted to install.
 
 #### Workaround
 
@@ -84,7 +88,9 @@ dism /online /remove-package /PackageName:Package_for_RollupFix_Wrapper~31bf3856
 dism /online /remove-package /PackageName:Package_for_RollupFix_Wrapper~31bf3856ad364e35~x86~~14393.1770.1.6 /norestart >NUL 2>&1
 ```  
 
-### Scenario 3: WSUS/SCCM managed devices that installed the Delta Package versions of KB4041676 or KB4041691 and are unable to boot and/or see a recovery screen
+### Scenario 3
+
+WSUS/SCCM managed devices that installed the Delta Package versions of KB4041676 or KB4041691 and are unable to boot and/or see a recovery screen
 
 #### Workaround
 
