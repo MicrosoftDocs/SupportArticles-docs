@@ -2,22 +2,32 @@
 title: Event 7000 after installing the Hyper-V role in Windows Server
 description: This article describes Event 7000 that is logged by the VMSP service after you install the Hyper-V role in Windows Server.
 ms.date: 12/07/2020
-ms.prod-support-area-path: 
-ms.technology: [Replace with your value]
-ms.reviewer: 
+author: Deland-Han
+ms.author: delhan
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-server
+localization_priority: medium
+ms.reviewer: kaushika
+ms.prod-support-area-path: Installation and configuration of Hyper-V
+ms.technology: HyperV
 ---
 # Event 7000 after installing the Hyper-V role in Windows Server
 
-_Original product version:_ &nbsp; Windows 10, version 2004, all editions, Windows Server, version 2004, all editions, Windows 10, version 1909, all editions, Windows Server, version 1903, all editions, Windows 10, version 1903, all editions, Windows Server 2019, all editions  
+This article describes Event ID 7000 that's logged by the VMSP service after you install the Hyper-V role.
+
+_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4483865
 
 ## Symptoms
 
 After you install the Hyper-V role in Windows Server, version 1903, Windows Server, version 1909 and Windows Server 2019 and then restart the system to complete the role installation, the virtual machine security process (VMSP) logs the following error message in Event Viewer:
-Log Name: System
-Source: Service Control Manager
-Event ID: 7000
-Level: Error
+
+> Log Name: System  
+Source: Service Control Manager  
+Event ID: 7000  
+Level: Error  
 Description: "The VMSP service failed to start due to the following error: A device attached to the system is not functioning."
 
 ## More information

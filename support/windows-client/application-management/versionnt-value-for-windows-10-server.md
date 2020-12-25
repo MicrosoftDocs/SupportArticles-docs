@@ -2,19 +2,28 @@
 title: VersionNT value for Windows 10 and Windows Server 2016
 description: Provides the VersionNT value for Windows 10 and Windows Server 2016.
 ms.date: 12/07/2020
-ms.prod-support-area-path: 
-ms.technology: [Replace with your value]
-ms.reviewer: 
+author: Deland-Han
+ms.author: delhan
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-client
+localization_priority: medium
+ms.reviewer: kaushika
+ms.prod-support-area-path: MSI
+ms.technology: ApplicationCompatibility
 ---
 # VersionNT value for Windows 10, Windows Server 2016, and Windows Server 2019
 
-_Original product version:_ &nbsp; Windows 10, version 1809, all editions, Windows Server version 1803, Windows Server version 1709, Windows Server version 1803, Windows Server 2016, Windows 10, Windows Server 2019, all editions  
+This article describes the VersionNT value for Windows 10, Windows Server 2016, and Windows Server 2019.
+
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3202260
 
 ## Summary
 
-When you install an .msi installation package on Windows 10, Windows Server 2016 or Windows Server 2019, the **VersionNT** value is **603**.
+When you install a .msi installation package in Windows 10, Windows Server 2016 or Windows Server 2019, the VersionNT value is 603.
 
-## More Information
+## More information
 
 This version numbering is by design. To maintain compatibility, the VersionNT value is 603 for Windows 10, Windows Server 2016, and Windows Server 2019.
