@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4091524
 
 After you apply certain kernel changes (such as a kernel upgrade) to a Linux virtual machine (VM) on Azure, the VM can't restart. One of the following kernel errors is logged during the startup process:
 
-- An "no root device found" error that resembles the following:
+- An "no root device found" error that resembles the following one:
 
     ```
     dracut Warning: No root device "block:/dev/disk/by-uuid/UUID" found
@@ -33,7 +33,7 @@ After you apply certain kernel changes (such as a kernel upgrade) to a Linux vir
     [<ffffffff8100b072>] ? system_call_fastpath+0x16/0x1b
     ```
 
-- A kernel-timeout error that resembles the following:
+- A kernel-timeout error that resembles the following one:
 
     ```
     INFO: task swapper:1 blocked for more than 120 seconds.
@@ -58,7 +58,7 @@ After you apply certain kernel changes (such as a kernel upgrade) to a Linux vir
     [<ffffffff8100c200>] ? child_rip+0x0/0x20
     ```
 
-- A null pointer error that resembles the following:
+- A null pointer error that resembles the following one:
 
     ```
     Pid: 242, comm: async/1 Not tainted 2.6.32-504.12.2.el6.x86_64 #1
@@ -91,7 +91,7 @@ After you apply certain kernel changes (such as a kernel upgrade) to a Linux vir
     PGD 0
     ```
 
-- A kernel panic error that resembles the following:
+- A kernel panic error that resembles the following one:
 
     ```
     Invalid op code: 0000 [#2] [11427.908676] - end trace 61a458bb863d7f0f ]-
@@ -100,8 +100,9 @@ After you apply certain kernel changes (such as a kernel upgrade) to a Linux vir
 
 ## Resolution
 
-To recover the Linux VM on Azure, you must either install a newer kernel or roll back to an earlier version manually by using one of the following repair options. 
- To do this, use the usual procedure: Delete the affected Linux VM and keep the operating system disk, and then attach the disk to a new VM that has the same version of the affected VM (or, at least, of the same distribution). Then, use one of the following repair options. 
+To recover the Linux VM on Azure, you must either install a newer kernel or roll back to an earlier version manually by using one of the following repair options.
+
+To perform this action, use the usual procedure: Delete the affected Linux VM and keep the operating system disk, and then attach the disk to a new VM that has the same version of the affected VM (or, at least, of the same distribution). Then, use one of the following repair options.
 
 #### Repair option 1
 
@@ -112,12 +113,12 @@ Roll back the kernel, and start from a previous working setup by editing the con
 
 #### Repair option 2
 
-Install or reinstall a kernel by attaching the affected VM operating system disk to a temporary new VM, and then running a tool such as apt-get, Yellowdog Updater Modified (YUM), or Zypper. For more information, see [Linux Recovery: Using CHROOT steps to recover VMs that are not accessible](https://docs.microsoft.com/archive/blogs/linuxonazure/linux-recovery-using-chroot-steps-to-recover-vms-that-are-not-accessible).
+Install or reinstall a kernel by attaching the affected VM operating system disk to a temporary new VM, and then running a tool such as apt-get, `Yellowdog Updater Modified` (YUM), or `Zypper`. For more information, see [Linux Recovery: Using CHROOT steps to recover VMs that are not accessible](https://docs.microsoft.com/archive/blogs/linuxonazure/linux-recovery-using-chroot-steps-to-recover-vms-that-are-not-accessible).
 
 > [!NOTE]
 > This second option may be the best way to do the repair because you don't have to edit files manually.
 
-If the VM can't start from a previous kernel, you can try to rebuild the initramfs file, and then copy a new compressed image of the Linux kernel. For more information, see [How to rebuild the initramfs file](#how-to-rebuild-the-initramfs-file). 
+If the VM can't start from a previous kernel, you can try to rebuild the initramfs file, and then copy a new compressed image of the Linux kernel. For more information, see [How to rebuild the initramfs file](#how-to-rebuild-the-initramfs-file).
 
 ## More information
 
@@ -138,7 +139,7 @@ The first four lines of the grub.conf file contain the following information ab
 - **kernel:** Specifies the kernel command line that is being loaded at boot time and its parameters.
 - **initrd:** Specifies the path for the initrd file that will be loaded to boot, which usually matches the installation path of the kernel.
 
-The following are examples of grub files for different versions of the Linux kernel: 
+The following are examples of grub files for different versions of the Linux kernel:
 
 ```
 title CentOS (2.6.32-504.16.2.el6.x86_64)
@@ -170,7 +171,7 @@ initrd /boot/initramfs-2.6.32-431.29.2.el6.x86_64.img
 
 ### Methods to update configuration files
 
-To change the boot loader (grub.conf) and force the Linux VM to load a different kernel, manual intervention is required. To do this, use one of the following methods.
+To change the boot loader (grub.conf) and force the Linux VM to load a different kernel, manual intervention is required. To perform this action, use one of the following methods.
 
 #### Method 1: Serial console
 
@@ -178,15 +179,15 @@ The serial console is the fastest method to resolve this issue. This allows you 
 
 #### Method 2: Offline repair
 
-If the serial console is not enabled on your VM, or if it does not work, you can repair the system offline. To do this, follow these steps:
+If the serial console isn't enabled on your VM, or if it doesn't work, you can repair the system offline by following these steps:
 
-1. Attach the system disk of the VM as a data disk to a recovery VM (any working Linux VM). To do this, [use CLI commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/troubleshoot-recovery-disks-linux) or [VM recovery script](https://github.com/Azure/azure-support-scripts/tree/master/VMRecovery/ResourceManager). 
+1. Attach the system disk of the VM as a data disk to a recovery VM (any working Linux VM). To do it, [use CLI commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/troubleshoot-recovery-disks-linux) or [VM recovery script](https://github.com/Azure/azure-support-scripts/tree/master/VMRecovery/ResourceManager).
 2. Follow the steps in the mitigation section.
-3. Unmount and detach the original virtual hard disk, and then create a VM from the original system disk. To do this, [use CLI commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/troubleshoot-recovery-disks-linux) or [VM recovery script](https://github.com/Azure/azure-support-scripts/tree/master/VMRecovery/ResourceManager).
- 
+3. Unmount and detach the original virtual hard disk, and then create a VM from the original system disk. To do it, [use CLI commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/troubleshoot-recovery-disks-linux) or [VM recovery script](https://github.com/Azure/azure-support-scripts/tree/master/VMRecovery/ResourceManager).
+
 #### Mitigation steps
 
-1. Modify the `/mnt/troubleshootingdisk /boot/grub.conf` file. The following is an example of a modified grub.conf file: 
+1. Modify the `/mnt/troubleshootingdisk /boot/grub.conf` file. Here is an example of a modified grub.conf file:
 
     ```
     #title CentOS (2.6.32-504.16.2.el6.x86_64)
@@ -200,22 +201,22 @@ If the serial console is not enabled on your VM, or if it does not work, you can
 
 2. Check whether the device that is specified by the UUID value from the boot loader file grub.conf exists.
 
-    For example, when you check the system disk that is mounted on `/mnt/troubleshootingdisk` by looking in `/mnt/troubleshootingdisk /dev/disk/by-uuid`, you can see that there is a corresponding UUID file on disk that is referenced in the grub.conf file. The file is actually a symbolic link that is denoted by the character **l** at the start of the **lrwxrwxrwx** attribute that is pointing to the operating system disksda1. If the file is missing, the symbolic link can be re-created during system startup.
-3. You can create symbolic links manually by running following command if you know whethersda1is your startup device and you know the corresponding UUID: 
+    For example, when you check the system disk that is mounted on `/mnt/troubleshootingdisk` by looking in `/mnt/troubleshootingdisk /dev/disk/by-uuid`, you can see that there's a corresponding UUID file on disk that is referenced in the grub.conf file. The file is actually a symbolic link that is denoted by the character **l** at the start of the **lrwxrwxrwx** attribute that is pointing to the operating system disksda1. If the file is missing, the symbolic link can be re-created during system startup.
+3. You can create symbolic links manually by running following command if you know whethersda1is your startup device and you know the corresponding UUID:
 
     ```console
     cd /mnt/troubleshootingdisk/dev/disk/by-uuid ln -s ../../sda1 UUID
     ```
 
     > [!NOTE]
-    > The sda1 file is known as ablock devicein Linux. You can check it in the `ls` command output, in which it is denoted by the character `b` in the `brw-rw--` attribute. 
-4. You can also check whether this file exists on a CentOS 6.5, and the file can be re-created if it is missing. For example, run the following command: 
+    > The sda1 file is known as ablock devicein Linux. You can check it in the `ls` command output, in which it's denoted by the character `b` in the `brw-rw--` attribute.
+4. You can also check whether this file exists on a CentOS 6.5, and the file can be re-created if it's missing. For example, run the following command:
 
     ```console
     cd /mnt/troubleshootingdisk/dev/disk/by-uuid ls -ltr ../../sda1
     ```
 
-     The output resembles the following: 
+     The output resembles the following one:
 
     ```console
     brw-rw-- 1 root disk 8, 1 Date\Time ../../sda1
@@ -227,7 +228,7 @@ If the serial console is not enabled on your VM, or if it does not work, you can
     file ../../sda1 ../../sda1: block special
     ```
 
-### How to rebuild the initramfs file 
+### How to rebuild the initramfs file
 
 You can see the initramfs and kernel files in the example grub file (in the previous section) as follows:
 
@@ -238,24 +239,24 @@ You can see the initramfs and kernel files in the example grub file (in the prev
 
     `/boot/vmlinuz-2.6.32-504.16.2.el6.x86_64`
 
-Usually, you start a system from a recovery cd on-premises environment. However, in cloud environments, you have to attach the system disk to a temporary VM of the same operating system and version for recovering or manipulating system files for a no-boot scenario. This is needed when you try to copy or re-create initramfs and kernel files. 
+Usually, you start a system from a recovery cd on-premises environment. However, in cloud environments, you have to attach the system disk to a temporary VM of the same operating system and version for recovering or manipulating system files for a no-boot scenario. It's needed when you try to copy or re-create initramfs and kernel files.
 > [!NOTE]
 > After you attach the operating system disk to a temporary VM on /mnt/troubleshootingdisk (first secure any data by copying off the operating system disk), revert any previously made changes to grub.conf if you had commented out entries that refer to the first kernel to boot re-instate them.
 
-You can follow these steps to rebuild the initramfs file: 
+You can follow these steps to rebuild the initramfs file:
 
-1. Generate an initramfs file that is based on the existing version: 
+1. Generate an initramfs file that is based on the existing version:
 
     `mv /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.8.1.el6.x86_64.img /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.8.1.el6.x86_64.old-img dracut /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.8.1.el6.x86_64.img 2.6.32-504.8.1.el6.x86_64`
 
-    For example, you have to build and use the latest version available on the temporary CentOS 6.6 Linux VM, because you can't locate the exact same initramfs file. 
+    For example, you have to build and use the latest version available on the temporary CentOS 6.6 Linux VM, because you can't locate the exact same initramfs file.
 
-2. Copy the relevant vmlinuz file, and then update the grub.conf file to reflect new kernel values. To do this, use the commands in following table.
+2. Copy the relevant vmlinuz file, and then update the grub.conf file to reflect new kernel values. To do it, use the commands in following table.
 
 | **Command**| **Output** |
 |---|---|
-|`ls -ltr /lib/modules/|drwxr-xr-x. 7 root root 4096Date2.6.32-431.11.2.el6.x86_64<br/>drwxr-xr-x. 7 root root 4096Date2.6.32-431.17.1.el6.x86_64<br/>drwxr-xr-x. 7 root root 4096Date2.6.32-431.29.2.el6.x86_64<br/>drwxr-xr-x. 7 root root 4096Date\Time2.6.32-504.1.3.el6.x86_64<br/>drwxr-xr-x. 7 root root 4096Date\Time2.6.32-504.12.2.el6.x86_64|
-|dracut /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.12.2.el6.x86_64.img 2.6.32-504.12.2.el6.x86_64<br/>ls -ltr /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.12.2.el6.x86_64.img| -rw---. 1 root root 19354168Date\Time/mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.12.2.el6.x86_64.img |
-|cp /boot/vmlinuz-2.6.32-504.12.2.el6.x86_64 /mnt/troubleshootingdisk/boot/<br/>ls -ltr /mnt/troubleshootingdisk/boot/vmlinuz*|-rwxr-xr-x. 1 root root 4128368Date\Time/mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-431.el6.x86_64<br/>-rwxr-xr-x. 1 root root 4128688 Jan 3 2014 /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-431.3.1.el6.x86_64<br/>-rwxr-xr-x. 1 root root 4129872Date\Time/mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-431.17.1.el6.x86_64<br/>-rwxr-xr-x. 1 root root 4131984Date\Time/mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-431.29.2.el6.x86_64<br/>-rwxr-xr-x. 1 root root 4153008Date\Time/mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-504.8.1.el6.x86_64<br/>-rwxr-xr-x. 1 root root 4152720Date\Time/mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-504.12.2.el6.x86_64|
-|vi /mnt/troubleshootingdisk/boot/grub/grub.conf|title CentOS (2.6.32-504.12.2.el6.x86_64)<br/>root (hd0,0)<br/>kernel /boot/vmlinuz-2.6.32-504.12.2.el6.x86_64 ro root=UUID=UUIDrd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD SYSFONT=latarcyrheb-sun16 crashkernel=auto KEYBOARDTYPE=pc KEYTABLE=us rd_NO_DM rhgb quiet numa=off console=ttyS0 earlyprintk=ttyS0 rootdelay=300<br/>initrd /boot/initramfs-2.6.32-504.12.2.el6.x86_64.img|
+|`ls -ltr /lib/modules/`|`drwxr-xr-x. 7 root root 4096 Date 2.6.32-431.11.2.el6.x86_64`<br/>`drwxr-xr-x. 7 root root 4096 Date 2.6.32-431.17.1.el6.x86_64`<br/>`drwxr-xr-x. 7 root root 4096 Date 2.6.32-431.29.2.el6.x86_64`<br/>`drwxr-xr-x. 7 root root 4096 Date\Time 2.6.32-504.1.3.el6.x86_64`<br/>`drwxr-xr-x. 7 root root 4096 Date\Time 2.6.32-504.12.2.el6.x86_64`|
+|`dracut /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.12.2.el6.x86_64.img 2.6.32-504.12.2.el6.x86_64`<br/>`ls -ltr /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.12.2.el6.x86_64.img`| `-rw---. 1 root root 19354168 Date\Time /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.12.2.el6.x86_64.img` |
+|`cp /boot/vmlinuz-2.6.32-504.12.2.el6.x86_64 /mnt/troubleshootingdisk/boot/`<br/>`ls -ltr /mnt/troubleshootingdisk/boot/vmlinuz*`|`-rwxr-xr-x. 1 root root 4128368 Date\Time /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-431.el6.x86_64`<br/>`-rwxr-xr-x. 1 root root 4128688 Date\Time /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-431.3.1.el6.x86_64`<br/>`-rwxr-xr-x. 1 root root 4129872 Date\Time /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-431.17.1.el6.x86_64`<br/>`-rwxr-xr-x. 1 root root 4131984 Date\Time /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-431.29.2.el6.x86_64`<br/>`-rwxr-xr-x. 1 root root 4153008 Date\Time /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-504.8.1.el6.x86_64`<br/>`-rwxr-xr-x. 1 root root 4152720 Date\Time /mnt/troubleshootingdisk/boot/vmlinuz-2.6.32-504.12.2.el6.x86_64`|
+|`vi /mnt/troubleshootingdisk/boot/grub/grub.conf`|title CentOS (2.6.32-504.12.2.el6.x86_64)<br/>root (hd0,0)<br/>`kernel /boot/vmlinuz-2.6.32-504.12.2.el6.x86_64 ro root=UUID=UUID rd_NO_LUKS rd_NO_LVM LANG=en_US.UTF-8 rd_NO_MD SYSFONT=latarcyrheb-sun16 crashkernel=auto KEYBOARDTYPE=pc KEYTABLE=us rd_NO_DM rhgb quiet numa=off console=ttyS0 earlyprintk=ttyS0 rootdelay=300`<br/>initrd /boot/initramfs-2.6.32-504.12.2.el6.x86_64.img|
 |||
