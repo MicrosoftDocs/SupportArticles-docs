@@ -67,4 +67,6 @@ To work around this problem, you can copy the ExcludeProfileDirs registry key fr
 
 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\ExcludeProfileDirs`
 
-For information about how to export and import registry keys by using the reg.exe tool, see [reg export](/windows-server/administration/windows-commands/reg-export).
+For information about how to export and import registry keys by using the reg.exe tool, see the following Windows IT Pro Center article:
+
+[reg export](/windows-server/administration/windows-commands/reg-export)
