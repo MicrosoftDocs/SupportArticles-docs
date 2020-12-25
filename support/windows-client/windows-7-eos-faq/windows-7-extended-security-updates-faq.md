@@ -240,6 +240,10 @@ For instructions to install and activate Windows 7 ESU MAK keys on multiple devi
 
 No. Nothing needs to be done to the Year 1 key in order to install the Year 2 key. The installation process for Year 2 is identical to Year 1 (see previous question, above).
 
+### Can Windows 7 ESU Year 1 updates be applied to a device after January 12, 2021 if the Year 1 key is installed on the device?
+
+Yes, updates can be installed at any time. That allows you to maintain your existing patch rollout process when the Year 1 key is installed and activated on a device. The same applies for Year 2 and Year 3. For more information, see [What are the coverage dates for the three Windows 7 ESU SKUs](#what-are-the-coverage-dates-for-the-three-windows-7-esu-skus).
+
 ### Why are the ESU License Preparation Packages necessary?
 
 The Extended Security Updates (ESU) License Preparation Packages ([Extended Security Updates (ESU) Licensing Preparation Package for Windows 7 SP1 and Windows Server 2008 R2 SP1](https://support.microsoft.com/help/4538483/extended-security-updates-esu-licensing-preparation-package) and [Extended Security Updates (ESU) Licensing Preparation Package for Windows Server 2008 SP2](https://support.microsoft.com/help/4538484/extended-security-updates-esu-licensing-preparation-package)) address activation experience requirements that we identified while testing and evaluating by using a large population of preview customers. We introduced the ESU License Preparation Packages on February 11, 2020, to provide a consistent user experience going forward, minimize the number of package installations, and reduce overall customer disruption.  
