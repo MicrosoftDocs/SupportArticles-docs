@@ -37,7 +37,7 @@ If you do not know the exact name of your package, you can use the command line 
 
 This method allows you launch any command within the context of an App-V package whether the package is currently running or not. This is similar to using the `sfttray /exe cmd.exe /launch "App-V Application"` syntax in App-V 4.6.
 
-## The command-line switch /appvpid:\<PID>
+## The command-line switch "/appvpid:\<PID>"
 
 This allows you to apply the `/appvpid` switch to any command that will allow the command to run within the virtual process of the virtual process you selected by its PID (Process ID) as in the example below:
 
@@ -47,7 +47,7 @@ cmd.exe /appvpid:8108
 
 To obtain the process ID (PID) of your App-V process, use the command tasklist.exe from an elevated command prompt and obtain the PID of your process. This method has the advantage of launching the new executable in the same App-V environment as an already-running executable.
 
-## The command-line hook switch /appvve:\<GUID>
+## The command-line hook switch "/appvve:\<GUID>"
 
 Where the `/appvpid` switch requires the virtual process to already be running, this switch allows you to start a local command and allow it to run within the virtual environment of an App-V package and will initialize it. The syntax is `cmd.exe /appvve: <PACKAGEGUID_VERSIONGUID>`.
 
