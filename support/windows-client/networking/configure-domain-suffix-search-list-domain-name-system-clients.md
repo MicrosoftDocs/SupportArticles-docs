@@ -68,8 +68,10 @@ To run the script, you must have administrator or system-level access to the com
 > 1. Create a file with the .vbs extension (for example, C:\\add.vbs).
 > 2. Add the following two lines to the file:
 >
->    `SET WSHShell = CreateObject("WScript.Shell")`  
-     `WSHShell.RegWrite "HKLM\System\CurrentControlSet\Services\TCPIP\Parameters\SearchList", "testadatum.com,test2adatum.net,test3adatum.gov", "REG_SZ"`
+>    ```vbscript
+>    SET WSHShell = CreateObject("WScript.Shell")
+>    WSHShell.RegWrite "HKLM\System\CurrentControlSet\Services\TCPIP\Parameters\SearchList", "testadatum.com,test2adatum.net,test3adatum.gov", "REG_SZ"
+>    ```
 >
 >    (the second line starts with "WSHShell.RegWrite" and ends with "REG_SZ")
 > 3. Double-click the file to run or at a command prompt, type *C:\\add.vbs*
