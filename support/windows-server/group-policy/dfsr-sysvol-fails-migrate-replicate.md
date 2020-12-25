@@ -179,14 +179,14 @@ To resolve the issue, follow all steps in the order, using an elevated CMD promp
 5. Restart the DFSR service on that DC.
 6. Validate that the DC now shares `SYSVOL` and NETLOGON, and replicates `SYSVOL` inbound.
 
-The sysvol may not be shared on any of the DCs. Which will prevent you from editing or applying Group Policy. As a workaround you can manually share the sysvol, edit the User Right "Manage Auditing and Security Log" and force a GP update.
+The `sysvol` may not be shared on any of the DCs. Which will prevent you from editing or applying Group Policy. As a workaround you can manually share the `sysvol`, edit the User Right "Manage Auditing and Security Log" and force a GP update.
 
 Steps:
 
-1. Manually share the sysvol - Edit this registry value
+1. Manually share the `sysvol` - Edit this registry value
     `Key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\parameters`  
     Value `SysvolReady` = 1  
-    run net share to make sure the sysvol is shared out.
+    run net share to make sure the `sysvol` is shared out.
 1. Open the policy and add the user or group to the "manage auditing and security log" user right.
 1. Run:
 
@@ -208,4 +208,4 @@ Don't share `SYSVOL` and NETLOGON manually to work around this issue. Don't set 
 
 For more information on lowering the AD Replication convergence time using Inter-site Change Notification, see [Appendix B - Procedures Reference](/previous-versions/windows/it-pro/windows-2000-server/bb727062(v=technet.10)).
 
-For more information on SYSVOL migration from FRS to DFSR, see [Migrate SYSVOL replication to DFS Replication](https://technet.microsoft.com/library/dd640019%28WS.10%29.aspx/windows-server/storage/dfs-replication/migrate-sysvol-to-dfsr).
+For more information on `SYSVOL` migration from FRS to DFSR, see [Migrate SYSVOL replication to DFS Replication](https://technet.microsoft.com/library/dd640019%28WS.10%29.aspx/windows-server/storage/dfs-replication/migrate-sysvol-to-dfsr).
