@@ -1,49 +1,30 @@
 ---
 title: How to configure DNS dynamic updates in Windows Server 2003
-description: Describes that  how to configure DNS dynamic updates in Windows Server 2003 and how to integrate DNS updates with DHCP .
+description: Describes that  how to configure DNS dynamic updates in Windows Server 2003 and how to integrate DNS updates with DHCP.
 ms.date: 12/07/2020
-ms.prod-support-area-path: 
-ms.technology: [Replace with your value]
-ms.reviewer: 
+author: Deland-Han
+ms.author: delhan 
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-server
+localization_priority: medium
+ms.reviewer: kaushika
+ms.prod-support-area-path: DNS
+ms.technology: Networking
 ---
 # How to configure DNS dynamic updates in Windows Server 2003
 
-For a Microsoft Windows 2000 version of this article, see [317590](https://support.microsoft.com/help/317590).  
+This article describes how to configure the DNS update functionality in Microsoft Windows Server 2003.
 
-_Original product version:_ &nbsp; Windows Servers  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 816592
-
-### IN THIS TASK
-
-
-- [SUMMARY](#SUMMARY) 
-  - [Windows Server 2003 DNS update features](#Windows-Server-2003-DNS-update-features) 
-  - [How Windows Server 2003-based computers update their DNS names](#How-Windows-Server-2003-based-computers-update-their-DNS-names) 
-    - [An example of how DNS updates work](#An-example-of-how-DNS-updates-work) 
-  - [Integration of DHCP with DNS](#Integration-of-DHCP-with-DNS) 
-    - [How the DHCP/DNS update interaction works](#How-the-DHCP/DNS--update-interaction-works) 
-  - [Windows-based DHCP clients and DNS dynamic update protocol](#Windows-based-DHCP-clients-and-DNS-dynamic-update-protocol) 
-    - [An example of a DHCP/DNS update interaction for Windows Server 2003-based, Windows 2000-based, and Windows XP-based DHCP clients](#An-example-of-a-DHCP/DNS-update-interaction-for-Windows-Server-2003-based,-Windows-2000-based,-and-Windows-XP-based-DHCP-clients) 
-    - [An example of a DHCP/DNS update interaction for Windows-based DHCP clients that use a version of Windows that is earlier than Windows Server 2003](#An-example-of-a-DHCP/DNS-update-interaction-for-Windows-based-DHCP-clients-that-use-a-version-of-Windows-that-is-earlier-than-Windows-Server-2003) 
-  - [Secure dynamic updates](#Secure-dynamic-updates) 
-    - [Enable only secure dynamic updates](#Enable-only-secure-dynamic-updates) 
-  - [Use the DnsUpdateProxy security group](#Use-the-DnsUpdateProxy-security-group) 
-    - [Add members to the DnsUpdateProxy group](#Add-members-to-the-DnsUpdateProxy-group) 
-    - [Security considerations when you use the DnsUpdateProxy group](#Security-considerations-when-you-use-the-DnsUpdateProxy-group) 
-  - [Configure DNS dynamic update protocol](#Configure-DNS-dynamic-update-protocol) 
-    - [Configure DNS updates for DHCP clients](#Configure-DNS-updates-for-DHCP-clients) 
-    - [Configure DNS updates on multihomed client computers](#Configure-DNS-updates-on-multihomed-client-computers) 
-    - [Configure DNS updates on a Windows Server 2003-based DHCP server](#Configure-DNS-updates-on-a-Windows-Server-2003-based-DHCP-server) 
-    - [Enable DNS updates to a DNS server](#Enable-DNS-updates-to-a-DNS-server) 
-  - [Disable DNS updates](#Disable-DNS-updates) 
 
 ## Summary
 
-This article describes how to configure the DNS update functionality in Microsoft Windows Server 2003. The DNS update functionality enables DNS client computers to register and to dynamically update their resource records with a DNS server whenever changes occur. If you use this functionality, you can reduce the requirement for manual administration of zone records, especially for clients that frequently move and use Dynamic Host Configuration Protocol (DHCP) to obtain an IP address.
+The DNS update functionality enables DNS client computers to register and to dynamically update their resource records with a DNS server whenever changes occur. If you use this functionality, you can reduce the requirement for manual administration of zone records, especially for clients that frequently move and use Dynamic Host Configuration Protocol (DHCP) to obtain an IP address.
 
 Windows Server 2003 provides support for the dynamic update functionality as described in Request for Comments (RFC) 2136. For DNS servers, the DNS service permits you to enable or to disable the DNS update functionality on a per-zone basis at each server that is configured to load either a standard primary or directory-integrated zone.
-
-[back to the top](#toc) 
 
 ### Windows Server 2003 DNS update features
 
@@ -54,91 +35,97 @@ Windows Server 2003 provides the following features that are related to the DNS 
 - Use of Active Directory directory service as a locator service for domain controllers.
 - Integration with Active Directory.
 
-You can integrate DNS zones into Active Directory to provide increased fault tolerance and security. Every Active Directory-integrated zone is replicated among all domain controllers in the Active Directory domain. All DNS servers that are running on these domain controllers can act as primary servers for the zone and accept dynamic updates. Active Directory replicates on a per-property basis and propagates only relevant changes.
+    You can integrate DNS zones into Active Directory to provide increased fault tolerance and security. Every Active Directory-integrated zone is replicated among all domain controllers in the Active Directory domain. All DNS servers that are running on these domain controllers can act as primary servers for the zone and accept dynamic updates. Active Directory replicates on a per-property basis and propagates only relevant changes.
 - Aging and scavenging of records.
 
-The DNS Server service can scan and remove records that are no longer required. When you enable this feature, you can prevent outdated records from remaining in DNS.
+    The DNS Server service can scan and remove records that are no longer required. When you enable this feature, you can prevent outdated records from remaining in DNS.
 - Secure dynamic updates in Active Directory-integrated zones.
 
-You can configure Active Directory-integrated zones for secure dynamic updates so that only authorized users can make changes to a zone or to a record.
+    You can configure Active Directory-integrated zones for secure dynamic updates so that only authorized users can make changes to a zone or to a record.
 - Administration from a command prompt.
 - Enhanced name resolution.
 - Enhanced caching and negative caching.
 - Interoperability with other DNS server implementations.
 - Integration with other network services.
-- Incremental zone transfer. [back to the top](#toc) 
+- Incremental zone transfer.
 
 ### How Windows Server 2003-based computers update their DNS names
 
 By default, computers that run Windows Server 2003 and that are statically configured for TCP/IP try to dynamically register host address (A) and pointer (PTR) resource records for IP addresses that are configured and used by their installed network connections. By default, all computer register records are based on the full computer name.
 
-For Windows Server 2003-based computers, the primary full computer name is a fully qualified domain name (FQDN). Additionally, the primary full computer name is the primary DNS suffix of the computer that is appended to the computer name. To determine the primary DNS suffix of the computer and the computer name, right-click **My Computer**, click
- **Properties**, and then click **Computer Name**.
+For Windows Server 2003-based computers, the primary full computer name is a fully qualified domain name (FQDN). Additionally, the primary full computer name is the primary DNS suffix of the computer that is appended to the computer name. To determine the primary DNS suffix of the computer and the computer name, right-click **My Computer**, click **Properties**, and then click **Computer Name**.
 
 DNS updates can be sent for any one of the following reasons or events:
 
 - An IP address is added, removed, or modified in the TCP/IP properties configuration for any one of the installed network connections.
-- An IP address lease changes or renews any one of the installed network connections with the DHCP server. For example, this update occurs when the computer is started or when you use the ipconfig /renew command.
-- You use the ipconfig /registerdns command to manually force an update of the client name registration in DNS.
+- An IP address lease changes or renews any one of the installed network connections with the DHCP server. For example, this update occurs when the computer is started or when you use the `ipconfig /renew` command.
+- You use the `ipconfig /registerdns` command to manually force an update of the client name registration in DNS.
 - The computer is turned on.
-- A member server is promoted to a domain controller.When one of these events triggers a DNS update, the DHCP Client service, not the DNS Client service, sends updates. If a change to the IP address information occurs because of DHCP, corresponding updates in DNS are performed to synchronize name-to-address mappings for the computer. The DHCP Client service performs this function for all network connections on the system. This includes connections that are not configured to use DHCP.
+- A member server is promoted to a domain controller.
 
-Notes 
-- The update process for Windows Server 2003-based computers that use DHCP to obtain their IP address is different from the process that is described in this section. For more information, see the "Integration of DHCP with DNS" section and the "Windows DHCP clients and DNS dynamic update protocol" section.
-- The update process that is described in this section assumes that Windows Server 2003 installation defaults are in effect. Specific names and update behavior is tunable when advanced TCP/IP properties are configured to use non-default DNS settings.
-- Besides the full computer name, or the primary name, of the computer, you can configure additional connection-specific DNS names and optionally register or update them in DNS.By default, Windows XP and Windows Server 2003 reregister their A and PTR resource records every 24 hours regardless of the computer's role. To change this time, add the DefaultRegistrationRefreshInterval registry entry under the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TcpIp\Parameters` 
+When one of these events triggers a DNS update, the DHCP Client service, not the DNS Client service, sends updates. If a change to the IP address information occurs because of DHCP, corresponding updates in DNS are performed to synchronize name-to-address mappings for the computer. The DHCP Client service performs this function for all network connections on the system. This includes connections that are not configured to use DHCP.
+
+> [!Note]
+>
+> - The update process for Windows Server 2003-based computers that use DHCP to obtain their IP address is different from the process that is described in this section. For more information, see the "Integration of DHCP with DNS" section and the "Windows DHCP clients and DNS dynamic update protocol" section.
+> - The update process that is described in this section assumes that Windows Server 2003 installation defaults are in effect. Specific names and update behavior is tunable when advanced TCP/IP properties are configured to use non-default DNS settings.
+> - Besides the full computer name, or the primary name, of the computer, you can configure additional connection-specific DNS names and optionally register or update them in DNS.
+
+By default, Windows XP and Windows Server 2003 reregister their A and PTR resource records every 24 hours regardless of the computer's role. To change this time, add the DefaultRegistrationRefreshInterval registry entry under the following registry subkey:  
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TcpIp\Parameters`
+
 The interval is set in seconds.
-
-[back to the top](#toc) 
 
 #### An example of how DNS updates work
 
-For Windows Server 2003, dynamic updates are typically requested when either a DNS name or an IP address changes on the computer. For example, a client named "oldhost" is first configured in system properties to have the following names: Computer name: oldhost
- DNS domain name of computer: example.microsoft.com
- Full computer name: oldhost.example.microsoft.com
-In this example, no connection-specific DNS domain names are configured for the computer. If you rename the computer from "oldhost" to "newhost", the following name changes occur: Computer name: newhost
- DNS domain name of computer: example.microsoft.com
- Full computer name: newhost.example.microsoft.com
+For Windows Server 2003, dynamic updates are typically requested when either a DNS name or an IP address changes on the computer. For example, a client named "oldhost" is first configured in system properties to have the following names:  
+Computer name: oldhost  
+DNS domain name of computer: `example.microsoft.com`  
+Full computer name: `oldhost.example.microsoft.com`  
+
+In this example, no connection-specific DNS domain names are configured for the computer. If you rename the computer from "oldhost" to "newhost", the following name changes occur:  
+Computer name: newhost  
+DNS domain name of computer: `example.microsoft.com`  
+Full computer name: `newhost.example.microsoft.com`
+
 After the name change is applied in **System Properties**, Windows Server 2003 prompts you to restart the computer. After the computer restarts Windows, the DHCP Client service performs the following sequence to update DNS:
 
 1. The DHCP Client service sends a start of authority (SOA) type query by using the DNS domain name of the computer.
 
-The client computer uses the currently configured FQDN of the computer, such as "newhost.example.microsoft.com", as the name specified in this query.
+    The client computer uses the currently configured FQDN of the computer, such as "`newhost.example.microsoft.com`", as the name specified in this query.
 2. The authoritative DNS server for the zone that contains the client FQDN responds to the SOA-type query.
 
-For standard primary zones, the primary server, or owner, that is returned in the SOA query response is fixed and static. The primary server name always matches the exact DNS name as that name is displayed in the SOA resource record that is stored with the zone. However, if the zone that is being updated is directory-integrated, any DNS server that is loading the zone can respond and dynamically insert its own name as the primary server of the zone in the SOA query response.
+    For standard primary zones, the primary server, or owner, that is returned in the SOA query response is fixed and static. The primary server name always matches the exact DNS name as that name is displayed in the SOA resource record that is stored with the zone. However, if the zone that is being updated is directory-integrated, any DNS server that is loading the zone can respond and dynamically insert its own name as the primary server of the zone in the SOA query response.
 3. The DHCP Client service tries to contact the primary DNS server.
 
-The client processes the SOA query response for its name to determine the IP address of the DNS server that is authorized as the primary server for accepting its name. If it is required, the client performs the following steps to contact and dynamically update its primary server:
+    The client processes the SOA query response for its name to determine the IP address of the DNS server that is authorized as the primary server for accepting its name. If it is required, the client performs the following steps to contact and dynamically update its primary server:
 
-1. The client sends a dynamic update request to the primary server that is determined in the SOA query response.
+    1. The client sends a dynamic update request to the primary server that is determined in the SOA query response.
 
-If the update succeeds, no additional action is taken.
-  2. If this update fails, the client next sends an NS-type query for the zone name that is specified in the SOA record.
-  3. When the client receives a response to this query, the client sends an SOA query to the first DNS server that is listed in the response.
-  4. After the SOA query is resolved, the client sends a dynamic update to the server that is specified in the returned SOA record.
+        If the update succeeds, no additional action is taken.
+    2. If this update fails, the client next sends an NS-type query for the zone name that is specified in the SOA record.
+    3. When the client receives a response to this query, the client sends an SOA query to the first DNS server that is listed in the response.
+    4. After the SOA query is resolved, the client sends a dynamic update to the server that is specified in the returned SOA record.
 
-If the update succeeds, no additional action is taken.
-  5. If this update fails, the client repeats the SOA query process by sending to the next DNS server that is listed in the response.
+        If the update succeeds, no additional action is taken.
+    5. If this update fails, the client repeats the SOA query process by sending to the next DNS server that is listed in the response.
 
 4. After the primary server that can perform the update is contacted, the client sends the update request, and the server processes it.
 
-The contents of the update request include instructions to add A, and possibly PTR, resource records for "newhost.example.microsoft.com" and to remove these same record types for "oldhost.example.microsoft.com". ("oldhost.example.microsoft.com" is the name that was previously registered.)
+    The contents of the update request include instructions to add A, and possibly PTR, resource records for "`newhost.example.microsoft.com`" and to remove these same record types for "`oldhost.example.microsoft.com`". ("`oldhost.example.microsoft.com`" is the name that was previously registered.)
 
-The server also checks to make sure that updates are permitted for the client request. For standard primary zones, dynamic updates are not secured. Any client attempt to update succeeds. For Active Directory-integrated zones, updates are secured and performed using directory-based security settings.Dynamic updates are sent or refreshed periodically. By default, computers send an update every twenty-four hours. If the update causes no changes to zone data, the zone remains at its current version, and no changes are written. Updates that cause actual zone changes or increased zone transfers occur only if names or addresses actually change.
+    The server also checks to make sure that updates are permitted for the client request. For standard primary zones, dynamic updates are not secured. Any client attempt to update succeeds. For Active Directory-integrated zones, updates are secured and performed using directory-based security settings.
+
+Dynamic updates are sent or refreshed periodically. By default, computers send an update every twenty-four hours. If the update causes no changes to zone data, the zone remains at its current version, and no changes are written. Updates that cause actual zone changes or increased zone transfers occur only if names or addresses actually change.
 
 > [!NOTE]
 > Names are not removed from DNS zones if they become inactive or if they are not updated within the update interval of twenty-four hours. DNS does not use a mechanism to release or to tombstone names, although DNS clients do try to delete or to update old name records when a new name or address change is applied
 
 When the DHCP Client service registers A and PTR resource records for a Windows Server 2003-based computer, the client uses a default caching time-to-live (TTL) value of 15 minutes for host records. This value determines how long other DNS servers and clients cache a computer's records when they are included in a query response.
 
-[back to the top](#toc) 
-
 ### Integration of DHCP with DNS
 
-With Windows Server 2003, a DHCP server can enable dynamic updates in the DNS namespace for any one of its clients that support these updates. Scope clients can use the DNS dynamic update protocol to update their host name-to-address mapping information whenever changes occur to their DHCP-assigned address. (This mapping information is stored in zones on the DNS server.) A Windows Server 2003-based DHCP server can perform updates on behalf of its DHCP clients to any DNS server.
-
-[back to the top](#toc) 
+With Windows Server 2003, a DHCP server can enable dynamic updates in the DNS namespace for any one of its clients that support these updates. Scope clients can use the DNS dynamic update protocol to update their host name-to-address mapping information whenever changes occur to their DHCP-assigned address. This mapping information is stored in zones on the DNS server. A Windows Server 2003-based DHCP server can perform updates on behalf of its DHCP clients to any DNS server.
 
 #### How DHCP/DNS update interaction works
 
@@ -146,25 +133,26 @@ You can use the DHCP server to register and update the PTR and A resource record
 
 The FQDN option includes the following six fields:
 
-- Code 
+- Code  
 Specifies the code for this option (81).
-- Len 
-Specifies the length of this option . (This must be a minimum of 4.)
-- Flags 
+- Len  
+Specifies the length of this option. (This must be a minimum of 4.)
+- Flags  
 Specifies the type of service.
-- 0 
+- 0  
 Client will register the "A" (Host) record.
-- 1 
+- 1  
 Client wants DHCP to register the "A" (Host) record.
-- 3 
+- 3  
 DHCP will register the "A" (Host) record regardless of the client's request.
-- RCODE1 
+- RCODE1  
 Specifies a response code the server is sending to the client.
-
-- RCODE2 
+- RCODE2  
 Specifies an additional delineation of RCODE1.
-- Domain Name 
-Specifies the FQDN of the client.If the client requests to register its resource records with DNS, the client is responsible for generating the dynamic UPDATE request per Request for Comments (RFC) 2136. Then, the DHCP server registers its PTR (pointer) record.
+- Domain Name  
+Specifies the FQDN of the client.
+
+If the client requests to register its resource records with DNS, the client is responsible for generating the dynamic UPDATE request per Request for Comments (RFC) 2136. Then, the DHCP server registers its PTR (pointer) record.
 
 Assume that this option is issued by a qualified DHCP client, such as a DHCP-enabled computer that is running Windows Server 2003, Microsoft Windows 2000, or Microsoft Windows XP. In this case, the option is processed and interpreted by Windows Server 2003-based DHCP servers to determine how the server initiates updates on behalf of the client.
 
@@ -172,53 +160,48 @@ For example, you can use any one of the following configurations to process clie
 
 - The DHCP server registers and updates client information with its configured DNS servers according to the client request.
 
-This is the default configuration for Windows Server 2003-based DHCP servers and clients that are running Windows Server 2003, Windows 2000, or Windows XP. In this mode, any one of these Windows DHCP clients can specify the way that the DHCP server updates its host A and PTR resource records. If it is possible, the DHCP server handles the client request for handling updates to its name and IP address information in DNS.
+    This is the default configuration for Windows Server 2003-based DHCP servers and clients that are running Windows Server 2003, Windows 2000, or Windows XP. In this mode, any one of these Windows DHCP clients can specify the way that the DHCP server updates its host A and PTR resource records. If it is possible, the DHCP server handles the client request for handling updates to its name and IP address information in DNS.
 
-To configure the DHCP server to register client information according to the client's request, follow these steps:
-  1. Open the DHCP properties for the server or the individual scope.
-  2. Click the **DNS** tab, click
- **Properties**, and then click to select the **Dynamically update DNS A and PTR records only if requested by the DHCP clients** check box.
+    To configure the DHCP server to register client information according to the client's request, follow these steps:
+    1. Open the DHCP properties for the server or the individual scope.
+    2. Click the **DNS** tab, click **Properties**, and then click to select the **Dynamically update DNS A and PTR records only if requested by the DHCP clients** check box.
 - The DHCP server always registers and updates client information with its configured DNS servers.
 
-This is a modified configuration supported for Windows Server 2003-based DHCP servers and clients that are running Windows Server 2003, Windows 2000, or Windows XP. In this mode, the DHCP server always performs updates of the client's FQDN and leased IP address information regardless of whether the client has requested to perform its own updates.
+    This is a modified configuration supported for Windows Server 2003-based DHCP servers and clients that are running Windows Server 2003, Windows 2000, or Windows XP. In this mode, the DHCP server always performs updates of the client's FQDN and leased IP address information regardless of whether the client has requested to perform its own updates.
 
-To configure a DHCP server to register and to update client information with its configured DNS servers, follow these steps:
-  1. Open the DHCP properties for the server
-  2. Click **DNS**, click **Properties**, click to select the **Enable DNS dynamic updates according to the settings below** check box, and then click
- **Always dynamically update DNS A and PTR records**.
+    To configure a DHCP server to register and to update client information with its configured DNS servers, follow these steps:
+    1. Open the DHCP properties for the server
+    2. Click **DNS**, click **Properties**, click to select the **Enable DNS dynamic updates according to the settings below** check box, and then click **Always dynamically update DNS A and PTR records**.
 - The DHCP server never registers and updates client information with its configured DNS servers.
 
-To use this configuration, the DHCP server must be configured to disable performance of DHCP/DNS proxied updates. When you use this configuration, no client host A or PTR resource records are updated in DNS for DHCP clients.
+    To use this configuration, the DHCP server must be configured to disable performance of DHCP/DNS proxied updates. When you use this configuration, no client host A or PTR resource records are updated in DNS for DHCP clients.
 
-To configure the server to never update client information, follow these steps:
-  1. Open the DHCP properties for the DHCP server or one of its scopes on the Windows Server 2003-based DHCP server.
-  2. Click
- **DNS**, click **Properties**, and then clear the
- **Enable DNS dynamic updates according to the settings below** check box.By default, updates are always performed for newly installed Windows Server 2003-based DHCP servers and any new scopes that you create for them. [back to the top](#toc) 
+    To configure the server to never update client information, follow these steps:
+    1. Open the DHCP properties for the DHCP server or one of its scopes on the Windows Server 2003-based DHCP server.
+    2. Click **DNS**, click **Properties**, and then clear the **Enable DNS dynamic updates according to the settings below** check box.
+
+    By default, updates are always performed for newly installed Windows Server 2003-based DHCP servers and any new scopes that you create for them.
 
 ### Windows DHCP clients and DNS dynamic update protocol
 
 DHCP clients that are running Windows Server 2003, Windows 2000, Windows XP, or earlier operating systems can interact differently when they perform the DHCP/DNS interactions. The following examples show how this process varies in different cases.
-
-[back to the top](#toc) 
 
 #### An example of a DHCP/DNS update interaction for Windows Server 2003-based, Windows 2000-based, and Windows XP-based DHCP clients
 
 Clients that are running Windows Server 2003, Windows 2000, or Windows XP DHCP interact with DNS dynamic update protocol in the following manner:
 
 1. The client initiates a DHCP request message (DHCPREQUEST) to the server. The request includes option 81.
-2. The server returns a DHCP acknowledgement message (DHCPACK) to the client. The client grants an IP address lease and includes option 81. If the DHCP server is configured with the default settings, option 81 tells the client that the DHCP server will register the DNS PTR record and that the client will register the DNS A record.
+2. The server returns a DHCP acknowledgment message (DHCPACK) to the client. The client grants an IP address lease and includes option 81. If the DHCP server is configured with the default settings, option 81 tells the client that the DHCP server will register the DNS PTR record and that the client will register the DNS A record.
 3. Asynchronously, the client sends a DNS update request to the DNS server for its own forward lookup record, a host A resource record.
-
-4. The DHCP server registers the PTR record of the client. [back to the top](#toc) 
+4. The DHCP server registers the PTR record of the client.
 
 #### An example of a DHCP/DNS update interaction for Windows-based DHCP clients that use a version of Windows that is earlier than Windows Server 2003
 
 Earlier versions of Windows-based DHCP clients do not support the DNS dynamic update process directly and cannot directly interact with the DNS server. For these DHCP clients, updates are typically handled in the following manner:
 
 1. The client initiates a DHCP request message (DHCPREQUEST) to the server. This request does not include option 81.
-2. The server returns a DHCP acknowledgement message (DHCPACK) to the client. The client grants an IP address lease, without option 81.
-3. The server sends updates to the DNS server for the client's forward lookup record, the host A resource record, and sends an update for the client's PTR reverse lookup record. [back to the top](#toc) 
+2. The server returns a DHCP acknowledgment message (DHCPACK) to the client. The client grants an IP address lease, without option 81.
+3. The server sends updates to the DNS server for the client's forward lookup record, the host A resource record, and sends an update for the client's PTR reverse lookup record.
 
 ### Secure dynamic updates
 
@@ -228,11 +211,12 @@ For more information, search for the "To modify security for a resource record" 
 
 By default, dynamic update security for Windows Server 2003 DNS servers and clients is handled in the following manner:
 
-
 1. Windows Server 2003-based DNS clients try to use nonsecure dynamic updates first. If the nonsecure update is refused, clients try to use a secure update.
 
-Also, clients use a default update policy that lets them to try to overwrite a previously registered resource record, unless they are specifically blocked by update security.
-2. By default, after a zone becomes Active Directory-integrated, Windows Server 2003-based DNS servers enable only secure dynamic updates.By default, when you use standard zone storage, the DNS Server service does not enable dynamic updates on its zones. For zones that are either directory-integrated or use standard file-based storage, you can change the zone to enable all dynamic updates. This enables all updates to be accepted by passing the use of secure updates.
+    Also, clients use a default update policy that lets them to try to overwrite a previously registered resource record, unless they are specifically blocked by update security.
+2. By default, after a zone becomes Active Directory-integrated, Windows Server 2003-based DNS servers enable only secure dynamic updates.
+
+By default, when you use standard zone storage, the DNS Server service does not enable dynamic updates on its zones. For zones that are either directory-integrated or use standard file-based storage, you can change the zone to enable all dynamic updates. This enables all updates to be accepted by passing the use of secure updates.
 
 > [!IMPORTANT]
 > The DHCP Server service can perform proxy registration and update of DNS records for legacy clients that do not support dynamic updates. For more information, see the "Using DNS servers with DHCP" topic in Windows Server 2003 Help.
@@ -241,29 +225,23 @@ If you use multiple Windows Server 2003-based DHCP servers on your network and i
 
 > [!CAUTION]
 > The secure dynamic updates functionality can be compromised if the following conditions are true:
-- You run a DHCP server on a Windows Server 2003-based domain controller
-- The DHCP server is configured to perform registration of DNS records on behalf of its clients.To avoid this issue, deploy DHCP servers and domain controllers on separate computers, or configure the DHCP server to use a dedicated user account for dynamic updates. For more information, see the "Using DNS servers with DHCP" topic in Windows Server 2003 Help.
+>
+> - You run a DHCP server on a Windows Server 2003-based domain controller
+> - The DHCP server is configured to perform registration of DNS records on behalf of its clients. To avoid this issue, deploy DHCP servers and domain controllers on separate computers, or configure the DHCP server to use a dedicated user account for dynamic updates. For more information, see the "Using DNS servers with DHCP" topic in Windows Server 2003 Help.
 
 For more information, see the "Security considerations when you use the DnsUpdateProxy group" section.
 
-[back to the top](#toc) 
-
 #### Enable only secure dynamic updates
 
-
-1. Click **Start**, point to
- **Administrative Tools**, and then click
- **DNS**.
-2. Under **DNS**, double-click the applicable DNS server, double-click **Forward Lookup Zones** or
- **Reverse Lookup Zones**, and then right-click the applicable zone.
+1. Click **Start**, point to **Administrative Tools**, and then click **DNS**.
+2. Under **DNS**, double-click the applicable DNS server, double-click **Forward Lookup Zones** or **Reverse Lookup Zones**, and then right-click the applicable zone.
 3. Click **Properties**.
 4. On the **General** tab, verify that the zone type is **Active Directory-integrated**.
-5. In the **Dynamic updates** box, click
- **Secure only**.
-6. Click **OK**.> [!NOTE]
-> The secure dynamic update functionality is supported only for Active Directory-integrated zones. If you configure a different zone type, change the zone type, and then integrate the zone before you secure it for DNS updates. Dynamic update is an RFC-compliant extension to the DNS standard. The DNS update process is defined in RFC 2136, "Dynamic Updates in the Domain Name System (DNS UPDATE)".
+5. In the **Dynamic updates** box, click **Secure only**.
+6. Click **OK**.
 
-[back to the top](#toc) 
+> [!NOTE]
+> The secure dynamic update functionality is supported only for Active Directory-integrated zones. If you configure a different zone type, change the zone type, and then integrate the zone before you secure it for DNS updates. Dynamic update is an RFC-compliant extension to the DNS standard. The DNS update process is defined in RFC 2136, "Dynamic Updates in the Domain Name System (DNS UPDATE)".
 
 ### Use the DnsUpdateProxy security group
 
@@ -273,13 +251,13 @@ For example, consider the following scenario:
 
 1. A Windows Server 2003 DHCP server (DHCP1) performs a secure dynamic update on behalf of one of its clients for a specific DNS domain name.
 2. Because the DHCP server successfully created the name, it becomes the owner of the name.
-3. After the DHCP server becomes the owner of the client name, only that DHCP server can update the name.In some circumstances, this scenario may cause problems. For example, if DHCP1 fails and a second backup DHCP server comes online, the backup server cannot update the client name because the server is not the owner of the name.
+3. After the DHCP server becomes the owner of the client name, only that DHCP server can update the name.
+
+In some circumstances, this scenario may cause problems. For example, if DHCP1 fails and a second backup DHCP server comes online, the backup server cannot update the client name because the server is not the owner of the name.
 
 In another example, assume that the DHCP server performs dynamic updates for legacy clients. If you upgrade those clients to Windows Server 2003, Windows 2000, or Windows XP, the upgraded client cannot take ownership or update its DNS records.
 
 To solve this problem, a built-in security group named DnsUpdateProxy is provided. If all DHCP servers are added to the DnsUpdateProxy group, the records of one server can be updated by another server if the first server fails. Also, all the objects that are created by the members of the DnsUpdateProxy group are not secured. Therefore, the first user who is not a member of the DnsUpdateProxy group and that modifies the set of records that is associated with a DNS name becomes its owner. When legacy clients are upgraded, they can take ownership of their name records at the DNS server. If every DHCP server that registers resource records for legacy clients is a member of the DnsUpdateProxy group, many problems are eliminated.
-
-[back to the top](#toc) 
 
 #### Add members to the DnsUpdateProxy group
 
@@ -288,27 +266,24 @@ Use the Active Directory Users and Computers snap-in to configure the DnsUpdateP
 > [!NOTE]
 > If you are using multiple DHCP servers for fault tolerance and secure dynamic updates, add each server to the DnsUpdateProxy global security group.
 
-[back to the top](#toc) 
-
 #### Security considerations when you use the DnsUpdateProxy group
 
 DNS domain names that are registered by the DHCP server are not secure if the DHCP server is a member of the DnsUpdateProxy group. The host (A) resource record for the DHCP server itself is an example of such a record. Also, objects that are created by the members of the DnsUpdateProxy group are not secure. Therefore, you cannot use this group effectively in an Active Directory-integrated zone that enables only secure dynamic updates unless you take additional steps to enable records that are created by members of the group to be secured.
 
 To help protect against nonsecure records or to enable members of the DnsUpdateProxy group to register records in zones that enable only secured dynamic updates, follow these steps:
+
 1. Create a dedicated user account.
-2. Configure DHCP servers to perform DNS dynamic updates with the user account credentials. (These credentials are the user name, the password, and the domain.)The credentials of one dedicated user account can be used by multiple DHCP servers.
+2. Configure DHCP servers to perform DNS dynamic updates with the user account credentials. (These credentials are the user name, the password, and the domain.)
+
+The credentials of one dedicated user account can be used by multiple DHCP servers.
 
 A dedicated user account is a user account whose sole purpose is to supply DHCP servers with credentials for DNS dynamic update registrations. Assume that you have created a dedicated user account and configured DHCP servers with the account credentials. Each DHCP server will supply these credentials when it registers names on behalf of DHCP clients that are using DNS dynamic update. The dedicated user account should be created in the forest where the primary DNS server for the zone to be updated resides. The dedicated user account can also be located in another forest. However, the forest that the account resides in must have a forest trust established with the forest that contains the primary DNS server for the zone to be updated.
 
 When the DHCP Server service is installed on a domain controller, you can configure the DHCP server by using the credentials of the dedicated user account to prevent the server from inheriting, and possibly misusing, the power of the domain controller. When the DHCP Server service is installed on a domain controller, it inherits the security permissions of the domain controller. The service also has the authority to update or delete any DNS record that is registered in a secure Active Directory-integrated zone. (This includes records that were securely registered by other Windows 2000-based or Windows Server 2003-based computers, and by domain controllers.)
 
-[back to the top](#toc) 
-
 ### Configure DNS dynamic updates
 
 The dynamic update functionality that is included in Windows Server 2003 follows RFC 2136. Dynamic update enables clients and servers to register DNS domain names (PTR resource records) and IP address mappings (A resource records) to an RFC 2136-compliant DNS server.
-
-[back to the top](#toc) 
 
 #### Configure DNS dynamic updates for DHCP clients
 
@@ -316,58 +291,48 @@ By default, Windows Server 2003-based, Windows 2000-based, and Windows XP-based 
 
 To change the dynamic update defaults on the dynamic update client, follow these steps:
 
-1. In **Control Panel**, double-click
- **Network Connections**.
+1. In **Control Panel**, double-click **Network Connections**.
 2. Right-click the connection that you want to configure, and then click **Properties**.
-3. Click **Internet Protocol (TCP/IP)**, click
- **Properties**, and then click
- **Advanced**.
+3. Click **Internet Protocol (TCP/IP)**, click **Properties**, and then click **Advanced**.
 4. Click **DNS**.
 
-By default,
- **Register this connection's address in DNS** is selected and
- **Use this connection's DNS suffix in DNS registration** is not selected. This default configuration causes the client to request that the client register the A resource record and the server register the PTR resource record.
+    By default, **Register this connection's address in DNS** is selected and **Use this connection's DNS suffix in DNS registration** is not selected. This default configuration causes the client to request that the client register the A resource record and the server register the PTR resource record.
 5. Click to select the **Use this connection's DNS suffix in DNS registration** check box.
 
-The client will then request that the server update the PTR record by using the FQDN. If the DHCP server is configured to register DNS records according to the client's request, the client registers the following records:
+    The client will then request that the server update the PTR record by using the FQDN. If the DHCP server is configured to register DNS records according to the client's request, the client registers the following records:
 
-- The PTR record.
-   - The A record that uses the name that is a concatenation of the computer name and the primary DNS suffix.
-   - The A record that uses the name that is a concatenation of the computer name and the connection-specific DNS suffix.
-6. To configure the client to make no requests for DNS registration, click to clear the **Register this connection's address in DNS** check box. [back to the top](#toc) 
+    - The PTR record.
+    - The A record that uses the name that is a concatenation of the computer name and the primary DNS suffix.
+    - The A record that uses the name that is a concatenation of the computer name and the connection-specific DNS suffix.
+6. To configure the client to make no requests for DNS registration, click to clear the **Register this connection's address in DNS** check box.
 
 #### Configure DNS dynamic updates on multihomed client computers
 
-If a dynamic update client is multihomed, it registers all its IP addresses with DNS by default. ( A client is multihomed if it has more than one adaptor and an associated IP address.)If you do not want the client to register all its IP addresses, you can configure it not to register one or more IP addresses in the network connection properties.
+If a dynamic update client is multihomed, it registers all its IP addresses with DNS by default. A client is multihomed if it has more than one adaptor and an associated IP address. If you do not want the client to register all its IP addresses, you can configure it not to register one or more IP addresses in the network connection properties.
 
 To prevent the computer from registering all its IP addresses, follow these steps:
 
-1. In **Control Panel**, double-click
- **Network Connections**.
+1. In **Control Panel**, double-click **Network Connections**.
 2. Right-click the connection that you want to configure, and then click **Properties**.
-3. Click **Internet Protocol (TCP/IP)**, click
- **Properties**, and then click
- **Advanced**.
+3. Click **Internet Protocol (TCP/IP)**, click **Properties**, and then click **Advanced**.
 4. Click **DNS**.
-5. Click to clear the **Register this connection's address in DNS** check box.You can also configure the computer to register its domain name in DNS. For example, if you have a client that is connected to two different networks, you can configure the client to have a different domain name on each network.
+5. Click to clear the **Register this connection's address in DNS** check box.
 
-[back to the top](#toc) 
+You can also configure the computer to register its domain name in DNS. For example, if you have a client that is connected to two different networks, you can configure the client to have a different domain name on each network.
 
 #### Configure DNS dynamic updates on a Windows Server 2003-based DHCP server
 
 To configure DNS dynamic update for a Windows Server 2003-based DHCP server, follow these steps:
 
-1. Click **Start**, point to
- **Administrative Tools**, and then click
- **DHCP**.
+1. Click **Start**, point to **Administrative Tools**, and then click **DHCP**.
 2. Right-click the appropriate DHCP server or scope, and then click **Properties**.
 3. Click **DNS**.
 4. Click to select the **Enable DNS dynamic updates according to the settings below** check box to enable DNS dynamic update for clients that support dynamic update.
 
-> [!NOTE]
-> By default, this check box is selected.
+    > [!NOTE]
+    > By default, this check box is selected.
 5. To enable DNS dynamic update for DHCP clients that do not support it, click to select the **Dynamically update DNS A and PTR records for DHCP clients that do not request for updates (for example, clients that are running Windows NT 4.0)** check box.
-6. Click **OK**. [back to the top](#toc) 
+6. Click **OK**.
 
 #### Enable DNS dynamic updates to a DNS server
 
@@ -376,45 +341,35 @@ On a Windows Server 2003-based DHCP server, you can dynamically update the DNS r
 To enable a DHCP server to dynamically update the DNS records of its clients, follow these steps:
 
 1. In the DHCP management console, select the scope or the DHCP server that you want to enable DNS updates for.
-2. On the **Action** menu, click
- **Properties**, and then click **DNS**.
+2. On the **Action** menu, click **Properties**, and then click **DNS**.
 3. Click to select the **Enable DNS dynamic updates according to the settings below** check box.
-4. To update a client's DNS records based on the type of DHCP request that the client makes, click to select
- **Dynamically update DNS A and PTR records only if requested by the DHCP clients**. (This update will only occur only when the client makes a request.)
+4. To update a client's DNS records based on the type of DHCP request that the client makes, click to select **Dynamically update DNS A and PTR records only if requested by the DHCP clients**. (This update will only occur only when the client makes a request.)
 5. To always update a client's forward and reverse lookup records, click to select **Always dynamically update DNS A and PTR records**.
 6. Click to select the **Discard A and PTR records when lease is deleted** check box to have the DHCP server delete the record for a client when its DHCP lease expires and is not renewed.
- [back to the top](#toc) 
 
 ### Disable DNS dynamic updates
 
 > [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
+> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
+[322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
 
 By default, dynamic updates are configured on Windows Server 2003-based clients. To disable dynamic updates for all network interfaces, follow these steps:
 
-1. Click **Start**, click
- **Run**, type
- regedit , and then click **OK**.
-2. Locate and then click the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters` 
+1. Click **Start**, click **Run**, type *regedit*, and then click **OK**.
+2. Locate and then click the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 
-3. On the **Edit** menu, point to
- **New**, and then click **DWORD value**.
-4. Type DisableDynamicUpdate , and then press ENTER two times.
-5. In **Edit DWORD Value**, type
- 1 in the **Value data** box, and then click
- **OK**.
-6. Quit Registry Editor.To disable dynamic updates for a specific interface, follow these steps:
+3. On the **Edit** menu, point to **New**, and then click **DWORD value**.
+4. Type *DisableDynamicUpdate*, and then press ENTER two times.
+5. In **Edit DWORD Value**, type *1* in the **Value data** box, and then click **OK**.
+6. Quit **Registry Editor**.
 
-1. Click **Start**, click
- **Run**, type
- regedit , and then click **OK**.
-2. Locate and then click the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\**interface`*  
-> [!NOTE]
-> **interface** is the device ID of the network adaptor for the interface that you want to disable dynamic update for.
-3. On the **Edit** menu, point to
- **New**, and then click **DWORD value**.
-4. Type DisableDynamicUpdate , and then press ENTER two times.
-5. In **Edit DWORD Value**, type
- 1 in the **Value data** box, and then click
- **OK**.
-6. Quit Registry Editor. [back to the top](#toc)
+To disable dynamic updates for a specific interface, follow these steps:
+
+1. Click **Start**, click **Run**, type *regedit*, and then click **OK**.
+2. Locate and then click the following registry subkey:  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\interface`
+    > [!NOTE]
+    > **interface** is the device ID of the network adaptor for the interface that you want to disable dynamic update for.
+3. On the **Edit** menu, point to **New**, and then click **DWORD value**.
+4. Type *DisableDynamicUpdate*, and then press ENTER two times.
+5. In **Edit DWORD Value**, type *1* in the **Value data** box, and then click **OK**.
+6. Quit **Registry Editor**.

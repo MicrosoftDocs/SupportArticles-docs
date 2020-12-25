@@ -1,14 +1,23 @@
 ---
 title: Support policy for Windows Virtual Desktop and Windows 10 Enterprise multi-session
-description: Describes the Microsoft support policy for Windows virtual Desktop and Windows 10 Enterprise for Virtual Desktops. Both are supported in Azure only.
+description: Describes the Microsoft support policy for Windows Virtual Desktop and Windows 10 Enterprise for virtual desktops. Both are supported in Azure only.
 ms.date: 12/07/2020
-ms.prod-support-area-path:  Windows\Windows 10\Windows 10 Enterprise\Remote Desktop Services and Terminal Services
-ms.technology: [Replace with your value]
-ms.reviewer: jerrycif
+author: Deland-Han
+ms.author: delhan 
+manager: dscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-client
+localization_priority: medium
+ms.reviewer: kaushika, jerrycif, v-tea, v-jesits
+ms.prod-support-area-path: Virtual Desktop Infrastructure (VDI)
+ms.technology: RDS
 ---
 # Support policy for Windows Virtual Desktop and Windows 10 Enterprise multi-session
 
-_Original product version:_ &nbsp; Windows Virtual Desktop, Windows 10 Enterprise multi-session  
+This article describes the support policy for Windows Virtual Desktop and Windows 10 Enterprise multi-session.
+
+_Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4491323
 
 ## Summary
@@ -20,5 +29,7 @@ Windows Virtual Desktop (WVD) is now generally available.  WVD is a managed des
 ### Windows 10 Enterprise multi-session
 
 Windows 10 Enterprise multi-session provides multi-session functionality exclusively for Windows Virtual Desktop.
+
 Windows 10 Enterprise multi-session is tested, optimized for, and supported exclusively on Azure. Microsoft does not support Windows 10 Enterprise multi-session on non-Azure deployments (for example, on-premises deployments).
+
 For more information about Windows Virtual Desktop and Windows 10 Enterprise multi-session, see [Windows Virtual Desktop](https://azure.microsoft.com/services/virtual-desktop/).
