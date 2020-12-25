@@ -30,7 +30,7 @@ During operating system startup, domain controller installation/uninstallation, 
 
 #### Cause
 
-Hardware corrupted the I/O at writing, or the hardware [lost flush](#what-is-a-lost-io-/-lost-flush) caused the log to become unusable. Typically the database (DB) is left in a corrupted state.
+Hardware corrupted the I/O at writing, or the hardware [lost flush](#what-is-a-lost-io--lost-flush) caused the log to become unusable. Typically the database (DB) is left in a corrupted state.
 
 #### Resolution
 
@@ -123,7 +123,7 @@ When Jet error -1018s occurs on virtualized DCs that are running on the same vir
 
 This is like the -1018 error but is due to a lost page flush.
 
-A [lost flush](#what-is-a-lost-io-/-lost-flush) can represent a critical USN change. Failure to apply the same change to local DCs or to transitive replication partners could be harmful where a single replication path exists.
+A [lost flush](#what-is-a-lost-io--lost-flush) can represent a critical USN change. Failure to apply the same change to local DCs or to transitive replication partners could be harmful where a single replication path exists.
 
 #### Resolution
 
@@ -168,7 +168,7 @@ Verify the whole driver stack.
 
 #### Cause
 
-This error is the same as missing/corrupt log file. This error indicates that a [lost flush](#what-is-a-lost-io-/-lost-flush) occurred.
+This error is the same as missing/corrupt log file. This error indicates that a [lost flush](#what-is-a-lost-io--lost-flush) occurred.
   
 ### -1216 JET_errAttachedDatabaseMismatch
 
@@ -220,7 +220,7 @@ You can use these methods to troubleshoot Jet database errors:
     > [!Note]
     > the path to the NTDS.DIT and log files.
 
-8. Verify that the drive that hosts the NTDS.DIT or log files is available on OS startup. 
+8. Verify that the drive that hosts the NTDS.DIT or log files is available on OS startup.
 9. Open Windows Explorer and verify that the NTDS.DIT and log files are present at the log file path reported by step 7.
 
     If the files are present, proceed to step 10.
@@ -245,7 +245,7 @@ You can use these methods to troubleshoot Jet database errors:
     ||||
 
     - The root of the volume that is hosting the NTDS.DIT and NTDS log files (system requires fully control)
-    - The %windir% folder (i.e., c:\windows or c:\winnnt) (system requires fully control)
+    - The %windir% folder (i.e., c:\\windows or c:\\winnnt) (system requires fully control)
     - The folder that hosts the NTDS.DIT and NTDS log files (see permissions table below)
     - The NTDS Log files themselves (see perms table below)
 
@@ -265,9 +265,9 @@ You can use these methods to troubleshoot Jet database errors:
     Equivalent NTDSUTIL and ESENTUTL commands for each later are shown below:
     |Layer|NTDSUTIL command|ESENTUTL equivalent command|
     |---|---|---|
-    | 1. Physical consistency| no equivalent| ESENTUTL /K |
-    | 2. ESE logical consistency| NTDSUTIL FILES INTEGRITY| ESENTUTL /G |
-    | 3. Application logical consistency <br/>| NTDSUTIL ->Semantic database analysis<br/><br/>+<br/><br/>NTDSUTIL -> Offline Defrag| No equivalent. Run NTDSUTIL -> SDA<br/><br/>+<br/><br/>ESENTUTL / D |
+    | 1. Physical consistency| no equivalent| `ESENTUTL /K` |
+    | 2. ESE logical consistency| NTDSUTIL FILES INTEGRITY| `ESENTUTL /G` |
+    | 3. Application logical consistency <br/>| NTDSUTIL ->Semantic database analysis<br/><br/>+<br/><br/>NTDSUTIL -> Offline Defrag| No equivalent. Run NTDSUTIL -> SDA<br/><br/>+<br/><br/>`ESENTUTL / D` |
     ||||
 14. Look up the user action for the first failing Jet error encountered during step 13. Perform remediation if possible.
 15. Repair the Jet database:

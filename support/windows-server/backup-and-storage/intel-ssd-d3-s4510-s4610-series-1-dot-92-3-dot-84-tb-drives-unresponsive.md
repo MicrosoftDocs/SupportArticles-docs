@@ -40,12 +40,9 @@ Run the Intel SSD Data Center Tool to inspect all affected disks as soon as poss
 
 The following MR1 firmware binary is available for use together with the Storage Spaces Direct automated firmware update method, as appropriate for your device.
 
-|||
-|---|---|
-|Intel|[Intel® SSD S4510/S4610 - 2.5" Material](https://downloadcenter.intel.com/download/28673/SSD-S4510-S4610-2-5-non-searchable-firmware-links/)|
-|Dell|[Serial-ATA_Firmware_8VGP8_WN64_DL63_A00.EXE](https://www.dell.com/support/home/us/en/ilbsdt1/drivers/driversdetails?driverid=8vgp8&oscode=wst14&productcode=poweredge-r740)|
-|Lenovo|[Intel S4510 and S4610 SATA SSD issue - Lenovo Server, Lenovo ThinkSystem and IBM Server](https://support.lenovo.com/us/en/solutions/ht507987)|
-|||
+- Intel [Intel® SSD S4510/S4610 - 2.5" Material](https://downloadcenter.intel.com/download/28673/SSD-S4510-S4610-2-5-non-searchable-firmware-links/)
+- Dell [Serial-ATA_Firmware_8VGP8_WN64_DL63_A00.EXE](https://www.dell.com/support/home/us/en/ilbsdt1/drivers/driversdetails?driverid=8vgp8&oscode=wst14&productcode=poweredge-r740)
+- Lenovo [Intel S4510 and S4610 SATA SSD issue - Lenovo Server, Lenovo ThinkSystem and IBM Server](https://support.lenovo.com/us/en/solutions/ht507987)
 
 > [!Note]
 > There is no counter or other attribute that reports drive idle power-on hours. Intel recommends that you use SMART 09h (drive power-on hours) as an approximation of the idle power-on hours. Therefore, Intel strongly recommends that you update the firmware as soon as possible to avoid the risk of unrecoverable data loss. The new MR1 firmware will not resolve any read-uncorrectable errors that existed before the firmware upgrade. Intel has released a Data Center Tool (DCT) to identify whether the issue is successfully corrected by installing the MR1 firmware. The tool also describes possible next steps.
