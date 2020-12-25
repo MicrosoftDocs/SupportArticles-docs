@@ -26,12 +26,12 @@ This article provides a quick reference to determine Microsoft Application Virtu
 
 ## More Information
 
-To identify the build number of the App-V client, go to the **Programs and Features**  item in **Control Panel**, and then click one of the following items, as appropriate:
+To identify the build number of the App-V client, go to the **Programs and Features** item in **Control Panel**, and then click one of the following items, as appropriate:
 
 - Microsoft Application Virtualization (App-V) Client 5.X
 - Microsoft Application Virtualization (App-V) Client 5.X Service Pack x
 
-The version that is installed is listed in the **Version**  column. The following list shows the current latest build number for each component:
+The version that is installed is listed in the **Version** column. The following list shows the current latest build number for each component:
 
 - The App-V Client (as of 03/06/2018): 5.1.134.0  (App-V 5.1 March 2018 service release).
 - The App-V Sequencer (as of 10/10/2017): 5.1.129.0  (App-V 5.1 September 2017 servicing release).
