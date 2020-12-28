@@ -21,11 +21,22 @@ search.appverid:
 
 # NDR (AggregateGroupMailbox full) received when sending emails to Microsoft 365 Groups
 
+## Symptoms
+
+When you send email messages to a Microsoft 365 group, you may receive the following non-delivery report (NDR):
+
+> Delivery has failed to these recipients or groups:
+>
+> `AggregateGroupMailbox.A.201708181918@contoso.onmicrosoft.com` the recipient’s mailbox is full and can’t accept messages now. Please try resending your message later, or contact the recipient directly.
+
+
+## Cause
+
 The aggregate group mailbox has a retention policy associated. The policy purges all email messages from the mailbox periodically. However, a heavy mail flow to a Microsoft 365 group may fill up the mailbox before the policy takes effect and purge the content.  
 
 ## Status
 
-The non-delivery report (NDR) doesn't affect the actual email delivery to Microsoft 365 Groups.  
+The NDR doesn't affect the actual email delivery to Microsoft 365 Groups.  
 
 ## Workaround
 
@@ -34,10 +45,10 @@ Create an Exchange transport rule to delete the email messages sent to the aggre
 For example:
 
 ```powershell
-New-TransportRule -SentTo @("AggregateGroupMailbox@contoso.onmicrosoft.com") -DeleteMessage:$true -Name 'rule name' -StopRuleProcessing:$false -Mode 'Enforce' -Comments '' -RuleErrorAction 'Ignore' -SenderAddressLocation 'Header' 
+New-TransportRule -SentTo @("AggregateGroupMailbox.A.201708181918@contoso.onmicrosoft.com") -DeleteMessage:$true -Name 'rule name' -StopRuleProcessing:$false -Mode 'Enforce' -Comments '' -RuleErrorAction 'Ignore' -SenderAddressLocation 'Header' 
 ```
 
-- The `AggregateGroupMailbox@contoso.onmicrosoft.com` represents the SMTP address of aggregate group mailbox stated in the NDR.  
+- The `AggregateGroupMailbox.A.201708181918@contoso.onmicrosoft.com` represents the SMTP address of aggregate group mailbox stated in the NDR.  
 - This transport rule deletes email messages before they arrive at the aggregate group mailbox. It doesn't affect email delivery to Microsoft 365 Groups.
 
 ## More information
