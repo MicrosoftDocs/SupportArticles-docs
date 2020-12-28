@@ -454,6 +454,8 @@
       href: ./networking/cannot-establish-dial-up-connection.md
     - name: How to disable network adapter power management
       href: ./networking/power-management-on-network-adapter.md
+    - name: Network gets disconnected if the computer isn't used after sign-in
+      href: ./networking/network-gets-disconnected-computer-not-used-after-sign-in.md
     - name: Port Scanning Prevention Filter behavior
       href: ./networking/lots-disk-io-writes-wfpdiag-etl-log.md
     - name: Set up your small business network
