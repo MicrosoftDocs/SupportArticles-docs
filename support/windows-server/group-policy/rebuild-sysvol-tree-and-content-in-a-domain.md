@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Sysvol access or replication issues
 ms.technology: GroupPolicy
 ---
-# How to rebuild the SYSVOL tree and its content in a domain  
+# How to rebuild the SYSVOL tree and its content in a domain
 
 The article describes how to use the Burflags registry entry to rebuild each domain controller's copy of the system volume (SYSVOL) tree on all domain controllers in a common Active Directory directory service domain.
 
@@ -27,7 +27,7 @@ The term SYSVOL refers to a set of files and folders that reside on the local ha
 - NETLOGON
 - SYSVOL
 
-We recommend the procedure that is described in this article as a last resort to restore a domain's SYSVOL tree and its contents. Use this procedure only if you cannot make the FRS functional on individual domain controllers in the domain. Use this procedure only if the bulk restart can be performed more quickly than troubleshooting and resolving replication inconsistencies, and time to resolution is a critical factor.
+We recommend the procedure that is described in this article as a last resort to restore a domain's SYSVOL tree and its contents. Use this procedure only if you can't make the FRS functional on individual domain controllers in the domain. Use this procedure only if the bulk restart can be performed more quickly than troubleshooting and resolving replication inconsistencies, and time to resolution is a critical factor.
 
 > [!IMPORTANT]
 > Domain controllers will not service authentication request during the procedure. Only when the SYSVOL and NETLOGON folders are shared again will the domain controller authenticate requests. This procedure should not be performed during peak hours.
@@ -35,7 +35,7 @@ We recommend the procedure that is described in this article as a last resort to
 > [!NOTE]
 > See the [How to temporarily stabilize the domain SYSVOL tree](#how-to-temporarily-stabilize-the-domain-sysvol-tree) section of this article for information about how to temporarily stabilize the domain SYSVOL tree until you can complete all the steps in the [How to rebuild the domain SYSVOL replica set across enterprise environments](#how-to-rebuild-the-domain-sysvol-replica-set-across-enterprise-environments) section.
 
-We strongly recommend that you monitor FRS performance and health by using monitoring tools. By using monitoring tools, you may prevent the need for replica set authoritative and non-authoritative restores, and you may provide insight into the root cause of FRS failures.
+We strongly recommend that you monitor FRS performance and health by using monitoring tools. By using monitoring tools, you may prevent the need for replica set authoritative and non-authoritative restores. Also, you may provide insight into the root cause of FRS failures.
 
 The monitoring tool Ultrasound is available for download.
 
@@ -60,7 +60,7 @@ Use the following guidelines to configure the Burflags registry entry:
 
 - If you set Burflags to D4 on a single domain controller and set Burflags to D2 on all other domain controllers in that domain, you can rebuild the SYSVOL tree in that domain. This bulk rebuild process is known as a hub, branch, or bulk FRS restart.
 
-The following is a list of the valid uses of a bulk restart of the SYSVOL replica set:
+The following items list the valid uses of a bulk restart of the SYSVOL replica set:
 
 - The members of an FRS replica set that are currently inconsistent can perform a full synchronization of all files and folders in the SYSVOL tree faster than the members can process the backlog of changes that reside in the outgoing logs of upstream replication partners.
 
@@ -84,7 +84,7 @@ This section describes how to rebuild the domain SYSVOL replica set across enter
 
 ### Summary of the steps
 
-The following is a summarized list of steps that are performed in a hub or branch restart:
+The following list summarizes the steps that are performed in a hub or branch restart:
 
 1. Stop the FRS on all domain controllers in the domain.
 
@@ -94,7 +94,7 @@ The following is a summarized list of steps that are performed in a hub or branc
 
     > The Permissions for This GPO in the SYSVOL Folder Are Inconsistent with Those in Active Directory
 
-    If you have permissions to modify security on the GPO, click **OK** when you receive this error message. This action modifies the ACLs on the Sysvol part of the Group Policy object and makes them consistent with the ACLs on the Active Directory component. In this case, Group Policy removes the inheritance attribute in the Sysvol folder.
+    If you have permissions to modify security on the GPO, select **OK** when you receive this error message. This action modifies the ACLs on the Sysvol part of the Group Policy object and makes them consistent with the ACLs on the Active Directory component. In this case, Group Policy removes the inheritance attribute in the Sysvol folder.
 
 3. Verify junction points and required folders on each domain controller in the domain.
 4. Restart the FRS on the reference domain controller with the D4 registry entry set.
@@ -109,7 +109,7 @@ When the Burflags registry entry is set to D2 or to D4, and the FRS is restarted
 
 ### Detailed list of the steps
 
-The following is a detailed list of steps that are performed in a hub or branch restart:
+The following list shows the detailed steps that are performed in a hub or branch restart:
 
 1. On all domain controllers in the domain, stop the FRS, and then set the service startup type value for the FRS to **Disabled**.
 
@@ -119,15 +119,15 @@ The following is a detailed list of steps that are performed in a hub or branch 
 
     To configure the SYSVOL replica set to be authoritative, follow these steps:
 
-    1. Click **Start**, click **Run**, type *regedit*, and then click **OK**.
-    2. Locate and then click the **BurFlags** entry under the following registry subkey:  
+    1. Go to **Start**, select **Run**, type *regedit*, and then select **OK**.
+    2. Locate and then select the **BurFlags** entry under the following registry subkey:  
         `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NtFrs\Parameters\Cumulative Replica Sets\GUID`
 
         GUID is the GUID of the domain system volume replica set that is shown in the following registry subkey:  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NtFrs\Parameters\Replica Sets\GUID`
-    3. Right-click **BurFlags**, and then click **Modify**.
-    4. Type *D4* in the **Value Data field (HexaDecimal)**, and then click **OK**.
+    3. Right-click **BurFlags**, and then select **Modify**.
+    4. Type *D4* in the **Value Data field (HexaDecimal)**, and then select **OK**.
 
-3. On all domain controllers in the domain, verify that the file structure and junction points are correct. To do this, follow these steps:
+3. On all domain controllers in the domain, verify that the file structure and junction points are correct. You can follow these steps:
 
     1. Verify that the following folders exist in the SYSVOL tree:
 
@@ -165,25 +165,25 @@ The following two reparse points for a SYSVOL tree are installed in the C:\\WINN
 
 On each domain controller in the domain, follow these steps:
 
-1. Click **Start**, click **Run**, type *cmd*, and then click **OK**.
+1. Go to **Start**, select **Run**, type *cmd*, and then select **OK**.
 2. Type `net start ntfrs` to start the File Replication service.
 3. Type `ntfrsutl ds |findstr /i "root stage"`, and then press ENTER. The NTFRSUTIL command returns the current root directory for the SYSVOL replica set that is referred to as the "replica set root" and the staging folder. For example, this command returns:
 
     > Root: C:\\WINNT\\SYSVOL\\domain  
     Stage: C:\\WINNT\\SYSVOL\\staging\\domain
 
-4. Type `Linkd %systemroot%\SYSVOL\SYSVOL\DNS Domain name`, and then press ENTER. The LINKD command returns the following:
+4. Type `Linkd %systemroot%\SYSVOL\SYSVOL\DNS Domain name`, and then press ENTER. The LINKD command returns:
 
     > Source **DNS Domain Name** is linked to %systemroot%\\SYSVOL\\domain
 
-5. Type `linkd "%systemroot%\SYSVOL\staging areas\DNS Domain Name"`, and then press ENTER. This command returns the following:
+5. Type `linkd "%systemroot%\SYSVOL\staging areas\DNS Domain Name"`, and then press ENTER. This command returns:
 
     > Source **DNS Domain Name** is linked to %systemroot%\\SYSVOL\\Staging\\domain
 
     > [!NOTE]
     > The path that is reported by the LINKD command varies depending on the location of the SYSVOL\\SYSVOL\\**DNS Domain Name** folder. If the SYSVOL folder is in the default location in the %systemroot%\\SYSVOL folder, use the commands that are listed. Otherwise, type the actual path of the SYSVOL folders.
 
-    For example, if the NTFRSUTL and LINKD commands are run on a domain controller in the `contoso.com` domain, and the SYSVOL folder is in the C:\\Windows\\SYSVOL folder, the command syntax and results for the SYSVOL and Staging folders will appear similar to the following:
+    For example, if the NTFRSUTL and LINKD commands are run on a domain controller in the `contoso.com` domain, and the SYSVOL folder is in the C:\\Windows\\SYSVOL folder, the command syntax and results for the SYSVOL and Staging folders will appear similar to:
 
     ```console
     C:\>ntfrsutl ds |findstr /i "root stage"
@@ -217,15 +217,15 @@ On each domain controller in the domain, follow these steps:
 
 6. On all domain controllers in the domain, verify that enough staging space is available. The ratio of staging area size to data set size depends upon a range of factors.
 
-    To determine the size of the replica set root, right-click the replica set root that uses the Winnt\\SYSVOL\\domain folder in Windows Explorer, and then click **Properties**.
+    To determine the size of the replica set root, right-click the replica set root that uses the Winnt\\SYSVOL\\domain folder in Windows Explorer, and then select **Properties**.
 
     To adjust the staging folder size, follow these steps:
 
-    1. Click **Start**, click **Run**, type *regedit*, and then click **OK**.
-    2. Locate and then click the following registry subkey:  
+    1. Go to **Start**, select **Run**, type *regedit*, and then select **OK**.
+    2. Locate and then select the following registry subkey:  
         `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NtFrs\Parameters`
-    3. Right-click **Staging Space Limit in KB**, and then click **Modify**.
-    4. Click **decimal**, type the size of the staging folder in kilobytes, and then click **OK**.
+    3. Right-click **Staging Space Limit in KB**, and then select **Modify**.
+    4. Select **decimal**, type the size of the staging folder in kilobytes, and then select **OK**.
     5. Quit Registry Editor.
 
 7. On the reference domain controller, build a good set of policies and scripts, and then put them in a temporary folder outside the SYSVOL replica set folders on the FRS reference domain controller.
@@ -233,7 +233,7 @@ On each domain controller in the domain, follow these steps:
     To complete this step, examine Active Directory to determine the group policies that are still used and that contain orphaned data. Policy information is located in the Group Policies container. To view this container, follow these steps:
 
     1. Start Active Directory Users and Computers.
-    2. On the **View** menu, click **Advanced Features** if it is not already selected.
+    2. On the **View** menu, select **Advanced Features** if it is not already selected.
     3. Expand the domain container, expand the **System** container, and then expand the **Policies** container.
 
         In the right pane of Active Directory Users and Computers, all the Group Policy objects (GPOs) in Active Directory are listed. There should be a one-to-one mapping between valid GPOs in Active Directory with Group Policy folders in the SYSVOL tree.
@@ -256,14 +256,14 @@ On each domain controller in the domain, follow these steps:
 
     5. On the reference domain controller, move the policies and scripts folders and the folder contents from the temporary location that you used in step c to the FRS replica set root folder. For the SYSVOL folder, the default location for the replica set root is the  folder: C:\\WINNT\\SYSVOL\\domain.
 
-    6. On all domain controllers except the reference domain controller, configure the FRS to be non-authoritative. To do this, follow these steps:
+    6. On all domain controllers except the reference domain controller, configure the FRS to be non-authoritative. You can follow these steps:
 
-        1. Click **Start**, click **Run**, type *regedit*, and then click **OK**.
-        2. Locate and then click the **BurFlags** entry under the following registry subkey:  
+        1. Go to **Start**, select **Run**, type *regedit*, and then select **OK**.
+        2. Locate and then select the **BurFlags** entry under the following registry subkey:  
             `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NtFrs\Parameters\Cumulative Replica Sets\GUID`
 
             **GUID** is the GUID of the domain system volume replica set that is shown in the following registry subkey:  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NtFrs\Parameters\Replica Sets\GUID`
-        3. On the **Edit** menu, point to **New**, and then click **DWORD Value**.
+        3. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
         4. Type *D2* for the name of the DWORD, and then press ENTER.
 
         > [!NOTE]
@@ -285,7 +285,7 @@ On each domain controller in the domain, follow these steps:
     > [!NOTE]
     > If this registry entry does not exist, you must create it.
 
-    We recommend that a single domain controller not become the source for more than 10 to 15 domain controllers at the same time. If you must source more than 15 domain controllers off a single source, start the FRS on only 15 downstream partners of any particular source domain controller, and then wait for them to complete sourcing the SYSVOL tree before the FRS service is started on the next group of 15 computers.
+    We don't recommend that a single domain controller becomes the source for more than 10 to 15 domain controllers at the same time. If you must source more than 15 domain controllers off a single source, start the FRS on only 15 downstream partners of any particular source domain controller, and then wait for them to complete sourcing the SYSVOL tree before the FRS service is started on the next group of 15 computers.
 
     > [!NOTE]
     >

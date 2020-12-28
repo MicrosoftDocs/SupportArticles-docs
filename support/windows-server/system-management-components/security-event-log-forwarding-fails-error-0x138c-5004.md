@@ -37,7 +37,7 @@ This problem may occur when the following conditions are true:
 
   - Registry key: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security`
   - Registry entry: CustomSD
-  - Value: O:BAG:SYD:(D;; 0xf0007;;;AN)(D;; 0xf0007;;;BG)(A;; 0xf0007;;;SY)(A;; 0x7;;;BA)(A;; 0x7;;;SO)(A;; 0x3;;;IU)(A;; 0x2;;;BA)(A;; 0x2;;;LS)(A;; 0x2;;;NS)(A;; 0x7;;;DA)(A;; 0x1;;;S-1-5-21-xxx-xxx-xxx-xxx)
+  - Value: `O:BAG:SYD:(D;; 0xf0007;;;AN)(D;; 0xf0007;;;BG)(A;; 0xf0007;;;SY)(A;; 0x7;;;BA)(A;; 0x7;;;SO)(A;; 0x3;;;IU)(A;; 0x2;;;BA)(A;; 0x2;;;LS)(A;; 0x2;;;NS)(A;; 0x7;;;DA)(A;; 0x1;;;S-1-5-21-xxx-xxx-xxx-xxx)`
 
 ## Resolution
 
@@ -47,6 +47,8 @@ To fix this problem, you need to add the Network Service account to the **Manage
 2. On the navigation menu, select **Local Policies** > **User Rights Assignment**.
 3. Right-click **Manage auditing and security log**, and then select **Properties**.
 4. On the **Local Security Setting** tab, click **Add User or Group** to add the Network Service account.
-The previous procedure add the SID **S-1-5-20** (well-known SID of the Network Service account) to the **CustomSD** registry value that's mentioned above. You could also manually add the value to the registry key. After the modification, the value resembles the following:  
-O:BAG:SYD:(D;; 0xf0007;;;AN)(D;; 0xf0007;;;BG)(A;; 0xf0007;;;SY)(A;; 0x7;;;BA)(A;; 0x7;;;SO)  
-(A;; 0x3;;;IU)(A;; 0x2;;;BA)(A;; 0x2;;;LS)(A;; 0x2;;;NS)(A;; 0x7;;;DA)(A;; 0x1;;;S-1-5-21-xxx-xxx-xxx-xxx);;; S-1-5-20
+
+The previous procedure adds the SID **S-1-5-20** (well-known SID of the Network Service account) to the **CustomSD** registry value that's mentioned above. You could also manually add the value to the registry key. After the modification, the value resembles the following:  
+`O:BAG:SYD:(D;; 0xf0007;;;AN)(D;; 0xf0007;;;BG)(A;; 0xf0007;;;SY)(A;; 0x7;;;BA)(A;; 0x7;;;SO)`
+  
+`(A;; 0x3;;;IU)(A;; 0x2;;;BA)(A;; 0x2;;;LS)(A;; 0x2;;;NS)(A;; 0x7;;;DA)(A;; 0x1;;;S-1-5-21-xxx-xxx-xxx-xxx);;; S-1-5-20`
