@@ -1,6 +1,6 @@
 ---
 title: Error (CredSSP encryption oracle remediation) when you try to RDP to a Windows VM in Azure
-description: Fixes an issue in which you receive a CredSSP encryption oracle remediation error when you try to RDP to a Windows VM in Azure.
+description: Fixes an issue that you receive a CredSSP encryption oracle remediation error when you try to RDP to a Windows VM in Azure.
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
@@ -83,7 +83,7 @@ To resolve the issue, install CredSSP updates for both client and server so that
     ![The image  about CMD section in SAC](./media/credssp-encryption-oracle-remediation/4341456_en_1.png)  
 
 7. To start a PowerShell instance, type `PowerShell`.
-8. In the PowerShell instance, [run the Serial console script](#azure-serial-console-scripts)based on the VM operating system. This script does the following: 
+8. In the PowerShell instance, [run the Serial console script](#azure-serial-console-scripts)based on the VM operating system. This script performs the following steps:
 
    - Create a folder in which to save the download file.
    - Download the update.
@@ -101,7 +101,7 @@ To resolve the issue, install CredSSP updates for both client and server so that
 
 2. In the Azure portal, configure **Network Security Groups** on the VM to allow traffic to port 5986. 
 3. In the Azure portal, select **Virtual Machine** > < **your VM** >, scroll down to the **OPERATIONS** section, click the **Run command**, and then run **EnableRemotePS**.
-4. On the Windows-based computer, [run the Remote PowerShell script](#remote-powershell-scripts) for the appropriate system version of your VM. This script does the following:
+4. On the Windows-based computer, [run the Remote PowerShell script](#remote-powershell-scripts) for the appropriate system version of your VM. This script performs the following steps:
    - Connect to Remote PowerShell on the VM.
    - Create a folder to which to save the download file.
    - Download the Credssp update.
@@ -117,11 +117,11 @@ To resolve the issue, install CredSSP updates for both client and server so that
 
 ### Scenario 1: Updated clients cannot communicate with non-updated servers
 
-The most common scenario is that the client has the CredSSP update installed, and the **Encryption Oracle Remediation** policy setting does not allow an insecure RDP connection to a server that does not have the CredSSP update installed.
+The most common scenario is that the client has the CredSSP update installed, and the **Encryption Oracle Remediation** policy setting doesn't allow an insecure RDP connection to a server that does not have the CredSSP update installed.
 
 To work around this issue, follow these steps:
 
-1. On the client has the CredSSP update installed, run **gpedit.msc**, and then browse to **Computer Configuration** > **Administrative Templates** > **System** > **Credentials Delegation** in the navigation pane. 
+1. On the client that has the CredSSP update installed, run **gpedit.msc**, and then browse to **Computer Configuration** > **Administrative Templates** > **System** > **Credentials Delegation** in the navigation pane. 
 2. Change the **Encryption Oracle Remediation policy** to **Enabled**, and then change **Protection Level** to **Vulnerable**.
 
     If you cannot use gpedit.msc, you can make the same change by using the registry, as follows:
