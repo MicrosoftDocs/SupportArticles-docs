@@ -25,11 +25,11 @@ _Original KB number:_ &nbsp; 2697959
 
 When a manager (in a manager-delegate pair) opens a meeting invite, they do not see the **Accept**, **Tentative**, or **Decline** options under the **Change Response** control. Instead, they see only **No Response Required** in the Respond section of the ribbon, as shown in the following figure.
 
-:::image type="content" source="media/manager-cannot-respond-to-meeting-invite.md/no-response-required.jpg" alt-text="The screenshot for the ribbon of a meeting invite." border="false":::
+:::image type="content" source="media/manager-cannot-respond-to-meeting-invite/no-response-required.jpg" alt-text="The screenshot for the ribbon of a meeting invite." border="false":::
 
 Normally, the manager sees the **Accept**, **Tentative**, and **Decline** options under the Change Response control on the ribbon, as shown in the following figure.
 
-:::image type="content" source="media/manager-cannot-respond-to-meeting-invite.md/change-response.jpg" alt-text="The screenshot for the options under the Change Response control on the ribbon" border="false":::
+:::image type="content" source="media/manager-cannot-respond-to-meeting-invite/change-response.jpg" alt-text="The screenshot for the options under the Change Response control on the ribbon" border="false":::
 
 ## Cause
 
@@ -85,6 +85,6 @@ Use the following steps to change the value of `DisableResponseButtons` to zero 
 
 If a manager is configured with the default delegate setting where they receive informational meeting items, they will not be able to act on a meeting invite if they view it in the reading pane. This is demonstrated in the following figure.
 
-:::image type="content" source="media/manager-cannot-respond-to-meeting-invite.md/meeting-invite-reading-pane.jpg" alt-text="The screenshot for the reading pane of a meeting invite":::
+:::image type="content" source="media/manager-cannot-respond-to-meeting-invite/meeting-invite-reading-pane.jpg" alt-text="The screenshot for the reading pane of a meeting invite":::
 
 However, the manager can accept or decline a meeting if they open the meeting invite in an inspector window (double-click on the item to open it). If `DisableResponseButtons`=**1** in the registry, then they will not be able to act on meeting invites when they open them.
