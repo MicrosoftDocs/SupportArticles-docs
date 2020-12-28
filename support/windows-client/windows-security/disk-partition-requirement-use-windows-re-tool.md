@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Bitlocker
-ms.technology: Deployment
+ms.technology: WindowsSecurity
 ---
 # Disk partition requirement for using Windows RE tools on a UEFI-based computer
 
@@ -26,9 +26,10 @@ This article discusses the disk partition requirements for using Windows Recover
 
 ## More information
 
-The disk partition for Windows RE tools must be at least 300 MB. Typically, between 250-300 MB is allocated for the Windows RE tools image (Winre.wim), depending on base language and added customizations. 
+The disk partition for Windows RE tools must be at least 300 MB. Typically, between 250-300 MB is allocated for the Windows RE tools image (Winre.wim), depending on base language and added customizations.
 
 The allocation for Windows RE must also include sufficient free space for backup utilities to capture the partition. Follow these guidelines to create the partition:
+
 - If the partition is smaller than 500 MB, it must have at least 50 MB of free space.
 - If the partition is 500 MB or larger, it must have at least 320 MB of free space.
 - If the partition is larger than 1 GB, it must have at least 1 GB free of free space.
