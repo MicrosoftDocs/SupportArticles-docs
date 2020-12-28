@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-virtual-machines.md
+  href: welcome-virtual-machines.yml
 
 - name: Troubleshoot deployment issues
   items:
@@ -32,6 +32,10 @@
       href: credssp-encryption-oracle-remediation.md
     - name: No Internet access
       href: no-internet-access-multi-ip.md
+  - name: RDP
+    items:
+    - name: Cannot RDP into Azure VM
+      href: cannot-connect-rdp-azure-vm.md
 
 - name: VM is not booting
   items:
@@ -67,13 +71,17 @@
     href: linux-kernel-panics-upgrade.md
   - name: Linux VM does not start after an LIS upgrade
     href: linux-vm-not-start-kernel-lis.md
+  - name: Troubleshoot Windows VM OS with missing boot manager
+    href: os-bootmgr-missing.md
   - name: OS isn't found
     href: os-not-found.md
+  - name: Troubleshoot Windows VM OS boot failure
+    href: os-bucket-boot-failure.md
 
 - name: VM restart issues
   items:
   - name: Can't restart after applying kernel changes
-    href: kernel-related-boot issues.md
+    href: kernel-related-boot-issues.md
   - name: Fail to access Generation 2 Linux VM
     href: unable-access-g2-linux-vm-reboot.md
   - name: Fail to restart or be provisioned

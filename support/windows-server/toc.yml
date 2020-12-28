@@ -426,7 +426,7 @@
       href: ./identity/use-online-dbdump-feature-ldp-dot-exe.md
     - name: View and set LDAP policy by using Ntdsutil
       href: ./identity/view-set-ldap-policy-using-ntdsutil.md
-  - name: Schema update - known issues, best practies, workflow review
+  - name: Schema update - known issues, best practices, workflow review
     items:
     - name: How to find the current Schema Version
       href: ./identity/find-current-schema-version.md
@@ -920,20 +920,6 @@
       href: ./deployment/windows-activation-fails-with-error-0x8007267.md
     - name: Windows installation fails with error
       href: ./deployment/error-product-key-not-match-windows-images-installation.md
-  - name: Bitlocker
-    items:
-    - name: Computer Record is Rejected in MBAM
-      href: ./deployment/computer-record-rejected-in-mbam.md
-    - name: Error when opening reports in MBAM
-      href: ./deployment/error-when-opening-reports-mbam.md
-    - name: Error when viewing reports in MBAM
-      href: ./deployment/server-error-click-reports-tab-mbam.md
-    - name: MBAM Enterprise Reports aren't updated
-      href: ./deployment/mbam-enterprise-report-not-updated.md
-    - name: MBAM fails to take ownership of the TPM
-      href: ./deployment/error-mbam-take-ownership-tpm.md
-    - name: MBAM setup fails if SSRS is not configured properly
-      href: ./deployment/mbam-setup-fails.md
   - name: Devices and Drivers
     items:
     - name: '"Stop 0x0000007B" error'
@@ -1916,6 +1902,8 @@
       href: ./performance/task-manager-display-incorrect-memory-info.md
     - name: Unable to allocate memory from the system paged pool
       href: ./performance/unable-allocate-memory-system-paged-pool.md
+    - name: User-defined data collector set doesn't run as scheduled
+      href: ./performance/user-defined-dcs-doesnt-run-as-scheduled.md
     - name: Virtual memory in 32-bit version of Windows
       href: ./performance/ram-virtual-memory-pagefile-management.md
   - name: Shutdown is slow or hangs
@@ -2666,6 +2654,18 @@
       href: ./windows-security/mbam-secure-network-communication.md
     - name: How to use BitLocker Recovery Password Viewer
       href: ./windows-security/bitlocker-recovery-password-viewer-tool.md
+    - name: Computer Record is Rejected in MBAM
+      href: ./windows-security/computer-record-rejected-in-mbam.md
+    - name: Error when opening reports in MBAM
+      href: ./windows-security/error-when-opening-reports-mbam.md
+    - name: Error when viewing reports in MBAM
+      href: ./windows-security/server-error-click-reports-tab-mbam.md
+    - name: MBAM Enterprise Reports aren't updated
+      href: ./windows-security/mbam-enterprise-report-not-updated.md
+    - name: MBAM fails to take ownership of the TPM
+      href: ./windows-security/error-mbam-take-ownership-tpm.md
+    - name: MBAM setup fails if SSRS is not configured properly
+      href: ./windows-security/mbam-setup-fails.md
   - name: Certificates and public key infrastructure (PKI)
     items:
     - name: '"Http error 500.0" when getting the NDES enrollment challenge password'

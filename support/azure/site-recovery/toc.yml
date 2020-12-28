@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-site-recovery.md
+  href: welcome-site-recovery.yml
 - name: Azure Backup offline seeding is stuck
   href: backup-offline-seeding-stuck.md
 - name: Azure protection network bandwidth usage management

@@ -1,0 +1,78 @@
+---
+title: Error occurs when you open Configuration Manager
+description: This article provides workarounds for the problem that occurs when you open SQL Server Configuration Manager.
+ms.date: 09/25/2020
+ms.prod-support-area-path: Other tools
+ms.reviewer: yongzhe
+ms.prod: sql
+---
+# Error message when you open SQL Server Configuration Manager in SQL Server: Cannot connect to WMI provider. You do not have permission or the server is unreachable
+
+This article helps you work around the problem that occurs when you open SQL Server Configuration Manager.
+
+_Original product version:_ &nbsp; SQL Server  
+_Original KB number:_ &nbsp; 956013
+
+## Symptoms
+
+You may receive one of the following error messages when you open SQL Server Configuration Manager:
+
+> Cannot connect to WMI provider. You do not have permission or the server is unreachable. Note that you can only manage SQL Server 2005 and later servers with SQL Server Configuration Manager.  
+Invalid namespace [0x8004100e]
+
+or
+
+> Cannot connect to WMI provider. You do not have permission or the server is unreachable, Note that you can only manage SQL Server 2005 and later servers with SQL Server Configuration Manager.  
+Invalid class [0x80041010]
+
+## Cause
+
+SQL Server Configuration Manager use Window Management Instrumentation (WMI) to view and change some server settings. When connecting to servers, SQL Server Configuration Manager uses WMI to obtain the status of the SQL Server (MSSQLSERVER) and SQL Server Agent services. This problem occurs because the WMI provider is removed when you uninstall an instance of SQL Server.
+
+This file is located in the `%programfiles(x86)%` folder.
+
+## Workaround
+
+You can use one of the following options to solve the problem.
+
+### Option 1: Recompile SQL WMI provider using mofcomp (Managed Object Format (MOF) compiler)
+
+Use the following procedure:
+
+1. The MOF file (sqlmgmproviderxpsp2up.mof) for your SQL instance is found in "%programfiles(x86)%\Microsoft SQL Server\nnn\Shared” folder. Determine the location of the mofcomp file for your version using the following table as a reference:
+
+    |Version|nn|
+    |---|---|
+    |Microsoft SQL Server 2019 |150|
+    |Microsoft SQL Server 2017 |140|
+    |Microsoft SQL Server 2016|130|
+    |Microsoft SQL Server 2014|120|
+    |Microsoft SQL Server 2012|100|
+    |Microsoft SQL Server 2008 R2|100|
+    |Microsoft SQL Server 2008|100|
+    |Microsoft SQL Server 2005|90|
+    |||
+
+1. Open an elevated  command prompt, and change the directory to the folder location from Step1.  
+
+1. Then type the following command, and then press **ENTER**:
+
+    ```console
+    mofcomp "sqlmgmproviderxpsp2up.mof"
+    ```
+
+    > [!NOTE]
+    > For this command to succeed, the *Sqlmgmproviderxpsp2up.mof* file must be present in the `%programfiles(x86)%\Microsoft SQL Server\nnn\Shared` folder.
+
+1. After you run the mofcomp tool, restart the WMI service for the changes to take effect. The service name is Windows management Instrumentation.
+
+### Option 2:  Repair your SQL Server installation. For further information review Repair a Failed SQL Server Installation
+
+> [!NOTE]
+> This option is only required if the *sqlmgmproviderxpsp2up.mof* is missing from the `%programfiles(x86)%\Microsoft SQL Server\nnn\Shared` location.
+
+## See also
+
+- [SQL Server Configuration Manager](/sql/relational-databases/sql-server-configuration-manager)
+
+- [Configure WMI to Show Server Status in SQL Server Tools](/sql/ssms/configure-wmi-to-show-server-status-in-sql-server-tools)

@@ -1,6 +1,6 @@
 ---
 title: HTTP Error 403.14 when you open IIS webpages
-description: Resolves an error that occurs when you visit a website and receive error message HTTP 403.14 The web server is configured to not list the contents of this directory.
+description: Resolves the "HTTP 403.14 The web server is configured to not list the contents of this directory" error message that occurs when you visit a website.
 ms.date: 11/9/2020
 ms.prod-support-area-path: Health, diagnostic, and performance features
 ---
@@ -12,11 +12,13 @@ _Original product version:_ &nbsp; Internet Information Services 7.0 and later v
 _Original KB number:_ &nbsp; 942062
 
 > [!NOTE]
-> The target audience for this article is website administrators and web developers.
+>
+> - The target audience for this article is website administrators and web developers.
+> - This article only applies to traditional ASP.Net Form applications.
 
 ## Symptoms
 
-When you visit a website that is hosted on IIS 7.0 or a later version, you receive an error message that resembles the following:
+When you visit a website hosted on IIS 7.0 or a later version, you receive an error message that resembles the following:
 
 > Server Error in Application "**application name**"  
 > HTTP Error 403.14 - Forbidden  
@@ -25,17 +27,17 @@ When you visit a website that is hosted on IIS 7.0 or a later version, you recei
 
 ## Resolution for users
 
-If you are a user, you should contact the website administrators to notify them that this error has occurred for this web address.
+If you're a user, you should contact the website administrators to notify them that this error has occurred for this web address.
 
 ## Resolution for site administrators
 
-This problem occurs because the website does not have the Directory Browsing feature enabled. Also, the default document is not configured. To resolve this problem, use one of the following methods:
+This problem occurs because the website doesn't have the Directory Browsing feature enabled. Also, the default document isn't configured. To resolve this problem, use one of the following methods:
 
 **Method 1: Enable the Directory Browsing feature in IIS (recommended)**
 
 To resolve this problem, follow these steps:
 
-1. Start IIS Manager. To do this, select **Start**, select **Run**, type **inetmgr.exe**, and then select **OK**.
+1. Start IIS Manager. To do it, select **Start**, select **Run**, type **inetmgr.exe**, and then select **OK**.
 2. In IIS Manager, expand **server name**, expand **Web sites**, and then select the website that you want to change.
 3. In the **Features** view, double-click **Directory Browsing**.
 4. In the **Actions** pane, select **Enable**.
@@ -44,7 +46,7 @@ To resolve this problem, follow these steps:
 
 To resolve this problem, follow these steps:
 
-1. Start IIS Manager. To do this, select **Start**, select **Run**, type **inetmgr.exe**, and then select **OK**.
+1. Start IIS Manager. To do it, select **Start**, select **Run**, type **inetmgr.exe**, and then select **OK**.
 2. In IIS Manager, expand **server name**, expand **Web sites**, and then select the website that you want to change.
 3. In the **Features** view, double-click **Default Document**.
 4. In the **Actions** pane, select **Enable**.
@@ -54,8 +56,6 @@ To resolve this problem, follow these steps:
 
 > [!NOTE]
 > This method is for the web developers who experience this issue when they use IIS Express.
-
-To do this, follow these steps:
 
 1. Open a Command Prompt window, and navigate to the IIS Express folder on your computer. For example, type the following command at the command prompt, and then press Enter:
 

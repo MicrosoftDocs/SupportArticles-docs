@@ -1,6 +1,6 @@
 ---
-title: DirectAccess clients encounter error 0x800b0109
-description: Describes an issue in which DirectAccess clients encounter error code 0x800b0109 and cannot connect to Windows Server by using IP-HTTPS.
+title: DirectAccess clients connection error 0x800b0109
+description: Provides a solution to an issue in which DirectAccess clients encounter error code 0x800b0109 and cannot connect to Windows Server by using IP-HTTPS.
 ms.date: 09/17/2020
 author: Deland-Han
 ms.author: delhan
@@ -22,22 +22,20 @@ _Original KB number:_ &nbsp; 2980667
 
 ## Symptoms
 
-DirectAccess clients may not be able to connect to a DirectAccess server by using IP-HTTPS. When you run the netsh interface http show interface command, the output is as follows:
+DirectAccess clients may not be able to connect to a DirectAccess server by using IP-HTTPS. When you run the `netsh interface http show interface` command, the output is as follows:
 
-```console
-URL: https://da.contoso.com:443/IPHTTPS
-Error: 0x800b0109
+> URL: `https://da.contoso.com:443/IPHTTPS`
+Error: 0x800b0109  
 Interface Status: Failed to connect to the IPHTTPS server. Waiting to reconnect
+>
+> The error 0x800b0109 translates to:  
+CERT_E_UNTRUSTEDROOT  
+\# A certificate chain processed, but terminated in a root  
+\# certificate which is not trusted by the trust provider.
 
-The error 0x800b0109 translates to:
-CERT_E_UNTRUSTEDROOT
-# A certificate chain processed, but terminated in a root
-# certificate which is not trusted by the trust provider.
-```
+By default, the Trusted Root Certification Authorities certificate store is configured with a set of public certification authorities that are trusted by a Windows client. Some organizations may want to manage certificate trust and prevent users in the domain from configuring their own set of trusted root certificates. In addition, some organizations may want to issue certificates for the IP-HTTPS server from their own certification authority server. They need to distribute that specific trusted root certificate to enable the trust relationships. When configuring certificates for DirectAccess, the Root Certificate Authority must be trusted by the clients, and it should have the Root CA certificate in the Trusted Root Certification Authorities store.
 
-By default, the Trusted Root Certification Authorities certificate store is configured with a set of public certification authorities that are trusted by a Windows client. Some organizations may want to manage certificate trust and prevent users in the domain from configuring their own set of trusted root certificates. In addition, some organizations may want to issue certificates for the IP-HTTPS server from their own certification authority server. They need to distribute that specific trusted root certificate to enable the trust relationships. When configuring certificates for DirectAccess, the Root Certificate Authority must be trusted by the clients, and it should have the Root CA certificate in the Trusted Root Certification Authorities store. 
-
-For more information about certificates, please visit the following page at Microsoft TechNet: [How certificate revocation works](https://technet.microsoft.com/library/ee619754%28v=ws.10%29.aspx) 
+For more information about certificates, see [How certificate revocation works](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee619754(v=ws.10)).
 
 ## Cause
 
@@ -49,11 +47,9 @@ To solve this issue, follow these steps:
 
 1. Obtain the certificate for the certification authority that issued the IP-HTTPS certificate.
 2. Import this certificate into the computer store of the DirectAccess client.
-3. To apply this change to all clients, [use Group Policy to deploy the imported certificate](https://technet.microsoft.com/library/cc772491.aspx).
+3. To apply this change to all clients, [use Group Policy to deploy the imported certificate](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772491(v=ws.11)).
 
-## More information
-
-DirectAccess connectivity methods 
+## DirectAccess connectivity methods
 
 DirectAccess clients use multiple methods to connect to the DirectAccess server, which enables access to internal resources. Clients have the option to use either Teredo, 6to4, or IP-HTTPS to connect to DirectAccess. This also depends on how the DirectAccess server is configured.
 
@@ -63,4 +59,4 @@ When the client is behind a NAT device, it will try to use Teredo. Many business
 
 Having this in mind, IP-HTTPS was built to provide a backup connection that is reliable and always reachable. A DirectAccess client will make use of this when other methods (such as Teredo or 6to4) fail.
 
-More information about transition technologies can be found at [IPv6 transition technologies](https://technet.microsoft.com/library/bb726951.aspx).
+More information about transition technologies can be found at [IPv6 transition technologies](/previous-versions//bb726951(v=technet.10)).

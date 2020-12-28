@@ -4,7 +4,7 @@
   items:
   - name: Active Directory
     href: ./identity/active-directory-overview.md
-  - name: Schema update - known issues, best practies, workflow review
+  - name: Schema update - known issues, best practices, workflow review
     items:
     - name: Error when checking domain object property
       href: ./identity/error-when-checking-domain-object-property.md
@@ -176,32 +176,6 @@
       href: ./deployment/validate-oem-activation-key.md
     - name: KMS current count doesn't increase
       href: ./deployment/kms-current-count-not-increase.md
-  - name: Bitlocker
-    items:
-    - name: BitLocker could not be enabled
-      href: ./deployment/bitlocker-not-enabled-usb-drive-not-found.md
-    - name: Can't retrieve BitLocker Recovery key
-      href: ./deployment/cant-retrieve-bitlocker-recovery-key.md
-    - name: Disk partition requirement for using Windows RE tools on a UEFI-based computer
-      href: ./deployment/disk-partition-requirement-use-windows-re-tool.md
-    - name: Error after you enter BitLocker PIN at startup
-      href: ./deployment/bitlocker-too-many-pin-entry-attempts.md
-    - name: Error when BIOS is in legacy mode with TPM 2.0
-      href: ./deployment/tpm-is-ready-for-use-with-reduced-functionality.md
-    - name: Event ID 15 when a computer resumes from sleep
-      href: ./deployment/event-id-15-computer-resume-from-sleep.md
-    - name: How to enable BitLocker device encryption
-      href: ./deployment/enable-bitlocker-device-encryption-local-hard-disk.md
-    - name: MBAM client fails with error 0x8004100E
-      href: ./deployment/mbam-client-fails-event-id-4-0x8004100e.md
-    - name: Parameter is incorrect when you enable  BitLocker
-      href: ./deployment/parameter-is-incorrect.md
-    - name: Specified Account not exist when enabling BitLocker
-      href: ./deployment/specified-account-not-exist-enable-bitlocker.md
-    - name: The recovery password for BitLocker isn't available when FIPS compliant policy is set
-      href: ./deployment/bitlocker-recovery-password-not-fips-compliant.md
-    - name: The requested Key ID is invalid
-      href: ./deployment/requested-key-id-is-invalid.md
   - name: Devices and Drivers
     items:
     - name: '"The operation timed out" error'
@@ -728,6 +702,8 @@
       href: ./performance/gpu-process-memory-counters-report-wrong-value.md
     - name: Task Manager shows incorrect CPU speed
       href: ./performance/task-manager-shows-incorrect-cpu-speed.md
+    - name: User-defined data collector set doesn't run as scheduled
+      href: ../windows-server/performance/user-defined-dcs-doesnt-run-as-scheduled.md
     - name: Use the System Configuration utility to troubleshoot
       href: ./performance/system-configuration-utility-troubleshoot-configuration-errors.md
     - name: Windows Experience Index shows 1.0
@@ -1092,13 +1068,13 @@
     items:
     - name: Hyper-V can't start VM after upgrade
       href: ./virtualization/hyper-v-not-start-vm-after-upgrade.md
-- name: Windows 7 EoS FAQ
+- name: Windows 7 End of Support (EoS) FAQ
   items:
   - name: Windows 7 EoS FAQ
     href: ./windows-7-eos-faq/windows-7-end-support-faq.md
   - name: Windows 7 end of support
     href: ./windows-7-eos-faq/windows-7-end-support-faq-general.md
-  - name: Windows 7 ESU
+  - name: Windows 7 Extended Security Updates (ESU)
     href: ./windows-7-eos-faq/windows-7-extended-security-updates-faq.md
   - name: Windows 7 ESU offers for E5 customers
     href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.md
@@ -1122,6 +1098,30 @@
       href: ./windows-security/trusted-platform-module-reduced-functionality-mode.md
     - name: Windows 10 BitLocker Recovery auto-shutdown in UEFI mode
       href: ./windows-security/bitlocker-recovery-auto-shutdown-in-uefi-mode.md
+    - name: BitLocker could not be enabled
+      href: ./windows-security/bitlocker-not-enabled-usb-drive-not-found.md
+    - name: Can't retrieve BitLocker Recovery key
+      href: ./windows-security/cant-retrieve-bitlocker-recovery-key.md
+    - name: Disk partition requirement for using Windows RE tools on a UEFI-based computer
+      href: ./windows-security/disk-partition-requirement-use-windows-re-tool.md
+    - name: Error after you enter BitLocker PIN at startup
+      href: ./windows-security/bitlocker-too-many-pin-entry-attempts.md
+    - name: Error when BIOS is in legacy mode with TPM 2.0
+      href: ./windows-security/tpm-is-ready-for-use-with-reduced-functionality.md
+    - name: Event ID 15 when a computer resumes from sleep
+      href: ./windows-security/event-id-15-computer-resume-from-sleep.md
+    - name: How to enable BitLocker device encryption
+      href: ./windows-security/enable-bitlocker-device-encryption-local-hard-disk.md
+    - name: MBAM client fails with error 0x8004100E
+      href: ./windows-security/mbam-client-fails-event-id-4-0x8004100e.md
+    - name: Parameter is incorrect when you enable  BitLocker
+      href: ./windows-security/parameter-is-incorrect.md
+    - name: Specified Account not exist when enabling BitLocker
+      href: ./windows-security/specified-account-not-exist-enable-bitlocker.md
+    - name: The recovery password for BitLocker isn't available when FIPS compliant policy is set
+      href: ./windows-security/bitlocker-recovery-password-not-fips-compliant.md
+    - name: The requested Key ID is invalid
+      href: ./windows-security/requested-key-id-is-invalid.md
   - name: Kerberos authentication
     items:
     - name: '"Not enough storage is available to complete this operation" error'
@@ -1152,10 +1152,12 @@
       href: ./windows-security/tpm-is-not-recognized.md
   - name: Smart card logon
     items:
-    - name: Can't authenticate because of an incorrect PIV smart card driver update
-      href: ./windows-security/cannot-authenticate-incorrect-piv-smart-card-driver-update.md
     - name: 0x6 ERROR_INVALID_HANDLE error when a multithreaded application accesses a smart card
       href: ./windows-security/0x6-error-invalid-handle-multithreaded-application.md
+    - name: Can't authenticate because of an incorrect PIV smart card driver update
+      href: ./windows-security/cannot-authenticate-incorrect-piv-smart-card-driver-update.md
+    - name: Code 31 for Microsoft USB CCID smart card reader
+      href: ./windows-security/code-31-device-manager-usbccid-smartcard-reader-problem.md
   - name: TPM
     items:
     - name: Events 14 and 17 for TPM command failure or non-recoverable error

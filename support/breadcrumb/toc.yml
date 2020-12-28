@@ -49,6 +49,10 @@
       tocHref: /troubleshoot/webapps/
       topicHref: /troubleshoot/webapps/welcome-webapps
 
+    - name: SQL Server
+      tocHref: /troubleshoot/sql/
+      topicHref: /troubleshoot/sql/welcome-sql-server
+
     - name: Microsoft Identity Manager
       tocHref: /troubleshoot/microsoft-identity-manager/
       topicHref: /troubleshoot/microsoft-identity-manager/welcome-identity-manager

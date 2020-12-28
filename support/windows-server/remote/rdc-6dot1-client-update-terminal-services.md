@@ -17,12 +17,13 @@ ms.technology: RDS
 
 This article describes the Remote Desktop Connection 6.1 client update and how it affects Terminal Services in Windows Vista SP1, in Windows XP SP3, and in Windows Server 2008.
 
-Support for Windows Vista Service Pack 1 (SP1) ends on July 12, 2011. To continue receiving security updates for Windows, make sure you're running Windows Vista with Service Pack 2 (SP2). For more information, see this Microsoft web page: [Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs).
+> [!NOTE]
+> Support for Windows Vista Service Pack 1 (SP1) ends on July 12, 2011. To continue receiving security updates for Windows, make sure you're running Windows Vista with Service Pack 2 (SP2). For more information, see this Microsoft web page: [Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs).
 
 _Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;951616  
 
-## INTRODUCTION
+## Introduction
 
 This article discusses the Remote Desktop Connection (RDC) 6.1 client update that helps you use the new Terminal Services features. These features are introduced in Windows Vista and in Windows Server 2008 and are available from a computer that is running one of the following operating systems:
 
@@ -71,10 +72,6 @@ Network Level Authentication (NLA) is a new authentication method that finishes 
 > [!NOTE]
 > By default, Network Level Authentication (NLA) is disabled in Windows XP Service Pack 3. To enable NLA, you have to turn on the Credential Security Service Provider (CredSSP).
 
-For more information about how to run on CredSSP, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[951608](https://support.microsoft.com/help/951608) Description of the Credential Security Service Provider (CredSSP) in Windows XP Service Pack 3  
-
 ### Server authentication
 
 In RDC 6.1, server authentication verifies that you're connecting to the correct remote computer or remote server. This security feature helps prevent you from connecting to a computer or server to which you didn't intend to connect. This feature also prevents you from unintentionally exposing confidential information.
@@ -89,16 +86,15 @@ The three available authentication options are as follows:
 
 - **Always connect, even if authentication fails**  
 
-If you enable this option, you can connect even if RDC 6.1 can't verify the identity of the remote computer.
+    If you enable this option, you can connect even if RDC 6.1 can't verify the identity of the remote computer.
 
 - **Warn me if authentication fails**  
 
-If you enable this option, RDC 6.1 tells you if it can't verify the identity of the remote computer. This option gives you the choice of whether to continue with the connection.
+    If you enable this option, RDC 6.1 tells you if it can't verify the identity of the remote computer. This option gives you the choice of whether to continue with the connection.
 
 - **Do not connect if authentication fails**  
 
-If you enable this option, you can't connect if RDC 6.1 can't verify the identity of the remote computer.
-
+    If you enable this option, you can't connect if RDC 6.1 can't verify the identity of the remote computer.
 
 ### Resource redirection
 
@@ -109,7 +105,6 @@ To redirect a Plug and Play device, follow these steps:
 1. Click **Start**, click **All Programs**, click **Accessories**, click **Communication**, and then click **Remote Desktop Connection**.
 
 2. Click **Options**, click the **Local Resources** tab, click **More**, and then select the **Supported Plug and Play devices** check box.
-
 
 ### Terminal Server Gateway servers
 
@@ -135,16 +130,14 @@ To specify a TS Gateway server, follow these steps:
 
     - **Allow me to select later**  
     This option lets you select a logon method when you connect.
-    
+
     - **Ask for password**  
     This option prompts you for a password when you connect.
-    
+
     - **Smart card**  
     This option prompts you to insert a smart card when you connect.
-    
 
 4. Select or clear the **Bypass TS Gateway server for local addresses** check box. By selecting this check box, you prevent the traffic that is moving to and from local network addresses from being routed through the TS Gateway server. This option makes the connection faster.
-
 
 ### Terminal Services RemoteApp
 
@@ -156,7 +149,7 @@ TS RemoteApp makes system administration easier because there is only one copy o
 
 Remote Desktop Connection supports high-resolution displays that span multiple monitors. However, the total resolution on all monitors must be under 4096 x 2048 pixels. The monitors must have the same resolution. Additionally, the monitors must be aligned side by side.
 
-To make the desktop of the remote computer span multiple monitors, type Mstsc /span at a command prompt.
+To make the desktop of the remote computer span multiple monitors, type *Mstsc /span* at a command prompt.
 
 ### Visual improvements
 
@@ -166,7 +159,10 @@ To enable 32-bit color, follow these steps:
 
 1. Click **Start**, click **All Programs**, click **Accessories**, click **Communication**, and then click **Remote Desktop Connection**.
 
-2. Click **Options**, click the **Display** tab, and then click **Highest Quality (32 bit)** in the **Colors** list. To enable font smoothing, follow these steps:
+2. Click **Options**, click the **Display** tab, and then click **Highest Quality (32 bit)** in the **Colors** list.
+
+To enable font smoothing, follow these steps:
+
 1. Click **Start**, click **All Programs**, click **Accessories**, click **Communication**, and then click **Remote Desktop Connection**.
 
 2. Click **Options**, click the **Experience** tab, and then select the **Font smoothing** check box.

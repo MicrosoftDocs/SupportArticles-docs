@@ -17,14 +17,11 @@ ms.technology: ShellExperience
 
 This article describes the known issues that may occur when you use Windows Desktop Search or Cortana in Windows 10.
 
+> [!NOTE]
+> Home users: This article is intended for use by support agents and IT professionals. If you're looking for more information about website error messages, please see the following Windows website: [Search for anything, anywhere](https://support.microsoft.com/help/17190)
+
 _Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3206883
-
-## Summary
-
-Home users: This article is intended for use by support agents and IT professionals. If you're looking for more information about website error messages, please see the following Windows website:
-
-[Search for anything, anywhere](https://support.microsoft.com/help/17190) 
 
 ## Known issues
 
@@ -34,7 +31,8 @@ Desktop Search or Cortana can't find shortcut files (.lnk)
 
 #### Symptoms
 
-On a computer that's running Windows 10, Desktop Search or Cortana, you cant find shortcut files (files with an LNK extension).
+On a computer that's running Windows 10, Desktop Search, or Cortana, you can't find shortcut files (files with an LNK extension).
+
 The issue occurs regardless of whether the shortcut files are in indexed locations.
 
 #### Status
@@ -55,21 +53,22 @@ This is by design. The search filters the results to eliminate noise that's caus
 
 ### Issue 3
 
-Windows Desktop Search shows no results if you have your **Internet Options**  settings configured to disable website data.
+Windows Desktop Search shows no results if you have your **Internet Options** settings configured to disable website data.
 
 #### Symptoms
 
 When you try to search from the **Start**  menu or from Cortana on a Windows 10-based computer, you receive no results. This behavior occurs if you have your **Internet Options**  settings configured to disable local caches and databases.
 
 You can disable local caches and databases by using one of the following methods:
-- Using Internet Explorer: 
- **Internet Options**  -> **General**  tab -> **Browsing History -** > **Settings -** > **Website Data Settings -** > **Caches and databases**  tab -> **Allow website caches and databases** (clearing the check box)
+
+- Using Internet Explorer:
+ **Internet Options** -> **General** tab -> **Browsing History** -> **Settings** -> **Website Data Settings** -> **Caches and databases** tab -> **Allow website caches and databases** (clearing the check box)
 - Using Registry Editor:  
-HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\BrowserStorage\AppCache] "AllowWebsiteCaches"=dword:00000000
+`HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\BrowserStorage\AppCache` "AllowWebsiteCaches"=dword:00000000
 - Using Group Policy:  
 Group Policy under either or both User and Computer configuration:
 
-Administrative Templates>Windows Components> Internet Explorer>Internet Control Panel>General Page>Browsing History>Allow websites to store application caches on client computers 
+    Administrative Templates>Windows Components> Internet Explorer>Internet Control Panel>General Page>Browsing History>Allow websites to store application caches on client computers
 
 #### Cause
 
@@ -77,16 +76,17 @@ This issue occurs when the user disables the use of caches and databases through
 
 #### Resolution
 
-To work around this problem, change the configuration of Desktop Search through Group Policy. To do this, follow these steps: 
-1. Press the Windows key + R to open the Run  box.
-2. Type gpedit.msc, and then press Enter.
+To work around this problem, change the configuration of Desktop Search through Group Policy. To do this, follow these steps:
+
+1. Press the Windows key + R to open the **Run**  box.
+2. Type *gpedit.msc*, and then press **Enter**.
 3. In the Group Policy Editor, navigate to the following location:
 
-**Computer Configuration** -> **Administrative Templates** -> **Windows Components** -> **Search**  
+    **Computer Configuration** -> **Administrative Templates** -> **Windows Components** -> **Search**  
 
-4. In the pane on the right, double-click Don't search the web or display web results in Search.
+4. In the pane on the right, double-click. Don't search the web or display web results in Search.
 5. Select Enabled.
-6. Click Apply, and then click OK. Desktop Search will now avoid using any of the Web Platform APIs to acquire content from the web. This also mitigates the impact of disabling website caching and databases. 
+6. Click **Apply**, and then click OK. Desktop Search will now avoid using any of the Web Platform APIs to acquire content from the web. This also mitigates the impact of disabling website caching and databases.
 
 #### More information
 

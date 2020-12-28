@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, luche
 ms.prod-support-area-path: Setup
 ms.technology: Deployment
 ---
@@ -23,12 +23,15 @@ _Original KB number:_ &nbsp; 2901152
 ## Symptoms
 
 Consider the following scenario:
-- You create a virtual machine that is configured to use the minimum RAM requirement (512 megabytes [MB]). 
-- You start the virtual machine from an ISO image file.
-- You try to set up Windows Server 2012 R2 on the virtual machine. In this scenario, the setup fails, and you receive the following error message:
-Windows installation encountered an unexpected error. Verify that the installation sources are accessible, and restart the installation.
 
-Error code: 0xE0000100"
+- You create a virtual machine that is configured to use the minimum RAM requirement (512 megabytes [MB]).
+- You start the virtual machine from an ISO image file.
+- You try to set up Windows Server 2012 R2 on the virtual machine.
+
+In this scenario, the setup fails, and you receive the following error message:
+> Windows installation encountered an unexpected error. Verify that the installation sources are accessible, and restart the installation.  
+>
+> Error code: 0xE0000100"
 
 ## Cause
 
@@ -37,15 +40,16 @@ This issue occurs because of insufficient memory during setup.
 ## Workaround
 
 To work around this issue, use one of the following methods:
+
 - Create a page file. To do this, follow these steps:
   1. When the virtual machine starts, press Shift + F10 to open the Command Prompt window.
-  2. Run Diskpart.exe to create and format the partition (for example, C:) on which you want to install Windows Server 2012 R2. 
+  2. Run Diskpart.exe to create and format the partition (for example, C:) on which you want to install Windows Server 2012 R2.
   3. Run the following command to create a page file that has default size of 64 MB:
 
-    ```console
-    wpeutil createpagefile /path=C:\pf.sys
-    ```
+        ```console
+        wpeutil createpagefile /path=C:\pf.sys
+        ```
 
-  4. Exit the Command Prompt window, and then continue the setup. 
+  4. Exit the Command Prompt window, and then continue the setup.
 - Increase the allocated memory of the virtual machine before setup.
-- Create and set up another virtual machine that is configured to use more memory, and then attach the virtual hard disk. 
+- Create and set up another virtual machine that is configured to use more memory, and then attach the virtual hard disk.

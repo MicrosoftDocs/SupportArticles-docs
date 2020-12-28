@@ -1,0 +1,195 @@
+---
+title: Open ADO connection and Recordset objects
+description: This article describes how to open ADO connection and Recordset objects.
+ms.date: 09/25/2020
+ms.prod-support-area-path: MDAC and ADO
+ms.prod: sql
+ms.topic: how-to
+---
+# Open ADO connection and Recordset objects
+
+This article introduces how to open ADO connection and Recordset objects.
+
+_Original product version:_ &nbsp; SQL Server  
+_Original KB number:_ &nbsp; 168336
+
+## Summary
+
+ActiveX Data Objects (ADO) offers several ways to open both the Connection and Recordset objects. This article presents sample code for several common techniques for each object.
+
+## More information
+
+There are several ways to open a Connection Object within ADO:
+
+- By Setting the `ConnectionString` property to a valid Connect string and then calling the `Open()` method. This connection string is provider-dependent.
+- By passing a valid Connect string to the first argument of the `Open()` method.
+- By passing a valid Command object into the first argument of a Recordset's Open method.
+- By passing the ODBC Data source name and optionally user-id and password to the Connection Object's `Open()` method.
+
+There are three ways to open a Recordset Object within ADO:
+
+- By opening the Recordset off the `Connection.Execute()` method.
+- By opening the Recordset off the `Command.Execute()` method.
+- By opening the Recordset object without a Connection or Command object, and passing a valid Connect string to the second argument of the `Recordset.Open()` method.
+
+This code assumes that Nwind.mdb is installed with Visual Basic, and is located in the `C:\Program Files\DevStudio\VB directory`:
+
+```vbnet
+Option Explicit
+
+Private Sub cmdOpen_Click()
+
+    Dim Conn1 As New adodb.Connection
+    Dim Cmd1 As New adodb.Command
+    Dim Errs1 As Errors
+    Dim Rs1 As New adodb.Recordset
+    
+    Dim i As Integer
+    Dim AccessConnect As String
+    
+    ' Error Handling Variables
+    Dim errLoop As Error
+    Dim strTmp As String
+    
+    AccessConnect = "Driver={Microsoft Access Driver (*.mdb)};" & _
+    "Dbq=nwind.mdb;" & _
+    "DefaultDir=C:\program files\devstudio\vb;" & _
+    "Uid=Admin;Pwd=;"
+    
+    '---------------------------
+    ' Connection Object Methods
+    '---------------------------
+    
+    On Error GoTo AdoError ' Full Error Handling which traverses
+    ' Connection object
+    
+    ' Connection Open method #1: Open via ConnectionString Property
+    Conn1.ConnectionString = AccessConnect
+    Conn1.Open
+    Conn1.Close
+    Conn1.ConnectionString = ""
+    
+    ' Connection Open method #2: Open("[ODBC Connect String]","","")
+    Conn1.Open AccessConnect
+    Conn1.Close
+    
+    ' Connection Open method #3: Open("DSN","Uid","Pwd")
+    Conn1.Open "Driver={Microsoft Access Driver (*.mdb)};" & _
+    "DBQ=nwind.mdb;" & _
+    "DefaultDir=C:\program files\devstudio\vb;" & _
+    "Uid=Admin;Pwd=;"
+    Conn1.Close
+    
+    '--------------------------
+    ' Recordset Object Methods
+    '--------------------------
+    
+    ' Don't assume that we have a connection object.
+    On Error GoTo AdoErrorLite
+    
+    ' Recordset Open Method #1: Open via Connection.Execute(...)
+    Conn1.Open AccessConnect
+    Set Rs1 = Conn1.Execute("SELECT * FROM Employees")
+    Rs1.Close
+    Conn1.Close
+    
+    ' Recordset Open Method #2: Open via Command.Execute(...)
+    Conn1.ConnectionString = AccessConnect
+    Conn1.Open
+    Cmd1.ActiveConnection = Conn1
+    Cmd1.CommandText = "SELECT * FROM Employees"
+    Set Rs1 = Cmd1.Execute
+    Rs1.Close
+    Conn1.Close
+    Conn1.ConnectionString = ""
+    
+    ' Recordset Open Method #3: Open via Command.Execute(...)
+    Conn1.ConnectionString = AccessConnect
+    Conn1.Open
+    Cmd1.ActiveConnection = Conn1
+    Cmd1.CommandText = "SELECT * FROM Employees"
+    Rs1.Open Cmd1
+    Rs1.Close
+    Conn1.Close
+    Conn1.ConnectionString = ""
+    
+    ' Recordset Open Method #4: Open w/o Connection & w/Connect String
+    Rs1.Open "SELECT * FROM Employees", AccessConnect, adOpenForwardOnly
+    Rs1.Close
+    
+    Done:
+    Set Rs1 = Nothing
+    
+    Set Cmd1 = Nothing
+    Set Conn1 = Nothing
+    
+    Exit Sub
+    
+    AdoError:
+    i = 1
+    On Error Resume Next
+    
+    ' Enumerate Errors collection and display properties of
+    ' each Error object (if Errors Collection is filled out)
+    Set Errs1 = Conn1.Errors
+    For Each errLoop In Errs1
+        With errLoop
+            strTmp = strTmp & vbCrLf & "ADO Error # " & i & ":"
+            strTmp = strTmp & vbCrLf & " ADO Error # " & .Number
+            strTmp = strTmp & vbCrLf & " Description " & .Description
+            strTmp = strTmp & vbCrLf & " Source " & .Source
+            i = i + 1
+        End With
+    Next
+    
+    AdoErrorLite:
+    ' Get VB Error Object's information
+    strTmp = strTmp & vbCrLf & "VB Error # " & Str(Err.Number)
+    strTmp = strTmp & vbCrLf & " Generated by " & Err.Source
+    strTmp = strTmp & vbCrLf & " Description " & Err.Description
+    
+    MsgBox strTmp
+    
+    ' Clean up gracefully without risking infinite loop in error handler
+    On Error GoTo 0
+    GoTo Done
+End Sub
+
+```
+
+## ERROR NOTES
+
+Only the ADO Connection object has an errors collection. The observant reader will notice that a lightweight error handler is in effect for the `RecordSet.Open` examples. In the event of an error opening a RecordSet object, ADO should return the most explicit error from the OLEDB provider. Some common errors that can be encountered with the preceding code follow.
+
+If you omit (or there is an error in) the DefaultDir parameter in the connect string, you may receive the following error:
+
+> ADO Error # -2147467259  
+Description [Microsoft][ODBC Microsoft Access 97 Driver] '(unknown)'  
+isn't a valid path. Make sure that the path name is  
+spelled correctly and that you are connected to the server  
+on which the file resides.  
+Source Microsoft OLE DB Provider for ODBC Drivers
+
+If there is an error in the Dbq parameter in the connect string, you may receive the following error:
+
+> ADO Error # -2147467259 Description [Microsoft][ODBC Microsoft Access 97 Driver] Couldn't find
+file '(unknown)'.  
+Source Microsoft OLE DB Provider for ODBC Drivers
+
+The preceding errors also populate the Connection errors collection with the following errors:
+
+> ADO Error # -2147467259  
+Description [Microsoft][ODBC Driver Manager] Driver's  
+SQLSetConnectAttr failed  
+Source Microsoft OLE DB Provider for ODBC Drivers
+
+> ADO Error # -2147467259  
+Description Login Failed  
+Source Microsoft OLE DB Provider for ODBC Drivers
+
+> [!NOTE]
+> For each error, the ADO Error number is the same, in this case translating to 0x80004005, which is the generic E_FAIL error message. The underlying Component did not have a specific error number for the condition encountered, but useful information was never-the-less raised to ADO.
+
+## References
+
+For more information, see [Microsoft ActiveX Data Objects (ADO)](/sql/ado/microsoft-activex-data-objects-ado).

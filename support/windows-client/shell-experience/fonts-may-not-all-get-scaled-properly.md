@@ -1,5 +1,5 @@
 ---
-title: Fonts may not all get scaled properly
+title: Fonts may not all get scaled properly when you change DPI setting
 description: Provides a solution to an issue that the fonts may not all get scaled properly when changing the DPI setting on Windows 7.
 ms.date: 09/23/2020
 author: Deland-Han 
@@ -13,21 +13,20 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: DPI and Display Issues
 ms.technology: ShellExperience
 ---
-# When changing the DPI setting on Windows 7, some fonts may be scaled too large or too small
+# Some fonts may be scaled too large or too small when you change the DPI setting in Windows 7
 
-This article provides a solution to an issue that the fonts may not all get scaled properly when changing the DPI setting on Windows 7.
+This article provides a solution to an issue that the fonts may not all get scaled properly when you change the DPI setting in Windows 7 Service Pack 1.
 
 _Original product version:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2556182
 
 ## Symptoms
 
-Consider the following scenario:
+Consider the following scenario on a Windows 7 Service Pack 1 machine:
 
-On a Windows 7 machine,
-Right-click on the desktop and click Personalize
-Click Display to bring up the DPI adjustment window, which is titled "Make it easier to read what's on your screen."
-Change from the current setting to a larger or smaller setting, then click "Log off now."
+- Right-click on the desktop and click **Personalize**.
+- Click **Display** to bring up the DPI adjustment window, which is titled **Make it easier to read what's on your screen**.
+- Change from the current setting to a larger or smaller setting, then click **Log off now**.
 
 When you perform these steps, sometimes the fonts may not all get scaled properly. Certain fonts in the user interface may be either too large or too small.
 
@@ -37,4 +36,7 @@ This is the result of a timing issue between the Explorer and Winlogon processes
 
 ## Resolution
 
-Change the DPI setting again to reset the font to a normal size. Note you may need to change the setting a few times.
+Change the DPI setting again to reset the font to a normal size.
+
+> [!NOTE]
+> You may need to change the setting a few times.
