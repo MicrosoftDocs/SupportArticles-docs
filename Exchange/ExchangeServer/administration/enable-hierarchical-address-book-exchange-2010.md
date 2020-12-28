@@ -261,7 +261,7 @@ To change the display order of these members, follow the steps:
 
 After you set the `msDS-HABSeniorityIndex` attribute, David Hamilton is the top of the list as the following screenshot shows, and other members are sorted by descending number of the Seniority In.
 
-:::image type="content" source="./media/enable-hierarchical-address-book-exchange-2010/how-david hamilton-shows.png" alt-text="Screenshot of how David Hamilton shows.":::
+:::image type="content" source="./media/enable-hierarchical-address-book-exchange-2010/how-david-hamilton-shows.png" alt-text="Screenshot of how David Hamilton shows.":::
 
 ## Step ten: Enable the Hierarchical Address Book feature
 
