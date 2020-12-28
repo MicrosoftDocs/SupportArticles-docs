@@ -920,6 +920,8 @@
       href: ./windows-security/parameter-is-incorrect.md
     - name: Specified Account not exist when enabling BitLocker
       href: ./windows-security/specified-account-not-exist-enable-bitlocker.md
+    - name: Suspend BitLocker protection for non-Microsoft software updates
+      href: ./windows-security/suspend-bitlocker-protection-non-microsoft-updates.md
     - name: The recovery password for BitLocker isn't available when FIPS compliant policy is set
       href: ./windows-security/bitlocker-recovery-password-not-fips-compliant.md
     - name: The requested Key ID is invalid
