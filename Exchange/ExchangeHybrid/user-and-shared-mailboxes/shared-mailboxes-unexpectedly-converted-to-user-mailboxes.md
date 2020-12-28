@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer: jhayes, benwinz
 appliesto:
 - Exchange Online
@@ -72,4 +73,4 @@ You can't use the `New-RemoteMailbox` or `Set-RemoteMailbox` cmdlet to set the `
 > [!NOTE]
 > Under most circumstances, Microsoft does not support the use of non-Exchange tools to manually change Exchange attributes. Because of the limitation in these cmdlets, this behavior is identified as an exception to this support stance.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

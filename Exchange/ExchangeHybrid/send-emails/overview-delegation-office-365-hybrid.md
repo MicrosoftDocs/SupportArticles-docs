@@ -5,8 +5,10 @@ author: lucciz
 ms.author: v-zolu
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
-ms.custom: CSSTroubleshoot
+ms.topic: troubleshooting 
+ms.custom: 
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.service: exchange-online
 localization_priority: Normal
 ms.reviewer: kellybos
@@ -51,8 +53,8 @@ This article describes the necessary configuration, administration details, and
 
 - Resource mailboxes have special capabilities and work differently in some scenarios if they're in another forest, as follows:
 
-  - Resource mailboxes cannot be added as additional mailboxes. For more information, see [Can't add a Room or Resource mailbox in an Office 365 hybrid environment](/exchange/troubleshoot/user-and-shared-mailboxs/cannot-add-room-or-resource-mailbox).
-  - Customers cannot grant permissions to a resource mailbox. For more information, see [Can't add permissions to a room mailbox in another forest in an Office 365 hybrid environment](/exchange/troubleshoot/user-and-shared-mailboxs/cannot-add-permissions-to-user-or-room-mailbox-in-another-forest).
+  - Resource mailboxes cannot be added as additional mailboxes. For more information, see [Can't add a Room or Resource mailbox in an Office 365 hybrid environment](/exchange/troubleshoot/user-and-shared-mailboxes/cannot-add-room-or-resource-mailbox).
+  - Customers cannot grant permissions to a resource mailbox. For more information, see [Can't add permissions to a room mailbox in another forest in an Office 365 hybrid environment](/exchange/troubleshoot/user-and-shared-mailboxes/cannot-add-permissions-to-user-or-room-mailbox-in-another-forest).
 
 - Newly provisioned cloud mailboxes cannot access on-premises mailboxes. For more information, see [Can't add an on-premises mailbox as an additional mailbox in Exchange Online](https://support.microsoft.com/help/4051496).
 - A new remote mailbox that's created directly in Exchange Online is not ACLable in on-premises Active Directory. For more information, see [A remote mailbox created in on-premises AD DS is not ACLable in Exchange Online](https://support.microsoft.com/help/4051497).
@@ -75,7 +77,7 @@ This article describes the necessary configuration, administration details, and
 
   - The Calendar folder works differently in Outlook than other folders do. For more information, see [Can't view cross-forest calendar data in Office 365 hybrid environment](/exchange/troubleshoot/calendars/cannot-view-cross-forest-calendar-data).
   - Private items are viewable only if the user is configured correctly as a delegate. For more information, see [Delegates are not listed correctly in Outlook after a migration to Office 365 hybrid environment](/exchange/troubleshoot/send-emails/delegates-not-listed-correctly-in-outlook-after-migration).
-  - The user cannot view the calendar of a hidden mailbox in Exchange Online. For more information, see [Can't access a hidden mailbox in Outlook after a migration to Office 365 hybrid environment](/exchange/troubleshoot/user-and-shared-mailboxs/cannot-access-hidden-mailbox-in-outlook-after-migration).
+  - The user cannot view the calendar of a hidden mailbox in Excshange Online. For more information, see [Can't access a hidden mailbox in Outlook after a migration to Office 365 hybrid environment](/exchange/troubleshoot/user-and-shared-mailboxes/cannot-access-hidden-mailbox-in-outlook-after-migration).
 
 ### Send on Behalf of
 

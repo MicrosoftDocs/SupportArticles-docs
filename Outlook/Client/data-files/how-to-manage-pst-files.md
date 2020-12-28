@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: office-perpetual-itpro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Outlook for Windows
+- CSSTroubleshoot
 ms.reviewer: aruiz
 appliesto:
 - Microsoft Outlook 2010
@@ -287,7 +288,7 @@ You can use this backup to restore your Personal Address Book to your computer o
 
 ### How to use the Personal Folder Backup utility to automate the backup of .pst files
 
-Microsoft has released a utility to automate the backup of your personal folders (.pst) file. For more information about the Personal Folder Backup utility, see [Back up Outlook data with the Microsoft Outlook Personal Folders Backup tool](https://support.microsoft.com/office/back-up-outlook-data-with-the-microsoft-outlook-personal-folders-backup-tool-7ef27bac-6088-4f03-a9f7-34165d885883).
+Microsoft has released a utility to automate the backup of your personal folders (.pst) file. For more information about the Personal Folder Backup utility, see [Back up your email](https://support.microsoft.com/office/e5845b0b-1aeb-424f-924c-aa1c33b18833).
 
 ### How to back up Outlook settings files
 

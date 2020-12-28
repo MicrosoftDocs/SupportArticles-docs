@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer: timothyh
 appliesto:
 - Exchange Online
@@ -42,9 +43,5 @@ To resolve this issue, follow these steps:
 2. Make sure that domains are added to Microsoft Exchange Online as accepted domains. For more information, see [Verify a domain at any domain name registrar](/previous-versions/azure/jj151803(v=azure.100)).
 
 3. Rerun the Hybrid Configuration wizard. When you're prompted to add your domain or domains, select the domains that you added. For more information, see step 5 of [Create a hybrid deployment with the Hybrid Configuration Wizard](/exchange/hybrid-deployment/deploy-hybrid).
-
-## More information
-
-If you experience issues with the Hybrid Configuration wizard, you can run the [Exchange Hybrid Configuration Diagnostic](https://aka.ms/hcwcheck). This diagnostic is an automated troubleshooting experience. Run it on the same server on which the Hybrid Configuration wizard failed. Doing this collects the Hybrid Configuration wizard logs and parses them for you. If you're experiencing a known issue, a message is displayed that tells you what went wrong. The message includes a link to an article that contains the solution. Currently, the diagnostic is supported only in Internet Explorer.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Q&A](/answers/products/?WT.mc_id=msdnredirect-web-msdn).

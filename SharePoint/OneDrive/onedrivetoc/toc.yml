@@ -9,6 +9,8 @@
       href: ../lists-and-libraries/cant-open-online-only-file.md
     - name: Can't open OneDrive on images using Sysprep
       href: ../lists-and-libraries/cannot-open-onedrive-on-images-using-sysprep.md
+    - name: File post-processing may take up to 24 hours
+      href: ../../SharePointOnline/lists-and-libraries/file-post-processing-takes-up-to-24-hours.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Security
     items:
     - name: Documents deleted by retention policy after workload is removed
@@ -31,6 +33,8 @@
       href: ../../SharePointOnline/sharing-and-permissions/rest-mouse-pointer-on-user-name.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Restore OneDrive Sharing settings in O365 admin center
       href: ../sharing-and-permissions/restore-onedrive-share-settings-office365.md
+    - name: '"This item might not exist" error'
+      href: ../sharing-and-permissions/this-item-might-not-exist-error.md
   - name: Sites
     items:
     - name: Top navigation bar displays either Sites or Newsfeed instead of OneDrive

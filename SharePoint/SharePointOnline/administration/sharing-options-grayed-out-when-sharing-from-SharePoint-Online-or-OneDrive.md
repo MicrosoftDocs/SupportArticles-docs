@@ -70,7 +70,7 @@ Try sharing again.
 
 Try sharing again.
 
-### Anonymous access
+### Limited-access user permission lockdown mode
 
 If the site collection feature **Limited-access user permission lockdown mode** is activated, the end user will see both **Anyone** and **People in Microsoft** grayed out.
  

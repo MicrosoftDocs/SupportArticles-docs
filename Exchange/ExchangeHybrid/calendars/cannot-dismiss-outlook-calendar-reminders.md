@@ -4,9 +4,11 @@ description: Describes an issue that prevents you from dismissing calendar remin
 author: simonxjx
 audience: ITPro
 ms.prod: exchange-server-it-pro
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Exchange Hybrid
+- CSSTroubleshoot
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

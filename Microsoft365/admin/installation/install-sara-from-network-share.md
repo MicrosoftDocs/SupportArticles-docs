@@ -32,12 +32,13 @@ If you want to install and start Microsoft Support and Recovery Assistant (SaRA)
 
 2. In the downloaded file, extract the files from the **ClickOnce** folder to a shared network folder.
 3. Install the SaRA tool. You can install it either at a command prompt or manually.
-   
+
 ### By command
-      
+
 1. Select **Start**, type **cmd**, and then press Enter to open a Command Prompt window.
 2. Type the path to SaraSetup.exe, and then press **Enter**.
     > [!NOTE]
+    >
     > - You can use the quiet switch (**/q** or **/quiet**) to run Setup without any user interaction or user interface. For example, see the following screenshot.<br />
     > ![SaRA cmd line setup.](media/install-sara-from-network-share/120760-1.png)<br />
     > If the **/q** (or **/quiet**) switch is used, SaraSetup.exe runs in the background.
@@ -78,7 +79,6 @@ Any computer that has SaRA already installed can now be updated by using the fol
 
    ![Installation progress bar](./media/install-sara-from-network-share/5.png)
 
-
 SaRA is now installed and ready to run troubleshooting scenarios.
 ![The Support and Recovery screen.](media/install-sara-from-network-share/120760-7.png)
 
@@ -90,6 +90,7 @@ The following table provides the versions of SaRA that were made available on th
 
 |Release date|SaRA version|
 |--------|--------|
+|November 11, 2020|17.00.5665.007|
 |October 20, 2020|17.00.5555.000|
 |September 24, 2020|17.00.5390.006|
 |September 15, 2020|17.00.5275.009|

@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer: jmartin, rayfong, austinmc, wduff, jhayes, timothyh
 appliesto:
 - Exchange Online
@@ -111,6 +112,6 @@ To help identify the issue in Microsoft 365, follow these steps:
     Get-AcceptedDomain | ForEach-Object { if ( (Get-OrganizationRelationship).DomainNames -contains $_.DomainName) { write-host $_.DomainName "was found" -ForegroundColor Green } else { write-host $_.DomainName "was not found" -ForegroundColor Yellow} }
     ```
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).
 
 [Start the guide to troubleshoot this issue](https://support.microsoft.com/help/10092).

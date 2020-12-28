@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: office 365
 localization_priority: Normal
 ms.custom: 
+- Exchange Online
 - CI 119824
 - CSSTroubleshoot
 ms.reviewer: danba
@@ -17,7 +18,6 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-
 # EWS isn't supported when accessing Teams data
 
 ## Summary
@@ -28,4 +28,4 @@ Access to Teams data is only supported by Microsoft Graph API (preview). Teams G
 
 ## More information
 
-To access Teams messages, subscribe to changes for messaging. You can subscribe a listener application to receive notifications for certain types of changes in Microsoft Graph's specified resource. This API is currently in the Beta testing phase. For more information, see [Create subscription](https://docs.microsoft.com/graph/api/subscription-post-subscriptions?view=graph-rest-beta&tabs=http&preserve-view=true).
+To access Teams messages, subscribe to changes for messaging. You can subscribe a listener application to receive notifications for certain types of changes in Microsoft Graph's specified resource. This API is currently in the Beta testing phase. For more information, see [Create subscription](/graph/api/subscription-post-subscriptions).

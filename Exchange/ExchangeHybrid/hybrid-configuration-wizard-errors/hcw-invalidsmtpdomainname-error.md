@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer: jeknight
 appliesto:
 - Exchange Online
@@ -21,7 +22,7 @@ _Original KB number:_ &nbsp; 3132123
 
 ## Problem
 
-When you run the [Office 365 Hybrid Configuration wizard](https://aka.ms/taphcw), you receive the following error message when the wizard tries to connect to your on-premises Exchange environment:
+When you run the [Office 365 Hybrid Configuration wizard](https://aka.ms/HybridWizard), you receive the following error message when the wizard tries to connect to your on-premises Exchange environment:
 
 > DataStrings.InvalidSmtpDomainName(domain)
 
@@ -68,4 +69,4 @@ Use ADSI Edit to remove the Exchange server from the domain configuration:
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

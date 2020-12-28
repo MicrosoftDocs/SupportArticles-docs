@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer: scotro
 appliesto:
 - Exchange Online
@@ -68,4 +69,4 @@ This is a known issue. We're working to address this issue and will post more in
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

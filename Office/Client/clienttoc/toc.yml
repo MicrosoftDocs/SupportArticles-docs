@@ -501,6 +501,8 @@
           href: ../excel/link-visio-drawing-to-a-specific-region.md
         - name: LOGEST statistical functions
           href: ../excel/statistical-functions-logest.md
+        - name: Long numbers are displayed incorrectly
+          href: ../excel/long-numbers-incorrectly-in-excel.md
         - name: Loop through a list of data by using macros
           href: ../excel/loop-through-data-using-macro.md
         - name: Macro to extract data from a chart
@@ -705,7 +707,7 @@
           href: ../office-suite-issues/cannot-guarantee-complete-repair-corrupted-files.md
         - name: Connection to a network document is lost
           href: ../office-suite-issues/connect-to-network-document-lost.md
-        - name: Do you want to download the converter
+        - name: '"Do you want to download the converter?" error message'
           href: ../office-suite-issues/error-do-you-want-download-converter.md
         - name: Document files in Office Document Cache not deleted
           href: ../office-suite-issues/office-temporary-files-not-delete.md
@@ -839,6 +841,10 @@
           href: ../performance/office-applications-not-responding.md
         - name: Open network file slow or stop responding
           href: ../performance/office-slow-or-stop-responding.md
+    - name: Planner
+      items:
+        - name: Guest users have no access to assigned tasks
+          href: ../planner/guests-cannot-comment-assigned-tasks.md
     - name: PowerPoint
       items:
         - name: Can't edit video or audio in a presentation
@@ -945,6 +951,8 @@
           href: ../settings/office-display-issues.md
         - name: Error in Office when file is blocked
           href: ../settings/file-blocked-in-office.md
+        - name: How to use Problem Steps Recorder
+          href: ../settings/how-to-use-problem-steps-recorder.md
         - name: Task panes in Office
           href: ../settings/office-program-task-panes.md
         - name: Use registry to clear the most recently used files list
@@ -1013,6 +1021,8 @@
           href: ../word/end-tag-error-when-open-docx.md
         - name: Headers and footers remain after removing sensitivity label
           href: ../word/headers-footers-remain-after-remove-sensitivity-label.md
+        - name: How to merge multiple documents
+          href: ../word/merge-word-documents.md
         - name: Image DPI is changed after you print to PDF
           href: ../word/image-dpi-change-after-print-to-pdf.md
         - name: In-place edit of an embedded Word document with ActiveX control causes flickering

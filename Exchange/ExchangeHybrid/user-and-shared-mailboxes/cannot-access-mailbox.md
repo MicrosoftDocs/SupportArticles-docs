@@ -4,9 +4,11 @@ description: Describes an issue in which users in an Exchange hybrid deployment 
 author: simonxjx
 audience: ITPro
 ms.prod: exchange-server-it-pro
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Exchange Hybrid
+- CSSTroubleshoot
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -119,4 +121,4 @@ New-Remotemailbox sharedmailbox@contoso.com -Remoteroutingaddress sharedmailbox@
 
 For more information about remote shared mailboxes, see [Cmdlets to create or modify a remote shared mailbox in an on-premises Exchange environment](https://support.microsoft.com/help/4133605/).  
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

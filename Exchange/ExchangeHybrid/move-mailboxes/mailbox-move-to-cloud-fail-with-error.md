@@ -4,10 +4,12 @@ description: Describes an error message that you receive when you move mailboxes
 author: simonxjx
 audience: ITPro
 ms.prod: office 365
-ms.topic: article
+ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- Exchange Hybrid
+- CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
 - MET150
@@ -63,4 +65,4 @@ For more information about this issue, visit the following Office 365 Community 
 
 For more information about flood mitigation in the Forefront TMG, see [Overview of flood mitigation](/previous-versions/tn-archive/cc995196(v=technet.10)).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

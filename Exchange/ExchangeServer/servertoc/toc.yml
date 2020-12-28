@@ -153,6 +153,8 @@
       href: ../administration/exchange-transaction-logs-grow-rapidly.md
     - name: Extend AD schema to use Hierarchical Address Book
       href: ../administration/extend-ad-schema-to-use-hab.md
+    - name: Fail to add mailbox database copy
+      href: ../administration/add-database-copy-seeding-operation-failed.md
     - name: Fail to change the ownership of a distribution group
       href: ../administration/cannot-change-distribution-group-ownership.md
     - name: Fail to configure Out of Office messages in OWA
@@ -217,6 +219,8 @@
       href: ../administration/new-mailboxsearch-creates-folder-hierarchy.md
     - name: No active public folder mailboxes were found error
       href: ../administration/no-active-public-folder-mailboxes-were-found-error.md
+    - name: No result using a number to search for an Excel attachment
+      href: ../administration/no-result-use-number-to-search-excel-attachment.md
     - name: On-premises EAC link goes to product comparison
       href: ../administration/o365-link-eac-redirect-product-comparison.md
     - name: Options in Resource Scheduling not available
@@ -285,16 +289,20 @@
       href: ../client-connectivity/activesync-clients-not-connect-sync-delay.md
     - name: Attendees get a meeting update without changes
       href: ../client-connectivity/attendees-meeting-update-without-changes.md
-    - name: Cannot access archive mailboxes with Full Access permission
+    - name: Can't access archive mailbox in Outlook
+      href: ../client-connectivity/cannot-access-archive-mailbox-in-outlook.md
+    - name: Can't access archive mailboxes with Full Access permission
       href: ../client-connectivity/cannot-access-archive-mailbox-with-full-access.md
-    - name: Cannot connect to POP3 or IMAP4
-      href: ../client-connectivity/cannot-connect-to-pop3-or-imap4.md
     - name: Can't access calendar in OWA
       href: ../client-connectivity/cannot-access-calendar-outlook-web-app.md
     - name: Can't access shared mailboxes via POP/IMAP
       href: ../client-connectivity/accessing-shared-mailboxes-fails.md
+    - name: Can't connect to POP3 or IMAP4
+      href: ../client-connectivity/cannot-connect-to-pop3-or-imap4.md
     - name: Can't create appointment or all day event
       href: ../client-connectivity/cannot-create-appointment.md
+    - name: Can't open documents on a network file share
+      href: /exchange/troubleshoot/outlook-on-the-web-issues/cannot-open-documents-on-network-file-share?context=/exchange/troubleshoot/context/server-context
     - name: Can't open OWA, ECP, or EMS after a self-signed certificate is removed
       href: ../client-connectivity/owa-ecp-ems-cannot-connect-after-self-signed-certificate-removed.md
     - name: Can't search people in OWA
@@ -406,7 +414,7 @@
   - name: Distribution Lists
     items:
     - name: Get-DistributionGroupMember not return all members
-      href: ../distribution-list/get-distributiongroupmember-not-return-memebers.md
+      href: ../distribution-list/get-distributiongroupmember-not-return-members.md
   - name: Mailflow
     items:
     - name: 451 4.4.0 DNS query failed
@@ -435,6 +443,8 @@
       href: ../mailflow/edge-transport-servers-reject-messages.md
     - name: Email body part is shown incorrectly as an attachment
       href: ../mailflow/message-body-shown-as-attachment.md
+    - name: Emails are stuck in queues
+      href: ../mailflow/email-stuck-queues.md
     - name: Emails aren't delivered to all recipients
       href: ../mailflow/emails-not-delivered-dynamic-distribution-group.md
     - name: Emails sent to Exchange Online appear external
@@ -459,14 +469,14 @@
       href: ../mailflow/outbound-email-messages-are-not-sent.md
     - name: The front-end Microsoft Exchange Transport service stops and doesn't start
       href: ../mailflow/front-end-microsoft-exchange-transport-service-stops.md
+    - name: TLS negotiation failed with error NoCredentials error
+      href: ../mailflow/tls-negotiation-failed-with-error-nocredentials-error.md
     - name: Use nslookup to get MX records for SMTP domain
       href: ../mailflow/get-internet-mx-record-smtp-domain-with-nslookup.md
   - name: Migration
     items:
     - name: Can't move a mailbox to a database
       href: ../migration/error-move-mailbox-to-database-exchange-2010.md
-    - name: Can't move mailboxes to Exchange Online
-      href: ../migration/user-is-already-being-moved-error.md
     - name: Can't move mailboxes due to Exchange Online limits
       href: ../migration/save-changes-made-item-store-migrate-mailbox.md
     - name: Can't replicate public folder
@@ -497,6 +507,8 @@
       href: ../public-folders/disable-conflict-message.md
     - name: No active public folder mailboxes were found
       href: ../public-folders/migrationbatch-fails-no-public-folder-mailboxes.md
+    - name: Public folder meetings cannot be modified in OWA
+      href: /exchange/troubleshoot/calendars/public-folder-meetings-not-modified-in-owa?context=/exchange/troubleshoot/context/server-context
     - name: Public folder migration stops at 95%
       href: ../public-folders/public-folder-migration-fails.md
     - name: Troubleshoot public folder replication issues

@@ -1,6 +1,6 @@
 ---
 title: Can't mount databases that are larger than 1024 GB
-description: Fixes an issue that prevents you from remounting a large dismounted database (>1 TB) in Exchange Server 2019, Exchange Server 2013 Standard Edition, and Exchange Server 2016 Standard Edition. This issue concerns the default database size limit.
+description: Fixes an issue that prevents you from remounting a large dismounted database (>1 TB) in Exchange Server 2019 Standard Edition, Exchange Server 2016 Standard Edition and Exchange Server 2013 Standard Edition. This issue concerns the default database size limit.
 author: AmandaAZ
 ms.author: v-weizhu
 manager: dcscontentpm
@@ -8,24 +8,25 @@ audience: ITPro
 ms.topic: troubleshooting 
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.custom:
+ms.custom: 
+- Exchange Server
 - CI 119623
 - CSSTroubleshoot
 ms.reviewer: dpaul, honche, jarrettr, genli, christys
 search.appverid: 
 - MET150
 appliesto:
-- Exchange Server 2019
+- Exchange Server 2019 Standard Edition
 - Exchange Server 2013 Standard Edition
 - Exchange Server 2016 Standard Edition 
 ---
-# Exchange Server 2013 and 2016 Standard Edition can't mount databases that are larger than 1024 GB
+# Exchange Server 2013, 2016 and 2019 Standard Edition can't mount databases that are larger than 1024 GB
 
 _Original KB number:_ &nbsp; 3059008
 
 ## Summary
 
-This issue occurs because the default database size limit for Microsoft Exchange Server 2019, Exchange Server 2013 Standard Edition, and Exchange Server 2016 Standard Edition is 1,024 gigabytes (GB). There is no default database size limit for the Enterprise Edition. The Exchange store checks database size limits periodically and dismounts a database when the size limit is reached. Therefore, this issue may occur after the database is automatically dismounted.
+This issue occurs because the default database size limit for Microsoft Exchange Server 2019 Standard Edition, Exchange Server 2016 Standard Edition and Exchange Server 2013 Standard Edition is 1,024 gigabytes (GB). There is no default database size limit for the Enterprise Edition. The Exchange store checks database size limits periodically and dismounts a database when the size limit is reached. Therefore, this issue may occur after the database is automatically dismounted.
 
 Additionally, when you perform a failover of the database, the failover fails.
 

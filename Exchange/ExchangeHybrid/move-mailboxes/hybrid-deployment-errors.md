@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.custom: 
-  - CSSTroubleshoot
+- Exchange Hybrid
+- CSSTroubleshoot
 ms.reviewer: timothyh
 appliesto:
 - Exchange Online
@@ -84,4 +85,4 @@ To resolve this issue, run the `ServiceModelReg.exe -r` command to reinstall the
 
 When you experience this issue, you may notice that other connections to the Client Access Server (CAS), such as the connection for configuring user profiles through the Autodiscover service, aren't affected. This is because this operation doesn't use the svc endpoint. Any connection that uses the svc endpoint won't work. Other endpoints probably will not be affected.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).
