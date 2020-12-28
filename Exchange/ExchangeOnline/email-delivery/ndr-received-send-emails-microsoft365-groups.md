@@ -21,7 +21,7 @@ search.appverid:
 
 # NDR (AggregateGroupMailbox full) received when sending emails to Microsoft 365 Groups
 
-The aggregate group mailbox has a retention policy associated. The policy purges all emails from the mailbox periodically. However, a heavy mail flow to a Microsoft 365 group may fill up the mailbox before the policy takes effect and purge the content.  
+The aggregate group mailbox has a retention policy associated. The policy purges all email messages from the mailbox periodically. However, a heavy mail flow to a Microsoft 365 group may fill up the mailbox before the policy takes effect and purge the content.  
 
 ## Status
 
@@ -29,7 +29,7 @@ The non-delivery report (NDR) doesn't affect the actual email delivery to Micros
 
 ## Workaround
 
-Create an Exchange transport rule to delete the emails sent to the aggregate group mailbox from Exchange Online by using PowerShell cmdlets.  
+Create an Exchange transport rule to delete the email messages sent to the aggregate group mailbox from Exchange Online by using PowerShell cmdlets.  
 
 For example:
 
@@ -38,7 +38,7 @@ New-TransportRule -SentTo @("AggregateGroupMailbox@contoso.onmicrosoft.com") -De
 ```
 
 - The `AggregateGroupMailbox@contoso.onmicrosoft.com` represents the SMTP address of aggregate group mailbox stated in the NDR.  
-- This transport rule doesn't affect email delivery to Microsoft 365 Groups.
+- This transport rule deletes email messages before they arrive at the aggregate group mailbox. It doesn't affect email delivery to Microsoft 365 Groups.
 
 ## More information
 
