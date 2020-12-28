@@ -23,7 +23,7 @@ search.appverid:
 
 ## Symptoms
 
-When you send email messages to a Microsoft 365 group, you may receive the following non-delivery report (NDR):
+When you send an email message to a Microsoft 365 group, you may receive a non-delivery report (NDR) that resembles the following:
 
 > Delivery has failed to these recipients or groups:
 >
