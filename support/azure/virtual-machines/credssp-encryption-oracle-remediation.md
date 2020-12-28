@@ -83,7 +83,7 @@ To resolve the issue, install CredSSP updates for both client and server so that
     ![The image  about CMD section in SAC](./media/credssp-encryption-oracle-remediation/4341456_en_1.png)  
 
 7. To start a PowerShell instance, type `PowerShell`.
-8. In the PowerShell instance, [run the Serial console script](#azure-serial-console-scripts)based on the VM operating system. This script performs the following steps:
+8. In the PowerShell instance, [run the Serial console script](#azure-serial-console-scripts) based on the VM operating system. This script performs the following steps:
 
    - Create a folder in which to save the download file.
    - Download the update.
