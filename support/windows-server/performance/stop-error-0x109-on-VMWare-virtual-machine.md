@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 2902739
 ## Symptoms
 
 On a Windows Server Virtual Machine that is running VMware ESXi 5.0.x, you receive a "CRITICAL_STRUCTURE_CORRUPTION" Stop error code that begins as follows:
->Bugcheck code 00000109  
+>`Bugcheck` code 00000109  
 Arguments a3a01f58 \`92797517 b3b72bde \`e4f976b6 00000000 \`c0000103 00000000` 00000007
 
 ## Cause
@@ -52,13 +52,13 @@ To work around this issue, manually create a CPUID mask for the affected virtual
 
 ## More information
 
-0: kd>. bugcheck
+0: kd>. `bugcheck`
 
-Bugcheck code 00000109
+`Bugcheck` code 00000109
 
-Arguments a3a01f58`92797517 b3b72bde`e4f976b6 00000000`c0000103 00000000`00000007
+Arguments a3a01f58\`92797517 b3b72bde\`e4f976b6 00000000\`c0000103 00000000\`00000007
 
-0: kd> !sysinfo machineid
+0: kd> `!sysinfo machineid`
 
 Machine ID Information [From Smbios 2.4, DMIVersion 0, Size=10150]
 
