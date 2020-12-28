@@ -35,7 +35,7 @@ To verify that an existing Azure AD Connect server has a version compatibility i
 
 1. Get the version of the applications from the **Programs** item in Control Panel.
 
-    :::image type="content" source="./media/old-information-on-premises-aad-connect server/4053463_en_1.png" alt-text="Screenshot of Programs window.":::
+    :::image type="content" source="./media/old-information-on-premises-aad-connect-server/4053463_en_1.png" alt-text="Screenshot of Programs window.":::
 
 2. Compare the version information against the following compatibility table:
 
