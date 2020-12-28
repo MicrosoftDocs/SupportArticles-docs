@@ -7,18 +7,14 @@ ms.reviewer: heikom
 ---
 # Optimizing performance with automatic proxy-configuration scripts (PAC)
 
-## Summary
-
 This topic explains how to optimize the performance of an automatic proxy-configuration script (PAC file, also known as Wpad.dat). This document focuses on how to resolve issues with the intranet servers directly and external internal traffic through a proxy-server.
-
-## More information
 
 For more information about the functions that are used to evaluate an address (URL or hostname), see: [Use proxy autoconfiguration (.pac) files with IEAK 11](https://docs.microsoft.com/internet-explorer/ie11-ieak/proxy-auto-config-examples).
 
 > [!NOTE]
 > The `isInNet()`, `isResolvable()`, and `dnsResolve()` functions send queries to the DNS-subsystem. Therefore, you should avoid, or, at least, minimize the use of these functions.
 
-### Query for NetBIOS names
+## Query for NetBIOS names
 
 NetBIOS names (server names that contain no period) are used in the intranet only and are not routed through the proxy:
 
@@ -27,7 +23,7 @@ if (isPlainHostName(host))
     return "DIRECT";
 ```
 
-### Query for internal DNS suffixes
+## Query for internal DNS suffixes
 
 Internally used DNS zones are typically routed directly. The easiest way to determine such hosts is by using the `dnsDomainis` function:
 
@@ -43,7 +39,7 @@ if (shExpMatch(host, "*.dns.company.com"))
     return "DIRECT";
 ```
 
-### Query for IP ranges
+## Query for IP ranges
 
 If the IP address of the host belongs to the local intranet, regardless of the web server name, it should bypass the proxy in order to navigate directly.
 
@@ -84,7 +80,7 @@ if (shExpMatch(hostIP, "95.53.*"))
     return "DIRECT";
 ```
 
-### JavaScript is case-sensitive
+## JavaScript is case-sensitive
 
 The proxy script uses the JavaScript language. JavaScript is case-sensitive. Therefore, an `if` clause that is uppercase will never become true, while other parameters use lowercase. Internet Explorer itself converts the variables `host` and `url` into lowercase before the `FindProxyForURL` function is called.
 
@@ -96,7 +92,7 @@ Therefore, the parameters that are checked within the PAC file should be convert
 host = host.toLowerCase();
 ```
 
-### Using IPv6
+## Using IPv6
 
 If you want to use and handle IPv6 addresses, Internet Explorer supports them because Internet Explorer is included in every currently supported Windows version (and in WinHTTP since Windows Vista). However, in this case, you have to use "Ex" functions (such as `isInNetEx()`), as mentioned in the following article:
 
@@ -104,7 +100,7 @@ If you want to use and handle IPv6 addresses, Internet Explorer supports them be
 
 For an example of `myIpAddressEx` implementation, see ["myIpAddress" function returns incorrect result in Internet Explorer 9](https://support.microsoft.com/help/2839111).
 
-### Testing a PAC file
+## Testing a PAC file
 
 If the script contains any syntax error (for example, a missing ")" character in an `if` statement), the script is not run. To minimize errors, consider using a script editor that runs syntax checking. By using Visual Studio, you can rename the extension of the PAC file to ".js" during editing, but rename it back to ".pac" before uploading it to the webserver.
 
@@ -114,7 +110,7 @@ If the script contains any syntax error (for example, a missing ")" character in
 > - [Windows 10 does not read a PAC file referenced by a file protocol](/troubleshoot/browsers/cannot-read-pac-file)
 > - [Debugging Proxy Configuration Scripts in the new Edge](https://textslashplain.com/2020/03/25/debugging-proxy-configuration-scripts-in-the-new-edge/)
 
-### Testing with Autoprox.exe
+## Testing with Autoprox.exe
 
 Sometimes, you have to test the PAC file even if you have no access to the website. To do this, you can use the [Autoprox.exe command line tool](https://ieee.azurewebsites.net/pierrelc/autoprox.exe).
 
@@ -152,7 +148,7 @@ Calling InternetInitializeAutoProxyDll with c:\temp\sample.pac
 PROXY myproxy:80;
 ```
 
-### Error handling in Autoprox.exe
+## Error handling in Autoprox.exe
 
 If the PAC file contains syntax errors, you receive the following message:
 

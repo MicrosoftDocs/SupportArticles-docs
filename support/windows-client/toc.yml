@@ -874,13 +874,13 @@
     items:
     - name: Hyper-V can't start VM after upgrade
       href: ./virtualization/hyper-v-not-start-vm-after-upgrade.md
-- name: Windows 7 EoS FAQ
+- name: Windows 7 End of Support (EoS) FAQ
   items:
   - name: Windows 7 EoS FAQ
     href: ./windows-7-eos-faq/windows-7-end-support-faq.md
   - name: Windows 7 end of support
     href: ./windows-7-eos-faq/windows-7-end-support-faq-general.md
-  - name: Windows 7 ESU
+  - name: Windows 7 Extended Security Updates (ESU)
     href: ./windows-7-eos-faq/windows-7-extended-security-updates-faq.md
   - name: Windows 7 ESU offers for E5 customers
     href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.md
@@ -901,29 +901,31 @@
     - name: TPM is in reduced functionality mode
       href: ./windows-security/trusted-platform-module-reduced-functionality-mode.md
     - name: BitLocker could not be enabled
-      href: ./deployment/bitlocker-not-enabled-usb-drive-not-found.md
+      href: ./windows-security/bitlocker-not-enabled-usb-drive-not-found.md
     - name: Can't retrieve BitLocker Recovery key
-      href: ./deployment/cant-retrieve-bitlocker-recovery-key.md
+      href: ./windows-security/cant-retrieve-bitlocker-recovery-key.md
     - name: Disk partition requirement for using Windows RE tools on a UEFI-based computer
-      href: ./deployment/disk-partition-requirement-use-windows-re-tool.md
+      href: ./windows-security/disk-partition-requirement-use-windows-re-tool.md
     - name: Error after you enter BitLocker PIN at startup
-      href: ./deployment/bitlocker-too-many-pin-entry-attempts.md
+      href: ./windows-security/bitlocker-too-many-pin-entry-attempts.md
     - name: Error when BIOS is in legacy mode with TPM 2.0
-      href: ./deployment/tpm-is-ready-for-use-with-reduced-functionality.md
+      href: ./windows-security/tpm-is-ready-for-use-with-reduced-functionality.md
     - name: Event ID 15 when a computer resumes from sleep
-      href: ./deployment/event-id-15-computer-resume-from-sleep.md
+      href: ./windows-security/event-id-15-computer-resume-from-sleep.md
     - name: How to enable BitLocker device encryption
-      href: ./deployment/enable-bitlocker-device-encryption-local-hard-disk.md
+      href: ./windows-security/enable-bitlocker-device-encryption-local-hard-disk.md
     - name: MBAM client fails with error 0x8004100E
-      href: ./deployment/mbam-client-fails-event-id-4-0x8004100e.md
+      href: ./windows-security/mbam-client-fails-event-id-4-0x8004100e.md
     - name: Parameter is incorrect when you enable  BitLocker
-      href: ./deployment/parameter-is-incorrect.md
+      href: ./windows-security/parameter-is-incorrect.md
     - name: Specified Account not exist when enabling BitLocker
-      href: ./deployment/specified-account-not-exist-enable-bitlocker.md
+      href: ./windows-security/specified-account-not-exist-enable-bitlocker.md
+    - name: Suspend BitLocker protection for non-Microsoft software updates
+      href: ./windows-security/suspend-bitlocker-protection-non-microsoft-updates.md
     - name: The recovery password for BitLocker isn't available when FIPS compliant policy is set
-      href: ./deployment/bitlocker-recovery-password-not-fips-compliant.md
+      href: ./windows-security/bitlocker-recovery-password-not-fips-compliant.md
     - name: The requested Key ID is invalid
-      href: ./deployment/requested-key-id-is-invalid.md
+      href: ./windows-security/requested-key-id-is-invalid.md
   - name: Kerberos authentication
     items:
     - name: '"Not enough storage is available to complete this operation" error'

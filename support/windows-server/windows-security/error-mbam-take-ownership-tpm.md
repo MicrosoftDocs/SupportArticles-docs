@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: manojse, yitzhaks, avicar, kaushika
 ms.prod-support-area-path: Bitlocker
-ms.technology: Deployment
+ms.technology: WindowsSecurity
 ---
 # MBAM fails to take ownership of TPM
 
@@ -134,8 +134,8 @@ WScript.Quit 0
 
 ## More information
 
-[Understand the TPM Endorsement Key](https://technet.microsoft.com/library/cc770443.aspx) 
+[Understand the TPM Endorsement Key](https://technet.microsoft.com/library/cc770443.aspx)
 
-[BitLocker Sample Deployment Script](https://gallery.technet.microsoft.com/scriptcenter/780d167f-2d57-4eb7-bd18-84c5293d93e3/) 
+[BitLocker Sample Deployment Script](https://gallery.technet.microsoft.com/scriptcenter/780d167f-2d57-4eb7-bd18-84c5293d93e3/)
 
 [TPM Error Codes](https://msdn.microsoft.com/library/dd542648%28vs.85%29.aspx)
