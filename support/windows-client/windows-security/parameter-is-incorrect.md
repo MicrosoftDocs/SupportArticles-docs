@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, joscon, manojse
 ms.prod-support-area-path: Bitlocker
-ms.technology: Deployment
+ms.technology: WindowsSecurity
 ---
 # Parameter is incorrect error message when you try to enable  BitLocker if you don't have a separate active partition in Windows Server 2008 Core and Windows 2008 R2 Core Edition
 
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2019926
 
 When you try to enable BitLocker drive encryption on the operating system drive (typically drive C) by using the `manage-bde.exe -on` command, you may receive the following error message:
 
-> ERROR: An error occurred <code 0x80070057>  
+> ERROR: An error occurred \<code 0x80070057\>  
 The parameter is incorrect
 
 ## Cause
