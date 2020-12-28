@@ -26,7 +26,7 @@ You can't copy and paste files between a system that is running [Virtual Machine
 
 ## Cause
 
-Enhanced Session Mode enables the transfer of files to and from virtual machines through the Clipboard copy-and-paste operations. However, if the **Do not allow drive redirection policy** option is enabled, copying and pasting files through the Clipboard is disabled.
+Enhanced Session Mode enables the transfer of files to and from virtual machines through the Clipboard copy-and-paste operations. However, copying and pasting files through the Clipboard is disabled if the **Do not allow drive redirection policy** option is enabled.
 
 ## Resolution
 
