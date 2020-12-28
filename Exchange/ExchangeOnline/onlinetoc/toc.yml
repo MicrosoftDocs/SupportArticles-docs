@@ -69,6 +69,8 @@
       href: ../email-delivery/invalid-message-ndr.md
     - name: 554 5.2.2 mailbox full NDR
       href: ../email-delivery/cannot-send-mail-mepf.md
+    - name: AggregateGroupMailbox full NDR
+      href: ../email-delivery/ndr-received-send-emails-microsoft365-groups.md
     - name: Automatically forward email in transport rule
       href: ../email-delivery/autoforward-mail-exclusions-not-honored-transport-rule.md
     - name: Configure Proofpoint Email Protection with Exchange Online 
