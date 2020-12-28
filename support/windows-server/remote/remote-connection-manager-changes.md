@@ -15,7 +15,7 @@ ms.technology: RDS
 ---
 # Changes to Remote Connection Manager in Windows Server 2016
 
-This article describes Remote Connection Manager (RCM) and the changes to RCM in Microsoft Windows Server 2016.
+This article describes Remote Connection Manager (RCM) and the changes to RCM in Microsoft Windows Server 2016.
 
 _Original product version:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 3200967
@@ -29,9 +29,9 @@ Starting in Windows Server 2016, RCM no longer queries the users object in AD DS
 Additionally, consider the following scenario:
 
 - You install Windows Server 2016 with the Remote Desktop Session Host role.
-- You configure a local user account to start an application during logon by using the Local Users and Groups tool in Computer Management.
+- You configure a local user account to start an application during logon by using the Local Users and Groups tool in Computer Management.
 
-In this scenario, you expect the user to be presented with the application in the Remote Desktop Session only. However, by default in Remote Desktop Session Host (RDSH) in Windows Server, a full Remote Desktop Session is presented, and the application setup process in the profile doesn't start.
+In this scenario, you expect the user to be presented with the application in the Remote Desktop Session only. However, by default in Remote Desktop Session Host (RDSH) in Windows Server, a full Remote Desktop Session is presented, and the application setup process in the profile doesn't start.
 
 To revert to the earlier (pre-Windows Server 2016) behavior, here's what to do:
 
@@ -42,7 +42,7 @@ If the server has the RD Session Host Role installed, apply the following regist
 - Type: Reg_DWORD
 - Value: 1 (Decimal)
 
-Then, restart the Remote Desktop Service. If the server doesn't have the Remote Desktop Service role installed, you must set up an additional registry key:  
+Then, restart the Remote Desktop Service. If the server doesn't have the Remote Desktop Service role installed, you must set up an additional registry key:  
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server`
 
 ## More information
@@ -63,7 +63,7 @@ The attributes that you can set in the Active Directory Users and Computers MMC 
 
 - Profile Path
 - Home Folder
-- Deny Logon to the RDSH server  
+- Deny Logon to the RDSH server  
 
 ## Enable RCM in Windows Server
 
@@ -87,7 +87,7 @@ Use either of the following registry values to enable the behavior of RCM in Win
   - Value: 1 (Decimal)
 
 > [!NOTE]
-> The default value for \<Winstation Name> is **RDP-tcp**. However, this value can be renamed.
+> The default value for \<Winstation Name> is **RDP-tcp**. However, this value can be renamed.
 
 ## RCM behavior in Windows Server
 

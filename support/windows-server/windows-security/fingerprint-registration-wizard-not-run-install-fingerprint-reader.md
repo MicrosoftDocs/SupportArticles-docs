@@ -1,5 +1,5 @@
 ---
-title: The Fingerprint Registration Wizard doesn't run after you install the Fingerprint Reader and the DigitalPersona Password Manager software and then restart the computer
+title: Fingerprint Registration Wizard doesn't run
 description: Describes an issue in which the Fingerprint Registration Wizard doesn't run after you install the Microsoft Fingerprint Reader and the Microsoft DigitalPersona Password Manager software and then restart the computer.
 ms.date: 09/21/2020
 author: Deland-Han
@@ -13,11 +13,11 @@ ms.reviewer: v-jomcc, kaushika
 ms.prod-support-area-path: Kerberos authentication
 ms.technology: WindowsSecurity
 ---
-# The Fingerprint Registration Wizard doesn't run after you install the Fingerprint Reader and the DigitalPersona Password Manager software and then restart the computer
+# Fingerprint Registration Wizard doesn't run after you install Fingerprint Reader and DigitalPersona Password Manager software and restart the computer
 
-This article describes an issue in which the Fingerprint Registration Wizard doesn't run after you install the Microsoft Fingerprint Reader and the Microsoft DigitalPersona Password Manager software and then restart the computer.
+This article provides a solution to an issue in which the Fingerprint Registration Wizard doesn't run after you install the Microsoft Fingerprint Reader and the Microsoft DigitalPersona Password Manager software and then restart the computer.
 
-_Original product version:_ &nbsp;  Windows Server 2012 R2  
+_Original product version:_ &nbsp;  Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 909129
 
 ## Symptoms
@@ -33,7 +33,7 @@ To resolve this issue, use one of the following methods.
 The first time that you log on to Windows after you install the Fingerprint Reader, the **Fingerprint Registration Wizard** is displayed so that you can start registering fingerprints. If the **Fingerprint Registration Wizard** doesn't run, verify the following things:
 
 - Look for DPAgnt.exe on the **Processes** tab in Task Manager. To view the **Processes** tab in Task Manager, press CTRL+ALT+DEL, click **Task Manager**, and then click the **Processes** tab.
-- Examine the **Startup** tab in the System Configuration Utility. DPAgnt.exe should be selected. To start the System Configuration Utility, click **Start**, click **Run**, type msconfig.exe in the **Open** box, and then click **OK**.
+- Examine the **Startup** tab in the System Configuration Utility. DPAgnt.exe should be selected. To start the System Configuration Utility, click **Start**, click **Run**, type *msconfig.exe* in the **Open** box, and then click **OK**.
 - Make sure that the user who is logged on is a member of the Administrators group.
 
 If one or more of these things aren't verified, reinstall the DigitalPersona Password Manager software. Then, restart the computer.
@@ -43,10 +43,9 @@ For information about how to install the DigitalPersona Password Manager softwar
 If reinstalling the DigitalPersona Password Manager software doesn't resolve the issue, follow these steps.
 
 > [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
-[322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
+> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
-1. Click **Start**, click **Run**, type regedit in the **Open** box, and then click **OK** to start Registry Editor.
+1. Click **Start**, click **Run**, type *regedit* in the **Open** box, and then click **OK** to start Registry Editor.
 2. Locate and then click the following registry subkey:
     `HKEY_LOCALMACHINE\Software\Microsoft\Windows\Currentversion\Run`
 
@@ -66,9 +65,3 @@ To register a fingerprint, follow these steps:
 2. Click **Start**, point to **All Programs**, point to **DigitalPersona Password Manager**, and then click **Fingerprint Registration Wizard**.
 3. Follow the **Fingerprint Registration Wizard** instructions on the screen.
 4. When you're finished registering fingerprints, click **Finish**.
-
-## More information
-
-For more information about how to add, change, or remove a Fingerprint Logon by using the Fingerprint Logon Manager for use with the Microsoft Fingerprint Reader, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[899626](https://support.microsoft.com/help/899626) How to add, change, or remove a Fingerprint Logon by using the Fingerprint Logon Manager for use with the Fingerprint Reader

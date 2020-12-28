@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
 ms.technology: GroupPolicy
 ---
-# WMI Group Policy filters that compare Win32_OperatingSystem BuildNumber don't work as expected in Windows 10
+# WMI Group Policy filters that compare Win32_OperatingSystem BuildNumber don't work as expected
 
 This article provides a solution to an issue where Windows Management Instrumentation (WMI) Group Policy filters that compare Win32_OperatingSystem BuildNumber don't work as expected in Windows 10.
 
@@ -32,24 +32,24 @@ Consider the following scenario:
     "Select BuildNumber from Win32_OperatingSystem WHERE BuildNumber >= 9200 "
     ```
 
-|Build number|Windows version|
-|---|---|
-|9200|Windows 8|
-|9600|Windows 8.1|
-|10240|Windows 10|
-|10586|Windows 10, version 1511|
-|14393|Windows 10, version 1607|
-|15063|Windows 10, version 1703|
-|16299|Windows 10, version 1709|
-|17134|Windows 10, version 1803|
-|17763|Windows 10, version 1809|
-|18362|Windows 10, version 1903|
+    |Build number|Windows version|
+    |---|---|
+    |9200|Windows 8|
+    |9600|Windows 8.1|
+    |10240|Windows 10|
+    |10586|Windows 10, version 1511|
+    |14393|Windows 10, version 1607|
+    |15063|Windows 10, version 1703|
+    |16299|Windows 10, version 1709|
+    |17134|Windows 10, version 1803|
+    |17763|Windows 10, version 1809|
+    |18362|Windows 10, version 1903|
 
-In this scenario, although you would expect the WMI filter to cause the Group Policy setting to apply to build number 9200 and later builds, Windows 10 builds are excluded.
+In this scenario, although you would expect the WMI filter to cause the Group Policy setting to apply to build number 9200 and later builds, Windows 10 builds are excluded.
 
 ## Cause
 
-This issue occurs because the data type for **BuildNumber**  is String and not Integer. Therefore, 10*** < 9600.
+This issue occurs because the data type for **BuildNumber**  is String and not Integer. Therefore, 10*** < 9600.
 
 ## Resolution
 

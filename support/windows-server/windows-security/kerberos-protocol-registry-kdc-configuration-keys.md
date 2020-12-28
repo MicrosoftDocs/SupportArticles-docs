@@ -100,7 +100,7 @@ The registry entries that are listed in this section must be added to the follow
   - Type: REG_DWORD
 
     This value indicates the default encryption type for pre-authentication.
-    Default value is RC4 is 23 (decimal) or 0x17 (hexadecimal)
+    Default value is RC4 is 23 (decimal) or 0x17 (hexadecimal)
 
     When you want to use AES, set the value to the following:
 
@@ -159,23 +159,23 @@ The registry entries that are listed in this section must be added to the follow
     |DEB_TRACE_CTXT2|0x00000400|This macro enables additional context tracing.|
     |DEB_TRACE_TIME|0x00000800|This macro enables the time skew tracing that is found in Timesync.cxx.|
     |DEB_TRACE_USER|0x00001000|This macro enables user API tracing that is used together with DEB_TRACE_API and that is found mostly in Userapi.cxx.|
-    |DEB_TRACE_LEAKS|0x00002000| |
+    |DEB_TRACE_LEAKS|0x00002000| |
     |DEB_TRACE_SOCK|0x00004000|This macro enables Winsock-related events.|
     |DEB_TRACE_SPN_CACHE|0x00008000|This macro enables events that are related to SPN cache hits and misses.|
     |DEB_S4U_ERROR|0x00010000|Not implemented|
-    |DEB_TRACE_S4U|0x00020000| |
-    |DEB_TRACE_BND_CACHE|0x00040000| |
-    |DEB_TRACE_LOOPBACK|0x00080000| |
-    |DEB_TRACE_TKT_RENEWAL|0x00100000| |
-    |DEB_TRACE_U2U|0x00200000| |
-    |DEB_TRACE_LOCKS|0x01000000| |
+    |DEB_TRACE_S4U|0x00020000| |
+    |DEB_TRACE_BND_CACHE|0x00040000| |
+    |DEB_TRACE_LOOPBACK|0x00080000| |
+    |DEB_TRACE_TKT_RENEWAL|0x00100000| |
+    |DEB_TRACE_U2U|0x00200000| |
+    |DEB_TRACE_LOCKS|0x01000000| |
     |DEB_USE_LOG_FILE|0x02000000|Not implemented|
     ||||
 
 - Entry: MaxTokenSize
 
   - Type: REG_DWORD
-  - Default Value: 12000 (Decimal). Starting Windows Server 2012 and Windows 8, the default value is 48000.
+  - Default Value: 12000 (Decimal). Starting Windows Server 2012 and Windows 8, the default value is 48000.
 
     This value is the maximum value of the Kerberos token. Microsoft recommends that you set this value to less than 65535. For more information, see [Problems with Kerberos authentication when a user belongs to many groups](https://support.microsoft.com/help/327825).
 
@@ -184,7 +184,7 @@ The registry entries that are listed in this section must be added to the follow
   - Type: REG_DWORD
   - Default Value: 15 minutes
 
-    This value is used by the system when purging Service Principal Names (SPN) cache entries. On domain controllers, the SPN cache is disabled. Clients and member servers use this value to age out and purge negative cache entries (SPN not found). Valid SPN cache entries (for example, not negative cache) are not deleted after 15 minutes of creation. However, the **SPNCacheTimeout** value is also used to reduce the SPN cache to a manageable size - when the SPN cache reaches 350 entries the system will use this value to `scavenge / cleanup` old and unused entries.
+    This value is used by the system when purging Service Principal Names (SPN) cache entries. On domain controllers, the SPN cache is disabled. Clients and member servers use this value to age out and purge negative cache entries (SPN not found). Valid SPN cache entries (for example, not negative cache) are not deleted after 15 minutes of creation. However, the **SPNCacheTimeout** value is also used to reduce the SPN cache to a manageable size - when the SPN cache reaches 350 entries the system will use this value to `scavenge / cleanup` old and unused entries.
 
 - Entry: S4UCacheTimeout
 
@@ -239,7 +239,7 @@ The registry entries that are listed in this section must be added to the follow
     This value indicates whether session keys are exported with initial or with cross realm TGT authentication. The default value is false for security reasons.
 
     > [!NOTE]
-    > With active Credential Guard in Windows 10 and later versions of Windows, you cannot enable sharing the TGT session keys with applications anymore. For more information, see [Registry Key to Allow Session Keys to Be Sent in Kerberos Ticket-Granting-Ticket](https://support.microsoft.com/en-US/help/308339).
+    > With active Credential Guard in Windows 10 and later versions of Windows, you cannot enable sharing the TGT session keys with applications anymore.  
 
 ## Registry entries and values under the Kdc key
 

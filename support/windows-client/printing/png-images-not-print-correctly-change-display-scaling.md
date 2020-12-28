@@ -9,8 +9,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika
-ms.prod-support-area-path: Errors and troubleshooting Print output or print failures
+ms.reviewer: kaushika, v-jesits
+ms.prod-support-area-path: 'Errors and troubleshooting: Print output or print failures'
 ms.technology: PrintFaxScan
 ---
 # PNG images don't print correctly in Word 2010 after the system display scaling setting is changed in Windows 7
@@ -23,7 +23,6 @@ _Original KB number:_ &nbsp;3101023
 ## Symptoms
 
 Consider the following scenario:
-
 
 - You have a Windows 7-based computer that has Microsoft Word 2010 installed.
 - You have a Word document that contains a PNG image.

@@ -21,7 +21,8 @@ _Original product version:_ &nbsp; Windows Server 2003
 _Original KB number:_ &nbsp; 914052
 
 > [!IMPORTANT]
-> This article contains information about how to modify the registry. Make sure to back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, click the following article number to view the article in the Microsoft Knowledge Base: [256986](https://support.microsoft.com/help/256986) Description of the Microsoft Windows registry  
+> This article contains information about how to modify the registry. Make sure to back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
+[256986](https://support.microsoft.com/help/256986) Description of the Microsoft Windows registry  
 
 ## Symptoms
 
@@ -44,7 +45,8 @@ This issue occurs when registry entries that are required for Winlogon notificat
 
 1. Click **Start**, click **Run**, type regedit in the **Open** box, and then click
  **OK**.
-2. Locate the following registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify\termsrv` 
+2. Locate the following registry subkey:  
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify\termsrv`  
 
 3. Under this subkey, add the following registry entries:
 

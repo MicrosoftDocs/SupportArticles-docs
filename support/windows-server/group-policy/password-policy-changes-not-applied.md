@@ -37,12 +37,12 @@ To resolve this issue, disable the **Block Policy Inheritance** option on the Do
 
 1. Start the Active Directory Users and Computers snap-in.
 2. Right-click the Domain Controllers organizational unit, click Properties, and then click to clear the **Block Policy Inheritance** check box.
-3. On the domain controllers, run the following command: secedit /refreshpolicy machine_policy /enforce 
+3. On the domain controllers, run the following command: secedit/refreshpolicy machine_policy/enforce  
 If this issue occurs because you did not set password policy in the Default Domain policy, set all password policies in the Default Domain policy.
 
 ## Status
 
-This behavior is by design. 
+This behavior is by design.  
 
 ## More information
 

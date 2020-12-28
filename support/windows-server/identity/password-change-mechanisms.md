@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, davidg
 ms.prod-support-area-path: User, computer, group, and object management
 ms.technology: ActiveDirectory
 ---
@@ -26,7 +26,8 @@ Windows uses many different mechanisms for changing passwords. This article desc
 
 ## More information
 
-The supported password-change protocols are:
+The supported password-change protocols are:  
+
 1. The NetUserChangePassword protocol
 2. The NetUserSetInfo protocol
 3. The Kerberos change-password protocol (IETF Internet Draft Draft-ietf-cat-kerb-chg-password-02.txt) [port 464]

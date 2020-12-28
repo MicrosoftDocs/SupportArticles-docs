@@ -41,7 +41,7 @@ _Original KB number:_ &nbsp; 832017
 >
 > For more information about the default dynamic port range, see [The default dynamic port range for TCP/IP has changed](https://support.microsoft.com/help/929851).
 
-You should not use the port information in this article to configure Windows Firewall. For information about how to configure Windows Firewall, see [Windows Firewall with Advanced Security](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754274(v=ws.11)).
+Don't use the port information in this article to configure Windows Firewall. For information about how to configure Windows Firewall, see [Windows Firewall with Advanced Security](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754274(v=ws.11)).
 
 The Windows Server system includes a comprehensive and integrated infrastructure to meet the requirements of developers and information technology (IT) professionals. This system runs programs and solutions that you can use to obtain, analyze, and share information quickly and easily. These Microsoft client, server, and server program products use different network ports and protocols to communicate with client systems and with other server systems over the network. Dedicated firewalls, host-based firewalls, and Internet Protocol security (IPsec) filters are other important components that you must have to help secure your network. However, if these technologies are configured to block ports and protocols that are used by a specific server, that server will no longer respond to client requests.
 
@@ -49,7 +49,13 @@ The Windows Server system includes a comprehensive and integrated infrastructure
 
 The following list provides an overview of the information that this article contains:
 
-- The [System services ports](#system-services-ports) section contains a brief description of each service, displays the logical name of that service, and indicates the ports and protocols that each service requires for correct operation. Use this section to help identify the ports and protocols that a particular service uses.
+- The [System services ports](#system-services-ports) section:
+
+  - Contains a brief description of each service.
+  - Displays the logical name of each service.
+  - Indicates the ports and protocols that each service requires for correct operation.
+
+  Use this section to help identify the ports and protocols that a particular service uses.
 - The [Ports and protocols](#ports-and-protocols) section includes a table that summarizes the information from the System services ports section. The table is sorted by the port number instead of by the service name. Use this section to quickly determine which services listen on a particular port.
 
 This article uses certain terms in specific ways. To help avoid confusion, make sure that you understand how the article uses these terms:
@@ -57,13 +63,13 @@ This article uses certain terms in specific ways. To help avoid confusion, make 
 - System services: System services are programs that load automatically as part of an application's startup process or as part of the operating system startup process. System services support the different tasks that the operating system must perform. For example, some system services that are available on computers that run Windows Server 2003 Enterprise Edition include the Server service, the Print Spooler service, and the World Wide Web Publishing service. Each system service has a *friendly service name* and a *service name*. The friendly service name is the name that appears in graphical management tools such as the Services Microsoft Management Console (MMC) snap-in. The service name is the name that is used with command-line tools and with many scripting languages. Each system service may provide one or more network services.
 - Application protocol: In this article, *application protocol* refers to a high-level network protocol that uses one or more TCP/IP protocols and ports. Examples of application protocols include HTTP, server message blocks (SMBs), and Simple Mail Transfer Protocol (SMTP).
 - Protocol: TCP/IP protocols are standard formats for communicating between devices on a network. TCP/IP protocols operate at a lower level than the application protocols. The TCP/IP suite of protocols includes TCP, User Datagram Protocol (UDP), and Internet Control Message Protocol (ICMP).
-- Port: This is the network port that the system service listens on for incoming network traffic.
+- Port: It's the network port that the system service listens on for incoming network traffic.
 
-This article does not specify which services rely on other services for network communication. For example, many services rely on the remote procedure call (RPC) or DCOM features in Microsoft Windows to assign them dynamic TCP ports. The Remote Procedure Call service coordinates requests by other system services that use RPC or DCOM to communicate with client computers. Many other services rely on network basic input/output system (NetBIOS) or SMBs, protocols that are provided by the Server service. Other services rely on HTTP or on Hypertext Transfer Protocol Secure (HTTPS). These protocols are provided by Internet Information Services (IIS). A full discussion of the architecture of the Windows operating systems is beyond the scope of this article. However, detailed documentation on this subject is available on Microsoft TechNet and on the Microsoft Developer Network (MSDN) websites. Although many services may rely on a particular TCP or UDP port, only one service or process at a time can listen on that port.
+This article doesn't specify which services rely on other services for network communication. For example, many services rely on the Remote Procedure Call (RPC) or DCOM features in Microsoft Windows to assign them dynamic TCP ports. The Remote Procedure Call service coordinates requests by other system services that use RPC or DCOM to communicate with client computers. Many other services rely on network basic input/output system (NetBIOS) or SMBs, protocols that are provided by the Server service. Other services rely on HTTP or on Hypertext Transfer Protocol Secure (HTTPS). These protocols are provided by Internet Information Services (IIS). A full discussion of the architecture of the Windows operating systems is beyond the scope of this article. However, detailed documentation on this subject is available on Microsoft TechNet and on the Microsoft Developer Network (MSDN) websites. Although many services may rely on a particular TCP or UDP port, only one service or process at a time can listen on that port.
 
-When you use RPC with TCP/IP or with UDP/IP as the transport, incoming ports are frequently dynamically assigned to system services as required; TCP/IP and UDP/IP ports that are higher than port 1024 are used. These are also informally known as *random RPC ports*. In these cases, RPC clients rely on the RPC endpoint mapper to tell them which dynamic port or ports were assigned to the server. For some RPC-based services, you can configure a specific port instead of letting RPC dynamically assign a port. You can also restrict the range of ports that RPC dynamically assigns to a small range, regardless of the service. For more information about this topic, see the [References](#references) section.
+When you use RPC with TCP/IP or with UDP/IP as the transport, incoming ports are frequently dynamically assigned to system services as required. TCP/IP and UDP/IP ports that are higher than port 1024 are used. These ports are also informally known as *random RPC ports*. In these cases, RPC clients rely on the RPC endpoint mapper to tell them which dynamic port or ports were assigned to the server. For some RPC-based services, you can configure a specific port instead of letting RPC dynamically assign a port. You can also restrict the range of ports that RPC dynamically assigns to a small range, regardless of the service. For more information about this topic, see the [References](#references) section.
 
-This article includes information about the system services roles and the server roles for the Microsoft products that are listed in the Applies to section. Although this information may also apply to Windows XP and to Microsoft Windows 2000 Professional, this article is focused on server-class operating systems. Therefore, this describes the ports that a service listens on instead of the ports that client programs use to connect to a remote system.
+This article includes information about the system services roles and the server roles for the Microsoft products that are listed in the Applies to section. Although this information may also apply to Windows XP and to Microsoft Windows 2000 Professional, this article is focused on server-class operating systems. Therefore, this article describes the ports that a service listens on instead of the ports that client programs use to connect to a remote system.
 
 ## System services ports
 
@@ -100,7 +106,7 @@ Finally, you can hard-code the port that is used for Active Directory replicatio
 |Global Catalog|TCP|3269|
 |Global Catalog|TCP|3268|
 |ICMP||No port number|
-|LDAP Server|TCP|389|
+|Lightweight Directory Access Protocol (LDAP) Server|TCP|389|
 |LDAP Server|UDP|389|
 |LDAP SSL|TCP|636|
 |IPsec ISAKMP|UDP|500|
@@ -110,14 +116,14 @@ Finally, you can hard-code the port that is used for Active Directory replicatio
 |SMB|TCP|445|
 ||||
 
-¹ For more information about how to customize this port, see Domain controllers and Active Directory in the [References](#references) section. This also includes remote WMI and DCOM communications first used in Windows Server 2012 domain controller promotion during prerequisite validation and with the Server Manager tool.
+¹ For more information about how to customize this port, see Domain controllers and Active Directory in the [References](#references) section. This section also includes remote WMI and DCOM communications first used in Windows Server 2012 domain controller promotion during prerequisite validation and with the Server Manager tool.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
-In addition, the Microsoft LDAP client uses ICMP pings to verify that an LDAP server it has a pending request with is still present on the network. The following settings are LDAP session options:
+In addition, the Microsoft LDAP client uses ICMP pings to verify that an LDAP server it has a pending request with is still present on the network. The following settings are LDAP session options:
 
-- [PingKeepAliveTimeout](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pingkeepalivetimeout) = 120 seconds (how long it waits after last response from server before it starts sending ping [PingLimit](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pinglimit) = 4 (how many pings are sent before connection is closed)
-- [PingWaitTimeout](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pingwaittimeout) = 2000ms (how long it waits for the ICMP response)
+- [PingKeepAliveTimeout](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pingkeepalivetimeout) = 120 seconds (how long it waits after last response from server before it starts sending ping [PingLimit](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pinglimit)) = 4 (how many pings are sent before connection is closed)
+- [PingWaitTimeout](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions.pingwaittimeout) = 2000 ms (how long it waits for the ICMP response)
 - Reference: [LdapSessionOptions Class](/dotnet/api/system.directoryservices.protocols.ldapsessionoptions)
 
 ### Application Layer Gateway service
@@ -149,7 +155,7 @@ System service name: **aspnet_state**
 
 ### Certificate Services
 
-Certificate Services is part of the core operating system. By using Certificate Services, a business can act as its own certification authority (CA). This lets the business issue and manage digital certificates for programs and protocols such as the following:
+Certificate Services is part of the core operating system. By using Certificate Services, a business can act as its own certification authority (CA). It lets the business issue and manage digital certificates for programs and protocols such as:
 
 - Secure/Multipurpose Internet Mail Extensions (S/MIME)
 - Secure Sockets Layer (SSL)
@@ -170,7 +176,7 @@ System service name: **CertSvc**
 
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 For more information, see [3.2.2.6.2.1.4.5.9 msPKI-Certificate-Name-Flag](/openspecs/windows_protocols/ms-wcce/a1f27ffb-7f74-4fa1-8841-7cde4ba0bcfe).
 
@@ -192,11 +198,11 @@ System service name: **ClusSvc**
 > [!NOTE]
 > Additionally, for successful validation on Windows Failover Clusters on 2008 and above, allow inbound and outbound traffic for ICMP4, ICMP6, and port 445/TCP for SMB.
 >
-> ¹ Cluster Service UDP traffic over port 3343 requires the Datagram Transport Layer Security (DTLS) protocol, version 1.0 or version 1.2. By default, DTLS is enabled. For more information, see [Protocols in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
+> ¹ Cluster Service UDP traffic over port 3343 requires the Datagram Transport Layer Security (DTLS) protocol, version 1.0 or version 1.2. By default, DTLS is enabled. For more information, see [Protocols in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
 >
 > ² For more information about how to customize these ports, see Remote Procedure Calls and DCOM in the [References](#references) section.
 >
-> ³ This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+> ³ It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### Computer Browser
 
@@ -215,9 +221,9 @@ System service name: **Browser**
 
 The Browser service uses RPC over Named Pipes to compile.
 
-### DHCP Server
+### Dynamic Host Configuration Protocol (DHCP) Server
 
-The DHCP Server service uses the Dynamic Host Configuration Protocol (DHCP) to automatically allocate IP addresses. You can use this service to adjust the advanced network settings of DHCP clients. For example, you can configure network settings such as Domain Name System (DNS) servers and Windows Internet Name Service (WINS) servers. You can establish one or more DHCP servers to maintain TCP/IP configuration information and to provide that information to client computers.
+The DHCP Server service uses the DHCP to automatically allocate IP addresses. You can use this service to adjust the advanced network settings of DHCP clients. For example, you can configure network settings such as Domain Name System (DNS) servers and Windows Internet Name Service (WINS) servers. You can establish one or more DHCP servers to maintain TCP/IP configuration information and to provide that information to client computers.
 
 System service name: **DHCPServer**
 
@@ -232,7 +238,7 @@ System service name: **DHCPServer**
 
 The Distributed File System Namespaces (DFSN) integrates different file shares that are located on a local area network (LAN) or wide area network (WAN) into a single logical namespace. The DFSN service is required for Active Directory domain controllers to advertise the SYSVOL shared folder.
 
-System service name: **Dfs**
+System service name: `Dfs`
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
@@ -247,7 +253,7 @@ System service name: **Dfs**
 
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ³ The NETBIOS ports are optional and are not required when DFSN is using FQDN Server names.
 
@@ -266,7 +272,7 @@ System service name: **DFSR**
 
 ¹ For more information about how to customize this port, see Distributed File Replication Service in the [References](#references) section.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 ³ Port 5722 is only used on a Windows Server 2008 domain controller or on a Windows Server 2008 R2 domain controller. It is not used on a Windows Server 2012 domain controller.
 
 ### Distributed Link Tracking Server
@@ -283,23 +289,23 @@ System service name: **TrkSvr**
 
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### Distributed Transaction Coordinator
 
-The Distributed Transaction Coordinator (DTC) system service coordinates transactions that are distributed across multiple computer systems and resource managers, such as databases, message queues, file systems, or other transaction-protected resource managers. The DTC system service is required if transactional components are configured through COM+. It is also required for transactional queues in Message Queuing (also known as MSMQ) and SQL Server operations that span multiple systems.
+The Distributed Transaction Coordinator (DTC) system service coordinates transactions that are distributed across multiple computer systems and resource managers, such as databases, message queues, file systems, or other transaction-protected resource managers. The DTC system service is required if transactional components are configured through Component Object Model Plus (COM+). It's also required for transactional queues in Message Queuing (also known as MSMQ) and SQL Server operations that span multiple systems.
 
 System service name: **MSDTC**
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
 |RPC|TCP|135|
-|Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
+|Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 5000**<br/>**random port number between 49152 - 65535**²|
 ||||
 
 ¹ For more information about how to customize this port, see Distributed Transaction Coordinator in the [References](#references) section.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### DNS Server
 
@@ -346,7 +352,7 @@ System service name: **Fax**
 
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### File Replication
 
@@ -362,7 +368,7 @@ System service name: **NtFrs**
 
 ¹ For more information about how to customize this port, see File Replication Service in the [References](#references) section.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### FTP Publishing Service
 
@@ -377,7 +383,7 @@ System service name: **MSFTPSVC**
 |Randomly allocated high TCP ports|TCP| **random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535¹** |
 ||||
 
-¹ This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+¹ It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### Group Policy
 
@@ -398,7 +404,7 @@ System service name: **Group Policy**
 
 ¹ For more information about how to customize this port, see Domain controllers and Active Directory in the [References](#references) section.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ³ This protocol is required only by Windows XP and Windows Server 2003 acting as clients.
 
@@ -466,9 +472,9 @@ System service name: **SharedAccess**
 |DNS|TCP|53|
 ||||
 
-### IPAM
+### IP Address Management (IPAM)
 
-The IP Address Management (IPAM) client UI communicates with the IPAM server to perform remote management. This is done by using the Windows Communications Framework (WCF), which uses TCP as the transport protocol. By default, the TCP binding is performed on port 48885 on the IPAM server.
+The IPAM client UI communicates with the IPAM server to perform remote management. It's done by using the Windows Communications Framework (WCF), which uses TCP as the transport protocol. By default, the TCP binding is performed on port 48885 on the IPAM server.
 
 #### BranchCache information
 
@@ -500,7 +506,7 @@ The IP Address Management (IPAM) client UI communicates with the IPAM server to 
 > 4. OEM uses Firewall Web Management to provide non-MMC management of ISA Server.
 > 5. This port is also used for intra-array traffic.
 > 6. This port is used only by the ISA management MMC during remote server and service status monitoring.
-> 7. This is the range in TMG. Please note that TMG extends the default dynamic port ranges in Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+> 7. It's the range in TMG. Please note that TMG extends the default dynamic port ranges in Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### Kerberos Key Distribution Center
 
@@ -551,9 +557,9 @@ System service name: **MSMQ**
 |RPC|TCP|135|
 ||||
 
-### Microsoft Exchange MTA stacks
+### Microsoft Exchange Message Transfer Agent (MTA) stacks
 
-In Microsoft Exchange 2000 Server and Exchange Server 2003, the Message Transfer Agent (MTA) is frequently used to provide backward-compatible message transfer services between Exchange 2000 Server-based servers and Exchange Server 5.5-based servers in a mixed-mode environment.
+In Microsoft Exchange 2000 Server and Exchange Server 2003, the MTA is frequently used to provide backward-compatible message transfer services between Exchange 2000 Server-based servers and Exchange Server 5.5-based servers in a mixed-mode environment.
 
 System service name: **MSExchangeMTA**
 
@@ -577,7 +583,7 @@ System service name: **POP3SVC**
 
 The Net Logon system service maintains a security channel between your computer and the domain controller to authenticate users and services. It passes the user's credentials to a domain controller and returns the domain security identifiers and the user rights for the user. This is typically known as pass-through authentication. Net Logon is configured to start automatically only when a member computer or domain controller is joined to a domain. In the Windows 2000 Server and Windows Server 2003 families, Net Logon publishes service resource locator records in the DNS. When this service runs, it relies on the WORKSTATION service and on the Local Security Authority service to listen for incoming requests. On domain member computers, Net Logon uses RPC over named pipes. On domain controllers, it uses RPC over named pipes, RPC over TCP/IP, mail slots, and Lightweight Directory Access Protocol (LDAP).
 
-System service name: **Netlogon**
+System service name: `Netlogon`
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
@@ -591,9 +597,9 @@ System service name: **Netlogon**
 
 ¹ For more information about how to customize this port, see Domain controllers and Active Directory in the [References](#references) section.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
-³ The NETBIOS ports are optional. Netlogon uses these only for trusts that don't support DNS or when DNS fails during an attempted fallback. If there is no WINS infrastructure and broadcasts can't work, you should either disable NetBt or set the computers and servers to NodeType=2.
+³ The NETBIOS ports are optional. `Netlogon` uses these only for trusts that don't support DNS or when DNS fails during an attempted fallback. If there is no WINS infrastructure and broadcasts can't work, you should either disable NetBt or set the computers and servers to NodeType=2.
 
 > [!NOTE]
 > The Net Logon service uses RPC over named pipes for earlier versions of Windows clients. This service has the same firewall requirements as the File and Printer Sharing feature.
@@ -623,7 +629,7 @@ System service name: **NNTPSVC**
 
 ### Offline Files, User Profile Service, Folder Redirection, and Primary Computer
 
-Offline Files and Roaming User Profiles cache user data to computers for offline use. These capabilities exist in all supported Microsoft operating systems. Windows XP implemented roaming user profile caching as part of the Winlogon process while Windows Vista, Windows Server 2008, and later operating systems use the User Profile Service. All of these systems use SMB.
+Offline Files and Roaming User Profiles cache user data to computers for offline use. These capabilities exist in all supported Microsoft operating systems. Windows XP implemented roaming user profile caching as part of the `Winlogon` process while Windows Vista, Windows Server 2008, and later operating systems use the User Profile Service. All of these systems use SMB.
 
 Folder Redirection redirects user data from the local computer to a remote file share, using SMB.
 
@@ -643,7 +649,7 @@ System service names: **ProfSvc**, **CscService**
 
 ### Performance Logs and Alerts
 
-The Performance Logs and Alerts system service collects performance data from local or remote computers based on preconfigured schedule parameters and then writes that data to a log or triggers a message. Based on the information that is contained in the named log collection setting, the Performance Logs and Alerts service starts and stops each named performance data collection. This service runs only if at least one performance data collection is scheduled.
+The Performance Logs and Alerts system service collects performance data from local or remote computers based on preconfigured schedule parameters and then writes that data to a log or triggers a message. Based on the information that is contained in the named log collection setting, the **Performance Logs and Alerts** service starts and stops each named performance data collection. This service runs only if at least one performance data collection is scheduled.
 
 System service name: **SysmonLog**
 
@@ -732,7 +738,7 @@ System service name: **Remote_Storage_User_Link**
 
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### Remote Storage
 
@@ -748,7 +754,7 @@ System service name: **Remote_Storage_Server**
 
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### Routing and Remote Access
 
@@ -789,7 +795,7 @@ System service name: **lanmanserver**
 
 ### SharePoint Portal Server
 
-The SharePoint Portal Server system service lets you develop an intelligent portal that seamlessly connects users, teams, and knowledge. This helps people take advantage of relevant information across business processes. Microsoft SharePoint Portal Server 2003 provides an enterprise business solution that integrates information from various systems into one solution through single sign-on and enterprise application integration capabilities.
+The SharePoint Portal Server system service lets you develop an intelligent portal that seamlessly connects users, teams, and knowledge. It helps people take advantage of relevant information across business processes. Microsoft SharePoint Portal Server 2003 provides an enterprise business solution that integrates information from various systems into one solution through single sign-on and enterprise application integration capabilities.
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
@@ -822,21 +828,21 @@ System service name: **SimpTcp**
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
-|Chargen|TCP|19|
-|Chargen|UDP|19|
+|`Chargen`|TCP|19|
+|`Chargen`|UDP|19|
 |Daytime|TCP|13|
 |Daytime|UDP|13|
 |Discard|TCP|9|
 |Discard|UDP|9|
 |Echo|TCP|7|
 |Echo|UDP|7|
-|Quotd|TCP|17|
+|`Quotd`|TCP|17|
 |Quoted|UDP|17|
 ||||
 
-### SNMP Service
+### Simple Network Management Protocol (SNMP) Service
 
-SNMP Service lets the local computer service incoming Simple Network Management Protocol (SNMP) requests. SNMP Service includes agents that monitor activity in network devices and report to the network console workstation. SNMP Service provides a method of managing network hosts (such as workstation or server computers, routers, bridges, and hubs) from a centrally-located computer that is running network management software. SNMP performs management services by using a distributed architecture of management systems and agents.
+SNMP Service lets the local computer service incoming SNMP requests. SNMP Service includes agents that monitor activity in network devices and report to the network console workstation. SNMP Service provides a method of managing network hosts (such as workstation or server computers, routers, bridges, and hubs) from a centrally located computer that is running network management software. SNMP performs management services by using a distributed architecture of management systems and agents.
 
 System service name: **SNMP**
 
@@ -856,9 +862,9 @@ System service name: **SNMPTRAP**
 |SNMP Traps Outgoing|UDP|162|
 ||||
 
-### SSDP Discovery Service
+### Simple Service Discovery Protocol (SSDP) Discovery Service
 
-SSDP Discovery Service implements Simple Service Discovery Protocol (SSDP) as a Windows service. SSDP Discovery Service manages receipt of device presence announcements, updates its cache, and sends these notifications to clients that have outstanding search requests. SSDP Discovery Service also accepts the registration of event callbacks from clients. The registered event callbacks are then turned into subscription requests. SSDP Discovery Service then monitors for event notifications and sends these requests to the registered callbacks. This system service also provides periodic announcements to hosted devices. Currently, the SSDP event notification service uses TCP port 5000.
+SSDP Discovery Service implements SSDP as a Windows service. SSDP Discovery Service manages receipt of device presence announcements, updates its cache, and sends these notifications to clients that have outstanding search requests. SSDP Discovery Service also accepts the registration of event callbacks from clients. The registered event callbacks are then turned into subscription requests. SSDP Discovery Service then monitors for event notifications and sends these requests to the registered callbacks. This system service also provides periodic announcements to hosted devices. Currently, the SSDP event notification service uses TCP port 5000.
 
 > [!NOTE]
 > Starting with Windows XP Service Pack 2 (SP2), the SSDP event notification service uses TCP port 2869.
@@ -928,7 +934,7 @@ System service name: **TermServLicensing**
 
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 > [!NOTE]
 > Terminal Services Licensing offers its services by using RPC over named pipes. This service has the same firewall requirements as the File and Printer Sharing feature.
@@ -947,7 +953,7 @@ System service name: **Tssdis**
 
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
 
-² This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 ### Trivial FTP Daemon
 
@@ -1002,7 +1008,7 @@ Windows Media Services in Windows Server 2003 and later versions replaces the fo
 
 Windows Media Services is now a single service that runs on Windows Server. Its core components were developed by using COM, and it has a flexible architecture that you can customize for specific programs. Windows Media Services supports a larger variety of control protocols. These include Real Time Streaming Protocol (RTSP), Microsoft Media Server (MMS) protocol, and HTTP.
 
-System service name: **WMServer**
+System service name: `WMServer`
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
@@ -1068,10 +1074,10 @@ The following table summarizes the information from the [System services ports](
 |9|UDP|Discard|Simple TCP/IP Services|
 |13|TCP|Daytime|Simple TCP/IP Services|
 |13|UDP|Daytime|Simple TCP/IP Services|
-|17|TCP|Quotd|Simple TCP/IP Services|
-|17|UDP|Quotd|Simple TCP/IP Services|
-|19|TCP|Chargen|Simple TCP/IP Services|
-|19|UDP|Chargen|Simple TCP/IP Services|
+|17|TCP|`Quotd`|Simple TCP/IP Services|
+|17|UDP|`Quotd`|Simple TCP/IP Services|
+|19|TCP|`Chargen`|Simple TCP/IP Services|
+|19|UDP|`Chargen`|Simple TCP/IP Services|
 |20|TCP|FTP default data|FTP Publishing Service|
 |21|TCP|FTP control|FTP Publishing Service|
 |21|TCP|FTP control|Application Layer Gateway Service|
@@ -1146,7 +1152,7 @@ The following table summarizes the information from the [System services ports](
 |389|UDP|DC Locator|Local Security Authority|
 |389|TCP|LDAP Server|Distributed File System Namespaces|
 |389|UDP|DC Locator|Distributed File System Namespaces|
-|389|UDP|DC Locator|Netlogon|
+|389|UDP|DC Locator|`Netlogon`|
 |389|UDP|DC Locator|Kerberos Key Distribution Center|
 |389|TCP|LDAP Server|Distributed File System Replication|
 |389|UDP|DC Locator|Distributed File System Replication|

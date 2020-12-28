@@ -22,24 +22,25 @@ _Original KB number:_ &nbsp; 2009647
 
 ## Symptoms
 
-When trying to start the Windows Deployment Service, you may see the following event id's logged:
+When trying to start the Windows Deployment Service, you may see the following event IDs logged:
 
 > Event Source: WDSServer  
 Event ID: 257  
-Description:  
+Description:  
 An error occurred while trying to start the Windows  Deployment Services server.  
 Error information: 0x5  
-Event Source: WDSServer  
+>
+>Event Source: WDSServer  
 Event ID: 513  
 Description:  
 An error occurred while trying to initialize provider WDSPXE from C:\WINDOWS\system32\wdspxe.dll. Windows Deployment Services server will be shutdown.  
 Error Information 0x5  
 >
-> Event Source:  WDSPXE  
-Event id:  265  
-Description:  
+> Event Source:  WDSPXE  
+Event id:  265  
+Description:  
 An error occurred while trying to initialize provider BINSVC. Since the provider is marked as critical the windows deployment services server will be shutdown.  
-Error information:  0x5
+Error information:  0x5
 
 ## Cause
 
@@ -47,16 +48,18 @@ This can occur if you are logged in as local administrator or if the computer ac
 
 ## Resolution
 
-To resolve this issue, make sure you are logged in as domain or Enterprise administrator and check the permissions for the computer account by doing the following: 
+To resolve this issue, make sure you are logged in as domain or Enterprise administrator and check the permissions for the computer account by doing the following:  
+
 1. Log into a Domain Controller and launch **Active Directory Users and Computers**  
 2. Enable **Advanced Features** from the **View** menu
 3. Find the server object for the WDS server and in Properties select the **Security** tab
-4. Verify the following permissions: Domain Admins:  Full Control
-Enteprise Admins:  Full Control
-Account Operators:  Full Control
-System:  Full Control
-SELF:  Create All Child Objects, Delete All Child Objects, Validated write to DNS host name, Validated write to service principal name, Read Personal Information, Write Personal Information
+4. Verify the following permissions:  
+Domain Admins:  Full Control  
+Enteprise Admins:  Full Control  
+Account Operators:  Full Control  
+System:  Full Control  
+SELF:  Create All Child Objects, Delete All Child Objects, Validated write to DNS host name, Validated write to service principal name, Read Personal Information, Write Personal Information
 
 ## More information
 
-For more information, see https://technet.microsoft.com/library/cc726539(WS.10).aspx
+For more information, see [Event ID 1804—Active Directory Integration](https://technet.microsoft.com/library/cc726539(WS.10).aspx)

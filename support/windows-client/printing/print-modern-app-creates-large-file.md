@@ -10,21 +10,21 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Management and Configuration General issues
+ms.prod-support-area-path: 'Management and Configuration: General issues'
 ms.technology: PrintFaxScan
 ---
 # Printing from Modern App creates large spool file when you select Advanced Printing features
 
 This article describes an issue that occurs when you print from Modern App as this creates a large spool file when you select Advanced Printing features such as number of pages per sheet.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2989058
 
 ## Symptoms
 
 Consider the following scenario:
 
-- You have a system that is running Windows 8, Windows 8.1 or Windows 10.
+- You have a system that is running Windows 10.
 - You have a document open in a Modern App that contains images and text on multiple pages, for example a PDF file.
 - You try to print the file by using a PostScript or PCL6-based printer driver.
 - Within the printer properties, you select the print feature to include more than one page per sheet.

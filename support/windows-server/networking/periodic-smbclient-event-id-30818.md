@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: steved, delhan, christys, kaushika
-ms.prod-support-area-path: Configuring and using Backup software
-ms.technology: BackupStorage
+ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.technology: Networking
 ---
 # Periodic SMBClient event ID 30818 is logged on Windows Server 2012 R2
 
@@ -31,8 +31,9 @@ On Windows Server 2012 R2, the SmbDirect interface is started automatically by t
 ## Resolution
 
 To work around this problem on Windows Server 2012 R2, the SmbDirect service should be configured to start automatically. To do this, follow these steps:
+
 1. Open Registry Editor, and then locate to the following registry subkey:
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\smbdirect` 
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\smbdirect`
 
 2. Right-click the **Start** registry entry, and then click **Modify**.
 3. In the **Value data** box, change the value (by default, it's **3** as on-demand) to **2** (automatic). Then, the event 30818 error should no longer be logged immediately after a restart of the server, unless there's some other problem that prevents the RDMA interface from initializing.

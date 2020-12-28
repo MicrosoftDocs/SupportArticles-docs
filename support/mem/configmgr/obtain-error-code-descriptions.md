@@ -30,6 +30,6 @@ Some reports that are included together with Configuration Manager display error
 
    - Converted error codes that begin with **8009** are typically CryptoAPI error codes, such as **certificate expired** errors or **CN= mismatch** errors. You can use the Trace32 program to view the error code directly when you type trace32 together with the error code. For more information about CryptoAPI error codes and other Windows System error codes, see [Error Codes](/windows/win32/debug/system-error-codes?redirectedfrom=MSDN).
 
-   - Converted error codes that begin with **800402** or **800403** are typically Configuration Manager error codes. For more information about custom error codes for Configuration Manager, see [Custom Error Codes for Configuration Manager 2007](/previous-versions/system-center/configuration-manager-2007/bb632794(v=technet.10)?redirectedfrom=MSDN).
+   - Converted error codes that begin with **800402** or **800403** are typically Configuration Manager error codes.
 
    - All other error codes are typically Windows error codes or third-party error codes. All Windows error codes can be identified by using the Trace32 program and by specifying the error code, such as **80072EE7**.

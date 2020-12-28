@@ -15,7 +15,7 @@ ms.technology: Networking
 ---
 # Event 1 about SMB witness client initialization when you install Windows Server
 
-This article describes an Event 1 that occurs during the deployment of Windows Server.
+This article describes Event ID 1 that occurs during the deployment of Windows Server.
 
 _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4483863
@@ -32,4 +32,4 @@ Description: Witness Client initialization failed with error (The system cannot 
 
 ## More information  
 
-You can safely ignore this event if this is a fresh deployment of Windows Server that has no role and no feature is enabled.
+You can safely ignore this event if this is a fresh deployment of Windows Server that has no role and no feature is enabled.

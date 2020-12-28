@@ -20,10 +20,6 @@ This article provides the information about the Network Load Balancing.
 _Original product version:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 556067
 
-## Community solutions content disclaimer
-
-Microsoft corporation and/or its respective suppliers make no representations about the suitability, reliability, or accuracy of the information and related graphics contained herein. all such information and related graphics are provided "as is" without warranty of any kind. Microsoft and/or its respective suppliers hereby disclaim all warranties and conditions with regard to this information and related graphics, including all implied warranties and conditions of merchantability, fitness for a particular purpose, workmanlike effort, title, and non-infringement. you specifically agree that in no event shall Microsoft and/or its suppliers be liable for any direct, indirect, punitive, incidental, special, consequential damages or any damages whatsoever including, without limitation, damages for loss of use, data or profits, arising out of or in any way connected with the use of or inability to use the information and related graphics contained herein, whether based on contract, tort, negligence, strict liability or otherwise, even if Microsoft or any of its suppliers has been advised of the possibility of damages.
-
 ## Summary
 
 This article has information about Network Load Balancing - a Microsoft Clustering Technology.  
@@ -32,10 +28,11 @@ This article has information about Network Load Balancing - a Microsoft Clusteri
 
 - Q. How do you test an NLB Cluster?
 - For example, you have found nodes in the cluster and want to check whether Load Balancing is working or not. Create different four shares on four nodes and try to access them from one machine. You must get each time different share when browsing using UNC patch.
- 
-- You can adjust the Convergence parameters by adjusting the following registry values:
-    -  AliveMsgPeriod
-    - AliveMsgTolerance 
+
+- You can adjust the Convergence parameters by adjusting the following registry values:  
+
+  - AliveMsgPeriod
+  - AliveMsgTolerance  
 
 - Configuring more than one VIP (Virtual IP) is available only in Windows 2003 editions and later.
 - There's a different between STOP and DRAINSTOP commands. The STOP command will stop the NLB service on host and all existing connections will be lost, whereas DRAINSTOP will allow NLB to serve current connections and disable the new connections at the same time.
@@ -70,10 +67,12 @@ This article has information about Network Load Balancing - a Microsoft Clusteri
 - NLB can be enabled on multiple network adapters. This allows you to configure different NLB Cluster.
 - NLB can operate in two modes - Unicast or Multicast but both the modes can't be enabled at the same time. Unicast is the default mode.
 - NLB enables each host to detect and receive incoming TCP/IP traffic. This traffic is received by all the hosts in cluster and NLB driver filter the traffic as per the Port Rules defined. NLB nodes don't communicate with each other for incoming traffic coming from client because NLB is enabled on all the nodes. A statistically mapping rule is created on each host to distribute incoming traffic. This mapping remains the same unless there's a change in the cluster (for example, node removed or added).
-- Convergence is a process to rebuild the cluster state. This process invokes when there's a change in cluster (for example, node fails, leaves, or rejoin the cluster). In this process, the following actions are taken by cluster:
+- Convergence is a process to rebuild the cluster state. This process invokes when there's a change in cluster (for example, node fails, leaves, or rejoin the cluster). In this process, the following actions are taken by cluster:  
+
     1. Rebuild the cluster state.
     2. Designate the host with the highest host priority as the Default Host.
-    3. Load-balanced traffic is repartioned or redistributed among the remaining hosts.
+    3. Load-balanced traffic is repartioned or redistributed among the remaining hosts.  
+
 - During this process, remaining host continues to handle incoming client traffic. If a host is added to the cluster, convergence allows this host to receive its share of the load-balanced traffic. Expansion of the cluster doesn't affect ongoing cluster operations and is achieved transparently to both Internet clients and to server applications. However, it might affect client sessions that span multiple TCP connections when client affinity is selected, because clients might be remapped to different cluster hosts between connections. For more information on affinity
 - All the nodes in cluster emit the heartbeat messages to tell their availability in the cluster. The default period for sending heartbeat message is one second and five missed heartbeat messages from a host cause NLB to invoke Convergence process.
 - We can configure multiple NLB clusters on the same network adapter and then apply the specific port rules to each of those IP addresses. These are referred to as "Virtual Clusters".
@@ -82,28 +81,22 @@ This article has information about Network Load Balancing - a Microsoft Clusteri
 - Single NIC > NLB Enabled in Unicast mode - You can't use NLB Manager on this computer to configure and manage other hosts because a single network adapter in unicast mode can't have intrahost communication.
 - Intra-host communication is possible only in multicast node. To allow communication between servers in the same NLB cluster, each server requires the following registry entry: a DWORD key named "UnicastInterHostCommSupport" and set to 1, for each network interface card's GUID (HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\WLBS\Parameters\Interface\\{GUID})
 - There's no restriction on number of adapters. Different hosts can have different network adapters.
-- Single Network Adapter In Unicast Mode 
+- Single Network Adapter In Unicast Mode  
 
-    ======================================
+  - Adapter's own MAC address is disabled: The cluster MAC address that is generated automatically replaces this address.  
+  - Both the dedicated IP address and Cluster IP Address resolve to the Cluster MAC address.  
+  - Ordinary Network communication between cluster hosts isn't possible.  
 
-    a. Adapter's own MAC address is disabled: The cluster MAC address that is generated automatically replaces this address.
-    b. Both the dedicated IP address and Cluster IP Address resolve to the Cluster MAC address.
-    c. Ordinary Network communication between cluster hosts isn't possible. 
-
-- **Cluster Parameters**  
-
-    ===============
+## Cluster Parameters
 
 - Cluster MAC Address is generated automatically by using the Cluster IP Address and it's unique across the subnet.
 - Remote Control won't work if IPSEC is enabled. Remote control uses 1717 and 2504 on port over UDP.
-- Priority Unique Host ID: Lowest number is the highest - The host with this priority handles all the incoming traffic that's not covered by Port Rules.
+- Priority Unique Host ID: Lowest number is the highest - The host with this priority handles all the incoming traffic that's not covered by Port Rules.  
     If a cluster node is joined with the same priority, it's not accepted as the part of the cluster but other nodes will continue to operate. This is called the Default Host. If Default Host fails, the other node with higher priority can act as a Default Host.
 - Dedicated IP Address must be entered first in TCP/IP Property. It can't be DHCP enabled. This same applies to VIP also.
-- You can't add more than 32 Port Rules to one cluster and it must be same across the cluster. 
+- You can't add more than 32 Port Rules to one cluster and it must be same across the cluster.  
 
-- **Network Load Balancing Manager**  
-
-    ===========================
+## Network Load Balancing Manager  
 
 - You can't open any network property for the host if NLB Manager currently uses this.
 - NLB can be configured for any machine as long as you have administrative rights on the remote computer.
@@ -116,14 +109,16 @@ This article has information about Network Load Balancing - a Microsoft Clusteri
 - Hosts for which you don't have administrative membership won't be displayed in NLB Manager.
 - The list of all port ranges is sorted by Port Range.
 - NLB can have mixed of Domain Controllers, Member Servers, Workgroup servers, and so on. This isn't the limitation of NLB actually. NLB should be able to access the computer using the built-in administrator account.
-- When you enable NLB on a server, the default registry entries are created under: HKLM\System\CurrentControlSet\Services\WLBS
+- When you enable NLB on a server, the default registry entries are created under: `HKLM\System\CurrentControlSet\Services\WLBS`
 - The DIP and VIP must be entered correctly. The cluster nodes will converge with each other if you omit this step but they won't be able to accept and traffic.
 - IP Address conflict message is displayed for VIP only. Make sure VIP from all adapters is removed if you uncheck NLB on that host.
-- The following tools can be used with NLB for monitoring:
-    - ClusterSenitel
-    - Data Warehouse Center
-    - HTTPMon - for monitoring IIS Services.
-    - MOM
+- The following tools can be used with NLB for monitoring:  
+
+  - ClusterSenitel  
+  - Data Warehouse Center  
+  - HTTPMon - for monitoring IIS Services.  
+  - MOM  
+
 - When load balancing PPTP requests, the two network adapters are required on each NLB host.
 - You should supply gateway address in TCP/IP property when configuring two network adapters. The gateway should be entered to FE NIC.
 - NLB must be enabled on the Public or Internet facing network adapter.
@@ -131,19 +126,19 @@ This article has information about Network Load Balancing - a Microsoft Clusteri
 - The original implementation of NLB is WLBS. All the events are recorded in the source of WLBS. The command-line interface for NLB is WLBS and in Windows 2003, it's NLB.
 - NLB Manager WMI provider can't connect to a cluster host for which the computer name starts with a numeric character. This is bug.
 - NLB doesn't replicate the application data. You might need to use the Microsoft content Replication System (CRS) or third-party software.
-- NLB doesn't monitor the services stop or start also. You can use HTTPMon that comes with Resource kit. You can use the following tools described below:
-    - Exception Monitor
-    - HTTPMon
-    - Third-party monitoring tools
-        - SiteScope by Mercury Interactive Corporation ( (
-        - AppManager by NetIQ ( (
-        - WhatsUp Gold by Ipswitch ( ( 
+- NLB doesn't monitor the services stop or start also. You can use HTTPMon that comes with Resource kit. You can use the following tools described below:  
 
-- **Unicast Mode with Single NIC**  
+  - Exception Monitor
+  - HTTPMon
+  - Third-party monitoring tools  
 
-    =======================
+    - SiteScope by Mercury Interactive Corporation
+    - AppManager by NetIQ  
+    - WhatsUp Gold by Ipswitch  
 
-    In Unicast Mode, NLB modifies the Network Adapter's MAC address to Cluster MAC. Now, there's only one MAC Address available in cluster - that is Cluster MAC and this MAC address has to be same on all cluster hosts. Network Redirector can't forward the request to same MAC Address if it's originating from the same source, and also host can't communicate with each other - This is the disadvantage of Unicast Mode with Single NIC. To enable hosts to talk to each other, enable either MULTICAST mode or install a second NIC.
+## Unicast Mode with Single NIC  
+
+In Unicast Mode, NLB modifies the Network Adapter's MAC address to Cluster MAC. Now, there's only one MAC Address available in cluster - that is Cluster MAC and this MAC address has to be same on all cluster hosts. Network Redirector can't forward the request to same MAC Address if it's originating from the same source, and also host can't communicate with each other - This is the disadvantage of Unicast Mode with Single NIC. To enable hosts to talk to each other, enable either MULTICAST mode or install a second NIC.
 
 - You may get "No interface is available to configure load balancing" when using network load balancing manager. You get this error if you've imaged a server or copied to virtual machine. All network GUIDs will be same. You need to reinstall the network adapter from device manager to overcome this problem.
 - While configuring NLB through NLB Manager and you've deleted the host from the cluster. If that status of that still shows pending for a long time, then manually disable the NLB in host. It would disappear from the Manager.
@@ -155,14 +150,16 @@ This article has information about Network Load Balancing - a Microsoft Clusteri
 - Heartbeat messages are transmitted over NLB Enabled NIC always whether you're operating cluster in Unicast or Multicast mode.
 - When an application running on a host dies or stop, the NLB will keep forwarding the requests to that server because NLB doesn't monitor the state of the application.
 - Only Windows 2003 and later versions can be configured by the NLB Manager. However, you can manage previous versions of Windows but can't configure them using NLB Manager.
-- Remote control for NLB uses UDP port 2504. 
+- Remote control for NLB uses UDP port 2504.  
 
-- **Windows 2008 Network Load Balancing Enhancements:**  
-
-    ============================================
+## Windows 2008 Network Load Balancing Enhancements  
 
 - There's a support fo IPV6 in Windows server 2008 for NLB. An IPV6 host can join NLB node.
 - Multiple Dedicated IP Addresses are support in Windows Server 2008 for NLB.
 - Supports rolling upgrade from Windows 2003 to Windows 2008.
 - Supports for Unattended NLB Installation
 - Supports for NLB in server Core also.
+
+## Community Solutions Content Disclaimer
+
+Microsoft corporation and/or its respective suppliers make no representations about the suitability, reliability, or accuracy of the information and related graphics contained herein. All such information and related graphics are provided "as is" without warranty of any kind. Microsoft and/or its respective suppliers hereby disclaim all warranties and conditions with regard to this information and related graphics, including all implied warranties and conditions of merchantability, fitness for a particular purpose, workmanlike effort, title and non-infringement. You specifically agree that in no event shall Microsoft and/or its suppliers be liable for any direct, indirect, punitive, incidental, special, consequential damages or any damages whatsoever including, without limitation, damages for loss of use, data or profits, arising out of or in any way connected with the use of or inability to use the information and related graphics contained herein, whether based on contract, tort, negligence, strict liability or otherwise, even if Microsoft or any of its suppliers has been advised of the possibility of damages.

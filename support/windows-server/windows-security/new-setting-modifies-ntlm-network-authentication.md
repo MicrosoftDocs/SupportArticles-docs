@@ -1,5 +1,5 @@
 ---
-title: New setting modifies NTLM network authentication
+title: NTLM network authentication changes
 description: Describes new behavior in Windows Server 2003 SP1 that affects NTLM password changes. After you install the service pack, domain users can change a password and still use their old password to authenticate. This setting can be changed in the registry.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -26,7 +26,7 @@ Beginning with Microsoft Windows Server 2003 Service Pack 1 (SP1) there is a cha
 
 The goal of this change is to allow background processes such as services to continue running for some time until an administrator has the opportunity to update the credentials for the new password.
 
-## More information
+## NTLM network authentication behavior
 
 To reliably support network access for NTLM network authentication in distributed environments, the NTLM network authentication behavior is as follows:
 
@@ -34,22 +34,24 @@ To reliably support network access for NTLM network authentication in distribute
 - The extension of the password lifetime period applies only to network access by using NTLM. Interactive logon behavior is unchanged. This behavior does not apply to accounts that are hosted on stand-alone servers or on member servers. Only domain users are affected by this behavior.
 - The lifetime period of the old password can be configured by editing the registry on a domain controller. No restart is required for this registry change to take effect.
 
-### How to change the lifetime period of an old password
+## Change the lifetime period of an old password
 
 > [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
+> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).  
 
-To change the lifetime period of an old password, add a DWORD entry that is named OldPasswordAllowedPeriod to the following registry subkey on a domain controller:
- `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa`  
+To change the lifetime period of an old password, add a DWORD entry that is named *OldPasswordAllowedPeriod* to the following registry subkey on a domain controller:
+
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa`  
 
 To do this, follow these steps:
 
 1. Click **Start**, click **Run**, type regedit, and then click **OK**.
 2. Locate and then click the following registry subkey:
- `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa`  
+
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa`  
 
 3. On the **Edit** menu, point to **New**, and then click **DWORD Value**.
-4. Type OldPasswordAllowedPeriod as the name of the DWORD, and then press ENTER.
+4. Type *OldPasswordAllowedPeriod* as the name of the DWORD, and then press ENTER.
 5. Right-click **OldPasswordAllowedPeriod**, and then click **Modify**.
 6. In the **Value data** box, type the value in minutes that you want to use, and then click **OK**.
 

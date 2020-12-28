@@ -1,5 +1,5 @@
 ---
-title: New SMB 3.0 features in the Windows Server 2012 file server
+title: New SMB file server 3.0 features
 description: Describes new features in the next version of the Server Message Block (SMB) protocol, SMB 3.0. Windows Server 2012 introduced SMB 3.0.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,8 +17,8 @@ ms.technology: HighAvailability
 
 This article describes new features of the Server Message Block (SMB) 3.0 protocol.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2709568
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2709568
 
 ## Summary
 
@@ -52,7 +52,7 @@ SMB 1.0- and SMB 2.x-capable clients will be able to connect to, and access, sha
 
 Both the SMB client and SMB server must support SMB 3.0 to take advantage of the SMB Scale Out feature.
 
-SMB 1.0 clients don't contain the required client functionality to access SMB scale-out file shares and will receive an "Access Denied" error message when they try to connect to a scale-out file share.
+SMB 1.0 clients don't contain the required client functionality to access SMB scale-out file shares and will receive an **Access Denied** error message when they try to connect to a scale-out file share.
 
 SMB scale-out file shares are always configured so that the Continuously Available property is set. SMB 2.x clients will be able to connect to SMB scale-out file shares but won't benefit from the SMB Transparent Failover functionality.
 
@@ -82,4 +82,4 @@ SMB PowerShell management cmdlets were introduced in Windows Server 2012 and in 
 
 ## References
 
-For more information about the common errors you may experience with SMB 3.0, go to the following Microsoft Knowledge Base article: [2686098](https://support.microsoft.com/help/2686098)"System error 2148073478," "extended error," or "Invalid Signature" error on SMB connections in Windows 8 or Windows Server 2012
+For more information about the common errors you may experience with SMB 3.0, see [/troubleshoot/windows-server/networking/error-messages-smb-connections](https://support.microsoft.com/help/2686098).

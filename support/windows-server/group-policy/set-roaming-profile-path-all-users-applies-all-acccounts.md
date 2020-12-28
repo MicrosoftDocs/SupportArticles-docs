@@ -1,5 +1,5 @@
 ---
-title: Set roaming profile path for all users logging onto this computer Group Policy setting also applies to local user accounts
+title: Set roaming profile path for all users
 description: Describes the behavior where the Set roaming profile path for all users logging onto this computer Group Policy setting applies to all user accounts including local user accounts because Group Policy will override the local computer policy.
 ms.date: 09/21/2020
 author: Deland-Han
@@ -17,7 +17,7 @@ ms.technology: GroupPolicy
 
 This article describes the behavior where the **Set roaming profile path for all users logging onto this computer** Group Policy setting applies to all user accounts including local user accounts because Group Policy will override the local computer policy.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 958736
 
 ## Symptoms
@@ -33,9 +33,9 @@ This behavior is expected because the **Set roaming profile path for all users l
 > [!IMPORTANT]
 > Consider the following scenario. You set up a profile on a Windows 2008 member server. The profile includes some important settings. In this scenario, if you apply the Set roaming profile path for all users logging onto this computer Group Policy setting, you lose your current profile. Additionally, you are assigned a default temporary profile.
 
-This behavior occurs because the Group Policy setting sets a roaming profile for all users even though the users are local to the member server. In the Windows registry, a registry value that is named CentralProfile in the following registry subkey is used to set the share path of the roaming profile that is mentioned in the Group Policy for local users: 
+This behavior occurs because the Group Policy setting sets a roaming profile for all users even though the users are local to the member server. In the Windows registry, a registry value that is named CentralProfile in the following registry subkey is used to set the share path of the roaming profile that is mentioned in the Group Policy for local users:  
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\<userSID>\CentralProfile`  
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows  NT\CurrentVersion\ProfileList\<userSID>\CentralProfile`  
 
 > [!NOTE]
 > The \<userSID> placeholder specifies the security identifier (SID) of the user.
@@ -53,10 +53,10 @@ The **Set path for TS Roaming User Profile** Group Policy setting lets you speci
 
 By default, Terminal Services stores all user profiles locally on the terminal server. You can use the **Set path for TS Roaming User Profile** Group Policy setting to specify a network share where user profiles can be centrally stored. When profiles are centrally stored, users can access the same profile for sessions on all terminal servers that are configured to use the network share for user profiles.
 
-Notes 
-
-- The roaming user profiles that are enabled by the **Set path for TS Roaming User Profile** Group Policy setting apply only to Terminal Services connections. You may also have a Windows roaming user profile that is configured. The Terminal Services roaming user profile always takes precedence in a Terminal Services session.
-- If you configure the **Set path for TS Roaming User Profile** Group Policy setting, each user who logs on by using a terminal session uses the path that is specified as the roaming profile location.
+> [!Note]  
+>
+> - The roaming user profiles that are enabled by the **Set path for TS Roaming User Profile** Group Policy setting apply only to Terminal Services connections. You may also have a Windows roaming user profile that is configured. The Terminal Services roaming user profile always takes precedence in a Terminal Services session.
+> - If you configure the **Set path for TS Roaming User Profile** Group Policy setting, each user who logs on by using a terminal session uses the path that is specified as the roaming profile location.
 
 ### Set roaming profile path for all users logging onto this computer
 
@@ -66,13 +66,14 @@ To use the **Set roaming profile path for all users logging onto this computer**
 
 If you enable the **Set roaming profile path for all users logging onto this computer** Group Policy setting, all users who log on to the computer use the roaming profile path that is specified in the Group Policy setting. This behavior is by design.
 
-Notes 
-
-- You have to make sure that you have set the appropriate security on the folder to let all users access the profile.
-- If you use a local user account, the profile path may fail because of lack of permissions.
-- There are four ways to configure a roaming profile for a user. Windows reads profile configuration in the following order, and Windows uses the first configured setting that it reads:
-  - The Terminal Services roaming profile path that is specified by Terminal Services policy
-  - The Terminal Services roaming profile path that is specified by the user object
-  - A per-computer roaming profile path that is specified in the **Set roaming profile path for all users logging onto this computer** Group Policy setting
-  - A per-user roaming profile path that is specified in the user object
-- If you configure the **Set roaming profile path for all users logging onto this computer** Group Policy setting, each user who logs on to the member server uses the path that is specified as the roaming profile location.
+> [!Note]  
+>
+> - You have to make sure that you have set the appropriate security on the folder to let all users access the profile.
+> - If you use a local user account, the profile path may fail because of lack of permissions.
+> - There are four ways to configure a roaming profile for a user. Windows reads profile configuration in the following order, and Windows uses the first configured setting that it reads:  
+>
+>   - The Terminal Services roaming profile path that is specified by Terminal Services policy  
+>   - The Terminal Services roaming profile path that is specified by the user object  
+>   - A per-computer roaming profile path that is specified in the **Set roaming profile path for all users logging onto this computer** Group Policy setting  
+>   - A per-user roaming profile path that is specified in the user object
+> - If you configure the **Set roaming profile path for all users logging onto this computer** Group Policy setting, each user who logs on to the member server uses the path that is specified as the roaming profile location.

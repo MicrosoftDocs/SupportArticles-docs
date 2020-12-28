@@ -1,5 +1,5 @@
 ---
-title: New registry entry for controlling the TCP Acknowledgment (ACK) behavior in Windows
+title: New registry entry for controlling TCP ACK
 description: Introduces the TcpAckFrequency, a new registry entry that determines the number of TCP acknowledgments (ACKs).
 ms.date: 09/21/2020
 author: Deland-Han
@@ -22,11 +22,11 @@ _Original KB number:_ &nbsp; 328890
 
 ## Summary
 
-**TcpAckFrequency** is a new registry entry in Microsoft Windows XP and Microsoft Windows Server 2003 that determines the number of TCP acknowledgments (ACKs) that will be outstanding before the delayed ACK timer is ignored.
+**TcpAckFrequency** is a registry entry that determines the number of TCP acknowledgments (ACKs) that will be outstanding before the delayed ACK timer is ignored.
 
 ## More information
 
-As specified in RFC 1122, TCP uses delayed acknowledgments to reduce the number of packets that are sent on the media. Instead of sending an acknowledgment for each TCP segment received, TCP in Windows 2000 and later takes a common approach to implementing delayed acknowledgments. As data is received by TCP on a particular connection, it sends an acknowledgment back only if one of the following conditions is true:
+As specified in RFC 1122, TCP uses delayed acknowledgments to reduce the number of packets that are sent on the media. Instead of sending an acknowledgment for each TCP segment received, TCP in Windows takes a common approach to implementing delayed acknowledgments. As data is received by TCP on a particular connection, it sends an acknowledgment back only if one of the following conditions is true:
 
 - No acknowledgment was sent for the previous segment received.
 - A segment is received, but no other segment arrives within 200 milliseconds for that connection.
@@ -45,8 +45,6 @@ Entry: **TcpAckFrequency**
 Value Type: REG_DWORD, number  
 Valid Range: 0-255  
 Default: 2  
-Description: Specifies the number of ACKs that will be outstanding before the delayed ACK timer is ignored. Microsoft does not recommend changing the default value without careful study of the environment. For more information, visit the following Microsoft Web page:  
-
-[https://technet2.microsoft.com/WindowsServer/en/library/823ca085-8b46-4870-a83e-8032637a87c81033.mspx?mfr=true](https://technet2.microsoft.com/windowsserver/en/library/823ca085-8b46-4870-a83e-8032637a87c81033.mspx?mfr=true) 
+Description: Specifies the number of ACKs that will be outstanding before the delayed ACK timer is ignored. Microsoft does not recommend changing the default value without careful study of the environment.
 
 If you set the value to 1, every packet is acknowledged immediately because there's only one outstanding TCP ACK as a segment is just received. The value of 0 (zero) isn't valid and is treated as the default, 2. The only time the ACK number is 0 when a segment isn't received and the host isn't going to acknowledge the data.

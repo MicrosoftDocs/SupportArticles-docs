@@ -28,6 +28,10 @@
       href: deploy-language-pack.md
     - name: Deployment Type changes are deployed unexpectedly
       href: deployment-type-changes-deployed-unexpectedly.md
+    - name: Troubleshoot Microsoft Store for Business and Education integration
+      href: troubleshoot-microsoft-store-for-business-integration.md
+    - name: Troubleshooting tips for application deployments
+      href: troubleshoot-application-deployment.md
 - name: Client installation and assignment
   items:
     - name: Can't install client in Windows Server 2008 SP2
@@ -172,6 +176,10 @@
       href: recommended-antivirus-exclusions.md
     - name: Support policies for Azure Virtual Machines
       href: support-policies-for-azure-virtual-machines.md
+- name: Microsoft Deployment Toolkit (MDT)
+  items:
+    - name: Troubleshooting reference for MDT
+      href: troubleshooting-reference.md
 - name: Mobile device management
   items:
     - name: Call to HttpSendRequestSync failed for port 443
@@ -280,6 +288,8 @@
           href: central-administration-site-setup-fails.md
     - name: Site system roles installation and operations
       items:
+        - name: Connectivity issues when the DigiCert Global Root G2 root cert is not installed
+          href: connectivity-issues-digicert-global-root-g2-not-installed.md
         - name: Enable MFA for SMS Provider calls
           href: enable-mfa-for-sms-provider-calls.md
         - name: HTTP Error 500.19
@@ -380,8 +390,8 @@
           href: high-network-bandwidth-usage.md
         - name: Optimize WSUS client performance
           href: optimize-wsus-client-performance.md
-        - name: WSUS console crashes
-          href: wsus-console-crashes.md
+        - name: The spDeleteUpdate stored procedure runs slowly
+          href: spdeleteupdate-slow-performance.md          
         - name: Troubleshoot issues with WSUS client agents
           href: troubleshoot-issues-with-wsus-client-agents.md
         - name: Troubleshoot WSUS connection failures
@@ -392,8 +402,12 @@
           href: wsus-and-windows-update-agent-diagnostics.md
         - name: WSUS best practices
           href: windows-server-update-services-best-practices.md
+        - name: WSUS client computers restart without any notification
+          href: wsus-client-computers-restart-automatically.md
         - name: WSUS client takes too long to finish an update scan
           href: wsus-client-long-time-finish-update-scan.md
+        - name: WSUS console crashes
+          href: wsus-console-crashes.md
         - name: WSUS maintenance guide
           href: wsus-maintenance-guide.md
         - name: WSUS sync fails in Windows Server 2008 R2

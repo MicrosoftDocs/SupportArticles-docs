@@ -40,7 +40,7 @@ Level: Warning
 User: N/A  
 Task Category: Security  
 Keywords: Classic  
-Computer: win7-1.contoso.com  
+Computer: `win7-1.contoso.com`  
 
 A method call to an object in a COM+ application was rejected because the caller isn't properly authorized to make this call. The COM+ application is configured to use Application and Component level access checks, and enforcement of these checks is currently enabled. The remainder of this message provides information about the component method that the caller attempted to invoke and the identity of the caller.SVC/Lvl/Imp = 10/6/3, Identity=<\<DOMAIN\Username>>
 
@@ -50,13 +50,7 @@ This is a known issue with USMT when migrating from x86 to x64.
 
 ## Resolution
 
-Solution 
-
-This issue is fixed in USMT 5.0. The recommended solution is to use USMT 5.0 for migrations instead of USMT 4.0. USMT 5.0 is part of the Windows Assessment and Deployment Kit (ADK):
-
-[Windows Assessment and Deployment Kit (ADK) for Windows 8](https://www.microsoft.com/download/details.aspx?id=30652) 
-
-Workaround 
+Workaround  
 
 To work around the issue in USMT 4.0, you must specify a config.xml file and set the "Microsoft-Windows-COM-ComPlus-Setup" to not migrate.
 
@@ -66,9 +60,9 @@ scanstate.exe /genconfig:config.xml /i:migdocs.xml /i:migapp.xml
 
 For more information about USMT and config.xml files, see the following Microsoft TechNet Article:
 
- [USMT .xml Files](https://technet.microsoft.com/library/cc766203%28ws.10%29.aspx#config) 
+ [USMT .xml Files](https://technet.microsoft.com/library/cc766203%28ws.10%29.aspx#config)  
 
-Once you've generated the config.xml file, you must edit the following section, depending on source operating system (OS):
+Once you've generated the config.xml file, you must edit the following section, depending on source operating system (OS):  
 
 Windows XP - \<component displayname=" Microsoft-Windows-COM-ComPlus-Setup-DL " migrate=" no "  
 
@@ -95,28 +89,30 @@ Dir
 Verify that R000000000001.clb is present. Then, copy it from the current directory to the root of the C drive by running this command:
 
 ```console
-copy R000000000001.clb C:\R000000000001.clb 
+copy R000000000001.clb C:\R000000000001.clb  
 ```
 
-Next, copy, and paste the following VB script (between the dashed lines) to a.txt file and rename it COM_Restore.vbs (make sure to change the .txt file extension to .vbs). 
+Next, copy, and paste the following VB script (between the dashed lines) to a.txt file and rename it COM_Restore.vbs (make sure to change the .txt file extension to .vbs).  
 
-> =============================================================================
+```vbscript
+ =============================================================================
 Dim objComCatalog  
->
-> Set objComCatalog = CreateObject("COMAdmin.COMAdminCatalog")  
+
+Set objComCatalog = CreateObject("COMAdmin.COMAdminCatalog")  
 objComCatalog.RestoreREGDB "C:\R000000000001.clb"  
->
-> MsgBox "Backup Restored!"  
-> Set objComCatalog = Nothing  
->
-> =============================================================================
 
-Save the script to the root of C:\\. 
+ MsgBox "Backup Restored!"  
+Set objComCatalog = Nothing  
 
-From the command prompt, run this command: 
+=============================================================================
+```
+
+Save the script to the root of C:\\.  
+
+From the command prompt, run this command:  
 
 ```console
- C:\cscript COM_Restore.vbs 
+ C:\cscript COM_Restore.vbs  
 ```
 
 Once you see the pop-up message stating that the backup is restored, restart the computer (this is required).

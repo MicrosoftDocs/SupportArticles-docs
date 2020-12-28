@@ -39,19 +39,19 @@ Keywords: Classic
 User: N/A  
 Computer: computer name  
 Description:  
- The Network Device Enrollment Service cannot be started (0x800700ea). More data is available. 
+The Network Device Enrollment Service cannot be started (0x800700ea). More data is available.
 
 ## Workaround
 
 A workaround for this issue is to change the order of the handlers for the Microsoft Simple Certificate Enrollment Protocol (MSCEP) applications in IIS so that the ExtensionlessUrlHandler-ISAPI-4.0_64bit handler comes after the StaticFile handler. To do so, you can follow the steps below:
 
-1) Install and configure NDES (and CEP/CES).
-2) Open IIS.
-3) Select "Default Web Site". 
-4) Click "View Applications" in the action panel on the right.
-5) Double-click the mscep application.
-6) Double-click "Handler Mappings".
-7) Click "View Ordered List..." in the action panel.
-8) Select ExtensionlessUrlHandler-ISAPI-4.0_64bit and move it down so it is below StaticFile.
-9) Repeat steps 6-8 for the mscep_admin application.
-10) Restart IIS.
+1. Install and configure NDES (and CEP/CES).
+2. Open IIS.
+3. Select "Default Web Site".
+4. Click "View Applications" in the action panel on the right.
+5. Double-click the mscep application.
+6. Double-click "Handler Mappings".
+7. Click "View Ordered List..." in the action panel.
+8. Select ExtensionlessUrlHandler-ISAPI-4.0_64bit and move it down so it is below StaticFile.
+9. Repeat steps 6-8 for the mscep_admin application.
+10. Restart IIS.

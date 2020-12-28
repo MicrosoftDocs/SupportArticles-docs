@@ -36,8 +36,8 @@ This behavior is by design. Windows considers the fact that time does not travel
 
 ## Resolution
 
-If you have to change the calendar date on your computer, use the Windows settings to make the change instead of changing the date in the BIOS. This change will be reflected across multiple restarts.
+If you have to change the calendar date on your computer, use the Windows settings to make the change instead of changing the date in the BIOS. This change will be reflected across multiple restarts.
 
 ## More information
 
-This behavior is new to Windows 8 and Windows Server 2012. Additionally, this behavior does not affect changes to the calendar date in the BIOS if the new date is later than the date that Windows reports.
+This behavior is new to Windows 8 and Windows Server 2012. Additionally, this behavior does not affect changes to the calendar date in the BIOS if the new date is later than the date that Windows reports.

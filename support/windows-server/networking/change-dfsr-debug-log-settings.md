@@ -17,8 +17,8 @@ ms.technology: Networking
 
 This article describes the way to change these DFSR debug log settings is via the WMI Command-line interface WMIC.
 
-_Original product version:_ &nbsp;Windows Server 2003 Service Pack 2  
-_Original KB number:_ &nbsp;958893
+_Original product version:_ &nbsp; Windows Server 2003  
+_Original KB number:_ &nbsp; 958893
 
 ## Symptoms
 
@@ -60,7 +60,8 @@ Default: %windir%\debug
 
 WMIC syntax: wmic /namespace:\\\root\microsoftdfs path dfsrmachineconfig set debuglogfilepath="d:\dfsrlogs"
 
-NOTE: The path must be created manually before, if not available the default value %windir%\debug will be used.
+> [!NOTE]
+> The path must be created manually before, if not available the default value %windir%\debug will be used.
 
 SETTING: Enable Debug Logging
 
@@ -132,7 +133,8 @@ Value Type: REG_DWORD
 
 Value Data: 1
 
-NOTE: Although the registry value doesn't exist by default, the following events are suppressed by default unless verbose event logging is enabled:
+> [!NOTE]
+> Although the registry value doesn't exist by default, the following events are suppressed by default unless verbose event logging is enabled:
 
 2002 EVENT_DFSR_VOLUME_INITIALIZED
 

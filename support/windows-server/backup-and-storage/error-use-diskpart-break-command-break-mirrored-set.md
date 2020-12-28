@@ -1,5 +1,5 @@
 ---
-title: Error message when you use the DiskPart break command to break a mirrored set
+title: Error message when you use the DiskPart break command
 description: Describes an issue where an error occurs when you use the DiskPart break command to break a mirrored set.
 ms.date: 09/21/2020
 author: Deland-Han
@@ -17,7 +17,7 @@ ms.technology: BackupStorage
 
 This article describes an issue where an error occurs when you use the DiskPart break command to break a mirrored set.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 331494
 
 ## Symptoms
@@ -45,10 +45,10 @@ For example, select the mirrored volume, issue the "detail volume" command, then
 ```console
 diskpart> List Volume
 
-Volume ### Ltr Label Fs Type Size Status Info
+Volume ###  Ltr  Label       Fs    Type       Size    Status    Info
  ---------- --- ----------- ----- ---------- ------- --------- --------
- Volume 0 D data_vol NTFS Mirror 737 KB Failed Rd
- Volume 1 C system NTFS Simple 3000 MB Boot
+ Volume 0   D   data_vol    NTFS  Mirror     737 KB   Failed Rd
+ Volume 1   C   system      NTFS  Simple     3000 MB           Boot
 
 diskpart> select volume 0
 
@@ -56,23 +56,20 @@ Volume 0 is the selected volume.
 
 Diskpart> detail volume
 
-Disk ### Status Size Free Dyn Gpt
- ---------- ------- ------- --- --- ---
- Disk 1 Online 1023 MB 737 KB *
- Disk M0 Missing 1022 MB 0 B *
+Disk ###     Status  Size   Free   Dyn Gpt
+ ---------- ------- ------- ---    --- ---
+ Disk 1     Online  1023 MB 737 KB *
+ Disk M0    Missing 1022 MB 0 B    *
 ```
 
-In this example, the correct command to break the mirrored volume is:
-
-```console
-Diskpart> break disk=m0 nokeep 
-```
+In this example, the correct command to break the mirrored volume is:  
+`Diskpart> break disk=m0 nokeep`
 
 After you issue this command, the mirror on Disk 1 is converted to a simple volume, and the reference to the missing mirror is deleted from the Logical Disk Management (LDM) database.
 
 ## Status
 
-This behavior is by design. 
+This behavior is by design.  
 
 ## More information
 

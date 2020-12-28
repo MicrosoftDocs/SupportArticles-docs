@@ -49,6 +49,10 @@
       tocHref: /troubleshoot/webapps/
       topicHref: /troubleshoot/webapps/welcome-webapps
 
+    - name: SQL Server
+      tocHref: /troubleshoot/sql/
+      topicHref: /troubleshoot/sql/welcome-sql-server
+
     - name: Microsoft Identity Manager
       tocHref: /troubleshoot/microsoft-identity-manager/
       topicHref: /troubleshoot/microsoft-identity-manager/welcome-identity-manager
@@ -103,6 +107,9 @@
       - name: General
         tocHref: /troubleshoot/azure/general/
         topicHref: /troubleshoot/azure/general/welcome-general
+      - name: Virtual Machines
+        tocHref: /troubleshoot/azure/virtual-machines/
+        topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
 
 
     - name: Previous versions

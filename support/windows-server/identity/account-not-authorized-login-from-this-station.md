@@ -1,5 +1,5 @@
 ---
-title: Error message The account is not authorized to login from this station
+title: Account is not authorized to login
 description: Discusses an issue where an error occurs when you try to join a Windows 2000-based computer to a Microsoft Windows NT 4.0-based domain.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -17,12 +17,13 @@ ms.technology: ActiveDirectory
 
 This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).
 
-_Original product version:_ &nbsp;Windows 2000  
-_Original KB number:_ &nbsp;281648
+_Original product version:_ &nbsp; Windows 2000  
+_Original KB number:_ &nbsp; 281648
 
 ## Symptoms
 
 When you attempt to join a Windows 2000-based computer to a Microsoft Windows NT 4.0-based domain, you may receive the following error message:
+
 > The following error occurred attempting to join the domain "domainname": The account is not authorized to login from this station.
 
 ## Cause

@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 922836
 
 ## Summary
 
-*In the Active Directory directory service for Microsoft Windows Server 2000 and for Microsoft Windows Server 2003, it is difficult to prevent an authenticated user from reading an attribute. Generally, if the user requests READ_PROPERTY permissions for an attribute or for its property set, read access is granted. Default security in Active Directory is set so that authenticated users have read access to all attributes. This article discusses how to prevent read access for an attribute in Windows Server 2003 Service Pack 1 (SP1).*  
+In the Active Directory directory service for Microsoft Windows Server 2000 and for Microsoft Windows Server 2003, it is difficult to prevent an authenticated user from reading an attribute. Generally, if the user requests READ_PROPERTY permissions for an attribute or for its property set, read access is granted. Default security in Active Directory is set so that authenticated users have read access to all attributes. This article discusses how to prevent read access for an attribute in Windows Server 2003 Service Pack 1 (SP1).  
 
 ## More information
 
@@ -68,19 +68,23 @@ Generic and object-specific access control entries are basically the same. What 
 
 When you use the confidential attributes feature, CONTROL_ACCESS permission is granted by assigning a generic access control entry to a user. If CONTROL_ACCESS permission is granted by assigning an object-specific access control entry, the user will only have CONTROL_ACCESS permission to the confidential attribute.
 
-The following permissions are granted when you use a generic access control entry:
+The following permissions are granted when you use a generic access control entry:  
+
 - All Extended Rights
 - Allowed to Authenticate
 - Change Password
 - Receive As
 - Reset Password
-- Send AsPermissions that are granted when you use a generic access control entry may provide more access than is desired over the whole object. If this is a concern, you can set an object-specific access control entry on the object so that the access control entry applies only to the confidential attribute. When you use object-specific access control entries, you can control the property or the property set to which the access control entry applies.
+- Send As  
+
+Permissions that are granted when you use a generic access control entry may provide more access than is desired over the whole object. If this is a concern, you can set an object-specific access control entry on the object so that the access control entry applies only to the confidential attribute. When you use object-specific access control entries, you can control the property or the property set to which the access control entry applies.
 
 The user interface in Windows Server 2003 does not expose Control_Access permissions. You can use the Dsacls.exe tool to set Control_Access permissions by assigning a generic access control entry. However, you cannot use this tool to assign an object-specific access control entry. The only tool that can set Control_Access permissions by assigning an object-specific access control entry is the Ldp.exe tool.
 
 > [!NOTE]
-> An in-depth discussion of access control is beyond the scope of this article. For more information about access control, visit the following Microsoft Web sites: [https://msdn.microsoft.com/library/aa374860(VS.85).aspx ](https://msdn.microsoft.com/library/aa374860%28vs.85%29.aspx) 
- [https://technet.microsoft.com/library/cc749433.aspx](https://technet.microsoft.com/library/cc749433.aspx) 
+> An in-depth discussion of access control is beyond the scope of this article. For more information about access control, visit the following Microsoft Web sites:  
+[Access Control (Authorization)](https://msdn.microsoft.com/library/aa374860%28vs.85%29.aspx)  
+[Identity Management and Access Control](https://technet.microsoft.com/library/cc749433.aspx)  
 
 ### How to use inheritance
 
@@ -90,9 +94,10 @@ By default, inheritance is enabled for all organizational units (OU) and for all
 
 ### How to create a confidential attribute
 
-
 1. Determine what attribute to mark as confidential, or add an attribute that you want to make confidential.
-2. Grant the appropriate users Control_Access permissions so the users can view the attribute data. Tools such as the Ldp.exe tool and the Adsiedit.msc tool can be used to create a confidential attribute. .ldf files are typically used to extend the schema. These files can also be used to mark an attribute as confidential. The files that you create for an implementation should be tuned during the testing phase so that you know exactly what you are adding to the schema when you roll out to production. .ldf files help prevent errors.
+2. Grant the appropriate users Control_Access permissions so the users can view the attribute data.  
+
+Tools such as the Ldp.exe tool and the Adsiedit.msc tool can be used to create a confidential attribute. .ldf files are typically used to extend the schema. These files can also be used to mark an attribute as confidential. The files that you create for an implementation should be tuned during the testing phase so that you know exactly what you are adding to the schema when you roll out to production. .ldf files help prevent errors.
 
 The following sample .ldf files can be used to do the following:
 
@@ -107,43 +112,37 @@ The following sample .ldf files can be used to do the following:
 
 The following code adds an attribute to the schema and then marks the attribute as confidential.
 
-```console
-dn: CN=ConfidentialAttribute-LDF,CN=Schema,Cn=Configuration,DC=domain,DC=com
-changetype: add
-objectClass: attributeSchema
-lDAPDisplayName: ConfidentialAttribute
-adminDescription: This attribute stores user's confidential data
-attributeID: 1.2.840.113556.1.xxxx.xxxx.1.x
-attributeSyntax: 2.5.5.12
-oMSyntax: 64
-isSingleValued: TRUE
-showInAdvancedViewOnly: TRUE
-searchFlags: 128
-
-dn:
-changeType: modify
-add: schemaupdatenow
-schemaupdatenow: 1
--
-
-```
+> dn: CN=ConfidentialAttribute-LDF,CN=Schema,Cn=Configuration,DC=domain,DC=com  
+changetype: add  
+objectClass: attributeSchema  
+lDAPDisplayName: ConfidentialAttribute  
+adminDescription: This attribute stores user's confidential data  
+attributeID: 1.2.840.113556.1.xxxx.xxxx.1.x  
+attributeSyntax: 2.5.5.12  
+oMSyntax: 64  
+isSingleValued: TRUE  
+showInAdvancedViewOnly: TRUE  
+searchFlags: 128  
+>
+> dn:  
+changeType: modify  
+add: schemaupdatenow  
+schemaupdatenow: 1  
+\-
 
 The following code adds the new attribute to the user class.
 
-```console
-dn: CN=User,CN=Schema,CN=Configuration,DC=domain,DC=com
-changetype: modify
-add: mayContain
-mayContain: ConfidentialAttribute
--
-
-dn:
-changeType: modify
-add: schemaupdatenow
-schemaupdatenow: 1
--
-
-```
+> dn: CN=User,CN=Schema,CN=Configuration,DC=domain,DC=com  
+changetype: modify  
+add: mayContain  
+mayContain: ConfidentialAttribute  
+\-  
+>
+> dn:  
+changeType: modify  
+add: schemaupdatenow  
+schemaupdatenow: 1  
+\-
 
 ### How to let non-administrative users see the attribute data
 
@@ -199,7 +198,8 @@ To use the Ldp.exe tool to obtain the searchFlags attribute value, follow these 
 8. In the list of attributes that are populated for the object, find **searchFlags** to determine the current searchFlags attribute value for that object.
 
 > [!NOTE]
-> To determine the new searchFlags attribute value, use the following formula:128 + **currentsearchFlagsattribute value** =
+> To determine the new searchFlags attribute value, use the following formula:  
+128 + **currentsearchFlagsattribute value** =
  **newsearchFlagsattribute value**.  
 
 ### How to determine whether an attribute is a base schema attribute
@@ -210,7 +210,7 @@ To determine whether an attribute is a base schema attribute, use the Ldp.exe to
 
 In the following sample Ldp.exe output, Ldp.exe identifies the systemFlags attribute value as 0x10 and as a base schema attribute. Therefore, you cannot mark this attribute as confidential.
 
->> Dn: CN=Employee-ID,CN=Schema,CN=Configuration,DC=domain,DC=com  
+> \>> Dn: CN=Employee-ID,CN=Schema,CN=Configuration,DC=domain,DC=com  
 2> objectClass: top; attributeSchema;  
 1> cn: Employee-ID;  
 1> distinguishedName: CN=Employee-ID,CN=Schema,CN=Configuration,DC=domain,DC=com;  
@@ -230,7 +230,7 @@ In the following sample Ldp.exe output, Ldp.exe identifies the systemFlags attri
 1> oMSyntax: 64 = ( OM_S_UNICODE_STRING );  
 1> searchFlags: 0x0 = ( );  
 1> lDAPDisplayName: employeeID;  
-1> name: Employee-ID; 
+1> name: Employee-ID;  
 1> objectGUID: 64fb3ed1-338f-466e-a879-595bd3940ab7;  
 1> schemaIDGUID: bf967962-0de6-11d0-a285-00aa003049e2;  
 1> systemOnly: FALSE;  
@@ -241,7 +241,7 @@ In the following sample Ldp.exe output, Ldp.exe identifies the systemFlags attri
 
 In the following sample Ldp.exe output, Ldp.exe identifies the systemFlags attribute value as 0. This attribute can be marked as confidential.
 
->> Dn: CN=Employee-Number,CN=Schema,CN=Configuration,DC=warrenw,DC=com  
+> \>> Dn: CN=Employee-Number,CN=Schema,CN=Configuration,DC=warrenw,DC=com  
 2> objectClass: top; attributeSchema;  
 1> cn: Employee-Number;  
 1> distinguishedName: CN=Employee-Number,CN=Schema,CN=Configuration,DC=warrenw,DC=com;  
@@ -267,16 +267,18 @@ In the following sample Ldp.exe output, Ldp.exe identifies the systemFlags attri
 1> schemaIDGUID: a8df73ef-c5ea-11d1-bbcb-0080c76670c0;  
 1> systemOnly: FALSE;  
 1> systemFlags: 0x0 = ( );  
-1> objectCategory: CN=Attribute-Schema,CN=Schema,CN=Configuration,DC=warrenw,DC=com; 
+1> objectCategory: CN=Attribute-Schema,CN=Schema,CN=Configuration,DC=warrenw,DC=com;  
 
 ### Object identifiers
 
-When you add an attribute or a class object to the schema, one of the required attributes is the object identifier (also known as OID). Object identifiers are used to uniquely define object classes and attributes. Make sure that your company obtains a unique object identifier to identify its attribute. Tools that generate object identifiers, such as the Oidgen.exe tool, are not supported. To obtain an object identifier from Microsoft, visit the following Microsoft Web site: [https://msdn2.microsoft.com/library/ms677620.aspx](https://msdn2.microsoft.com/library/ms677620.aspx) 
+When you add an attribute or a class object to the schema, one of the required attributes is the object identifier (also known as OID). Object identifiers are used to uniquely define object classes and attributes. Make sure that your company obtains a unique object identifier to identify its attribute. Tools that generate object identifiers, such as the Oidgen.exe tool, are not supported. To obtain an object identifier from Microsoft, visit the following Microsoft Web site:  
+[Obtaining an Object Identifier from Microsoft](https://msdn2.microsoft.com/library/ms677620.aspx)  
 
 ### Attribute syntax
 
 The attributeSyntax attribute is also required to add new objects to the schema. This attribute defines the storage representation, byte ordering, and matching rules for comparisons of property types. The syntax defines whether the attribute value must be a string, a number, or a unit of time. Each attribute of every object is associated with exactly one syntax. Make sure that you select the correct attribute syntax for the new attribute. This is especially important if you synchronize a Lightweight Directory Access Protocol (LDAP) directory with another LDAP directory. After the attribute is added to the schema, its attribute syntax cannot be changed.
 
-For more information about the attributeSyntax attribute, visit the following Microsoft Web site: [https://msdn.microsoft.com/library/ms675236(VS.85).aspx](https://msdn.microsoft.com/library/ms675236%28vs.85%29.aspx)
+For more information about the attributeSyntax attribute, visit the following Microsoft Web site:  
+[Attribute-Syntax attribute](https://msdn.microsoft.com/library/ms675236%28vs.85%29.aspx)
 
 See the [Search-Flags attribute](https://docs.microsoft.com/windows/win32/adschema/a-searchflags) for more information.

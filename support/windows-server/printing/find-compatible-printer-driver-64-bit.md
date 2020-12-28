@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Management and Configuration - Installing Print drivers
+ms.prod-support-area-path: 'Management and Configuration: Installing Print drivers'
 ms.technology: PrintFaxScan 
 ---
 # How to find a compatible printer driver for a computer that's running a 64-bit version of Windows
@@ -29,7 +29,7 @@ The information in this article may be useful if you can't obtain a WHQL signed 
 
 We recommend that you first visit the Windows Vista Compatibility Center to find links to the latest 64-bit printer drivers. Its database contains thousands of the most popular printers and you can easily search by product name, number, or brand.
 
-Visit the [Windows Vista Compatibility Center](https://www.microsoft.com/windows/compatibility/windows-vista/default.aspx).
+Visit the [Windows Vista Compatibility Center](https://www.microsoft.com/windows/compatibility/CompatCenter).
 
 If you can't find the printer drivers, follow these methods in the following order.
 

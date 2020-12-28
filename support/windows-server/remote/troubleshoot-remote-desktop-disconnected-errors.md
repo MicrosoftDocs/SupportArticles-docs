@@ -89,8 +89,8 @@ Additionally, the following event ID messages may be logged in Event Viewer on t
 
 - Event message 1  
 
-    > Event ID: 50  
-    > Event Source: TermDD  
+    > Event ID: 50  
+    > Event Source: TermDD  
     > Event Description: The RDP protocol component X.224 detected an error in the protocol stream and has disconnected the client.
 
 - Event message 2
@@ -107,14 +107,14 @@ Additionally, the following event ID messages may be logged in Event Viewer on t
 
 - Event message 4
 
-    > Event ID: 1010  
-    > Event Source: TermService  
+    > Event ID: 1010  
+    > Event Source: TermService  
     > Event Description: The terminal services could not locate a license server. Confirm that all license servers on the network are registered in WINS/DNS, accepting network requests, and the Terminal Services Licensing Service is running.
 
 - Event message 5
 
-    > Event ID: 28  
-    > Event Source: TermServLicensing  
+    > Event ID: 28  
+    > Event Source: TermServLicensing  
     > Event Description: Terminal Services Licensing can only be run on Domain Controllers or Server in a Workgroup. See Terminal Server Licensing help topic for more information.
 
 ## Resolution for Symptom 1
@@ -123,7 +123,7 @@ To resolve this problem, use the following methods, as appropriate.
 
 ### Verify Remote Desktop is enabled
 
-1. Open the **System** item in Control Panel. To start the System tool, click Start, click **Control Panel**, click **System**, and then click **OK**.
+1. Open the **System** item in Control Panel. To start the System tool, click Start, click **Control Panel**, click **System**, and then click **OK**.
 2. Under **Control Panel Home**, click **Remote settings**.
 3. Click the **Remote** tab.
 4. Under **Remote Desktop**, select either of the available options, depending on your security requirements:
@@ -270,7 +270,7 @@ To stop and start the Remote Desktop Services service, follow these steps:
 
 4. If you are prompted to restart other services, click **Yes**.
 
-5. Verify that the **Status** column for the Remote Desktop Services service displays a **Started** status. 
+5. Verify that the **Status** column for the Remote Desktop Services service displays a **Started** status. 
 
 #### Verify that the RDP port has changed
 

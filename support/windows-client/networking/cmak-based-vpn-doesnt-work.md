@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4052854
 
 ## Symptom
 
-After you upgrade Windows to Windows 10, version 1703 (Creators Update), Windows 10, version 1709 (Fall Creators Update), Windows 10, version 1803, Windows 10, version 1809, or Windows 10, version 1909, you can't start a Connection Manager Administration Kit (CMAK)-based Virtual Private Network (VPN) client.
+After you upgrade Windows to Windows 10, version 1703 (Creators Update), Windows 10, version 1709 (Fall Creators Update), Windows 10, version 1803, Windows 10, version 1809, or Windows 10, version 1909, you can't start a Connection Manager Administration Kit (CMAK)-based Virtual Private Network (VPN) client.
 
 ## Resolution
 

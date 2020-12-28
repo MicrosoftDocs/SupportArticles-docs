@@ -1,5 +1,5 @@
 ---
-title: username is unavailable
+title: Variable %username% is unavailable
 description: Resolves an issue in which username is unavailable in Windows that has OneDrive for Business installed.
 ms.date: 09/25/2020
 author: Deland-Han 
@@ -17,7 +17,7 @@ ms.technology: User Experience Virtualization (UE-V)
 
 This article provides a solution to an issue where %username% is unavailable in Windows that has OneDrive for Business installed.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4551435
 
 ## Symptoms
@@ -26,8 +26,8 @@ In a Windows installation that has OneDrive for Business installed, the **%usern
 
 ## Cause
 
-In some cases, OneDrive for Business restarts the Windows Explorer process shortly after a user logs on. When this occurs, the **%username%** variable is not inherited by the new Explorer process.
-If you deployed UE-V by using the **%username%** variable as part of the "Settings Storage" setting, the literal string will be used. So all user accounts write to the same folder. This can cause high CPU activity on the server that hosts the network share.
+In some cases, OneDrive for Business restarts the Windows Explorer process shortly after a user logs on. When this occurs, the **%username%** variable is not inherited by the new Explorer process.
+If you deployed UE-V by using the **%username%** variable as part of the "Settings Storage" setting, the literal string will be used. So all user accounts write to the same folder. This can cause high CPU activity on the server that hosts the network share.
 
 ## Resolution
 

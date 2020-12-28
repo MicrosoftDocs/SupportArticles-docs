@@ -28,8 +28,8 @@ _Original KB number:_ &nbsp; 2023704
     > Starting test: Replications  
     > Replications Check  
     > [Replications Check,\<destination DC name>] A recent replication attempt failed:  
-    > From \<source DC> to \<destination DC>  
-    > Naming Context: \<directory partition DN path>  
+    > From \<source DC> to \<destination DC>  
+    > Naming Context: \<directory partition DN path>  
     > The replication generated an error (8452):  
     > The naming context is in the process of being removed or is not replicated from the specified server.  
     > The failure occurred at \<date> \<time>.  
@@ -58,15 +58,15 @@ _Original KB number:_ &nbsp; 2023704
     DC=contoso,DC=com  
     Default-First-Site-Name\CONTOSO-DC2 via RPC  
     DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2  
-    Last attempt @ <date> <time> failed, result 8452 (0x2104):  
+    Last attempt @ <date> <time> failed, result 8452 (0x2104):  
     The naming context is in the process of being removed or is not replicated from the specified server.  
     <#> consecutive failure(s).  
-    Last success @ <date> <time>.
+    Last success @ <date> <time>.
    ```
 
 3. The **replicate now** command in Active Directory Sites and Services returns the error **The naming context is in the process of being removed or is not replicated from the specified server**.
 
-    Right-clicking on the connection object from a source DC and choosing **replicate now** fails with **The naming context is in the process of being removed or is not replicated from the specified server**. The on-screen error message text is shown below:  
+    Right-clicking on the connection object from a source DC and choosing **replicate now** fails with **The naming context is in the process of being removed or is not replicated from the specified server**. The on-screen error message text is shown below:  
 
     > Dialog title text: Replicate Now
     Dialog message text: The following error occurred during the attempt to synchronize naming context <%directory partition name%> from Domain Controller \<Source DC> to Domain Controller \<Destination DC>:
@@ -86,19 +86,19 @@ _Original KB number:_ &nbsp; 2023704
 
 ## Cause
 
-This error most commonly occurs when replication topology in a DC that is starting replication differs from the replication topology defined in the destination DCs copy of Active Directory.
+This error most commonly occurs when replication topology in a DC that is starting replication differs from the replication topology defined in the destination DCs copy of Active Directory.
 
 The error naturally occurs when the replication topology in an Active Directory forest is being modified by:
 
 - New partitions being added or removed from the forest (that is, the promotion or demotion of the first/last DC in a domain, or the addition/ removal of an application partition including default DNS application partitions)
-- The addition or removal of directory partitions on existing DCs (that is, the promotion/demotion of global catalog or addition/removal of an application partition).
-- Changes in replication topology or settings (that is, the promotion of new DCs, the demotion of existing DCs, changes to preferred/nominated bridgeheads, the building of alternate replication paths in response to replication failures or offline DCs, as well as site and site link changes).
+- The addition or removal of directory partitions on existing DCs (that is, the promotion/demotion of global catalog or addition/removal of an application partition).
+- Changes in replication topology or settings (that is, the promotion of new DCs, the demotion of existing DCs, changes to preferred/nominated bridgeheads, the building of alternate replication paths in response to replication failures or offline DCs, as well as site and site link changes).
 
 The error can be transient in a forest undergoing the changes above until the set of source DCs and partitions that each destination DC replicates from has inbound replicated by triggering replication operations.
 
 The error can be persistent when replication failures prevent the end-to-end replication of topology changes in the forest.
 
-The error is most commonly seen in replication scenarios triggered by REPADMIN.EXE remotely (especially `/SYNCALL`) or the replicate now command in DSSITE.MSC where the copy of Active Directory on the DC triggering replication has a different list of source DCs that a destination DC replicates from partitions than what the destination DC has defined in its copy of Active Directory.
+The error is most commonly seen in replication scenarios triggered by REPADMIN.EXE remotely (especially `/SYNCALL`) or the replicate now command in DSSITE.MSC where the copy of Active Directory on the DC triggering replication has a different list of source DCs that a destination DC replicates from partitions than what the destination DC has defined in its copy of Active Directory.
 
 Windows 2000 domain controllers are particularly prone to this error during GC demotion as they're slow to remove objects from read-only partitions. Object removal during GC demotion improved dramatically on Windows Server 2003 and later OS versions.
 
@@ -116,9 +116,9 @@ In summary, Error 8452 happens if anyone of the following is true:
 
 ## Resolution
 
-1. Wait. As mentioned, this condition is usually transient and doesn't normally warrant troubleshooting.
+1. Wait. As mentioned, this condition is usually transient and doesn't normally warrant troubleshooting.
 
-    If replication topology changes of the type listed in the Cause section of this article are taking place in your Active Directory forest, wait for the error condition to correct itself with time.  
+    If replication topology changes of the type listed in the Cause section of this article are taking place in your Active Directory forest, wait for the error condition to correct itself with time.  
 
 2. Avoid the use of the `repadmin /syncall` command and equivalents until domain controllers starting replication and the destination DCs being replicated to agree source DCs and directory partitions being replicated.
 
@@ -162,7 +162,7 @@ As in the `REPAMIN /SYNCALL` example, there are also two cases where we might ob
 
 Case 1: Suppose we change the replication topology on DC2 to make it inbound replicate from DC4. The new replication topology is DC1 <- DC2 <- DC4. Until knowledge of this topology change outbound replicates to DC1, the topology on DC1 is still the old topology of DC1 <- DC2 <- DC3.
 
-Starting the Active Directory Sites and Services UI focused on DC1s copy of Active Directory still shows that DC2 has an inbound connection object from source DC3. Right-clicking on DCs inbound connection object from DC2 and choosing **replicate now** will start a DC2 <- DC3 replication on DC2. However, the KCC on DC2 already removed the replica link inbound replicating to DC2 from DC3 and created a replica link to DC2. Because the replication attempt DC2 <-> DC2 can't be executed, the request fails error 8452.
+Starting the Active Directory Sites and Services UI focused on DC1s copy of Active Directory still shows that DC2 has an inbound connection object from source DC3. Right-clicking on DCs inbound connection object from DC2 and choosing **replicate now** will start a DC2 <- DC3 replication on DC2. However, the KCC on DC2 already removed the replica link inbound replicating to DC2 from DC3 and created a replica link to DC2. Because the replication attempt DC2 <-> DC2 can't be executed, the request fails error 8452.
 
 Case 2: Suppose we're removing an NC on DC3 when we right-click the connection object and select **replicate now** on DC1 to start DC2 <- DC3 replication for this NC. Because the NC on DC3 is in the process of being removed, DC3 isn't a valid replication source. So we'll see error 8452.
 

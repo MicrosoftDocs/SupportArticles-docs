@@ -1,5 +1,5 @@
 ---
-title: 80072EE6 error code when you download an update from Windows Server Update Services in Windows 7-based or Windows Server 2008 R2-based computer
+title: 80072EE6 error code when you download an update
 description: Resolve the 80072EE6 error code that occurs when you download an update from Windows Server Update Services.
 ms.data: 09/08/2020
 author: Deland-Han
@@ -17,8 +17,8 @@ ms.technology: Deployment
 
 This article helps resolve the 80072EE6 error code that occurs when you download an update from Windows Server Update Services.
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1,  Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2724184
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2724184
 
 ## Symptoms
 
@@ -41,9 +41,9 @@ For Example, `corp.contoso.com` or an IPaddress is invalid.
 To resolve this issue, follow steps below:
 
 1. Click on Start and then type gpedit.msc.
-2. Go to Computer Configuration\Administrative Templates\Windows Components\Windows Update\\.
+2. Go to `Computer Configuration\Administrative Templates\Windows Components\Windows Update\`.
 3. From the right-side pane, double-click on Specify intranet Microsoft update service location to open it.
-4. Verify that the URL includes http:// or https://. For Example, `http://corp.contoso.com` or `https://corp.contoso.comNote`.
+4. Verify that the URL includes `http://` or `https://`. For Example, `http://corp.contoso.com` or `https://corp.contoso.comNote`.
 
 ## More information
 

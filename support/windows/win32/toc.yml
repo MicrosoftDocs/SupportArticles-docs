@@ -7,6 +7,8 @@
     items:
     - name: An application fails to create a COM+ component
       href: client-application-error-create-com-plus-component.md
+    - name: Descriptions and workings of OLE threading models
+      href: descriptions-workings-ole-threading-models.md
     - name: Two DLL hosts start when a COM+ object is enabled
       href: two-dll-hosts-start-com-plus-enabled.md
     - name: VarI8FromCy produces incorrect value
@@ -61,10 +63,14 @@
       href: mix-gdi-and-gdi-plus-drawing.md
     - name: Modify printer settings by using SetPrinter
       href: modify-printer-settings-setprinter-api.md
+    - name: Modify printer settings with DocumentProperties
+      href: modify-printer-settings-documentproperties.md  
     - name: Printer device fonts
       href: printer-device-fonts.md
     - name: RAW data can't print
       href: writeprinter-raw-data-not-print.md
+    - name: S1023 error when you install the DirectX SDK
+      href: s1023-error-when-you-install-directx-sdk.md
     - name: Send raw data to printers
       href: win32-raw-data-to-printer.md
     - name: XPSDrv isn't compatible with RAW databases
@@ -73,6 +79,8 @@
       href: wia-2-not-support-duplex.md
   - name: Networking development
     items:
+    - name: An API causes an I/O not work correctly
+      href: setfilecompletionnotificationmodes-causes-io-completion.md
     - name: The BeginRead method causes exceptions
       href: beginread-causes-invalidoperationexception.md
     - name: Header and library requirement at the IPPROTO_IP level
@@ -85,10 +93,14 @@
     items:
     - name: Changing krbtgt password fails
       href: change-krbtgt-password-may-fail.md
+    - name: Get information from Authenticode Signed Executables
+      href: get-information-authenticode-signed-executables.md
     - name: Limitation of 10 smart card readers in Windows
       href: limitation-10-smart-card-readers.md
   - name: System services development
     items:
+    - name: Access Violation of BEX or APPCRASH occurs
+      href: access-violation-bex-appcrash.md
     - name: Asynchronous disk I/O appears synchronous
       href: asynchronous-disk-io-synchronous.md
     - name: CD-ROM notifications
@@ -105,6 +117,8 @@
       href: evtformatmessage-formatted-string-event.md
     - name: Guidelines for dates and times handling
       href: handle-dates-and-times-dst.md
+    - name: MSXML is not supported in .NET applications
+      href: msxml-not-support-dotnet-application.md
     - name: SetSystemTimeAdjustment loses adjustments
       href: setsystemtimeadjustment-less-than-16.md
     - name: Troubleshoot errors in Event Viewer

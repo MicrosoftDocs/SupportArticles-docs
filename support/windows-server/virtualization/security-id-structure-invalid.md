@@ -17,7 +17,7 @@ ms.technology: HyperV
 
 This article provides a solution to an error that occurs when you start an imported virtual machine under Hyper-V.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2927313
 
 ## Symptoms
@@ -34,7 +34,11 @@ This issue is caused when a virtual machine is moved from one environment to ano
 
 A user can reset the state of security IDs in the virtual machine configuration by adding a new, valid user ID. To do this, you'll need to:
 
-1. Open an administrative PowerShell command window
-2. Run: Grant-VMConnectAccess -VMName "*Name of VM that is not starting*" -UserName "*Domain and username of the current user*"
+1. Open an administrative PowerShell command window.
+2. Run the following command:
+
+    ```console
+    Grant-VMConnectAccess -VMName "Name of VM that is not starting" -UserName "Domain and username of the current user"
+    ```
 
 The virtual machine should now be able to start successfully.

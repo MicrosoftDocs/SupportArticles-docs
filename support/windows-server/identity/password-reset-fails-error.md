@@ -28,7 +28,7 @@ You have the task to manage users in your domain and you need to reset the passw
 The System cannot find the path specified
 
 The password for the user isn't changed afterwards. The same task may work with other administrator user accounts, and also for the same administrator accounts on other workstations. Resetting the user password may also work through other tools, for example using the LDIFDE as outlined in the following article in the Microsoft Knowledge Base:  
-    [263991](https://support.microsoft.com/kb/263991)  How to set a user's password with Ldifde
+    [263991](https://support.microsoft.com/kb/263991)  How to set a user's password with Ldifde
 
 ## Cause
 
@@ -47,4 +47,4 @@ Using the Process Monitor tool, you can see the LSASS.EXE process will fail to o
 
 ## More information
 
-Microsoft recommends using Folder Redirection Policies to redirect parts of the user profile to different locations. These policies also allow the contents of the folder to be moved automatically.
+Microsoft recommends using Folder Redirection Policies to redirect parts of the user profile to different locations. These policies also allow the contents of the folder to be moved automatically.

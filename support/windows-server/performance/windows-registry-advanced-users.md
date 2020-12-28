@@ -38,7 +38,7 @@ The Registry replaces most of the text-based .ini files that are used in Windows
 |HKEY_LOCAL_MACHINE\System|System, System.alt, System.log, System.sav|
 |HKEY_CURRENT_CONFIG|System, System.alt, System.log, System.sav, Ntuser.dat, Ntuser.dat.log|
 |HKEY_USERS\DEFAULT|Default, Default.log, Default.sav|
-|| |
+|| |
 |||
 
 In Windows 98, the registry files are named User.dat and System.dat. In Windows Millennium Edition, the registry files are named Classes.dat, User.dat, and System.dat.

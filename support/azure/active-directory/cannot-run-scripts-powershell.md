@@ -9,7 +9,7 @@ ms.reviewer: willfid, willfid
 
 This article describes an issue in which you receive an error message when you try to run scripts in Azure Active Directory Module for Windows PowerShell.
 
-_Original product version:_ &nbsp; Azure Active Directory, Microsoft Intune, Azure Backup,Office 365 User and Domain Management, Office 365 Identity Management  
+_Original product version:_ &nbsp; Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 User and Domain Management, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2411920
 
 ## Symptoms
@@ -30,15 +30,15 @@ This issue may occur if the execution policy is set to **Restricted**. Certain W
 
 To resolve this issue, follow these steps:
 
-1. Run the Azure Active Directory Module for Windows PowerShell as an administrator. To do this, select **Start**, select **All Programs**, select **Windows Azure Active Directory**, right-click **Windows Azure Active Directory Module for Windows PowerShell**, and then select **Run as administrator**.
-2. Set the execution policy to **Unrestricted**. To do this, type the following cmdlet, and then press Enter:
+1. Run the Azure Active Directory Module for Windows PowerShell as an administrator. To do it, select **Start**, select **All Programs**, select **Windows Azure Active Directory**, right-click **Windows Azure Active Directory Module for Windows PowerShell**, and then select **Run as administrator**.
+2. Set the execution policy to **Unrestricted**. To do it, type the following cmdlet, and then press Enter:
 
     ```powershell
     Set-ExecutionPolicy Unrestricted
     ```
 
 3. Run the Windows PowerShell cmdlets that you want.
-4. Set the execution policy to **Restricted**. To do this, type the following cmdlet, and then press Enter:
+4. Set the execution policy to **Restricted**. To do it, type the following cmdlet, and then press Enter:
 
     ```powershell
     Set-ExecutionPolicy Restricted
@@ -46,7 +46,7 @@ To resolve this issue, follow these steps:
 
 ## More information
 
-To help deliver a more secure command-line administration experience, Windows PowerShell uses "execution policies" to control how Windows PowerShell can be used. Execution policies define the restrictions under which Windows PowerShell loads files for execution and configuration. By default, Windows PowerShell runs in the Restricted execution policy. This mode is its most secure mode in which Windows PowerShell operates as an interactive shell only.
+To help deliver a more secure command-line administration experience, Windows PowerShell uses "execution policies" to control how Windows PowerShell can be used. Execution policies define the restrictions under which Windows PowerShell loads files for execution and configuration. By default, Windows PowerShell runs in the Restricted execution policy. This mode is its most secure mode. In this mode, Windows PowerShell operates as an interactive shell only.
 
 The four execution policies are as follows:
 

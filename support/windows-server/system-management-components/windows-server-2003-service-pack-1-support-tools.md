@@ -17,16 +17,17 @@ ms.technology: SysManagementComponents
 
 This article describes updates to the Microsoft Windows Server 2003 Support Tools that are included in Microsoft Windows Server 2003 Service Pack 1 (SP1).
 
-_Original product version:_ &nbsp; Windows Server 2003 Service Pack 1  
-_Original KB number:_ &nbsp; 892777
+_Original product version:_ &nbsp;Windows Server 2003 Service Pack 1
+_Original KB number:_ &nbsp;892777
 
-## INTRODUCTION
+## Introduction
 
 If you are a support person or a network administrator, you can use the Windows Support Tools to manage networks and to troubleshoot network problems that you may experience.
 
 ## More information
 
-Windows Server 2003 SP1 includes updates for the following Support Tools:
+Windows Server 2003 SP1 includes updates for the following Support Tools:  
+
 - Acldiag.exe
 - Adsiedit.msc
 - Bitsadmin.exe

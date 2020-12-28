@@ -22,14 +22,14 @@ _Original KB number:_ &nbsp; 4046675
 
 ## Symptoms
 
-Assume that you have a Windows Active Directory forest that has Domain Controllers in Windows Server 2016, and the Recycle Bin optional feature is not enabled. Assume also that you restore a deleted object through an NTDSUTIL authoritative restore operation, or you undelete it through an LDAP command or a commercial recovery tool.
+Assume that you have a Windows Active Directory forest that has Domain Controllers in Windows Server 2016, and the Recycle Bin optional feature is not enabled. Assume also that you restore a deleted object through an NTDSUTIL authoritative restore operation, or you undelete it through an LDAP command or a commercial recovery tool.
 
-After the update replicates, the Active Directory replication fails and returns error 8409.
+After the update replicates, the Active Directory replication fails and returns error 8409.
 
 > [!NOTE]
 > The failure occurs at every replication attempt for the affected naming context for all inbound partners. However, the failure stops occurring after several hours.
 
-Additionally, the following events are logged in the Windows NT Directory Services (NTDS) event log on the domain controller in Windows Server 2016:
+Additionally, the following events are logged in the Windows NT Directory Services (NTDS) event log on the domain controller in Windows Server 2016:
 
 > Log Name: Directory Service  
 Source: Microsoft-Windows-ActiveDirectory_DomainService  
@@ -51,7 +51,7 @@ Internal event: Active Directory Domain Services could not update the following 
 >
 > Object:  
 CN=user,OU=users,DC=contoso,DC=com  
-Object GUID: GUID  
+Object GUID: GUID  
 Source directory service:  
 GUID._msdcs.contoso.com  
 >
@@ -74,7 +74,7 @@ This event contains REPAIR PROCEDURES for the 1084 event which has previously be
 >
 > Object:  
 CN=user,OU=users,DC=contoso,DC=com  
-Object GUID: GUID  
+Object GUID: GUID  
 Source directory service:  
 GUID._msdcs.contoso.com
 >
@@ -88,22 +88,23 @@ Secondary Error value:
 
 ## Cause
 
-When NTDS is started in Windows Server 2008 R2 or a later version, DS starts an internal task to check all writable NCs for the need to assign a value of **TRUE** to the **IsRecycled** attribute of the deleted objects.
+When NTDS is started in Windows Server 2008 R2 or a later version, DS starts an internal task to check all writable NCs for the need to assign a value of **TRUE** to the **IsRecycled** attribute of the deleted objects.
 
-Until this task is completed, the status of the Recycle Bin optional feature is "disabled." In this state, the replication engine does not allow undeleting or restoring of Active Directory objects. Therefore,  this does not interact with the addition of the **isRecycled** attribute.
+Until this task is completed, the status of the Recycle Bin optional feature is disabled. In this state, the replication engine does not allow undeleting or restoring of Active Directory objects. Therefore,  this does not interact with the addition of the **isRecycled** attribute.
 
-This task is completed in a few seconds if the objects already have the attribute value of **TRUE**. In Windows Server 2016, the task is deferred during a startup to improve the DS startup time, and it's rescheduled to begin six hours later. Therefore, you can't replicate any AD object restore process for the first six hours of the DS uptime.
+This task is completed in a few seconds if the objects already have the attribute value of **TRUE**. In Windows Server 2016, the task is deferred during a startup to improve the DS startup time, and it's rescheduled to begin six hours later. Therefore, you can't replicate any AD object restore process for the first six hours of the DS uptime.
 
 NTDS diagnostics logging for six Garbage Collection at level 2 would enable you to see the "2406" event that indicates the start of the task and the "2405" event that indicates the end of the task.
+
 If the AD replication has the top priority, you can delete the objects again and then restore them again later. Or, you can wait for six hours until the task is completed. If you restart the domain controller, you start another six-hour interval with this issue.
 
 ## Resolution
 
-To fix this issue, enable the Recycle Bin optional feature to allow the undelete or restore operations to finish. After you do this, there is no task started that will disable the optional feature.
+To fix this issue, enable the Recycle Bin optional feature to allow the undelete or restore operations to finish. After you do this, there is no task started that will disable the optional feature.
 
 ## More information
 
-When the directory service starts, it tracks the progress of the task through events that are logged in the NTDS event log. The events for managing the disabling of the Recycle Bin optional feature are as follows:
+When the directory service starts, it tracks the progress of the task through events that are logged in the NTDS event log. The events for managing the disabling of the Recycle Bin optional feature are as follows:
 
 > Disabling state:  
 >

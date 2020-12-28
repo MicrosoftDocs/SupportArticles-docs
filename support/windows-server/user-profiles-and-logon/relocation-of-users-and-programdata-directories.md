@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 949977
 > [!CAUTION]
 > Using the `ProgramData` setting to redirect folders to a drive other than the system volume will block your ability to upgrade to future versions of Windows.
 >
-> By changing the default location of the user profile directories or program data folders to a volume other than the system volume, you cannot service your Windows installation. Any updates, fixes, or service packs cannot be applied to the installation. We recommend that you do not change the location of the user profile directories or program data folders.
+> By changing the default location of the user profile directories or program data folders to a volume other than the system volume, you cannot service your Windows installation. Any updates, fixes, or service packs cannot be applied to the installation. We recommend that you do not change the location of the user profile directories or program data folders.
 >
 > Beginning with Windows 10, OS upgrades are supported even if user profiles are redirected to another drive. For example, if you are using Windows 8.1 with ProfilesDirectory set to D:\\, you can upgrade to Windows 10.
 

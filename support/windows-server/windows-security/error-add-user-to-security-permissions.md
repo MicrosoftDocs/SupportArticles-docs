@@ -17,7 +17,7 @@ ms.technology: WindowsSecurity
 
 This article describes an issue that occurs when you reach the maximum size of the access control list.
 
-_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
+_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;166348
 
 ## Symptoms
@@ -32,7 +32,7 @@ Additionally, when you use Cacls.exe to perform this function, you may receive t
 
 ## Cause
 
-This issue occurs when you reach the maximum size of the access control list (ACL). The size of an ACL varies with the number and size of its access control entries (ACEs). The maximum size of an ACL is 64 kilobytes (KB), or approximately 1,820 ACEs. However, for performance reasons, the maximum size isn't practical. 
+This issue occurs when you reach the maximum size of the access control list (ACL). The size of an ACL varies with the number and size of its access control entries (ACEs). The maximum size of an ACL is 64 kilobytes (KB), or approximately 1,820 ACEs. However, for performance reasons, the maximum size isn't practical.  
 
 ## More information
 

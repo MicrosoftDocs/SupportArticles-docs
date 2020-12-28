@@ -22,8 +22,8 @@ _Original KB number:_ &nbsp; 4543142
 
 ## Symptoms
 
-You use a DISM command to deploy a Microsoft Store app in Windows 10, version 1809 or a later version of Windows, and then you deploy the app on a computer. After a user logs on to the computer for the first time, the app is unexpectedly removed. Additionally, an Event ID 240 error is generated.
+You use a DISM command to deploy a Microsoft Store app in Windows 10, version 1809 or a later version of Windows, and then you deploy the app on a computer. After a user logs on to the computer for the first time, the app is unexpectedly removed. Additionally, an Event ID 240 error is generated.
 
 ## Workaround
 
-To work around this issue, add the **/Region:"All"** switch when you use the DISM command to deploy the app.
+To work around this issue, add the `/Region:"All"` switch when you use the DISM command to deploy the app.

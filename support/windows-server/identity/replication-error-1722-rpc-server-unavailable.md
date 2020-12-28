@@ -35,19 +35,19 @@ This article describes the symptoms, cause, and resolution for resolving Active 
 1. DCDIAG reports that the Active Directory Replications test has failed with error 1722: The RPC Server is unavailable.
 
     > [Replications Check,\<DC Name>] A recent replication attempt failed:
-    >    From \<source DC> to \<destination DC>  
-    >    Naming Context: \<DN path of directory partition>  
-    >    The replication generated an error (1722):  
-    >    The RPC server is unavailable.  
-    >    The failure occurred at \<date> \<time>.  
-    >    The last success occurred at \<date> \<time>.  
+    >    From \<source DC> to \<destination DC>  
+    >    Naming Context: \<DN path of directory partition>  
+    >    The replication generated an error (1722):  
+    >    The RPC server is unavailable.  
+    >    The failure occurred at \<date> \<time>.  
+    >    The last success occurred at \<date> \<time>.  
     >    \<X> failures have occurred since the last success.  
     >    [\<dc name>] DsBindWithSpnEx() failed with error 1722,  
     >    The RPC server is unavailable..  
     >    Printing RPC Extended Error Info:  
     >    \<snip>
 
-1. REPADMIN.EXE reports that replication attempt has failed with status 1722 (0x6ba).
+1. REPADMIN.EXE reports that replication attempt has failed with status 1722 (0x6ba).
 
     REPADMIN commands that commonly cite the -1722 (0x6ba) status include but are not limited to:  
 
@@ -56,7 +56,7 @@ This article describes the symptoms, cause, and resolution for resolving Active 
     - `REPADMIN /SHOWREPS`
     - `REPADMIN /SYNCALL`
 
-    Sample output from `REPADMIN /SHOWREPS` and `REPADMIN /SYNCALL` depicting **The RPC server is unavailable** error is shown below:
+    Sample output from `REPADMIN /SHOWREPS` and `REPADMIN /SYNCALL` depicting **The RPC server is unavailable** error is shown below:
 
     ```console
     c:\> repadmin /showreps  
@@ -67,12 +67,12 @@ This article describes the symptoms, cause, and resolution for resolving Active 
     DC invocationID: <invocation ID string>  
     ==== INBOUND NEIGHBORS ======================================  
     DC=<DN path for directory partition>  
-        <site name><source DC via RPC  
-            DC object GUID: <source DCs ntds settings object object guid>  
-            Last attempt @ <date> <time> failed, result **1722 (0x6ba):  
+        <site name><source DC via RPC  
+            DC object GUID: <source DCs ntds settings object object guid>  
+            Last attempt @ <date> <time> failed, result **1722 (0x6ba):  
     The RPC server is unavailable.  
-            <X #> consecutive failure(s).  
-            Last success @ <date> <time>
+            <X #> consecutive failure(s).  
+            Last success @ <date> <time>
    ```
 
     Sample output of `REPADMIN /SYNCALL` depicting **The RPC server is unavailable** error is shown below:
@@ -85,9 +85,9 @@ This article describes the symptoms, cause, and resolution for resolving Active 
 
 1. The **replicate now** command in Active Directory Sites and Services returns **The RPC server is unavailable**.
 
-    Right-clicking on the connection object from a source DC and choosing **replicate now** fails with **The RPC server is unavailable**. The on-screen error message is shown below:
+    Right-clicking on the connection object from a source DC and choosing **replicate now** fails with **The RPC server is unavailable**. The on-screen error message is shown below:
 
-    Dialog title text: Replicate Now
+    Dialog title text: Replicate Now
 
     Dialog message text:
 
@@ -128,15 +128,15 @@ Basic troubleshooting steps to identify the problem.
 
 ### Verify the startup value and service status are correct for RPC, RPC Locator and Kerberos Key Distribution Center
 
-Verify the startup value and service status are correct for the Remote Procedure Call (RPC), Remote Procedure Call (RPC) Locator and Kerberos Key Distribution Center.
+Verify the startup value and service status are correct for the Remote Procedure Call (RPC), Remote Procedure Call (RPC) Locator and Kerberos Key Distribution Center.
 
-The OS version will determine the correct values for the source and destination system that is logging the replication error.  Use the following table to help validate the settings.
+The OS version will determine the correct values for the source and destination system that is logging the replication error.  Use the following table to help validate the settings.
 
 |Service Name|Windows 2000|Windows 2003 /R2|Windows 2008|Windows 2008 R2|
 |---|---|---|---|---|
-|Remote Procedure Call (RPC)|Started / Automatic|Started / Automatic|Started / Automatic|Started / Automatic|
-|Remote Procedure Call (RPC) Locator|Started / Automatic (Domain Controllers)Not  started / Manual(Member Servers)|Not  started / Manual|Not  started / Manual|Not  started / Manual|
-|Kerberos Key Distribution Center (KDC)|Started / Automatic (Domain Controllers)Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)Not started / Disabled(Member Servers) |
+|Remote Procedure Call (RPC)|Started / Automatic|Started / Automatic|Started / Automatic|Started / Automatic|
+|Remote Procedure Call (RPC) Locator|Started / Automatic (Domain Controllers)Not  started / Manual(Member Servers)|Not  started / Manual|Not  started / Manual|Not  started / Manual|
+|Kerberos Key Distribution Center (KDC)|Started / Automatic (Domain Controllers)Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)Not started / Disabled(Member Servers) |
 ||||||
 
 If you make any changes to match the settings above, reboot the machine and verify both the startup value and service status match the values documented in the table above.
@@ -145,23 +145,23 @@ If you make any changes to match the settings above, reboot the machine and veri
 
 |Protocol Name|Type|Data Value|
 |---|---|---|
-| ncacn_http| REG_SZ| rpcrt4.dll|
-| ncacn_ip_tcp| REG_SZ| rpcrt4.dll|
-| ncacn_np| REG_SZ| rpcrt4.dll|
-| ncacn_ip_udp| REG_SZ| rpcrt4.dll|
+| ncacn_http| REG_SZ| rpcrt4.dll|
+| ncacn_ip_tcp| REG_SZ| rpcrt4.dll|
+| ncacn_np| REG_SZ| rpcrt4.dll|
+| ncacn_ip_udp| REG_SZ| rpcrt4.dll|
 ||||
 
-If the **ClientProtocols** key or any of the 4 default values are missing, import the key from a known good server.
+If the **ClientProtocols** key or any of the 4 default values are missing, import the key from a known good server.
 
 ### Verify DNS is working
 
 DNS lookup failures are the cause of a large amount of 1722 RPC errors when it comes to replication.
 
-There are a few tools to use to help identify DNS errors:
+There are a few tools to use to help identify DNS errors:
 
 - `DCDIAG /TEST:DNS /V /E /F:<filename.log>`  
 
-    The `DCDIAG /TEST:DNS` command can validate DNS health of Windows 2000 Server (SP3 or later), Windows Server 2003 and Windows Server 2008 family domain controllers. This test was first introduced with Windows Server 2003 Service Pack 1.
+    The `DCDIAG /TEST:DNS` command can validate DNS health of Windows 2000 Server (SP3 or later), Windows Server 2003 and Windows Server 2008 family domain controllers. This test was first introduced with Windows Server 2003 Service Pack 1.
 
     There are seven test groups for this command.
 
@@ -188,9 +188,9 @@ There are a few tools to use to help identify DNS errors:
     Adapter [00000009] Microsoft Virtual Machine Bus Network Adapter:  
     MAC address is 00:15:5D:40:CF:92  
     IP address is static  
-    IP address: \<IP Address>  
+    IP address: \<IP Address>  
     DNS servers:  
-    \<DNS IP Address> (DC.domain.com.) [Valid]  
+    \<DNS IP Address> (DC.domain.com.) [Valid]  
     The A record for this DC was found  
     The SOA record for the Active Directory zone was found  
     The Active Directory zone on this DC/DNS server was found (primary)  
@@ -199,22 +199,22 @@ There are a few tools to use to help identify DNS errors:
 
     Summary of DNS test results:
 
-    > Auth Basc Forw Del  Dyn  RReg Ext
+    > Auth Basc Forw Del  Dyn  RReg Ext
     >
     >
     > Domain: `fragale.contoso.com`
-    > DC1 PASS PASS FAIL PASS PASS PASS n/a  
+    > DC1 PASS PASS FAIL PASS PASS PASS n/a  
     > Domain: `child.fragale.contoso.com`  
-    > DC2 PASS PASS n/a  n/a  n/a  PASS n/a  
+    > DC2 PASS PASS n/a  n/a  n/a  PASS n/a  
     >
     > Enterprise DNS infrastructure test results:  
-    > For parent domain domain.com and subordinate domain child:  
-    > Forwarders or root hints are not misconfigured from parent domain to subordinate domain  
-    > Error: Forwarders are configured from subordinate to parent domain but some of them failed DNS server tests  
+    > For parent domain domain.com and subordinate domain child:  
+    > Forwarders or root hints are not misconfigured from parent domain to subordinate domain  
+    > Error: Forwarders are configured from subordinate to parent domain but some of them failed DNS server tests  
     >
     > (See DNS servers section for error details)  
     > Delegation is configured properly from parent to subordinate domain  
-    > ......................... domain.com failed test DNS
+    > ......................... domain.com failed test DNS
 
     The summary provides remediation steps for the more common failures from this test.
 
@@ -226,14 +226,14 @@ There are a few tools to use to help identify DNS errors:
 
     Sample output:
 
-    > DC: [\\`DC.fabrikam.com`]  
-    > Address: \\\\\<IP Address>  
-    > Dom Guid: 5499c0e6-2d33-429d-aab3-f45f6a06922b  
-    > Dom Name: `fabrikam.com`  
-    > Forest Name: `fabrikam.com`  
-    > Dc Site Name: Default-First-Site-Name  
+    > DC: [\\`DC.fabrikam.com`]  
+    > Address: \\\\\<IP Address>  
+    > Dom Guid: 5499c0e6-2d33-429d-aab3-f45f6a06922b  
+    > Dom Name: `fabrikam.com`  
+    > Forest Name: `fabrikam.com`  
+    > Dc Site Name: Default-First-Site-Name  
     > Our Site Name: Default-First-Site-Name  
-    > Flags: PDC GC DS LDAP KDC TIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE  
+    > Flags: PDC GC DS LDAP KDC TIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE  
     > The command completed successfully
 
 - `Netdiag -v`
@@ -259,7 +259,7 @@ There are a few tools to use to help identify DNS errors:
 
 - `ping -a <IP_of_problem_server>`
 
-    This is a simple quick test to validate the host record for a domain controller is resolving to the correct machine.  
+    This is a simple quick test to validate the host record for a domain controller is resolving to the correct machine.  
 
 - `dnslint /s IP /ad IP`
 
@@ -296,9 +296,9 @@ There are a few tools to use to help identify DNS errors:
 
     For more information, see [Description of the DNSLint utility](https://support.microsoft.com/kb/321045).
 
-### Verify network ports are not blocked by a firewall or third party application listening on the required ports
+### Verify network ports are not blocked by a firewall or third party application listening on the required ports
 
-The endpoint mapper (listening on port 135) tells the client which randomly assigned port a service (FRS, AD replication, MAPI, and so on) is listening on.
+The endpoint mapper (listening on port 135) tells the client which randomly assigned port a service (FRS, AD replication, MAPI, and so on) is listening on.
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
@@ -327,7 +327,7 @@ A graphical version of portqry, called Portqryui can be found at [PortQryUI - Us
 
 If the Dynamic Port range has ports being blocked, please use the below links to configure a port range that is manageable for the customer.
 
-Additional important links for configuration and working with Firewalls and Domain Controllers:
+Additional important links for configuration and working with Firewalls and Domain Controllers:
 
 - [HOWTO: Configure RPC Dynamic Port Allocation to Work with Firewall](https://support.microsoft.com/help/154596)
 
@@ -345,13 +345,13 @@ See network card vendors or OEMs for the latest drivers.
 
 ### UDP fragmentation can cause replication errors that appear to have a source of RPC server is unavailable
 
-Event ID 40960 & 40961 errors with a source of LSASRV are common for this particular cause.
+Event ID 40960 & 40961 errors with a source of LSASRV are common for this particular cause.
 
 For more information, see [How to force Kerberos to use TCP instead of UDP in Windows](https://support.microsoft.com/help/244474).
 
-### SMB signing mismatches between DCs
+### SMB signing mismatches between DCs
 
-Using Default Domain Controllers Policy to configure consistent settings for SMB Signing under the following section will help address this cause:
+Using Default Domain Controllers Policy to configure consistent settings for SMB Signing under the following section will help address this cause:
 
 `Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options`
 

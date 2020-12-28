@@ -22,14 +22,14 @@ _Original KB number:_ &nbsp; 243330
 
 ## Summary
 
-A security identifier (SID) is a unique value of variable length that is used to identify a security principal (such as a security group) in Windows operating systems. SIDs that identify generic users or generic groups is well known. Their values remain constant across all operating systems.
+A security identifier (SID) is a unique value of variable length that is used to identify a security principal (such as a security group) in Windows operating systems. SIDs that identify generic users or generic groups is well known. Their values remain constant across all operating systems.
 
-This information is useful for troubleshooting issues that involve security. It is also useful for troubleshooting display issues in the Windows access control list (ACL) editor. Windows tracks a security principal by its SID. To display the security principal in the ACL editor, Windows resolves the SID to its associated security principal name.
+This information is useful for troubleshooting issues that involve security. It is also useful for troubleshooting display issues in the Windows access control list (ACL) editor. Windows tracks a security principal by its SID. To display the security principal in the ACL editor, Windows resolves the SID to its associated security principal name.
 
 > [!NOTE]
 > This article describes circumstances under which the ACL editor displays a security principal SID instead of the security principal name.
 
-Over time, this set of well-known SIDs has grown. The tables in this article organize these SIDs according to which version of Windows introduced them.
+Over time, this set of well-known SIDs has grown. The tables in this article organize these SIDs according to which version of Windows introduced them.
 
 ## Well-known SIDs (all versions of Windows)
 
@@ -78,8 +78,8 @@ All versions of Windows use the following well-known SIDs.
 |S-1-5-21root domain-518|Schema Admins|A universal group in a native-mode domain; a global group in a mixed-mode domain. The group is authorized to make schema changes in Active Directory. By default, the only member of the group is the Administrator account for the forest root domain.|
 |S-1-5-21root domain-519|Enterprise Admins|A universal group in a native-mode domain; a global group in a mixed-mode domain. The group is authorized to make forest-wide changes in Active Directory, such as adding child domains. By default, the only member of the group is the Administrator account for the forest root domain.|
 |S-1-5-21domain-520|Group Policy Creator Owners|A global group that is authorized to create new Group Policy objects in Active Directory. By default, the only member of the group is Administrator.|
-|S-1-5-21domain-526|Key Admins|A security group. The intention for this group is to have delegated write access on the `msdsKeyCredentialLink` attribute only. The group is intended for use in scenarios where trusted external authorities (for example, Active Directory Federated Services) are responsible for modifying this attribute. Only trusted administrators should be made a member of this group.|
-|S-1-5-21domain-527|Enterprise Key Admins|A security group. The intention for this group is to have delegated write access on the `msdsKeyCredentialLink` attribute only. The group is intended for use in scenarios where trusted external authorities (for example, Active Directory Federated Services) are responsible for modifying this attribute. Only trusted administrators should be made a member of this group.|
+|S-1-5-21domain-526|Key Admins|A security group. The intention for this group is to have delegated write access on the `msdsKeyCredentialLink` attribute only. The group is intended for use in scenarios where trusted external authorities (for example, Active Directory Federated Services) are responsible for modifying this attribute. Only trusted administrators should be made a member of this group.|
+|S-1-5-21domain-527|Enterprise Key Admins|A security group. The intention for this group is to have delegated write access on the `msdsKeyCredentialLink` attribute only. The group is intended for use in scenarios where trusted external authorities (for example, Active Directory Federated Services) are responsible for modifying this attribute. Only trusted administrators should be made a member of this group.|
 |S-1-5-21domain-553|RAS and IAS Servers|A domain local group. By default, this group has no members. Servers in this group have Read Account Restrictions and Read Logon Information access to User objects in the Active Directory domain local group.|
 |S-1-5-32-544|Administrators|A built-in group. After the initial installation of the operating system, the only member of the group is the Administrator account. When a computer joins a domain, the Domain Admins group is added to the Administrators group. When a server becomes a domain controller, the Enterprise Admins group also is added to the Administrators group.|
 |S-1-5-32-545|Users|A built-in group. After the initial installation of the operating system, the only member is the Authenticated Users group. When a computer joins a domain, the Domain Users group is added to the Users group on the computer.|
@@ -90,7 +90,7 @@ All versions of Windows use the following well-known SIDs.
 |S-1-5-32-550|Print Operators|A built-in group that exists only on domain controllers. By default, the only member is the Domain Users group. Print Operators can manage printers and document queues.|
 |S-1-5-32-551|Backup Operators|A built-in group. By default, the group has no members. Backup Operators can back up and restore all files on a computer, regardless of the permissions that protect those files. Backup Operators also can log on to the computer and shut it down.|
 |S-1-5-32-552|Replicators|A built-in group that is used by the File Replication service on domain controllers. By default, the group has no members. Do not add users to this group.|
-|S-1-5-32-582|Storage Replica Administrators|A built-in group that grants complete and unrestricted access to all features of Storage Replica.|
+|S-1-5-32-582|Storage Replica Administrators|A built-in group that grants complete and unrestricted access to all features of Storage Replica.|
 |S-1-5-64-10|NTLM Authentication|An SID that is used when the NTLM authentication package authenticated the client.|
 |S-1-5-64-14|SChannel Authentication|An SID that is used when the SChannel authentication package authenticated the client.|
 |S-1-5-64-21|Digest Authentication|An SID that is used when the Digest authentication package authenticated the client.|
@@ -102,7 +102,7 @@ All versions of Windows use the following well-known SIDs.
 When you add a domain controller that runs Windows Server 2003 or a later version to a domain, Active Directory adds the security principals in the following table.
 
 > [!NOTE]
-> The Windows ACL editor may not display these security principles by name. Active Directory does not resolve these SIDs to their corresponding names until the [PDC Emulator FSMO Role](/openspecs/windows_protocols/ms-adts/f96ff8ec-c660-4d6c-924f-c0dbbcac1527) transfers to or is seized by a domain controller that runs Windows Server 2003 or later.
+> The Windows ACL editor may not display these security principles by name. Active Directory does not resolve these SIDs to their corresponding names until the [PDC Emulator FSMO Role](/openspecs/windows_protocols/ms-adts/f96ff8ec-c660-4d6c-924f-c0dbbcac1527) transfers to or is seized by a domain controller that runs Windows Server 2003 or later.
 
 |SID|Name|Description|
 |---|---|---|
@@ -157,7 +157,7 @@ When you add a domain controller that runs Windows Server 2008 or a later versio
 When you add a domain controller that runs Windows Server 2012 or a later version to a domain, Active Directory adds the security principals in the following table.
 
 > [!NOTE]
-> The Windows ACL editor may not display these security principles by name. Active Directory does not resolve these SIDs to their corresponding names until the PDC emulator FSMO role transfers to or is seized by a domain controller that runs Windows Server 2012 or later.
+> The Windows ACL editor may not display these security principles by name. Active Directory does not resolve these SIDs to their corresponding names until the PDC emulator FSMO role transfers to or is seized by a domain controller that runs Windows Server 2012 or later.
 
 |SID|Name|Description|
 |---|---|---|
@@ -172,7 +172,7 @@ When you add a domain controller that runs Windows Server 2012 or a later versio
 
 ## Capability SIDs
 
-Windows 8 introduced [capability security identifiers (SIDs)](/windows/security/identity-protection/access-control/security-identifiers#capability-sids). A capability SID identifies a capability in a unique and immutable manner. A capability represents an unforgettable token of authority that grants access to resources (such as documents, a camera, locations, and so forth) to Universal Windows Applications. An app that has a capability is granted access to the associated resource. An app that does not have a capability is denied access to the resource.
+Windows 8 introduced [capability security identifiers (SIDs)](/windows/security/identity-protection/access-control/security-identifiers#capability-sids). A capability SID identifies a capability in a unique and immutable manner. A capability represents an unforgettable token of authority that grants access to resources (such as documents, a camera, locations, and so forth) to Universal Windows Applications. An app that has a capability is granted access to the associated resource. An app that does not have a capability is denied access to the resource.
 
 All capability SIDs that the operating system is aware of are stored in the Windows registry in the following subkey:
 

@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-azure-devops.md
+  href: welcome-azure-devops.yml
 
 - name: Boards
   items:
@@ -39,6 +39,8 @@
 
 - name: Repos
   items:
+  - name: HTTP 502 error when you use Git client
+    href: http-502-error-use-git-client.md
   - name: Pushing large files by Git client hangs
     href: push-large-files-git-hangs.md
   - name: Version control download returns incorrect files
@@ -52,6 +54,8 @@
     href: incorrect-default-project-administrator-permission.md
   - name: Deployment agents rely on shadow don't work
     href: deployment-agents-rely-shadow-accounts-not-work.md
+  - name: Error when you view a report
+    href: error-view-tfs-report.md
   - name: Team Foundation Server 2015 known issues
     href: team-foundation-server-2015-known-issues.md
   - name: Selecting distinct users in identity fields

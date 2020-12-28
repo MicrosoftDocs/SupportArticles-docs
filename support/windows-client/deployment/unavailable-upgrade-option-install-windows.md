@@ -1,5 +1,5 @@
 ---
-title: A list of Microsoft Knowledge Base articles is available to help troubleshoot error messages that you may receive when you upgrade to Windows Vista within Windows
+title: troubleshoot error messages when upgrading
 description: Contains a list of Knowledge Base articles to help troubleshoot error messages that you may receive when you upgrade Windows Vista.
 ms.date: 09/21/2020
 author: Deland-Han
@@ -17,7 +17,7 @@ ms.technology: Deployment
 
 This article contains a list of Microsoft Knowledge Base articles that you can use to help troubleshoot issues that you may experience when you try to upgrade the current version of Windows to Windows Vista.
 
-_Original product version:_ &nbsp; Windows 10 – all editions  
+_Original product version:_ &nbsp; Windows 10 – all editions  
 _Original KB number:_ &nbsp; 930743
 
 ## More information

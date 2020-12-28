@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows NIC Teaming (Load Balance Failover)
-ms.technology: Networking
+ms.prod-support-area-path: Applications
+ms.technology: Performance
 ---
 # Registry values for Process Control parameters
 
@@ -76,7 +76,7 @@ Microsoft provides programming examples for illustration only, without warranty 
 
 For more information about the support options that are available and about how to contact Microsoft, visit the following Microsoft Web site:
 
-[https://support.microsoft.com/default.aspx?scid=fh;EN-US;CNTACTMS](/default.aspx?scid=fh;en-us;cntactms)  
+[Global Customer Service phone numbers](https://support.microsoft.com/help/4051701)  
 
 ```csharp
 Output:

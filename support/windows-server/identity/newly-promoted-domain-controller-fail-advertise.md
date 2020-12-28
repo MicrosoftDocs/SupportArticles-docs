@@ -20,7 +20,6 @@ This article describes an issue where a newly promoted Windows 2008 domain contr
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;967336
 
-
 ## Symptoms
 
 A newly promoted Windows 2008 domain controller may fail to advertise after completion of DCpromo and reboot. This issue is specific to domain controllers participating in domains at Windows 2008 functional level where Sysvol is replicated by Distributed Files System Replication (DFSR).
@@ -31,27 +30,28 @@ There's a name resolution or network connectivity issue.
 
 ## Resolution
 
-To resolve this problem, choose one of the following options: 
+To resolve this problem, choose one of the following options:  
 
 1. Resolve any possible name resolution or network connectivity issue that would prevent communication with the defined "Parent Computer"
 
 2. Modify the following registry to point to an available source domain controller:
 
-    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DFSR\Parameters\SysVols\Seeding SysVols\\`contoso.com`
-    
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DFSR\Parameters\SysVols\Seeding SysVols\contoso.com`
+
     "Parent Computer"="`DC1.contoso.com`"
 
 ## More information
 
 DFSR is a Multi master replication engine used to replicate files and folders for Distributed files system (DFS) structures and optionally the Domain System Volume in Windows 2008 functional level domains. Windows 2008 domain controllers using DFSR for sysvol will initially synchronize their Sysvol content after the DCpromo wizard has synchronized Active Directory and the computer is rebooted.
 
-A replica domain controller will attempt to source its sysvol content from the same server that it used to source it domain-naming context from during the Active Directory promotion by reading the "Parent Computer" registry key under: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DFSR\Parameters\SysVols\Seeding SysVols\\`domain.com`
+A replica domain controller will attempt to source its sysvol content from the same server that it used to source it domain-naming context from during the Active Directory promotion by reading the "Parent Computer" registry key under: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DFSR\Parameters\SysVols\Seeding SysVols\domain.com`
 
-Note: "Parent Computer" may be set automatically or defined by an administrator during DCpromo.
+> [!Note]
+> "Parent Computer" may be set automatically or defined by an administrator during DCpromo.
 
 If the Server defined by the "Parent Computer" becomes unavailable after the reboot, initial synchronization of the sysvol content will be delayed until action to correct the server's availability on the network has been restored.
 
-Errors reported in the DFSR event log: 
+Errors reported in the DFSR event log:  
 
 > Source: DFSR
 >
@@ -111,30 +111,26 @@ Additional Information:
 
 Replicated Folder Name: SYSVOL Share
 
-Errors reported in the DFSR debug logs: 
+Errors reported in the DFSR debug logs:  
 
 > ERROR: DownstreamTransport: SetupBinding Failed
 >
 > Error: The RPC server is unavailable.
 
-References: 
+References:  
 
-[Distributed File System Replication FAQ](https://technet.microsoft.com/library/cc773238.aspx) 
+[Distributed File System Replication FAQ](https://technet.microsoft.com/library/cc773238.aspx)
 
 Additional information on DFSR debug Logging
 
-[958893 How to configure DFSR logging](/default.aspx?scid=kb;en-us;958893) 
+[DCpromo](https://technet.microsoft.com/library/cc732887.aspx) aspx
 
-[DCpromo](https://technet.microsoft.com/library/cc732887.aspx) aspx 
+[322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows XP and Windows Vista
 
-[322756](http://vkbexternal/vkbwebservice/viewcontent.aspx?scid=kb;en-us;322756&portalid=1) How to back up and restore the registry in Windows XP and Windows Vista
-
-[DNS Server Operations Guide](https://technet.microsoft.com/library/cc816603.aspx) 
+[DNS Server Operations Guide](https://technet.microsoft.com/library/cc816603.aspx)
 
 ## Disclaimer
 
 Microsoft and/or its suppliers make no representations or warranties about the suitability, reliability, or accuracy of the information contained in the documents and related graphics published on this website (the "materials") for any purpose. The materials may include technical inaccuracies or typographical errors and may be revised at any time without notice.
 
-
 To the maximum extent permitted by applicable law, Microsoft and/or its suppliers disclaim and exclude all representations, warranties, and conditions whether express, implied, or statutory, including but not limited to representations, warranties, or conditions of title, non-infringement, satisfactory condition or quality, merchantability and fitness for a particular purpose, with respect to the materials.
-

@@ -24,22 +24,22 @@ _Original KB number:_ &nbsp; 4052082
 
 Consider the following scenario:
 
-- You have a Windows 10-based computer that has the Hyper-V role installed.
-- You upgrade the computer to Windows 10, version 1709, Windows 10, version 1803, Windows 10, version 1809, Windows 10, version 1903 or Windows 10, version 1909.
+- You have a Windows 10-based computer that has the Hyper-V role installed.
+- You upgrade the computer to Windows 10, version 1709, Windows 10, version 1803, Windows 10, version 1809, Windows 10, version 1903 or Windows 10, version 1909.
 
-In this scenario, you cannot start virtual machines. Also, you receive the following error message:
+In this scenario, you cannot start virtual machines. Also, you receive the following error message:
 
 > Start-VM: 'VM_NAME' failed to start. (Virtual machine IDMachineID)  
 > 'VM_NAME' failed to start worker process: %%3228369022 (0xC06D007E). (Virtual machine IDMachineID)  
 > At line:1 char:1  
 > \+ Start-VM VM_NAME  
 > \+ ~~~~~~~~~~~~~  
-> \+ CategoryInfo : NotSpecified: (:) [Start-VM], VirtualizationException  
+> \+ CategoryInfo : NotSpecified: (:) [Start-VM], VirtualizationException  
 > \+ FullyQualifiedErrorId: OperationFailed,Microsoft.HyperV.PowerShell.Commands.StartVM
 
-Additionally, you see the following entry in the System log:
+Additionally, you see the following entry in the System log:
 
-> The Hyper-V Host Compute Service service terminated unexpectedly. It has done this 11 time(s).
+> The Hyper-V Host Compute Service service terminated unexpectedly. It has done this 11 time(s).
 
 And you see the following entry in the Application log:
 
@@ -84,7 +84,7 @@ Hashed bucket: \
 
 ## Cause
 
-This issue occurs because Windows 10 enforces a policy that configures Vmcompute.exe not to allow any non-Microsoft DLL files to be loaded.
+This issue occurs because Windows 10 enforces a policy that configures Vmcompute.exe not to allow any non-Microsoft DLL files to be loaded.
 
 ## Resolution
 

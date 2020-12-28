@@ -13,25 +13,39 @@ productDirectory:
   - title:  Azure Active Directory
     imageSrc: "https://static.docs.com/ui/media/product/azure/active-directory.svg"
     links:
-    - url: active-directory/welcome-azure-ad.md
+    - url: active-directory/welcome-azure-ad.yml
       text: Troubleshooting articles for Azure Active Directory
   - title: Cloud Services
     imageSrc: "https://static.docs.com/ui/media/product/azure/cloud-services.svg"
     links:
-    - url: cloud-services/welcome-cloud-services.md
+    - url: cloud-services/welcome-cloud-services.yml
       text: Troubleshooting articles for Cloud Services
   - title: Azure DevOps
     imageSrc: "https://docs.microsoft.com/en-us/azure/devops/media/index/devopsiconboards96.svg"
     links:
-    - url: devops/welcome-azure-devops.md
+    - url: devops/welcome-azure-devops.yml
       text: Troubleshooting articles for Azure DevOps
   - title: Virtual Machines
     imageSrc: "https://static.docs.com/ui/media/product/azure/virtual-machine.svg"
     links:
-    - url: virtual-machines/welcome-virtual-machines.md
+    - url: virtual-machines/welcome-virtual-machines.yml
       text: Troubleshooting articles for Virtual Machines
   - title: Site Recovery
     imageSrc: "https://static.docs.com/ui/media/product/azure/recovery-services-vaults.svg"
     links:
-    - url: site-recovery/welcome-site-recovery.md
+    - url: site-recovery/welcome-site-recovery.yml
       text: Troubleshooting articles for Site Recovery
+  - title: Other Azure Services
+    imageSrc: "https://static.docs.com/ui/media/product/azure/azure.svg"
+    links:
+    - url: general/welcome-general.yml
+      text: Troubleshooting articles for other Azure Services
+  - title: Need help?
+    imageSrc: "https://static.docs.com/ui/media/product/azure/sentinel.svg"
+    links:
+    - url: general/search-tips-find-troubleshooting-content.md
+      text: Advanced search tips for finding Microsoft troubleshooting content
+    - url: general/secure-file-exchange-transfer-files.md
+      text: Use Secure File Exchange to exchange files with Microsoft Support
+    - url: https://docs.microsoft.com/azure/azure-portal/supportability/how-to-create-azure-support-request
+      text: Create an Azure support request

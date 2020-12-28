@@ -1,5 +1,5 @@
 ---
-title: Password change for expired password failing for workgroup scenario
+title: Password change for expired password failing
 description: Fixes an error that occurs when processing the password change for a user where the password is expired or set to change at next logon.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -51,7 +51,7 @@ The error dialog looks like this:
 
 When processing the password change for a user where the password is expired or set to change at next logon, Winlogon uses an anonymous token to process the password change request.
 
-The password change dialog allows changing passwords against remote computers as well, so the API calls use remotable interfaces through RPC over Named Pipes over SMB. For this protocol sequence, the RPC runtime reads a policy setting "Server2003NegotiateDisable" from the key "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Rpc".
+The password change dialog allows changing passwords against remote computers as well, so the API calls use remotable interfaces through RPC over Named Pipes over SMB. For this protocol sequence, the RPC runtime reads a policy setting "Server2003NegotiateDisable" from the key `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Rpc`.
 
 This fails in the context of the anonymous token as the default permissions allow only authenticated users, administrators, and LocalSystem to read the key.
 
@@ -62,27 +62,27 @@ When NLA is enabled, the user session request doesn't validate and thus fails.
 The approaches to avoid this problem are:
 
 1. Change the password remotely. Note that currently the user in the context you run the remote password change needs to be able to log on to the target server with the default credentials (or already connected using SMB to the server at the time of the password change already).
-2. Change the permissions of the key "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Rpc" to allow anonymous to read the key. If the key doesn't exist, you may create it and then add the read permissions for the anonymous account.
+2. Change the permissions of the key `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Rpc` to allow anonymous to read the key. If the key doesn't exist, you may create it and then add the read permissions for the anonymous account.
 
-**NOTE** For approach 2, in an attempt to recover from an error, it might happen that the group policy service deletes the keys and recreates them using default permissions. In this case, you have to reapply the permissions.
+> [!NOTE] For approach 2, in an attempt to recover from an error, it might happen that the group policy service deletes the keys and recreates them using default permissions. In this case, you have to reapply the permissions.
 
 You can automate setting the permissions on using Registry Security Policy when the machine is member of the domain. For workgroup machines you can import this text as rpc-pol.inf file:
 
-```console
----------------------------
-[Unicode]
-Unicode=yes
-[Version]
-signature="$CHICAGO$"
-Revision=1
-[Registry Keys]
-"MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\rpc",0,"D:PAR(A;CIIO;KA;;;CO)(A;CI;KA;;;SY)(A;CI;KA;;;BA)(A;CI;KR;;;S-1-5-7)(A;CI;KR;;;BU)"
+```inf
+---------------------------  
+[Unicode]  
+Unicode=yes  
+[Version]  
+signature="$CHICAGO$"  
+Revision=1  
+[Registry Keys]  
+"MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\rpc",0,"D:PAR(A;CIIO;KA;;;CO)(A;CI;KA;;;SY)(A;CI;KA;;;BA)(A;CI;KR;;;S-1-5-7)(A;CI;KR;;;BU)"  
 ------------------------------
 ```
 
 You can apply it using:
 
-secedit /configure /db C:\Windows\security\database\rpc-pol.sdb/cfg rpc-pol.inf /log rpc-pol.log
+secedit /configure /db C:\Windows\security\database\rpc-pol.sdb/cfg rpc-pol.inf /log rpc-pol.log
 Note the key must exist so this is successful.
 
 ## More information

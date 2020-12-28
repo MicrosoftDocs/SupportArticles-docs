@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-virtual-machines.md
+  href: welcome-virtual-machines.yml
 
 - name: Troubleshoot deployment issues
   items:
@@ -32,6 +32,10 @@
       href: credssp-encryption-oracle-remediation.md
     - name: No Internet access
       href: no-internet-access-multi-ip.md
+  - name: RDP
+    items:
+    - name: Cannot RDP into Azure VM
+      href: cannot-connect-rdp-azure-vm.md
 
 - name: VM is not booting
   items:
@@ -65,20 +69,32 @@
     href: windows-boot-failure.md
   - name: Can't boot after a host node upgrade
     href: linux-kernel-panics-upgrade.md
+  - name: Linux VM does not start after an LIS upgrade
+    href: linux-vm-not-start-kernel-lis.md
+  - name: Troubleshoot Windows VM OS with missing boot manager
+    href: os-bootmgr-missing.md
   - name: OS isn't found
     href: os-not-found.md
+  - name: Troubleshoot Windows VM OS boot failure
+    href: os-bucket-boot-failure.md
 
 - name: VM restart issues
   items:
   - name: Can't restart after applying kernel changes
     href: kernel-related-boot issues.md
-  - name: Fails to restart or be provisioned
+  - name: Fail to access Generation 2 Linux VM
+    href: unable-access-g2-linux-vm-reboot.md
+  - name: Fail to restart or be provisioned
     href: linux-kernel-fails-restart-provision.md
   - name: Start VM with Last Known Good Configuration
     href: start-vm-last-known-good.md
+  - name: Swap file is not re-created
+    href: swap-file-not-recreated-linux-vm-restart.md
 
 - name: VM extension issues
   items:
+  - name: Azure cloud-init support for Linux VMs
+    href: cloud-init-support-linux-vms.md
   - name: Can't enable Azure Disk Encryption
     href: extension-version-2.2-not-supported.md
   - name: Can't process extensions
@@ -95,6 +111,11 @@
     href: support-agent-extensions.md
   - name: Supported operating systems
     href: extension-supported-os.md
+  - name: The host keys of Linux VM are written to ec2 
+    href: cloud-init-writes-vm-host-keys-as-ec2.md
+  - name: Update awareness for Linux Image Provisioning Agent 
+    href: linux-image-provisioning-agent-update-awareness.md
+
 
 - name: VM performance issues
   items:
@@ -114,6 +135,8 @@
 
 - name: Support statements
   items:
+  - name: Azure VM logs
+    href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
   - name: Citrix services support policy
     href: support-policy-citrix-services.md
   - name: Changes to Windows Server images default size
@@ -130,3 +153,7 @@
     href: updates-included-windows-server-images.md
   - name: Windows Server 2003 on Azure
     href: run-win-server-2003.md
+  - name: Windows Virtual Desktop guides
+    href: how-to-videos-windows-virtual-desktop.md
+
+

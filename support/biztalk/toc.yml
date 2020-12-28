@@ -3,12 +3,18 @@
   
 - name: Accelerators
   items:
+  - name: 999 acknowledgments for HIPAA 5010
+    href: 999-acknowledgments-hipaa-5010.md
   - name: ADT^A03 problem for HL7
     href: adta03-file-biztalk-accelerator-hl7.md
   - name: Can't call HL7 pipelines from Orchestration
     href: call-hl7-pipelines-orchestration-fail.md
   - name: EDI/AS2 Runtime configuration fails
     href: biztalk-edias2-runtime-feature-fails.md
+  - name: Fail to install security or post-2871997 update
+    href: fail-install-security-post-2871997-update.md
+  - name: ISA16 cannot be part of the payload
+    href: isa16-cannot-part-payload.md
   - name: MessagesToLOB and MessageContent in BTARN
     href: messagestolob-messagecontent-btarn.md
   - name: Override EDI header for outgoing X12 997
@@ -54,8 +60,17 @@
   items:
   - name: Add Generated Items can't generate XSD schema
     href: add-generated-items-not-generate-xsd.md
+  - name: Build process fails with an error
+    href: build-failed-error-when-you-use-64-bit-version.md
+  - name: Change in scripting function boolean parameter behavior
+    href: change-scripting-function-boolean-parameter.md
   - name: Supported OS, VS and SQL Server 
     href: systems-sql-server-biztalk.md
+
+- name: ENTSSO
+  items:
+  - name: Upgrading does not upgrade Enterprise SSO
+    href: upgrading-not-upgrade-enterprise-sso.md
 
 - name: ESB Toolkit
   items:
@@ -72,6 +87,8 @@
     href: biztalkmsgboxdb-connection-issue.md
   - name: Issues and resolutions with Administration console
     href: common-issues-resolutions-biztalk.md
+  - name: Maintain and troubleshoot databases
+    href: maintain-troubleshoot-database.md
   - name: Time-out expired error when you use the UDDI tool
     href: time-out-expired-error-when-you-use-uddi-tool.md
   - name: Wrong behavior of tracking profiles
@@ -81,6 +98,8 @@
   items:
   - name: BizTalk Server 2013 known issues
     href: known-issues-biztalk-server-2013.md
+  - name: Error message in the application log
+    href: error-message-application-log-server.md
   - name: High CPU when you execute a BRE policy
     href: high-cpu-execute-bre-policy.md
   - name: How to troubleshoot a memory leak

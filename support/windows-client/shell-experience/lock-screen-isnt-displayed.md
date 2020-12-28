@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 3205123
 Consider the following scenario:
 
 - You have a computer that has Intel® Ready Mode enabled.
-- You install Windows 10 on the computer.
+- You install Windows 10 on the computer.
 - You try to resume the computer from Away Mode. In this scenario, the Windows Lock screen isn't displayed as expected.
 
 ## Workaround
@@ -34,8 +34,8 @@ The Windows Lock screen will be displayed when you press or select any human int
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.  
+Microsoft has confirmed that this is a problem in the Microsoft products that are listed at the beginning of this article.  
 
-Third-party information disclaimer
+### Third-party information disclaimer
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.

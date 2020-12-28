@@ -29,12 +29,12 @@ When you attempt to install Active Directory Domain Services on a Windows Server
 
 The **%systemroot%\debug\DCPROMOUI.LOG** contains the following text:
 
-dcpromoui  Enter ComposeFailureMessage
-dcpromoui  Enter GetErrorMessage 80070524
-dcpromoui  Enter State::GetOperationResultsMessage The attempt to join this computer to the \<target DNS domain> domain failed.
-dcpromoui  Enter State::GetOperationResultsFlags 0x0
-dcpromoui  Enter State::SetFailureMessage The operation failed because:
-The attempt to join this computer to the  \<target DNS domain> domain failed.
+dcpromoui  Enter ComposeFailureMessage
+dcpromoui  Enter GetErrorMessage 80070524
+dcpromoui  Enter State::GetOperationResultsMessage The attempt to join this computer to the \<target DNS domain> domain failed.
+dcpromoui  Enter State::GetOperationResultsFlags 0x0
+dcpromoui  Enter State::SetFailureMessage The operation failed because:
+The attempt to join this computer to the  \<target DNS domain> domain failed.
 "The specified user already exists."
 
 ## Cause
@@ -52,26 +52,26 @@ There is a computer account with the same name as the computer on which you are 
     
     [216498](https://support.microsoft.com/kb/216498) How to remove data in Active Directory after an unsuccessful domain controller demotion
     
-    For best results, remove the stale domain controller metadata on a domain controller in the same domain and site that the new domain controller is joining, or the helper domain controller specified in the Active Directory Installation Wizard or answer file.
+    For best results, remove the stale domain controller metadata on a domain controller in the same domain and site that the new domain controller is joining, or the helper domain controller specified in the Active Directory Installation Wizard or answer file.
 
-2. If the Active Directory Installation Wizard continues to fail with error. The specified user already exists**, review the **%systemroot%\debug\DCPROMOUI.LOG** to identify the name of the helper domain controller that the new domain controller is attempting to use.
+2. If the Active Directory Installation Wizard continues to fail with error. The specified user already exists**, review the **%systemroot%\debug\DCPROMOUI.LOG** to identify the name of the helper domain controller that the new domain controller is attempting to use.
 
 Sample output from DCPROMOUI.LOG:
 
-> dcpromoui          Enter DS::JoinDomain                                                  ← Search for this section of the %systemroot%\debug\dcpromoui.log  
-dcpromoui          Enter MassageUserName administrator  
-dcpromoui          contoso.com\administrator  
-dcpromoui          Enter MyNetJoinDomain contoso.com\<helper DCs hostname>.contoso.com                     ← name of helper domain controller  
-dcpromoui          Calling NetJoinDomain  
-dcpromoui          lpServer         : (null)  
-dcpromoui          lpDomain         : contoso.com\<helper DCs hostname>.contoso.com  
-dcpromoui          lpAccountOU      : (null)  
-dcpromoui          lpAccount        : contoso.com\administrator  
-dcpromoui          fJoinOptions : 0x27  
-dcpromoui          HRESULT = 0x80070524Error                ← 0x80070524 = 0x524 hex / 1316 decimal with symbolic error ERROR_USER_EXISTS  
-dcpromoui          HRESULT = 0x80070524
+> dcpromoui          Enter DS::JoinDomain                                                  ← Search for this section of the %systemroot%\debug\dcpromoui.log  
+dcpromoui          Enter MassageUserName administrator  
+dcpromoui          contoso.com\administrator  
+dcpromoui          Enter MyNetJoinDomain contoso.com\<helper DCs hostname>.contoso.com                     ← name of helper domain controller  
+dcpromoui          Calling NetJoinDomain  
+dcpromoui          lpServer         : (null)  
+dcpromoui          lpDomain         : contoso.com\<helper DCs hostname>.contoso.com  
+dcpromoui          lpAccountOU      : (null)  
+dcpromoui          lpAccount        : contoso.com\administrator  
+dcpromoui          fJoinOptions : 0x27  
+dcpromoui          HRESULT = 0x80070524Error                ← 0x80070524 = 0x524 hex / 1316 decimal with symbolic error ERROR_USER_EXISTS  
+dcpromoui          HRESULT = 0x80070524
 
-3. Verify that the helper domain controller identified in Step 2 has inbound replicated the removal of the conflicting domain controller machine account and NTDS Settings objects (metadata cleanup) performed in Step 1. If the domain controller machine account still exists, evaluate the possible reasons:
+3. Verify that the helper domain controller identified in Step 2 has inbound replicated the removal of the conflicting domain controller machine account and NTDS Settings objects (metadata cleanup) performed in Step 1. If the domain controller machine account still exists, evaluate the possible reasons:
 
 - Replication latency such as a domain controller being several hops away from the domain controller originating the metadata cleanup.
 - Inbound replication failure on the helper domain controller.
@@ -80,5 +80,5 @@ dcpromoui          HRESULT = 0x80070524
 4. For more information about other root causes for this error, click the following article numbers to view the articles in the Microsoft Knowledge Base:
 
 [266633](https://support.microsoft.com/kb/266633)"Computer \<name> is already in use" error message when you add user names in Windows 2000 or Windows Server 2003
- [273875](https://support.microsoft.com/kb/273875)   Error Message "lsass.exe-System Error" After Running the Dcpromo.exe Program
- [938447](https://support.microsoft.com/kb/938447)   You cannot add a user name or an object name that only differs by a character with a diacritic mark
+ [273875](https://support.microsoft.com/kb/273875)   Error Message "lsass.exe-System Error" After Running the Dcpromo.exe Program
+ [938447](https://support.microsoft.com/kb/938447)   You cannot add a user name or an object name that only differs by a character with a diacritic mark

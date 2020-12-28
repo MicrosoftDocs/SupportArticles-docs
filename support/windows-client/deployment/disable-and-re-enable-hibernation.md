@@ -26,7 +26,7 @@ _Original KB number:_ &nbsp; 920730
 ## How to make hibernation unavailable
 
 1. Press the Windows button on the keyboard to open Start menu or Start screen.
-2. Search for **cmd**. In the search results list, right-click **Command Prompt**, and then select **Run as Administrator**.
+2. Search for **cmd**. In the search results list, right-click **Command Prompt**, and then select **Run as Administrator**.
 3. When you are prompted by User Account Control, select **Continue**.
 4. At the command prompt, type `powercfg.exe /hibernate off`, and then press Enter.
 5. Type *exit*, and then press Enter to close the **Command Prompt** window.
@@ -34,7 +34,7 @@ _Original KB number:_ &nbsp; 920730
 ## How to make hibernation available
 
 1. Press the Windows button on the keyboard to open Start menu or Start screen.
-2. Search for **cmd**. In the search results list, right-click **Command Prompt**, and then select **Run as Administrator**.
+2. Search for **cmd**. In the search results list, right-click **Command Prompt**, and then select **Run as Administrator**.
 3. When you are prompted by User Account Control, select **Continue**.
 4. At the command prompt, type `powercfg.exe /hibernate on`, and then press Enter.
 5. Type *exit*, and then press Enter to close the Command Prompt window.

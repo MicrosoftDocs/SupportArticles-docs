@@ -23,6 +23,7 @@ _Original KB number:_ &nbsp; 2879602
 ## Symptoms
 
 Consider the following scenario:
+
 - You have a PC that is running Windows 7/Server 2008 R2 or later and is booting in uEFI mode.
 - You add a second hard disk to the PC and start a second install of Windows using uEFI bootable media. A new EFI System Partition (ESP) is created on the second disk in addition to the existing ESP on the primary hard disk.
 
@@ -36,7 +37,7 @@ Because of variances in different versions of uEFI firmware, Windows doesn't mak
 
 ## Workaround
 
-The only Microsoft supported workaround for booting multiple installations of Windows in a uEFI environment is to use a [dual boot](https://answers.microsoft.com/windows/forum/windows_8-windows_install/dual-boot-windows-8-pro-and-windows-7/0c2887f8-fbe8-489a-ba20-b8ba2dfb0eab) configuration. This will make use of a single ESP and one MSR while still allowing the user to choose to boot to an installation on disk 1 or disk 2.
+The only Microsoft supported workaround for booting multiple installations of Windows in a uEFI environment is to use a [dual boot](https://answers.microsoft.com/en-US/windows/forum/windows_8-windows_install/dual-boot-windows-8-pro-and-windows-7/0c2887f8-fbe8-489a-ba20-b8ba2dfb0eab) configuration. This will make use of a single ESP and one MSR while still allowing the user to choose to boot to an installation on disk 1 or disk 2.
 
 Note: The EFI firmware will use the last Windows installation (using setup.exe) as the primary boot OS.
 

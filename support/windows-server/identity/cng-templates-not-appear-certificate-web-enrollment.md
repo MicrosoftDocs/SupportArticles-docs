@@ -1,5 +1,5 @@
 ---
-title: Version 3 (CNG) templates won't appear in Windows Server 2008 or Windows Server 2008 R2 certificate web enrollment
+title: Version 3 (CNG) templates won't appear in certificate web enrollment
 description: Fixes an issue where the CNG or 2008 templates don't appear in the Advanced Certificate Request template pulldown menu.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;2015796
 
 ## Symptoms
 
-When using the certificate web enrollment page on a Windows Server 2008 or Windows Server 2008 R2 server, the new Version 3, also known as CNG or 2008 templates, don't appear in the Advanced Certificate Request template pulldown menu. As a result, web enrollment using a CNG template can't take place via the web enrollment method.
+When using the certificate web enrollment page on a Windows Server 2008 or Windows Server 2008 R2 server, the new Version 3, also known as CNG or 2008 templates, don't appear in the Advanced Certificate Request template pulldown menu. As a result, web enrollment using a CNG template can't take place via the web enrollment method.
 
 When this occurs, certificates can be requested and enrolled in successfully using the same templates but other enrollment methods. In other words, you can successfully request a certificate from that template using the certificates MMC snap-in, script, autoenrollment, or exported request. The issue only occurs with web enrollment not allowing the Version 3 template from being available to select.
 

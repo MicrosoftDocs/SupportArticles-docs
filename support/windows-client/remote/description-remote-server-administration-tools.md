@@ -9,11 +9,11 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika, nedpyle
+ms.reviewer: kaushika, nedpyle, qianyu
 ms.prod-support-area-path: Administration
 ms.technology: RDS
 ---
-# Description of Remote Server Administration Tools  
+# Description of Remote Server Administration Tools
 
 This article describes the tools that are available for installation as part of Remote Server Administration Tools.
 
@@ -28,7 +28,7 @@ This article describes the tools that are available for installation as part of 
 
 |Remote Server Administration Tools technology|Description|Manages technology on Windows Server 2003|Manages technology on Windows Server 2008|
 |---|---|---|---|
-|Active Directory Certificate Services Tools|Active Directory Certificate Services Tools includes the Certification Authority, Certificate Templates, Enterprise PKI, and Online Responder Management snap-ins.| √ , except Online Certificate Status Protocol (OCSP)| √ |
+|Active Directory Certificate Services Tools|Active Directory Certificate Services Tools includes the Certification Authority, Certificate Templates, Enterprise PKI, and Online Responder Management snap-ins.| √, except Online Certificate Status Protocol (OCSP)| √ |
 |Active Directory Domain Services (AD DS) Tools and Active Directory Lightweight Directory Services (AD LDS) Tools|Active Directory Domain Services includes Active Directory Users and Computers, Active Directory Domains and Trusts, Active Directory Sites and Services, Active Directory Administrative Center (ADAC), Server for Network Information Service (NIS) tools, the Windows PowerShell module for Active Directory, and other snap-ins and command-line tools for remotely managing Active Directory Domain Services.<br/><br/>- Active Directory Lightweight Directory Services Tools includes Active Directory Sites and Services, ADSI Edit, Schema Manager, and other snap-ins and command-line tools for managing Active Directory Lightweight Directory Services.<br/><br/>- Server for NIS Tools includes an extension to the Active Directory Users and Computers snap-in, and the Ypclear.exe command-line tool.| √, Windows PowerShell and ADAC remote management require the Active Directory Web Service download package.| √, PowerShell and ADAC remote management require the Active Directory Web Service download package.|
 |BitLocker Active Directory Recovery Password Viewer|The BitLocker Active Directory Recovery Password Viewer tool is an extension for the Active Directory Users and Computers Microsoft Management Console (MMC) snap-in. Using this tool, you can open a computer object's **Properties** dialog box to view the corresponding BitLocker recovery passwords.|Not available|Not available|
 |DHCP Server Tools|DHCP Server Tools include the DHCP Management Console and the Netsh command-line tool.| √| √ |
@@ -44,5 +44,3 @@ This article describes the tools that are available for installation as part of 
 |Storage Explorer Tools|Storage Explorer Tools include the Storage Explorer snap-in.|Not available| √ |
 |Storage Manager for Storage Area Networks (SANs) Tools|Storage Manager for SANs Tools includes the Storage Manager for SANs snap-in and the Provisionstorage.exe command-line tool.| √ <br/><br/>Storage Manager for SANs is available in Windows Server 2003 R2 and later versions.| √ |
 |Windows System Resource Manager Tools|Windows System Resource Manager Tools include the Windows System Resource Manager snap-in and the Wsrmc.exe command-line tool.|Not available| √ |
-
-For more information about Remote Server Administration Tools for Windows 7, visit the following Microsoft Web site: [https://www.microsoft.com/download/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d](https://www.microsoft.com/download/details.aspx?familyid=7d2f6ad7-656b-4313-a005-4e344e43997d)

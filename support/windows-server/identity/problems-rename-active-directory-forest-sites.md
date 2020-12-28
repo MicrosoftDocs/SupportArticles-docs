@@ -17,8 +17,8 @@ ms.technology: ActiveDirectory
 
 This article describes the problems that you may experience when you rename sites in the Active Directory forest.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;920718
+_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 920718
 
 ## More information
 
@@ -33,32 +33,22 @@ When you rename a site in the Active Directory forest, the following events occu
 
 Because of the different time intervals that are used to update site-related information, you may experience the following problems:
 
-- When the client computers are informed about the new site name in step 2, their DNS server may not yet have the new record registrations and will therefore return an error. The client computers will then query for records that aren't site-specific. The domain controllers that are returned from this query may only have a weak network link to the client computer. Therefore, the client computer experiences poor performance. The effect of this problem depends on the following:
+- When the client computers are informed about the new site name in step 2, their DNS server may not yet have the new record registrations and will therefore return an error. The client computers will then query for records that aren't site-specific. The domain controllers that are returned from this query may only have a weak network link to the client computer. Therefore, the client computer experiences poor performance. The effect of this problem depends on the following:  
 
-    - The replication delay of the site information in the Configuration NC
-    - The delay that you experience in obtaining the new DNS records that are propagated to all DNS servers
+  - The replication delay of the site information in the Configuration NC
+  - The delay that you experience in obtaining the new DNS records that are propagated to all DNS servers
 
-To force the Net Logon service to immediately register its DNS records, you can run the nltest /dsregdns command at the command prompt.
+    To force the Net Logon service to immediately register its DNS records, you can run the `nltest /dsregdns` command at the command prompt.
 
-> [!NOTE]
-> The Nltest tool can be obtained from the Microsoft Windows Server 2003 support tools.
+    > [!NOTE]
+    > The Nltest tool can be obtained from the Microsoft Windows Server 2003 support tools.
 
-To speed up adoption of new sites especially for System Volume (SYSVOL) access, you can use the logon server as the preferred DFS server.
-
-For more information about how to use the logon server as the preferred DFS server, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[831201](https://support.microsoft.com/help/831201) An update for Windows Server 2003 and Windows 2000 Server makes it possible to put the logon server at the top of the DFS referrals list  
+    To speed up adoption of new sites especially for System Volume (SYSVOL) access, you can use the logon server as the preferred DFS server.
 
 - When client computers search for domain-based DFS volumes, the DFS namespace servers or domain controllers examine the IP address of the client computers and their local site information. When the DFS namespace servers or domain controllers examine the IP address, they can determine the site that the client computers are in. You can also perform this mapping from the client site cache. DFS may run a query for the best alternative site by using the Windows Server 2003 closest site selection mode. The DFS server then examines the target site cache to find the servers for the site that the client computer is in, and the next best sites. Because of the delay to update the caches, the DFS server may not find the new site names in the target site cache. The DFS server then returns an incorrectly ordered list of servers to the client computer. Therefore, the client computer may contact slow servers for files. This causes poor performance.
 
-If the site information is completely replicated in Active Directory and DNS, you may restart all DFS namespace servers or domain controllers so that they obtain the latest server-to-site mapping.
+    If the site information is completely replicated in Active Directory and DNS, you may restart all DFS namespace servers or domain controllers so that they obtain the latest server-to-site mapping.
 
-For more information about DFS site selection, follow these steps:
+    For more information about DFS, visit the following Microsoft Web site:
 
-1. Visit the following Microsoft Web site: [https://www.microsoft.com/windowsserver2003/techinfo/overview/dfsfaq.mspx](https://www.microsoft.com/windowsserver2003/techinfo/overview/dfsfaq.mspx) 
-
-2. Click **DFS Clients**, and then click **Q. What can cause clients to be referred to unexpected targets?**.
-
-For more information about DFS, visit the following Microsoft Web site:
-
-[Distributed File System](https://docs.microsoft.com/windows/win32/dfs/distributed-file-system) 
+    [Distributed File System](https://docs.microsoft.com/windows/win32/dfs/distributed-file-system)

@@ -33,17 +33,17 @@ Consider the following scenario:
 
 In this scenario, the certificate is missing in the GPO settings report.
 
-Example settings and screenshots
+Example settings and screenshots:
 
 You set the following CA certificates to be used by the authentication:
 
-- The first certificate has multiple subject names:
+- The first certificate has multiple subject names:
 
     CN = Contoso OneAD Root CA  
     DC = contoso  
     DC = com  
 
-    :::image type="content" source="./media/root-ca-certificate-doesnt-appear/certificate- multiple-subject-names.png" alt-text="The first certificate has multiple subject names.":::
+    :::image type="content" source="./media/root-ca-certificate-doesnt-appear/certificate- multiple-subject-names.png" alt-text="The first certificate has multiple subject names.":::
 
 - The second certificate has a single subject name:
 
@@ -61,4 +61,4 @@ The issue occurs because of a code defect in Windows.
 
 ## Status
 
-This issue affects only the GPO settings report. The certificate is successfully used by the authentication.
+This issue affects only the GPO settings report. The certificate is successfully used by the authentication.

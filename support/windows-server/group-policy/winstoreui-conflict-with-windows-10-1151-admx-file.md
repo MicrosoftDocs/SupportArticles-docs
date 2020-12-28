@@ -32,7 +32,7 @@ Comparing the .admx files of Windows Server 2012 R2 and Windows 10 Version 1511 
 
 An error has occurred while collecting data for Administrative Templates. The following errors were encountered
 
-> An appropriate resource file could not be found for \\\<domain>\sysvol\\<domain.dns>policies\PolicyDefinitions\WinStoreUI.admx\(error = 2): The system cannot find the file specified.
+> An appropriate resource file could not be found for \\\\\<domain>\sysvol\\<domain.dns>policies\PolicyDefinitions\WinStoreUI.admx\(error = 2): The system cannot find the file specified.
 
 ## Cause
 
@@ -40,13 +40,13 @@ In Windows 10 Version 1507, the Store .admx file was removed. A fix restored the
 
 The .admx files are the following:
 
-
 - Original Store Group Policy file name: winstoreui.admx
 - New Store Group Policy file name: windowsstore.admx
 
 ## Resolution
 
-This problem is fixed in Windows 10 Version 1511 and by the most recent cumulative update. Affected customers should upgrade to that release if possible. To prevent the error from occurring when you open Gpedit.msc and when you run Gpresult.exe, follow these steps:
+This problem is fixed in Windows 10 Version 1511 and by the most recent cumulative update. Affected customers should upgrade to that release if possible. To prevent the error from occurring when you open Gpedit.msc and when you run Gpresult.exe, follow these steps:  
+
 1. Verify that you have both winstoreui.admx and windowsstore.admx in the Central Store.
 2. Delete the winstoreui.admx and winstoreui.adml files from the Central Store.
 3. Verify that both opening Gpedit.msc and running Gpresults.exe work without error.

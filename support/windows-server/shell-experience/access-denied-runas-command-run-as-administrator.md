@@ -1,6 +1,6 @@
 ---
 title: Access is denied error when you use the runas command, Run as Administrator option, or Run as a different user option
-description: Describes an issue where you can't use the runas command, the Run as Administrator option, or the Run as a different user option. Provides some workarounds.
+description: Describes an issue where you can't use the `runas` command, the Run as Administrator option, or the Run as a different user option. Provides some workarounds.
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
@@ -22,7 +22,8 @@ _Original KB number:_ &nbsp; 977513
 
 ## Symptoms
 
-Consider the following scenario:
+Consider the following scenario:  
+
 - You upgrade a computer that is running Windows Server 2003 or Windows Server 2008 to Windows Server 2008 R2.
 - You log on as a standard user.
 
@@ -50,7 +51,8 @@ You can use the Sc.exe command prompt utility to set the security to the default
 > [!NOTE]
 > You should log on as an administrator before you run these commands.
 
-To do this, follow these steps:
+To do this, follow these steps:  
+
 1. Open a Command Prompt window.
 2. At the command prompt, type the following command, and then press ENTER:
 
@@ -63,7 +65,7 @@ To do this, follow these steps:
     ```console
     sc sdset seclogon d:(a;;cclcswrpwpdtlocrrc;;;sy)(a;;ccdclcswrpwpdtlocrsdrcwdwo;;;ba)(a;;cclcswrpdtlocrrc;;;iu)(a;;cclcswdtlocrrc;;;su)(a;;cclcswrpdtlocrrc;;;au)s:(au;fa;ccdclcswrpwpdtlocrsdrcwdwo;;;wd)  
     ```
-    
+
     > [!NOTE]
     > This command is wrapped for readability.
 4. Close the Command Prompt window.
@@ -90,11 +92,11 @@ To do this, follow these steps:
 
     |Property|Objects|
     |---|---|
-    |Authenticated Users|Query Template, Query Status, Enumerate Dependents, Start, Pause and continue, Interrogate, Read Permissions, User Defined Control|
+    |Authenticated Users|Query Template, Query Status, Enumerate Dependents, Start, Pause, and continue, Interrogate, Read Permissions, User Defined Control|
     |Builtin\Administrators|Full Control|
-    |Interactive|Query Template, Query Status, Enumerate Dependents, Start, Pause and continue, Interrogate, Read Permissions, User Defined Control|
-    |Service|Query Template, Query Status, Enumerate Dependents, Pause and continue, Interrogate, User Defined Control|
-    |System|Query Template, Query Status, Enumerate Dependents, Start, Pause and continue, Interrogate, Stop|
+    |Interactive|Query Template, Query Status, Enumerate Dependents, Start, Pause, and continue, Interrogate, Read Permissions, User Defined Control|
+    |Service|Query Template, Query Status, Enumerate Dependents, Pause, and continue, Interrogate, User Defined Control|
+    |System|Query Template, Query Status, Enumerate Dependents, Start, Pause, and continue, Interrogate, Stop|
 
 7. Click **OK** to apply the security changes.
 8. Click **OK** to apply the Group Policy changes.
@@ -112,14 +114,14 @@ To do this, follow these steps:
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section. 
+Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.  
 
 ## More information
 
 For more information about the `runas` command, visit the following Microsoft TechNet Web site:
 
 [Runas](https://technet.microsoft.com/library/bb490994.aspx)
- 
+
 For more information about how to use the Group Policy Management Console, visit the following Microsoft TechNet Web site:
 
 [Group Policy Management Console](https://technet.microsoft.com/library/cc753298.aspx)

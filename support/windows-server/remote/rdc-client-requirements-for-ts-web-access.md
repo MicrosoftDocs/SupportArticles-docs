@@ -20,7 +20,7 @@ This article describes the Remote Desktop Connection (RDC) client requirements t
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 943887
 
-## INTRODUCTION
+## Introduction
 
 Terminal Services (TSWeb) in Windows Server 2008 and Remote Desktop Services (RDWeb) in Windows 2008 R2 are role-based services that let users start RemoteApp and Desktop Connection from a web browser. RemoteApp and Desktop Connection provides a customized view of RemoteApp programs and virtual desktops to users. When a user starts a RemoteApp program, a Terminal Services session is started on the Windows Server 2008-based terminal server that hosts the RemoteApp program.
 
@@ -30,16 +30,16 @@ To start a RemoteApp program, a user connects to a website that is hosted on the
 
 If you are using Windows Server 2008 R2, you must use RDC client version 7.
 
-You must have the RDC client version 6.1 installed to use TS Web Access with the following operating systems:
+You must have the RDC client version 6.1 installed to use TS Web Access with the following operating systems:  
+
 - Windows Server 2008
 - Windows Vista with Service Pack 1 (SP1)
 - Windows XP with Service Pack 3 (SP3)
 
     > [!NOTE]
     > RDC 6.1 (6.0.6001) supports Remote Desktop Protocol 6.1.
-- If you are experiencing this issue on a Windows Vista-based computer, you must have Windows Vista Service Pack 1 installed on your computer. For more information about Windows Vista Service Pack 1, see Microsoft Knowledge Base article [936330: What you should know before you install Windows Vista Service Pack 1](https://support.microsoft.com/help/936330) 
+- If you are experiencing this issue on a Windows Vista-based computer, you must have Windows Vista Service Pack 1 installed on your computer.  
 - If you are experiencing this issue on a Windows XP-based computer, you must have Windows XP Service Pack 3 or RDC 6.1 installed on your computer.
-  - [Click here to see how to obtain Windows XP SP3](https://technet.microsoft.com/windowsxp/0a5b9b10-17e3-40d9-8d3c-0077c953a761.aspx) 
 
 ## Advanced Information
 
@@ -49,23 +49,25 @@ When users try to connect to TS Web Access from a computer that has an earlier v
 
 Currently, the URL that is included in the error message points to this Knowledge Base article. However, you can change the URL that is included in the error message. To modify the URL, use one of the following methods.
 
-#### Method 1: Use an ASP.NET application setting
+#### Method 1: Use an `ASP.NET` application setting
 
-To change the URL that is included in the error message, use an ASP.NET application setting. To do this, follow these steps:
+To change the URL that is included in the error message, use an `ASP.NET` application setting. To do this, follow these steps:  
+
 1. Click **Start**, click **Run**, type Inetmgr.exe, and then click
  **OK**.
 2. Expand the server name, expand **Sites**, expand **Default Web Site**, and then click **TS**.
 
     > [!NOTE]
     > By default, TS Web Access is installed in the default website.
-3. Under **ASP.NET**, double-click **Application Settings**.
+3. Under **`ASP.NET`**, double-click **Application Settings**.
 4. In the actions pane, click **Add**.
 5. In the **Add Application Setting** dialog box, type rdcInstallURL in the **Name** box.
 6. In the **Add Application Setting** dialog box, type the URL for the webpage that includes more information about how to use TS Web Access, and then click **OK**.
 
 #### Method 2: Edit the Web.config file
 
-To change the URL that is included in the error message, you can edit the Web.config file for the TS Web Access website. To do this, follow these steps:
+To change the URL that is included in the error message, you can edit the Web.config file for the TS Web Access website. To do this, follow these steps:  
+
 1. Open the Web.config file for the TS Web Access website in Notepad.
 
     > [!NOTE]
@@ -73,12 +75,10 @@ To change the URL that is included in the error message, you can edit the Web.co
 2. Locate the \<appSettings> section in the Web.config file.
 3. In the \<appSettings> section, add the following entry:
 
-```xml
-<add key="rdcInstallUrl" value="http://URL" />
-```
+    > \<add key="rdcInstallUrl" value="`http://URL`" />
 
-> [!NOTE]
-> The **URL** placeholder is the URL for the webpage that includes more information about how to use TS Web Access.
+    > [!NOTE]
+    > The **URL** placeholder is the URL for the webpage that includes more information about how to use TS Web Access.
 
 4. On the **File** menu, click **Save**.
 5. Exit Notepad.
@@ -89,11 +89,9 @@ If you are not an administrator, contact the system administrator if you have pr
 
 ## More information
 
-#### Related Topic
+### Related Topic
 
-
-- For more information about Remote Desktop Connection 6.1 in Windows XP, see Microsoft Knowledge Base article [952155: Description of the Remote Desktop Connection 6.1 client update for Terminal Services in Windows XP Service Pack 2](https://support.microsoft.com/KB/952155) 
-- For more information about security update for Remote Desktop Client version 6.0 and 6.1, see Microsoft Knowledge Base article [956744: MS09-044: Description of the security update for Remote Desktop Client version 6.0 and 6.1: August 11, 2009](https://support.microsoft.com/KB/956744) 
+- For more information about security update for Remote Desktop Client version 6.0 and 6.1, see Microsoft Knowledge Base article [956744: MS09-044: Description of the security update for Remote Desktop Client version 6.0 and 6.1: August 11, 2009](https://support.microsoft.com/KB/956744)  
 - Depending on your version of Windows Server, visit one of the following:
   - The [Remote Desktop Services](https://technet.microsoft.com/windowsserver/ee236407.aspx) home page (Windows Server 2008 R2) on the Windows Server TechCenter.
   - The [Terminal Services](https://technet.microsoft.com/library/cc754746%28WS.10%29.aspx) home page (Windows Server 2008) on the Windows Server TechCenter.
@@ -102,6 +100,7 @@ If you are not an administrator, contact the system administrator if you have pr
 
 ## Additional Resources
 
-Click the following links to find more options if this article cannot resolve your problem:
-- [Microsoft Windows Answer](https://answers.microsoft.com/windows/default.aspx) 
-- [Troubleshooting Specific Remote Desktop Problems](https://technet.microsoft.com/library/cc756819%28WS.10%29.aspx) 
+Click the following links to find more options if this article cannot resolve your problem:  
+
+- [Microsoft Windows Answer](https://answers.microsoft.com/windows/default.aspx)  
+- [Troubleshooting Specific Remote Desktop Problems](https://technet.microsoft.com/library/cc756819%28WS.10%29.aspx)  
