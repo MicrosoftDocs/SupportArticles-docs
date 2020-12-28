@@ -834,10 +834,6 @@
     items:
     - name: Extend stand-alone tiered storage spaces
       href: ./backup-and-storage/extend-stand-alone-tiered-storage-spaces.md
-  - name: Storage Spaces Direct (S2D)
-    items:
-    - name: Virtual Disks resources are in No Redundancy or Detached status
-      href: ./backup-and-storage/virtual-disks-resources-not-come-online.md
   - name: System Restore or resetting your computer
     items:
     - name: How to restore a Windows 7 installation
