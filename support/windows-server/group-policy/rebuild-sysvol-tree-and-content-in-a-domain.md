@@ -35,7 +35,7 @@ We recommend the procedure that is described in this article as a last resort to
 > [!NOTE]
 > See the [How to temporarily stabilize the domain SYSVOL tree](#how-to-temporarily-stabilize-the-domain-sysvol-tree) section of this article for information about how to temporarily stabilize the domain SYSVOL tree until you can complete all the steps in the [How to rebuild the domain SYSVOL replica set across enterprise environments](#how-to-rebuild-the-domain-sysvol-replica-set-across-enterprise-environments) section.
 
-We strongly recommend that you monitor FRS performance and health by using monitoring tools. By using monitoring tools, you may prevent the need for replica set authoritative and non-authoritative restores. Also, you may provide insight into the root cause of FRS failures.
+We strongly recommend that you monitor FRS performance and health by using monitoring tools. By using monitoring tools, you may prevent the need for replica set authoritative and non-authoritative restores. Also, by using monitoring tools, you may provide insight into the root cause of FRS failures.
 
 The monitoring tool Ultrasound is available for download.
 
@@ -60,7 +60,7 @@ Use the following guidelines to configure the Burflags registry entry:
 
 - If you set Burflags to D4 on a single domain controller and set Burflags to D2 on all other domain controllers in that domain, you can rebuild the SYSVOL tree in that domain. This bulk rebuild process is known as a hub, branch, or bulk FRS restart.
 
-The following items list the valid uses of a bulk restart of the SYSVOL replica set:
+The following section lists the valid uses of a bulk restart of the SYSVOL replica set:
 
 - The members of an FRS replica set that are currently inconsistent can perform a full synchronization of all files and folders in the SYSVOL tree faster than the members can process the backlog of changes that reside in the outgoing logs of upstream replication partners.
 
@@ -172,18 +172,18 @@ On each domain controller in the domain, follow these steps:
     > Root: C:\\WINNT\\SYSVOL\\domain  
     Stage: C:\\WINNT\\SYSVOL\\staging\\domain
 
-4. Type `Linkd %systemroot%\SYSVOL\SYSVOL\DNS Domain name`, and then press ENTER. The LINKD command returns:
+4. Type `Linkd %systemroot%\SYSVOL\SYSVOL\DNS Domain name`, and then press ENTER. The LINKD command returns the following information:
 
     > Source **DNS Domain Name** is linked to %systemroot%\\SYSVOL\\domain
 
-5. Type `linkd "%systemroot%\SYSVOL\staging areas\DNS Domain Name"`, and then press ENTER. This command returns:
+5. Type `linkd "%systemroot%\SYSVOL\staging areas\DNS Domain Name"`, and then press ENTER. This command returns the following information:
 
     > Source **DNS Domain Name** is linked to %systemroot%\\SYSVOL\\Staging\\domain
 
     > [!NOTE]
     > The path that is reported by the LINKD command varies depending on the location of the SYSVOL\\SYSVOL\\**DNS Domain Name** folder. If the SYSVOL folder is in the default location in the %systemroot%\\SYSVOL folder, use the commands that are listed. Otherwise, type the actual path of the SYSVOL folders.
 
-    For example, if the NTFRSUTL and LINKD commands are run on a domain controller in the `contoso.com` domain, and the SYSVOL folder is in the C:\\Windows\\SYSVOL folder, the command syntax and results for the SYSVOL and Staging folders will appear similar to:
+    For example, if the NTFRSUTL and LINKD commands are run on a domain controller in the `contoso.com` domain, and the SYSVOL folder is in the C:\\Windows\\SYSVOL folder, the command syntax and results for the SYSVOL and Staging folders will appear similar to the following output:
 
     ```console
     C:\>ntfrsutl ds |findstr /i "root stage"
