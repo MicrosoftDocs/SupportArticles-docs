@@ -46,13 +46,13 @@ To resolve this issue, follow these steps:
 
 ## More information
 
-To help deliver a more secure command-line administration experience, Windows PowerShell uses "execution policies" to control how Windows PowerShell can be used. Execution policies define the restrictions under which Windows PowerShell loads files for execution and configuration. By default, Windows PowerShell runs in the Restricted execution policy. This mode is its most secure mode. In this mode, Windows PowerShell operates as an interactive shell only.
+To help deliver a more secure command-line administration experience, Windows PowerShell uses "execution policies" to control how Windows PowerShell can be used. Execution policies define the restrictions under which Windows PowerShell loads files for execution and configuration. Windows PowerShell runs in the Restricted execution policy by default. This mode is its most secure mode. In this mode, Windows PowerShell operates as an interactive shell only.
 
 The four execution policies are as follows:
 
 - Restricted is the default execution policy. This policy doesn't run scripts and is interactive only.
 - AllSigned policy runs scripts. All scripts and configuration files must be signed by a publisher that you trust. This policy opens you to the risk of running signed but malicious scripts, after you confirm that you trust the publisher.
-- RemoteSigned policy runs scripts. All scripts and configuration files that are downloaded from communication applications such as Microsoft Outlook, Windows Internet Explorer, Outlook Express, and Windows Messenger must be signed by a publisher that you trust. This policy opens you to the risk of running malicious scripts that are not downloaded from these applications, and you are not prompted.
+- RemoteSigned policy runs scripts. All scripts and configuration files that are downloaded from communication applications such as Microsoft Outlook, Windows Internet Explorer, Outlook Express, and Windows Messenger must be signed by a publisher that you trust. This policy opens you to the risk of running malicious scripts that aren't downloaded from these applications. And you aren't prompted in this situation.
 - Unrestricted policy runs scripts. All scripts and configuration files that are downloaded from communication applications such as Outlook, Internet Explorer, Outlook Express, and Windows Messenger run after you confirm that you understand that the file originated from the Internet. No digital signature is required. This policy opens you to the risk of running unsigned, malicious scripts that are downloaded from these applications.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/home) website.
