@@ -14,7 +14,7 @@ ms.technology: windows-troubleshooters
 ---
 # Windows Troubleshooters documentation
 
-The topic in this section provide information about Windows Troubleshooters.
+The topic in this section provides information about Windows Troubleshooters.
 
 ## Windows Troubleshooters topic
 

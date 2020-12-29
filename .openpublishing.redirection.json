@@ -731,6 +731,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/windows-server/high-availability/smb-3- file-server-features.md",
+      "redirect_url": "/troubleshoot/windows-server/high-availability/smb-3-file-server-features",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-client/deployment/specified-account-not-exist-enable-bitlocker.md",
       "redirect_url": "/troubleshoot/windows-client/windows-security/specified-account-not-exist-enable-bitlocker",
       "redirect_document_id": false

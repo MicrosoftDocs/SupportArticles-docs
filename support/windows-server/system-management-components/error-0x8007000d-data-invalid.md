@@ -15,7 +15,7 @@ ms.technology: SysManagementComponents
 ---
 # Error message when you run an old scheduled task or a newly created scheduled task on a domain controller: "0x8007000d: The data is invalid"
 
-This article provides the resolution for the error message "0x8007000d: The data is invalid", when you run an old scheduled task or newly created scheduled task on a domain controller.
+This article provides the resolution for the error message "0x8007000d: The data is invalid" when you run an old scheduled task or newly created scheduled task on a domain controller.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 958837
@@ -41,8 +41,8 @@ To resolve this issue, follow these steps:
    3. Click **Stop**, and then click **OK**.
    4. On the **File** menu, click **Exit**.
 2. Change the attribute of the **Tasks** folder to make the folder a typical folder. To do this, follow these steps:
-   1. Click **Start**, click **Run**, type cmd , and then press ENTER.
-   2. At the command prompt, type cd %windir% , and then press ENTER.
+   1. Click **Start**, click **Run**, type cmd, and then press ENTER.
+   2. At the command prompt, type cd %windir%, and then press ENTER.
 
     > [!NOTE]
     > %windir% specifies the path where Windows is installed. Typically, C:\Windows is the path where Windows is installed.
@@ -63,9 +63,3 @@ To resolve this issue, follow these steps:
     2. In the list of services, double-click **Task Scheduler**.
     3. Click **Start**, and then click **OK**.
     4. On the **File** menu, click **Exit**.
-
-## References
-
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[822904](https://support.microsoft.com/help/822904)"The attempt to retrieve account information for the specified task failed" error message when you use Task Scheduler to schedule volume shadow copy to run in Windows Server 2003

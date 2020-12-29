@@ -1149,7 +1149,7 @@
   - name: Cannot failover a group
     items:
     - name: SMB 3.0 features in Windows Server 2012 file server
-      href: ./high-availability/smb-3- file-server-features.md
+      href: ./high-availability/smb-3-file-server-features.md
   - name: Cluster node is hanging
     items:
     - name: Memory dump file is corrupted

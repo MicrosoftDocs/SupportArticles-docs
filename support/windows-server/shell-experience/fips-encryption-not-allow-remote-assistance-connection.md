@@ -74,7 +74,7 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 
 ## More information
 
-The **FIPS Compliant** setting requires that all data between the client and the server is encrypted by using encryption methods that are validated by Federal Information Processing Standard 140-1. When a Windows 10-based client tries to connect to a Windows Server-based computer that requires FIPS-compliant encryption, the following errors occur:
+The **FIPS Compliant** setting requires that all data between the client and the server be encrypted by using encryption methods that are validated by Federal Information Processing Standard 140-1. When a Windows 10-based client tries to connect to a Windows Server-based computer that requires FIPS-compliant encryption, the following errors occur:
 
 - On the client, you receive the following error message from Remote Assistance:
 

@@ -52,6 +52,6 @@ net stop wms; $hostname = (Get-WmiObject -Class Win32_ComputerSystem -Property N
 2. Open an elevated Command Prompt window and run **net stop wms**.
 3. Run **mmc.exe**.
 4. Press Ctrl+M to add a new snap-in.
-5. From the list of available snap-ins on the left side, select **Certificates** to add it to the list. Choose **Computer account** from among the three options, and then choose **Local computer: (the computer this console is running on)**.
+5. From the list of available snap-ins on the left side, select **Certificates** to add it to the list. Choose **Computer account** from among the three options, and then choose **Local computer** (the computer this console is running on).
 6. Find **MultiPoint Services Certificates** in the list of certificates for the local computer, and then delete all the certificates for which **Issued By** is the local host name.
 7. Run **net start wms** in the Command Prompt window. When the MultiPoint service starts, it will create a new certificate.

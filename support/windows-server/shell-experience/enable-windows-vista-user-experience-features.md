@@ -31,6 +31,7 @@ To enable the user experience features that are available in Windows Vista on a 
 ### Desktop Experience
 
 As a first step to enable these user experience features in Windows Server 2008, install the Desktop Experience feature. When you install this feature, the following components are also installed:
+
 - Windows Media Player
 - Media codecs
 
@@ -116,6 +117,7 @@ The following Windows Vista features are not available in Windows Server 2008:
 - Speech Recognition
 
 To install Desktop Experience, follow these steps:
+
 1. Start Server Manager.
 2. In the details pane, locate the **Features Summary** area, and then click **Add Features**.
 3. In the Add Features Wizard, click to select the **Desktop Experience** check box, and then click **Next**.
@@ -134,8 +136,12 @@ Microsoft provides third-party contact information to help you find technical su
 
 > [!NOTE]
 > To use Windows Aero in Windows Server 2008, you must install the following items:
-- The Desktop Experience feature
-- Windows Aero-capable graphics driversTo enable Windows Aero, follow these steps:
+>
+> - The Desktop Experience feature
+> - Windows Aero-capable graphics drivers
+
+To enable Windows Aero, follow these steps:
+
 1. Start the Themes service. To do this, follow these steps:
       1. Click **Start**, click **Run**, type services.msc, and then click **OK**.
       2. In the list of installed services, right-click **Themes**, and then click **Properties**.
@@ -147,19 +153,20 @@ Microsoft provides third-party contact information to help you find technical su
     > [!NOTE]
     > If **Windows Aero** does not appear in the **Color scheme** list, the graphics adapter may not support Windows Aero, or you may have to update the graphics adapter drivers.
 
-
 ### Windows Audio
 
 Windows Server 2008 supports audio playback. However, by default, the Windows Audio service is not started in Windows Server 2008. To enable the Windows Audio service, follow these steps:
+
 1. In the notification area, right-click the speaker icon, and then click **Sounds**.
 2. In the following message that appears, click **Yes**:
     The computer cannot play audio because the Windows Audio Service is not enabled.
-    
+
     Would you like to enable the Windows Audio Service?
 
 ### Windows Search
 
 The Windows Search feature is required for many other search features, such as the Start menu Search tool and the 2007 Office Outlook Search functionality. To install Windows Search, follow these steps:
+
 1. Start Server Manager.
 2. In the details pane, locate the **Roles Summary** area, and then click **Add Roles**.
 3. On the **Before You Begin** page of the Add Roles Wizard, click **Next**.
@@ -172,15 +179,17 @@ The Windows Search feature is required for many other search features, such as t
 ### Shadow Copies
 
 To enable shadow copies for a particular volume, follow these steps:
+
 1. Click **Start**, point to **Administrative Tools**, and then click **Share and Storage Management**.
 2. In the details pane, click the **Volumes** tab.
 3. Right-click the volume for which you want to enable shadow copies, and then click **Properties**.
-4. In the ****DriveName**Properties** dialog box, click the **Shadow Copies** tab.
+4. In the **DriveName** **Properties** dialog box, click the **Shadow Copies** tab.
 5. Click **Enable**, and then click **Yes** to enable shadow copies for the particular volume.
 
 ### Internet Explorer Enhanced Security Configuration
 
 By default, Internet Explorer Enhanced Security Configuration is turned on. If you use Windows Server 2008 as a workstation, you may want to turn off Internet Explorer Enhanced Security Configuration. To do this, follow these steps:
+
 1. Exit any instances of Internet Explorer.
 2. Start Server Manager.
 3. In the details pane, locate the **Security Information** area that appears under the **Server Summary** area.
@@ -196,6 +205,7 @@ By default, Internet Explorer Enhanced Security Configuration is turned on. If y
 ### Sleep
 
 Windows Server 2008 supports the sleep feature. However, this feature depends on the following conditions:
+
 - Computer hardware that supports sleep
 - Computer Basic Input/Output Settings (BIOS) that support sleep
 
@@ -207,6 +217,7 @@ Windows Server 2008 supports the sleep feature. However, this feature depends on
     > The graphics driver must support this feature. The Windows Server 2008 Super VGA (SVGA) driver does not support sleep.
 
 To enable sleep in Windows Server 2008, follow these steps:
+
 1. Click **Start**, click **Control Panel**, and then double-click **Power Options**.
 2. Under the power plan that is configured, click **Change plan settings**, and then click **Change advanced power settings**.
 3. Expand **Sleep**, and then modify the sleep configuration settings as appropriate for your requirements.

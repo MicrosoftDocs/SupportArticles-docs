@@ -55,7 +55,8 @@ To resolve this problem, follow these steps:
 3. In the console tree, expand **Component Services**, and then expand **Computers**.
 4. Right-click **My Computer**, and then click **Properties**.
 5. Click **Default Properties**, and then in the **Default Authentication Level** list, click **Connect**.
-    NoteIf the **Default Authentication Level** item is not set to **None**, do not change it. It may have been set by an administrator.
+    > [!Note]
+    > If the **Default Authentication Level** item is not set to **None**, do not change it. It may have been set by an administrator.
 
 6. In the **Default Impersonation Level** list, click **Identify**.
 7. Click **OK**, and then click **Yes** to confirm the selection.

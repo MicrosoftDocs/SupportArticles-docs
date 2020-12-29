@@ -24,10 +24,10 @@ _Original KB number:_ &nbsp; 2781106
 
 Consider the following scenario:  
 
-- You're unable to connect remotely to Windows Server 2012 Device Manager from a Windows 8-based computer
-- You're unable to connect remotely to Windows Server 2012 Device Manager from a Windows 7-based computer
-- You're unable to connect remotely to Windows Server 2008 R2 Device Manager from a Windows 8-based computer
-- You're unable to connect remotely to Windows 8 Device Manager from a Windows 7-based computer
+- You're unable to connect remotely to Windows Server 2012 Device Manager from a Windows 8-based computer.
+- You're unable to connect remotely to Windows Server 2012 Device Manager from a Windows 7-based computer.
+- You're unable to connect remotely to Windows Server 2008 R2 Device Manager from a Windows 8-based computer.
+- You're unable to connect remotely to Windows 8 Device Manager from a Windows 7-based computer.
 
 Additionally, you may receive an error message that is similar to the following:
 
@@ -53,7 +53,7 @@ Previously, a Windows 7-based computer could connect to a Windows Server 2008 R2
 
 To open Device Manager on a remote computer:  
 
-1. Open Computer Management (compmgmt.msc)
+1. Open Computer Management (compmgmt.msc).
 2. On the Action menu, click Connect to another computer.
 3. In the Select Computer dialog box, do one of the following:
    - In the Another computer text box, type the name of the computer to access, and then click OK.
