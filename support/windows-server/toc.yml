@@ -2842,9 +2842,7 @@
     items:
     - name: Enabling smart card logon
       href: ./windows-security/enabling-smart-card-logon-third-party-certification-authorities.md
-- name: Windows Server EoS FAQ
+- name: Windows Server End of Support (EoS) FAQ
   items:
-  - name: Main page
-    items:
-    - name: End of support for Windows Server 2008 and Windows Server 2008 R2
-      href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.md
+  - name: End of support for Windows Server 2008 and Windows Server 2008 R2
+    href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.md
