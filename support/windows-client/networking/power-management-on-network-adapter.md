@@ -75,7 +75,7 @@ You have three options for the power management properties of the Network Card:
 
 The different possible combinations that exist along with their DWORD values (in decimal and hex) are:
 
-- Option 1 and option 2 are checked, Option 3 is unchecked: This is default and hence its value is **0**.
+- Option 1 and option 2 are checked, Option 3 is unchecked: It's default and hence its value is **0**.
 - Option 1, option 2, and option 3 are all checked: The value becomes **0x100 (256)**.
 - Only option 1 is checked: The value becomes **0x110 (272)**.
 - Option 1 is unchecked (Note that option 2 and option 3 will be greyed out as a result): The value becomes **0x118 (280)**.
@@ -83,7 +83,7 @@ The different possible combinations that exist along with their DWORD values (in
 A conflict happens for the DWORD value for the last step where Option 1 is only checked, if the following steps are done exactly as mentioned below:
 
 - If you check all the boxes, then the value is **256 (0x100)**.
-- If you uncheck the box 1, which will grey out the other two, the value becomes **280 (0x118)**.
+- If you uncheck the box 1, the other two will be grey out, and the value becomes **280 (0x118)**.
 - If you check all the boxes except, the third one, PNPCapabilities value becomes **0**.
 - If step 2 is repeated, the value becomes **24 (0x18)**.
 
