@@ -88,13 +88,13 @@ The Ntdsutil.exe command-line tool allows you to restore the backlinks of delete
 
 When you use this method, you perform the following high-level steps:
 
-1. Check to see if a global catalog in the user's domain hasn't replicated in the deletion. And then prevent that global catalog from replicating. If there's no latent global catalog, locate the most current system state backup of a global catalog domain controller in the deleted user's home domain.
+1. Check if a global catalog in the user's domain hasn't replicated in the deletion. And then prevent that global catalog from replicating. If there's no latent global catalog, locate the most current system state backup of a global catalog domain controller in the deleted user's home domain.
 2. Auth restore all the deleted user accounts, and then permit end-to-end replication of those user accounts.
 3. Add all the restored users back to all the groups in all the domains that the user accounts were a member of before they were deleted.
 
 To use method 1, follow this procedure:
 
-1. Check to see whether there is a global catalog domain controller in the deleted user's home domain that has not replicated any part of the deletion.
+1. Check whether there's a global catalog domain controller in the deleted user's home domain that hasn't replicated any part of the deletion.
 
     > [!NOTE]
     > Focus on the global catalogs that have the least frequent replication schedules.
@@ -205,7 +205,15 @@ To use method 1, follow this procedure:
 
         Authoritative restorations of a whole subtree are valid when the OU targeted by the ntdsutil authoritative restore command contains most of the objects that you're trying to authoritatively restore. Ideally, the targeted OU contains all the objects that you're trying to authoritatively restore.
 
-        An authoritative restoration on an OU subtree restores all the attributes and objects that reside in the container. Any changes that were made up to the time that a system state backup is restored are rolled back to their values at the time of the backup. With user accounts, computer accounts, and security groups, this rollback may mean the loss of the most recent changes to passwords, to the home directory, to the profile path, to location and to contact info, to group membership, and to any security descriptors that are defined on those objects and attributes.
+        An authoritative restoration on an OU subtree restores all the attributes and objects that reside in the container. Any changes that were made up to the time that a system state backup is restored are rolled back to their values at the time of the backup. With user accounts, computer accounts, and security groups, this rollback may mean the loss of the most recent changes to:
+
+        - passwords
+        - the home directory
+        - the profile path
+        - location
+        - contact info
+        - group membership
+        - any security descriptors that are defined on those objects and attributes.
 
         Ntdsutil uses the following syntax:
 
@@ -293,7 +301,7 @@ To use method 1, follow this procedure:
 
 When you use this method, you perform the following high-level steps:
 
-1. Check to see if a global catalog in the user's domain has not replicated in the deletion. And then prevent that global catalog from replicating. If there is no latent global catalog, locate the most current system state backup of a global catalog domain controller in the deleted user's home domain.
+1. Check if a global catalog in the user's domain hasn't replicated in the deletion. And then prevent that global catalog from replicating. If there is no latent global catalog, locate the most current system state backup of a global catalog domain controller in the deleted user's home domain.
 2. Auth restore all the deleted user accounts, and then permit end-to-end replication of those user accounts.
 3. Add all the restored users back to all the groups in all the domains that the user accounts were a member of before they were deleted.
 
@@ -491,7 +499,7 @@ To use method 2, follow this procedure:
     > [!NOTE]
     > If one or more of the following statements isn't true, go to step 12.
 
-    - Your forest is running at the Windows Server 2003 and later forest functional level or at the Windows Server 2003 and later Interim forest functional level.
+    - Your forest is running at the Windows Server 2003 and later forest functional level, or at the Windows Server 2003 and later Interim forest functional level.
     - Only user accounts or computer accounts were deleted, and not security groups.
     - The deleted users were added to security groups in all the domains in the forest after the forest was transitioned to Windows Server 2003 and later forest functional level.
 
@@ -500,9 +508,9 @@ To use method 2, follow this procedure:
     > [!NOTE]
     > Before you can add users to groups, the users who you auth restored in step 7 and who you outbound-replicated in step 11 must have replicated to the domain controllers in the referenced domain controller's domain and to all the global catalog domain controllers in the forest.
 
-    If you have deployed a group-provisioning utility to repopulate membership for security groups, use that utility now to restore deleted users to the security groups that they were members of before they were deleted. Do it after all the direct and transitive domain controllers in the forest's domain and global catalog servers have inbound-replicated the auth-restored users and any restored containers.
+    If you have deployed a group-provisioning utility to repopulate membership for security groups, use that utility to restore deleted users to the security groups that they were members of before they were deleted. Do it after all the direct and transitive domain controllers in the forest's domain and global catalog servers have inbound-replicated the auth-restored users and any restored containers.
 
-    If you don't have such a utility, the Ldifde.exe command-line tool and the Groupadd.exe command-line tool can automate this task for you when they are run on the recovery domain controller. These tools are available from Microsoft Product Support Services. In this scenario, Ldifde.exe creates an LDAP Data Interchange Format (LDIF) information file that contains the names of the user accounts and their security groups, starting at an OU container that the administrator specifies. Groupadd.exe then reads the `memberOf` attribute for each user account that is listed in the .ldf file, and then generates separate and unique LDIF information for each domain in the forest. This LDIF information contains the names of the security groups associated with the deleted users. Use the LDIF information to add the information back to the users so that their group memberships can be restored. Follow these steps for this phase of the recovery:
+    If you don't have the utility, the `Ldifde.exe` and `Groupadd.exe` command-line tools can automate this task for you when they are run on the recovery domain controller. These tools are available from Microsoft Product Support Services. In this scenario, Ldifde.exe creates an LDAP Data Interchange Format (LDIF) information file that contains the names of the user accounts and their security groups. It starts at an OU container that the administrator specifies. Groupadd.exe then reads the `memberOf` attribute for each user account that's listed in the .ldf file. It then generates separate and unique LDIF information for each domain in the forest. This LDIF information contains the names of the security groups associated with the deleted users. Use the LDIF information to add the information back to the users so that their group memberships can be restored. Follow these steps for this phase of the recovery:
 
     1. Sign in to the recovery domain controller's console by using a user account that is a member of the domain administrator's security group.
     2. Use the Ldifde command to dump the names of the formerly deleted user accounts and their `memberOf` attributes, starting at the topmost OU container where the deletion occurred. The Ldifde command uses the following syntax:
@@ -533,7 +541,7 @@ To use method 2, follow this procedure:
 
         Run the .ldf file for the domain that the users were deleted from on any domain controller except the recovery domain controller.
 
-    5. On the console of each domain controller that is used to import the Groupadd_<**fully.qualified.domain.name**>.ldf file for a particular domain, outbound-replicate the group membership additions to the other domain controllers in the domain and to the global catalog domain controllers in the forest by using the following command:
+    5. On the console of each domain controller that's used to import the Groupadd_<**fully.qualified.domain.name**>.ldf file for a particular domain, outbound-replicate the group membership additions to the other domain controllers in the domain, and to the global catalog domain controllers in the forest. To do it, use the following command:
 
         ```console
         repadmin /syncall /d /e /P <recovery dc> <Naming Context>
@@ -569,15 +577,15 @@ To use method 2, follow this procedure:
 
 When you use this method, you perform the following high-level steps:
 
-1. Check to see if a global catalog in the user's domain has not replicated in the deletion, and then prevent that domain controller from inbound-replicating the deletion. If there is no latent global catalog, locate the most current system state backup of a global catalog domain controller in the deleted user's home domain.
+1. Check if a global catalog in the user's domain hasn't replicated in the deletion. And then prevent that domain controller from inbound-replicating the deletion. If there is no latent global catalog, locate the most current system state backup of a global catalog domain controller in the deleted user's home domain.
 2. Authoritatively restore all deleted user accounts and all security groups in the deleted user's domain.
-3. Wait for the end-to-end replication of the restored users and of the security groups to all the domain controllers in the deleted user's domain and to the forest's global catalog domain controllers.
+3. Wait for the end-to-end replication of the restored users and the security groups to all the domain controllers in the deleted user's domain, and to the forest's global catalog domain controllers.
 4. Repeat steps 2 and 3 to authoritatively restore deleted users and security groups. (You restore the system state only one time.)
-5. If the deleted users were members of security groups in other domains, authoritatively restore all the security groups that the deleted users were members of in those domains. Or, if system state backups are current, authoritatively restore all the security groups in those domains. To satisfy the requirement that deleted group members must be restored before security groups to fix up group membership links, you restore both object types two times in this method. The first restoration puts all the user accounts and group accounts in place, and the second restoration restores deleted groups and repairs the group membership information, including membership information for nested groups.
+5. If the deleted users were members of security groups in other domains, authoritatively restore all the security groups that the deleted users were members of in those domains. Or, if system state backups are current, authoritatively restore all the security groups in those domains. To satisfy the requirement that deleted group members must be restored before security groups to fix up group membership links, you restore both object types twice in this method. The first restoration puts all the user accounts and group accounts in place. The second restoration restores deleted groups and repairs the group membership information, including membership information for nested groups.
 
 To use method 3, follow this procedure:
 
-1. Check to see whether a global catalog domain controller exists in the deleted users home domain and has not replicated in any part of the deletion.
+1. Check whether a global catalog domain controller exists in the deleted users home domain and hasn't replicated in any part of the deletion.
 
     > [!NOTE]
     > Focus on global catalogs in the domain that has the least frequent replication schedules. If these domain controllers exist, use the Repadmin.exe command-line tool to immediately disable inbound replication. To do it, follow these steps:
@@ -715,7 +723,7 @@ To use method 3, follow this procedure:
 
     If all the following statements are true, group membership links are rebuilt with the restoration of the deleted user accounts. Go to step 13.
 
-    - Your forest is running at the Windows Server 2003 and later forest functional level or at the Windows Server 2003 and later interim forest functional level.
+    - Your forest is running at the Windows Server 2003 and later forest functional level, or at the Windows Server 2003 and later interim forest functional level.
     - Only security groups were not deleted.
     - All the deleted users were added to all the security groups in all the domains in the forest.
 
@@ -747,12 +755,13 @@ To use method 3, follow this procedure:
 
 If you lack current system state backups in a domain where user accounts or security groups were deleted, and the deletion occurred in domains that contain Windows Server 2003 and later domain controllers, follow these steps to manually reanimate deleted objects from the deleted objects container:
 
-1. Follow the steps in the [How to manually undelete objects in a deleted objects container](#how-to-manually-undelete-objects-in-a-deleted-objects-container) section to reanimate deleted users, computers, groups, or all of them.
-2. Use Active Directory Users and Computers to change the account from disabled to enabled. (The account appears in the original OU.)
-3. Use the bulk reset features in the Windows Server 2003 and later version of Active Directory Users and Computers to perform bulk resets on the **password must change at next logon policy** setting, on the home directory, on the profile path, and on group membership for the deleted account as required. You can also use a programmatic equivalent of these features.
-4. If Microsoft Exchange 2000 or later was used, repair the Exchange mailbox for the deleted user.
-5. If Exchange 2000 or later was used, reassociate the deleted user with the Exchange mailbox.
-6. Verify that the recovered user can log on and access local directories, shared directories, and files.
+1. Follow the steps in the following section to reanimate deleted users, computers, groups, or all of them:  
+   [How to manually undelete objects in a deleted objects container](#how-to-manually-undelete-objects-in-a-deleted-objects-container)
+1. Use Active Directory Users and Computers to change the account from disabled to enabled. (The account appears in the original OU.)
+1. Use the bulk reset features in the Windows Server 2003 and later version of Active Directory Users and Computers to perform bulk resets on the **password must change at next logon policy** setting, on the home directory, on the profile path, and on group membership for the deleted account as required. You can also use a programmatic equivalent of these features.
+1. If Microsoft Exchange 2000 or later was used, repair the Exchange mailbox for the deleted user.
+1. If Exchange 2000 or later was used, reassociate the deleted user with the Exchange mailbox.
+1. Verify that the recovered user can log on and access local directories, shared directories, and files.
 
 You can automate some or all of these recovery steps by using the following methods:
 
@@ -875,7 +884,7 @@ You can paste this value when you enter the `Repadmin` command in step 4.
     |134760|Default-First-Site-Name\NA-DC1|134760|DateTime|2|objectCategory|
     |||||||
 
-5. If the name of the originating domain controller in the second column of the output appears as a 32-character alpha-numeric GUID, use the Ping command to resolve the GUID to the IP address and the name of the domain controller that originated the deletion. The Ping command uses the following syntax:
+5. If the name of the originating domain controller appears as a 32-character alpha-numeric GUID, use the Ping command to resolve the GUID to the IP address and the name of the domain controller that originated the deletion. The Ping command uses the following syntax:
 
     ```console
     ping -a <originating DC GUID>._msdomain controllers.<fully qualified path for forest root domain>
@@ -916,28 +925,26 @@ System state changes occur every day. These changes may include:
 - Group membership changes
 - Other attribute changes on user accounts, computer accounts, and security groups.
 
-If your hardware fails, your software fails, or your site experiences another disaster, you'll want to restore the backups that were made after each significant set of changes in each Active Directory domain and site in the forest. If you don't maintain current backups, you may lose data, or may have to roll back restored objects.
+If your hardware or software fails, or your site experiences another disaster, you'll want to restore the backups that were made after each significant set of changes in each Active Directory domain and site in the forest. If you don't maintain current backups, you may lose data, or may have to roll back restored objects.
 
 Microsoft recommends that you take the following steps to prevent bulk deletions:
 
 1. Don't share the password for the built-in administrator accounts, or permit common administrative user accounts to be shared. If the password for the built-in administrator account is known, change the password, and define an internal process that discourages its use. Audit events for shared user accounts make it impossible to determine the identity of the user who is making changes in Active Directory. Therefore, the use of shared user accounts must be discouraged.
-2. It's rare that user accounts, computer accounts, and security groups are intentionally deleted. It's especially true of tree deletions. Disassociate the ability of service and delegated administrators to delete these objects from the ability to create and to manage user accounts, computer accounts, security groups, OU containers, and their attributes. Grant only the most privileged user accounts or security groups the right to perform tree deletes. These privileged user accounts may include enterprise administrators.
-3. Grant delegated administrators access only to the class of object that those administrators are permitted to manage. For example, it's better if a help desk administrator whose primary job is to modify properties on user accounts doesn't have permissions to create and to delete computer accounts, security groups, or OU containers. This restriction also applies to delete permissions for the administrators of other specific object classes.
+2. It's rare that user accounts, computer accounts, and security groups are intentionally deleted. It's especially true of tree deletions. Disassociate the ability of service and delegated administrators to delete these objects from the ability to create and manage user accounts, computer accounts, security groups, OU containers, and their attributes. Grant only the most privileged user accounts or security groups the right to perform tree deletes. These privileged user accounts may include enterprise administrators.
+3. Grant delegated administrators access only to the class of object that those administrators are permitted to manage. For example, a help desk administrator's primary job is to modify properties on user accounts. He doesn't have permissions to create and delete computer accounts, security groups, or OU containers. This restriction also applies to delete permissions for the administrators of other specific object classes.
 4. Experiment with audit settings to track delete operations in a lab domain. After you're comfortable with the results, apply your best solution to the production domain.
 5. Wholesale access-control and audit changes on containers that host tens of thousands of objects can make the Active Directory database grow significantly, especially in Windows 2000 domains. Use a test domain that mirrors the production domain to evaluate potential changes to free disk space. Check the hard disk drive volumes that host the Ntds.dit files and the log files of domain controllers in the production domain for free disk space. Avoid setting access-control and audit changes on the domain network controller head. Making these changes would needlessly apply to all the objects of all the classes in all the containers in the partition. For example, avoid making changes to Domain Name System (DNS) and distributed link tracking (DLT) record registration in the CN=SYSTEM folder of the domain partition.
-6. Use the best-practice OU structure to separate user accounts, computer accounts, security groups, and service accounts in their own organizational unit. When you use this structure, you can apply discretionary access control lists (DACLs) to objects of a single class for delegated administration. And you make it possible for objects to be restored according to object class if they have to be restored. The best-practice OU structure is discussed in the **Creating an Organizational Unit Design** section of the following article:  
+6. Use the best-practice OU structure to separate user accounts, computer accounts, security groups, and service accounts, in their own organizational unit. When you use this structure, you can apply discretionary access control lists (DACLs) to objects of a single class for delegated administration. And you make it possible for objects to be restored according to object class if they have to be restored. The best-practice OU structure is discussed in the **Creating an Organizational Unit Design** section of the following article:  
 [Best Practice Active Directory Design for Managing Windows Networks](/previous-versions/windows/it-pro/windows-2000-server/bb727085(v=technet.10))
 7. Test bulk deletions in a lab environment that mirrors your production domain. Choose the recovery method that makes sense to you, and then customize it to your organization. You may want to identify:
 
     - The names of the domain controllers in each domain that is regularly backed up
-    - Where backup images are stored
+    - Where backup images are stored  
+      Ideally, these images are stored on an extra hard disk that's local to a global catalog in each domain in the forest.
+    - Which members of the help desk organization to contact
+    - The best way to make that contact
 
-    Ideally, these images are stored on an extra hard disk that's local to a global catalog in each domain in the forest.
-
-   - Which members of the help desk organization to contact
-   - The best way to make that contact
-
-8. Most of the bulk deletions of user accounts, of computer accounts, and of security groups that Microsoft sees are accidental. Discuss this scenario with your IT staff, and develop an internal action plan. Focus on early detection and on returning functionality to your domain users and business as quickly as possible. You can also take steps to prevent accidental bulk deletions from occurring by editing the access control lists (ACLs) of organizational units.
+8. Most of the bulk deletions of user accounts, of computer accounts, and of security groups that Microsoft sees are accidental. Discuss this scenario with your IT staff, and develop an internal action plan. Focus on early detection. And return functionality to your domain users and business as quickly as possible. You can also take steps to prevent accidental bulk deletions from occurring by editing the access control lists (ACLs) of organizational units.
 
     For more information about how to use Windows interface tools to prevent accidental bulk deletions, see [Guarding Against Accidental Bulk Deletions in Active Directory](/previous-versions/windows/it-pro/windows-server-2003/cc773347(v=ws.10)).
 

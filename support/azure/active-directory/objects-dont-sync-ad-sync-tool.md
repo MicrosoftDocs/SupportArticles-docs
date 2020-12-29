@@ -150,22 +150,22 @@ Identify the specific attributes that are preventing synchronization based on th
 
 After a specific attribute value is identified, use the Active Directory Users and Computers tool to edit the attribute value. To do it, follow these steps:
 
-    1. Open Active Directory Users and Computers, and then select the root node of the AD DS domain.
-    2. Select **View,** and then make sure that the **Advanced Features** option is selected.
-    3. In the left navigation pane, locate the user object, right-click it, and then select **Properties**.
-    4. On the **Object Editor** tab, locate the attribute that you want. Select **Edit**, and then edit the attribute value to the value that you want.
-    5. Select **OK** two times. 
+1. Open Active Directory Users and Computers, and then select the root node of the AD DS domain.
+2. Select **View,** and then make sure that the **Advanced Features** option is selected.
+3. In the left navigation pane, locate the user object, right-click it, and then select **Properties**.
+4. On the **Object Editor** tab, locate the attribute that you want. Select **Edit**, and then edit the attribute value to the value that you want.
+5. Select **OK** two times.
 
-    Or, you can use Active Directory Service Interfaces (ADSI) Edit to update object attributes in AD DS. You can download and install ADSI Edit as a part of the Windows Server Toolkit. To use ADSI Edit to edit attributes, follow these steps.
+Or, you can use Active Directory Service Interfaces (ADSI) Edit to update object attributes in AD DS. You can download and install ADSI Edit as a part of the Windows Server Toolkit. To use ADSI Edit to edit attributes, follow these steps.
 
-   > [!WARNING]
-   > This procedure requires ADSI Edit. Using ADSI Edit incorrectly can cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that problems that result from the incorrect use of ADSI Edit can be resolved. Use ADSI Edit at your own risk.
+> [!WARNING]
+> This procedure requires ADSI Edit. Using ADSI Edit incorrectly can cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that problems that result from the incorrect use of ADSI Edit can be resolved. Use ADSI Edit at your own risk.
 
-    1. Select **Start**, select **Run**, type ADSIEdit.msc, and then select **OK**.
-    2. Right-click **ADSI Edit** in the navigation pane, select **Connect to**, and then select **OK** to load the domain partition.
-    3. Locate the user object, right-click it, and then select **Properties**.
-    4. In the **Attributes** list, locate the attribute that you want. Select **Edit**, and then edit the attribute value to the value that you want.
-    5. Select **OK** two times, and then exit ADSI Edit.
+1. Select **Start**, select **Run**, type ADSIEdit.msc, and then select **OK**.
+2. Right-click **ADSI Edit** in the navigation pane, select **Connect to**, and then select **OK** to load the domain partition.
+3. Locate the user object, right-click it, and then select **Properties**.
+4. In the **Attributes** list, locate the attribute that you want. Select **Edit**, and then edit the attribute value to the value that you want.
+5. Select **OK** two times, and then exit ADSI Edit.
 
 ### Create a new group and add it to the built-in group that's not being synced
 
