@@ -1,6 +1,10 @@
 ---
 title: Windows client troubleshooting document
 description: This article lists troubleshooting articles for Windows client products.
+author: Deland-Han
+ms.author: delhan 
+manager: dscontentpm
+audience: itpro
 ms.prod: windows-client
 ms.topic: article
 ms.data: 09/08/2020
@@ -29,6 +33,6 @@ Browse the following content or use the search feature.
 - [UE-V](./ue-v/ue-v-overview.md)
 - [UserProfiles and Logon](./user-profiles-and-logon/userprofiles-and-logon-overview.md)
 - [Virtualization](./virtualization/virtualization-overview.md)
-- [Windows 7 EoS FAQ](./windows-7-eos-faq/windows-7-end-support-faq.md)
+- [Windows 7 End of Support (EoS) FAQ](./windows-7-eos-faq/windows-7-end-support-faq.md)
 - [Windows Security](./windows-security/windows-security-overview.md)
-- [windows-troubleshooters](./windows-troubleshooters/windows-troubleshooters-overview.md)
+- [Windows Troubleshooters](./windows-troubleshooters/windows-troubleshooters-overview.md)

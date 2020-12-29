@@ -36,17 +36,13 @@ To work around this issue, follow these steps:
 
 1. Open the run command box by pressing the Windows key+R.
 2. Type regedit.exe, and then press Enter.
-3. Locate the following registry subkey:
+3. Locate the following registry subkey:  
+   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\RemoteRegistry`
 
-    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\RemoteRegistry` 
 4. In the details pane (on the right side), double-click DisableIdleStop.
 5. Change the value to 00000001.
 
-    > [!NOTE]
-    > The default value is 00000000.
+   > [!NOTE]
+   > The default value is 00000000.
 
 6. Exit Registry Editor.
-
-For more information on Poolmon.exe, see the following Knowledge Base article:
-
-[177415](https://support.microsoft.com/help/177415)  How to use Memory Pool Monitor (Poolmon.exe) to troubleshoot kernel mode memory leaks
