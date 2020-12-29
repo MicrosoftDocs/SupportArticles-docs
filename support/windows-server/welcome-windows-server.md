@@ -31,4 +31,4 @@ Browse the following content or use the search feature.
 - [UserProfiles and Logon](./user-profiles-and-logon/userprofiles-and-logon-overview.md)
 - [Virtualization](./virtualization/virtualization-overview.md)
 - [Windows Security](./windows-security/windows-security-overview.md)
-- [Windows Server EoS FAQ](./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.md)
+- [Windows Server End of Support (EoS) FAQ](./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.md)
