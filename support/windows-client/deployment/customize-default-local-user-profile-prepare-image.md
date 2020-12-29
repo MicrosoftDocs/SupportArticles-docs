@@ -85,9 +85,7 @@ Install the version of Windows for which you want to use the profile. Follow the
 
 ### How to configure default user settings for already deployed desktops
 
-Implement the required new or changed settings as a logon script and configure it to run one time. For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[284193](https://support.microsoft.com/help/284193) How to run a logon script one time when a new user logs on  
+Implement the required new or changed settings as a logon script and configure it to run one time.
 
 You can automate the procedure in Knowledge Base article 284193 by using the Reg.exe command. For an alternative solution, see the "Targeted changes to the Default User Registry hive and profile folders" section on the following Microsoft website:
 

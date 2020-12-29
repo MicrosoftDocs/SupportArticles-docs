@@ -130,12 +130,12 @@ Methods for including drivers into WinPE include:
 
 There are several methods for launching the installation of the operating system from WinPE, including:
 
-1. Injecting setup packages into boot.wim.
-    a. Custom WinPE can be modified to auto launch Windows Setup.exe.  
-    b. Can also be used for language packs and scripting support.
+1. Injecting setup packages into boot.wim.  
+    1. Custom WinPE can be modified to auto launch Windows Setup.exe.  
+    2. Can also be used for language packs and scripting support.
 2. Launching setup.exe from startnet.cmd or winpeshl.ini.
-    a. locate USB stick/Hdd  
-    b. Launch \path\setup.exe \</switches>
+    1. locate USB stick/Hdd  
+    2. Launch \path\setup.exe \</switches>
 3. Custom front end to replace cmd.exe (see links for Windows RE in reference section).
 4. Booting from regular Windows Setup media, which first boots up to WinPE (Boot.wim) and can take input from attached USB device or network storage. This method isn't discussed in this article.
 
