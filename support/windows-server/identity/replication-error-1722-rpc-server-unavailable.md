@@ -139,7 +139,7 @@ The OS version will determine the correct values for the source and destination 
 |Kerberos Key Distribution Center (KDC)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers) |
 ||||||
 
-If you make any changes to match the settings above, reboot the machine and verify both the startup value and service status match the values documented in the table above.
+If you make any changes to match the settings above, restart the machine. Verify both the startup value and service status match the values documented in the table above.
 
 ### Verify the ClientProtocols key exists under HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc, and that it contains the correct default protocols
 
@@ -369,7 +369,7 @@ The settings can be found under the following registry keys:
 
 Additional Troubleshooting:
 
-If the above don't provide a solution to the 1722, then you can use the following Diagnostic logging to gather more information:
+If the above don't provide a solution to the 1722, use the following Diagnostic logging to gather more information:
 
 > Windows Server 2003 SP2 computers logs extended RPC Server info in NTDS Replication events 1960, 1961, 1962 and 1963.  
 > Crank up NTDS Diagnostic logging
