@@ -105,9 +105,7 @@ Copy these files into: %systemroot\\Windows\\Servicing\\Packages.
 3. Now you need to gather the missing or corrupted files from the `checksur` log:
 download the KB files for the missing files.
 
-    ```console
-    servicing\packages\Package_for_ KB978601 ~31bf3856ad364e35~amd64~~6.0.1.0.mum
-    ```
+    > servicing\\packages\\Package_for_ KB978601 ~31bf3856ad364e35~amd64~~6.0.1.0.mum
 
 4. Unpack them using the following command:
 
