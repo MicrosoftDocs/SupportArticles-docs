@@ -32,7 +32,9 @@ When you send an email message to a Microsoft 365 group, you may receive a non-d
 
 ## Cause
 
-The aggregate group mailbox has a retention policy associated. The policy purges all email messages from the mailbox periodically. However, a heavy mail flow to a Microsoft 365 group may fill up the mailbox before the policy takes effect and purge the content.  
+The aggregate group mailbox is an arbitration mailbox. It was used to temporarily store emails sent to Microsoft 365 Groups to support a search-related feature. The feature is now deprecated and the aggregate group mailbox is no longer used. This arbitration mailbox will be removed from all Microsoft 365 tenants in the future.
+
+This arbitration mailbox has a retention policy associated. The policy purges all email messages from the mailbox periodically. However, a heavy mail flow to a Microsoft 365 group may fill up the mailbox before the policy takes effect and purge the content.  
 
 ## Status
 
@@ -51,6 +53,3 @@ New-TransportRule -SentTo @("AggregateGroupMailbox.A.201708181918@contoso.onmicr
 - The `AggregateGroupMailbox.A.201708181918@contoso.onmicrosoft.com` represents the SMTP address of aggregate group mailbox stated in the NDR.  
 - This transport rule deletes email messages before they arrive at the aggregate group mailbox. It doesn't affect email delivery to Microsoft 365 Groups.
 
-## More information
-
-The aggregate group mailbox is an arbitration mailbox. It was used to temporarily store emails sent to Microsoft 365 Groups to support a search-related feature. The feature is now deprecated and the aggregate group mailbox is no longer used. This arbitration mailbox will be removed from all Microsoft 365 tenants in the future.
