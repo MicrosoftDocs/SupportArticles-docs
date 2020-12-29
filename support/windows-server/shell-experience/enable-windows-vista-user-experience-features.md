@@ -183,7 +183,7 @@ To enable shadow copies for a particular volume, follow these steps:
 1. Click **Start**, point to **Administrative Tools**, and then click **Share and Storage Management**.
 2. In the details pane, click the **Volumes** tab.
 3. Right-click the volume for which you want to enable shadow copies, and then click **Properties**.
-4. In the **DriveName** **Properties** dialog box, click the **Shadow Copies** tab.
+4. In the **DriveName Properties** dialog box, click the **Shadow Copies** tab.
 5. Click **Enable**, and then click **Yes** to enable shadow copies for the particular volume.
 
 ### Internet Explorer Enhanced Security Configuration
