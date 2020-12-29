@@ -1,6 +1,10 @@
 ---
 title: Windows client troubleshooting document
 description: This article lists troubleshooting articles for Windows client products.
+author: Deland-Han
+ms.author: delhan 
+manager: dscontentpm
+audience: itpro
 ms.prod: windows-client
 ms.topic: article
 ms.data: 09/08/2020

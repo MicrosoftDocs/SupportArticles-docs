@@ -1,6 +1,10 @@
 ---
 title: Windows Server troubleshooting document
 description: This article lists troubleshooting articles for Windows Server products.
+author: Deland-Han
+ms.author: delhan 
+manager: dscontentpm
+audience: itpro
 ms.prod: windows-server
 ms.topic: article
 ms.date: 10/21/2020
