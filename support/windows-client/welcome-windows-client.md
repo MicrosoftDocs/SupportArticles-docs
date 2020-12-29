@@ -31,4 +31,4 @@ Browse the following content or use the search feature.
 - [Virtualization](./virtualization/virtualization-overview.md)
 - [Windows 7 End of Support (EoS) FAQ](./windows-7-eos-faq/windows-7-end-support-faq.md)
 - [Windows Security](./windows-security/windows-security-overview.md)
-- [Windows troubleshooters](./windows-troubleshooters/windows-troubleshooters-overview.md)
+- [Windows Troubleshooters](./windows-troubleshooters/windows-troubleshooters-overview.md)
