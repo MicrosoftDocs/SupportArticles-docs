@@ -66,23 +66,27 @@ Here are the steps to fix the issue:
 
 1. Get the Microsoft Update Readiness Tool from the location: [https://support.microsoft.com/kb/947821](https://support.microsoft.com/kb/947821).  
 2. Run the Microsoft Update Readiness Tool on the problematic computer.
-3. You open the %Systemroot%\Windows\logs\CBS\Checksur.log file after the scan was completed.
+3. You open the %Systemroot%\\Windows\\logs\\CBS\\Checksur.log file after the scan was completed.
 4. You check corrupt information in the files. Here are some samples:  
-    (f) `CBS MUM Corrupt 0x00000000 servicing\Packages\Package_for_KB978601~31bf3856ad364e35~amd64~~6.0.1.0.mum  Expected file name Package_for_KB978601_server~31bf3856ad364e35~amd64~~6.0.1.0.mum does not match the actual file name`  
-    (f) `CBS MUM Corrupt 0x00000000 servicing\Packages\Package_for_KB979309~31bf3856ad364e35~amd64~~6.0.1.0.mum  Expected file name Package_for_KB979309_server~31bf3856ad364e35~amd64~~6.0.1.0.mum does not match the actual file name`  
+    > (f) CBS MUM Corrupt 0x00000000 servicing\\Packages\\Package_for_KB978601~31bf3856ad364e35~amd64\~~6.0.1.0.mum  Expected file name Package_for_KB978601_server~31bf3856ad364e35~amd64\~~6.0.1.0.mum does not match the actual file name  
+    (f) CBS MUM Corrupt 0x00000000 servicing\\Packages\\Package_for_KB979309~31bf3856ad364e35~amd64\~~6.0.1.0.mum  Expected file name Package_for_KB979309_server~31bf3856ad364e35~amd64\~~6.0.1.0.mum does not match the actual file name
+
     Or  
 
-    (f) `CBS MUM Corrupt 0x800B0100  servicing\Packages\Package_for_KB978601~31bf3856ad364e35~amd64~~6.0.1.0.mum   servicing\Packages\Package_for_KB978601~31bf3856ad364e35~amd64~~6.0.1.0.cat Package   manifest cannot be validated by the corresponding catalog`  
-    (f) `CBS MUM Corrupt 0x800B0100   servicing\Packages\Package_for_KB979309~31bf3856ad364e35~amd64~~6.0.1.0.mum  servicing\Packages\Package_for_KB979309~31bf3856ad364e35~amd64~~6.0.1.0.cat Package  manifest cannot be validated by the corresponding catalog`  
+    > (f) CBS MUM Corrupt 0x800B0100  servicing\\Packages\\Package_for_KB978601~31bf3856ad364e35~amd64\~~6.0.1.0.mum   servicing\\Packages\\Package_for_KB978601~31bf3856ad364e35~amd64\~~6.0.1.0.cat Package   manifest cannot be validated by the corresponding catalog
+    (f) CBS MUM Corrupt 0x800B0100   servicing\\Packages\\Package_for_KB979309~31bf3856ad364e35~amd64\~~6.0.1.0.mum  servicing\\Packages\\Package_for_KB979309~31bf3856ad364e35~amd64\~~6.0.1.0.cat Package  manifest cannot be validated by the corresponding catalog
+
     Or  
-    (f) `CBS MUM Missing 0x00000002   servicing\packages\Package_114_for_KB955839~31bf3856ad364e35~amd64~~6.0.1.0.mum`  
-    (f) `CBS MUM Missing 0x00000002   servicing\packages\Package_83_for_KB955839~31bf3856ad364e35~amd64~~6.0.1.0.mum`  
+    > (f) CBS MUM Missing 0x00000002   servicing\\packages\\Package_114_for_KB955839~31bf3856ad364e35~amd64\~~6.0.1.0.mum
+    (f) CBS MUM Missing 0x00000002   servicing\\packages\\Package_83_for_KB955839~31bf3856ad364e35~amd64\~~6.0.1.0.mum
+
     Further down you will see:  
-    Unavailable repair files:  
-    `servicing\packages\Package_for_KB978601~31bf3856ad364e35~amd64~~6.0.1.0.mum  
-    servicing\packages\Package_for_KB979309~31bf3856ad364e35~amd64~~6.0.1.0.mum  
-    servicing\packages\Package_for_KB978601~31bf3856ad364e35~amd64~~6.0.1.0.cat  
-    servicing\packages\Package_for_KB979309~31bf3856ad364e35~amd64~~6.0.1.0.cat`  
+
+    > Unavailable repair files:  
+    servicing\\packages\\Package_for_KB978601~31bf3856ad364e35~amd64\~~6.0.1.0.mum  
+    servicing\\packages\\Package_for_KB979309~31bf3856ad364e35~amd64\~~6.0.1.0.mum  
+    servicing\\packages\\Package_for_KB978601~31bf3856ad364e35~amd64\~~6.0.1.0.cat  
+    servicing\\packages\\Package_for_KB979309~31bf3856ad364e35~amd64\~~6.0.1.0.cat  
 
 Copy these files into: %systemroot\\Windows\\Servicing\\Packages.  
 
