@@ -42,7 +42,7 @@ This policy directs the system to apply the set of GPOs for the computer to any 
 > - Windows 2000 Advanced Server
 > - Windows Server 2003
 
-When users work on their own workstations, you may want Group Policy settings applied based on the location of the user object. So we recommend that you configure policy settings based on the organizational unit in which the user account resides. However, there may be instances when a computer object resides in a specific organizational unit, and the user settings of a policy should be applied based on the location of the computer object instead of the user object.
+When users work on their own workstations, you may want Group Policy settings applied based on the location of the user object. So we recommend you configure policy settings based on the organizational unit in which the user account resides. However, there may be instances when a computer object resides in a specific organizational unit. The user settings of a policy should be applied based on the location of the computer object instead of the user object.
 
 > [!NOTE]
 > You cannot filter the user settings that are applied by denying or removing the AGP and Read rights from the computer object specified for the loopback policy.
