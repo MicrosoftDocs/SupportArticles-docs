@@ -30,7 +30,7 @@ Additionally, if a user has already configured a convenience PIN in an earlier v
 
 ## Cause
 
-Windows 10 Version 1607 and later includes new functionality that differentiates Windows Hello for Business from a convenience sign-in PIN.
+Windows 10 Version 1607 and later include new functionality that differentiates Windows Hello for Business from a convenience sign-in PIN.
 
 Windows Hello for Business has strong user authentication properties that are frequently and mistakenly assumed to be functioning when the Windows Hello for Business infrastructure is not in place and when a user is using a convenience PIN. This change prevents the creation of a PIN in Windows 10 and later version without Windows Hello for Business.
 
