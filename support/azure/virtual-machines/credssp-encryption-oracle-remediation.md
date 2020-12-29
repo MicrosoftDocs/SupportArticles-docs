@@ -66,21 +66,21 @@ To resolve the issue, install CredSSP updates for both client and server so that
 
 ### How to install this update by using Azure Serial console
 
-1. Sign in to the [Azure portal](https://portal.azure.com), select **Virtual Machine**, and then select the VM. 
-2. Scroll down to the **Support + Troubleshooting** section, and then click **Serial console (Preview)**. The serial console requires Special Administrative Console (SAC) to be enabled within the Windows VM. If you do not see **SAC>** in the console (as shown in the following screenshot), go to the "[How to install the update by using Remote PowerShell]()" section in this article.
+1. Sign in to the [Azure portal](https://portal.azure.com), select **Virtual Machine**, and then select the VM.
+2. Scroll down to the **Support + Troubleshooting** section, and then click **Serial console (Preview)**. The serial console requires Special Administrative Console (SAC) to be enabled within the Windows VM. If you do not see **SAC>** in the console (as shown in the following screenshot), go to the "[How to install this update by using Remote PowerShell](#how-to-install-this-update-by-using-remote-powershell)" section in this article.
 
-    ![The image about SAC is connected](./media/credssp-encryption-oracle-remediation/4341452_en_1.png)  
+    :::image type="content" source="./media/credssp-encryption-oracle-remediation/connected-sac.png" alt-text="Screenshot of connected SAC":::
   
 3. Type `cmd` to start a channel that has a CMD instance.
 
 4. Type `ch-si 1` to switch to the channel that is running the CMD instance. You receive the following output:
 
-    ![The image about launch CMD in SAC](./media/credssp-encryption-oracle-remediation/4341455_en_2.png)  
+    :::image type="content" source="./media/credssp-encryption-oracle-remediation/launch-cmd.png" alt-text="Screenshot of launching CMD in SAC":::
 
-5. Press Enter, and then enter your login credentials that have administrative permission. 
+5. Press Enter, and then enter your login credentials that have administrative permission.
 6. After you enter valid credentials, the CMD instance opens, and you will see the command at which you can start troubleshooting.
 
-    ![The image  about CMD section in SAC](./media/credssp-encryption-oracle-remediation/4341456_en_1.png)  
+    :::image type="content" source="./media/credssp-encryption-oracle-remediation/cmd-section.png" alt-text="Screenshot of CMD section in SAC":::
 
 7. To start a PowerShell instance, type `PowerShell`.
 8. In the PowerShell instance, [run the Serial console script](#azure-serial-console-scripts) based on the VM operating system. This script performs the following steps:
@@ -93,13 +93,13 @@ To resolve the issue, install CredSSP updates for both client and server so that
 
 ### How to install this update by using Remote PowerShell
 
-1. On any Windows-based computer that has PowerShell installed, add the IP address of the VM to the "trusted" list in the host file, as follows: 
+1. On any Windows-based computer that has PowerShell installed, add the IP address of the VM to the "trusted" list in the host file, as follows:
 
     ```powershell
     Set-item wsman:\localhost\Client\TrustedHosts -value <IP>
     ```
 
-2. In the Azure portal, configure **Network Security Groups** on the VM to allow traffic to port 5986. 
+2. In the Azure portal, configure **Network Security Groups** on the VM to allow traffic to port 5986.
 3. In the Azure portal, select **Virtual Machine** > < **your VM** >, scroll down to the **OPERATIONS** section, click the **Run command**, and then run **EnableRemotePS**.
 4. On the Windows-based computer, [run the Remote PowerShell script](#remote-powershell-scripts) for the appropriate system version of your VM. This script performs the following steps:
    - Connect to Remote PowerShell on the VM.
@@ -121,7 +121,7 @@ The most common scenario is that the client has the CredSSP update installed, an
 
 To work around this issue, follow these steps:
 
-1. On the client that has the CredSSP update installed, run **gpedit.msc**, and then browse to **Computer Configuration** > **Administrative Templates** > **System** > **Credentials Delegation** in the navigation pane. 
+1. On the client that has the CredSSP update installed, run **gpedit.msc**, and then browse to **Computer Configuration** > **Administrative Templates** > **System** > **Credentials Delegation** in the navigation pane.
 2. Change the **Encryption Oracle Remediation policy** to **Enabled**, and then change **Protection Level** to **Vulnerable**.
 
     If you cannot use gpedit.msc, you can make the same change by using the registry, as follows:
