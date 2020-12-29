@@ -186,7 +186,7 @@ This may occur if TLS 1.0 is disabled and the `HKEY_LOCAL_MACHINE\System\Current
 - DisabledByDefault: 1
 - Enabled: 0
 
-Actions to take  
+#### Actions to take
 
 This method forces the activation process to use TLS 1.2 by default so that TLS 1.0 can remain disabled.
 
