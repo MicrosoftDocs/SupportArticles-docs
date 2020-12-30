@@ -15,7 +15,7 @@ ms.technology: Networking
 ---
 # DirectAccess clients may be unable to connect when a static proxy is configured
 
-This article provides workarounds for the issue that occurs when you have the Remote Access role installed on a Windows server.
+This article provides workarounds for an issue that occurs when you have the Remote Access role installed on a Windows server.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3017472
@@ -35,14 +35,12 @@ In this scenario, DirectAccess clients may be unable to connect to the DirectAcc
 
 This issue occurs because the IP Helper service cancels the connection to the DirectAccess server as soon as it detects that there is a static proxy configured.
 
-## Workaround
-
 To work around this issue, use one of the following methods.
 
-### Method 1
+## Workaround 1
 
 If you have DirectAccess clients that roam to locations where they will not be using a proxy server, you can use WPAD on your intranet to obtain a proxy setting for the clients. This enables the DirectAccess client not to use a proxy when the client is roaming and has to connect to the DirectAccess server.
 
-### Method 2
+## Workaround 2
 
 You can add an exception for the DirectAccess server in the advanced settings to skip the proxy for just the DirectAccess server address. For example, you could add `directaccess.contoso.com` as an exception for the DirectAccess server, or you could add *.directaccess.contoso.com if there are multiple DirectAccess servers.

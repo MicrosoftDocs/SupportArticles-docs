@@ -15,7 +15,7 @@ ms.technology: Networking
 ---
 # 0x2AFC or 0x274D error when DirectAccess clients try to connect over IP-HTTPS
 
-This article provides a resolution to the error 0x2AFC and 0x274D that occur when DirectAccess clients try to connect over IP-HTTPS.
+This article provides a resolution to the error 0x2AFC or 0x274D that occurs when DirectAccess clients try to connect over IP-HTTPS.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3056560
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 3056560
 
 DirectAccess clients may be unable to connect to a DirectAccess server through an Internet Protocol over Secure Hypertext Transfer Protocol (IP-HTTPS) connection. Or, these clients may be unable to resolve the DirectAccess public host name.
 
-When you run the netsh interface http show interface command in this situation, one of the following errors is returned:
+When you run the `netsh interface http show interface` command in this situation, one of the following errors is returned:
 
 > Error: 0x2AFC  
  Role: Client  

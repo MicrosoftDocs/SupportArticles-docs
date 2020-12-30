@@ -71,10 +71,10 @@ To resolve this problem, check with the hardware vendor to see if a new driver/f
 To work around this problem, update the BIOS on the computer. Or, modify the Boot.ini file to use the /usepmtimer switch. To do this, follow these steps:
 
 1. Log on to the computer by using an account that has administrative credentials.
-2. Click **Start**, click **Run**, type *notepad c:\boot.ini*, and then click **OK**.
+2. Click **Start**, click **Run**, type `notepad c:\boot.ini`, and then click **OK**.
 3. In the Boot.ini file, a line that starts with "default" is located in the "[boot loader]" section. This line specifies the location of the default operating system. The line may appear as follows:
 
-    default=multi(0)disk(0)rdisk(0)partition(2)\\WINDOWS  
+    default=multi(0)disk(0)rdisk(0)partition(2)\\WINDOWS
 
     In the "[operating systems]" section, locate the line for the operating system that corresponds to the "default" line. For example, if the computer is running Microsoft Windows Server 2003, Enterprise x64 Edition, the line should resemble the following:  
 
