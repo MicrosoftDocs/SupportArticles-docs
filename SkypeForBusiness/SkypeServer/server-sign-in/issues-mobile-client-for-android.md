@@ -93,15 +93,15 @@ When users experience an issue that affects the Lync 2010 mobile client for Goog
 
 1. On the Google Android device, after a user is signed in, tap **Options** on the **Signing in** tab. On the Options screen, tap **Diagnostic logging**, sign out, and then sign in again. (The screenshot for this step is listed below).
  
-    ![Diagnostic logging](./media/issues-mobile-client-for-android.md/diagnostic-logging.png)
+    ![Diagnostic logging](./media/issues-mobile-client-for-android/diagnostic-logging.png)
 
 2. Reproduce the issue, return to the Options screen, and then tap **About Lync**.    
 3. Tap **Send diagnostic logs**, and then select a configured email account. (The screenshot for this step is listed below).
 
-    ![Send diagnostic logs](./media/issues-mobile-client-for-android.md/send-diagnostic-logs.png)    
+    ![Send diagnostic logs](./media/issues-mobile-client-for-android/send-diagnostic-logs.png)    
 4. In the **To** box, enter the recipient's email address. For example, your personal email address or your technical support team's alias. In the **Subject** box, enter a subject, and then tap **Send**. Logs are attached as a .zip file. (The screenshot for this step is listed below).
  
-    ![Subject](./media/issues-mobile-client-for-android.md/subject.png)
+    ![Subject image](./media/issues-mobile-client-for-android/subject.png)
 
  
 > [!NOTE]
