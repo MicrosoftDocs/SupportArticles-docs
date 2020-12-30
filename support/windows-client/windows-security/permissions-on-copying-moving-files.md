@@ -33,7 +33,7 @@ Additionally, note the following rules:
 - The Everyone group is granted **Allow Full Control** permissions to the root of each NTFS drive.
 - Deny permissions always take precedence over **Allow** permissions.
 - Explicit permissions take precedence over inherited permissions.
-- If NTFS permissions conflict, or example, if group and user permissions are contradictory, the most liberal permissions take precedence.
+- If NTFS permissions conflict, for example, if group and user permissions are contradictory, the most liberal permissions take precedence.
 - Permissions are cumulative.
 - To preserve permissions when files and folders are copied or moved, use the Xcopy.exe utility with the `/O` or the `/X`switch.
 
