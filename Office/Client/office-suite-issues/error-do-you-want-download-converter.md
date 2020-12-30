@@ -50,7 +50,7 @@ To resolve this issue, follow the steps below.
 2. Open the file again in Word 2010, Excel 2010,  or PowerPoint 2010.
 3. Select **Open** when the following message appears:
 
-    ![Select Open. ](./media/error-do-you-want-download-converter/screenshot.png)
+    ![Screenshot of the message, selecting the Open button.](./media/error-do-you-want-download-converter/select-open.png)
 
 4. When the file opens, select **Save As** to save the file in the Word 2010, Excel 2010, or PowerPoint 2010 default format.
 
