@@ -43,7 +43,7 @@ With the release of Service Pack 1 for Windows 7 and Windows Server 2008 R2, a n
 
 For more information on Microsoft RemoteFX, visit the following Microsoft Web site:
 
-[Microsoft RemoteFX](https://technet.microsoft.com/library/ff817578%28v=ws.10%29.aspx) 
+[Microsoft RemoteFX](https://technet.microsoft.com/library/ff817578%28v=ws.10%29.aspx)
 
 ## Resolution
 
@@ -51,25 +51,24 @@ To resolve the problem, you must enable the RemoteFX Windows Firewall rule manua
 
 To enable the RemoteFX rule by using Windows Firewall with Advanced Security
 
-1. Click the Start button, and then click Control Panel.
-2. In the Control Panel windows click Windows Firewall.
-3. In the left pane, click Allow a program or feature through Windows Firewall.
-4. Click Change settings. If you're prompted for an administrator password or confirmation, type the password or provide confirmation.
-5. Under Allowed programs and features, select the check box next to Remote Desktop - RemoteFX, and then use the check boxes in the columns to select the network location types you want to allow communication on.
-6. Click OK.
+1. Click the **Start** button, and then click **Control Panel**.
+2. In the **Control Panel** windows click **Windows Firewall**.
+3. In the left pane, click **Allow a program or feature through Windows Firewall**.
+4. Click **Change settings**. If you're prompted for an administrator password or confirmation, type the password or provide confirmation.
+5. Under **Allowed programs and features**, select the check box next to **Remote Desktop - RemoteFX**, and then use the check boxes in the columns to select the network location types you want to allow communication on.
+6. Click **OK**.
 
 Alternatively, if you enable Remote Desktop by using the System properties window, the rule is enabled automatically.
 
-1. Click the Start button, and then click Control Panel.
-2. Click on System  icon.
-3. Under Control Panel Home, click Remote settings.
-4. Click the Remote tab. Under Remote Desktop, Select Don't allow connections to this computer and the click Apply  
+1. Click the **Start** button, and then click **Control Panel**.
+2. Click on **System** icon.
+3. Under Control Panel Home, click **Remote settings**.
+4. Click the **Remote** tab. Under **Remote Desktop**, Select **Don't allow connections to this computer** and the click **Apply**.  
 5. Now select either option depending on your security requirements:
-6.
-   - Allow connections from computers running any version of Remote Desktop (less secure)
-   - Allow connections only from computers running Remote Desktop with Network Level Authentication (more secure)  
+   - **Allow connections from computers running any version of Remote Desktop (less secure)**
+   - **Allow connections only from computers running Remote Desktop with Network Level Authentication (more secure)**  
 
-7. Click on Apply and the OK.
+6. Click on **Apply** and then **OK**.
 
 ## More information
 

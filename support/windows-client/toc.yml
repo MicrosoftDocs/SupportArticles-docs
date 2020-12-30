@@ -574,6 +574,8 @@
       href: ./networking/ics-not-work-after-computer-or-service-restart.md
     - name: Internet Explorer or Edge window opens when connecting to a corporate network
       href: ./networking/internet-explorer-edge-open-connect-corporate-public-network.md
+    - name: Network gets disconnected if the computer isn't used after you sign in
+      href: ./networking/network-gets-disconnected-computer-not-used-after-sign-in.md
     - name: Port Scanning Prevention Filter behavior
       href: ./networking/lots-disk-io-writes-wfpdiag-etl-log.md
     - name: Set up your small business network
