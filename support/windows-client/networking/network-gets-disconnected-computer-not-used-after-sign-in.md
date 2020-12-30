@@ -28,7 +28,7 @@ Applications and services that communicate with the computer through LAN will ge
 
 ## Cause
 
-The Logon pre-scheduled task starts the ProvTool.exe file. This file processes provisioning packages on the system. The ndisuio.sys driver is loaded when the ProvTool.exe starts the DMWapPushService service for the process. When the ndisuio.sys driver binds to the network, the existing connection will be disconnected and then reconnected.
+The Logon pre-scheduled task starts the ProvTool.exe file. This file processes provisioning packages on the system. The ndisuio.sys driver is loaded when the ProvTool.exe starts the DMWapPushService service for the process. When the ndisuio.sys driver binds to the network, the existing connection is interrupted and resumes after a few seconds.
 
 ## Resolution
 
