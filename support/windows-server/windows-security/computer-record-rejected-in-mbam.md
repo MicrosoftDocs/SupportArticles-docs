@@ -1,5 +1,5 @@
 ---
-title: Computer Record is Rejected in MBAM
+title: Computer record is rejected in MBAM
 description: Describe how to resolve the warning message "Computer Record is Rejected" in MBAM.
 ms.date: 09/14/2020
 author: Deland-Han
@@ -13,9 +13,9 @@ ms.reviewer: manojse, kaushika
 ms.prod-support-area-path: Bitlocker
 ms.technology: WindowsSecurity
 ---
-# Computer Record is Rejected in MBAM
+# Computer record is rejected in MBAM
 
-This article provides workarounds for an issue that computer record is rejected in MBAM.
+This article provides a solution to an issue where you receive a warning message "computer record is rejected" when using Microsoft BitLocker Administration and Monitoring (MBAM).
 
 _Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp; 2612822
@@ -24,15 +24,15 @@ _Original KB number:_ &nbsp; 2612822
 
 When using Microsoft BitLocker Administration and Monitoring (MBAM) users may receive a Warning message stating, "Computer Record is Rejected" in the application logs on MBAM Server.
 
-When users experience this problem they will not see the UI prompt on Windows 7 client to start the encryption process.
+When users experience this problem, they will not see the UI prompt on Windows 7 client to start the encryption process.
 
 Also in some cases you may see the UI prompt to Start Encryption Process, but the process will fail and you will see "Encryption Failed" in the UI prompt.
 
 If we open EventViewer on MBAM Server and check Application Logs, you will see the below warning message.
 
-Application Logs on MBAM Server :
+Application Logs on MBAM Server:
 
-Log Name: Application  
+> Log Name: Application  
 Source: ASP.NET 2.0.50727.0  
 Event ID: 1310  
 Task Category: Web Event  
@@ -48,53 +48,57 @@ Event detail code: 0
 
 Application information:
 
-Application domain: /LM/W3SVC/2/ROOT/MBAMRecoveryAndHardwareService-1-129594585755957178  
+> Application domain: /LM/W3SVC/2/ROOT/MBAMRecoveryAndHardwareService-1-129594585755957178  
  Trust level: Full  
  Application Virtual Path: /MBAMRecoveryAndHardwareService  
- Application Path: C:\inetpub\Malta BitLocker Management Solution\MBAM Recovery And Hardware Service\
+ Application Path: C:\\inetpub\\Malta BitLocker Management Solution\\MBAM Recovery And Hardware Service\\
 
-Process information:  
- Process ID: 1112  
- Process name: w3wp.exe  
- Account name: NT AUTHORITY\NETWORK SERVICE  
+Process information:
 
-Exception information:  
- Exception type: FaultException  
- Exception message: The computer record is rejected. The request from machine "DOMAIN\COMPUTERNAME$" contains invalid machine name "COMPUTER.FQDN".
+> Process ID: 1112  
+Process name: w3wp.exe  
+Account name: NT AUTHORITY\\NETWORK SERVICE  
 
-Request information:  
- Request URL:  
- Request path:  
- User host address:  
- User:  
- Is authenticated: False  
- Authentication Type:  
- Thread account name: NT AUTHORITY\NETWORK SERVICE  
+Exception information:
 
-Thread information:  
- Thread ID: 7  
- Thread account name: NT AUTHORITY\NETWORK SERVICE  
- Is impersonating: False  
- Stack trace: at Microsoft.Mbam.AgentSupportService.CoreService.PostKeyRecoveryInfo(Message recoveryInfoMessage)
+> Exception type: FaultException  
+Exception message: The computer record is rejected. The request from machine "DOMAIN\\COMPUTERNAME$" contains invalid machine name "COMPUTER.FQDN".
 
-Custom event details:  
- Application: MBAMComplianceStatusService  
- Error Message: The computer record is rejected. The request from machine "DOMAIN\COMPUTERNAME$" contains invalid machine name "COMPUTER.FQDN".
+Request information:
 
-On Windows 7 client you will see this error message under  
-Event Viewer -> Application and Services Logs -> Microsoft -> Windows -> MBAM
+> Request URL:  
+Request path:  
+User host address:  
+User:  
+Is authenticated: False  
+Authentication Type:  
+Thread account name: NT AUTHORITY\\NETWORK SERVICE  
 
-Log Name: Microsoft-Windows-MBAM/Admin  
+Thread information:
+
+> Thread ID: 7  
+Thread account name: NT AUTHORITY\\NETWORK SERVICE  
+Is impersonating: False  
+Stack trace: at Microsoft.Mbam.AgentSupportService.CoreService.PostKeyRecoveryInfo(Message recoveryInfoMessage)
+
+Custom event details:
+
+> Application: MBAMComplianceStatusService  
+Error Message: The computer record is rejected. The request from machine "DOMAIN\\COMPUTERNAME$" contains invalid machine name "COMPUTER.FQDN".
+
+On Windows 7 client you will see this error message under Event Viewer > Application and Services Logs > Microsoft > Windows > MBAM:
+
+> Log Name: Microsoft-Windows-MBAM/Admin  
 Source: Microsoft-Windows-MBAM  
 Event ID: 4  
 Task Category: None  
 Level: Error  
 User: SYSTEM  
-Computer: machinename.domainname.com  
+Computer: `machinename.domainname.com`  
 Description: An error occurred while sending encryption status data.  
 Error code: 0x803d0013
-
-Details: A message containing a fault was received from the remote endpoint.
+>
+> Details: A message containing a fault was received from the remote endpoint.
 
 ## Cause
 
@@ -104,36 +108,29 @@ This is a known issue with the product specified.
 
 Follow steps below to create a new registry key on MBAM Server where you have MBAM Administration and Monitoring Server role installed.  
 
-WARNING: If you use Registry Editor incorrectly, you may cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk.
-For information about how to back up, restore, and edit the registry, click the following article:
+> [!NOTE]
+> If you use Registry Editor incorrectly, you may cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk. For information about how to back up, restore, and edit the registry, see [Windows registry information for advanced users](/troubleshoot/windows-server/performance/windows-registry-advanced-users).
 
-[256986](https://support.microsoft.com/help/en-us) Description of the Microsoft Windows Registry
-
-a. Start Registry Editor.  
-b. Navigate to following registry key:
- HKEY_LOCAL_MACHINE\Software\Microsoft
-
-c. On the Edit menu, click New -> Key, and add the following registry key value:
- MBAM
-
-d. Under the newly created registry key name, on the Edit menu, click New -> DWORD (32-bit) Value and name it as:
- DisableMachineVerification
-
-e. Set the value to 1.  
-f. Exit Registry Editor.
+1. Start Registry Editor.
+2. Navigate to the registry key: `HKEY_LOCAL_MACHINE\Software\Microsoft`.
+3. On the **Edit** menu, click **New** > **Key**, and add the registry key value: MBAM.
+4. Under the newly created registry key name, on the **Edit** menu, click **New** > **DWORD (32-bit) Value** and name it as DisableMachineVerification.
+5. Set the value to 1.  
+6. Exit Registry Editor.
 
 After you make these changes, you must restart the MBAM server for the modifications to take effect.
 
-Note: The above registry key has nothing to do with hardware compatibility checking on the server and hardware compatibility check functionality still works as designed.
+> [!NOTE]
+> The above registry key has nothing to do with hardware compatibility checking on the server and hardware compatibility check functionality still works as designed.
 
 ## More information
 
 For further information on MBAM and how it can help your environment, please consult the following documentation.
 
-Planning Guide: [https://onlinehelp.microsoft.com/mdop/hh285653.aspx](https://onlinehelp.microsoft.com/mdop/hh285653.aspx)
+- [Planning for MBAM](/previous-versions/hh285653(v=technet.10))
 
-Deployment Guide: [https://onlinehelp.microsoft.com/mdop/hh285644.aspx](https://onlinehelp.microsoft.com/mdop/hh285644.aspx)
+- [Deploying MBAM](/previous-versions/hh285644(v=technet.10))
 
-Operations Guide: [https://onlinehelp.microsoft.com/mdop/hh285664.aspx](https://onlinehelp.microsoft.com/mdop/hh285664.aspx)
+- [Operations for MBAM](/previous-versions/hh285664(v=technet.10))
 
-Troubleshooting MBAM: [https://onlinehelp.microsoft.com/mdop/hh352745.aspx](https://onlinehelp.microsoft.com/mdop/hh352745.aspx)
+- [Troubleshooting MBAM](/previous-versions/hh352745(v=technet.10))
