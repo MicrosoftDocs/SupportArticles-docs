@@ -37,11 +37,11 @@ The number of services installed has exceeded the size limit of the Services.msc
 
 Reduce the Number of Services. You can do this by:
 
-1. Uninstall unneeded software that includes services (recommended)
+1. Uninstall unneeded software that includes services (recommended).
 
 2. Uninstall unneeded services manually:
 
-    1. Go to Registry Editor  
+    1. Go to Registry Editor.
     2. Browse to `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services` Key.
     3. Back up the Services registry key and remove unwanted keys to reduce the number of items.
 

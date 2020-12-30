@@ -199,7 +199,7 @@ To do this, follow these steps:
     To fix this issue, follow these steps:
 
     1. Open the .NET Framework installation files folder.
-    2. Open *Sources* folder
+    2. Open *Sources* folder.
     3. Right-click the *SXS* folder, and then click **Properties**.
     4. Click **Security** and make sure that there is a check mark next to **Read & Execute**. If the check mark isn't there, click the **Edit** button and turn it on.
     5. Press Windows Key + X keyboard shortcut.  

@@ -42,7 +42,7 @@ A widely released fix for a product-specific, security-related vulnerability. Se
 
 ### Additional information
 
-Microsoft security updates are available for customers to download and are accompanied by two documents: a security bulletin and a Microsoft Knowledge Base article. For more information about the format of Microsoft Knowledge Base articles for Microsoft security updates, see [Description of the format of Microsoft Knowledge Base articles for Microsoft Security Updates](https://support.microsoft.com/help/824689).
+Microsoft security updates are available for customers to download and are accompanied by two documents: a security bulletin and a Microsoft Knowledge Base article.
 
 ## Service pack
 

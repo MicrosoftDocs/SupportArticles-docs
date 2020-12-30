@@ -1,7 +1,7 @@
 ---
 title: Windows Server Update Services (WSUS) maintenance guide for Configuration Manager
 description: Describes the complete guide to WSUS maintenance for Configuration Manager environments.
-ms.date: 09/11/2020
+ms.date: 12/21/2020
 ms.prod-support-area-path: Software update point configuration
 ms.reviewer: mstewart, erice
 ---
@@ -378,7 +378,7 @@ Needed/helpful links:
 
 The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/08/11/weekend-scripter-use-the-windows-task-scheduler-to-run-a-windows-powershell-script.aspx) blog post mentioned in the previous section contains basic directions and troubleshooting for this step. However, I'll walk you through the process in the following steps.
 
-1. Open **Task Scheduler** and select **Create a Task**. On the **General** tab, set the name of the task, the user to run the PowerShell script as most people use a service account. Select **Run whether a user is logged on or not**, and then add a description if you wish.
+1. Open **Task Scheduler** and select **Create a Task**. On the **General** tab, set the name of the task, the user that you want to run the PowerShell script as (most people use a service account). Select **Run whether a user is logged on or not**, and then add a description if you wish.
 
     ![WSUS Create a task screen.](./media/wsus-maintenance-guide/create-task.jpg)
 
@@ -458,7 +458,7 @@ The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/
 
     ![WSUS New Job Schedule screen.](./media/wsus-maintenance-guide/new-job-schedule.png)
 
-6. While creating the maintenance plan, consider adding a backup of the SUSDB into the plan as well. I back up first, then reindex. It may add more time to the schedule.
+6. While creating the maintenance plan, consider adding a backup of the SUSDB into the plan as well. I usually back up first, then reindex. It may add more time to the schedule.
 
 ### Putting it all together
 

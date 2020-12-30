@@ -30,7 +30,7 @@ When you run the netsh interface http show interface command, the output is as f
 Translates to: Fatal error during installation.
 >
 > Error: 0x34  
-Translates to : Interface creation failure.
+Translates to: Interface creation failure.
 
 ## Cause
 

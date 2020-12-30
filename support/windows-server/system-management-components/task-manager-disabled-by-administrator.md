@@ -28,13 +28,13 @@ When you try to open Windows Task Manger, the following error may appear:
 
 ## Cause
 
-1. You use account that was blocked via the Local Group Policy or Domain Group Policy.
+1. You use an account that was blocked via the Local Group Policy or Domain Group Policy.
 
 2. Some registry settings block you from using Task Manager.
 
 ## Resolution
 
-1. Verity that the Local Group Policy or Domain Group Policy doesn't block you from using Task Manager.
+1. Verify that the Local Group Policy or Domain Group Policy doesn't block you from using Task Manager.
 
     - Local Group Policy
 
@@ -42,27 +42,27 @@ When you try to open Windows Task Manger, the following error may appear:
 
         2. Navigate to **User Configuration** > **Administrative Templates** > **System** > **Ctrl+Alt+Del Options**.
 
-        3. In the right side of the screen verity that **Remove Task Manager** option set to **Disable** or **Not Configured**.
+        3. In the right side of the screen, verify that **Remove Task Manager** option set to **Disable** or **Not Configured**.
 
         4. Close **Gpedit.msc** MMC.
 
         5. Go to **Start** > **Run**, write `gpupdate /force` and press on **Enter** button.
 
             > [!NOTE]
-            > If you are using Windows 2000, follow KB q227302 instead stage e. Using SECEDIT to force a Group Policy refresh immediately.
+            > If you are using Windows 2000, follow KB 227302 instead stage e. Using SECEDIT to force a Group Policy refresh immediately.
 
     - Domain Group Policy
 
         1. Contact you local IT support team.
 
-2. Verity correct registry settings:
+2. Verify correct registry settings:
 
     1. Go to **Start** > **Run**, write *regedit* and press on **Enter** button.
 
         > [!WARNING]
-        > Modifying your registry can cause serious problems that may require you to reinstall your operating system. Always backup your files before doing this registry hack.
+        > Modifying your registry can cause serious problems that may require you to reinstall your operating system. Always back up your files before doing this registry hack.
 
-    2. Navigate to the following registry keys and verity that following settings set to default:
+    2. Navigate to the following registry keys and verify that following settings set to default:
 
         Windows Registry Editor Version 5.00
 
