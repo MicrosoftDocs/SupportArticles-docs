@@ -24,7 +24,6 @@ _Original KB number:_ &nbsp; 3017472
 
 Consider the following scenario:
 
-
 - You have the Remote Access (DirectAccess) role installed on a Windows Server 2012 R2-based server.
 - Windows 8 or Windows 8.1 clients connect to this DirectAccess server for corporate connectivity when they are outside the corporate network.
 - You have a static proxy server that is configured on the DirectAccess clients.
@@ -46,4 +45,4 @@ If you have DirectAccess clients that roam to locations where they will not be u
 
 ### Method 2
 
-You can add an exception for the DirectAccess server in the advanced settings to skip the proxy for just the DirectAccess server address. For example, you could add directaccess.contoso.com  as an exception for the DirectAccess server, or you could add *.directaccess.contoso.com if there are multiple DirectAccess servers.
+You can add an exception for the DirectAccess server in the advanced settings to skip the proxy for just the DirectAccess server address. For example, you could add `directaccess.contoso.com` as an exception for the DirectAccess server, or you could add *.directaccess.contoso.com if there are multiple DirectAccess servers.
