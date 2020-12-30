@@ -38,7 +38,7 @@ For example:
 When you use the ping command to send Internet Control Message Protocol (ICMP) packets to a remote computer, the reply may show negative response times. For example, the following ping command may generate the following replies:
 
 ```console
-C:\\>ping x.x.x.x
+C:\>ping x.x.x.x
 ```
 
 Output:
