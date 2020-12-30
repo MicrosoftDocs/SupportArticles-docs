@@ -53,7 +53,7 @@ This switch specifies the communications port to use for the debug port, where *
 
 ### /maxmem=number  
 
-This switch specifies the amount of RAM, in bytes, that Windows can use. For example, if you want Windows to use less than 64 MB of memory, use the `/maxmem=64`switch.
+This switch specifies the amount of RAM, in bytes, that Windows can use. For example, if you want Windows to use less than 64 MB of memory, use the `/maxmem=64` switch.
 
 However, the `/maxmem` switch does not account for memory holes. Therefore, we recommend that you use the `/burnmemory` switch instead. The `/burnmemory` switch accounts for memory holes.
 
