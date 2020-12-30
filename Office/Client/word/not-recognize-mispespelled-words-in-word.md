@@ -30,7 +30,8 @@ Spell Checker does not recognize misspelled words in Word 2010.
 When you click the **Spelling & Grammar** button in the **Proofing** group on the **Review** tab in Word 2010, you receive one of the following messages: 
 
 - The spelling and grammar check is complete.   
-- Proofing Tools are not installed for **default language**, try re-installing proofing tools.   
+- Proofing Tools are not installed for **default language**, try re-installing proofing tools.
+
 ## Cause
 
 This may occur for any one of the following reasons: 
@@ -45,9 +46,9 @@ This may occur for any one of the following reasons:
 To resolve this problem, complete the methods that are provided in this article in the order in which they are presented. If you have previously tried one of these methods, and it did not help to resolve the problem, you can skip that method and proceed to the next one.
 
 ### Method 1: Install proofing tools  
- 
-To install the proofing tools, follow these steps: 
- 
+
+To install the proofing tools, follow these steps:
+
 1. Exit all programs.    
 2. Click **Start**, and then click **Control Panel**.    
 3. Follow the appropriate step for your operating system:  
@@ -61,11 +62,11 @@ To install the proofing tools, follow these steps:
     > In this step and in the following step, the placeholder **Edition **represents the Microsoft Office edition that is installed on the computer.    
 5. In the **Microsoft Office **Edition**** dialog box, click **Add or Remove Features**, and then click **Continue**.
      
-    ![In the Microsoft Office Edition dialog box, click Add or Remove Features, and then click Continue.](./media/not-recognize-mispespelled-words-in-word/features.png)
+    ![Screenshot the Microsoft Office Edition dialog box, selecting Add or Remove Features.](./media/not-recognize-mispespelled-words-in-word/features.png)
 
 6. Expand **Office Shared Features**, click the icon to the left of **Proofing Tools**, and then click **Run all from My Computer**.
  
-    ![Expand Office Shared Features, click the icon to the left of Proofing Tools, and then click Run all from My Computer.](./media/not-recognize-mispespelled-words-in-word/run-all-from-my-computer.png)
+    ![Screenshot of the Installation Option page, selecting Run all from My Computer.](./media/not-recognize-mispespelled-words-in-word/run-all-from-my-computer.png)
 
 ### Method 2: Enable the speller EN-US add-in  
  
@@ -74,8 +75,8 @@ To enable the add-in, follow these steps:
 1. Click the **File** tab, and then click **Options**.    
 2. On the left, click **Add-Ins**.    
 3. At the bottom of the **Word Options** dialog box, click the drop-down arrow under **Manage**, change the selection from **COM Add-ins** to **Disabled items**, and then click **Go**.
- 
-    ![At the bottom of the Word Options dialog box, click the drop-down arrow under Manage, change the selection from COM Add-ins to Disabled items, and then click Go.](./media/not-recognize-mispespelled-words-in-word/disabled-items.png)
+
+   :::image type="content" source="media/not-recognize-mispespelled-words-in-word/disabled-items.png" alt-text="Screenshot of selecting Disabled items in the Manage field.":::
 
 4. In the **Disabled Items** dialog box, check whether **Speller EN-US (nlsdata0009.dll)** is available in the **Select the ones you which to re-enable** box.    
 5. If **Speller EN-US (nlsdata0009.dll)** is listed, click it, and then click **Enable**.    
@@ -88,12 +89,12 @@ To enable spell check as you type, follow these steps:
 1. Click the **File** tab, and then click **Options**.    
 2. In the **Word Options** dialog box, click **Proofing**.    
 3. Make sure that the **Check spelling as you type** check box is selected in the **When correcting spelling and grammar in Word** section.
- 
-    ![Make sure that the Check spelling as you type check box is selected in the When correcting spelling and grammar in Word section.](./media/not-recognize-mispespelled-words-in-word/check-spelling.png)
+
+   :::image type="content" source="media/not-recognize-mispespelled-words-in-word/check-spelling.png" alt-text="Screenshot of selecting Check spelling as you type.":::
 
 4. Make sure that all check boxes are cleared in the **Exception for** section.
- 
-    ![Make sure that all check boxes are cleared in the Exception for section.](./media/not-recognize-mispespelled-words-in-word/cleared-boxes.png)
+
+   :::image type="content" source="media/not-recognize-mispespelled-words-in-word/cleared-boxes.png" alt-text="Screenshot of all check boxes cleared in the Exception for section.":::
 
 5. Click **OK**.    
 
@@ -106,10 +107,10 @@ To clear the "Do not check spelling or grammar check box, follow these steps:
 3. In the **Language** dialog box, select the language that you want.    
 4. If the **Do not check spelling or grammar** check box is selected, click to clear the check box.
 
-    ![If the Do not check spelling or grammar check box is selected, click to clear the check box.](./media/not-recognize-mispespelled-words-in-word/language-window.png)    
+    ![Screenshot of the clearing the Do not check spelling or grammar check box.](./media/not-recognize-mispespelled-words-in-word/language-window.png)
 5. Click **OK**.
  
-    ![Click OK.](./media/not-recognize-mispespelled-words-in-word/language-window-2.png)    
+    ![Screenshot of the Language window, clicking OK.](./media/not-recognize-mispespelled-words-in-word/language.png)
  
     > [!NOTE]
     > If this method fixes the problem, repeat steps 1 through 3 to reopen to the **Language** dialog box, and then click **Set As Default**
