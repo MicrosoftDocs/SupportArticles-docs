@@ -271,7 +271,7 @@ If you deleted a Word document without emptying the recycle bin, you may be able
 1. Search through the list of documents to see if the deleted word file is still there. If you don't know the name, look for file types such as DOC, DOCX, DOT, etc.
 1. Right-click the Word file and select **Restore** to recover it.
 
-    :::image type="content" source="media/recover-lost-document/word_recycle.png" alt-text="Select Restore to recover the document. " border="false":::
+    :::image type="content" source="media/recover-lost-document/word-recycle.png" alt-text="Select Restore to recover the document. " border="false":::
 
     If you have emptied the recycle bin after deleting files, the deleted Word file may have been permanently removed. If so, go to Option 4. 
 
@@ -322,11 +322,11 @@ AutoRecover file names end in the .asd file name extension. By default, Word sea
 
    2. On the **Processes** tab, select any instance of **Winword.exe** or **Microsoft Word**, and then select **End Task** or **End Process**. Repeat this step until you have exited all instances of Winword.exe and Word.
 
-       :::image type="content" source="media/recover-lost-document/task_mgr_md.png" alt-text="Screenshot of selecting an instance of Word.":::
+       :::image type="content" source="media/recover-lost-document/task-manager.png" alt-text="Screenshot of selecting an instance of Word.":::
 
    3. Close the **Windows Task Manager** dialog box, and then start Word.
 
-       :::image type="content" source="media/recover-lost-document/Word_md.png" alt-text="Screenshot of starting Word." border="false":::
+       :::image type="content" source="media/recover-lost-document/word.png" alt-text="Screenshot of starting Word." border="false":::
 
 If Word finds the auto-recovered file, the **Document Recovery** task pane opens on the left side of the screen, and the missing document is listed as "**document name** [Original]" or as "**document name** [Recovered]." If this occurs, double-click the file in the Document Recovery pane, select **File** > **Save As**, and then save the document as a .docx file. To manually change the extension to .docx, right-click the file, and select **Rename**.
 
