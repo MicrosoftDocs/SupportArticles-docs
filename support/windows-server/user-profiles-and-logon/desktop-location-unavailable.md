@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp;3048895
 
 After you install the update in [Vulnerability in Windows User Profile service could allow elevation of privilege: January 13, 2015 (MS15-003)](https://support.microsoft.com/help/3021674), you meet the following issues:
 
-- Profiles don't load when users log on to a computer for the first time. Or, you log on to a computer where policy then deletes the cached profile after a date interval when you log off.
+- Profiles don't load when users log on to a computer for the first time. Or, you log on to a computer where policy deletes the cached profile after a date interval when you log off.
 
     > [!NOTE]
     > Logons that use mandatory user profiles or Virtual Desktop Infrastructure (VDI) may also be affected.
@@ -36,7 +36,8 @@ After you install the update in [Vulnerability in Windows User Profile service c
   - MSSQLWhen this issue occurs, related events are logged. See [the events that are logged in Event Viewer](#more-information).
 
 Process Monitor may indicate that a **CreateFile** operation fails with an **ACCESS DENIED** result to the following path, depending on how file access is constrained:
-**\<drive>**:\documents & settings\\\<username>\local settings\Application Data\Microsoft\Windows\UsrClasss.dat
+**\<drive>**:\documents & settings\\\<username>\local settings\Application Data\Microsoft\Windows\UsrClasss.dat.
+
 The screenshot of Process Monitor can be seen here:
 
 :::image type="content" source="./media/desktop-location-unavailable/process-monitor.jpg" alt-text="The screenshot of Process Monitor.":::

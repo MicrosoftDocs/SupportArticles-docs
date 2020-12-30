@@ -731,6 +731,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/azure/virtual-machines/kernel-related-boot issues.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/kernel-related-boot-issues",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-client/deployment/specified-account-not-exist-enable-bitlocker.md",
       "redirect_url": "/troubleshoot/windows-client/windows-security/specified-account-not-exist-enable-bitlocker",
       "redirect_document_id": false
@@ -738,6 +743,21 @@
     {
       "source_path": "support/windows-client/deployment/requested-key-id-is-invalid.md",
       "redirect_url": "/troubleshoot/windows-client/windows-security/requested-key-id-is-invalid",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/cpp/visual-studio-2013- startup-crashes.md",
+      "redirect_url": "/troubleshoot/cpp/visual-studio-2013-startup-crashes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/high-availability/smb-3- file-server-features.md",
+      "redirect_url": "/troubleshoot/windows-server/high-availability/smb-3-file-server-features",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/cpp/expand-pointer- debugger-watch-window.md",
+      "redirect_url": "/troubleshoot/cpp/expand-pointer-debugger-watch-window",
       "redirect_document_id": false
     }
   ]

@@ -83,8 +83,7 @@ You can use the Group Policy Management Console to configure a domain-based poli
 To do this, follow these steps:
 
 1. Edit Group Policy in the Group Policy Management Console.
-2. Locate the following policy: **Computer Configuration\Policies\Windows Settings\Security Settings\System Services**  
-
+2. Locate the following policy: **Computer Configuration\Policies\Windows Settings\Security Settings\System Services**.  
 3. Open the **Secondary Logon** service.
 4. Click to select the **Define this policy setting** check box, and then click **Enabled**.
 5. Set the service startup mode to **Manual**.

@@ -29,8 +29,6 @@ If you try to establish a virtual private network (VPN) connection to a corporat
 > [!NOTE]
 > The 721 error description may vary.
 
-If you are using a Microsoft Windows NT Server 4.0-based remote access server, the following event may be logged in the System log of the server:
-
 ## Cause
 
 This issue may occur if the network firewall does not permit Generic Routing Encapsulation (GRE) protocol traffic. GRE is IP Protocol 47. PPTP uses GRE for tunneled data.

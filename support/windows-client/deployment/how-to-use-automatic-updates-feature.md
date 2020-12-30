@@ -31,26 +31,16 @@ For additional information about how to configure other Automatic Updates settin
 
 [306525](https://support.microsoft.com/help/306525) How to configure and use Automatic Updates in Windows XP  
 
-For additional information about how to configure other Automatic Updates settings in Windows 2000, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[327850](https://support.microsoft.com/help/327850) How to configure and use Automatic Updates in Windows 2000  
-
 ### Updating the Automatic Updates feature (Windows XP and Windows 2000 only)
 
 > [!NOTE]
 > If you use Automatic Updates, the feature may have been automatically updated on your computer. To make sure that the new feature is installed, use the procedure that is described in the
  [Schedule Automatic Updates](#scheduling-automatic-updates) section of this article to confirm that the **Automatically download the updates, and install them on the schedule that I specify** option is available on your computer.
 
-To use the new Automatic Updates feature, install any one of the following updates:
+To use the new Automatic Updates feature, install the following updates:
 
-- Windows XP Service Pack 1 (SP1). For additional information about how to obtain SP1, click the following article number to view the article in the Microsoft Knowledge Base:
-
-    [322389](https://support.microsoft.com/help/322389) How to obtain the latest Windows XP service pack  
-
-- Windows 2000 Service Pack 3 (SP3).
-     For additional information about how to obtain SP3, click the following article number to view the article in the Microsoft Knowledge Base:
-
-    [260910](https://support.microsoft.com/help/260910) How to obtain the latest Windows 2000 service pack  
+Windows XP Service Pack 1 (SP1). For additional information about how to obtain SP1, click the following article number to view the article in the Microsoft Knowledge Base:  
+[322389](https://support.microsoft.com/help/322389) How to obtain the latest Windows XP service pack  
 
 > [!NOTE]
 > You must restart your computer after you install this update. Automatic Updates does not download any updates until you have configured it to do so. If Automatic Updates is not configured in 24 hours after you install it, either the network administrator or the user who is logged on locally as an administrator is prompted to configure it.
@@ -104,22 +94,11 @@ If you're logged on as an administrator, when you receive this message, you can 
 
 For additional information about how to use Automatic Updates, click the following article number to view the article in the Microsoft Knowledge Base:
 
-[283629](https://support.microsoft.com/help/283629) How to configure Automatic Updates to prompt you before you download updates in Windows XP  
-
-[283151](https://support.microsoft.com/help/283151) Disabling AutoUpdate service in Control Panel does not shut down the service  
-
 [294871](https://support.microsoft.com/help/294871) Description of the Automatic Updates feature in Windows  
 
 [306525](https://support.microsoft.com/help/306525) How to configure and use Automatic Updates in Windows XP  
 
-[323184](https://support.microsoft.com/help/323184) Automatic Updates 2.2 client does not detect approved updates from Software Update Services  
-
-[326693](https://support.microsoft.com/help/326693) How to force Automatic Updates 2.2 to perform a detection cycle  
-
 [328010](https://support.microsoft.com/help/328010) How to configure Automatic Updates by using Group Policy or registry settings  
 
-[327850](https://support.microsoft.com/help/327850) How to configure and use Automatic Updates in Windows 2000  
-
-For more information about Software Update Services, visit the following Microsoft Web site:
-
+For more information about Software Update Services, visit the following Microsoft Web site:  
 [What's new in Windows 10 deployment](https://technet.microsoft.com/wsus/bb466201.aspx)
