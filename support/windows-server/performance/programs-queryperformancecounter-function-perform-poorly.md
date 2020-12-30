@@ -74,33 +74,40 @@ To work around this problem, update the BIOS on the computer. Or, modify the Boo
 2. Click **Start**, click **Run**, type `notepad c:\boot.ini`, and then click **OK**.
 3. In the Boot.ini file, a line that starts with "default" is located in the "[boot loader]" section. This line specifies the location of the default operating system. The line may appear as follows:
 
-    default=multi(0)disk(0)rdisk(0)partition(2)\\WINDOWS
+    ```ini  
+    default=multi(0)disk(0)rdisk(0)partition(2)\WINDOWS
+    ```
 
-    In the "[operating systems]" section, locate the line for the operating system that corresponds to the "default" line. For example, if the computer is running Microsoft Windows Server 2003, Enterprise x64 Edition, the line should resemble the following:  
+    In the "[operating systems]" section, locate the line for the operating system that corresponds to the "default" line. For example, if the computer is running Microsoft Windows Server 2003, Enterprise x64 Edition, the line should resemble the following:
 
-    multi(0)disk(0)rdisk(0)partition(2)\\WINDOWS="Windows Server 2003 Enterprise x64 Edition" /fastdetect /NoExecute=OptIn
+    ```ini  
+    multi(0)disk(0)rdisk(0)partition(2)\WINDOWS="Windows Server 2003 Enterprise x64 Edition" /fastdetect /NoExecute=OptIn
+    ```
 
-4. At the end of the line, add a space, and then type */usepmtimer*. The line should now resemble the following.  
+4. At the end of the line, add a space, and then type /usepmtimer. The line should now resemble the following.
 
-    multi(0)disk(0)rdisk(0)partition(2)\\WINDOWS="Windows Server 2003 Enterprise x64 Edition" /fastdetect /NoExecute=OptIn /usepmtimer
+    ```ini  
+    multi(0)disk(0)rdisk(0)partition(2)\WINDOWS="Windows Server 2003 Enterprise x64 Edition" /fastdetect /NoExecute=OptIn /usepmtimer
+    ```
 
 5. Save the file, and then exit Notepad.
-6. Restart the computer.  
-
+6. Restart the computer.
+  
 The following is a sample Boot.ini file for a system that contains the /usepmtimer switch.
 
+```ini  
 [boot loader]  
 timeout=0  
 default=multi(0)disk(0)rdisk(0)partition(2)\\WINDOWS  
 [operating systems]  
 multi(0)disk(0)rdisk(0)partition(2)\WINDOWS="Windows Server 2003 Enterprise x64 Edition" /fastdetect /NoExecute=OptIn /usepmtimer
+```
 
 > [!NOTE]
->
-> - The Boot.ini file is located in the root folder of the system drive.  
-> - Using the /UsePmTimer setting may introduce a decrease in performance.
+> The Boot.ini file is located in the root folder of the system drive.  
+Using the /UsePmTimer setting may introduce a decrease in performance.
 
-## Technical support for x64-based versions of Windows
+## Technical support for x64-based versions of Microsoft Windows
 
 If your hardware came with a Windows x64 edition already installed, your hardware manufacturer provides technical support and assistance for the Windows x64 edition. In this case, your hardware manufacturer provides support because a Windows x64 edition was included with your hardware. Your hardware manufacturer might have customized the Windows x64 edition installation by using unique components. Unique components might include specific device drivers or might include optional settings to maximize the performance of the hardware. Microsoft will provide reasonable-effort assistance if you need technical help with a Windows x64 edition. However, you might have to contact your manufacturer directly. Your manufacturer is best qualified to support the software that your manufacturer installed on the hardware. If you purchased a Windows x64 edition such as a Microsoft Windows Server 2003 x64 edition separately, contact Microsoft for technical support.
 

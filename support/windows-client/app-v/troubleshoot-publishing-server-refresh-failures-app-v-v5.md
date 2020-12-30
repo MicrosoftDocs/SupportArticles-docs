@@ -17,7 +17,7 @@ ms.technology: Application Virtulization (App-V)
 
 This article describes how to troubleshoot publishing server refresh failures in Microsoft Application Virtualization (App-V) v5.
 
-_Original product version:_ &nbsp; Window 10 - all editions  
+_Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2778168
 
 ## Summary

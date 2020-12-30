@@ -42,7 +42,7 @@ To install and to configure the external connector for a Windows Server 2003 or 
 
 To install and to configure the external connector for a Windows Server 2008 R2 Remote Desktop Services (RDS) server, follow these steps:
 
-1. On the RD Session Host server, open Remote Desktop Session Host Configuration. To open Remote Desktop Session Host Configuration, click **Start**, point to **Administrative Tools**, point to **Remote Desktop Services**, and then click **Remote Desktop Session Host Configuration**.
+1. On the RD Session Host server, open **Remote Desktop Session Host Configuration**. To open **Remote Desktop Session Host Configuration**, click **Start**, point to **Administrative Tools**, point to **Remote Desktop Services**, and then click **Remote Desktop Session Host Configuration**.
 2. If the User Account Control dialog box appears, confirm that the action it displays is what you want, and then click **Yes**.
 3. In the **Edit settings** section, under **Licensing**, double-click **Remote Desktop licensing mode**.
 4. On the **Licensing** tab of the **Properties** dialog box, select **Per User mode**.
