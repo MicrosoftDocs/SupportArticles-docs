@@ -29,7 +29,7 @@ Consider the following scenario:
 
 In this scenario, you receive a **0x6 ERROR_INVALID_HANDLE** error.
 
-This problem occurs if a call is made to any Crypto API that uses the transaction manager, such as `CryptGetKeyParam()` and `CryptGetUserKey()`, to precedes another call that releases the context.
+This problem occurs if a call is made to any Crypto API that uses the transaction manager, such as `CryptGetKeyParam()` and `CryptGetUserKey()`, to precede another call that releases the context.
 
 The **ERROR_INVALID_HANDLE** error does not appear immediately. Depending on the load, it takes time for threads to encounter the synchronization problem.
 

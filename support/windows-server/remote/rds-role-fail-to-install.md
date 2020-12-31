@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2027551
 
 ## Symptoms
 
-When installing the Remote Desktop Services Role on Windows Server 2008 server, you may receive following error:
+When installing the Remote Desktop Services Role on Windows Server 2008 server, you may receive the following error:
 
 > Attempt to configure Terminal Server failed with error code *0x800706D9*. "There are no more endpoints available from the endpoint mapper"
 

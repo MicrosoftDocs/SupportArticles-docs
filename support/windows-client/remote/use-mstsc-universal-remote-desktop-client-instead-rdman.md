@@ -17,7 +17,7 @@ ms.technology: RDS
 
 This article provides some information about using MSTSC or universal Remote Desktop client instead of RDMan in Windows 10.
 
-_Original product version:_ &nbsp; Window 10 - all editions  
+_Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4512838
 
 ## Summary

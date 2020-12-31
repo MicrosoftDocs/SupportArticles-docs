@@ -15,7 +15,7 @@ ms.technology: Performance
 ---
 # Memory leak in the remote registry service causes Windows to hang
 
-This article provides a solution to a memory leak issue in the remote registry service that causes Windows Server 2012 and Windows 8 to hang.
+This article provides a solution to a memory leak issue in the remote registry service that causes Windows to hang.
 
 _Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3105719

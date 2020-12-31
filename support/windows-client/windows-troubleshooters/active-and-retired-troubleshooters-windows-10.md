@@ -71,16 +71,15 @@ Successfully ran the "Hardware and Devices" or "Storage Spaces" troubleshooter
 ## Storage space troubleshooter
 
 Text displayed in Settings:  
-Data corruption was detected on your parity storage space. This troubleshooter takes actions to prevent further corruption. It also restores write access if the space was previously marked read-only. For more information and recommended actions please see the link below.
+Data corruption was detected on your parity storage space. This troubleshooter takes actions to prevent further corruption. It also restores write access if the space was previously marked read-only. For more information and recommended actions, please see the link below.
 
 ### Description
 
-Devices that use Parity Storage Spaces might experience issues when they try to use or access their Storage Spaces after they update to Windows 10, version 2004 (the May 2020 Update) or Windows Server, version 2004. This troubleshooter mitigates the issue for some users and restores read and write access to your Parity Storage Spaces. 
+Devices that use Parity Storage Spaces might experience issues when they try to use or access their Storage Spaces after they update to Windows 10, version 2004 (the May 2020 Update) or Windows Server, version 2004. This troubleshooter mitigates the issue for some users and restores read and write access to your Parity Storage Spaces.
 
 This troubleshooter runs automatically on devices that meet the following criteria.
 
 Successfully ran the "Hardware and Devices" or "Storage Spaces" troubleshooter.
-
 
 |Activation date|Retirement date|More information|
 |---|---|---|
@@ -117,7 +116,6 @@ Some devices might not start if Disk Cleanup runs after you install the Windows 
 
 This troubleshooter automatically runs two times. It runs the first time on all devices on Windows 10, version 19041.21. It then runs again after devices are upgraded to Windows 10, version 19041.84.  
   
-
 |Activation date|Retirement date|More information|
 |---|---|---|
 |2/7/2020|\-|[https://aka.ms/AA7afc1](https://aka.ms/AA7afc1)|

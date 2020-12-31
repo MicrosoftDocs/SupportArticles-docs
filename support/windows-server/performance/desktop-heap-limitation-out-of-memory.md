@@ -82,6 +82,4 @@ Check whether the problem is fixed. If the problem is fixed, you are finished wi
 
 ## References
 
-- ["Out of Memory" error message appears when you have a large number of programs running](https://support.microsoft.com/help/126962)
-
-- [Desktop Heap Overview](/archive/blogs/kocoreinternals/desktop-heap-overview)
+[Desktop Heap Overview](/archive/blogs/kocoreinternals/desktop-heap-overview)

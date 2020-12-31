@@ -76,6 +76,6 @@ winrs -r:DC1 dir
 > [!NOTE]
 > In Windows Workgroup environment, there is a need to add a trust for the server that the client initiate a connection to it by using the command `winrm set winrm/config/client @{TrustedHosts="%servername1%,"%servername2%"}`.
 >
-> Verity the new settings by using the command `winrm enumerate winrm/config/listener`.
+> Verify the new settings by using the command `winrm enumerate winrm/config/listener`.
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]
