@@ -472,6 +472,8 @@
       href: ./networking/mapped-drives-not-available-from-elevated-command.md
     - name: Mapped network drive may fail to reconnect
       href: ./networking/mapped-network-drive-fail-reconnect.md
+    - name: Saving and restoring existing Windows shares
+      href: ./networking/saving-restoring-existing-windows-shares.md
     - name: Slow network performance on remote network computer
       href: ./networking/slow-network-performance-remote-computer.md
     - name: System error 85 with NET USE command
