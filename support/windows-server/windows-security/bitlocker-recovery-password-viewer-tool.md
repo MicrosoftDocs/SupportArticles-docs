@@ -216,7 +216,9 @@ Q5: How long does it take to search for a recovery password across all domains?
 A5: Generally, it takes no more than several seconds to search for a password ID across all the domains of a forest. However, you may experience decreased performance if the following conditions are true:
 
 - A global catalog server locates a recovery password in a domain.
-- The global catalog server can't connect to that particular domain. Q6: How do I troubleshoot problems that I may experience when I use the BitLocker Recovery Password Viewer tool?
+- The global catalog server can't connect to that particular domain.
+
+Q6: How do I troubleshoot problems that I may experience when I use the BitLocker Recovery Password Viewer tool?
 
 A6: Use the following information to help troubleshoot issues that you experience when you use the BitLocker Recovery Password Viewer tool:
 

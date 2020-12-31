@@ -26,8 +26,13 @@ Consider the following scenario.
 
 - You have a computer that has Hyper-V installed.
 - You create a virtual machine on the computer.
-- You create the virtual machine from a virtual hard disk image (.vhd file) that was created by using Microsoft Virtual Server 2005 or Microsoft Virtual PC 2007.In this scenario, the **VMBus** Integration Services device does not load. When you open Device Manager on the virtual machine, a yellow triangle that has an exclamation point on it appears next to **VMBus**. When you double-click **VMBus**, the **VMBus Properties** dialog box displays one of the following messages: This device cannot find enough free resources that it can use. (Code 12).
-This device cannot start. (Code 10).
+- You create the virtual machine from a virtual hard disk image (.vhd file) that was created by using Microsoft Virtual Server 2005 or Microsoft Virtual PC 2007.
+
+In this scenario, the **VMBus** Integration Services device does not load. When you open Device Manager on the virtual machine, a yellow triangle that has an exclamation point on it appears next to **VMBus**. When you double-click **VMBus**, the **VMBus Properties** dialog box displays one of the following messages:
+
+> This device cannot find enough free resources that it can use. (Code 12).
+
+>This device cannot start. (Code 10).
 
 ## Cause
 

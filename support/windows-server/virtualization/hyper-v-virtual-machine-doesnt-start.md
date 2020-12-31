@@ -52,8 +52,6 @@ If you click **See details in the message window**, the following information is
 >
 > [^] Hide details [Close]
 
-Additionally, you may notice that the following event is logged:
-
 ## Cause
 
 This is a known issue in McAfee VirusScan Enterprise 8.8 Patch 5.
