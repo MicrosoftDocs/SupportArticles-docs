@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2672809
 
 In IIS 7.5, one of the following problems occurs:
 
-### PROBLEM 1
+### Problem 1
 
 Application code that accesses resources on another server fails. For example, code similar to the following that uses HttpWebRequest fails:
 
@@ -40,7 +40,7 @@ at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, 
 > [!NOTE]
 > The above code sample is just one example of how the problem may occur. It can also occur other ways, such as using `System.IO` to access remote resources.
 
-### PROBLEM 2
+### Problem 2
 
 After restarting IIS services and sending a request to the web application, an error message similar to the following will occur:
 
