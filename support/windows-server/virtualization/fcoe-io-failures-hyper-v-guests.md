@@ -34,7 +34,7 @@ A typical system configuration is similar to those in the Repro Steps that follo
 1. Configure multiple FC LUNs and present them to the Hyper-V system and have the Hyper-V system present these LUNs to the 2019 guest.
 2. Use a storage IO generation tool to run IO to all FC LUNs on the 2019 guest.
 3. Disable one CNA port.
-4. Wait 30 Seconds.
+4. Wait 30 seconds.
 5. Enable the CNA port.
 6. Wait 2 minutes.
 7. Repeat the port disables/enables above, test failures will be intermittent.

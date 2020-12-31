@@ -72,7 +72,7 @@ The choice depends on your security needs and your need to minimize disruption o
 
 This method adds the newer encryption types to the trust configuration, and does not require any changes to the client or the service. In this method, you use the `ksetup` command-line tool to configure the trust.  
 
-To configure the Kerberos encryption type of a trust, open a Command Prompt window on a DC in the trusted domain and then enter for following command:  
+To configure the Kerberos encryption type of a trust, open a Command Prompt window on a DC in the trusted domain and then enter the following command:  
 
 ```console
 ksetup /setenctypeattr <trustingdomain> RC4-HMAC-MD5 AES128-CTS-HMAC-SHA1-96 AES256-CTS-HMAC-SHA1-96
@@ -109,7 +109,7 @@ For complete instructions to change the encryption types that clients can use, 
 
 This method resembles method 1 in that you configure the trust attributes.  
 
-In the case of Windows forest trusts, both sides of the trust support AES. therefore, all ticket requests on the trust use AES. However, a third-party Kerberos client that inspects the referral ticket might notify you that the ticket uses an encryption type that the client does not support. In order to continue to allow such a client to inspect the ticket, update it to support AES.  
+In the case of Windows forest trusts, both sides of the trust support AES. Therefore, all ticket requests on the trust use AES. However, a third-party Kerberos client that inspects the referral ticket might notify you that the ticket uses an encryption type that the client does not support. In order to continue to allow such a client to inspect the ticket, update it to support AES.  
 
 When you use this method, configure the trust by using the Active Directory Domains and Trusts MMC snap-in.
 To use this method, follow these steps:  

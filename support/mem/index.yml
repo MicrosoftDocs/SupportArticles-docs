@@ -17,4 +17,4 @@ productDirectory:
   - title: Microsoft Intune
     imageSrc: "../media/hub-landing/logo-intune.png"
     summary: Troubleshooting articles for Microsoft Intune
-    url: intune/welcome-intune.md
+    url: intune/welcome-intune.yml
