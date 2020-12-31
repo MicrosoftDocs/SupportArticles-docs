@@ -15,7 +15,7 @@ ms.technology: HyperV
 ---
 # Support partners for non-Microsoft hardware virtualization software
 
-This article list some vendors that have partnered with Microsoft to provide support for virtualized software.
+This article lists some vendors that have partnered with Microsoft to provide support for virtualized software.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 944987
