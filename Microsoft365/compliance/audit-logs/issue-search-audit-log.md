@@ -1,5 +1,5 @@
 ---
-title: (Your request couldn't be completed. Please try again) when searching audit log.
+title: "Your request couldn't be completed. Please try again" error when searching audit log.
 description: Describes an error that occurs when a user tries to search the audit log in the Office 365 Security & Compliance Center. Provides a solution.
 author: simonxjx
 ms.author: v-six
@@ -16,7 +16,7 @@ appliesto:
 search.appverid: MET150
 ---
 
-# Error (Your request couldn't be completed. Please try again) when you try to search the audit log in Office 365
+# "Your request couldn't be completed. Please try again" error when you try to search the audit log in Office 365
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
