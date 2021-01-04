@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2532917
 
 ## Symptoms
 
-On Windows Server 2008 R2, when starting or shutting down guest VMs that use large amounts of memory (for example, 32 GB per VM) and running on a virtualization host with a large number of logical processors (for example, 64LPs) you may observe slow VM startup or shutdown performance.
+On Windows Server 2008 R2, when starting or shutting down guest VMs that use large amounts of memory (for example, 32 GB per VM) and running on a virtualization host with a large number of logical processors (for example, 64LPs), you may observe slow VM startup or shutdown performance.
 
 ## Cause
 

@@ -65,7 +65,7 @@ To resolve the problem, follow these steps:
     ```
 
     > [!NOTE]
-    > The `certutil` command must be run for every user on the workstation. Each user must login and follow steps 1 and 2 above.
+    > The `certutil` command must be run for every user on the workstation. Each user must log in and follow steps 1 and 2 above.
 
 1. If the expired certificate is cached in one of the local system profiles, you must delete the contents of some directories by using Windows Explorer. To do this, follow these steps:
 
