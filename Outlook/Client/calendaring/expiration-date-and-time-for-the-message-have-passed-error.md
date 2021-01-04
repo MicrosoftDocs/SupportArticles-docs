@@ -27,7 +27,7 @@ When you try to update a meeting in Microsoft Outlook 2010 or Outlook 2013, you 
 
 > The expiration date and time for the message have passed. Do you still want to send it?
 
-:::image type="content" source="media/expiration-date-and-time-for-the-message-have-passed-error.md/error.png" alt-text="error details." border="false":::
+:::image type="content" source="media/expiration-date-and-time-for-the-message-have-passed-error/error.png" alt-text="error details." border="false":::
 
 > [!NOTE]
 > Select **Yes** does not actually send a meeting update.
@@ -45,7 +45,7 @@ To resolve this issue, follow these steps:
 3. Select **Properties**.
 4. Clear the **Expires After** check box, or change the expiration date.
 
-   :::image type="content" source="media/expiration-date-and-time-for-the-message-have-passed-error.md/clear-expires-after-checkbox.png" alt-text="Clear the Expires After check box" border="false":::
+   :::image type="content" source="media/expiration-date-and-time-for-the-message-have-passed-error/clear-expires-after-checkbox.png" alt-text="Clear the Expires After check box" border="false":::
 
 5. Select **Close**.
 
@@ -62,7 +62,7 @@ The **Expires After** setting is managed by the following registry settings.
   2. In the navigation pane on the left, click **Mail**.
   3. Scroll down to Send Messages pane, and then clear the **Mark messages as expired after this many days** setting.
 
-     :::image type="content" source="media/expiration-date-and-time-for-the-message-have-passed-error.md/mark-messages-as-expired-after-this-many-days.jpg" alt-text="clear the Mark messages as expired after this many days setting" border="false":::
+     :::image type="content" source="media/expiration-date-and-time-for-the-message-have-passed-error/mark-messages-as-expired-after-this-many-days.jpg" alt-text="clear the Mark messages as expired after this many days setting" border="false":::
 
 - Without Group Policy:
 

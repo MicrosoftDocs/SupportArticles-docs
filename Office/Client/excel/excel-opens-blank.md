@@ -308,7 +308,7 @@ Try to repair your Office programs. To do this, follow the steps for your instal
 1. Select **Microsoft Office 365**, then select **Change**.
 1. Select **Online Repair**, then select **Repair**.
 
-   ![Office repair](./media/excel-opens-blank/office-repair.jpg)
+   ![Screenshot of the Office repair page that selects Online Repair](./media/excel-opens-blank/office-repair.jpg)
 
 > [!NOTE]
 > You may have to restart your computer after the repair process is complete.
@@ -359,7 +359,7 @@ To disable hardware acceleration, follow these steps:
 
    The following screenshot shows this option in Excel.
 
-   ![disable hardware accel](./media/excel-opens-blank/disable-hardware-acceleration.jpg)
+   ![Screenshot of the Disable hardware graphics acceleration check box.](./media/excel-opens-blank/disable-hardware-acceleration.png)
 
 1. Select the **OK** button.
 

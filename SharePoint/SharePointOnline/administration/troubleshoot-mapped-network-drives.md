@@ -40,7 +40,7 @@ When you browse to a mapped network drive, you may receive one of the following 
 
 Make sure that you're authenticated to Office 365. To do this, sign in to the SharePoint Online site by using your Office 365 work or school account credentials, and make sure that you select the **Stay signed in** option as seen in the following screen shot:
 
-![stay signed in](./media/troubleshoot-mapped-network-drives/stay-signed-in.png)
+:::image type="content" source="./media/troubleshoot-mapped-network-drives/stay-signed-in.png" alt-text="Screenshot of the stay signed in page.":::
 
 > [!NOTE]
 > After you map a network drive to SharePoint Online, you must occasionally connect to the SharePoint Online site by using Internet Explorer and select the **Stay signed in** option. This prevents the session that's used by the mapped network drive from expiring. A mapped network drive that's connected to SharePoint Online is only supported when these steps are performed within Internet Explorer.
