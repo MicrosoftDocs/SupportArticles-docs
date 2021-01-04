@@ -48,7 +48,7 @@ You may experience one of the following symptoms after you update to Microsoft O
 
 When the overall network is working on your devices, Office applications may experience connection issues. You may see a message that resembles the following:
 
-![A screenshot of the error message saying you need the internet](./media/connection-issue-when-sign-in-office-2016/error-message-saying-you-need-internet.png)
+:::image type="content" source="./media/connection-issue-when-sign-in-office-2016/error-message-saying-you-need-internet.png" alt-text="Screenshot of the error message saying you need the internet.":::
 
 To determine whether you're experiencing this kind of issue, follow these steps:
 
@@ -178,7 +178,7 @@ To do a manual recovery of the computer, follow the appropriate steps, dependin
 
 The Office sign-in workflow stops or shows no on-screen progress. The sign-in window shows a "Signing in" message or a blank authentication screen.
 
-![A screenshot of the sign in page](./media/connection-issue-when-sign-in-office-2016/sign-in-page.png)
+:::image type="content" source="./media/connection-issue-when-sign-in-office-2016/sign-in-page.png" alt-text="Screenshot of the sign in page.":::
 
 This issue occurs because WAM is disabling non-HTTPS traffic to prevent security threats, such as someone stealing user credentials. To verify that you are experiencing this issue, follow these steps:
 
