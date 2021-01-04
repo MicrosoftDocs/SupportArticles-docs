@@ -50,8 +50,6 @@ When the overall network is working on your devices, Office applications may exp
 
 :::image type="content" source="./media/connection-issue-when-sign-in-office-2016/error-message-saying-you-need-internet.png" alt-text="Screenshot of the error message saying you need the internet.":::
 
-![A screenshot of the error message saying you need the internet](./media/connection-issue-when-sign-in-office-2016/error-message-saying-you-need-internet.png)
-
 To determine whether you're experiencing this kind of issue, follow these steps:
 
 1. Make sure that you're running Office build 16.0.9126.2259 or a later build. (The latest build on your channel is great. See the [general guidance](#general-guidance) in the [Overview](#overview) section.)
