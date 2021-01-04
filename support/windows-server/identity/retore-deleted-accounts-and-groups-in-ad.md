@@ -161,8 +161,6 @@ To use method 1, follow this procedure:
     > [!NOTE]
     > The terms *auth restore* and *authoritative restore* refer to the process of using the authoritative restore command in the Ntdsutil command-line tool to increment the version numbers of specific objects or of specific containers and all their subordinate objects. As soon as end-to-end replication occurs, the targeted objects in the recovery domain controller's local copy of Active Directory become authoritative on all the domain controllers that share that partition. An authoritative restoration is different from a system state restoration. A system state restoration populates the restored domain controller's local copy of Active Directory with the versions of the objects at the time that the system state backup was made.
 
-    For more information about auth restoring a domain controller, see [How to perform an authoritative restore to a domain controller in Windows 2000](https://support.microsoft.com/help/241594).
-
     Authoritative restorations are performed with the Ntdsutil command-line tool, and refer to the domain name (dn) path of the deleted users or of the containers that host the deleted users.
 
     When you auth restore, use domain name (dn) paths that are as low in the domain tree as they have to be. The purpose is to avoid reverting objects that aren't related to the deletion. These objects may include objects that were modified after the system state backup was made.
@@ -338,9 +336,9 @@ To use method 2, follow this procedure:
 
     It's best to stop making changes to security groups in the forest if all the following statements are true:
 
-    - you're using method 2 to authoritatively restore deleted users or computer accounts by their domain name (dn) path.
+    - You're using method 2 to authoritatively restore deleted users or computer accounts by their domain name (dn) path.
     - The deletion has replicated to all the domain controllers in the forest except the latent recovery domain controller.
-    - you're not auth restoring security groups or their parent containers.
+    - You're not auth restoring security groups or their parent containers.
 
     If you're auth restoring security groups or organizational unit (OU) containers that host security groups or user accounts, temporarily stop all these changes.
 
@@ -383,9 +381,7 @@ To use method 2, follow this procedure:
     > [!NOTE]
     > The terms **auth restore** and **authoritative restore** refer to the process of using the authoritative restore command in the Ntdsutil command-line tool to increment the version numbers of specific objects or of specific containers and all their subordinate objects. As soon as end-to-end replication occurs, the targeted objects in the recovery domain controller's local copy of Active Directory become authoritative on all the domain controllers that share that partition. An authoritative restoration is different from a system state restoration. A system state restoration populates the restored domain controller's local copy of Active Directory with the versions of the objects at the time that the system state backup was made.
 
-    For more information about auth restoring a domain controller, see [How to perform an authoritative restore to a domain controller in Windows 2000](https://support.microsoft.com/help/241594).
-
-   Authoritative restorations are performed with the Ntdsutil command-line tool, and refer to the domain name (dn) path of the deleted users or of the containers that host the deleted users.
+    Authoritative restorations are performed with the Ntdsutil command-line tool, and refer to the domain name (dn) path of the deleted users or of the containers that host the deleted users.
 
     When you auth restore, use domain name (dn) paths that are as low in the domain tree as they have to be. The purpose is to avoid reverting objects that aren't related to the deletion. These objects may include objects that were modified after the system state backup was made.
 
@@ -647,8 +643,6 @@ To use method 3, follow this procedure:
 
     > [!NOTE]
     > The terms *auth restore* and *authoritative restore* refer to the process of using the authoritative restore command in the Ntdsutil command-line tool to increment the version numbers of specific objects or of specific containers and all their subordinate objects. As soon as end-to-end replication occurs, the targeted objects in the recovery domain controller's local copy of Active Directory become authoritative on all the domain controllers that share that partition. An authoritative restoration is different from a system state restoration. A system state restoration populates the restored domain controller's local copy of Active Directory with the versions of the objects at the time that the system state backup was made.
-
-    For more information about auth restoring a domain controller, see [How to perform an authoritative restore to a domain controller in Windows 2000](https://support.microsoft.com/help/241594).
 
     Authoritative restorations are performed with the Ntdsutil command-line tool by referencing the domain name (dn) path of the deleted users, or of the containers that host the deleted users.
 

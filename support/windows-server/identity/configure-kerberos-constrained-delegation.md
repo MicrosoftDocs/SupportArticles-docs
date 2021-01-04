@@ -38,7 +38,7 @@ This section describes how to implement Service for User to Proxy (S4U2Proxy) or
 
 ### 1. Add an SPN to the service account
 
-Associate the service account with a Service Principle Name (SPN). To do this, follow these steps:
+Associate the service account with a Service Principal Name (SPN). To do this, follow these steps:
 
 1. In **Active Directory Users and Computers**, connect to the domain, and then select **PKI** > **PKI Users**.  
 
