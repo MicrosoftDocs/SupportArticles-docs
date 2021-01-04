@@ -7,7 +7,7 @@ ms.reviewer:
 ---
 # One or more objects don't sync when using Azure Active Directory Sync tool
 
-This article provides information about resolving an issue in which one or more Active Directory Domain Services (AD DS) object attributes don't sync to Azure Active Directory (Azure AD) through the Azure Active Directory Sync tool.
+This article resolves an issue that one or more Active Directory Domain Services (AD DS) object attributes don't sync to Azure Active Directory (Azure AD) through the Azure Active Directory Sync tool.
 
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2643629
@@ -20,7 +20,7 @@ One or more AD DS objects or attributes don't sync to Microsoft Azure AD as expe
 - You receive an error message that states that one or more attributes violate formatting requirements such as character set or character length.
 - You don't receive an error message, and directory synchronization seems to be completed. However, some objects or attributes aren't updated as expected.
 
-Some examples of the error message that you may receive include the following:
+Some examples of the error message that you may receive:
 > A synchronized object with the same proxy address already exists in your Microsoft Online Services directory.
 
 > Unable to update this object because the user ID is not found.
@@ -73,9 +73,9 @@ Use the [IdFix DirSync Error Remediation Tool](https://github.com/microsoft/idfi
 
 ### Determine attribute conflicts that are caused by objects that weren't created in Azure AD through directory synchronization
 
-To determine attribute conflicts that are caused by user objects that were created by using management tools (and that weren't created in Azure AD through directory synchronization), follow these steps:
+To determine attribute conflicts caused by user objects that were created by using management tools (and that weren't created in Azure AD through directory synchronization), follow these steps:
 
-1. Determine the unique attributes of the on-premises AD DS user account. To do this, on a computer that has Windows Support Tools installed, follow these steps:
+1. Determine the unique attributes of the on-premises AD DS user account. To do it, on a computer that has Windows Support Tools installed, follow these steps:
 
    1. Select **Start**, select **Run**, type ldp.exe, and then select **OK**.
    2. Select **Connection**, select **Connect**, type the computer name of an AD DS domain controller, and then select **OK**.
@@ -101,7 +101,7 @@ To determine attribute conflicts that are caused by user objects that were creat
     Leave the console window open. You'll need to use it in the next step.
 3. Check for the duplicate userPrincipalName attributes.
 
-    In the console connection that you opened in step 2, type the following commands in the order in which they are presented, and then press Enter after each command:
+    In the console connection that you opened in step 2, type the following commands in the order in which they are presented. Press Enter after each command:
 
     ```powershell
     $userUPN = "<search UPN>"
@@ -115,7 +115,7 @@ To determine attribute conflicts that are caused by user objects that were creat
     ```
 
     Leave the console window open. You'll use it again in the next step.
-4. Check for duplicate proxyAddresses attributes. In the console connection that you opened in step 2, type the following commands in the order in which they are presented, and then press Enter after each command:
+4. Check for duplicate proxyAddresses attributes. In the console connection that you opened in step 2, type the following commands in the order in which they are presented. Press Enter after each command:
 
     ```powershell
     $SessionExO = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $Cred -Authentication Basic - AllowRedirection
@@ -125,7 +125,7 @@ To determine attribute conflicts that are caused by user objects that were creat
     Import-PSSession $sessionExO -prefix:Cloud
     ```
 
-5. For each proxy address entry that you recorded in step 1f, type the following commands in the order in which they are presented, and then press Enter after each command:
+5. For each proxy address entry that you recorded in step 1f, type the following commands in the order in which they are presented. Press Enter after each command:
 
     ```powershell
     $proxyAddress = "<search proxyAddress>"
@@ -146,40 +146,42 @@ Identify the specific attributes that are preventing synchronization based on th
 
 - Administrative email messages
 - The report from the output of the Office 365 Deployment Readiness Tool
-- Default directory synchronization scoping rules and custom rulesAfter a specific attribute value is identified, use the Active Directory Users and Computers tool to edit the attribute value. To do this, follow these steps:
+- Default directory synchronization scoping rules and custom rules
 
-    1. Open Active Directory Users and Computers, and then select the root node of the AD DS domain.
-    2. Select **View,** and then make sure that the **Advanced Features** option is selected.
-    3. In the left navigation pane, locate the user object, right-click it, and then select **Properties**.
-    4. On the **Object Editor** tab, locate the attribute that you want, select **Edit**, and then edit the attribute value to the value that you want.
-    5. Select **OK** two times. 
+After a specific attribute value is identified, use the Active Directory Users and Computers tool to edit the attribute value. To do it, follow these steps:
 
-    Or, you can use Active Directory Service Interfaces (ADSI) Edit to update object attributes in AD DS. You can download and install ADSI Edit as a part of the Windows Server Toolkit. To use ADSI Edit to edit attributes, follow these steps.
+1. Open Active Directory Users and Computers, and then select the root node of the AD DS domain.
+2. Select **View,** and then make sure that the **Advanced Features** option is selected.
+3. In the left navigation pane, locate the user object, right-click it, and then select **Properties**.
+4. On the **Object Editor** tab, locate the attribute that you want. Select **Edit**, and then edit the attribute value to the value that you want.
+5. Select **OK** two times.
 
-   > [!WARNING]
-   > This procedure requires ADSI Edit. Using ADSI Edit incorrectly can cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that problems that result from the incorrect use of ADSI Edit can be resolved. Use ADSI Edit at your own risk.
+Or, you can use Active Directory Service Interfaces (ADSI) Edit to update object attributes in AD DS. You can download and install ADSI Edit as a part of the Windows Server Toolkit. To use ADSI Edit to edit attributes, follow these steps.
 
-    1. Select **Start**, select **Run**, type ADSIEdit.msc, and then select **OK**.
-    2. Right-click **ADSI Edit** in the navigation pane, select **Connect to**, and then select **OK** to load the domain partition.
-    3. Locate the user object, right-click it, and then select **Properties**.
-    4. In the **Attributes** list, locate the attribute that you want, select **Edit**, and then edit the attribute value to the value that you want.
-    5. Select **OK** two times, and then exit ADSI Edit.
+> [!WARNING]
+> This procedure requires ADSI Edit. Using ADSI Edit incorrectly can cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that problems that result from the incorrect use of ADSI Edit can be resolved. Use ADSI Edit at your own risk.
+
+1. Select **Start**, select **Run**, type ADSIEdit.msc, and then select **OK**.
+2. Right-click **ADSI Edit** in the navigation pane, select **Connect to**, and then select **OK** to load the domain partition.
+3. Locate the user object, right-click it, and then select **Properties**.
+4. In the **Attributes** list, locate the attribute that you want. Select **Edit**, and then edit the attribute value to the value that you want.
+5. Select **OK** two times, and then exit ADSI Edit.
 
 ### Create a new group and add it to the built-in group that's not being synced
 
-To resolve the issue in the scenario where some built-in groups (such as the Domain Users group) are not synced, create a new group that contains all the applicable members and appropriate permissions of the built-in group. Then, add that group as a member to the built-in group that's not synced. Use the new group instead of the built-in group to manage members. By doing this, you still manage only one group.
+To resolve the issue in the scenario that some built-in groups (such as the Domain Users group) aren't synced, create a new group that contains all the applicable members and appropriate permissions of the built-in group. Then, add that group as a member to the built-in group that's not synced. Use the new group instead of the built-in group to manage members. By using this method, you still manage only one group.
 
-You don't want to change the attributes of the built-in group or change the scoping rules of the identity sync appliance to allow critical system objects to be synced, because this may trigger other unexpected behavior.
+You don't want to change the attributes of the built-in group or change the scoping rules of the identity sync appliance to allow critical system objects to be synced. It may trigger other unexpected behavior.
 
 ### Use SMTP matching to cause an on-premises user object to sync to an existing user object
 
-To do this, see [How to use SMTP matching to match on-premises user accounts to Office 365 user accounts for directory synchronization](https://support.microsoft.com/help/2641663).
+For more information, see [How to use SMTP matching to match on-premises user accounts to Office 365 user accounts for directory synchronization](https://support.microsoft.com/help/2641663).
 
 ### Manually update a user account UPN
 
 To update a user account UPN that was licensed after initial directory synchronization has occurred, follow these steps:
 
-1. Install Azure Active Directory V2 PowerShell Module. To do this, refer to [Azure Active Directory V2 PowerShell Module](https://www.powershellgallery.com/packages/AzureAD/2.0.0.71).
+1. Install Azure Active Directory V2 PowerShell Module. For more information, see [Azure Active Directory V2 PowerShell Module](https://www.powershellgallery.com/packages/AzureAD/2.0.0.71).
 2. Run the following cmdlets at the Azure Active Directory V2 PowerShell prompt:
 
     ```powershell
@@ -199,7 +201,7 @@ To update a user account UPN that was licensed after initial directory synchroni
 
 ### Update user SMTP addresses by using on-premises Active Directory attributes
 
-When SMTP attributes aren't synced to Exchange Online in an expected way, you may have to update the on-premises Active Directory attributes. To update on-premises Active Directory attributes so that the correct email address displays in Exchange Online, use Resolution 2 to manipulate the attributes that are listed in the following table.
+When SMTP attributes aren't synced to Exchange Online in an expected way, you may have to update the on-premises Active Directory attributes. To update on-premises Active Directory attributes so that the correct email address displays in Exchange Online, use Resolution 2 to manipulate the attributes in the following table.
 
 |On-premises Active Directory attribute name|Example On-premises Active Directory attribute value|Example Exchange Online email addresses|
 |---|---|---|
@@ -210,7 +212,7 @@ When SMTP attributes aren't synced to Exchange Online in an expected way, you ma
 |UserPrincipalName|`User1@contoso.com`|Primary SMTP: `user1@contoso.com`<br/>Secondary SMTP: `user1@contoso.onmicrosoft.com`|
 ||||
 
-The Microsoft Online Email Routing Address (MOERA) entry that's associated with the default domain (such as `user1@contoso.onmicrosoft.com`) is an interpreted value that's based on a user account's alias. This specialty email address is inextricably linked to each Exchange Online recipient, and you can't manage, delete, or create additional MOERA addresses for any recipient. However, the MOERA address can be over-ridden as the primary SMTP address by using the attributes in the on-premises Active Directory user object.
+The Microsoft Online Email Routing Address (MOERA) entry that's associated with the default domain (such as `user1@contoso.onmicrosoft.com`) is an interpreted value that's based on a user account's alias. This specialty email address is inextricably linked to each Exchange Online recipient. You can't manage, delete, or create additional MOERA addresses for any recipient. However, the MOERA address can be over-ridden as the primary SMTP address by using the attributes in the on-premises Active Directory user object.
 
 > [!NOTE]
 > The presence of data in the proxyAddresses attribute completely masks data in the mail attribute for Exchange Online email address population.
@@ -222,8 +224,10 @@ We highly recommend that one of these attributes is used consistently to manage 
 
 ## More information
 
-The Windows PowerShell commands that are mentioned in this article require the Azure Active Directory Module for Windows PowerShell. For more information about the Azure Active Directory Module for Windows PowerShell, go to [Manage Azure AD using Windows PowerShell](https://docs.microsoft.com/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN).
+The Windows PowerShell commands that are mentioned in this article require the Azure Active Directory Module for Windows PowerShell. For more information about the Azure Active Directory Module for Windows PowerShell, see the following article:  
+[Manage Azure AD using Windows PowerShell](https://docs.microsoft.com/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN).
 
-For more information about filtering directory synchronization by attributes, see the following Microsoft TechNet wiki article: [List of Attributes that are Synced by the Azure Active Directory Sync Tool](https://social.technet.microsoft.com/wiki/contents/articles/19901.list-of-attributes-that-are-synced-by-the-windows-azure-active-directory-sync-tool.aspx)
+For more information about filtering directory synchronization by attributes, see the following Microsoft TechNet wiki article:  
+[List of Attributes that are Synced by the Azure Active Directory Sync Tool](https://social.technet.microsoft.com/wiki/contents/articles/19901.list-of-attributes-that-are-synced-by-the-windows-azure-active-directory-sync-tool.aspx)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuread) website.
