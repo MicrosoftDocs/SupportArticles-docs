@@ -163,7 +163,7 @@ To use method 1, follow this procedure:
 
     For more information about auth restoring a domain controller, see [How to perform an authoritative restore to a domain controller in Windows 2000](https://support.microsoft.com/help/241594).
 
-    Authoritative restorations are performed with the Ntdsutil command-line tool by referencing to the domain name (dn) path of the deleted users, or of the containers that host the deleted users.
+    Authoritative restorations are performed with the Ntdsutil command-line tool, and refer to the domain name (dn) path of the deleted users or of the containers that host the deleted users.
 
     When you auth restore, use domain name (dn) paths that are as low in the domain tree as they have to be. The purpose is to avoid reverting objects that aren't related to the deletion. These objects may include objects that were modified after the system state backup was made.
 
@@ -385,7 +385,7 @@ To use method 2, follow this procedure:
 
     For more information about auth restoring a domain controller, see [How to perform an authoritative restore to a domain controller in Windows 2000](https://support.microsoft.com/help/241594).
 
-    Authoritative restorations are performed with the Ntdsutil command-line tool by referencing to the domain name (dn) path of the deleted users, or of the containers that host the deleted users.
+   Authoritative restorations are performed with the Ntdsutil command-line tool, and refer to the domain name (dn) path of the deleted users or of the containers that host the deleted users.
 
     When you auth restore, use domain name (dn) paths that are as low in the domain tree as they have to be. The purpose is to avoid reverting objects that aren't related to the deletion. These objects may include objects that were modified after the system state backup was made.
 

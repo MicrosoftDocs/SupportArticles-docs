@@ -88,7 +88,7 @@ The following settings can be enabled under **Computer Configuration**:
 
    By default, if you enable the Group Policy Computer location setting, the default location that you entered appears in the **Location**  field.
 
-- **Printer Browsing:** If you enable this setting, the print subsystem announces shared printers for printer browsing. Disable this setting if you don't want the print subsystem to add shared printers to the browse list. If this setting isn't configured, shared printers aren't added to the browse list if a Directory service is available.  They're added if a Directory service is unavailable.
+- **Printer Browsing:** If you enable this setting, the print subsystem announces shared printers for printer browsing. Disable this setting if you don't want the print subsystem to add shared printers to the browse list. If this setting isn't configured, shared printers aren't added to the browse list if a Directory service is available. They're added if a Directory service is unavailable.
 
 - **Prune printers that are not automatically republished:** This setting determines whether printers can be pruned from the directory. It's best to leave this setting unconfigured. However, if you find that printers are being pruned even though the computer from which they are published is functioning and on the network, you can enable this policy to prevent the pruning service from deleting the published printers during network outages or situations in which dial-up links that are up only intermittently are used. To prevent printers from being removed from Active Directory, enable this policy, and retain the default selection of **Never** in the **Prune non-republishing printers** list.
 
