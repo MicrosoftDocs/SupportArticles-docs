@@ -51,8 +51,8 @@ If authenticated users have been removed from the ACLs of a template, the follow
     Event Source:CertSvc  
     Event Category:None  
     Event ID: 53  
-    Date:08/14/2000  
-    Time:05:13:33  
+    Date: *\<DateTime>*  
+    Time: *\<DateTime>*  
     User:N/A  
     Computer: MUSGRAVE  
     Description:  
@@ -64,8 +64,8 @@ If authenticated users have been removed from the ACLs of a template, the follow
 Event Source:CertSvc  
 Event Category:None  
 Event ID: 78  
-Date:08/14/2000  
-Time:05:13:12  
+Date: *\<DateTime>*  
+Time: *\<DateTime>*  
 User:N/A  
 Computer: MUSGRAVE  
 Description:  

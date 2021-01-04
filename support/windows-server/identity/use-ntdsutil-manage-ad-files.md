@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 816120
 
 ## How to start your computer in Directory Services Restore mode
 
-Windows Server 2003 Directory Service opens its files in exclusive mode. Which means that the files can't be managed while the server is operating as a domain controller.
+Windows Server 2003 Directory Service opens its files in exclusive mode, which means that the files can't be managed while the server is operating as a domain controller.
 
 To start the server in Directory Services Restore mode, follow these steps:
 
