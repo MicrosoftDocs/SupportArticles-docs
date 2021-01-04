@@ -68,7 +68,5 @@ Even though the Excel Viewer can read the latest Excel workbooks, the following 
 - PivotTables and PivotCharts are flattened. The data or chart will appear, but modifications cannot be made.    
 - Macros do not run in the Excel Viewer.    
 - Slicers do not display data in the Excel Viewer. Instead, a box is displayed in the location of the slicer and it contains the following text: "This shape represents a slicer. Slicers are supported in Excel 2010 or later. If the shape was modified in an earlier version of Excel, or if the workbook was saved in Excel 2003 or earlier, the slicer cannot be used."
- 
-   ![an image of the text contained in a slicer](./media/get-latest-excel-viewer/slicer-not-display-data.png)    
 
 If you have to view or use these features, use Excel Online.
