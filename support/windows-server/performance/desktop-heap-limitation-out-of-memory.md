@@ -22,20 +22,20 @@ _Original KB number:_ &nbsp; 947246
 
 ## Symptoms
 
-After you open many application windows in Windows, you may be unable to open any additional windows. Sometimes, a window may open. However, it will not contain the expected components. Additionally, you may receive an error message that resembles the following:
+After you open many application windows in Windows, you may be unable to open any additional windows. Sometimes, a window may open. However, it won't contain the expected components. Additionally, you may receive an error message that resembles the following:
 
 > Out of Memory
 
 ## Cause
 
-This problem occurs because of the desktop heap limitation. If you close some windows, and then you try to open other windows, these windows may open. However, this method does not affect the desktop heap limitation.
+This problem occurs because of the desktop heap limitation. If you close some windows, and then you try to open other windows, these windows may open. However, this method doesn't affect the desktop heap limitation.
 
 ## Resolution
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
-To resolve this problem, modify the desktop heap size. To do this, follow these steps:
+To resolve this problem, modify the desktop heap size by following these steps:
 
 1. Click **Start**, type *regedit* in the **Start Search** box, and then click regedit.exe in the **Programs** list.
 
@@ -71,14 +71,14 @@ Windows 7 Service Pack 1 (64 bit) / Windows Server 2008 R2, 2012 R2 (64 bit)
 
 > SharedSection=1024, 20480,768
 
-In later operating systems, memory allocations are dynamic. Therefore, there is no limitation for memory allocation. However, if you allocate too much memory to the desktop heap, negative performance may occur. This is the reason why we don't recommend that you set a value that is over **20480**.
+In later operating systems, memory allocations are dynamic. Therefore, there's no limitation for memory allocation. However, if you allocate too much memory to the desktop heap, negative performance may occur. It's the reason why we don't recommend that you set a value that is over **20480**.
 
 > [!NOTE]
 > The desktop heap size is not affected by the physical RAM on the computer. Therefore, you cannot improve the performance by adding physical RAM.
 
 ### Did this fix the problem
 
-Check whether the problem is fixed. If the problem is fixed, you are finished with this section. If the problem is not fixed, you can [contact support](https://support.microsoft.com/contactus/).
+Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus/).
 
 ## References
 
