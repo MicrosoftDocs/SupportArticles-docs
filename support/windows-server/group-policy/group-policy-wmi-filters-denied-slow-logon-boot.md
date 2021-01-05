@@ -26,8 +26,8 @@ Group policy with WMI filter fails to apply. The WMI query (WMI filter linked to
 
 GPSVC logs show the following:
 
-> GPSVC(320.af8) 12:00:14:840 FilterCheck: Evaluate returned error. hr=0x80041069  
-GPSVC(320.af8) 12:00:14:840 ProcessGPO: The GPO does not pass the filter check and so will not be applied.  
+> GPSVC(320.af8) *\<DateTime>* FilterCheck: Evaluate returned error. hr=0x80041069  
+GPSVC(320.af8) *\<DateTime>* ProcessGPO: The GPO does not pass the filter check and so will not be applied.  
 
 ERR for 0x80041069 gives the following result:
 
