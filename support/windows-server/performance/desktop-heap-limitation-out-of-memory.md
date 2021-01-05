@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 947246
 
 ## Symptoms
 
-After you open many application windows in Windows, you may be unable to open any additional windows. Sometimes, a window may open. However, it won't contain the expected components. Additionally, you may receive an error message that resembles the following:
+After you open many application windows in Windows, you may be unable to open any additional windows. A window may open sometimes, but it won't contain the expected components. Additionally, you may receive an error message that resembles the following one:
 
 > Out of Memory
 
