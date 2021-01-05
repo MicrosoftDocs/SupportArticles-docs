@@ -1886,8 +1886,6 @@
       href: ./performance/manually-rebuild-performance-counters.md
     - name: Monitor performance of remote computers
       href: ./performance/monitor-remote-computer-performance.md
-    - name: Number of physical processors is incorrectly reported
-      href: ./performance/number-physical-processors-is-incorrect.md
     - name: QueryPerformanceCounter function perform poorly in some program
       href: ./performance/programs-queryperformancecounter-function-perform-poorly.md
     - name: Rebuild Performance Counter Library values
