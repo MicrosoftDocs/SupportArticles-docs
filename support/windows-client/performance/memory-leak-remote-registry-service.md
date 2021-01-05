@@ -1,7 +1,7 @@
 ---
 title: Memory leak in remote registry service
 description: Describes a memory leak issue that causes Windows Server 2012 and Windows 8 to hang. This memory leak involves the WnF tag, which consumes all available paged pool memory. A workaround is provided.
-ms.date: 09/17/2020
+ms.date: 01/04/2021
 author: Deland-Han 
 ms.author: delhan
 manager: dscontentpm
@@ -17,7 +17,10 @@ ms.technology: Performance
 
 This article provides a solution to a memory leak issue in the remote registry service that causes Windows to hang.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+> [!NOTE]
+> This issue is fixed in Windows 10.
+
+_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 8.1, Windows Server 2012
 _Original KB number:_ &nbsp; 3105719
 
 ## Symptoms
