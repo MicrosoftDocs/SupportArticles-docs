@@ -22,13 +22,13 @@ _Original KB number:_ &nbsp; 325850
 
 ## Summary
 
-Each Windows-based computer maintains a machine account password history that contains the current and previous passwords that are used for the account. When two computers try to authenticate with each other and a change to the current password isn't yet received, Windows relies on the previous password. If the sequence of password changes exceeds two changes, the computers involved may not be able to communicate, and you may receive error messages. For example, you may receive **Access Denied** error messages when Active Directory replication occurs.
+Each Windows-based computer maintains a machine account password history that contains the current and previous passwords that are used for the account. When two computers try to authenticate with each other and a change to the current password isn't yet received, Windows relies on the previous password. If the sequence of password changes exceeds two changes, the computers involved may not be able to communicate, and you may receive error messages. For example, you receive **Access Denied** error messages when Active Directory replication occurs.
 
 This behavior also applies to replication between domain controllers of the same domain. If the domain controllers that aren't replicating reside in two different domains, look at the trust relationship more closely.
 
 You can't change the machine account password by using the Active Directory Users and Computers snap-in. But you can reset the password by using the Netdom.exe tool. The Netdom.exe tool is included in the Windows Support Tools for Windows Server 2003, in Windows Server 2008 R2, and in Windows Server 2008.
 
-The Netdom.exe tool resets the account password on the computer locally (known as a *local secret*). It writes this change to the computer's computer account object on a Windows domain controller that resides in the same domain. Simultaneously writing the new password to both places ensures that at least the two computers involved in the operation are synchronized. And starting Active Directory replication ensures that other domain controllers receive the change.
+The Netdom.exe tool resets the account password on the computer locally (known as a *local secret*). It writes this change to the computer's computer account object on a Windows domain controller that's in the same domain. Simultaneously writing the new password to both places ensures that at least the two computers involved in the operation are synchronized. And starting Active Directory replication ensures that other domain controllers receive the change.
 
 The following procedure describes how to use the netdom command to reset a machine account password. This procedure is most frequently used on domain controllers, but also applies to any Windows machine account.
 

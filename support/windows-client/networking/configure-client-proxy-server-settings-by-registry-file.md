@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 819961
 
 ## Summary
 
-You can automatically configure the proxy server settings on a client computer by updating the client computer registry. To do it, create a registry file that contains the registry settings you want to update, and then distribute it to the client computer by using a batch file or logon script.
+You can automatically configure the proxy server settings on a client computer by updating the client computer registry. To do it, create a registry file that contains the registry settings you want to update. Then distribute it to the client computer by using a batch file or logon script.
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).

@@ -1,13 +1,13 @@
 ---
 title: Can't manage or remove objects that were synchronized through the Azure Active Directory Sync tool
-description: Resolves an issue in which you can't manage or remove objects that were created through directory synchronization from Azure AD.
+description: Resolves an issue that you can't manage or remove objects created through directory synchronization from Azure AD.
 ms.date: 06/22/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 # Can't manage or remove objects that were synchronized through the Azure Active Directory Sync tool
 
-This article describes an issue in which you can't manage or remove objects that were created through directory synchronization from Azure AD. It provides two resolutions for this issue according to different reasons.
+This article describes an issue that you can't manage or remove objects that were created through directory synchronization from Azure AD. It provides two resolutions for this issue according to different reasons.
 
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2619062
@@ -18,7 +18,7 @@ You try to manually manage or remove objects that were created through directory
 
 For example, you want to remove an orphaned user account that was synced to Azure AD from your on-premises Active Directory Domain Services (AD DS).
 
-In this scenario, you can't remove the orphaned user account by using the Microsoft cloud service portal in Office 365, Azure, or Microsoft Intune or by using Windows PowerShell.
+In this scenario, you can't remove the orphaned user account by using the Microsoft cloud service portal in Office 365, Azure, or Microsoft Intune, or by using Windows PowerShell.
 
 ## Cause
 
@@ -59,9 +59,9 @@ You want to manage objects in Office 365, Azure, or Intune and you no longer wan
 
 ### You delete an object from an on-premises AD DS. However, the object isn't deleted from your cloud service subscription account
 
-Force directory synchronization by using the steps on this Microsoft article: [Start the Scheduler](/azure/active-directory/hybrid/how-to-connect-sync-feature-scheduler#start-the-scheduler)
+Force directory synchronization by using the steps on this article: [Start the Scheduler](/azure/active-directory/hybrid/how-to-connect-sync-feature-scheduler#start-the-scheduler)
 
-- If some updates and deletions are propagated, but some deletions aren't synchronized to the cloud service, perform typical directory synchronization troubleshooting procedures.
+- If some updates and deletions are propagated, but some deletions aren't synchronized to the cloud service, follow typical directory synchronization troubleshooting procedures.
 - If all updates and deletions aren't synchronized to the cloud service, contact Support.
 
     > [!NOTE]

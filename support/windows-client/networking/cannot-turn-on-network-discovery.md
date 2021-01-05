@@ -13,7 +13,7 @@ ms.reviewer: kaushika，ahamad, vipekkan
 ms.prod-support-area-path: TCP/IP communications
 ms.technology: Networking
 ---
-# You cannot turn on Network Discovery in Network and Sharing Center
+# You can't turn on Network Discovery in Network and Sharing Center
 
 This article provides a resolution for the issue that you can't turn on Network Discovery in Network and Sharing Center.
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2722035
 
 ## Symptoms
 
-You try to turn on Network Discovery on a computer that's running Windows Server 2012. To do it, you change the Advanced sharing settings in **Network and Sharing Center**. However, the changes aren't saved. Therefore, you can't turn on Network Discovery. And you experience the following issues:
+You try to turn on Network Discovery on a computer that's running Windows Server 2012. To do it, you change the Advanced sharing settings in **Network and Sharing Center**. However, the changes aren't saved. So you can't turn on Network Discovery. And you experience the following issues:
 
 - You can't browse or find any network share.
 - You can't view shared folders on a local network.
