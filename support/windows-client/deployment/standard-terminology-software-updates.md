@@ -69,7 +69,7 @@ An update that collects all the new security updates for a given month and for a
 
 ## Monthly Rollup
 
-A tested, cumulative set of updates. They include both security and reliability updates that are packaged together and distributed over the following tools for easy deployment:
+A tested, cumulative set of updates. They include both security and reliability updates that are packaged together and distributed over the following channels for easy deployment:
 
 - Windows Update
 - WSUS

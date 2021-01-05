@@ -201,15 +201,15 @@ If the serial console isn't enabled on your VM, or if it doesn't work, you can r
 
 2. Check whether the device that is specified by the UUID value from the boot loader file grub.conf exists.
 
-    For example, when you check the system disk that is mounted on `/mnt/troubleshootingdisk` by looking in `/mnt/troubleshootingdisk /dev/disk/by-uuid`, you can see that there's a corresponding UUID file on disk that is referenced in the grub.conf file. The file is actually a symbolic link that is denoted by the character **l** at the start of the **lrwxrwxrwx** attribute that is pointing to the operating system disksda1. If the file is missing, the symbolic link can be re-created during system startup.
-3. You can create symbolic links manually by running following command if you know whethersda1is your startup device and you know the corresponding UUID:
+    For example, when you check the system disk that is mounted on `/mnt/troubleshootingdisk` by looking in `/mnt/troubleshootingdisk /dev/disk/by-uuid`, you can see that there's a corresponding UUID file on disk that is referenced in the grub.conf file. The file is actually a symbolic link that is denoted by the character **l** at the start of the **lrwxrwxrwx** attribute that is pointing to the operating system disk sda1. If the file is missing, the symbolic link can be re-created during system startup.
+3. You can create symbolic links manually by running the following command if you know whether sda1 is your startup device and you know the corresponding UUID:
 
     ```console
     cd /mnt/troubleshootingdisk/dev/disk/by-uuid ln -s ../../sda1 UUID
     ```
 
     > [!NOTE]
-    > The sda1 file is known as ablock devicein Linux. You can check it in the `ls` command output, in which it's denoted by the character `b` in the `brw-rw--` attribute.
+    > The sda1 file is known as a block device in Linux. You can check it in the `ls` command output, in which it's denoted by the character `b` in the `brw-rw--` attribute.
 4. You can also check whether this file exists on a CentOS 6.5, and the file can be re-created if it's missing. For example, run the following command:
 
     ```console

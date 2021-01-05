@@ -35,7 +35,9 @@ A successful Windows startup includes the following phases:
 If a problem occurs during any of these phases, Windows may not start correctly, and you may experience the following problems:
 
 - The computer stops responding (hangs).
-- You receive an error message. If a startup problem occurs after you click **Microsoft Windows Server 2003** on either the boot loader menu, or when you receive the "Please select the operating system to start" message, files that the operating system needs may be missing or damaged. Windows provides several options that you can use to troubleshoot this issue, including safe mode, the Recovery Console, and an Automated System Recovery.  
+- You receive an error message.
+
+If a startup problem occurs after you click **Microsoft Windows Server 2003** on either the boot loader menu, or when you receive the "Please select the operating system to start" message, files that the operating system needs may be missing or damaged. Windows provides several options that you can use to troubleshoot this issue, including safe mode, the Recovery Console, and an Automated System Recovery.  
 
 ## How to start the computer by using the last known good configuration
 
@@ -79,7 +81,7 @@ To troubleshoot startup problems in safe mode, follow these steps:
     > Num Lock must be off before the arrow keys on the numeric keypad will function.  
 
 5. If you're running other operating systems on the computer, click **Microsoft Windows Server 2003** on the list, and then press Enter.  
-6. Do one of the following actions:  
+6. Take one of the following actions:  
 
     - If the computer doesn't start in safe mode, try starting the computer by using the Recovery Console. If you still can't start the computer, look for possible hardware problems, such as defective devices, installation problems, cabling problems, or connector problems. Remove any hardware that was added recently, and then restart the computer to see if the problem is resolved.
     - If the computer starts in safe mode, go to the next section to continue to troubleshoot the startup issue.  
@@ -88,7 +90,7 @@ To troubleshoot startup problems in safe mode, follow these steps:
 
 View the event logs in Event Viewer for information that can help you identify and diagnose the cause of the startup problem. To view events that are recorded in the event logs, follow these steps.  
 
-1. Do one of the following actions:
+1. Take one of the following actions:
    - Click Start, point to Administrative Tools, and then click Event Viewer.
    - Start the Event Viewer snap-in in Microsoft Management Console (MMC).
 2. In the console tree, expand Event Viewer, and then click the log that you want to view. For example, click **System log** or **Application log**.
@@ -331,7 +333,7 @@ The Recovery Console is a command-line tool that you can use to repair Windows i
 To use Recovery Console, follow these steps.
 
 1. Insert the Windows Server 2003 installation CD in your CD drive or DVD drive, and then restart the computer.
-2. When you're prompted during text-mode setup, press R to start the Recovery Console. You can use the Recovery Console to do the following actions:
+2. When you're prompted during text-mode setup, press R to start the Recovery Console. You can use the Recovery Console to perform the following actions:
 
     - Access the drives on your computer.
     - Enable or disable device drivers or services.
@@ -340,7 +342,7 @@ To use Recovery Console, follow these steps.
 
 ## Confirm that your hard disk or file system is not damaged
 
-To confirm that your hard disk or file system is not damaged, start your computer from the Windows Server 2003 CD, start the Recovery Console, and then use the Chkdsk command prompt utility. It may resolve your problem.
+To confirm that your hard disk or file system isn't damaged, start your computer from the Windows Server 2003 CD, start the Recovery Console, and then use the Chkdsk command prompt utility. It may resolve your problem.
 
 > [!IMPORTANT]
 > We recommend that only advanced users or administrators use the Recovery Console. You have to know the password for the Administrator account to use the Recovery Console.
