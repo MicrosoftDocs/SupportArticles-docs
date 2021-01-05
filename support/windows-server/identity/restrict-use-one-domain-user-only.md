@@ -39,7 +39,7 @@ By using group policy capabilities in Windows 2000/2003 Domain, you can prevent 
 
    1. Create a new domain-wide GPO and enable "Deny logon locally" user right to the source domain user account/sIn the target domain.  
 
-      >[!NOTE]
+      > [!NOTE]
       > Some services (Like Backup software services) may effect by this policy, and wouldn't function.
        To eliminate future problems, apply this policy and use GPO security filter feather.
 
