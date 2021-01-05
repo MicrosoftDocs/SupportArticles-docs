@@ -81,7 +81,7 @@ Microsoft recommends that you use the following settings with Distributed Link T
     See the "How to Delete Distributed Link Tracking Object" section of this article for more information about how to delete Distributed Link Tracking objects. It is recommended that you delete objects after you disable the Distributed Link Tracking Server service.
 
     > [!NOTE]
-    > The Directory Information Tree (DIT) size on domain controllers is not reduced until the following actions are completed:
+    > The Directory Information Tree (DIT) size on domain controllers is not reduced until the following actions are completed.
 
     1. Objects are deleted from the directory service.
 
