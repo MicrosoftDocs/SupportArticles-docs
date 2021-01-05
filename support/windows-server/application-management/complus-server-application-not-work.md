@@ -30,8 +30,8 @@ You may see an error that resembles the following in the Application log on the 
 Event Source:    DCOM  
 Event Category:                None  
 Event ID:              10006  
-Date:                     10/17/2009  
-Time:                    1:36:39 PM  
+Date:                     *\<DateTime>*  
+Time:                    *\<DateTime>*  
 User:                     Domain\user  
 Computer:          *****  
 Description:  
@@ -43,7 +43,7 @@ You'll also see events that resemble the following in the Application log of the
 
 > Log Name:      Application  
 Source:        Microsoft-Windows-User Profiles Service  
-Date:          10/26/2009 8:22:13 AM  
+Date:          *\<DateTime>*  
 Event ID:      1530  
 Task Category: None  
 Level:         Warning  
