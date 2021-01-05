@@ -41,10 +41,6 @@ This problem may occur if one of the following conditions is true:
 
 To resolve this problem, use one of the following two methods. Method 1 addresses Condition 1 and Condition 2. Method 2 addresses Condition 3.
 
-For additional information about command-line tools that are used in this article, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[298882](https://support.microsoft.com/help/298882) The new command-line tools for Active Directory in Windows Server 2003  
-
 ### Method 1: Resolution for Condition 1 and Condition 2
 
 The "schema mismatch" error message is misleading. The root cause of the error may not have anything to do with the schema partition (CN) or with any objects that are in it. The actual problem may be a database constraint violation, such as a multi-valued attribute with duplicate values.
@@ -85,18 +81,12 @@ Turn on diagnostic logging on the source domain controller. To do this, follow t
 #### Part 2: Force inbound replication of Active Directory
 
 Force the destination computer to perform inbound replication of Active Directory from a domain controller where NTDS diagnostic logging has been enabled. If there are multiple source domain controllers, make sure that replication occurs from a source domain controller where diagnostic logging has been enabled. To do this, use one of the following methods:
+
 - Increase `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Ntds\Diagnostics` logging on all possible source domain controllers by using steps 1 through 5 in the "Part 1: Turn on diagnostic logging" section.
 - Stop the Net Logon service on all possible source domain controllers except the source domain controller that is referenced in the "schema mismatch" error where logging was increased. To do this, follow these steps:
   1. Click **Start**, point to **Programs**, point to **Administrative Tools**, and then click **Services**.
   2. Right-click **Net Logon**, and then click **Stop**.
   3. Create an unattended Active Directory Installation Wizard answer file.
-
-     For more information about the Active Directory Installation Wizard (Dcpromo.exe), click the following article number to view the article in the Microsoft Knowledge Base:
-
-     [223757](https://support.microsoft.com/help/223757) Unattended promotion and demotion of Windows 2000 and Windows Server 2003 domain controllers  
-
-     [311078](https://support.microsoft.com/help/311078) How to use the Install from Media feature to promote Windows Server 2003-based domain controllers  
-
 
 - Run the Active Directory Installation Wizard on the destination computer that is reporting the "schema mismatch" error with NTDS diagnostic logging enabled. The exact time that NTDS diagnostic logging occurs depends on whether the computer that is being promoted is running Windows 2000 or Windows Server 2003.
 
@@ -108,6 +98,7 @@ Force the destination computer to perform inbound replication of Active Director
 #### Part 3: Pre-populate the registry on destination domain controllers
 
 Pre-populate the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Ntds\Diagnostics` subkey on destination domain controllers that are running Windows 2000 or Windows Server 2003. To do this, follow these steps:
+
 1. On the source domain controller, follow steps 1 through 5 in the "Part 1: Turn on diagnostic logging" section.
 2. Right-click the following registry subkey, and then click **Export**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Ntds\Diagnostics` 
 
@@ -152,7 +143,7 @@ Look for inconsistent or suspicious values in the output, especially in the Loca
 
 4. If the problem object that is referenced in the output is not a critical object, make a ldifde backup of the object, and then delete the object. Do not delete problem objects that reside in the schema partition of Active Directory.
 5. Run an NTDSUTIL files integrity check against the Active Directory database. To do this:
-   1. Windows 2000 uses setpwd to change the DSRM passwords. Windows Server 2003 uses ntdsutil to change the DSRM passwords. The following option works in Windows 2000: [810037](https://support.microsoft.com/help/810037) Setpwd.exe enhancement to specify a DSRM password as an argument  
+   1. Windows 2000 uses setpwd to change the DSRM passwords. Windows Server 2003 uses ntdsutil to change the DSRM passwords.
 
    The following option works in Windows Server 2003: [322672](https://support.microsoft.com/help/322672) HOW TO: Reset the Directory Services Restore Mode administrator account password in Windows Server 2003  
 
