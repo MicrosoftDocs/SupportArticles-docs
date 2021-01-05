@@ -33,15 +33,15 @@ The destination domain controller receives a service ticket from a Kerberos Key 
 
 ### Top resolution
 
-1. Stop the KDC service on the destination domain controller. To do this, run the following command at a command prompt:
+1. Stop the KDC service on the destination domain controller. To do it, run the following command at a command prompt:
 
     ```console
     net stop KDC
     ```  
 
-2. Start replication on the destination domain controller from the source domain controller by using AD Sites and Services or Repadmin.
+2. Start replication on the destination domain controller from the source domain controller by using AD Sites and Services or Rep admin.
 
-    Using repadmin:
+    Using `repadmin`:
 
     ```console
     Repadmin replicate destinationDC sourceDC DN_of_Domain_NC
@@ -53,13 +53,13 @@ The destination domain controller receives a service ticket from a Kerberos Key 
     Repadmin replicate ContosoDC2.contoso.com ContosoDC1.contoso.com "DC=contoso,DC=com"
     ```
 
-3. Start the Kerberos KDC service on the destination domain controller. To do this, run the following command:
+3. Start the Kerberos KDC service on the destination domain controller by running the following command:
 
     ```console
     net start KDC
     ```
 
-If this doesn't resolve the issue, see the [Resolution](#resolution) section for an alternative solution in which you use the `netdom resetpwd` command to reset the computer account password of the source domain controller. If these steps do not resolve the problem, review the rest of this article.
+If it doesn't resolve the issue, see the [Resolution](#resolution) section for an alternative solution in which you use the `netdom resetpwd` command to reset the computer account password of the source domain controller. If these steps don't resolve the problem, review the rest of this article.
 
 ## Symptoms
 
@@ -78,7 +78,7 @@ When this problem occurs, you experience one or more of the following symptoms:
 
 - Repadmin.exe reports that a replication attempt failed, and reports a status of **-2146893022 (0x80090322)**.
 
-    Repadmin commands that commonly indicate the **-2146893022 (0x80090322)** status include but are not limited to the following:
+    `Repadmin` commands that commonly indicate the **-2146893022 (0x80090322)** status include but aren't limited to the following ones:
 
   - `DMIN /REPLSUMREPA`
   - `REPADMIN /SHOWREPL`
@@ -113,7 +113,7 @@ When this problem occurs, you experience one or more of the following symptoms:
 
 - The **replicate now** command in Active Directory Sites and Services returns **The target principal name is incorrect** message.
 
-    Right-clicking on the connection object from a source DC and then selecting **replicate now** fails and returns **The target principal name is incorrect** message. The on-screen error message is as follows:
+    Right-clicking on the connection object from a source DC and then selecting **replicate now** fails. It returns **The target principal name is incorrect** message. The on-screen error message is as follows:
 
     > Dialog title text: Replicate Now  
     > Dialog message text: The following error occurred during the attempt to contact the domain controller \<source DC name>:  
@@ -122,7 +122,7 @@ When this problem occurs, you experience one or more of the following symptoms:
 
 - NTDS KCC, NTDS General or **Microsoft-Windows-ActiveDirectory_DomainService** events that have the **-2146893022** status are logged in the directory service event log.
 
-    Active Directory events that commonly cite the **-2146893022** status include but are not limited to the following ones:
+    Active Directory events that commonly cite the **-2146893022** status include but aren't limited to the following ones:
 
     |**Event Source**| **Event ID**| **Event String** |
     |---|---|---|
@@ -135,7 +135,7 @@ When this problem occurs, you experience one or more of the following symptoms:
 
 ## Cause
 
-The **-2146893022**\\**0x80090322**\\**SEC_E_WRONG_PRINCIPAL** error code is not an Active Directory error but may be returned by lower layer components, including RPC, Kerberos, SSL, LSA, and NTLM for different root causes.
+The **-2146893022**\\**0x80090322**\\**SEC_E_WRONG_PRINCIPAL** error code isn't an Active Directory error. It may be returned by lower layer components, including RPC, Kerberos, SSL, LSA, and NTLM for different root causes.
 
 Kerberos errors that are mapped by Windows code to **-2146893022**\\**0x80090322**\\**SEC_E_WRONG_PRINCIPAL** include:
 
@@ -147,9 +147,9 @@ Some specific root causes for **-2146893022**\\**0x80090322**\\**SEC_E_WRONG_PRI
 
 - A bad name-to-IP mapping in DNS, WINS, HOST, or LMHOST file caused the destination domain controller to connect to the wrong source domain controller in a different Kerberos realm.
 
-- The Kerberos target computer (source domain controller) could not decrypt Kerberos authentication data that was sent by the Kerberos client (destination domain controller) because the KDC and source domain controller have different versions of the source domain controller's computer account password.
+- The Kerberos target computer (source domain controller) couldn't decrypt Kerberos authentication data sent by the Kerberos client (destination domain controller). The reason is that the KDC and source domain controller have different versions of the source domain controller's computer account password.
 
-- The KDC could not find a domain to look for the source domain controller's SPN.
+- The KDC couldn't find a domain to look for the source domain controller's SPN.
 
 - Authentication data in Kerberos encrypted frames were modified by hardware (including network devices), software, or an attacker.
 
