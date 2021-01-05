@@ -26,18 +26,18 @@ Assume that you have a Windows 8.1 image that was captured from a non-UEFI compu
 
 When this issue occurs, messages that resemble the following are logged in the setupact.log file. The messages indicate that the setup process can't find the staged WinRE image, and that the WinRE can't be built:
 
-> 2014-01-29 16:42:34, Info [setup.exe] WinReInstallOnTargetOS Beginning WinRE installation.  
-2014-01-29 16:42:34, Info [setup.exe] winreCheckRegKeyTest hook (S) present or enabled  
-2014-01-29 16:42:34, Info [setup.exe] WinReInstallOnTargetOS System setup is in progress.  
-2014-01-29 16:42:34, Info [setup.exe] WinReInstallOnTargetOS Checking for downlevel WinRE installation.  
-2014-01-29 16:42:34, Info [setup.exe] ReAgentXMLParser::ParseConfigFile (xml file: \Recovery\ReAgentOld.xml) returning 0X3  
-2014-01-29 16:42:34, Info [setup.exe] ReAgentConfig::ParseConfigFile returned with 0x3  
-2014-01-29 16:42:34, Info [setup.exe] WinReInstallOnTargetOS Getting current WinRE configuration.  
-2014-01-29 16:42:34, Info [setup.exe] WinReInstallOnTargetOS Disabling extra ReAgentConfig BCD checks for legacy setup.  
-2014-01-29 16:42:34, Info [setup.exe] WinReInstallOnTargetOS No source winre.wim was specified. Checking for a staged winre.wim.  
-2014-01-29 16:42:34, Info [setup.exe] WinReInstallOnTargetOS Searching for OEM Winre.wim  
-2014-01-29 16:42:34, Info [setup.exe] WinReInstallOnTargetOS Error 0X2 while searching for OEM winre.wim  
-2014-01-29 16:42:34, Warning [setup.exe] WinReInstallOnTargetOS (WinRE)WinREInstall() returning FALSE, gle = 0x64E  
+> \<DateTime>, Info [setup.exe] WinReInstallOnTargetOS Beginning WinRE installation.  
+\<DateTime>, Info [setup.exe] winreCheckRegKeyTest hook (S) present or enabled  
+\<DateTime>, Info [setup.exe] WinReInstallOnTargetOS System setup is in progress.  
+\<DateTime>, Info [setup.exe] WinReInstallOnTargetOS Checking for downlevel WinRE installation.  
+\<DateTime>, Info [setup.exe] ReAgentXMLParser::ParseConfigFile (xml file: \Recovery\ReAgentOld.xml) returning 0X3  
+\<DateTime>, Info [setup.exe] ReAgentConfig::ParseConfigFile returned with 0x3  
+\<DateTime>, Info [setup.exe] WinReInstallOnTargetOS Getting current WinRE configuration.  
+\<DateTime>, Info [setup.exe] WinReInstallOnTargetOS Disabling extra ReAgentConfig BCD checks for legacy setup.  
+\<DateTime>, Info [setup.exe] WinReInstallOnTargetOS No source winre.wim was specified. Checking for a staged winre.wim.  
+\<DateTime>, Info [setup.exe] WinReInstallOnTargetOS Searching for OEM Winre.wim  
+\<DateTime>, Info [setup.exe] WinReInstallOnTargetOS Error 0X2 while searching for OEM winre.wim  
+\<DateTime>, Warning [setup.exe] WinReInstallOnTargetOS (WinRE)WinREInstall() returning FALSE, gle = 0x64E  
 
 ## Cause
 

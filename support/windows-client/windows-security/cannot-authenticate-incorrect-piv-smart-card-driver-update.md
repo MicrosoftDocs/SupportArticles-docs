@@ -60,7 +60,7 @@ In Settings, select **Updates & Security** > **View update history**. You should
 
 ### Manually delete the driver
 
-To manually remover the driver, follow these steps:  
+To manually remove the driver, follow these steps:  
 
 1. Connect the smart card device to the computer.
 2. Start Device Manager. You can start Device Manager from Control Panel, or by pressing **Windows** + **R**, and then entering **devmgmt.msc**.

@@ -83,7 +83,7 @@ productDirectory:
   - title: Previous Versions
     imageSrc: "media/hub-landing/MEM.jpg"
     summary: Troubleshooting articles for previous versions of products
-    url: previous-versions/index.yml
+    url: https://docs.microsoft.com/previous-versions/troubleshoot/
 
 # conceptualContent:
 

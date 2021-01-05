@@ -1,6 +1,10 @@
 ---
 title: Windows Server troubleshooting document
 description: This article lists troubleshooting articles for Windows Server products.
+author: Deland-Han
+ms.author: delhan 
+manager: dscontentpm
+audience: itpro
 ms.prod: windows-server
 ms.topic: article
 ms.date: 10/21/2020
@@ -31,3 +35,4 @@ Browse the following content or use the search feature.
 - [UserProfiles and Logon](./user-profiles-and-logon/userprofiles-and-logon-overview.md)
 - [Virtualization](./virtualization/virtualization-overview.md)
 - [Windows Security](./windows-security/windows-security-overview.md)
+- [Windows Server End of Support (EoS) FAQ](./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.md)

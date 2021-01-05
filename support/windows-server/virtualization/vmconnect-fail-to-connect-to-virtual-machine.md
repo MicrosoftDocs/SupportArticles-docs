@@ -90,7 +90,7 @@ To enable authentication of remote credentials, you can use the Gpedit tool to c
     > If you are using NTLM authentication, use the **Allow Default Credentials with NTLM-only Server Authentication** entry.  
 
 5. Click **Enabled**, and then click to select the **Concatenate OS defaults with inputs above** check box.
-6. Click **Show**, and then verify that the computer of the remote user is included in the list. If it is necessary, click **Add**, and then include the computer of the remote user. You can also use wildcard characters. For example, to select all computers, add the following wildcard character: *
+6. Click **Show**, and then verify that the computer of the remote user is included in the list. If it is necessary, click **Add**, and then include the computer of the remote user. You can also use wildcard characters. For example, to select all computers, add the following wildcard character: \*.
 7. Click **OK** two times.
 8. Close Group Policy.
 

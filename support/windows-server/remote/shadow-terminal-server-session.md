@@ -41,7 +41,7 @@ To remote control the console with no prompt for approval:
     gpupdate /force
     ```
 
-Now, if you establish a Remote Desktop session you can connect to the console and remote control it by going to a command prompt and using the following command:
+Now, if you establish a Remote Desktop session, you can connect to the console and remote control it by going to a command prompt and using the following command:
 
 ```console
 Shadow 0
