@@ -27,7 +27,7 @@ appliesto:
 
 ## Possible causes that documents do not save
 
-Select the tab that applies to you. If none of these causes apply to you, see the [Quick resolution](#quick-resolution) section below.
+Select the tab that applies to you, or go to the [Quick resolution](#quick-resolution) section below.
 
 ## [3rd-party add-ins](#tab/third-party)
  
