@@ -103,7 +103,7 @@ The following attributes are set in Azure AD on the synchronized user object:
 > mailNickName: us1  
 > proxyAddresses: {smtp:`us1@contoso.onmicrosoft.com`,SMTP:`us1@contoso.com`}
 
-Then, you change the values of the proxyAddresses attribute to the following one:
+Then, you change the values of the proxyAddresses attribute to the following ones:
 
 > UPN: `us1@contoso.com`
 > mail: \<not set>  
@@ -149,7 +149,7 @@ The following attributes are set in Azure AD on the synchronized user object:
 
 Then, you remove the Exchange Online license. Nothing changes in Azure AD. All attributes remain the same.
 
-Then, you change the values of the proxyAddresses attribute to the following one:
+Then, you change the values of the proxyAddresses attribute to the following ones:
 
 > UPN: `us2@contoso.com`  
 > mail: \<not set>  
@@ -191,7 +191,7 @@ The following attributes are set in Azure AD on the synchronized user object:
 > mailNickName: us4
 > proxyAddresses: {smtp:`us4@contoso.com`,SMTP:`us4@contoso.onmicrosoft.com`}
 
-Then, you change the values of the proxyAddresses attribute of the on-premises user to the following one:
+Then, you change the values of the proxyAddresses attribute of the on-premises user to the following ones:
 
 > UPN: `us4@contoso.com`  
 > mail: \<not set>  

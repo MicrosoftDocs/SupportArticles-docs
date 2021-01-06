@@ -43,7 +43,7 @@ To enable `Netlogon` logging:
     Nltest /DBFlag:2080FFFF
     ```
 
-3. It's typically not necessary to stop and restart the `Netlogon` service for Windows Server 2012 R2 or later operating systems to enable `Netlogon` logging. Netlogon-related activity is logged to %windir%\debug\netlogon.log. Verify new writes to this log to determine whether a restart of the `Netlogon` service is necessary. If you have to restart the service, open a Command Prompt window (administrative Command Prompt window for Windows 10, and Windows Server 2012 R2 and later versions). Then run the following commands:
+3. It's typically unnecessary to stop and restart the `Netlogon` service for Windows Server 2012 R2 or later to enable `Netlogon` logging. Netlogon-related activity is logged to %windir%\debug\netlogon.log. Verify new writes to this log to determine whether a restart of the `Netlogon` service is necessary. If you have to restart the service, open a Command Prompt window (administrative Command Prompt window for Windows 10, and Windows Server 2012 R2 and later versions). Then run the following commands:
 
     ```console
     net stop netlogon
@@ -64,7 +64,7 @@ To disable `Netlogon` logging, follow these steps:
      Nltest /DBFlag:0x0
     ```
 
-3. It's typically not necessary to stop and restart the `Netlogon` service for Windows Server 2012 R2 or later versions of the operating system to disable `Netlogon` logging. Netlogon-related activity is logged to %windir%\debug\netlogon.log. Verify that no new information is being written to this log to determine whether a restart of the `Netlogon` service is necessary. If you have to restart the service, open a Command Prompt window (administrative Command Prompt window for Windows 10, and Windows Server 2012 R2 and later versions). Then run the following commands:  
+3. It's typically unnecessary to stop and restart the `Netlogon` service for Windows Server 2012 R2 or later versions to disable `Netlogon` logging. Netlogon-related activity is logged to %windir%\debug\netlogon.log. Verify that no new information is being written to this log to determine whether a restart of the `Netlogon` service is necessary. If you have to restart the service, open a Command Prompt window (administrative Command Prompt window for Windows 10, and Windows Server 2012 R2 and later versions). Then run the following commands:  
 
     ```console
     net stop netlogon
@@ -81,7 +81,7 @@ To disable `Netlogon` logging, follow these steps:
 > [!NOTE]
 >
 > - A value of decimal 545325055 is equivalent to 0x2080FFFF (which enables verbose `Netlogon` logging). This Group Policy setting is specified in bytes.
-> - The Group Policy method can be used to enable `Netlogon` logging on a larger number of systems more efficiently. We don't recommend that you enable `Netlogon` logging in policies that apply to all systems (such as the Default Domain Policy). Instead, consider narrowing the scope to systems that may be causing problems by doing either of the following:
+> - The Group Policy method can be used to enable `Netlogon` logging on a larger number of systems more efficiently. We don't recommend that you enable `Netlogon` logging in policies that apply to all systems, such as the Default Domain Policy. Instead, consider narrowing the scope to systems that may be causing problems by using one of the following methods:
 >
 >   - Create a new policy by using this Group Policy setting, and then provide the Read and Apply Group Policy rights to a group that contains only the required computer accounts.
 >   - Move computer objects into a different OU, and then apply the policy settings at that OU level.
@@ -93,7 +93,7 @@ To enable logging, you may have to obtain a checked build of Netlogon.dll.
 1. Start Registry Editor.
 2. If it exists, delete the Reg_SZ value of the following registry entry, create a REG_DWORD value with the same name, and then add the 2080FFFF hexadecimal value:  
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters\DBFlag`
-3. It's typically not necessary to stop and restart the `Netlogon` service for Windows Server 2012 R2 and later versions of the operating system to enable `Netlogon` logging. Netlogon-related activity is logged to %windir%\debug\netlogon.log. Verify the new writes to this log to determine whether a restart of the `Netlogon` service is necessary. If you have to restart the service, open a Command Prompt window (administrative Command Prompt window for Windows Server 2012 R2/Windows 10 and above). Then run the following commands:  
+3. It's typically unnecessary to stop and restart the `Netlogon` service for Windows Server 2012 R2 and later versions to enable `Netlogon` logging. Netlogon-related activity is logged to %windir%\debug\netlogon.log. Verify the new writes to this log to determine whether a restart of the `Netlogon` service is necessary. If you have to restart the service, open a Command Prompt window (administrative Command Prompt window for Windows Server 2012 R2/Windows 10 and above). Then run the following commands:  
 
     ```console
     net stop netlogon
@@ -111,7 +111,7 @@ To disable `Netlogon` logging, follow these steps:
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters\DBFlag`
 2. Exit Registry Editor.
-3. It's typically not necessary to stop and restart the `Netlogon` service for Windows Server 2012 R2, Windows 10, or later versions of the operating system to disable `Netlogon` logging. Netlogon-related activity is logged to %windir%\debug\netlogon.log. Verify that no new information is being written to this log to determine whether a restart of the `Netlogon` service is necessary. If you have to restart the service, open a Command Prompt window (administrative Command Prompt window for Windows Server 2012 R2/Windows 10 and later versions of the operating system). Then run the following commands:  
+3. It's typically unnecessary to stop and restart the `Netlogon` service for Windows Server 2012 R2, Windows 10, or later versions to disable `Netlogon` logging. Netlogon-related activity is logged to %windir%\debug\netlogon.log. Verify that no new information is being written to this log to determine whether a restart of the `Netlogon` service is necessary. If you have to restart the service, open a Command Prompt window (administrative Command Prompt window for Windows Server 2012 R2/Windows 10 and later versions of the operating system). Then run the following commands:  
 
     ```console
     net stop netlogon
