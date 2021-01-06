@@ -16,50 +16,117 @@ metadata:
 landingContent:
 
  # Card
-  - title: First
+  - title: Active Directory
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Active Directory 
-            url: ./identity/active-directory-overview.md
-          - text: Admin Development 
-            url: ./admin-development/admin-development-overview.md
-          - text: Application Management 
-            url: ./application-management/application-management-overview.md
-          - text: Backup and Storage 
-            url: ./backup-and-storage/backup-and-storage-overview.md
-          - text: Deployment 
-            url: ./deployment/deployment-overview.md
-          - text: Group Policy 
-            url: ./group-policy/group-policy-overview.md
-          - text: High Availability 
-            url: ./high-availability/high-availability-overview.md
-          - text: Networking 
-            url: ./networking/networking-overview.md
-          - text: Performance 
-            url: ./performance/performance-overview.md
-          - text: Printing 
-            url: ./printing/printing-overview.md
-  - title: Second
+          - text:  Overview
+            url:  ./identity/active-directory-overview.md
+  - title: Admin Development
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Remote Desktop Services 
-            url: ./remote/remote-desktop-services-overview.md
-          - text: Security and Malware 
-            url: ./security-and-malware/security-and-malware-overview.md
-          - text: Shell Experience 
-            url: ./shell-experience/shell-experience-overview.md
-          - text: Software Defined Networking 
-            url: ./software-defined-networking/software-defined-networking-overview.md
-          - text: System Management Components 
-            url: ./system-management-components/system-management-components-overview.md
-          - text: UserProfiles and Logon 
-            url: ./user-profiles-and-logon/userprofiles-and-logon-overview.md
-          - text: Virtualization 
-            url: ./virtualization/virtualization-overview.md
-          - text: Windows Security 
-            url: ./windows-security/windows-security-overview.md
-          - text: Windows Server End of Support (EoS FAQ 
-            url: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.md
-
+          - text:  Overview
+            url:  ./admin-development/admin-development-overview.md
+  - title: Application Management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Overview
+            url:  ./application-management/application-management-overview.md
+  - title: Backup and Storage
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Overview
+            url:  ./backup-and-storage/backup-and-storage-overview.md
+  - title: Deployment
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Overview
+            url:  ./deployment/deployment-overview.md
+  - title: Group Policy
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Overview
+            url:  ./group-policy/group-policy-overview.md
+  - title: High Availability
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Overview
+            url:  ./high-availability/high-availability-overview.md
+  - title: Networking
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Overview
+            url:  ./networking/networking-overview.md
+  - title: Performance
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Overview
+            url:  ./performance/performance-overview.md
+  - title: Printing
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Overview
+            url:  ./printing/printing-overview.md
+  - title: Remote Desktop Services
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Overview
+            url:  ./remote/remote-desktop-services-overview.md
+  - title: Security and Malware
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Overview
+            url:  ./security-and-malware/security-and-malware-overview.md
+  - title: Shell Experience
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Overview
+            url:  ./shell-experience/shell-experience-overview.md
+  - title: Software Defined Networking
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Overview
+            url:  ./software-defined-networking/software-defined-networking-overview.md
+  - title: System Management Components
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Overview
+            url:  ./system-management-components/system-management-components-overview.md
+  - title: UserProfiles and Logon
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Overview
+            url:  ./user-profiles-and-logon/userprofiles-and-logon-overview.md
+  - title: Virtualization
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Overview
+            url:  ./virtualization/virtualization-overview.md
+  - title: Windows Security
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Overview
+            url:  ./windows-security/windows-security-overview.md
+  - title: Windows Server End of Support (EoS FAQ
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Overview
+            url:  ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.md
