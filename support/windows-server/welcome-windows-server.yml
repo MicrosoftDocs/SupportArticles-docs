@@ -21,65 +21,82 @@ metadata:
 productDirectory:
   items:
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
   - title: Active Directory
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
+    imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows
     url: ./identity/active-directory-overview.md
