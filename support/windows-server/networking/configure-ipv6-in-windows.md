@@ -15,21 +15,19 @@ ms.technology: Networking
 ---
 # Guidance for configuring IPv6 in Windows for advanced users
 
-This article provides solutions to configure Internet Protocol version 6 (IPv6) for advanced users in Windows.
+Windows Vista, Windows Server 2008, and later versions of Windows implement RFC 3484 and use a prefix table to determine which address to use when multiple addresses are available for a Domain Name System (DNS) name.
+
+By default, Windows favors IPv6 global unicast addresses over IPv4 addresses.
 
 _Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 929852
 
 ## Summary
 
-Windows Vista, Windows Server 2008, and later versions of Windows implement RFC 3484 and use a prefix table to determine which address to use when multiple addresses are available for a Domain Name System (DNS) name.
-
-By default, Windows favors IPv6 global unicast addresses over IPv4 addresses.
-
 It is common for IT administrators to disable IPv6 to troubleshoot networking-related issues such as name resolution issues.
 
 > [!IMPORTANT]
-> IPv6 is a mandatory part of Windows Vista and Windows Server 2008 and newer versions. We don't recommend disabling IPv6 or its components. If you do, some Windows components may not function.
+> Internet Protocol version 6 (IPv6) is a mandatory part of Windows Vista and Windows Server 2008 and newer versions. We do not recommend that you disable IPv6 or its components. If you do, some Windows components may not function.
 >
 > We recommend using **Prefer IPv4 over IPv6** in prefix policies instead of disabling IPV6.
 
