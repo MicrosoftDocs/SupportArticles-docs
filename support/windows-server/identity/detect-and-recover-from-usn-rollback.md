@@ -222,7 +222,7 @@ There are three approaches to recover from a USN rollback.
     6. If you are required to, install Active Directory on the stand-alone server again.
     7. If the domain controller was previously a global catalog, configure the domain controller to be a global catalog. For more information, see [How to create or move a global catalog](https://support.microsoft.com/help/313994).
 
-    8. If the domain controller previously hosted operations master roles, transfer the operations master roles back to the domain controller. For more information, see [Transfer or seize FSMO roles in Active Directory Domain Services](/troubleshoot/windows-server/identity/transfer-or-seize-fsmo-roles-in-ad-ds4).
+    8. If the domain controller previously hosted operations master roles, transfer the operations master roles back to the domain controller. For more information, see [Transfer or seize FSMO roles in Active Directory Domain Services](/troubleshoot/windows-server/identity/transfer-or-seize-fsmo-roles-in-ad-ds).
 
 - Restore the system state of a good backup.
 

@@ -46,14 +46,14 @@ auditpol /set /subcategory:"Filtering Platform Packet Drop" /success:enable /fai
 
 ## Cause
 
-This issue occurs because the Adylkuzz malware that leverages the same SMBv1 vulnerability as Wannacrypt adds an IPSec policy that's named *NETBC* that blocks incoming traffic on the SMB server that's using TCP port 445. Some Adylkuzz-cleanup tools can remove the malware but fail to delete the IPSec policy. For details, see [Win32/Adylkuzz.B](https://www.microsoft.com/wdsi/threats/malware-encyclopedia-description?Name=Trojan:Win32/Adylkuzz.B).
+This issue occurs because the Adylkuzz malware that leverages the same SMBv1 vulnerability as Wannacrypt adds an IPSec policy that's named *NETBC* that blocks incoming traffic on the SMB server that's using TCP port 445. Some Adylkuzz-cleanup tools can remove the malware but fail to delete the IPSec policy. For details, see [Win32/Adylkuzz.B](https://www.microsoft.com/en-US/wdsi/threats/malware-encyclopedia-description?Name=Trojan:Win32/Adylkuzz.B).
 
 ## Resolution
 
 To fix this issue, follow these steps:
 
 1. Install the [security update MS17-010](/security-updates/SecurityBulletins/2017/ms17-010) version appropriate to the operating system.
-2. Follow the steps on the "What to do now tab" of [Win32/Adylkuzz.B](/wdsi/threats/malware-encyclopedia-description?Name=Trojan:Win32/Adylkuzz.B).
+2. Follow the steps on the "What to do now tab" of [Win32/Adylkuzz.B](https://www.microsoft.com/en-US/wdsi/threats/malware-encyclopedia-description?Name=Trojan:Win32/Adylkuzz.B).
 3. Run a scan by using the [Microsoft Security Scanner](/windows/security/threat-protection/intelligence/safety-scanner-download).
 4. Check whether the IPSec policy blocks the TCP port 445 by using the following commands (and see the cited results for examples).
 
