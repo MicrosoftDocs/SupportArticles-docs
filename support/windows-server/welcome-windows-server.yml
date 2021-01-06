@@ -13,78 +13,63 @@ metadata:
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
-landingContent:
+highlightedContent:
 
  # Card
   - title: Active Directory
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text:  Overview
-            url:  ./identity/active-directory-overview.md
-  - title: Admin Development
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text:  Overview
-            url:  ./admin-development/admin-development-overview.md
-  - title: Application Management
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text:  Overview
-            url:  ./application-management/application-management-overview.md
-  - title: Backup and Storage
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text:  Overview
-            url:  ./backup-and-storage/backup-and-storage-overview.md
-  - title: Deployment
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text:  Overview
-            url:  ./deployment/deployment-overview.md
-  - title: Group Policy
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text:  Overview
-            url:  ./group-policy/group-policy-overview.md
-  - title: High Availability
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text:  Overview
-            url:  ./high-availability/high-availability-overview.md
-  - title: Networking
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text:  Overview
-            url:  ./networking/networking-overview.md
-  - title: Performance
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text:  Overview
-            url:  ./performance/performance-overview.md
-  - title: Printing
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text:  Overview
-            url:  ./printing/printing-overview.md
-  - title: Remote Desktop Services
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text:  Overview
-            url:  ./remote/remote-desktop-services-overview.md
-  - title: Security and Malware
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text:  Overview
-            url:  ./security-and-malware/security-and-malware-overview.md
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
+  - title: Active Directory
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
+  - title: Active Directory
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
+  - title: Active Directory
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
+  - title: Active Directory
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
+  - title: Active Directory
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
+  - title: Active Directory
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
+  - title: Active Directory
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
+  - title: Active Directory
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
+  - title: Active Directory
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
+  - title: Active Directory
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
+  - title: Active Directory
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
+  - title: Active Directory
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
+  - title: Active Directory
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
+  - title: Active Directory
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
+  - title: Active Directory
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
+  - title: Active Directory
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
+  - title: Active Directory
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
+  - title: Active Directory
+    itemType: whats-new # controls the icon image and super-title text
+    url:  ./identity/active-directory-overview.md
