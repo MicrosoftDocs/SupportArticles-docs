@@ -16,7 +16,7 @@ ms.reviewer:
    - ##% complete
    - Don't turn off your computer
 
-   ![Error messages](./media/azure-vm-cannot-rdp-ssh-working-features/1-error.png)
+   ![Error messages](./media/azure-vm-cannot-rdp-working-features/1-error.png)
 
 ## Cause
 
