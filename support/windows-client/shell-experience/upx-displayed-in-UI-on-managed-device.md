@@ -46,7 +46,7 @@ To work around this issue, follow these steps to suppress the UPX display and mi
 > [!NOTE]
 > Any client that is managed by third-party enterprise management software can also avoid the UPX UI display by having the two registry key values set.
 
-For more information about UPX, see [Choose your privacy settings for the Windows 10 Creators Update](/windows/choose-your-privacy-settings-after-updating-windows-10-9d92e194-36aa-ae41-18f6-fef5459ad86d).
+For more information about UPX, see [Choose your privacy settings for the Windows 10 Creators Update](https://support.microsoft.com/windows/choose-your-privacy-settings-after-updating-windows-10-9d92e194-36aa-ae41-18f6-fef5459ad86d).
 
 > [!NOTE]
 > If the [KB4013214](https://support.microsoft.com/help/4013214) update is already installed on the system, open **Task Scheduler**, navigate to \\Microsoft\\Windows\\UNP, and run the `RunCampaignManager` command. This operation will prevent the UPX UI from being shown to the end user even if the UPX has already been downloaded and installed on the system.

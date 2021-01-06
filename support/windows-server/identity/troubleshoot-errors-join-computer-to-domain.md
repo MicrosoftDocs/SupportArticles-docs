@@ -251,4 +251,4 @@ This problem is related to mismatched SMB Signing settings between the client co
 
 #### Resolution
 
-Make sure that the DC through which you are trying to join the domain has the Windows Time service started.  For more information, see [The Windows Time service may generate event ID 7023 after you upgrade to Windows Server 2003 Service Pack 1](https://support.microsoft.com/office/the-windows-time-service-may-generate-event-id-7023-after-you-upgrade-to-windows-server-2003-service-pack-1-120ba3ac-5c4b-1440-584f-f410a09f70b7).
+Make sure that the DC through which you are trying to join the domain has the Windows Time service started.
