@@ -85,18 +85,11 @@ If logical unit 0 isn't present, the REPORT LUNS  command can't be sent to the t
 Any LUN with a LUN number larger than 254 will not be recognized by the Windows operating system. Consult your hardware manufacturer about the different parameters that should be used with your particular hardware.
 
 Even though Windows can access Large LUNs, there may be other environment variables that need to be taken into consideration.
- For more information, click the following article number to view the article in the Microsoft Knowledge Base: 
-
- [277222](https://support.microsoft.com/help/277222) System may not start when creating a large number of logical units and volumes 
-
-For more information, click the following article number to view the article in the Microsoft Knowledge Base: 
-
- [208173](https://support.microsoft.com/help/208173) Duplicate LUN 0 when LargeLuns registry key enabled 
 
 ### Additional parameters for the SpecialTargetList key
 
 For Windows Server, there are several additional parameters that you can use under the SpecialTargetList key. They are:
- 
+
 - SparseLun - Allow for discontinuous LUN list.
 - OneLun - Only scan LUN zero.
 - LargeLuns - The device supports more than seven LUNs.

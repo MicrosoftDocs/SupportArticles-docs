@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-intune.md
+  href: welcome-intune.yml
 - name: App management
   items:
   - name: Access denied configuring MAM

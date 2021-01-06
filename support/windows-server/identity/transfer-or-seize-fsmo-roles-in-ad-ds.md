@@ -42,8 +42,6 @@ When a DC that has been acting as a role holder starts to run (for example, afte
 
 The information that the DCs pass as part of Active Directory replication includes the identities of the current FSMO role holders. When the newly started DC receives the inbound replication information, it verifies whether it is still the role holder. If it is, it resumes typical operations. If the replicated information indicates that another DC is acting as the role holder, the newly started DC relinquishes its role ownership. This behavior reduces the chance that the domain or forest will have duplicate FSMO role holders.
 
-For more information, see [Initial synchronization requirements for Windows Server operations master role holders](https://support.microsoft.com/help/305476).
-
 > [!IMPORTANT]
 > AD FS operations fail if they require a role holder and if the newly started role holder is, in fact, the role holder and it does not receive inbound replication.  
 > The resulting behavior resembles what would happen if the role holder was offline.
@@ -205,7 +203,6 @@ For more information, see:
 - [Active Directory FSMO roles in Windows](https://docs.microsoft.com/troubleshoot/windows-server/identity/fsmo-roles)
 - [FSMO placement and optimization on Active Directory domain controllers](https://support.microsoft.com/help/223346)
 - [Flexible Single Master Operation Transfer and Seizure Process](https://support.microsoft.com/help/223787)
-- [Initial synchronization requirements for Windows Server operations master role holders](https://support.microsoft.com/help/305476)
 - [HOW TO: Use Ntdsutil to find and clean up duplicate security identifiers in Windows Server](https://support.microsoft.com/help/816099)
 - [Troubleshoot DNS Event ID 4013: The DNS server was unable to load AD integrated DNS zones](https://support.microsoft.com/help/2001093)
 - [DCPROMO demotion fails if unable to contact the DNS infrastructure master](https://support.microsoft.com/help/2694933)

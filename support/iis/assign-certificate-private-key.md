@@ -1,6 +1,6 @@
 ---
 title: Assign a private key to a new certificate
-description: This article describes how to recover a private key after you use the Certificates Management Console snap-in to delete the original certificate in IIS.
+description: Describes how to recover a private key after you use the Certificates Management Console snap-in to delete the original certificate in Internet Information Services (IIS).
 ms.date: 03/23/2020
 ms.prod-support-area-path: Development
 ms.topic: how-to
@@ -14,11 +14,11 @@ _Original KB number:_ &nbsp; 889651
 
 ## Summary
 
-You delete the original certificate from the personal folder in the local computer's certificate store. This article assumes that you have the matching certificate file backed up as a PKCS#7 file, a .cer file, or a .crt file. When you delete a certificate on a computer that is running IIS, the private key is not deleted.
+You delete the original certificate from the personal folder in the local computer's certificate store. This article assumes that you have the matching certificate file backed up as a PKCS#7 file, a .cer file, or a .crt file. When you delete a certificate on a computer that's running IIS, the private key isn't deleted.
 
 ## Assign the existing private key to a new certificate
 
-To assign the existing private key to a new certificate, you must use the Windows Server version of Certutil.exe. To do this, follow these steps:
+To assign the existing private key to a new certificate, you must use the Windows Server version of Certutil.exe. To do it, follow these steps:
 
 1. Sign in to the computer that issued the certificate request by using an account that has administrative permissions.
 2. Select **Start**, select **Run**, type *mmc*, and then select **OK**.
@@ -38,7 +38,7 @@ To assign the existing private key to a new certificate, you must use the Window
 16. In the **Certificate** dialog box, select the **Details** tab.
 17. Select **Serial Number** in the **Field** column of the **Details** tab, highlight the serial number, and then write down the serial number.
 18. Select **Start**, select **Run**, type **cmd**, and then select **OK**.
-19. At the command prompt, type the following:
+19. At the command prompt, type the following command:
 
     ```console
     certutil -repairstore my "SerialNumber"

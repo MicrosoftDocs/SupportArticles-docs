@@ -33,7 +33,7 @@ IISReset.exe fails to stop the IIS services in a timely fashion. With the `/NOFO
 
 ## Resolution
 
-Do not use the IISReset.exe tool to restart the IIS services. Instead, use the NET `STOP` and `NET START` commands. For example, to stop and start the World Wide Web Publishing Service, run the following commands:
+Do not use the IISReset.exe tool to restart the IIS services. Instead, use the `NET STOP` and `NET START` commands. For example, to stop and start the World Wide Web Publishing Service, run the following commands:
 
 ```console
 C:\> NET STOP w3svc

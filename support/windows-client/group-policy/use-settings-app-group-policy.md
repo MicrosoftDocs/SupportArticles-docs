@@ -33,7 +33,7 @@ The Settings app Group Policy has two modes. An administrator can either specify
 ## Use Setting app Group Policy
 
 1. Open the Local Group Policy Editor and then go to **Computer Configuration** > **Administrative Templates** > **Control Panel**.
-2. Double-click the **Settings Page Visibility** policy and then select **Enable**.
+2. Double-click the **Settings Page Visibility** policy and then select **Enabled**.
 
     ![Setting Page Visibility Group Policy](./media/use-settings-app-group-policy/enable-settings-page-visibility-policy.png)
 3. Depending on your need, specify either a **ShowOnly:** or **Hide:** string.

@@ -388,7 +388,7 @@ After the correct security groups have been granted the required permissions on 
 1. Log on by using the user account in which ad-hoc replication is failing and returning **replication access was denied**.
 2. At a command prompt, run the following command:
 
-    ```cosnole
+    ```console
     WHOAMI /ALL
     ```
 
@@ -407,10 +407,6 @@ After the correct security groups have been granted the required permissions on 
 ### RODC replication
 
 If computer-initiated replication is failing on RODCs, verify that you have run `ADPREP /RODCPREP` and that the Enterprise Read-Only Domain Controller group is granted the **Replicate Directory Changes** right on each NC head.
-
-### Office Communication Server
-
-If you notice that AD operations fail and return the 8453 error (replication access was denied) in an existing forest that's running either Office Communications Server 2005 or Office Communications Server 2007, and if this occurs immediately after the promotion of or upgrade to Windows Server 2008 or Windows Server 2008 R2 domain controllers, see [Office Communications Server 2007 R2, OCS 2007 or LCS 2005 does not work correctly after you upgrade to Windows Server 2008 R2](https://support.microsoft.com/help/982020).
 
 ### Missing NTDS Settings object for LDS server
 

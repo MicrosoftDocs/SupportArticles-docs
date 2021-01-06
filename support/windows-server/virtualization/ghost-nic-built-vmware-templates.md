@@ -24,11 +24,11 @@ _Original KB number:_ &nbsp; 2526142
 
 Consider the following situations:
 
-1. You have a VMware Virtual Machine that is running Windows Server 2008 R2 or Windows 7, and is configured with a Synthetic NIC (VMXNET3)
-2. The NIC is seen as "Local Area Connection", "vmxnet3 Ethernet Adapter"
+1. You have a VMware Virtual Machine that is running Windows Server 2008 R2 or Windows 7, and is configured with a Synthetic NIC (VMXNET3).
+2. The NIC is seen as "Local Area Connection", "vmxnet3 Ethernet Adapter".
 3. A VM Template is created using the Windows Server 2008 R2 or Windows 7 Virtual Machine.
-4. For Each VM Deployed using this Template, a New MAC address is assigned by the clone/deploy operation.
-5. Upon boot-up, Windows recognizes the NIC as a New Device and the adapter is seen as "Local Area Connection 2", "vmxnet3 Ethernet Adapter #2".
+4. For each VM deployed using this Template, a new MAC address is assigned by the clone/deploy operation.
+5. Upon boot-up, Windows recognizes the NIC as a new device and the adapter is seen as "Local Area Connection 2", "vmxnet3 Ethernet Adapter #2".
 6. The original NIC "Local Area Connection", "vmxnet3 Ethernet Adapter" remains on the machine as a Hidden / Ghost Network Adapter.
 
 > [!NOTE]

@@ -110,12 +110,3 @@
       - name: Virtual Machines
         tocHref: /troubleshoot/azure/virtual-machines/
         topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
-
-
-    - name: Previous versions
-      tocHref: /troubleshoot/previous-versions/
-      topicHref: /troubleshoot/previous-versions/
-      items:
-      - name: Configuration Manager
-        tocHref: /troubleshoot/previous-versions/configmgr
-        topicHref: /troubleshoot/previous-versions/configmgr/backups-fail-with-vss-provider-issue

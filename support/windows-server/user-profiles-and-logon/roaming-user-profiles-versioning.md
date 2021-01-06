@@ -29,7 +29,7 @@ For example, when you try to deploy Windows 10 in an environment that uses roami
 - After you use a user account that has an existing Windows 7 or Windows 8.1 profile to logs on to a Windows 10-based computer for the first time, the components from Windows 10 read and change the profile state.
 
 - Certain Windows 7, Windows 8.1, or Windows 10 features may not work as expected because the expected profile state isn't present.
-For example, Start menu does not start. Cortana, Taskbar is unresponsive. And taskbar icons are missing.
+For example, Start menu does not start. Cortana, Taskbar is unresponsive, and taskbar icons are missing.
 
 - When you try to use the same user account to log on to a Windows 7-based computer, the user profile modification that was performed in Windows 10 may not work as expected in Windows 7 or Windows 8.1.
 

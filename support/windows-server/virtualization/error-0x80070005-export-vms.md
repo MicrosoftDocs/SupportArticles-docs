@@ -51,9 +51,9 @@ Ensure the permissions allow the Computer account of the Hyper-V host performing
 1. On the destination server, right-click on the shared folder and select **Properties**.
 2. Select the **Security** tab.
 3. Click **Edit** button and click the **Add** button in the permissions dialog box.
-4. Click **Oject Types** and select **Computers** if not already done and click **OK**  
-5. In the dialog **Enter the object names to select** provide the name of Hyper-V host machine and click **Check Names**  
-6. With the Hyper-V host machine name select, click **Allow** by Full control and click **OK**  
+4. Click **Oject Types** and select **Computers** if not already done and click **OK**.  
+5. In the dialog **Enter the object names to select** provide the name of Hyper-V host machine and click **Check Names**.  
+6. With the Hyper-V host machine name select, click **Allow** by Full control and click **OK**.  
 
 ### Update the share level permissions
 
@@ -62,5 +62,5 @@ Ensure the permissions allow the Computer account of the Hyper-V host performing
 3. Click **Advanced Sharing...**.
 4. On the **Advanced Sharing** dialog, click **Permissions** and then **Add**.
 5. Click **Oject Types** and select **Computers** if not already done and click **OK**.
-6. In the dialog **Enter the object names to select** provide the name of Hyper-V host machine and click **Check Names**  
-7. With the Hyper-V host machine name select, click **Allow** by Full control and click **OK**
+6. In the dialog **Enter the object names to select** provide the name of Hyper-V host machine and click **Check Names**.  
+7. With the Hyper-V host machine name select, click **Allow** by Full control and click **OK**.
