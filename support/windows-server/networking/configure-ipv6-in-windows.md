@@ -49,7 +49,7 @@ The IPv6 functionality can be configured by modifying the following registry key
 |IPv6 Functionality|Registry value and comments|
 |---|---|
 |Prefer IPv4 over IPv6|Dec 32<br/>Hex 0x20<br/>Bin xx1x xxxx<br/><br/>Recommended instead of disabling IPv6.|
-|Disable IPv6|Dec 255<br/>Hex 0xFF<br/>Bin 1111 1111<br/><br/>See [startup delay occurs after you disable IPv6 in Windows](https://support.microsoft.com/help/3014406) if you encounter startup delay after disabling IPv6 in Windows 7 SP1 or Windows Server 2008 R2 SP1. <br/><br/> Additionally, system startup will be delayed for five seconds if IPv6 is disabled by incorrectly, setting the **DisabledComponents** registry setting to a value of 0xffffffff. The correct value should be 0xff. For more information, see [Internet Protocol Version 6 (IPv6) Overview](/previous-versions/windows/it-pro/windows-8.1-and-8/hh831730(v=ws.11)). <br/><br/>  The **DisabledComponents** registry value doesn't affect the state of the check box. Even if the **DisabledComponents** registry key is set to disable IPv6, the check box in the Networking tab for each interface can be checked. This is an expected behavior.<br/><br/> You cannot completely disable IPv6 as IPv6 is used internally on the system for many TCPIP tasks. For example, you will still be able to run ping ::1 after configuring this setting.|
+|Disable IPv6|Dec 255<br/>Hex 0xFF<br/>Bin 1111 1111<br/><br/>See [startup delay occurs after you disable IPv6 in Windows](https://support.microsoft.com/help/3014406) if you encounter startup delay after disabling IPv6 in Windows 7 SP1 or Windows Server 2008 R2 SP1. <br/><br/> Additionally, system startup will be delayed for five seconds if IPv6 is disabled by incorrectly, setting the **DisabledComponents** registry setting to a value of 0xffffffff. The correct value should be 0xff. For more information, see [Internet Protocol Version 6 (IPv6) Overview](/previous-versions/windows/it-pro/windows-8.1-and-8/hh831730(v=ws.11)). <br/><br/>  The **DisabledComponents** registry value doesn't affect the state of the check box. Even if the **DisabledComponents** registry key is set to disable IPv6, the check box in the Networking tab for each interface can be checked. This is an expected behavior.<br/><br/> You cannot completely disable IPv6 as IPv6 is used internally on the system for many TCPIP tasks. For example, you will still be able to run ping `::1` after configuring this setting.|
 |Disable IPv6 on all nontunnel interfaces|Dec 16<br/> Hex 0x10<br/>Bin xxx1 xxxx|
 |Disable IPv6 on all tunnel interfaces|Dec 1<br/> Hex 0x01<br/>Bin xxxx xxx1|
 |Disable IPv6 on all nontunnel interfaces (except the loopback) and on IPv6 tunnel interface|Dec 17<br/> Hex 0x11<br/>Bin xxx1 xxx1|
@@ -85,7 +85,7 @@ Windows use bitmasks to check the **DisabledComponents** values and determine wh
 
 To learn which component each bit (from low to high) controls, refer to the following table.
 
-|||
+|Name|Setting|
 |---|---|
 |Tunnel|Disable tunnel interfaces|
 |Tunnel6to4|Disable 6to4 interfaces|
@@ -99,7 +99,7 @@ To learn which component each bit (from low to high) controls, refer to the foll
 
 For each bit, **0** means false and **1** means true. Refer to the following table for an example.
 
-||Prefer IPv4 over IPv6 in prefix policies|Disable IPv6 on all nontunnel interfaces|Disable IPv6 on all tunnel interfaces|Disable IPv6 on nontunnel interfaces (except the loopback) and on IPv6 tunnel interface|
+|Setting|Prefer IPv4 over IPv6 in prefix policies|Disable IPv6 on all nontunnel interfaces|Disable IPv6 on all tunnel interfaces|Disable IPv6 on nontunnel interfaces (except the loopback) and on IPv6 tunnel interface|
 |---|---|---|---|---|
 |Disable tunnel interfaces|0|0|1|1|
 |Disable 6to4 interfaces|0|0|0|0|
