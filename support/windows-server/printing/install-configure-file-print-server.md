@@ -48,14 +48,14 @@ You can create a Windows Server 2003 file server and print server manually, or y
 
 ### How to manually install a file server on Windows Server 2003
 
-1. Click **Start**, and then click **Windows Explorer**.
+1. Click **Start**, and then click Windows Explorer.
 2. Locate the folder that you want to share.
 3. Right-click the folder, and then click **Sharing and Security**.
 4. Click **Share this folder**, and then accept the default name or type a different name for the share.
 5. Optionally, configure the number of users who can connect, configure permissions for this folder, and then configure the caching options.
 6. Click **OK**.
-7. A little hand is displayed in the **Windows Explorer** window to indicate that the folder is being shared.
-8. Quit **Windows Explorer**.
+7. A little hand is displayed in the Windows Explorer window to indicate that the folder is being shared.
+8. Quit Windows Explorer.
 
 ## Install a Windows Server 2003 Print Server
 
