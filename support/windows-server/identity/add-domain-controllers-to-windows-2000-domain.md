@@ -293,9 +293,7 @@ If you run the Windows Server 2003 `adprep /forestprep` command in a Windows 200
 
             - DC=X is a case-sensitive constant.
             - The domain name path for the forest root domain must be enclosed in quotation marks.
-8. Verify that the houseIdentifier, secretary, and labeledURI attributes in the schema naming context are not "mangled" before you install Exchange 2000. For more information about a related schema conflict with Services for UNIX version 2.0, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[293783](https://support.microsoft.com/help/293783) Cannot upgrade Windows 2000 server to Windows Server 2003 with Windows Services for UNIX 2.0 installed  
+8. Verify that the houseIdentifier, secretary, and labeledURI attributes in the schema naming context are not "mangled" before you install Exchange 2000.
 
 ## Overview: Upgrading Windows 2000 domain controllers to Windows Server 2003
 
@@ -439,11 +437,9 @@ Resolve any issues that the compatibility check identifies.
 
     [232122](https://support.microsoft.com/help/232122) Performing offline defragmentation of the Active Directory database  
 
-10. Investigate the DLT Server Service. Windows Server 2003 domain controllers disable the DLT Server service on fresh and upgrade installs. If Windows 2000 or Windows XP clients in your organization use the DLT Server service, use Group Policy to enable the DLT Server service on new or upgraded Windows Server 2003 domain controllers. Otherwise, incrementally delete distributed link tracking objects from Active Directory. For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:
+10. Investigate the DLT Server Service. Windows Server 2003 domain controllers disable the DLT Server service on fresh and upgrade installs. If Windows 2000 or Windows XP clients in your organization use the DLT Server service, use Group Policy to enable the DLT Server service on new or upgraded Windows Server 2003 domain controllers. Otherwise, incrementally delete distributed link tracking objects from Active Directory. For more information, click the following article number to view the article in the Microsoft Knowledge Base:
 
     [312403](https://support.microsoft.com/help/312403) Distributed Link Tracking on Windows-based domain controllers  
-
-    [315229](https://support.microsoft.com/help/315229) Text version of Dltpurge.vbs for Microsoft Knowledge Base article Q312403  
 
     If you bulk delete thousands of DLT objects or other objects, you may block replication because of a lack of version store. Wait **tombstonelifetime** number of days (by default, 60 days) after you delete the last DLT object and for garbage collection to complete, then use NTDSUTIL.EXE to perform an offline defragmentation of the Ntds.dit file.
 

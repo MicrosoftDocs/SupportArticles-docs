@@ -61,8 +61,8 @@ A list of possible owners of the resource is displayed. This list indicates that
 
 4. In Cluster Administrator, bring the group that was previously in the offline state online again.  
 
->[!NOTE]
- After the group comes online, if you have problems reviewing the resources in Cluster Administrator, quit Cluster Administrator, and then reconnect to the cluster.
+> [!NOTE]
+> After the group comes online, if you have problems reviewing the resources in Cluster Administrator, quit Cluster Administrator, and then reconnect to the cluster.
 
 ## Status
 

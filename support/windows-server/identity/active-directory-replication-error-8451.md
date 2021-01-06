@@ -218,8 +218,8 @@ The status 8451: "The replication operation encountered a database error" has mu
 
 ## Resolution
 
->[!Important]
-Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+> [!Important]
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 ### How to resolve a single occurrence of the problem
 
@@ -240,8 +240,8 @@ If the problem recurs, collect some diagnostic data.
    - Replication Events
    - Internal Processing  
 
-    >[!Note]
-    Level-5 logging is extremely verbose. The values of both keys should be restored to the default of **0** after the problem is resolved. Filtering the Directory Services event log should be done to isolate and identify these events.  
+    > [!Note]
+    > Level-5 logging is extremely verbose. The values of both keys should be restored to the default of **0** after the problem is resolved. Filtering the Directory Services event log should be done to isolate and identify these events.  
 
     For more information about the standard terminology that is used to describe Microsoft software updates, see the following Knowledge Base article:
 

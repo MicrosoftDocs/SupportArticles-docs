@@ -1,20 +1,20 @@
 ---
 title: HTTP 400 error responses to HTTP requests
-description: This article provides workarounds for the problem where you can't receive expected webpage when you send an HTTP request that needs Kerberos authentication. 
+description: Works around a problem where you can't receive expected webpage when you send an HTTP request that needs Kerberos authentication. 
 ms.date: 03/23/2020
 ms.prod-support-area-path: WWW administration and management
 ms.reviewer: ivanpash
 ---
 # HTTP 400 Bad Request (Request Header too long) responses to HTTP requests
 
-This article helps you resolve the HTTP 400 error that occurs when an Hypertext Transfer Protocol (HTTP) request that needs Kerberos authentication is sent from a browser to a website that's hosted on Microsoft Internet Information Services (IIS) and is configured to use Kerberos authentication.
+This article helps you resolve the HTTP 400 error that occurs when a Hypertext Transfer Protocol (HTTP) request that needs Kerberos authentication is sent from a browser to a website that's hosted on Microsoft Internet Information Services (IIS) and is configured to use Kerberos authentication.
 
 _Original product version:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 2020943
 
 ## Symptoms
 
-An HTTP request that needs Kerberos authentication is sent from a browser to a website that's hosted on IIS. The website is configured to use Kerberos authentication. However, instead of receiving the expected webpage, you receive an error message that resembles the following:
+An HTTP request that needs Kerberos authentication is sent from a browser to a website that's hosted on IIS. The website is configured to use Kerberos authentication. However, instead of receiving the expected webpage, you receive an error message that resembles the following one:
 
 > HTTP 400 - Bad Request (Request header too long)
 
@@ -34,18 +34,19 @@ Decrease the number of Active Directory groups that the user is a member of.
 
 Increase the settings for the `MaxFieldLength` and the `MaxRequestBytes` registry entries on the server so that the user's request headers don't exceed these values. To determine the appropriate settings, use the following calculations:
 
-1. Calculate the size of the user's Kerberos token by using the formula that's described in [Problems with Kerberos authentication when a user belongs to many groups](https://support.microsoft.com/kb/327825).
+1. Calculate the size of the user's Kerberos token by using the formula described in the following article:  
+[Problems with Kerberos authentication when a user belongs to many groups](https://support.microsoft.com/kb/327825).
 
 2. Set the value of `MaxFieldLength` and `MaxRequestBytes` on the server to 4/3 * T bytes, where T is the user's token size in bytes. HTTP encodes the Kerberos token by using base64 encoding.
 
    > [!NOTE]
    > This replaces every three bytes in the token with four base64-encoded bytes. Changes that are made to the registry do not take effect until you restart the HTTP service. Additionally, you may have to restart any related services, such as IIS services.
 
-Depending on your application environment, you might also be able to work around this problem by configuring the website to use Windows NT LAN Manager (NTLM) instead of Kerberos. However, some application environments require Kerberos authentication to be used for delegation. We consider Kerberos authentication to be more secure than NTLM. Therefore, we recommend that you do not disable Kerberos authentication before you consider the security and delegation ramifications of doing this.
+Depending on your application environment, you might also work around this problem by configuring the website to use Windows NT LAN Manager (NTLM) instead of Kerberos. Some application environments require Kerberos authentication to be used for delegation. We consider Kerberos authentication to be more secure than NTLM. And we recommend that you don't disable Kerberos authentication before you consider the security and delegation ramifications.
 
 ## More information
 
-By default, there is no `MaxFieldLength` registry entry. This entry specifies the maximum size limit of each HTTP request header. The `MaxRequestBytes` registry entry specifies the upper limit for the total size of the Request line and the headers. Typically, this registry entry is configured together with the `MaxRequestBytes` registry entry. If the `MaxRequestBytes` value is lower than the `MaxFieldLength` value, the `MaxFieldLength` value is adjusted. In large Active Directory environments, users may experience logon failures if the values for both these entries are not set to a sufficiently high value.
+By default, there is no `MaxFieldLength` registry entry. This entry specifies the maximum size limit of each HTTP request header. The `MaxRequestBytes` registry entry specifies the upper limit for the total size of the Request line and the headers. Typically, this registry entry is configured together with the `MaxRequestBytes` registry entry. If the `MaxRequestBytes` value is lower than the `MaxFieldLength` value, the `MaxFieldLength` value is adjusted. In large Active Directory environments, users may experience logon failures if the values for both these entries aren't set to a sufficiently high value.
 
 For IIS 6.0 and later, the `MaxFieldLength` and `MaxRequestBytes` registry keys are located at the following sub key:  
 `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\HTTP\Parameters`
@@ -58,7 +59,7 @@ Set the key values as shown in the following table:
 | MaxRequestBytes| DWORD| (4/3 * T bytes) + 200|
 ||||
 
-You can also set the registry keys to their maximum values, as shown in the next table. You should consider all potential security ramifications if he makes any changes to the registry settings.
+You can also set the registry keys to their maximum values, as shown in the next table. Consider all potential security ramifications before you make any changes to the registry settings.
 
 |Name|Value Type|Value Data|
 |---|---|---|

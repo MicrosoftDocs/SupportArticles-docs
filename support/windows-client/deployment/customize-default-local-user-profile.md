@@ -74,7 +74,7 @@ For more information about Windows AIK, see [Windows Automated Installation Kit 
 
     If you are prompted for an administrator password or for confirmation, type the password or provide confirmation.
 
-1. At the command prompt, type the following command, and then press ENTER:
+2. At the command prompt, type the following command, and then press ENTER:
 
     ```console
     %systemroot%\system32\sysprep\sysprep.exe /oobe /shutdown /generalize /unattend:c:\answerfile\unattend.xml
@@ -83,17 +83,17 @@ For more information about Windows AIK, see [Windows Automated Installation Kit 
     > [!NOTE]
     > Sysprep.exe is located in the `%systemdrive%\Windows\System32\sysprep` directory.
 
-1. To confirm that the CopyProfile command successfully completed, open the `%systemroot%\panther\unattendgc\setupact.log` file.
-1. Search for lines that resemble the following (in the specialize pass):
+3. To confirm that the CopyProfile command successfully completed, open the `%systemroot%\panther\unattendgc\setupact.log` file.
+4. Search for lines that resemble the following (in the specialize pass):
 
     > [shell unattend] CopyProfileDirectory from c:\Users\Administrator succeeded.  
     > [shell unattend] CopyProfile succeeded.
 
     This line confirms whether the CopyProfile command succeeded and which user profile was copied to the default user profile.
 
-1. Capture the image.
+5. Capture the image.
 
-1. Deploy the image. For more information about how to use Sysprep to capture and deploy an image, see [Sysprep Technical Reference.](/previous-versions/windows/it-pro/windows-vista/cc766049(v=ws.10)).
+6. Deploy the image. For more information about how to use Sysprep to capture and deploy an image, see [Sysprep Technical Reference](/previous-versions/windows/it-pro/windows-vista/cc766049(v=ws.10)).
 
 > [!NOTE]
 >

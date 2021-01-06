@@ -180,5 +180,3 @@ For more information, visit the following Web sites:
 The [Windows Server Catalog](https://www.windowsservercatalog.com/results.aspx?text=backup&bCatID=1282&OR=5&chtext=&cstext=&csttext=&chbtext=) of Tested Products is a reference for products that have been tested for Windows Server compatibility.
 
 Data Protection Manager (DPM) is a key member of the Microsoft System Center family of management products and is designed to help IT professionals manage their Windows environment. DPM is the new standard for Windows backup and recovery and delivers continuous data protection for Microsoft application and file servers that use seamlessly integrated disk and tape media. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows XP and Windows Vista](https://support.microsoft.com/help/322756).
-
-For more information about the differences between Regedit.exe and Regedt32.exe, see [Differences between Regedit.exe and Regedt32.exe](https://support.microsoft.com/help/141377).

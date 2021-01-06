@@ -167,10 +167,6 @@ To collect a network trace, follow these steps:
     netsh trace stop
     ```
 
-## SDP Report Networking
-
-For more information about how to collect SDP Report Networking, see [[SDP 3][9b9d2b88-02f1-4a27-807d-0bb44178cdab] Networking Diagnostic for Windows](https://support.microsoft.com/help/2562677).
-
 ## Collect registry settings
 
 To collect registry settings on the file server, select **Start**, select **Run**, type the command in the Open box, and then select **OK**. Repeat this step for the following commands:
