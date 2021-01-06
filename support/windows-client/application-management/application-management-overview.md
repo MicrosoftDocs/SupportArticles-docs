@@ -1,6 +1,6 @@
 ---
 title: Application Management overview
-description: Overview of Application Management troubleshooting articles.
+description: Overview of Application Management troubleshooting articles for Windows clients.
 ms.date: 11/09/2020
 author: Deland-Han
 ms.author: delhan
@@ -19,10 +19,10 @@ The topics in this section provide solutions and scenario guides to help you tro
 ## Application Management sub categories
 
 - .NET Framework installation
-- 1st Party Applications
+- First Party Applications
 - COM and COM+ performance and stability
 - DCOM service startup and permissions
-- Modern, Inbox and Microsoft Store Apps
+- Modern, Inbox, and Microsoft Store Apps
 - MSI
 - Multilingual User Interface (MUI) and Input Method Editor (IME)
-- Windows Script Host (CScript or WScript)
+- Windows Script Host (`CScript` or `WScript`)
