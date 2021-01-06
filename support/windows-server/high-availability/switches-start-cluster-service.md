@@ -100,8 +100,6 @@ When the Cluster service is running correctly, press CTRL+C to stop the service.
 > [!NOTE]
 > You can use the ClusterLogLevel environment variable to control the output level when you use the debug switch.
 
-For more information, see [How to enable cluster logging in Microsoft Cluster Server](https://support.microsoft.com/help/168801).
-
 ### FixQuorum
 
 *Function*: Lets the cluster service start up despite problems with the quorum device. The only resources that will be brought online once the service is started is the Cluster IP Address and the Cluster Name. You can open Cluster Administrator and bring other resources online manually.

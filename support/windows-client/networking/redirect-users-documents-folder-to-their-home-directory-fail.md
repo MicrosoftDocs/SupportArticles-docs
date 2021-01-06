@@ -28,7 +28,7 @@ The following error is logged in the Application Event Log:
 
 > Log Name: Application  
 Source: Microsoft-Windows-Folder Redirection  
-Date: 1/7/2011 4:52:57 PM  
+Date: \<DateTime>  
 Event ID: 502  
 Task Category: None  
 Level: Error  

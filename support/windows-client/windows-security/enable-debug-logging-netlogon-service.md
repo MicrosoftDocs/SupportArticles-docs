@@ -118,7 +118,7 @@ To disable `Netlogon` logging, follow these steps:
     net start netlogon
     ```
 
-Setting the maximum log file size for `Netlogon` logs:
+Set the maximum log file size for `Netlogon` logs:
 
 - The **MaximumLogFileSize** registry entry can be used to specify the maximum size of the Netlogon.log file. By default, this registry entry doesn't exist, and the default maximum size of the Netlogon.log file is 20 MB. When the file reaches 20 MB, it's renamed to Netlogon.bak, and a new Netlogon.log file is created. This registry entry has the following parameters:
 
@@ -127,7 +127,7 @@ Setting the maximum log file size for `Netlogon` logs:
   - Value Type: REG_DWORD
   - Value Data: \<maximum log file size in bytes>
 
-- Remember that the total disk space that's used by `Netlogon` logging is the size that's specified in the maximum log file size times two (2). It's required to accommodate space for the Netlogon.log and Netlogon.bak file. For example, a setting of 50 MB can require 100 MB of disk space. Which provides 50 MB for Netlogon.log and 50 MB for Netlogon.bak.
+- Remember that the total disk space that's used by `Netlogon` logging is the size that's specified in the maximum log file size times two (2). It's required to accommodate space for the Netlogon.log and Netlogon.bak file. For example, a setting of 50 MB can require 100 MB of disk space, which provides 50 MB for Netlogon.log and 50 MB for Netlogon.bak.
 - As mentioned earlier, on Windows Server 2012 R2 and later versions of the operating system, you can use the following policy setting to configure the log file size (value is set in bytes):  
 
    \Computer Configuration\Administrative Templates\System\Net Logon\Maximum Log File Size

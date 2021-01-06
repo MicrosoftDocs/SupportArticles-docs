@@ -39,7 +39,7 @@ To log on to Windows by using the disabled local Administrator account, start Wi
 
 If the server is a domain controller, the Local Users and Groups are not available in **Computer Management**. To enable the Administrator account, follow these steps:
 
-1. Start your computer in to Safe mode with networking support.
+1. Start your computer to Safe mode with networking support.
 2. Log on as the administrator.
 3. Click **Start**, click **Run**, type *cmd*, and then press Enter.
 4. At the command prompt, type the following command, and then press Enter:

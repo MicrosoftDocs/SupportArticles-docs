@@ -13,7 +13,7 @@ ms.reviewer: kaushika, stevemat, davidg, johnmar
 ms.prod-support-area-path: High availability virtual machines
 ms.technology: HyperV
 ---
-# MAC Address Changes for Virtual Server During a Failover with Clustering
+# MAC address changes for virtual server during a failover with clustering
 
 This article provides a solution to an issue where users in a different subnet are unable to connect to the virtual server after a failover from one cluster node to another.
 

@@ -35,11 +35,11 @@ A screenshot of this condition is shown below:
 The %windir%\debug\dcpromoui.log file on the replica domain controller being promoted shows the following:  
 
 > Enter DoesDomainHostDns SLD  
-dcpromoui A74.A78 046C 14:07:18.800                 Dns_DoesDomainHostDns testing domain name SLD  
-dcpromoui A74.A78 046D 14:07:19.113                 SOA query returned 9003 so the domain does not host DNS  
-dcpromoui A74.A78 046E 14:07:19.113                 Dns_DoesDomainHostDns returning false  
-dcpromoui A74.A78 046F 14:07:19.113                 HRESULT = 0x00000000  
-dcpromoui A74.A78 0470 14:07:19.113                 The domain does not host DNS.  
+dcpromoui A74.A78 046C *\<DateTime>*                 Dns_DoesDomainHostDns testing domain name SLD  
+dcpromoui A74.A78 046D *\<DateTime>*                 SOA query returned 9003 so the domain does not host DNS  
+dcpromoui A74.A78 046E *\<DateTime>*                 Dns_DoesDomainHostDns returning false  
+dcpromoui A74.A78 046F *\<DateTime>*                 HRESULT = 0x00000000  
+dcpromoui A74.A78 0470 *\<DateTime>*                 The domain does not host DNS.  
 
 ## Cause
 

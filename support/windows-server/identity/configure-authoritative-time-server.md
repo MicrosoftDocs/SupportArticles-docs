@@ -91,10 +91,6 @@ To configure the PDC in the root of an Active Directory forest to synchronize wi
    net stop w32time && net start w32time
    ```
 
-## Time Servers available on the internet
-
-For a list of available time servers, see [A list of the Simple Network Time Protocol (SNTP) time servers that are available on the Internet](https://support.microsoft.com/help/262680).
-
 ## Troubleshooting
 
 For the Windows Time service to function correctly, the networking infrastructure must function correctly. The most common problems that affect the Windows Time service include the following:

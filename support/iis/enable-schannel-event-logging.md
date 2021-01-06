@@ -55,7 +55,7 @@ The default value for Schannel event logging is *0x00000001* in Windows, which
 
 ## More information
 
-Schannel event logging is different from schannel logging. Use schannel logging to enable Windows products to log debug information using the checked version of Schannel.dll
+Schannel event logging is different from schannel logging. Use schannel logging to enable Windows products to log debug information using the checked version of Schannel.dll.
 
 ## Applies to
 

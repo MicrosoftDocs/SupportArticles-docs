@@ -15,7 +15,7 @@ ms.technology: SysManagementComponents
 ---
 # What is Microsoft Management Console?
 
-This article provides information about the Microsoft Management Console (MMC)
+This article provides information about the Microsoft Management Console (MMC).
 
 _Original product version:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 962457

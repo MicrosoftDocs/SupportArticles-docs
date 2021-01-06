@@ -26,9 +26,9 @@ On a cluster node that is running Windows Server 2003, Windows Server 2008 or Wi
 
 When this problem occurs, the following entries are logged in the Windows Server 2003 Cluster log for the physical disk resource that entered the **failed** state:
 
-> 000020cc.000014d0::2010/01/23-19:40:39.929 ERR Physical Disk \<Disk Q:>:  
+> 000020cc.000014d0::*\<DateTime>* ERR Physical Disk \<Disk Q:>:  
 DiskspCheckPath: GetFileAttrs(Q:) returned status of 87.  
-000020cc.000014d0::2010/01/23-19:40:39.929 WARN Physical Disk \<Disk Q:>:  
+000020cc.000014d0::*\<DateTime>* WARN Physical Disk \<Disk Q:>:  
 DiskspCheckDriveLetter: Checking drive name (Q:) returns 87
 
 Additionally, the following events are logged in the Windows Server 2003 System Event log:
@@ -55,9 +55,9 @@ Description: Cluster disk resource 'Disk Q:' could not be mounted.
 
 Similarly, on a Windows Server 2008 or Windows Server 2008 R2 cluster nodes you may see following entries are logged in the Cluster log:
 
-> 00000db0.00000868::2011/12/06-00:43:00.683 WARN [RES] Physical Disk \<Cluster Disk 1>: OnlineThread: Failed to get volume guid for device \\?\GLOBALROOT\Device\Harddisk15\Partition1\. Error 3  
-00000db0.00000868::2011/12/06-00:43:04.683 WARN [RES] Physical Disk \<Cluster Disk 1>: OnlineThread: Failed to set volguid \??\Volume{3cb36133-0d0b-11df-afcf-005056ab58b9}. Error: 183.  
-00000db0.00000868::2011/12/06-00:43:04.686 INFO [RES] Physical Disk \<Cluster Disk 1>: VolumeIsNtfs: Volume \\?\GLOBALROOT\Device\Harddisk15\Partition1\ has FS type NTFS
+> 00000db0.00000868::*\<DateTime>* WARN [RES] Physical Disk \<Cluster Disk 1>: OnlineThread: Failed to get volume guid for device \\?\GLOBALROOT\Device\Harddisk15\Partition1\. Error 3  
+00000db0.00000868::*\<DateTime>* WARN [RES] Physical Disk \<Cluster Disk 1>: OnlineThread: Failed to set volguid \??\Volume{3cb36133-0d0b-11df-afcf-005056ab58b9}. Error: 183.  
+00000db0.00000868::*\<DateTime>* INFO [RES] Physical Disk \<Cluster Disk 1>: VolumeIsNtfs: Volume \\?\GLOBALROOT\Device\Harddisk15\Partition1\ has FS type NTFS
 
 Additionally, following event is logged in the System Event log of Windows Server 2008 or Windows Server 2008 R2:
 

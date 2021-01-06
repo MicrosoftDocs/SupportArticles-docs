@@ -68,7 +68,7 @@ DC=domainDC=com
 > "Backup latency interval" (days):  
 30  
 
-It's recommended that you take a backup as often as possible to recover from accidental loss of data. However if you haven't taken a backup since at least the "backup latency interval" number of days this message will be logged every day until a backup is taken. You can take a backup of any replica that holds this partition.
+It's recommended that you take a backup as often as possible to recover from accidental loss of data. However, if you haven't taken a backup since at least the "backup latency interval" number of days, this message will be logged every day until a backup is taken. You can take a backup of any replica that holds this partition.
 
 By default the "Backup latency interval" is set to half the "Tombstone Lifetime Interval". If you want to change the default "Backup latency interval", you could do so by adding the following registry key.
 

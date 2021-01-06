@@ -46,4 +46,4 @@ SLMGR /ILC \<token-based-license-filename>
 
 ## More information
 
-Token-Based activation functionality was enabled in Service Pack 2 for Windows Vista and Windows Server 2008
+Token-Based activation functionality was enabled in Service Pack 2 for Windows Vista and Windows Server 2008.
