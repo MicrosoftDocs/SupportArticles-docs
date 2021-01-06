@@ -152,39 +152,19 @@ Here are some examples:
 |Disable IPv6 on nontunnel interfaces (except the loopback) and on IPv6 tunnel interface|0|0|0|1|0|0|0|1|===|00010001|0x11|
 ||||||||||||
 
-To turn off a switch of the current value, you need to set the related bit to 0. You can use PowerShell to do the calculation. Here are some common operations.
+Here are some common settings which require to set the related bits to 0:
 
-- Prefer IPv6 over IPv4
+- Prefer IPv6 over IPv4  
+  From the current value, set the sixth bit (Prefer IPv4 in default prefix policy) to 0. (xx0x xxxx)
 
-  ```powershell
-  <value> -band 0xDF
-  ```
+- Re-enable IPv6 on all nontunnel interfaces  
+  From the current value, set the fifth bit (Disable native interfaces (also PPP)) to 0. (xxx0 xxxx)
 
-- Re-enable IPv6 on all nontunnel interfaces
-
-  ```powershell
-  <value> -band 0xEF
-  ```
-
-- Re-enable IPv6 on all tunnel interfaces
-
-  ```powershell
-  <value> -band 0xFE
-  ```
+- Re-enable IPv6 on all tunnel interfaces  
+  From the current value, set the first bit (Disable tunnel interfaces) to 0. (xxxx xxx0)
 
 - Re-enable IPv6 on nontunnel interfaces and on IPv6 tunnel interfaces
-
-  ```powershell
-  <value> -band 0xEE
-  ```
-
-For example, if the current value is 255, to configure "Prefer IPv6 over IPv4", run the following command:
-
-```powershell
-255 -band 0xDF
-```
-
-The result is 223, which means you should change the value to 223.
+  From the current value, set the first and the fifth bits to 0. (xxx0 xxx0)
 
 ## Reference
 
