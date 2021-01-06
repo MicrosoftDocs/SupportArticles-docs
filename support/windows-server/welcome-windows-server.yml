@@ -16,12 +16,20 @@ metadata:
 landingContent:
 
  # Card
-  - title: First
-    linkLists:
+  - title: Identity
+    linkListType:
       - linkListType: how-to-guide
         links:
           - text: Active Directory 
             url: ./identity/active-directory-overview.md
+          - text: Group Policy 
+            url: ./group-policy/group-policy-overview.md
+          - text: UserProfiles and Logon 
+            url: ./user-profiles-and-logon/userprofiles-and-logon-overview.md
+  - title: First
+    linkLists:
+      - linkListType: how-to-guide
+        links:
           - text: Admin Development 
             url: ./admin-development/admin-development-overview.md
           - text: Application Management 
@@ -30,8 +38,6 @@ landingContent:
             url: ./backup-and-storage/backup-and-storage-overview.md
           - text: Deployment 
             url: ./deployment/deployment-overview.md
-          - text: Group Policy 
-            url: ./group-policy/group-policy-overview.md
           - text: High Availability 
             url: ./high-availability/high-availability-overview.md
           - text: Networking 
@@ -54,8 +60,6 @@ landingContent:
             url: ./software-defined-networking/software-defined-networking-overview.md
           - text: System Management Components 
             url: ./system-management-components/system-management-components-overview.md
-          - text: UserProfiles and Logon 
-            url: ./user-profiles-and-logon/userprofiles-and-logon-overview.md
           - text: Virtualization 
             url: ./virtualization/virtualization-overview.md
           - text: Windows Security 
