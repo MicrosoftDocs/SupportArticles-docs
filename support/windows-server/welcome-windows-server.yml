@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
-title: Windows Server troubleshooting documentation # < 60 chars
+title: Windows Server troubleshooting # < 60 chars
 summary: This library provides solutions enabling IT Pros to troubleshoot and support Windows Server operating systems. To bring you the most accurate content, this library is managed by a team that works directly with the Windows product group and support professionals.
 metadata:
-  title: Troubleshoot Azure Active Directory issues
+  title: Windows Server troubleshooting document
   description: Documentation for troubleshooting common issues with Windows Server. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: active-directory  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.prod: windows-server
   ms.topic: landing-page # Required
   author: Deland-Han  #Required; your GitHub user alias, with correct capitalization.
   ms.author: delhan #Required; microsoft alias of author; optional team alias.
@@ -20,9 +20,12 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Active Directory             
-          - text: Admin Development             
-          - text: Application Management             
+          - text: Active Directory 
+            url: ./identity/active-directory-overview.md
+          - text: Admin Development 
+            url: ./admin-development/admin-development-overview.md
+          - text: Application Management 
+            url: ./application-management/application-management-overview.md
           - text: Backup and Storage 
             url: ./backup-and-storage/backup-and-storage-overview.md
           - text: Deployment 
