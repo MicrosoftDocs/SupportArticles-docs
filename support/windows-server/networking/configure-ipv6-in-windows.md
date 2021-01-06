@@ -119,27 +119,22 @@ This registry value doesn't affect the state of the following check box. Even if
 
 ## Reference
 
-For more information about IPv6, see [Internet Protocol Version 6 (IPv6) Overview
-](/previous-versions/windows/it-pro/windows-8.1-and-8/hh831730(v=ws.11)).
-
-For more information about how to manage Group Policy settings by using ADMX files, see [Managing Group Policy ADMX Files Step-by-Step Guide](/previous-versions/windows/it-pro/windows-vista/cc709647(v=ws.10)).
-
 For more information about RFC 3484, see [Default Address Selection for Internet Protocol version 6 (IPv6)](https://tools.ietf.org/html/rfc3484).
 
 For more information about how to set IPv4 precedence over IPv6, see [Using SIO_ADDRESS_LIST_SORT](/windows/win32/winsock/using-sio-address-list-sort).
 
 For information about RFC 4291, see [IP Version 6 Addressing Architecture](https://tools.ietf.org/html/rfc4291).
 
-For more information about related issues, see:
+For more information about the related issues, see the articles below:
 
-- On Domain Controllers, LDAP over UDP 389 stops working. See [How to use Portqry to troubleshoot Active Directory connectivity issues](https://support.microsoft.com/help/816103).
-- Exchange Server 2010 stops working. See [Arguments against disabling IPv6](/archive/blogs/netro/arguments-against-disabling-ipv6) and [Disabling IPv6 And Exchange - Going All The Way](https://blog.rmilne.ca/2014/10/29/disabling-ipv6-and-exchange-going-all-the-way/).
-- Failover Clusters. See [What is a Microsoft Failover Cluster Virtual Adapter anyway?](/archive/blogs/askcore/what-is-a-microsoft-failover-cluster-virtual-adapter-anyway) and [Failover Clustering and IPv6 in Windows Server 2012 R2](https://techcommunity.microsoft.com/t5/failover-clustering/failover-clustering-and-ipv6-in-windows-server-2012-r2/ba-p/371912).
+- Example 1: On Domain Controllers, you might run into where LDAP over UDP 389 will stop working.
+  See [How to use Portqry to troubleshoot Active Directory connectivity issues](use-portqry-verify-active-directory-tcp-ip-connectivity.md)
+- Example 2: Exchange Server 2010, you might run into problems where Exchange will stop working.
+  See [Arguments against disabling IPv6](/archive/blogs/netro/arguments-against-disabling-ipv6) and [Disabling IPv6 And Exchange – Going All The Way](https://blog.rmilne.ca/2014/10/29/disabling-ipv6-and-exchange-going-all-the-way/).
+- Example 3: Failover Clusters
+  See [What is a Microsoft Failover Cluster Virtual Adapter anyway?](/archive/blogs/askcore/what-is-a-microsoft-failover-cluster-virtual-adapter-anyway) and [Failover Clustering and IPv6 in Windows Server 2012 R2](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering).
 
-For more information about network trace tools, see:
+Tools to help with network trace: [Microsoft Network Monitor 3.4 (archive)](https://www.microsoft.com/download/details.aspx?id=4865)
 
-- [Microsoft Message Analyzer Operating Guide](/message-analyzer/microsoft-message-analyzer-operating-guide)
-- [Microsoft Network Monitor 3.4 (archive)](/windows/client-management/troubleshoot-tcpip-netmon)
-
-    > [!WARNING]
-    > Netmon 3.4 isn't compatible with Windows Server 2012 or newer OS when LBFO NIC teaming is enabled. Use **Message Analyzer** instead.
+> [!WARNING]
+> Netmon 3.4 isn't compatible with Windows Server 2012 or newer OS when LBFO NIC teaming is enabled. Use **Message Analyzer** instead.
