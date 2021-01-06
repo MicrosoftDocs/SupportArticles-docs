@@ -203,7 +203,8 @@ Active Directory events that commonly indicate the 8453 status include but aren'
 
 Error 8453 (Replication Access was denied) has multiple root causes, including:
 
-- The **UserAccountControl** attribute on the destination domain controller computer account is missing either the **SERVER_TRUST_ACCOUNT** or **TRUSTED_FOR_DELEGATION** flag.
+- The **UserAccountControl** attribute on the destination domain controller computer account is missing either of the following flags:  
+  **SERVER_TRUST_ACCOUNT** or **TRUSTED_FOR_DELEGATION**
 
 - The default permissions don't exist on one or more directory partitions to allow scheduled replication to occur in the operating system's security context.
 
@@ -220,7 +221,7 @@ Error 8453 (Replication Access was denied) has multiple root causes, including:
 
 - DCs that are running new operating system versions were added to an existing forest where Office Communication Server has been installed.
 
-- You have Lightweight Directory Services (LDS) instances. And the **NTDS Settings** object for the affected instances are missing from the LDS configuration container. For example, you see the following entry:
+- You have Lightweight Directory Services (LDS) instances. And the **NTDS Settings** object for the affected instances is missing from the LDS configuration container. For example, you see the following entry:
 
     > CN=NtDs Settings,CN=Server1$ADAMINST1,CN=Server,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,CN={A560B9B8-6B05-4000-9A1F-9A853DB6615A}
 
@@ -277,9 +278,9 @@ The typical **UserAccountControl** attribute value for a read-only domain contro
     1. Start ADSIEDIT.MSC on the console of the domain controller that's missing the **SERVER_TRUST_ACCOUNT** as reported by DCDIAG.
     2. Right-click ADSIEDIT in the top-left pane of ADSIEDIT.MSC, and then select **connect to**.
     3. In the **Connection Settings** dialog box, click **Select a well known naming context**, and then select **Default naming context** (the computer account domain partition).
-    4. Click **Select or type a domain or server**, and select the name of the domain controller that's failing in DCDIAG.
+    4. Click **Select or type a domain or server**. And select the name of the domain controller that's failing in DCDIAG.
     5. Select **OK**.
-    6. In the domain naming context, locate and right-click on the domain controller computer account, and select **Properties**.
+    6. In the domain naming context, locate and right-click the domain controller computer account, and select **Properties**.
     7. Double-click the **UserAccountControl** attribute, and then record its decimal value.
     8. Start Windows Calculator in programmer mode (Windows Server 2008 and later versions).
     9. Enter the decimal value for **UserAccountControl**. Convert the decimal value to its hexadecimal equivalent, add **0x80000** to the existing value, and then press the equals sign (=).
@@ -296,7 +297,7 @@ The typical **UserAccountControl** attribute value for a read-only domain contro
     3. Select the **Delegation** tab.
     4. On the domain controller machine account, select the **Trusted this computer for delegation to any service (Kerberos only)** option.
 
-        :::image type="content" source="./media/replication-error-8453/trusted-computer-for-delegation-to-service.png" alt-text="Screenshot of the Trusted this computer for delegation to any service option.":::
+        :::image type="content" source="./media/replication-error-8453/trusted-computer-for-delegation-to-service.png" alt-text="The Trusted this computer for delegation to any service option.":::
 
 ### Fix invalid default security descriptors
 
@@ -313,7 +314,7 @@ Default permissions on Active Directory partitions don't allow the following ope
 
 By design, these operations fail until default permissions or group memberships are modified.
 
-Permissions are defined at the top of each directory partition (*NC head*), and are inherited throughout the partition tree. Verify that explicit groups (groups that the user is directly a member of) and implicit groups (groups that explicit groups have nested membership of) have the required permissions. Also verify that Deny permissions that are assigned to implicit or explicit groups don't take precedence over the required permissions. For more information about default directory partitions, see [Default Security of the Configuration Directory Partition](/previous-versions/windows/it-pro/windows-2000-server/cc961739(v=technet.10)).
+Permissions are defined at the top of each directory partition (*NC head*), and are inherited throughout the partition tree. Verify that explicit groups (groups that the user is directly a member of) and implicit groups (groups that explicit groups have nested membership of) have the required permissions. Also verify that Deny permissions assigned to implicit or explicit groups don't take precedence over the required permissions. For more information about default directory partitions, see [Default Security of the Configuration Directory Partition](/previous-versions/windows/it-pro/windows-2000-server/cc961739(v=technet.10)).
 
 - **Verify that default permissions exist in the top of each directory partition that is failing and returning replication access was denied**  
 
@@ -323,11 +324,14 @@ Permissions are defined at the top of each directory partition (*NC head*), and 
 
     If ad-hoc replication is failing for members of a Domain Administrators group, focus on the permissions that are granted to the built-in Administrators Security group.
 
-    If a scheduled replication that is initiated by domain controllers in a forest is failing and returning error 8453, focus on permissions for the Enterprise Domain Controllers and Enterprise Read-Only Domain Controllers security groups.
+    If a scheduled replication that's started by domain controllers in a forest is failing and returning error 8453, focus on permissions for the following security groups:
 
-    If a scheduled replication is initiated by domain controllers on a read-only domain controller (RODC) is failing and returning error 8453, verify that the Enterprise Read-Only Domain Controllers security group is granted the required access on the NC head of each directory partition.
+    - Enterprise Domain Controllers
+    - Enterprise Read-Only Domain Controllers
 
-    The following table shows the default permission that is defined on the schema, configuration, domain, and DNS applications by various Windows versions.
+    If a scheduled replication is started by domain controllers on a read-only domain controller (RODC) is failing and returning error 8453, verify that the Enterprise Read-Only Domain Controllers security group is granted the required access on the NC head of each directory partition.
+
+    The following table shows the default permission that's defined on the schema, configuration, domain, and DNS applications by various Windows versions.
 
     |DACL required on each directory partition|Windows Server 2008 and later|
     |---|---|---|---|
@@ -362,14 +366,17 @@ Permissions are defined at the top of each directory partition (*NC head*), and 
 
 Use the Active Directory ACL editor in ADSIEDIT.MSC to add the missing DACLS.
 
-### <a id="grant"></a>Grant non-domain admins permissions 
+### <a id="grant"></a>Grant non-domain admins permissions
 
-Grant non-domain admins permissions to replicate between domain controllers in the same domain for non-enterprise administrators and to replicate between domain controllers in different domains
+Grant non-domain admins the following permissions:
 
-Default permissions on Active Directory partitions do not allow the following operations:
+- To replicate between domain controllers in the same domain for non-enterprise administrators
+- To replicate between domain controllers in different domains
 
-- Members of the Built-in Administrators group in one domain cannot initiate ad-hoc replication from domain controllers in different domains.
-- Users that are NOT members of the built-in domain admins group to initiate ad-hoc replication between domain controllers in the same domain or different domain.
+Default permissions on Active Directory partitions don't allow the following operations:
+
+- Members of the Built-in Administrators group in one domain can't initiate ad-hoc replication from domain controllers in different domains.
+- Users that aren't members of the built-in domain admins group to initiate ad-hoc replication between domain controllers in the same domain or different domain.
 
 These operations fail until permissions on directory partitions are modified.
 
@@ -379,11 +386,11 @@ To resolve this problem, use either of the following methods:
 
 - Create your own group, grant that group the required permissions on directory partitions throughout the forest, and then add users to those groups.
 
-[KB303972](https://support.microsoft.com/help/303972) describes how to create a security group, add the required members to those groups, and grant the group the required DACLS on Active Directory partitions. Grant the security group in question the same permissions that are listed in the table in the [Fix invalid default security descriptors](#fix-invalid-default-security-descriptors) section in this article.
+For more information, see [KB303972](https://support.microsoft.com/help/303972). Grant the security group in question the same permissions listed in the table in the [Fix invalid default security descriptors](#fix-invalid-default-security-descriptors) section.
 
 ### Verify group membership in the required security groups
 
-After the correct security groups have been granted the required permissions on directory partitions, the last remaining task is to verify that users who initiate replication have effective membership in direct or nested security groups that are granted replication permissions. To do it, follow these steps:
+After the correct security groups have been granted the required permissions on directory partitions, verify that users who start replication have effective membership in direct or nested security groups that are granted replication permissions. To do it, follow these steps:
 
 1. Log on by using the user account in which ad-hoc replication is failing and returning **replication access was denied**.
 2. At a command prompt, run the following command:
@@ -402,7 +409,7 @@ After the correct security groups have been granted the required permissions on 
 
 4. Verify that the expected nested group memberships exist.
 
-    If a user is getting permissions to run ad-hoc replication as a member of nested group which is a member of group that has been directly granted replication permissions, verify the nested group membership chain. We've seen ad-hoc Active Directory replication failures because the Domain Administrators and Enterprise Administrators groups were removed from the built-in Administrators groups.
+    If a user is getting permissions to run ad-hoc replication as a member of nested group, which is a member of group that has been directly granted replication permissions, verify the nested group membership chain. We've seen ad-hoc Active Directory replication failures because the Domain Administrators and Enterprise Administrators groups were removed from the built-in Administrators groups.
 
 ### RODC replication
 
