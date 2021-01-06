@@ -1,6 +1,6 @@
 ---
 title: Application Management overview
-description: Overview of Application Management troubleshooting articles.
+description: Overview of Application Management troubleshooting articles for Windows Server.
 ms.date: 11/09/2020
 author: Deland-Han
 ms.author: delhan
