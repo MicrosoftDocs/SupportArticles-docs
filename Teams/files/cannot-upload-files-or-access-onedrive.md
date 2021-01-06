@@ -1,5 +1,5 @@
 ---
-title: "File is locked" or "item might not exist" error
+title: (File is locked) or (item might not exist) error
 description: Fixes an issue in which you get the "file is locked" error when uploading a file or get the "item might not exist or is no longer available" error when accessing OneDrive in Teams.
 author: MaryQiu1987
 ms.author: v-maqiu
@@ -17,7 +17,7 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-# Error when uploading a file or accessing the OneDrive storage in Teams
+# Error when uploading a file or accessing OneDrive cloud storage in Teams
 
 ## Symptoms
 
