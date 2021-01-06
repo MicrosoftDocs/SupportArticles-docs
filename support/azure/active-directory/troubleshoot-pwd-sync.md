@@ -1,6 +1,6 @@
 ---
 title: How to troubleshoot password synchronization when using an Azure AD sync appliance
-description: Troubleshoots common issues that you may encounter when you're using an Azure Active Directory (Azure AD) sync appliance together with password synchronization.
+description: Troubleshoots common issues when you're using an Azure Active Directory (Azure AD) sync appliance together with password synchronization.
 ms.date: 06/22/2020
 ms.prod-support-area-path: 
 ms.reviewer: willfid
@@ -51,7 +51,7 @@ For more info about how to troubleshoot this issue, see [One or more objects don
 
 ### Scenario 4: Users are moved between filtered and unfiltered scopes
 
-In this scenario, the user is moved to a scope that now allows the user to be synced. This could be when filtering is set up for domains, organizational units, or attributes.
+In this scenario, the user is moved to a scope that now allows the user to be synced. It could be when filtering is set up for domains, organizational units, or attributes.
 
 To resolve this issue, see the **How to perform a full password sync** section.
 
@@ -102,9 +102,9 @@ The following tables list event ID messages in the Application log that are rela
 | 651|Provision credentials batch end. Count: 1|Password synchronization finishes retrieving updated passwords from the on-premises AD DS.|
 | 653|Provision credentials ping start.|Password synchronization starts informing Azure AD that there are no passwords to be synced. It occurs every 30 minutes if no passwords have been updated in the on-premises AD DS.|
 | 654|Provision credentials ping end.|Password synchronization finishes informing Azure AD that there are no passwords to be synced. It occurs every 30 minutes if no passwords were updated in the on-premises AD DS.|
-| 656|Password Change Request - Anchor : H552hI9GwEykZwosf74JeOQ==, Dn : CN=Viola Hanson,OU=Cloud Objects,DC=contoso,DC=local, Change Date : 05/01/2013 16:34:08|Password synchronization indicates that a password change was detected and tries to sync it to Azure AD. This identifies the user or users whose password changed and will be synced. Each batch contains at least one user and at most 50 users.|
-| 657|Password Change Result - Anchor: eX5b50Rf+UizRIMe2CA/tg==, Dn : CN=Viola Hanson,OU=Cloud Objects,DC=contoso,DC=local, Result : Success .|Users whose password successfully synced.|
-| 657|Password Change Result - Anchor: eX5b50Rf+UizRIMe2CA/tg==, Dn : CN=Viola Hanson,OU=Cloud Objects,DC=contoso,DC=local, Result : Failed.|Users whose password didn't sync.|
+| 656|Password Change Request - Anchor : H552hI9GwEykZwosf74JeOQ==, Dn : CN=Viola Hanson,OU=Cloud Objects,DC=contoso,DC=local, Change Date : 05/01/2013 16:34:08|Password synchronization indicates that a password change was detected and tries to sync it to Azure AD. It identifies the user or users whose password changed and will be synced. Each batch contains at least one user and at most 50 users.|
+| 657|Password Change Result - Anchor : eX5b50Rf+UizRIMe2CA/tg==, Dn : CN=Viola Hanson,OU=Cloud Objects,DC=contoso,DC=local, Result : Success.|Users whose password successfully synced.|
+| 657|Password Change Result - Anchor : eX5b50Rf+UizRIMe2CA/tg==, Dn : CN=Viola Hanson,OU=Cloud Objects,DC=contoso,DC=local, Result : Failed.|Users whose password didn't sync.|
 ||||
 
 ### Informational (may require action)
