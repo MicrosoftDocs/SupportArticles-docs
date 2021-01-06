@@ -55,7 +55,7 @@ Scenario 2: The Terminal Server License Servers group is present but does not ha
 The Windows Server 2003 License server will only update the teminalServer attribute. Newer Terminal Server License Servers will try to update additional attributes when available. To accommodate that, the Windows Server 2008 schema update defines a property set used to grant permissions to all attributes required.
 
 > [!IMPORTANT]
-> Based on the User Interface language the account names and Property Set names might differ.
+> Based on the User Interface language, the account names and Property Set names might differ.
 
 ### Method 1: Use dsacls.exe
 

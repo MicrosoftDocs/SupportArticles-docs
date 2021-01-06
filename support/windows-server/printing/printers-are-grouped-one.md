@@ -24,9 +24,9 @@ _Original KB number:_ &nbsp; 2015694
 
 Consider this scenario:
 
-- A computer running a version of Windows listed in the Applies To section
-- Install two or more printers using the same printer driver and installed with the same printer port (that is, LPT1)
-- View the installed printers within **Devices and Printers**
+- A computer running a version of Windows listed in the Applies To section.
+- Install two or more printers using the same printer driver and installed with the same printer port (that is, LPT1).
+- View the installed printers within **Devices and Printers**.
 
 In this scenario, when viewing the installed printers within **Devices and Printers**, you may notice that some of the printers are grouped together and are associated with the same printer icon.
 
