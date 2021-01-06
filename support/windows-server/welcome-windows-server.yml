@@ -20,12 +20,9 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Active Directory 
-            url: ./identity/active-directory-overview.md
-          - text: Admin Development 
-            url: ./admin-development/admin-development-overview.md
-          - text: Application Management 
-            url: ./application-management/application-management-overview.md
+          - text: Active Directory             
+          - text: Admin Development             
+          - text: Application Management             
           - text: Backup and Storage 
             url: ./backup-and-storage/backup-and-storage-overview.md
           - text: Deployment 
