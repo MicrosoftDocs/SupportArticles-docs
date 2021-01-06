@@ -197,8 +197,6 @@ Basically, the cause and resolution steps for replication error status 8614 appl
 
     - [Event ID 1388 or 1988: A lingering object is detected](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10))
 
-    - [Outdated Active Directory objects generate event ID 1988 in Windows Server 2003](https://support.microsoft.com/help/870695)
-
     Repadmin syntax is shown here:
 
     |Syntax|Online help (Windows Server 2008 and later)|

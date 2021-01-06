@@ -531,9 +531,3 @@ You must not use this entry when you install a new domain controller in an exist
 The Active Directory Domain Services Installation Wizard returns a success code or a failure code after you complete the unattended installation of a Windows Server 2008-based domain controller. For more information about the unattended installation return codes, visit the following Microsoft Web site:
 
 [Unattended Installation Return Codes](https://technet.microsoft.com/library/cc754937%28ws.10%29.aspx)
-
-## References
-
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[223757](https://support.microsoft.com/help/223757) Unattended promotion and demotion of Windows 2000 and Windows Server 2003 domain controllers

@@ -58,13 +58,13 @@ To resolve this issue, configure the Application Pool hosting the application to
 
 ## More information
 
-The information in this section is meant to help identify which handlers are configured for the web site and application mentioned in the error, as well as help identify the pre-conditions that are configured for that handler.
+The information in this section is meant to help identifying which handlers are configured for the web site and application mentioned in the error, as well as help identify the pre-conditions that are configured for that handler.
 
-### Appcmd.exe Commands
+### Appcmd.exe commands
 
 The following commands can be used to identify the handlers configured for the Web Site listed in the output of the error.
 
-### List Application Pool
+### List application pool
 
 The following commands show how to determine what application pool the application is running in, and then list the preconditions configured for that application pool.
 
@@ -76,7 +76,7 @@ C:\Windows\System32\inetsrv>appcmd.exe list apppools
 APPPOOL "DefaultAppPool" (MgdVersion:v2.0,MgdMode:Integrated,state:Started)
 ```
 
-### List Handlers
+### List handlers
 
 This command will output the handlers configured for the specific application in the default web site.
 

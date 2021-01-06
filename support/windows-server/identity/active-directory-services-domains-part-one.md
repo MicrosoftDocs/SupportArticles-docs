@@ -26,7 +26,7 @@ The information covered in this article is provided in part by: [Microsoft Press
 
 This article is part 1 of a series of two articles that explain Active Directory Services and Windows 2000 or Windows Server 2003 domains. To view part 2, click the following link:
 
-[310997](https://support.microsoft.com/help/310997) Active Directory Services and Windows 2000 or Windows Server 2003 Domains (Part 2)  
+[310997](https://support.microsoft.com/topic/active-directory-services-and-windows-2000-or-windows-server-2003-domains-part-2-50f2edb5-75db-3ce8-8a71-20b7b4278d3a) Active Directory Services and Windows 2000 or Windows Server 2003 Domains (Part 2).  
 
 The following topics are covered in part 1:
 

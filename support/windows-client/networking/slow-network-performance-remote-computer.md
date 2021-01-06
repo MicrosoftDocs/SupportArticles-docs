@@ -78,9 +78,3 @@ To do this, follow these steps:
 1. Click **Start**, click **Run**, type Gpedit.msc, and then click **OK**.
 2. Under **User Configuration** in the left pane, expand **Administrative Templates**, expand **Windows Components**, and then click **Windows Explorer**.
 3. In the right pane, double-click **Allow only per user or approved shell extensions**, click **Enabled**, and then click **OK**.
-
-## References
-
-For more information about how to troubleshoot similar network performance issues, click the following article numbers to view the articles in the Microsoft Knowledge Base:
-
-[265396](https://support.microsoft.com/help/265396) Slow network performance occurs when you select a file on a share that uses NTFS

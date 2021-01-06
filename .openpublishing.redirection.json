@@ -751,6 +751,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/windows-server/high-availability/smb-3- file-server-features.md",
+      "redirect_url": "/troubleshoot/windows-server/high-availability/smb-3-file-server-features",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/cpp/expand-pointer- debugger-watch-window.md",
       "redirect_url": "/troubleshoot/cpp/expand-pointer-debugger-watch-window",
       "redirect_document_id": false
