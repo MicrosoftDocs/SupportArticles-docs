@@ -39,7 +39,7 @@ The destination domain controller receives a service ticket from a Kerberos Key 
     net stop KDC
     ```  
 
-2. Start replication on the destination domain controller from the source domain controller. Use AD Sites and Services or Rep admin.
+2. Start replication on the destination domain controller from the source domain controller. Use AD Sites and Services or `Repadmin`.
 
     Using `repadmin`:
 
