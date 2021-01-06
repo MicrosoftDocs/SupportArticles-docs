@@ -1,102 +1,65 @@
-### YamlMime:Hub
-title: Microsoft troubleshooting documentation
+### YamlMime:Landing
 
-summary: Find the documentation you need to troubleshoot issues and apply workarounds for the following commercial products from Microsoft.
-
-# TODO - Identify a generic Microsoft brand code, from Kurtis. (Gene)
-brand: sql-server
-
-
+title: Windows Server troubleshooting # < 60 chars
+summary: This library provides solutions enabling IT Pros to troubleshoot and support Windows Server operating systems. To bring you the most accurate content, this library is managed by a team that works directly with the Windows product group and support professionals.
 metadata:
-   title: Microsoft troubleshooting documentation | Microsoft Docs
-   description: Find the documentation you need to troubleshoot issues and apply workarounds for the following commercial products from Microsoft.
-   ms.topic: hub-page
+  title: Windows Server troubleshooting document
+  description: Documentation for troubleshooting common issues with Windows Server. # Required; article description that is displayed in search results. < 160 chars.
+  ms.prod: windows-server
+  ms.topic: landing-page # Required
+  author: Deland-Han  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: delhan #Required; microsoft alias of author; optional team alias.
+  ms.date: 01/06/2021
 
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
-# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+landingContent:
 
-# highlightedContent:
+ # Card
+  - title: First
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Active Directory 
+            url: ./identity/active-directory-overview.md
+          - text: Admin Development 
+            url: ./admin-development/admin-development-overview.md
+          - text: Application Management 
+            url: ./application-management/application-management-overview.md
+          - text: Backup and Storage 
+            url: ./backup-and-storage/backup-and-storage-overview.md
+          - text: Deployment 
+            url: ./deployment/deployment-overview.md
+          - text: Group Policy 
+            url: ./group-policy/group-policy-overview.md
+          - text: High Availability 
+            url: ./high-availability/high-availability-overview.md
+          - text: Networking 
+            url: ./networking/networking-overview.md
+          - text: Performance 
+            url: ./performance/performance-overview.md
+          - text: Printing 
+            url: ./printing/printing-overview.md
+  - title: Second
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Remote Desktop Services 
+            url: ./remote/remote-desktop-services-overview.md
+          - text: Security and Malware 
+            url: ./security-and-malware/security-and-malware-overview.md
+          - text: Shell Experience 
+            url: ./shell-experience/shell-experience-overview.md
+          - text: Software Defined Networking 
+            url: ./software-defined-networking/software-defined-networking-overview.md
+          - text: System Management Components 
+            url: ./system-management-components/system-management-components-overview.md
+          - text: UserProfiles and Logon 
+            url: ./user-profiles-and-logon/userprofiles-and-logon-overview.md
+          - text: Virtualization 
+            url: ./virtualization/virtualization-overview.md
+          - text: Windows Security 
+            url: ./windows-security/windows-security-overview.md
+          - text: Windows Server End of Support (EoS FAQ 
+            url: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.md
 
-
-productDirectory:
-  items:
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
-  - title: Active Directory
-    imageSrc: "../media/hub-landing/windows.svg"
-    summary: Troubleshooting articles for Windows
-    url: ./identity/active-directory-overview.md
