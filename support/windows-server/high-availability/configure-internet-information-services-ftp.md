@@ -18,7 +18,7 @@ ms.technology: HighAvailability
 This article describes how to configure FTP for Internet Information Services (IIS) 8.0 or a later version in a Windows Server failover cluster. The procedures in this article apply only to the FTP service.  
 
 > [!NOTE]
-For more information about how to configure Web services in a failover cluster, click the following article number to view the article in the Microsoft Knowledge Base:
+> For more information about how to configure Web services in a failover cluster, click the following article number to view the article in the Microsoft Knowledge Base:
 >
 > [970759](https://support.microsoft.com/help/970759) Configuring IIS World Wide Web Publishing Service in a Windows Server failover cluster
 
