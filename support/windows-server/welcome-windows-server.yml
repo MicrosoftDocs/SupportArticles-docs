@@ -16,7 +16,7 @@ metadata:
 landingContent:
 
  # Card
-  - title: 
+  - title: First
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -40,7 +40,7 @@ landingContent:
             url: ./performance/performance-overview.md
           - text: Printing 
             url: ./printing/printing-overview.md
-  - title:   
+  - title: Second
     linkLists:
       - linkListType: how-to-guide
         links:
