@@ -40,13 +40,13 @@ It is common for IT administrators to disable IPv6 to troubleshoot networking-re
 
 The IPv6 functionality can be configured by modifying the following registry key:
 
-**Location**: `HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip6\\Parameters\\`  
+**Location**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\`  
 **Name**: DisabledComponents  
 **Type**: REG_DWORD  
-**Min Value**: 0x00  
+**Min Value**: 0x00 (default value)  
 **Max Value**: 0xFF (IPv6 disabled)
 
-Windows uses bitmasks to check the **Disabled Components** values and determine whether a component should be disabled. For more information on how to calculate the registry value, see [How to calculate the registry value](#how-to-calculate-the-registry-value).
+Windows uses bitmasks to check the **DisabledComponents** values and determine whether a component should be disabled. For more information on how to calculate the registry value, see [How to calculate the registry value](#how-to-calculate-the-registry-value).
 
 The following lists the values for some common settings:
 
@@ -70,7 +70,7 @@ The following lists the values for some common settings:
 
   See [startup delay occurs after you disable IPv6 in Windows](https://support.microsoft.com/help/3014406) if you encounter startup delay after disabling IPv6 in Windows 7 SP1 or Windows Server 2008 R2 SP1.
 
-  Additionally, system startup will be delayed for five seconds if IPv6 is disabled incorrectly by setting the DisabledComponents registry setting to a value of 0xfffffff. The correct value should be 0xff. For more information, see [Internet Protocol Version 6 (IPv6) Overview](/previous-versions/windows/it-pro/windows-8.1-and-8/hh831730(v=ws.11)).
+  Additionally, system startup will be delayed for five seconds if IPv6 is disabled incorrectly by setting the DisabledComponents registry setting to a value of 0xffffffff. The correct value should be 0xff. For more information, see [Internet Protocol Version 6 (IPv6) Overview](/previous-versions/windows/it-pro/windows-8.1-and-8/hh831730(v=ws.11)).
 
   The DisabledComponents registry value doesn't affect the state of the check box. Even if the DisabledComponents registry key is set to disable IPv6, the check box in the Networking tab for each interface can be checked. This is an expected behavior.
 
@@ -102,6 +102,26 @@ By default, the 6to4 tunneling protocol is enabled in Windows when an interface 
 
 6to4 automatically assigns an IPv6 address to the 6to4 tunneling interface for each address, and 6to4 dynamically registers these IPv6 addresses on the assigned DNS server. If this behavior isn’t desired, we recommend disabling the IPv6 tunnel interfaces on the affected hosts.
 
+### Use Command Prompt to configure IPv6
+
+You can also follow these steps to modify the registry key:
+
+1. Open an administrative **Command Prompt** window.
+2. Run the following command:
+
+    ```console
+    reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters" /v DisabledComponents /t REG_DWORD /d <value> /f
+    ```
+
+    > [!NOTE]
+    > Replace the \<value> with the corresponding value.
+
+### Using the network properties GUI to disable IPv6 is not supported
+
+This registry value doesn't affect the state of the following check box. Even if the registry key is set to disable IPv6, the check box in the **Networking** tab for each interface can be selected. This is an expected behavior.
+
+:::image type="content" source="./media/configure-ipv6-in-windows/network-properties.png" alt-text="Network properties":::
+
 ## How to calculate the registry value
 
 The registry value is a 32-bit (REG_DWORD type) value. Each bit of the lowest eight bits of the value is a switch of a functionality.
@@ -124,12 +144,12 @@ For each bit, set it to 0 to turn off the switch, or set it to 1 to turn the swi
 
 Here are some examples:
 
-|Setting\\Index|7|6|5|4|3|2|1|0|Bin|Value|
-|---|---|---|---|---|---|---|---|---|---|---|
-|Prefer IPv4 over IPv6 in prefix policies|0|0|1|0|0|0|0|0|00100000|0x20|
-|Disable IPv6 on all nontunnel interfaces|0|0|0|1|0|0|0|0|00010000|0x10|
-|Disable IPv6 on all tunnel interfaces|0|0|0|0|0|0|0|1|00000001|0x01|
-|Disable IPv6 on nontunnel interfaces (except the loopback) and on IPv6 tunnel interface|0|0|0|1|0|0|0|1|00010001|0x11|
+|Setting\\Index|7|6|5|4|3|2|1|0|===|Bin|Value|
+|---|---|---|---|---|---|---|---|---|---|---|---|
+|Prefer IPv4 over IPv6 in prefix policies|0|0|1|0|0|0|0|0|===|00100000|0x20|
+|Disable IPv6 on all nontunnel interfaces|0|0|0|1|0|0|0|0|===|00010000|0x10|
+|Disable IPv6 on all tunnel interfaces|0|0|0|0|0|0|0|1|===|00000001|0x01|
+|Disable IPv6 on nontunnel interfaces (except the loopback) and on IPv6 tunnel interface|0|0|0|1|0|0|0|1|===|00010001|0x11|
 ||||||||||||
 
 To turn off a switch of the current value, you need to set the related bit to 0. You can use PowerShell to do the calculation. Here are some common operations.
@@ -168,7 +188,12 @@ The result is 223, which means you should change the value to 223.
 
 ## Reference
 
-For information about RFC 3484, see [Default Address Selection for Internet Protocol version 6 (IPv6)](https://tools.ietf.org/html/rfc3484).
+For more information about IPv6, see [Internet Protocol Version 6 (IPv6) Overview
+](/previous-versions/windows/it-pro/windows-8.1-and-8/hh831730(v=ws.11)).
+
+For more information about how to manage Group Policy settings by using ADMX files, see [Managing Group Policy ADMX Files Step-by-Step Guide](/previous-versions/windows/it-pro/windows-vista/cc709647(v=ws.10)).
+
+For more information about RFC 3484, see [Default Address Selection for Internet Protocol version 6 (IPv6)](https://tools.ietf.org/html/rfc3484).
 
 For more information about how to set IPv4 precedence over IPv6, see [Using SIO_ADDRESS_LIST_SORT](/windows/win32/winsock/using-sio-address-list-sort).
 
