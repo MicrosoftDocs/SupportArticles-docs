@@ -28,6 +28,27 @@ When you try to validate an OEM version of Windows 8 or Windows Server 2012, you
 
 Additionally, you may also notice the following events getting logged in the Application event log:
 
+> Log Name: Application  
+Source: Microsoft-Windows-Security-SPP  
+Event ID: 1015  
+Level: Warning  
+Keywords: Classic  
+User: N/A  
+Computer: xxxxxxxx  
+Description:  
+Detailed HRESULT. Returned hr=0xC004F022, Original hr=0x80049E00  
+Current activation Status : 0xC004F022  The Software Licensing Service reported that the license authorization failed.  
+Earlier Activation Status : 0x80049E00  
+
+> Log Name: Application  
+Source: Microsoft-Windows-Security-SPP  
+Event ID: 8198  
+Level: Error  
+User:  N/A  
+Computer: xxxxxxxx  
+Description:  
+License Activation (slui.exe) failed with the following error code: hr=0xC004F063  
+
 ## Cause
 
 This error usually occurs if a hardware is changed or any hardware device malfunctions and Windows is unable to verify the license again. Windows is unable to read the SLIC table in the BIOS that is required to be able to self-activate the OEM_SLP Key that is currently in use. This happens due to one of the following reasons:

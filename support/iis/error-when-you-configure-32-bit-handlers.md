@@ -33,7 +33,7 @@ Normally, a .NET assembly is compiled down to Microsoft Intermediary Language (M
 
 Because the IIS Manager console runs inside a 64-bit process on a version of Windows that's 64-bit (by default), the child .NET application domain will be created inside a 64-bit process. There is no way for the IIS Manager console to know that some of the .NET assemblies that are inside the /bin folder of your application are compiled to target only 32-bit platforms when it tries to load them to perform the configuration changes. If an assembly targeting a 32-bit platform is encountered, the loading of assemblies in the child .NET application domain inside the inetmgr.exe process stops, and the error that's described in the [Symptoms](#symptoms) section is displayed in the IIS console.
 
-This behavior is by design, because the IIS Manager console cannot determine the target bitness for .NET assemblies for your application. Therefore, it assumes that all assemblies are compiled down to MSIL and are platform-independent-that they can run on both 32-bit and 64-bit versions of Windows.
+This behavior is by design, because the IIS Manager console cannot determine the target bitness for .NET assemblies for your application. Therefore, it assumes that all assemblies are compiled down to MSIL and are platform-independent that they can run on both 32-bit and 64-bit versions of Windows.
 
 ## Workaround
 

@@ -315,6 +315,4 @@ To resolve this issue, back up and then remove the X509 Certificate registry key
 
 - [Because of a security error, the client could not connect to the Terminal Server](https://support.microsoft.com/help/329896)
 
-- [Update to turn off SNP features for Windows Server 2003 and Windows SBS 2003](https://support.microsoft.com/help/948496)
-
 If this article does not help you resolve the problem or if you experience symptoms that differ from those that are described in this article, search the [Microsoft Support](https://support.microsoft.com/). Then, type the text of the error message that you receive, or type a description of the problem in the Search Support (KB) box.

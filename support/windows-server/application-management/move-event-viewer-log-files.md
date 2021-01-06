@@ -87,9 +87,7 @@ To view the name and the location of Event Viewer log files, follow these steps:
 
 ## References
 
-For more information about how to view and manage logs in Event Viewer, see the following articles:
-
-- [How To Diagnose System Problems with Event Viewer in Microsoft Windows 2000](https://support.microsoft.com/help/302542)
+For more information about how to view and manage logs in Event Viewer, see the following article:
 
 - [How to Delete Corrupt Event Viewer Log Files](https://support.microsoft.com/help/172156)
 

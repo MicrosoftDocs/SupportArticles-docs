@@ -24,11 +24,11 @@ _Original KB number:_ &nbsp; 2009272
 
 When you perform a system state backup using Windows Server Backup on Windows Server 2008, the backup fails with the following error:  
 
-> Backup of system state failed [01/12/2009 16:21]  
+> Backup of system state failed [*\<DateTime>*]  
 Log of files successfully backed up  
-'C:\Windows\Logs\WindowsServerBackup\SystemStateBackup 01-12-2009 16-21-37.log'  
+'C:\Windows\Logs\WindowsServerBackup\SystemStateBackup *\<DateTime>*.log'  
 Log of files for which backup failed  
-'C:\Windows\Logs\WindowsServerBackup\SystemStateBackup_Error 01-12-2009 16-21-37.log'  
+'C:\Windows\Logs\WindowsServerBackup\SystemStateBackup_Error *\<DateTime>*.log'  
 System writer is not found in the backup.
 
 In the Application event log, the following events are logged:  
@@ -38,7 +38,7 @@ Source: Microsoft-Windows-Backup
 Event ID: 517  
 Level: Error  
 Description:  
-Backup started at '01/12/2009 16:21:03' failed with following error code '2155348226' (System writer is not found in the backup.). Please rerun backup once issue is resolved.
+Backup started at '*\<DateTime>*' failed with following error code '2155348226' (System writer is not found in the backup.). Please rerun backup once issue is resolved.
 >
 > Log Name: Application  
 Source: Microsoft-Windows-CAPI2  

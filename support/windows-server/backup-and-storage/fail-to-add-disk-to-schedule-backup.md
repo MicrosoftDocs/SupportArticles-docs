@@ -33,7 +33,7 @@ This problem may occur if a previously added destination disk is not currently a
 
 To resolve this issue, use one of the following options.
  > [!NOTE]
- To configure or modify a daily backup schedule, you must be a member of the Administrators group. In addition, you must run the **wbadmin** command from an elevated command prompt. To open an elevated command prompt, click **Start**, right-click **Command Prompt**, and then click **Run as administrator**.  
+ > To configure or modify a daily backup schedule, you must be a member of the Administrators group. In addition, you must run the **wbadmin** command from an elevated command prompt. To open an elevated command prompt, click **Start**, right-click **Command Prompt**, and then click **Run as administrator**.  
 
 ### Option 1
 

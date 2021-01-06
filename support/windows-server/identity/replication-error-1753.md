@@ -321,8 +321,6 @@ Summary: Example 1 failed because an invalid host to IP mapping (in the HOST fil
 
 ### Related Content
 
-MSKB [839880](https://support.microsoft.com/kb/839880): Troubleshooting RPC Endpoint Mapper errors using the Windows Server 2003 Support Tools from the product CD
-
 MSKB [832017](https://support.microsoft.com/kb/832017/): Service overview and network port requirements for the Windows Server system
 
 MSKB [224196](https://support.microsoft.com/kb/224196/): Restricting Active Directory replication traffic and client RPC traffic to a specific port

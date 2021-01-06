@@ -42,13 +42,13 @@ This behavior is by design. In Windows Server 2003, this setting is checked no m
 
 ## Resolution
 
-To deny a user or a group logon via RDP, explicitly set the "Deny logon through Remote Desktop Services" privilege. To do this access a group policy editor (either local to the server or from a OU) and set this privilege:
+To deny a user or a group logon via RDP, explicitly set the "Deny logon through Remote Desktop Services" privilege. To do this, access a group policy editor (either local to the server or from a OU) and set this privilege:
 
 1. Start | Run | Gpedit.msc if editing the local policy or chose the appropriate policy and edit it.
 
 2. Computer Configuration | Windows Settings | Security Settings | Local Policies | User Rights Assignment.
 
-3. Find and double-click "Deny logon through Remote Desktop Services"
+3. Find and double-click "Deny logon through Remote Desktop Services".
 
 4. Add the user and / or the group that you would like to deny access.
 

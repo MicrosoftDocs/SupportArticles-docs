@@ -52,7 +52,7 @@ You cannot use Add or Removed Programs in Control Panel to remove only WSUS 3.0 
   - An update is approved for optional approval to one of the target groups.
   - The same update is approved for required approval to at least one of the other target groups that is at the same or greater depth in the target group tree.  
   > [!NOTE]
-   We recommend that you use the WSUS APIs to "optionally" approve updates for WSUS 3.0 SP1 and to approve updates that are not critical updates or security updates.
+  > We recommend that you use the WSUS APIs to "optionally" approve updates for WSUS 3.0 SP1 and to approve updates that are not critical updates or security updates.
 
   For example, assume that you have a required approval on Update X for Group A and an optional approval for Group B. If a computer belongs to both Group A and Group B, the update would be listed as optional on the client computer. Because the target groups are at the same level, required approval should always "win."
 - The Computer Detailed Status report to Excel works.

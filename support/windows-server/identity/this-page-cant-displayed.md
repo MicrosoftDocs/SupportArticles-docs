@@ -62,7 +62,7 @@ To resolve this problem, follow these steps in the order. These steps will help 
 
     In the following screenshot, the first URL is for the web application, and the second URL is for the AD FS service.
 
-    :::image type="content" source="./media/this-page-cant-displayed/error-displays-ie- developer tool.png" alt-text="The screenshot for IE Developer tool.":::
+    :::image type="content" source="./media/this-page-cant-displayed/error-displays-ie-developer-tool.png" alt-text="The screenshot for IE Developer tool.":::
 
 - How to fix
 

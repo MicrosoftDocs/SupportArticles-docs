@@ -219,8 +219,6 @@ Root servers may be created by the DCpromo Wizard. If the "." zone exists, a roo
 
 - [Unable to select DNS Server role when adding a domain controller into an existing Active Directory domain](/troubleshoot/windows-server/identity/auto-install-dns-server-role-disabled-promte-domain-controller)
 
-- [Warnings installing Active Directory Domain Services on Windows Server 2008 and Windows Server 2008 R2 in domains with single-label DNS names](https://support.microsoft.com/help/2002634)
-
 - [ADMT Guide: Migrating and Restructuring Active Directory Domains](https://www.microsoft.com/download/details.aspx?id=19188)
 
 - [Active Directory Migration Tool (ADMT) Guide: Migrating and Restructuring Active Directory Domains](https://www.microsoft.com/download/details.aspx?id=19188)

@@ -15,7 +15,7 @@ ms.technology: WindowsSecurity
 ---
 # Error with a one-way trust in Windows Server 2012 R2: Security identifier could not be resolved
 
-This article provides help to fix an error (Security identifier could not be resolved) that occurs with a one-way trust.
+This article provides help to fix an error "Security identifier could not be resolved" that occurs with a one-way trust.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3212982

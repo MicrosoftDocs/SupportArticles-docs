@@ -76,9 +76,9 @@ By running the above command, you retain the old ACLs and also add the missing A
 
 Following is a list of some more things that can be looked into in a "Printer Redirection not working" issue:
 
-1) If the client machines are running Windows XP, ensure that .NET Framework 3.5 SP1 is installed and at least RDC 6.1 is being used.
-2) Even if RDC 6.1 or above is used, the user must install a supported version of .NET Framework separately. Microsoft .NET Framework 3.5 (which includes .NET Framework 3.0 SP1) can be downloaded from the Microsoft Download Center ([https://go.microsoft.com/fwlink/?LinkId=109422](https://go.microsoft.com/fwlink/?LinkId=109422)).
-3) If you connect over RD Gateway, ensure that the policy that disables printer redirection is turned off.
-4) If your server is also a domain controller refer: [https://support.microsoft.com/kb/968605](https://support.microsoft.com/kb/968605) 
-5) Group Policy must be correctly set to enable Easy Print on the Server. The policy location is "Computer Configuration -> Administrative templates - Windows Components -> Remote Desktop Services > Remote Desktop Session Host -> Printer Redirection". The setting "Use Remote Desktop Easy Print printer driver first" must be set to "Enabled" for Easy Print redirection, and it has to be "Disabled" for Legacy Print. For "Not configured", Easy Print is chosen by default.
-6) Make sure that the "Printers" check box in the client (mstsc.exe) window on the "Local Resources" tab is checked. The corresponding setting in the associated RDP file is "redirectprinters:i:1".
+1. If the client machines are running Windows XP, ensure that .NET Framework 3.5 SP1 is installed and at least RDC 6.1 is being used.
+2. Even if RDC 6.1 or above is used, the user must install a supported version of .NET Framework separately. Microsoft .NET Framework 3.5 (which includes .NET Framework 3.0 SP1) can be downloaded from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=109422).
+3. If you connect over RD Gateway, ensure that the policy that disables printer redirection is turned off.
+4. If your server is also a domain controller, refer to [Install Remote Desktop Session Host role service in Windows Server without Connection Broker role service](https://support.microsoft.com/kb/968605).
+5. Group Policy must be correctly set to enable Easy Print on the Server. The policy location is "Computer Configuration -> Administrative templates - Windows Components -> Remote Desktop Services > Remote Desktop Session Host -> Printer Redirection". The setting "Use Remote Desktop Easy Print printer driver first" must be set to "Enabled" for Easy Print redirection, and it has to be "Disabled" for Legacy Print. For "Not configured", Easy Print is chosen by default.
+6. Make sure that the "Printers" check box in the client (mstsc.exe) window on the "Local Resources" tab is checked. The corresponding setting in the associated RDP file is "redirectprinters:i:1".
