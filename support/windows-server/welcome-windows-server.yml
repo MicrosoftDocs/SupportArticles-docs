@@ -16,7 +16,7 @@ metadata:
 landingContent:
 
  # Card
-  - title: Windows Server troubleshooting
+  - title: 
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -40,3 +40,26 @@ landingContent:
             url: ./performance/performance-overview.md
           - text: Printing 
             url: ./printing/printing-overview.md
+  - title:   
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Remote Desktop Services 
+            url: ./remote/remote-desktop-services-overview.md
+          - text: Security and Malware 
+            url: ./security-and-malware/security-and-malware-overview.md
+          - text: Shell Experience 
+            url: ./shell-experience/shell-experience-overview.md
+          - text: Software Defined Networking 
+            url: ./software-defined-networking/software-defined-networking-overview.md
+          - text: System Management Components 
+            url: ./system-management-components/system-management-components-overview.md
+          - text: UserProfiles and Logon 
+            url: ./user-profiles-and-logon/userprofiles-and-logon-overview.md
+          - text: Virtualization 
+            url: ./virtualization/virtualization-overview.md
+          - text: Windows Security 
+            url: ./windows-security/windows-security-overview.md
+          - text: Windows Server End of Support (EoS FAQ 
+            url: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.md
+
