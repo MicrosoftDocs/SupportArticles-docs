@@ -173,8 +173,6 @@ Administrators can also query Active Directory information from any computer in 
 
 ## References
 
-For additional information about enabling debug logging, click the following article numbers to view the articles in the Microsoft Knowledge Base:
-
-[221833](https://support.microsoft.com/help/221833) How to enable user environment debug logging in retail builds of Windows  
+For additional information about enabling debug logging, click the following article number to view the article in the Microsoft Knowledge Base:
 
 [109626](https://support.microsoft.com/help/109626) enabling debug logging for the Net Logon service

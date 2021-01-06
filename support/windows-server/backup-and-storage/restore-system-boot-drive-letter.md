@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 223188
 ## Summary
 
 > [!WARNING]
-> Don't use the procedure that is described in this article to change a drive on a computer where the drive letter has not changed. If you do so, you may not be able to start your operating system. Follow the procedure that is described in this article only to recover from a drive letter change, not to change an existing computer drive to something else. Back up your registry keys before you make this change. For more information, see [Unable to log on if the boot partition drive letter has changed](https://support.microsoft.com/help/249321).
+> Don't use the procedure that is described in this article to change a drive on a computer where the drive letter has not changed. If you do so, you may not be able to start your operating system. Follow the procedure that is described in this article only to recover from a drive letter change, not to change an existing computer drive to something else. Back up your registry keys before you make this change.
 
 This article describes how to change the system or boot drive letter. For the most part, this is not recommended, especially if the drive letter is the same as when Windows was installed. The only time that you may want to do this is when the drive letters get changed without any user intervention. This may happen when you break a mirror volume or there is a drive configuration change. This should be a rare occurrence and you should change the drive letters back to match the initial installation.
 

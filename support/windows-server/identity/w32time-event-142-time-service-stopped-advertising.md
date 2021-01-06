@@ -140,7 +140,7 @@ Microsoft-Windows-Time-Service Event 142 was logged on `\\DC2.contoso.com`. The 
  Event Xml:  
  \<Event xmlns="`https://schemas.microsoft.com/win/2004/08/events/event`">  
    \<System>  
-     \<Provider Name="Microsoft-Windows-Time-Service" Guid="{06EDCFEB-0FD0-4E53-ACCA-A6F8BBF81BCB}" />  
+     \<Provider Name="Microsoft-Windows-Time-Service" Guid="{*\<GUID>*}" />  
      \<EventID>142\</EventID>  
      \<Version>0\</Version>  
      \<Level>3\</Level>  
@@ -175,14 +175,14 @@ Microsoft-WIndows-Time-Service event 35 logged on the console of `\\DC1.contoso.
  Event Xml:  
  \<Event xmlns="`https://schemas.microsoft.com/win/2004/08/events/event`"  
    \<System>  
-     \<Provider Name="Microsoft-Windows-Time-Service" Guid="{06EDCFEB-0FD0-4E53-ACCA-A6F8BBF81BCB}" />  
+     \<Provider Name="Microsoft-Windows-Time-Service" Guid="{*\<GUID>*}" />  
      \<EventID>35\</EventID>  
      \<Version>0\</Version>  
      \<Level>4\</Level>  
      \<Task>0\</Task>  
      \<Opcode>0\</Opcode>  
      \<Keywords>0x8000000000000000\</Keywords>  
-     \<TimeCreated SystemTime="2010-11-13T01:22:15.991036900Z" />  
+     \<TimeCreated SystemTime="*\<DateTime>*" />  
      \<EventRecordID>2614\</EventRecordID>  
      \<Correlation />  
      \<Execution ProcessID="1012" ThreadID="2508" />  
@@ -211,14 +211,14 @@ Microsoft-WIndows-Time-Service event 35 logged on the console of `\\DC1.contoso.
  Event Xml:  
  \<Event xmlns="`https://schemas.microsoft.com/win/2004/08/events/event`">  
    \<System>  
-     \<Provider Name="Microsoft-Windows-Time-Service" Guid="{06EDCFEB-0FD0-4E53-ACCA-A6F8BBF81BCB}" />  
+     \<Provider Name="Microsoft-Windows-Time-Service" Guid="{*\<GUID>*}" />  
      \<EventID>37</EventID>  
      \<Version>0</Version>  
      \<Level>4</Level>  
      \<Task>0</Task>  
      \<Opcode>0</Opcode>  
      \<Keywords>0x8000000000000000\</Keywords>  
-     \<TimeCreated SystemTime="2010-11-13T01:42:56.265259300Z" />  
+     \<TimeCreated SystemTime="*\<DateTime>*" />  
      \<EventRecordID>3972</EventRecordID>  
      \<Correlation />  
      \<Execution ProcessID="1012" ThreadID="1596" />  

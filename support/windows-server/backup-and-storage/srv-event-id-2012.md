@@ -32,7 +32,7 @@ In this scenario, you see multiple events with Source Srv ID 2012 in the system 
 
 > Log Name: System  
 Source: srv  
-Date: 07.08.2013 10:23:04  
+Date: *\<DateTime>*  
 Event ID: 2012  
 Task Category: None  
 Level: Warning  
