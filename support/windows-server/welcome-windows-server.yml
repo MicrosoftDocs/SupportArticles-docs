@@ -17,7 +17,7 @@ landingContent:
 
  # Card
   - title: Identity
-    linkListType:
+    linkLists:      
       - linkListType: how-to-guide
         links:
           - text: Active Directory 
