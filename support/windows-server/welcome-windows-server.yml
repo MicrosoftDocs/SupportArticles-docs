@@ -14,7 +14,7 @@ metadata:
   ms.author: delhan
 
 highlightedContent:
-  - items:
+    items:
     - title: Active Directory
       itemType: whats-new # controls the icon image and super-title text
       url:  ./identity/active-directory-overview.md
