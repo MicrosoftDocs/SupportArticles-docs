@@ -13,7 +13,7 @@ productDirectory:
   - title: Windows Server
     imageSrc: "../media/hub-landing/windows.svg"
     summary: Troubleshooting articles for Windows Server
-    url: ../windows-server/welcome-windows-server.md
+    url: ../windows-server/welcome-windows-server.yml
 
   - title: Windows Client
     imageSrc: "../media/hub-landing/windows.svg"
