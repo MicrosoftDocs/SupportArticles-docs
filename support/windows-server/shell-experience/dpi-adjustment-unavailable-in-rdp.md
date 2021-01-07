@@ -26,7 +26,7 @@ When regular users connect to a remote session, they are unable to change the re
 
 Regular users (and users in a remote session) can adjust many UI elements individually, however, using the "Window Color and Appearance" in the Personalization Control Panel applet.  
 
-In order to provide a solution to users, it is recommended that an Administrator create several Themes with different-sized fonts and UI elements, named in a discoverable way (for example, "120 dpi Theme", "150 dpi Theme"). This will enable remote desktop users to easily select a Theme with scaled-up user interface elements, from a familiar place in Windows (that is, Personalization applet; also accessible via a right-click on the desktop).
+In order to provide a solution to users, it is recommended that an Administrator create several Themes with different-sized fonts and UI elements, named in a discoverable way (for example, "120 dpi Theme", "150 dpi Theme"). This will enable remote desktop users to easily select a Theme with scaled-up user interface elements, from a familiar place in Windows (for example, Personalization applet; also accessible via a right-click on the desktop).
 
 ## More information
 
