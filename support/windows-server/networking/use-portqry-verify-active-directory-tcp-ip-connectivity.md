@@ -96,7 +96,7 @@ This example demonstrates how to use PortQry to determine if the LDAP service is
 
 By default, LDAP is configured to listen to port 389. The example call specifies the server to query using the UDP protocol:
 
-`PortQry -n myserver -p udp -e 389`
+`PortQry -n <fqdn> -p udp -e 389`
 
 PortQry automatically resolves UDP port 389 using the %SystemRoot%\System32\Drivers\\...\Services file included in Windows Server 2003 and later computers. In the example output below, the port resolves to an LDAP service that is active and PortQry reports that the port is LISTENING or FILTERED.
 
@@ -104,11 +104,11 @@ PortQry then sends a formatted LDAP query to which it receives a response. It re
 
 #### Sample output
 
-> C:\\>portqry -n *\<IP Address>* -e 389 -p udp
+> C:\\>portqry -n *\<fqdn>* -e 389 -p udp
 >
 > Querying target system called:
 >
-> *\<IP Address>*
+> *\<fqdn>*
 >
 > Attempting to resolve name to IP address...
 >
@@ -159,13 +159,13 @@ This example demonstrates how to use PortQry to determine which services or appl
 
 By default, the RPC end point mapper database is configured to listen to port 185. The example call specifies the server to query using the UDP protocol:
 
-`portqry -n <IP Address> -p udp -e 135`
+`portqry -n <fqdn> -p udp -e 135`
 
 #### Sample output
 
 > Querying target system called:
 >
-> *\<IP Address>*
+> *\<fqdn>*
 >
 > Attempting to resolve name to IP address...
 >
