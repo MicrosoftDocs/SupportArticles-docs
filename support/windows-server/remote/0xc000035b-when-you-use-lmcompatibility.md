@@ -30,7 +30,7 @@ Additionally, Event 4625 is logged in the Security sign in the Gateway server, a
 
 > Log Name: Security  
 Source: Microsoft-Windows-Security-Auditing  
-Date: 8/5/2013 4:20:00 PM  
+Date: *\<DateTime>*  
 Event ID: 4625  
 Task Category: Logon  
 Level: Information  

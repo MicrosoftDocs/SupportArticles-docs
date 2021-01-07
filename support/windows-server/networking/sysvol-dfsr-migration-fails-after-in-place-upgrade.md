@@ -52,7 +52,7 @@ When you try to migrate the domain to Distributed File System (DFS) Replication,
 
     > Log Name:      DFS Replication  
     Source:        DFSR  
-    Date:          3/6/2019 3:13:29 PM  
+    Date:          *\<DateTime>*  
     Event ID:      8028  
     Task Category: None  
     Level:         Error  

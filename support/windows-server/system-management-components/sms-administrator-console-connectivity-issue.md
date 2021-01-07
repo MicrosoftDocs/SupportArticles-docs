@@ -91,12 +91,12 @@ After you consider these issues, complete the troubleshooting procedures that ar
 
 Make sure that the user can connect to the SMS namespace and the SMS_'sitecode' namespaces. To do this, follow these steps:
 
-1. Click Start, click Run, and then type *wbemtest*.
-2. Click Connect, type *\\\\siteserver\\root\\sms*, and then click Login.
-3. Click Enum Classes, click Recursive, and then click OK.
-4. In the Query Result list, double-click SMS_ProviderLocation.
-5. Click Instances, and then double-click the line that contains the target site code. For example, SMS_ProviderLocation.SiteCode="**xxx**."
-6. In the Properties section, locate the NamespacePath line. You may have to double-click this line to see the whole line.
+1. Click **Start**, click **Run**, and then type *wbemtest*.
+2. Click **Connect**, type *\\\\siteserver\\root\\sms*, and then click **Login**.
+3. Click **Enum Classes**, click **Recursive**, and then click **OK**.
+4. In the **Query Result** list, double-click **SMS_ProviderLocation**.
+5. Click **Instances**, and then double-click the line that contains the target site code. For example, SMS_ProviderLocation.SiteCode="**xxx**."
+6. In the **Properties** section, locate the NamespacePath line. You may have to double-click this line to see the whole line.
 7. Copy the NamespacePath value to the clipboard. For example, copy the following value:\\\\ **server_name**\\root\\sms\\site_**xxx**.  
 
 If you successfully complete this procedure, you can connect to the site server and enumerate the SMS namespace.
@@ -106,9 +106,9 @@ If you successfully complete this procedure, you can connect to the site server 
 Determine whether you can connect to the server that the provider is located on. The server is defined in the NamespacePath value that you determined in the "How to troubleshoot SMS namespace connectivity" section. Typically, this server is the same server.
 
 1. Close all WBEMtest windows that may be open.
-2. Click Connect, paste the NamespacePath that you copied in step 7, and then click Login.
-3. Click Enum Classes, click Recursive, and then click OK
-4. In the **Query Result** list, double-click SMS_Site.
+2. Click **Connect**, paste the NamespacePath that you copied in step 7, and then click **Login**.
+3. Click **Enum Classes**, click **Recursive**, and then click **OK**.
+4. In the **Query Result** list, double-click **SMS_Site**.
 
 If you receive an "access denied" error message when you perform this procedure, this may be because of one of the following causes:
 
@@ -120,11 +120,11 @@ If you receive an "access denied" error message when you perform this procedure,
     > For more information about how to secure SMS site systems, visit the following Microsoft Web site: [https://technet.microsoft.com/library/cc179764.aspx](https://technet.microsoft.com/library/cc179764.aspx)
 
 2. The account that is used does not have the appropriate permissions to the namespace of the provider. To modify or to verify the permissions, follow these steps:
-   1. On the server on which you enumerated the SMS site, click Start, click Run, type *wmimgmt.msc*, and then click OK.
-   2. Right-click WMI Control, and then click Properties.
-   3. On the Security tab, expand Root, and then click SMS.
-   4. Click Security in the results pane to see the permissions.
-   5. Click Advanced, click SMS Admins, and then click View-edit.
+   1. On the server on which you enumerated the SMS site, click **Start**, click **Run**, type *wmimgmt.msc*, and then click **OK**.
+   2. Right-click **WMI Control**, and then click **Properties**.
+   3. On the **Security** tab, expand **Root**, and then click **SMS**.
+   4. Click **Security** in the results pane to see the permissions.
+   5. Click **Advanced**, click **SMS Admins**, and then click **View-edit**.
 
       For the SMS namespace, the SMS Admins group must have the following permissions:
       - Enable account

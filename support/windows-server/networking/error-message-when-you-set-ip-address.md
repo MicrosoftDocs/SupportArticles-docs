@@ -33,7 +33,7 @@ If you select **Yes**, you see the TCP/IP properties. Then, you can change the I
 
 > [!NOTE]
 > On a computer that is running Windows Server 2008, you receive the following error message:
-
+>
 > Cannot rename this connection. A connection with the name you specified already exists. Specify a different name.
 
 ## Cause

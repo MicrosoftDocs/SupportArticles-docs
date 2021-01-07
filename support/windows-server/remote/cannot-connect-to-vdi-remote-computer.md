@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Performance (audio and video) and RemoteFX
 ms.technology: RDS
 ---
-# Remote Desktop cannot Connect to the VDI-based remote computer after enabling Microsoft RemoteFX 3D Video Adapter
+# Remote Desktop cannot connect to the VDI-based remote computer after enabling Microsoft RemoteFX 3D Video Adapter
 
 This article provides a solution to an issue where Remote Desktop can't connect to a Virtual Desktop Infrastructure (VDI)-based remote computer.
 
@@ -24,18 +24,28 @@ _Original KB number:_ &nbsp; 2820155
 
 After installing the RemoteFX 3D Video Adapter on a VDI-based physical machine or a virtual machine that is hosted on a Hyper-V server, when you try to connect to the machine using Remote Desktop connection, it may fail. Additionally, you may receive the error message that is similar to the following:
 
-Remote Desktop can't connect to the remote computer for one of these reasons:
-
-1. Remote access to the server is not enabled
-2. The remote computer is turned off
-3. The remote computer is not available on the network
-
-Make sure the remote computer is turned on and connected to the network, and that remote access is enabled.
+> Remote Desktop can't connect to the remote computer for one of these reasons:
+>
+> 1. Remote access to the server is not enabled
+> 2. The remote computer is turned off
+> 3. The remote computer is not available on the network
+>
+> Make sure the remote computer is turned on and connected to the network, and that remote access is enabled.
 
 You may also receive the following error in the Windows Event Log:
 
+> Log Name: Microsoft-Windows-TerminalServices-LocalSessionManager/Operational  
+Source:       Microsoft-Windows-TerminalServices-LocalSessionManager  
+Date:          \<Date>\<Time>  
+Event ID:    17  
+Level:         Error  
+User:          SYSTEM  
+Computer: machinename.domain.com  
+Description:  
+Remote Desktop Service start failed. The relevant status code was 0x800706b5.  
+
 > [!NOTE]
-> that you can connect to the computer using RDP if you remove the RemoteFX 3D Video Adapter from the VM.
+> You can connect to the computer using RDP if you remove the RemoteFX 3D Video Adapter from the VM.
 
 ## Cause
 

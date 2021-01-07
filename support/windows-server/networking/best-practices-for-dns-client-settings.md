@@ -49,7 +49,7 @@ Dependent on Active Directory replication to ensure that DNS zone is up to date.
     - The ServerPriorityTimeLimit value is reached (15 minutes by default).  
 
 > [!Note]
-> only a failure to respond will cause the DNS client to switch Preferred DNS servers; receiving an authoritative but incorrect response does not cause the DNS client to try another server. As a result, configuring a Domain Controller with itself and another DNS server as Preferred and Alternate servers helps to ensure that a response is received, but it does not guarantee accuracy of that response. DNS record update failures on either of the servers may result in an inconsistent name resolution experience.  
+> Only a failure to respond will cause the DNS client to switch Preferred DNS servers; receiving an authoritative but incorrect response does not cause the DNS client to try another server. As a result, configuring a Domain Controller with itself and another DNS server as Preferred and Alternate servers helps to ensure that a response is received, but it does not guarantee accuracy of that response. DNS record update failures on either of the servers may result in an inconsistent name resolution experience.  
 
 - Do not configure the DNS client settings on the domain controllers to point to your Internet Service Provider's (ISP's) DNS servers. If you configure the DNS client settings to point to your ISP's DNS servers, the Netlogon service on the domain controllers does not register the correct records for the Active Directory directory service. With these records, other domain controllers and computers can find Active Directory-related information. The domain controller must register its records with its own DNS server.
 

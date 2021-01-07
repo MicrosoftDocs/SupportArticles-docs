@@ -32,6 +32,11 @@ Kernel memory dump files may not be generated on Windows Server 2008-based or Wi
 
 You may also notice the following event is logged in the System event log:
 
+> Event ID: 49  
+Event Type: Error  
+Event Source: volmgr  
+Description: Configuring the Page file for crash dump failed. Make sure there is a page file on the boot partition and that is large enough to contain all physical memory.
+
 ## Cause
 
 This behavior occurs when more physical memory (RAM) is installed than the initial size that is set for the page file. If a STOP error occurs when the system is configured to generate a kernel or complete memory dump, no memory dump file will be generated.
@@ -45,23 +50,24 @@ To confirm how much physical memory is installed on the system, follow these ste
 ## Workaround
 
 > [!WARNING]
-> Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk. 
+> Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
 
 To work around this behavior, modify the registry so that writting of the memory dump files is attempted even if the physical memory size is larger than the initial size that is set for the page file. To do this, follow these steps:
-1. Click **Start**, type regedit in the **Start Search** box, and then click **regedit** in the **Programs** list.
+
+1. Click **Start**, type *regedit* in the **Start Search** box, and then click **regedit** in the **Programs** list.
 
     If you are prompted for an administrator password or for confirmation, type your password, or click **Continue**.
 2. Locate and then click the following registry subkey: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\CrashControl`
 
 3. On the **Edit** menu, point to **New**, and then click **DWORD Value**.
 
-4. Type IgnorePagefileSize, and then press ENTER.
+4. Type *IgnorePagefileSize*, and then press ENTER.
 
 5. Right-click **IgnorePagefileSize**, and then click **Modify**.
 
-6. In the **Value data** box, type 1, and then click **OK**.
+6. In the **Value data** box, type *1*, and then click **OK**.
 
-7. Exit Registry Editor.
+7. Exit **Registry Editor**.
 
 8. Reboot the system for the change to take effect.
 

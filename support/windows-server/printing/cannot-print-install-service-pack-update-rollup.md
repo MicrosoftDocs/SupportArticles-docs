@@ -54,7 +54,9 @@ To resolve this issue, schedule sufficient time for the server to complete the p
 If you can't wait for the server to complete the parsing of all the Unidrv-based printer drivers, manually remove all cached binary printer description files (.bud files), and then let them be automatically re-created. Depending on the speed of your server, this automatic re-creation may be completed in a shorter time. Typically, this operation is completed within 30 minutes.
 
 > [!NOTE]
-> When Print Spooler starts, it installs a newer version of Unidrv.dll. As a result, the .bud files are out of date. The .bud files are the compiled versions of .ppd files and can be completely regenerated from those .ppd files. Because of this, you can remove the .bud files. To do this, follow these steps:
+> When Print Spooler starts, it installs a newer version of Unidrv.dll. As a result, the .bud files are out of date. The .bud files are the compiled versions of .ppd files and can be completely regenerated from those .ppd files. Because of this, you can remove the .bud files.
+
+To do this, follow these steps:
 
 1. Stop the Print Spooler service. To do this, run the following command from a command prompt:
 
