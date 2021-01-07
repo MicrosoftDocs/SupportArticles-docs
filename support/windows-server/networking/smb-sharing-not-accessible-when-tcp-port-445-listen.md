@@ -63,7 +63,7 @@ To fix this issue, follow these steps:
 
     > Policy Name: netbc  
     Description: NONE  
-    Last Modified: 5/24/2017 4:33:45 AM  
+    Last Modified: *\<DateTime>*  
     Assigned: YES  
     Master PFS: NO  
     Polling Interval: 180 minutes
@@ -75,7 +75,7 @@ To fix this issue, follow these steps:
     > FilterList Name: block  
     Description: NONE  
     Store: Local Store \<WIN>  
-    Last Modified: 5/24/2017 4:32:18 AM  
+    Last Modified: *\<DateTime>*  
     GUID: {ID}  
     No. of Filters: 1  
     Filter(s)  
