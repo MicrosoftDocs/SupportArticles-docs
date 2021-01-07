@@ -62,8 +62,8 @@ On Windows 10 and later versions, you'll see only events by components, dependin
 > Opened query for NLA successfully  
 > NlaGetIntranetCapability returned Not Ready error. Consider it as NOT intranet capable.  
 >
-> GPSVC(530.ae0) 13:32:28:728 There is no connectivity  
-> GPSVC(530.8e0) 13:32:28:728 ApplyGroupPolicy: Getting ready to create background thread GPOThread.
+> GPSVC(530.ae0) *\<DateTime>* There is no connectivity  
+> GPSVC(530.8e0) *\<DateTime>* ApplyGroupPolicy: Getting ready to create background thread GPOThread.
 
 The first section shows the calculation for the time-out to use to bring up the network. This can be based on previous fast startups.
 

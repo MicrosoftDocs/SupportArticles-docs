@@ -74,4 +74,4 @@ This scenario involves third-party clients:
 5. The server forwards the package to the DC that authenticates the request, and since the DC is OK to use NTLMv1, it authenticates the request.
 6. The server receives the successful logon and audits that as NTLMv1 as specified by the DC.
 
-For logons without extended session security, the server has no option to block the logon request based on the client flags. It has to forward the request with the best flags it got to the DC. on return, it also has to accept any decision the DC makes on the logon. In this case, it accepts the logon and logs it as NTLMv1 logon, even though the resource server is configured to only allow NTLMv2.
+For logons without extended session security, the server has no option to block the logon request based on the client flags. It has to forward the request with the best flags it got to the DC. On return, it also has to accept any decision the DC makes on the logon. In this case, it accepts the logon and logs it as NTLMv1 logon, even though the resource server is configured to only allow NTLMv2.

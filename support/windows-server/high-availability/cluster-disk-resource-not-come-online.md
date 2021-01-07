@@ -45,24 +45,24 @@ Cluster tries to enumerate files on the disk during an Online event and if it is
 
 A snippet from the cluster logs:  
 
-> 00001668.00001f88::2011/08/02-12:04:00.366 WARN [RES] Physical Disk <G:\>: OnlineThread: Failed to get volume guid for device \\?\GLOBALROOT\Device\Harddisk2\Partition1\. Error 3  
-00001668.00001f88::2011/08/02-12:04:04.418 WARN [RES] Physical Disk <G:\>: OnlineThread: Failed to set volguid \??\Volume{aaeb0322-6921-11e0-a955-00155d50c903}. Error: 183.  
-00001668.00001f88::2011/08/02-12:04:04.418 INFO [RES] Physical Disk <G:\>: Found 2 mount points for device \Device\Harddisk2\Partition1  
-00001668.00001f88::2011/08/02-12:04:04.418 INFO [RES] Physical Disk <G:\>: VolumeIsNtfs: Volume \\?\GLOBALROOT\Device\Harddisk2\Partition1\ has FS type NTFS  
+> 00001668.00001f88::*\<DateTime>* WARN [RES] Physical Disk <G:\>: OnlineThread: Failed to get volume guid for device \\?\GLOBALROOT\Device\Harddisk2\Partition1\. Error 3  
+00001668.00001f88::*\<DateTime>* WARN [RES] Physical Disk <G:\>: OnlineThread: Failed to set volguid \??\Volume{aaeb0322-6921-11e0-a955-00155d50c903}. Error: 183.  
+00001668.00001f88::*\<DateTime>* INFO [RES] Physical Disk <G:\>: Found 2 mount points for device \Device\Harddisk2\Partition1  
+00001668.00001f88::*\<DateTime>* INFO [RES] Physical Disk <G:\>: VolumeIsNtfs: Volume \\?\GLOBALROOT\Device\Harddisk2\Partition1\ has FS type NTFS  
 >
-> 00001668.00001f88::2011/08/02-12:04:04.426 ERR [RES] Physical Disk <G:\>: VerifyFS: Failed to open file \\?\GLOBALROOT\Device\Harddisk2\Partition1\kilo.docx Error: 5.  
-00001668.00001f88::2011/08/02-12:04:04.426 ERR [RES] Physical Disk <G:\>: VerifyFS: Failed to open file \\?\GLOBALROOT\Device\Harddisk2\Partition1\kilo.docx Error: 5.
+> 00001668.00001f88::*\<DateTime>* ERR [RES] Physical Disk <G:\>: VerifyFS: Failed to open file \\?\GLOBALROOT\Device\Harddisk2\Partition1\kilo.docx Error: 5.  
+00001668.00001f88::*\<DateTime>* ERR [RES] Physical Disk <G:\>: VerifyFS: Failed to open file \\?\GLOBALROOT\Device\Harddisk2\Partition1\kilo.docx Error: 5.
 >
-> 00001668.00001f88::2011/08/02-12:04:04.426 ERR [RES] Physical Disk <G:\>: OnlineThread: Error 123 bringing resource online.  
-00001668.00001e3c::2011/08/02-12:04:52.772 ERR [RES] Physical Disk: Failed to get partition size, status 3  
-00001668.00001e3c::2011/08/02-12:04:52.773 ERR [RHS] Error 5023 from ResourceControl for resource G:\.  
-00001920.00000808::2011/08/02-12:04:52.773 WARN [RCM] ResourceControl(STORAGE_GET_DIRTY) to G:\ returned 5023.  
+> 00001668.00001f88::*\<DateTime>* ERR [RES] Physical Disk <G:\>: OnlineThread: Error 123 bringing resource online.  
+00001668.00001e3c::*\<DateTime>* ERR [RES] Physical Disk: Failed to get partition size, status 3  
+00001668.00001e3c::*\<DateTime>* ERR [RHS] Error 5023 from ResourceControl for resource G:\.  
+00001920.00000808::*\<DateTime>* WARN [RCM] ResourceControl(STORAGE_GET_DIRTY) to G:\ returned 5023.  
 
 The disk gets marked as dirty as the name had an invalid character and would run CHKDSK before the disk is brought online successfully next time. Following events may be noted in the system event log after you correct the problem and online the disk for the first time.  
 
 > Log Name: System  
 Source: Microsoft-Windows-FailoverClustering  
-Date: 8/2/2011 5:23:11 PM  
+Date: *\<DateTime>*  
 Event ID: 1066  
 Task Category: Physical Disk Resource  
 Level: Warning  
@@ -73,7 +73,7 @@ Description: Cluster disk resource 'Cluster Disk 1' indicates corruption for vol
 >
 > Log Name: Application  
 Source: Chkdsk  
-Date: 8/2/2011 5:23:12 PM  
+Date: *\<DateTime>*  
 Event ID: 26214  
 Task Category: None  
 Level: Information  

@@ -28,7 +28,7 @@ Using Group Policy Preferences to create a new printer mapping and set that prin
 Event ID 4098 is logged in the Application Log:  
 Log Name:      Application  
 Source:        Group Policy Printers  
-Date:          13/01/2009 4:07:48 PM  
+Date:          *\<DateTime>*  
 Event ID:      4098  
 Task Category: (2)  
 Level:         Warning  

@@ -42,10 +42,6 @@ To make Windows Server 2008 or later to reply to LDAP Ping, configure either of 
 
 2. Add IP address and hostname of client to LMHOSTS file.
 
-See following links for details:
-
-[Domain Browsing with TCP/IP and LMHOSTS Files](https://support.microsoft.com/help/150800) 
-
 (B) Add WINS server
 
 Configure TCP/IP to use WINS server that can resolve client hostname to Windows Server.

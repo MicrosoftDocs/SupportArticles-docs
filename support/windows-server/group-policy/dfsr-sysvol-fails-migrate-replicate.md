@@ -39,7 +39,7 @@ Examining the DFS Replication event sign in the Primary Domain Controller (PDC) 
 
 > Log Name: DFS Replication  
 Source: DFSR  
-Date: 6/15/2011 3:29:53 PM  
+Date: *\<DateTime>*  
 **Event ID: 8028**  
 Task Category: None  
 Level: Error  
@@ -54,16 +54,16 @@ Description:
 
 Examining the DFSR Debug sign in the PDCE shows:
 
-> 20110615 15:30:02.406 1524 CFAD  2836 Config::AdObjectEditor::AddObject Add cn=DFSR-LocalSettings,CN=2008R2-MIG-01,OU=Domain  
+> *\<DateTime>* 1524 CFAD  2836 Config::AdObjectEditor::AddObject Add cn=DFSR-LocalSettings,CN=2008R2-MIG-01,OU=Domain  
 Controllers,DC=cohowinery,DC=com  
-20110615 15:30:02.406 1524 ADWR   633  
+*\<DateTime>* 1524 ADWR   633  
 Config::AdWriter::CreateSysVolLocalObjectsOnLocalDc [SYSVOL] Local settings object already exists.  
-20110615 15:30:02.406 1524 ADWR   655  
+*\<DateTime>* 1524 ADWR   655  
 Config::AdWriter::CreateSysVolLocalObjectsOnLocalDc [SYSVOL] Got Local Setting's SD for adding ACE  
-20110615 15:30:02.406 1524 ADWR   678  
+*\<DateTime>* 1524 ADWR   678  
 Config::AdWriter::CreateSysVolLocalObjectsOnLocalDc [SYSVOL] Going to set new SD  
-20110615 15:30:02.406 1524 CFAD  2570 **[ERROR] Config::AdAttrEditor::ModifyValue Failed to ldap_modify_s(). dn:cn=DFSR-LocalSettings,CN=2008R2-MIG-01,OU=Domain Controllers,DC=cohowinery,DC=com Error:Insufficient Rights**  
-20110615 15:30:02.406 1524 SYSM   586 [ERROR] Migration::SysvolMigrationTask::Step [MIG] Failed Migration task. Error:  
+*\<DateTime>* 1524 CFAD  2570 **[ERROR] Config::AdAttrEditor::ModifyValue Failed to ldap_modify_s(). dn:cn=DFSR-LocalSettings,CN=2008R2-MIG-01,OU=Domain Controllers,DC=cohowinery,DC=com Error:Insufficient Rights**  
+*\<DateTime>* 1524 SYSM   586 [ERROR] Migration::SysvolMigrationTask::Step [MIG] Failed Migration task. Error:  
 + [Error:5(0x5) **Migration::SysVolMigration::Migrate migrationserver.cpp:1200 1524 W Access is denied.]**  
 + [Error:5(0x5) Migration::SysVolMigration::StepToNextStableState migrationserver.cpp:1271 1524 W Access is denied.]  
 + [Error:5(0x5) Migration::SysVolMigration::Prepare migrationserver.cpp:1431 1524 W Access is denied.]  
@@ -80,7 +80,7 @@ Examining the DFS Replication event sign in that new DC shows:
 
 > Log Name: DFS Replication  
 Source: DFSR  
-Date: 6/27/2011 12:34:18 PM  
+Date: *\<DateTime>*  
 **Event ID: 6016**  
 Task Category: None  
 Level: Warning  
@@ -99,10 +99,10 @@ Description:
 
 Examining the DFSR Debug sign in that DC shows:
 
-> 20110627 12:19:16.604 1712 CFAD  2836 Config::AdObjectEditor::AddObject Add cn=DFSR-LocalSettings,CN=2008-R2-TSPDC2,OU=Domain Controllers,DC=tailspintoys,DC=com  
-20110627 12:19:16.604 1712 ADWR   633 Config::AdWriter::CreateSysVolLocalObjectsOnLocalDc [SYSVOL] Local settings object already exists.  
-20110627 12:19:16.604 1712 ADWR   655 Config::AdWriter::CreateSysVolLocalObjectsOnLocalDc [SYSVOL] Got Local Setting's SD for adding ACE  
-20110627 12:19:16.604 1712 ADWR   678 Config::AdWriter::CreateSysVolLocalObjectsOnLocalDc [SYSVOL] Going to set new SD  
+> *\<DateTime>* 1712 CFAD  2836 Config::AdObjectEditor::AddObject Add cn=DFSR-LocalSettings,CN=2008-R2-TSPDC2,OU=Domain Controllers,DC=tailspintoys,DC=com  
+*\<DateTime>* 1712 ADWR   633 Config::AdWriter::CreateSysVolLocalObjectsOnLocalDc [SYSVOL] Local settings object already exists.  
+*\<DateTime>* 1712 ADWR   655 Config::AdWriter::CreateSysVolLocalObjectsOnLocalDc [SYSVOL] Got Local Setting's SD for adding ACE  
+*\<DateTime>* 1712 ADWR   678 Config::AdWriter::CreateSysVolLocalObjectsOnLocalDc [SYSVOL] Going to set new SD  
 20110627 12:19:16.620 1712 **CFAD  2570 [ERROR] Config::AdAttrEditor::ModifyValue Failed to ldap_modify_s(). dn:cn=DFSR-LocalSettings,CN=2008-R2-TSPDC2,OU=Domain Controllers,DC=tailspintoys,DC=com Error:Insufficient Rights**  
 20110627 12:19:16.620 1712 **CFAD 11508 [ERROR] Config::AdReader::Read [SYSVOL] (Ignored) Failed to create SysVol objects, Error:**  
 + **[Error:5(0x5) Config::AdWriter::CreateSysVolObjects adwriterserver.cpp:1360 1712 W Access is denied.]**  
@@ -114,7 +114,7 @@ Examining the DFSR Debug sign in that DC shows:
 
 Examining the DFSR debug sign in the PDCE shows:
 
-> 20110627 12:28:57.060 1792 CFAD  6160 **[ERROR]   Config::AdSnapshot::BuildPartnersSubTree Failed to create computer tree for partner:CN=2008-R2-TSPDC2,CN=Topology,CN=Domain System Volume,CN=DFSR-GlobalSettings,CN=System,DC=tailspintoys,DC=com, Error:**  
+> *\<DateTime>* 1792 CFAD  6160 **[ERROR]   Config::AdSnapshot::BuildPartnersSubTree Failed to create computer tree for partner:CN=2008-R2-TSPDC2,CN=Topology,CN=Domain System Volume,CN=DFSR-GlobalSettings,CN=System,DC=tailspintoys,DC=com, Error:**  
 + **[Error:1168(0x490) Config::AdSnapshot::BuildPartnerComputerSubTree ad.cpp:6018 1792 W Element not found.]**  
 + [Error:1168(0x490) Config::AdSnapshot::BuildLocalSettingsTree ad.cpp:6408 1792 W Element not found.]  
 + [Error:1168(0x490) Config::AdSnapshot::GetSubscriber ad.cpp:4112 1792 W Element not found.]  

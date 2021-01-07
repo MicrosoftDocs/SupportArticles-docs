@@ -86,7 +86,7 @@ For more information about technical details and white papers, go to the followi
 If you have Windows Identity Foundation installed on Windows Server 2008 or on Windows Server 2003, Windows Identity Foundation will be automatically uninstalled when you upgrade your Windows operating system to Windows Server 2008 R2. You have to install the Windows Identity Foundation installation package for Windows Server 2008 R2 after your Windows operating system upgrade.
 
 If you have Windows Identity Foundation installed on Windows Server 2003, Windows Identity Foundation will remain on the upgraded operating system when you upgrade your Windows operating system to Windows Server 2008. We recommend that you uninstall the Windows Identity Foundation before you upgrade your Windows operating system and then reinstall Windows Identity Foundation for Windows Server 2008. You can use the following command to silently uninstall Windows Identity Foundation on Windows Server 2003:
-`%windir%\\$NtUninstallKB974405$\\spuninst\\spuninst.exe /quiet`
+`%windir%\\$NtUninstallKB974405$\\spuninst\\spuninst.exe /quiet`.
 
 If an error occurs when you run this command, we recommend that you uninstall Windows Identity Foundation by using Programs and Features in Control Panel.
 

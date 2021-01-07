@@ -48,7 +48,7 @@ These are the steps to download the ISO file:
     2. Choose the location on your computer and click the **Save** button.
 
         > [!NOTE]
-        > you will be prompted to install the Download Manager on your first download.
+        > You will be prompted to install the Download Manager on your first download.
     3. The Download Manager opens and the download begins.
     4. You can cancel the download if required by clicking the **Cancel** button.
 

@@ -24,6 +24,20 @@ _Original KB number:_ &nbsp; 3098315
 
 When you perform a backup in Windows Server 2012 and earlier (back to Windows Server 2008), one of the following errors is logged in the Application log:
 
+> Log Name: Application  
+Source: VSS  
+Event ID: 8193  
+Level: Error  
+Description:  
+Volume Shadow Copy Service error: Unexpected error calling routine  
+XML document is too long. hr = 0x80070018, The program issued a command but the command length is incorrect.  
+>
+> Operation: Writer Modifying Backup Document
+>
+> Context: Execution  
+Context: Requestor  
+Writer Instance ID: {14BE9B90-62D7-4A2D-B57F-53D21EAB0789}
+
 ## Cause
 
 When a Volume Shadow Copy Service (VSS)-based backup is performed, each of the subscribed VSS writers is queried for a list of components. The problem that's described in the [Symptoms](#symptoms) section occurs when that list generates a metadata file that's larger than the size limitation.

@@ -31,7 +31,7 @@ Opening COMEXP.MSC or DCOMCNFG.EXE and navigating to Component Services\Computer
 
 > You do not have permission to perform the requested action.
 
-Additionally you may see Event ID 4434 logged in the Application log:
+Additionally, you may see Event ID 4434 logged in the Application log:
 
 > Log Name: Application  
 Source: Complus  

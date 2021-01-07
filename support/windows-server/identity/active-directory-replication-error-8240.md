@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp;2680976
 
 ### Symptom 1
 
-Output of the Repadmin /ShowReps command:
+Output of the `Repadmin /ShowReps` command:
 
 > SiteName\\DCName via RPC  
 objectGuid: \<GUID>  
@@ -56,8 +56,8 @@ You receive NTDS General event 1126 in Directory Service on Domain Controller wi
 Event Source: NTDS General  
 Event Category: Global Catalog  
 Event ID: 1126  
-Date: 5/2/2009  
-Time: 10:51:48 AM  
+Date: \<DateTime>  
+Time: \<DateTime>  
 User: NT AUTHORITY\\ANONYMOUS LOGON  
 Computer: ComputerName  
 Description:  
@@ -145,7 +145,5 @@ For the error that indicates that GC isn't available, we may generally follow th
 ## More information
 
 For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:
-
-[317097](https://support.microsoft.com/help/317097) Lingering objects prevent Active Directory replication from occurring
 
 [910204](https://support.microsoft.com/help/910204) Troubleshooting problems with promoting a domain controller to a global catalog server
