@@ -1,5 +1,5 @@
 - name: Windows Client
-  href: welcome-windows-client.md
+  href: welcome-windows-client.yml
 - name: Active Directory
   items:
   - name: Active Directory

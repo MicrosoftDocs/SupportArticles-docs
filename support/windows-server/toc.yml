@@ -1,5 +1,5 @@
 - name: Windows Server
-  href: welcome-windows-server.md
+  href: welcome-windows-server.yml
 - name: Active Directory
   items:
   - name: Active Directory

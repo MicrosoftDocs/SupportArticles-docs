@@ -76,8 +76,8 @@ To integrate Windows DNS into an existing namespace based on non-dynamic DNS ser
     Event Source: NETLOGON  
     Event Category: None  
     Event ID: 5773  
-    Date: 3/29/2000  
-    Time: 3:16:14 PM  
+    Date: *\<DateTime>*  
+    Time: *\<DateTime>*  
     User: N/A  
     Computer: DC  
     Description:  

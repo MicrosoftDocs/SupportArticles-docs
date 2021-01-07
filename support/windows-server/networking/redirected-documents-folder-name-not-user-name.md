@@ -32,7 +32,7 @@ To work around this behavior, use one of the following methods.
 
 ### Method 1
 
-Create a subfolder under the redirected folder in the Universal Naming Convention (UNC) path. For example, use the following UNC path:\\\\**server**\\**users**\\**username**\Documents
+Create a subfolder under the redirected folder in the Universal Naming Convention (UNC) path. For example, use the following UNC path:\\\\**server**\\**users**\\**username**\\Documents.
 
 ### Method 2
 
