@@ -26,7 +26,7 @@ When you try to validate a copy of Windows, you may receive an error message tha
 
 > Update installation failed. Error information: 0x80092026
 
-When you try to validate Windows from genuine validation, Windows downloads an update [971033](https://support.microsoft.com/help/971033), however when Windows tries to install the update, the update shows an error message that is mentioned above. Additionally, if you try to download the update KB971033 on your machine and run it manually, you may receive following error message:
+When you try to validate Windows from the genuine validation website, Windows downloads an update [971033](https://support.microsoft.com/help/971033), however when Windows tries to install the update, the update shows an error message that is mentioned above. Additionally, if you try to download the update KB971033 on your machine and run it manually, you may receive following error message:
 
 > Installer encountered an error: 0x80092026  
 The cryptographic operation failed due to a local security option setting.
