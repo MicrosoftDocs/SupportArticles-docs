@@ -86,3 +86,9 @@ landingContent:
             url: ./admin-development/admin-development-overview.md
           - text: Windows Troubleshooters
             url: ./windows-troubleshooters/windows-troubleshooters-overview.md
+  - title: Windows Troubleshooters
+    linkLists:      
+      - linkListType: how-to-guide
+        links:
+          - text: Active and retired troubleshooters for Windows 10
+            url: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
