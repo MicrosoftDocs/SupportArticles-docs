@@ -82,9 +82,9 @@ This issue may occur if a non-Microsoft program that is installed on your comput
 
 ## Resolution
 
-To resolve this issue, contact the manufacturer of the program to inquire about the availability of a filter driver update. For more information about how to contact Computer Associates to obtain the latest update for the Ofant.sys driver, visit [Computer Associates](https://www.ca.com/support/).
+To resolve this issue, contact the manufacturer of the program to inquire about the availability of a filter driver update. For more information about how to contact Computer Associates to obtain the latest update for the Ofant.sys driver, visit [Computer Associates](https://www.broadcom.com/support/).
 
-If you installed Open Transaction Manager separately, contact Columbia Data Products, Inc. to inquire about the availability of an update that may resolve this issue. To contact Columbia Data Products, visit [Columbia Data Products](https://www.cdp.com/).
+If you installed Open Transaction Manager separately, contact Columbia Data Products, Inc. to inquire about the availability of an update that may resolve this issue. To contact Columbia Data Products, visit [Columbia Data Products](http://www.cdp.com/).
 
 For more information about how to contact VERITAS, visit [VERITAS support](https://support.veritas.com/)
 

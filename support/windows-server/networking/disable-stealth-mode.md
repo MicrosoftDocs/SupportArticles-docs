@@ -38,7 +38,7 @@ Warning
 Stealth mode is an important security feature. Disabling it can make the computer vulnerable to attack, even in managed corporate domain networks and behind edge firewalls. Therefore, we strongly recommend that you keep stealth mode active, and disable it only if it is required.
 
 > [!Caution]
-Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.  
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.  
 
 Stealth mode is a core security feature. For any given configuration, stealth mode should stay enabled unless there is a strong, valid argument for disabling it.  
 Stealth mode can be disabled by using any of the following methods:  
@@ -50,7 +50,7 @@ Stealth mode can be disabled by using any of the following methods:
 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\StandardProfile`  
 
 > [!Note]
-In the Software hive "Policy" section, the **StandardProfile** entry is used only if a legacy firewall GPO still exists.  
+> In the Software hive "Policy" section, the **StandardProfile** entry is used only if a legacy firewall GPO still exists.  
 
 In either set of subkeys, add the following value:  
 Value: **DisableStealthMode**  
@@ -58,7 +58,7 @@ Type:  **REG_DWORD**
 Data: **0x00000000 (default - StealthMode enabled) 0x00000001 (StealthMode disabled)**  
 
 > [!Caution]
-Stealth mode cannot be deactivated by disabling the firewall service (MpsSvc). This is an unsupported configuration. For more information, see the "[Disable Windows Defender Firewall with Advanced Security](https://docs.microsoft.com/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-administration-with-windows-powershell#disable-windows-defender-firewall-with-advanced-security)" section of "Windows Defender Firewall with Advanced Security Administration with Windows PowerShell."
+> Stealth mode cannot be deactivated by disabling the firewall service (MpsSvc). This is an unsupported configuration. For more information, see the "[Disable Windows Defender Firewall with Advanced Security](https://docs.microsoft.com/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-administration-with-windows-powershell#disable-windows-defender-firewall-with-advanced-security)" section of "Windows Defender Firewall with Advanced Security Administration with Windows PowerShell."
 
 ## More information
 
