@@ -34,7 +34,7 @@ The behavior is by design. The activation and user experience aren't affected. B
 
 ## Recommendations for validating the product ID against the product key ID of OA3 DPK
 
-Every OEM has a different manufacturing process that have been adopted through years of experience. Specifically, to validate the DPK against the installed Windows 10 edition, we recommend that you don't rely on the output of `slmgr /dlv` or `slmgr/dli`. Instead, use the latest OA3Tool as follows:
+Every OEM has a different manufacturing process that has been adopted through years of experience. Specifically, to validate the DPK against the installed Windows 10 edition, we recommend that you don't rely on the output of `slmgr /dlv` or `slmgr/dli`. Instead, use the latest OA3Tool as follows:
 
 - OA3TOOL /Validate
 

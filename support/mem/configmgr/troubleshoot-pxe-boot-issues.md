@@ -66,7 +66,7 @@ In certain instances, configuring DHCP options 60, 66, and 67 may make the PXE b
 In many cases, errors that occur during installation or configuration are the cause of PXE boot issues. They can be difficult and time-consuming to pinpoint. In many cases, reinstalling PXE and starting over can be the most effective and least time-consuming solution. To do it, follow these steps:
 
 1. On the DP, clear the **Enable PXE** checkbox. When you're prompted to remove the Windows Deployment service, select **Yes**.
-2. Verify that PXE was uninstalled. Use Distmgr.log for DPs on-site server. Use Smsdpprov.log for a standalone DP.
+2. Verify that PXE was uninstalled. Use Distmgr.log for DPs on site servers. Use Smsdpprov.log for a standalone DP.
 
    > [!IMPORTANT]
    > Do not proceed until you verify that PXE is fully uninstalled.
