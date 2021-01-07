@@ -520,6 +520,8 @@
     items:
     - name: Cannot connect to WMI provider error in Configuration manager
       href: tools/error-message-when-you-open-configuration-manager.md
+    - name: MSDB database grows
+      href: tools/msdb-database-grows.md
     - name: New data isn't uploaded to MDW database after configuring collection set
       href: tools/data-collector-collection-set-upload-fail.md
     - name: PowerShell issue when RemoteSigned is not set
