@@ -59,25 +59,25 @@ The following list is a comprehensive list of the problematic behavior that may 
 
 - You may receive errors when you try to perform administrative tasks on a domain controller. For example, MMC snap-ins such as Active Directory Users and Computers or Active Directory Sites and Services may not start, and you may receive an error message that is similar to the following one:  
 
-     >Naming Information cannot be located because: Login attempt failed.
+     > Naming Information cannot be located because: Login attempt failed.
 
 - When you try to add a user to a security group, you may receive an error message that is similar to:  
 
-     >Object Picker cannot open because no locations from which to choose objects can be found.
+     > Object Picker cannot open because no locations from which to choose objects can be found.
 
 - When you try to run Netdom.exe from the Windows 2000 Support Tools to find the FSMO roles, you may receive an error message that is similar to the following one:  
 
-     >Unable to update the password. The value provided as the current password is incorrect.
+     > Unable to update the password. The value provided as the current password is incorrect.
 
 - When you try to run Dcdiag.exe from the Windows 2000 Support Tools, you may receive an error message that is similar to the following one:  
-     >Failed with 67: The network name cannot be found  
+     > Failed with 67: The network name cannot be found  
 
      The results from Dcdiag.exe may also list LDAP bind errors that are similar to the following one:  
-     >LDAP bind failed with error 1323.
+     > LDAP bind failed with error 1323.
 
 - When you try to run Netdiag.exe from the Windows 2000 Support Tools, you may receive an error message that is similar to:  
 
-     >DC list test . . . . . . . . . . . : Failed  
+     > DC list test . . . . . . . . . . . : Failed  
      Failed to enumerate DCs by using the browser. [NERR_BadTransactConfig]
 
 - If you run a network trace when you try to connect to the affected computer, you may see results that are similar to the following one:
@@ -113,13 +113,13 @@ Infection by one of these malicious programs can come directly from the Internet
 An example of a malicious program that targets administrative shares is the `Win32.Agobot` program.  
   
 Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.  
->[!NOTE]
->The `Win32.Agobot` program is only an example. Malicious programs become obsolete as antivirus vendors discover them and add them to their virus definitions. However, malicious users frequently develop new programs and variants to avoid detection by antivirus software.
+> [!NOTE]
+> The `Win32.Agobot` program is only an example. Malicious programs become obsolete as antivirus vendors discover them and add them to their virus definitions. However, malicious users frequently develop new programs and variants to avoid detection by antivirus software.
 
 ## Resolution
 
->[!IMPORTANT]
->This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
+> [!IMPORTANT]
+> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
 [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
 
 To verify whether a computer is affected by this issue, follow these steps:  
@@ -129,8 +129,8 @@ To verify whether a computer is affected by this issue, follow these steps:
     1. Click **Start**, click **Run**, type regedit, and then press ENTER.
     2. Locate and then click the following registry subkey: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanmanServer\Parameters`  
     3. If the AutoShareServer and AutoShareWks DWORD values in the **LanmanServer\Parameters** subkey are configured with a value data of 0, change that value to 1.
-        >[!NOTE]
-        >If these values do not exist, you do not have to create them because the default behavior is to automatically create the administrative shares.
+        > [!NOTE]
+        > If these values do not exist, you do not have to create them because the default behavior is to automatically create the administrative shares.
     4. Quit Registry Editor.
 
 2. Restart the computer. Typically, computers that are running Windows Server 2003, Windows XP, Windows 2000, or Windows NT 4.0 automatically create the administrative shares during startup.
