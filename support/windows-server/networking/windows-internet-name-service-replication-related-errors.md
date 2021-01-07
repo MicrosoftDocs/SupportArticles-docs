@@ -182,7 +182,7 @@ Otherwise, you may receive the WINS 4121 event log event message if both of the 
 - When the pull partner initiates a replication (for example, a pull request), the following behavior may occur:
 
     > [!NOTE]
-    > the arrow indicates the direction of traffic.
+    > The arrow indicates the direction of traffic.
 
 1. Pull partner -> Push partner
 

@@ -37,8 +37,8 @@ Additionally, when you view System Event log on the affected server you see the 
 Event Source: TermService  
 Event Category: None  
 Event ID: 1036  
-Date: 24.07.2005  
-Time: 18:57:44  
+Date: *\<DateTime>*  
+Time: *\<DateTime>*  
 User: N/A  
 Computer: Servername  
 Description:  

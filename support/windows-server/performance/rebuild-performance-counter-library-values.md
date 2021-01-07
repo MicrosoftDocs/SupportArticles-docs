@@ -1,6 +1,6 @@
 ---
-title: Rebuild Performance Counter Library values
-description: This article describes how to manually rebuild Performance Counter Library values.
+title: Rebuild performance counter library values
+description: This article describes how to manually rebuild performance counter library values.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Performance monitoring tools
 ms.technology: Performance
 ---
-# Manually rebuild Performance Counter Library values
+# Manually rebuild performance counter library values
 
 This article describes how to manually rebuild the performance counter library values.
 

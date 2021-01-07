@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2570355
 
 ## Symptoms
 
-You have a computer running Windows Vista or Windows 7 in a domain. You find out the Folder Redirection policy is not working on the client machine. When you look at the event log, you see following event logged:
+You have a computer running Windows Vista or Windows 7 in a domain. You find out the Folder Redirection policy is not working on the client machine. When you look at the event log, you see the following event logged:
 
 > Log Name: Application  
 Source: Microsoft-Windows-Folder Redirection  

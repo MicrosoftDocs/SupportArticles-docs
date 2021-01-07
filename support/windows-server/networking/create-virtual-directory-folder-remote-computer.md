@@ -61,7 +61,7 @@ To create a virtual directory to a remote network share, create the share, and t
 ## How to test the virtual directory
 
 1. Start Internet Explorer.
-2. In the **Address** box, type the URL to your Web server (for example, `http://WebServer`), and then click**Go**.
+2. In the **Address** box, type the URL to your Web server (for example, `http://WebServer`), and then click **Go**.
 
     Verify that you can view the default Web site.
 3. Append the alias of the virtual directory to the address that you typed in step two (for example, `http://WebServer/Sales`), and then click **Go**.
