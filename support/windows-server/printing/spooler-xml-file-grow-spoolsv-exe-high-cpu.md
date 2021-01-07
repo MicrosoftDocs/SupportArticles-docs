@@ -36,9 +36,9 @@ You can work around this problem by disabling Windows Error Reporting for the pr
 
 2. Browse to the following registry key:
 
-    HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Print\
+    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Print\`.
 
-3. Add a REG_DWORD value named DisableWERLogging and set this value to 0x1 (hexadecimal)
+3. Add a REG_DWORD value named DisableWERLogging and set this value to 0x1 (hexadecimal).
 
 4. Restart the Print Spooler service.
 

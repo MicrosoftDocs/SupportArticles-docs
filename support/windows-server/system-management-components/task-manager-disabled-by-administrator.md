@@ -15,7 +15,7 @@ ms.technology: SysManagementComponents
 ---
 # Error message: Task Manager has been disabled by your administrator
 
-This article provides help to resolve an error (Task Manager has been disabled by your administrator) that occurs when you try to use Task Manager.
+This article provides help to resolve an error "Task Manager has been disabled by your administrator" that occurs when you try to use Task Manager.
 
 _Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 555480

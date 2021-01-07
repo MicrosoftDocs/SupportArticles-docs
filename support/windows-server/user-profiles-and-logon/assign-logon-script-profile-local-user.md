@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: User profiles
 ms.technology: UserProfilesAndLogon
 ---
-# How to assign a logon script to a profile for a local user  
+# How to assign a logon script to a profile for a local user
 
 This article describes how to assign a logon script to a profile for a local user.
 
@@ -29,16 +29,16 @@ This article describes how to assign a logon script to a profile for a local use
 
 ## How to assign a logon script to a user's profile
 
-1. Click the Start, point to Administrative Tools, and then click Computer Management.
-2. In the console tree, expand **Local Users and Groups**, and then click Users.
-3. In the right pane, right-click the user account that you want, and then click Properties.
-4. Click the Profile tab.
+1. Click the **Start**, point to **Administrative Tools**, and then click **Computer Management**.
+2. In the console tree, expand **Local Users and Groups**, and then click **Users**.
+3. In the right pane, right-click the user account that you want, and then click **Properties**.
+4. Click the **Profile** tab.
 5. In the **Logon script** box, type the file name (and the relative path, if necessary) of the logon script.
 
    > [!NOTE]
    > If the logon script is stored in a subfolder of the default logon script path, put the relative path to that folder in front of the file name. For example, if the Startup.bat logon script is stored in \\\\**ComputerName**\\Netlogon\\**FolderName**, type **FolderName**\\Startup.bat .
 
-6. Click Apply, and then click OK.
+6. Click **Apply**, and then click **OK**.
 
    >[!NOTE]
    >
