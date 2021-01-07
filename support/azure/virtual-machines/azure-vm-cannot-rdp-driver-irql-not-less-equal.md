@@ -10,18 +10,18 @@ ms.reviewer:
 
 ## Symptoms
 
-1. When you pull the screenshot of the virtual machine (VM), the operating system (OS) is stopped with the error `0x000000D1` also known as `DRIVER_IRQL_NOT_LESS_OR_EQUAL:`
+When you pull the screenshot of the virtual machine (VM), the operating system (OS) is stopped with the error `0x000000D1` also known as `DRIVER_IRQL_NOT_LESS_OR_EQUAL:`
 
-   `Your PC ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you.`
-   `(%% complete)`
+`Your PC ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you.`
+`(%% complete)`
 
-   `For more information on this issue and possible fixes, visit http://windows.com/stopcode. If you call a support person give them this info`
+`For more information on this issue and possible fixes, visit http://windows.com/stopcode. If you call a support person give them this info`
 
-   `Stop code: DRIVER_IRQL_NOT_LESS_OR_EQUAL`
+`Stop code: DRIVER_IRQL_NOT_LESS_OR_EQUAL`
 
-   `What failed: myfault.sys`
+`What failed: myfault.sys`
 
-   ![Error messages](./media/azure-vm-cannot-rdp-driver-irql-not-less-equal/1-error.png)
+![Error messages](./media/azure-vm-cannot-rdp-driver-irql-not-less-equal/1-error.png)
 
 ## Cause
 
