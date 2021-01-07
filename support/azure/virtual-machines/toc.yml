@@ -36,6 +36,8 @@
     items:
     - name: Cannot RDP into Azure VM
       href: cannot-connect-rdp-azure-vm.md
+    - name: Azure VM cannot RDP - working on features
+      href: azure-vm-cannot-rdp-working-features.md
 
 - name: VM is not booting
   items:
