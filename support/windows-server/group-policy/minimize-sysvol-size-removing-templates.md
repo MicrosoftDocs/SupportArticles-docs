@@ -26,7 +26,7 @@ For domains with many policies, and domain controllers with slow wide area netwo
 
 Because Administrative Templates (that is, .adm files) take up the most space in policies, remove them to significantly reduce the size of SYSVOL. For example, with the default Administrative Templates, each policy takes up 870 kilobytes (KB) of disk space. If you have 1,300 policies, you can reduce the size of SYSVOL from 1,100 megabytes (MB) to 35 MB (or 27 KB per policy).
 
-You can use Group Policy settings to change the behavior of Group Policy Editor about .adm files in Microsoft Windows Server 2003. For more information, see [Recommendations for managing Group Policy administrative template (.adm) files](https://support.microsoft.com/help/816662)  
+You can use Group Policy settings to change the behavior of Group Policy Editor about .adm files in Microsoft Windows Server 2003. For more information, see [Recommendations for managing Group Policy administrative template (.adm) files](https://support.microsoft.com/help/816662).
 
 ## More information
 
