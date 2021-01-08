@@ -34,7 +34,7 @@ Follow these steps to determine if you are experiencing this issue, on both the 
 
 1. Open WMI Tester - wbemtest.exe.
 2. Select **Connect**.
-3. In the **Namespace** box enter **root\\cimv2**, and then select **Connect**.
+3. In the **Namespace** box enter *root\\cimv2*, and then select **Connect**.
 4. Select **Query** and then enter `SELECT Domain FROM Win32_ComputerSystem`.
 
 If you get the "Provider load failure" error, you are experiencing the problem documented in this article, on this server.

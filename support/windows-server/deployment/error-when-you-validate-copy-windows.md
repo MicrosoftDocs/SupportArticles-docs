@@ -43,8 +43,8 @@ You can find a key with the name **State**. By default the value is set to **23c
 
 To resolve this problem, change the registry key to a valid setting, for example:
 
-- State = 0x00023e00 - **Check for publisher's certificate Revocation** Unchecked
-- State = 0x00023c00 - **Check for publisher's certificate Revocation** Checked
+- **State** = **0x00023e00** - **Check for publisher's certificate Revocation** Unchecked
+- **State** = **0x00023c00** - **Check for publisher's certificate Revocation** Checked
 
 The wrong value might result from an issue described in [The value of the "State" registry item is changed after a Group Policy preferences setting is applied in Windows Server 2008, in Windows Vista or in Windows Server 2008 R2](https://support.microsoft.com/help/982606).
 
@@ -58,7 +58,7 @@ Use one of the following methods:
 1. Start Registry Editor (Regedit.exe).
 2. Navigate to `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\WinTrust\Trust Providers\Software Publishing`.
 3. On the left side pane, look for State key and double-click to open it.
-4. Change the **Value data** to 23c00 or 23e00 (Hexadecimal).
+4. Change the **Value data** to **23c00** or **23e00** (Hexadecimal).
 5. Quit Registry Editor.
 
 ### Method 2: Create a reg file
