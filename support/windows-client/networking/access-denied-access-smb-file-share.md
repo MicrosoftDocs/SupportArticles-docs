@@ -22,7 +22,16 @@ _Original KB number:_ &nbsp; 3035936
 
 ## Symptoms
 
-When you try to access a specific folder located on a Network Appliance (NetApp) Filer or a Windows Server that supports SMB2 from a Windows-based system through the SMB Version 2 protocol, the access is denied. This issue occurs in Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008.
+When you try to access a specific folder that's located on a Network Appliance (NetApp) Filer or a Windows Server that supports SMB2 from a Windows-based system through the SMB Version 2 protocol, the access is denied. This issue occurs in the following version of Windows:
+
+- Windows 8.1
+- Windows Server 2012 R2
+- Windows 8
+- Windows Server 2012
+- Windows 7
+- Windows Server 2008 R2
+- Windows Vista
+- Windows Server 2008
 
 > [!NOTE]
 > This issue doesn't occur if you disable the SMB2 protocol on the client or use a Windows SMB client, such as Windows XP or Windows Server 2003.
