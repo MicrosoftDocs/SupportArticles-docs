@@ -21,13 +21,15 @@ appliesto:
 - Microsoft Office Excel 2003
 ---
 
-# How to troubleshoot errors when you save Excel workbooks
+# Troubleshoot why Excel is not saving changes
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-## Causes
+## Possible causes that documents do not save
 
-## Third-party add-ins
+Select the tab that applies to you, or go to the [Quick resolution](#quick-resolution) section below.
+
+## [3rd-party add-ins](#tab/third-party)
  
 If the Excel file is not saved when you run Excel in Windows safe mode, the issue may be caused by a third-party add-in or by a file that is in one of the Excel startup locations. By default, these files are loaded when you start Excel.
 
@@ -52,7 +54,7 @@ For more information about how to determine the folders that Excel uses during s
 - [Use startup folders in Excel](https://docs.microsoft.com/office/troubleshoot/excel/use-startup-folders) 
 - [How to prevent files from opening automatically in Excel](https://docs.microsoft.com/office/troubleshoot/excel/files-open-automatically) 
 
-## Restricted permissions
+## [Permissions](#tab/restricted)
  
 When you save an Excel file, you must have the following permissions to the folder in which you are saving the file:
 
@@ -64,7 +66,7 @@ When you save an Excel file, you must have the following permissions to the fold
 > [!NOTE]
 > If you do not have these permissions, the Excel save process cannot be completed.
 
-## Insufficient drive space
+## [Drive space](#tab/ins-drive-space)
  
 When you save to any medium, such as a hard drive, an external storage drive, or a network drive, you must make sure that the drive has sufficient free space to enable the file to save. If the destination drive does not have sufficient space, Excel cannot complete the save operation, and you receive the following error message:
    
@@ -75,19 +77,19 @@ For more information about this error message, see the following articles:
 - [You receive the "Disk is Full" error message when you save a workbook in Excel](https://support.microsoft.com/help/214245/you-receive-the-disk-is-full-error-message-when-you-save-a-workbook-in) 
 - [Error while saving a file in Excel](https://docs.microsoft.com/office/troubleshoot/excel/error-saving-file)
   
-## Antivirus software conflict
+## [Antivirus software](#tab/antivirus)
  
 When antivirus software is installed or is running, you may receive an error message when you try to save an existing workbook. You do not receive an error message if you try to save a new file. You may receive an error message because some antivirus programs quickly scan any new files that appear on a computer. This scan can sometimes disrupt the Excel save process. This interruption may stop Excel from saving the file correctly.
 
 To check if your antivirus software conflicts with Excel, temporarily deactivate the antivirus software and then try to save the Excel file. 
 
-## File sharing conflict
+## [File sharing](#tab/file-share-conflict)
  
 If you and a second user work concurrently on a shared workbook, you may receive an error message if you and the second user try to save the file at the same time. You receive an error message because Excel cannot save the file if another instance of Excel is saving the same file.
 
 For more information about this error message, see [Unlock a file that has been locked for editing](https://support.microsoft.com/office/unlock-a-file-that-has-been-locked-for-editing-bdda0d41-1b8e-44ed-a6ae-6d095d37c22d?ui=en-us&rs=en-us&ad=us).
 
-## File name length
+## [File naming](#tab/file-name-length)
  
 If you try to save or open an Excel file, and the path of that file (including the file name) is more than 218 characters, you may receive the following error message:
 
@@ -108,10 +110,11 @@ For more information, see [Description of the way that Excel saves files](https:
 > [!NOTE]
 > Other processes that occur on your computer may disrupt the Excel save process. These issues may occur if the Excel temporary file is accessed before the Excel save process is completed. For example, the local antivirus software locks the temporary file for scanning before the file can be renamed. Therefore, you must keep track of any new software installations or updates that are performed before you have problems when you try to save workbooks. This information will be helpful if this article does not fix your issue and you have to contact [Microsoft Support](https://support.microsoft.com).
 
+---
 
 ## Quick resolution
 
-Try the following options to help recover your Word document. Select the image at the left or the option heading to see more detailed instructions about that option.
+If any of the causes above don't apply to your situation or you still can't save the document, try the following options to help save your Excel document. Select the image at the left or the option heading to see more detailed instructions about that option.
 
 
 
@@ -240,6 +243,8 @@ Restart Windows in safe mode, and then try to save the workbook to your local ha
 </table>
 
 ## Additional resources
+
+To avoid problems with documents not saved properly, we recommend that you activate AutoSave. For more information, see: [What is Autosave](https://support.microsoft.com/office/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5)? 
  
 If you experience specific issues when you use Excel, go to the following website to search for more information about your program version:
 

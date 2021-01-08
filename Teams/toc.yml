@@ -15,6 +15,8 @@
       href: ./teams-administration/cannot-access-admin-center.md
     - name: Can't enable archiving or increase mailbox quota in O365 Group mailbox
       href: ./known-issues/group-mailboxes-will-not-enable-archive.md
+    - name:  Can't send messages to a group chat
+      href: ./teams-administration/unable-send-message-group-chat.md
     - name: Include or exclude Teams from antivirus or DLP applications
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
     - name: Organizations can't prevent users from changing profile photos
@@ -25,6 +27,9 @@
       href: ./teams-administration/admin-self-help-diagnostics.md
     - name: User doesn't receive welcome email when added by an administrator
       href: ./known-issues/welcome-email-not-received-in-teams.md
+    - name: User information isn't updated
+      href: ./teams-administration/user-information-not-updated.md
+
   - name: Authentication
     items:
     - name: Always log into the domain-joined PC account
@@ -113,6 +118,8 @@
       href: ./known-issues/teams-exchange-interaction-issue.md
   - name: Files
     items:
+    - name: '"File is locked" or "item might not exist" error'
+      href: ./files/cannot-upload-files-or-access-onedrive.md
     - name: Can't open files in a chat window
       href: ./known-issues/do-not-have-access-to-this-file-teams.md
     - name: Downloaded documents open in protected view
@@ -133,6 +140,8 @@
     items:
     - name: How to join a Microsoft Teams meeting
       href: ./meetings/how-to-join-a-teams-meeting.md
+    - name: Troubleshoot Teams meeting recording issues
+      href: ./meetings/troubleshoot-meeting-recording-issues.md
   - name: Mobile
     items:
     - name: Can't see auto-favorited channels in mobile app

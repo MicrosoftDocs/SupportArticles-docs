@@ -1,5 +1,5 @@
 ---
-title: Strange characters are displayed in meeting requests, read receipts, and IRM messages
+title: Strange characters in Outlook email text
 description: Provide a workaround to an issue in which recipients receive messages with a mix of characters in various languages in Outlook.
 author: TobyTu
 manager: dcscontentpm
@@ -24,8 +24,6 @@ appliesto:
 ## Symptoms
 
 In Microsoft Outlook and Outlook for Microsoft 365, some recipients receive email messages that contain a mix of characters in various languages in the text body. The messages may take some time to load.
-
-:::image type="content" source="media/strange-characters-display-message-body/garbled-body.png" alt-text="Screenshot of garbled-body garbled body.":::
 
 This issue can occur in the following media:
 

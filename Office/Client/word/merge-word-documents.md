@@ -30,13 +30,13 @@ If you need to cope with Word documents often during work, merger of multiple Wo
 
 2. Select **Object**, press a small triangle next to it, and then select **Text from File** from the dropdown menu.
 
-   ![Screenshot of the Text from File option](./media/merge-word-documents/text-from-file.png)
+   :::image type="content" source="./media/merge-word-documents/text-from-file.png" alt-text="Screenshot of the Text from File option.":::
 
 3. After that, you can select files to be merged into the current document. By pressing and holding **Ctrl** to select more than one document.
 
     > [!NOTE]
     > Documents placed at the top will be merged in the first place. Therefore, please sort and number each target document in case that you want to keep a certain sequence for your documents.
 
-   ![Screenshot of insert file](./media/merge-word-documents/insert-file.png)
+   ![Screenshot of inserting file](./media/merge-word-documents/insert-file.png)
 
 If it doesn't work all the same, you can dig the [Forum](https://answers.microsoft.com/default.aspx) to see if any solution can be best for you.
