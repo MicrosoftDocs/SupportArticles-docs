@@ -2,7 +2,7 @@
 title: WinHTTP SDP package information
 description: This article outlines the manual steps required to disable WinHTTP tracing that was enabled using the SDP package.
 ms.date: 03/23/2020
-ms.prod-support-area-path: WWW service and Svchost operation
+ms.prod-support-area-path: WWW service and Svchost operation
 ms.reviewer: huizhu
 ms.topic: how-to
 ---

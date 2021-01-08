@@ -133,7 +133,7 @@ The following restrictions and limitations may affect the support policy of the 
 
 - **Q5: Is Quick and Live Migration with Windows Server 2012 or Windows Server 2008 R2 Hyper-V supported with SQL Server?**
 
-  A5: Yes, Live Migration is supported for SQL Server 2008 and later versions when used with Windows Server 2008 R2 or later versions with Hyper-V and with Hyper-V server 2008 R2 or later versions. Quick Migration, which was introduced with Windows Server 2008 with Hyper-V and Hyper-V Server 2008, is also supported for SQL Server (All versions from SQL Server 2008 and later) in Windows Server 2008 (or later versions) with Hyper-V and Hyper-V Server 2008  (or later versions).
+  A5: Yes, Live Migration is supported for SQL Server 2008 and later versions when used with Windows Server 2008 R2 or later versions with Hyper-V and with Hyper-V server 2008 R2 or later versions. Quick Migration, which was introduced with Windows Server 2008 with Hyper-V and Hyper-V Server 2008, is also supported for SQL Server (All versions from SQL Server 2008 and later) in Windows Server 2008 (or later versions) with Hyper-V and Hyper-V Server 2008  (or later versions).
 
 - **Q6: What is the support policy for SQL Server when using an SVVP vendor virtualization feature such as snapshots or migration?**
 
@@ -151,13 +151,13 @@ The following restrictions and limitations may affect the support policy of the 
 
   - [SQL Server and Hyper-V Dynamic Memory - Part 2](/archive/blogs/sqlosteam/sql-server-and-hyper-v-dynamic-memory-part-2)
 
-- **Q8: Do you support SQL Server running in Microsoft Azure Virtual Machine?**
+- **Q8: Do you support SQL Server running in Microsoft Azure Virtual Machine?**
 
-  A8: Yes. Microsoft supports SQL Server 2008 and later versions in Microsoft Azure Infrastructure Services that includes Microsoft Azure Virtual Machines and Microsoft Azure Virtual Network. Consider the following when you deploy SQL Server 2008 and later versions in Microsoft Azure Virtual Machine:
+  A8: Yes. Microsoft supports SQL Server 2008 and later versions in Microsoft Azure Infrastructure Services that includes Microsoft Azure Virtual Machines and Microsoft Azure Virtual Network. Consider the following when you deploy SQL Server 2008 and later versions in Microsoft Azure Virtual Machine:
 
   - Microsoft Azure Storages Geo-Replication is not supported if the data and log files of a database are stored in more than one disk.
 
-  - AlwaysOn Availability Groups (with multiple Listeners) fully supported.
+  - AlwaysOn Availability Groups (with multiple Listeners) fully supported.
 
   - We recommend a DS3 VM or higher for SQL Enterprise edition, and DS2 or higher for SQL Standard and Web.
 
@@ -165,9 +165,9 @@ The following restrictions and limitations may affect the support policy of the 
 
   - For more information about Microsoft Azure Virtual Machine and SQL Server, see [What is SQL Server on Azure Virtual Machines (Windows)](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview).
 
-  - SQL Server failover cluster instances (FCI) are supported in the following scenarios:
+  - SQL Server failover cluster instances (FCI) are supported in the following scenarios:
 
-    - SQL Server FCI on Windows Server 2016  and later versions with Storage Spaces Direct. For more information, see [Configure SQL Server Failover Cluster Instance on Azure Virtual Machines](/azure/azure-sql/virtual-machines/windows/failover-cluster-instance-premium-file-share-manually-configure).
+    - SQL Server FCI on Windows Server 2016  and later versions with Storage Spaces Direct. For more information, see [Configure SQL Server Failover Cluster Instance on Azure Virtual Machines](/azure/azure-sql/virtual-machines/windows/failover-cluster-instance-premium-file-share-manually-configure).
 
     - SQL Server FCI on Windows Server 2016 and later versions with premium file shares. For more information review [Create an FCI with a premium file share (SQL Server on Azure VMs)](/azure/azure-sql/virtual-machines/windows/failover-cluster-instance-premium-file-share-manually-configure?tabs=windows2012).
 
@@ -175,7 +175,7 @@ The following restrictions and limitations may affect the support policy of the 
 
 - **Q9: Can customers run SQL Server in the Microsoft Azure VM role?**
 
-  A9:  Microsoft Azure VM role is a non-persistent role and not the same as Microsoft Azure Virtual Machine. It is not supported for SQL Server production use. Customers who want to deploy data platform capabilities today in the Microsoft Azure platform should use Microsoft Azure Virtual Machine or Microsoft Azure SQL Database.
+  A9:  Microsoft Azure VM role is a non-persistent role and not the same as Microsoft Azure Virtual Machine. It is not supported for SQL Server production use. Customers who want to deploy data platform capabilities today in the Microsoft Azure platform should use Microsoft Azure Virtual Machine or Microsoft Azure SQL Database.
 
 - **Q10: Are there any recommended configuration or best practices to consider while deploying SQL Server in virtualized environments?**
 

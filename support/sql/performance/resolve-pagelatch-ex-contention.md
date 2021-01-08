@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4460004
 
 Consider the following scenarios:
 
-- You have a column that includes sequential values, such as an Identity column or a DateTime column, that is being inserted through the **Getdate()** function.
+- You have a column that includes sequential values, such as an Identity column or a DateTime column, that is being inserted through the **Getdate()** function.
 
 - You have a clustered index that has the sequential column as a leading column.
 
@@ -60,29 +60,29 @@ You notice that multiple sessions are all waiting for the same resource that res
 database_id = 5, file_id = 1, database page_id = 4144
 
 > [!NOTE]
-> The database_id should be a user database (the ID number is greater than or equal to **5**). If the database_id is **2**, you may, instead, be experiencing the issue that is discussed in [Files, trace flags and updates on TEMPDB](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my).
+> The database_id should be a user database (the ID number is greater than or equal to **5**). If the database_id is **2**, you may, instead, be experiencing the issue that is discussed in [Files, trace flags and updates on TEMPDB](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my).
 
 ## Cause
 
 **PAGELATCH** (latch on a data or index page) is a thread-synchronization mechanism. It is used to synchronize short-term physical access to database pages that are located in the Buffer cache.
 
-**PAGELATCH** differs from a **PAGEIOLATCH**. The latter is used to synchronize physical access to pages when they are read from or written to disk.
+**PAGELATCH** differs from a **PAGEIOLATCH**. The latter is used to synchronize physical access to pages when they are read from or written to disk.
 
-Page latches are common in every system because they ensure physical page protection. A clustered index orders the data by the leading key column. For this reason, when you create the index on a sequential column, this causes all new data inserts to occur on the same page at the end of the index until that page is filled. However, under high load, the concurrent INSERT operations may cause contention on the last page of the B-tree. This contention can occur on clustered and nonclustered indexes. This is because the nonclustered index orders the leaf-level pages by the leading key. This issue is also known as last-page insert contention.
+Page latches are common in every system because they ensure physical page protection. A clustered index orders the data by the leading key column. For this reason, when you create the index on a sequential column, this causes all new data inserts to occur on the same page at the end of the index until that page is filled. However, under high load, the concurrent INSERT operations may cause contention on the last page of the B-tree. This contention can occur on clustered and nonclustered indexes. This is because the nonclustered index orders the leaf-level pages by the leading key. This issue is also known as last-page insert contention.
 
 For more information, see [Diagnosing and Resolving Latch Contention on SQL Server](/sql/relational-databases/diagnose-resolve-latch-contention).
 
 ## Resolution
 
-To resolve this contention, the overall strategy is to prevent all concurrent INSERT operations from accessing the same database page. Instead, make each INSERT operation access a different page and increase concurrency. Therefore, any of the following methods that organize the data by a column other than the sequential column achieves this goal.
+To resolve this contention, the overall strategy is to prevent all concurrent INSERT operations from accessing the same database page. Instead, make each INSERT operation access a different page and increase concurrency. Therefore, any of the following methods that organize the data by a column other than the sequential column achieves this goal.
 
 In SQL Server 2019, a new index option (OPTIMIZE_FOR_SEQUENTIAL_KEY) was added that can help resolve this issue without using any of the following methods. See [Behind the Scenes on OPTIMIZE_FOR_SEQUENTIAL_KEY](https://techcommunity.microsoft.com/t5/SQL-Server/Behind-the-Scenes-on-OPTIMIZE-FOR-SEQUENTIAL-KEY/ba-p/806888) for more information.
 
 ### Method 1
 
-Make the column that contains sequential values a nonclustered index, and then move the clustered index to another column. For example, for a primary key on an identity column, remove the clustered primary key, and then re-create it as a nonclustered primary key. This is the easiest method to do, and it directly achieves the goal.
+Make the column that contains sequential values a nonclustered index, and then move the clustered index to another column. For example, for a primary key on an identity column, remove the clustered primary key, and then re-create it as a nonclustered primary key. This is the easiest method to do, and it directly achieves the goal.
 
-For example, assume that you have the following table that was defined by using a clustered primary key on an Identity column.
+For example, assume that you have the following table that was defined by using a clustered primary key on an Identity column.
 
 ```sql
 CREATE TABLE Customers 
@@ -103,7 +103,7 @@ primary key NONCLUSTERED (CustomerID)
 
 ### Method 2
 
-Reorder the clustered index definition in such a way that the leading column isn't the sequential column. This requires that the clustered index be a composite index. For example, in a customer table, you can make a **CustomerLastName** column be the leading column, followed by the **CustomerID**. We recommend that you thoroughly test this method to make sure that it meets performance requirements.
+Reorder the clustered index definition in such a way that the leading column isn't the sequential column. This requires that the clustered index be a composite index. For example, in a customer table, you can make a **CustomerLastName** column be the leading column, followed by the **CustomerID**. We recommend that you thoroughly test this method to make sure that it meets performance requirements.
 
 ```sql
 ALTER TABLE Customers 
@@ -113,7 +113,7 @@ primary key clustered (CustomerLastName, CustomerID)
 
 ### Method 3
 
-Add a nonsequential hash value as the leading index key. This will also spread out the inserts. A hash value is generated as a modulo that matches the number of CPUs on the system. For example, on a 16-CPU system, you can use a modulo of 16. This method spreads out the INSERT operations uniformly against multiple database pages.
+Add a nonsequential hash value as the leading index key. This will also spread out the inserts. A hash value is generated as a modulo that matches the number of CPUs on the system. For example, on a 16-CPU system, you can use a modulo of 16. This method spreads out the INSERT operations uniformly against multiple database pages.
 
 ```sql
 CREATE TABLE Customers 
@@ -134,16 +134,16 @@ PRIMARY KEY CLUSTERED (HashValue, CustomerID)
 Use a GUID as the leading key column of an index to ensure the uniform distribution of inserts.
 
 > [!NOTE]
-> Although it achieves the goal, we don't recommend this method because it presents multiple challenges, including a large index key, frequent page splits, low page density, and so on.
+> Although it achieves the goal, we don't recommend this method because it presents multiple challenges, including a large index key, frequent page splits, low page density, and so on.
 
 ### Method 5
 
-Use table partitioning and a computed column that has a hash value to spread out the INSERT operations. Because this method uses table partitioning, it's usable only on Enterprise editions of SQL Server.
+Use table partitioning and a computed column that has a hash value to spread out the INSERT operations. Because this method uses table partitioning, it's usable only on Enterprise editions of SQL Server.
 
 > [!NOTE]
 > You can use Partitioned tables in SQL Server 2016 SP1 Standard Edition. For more information, see the description of "Table and index partitioning" in the article [Editions and supported features of SQL Server 2016](/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2017#RDBMSSP&preserve-view=true).
 
-The following is an example in a system that has 16 CPUs.
+The following is an example in a system that has 16 CPUs.
 
 ```sql
 CREATE TABLE Customers 

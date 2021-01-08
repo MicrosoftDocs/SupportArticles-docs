@@ -35,9 +35,9 @@ _Original KB number:_ &nbsp; 321185
   |---|---|---|---|
   |SQL Server 2019|None| [CU8 for 2019](https://support.microsoft.com/help/4577194) (15.0.4073.23 - September 2020)| [SQL Server 2019 builds](https://support.microsoft.com/help/4518398) |
   |SQL Server 2017|None| [CU22 for 2017](https://support.microsoft.com/help/4577467) (14.0.3356.20 - September 2020)| [SQL Server 2017 builds](https://support.microsoft.com/help/4047329) |
-  |SQL Server 2016| [SQL Server 2016 SP2](https://support.microsoft.com/help/4052908)  (13.0.5026.0 - April 2018)|[CU15 for 2016 SP2](https://support.microsoft.com/help/4577775) (13.0.5850.14 - September 2020)<br/> [CU15 + GDR for 2016 SP1](https://support.microsoft.com/help/4505221) (13.0.4604.0 - July 2019) <br/>[CU15 for 2016 SP1](https://support.microsoft.com/help/4495257) (13.0.4574.0 - May 2019)<br/>[CU14 for 2016 SP2](https://support.microsoft.com/help/4564903)  (13.0.5830.85- August 2020)<br/>  [CU9 for 2016 RTM](https://support.microsoft.com/help/4037357)  (13.0.2216.0 - November 2017)| [SQL Server 2016 builds](https://support.microsoft.com/help/3177312) |
-  |SQL Server 2014| [SQL Server 2014 SP3](https://support.microsoft.com/help/4022619)  (12.0.6024.0 - October 2018)| [CU4 for 2014 SP3](https://support.microsoft.com/help/4022619)  (12.0.6329.1 - July 2019)<br/>  [CU18 for 2014 SP2](https://support.microsoft.com/help/4500180)  (12.0.5687.1 - July 2019) [CU13 for 2014 SP1](https://support.microsoft.com/help/4019099)  (12.0.4522.0 - August 2017)| [SQL Server 2014 builds](https://support.microsoft.com/help/321185/#sqlserver2014) |
-  |SQL Server 2012| [SQL Server 2012 SP4](https://support.microsoft.com/help/4018073) (11.0.7001.0 - September 2017)<br/>| [CU10 for 2012 SP3](https://support.microsoft.com/help/4025925)  (11.0.6607.3 - August 2017)<br/><br/> [CU16 for 2012 SP2](https://support.microsoft.com/help/3205054)  (11.0.5678.0 - January 2017)<br/><br/> [CU16 for 2012 SP1](https://support.microsoft.com/help/3052476) (11.0.3487.0 - May 2015)| [SQL Server 2012 builds](https://support.microsoft.com/help/321185/#sqlserver2012) |
+  |SQL Server 2016| [SQL Server 2016 SP2](https://support.microsoft.com/help/4052908)  (13.0.5026.0 - April 2018)|[CU15 for 2016 SP2](https://support.microsoft.com/help/4577775) (13.0.5850.14 - September 2020)<br/> [CU15 + GDR for 2016 SP1](https://support.microsoft.com/help/4505221) (13.0.4604.0 - July 2019) <br/>[CU15 for 2016 SP1](https://support.microsoft.com/help/4495257) (13.0.4574.0 - May 2019)<br/>[CU14 for 2016 SP2](https://support.microsoft.com/help/4564903)  (13.0.5830.85- August 2020)<br/>  [CU9 for 2016 RTM](https://support.microsoft.com/help/4037357)  (13.0.2216.0 - November 2017)| [SQL Server 2016 builds](https://support.microsoft.com/help/3177312) |
+  |SQL Server 2014| [SQL Server 2014 SP3](https://support.microsoft.com/help/4022619)  (12.0.6024.0 - October 2018)| [CU4 for 2014 SP3](https://support.microsoft.com/help/4022619)  (12.0.6329.1 - July 2019)<br/>  [CU18 for 2014 SP2](https://support.microsoft.com/help/4500180)  (12.0.5687.1 - July 2019) [CU13 for 2014 SP1](https://support.microsoft.com/help/4019099)  (12.0.4522.0 - August 2017)| [SQL Server 2014 builds](https://support.microsoft.com/help/321185/#sqlserver2014) |
+  |SQL Server 2012| [SQL Server 2012 SP4](https://support.microsoft.com/help/4018073) (11.0.7001.0 - September 2017)<br/>| [CU10 for 2012 SP3](https://support.microsoft.com/help/4025925)  (11.0.6607.3 - August 2017)<br/><br/> [CU16 for 2012 SP2](https://support.microsoft.com/help/3205054)  (11.0.5678.0 - January 2017)<br/><br/> [CU16 for 2012 SP1](https://support.microsoft.com/help/3052476) (11.0.3487.0 - May 2015)| [SQL Server 2012 builds](https://support.microsoft.com/help/321185/#sqlserver2012) |
   |SQL Server 2008 R2| [SQL Server 2008 R2 SP3](https://support.microsoft.com/help/2979597) (10.50.6000.34 - September 2014)<br/><br/> **Note** Latest and final release for this version|None| [SQL Server 2008 R2 builds](https://support.microsoft.com/help/321185/#sqlserver2008r2) |
   |SQL Server 2008| [SQL Server 2008 SP4](https://support.microsoft.com/help/2979596) (10.0.6000.29 - September 2014)<br/><br/> **Note** Latest and final release for this version|None| [SQL Server 2008 builds](https://support.microsoft.com/help/321185/#sqlserver2008) |
   |||||  
@@ -133,7 +133,7 @@ on Windows NT 6.1 \<X64> (Build 7600: )
   >
   > - Starting with [SQL Server 2014 RTM Cumulative Update 10](https://support.microsoft.com/help/3094220) and [SQL Server 2014 Service Pack 1 Cumulative Update 3](https://support.microsoft.com/help/3094221), additional properties have been added to ServerProperty statement. For a complete list review [SERVERPROPERTY (Transact-SQL)](/sql/t-sql/functions/serverproperty-transact-sql).
 
-- **Method 5:** Starting in SQL Server 2008, you can also use the Installed SQL Server Features Discovery report. This report can be found by locating the **Tools**  page of SQL Server Installation Center. This tool gives information about all the instances of SQL Server that are installed on the system. These include client tools such as SQL Server Management Studio. The only thing to be aware of is that this tool can be run locally only on the system where SQL server is installed. It cannot be used to obtain information about remote servers. For more information, see [Validate a SQL Server Installation](/sql/database-engine/install-windows/validate-a-sql-server-installation).
+- **Method 5:** Starting in SQL Server 2008, you can also use the Installed SQL Server Features Discovery report. This report can be found by locating the **Tools**  page of SQL Server Installation Center. This tool gives information about all the instances of SQL Server that are installed on the system. These include client tools such as SQL Server Management Studio. The only thing to be aware of is that this tool can be run locally only on the system where SQL server is installed. It cannot be used to obtain information about remote servers. For more information, see [Validate a SQL Server Installation](/sql/database-engine/install-windows/validate-a-sql-server-installation).
 
   A snapshot of a sample report is as follows:
 
@@ -460,7 +460,7 @@ For more information, go to the following websites:
 |13.0.2197.0|RTM| CU5| [4013105](https://support.microsoft.com/help/4013105)|March 20, 2017|
 |13.0.2193.0|RTM| CU4| [3205052](https://support.microsoft.com/help/3205052)|January 17, 2017|
 |13.0.2186.6|RTM| CU3| [3205413](https://support.microsoft.com/help/3205413)|November 16, 2016|
-|13.0.2164.0|RTM| CU2| [3182270](https://support.microsoft.com/help/3182270)|September 22, 2016|
+|13.0.2164.0|RTM| CU2| [3182270](https://support.microsoft.com/help/3182270)|September 22, 2016|
 |13.0.2149.0|RTM| CU1| [3164674](https://support.microsoft.com/help/3164674)|July 25, 2016|
 ||||||
 
@@ -487,17 +487,17 @@ For more information, go to the following websites:
 |12.0.5563.0|SP2|CU9| [4055557](https://support.microsoft.com/help/4055557)|December 18, 2017|
 |12.0.5557.0|SP2|CU8| [4037356](https://support.microsoft.com/help/4037356)|October 16, 2017|
 |12.0.5556.0|SP2|CU7| [4032541](https://support.microsoft.com/help/4032541)|August 28, 2017|
-|12.0.5553.0|SP2|CU6| [4019094](https://support.microsoft.com/help/4019094)|August 8, 2017 |
-|12.0.5546.0|SP2|CU5| [4013098](https://support.microsoft.com/help/4013098)|April 17, 2017 |
-|12.0.5540.0|SP2|CU4| [4010394](https://support.microsoft.com/help/4010394)|February 21, 2017 |
-|12.0.5538.0|SP2|CU3| [3204388](https://support.microsoft.com/help/3204388)|December 19, 2016 |
+|12.0.5553.0|SP2|CU6| [4019094](https://support.microsoft.com/help/4019094)|August 8, 2017 |
+|12.0.5546.0|SP2|CU5| [4013098](https://support.microsoft.com/help/4013098)|April 17, 2017 |
+|12.0.5540.0|SP2|CU4| [4010394](https://support.microsoft.com/help/4010394)|February 21, 2017 |
+|12.0.5538.0|SP2|CU3| [3204388](https://support.microsoft.com/help/3204388)|December 19, 2016 |
 |12.0.5522.0|SP2|CU2| [3188778](https://support.microsoft.com/help/3188778)|October 17, 2016|
 |12.0.5511.0|SP2|CU1| [3178925](https://support.microsoft.com/help/3178925)|August 25, 2016|
 |12.0.5000.0|SP2| RTW/PCU2| [3171021](https://support.microsoft.com/help/3171021)|July 11, 2016|
-|12.0.4522.0|SP1|CU13| [4019099](https://support.microsoft.com/help/4019099)|August 8, 2017 |
-|12.0.4511.0|SP1|CU12| [4017793](https://support.microsoft.com/help/4017793)|April 17, 2017 |
-|12.0.4502.0|SP1|CU11| [4010392](https://support.microsoft.com/help/4010392)|February 21, 2017 |
-|12.0.4491.0|SP1|CU10| [3204399](https://support.microsoft.com/help/3204399)|December 19, 2016 |
+|12.0.4522.0|SP1|CU13| [4019099](https://support.microsoft.com/help/4019099)|August 8, 2017 |
+|12.0.4511.0|SP1|CU12| [4017793](https://support.microsoft.com/help/4017793)|April 17, 2017 |
+|12.0.4502.0|SP1|CU11| [4010392](https://support.microsoft.com/help/4010392)|February 21, 2017 |
+|12.0.4491.0|SP1|CU10| [3204399](https://support.microsoft.com/help/3204399)|December 19, 2016 |
 |12.0.4474.0|SP1|CU9| [3186964](https://support.microsoft.com/help/3186964)|October 17, 2016|
 |12.0.4468.0|SP1|CU8| [3174038](https://support.microsoft.com/help/3174038)|August 15, 2016|
 |12.0.4459.0|SP1|CU7| [3162659](https://support.microsoft.com/help/3162659)|June 20, 2016|
@@ -669,7 +669,7 @@ For more information, go to the following websites:
 |10.00.6241.00|SP3| MS15-058: GDR Security Update| [3045311](https://support.microsoft.com/help/3045311)|July 14, 2015|
 |10.00.5890.00|SP3| MS15-058: QFE Security Update| [3045303](https://support.microsoft.com/help/3045303)|July 14, 2015|
 |10.00.5869.00|SP3| MS14-044: QFE Security Update| [2984340](https://support.microsoft.com/help/2984340), [2977322](https://support.microsoft.com/help/2977322)|August 12, 2014|
-|10.00.5867.00|(on-demand update package)|| [2888996](https://support.microsoft.com/help/2888996), [2877204](https://support.microsoft.com/help/2877204), [2920987](https://support.microsoft.com/help/2920987)| |
+|10.00.5867.00|(on-demand update package)|| [2888996](https://support.microsoft.com/help/2888996), [2877204](https://support.microsoft.com/help/2877204), [2920987](https://support.microsoft.com/help/2920987)| |
 |10.00.5861.00|SP3|CU17| [2958696](https://support.microsoft.com/help/2958696)|May 19, 2014|
 |10.00.5852.00|SP3|CU16| [2936421](https://support.microsoft.com/help/2936421)|March 17, 2014|
 |10.00.5850.00|SP3|CU15| [2923520](https://support.microsoft.com/help/2923520)|January 20, 2014|
@@ -798,9 +798,9 @@ For more information, go to the following websites:
 |9.00.3077|SP4| MS09-004: GDR Security update| [960089](https://support.microsoft.com/help/960089)|February 10, 2009|
 |9.00.3073|SP5| MS08-052: GDR Security update| [954606](https://support.microsoft.com/help/954606)|September 9, 2008|
 |9.00.3068|SP6| MS08-040: GDR Security update| [948109](https://support.microsoft.com/help/948109)|July 8, 2008|
-|9.00.3042| SP2|| [937137](https://support.microsoft.com/help/937137)| |
-|9.00.2047| SP1||| |
-|9.00.1399| RTM||| |
+|9.00.3042| SP2|| [937137](https://support.microsoft.com/help/937137)| |
+|9.00.2047| SP1||| |
+|9.00.1399| RTM||| |
 ||||||
 
 ### SQL Server 2000

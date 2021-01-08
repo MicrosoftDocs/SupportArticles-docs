@@ -2,7 +2,7 @@
 title: Time-taken fields in IIS HTTP logging
 description: This article describes the functionality of the time-taken field in Internet Information Services (IIS) 6.0 and IIS 7.0 HTTP logging, and also describes the values that are stored in the time-taken field.
 ms.date: 04/17/2020
-ms.prod-support-area-path: Health, diagnostic, and performance features
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.reviewer: mlaing
 ms.topic: article
 ---

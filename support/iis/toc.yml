@@ -263,7 +263,7 @@
     href: shared-configuration-require-same-version.md
   - name: ShutdownTimeLimit property doesn't work
     href: shutdowntimelimit-not-apply-to-wcf.md
-  - name: Troubleshoot Kerberos failures
+  - name: Troubleshoot Kerberos failures
     href: troubleshoot-kerberos-failures-ie.md
   - name: Understanding identities
     href: understanding-identities.md
