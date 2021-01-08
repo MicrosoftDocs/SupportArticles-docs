@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2009672
 
 Consider the following scenario:
 
-- You create an SQL Server Integration Services (SSIS) package that has an SQL Server Destination component within a Dataflow Task.
+- You create an SQL Server Integration Services (SSIS) package that has an SQL Server Destination component within a Dataflow Task.
 - You try to run this package on systems where User Account Control (UAC) is enabled (for example Vista or Windows 7) using one of the following methods：
 
   - Business Intelligence Development Studio (BIDS)
@@ -27,12 +27,12 @@ Consider the following scenario:
 In this scenario, you may get an error message that is similar to the following:
 
 > SQL Server Destination] Error: Unable to prepare the SSIS bulk insert for data insertion.
-[SSIS.Pipeline] Error: component "SQL Server Destination" failed the pre-execute phase and returned error code 0xC0202071.
+[SSIS.Pipeline] Error: component "SQL Server Destination" failed the pre-execute phase and returned error code 0xC0202071.
 
 > [!NOTE]
 > You will not get this error if you run the package under the Builtin Administrator Account that gets created during Operating System installation. But you will get this message for any other user including those that are members of the Local Administrators group.
 >
-> The problem does not occur when you execute the same SSIS package as a SQL Server Agent job.
+> The problem does not occur when you execute the same SSIS package as a SQL Server Agent job.
 >
 > After SQL 2008 Service Pack 2 is installed, the text of the error **DTS_E_BULKINSERTAPIPREPARATIONFAILED (0xC0202071)** has been changed to: **Unable to bulk copy data. You may need to run this package as an administrator.**
 >
@@ -48,14 +48,14 @@ Use one of the following methods to work around the problem:
 
 - If you are running the package from either SQL Server Management Studio (SSMS) or Business Intelligence Development Studio (BIDS) or DTExecUI.exe, launch those tools under the elevated Administrator account. To do this, click **Start**, point to **All Programs**, point to **SQL Server 2005** or **SQL Server 2008**, right-click the tool you are using and then click **Run as administrator**. This launches the application with elevated privileges of the Built In Administrator account and the package executes successfully.
 
-  Similarly if you are running the package using DTExec.exe launch it from an elevated command prompt. You can start the elevated command prompt by clicking **Start**, click **All Programs**, click **Accessories**, right-click **Command Prompt**, and then click **Run as administrator.**  
+  Similarly if you are running the package using DTExec.exe launch it from an elevated command prompt. You can start the elevated command prompt by clicking **Start**, click **All Programs**, click **Accessories**, right-click **Command Prompt**, and then click **Run as administrator.**  
 
   > [!NOTE]
   > If you do not log on to the computer as an administrator, you are prompted to provide the administrator account. When you are prompted to provide the administrator account, type the administrator user name and password in the **User Account Control** dialog box. Then, click **OK**.  
 
 - Replace the SQL Server Destination components in the Dataflow Tasks that are failing with OLE DB Destination components that point to the same SQL Server connection manager.
 
-- Use an account that is not a member of the local Administrators group after assigning Create Global Objects user right to that account. To do this, follow these steps:
+- Use an account that is not a member of the local Administrators group after assigning Create Global Objects user right to that account. To do this, follow these steps:
 
   1. Click **Start**, point to **Administrative Tools**, and then click **Local Security Policy**.
   2. Expand **Local Policies**, and then click **User Rights Assignment**.

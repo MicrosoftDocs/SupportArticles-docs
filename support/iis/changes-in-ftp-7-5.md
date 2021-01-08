@@ -2,7 +2,7 @@
 title: Changes in FTP 7.5
 description: This article introduces the changes that were made for Microsoft FTP 7.5.
 ms.date: 04/07/2020
-ms.prod-support-area-path: FTP service and Svchost or Inetinfo process operation
+ms.prod-support-area-path: FTP service and Svchost or Inetinfo process operation
 ms.technology: iis
 ms.reviewer: kaorif, mlaing, robmcm, dougste
 ms.topic: article

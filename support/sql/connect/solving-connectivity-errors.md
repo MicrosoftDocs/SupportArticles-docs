@@ -42,7 +42,7 @@ To effectively use this troubleshooter, you may want to gather the following inf
 
 - Check if SQL is listening on appropriate protocols by reviewing the ErrorLog.
 
-- Check if you are able to connect to SQL server by using a UDL file. If it works, then there may be an issue with the connection string. For instructions on the procedure about UDL test, move to  [Connect to SQL server by using a UDL file](#connect-to-sql-server-by-using-a-udl-file) section.
+- Check if you are able to connect to SQL server by using a UDL file. If it works, then there may be an issue with the connection string. For instructions on the procedure about UDL test, move to  [Connect to SQL server by using a UDL file](#connect-to-sql-server-by-using-a-udl-file) section.
 
 - Check if you are able to connect to SQL Server from other client systems and different user logins. If you are able to, then the issue could be specific to the client or login that is experiencing the issue. Check the Windows event logs on problematic client for additional pointers. Also check if network drivers are up to date.
 
@@ -339,12 +339,12 @@ For additional information as to why the Kerberos operations cannot be completed
 
 Kerberos authentication failures can happen due to a variety of reasons. The major causes and corresponding resolutions are highlighted below:
 
-| Issue type| Suggested resolutions|
+| Issue type| Suggested resolutions|
 |---|---|
-| SPN Issues:<br/><ul><li> Missing SPNs: SPN is not registered in the Active directory.</li> <li>Incorrect SPN entries: SPN exists, but the port number is incorrect or it exists on a different account other than the SQL Service account.</li><li>Duplicate SPNs: The same SPN exists on multiple accounts in the active directory.</li></ul> |Check [Using Kerberos Configuration manager to diagnose and fix SPN and delegation issues](#using-kerberos-configuration-manager-to-diagnose-and-fix-spn-and-delegation-issues) section to diagnose and resolve SPN issues.<br/><br/>**Note** For in-depth understanding of SPNs, Kerberos, and other related concepts review the information in the following KB article:<br/> [How to troubleshoot the "Cannot generate SSPI context" error message](https://support.microsoft.com/help/811889) |
-| SQL Service accounts not trusted for delegation. If you are using Local System account, the middle server should be trusted for delegation in the active directory.|UseKerberos configuration manager 's delegation tab to confirm and work with your Active directory administrator to enable delegation for the account. Check [Using Kerberos Configuration manager to diagnose and fix SPN and delegation issues](#using-kerberos-configuration-manager-to-diagnose-and-fix-spn-and-delegation-issues) for details in the following paragraph. |
+| SPN Issues:<br/><ul><li> Missing SPNs: SPN is not registered in the Active directory.</li> <li>Incorrect SPN entries: SPN exists, but the port number is incorrect or it exists on a different account other than the SQL Service account.</li><li>Duplicate SPNs: The same SPN exists on multiple accounts in the active directory.</li></ul> |Check [Using Kerberos Configuration manager to diagnose and fix SPN and delegation issues](#using-kerberos-configuration-manager-to-diagnose-and-fix-spn-and-delegation-issues) section to diagnose and resolve SPN issues.<br/><br/>**Note** For in-depth understanding of SPNs, Kerberos, and other related concepts review the information in the following KB article:<br/> [How to troubleshoot the "Cannot generate SSPI context" error message](https://support.microsoft.com/help/811889) |
+| SQL Service accounts not trusted for delegation. If you are using Local System account, the middle server should be trusted for delegation in the active directory.|UseKerberos configuration manager 's delegation tab to confirm and work with your Active directory administrator to enable delegation for the account. Check [Using Kerberos Configuration manager to diagnose and fix SPN and delegation issues](#using-kerberos-configuration-manager-to-diagnose-and-fix-spn-and-delegation-issues) for details in the following paragraph. |
 |Incorrect name resolution: Your server name may be resolving to a different IP address than that is registered by your network's DNS server.| **ping -a <your_target_machine>** (use -4 and -6 for IPv4 and IPv6 specifically)<br/> **ping -a <Your_remote_IPAddress> nslookup** (type your local and remote machine name and IP address multiple times)<br/><br/>Look for any discrepancies and mismatches on the returned results. The correctness of DNS configuration on the network is vital to SQL connection. Wrong DNS entry could cause of all sorts of connectivity issue later.|
-|Firewalls or other network devices preventing connections from the client to the domain controller: SPNs are stored in active directory and if the clients are unable to communicate with the AD, the connection cannot proceed further.| Check the following links for additional information:<br/><ul><li> [Active Directory and Active Directory Domain Services Port Requirements](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772723(v=ws.10)) </li><li> [Kerberos Authentication Tools and Settings](/previous-versions/windows/it-pro/windows-server-2003/cc738673(v=ws.10))</li></ul> |
+|Firewalls or other network devices preventing connections from the client to the domain controller: SPNs are stored in active directory and if the clients are unable to communicate with the AD, the connection cannot proceed further.| Check the following links for additional information:<br/><ul><li> [Active Directory and Active Directory Domain Services Port Requirements](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772723(v=ws.10)) </li><li> [Kerberos Authentication Tools and Settings](/previous-versions/windows/it-pro/windows-server-2003/cc738673(v=ws.10))</li></ul> |
 |||
 
 > [!NOTE]
@@ -438,12 +438,12 @@ There could be a more specific error. Select the exact error you receive:
 
 There are at least three scenarios for this issue. Use the following table to go through each applicable scenario and take the appropriate resolution steps.
 
-| Potential cause| Suggested resolutions|
+| Potential cause| Suggested resolutions|
 |---|---|
-| Double hop scenarios on the same machine - You are trying to do a double hop, but NTLM credentials are being used instead of Kerberos.| For double hop scenarios on the same machine, add DisableLoopbackCheck or BackConnectionHostNames registry entries as per the following:<ul><li>  [DisableLoopbackCheck. Lets do it the right way](/archive/blogs/sharepoint_foxhole/disableloopbackcheck-lets-do-it-the-right-way)</li></ul> |
-| Double hop scenarios across multiple machines - the error could happen when Kerberos connections are failing due to SPN issues.|Move to section: [Troubleshooting authentication failures due to Kerberos issues](#troubleshooting-authentication-failures-due-to-kerberos-issues) at the bottom to see details.|
-| No double hop involved.| If no double-hop is involved, then it could also mean that there are Duplicate SPNs and the client is running as LocalSystem or other machine account that gets NTLM credentials instead of Kerberos credentials.<br/><br/>Move to section: [Troubleshooting authentication failures due to Kerberos issues](#troubleshooting-authentication-failures-due-to-kerberos-issues) to diagnose and resolve SPN issues.|
-| Windows local security policy may have been configured to prevent the use of machine account for local accounts going off the box.|On Windows 2008 R2/Windows 7 and later, the Local Security Policy. | Security Options | Network Security can be configured not to use the machine account for local accounts going off-box; it would use Anonymous credentials instead.|
+| Double hop scenarios on the same machine - You are trying to do a double hop, but NTLM credentials are being used instead of Kerberos.| For double hop scenarios on the same machine, add DisableLoopbackCheck or BackConnectionHostNames registry entries as per the following:<ul><li>  [DisableLoopbackCheck. Lets do it the right way](/archive/blogs/sharepoint_foxhole/disableloopbackcheck-lets-do-it-the-right-way)</li></ul> |
+| Double hop scenarios across multiple machines - the error could happen when Kerberos connections are failing due to SPN issues.|Move to section: [Troubleshooting authentication failures due to Kerberos issues](#troubleshooting-authentication-failures-due-to-kerberos-issues) at the bottom to see details.|
+| No double hop involved.| If no double-hop is involved, then it could also mean that there are Duplicate SPNs and the client is running as LocalSystem or other machine account that gets NTLM credentials instead of Kerberos credentials.<br/><br/>Move to section: [Troubleshooting authentication failures due to Kerberos issues](#troubleshooting-authentication-failures-due-to-kerberos-issues) to diagnose and resolve SPN issues.|
+| Windows local security policy may have been configured to prevent the use of machine account for local accounts going off the box.|On Windows 2008 R2/Windows 7 and later, the Local Security Policy. | Security Options | Network Security can be configured not to use the machine account for local accounts going off-box; it would use Anonymous credentials instead.|
 |||
 
 If this does not resolve your issue, move to [Still having problems](#still-having-problems) section.
@@ -466,7 +466,7 @@ Task Category: None
 Level: Error
 Keywords: Classic
 User: N/A
-Computer: <computer name>
+Computer: <computer name>
 Description:This computer was not able to set up a secure session with a domain controller in domain due to the following: The remote procedure call was cancelled. This may lead to authentication problems. Make sure that this computer is connected to the network. If the problem persists, please contact your domain administrator.
 Empty string means that SQL tried to hand-off the credentials to LSASS but there was some problem. Either LSASS was not available or the domain controller could not be contacted.
 Check the event logs on the client and the server machines to see if there are any network or Active Directory related messages around the time of failure and if you do, work with your domain administrator to fix the issues.
@@ -478,7 +478,7 @@ If this does not resolve your issue, move to [Still having problems](#still-havi
 
 If the domain name is not specified, then it is a failing SQL login. If it is specified, then it is a failing Windows-Integrated login. Review the following table for causes and potential resolutions.
 
-| Cause| Resolution steps|
+| Cause| Resolution steps|
 |---|---|
 |The database requested is off-line or otherwise not available.|Check permissions and database availability in SQL Server Management Studio.|
 |The user does not have permissions to the requested database.|Try connecting as another user that has sysadmin rights.|
@@ -543,47 +543,47 @@ A timeout is when something takes longer than it is allowed. We are basically ab
 
     ```console
     System.Data.SqlClient.SqlException: Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding.
-     at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
-     at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
-     at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
-     at System.Data.SqlClient.TdsParserStateObject.ReadSni(DbAsyncResult asyncResult, TdsParserStateObject stateObj)
-     at System.Data.SqlClient.TdsParserStateObject.ReadNetworkPacket()
-     at System.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(Boolean encrypt,Boolean trustServerCert, Boolean& marsCapable)
-     at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnectionowningObject)
-     at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfoserverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
-     at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
-     at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
-     at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
-     at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
-     at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)  
+     at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+     at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+     at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+     at System.Data.SqlClient.TdsParserStateObject.ReadSni(DbAsyncResult asyncResult, TdsParserStateObject stateObj)
+     at System.Data.SqlClient.TdsParserStateObject.ReadNetworkPacket()
+     at System.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(Boolean encrypt,Boolean trustServerCert, Boolean& marsCapable)
+     at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnectionowningObject)
+     at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfoserverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+     at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+     at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+     at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+     at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+     at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)  
     at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject) at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
-     at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
-     at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
-     at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
-     at System.Data.SqlClient.SqlConnection.Open() <-- SqlConnection along with Open tells us that we are trying to open a connection. So, this is not related to a query.  
+     at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+     at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+     at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+     at System.Data.SqlClient.SqlConnection.Open() <-- SqlConnection along with Open tells us that we are trying to open a connection. So, this is not related to a query.  
     ```
 
 - A command timeout in .NET 2.0 Framework looks similar to this:
 
     ```console
     System.Data.SqlClient.SqlException: Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding.
-     at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-     at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
-     at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-     at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
-     at System.Data.SqlClient.SqlDataReader.get_MetaData()
-     at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString) at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
-     at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
-     at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
-     at System.Data.SqlClient.SqlCommand.ExecuteScalar() <-- SqlCommand is used to work with a query, not a connection. ExecuteScalar is used to actually execute a query. You could also see other items like an ExecuteReader or ExecuteNonQuery for example.
+     at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+     at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+     at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+     at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+     at System.Data.SqlClient.SqlDataReader.get_MetaData()
+     at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString) at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+     at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+     at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+     at System.Data.SqlClient.SqlCommand.ExecuteScalar() <-- SqlCommand is used to work with a query, not a connection. ExecuteScalar is used to actually execute a query. You could also see other items like an ExecuteReader or ExecuteNonQuery for example.
     ```
 
 **Resolution steps**:
 Both these issues could be environment or SQL Server related. For example, it could be that you have a slow network or there is query performance issue. There are no hard and fast rules as what could be done here and more investigations may be necessary as to be what could be causing the issue. Increasing the Query Timeout is much more common than increasing the Connection Timeout. This is because when trying to connect to a data source, the connection typically happens quickly (usually within a span of few milliseconds).  
 
-| Type| Things to try|
+| Type| Things to try|
 |---|---|
-|Connection Timeout|<br/>1. Increase ConnectionTimout in your application.<br/>2. Check if the port used by SQL is blocked on the network using a tool like **[Portqry](https://www.microsoft.com/download/details.aspx?id=24009)**.  Move to [Using PortqryUI tool with SQL Server](#using-portqryui-tool-with-sql-server) section for instructions on how to use it. |
+|Connection Timeout|<br/>1. Increase ConnectionTimout in your application.<br/>2. Check if the port used by SQL is blocked on the network using a tool like **[Portqry](https://www.microsoft.com/download/details.aspx?id=24009)**. Move to [Using PortqryUI tool with SQL Server](#using-portqryui-tool-with-sql-server) section for instructions on how to use it. |
 |Command Timeout|<br/> Increase the CommandTimeout value in your application and also fine-tune the queries that are getting executed on the backend. |
 ||
 

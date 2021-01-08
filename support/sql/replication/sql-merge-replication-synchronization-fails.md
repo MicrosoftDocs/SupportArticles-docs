@@ -26,8 +26,8 @@ Consider the following scenario:
 - The table article also contains a column of data type `decimal`.
 
     > [!NOTE]
-    > The table may also contain a column of data type `numeric`  or `money`.
-- A column of data type `uniqueidentifier` that has the `Rowguidcol` property isn't the last column in the table. For example, a column of data type `decimal`, `numeric`, or `money` is sorted after the `uniqueidentifier` column.
+    > The table may also contain a column of data type `numeric`  or `money`.
+- A column of data type `uniqueidentifier` that has the `Rowguidcol` property isn't the last column in the table. For example, a column of data type `decimal`, `numeric`, or `money` is sorted after the `uniqueidentifier` column.
 - You configure the table article to use a stored procedure custom conflict resolver.
 - A conflict is detected for the table article.
 

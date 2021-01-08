@@ -65,7 +65,7 @@ Refer to the following MSDN articles for each of the versions:
 - [Windows Server Failover Clustering with SQL Server](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server)
 - [Failover Policy for Failover Cluster Instances](/sql/sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances)
 - [Windows Server Failover Clustering (WSFC) with SQL Server 2016](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server?redirectedfrom=MSDN&view=sql-server-ver15&preserve-view=true)
-- [SQL Server 2016 Failover Policy for Failover Cluster Instances](/sql/sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances)  
+- [SQL Server 2016 Failover Policy for Failover Cluster Instances](/sql/sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances)
 
 ## Mounted drives
 

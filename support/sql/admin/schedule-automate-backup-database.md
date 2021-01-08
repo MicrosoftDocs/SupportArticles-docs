@@ -34,7 +34,7 @@ This article describes how to use a Transact-SQL script together with Task Sched
 
 ## More information
 
-You have to follow these four steps to back up your SQL Server databases by using Windows Task Scheduler:
+You have to follow these four steps to back up your SQL Server databases by using Windows Task Scheduler:
 
 **Step A**: Create stored procedure to Back up your databases.
 
