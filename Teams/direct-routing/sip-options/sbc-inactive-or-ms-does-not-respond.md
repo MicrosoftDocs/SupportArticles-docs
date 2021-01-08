@@ -1,5 +1,5 @@
 ---
-title: The SBC is inactive or is not responding
+title: The SBC is inactive or not responding
 ms.author: v-todmc
 author: mccoybot
 manager: dcscontentpm
@@ -28,11 +28,11 @@ You may experience intermittent periods when the SBC is displayed as inactive or
 
 ## More information
 
-SBC may not be configured to send SIP OPTIONS to FQDNs (for example, sip.pstnhub.microsoft.com). It may, instead, be configured to send SIP OPTIONS to the specific IP addresses that the FQDNs resolve to. This isn’t a correct configuration. During maintenance or outages, IP address that the domain points to might change to a different datacenter while SBC continues to send SIP OPTIONS to the inactive and unresponsive datacenter.
+SBC may not be configured to send SIP OPTIONS to FQDNs (for example, sip.pstnhub.microsoft.com). It may, instead, be configured to send SIP OPTIONS to the specific IP addresses that the FQDNs resolve to. This configuration isn’t correct. During maintenance or outages, IP address that the domain points to might change to a different datacenter while SBC continues to send SIP OPTIONS to the inactive and unresponsive datacenter.
 
-To ensure successful reception of SIP OPTIONS from Microsoft endpoints, please make sure that all network devices on the path (SBCs, FWs, etc.) will allow communication to and from all Microsoft signaling FQDNs.
+To ensure successful reception of SIP OPTIONS from Microsoft endpoints, ensure that all network devices on the path (such as SBCs, FWs, etc.) will allow communication to and from all Microsoft signaling FQDNs.
 
-SBC should be configured to use all three Microsoft SIP proxy FQDNs, and all network devices on the path (SBC, firewall, routers, etc.) need to allow incoming and outgoing trafice from (and to) all Microsoft SIP proxy FQDNs. (Devices that support these options can use sip-all.pstnhub.microsoft.com to resolve into all possible IPs.)
+SBC should be configured to use all three Microsoft SIP proxy FQDNs. All network devices on the path (SBC, firewall, routers, etc.) must allow incoming and outgoing traffic from (and to) all Microsoft SIP proxy FQDNs. (Devices that support these options can use sip-all.pstnhub.microsoft.com to resolve into all possible IPs.)
 
 For more information, See [Plan Direct Routing - Microsoft Teams | Microsoft Docs](https://docs.microsoft.com/microsoftteams/direct-routing-plan#sip-signaling-fqdns).
 
