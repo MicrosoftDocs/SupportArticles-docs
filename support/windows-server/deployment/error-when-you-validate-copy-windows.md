@@ -33,7 +33,7 @@ The cryptographic operation failed due to a local security option setting.
 
 ## Cause
 
-This error occurs when the **State** value of below mentioned registry key is incorrectly set. This value corresponds to the Internet Explorer security setting **Check for publisher's certificate Revocation** and **Check for signatures on downloaded programs**.
+This error occurs when the **State** value of the following registry subkey is incorrectly set. This value corresponds to the Internet Explorer security setting **Check for publisher's certificate Revocation** and **Check for signatures on downloaded programs**.
 
 `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\WinTrust\Trust Providers\Software Publishing`
 
