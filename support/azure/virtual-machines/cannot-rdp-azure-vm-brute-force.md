@@ -49,3 +49,19 @@ Use a [VPN Gateway](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-abo
 
 > [!NOTE]
 > Use [Azure Security Centre](https://azure.microsoft.com/services/security-center/) to assess the security state of your cloud resources. Visualize your security state, and improve your security posture by using [Azure Secure Score](https://docs.microsoft.com/azure/security-center/secure-score-security-controls) recommendations.
+
+If you are unable to successfully RDP to the VM you can try using PowerShell and Serial Console to check fo the log entries.
+
+### Connect to the VM using Serial console
+
+```ps
+remove-module psreadline
+Get-WinEvent -FilterHashtable @{LogName='Security'; StartTime=(Get-Date).AddDays(-1); Id='4625'}
+```
+
+You can alternately use (Remote PowerShell)[https://docs.microsoft.com/azure/virtual-machines/troubleshooting/remote-tools-troubleshoot-azure-vm-issues#remote-powershell] to execute the Get-WinEvent command.
+
+## Next Steps
+
+- [Azure best practices for network security](https://docs.microsoft.com/azure/security/fundamentals/network-best-practices)
+- [The virtual datacenter: A network perspective](https://docs.microsoft.com/azure/cloud-adoption-framework/reference/networking-vdc)
