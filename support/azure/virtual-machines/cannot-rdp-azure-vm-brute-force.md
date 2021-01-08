@@ -29,7 +29,7 @@ Open ports on Internet-facing virtual machines are targets for brute force attac
 
 ## Cause
 
-The machine is likely experiencing a brute force attack, and the VM needs to be secured.
+If there are many recent log entries indicating failed logon attempts the VM may be experiencing a brute force attack and will need to be secured. This activity may be consuming the RDP service resources preventing you from being able to successfully connect via RDP.
 
 ## Solution
 
@@ -38,12 +38,12 @@ In this scenario the RDP TCP Port 3389 is exposed to the internet, please use on
 1. Use [Just-In-Time access](https://docs.microsoft.com/azure/security-center/just-in-time-explained) to secure the public facing ports of your VM.
 
 2. Use [Azure Bastion](https://docs.microsoft.com/azure/bastion/) to connect securely via the Azure portal.
-
+Use a [VPN Gateway](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) to provide an encrypted tunnel between your computer and your VMs, and [block RDP traffic from the Internet](https://docs.microsoft.com/azure/virtual-network/network-security-groups-overview#security-rules) in your Network Security Group (NSG).
 3. Edit your Network Security Group (NSG) to be more restrictive. Only allow specific internet protocols (IPs) or a range of IPs that belong to your organization in your inbound rule for RDP:
 
    For your inbound RDP (TCP Port 3389) rule, if the Source is set to "Any" or "*" then the rule is considered open. To improve the security of the rule, [restrict the RDP port to a specific user's IP address](https://docs.microsoft.com/azure/virtual-network/network-security-groups-overview#security-rules), and then test RDP access again.
 
-4. Use [Run Command](https://docs.microsoft.com/azure/virtual-machines/windows/run-command) to change the default RDP port from 3389 to a less common port number. This is not suggested as a long-term fix, but may help to temporarily mitigate the attack and regain access to the VM, we suggest using [Just-In-Time access](https://docs.microsoft.com/azure/security-center/just-in-time-explained), or [Azure Bastion](https://docs.microsoft.com/azure/bastion/).
+4. Use [Run Command](https://docs.microsoft.com/azure/virtual-machines/windows/run-command) to change the default RDP port from 3389 to a less common port number. This is not suggested as a long-term fix, but may help to temporarily mitigate the attack and regain access to the VM, we suggest using [Just-In-Time access](https://docs.microsoft.com/azure/security-center/just-in-time-explained), [Azure Bastion](https://docs.microsoft.com/azure/bastion/), or [VPN Gateway](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways).
 
    ![Run Command](./media/cannot-rdp-azure-vm-brute-force/run-command-1.png)
 
