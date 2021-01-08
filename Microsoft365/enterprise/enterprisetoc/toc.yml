@@ -5,7 +5,7 @@
     items:
     - name: Can't insert scriptable ActiveX controls
       href: ../administration/insert-scriptable-activex-control.md
-    - name: Format of the CSV file isn't correct error
+    - name: Format of the CSV file isn't correct error
       href: ../administration/format-of-the-csv-file-not-correct-error-when-importing-contacts.md
     - name: Issue on devices with App-V enabled
       href: ../administration/issues-on-devices-with-app-v-enabled.md
