@@ -13,7 +13,6 @@ ms.topic: article
 ms.author: v-six
 appliesto:
 - SharePoint Online
-- SharePoint Online MSIT
 ---
 
 # "Everyone except external users" group is removed on Office 365 private group website
