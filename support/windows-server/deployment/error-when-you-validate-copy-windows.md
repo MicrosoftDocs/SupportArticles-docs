@@ -33,22 +33,22 @@ The cryptographic operation failed due to a local security option setting.
 
 ## Cause
 
-This error occurs when the 'State' value of below mentioned registry key is incorrectly set. This value corresponds to the Internet Explorer security setting "Check for publisher's certificate Revocation" and "Check for signatures on downloaded programs".
+This error occurs when the **State** value of below mentioned registry key is incorrectly set. This value corresponds to the Internet Explorer security setting **Check for publisher's certificate Revocation** and **Check for signatures on downloaded programs**.
 
 `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\WinTrust\Trust Providers\Software Publishing`
 
-You can find a key with the name 'State'. By default the values is set to - '23c00'.
+You can find a key with the name **State**. By default the value is set to **23c00**.
 
 ## Resolution
 
 To resolve this problem, change the registry key to a valid setting, for example:
 
-- State = 0x00023e00 - 'Check for publisher's certificate Revocation' Unchecked
-- State = 0x00023c00 - 'Check for publisher's certificate Revocation' Checked
+- State = 0x00023e00 - **Check for publisher's certificate Revocation** Unchecked
+- State = 0x00023c00 - **Check for publisher's certificate Revocation** Checked
 
 The wrong value might result from an issue described in [The value of the "State" registry item is changed after a Group Policy preferences setting is applied in Windows Server 2008, in Windows Vista or in Windows Server 2008 R2](https://support.microsoft.com/help/982606).
 
-Use one of the methods:
+Use one of the following methods:
 
 ### Method 1: Edit the registry
 
@@ -81,7 +81,7 @@ You would be able to validate your Windows successfully.
 
 ## More information
 
-In some cases, you might be required to update the 'State' value for following two registries as well.
+In some cases, you might be required to update the **State** value for following two registries as well.
 
 - `HKEY_USERS\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\WinTrust\Trust Providers\Software Publishing`
 - `HKEY_USERS\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\WinTrust\Trust Providers\Software Publishing`

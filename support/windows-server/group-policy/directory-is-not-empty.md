@@ -34,8 +34,11 @@ As the Import is done on the SysVol share, DFSR replication might interfere with
 
 To prevent the conflicting operations from occurring, use DFSRDIAG.EXE to suspend replication on the DC the GPMC import is happening on. The command requires the user to specify the Replication Group name, the Partner name (in this case the DC used for the import is the partner) and the amount of time in minutes to suspend replication. DFSR will automatically resume replication once the number of minutes specified has elapsed.
 
-1. Open an administrative command prompt.
+1. Open an administrative Command Prompt window.
 2. Run this command: `DFSRDIAG StopNow /rgname:"Domain System Volume" /partner:<DcName> /time:<number of minutes to suspend replication>`.
+
+    > [!NOTE]
+    > In this command, \<*DcName*> represents the domain controller name, and \<*number of minutes to suspend replication*> represents how long replication is suspended.
 3. Import the Group Policy.
 
 > [!NOTE]
@@ -91,7 +94,7 @@ To resolve the issue, in case the import needs to happen more often, add a filte
 - UserStaging
 - AdmOld
 
-To modify the DFSR filter, edit this object in AD as mentioned below:
+To modify the DFSR filter, edit this object in AD as mentioned as follows:
 
 CN=SYSVOL Share,CN=Content,CN=Domain System Volume,CN=DFSR-GlobalSettings,CN=System,DC=Contoso,DC=Com
 

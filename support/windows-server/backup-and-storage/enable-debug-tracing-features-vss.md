@@ -13,7 +13,7 @@ ms.reviewer: kaushika, v-jomcc
 ms.prod-support-area-path: Configuring and using Backup software
 ms.technology: BackupStorage
 ---
-# How to enable the Volume Shadow Copy service's debug tracing features in Windows Server 2003 and Windows 2008
+# How to enable the Volume Shadow Copy service's debug tracing features in Windows Server 2003 and Windows Server 2008
 
 This article describes how to enable the Volume Shadow Copy service's debug tracing features in Windows Server 2003 and Windows Server 2008.
 

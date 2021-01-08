@@ -59,7 +59,7 @@ The File Replication System (FRS) or the Distributed File System Replication (DF
 
 #### Steps for FRS
 
-You can specify a file filter in the FRS object for the replica set (after you remove the Administrative Templates). For best results, use Adsiedit.msc from the Support Tools. The Attribute is fRSFileFilter. By default, its content is `*.tmp, *.bak, ~*`.
+You can specify a file filter in the FRS object for the replica set (after you remove the Administrative Templates). For best results, use Adsiedit.msc from the Support Tools. The Attribute is fRSFileFilter. By default, its content is **\*.tmp, \*.bak, ~\***.
 
 To edit this attribute:
 
@@ -69,7 +69,7 @@ To edit this attribute:
 
 2. In the properties for the object, select **fRSFileFilter** in **Select a property to view**. The value appears in the **Value** line.
 3. Select **Clear** to bring the attribute to the **Edit Attribute** line.
-4. Change this line to `*.tmp, *.bak, *.adm, ~*`.
+4. Change this line to **\*.tmp, \*.bak, \*.adm, ~\***.
 5. Select **Set**.
 6. Select **OK**.
 
@@ -77,9 +77,9 @@ To edit this attribute:
 
 1. Open ADSIEDIT.MSC.
 2. Browse to DC=\<DominanName>,CN=System,CN=DFSR GlobalSettings, CN=Domain System Volume,CN=Content.
-3. Right click on **CN=Sysvol Share** and select properties. Locate the attribute msDFSR-FileFiler.
-4. Edit the msDFSR-FileFiler attribute and add ,*.ADM.
-5. Select **Apply** and **OK**.
+3. Right click **CN=Sysvol Share** and select **Properties**. Locate the **msDFSR-FileFiler** attribute.
+4. Edit the **msDFSR-FileFiler** attribute and add ,*.ADM.
+5. Select **Apply** and then select **OK**.
 
 ### Step 3: Copy the ADM files back to the PDC's SYSVOL
 

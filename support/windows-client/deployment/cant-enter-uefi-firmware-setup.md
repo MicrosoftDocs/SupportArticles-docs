@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 2804597
 Consider the following scenario:
 
 - You enter UEFI F/W setup by pressing F1 key during POST.
-- Navigate to "Startup" page and change the "UEFI/Legacy Boot" setting from "Both" to "UEFI Only".
+- Navigate to **Startup** page and change the **UEFI/Legacy Boot** setting from **Both** to **UEFI Only**.
 - Exit UEFI F/W setup using F10 key to save your changes.
 - You then boot the system from the Windows 7/Windows 8 installation DVD and do a normal installation.
 

@@ -15,7 +15,7 @@ ms.technology: Deployment
 ---
 # Hard disk usage reaches 100 percent after the computer resumes from Sleep mode
 
-This article provides a solution to an issue where a Windows 8.1-based computer's hard disk usage reaches 100 percent after it's resumed from Sleep mode.
+This article provides a solution to an issue where a Windows 8.1-based computer's hard disk usage reaches 100 percent and the computer stops responding after it resumes from Sleep mode.
 
 _Original product version:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp; 2922899
