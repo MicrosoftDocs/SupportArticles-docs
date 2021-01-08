@@ -98,7 +98,7 @@ IIS 7.0 and later versions use the following client error HTTP status codes:
   - 401.4 - Authorization failed by filter.
   - 401.5 - Authorization failed by ISAPI/CGI application.
   - 401.501 - Access Denied: Too many requests from the same client IP; Dynamic IP Restriction Concurrent request rate limit reached.
-  - 401.502 - Forbidden: Too many requests from the same client IP; Dynamic IP Restriction Maximum request rate limit reached.
+  - 401.502 - Forbidden: Too many requests from the same client IP; Dynamic IP Restriction Maximum request rate limit reached.
   - 401.503 - Access Denied: the IP address is included in the Deny list of IP Restriction
   - 401.504 - Access Denied: the host name is included in the Deny list of IP Restriction
 
@@ -128,8 +128,8 @@ IIS 7.0 and later versions use the following client error HTTP status codes:
   - 403.20 - Forbidden: Passport logon failed.
   - 403.21 - Forbidden: Source access denied.
   - 403.22 - Forbidden: Infinite depth is denied.
-  - 403.501 - Forbidden: Too many requests from the same client IP; Dynamic IP Restriction Concurrent request rate limit reached.
-  - 403.502 - Forbidden: Too many requests from the same client IP; Dynamic IP Restriction Maximum request rate limit reached.
+  - 403.501 - Forbidden: Too many requests from the same client IP; Dynamic IP Restriction Concurrent request rate limit reached.
+  - 403.502 - Forbidden: Too many requests from the same client IP; Dynamic IP Restriction Maximum request rate limit reached.
   - 403.503 - Forbidden: the IP address is included in the Deny list of IP Restriction
   - 403.504 - Forbidden: the host name is included in the Deny list of IP Restriction
 

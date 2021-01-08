@@ -28,7 +28,7 @@ INSERT EXEC failed because the stored procedure altered the schema of the target
 
 ## Cause
 
-When the Query Data Store runs auto-cleanup, this flush plans out of Query Data Store. The query encounters a recompile operation because the plan is missing from Query Data Store, but the plan is still present in the procedure cache. By design, when the recompile operation occurs, SQL Server throws error 556 to prevent duplicate execution of the child procedure, which would result in incorrect results being returned.
+When the Query Data Store runs auto-cleanup, this flush plans out of Query Data Store. The query encounters a recompile operation because the plan is missing from Query Data Store, but the plan is still present in the procedure cache. By design, when the recompile operation occurs, SQL Server throws error 556 to prevent duplicate execution of the child procedure, which would result in incorrect results being returned.
 
 ## Workaround
 

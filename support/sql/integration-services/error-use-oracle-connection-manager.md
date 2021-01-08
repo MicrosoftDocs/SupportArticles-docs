@@ -52,7 +52,7 @@ For example, the following XML Configuration file is generated when you use BIDS
 
 Remove the check box for **Initial Catalog** when creating or editing the configuration file through the BIDS Designer.
 
-For example, the fixed version of the example Configuration file  shown in the Cause section will be as follows:
+For example, the fixed version of the example Configuration file shown in the Cause section will be as follows:
 
 ```xml
 <?xml version="1.0"?>

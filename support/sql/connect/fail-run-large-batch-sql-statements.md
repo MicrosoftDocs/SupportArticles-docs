@@ -62,21 +62,21 @@ This behavior is by design.
    2. On the **Conn** menu, click **Full Connect**.
    3. In the **Full Connect** dialog box, click the name of the DSN that you created in step 2.
    4. Make sure that the connection to SQL Server is successful.
-   5. On the **Stmt** menu, click **SQLExecDirect**.
-   6. In the **StatementText** box, type *{call bigBatch}*, and then click **OK**.
+   5. On the **Stmt** menu, click **SQLExecDirect**.
+   6. In the **StatementText** box, type *{call bigBatch}*, and then click **OK**.
 
-In the analysis of SQL Profiler trace, you notice that the processing of the stored procedure is not complete. However, the ODBC Test tool indicates that the execution was successful. To fetch all the result sets and to cause the batch to finish on the server, click **Get Data All**  on the **Results** menu.
+In the analysis of SQL Profiler trace, you notice that the processing of the stored procedure is not complete. However, the ODBC Test tool indicates that the execution was successful. To fetch all the result sets and to cause the batch to finish on the server, click **Get Data All**  on the **Results** menu.
 You can connect to SQL Server by using OLE DB. To do this, follow these steps:
 
 1. Open the OLE DB RowsetViewer tool sample that is available with MDAC SDK.
-2. Connect to the SQL Server pubs database by using the **Full Connect** option.
+2. Connect to the SQL Server pubs database by using the **Full Connect** option.
 3. On the **Command** menu, point to **ICommand**, and then click **Execute**.
-4. In the **Cmd Text** box, type *{call bigBatch}*.
-5. Click **IID_IMultipleResults** on the **REFIID** list, and then click **Properties**.
-6. In the **ICommandProperties::SetProperties** dialog box, click **DBPROP_IMultipleResults**, change the value to **VARIANT_TRUE** and then click **OK**.
+4. In the **Cmd Text** box, type *{call bigBatch}*.
+5. Click **IID_IMultipleResults** on the **REFIID** list, and then click **Properties**.
+6. In the **ICommandProperties::SetProperties** dialog box, click **DBPROP_IMultipleResults**, change the value to **VARIANT_TRUE** and then click **OK**.
 7. Click **OK**.
 
-In the analysis of SQL Profiler trace, you notice that the processing of the stored procedure is not complete. However, the RowsetViewer tool shows that the operation was successful. To retrieve all result sets, right-click the **MultipleResults**  object in the left pane, point to **IMultipleResults**, and then click **GetResult**. Repeat until all result sets have been consumed.
+In the analysis of SQL Profiler trace, you notice that the processing of the stored procedure is not complete. However, the RowsetViewer tool shows that the operation was successful. To retrieve all result sets, right-click the **MultipleResults** object in the left pane, point to **IMultipleResults**, and then click **GetResult**. Repeat until all result sets have been consumed.
 
 The problem is most easily reproduced when you are connected to the SQL Server by using the Named pipes protocol or the Shared memory (LPC) protocol. This is because of the internal buffer size that SQL Server has available for the different protocols.
 

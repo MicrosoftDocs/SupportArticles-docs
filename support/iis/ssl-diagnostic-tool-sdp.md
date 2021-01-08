@@ -2,7 +2,7 @@
 title: IIS SSL Diagnostic tool for SDP
 description: This article describes that IIS SSL Diagnostic tool for SDP is designed to troubleshoot SSL problems on IIS and it collects information used for troubleshooting common SSL problems.
 ms.date: 04/10/2020
-ms.prod-support-area-path: Health, diagnostic, and performance features
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ---
 # Information about IIS SSL Diagnostic tool for SDP
 

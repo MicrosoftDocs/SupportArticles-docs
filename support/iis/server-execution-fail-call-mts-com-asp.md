@@ -2,7 +2,7 @@
 title: Error when you call MTS COM from ASP
 description: This article provides resolutions for the problem where server execution fails when you call an MTS COM Component from ASP.
 ms.date: 03/24/2020
-ms.prod-support-area-path: Site behavior and performance
+ms.prod-support-area-path: Site behavior and performance
 ms.reviewer: jmeier
 ---
 # Server execution failed when calling MTS COM component from ASP

@@ -2,7 +2,7 @@
 title: Can't import SSL private key certificate
 description: This article describes a behavior that may occur when you try to import an SSL private key certificate (.pfx) file into the local computer personal certificate store.
 ms.date: 03/26/2020
-ms.prod-support-area-path: WWW authentication and authorization
+ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: v-jomcc
 ---
 # Error when you import an SSL .pfx file into the local computer personal certificate store by using IIS Manager

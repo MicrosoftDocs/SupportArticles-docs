@@ -2,7 +2,7 @@
 title: Digest authentication fails
 description: This article provides workarounds for the problem where digest authentication fails when a client sends a request through a proxy to a site IIS using digest authentication.
 ms.date: 04/07/2020
-ms.prod-support-area-path: WWW authentication and authorization
+ms.prod-support-area-path: WWW authentication and authorization
 ms.technology: iis
 ms.reviewer: atsushin, bariscag 
 ---

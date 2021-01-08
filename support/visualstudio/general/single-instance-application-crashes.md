@@ -2,7 +2,7 @@
 title: Single instance application crashes
 description: This article provides a resolution to solve the problem that single instance application crashes. This problem occurs if the application uses the WindowsFormsApplicationBase.
 ms.date: 04/27/2020
-ms.prod-support-area-path: Language or compilers
+ms.prod-support-area-path: Language or compilers
 ms.reviewer: rachanr
 ---
 # Single instance application crashes
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2834636
 
 ## Symptoms
 
-You have a single instance Visual Basic.NET application or a C# application that uses the `WindowsFormsApplicationBase` class to make the application single instance and you are running the application as in an environment with IP Virtualization turned on. The application may crash. if a debugger is attached to the application, you will notice that the exception is `CantStartSingleInstanceException`.
+You have a single instance Visual Basic.NET application or a C# application that uses the `WindowsFormsApplicationBase` class to make the application single instance and you are running the application as in an environment with IP Virtualization turned on. The application may crash. if a debugger is attached to the application, you will notice that the exception is `CantStartSingleInstanceException`.
 
 ## Cause
 
@@ -39,8 +39,8 @@ To work around this issue, you can use a named `mutex` or enumerate all the proc
         mutex = new System.Threading.Mutex (true, 'Application Name', prevInstance);
         if ((prevInstance == false))
         {
-            MessageBox.Show ('There is another instance running');   return;  
-        }  
+            MessageBox.Show ('There is another instance running');   return;  
+        }  
         Application.Run (new Form1 ());
     }
     ```

@@ -22,6 +22,6 @@ Assume that you have an in-memory database in SQL Server. If you back up the in-
 
 ## More information
 
-The warning message starts with **HkHostBackupGetCheckpointFileInfoV2** and ends with **1000016** in the FileName. Warning messages that have exactly these values are harmless, and you can safely ignore them. At some point SQL Server will delete them automatically.
+The warning message starts with **HkHostBackupGetCheckpointFileInfoV2** and ends with **1000016** in the FileName. Warning messages that have exactly these values are harmless, and you can safely ignore them. At some point SQL Server will delete them automatically.
 
 The file in the *$FSLOG* folder is used internally for Filestream transaction integrity. SQL Server incorrectly interprets the warning message as a valid checkpoint of the in-memory database. In this case, SQL Server logs the warning to the SQL Server error log.
