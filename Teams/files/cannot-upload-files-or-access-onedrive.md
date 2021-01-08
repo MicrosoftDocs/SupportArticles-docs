@@ -41,7 +41,7 @@ When accessing the OneDrive cloud storage from the **Files** section, you receiv
 
 ## Cause
 
-These error messages occur when the document library on your OneDrive site has been changed from its default name "**Documents**" to another name.
+These error messages occur when the document library on your OneDrive site has been changed from its default name "Documents" to another name.
 
 ## Resolution
 
