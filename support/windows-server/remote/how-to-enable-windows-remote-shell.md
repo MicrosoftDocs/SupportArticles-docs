@@ -29,7 +29,7 @@ To enable Windows Remote Shell, you need to deploy the server-side and client-si
 ### Server Side  
 
 > [!NOTE]
-> The server definition in the article describe a Windows host that get into remote management shell.
+> The server definition in the article describes a Windows host that gets into remote management shell.
 
 1. Log into the Windows console.
 2. Optional (For Windows Vista serves as remote server): Start the service "Windows Remote Management " and set it for auto start after reboot.

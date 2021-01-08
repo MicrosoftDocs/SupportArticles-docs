@@ -359,8 +359,8 @@ If Chkdsk reports that it can't fix all hard disk problems, your file system or 
 
 > [!IMPORTANT]
 > For more help, contact your computer manufacturer or a Microsoft Support professional. Only qualified personnel should try to repair your computer. If the computer repair is performed by unqualified personnel, this may nullify your computer's warranty. For additional information about how to Use Recovery Console, click the following article numbers to view the articles in the Microsoft Knowledge Base:
-
-[326215](https://support.microsoft.com/help/326215) How to use the Recovery Console on a Windows Server 2003-based computer that doesn't start  
+>
+> [326215](https://support.microsoft.com/help/326215) How to use the Recovery Console on a Windows Server 2003-based computer that doesn't start.  
 
 ## How to use Automated System Recovery
 

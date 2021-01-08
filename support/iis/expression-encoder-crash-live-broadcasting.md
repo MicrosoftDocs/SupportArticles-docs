@@ -2,7 +2,7 @@
 title: Expression Encoder crashes
 description: This article provides resolutions for the problem where Expression Encoder might crash.
 ms.date: 03/20/2020
-ms.prod-support-area-path: Site behavior and performance
+ms.prod-support-area-path: Site behavior and performance
 ms.reviewer: dbristol, marashid
 ---
 # Expression Encoder may crash when live broadcasting
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2883279
 
 ## Symptoms
 
-Expression Encoder 4 is configured to push a stream to Windows Media Services via HTTP. Expression Encoder may crash without reporting any error.
+Expression Encoder 4 is configured to push a stream to Windows Media Services via HTTP. Expression Encoder may crash without reporting any error.
 
 ## Cause
 

@@ -2,7 +2,7 @@
 title: HTTP Error 500.19 on Internet Information Services (IIS) webpages
 description: Resolves the HTTP 500.19 error that occurs when you visit a website that is hosted on IIS 7.0 and later versions.
 ms.date: 11/9/2020
-ms.prod-support-area-path: Health, diagnostic, and performance features
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.reviewer: mlaing
 ---
 # HTTP Error 500.19 - internal server error when you open an IIS Webpage

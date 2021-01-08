@@ -103,7 +103,7 @@ You can check the following two other settings that affect TCPchimney offloading
 These commands enable TCP offloading to be set up specifically for a certain application or port combination. Output from both netsh commands is as follows:
 
 > [!NOTE]
-> This operation requires elevated privileges (Run as administrator)
+> This operation requires elevated privileges (Run as administrator).
 
 ![chimney settings ](./media/troubleshoot-network-performance-features-rss-netdma/netsh-cmd-output.png)
 

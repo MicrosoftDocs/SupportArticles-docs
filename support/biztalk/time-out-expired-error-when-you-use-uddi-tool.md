@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2884899
 
 Assume that you use the UDDI tool in Microsoft BizTalk Server 2013. After some calls to the UDDI web service, you receive the following error message:
 
-> Timeout expired. The timeout period elapsed prior to obtaining a connection from the pool. This may have occurred because all pooled connections were in use and max pool size was reached.
+> Timeout expired. The timeout period elapsed prior to obtaining a connection from the pool. This may have occurred because all pooled connections were in use and max pool size was reached.
 
 ## Cause
 
@@ -28,6 +28,6 @@ This issue was first fixed in the following cumulative update of BizTalk Server:
 
 ## References
 
-- For information about service packs and a cumulative update list for BizTalk Server, see [Service Pack and cumulative update list for BizTalk Server](https://support.microsoft.com/help/2555976).
+- For information about service packs and a cumulative update list for BizTalk Server, see [Service Pack and cumulative update list for BizTalk Server](https://support.microsoft.com/help/2555976).
 
 - For more information about BizTalk Server hotfixes, see [Information about BizTalk Server hotfixes, cumulative updates, and service packs](/troubleshoot/biztalk/biztalk-hotfixes-cumulative-update).

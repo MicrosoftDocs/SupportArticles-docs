@@ -22,11 +22,9 @@ _Original KB number:_ &nbsp; 296930
 
 ## Summary
 
-You can manually manipulate the Process Control service registry values for administrative functions or for troubleshooting purposes. Which are stored in the following registry key:
+You can manually manipulate the Process Control service registry values for administrative functions or for troubleshooting purposes, which are stored in the following registry key:
 
-```console
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ProcCon\Parameters
-```
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ProcCon\Parameters`
 
 The following components are described in this article:
 

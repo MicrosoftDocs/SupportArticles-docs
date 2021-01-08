@@ -48,7 +48,7 @@ Error log location not found.
 
 ## Symptom 3
 
-Certain maintenance plans or SQL Agent jobs, such as a maintenance cleanup task to delete old backup or report files "silently" fail. In the case of the cleanup task, the files that you expect to be deleted are not deleted when the corresponding job is run, and no error is written to the SQL Server log. Executing `sp_readerrorlog` would result in Symptom 2.
+Certain maintenance plans or SQL Agent jobs, such as a maintenance cleanup task to delete old backup or report files "silently" fail. In the case of the cleanup task, the files that you expect to be deleted are not deleted when the corresponding job is run, and no error is written to the SQL Server log. Executing `sp_readerrorlog` would result in Symptom 2.
 
 ## Cause
 

@@ -2,7 +2,7 @@
 title: Visual Studio 2012 Help Viewer 2.0 crashes
 description: This article provides a resolution to resolve the crash problem when you launch Help Viewer 2.0 with Visual Studio 2012.
 ms.date: 04/27/2020
-ms.prod-support-area-path: Language or compilers
+ms.prod-support-area-path: Language or compilers
 ---
 # Visual Studio 2012 Help Viewer 2.0 crashes
 

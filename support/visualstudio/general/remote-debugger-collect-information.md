@@ -2,7 +2,7 @@
 title: Information collected by Visual Studio Remote Debugger
 description: This article lists information collected by Visual Studio Remote Debugger diagnostics.
 ms.date: 04/27/2020
-ms.prod-support-area-path: Debuggers and analyzers
+ms.prod-support-area-path: Debuggers and analyzers
 ---
 # Visual Studio Remote Debugger diagnostics
 

@@ -35,7 +35,7 @@ Excel uses the version of the MSOLAP provider that is installed on the client de
 
 ![Connection properties](./media/configure-msolap-data-provider-excel/connection-properties-image.png)  
 
-On a client device that has  multiple versions of the MSOLAP provider installed, Excel uses the version that's configured in the registry.
+On a client device that has multiple versions of the MSOLAP provider installed, Excel uses the version that's configured in the registry.
 
 For example, in the following scenario:
 
@@ -46,7 +46,7 @@ Excel will configure the connection to use MSOLAP.5 in the connection string. Th
 
 ## More information
 
-To specify the version of  MSOLAP that Excel uses, update the version in the registry keys. The following keys define which MSOLAP version Excel uses to connect to Analysis Services. The location of the registry key depends on whether Microsoft Office is an MSI or Click-to-Run (C2R) installation, and whether it's 32-bit or 64-bit.
+To specify the version of MSOLAP that Excel uses, update the version in the registry keys. The following keys define which MSOLAP version Excel uses to connect to Analysis Services. The location of the registry key depends on whether Microsoft Office is an MSI or Click-to-Run (C2R) installation, and whether it's 32-bit or 64-bit.
 
 - **Office 32-bit MSI**
 

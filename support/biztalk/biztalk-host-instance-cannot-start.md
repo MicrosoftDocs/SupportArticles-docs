@@ -32,7 +32,7 @@ The BizTalk Server host instance can't start after you changed the configuration
 
 ## Cause
 
-The btsntsvc.exe.config or btsntsvc64.exe.config file had been modified with an `xlangs` section. No configuration section handler was present for `xlangs`.
+The btsntsvc.exe.config or btsntsvc64.exe.config file had been modified with an `xlangs` section. No configuration section handler was present for `xlangs`.
 
 ## Resolution
 
@@ -41,8 +41,8 @@ Add a configuration section handler for `xlangs`.
 ``` xml
 <?xml version="1.0"?>
 <configuration>
-  <configSections>
-    <section name="xlangs" type="Microsoft.XLANGs.BizTalk.CrossProcess.XmlSerializationConfigurationSectionHandler, Microsoft.XLANGs.BizTalk.CrossProcess">
-    </section>
-  </configSections>
+  <configSections>
+    <section name="xlangs" type="Microsoft.XLANGs.BizTalk.CrossProcess.XmlSerializationConfigurationSectionHandler, Microsoft.XLANGs.BizTalk.CrossProcess">
+    </section>
+  </configSections>
 ```

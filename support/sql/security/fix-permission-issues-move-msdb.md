@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 2000274
 
 Consider the following scenario:
 
-You move msdb database from one instance to another either using the backup and restore process or by copying over the database files (mdf and ldf). Then, on the destination server, a user who is not part of Sysadmin fixed role in SQL Server tries to do either of the following operations:
+You move msdb database from one instance to another either using the backup and restore process or by copying over the database files (mdf and ldf). Then, on the destination server, a user who is not part of Sysadmin fixed role in SQL Server tries to do either of the following operations:
 
 - View a job in SQL Server management studio.
 - Call SQL agent related stored procedures (for example xp_sqlagent_enum_jobs or sp_get_composite_job_info) directly using T-SQL.

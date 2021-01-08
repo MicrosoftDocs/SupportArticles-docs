@@ -2,7 +2,7 @@
 title: Setup projects have dependencies on .NET Framework
 description: Installing .NET 4.5 (perhaps via VS 2012 installation) will cause setup projects for native applications in Visual Studio 2010 to add a .NET dependency they didn't have before.
 ms.date: 04/27/2020
-ms.prod-support-area-path: Project/Build system
+ms.prod-support-area-path: Project/Build system
 ms.reviewer: candyc, sbonev, chrmann
 ---
 # Visual Studio 2010 setup projects depend on .NET Framework after you install .NET Framework 4.5

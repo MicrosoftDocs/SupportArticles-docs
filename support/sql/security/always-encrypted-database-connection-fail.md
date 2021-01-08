@@ -24,7 +24,7 @@ When this problem occurs, queries against columns that are protected by the **Al
 
 ## Resolution
 
-To fix this issue, install the security update from [Microsoft Security Bulletin MS16-155](/security-updates/SecurityBulletins/2016/ms16-155).
+To fix this issue, install the security update from [Microsoft Security Bulletin MS16-155](/security-updates/SecurityBulletins/2016/ms16-155).
 
 ## Workaround
 

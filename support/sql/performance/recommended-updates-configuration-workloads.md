@@ -15,11 +15,11 @@ _Original KB number:_ &nbsp; 4465518
 
 ## Introduction
 
-This article describes the performance improvements and changes that are available for Microsoft SQL Server 2017 and SQL Server 2016 through various product updates and configuration options.
+This article describes the performance improvements and changes that are available for Microsoft SQL Server 2017 and SQL Server 2016 through various product updates and configuration options.
 
-We recommend that you consider applying these updates to improve the performance of SQL Server instances. The degree of improvement will depend on various factors, including workload pattern, contention points, processor layout (number of processor groups, sockets, NUMA nodes, and cores in a NUMA node), and the amount of available memory in the system.
+We recommend that you consider applying these updates to improve the performance of SQL Server instances. The degree of improvement will depend on various factors, including workload pattern, contention points, processor layout (number of processor groups, sockets, NUMA nodes, and cores in a NUMA node), and the amount of available memory in the system.
 
-The SQL Server support team has used these updates and configuration changes to achieve reasonable performance gains for customer workloads that use hardware systems that included several NUMA nodes and lots of processors. The support team will continue to update this article with other updates in the future.
+The SQL Server support team has used these updates and configuration changes to achieve reasonable performance gains for customer workloads that use hardware systems that included several NUMA nodes and lots of processors. The support team will continue to update this article with other updates in the future.
 
 > Definition: High-end systems  
 A "high-end system" typically has multiple sockets, eight cores or more per socket, and a half terabyte or more of memory.
@@ -129,7 +129,7 @@ This table provides an overview of all changes that are implemented in SQL Serve
 |Code page|BULK INSERT or bcp utilities improved to load UTF-8 data into a table in SQL Server.| [SQLSweet16!, Episode 10: "I can eat glass ...", but can I load it into a database?](/archive/blogs/sqlcat/sqlsweet16-episode-10-i-can-eat-glass-but-can-i-load-it-into-a-database) |
 |Spatial|SQL Server 2016 removes the PInvoke and PUnInvoke activities during T-SQL execution for many of the spatial methods.| [SQL 2016 - It Just Runs Faster: Native Spatial Implementation(s)](/archive/blogs/psssql/sql-2016-it-just-runs-faster-native-spatial-implementations) |
 |Spatial|SQL Server 2016 improves the scalability of TVP that uses spatial data by using native spatial validations.| [SQL 2016 - It Just Runs Faster: TVPs with Spatial Column(s)](/archive/blogs/psssql/sql-2016-it-just-runs-faster-tvps-with-spatial-columns) |
-|Spatial|The native and TVP spatial improvements enable SQL Server to optimize index creation and tessellation of spatial data.| [SQL 2016 - It Just Runs Faster: Spatial Index Builds Faster](/archive/blogs/psssql/sql-2016-it-just-runs-faster-spatial-index-builds-faster) |
+|Spatial|The native and TVP spatial improvements enable SQL Server to optimize index creation and tessellation of spatial data.| [SQL 2016 - It Just Runs Faster: Spatial Index Builds Faster](/archive/blogs/psssql/sql-2016-it-just-runs-faster-spatial-index-builds-faster) |
 |MSDTC|SQL Server 2016 dynamically starts MSDTC as needed allowing resources to be used for other activities until required.| [SQL 2016 - Leverages On Demand MSDTC Startup](/archive/blogs/psssql/sql-2016-leverages-on-demand-msdtc-startup) |
 |XEvent|Various changes are made to the XEvent Linq provider logic to reduce context switching, memory allocations, and other aspects for faster rendering of events.| [SQL 2016 - It Just Runs Faster: XEvent Linq Reader](/archive/blogs/psssql/sql-2016-it-just-runs-faster-xevent-linq-reader) |
 ||||  
