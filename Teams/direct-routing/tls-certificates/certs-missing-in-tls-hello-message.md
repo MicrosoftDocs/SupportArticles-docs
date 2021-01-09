@@ -32,4 +32,4 @@ Check that a valid certificate and all intermediate Certificate Authority certif
 
 ## More information
 
-In some cases, everything might look correct. However, a closer examination of the packet capture might reveal that the TLS certificate of the Intermediate Certificate Authority isn’t provided to the Teams infrastructure.
+In some cases, everything may look correct. However, a closer examination of the packet capture might reveal that the TLS certificate of the Intermediate Certificate Authority isn’t provided to the Teams infrastructure.
