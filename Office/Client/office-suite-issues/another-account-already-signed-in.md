@@ -62,7 +62,7 @@ Sign out of Microsoft Office using any Office product: Word, Excel, PowerPoint, 
 1. In the upper-right corner of an Office 2013 app (Word, Excel, PowerPoint), select your name, and then select **Switch Account**.
 1. On the **Accounts** screen, select **Sign out**.
 
-   :::image type="content" source="./media/another-account-already-signed-in/2750229-4.png" alt-text="Sign out on the Accounts page":::
+   :::image type="content" source="./media/another-account-already-signed-in/accounts.png" alt-text="Sign out on the Accounts page.":::
 
 1. Locate the account that you want to remove, and then select **Sign out**.
 
@@ -71,7 +71,7 @@ Sign out of Microsoft Office using any Office product: Word, Excel, PowerPoint, 
 1. Go to **File**, and then select **Account**.
 1. Under **Connected Services**, remove all the services for the existing account.
 
-   :::image type="content" source="./media/another-account-already-signed-in/2750229-5.png" alt-text="Under Connected Services, remove all the services for the existing account":::
+   :::image type="content" source="./media/another-account-already-signed-in/connected-services.png" alt-text="Screenshot of removing all the services for the existing account under Connected Services.":::
 
 ### Step 4: Clear cached credentials on the computer
 
@@ -98,7 +98,7 @@ Sign out of Microsoft Office using any Office product: Word, Excel, PowerPoint, 
       > [!NOTE]
       > In Windows 7, this is listed as **Generic Credentials**.
 
-       :::image type="content" source="./media/another-account-already-signed-in/2750229-6.png" alt-text="Remove Windows Credentials":::
+       :::image type="content" source="./media/another-account-already-signed-in/windows-credentials.png" alt-text="Remove Windows Credentials":::
 
 1. Log off, and then log back in to the computer.
 

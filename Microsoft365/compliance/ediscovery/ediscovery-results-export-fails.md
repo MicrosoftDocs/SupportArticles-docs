@@ -1,5 +1,5 @@
 ---
-title: (Export failed with error type FailedToSearchMailboxes) when export eDiscovery search results. 
+title: Export failed with error type FailedToSearchMailboxes error when export eDiscovery search results. 
 description: Describes a problem that triggers an error message when you try to export eDiscovery search results to a PST file in the Exchange admin center in Exchange Online. Provides a resolution.
 author: simonxjx
 ms.author: v-six
@@ -15,7 +15,7 @@ appliesto:
 search.appverid: MET150
 ---
 
-# Error (Export failed with error type FailedToSearchMailboxes) when you try to export eDiscovery search results to a PST file in Exchange Online
+# "Export failed with error type FailedToSearchMailboxes" error when you try to export eDiscovery search results to a PST file in Exchange Online
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
