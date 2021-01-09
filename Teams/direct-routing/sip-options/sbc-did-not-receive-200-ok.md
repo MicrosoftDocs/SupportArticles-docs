@@ -33,10 +33,10 @@ Assuming that there are no issues that affect the TLS connection, the FQDN that'
 
 ## Resolution
 
-This situation can occur for one of several reasons. To resolve this issue, you have to narrow it down. The most common situations to investigate include the following:
+This situation can occur for one of several reasons. To resolve this issue, you have to narrow it down. The following situations are the most common to investigate:
 
 - The FQDN that’s provided by SBC differs from what was configured in Microsoft system.
-- The domain was not yet [fully validated](https://docs.microsoft.com/microsoft-365/admin/setup/add-domain).
+- The domain wasn't yet [fully validated](https://docs.microsoft.com/microsoft-365/admin/setup/add-domain).
 - A user with a valid license (E3 or E5) was not [assigned to the SBC domain](https://docs.microsoft.com/microsoftteams/direct-routing-connect-the-sbc#connect-the-sbc-to-the-tenant).
 - The Contact header contains an IP address instead of the expected FQDN.
 
