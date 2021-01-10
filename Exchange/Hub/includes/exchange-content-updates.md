@@ -2,6 +2,14 @@
 
 
 
+## Week of January 04, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/7/2021 | [Mobile devices not quarantined as expected](/exchange/troubleshoot/mobile-devices/mobile-devices-not-quarantined-as-expected) | modified |
+
+
 ## Week of December 21, 2020
 
 
@@ -42,23 +50,3 @@
 | 12/15/2020 | Error occurs when running Hybrid Configuration Diagnostic | removed |
 | 12/16/2020 | [401 Access denied when running Test-OAuthConnectivity](/exchange/troubleshoot/administration/401-access-denied-error-when-running-test-oauthconnectivity) | modified |
 | 12/16/2020 | [Validation errors for a mailbox archive GUID for Microsoft 365 users](/exchange/troubleshoot/administration/validation-errors-for-mailbox-archive-guid) | modified |
-
-
-## Week of November 30, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/30/2020 | [Only see availability info of resource when scheduling](/exchange/troubleshoot/calendars/only-can-see-availability-info-of-resource-when-scheduling-meeting) | modified |
-| 11/30/2020 | [InvalidSmtpDomainName(domain) error connecting to on-premises Exchange](/exchange/troubleshoot/hybrid-configuration-wizard-errors/hcw-invalidsmtpdomainname-error) | modified |
-| 11/30/2020 | [Cross-forest or Hybrid free/busy lookups fail](/exchange/troubleshoot/administration/cross-forest-or-hybrid-free-busy-lookups-fail) | modified |
-| 11/30/2020 | [Exchange public folder migration stops at 95%](/exchange/troubleshoot/public-folders/public-folder-migration-fails) | modified |
-| 12/3/2020 | [Email messages are stuck in Exchange Server queues for several minutes](/exchange/troubleshoot/mailflow/email-stuck-queues) | modified |
-
-
-## Week of November 23, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/24/2020 | [Configure Proofpoint Email Protection with Exchange Online](/exchange/troubleshoot/email-delivery/configure-proofpoint-with-exchange) | modified |
