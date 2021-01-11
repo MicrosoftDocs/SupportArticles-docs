@@ -27,6 +27,15 @@ Open ports on Internet-facing virtual machines are targets for brute force attac
 
    ![Events Log 2](./media/cannot-rdp-azure-vm-brute-force/events-log-2.png)
 
+### Connect to the VM using Serial console
+   
+```ps
+remove-module psreadline
+Get-WinEvent -FilterHashtable @{LogName='Security'; StartTime=(Get-Date).AddDays(-1); Id='4625'}
+```
+
+You can alternately use [Remote PowerShell](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/remote-tools-troubleshoot-azure-vm-issues#remote-powershell) to execute the Get-WinEvent command.
+
 ## Cause
 
 If there are many recent log entries indicating failed logon attempts the VM may be experiencing a brute force attack and will need to be secured. This activity may be consuming the RDP service resources preventing you from being able to successfully connect via RDP.
@@ -38,12 +47,14 @@ In this scenario the RDP TCP Port 3389 is exposed to the internet, please use on
 1. Use [Just-In-Time access](https://docs.microsoft.com/azure/security-center/just-in-time-explained) to secure the public facing ports of your VM.
 
 2. Use [Azure Bastion](https://docs.microsoft.com/azure/bastion/) to connect securely via the Azure portal.
-Use a [VPN Gateway](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) to provide an encrypted tunnel between your computer and your VMs, and [block RDP traffic from the Internet](https://docs.microsoft.com/azure/virtual-network/network-security-groups-overview#security-rules) in your Network Security Group (NSG).
-3. Edit your Network Security Group (NSG) to be more restrictive. Only allow specific internet protocols (IPs) or a range of IPs that belong to your organization in your inbound rule for RDP:
 
-   For your inbound RDP (TCP Port 3389) rule, if the Source is set to "Any" or "*" then the rule is considered open. To improve the security of the rule, [restrict the RDP port to a specific user's IP address](https://docs.microsoft.com/azure/virtual-network/network-security-groups-overview#security-rules), and then test RDP access again.
+3. Use a [VPN Gateway](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways) to provide an encrypted tunnel between your computer and your VMs, and [block RDP traffic from the Internet](https://docs.microsoft.com/azure/virtual-network/network-security-groups-overview#security-rules) in your Network Security Group (NSG).
 
-4. Use [Run Command](https://docs.microsoft.com/azure/virtual-machines/windows/run-command) to change the default RDP port from 3389 to a less common port number. This is not suggested as a long-term fix, but may help to temporarily mitigate the attack and regain access to the VM, we suggest using [Just-In-Time access](https://docs.microsoft.com/azure/security-center/just-in-time-explained), [Azure Bastion](https://docs.microsoft.com/azure/bastion/), or [VPN Gateway](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways).
+4. Edit your Network Security Group (NSG) to be more restrictive. Only allow specific internet protocols (IPs) or a range of IPs that belong to your organization in your inbound rule for RDP:
+
+   For your inbound RDP (TCP Port 3389) rule, if the Source is set to "Any" or " * " then the rule is considered open. To improve the security of the rule, [restrict the RDP port to a specific user's IP address](https://docs.microsoft.com/azure/virtual-network/network-security-groups-overview#security-rules), and then test RDP access again.
+
+5. Use [Run Command](https://docs.microsoft.com/azure/virtual-machines/windows/run-command) to change the default RDP port from 3389 to a less common port number. This is not suggested as a long-term fix, but may help to temporarily mitigate the attack and regain access to the VM, we suggest using [Just-In-Time access](https://docs.microsoft.com/azure/security-center/just-in-time-explained), [Azure Bastion](https://docs.microsoft.com/azure/bastion/), or [VPN Gateway](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways).
 
    ![Run Command](./media/cannot-rdp-azure-vm-brute-force/run-command-1.png)
 
@@ -51,15 +62,6 @@ Use a [VPN Gateway](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-abo
 > Use [Azure Security Centre](https://azure.microsoft.com/services/security-center/) to assess the security state of your cloud resources. Visualize your security state, and improve your security posture by using [Azure Secure Score](https://docs.microsoft.com/azure/security-center/secure-score-security-controls) recommendations.
 
 If you are unable to successfully RDP to the VM you can try using PowerShell and Serial Console to check fo the log entries.
-
-### Connect to the VM using Serial console
-
-```ps
-remove-module psreadline
-Get-WinEvent -FilterHashtable @{LogName='Security'; StartTime=(Get-Date).AddDays(-1); Id='4625'}
-```
-
-You can alternately use (Remote PowerShell)[https://docs.microsoft.com/azure/virtual-machines/troubleshooting/remote-tools-troubleshoot-azure-vm-issues#remote-powershell] to execute the Get-WinEvent command.
 
 ## Next Steps
 
