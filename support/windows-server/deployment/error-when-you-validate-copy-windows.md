@@ -17,7 +17,7 @@ ms.technology: Deployment
 
 This article provides a solution to an error that occurs when you try to validate a copy of Windows.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2715304
 
 ## Symptoms
@@ -26,7 +26,7 @@ When you try to validate a copy of Windows, you may receive an error message tha
 
 > Update installation failed. Error information: 0x80092026
 
-When you try to validate Windows from the genuine validation website, Windows downloads an update [971033](https://support.microsoft.com/help/971033), however when Windows tries to install the update, the update shows an error message that is mentioned above. Additionally, if you try to download the update KB971033 on your machine and run it manually, you may receive following error message:
+When you try to validate Windows, Windows downloads an update [971033](https://support.microsoft.com/help/971033). However, when Windows tries to install the update, the update shows an error message that is mentioned above. Additionally, if you try to download the update KB971033 on your machine and run it manually, you may receive following error message:
 
 > Installer encountered an error: 0x80092026  
 The cryptographic operation failed due to a local security option setting.
@@ -45,8 +45,6 @@ To resolve this problem, change the registry key to a valid setting, for example
 
 - **State** = **0x00023e00** - **Check for publisher's certificate Revocation** Unchecked
 - **State** = **0x00023c00** - **Check for publisher's certificate Revocation** Checked
-
-The wrong value might result from an issue described in [The value of the "State" registry item is changed after a Group Policy preferences setting is applied in Windows Server 2008, in Windows Vista or in Windows Server 2008 R2](https://support.microsoft.com/help/982606).
 
 Use one of the following methods:
 
