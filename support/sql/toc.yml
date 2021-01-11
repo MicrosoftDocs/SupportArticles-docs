@@ -235,6 +235,8 @@
       href: install/installation-fails-if-remove-user-right.md
     - name: Invalid User Directory message when installing CU or SP
       href: install/error-install-sql-server-2005-sp4.md
+    - name: MU detection logic updates
+      href: install/mu-detection-logic-updates.md
     - name: Naming schema and Fix areas for SQL updates
       href: install/naming-schema-and-fix-area.md
     - name: Permission error when you use a volume mount point
