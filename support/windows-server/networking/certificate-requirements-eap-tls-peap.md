@@ -15,14 +15,14 @@ ms.technology: Networking
 ---
 # Certificate requirements when you use EAP-TLS or PEAP with EAP-TLS
 
-This article describes the requirements that your client certificates and your server certificates must meet when you use Extensible Authentication Protocol-Transport Layer Security (EAP-TLS) or Protected Extensible Authentication Protocol (PEAP) with EAP-TLS.
+When you use Extensible Authentication Protocol-Transport Layer Security (EAP-TLS) or Protected Extensible Authentication Protocol (PEAP) with EAP-TLS, your client and server certificates must meet certain requirements.
 
 _Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 814394
 
 ## Summary
 
-When you use EAP with a strong EAP type, such as TLS with smart cards or TLS with certificates, both the client and the server use certificates to verify their identities to each other. Certificates must meet specific requirements both on the server and on the client for successful authentication.
+When you use EAP with a strong EAP type, such as TLS with smart cards, or TLS with certificates, both the client and server use certificates to verify identities to each other. Certificates must meet specific requirements both on the server and on the client for successful authentication.
 
 The certificate must be configured with one or more purposes in Extended Key Usage (EKU) extensions that match the certificate use. For example, a certificate that's used for the authentication of a client to a server must be configured with the Client Authentication purpose. Or, a certificate that's used for the authentication of a server must be configured with the Server Authentication purpose. When certificates are used for authentication, the authenticator examines the client certificate and looks for the correct purpose object identifier in EKU extensions. For example, the object identifier for the Client Authentication purpose is 1.3.6.1.5.5.7.3.2.
 
@@ -43,8 +43,8 @@ With either EAP-TLS or PEAP with EAP-TLS, the server accepts the client's authen
 - The 802.1 **x** client doesn't use registry-based certificates that are either smart-card certificates or certificates that are protected with a password.
 - The Subject Alternative Name (SubjectAltName) extension in the certificate contains the user principal name (UPN) of the user.
 - When clients use EAP-TLS or PEAP with EAP-TLS authentication, a list of all the installed certificates is displayed in the Certificates snap-in, with the following exceptions:
-  - Wireless clients do not display registry-based certificates and smart card logon certificates.
-  - Wireless clients and virtual private network (VPN) clients do not display certificates that are protected with a password.
+  - Wireless clients don't display registry-based certificates and smart card logon certificates.
+  - Wireless clients and virtual private network (VPN) clients don't display certificates that are protected with a password.
   - Certificates that don't contain the Client Authentication purpose in EKU extensions aren't displayed.
 
 ## Server certificate requirements
