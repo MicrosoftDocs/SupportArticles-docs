@@ -18,7 +18,7 @@ ms.reviewer:
 
    ![Service stopped](./media/azure-vm-nsi-not-starting/2-stopped.png)
 
-3. If you pull the Guest OS Logs, you'll see that the core networking service, Network Store Interface (NSI), is not starting or failing to start. This could be due to a hang, a crash of this service, or any required service to be run before it.
+3. If you pull the Guest OS Logs, you'll see that the core networking service, Network Store Interface (NSI), is not starting or failing to start. This issue could be due to a hang, a crash of this service, or any required service to be run before it.
 
    ```cmd
       Log Name:      System
@@ -68,7 +68,7 @@ ms.reviewer:
 
 ## Cause
 
-The NSI service is not running on the Virtual Machine. This happens in the following scenarios:
+The NSI service is not running on the Virtual Machine. This issue happens in the following scenarios:
 
 1. The NSI service was set to disabled.
 2. The NSI is crashing. The RCA will depend on the dump from the process.
@@ -95,12 +95,12 @@ The NSI service is not running on the Virtual Machine. This happens in the follo
 1. Use steps 1-3 of the [VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to prepare a Repair VM.
 1. Using Remote Desktop Connection, connect to the Repair VM.
 
-### Verify that the OS partition is active.
+### Verify that the OS partition is active
 
 > [!NOTE]
 > This mitigation applies only for Generation 1 VMs. Generation 2 VMs (using UEFI) does not have active partition.
 
-Verify the OS partition which holds the BCD store for the disk is marked as active.
+Verify the OS partition, which holds the BCD store for the disk is marked as active.
 
    1. Open an elevated command prompt and open up DISKPART tool.
 
@@ -115,7 +115,7 @@ Verify the OS partition which holds the BCD store for the disk is marked as acti
 
       ![Disk 1](media/azure-vm-nsi-not-starting/11-Gen2-1.png)
 
-   3. List all the partitions on that disk and then proceed to select the partition you want to check. Usually System Managed partitions are smaller and are around 350Mb big. In the image below, this will be Partition 1.
+   3. List all the partitions on that disk and then proceed to select the partition you want to check. Usually System Managed partitions are smaller and are around 350 Mb. In the image below, this will be Partition 1.
 
       ```cmd
       list partition
@@ -215,7 +215,7 @@ Verify the OS partition which holds the BCD store for the disk is marked as acti
       >[!NOTE]
       In some cases the variables Devices and OSDevices in {< IDENTIFIER >} were pointing to the correct partition but still the OS was unable to boot. For those cases, a rewrite could fix the machine start up.
 
-   Detach the disk and wait till Azure update the disk, then reassemble the VM.
+   Detach the disk and wait until Azure updates the disk, then re-assemble the VM.
 
 If those steps don't resolve the issue, then recreate the BCD store entirely.
 
