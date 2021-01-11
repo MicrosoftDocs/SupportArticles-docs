@@ -14,7 +14,7 @@ ms.reviewer:
 
    ![Waiting for credentials](./media/azure-vm-nsi-not-starting/1-waiting.png)
 
-2. In the **WinGuestAnalyzer\Health Signal** tab the service is currently in not in a **Running** state. As this service is the core service for the network component on the OS, all related network services like BFE or Windows Firewall will not start:
+2. In the **WinGuestAnalyzer\Health Signal** tab, the service is currently in not in a **Running** state. As this service is the core service for the network component on the OS, all related network services like BFE or Windows Firewall will not start:
 
    ![Service stopped](./media/azure-vm-nsi-not-starting/2-stopped.png)
 
@@ -64,16 +64,16 @@ ms.reviewer:
       The account specified for this service is different from the account specified for other services running in the same process.
    ```
 
-4. It is possible that you don't see any attempt to start this service during the booting time, which can happen if the service was disabled.
+4. It's possible that you don't see any attempt to start this service during the booting time, which can happen if the service was disabled.
 
 ## Cause
 
-The NSI service is not running on the Virtual Machine. This happen on the following scenarios, and the RCA will depend on one of the following issues:
+The NSI service is not running on the Virtual Machine. This happens in the following scenarios:
 
-1. NSI service was set to disabled.
-2. NSI is crashing, the RCA will depend on the dump from the process.
-3. NSI is hanging, , the RCA will depend on the dump from the process.
-4. Another required service is not running, the RCA will depend on why the other service was not starting.
+1. The NSI service was set to disabled.
+2. The NSI is crashing. The RCA will depend on the dump from the process.
+3. The NSI is hanging. The RCA will depend on the dump from the process.
+4. Another required service is not running. The RCA will depend on why the other service was not starting.
 
 ## Solution
 
