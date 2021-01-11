@@ -602,8 +602,6 @@
       href: ./application-management/dial-in-tab-unavailable-mmc-snap-in.md
   - name: Application Compatibility Toolkit (ACT)
     items:
-    - name: Application compatibility update
-      href: ./application-management/application-compatibility-update.md
     - name: DXDIAG reports low display adapters memory
       href: ./application-management/low-amount-display-adapter-memory.md
     - name: Error "The Best Practices Analyzer scan has failed"
@@ -1914,8 +1912,6 @@
       href: ./performance/ram-virtual-memory-pagefile-management.md
   - name: Shutdown is slow or hangs
     items:
-    - name: Shutdown command fails to shut down or to restart Windows Server 2003 remotely
-      href: ./performance/cannot-use-shutdown-command-shut-down-restart-remotely.md
     - name: incorrect shutdown reason code written to SEL
       href: ./performance/incorrect-shutdown-reason-code-sel.md
     - name: Use Userdump.exe to create a dump file
@@ -2718,8 +2714,6 @@
       href: ./windows-security/root-ca-certificate-doesnt-appear.md
     - name: Security certificate validation fails
       href: ./windows-security/secured-website-certificate-validation-fails.md
-    - name: '"SSL Certificate add failed, Error: 1312" error message'
-      href: ./windows-security/ssl-certificate-add-failed-error-1312-error-message.md
     - name: Superseded Certificate Templates and impact on user’s AD store
       href: ./windows-security/superseded-certificate-templates-impact-user-ad-store.md
     - name: Support for Suite B cryptographic algorithms
