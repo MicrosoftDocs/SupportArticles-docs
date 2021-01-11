@@ -62,8 +62,12 @@
     href: cannot-compile-32-bit-app-x64-machine.md
   - name: Help Viewer 2.0 crashes
     href: help-viewer-2-crashes.md
+  - name: Instrumenting an signed assembly would throw warning message
+    href: instrumenting-signed-assembly-throw-warning-message.md
   - name: LNK1102 error when you build projects
     href: linker-fatal-error-out-of-memory.md
+  - name: No Internet connectivity if Internet Explorer is not started
+    href: no-internet-connectivity-internet-explorer-not-started.md
   - name: Referenced project doesn't exist
     href: building-solution-with-multiple-projects-fails.md
   - name: Single instance application crashes
