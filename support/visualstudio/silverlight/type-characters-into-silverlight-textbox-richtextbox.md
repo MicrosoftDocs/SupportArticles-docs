@@ -31,7 +31,7 @@ The steps to reproduce the problem could vary depending on the IME. It does not 
 
 1. Create a Silverlight 4 application
 1. Add a TextBox capable of holding at least 60 characters.
-1. Run the application. You will see the textbox in the browser.  Set focus to the Textbox and make the Chinese (Simplified) Microsoft Pinyin IME active and set the input mode to Chinese 中.
+1. Run the application. You will see the textbox in the browser.  Set focus to the Textbox and make the Chinese (Simplified) Microsoft Pinyin IME active and set the input mode to Chinese.
 1. Type the following three letters 'a','s', and 'd' from an English keyboard repeatedly into the Silverlight textbox.
 
 Around the 47th character, you could see some characters repeated and you could see the following exception thrown:

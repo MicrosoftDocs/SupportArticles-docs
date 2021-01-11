@@ -25,7 +25,7 @@ This problem occurs because many services use WinHTTP to access the Internet, an
 
 If the value doesn't exist, it's created automatically by Internet Explorer through WinINet when the browser starts for the first time in a Windows session.
 
-## More Information
+## More information
 
 To fully analyze the root cause of this problem, you must understand why your operating system installation method is using a configuration in which the **DefaultConnectionSettings** registry value doesn't exist. This is not expected because all out-of-the-box (OOB) operating system installations are configured to correctly create this registry key.
 
@@ -38,6 +38,4 @@ Depending on the root cause, you may have to take different actions. We don't pr
 "ProxyServer"="Proxy:Port"  
 "ProxyOverride"="List"  
 
-This method is explained in detail in the following MSDN topic:
-
-[Setting and Retrieving Internet Options](/windows/win32/wininet/setting-and-retrieving-internet-options)
+This method is explained in detail in: [Setting and Retrieving Internet Options](/windows/win32/wininet/setting-and-retrieving-internet-options).

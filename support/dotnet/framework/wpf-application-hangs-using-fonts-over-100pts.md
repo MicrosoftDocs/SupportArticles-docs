@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ms.reviewer: Tatkins
 ms.topic: troubleshooting
 ---
-# WPF application hangs when using fonts over 100 pts in size
+# WPF application hangs when you use fonts over 100 pts in size
 
 This article helps you resolve the problem where application becomes unresponsive and hangs indefinitely.
 
@@ -27,6 +27,6 @@ We have confirmed this is a bug in the Microsoft .NET 3.5 Framework.
 
 This bug has been fixed in Microsoft .NET 4.0 Framework. To work around this bug, avoid using large characters or fonts, or upgrade your application to target the Microsoft .NET 4.0 Framework.
 
-## More Information
+## More information
 
 In the above symptom, we define large to mean a character with an effective size of 100 pt or greater, 100 pt being the bug threshold. Effective refers to multiplying the font size by any transforms. The threshold takes into account any transformations that might be in effect, and the effect of your computer's DPI setting. For example, if you use a 60-point Arial font within the scope of a RenderTransform that scales up by a factor of 2, the effective size is 120 pt, which exceeds the 100-pt threshold limit.

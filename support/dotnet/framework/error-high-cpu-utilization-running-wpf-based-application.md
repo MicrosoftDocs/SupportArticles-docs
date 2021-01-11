@@ -6,16 +6,16 @@ ms.prod-support-area-path:
 ms.reviewer: 
 ms.topic: troubleshooting
 ---
-# Error message or high CPU utilization when running a Windows Presentation Foundation (WPF)-based application
+# Error message or high CPU utilization when running a WPF-based application
 
-This article helps you resolve the problem where you receive a **FileFormatException** or **ArgumentOutOfRangeException** error message in a WPF-based program when the WPF-based program processes text.
+This article helps you resolve the problem where you receive a **FileFormatException** or **ArgumentOutOfRangeException** error message in a Windows Presentation Foundation (WPF)-based program when the WPF-based program processes text.
 
 _Applies to:_ &nbsp; Windows Presentation Foundation  
 _Original KB number:_ &nbsp; 937135
 
 ## Symptoms
 
-When you run a Windows Presentation Foundation (WPF)-based application in the Microsoft .NET Framework 3.0, you may receive a FileFormatException error or an ArgumentOutofRangeException error. The error occurs when the WPF-based application starts to process text. For example, you may receive a FileFormatException error message that resembles the following:
+When you run a WPF-based application in the Microsoft .NET Framework 3.0, you may receive a FileFormatException error or an ArgumentOutofRangeException error. The error occurs when the WPF-based application starts to process text. For example, you may receive a **FileFormatException** error message that resembles the following:
 
 > file:///filepath/file_name file does not conform to the expected file format specification.
 
@@ -59,7 +59,7 @@ To resolve this issue, follow these steps:
 
       To download and install the latest video card drivers, contact the computer or the video hardware manufacturer.
 
-## More Information
+## More information
 
 If the video card drivers overwrite the data in the font cache that is stored in memory, the corrupted data may be saved to the hard disk as a data file. Therefore, you may experience the issue that is described in the [Symptoms](#symptoms) section when another WPF-based application tries to read the corrupted data file.
 

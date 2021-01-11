@@ -15,7 +15,11 @@ _Original KB number:_ &nbsp; 2200180
 
 ## Symptoms
 
-In Visual Studio, you would get a warning message: **XXX.DLL/XXX.EXE has been signed. Instrumenting will break verification. Either turn off verification for this assembly or re-sign it in the post-instrumentation step. Press OK to attempt to profile anyway**. If you press **OK** in the message box, the profiler would run however there will not be any data collected after instrumenting the assembly.
+In Visual Studio, you would get a warning message similar to the following:
+
+> XXX.DLL/XXX.EXE has been signed. Instrumenting will break verification. Either turn off verification for this assembly or re-sign it in the post-instrumentation step. Press OK to attempt to profile anyway.
+
+If you press **OK** in the message box, the profiler would run however there will not be any data collected after instrumenting the assembly.
 
 You create any type of .Net based application (Console, Winforms, Test project, etc), and you sign the assembly. Then you use the performance wizard to instrument the signed assembly. Refer the MSDN document: [How to: Use Performance Wizard](/previous-versions/ms182372(v=vs.80)).
 

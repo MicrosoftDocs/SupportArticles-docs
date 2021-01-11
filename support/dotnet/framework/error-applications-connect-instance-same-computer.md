@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 3214106
 
 ## Summary
 
-The December 13, 2016, Security and Quality Rollup updates 3210137 and 3210138 contain a known issue that affects the .NET Framework 4.5.2 running on Windows 8.1, Windows Server 2012 R2, and Windows Server 2012. The issue was also present in the November 15, 2016, rollup updates that were superseded by the December updates. This article contains a workaround for this issue.
+The December 13, 2016, Security and Quality Rollup updates [3210137](https://support.microsoft.com/help/3210137) and [3210138](https://support.microsoft.com/help/3210138) contain a known issue that affects the .NET Framework 4.5.2 running on Windows 8.1, Windows Server 2012 R2, and Windows Server 2012. The issue was also present in the November 15, 2016, rollup updates that were superseded by the December updates. This article contains a workaround for this issue.
 
 ## Symptoms
 

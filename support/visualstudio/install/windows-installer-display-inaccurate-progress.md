@@ -17,13 +17,13 @@ _Original KB number:_ &nbsp; 2533844
 
 Most installation and uninstalls using Windows Installer service have dialog boxes that show the remaining time. This can be displayed as a percentage, number of minutes and seconds, a progress bar, or a combination.
 
-There are circumstances where the *Standard Windows Installer* progress dialog time estimates will fluctuate and will not show the true time remaining.
+There are circumstances where the **Standard Windows Installer** progress dialog time estimates will fluctuate and will not show the true time remaining.
 
 ## Cause
 
 There are many factors that strongly affect the display, particularly when trying to determine the actual time remaining. For example, having a high quantity of files during an uninstall will impact the calculation. Resources on the target machine also introduce variances since subsystems (CPU, memory, disk speed, and network) will respond at different rates.
 
-## More Information
+## More information
 
 Windows Installer's existing internal UI does not provide the flexibility necessary for unique setups or complex scenarios. Setup authors, who want a UI experience that Windows Installer's internal UI doesn't support, use [MsiSetExternalUIA function (msi.h)](/windows/win32/api/msi/nf-msi-msisetexternaluia) / [MsiSetExternalUIRecord function (msi.h)](/windows/win32/api/msi/nf-msi-msisetexternaluirecord) to initialize and use their custom UI. For information on how to use these APIs to control your own user experience refer to the links below:
 

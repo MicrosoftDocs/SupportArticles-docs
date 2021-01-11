@@ -13,10 +13,6 @@ This article provides resolutions for troubleshooting for Visual C++ Compiler or
 _Applies to:_ &nbsp; Microsoft Visual C++ 2010 Express, Visual Studio  
 _Original KB number:_ &nbsp; 974229
 
-## Rapid publishing
-
-RAPID PUBLISHING ARTICLES PROVIDE INFORMATION DIRECTLY FROM WITHIN THE MICROSOFT SUPPORT ORGANIZATION. THE INFORMATION CONTAINED HEREIN IS CREATED IN RESPONSE TO EMERGING OR UNIQUE TOPICS, OR IS INTENDED SUPPLEMENT OTHER KNOWLEDGE BASE INFORMATION.
-
 ## Action
 
 When investigating a possible problem with the Microsoft Visual C++ compiler or linker, it is important to obtain as much information as possible about the build process and the options being used. This article discusses some troubleshooting tips to help resolve your build problem or capture comprehensive information for Microsoft Support.
@@ -54,7 +50,7 @@ When investigating a possible problem with the Microsoft Visual C++ compiler or 
 
     1. Create the `LINK_REPRO` environment variable pointing to an existing and empty directory, for example: `SET LINK_REPRO=C:\TEMP\LINKREPRO\`.
 
-    1. Run Visual Studio *from the same command prompt* so that it shares a copy of the environment you have modified.
+    1. Run Visual Studio from the same command prompt so that it shares a copy of the environment you have modified.
 
     1. Open the project and do a Rebuild All of the project.
 
@@ -68,6 +64,6 @@ When investigating a possible problem with the Microsoft Visual C++ compiler or 
 
 ## Disclaimer
 
-MICROSOFT AND/OR ITS SUPPLIERS MAKE NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY, RELIABILITY OR ACCURACY OF THE INFORMATION CONTAINED IN THE DOCUMENTS AND RELATED GRAPHICS PUBLISHED ON THIS WEBSITE (THE "MATERIALS") FOR ANY PURPOSE. THE MATERIALS MAY INCLUDE TECHNICAL INACCURACIES OR TYPOGRAPHICAL ERRORS AND MAY BE REVISED AT ANY TIME WITHOUT NOTICE.
+[!INCLUDE [Rapid Publishing Disclaimer](../includes/rapid-publishing-disclaimer.md)]
 
-TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, MICROSOFT AND/OR ITS SUPPLIERS DISCLAIM AND EXCLUDE ALL REPRESENTATIONS, WARRANTIES, AND CONDITIONS WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT LIMITED TO REPRESENTATIONS, WARRANTIES, OR CONDITIONS OF TITLE, NON INFRINGEMENT, SATISFACTORY CONDITION OR QUALITY, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, WITH RESPECT TO THE MATERIALS.
+[!INCLUDE [Disclaimer](../includes/publishing-disclaimer.md)]
