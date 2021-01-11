@@ -108,7 +108,7 @@ Verify the OS partition, which holds the BCD store for the disk is marked as act
       sel disk 1
       ```
 
-      ![Disk 1](media/azure-vm-nsi-not-starting/11-Gen2-1.png)
+      ![Disk 1](media/azure-vm-netlogon-not-starting/11-Gen2-1.png)
 
    3. List all the partitions on that disk and then proceed to select the partition you want to check. Usually System Managed partitions are smaller and are around 350 Mb. In the image below, this will be Partition 1.
 
@@ -117,13 +117,13 @@ Verify the OS partition, which holds the BCD store for the disk is marked as act
       sel partition 1
       ```
 
-      ![Partition 1](media/azure-vm-nsi-not-starting/12-Gen2-2.png)
+      ![Partition 1](media/azure-vm-netlogon-not-starting/12-Gen2-2.png)
 
    4. Check the status of the partition. The same should be Active.
 
       `detail partition`
 
-      ![Detail Partition](media/azure-vm-nsi-not-starting/13-Gen2-3.png)
+      ![Detail Partition](media/azure-vm-netlogon-not-starting/13-Gen2-3.png)
 
       1. If the partition isn't active:
 
@@ -134,7 +134,7 @@ Verify the OS partition, which holds the BCD store for the disk is marked as act
             detail partition
             ```
 
-            ![Acive Flag](media/azure-vm-nsi-not-starting/14-Gen2-4.png)
+            ![Acive Flag](media/azure-vm-netlogon-not-starting/14-Gen2-4.png)
 
    5. Now exist DISKPART tool.
 
@@ -156,7 +156,7 @@ Verify the OS partition, which holds the BCD store for the disk is marked as act
 
       2. Write down the identifier of the Windows Boot loader. This is the one which path is `\windows\system32\winload.exe`.
 
-         ![Mitigation 2 - Windows Identifier 1](media/azure-vm-nsi-not-starting/6-boot-configuration-data-windows-identifier.png)
+         ![Mitigation 2 - Windows Identifier 1](media/azure-vm-netlogon-not-starting/6-boot-configuration-data-windows-identifier.png)
 
    2. For Generation 2 VM:
 
@@ -166,7 +166,7 @@ Verify the OS partition, which holds the BCD store for the disk is marked as act
 
       2. Write down the identifier of the Windows Boot loader. This is the one which path is `\windows\system32\winload.efi`.
 
-         ![Mitigation 2 - Windows Identifier 2](media/azure-vm-nsi-not-starting/15-default-identifier.png)
+         ![Mitigation 2 - Windows Identifier 2](media/azure-vm-netlogon-not-starting/15-default-identifier.png)
 
 3. Run the following commands:
 
