@@ -1,6 +1,6 @@
 ---
 title: Certificate requirements when you use EAP-TLS
-description: This article discusses the certificate requirements when you use Extensible Authentication Protocol-Transport Layer Security (EAP-TLS) or Protected Extensible Authentication Protocol (PEAP)-EAP-TLS in Windows Server.
+description: Discusses the certificate requirements when you use Extensible Authentication Protocol (EAP) Transport Layer Security (TLS) or Protected Extensible Authentication Protocol (PEAP)-EAP-TLS in Windows Server.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -28,7 +28,7 @@ One requirement is that the certificate must be configured with one or more purp
 
 ## Minimum certificate requirements
 
-All certificates that are used for network access authentication must meet the requirements for X.509 certificates, and they must also meet the requirements for connections that use Secure Sockets Layer (SSL) encryption and Transport Level Security (TLS) encryption. After these minimum requirements are met, both the client certificates and the server certificates must meet the following additional requirements.
+All certificates that are used for network access authentication must meet the requirements for X.509 certificates. They must also meet the requirements for connections that use Secure Sockets Layer (SSL) encryption and Transport Level Security (TLS) encryption. After these minimum requirements are met, both the client certificates and the server certificates must meet the following additional requirements.
 
 ## Client certificate requirements
 
@@ -45,13 +45,13 @@ With either EAP-TLS or PEAP with EAP-TLS, the server accepts the client's authen
 - When clients use EAP-TLS or PEAP with EAP-TLS authentication, a list of all the installed certificates is displayed in the Certificates snap-in, with the following exceptions:
   - Wireless clients do not display registry-based certificates and smart card logon certificates.
   - Wireless clients and virtual private network (VPN) clients do not display certificates that are protected with a password.
-  - Certificates that do not contain the Client Authentication purpose in EKU extensions are not displayed.
+  - Certificates that don't contain the Client Authentication purpose in EKU extensions aren't displayed.
 
 ## Server certificate requirements
 
-You can configure clients to validate server certificates by using the **Validate server certificate** option on the **Authentication** tab in the Network Connection properties. When a client uses PEAP-EAP-MS-Challenge Handshake Authentication Protocol (CHAP) version 2 authentication, PEAP with EAP-TLS authentication, or EAP-TLS authentication, the client accepts the server's certificate when the certificate meets the following requirements:
+You can configure clients to validate server certificates by using the **Validate server certificate** option. This option is on the **Authentication** tab in the Network Connection properties. When a client uses PEAP-EAP-MS-Challenge Handshake Authentication Protocol (CHAP) version 2 authentication, PEAP with EAP-TLS authentication, or EAP-TLS authentication, the client accepts the server's certificate when the certificate meets the following requirements:
 
-- The computer certificate on the server chains to one of the following:
+- The computer certificate on the server chains to one of the following CAs:
 
   - A trusted Microsoft root CA.
   
@@ -59,9 +59,9 @@ You can configure clients to validate server certificates by using the **Validat
 
 - The IAS or the VPN server computer certificate is configured with the Server Authentication purpose. The object identifier for Server Authentication is 1.3.6.1.5.5.7.3.1.
 
-- The computer certificate does not fail any one of the checks that are performed by the CryptoAPI certificate store, and it does not fail any one of the requirements in the remote access policy.
+- The computer certificate doesn't fail any one of the checks that are performed by the CryptoAPI certificate store. And it doesn't fail any one of the requirements in the remote access policy.
 
-- The name in the Subject line of the server certificate matches the name that is configured on the client for the connection.
+- The name in the Subject line of the server certificate matches the name that's configured on the client for the connection.
 
 - For wireless clients, the Subject Alternative Name (SubjectAltName) extension contains the server's fully qualified domain name (FQDN).
 
