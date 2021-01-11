@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4038458
 
 ## Symptoms
 
-Assume that you have Microsoft SQL Server 2016 Analysis Services (SSAS 2016) installed. When you try to obtain the properties of a specific Dimension Hierarchy and its members by using XMLA script in SSAS 2016, no results are returned.
+Assume that you have Microsoft SQL Server 2016 Analysis Services (SSAS 2016) installed. When you try to obtain the properties of a specific Dimension Hierarchy and its members by using XMLA script in SSAS 2016, no results are returned.
 
 > [!NOTE]
 > - The same XMLA script works in SQL Server 2014 Analysis Services or earlier versions of SQL Server Analysis Services.

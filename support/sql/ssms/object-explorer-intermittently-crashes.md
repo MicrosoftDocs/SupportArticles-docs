@@ -15,17 +15,17 @@ _Original KB number:_ &nbsp; 4091777
 
 ## Symptoms
 
-Object Explorer intermittently hangs when you use SSMS. This issue applies to all versions starting from SSMS 2012.
+Object Explorer intermittently hangs when you use SSMS. This issue applies to all versions starting from SSMS 2012.
 
-This issue may occur anytime that Object Explorer is in focus (for example, when you click an item in the tree). However, this issue occurs only if all the following conditions are true:
+This issue may occur anytime that Object Explorer is in focus (for example, when you click an item in the tree). However, this issue occurs only if all the following conditions are true:
 
 - SQL Server authentication is used.
-- The default database for the logon that is used to connect is not the master.
+- The default database for the logon that is used to connect is not the master.
 - The SSMS version is 2012 or a later version.
 - Object Explorer is connected to the database engine.
 
     > [!NOTE]
-    > Query windows do not experience this issue.
+    > Query windows do not experience this issue.
 
 ## Cause
 

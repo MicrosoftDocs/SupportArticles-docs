@@ -14,13 +14,13 @@ _Original KB number:_ &nbsp; 4057582
 
 ## Symptoms
 
-When you open an XAML or WPF file in Design view in Microsoft Visual Studio 2017, you receive the following error message:
+When you open an XAML or WPF file in Design view in Microsoft Visual Studio 2017, you receive the following error message:
 
 > Cannot find resource named \<Resource name\>. Resource names are case sensitive.
 
 > [!NOTE]
 >
-> - The static resource keys of the UI components that display error messages in Design view can be found in the application resource dictionary.
+> - The static resource keys of the UI components that display error messages in Design view can be found in the application resource dictionary.
 > - This issue doesn't occur at run time.
 > - This issue doesn't occur if project code is disabled.
 
@@ -28,7 +28,7 @@ When you open an XAML or WPF file in Design view in Microsoft Visual Studio 201
 
 This problem occurs because of the interaction between the WPF runtime and a designer performance optimization that was introduced in Visual Studio 2015.
 
-If the performance optimization is enabled, the designer waits until resources are used before it instantiates the values of the resources instead of creating all resources during designer load. This can cause a small reduction in designer load time. However, this process doesn't work well if the referenced projects are unloaded.
+If the performance optimization is enabled, the designer waits until resources are used before it instantiates the values of the resources instead of creating all resources during designer load. This can cause a small reduction in designer load time. However, this process doesn't work well if the referenced projects are unloaded.
 
 ## Resolution
 

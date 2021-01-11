@@ -33,7 +33,9 @@ After you install the update in [Vulnerability in Windows User Profile service c
 - Services don't start because of profile load failures. Affected services include but aren't limited to the following:
   - Local Service
   - Network Service
-  - MSSQLWhen this issue occurs, related events are logged. See [the events that are logged in Event Viewer](#more-information).
+  - MSSQL
+
+When this issue occurs, related events are logged. See [the events that are logged in Event Viewer](#more-information).
 
 Process Monitor may indicate that a **CreateFile** operation fails with an **ACCESS DENIED** result to the following path, depending on how file access is constrained:
 **\<drive>**:\documents & settings\\\<username>\local settings\Application Data\Microsoft\Windows\UsrClasss.dat.

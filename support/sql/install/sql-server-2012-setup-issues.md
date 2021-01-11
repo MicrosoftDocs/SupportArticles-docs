@@ -100,10 +100,10 @@ _Original KB number:_ &nbsp; 2681562
 
   Symptoms
 
-  In Windows 8.1, Windows 8, Windows Server 2012 R2, Windows Server 2012, Windows 10, and Windows Server 2016, the .NET Framework is a Feature-On-Demand (FOD) component. Additionally, the Windows 10, Windows 8.1 and Windows 8 system policies and the Windows Server 2016, Windows Server 2012 R2 and Windows Server 2012 system policies require users to be alerted when FOD components are enabled.
+  In Windows 8.1, Windows 8, Windows Server 2012 R2, Windows Server 2012, Windows 10, and Windows Server 2016, the .NET Framework is a Feature-On-Demand (FOD) component. Additionally, the Windows 10, Windows 8.1 and Windows 8 system policies and the Windows Server 2016, Windows Server 2012 R2 and Windows Server 2012 system policies require users to be alerted when FOD components are enabled.
 
   > [!NOTE]
-  > By default, the .NET Framework 4.0 is enabled in Windows 8 and Windows Server 2012. Additionally, the .NET Framework 4.5 is enabled in Windows 8.1 and Windows Server 2012 R2, and the .NET Framework 4.6 is enabled in Windows 10 and Window Server 2016. However, the .NET Framework 3.5 is disabled.
+  > By default, the .NET Framework 4.0 is enabled in Windows 8 and Windows Server 2012. Additionally, the .NET Framework 4.5 is enabled in Windows 8.1 and Windows Server 2012 R2, and the .NET Framework 4.6 is enabled in Windows 10 and Window Server 2016. However, the .NET Framework 3.5 is disabled.
 
   Therefore, a program compatibility mode warning that prompts users to download and install the .NET Framework 3.5 may be displayed during a silent install. These program compatibility alerts cannot be suppressed. Screenshots of warnings are shown as follows:
 
@@ -145,7 +145,7 @@ _Original KB number:_ &nbsp; 2681562
 
   When you try to install the second instance of SQL Server 2012, the installation uses the .NET Framework 2.0 because the .NET Framework 3.5 is already installed. This conflict with the setting in the user configuration causes the unhandled exception.
 
-  In Windows 10 and Windows Server 2016, this issue occurs because the .NET Framework 4.6 is enabled by default. Therefore, a .NET Framework 4.6 user configuration file is created when you install SQL Server 2012. Additionally, the .NET Framework 3.5 is enabled during the installation.
+  In Windows 10 and Windows Server 2016, this issue occurs because the .NET Framework 4.6 is enabled by default. Therefore, a .NET Framework 4.6 user configuration file is created when you install SQL Server 2012. Additionally, the .NET Framework 3.5 is enabled during the installation.
 
   When you try to install the second instance of SQL Server 2012, the installation uses the .NET Framework 2.0 because the .NET Framework 3.5 is already installed. This conflicts with the setting in the user configuration file cause the unhandled exception.
 

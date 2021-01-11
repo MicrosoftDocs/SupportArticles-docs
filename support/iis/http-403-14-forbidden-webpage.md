@@ -2,7 +2,7 @@
 title: HTTP Error 403.14 when you open IIS webpages
 description: Resolves the "HTTP 403.14 The web server is configured to not list the contents of this directory" error message that occurs when you visit a website.
 ms.date: 11/9/2020
-ms.prod-support-area-path: Health, diagnostic, and performance features
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ---
 # HTTP Error 403.14 - Forbidden when you open an IIS webpage
 

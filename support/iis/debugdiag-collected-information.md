@@ -2,12 +2,12 @@
 title: Information collected by DebugDiag
 description: This article describes the information on what is collected in DebugDiag Diagnostic.
 ms.date: 03/19/2020
-ms.prod-support-area-path: Health, diagnostic, and performance features
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.topic: article
 ---
 # DebugDiag 1.2 installation and data collector
 
-This article describes the information that might be collected from a machine when running the DebugDiag 1.2 installation and data collector.
+This article describes the information that might be collected from a machine when running the DebugDiag 1.2 installation and data collector.
 
 _Original product version:_ &nbsp; Windows Server 2008 R2, 2008  
 _Original KB number:_ &nbsp; 2700007
@@ -61,6 +61,6 @@ The DebugDiag 1.2 installation and data collector will install DebugDiag 1.2 to 
 
 ## More information
 
-If the user selects to install DebugDiag 1.2 to the machine, it will launch the DebugDiag 1.2 installer.  After installed, this troubleshooter won't remove DebugDiag 1.2 from the machine. Use Control Panel to uninstall the program if that is desired.
+If the user selects to install DebugDiag 1.2 to the machine, it will launch the DebugDiag 1.2 installer.  After installed, this troubleshooter won't remove DebugDiag 1.2 from the machine. Use Control Panel to uninstall the program if that is desired.
 
 For more information, see [KB2598970 - Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform](https://support.microsoft.com/help/2598970).

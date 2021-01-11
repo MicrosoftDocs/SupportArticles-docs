@@ -34,14 +34,14 @@ Windows member servers only issue up to two concurrent NTLM authentication reque
 ### Add a registry key
 
 > [!WARNING]
-> Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk. 
+> Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
 
 Follow these steps to increase the number of concurrent authentication calls in progress at one time between the ISA Server computer and the domain controller.
 
-1. Start Registry Editor. To do this, click Start , click Run, type Regedt32.exe, and then click OK.
-2. Locate the following registry key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters  
+1. Start **Registry Editor**. To do this, click **Start** , click **Run**, type *Regedt32.exe*, and then click **OK**.
+2. Locate the following registry key: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters`  
 
-3. On the Edit menu, click Add Value, and then add the following registry information:
+3. On the **Edit** menu, click **Add Value**, and then add the following registry information:
 
     - Value Name: MaxConcurrentApi
     - Data Type: REG_DWORD
@@ -49,7 +49,7 @@ Follow these steps to increase the number of concurrent authentication calls in 
 
     Windows 2008 R2 maximum value is 150.
 4. Restart the NETLOGON service. To use the higher values, you need to install an update:
- [975363](https://support.microsoft.com/help/975363) A time-out error occurs when many NTLM authentication requests are sent from a Domain Member for users from remote Domains in a high latency network
+ [975363](https://support.microsoft.com/help/975363) A time-out error occurs when many NTLM authentication requests are sent from a Domain Member for users from remote Domains in a high latency network.
 
 > [!NOTE]
 > When you increase the value of the MaxConcurrentApi entry to a value that is greater than 5, make sure that you monitor the number of requests that are sent to the domain controller. To do this, install the update that is described in the following Knowledge Base article on the servers: [928576](https://support.microsoft.com/help/928576) New performance counters for Windows Server 2003 let you monitor the performance of Netlogon authentication  

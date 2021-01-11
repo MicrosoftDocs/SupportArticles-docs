@@ -18,9 +18,9 @@ _Original KB number:_ &nbsp; 969052
 > The process that's described in this article provides emergency relief only and not a permanent fix. Customers who use this emergency process should validate their Windows Installer Cache using the Windows Installer Cache Verifier Package, as directed in KB article [Missing Windows Installer cache requires a computer rebuild](https://support.microsoft.com/help/2667628).
 ## Symptoms
 
-When you try to install a Microsoft SQL Server service pack or a cumulative update, you may encounter various error messages, and these may indicate Windows Installer Cache problems. The Windows Installer Cache, located in *c:\windows\installer* folder, stores important files for applications installed using the Windows Installer technology and should not be deleted. If the installer cache has been compromised, you may not immediately see problems until you perform an action such as uninstall, repair, or update SQL Server.
+When you try to install a Microsoft SQL Server service pack or a cumulative update, you may encounter various error messages, and these may indicate Windows Installer Cache problems. The Windows Installer Cache, located in *c:\windows\installer* folder, stores important files for applications installed using the Windows Installer technology and should not be deleted. If the installer cache has been compromised, you may not immediately see problems until you perform an action such as uninstall, repair, or update SQL Server.
 
-When you install SQL Server, the Windows Installer stores critical files in the Windows Installer Cache (default is *C:\Windows\Installer*). These files are required for uninstalling and updating applications. Missing files cannot be copied between computers, because they are unique.
+When you install SQL Server, the Windows Installer stores critical files in the Windows Installer Cache (default is *C:\Windows\Installer*). These files are required for uninstalling and updating applications. Missing files cannot be copied between computers, because they are unique.
 
 Microsoft recommends that for SQL Server installations you first use the repair process that's described in the following articles to verify your current installation:
 
@@ -31,7 +31,7 @@ Microsoft recommends that for SQL Server installations you first use the repair 
 
 You should run the repair from the original installation media, using the command line: `setup.exe/ACTION=REPAIR/INDICATEPROGRESS=TRUE`.
 
-Repair the common shared components and features first, and then repeat the command to repair the instances installed. During the repair process, the setup dialog box disappears. As long as the progress window does not show an error, the repair process is proceeding as expected. If the installer cache file for a specific component is missing, then repair process will encounter an error.
+Repair the common shared components and features first, and then repeat the command to repair the instances installed. During the repair process, the setup dialog box disappears. As long as the progress window does not show an error, the repair process is proceeding as expected. If the installer cache file for a specific component is missing, then repair process will encounter an error.
 
 ## Cause
 
@@ -45,7 +45,7 @@ Any future update to the product such as a hotfix, a cumulative update, or a ser
 
 To resolve these problems, use one of the following procedures.
 
-## Procedure 1.a.: Use the FixMissingMSI tool
+## Procedure 1.a.: Use the FixMissingMSI tool
 
 In this procedure, you will use the FixMissingMSI tool to identify MSI and MSP files that are missing from the Windows Installer cache. As an additional step you can point the tool to the original media locations and recache the missing files.
 
@@ -55,7 +55,7 @@ For more information, please see [SQL Setup ToolSuite Introduction (1) -FixMissi
 
 ## Procedure 1.b.: Use the FindSQLInstalls.vbs script
 
-To complete the steps in this procedure, you have to copy the FindSQLInstalls.vbs script in the *FixMissingMSI* folder from the [GitHub repository](https://github.com/suyouquan/SQLSetupTools/tree/master/FixMissingMSI)  to a local folder on the computer where you are trying to update your SQL Server installation.
+To complete the steps in this procedure, you have to copy the FindSQLInstalls.vbs script in the *FixMissingMSI* folder from the [GitHub repository](https://github.com/suyouquan/SQLSetupTools/tree/master/FixMissingMSI) to a local folder on the computer where you are trying to update your SQL Server installation.
 
 > [!NOTE]
 > The FindSQLInstalls.vbs script collects the information to correct invalid package paths. This script is used against the source locations to make sure that all MSP packages are in the Windows Installer cache directory. After executing the commands indicated in the Action needed lines in the script output file, the missing packages will be re-added if the original source media is available.
@@ -166,7 +166,7 @@ To manually restore the files that are missing from the Windows Installer cache,
 
 1. Locate the original msp file *sql_engine_core_inst.msp* file. The file should be in the following folder: `C:\Temp\SQLServer2008R2-KB981355-x64\x64\setup\sql_engine_core_inst_msi\`.
 
-1. Copy this original msp file to the following Windows Installer cache: `%windir%\installer\`.
+1. Copy this original msp file to the following Windows Installer cache: `%windir%\installer\`.
 
 1. Rename the original msp file, *sql_engine_core_inst.msp*, to the name: cached msp file 1fdb1aec.msp.
 
@@ -295,19 +295,19 @@ You can restore from system state backups as described in [Missing Windows Insta
 
     In the *Detail.txt* file:
 
-    > Date/Time Slp: Sco: FileFilePath does not exist  
-    Date/Time Slp: Sco: FileFilePathdoes not exist  
-    Date/Time Slp: Checkpoint: PREINSTALL_SQLSUPPORT_CPU64_ACTION  
-    Date/Time Slp: Sco: Attempting to create base registry key HKEY_LOCAL_MACHINE, machineServer Name
-    Date/Time Slp: Sco: Attempting to open registry subkey    Software\Microsoft\Windows\CurrentVersion\Installer  
-    Date/Time Slp: Sco: Attempting to get registry value InstallerLocation  
-    Date/Time Slp: Windows installer version : 5.0.7601.17514  
-    Date/Time Slp: Sco: Waiting for service 'msiserver' to accept the stop request.  
-    Date/Time Slp: Sco: Attempting to open SC Manager  
-    Date/Time Slp: Sco: Attempting to open service handle for service msiserver  
-    Date/Time Slp: Invoking QueryServiceStatus Win32 API  
-    Date/Time Slp: Sco: Attempting to close service handle for service msiserver  
-    Date/Time Slp: Sco: Attempting to close SC Manager  
+    > Date/Time Slp: Sco: FileFilePath does not exist  
+    Date/Time Slp: Sco: FileFilePathdoes not exist  
+    Date/Time Slp: Checkpoint: PREINSTALL_SQLSUPPORT_CPU64_ACTION  
+    Date/Time Slp: Sco: Attempting to create base registry key HKEY_LOCAL_MACHINE, machineServer Name
+    Date/Time Slp: Sco: Attempting to open registry subkey    Software\Microsoft\Windows\CurrentVersion\Installer  
+    Date/Time Slp: Sco: Attempting to get registry value InstallerLocation  
+    Date/Time Slp: Windows installer version : 5.0.7601.17514  
+    Date/Time Slp: Sco: Waiting for service 'msiserver' to accept the stop request.  
+    Date/Time Slp: Sco: Attempting to open SC Manager  
+    Date/Time Slp: Sco: Attempting to open service handle for service msiserver  
+    Date/Time Slp: Invoking QueryServiceStatus Win32 API  
+    Date/Time Slp: Sco: Attempting to close service handle for service msiserver  
+    Date/Time Slp: Sco: Attempting to close SC Manager  
     Date/TimeSlp: Target package: "FilePath"  
     Date/TimeSlp: MSI Error: 1714 The older version of Microsoft SQL Server 2012 Setup (English) cannot be removed. Contact your technical support group.  
     Date/TimeSlp: InstallPackage: MsiInstallProduct returned the result code 1603.  

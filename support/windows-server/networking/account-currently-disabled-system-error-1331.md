@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
 ms.technology: Networking
 ---
-# "Logon Failure: Account Currently Disabled" and "System Error 1331" Error Messages
+# "Logon failure: account currently disabled" and "System error 1331" error messages
 
 This article provides a solution to the system error 1331 that occurs when you connect to a share.
 
