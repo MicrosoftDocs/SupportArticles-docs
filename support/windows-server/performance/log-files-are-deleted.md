@@ -1,5 +1,5 @@
 ---
-title: Log files are deleted
+title: Log files are deleted when you use Performance Monitor in Windows Server
 description: Discusses that log data is lost when you run Performance Monitor in Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
 ms.date: 09/17/2020
 author: Deland-Han 
@@ -46,14 +46,8 @@ To work around this issue, do one of the following:
 
 ## References
 
-For more information about Windows Performance Monitor, go to the following Microsoft TechNet website:
+- [Performance Monitoring Getting Started Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd744567(v=ws.10))
 
-[Performance Monitoring Getting Started Guide](https://technet.microsoft.com/library/dd744567%28v=ws.10%29.aspx)
+- [Manage Data in Windows Performance Monitor](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc765998(v=ws.11))
 
-For information about how to manage data in Windows Performance Monitor, go to the following Microsoft TechNet website:
-
-[Manage Data in Windows Performance Monitor](https://technet.microsoft.com/library/cc765998.aspx)
-
-For information about the IDataCollectorSet::RootPath property, go to the following MSDN website:
-
-[IDataCollectorSet::RootPath property](https://msdn.microsoft.com/library/windows/desktop/aa371978%28v=vs.85%29.aspx)
+- [IDataCollectorSet::RootPath property](/windows/win32/api/pla/nf-pla-idatacollectorset-get_rootpath)

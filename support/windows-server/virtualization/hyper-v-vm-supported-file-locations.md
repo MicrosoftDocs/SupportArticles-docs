@@ -26,13 +26,13 @@ Hyper-V virtual machines are only in a supported configuration when the virtual 
 
 For example:
 
-D:\ is not a supported location for storing virtual machine files in Hyper-V.
+D:\\ is not a supported location for storing virtual machine files in Hyper-V.
 
-D:\VMs is a supported location for storing virtual machine files.
+D:\\VMs is a supported location for storing virtual machine files.
 
-\\\\FILESERVER\SHARE is not a supported location for storing virtual machine files.
+\\\\FILESERVER\\SHARE is not a supported location for storing virtual machine files.
 
-\\\\FILESERVER\Share\VMname is a supported location for storing virtual machine files.
+\\\\FILESERVER\\Share\\VMname is a supported location for storing virtual machine files.
 
 ## More information
 
