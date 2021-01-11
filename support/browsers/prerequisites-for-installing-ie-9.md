@@ -12,13 +12,18 @@ This article helps you resolve the problem that some prerequisites of Internet E
 _Original product version:_ &nbsp; Internet Explorer 9  
 _Original KB number:_ &nbsp; 2399238
 
-When you install Internet Explorer 9, additional software and components are also installed as part of the process. These software and components are Internet Explorer 9 prerequisites, and their details vary, depending on the operating system that your computer is running. If some of these prerequisites can't be installed automatically, the Internet Explorer 9 installation process won't finish. In that case, you have to manually install the prerequisite software and components that are described later in this article.
+When you install Internet Explorer 9, additional software and components are also installed as part of the process. The software and components are Internet Explorer 9 prerequisites. Their details vary, depending on the operating system that your computer is running. If some of these prerequisites can't be installed automatically, the Internet Explorer 9 installation process won't finish. In that case, you have to manually install the prerequisite software and components that are described later in this article.
 
 ## Things to consider before you go the manual install route
 
 ### Make sure that no updates are being installed and that no restart is pending
 
-Internet Explorer 9 might not automatically install prerequisite software and components if the installation of other updates is in progress, or if the system is awaiting a restart. To check whether these things are causing the problem, do one of the following steps:
+Internet Explorer 9 might not automatically install prerequisite software and components if one of the following conditions is true:
+
+- The installation of other updates is in progress.
+- The system is awaiting a restart.
+
+To check whether these things are causing the problem, do one of the following steps:
 
 - In Windows 7, click Start, click Control Panel, and then click Windows Update.
 - In Windows Vista, click Security in Control Panel, and then click Windows Update.
