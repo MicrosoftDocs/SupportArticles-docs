@@ -55,7 +55,7 @@ To move the WSUS Content directory, follow these steps:
     ```
 
     > [!NOTE]
-    > The *contentpath* placeholder is the new root for content files (the path must exist) and log file is the path and file name of the log file to create.
+    > The *contentpath* placeholder is the new root for content files (the path must exist) and *logfile* is the path and file name of the log file to create.
 
 6. Press ENTER. Wsusutil does the following:
 
