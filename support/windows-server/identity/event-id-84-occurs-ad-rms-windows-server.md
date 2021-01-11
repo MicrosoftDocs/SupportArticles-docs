@@ -42,7 +42,7 @@ HelpLink.ProdName: Microsoft SQL Server
 HelpLink.ProdVer: 10.50.4000  
 HelpLink.EvtSrc: MSSQLServer  
 HelpLink.EvtID: 8115  
-HelpLink.BaseHelpUrl: [https://go.microsoft.com/fwlink](https://go.microsoft.com/fwlink)  
+HelpLink.BaseHelpUrl: `https://go.microsoft.com/fwlink`  
 HelpLink.LinkId: 20476  
 SqlError-1.Class: 0  
 SqlError-0.State: 1  
@@ -61,7 +61,7 @@ SqlError-0.Class: 16
         HelpLink.ProdVer: 10.50.4000  
         HelpLink.EvtSrc: MSSQLServer  
         HelpLink.EvtID: 8115  
-        HelpLink.BaseHelpUrl: [https://go.microsoft.com/fwlink](https://go.microsoft.com/fwlink)  
+        HelpLink.BaseHelpUrl: `https://go.microsoft.com/fwlink`  
         HelpLink.LinkId: 20476  
         Context: ComponentBase.LogResults  
         SqlError-1.Class: 0  
@@ -81,7 +81,7 @@ Arithmetic overflow occurred.
   +         HelpLink.ProdVer: 10.50.4000  
   +         HelpLink.EvtSrc: MSSQLServer  
   +         HelpLink.EvtID: 8115  
-  +         HelpLink.BaseHelpUrl: [https://go.microsoft.com/fwlink](https://go.microsoft.com/fwlink)  
+  +         HelpLink.BaseHelpUrl: `https://go.microsoft.com/fwlink`  
   +         HelpLink.LinkId: 20476  
   +         Context: ComponentBase.LogResults  
 
