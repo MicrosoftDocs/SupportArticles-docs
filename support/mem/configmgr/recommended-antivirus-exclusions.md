@@ -1,7 +1,7 @@
 ---
 title: Recommended antivirus exclusions for Configuration Manager
 description: Lists the recommended antivirus exclusions for Configuration Manager site servers, site systems, and clients.
-ms.date: 05/25/2020
+ms.date: 01/12/2021
 ms.prod-support-area-path:
 ms.reviewer: jarrettr, jrosse, keiththo
 ---
@@ -97,7 +97,7 @@ Process Exclusions are necessary only if aggressive antivirus programs consider 
 - Either of the following:
   - *Client installation folder*\Ccmexec.exe
   - *MP installation folder*\Ccmexec.exe
-- *Client installation folder*\CmRcService.exe (client-side)
+- *Client installation folder*\RemCtrl\CmRcService.exe (client-side)
 - *ConfigMgr installation folder*\bin\x64\Sitecomp.exe
 - *ConfigMgr installation folder*\bin\x64\Smswriter.exe
 - *ConfigMgr installation folder*\bin\x64\Smssqlbkup.exe, or SMS_*SQLFQDN*\bin\x64\ Smssqlbkup.exe
