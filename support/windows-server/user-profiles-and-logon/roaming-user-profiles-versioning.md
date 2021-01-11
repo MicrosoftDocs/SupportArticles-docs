@@ -26,7 +26,7 @@ Roaming user profiles in Windows 10, Windows Server 2016 and later versions are 
 
 For example, when you try to deploy Windows 10 in an environment that uses roaming profiles in Windows 7, you experience the following behavior:
 
-- After you use a user account that has an existing Windows 7 or Windows 8.1 profile to logs on to a Windows 10-based computer for the first time, the components from Windows 10 read and change the profile state.
+- After you use a user account that has an existing Windows 7 or Windows 8.1 profile to log on to a Windows 10-based computer for the first time, the components from Windows 10 read and change the profile state.
 
 - Certain Windows 7, Windows 8.1, or Windows 10 features may not work as expected because the expected profile state isn't present.
 For example, Start menu does not start. Cortana, Taskbar is unresponsive, and taskbar icons are missing.

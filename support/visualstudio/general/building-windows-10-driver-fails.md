@@ -2,7 +2,7 @@
 title: Building a Windows 10 driver fails
 description: This article describes a problem that prevents you from successfully building a Windows 10 driver in Visual Studio 2015, and provides a resolution.
 ms.date: 04/27/2020
-ms.prod-support-area-path: Project/Build system
+ms.prod-support-area-path: Project/Build system
 ms.reviewer: chrit, meerak
 ---
 # Building a Windows 10 driver in Visual Studio 2015 fails

@@ -2,7 +2,7 @@
 title: Event 115 when you connect HTTPS website 
 description: This article provides workarounds for the Event ID 115 error that occurs when you connect to a Web site by using HTTPS.
 ms.date: 03/23/2020
-ms.prod-support-area-path: Site behavior and performance
+ms.prod-support-area-path: Site behavior and performance
 ms.reviewer: lauras, martinsm
 ---
 # Event ID 115 occurs when you try to connect to a HTTPS Website

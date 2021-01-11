@@ -40,7 +40,7 @@ Consider the following scenario in Microsoft .NET Framework:
 
 This issue occurs because the SmSvcHost.exe process of the Net.TCP Port Sharing Service times out after one minute. The internal timeout value is one minute. When a request is sent to the service, the SmSvcHost.exe process creates a pipe binding to register new channels to communicate with the W3wp.exe process of Internet Information Services (IIS). The process requires one minute to create the pipe binding. Therefore, the process times out. The timeout can result from either of these conditions:
 
-- High CPU: The CPU is near full utilization for an extended period of time. Hence, the target service isn't able to process requests fast enough.  
+- High CPU: The CPU is near full utilization for an extended period of time. Hence, the target service isn't able to process requests fast enough.  
 
 - Service Throttling: The Service is hitting a throttle inside of service model.  
 
@@ -48,11 +48,11 @@ This issue occurs because the SmSvcHost.exe process of the Net.TCP Port Sharing 
 
 ## Resolution
 
-- High CPU: The CPU is near full utilization for an extended period of time. Hence, the target service isn't able to process requests fast enough.  
+- High CPU: The CPU is near full utilization for an extended period of time. Hence, the target service isn't able to process requests fast enough.  
 Resolution: You need to modify your code, or add resources to prevent the high CPU condition.
 
 - Service Throttling: The Service is hitting a throttle inside of service model.  
-Resolution:  Turn on warning/error traces for the target service to identify this problem. If your solution has multiple sessions active, or multiple concurrent calls, modify either the `MaxConcurrentSessions` `or MaxConcurrentCalls` to reduce the load.
+Resolution: Turn on warning/error traces for the target service to identify this problem. If your solution has multiple sessions active, or multiple concurrent calls, modify either the `MaxConcurrentSessions` `or MaxConcurrentCalls` to reduce the load.
 
 - Service initialization takes longer than 1 minute.  
 Resolution: Monitor your traces to see whether the Service application initialization is taking longer than one minute. See whether it's possible to modify the initialization logic to reduce this time, or use the Auto Start feature to initialize the service prior to the first client call.

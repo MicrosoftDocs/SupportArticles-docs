@@ -1,5 +1,5 @@
 - name: Windows Server
-  href: welcome-windows-server.md
+  href: welcome-windows-server.yml
 - name: Active Directory
   items:
   - name: Active Directory
@@ -294,6 +294,10 @@
       href: ./identity/replication-error-8606.md
     - name: Use Ntdsutil to find and clean up duplicate security identifiers
       href: ./identity/ntdsutil-find-clean-duplicate-security-identifiers.md
+  - name: Active Directory Rights Management Services
+    items:
+    - name: Event ID 84 occurs in AD RMS in Windows Server
+      href: ./identity/event-id-84-occurs-ad-rms-windows-server.md
   - name: Active Directory topology (sites, subnets, and connection objects)
     items:
     - name: Active Directory services and domains (Part 1)

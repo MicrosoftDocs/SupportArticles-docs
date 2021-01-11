@@ -2,7 +2,7 @@
 title: Errors occur when you use Web Deploy
 description: This article provides resolutions for the unexpected error that occurs when you perform Web Deploy operations remotely through IIS Manager and use WMSVC.
 ms.date: 04/01/2020
-ms.prod-support-area-path: Deployment and migration
+ms.prod-support-area-path: Deployment and migration
 ---
 # Errors when you use the Web Deployment tool as a delegated user over a remote IIS manager connection
 
@@ -20,7 +20,7 @@ When you perform Web Deploy operations remotely through IIS Manager and are usin
 
 ## Cause
 
-The problem occurs because the user hasn't been granted permissions to perform the action for the specified provider. The server administrator has to determine the provider and user that are affected, the permissions that are necessary (for example, Read or Write), and the path that is being used.  
+The problem occurs because the user hasn't been granted permissions to perform the action for the specified provider. The server administrator has to determine the provider and user that are affected, the permissions that are necessary (for example, Read or Write), and the path that is being used.  
 
 ## Resolution
 

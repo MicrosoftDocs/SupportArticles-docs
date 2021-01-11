@@ -44,18 +44,18 @@ a. Modify the ClusWMI.mof
 
 For this, follow the steps:
 
-1. open C:\Windows\system32\wbem\ClusWMI.mof for editing and set [RequiresEncryption(FALSE)]
-2. recompile the ClusWMI.mof file by running "mofcomp C:\Windows\system32\wbem\ClusWMI.mof"
-3. restart the winmgmt service  
+1. Open C:\Windows\system32\wbem\ClusWMI.mof for editing and set [RequiresEncryption(FALSE)].
+2. Recompile the ClusWMI.mof file by running "mofcomp C:\Windows\system32\wbem\ClusWMI.mof".
+3. Restart the winmgmt service.  
 
 > [!NOTE]
 > This workaround will have to be reapplied if the ClusWMI.mof file is updated through hotfix or service pack.
 >
-> This workaround has not been tested and confirmed by Microsoft for any security/supportability implications
+> This workaround has not been tested and confirmed by Microsoft for any security/supportability implications.
 
 b. Modify the authenticationLevel of the application doing the query
 
-For this, Modify the registry with the following script on the System, from which the query is done/started:
+For this, modify the registry with the following script on the System, from which the query is done/started:
 
 Windows Registry Editor Version 5.00  
 

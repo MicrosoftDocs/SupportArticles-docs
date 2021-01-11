@@ -100,4 +100,4 @@ dnscmd /zoneresetscavengeservers contoso.com (without ip address).
 ```
 
 > [!NOTE]
-> The maximum time that an stale record may take to be deleted through Scavenging is (No Refresh interval + Refresh interval + Scavenging cycle interval)
+> The maximum time that an stale record may take to be deleted through Scavenging is (No Refresh interval + Refresh interval + Scavenging cycle interval).

@@ -14,45 +14,45 @@ _Original KB number:_ &nbsp; 2000257
 
 ## Symptoms
 
-Consider the following scenario. To tighten security, you remove some default user rights to the local administrators group on a Windows operating system. In preparation for setting up SQL Server on this system, you add the Setup account to the local administrators group.
+Consider the following scenario. To tighten security, you remove some default user rights to the local administrators group on a Windows operating system. In preparation for setting up SQL Server on this system, you add the Setup account to the local administrators group.
 
-In this scenario, if you either install or upgrade SQL Server, the installation process may fail, and you receive various error messages as noted in the following sections.
+In this scenario, if you either install or upgrade SQL Server, the installation process may fail, and you receive various error messages as noted in the following sections.
 
-- **Scenario 1:** For a new installation, the Setup program fails, and you receive the following error message:
+- **Scenario 1:** For a new installation, the Setup program fails, and you receive the following error message:
 
     > Access is denied
-    Additionally, you may notice error messages that resemble the following in the Detail.txt file:
+    Additionally, you may notice error messages that resemble the following in the Detail.txt file:
     2009-01-02 13:00:17 SQLEngine: --SqlServerServiceSCM: Waiting for nt event 'Global\sqlserverRecComplete$NIIT' to be created
     2009-01-02 13:00:20 SQLEngine: --SqlServerServiceSCM: Waiting for nt event 'Global\sqlserverRecComplete$NIIT' or sql process handle to be signaled
     2009-01-02 13:00:20 Slp: Configuration action failed for feature SQL_Engine_Core_Inst during timing ConfigRC and scenario ConfigRC.
     2009-01-02 13:00:20 Slp: Access is denied
     2009-01-02 13:00:20 Slp: Configuration action failed for feature SQL_Engine_Core_Inst during timing ConfigRC and scenario ConfigRC.
     2009-01-02 13:00:20 Slp: System.ComponentModel.Win32Exception: Access is denied
-    2009-01-02 13:00:20 Slp:    at System.Diagnostics.ProcessManager.OpenProcess(Int32 processId, Int32 access, Boolean throwIfExited)
-    2009-01-02 13:00:20 Slp:    at System.Diagnostics.Process.GetProcessHandle(Int32 access, Boolean throwIfExited)
-    2009-01-02 13:00:20 Slp:    at System.Diagnostics.Process.OpenProcessHandle()
-    2009-01-02 13:00:20 Slp:    at System.Diagnostics.Process.get_Handle()
-    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlServerServiceBase.WaitSqlServerStart(Process processSql)
-    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlServerServiceSCM.StartSqlServer(String[] parameters)
-    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlServerStartup.StartSQLServerForInstall(String sqlCollation, String masterFullPath, Boolean isConfiguringTemplateDBs)
-    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlEngineDBStartConfig.ConfigSQLServerSystemDatabases(EffectiveProperties properties, Boolean isConfiguringTemplateDBs, Boolean useInstallInputs)
-    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlEngineDBStartConfig.DoCommonDBStartConfig(ConfigActionTiming timing)
-    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlEngineDBStartConfig.Install(ConfigActionTiming timing, Dictionary`2 actionData, PublicConfigurationBase spcb)
-    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlConfigBase.PrivateConfigurationBase.Execute(ConfigActionScenario scenario, ConfigActionTiming timing, Dictionary`2 actionData, PublicConfigurationBase spcbCurrent)
-    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlConfigBase.SqlFeatureConfigBase.Execute(ConfigActionScenario scenario, ConfigActionTiming timing, Dictionary`2 actionData, PublicConfigurationBase spcbCurrent)
-    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlConfigBase.SlpConfigAction.ExecuteAction(String actionId)
-    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlConfigBase.SlpConfigAction.Execute(String actionId, TextWriter errorStream)
+    2009-01-02 13:00:20 Slp:    at System.Diagnostics.ProcessManager.OpenProcess(Int32 processId, Int32 access, Boolean throwIfExited)
+    2009-01-02 13:00:20 Slp:    at System.Diagnostics.Process.GetProcessHandle(Int32 access, Boolean throwIfExited)
+    2009-01-02 13:00:20 Slp:    at System.Diagnostics.Process.OpenProcessHandle()
+    2009-01-02 13:00:20 Slp:    at System.Diagnostics.Process.get_Handle()
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlServerServiceBase.WaitSqlServerStart(Process processSql)
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlServerServiceSCM.StartSqlServer(String[] parameters)
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlServerStartup.StartSQLServerForInstall(String sqlCollation, String masterFullPath, Boolean isConfiguringTemplateDBs)
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlEngineDBStartConfig.ConfigSQLServerSystemDatabases(EffectiveProperties properties, Boolean isConfiguringTemplateDBs, Boolean useInstallInputs)
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlEngineDBStartConfig.DoCommonDBStartConfig(ConfigActionTiming timing)
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlEngine.SqlEngineDBStartConfig.Install(ConfigActionTiming timing, Dictionary`2 actionData, PublicConfigurationBase spcb)
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlConfigBase.PrivateConfigurationBase.Execute(ConfigActionScenario scenario, ConfigActionTiming timing, Dictionary`2 actionData, PublicConfigurationBase spcbCurrent)
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlConfigBase.SqlFeatureConfigBase.Execute(ConfigActionScenario scenario, ConfigActionTiming timing, Dictionary`2 actionData, PublicConfigurationBase spcbCurrent)
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlConfigBase.SlpConfigAction.ExecuteAction(String actionId)
+    2009-01-02 13:00:20 Slp:    at Microsoft.SqlServer.Configuration.SqlConfigBase.SlpConfigAction.Execute(String actionId, TextWriter errorStream)
     2009-01-02 13:00:20 Slp: Exception: System.ComponentModel.Win32Exception.
     2009-01-02 13:00:20 Slp: Source: System.
     2009-01-02 13:00:20 Slp: Message: Access is denied.
 
-- **Scenario 2** : Upgrades to SQL Server 2008 will report the following error message on the `Engine_SqlEngineHealthCheck` rule:
+- **Scenario 2** : Upgrades to SQL Server 2008 will report the following error message on the `Engine_SqlEngineHealthCheck` rule:
 
     > Rule name:Engine_SqlEngineHealthCheck
     Rule description: Checks whether the SQL Server service can be restarted; or for a clustered instance, whether the SQL Server resource is online.
     Result: Failed
     Message/Corrective Action: The SQL Server service cannot be restarted; or for a clustered instance, the SQL Server resource is not online
-    Additionally, you may notice error messages that resemble the following in the Detail.txt file
+    Additionally, you may notice error messages that resemble the following in the Detail.txt file
     2009-05-27 17:50:20 SQLEngine: : Checking Engine checkpoint 'GetSqlServerProcessHandle_1'
     2009-05-27 17:50:20 SQLEngine: --SqlServerServiceSCM: Waiting for nt event 'Global\sqlserverRecComplete$SQL10' to be created
     2009-05-27 17:50:22 SQLEngine: --SqlServerServiceSCM: Waiting for nt event 'Global\sqlserverRecComplete$SQL10' or sql process handle to be signaled
@@ -100,7 +100,7 @@ Additionally, if SMB Fileshare is used as a storage option for data directory or
 
 ## Resolution
 
-To add the rights to the local administrator account, follow these steps:
+To add the rights to the local administrator account, follow these steps:
 
 1. Log on to the computer as a user who has administrative credentials.
 2. Click **Start**, click **Run**, type *Control admintools*, and then click **OK**.
@@ -113,47 +113,47 @@ To add the rights to the local administrator account, follow these steps:
 
 ## More information
 
-- To check the list of privileges that are currently associated with the account that is used for Setup, you can use the AccessChk.exe tool. To download this tool, see [AccessChk v6.13](/sysinternals/downloads/accesschk).
+- To check the list of privileges that are currently associated with the account that is used for Setup, you can use the AccessChk.exe tool. To download this tool, see [AccessChk v6.13](/sysinternals/downloads/accesschk).
 
-  **Usage**: accesschk.exe- a \<setup account> *
+  **Usage**: accesschk.exe- a \<setup account> *
 
     For example:
     `c:\tools\accesschk.exe -a testdc\setupaccount *`
 
   ```console
     Sample output:
-           SeSecurityPrivilege
-            SeBackupPrivilege
-            SeRestorePrivilege
-            SeSystemtimePrivilege
-            SeShutdownPrivilege
-            SeRemoteShutdownPrivilege
-            SeTakeOwnershipPrivilege
-            SeDebugPrivilege
-            SeSystemEnvironmentPrivilege
-            SeSystemProfilePrivilege
-            SeProfileSingleProcessPrivilege
-            SeIncreaseBasePriorityPrivilege
-            SeLoadDriverPrivilege
-            SeCreatePagefilePrivilege
-            SeIncreaseQuotaPrivilege
-            SeChangeNotifyPrivilege
-            SeUndockPrivilege
-            SeManageVolumePrivilege
-            SeImpersonatePrivilege
-            SeCreateGlobalPrivilege
-            SeTimeZonePrivilege
-            SeCreateSymbolicLinkPrivilege
-            SeInteractiveLogonRight
-            SeNetworkLogonRight
-            SeBatchLogonRight
-            SeRemoteInteractiveLogonRight
+           SeSecurityPrivilege
+            SeBackupPrivilege
+            SeRestorePrivilege
+            SeSystemtimePrivilege
+            SeShutdownPrivilege
+            SeRemoteShutdownPrivilege
+            SeTakeOwnershipPrivilege
+            SeDebugPrivilege
+            SeSystemEnvironmentPrivilege
+            SeSystemProfilePrivilege
+            SeProfileSingleProcessPrivilege
+            SeIncreaseBasePriorityPrivilege
+            SeLoadDriverPrivilege
+            SeCreatePagefilePrivilege
+            SeIncreaseQuotaPrivilege
+            SeChangeNotifyPrivilege
+            SeUndockPrivilege
+            SeManageVolumePrivilege
+            SeImpersonatePrivilege
+            SeCreateGlobalPrivilege
+            SeTimeZonePrivilege
+            SeCreateSymbolicLinkPrivilege
+            SeInteractiveLogonRight
+            SeNetworkLogonRight
+            SeBatchLogonRight
+            SeRemoteInteractiveLogonRight
   ```
 
 - [Configure Windows Service Accounts and Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)
 
 - **Frequently asked questions**  
-  - Why is **SeSecurityPrivilege** required on the file server for the Backup directory on the  UNC share?
+  - Why is **SeSecurityPrivilege** required on the file server for the Backup directory on the  UNC share?
 
     This permission is required in order to retrieve ACLs on the default backup directory to make sure that the SQL Server service account has full permissions on the folder. This also sets the ACLs if permissions are missing for the SQL Service account so that it can perform a backup on the directory. Setup performs these checks for the default backup directory so that if backup is performed on the default backup directorypost-installation, the user doesn't encounter an error or issue (because of missing permissions) when you perform backup on the default directory.
 

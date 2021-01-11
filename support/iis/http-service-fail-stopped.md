@@ -3,7 +3,7 @@ title: HTTP services can't be stopped
 description: This article describes the problem where you can't stop the HTTP service by using the NET STOP HTTP command when the Microsoft Web Deployment Service (MSDEPSVC) is installed, and provides a solution.
 ms.date: 02/27/2020
 ms.reviewer: bretb
-ms.prod-support-area-path: IISAdmin service and Inetinfo process operation
+ms.prod-support-area-path: IISAdmin service and Inetinfo process operation
 ---
 # HTTP services can't be stopped when the Microsoft Web Deployment Service is installed
 
