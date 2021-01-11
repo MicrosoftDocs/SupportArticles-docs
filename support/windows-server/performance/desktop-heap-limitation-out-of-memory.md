@@ -71,7 +71,7 @@ Windows 7 Service Pack 1 (64 bit) / Windows Server 2008 R2, 2012 R2 (64 bit)
 
 > SharedSection=1024, 20480,768
 
-In later operating systems, memory allocations are dynamic. Therefore, there's no limitation for memory allocation. However, if you allocate too much memory to the desktop heap, negative performance may occur. It's the reason why we don't recommend that you set a value that is over **20480**.
+Memory allocations are dynamic in later operating systems. Therefore, there's no limitation for memory allocation. However, if you allocate too much memory to the desktop heap, negative performance may occur. It's the reason why we don't recommend that you set a value that is over **20480**.
 
 > [!NOTE]
 > The desktop heap size is not affected by the physical RAM on the computer. Therefore, you cannot improve the performance by adding physical RAM.
