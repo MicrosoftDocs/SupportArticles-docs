@@ -92,7 +92,7 @@ The NSI service is not running on the Virtual Machine. This issue happens in the
 
 ### Create and Access a Repair VM
 
-1. Use steps 1-3 of the [VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to prepare a Repair VM.
+1. Use steps 1-3 of the [VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to prepare a Repair VM.
 1. Using Remote Desktop Connection, connect to the Repair VM.
 
 ### Verify that the OS partition is active
@@ -311,7 +311,7 @@ If those steps don't resolve the issue, then recreate the BCD store entirely.
 
 ### Rebuild the VM
 
-Use [step 5 of the VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to rebuild the VM.
+Use [step 5 of the VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to rebuild the VM.
 
 ## Next steps
 
