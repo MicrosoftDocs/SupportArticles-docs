@@ -37,7 +37,7 @@ One reason that Microsoft decided to implement RDP for connectivity purposes wit
 
 RDP is designed to support many different types of Network topologies, such as ISDN, POTS. RDP is also designed to support many LAN protocols, such as IPX, NetBIOS, TCP/IP. The current version of RDP will only run over TCP/IP. With customer feedback, other protocol support may be added in future versions.
 
-The activity involved in sending and receiving data through the RDP stack is essentially the same as the seven-layer OSI model standards for common LAN networking today. Data from an application or service to be transmitted is passed down through the protocol stacks. It's sectioned, directed to a channel (through MCS), encrypted, wrapped, framed, packaged onto the network protocol, and finally addressed and sent over the wire to the client. The returned data works the same way only in reverse. The packet is stripped of its address, then unwrapped, decrypted, and so on, until the data is presented to the application for use. Key portions of the protocol stack modifications occur between the fourth and seventh layers, where the data is:
+The activity involved in sending and receiving data through the RDP stack is essentially the same as the seven-layer OSI model standards for common LAN networking today. Data from an application or service to be transmitted is passed down through the protocol stacks. It's sectioned, directed to a channel (through MCS), encrypted, wrapped, framed, packaged onto the network protocol, and finally addressed and sent over the wire to the client. The returned data works the same way only in reverse. The packet is stripped of its address, then unwrapped, decrypted, and so on. Finally the data is presented to the application for use. Key portions of the protocol stack modifications occur between the fourth and seventh layers, where the data is:
 
 - encrypted
 - wrapped
@@ -73,4 +73,4 @@ It essentially abstracts the multiple RDP stacks into a single entity, from the 
 - an RDP driver (Wdtshare.sys) for UI transfer, compression, encryption, framing, and so on.
 - a transport driver (Tdtcp.sys) to package the protocol onto the underlying network protocol, TCP/IP.
 
-RDP was developed to be entirely independent of its underlying transport stack, in this case TCP/IP. It means that we can add other transport drivers for other network protocols as customers needs for them grow, with little or no significant changes to the foundational parts of the protocol. They are key elements to the performance and extendibility of RDP on the network.
+RDP was developed to be entirely independent of its underlying transport stack, in this case TCP/IP. It means that we can add other transport drivers for other network protocols as customers needs for them grow, with little or no significant changes to the foundational parts of the protocol. They're key elements to the performance and extendibility of RDP on the network.
