@@ -14,7 +14,7 @@ ms.reviewer:
 
    ![Waiting for credentials](./media/azure-vm-netlogon-not-starting/1-waiting.png)
 
-2. In the **WinGuestAnalyzer\Health Signal** tab you'll see the service is currently not in a **Running** state:
+2. In the **WinGuestAnalyzer\Health Signal** tab, the service is currently not in a **Running** state:
 
    ![Service stopped](./media/azure-vm-netlogon-not-starting/2-stopped.png)
 
@@ -95,7 +95,7 @@ The Netlogon service (LSASS) is not running on the Virtual Machine. The cause wi
 > [!NOTE]
 > This mitigation applies only for Generation 1 VMs. Generation 2 VMs (using UEFI) does not have active partition.
 
-Verify the OS partition which holds the BCD store for the disk is marked as active.
+Verify the OS partition, which holds the BCD store for the disk is marked as active.
 
    1. Open an elevated command prompt and open up DISKPART tool.
 
@@ -108,22 +108,22 @@ Verify the OS partition which holds the BCD store for the disk is marked as acti
       sel disk 1
       ```
 
-      ![Disk 1](media/azure-vm-netlogon-not-starting/11-Gen2-1.png)
+      ![Disk 1](media/azure-vm-nsi-not-starting/11-Gen2-1.png)
 
-   3. List all the partitions on that disk and then proceed to select the partition you want to check. Usually System Managed partitions are smaller and are around 350Mb big. In the image below, this will be Partition 1.
+   3. List all the partitions on that disk and then proceed to select the partition you want to check. Usually System Managed partitions are smaller and are around 350 Mb. In the image below, this will be Partition 1.
 
       ```cmd
       list partition
       sel partition 1
       ```
 
-      ![Partition 1](media/azure-vm-netlogon-not-starting/12-Gen2-2.png)
+      ![Partition 1](media/azure-vm-nsi-not-starting/12-Gen2-2.png)
 
    4. Check the status of the partition. The same should be Active.
 
       `detail partition`
 
-      ![Detail Partition](media/azure-vm-netlogon-not-starting/13-Gen2-3.png)
+      ![Detail Partition](media/azure-vm-nsi-not-starting/13-Gen2-3.png)
 
       1. If the partition isn't active:
 
@@ -134,7 +134,7 @@ Verify the OS partition which holds the BCD store for the disk is marked as acti
             detail partition
             ```
 
-            ![Acive Flag](media/azure-vm-netlogon-not-starting/14-Gen2-4.png)
+            ![Acive Flag](media/azure-vm-nsi-not-starting/14-Gen2-4.png)
 
    5. Now exist DISKPART tool.
 
@@ -156,7 +156,7 @@ Verify the OS partition which holds the BCD store for the disk is marked as acti
 
       2. Write down the identifier of the Windows Boot loader. This is the one which path is `\windows\system32\winload.exe`.
 
-         ![Mitigation 2 - Windows Identifier 1](media/azure-vm-netlogon-not-starting/6-boot-configuration-data-windows-identifier.png)
+         ![Mitigation 2 - Windows Identifier 1](media/azure-vm-nsi-not-starting/6-boot-configuration-data-windows-identifier.png)
 
    2. For Generation 2 VM:
 
@@ -166,7 +166,7 @@ Verify the OS partition which holds the BCD store for the disk is marked as acti
 
       2. Write down the identifier of the Windows Boot loader. This is the one which path is `\windows\system32\winload.efi`.
 
-         ![Mitigation 2 - Windows Identifier 2](media/azure-vm-netlogon-not-starting/15-default-identifier.png)
+         ![Mitigation 2 - Windows Identifier 2](media/azure-vm-nsi-not-starting/15-default-identifier.png)
 
 3. Run the following commands:
 
@@ -210,7 +210,7 @@ Verify the OS partition which holds the BCD store for the disk is marked as acti
       >[!NOTE]
       In some cases the variables Devices and OSDevices in {< IDENTIFIER >} were pointing to the correct partition but still the OS was unable to boot. For those cases, a rewrite could fix the machine start up.
 
-   Detach the disk and wait till Azure update the disk, then reassemble the VM.
+   Detach the disk and wait until Azure updates the disk, then re-assemble the VM.
 
 If those steps don't resolve the issue, then recreate the BCD store entirely.
 
