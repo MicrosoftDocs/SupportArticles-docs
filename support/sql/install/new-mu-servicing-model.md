@@ -8,6 +8,8 @@ ms.prod: sql
 ---
 # Updates to the Microsoft Update detection logic for SQL Server servicing
 
+_Original product version:_ &nbsp; SQL Server 2019, SQL Server 2017, SQL Server 2016
+
 Historically, servicing baselines (RTM or Service Pack) have included the following servicing branches:
 
 - A General Distribution Release (GDR) branch that contains only security and other critical fixes.
