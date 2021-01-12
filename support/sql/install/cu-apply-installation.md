@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 4047327
 >- SQL Server releases through SQL Server 2014: All CU releases
 >- SQL Server 2016: All CU releases for RTM and SP1 baselines. SP2 baseline CU releases through CU13
 >- SQL Server 2017: RTM baseline CU releases through CU18
->- SQL Server 2017: None
+>- SQL Server 2019: None
 >- All security releases through 2020
 
 For information about the updates to the detection logic for newer CU releases and future security releases, see [Updates to the Microsoft Update detection logic for SQL Server servicing](new-mu-servicing-model.md).
@@ -64,18 +64,18 @@ This logic helps to minimize the default number of changes that are required in 
 ## Applies to
 
 - SQL Server 2017 on Windows (all editions)
-- SQL Server 2016 Standard
 - SQL Server 2016 Developer
 - SQL Server 2016 Enterprise
+- SQL Server 2016 Standard
 - SQL Server 2016 Web
 - SQL Server 2016 Business Intelligence
 - SQL Server 2014 Developer
 - SQL Server 2014 Enterprise
+- SQL Server 2014 Standard
 - SQL Server 2014 Web
 - SQL Server 2014 Business Intelligence
-- SQL Server 2012 Enterprise
 - SQL Server 2012 Developer
+- SQL Server 2012 Enterprise
 - SQL Server 2012 Standard
 - SQL Server 2012 Web
 - SQL Server 2012 Business Intelligence
-- SQL Server 2014 Standard
