@@ -36,6 +36,8 @@
     items:
     - name: Cannot RDP into Azure VM
       href: cannot-connect-rdp-azure-vm.md
+    - name: Cannot RDP into Azure VM because of a brute force attack
+      href: cannot-rdp-azure-vm-brute-force.md
     - name: Azure VM cannot RDP - driver IRQL not less or equal
       href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
     - name: Azure VM cannot RDP - working on features
