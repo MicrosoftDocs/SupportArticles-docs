@@ -237,6 +237,8 @@
       href: install/error-install-sql-server-2005-sp4.md
     - name: Naming schema and Fix areas for SQL updates
       href: install/naming-schema-and-fix-area.md
+    - name: New MU Servicing Model
+      href: install/new-mu-servicing-model.md
     - name: Permission error when you use a volume mount point
       href: install/permission-error-use-volume-mount-point.md
     - name: Remove a partial installation of SQL server

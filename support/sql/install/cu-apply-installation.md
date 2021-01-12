@@ -1,17 +1,28 @@
 ---
 title: CU doesn't apply to your installation
 description: This article provides a resolution for the problem that occurs when you use WSUS, Microsoft Update, or Microsoft System Center Configuration Manager Software Updates to apply updates to Microsoft SQL Server.
-ms.date: 10/23/2020
+ms.date: 1/11/2021
 ms.prod-support-area-path: Database Engine
 ms.reviewer: troymoen
 ms.prod: sql 
 ---
 # Non-applicable SQL Server CUs are listed in WSUS, MU, or ConfMgr
 
-This article helps you resolve the problem that occurs when you use WSUS, Microsoft Update (MU), or System Center Configuration Manager Software Updates to apply updates to SQL Server.
+This article helps you resolve the problem that occurs when you use WSUS, Microsoft Update (MU), or Microsoft System Center Configuration Manager software updates to apply updates to Microsoft SQL Server.
 
 _Original product version:_ &nbsp; SQL Server 2016, SQL Server 2014, SQL Server 2012 Enterprise, SQL Server 2012, SQL Server 2017 on Windows (all editions), SQL Server 2014  
 _Original KB number:_ &nbsp; 4047327
+
+> [!NOTE]
+> The Microsoft Update detection logic is updated for newer cumulative update (CU) releases and GDR releases going forward. This article is valid for the following servicing releases:
+>
+>- SQL Server releases through SQL Server 2014: All CU releases
+>- SQL Server 2016: All CU releases for RTM and SP1 baselines. SP2 baseline CU releases through CU13
+>- SQL Server 2017: RTM baseline CU releases through CU18
+>- SQL Server 2019: None
+>- All security releases through 2020
+
+For information about the updates to the detection logic for newer CU releases and future security releases, see [Updates to the Microsoft Update detection logic for SQL Server servicing](new-mu-servicing-model.md).
 
 ## Symptoms
 
@@ -53,18 +64,18 @@ This logic helps to minimize the default number of changes that are required in 
 ## Applies to
 
 - SQL Server 2017 on Windows (all editions)
-- SQL Server 2016 Standard
 - SQL Server 2016 Developer
 - SQL Server 2016 Enterprise
+- SQL Server 2016 Standard
 - SQL Server 2016 Web
 - SQL Server 2016 Business Intelligence
 - SQL Server 2014 Developer
 - SQL Server 2014 Enterprise
+- SQL Server 2014 Standard
 - SQL Server 2014 Web
 - SQL Server 2014 Business Intelligence
-- SQL Server 2012 Enterprise
 - SQL Server 2012 Developer
+- SQL Server 2012 Enterprise
 - SQL Server 2012 Standard
 - SQL Server 2012 Web
 - SQL Server 2012 Business Intelligence
-- SQL Server 2014 Standard
