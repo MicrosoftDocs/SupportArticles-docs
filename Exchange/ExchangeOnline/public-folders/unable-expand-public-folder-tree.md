@@ -74,7 +74,7 @@ To resolve this issue, create a new public folder mailbox, manually update the p
 
     In the result, note \<User mailbox name>.
 
-5. Run this command to predefine the *DefaultPublicFolderMailbox* property for the user mailbox name you noted.
+5. Run this command to set the *DefaultPublicFolderMailbox* to the new public folder mailbox for the user mailbox you noted.
 
     ```powershell
     Set-Mailbox -identity "<User mailbox name>" -DefaultPublicFolderMailbox "<New public folder mailbox name>"
