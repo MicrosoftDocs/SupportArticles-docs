@@ -465,6 +465,8 @@
       href: ../public-folders/mailbox-not-found-local-forest-public-folder.md
     - name: Troubleshoot public folder permission issues
       href: ../public-folders/public-folder-permission-issues.md
+    - name: Unable to expand public folder trees
+      href: ../public-folders/unable-expand-public-folder-tree.md
   - name: Send Emails
     items:
     - name: Can't receive Out of Office notifications
