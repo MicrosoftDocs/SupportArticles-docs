@@ -108,9 +108,8 @@ AD FS 2.0 is supported in the following languages:
 ## Download information
 
 The following files are available for download from the Microsoft Download Center:  
-||||
+|Package name| Supported Windows operating system| Platform| Download file size |
 |---|---|---|---|
-| Package name| Supported Windows operating system| Platform| Download file size |
 |AdfsSetup.exe|Windows Server 2008 R2|x64|24.04 MB|
 |AdfsSetup.exe|Windows Server 2008 SP2|x64|42.64 MB|
 |AdfsSetup.exe|Windows Server 2008 SP2|x86|38.66 MB|
@@ -158,7 +157,7 @@ Reinstall AD FS 2.0, set a registry setting to restore the previous configuratio
     %system drive%\\Program Files\\Active Directory Federation Service 2.0
 4. Click **Start**, click **Run**, type *regedit*, and then click **OK**.
 5. Locate and then click the following registry subkey:  
-    HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\adfssrv
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\adfssrv`
 
 6. On the **Edit** menu, point to **New**, and then click **String Value**.
 7. Type *InitialConfigurationCompleted*, and then press ENTER.

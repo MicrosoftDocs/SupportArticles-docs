@@ -70,7 +70,7 @@ To manually remove these directories from the decommissioned federation server o
     > The next two steps show how to remove the \\adfs directory from the "inetpub" directory. If you have made custom changes to the content within this directory, we recommend that you back up this content to another location before removing the directory.
 
 7. In Windows Explorer, browse to the "inetpub" directory. This directory is located in the following path:  
-    `%systemdrive%\inetpub`
+    %systemdrive%\\inetpub
 
 8. Right-click the **Adfs** directory, and then click **Delete**.
 
