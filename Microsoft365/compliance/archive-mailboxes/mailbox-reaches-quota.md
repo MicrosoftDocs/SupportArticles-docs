@@ -46,7 +46,7 @@ If your organization didn't assign a specific retention policy, you can configur
 
 **Note:** If your organization assigned a specific retention policy, you must contact your administrator to configure policies.
 
-Administrators can also configure policies for users to automatically move items from a mailbox to its archive. To learn more, see [Set up an archive and deletion policy for mailboxes in your organization](/microsoft-365/compliance/set-up-an-archive-and-deletion-policy-for-mailboxes).
+Administrators can also configure policies for users to automatically move items from a mailbox to its archive. To learn more, see [Set up an archive and deletion policy for mailboxes in your organization](https://docs.microsoft.com/microsoft-365/compliance/set-up-an-archive-and-deletion-policy-for-mailboxes).
 
 ## More information
 
