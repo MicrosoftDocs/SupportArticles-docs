@@ -66,8 +66,6 @@
     href: instrumenting-signed-assembly-throw-warning-message.md
   - name: LNK1102 error when you build projects
     href: linker-fatal-error-out-of-memory.md
-  - name: No Internet connectivity if Internet Explorer is not started
-    href: no-internet-connectivity-internet-explorer-not-started.md
   - name: Referenced project doesn't exist
     href: building-solution-with-multiple-projects-fails.md
   - name: Single instance application crashes
@@ -98,6 +96,8 @@
 
 - name: Project/Build system
   items:
+  - name: Build errors when you delete the debug configuration
+    href: build-errors-delete-debug-configuration.md
   - name: Building a Windows 10 driver fails
     href: building-windows-10-driver-fails.md
   - name: Setup projects have dependencies on .NET Framework
