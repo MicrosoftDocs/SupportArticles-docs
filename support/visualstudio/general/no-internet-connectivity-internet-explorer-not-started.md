@@ -8,7 +8,7 @@ ms.topic: article
 ---
 # No Internet connectivity if Internet Explorer is not started once
 
-This article describes a problem where you may not be able to get Internet connectivity if Internet Explorer has not been started at least once in the current Windows session.
+This article introduces a problem where you may not be able to get Internet connectivity if Internet Explorer has not been started at least once in the current Windows session.
 
 _Applies to:_ &nbsp; Internet Explorer 11  
 _Original KB number:_ &nbsp; 3173620
