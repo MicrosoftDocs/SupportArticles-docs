@@ -61,3 +61,7 @@ function FindProxyForURL(url, host)
     }
 }
 ```
+
+## References
+
+For more information, see [Optimizing performance with automatic proxy-configuration scripts (PAC)](/troubleshoot/browsers/optimize-pac-performance).
