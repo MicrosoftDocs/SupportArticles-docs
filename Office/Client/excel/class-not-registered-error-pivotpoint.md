@@ -39,12 +39,16 @@ You see the following errors when trying to update data in a PowerPivot workbook
 
 ## Cause
 
-The issue occurs when the provider that is defined for the data connection for PowerPivot data does not exist on your system.
-This behavior is by design.
+This issue generally occurs under the following scenarios:
+
+- You try to update the data with the most current data from the back-end server by using the **Refresh All** option in the **Refresh** menu.
+- You try to import data by using one of the connections under the **Existing Connection** option in the **Design** tab.
+
+This behavior is by design. It occurs when the provider that is defined for the data connection for PowerPivot data doesn't exist on your system.
 
 ## Resolution
 
-To resolve the problem, Use one of the following procedures.
+To resolve the problem, use one of the following procedures.
 
 ### Procedure 1: Configure the failing connection to use a different and compatible provider that exists on your system
 
@@ -66,6 +70,5 @@ For example, if the connection is configured to use SQLNCLI10 (SQL Native Client
 ## More Information
 
 You may also see a similar error message when you use a 32-bit system to work with a workbook that was developed on a 64-bit system. And, there is no 32-bit provider that is available for one or more of the connections that are defined in your workbook, or the 32-bit provider is not installed on your system, or vice-versa.
-
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
