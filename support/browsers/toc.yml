@@ -12,6 +12,9 @@
     - name: Can't change home page
       href: cannot-change-home-page.md
 
+    - name: Customized settings in IEAK override defined settings
+      href: customized-settings-in-ieak-overtide-settings-defined-in-ie-maintenance-policy.md
+
     - name: Empty IEM is reported as winning
       href: empty-ie-policy-shown-as-winning.md
 
@@ -35,6 +38,9 @@
 
     - name: How to disable password caching
       href: disable-password-caching.md
+
+    - name: Internet Explorer 11 can't download new Enterprise Mode site list XML file
+      href: internet-explorer-11-does-not-download-new-enterprise-mode-site-list-xml.md
 
     - name: Non-secure content can't be displayed
       href: only-secure-content-is-displayed-message.md
@@ -70,6 +76,9 @@
 
     - name: Nearly 49.7 days trigger timeout events
       href: timeout-events-in-ie-get-fired.md
+
+    - name: No Internet connectivity if Internet Explorer isn't started
+      href: no-internet-connectivity-internet-explorer-not-started.md
 
     - name: Optimize PAC performance
       href: optimize-pac-performance.md
@@ -144,8 +153,14 @@
     - name: ActiveX controls stop receiving focus
       href: webpage-fails-to-get-focus-ie-9.md
 
+    - name: Animated GIF is not animated in separate instances
+      href: animated-gif-not-animated-separate-instances.md
+
     - name: BHOs and toolbars not working
       href: third-party-products-break.md
+
+    - name: Browser default action for Ctrl+P cannot be prevented
+      href: browser-default-action-ctrlp-cannot-prevented.md
 
     - name: CSS styles webpage renders incorrectly
       href: css-styles-webpage-renders-wrongly.md
@@ -400,6 +415,9 @@
 
     - name: Slow rendering for document mode
       href: document-modes-slow-rendering.md
+
+    - name: Slow browsing in Internet Explorer
+      href: slow-browsing-internet-explorer.md
 
     - name: We were unable to return you to your webpage error
       href: we-were-unable-to-return-you-to-your-webpage-error.md
