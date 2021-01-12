@@ -3,6 +3,8 @@
   items:
   - name: Archive Mailboxes
     items:
+    - name: A mailbox reaches its quota
+      href: ../archive-mailboxes/mailbox-reaches-quota.md
     - name: Archive mailbox issues
       href: ../archive-mailboxes/archive-mailbox-issues.md
     - name: ArchiveStatus shows None
