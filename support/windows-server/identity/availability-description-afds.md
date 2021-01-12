@@ -107,8 +107,9 @@ AD FS 2.0 is supported in the following languages:
 
 ## Download information
 
-The following files are available for download from the Microsoft Download Center:  
-|Package name| Supported Windows operating system| Platform| Download file size |
+The following files are available for download from the Microsoft Download Center:
+
+|Package name| Supported Windows operating system| Platform| Download file size|
 |---|---|---|---|
 |AdfsSetup.exe|Windows Server 2008 R2|x64|24.04 MB|
 |AdfsSetup.exe|Windows Server 2008 SP2|x64|42.64 MB|
