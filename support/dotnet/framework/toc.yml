@@ -58,6 +58,10 @@
     href: httpwebrequest-different-webexceptionstatus.md
   - name: Endpoints of an arc aren't drawn correctly
     href: arc-endpoints-not-be-drawn-correctly.md
+  - name: Error or high CPU utilization when running a WPF-based application
+    href: error-high-cpu-utilization-running-wpf-based-application.md
+  - name: Error when applications connect to an instance
+    href: error-applications-connect-instance-same-computer.md
   - name: Explain DefaultValueAttribute
     href: confusing-defaultvalueattribute.md
   - name: Event handle leaks in an application
@@ -140,6 +144,8 @@
     href: wcf-net-tcp-service-stop-response.md
   - name: Windows Forms applications throw SecurityException
     href: winform-app-securityexception.md
+  - name: WPF application hangs when you use fonts over 100 pts in size
+    href: wpf-application-hangs-using-fonts-over-100pts.md
   - name: WPF render thread failures
     href: wpf-render-thread-failures.md
   - name: WPF XBAPs crash during startup
