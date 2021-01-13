@@ -21,6 +21,10 @@
     href: commands-under-guirunonce-not-run.md
   - name: Disabling File Based Write Filter causes a crash
     href: disabling-fbwf-causes-crash.md
+  - name: IVssBackupComponents returns a value of 0x1 or S_FALSE
+    href: ivssbackupcomponents-returns-value-0x1.md
+  - name: Making VSS shadow copy fails with error
+    href: making-vss-shadow-copy-fails-error.md
   - name: Network adapter fails to acquire an IP address
     href: network-adapter-fails-acquire-ip-address.md
   - name: Perpetual Boot failure with a prompt
@@ -33,11 +37,12 @@
     href: target-server-amd-proc-cisco-vic-cannot-start-during-kdnet.md
   - name: Volume Copy Service Provider is absent
     href: volume-copy-service-provider-absent.md
+  - name: VSS GetBackupMetadata may return incorrect path
+    href: vss-getbackupmetadata-return-incorrect-path.md
   - name: WEDU reoffers downloaded updates
     href: wedu-reoffers-downloaded-updates.md
   - name: Write filter must be disabled
     href: write-filter-must-disabled-join-domain.md
-
 
 - name: Human Interface Device (HID) Driver
   items:

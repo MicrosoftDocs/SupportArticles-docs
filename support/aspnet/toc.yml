@@ -115,6 +115,8 @@
     href: system-security-securityexception.md
   - name: Can't use DataAdapter in web applications
     href: request-timed-out-dataadapter.md
+  - name: Debug Mode in ASP.NET applications
+    href: debug-mode-applications.md
   - name: Error-logging capabilities of HTTP APIs
     href: error-logging-http-apis.md
   - name: Exceptions cause applications to quit
@@ -146,5 +148,7 @@
   items:
   - name: Control authorization permissions
     href: authorization-permissions.md
+  - name: Troubleshoot permission and security issues
+    href: troubleshoot-permissions-security-issues.md
   - name: Web applications can't write data to App_Data
     href: applicationpoolidentity-write-app-data.md
