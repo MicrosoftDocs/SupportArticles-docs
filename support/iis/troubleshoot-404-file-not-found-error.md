@@ -57,6 +57,6 @@ For more information about other, less common causes of this error message, see 
 
 ## More information
 
-- For more information about virtual directories, see [Virtual Directory \<virtualDirectory>](iis/configuration/system.applicationhost/sites/site/application/virtualdirectory).
+- For more information about virtual directories, see [Virtual Directory \<virtualDirectory>](/iis/configuration/system.applicationhost/sites/site/application/virtualdirectory).
 
 - For more information about IIS, see [IIS](http://www.iis.net/).

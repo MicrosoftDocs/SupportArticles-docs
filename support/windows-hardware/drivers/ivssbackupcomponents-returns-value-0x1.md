@@ -8,21 +8,21 @@ ms.topic: article
 ---
 # IVssBackupComponents::Query returns a value of 0x1 or S_FALSE
 
-This article describes an issue where the `IVssBackupComponents::Query` method may return a value of `0x1` or `S_FALSE`.
+This article describes an issue where the `IVssBackupComponents::Query` method may return a value of **0x1** or **S_FALSE**.
 
 _Applies to:_ &nbsp; Windows Server  
 _Original KB number:_ &nbsp; 2940851
 
 ## Summary
 
-When you use the `IVssBackupComponents::Query` method to query providers on the system and on the completed shadow copies in the system, the query may return a value of `0x1` or `S_FALSE`.
+When you use the `IVssBackupComponents::Query` method to query providers on the system and on the completed shadow copies in the system, the query may return a value of **0x1** or **S_FALSE**.
 
 > [!NOTE]
 > These values are not listed on the [IVssBackupComponents::Query method (vsbackup.h)](/windows/win32/api/vsbackup/nf-vsbackup-ivssbackupcomponents-query) webpage on the Microsoft Developer Network (MSDN) website.
 
 ## More information
 
-The `IVssBackupComponents::Query` method currently returns a list of all available providers and all completed shadow copies. This return value may also mask a failure of a provider that is installed on the system because we query all providers on the system. If the other providers on the system have no snapshots, the Query  method may return a value of 0x1 or `S_FALSE` instead of the expected return value of `VSS_E_OBJECT_NOT_FOUND`.
+The `IVssBackupComponents::Query` method currently returns a list of all available providers and all completed shadow copies. This return value may also mask a failure of a provider that is installed on the system because we query all providers on the system. If the other providers on the system have no snapshots, the query method may return a value of **0x1** or **S_FALSE** instead of the expected return value of **VSS_E_OBJECT_NOT_FOUND**.
 
 ## Applies to
 

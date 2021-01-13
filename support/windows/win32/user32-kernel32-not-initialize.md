@@ -32,7 +32,7 @@ This failure occurs for one of the following reasons:
 
 - The system ran out of desktop heap.
 
-## More Information
+## More information
 
 - Cause 1
 

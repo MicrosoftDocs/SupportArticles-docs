@@ -79,7 +79,7 @@ The key here is to look closely at the error message. The error clearly says "ca
 
 > [!TIP]
 > The easiest way to turn off third-party services is to:
-> 1. Click **Start**, click **Run**, and then type msconfig .
+> 1. Click **Start**, click **Run**, and then type *msconfig*.
 > 2. Select **Services** and check **Hide All Microsoft Services**.
 > 3. Click **Disable All** to stop the third-party services.
 > 4. Click **Start**, click **Run**, and then type iisreset to reload the CLR into the worker process.
@@ -92,7 +92,7 @@ Monitor your application to see if the issue reoccurs. If you run multiple antiv
 See [ASP.NET Required Access Control Lists (ACLs)](/previous-versions/kwzs111e(v=vs.140)).
 
 > [!TIP]
-> The %SystemRoot%\Assembly folder is the global assembly cache. You cannot directly use Windows Explorer to edit ACLs for this folder.
+> The `%SystemRoot%\Assembly` folder is the global assembly cache. You cannot directly use Windows Explorer to edit ACLs for this folder.
 
 Instead, use a command prompt and run the following command:
 
@@ -114,18 +114,18 @@ Your first step would be to see if you can connect to the remote server through 
 
 1. On the remote server, create a folder called Test. On the **Sharing** and **Security** tabs of the Test folder, add your domain/account, and also the process account that is used by your ASP.NET application, and give them both Full Control.
 
-2. On the IIS server, log in with your domain/account, click **Start**, click **Run**, and then type the UNC share path of the remote server: `\\RemoteServerName*\Test`
+2. On the IIS server, log in with your domain/account, click **Start**, click **Run**, and then type the UNC share path of the remote server: `\\RemoteServerName*\Test`.
 
     If you are unable to get to this folder, then contact your Network Administrator to fix this issue. Only then can your ASP.NET application access the share.
 
-1. Create a file called *CreateUNCFile.aspx* with the code below and save the file in your application directory.
+3. Create a file called *CreateUNCFile.aspx* with the code below and save the file in your application directory.
 
     ```aspx-vb
     <%@ Page Language="vb" %>
     <%@ Import Namespace="System.IO" %>
     <html>
-      <head>
-      <title>Writing to a Text File</title>
+    <head>
+    <title>Writing to a Text File</title>
     <script runat="server">
         Sub WriteToFile(ByVal sender As System.Object, ByVal e As System.EventArgs)
             Dim fp As StreamWriter
