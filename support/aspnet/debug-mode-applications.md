@@ -19,7 +19,7 @@ ASP.NET supports compiling applications in a special debug mode that facilitates
 1. Code will execute slower due to additional debug paths being enabled.
 2. Compilation will take longer because additional debug information is being generated, such as symbol (.pdb) files.
 3. Execution timeout is extended to 30,000,000 seconds.
-4. Scripts and images downloaded from the WebResource.axd and ScriptResource.axd handlers are not cached.
+4. Scripts and images downloaded from the `WebResource.axd` and `ScriptResource.axd` handlers are not cached.
 5. Code optimization is disabled.
 
 It is recommended that debug mode is always disabled in a production environment.

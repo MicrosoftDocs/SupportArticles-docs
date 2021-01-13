@@ -115,7 +115,7 @@
     href: system-security-securityexception.md
   - name: Can't use DataAdapter in web applications
     href: request-timed-out-dataadapter.md
-  - name: Debug Mode in ASP.NET applications
+  - name: Debug mode in ASP.NET applications
     href: debug-mode-applications.md
   - name: Error-logging capabilities of HTTP APIs
     href: error-logging-http-apis.md
