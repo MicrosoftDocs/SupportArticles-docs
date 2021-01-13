@@ -5,7 +5,7 @@ ms.date: 12/29/2020
 ms.prod-support-area-path: Site Behavior and Performance
 ms.reviewer: mlaing
 ---
-# By default, the maximum stack size of a thread that is created in a native IIS process is 256 KB
+# The default maximum stack size of threads created in a native IIS process is 256 KB
 
 This article introduces the default maximum stack size of a thread that is created by a native Microsoft Internet Information Services (IIS) process.
 
