@@ -1,7 +1,7 @@
 ---
 title: The breadcrumb trail of sync
 description: Describes how to determine why an object is not syncing in Azure AD.
-ms.date: 1/11/21
+ms.date: 1/11/2021
 ms.prod-support-area-path: 
 ms.reviewer: jarrettr
 ---
