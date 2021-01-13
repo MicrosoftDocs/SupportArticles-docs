@@ -45,5 +45,6 @@ This is by design. If the DHCP scope range does not cover the whole subnet defin
 
 ## More information
 
-Adding a reservation that is outside of the distribution range of a scope was possible in Windows Server 2003 and Windows Server 2008.  
+Adding a reservation that is outside of the distribution range of a scope was possible in Windows Server 2003 and Windows Server 2008.
+
 However, this is considered to be an invalid configuration and as such, the behavior has been changed so that it isn't possible anymore to create such a reservation.
