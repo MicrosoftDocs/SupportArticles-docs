@@ -1,6 +1,6 @@
 ---
 title: New SMB file server 3.0 features
-description: Describes new features in the next version of the Server Message Block (SMB) protocol, SMB 3.0. Windows Server 2012 introduced SMB 3.0.
+description: Describes new features in the next version of the Server Message Block (SMB) protocol, SMB 3.0. Windows introduced SMB 3.0.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Cannot failover a group
 ms.technology: HighAvailability
 ---
-# New SMB 3.0 features in the Windows Server 2012 file server
+# New SMB 3.0 features in the Windows file server
 
 This article describes new features of the Server Message Block (SMB) 3.0 protocol.
 
@@ -22,13 +22,11 @@ _Original KB number:_ &nbsp; 2709568
 
 ## Summary
 
-Windows Server 2012 introduces new server message block (SMB) file server features. To take advantage of these new features, the SMB client and SMB server must support SMB 3.0.
+Windows introduces new server message block (SMB) file server features. To take advantage of these new features, the SMB client and SMB server must support SMB 3.0.
 
-The SMB 2.x protocol was introduced in Windows Server 2008 and in Windows Vista.
+The SMB 3.0 protocol was introduced in Windows Server 2012 R2 and in Windows 10.
 
-The SMB 3.0 protocol was introduced in Windows Server 2012 and in Windows 8.
-
-## New SMB features introduced in the Windows Server 2012 file server
+## New SMB features introduced in the Windows file server
 
 - SMB Transparent Failover
 - SMB Scale Out
@@ -62,7 +60,7 @@ Both the SMB client and SMB server must support SMB 3.0 to take advantage of the
 
 ### SMB Direct (SMB over Remote Direct Memory Access [RDMA])
 
-SMB Direct is available only on the Windows Server platform and was introduced in Windows Server 2012. SMB Direct Functionality requires that the SMB client and SMB server support SMB 3.0.
+SMB Direct is available only on the Windows Server platform and was introduced in Windows Server 2012 R2. SMB Direct Functionality requires that the SMB client and SMB server support SMB 3.0.
 
 ### SMB Encryption
 
@@ -78,7 +76,7 @@ Both the SMB client and SMB server must support SMB 3.0 to take advantage of the
 
 ### SMB PowerShell
 
-SMB PowerShell management cmdlets were introduced in Windows Server 2012 and in Windows 8. Older SMB clients and SMB servers will have to continue using down-level tools for management (for example, Net.exe) and APIs (for example, Win32 APIs).
+SMB PowerShell management cmdlets were introduced in Windows Server 2012 R2 and in Windows 10. Older SMB clients and SMB servers will have to continue using down-level tools for management (for example, Net.exe) and APIs (for example, Win32 APIs).
 
 ## References
 

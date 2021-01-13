@@ -22,16 +22,16 @@ _Original KB number:_ &nbsp; 981475
 
 ## Symptoms
 
-On a cluster node that is running Windows Server 2003, Windows Server 2008 or Windows Server 2008 R2, a physical disk resource may enter the **Failed** state when you try to move a group that contains the physical disk resource. If you restart the cluster node that has the physical disk resource that did not come online, the problem is temporarily resolved.
+On a cluster node that is running Windows, a physical disk resource may enter the **Failed** state when you try to move a group that contains the physical disk resource. If you restart the cluster node that has the physical disk resource that did not come online, the problem is temporarily resolved.
 
-When this problem occurs, the following entries are logged in the Windows Server 2003 Cluster log for the physical disk resource that entered the **failed** state:
+When this problem occurs, the following entries are logged in the Cluster log for the physical disk resource that entered the **failed** state:
 
 > 000020cc.000014d0::*\<DateTime>* ERR Physical Disk \<Disk Q:>:  
 DiskspCheckPath: GetFileAttrs(Q:) returned status of 87.  
 000020cc.000014d0::*\<DateTime>* WARN Physical Disk \<Disk Q:>:  
 DiskspCheckDriveLetter: Checking drive name (Q:) returns 87
 
-Additionally, the following events are logged in the Windows Server 2003 System Event log:
+Additionally, the following events are logged in the System Event log:
 
 > Event Type: Error  
 Event Source: ClusSvc  
@@ -53,13 +53,11 @@ User: N/A
 Computer: \<node name>  
 Description: Cluster disk resource 'Disk Q:' could not be mounted.
 
-Similarly, on a Windows Server 2008 or Windows Server 2008 R2 cluster nodes you may see following entries are logged in the Cluster log:
+Similarly, on a Windows server cluster node you may see following entries are logged in the Cluster log:
 
 > 00000db0.00000868::*\<DateTime>* WARN [RES] Physical Disk \<Cluster Disk 1>: OnlineThread: Failed to get volume guid for device \\?\GLOBALROOT\Device\Harddisk15\Partition1\. Error 3  
 00000db0.00000868::*\<DateTime>* WARN [RES] Physical Disk \<Cluster Disk 1>: OnlineThread: Failed to set volguid \??\Volume{3cb36133-0d0b-11df-afcf-005056ab58b9}. Error: 183.  
 00000db0.00000868::*\<DateTime>* INFO [RES] Physical Disk \<Cluster Disk 1>: VolumeIsNtfs: Volume \\?\GLOBALROOT\Device\Harddisk15\Partition1\ has FS type NTFS
-
-Additionally, following event is logged in the System Event log of Windows Server 2008 or Windows Server 2008 R2:
 
 ## Cause
 
