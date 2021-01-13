@@ -61,6 +61,8 @@
       href: boot-error-0xc0000034.md
     - name: Can't boot with 0xc0000098
       href: boot-error-0xc0000098.md
+    - name: Can't boot with 0xC0000102
+      href: error-code-0xC0000102-status-file-corrupt.md
     - name: Can't boot with 0xc0000225
       href: boot-error-0xc0000225.md
     - name: Can't boot with 0xc0000359
