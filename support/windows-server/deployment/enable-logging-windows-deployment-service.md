@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
 ms.technology: Deployment
 ---
-# How to enable logging in WDS in Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, and in Windows Server 2012
+# How to enable logging in WDS in Windows
 
 This article describes how to enable logging in Windows Deployment Services (WDS) in Windows.
 
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 936625
 
 ## Introduction
 
-This article discusses how to enable logging in WDS in Microsoft Windows Server 2003 and in Windows Server 2008. Additionally, this article describes how to gather data in Windows Deployment Services.
+This article discusses how to enable logging in WDS in Windows. Additionally, this article describes how to gather data in Windows Deployment Services.
 
 You can use this information to help troubleshoot issues that you may experience in Windows Deployment Services.
 
@@ -56,28 +56,15 @@ WDSUTIL /get-server /show:all /detailed
 
 This command causes Windows Deployment Services information to be logged in the Application log and in the System log.
 
-## Obtain trace logs for Windows Server 2012
+## Obtain trace logs for Windows
 
-To obtain trace information for Windows Server 2012, do the following:
+To obtain trace information for Windows, do the following:
 
-1. Open Event Viewer (eventvwr).
-2. Browse to Windows Logs\Applications and Services Logs\Microsoft\Windows\Deployment-Services-Diagnostics.
+1. Open **Event Viewer** (eventvwr).
+2. Browse to **Windows Logs**\\**Applications and Services Logs**\\**Microsoft**\\**Windows**\\**Deployment-Services-Diagnostics**.
 3. Right-click the channel and choose **Enable Log**.
 
-## Obtain trace in Windows Server 2003, Windows Server 2008, and Windows Server 2008 R2
-
-To obtain trace information for Windows Server 2003, Windows Server 2008 and Windows Server 2008 R2, you must enable tracing in the Windows Deployment Services server component. To do this, set the following registry entry:
-
-- Path: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Tracing\WDSServer
-- Name: EnableFileTracing
-- Value type: REG_DWORD
-- Value data: 1
-
 Then, configure the components that you want to be logged by setting one or more of the following registry keys to a 0 value.
-
-- Windows Deployment Services Dynamic Driver Provisioning Service (Windows Server 2008 R2 only)
-
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\WDSServer\Providers\WDSDDPS\TraceDisabled`
 
 - Windows Deployment Services Multicasting
 
@@ -91,11 +78,7 @@ Then, configure the components that you want to be logged by setting one or more
 
      `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\WDSServer\Providers\WDSTFTP\TraceDisabled`
 
-- Windows Deployment Services Imaging (Windows Server 2008 R2 only)
-
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\WDSServer\Providers\WDSIMAGE\TraceDisabled`
-
-WDS servers that are running Windows Server 2008 R2 also support the following additional tracing
+WDS servers that are running Windows also support the following additional tracing:
 
 - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\WDSServer\Providers\WDSTFTP\TraceFlags`
 - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\WDSServer\Providers\WDSMC\TraceFlags`
@@ -109,7 +92,7 @@ You can set these registry keys to the following values to control what is inclu
 > [!NOTE]
 > A tracing process may affect performance. Therefore, we recommend that you disable the tracing functionality when you do not have to generate a log.
 
-After you set this registry entry, trace information for the Windows Deployment Services server component is logged in the following file:%windir%\Tracing\wdsserver.log
+After you set this registry entry, trace information for the Windows Deployment Services server component is logged in the following file:%windir%\\Tracing\\wdsserver.log
 
 ## Windows Deployment Services management components
 
@@ -139,9 +122,9 @@ To obtain trace information, you must enable tracing in the Windows Deployment S
 - Value type: REG_DWORD
 - Value data: 1
 
-After you set these registry entries, trace information for the Windows Deployment Services management component is logged in the %windir%\Tracing\wdsmgmt.log file.
+After you set these registry entries, trace information for the Windows Deployment Services management component is logged in the %windir%\\Tracing\\wdsmgmt.log file.
 
-Additionally, trace information for the Windows Deployment Services MMC component is logged in the %windir%\Tracing\wdsmmc.log file.
+Additionally, trace information for the Windows Deployment Services MMC component is logged in the %windir%\\Tracing\\wdsmmc.log file.
 
 > [!NOTE]
 > Although the Windows Deployment Services MMC component and the WDSUTIL component share the same API layer, MMC sometimes adds processing and functionality. If an error occurs, it is frequently worthwhile to use WDSUTIL to try to reproduce the failure. WDSUTIL may help you determine whether the error is local to MMC or whether the error is a general management API failure. Frequently, the WDSUTIL component provides more detailed error output when tracing is not enabled. Where applicable, use the following options to obtain extra information:
@@ -175,7 +158,7 @@ To obtain the trace log in the WDSCapture operation, follow these steps:
 4. Start a second instance of the WDSCapture component. Then, reproduce the problem by using the second instance of WDSCapture.
 
 > [!NOTE]
-> Don't close the original instance of WDSCapture. If you close the original instance of WDSCapture, Windows PE restarts. Instead, press ALT+TAB to switch between the instances of WDSCapture.The following trace log file is generated: X:\Windows\Tracing\WDSCapture.log.
+> Don't close the original instance of WDSCapture. If you close the original instance of WDSCapture, Windows PE restarts. Instead, press ALT+TAB to switch between the instances of WDSCapture.The following trace log file is generated: X:\\Windows\\Tracing\\WDSCapture.log.
 
 ## Windows Deployment Services client components
 
@@ -218,8 +201,8 @@ In the tree structure of event logs, the **Admin** log contains all the errors, 
 
 The location of the setup logs depends on when the failure occurs.
 
-If the failure occurs in Windows PE before the disk configuration page of the WDS client is completed, you can find the logs at the **X:\Windows\Panther** folder. Use Shift+F10 to open a command prompt, and then change the directory to the location.
+If the failure occurs in Windows PE before the disk configuration page of the WDS client is completed, you can find the logs at the **X:\\Windows\\Panther** folder. Use Shift+F10 to open a command prompt, and then change the directory to the location.
 
-If the failure occurs in Windows PE after the disk configuration page of the WDS client is completed, you can find the logs on the local disk volume at the **$Windows.~BT\Sources\Panther** folder. The local disk volume is usually the drive **C**. Use Shift+F10 to open a command prompt, and then change the directory to the location.
+If the failure occurs in Windows PE after the disk configuration page of the WDS client is completed, you can find the logs on the local disk volume at the **$Windows.~BT\\Sources\\Panther** folder. The local disk volume is usually the drive **C**. Use Shift+F10 to open a command prompt, and then change the directory to the location.
 
-If the failure occurs on the first boot after the image is applied, you can find the logs in the **\Windows\Panther** folder of the local disk volume. The local disk volume is usually the drive **C**.
+If the failure occurs on the first boot after the image is applied, you can find the logs in the **\\Windows\\Panther** folder of the local disk volume. The local disk volume is usually the drive **C**.
