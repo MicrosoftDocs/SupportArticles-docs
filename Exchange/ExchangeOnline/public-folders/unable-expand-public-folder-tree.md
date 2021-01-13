@@ -37,7 +37,7 @@ Users who have sufficient permissions over public folders receive the following 
 There are two possible causes:
 
 - You're using an outdated version of Microsoft Outlook 2016 or 2013.
-- The default public folder mailbox resources are exhausted serving public folder hierarchy but the threshold where Exchange can provision a new public folder mailbox hasn't been reached.
+- The default public folder mailbox resource(s) are exhausted serving public folder hierarchy but still the threshold where Exchange ([Auto-split](https://techcommunity.microsoft.com/t5/exchange-team-blog/how-exchange-online-automatically-cares-for-your-public-folder/ba-p/2050019)) can provision a new public folder mailbox hasn't been reached.
 
 ## Resolution
 
@@ -82,7 +82,7 @@ To resolve this issue, create a new public folder mailbox, manually update the p
 
 ### Scenario 2
 
-You're using the *DefaultPublicFolderMailbox* property to predefine a hierarchy serving public folder mailbox. There are other public folder mailboxes with no special configuration. That's the case when all users are in the same geographical location.  
+You're using the *DefaultPublicFolderMailbox* property to predefine a hierarchy serving public folder mailbox. There are other public folder mailboxes ready to serve hierarchy for users with no special configuration. That's the case when all users are in the same geographical location.  
 
 In this scenario, find the users' mailboxes whose *DefaultPublicFolderMailbox* property is set to non-null values and set the property to **null**. This will redirect users to a relatively low-load public folder mailbox.
 
