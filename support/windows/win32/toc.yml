@@ -89,6 +89,8 @@
       href: close-non-blocked-socket-memory-leak.md
     - name: Send small data packets over TCP by using Winsock
       href: data-segment-tcp-winsock.md
+    - name: Win32_NetworkAdapterConfiguration class is unable to retrieve information
+      href: win32-networkadapterconfiguration-unable-retrieve-information.md
   - name: Security development
     items:
     - name: Changing krbtgt password fails
@@ -123,7 +125,11 @@
       href: setsystemtimeadjustment-less-than-16.md
     - name: Troubleshoot errors in Event Viewer
       href: troubleshoot-event-message-not-found.md
+    - name: User32.dll or Kernel32.dll does not initialize
+      href: user32-kernel32-not-initialize.md
   - name: Windows administration and management development
     items:
+    - name: Change Windows Active Directory user password through LDAP
+      href: change-windows-active-directory-user-password.md
     - name: MSI packages fail to run
       href: msi-packages-wmi-queries-cannot-run.md

@@ -43,7 +43,7 @@ Active Directory Domain Services (AD DS) replication has the following dependenc
 
 Use either of the following methods to view replications errors:
 
-- Run [AD Status Replication Tool](https://www.microsoft.com/download/details.aspx?id=30005) on the DCs.
+- Download and run the [Microsoft Support and Recovery Assistant tool](https://aka.ms/sara-adreplication) OR Run [AD Status Replication Tool](https://www.microsoft.com/download/details.aspx?id=30005) on the DCs.
 - Read the replication status in the `repadmin /showrepl` output.
 
   - `Repadmin` is part of Remote Server Administrator Tools (RSAT). If you're using Windows 10, version 1803 or an earlier version of Windows, download [Remote Server Administration Tools (RSAT)](https://www.microsoft.com/download/details.aspx?id=45520).
