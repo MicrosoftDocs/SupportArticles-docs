@@ -1,13 +1,13 @@
 ---
-title: Debug Mode in ASP.NET applications
-description: This article describes the Debug Mode in ASP.NET applications.
+title: Debug mode in ASP.NET applications
+description: This article describes the Debug mode in ASP.NET applications.
 ms.date: 12/29/2020
 ms.prod-support-area-path: Site Behavior and Performance
 ms.reviewer: radomirz, jamesche, mlaing, bretb
 ---
-# Debug Mode in ASP.NET applications
+# Debug mode in ASP.NET applications
 
-This article introduces the Debug Mode in ASP.NET applications.
+This article introduces the Debug mode in ASP.NET applications.
 
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 2580348
