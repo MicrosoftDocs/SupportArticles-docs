@@ -572,7 +572,7 @@
     },
     {
       "source_path": "support/azure/active-directory/install-ad-sync-tool-fails.md",
-      "redirect_url": "support/windows-server/welcome-azure-ad.md",
+      "redirect_url": "support/azure/active-directory/welcome-azure-ad.md",
       "redirect_document_id": true
     },
     {
