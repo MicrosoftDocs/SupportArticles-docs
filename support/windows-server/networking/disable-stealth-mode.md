@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 2586744
 ## Introduction
 
 Windows Server or Windows client computers do not send Transmission Control Protocol (TCP) reset (RST) messages or Internet Control Message Protocol (ICMP) unreachable packets across a port that does not have a listening application.
-Several applications rely on the behavior that is described in [RFC 793](http://tools.ietf.org/html/rfc793#section-3.4), "Reset Generation," Page 35f. These applications require the TCP RST packet or ICMP unreachable packet as a response if they knock on a port that has no listener. If they don't receive this response, the applications might not be able to run correctly on Windows Server 2008 R2 or Windows 7.
+Several applications rely on the behavior that is described in [RFC 793](http://tools.ietf.org/html/rfc793#section-3.4), "Reset Generation," Page 35f. These applications require the TCP RST packet or ICMP unreachable packet as a response if they knock on a port that has no listener. If they don't receive this response, the applications might not be able to run correctly on Windows.
 Typically, the effect of this dependency is that stealth mode may cause a 20-second delay for regular TCP applications to reconnect if the remote peer loses the connection state and that notification packet doesn't reach the client.
 One example of this behavior is Lotus Notes Client. The client can be configured to use different Lotus Notes servers. If the service is not running on the first configured server, the client switches immediately to the second server if it receives a TCP RESET command. If stealth mode is enabled, no TCP RESET is received by the client. The client then waits for the last SYN retransmit to time out before it tries the next server in the list.
 
