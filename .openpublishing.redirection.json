@@ -567,7 +567,7 @@
     },
     {
       "source_path": "support/windows-server/index.md",
-      "redirect_url": "/support/windows-server/welcome-windows-server.md",
+      "redirect_url": "/support/windows-server/welcome-windows-server",
       "redirect_document_id": false
     },
     {
@@ -648,7 +648,7 @@
     {
       "source_path": "support/azure/general/capture-debug-stream.md",
       "redirect_url": "https://docs.microsoft.com/azure/automation/troubleshoot/runbooks",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/windows-client/deployment/bitlocker-too-many-pin-entry-attempts.md",
