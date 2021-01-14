@@ -648,7 +648,7 @@
     {
       "source_path": "support/azure/general/capture-debug-stream.md",
       "redirect_url": "https://docs.microsoft.com/azure/automation/troubleshoot/runbooks",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-client/deployment/bitlocker-too-many-pin-entry-attempts.md",
