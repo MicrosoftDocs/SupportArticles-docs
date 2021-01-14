@@ -110,6 +110,8 @@
     href: readfromstream-return-access-denied.md
   - name: Redirecting error from Command Prompt
     href: redirecting-error-command-prompt.md
+  - name: Troubleshoot Visual C++ Compiler or Visual C++ Linker
+    href: troubleshoot-visual-c-compile-linker.md
   - name: Unnested loops cause C1061 compiler error
     href: unnested-loops-cause-c1061-error.md
   - name: Use try-catch-finally to catch exceptions

@@ -30,7 +30,7 @@ Installing RSAT is similar to installing Adminpak.msi in Windows 2000-based or W
 
 In the RSAT releases for Windows 10, tools are again all enabled by default. You can open **Turn Windows features on or off** to disable tools that you don't want to use for Windows 7.
 
-:::image type="content" source="./media/remote-server-administration-tools/turn-windows-features-on-or-off.jpg" alt-text="Turn Windows features on or off option in Windows 7.":::
+:::image type="content" source="./media/remote-server-administration-tools/turn-windows-features-on-or-off.png" alt-text="Turn Windows features on or off option in Windows 7.":::
 
 For RSAT in Windows 7, you must enable the tools for the roles and features that you want to manage after you run the downloaded installation package.
 
