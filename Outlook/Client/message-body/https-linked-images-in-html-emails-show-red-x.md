@@ -62,7 +62,7 @@ The **Do not save encrypted pages to disk** setting is managed by the following 
   Value: 1
 - Group Policy:
 
-  Key: `HKEY_CURRENT_USER\software\Policies\microsoft\windows\CurrentVersion\Internet`  
+  Key: `HKEY_CURRENT_USER\software\Policies\microsoft\windows\CurrentVersion\Internet Settings`  
   DWORD: DisableCachingOfSSLPages  
   Value: 1
 
