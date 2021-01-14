@@ -126,7 +126,7 @@ To use the **Add Roles and Features Wizard**, follow these steps:
 
 5. On the **Specify Alternate Source Path** page, type the path of the *SxS* folder as a local path or as a network share path. The screenshot for this step is listed below.
 
-    ![path of the SxS folder](./media/dotnet-framework-35-installation-error/path_of_the_SxS_folder.png)  
+    ![Path of the SxS folder](./media/dotnet-framework-35-installation-error/path-of-the-sxs-folder.png)  
 
 6. Click **OK**.
 7. Click **Install** to finish the wizard.

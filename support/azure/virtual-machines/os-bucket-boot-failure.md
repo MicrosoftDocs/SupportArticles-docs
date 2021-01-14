@@ -109,7 +109,7 @@ Verify the OS partition that holds the BCD store for the disk is marked as activ
 
       2. Write down the identifier of the Windows Boot loader. This identifier is the one with the path `\windows\system32\winload.efi`.
 
-         ![Mitigation 2 - Windows Identifier 1](media/os-bucket-boot-failure/6-boot configuration data-windows-identifier.png)
+         ![Mitigation 2 - Windows Identifier 1](media/os-bucket-boot-failure/6-boot-configuration-data-windows-identifier.png)
 
    2. For Generation 2 VM:
 

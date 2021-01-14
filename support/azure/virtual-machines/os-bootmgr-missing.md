@@ -113,7 +113,7 @@ Verify the OS partition which holds the BCD store for the disk is marked as acti
 
       2. Write down the identifier of the Windows Boot loader. This identifier is the one with the path `\windows\system32\winload.exe`.
 
-         ![Mitigation 2 - Windows Identifier 1](media/os-bootmgr-missing/6-boot configuration data-windows-identifier.png)
+         ![Mitigation 2 - Windows Identifier 1](media/os-bootmgr-missing/6-boot-configuration-data-windows-identifier.png)
 
    2. For Generation 2 VM:
 
