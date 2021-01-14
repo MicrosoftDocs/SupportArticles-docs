@@ -572,17 +572,17 @@
     },
     {
       "source_path": "support/azure/active-directory/install-ad-sync-tool-fails.md",
-      "redirect_url": "support/azure/active-directory/welcome-azure-ad.md",
-      "redirect_document_id": true
+      "redirect_url": "/troubleshoot/azure/active-directory/welcome-azure-ad",
+      "redirect_document_id": false
     },
     {
       "source_path": "support/azure/active-directory/specified-module-dirsync-not-load.md",
       "redirect_url": "/troubleshoot/azure/active-directory/welcome-azure-ad",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/azure/general/backup-service-mars-agent-versions-not-match.md",
-      "redirect_url": "support/azure/site-recovery/backup-service-mars-agent-versions-not-match.md",
+      "redirect_url": "/troubleshoot/azure/site-recovery/backup-service-mars-agent-versions-not-match",
       "redirect_document_id": true
     },
     {
