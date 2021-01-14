@@ -361,6 +361,8 @@
           href: ../excel/inaccurate-chart-trendline-formula.md
         - name: CHIINV statistical functions
           href: ../excel/statistical-functions-chiinv.md
+        - name: '"Class not registered" error when updating PowerPivot data'
+          href: ../excel/class-not-registered-error-pivotpoint.md
         - name: Clean up workbooks with less memory
           href: ../excel/clean-workbook-less-memory.md
         - name: Columns and rows are labeled numerically
