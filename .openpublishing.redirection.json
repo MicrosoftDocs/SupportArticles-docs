@@ -448,317 +448,317 @@
     {
       "source_path": "support/browsers/index.md",
       "redirect_url": "/support/browsers/welcome-browsers",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/biztalk/index.md",
       "redirect_url": "/support/biztalk/welcome-biztalk-server",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/biztalk/welcome-support-biztalk.md",
       "redirect_url": "/support/biztalk/welcome-biztalk-server",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/dotnet/index.md",
       "redirect_url": "/support/dotnet/welcome-dotnet",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/mem/intune/index.md",
       "redirect_url": "/support/mem/intune/welcome-intune",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/mem/configmgr/index.md",
       "redirect_url": "/support/mem/configmgr/welcome-configuration-manager",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/system-center/dpm/index.md",
       "redirect_url": "/support/system-center/dpm/welcome-dpm",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/system-center/scom/index.md",
       "redirect_url": "/support/system-center/scom/welcome-scom",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/system-center/orchestrator/index.md",
       "redirect_url": "/support/system-center/orchestrator/welcome-orchestrator",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/system-center/scsm/index.md",
       "redirect_url": "/support/system-center/scsm/welcome-scsm",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/system-center/vmm/index.md",
       "redirect_url": "/support/system-center/vmm/welcome-vmm",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/microsoft-identity-manager/index.md",
       "redirect_url": "/support/microsoft-identity-manager/welcome-identity-manager",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/visualstudio/index.md",
       "redirect_url": "/support/visualstudio/welcome-visual-studio",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/webapps/index.md",
       "redirect_url": "/support/webapps/welcome-webapps",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/sql/index.md",
       "redirect_url": "/support/sql/welcome-sql-server",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/host-integration-server/index.md",
       "redirect_url": "/support/host-integration-server/welcome-host-integration-server",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/azure/active-directory/index.md",
       "redirect_url": "/support/azure/active-directory/welcome-azure-ad",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/azure/devops/index.md",
       "redirect_url": "/support/azure/devops/welcome-azure-devops",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/azure/site-recovery/index.md",
       "redirect_url": "/support/azure/site-recovery/welcome-site-recovery",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/azure/cloud-services/index.md",
       "redirect_url": "/support/azure/cloud-services/welcome-cloud-services",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/azure/virtual-machines/index.md",
       "redirect_url": "/support/azure/virtual-machines/welcome-virtual-machines.md",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/azure/general/index.md",
       "redirect_url": "/support/azure/virtual-machines/welcome-general.md",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows/win32/index.md",
       "redirect_url": "/support/windows/win32/welcome-windowsdeveloper",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-client/index.md",
       "redirect_url": "/support/windows-client/welcome-windows-client",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-server/index.md",
       "redirect_url": "/support/windows-server/welcome-windows-server",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/azure/active-directory/install-ad-sync-tool-fails.md",
       "redirect_url": "/support/azure/active-directory/welcome-azure-ad",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/azure/active-directory/specified-module-dirsync-not-load.md",
       "redirect_url": "/support/azure/active-directory/welcome-azure-ad",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/azure/general/backup-service-mars-agent-versions-not-match.md",
       "redirect_url": "/support/azure/site-recovery/backup-service-mars-agent-versions-not-match",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/azure/general/upgrade-mars-agent.md",
       "redirect_url": "/support/azure/site-recovery/upgrade-mars-agent",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/azure/general/asr-agent-disable-tls-pci-compliance.md",
       "redirect_url": "/support/azure/site-recovery/asr-agent-disable-tls-pci-compliance",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/azure/general/mars-agent-system-state-backup-failure.md",
       "redirect_url": "/support/azure/site-recovery/mars-agent-system-state-backup-failure",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/azure/general/unsupported-features-and-platforms-post-upgrade.md",
       "redirect_url": "/support/azure/site-recovery/unsupported-features-and-platforms-post-upgrade",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/azure/active-directory/unable-connect-sync-service-miisclient.md",
       "redirect_url": "/support/azure/active-directory/welcome-azure-ad",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/previous-versions/configmgr/index.md",
       "redirect_url": "/support/previous-versions/configmgr/backups-fail-with-vss-provider-issue",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/previous-versions/dotnet/index.md",
       "redirect_url": "/support/previous-versions/dotnet/framework/64-bit-app-fails-access-violation-clr-marshaling",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/previous-versions/dotnet/framework/index.md",
       "redirect_url": "/support/previous-versions/dotnet/framework/64-bit-app-fails-access-violation-clr-marshaling",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/previous-versions/visualstudio/index.md",
       "redirect_url": "/support/previous-versions/visualstudio/general/redistribution-shared-c-runtime-component",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/previous-versions/msmq/index.md",
       "redirect_url": "/support/previous-versions/msmq/clustering-support-msmq",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/previous-versions/visualstudio/foxpro/index.md",
       "redirect_url": "/support/previous-versions/visualstudio/foxpro/access-imagelist-treeview-listview",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/previous-versions/iis/index.md",
       "redirect_url": "/support/previous-versions/iis/force-ssl-specific-pages",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/azure/general/capture-debug-stream.md",
       "redirect_url": "https://docs.microsoft.com/azure/automation/troubleshoot/runbooks",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-client/deployment/bitlocker-too-many-pin-entry-attempts.md",
       "redirect_url": "/troubleshoot/windows-client/windows-security/bitlocker-too-many-pin-entry-attempts",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-client/deployment/parameter-is-incorrect.md",
       "redirect_url": "/troubleshoot/windows-client/windows-security/parameter-is-incorrect",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-client/deployment/event-id-15-computer-resume-from-sleep.md",
       "redirect_url": "/troubleshoot/windows-client/windows-security/event-id-15-computer-resume-from-sleep",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-client/deployment/mbam-client-fails-event-id-4-0x8004100e.md",
       "redirect_url": "/troubleshoot/windows-client/windows-security/mbam-client-fails-event-id-4-0x8004100e",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-client/deployment/tpm-is-ready-for-use-with-reduced-functionality.md",
       "redirect_url": "/troubleshoot/windows-client/windows-security/tpm-is-ready-for-use-with-reduced-functionality",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-client/deployment/enable-bitlocker-device-encryption-local-hard-disk.md",
       "redirect_url": "/troubleshoot/windows-client/windows-security/enable-bitlocker-device-encryption-local-hard-disk",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-server/deployment/server-error-click-reports-tab-mbam.md",
       "redirect_url": "/troubleshoot/windows-server/windows-security/server-error-click-reports-tab-mbam",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-server/deployment/mbam-setup-fails.md",
       "redirect_url": "/troubleshoot/windows-server/windows-security/mbam-setup-fails",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-server/deployment/error-mbam-take-ownership-tpm.md",
       "redirect_url": "/troubleshoot/windows-server/windows-security/error-mbam-take-ownership-tpm",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-client/deployment/bitlocker-recovery-password-not-fips-compliant.md",
       "redirect_url": "/troubleshoot/windows-client/windows-security/bitlocker-recovery-password-not-fips-compliant",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-client/deployment/disk-partition-requirement-use-windows-re-tool.md",
       "redirect_url": "/troubleshoot/windows-client/windows-security/disk-partition-requirement-use-windows-re-tool",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-client/deployment/cant-retrieve-bitlocker-recovery-key.md",
       "redirect_url": "/troubleshoot/windows-client/windows-security/cant-retrieve-bitlocker-recovery-key",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-server/deployment/computer-record-rejected-in-mbam.md",
       "redirect_url": "/troubleshoot/windows-server/windows-security/computer-record-rejected-in-mbam",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-server/deployment/error-when-opening-reports-mbam.md",
       "redirect_url": "/troubleshoot/windows-server/windows-security/error-when-opening-reports-mbam",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-server/deployment/mbam-enterprise-report-not-updated.md",
       "redirect_url": "/troubleshoot/windows-server/windows-security/mbam-enterprise-report-not-updated",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-client/deployment/bitlocker-not-enabled-usb-drive-not-found.md",
       "redirect_url": "/troubleshoot/windows-client/windows-security/bitlocker-not-enabled-usb-drive-not-found",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/azure/virtual-machines/kernel-related-boot issues.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/kernel-related-boot-issues",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-client/deployment/specified-account-not-exist-enable-bitlocker.md",
       "redirect_url": "/troubleshoot/windows-client/windows-security/specified-account-not-exist-enable-bitlocker",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-client/deployment/requested-key-id-is-invalid.md",
       "redirect_url": "/troubleshoot/windows-client/windows-security/requested-key-id-is-invalid",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/cpp/visual-studio-2013- startup-crashes.md",
       "redirect_url": "/troubleshoot/cpp/visual-studio-2013-startup-crashes",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/windows-server/high-availability/smb-3- file-server-features.md",
       "redirect_url": "/troubleshoot/windows-server/high-availability/smb-3-file-server-features",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/cpp/expand-pointer- debugger-watch-window.md",
       "redirect_url": "/troubleshoot/cpp/expand-pointer-debugger-watch-window",
-      "redirect_document_id": false
+      "redirect_document_id": true
     }
   ]
 }
