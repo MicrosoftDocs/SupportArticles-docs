@@ -3,13 +3,13 @@
   items:
   - name: Exchange ActiveSync
     items:
-    - name: Invitations are forwarded by an attendee for an existing meeting
+    - name: Invitations are forwarded by an attendee for an existing meeting
       href: ../exchange-activesync/invitations-forwarded-by-attendee-for-existing-meeting.md
   - name: Exchange connectivity
     items:
     - name: ActiveSync v12.0 is out of support
       href: ../exchange-connectivity/activesync-v12.0-out-of-support.md
-    - name: Outlook app access end after June 1 if EWS app policies not set correctly
+    - name: Outlook app access end after June 1 if EWS app policies not set correctly
       href: /exchange/troubleshoot/mobile-devices/outlook-app-access-end-after-june-1-if-ews-app-policies-not-set-correctly?context=/outlook/troubleshoot/context/mobile-context
-    - name: Outlook for iOS and Android with Device Access (ABQ) rules are quarantined
+    - name: Outlook for iOS and Android with Device Access (ABQ) rules are quarantined
       href: ../exchange-connectivity/outlook-for-ios-and-android-with-abq-rules-are-quarantined.md

@@ -47,49 +47,51 @@ To repair authentication-related issues that are associated with provider-hosted
    In the following script, replace {0} with your web application. The outputs of the script are the app title, app client ID and target Web of all provider-hosted add-ins. These values will be used as inputs in step 3.
 
    ```powershell
-   Add-PsSnapin Microsoft.SharePoint.PowerShell
-   $webApp = Get-SPWebApplication -identity "webapplication"
-   foreach($site in $webApp.Sites)
-   {
-   foreach($web in $site.AllWebs)
-   {
-   $appInstance = Get-SPAppInstance -Web $web.Url | ? {$_.LaunchUrl -notlike "~appWebUrl*"} | select Title, AppPrincipalId
-   if($appInstance -ne $null)
-   {
-   foreach ($instance in $appInstance)
-   {
-   $tmp = $instance.AppPrincipalId.Split('|@',[System.StringSplitOptions]::RemoveEmptyEntries)
-   $appInfo = $instance.Title + " - " + $tmp[$tmp.Count - 2] + " - " + $web.Url
-   Write-Output $appInfo
-   }
-   }
-   }
-   }
+    Add-PsSnapin Microsoft.SharePoint.PowerShell
+    Add-PsSnapin Microsoft.SharePoint.PowerShell
+    $webApp = Get-SPWebApplication "{0}"
+    foreach($site in $webApp.Sites){
+    foreach($web in $site.AllWebs)
+    {
+    $appInstance = Get-SPAppInstance -Web $web.Url | ? {$_.LaunchUrl -notlike "~appWebUrl*"} | select Title, AppPrincipalId
+    if($appInstance -ne $null)
+    {
+    foreach ($instance in $appInstance)
+    {
+    $tmp = $instance.AppPrincipalId.Split('|@',[System.StringSplitOptions]::RemoveEmptyEntries)
+    $appInfo = $instance.Title + " - " + $tmp[$tmp.Count - 2] + " - " + $web.Url
+    Write-Output $appInfo
+    }
+    }
+    }
+    }
    ```
 
 2. Update **SPTrustedSecurityTokenIssuers** by using the following script:
 
    ```powershell
-   $NewRealm = Get-SPAuthenticationRealm
-   $sts = Get-SPTrustedSecurityTokenIssuer | ? {$_.Name -ne 'EvoSTS-Trust' -and $_.Name -ne 'ACS_STS'} | Select RegisteredIssuerName
-   $realm = $sts | ?{$_.RegisteredIssuerName -ne $null} | %{$($($_.RegisteredIssuerName).toString().split('@',2)[1]).toString()} | ?{$_ -ne '*' -and $_ -ne $newRealm}
-   if($Realm.count -gt 0)
-   {
-   $TempRealm = '*@$($NewRealm)'
-   $Issuers = Get-SPTrustedSecurityTokenIssuer | ?{$_.Name -ne 'EvoSTS-Trust' -and $_.Name -ne 'ACS_STS' -and $_.RegisteredIssuerName -ne $null -and $_.RegisteredIssuerName -notlike '*@`*' -and $_.RegisteredIssuerName -notlike $TempRealm}
-   $Guid = [guid]::NewGuid() foreach ($Issuer in $Issuers)
-   {
-   $NameCopy = $Issuer.Name $NewIssuerName = $Guid
-   $IssuerCertificate = $Issuer.SigningCertificate
-   $OldRegisteredIssuerID = $Issuer.RegisteredIssuerName
-   $IssuerID = $OldRegisteredIssuerID.Split('@')[0]
-   $NewRegisteredIssuerName = $IssuerID + '@' + $NewRealm
-   $NewIssuer = New-SPTrustedSecurityTokenIssuer -Name $NewIssuerName -Certificate $IssuerCertificate -RegisteredIssuerName $NewRegisteredIssuerName -IsTrustBroker
-   Remove-SPTrustedSecurityTokenIssuer $Issuer -Confirm:$false
-   $NewIssuer.Name = $NameCopy
-   $NewIssuer.Update()
-   }
-   }
+    $NewRealm = Get-SPAuthenticationRealm
+    $sts = Get-SPTrustedSecurityTokenIssuer | ? {$_.Name -ne 'EvoSTS-Trust' -and $_.Name -ne 'ACS_STS'} | Select RegisteredIssuerName
+    $realm = $sts | ?{$_.RegisteredIssuerName -ne $null} | %{$($($_.RegisteredIssuerName).toString().split('@',2)[1]).toString()} | ?{$_ -ne '*' -and $_ -ne $newRealm}
+    if($Realm.count -gt 0) {
+    $TempRealm = '*@$($NewRealm)'
+    $Issuers = Get-SPTrustedSecurityTokenIssuer | ?{$_.Name -ne 'EvoSTS-Trust' -and $_.Name -ne 'ACS_STS' -and $_.RegisteredIssuerName -ne $null -and $_.RegisteredIssuerName -notlike '*@`*' -and $_.RegisteredIssuerName -notlike $TempRealm}
+    
+    $Guid = [guid]::NewGuid()
+    foreach ($Issuer in $Issuers)
+    {
+    $NameCopy = $Issuer.Name
+    $NewIssuerName = $Guid
+    $IssuerCertificate = $Issuer.SigningCertificate
+    $OldRegisteredIssuerID = $Issuer.RegisteredIssuerName
+    $IssuerID = $OldRegisteredIssuerID.Split('@')[0]
+    $NewRegisteredIssuerName = $IssuerID + '@' + $NewRealm
+    $NewIssuer = New-SPTrustedSecurityTokenIssuer -Name $NewIssuerName -Certificate $IssuerCertificate -RegisteredIssuerName $NewRegisteredIssuerName -IsTrustBroker
+    Remove-SPTrustedSecurityTokenIssuer $Issuer -Confirm:$false
+    $NewIssuer.Name = $NameCopy
+    $NewIssuer.Update()
+    }
+    }
    ```
 
 3. Fix each provider-hosted add-in that was found in step 1 by running the following script:  
@@ -97,37 +99,37 @@ To repair authentication-related issues that are associated with provider-hosted
    In the script, replace {0}, {1} and {2} with the values you obtained in step 1.
 
    ```powershell
-   $appTitle = '{0}'
-   $clientID = '{1}'
-   $targetWeb = Get-SPWeb '{2}'
-   $Scope = 'Taxonomy'
-   $Right = 'FullControl'
-   $authRealm = Get-SPAuthenticationRealm -ServiceContext $targetWeb.Site
-   $AppIdentifier = $clientID + '@' + $authRealm
-   Register-SPAppPrincipal -NameIdentifier $AppIdentifier -Site $targetWeb -DisplayName $appTitle
-   $appPrincipal = Get-SPAppPrincipal -Site $targetWeb -NameIdentifier $AppIdentifier
-   Set-SPAppPrincipalPermission -Site $targetWeb -AppPrincipal $appPrincipal -Scope $Scope -Right $Right
+    $appTitle = '{0}'
+    $clientID = '{1}'
+    $targetWeb = Get-SPWeb '{2}'
+    $Scope = 'Taxonomy'
+    $Right = 'FullControl'
+    $authRealm = Get-SPAuthenticationRealm -ServiceContext $targetWeb.Site
+    $AppIdentifier = $clientID + '@' + $authRealm
+    Register-SPAppPrincipal -NameIdentifier $AppIdentifier -Site $targetWeb -DisplayName $appTitle
+    $appPrincipal = Get-SPAppPrincipal -Site $targetWeb -NameIdentifier $AppIdentifier
+    Set-SPAppPrincipalPermission -Site $targetWeb -AppPrincipal $appPrincipal -Scope $Scope -Right $Right
    ```
 
    To update the authentication realm for Workflow Manager, run the following cmdlet:
 
    ```powershell
-   $workflowproxy = Get-SPWorkflowServiceApplicationProxy
-   $webapp = get-spwebapplication -identity "webapplication"
-   if ($webapp)
-   {
-   $webappurl = $webapp[0].url
-   $Site=get-spsite $webappurl
-   if ($site)
-   {
-   $workflowaddress = $workflowproxy.GetWorkflowServiceAddress($site)
-   $workflowscopename = $workflowproxy.GetWorkflowScopeName($site)
-   $TrimScope = '/'+$workflowscopename+'/'
-   $wfmaddress = $workflowaddress.TrimEnd($Trimscope)
-   }
-   }
-   $workflowproxy.delete()
-   Register-SPWorkflowService -SPSite $Site -WorkflowHostUri $wfmaddress -Force
+    $workflowproxy = Get-SPWorkflowServiceApplicationProxy
+    $webapp = get-spwebapplication
+    if ($webapp)
+    {
+    $webappurl = $webapp[0].url
+    $Site=get-spsite $webappurl
+    if ($site)
+    {
+    $workflowaddress = $workflowproxy.GetWorkflowServiceAddress($site)
+    $workflowscopename = $workflowproxy.GetWorkflowScopeName($site)
+    $TrimScope = '/'+$workflowscopename+'/'
+    $wfmaddress = $workflowaddress.TrimEnd($Trimscope)
+    }
+    }
+    $workflowproxy.delete()
+    Register-SPWorkflowService -SPSite $Site -WorkflowHostUri $wfmaddress -Force
    ```
 
    If you deployed cross-farm trust scenarios before you configured hybrid features, use the methods in the following TechNet topics to fix the scenarios manually:
