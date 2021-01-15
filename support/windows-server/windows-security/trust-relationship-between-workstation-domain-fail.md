@@ -1,5 +1,5 @@
 ---
-title: Unable to log on to a domain
+title: Unable to log on to a domain in Windows 7 or Windows Server 2008 R2
 description: Fixes an error that occurs when you try to log on to your domain in Windows 7 or Windows Server 2008 R2.
 ms.date: 10/23/2020
 author: Deland-Han

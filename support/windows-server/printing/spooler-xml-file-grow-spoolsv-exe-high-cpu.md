@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;960919
 
 ## Symptoms
 
-Windows Server 2008 print server may experience higher than normal CPU utilization in the spoolsv.exe process. The spooler.xml file located in %systemroot%\system32\spool\ folder will also grow in size and may exhaust all available disk space.
+Windows Server 2008 print server may experience higher than normal CPU utilization in the spoolsv.exe process. The spooler.xml file located in %systemroot%\\system32\\spool\\ folder will also grow in size and may exhaust all available disk space.
 
 ## Cause
 
