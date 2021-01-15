@@ -66,11 +66,12 @@ For User Support Service web.config file issue, follow the steps:
     <add name="ComplianceStatusConnectionString" providerName="System.Data.SqlClient" connectionString=" Data Source=[SQL server name];Initial Catalog=&quot;MBAM Compliance Status&quot;;Integrated Security=SSPI;"/>
     ```
 
-    Notes:
+    > [!NOTE]
+    >
+    > - Replace *[SQL server name]* with your SQL Server Name.
+    > - Replace *MBAM Compliance Status* with name of MBAM Compliance Status DB.
 
-    1. Replace *[SQL server name]* with your SQL Server Name.
-    2. Replace *MBAM Compliance Status* with name of MBAM Compliance Status DB.
-    For Example: If name of your SQL Server is MBAMSQL and name of MBAM Compliance DB is MBAM_Comp_DB, then the query should be:
+    For example, if the name of your SQL Server is MBAMSQL and the name of MBAM Compliance DB is MBAM_Comp_DB, then the query should be:
 
     ```xml
     <add name="ComplianceStatusConnectionString" providerName="System.Data.SqlClient" connectionString="*Data Source=[MBAMSQL];Initial Catalog=&quot;MBAM_ Comp_DB &quot;;Integrated Security=SSPI;*"/>
