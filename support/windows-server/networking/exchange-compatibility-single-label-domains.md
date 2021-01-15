@@ -57,7 +57,7 @@ In Microsoft Exchange 2010, there are three supported scenarios for deploying Ex
 
 For more information about Exchange 2010 and disjoint namespaces, see [Understanding Disjoint Namespace Scenarios](/previous-versions/exchange-server/exchange-140/bb676377(v=exchg.140)).
 
-#### Special Considerations
+#### Special considerations
 
 - In Exchange 2010, you may have to configure the DNS suffix search list to include multiple DNS suffixes if you have a disjoint namespace. For more information, see [Configure the DNS Suffix Search List for a Disjoint Namespace](/previous-versions/exchange-server/exchange-140/bb847901(v=exchg.140)).
 - `Msds-allowedDNSSuffixes` must be configured within the Active Directory environment for all namespaces that are used within the forest. For information about how to configure this, see [The computer's primary DNS suffix does not match the FQDN of the domain where it resides](/previous-versions/office/exchange-server-analyzer/aa998420(v=exchg.80)).

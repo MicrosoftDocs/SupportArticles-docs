@@ -40,15 +40,15 @@ C:\sc sdshow spooler
 
 An unaltered SD (security descriptor) for print spooler should look like this:
 
-D:(A;;CCLCSWLOCRRC;;;AU)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWRPWPDTLOCRRC;;;SY)
+> D:(A;;CCLCSWLOCRRC;;;AU)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWRPWPDTLOCRRC;;;SY)
 
 The important ACL in this case is the one for authenticated user (AU), since TS runs as a network service it relies on this ACL to be present in order to successfully open the spooler service. Adding the following ACL back fixed the problem.
 
-(A;;CCLCSWLOCRRC;;;AU)
+> (A;;CCLCSWLOCRRC;;;AU)
 
-The following is the method that can be implemented to add the missing ACL.  
+The following method can be implemented to add the missing ACL.  
 
-Run the following command:  
+Run the following command:
 
 ```console
 c:\>sc sdshow spooler >temp.txt  
@@ -58,11 +58,11 @@ You would see all the ACLs except for the "(A;;CCLCSWLOCRRC;;;AU)" ACL when you 
 
 The following is an example: (you may see a different output depending on the permissions set on the spooler)  
 
-D:(A;;CCLCSWLOCRRC;;;AU)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWRPWPDTLOCRRC;;;SY)
+> D:(A;;CCLCSWLOCRRC;;;AU)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWRPWPDTLOCRRC;;;SY)
 
 You could then copy the above output in a notepad as follows:
 
-sc sdset spooler D: (A;;CCLCSWLOCRRC;;;AU)(A;;CCLCSWLOCRRC;;;AU)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWRPWPDTLOCRRC;;;SY)  
+> sc sdset spooler D: (A;;CCLCSWLOCRRC;;;AU)(A;;CCLCSWLOCRRC;;;AU)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWRPWPDTLOCRRC;;;SY)  
 
 > [!NOTE]
 > Ensure that you're appending the "sc sdset spooler D: (A;;CCLCSWLOCRRC;;;AU)" section of above command to the output you see in your case.  

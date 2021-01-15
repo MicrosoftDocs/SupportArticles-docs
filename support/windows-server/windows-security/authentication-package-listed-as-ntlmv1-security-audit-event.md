@@ -53,7 +53,7 @@ There are two known scenarios that can lead to this result.
 
     If the domain controller is Windows Server 2008 or newer the server will show the authentication package listed correctly as NTLMv2. If the reporting of the authentication protocol version is important, we suggest using Windows Server 2008 or newer Domain Controllers.
 
-    Windows Server 2003 is in the extended support phase, the support is retired in July 2015. See [Search product lifecycle](https://support.microsoft.com/lifecycle/?c2=1163)
+    Windows Server 2003 is in the extended support phase, the support is retired in July 2015. See [Search product lifecycle](https://support.microsoft.com/lifecycle/?c2=1163).
 
 - Scenario B: Negotiation of security levels uses "legacy" methods that mean best effort
 

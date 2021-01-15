@@ -46,7 +46,7 @@ In this scenario, folder redirection fails to apply and the following event is l
 >
 > Keywords:
 >
-> User:          Contoso\raj
+> User:          Contoso\\raj
 >
 > Computer:      `TestPC.Contoso.com`
 >
