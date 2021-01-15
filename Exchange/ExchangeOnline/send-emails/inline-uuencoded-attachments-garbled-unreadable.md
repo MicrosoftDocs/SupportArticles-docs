@@ -48,8 +48,7 @@ This issue occurs because of "begin 664." It indicates that UUEncoding is being 
 
 To resolve this issue, encode the message by using multipart MIME.
 
-> [!NOTE]
-> The issue cannot be resolved on an Exchange server because Exchange displays the messages according to the specified MIME encoding type.
+**Note:** The issue cannot be resolved on an Exchange server because Exchange displays the messages according to the specified MIME encoding type.
 
 ## More information
 
