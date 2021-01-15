@@ -1,5 +1,5 @@
 ---
-title: '"Class not registered" error when updating PowerPivot data'
+title: (Class not registered) error when updating PowerPivot data
 ms.author: v-todmc
 author: mccoybot
 manager: dcscontentpm
@@ -67,7 +67,7 @@ For example, if the connection is configured to use SQLNCLI10 (SQL Native Client
 1. Identify the provider that is used for the failing connection. To do this, use the information in the error message or the steps that are documented in [Procedure 1](#procedure-1-configure-the-failing-connection-to-use-a-different-and-compatible-provider-that-exists-on-your-system) to identify the provider.
 2. Install that provider on your system by using the installation media or by downloading the provider from the Internet.
 
-## More Information
+## More information
 
 You may also see a similar error message when you use a 32-bit system to work with a workbook that was developed on a 64-bit system. And, there is no 32-bit provider that is available for one or more of the connections that are defined in your workbook, or the 32-bit provider is not installed on your system, or vice-versa.
 
