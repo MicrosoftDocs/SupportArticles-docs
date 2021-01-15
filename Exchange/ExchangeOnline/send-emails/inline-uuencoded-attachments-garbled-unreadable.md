@@ -38,7 +38,7 @@ In this scenario, the attachment is garbled or is unreadable. Additionally, the 
 
 **Note:** The following content is displayed in an affected message header.
 
-`MIME-Version: 1.0 Content-Transfer-Encoding: 7bit Content-Type: text/plain; charset="us-ascii"`
+> MIME-Version: 1.0 Content-Transfer-Encoding: 7bit Content-Type: text/plain; charset="us-ascii"
 
 ## Cause
 
