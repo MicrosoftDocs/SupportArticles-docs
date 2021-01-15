@@ -57,4 +57,4 @@ For more information about MIME, visit the following website:
 
 [General information about MIME](https://www.ietf.org/rfc/rfc1341.txt)
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
