@@ -1,5 +1,5 @@
 ---
-title: Availability and description of ADFS
+title: Availability and description of AD FS 2.0
 description: Describes Active Directory Federation Services 2.0.
 ms.date: 09/15/2020
 ms.author: delhan
@@ -14,7 +14,7 @@ ms.technology: ActiveDirectory
 ---
 # Availability and description of Active Directory Federation Services 2.0
 
-This article describes Availability and description of Active Directory Federation Services 2.0.
+This article provides availability and description of Active Directory Federation Services 2.0.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 974408
@@ -71,12 +71,12 @@ To install AD FS 2.0, the following software and hotfixes must be installed. If 
 - Windows Identity Foundation (WIF)
 - Software updates and hotfixes
 
-    Windows Server 2008 R2
+  - Windows Server 2008 R2
 
     The following hotfix must be installed on computers that are running Windows Server 2008 R2:  
       [981002](https://support.microsoft.com/help/981002) A hotfix rollup is available for Windows Communication Foundation in the .NET Framework 3.5 Service Pack 1 for Windows 7 and Windows Server 2008 R2  
 
-    Windows Server 2008
+  - Windows Server 2008
 
     The following software updates and hotfixes must be installed on computers that are running Windows Server 2008 SP2:
 
@@ -107,10 +107,10 @@ AD FS 2.0 is supported in the following languages:
 
 ## Download information
 
-The following files are available for download from the Microsoft Download Center:  
-||||
+The following files are available for download from the Microsoft Download Center:
+
+|Package name| Supported Windows operating system| Platform| Download file size|
 |---|---|---|---|
-| Package name| Supported Windows operating system| Platform| Download file size |
 |AdfsSetup.exe|Windows Server 2008 R2|x64|24.04 MB|
 |AdfsSetup.exe|Windows Server 2008 SP2|x64|42.64 MB|
 |AdfsSetup.exe|Windows Server 2008 SP2|x86|38.66 MB|
@@ -135,12 +135,12 @@ If you want to preserve the previous configuration data on the federation server
 Copy the AD FS service configuration file to a file server on the network before you upgrade the operating system. And, note the service account that the AD FS 2.0 Windows Service uses. To do this, follow these steps:
 
 1. Locate the following AD FS 2.0 installation folder:  
-    `%system drive%\Program Files\Active Directory Federation Service 2.0`
+    %system drive%\\Program Files\\Active Directory Federation Service 2.0
 
 2. Copy the following configuration file to a safe backup location:  
     Microsoft.IdentityServer.Servicehost.exe.config
 
-3. Click **Start**, click **Run**, type services.msc, and then click **OK**.
+3. Click **Start**, click **Run**, type *services.msc*, and then click **OK**.
 4. Right-click **AD FS 2.0 Windows Service**, and then click **Properties**.
 5. On the **Log On** tab, note the service account that is used for the AD FS 2.0 Windows Service.
 
@@ -155,17 +155,17 @@ Reinstall AD FS 2.0, set a registry setting to restore the previous configuratio
 2. Copy the following configuration file that you saved in step 2 of the [Before you upgrade Windows](#before-you-upgrade-windows) section:  
     Microsoft.IdentityServer.Servicehost.exe.config
 3. Locate the following AD FS 2.0 installation folder, and then copy the file that is mentioned in step 2 to this location:  
-    `%system drive%\Program Files\Active Directory Federation Service 2.0`
-4. Click **Start**, click **Run**, type regedit, and then click **OK**.
+    %system drive%\\Program Files\\Active Directory Federation Service 2.0
+4. Click **Start**, click **Run**, type *regedit*, and then click **OK**.
 5. Locate and then click the following registry subkey:  
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\adfssrv`
 
 6. On the **Edit** menu, point to **New**, and then click **String Value**.
-7. Type InitialConfigurationCompleted, and then press ENTER.
+7. Type *InitialConfigurationCompleted*, and then press ENTER.
 8. Right-click **InitialConfigurationCompleted**, and then click **Modify**.
-9. In the **Value data** box, type TRUE, and then click **OK**.
+9. In the **Value data** box, type *TRUE*, and then click **OK**.
 10. On the **File** menu, click **Exit** to exit Registry Editor.
-11. Click **Start**, click **Run**, type services.msc, and then click **OK**.
+11. Click **Start**, click **Run**, type *services.msc*, and then click **OK**.
 12. If you use Windows Internal Database as the AD FS 2.0 configuration database, follow these steps. Otherwise, bypass step 12, and go to step 13.
 
     1. Right-click **Windows Internal Database (MICROSOFT##SSEE)**, and then click **Properties**.
@@ -179,10 +179,9 @@ Reinstall AD FS 2.0, set a registry setting to restore the previous configuratio
 
 ## Privacy statement information
 
-AD FS 2.0 is covered by the following Windows Server privacy statements:
+AD FS 2.0 is covered by the following Windows Server privacy statement:
 
-- [Windows Vista Privacy Statement](https://go.microsoft.com/fwlink/?linkid=169559)
-- [Windows 7 Privacy Statement](https://go.microsoft.com/fwlink/?linkid=181904)
+[Windows 7 Privacy Statement](https://privacy.microsoft.com/windows-7-privacy-statement)
 
 ## Technical revisions
 
