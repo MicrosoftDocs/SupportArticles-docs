@@ -52,9 +52,9 @@ When the device is removed (either from the Office 365 Exchange Admin Center or 
 To prevent the device from connecting, set the `ActiveSyncAllowedDeviceIDs` and `ActiveSyncBlockedDeviceIDs` parameters to **$null** after you remove the device. For example, run the following cmdlet:
 
 ```powershell
-Set-CASMailboxjoe@contoso.com-ActiveSyncAllowedDeviceIDs $null
+Set-CASMailbox joe@contoso.com -ActiveSyncAllowedDeviceIDs $null
 ```
 
-When these parameters are set to$null, the device is quarantined when it tries to connect.
+When these parameters are set to $null, the device is quarantined when it tries to connect.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -2,6 +2,20 @@
 
 
 
+## Week of January 04, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/4/2021 | [Obtain the latest Excel Viewer](/office/troubleshoot/excel/get-latest-excel-viewer) | modified |
+| 1/4/2021 | [Another account is already signed in computer when signing in to Office 2013](/office/troubleshoot/office-suite-issues/another-account-already-signed-in) | modified |
+| 1/4/2021 | [How to merge multiple Word documents into one](/office/troubleshoot/word/merge-word-documents) | modified |
+| 1/4/2021 | [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state) | modified |
+| 1/4/2021 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
+| 1/5/2021 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
+| 1/7/2021 | [Formula returns "#VALUE!" error](/office/troubleshoot/excel/formula-returns-value-error) | modified |
+
+
 ## Week of December 14, 2020
 
 
@@ -17,39 +31,3 @@
 | 12/15/2020 | [How to recover a lost, unsaved, or corrupted Word document](/office/troubleshoot/word/recover-lost-unsaved-corrupted-document) | modified |
 | 12/16/2020 | [How to recover a lost, unsaved, or corrupted Word document](/office/troubleshoot/word/recover-lost-unsaved-corrupted-document) | modified |
 | 12/16/2020 | [How to merge multiple Word documents into one](/office/troubleshoot/word/merge-word-documents) | modified |
-
-
-## Week of November 30, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/30/2020 | [Convert degrees/minutes/seconds angles to or from decimal angles](/office/troubleshoot/excel/convert-degrees-minutes-seconds-angles) | modified |
-| 12/1/2020 | [How column widths are determined in Excel](/office/troubleshoot/excel/determine-column-widths) | modified |
-| 12/1/2020 | [You receive an error when accessing Project Web App](/office/troubleshoot/project/error-when-access-pwa) | modified |
-| 12/3/2020 | [No email notifications for responses to Group Forms](/office/troubleshoot/microsoft-forms/no-email-notifications-for-responses-to-group-forms) | modified |
-| 12/3/2020 | [Error (Do you want to download the converter) in Office](/office/troubleshoot/office-suite-issues/error-do-you-want-download-converter) | modified |
-
-
-## Week of November 23, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/23/2020 | [Can't open a file (.xslx, .docx, .pptx) in Excel 2010, Word 2010, or PowerPoint 2010](/office/troubleshoot/office-suite-issues/error-do-you-want-download-converter) | modified |
-| 11/23/2020 | [Office Online Server and Office Web Apps Server limitations and features with Information Rights Management (IRM)](/office/troubleshoot/administration/office-online-limitations-and-features-with-information-rights-management) | modified |
-| 11/24/2020 | [Can't open a file (.xslx, .docx, .pptx) in Excel 2010, Word 2010, or PowerPoint 2010](/office/troubleshoot/office-suite-issues/error-do-you-want-download-converter) | modified |
-| 11/24/2020 | [Error (Do you want to download the converter) in Office](/office/troubleshoot/office-suite-issues/error-do-you-want-download-converter) | modified |
-| 11/26/2020 | [Guests have no access to assigned Planner tasks](/office/troubleshoot/planner/guests-cannot-comment-assigned-tasks) | modified |
-
-
-## Week of November 16, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/17/2020 | [Access linked table to SQL Server database returns Deleted](/office/troubleshoot/access/access-linked-table-deleted) | modified |
-| 11/17/2020 | [Long numbers are displayed incorrectly in Excel](/office/troubleshoot/excel/long-numbers-incorrectly-in-excel) | added |
-| 11/17/2020 | [How to merge multiple Word documents into one](/office/troubleshoot/word/merge-word-documents) | added |
-| 11/17/2020 | [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state) | modified |
-| 11/19/2020 | [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state) | modified |

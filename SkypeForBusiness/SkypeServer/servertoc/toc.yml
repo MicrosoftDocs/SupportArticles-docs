@@ -55,7 +55,7 @@
       href: ../server-configuration/event-32263-0xc3e93c2f-front-end.md
     - name: Event IDs 32402, 61045 logged in Front End
       href: ../server-configuration/event-32402-61045-front-end.md
-    - name: How to use Configuration Information
+    - name: How to use Configuration Information
       href: ../server-configuration/how-to-use-configuration-information.md
     - name: Insufficient access rights when move user command
       href: ../server-configuration/issue-attempt-move-or-enable-user-command.md
@@ -111,7 +111,7 @@
       href: ../server-im-presence/emoticons-and-emojis-converted-to-text.md
     - name: Enabling presence privacy mode update presence status
       href: ../server-im-presence/presence-privacy-mode-update-presence-status.md
-    - name: Lync conversation window doesn't contain IM
+    - name: Lync conversation window doesn't contain IM
       href: ../server-im-presence/blank-conversation-window.md
     - name: Presence not show in Outlook
       href: ../server-im-presence/presence-not-show-outlook.md

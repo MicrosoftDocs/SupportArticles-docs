@@ -361,6 +361,8 @@
           href: ../excel/inaccurate-chart-trendline-formula.md
         - name: CHIINV statistical functions
           href: ../excel/statistical-functions-chiinv.md
+        - name: '"Class not registered" error when updating PowerPivot data'
+          href: ../excel/class-not-registered-error-pivotpoint.md
         - name: Clean up workbooks with less memory
           href: ../excel/clean-workbook-less-memory.md
         - name: Columns and rows are labeled numerically
@@ -951,7 +953,7 @@
           href: ../settings/office-display-issues.md
         - name: Error in Office when file is blocked
           href: ../settings/file-blocked-in-office.md
-        - name: How to use Problem Steps Recorder
+        - name: How to use Problem Steps Recorder
           href: ../settings/how-to-use-problem-steps-recorder.md
         - name: Task panes in Office
           href: ../settings/office-program-task-panes.md

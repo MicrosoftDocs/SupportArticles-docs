@@ -12,11 +12,13 @@ ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: v-six
 appliesto:
+- Excel for Office 365
+- Microsoft Excel 2016
+- Microsoft Excel 2013
+- Microsoft Excel 2010
 - Microsoft Office Excel 2007
 - Microsoft Excel 2002 Standard Edition
 - Microsoft Excel 2000 Standard Edition
-- Microsoft Excel 2010
-- Microsoft Excel 2013
 ---
 
 # SUMIF, COUNTIF, and COUNTBLANK functions return "#VALUE!" Error
