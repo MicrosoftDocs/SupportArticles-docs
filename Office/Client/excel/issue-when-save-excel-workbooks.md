@@ -124,10 +124,10 @@ For more information about this error message, see the following articles:
 - [Error while saving a file in Excel](https://docs.microsoft.com/office/troubleshoot/excel/error-saving-file)
   
 ## [Antivirus software](#tab/antivirus)
- 
-- When antivirus software is installed or is running, you may receive an error message when you try to save an existing workbook. You do not receive an error message if you try to save a new file. You may receive an error message because some antivirus programs quickly scan any new files that appear on a computer. This scan can sometimes disrupt the Excel "save" process. This interruption may stop Excel from saving the file correctly.
 
-- To check whether your antivirus software conflicts with Excel, temporarily deactivate the antivirus software, and then try to save the Excel file. 
+When antivirus software is installed or is running, you may receive an error message when you try to save an existing workbook, but not when you try to save a new file. You may receive the error message because some antivirus programs quickly scan any new files that appear on a computer. This scan can sometimes interrupt the Excel "save" process and may stop Excel from saving the file correctly.
+
+To check whether your antivirus software conflicts with Excel, temporarily deactivate the antivirus software, and then try to save the Excel file. 
 
 ## [File sharing](#tab/file-share-conflict)
  
