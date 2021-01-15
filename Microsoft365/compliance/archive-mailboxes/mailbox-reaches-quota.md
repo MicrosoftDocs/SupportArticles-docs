@@ -44,11 +44,9 @@ If your organization didn't assign a specific retention policy, you can configur
 - Outlook on the web  
   [Retention and archive policies in Outlook Web App](https://support.microsoft.com/office/retention-and-archive-policies-in-outlook-web-app-465372e4-e16b-47db-bee0-aba44799085e)
 
-  **Note:** If you use the retention and archive policies, the policies will move items to the Archive mailbox based on the retention period configured.
+**Note:** If your organization assigned a specific retention policy, you must contact your administrator to configure policies. Also, if you use the retention and archive policies, the policies will move items to the Archive mailbox (not to the Archive folder) based on the retention period configured on the policy.
 
-**Note:** If your organization assigned a specific retention policy, you must contact your administrator to configure policies.
-
-Administrators can also configure policies for users to automatically move items from a mailbox to its archive. To learn more, see [Set up an archive and deletion policy for mailboxes in your organization](https://docs.microsoft.com/microsoft-365/compliance/set-up-an-archive-and-deletion-policy-for-mailboxes).
+Administrators can also configure policies for users to automatically move items from a mailbox to its archive. To learn more, see [Set up an archive and deletion policy for mailboxes in your organization](/microsoft-365/compliance/set-up-an-archive-and-deletion-policy-for-mailboxes).
 
 ## More information
 
