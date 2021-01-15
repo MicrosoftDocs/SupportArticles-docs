@@ -1,9 +1,8 @@
 ---
 title: MSDB database grows on SQL Server
 description: This article provides workarounds for the problem where MSDB database grows on SQL Server with supplementary character collations.
-author: ramakoni1 
 ms.date: 12/28/2020
-ms.author: oliviera, ramakoni
+ms.author: oliviera
 ms.reviewer: oliviera, sqlblt
 ---
 # MSDB database grows on SQL Server with supplementary character collations
