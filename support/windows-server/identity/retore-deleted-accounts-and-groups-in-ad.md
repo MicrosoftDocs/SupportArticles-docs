@@ -968,6 +968,4 @@ The third-party products that this article discusses are manufactured by compani
 
 ## References
 
-For more information, see [Description of the standard terminology that is used to describe Microsoft software updates](https://support.microsoft.com/help/824684).
-
 For more information on how to use the AD Recycle Bin feature included in Windows Server 2008 R2, see [Active Directory Recycle Bin Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd392261(v=ws.10)).

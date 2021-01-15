@@ -65,7 +65,3 @@ To change the SSMS connection string, follow these steps:
 3. On the **Connection Properties** tab, enter *master* in the **Connect to database** field, and then click **Connect**.
 
     ![Step 3: Connection Properties](./media/object-explorer-intermittently-crashes/connection-properties.png)
-
-## References
-
-Learn about the [terminology](https://support.microsoft.com/help/824684) that Microsoft uses to describe software updates.
