@@ -42,7 +42,7 @@ In this scenario, the attachment is garbled or is unreadable. Additionally, the 
 
 ## Cause
 
-This issue occurs because of "begin 664." This indicates that UUEncoding is being used. When an email message contains an inline UUEncoded attachment, multipart MIME instead of MIME should be used. Otherwise, Microsoft Exchange translates the UUEncoded data as a part of the message body that has a MIME designator.
+This issue occurs because of "begin 664." It indicates that UUEncoding is being used. When an email message contains an inline UUEncoded attachment, multipart MIME instead of MIME should be used. Otherwise, Microsoft Exchange translates the UUEncoded data as a part of the message body that has a MIME designator.
 
 ## Resolution
 
@@ -57,4 +57,4 @@ For more information about MIME, visit the following website:
 
 [General information about MIME](https://www.ietf.org/rfc/rfc1341.txt)
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
