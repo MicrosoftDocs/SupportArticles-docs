@@ -465,6 +465,8 @@
       href: ../public-folders/mailbox-not-found-local-forest-public-folder.md
     - name: Troubleshoot public folder permission issues
       href: ../public-folders/public-folder-permission-issues.md
+    - name: Unable to expand public folder trees
+      href: ../public-folders/unable-expand-public-folder-tree.md
   - name: Send Emails
     items:
     - name: Can't receive Out of Office notifications
@@ -477,6 +479,8 @@
       href: ../send-emails/ews-not-support-access-teams-data.md
     - name: How to set IIS SMTP for outgoing TLS authentication
       href: ../send-emails/how-to-set-iis-smtp-for-outgoing-tls-auth.md
+    - name: Inline UUEncoded attachments are garbled or unreadable
+      href: ../send-emails/inline-uuencoded-attachments-garbled-unreadable.md
     - name: Issues with OOF replies
       href: ../send-emails/understand-troubleshoot-oof-replies.md
   - name: User and Shared Mailboxes
