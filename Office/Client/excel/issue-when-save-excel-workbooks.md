@@ -31,17 +31,17 @@ If this process is interrupted, the workbook might not save correctly. You might
 
 The following information can help you identify possible causes of this problem, and proposes solutions to help you solve the problem.
 
-## Possible causes that documents do not save
+## Possible reasons why documents do not save
 
 Select the tab that applies to you, or go to the "[Quick resolution](#quick-resolution)" section.
 
 ## [3rd-party add-ins](#tab/third-party)
  
-If you cannot save a workbook when you run Excel in Windows safe mode, the problem may be caused by a third-party add-in or by a file that is in one of the Excel startup locations. By default, startup files are loaded when you start Excel.
+If you cannot save a workbook when you run Microsoft Excel in Windows Safe mode, the problem may be caused by a third-party add-in or by a file from one of the Excel startup locations. By default, startup files are loaded when you start Excel.
 
 Some add-ins from third-party software vendors work together with existing Excel features by design, and some are intended to enable a seamless transition when you use a third-party product. Typically, these third-party add-ins do not interfere with Excel functionality. However, some functions, such as saving a file can be affected.
 
-To test for and eliminate the possibility that a third-party Excel add-in or file is causing a "save" problem in Excel, try to save the file in safe mode. To do this, follow these steps: 
+To test for and eliminate the possibility that a third-party Excel add-in or file is causing a "save" problem in Excel, try to save the file in Safe mode. To do this, follow these steps: 
 
 1. Exit Excel.    
 2. Select **Start**, and point to **Programs**.    
