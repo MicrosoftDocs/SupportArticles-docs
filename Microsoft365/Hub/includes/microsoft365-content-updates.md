@@ -2,6 +2,13 @@
 
 
 
+## Week of January 11, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+
+
 ## Week of January 04, 2021
 
 
