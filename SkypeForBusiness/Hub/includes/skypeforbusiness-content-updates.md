@@ -2,6 +2,14 @@
 
 
 
+## Week of January 11, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/12/2021 | [Voicemail messages are not delivered in Teams or Skype for Business client](/skypeforbusiness/troubleshoot/hybrid-phone-system/voicemails-not-delivered) | modified |
+
+
 ## Week of January 04, 2021
 
 
