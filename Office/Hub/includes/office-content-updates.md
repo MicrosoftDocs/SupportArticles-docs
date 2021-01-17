@@ -7,6 +7,7 @@
 
 | Published On |Topic title | Change |
 |------|------------|--------|
+| 1/12/2021 | ["Class not registered" error when updating PowerPivot data](/office/troubleshoot/excel/class-not-registered-error-pivotpoint) | added |
 | 1/15/2021 | [(Class not registered) error when updating PowerPivot data](/office/troubleshoot/excel/class-not-registered-error-pivotpoint) | modified |
 | 1/15/2021 | [How to troubleshoot errors when you save Excel workbooks](/office/troubleshoot/excel/issue-when-save-excel-workbooks) | modified |
 | 1/15/2021 | You receive an error message when you try to save a file in Excel | removed |
