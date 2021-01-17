@@ -2,6 +2,15 @@
 
 
 
+## Week of January 11, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/13/2021 | [HTTPS linked images in HTML emails display the red X](/outlook/troubleshoot/message-body/https-linked-images-in-html-emails-show-red-x) | modified |
+| 1/14/2021 | [HTTPS linked images in HTML emails display the red X](/outlook/troubleshoot/message-body/https-linked-images-in-html-emails-show-red-x) | modified |
+
+
 ## Week of January 04, 2021
 
 
