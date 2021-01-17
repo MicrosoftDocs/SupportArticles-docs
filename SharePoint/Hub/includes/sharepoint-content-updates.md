@@ -2,6 +2,14 @@
 
 
 
+## Week of January 11, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/13/2021 | [Provider-hosted add-ins stop working and HTTP 401 error after you configure SharePoint farm hybrid features](/sharepoint/troubleshoot/administration/provider-hosted-add-ins-stop-working-and-http-401-error-after-configure-farm-hybrid-features) | modified |
+
+
 ## Week of January 04, 2021
 
 
