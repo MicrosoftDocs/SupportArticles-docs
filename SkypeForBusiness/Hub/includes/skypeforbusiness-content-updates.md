@@ -10,13 +10,6 @@
 | 1/12/2021 | [Voicemail messages are not delivered in Teams or Skype for Business client](/skypeforbusiness/troubleshoot/hybrid-phone-system/voicemails-not-delivered) | modified |
 
 
-## Week of January 04, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-
-
 ## Week of December 14, 2020
 
 
@@ -38,3 +31,10 @@
 | 12/15/2020 | [New features in the firmware update for Polycom VVX IP phones](/skypeforbusiness/troubleshoot/server-phone-system/new-features-in-firmware-update) | modified |
 | 12/15/2020 | [You can't sign in with this version of Lync](/skypeforbusiness/troubleshoot/server-sign-in/you-cant-sign-in-with-this-version-of-lync) | modified |
 | 12/17/2020 | [Skype for Business plays a dial tone during a Teams call](/skypeforbusiness/troubleshoot/server-conferencing/sfb-play-dial-tone-teams-call) | modified |
+
+
+## Week of January 04, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
