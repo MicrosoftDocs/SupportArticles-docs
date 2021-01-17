@@ -7,6 +7,9 @@
 
 | Published On |Topic title | Change |
 |------|------------|--------|
+| 1/14/2021 | [Can't expand public folders with error "Your server administrator has limited the number of items you can open simultaneously"](/exchange/troubleshoot/public-folders/unable-expand-public-folder-tree) | added |
+| 1/14/2021 | [Inline UUEncoded attachments from a UNIX-based application are garbled or unreadable](/exchange/troubleshoot/send-emails/inline-uuencoded-attachments-garbled-unreadable) | added |
+| 1/15/2021 | [Inline UUEncoded attachments from a UNIX-based application are garbled or unreadable](/exchange/troubleshoot/send-emails/inline-uuencoded-attachments-garbled-unreadable) | modified |
 
 
 ## Week of January 04, 2021
