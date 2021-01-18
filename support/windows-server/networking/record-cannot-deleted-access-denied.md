@@ -46,6 +46,8 @@ To do so, use one of the following methods to assign Full Control to DnsAdmins s
     dsacls "\\servername\CN=MicrosoftDNS, CN=System, DC=domain, dc=com" /G DNSADMINS:GA / I:T
     ```
 
+For more information about the Dsacls tool, see [Dsacls](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc771151(v=ws.11)).
+
 ### Method 2: Use ADSI Editor to assign Full Control permissions to the DNSAdmins group
 
 1. Log on to your computer as administrator.
