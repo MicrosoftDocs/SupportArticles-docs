@@ -23,11 +23,12 @@ _Original KB number:_ &nbsp;3044882
 ## Symptoms
 
 Consider the following scenario:
+
 - You have a custom networking application installed on your server.
 - The application captures lots of traffic on the wire.
 - The server may be using a DHCP-assigned IP address.
 
-In this scenario, a large volume of disk I/O may be generated when writes are made to the C:\Windows\System32\wfp\wfpdiag.etl log.
+In this scenario, a large volume of disk I/O may be generated when writes are made to the C:\\Windows\\System32\\wfp\\wfpdiag.etl log.
 
 ## Cause
 
@@ -39,11 +40,12 @@ This filter is built in to the Windows Firewall and Advanced Security (WFAS). It
 
 ## Workaround
 
-To work around this issue, disable WFP logging in the registry: 
+To work around this issue, disable WFP logging in the registry:
+
 1. Start Registry Editor.
 2. Locate the following registry subkey:
 3. Right-click the subkey, click **New**, and then create a DWORD (32-bit) registry value.
-4. Type CollectNetEvents as the registry value name.
+4. Type *CollectNetEvents* as the registry value name.
 5. Leave the value data as 0.
 6. Restart the server.
 
@@ -52,4 +54,4 @@ To work around this issue, disable WFP logging in the registry:
 
 ## More information
 
-For more information, see [Stealth mode in Windows Firewall with Advanced Security](https://technet.microsoft.com/library/dd448557%28ws.10%29.aspx).
+For more information, see [Stealth mode in Windows Firewall with Advanced Security](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd448557(v=ws.10)).

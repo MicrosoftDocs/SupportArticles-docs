@@ -272,6 +272,8 @@
           href: os-deployment-task-sequence-not-continue.md
         - name: The debug deployment isn't displayed
           href: debug-deployment-not-displayed.md
+        - name: Troubleshoot the Install Application task sequence step
+          href: troubleshoot-install-application-step.md  
     - name: Versions required for Windows deployment
       href: required-versions-windows-deployment.md
 - name: Setup, migration, backup, and recovery

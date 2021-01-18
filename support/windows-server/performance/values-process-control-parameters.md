@@ -1,5 +1,5 @@
 ---
-title: Values for Process Control parameters
+title: Registry values for Process Control parameters
 description: Describes the parameters for the Process Control service components.
 ms.date: 09/14/2020
 author: Deland-Han 
@@ -32,9 +32,9 @@ The following components are described in this article:
 - Process Execution Rules
 - Process Group Execution Rules
 
-## Default Process Execution Rule String
+## Default Process Execution Rule string
 
-`DfltMgmt:REG_SZ:{F0x0,A0x0,P0x8,L0x0,H0x0,S0x0,T0x0,U0x0,C0x0,M0x0,N0x0}`
+DfltMgmt:REG_SZ:{F0x0,A0x0,P0x8,L0x0,H0x0,S0x0,T0x0,U0x0,C0x0,M0x0,N0x0}
 
 Where:
 
@@ -57,9 +57,9 @@ Where:
 - H0x0 is the default setting for a process execution rule's maximum working set. Values are in decimal kilobytes that are converted to hexadecimal. For example, you might set the GUI interface to 10,000 which in decimal would be 10,240,000. The corresponding registry entry value would be L0x9c4000.
 - S0x0, T0x0, U0x0, C0x0, M0x0, N0x0 are currently unused in process execution rule descriptions.
 
-## Default Process Group Execution Rule String
+## Default Process Group Execution Rule string
 
-`DfltMgmt:REG_SZ:{F0x0,A0x0,P0x8,L0x0,H0x0,S0x5,T0x0,U0x0,C0x0,M0x0,N0x0}`
+DfltMgmt:REG_SZ:{F0x0,A0x0,P0x8,L0x0,H0x0,S0x5,T0x0,U0x0,C0x0,M0x0,N0x0}
 
 Where:
 
@@ -68,44 +68,44 @@ Where:
 - S0x5 is the default scheduling class value. The available values are from 0 to 9. The valid values are S0x0, S0x1, S0x2, ....... S0x9.
 - T0x0 is the default value for "Apply per process user time limit:". This value is specified in the GUI in the format hh:mm:ss. The registry values are in a hexadecimal format that is computed by the operating system. To obtain the hexadecimal conversions, you must create a code-based method. The following code is example code that, when compiled, will perform the conversion and output the required hexadecimal value when it is given input in the format 0:00:00.
 
-Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements.
+    Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements.
 
-[https://partner.microsoft.com/global/30000104](https://partner.microsoft.com/global/30000104)
+    For more information about the support options that are available and about how to contact Microsoft, visit the following Microsoft Web site:
 
-For more information about the support options that are available and about how to contact Microsoft, visit the following Microsoft Web site:
+    [Global Customer Service phone numbers](https://support.microsoft.com/help/4051701)  
 
-[Global Customer Service phone numbers](https://support.microsoft.com/help/4051701)  
+    Output:
 
-```csharp
-Output:
-C:\Projects\timecv\Release>timecv
-Enter time in the following format (hh:mm:ss:) ->2:30:00
+    ```console
+    C:\Projects\timecv\Release>timecv
+    Enter time in the following format (hh:mm:ss:) ->2:30:00
+    
+    Registry value should be 0x14f46b0400
+    ```
 
-Registry value should be 0x14f46b0400
+    Source:
 
-Source:
-
-#include "stdio.h"
-
-int main(int argc, char* argv[])
-{
-__int64i64=0;
-intiHour=0,iMinute=0,iSecond=0;
-
-printf ("Enter time in the following format (hh:mm:ss:) ->");
-scanf ("%i:%i:%i", &iHour,&iMinute,&iSecond);
-
-iHour *= 3600;
-iMinute *= 60;
-
-i64=(iHour+iMinute+iSecond);
-i64*=10000000;
-
-printf ("\nRegistry value should be 0x%I64x\n", i64);
-return 0;
-
-}
-```
+    ```c
+    #include "stdio.h"
+    
+    int main(int argc, char* argv[])
+    {
+        __int64i64=0;
+        intiHour=0,iMinute=0,iSecond=0;
+        
+        printf ("Enter time in the following format (hh:mm:ss:) ->");
+        scanf ("%i:%i:%i", &iHour,&iMinute,&iSecond);
+        
+        iHour *= 3600;
+        iMinute *= 60;
+        
+        i64=(iHour+iMinute+iSecond);
+        i64*=10000000;
+        
+        printf ("\nRegistry value should be 0x%I64x\n", i64);
+        return 0;
+    }
+    ```
 
 - U0x0 is the default value for "Apply process group user time limit:". This value is specified and computed in the same fashion as those in the preceding T0x0 description.
 - C0x0 is the default value for "Apply process count limit". These values are created by simple conversion of the decimal input values converted to hexadecimal. The maximum number in decimal is over one billion processes.

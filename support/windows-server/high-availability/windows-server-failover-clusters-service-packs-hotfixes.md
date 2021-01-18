@@ -1,6 +1,6 @@
 ---
 title: Update Windows Server failover clusters
-description: Describes how to update failover clusters in Windows Server 2008 R2, Windows Server 2008, and Windows Server 2003.
+description: Describes how to update failover clusters in Windows Server.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,41 +15,24 @@ ms.technology: HighAvailability
 ---
 # How to update Windows Server failover clusters
 
-This article describes how to update failover clusters in Windows Server 2008 R2, Windows Server 2008, and Windows Server 2003.
+This article describes how to update failover clusters in Windows Server.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 174799
 
 ## Summary
 
-This article describes how to install service packs or hotfixes on a Windows Server failover cluster. Applying a service pack or hotfix to a server cluster is the same as applying a service pack or hotfix to Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2 (although Windows Server 2012 requires a different process). However, there are special conditions that you should consider to make sure that clients have a high level of access while you perform the installation.
+This article describes how to install service packs or hotfixes on a Windows Server failover cluster. Applying a service pack or hotfix to a server cluster is the same as applying a service pack or hotfix to Windows Server. However, there are special conditions that you should consider to make sure that clients have a high level of access while you perform the installation.
 
 ## More information
 
 To install Windows service packs or hotfixes on a Windows Server failover cluster, follow these steps, depending on the version of Windows Server that you're running. Always install the same service packs or hotfixes on each cluster node. Follow these steps unless you're directed otherwise by the instructions for a particular service pack version.
 
-### Windows Server 2012 or newer
+### Windows Server 2012 - 2019
 
-Installing service packs and hotfixes on Windows Server 2012 or newer requires a different process. For more information, see [Draining Nodes for Planned Maintenance with Windows Server](https://techcommunity.microsoft.com/t5/failover-clustering/draining-nodes-for-planned-maintenance-with-windows-server-2012/ba-p/371713).
+Installing service packs and hotfixes on Windows Server 2012 - 2019 requires a different process. For more information, see [Draining Nodes for Planned Maintenance with Windows Server](https://techcommunity.microsoft.com/t5/failover-clustering/draining-nodes-for-planned-maintenance-with-windows-server-2012/ba-p/371713).
 
-### Windows Server 2003
-
-1. Check the System log for errors, and make sure that the system is operating correctly.
-2. Make sure that you have a current backup and updated emergency repair disk for the system. If there are corrupted files, a power outage, or an incompatibility, you may have to revert to the state of the system before you tried to install the service packs or hotfixes.
-3. Start Cluster Administrator, right-click **Node A**, and then click **Pause Node**.
-4. Expand **Node A**, and then click **Active Groups**.
-5. In the navigation pane, right-click the groups, and then click **Move Group** to move all groups to Node B.
-6. Install the service pack on Node A, and then restart the computer.
-7. Check the System log for errors. If you find any errors, you should troubleshoot them before you continue this process.
-8. In Cluster Administrator, right-click **Node A**, and then click **Resume Node**.
-9. In Cluster Administrator, right-click **Node B**, and then click **Pause Node**.
-10. Right-click **Node B**, and then click **Move Group** for all groups that are owned by Node B to move all groups to Node A.
-11. Install the service pack on Node B, and then restart the computer.
-12. Check the System log for errors. If you find any errors, you should troubleshoot them before you continue this process.
-13. In Cluster Administrator, right-click **Node B**, and then click **Resume Node**.
-14. Right-click each group, click **Move Group**, and then move the groups back to their preferred owner.
-
-### Install service packs or hotfixes by using Failover Cluster Manager in Windows Server 2008 and Windows Server 2008 R2
+### Install service packs or hotfixes by using Failover Cluster Manager in Windows Server 2008 R2
 
 Membership in the local Administrators group on each clustered server or an equivalent is required to complete this procedure.
 
@@ -67,7 +50,6 @@ Membership in the local Administrators group on each clustered server or an equi
 9. In the Failover Cluster Manager snap-in, right-click **Node A**, and then click **Resume**.
 10. In the Failover Cluster Manager snap-in, right-click **Node B**, and then click **Pause**.
 11. Under **Actions** (on the right side), click **Move this service or application to another node**, and then select the node.
-
     > [!NOTE]
     > As the service or application moves, its status is displayed in the details pane (the center pane).
 12. Follow steps 10 and 11 for each service and application that is configured on the cluster.
@@ -90,7 +72,6 @@ Membership in the local Administrators group on each clustered server or an equi
 
     > [!TIP]
     > You can also use following command to move all groups of the node to the preferred owner of the best possible node: `Get-ClusterNode NodeA | Get-ClusterGroup | Move-Cluster Group`.
-
 8. Install the service pack on Node A, and then restart the computer.
 9. Check the System log for errors. If you find any errors, troubleshoot them before you continue this process.
 10. Resume activity on node A that was suspended in step 5 by running the following command: `Resume-ClusterNode nodeA`.
@@ -100,7 +81,6 @@ Membership in the local Administrators group on each clustered server or an equi
     > [!NOTE]
     > You can again use following command to move all groups of the node to the preferred owner of the best possible node:  
     `Get-ClusterNode NodeB | Get-ClusterGroup | Move-Cluster Group`.
-
 13. Install the service pack on Node B, and then restart the computer.
 14. Check the System log for errors. If you find any errors, troubleshoot them before you continue this process.
 15. Resume activity on node B that was suspended in step 10 by running the following command: `Resume-ClusterNode nodeB`.
@@ -109,5 +89,4 @@ Membership in the local Administrators group on each clustered server or an equi
 For more information, go to the following Microsoft websites:
 
 - [Failover Cluster Cmdlets in Windows PowerShell](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461009(v=technet.10))
-
 - [Overview of Server Manager Commands](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732757(v=ws.11))
