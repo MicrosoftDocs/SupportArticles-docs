@@ -1,6 +1,6 @@
 ---
 title: Enable logging in WDS
-description: Explains how to modify the registry to enable tracing and logging in Windows Deployment Services. You can use the information to help troubleshoot issues that you may experience in Windows Deployment Services.
+description: Explains how to modify the registry to enable tracing and logging in WDS. You can use the information to help troubleshoot issues that you may experience in WDS.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -25,18 +25,18 @@ _Original KB number:_ &nbsp; 936625
 
 ## Introduction
 
-This article discusses how to enable logging in WDS in Windows. Additionally, this article describes how to gather data in Windows Deployment Services.
+This article discusses how to enable logging in WDS in Windows. Additionally, this article describes how to gather data in WDS.
 
-You can use this information to help troubleshoot issues that you may experience in Windows Deployment Services.
+You can use this information to help troubleshoot issues that you may experience in WDS.
 
 ## Overview
 
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
 
-Each Windows Deployment Services component has a mechanism that you can enable for logging and for tracing. You can then analyze the results for troubleshooting. Use the information in the following sections to enable logging and tracing for Windows Deployment Services components.
+Each WDS component has a mechanism that you can enable for logging and for tracing. You can then analyze the results for troubleshooting. Use the information in the following sections to enable logging and tracing for WDS components.
 
-## General Windows Deployment Services server health
+## General WDS server health
 
 Type the following command to generate general server health information:
 
@@ -46,15 +46,15 @@ WDSUTIL /get-server /show:all /detailed
 
 This command causes general server health information to be logged in the Application log and in the System log.
 
-## Windows Deployment Services server component
+## WDS server component
 
-Type the following command to generate health information about the Windows Deployment Services server component:
+Type the following command to generate health information about the WDS server component:
 
 ```console
 WDSUTIL /get-server /show:all /detailed
 ```
 
-This command causes Windows Deployment Services information to be logged in the Application log and in the System log.
+This command causes WDS information to be logged in the Application log and in the System log.
 
 ## Obtain trace logs for Windows
 
@@ -66,15 +66,15 @@ To obtain trace information for Windows, do the following:
 
 Then, configure the components that you want to be logged by setting one or more of the following registry keys to a 0 value.
 
-- Windows Deployment Services Multicasting
+- WDS Multicasting
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\WDSServer\Providers\WDSMC\TraceDisabled`
 
-- Windows Deployment Services PXE
+- WDS PXE
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\WDSServer\Providers\WDSPXE\TraceDisabled`
 
-- Windows Deployment Services TFTP
+- WDS TFTP
 
      `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\WDSServer\Providers\WDSTFTP\TraceDisabled`
 
@@ -92,9 +92,9 @@ You can set these registry keys to the following values to control what is inclu
 > [!NOTE]
 > A tracing process may affect performance. Therefore, we recommend that you disable the tracing functionality when you do not have to generate a log.
 
-After you set this registry entry, trace information for the Windows Deployment Services server component is logged in the following file:%windir%\\Tracing\\wdsserver.log
+After you set this registry entry, trace information for the WDS server component is logged in the following file:%windir%\\Tracing\\wdsserver.log
 
-## Windows Deployment Services management components
+## WDS management components
 
 Type the following command to generate management component health information:
 
@@ -102,11 +102,11 @@ Type the following command to generate management component health information:
 WDSUTIL /get-server /show:all /detailed
 ```
 
-This command causes Windows Deployment Services component health information to be logged in the Application log and in the System log.
+This command causes WDS component health information to be logged in the Application log and in the System log.
 
 ## Enable tracing
 
-To obtain trace information, you must enable tracing in the Windows Deployment Services management component and in the Windows Deployment Services Microsoft Management Console (MMC) component. To do this, set the following registry entries:
+To obtain trace information, you must enable tracing in the WDS management component and in the WDS Microsoft Management Console (MMC) component. To do this, set the following registry entries:
 
 ### For the management component
 
@@ -122,18 +122,18 @@ To obtain trace information, you must enable tracing in the Windows Deployment S
 - Value type: REG_DWORD
 - Value data: 1
 
-After you set these registry entries, trace information for the Windows Deployment Services management component is logged in the %windir%\\Tracing\\wdsmgmt.log file.
+After you set these registry entries, trace information for the WDS management component is logged in the %windir%\\Tracing\\wdsmgmt.log file.
 
-Additionally, trace information for the Windows Deployment Services MMC component is logged in the %windir%\\Tracing\\wdsmmc.log file.
+Additionally, trace information for the WDS MMC component is logged in the %windir%\\Tracing\\wdsmmc.log file.
 
 > [!NOTE]
-> Although the Windows Deployment Services MMC component and the WDSUTIL component share the same API layer, MMC sometimes adds processing and functionality. If an error occurs, it is frequently worthwhile to use WDSUTIL to try to reproduce the failure. WDSUTIL may help you determine whether the error is local to MMC or whether the error is a general management API failure. Frequently, the WDSUTIL component provides more detailed error output when tracing is not enabled. Where applicable, use the following options to obtain extra information:
+> Although the WDS MMC component and the WDSUTIL component share the same API layer, MMC sometimes adds processing and functionality. If an error occurs, it is frequently worthwhile to use WDSUTIL to try to reproduce the failure. WDSUTIL may help you determine whether the error is local to MMC or whether the error is a general management API failure. Frequently, the WDSUTIL component provides more detailed error output when tracing is not enabled. Where applicable, use the following options to obtain extra information:
 >
 > - /detailed
 > - /verbose
 > - /progress
 
-## Windows Deployment Services legacy components
+## WDS legacy components
 
 If you perform legacy management functions, set the following registry entry to enable tracing in the RISetup component:
 
@@ -160,7 +160,7 @@ To obtain the trace log in the WDSCapture operation, follow these steps:
 > [!NOTE]
 > Don't close the original instance of WDSCapture. If you close the original instance of WDSCapture, Windows PE restarts. Instead, press ALT+TAB to switch between the instances of WDSCapture.The following trace log file is generated: X:\\Windows\\Tracing\\WDSCapture.log.
 
-## Windows Deployment Services client components
+## WDS client components
 
 To turn on the client logging functionality, run the following command on the WDS server:
 
