@@ -37,8 +37,6 @@ For additional information about command-line switches used by Windows Installer
 
  For additional information about the standard terminology that Microsoft is adopting to describe software updates, click the following article number to view the article in the Microsoft Knowledge Base:
 
-[824684](https://support.microsoft.com/help/824684) Description of the standard terminology that is used to describe Microsoft software updates  
-
 ## More information
 
 Microsoft is adopting the following command-line switches for software update packages:

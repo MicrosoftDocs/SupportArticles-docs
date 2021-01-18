@@ -1,6 +1,6 @@
 ---
 title: Blank desktop after you log on
-description: Discusses an issue where you're presented with a blank screen with no Start Menu, shortcuts, or icons after logging on to a Windows Vista or Windows Server 2008 computer.
+description: Discusses an issue where you're presented with a blank screen with no Start Menu, shortcuts, or icons after logging on to a Windows computer.
 ms.data: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,16 +13,16 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Desktop Shell
 ms.technology: ShellExperience
 ---
-# Blank desktop in Windows Vista or Windows Server 2008
+# Blank desktop in Windows
 
-This article provides resolutions to an issue where you're presented with a blank screen with no Start Menu, shortcuts, or icons after logging on to a Windows Vista or Windows Server 2008 computer.
+This article provides resolutions to an issue where you're presented with a blank screen with no Start Menu, shortcuts, or icons after logging on to a Windows computer.
 
 _Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 970879
 
 ## Symptoms
 
-After logging on to a Windows Vista or Windows Server 2008 computer, you're presented with a blank screen with no Start Menu, shortcuts, or icons. If you reboot and use F8 to boot to Safe Mode with Networking, you'll see your normal desktop.
+After logging on to a Windows computer, you're presented with a blank screen with no Start Menu, shortcuts, or icons. If you reboot and use F8 to boot to Safe Mode with Networking, you'll see your normal desktop.
 
 You may see the following events in the Application log:
 
@@ -33,7 +33,7 @@ Level: Warning
 User: N/A  
 Computer: M1.Contoso.com  
 Description:  
-The Windows logon process has failed to spawn a user application. Application name: . Command line parameters: C:\Windows\system32\logon.scr /s.
+The Windows logon process has failed to spawn a user application. Application name: . Command line parameters: C:\\Windows\\system32\\logon.scr /s.
 >
 > Log Name: Application  
 Source: Microsoft-Windows-Winlogon  
@@ -42,7 +42,7 @@ Level: Warning
 User: N/A  
 Computer: M1.Contoso.com  
 Description:  
-The Windows logon process has failed to spawn a user application. Application name: . Command line parameters: C:\Windows\system32\userinit.exe.
+The Windows logon process has failed to spawn a user application. Application name: . Command line parameters: C:\\Windows\\system32\\userinit.exe.
 
 ## Cause
 
@@ -84,7 +84,7 @@ When the local Users group doesn't contain the default members, the standard use
 
 When UAC is turned off, only the full privilege access token is generated for the user and the membership of the local Users group doesn't impact the permissions available in that token.
 
-Unlike previous versions of Windows, Vista makes a distinction between the built-in Administrator account and members of the Administrators group. The built-in Administrator account still has full read/write access to the computer and runs with the full administrative access token. UAC administrators are also members of the local Administrators group, but they run with the same access token as standard users.
+Windows makes a distinction between the built-in Administrator account and members of the Administrators group. The built-in Administrator account still has full read/write access to the computer and runs with the full administrative access token. UAC administrators are also members of the local Administrators group, but they run with the same access token as standard users.
 
 ## Disclaimer
 

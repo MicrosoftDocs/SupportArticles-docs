@@ -1,6 +1,6 @@
 ---
 title: Error 0x80070005 when you log on to computer
-description: Describes a problem in which you receive an error (Windows is not genuine. Your computer might not be running a counterfeit copy of Windows. 0x80070005) in Windows 7 or in Windows Server 2008 R2. Provides resolutions.
+description: Describes a problem in which you receive an error (Windows is not genuine. Your computer might not be running a counterfeit copy of Windows. 0x80070005) in Windows. Provides resolutions.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Activation
 ms.technology: Deployment
 ---
-# Windows is not genuine error in Windows 7 or Windows Server 2008 R2
+# Windows is not genuine error
 
 This article helps fix the 0x80070005 error that occurs when you log on to a computer.
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2704233
 
 ## Symptoms
 
-When you log on to a computer that is running Windows 7 or Windows Server 2008 R2, you receive the following Windows Activation message:
+When you log on to a computer that is running Windows, you receive the following Windows Activation message:
 
 ![Screenshot of the error 1](./media/windows-not-genuine-error/windows-not-genuine.png)
 
