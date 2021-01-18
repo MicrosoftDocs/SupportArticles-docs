@@ -180,5 +180,3 @@ For more information, click the following article number to view the article in 
 [948014](https://support.microsoft.com/help/948014) Description of the Windows Server Update Services 3.0 Service Pack 1 package  
 
 For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[824684](https://support.microsoft.com/help/824684) Description of the standard terminology that is used to describe Microsoft software updates

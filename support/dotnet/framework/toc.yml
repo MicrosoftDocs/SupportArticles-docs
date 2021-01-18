@@ -3,7 +3,7 @@
   - name: 501 syntax error when you use FtpWebRequest
     href: ftpwebrequest-behavior.md
   - name: A ClickOnce application fails to run
-    href: manifest-definitions-dont-match-reference.md
+    href: manifest-definitions-do-not-match-reference.md
   - name: Applications crash at startup
     href: applications-crash-at-startup.md
   - name: Patching fails

@@ -245,7 +245,6 @@ If the problem recurs, collect some diagnostic data.
 
     For more information about the standard terminology that is used to describe Microsoft software updates, see the following Knowledge Base article:
 
-    [824684](https://support.microsoft.com/help/824684)   Description of the standard terminology that is used to describe Microsoft software updates.
 2. Review the event logs for the new events that were generated from the increased logging for error values that will give a definitive view of the original 8451 error. For example, an Internal Processing Event ID 1173 that has an error value of **-1526** would indicate that we have a corruption in long-value tree.
 3. Based on the additional information from the increased logging, refer to the following table for a potential resolution.
 
