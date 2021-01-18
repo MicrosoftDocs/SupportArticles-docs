@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 174799
 
 ## Summary
 
-This article describes how to install service packs or hotfixes on a Windows Server failover cluster. Applying a service pack or hotfix to a server cluster is the same as applying a service pack or hotfix to Windows Server (although Windows Server 2012 requires a different process). However, there are special conditions that you should consider to make sure that clients have a high level of access while you perform the installation.
+This article describes how to install service packs or hotfixes on a Windows Server failover cluster. Applying a service pack or hotfix to a server cluster is the same as applying a service pack or hotfix to Windows Server. However, there are special conditions that you should consider to make sure that clients have a high level of access while you perform the installation.
 
 ## More information
 
