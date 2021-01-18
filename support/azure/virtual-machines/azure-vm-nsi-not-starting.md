@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ms.reviewer: 
 ---
 
-# Azure Virtual Machine - Network Store Interface service is not starting
+# Azure Virtual Machine - Network Store Interface (NSI) service is not starting
 
 ## Symptoms
 
@@ -14,11 +14,7 @@ ms.reviewer:
 
    ![Waiting for credentials](./media/azure-vm-nsi-not-starting/1-waiting.png)
 
-2. In the **WinGuestAnalyzer\Health Signal** tab, the service is currently in not in a **Running** state. As this service is the core service for the network component on the OS, all related network services like BFE or Windows Firewall will not start:
-
-   ![Service stopped](./media/azure-vm-nsi-not-starting/2-stopped.png)
-
-3. If you pull the Guest OS Logs, you'll see that the core networking service, Network Store Interface (NSI), is not starting or failing to start. This issue could be due to a hang, a crash of this service, or any required service to be run before it.
+2. If you view the Guest OS Logs, you'll see that the core networking service, **Network Store Interface (NSI)**, is not starting or failing to start. This issue could be due to a hang, a crash of this service, or any required service to be run before it.
 
    ```cmd
       Log Name:      System
@@ -64,254 +60,71 @@ ms.reviewer:
       The account specified for this service is different from the account specified for other services running in the same process.
    ```
 
-4. It's possible that you don't see any attempt to start this service during the booting time, which can happen if the service was disabled.
+### Connect to the VM using Serial console (Troubleshoot cause)
+
+If you're unable to successfully RDP to the virtual machine (VM), use **PowerShell** and **Serial Console** to check for the log entries.
+
+1. On the command line, launch PowerShell by running `powershell.exe`.
+2. In PowerShell, execute this command:
+
+```ps
+psCopy
+remove-module psreadline
+Get-WinEvent -FilterHashtable @{LogName='System'; StartTime=(Get-Date).AddDays(-1); ProviderName='Service Control Manager'}
+```
 
 ## Cause
 
 The NSI service is not running on the Virtual Machine. This issue happens in the following scenarios:
 
-1. The NSI service was set to disabled.
+1. The NSI service was set to **disabled**.
 2. The NSI is crashing. The RCA will depend on the dump from the process.
 3. The NSI is hanging. The RCA will depend on the dump from the process.
 4. Another required service is not running. The RCA will depend on why the other service was not starting.
 
 ## Solution
 
-### Process Overview
+Backup the VM OS disk using your preferred method.
 
-1. Create and access a Repair VM.
+One method that you can use is to [take a snapshot of the disk](https://docs.microsoft.com/azure/virtual-machines/windows/snapshot-copy-managed-disk).
 
-1. Verify that the OS partition is active.
-1. Find the missing reference on the BCD store.
+### Connect to the VM using Serial console (Solution)
 
-1. Enable serial console and memory dump collection.
-1. Rebuild the VM.
+Connect to the VM using Serial Console to attempt to get the NSI service started.
 
-> [!NOTE]
-> When encountering this error, the Guest OS is not operational. Troubleshoot this issue in offline mode to resolve this issue.
+1. In the Serial Console, execute this command:
 
-### Create and Access a Repair VM
+   `sc query NSI`
 
-1. Use steps 1-3 of the [VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to prepare a Repair VM.
-1. Using Remote Desktop Connection, connect to the Repair VM.
+2. If the service is shown as:
 
-### Verify that the OS partition is active
+   1. **Stopped** – Try to start the service:
 
-> [!NOTE]
-> This mitigation applies only for Generation 1 VMs. Generation 2 VMs (using UEFI) does not have active partition.
+      `sc start NSI`
 
-Verify the OS partition, which holds the BCD store for the disk is marked as active.
+      1. If the service starts without error and you can connect to the VM, then stop here.
 
-   1. Open an elevated command prompt and open up DISKPART tool.
+   2. **Starting/Stopping** - Try stopping and starting the service again with these commands:
 
-      `diskpart`
+      `sc stop NSI`
+      `sc start NSI`
 
-   2. List the disks on the system and look for added disks and proceed to select the new disk. In this example, this is Disk 1.
+3. If the NSI service is disabled:
 
-      ```cmd
-      list disk
-      sel disk 1
-      ```
+   1. First set the service to automatic:
 
-      ![Disk 1](media/azure-vm-nsi-not-starting/11-Gen2-1.png)
+      `sc config NSI start=auto`
 
-   3. List all the partitions on that disk and then proceed to select the partition you want to check. Usually System Managed partitions are smaller and are around 350 Mb. In the image below, this will be Partition 1.
+   1. Start the NSI service:
 
-      ```cmd
-      list partition
-      sel partition 1
-      ```
+      `sc start NSI`
 
-      ![Partition 1](media/azure-vm-nsi-not-starting/12-Gen2-2.png)
+   1. Check if the NSI service is running:
 
-   4. Check the status of the partition. The same should be Active.
+      `sc query NSI`
 
-      `detail partition`
-
-      ![Detail Partition](media/azure-vm-nsi-not-starting/13-Gen2-3.png)
-
-      1. If the partition isn't active:
-
-         1. Now change the Active flag and then recheck the change was done properly.
-
-            ```cmd
-            active
-            detail partition
-            ```
-
-            ![Acive Flag](media/azure-vm-nsi-not-starting/14-Gen2-4.png)
-
-   5. Now exist DISKPART tool.
-
-      `exit`
-
-### Mitigation 2
-
-1. Open up an elevated CMD and run CHKDSK on that disks.
-
-   `chkdsk <DRIVE LETTER>: /f`
-
-2. Gather the current booting setup info and document it, and use this step to take note of the identifier on the active partition.
-
-   1. For Generation 1 VM:
-
-      `bcdedit /store <drive letter>:\boot\bcd /enum`
-
-      1. If this errors out because there's no `\boot\bcd` file, then go to the following mitigation.
-
-      2. Write down the identifier of the Windows Boot loader. This is the one which path is `\windows\system32\winload.exe`.
-
-         ![Mitigation 2 - Windows Identifier 1](media/azure-vm-nsi-not-starting/6-boot-configuration-data-windows-identifier.png)
-
-   2. For Generation 2 VM:
-
-      `bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /enum`
-
-      1. If this errors out because there's no \boot\bcd file, then go to the following mitigation.
-
-      2. Write down the identifier of the Windows Boot loader. This is the one which path is `\windows\system32\winload.efi`.
-
-         ![Mitigation 2 - Windows Identifier 2](media/azure-vm-nsi-not-starting/15-default-identifier.png)
-
-3. Run the following commands:
-
-   1. For **Generation 1** VM:
-
-      ```cmd
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {bootmgr} device partition=<BCD FOLDER - DRIVE LETTER>:
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {bootmgr} integrityservices enable
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} device partition=<WINDOWS FOLDER - DRIVE LETTER>:
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} integrityservices enable
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} recoveryenabled Off
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} osdevice partition=<WINDOWS FOLDER - DRIVE LETTER>:
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} bootstatuspolicy IgnoreAllFailures
-      ```
-
-      >[!NOTE]
-      In case the VHD has a single partition and both the BCD Folder and Windows Folder are in the same volume, and if the above setup didn't work, then try replacing the partition values with ***boot***.
-
-      ```cmd
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {bootmgr} device boot
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {bootmgr} integrityservices enable
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} device boot
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} integrityservices enable
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} recoveryenabled Off
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} osdevice boot
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} bootstatuspolicy IgnoreAllFailures
-      ```
-
-   2. For **Generation 2** VM:
-
-      ```cmd
-      bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {bootmgr} device partition=<Volume Letter of EFI System Partition>:
-      bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {bootmgr} integrityservices enable
-      bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {<IDENTIFIER>} device partition=<WINDOWS FOLDER - DRIVE LETTER>:
-      bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {<IDENTIFIER>} integrityservices enable
-      bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {<IDENTIFIER>} recoveryenabled Off
-      bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {<IDENTIFIER>} osdevice partition=<WINDOWS FOLDER - DRIVE LETTER>:
-      bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {<IDENTIFIER>} bootstatuspolicy IgnoreAllFailures
-      ```
-
-      >[!NOTE]
-      In some cases the variables Devices and OSDevices in {< IDENTIFIER >} were pointing to the correct partition but still the OS was unable to boot. For those cases, a rewrite could fix the machine start up.
-
-   Detach the disk and wait until Azure updates the disk, then re-assemble the VM.
-
-If those steps don't resolve the issue, then recreate the BCD store entirely.
-
-1. Attach the disk again on the rescue VM.
-
-2. Before doing any other change, do a backup of the current `\boot` folder.
-
-   1. For **Generation 1** VM:
-
-      ```cmd
-      REM Create a copy of the BuiltIn BCD template that comes within each windows installation. In this case as the OS is Gen 1, use the BIOS flag
-      bcdboot <WINDOWS FOLDER - DRIVE LETTER>:\windows /s <BCD FOLDER - DRIVE LETTER>: /v /f BIOS
-        
-      REM Re-add the following flags which are not going to be there by default:
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER FROM THE BOOT LOADER>} integrityservices enable
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER FROM THE BOOT LOADER>} recoveryenabled Off
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER FROM THE BOOT LOADER>} bootstatuspolicy IgnoreAllFailures 
-        
-      REM Renable EMS to enable the serial console feature
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {bootmgr} displaybootmenu yes
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {bootmgr} timeout 5
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {bootmgr} bootems yes
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /ems {current} on 
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
-      ```
-
-   2. For **Generation 2** VM:
-
-      ```cmd
-      REM Create a copy of the BuiltIn BCD template that comes within each windows installation. In this case as the OS is Gen 1, use the UEFI flag
-      bcdboot <WINDOWS FOLDER - DRIVE LETTER>:\windows /s <Volume Letter of EFI System Partition>: /v /f UEFI
-       
-      REM Re-add the following flags which are not going to be there by default:
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} integrityservices enable
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} recoveryenabled Off
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} bootstatuspolicy IgnoreAllFailures
-       
-      REM Renable EMS to enable the serial console feature
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {bootmgr} displaybootmenu yes
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {bootmgr} timeout 5
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {bootmgr} bootems yes
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /ems {current} on 
-      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
-      ```
-
-### Enable the Serial Console and memory dump collection
-
-**Recommended**: Before you rebuild the VM, enable the Serial Console and memory dump collection by running the following script:
-
-1. Open an elevated command prompt session as an Administrator.
-1. Run the following commands:
-
-   **Enable the Serial Console**:
-
-   ```cmd
-   bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /ems {<BOOT LOADER IDENTIFIER>} ON 
-   bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
-   ```
-
-1. Verify that the free space on the OS disk is larger than the memory size (RAM) on the VM.
-
-   If there's not enough space on the OS disk, change the location where the memory dump file will be created, and refer that location to any data disk attached to the VM that has enough free space. To change the location, replace **%SystemRoot%** with the drive letter of the data disk, such as **F:**, in the following commands.
-
-   Suggested configuration to enable OS Dump:
-
-    **Load the broken OS Disk:**
-
-   ```cmd
-   REG LOAD HKLM\BROKENSYSTEM <VOLUME LETTER OF BROKEN OS DISK>:\windows\system32\config\SYSTEM 
-   ```
-
-   **Enable on ControlSet001**:
-
-   ```cmd
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
-   ```
-
-   **Enable on ControlSet002**:
-
-   ```cmd
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
-   ```
-
-   **Unload Broken OS Disk**:
-
-   ```cmd
-   REG UNLOAD HKLM\BROKENSYSTEM
-   ```
-
-### Rebuild the VM
-
-Use [step 5 of the VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to rebuild the VM.
+4. IF the NSI service fails due to dependency, you can try the above process on the dependency that was listed.
+Once the NSI service is running you can try accessing the VM via RDP.
 
 ## Next steps
 
