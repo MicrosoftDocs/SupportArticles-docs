@@ -24,7 +24,7 @@ When the **Install Application** step runs, the application checks the applicabi
 
 ## Step 1: Task Sequence Manager parses the task sequence XML and begins the Install Application task
 
-Application installations in a task sequence have a lot in common with application installations outside of a task sequence. They both use Configuration manager [compliance settings](/previous-versions/system-center/system-center-2012-R2/gg681958(v=technet.10)). But they don't function exactly the same. There are more components involved due to the nature of running a task sequence.
+Application installations in a task sequence have a lot in common with application installations outside of a task sequence. They both use Configuration Manager [compliance settings](/previous-versions/system-center/system-center-2012-R2/gg681958(v=technet.10)). But they don't function exactly the same. There are more components involved due to the nature of running a task sequence.
 
 As the task sequence progresses, it maintains the status of tasks and the associated execution status using [task sequence environment variables](/previous-versions/system-center/system-center-2012-R2/hh273375(v=technet.10)). These built-in variables provide information about the environment where the task sequence is running. The values for these variables are available throughout the whole task sequence. These built-in variables are initialized before the **Install Application** step runs in the task sequence.
 
@@ -36,8 +36,8 @@ As the task sequence progresses, it maintains the status of tasks and the associ
    The following entries are logged in SMSTS.log:
 
    > 01-13-2016 17:56:35.510   TSManager    2176 (0x880)    Start executing an instruction. Instructionname: Install Application. Instruction pointer: 32  
-   > 01-13-2016 17:56:35.510   TSManager    2176 (0x880)    Set a global environment variable_SMSTSCurrentActionName=Install Application  
-   > 01-13-2016 17:56:35.510   TSManager    2176 (0x880)    Set a global environment variable_SMSTSNextInstructionPointer=32
+   > 01-13-2016 17:56:35.510   TSManager    2176 (0x880)    Set a global environment variable _SMSTSCurrentActionName=Install Application  
+   > 01-13-2016 17:56:35.510   TSManager    2176 (0x880)    Set a global environment variable _SMSTSNextInstructionPointer=32
 2. Task Sequence Manager then saves the execution state of the task sequence and the environment (TSEnv.dat) to the local hard disk, as seen in SMSTS.log:
 
    > 01-13-2016 17:56:35.510    TSManager    2176 (0x880)    Successfully save execution state and environment to local hard disk
@@ -46,11 +46,11 @@ As the task sequence progresses, it maintains the status of tasks and the associ
    > 01-13-2016 17:56:35.510   TSManager    2176 (0x880)    Start executing an instruction. Instructionname: Install Application. Instruction pointer: 32
 4. Task Sequence Manager then sets local default variables for applications:
 
-   > 01-13-201617:56:35.510    TSManager    2176 (0x880)    Set a local default variableOSDApp0Description  
-   > 01-13-201617:56:35.510    TSManager    2176 (0x880)    Set a local default variableOSDApp0DisplayName  
+   > 01-13-201617:56:35.510    TSManager    2176 (0x880)    Set a local default variable OSDApp0Description  
+   > 01-13-201617:56:35.510    TSManager    2176 (0x880)    Set a local default variable OSDApp0DisplayName  
    > 01-13-201617:56:35.510    TSManager    2176 (0x880)    Set a local default variable OSDApp0Name  
    > 01-13-201617:56:35.510    TSManager    2176 (0x880)    Set a local default variable OSDAppCount  
-   > 01-13-201617:56:35.525    TSManager    2176 (0x880)    Set a global environment variable_SMSTSLogPath=C:\WINDOWS\CCM\Logs\SMSTSLog
+   > 01-13-201617:56:35.525    TSManager    2176 (0x880)    Set a global environment variable _SMSTSLogPath=C:\WINDOWS\CCM\Logs\SMSTSLog
 5. Task Sequence Manager sets the command line for the application install (smsappinstall.exe) based on the task sequence XML policy that it has parsed, and begins executing it by calling smsappinstall.exe. The following entry is logged in SMSTS.log:
 
    > 01-13-2016 17:56:35.525   TSManager    2176 (0x880)    Executing command line: smsappinstall.exe/app:ScopeId_GUID/Application_GUID/basevar: /continueOnError:False
@@ -89,7 +89,7 @@ During this step, the **Install Application** component evaluates the task seque
 2. **Install Application** sets variables for the application. The following entries are logged in SMSTS.log:
 
    > 01-13-2016 17:56:35.666    InstallApplication    1608 (0x648)    Setting TSEnv variable 'SMSTSAppPolicyEvaluationJobID__ScopeId_GUID/Application_GUID'=''  
-   > 01-13-2016 17:56:35.666    InstallApplication    1608 (0x648)    Setting TSEnv variable 'SMSTSInstallApplicationJobID__ScopeId_GUID/Application_GUID'='
+   > 01-13-2016 17:56:35.666    InstallApplication    1608 (0x648)    Setting TSEnv variable 'SMSTSInstallApplicationJobID__ScopeId_GUID/Application_GUID'=''
 3. It then looks for policy scope ID. The following entry is logged in SMSTS.log:
 
    > 01-13-2016 17:56:35.666    InstallApplication    1608 (0x648)    Retrieving value from TSEnv for '_SMSTSPolicy_ScopeId_GUID/Application_GUID
@@ -162,7 +162,7 @@ Here's a list of the most common errors that are returned to the **Install Appli
 
 |Failure Type|What to Check|
 |---|---|
-|SMSTS.log shows one of the following errors: <ul><li>InstallApplication 2740 (0xab4) Policy Evaluation failed, hr=0x87d00269</li><li>Required management point not found (Error: 87D00269)</li></ul>|The error indicates that the machine can't communicate with the management point (MP). Confirm whether you're using a custom website for the MP. If so, review[] How to Create the Custom Website in Internet Information Services (IIS)](/previous-versions/system-center/system-center-2012-R2/gg712282(v=technet.10)#BKMK_PlanCustomWebsite). Ensure that a copy of the default document (default.htm) has been placed in the root folder that hosts the website. Also ensure that HTTP redirection isn't enabled on the default website.|
+|SMSTS.log shows one of the following errors: <ul><li>InstallApplication 2740 (0xab4) Policy Evaluation failed, hr=0x87d00269</li><li>Required management point not found (Error: 87D00269)</li></ul>|The error indicates that the machine can't communicate with the management point (MP). Confirm whether you're using a custom website for the MP. If so, review  [How to Create the Custom Website in Internet Information Services (IIS)](/previous-versions/system-center/system-center-2012-R2/gg712282(v=technet.10)#BKMK_PlanCustomWebsite). Ensure that a copy of the default document (default.htm) has been placed in the root folder that hosts the website. Also ensure that HTTP redirection isn't enabled on the default website.|
 |SMSTS.log shows the following error: <br/>InstallApplication 3248 (0xcb0) Policy Evaluation failed, hr=0x80004005|Ensure that you have the latest updates for Configuration Manager installed.|
 |SMSTS.log shows the following error:<br/>Install Static Applications failed, hr=0x87d00267|Ensure that you've installed the latest version of ConfigMgr 2012 R2 SP1.|
 |SMSTS.log shows the following error:<br/>Execution status received: 24 (Application download failed)|Review [KB3007095](https://support.microsoft.com/help/3007095) and ensure that you're up to date. Ensure that you have the latest updates for Configuration Manager installed.|
@@ -175,7 +175,7 @@ In the previous step, the CIs were marked for download. The DCM agent uses CI Ag
 - Application Properties
 - Application Manifest
 - Deployment Type Properties
-- Deployment Type Manifest-
+- Deployment Type Manifest
 - Application Intent Policies for Compliance
 
 The acquisition of this information doesn't happen all at once. The DCM agent uses the following client-side components at different times to do this work:
@@ -243,7 +243,7 @@ In CIAgent.log:
 
    > 01-13-201617:56:37.275    DataTransferService    2728(0xaa8)    Added(source=.sms_dcm?Id&DocumentId=ScopeId_GUID/RequiredApplication_GUID/10/PROPERTIES&Hash=HashString&Compression=zlib,dest={JobID}_2.zip)pair from manifest.  
    > 01-13-201617:56:37.275    DataTransferService    2728(0xaa8)    Added(source=.sms_dcm?Id&DocumentId=ScopeId_GUID/RequiredApplication_GUID/10/MANIFEST&Hash=HashString&Compression=zlib,dest={JobID}_1.zip)pair from manifest.
-1. Data Transfer Service calls into the `MP_GetSDMPacakge` ISAPI on the management point, which in turn requests the SDM package information from the database by triggering a SQL stored procedure. In SQL Profiler:
+1. Data Transfer Service calls into the `MP_GetSDMPacakge` ISAPI on the management point, which in turn requests the SDM package information from the database by triggering a SQL stored procedure. In SQL Server Profiler:
 
    > exec MP_GetSdmDocument N'ScopeId_GUID/RequiredApplication_GUID/10/PROPERTIES',N'HashString',N'1',N'1'  
    > exec MP_GetSdmDocument N'ScopeId_GUID/RequiredApplication_GUID/10/MANIFEST',N'HashString',N'1',N'1'
@@ -253,7 +253,7 @@ In CIAgent.log:
    > 01-13-201617:56:37.479    DataTransferService    2316(0x90c)    BITSHelper: Full source path to be transferred = `http://PS1.contoso.com:80/SMS_MP/.sms_dcm?Id&DocumentId=ScopeId_GUID/RequiredApplication_GUID/10/PROPERTIES&Hash=HashString&Compression=zlib`  
    > 01-13-201617:56:37.479    DataTransferService    2316(0x90c)    Adding to BITS job:{ID}_2.zip  
    > 01-13-201617:56:37.479    DataTransferService    2316(0x90c)    BITSHelper: Full source path to be transferred= `http://PS1.contoso.com:80/SMS_MP/.sms_dcm?Id&DocumentId=ScopeId_GUID/RequiredApplication_GUID/10/MANIFEST&Hash=HashString&Compression=zlib`  
-   > 01-13-201617:56:37.479   DataTransferService    2316 (0x90c)    Adding toBITS job: {ID}_1.zip
+   > 01-13-201617:56:37.479   DataTransferService    2316 (0x90c)    Adding to BITS job: {ID}_1.zip
 1. Monitor DataTransferService.log for the completion of the SDM package download. Search for lines similar to below:
 
    Configuration Item #1
@@ -351,7 +351,7 @@ Next, CI Agent will perform further processing by invoking the SDM model. SDM pa
 
 ### Troubleshoot step 4
 
-To troubleshoot issues during this step, see Troubleshoot step 3.
+To troubleshoot issues during this step, see [Troubleshoot step 3](#troubleshoot-step-3).
 
 ## Step 5: CI Agent performs further processing of CIs using the SDM model
 
@@ -359,7 +359,7 @@ At this point, the necessary CIs have been acquired, and SDM package data has be
 
 - invoke `SDMMethod` to bind the CIs to their *Policy Platform*/*Lantern Policies* stored in WMI, located at `root\Microsoft\PolicyPlatform\Documents\Local`.
 - evaluate their applicability
-- ultimately mark them as *Available for Enforcement* before cleaning up its jobs
+- ultimately mark them as **Available for Enforcement** before cleaning up its jobs
 
 In CIAgent.log:
 
@@ -375,7 +375,7 @@ In CIAgent.log:
    > 01-13-2016 17:56:38.541    CIAgent    2316 (0x90c)    CIAgentJob({ID}): StartEnactment - Attempting to invoke Policy Platform Client  
    > 01-13-2016 17:56:38.885    CIAgent    2316 (0x90c)    DCM::LanternUtils::ScopeAndBindPolicies - [ScopedPolicies] ScopeId_GUID_Application_GUID_Platform_PolicyDocument  
    > 01-13-2016 17:56:38.885    CIAgent    2316 (0x90c)    DCM::LanternUtils::ScopeAndBindPolicies - [ScopedPolicies] ScopeId_GUID_Application_GUID_Configuration_PolicyDocument
-3. CI Agent completes the Enactment. In CIAgent.log:
+3. CI Agent completes the enactment. In CIAgent.log:
 
    > 01-13-2016 17:56:38.885    CIAgent    2316 (0x90c)    DCM::LanternUtils::ScopeAndBindPolicies - [ScopedPolicies] ScopeId_GUID_DeploymentType_GUID_Discovery_PolicyDocument  
    > 01-13-2016 17:56:39.619    CIAgent    2768 (0xad0)    CIAgentJob({ID}): Invocation succeeded for policy platform job ID  
@@ -420,7 +420,7 @@ In CIAgent.log:
 
 ### Troubleshoot step 5
 
-To troubleshoot issues during this step, see Troubleshoot step 3.
+To troubleshoot issues during this step, see [Troubleshoot step 3](#troubleshoot-step-3).
 
 ## Step 6: DCM Agent confirms that all CIs are present and flags content for download
 
@@ -452,7 +452,7 @@ To troubleshoot issues during this step, see Troubleshoot step 3.
 5. `CIDownloader` reports to CI Agent that all the CIs for the application are present in the store. In CIDownloader.log:
 
    > 01-13-2016 17:56:40.166    CIDownloader    2768 (0xad0)    CDownloadPayloadInfo::AddCI - CI with ModelName ScopeId_GUID/Application_GUID, Version 10 is already available.
-6. CI Agent logs that nothing is to be downloaded. The CI for the application, application DT, and requirements have already been downloaded. CI Agent moves on to persisting the CI models.
+6. The CI for the application, application DT, and requirements have already been downloaded. CI Agent logs that nothing is to be downloaded. Then it moves on to persisting the CI models.
 
    In CIAgent.log:
 
@@ -490,7 +490,7 @@ The complicated part is now over. Now we move on to download the binaries.
 
 ### Troubleshoot step 6
 
-To troubleshoot issues during this step, see Troubleshoot step 3.
+To troubleshoot issues during this step, see [Troubleshoot step 3](#troubleshoot-step-3).
 
 ## Step 7: Content for the Application Install task is downloaded using the standard content request/response process
 
@@ -511,8 +511,7 @@ On the server side, the components involved include:
 
    > 01-13-2016 17:56:40.572    ContentAccess    2728 (0xaa8)    CContentAccessService::Initialize  
    > 01-13-2016 17:56:40.572    ContentAccess    2728 (0xaa8)    CDownloadManager::InitializeFromWmi  
-   > 01-13-2016 17:56:40.572    ContentAccess    2728 (0xaa8)    ===== CacheManager: Initializing cache state from Wmi.  
-   > ...  
+   > 01-13-2016 17:56:40.572    ContentAccess    2728 (0xaa8)    ===== CacheManager: Initializing cache state from Wmi. =====  
    > 01-13-2016 17:56:40.588    ContentAccess    2728 (0xaa8)    Loading cache configuration from Wmi.  
    > 01-13-2016 17:56:42.166    ContentAccess    2728 (0xaa8)    CacheManager: Getting cached content information for Content_GUID.1.
 2. Content Transfer Manager creates and sends the Content Location Request. In ContentTransferManager.log:
@@ -520,7 +519,7 @@ On the server side, the components involved include:
    > 01-13-2016 17:56:42.432    ContentTransferManager    2768 (0xad0)    Attempting to create Location Request for PackageID='PackageID' and Version='1'  
    > 01-13-2016 17:56:42.448    ContentTransferManager    2768 (0xad0)    Attempting to send Location Request for PackageID='Content_GUID'  
    > 01-13-2016 17:56:42.448    ContentTransferManager    2728 (0xaa8)    Created CTM job {ID} for user SID  
-   > 01-13-2016 17:56:42.448    ContentTransferManager    2768 (0xad0)    ContentLocationRequest : \<ContentLocationRequest SchemaVersion="1.00" ExcludeFileList="">\<Package ID="UID:Content_GUID" Version="1"/>\<AssignedSite SiteCode="MEH"/>\<ClientLocationInfo LocationType="SMSUpdate" DistributeOnDemand="0" UseAzure="0" AllowWUMU="0" UseProtected="0" AllowCaching="0" BranchDPFlags="0" UseInternetDP="0" AllowHTTP="1" AllowSMB="0" AllowMulticast="0">\<ADSite Name="Default-First-Site-Name"/>\<Forest Name="contoso.lab"/>\<Domain Name="contoso.lab"/>\<IPAddresses>\<IPAddress SubnetAddress="10.10.25.128" Address="10.10.25.130"/>\<IPAddress SubnetAddress="10.10.25.128" Address="10.10.25.166"/>\</IPAddresses>\</ClientLocationInfo>\</ContentLocationRequest>  
+   > 01-13-2016 17:56:42.448    ContentTransferManager    2768 (0xad0)    ContentLocationRequest : \<ContentLocationRequest SchemaVersion="1.00" ExcludeFileList="">\<Package ID="UID:Content_GUID" Version="1"/>\<AssignedSite SiteCode="MEH"/>\<ClientLocationInfo LocationType="SMSUpdate" DistributeOnDemand="0" UseAzure="0" AllowWUMU="0" UseProtected="0" AllowCaching="0" BranchDPFlags="0" UseInternetDP="0" AllowHTTP="1" AllowSMB="0" AllowMulticast="0">\<ADSite Name="Default-First-Site-Name"/>\<Forest Name="contoso.com"/>\<Domain Name="contoso.com"/>\<IPAddresses>\<IPAddress SubnetAddress="10.10.25.128" Address="10.10.25.130"/>\<IPAddress SubnetAddress="10.10.25.128" Address="10.10.25.166"/>\</IPAddresses>\</ClientLocationInfo>\</ContentLocationRequest>  
    > 01-13-2016 17:56:42.463    ContentTransferManager    2768 (0xad0)    Created and Sent Location Request '{ID}' for package Content_GUID  
    > 01-13-2016 17:56:42.463    ContentTransferManager    2768 (0xad0)    CTM job {ID} entered phase CCM_DOWNLOADSTATUS_DOWNLOADING_DATA
 3. MP_Location receives the request and processes it by executing a stored procedure in the database. Either `MP_GetDPInfoProtected` or `MP_GetDPInfoUnprotected`.
@@ -568,8 +567,8 @@ Status : SUCCESS,
 
     In CAS.log:
 
-    > 01-13-2016 17:56:42.948    ContentAccess    2348 (0x92c)    Computed hash: HashString 
-01-13-2016 17:56:42.948    ContentAccess    2348 (0x92c)    Success hash verification with hash algorithm = 32780, preference : 4
+    > 01-13-2016 17:56:42.948    ContentAccess    2348 (0x92c)    Computed hash: HashString  
+    > 01-13-2016 17:56:42.948    ContentAccess    2348 (0x92c)    Success hash verification with hash algorithm = 32780, preference : 4
 12. Content Access then maps the content to the CCM cache where the downloaded binaries are now stored. In CAS.log:
 
     > 01-13-2016 17:56:42.948    ContentAccess    2348 (0x92c)    Saved Content ID Mapping Content_GUID.1, C:\WINDOWS\ccmcache\1  
@@ -582,7 +581,8 @@ Status : SUCCESS,
     > 01-13-2016 17:56:43.041    CIAgent    2728 (0xaa8)    CIAgentJob({ID}): EnforceCIs  
     > 01-13-2016 17:56:43.041    CIAgent    2728 (0xaa8)    {ID} - Initiating Enforce tasks.  
     > 01-13-2016 17:56:43.073    CIAgent    2728 (0xaa8)    Job({ID}) : Performing : Task(ScopeId_GUID/RequiredApplication_GUID.10.Enforce)  
-    > 01-13-2016 17:56:43.073    CIAgent    2728 (0xaa8)    Job({ID}) : Performing : Task(ScopeId_GUID/Application_GUID.10.Enforce) 01-13-2016 17:56:43.073    CIAgent    2728 (0xaa8)    Job({ID}) : Performing : Task(ScopeId_GUID/DeploymentType_GUID.6.Enforce)
+    > 01-13-2016 17:56:43.073    CIAgent    2728 (0xaa8)    Job({ID}) : Performing : Task(ScopeId_GUID/Application_GUID.10.Enforce)  
+    > 01-13-2016 17:56:43.073    CIAgent    2728 (0xaa8)    Job({ID}) : Performing : Task(ScopeId_GUID/DeploymentType_GUID.6.Enforce)
 
 ### Troubleshoot step 7
 
@@ -615,7 +615,7 @@ Now comes the work of enforcing the installation of the application. It will use
 
    > 01-13-2016 17:56:44.682    AppEnforce    2216 (0x8a8)    App enforcement environment:  
    > Context: Machine  
-   > Command line: msiexec /i "ConfigMgrTools.msi" /q /L*V "C:\Windows\CCM\Logs\MSI_install.log"  
+   > Command line: `msiexec /i "ConfigMgrTools.msi" /q /L*V "C:\Windows\CCM\Logs\MSI_install.log"`  
    > Allow user interaction: No  
    > UI mode: 0  
    > User token: null  
@@ -623,15 +623,15 @@ Now comes the work of enforcing the installation of the application. It will use
    > Content path: C:\WINDOWS\ccmcache\1  
    > Working directory:  
    > 01-13-2016 17:56:44.682    AppEnforce    2216 (0x8a8)    Prepared working directory: C:\WINDOWS\ccmcache\1  
-   > 01-13-2016 17:56:44.713    AppEnforce    2216 (0x8a8)    Parsed CmdLine: msiexec /i "ConfigMgrTools.msi" /q /L*V "C:\Windows\CCM\Logs\MSI_install.log"  
+   > 01-13-2016 17:56:44.713    AppEnforce    2216 (0x8a8)    Parsed CmdLine: `msiexec /i "ConfigMgrTools.msi" /q /L*V "C:\Windows\CCM\Logs\MSI_install.log"`  
    > 01-13-2016 17:56:44.713    AppEnforce    2216 (0x8a8)    Found executable file msiexec with complete path C:\WINDOWS\system32\msiexec.exe  
-   > 01-13-2016 17:56:45.666    AppEnforce    2216 (0x8a8)    Executing Command line: "C:\WINDOWS\system32\msiexec.exe" /i "ConfigMgrTools.msi" /q /L*V "C:\Windows\CCM\Logs\MSI_install.log" /qn with system context  
-   > 01-13-2016 17:56:44.729    AppEnforce    2216 (0x8a8)    Parsed CmdLine: "C:\WINDOWS\system32\msiexec.exe" /i "ConfigMgrTools.msi" /q /L*V "C:\Windows\CCM\Logs\MSI_install.log" /qn  
-   > 01-13-2016 17:56:45.666    AppEnforce    2216 (0x8a8)    Executing Command line: "C:\WINDOWS\system32\msiexec.exe" /i "ConfigMgrTools.msi" /q /L*V "C:\Windows\CCM\Logs\MSI_install.log" /qn with system context
+   > 01-13-2016 17:56:45.666    AppEnforce    2216 (0x8a8)    Executing Command line: `"C:\WINDOWS\system32\msiexec.exe" /i "ConfigMgrTools.msi" /q /L*V "C:\Windows\CCM\Logs\MSI_install.log" /qn` with system context  
+   > 01-13-2016 17:56:44.729    AppEnforce    2216 (0x8a8)    Parsed CmdLine: `"C:\WINDOWS\system32\msiexec.exe" /i "ConfigMgrTools.msi" /q /L*V "C:\Windows\CCM\Logs\MSI_install.log" /qn`  
+   > 01-13-2016 17:56:45.666    AppEnforce    2216 (0x8a8)    Executing Command line: `"C:\WINDOWS\system32\msiexec.exe" /i "ConfigMgrTools.msi" /q /L*V "C:\Windows\CCM\Logs\MSI_install.log" /qn` with system context
 4. At this point, assuming there's logging for the MSI installation, msiexec.exe takes over and does the installation. In MSI Logging.log:
 
    > === Verbose logging started: 1/13/2016  17:56:45  Build type: SHIP UNICODE 5.00.9600.00  Calling process: C:\WINDOWS\system32\msiexec.exe ===
-5. Once the installation is complete, msiexec.exe will send the return code to **Install Application**. **Install Application** will set the necessary TS environment variables indicating success, then report the successful install back to AppEnforce.
+5. Once the installation is complete, msiexec.exe will send the return code to **Install Application**. **Install Application** will set the necessary task sequence environment variables indicating success, then report the successful install back to `AppEnforce`.
 
    In AppEnforce.log:
 
@@ -692,7 +692,7 @@ At this time, CI Agent has been checking with CI State Store for the Enforcement
    > 01-13-2016 17:56:47.823    CIAgent    2348 (0x92c)    Job({ID}): Already Completed : Task(ScopeId_GUID/Application_GUID.10.Enforce)  
    > 01-13-2016 17:56:47.823    CIAgent    2348 (0x92c)    Job({ID}): Already Completed : Task(ScopeId_GUID/RequiredApplication_GUID.10.Enforce)  
    > 01-13-2016 17:56:47.838    CIAgent    2316 (0x90c)    CIAgentJob({ID}): CAgentJob::HandleEvent(Event=Transition, CurrentState=StateEnforcementReporting)
-3. Enforcement reporting involves checking CI State Store for the compliance state of the application CI. Once it's set to compliant, CI Agent will transition to Completed and cleanup its job.
+3. Enforcement reporting involves checking CI State Store for the compliance state of the application CI. Once it's set to compliant, CI Agent will transition to **Completed** and clean up its job.
 
    In CIStateStore.log:
 
@@ -704,7 +704,7 @@ At this time, CI Agent has been checking with CI State Store for the Enforcement
    > 01-13-2016 17:56:47.963    CIAgent    2728 (0xaa8)    CIAgentJob({ID}): CAgentJob::HandleEvent(Event=Transition, CurrentState=Completed)  
    > 01-13-2016 17:56:47.963    CIAgent    2728 (0xaa8)    CIAgentJob({ID}): Deleting CIAgent Job  
    > 01-13-2016 17:56:47.963    CIAgent    2728 (0xaa8)    Deleted CIAgent job {ID}
-4. DCM Agent passes the success notification back to the Install Application (smsappinstall.exe) process and DCM Agent cleans up its job.
+4. DCM Agent passes the success notification back to the **Install Application** (smsappinstall.exe) process and DCM Agent cleans up its job.
 
     In DCMAgent.log:
 
@@ -712,7 +712,7 @@ At this time, CI Agent has been checking with CI State Store for the Enforcement
     > 01-13-2016 17:56:47.979    DCMAgent    2316 (0x90c)    DCMAgentJob({ID}): CDCMAgentJob::HandleEvent(Event=NotifyProgress, CurrentState=Success)  
     > 01-13-2016 17:56:47.979    InstallApplication    1608 (0x648)    Received job completion notification from DCM Agent  
     > 01-13-2016 17:56:47.995    DCMAgent    2348 (0x92c)    CDCMAgentJobMgr::DeleteJob - Request to delete DCM Agent job {ID}
-5. Lastly, the exit code is returned back to Task Sequence Manager. Task Sequence Manager updates the appropriate Task Sequence environment variables and resumes the next task in the sequence. In SMSTS.log:
+5. Lastly, the exit code is returned back to Task Sequence Manager. Task Sequence Manager updates the appropriate task sequence environment variables, and resumes the next task in the sequence. In SMSTS.log:
 
     > 01-13-2016 17:56:48.073    TSManager    2176 (0x880)    Process completed with exit code 0  
     > 01-13-2016 17:56:48.073    TSManager    2176 (0x880)    Successfully completed the action (Install Application) with the exit win32 code 0
@@ -721,6 +721,8 @@ At this time, CI Agent has been checking with CI State Store for the Enforcement
 
 For troubleshooting purposes, it's considered a best practice to create and use a duplicate copy of your production task sequence. The task sequence may need to be modified to include more data gathering tasks. And you may need to deploy the task sequence to a test machine.
 
-Deployments that have problems will typically report errors in the **Monitoring** workspace. You can see these errors when you select Deployments > Error. For more information about how to troubleshoot these errors, see the following article:
+Deployments that have problems will typically report errors in the **Monitoring** workspace. You can see these errors when you select **Deployments** > **Error**. For more information about how to troubleshoot these errors, see the following article:
 
 [Tips and Tricks: How to Take Action on Assets That Report a Failed Deployment in System Center 2012 Configuration Manager](https://techcommunity.microsoft.com/t5/configuration-manager-archive/tips-and-tricks-how-to-take-action-on-assets-that-report-a/ba-p/273019)
+
+For more information about task sequence steps, see [Task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps).
