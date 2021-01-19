@@ -64,7 +64,8 @@ The approaches to avoid this problem are:
 1. Change the password remotely. Note that currently the user in the context you run the remote password change needs to be able to log on to the target server with the default credentials (or already connected using SMB to the server at the time of the password change already).
 2. Change the permissions of the key `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Rpc` to allow anonymous to read the key. If the key doesn't exist, you may create it and then add the read permissions for the anonymous account.
 
-> [!NOTE] For approach 2, in an attempt to recover from an error, it might happen that the group policy service deletes the keys and recreates them using default permissions. In this case, you have to reapply the permissions.
+> [!NOTE]
+> For approach 2, in an attempt to recover from an error, it might happen that the group policy service deletes the keys and recreates them using default permissions. In this case, you have to reapply the permissions.
 
 You can automate setting the permissions on using Registry Security Policy when the machine is member of the domain. For workgroup machines you can import this text as rpc-pol.inf file:
 
