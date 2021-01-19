@@ -15,7 +15,7 @@ ms.technology: windows-server-rds
 ---
 # Remote Desktop Service can't be restarted if Keep-Alive feature is enabled
 
-This article discusses an issue where you can't restart the Remote Desktop Services (Terminal Services) if Keep-Alive is enabled.
+This article provides a solution to an issue where you can't restart the Remote Desktop Services (Terminal Services) if Keep-Alive is enabled.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2507353
@@ -38,21 +38,23 @@ When Keep-Alive is enabled and the Remote Desktop Services (Terminal Services) s
 
 The Keep-Alive feature can be enabled by Group Policy:
 
-Windows Server 2008 R2:  
+- Windows Server 2008 R2
 
-Computer Configuration\Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Connections
+    Computer Configuration\\Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Connections
 
-Configure Keep-Alive Connection Interval
+    Configure Keep-Alive Connection Interval
 
-Windows Server 2008:  
+- Windows Server 2008
 
-Computer Configuration\Administrative Templates\Windows Components\Terminal Services\Terminal Server\Connections
+    Computer Configuration\\Administrative Templates\\Windows Components\\Terminal Services\\Terminal Server\\Connections
 
-Configure Keep-Alive Connection Interval
+    Configure Keep-Alive Connection Interval
 
 To configure directly in the registry:
 
-Windows Registry Editor Version 5.00  
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server]  
-"KeepAliveInterval"=dword:00000001  
-"KeepAliveEnable"=dword:00000001  
+```registry
+Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server]
+"KeepAliveInterval"=dword:00000001
+"KeepAliveEnable"=dword:00000001
+```
