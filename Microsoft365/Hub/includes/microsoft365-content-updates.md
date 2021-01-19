@@ -2,6 +2,14 @@
 
 
 
+## Week of January 11, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/15/2021 | [Your mailbox reaches its quota though it has an archive enabled](/office365/troubleshoot/archive-mailboxes/mailbox-reaches-quota) | added |
+
+
 ## Week of January 04, 2021
 
 
@@ -13,11 +21,10 @@
 | 1/4/2021 | [We can't display your message right now error in Outlook Web App](/office365/troubleshoot/office-message-encryption/cannot-display-message) | modified |
 
 
-## Week of December 14, 2020
+## Week of December 28, 2020
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 12/15/2020 | [Can't Verify Subscription or No Subscription Found in Office Mobile](/office365/troubleshoot/licensing/subscription-issue-in-office-mobile) | modified |
-| 12/15/2020 | [Chrome SameSite cookie behavior effect on customer applications](/office365/troubleshoot/miscellaneous/chrome-behavior-affects-applications) | modified |
-| 12/15/2020 | [Another account from your organization is already signed in on this computer](/office365/troubleshoot/sign-in/sign-in-to-office-2016-for-mac-fail) | modified |
+| 12/31/2020 | [Your request couldn't be completed. Please try again" error when searching audit log](/office365/troubleshoot/audit-logs/issue-search-audit-log) | modified |
+| 12/31/2020 | [Your request couldn't be completed. Please try again error when searching audit log.](/office365/troubleshoot/audit-logs/issue-search-audit-log) | modified |
