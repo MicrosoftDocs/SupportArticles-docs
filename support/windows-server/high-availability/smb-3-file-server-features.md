@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Cannot failover a group
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # New SMB 3.0 features in the Windows Server 2012 file server
 

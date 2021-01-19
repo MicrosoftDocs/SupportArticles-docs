@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory domain or forest functional level updates
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Error when you run the Adprep /rodcprep command in Windows Server 2008: Adprep could not contact a replica for partition DC=DomainDnsZones,DC=Contoso,DC=com
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, steved, cmyu, ssutari
 ms.prod-support-area-path: WMI 
-ms.technology: SysManagementComponents
+ms.technology: windows-client-system-management-components
 ---
 # WMI-Activity Event 5858 logged frequently with ResultCode 0x80041032
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, makotkat
 ms.prod-support-area-path: File Server Resource Manager (FSRM)
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Error 10013 (WSAEACCES) is returned when a second bind to an excluded port fails in Windows
 

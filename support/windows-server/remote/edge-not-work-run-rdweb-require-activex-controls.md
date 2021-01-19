@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: RDWeb
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # WinX: Remote Desktop tab in RDWEB is missing from Microsoft Edge browser
 

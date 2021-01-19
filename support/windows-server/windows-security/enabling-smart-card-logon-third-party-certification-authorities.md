@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, slight
 ms.prod-support-area-path: Smart card logon
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Guidelines for enabling smart card logon with third-party certification authorities
 

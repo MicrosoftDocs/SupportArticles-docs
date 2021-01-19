@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, cbutch, v-jomcc
 ms.prod-support-area-path: System Hang
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # When you restart a computer, the computer stops responding, or the "Applying computer settings" screen appears for longer than you expect
 

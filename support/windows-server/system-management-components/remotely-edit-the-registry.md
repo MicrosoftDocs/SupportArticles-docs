@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Microsoft Management Console (MMC)
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # How to remotely edit the registry of a client computer from a host computer after you use Remote Recover to connect the host computer to the client computer
 

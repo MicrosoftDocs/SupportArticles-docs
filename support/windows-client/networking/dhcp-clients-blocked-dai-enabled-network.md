@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, saweng, greglin, arrenc, ajayps
 ms.prod-support-area-path: Dynamic Host Configuration Protocol (DHCP)
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # DHCP clients are blocked when a DAI-enabled network device is used with a DHCP failover in Windows Server 2012 R2
 

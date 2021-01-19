@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevemat, davidg, johnmar  
 ms.prod-support-area-path: High availability virtual machines
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # MAC address changes for virtual server during a failover with clustering
 

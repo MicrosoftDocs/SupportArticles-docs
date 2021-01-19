@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, sashalon
 ms.prod-support-area-path: DPI and Display Issues
-ms.technology: ShellExperience
+ms.technology: windows-server-shell-experience
 ---
 # The DPI adjustment isn't available in a Remote Session (RDP)
 

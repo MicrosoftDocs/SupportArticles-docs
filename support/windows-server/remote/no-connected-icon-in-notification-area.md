@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: RDWeb
-ms.technology: RDS  
+ms.technology: windows-server-rds  
 ---
 # The "Connected" icon doesn't appear in the notification area when you connect to a remote application by using Remote Desktop Web Access
 

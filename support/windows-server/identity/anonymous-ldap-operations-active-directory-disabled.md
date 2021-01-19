@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory Lightweight Directory Services (AD LDS) and Active Directory Application Mode (ADAM)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Anonymous LDAP operations to Active Directory are disabled on domain controllers
 

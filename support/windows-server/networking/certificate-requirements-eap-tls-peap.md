@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: RADIUS - Network Policy Server (NPS) or Internet Authentication Service (IAS)
-ms.technology: Networking
+ms.technology: networking
 ---
 # Certificate requirements when you use EAP-TLS or PEAP with EAP-TLS
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Managing Internet Explorer settings through Group Policy
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # How to use Group Policy to control access to web sites
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # You receive a 80072EE6 error code when you download an update from Windows Server Update Services in Windows 7-based or Windows Server 2008 R2-based computer
 

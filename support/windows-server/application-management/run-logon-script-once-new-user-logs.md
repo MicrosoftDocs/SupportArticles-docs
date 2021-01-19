@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, BOBQIN
 ms.prod-support-area-path: Windows Script Host (CScript or WScript)
-ms.technology: ApplicationCompatibility
+ms.technology: windows-server-application-compatibility
 ---
 # How to run a logon script one time when a new user logs on in Windows Server 2003
 

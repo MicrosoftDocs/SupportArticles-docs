@@ -10,9 +10,9 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: ApplicationCompatibility
+ms.technology: windows-client-application-compatibility
 ---
-# Application Management documentation
+# Application Management documentation for Windows clients
 
 The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve Application Management-related issues. The topics are divided into subcategories. Browse the content or use the search feature to find relevant content.
 

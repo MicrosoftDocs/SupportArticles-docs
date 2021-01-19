@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Storage Spaces
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # How to extend stand-alone tiered storage spaces
 

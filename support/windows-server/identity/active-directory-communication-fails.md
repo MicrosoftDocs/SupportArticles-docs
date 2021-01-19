@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: smondal, kaushika
 ms.prod-support-area-path: Active Directory database issues and domain controller boot failures
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Active Directory communication fails on multihomed domain controllers
 

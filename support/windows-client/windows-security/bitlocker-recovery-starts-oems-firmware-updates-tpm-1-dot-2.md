@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: BitLocker
-ms.technology: WindowsSecurity
+ms.technology: windows-client-security
 ---
 # BitLocker Recovery starts when OEMs perform firmware updates for TPM 1.2
 

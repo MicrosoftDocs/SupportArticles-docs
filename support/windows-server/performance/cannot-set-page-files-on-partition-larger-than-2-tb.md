@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: adityah, kaushika
 ms.prod-support-area-path: Applications
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # You cannot set page files on a partition that is larger than 2 terabytes
 

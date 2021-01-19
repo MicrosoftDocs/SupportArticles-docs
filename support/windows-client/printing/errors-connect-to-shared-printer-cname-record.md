@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: 'Management and Configuration: General issues'
-ms.technology: PrintFaxScan
+ms.technology: windows-client-printing
 ---
 # Errors when you connect to a shared printer by using a CNAME record
 

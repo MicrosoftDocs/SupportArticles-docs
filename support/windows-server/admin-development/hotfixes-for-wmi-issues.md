@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Windows Management Instrumentation (WMI)
-ms.technology: WindowsAdministrationManagementDevelopment
+ms.technology: windows-server-administration-management-development
 ---
 # Suggested hotfixes for WMI related issue on Windows platforms
 

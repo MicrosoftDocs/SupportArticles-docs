@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, arichard, kimnich
 ms.prod-support-area-path: File Explorer/Windows Explorer
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # Support for Whitespace characters in File and Folder names for Windows 8, Windows RT and Windows Server 2012
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Backup and restore of virtual machines
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Error 0x80070005 when you export Hyper-V VMs over the Network
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rmartin
 ms.prod-support-area-path: Configuring and using Backup software
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Access is denied when you run a batch job on a Windows Server 2003-based computer
 

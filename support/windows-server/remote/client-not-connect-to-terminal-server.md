@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mikeres
 ms.prod-support-area-path: Authentication
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Because of a security error, the client could not connect to the Terminal server
 

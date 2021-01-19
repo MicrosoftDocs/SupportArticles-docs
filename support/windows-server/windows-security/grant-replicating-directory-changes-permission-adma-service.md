@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dweiss
 ms.prod-support-area-path: Permissions, access control, and auditing
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # How to grant the "Replicating Directory Changes" permission for the Microsoft Metadirectory Services ADMA service account
 

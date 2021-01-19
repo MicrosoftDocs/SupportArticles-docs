@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Legacy authentication (NTLM)
-ms.technology: WindowsSecurity 
+ms.technology: windows-server-security 
 ---
 # Audit use of NTLMv1 on a Windows Server-based domain controller
 

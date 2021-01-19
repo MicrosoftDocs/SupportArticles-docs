@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Cluster service fails to start
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Cluster Service Stops Responding on a Cluster Node When You Restart the Active Node
 

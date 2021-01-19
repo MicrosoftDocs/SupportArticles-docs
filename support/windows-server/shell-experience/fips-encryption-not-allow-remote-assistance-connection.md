@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Remote Assistance
-ms.technology: ShellExperience
+ms.technology: windows-server-shell-experience
 ---
 # Remote Assistance connection to Windows Server with FIPS encryption does not work
 

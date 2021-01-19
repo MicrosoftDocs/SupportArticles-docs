@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.prod-support-area-path: Management and Configuration Installing Print drivers
-ms.technology: PrintFaxScan
+ms.technology: windows-client-printing
 ---
 # Print driver default settings are not inherited through "Point and Print" in Windows 10 Version 1709
 

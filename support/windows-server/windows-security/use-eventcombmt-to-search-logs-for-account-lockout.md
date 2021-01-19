@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mikeres
 ms.prod-support-area-path: Account lockouts
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # How to use the EventCombMT utility to search event logs for account lockouts
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, prvijay
 ms.prod-support-area-path: Hyper-V Replica
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Feature and performance optimization of Hyper-V Replica (HVR)
 

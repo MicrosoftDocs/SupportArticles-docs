@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: networking
 ---
 # IP address and default gateway settings are assigned incorrectly in Windows Vista, in Windows Server 2008, in Windows 7, and in Windows Server 2008 R2
 

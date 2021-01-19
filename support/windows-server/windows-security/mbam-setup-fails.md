@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: manojse, hisingh, avicar, kaushika
 ms.prod-support-area-path: Bitlocker
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # MBAM Setup fails if SQL SSRS is not configured properly
 

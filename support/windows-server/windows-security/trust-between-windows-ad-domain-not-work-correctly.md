@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: slight, kaushika
 ms.prod-support-area-path: Domain and forest trusts
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Trust between a Windows NT domain and an Active Directory domain can't be established or it doesn't work as expected
 

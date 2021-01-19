@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Lock Screen or Screensaver 
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # Lock screen isn't displayed when you resume a Windows 10-based computer
 

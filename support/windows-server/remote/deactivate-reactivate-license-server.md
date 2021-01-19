@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Remote Desktop Services (Terminal Services) licensing
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Deactivate or reactivate a license server by using Terminal Services Licensing
 

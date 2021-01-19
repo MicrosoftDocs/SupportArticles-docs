@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, tode, tonyga
 ms.prod-support-area-path: Web Application Proxy (WAP) role service
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Using authenticated proxy servers together with Windows 8
 

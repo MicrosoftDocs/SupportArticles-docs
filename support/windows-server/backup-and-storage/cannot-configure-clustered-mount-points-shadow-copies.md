@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: eldenc, kaushika
 ms.prod-support-area-path: Configuring and using Backup software
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # 0x80042306 error occurs when configuring shadow copies for clustered mount points on another drive in Windows Server 2012
 

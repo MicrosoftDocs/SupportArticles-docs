@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, PATCH
 ms.prod-support-area-path: Active Directory FSMO
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Users can't sign in to the domain after password changes on a Remote Domain Controller
 

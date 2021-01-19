@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory FSMO
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Password change and conflict resolution functionality in Windows
 

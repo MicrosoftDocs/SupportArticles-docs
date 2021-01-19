@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
 ms.prod-support-area-path: RDWeb
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # You cannot view "RemoteApp" programs on an RD Session Host server by using RD Web Access
 

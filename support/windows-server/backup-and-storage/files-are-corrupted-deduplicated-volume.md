@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Deduplication
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Files are corrupted on deduplicated volumes that were created as NTFS-compressed
 

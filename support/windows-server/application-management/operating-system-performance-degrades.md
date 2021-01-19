@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, raackley
 ms.prod-support-area-path: COM and DCOM programming
-ms.technology: ApplicationCompatibility
+ms.technology: windows-server-application-compatibility
 ---
 # Performance degrades when you access large files with FILE_FLAG_RANDOM_ACCESS
 

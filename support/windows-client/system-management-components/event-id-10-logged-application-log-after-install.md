@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, chwall
 ms.prod-support-area-path: WMI
-ms.technology: SysManagementComponents
+ms.technology: windows-client-system-management-components
 ---
 # Event ID 10 is logged in the Application log
 

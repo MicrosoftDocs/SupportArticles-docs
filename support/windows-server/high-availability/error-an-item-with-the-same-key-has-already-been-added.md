@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Errors when running the Validation Wizard
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Error: "An item with the same key has already been added"
 

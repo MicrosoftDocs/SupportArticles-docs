@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, MHUNTER, dhook
 ms.prod-support-area-path: Active Directory FSMO
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How To Find Servers That Hold Flexible Single Master Operations Roles
 

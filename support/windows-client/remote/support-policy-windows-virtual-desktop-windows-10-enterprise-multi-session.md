@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jerrycif, v-tea, v-jesits
 ms.prod-support-area-path: Virtual Desktop Infrastructure (VDI)
-ms.technology: RDS
+ms.technology: windows-client-rds
 ---
 # Support policy for Windows Virtual Desktop and Windows 10 Enterprise multi-session
 

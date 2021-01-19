@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevenek, rspitz
 ms.prod-support-area-path: Initial Cluster Creation or Adding node
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Error message "Provider load failure" when you try to add a node to a Windows Server 2008-based Failover Cluster
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, cenki, v-jesits
 ms.prod-support-area-path: DST and Timezones
-ms.technology: ShellExperience
+ms.technology: windows-server-shell-experience
 ---
 # The default date format is changed in Windows 8 and Windows Server 2012
 
