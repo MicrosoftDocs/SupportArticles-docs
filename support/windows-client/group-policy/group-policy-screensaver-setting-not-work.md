@@ -1,5 +1,5 @@
 ---
-title: Win7/W2k8 R2 Group Policy Screensaver setting isn't working
+title: Windows 7/Windows Server 2008 R2 Group Policy Screensaver setting isn't working
 description: Fixes an issue where the Screensaver doesn't start after a Group Policy is configured to enable it in Windows 7 and Windows Server 2008 R2.
 ms.date: 09/14/2020
 author: Deland-Han
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
 ms.technology: GroupPolicy
 ---
-# Win7/W2k8 R2 Group Policy Screensaver setting isn't working
+# Windows 7/Windows Server 2008 R2 Group Policy Screensaver setting isn't working
 
 This article helps work around an issue where the Screensaver doesn't start after a Group Policy is configured to enable it in Windows 7 and Windows Server 2008 R2.
 
@@ -24,12 +24,9 @@ _Original KB number:_ &nbsp;2616727
 
 A Group Policy is configured to enable Screensaver:
 
-User Configuration\Administrative Templates\Control Panel\Personalization\  
- Enable screen saver 
+User Configuration\\Administrative Templates\\Control Panel\\Personalization\\Enable screen saver
 
-but there's no setting defining a ScreenSaverTimeout configured in:
-
-Screen saver timeout 
+But there's no setting defining a ScreenSaverTimeout configured in Screen saver timeout.
 
 The Screensaver won't start in such a configuration by default.
 
@@ -37,46 +34,39 @@ The Screensaver won't start in such a configuration by default.
 
 The default ScreenSaver Timeout is configured in the registry at this location:
 
-HKEY_CURRENT_USER\Control Panel\Desktop  
-Reg_SZ ScreenSaveTimeOut
+- Registry subkey: `HKEY_CURRENT_USER\Control Panel\Desktop`  
+- Type: Reg_SZ
+- Name: ScreenSaveTimeOut
 
-Since Windows 7 / Windows Server 2008 R2, this key doesn't exist by default.
+Since Windows 7/Windows Server 2008 R2, this key doesn't exist by default.
 
 Without configuring a default timeout via Group Policy, the system doesn't have a timeout and therefore doesn't start the screensaver.
 
-## Resolution
+## Workaround
 
-There are two workarounds to solve this issue
+There are two workarounds to solve this issue.
 
-1) Configure a Default ScreenSaver Timeout using Group Policy
+- Configure a Default ScreenSaver Timeout using Group Policy:
 
-User Configuration\Administrative Templates\Control Panel\Personalization\
+    User Configuration\\Administrative Templates\\Control Panel\\Personalization\\
 
-Screen saver timeout
+    Screen saver timeout
 
-2) Use Group Policy Preferences to configure a new default value for
+- Use Group Policy Preferences to configure a new default value for the following registry key in a Group Policy applying to users:
 
-HKEY_CURRENT_USER\Control Panel\Desktop
+  - Registry subkey: HKEY_CURRENT_USER\\Control Panel\\Desktop
+  - Type: Reg_SZ
+  - Name: ScreenSaveTimeOut
 
-Reg_SZ  
-ScreenSaveTimeOut
+    User Configuration > Preferences > Windows Settings > Registry
 
-in a Group Policy applying to users.
+    New > Registry Item
 
-User Configuration => Preferences => Windows Settings => Registry
+  - Action: Create
+  - Hive: HKEY_CURRENT_USER
+  - Key Path: Control Panel\\Desktop
+  - Value Name: ScreenSaveTimeOut
+  - Value Type: REG_SZ
+  - Value Data: 600
 
-New => Registry Item
-
-Action: Create
-
-Hive: HKEY_CURRENT_USER
-
-Key Path: Control Panel\Desktop
-
-Value Name: ScreenSaveTimeOut
-
-Value Type: REG_SZ
-
-Value Data: 600
-
-Using Item Level Targeting (Common Tab of setting) the appliance of this setting can be restricted to systems running Windows 7 or Windows Server 2008 R2.
+    Using Item Level Targeting (Common Tab of setting) the appliance of this setting can be restricted to systems running Windows 7 or Windows Server 2008 R2.

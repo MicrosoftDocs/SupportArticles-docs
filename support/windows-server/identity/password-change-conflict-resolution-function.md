@@ -18,8 +18,7 @@ ms.technology: ActiveDirectory
 This article describes a new registry value that can be used by the administrator to control when the PDC is contacted, which can help reduce communication costs between sites.
 
 > [!IMPORTANT]
-> This article contains information about modifying the registry. Before you modify the registry, make sure to back it up and make sure that you understand how to restore the registry if a problem occurs. For information about how to back up, restore, and edit the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
-[256986](https://support.microsoft.com/help/256986) Description of the Microsoft Windows Registry  
+> This article contains information about modifying the registry. Before you modify the registry, make sure to back it up and make sure that you understand how to restore the registry if a problem occurs. For information about how to back up, restore, and edit the registry, see [Windows registry information for advanced users](/troubleshoot/windows-server/performance/windows-registry-advanced-users).
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;225511
@@ -35,19 +34,19 @@ By default, when a machine account password or user password is changed, or a do
 
 The following registry value can be modified to control Password Notification and Password Conflict Resolution as described below:
 
-HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters  
+`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters`  
 
-Registry value: AvoidPdcOnWan  
-Registry type: REG_DWORD  
-Registry value data: 0 (or value not present) or 1  
-0 or value not present = FALSE (to disable)  
-1 = TRUE (to enable)  
-Default: (value isn't present)  
-Platform: Only Windows 2000 domain controllers  
+- Registry value: AvoidPdcOnWan
+- Registry type: REG_DWORD
+- Registry value data: 0 (or value not present) or 1
+  - 0 or value not present = FALSE (to disable)
+  - 1 = TRUE (to enable)
+- Default: (value isn't present)
+- Platform: Only Windows 2000 domain controllers
 
 ### Password change notification
 
-By default, machine account password and user password changes are sent immediately to the PDC FSMO. In a mixed-mode domain, if a Microsoft Windows NT 4.0 domain controller receives the request, the client is sent to the PDC FSMO role owner (which must be a Windows 2000-based computer) to make the password change. This change is then replicated to other Windows 2000 domain controllers using Active Directory replication, and to down-level domain controllers through the down-level replication process. If a Windows 2000 domain controller receives the request (either in mixed or native mode), the password change is made locally, sent immediately to the PDC FSMO role owner using the Netlogon service in the form of a Remote Procedure Call (RPC), and the password change is then replicated to its partners using the Active Directory replication process. Down-level domain controllers replicate the change directly from the PDC FSMO role owner.
+By default, machine account password and user password changes are sent immediately to the PDC FSMO. In a mixed-mode domain, if a Windows NT 4.0 domain controller receives the request, the client is sent to the PDC FSMO role owner (which must be a Windows 2000-based computer) to make the password change. This change is then replicated to other Windows 2000 domain controllers using Active Directory replication, and to down-level domain controllers through the down-level replication process. If a Windows 2000 domain controller receives the request (either in mixed or native mode), the password change is made locally, sent immediately to the PDC FSMO role owner using the Netlogon service in the form of a Remote Procedure Call (RPC), and the password change is then replicated to its partners using the Active Directory replication process. Down-level domain controllers replicate the change directly from the PDC FSMO role owner.
 
 If the AvoidPdcOnWan value is set to TRUE and the PDC FSMO is located at another site, the password change isn't sent immediately to the PDC. However, it's notified of the change through normal Active Directory replication, which in turn replicates it to down-level domain controllers (if the domain is in mixed mode). If the PDC FSMO is at the same site, the AvoidPdcOnWan value is disregarded and the password change is immediately communicated to the PDC.
 
