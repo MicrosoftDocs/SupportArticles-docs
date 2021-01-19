@@ -11,7 +11,7 @@ ms.prod: sql
 
 This article helps you work around the problem that occurs when you perform a full-text search on SQL Server character data, or when you use a SQL distributed query with the Microsoft Index Server OLE DB provider (MSIDXS) and a prefix expansion search for a compound word that contains a hyphen (for example, XYZ-A*).
 
-_Applies to:_ &nbsp; Microsoft SQL Server  
+_Applies to:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 200043
 
 ## Symptoms
@@ -36,6 +36,6 @@ Microsoft SQL Server version 7.0 provides the ability to perform a full-text que
 
 ## References
 
-For more information on SQL Server full-text search, see the SQL Server Books Online.
+- For more information on SQL Server full-text search, see the SQL Server Books Online.
 
-For more information on the use of the CONTAINS clause with the Microsoft Index Server (MSIDXS) provider, see the Index Server documentation in the Windows NT 4.0 Option Pack documentation.
+- For more information on the use of the CONTAINS clause with the Microsoft Index Server (MSIDXS) provider, see the Index Server documentation in the Windows NT 4.0 Option Pack documentation.

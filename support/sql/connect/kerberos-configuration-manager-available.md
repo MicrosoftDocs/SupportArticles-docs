@@ -11,7 +11,7 @@ ms.prod: sql
 
 This article describes the Microsoft Kerberos Configuration Manager diagnostic tool for SQL Server.
 
-_Applies to:_ &nbsp; SQL Serve  
+_Applies to:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2985455
 
 ## About Kerberos Configuration Manager
@@ -69,8 +69,8 @@ For more information about Kerberos Configuration Manager, see the following:
     > To troubleshoot the connectivity issue with SSRS, start the command line window as administrator.
 
 1. Switch to the folder where **KerberosConfigMgr.exe** is.
-1. Type **KerberosConfigMgr.exe -q -l**.
-1. For more command-line option, type **KerberosConfigMgr.exe -h**.
+1. Type `KerberosConfigMgr.exe -q -l`.
+1. For more command-line option, type `KerberosConfigMgr.exe -h`.
 
 **To Save a Server's Kerberos Configuration Information:**
 
@@ -96,7 +96,7 @@ By default, one-log file is generated every time that the application is run in 
 **To Get Help:**  
 
 - Option 1: Hover the pointer over the command for tooltip.
-- Option 2: Run **KerberosConfigMgr.exe -h** from the command line.
+- Option 2: Run `KerberosConfigMgr.exe -h` from the command line.
 - Option 3: Click the **Help** button in the toolbar.
 
 ## Applies to

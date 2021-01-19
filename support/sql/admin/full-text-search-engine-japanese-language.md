@@ -11,7 +11,7 @@ ms.prod: sql
 
 This article describes the considerations that apply when you use the SQL Server Full-Text Search engine for the Japanese language.
 
-_Applies to:_ &nbsp; Microsoft SQL Server  
+_Applies to:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2252955
 
 ## Introduction
@@ -93,13 +93,13 @@ Then, you run the following three queries:
     9 RE: :::no-loc text="テストメール":::  
     10 :::no-loc text="テストメール":::
 
-From the results of the queries, you can find that the result of Query 2 is the same as the result of Query 3 because the Full-Text query does not work in the suffix-matching mode. Additionally, **:::no-loc text="テスト":::** is a token that differs from **:::no-loc text="ポリシーテスト":::** or from `White List` **:::no-loc text="テスト":::** in the matchings.
+    From the results of the queries, you can find that the result of Query 2 is the same as the result of Query 3 because the Full-Text query does not work in the suffix-matching mode. Additionally, **:::no-loc text="テスト":::** is a token that differs from **:::no-loc text="ポリシーテスト":::** or from `White-List` **:::no-loc text="テスト":::** in the matchings.
 
-To tokenize phrases, a word breaker for the language family must be used. Work breakers use spaces and other signs to recognize phrases. Therefore, some phrases cannot be recognized by the word breaker and cannot be searched by using Full-Text engine in the Japanese language. For more information about word breakers, see the **Word Breakers and Stemmers** topic in the **Reference** section.
+    To tokenize phrases, a word breaker for the language family must be used. Work breakers use spaces and other signs to recognize phrases. Therefore, some phrases cannot be recognized by the word breaker and cannot be searched by using Full-Text engine in the Japanese language. For more information about word breakers, see the **Word Breakers and Stemmers** topic in the **Reference** section.
 
-The best practice to use the Full-Text search engine in the Japanese language is to test the phrases to see whether the phrases are affected by the limitation. If a phrase consists of words without spaces, you cannot use the Full-Text functionality to search the phrase. Instead, you can use the LIKE keyword together with wildcard characters. However, the performance of the LIKE operation is lower than the performance of the Full-Text searching. You must consider the performance effect for your application.
+    The best practice to use the Full-Text search engine in the Japanese language is to test the phrases to see whether the phrases are affected by the limitation. If a phrase consists of words without spaces, you cannot use the Full-Text functionality to search the phrase. Instead, you can use the LIKE keyword together with wildcard characters. However, the performance of the `like` operation is lower than the performance of the Full-Text searching. You must consider the performance effect for your application.
 
-The following are some sample queries of the LIKE keyword to search for phrases.
+    The following are some sample queries of the `like` keyword to search for phrases.
 
 - Query 4
 
@@ -133,7 +133,7 @@ The following are some sample queries of the LIKE keyword to search for phrases.
     8 :::no-loc text="テスト":::テストフィルタ１  
     9 RE: :::no-loc text="テスト":::テストメール  
     10 :::no-loc text="テスト":::テストメール  
-    11 `White List` :::no-loc text="テスト":::  
+    11 `White-List` :::no-loc text="テスト":::  
     12 :::no-loc text="フィルタリングテスト":::
 
 > [!NOTE]

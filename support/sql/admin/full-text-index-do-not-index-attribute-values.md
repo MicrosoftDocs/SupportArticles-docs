@@ -43,8 +43,7 @@ Procedure to resolve the problem on SQL Servers running on Windows Server 2008 R
 
     For more information, see [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server).
 
-2. Edit *SQLMSSearch.reg* file with notepad and replace all occurrences of *xmlfilt.dll*  
-by `C:\Windows\system32\xmlfilter.dll` and then save the changes.
+2. Edit *SQLMSSearch.reg* file with notepad and replace all occurrences of *xmlfilt.dll* by `C:\Windows\system32\xmlfilter.dll` and then save the changes.
 
     > [!NOTE]
     > - This assumes your windows folder is located at `C:\Windows`.

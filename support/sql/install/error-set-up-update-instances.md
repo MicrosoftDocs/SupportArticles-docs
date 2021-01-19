@@ -7,7 +7,7 @@ ms.reviewer:
 ms.topic: troubleshooting
 ms.prod: sql 
 ---
-# Error (Attempted to perform an unauthorized operation) when you set up or update SQL Server instances
+# Attempted to perform an unauthorized operation error when you set up or update SQL Server instances
 
 This article helps you resolve the problem where setting up or updating SQL Server instances fails and returns an error message.
 

@@ -1,6 +1,6 @@
 ---
 title: Inconsistent results in MKL computations
-description: This article provides a resolution for the problem where you get inconsistent results because of a missing.
+description: This article provides a resolution for the problem where you get inconsistent results because of a missing environment variable.
 ms.date: 01/14/2021
 ms.prod-support-area-path: Machine Learning Services (in database)
 ms.topic: troubleshooting
@@ -8,7 +8,7 @@ ms.prod: sql
 ---
 # Inconsistent results in MKL computations because of a missing environment variable in Microsoft R Server or Machine Learning Server
 
-This article helps you resolve the problem where you get inconsistent results because of a missing.
+This article helps you resolve the problem where you get inconsistent results because of a missing environment variable.
 
 _Applies to:_ &nbsp; SQL Server 2017 on Windows, Microsoft Machine Learning Server (R Server)  
 _Original KB number:_ &nbsp; 4488257
@@ -19,9 +19,7 @@ When you run Microsoft R Server 9.0, 9.1, 9.2, 9.3.x, or Microsoft Machine Learn
 
 ## Cause
 
-This issue occurs because a new feature was added to the Intel MKL library that's included together with Microsoft R Server and SQL Server 2017. For more information about this feature, go to the following Intel website:
-
-- [Introduction to Conditional Numerical Reproducibility (CNR)](https://software.intel.com/content/www/us/en/develop/articles/introduction-to-the-conditional-numerical-reproducibility-cnr.html)
+This issue occurs because a new feature was added to the Intel MKL library that's included together with Microsoft R Server and SQL Server 2017. For more information about this feature, see [Introduction to Conditional Numerical Reproducibility (CNR)](https://software.intel.com/content/www/us/en/develop/articles/introduction-to-the-conditional-numerical-reproducibility-cnr.html)
 
 ## Resolution
 
@@ -38,7 +36,7 @@ To fix this issue, configure conditional numeric reproducibility in Microsoft R 
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
+Microsoft has confirmed that this is a problem in the Microsoft products.
 
 In future versions of Microsoft R Server, the **MKL_CBWR=AUTO** setting will be the default setting.
 
