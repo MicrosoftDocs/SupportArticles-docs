@@ -50,7 +50,7 @@ To enable Debug logging in Windows 7 only, follow these steps:
 
 Start Network Capture, and then reproduce the issue.
 
-### Enable Capi2 logging
+## Enable Capi2 logging
 
 For information about how to enable Capi2 logging, go to the following Microsoft website:
 
@@ -58,7 +58,7 @@ For information about how to enable Capi2 logging, go to the following Microsoft
 
 This enables verbose logging in **Applications and Services Logs/Microsoft/Windows/Capi2** in Event Viewer.
 
-### SSL certificate troubleshooting
+## SSL certificate troubleshooting
 
 To verify the Revocation Status against the certification authority (CA) database, run the following command:
 
@@ -69,7 +69,7 @@ Certutil.exe -isvalid <Serialnumber>
 > [!NOTE]
 > The \<Serialnumber> placeholder is the serial number of the certificate that you want to verify, in hexadecimal format.
 
-### Verify that a certificate was issued by a specific CA
+## Verify that a certificate was issued by a specific CA
 
 You can use the Certutil.exe tool to determine whether a certificate was issued by a specific CA. To verify the certificate, you must have the certificate that you want to verify and the CA certificate that you want to verify *against* as parameters. Use the following command syntax:
 

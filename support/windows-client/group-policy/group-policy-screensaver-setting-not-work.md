@@ -54,7 +54,7 @@ There are two workarounds to solve this issue.
 
 - Use Group Policy Preferences to configure a new default value for the following registry key in a Group Policy applying to users:
 
-  - Registry subkey: HKEY_CURRENT_USER\\Control Panel\\Desktop
+  - Registry subkey: `HKEY_CURRENT_USER\Control Panel\Desktop`
   - Type: Reg_SZ
   - Name: ScreenSaveTimeOut
 
@@ -63,8 +63,8 @@ There are two workarounds to solve this issue.
     New > Registry Item
 
   - Action: Create
-  - Hive: HKEY_CURRENT_USER
-  - Key Path: Control Panel\\Desktop
+  - Hive: `HKEY_CURRENT_USER`
+  - Key Path: `Control Panel\Desktop`
   - Value Name: ScreenSaveTimeOut
   - Value Type: REG_SZ
   - Value Data: 600
