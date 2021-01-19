@@ -46,11 +46,11 @@ Without configuring a default timeout via Group Policy, the system doesn't have 
 
 There are two workarounds to solve this issue.
 
-- Configure a Default ScreenSaver Timeout using Group Policy:
+- Configure the **Screen saver timeout** Group Policy under the following path to change the default ScreenSaver timeout:
 
     User Configuration\\Administrative Templates\\Control Panel\\Personalization\\
 
-    Screen saver timeout
+    
 
 - Use Group Policy Preferences to configure a new default value for the following registry key in a Group Policy applying to users:
 
