@@ -12,7 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.technology: windows-client-group-policy
 ---
-# Group Policy documentation for Windows clients
+# Group Policy troubleshooting documentation for Windows clients
 
 The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve Group Policy-related issues. The topics are divided into subcategories. Browse the content or use the search feature to find relevant content.
 

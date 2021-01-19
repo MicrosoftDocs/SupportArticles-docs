@@ -12,7 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.technology: windows-client-administration-management-development
 ---
-# Admin Development documentation for Windows clients
+# Admin Development troubleshooting documentation for Windows clients
 
 The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve Admin Development-related issues. Browse the content or use the search feature to find relevant content.
 

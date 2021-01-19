@@ -12,7 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.technology: windows-server-administration-management-development
 ---
-# Admin Development documentation for Windows Server
+# Admin Development troubleshooting documentation for Windows Server
 
 The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve Admin Development-related issues. The topics are divided into subcategories. Browse the content or use the search feature to find relevant content.
 

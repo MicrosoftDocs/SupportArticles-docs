@@ -94,6 +94,8 @@
       href: ./application-management/change-registry-values-permissions.md
 - name: App-V
   items:
+  - name: App-V
+    href: ./app-v/app-v-overview.md
   - name: Administration
     items:
     - name: Launch processes inside the App-V 5.0 virtualized environment
