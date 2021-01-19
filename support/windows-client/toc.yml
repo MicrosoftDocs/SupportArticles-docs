@@ -735,7 +735,7 @@
 - name: 'Printing '
   items:
   - name: 'Printing '
-    href: ./printing/printing--overview.md
+    href: ./printing/printing-overview.md
   - name: 'Errors and troubleshooting: General issues'
     items:
     - name: Can't install a Secure WSD printer from Print Management Console

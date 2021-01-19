@@ -18,6 +18,7 @@ ms.technology: windows-troubleshooters
 This article provides a list of active and retired troubleshooters for Windows 10, including a description of what the troubleshooter does, the problem that it addresses, and which devices it applies to. To learn more about troubleshooters, see [keep your device running smoothly with recommended troubleshooting](https://support.microsoft.com/help/4487232/).
 
 ## Files On-Demand troubleshooter
+
 Text displayed in Settings:  
 You may have lost access to your Files On-Demand. This troubleshooter restores access or prevents the loss of access from happening in the near future. Important: Please reboot your device once the troubleshooter is finished.
 
@@ -33,7 +34,7 @@ Devices that successfully ran the "Hardware and Devices" troubleshooter will be 
 
 ## Hardware and Devices troubleshooter
 
-Text displayed in Settings:
+Text displayed in Settings:  
 Automatically repair system files and settings to fix a problem on your device.
 
 ### Description
@@ -44,7 +45,6 @@ This troubleshooter runs automatically on devices that meet the following criter
 
 - Runs on Windows 10, version 2004
 - Uses a Cloud files filter (OneDrive, iCloud, Workfolders)
-
 
 |Activation date|Retirement date|More information|
 |---|---|---|
