@@ -627,7 +627,7 @@
           href: ../installation/error-run-office-setup-program.md
         - name: How to download and run Office 2019 installation files not in VLSC
           href: ../installation/how-to-download-office-install-not-in-vlsc.md
-        - name: Information about the deprecated ODT attributes ForceUpgrade and ForceDowngrade
+        - name: ForceUpgrade and ForceDowngrade attributes
           href: ../installation/forceupgrade-forcedowngrade-removed-odt-config.md
         - name: Install Office Pro 2013 on a Terminal Server
           href: ../installation/install-and-activate-office-2013.md
