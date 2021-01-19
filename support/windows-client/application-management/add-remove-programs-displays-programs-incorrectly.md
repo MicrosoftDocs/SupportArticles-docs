@@ -17,7 +17,7 @@ ms.technology: ApplicationCompatibility
 
 This article provides a solution to an issue where the **Add/Remove Programs** tool in Control Panel displays installed programs incorrectly.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Original product version:_ &nbsp; Windows XP  
 _Original KB number:_ &nbsp; 266668
 
 ## Symptoms
@@ -223,7 +223,3 @@ Set to 0 when ARP exits.
     Read to determine if a restart is required after running setup.
 Presence of value means must-reboot == true.
 - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\MS-DOSOptions`
-
-#### Did this fix the problem
-
-Check whether the problem is fixed. If the problem is fixed, you are finished with this section. If the problem is not fixed, you can [contact support](https://support.microsoft.com/contactus/).
