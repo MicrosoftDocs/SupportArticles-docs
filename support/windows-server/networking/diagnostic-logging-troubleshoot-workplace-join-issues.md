@@ -15,14 +15,10 @@ ms.technology: Networking
 ---
 # Diagnostic logging for troubleshooting Workplace Join issues
 
-This article describes how to troubleshoot Workplace Join issues by collecting and reviewing log information through Event Viewer.
+This article describes how to collect diagnostic logs for troubleshooting Workplace Join issues.
 
 _Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3045377
-
-## Summary
-
-To troubleshoot Workplace Join issues, collect and then review the log information.
 
 ## Enable Workplace Join Debug logging by using Event Viewer
 
