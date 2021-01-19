@@ -129,6 +129,8 @@
     href: installation-configuration-wizard-errors.md
   - name: Troubleshoot Azure AD Connect installation issues
     href: installation-issues.md
+  - name: Troubleshoot Azure AD Connect objects and attributes
+    href: troubleshoot-aad-connect-objects-attributes.md
   - name: Troubleshoot password sync issues
     href: troubleshoot-pwd-sync.md
   - name: Unable to add subdomain
