@@ -280,6 +280,8 @@
     href: cannot-load-help-and-support-blade.md
   - name: Intune account portal retired
     href: intune-account-portal-retired.md
+  - name: Script error during Intune setup process
+    href: script-error-intune-setup.md  
   - name: Set the MDM authority
     href: set-mdm-authority.md
   - name: Things to try before calling Intune support
