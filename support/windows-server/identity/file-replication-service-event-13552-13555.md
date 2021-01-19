@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, skushida, v-ivz, shinicht, torumi
 ms.prod-support-area-path: Active Directory backup, restore, or disaster recovery
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Event ID 13552 and 13555 are logged in the File Replication Service log on a Windows-based domain controller
 

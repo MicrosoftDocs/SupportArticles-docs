@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Windows Security documentation
 

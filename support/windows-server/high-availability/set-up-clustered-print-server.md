@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: eldenc, kaushika
 ms.prod-support-area-path: Print clusters and High Availability Printing
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # How to set up a clustered print server
 

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Backup and Storage documentation
 

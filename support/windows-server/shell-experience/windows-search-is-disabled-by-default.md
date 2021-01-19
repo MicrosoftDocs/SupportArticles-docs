@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Cortana and Search
-ms.technology: ShellExperience
+ms.technology: windows-server-shell-experience
 ---
 # Windows Search is disabled by default in Windows Server 2016
 

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: PrintFaxScan
+ms.technology: windows-server-printing
 ---
 # Printing documentation
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, leons, v-srisan
 ms.prod-support-area-path: Integration components
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # The VMBus device doesn't load on a virtual machine that is running on a computer that has Hyper-V installed
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jdickson
 ms.prod-support-area-path: (Management and Configuration) Installing Print drivers
-ms.technology: PrintFaxScan
+ms.technology: windows-server-printing
 ---
 # You experience Print Spooler error messages after you install or upgrade a Third-Party print driver
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Load Balancing and Connection Broker
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Remote Desktop Services role cannot coexist with AD DS role
 

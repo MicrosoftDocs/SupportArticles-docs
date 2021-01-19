@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Remote Desktop Services documentation
 

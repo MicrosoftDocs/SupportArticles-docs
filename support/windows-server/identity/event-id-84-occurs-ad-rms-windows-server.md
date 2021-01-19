@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, kakojima, kmasudo, kewaka, slight
 ms.prod-support-area-path: Active Directory Rights Management Services
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Event ID 84 occurs in Active Directory Rights Management Services (AD RMS) in Windows Server
 

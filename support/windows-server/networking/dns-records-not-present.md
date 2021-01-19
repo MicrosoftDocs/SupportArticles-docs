@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DNS
-ms.technology: Networking  
+ms.technology: networking  
 ---
 # Cumulative list of reasons that cause DNS records to disappear from DNS zones
 

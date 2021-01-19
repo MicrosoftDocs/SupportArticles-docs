@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, gbrag, lindakup, stevepar, arrenc, v-jeffbo
 ms.prod-support-area-path: WMI
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # New WMI arbitrator behavior in Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, JEFFWADE, ScottMca
 ms.prod-support-area-path: Event System
-ms.technology: ApplicationCompatibility
+ms.technology: windows-server-application-compatibility
 ---
 # Description of the Shutdown Event Tracker
 

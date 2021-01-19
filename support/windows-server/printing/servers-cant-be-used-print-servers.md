@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: 'Management and Configuration: General issues'
-ms.technology: PrintFaxScan
+ms.technology: windows-server-printing
 ---
 # Servers in a NLB failover cluster can't be used as print servers in Windows Server 2012 R2
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jeffhugh
 ms.prod-support-area-path: Cannot bring a resource online
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # A Cluster Disk Resource May Fail to Come Online and Run ChkDsk when an Invalid Character is used in the Resource Name
 

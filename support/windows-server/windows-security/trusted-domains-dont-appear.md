@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Domain and forest trusts
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Trusted domains don't appear in the Available List for domain logon or setting security permissions
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: arrenc, herbertm, warrenw, kaushika, joscon
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Domain Controllers in-place upgrade hangs at black screen
 

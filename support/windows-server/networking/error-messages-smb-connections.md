@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, joelch
 ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace) 
-ms.technology: Networking
+ms.technology: networking
 ---
 # System error 2148073478, extended error, or Invalid Signature error message on SMB connections in Windows Server 2012 or Windows 8
 

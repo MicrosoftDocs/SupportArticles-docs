@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
 ms.prod-support-area-path: Virtual Switch Manager (vmswitch)
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Network connectivity is lost on Hyper-V VMs if VMQ feature is enabled on HOST network cards
 

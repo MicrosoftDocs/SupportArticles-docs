@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, shenry, yuqinwu
 ms.prod-support-area-path: Performance (audio and video) and RemoteFX
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Frame rate is limited to 30 FPS in Windows 8 and Windows Server 2012 remote sessions
 

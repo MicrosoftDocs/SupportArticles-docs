@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jtierney
 ms.prod-support-area-path: iSCSI
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # The Microsoft iSCSI Initiator may fail to log in to Favorite Targets after the Initiator Name is changed on Windows Server 2008 and 2008 R2 or Windows 7
 

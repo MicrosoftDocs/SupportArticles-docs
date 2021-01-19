@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Integration components
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # The uptime value of the Hyper-V Management console changes to the resume time of the last pause
 

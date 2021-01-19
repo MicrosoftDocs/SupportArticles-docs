@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Randym
 ms.prod-support-area-path: Authentication
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Terminal Services client connection error 0xC000035B when you use LmCompatibility
 

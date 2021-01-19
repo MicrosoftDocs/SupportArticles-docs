@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ryhayash, v-jesits
 ms.prod-support-area-path: Integration components
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Event ID 4096 (Microsoft-Windows-Hyper-V-Integration-KvpExchange) is logged
 
