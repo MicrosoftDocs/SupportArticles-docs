@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: WindowsAdministrationManagementDevelopment
+ms.technology: windows-client-administration-management-development
 ---
 # Admin Development documentation
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, mapalko, v-tea
 ms.prod-support-area-path: Blue Screen/Bugcheck
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 # Stop error on Lenovo ThinkPad that has KB4568831 or a later update and Enhanced Windows Biometric Security enabled in UEFI
 

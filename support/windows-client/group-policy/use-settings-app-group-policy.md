@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Group Policy management - GPMC or AGPM
-ms.technology: GroupPolicy
+ms.technology: windows-client-group-policy
 ---
 # Use the Settings app Group Policy in Windows 10
 

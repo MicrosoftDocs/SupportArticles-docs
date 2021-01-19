@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Deployment documentation
 

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # Shell Experience documentation
 

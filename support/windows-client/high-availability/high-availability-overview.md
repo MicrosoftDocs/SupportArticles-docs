@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: HighAvailability
+ms.technology: windows-client-high-availability
 ---
 # High Availability documentation
 

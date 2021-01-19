@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, tode
 ms.prod-support-area-path: Remote access
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Change the default maximum transmission unit (MTU) size settings for PPP connections or for VPN connections
 

@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: ApplicationCompatibility
+ms.technology: windows-client-application-compatibility
 ---
 # Application Management documentation
 

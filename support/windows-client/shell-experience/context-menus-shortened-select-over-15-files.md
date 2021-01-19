@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: File Explorer/Windows Explorer
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # Context menus are shortened when more than 15 files are selected
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Power Management
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Devices connected through a Thunderbolt Dock stop working after the computer resumes from the S5 power state
 

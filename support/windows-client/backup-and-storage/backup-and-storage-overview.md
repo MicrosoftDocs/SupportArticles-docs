@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: BackupStorage
+ms.technology: windows-client-backup-and-storage
 ---
 # Backup and Storage documentation
 

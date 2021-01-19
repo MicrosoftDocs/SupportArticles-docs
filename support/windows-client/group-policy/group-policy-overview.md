@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: GroupPolicy
+ms.technology: windows-client-group-policy
 ---
 # Group Policy documentation
 

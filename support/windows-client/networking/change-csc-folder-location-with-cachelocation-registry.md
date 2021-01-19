@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-dehaas, waltere, lseri 
 ms.prod-support-area-path: Folder redirection and Offline Files and Folders (CSC)
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # How to change the location of the CSC folder by configuring the CacheLocation registry value in Windows
 

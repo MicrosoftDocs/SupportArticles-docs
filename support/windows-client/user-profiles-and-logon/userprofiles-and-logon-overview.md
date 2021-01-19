@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-client-user-profiles
 ---
 # UserProfiles and Logon documentation
 

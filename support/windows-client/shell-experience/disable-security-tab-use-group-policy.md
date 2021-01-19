@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: timtho, kaushika
 ms.prod-support-area-path: File Explorer/Windows Explorer
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # How to remove the Security tab by using a group policy  
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Issues with Scanning
-ms.technology: PrintFaxScan
+ms.technology: windows-client-printing
 ---
 # Scanning using a scanner may cause a TWAIN aware application to hang
 
