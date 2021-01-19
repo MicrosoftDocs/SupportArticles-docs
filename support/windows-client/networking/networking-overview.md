@@ -1,6 +1,6 @@
 ---
 title: Networking overview
-description: Overview of Networking troubleshooting articles for Windows clients.
+description: Overview of Windows clients networking troubleshooting articles.
 ms.date: 11/09/2020
 author: Deland-Han
 ms.author: delhan
@@ -12,7 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.technology: windows-client-networking
 ---
-# Networking troubleshooting documentation for Windows clients
+# Windows clients networking troubleshooting documentation
 
 The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve Networking-related issues. The topics are divided into subcategories. Browse the content or use the search feature to find relevant content.
 
