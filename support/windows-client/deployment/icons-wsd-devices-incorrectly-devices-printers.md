@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Icons for WSD devices may show up incorrectly as a different class under Devices and Printers
 

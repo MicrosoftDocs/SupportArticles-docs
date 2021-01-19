@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevenek
 ms.prod-support-area-path: Setup and configuration of clustered services and applications
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Microsoft support policy for Windows server failover clusters
 

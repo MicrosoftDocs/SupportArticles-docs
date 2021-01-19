@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jwojan
 ms.prod-support-area-path: Event System
-ms.technology: ApplicationCompatibility
+ms.technology: windows-server-application-compatibility
 ---
 # How to move Event Viewer log files to another location
 

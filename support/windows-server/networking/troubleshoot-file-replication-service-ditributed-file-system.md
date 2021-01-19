@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: FRS
-ms.technology: Networking
+ms.technology: networking
 ---
 # Troubleshoot the File Replication Service and the Distributed File System
 

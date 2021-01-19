@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: 'Management and Configuration: Installing Print drivers'
-ms.technology: PrintFaxScan
+ms.technology: windows-server-printing
 ---
 # How to install and configure a file and print server
 

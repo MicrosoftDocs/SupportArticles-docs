@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, kajain
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # Group policy with WMI filters can be denied or cause slow logon/boot
 

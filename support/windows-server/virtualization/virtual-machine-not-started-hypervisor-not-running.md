@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: stevenxu, kaushika
 ms.prod-support-area-path: Virtual machine will not boot
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Error in Windows Server 2008 or Windows Server 2008 R2: Virtual machine could not start because the hypervisor is not running
 

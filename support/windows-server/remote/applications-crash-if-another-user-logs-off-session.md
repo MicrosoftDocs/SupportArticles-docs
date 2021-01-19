@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Remote desktop sessions
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Applications crash or become unresponsive if another user logs off a Remote Desktop session in Windows Server 2012/R2 or Windows Server 2008/R2
 

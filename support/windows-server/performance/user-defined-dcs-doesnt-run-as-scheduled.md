@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Kerberos authentication
-ms.technology: performance
+ms.technology: windows-server-performance
 ---
 
 # User-defined data collector set doesn't run as scheduled

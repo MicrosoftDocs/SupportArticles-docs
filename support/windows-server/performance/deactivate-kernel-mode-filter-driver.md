@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, WalterE
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # How to temporarily deactivate the kernel mode filter driver in Windows
 

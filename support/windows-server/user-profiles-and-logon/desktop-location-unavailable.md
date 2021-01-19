@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
 ms.prod-support-area-path: User profiles
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-server-user-profiles
 ---
 # Error occurs during desktop setup and desktop location is unavailable when you log on to Windows for the first time
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
 ms.prod-support-area-path: No Boot (not BugChecks)
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 # Invalid Boot File Received Error Message When PXE booting from WDS
 

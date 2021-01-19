@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, slight
 ms.prod-support-area-path: Active Directory Certificate Services
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # A Certification Authority can't use a certificate template
 

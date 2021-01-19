@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, ddobyns
 ms.prod-support-area-path: Wireless networking and 802.1X authentication
-ms.technology: Networking 
+ms.technology: windows-client-networking 
 ---
 # OpenGL applications do not run on a Miracast wireless display in Windows 10
 

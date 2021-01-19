@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Printing (includes redirection)
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Windows Server printer redirection isn't working
 

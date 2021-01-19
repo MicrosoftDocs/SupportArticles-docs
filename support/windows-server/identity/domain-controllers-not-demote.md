@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: arrenc, kaushika
 ms.prod-support-area-path: DCPromo and the installation of domain controllers
-ms.technology: ActiveDirectory 
+ms.technology: windows-server-active-directory 
 ---
 # Domain controllers do not demote gracefully when you use the Active Directory Installation Wizard to force demotion
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Permissions, access control, and auditing
-ms.technology: WindowsSecurity
+ms.technology: windows-client-security
 ---
 # How permissions are handled when you copy and move files and folders
 

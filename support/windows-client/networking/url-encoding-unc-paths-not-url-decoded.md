@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, tonyga, ajayps, v-jeffbo
 ms.prod-support-area-path: DNS
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # URI-encoding in UNC paths interpreted literally in Windows 10, version 1803 and later
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, aanandr
 ms.prod-support-area-path: Remote access
-ms.technology: Networking
+ms.technology: networking
 ---
 # The Routing and Remote Access service doesn't start in Windows 7 or in Windows Server 2008 R2 when there's no network connectivity
 

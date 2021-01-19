@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, raackley
 ms.prod-support-area-path: Applications
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Copying .EXE files may result in a sharing violation error - Folder In Use
 

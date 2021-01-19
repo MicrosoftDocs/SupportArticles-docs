@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Cannot bring a resource online
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # A physical disk resource may not come online on a cluster node
 

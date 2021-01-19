@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # How to use or reference the Usbser.sys driver from universal serial bus (USB) modem .inf files
 

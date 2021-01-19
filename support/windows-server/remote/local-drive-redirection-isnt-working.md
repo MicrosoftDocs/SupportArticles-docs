@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Remote desktop sessions
-ms.technology: RDS
+ms.technology: windows-server-rds
 --- 
 # Local drive redirection isn't working in RDP Session
 

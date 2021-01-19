@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DPI and Display Issues
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # Custom display settings may revert to default display settings after you install a Windows Vista Service Pack on a computer that uses multiple monitors
 

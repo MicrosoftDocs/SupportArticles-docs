@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Nested Virtualization
-ms.technology: HighAvailability
+ms.technology: windows-client-high-availability
 ---
 # How to retrieve data from a Windows XP Mode virtual machine on Windows 8 or Windows 10
 

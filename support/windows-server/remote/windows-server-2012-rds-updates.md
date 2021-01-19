@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Available updates for Remote Desktop Services
 

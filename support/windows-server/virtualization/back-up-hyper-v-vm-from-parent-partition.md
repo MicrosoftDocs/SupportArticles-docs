@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
 ms.prod-support-area-path: Backup and restore of virtual machines
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # How to back up Hyper-V virtual machines from the parent partition on a Windows Server 2008-based computer by using Windows Server Backup
 

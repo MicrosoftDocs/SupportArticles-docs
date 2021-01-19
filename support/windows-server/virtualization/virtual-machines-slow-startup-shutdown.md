@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
 ms.prod-support-area-path: Configuration of virtual machine settings
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Hyper-V Virtual Machines Exhibit Slow Startup and Shutdown
 

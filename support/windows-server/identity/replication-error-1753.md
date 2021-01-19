@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory  
+ms.technology: windows-server-active-directory  
 ---
 # Active Directory Replication Error 1753: There are no more endpoints available from the endpoint mapper
 

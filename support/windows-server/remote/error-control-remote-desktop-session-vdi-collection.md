@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: rkiran, jerrycif, kaushika
 ms.prod-support-area-path: Virtual Desktop Infrastructure (VDI)
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Error message when you try to shadow a remote session in Windows Server 2012 R2: This computer name is invalid
 

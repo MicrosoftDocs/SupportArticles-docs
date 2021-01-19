@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: klausu, kaushika
 ms.prod-support-area-path: Remote Desktop Services (Terminal Services) licensing
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # W2k8 R2: Administrator on RDSH gets error in Licensing Diagnosis: Licenses are not available for this Remote Desktop Session Host server
 

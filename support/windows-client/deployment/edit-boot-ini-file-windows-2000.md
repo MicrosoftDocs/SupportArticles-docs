@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: cbutch, kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # How to edit the Boot.ini file in Windows 2000
 

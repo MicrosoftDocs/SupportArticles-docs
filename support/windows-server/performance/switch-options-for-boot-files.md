@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: No Boot (not BugChecks)
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Available switch options for the Windows XP and the Windows Server 2003 Boot.ini files
 

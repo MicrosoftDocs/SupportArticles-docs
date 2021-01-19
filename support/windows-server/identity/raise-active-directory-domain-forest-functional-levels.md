@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory domain or forest functional level updates
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to raise Active Directory domain and forest functional levels
 

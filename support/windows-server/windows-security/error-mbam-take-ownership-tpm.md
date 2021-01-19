@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: manojse, yitzhaks, avicar, kaushika
 ms.prod-support-area-path: Bitlocker
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # MBAM fails to take ownership of TPM
 

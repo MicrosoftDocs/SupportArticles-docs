@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Windows NIC Teaming (Load Balance Failover)
-ms.technology: Networking
+ms.technology: networking
 ---
 # Services do not automatically start after reboot of a computer that uses NIC teaming
 

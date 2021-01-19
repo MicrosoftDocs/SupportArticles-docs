@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Installing the Microsoft Loopback Adapter in Windows 8 and Windows Server 2012
 

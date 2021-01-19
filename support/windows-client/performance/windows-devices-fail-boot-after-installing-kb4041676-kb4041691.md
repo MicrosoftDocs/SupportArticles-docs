@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: No Boot (not BugChecks)
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 # Windows devices may fail to boot after installing October 10 version of KB4041676 or KB4041691 that contained a publishing issue
 

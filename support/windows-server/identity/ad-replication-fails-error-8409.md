@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, chrisrob, herbertm
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Error 8409 and AD replication fails after you restore or undelete AD objects in Windows Server 2016
 

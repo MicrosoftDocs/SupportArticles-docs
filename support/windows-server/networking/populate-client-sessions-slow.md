@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, DanMa
 ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
-ms.technology: Networking
+ms.technology: networking
 ---
 # You may have to wait for a long time to populate the information on shared folder sessions in Computer Management console
 

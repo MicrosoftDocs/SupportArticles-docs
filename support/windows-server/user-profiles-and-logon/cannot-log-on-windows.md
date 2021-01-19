@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User Logon fails
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-server-user-profiles
 ---
 # Windows logs on and logs off immediately
 

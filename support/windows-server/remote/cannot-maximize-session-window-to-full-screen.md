@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Remote desktop sessions
-ms.technology: RDS 
+ms.technology: windows-server-rds 
 ---
 # You cannot maximize a Remote Desktop Connection session window to full-screen when you use the /v parameter
 

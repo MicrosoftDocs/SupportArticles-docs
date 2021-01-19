@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-rezhou
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Windows Update automatically downloads and installs updates when you connect to the Internet for the first time
 

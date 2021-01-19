@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: 1st Party Applications
-ms.technology: ApplicationCompatibility
+ms.technology: windows-server-application-compatibility
 ---
 # The Dial-in tab is not available in the Active Directory Users and Computers MMC snap-in after you install Remote Server Administration Tools for Windows 7
 

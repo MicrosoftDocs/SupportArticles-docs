@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User profiles
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-client-user-profiles
 ---
 # Renaming a user account doesn't automatically change the profile path
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, chughes
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # How to download updates that include drivers and hotfixes from the Windows Update Catalog
 

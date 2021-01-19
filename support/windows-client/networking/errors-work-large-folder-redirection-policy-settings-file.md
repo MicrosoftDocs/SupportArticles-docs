@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: herbertm, kaushika
 ms.prod-support-area-path: Folder redirection and Offline Files and Folders (CSC)
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Errors when you have a large Folder Redirection policy settings file in Windows
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
 ms.prod-support-area-path: FRS
-ms.technology: Networking
+ms.technology: networking
 ---
 # Recovering missing FRS objects and FRS attributes in Active Directory
 

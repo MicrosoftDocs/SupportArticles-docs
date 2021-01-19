@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, senthilr
 ms.prod-support-area-path: Configuration of virtual machine settings
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Using Hyper-V with large-sector drives in Windows Server 2008 and Windows Server 2008 R2
 

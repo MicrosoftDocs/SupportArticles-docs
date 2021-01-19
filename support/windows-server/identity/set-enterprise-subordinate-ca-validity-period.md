@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory Certificate Services
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to Set an Enterprise Subordinate CA to Have a Different Certificate Validity Period than the Parent CA
 

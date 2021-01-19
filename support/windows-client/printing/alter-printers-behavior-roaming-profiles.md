@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, eugenev
 ms.prod-support-area-path: 'Management and Configuration: General issues'
-ms.technology: PrintFaxScan
+ms.technology: windows-client-printing
 ---
 # How to Alter Behavior of Printers That Roam with Roaming Profiles
 

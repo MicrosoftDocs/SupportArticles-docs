@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Virtual machine will not boot
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Virtual machine that's running on Windows Server 2012 R2 doesn't start
 

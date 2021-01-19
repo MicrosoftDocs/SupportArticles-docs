@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Help and Support
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # Windows Server 2003 Service Pack 1 Support Tools
 

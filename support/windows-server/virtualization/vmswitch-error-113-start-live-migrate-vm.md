@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: Tode, kaushika
 ms.prod-support-area-path: Virtual Switch Manager (vmswitch)
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # VmSwitch Error 113 event is logged when you start or live migrate virtual machines
 

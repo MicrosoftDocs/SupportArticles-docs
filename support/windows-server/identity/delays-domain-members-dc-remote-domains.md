@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Schema update failure or conflict
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Delays when domain members are required to communicate to DCs on remote domains
 

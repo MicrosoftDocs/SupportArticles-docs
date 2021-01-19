@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, chadbee, philipd, kimnich
 ms.prod-support-area-path: DPI and Display Issues
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # Display configuration reverts to "Second screen only" after you resume from standby
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, benarm, kledman
 ms.prod-support-area-path: Virtual machine creation
-ms.technology: HyperV
+ms.technology: windows-client-hyper-v
 ---
 # Supported Guest Operating Systems in Virtual PC
 

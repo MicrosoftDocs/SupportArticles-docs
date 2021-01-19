@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jomcc, jobarner
 ms.prod-support-area-path: Legacy authentication (NTLM)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Error code 403 or 500 when you connect to a Web site that is published by using ISA Server 2004 Service Pack 2
 

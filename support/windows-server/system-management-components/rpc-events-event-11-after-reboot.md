@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: WMI
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # Microsoft-Windows-RPC-Events Event 11 after reboot
 

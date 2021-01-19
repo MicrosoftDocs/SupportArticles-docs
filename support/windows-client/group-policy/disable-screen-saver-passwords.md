@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, CCLAY
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
-ms.technology: GroupPolicy
+ms.technology: windows-client-group-policy
 ---
 # Disable screen saver passwords by using policies
 

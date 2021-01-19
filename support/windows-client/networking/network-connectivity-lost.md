@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, yongrhee, ksarens, alexsc, niwelton
 ms.prod-support-area-path: Windows Defender Exploit Guard
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Lost internet connectivity using VPN in Windows Defender Exploit Guard - Network Protection
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Backup fails with VSS event ID 12292 and 11 on Windows Server 2008 and Windows Server 2008 R2
 

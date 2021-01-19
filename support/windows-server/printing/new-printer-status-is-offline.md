@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, AndrewYa
 ms.prod-support-area-path: 'Errors and troubleshooting: General issues'
-ms.technology: PrintFaxScan
+ms.technology: windows-server-printing
 ---
 # The new printer status is Offline after you delete a print queue and then restart a Windows-based computer
 

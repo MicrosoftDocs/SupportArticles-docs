@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: justinha, kaushika
 ms.prod-support-area-path: DCPromo and the installation of domain controllers
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to use unattended mode to install and remove Active Directory Domain Services on Windows Server 2008-based domain controllers
 

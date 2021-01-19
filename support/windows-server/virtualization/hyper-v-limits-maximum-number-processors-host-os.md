@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: arichard, kaushika
 ms.prod-support-area-path: Configuration of virtual machine settings
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Hyper-V limits the maximum number of processors in the Hyper-V host OS to 64
 

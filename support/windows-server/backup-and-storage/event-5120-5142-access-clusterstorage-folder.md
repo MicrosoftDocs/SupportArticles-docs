@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Partition and volume management
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Unable to access ClusterStorage folder on a passive node in a server 2008 R2 cluster
 

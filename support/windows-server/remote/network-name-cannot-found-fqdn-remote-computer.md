@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: markusr, kaushika
 ms.prod-support-area-path: Remote desktop sessions
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Error when you use the fully qualified domain name to connect to a remote computer from a Windows Server based computer: The network name cannot be found
 

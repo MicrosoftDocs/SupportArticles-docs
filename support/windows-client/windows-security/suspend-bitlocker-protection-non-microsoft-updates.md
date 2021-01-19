@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jefen, xingrli
 ms.prod-support-area-path: windows-security
-ms.technology: bitlocker
+ms.technology: windows-client-security
 ---
 # Suspend BitLocker protection for non-Microsoft software updates
 

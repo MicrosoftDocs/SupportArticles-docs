@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Configuring and using Backup software
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Error message when you try to add an additional disk to a scheduled backup: The filename, directory name, or volume label syntax is incorrect
 

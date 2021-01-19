@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jeffbo, travisa
 ms.prod-support-area-path: Kerberos authentication
-ms.technology: WindowsSecurity
+ms.technology: windows-client-security
 ---
 # "File system error" when pasting password into credential dialog box in Windows 10
 

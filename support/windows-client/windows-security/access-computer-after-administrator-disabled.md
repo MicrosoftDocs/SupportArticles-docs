@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Account lockouts
-ms.technology: WindowsSecurity 
+ms.technology: windows-client-security 
 ---
 # How to access the computer after you disable the administrator account
 
@@ -50,4 +50,4 @@ If the server is a domain controller, the Local Users and Groups are not availab
 
 ## Log on to Windows by using Recovery Console
 
-You can use the recovery console to access the computer even if the local Administrator account is disabled. Disabling the local Administrator account does not prevent you from logging on to the recovery console as Administrator. 
+You can use the recovery console to access the computer even if the local Administrator account is disabled. Disabling the local Administrator account does not prevent you from logging on to the recovery console as Administrator.

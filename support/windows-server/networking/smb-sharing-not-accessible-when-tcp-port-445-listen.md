@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dantes
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: networking
 ---
 # SMB sharing is not accessible when TCP port 445 is listening in Windows Server
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: WMI
-ms.technology: SysManagementComponents
+ms.technology: windows-client-system-management-components
 ---
 # Failed logon event generated when running remote WMI command
 

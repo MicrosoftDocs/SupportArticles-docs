@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, match, chadbee, v-miand3
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Can't install the .NET Framework 3.5 without a public Internet environment on an OEM Windows installation
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, joscon
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # How to determine the type of processor that your computer uses
 

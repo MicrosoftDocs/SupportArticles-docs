@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, lacranda, manojse
 ms.prod-support-area-path: Bitlocker
-ms.technology: WindowsSecurity
+ms.technology: windows-client-security
 ---
 # Users cannot retrieve BitLocker Recovery key using MBAM 2.0 Self Service Portal
 

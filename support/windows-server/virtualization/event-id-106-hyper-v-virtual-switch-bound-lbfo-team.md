@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ajayps, tode, gsilva
 ms.prod-support-area-path: Hyper-V Network Virtualization (HNV)
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Event ID 106 when a Hyper-V virtual switch is bound to an LBFO team
 

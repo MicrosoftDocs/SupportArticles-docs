@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: herbertm, kaushika
 ms.prod-support-area-path: Legacy authentication (NTLM)
-ms.technology: WindowsSecurity 
+ms.technology: windows-server-security 
 ---
 # Audit event shows authentication package as NTLMv1 instead of NTLMv2
 

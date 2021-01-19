@@ -10,7 +10,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Windows Time Service
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Windows Time Service settings aren't preserved during an in-place upgrade to Windows Server 2016 or Windows 10 Version 1607
 

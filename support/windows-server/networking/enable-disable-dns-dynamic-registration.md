@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DNS
-ms.technology: Networking
+ms.technology: networking
 ---
 # How to enable or disable DNS updates in Windows 2000 and in Windows Server 2003
 

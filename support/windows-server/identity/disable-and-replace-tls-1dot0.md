@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory Federation Services (AD FS)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Considerations for disabling and replacing TLS 1.0 in AD FS
 

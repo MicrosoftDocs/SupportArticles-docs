@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, sajijohn, markgray
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # Unable to create DSN using Group Policy Preferences, unspecified error 0x80004005
 

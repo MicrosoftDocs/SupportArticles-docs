@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, joramos
 ms.prod-support-area-path: Account lockouts
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Administrator account password expiration behavior
 

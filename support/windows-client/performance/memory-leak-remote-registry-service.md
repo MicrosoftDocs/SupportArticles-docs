@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Slow Performance
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 # Memory leak in the remote registry service causes Windows to hang
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Folder redirection and Offline Files and Folders (CSC)
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Features and functions in version 1.1 of the Client-Side Caching Command-Line Options command-line tool
 

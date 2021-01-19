@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, xiangwu
 ms.prod-support-area-path: Remote desktop sessions
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Remote Desktop Connection 6.0 prompts you for credentials before you establish a remote desktop connection
 

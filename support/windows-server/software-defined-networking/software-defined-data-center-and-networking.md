@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, johnmar
 ms.prod-support-area-path: Internal DNS Server for SDN
-ms.technology: SDN
+ms.technology: windows-server-sdn
 ---
 # Software Defined Data Center and Software Defined Networking in Windows Server
 

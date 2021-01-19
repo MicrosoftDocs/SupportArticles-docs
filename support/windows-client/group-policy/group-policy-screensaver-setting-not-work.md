@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
-ms.technology: GroupPolicy
+ms.technology: windows-client-group-policy
 ---
 # Win7/W2k8 R2 Group Policy Screensaver setting isn't working
 
