@@ -15,7 +15,7 @@ ms.technology: WindowsSecurity
 ---
 # MBAM fails to take ownership of TPM
 
-This article describes an error that occurs when MBAM tries to initialize TPM.
+This article provides a solution to an error that occurs when MBAM tries to initialize TPM.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp;2640178
@@ -31,7 +31,7 @@ BitLocker will close now. Contact the help desk of your company if you need addi
 > Details  
 Error taking ownership of the TPM.
 
-![Screenshot of the error](./media/error-mbam-take-ownership-tpm/bitlocker-encrypt-error.png)
+:::image type="content" source="./media/error-mbam-take-ownership-tpm/bitlocker-encrypt-error.png" alt-text="Screenshot of the error.":::
 
 ## Cause
 
@@ -41,15 +41,11 @@ The Endorsement Key (EK) is an encryption key that is permanently embedded in th
 
 You may see this error message if the TPM manufacturer didn't create the Endorsement Key (EK) pair.
 
-Note: Enabling verbose logging on Microsoft BitLocker Administration and Monitoring (MBAM) client should show the error as below:
+Enabling verbose logging on Microsoft BitLocker Administration and Monitoring (MBAM) client should show the error as below:
 
 > TPM_E_NO_ENDORSEMENT - 0x80280023- The TPM does not have an Endorsement Key (EK) installed.
 
 ## Resolution
-
-If you prefer to fix this problem yourself, go to the "[Let me fix it myself](#let-me-fix-it-myself)" section.
-
-### Let me fix it myself
 
 To resolve this issue, follow below steps:
 
@@ -58,7 +54,7 @@ To resolve this issue, follow below steps:
 3. Execute the vbs script on the machine to generate the Endorsement Key (EK) pair.
 4. Now, when MBAM tries to take ownership of TPM it will work correctly. This will happen when MBAM agent will hit the next client wake-up frequency, which is 90 minutes by default.
 
-```console
+```vb
 =============== Script Text ===============
 
 Set objWMIService = GetObject("WinMgmts:{impersonationLevel=impersonate,AuthenticationLevel=pktprivacy}//" & "." & "\root\CIMV2\Security\MicrosoftTpm")
@@ -127,15 +123,10 @@ WScript.Quit 0
 =============== Script Text ===============
 ```
 
-### Did this fix the problem?
+## References
 
-- Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus).
-- We would appreciate your feedback. To provide feedback or to report any issues with this solution, please leave a comment on the "[Fix it for me](https://support.microsoft.com/help/2970908)" blog or send us an [email](mailto:fixit4me@microsoft.com?subject=kb).
+- [Understand the TPM Endorsement Key](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770443(v=ws.11))
 
-## More information
+- [BitLocker Sample Deployment Script](https://gallery.technet.microsoft.com/scriptcenter/780d167f-2d57-4eb7-bd18-84c5293d93e3/)
 
-[Understand the TPM Endorsement Key](https://technet.microsoft.com/library/cc770443.aspx)
-
-[BitLocker Sample Deployment Script](https://gallery.technet.microsoft.com/scriptcenter/780d167f-2d57-4eb7-bd18-84c5293d93e3/)
-
-[TPM Error Codes](https://msdn.microsoft.com/library/dd542648%28vs.85%29.aspx)
+- [TPM Error Codes](/windows/win32/com/com-error-codes-6)
