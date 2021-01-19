@@ -1,6 +1,6 @@
 ---
-title: Event ID 236 with SR-IOV enabled
-description: Address an Event ID 236 on a Hyper-V server that has SR-IOV enabled on a VM in Windows Server.
+title: Event ID 236 on a Hyper-V server that has SR-IOV enabled on a VM in Windows Server
+description: Address an Event ID 236 that occurs on a Hyper-V server that has SR-IOV enabled on a VM in Windows Server.
 ms.date: 09/18/2020
 author: Deland-Han 
 ms.author: delhan
@@ -15,7 +15,7 @@ ms.technology: Networking
 ---
 # Event ID 236 on a Hyper-V server that has SR-IOV enabled on a VM in Windows Server
 
-This article provides a solution to an Event ID 236 on a Hyper-V server that has SR-IOV enabled on a VM in Windows Server.
+This article provides a solution to an Event ID 236 that occurs on a Hyper-V server that has SR-IOV enabled on a VM in Windows Server.
 
 _Original product version:_ &nbsp; Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 4136996
@@ -34,4 +34,4 @@ Event 236 is logged when the user-mode process tries to allocate a virtual funct
 
 ## More information
 
-The user mode process will retry to enable I/O Virtualization at a later stage in few moments. You can verify the IOV VF function by using the PowerShell cmdlet [Get-NetAdapterSriovVf](https://docs.microsoft.com/powershell/module/netadapter/get-netadaptersriovvf?view=win10-ps&preserve-view=true).
+The user mode process will retry to enable I/O Virtualization at a later stage in few moments. You can verify the IOV VF function by using the PowerShell cmdlet [Get-NetAdapterSriovVf](/powershell/module/netadapter/get-netadaptersriovvf?view=win10-ps&preserve-view=true).

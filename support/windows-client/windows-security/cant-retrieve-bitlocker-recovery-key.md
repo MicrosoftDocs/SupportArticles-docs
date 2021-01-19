@@ -1,5 +1,5 @@
 ---
-title: Can't retrieve BitLocker Recovery key
+title: Can't retrieve BitLocker Recovery key using MBAM 2.0 Self Service Portal
 description: Provides a solution to an error that occurs when you try to open MBAM 2.0 Self Service Portal web page to retrieve BitLocker Recovery Key.
 ms.date: 09/17/2020
 author: Deland-Han 
@@ -34,7 +34,7 @@ This problem can occur for two possible reasons:
 
     You will also see the below error message in the application logs where SSP feature is installed.
 
-    Exception message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+    > Exception message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
 
 2. User Support Service web.config file does not have connection string information.
 
@@ -46,33 +46,34 @@ For Windows Firewall issue:
 
 Open firewall ports for SQL Server. By default SQL uses port 1433 if you have configured SQL with a default instance.
 
-[Configuring the Windows Firewall to Allow SQL Server Access](https://msdn.microsoft.com/library/cc646023%28v=sql.105%29.aspx)
+[Configuring the Windows Firewall to Allow SQL Server Access](/previous-versions/sql/sql-server-2008-r2/cc646023(v=sql.105))
 
 For User Support Service web.config file issue, follow the steps:
 
 1. Connect to Server where MBAM 2.0 Self Service Portal feature is installed.
-2. Open Windows Explorer and browse to c:\inetpub\MicrosoftBitLockerManagementSolution\UserSupportService directory.
+2. Open Windows Explorer and browse to c:\\inetpub\\MicrosoftBitLockerManagementSolution\\UserSupportService directory.
 3. Make a copy of web.config file.
 4. Edit the web.config file and make sure the connection string information is correct as shown below.
 5. In the \<connectionStrings> block:
 
-    ```sql
+    ```xml
     <add name="ComplianceStatusConnectionString" providerName="System.Data.SqlClient" connectionString=""/>
     ```
 
     should be:
 
-    ```sql
+    ```xml
     <add name="ComplianceStatusConnectionString" providerName="System.Data.SqlClient" connectionString=" Data Source=[SQL server name];Initial Catalog=&quot;MBAM Compliance Status&quot;;Integrated Security=SSPI;"/>
     ```
 
-    Notes:
+    > [!NOTE]
+    >
+    > - Replace *[SQL server name]* with your SQL Server Name.
+    > - Replace *MBAM Compliance Status* with name of MBAM Compliance Status DB.
 
-    1. Replace *[SQL server name]* with your SQL Server Name
-    2. Replace *MBAM Compliance Status* with name of MBAM Compliance Status DB.
-    For Example: If name of your SQL Server is MBAMSQL and name of MBAM Compliance DB is MBAM_Comp_DB, then the query should be:
+    For example, if the name of your SQL Server is MBAMSQL and the name of MBAM Compliance DB is MBAM_Comp_DB, then the query should be:
 
-    ```sql
+    ```xml
     <add name="ComplianceStatusConnectionString" providerName="System.Data.SqlClient" connectionString="*Data Source=[MBAMSQL];Initial Catalog=&quot;MBAM_ Comp_DB &quot;;Integrated Security=SSPI;*"/>
     ```
 
@@ -80,7 +81,6 @@ For User Support Service web.config file issue, follow the steps:
 7. Restart IIS Services on Server.
 8. Now user should be to retrieve BitLocker Recovery key successfully from MBAM SSP webpage.
 
-## More information
+## References
 
-How to Use the Self-Service Portal to Regain Access to a Computer
-[https://technet.microsoft.com/library/dn148207.aspx](https://technet.microsoft.com/library/dn148207.aspx)
+[How to Use the Self-Service Portal to Regain Access to a Computer](/microsoft-desktop-optimization-pack/mbam-v2/how-to-use-the-self-service-portal-to-regain-access-to-a-computer)

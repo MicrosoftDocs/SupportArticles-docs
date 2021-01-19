@@ -34,14 +34,14 @@ Task Manager Display of Total Host System Logical Processors
 
 Task Manager does accurately display the total number of system logical processors, as illustrated below. The value *Logical processors* correctly displays 128, which is the total number of processors in the example computer system. The value *Host logical processors* reflects that the Hyper‑V host partition is only running on 64 VPs out of the total 128 system logical processors.
 
-![Task Manager](./media/hyper-v-limits-maximum-number-processors-host-os/task-manager.png)
+:::image type="content" source="./media/hyper-v-limits-maximum-number-processors-host-os/task-manager.png" alt-text="Task Manager.":::
 
 Determining the Number of Logical Processors in Performance Monitor  
 
-Windows Performance Monitor may also be used to observe the total number of system logical processors, and the number of VPs in the root partition, as illustrated below. The counter *Hyper‑V Hypervisor\Logical Processors*  indicates the total number of system logical processors that the hypervisor is using. The counter *Hyper‑V Hypervisor Root Partition\Virtual Processors* indicates the total number of virtual processors allocated to the host partition.
+Windows Performance Monitor may also be used to observe the total number of system logical processors, and the number of VPs in the root partition, as illustrated below. The counter *Hyper‑V Hypervisor\\Logical Processors* indicates the total number of system logical processors that the hypervisor is using. The counter *Hyper‑V Hypervisor Root Partition\\Virtual Processors* indicates the total number of virtual processors allocated to the host partition.
 
-![Performance Monitor](./media/hyper-v-limits-maximum-number-processors-host-os/windows-performance-monitor.png)
+:::image type="content" source="./media/hyper-v-limits-maximum-number-processors-host-os/windows-performance-monitor.png" alt-text="Performance Monitor.":::
 
-NUMA Topologies 
+NUMA Topologies
 
-The original and adjusted NUMA topologies of the system can be viewed using the *Debugging Tools for Windows*. The *!numa* command displays the configuration of the host partition. The *!numa_hal* command displays the configuration of the system.
+The original and adjusted NUMA topologies of the system can be viewed using the *Debugging Tools for Windows*. The `!numa` command displays the configuration of the host partition. The `!numa_hal` command displays the configuration of the system.

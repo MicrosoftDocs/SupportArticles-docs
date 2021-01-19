@@ -24,14 +24,11 @@ _Original KB number:_ &nbsp; 837335
 
 As member of the DnsAdmins security group, you may not be able to delete zone information on a DNS server. If you try to delete a record, you may receive the following error message:
 
-The record cannot be deleted Access Denied
+> The record cannot be deleted Access Denied
 
 ## Cause
 
-This issue may occur if either of the following conditions is true:
-
-- The domain is upgraded to Windows Server 2003, and you have Active Directory Integrated zones that were created by using Windows 2000.
-- Security permissions for the DnsAdmins security group aren't automatically added on the newly created Active Directory Integrated zones.
+This issue may occur if security permissions for the DnsAdmins security group aren't automatically added on the newly created Active Directory Integrated zones.
 
 ## Workaround
 
@@ -41,16 +38,15 @@ To do so, use one of the following methods to assign Full Control to DnsAdmins s
 
 ### Method 1: Use the Dsacls.exe tool to assign Full Control permissions to the DNSAdmins group
 
-> [!NOTE]
-> Install the Dsacls.exe tool (Dsacls.exe) from the \Support\Tools folder on the Windows Server 2003 media.
-
 1. Log on to your computer as administrator.
-2. Click **Start**, click **Run**, type cmd, and then click **OK**.
+2. Click **Start**, click **Run**, type *cmd*, and then click **OK**.
 3. Type the following command, and then press ENTER:
 
     ```console
     dsacls "\\servername\CN=MicrosoftDNS, CN=System, DC=domain, dc=com" /G DNSADMINS:GA / I:T
     ```
+
+For more information about the Dsacls tool, see [Dsacls](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc771151(v=ws.11)).
 
 ### Method 2: Use ADSI Editor to assign Full Control permissions to the DNSAdmins group
 

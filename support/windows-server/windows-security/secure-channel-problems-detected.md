@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Secure channel issues
 ms.technology: WindowsSecurity
 ---
-# Secure Channel Problems Detected
+# Secure channel problems detected
 
 This article provides a solution to detected secure channel problems.
 
@@ -42,15 +42,11 @@ To resolve this issue if the cause is only network difficulties:
 
 Verify that the network connectivity between the local computer and the domain controller(s) has the required ports open on both client (local computer) and server (domain controller).
 
-Many methods may be used to verify that connectivity is sufficient since there are many causes of network problems. A common cause is network ports being inadvertently restricted. To resolve that common concern, review the ports required for Active Directory in the Knowledge Base article below and then to use the Port Query tool (PortQry.exe) to examine the ports that are in user or available for use on local computer and domain controller.
-
-Service overview and network port requirements for Windows
-
-[https://support.microsoft.com/kb/832017](https://support.microsoft.com/help/832017)  
+Many methods may be used to verify that connectivity is sufficient since there are many causes of network problems. A common cause is network ports being inadvertently restricted. To resolve that common concern, review the ports required for Active Directory in [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements) and then to use the Port Query tool (PortQry.exe) to examine the ports that are in user or available for use on local computer and domain controller.
 
 PortQry.exe is a free download from Microsoft.
 
-[https://www.microsoft.com/download/details.aspx?id=17148](https://www.microsoft.com/download/details.aspx?id=17148)
+[PortQry Command Line Port Scanner Version 2.0](https://www.microsoft.com/download/details.aspx?id=17148)
 
 Once the network concern is identified look to local network interface, firewall software, or network infrastructure to resolve the issue.
 
@@ -63,7 +59,7 @@ On the computer that is seeing the issue, log on local and use the command below
 From an elevated command prompt on the domain member computer, see the problem run the command below (where DomainName is the domain the computer is a member of):
 
 ```console
-Nltest.exe /sc_change_pwd:[ <DomainName>]
+Nltest.exe /sc_change_pwd:[<DomainName>]
 ```
 
 After doing the command above, restart the computer and attempt to logon to the domain.
