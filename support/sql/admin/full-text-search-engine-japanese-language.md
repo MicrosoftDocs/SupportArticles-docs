@@ -93,7 +93,7 @@ Then, you run the following three queries:
     9 RE: :::no-loc text="テストメール":::  
     10 :::no-loc text="テストメール":::
 
-From the results of the queries, you can find that the result of Query 2 is the same as the result of Query 3 because the Full-Text query does not work in the suffix-matching mode. Additionally, **:::no-loc text="テスト":::** is a token that differs from **:::no-loc text="ポリシーテスト":::** or from **White List:::no-loc text="テスト":::** in the matchings.
+From the results of the queries, you can find that the result of Query 2 is the same as the result of Query 3 because the Full-Text query does not work in the suffix-matching mode. Additionally, **:::no-loc text="テスト":::** is a token that differs from **:::no-loc text="ポリシーテスト":::** or from `White List` **:::no-loc text="テスト":::** in the matchings.
 
 To tokenize phrases, a word breaker for the language family must be used. Work breakers use spaces and other signs to recognize phrases. Therefore, some phrases cannot be recognized by the word breaker and cannot be searched by using Full-Text engine in the Japanese language. For more information about word breakers, see the **Word Breakers and Stemmers** topic in the **Reference** section.
 
@@ -133,7 +133,7 @@ The following are some sample queries of the LIKE keyword to search for phrases.
     8 :::no-loc text="テスト":::テストフィルタ１  
     9 RE: :::no-loc text="テスト":::テストメール  
     10 :::no-loc text="テスト":::テストメール  
-    11 White List:::no-loc text="テスト":::  
+    11 `White List` :::no-loc text="テスト":::  
     12 :::no-loc text="フィルタリングテスト":::
 
 > [!NOTE]

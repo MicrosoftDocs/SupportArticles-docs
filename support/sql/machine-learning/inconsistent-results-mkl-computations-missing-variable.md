@@ -46,4 +46,4 @@ In future versions of Microsoft R Server, the **MKL_CBWR=AUTO** setting will be
 
 [Known issues in SQL Server Machine Learning Services](/sql/machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services) Third-party information disclaimer
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
