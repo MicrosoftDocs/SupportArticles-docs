@@ -1,28 +1,28 @@
 {
   "redirections": [
     {
-      "source_path": "support/azure/general/sdp-321382d70-df1d-4c0c-bdc6-9ba62752e851-asr.md",
-      "redirect_url": "/troubleshoot/azure/site-recovery/sdp-321382d70-df1d-4c0c-bdc6-9ba62752e851-asr",
-      "redirect_document_id": true
+      "source_path": "support/azure/general/sdp-321382d70-df1d-4c0c-bdc6-9ba62752e851-asr.md",
+      "redirect_url": "/troubleshoot/azure/site-recovery/sdp-321382d70-df1d-4c0c-bdc6-9ba62752e851-asr",
+      "redirect_document_id": true
     },
     {
-      "source_path": "support/azure/general/sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md",
-      "redirect_url": "/troubleshoot/azure/virtual-machines/sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm",
-      "redirect_document_id": true
+      "source_path": "support/azure/general/sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm",
+      "redirect_document_id": true
     },
     {
-      "source_path": "support/browsers/troubleshoot-installation-problems-ie-9.md",
-      "redirect_url": "/troubleshoot/browsers/how-to-successfully-install-internet-explorer-9",
-      "redirect_document_id": true
+      "source_path": "support/browsers/troubleshoot-installation-problems-ie-9.md",
+      "redirect_url": "/troubleshoot/browsers/how-to-successfully-install-internet-explorer-9",
+      "redirect_document_id": true
     },
     {
       "source_path": "support/dotnet/framework/manifest-definitions-dont-match-reference.md",
-      "redirect_url": "/troubleshoot/dotnet/framework/manifest-definitions-do-not-match-reference",
+      "redirect_url": "/troubleshoot/dotnet/framework/manifest-definitions-do-not-match-reference",
       "redirect_document_id": true
     },  
     {
       "source_path": "support/windows-server/networking/dns-chame-alias-cannot-access-smb-file-server-share.md",
-      "redirect_url": "/troubleshoot/windows-server/networking/dns-cname-alias-cannot-access-smb-file-server-share",
+      "redirect_url": "/troubleshoot/windows-server/networking/dns-cname-alias-cannot-access-smb-file-server-share",
       "redirect_document_id": true
     },
     {
