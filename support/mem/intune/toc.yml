@@ -12,7 +12,7 @@
     href: app-install-error-codes.md
   - name: Apps don't appear as Available
     href: apps-appear-unavailable.md
-  - name: Can't attach photos due to IO error
+  - name: Can't attach photos because of IO error
     href: android-enterprise-enrolled-devices-fails-attaching-photo.md
   - name: Can't create messages in Outlook for Android
     href: creating-message-action-not-allowed.md
