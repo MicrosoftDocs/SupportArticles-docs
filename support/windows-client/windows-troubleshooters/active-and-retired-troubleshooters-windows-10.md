@@ -63,7 +63,6 @@ This troubleshooter runs automatically on devices that meet the following criter
 
 Successfully ran the "Hardware and Devices" or "Storage Spaces" troubleshooter
 
-
 |Activation date|Retirement date|More information|
 |---|---|---|
 |7/30/2020|10/30/2020|[https://aka.ms/AA8uojg](https://aka.ms/AA8uojg)|
