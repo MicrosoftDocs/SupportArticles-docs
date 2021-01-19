@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User, computer, group, and object management
- ms.technology: windows-client-active-directory
+ms.technology: windows-client-active-directory
 ---
 # The LsaLookupSids function may return the old user name instead of the new user name if the user name has changed
 

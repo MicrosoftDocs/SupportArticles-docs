@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User, computer, group, and object management
- ms.technology: windows-client-active-directory
+ms.technology: windows-client-active-directory
 ---
 # Known issues managing a Windows 10 Group Policy client in Windows Server 2012 R2
 
