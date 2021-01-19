@@ -1,7 +1,7 @@
 ---
 title: Script error during Intune setup process
 description: Fixes an issue in which you receive script error during Intune setup process in Configuration Manager.
-ms.date: 12/30/2020
+ms.date: 01/19/2021
 ms.prod-support-area-path: 
 ---
 # Wizard generates a script error when you configure a Microsoft Intune subscription in Configuration Manager
