@@ -46,10 +46,10 @@ For information about how to identify orphan **krbtgt_*#####*** accounts, see [M
 
 The procedure that you use to resolve this issue depends on whether you have enabled the [AD Recycle Bin](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379542(v=ws.10)) feature in Active Directory. Select one of the following methods:
 
-- [Recovery Method 1 (AD Recycle Bin feature not enabled)](#method1)
-- [Recovery Method 2 (AD Recycle Bin feature enabled)](#method2)
+- [Recovery Method 1 (AD Recycle Bin feature not enabled)](#recovery-method-1-ad-recycle-bin-feature-not-enabled)
+- [Recovery Method 2 (AD Recycle Bin feature enabled)](#recovery-method-2-ad-recycle-bin-feature-enabled)
 
-### <a id="method1"></a>Recovery Method 1 (AD Recycle Bin feature not enabled)
+### Recovery Method 1 (AD Recycle Bin feature not enabled)
 
 If the AD Recycle Bin feature wasn't enabled, follow these steps on a writeable domain controller (RWDC) or global catalog server (GC).
 
