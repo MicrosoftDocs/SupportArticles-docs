@@ -43,11 +43,17 @@ This filter is built in to the Windows Firewall and Advanced Security (WFAS). It
 To work around this issue, disable WFP logging in the registry:
 
 1. Start Registry Editor.
-2. Locate the following registry subkey:
+2. Locate the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BFE\Parameters\Policy\Options`
 3. Right-click the subkey, click **New**, and then create a DWORD (32-bit) registry value.
 4. Type *CollectNetEvents* as the registry value name.
 5. Leave the value data as 0.
 6. Restart the server.
+
+WFP logging can also be disabled by running the following Netsh command from an elevated command prompt:
+
+```console
+netsh wfp set options netevents=off
+```
 
 > [!NOTE]
 > By disabling WFP logging, this only stops the logging of WFP activity in wfpdiag.etl. The Port Scanning Prevention Filter continues to work normally.
