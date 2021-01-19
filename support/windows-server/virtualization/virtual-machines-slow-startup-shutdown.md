@@ -13,7 +13,7 @@ ms.reviewer: kaushika, jeffpatt
 ms.prod-support-area-path: Configuration of virtual machine settings
 ms.technology: HyperV
 ---
-# Hyper-V Virtual Machines Exhibit Slow Startup and Shutdown
+# Hyper-V virtual machines exhibit slow startup and shutdown
 
 This article provides help to fix slow virtual machines (VMs) startup or shutdown performance issues.
 
@@ -34,7 +34,11 @@ You can disable the Advance Configuration and Power Interface (ACPI) C-states by
 
 1. At a command prompt, run the following command:
 
-    reg add HKLM\System\CurrentControlSet\Control\Processor /v Capabilities /t REG_DWORD /d 0x0007e066  
+    ```console
+    reg add HKLM\System\CurrentControlSet\Control\Processor /v Capabilities /t REG_DWORD /d 0x0007e066
+    ```
+
 2. Restart the system.
 
-Note: The computer idle power consumption will increase significantly if the deeper ACPI C-states (processor idle sleep states) are disabled. Windows Server 2008 R2 uses these deeper C-states as a key energy-saving feature.
+> [!NOTE]
+> The computer idle power consumption will increase significantly if the deeper ACPI C-states (processor idle sleep states) are disabled. Windows Server 2008 R2 uses these deeper C-states as a key energy-saving feature.
