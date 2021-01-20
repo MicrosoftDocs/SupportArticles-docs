@@ -26,7 +26,7 @@ Windows Server introduces new server message block (SMB) file server features. T
 
 The SMB 2.x protocol was introduced in Windows Server 2008 and in Windows Vista.
 
-The SMB 3.0 protocol was introduced in Windows Server 2012 R2 and in Windows 10.
+The SMB 3.0 protocol was introduced in Windows Server 2012 and in Windows 8.
 
 ## New SMB features introduced in the Windows file server
 
@@ -62,7 +62,7 @@ Both the SMB client and SMB server must support SMB 3.0 to take advantage of the
 
 ### SMB Direct (SMB over Remote Direct Memory Access [RDMA])
 
-SMB Direct is available only on the Windows Server platform and was introduced in Windows Server 2012 R2. SMB Direct Functionality requires that the SMB client and SMB server support SMB 3.0.
+SMB Direct is available only on the Windows Server platform and was introduced in Windows Server 2012. SMB Direct Functionality requires that the SMB client and SMB server support SMB 3.0.
 
 ### SMB Encryption
 
