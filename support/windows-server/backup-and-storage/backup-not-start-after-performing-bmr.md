@@ -23,10 +23,12 @@ _Original KB number:_ &nbsp; 2961238
 ## Symptoms
 
 Consider the following scenario:
+
 - You have a computer that's running Windows Server 2012 or Windows Server 2012 R2.
 - You're using a UEFI system with two hard disks, and you have EFI System Partition on your system disk.
 - You use Windows Server Backup to perform a complete backup.
 - You then use the backup data to perform a BMR.
+
 However, after the recovery operation is completed, the Windows Server Backup service cannot be started.
 
 ## Cause
@@ -40,9 +42,12 @@ To resolve this issue, Windows Backup must rebuild the catalog to reflect the la
 1. Open an administrative command prompt.
 2. Run the following command:
 
-    wbadmin delete catalog 
+    ```console
+    wbadmin delete catalog
+    ```
 
 3. Restart the Windows Server Backup service, or restart the computer.
+
 The Windows Server Backup service should now run normally.
 
 ## Status
@@ -51,4 +56,4 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 
 ## References
 
-Learn more about the [wbadmin delete catalog](https://technet.microsoft.com/library/cc742154.aspx) command.
+Learn more about the [wbadmin delete catalog](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc742154(v=ws.11)) command.

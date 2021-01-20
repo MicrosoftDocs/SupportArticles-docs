@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika, eugenev
+ms.reviewer: kaushika, eugenev, austinm
 ms.prod-support-area-path: 'Management and Configuration: General issues'
 ms.technology: windows-client-printing
 ---
@@ -22,7 +22,8 @@ _Original KB number:_ &nbsp; 304767
 
 > [!IMPORTANT]
 > This article contains information about modifying the registry. Before you modify the registry, make sure to back it up and make sure that you understand how to restore the registry if a problem occurs. For information about how to back up, restore, and edit the registry, click the following article number to view the article in the Microsoft Knowledge Base:
- [256986](https://support.microsoft.com/help/256986) Description of the Microsoft Windows Registry  
+>
+> [256986](https://support.microsoft.com/help/256986) Description of the Microsoft Windows Registry  
 
 ## Summary
 
@@ -41,22 +42,30 @@ Printers are designed to roam with a user's roaming profile, and this is why the
 ### Method 1
 
 Export the default printer setting for an already-installed printer, and then merge the setting into the user's profile when the user logs on to the computer:
- 
-1. Use Registry Editor (Regedit.exe) to export the following registry key: HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Windows 
 
-2. Modify the registry (.reg) file you made in step 1 with a text editor so that the only registry value name below the key is:
- " Device "=...
-The registry file should contain a blank line at the bottom of the file.
-3. Use Registry Editor (Regedit.exe) to add a new ResetPrinter string value under the following registry key: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run 
+1. Use Registry Editor (Regedit.exe) to export the following registry key:
 
-4. The value of the ResetPrinter value should be something similar to the following value
- REGEDIT.EXE -S *path* \ *File.reg*  
-where *File.reg* is the name you used to store the default printer.
+    `HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Windows`
+
+2. Modify the registry (.reg) file you made in step 1 with a text editor so that the only registry value name below the key is:  
+
+    "Device"=...
+
+    > [!NOTE]
+    > The registry file should contain a blank line at the bottom of the file.
+3. Use Registry Editor (Regedit.exe) to add a new ResetPrinter string value under the following registry key:
+
+    `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run`
+
+4. The value of the ResetPrinter value should be something similar to the following value:
+
+    REGEDIT.EXE -S *path*\\*File.reg*  
+    where *File.reg* is the name you used to store the default printer.
 
 ### Method 2
 
-If computers in a specific area contain similar computer names, you can use a .vbs script file that matches a specific set of characters in the computer name, and installs a corresponding printer. The sample code that is included in this method only requires that you modify the IF lines. For example, the first IF statement in the code translates to "if the computer name contains the text "LAB1-", then set the default printer to "\\LAB1\LaserJet". To complete this method:
- 
+If computers in a specific area contain similar computer names, you can use a .vbs script file that matches a specific set of characters in the computer name, and installs a corresponding printer. The sample code that is included in this method only requires that you modify the IF lines. For example, the first IF statement in the code translates to "if the computer name contains the text "LAB1-", then set the default printer to "\\\\LAB1\\LaserJet". To complete this method:
+
 1. Copy the following sample VBS code into a. vbs file, for example, Defaultprinter.vbs:
 
     ```vbs
@@ -90,13 +99,16 @@ If computers in a specific area contain similar computer names, you can use a .v
     ```
 
 2. Modify the IF lines as needed. The only portion of the IF lines that need to be modified is between double quotes. You may need to add additional IF lines.
-3. Use Registry Editor to create a ResetPrinter string value under the following registry key: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run 
+3. Use Registry Editor to create a ResetPrinter string value under the following registry key:
 
-4. The value of ResetPrinter should be something similar to the following value
- WSCRIPT.EXE *path* \DefaultPrinter.vbs 
-where *path* is the location where the Defaultprinter.vbs file is stored.
+    `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run`
 
-### Notes
+4. The value of ResetPrinter should be something similar to the following value:
 
-It is also possible to run the Defaultprinter.vbs file from a login script instead of the run key. Both of the methods that are described in this article reset the default printer that a user's profile is set to print to. Also, if the sample script that is included in this article does not run properly, you may need to upgrade or install the Windows Scripting Host.
- Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements.
+    WSCRIPT.EXE *path*\\DefaultPrinter.vbs  
+    where *path* is the location where the Defaultprinter.vbs file is stored.
+
+> [!NOTE]
+> It is also possible to run the Defaultprinter.vbs file from a login script instead of the run key. Both of the methods that are described in this article reset the default printer that a user's profile is set to print to. Also, if the sample script that is included in this article does not run properly, you may need to upgrade or install the Windows Scripting Host.
+>
+> Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements.

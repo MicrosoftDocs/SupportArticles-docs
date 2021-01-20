@@ -44,20 +44,20 @@ The above scenario may occur when the power management option " *Allow the compu
 
 You can work around this issue by using either of the two steps below:
 
-- Enable the power management option " *Allow the computer to turn off this device to save power* " for the Intel Wireless LAN device using the following steps:
-- 
-  1. Click on the Start button and select Control Panel.
-  2. Select System and Security.
-  3. Select Device Manager under System.
-  4. Select and expand the Network adapters from the list of devices.
-  5. Find the Intel Wireless LAN device and select it to bring up the Properties page.
-  6. Select the Power Management tab.
-  7. Under the Power Management tab, make sure the following option is checked (enabled): " *Allow the computer to turn off this device to save power*".
- 
-    Note: If you have Control Panel configured to view by small or large icons, you may not see the System and Security category listed in step 2. In this case, select System from the available Control Panel applets and select Device Manager from the left pane. You can then skip steps 2 and 3 and continue with step 4.
+- Enable the power management option "*Allow the computer to turn off this device to save power*" for the Intel Wireless LAN device using the following steps:
+
+  1. Click on the **Start** button and select **Control Panel**.
+  2. Select **System and Security**.
+  3. Select **Device Manager** under **System**.
+  4. Select and expand the **Network adapters** from the list of devices.
+  5. Find the Intel Wireless LAN device and select it to bring up the **Properties** page.
+  6. Select the **Power Management** tab.
+  7. Under the **Power Management** tab, make sure the following option is checked (enabled): "*Allow the computer to turn off this device to save power*".
+
+        > [!NOTE]
+        > If you have **Control Panel** configured to view by small or large icons, you may not see the **System and Security** category listed in step 2. In this case, select **System** from the available **Control Panel** applets and select **Device Manager** from the left pane. You can then skip steps 2 and 3 and continue with step 4.
 
 - Alternatively, you can reboot your computer.
-
 
 ## More information
 

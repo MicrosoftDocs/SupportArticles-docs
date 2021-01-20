@@ -25,9 +25,9 @@ _Original KB number:_ &nbsp; 2000622
 When you attempt to install Active Directory Domain Services on a Windows Server 2008 or Windows Server 2008 R2 computer, you may receive the following error:
 
 > Error Joining Domain  
- The operation failed because: The attempt to join this computer to the \<target DNS domain> failed. The specified user already exists.  
+The operation failed because: The attempt to join this computer to the \<target DNS domain> failed. The specified user already exists.  
 
-The **%systemroot%\debug\DCPROMOUI.LOG** contains the following text:
+The %systemroot%\\debug\\DCPROMOUI.LOG contains the following text:
 
 > dcpromoui  Enter ComposeFailureMessage  
 dcpromoui  Enter GetErrorMessage 80070524  
@@ -47,25 +47,24 @@ There is a computer account with the same name as the computer on which you are 
 
     You can use one of the following methods to remove the metadata:
 
-    [Clean up server metadata](https://technet.microsoft.com/library/cc736378%28WS.10%29.aspx)
-
-    [216498](https://support.microsoft.com/kb/216498) How to remove data in Active Directory after an unsuccessful domain controller demotion
+    - [Clean up server metadata](https://technet.microsoft.com/library/cc736378%28WS.10%29.aspx)
+    - [216498](https://support.microsoft.com/kb/216498) How to remove data in Active Directory after an unsuccessful domain controller demotion
 
     For best results, remove the stale domain controller metadata on a domain controller in the same domain and site that the new domain controller is joining, or the helper domain controller specified in the Active Directory Installation Wizard or answer file.
 
-2. If the Active Directory Installation Wizard continues to fail with error. The specified user already exists, review the **%systemroot%\debug\DCPROMOUI.LOG** to identify the name of the helper domain controller that the new domain controller is attempting to use.
+2. If the Active Directory Installation Wizard continues to fail with error "The specified user already exists", review the %systemroot%\\debug\\DCPROMOUI.LOG to identify the name of the helper domain controller that the new domain controller is attempting to use.
 
     Sample output from DCPROMOUI.LOG:
 
-    > dcpromoui          Enter DS::JoinDomain                                                  ← Search for this section of the %systemroot%\debug\dcpromoui.log  
+    > dcpromoui          Enter DS::JoinDomain                                                  ← Search for this section of the %systemroot%\\debug\\dcpromoui.log  
     dcpromoui          Enter MassageUserName administrator  
-    dcpromoui          contoso.com\administrator  
+    dcpromoui          contoso.com\\administrator  
     dcpromoui          Enter MyNetJoinDomain contoso.com\<helper DCs hostname>.contoso.com                     ← name of helper domain controller  
     dcpromoui          Calling NetJoinDomain  
     dcpromoui          lpServer         : (null)  
     dcpromoui          lpDomain         : contoso.com\<helper DCs hostname>.contoso.com  
     dcpromoui          lpAccountOU      : (null)  
-    dcpromoui          lpAccount        : contoso.com\administrator  
+    dcpromoui          lpAccount        : contoso.com\\administrator  
     dcpromoui          fJoinOptions : 0x27  
     dcpromoui          HRESULT = 0x80070524Error                ← 0x80070524 = 0x524 hex / 1316 decimal with symbolic error ERROR_USER_EXISTS  
     dcpromoui          HRESULT = 0x80070524

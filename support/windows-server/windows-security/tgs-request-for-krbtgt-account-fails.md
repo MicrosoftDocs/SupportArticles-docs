@@ -48,25 +48,32 @@ If the "Allowed to Authenticate" permission is not present, the domain controlle
 
 To resolve this issue, use one of the following methods.
 
-Method 1: Remove selective authentication from the trust 
+### Method 1: Remove selective authentication from the trust
 
 The domain controller in the target resources domain will ignore the "Allowed to authenticate" permission on the account. This behavior may not be desirable in a secure environment.
 
-Method 2: Add the caller's identity to the "Allowed to Authenticate" permission on the Krbtgt account in the target user's domain 
+### Method 2: Add the caller's identity to the "Allowed to Authenticate" permission on the Krbtgt account in the target user's domain
 
 Because the Krbtgt account is a protected account, you must add the "Allowed to Authenticate" permission for the caller's identity to the AdminSdHolder account object. To do this, follow these steps:
 
 1. Open a command prompt on a domain controller in the target user's domain.
 2. Run the following command to add the "Allowed to Authenticate" permission to the AdminSdholder object:
 
+    ```console
     dsacls "CN=AdminSDHolder,CN=System,DC=ForestB,DC=com" /G DomainA\callers-identity:CA;"Allowed to Authenticate"  
+    ```
 
-    Notes
+    > [!NOTE]
+    >
+    > - *DC=ForestB,DC=com* is the distinguished name of the user's target forest.
+    > - *DomainA* is the name of the domain where the identity of the account that's calling LsaLogonUser is located.
+    > - *Callers-identity* is the account name of the identity under which the LsaLogonUser call is being made.
 
-    - *DC=ForestB,DC=com* is the distinguished name of the user's target forest.
-       - *DomainA* is the name of the domain where the identity of the account that's calling LsaLogonUser is located.
-       - *Callers-identity* is the account name of the identity under which the LsaLogonUser call is being made.
-3. Run the following command to verify the "Allowed to Authenticate" permission on the target account: dsacls "CN=AdminSDHolder,CN=System,DC=ForestB,DC=com"
+3. Run the following command to verify the "Allowed to Authenticate" permission on the target account:
+
+    ```console
+    dsacls "CN=AdminSDHolder,CN=System,DC=ForestB,DC=com"
+    ```
 
 4. Run dsa.msc on the user's target domain, and then locate the Krbtgt account.
 5. Select the properties of the target account, and then click the **Security** tab.
