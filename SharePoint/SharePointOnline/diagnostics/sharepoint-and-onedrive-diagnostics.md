@@ -29,6 +29,10 @@ It’s important that administrators be able to diagnose and resolve issues quic
 
 Currently, we provide diagnostics to our customers through text analytics. This will not change. However, we want to make it easier to find our diagnostics within the current experience. Therefore, we have created a new set of queries to help administrators.
 
+> [!NOTE]
+> This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany. 
+
+
 ## More information
 
 Diagnostic capabilities first appeared within the M365 Admin Center support portal for certain text queries in December 2018.
@@ -75,9 +79,5 @@ Currently, these diagnostics are only available for administrators and can be ac
  
 5.	If you would like to render one of our specific diagnostics, enter one of the queries listed in the table above under "Shortcut cmd" into the “Need help?” text box.
 
-
-## Location of diagnostics 
-
-Microsoft would like to store these diagnostics in a new area and realize that having them behind the “Service Request” section is not ideal. We look forward to any and all feedback regarding these scenarios. Feel free to leave a comment on the current state of these tools or any features you would like to see.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
