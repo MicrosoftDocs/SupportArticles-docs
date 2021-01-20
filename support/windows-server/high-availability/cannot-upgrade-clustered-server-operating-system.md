@@ -23,19 +23,22 @@ _Original KB number:_ &nbsp; 935197
 ## Symptoms
 
 When you try to perform one of the following server operating system upgrades, the upgrade is blocked:
+
 - Windows Server 2003 to Windows Server 2008 or Windows Server 2008 R2
 - Windows Server 2008 to Windows Server 2008 R2 or Windows Server 2012
 - Windows Server 2008 R2 to Windows Server 2012 or Windows Server 2012 R2
-- Windows Server 2012 to Windows Server 2012 R2When this problem occurs, the following error message is recorded in the System Compatibility report: 
+- Windows Server 2012 to Windows Server 2012 R2
 
-You must make the following changes before upgrading Windows
+When this problem occurs, the following error message is recorded in the System Compatibility report:
 
-Uninstall the following Windows components and features:
+> You must make the following changes before upgrading Windows
+>
+> Uninstall the following Windows components and features:  
 Server Clustering - Please read Microsoft Knowledge Base article: 935197
 
 ## Cause
 
-This behavior occurs because the server is a cluster member. Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2 do not support an upgrade of clustered servers from previous versions. This is because of incompatibilities between the cluster versions. 
+This behavior occurs because the server is a cluster member. Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2 do not support an upgrade of clustered servers from previous versions. This is because of incompatibilities between the cluster versions.
 
 ## Workaround
 
@@ -43,17 +46,18 @@ To work around this behavior, use one of the following methods, as appropriate f
 
 ### Method 1: Clean installation
 
-
 1. Perform a clean installation of Windows Server 2008 or a later version on the nodes in the cluster.
 2. Install the Failover Clustering feature, create a new cluster, and then reconfigure the cluster settings.
 
 ### Method 2: In-place migration
 
-To perform in-place migration, go to the following Microsoft website for more information: [Migrating to a Failover Cluster Running Windows Server 2008 R2](https://go.microsoft.com/fwlink/?linkid=142796) 
+To perform in-place migration, go to the following Microsoft website for more information:
+
+[Migrating to a Failover Cluster Running Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730990(v=ws.11))
 
 ## Status
 
-This behavior is by design. 
+This behavior is by design.
 
 ## More information
 

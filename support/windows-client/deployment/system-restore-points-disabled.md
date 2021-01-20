@@ -22,15 +22,15 @@ _Original KB number:_ &nbsp; 3209726
 
 ## Symptoms
 
-Assume that you have a Windows 7-based system with system restore points set, and the computer is upgraded to Windows 10. When you try to restore the system to an earlier restore point after the upgrade, you discover that you can't do that. The option is disabled. 
+Assume that you have a Windows 7-based system with system restore points set, and the computer is upgraded to Windows 10. When you try to restore the system to an earlier restore point after the upgrade, you discover that you can't do that. The option is disabled.
 
 Windows 7 Disk Size:
 
 :::image type="content" source="./media/system-restore-points-disabled/disk-size.jpg" alt-text="Screenshot of Windows 7 Disk Size.":::
 
-Restore points on Windows 7: 
+Restore points on Windows 7:
 
-![Screenshot of restore points before upgrade](./media/system-restore-points-disabled/restore-points-before-upgrade.jpg)  
+:::image type="content" source="./media/system-restore-points-disabled/restore-points-before-upgrade.jpg" alt-text="Screenshot of restore points before upgrade.":::
 
 Restore points after you upgrade to Windows 10:
 
@@ -38,16 +38,16 @@ Restore points after you upgrade to Windows 10:
 
 Querying the System Restore via PowerShell:  
 
-![Screenshot of querying System Restore](./media/system-restore-points-disabled/query-system-restore.jpg)  
+:::image type="content" source="./media/system-restore-points-disabled/query-system-restore.jpg" alt-text="Screenshot of querying System Restore.":::
 
 ## Cause
 
-This issue occurs because system restore points don't persist after a Windows upgrade. This behavior is by design. 
+This issue occurs because system restore points don't persist after a Windows upgrade. This behavior is by design.
 
 ## More information
 
 By default, System Restore should be disabled after an upgrade regardless of its earlier setting, and all the older Restore Points will be deleted from System Restore. However, on an MSI or Windows Update installation, if the size of the operating system disk is greater than 128 gigabytes (GB), a restore point is automatically created without the user enabling System Restore (as if System Restore were already enabled). Similarly, if the disk size is less than 128 GB, no restore point is created until System Restore is manually enabled.
 
-You can verify this yourself by checking for a restore point after an .msi or Windows Update installation on a computer that has a disk size of greater than 128 GB.
+You can verify this yourself by checking for a restore point after a .msi or Windows Update installation on a computer that has a disk size of greater than 128 GB.
 
 For more information about System Restore, see [How to Use System Restore in Windows 7, 8, and 10](https://support.microsoft.com/help/17085/windows-8-restore-refresh-reset-pc) and [Backup and restore in Windows 10](https://support.microsoft.com/instantanswers/62ed802d-7c8d-35d9-9b82-6cace4b08185/backup-and-restore-in-windows-10).
