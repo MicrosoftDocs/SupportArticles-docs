@@ -1,5 +1,5 @@
 ---
-title: How to enable Windows Vista user experience features
+title: How to enable Windows Vista user experience features on a computer that is running Windows Server 2008
 description: Describes how to configure Windows Server 2008 as a workstation computer.
 ms.date: 09/14/2020
 author: Deland-Han
@@ -13,16 +13,16 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Windows Media Player
 ms.technology: windows-server-shell-experience 
 ---
-# How to enable Windows Vista user experience features
+# How to enable Windows Vista user experience features on a computer that is running Windows Server 2008
 
-This article describes how to configure Windows Server 2008 as a workstation computer.
+This article describes how to configure the user experience features that are available in Windows Vista on a computer that is running Windows Server 2008.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;947036
 
 ## Introduction
 
-This article describes how to configure the user experience features that are available in Windows Vista on a computer that is running Windows Server 2008. You may want to perform the actions that are described in this article if you intend to use a Windows Server 2008-based computer as a client workstation.
+You may want to perform the actions that are described in this article if you intend to use a Windows Server 2008-based computer as a client workstation.
 
 ## More information
 
@@ -34,49 +34,32 @@ As a first step to enable these user experience features in Windows Server 2008,
 
 - Windows Media Player
 - Media codecs
-
 - Windows Mail
 
     > [!NOTE]
     > This program was formerly known as Microsoft Outlook Express.
 - Windows Calendar
-
 - Sound Recorder
-
 - Windows Messenger
 - ActiveSync
-
 - Sync Manager
-
 - File sync
 
     > [!NOTE]
     > This program enables client-side caching.
 
 - Device Sync
-
 - Video Capture
-
 - Video for Windows
-
 - Themes
-
 - Character map (Charmap)
-
 - Data cleaner
-
 - Folder cleaner
-
 - Cleaner manager
-
 - Portable Media Devices
-
 - Scanners and Cameras
-
 - Photo Experience
-
 - Three dimensional (3-D) screensavers
-
 - Windows Defender
 
 The following Windows Vista features are not available in Windows Server 2008:
@@ -84,36 +67,23 @@ The following Windows Vista features are not available in Windows Server 2008:
 - Sidebar
 - Support for IrDA hardware
 - Windows Movie Maker
-
 - Bluetooth support
 - Game Controllers
-
 - Parental Controls
-
 - Inbox Games
-
 - Games Explorer
-
 - Windows Vista Photo Experience
-
 - RSS Client
-
 - Peer-to-Peer (P2P) meeting application
-
 - Wallpapers or screensavers other than the following:
   - The default wallpapers and screensavers
   - 3-D screensavers
 - Animated cursors
-
 - Sample files, such as music sample files and video sample files
-
 - PIF manager
-
 - Tablet support
 - Mobility Center
-
 - Media Center
-
 - Speech Recognition
 
 To install Desktop Experience, follow these steps:
@@ -143,13 +113,14 @@ Microsoft provides third-party contact information to help you find technical su
 To enable Windows Aero, follow these steps:
 
 1. Start the Themes service. To do this, follow these steps:
-      1. Click **Start**, click **Run**, type services.msc, and then click **OK**.
+      1. Click **Start**, click **Run**, type *services.msc*, and then click **OK**.
       2. In the list of installed services, right-click **Themes**, and then click **Properties**.
       3. In the **Startup type** list, click **Automatic**, click **Apply**, click **Start**, and then click **OK**.
 2. Enable Windows Aero. To do this, follow these steps:
       1. Right-click a blank area of the desktop, and then click **Personalize**.
       2. In the **Personalization** dialog box, click **Window Color and Appearance**.
       3. In the **Color scheme** list, click **Windows Aero**, and then click **OK**.
+
     > [!NOTE]
     > If **Windows Aero** does not appear in the **Color scheme** list, the graphics adapter may not support Windows Aero, or you may have to update the graphics adapter drivers.
 
@@ -159,8 +130,8 @@ Windows Server 2008 supports audio playback. However, by default, the Windows Au
 
 1. In the notification area, right-click the speaker icon, and then click **Sounds**.
 2. In the following message that appears, click **Yes**:
-    The computer cannot play audio because the Windows Audio Service is not enabled.
 
+    > The computer cannot play audio because the Windows Audio Service is not enabled.  
     Would you like to enable the Windows Audio Service?
 
 ### Windows Search
@@ -176,7 +147,7 @@ The Windows Search feature is required for many other search features, such as t
 7. Click **Install**.
 8. After Windows Search is installed, click **Close** to exit the Add Roles Wizard.
 
-### Shadow Copies
+### Shadow copies
 
 To enable shadow copies for a particular volume, follow these steps:
 
