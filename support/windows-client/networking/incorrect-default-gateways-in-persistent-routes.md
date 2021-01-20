@@ -26,7 +26,7 @@ Assume that a network adapter is configured with IP settings that include a defa
 
 For example, if an adapter is configured with a default gateway of 10.0.0.1, and it is then added to an LBFO teamed adapter that is configured with a default gateway of 192.168.0.1, both default routes may appear under the "Persistent Route" section of the Route Print command output as shown here:
 
-> ===========================================================================  
+> \===========================================================================  
 Persistent Routes:  
 Network Address &nbsp; &nbsp; Netmask &nbsp; Gateway Address &nbsp; Metric  
 0.0.0.0 &emsp; &emsp; &emsp; &emsp; &emsp;0.0.0.0 &emsp; &emsp; 10.0.0.1 &emsp; &emsp; &emsp;Default  
