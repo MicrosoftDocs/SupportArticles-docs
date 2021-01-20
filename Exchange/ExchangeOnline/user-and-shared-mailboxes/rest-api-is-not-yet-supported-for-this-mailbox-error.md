@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.custom: 
 - Exchange Online
 - CSSTroubleshoot
-ms.reviewer: evsung, rachaudh
+ms.reviewer: evsung, rachaudh, brianja, jasonjoh
 appliesto:
 - Power Automate  
 search.appverid: MET150
