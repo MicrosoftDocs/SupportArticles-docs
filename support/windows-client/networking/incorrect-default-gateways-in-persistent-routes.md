@@ -31,7 +31,7 @@ Persistent Routes:
 Network Address &nbsp; &nbsp; Netmask &nbsp; Gateway Address &nbsp; Metric  
 0.0.0.0 &emsp; &emsp; &emsp; &emsp; &emsp;0.0.0.0 &emsp; &emsp; 10.0.0.1 &emsp; &emsp; &emsp;Default  
 0.0.0.0 &emsp; &emsp; &emsp; &emsp; &emsp;0.0.0.0 &emsp; &emsp; 192.168.0.1&emsp;&emsp; Default  
-===========================================================================
+\===========================================================================
 
 However, in the "Active Routes" section of the Route Print command output, only the newly configured LBFO teamed adapter default gateway is present.
 
