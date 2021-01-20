@@ -1,49 +1,46 @@
 ---
 title: Error downloading the ConfigMgr.AdminUIContent.cab file
-description: Fixes an issue in which you encounter an AdminUIContentDownload error when you download updates for Configuration Manager either via Online Service Connection Point or ServiceConnectionTool.exe.
-ms.date: 09/11/2020
+description: An AdminUIContentDownload error occurs when you download updates for Configuration Manager by using either service connection point online mode or ServiceConnectionTool.exe.
+ms.date: 01/20/2021
 ms.prod-support-area-path:
 ---
-# The underlying connection was closed error when the SMS_DMP_DOWNLOADER component or Service Connection Tool downloads the ConfigMgr.AdminUIContent.cab file
+# Error when downloading the ConfigMgr.AdminUIContent.cab file by using the SMS_DMP_DOWNLOADER component or the service connection tool
 
-This article helps you fix an issue in which you encounter an AdminUIContentDownload error when you use Online Service Connection Point or ServiceConnectionTool.exe to download updates in Configuration Manager.
+When you use service connection point online mode or ServiceConnectionTool.exe to download updates in Configuration Manager, you receive an AdminUIContentDownload error.
 
 _Original product version:_ &nbsp; Configuration Manager (current branch)  
 _Original KB number:_ &nbsp; 4561945
 
 ## Symptoms
 
-When you use the Service Connection Point set to Online mode, you may notice that no new Configuration manager releases appear in the console and the following error entry is logged in the DmpDownloader.log:
+- When you have the service connection point set to online mode, you may notice that no new Configuration Manager releases appear in the console. And the following error message is logged in the DmpDownloader.log file:
 
->Redirected to URL https://configmgrbits.azureedge.net/adminuicontent/ConfigMgr.AdminUIContent.cab~~
+  > Redirected to URL `https://configmgrbits.azureedge.net/adminuicontent/ConfigMgr.AdminUIContent.cab`~~  
+  > Got fwdlink and recreating the httprequest/response~~  
+  > ERROR: Failed to download Admin UI content payload with exception: The underlying connection was closed: An unexpected error occurred on a send.~~  
+  > Failed to call AdminUIContentDownload. error = Error -2146233079~
 
->Got fwdlink and recreating the httprequest/response~~
+- You have the service connection point set to offline mode. You use the service connection tool (ServiceConnectionTool.exe) to download and import updates in Configuration Manager. A similar error message is logged in the ServiceConnectionTool.log file:
 
->ERROR: Failed to download Admin UI content payload with exception: The underlying connection was closed: An unexpected error occurred on a send.~~
-
->Failed to call AdminUIContentDownload. error = Error -2146233079~
-
-When you use the Service Connection Point set to Offline mode and run a Service Connection Tool (ServiceConnectionTool.exe) to download and import updates in Configuration Manager current branch, the similar error entry is logged in ServiceConnectionTool.log:
-
-> ERROR:AdminUIContentDownloadDownload:DownloadManifestCab exception: The underlying connection was closed: An unexpected error occurred on a send.. There may be an issue with internet connection or the download link
+  > ERROR:AdminUIContentDownloadDownload:DownloadManifestCab exception: The underlying connection was closed: An unexpected error occurred on a send. There may be an issue with internet connection or the download link.
 
 ## Cause
 
-This issue occurs because TLS 1.2 isn't enabled for .NET on the machine running Online Service Connection Point or Service Connection Tool. TLS 1.2 is required to download the .cab file.
+This issue occurs because TLS 1.2 isn't enabled for the .NET Framework on the computer that's running the online service connection point or service connection tool. TLS 1.2 is required to download the .cab file.
 
 ## Resolution
 
-To resolve the issue, use the following method:
+On the computer that runs the online service connection point or service connection tool, [enable TLS 1.2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-server).
 
-- On the computer that runs the Online Service Connection Point or Service Connection Tool, make sure that the actions from the following docs article are performed: https://docs.microsoft.com/en-us/mem/configmgr/core/plan-design/security/enable-tls-1-2-server. In particular, if .NET updates are installed, set the following registry values, and then restart the computer:
+In particular, if .NET Framework updates are installed, set the following registry values, and then restart the computer:
 
-  Subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319`
+Subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319`
 
-  Values:
+Values:
 
-  - `SystemDefaultTlsVersions` = **DWORD:00000001**  
-  - `SchUseStrongCrypto` = **DWORD:00000001**
+- `SystemDefaultTlsVersions` = **DWORD:00000001**  
+- `SchUseStrongCrypto` = **DWORD:00000001**
 
-- As a workaround, if you use a Service Connection Tool, manually download the **ConfigMgr.AdminUIContent.cab** file from [https://go.microsoft.com/fwlink/?LinkID=619849](https://go.microsoft.com/fwlink/?LinkID=619849), and save the file to the folder that's specified by the `-updatepackdest` parameter when you run the `serviceconnectiontool.exe` command. Then, rename the **ConfigMgr.AdminUIContent.cab** file to **ConfigMgr.AdminUIContent.auc**.
+## Workaround
 
-
+If you use the service connection tool, manually download the ConfigMgr.AdminUIContent.cab file from [https://go.microsoft.com/fwlink/?LinkID=619849](https://go.microsoft.com/fwlink/?LinkID=619849). Save the file to the folder that's specified by the `-updatepackdest` parameter when you run the `serviceconnectiontool.exe` command. Then, rename the **ConfigMgr.AdminUIContent.cab** file to **ConfigMgr.AdminUIContent.auc**.
