@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4462988
 
 ## Symptoms
 
-When you use your account to issue any Outlook REST API request or when you use any Outlook functionality in Microsoft Flow, you may receive the following error message
+When you use your account to issue an Outlook REST API request, you may receive the following error message:
 
 > HTTP error: 404  
 Error code: MailboxNotEnabledForRESTAPI or MailboxNotSupportedForRESTAPI  
@@ -30,42 +30,11 @@ Error message: "REST API is not yet supported for this mailbox."
 
 ## Cause
 
-This error can for various reasons:
-
-- The mailbox is on a dedicated Microsoft Exchange Server or is not a valid Office 365 mailbox.
-- The mailbox is an Outlook.com account that hasn't been enabled yet.
-- The mailbox is not part of an Office 365 plan that includes Flow.
+This error can occur if the mailbox is on a dedicated Microsoft Exchange Server and is not a valid Office 365 mailbox.
 
 ## Resolution
 
-To fix this issue, use one of the following options, as appropriate for your situation.
-
-### Option 1: Migrate your mailbox account
-
-If you don't have a valid Office 365 mailbox, you must submit a request to your Outlook administrator to migrate the mailbox account. Users who don't have administrator permissions can't migrate accounts. For  information about how to migrate the mailbox account, see [How to migrate mailbox data by using the Exchange Admin Center in Office 365](/exchange/troubleshoot/mailbox-migration/migrate-data-with-admin-center).
-
-### Option 2: Wait for your mailbox to update, or request a developer preview account
-
-Because enabling mailboxes on Outlook.com for the Outlook REST API happens over time, your existing Outlook.com account may still be in the queue. You can request a new, enabled Outlook.com developer preview account by sending an email message to [outlookdev@microsoft.com](mailto:outlookdev@microsoft.com).
-
-### Option 3: Upgrade your Office 365 plan
-
-The following Office 365 plans include the "Microsoft Flow for Office 365" plan:
-
-- Office 365 Business Essentials
-- Office 365 Business Premium
-- Office 365 Education
-- Office 365 Education Plus
-- Office 365 Enterprise E1
-- Office 365 Enterprise E3
-- Office 365 Enterprise E5
-
-> [!NOTE]
->
-> - Office 365 Enterprise E2 includes the same capabilities as Office 365 Enterprise E1, and Office 365 Enterprise E4 includes the same capabilities as Office 365 Enterprise E3.
-> - Office 365 Enterprise F1 includes the same capabilities as Flow Free. However, a service level agreement is provided, and the number of flow runs is aggregated across all users in an organization.
-
-For more information, see [Flow Plan](https://preview.flow.microsoft.com/pricing/).
+To get a valid Office 365 mailbox, submit a request to your Outlook administrator to migrate the mailbox account. Users who don't have administrator permissions can't migrate accounts. For  information on how to migrate the mailbox account, see [How to migrate mailbox data by using the Exchange Admin Center in Office 365](/exchange/troubleshoot/mailbox-migration/migrate-data-with-admin-center).
 
 ## More information
 
