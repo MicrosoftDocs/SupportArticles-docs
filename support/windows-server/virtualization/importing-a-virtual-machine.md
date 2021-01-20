@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, robtm, taylorb
 ms.prod-support-area-path: Configuration of virtual machine settings
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Importing a VM that is exported from Windows Server 2012 R2 into Windows Server 2012 is not supported
 

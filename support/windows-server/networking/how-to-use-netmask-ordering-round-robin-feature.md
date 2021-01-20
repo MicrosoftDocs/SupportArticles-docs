@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DNS
-ms.technology: Networking
+ms.technology: networking
 ---
 # Description of the netmask ordering feature and the round robin feature in Windows Server 2003 DNS
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Rajsin
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # Event ID 1053 is logged when you use the Gpupdate /force command, or you restart a domain controller
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
 ms.prod-support-area-path: Active Directory Migration Tool (ADMT)
-ms.technology: ActiveDirectory 
+ms.technology: windows-server-active-directory 
 ---
 # How to Troubleshoot Inter-Forest Password Migration with ADMTv2
 

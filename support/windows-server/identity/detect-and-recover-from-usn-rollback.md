@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
 ms.prod-support-area-path: Active Directory backup, restore, or disaster recovery
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # A Windows Server domain controller logs Directory Services event 2095 when it encounters a USN rollback
 

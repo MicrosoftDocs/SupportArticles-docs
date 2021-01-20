@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jdickson
 ms.prod-support-area-path: 'Management and Configuration: Installing Print drivers'
-ms.technology: PrintFaxScan
+ms.technology: windows-server-printing
 ---
 # Printers installed using the same driver and port on Windows are grouped as one when viewed within Devices and Printers
 

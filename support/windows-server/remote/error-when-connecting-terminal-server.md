@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Certificate management
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # You receive various certificate-related error messages when connecting to a Terminal server that is running Windows Server 2008 or Windows Server 2008 R2
 

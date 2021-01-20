@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jaysenb
 ms.prod-support-area-path: Blue Screen/Bugcheck
-ms.technology: Performance 
+ms.technology: windows-server-performance 
 ---
 # Stop error 0x000000D1 and Windows Server runs a bugcheck when you enable a storage controller
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Server Manager
-ms.technology: SysManagementComponents
+ms.technology: windows-client-system-management-components
 ---
 # DNS manager console is missing for RSAT client in Windows 10
 

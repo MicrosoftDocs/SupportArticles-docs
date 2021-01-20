@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: duanecr, kaushika
 ms.prod-support-area-path: Active Directory database issues and domain controller boot failures
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Error when you start your Windows-based domain controller: Directory Services cannot start
 

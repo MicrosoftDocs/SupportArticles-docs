@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, shfuruka
 ms.prod-support-area-path: Multilingual User Interface (MUI) and Input Method Editor (IME)
-ms.technology: ApplicationCompatibility
+ms.technology: windows-client-application-compatibility
 ---
 # You cannot link TextService in Eudcedit.exe
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, gavinl
 ms.prod-support-area-path: Connecting to a session or desktop
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Remote Desktop disconnected or can't connect to remote computer or Remote Desktop server (Terminal Server) that is running Windows Server 2003
 

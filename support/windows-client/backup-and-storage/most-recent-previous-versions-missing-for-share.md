@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, robsim, cpuckett, v-jesits, v-six
 ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
-ms.technology: BackupStorage
+ms.technology: windows-client-backup-and-storage
 ---
 # Most recent previous versions are missing for a share that has Previous Versions enabled in Windows
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DFSR
-ms.technology: Networking
+ms.technology: networking
 ---
 # Security setting changes on folders don't appear immediately on DFSR replication partners
 

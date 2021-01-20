@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Rajsin
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Error when client computers encrypt a file in a Windows Server 2003 domain: Recovery policy configured for this system contains invalid recovery certificate
 

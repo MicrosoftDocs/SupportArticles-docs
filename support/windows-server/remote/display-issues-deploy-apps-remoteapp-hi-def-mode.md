@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.prod-support-area-path: RemoteApp applications
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Display issues occur when you deploy applications through RemoteApp Hi-Def mode
 

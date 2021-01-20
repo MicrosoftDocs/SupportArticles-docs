@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Bitlocker
-ms.technology: WindowsSecurity
+ms.technology: windows-client-security
 ---
 # "TPM is ready for use, with reduced functionality" message when the BIOS is in legacy mode with TPM 2.0
 

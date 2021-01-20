@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika,  johnfern
 ms.prod-support-area-path: Configuration of virtual machine settings
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Ghost NIC seen on Windows 7/Windows 2008 R2 machines built from VMware Templates when the Template uses a Synthetic NIC (VMXNET3)
 

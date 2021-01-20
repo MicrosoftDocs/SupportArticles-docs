@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, RKWON
 ms.prod-support-area-path: User, computer, group, and object management
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # You cannot start the Active Directory Users and Computers tool because the server is not operational
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, bburgin
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: networking
 ---
 # TCP traffic stops after you enable both receive-side scaling and Internet Connection Sharing in Windows Vista or in Windows Server 2003 with Service Pack 1 or Service Pack 2
 

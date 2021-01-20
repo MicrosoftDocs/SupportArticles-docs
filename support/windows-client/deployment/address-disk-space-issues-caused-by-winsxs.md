@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, scottmca, joscon, jcollins
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # How to address disk space issues that are caused by a large Windows component store (WinSxS) directory
 

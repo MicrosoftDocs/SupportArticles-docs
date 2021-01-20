@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, ryhayash
 ms.prod-support-area-path: Slow Performance
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # High CPU usage when you search in the Settings app in Windows Server 2016
 

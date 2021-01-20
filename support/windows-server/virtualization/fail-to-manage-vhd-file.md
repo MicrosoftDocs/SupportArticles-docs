@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Virtual machine creation
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Error when you manage a VHD file in Windows Server 2008 or Windows Server 2008 R2: "A Virtual Disk Provider for the specified file was not found"
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, waltere
 ms.prod-support-area-path: Slow Performance
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # System stops responding, slow file server performance, or delays occur when you work with files that are located on a file server
 

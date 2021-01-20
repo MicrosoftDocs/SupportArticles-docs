@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory topology (sites, subnets, and connection objects)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to optimize the location of a domain controller or global catalog that resides outside of a client's site
 

@@ -294,7 +294,7 @@ Here are some SQL queries that may be helpful when troubleshooting various conte
   SELECT distinct DPSD.DPName, DPSD.PackageID, SP.Name, DPSD.MessageState, DPSD.LastStatusTime, DPSD.SiteCode
   FROM vSMS_DPStatusDetails DPSD
   JOIN SMSPackages_All SP ON DPSD.PackageID = SP.PkgID
-  WHERE DPSD.LastStatusTime > DATEAdd(dd,-3,GETDate())  
+  WHERE DPSD.LastStatusTime < DATEAdd(dd,-3,GETDate())  
   AND MessageState = 2
   ```
 
@@ -304,7 +304,7 @@ Here are some SQL queries that may be helpful when troubleshooting various conte
   SELECT distinct DPSD.DPName, DPSD.PackageID, SP.Name, DPSD.MessageState, DPSD.LastStatusTime, DPSD.SiteCode
   FROM vSMS_DPStatusDetails DPSD
   JOIN SMSPackages_All SP ON DPSD.PackageID = SP.PkgID
-  WHERE DPSD.LastStatusTime > DATEAdd(dd,-3,GETDate())
+  WHERE DPSD.LastStatusTime < DATEAdd(dd,-3,GETDate())
   AND MessageState = 4
   ```
 

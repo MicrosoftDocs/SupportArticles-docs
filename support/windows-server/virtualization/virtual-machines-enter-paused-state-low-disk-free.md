@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevenxu
 ms.prod-support-area-path: Virtual machine state
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Virtual machines enter the paused state due to low disk free space
 

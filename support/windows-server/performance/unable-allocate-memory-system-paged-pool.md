@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mohak, weiwan
 ms.prod-support-area-path: Performance monitoring tools
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Unable to allocate memory from the system paged pool
 

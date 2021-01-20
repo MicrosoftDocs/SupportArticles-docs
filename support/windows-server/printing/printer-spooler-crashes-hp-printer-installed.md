@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: 'Errors and troubleshooting: Print spooler'
-ms.technology: PrintFaxScan
+ms.technology: windows-server-printing
 ---
 # Printer spooler may crash randomly on a Windows Server computer that has an HP printer installed
 

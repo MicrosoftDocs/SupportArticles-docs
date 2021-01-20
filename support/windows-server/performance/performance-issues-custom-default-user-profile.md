@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Slow Performance
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Performance is poor when using custom default user profile in Windows
 

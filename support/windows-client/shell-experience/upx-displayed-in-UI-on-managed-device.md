@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, ningzhan, delhan, christys
 ms.prod-support-area-path: Desktop Shell
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # Upgrade and Privacy Experience (UPX) is displayed in the UI on managed Windows 10 device
 

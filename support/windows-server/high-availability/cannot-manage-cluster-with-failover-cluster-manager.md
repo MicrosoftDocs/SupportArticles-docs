@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup and configuration of clustered services and applications
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Unable to manage cluster using failover cluster manager. Error Received: "Connection to the cluster is not allowed since you are not an administrator on the cluster node(s)"
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Security filtering and item-level targeting
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # Information about Group Policy Preferences events
 

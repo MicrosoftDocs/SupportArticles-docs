@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, eldenc
 ms.prod-support-area-path: Initial Cluster Creation or Adding node
-ms.technology: HighAvailability  
+ms.technology: windows-server-high-availability  
 ---
 # Cluster Validation fails "Validate Cluster Network Configuration" Test with Error 80070005
 

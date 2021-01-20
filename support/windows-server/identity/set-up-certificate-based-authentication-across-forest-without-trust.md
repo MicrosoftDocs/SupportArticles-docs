@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, wincicadsec, jitha
 ms.prod-support-area-path: Active Directory Certificate Services
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to set up certificate-based authentication across forests without trust for a web server
 

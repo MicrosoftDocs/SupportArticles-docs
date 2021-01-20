@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Windows Script Host (WSH)
-ms.technology: WindowsAdministrationManagementDevelopment
+ms.technology: windows-client-administration-management-development
 ---
 # How to create a desktop shortcut with the Windows Script Host
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, dsmith
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 #  You receive the error 'WSAENOBUFS (10055)' when you try to connect from TCP ports greater than 5000
 

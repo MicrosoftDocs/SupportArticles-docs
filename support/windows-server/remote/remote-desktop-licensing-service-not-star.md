@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, AJAYPS, BHASKARR
 ms.prod-support-area-path: Remote Desktop Services (Terminal Services) licensing
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Remote Desktop Licensing Service may not start and event ID 623 may be logged
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, manojse, lacranda
 ms.prod-support-area-path: Bitlocker
-ms.technology: WindowsSecurity
+ms.technology: windows-client-security
 ---
 # MBAM 2.0 SSP Portal gives an error: The requested Key ID is invalid for the current user
 

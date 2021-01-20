@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: COM+ administration, configuration, and security
-ms.technology: ApplicationCompatibility
+ms.technology: windows-server-application-compatibility
 ---
 # 0x80004027 error when you try to remotely access COM+ object after you upgrade to Windows Server 2016
 

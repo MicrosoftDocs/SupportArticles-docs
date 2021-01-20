@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Applications
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 # SuperFetch(SysMain) service spikes the CPU for 1-2 minute when a 64-bit application is running in Windows Vista or in Windows 7
 

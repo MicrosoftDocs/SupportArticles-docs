@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Microsoft Management Console (MMC)
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # Error when enabling analytic or debug event log: The requested operation cannot be performed over an enabled direct channel. The channel must first be disabled before performing the requested operation
 

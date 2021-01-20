@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Blue Screen/Bugcheck
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Stop error (INACCESSIBLE_BOOT_DEVICE) after you reconfigure critical hardware devices
 

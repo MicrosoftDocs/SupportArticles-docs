@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, BOBQIN, herbertm
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Using language IDs to identify language packs for AD DS and AD LDS domain controllers
 

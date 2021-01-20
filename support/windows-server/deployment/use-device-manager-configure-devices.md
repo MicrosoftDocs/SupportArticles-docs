@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, V-LANAC
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # How to use Device Manager to configure devices in Windows Server 2003  
 

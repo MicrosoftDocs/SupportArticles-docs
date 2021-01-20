@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User, computer, group, and object management
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to use the Administration Tools Pack to remotely administer computers that are running Windows Server 2003, Windows XP, or Windows 2000
 

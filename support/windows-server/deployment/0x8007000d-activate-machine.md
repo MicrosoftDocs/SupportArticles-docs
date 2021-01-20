@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Activation
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Error code 0x8007000D when you try to activate a Windows 7 machine by using any type of product key
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, arrenc, ajayps, sarathm 
 ms.prod-support-area-path: Integration components
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # VM Integration Services status reports protocol version mismatch on pre-Windows 10, Windows Server 2016, or Windows Server 2019 VM guests
 

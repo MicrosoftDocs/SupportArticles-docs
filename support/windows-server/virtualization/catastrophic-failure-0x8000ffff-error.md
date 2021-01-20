@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, shenry, liexgu
 ms.prod-support-area-path: Virtual machine will not boot
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Catastrophic failure (0x8000FFFF) error when you start a VM on a Windows Server 2012 R2-based Hyper-V server
 

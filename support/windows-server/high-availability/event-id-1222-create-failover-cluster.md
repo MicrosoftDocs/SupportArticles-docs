@@ -9,9 +9,9 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: robsmi, kaushika
+ms.reviewer: robsmi, kaushika, qianyu
 ms.prod-support-area-path: Setup and configuration of clustered services and applications
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Event ID 1222 when you create a Windows Server 2012 failover cluster
 
@@ -34,7 +34,7 @@ A new feature in Windows Server 2012 flags Cluster Computer objects to prevent t
 
 To resolve this issue, follow these steps:
 
-1. Start Active Directory Administrative Center, and then select the tree view.
+1. Start **Active Directory Administrative Center**, and then select the tree view.
 2. Select the CNO's organizational unit (OU).
 3. Locate and right-click the CNO, and then click **Properties**.
 4. Click to select the **Protect from accidental deletion**  check box, and then click **OK**.
@@ -44,8 +44,16 @@ To resolve this issue, follow these steps:
 
 ## More information
 
-To improve the level of protection and ability to recover from the accidental deletion of Custer Computer objects, we recommend that you enable the Active Directory Recycle Bin feature. For more information about how to do this, go to the following TechNet websites: [Step-by-step guide to the Active Directory Recycle Bin feature](https://technet.microsoft.com/library/dd392261%28v=ws.10%29.aspx) 
+To improve the level of protection and ability to recover from the accidental deletion of Custer Computer objects, we recommend that you enable the Active Directory Recycle Bin feature. For more information about how to do this, go to the following websites:
 
-[How to configure accounts in Active Directory](https://technet.microsoft.com/library/cc731002%28v=ws.10%29.aspx) 
-For more information about the failover cluster security model, click the following article number to view the article in Microsoft Knowledge Base: [947049](https://support.microsoft.com/help/947049) Description of the failover cluster security model in Windows Server 2008
-For more information about Cluster Computer Objects, go to the following MSDN website: [How to identify stale Cluster Computer objects](https://techcommunity.microsoft.com/t5/failover-clustering/identifying-stale-cluster-computer-objects/ba-p/371687)
+- [Step-by-step guide to the Active Directory Recycle Bin feature](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd392261(v=ws.10))
+
+- [How to configure accounts in Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731002(v=ws.10))
+
+For more information about the failover cluster security model, click the following article number to view the article in Microsoft Knowledge Base:
+
+[947049](https://support.microsoft.com/help/947049) Description of the failover cluster security model in Windows Server 2008
+
+For more information about Cluster Computer Objects, go to the following MSDN website:
+
+[How to identify stale Cluster Computer objects](https://techcommunity.microsoft.com/t5/failover-clustering/identifying-stale-cluster-computer-objects/ba-p/371687)

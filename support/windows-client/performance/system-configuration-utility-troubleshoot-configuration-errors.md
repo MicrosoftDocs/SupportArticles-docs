@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Performance monitoring tools
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 # How to use the System Configuration utility to troubleshoot configuration errors
 

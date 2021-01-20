@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, v-jomcc
 ms.prod-support-area-path: Active Directory backup, restore, or disaster recovery
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to restore deleted user accounts and their group memberships in Active Directory
 
@@ -967,7 +967,5 @@ To obtain Groupadd.exe, contact Microsoft Product Support Services.
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 
 ## References
-
-For more information, see [Description of the standard terminology that is used to describe Microsoft software updates](https://support.microsoft.com/help/824684).
 
 For more information on how to use the AD Recycle Bin feature included in Windows Server 2008 R2, see [Active Directory Recycle Bin Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd392261(v=ws.10)).

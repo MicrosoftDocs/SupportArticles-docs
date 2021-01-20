@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Blue Screen/Bugcheck
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 # How to read the small memory dump file that is created by Windows if a crash occurs
 

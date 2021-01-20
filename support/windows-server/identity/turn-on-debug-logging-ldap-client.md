@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tea, v-jesits, herbertm
 ms.prod-support-area-path: LDAP configuration and interoperability
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to turn on debug logging of the LDAP client (Wldap32.dll)
 

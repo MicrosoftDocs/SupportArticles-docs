@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jeffwoo
 ms.prod-support-area-path: Virtual machine creation
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Support partners for non-Microsoft hardware virtualization software
 

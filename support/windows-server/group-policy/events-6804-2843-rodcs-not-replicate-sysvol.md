@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.prod-support-area-path: Sysvol access or replication issues
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # Events 6804 and 2843 are logged and RODCs do not replicate SYSVOL
 

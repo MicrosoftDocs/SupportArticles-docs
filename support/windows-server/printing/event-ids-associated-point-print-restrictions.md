@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Errors and troubleshooting General issues
-ms.technology: PrintFaxScan
+ms.technology: windows-server-printing
 ---
 # Event ID's commonly associated with point and print restrictions
 

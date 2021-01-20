@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, zhchia, squin
 ms.prod-support-area-path: Microsoft Management Console (MMC)
-ms.technology: SysManagementComponents
+ms.technology: windows-client-system-management-components
 ---
 # Error (MMC has detected an error in a snap-in and will unload it) when you try to launch VAMT 3.0 on a Windows 7 or Windows Server 2008 R2-based computer
 
