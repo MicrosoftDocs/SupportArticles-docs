@@ -65,11 +65,17 @@ ms.reviewer:
 If you're unable to successfully RDP to the virtual machine (VM), use PowerShell and [Serial Console](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/serial-console-windows) to check for the log entries.
 
 1. On the command line, launch PowerShell by running `powershell.exe`.
-2. In PowerShell, execute this command:
+2. In PowerShell, execute the following commands:
 
 ```ps
 psCopy
+```
+
+```ps
 remove-module psreadline
+```
+
+```ps
 Get-WinEvent -FilterHashtable @{LogName='System'; StartTime=(Get-Date).AddDays(-1); ProviderName='Service Control Manager'}
 ```
 
@@ -106,6 +112,7 @@ Connect to the VM using [Serial Console](https://docs.microsoft.com/azure/virtua
    2. **Starting/Stopping** - Try stopping and starting the service again with these commands:
 
       `sc stop NSI`
+
       `sc start NSI`
 
 3. If the NSI service is disabled:
