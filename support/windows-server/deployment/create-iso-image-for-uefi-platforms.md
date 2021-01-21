@@ -1,6 +1,6 @@
 ---
 title: Create an ISO image for UEFI platforms
-description: Describes how to create an UEFI bootable Windows PE RAM Disk on a CD-ROM for Windows Server 2008.
+description: Describes how to create an UEFI bootable Windows PE RAM Disk on a CD-ROM.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,31 +13,31 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
 ms.technology: windows-server-deployment
 ---
-# Create an ISO image for UEFI platforms for a Windows PE CD-ROM for Windows Server 2008
+# Create an ISO image for UEFI platforms for a Windows PE CD-ROM
 
-This article describes how to create an ISO image for UEFI platforms for a Windows PE CD-ROM for Windows Server 2008.
+This article describes how to create an ISO image for UEFI platforms for a Windows PE CD-ROM.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 947024
 
 ## Introduction
 
-This article describes how to create an International Standards Organization (ISO) image for a Windows Preinstallation Environment (Windows PE) CD-ROM for Windows Server 2008. This CD-ROM starts the computer by using Unified Extensible Firmware Interface (UEFI) firmware.
+This article describes how to create an International Standards Organization (ISO) image for a Windows Preinstallation Environment (Windows PE) CD-ROM. This CD-ROM starts the computer by using Unified Extensible Firmware Interface (UEFI) firmware.
 
 ## More information
 
 ### Prerequisites
 
 - You have installed one of the following configurations:
-  - The Windows OEM Preinstallation Kit (OPK) together with Windows Server 2008
-  - The Windows Automated Installation Kit (WAIK) together with Windows Server 2008
-- The target platform is an x64-based (amd64) version of Windows Server 2008.  
+  - The Windows OEM Preinstallation Kit (OPK) together with Windows Server
+  - The Windows Automated Installation Kit (WAIK) together with Windows Server
+- The target platform is an x64-based (amd64) version of Windows Server.  
 
 The Windows PE CD-Rom can be started from BIOS firmware or from UEFI firmware. The CD-ROM has two boot catalog entries. One platform ID entry corresponds to the BIOS, and one corresponds to the UEFI.
 
 To create an ISO image for Windows PE on a CD-ROM, follow these steps:
 
-1. Use administrative credentials to log on to a Windows Server 2008-based computer.
+1. Use administrative credentials to log on to a Windows Server computer.
 2. On the **Programs** Menu, click **Windows OEM Preinstallation Kit (OPK)**, and then click **Windows PE Tools Command Prompt**.
 
 3. Type copype.cmd amd64 winpe_x64, and then press ENTER. This command creates the directory structure and copies the required files.
