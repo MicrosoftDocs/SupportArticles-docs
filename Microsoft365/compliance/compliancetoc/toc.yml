@@ -3,6 +3,8 @@
   items:
   - name: Archive Mailboxes
     items:
+    - name: '"Mailbox is full" warning'
+      href: ../archive-mailboxes/mailbox-full-warning-though-not-reached-quota.md
     - name: A mailbox reaches its quota
       href: ../archive-mailboxes/mailbox-reaches-quota.md
     - name: Archive mailbox issues
