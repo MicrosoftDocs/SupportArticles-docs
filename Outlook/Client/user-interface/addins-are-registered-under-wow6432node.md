@@ -44,9 +44,9 @@ COM add-ins register themselves in the Windows Registry under either the `HKEY_C
 
 |Window bitness|Office bitness|COM add-in registry location under HKEY_LOCAL_MACHINE|
 |---|---|---|
-|32-bit|32-bit|HKEY_LOCAL_MACHINE\Software\Microsoft\Office\<*application*>\Addins|
-|64-bit|64-bit|HKEY_LOCAL_MACHINE\Software\Microsoft\Office\<*application*>\Addins|
-|64-bit|32-bit|HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Office\<*application*>\Addins|
+|32-bit|32-bit|HKEY_LOCAL_MACHINE\Software\Microsoft\Office\\<*application*>\Addins|
+|64-bit|64-bit|HKEY_LOCAL_MACHINE\Software\Microsoft\Office\\<*application*>\Addins|
+|64-bit|32-bit|HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Office\\<*application*>\Addins|
 |32-bit|64-bit|It is not possible to install a 64-bit version of Office on a 32-bit version of Windows|
 ||||
 
