@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Storage configuration
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # FCoE IO failures on Hyper-V guests for Windows Server 2016
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory backup, restore, or disaster recovery 
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Syskey.exe utility is no longer supported in Windows 10, Windows Server 2016, and later versions
 

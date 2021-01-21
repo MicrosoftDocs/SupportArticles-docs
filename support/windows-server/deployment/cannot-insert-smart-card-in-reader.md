@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Error message when you insert a smart card in a reader: Device driver software was not successfully installed
 

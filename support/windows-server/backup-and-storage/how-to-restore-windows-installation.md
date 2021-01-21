@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, keithpe
 ms.prod-support-area-path: System Restore or resetting your computer
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # How to restore a Windows 7 installation
 

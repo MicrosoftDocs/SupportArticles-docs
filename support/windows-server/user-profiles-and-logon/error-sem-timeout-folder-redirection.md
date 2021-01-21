@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tonnyp
 ms.prod-support-area-path: Folder redirection
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-server-user-profiles
 ---
 # Folder Redirection fails with the error ERROR_SEM_TIMEOUT or the semaphore timeout period has expired
 

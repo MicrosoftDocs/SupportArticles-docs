@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, taylorb
 ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # VSS writers report as failed on a virtual machine
 

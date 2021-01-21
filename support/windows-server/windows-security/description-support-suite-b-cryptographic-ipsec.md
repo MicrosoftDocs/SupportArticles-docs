@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, clayse
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Description of the support for Suite B cryptographic algorithms that was added to IPsec
 

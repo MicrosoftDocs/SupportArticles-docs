@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rkiran, malladi
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Useful log files for troubleshooting RDS issues
 

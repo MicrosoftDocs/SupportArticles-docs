@@ -57,12 +57,16 @@
       href: admin/8967-8921-errors-running-dbcc.md
     - name: A nonrecoverable I/O error when you use Backup to URL
       href: admin/nonrecoverable-io-error-backup-url.md
+    - name: A TDE-enabled database may not recover
+      href: admin/tde-enabled-database-not-recover.md
     - name: Access violations and memory dump files
       href: admin/access-violations-memory-dump-files.md
     - name: Activation tasks run over limit
       href: admin/activation-runs-over-limit.md
     - name: Agent job may fail with error 65535
       href: admin/agent-job-fail-error-65535-782-7437.md
+    - name: Assembly cannot be migrated to SQL Server 2017 error
+      href: admin/assembly-name-cannot-migrated-error.md
     - name: Assertion when you execute Bulk Insert or BCP 
       href: admin/assertion-execute-bulk-insert-bcp.md
     - name: ASR Agent or non-component VSS Backup fails
@@ -81,20 +85,28 @@
       href: admin/configure-permissions-access-remote-data.md
     - name: Considerations for the autogrow and autoshrink
       href: admin/considerations-autogrow-autoshrink.md
+    - name: Considerations when using the Full-Text to search
+      href: admin/full-text-search-engine-japanese-language.md
     - name: Crashes when you run an Oracle linked server query
       href: admin/crashes-run-oracle-linked-server-query.md
     - name: Create database permission is logged
       href: admin/create-database-permission-logged.md
     - name: Database Engine Input/Output requirements
       href: admin/database-engine-input-output-requirements.md
+    - name: Dashes ignored in search with SQL Full-Text
+      href: admin/dashes-ignored-search-full-text-msidxs-queries.md
     - name: Defragmenting database disk drives
       href: admin/defragmenting-database-disk-drives.md
     - name: Error 0x80040e97 when using full-text search
       href: admin/error-0x80040e97-using-full-text-search.md
+    - name: Error after you perform TDE certificate or key rotation
+      href: admin/error-after-perform-tde-certificate-key-rotation.md
     - name: Error when backing up in-memory database
       href: admin/error-backing-up-memory-database.md
     - name: Error when you run CLR object or create assembly
       href: admin/error-run-clr-object-create-assembly.md
+    - name: Full-text index doesn't index attribute values
+      href: admin/full-text-index-do-not-index-attribute-values.md
     - name: Full-text indexes stop populating
       href: admin/full-text-indexes-populate-slowly.md
     - name: I/O subsystem requirements for the tempdb
@@ -145,8 +157,10 @@
     items:
     - name: Can't connect remotely using TCP/IP
       href: connect/cannot-connect-remotely.md
-    - name: Reolving connectivity errors
-      href: connect/solving-connectivity-errors.md
+    - name: Kerberos Configuration Manager is available
+      href: connect/kerberos-configuration-manager-available.md
+    - name: Resolving connectivity errors
+      href: connect/resolving-connectivity-errors.md
     - name: Untrusted certificate authority error
       href: connect/error-message-when-you-connect.md
   - name: Database Design and Development
@@ -155,6 +169,8 @@
       href: database-design/cannot-make-remote-connection-clr-trigger.md
     - name: Error 556 insert exec failed
       href: database-design/error-556-insert-exec-failed.md
+    - name: Execution of CLR fails with TypeInitializationException
+      href: database-design/execution-clr-fails-typeInitializationexception.md
     - name: Filtered index not used in queries
       href: database-design/filtered-index-with-column-is-null.md
     - name: Improvements in handling some data types and uncommon operations
@@ -217,6 +233,8 @@
     items:
     - name: .Net Framework requirements for SQL Server
       href: install/understanding-dotnet-framework-requirements.md
+    - name: Attempted to perform an unauthorized operation error
+      href: install/error-set-up-update-instances.md
     - name: Description of the Update Cache folder
       href: install/description-update-cache-folder.md
     - name: Different errors when installing SQL Server 2008 R2
@@ -265,6 +283,10 @@
       href: install/error-upgrade-cluster-node.md
     - name: Warning about network binding order
       href: install/warning-about-network-binding.md
+  - name: Machine Learning Services (in database)
+    items:
+    - name: Inconsistent results in MKL computations
+      href: machine-learning/inconsistent-results-mkl-computations-missing-variable.md
   - name: Performance
     items:
     - name: Decreased performance when using TOP, MAX or MIN

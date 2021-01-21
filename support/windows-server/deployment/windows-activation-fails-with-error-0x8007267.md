@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, deepaksr, kledman
 ms.prod-support-area-path: Activation
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Windows Activation fails with error code: 0x8007267C
 

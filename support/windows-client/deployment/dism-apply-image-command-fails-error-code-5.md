@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # DISM /Apply-Image command fails with error code 5 (ERROR_ACCESS_DENIED)
 

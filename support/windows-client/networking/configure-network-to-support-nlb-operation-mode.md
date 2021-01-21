@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Network Load Balancing (NLB)
-ms.technology: Networking 
+ms.technology: windows-client-networking 
 ---
 # Configure network infrastructure to support the NLB operation mode
 

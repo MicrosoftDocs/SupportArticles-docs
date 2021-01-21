@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup and configuration of clustered services and applications
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Configure volume mount points on a server cluster in Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2
 

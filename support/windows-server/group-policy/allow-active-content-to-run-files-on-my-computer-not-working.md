@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, fmu
 ms.prod-support-area-path: Managing Internet Explorer settings through Group Policy
-ms.technology: GroupPolicy  
+ms.technology: windows-server-group-policy  
 ---
 # "Allow active content to run files on My Computer" Group Policy setting does not work as expected
 

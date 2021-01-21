@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Multiple operations fail if Windows 8 is improperly identified as a Windows To Go installation
 

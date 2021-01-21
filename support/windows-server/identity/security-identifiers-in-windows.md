@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User, computer, group, and object management
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Well-known security identifiers in Windows operating systems
 

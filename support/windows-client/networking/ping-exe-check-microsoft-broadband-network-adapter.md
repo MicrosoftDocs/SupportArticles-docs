@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # How to use Ping.exe to check your Microsoft Broadband Network Adapter  
 

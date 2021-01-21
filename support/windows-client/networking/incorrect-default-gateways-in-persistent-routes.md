@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, Joelch
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Additional default gateways may appear in persistent routes when you use LBFO
 
@@ -22,18 +22,16 @@ _Original KB number:_ &nbsp; 2966111
 
 ## Symptoms
 
-Assume that a network adapter is configured with IP settings that include a default gateway. Later, a LBFO team is created that includes the previously configured network adapter. The newly created teamed network adapter is configured with IP settings. In this situation, you may see the previously configured default gateway route and the newly configured default gateway route in the "Persistent Route" section of the Route Print command output.
+Assume that a network adapter is configured with IP settings that include a default gateway. Later, an LBFO team is created that includes the previously configured network adapter. The newly created teamed network adapter is configured with IP settings. In this situation, you may see the previously configured default gateway route and the newly configured default gateway route in the "Persistent Route" section of the Route Print command output.
 
 For example, if an adapter is configured with a default gateway of 10.0.0.1, and it is then added to an LBFO teamed adapter that is configured with a default gateway of 192.168.0.1, both default routes may appear under the "Persistent Route" section of the Route Print command output as shown here:
 
-```console
-===========================================================================
-Persistent Routes:
-Network Address Netmask Gateway Address Metric
- 0.0.0.0 0.0.0.0 10.0.0.1 Default
- 0.0.0.0 0.0.0.0 192.168.0.1 Default
-===========================================================================
-```
+> \===========================================================================  
+Persistent Routes:  
+Network Address &nbsp; &nbsp; Netmask &nbsp; Gateway Address &nbsp; Metric  
+0.0.0.0 &emsp; &emsp; &emsp; &emsp; &emsp;0.0.0.0 &emsp; &emsp; 10.0.0.1 &emsp; &emsp; &emsp;Default  
+0.0.0.0 &emsp; &emsp; &emsp; &emsp; &emsp;0.0.0.0 &emsp; &emsp; 192.168.0.1&emsp;&emsp; Default  
+\===========================================================================
 
 However, in the "Active Routes" section of the Route Print command output, only the newly configured LBFO teamed adapter default gateway is present.
 

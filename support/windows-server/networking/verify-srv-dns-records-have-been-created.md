@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DNS
-ms.technology: Networking
+ms.technology: networking
 ---
 # How to verify that SRV DNS records have been created for a domain controller
 

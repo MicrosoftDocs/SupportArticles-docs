@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, edwardr, danalb, mandarg, oscarlee, davidhen, sudheer, sivsha, bmoore, cecils
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Description of the Windows Server Update Services 3.0 Service Pack 1 package
 

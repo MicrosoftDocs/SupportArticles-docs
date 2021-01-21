@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Task Scheduler
-ms.technology: SysManagementComponents
+ms.technology: windows-client-system-management-components
 ---
 # Error when you use the /z switch together with the Schtasks command in Windows Vista: The task XML is missing a required element or attribute
 

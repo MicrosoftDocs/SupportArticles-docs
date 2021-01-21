@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # The naming context is in the process of being removed or is not replicated from the specified server
 

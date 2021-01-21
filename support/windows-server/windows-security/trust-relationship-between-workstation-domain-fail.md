@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: lindakup, kaushika
 ms.prod-support-area-path: Kerberos authentication
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Error on a computer that's running Windows 7 or Windows Server 2008 R2: Trust relationship between this workstation and the primary domain failed
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, clandis
 ms.prod-support-area-path: Active Directory Federation Services (AD FS)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to restore IIS and clean up Active Directory when you uninstall Active Directory Federation Services 2.0
 

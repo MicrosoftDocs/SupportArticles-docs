@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, akhleshs, tspring, lindakup, justintu
 ms.prod-support-area-path: Active Directory Migration Tool (ADMT)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # AD LDS instance logs Event ID 2092 in Windows Server 2008 or Windows Server 2008 R2
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.prod-support-area-path: 'Errors and troubleshooting: Print output or print failures'
-ms.technology: PrintFaxScan
+ms.technology: windows-client-printing
 ---
 # PNG images don't print correctly in Word 2010 after the system display scaling setting is changed in Windows 7
 

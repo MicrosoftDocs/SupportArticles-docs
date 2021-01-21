@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jdickson
 ms.prod-support-area-path: System Hang
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Enabling Debug mode causes Windows to hang if no Debugger is connected
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, lindakup, arrenc, ajayps, dnats, herbertm
 ms.prod-support-area-path: Group Policy management - GPMC or AGPM
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # Changes to Group Policy object permissions through AGPM are ignored
 

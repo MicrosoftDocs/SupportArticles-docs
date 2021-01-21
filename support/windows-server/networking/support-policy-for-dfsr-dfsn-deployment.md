@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, luche
 ms.prod-support-area-path: DFSR
-ms.technology: Networking
+ms.technology: networking
 ---
 # Information about Microsoft support policy for a DFS-R and DFS-N deployment scenario
 

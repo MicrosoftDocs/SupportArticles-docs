@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, Warrenw, ajayps
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
-ms.technology: GroupPolicy
+ms.technology: windows-client-group-policy
 ---
 # Error when you open gpedit.msc: Resource $(string id="Win7Only)' referenced in attribute displayName could not be found
 

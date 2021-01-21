@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, AshishSu, luche, LavinK, v-jesits
 ms.prod-support-area-path: Active Directory Certificate Services
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Reinstall the CA role in Windows Server 2012 Essentials
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, hikono
 ms.prod-support-area-path: DCOM service startup and permissions
-ms.technology: ApplicationCompatibility
+ms.technology: windows-client-application-compatibility
 ---
 # DCOM event ID 10016 is logged in Windows
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: ccraig, wincicadsec, kaushika
 ms.prod-support-area-path: Smart card logon
-ms.technology: WindowsSecurity
+ms.technology: windows-client-security
 ---
 # Can't authenticate because of an incorrect PIV smart card driver update
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Customize the default local user profile when you prepare an image of Windows
 

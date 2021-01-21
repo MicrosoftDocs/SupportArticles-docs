@@ -10,9 +10,9 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: SDN
+ms.technology: windows-server-sdn
 ---
-# Software Defined Networking documentation
+# Software Defined Networking troubleshooting documentation
 
 The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve Software Defined Networking-related issues. Browse the content or use the search feature to find relevant content.
 

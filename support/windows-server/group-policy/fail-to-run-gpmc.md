@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, bjwhalen
 ms.prod-support-area-path: Sysvol access or replication issues
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # "The Permissions for This GPO in the sysvol folder Are Inconsistent with Those in Active Directory" Message When You Run GPMC
 

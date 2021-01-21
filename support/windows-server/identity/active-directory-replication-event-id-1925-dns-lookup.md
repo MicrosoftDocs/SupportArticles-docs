@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Active Directory replication Event ID 1925: attempt to establish a replication link failed due to DNS lookup problem
 

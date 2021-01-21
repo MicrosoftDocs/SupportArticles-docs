@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ctimon
 ms.prod-support-area-path: Storage hardware
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Read-only pass-through disk after you add the disk to a highly available VM in a Windows Server 2008 R2 SP1 failover cluster
 

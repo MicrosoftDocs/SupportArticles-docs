@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika，egomes
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Event ID 4107 or Event ID 11 is logged in the Application log
 

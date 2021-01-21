@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DFSR
-ms.technology: Networking
+ms.technology: networking
 ---
 # DFSR no longer replicates files after restoring a virtualized server's snapshot
 

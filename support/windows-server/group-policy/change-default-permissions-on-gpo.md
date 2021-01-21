@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, sashalon
 ms.prod-support-area-path: Sysvol access or replication issues
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # How to change the default permissions on GPOs in Windows Server 2008 R2, Windows Server 2008, Windows Server 2003, and Windows 2000 Server
 

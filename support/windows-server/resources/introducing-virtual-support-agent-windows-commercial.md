@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Virtual Agent
-ms.technology: Resources
+ms.technology: windows-server-resources
 ---
 # Introducing Virtual Support Agent for Windows Commercial
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, gautama
 ms.prod-support-area-path: 
-ms.technology: Application Virtulization (App-V)
+ms.technology: windows-client-application-virtualization-app-v
 ---
 # An App-V v5 virtualized application fails to start with error 0xc0000142
 

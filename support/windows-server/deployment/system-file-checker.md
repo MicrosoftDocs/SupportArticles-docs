@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, LARRYGA
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Description of System File Checker (Sfc.exe)
 

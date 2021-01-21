@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Windows Server Update Services 3.0 SP2 Dynamic Installer for Server Manager
 

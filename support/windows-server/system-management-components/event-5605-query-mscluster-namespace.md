@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: WMI
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # Warning Event ID 5605 is logged in Application log when querying MSCluster namespace through WMI
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.prod-support-area-path: Remote desktop sessions
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Remote Desktop IP Virtualization does not work in Windows Server 2019
 

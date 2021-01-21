@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory 
+ms.technology: windows-server-active-directory 
 ---
 # NTFRS deprecation intentionally blocks the installation of Windows Server version 1709 replica DCs
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jeffbo
 ms.prod-support-area-path: setup
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # F5 doesn't refresh Explorer in Windows PE of Windows 10 Creators Update
 

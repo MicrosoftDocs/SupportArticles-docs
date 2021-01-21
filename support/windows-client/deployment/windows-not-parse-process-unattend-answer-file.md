@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, yuakib
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # "Windows could not parse or process the unattend answer file for pass [specialize]" error message when you perform an in-place upgrade
 

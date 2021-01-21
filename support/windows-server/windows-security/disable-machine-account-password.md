@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davidg 
 ms.prod-support-area-path: Legacy authentication (NTLM)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # How to disable automatic machine account password changes
 

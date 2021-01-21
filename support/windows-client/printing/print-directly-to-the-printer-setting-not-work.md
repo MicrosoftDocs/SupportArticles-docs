@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: 'Errors and troubleshooting: Print spooler'
-ms.technology: PrintFaxScan
+ms.technology: windows-client-printing
 ---
 # Print directly to the printer setting doesn't work with XPS-based print drivers
 

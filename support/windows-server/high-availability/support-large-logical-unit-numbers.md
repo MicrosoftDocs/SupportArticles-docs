@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: stevemat, keithpe, kaushika
 ms.prod-support-area-path: Setup and configuration of clustered services and applications
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Adding support for more than eight LUNs in Windows Server
 

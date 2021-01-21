@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, okang
 ms.prod-support-area-path: Kerberos authentication
-ms.technology: WindowsSecurity
+ms.technology: windows-client-security
 ---
 # "Not enough storage is available to complete this operation" error message when you use a domain controller to join a computer to a domain
 

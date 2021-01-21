@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
 ms.prod-support-area-path: Configuration of virtual machine settings
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # After a new Hyper-V VMMS certificate is generated, there are mouse and screen resolution issues when you manage a virtual machine using the Hyper-V Manager Console
 

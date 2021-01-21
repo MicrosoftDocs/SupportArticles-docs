@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Active Directory Replication Error 8524: The DSA operation is unable to proceed because of a DNS lookup failure
 

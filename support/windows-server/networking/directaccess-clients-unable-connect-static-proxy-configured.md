@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika,AJAYPS, TODE, AMANJAIN
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: networking
 ---
 # DirectAccess clients may be unable to connect when a static proxy is configured
 

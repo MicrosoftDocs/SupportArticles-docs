@@ -11,7 +11,7 @@ ms.prod: windows-client
 ms.localizationpriority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 
 # Push-button reset fails because language resources are missing

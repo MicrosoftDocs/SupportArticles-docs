@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, BrCaton
 ms.prod-support-area-path: Remote access
-ms.technology: Networking
+ms.technology: networking
 ---
 # LT2P/IPsec RAS VPN connections fail when using MS-CHAPv2
 

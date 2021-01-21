@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: networking
 ---
 # Receive Window Auto-Tuning feature for HTTP traffic on Windows Vista-based computers
 

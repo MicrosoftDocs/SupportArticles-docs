@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, minh
 ms.prod-support-area-path: Remote access
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # DirectAccess clients that use Teredo tunneling cannot connect after upgrade to Windows 10
 

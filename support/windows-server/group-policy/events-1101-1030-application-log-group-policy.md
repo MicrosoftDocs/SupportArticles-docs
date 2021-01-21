@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # Events 1101 and 1030 are logged in the Application log when applying Group Policy
 

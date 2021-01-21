@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Permissions, access control, and auditing
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Overview of the impersonate a client after authentication and the create global objects security settings (821546.KB.EN-US.2.2)
 

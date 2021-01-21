@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: No Boot (not BugChecks)
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 # Unable to refresh or reset PC after Automatic Repair fails in Windows 8
 
