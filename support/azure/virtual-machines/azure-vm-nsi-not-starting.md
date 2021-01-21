@@ -78,9 +78,8 @@ Get-WinEvent -FilterHashtable @{LogName='System'; StartTime=(Get-Date).AddDays(-
 The NSI service is not running on the Virtual Machine. This issue happens in the following scenarios:
 
 1. The NSI service was set to **disabled**.
-2. The NSI is crashing. The RCA will depend on the dump from the process.
-3. The NSI is hanging. The RCA will depend on the dump from the process.
-4. Another required service is not running. The RCA will depend on why the other service was not starting.
+2. The NSI is not responding, or is crashing.
+3. Another required service is not running.
 
 ## Solution
 
