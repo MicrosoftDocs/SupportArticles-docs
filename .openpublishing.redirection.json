@@ -784,6 +784,11 @@
       "source_path": "support/cpp/expand-pointer- debugger-watch-window.md",
       "redirect_url": "/troubleshoot/cpp/expand-pointer-debugger-watch-window",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/solving-connectivity-errors.md",
+      "redirect_url": "/troubleshoot/sql/connect/resolving-connectivity-errors",
+      "redirect_document_id": true
     }
   ]
 }

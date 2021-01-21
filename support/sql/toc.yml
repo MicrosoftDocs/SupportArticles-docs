@@ -159,8 +159,8 @@
       href: connect/cannot-connect-remotely.md
     - name: Kerberos Configuration Manager is available
       href: connect/kerberos-configuration-manager-available.md
-    - name: Reolving connectivity errors
-      href: connect/solving-connectivity-errors.md
+    - name: Resolving connectivity errors
+      href: connect/resolving-connectivity-errors.md
     - name: Untrusted certificate authority error
       href: connect/error-message-when-you-connect.md
   - name: Database Design and Development
