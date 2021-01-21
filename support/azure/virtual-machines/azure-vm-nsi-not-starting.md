@@ -90,7 +90,7 @@ One method that you can use is to [take a snapshot of the disk](https://docs.mic
 
 ### Connect to the VM using Serial console (Solution)
 
-Connect to the VM using Serial Console to attempt to get the NSI service started.
+Connect to the VM using [Serial Console](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/serial-console-windows) to attempt to get the NSI service started.
 
 1. In the Serial Console, execute this command:
 
