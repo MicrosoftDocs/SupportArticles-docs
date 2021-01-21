@@ -30,14 +30,14 @@ To resolve this issue, use one of the following methods:
 ### Method 1: Disable Teams as a game
 
 1. Brings Teams up to the forefront of your screen.
-2. Press Windows key + G to open Xbox Game Bar.
+2. Press Windows key + G to open **Xbox Game Bar**.
 3. Go to **Settings** > **General**, clear the **Remember this is a game** check box.
 4. Go to **Settings** > **Capturing**, clear the **Record in the background while I'm playing a game** check box.  
 
 ### Method 2: Disable Xbox Game Bar
 
 1. Go to **Start**, select **Settings** > **Gaming** > **Xbox Game Bar**.
-2. Turn off Xbox Game Bar.
+2. Turn off **Xbox Game Bar**.
 
    :::image type="content" source="media/performance-affected-when-teams-remembered-as-game/turn-off.png" alt-text="Screenshot of turning off Xbox Game Bar.":::
 
