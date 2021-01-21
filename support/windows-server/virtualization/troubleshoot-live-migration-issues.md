@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: adjudele, cpuckett, kaushika
 ms.prod-support-area-path: Live Migration
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Troubleshoot live migration issues
 

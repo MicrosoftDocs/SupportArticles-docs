@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, patste, v-jomcc
 ms.prod-support-area-path: Power Management
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # How to disable and re-enable hibernation on a computer that is running Windows
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: yongrhee, v-jomcc, kaushika
 ms.prod-support-area-path: 'Errors and troubleshooting: General issues'
-ms.technology: PrintFaxScan
+ms.technology: windows-server-printing
 ---
 # Error message when you try to install a shared network printer
 

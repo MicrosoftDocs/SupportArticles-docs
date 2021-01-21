@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Account lockouts
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Enumerate locked out user accounts using Saved Queries
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: manojse, kaushika, dereka
 ms.prod-support-area-path: Bitlocker 
-ms.technology: WindowsSecurity
+ms.technology: windows-client-security
 ---
 # BitLocker could not be enabled when USB drive is not found
 

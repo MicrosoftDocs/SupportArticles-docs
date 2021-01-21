@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle, qianyu
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-client-rds
 ---
 # Description of Remote Server Administration Tools
 

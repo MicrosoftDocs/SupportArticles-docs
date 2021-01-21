@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory topology (sites, subnets, and connection objects)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # You cannot promote a Windows Server domain controller to be a global catalog server
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, btoth, miodon, joelch
 ms.prod-support-area-path: Dynamic Host Configuration Protocol (DHCP)
-ms.technology: Networking
+ms.technology: networking
 ---
 # You cannot add a DHCP reservation that is outside of the scope distribution range in Windows Server 2008 R2
 

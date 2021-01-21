@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Backup and restore of virtual machines
-ms.technology: HyperV 
+ms.technology: hyper-v 
 ---
 # Errors when backing up VMs that belong to a guest cluster in Windows
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mghazai
 ms.prod-support-area-path: RemoteApp applications
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # An application does not start in a Windows Server Terminal Services RemoteApp session
 

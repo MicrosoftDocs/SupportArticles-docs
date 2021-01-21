@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevepar
 ms.prod-support-area-path: File Explorer/Windows Explorer
-ms.technology: ShellExperience
+ms.technology: windows-server-shell-experience
 ---
 # Increased CPU usage when you access a SQL Server FileTable share from Windows Explorer
 

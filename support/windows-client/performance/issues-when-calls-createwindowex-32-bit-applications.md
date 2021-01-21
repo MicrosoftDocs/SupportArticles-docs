@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, memarti, chmorri, v-jesits
 ms.prod-support-area-path: Applications
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 # Windows 10 causes issues when it calls CreateWindowEx in some 32-bit applications
 

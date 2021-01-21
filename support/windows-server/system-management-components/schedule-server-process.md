@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, markstan
 ms.prod-support-area-path: Task Scheduler
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # How to schedule a server process
 

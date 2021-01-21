@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, tfairman, dantes
 ms.prod-support-area-path: Web Application Proxy (WAP) role service
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Use Group Policy to apply WinHTTP proxy settings to Windows clients
 

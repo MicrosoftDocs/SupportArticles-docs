@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, danma
 ms.prod-support-area-path: Storage configuration
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # You receive an error message after you put the page file on another drive other than the drive C in a guest operating system
 

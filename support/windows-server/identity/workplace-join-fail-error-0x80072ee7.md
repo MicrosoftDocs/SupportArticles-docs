@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, willfid, AAdcontent, rkiran
 ms.prod-support-area-path: Active Directory Federation Services (AD FS)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # "Workplace Join discovery failed" error with exit code 0x80072EE7
 
@@ -27,21 +27,25 @@ _Original KB number:_ &nbsp; 3045385
 
 When users try to perform a Workplace Join, they receive the following error message:
 
-Confirm you are using the current sign-in info, and that your workplace uses this feature. Also, the connection to your workplace might not be working right now. Wait and try again.
+> Confirm you are using the current sign-in info, and that your workplace uses this feature. Also, the connection to your workplace might not be working right now. Wait and try again.
 
 Additionally, an administrator may see the following event details in Event Viewer:
 
-|Event ID:|102|
-|---|---|
-|Log Name:|Microsoft-Windows-Workplace Join/Admin|
-|Source:|Microsoft-Windows-Workplace Join|
-|Level:|Error|
-|Description:|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072EE7.<br/><br/>The server name or address could not be resolved. Could not connect to `https://EnterpriseRegistration.domainTEST.com:443/EnrollmentServer/contract?api-version=1.0`.|
-|||
+> Event ID: 102  
+Log Name: Microsoft-Windows-Workplace Join/Admin  
+Source: Microsoft-Windows-Workplace Join  
+Level: Error  
+Description:  
+Workplace Join discovery failed.
+>
+> Exit Code: 0x80072EE7.
+>
+> The server name or address could not be resolved. Could not connect to `https://EnterpriseRegistration.domainTEST.com:443/EnrollmentServer/contract?api-version=1.0`.
 
 ## Cause
 
 This problem occurs if one of the following conditions is true:
+
 - The currently signed-in user is from a domain that does not contain a DNS record for the DRS Service.
 - A user who has a user principal name (UPN) suffix that uses the initial domain (for example, joe@contoso.onmicrosoft.com) and who is not yet enabled as the mobile device management authority through Microsoft Intune for mobile device management in Office 365 tries to perform a Workplace Join.
 
@@ -50,18 +54,21 @@ This problem occurs if one of the following conditions is true:
 ### Verify DNS
 
 To resolve this problem, follow these steps:
+
 1. Verify the EnterpriseRegistration CNAME record for the UPN suffix of the user account. This is the part after the "@" character, such as in john@contoso.com.
-2. Open a Command Prompt window, and then run the following command:
+2. Open a **Command Prompt** window, and then run the following command:
 
-Nslookup enterpriseregistration.domain.com 
+    ```console
+    Nslookup enterpriseregistration.domain.com 
+    ```
 
-- If you use Azure Active Directory Join 
+    - If you use Azure Active Directory Join
 
-Results should return the CNAME result of EnterpriseRegistration.windows.net.
+      Results should return the CNAME result of EnterpriseRegistration.windows.net.
 
-- If you use Windows Server Workplace Join 
-     - Internal host should return internal ADFS node.
-     - External host should return external ADFS Proxy (if present).
+    - If you use Windows Server Workplace Join
+      - Internal host should return internal ADFS node.
+      - External host should return external ADFS Proxy (if present).
 
 ## References
 

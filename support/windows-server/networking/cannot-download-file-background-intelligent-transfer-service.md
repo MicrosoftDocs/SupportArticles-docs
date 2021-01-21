@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Background Intelligent Transfer Service (BITS)
-ms.technology: Networking
+ms.technology: networking
 ---
 # Error when you download a file by using the Background Intelligent Transfer Service: Content file download failed
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, harsur, rolandw, justintu, arrenc
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # DCDiag VerifyReferences test fails when you use DFSR to replicate SYSVOL
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: RemoteApp applications
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # RemoteApp sessions are disconnected when all RemoteApp windows and user-launched notification area icons are closed
 

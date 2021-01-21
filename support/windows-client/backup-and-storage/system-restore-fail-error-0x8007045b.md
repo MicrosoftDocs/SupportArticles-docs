@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: System Restore or resetting your computer
-ms.technology: BackupStorage
+ms.technology: windows-client-backup-and-storage
 ---
 # System Restore may fail with error code 0x8007045b if there is encrypted content in the restore point
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, rolandw, uspand, amaltsev
 ms.prod-support-area-path: Schema update - known issues, best practices, workflow review
-ms.technology: ActiveDirectory
+ms.technology: windows-client-active-directory
 ---
 # Error when you check domain object properties by using RSAT in Windows 10: msDS-ExpirePasswordsOnSmartCardOnlyAccounts not exist
 

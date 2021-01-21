@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kimnich, kaushika
 ms.prod-support-area-path: Multipath I/O (MPIO) and Storport
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Windows Setup in a boot from SAN configuration reports: Setup was unable to create a new system partition or locate an existing system partition
 

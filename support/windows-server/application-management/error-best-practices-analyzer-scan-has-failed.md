@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Application Compatibility Toolkit (ACT)
-ms.technology: ApplicationCompatibility
+ms.technology: windows-server-application-compatibility
 ---
 # Error "The Best Practices Analyzer scan has failed" when running Best Practice Analyzer 
 

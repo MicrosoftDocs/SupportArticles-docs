@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Installation and configuration of Hyper-V
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Incompatible version errors are logged in the System log when you start Windows Server 2008 R2 as a Windows Server 2008 Hyper-V guest
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, ajayps
 ms.prod-support-area-path: Group Policy management - GPMC or AGPM
-ms.technology: GroupPolicy
+ms.technology: windows-client-group-policy
 ---
 # Logon scripts don't run for five minutes after a user logs on to a Windows 8.1-based computer
 

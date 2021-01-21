@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, steverac
 ms.prod-support-area-path: WMI 
-ms.technology: SysManagementComponents
+ms.technology: windows-client-system-management-components
 ---
 # The SMS Agent Host service does not start after you restart a Systems Management Server 2003 client computer
 

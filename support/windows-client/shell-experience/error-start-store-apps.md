@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Modern, Inbox and Microsoft Store Apps
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # Error when you start Microsoft Store apps: This app has been blocked by your system administrator
 

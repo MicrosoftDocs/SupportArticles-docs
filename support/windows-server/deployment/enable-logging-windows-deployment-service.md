@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # How to enable logging in WDS in Windows
 
-This article describes how to enable logging in Windows Deployment Services (WDS) in Windows.
+This article describes how to enable logging in Windows Deployment Services (WDS) in Windows Server.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 936625
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 936625
 
 ## Introduction
 
-This article discusses how to enable logging in WDS in Windows. Additionally, this article describes how to gather data in WDS.
+This article discusses how to enable logging in WDS in Windows Server. Additionally, this article describes how to gather data in WDS.
 
 You can use this information to help troubleshoot issues that you may experience in WDS.
 
@@ -56,9 +56,9 @@ WDSUTIL /get-server /show:all /detailed
 
 This command causes WDS information to be logged in the Application log and in the System log.
 
-## Obtain trace logs for Windows
+## Obtain trace logs for Windows Server
 
-To obtain trace information for Windows, do the following:
+To obtain trace information for Windows Server, do the following:
 
 1. Open **Event Viewer** (eventvwr).
 2. Browse to **Windows Logs**\\**Applications and Services Logs**\\**Microsoft**\\**Windows**\\**Deployment-Services-Diagnostics**.
@@ -78,7 +78,7 @@ Then, configure the components that you want to be logged by setting one or more
 
      `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\WDSServer\Providers\WDSTFTP\TraceDisabled`
 
-WDS servers that are running Windows also support the following additional tracing:
+WDS servers also support the following additional tracing:
 
 - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\WDSServer\Providers\WDSTFTP\TraceFlags`
 - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\WDSServer\Providers\WDSMC\TraceFlags`
