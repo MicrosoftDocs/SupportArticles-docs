@@ -62,7 +62,7 @@ ms.reviewer:
 
 ### Connect to the VM using Serial console (Troubleshoot cause)
 
-If you're unable to successfully RDP to the virtual machine (VM), use **PowerShell** and **Serial Console** to check for the log entries.
+If you're unable to successfully RDP to the virtual machine (VM), use PowerShell and [Serial Console](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/serial-console-windows) to check for the log entries.
 
 1. On the command line, launch PowerShell by running `powershell.exe`.
 2. In PowerShell, execute this command:
