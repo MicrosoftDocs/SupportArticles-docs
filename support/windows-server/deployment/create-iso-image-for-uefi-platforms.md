@@ -29,15 +29,15 @@ This article describes how to create an International Standards Organization (IS
 ### Prerequisites
 
 - You have installed one of the following configurations:
-  - The Windows OEM Preinstallation Kit (OPK) together with Windows
-  - The Windows Automated Installation Kit (WAIK) together with Windows
-- The target platform is an x64-based (amd64) version of Windows.  
+  - The Windows OEM Preinstallation Kit (OPK) together with Windows Server
+  - The Windows Automated Installation Kit (WAIK) together with Windows Server
+- The target platform is an x64-based (amd64) version of Windows Server.  
 
 The Windows PE CD-Rom can be started from BIOS firmware or from UEFI firmware. The CD-ROM has two boot catalog entries. One platform ID entry corresponds to the BIOS, and one corresponds to the UEFI.
 
 To create an ISO image for Windows PE on a CD-ROM, follow these steps:
 
-1. Use administrative credentials to log on to a Windows computer.
+1. Use administrative credentials to log on to a Windows Server computer.
 2. On the **Programs** Menu, click **Windows OEM Preinstallation Kit (OPK)**, and then click **Windows PE Tools Command Prompt**.
 
 3. Type copype.cmd amd64 winpe_x64, and then press ENTER. This command creates the directory structure and copies the required files.

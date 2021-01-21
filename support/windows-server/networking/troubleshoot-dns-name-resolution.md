@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 816567
 
 This article describes methods that you can use to configure DNS if queries that are directed to the Internet are not resolved correctly, but local intranet name resolution functions correctly.
 
-The Cache.dns file that stores root hints on your Windows computer may be missing or damaged. You can manually add root hints by using the DNS snap-in, replace the Cache.dns file on your hard disk with the backup Cache.dns file or replace it with the original version of the Cache.dns file.
+The Cache.dns file that stores root hints on your Windows Server computer may be missing or damaged. You can manually add root hints by using the DNS snap-in, replace the Cache.dns file on your hard disk with the backup Cache.dns file or replace it with the original version of the Cache.dns file.
 
 ### To update root hints by using the DNS snap-in
 
@@ -32,7 +32,7 @@ To update root hints:
 
 #### On a non-domain controller
 
-To manually add root hints on a Windows DNS server that is not configured as a domain controller:
+To manually add root hints on a Windows Server DNS server that is not configured as a domain controller:
 
 1. Click **Start**, point to **Administrative Tools**, and then click **DNS**.
 2. In the right pane, right-click **ServerName**, where **ServerName** is the name of the server, and then click **Properties**.  
@@ -41,7 +41,7 @@ To manually add root hints on a Windows DNS server that is not configured as a d
 
 #### On a domain controller
 
-To update root hints on a Windows DNS server that is configured as a domain controller:
+To update root hints on a Windows Server DNS server that is configured as a domain controller:
 
 1. Click **Start**, point to **Administrative Tools**, and then click **DNS**.
 2. In the right pane, right-click **ServerName**, where **ServerName** is the name of the server, and then click **Properties**.  
@@ -99,7 +99,7 @@ To rename and replace the Cache.dns file in the %SystemRoot%\System32\Dns folder
 
 ## References
 
-For additional information about how to configure DNS for Internet access in Windows, click the following article number to view the article in the Microsoft Knowledge Base:  
+For additional information about how to configure DNS for Internet access in Windows Server, click the following article number to view the article in the Microsoft Knowledge Base:  
 [323380](https://support.microsoft.com/help/323380) Troubleshooting DNS servers  
-For additional information about how to install and configure DNS in Windows, click the following article number to view the article in the Microsoft Knowledge Base:  
+For additional information about how to install and configure DNS in Windows Server, click the following article number to view the article in the Microsoft Knowledge Base:  
 [814591](https://support.microsoft.com/help/814591) Troubleshooting Domain Name System (DNS) issues  

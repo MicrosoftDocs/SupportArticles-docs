@@ -174,21 +174,21 @@ The following two commands in REPADMIN.EXE can remove lingering objects from dir
 c:\\>repadmin /removelingeringobjects \<Dest_DSA_LIST> \<Source DSA GUID> \<NC> [/ADVISORY_MODE]
 
 Where:  
-\<Dest_DSA_LIST> is the name of a domain controller that is running Windows and that contains lingering objects (such as the source domain controller that is cited in the NTDS Replication 1988 event).  
+\<Dest_DSA_LIST> is the name of a domain controller and that contains lingering objects (such as the source domain controller that is cited in the NTDS Replication 1988 event).  
 
-\<Source DSA GUID> is the name of a domain controller that is running Windows and that hosts a writable copy of the directory partition that contains lingering objects to which the domain controller in <Dest_DSA_LIST> has network connectivity. The DC to be cleaned up (first DC specified in the command) must be able to connect directly to port 389 on the DC that hosts a writable copy of the directory partition (specified second in the command).  
+\<Source DSA GUID> is the name of a domain controller and that hosts a writable copy of the directory partition that contains lingering objects to which the domain controller in <Dest_DSA_LIST> has network connectivity. The DC to be cleaned up (first DC specified in the command) must be able to connect directly to port 389 on the DC that hosts a writable copy of the directory partition (specified second in the command).  
 
 \<NC> is the DN path of the directory partition that is suspected of containing lingering objects, such as the partition that is specified in a 1988 event.
 
-`REPADMIN /REHOST` can be used to remove lingering-objects domain controllers that host a *read-only* copy of a domain directory partition from domain controllers that are running Windows. The syntax is as follows:  
+`REPADMIN /REHOST` can be used to remove lingering-objects domain controllers that host a *read-only* copy of a domain directory partition from domain controllers. The syntax is as follows:  
  c:\\>repadmin /rehost DSA \<Naming Context> \<Good Source DSA Address>
 
 Where:  
-DSA is the name of a domain controller that is running Windows and that hosts a read-only domain directory partition for a nonlocal domain. For example, a GC in root.contoso.com can rehost its read-only copy of child.contoso.com but cannot rehost root.contoso.com.
+DSA is the name of a domain controller and that hosts a read-only domain directory partition for a nonlocal domain. For example, a GC in root.contoso.com can rehost its read-only copy of child.contoso.com but cannot rehost root.contoso.com.
 
 \<Naming Context> is the DN path of a read-only domain directory partition that is residing in a global catalog.
 
-\<Good Source DSA Address> is the name of a domain controller that is running Windows and that hosts a writable copy of \<Naming Context>. The domain controller must be network-available to the DSA computer.
+\<Good Source DSA Address> is the name of a domain controller and that hosts a writable copy of \<Naming Context>. The domain controller must be network-available to the DSA computer.
 
 If the lingering object that is reported in the 1988 event is not removed by repadmin, evaluate whether the object on the source domain controller was created in USN gap, or whether the objects originating domain controller does not exist in the source domain controller's up-to-dateness vector.
 

@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 811770
 
 ## Symptoms
 
-Microsoft has added the **FIPS Compliant** setting to the options for Terminal Services encryption levels in Windows. A Windows Server-based server that has the encryption level set to **FIPS Compliant** cannot allow Remote Assistance connections from a computer that is running Windows 10.
+Microsoft has added the **FIPS Compliant** setting to the options for Terminal Services encryption levels in Windows Server. A Windows Server-based server that has the encryption level set to **FIPS Compliant** cannot allow Remote Assistance connections from a computer that is running Windows 10.
 
 When you try to connect from a Windows 10-based client to a Terminal Services server, the connection may not succeed, and you may receive the following error message:  
 > Because of a security error, the client could not connect to the terminal server. After making sure that you are logged on to the network, try connecting to the server again.
