@@ -10,7 +10,7 @@ ms.reviewer:
 
 ## Symptoms
 
-1. The virtual machine (VM) screenshot shows the operating system (OS) fully loaded and waiting for the credentials.
+1. The virtual machine (VM) screenshot shows the operating system (OS) fully loaded and waiting for credentials.
 
    ![Waiting for credentials](./media/azure-vm-nsi-not-starting/1-waiting.png)
 
