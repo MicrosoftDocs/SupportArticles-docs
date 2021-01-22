@@ -111,7 +111,7 @@ Connect to the VM using [Serial Console](https://docs.microsoft.com/azure/virtua
 
    2. **Starting/Stopping** - Try stopping and starting the service again with these commands:
 
-      `sc stop Netlogon`
+      `sc stop NETLOGON`
 
       `sc start Netlogon`
 
