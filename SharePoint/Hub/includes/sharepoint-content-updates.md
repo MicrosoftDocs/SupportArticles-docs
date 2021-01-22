@@ -2,35 +2,26 @@
 
 
 
-## Week of December 14, 2020
+## Week of January 11, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 12/15/2020 | [Can't open documents in a local client from Chrome](/sharepoint/troubleshoot/lists-and-libraries/cant-open-sp-documents-from-chrome) | modified |
-| 12/15/2020 | [Native SharePoint PDF parser iFilter alternatives](/sharepoint/troubleshoot/lists-and-libraries/ifilter-alternative-to-the-native-pdf-parser) | modified |
-| 12/16/2020 | [Unexpected error when creating a calendar overlay](/sharepoint/troubleshoot/lists-and-libraries/fails-creating-calendar-overlay) | modified |
+| 1/13/2021 | [Provider-hosted add-ins stop working and HTTP 401 error after you configure SharePoint farm hybrid features](/sharepoint/troubleshoot/administration/provider-hosted-add-ins-stop-working-and-http-401-error-after-configure-farm-hybrid-features) | modified |
 
 
-## Week of November 30, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/30/2020 | [SharePoint Online or OneDrive for Business access denied due to organizational policies error message](/sharepoint/troubleshoot/sharing-and-permissions/access-denied-due-to-org-policies) | modified |
-| 12/1/2020 | [Sharing options are grayed out when sharing from SharePoint Online or OneDrive](/sharepoint/troubleshoot/administration/sharing-options-grayed-out-when-sharing-from-sharepoint-online-or-onedrive) | modified |
-| 12/3/2020 | [Access Denied, You need permission to access this site, or User not found in the directory errors in SharePoint Online and OneDrive for Business](/sharepoint/troubleshoot/administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business) | modified |
-
-
-## Week of November 23, 2020
+## Week of January 04, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
+| 1/4/2021 | [Mapping and syncing network drives that connect to SharePoint Online](/sharepoint/troubleshoot/administration/troubleshoot-mapped-network-drives) | modified |
+| 1/7/2021 | [Everyone except external users group is removed on Office 365](/sharepoint/troubleshoot/sharing-and-permissions/everyone-except-external-user-removed) | modified |
 
 
-## Week of November 16, 2020
+## Week of December 28, 2020
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
+| 12/29/2020 | [How to block OneDrive.exe from being advertised after you install Office 2016](/sharepoint/troubleshoot/installation-and-setup/how-to-block-onedrive-from-being-advertised-after-install-office-2016) | renamed |

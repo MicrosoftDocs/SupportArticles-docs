@@ -69,8 +69,8 @@ Change Microsoft Edge, Internet Explorer or Google Chrome settings using adminis
 
 ### Google Chrome
 
-1. In Windows Control Panel, open **Internet Options**.
-2. In the Internet Options window, select **Security** > **Trusted Sites** > **Sites**.
+1. In the Chrome **Settings** window, select **Cookies and other site data**.
+2. Under **Sites that can always use cookies**, select **Add** and select the **Including third-party cookies on this site** check box.
 3. Add the following sites:
 
     - [*.]microsoft.com
