@@ -1,23 +1,23 @@
 ---
-title: "Title goes here"
+title: Troubleshooting SIP options or TLS certificate issues with SBC in Teams
 ms.author: v-todmc
 author: mccoybot
 manager: dcscontentpm
-ms.date: xx/xx/xxxx
-audience: Admin|ITPro|Developer
+ms.date: 1/21/2021
+audience: Admin
 ms.topic: article
-ms.service OR ms.prod: see https://docsmetadatatool.azurewebsites.net/allowlists
+ms.prod: microsoft-teams
 localization_priority: Normal
 search.appverid:
 - SPO160
 - MET150
 appliesto:
-- ADD PRODUCT
+- Microsoft Teams
 ms.custom: 
-- CI ID
+- CI 124780
 - CSSTroubleshoot 
-ms.reviewer: MS aliases for tech reviewers and CI requestor, without "@microsoft.com".  
-description: "How to resolve the error "Virus Found" in SharePoint Server 2013 when the antivirus scanner is unavailable ."
+ms.reviewer: mikebis
+description: Describes how to diagnose SIP options or TLS certificate issues with SBC. 
 ---
 
 # Issues using SIP options or TLS certificates with SBC in Teams
