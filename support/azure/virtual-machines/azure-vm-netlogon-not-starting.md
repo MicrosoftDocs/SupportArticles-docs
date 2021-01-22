@@ -119,7 +119,7 @@ Connect to the VM using [Serial Console](https://docs.microsoft.com/azure/virtua
 
    1. First set the service to automatic:
 
-      `sc config Netlogon start=auto`
+      `sc config NETLOGON start=auto`
 
    1. Start the Netlogon service:
 
