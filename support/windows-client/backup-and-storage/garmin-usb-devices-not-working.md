@@ -32,13 +32,15 @@ Although the Garmin device shows up in Device Manager and is displayed as a conn
 
 ## Cause
 
-This problem occurs because Garmin devices that are formatted with FAT12, FAT16, or FAT32 file systems aren't recognized as mass storage devices by a computer or device that's running Windows 10.
+This problem occurs because Garmin devices formatted with FAT12, FAT16, or FAT32 file systems aren't recognized as mass storage devices by a computer or device that's running Windows 10.
 
 ## Resolution
 
 To resolve the issue, download and install the latest version of Garmin Express software. The Garmin Express tool recognizes the connected device and updates its boot code to make it compatible with Windows 10.
 
-This issue is documented by Garmin at [Device is not detected in Windows 10 after updating to the Anniversary update](https://static.garmin.com/com.garmin.static-pages/cf-maintenance-500.html?site=forums).
+This issue is documented by Garmin at the following site:
+
+[Device is not detected in Windows 10 after updating to the Anniversary update](https://static.garmin.com/com.garmin.static-pages/cf-maintenance-500.html?site=forums).
 
 To download the latest Garmin Express tool, go to [Garmin Express](https://software.garmin.com/express.html).
 
