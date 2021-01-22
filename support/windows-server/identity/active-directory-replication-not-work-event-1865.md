@@ -20,7 +20,6 @@ This article helps fix an issue where Active Directory replication doesn't work 
 _Original product version:_ &nbsp;Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp;944351
 
-
 ## Symptoms
 
 You have multiple sites in the forest. On some sites, you find that AD replication isn't working.

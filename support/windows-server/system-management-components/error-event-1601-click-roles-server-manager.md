@@ -15,7 +15,7 @@ ms.technology: SysManagementComponents
 ---
 # Windows Server 2008: Error message when you select Roles in Server Manager
 
-This article provides the resolution to resolve the Windows Server 2008 problem in which selecting Roles in Server Manager generates an error message and event 1601.
+This article provides a resolution to the Windows Server 2008 problem in which selecting Roles in Server Manager generates an error message and event 1601.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;971509
@@ -28,7 +28,7 @@ When you click **Roles** in **Server Manager** on a computer that is running Win
 Unexpected error refreshing Server Manager; cannot open an anonymous level security token. (Exception from HRESULT: 0x00070543)
 For more information, see the event log: Diagnostics, Event Viewer, Applications and Services Logs, Microsoft, Windows, Server Manager, Operational.
 
-To see the event details, open Event Viewer and navigate to **Applications and Services Logs\Microsoft\Windows\Server Manager\Operational**. Look for Event 1601. This entry provides the following information:
+To see the event details, open Event Viewer and navigate to **Applications and Services Logs\\Microsoft\\Windows\\Server Manager\\Operational**. Look for Event 1601. This entry provides the following information:
 
 > Log Name: Microsoft-Windows-Server Manager/Operational  
 Source: Microsoft-Windows-ServerManager  
@@ -50,11 +50,12 @@ This problem may occur if the Component-Based Servicing subsystem is corrupted i
 
 To resolve this problem, follow these steps:
 
-1. Click **Start**, click **Run**, type **dcomcnfg.exe**, and then click **OK**.
-2. If you receive the **User Account Control**  prompt, click **OK**.
+1. Click **Start**, click **Run**, type *dcomcnfg.exe*, and then click **OK**.
+2. If you receive the **User Account Control** prompt, click **OK**.
 3. In the console tree, expand **Component Services**, and then expand **Computers**.
 4. Right-click **My Computer**, and then click **Properties**.
 5. Click **Default Properties**, and then in the **Default Authentication Level** list, click **Connect**.
+
     > [!Note]
     > If the **Default Authentication Level** item is not set to **None**, do not change it. It may have been set by an administrator.
 
@@ -64,4 +65,4 @@ To resolve this problem, follow these steps:
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
+Microsoft has confirmed that this is a problem in the Microsoft products that are listed at the beginning of this article.

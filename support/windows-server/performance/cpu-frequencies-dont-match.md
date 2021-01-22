@@ -1,5 +1,5 @@
 ---
-title: CPU frequencies don't match
+title: CPU frequencies shown in System property page do not match
 description: Provides a solution to an issue where the CPU name is shown and two identical frequencies don't match on the System property page.
 ms.date: 09/11/2020
 author: Deland-Han 
@@ -26,7 +26,7 @@ Consider the following scenario:
 
 - You have a Windows computer with multiple Intel processors.
 - You open the System property page.
-- Under the Processor section, the CPU name is shown and two identical frequencies are listed. For example,  < CPU Name> @ 2.00 GHz 2.00 GHz.
+- Under the **Processor** section, the CPU name is shown and two identical frequencies are listed. For example, \<CPU Name> @ 2.00 GHz 2.00 GHz.
 - You then install the Intel Collaborative Processor Performance Control (CPPC) driver, which provides additional power management and increases battery life.
 
 After the Intel CPPC driver is installed, the second CPU frequency listed in the System properties page does not match the first one.
@@ -43,11 +43,6 @@ This is a cosmetic issue and does not affect how Windows manages the processor f
 
 For more information on Intel's Collaborative Processor Performance Control (CPPC) feature, P-states and thermal design power (TDP), visit the following links on Intel's website:
 
-Mobile fourth Generation Intel® Core™ Processor Family: Product Brief  
-[http://www.intel.com/content/www/us/en/processors/core/4th-gen-core-family-mobile-brief.html?wapkw=%22collaborative+processor+performance+control%22](http://www.intel.com/content/www/us/en/processors/core/4th-gen-core-family-mobile-brief.html?wapkw=%22collaborative+processor+performance+control%22)
+- [Mobile fourth Generation Intel® Core™ Processor Family: Product Brief](https://www.intel.com/content/www/us/en/processors/core/4th-gen-core-family-mobile-brief.html?wapkw=%22collaborative+processor+performance+control%22)
 
-What exactly is a P-state? (Pt. 1)  
-[http://software.intel.com/blogs/2008/05/29/what-exactly-is-a-p-state-pt-1/](http://software.intel.com/blogs/2008/05/29/what-exactly-is-a-p-state-pt-1/)
-
-Measuring Processor Power  
-[http://www.intel.com/content/dam/doc/white-paper/resources-xeon-measuring-processor-power-paper.pdf](http://www.intel.com/content/dam/doc/white-paper/resources-xeon-measuring-processor-power-paper.pdf)
+- [Measuring Processor Power](https://www.intel.com/content/dam/doc/white-paper/resources-xeon-measuring-processor-power-paper.pdf)
