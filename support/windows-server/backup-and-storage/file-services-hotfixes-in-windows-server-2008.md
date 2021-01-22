@@ -41,7 +41,6 @@ This article contains lists of Microsoft Knowledge Base articles that describe t
     |---|---|---|---|---|
     |May/12/2016| [3161561](https://support.microsoft.com/help/3161561)|MS16-075 and MS16-076: Description of the security update for Windows Netlogon and SMB Server: June 14, 2016|This hotfix contains the most current version of srvnet.sys, srv.sys, and srv2.sys.<br/><br/>(LDR)|To apply this security update, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
     ||||||
-    ||||||
 
 - MRXSMB component
 
@@ -122,29 +121,29 @@ The following image provides an overview of the different layers through which a
 
 - Network File System (NFS) Server components 2008 R2
 
-|Date added|Knowledge Base article|Title|Why we recommend this hotfix|Hotfix type and availability|
-|---|---|---|---|---|
-|12-Mar-2015| [3043762](https://support.microsoft.com/help/3043762)|The process cannot access the file error when you open files from NFS server in Windows Server 2008 R2 SP1|This security update contains the most current version of Nfssvc.exe,  and Nfssvr.sys. <br/><br/> (LDR)|To apply this hotfix, you must have Windows Server 2008 R2 SP1 installed. Available for individual download. Available from Microsoft Update.|
-| 29-Aug-2014| [2957486](https://support.microsoft.com/help/2957486)|Ls command takes a long time to list shared files in 2 windows on a Windows 7 or Windows Server 2008 R2-based NFS server|This hotfix contains the most current version of Rpcxdr.sys. (LDR GDR)|To apply this hotfix, you must have Windows Server 2008 R2, or Windows Server 2008 R2 SP1 installed. Available for individual download. |
-||||||
+    |Date added|Knowledge Base article|Title|Why we recommend this hotfix|Hotfix type and availability|
+    |---|---|---|---|---|
+    |12-Mar-2015| [3043762](https://support.microsoft.com/help/3043762)|The process cannot access the file error when you open files from NFS server in Windows Server 2008 R2 SP1|This security update contains the most current version of Nfssvc.exe,  and Nfssvr.sys. <br/><br/> (LDR)|To apply this hotfix, you must have Windows Server 2008 R2 SP1 installed. Available for individual download. Available from Microsoft Update.|
+    | 29-Aug-2014| [2957486](https://support.microsoft.com/help/2957486)|Ls command takes a long time to list shared files in 2 windows on a Windows 7 or Windows Server 2008 R2-based NFS server|This hotfix contains the most current version of Rpcxdr.sys. (LDR GDR)|To apply this hotfix, you must have Windows Server 2008 R2, or Windows Server 2008 R2 SP1 installed. Available for individual download. |
+    ||||||
 
 - NFS Client components
 
-|Date added|Knowledge Base article|Title|Why we recommend this hotfix|Hotfix type and availability|
-|---|---|---|---|---|
-|14-May-2014| [2956990](https://support.microsoft.com/help/2956990)|NFS client can't reconnect to NFS server in Windows 7 SP1 or Windows Server 2008 R2 SP1|This hotfix contains the most current version of Nfsnp.dll, Nfsclnt.exe, and Nfsrdr.sys.|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
-|Apr/03/2015| [3042826](https://support.microsoft.com/help/3042826)|POSIX subsystem crashes when you try to create a Telnet session in Windows|This hotfix contains the most current version of Psxdll.dll, Psxdllsvr.dll, Psxss.exe, Posix.exe.|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
-||||||
+    |Date added|Knowledge Base article|Title|Why we recommend this hotfix|Hotfix type and availability|
+    |---|---|---|---|---|
+    |14-May-2014| [2956990](https://support.microsoft.com/help/2956990)|NFS client can't reconnect to NFS server in Windows 7 SP1 or Windows Server 2008 R2 SP1|This hotfix contains the most current version of Nfsnp.dll, Nfsclnt.exe, and Nfsrdr.sys.|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
+    |Apr/03/2015| [3042826](https://support.microsoft.com/help/3042826)|POSIX subsystem crashes when you try to create a Telnet session in Windows|This hotfix contains the most current version of Psxdll.dll, Psxdllsvr.dll, Psxss.exe, Posix.exe.|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
+    ||||||
 
 ## Services for NFS in a Windows Server 2008 environment
 
 - NFS Server components
 
-|Date added|Knowledge Base article|Title|Why we recommend this hotfix|Hotfix type and availability|
-|---|---|---|---|---|
-|Jan/02/2014| [2923150](https://support.microsoft.com/help/2923150)|A memory leak occurs on an NFS share server that is running Windows Server 2008|This security update contains the most current version of Nfssvc.exe, Nfssvr.sys, and Msnfsflt.sys.|To apply this hotfix, you must have Windows Vista SP2 or Windows Server 2008 SP2 installed. Available from Microsoft Update.|
-|Sep/25/2014|[2957486](https://support.microsoft.com/help/2957486)|Ls command takes a long time to list shared files in 2 windows on a Windows 7 or Windows Server 2008 R2-based NFS server|This hotfix contains the most current version of Rpcxdr.sys.|To apply this hotfix, you must have Windows Vista SP2 or Windows Server 2008 SP2 installed. Available from Microsoft Update.|
-||||||
+    |Date added|Knowledge Base article|Title|Why we recommend this hotfix|Hotfix type and availability|
+    |---|---|---|---|---|
+    |Jan/02/2014| [2923150](https://support.microsoft.com/help/2923150)|A memory leak occurs on an NFS share server that is running Windows Server 2008|This security update contains the most current version of Nfssvc.exe, Nfssvr.sys, and Msnfsflt.sys.|To apply this hotfix, you must have Windows Vista SP2 or Windows Server 2008 SP2 installed. Available from Microsoft Update.|
+    |Sep/25/2014|[2957486](https://support.microsoft.com/help/2957486)|Ls command takes a long time to list shared files in 2 windows on a Windows 7 or Windows Server 2008 R2-based NFS server|This hotfix contains the most current version of Rpcxdr.sys.|To apply this hotfix, you must have Windows Vista SP2 or Windows Server 2008 SP2 installed. Available from Microsoft Update.|
+    ||||||
 
 ### Components included in services for NFS
 

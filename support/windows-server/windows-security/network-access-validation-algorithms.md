@@ -127,6 +127,7 @@ The trusted domain controller checks its own domain database
 When the server obtains the information and finds the user in the local database, the server uses the name of the LOCAL database to compute the salt and the hash. Therefore, if the "source domain" as sent by the client is empty or is an unknown domain, the salt and therefore the password hash will not match. In these cases, the authentication attempt will fail with an "unknown user name or bad password" (STATUS_LOGON_FAILURE) error. The audit event for the attempt will report "incorrect password," symbol STATUS_WRONG_PASSWORD.
 
 A sample event:
+
 > Log Name: Security  
 Source: Microsoft-Windows-Security-Auditing  
 Event ID: 4625  
@@ -136,29 +137,29 @@ Keywords: Audit Failure
 Computer: server-computer1  
 Description:  
 An account failed to log on.  
-
+>
 > Subject:
-
+>
 > Security ID: NULL SID  
 Account Name: -  
 Account Domain: -  
 Logon ID: 0x0  
-
+>
 > Logon type: 3
-
+>
 > Account for which logon failed:
-
+>
 > Security ID: NULL SID  
 Account Name: ntadmin  
 Account Domain: client-computer1  
-
+>
 > Failure information:
-
+>
 > Failure Reason: Unknown user name or bad password.  
 Status: 0xc000006d  
 Sub Status: 0xc000006a  
 ...
-
+>
 > Detailed authentication information:
 
 > Logon Process: NtLmSsp  
@@ -327,12 +328,12 @@ When you run the `NET USE x: \\NET\share` command, the following steps occur:
     - password = "PSW1"
     - domain = "LOCAL1"
 
-1. The \\\\NET server receives the SMB and looked at the account name.
-1. The server examines its local domain account database and does not find a match.
-1. The server then examines the SMB domain name.
-1. The server does not trust "LOCAL1," so the server does not check its trusted domains.
-1. The server then checks its guest account.
-1. The guest account is disabled so the "System error 1326 has occurred. Logon failure: unknown user name or bad password." error message is generated.
+2. The \\\\NET server receives the SMB and looked at the account name.
+3. The server examines its local domain account database and does not find a match.
+4. The server then examines the SMB domain name.
+5. The server does not trust "LOCAL1," so the server does not check its trusted domains.
+6. The server then checks its guest account.
+7. The guest account is disabled so the "System error 1326 has occurred. Logon failure: unknown user name or bad password." error message is generated.
 
 ### Example 3
 
