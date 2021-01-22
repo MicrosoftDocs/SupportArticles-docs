@@ -30,9 +30,7 @@ When a DNS server receives an update through Active Directory replication:
 
     > [!NOTE]
     > Each DNS record in the zone has a copy of the zone serial number at the time when the record was last modified.
-
 - If the serial number of the replicated record is the same or lower than the local serial number, and if the local DNS server is configured not to allow zone transfer of the zone, the local zone serial number is not changed.
-
 - If the serial number of the replicated record is the same or lower than the local zone serial number, if the DNS server is configured to allow a zone transfer of the zone, and if the local zone serial number has not been changed since the last zone transfer occurred to a remote DNS server, then the local zone serial number will be incremented. Otherwise that is if a copy of the zone with the current local zone serial number has not been transferred to a remote DNS server, the local zone serial number is not changed.
 
 ## More information
