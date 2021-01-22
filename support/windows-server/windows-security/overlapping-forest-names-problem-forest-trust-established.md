@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, herbertm
 ms.prod-support-area-path: Domain and forest trusts
 ms.technology: windows-server-security
 ---

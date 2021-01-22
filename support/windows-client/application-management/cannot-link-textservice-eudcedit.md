@@ -65,7 +65,7 @@ Revert to the previous version of Microsoft Bopomofo by using the following Grou
   
 **User Configuration** > **Administrative Templates** > **Windows Components** > **IME** > **Configure Traditional Chinese IME version**
 
-![Group policy](./media/cannot-link-textservice-eudcedit/ime-version.png)
+:::image type="content" source="./media/cannot-link-textservice-eudcedit/ime-version.png" alt-text="Group policy." border="false":::
 
 > [!Note]
 > This policy was introduced in Windows 10, version 2004.
