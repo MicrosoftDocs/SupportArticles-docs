@@ -27,7 +27,7 @@ ms.reviewer:
       User:          N/A
       Computer:      myvm.contoso.net
       Description:
-      The Network Store Interface service hung on starting.
+      The Netlogon service hung on starting.
    ```
 
    ```cmd
