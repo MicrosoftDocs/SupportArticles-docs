@@ -34,7 +34,8 @@
       href: no-internet-access-multi-ip.md
     - name: Netlogon service is not starting
       href: azure-vm-netlogon-not-starting.md
-  
+    - name: Network Store Interface service is not starting
+      href: azure-vm-nsi-not-starting.md
   - name: RDP
     items:
     - name: Cannot RDP into Azure VM
