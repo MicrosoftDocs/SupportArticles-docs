@@ -86,32 +86,10 @@
       href: ./known-issues/following-application-instance-not-present-error.md
     - name: Users with Exchange Online mailboxes can't access meetings or connectors 
       href: ./known-issues/exchange-users-cant-access-meetings.md
-  - name: Direct Routing
-    items:
-    - name: SIP OPTIONS
-      items:
-      - name: 200 OK message not received by SBC
-        href: ./direct-routing/sip-options/sbc-did-not-receive-200-ok.md
-      - name: 200 OK message received but not SIP OPTIONS
-        href: ./direct-routing/sip-options/sbc-receives-200-ok-but-not-sip-options.md
-      - name: FQDN doesn't match the CN or SAN certificates
-        href: ./direct-routing/sip-options/fqdn-does-not-match-cn-or-san-cert.md
-      - name: SBC is inactive or is not responding
-        href: ./direct-routing/sip-options/sbc-inactive-or-ms-does-not-respond.md
-      - name: The domain not fully activated on the Microsoft server
-        href: ./direct-routing/sip-options/domain-name-not-activated-on-ms-server.md
-    - name: TLS Certificates
-      items:
-      - name: Hello message doesn't contain SBC or required certificates
-        href: ./direct-routing/tls-certificates/certs-missing-in-tls-hello-message.md
-      - name: Connection closes and sending SIP OPTIONS fails
-        href: ./direct-routing/tls-certificates/connection-closes-sip-options-fails.md
-      - name: SBC certificate is not valid
-        href: ./direct-routing/tls-certificates/sbc-certificate-is-invalid.md
-      - name: SBC connection is interrupted
-        href: ./direct-routing/tls-certificates/sbc-connection-is-interrupted.md
-      - name: SBC doesn't trust SIP proxy certificate 
-        href: ./direct-routing/tls-certificates/sbc-does-not-trust-sip-proxy-cert.md
+  - name: Direct Routing issues
+    items: 
+    - name: SIP options and TLS certificate issues
+      href: ./direct-routing/sip-options-tls-certificate-issues.md
   - name: Exchange integration
     items:
     - name: Teams and Exchange interaction issues
