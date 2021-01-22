@@ -127,7 +127,7 @@ Connect to the VM using [Serial Console](https://docs.microsoft.com/azure/virtua
 
    1. Check if the Netlogon service is running:
 
-      `sc query Netlogon`
+      `sc query NETLOGON`
 
 4. IF the Netlogon service fails due to a dependency, you can try the above process on the dependency that was listed.
 Once the Netlogon service is running you can try accessing the VM via RDP.
