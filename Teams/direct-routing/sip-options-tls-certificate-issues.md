@@ -138,7 +138,7 @@ For a list of supported CAs, see the â€œPublic trusted certificate for the SBCâ€
 </details>
 
 <details>
-<summary><b>SBC certificate is invalid</b>
+<summary><b>SBC certificate is invalid</b></summary>
 
 You find that the SBC certificate is invalid, expired, or revoked.
 
