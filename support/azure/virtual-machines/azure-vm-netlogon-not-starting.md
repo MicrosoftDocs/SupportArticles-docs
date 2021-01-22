@@ -113,7 +113,7 @@ Connect to the VM using [Serial Console](https://docs.microsoft.com/azure/virtua
 
       `sc stop NETLOGON`
 
-      `sc start Netlogon`
+      `sc start NETLOGON`
 
 3. If the Netlogon service is disabled:
 
