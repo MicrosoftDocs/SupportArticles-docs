@@ -41,8 +41,8 @@ ms.reviewer:
       User:          N/A
       Computer:      myvm.contoso.net
       Description:
-      The DHCP Client service depends on the Network Store Interface service which failed to start because of the following error: 
-      The service cannot be started, either because it is disabled or because it has no enabled devices associated with it.
+      The Netlogon service depends on the Workstation service which failed to start because of the following error: 
+    The service cannot be started, either because it is disabled or because it has no enabled devices associated with it.
    ```
 
    ```cmd
