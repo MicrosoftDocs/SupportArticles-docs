@@ -32,6 +32,8 @@
       href: credssp-encryption-oracle-remediation.md
     - name: No Internet access
       href: no-internet-access-multi-ip.md
+    - name: Network Store Interface service is not starting
+      href: azure-vm-nsi-not-starting.md
   - name: RDP
     items:
     - name: Cannot RDP into Azure VM
@@ -73,8 +75,6 @@
       href: error-code-0xc0000605.md
     - name: Can't boot with 0xc0000221
       href: boot-error-0xc0000221.md
-  - name: Network Store Interface service is not starting
-    href: azure-vm-nsi-not-starting.md
   - name: Boot failure with error INACCESSIBLE_BOOT_DEVICE
     href: windows-boot-failure.md
   - name: Can't boot after a host node upgrade
