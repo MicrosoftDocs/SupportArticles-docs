@@ -68,7 +68,7 @@ If you’re not receiving a “200 OK” response from SBC, here are a few thing
 
 <summary><b>“200 OK” response received, but not SIP options</b></summary>
 
-SBC received the “200 OK” response and the FQDN name that’s provided by SBC in the Record Route or Contact Header, but it did not receive the SIP options you were expecting. If this occurs, make sure that the domain name was entered correctly and that the FQDN DNS record resolves to the correct SBC IP address. 
+SBC received the “200 OK” response and the FQDN name that’s provided by SBC in the Record Route or Contact Header, but it didn't receive the SIP options you were expecting. If this occurs, make sure that the domain name was entered correctly and that the FQDN DNS record resolves to the correct SBC IP address. 
 
 Another possible cause is that firewall rules aren’t allowing incoming traffic. Make sure that firewall rules are configured to allow incoming connections.
 
