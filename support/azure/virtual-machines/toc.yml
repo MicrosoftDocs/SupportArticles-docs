@@ -76,8 +76,6 @@
       href: error-code-0xc0000605.md
     - name: Can't boot with 0xc0000221
       href: boot-error-0xc0000221.md
-  - name: Netlogon service is not starting
-    href: azure-vm-netlogon-not-starting.md
   - name: Boot failure with error INACCESSIBLE_BOOT_DEVICE
     href: windows-boot-failure.md
   - name: Can't boot after a host node upgrade
