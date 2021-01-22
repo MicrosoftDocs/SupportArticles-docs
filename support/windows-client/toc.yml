@@ -392,8 +392,6 @@
       href: ./deployment/sysprep-capture-task-sequence-fails.md
     - name: System restore points are disabled after upgrade
       href: ./deployment/system-restore-points-disabled.md
-    - name: Unattended setup parameters for unattend.txt
-      href: ./deployment/unattended-setup-parameters-for-unattend-dot-txt.md
     - name: Windows optional component setup tool
       href: ./deployment/use-ocsetup-to-install-remove-components.md
     - name: Windows setup log file locations

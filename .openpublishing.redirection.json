@@ -789,6 +789,11 @@
       "source_path": "support/sql/connect/solving-connectivity-errors.md",
       "redirect_url": "/troubleshoot/sql/connect/resolving-connectivity-errors",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/unattended-setup-parameters-for-unattend-dot-txt.md",
+      "redirect_url": "/windows-hardware/manufacture/desktop/update-windows-settings-and-scripts-create-your-own-answer-file-sxs",
+      "redirect_document_id": false
     }
   ]
 }
