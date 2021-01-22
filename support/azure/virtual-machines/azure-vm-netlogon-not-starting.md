@@ -56,8 +56,8 @@ ms.reviewer:
       User:          N/A
       Computer:      myvm.contoso.net
       Description:
-      The Network Store Interface Service service failed to start due to the following error: 
-      The account specified for this service is different from the account specified for other services running in the same process.
+      The Netlogon service terminated with the following error: 
+    %%14
    ```
 
 ### Connect to the VM using Serial console (Troubleshoot cause)
