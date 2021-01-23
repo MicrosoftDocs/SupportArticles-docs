@@ -32,38 +32,34 @@ When performing a copy/paste operation from Microsoft Excel into Microsoft Acces
 
 ## Cause
 
-There are multiple scenarios which may lead to this error.
+There are multiple scenarios which may lead to this error. Microsoft is aware of this problem in recent versions of Microsoft Access.
 
-<b>Scenario 1</b>
+**Scenario 1**
 
 This issue occurs when the following two conditions are true:
 
 - One of the values in the first row of data contains a decimal point
 - You copy more than one row of data
 
-<b>Scenario 2</b>
+**Scenario 2**
 
 The Excel sheet name contains a single quote character.
 
-<br/>
-
-Microsoft is aware of this problem in recent versions of Microsoft Access.
-
-## Resolution
+## Workaround
 
 Use one of the following workarounds:
 
-<b>Method 1</b>
+**Method 1**
 
-In Microsoft Access, click the dropdown arrow on the Paste icon, and then choose Paste Special. Select either Text or CSV.
+In Microsoft Access, select the dropdown arrow on the **Paste** icon, and then select **Paste Special**. Then, select either Text or CSV.
 
-<b>Method 2</b>
+**Method 2**
 
-Ensure there are no decimal points in the first row of the Excel data you copy.
+Ensure there are no decimal points in the first row of the Excel data that you copy.
 
-<b>Method 3</b>
+**Method 3**
 
-Copy and Paste a single row at a time.
+Copy and paste a single row at a time.
 
 ## More information
 
