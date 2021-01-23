@@ -20,7 +20,7 @@ appliesto:
 - Microsoft Outlook 2010
 search.appverid: MET150
 ---
-# No available rooms for a meeting outside working hours in Outlook 2010 or Outlook 2013
+# No available rooms for a meeting outside working hours in Outlook
 
 _Original KB number:_ &nbsp; 2932395
 
@@ -38,8 +38,7 @@ To resolve this issue, configure the working hours in **Outlook Options** to the
 
 Use the Group Policy Management Console to change the Group Policy settings in the following location:
 
-- Microsoft Outlook 2010\Outlook Options\Preferences\Calendar Options\Working hours
-- Microsoft Outlook 2013\Outlook Options\Preferences\Calendar Options\Working hours
+- Outlook Options\Preferences\Calendar Options\Working hours
 
 Select **Enable**, and then specify the working hours to be the same hours as the rooms.
 
@@ -47,8 +46,7 @@ Select **Enable**, and then specify the working hours to be the same hours as th
 
 Use the Office Customization Tool (OCT), and navigate to the following location in Features\Modify User Settings:
 
-- Microsoft Outlook 2010\Outlook Options\Preferences\Calendar Options\Working hours
-- Microsoft Outlook 2013\Outlook Options\Preferences\Calendar Options\Working hours
+- Outlook Options\Preferences\Calendar Options\Working hours
 
 Select **Enabled**, and then specify the working hours to be the same hours as the rooms.
 
