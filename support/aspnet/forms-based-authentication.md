@@ -86,7 +86,7 @@ This section demonstrates how to create a sample database to store the user name
     ```
 
 3. Save the file as *Users.sql*.
-4. On the SQL Server computer, open *Users.sql* in Query Analyzer. From the list of databases, select **pubs**, and run the script. This creates a sample users table and populates the table in the Pubs database to be used with this sample application.
+4. On the SQL Server computer, open *Users.sql* in Query Analyzer. From the list of databases, select **pubs**, and run the script. This operation creates a sample users table and populates the table in the Pubs database to be used with this sample application.
 
 ## Create a Logon.aspx page
 
@@ -216,7 +216,7 @@ This section presents the code that is placed in the code-behind page (Logon.asp
         }
        ```
 
-    - Generate the authentication ticket, encrypt it, create a cookie, add it to the response, and redirect the user. This gives you more control in how you create the cookie. You can also include custom data along with the `FormsAuthenticationTicket` in this case.
+    - Generate the authentication ticket, encrypt it, create a cookie, add it to the response, and redirect the user. This operation gives you more control in how you create the cookie. You can also include custom data along with the `FormsAuthenticationTicket` in this case.
 
         ```csharp
         private void cmdLogin_ServerClick(object sender, System.EventArgs e)
@@ -295,7 +295,7 @@ This section creates a test page to which users are redirected after they authen
 
 - You may want to store the SQL connection information in the configuration file (*Web.config*) so that you can easily modify it if necessary.
 
-- You may consider adding code to prevent hackers who try to use different combinations of passwords from logging on. For example, you can include logic that accepts only two or three logon attempts. If the user can't log on in a certain number of attempts, you may want to set a flag in the database to not allow that user to log on until that user re-enables his or her account by visiting a different page or by calling your support line. In addition, you should add appropriate error handling wherever necessary.
+- You may consider adding code to prevent hackers who try to use different combinations of passwords from logging on. For example, you can include logic that accepts only two or three logon attempts. If the user can't log on in some attempts, you may want to set a flag in the database to not allow that user to log on until that user re-enables their account by visiting a different page or by calling your support line. Also, you should add appropriate error handling wherever necessary.
 
 - Because the user is identified based on the authentication cookie, you may want to use Secure Sockets Layer (SSL) on this application so that no one can deceive the authentication cookie and any other valuable information that is being transmitted.
 
