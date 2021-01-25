@@ -1,5 +1,5 @@
 ---
-title: Files are corrupted on deduplicated volume
+title: Files are corrupted on deduplicated volume that were created as NTFS-compressed
 description: Discusses that files cannot be opened and are logged as corrupted on deduplicated volumes that were created by having NTFS compression enabled. Provides a resolution.
 ms.date: 09/17/2020
 author: Deland-Han 
@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Deduplication
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Files are corrupted on deduplicated volumes that were created as NTFS-compressed
 
@@ -42,7 +42,7 @@ To decompress the deduplication metadata folder so that write actions to dedupli
 > In the example commands, **\<X>** is a volume that has been created as compressed and that has Data Deduplication enabled.
 
 1. Download the PsExec tool from the following Windows Sysinternals website:
-    [https://technet.microsoft.com/sysinternals/bb897553.aspx](https://technet.microsoft.com/sysinternals/bb897553.aspx) 
+    [PsExec v2.2](/sysinternals/downloads/psexec)
     > [!NOTE]
     > The PsExec tool lets users run processes by having "SYSTEM" user rights. This is necessary to access the protected Data Deduplication metadata folder that is located in the System Volume Information folder.
 2. Block data access for your users on the affected volume. To do this, run the following Windows PowerShell [disable-dedupvolume](/powershell/module/deduplication/disable-dedupvolume?view=win10-ps&preserve-view=true) command:
@@ -51,9 +51,10 @@ To decompress the deduplication metadata folder so that write actions to dedupli
     disable-dedupvolume X: -dataaccess
     ```  
 
-    Notes
-    - This command dismounts and then remounts the volume without the data deduplication filter attached. This blocks users from accessing any deduplicated files.
-    - The dismount action invalidates any open file handles on this volume.
+    > [!NOTE]
+    >
+    > - This command dismounts and then remounts the volume without the data deduplication filter attached. This blocks users from accessing any deduplicated files.
+    > - The dismount action invalidates any open file handles on this volume.
 
 3. Use PsExec to run Cmd.exe as a "SYSTEM" user. To do this, run the following command:
 
@@ -79,7 +80,8 @@ To decompress the deduplication metadata folder so that write actions to dedupli
 
     > Of M files within N directories  
     > \<X> are compressed and \<Y> are not compressed.  
-    > If **\<X>**  is greater than zero (0), go to step 8. Otherwise, go to step 11 because your deduplication metadata folder is not compressed.
+
+    If **\<X>**  is greater than zero (0), go to step 8. Otherwise, go to step 11 because your deduplication metadata folder is not compressed.
 8. In the PsExec Command Prompt window, run the following command:
 
     ```console
@@ -105,10 +107,10 @@ To decompress the deduplication metadata folder so that write actions to dedupli
     Enable-DedupVolume X: -DataAccess
     ```  
 
-    Notes
-
-       - This command dismounts and then remounts the volume with the data deduplication filter attached. Users will now be able to access the deduplicated files.
-       - The dismount action invalidates any open file handles on this volume.
+    > [!NOTE]
+    >
+    > - This command dismounts and then remounts the volume with the data deduplication filter attached. Users will now be able to access the deduplicated files.
+    > - The dismount action invalidates any open file handles on this volume.
 
 > [!NOTE]
 > To prevent similar corruptions from occurring, perform this procedure on all deduplication-enabled volumes that were created as compressed.

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Partition and volume management
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # How NTFS reserves space for its Master File Table (MFT)
 

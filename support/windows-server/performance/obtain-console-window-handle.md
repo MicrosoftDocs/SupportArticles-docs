@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, kayda 
 ms.prod-support-area-path: Performance monitoring tools
-ms.technology:  Performance
+ms.technology: windows-server-performance
 ---
 # How to obtain a Console Window Handle (HWND)
 

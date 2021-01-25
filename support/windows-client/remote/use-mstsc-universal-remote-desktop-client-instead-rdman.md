@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jomukher, v-jesits
 ms.prod-support-area-path: Connecting to a session or desktop
-ms.technology: RDS
+ms.technology: windows-client-rds
 ---
 # Use MSTSC or universal Remote Desktop client instead of RDMan in Windows 10
 

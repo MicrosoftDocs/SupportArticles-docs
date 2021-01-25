@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: FRS
-ms.technology: Networking
+ms.technology: networking
 ---
 # How to reset the File Replication service staging folder to a different logical drive
 

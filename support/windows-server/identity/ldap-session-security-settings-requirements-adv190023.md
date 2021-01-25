@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: herbertm, wincicadsec, kaushika
 ms.prod-support-area-path: LDAP configuration and interoperability
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # LDAP session security settings and requirements after ADV190023 is installed
 

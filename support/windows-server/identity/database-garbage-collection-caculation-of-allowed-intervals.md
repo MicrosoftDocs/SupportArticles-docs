@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-miegge
 ms.prod-support-area-path: Active Directory database issues and domain controller boot failures
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # The Active Directory database garbage collection process and calculation of allowed intervals
 

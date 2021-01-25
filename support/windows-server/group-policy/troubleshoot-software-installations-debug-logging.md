@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davidg 
 ms.prod-support-area-path: Deploying software through Group Policy
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # How to troubleshoot software installations by using Windows application management debug logging
 

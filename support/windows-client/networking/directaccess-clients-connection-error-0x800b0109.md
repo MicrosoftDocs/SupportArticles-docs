@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, AJAYPS
 ms.prod-support-area-path: Remote access
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # DirectAccess clients may not be able to connect to a DirectAccess server with error 0x800b0109 when using IP-HTTPS
 

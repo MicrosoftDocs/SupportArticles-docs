@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
 ms.prod-support-area-path: Sysvol access or replication issues
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # How to minimize SYSVOL size by removing administrative templates (.adm files)
 

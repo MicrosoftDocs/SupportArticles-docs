@@ -2,7 +2,9 @@
 title: MSDB database grows on SQL Server
 description: This article provides workarounds for the problem where MSDB database grows on SQL Server with supplementary character collations.
 ms.date: 12/28/2020
-ms.reviewer: Olivier Aupetit, SQL Server Content council
+author: cobibi
+ms.author: v-yunhya
+ms.reviewer: oliviera, sqlblt
 ---
 # MSDB database grows on SQL Server with supplementary character collations
 
@@ -44,7 +46,7 @@ Every 10 seconds, the following 11 warning messages are inserted into the `msdb.
 >
 > The external columns for ODS - Get snapshot of dm_exec_requests are out of synchronization with the data source columns. The external column "task_state" needs to be updated. The external column "request_status" needs to be updated. The external column "session_status" needs to be updated. The external column "host_name" needs to be updated. The external column "program_name" needs to be updated. The external column "login_name" needs to be updated. The external column "wait_type" needs to be updated. The external column "last_wait_type" needs to be updated. The external column "wait_resource" needs to be updated. The external column "resource_description" needs to be updated.
 
-As a result, the `msdb.dbo.sysssislog` table grows one page (eight KBs) every 10 seconds. The impact on the disk space is:
+As a result, the `msdb.dbo.sysssislog` table grows one page (8 KB) every 10 seconds. The impact on the disk space is:
 
 - 2.8 MB per hour (8 KB x 6 x 60)
 - 67.5 MB per day (8 KB x 6 x 60 x 24)

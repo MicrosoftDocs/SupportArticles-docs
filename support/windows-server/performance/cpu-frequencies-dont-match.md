@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Performance monitoring tools
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # CPU frequencies shown in System property page do not match
 
@@ -43,11 +43,6 @@ This is a cosmetic issue and does not affect how Windows manages the processor f
 
 For more information on Intel's Collaborative Processor Performance Control (CPPC) feature, P-states and thermal design power (TDP), visit the following links on Intel's website:
 
-Mobile fourth Generation Intel® Core™ Processor Family: Product Brief  
-[http://www.intel.com/content/www/us/en/processors/core/4th-gen-core-family-mobile-brief.html?wapkw=%22collaborative+processor+performance+control%22](http://www.intel.com/content/www/us/en/processors/core/4th-gen-core-family-mobile-brief.html?wapkw=%22collaborative+processor+performance+control%22)
-
-What exactly is a P-state? (Pt. 1)  
-[http://software.intel.com/blogs/2008/05/29/what-exactly-is-a-p-state-pt-1/](http://software.intel.com/blogs/2008/05/29/what-exactly-is-a-p-state-pt-1/)
-
-Measuring Processor Power  
-[http://www.intel.com/content/dam/doc/white-paper/resources-xeon-measuring-processor-power-paper.pdf](http://www.intel.com/content/dam/doc/white-paper/resources-xeon-measuring-processor-power-paper.pdf)
+- [Mobile fourth Generation Intel® Core™ Processor Family: Product Brief](http://www.intel.com/content/www/us/en/processors/core/4th-gen-core-family-mobile-brief.html?wapkw=%22collaborative+processor+performance+control%22)
+- [What exactly is a P-state? (Pt. 1)](https://software.intel.com/content/www/us/en/develop/blogs/what-exactly-is-a-p-state-pt-1.html)
+- [Measuring Processor Power](http://www.intel.com/content/dam/doc/white-paper/resources-xeon-measuring-processor-power-paper.pdf)

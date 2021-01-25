@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, davidg
 ms.prod-support-area-path: Managing removable devices through Group Policy
-ms.technology: GroupPolicy
+ms.technology: windows-client-group-policy
 ---
 # Using Group Policy Objects to hide specified drives
 

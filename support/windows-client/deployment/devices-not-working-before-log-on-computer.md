@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, ajayps, arrenc, v-phoebh
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Devices are not working before you log on a computer that's running Windows 10
 

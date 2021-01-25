@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, deepku
 ms.prod-support-area-path: Authentication
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # RDP connection to Remote Desktop server running Windows Server 2008 R2 may fail with message The Local Security Authority cannot be contacted
 

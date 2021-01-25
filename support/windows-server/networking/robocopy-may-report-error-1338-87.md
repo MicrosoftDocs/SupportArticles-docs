@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, sgoad
 ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
-ms.technology: Networking
+ms.technology: networking
 ---
 # Robocopy may report error 1338 (The security descriptor structure is invalid) or error 87 (The parameter is incorrect) when you copy data from CIFS file servers
 

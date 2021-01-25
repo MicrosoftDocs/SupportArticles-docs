@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, neilshen, v-lolang
 ms.prod-support-area-path: Smart card logon
-ms.technology: WindowsSecurity
+ms.technology: windows-client-security
 ---
 # Code 31 in Device Manager when Microsoft Usbccid Smartcard Reader is in a problem state
 

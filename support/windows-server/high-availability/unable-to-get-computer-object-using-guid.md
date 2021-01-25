@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dewitth, ctimon, eldenc
 ms.prod-support-area-path: Errors when running the Validation Wizard
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # "Unable to get Computer Object using GUID" error message when a network name request fails in a Windows Server 2008 failover cluster
 

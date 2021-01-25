@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Johnf
 ms.prod-support-area-path: Dynamic Host Configuration Protocol (DHCP)
-ms.technology: Networking
+ms.technology: networking
 ---
 # How To Install and Configure a DHCP Server in a Workgroup  
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: stevenek, kaushika
 ms.prod-support-area-path: Initial Cluster Creation or Adding node  
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Guest Cluster nodes in Hyper-V may not be able to create or join  
 

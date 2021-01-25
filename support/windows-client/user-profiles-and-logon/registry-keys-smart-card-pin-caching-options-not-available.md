@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, monaha
 ms.prod-support-area-path: Smart card logon
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-client-user-profiles
 ---
 # Registry keys for smart card PIN caching options are no longer available in Windows 10
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, kimnich
 ms.prod-support-area-path: DPI and Display Issues
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # Windows 8: List All Modes in Advanced Display Settings in Control Panel displays incomplete list of modes when in Duplicate mode
 

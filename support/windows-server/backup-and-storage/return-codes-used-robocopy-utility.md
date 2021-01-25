@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Configuring and using Backup software
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Return codes that are used by the Robocopy utility in Windows Server 2008 or Windows Server 2008 R2
 

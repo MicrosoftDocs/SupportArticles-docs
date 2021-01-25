@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Wireless networking and 802.1X authentication
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # How to connect to a wireless network
 

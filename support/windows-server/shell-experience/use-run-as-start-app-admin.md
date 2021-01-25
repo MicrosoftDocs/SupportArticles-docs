@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, BOBQIN
 ms.prod-support-area-path: Desktop Shell
-ms.technology: ShellExperience
+ms.technology: windows-server-shell-experience
 ---
 # How to use Run as to start an application as an administrator in Windows Server 2003  
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Slow Performance
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Large memory support is available in Windows Server 2003 and in Windows 2000
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Partition and volume management
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Restore the system or boot drive letter in Windows  
 

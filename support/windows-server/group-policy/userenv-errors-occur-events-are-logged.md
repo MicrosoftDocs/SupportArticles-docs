@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, msadoff
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # Userenv errors occur and events are logged after you apply Group Policy to computers that are running Windows Server 2003, Windows XP, or Windows 2000
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DST and Timezones
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # Changes to calendar date in BIOS are not reflected in Windows
 

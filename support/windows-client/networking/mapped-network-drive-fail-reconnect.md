@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-xuhuan, v-jesits
 ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Mapped network drive may fail to reconnect in Windows 10, version 1809
 

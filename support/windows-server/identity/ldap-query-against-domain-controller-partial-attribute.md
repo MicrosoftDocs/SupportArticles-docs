@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, fengli
 ms.prod-support-area-path: LDAP configuration and interoperability
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # When you run an LDAP query against a domain controller, you obtain a partial attribute list
 

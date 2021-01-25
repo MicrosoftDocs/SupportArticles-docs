@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: WinRM
-ms.technology: SysManagementComponents
+ms.technology: windows-client-system-management-components
 ---
 # Errors when you run WinRM commands to check local functionality in a Windows Server 2008 environment
 

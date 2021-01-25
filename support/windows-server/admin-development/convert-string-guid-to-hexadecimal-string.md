@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory Services Interface (ADSI)
-ms.technology: WindowsAdministrationManagementDevelopment
+ms.technology: windows-server-administration-management-development
 ---
 # Convert a String Formatted GUID to a Hexadecimal String Form For Use When Querying the Active Directory
 

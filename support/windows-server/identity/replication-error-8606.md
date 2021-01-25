@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Active Directory Replication Error 8606: Insufficient attributes were given to create an object
 
@@ -64,7 +64,7 @@ Various REPADMIN.EXE commands fail with error 8606. These commands include but a
 
 Event 1988 is logged shortly after one of the following events occurs:  
 
-- The first Windows Server 2008 R2 domain controller in the forest is deployed.
+- The first domain controller in the forest is deployed.
 - Any update to the partial attribute set is made.
 
 ### Symptom 5
@@ -95,7 +95,7 @@ Error 8606 is logged when the following conditions are true:
 If the destination domain controller was configured to use loose replication consistency, the object would have been "reanimated" on the destination domain controller's copy of the directory. Specific variations that can cause error are 8606 documented in the "More Information" section. However, the error is caused by one of the following:  
 
 - A permanently lingering object whose removal will require admin intervention
-- A transient lingering object that will correct itself when the source domain controller performs its next garbage-collection cleanup. The introduction of the first Windows Server 2008 R2 domain controller in an existing forest and updates to the partial attribute set are known causes of this condition.
+- A transient lingering object that will correct itself when the source domain controller performs its next garbage-collection cleanup. The introduction of the first domain controller in an existing forest and updates to the partial attribute set are known causes of this condition.
 - An object that was undeleted or restored at the cusp of tombstone lifetime expiration
 
 When you troubleshoot 8606 errors, think about the following points:  
@@ -151,7 +151,7 @@ When you troubleshoot 8606 errors, think about the following points:
 
     Deleted objects may have been prematurely purged from the deleted objects container if system time jumped forward in time on the destination domain controller. Review the "Check for Time Jumps" section.
 
-    If the object that is cited in the 1988 event exists in the deleted objects container of the source domain controller and its delete date is right at the cusp of tombstone lifetime expiration in such a way that the object was reclaimed by garbage collection by one or more destination domain controllers and *will* be reclaimed by garbage collection at the next garbage-collection interval on source domain controllers (that is, the lingering objects are *transient*), you have a choice. Either wait for the next garbage collection execution to delete the object, or manually trigger garbage collection on the source domain controller. See "Manually starting garbage collection." The introduction of the first Windows Server 2008 R2 domain controller, or any change in the partial attribute set, can cause this condition.
+    If the object that is cited in the 1988 event exists in the deleted objects container of the source domain controller and its delete date is right at the cusp of tombstone lifetime expiration in such a way that the object was reclaimed by garbage collection by one or more destination domain controllers and *will* be reclaimed by garbage collection at the next garbage-collection interval on source domain controllers (that is, the lingering objects are *transient*), you have a choice. Either wait for the next garbage collection execution to delete the object, or manually trigger garbage collection on the source domain controller. See "Manually starting garbage collection." The introduction of the first domain controller, or any change in the partial attribute set, can cause this condition.
 
     If repadmin /showobjmeta output for the object that is cited in the 1988 event has a LastKnownParent value of 1, this indicates that the object was deleted, *and* an **IsDeleted** value that of 2 or some other even-numbered value, *and* that date stamp for IsDeleted is at the cusp of the tombstone lifetime number of days different from the date stamp for LastKnownParent, then the object was deleted and then undeleted / auth-restored while it was still live on the source domain controller but already reclaimed by garbage collection by destination domain controllers logging error 8606 / Event 1988. See Reanimations at the cusp of TSL expiration  
 
@@ -170,25 +170,25 @@ The following two commands in REPADMIN.EXE can remove lingering objects from dir
 - `REPADMIN /REMOVELINGERINGOBJECTS`
 - `REPADMIN /REHOST`
 
-`REPADMIN /REMOVELINGERINGOBJCTS` can be used to remove lingering objects from writable and read-only directory partitions on Windows Server 2003 source domain controllers. The syntax is as follows:  
+`REPADMIN /REMOVELINGERINGOBJCTS` can be used to remove lingering objects from writable and read-only directory partitions on source domain controllers. The syntax is as follows:  
 c:\\>repadmin /removelingeringobjects \<Dest_DSA_LIST> \<Source DSA GUID> \<NC> [/ADVISORY_MODE]
 
 Where:  
-\<Dest_DSA_LIST> is the name of a domain controller that is running Windows Server 2003 or a later version and that contains lingering objects (such as the source domain controller that is cited in the NTDS Replication 1988 event).  
+\<Dest_DSA_LIST> is the name of a domain controller that contains lingering objects (such as the source domain controller that is cited in the NTDS Replication 1988 event).  
 
-\<Source DSA GUID> is the name of a domain controller that is running Windows Server 2003 or a later version and that hosts a writable copy of the directory partition that contains lingering objects to which the domain controller in <Dest_DSA_LIST> has network connectivity. The DC to be cleaned up (first DC specified in the command) must be able to connect directly to port 389 on the DC that hosts a writable copy of the directory partition (specified second in the command).  
+\<Source DSA GUID> is the name of a domain controller that hosts a writable copy of the directory partition that contains lingering objects to which the domain controller in <Dest_DSA_LIST> has network connectivity. The DC to be cleaned up (first DC specified in the command) must be able to connect directly to port 389 on the DC that hosts a writable copy of the directory partition (specified second in the command).  
 
 \<NC> is the DN path of the directory partition that is suspected of containing lingering objects, such as the partition that is specified in a 1988 event.
 
-`REPADMIN /REHOST` can be used to remove lingering-objects domain controllers that host a *read-only* copy of a domain directory partition from domain controllers that are running Windows 2000 SP4 or a later version. The syntax is as follows:  
+`REPADMIN /REHOST` can be used to remove lingering-objects domain controllers that host a *read-only* copy of a domain directory partition from domain controllers. The syntax is as follows:  
  c:\\>repadmin /rehost DSA \<Naming Context> \<Good Source DSA Address>
 
 Where:  
-DSA is the name of a domain controller that is running Windows 2000 SP4 or a later version and that hosts a read-only domain directory partition for a nonlocal domain. For example, a GC in root.contoso.com can rehost its read-only copy of child.contoso.com but cannot rehost root.contoso.com.
+DSA is the name of a domain controller that hosts a read-only domain directory partition for a nonlocal domain. For example, a GC in root.contoso.com can rehost its read-only copy of child.contoso.com but cannot rehost root.contoso.com.
 
 \<Naming Context> is the DN path of a read-only domain directory partition that is residing in a global catalog.
 
-\<Good Source DSA Address> is the name of a domain controller that is running Windows 2000 SP4 or a later version and that hosts a writable copy of \<Naming Context>. The domain controller must be network-available to the DSA computer.
+\<Good Source DSA Address> is the name of a domain controller that hosts a writable copy of \<Naming Context>. The domain controller must be network-available to the DSA computer.
 
 If the lingering object that is reported in the 1988 event is not removed by repadmin, evaluate whether the object on the source domain controller was created in USN gap, or whether the objects originating domain controller does not exist in the source domain controller's up-to-dateness vector.
 
@@ -285,7 +285,7 @@ The `CONTOSO.COM` domain contains two domain controllers in the same domain. Tom
 
 #### Cause 2: The source DC sends updates to objects at the cusp of TSL expiration that have already been reclaimed by garbage collection by a strict mode destination DC
 
-The `CONTOSO.COM` domain contains two domain controllers in the same domain. Tombstone lifetime = 60 days. Strict replication is enabled on both domain controllers. DC1 and DC2 replicate every 24 hours. DC1 originates-deletes daily. DC1 is in-place upgraded to Windows Server 2008 R2. This stamps new attribute on all objects in the configuration and writable domain partitions. This includes objects that are currently in the deleted objects container. Some of them were deleted 60 days ago and are now at the cusp of tombstone expiration. DC2 reclaims some objects by garbage collection that were deleted TSL days ago before the replication schedule opens with DC2. Error 8606 is logged until DC1 reclaims the blocking objects by garbage collection.
+The `CONTOSO.COM` domain contains two domain controllers in the same domain. Tombstone lifetime = 60 days. Strict replication is enabled on both domain controllers. DC1 and DC2 replicate every 24 hours. DC1 originates-deletes daily. DC1 is in-place upgraded. This stamps new attribute on all objects in the configuration and writable domain partitions. This includes objects that are currently in the deleted objects container. Some of them were deleted 60 days ago and are now at the cusp of tombstone expiration. DC2 reclaims some objects by garbage collection that were deleted TSL days ago before the replication schedule opens with DC2. Error 8606 is logged until DC1 reclaims the blocking objects by garbage collection.
 
 Any updates to the partial attribute set can cause temporary lingering objects that will clear themselves up after source domain controllers garbage-collect deleted objects at the cusp of TSL expiration (for example, the addition of the first W2K8 R2 domain controller to an existing forest).
 

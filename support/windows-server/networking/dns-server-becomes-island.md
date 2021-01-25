@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dsmith
 ms.prod-support-area-path: DNS
-ms.technology: Networking
+ms.technology: networking
 ---
 # DNS Server becomes an island when a domain controller points to itself for the _msdcs.ForestDnsName domain
 

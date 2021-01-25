@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
 ms.prod-support-area-path: Active Directory backup, restore, or disaster recovery
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Domain controller does not start, c00002e2 error occurs, or "Choose an option" is displayed
 

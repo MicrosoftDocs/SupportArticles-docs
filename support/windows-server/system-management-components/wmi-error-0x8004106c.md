@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: WMI
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # WMI Error: 0x8004106C Description: Quota violation, while you run WMI queries
 

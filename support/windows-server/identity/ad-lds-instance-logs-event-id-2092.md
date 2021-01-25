@@ -1,6 +1,6 @@
 ---
 title: AD LDS instance logs Event ID 2092
-description: Provides a solution to an issue when you reboot an AD LDS server that holds FSMO roles or restart an AD LDS instance on that server.
+description: Provides a solution to an issue that occurs when you reboot an AD LDS server that holds FSMO roles or restart an AD LDS instance on that server.
 ms.date: 09/15/2020
 author: Deland-Han 
 ms.author: delhan
@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, akhleshs, tspring, lindakup, justintu
 ms.prod-support-area-path: Active Directory Migration Tool (ADMT)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
-# AD LDS instance logs Event ID 2092 on Windows Server 2008 or Windows Server 2008 R2
+# AD LDS instance logs Event ID 2092 in Windows Server 2008 or Windows Server 2008 R2
 
-This article provides a solution to an issue when you reboot an AD LDS server that holds FSMO roles or restart an AD LDS instance on that server.
+This article provides a solution to an issue that occurs when you reboot an AD LDS server that holds FSMO roles or restart an AD LDS instance on that server.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2547569
@@ -44,7 +44,7 @@ Operations which require contacting a FSMO operation master will fail until this
 >
 > 1. Initial synchronization is the first early replications done by a system as it is starting. A failure to initially synchronize may explain why a FSMO role cannot be validated. This process is explained in KB article 305476.
 > 2. This server has one or more replication partners, and replication is failing for all of these partners. Use the command repadmin /showrepl to display the replication errors. Correct the error in question. For example there maybe problems with IP connectivity, DNS name resolution, or security authentication that is preventing successful replication.
-> 3. In the rare event that all replication partners being down is an expected occurrence, perhaps because of maintenance or a disaster recovery, you can force the role to be validated. This can be done by using NTDSUTIL.EXE to seize the role to the same server. This may be done using the steps provided in KB articles 255504 and 324801 on [https://support.microsoft.com](/).
+> 3. In the rare event that all replication partners being down is an expected occurrence, perhaps because of maintenance or a disaster recovery, you can force the role to be validated. This can be done by using NTDSUTIL.EXE to seize the role to the same server. This may be done using the steps provided in KB articles 255504 and 324801 on `https://support.microsoft.com`.
 >
 > The following operations may be impacted:  
 Schema: You will no longer be able to modify the schema for this forest.  
@@ -73,7 +73,7 @@ Operations which require contacting a FSMO operation master will fail until this
 >
 > 1. Initial synchronization is the first early replications done by a system as it is starting. A failure to initially synchronize may explain why a FSMO role cannot be validated. This process is explained in KB article 305476.
 > 2. This server has one or more replication partners, and replication is failing for all of these partners. Use the command repadmin /showrepl to display the replication errors. Correct the error in question. For example there maybe problems with IP connectivity, DNS name resolution, or security authentication that is preventing successful replication.
-> 3. In the rare event that all replication partners being down is an expected occurrence, perhaps because of maintenance or a disaster recovery, you can force the role to be validated. This can be done by using NTDSUTIL.EXE to seize the role to the same server. This may be done using the steps provided in KB articles 255504 and 324801 on [https://support.microsoft.com](/).
+> 3. In the rare event that all replication partners being down is an expected occurrence, perhaps because of maintenance or a disaster recovery, you can force the role to be validated. This can be done by using NTDSUTIL.EXE to seize the role to the same server. This may be done using the steps provided in KB articles 255504 and 324801 on `https://support.microsoft.com`.
 >
 > The following operations may be impacted:  
 Schema: You will no longer be able to modify the schema for this forest.  
@@ -84,7 +84,7 @@ Infrastructure: Cross-domain name references, such as universal group membership
 
 ## Cause
 
-When there are two or more AD LDS instances in a replica set, FSMO-owning AD LDS instances are required to in-bound replicate a particular partition on service start-up in order to satisfy initial synchronization requirements. Event 2092 is logged shortly after service start-up to indicate this condition. The domain naming FSMO is required to replicate the Configuration partition, and the Schema FSMO is required to replicate the Schema partition. Once the respective partition has been replicated successfully updates will be allowed again. There is no event logged to indicate that initial synchronization has completed successfully. 
+When there are two or more AD LDS instances in a replica set, FSMO-owning AD LDS instances are required to in-bound replicate a particular partition on service start-up in order to satisfy initial synchronization requirements. Event 2092 is logged shortly after service start-up to indicate this condition. The domain naming FSMO is required to replicate the Configuration partition, and the Schema FSMO is required to replicate the Schema partition. Once the respective partition has been replicated successfully updates will be allowed again. There is no event logged to indicate that initial synchronization has completed successfully.
 
 ## Resolution
 
@@ -94,8 +94,6 @@ If AD LDS replication is working between instances, you can ignore this event. T
 
 To check replication between AD LDS instances, you can use dcdiag.exe or repadmin.exe. For more information, see the following articles:
 
-Repadmin  
-[https://technet.microsoft.com/library/cc770963(WS.10).aspx](https://technet.microsoft.com/library/cc770963%28ws.10%29.aspx) 
+- [Repadmin](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770963(v=ws.10))
 
-Dcdiag  
-[https://technet.microsoft.com/library/cc731968(WS.10).aspx](https://technet.microsoft.com/library/cc731968%28ws.10%29.aspx)
+- [Dcdiag](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731968(v=ws.10))

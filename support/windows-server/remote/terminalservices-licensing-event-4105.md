@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, briansi
 ms.prod-support-area-path: Remote Desktop Services (Terminal Services) licensing
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Event ID 4105: The Terminal Services license server cannot update the license attributes for user \<UserName> in Active Directory Domain \<DomainName>
 

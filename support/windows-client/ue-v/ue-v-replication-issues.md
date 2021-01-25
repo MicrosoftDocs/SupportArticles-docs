@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, markstan
 ms.prod-support-area-path: User Experience Virtualization (UE-V)
-ms.technology: User Experience Virtualization (UE-V)
+ms.technology: windows-client-user-experience-virtualization-ue-v
 ---
 # How to troubleshoot UE-V replication issues
 
