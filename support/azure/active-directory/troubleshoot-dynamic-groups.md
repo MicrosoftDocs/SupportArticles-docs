@@ -193,7 +193,7 @@ Customers have created a dynamic group and configured a rule, but encountered on
 
 4. Verify that processing status is not impacted by the issue of guest user addition disallowed by policy, see [Check whether a tenant processing is impacted by a guest user addition disallowed by policy](#12).
 
-   - If the roup is an Office365 group and the user is a guest user, the guest user can't be added to a group if the directory setting does not allow a guest user addition in the tenant.
+   - If the group is an Office365 group and the user is a guest user, the guest user can't be added to a group if the directory setting does not allow a guest user addition in the tenant.
 
    - A guest user addition error in one group will block the updates of the same and other groups in the same tenant. you can choose to:
 
