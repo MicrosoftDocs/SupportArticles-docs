@@ -333,7 +333,7 @@
       href: ../move-or-migrate-mailboxes/remote-mailbox-not-moved-when-move-shows-completed.md
     - name: Resource ‎CiAgeOfLastNotification‎(System)‎ is unhealthy error
       href: ../move-or-migrate-mailboxes/resource-ciageoflastnotification-system-is-unhealthy-error.md
-    - name: Restored folders causes a migration batch failure
+    - name: Restored folders cause a migration batch failure
       href: ../move-or-migrate-mailboxes/public-folder-migration-batch-error.md
     - name: Server name doesn't update in a new region
       href: ../move-or-migrate-mailboxes/server-name-not-update-after-moved-new-region.md
