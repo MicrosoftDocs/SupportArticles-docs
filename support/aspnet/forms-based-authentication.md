@@ -58,7 +58,7 @@ This section demonstrates how to add and modify the `<authentication>` and `<aut
 
 ## Create a sample database table to store users details
 
-This section demonstrates how to create a sample database to store the user name, password, and role for the users. You need the role column if you want to store user roles in the database and implement role-based security.
+This section shows how to create a sample database to store the user name, password, and role for the users. You need the role column if you want to store user roles in the database and implement role-based security.
 
 1. On the **Start** menu, select **Run**, and then type notepad to open Notepad.
 2. Highlight the following SQL script code, right-click the code, and then select **Copy**. In Notepad, select **Paste** on the **Edit** menu to paste the following code:
@@ -303,7 +303,7 @@ This section creates a test page to which users are redirected after they authen
 
 - The timeout parameter of the `<authentication>` configuration section controls the interval at which the authentication cookie is regenerated. You can choose a value that provides better performance and security.
 
-- Certain intermediary proxies and caches on the Internet may cache Web server responses that contain `Set-Cookie` headers, which are then returned to a different user. Because forms-based authentication uses a cookie to authenticate users, this can cause users to accidentally (or intentionally) impersonate another user by receiving a cookie from an intermediary proxy or cache that wasn't originally intended for them.
+- Certain intermediary proxies and caches on the Internet may cache Web server responses that contain `Set-Cookie` headers, which are then returned to a different user. Because forms-based authentication uses a cookie to authenticate users, this behavior can cause users to accidentally (or intentionally) impersonate another user by receiving a cookie from an intermediary proxy or cache that wasn't originally intended for them.
 
 ## References
 
