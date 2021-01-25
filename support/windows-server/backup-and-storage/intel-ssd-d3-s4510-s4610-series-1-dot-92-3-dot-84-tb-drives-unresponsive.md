@@ -35,8 +35,7 @@ When this issue occurs on a Windows Server Storage Spaces Direct (S2D) cluster, 
 
 The NAND "channel hang" issue is currently addressed in the Maintenance Release 1 (MR1) of Intel firmware (version XCV10110) as of March 2019. We recommend that you update to the latest firmware before the drive reaches 1,700 cumulative idle power-on hours.
 
-Run the Intel SSD Data Center Tool to inspect all affected disks as soon as possible, and take corrective actions as recommended. The Intel SSD Data Center Tool is available at the following Intel website:
-[Intel SSD Data Center Tool (Intel SSD DCT)](https://downloadcenter.intel.com/download/28639?v=t)
+Run the Intel SSD Data Center Tool to inspect all affected disks as soon as possible, and take corrective actions as recommended. For more information, see [Intel SSD Data Center Tool](https://www.intel.com/content/www/us/en/support/articles/000006289/memory-and-storage.html).
 
 The following MR1 firmware binary is available for use together with the Storage Spaces Direct automated firmware update method, as appropriate for your device.
 
