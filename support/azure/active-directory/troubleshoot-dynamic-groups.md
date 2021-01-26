@@ -11,7 +11,7 @@ This troubleshooting guide helps a support engineer to diagnose and solve custom
 ## Dynamic groups docs reference
 
 - Public information on the Dynamic groups feature can be referenced here: [Creating Dynamic Membership Rules](/azure/active-directory/users-groups-roles/groups-dynamic-membership#other-properties-and-common-rules).
-- Public general groups troubleshooting information can be referenced at [Troubleshooting groups](/azure/active-directory/users-groups-roles/groups-troubleshooting?view=azureadps-2.0).
+- Public general groups troubleshooting information can be referenced at [Troubleshooting groups](/azure/active-directory/users-groups-roles/groups-troubleshooting).
 
 ## Dynamic groups identification and management
 
@@ -215,7 +215,7 @@ To evaluate whether a user or device satisfies the rule to be part of a group, u
 
 #### Manual validation
 
-Validate the values for user or device attributes (In Azure Support Center, [Azure Portal](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal?context=azure%2Factive-directory%2Fusers-groups-roles%2Fcontext%2Fugr-context#to-add-or-change-profile-information), or using [PowerShell](/powershell/module/azuread/get-azureaduser?view=azureadps-2.0)) in the rule.
+Validate the values for user or device attributes (In Azure Support Center, [Azure Portal](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal#to-add-or-change-profile-information), or using [PowerShell](/powershell/module/azuread/get-azureaduser) in the rule.
 
 - Ensure that there are users that satisfy the rule.
 - For devices, check the device properties to ensure that synchronized attributes contain the expected values.
@@ -232,7 +232,7 @@ In Azure Support Center:
 
 3. Read user attributes to check whether they satisfy the rule.
 
-   ![TEXT](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-search-and-user-properties.png)
+   ![Check whether user attributes satisfy rules](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-search-and-user-properties.png)
 
 ## Check whether tenant processing is impacted by a guest user addition disallowed by policy<a id="12"></a>
 
@@ -249,7 +249,7 @@ First, [install the Azure AD PowerShell module](/azure/active-directory/users-gr
    1. Read the directory setting of the tenant: [Read settings at the directory level](/azure/active-directory/users-groups-roles/groups-settings-cmdlets#read-settings-at-the-directory-level).
    2. Check the guest user setting: As shown in the following image, if **AllowToAddGuests** is **true**, check the setting in that particular group. If **AllowToAddGuests** is **false**, no matter what group level setting is, guest users can't be added.
 
-   ![TEXT](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-allow-to-add-guests.png)
+   ![check the Allow to Add Guests setting](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-allow-to-add-guests.png)
 
 3. Update the setting at the tenant level. To change the guest user setting at the tenant level, visit: [How to update setting at tenant level using PowerShell](/azure/active-directory/users-groups-roles/groups-settings-cmdlets#update-settings-at-the-directory-level).
 
