@@ -13,7 +13,7 @@ ms.reviewer: kaushika, arichard, kimnich
 ms.prod-support-area-path: File Explorer/Windows Explorer
 ms.technology: windows-client-shell-experience
 ---
-# Support for Whitespace characters in File and Folder names for Windows 8, Windows RT and Windows Server 2012
+# Support for Whitespace characters in File and Folder names for Windows
 
 This article describes support for whitespace characters in file and folder names.
 
@@ -63,18 +63,20 @@ There are various whitespace characters representing various 'space' widths (gly
 ### Object Manager
 
 ASCII Space (0x20) characters at the beginning or end of a file or folder name are removed by the Object Manager upon creation.
+
 ASCII Period (0x2E) characters at the end of a file or folder name are removed by the Object Manager upon creation.
+
 All other leading or trailing whitespace characters are retained by the Object Manager.
 
 ### API Enumeration
 
 #### Win32 API
 
-The Win32 API ([CreateFile](https://msdn.microsoft.com/library/windows/desktop/aa363858.aspx), [FindFirstFile](https://msdn.microsoft.com/library/windows/desktop/aa364418.aspx), etc.) uses a direct method to enumerate the files and folders on a local or remote file system. All files and folders are discoverable regardless of the inclusion or location of whitespace characters.
+The Win32 API ([CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilea), [FindFirstFile](/windows/win32/api/fileapi/nf-fileapi-findfirstfilea), etc.) uses a direct method to enumerate the files and folders on a local or remote file system. All files and folders are discoverable regardless of the inclusion or location of whitespace characters.
 
 #### WinRT API
 
-The WinRT API is designed to support multiple data providers (Physical Drives, OneDrive, Facebook, etc.). To achieve this, WinRT API uses a search engine to enumerate files and folders. Due to the search approach to enumeration, the WinRT API ([StorageFile](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx), [StorageFolder](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx), etc.) does not handle file and folder names with trailing whitespace characters other than ASCII Space (0x20) and ASCII Period (0x2E) residing on a local or remote file system. It does handle leading non-ASCII whitespace characters.
+The WinRT API is designed to support multiple data providers (Physical Drives, OneDrive, Facebook, etc.). To achieve this, WinRT API uses a search engine to enumerate files and folders. Due to the search approach to enumeration, the WinRT API ([StorageFile](/uwp/api/Windows.Storage.StorageFile), [StorageFolder](/uwp/api/Windows.Storage.StorageFolder), etc.) does not handle file and folder names with trailing whitespace characters other than ASCII Space (0x20) and ASCII Period (0x2E) residing on a local or remote file system. It does handle leading non-ASCII whitespace characters.
 
 ### Observed Behavior
 
