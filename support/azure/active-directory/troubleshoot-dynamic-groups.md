@@ -8,10 +8,10 @@ ms.prod-support-area-path:
 
 This troubleshooting guide helps a support engineer to diagnose and solve customer cases for dynamic groups in Azure Active Directory.
 
-## Dynamic Groups Docs Reference
+## Dynamic groups docs reference
 
-- Public information on the Dynamic groups feature can be referenced here: [Creating Dynamic Membership Rules](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#other-properties-and-common-rules).
-- Public general groups troubleshooting information can be referenced at [Troubleshooting groups](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-troubleshooting?view=azureadps-2.0).
+- Public information on the Dynamic groups feature can be referenced here: [Creating Dynamic Membership Rules](/azure/active-directory/users-groups-roles/groups-dynamic-membership#other-properties-and-common-rules).
+- Public general groups troubleshooting information can be referenced at [Troubleshooting groups](/azure/active-directory/users-groups-roles/groups-troubleshooting?view=azureadps-2.0).
 
 ## Dynamic groups identification and management
 
@@ -19,28 +19,28 @@ To verify whether your group is a dynamic group, see [Evaluate whether a group i
 
 - **Yes**: proceed to the next troubleshooting steps.
 
-- **No**: [Create a basic group and add members using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or other applicable groups TSG for additional troubleshooting information.
+- **No**: [Create a basic group and add members using Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or other applicable groups TSG for additional troubleshooting information.
 
-### Dynamic Group Creation Issues
+### Dynamic group creation issues
 
 ### References
 
 Recommended reference documents for group creation:
 
-- [Create a new group and add members in Azure portal](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
-- [Create groups in Powershell MSOnline](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#create-groups)
-- [Disable groups creation in Powershell](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#disable-group-creation-by-your-users)
-- [Azure AD administrative roles](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)
+- [Create a new group and add members in Azure portal](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
+- [Create groups in Powershell MSOnline](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#create-groups)
+- [Disable groups creation in Powershell](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#disable-group-creation-by-your-users)
+- [Azure AD administrative roles](/azure/active-directory/users-groups-roles/directory-assign-admin-roles)
 
 Common issues in creating a dynamic group or rule:
 
-- You're unable to create a dynamic group in Azure Portal, or you receive an error when creating a dynamic group in PowerShell: see [Cannot create a dynamic group](#4).
+- You're unable to create a dynamic group in Azure Portal, or you receive an error when creating a dynamic group in PowerShell. See [Cannot create a dynamic group](#4).
 
-- You can't find the attribute to create a rule: See [Create a dynamic membership rule](#7).
+- You can't find the attribute to create a rule. See [Create a dynamic membership rule](#7).
 
 - You receive a **"max groups allowed"** error when trying to create a Dynamic Group in PowerShell: You have reached 5,000 groups, the maximum limit for Dynamic groups in your tenant. To create new Dynamic groups, first delete existing Dynamic groups. Note that there's no way to increase the maximum limit.
 
-### Dynamic Membership Update Issues
+### Dynamic membership update issues
 
 Customers have created a dynamic group and configured a rule, but encountered these common issues:
 
@@ -56,7 +56,7 @@ You don’t see membership changes instantly after adding or changing a rule.
 
 - Membership evaluation is performed periodically in an background process. The duration of the process is determined by the number of users in your directory, and the size of the group is created as a result of the rule. Typically, directories with small numbers of users will see group membership changes within a few minutes. Directories with a large number of users can take 24 hours or longer to populate.
 
-- Check the [membership processing status](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-create-rule#check-processing-status-for-a-rule) to confirm whether the process is complete. Check the last updated date on the group **Overview** page in Azure portal to confirm that the page is updated.
+- Check the [membership processing status](/azure/active-directory/users-groups-roles/groups-create-rule#check-processing-status-for-a-rule) to confirm whether the process is complete. Check the last updated date on the group **Overview** page in Azure portal to confirm that the page is updated.
 
 - To force the group to be processed, see [Force the group to be processed now](#18).
 
@@ -64,11 +64,11 @@ You receive a rule processing error.
 
 - See [Fix a rule processing error](#19).
 
-### Dynamic Group Deletion or Restoration Issues
+### Dynamic group deletion or restoration issues
 
 You receive an error when deleting a group.
 
-- Before attempting to delete a group in Azure Active Directory, ensure that you have [deleted all assigned licenses](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-group-advanced#deleting-a-group-with-an-assigned-license). For more information about group deletion in general, see [Delete a group](#21).
+- Before attempting to delete a group in Azure Active Directory, ensure that you have [deleted all assigned licenses](/azure/active-directory/users-groups-roles/licensing-group-advanced#deleting-a-group-with-an-assigned-license). For more information about group deletion in general, see [Delete a group](#21).
 
 You restored a deleted group but did not see any updated.
 
@@ -98,7 +98,7 @@ Azure Active Directory (Azure AD) now provides the means to validate dynamic gro
 
  When creating or updating dynamic group rules, administrators want to know whether a user or a device will be a member of the group. This information helps evaluate whether user or device meets the rule criteria and aid in troubleshooting when membership isn't expected.
 
-For more information, see [Validate a dynamic group membership rule (preview) in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-rule-validation)
+For more information, see [Validate a dynamic group membership rule (preview) in Azure Active Directory](/azure/active-directory/users-groups-roles/groups-dynamic-rule-validation)
 
 ## Troubleshoot dynamic group creation issues<a id="3"></a>
 
@@ -135,8 +135,8 @@ This error means you have reached the max limit for Dynamic groups in your tenan
 
 ### Cannot find the attribute to create a rule<a id="6"></a>
 
-   1. Ensure that the user attributes are in the [list of supported properties](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#supported-properties). If they're not in the list, they're not currently supported.
-   2. Ensure that the device attributes are in the [list of device attributes](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#using-attributes-to-create-rules-for-device-objects). If they're not in the list, they're not currently supported. For more information, visit [Dynamic membership rules for groups in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/enterprise-users/groups-dynamic-membership).
+   1. Ensure that the user attributes are in the [list of supported properties](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#supported-properties). If they're not in the list, they're not currently supported.
+   2. Ensure that the device attributes are in the [list of device attributes](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#using-attributes-to-create-rules-for-device-objects). If they're not in the list, they're not currently supported. For more information, visit [Dynamic membership rules for groups in Azure Active Directory](/azure/active-directory/enterprise-users/groups-dynamic-membership).
 
 ### Cannot create a dynamic membership rule<a id="7"></a>
 
@@ -146,9 +146,9 @@ This error means you have reached the max limit for Dynamic groups in your tenan
 
    - Enterprise Mobility + Security licensing plans can be accessed at [Enterprise Mobility+Security pricing options](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing).
 
-2. If you cannot find the built-in **User Attributes**, ensure that the attribute is in the [list of supported properties](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#supported-properties). If it's not in the list, it's not currently supported.
+2. If you cannot find the built-in **User Attributes**, ensure that the attribute is in the [list of supported properties](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#supported-properties). If it's not in the list, it's not currently supported.
 
-3. If You're looking for built-in **Device Attributes**, ensure that the attribute is in the [list of device attributes](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#using-attributes-to-create-rules-for-device-objects). If it's not in the list, it's not currently supported.
+3. If You're looking for built-in **Device Attributes**, ensure that the attribute is in the [list of device attributes](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#using-attributes-to-create-rules-for-device-objects). If it's not in the list, it's not currently supported.
 
 4. If the attribute isn't found in the **Simple Rule** drop-down in the Azure portal, use the **Advanced Rule** to construct a rule.
 
@@ -158,9 +158,9 @@ This error means you have reached the max limit for Dynamic groups in your tenan
 
       - For example: **user.country**, **device.deviceOSType**.
 
-   3. Learn about the [guidelines on how to create an Advanced Rule](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#constructing-the-body-of-an-advanced-rule) including the list of supported operators and examples for common rules.
+   3. Learn about the [guidelines on how to create an Advanced Rule](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#constructing-the-body-of-an-advanced-rule) including the list of supported operators and examples for common rules.
 
-5. Also use [Extension Attributes](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#extension-attributes-and-custom-attributes) for dynamic user rules. These rules will be visible in the drop-down list while creating a simple rule.
+5. Also use [Extension Attributes](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#extension-attributes-and-custom-attributes) for dynamic user rules. These rules will be visible in the drop-down list while creating a simple rule.
 
    - The custom attribute name can be found in the directory by querying a user's attribute using **PowerShell**, and searching for the attribute name. These attributes could also be used when constructing an Advanced Rule.
 
@@ -180,7 +180,7 @@ Customers have created a dynamic group and configured a rule, but encountered on
 
 ### Members are not added or removed as expected<a id="10"></a>
 
-1. Check the [membership processing status](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-create-rule#check-processing-status-for-a-rule) to confirm if it's complete, and check the last updated date on the group Overview page in Azure portal to confirm it's up-to-date.
+1. Check the [membership processing status](/azure/active-directory/users-groups-roles/groups-create-rule#check-processing-status-for-a-rule) to confirm if it's complete, and check the last updated date on the group Overview page in Azure portal to confirm it's up-to-date.
 
    ![Membership processing status](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-membership-processing-status.png)
 
@@ -193,7 +193,7 @@ Customers have created a dynamic group and configured a rule, but encountered on
 
 4. Verify that processing status is not impacted by the issue of guest user addition disallowed by policy, see [Check whether a tenant processing is impacted by a guest user addition disallowed by policy](#12).
 
-   - If the group is an Office365 group and the user is a guest user, the guest user can't be added to a group if the directory setting does not allow a guest user addition in the tenant.
+   - If the roup is an Office365 group and the user is a guest user, the guest user can't be added to a group if the directory setting does not allow a guest user addition in the tenant.
 
    - A guest user addition error in one group will block the updates of the same and other groups in the same tenant. you can choose to:
 
@@ -215,7 +215,7 @@ To evaluate whether a user or device satisfies the rule to be part of a group, u
 
 #### Manual validation
 
-Validate the values for user or device attributes (In Azure Support Center, [Azure Portal](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal?context=azure%2Factive-directory%2Fusers-groups-roles%2Fcontext%2Fugr-context#to-add-or-change-profile-information), or using [PowerShell](https://docs.microsoft.com/powershell/module/azuread/get-azureaduser?view=azureadps-2.0)) in the rule.
+Validate the values for user or device attributes (In Azure Support Center, [Azure Portal](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal?context=azure%2Factive-directory%2Fusers-groups-roles%2Fcontext%2Fugr-context#to-add-or-change-profile-information), or using [PowerShell](/powershell/module/azuread/get-azureaduser?view=azureadps-2.0)) in the rule.
 
 - Ensure that there are users that satisfy the rule.
 - For devices, check the device properties to ensure that synchronized attributes contain the expected values.
@@ -240,20 +240,20 @@ In Azure Support Center:
 
 ## Manage guest user setting in office365 group<a id="13"></a>
 
-First, [install the Azure AD PowerShell module](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#install-the-azure-ad-powershell-module)
+First, [install the Azure AD PowerShell module](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#install-the-azure-ad-powershell-module)
 
-1. Connect to the directory. Visit [How to connect to the directory using PowerShell](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#connect-to-the-directory) for more information.
+1. Connect to the directory. Visit [How to connect to the directory using PowerShell](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#connect-to-the-directory) for more information.
 
 2. Check the directory setting:
 
-   1. Read the directory setting of the tenant: [Read settings at the directory level](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-cmdlets#read-settings-at-the-directory-level).
+   1. Read the directory setting of the tenant: [Read settings at the directory level](/azure/active-directory/users-groups-roles/groups-settings-cmdlets#read-settings-at-the-directory-level).
    2. Check the guest user setting: As shown in the following image, if **AllowToAddGuests** is **true**, check the setting in that particular group. If **AllowToAddGuests** is **false**, no matter what group level setting is, guest users can't be added.
 
    ![TEXT](./media/troubleshoot-dynamic-groups/troubleshoot-dynamic-groups-allow-to-add-guests.png)
 
-3. Update the setting at the tenant level. To change the guest user setting at the tenant level, visit: [How to update setting at tenant level using PowerShell](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-cmdlets#update-settings-at-the-directory-level).
+3. Update the setting at the tenant level. To change the guest user setting at the tenant level, visit: [How to update setting at tenant level using PowerShell](/azure/active-directory/users-groups-roles/groups-settings-cmdlets#update-settings-at-the-directory-level).
 
-4. Check the setting for the group. To change the guest user setting to your target value if applicable, visit: [How to check and update setting for a specific group using PowerShell](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-cmdlets#update-settings-for-a-specific-group)
+4. Check the setting for the group. To change the guest user setting to your target value if applicable, visit: [How to check and update setting for a specific group using PowerShell](/azure/active-directory/users-groups-roles/groups-settings-cmdlets#update-settings-for-a-specific-group)
 
    - There may be a transient throttling issue which blocked the tenant update. Allow time for the transient throttling issue to be resolved. If the issue lasts for hours, contact Azure Support.
 
@@ -280,24 +280,24 @@ There are two options to reset the processing for a given group:
 
 |Rule parser error|Error usage|Corrected usage|
 |---|---|---|
-|Error: Attribute not supported|(user.invalidProperty -eq "Value")|(user.department -eq "value")<br>Make sure the attribute is on the [supported properties list](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#supported-properties).|
+|Error: Attribute not supported|(user.invalidProperty -eq "Value")|(user.department -eq "value")<br>Make sure the attribute is on the [supported properties list](/azure/active-directory/users-groups-roles/groups-dynamic-membership#supported-properties).|
 |Error: Operator isn't supported on attribute|(user.accountEnabled -contains true)|(user.accountEnabled -eq true)<br>The operator used isn't supported for the property type (in this example, -contains cannot be used on type boolean). Use the correct operators for the property type.|
 |Error: Query compilation error|1. (user.department -eq "Sales")(user.department -eq "Marketing")<br>2. (user.userPrincipalName -match "`*@domain.ext`")|1. Missing operator. Use -and or -or two join predicates: (user.department -eq "Sales") -or (user.department -eq "Marketing")<br>2. Error in regular expression used with -match<br>(user.userPrincipalName -match "`.*@domain.ext`")<br>or alternatively: (user.userPrincipalName -match "@domain.ext$")|
 
-## Troubleshoot Dynamic groups Deletion or Restoration<a id="20"></a>
+## Troubleshoot dynamic groups deletion or restoration<a id="20"></a>
 
-Before attempting to delete a group in Azure Active Directory, ensure you have [deleted all assigned licenses](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-group-advanced#deleting-a-group-with-an-assigned-license) to avoid errors.
+Before attempting to delete a group in Azure Active Directory, ensure you have [deleted all assigned licenses](/azure/active-directory/users-groups-roles/licensing-group-advanced#deleting-a-group-with-an-assigned-license) to avoid errors.
 
 (For more information about group deletion in general, see [Delete a group](#21).
 
 ### Delete a group<a id="21"></a>
 
-1. Groups can be deleted from the directory [using the Remove-AzureADGroup cmdlet in the Azure AD Powershell module](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#delete-groups).
-2. Before attempting to delete a group in Azure Active Directory, ensure you have [deleted all assigned licenses  to avoid errors](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-group-advanced#deleting-a-group-with-an-assigned-license).
+1. Groups can be deleted from the directory [using the Remove-AzureADGroup cmdlet in the Azure AD Powershell module](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#delete-groups).
+2. Before attempting to delete a group in Azure Active Directory, ensure you have [deleted all assigned licenses  to avoid errors](/azure/active-directory/users-groups-roles/licensing-group-advanced#deleting-a-group-with-an-assigned-license).
 
 ### Restore a deleted group<a id="22"></a>
 
-- If an Office 365 group is deleted, it can only be restored up to 30 days before permanent deletion occurs. Once permanently deleted, the group can no longer be restored. Learn more about restoring groups at [Restore a deleted Microsoft 365 group in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-restore-azure-portal).
+- If an Office 365 group is deleted, it can only be restored up to 30 days before permanent deletion occurs. Once permanently deleted, the group can no longer be restored. Learn more about restoring groups at [Restore a deleted Microsoft 365 group in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-restore-azure-portal).
 - This functionality isn't supported for security groups and distribution groups.
 - Verify that you're authorized to restore an Office 365 group. Only Global administrators, User account administrators, Intune service administrators, Partner Tier1/Tier2 support, or the owner of the group are able to restore a group.
 
