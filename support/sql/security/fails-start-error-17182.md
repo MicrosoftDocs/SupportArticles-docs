@@ -3,15 +3,14 @@ title: SQL Server fails to start with error 17182
 description: This article provides a resolution for the problem that occurs when server is configured to use SSL.
 ms.date: 01/14/2021
 ms.prod-support-area-path: Security Issues
-ms.reviewer: 
 ms.topic: troubleshooting
 ms.prod: sql 
 ---
-# SQL Server fails to start with error 17182 (TDSSNIClient initialization failed with error 0xd, status code 0x38) when server is configured to use SSL
+# SQL Server fails to start with when server is configured to use SSL
 
-This article provides a resolution for the problem that occurs when server is configured to use SSL.
+This article provides a resolution for the error 17182 (TDSSNIClient initialization failed with error 0xd, status code 0x38) that occurs when server is configured to use SSL.
 
-_Applies to:_ &nbsp; SQL Serve  
+_Applies to:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2023869
 
 ## Symptoms
@@ -20,20 +19,20 @@ Consider the following scenario:
 
 - You have an instance of  SQL Server 2005  or a later version that is hosted on a system that is running either Windows Server 2008 or a later version of the operating system.
 
-- You have configured SSL encryption for your SQL Server by manually entering the Thumbprint of a certificate (For example, using the instructions in the blog post: [Enabling Certificate for SSL on a SQL Server 2005 Clustered Installation](http://blogs.msdn.com/b/jorgepc/archive/2008/02/19/enabling-certificates-for-ssl-connection-on-sql-server-2005-clustered-installation.aspx)) into the Certificate value under the following registry key:
+- You have configured SSL encryption for your SQL Server by manually entering the Thumbprint of a certificate into the Certificate value under the following registry key:
 
   `HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance>\MSSQLServer\SuperSocketNetLib`
 
 In this scenario, your SQL Server may fail to start and the following messages are logged in the SQL Server Errorlog:
 
-> 2010-04-16 18:56:31.48 Server      Error: 17182, Severity: 16, State: 1.  
-2010-04-16 18:56:31.48 Server      TDSSNIClient initialization failed with error 0xd, status code 0x38.  
-2010-04-16 18:56:31.49 Server      Error: 17182, Severity: 16, State: 1.
-2010-04-16 18:56:31.49 Server      TDSSNIClient initialization failed with error 0xd, status code 0x1.  
-2010-04-16 18:56:31.51 Server      Error: 17826, Severity: 18, State: 3.  
-2010-04-16 18:56:31.51 Server      Could not start the network library because of an internal error in the network library. To determine the cause, review the errors immediately preceding this one in the error log.  
-2010-04-16 18:56:31.54 Server      Error: 17120, Severity: 16, State: 1.  
-2010-04-16 18:56:31.54 Server      SQL Server could not spawn FRunCM thread. Check the SQL Server error log and the Windows event logs for information about possible related problems.  
+> \<Datetime> Server      Error: 17182, Severity: 16, State: 1.  
+\<Datetime> Server      TDSSNIClient initialization failed with error 0xd, status code 0x38.  
+\<Datetime> Server      Error: 17182, Severity: 16, State: 1.
+\<Datetime> Server      TDSSNIClient initialization failed with error 0xd, status code 0x1.  
+\<Datetime> Server      Error: 17826, Severity: 18, State: 3.  
+\<Datetime> Server      Could not start the network library because of an internal error in the network library. To determine the cause, review the errors immediately preceding this one in the error log.  
+\<Datetime> Server      Error: 17120, Severity: 16, State: 1.  
+\<Datetime> Server      SQL Server could not spawn FRunCM thread. Check the SQL Server error log and the Windows event logs for information about possible related problems.  
 
 ## Cause
 
@@ -66,7 +65,7 @@ You can then copy this value (without spaces - for the above example it will be
 
 `HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance>\MSSQLServer\SuperSocketNetLib`
 
-## More Information
+## More information
 
 A status code **0x38** in error message 17182 means that SQL Server experienced an error during the initialization of SSL. See [SQL Protocols](/archive/blogs/sql_protocols/) for more details.  
 

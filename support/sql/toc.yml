@@ -104,7 +104,7 @@
     - name: Error when backing up in-memory database
       href: admin/error-backing-up-memory-database.md
     - name: Error when you create a snapshot
-      href: amind/error-when-you-create-a-snapshot.md
+      href: admin/error-when-you-create-a-snapshot.md
     - name: Error when you run CLR object or create assembly
       href: admin/error-run-clr-object-create-assembly.md
     - name: Full-text index doesn't index attribute values

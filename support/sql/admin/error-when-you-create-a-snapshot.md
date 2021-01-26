@@ -5,9 +5,9 @@ ms.date: 01/20/2021
 ms.prod-support-area-path: Administration and Management
 ms.reviewer: kfarlee
 ---
-# "ERROR Selected writer 'Microsoft Writer (Service State)' is in failed state" messages when you create a snapshot backup of many databases at the same time in SQL Server
+# Error when you create a snapshot backup of many databases at the same time in SQL Server
 
-This article helps you work around for the problem that when you create a snapshot backup of many databases at the same time in SQL Server.
+This article helps you work around for the problem (`ERROR Selected writer 'Microsoft Writer (Service State)' is in failed state` message) that when you create a snapshot backup of many databases at the same time in SQL Server.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 943471

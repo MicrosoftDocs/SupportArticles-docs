@@ -37,13 +37,13 @@ Increase the Query timeout and Connection timeout values in Visual Studio using 
 
 ### Changing the Query Timeout
 
-1. In Visual Studio IDE, navigate to **Tools** -> **Options** -> **Database Tools** -> **Query and View Designers**  
+1. In Visual Studio IDE, navigate to **Tools** -> **Options** -> **Database Tools** -> **Query and View Designers**.  
 
 2. You can either uncheck the option **Cancel long running query** or change the value of **Cancel after** option **** to a higher value.
 
 ### Changing the Connection Timeout
 
-1. In Visual Studio IDE, enable Server Explorer by navigating to **View** -> **Server Explorer**  
+1. In Visual Studio IDE, enable Server Explorer by navigating to **View** -> **Server Explorer**.  
 
 2. In the Server Explorer, right click on the connection to SQL Server where the CLR objects are being deployed and choose **Modify Connection**.
 

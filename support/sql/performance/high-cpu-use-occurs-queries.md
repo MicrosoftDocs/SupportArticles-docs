@@ -1,20 +1,20 @@
 ---
-title: High CPU use occurs in your queries
-description: This article provides a resolution for the problem where high CPU use occurs when you run queries in SQL Server.
+title: High CPU usage occurs in your queries
+description: This article provides a resolution for the problem where high CPU usage occurs when you run queries in SQL Server.
 ms.date: 01/14/2021
 ms.prod-support-area-path: Performance
 ms.prod: sql 
 ---
-# High CPU use occurs when you run queries in SQL Server
+# High CPU usage occurs when you run queries in SQL Server
 
-This article helps you resolve the problem where high CPU use occurs when you run queries in SQL Server.
+This article helps you resolve the problem where high CPU usage occurs when you run queries in SQL Server.
 
-_Applies to:_ &nbsp; SQL Serve  
+_Applies to:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2009160
 
 ## Symptoms
 
-When you operate a server that is running Microsoft SQL Server and that has a highly concurrent workload, you notice some performance issues in which queries contribute significantly to high CPU use or extreme memory grant requests.
+When you operate a server that is running Microsoft SQL Server and that has a highly concurrent workload, you notice some performance issues in which queries contribute significantly to high CPU usage or extreme memory grant requests.
 
 You may also experience other side effects, such as OOM conditions, memory pressure for plan cache eviction, or unexpected `RESOURCE_SEMAPHORE` waits.
 
