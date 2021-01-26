@@ -13,7 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: wesmils
 appliesto: 
-- Microsoft 365
+- Exchange Online
 search.appverid: MET150
 ---
 # "Mailbox is full" warning even if the mailbox hasn't reached the storage limit
