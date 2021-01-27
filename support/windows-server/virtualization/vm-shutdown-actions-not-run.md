@@ -17,7 +17,7 @@ ms.technology: hyper-v
 
 This article helps solve a problem that prevents virtual machine shutdown actions from running.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
+_Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;3058418
 
 ## Symptoms
