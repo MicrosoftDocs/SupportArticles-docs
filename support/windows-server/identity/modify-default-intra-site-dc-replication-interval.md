@@ -45,7 +45,7 @@ Path: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`
 Key: Replicator notify pause between DSAs (secs)  
 Value: REG_DWORD  
 
-The default value data for the "Replicator notify pause between DSAs (secs)" DWORD value in Windows Server 2003 and later versions is decreased to 3 compared to 30 seconds, when the forest functional level is Windows Server 2003 or a higher functional level.
+The default value data for the "Replicator notify pause between DSAs (secs)" DWORD value in Windows Server 2003 and later versions is decreased to 3 compared with 30 seconds, when the forest functional level is Windows Server 2003 or a higher functional level.
 
 > [!NOTE]
 > A setting also applies to Active Directory Application Mode (ADAM) and Active Directory Lightweight Directory Services (AD LDS). For ADAM and for AD LDS, the registry key is in the ADAM instance "Parameters" registry key.
