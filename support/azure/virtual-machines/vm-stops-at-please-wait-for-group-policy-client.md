@@ -40,7 +40,7 @@ To resolve this problem, the memory dump will need to be analyzed. Collect the m
 ### Attach the OS disk to a new Repair VM
 
 1.	Use steps 1-3 of the [VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands) to prepare a Repair VM.
-1.	Using Remote Desktop Connection, connect to the Repair VM.
+1.	Using **Remote Desktop Connection**, connect to the Repair VM.
 
 ### Locate the dump file and submit a support ticket
 
