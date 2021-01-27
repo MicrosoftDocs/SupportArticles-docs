@@ -28,6 +28,9 @@ There are several causes for this error:
 
 ## Solution
 
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+
 ### Process overview
 
 1. Create and access a Repair VM.
