@@ -20,85 +20,87 @@ search.appverid: MET150
 
 ## Symptoms
 
-A user experiences one of these issues:
+A user experiences one of the following symptoms.
 
 ### Symptom 1
 
-The user receives a "mailbox is full" warning for a mailbox that hasn't reached the storage limit.
+The user receives a "mailbox is full" warning message for a mailbox that hasn't reached the storage limit.
 
 ### Symptom 2
 
-When the user deletes messages, a warning message saying "the operation could not be completed due to the quota" is displayed.
+When the user deletes email messages, the following warning message is displayed:
+
+> The operation could not be completed.
 
 ### Symptom 3
 
-The user can't change or accept any calendar invitation.
+The user can't change or accept a calendar invitation.
 
 ## Cause
 
-These issues occur if the mailbox size exceeds the mailbox quota. The mailbox size that the user see isn't the actual size because it doesn't include the Recoverable Items folder. This folder isn't visible to users.
+This issue occurs if the mailbox size exceeds the mailbox quota. The mailbox size that the user sees isn't the actual size because it doesn't include the Recoverable Items folder. This folder isn't visible to users.
 
 ## Resolution
 
 Here's how to resolve this issue:
 
-1. Verify the storage quotas of the user's mailbox by running this cmdlet:
+1. Verify the storage quotas of the user's mailbox by running the following cmdlet:
 
    ```powershell
    Get-Mailbox user@contoso.com | fl ProhibitSendReceiveQuota,RecoverableItemsQuota
    ```
 
-   Next, verify the status of the mailbox quota by running this cmdlet:
+   Then, verify the status of the mailbox quota by running this cmdlet:
 
    ```powershell
    Get-MailboxStatistics user@contoso.com | fl StorageLimitStatus,TotalItemSize,TotalDeletedItemSize
    ```
 
-    - If the `StorageLimitStatus` value isn't blank, the mailbox size exceeds the quota. The user will encounter the issues described in the Symptoms section.
-    - The `TotalItemSize` value refers to the portion of the mailbox visible to the user. The `TotalDeletedItemSize` value refers to the size of the Recoverable Items folder that isn't visible to the user.
+    - If the `StorageLimitStatus` value isn't blank, this means that the mailbox size exceeds the quota. The user will encounter the issue that's mentioned in the "Symptoms" section.
+    - The `TotalItemSize` value refers to the portion of the mailbox that's visible to the user. The `TotalDeletedItemSize` value refers to the size of the Recoverable Items folder that isn't visible to the user.
 
-2. If the `TotalItemSize` value exceeds the `ProhibitSendReceiveQuota` value or if the `TotalDeletedItemSize` value exceeds the `RecoverableItemsQuota` value:
+2. If the `TotalItemSize` value exceeds the `ProhibitSendReceiveQuota` value, or if the `TotalDeletedItemSize` value exceeds the `RecoverableItemsQuota` value:
 
-    - For Symptom 1 & 3, you can either ask the affected user to delete items from the mailbox or follow the steps below.
-    - For Symptom 2, you just follow the steps below.
+    - For Symptoms 1 and 3, you can either ask the affected user to delete items from the mailbox, or you can follow the next steps.
+    - For Symptom 2, follow the next steps.
 
-Here are the steps to fix the issue of exceeding `RecoverableItemsQuota`:
+Here are the steps to fix this issue:
 
-1. Verify that an archive is enabled for the affected user's mailbox by running this cmdlet:
+1. Verify that an archive is enabled for the affected user's mailbox by running the following cmdlet:
 
    ```powershell
    Get-Mailbox user@contoso.com | fl ArchiveStat*
    ```
 
-   If the `ArchiveStatus` value is **Archive** and if the `ArchiveState` value is **Local**, an archive is enabled in the cloud service. Skip directly to step 3.
+   If the `ArchiveStatus` value is **Archive**, and if the `ArchiveState` value is **Local**, an archive is enabled in the cloud service. In this case, go to step 3.
 
-   If no archive is enabled, check whether the user is on hold by running this cmdlet:
+   If no archive is enabled, check whether the user is on hold by running the following cmdlet:
 
    ```powershell
    Get-Mailbox user@contoso.com | fl *HoldEnabled
    ```
 
-   If at least one of the values returned is **True**, the user is on hold. If you don’t want to enable an archive for that user, you must remove messages from the Recoverable Items folder. To learn more about the Recoverable Items folder, the storage quota, and how the folder interacts with In-Place Hold and Litigation Hold, see [Recoverable Items folder in Exchange Online](/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder).
+   If at least one of the returned values is **True**, this means that the user is on hold. If you don't want to enable an archive for that user, you must remove messages from the Recoverable Items folder. To learn more about the Recoverable Items folder, the storage quota, and how the folder interacts with In-Place Hold and Litigation Hold, see [Recoverable Items folder in Exchange Online](/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder).
 
-2. Enable an archive and set up a retention or deletion policy to automatically process email messages. To learn more, see [Set up an archive and deletion policy for mailboxes in your organization](/microsoft-365/compliance/set-up-an-archive-and-deletion-policy-for-mailboxes).
+2. Enable an archive, and set up a retention or deletion policy to automatically process email messages. To learn more, see [Set up an archive and deletion policy for mailboxes in your organization](/microsoft-365/compliance/set-up-an-archive-and-deletion-policy-for-mailboxes).
 
-3. Verify what retention policy is applied to the affected user by running this cmdlet:
+3. Verify which retention policy is applied to the affected user by running the following cmdlet:
 
    ```powershell
    Get-Mailbox user@contoso.com | fl RetentionPolicy
    ```
 
-   Be aware that such policies automatically archive or delete items from the mailbox after a period of time.
+   Be aware that such policies automatically archive or delete items from the mailbox after some time.
 
-4. If a retention policy was recently modified or applied to the affected user, run mailbox processing manually by using this cmdlet:
+4. If a retention policy was recently modified or applied to the affected user, run mailbox processing manually by using the following cmdlet:
 
    ```powershell
    Start-ManagedFolderAssistant user@contoso.com
    ```
 
-   This cmdlet starts the mailbox processing tasks that execute retention policies and clears messages as configured. Wait at least one hour and check the mailbox again.
+   This cmdlet starts the mailbox processing tasks that run retention policies and clear messages as configured. Wait at least one hour, and then check the mailbox again.
 
-If these steps didn't resolve the issue, contact [Microsoft Support](https://support.microsoft.com/contactus) for assistance.  
+If these steps don't resolve the issue, contact [Microsoft Support](https://support.microsoft.com/contactus) for assistance.  
 
 ## More information
 
