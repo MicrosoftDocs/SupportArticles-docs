@@ -295,7 +295,7 @@ This section creates a test page to which users are redirected after they authen
 
 - You may want to store the SQL connection information in the configuration file (*Web.config*) so that you can easily modify it if necessary.
 
-- You may consider adding code to prevent hackers who try to use different combinations of passwords from logging on. For example, you can include logic that accepts only two or three logon attempts. If users can't log on in some attempts, you may want to set a flag in the database to not allow them to log on until the users re-enables their accounts by visiting a different page or by calling your support line. Also, you should add appropriate error handling wherever necessary.
+- You may consider adding code to prevent hackers who try to use different combinations of passwords from logging on. For example, you can include logic that accepts only two or three logon attempts. If users can't log on in some attempts, you may want to set a flag in the database to not allow them to log on until the users re-enable their accounts by visiting a different page or by calling your support line. Also, you should add appropriate error handling wherever necessary.
 
 - Because the user is identified based on the authentication cookie, you may want to use Secure Sockets Layer (SSL) on this application so that no one can deceive the authentication cookie and any other valuable information that is being transmitted.
 
