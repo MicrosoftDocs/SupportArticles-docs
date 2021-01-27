@@ -11,5 +11,3 @@
     href: devops/welcome-azure-devops.yml
 - name: VM is not booting
   items:
-  - name: 'VM stops at "Please wait for the Group Policy Client" screen'
-    href: /vm-stops-at-please-wait-for-group-policy-client
