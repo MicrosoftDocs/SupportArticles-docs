@@ -12,4 +12,4 @@
 - name: VM is not booting
   items:
   - name: 'VM stops at "Please wait for the Group Policy Client" screen'
-    href: vm-stops-at-please-wait-for-group-policy-client
+    href: /vm-stops-at-please-wait-for-group-policy-client
