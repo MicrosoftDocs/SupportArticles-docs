@@ -20,16 +20,10 @@ This article describes how to modify the default intra-site domain controller re
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;214678
 
-> [!IMPORTANT]
-> This article contains information about modifying the registry. Before you modify the registry, make sure to back it up and make sure that you understand how to restore the registry if a problem occurs. For information about how to back up, restore, and edit the registry, click the following article number to view the article in the Microsoft Knowledge Base:
-[256986](https://support.microsoft.com/help/256986) Description of the Microsoft Windows Registry  
-
-## More information
-
-When a domain controller writes a change to its local copy of the Active Directory, a timer is started that determines when the domain controller's replication partners should be notified of the change. By default, this interval is 15 seconds in Windows Server 2003 and later versions. When this interval elapses, the domain controller initiates a notification to each intra-site replication partner that it has changes that need to be propagated. Another configurable parameter determines the number of seconds to pause between notification. This parameter prevents simultaneous replies by the replication partners. By default, this interval is 30 seconds. Both of these intervals can be modified by editing the registry.
+When a domain controller writes a change to its local copy of the Active Directory, a timer is started that determines when the domain controller's replication partners should be notified of the change. By default, this interval is 15 seconds in Windows Server 2003 and later versions. When this interval elapses, the domain controller initiates a notification to each intra-site replication partner that it has changes that need to be propagated. Another configurable parameter determines the number of seconds to pause between notification. This parameter prevents simultaneous replies by the replication partners. By default, this interval is 3 seconds in Windows Server 2003 and later versions, when the forest functional level is Windows Server 2003 or a higher functional level. Both of these intervals can be modified by editing the registry.
 
 > [!WARNING]
-> If you use Registry Editor incorrectly, you may cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk.  
+> This article contains information about how to modify the registry. Make sure that you back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, see [Windows registry information for advanced users](/troubleshoot/windows-server/performance/windows-registry-advanced-users).
 
 To change the delay between the change to the Active Directory and first replication partner notification, use Registry Editor to change the value data for the "Replicator notify pause after modify (secs)" DWORD value in the following registry key:
 
@@ -37,15 +31,11 @@ Path: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`
 Key: Replicator notify pause after modify (secs)  
 Value: REG_DWORD  
 
-The default value data for the "Replicator notify pause after modify (secs)" DWORD value in Windows Server 2003 and later versions is 15 seconds.
-
 To change the notification delay between domain controllers, use Registry Editor to change the value data for the "Replicator notify pause between DSAs (secs)" DWORD value in the following registry key:  
 
 Path: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`  
 Key: Replicator notify pause between DSAs (secs)  
 Value: REG_DWORD  
-
-The default value data for the "Replicator notify pause between DSAs (secs)" DWORD value in Windows Server 2003 and later versions is decreased to 3 compared with 30 seconds, when the forest functional level is Windows Server 2003 or a higher functional level.
 
 > [!NOTE]
 > A setting also applies to Active Directory Application Mode (ADAM) and Active Directory Lightweight Directory Services (AD LDS). For ADAM and for AD LDS, the registry key is in the ADAM instance "Parameters" registry key.
