@@ -27,10 +27,10 @@ Cannot execute the Delete command: database 'Database' cannot be found
 To work around this issue, run an XML for Analysis (XMLA) query in SSMS to delete the corrupted database:
 
 ```xml
-<Delete xmlns="[https://schemas.microsoft.com/analysisservices/2003/engine](https://schemas.microsoft.com/analysisservices/2003/engine)"**IgnoreFailures="true"** >
-<Object>
-<DatabaseID>DatabaseID```
-</DatabaseID>
-</Object>
+<Delete xmlns="[https://schemas.microsoft.com/analysisservices/2003/engine](https://schemas.microsoft.com/analysisservices/2003/engine)"
+    IgnoreFailures="true" >
+    <Object>
+        <DatabaseID>DatabaseID```</DatabaseID>
+    </Object>
 </Delete>
 ```

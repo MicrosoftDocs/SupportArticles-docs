@@ -7,7 +7,7 @@ ms.reviewer: kaushika
 ---
 # Frequently asked questions about the Microsoft Support Diagnostic Tool
 
-This article provides the answers and questions about the Microsoft Support Diagnostics Tool  (MSDT).
+This article provides the answers and questions about the Microsoft Support Diagnostics Tool (MSDT).
 
 _Original product version:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 926079
@@ -27,7 +27,9 @@ For Windows XP and Windows Server 2003, MSDT runs on a Windows Internet Explorer
 
 ## More information
 
-### Q1: How do I run MSDT on a computer that is running Windows Server 2003 or Windows XP? 
+There are 9 questions and answers as following:
+
+### Q1: How do I run MSDT on a computer that is running Windows Server 2003 or Windows XP?
 
 You can run MSDT on a computer that is running Windows Server 2003 or Windows XP in two ways. If your computer has an Internet connection, follow these steps:
 

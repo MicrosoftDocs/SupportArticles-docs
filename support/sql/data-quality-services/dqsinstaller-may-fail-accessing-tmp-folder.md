@@ -40,7 +40,7 @@ DQSInstaller extracts assembly files and scripts into a temporary folder with a 
 
 ## Resolution
 
-The easiest way to resolve the problem is to launch the command prompt as administrator (elevate it if UAC is enabled), override the TMP location temporarily with a local TMP variable, and then run the DQSInstaller.exe
+The easiest way to resolve the problem is to launch the command prompt as administrator (elevate it if UAC is enabled), override the TMP location temporarily with a local TMP variable, and then run the DQSInstaller.exe.
 
 In this command prompt syntax example we will make a directory (md) c:\temp, then set the TMP variable to that location, and then change directory into the folder where DQSInstaller.exe is present, then run the DQSInstaller.exe (with no extra switches).
 
@@ -65,4 +65,4 @@ SET TMP
 echo %tmp%
 ```
 
-To permanently change the TMP and TEMP environment variables, see [How to Move the TEMP and TMP Directories](/previous-versions/tn-archive/aa998945(v=exchg.65))
+To permanently change the TMP and TEMP environment variables, see [How to Move the TEMP and TMP Directories](/previous-versions/tn-archive/aa998945(v=exchg.65)).
