@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
 ms.technology: windows-server-deployment
 ---
-# Message "Subsystem needed to support the image type is not present" error when installing or running applications on Windows Server 2008 R2 Core
+# Message "Subsystem needed to support the image type is not present" error when installing or running applications on Server Core
 
 This article helps fix an error (Subsystem needed to support the image type is not present) that occurs when you run or install applications on a Windows Server computer running as a Server Core.
 
@@ -26,7 +26,7 @@ Rapid publishing articles provide information directly from within the Microsoft
 
 ## Symptom
 
-When you run or install applications on a Windows Server 2008 R2 computer running as a Server Core, you receive the following message:
+When you run or install applications on a Windows Server computer running as a Server Core, you receive the following message:
 
 > "The subsystem needed to support the image type is not present"
 
