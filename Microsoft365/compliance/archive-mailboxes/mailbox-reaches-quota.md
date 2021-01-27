@@ -13,7 +13,7 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: wesmils
 appliesto: 
-- Microsoft 365
+- Exchange Online
 search.appverid: MET150
 ---
 # Your mailbox reaches its quota even if the Archive feature is enabled
