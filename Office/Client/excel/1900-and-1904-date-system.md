@@ -66,7 +66,7 @@ To set the date system for a workbook in Microsoft Office Excel 2003 and in earl
 1. Open or switch to the workbook.   
 2. On the **Tools** menu, click **Options**. In Excel X and later versions for Macintosh, click **Preferences** on the **Excel** menu.   
 3. Click the **Calculation** tab.   
-4. To use the 1900 date system in the workbook, click to clear the **1904 date system** check box. To use the 1904 date system in the workbook, click to select the **1904 date system**check box.   
+4. To use the 1900 date system in the workbook, click to clear the **1904 date system** check box. To use the 1904 date system in the workbook, click to select the **1904 date system** check box.   
 5. Click **OK**.   
 
 To set the date system for a workbook in Microsoft Office Excel 2007, follow these steps:
