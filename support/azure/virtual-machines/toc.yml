@@ -90,7 +90,7 @@
   - name: Troubleshoot Windows VM OS boot failure
     href: os-bucket-boot-failure.md
   - name: 'VM stops at "Please wait for the Group Policy Client" screen'
-    href: vm-stops-at-please-wait-for-group-policy-client
+    href: vm-stops-at-please-wait-for-group-policy-client.md
 
 - name: VM restart issues
   items:
