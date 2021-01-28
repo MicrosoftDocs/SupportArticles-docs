@@ -44,7 +44,7 @@ After each step, check if the issue is resolved. If it isn’t, proceed to the n
 
 For more information, see [User presence in Teams](/microsoftteams/presence-admins).
 
-If none of the steps resolve the issue, ask your administrator to open a support ticket containing the following information:
+If none of the steps resolve the issue, administrators open a support ticket containing the following information:
 
 - Sign-in address of the user.
 - The desktop and debug logs. For more information about the logs, see [Use log files in troubleshooting Microsoft Teams](/microsoftteams/log-files).

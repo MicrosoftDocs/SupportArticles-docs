@@ -34,14 +34,14 @@ This issue occurs if one or more of the following conditions are true:
 
 ## Workaround
 
-Contact your administrator to perform the following steps. After each step, check if the issue is resolved. If it isn’t, proceed to the next step.
+The following steps must be performed by administrators. After each step, check if the issue is resolved. If it isn’t, proceed to the next step.
 
 1. Verify that the contact has signed in to Teams.
 2. Verify that the contact hasn't set the presence status to **Appear offline**.
 3. Verify the network connectivity to [Teams endpoints](/microsoft-365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams).
 4. Verify that the contact is currently using Teams.
 
-If none of the steps resolve the issue, ask your administrator to open a support ticket containing the following information:
+If none of the steps resolve the issue, open a support ticket containing the following information:
 
 - Sign-in address of the user (also known as Observer) who sees the unknown presence status of the contact.
 - Sign-in address of the contact (also known as Publisher) whose presence status shows as unknown.
