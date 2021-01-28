@@ -1,7 +1,17 @@
 {:allowed-branchname-matches ["master"]
  :allowed-filename-matches ["support/"]
 
- :acrolinx-new-api false ;; New in GH 2.0
+ :use-gh-statuses true
+ 
+ :targets 
+   {
+     :counts {
+              ;;:issues 15 ;; coming from the platform. total issues count. Not used, just a placeholder.
+             }
+     :scores {
+              :qualityscore 80 ;; Confirmed with Hugo that you just comment out the single score and leave the structure in place
+             }
+   }
  
  :guidance-profile "c97ca89d-5eed-4329-87f8-5b8a3e799132" ;; Profile ID for "Microsoft standard"
 
@@ -18,9 +28,13 @@
   }
  
  :template-header
+ 
  "
+
 ## Acrolinx Scorecards
-**A minimum Acrolinx score of 80 is recommended. We will enforce this score in the future.**
+
+**A minimum Acrolinx score of 80 is required.**
+ 
 Click the scorecard links for each article to review the Acrolinx feedback on grammar, spelling, punctuation, writing style, and terminology.
 | Article | Acrolinx<br>score | Lowest<br>category<br>score | Spelling<br>issues | Scorecard | Processed |
 |---------|:--------------:|:--------------------:|:------:|:---------:|:---------:|
