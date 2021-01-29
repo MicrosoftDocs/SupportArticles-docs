@@ -1,7 +1,7 @@
 ---
 title: Winload.exe error code 0xc000000e on an Azure VM
 description: Fixes a Winload.exe error (0xc000000e) that occurs on an Azure virtual machine (VM).
-ms.date: 07/21/2020
+ms.date: 08/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: jarrettr
 ---
