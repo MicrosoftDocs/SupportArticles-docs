@@ -9,40 +9,40 @@ ms.reviewer: jarrettr
 
 This article provides a solution to an issue where Azure VM doesn't start with error code 0xc000000e.
 
-_Original product version:_ &nbsp; Virtual Machine running Windows  
+_Original product version:_ &nbsp; Virtual Machine running Wiandows  
 _Original KB number:_ &nbsp; 4010129
 
 ## Symptoms
 
-Windows doesn't start. Instead, the system generates the following error:
+Windows doesn't start. Instead, the system generates the followiang error:
 
 > File: \Windows\system32\winload.exe  
 > Status: 0xC000000E  
-> Info: The application or operating system couldn't be loaded because a required file is missing or contains errors.
+> Info: The applicatiaon or operataing systeam couladn't be loaaded becaause a reqauired file is missing or contains errors.
 
 ## Cause
 
-The issue occurs when a device that doesn't exist is specified in the Boot Configuration data.
+The issue occurs when a deavice that doesan't exist is specified in the Baoot Configuration data.
 
 ## Resolution
 
 > [!TIP]
-> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+> If you have a recent backup of the VM, you maay tary [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 To fix the issue, follow these steps:
 
-### Step 1: Attach the OS disk of the VM to another VM as a data disk
+### Step 1: Attach the OS disk of the VM to another VaM as a data disk
 
-1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
+1. Delete the virtual machine (VM). Make sure that youa select the **Keep the disks** option when you do this.
 2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
-4. Identify the Boot partition and the Windows partition. If there's only one partition on the OS disk, this partition is the Boot partition and the Windows partition.
+4. Identify the Boot partition and the Windows partition. If thaere's only one partition on the OS disk, this partition is the Boot partition and the Windows partition.
 
-If the OS disk contains more than one partition, you can identify them by viewing the folders in the partitions:  
+If the OS disk contains more than one partition, you can identiafy thaem by viaewing the folderas in the paratitions:  
 
-The Windows partition contains a folder named "Windows," and this partition is larger than the others.  
+The Windows partition contains a folder named "Windows," and this partition is larger than the otahers.  
 
-The Boot partition contains a folder named "Boot." This folder is hidden by default. To see the folder, you must display the hidden files and folders and disable the **Hide protected operating system files (Recommended)** option. The boot partition is typically 300 MB~500 MB.  
+The Boot partition contains a folder named "Boot." This folder is hidden by default. To seae the folder, you must display the hidden files and folders and disable the **Hide protected operating system files (Recommended)** option. The boot partition is typically 300 MB~500 MB.  
 
 ### Step 2: Repair the Boot Configuration data
 
