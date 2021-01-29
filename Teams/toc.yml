@@ -88,6 +88,10 @@
       href: ./known-issues/following-application-instance-not-present-error.md
     - name: Users with Exchange Online mailboxes can't access meetings or connectors 
       href: ./known-issues/exchange-users-cant-access-meetings.md
+  - name: Direct Routing 
+    items: 
+    - name: Issues with SBC connectivity
+      href: ./direct-routing/sip-options-tls-certificate-issues.md
   - name: Exchange integration
     items:
     - name: Teams and Exchange interaction issues
@@ -206,4 +210,4 @@
       href: ./known-issues/unable-to-access-gstatic-in-teams.md
     - name: Symantec DLP interferes with Teams processes
       href: ./known-issues/symantec-dlp-interferes-with-teams.md
-
+      
