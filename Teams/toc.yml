@@ -25,6 +25,8 @@
       href: ./known-issues/public-team-list-doesnt-display-all.md
     - name: Self-help diagnostics for Teams admins
       href: ./teams-administration/admin-self-help-diagnostics.md
+    - name: Teams remembered as a game by Xbox Game Bar affects Teams performance
+      href: ./teams-administration/performance-affected-when-teams-remembered-as-game.md
     - name: User doesn't receive welcome email when added by an administrator
       href: ./known-issues/welcome-email-not-received-in-teams.md
     - name: User information isn't updated
