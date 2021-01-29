@@ -110,6 +110,10 @@
       href: ./known-issues/cannot-send-poll.md
   - name: IM and Presence
     items:
+    - name: A contact's presence is unknown
+      href: ./teams-im-presence/contact-presence-status-unknown.md
+    - name: Actual presence status isn't displayed
+      href: ./teams-im-presence/presence-not-show-actual-status.md
     - name: Can't save profile picture
       href: ./known-issues/cant-save-profile-picture.md
     - name: Can't send message to Skype for Business

@@ -37,11 +37,11 @@ Install the language pack using the corresponding language .cab files from [Lang
 1. Open Command-Line as administrator and run these commands:
 
     ```
-    DISM/Online /Add-Package /PackagePath:"c:\temp\Microsoft-Windows-Client-Language-Pack_x64_fr-fr.cab"
+    DISM/Online /Add-Package /PackagePath:"c:\temp\Microsoft-Windows-Client-Language-Pack_x64_fr-FR.cab"
     ```
 
     ```
-    DISM/Online/Add-Capability/CapabilityName:Language.Basic~~~te-IN~0.0.1.0
+    DISM/Online/Add-Capability/CapabilityName:Language.Basic~~~fr-FR~0.0.1.0
     ```
 
 2. Check if these packages are installed:
