@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Server Manager
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # You are unable to view Roles and Features and receive error code 0x800706BE in Server Manager
 

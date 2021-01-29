@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, danma
 ms.prod-support-area-path: IP Address Management (IPAM)
-ms.technology: Networking
+ms.technology: networking
 ---
 # An incorrect IP address is returned when you ping a server by using its NetBIOS name  
 

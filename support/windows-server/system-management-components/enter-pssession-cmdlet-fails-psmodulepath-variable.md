@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Gbrag, jerrycif
 ms.prod-support-area-path: PowerShell
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # Enter-PSSession cmdlet fails when network path is specified in PSModulePath environment variable
 

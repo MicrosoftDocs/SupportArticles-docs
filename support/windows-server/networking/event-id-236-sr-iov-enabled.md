@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, yuvraja
 ms.prod-support-area-path: Windows NIC Teaming (Load Balance Failover)
-ms.technology: Networking
+ms.technology: networking
 ---
 # Event ID 236 on a Hyper-V server that has SR-IOV enabled on a VM in Windows Server
 

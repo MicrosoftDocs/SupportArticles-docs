@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: System Hang
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # You may receive an error "Out of Memory" because of the desktop heap limitation
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arudell, christys
 ms.prod-support-area-path: Windows NIC Teaming (Load Balance Failover)
-ms.technology: Networking
+ms.technology: networking
 ---
 # LACP Timer is configured incorrectly when you create a new NIC Team for LBFO in Windows Server 2016
 

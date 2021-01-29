@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: willgloy, kaushika
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Terminal Server error messages: 2200 to 2299
 

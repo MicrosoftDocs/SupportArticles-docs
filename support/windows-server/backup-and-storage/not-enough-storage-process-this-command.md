@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle, kapilth, robhind, jgerend, kumud
 ms.prod-support-area-path: File Server Resource Manager (FSRM)
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Error when you access file shares on a SOFS-configured server: Not enough server storage is available to process this command
 

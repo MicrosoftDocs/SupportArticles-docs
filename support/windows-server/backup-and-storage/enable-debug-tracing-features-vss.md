@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jomcc
 ms.prod-support-area-path: Configuring and using Backup software
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # How to enable the Volume Shadow Copy service's debug tracing features in Windows Server 2003 and Windows Server 2008
 

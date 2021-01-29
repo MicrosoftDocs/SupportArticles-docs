@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Blue Screen/Bugcheck
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Unexpected errors are returned when a shared folder is accessed from an application
 

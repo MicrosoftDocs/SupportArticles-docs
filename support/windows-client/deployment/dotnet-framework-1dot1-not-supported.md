@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # .NET Framework 1.1 is not supported on Windows 7 nor Windows Server 2008 R2 and higher Operating Systems
 

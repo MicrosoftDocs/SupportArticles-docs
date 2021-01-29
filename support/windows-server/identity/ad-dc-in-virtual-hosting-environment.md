@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Virtualized domain controller (errors and questions)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Things to consider when you host Active Directory domain controllers in virtual hosting environments
 

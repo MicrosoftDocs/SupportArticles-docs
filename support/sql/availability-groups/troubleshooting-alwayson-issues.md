@@ -40,12 +40,9 @@ If this information is not helpful, see the [More information about AlwaysOn Ava
 
 Typical configuration problems include AlwaysOn Availability Groups are disabled, accounts are incorrectly configured, the database mirroring endpoint does not exist, the endpoint is inaccessible (SQL Server Error 1418), network access does not exist, and a join database command fails (SQL Server Error 35250). Review the following document for help on troubleshooting these issues:
 
-[Troubleshoot AlwaysOn Availability Groups Configuration (SQL Server)](/sql/database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server) 
+[Troubleshoot AlwaysOn Availability Groups Configuration (SQL Server)](/sql/database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server)
 
-Additional links:
-
-- [Troubleshoot "Validating WSFC quorum vote configuration" warning](https://support.microsoft.com/kb/2833122)
-- [Fix: Error 41009 when you try to create multiple availability groups](https://support.microsoft.com/kb/2711145)
+Additional links: [Fix: Error 41009 when you try to create multiple availability groups](https://support.microsoft.com/kb/2711145)
 
 If the issue still exists, see the [More information about AlwaysOn Availability Groups](#more-information-about-alwayson-availability-groups).
 

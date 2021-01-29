@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Performance (audio and video) and RemoteFX
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Physical GPU settings is unavailable post domain join
 

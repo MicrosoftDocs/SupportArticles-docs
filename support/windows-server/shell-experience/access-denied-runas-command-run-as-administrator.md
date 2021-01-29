@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: nedpyle, kaushika
 ms.prod-support-area-path: Desktop Shell
-ms.technology: ShellExperience
+ms.technology: windows-server-shell-experience
 ---
 # Error when you try to use the runas command, the Run as Administrator option, or the Run as a different user option after you upgrade Windows Server: Access is denied
 
-This article provides some workarounds for an issue where you can't use the `runas` command, the "Run as Administrator" option, or the "Run as a different user" option after you upgrade to Windows Server 2008 R2.
+This article provides some workarounds for an issue where you can't use the `runas` command, the "Run as Administrator" option, or the "Run as a different user" option after you upgrade Windows Server.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 977513
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 977513
 
 Consider the following scenario:  
 
-- You upgrade a computer that is running Windows Server 2003 or Windows Server 2008 to Windows Server 2008 R2.
+- You upgrade a computer that is running Windows Server.
 - You log on as a standard user.
 
 - You try to use one of the following features:
@@ -38,7 +38,7 @@ In this scenario, you receive the following error message:
 
 ## Cause
 
-This issue occurs because the discretionary access control list (DACL) for the Secondary Logon service isn't set correctly when you upgrade from Windows Server 2003 or from Windows Server 2008. This problem prevents a standard user from starting this service and from running an application as a different user.
+This issue occurs because the discretionary access control list (DACL) for the Secondary Logon service isn't set correctly when you upgrade Windows Server. This problem prevents a standard user from starting this service and from running an application as a different user.
 
 ## Workaround
 

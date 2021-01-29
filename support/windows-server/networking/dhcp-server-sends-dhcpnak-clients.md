@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, prasadk 
 ms.prod-support-area-path: Dynamic Host Configuration Protocol (DHCP)
-ms.technology: Networking
+ms.technology: networking
 ---
 # DHCP Server with Deactivated Scope sends a DHCPNAK to clients
 

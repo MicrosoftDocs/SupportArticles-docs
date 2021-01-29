@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jongrkim
 ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
-ms.technology: Networking 
+ms.technology: networking 
 ---
 # Event 1 about SMB witness client initialization when you install Windows Server
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tonyga, stevenxu, kishore
 ms.prod-support-area-path: Webwindows-client and WebDAV
-ms.technology: Networking
+ms.technology: networking
 ---
 # Prompt for credentials when you access WebDav-based FQDN sites in Windows
 

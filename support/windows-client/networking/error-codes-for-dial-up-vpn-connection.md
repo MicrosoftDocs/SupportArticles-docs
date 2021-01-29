@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, tode
 ms.prod-support-area-path: Remote access
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # List of error codes for dial-up connections or VPN connections
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Multilingual User Interface (MUI) and Input Method Editor (IME)
-ms.technology: ApplicationCompatibility
+ms.technology: windows-server-application-compatibility
 ---
 # HTTP Listener fails to initialize when lacking SeChangeNotifyPrivilege
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: No Boot (not BugChecks)
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 # PROCESS1_INITIALIZATION_FAILED stop error after you upgrade to Windows 10 Version 1607
 

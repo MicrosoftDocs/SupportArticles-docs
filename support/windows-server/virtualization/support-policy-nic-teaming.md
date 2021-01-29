@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Installation and configuration of Hyper-V
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Microsoft support policy for NIC Teaming with Hyper-V
 

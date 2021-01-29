@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, JAMIRC
 ms.prod-support-area-path: Lock Screen or Screensaver
-ms.technology: ShellExperience
+ms.technology: windows-server-shell-experience
 ---
 # How to prevent the name of the last logged-on user from being displayed in the Log On to Windows dialog box in Windows Server 2003  
 

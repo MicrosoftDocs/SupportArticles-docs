@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DNS
-ms.technology: Networking
+ms.technology: networking
 ---
 # DNS Server Logs Event 7062: "DNS Server Encountered a Packet Addressed to Itself"
 

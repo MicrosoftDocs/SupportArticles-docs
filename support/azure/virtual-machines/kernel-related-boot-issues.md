@@ -100,6 +100,9 @@ After you apply certain kernel changes (such as a kernel upgrade) to a Linux vir
 
 ## Resolution
 
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+
 To recover the Linux VM on Azure, you must either install a newer kernel or roll back to an earlier version manually by using one of the following repair options.
 
 To perform this action, use the usual procedure: Delete the affected Linux VM and keep the operating system disk, and then attach the disk to a new VM that has the same version of the affected VM (or, at least, of the same distribution). Then, use one of the following repair options.

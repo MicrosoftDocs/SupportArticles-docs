@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, v-six, robsim, cpuckett
 ms.prod-support-area-path: Start Menu
-ms.technology: ShellExperience
+ms.technology: windows-server-shell-experience
 ---
 # Start menu shortcuts aren't immediately accessible in Windows Server 2016 and Windows Server 2019
 

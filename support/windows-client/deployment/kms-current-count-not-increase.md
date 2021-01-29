@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Activation
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # The KMS current count does not increase when you add new Windows Vista or Windows 7-based client computers to the network
 

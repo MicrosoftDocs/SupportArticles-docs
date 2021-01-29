@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Virtual Switch Manager (vmswitch)
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Creating V-switches within the hyper-V environment fails
 

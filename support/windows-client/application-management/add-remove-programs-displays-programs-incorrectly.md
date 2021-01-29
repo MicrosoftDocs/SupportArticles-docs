@@ -11,24 +11,26 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: MSI
-ms.technology: ApplicationCompatibility
+ms.technology: windows-client-application-compatibility
 ---
 # Add/Remove Programs tool displays installed programs incorrectly
 
 This article provides a solution to an issue where the **Add/Remove Programs** tool in Control Panel displays installed programs incorrectly.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Original product version:_ &nbsp; Windows XP  
 _Original KB number:_ &nbsp; 266668
 
 ## Symptoms
 
 When you install and uninstall programs, the Add/Remove Programs tool in Control Panel may display the installed programs incorrectly. The **Currently installed programs** box may contain only a single text string, or may display a large blank space before the program entries. Other display problems may include that there are no listed programs. Additionally, one of the following error messages may appear:
 
-> Message 1  
-An unexpected error occurred. Class not registered  
+Message 1  
+> An unexpected error occurred. Class not registered  
 res://appwiz.cpl/listbox.htc  
-Line: 225  
-Message 2 Object doesn't support this property or method res://appwiz.cpl/default.hta  
+Line: 225
+
+Message 2
+> Object doesn't support this property or method res://appwiz.cpl/default.hta  
 Line: 75
 
 ## Cause
@@ -93,9 +95,8 @@ To resolve this problem, follow these steps:
     > [!NOTE]
     > Before you perform an in-place upgrade, make sure that you back up your data. For more information about the risks of performing an in-place upgrade, see the More Information section.
 
-    1. Run Winnt32.exe from the \I386 directory on the Windows 2000 installation CD-ROM.
-    2. When the Windows 2000 Setup screen appears, click
-    **Upgrade to Windows 2000**.
+    1. Run Winnt32.exe from the \I386 directory.
+    2. When the Setup screen appears, proceed the upgrading.
     3. Allow installation to complete.
 
 If the Add/Remove Programs tool still does not function properly, shows no content, or if you want to try to fix this issue without upgrading to later versions of Internet Explorer, check the following registry keys to make sure that they contain entries:
@@ -181,12 +182,6 @@ The following list includes all the registry keys that are used by Add/Remove Pr
 - [HKEY_CLASSES_ROOT\CLSID\{0B124F8C-91F0-11D1-B8B5-006008059382}]
 
     @="Installed Apps Enumerator"
-- [HKEY_CLASSES_ROOT\CLSID\{0B124F8F-91F0-11D1-B8B5-006008059382}\InProcServer32]
-
-    @="SystemRoot%\System32\appwiz.cpl" (REG_EXPAND_SZ)"ThreadingModel"="Apartment"
-
-    > [!NOTE]
-    > This key is only available in Windows XP.
 
 - [HKEY_CLASSES_ROOT\CLSID\{CFCCC7A0-A282-11D1-9082-006008059382}]
 
@@ -197,12 +192,6 @@ The following list includes all the registry keys that are used by Add/Remove Pr
 - [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved]
 
     "{352EC2B7-8B9A-11D1-B8AE-006008059382}"="Shell Application Manager"
-- [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved]
-
-    "{0B124F8F-91F0-11D1-B8B5-006008059382}"="Installed Apps Enumerator"
-
-    > [!NOTE]
-    > This key is only available in Windows XP.
 
 - [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Current Version\App Management\Publishers\Darwin App Publisher]
 @="{CFCCC7A0-A282-11D1-9082-006008059382}"
@@ -234,7 +223,3 @@ Set to 0 when ARP exits.
     Read to determine if a restart is required after running setup.
 Presence of value means must-reboot == true.
 - `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\MS-DOSOptions`
-
-#### Did this fix the problem
-
-Check whether the problem is fixed. If the problem is fixed, you are finished with this section. If the problem is not fixed, you can [contact support](https://support.microsoft.com/contactus/).

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Error (BlInitializeLibrary failed XXX) when you install or start an operating system on a 64-bit UEFI-based computer
 

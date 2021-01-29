@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path:
-ms.technology: Application Virtulization (App-V)
+ms.technology: windows-client-application-virtualization-app-v
 ---
 # How to launch processes inside the App-V 5.0 virtualized environment
 

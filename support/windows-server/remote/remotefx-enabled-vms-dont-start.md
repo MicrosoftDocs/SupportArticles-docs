@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rkiran, jarrettr, sabinn
 ms.prod-support-area-path: Performance (audio and video) and RemoteFX
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # New and existing RemoteFX-enabled VMs do not start on a DC that is running the Remote Desktop Virtualization Host service on Windows Server
 

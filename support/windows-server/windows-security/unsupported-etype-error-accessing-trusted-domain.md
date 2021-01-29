@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Arrenc, justintu, lindakup, herbertm, waynmc
 ms.prod-support-area-path: Kerberos authentication
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # "Unsupported etype" error when accessing a resource in a trusted domain
 

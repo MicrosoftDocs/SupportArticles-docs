@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Secure channel issues
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # How to deploy custom cipher suite ordering in Windows Server 2016
 

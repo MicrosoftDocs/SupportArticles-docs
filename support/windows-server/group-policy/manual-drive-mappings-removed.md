@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Managing drive mappings through Group Policy
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # Group Policy Preferences removes manual drive mappings if the use first available setting is enabled
 

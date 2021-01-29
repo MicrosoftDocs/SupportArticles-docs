@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: .NET Framework installation
-ms.technology: ApplicationCompatibility
+ms.technology: windows-client-application-compatibility
 ---
 # .NET Framework 3.5 installation errors: 0x800F0906, 0x800F081F, 0x800F0907, 0x800F0922
 

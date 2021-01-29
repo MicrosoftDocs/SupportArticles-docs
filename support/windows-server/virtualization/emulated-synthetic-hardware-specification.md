@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: samacha, kaushika
 ms.prod-support-area-path: Installation and configuration of Hyper-V
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Emulated and synthetic hardware specification for Windows Server 2012 Hyper-V
 

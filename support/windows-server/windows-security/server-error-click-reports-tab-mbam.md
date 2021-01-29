@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: manojse, kaushika
 ms.prod-support-area-path: Bitlocker
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Error message when you click Reports tab in MBAM: Server Error in /Reports Application
 

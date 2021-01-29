@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, abizerh, fszita, meerak
 ms.prod-support-area-path: Active Directory Federation Services (AD FS)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Troubleshoot AD FS issues in Azure Active Directory and Office 365
 

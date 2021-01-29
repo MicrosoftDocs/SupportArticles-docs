@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, steved, grahamm
 ms.prod-support-area-path: Blue Screen/Bugcheck
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 # Tablet device that's running Windows 10 creates only a minidump file
 

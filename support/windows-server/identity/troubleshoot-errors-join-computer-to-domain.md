@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Domain join issues
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to troubleshoot errors that occur when you join Windows-based computers to a domain
 

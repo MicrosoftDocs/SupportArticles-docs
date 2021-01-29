@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, ntuttle, ardenw
 ms.prod-support-area-path: User profiles
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-client-user-profiles
 ---
 # Cannot configure a PIN when Convenience PIN and Hello for Business policies are enabled
 

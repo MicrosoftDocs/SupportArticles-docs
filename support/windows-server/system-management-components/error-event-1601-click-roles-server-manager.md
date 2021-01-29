@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Server Manager
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # Windows Server 2008: Error message when you select Roles in Server Manager
 

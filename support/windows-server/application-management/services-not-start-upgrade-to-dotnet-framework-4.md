@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: .NET Framework installation
-ms.technology: ApplicationCompatibility
+ms.technology: windows-server-application-compatibility
 ---
 # Services that depend on the ASP.NET State Service do not start after you upgrade to the .NET Framework 4.0
 

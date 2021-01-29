@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, AJAYPS
 ms.prod-support-area-path: Installation and configuration of Hyper-V
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Recommended hotfixes, updates, and known solutions for Windows Server 2012 R2 Hyper-V Network Virtualization (HNV) environments
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Bitlocker
-ms.technology: WindowsSecurity
+ms.technology: windows-client-security
 ---
 # Error after you enter a BitLocker PIN at Windows startup: Too many PIN entry attempts
 

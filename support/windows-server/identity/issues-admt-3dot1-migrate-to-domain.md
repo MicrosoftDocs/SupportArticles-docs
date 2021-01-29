@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scheung
 ms.prod-support-area-path: Active Directory Migration Tool (ADMT)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Known issues that may occur when you use ADMT 3.1 to migrate to a domain that contains Windows Server 2008 R2 domain controllers
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DFSR
-ms.technology: Networking 
+ms.technology: networking 
 ---
 # SYSVOL DFSR migration fails after you in-place upgrade a domain controller to Windows Server 2019
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Wireless networking and 802.1X authentication
-ms.technology: Networking 
+ms.technology: windows-client-networking 
 ---
 # Code 31 error in Device Manager for WAN Miniport (Network monitor) device in Windows 8 or Windows Server 2012
 
