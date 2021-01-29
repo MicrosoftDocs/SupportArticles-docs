@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting SIP options or TLS certificate issues with SBC in Teams
+title: SBC connectivity issues
 ms.author: v-todmc
 author: mccoybot
 manager: dcscontentpm
@@ -20,21 +20,7 @@ ms.reviewer: mikebis
 description: Describes how to diagnose SIP options or TLS certificate issues with SBC. 
 ---
 
-# Issues using SIP options or TLS certificates with SBC in Teams
-
-You might experience Session Border Controller (SBC) connectivity issues in Teams, such as the following:
-
-- Receiving Session Initiation Protocol (SIP) options
-- Transport Layer Security (TLS) problems are reported
-- SBC isn’t responding
-- SBC is marked as inactive in the Admin portal
-
-Such issues are most likely caused by either or both of the following conditions:
-
-- A TLS certificate issue
-- A misconfigured SBC Direct Routing service or fully qualified domain name (FQDN)
-
-This article outlines some common SIP options and TLS certificate scenarios, and provides resolutions that you can try.  
+# SBC connectivity issues
 
 ## Overview of the SIP options process
 
