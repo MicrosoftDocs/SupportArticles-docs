@@ -21,12 +21,12 @@ search.appverid:
 
 ## Symptoms
 
-In Microsoft Teams, your actual presence status isn't displayed in Teams. For example, your presence status should change to **Away** if your desktop has been inactive for more than 5 minutes. However, when you resume activity on your desktop, your presence status doesn't change to **Available** immediately.
+In Microsoft Teams, your presence status is shown incorrectly. For example, your presence status changes to **Away** if your desktop is inactive for more than 5 minutes. However, when you resume activity on your desktop, your presence status doesn't immediately change to **Available**.
 
 **Note:** Your desktop is inactive in these scenarios:
 
-- You locked your computer.
-- The computer entered idle or sleep mode.
+- You lock your computer.
+- The computer enters idle or sleep mode.
 - The Teams mobile app is running in the background.
 
 ## Cause
@@ -35,20 +35,27 @@ This issue occurs if the latest Teams updates aren't installed.
 
 ## Workaround
 
-After each step, check if the issue is resolved. If it isn’t, proceed to the next step.
+Try the first workaround, and check whether the issue is resolved. If it isn't, go to the second workaround.
 
-1. Update Teams by clicking your profile picture at the top of the app and selecting **Check for updates**.
-2. When your desktop resumes from inactive to active state, wait three minutes and check whether your presence status is updated.
+### Workaround 1
 
-   **Note:** It takes up to three minutes for the presence status to update from inactive to active.
+Update Teams: Select your profile picture at the top of the app, and then select **Check for updates**.
+
+### Workaround 2
+
+After your desktop resumes from an inactive to an active state, wait three minutes, and then check whether your presence status is updated.
+
+**Note:** It takes up to three minutes for the presence status to update from inactive to active.
 
 For more information, see [User presence in Teams](/microsoftteams/presence-admins).
 
-If none of the steps resolve the issue, administrators open a support ticket containing the following information:
+If neither workaround fixes the issue, open a support ticket that contains the following information:
+
+**Note:** This step must be performed by administrators.
 
 - Sign-in address of the user.
 - The desktop and debug logs. For more information about the logs, see [Use log files in troubleshooting Microsoft Teams](/microsoftteams/log-files).
-- The UTC time at which you expect the presence shows your actual status. For the example described in Symptoms, that's the UTC time at which you expect the presence status is **Available** instead **Away**. Verify the time is captured in the above logs collected.
+- The UTC time at which you might expect that the presence indicator shows the user's actual status. For the example that's described in the "Symptoms" section, this would be when you expect that the presence status would show **Available** instead of **Away**. Verify that the UTC time is captured in the collected logs.
 
 ## More information
 
