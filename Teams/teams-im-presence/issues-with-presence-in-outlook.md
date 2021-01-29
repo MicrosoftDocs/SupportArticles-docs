@@ -66,6 +66,4 @@ If these steps don’t resolve the issue, an administrator can create a support 
 
 - The desktop and web logs from both the user and contact. For information on collecting logs, see [Use log files in troubleshooting Microsoft Teams](https://docs.microsoft.com/microsoftteams/log-files).
 
-- The approximate time in UTC when the presence was updated by the contact, and the time elapsed when the user still wasn’t seeing the updated presence status. Verify that this time window is captured in the logs collected.
-
 For internal contacts, provide the results from the SaRa diagnostic tool.
