@@ -45,6 +45,9 @@ This issue occurs for one of the following reasons:
 
 ## Resolution
 
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+
 To fix the issue, follow these steps, based on the error message that you received.
 
 ### Error 1: Fix the corrupted hive

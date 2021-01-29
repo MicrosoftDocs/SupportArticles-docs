@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 958736
 
 ## Symptoms
 
-You apply the **Set roaming profile path for all users logging onto this computer** Group Policy setting in a domain for member servers that are running Windows Server 2008. In this case, the Group Policy setting applies to all user accounts, and this includes the local user accounts.
+You apply the **Set roaming profile path for all users logging onto this computer** Group Policy setting in a domain for member servers. In this case, the Group Policy setting applies to all user accounts, and this includes the local user accounts.
 
 ## Cause
 
@@ -31,7 +31,7 @@ This behavior is expected because the **Set roaming profile path for all users l
 ## More information
 
 > [!IMPORTANT]
-> Consider the following scenario. You set up a profile on a Windows 2008 member server. The profile includes some important settings. In this scenario, if you apply the Set roaming profile path for all users logging onto this computer Group Policy setting, you lose your current profile. Additionally, you are assigned a default temporary profile.
+> Consider the following scenario. You set up a profile on a member server. The profile includes some important settings. In this scenario, if you apply the Set roaming profile path for all users logging onto this computer Group Policy setting, you lose your current profile. Additionally, you are assigned a default temporary profile.
 
 This behavior occurs because the Group Policy setting sets a roaming profile for all users even though the users are local to the member server. In the Windows registry, a registry value that is named CentralProfile in the following registry subkey is used to set the share path of the roaming profile that is mentioned in the Group Policy for local users:  
 
@@ -42,7 +42,7 @@ This behavior occurs because the Group Policy setting sets a roaming profile for
 
 So you're assigned a default temporary profile because you don't have access to the remote share.
 
-The following roaming profile policy settings are currently available in Windows Server 2008:
+The following roaming profile policy settings are currently available in Windows Server:
 
 - **Set path for TS Roaming User Profile**
 - **Set roaming profile path for all users logging onto this computer**

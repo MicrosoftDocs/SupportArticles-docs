@@ -103,6 +103,8 @@
       href: admin/error-after-perform-tde-certificate-key-rotation.md
     - name: Error when backing up in-memory database
       href: admin/error-backing-up-memory-database.md
+    - name: Error when you create a snapshot
+      href: admin/error-when-you-create-a-snapshot.md
     - name: Error when you run CLR object or create assembly
       href: admin/error-run-clr-object-create-assembly.md
     - name: Full-text index doesn't index attribute values
@@ -125,12 +127,16 @@
       href: admin/performance-issues-using-columstore-indexes-large-pages.md
     - name: Policy-Based Management generates alerts
       href: admin/34052-error-pbm-generates-alerts.md
+    - name: Restore or recovery may fail
+      href: admin/restore-recovery-may-fail.md
     - name: Run a DLL-based COM object
       href: admin/run-dll-based-com-object.md
     - name: Schedule and automate Backups of databases
       href: admin/schedule-automate-backup-database.md
     - name: Set up and troubleshoot a linked server to an Oracle database
       href: admin/set-up-troubleshoot-linked-server.md
+    - name: Space used by a table is not released
+      href: admin/space-table-uses-not-released.md
     - name: Support for databases on compressed volumes
       href: admin/support-databases-compressed-volumes.md
     - name: Support for network database files
@@ -185,6 +191,8 @@
       href: database-design/remove-duplicate-rows-sql-server-tab.md
     - name: Rotate a table
       href: database-design/rotate-table.md
+    - name: Timeout issues when you deploy SQL CLR objects
+      href: database-design/timeout-issues-deploy-clr-objects.md
     - name: Use extended or SP_OA stored procedure to load CLR
       href: database-design/use-extended-sp-oa-stored-procedure.md
   - name: High Availability and Disaster Recovery features
@@ -289,12 +297,18 @@
       href: machine-learning/inconsistent-results-mkl-computations-missing-variable.md
   - name: Performance
     items:
+    - name: Blocked column is populated for latch waits
+      href: performance/blocked-column-populated-latch-waits.md
+    - name: Buffer pool scan runs slowly on large memory machines
+      href: performance/buffer-pool-scan-runs-slowly-large-memory-machines.md
     - name: Decreased performance when using TOP, MAX or MIN
       href: performance/decreased-performance-run-aggregating-clause.md
     - name: External modules can cause performance issues
       href: performance/performance-consistency-issues.md
     - name: Filter drivers cause performance and consistency issues
       href: performance/filter-drivers-lead-to-sql-performance-consistency.md
+    - name: High CPU use occurs in your queries
+      href: performance/high-cpu-use-occurs-queries.md
     - name: Non-yielding Resource Monitor
       href: performance/resource-monitor-nonyielding-condition.md
     - name: Performance degradation with new CE
@@ -341,6 +355,8 @@
       href: replication/apply-hotfix-sql-replication-topology.md
     - name: Cannot use rowguidcol in filter definition in merge replication
       href: replication/rowguidcol-not-supported-merge-replication.md
+    - name: CDC capture job fails when processing changes
+      href: replication/cdc-capture-job-fails-processing-changes-table.md
     - name: CDC for Oracle results in transaction log growth
       href: replication/sql-transaction-log-grows.md
     - name: Duplicate key rows from sys.syscommittab table
@@ -355,6 +371,8 @@
       href: replication/manually-remove-replication.md
     - name: Merge replication doesn't support centralized subscriber topologies
       href: replication/merge-replication-cannot-support-centralized-subscriber-topologies.md
+    - name: Non-convergence when SQL Server processes child generations
+      href: replication/non-convergence-when-processes-child-generations.md
     - name: ORACDC517E - Oracle Call Interface (OCI) method failed
       href: replication/error-use-change-data-capture-service.md
     - name: Oracle publication triggers send data for non-published columns
@@ -373,6 +391,8 @@
       href: replication/sql-merge-replication-synchronization-fails.md
     - name: The subscription does not exist
       href: replication/subscription-does-not-exist-error.md
+    - name: Understand merge Replication article processing order
+      href: replication/understand-merge-replication-article-process.md
     - name: Update is replicated as DELETE/INSERT pairs
       href: replication/update-statements-replicated-as-delete-insert.md
   - name: Security Issues
@@ -389,6 +409,8 @@
       href: security/error-disable-guest-user.md
     - name: Fix permission problem when you move MSDB database
       href: security/fix-permission-issues-move-msdb.md
+    - name: Fails to start with error 17182
+      href: security/fails-start-error-17182.md
     - name: SQL Service cannot start after configuring SSL certificate
       href: security/service-cannot-start.md
     - name: Transfer logins and passwords between instances

@@ -1,7 +1,7 @@
 - name: Welcome
   href: welcome-dotnet.md
 
-- name: .NET Framework
+- name: .NET
   href: ./framework/toc.yml
 
 - name: WCF
