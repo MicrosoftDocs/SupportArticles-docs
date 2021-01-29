@@ -86,9 +86,9 @@
       href: ./known-issues/following-application-instance-not-present-error.md
     - name: Users with Exchange Online mailboxes can't access meetings or connectors 
       href: ./known-issues/exchange-users-cant-access-meetings.md
-  - name: Direct Routing issues
+  - name: Direct Routing 
     items: 
-    - name: SIP options and TLS certificate issues
+    - name: Issues with SBC connectivity
       href: ./direct-routing/sip-options-tls-certificate-issues.md
   - name: Exchange integration
     items:
