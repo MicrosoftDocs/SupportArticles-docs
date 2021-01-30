@@ -27,7 +27,7 @@ In Microsoft Teams, the presence status of a contact is displayed as **Status un
 
 This issue occurs if one or more of the following conditions are true:
 
-- The contact is offline (the contact hasn't signed into Teams).
+- The contact is offline (the contact hasn't signed in to Teams).
 - The contact set the presence status to **Appear offline**.
 - A network communication issue is affecting the unified presence service (UPS).
 - The contact is using Microsoft Skype for Business. Based on the [Presence](/microsoftteams/coexistence-chat-calls-presence#presence) in the coexistence scenario, this issue may be an expected behavior.
