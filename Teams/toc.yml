@@ -25,6 +25,8 @@
       href: ./known-issues/public-team-list-doesnt-display-all.md
     - name: Self-help diagnostics for Teams admins
       href: ./teams-administration/admin-self-help-diagnostics.md
+    - name: Teams remembered as a game by Xbox Game Bar affects Teams performance
+      href: ./teams-administration/performance-affected-when-teams-remembered-as-game.md
     - name: User doesn't receive welcome email when added by an administrator
       href: ./known-issues/welcome-email-not-received-in-teams.md
     - name: User information isn't updated
@@ -86,6 +88,10 @@
       href: ./known-issues/following-application-instance-not-present-error.md
     - name: Users with Exchange Online mailboxes can't access meetings or connectors 
       href: ./known-issues/exchange-users-cant-access-meetings.md
+  - name: Direct Routing 
+    items: 
+    - name: Issues with SBC connectivity
+      href: ./direct-routing/sip-options-tls-certificate-issues.md
   - name: Exchange integration
     items:
     - name: Teams and Exchange interaction issues
@@ -104,6 +110,10 @@
       href: ./known-issues/cannot-send-poll.md
   - name: IM and Presence
     items:
+    - name: A contact's presence is unknown
+      href: ./teams-im-presence/contact-presence-status-unknown.md
+    - name: Actual presence status isn't displayed
+      href: ./teams-im-presence/presence-not-show-actual-status.md
     - name: Can't save profile picture
       href: ./known-issues/cant-save-profile-picture.md
     - name: Can't send message to Skype for Business
@@ -200,4 +210,4 @@
       href: ./known-issues/unable-to-access-gstatic-in-teams.md
     - name: Symantec DLP interferes with Teams processes
       href: ./known-issues/symantec-dlp-interferes-with-teams.md
-
+      
