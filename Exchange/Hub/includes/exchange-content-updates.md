@@ -2,6 +2,14 @@
 
 
 
+## Week of January 25, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/28/2021 | [Out-of-office replies and voting options show wrongly](/exchange/troubleshoot/send-emails/out-of-office-replies-and-voting-options-appear-incorrectly) | modified |
+
+
 ## Week of January 18, 2021
 
 
