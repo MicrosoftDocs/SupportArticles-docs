@@ -2,6 +2,14 @@
 
 
 
+## Week of January 25, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/27/2021 | [SharePoint Online or OneDrive for Business access denied due to organizational policies error message](/sharepoint/troubleshoot/sharing-and-permissions/access-denied-due-to-org-policies) | modified |
+
+
 ## Week of January 18, 2021
 
 
