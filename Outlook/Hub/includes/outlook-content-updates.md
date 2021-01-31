@@ -2,6 +2,14 @@
 
 
 
+## Week of January 25, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/26/2021 | [Instant messaging client features not available](/outlook/troubleshoot/user-interface/some-instant-messaging-client-features-not-available) | modified |
+
+
 ## Week of January 18, 2021
 
 
