@@ -36,7 +36,9 @@ This issue occurs because the public folder restore operation isn't supported du
 
 ## Resolution
 
-Here's how to resolve this issue:
+To resolve this issue, use one of the following methods, appropriate for your situation:
+
+### Method 1: Remove the recovered public folders
 
 1. Identify the entry IDs of the recovered folders. Here's how to check the report and identify the entry IDs:
 
@@ -111,6 +113,10 @@ Here's how to resolve this issue:
    ```
 
    Replace the *FailedMailbox* placeholder with the identity of the failed migration mailbox that you noted in step 1. For more information about that cmdlet, see [Start-MigrationUser](/powershell/module/exchange/start-migrationuser).
+
+### Method 2: Don't specify the ExcludeDumpster parameter
+
+If you don't want to remove the recovered public folders, restart the migration without specifying the `ExcludeDumpster` parameter.
 
 ## More information
 
