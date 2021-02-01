@@ -1,6 +1,6 @@
 ---
 title: Netlogon event ID 5719 or Group Policy event 1129
-description: Discusses event ID 5719 or Group Policy event 1129, which are logged if you have a Gigabit network adapter installed on a Windows-based compute. Provides a resolution.
+description: Event ID 5719 or Group Policy event 1129 is logged if you have a Gigabit network adapter installed on a Windows-based compute. Provides a resolution.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,7 +15,7 @@ ms.technology: windows-server-group-policy
 ---
 # Netlogon event ID 5719 or Group Policy event 1129 is logged when you start a domain member
 
-This article provides the methods to solve the Netlogon event ID 5719 or Group Policy event 1129 that is logged when you start a domain member.
+This article solves the Netlogon event ID 5719 or Group Policy event 1129 that's logged when you start a domain member.
 
 _Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 938449
@@ -33,17 +33,17 @@ Consider this scenario:
   - The computer has a Gigabit network adapter installed.
   - You secure the network access by using Network Access Protection (NAP), network authentication (by using 802.1**x**), or another method.
   
-In this scenario, the following event is logged in the System log when you start the computer in every version of Windows up to and including Windows 8.1. In Windows 10 and newer versions, event 5719 is no longer logged in this situation. Instead, the following lines are recorded in Netlogon.log:
+In this scenario, the following event is logged in the System log when you start the computer in Windows 8.1 and earlier versions. In Windows 10 and later versions, event 5719 is no longer logged in this situation. The following lines are recorded in Netlogon.log instead:
 
 > [CRITICAL] [960] CONTOSO: NlSessionSetup: Session setup: cannot pick trusted DC  
 > [SESSION] [960] No IP addresses present, skipping No DC event log
 
-After this occurs, the computer is assigned an IP address:
+After this issue occurs, the computer is assigned an IP address:
 
 > [SESSION] [960] V6 Winsock Addrs: fe80::5faf:632a:f22c:644a%2 (1) V6WinsockPnpAddresses List used to be empty.  
 > [SESSION] [960] Winsock Addrs: 10.1.1.80 (1) List used to be empty.
 
-On Windows 10 and later versions, you'll see only events by components, depending on the Domain Controller connectivity (such as Group Policy). The following is recorded in the group policy debug log:
+On Windows 10 and later versions, you'll see only events by components, depending on the Domain Controller connectivity (such as Group Policy). The following entries are recorded in the group policy debug log:
 
 > CGPApplicationService::MachinePolicyStartedWaitingOnNetwork.  
 > CGPMachineStartupConnectivity::CalculateWaitTimeoutFromHistory: Average is 388.
@@ -65,20 +65,20 @@ On Windows 10 and later versions, you'll see only events by components, dependin
 > GPSVC(530.ae0) *\<DateTime>* There is no connectivity  
 > GPSVC(530.8e0) *\<DateTime>* ApplyGroupPolicy: Getting ready to create background thread GPOThread.
 
-The first section shows the calculation for the time-out to use to bring up the network. This can be based on previous fast startups.
+The first section shows the calculation for the time-out to use to bring up the network. It can be based on previous fast startups.
 
-The second section shows that NLA fails to report a working network within the wait interval that is allowed, and group policy startup processing fails. The third section shows that the Group Policy engine starts a background procedure, and then waits for one minute after a network becomes available.
+The second section shows that Network Location Awareness (NLA) fails to report a working network within the wait interval that's allowed, and group policy startup processing fails. The third section shows that the Group Policy engine starts a background procedure, and then waits for one minute after a network becomes available.
 
 ## Cause
 
 This issue may occur for any of these reasons:
 
 - The Netlogon service starts before the network is ready. The network stack and adapter initialization often start at about the same time. Some network adapters and switches have link arbitration and MAC address uniqueness checks that take longer to complete than the wait time that is set for Netlogon to detect network connectivity.
-- Solutions that verify the health of the new network member delay the network connection and your ability to access domain controllers. If you have an automatic Direct Access channel connection enabled, this may also require more time to do than Netlogon allows.
+- Solutions that verify the health of the new network member delay the network connection and your ability to access domain controllers. If you have an automatic Direct Access channel connection enabled, it may also require more time to do than Netlogon allows.
 - The 802.1X authentication process delays connections to the domain controllers.
-- The client experiences a delay to retrieve an IP address from the DHCP server. This delays the display of the network interface.
+- The client experiences a delay to retrieve an IP address from the DHCP server. It delays the display of the network interface.
 
-Group Policy in Windows Vista and later versions is written to negotiate the network status that has Network Location Awareness (NLA) enabled, and it waits for a network that has DC connectivity. However, Group Policy may start prematurely because of a policy application. This is especially true when the delay in finding a network alternates between startups.
+Group Policy in Windows Vista and later versions is written to negotiate the network status that has NLA enabled. And it waits for a network that has DC connectivity. However, Group Policy may start prematurely because of a policy application. This situation is especially true when the delay in finding a network alternates between startups.
 
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
@@ -89,11 +89,11 @@ To resolve this issue, install the most current driver for the Gigabit network a
 
 ## Resolution 2
 
-To resolve this issue, use the registry to change the related settings that affect DC connectivity. To do this, use the following methods.
+To resolve this issue, use the registry to change the related settings that affect DC connectivity. To do it, use the following methods.
 
 ### Method 1
 
-Adjust the firewall settings or IPSEC policies that are changed to allow DC connectivity. These changes are made when the client receives an IP address but requires more time to access a domain controller (for example, after a successful verification through Cisco NAC or Microsoft NPS Services).
+Adjust the firewall settings or IPSEC policies that are changed to allow DC connectivity. These changes are made when the client receives an IP address but requires more time to access a domain controller, for example, after a successful verification through Cisco NAC or Microsoft NPS Services.
 
 ### Method 2
 
@@ -112,7 +112,7 @@ For more information, see [Settings for minimizing periodic WAN traffic](https:/
 
 ### Method 3
 
-The IP stack tries to verify the IP address using an ARP broadcast. This delays the time that the IP takes to come online. You can set the ArpRetryCount registry entry to one (1), so the wait for uniqueness is shortened. To do this, follow these steps:
+The IP stack tries to verify the IP address using an ARP broadcast. It delays the time that the IP takes to come online. You can set the ArpRetryCount registry entry to one (1), so the wait for uniqueness is shortened. To do it, follow these steps:
 
 1. Start Registry Editor.
 2. Locate and select the following subkey:  
@@ -156,7 +156,7 @@ For more information, see [How to force Kerberos to use TCP instead of UDP in Wi
 
 ### Method 6
 
-Disable media sense for TCP/IP. To do this, add the following value to the `Tcpip` registry subkey:
+Disable media sense for TCP/IP by adding the following value to the `Tcpip` registry subkey:
 
 > Registry subkey: HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters  
 Value Name: DisableDHCPMediaSense  
@@ -210,10 +210,10 @@ You can set a registry value to delay the application of Group Policy:
 
 ## More information
 
-If you can log on to the domain without a problem, you can safely ignore event ID 5719. Because the Netlogon service may start before the network is ready, the computer may be unable to locate the logon domain controller. Therefore, event ID 5719 is logged. However, after the network is ready, the computer will try again to locate the logon domain controller. In this situation, the operation should be successful.
+If you can log on to the domain without a problem, you can safely ignore event ID 5719. Because the Netlogon service may start before the network is ready, the computer may be unable to locate the logon domain controller. Therefore, event ID 5719 is logged. After the network is ready, the computer will try again to locate the logon domain controller. In this situation, the operation should be successful.
 
-In a Netogon.log, entries that resemble the following may be logged:
+In a Netogon.log, entries that resemble the following example may be logged:
 
 > *DateTime* [CRITICAL] \<domain>: NlDiscoverDc: Cannot find DC. *DateTime* [CRITICAL] \<domain>: NlSessionSetup: Session setup: cannot pick trusted DC *DateTime* [MISC] Eventlog: 5719 (1)"\<domain>" 0xc000005e ... *DateTime* [SESSION] WPNG: NlSetStatusClientSession: Set connection status to c000005e ... *DateTime* [SESSION] \Device\NetBT_Tcpip_{4A47AF53-40D3-4F92-ACDF-9B5E82A50E32}: Transport Added (10.0.64.232) -> Getting a proper IP address takes >15 seconds.
 
-Similar errors might be reported by other components that require Domain Controller connectivity to function correctly. For example, the Group Policy may not be applied at system startup. In this case, startup scripts do not run. The Group Policy failures may be related to the failure of Netlogon to locate a domain controller. You can set Group Policy to be more responsive to late network connectivity arrival.
+Similar errors might be reported by other components that require Domain Controller connectivity to function correctly. For example, the Group Policy may not be applied at system startup. In this case, start up scripts don't run. The Group Policy failures may be related to the failure of Netlogon to locate a domain controller. You can set Group Policy to be more responsive to late network connectivity arrival.
