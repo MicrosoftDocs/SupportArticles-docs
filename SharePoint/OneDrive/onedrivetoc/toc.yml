@@ -3,8 +3,8 @@
   items:
   - name: Administration
     items:
-    - name: Error 'DNS_PROBE_FINISHED_NXDOMAIN' when accessing SharePoint or OneDrive
-      href: ../administration/error-accessing-sharepoint-onedrive.md
+    - name: Error 'DNS_PROBE_FINISHED_NXDOMAIN' when accessing OneDrive or Sharepoint
+      href: ../administration/error-accessing-onedrive-sharepoint.md
   - name: List and Libraries
     items:
     - name: 401 error when Graph API access OneDrive data

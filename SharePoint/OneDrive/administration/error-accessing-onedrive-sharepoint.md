@@ -1,6 +1,6 @@
 ---
-title: Error 'DNS_PROBE_FINISHED_NXDOMAIN' when accessing SharePoint or OneDrive
-description: Describes how to resolve an issue when unable to SharePoint or OneDrive
+title: Error 'DNS_PROBE_FINISHED_NXDOMAIN' when accessing OneDrive or Sharepoint
+description: Describes how to resolve an issue when unable to OneDrive or Sharepoint
 author: v-miegge
 ms.author: prbalusu
 manager: dcscontentpm
@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.date: 02/01/2021
 ms.audience: Admin
 ms.topic: article
-ms.service: sharepoint-online
+ms.service: one-drive
 ms.custom: CSSTroubleshoot
 search.appverid:
 - SPO160
@@ -19,17 +19,17 @@ appliesto:
 - OneDrive for Business
 ---
 
-# Error 'DNS_PROBE_FINISHED_NXDOMAIN' when accessing SharePoint or OneDrive
+# Error 'DNS_PROBE_FINISHED_NXDOMAIN' when accessing OneDrive or Sharepoint
 
 ## Symptom
 
-When you try to access **SharePoint** or **OneDrive**, you receive following error:
+When you try to access **OneDrive** or **SharePoint**, you receive following error:
 
-![This site can't be reached](media/error-accessing-sharepoint-onedrive/this-site-cannot-be-reached.png)
+![This site can't be reached](media/error-accessing-onedrive-sharepoint/this-site-cannot-be-reached.png)
 
 ## Cause
 
-Your subscription to either **SharePoint** or **OneDrive** might have expired.
+Your subscription to either **OneDrive** or **SharePoint** might have expired.
 
 ## Resolution
 
@@ -51,7 +51,7 @@ To flush the local systems DNS cache:
 
 4. Select **Enter** on the keyboard.
 
-Once the DNS has been flushed, try to access **SharePoint** or **OneDrive** again.
+Once the DNS has been flushed, try to access **OneDrive** or **SharePoint** again.
 
 If you are still unable to access your service, contact [Microsoft technical support](https://go.microsoft.com/fwlink/?linkid=869559).
 
