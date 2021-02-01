@@ -1,5 +1,5 @@
-- name: Welcome
-  href: welcome-virtual-machines.yml
+- name: Troubleshooting Azure VMs
+  href: index.yml
 
 - name: Troubleshoot deployment failures
   items:
@@ -76,6 +76,16 @@
       href: cannot-connect-linux-network.md
     - name: SSH connection
       href: connect-linux-vm-sshconnection.md
+    - name: SSH troubleshooting
+      href: troubleshoot-ssh-connection.md
+    - name: Troubleshoot file system errors
+      href: linux-recovery-cannot-start-file-system-errors.md
+    - name: Recover LVM configured VMs and no boot 
+      href: chroot-logical-volume-manager.md
+    - name: Troubleshoot fstab errors 
+      href: linux-virtual-machine-cannot-start-fstab-errors.md
+    - name: Detailed SSH troubleshooting
+      href: detailed-troubleshoot-ssh-connection.md
   - name: Windows
     items:
     - name: Cannot RDP into Azure VM because of authentication errors
@@ -90,9 +100,6 @@
       href: azure-vm-nsi-not-starting.md
     - name: Cannot RDP into Azure VM because of a brute force attack
       href: cannot-rdp-azure-vm-brute-force.md
-  - name: RDP
-    href: rdp.md
-    items:
     - name: Reset RDP
       href: reset-rdp.md
     - name: RDP troubleshooting
@@ -133,18 +140,6 @@
       href: guest-os-firewall-misconfigured.md
     - name: Troubleshoot RDP error caused by netvsc.sys
       href: troubleshoot-rdp-driver-netvsc.md
-  - name: SSH
-    items:
-    - name: SSH troubleshooting
-      href: troubleshoot-ssh-connection.md
-    - name: Troubleshoot file system errors
-      href: linux-recovery-cannot-start-file-system-errors.md
-    - name: Recover LVM configured VMs and no boot 
-      href: chroot-logical-volume-manager.md
-    - name: Troubleshoot fstab errors 
-      href: linux-virtual-machine-cannot-start-fstab-errors.md
-    - name: Detailed SSH troubleshooting
-      href: detailed-troubleshoot-ssh-connection.md
   - name: Application access issues
     href: troubleshoot-app-connection.md
 - name: VM is not booting
@@ -154,6 +149,10 @@
     items:
     - name: Grub Rescue
       href: troubleshoot-vm-boot-error.md
+    - name: Can't boot after a host node upgrade
+      href: linux-kernel-panics-upgrade.md
+    - name: Linux VM does not start after an LIS upgrade
+      href: linux-vm-not-start-kernel-lis.md
   - name: Windows
     href: boot-error-troubleshoot.md
     items:
@@ -213,8 +212,6 @@
       href: windows-stop-error-system-process-terminated.md
     - name: Windows stop error - System thread exception not handled
       href: windows-stop-error-system-thread-exception-not-handled.md
-  - name: Error code
-    items:
     - name: Can't boot with 0xc000000f
       href: error-code-0xc000000f.md
     - name: Unable to boot with 0xc000000f
@@ -243,10 +240,6 @@
       href: boot-error-0xc0000221.md
   - name: Boot failure with error INACCESSIBLE_BOOT_DEVICE
     href: windows-boot-failure.md
-  - name: Can't boot after a host node upgrade
-    href: linux-kernel-panics-upgrade.md
-  - name: Linux VM does not start after an LIS upgrade
-    href: linux-vm-not-start-kernel-lis.md
   - name: Troubleshoot Windows VM OS with missing boot manager
     href: os-bootmgr-missing.md
   - name: OS isn't found

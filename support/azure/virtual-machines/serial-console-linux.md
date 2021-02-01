@@ -40,7 +40,7 @@ For Serial Console documentation for Windows, see [Serial Console for Windows](.
 
 - Your VM or virtual machine scale set instance must have [boot diagnostics](boot-diagnostics.md) enabled.
 
-    ![Boot diagnostics settings](./media/virtual-machines-serial-console/virtual-machine-serial-console-diagnostics-settings.png)
+    ![Boot diagnostics settings](./media/serial-console-linux/virtual-machine-serial-console-diagnostics-settings.png)
 
 - For settings specific to Linux distributions, see [Serial console Linux distribution availability](#serial-console-linux-distribution-availability).
 
