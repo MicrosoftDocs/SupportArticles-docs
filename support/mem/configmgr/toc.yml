@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-configuration-manager.md
+  href: welcome-configuration-manager.yml
 - name: Alerts, reporting, and queries
   items:
     - name: A log with a long line is truncated in CMTrace
