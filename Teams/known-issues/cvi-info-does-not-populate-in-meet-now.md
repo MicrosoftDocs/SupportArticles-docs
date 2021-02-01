@@ -28,8 +28,11 @@ Cloud Video Interop (CVI) information populated in a Meet Now instance of a meet
 
 To meet right away, users can click New Meeting in Microsoft Teams, instead of Meet Now, and type in a meeting name and optionally invite a guest. This will schedule a meeting in your calendar with working CVI coordinates. 
 
-## More information
+## Workaround
 
 We recommend that you schedule the meeting to populate this information.
+
+## More information
+Microsoft is researching how to enable working CVI coordinates for Meet Now scenarios and will post more information in this article when the information becomes available.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
