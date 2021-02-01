@@ -66,7 +66,7 @@ MCSMux controls:
 
 - channel assignment by multiplexing data onto predefined virtual channels within the protocol
 - priority levels
-- segmentation of data being sent.
+- segmentation of data being sent
 
 It essentially abstracts the multiple RDP stacks into a single entity, from the perspective of the GCC. GCC is responsible for management of those multiple channels. The GCC allows the creation and deletion of session connections and controls resources provided by MCS. Each Terminal Server protocol (currently, only RDP and Citrix's ICA are supported) will have a protocol stack instance loaded (a listener stack awaiting a connection request). The Terminal Server device driver coordinates and manages the RDP protocol activity. It's made up of smaller components:
 
