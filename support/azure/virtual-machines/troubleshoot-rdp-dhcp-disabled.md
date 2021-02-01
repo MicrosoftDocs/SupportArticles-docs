@@ -125,8 +125,7 @@ To resolve this problem, use Serial control to enable DHCP or [reset network int
    ```
 5. Collect the **c:\temp\ProcMonTrace.PML** file:
 
-    1. [Attach a data disk to the VM](../windows/attach-managed-disk-portal.md
-).
+    1. [Attach a data disk to the VM](/azure/virtual-machines/windows/attach-managed-disk-portal).
     2. Use Serial Console you can copy the file to the new drive. For example, `copy C:\temp\ProcMonTrace.PML F:\`. In this command, F is the driver letter of the attached data disk. Replace the letter as appropriate with the correct value.
     3. Detach the data drive and then attach it to a working VM that has Process Monitor ubstakke installed.
 

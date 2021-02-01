@@ -65,7 +65,7 @@ Serial Console is available for virtual machine scale sets, accessible on each i
 
 
 ### TLS 1.2 in Serial Console
-Serial Console uses TLS 1.2 end-to-end to secure all communication within the service. Serial Console has a dependency on a user-managed boot diagnostics storage account, and TLS 1.2 must be configured separately for the storage account. Instructions to do so are located [here](../../storage/common/transport-layer-security-configure-minimum-version.md).
+Serial Console uses TLS 1.2 end-to-end to secure all communication within the service. Serial Console has a dependency on a user-managed boot diagnostics storage account, and TLS 1.2 must be configured separately for the storage account. Instructions to do so are located [here](/azure/storage/common/transport-layer-security-configure-minimum-version).
 
 ## Advanced uses for Serial Console
 Aside from console access to your VM, you can also use the Azure Serial Console for the following:

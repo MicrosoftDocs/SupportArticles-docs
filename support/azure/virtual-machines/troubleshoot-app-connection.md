@@ -94,8 +94,8 @@ If you cannot access the application, verify the following settings:
 * The host firewall on the target VM is allowing the inbound request and outbound response traffic.
 * Intrusion detection or network monitoring software running on the target VM is allowing the traffic.
 * Cloud Services endpoints or Network Security Groups are allowing the traffic:
-  * [Classic model - Manage Cloud Services endpoints](../../cloud-services/cloud-services-enable-communication-role-instances.md)
-  * [Resource Manager model - Manage Network Security Groups](../../virtual-network/manage-network-security-group.md)
+  * [Classic model - Manage Cloud Services endpoints](/azure/cloud-services/cloud-services-enable-communication-role-instances)
+  * [Resource Manager model - Manage Network Security Groups](/azure/virtual-network/manage-network-security-group)
 * A separate component running in your VM in the path between the test VM and your VM, such as a load balancer or firewall, is allowing the traffic.
 
 On a Windows-based virtual machine, use Windows Firewall with Advanced Security to determine whether the firewall rules exclude your application's inbound and outbound traffic.
@@ -118,7 +118,7 @@ If you cannot access the application, verify the following settings:
   
   * Verify that the inbound NAT rule configuration for the VM is allowing the incoming traffic, especially the protocol (TCP or UDP) and the public and private port numbers.
   * Verify that Network Security Groups are allowing the inbound request and outbound response traffic.
-  * For more information, see [What is a network security group?](../../virtual-network/network-security-groups-overview.md)
+  * For more information, see [What is a network security group?](/azure/virtual-network/network-security-groups-overview)
 
 If the virtual machine or endpoint is a member of a load-balanced set:
 
@@ -134,7 +134,7 @@ If you can access the application, ensure that your Internet edge device is allo
 
 ## Step 4 If you cannot access the application, use IP Verify to check the settings. 
 
-For more information, see [Azure network monitoring overview](../../network-watcher/network-watcher-monitoring-overview.md). 
+For more information, see [Azure network monitoring overview](/azure/network-watcher/network-watcher-monitoring-overview). 
 
 ## Additional resources
 [Troubleshoot Remote Desktop connections to a Windows-based Azure Virtual Machine](troubleshoot-rdp-connection.md)
