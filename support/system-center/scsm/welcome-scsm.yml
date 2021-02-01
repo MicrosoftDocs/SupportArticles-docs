@@ -1,0 +1,24 @@
+### YamlMime:Landing
+
+title: System Center Service Manager troubleshooting troubleshooting
+summary: Welcome to Service Manager troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use System Center Service Manager. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: System Center Service Manager troubleshooting
+  description: Landing page for System Center Service Manager troubleshooting articles.
+  ms.prod: system-center
+  ms.topic: landing-page
+  author: helenclu
+  ms.author: luche
+  ms.date: 02/01/2021
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Configuration and performance
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Configure antivirus exclusions
+            url: configure-antivirus-exclusions.md

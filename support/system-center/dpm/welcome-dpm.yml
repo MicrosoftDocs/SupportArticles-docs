@@ -1,0 +1,24 @@
+### YamlMime:Landing
+
+title: System Center Data Protection Manager troubleshooting
+summary: Welcome to Data Protection Manager troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use System Center Data Protection Manager. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Data Protection Manager troubleshooting
+  description: Landing page for System Center Data Protection Manager troubleshooting articles.
+  ms.prod: system-center
+  ms.topic: landing-page
+  author: helenclu
+  ms.author: luche
+  ms.date: 02/01/2021
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Agents
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot protection agent installation issues
+            url: troubleshoot-dpm-protection-agent-installation-issues.md
