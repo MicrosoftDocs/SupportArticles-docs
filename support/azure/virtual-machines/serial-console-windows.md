@@ -41,7 +41,7 @@ For serial console documentation for Linux, see [Azure Serial Console for Linux]
 
 * The VM for virtual machine scale set instance must have [boot diagnostics](boot-diagnostics.md) enabled.
 
-    ![Boot diagnostics settings](./media/virtual-machines-serial-console/virtual-machine-serial-console-diagnostics-settings.png)
+    ![Boot diagnostics settings](./media/serial-console-windows/virtual-machine-serial-console-diagnostics-settings.png)
 
 ## Enable Serial Console functionality for Windows Server
 
@@ -53,7 +53,7 @@ Newer Windows Server images on Azure have [Special Administration Console](/prev
 
 For older Windows Server images (created before February 2018), you can automatically enable the serial console through the Azure portal's run command feature. In the Azure portal, select **Run command**, then select the command named **EnableEMS** from the list.
 
-![Run command list](./media/virtual-machines-serial-console/virtual-machine-windows-serial-console-runcommand.png)
+![Run command list](./media/serial-console-windows/virtual-machine-windows-serial-console-runcommand.png)
 
 Alternatively, to manually enable the serial console for Windows VMs/virtual machine scale set created before February 2018, follow these steps:
 
@@ -63,7 +63,7 @@ Alternatively, to manually enable the serial console for Windows VMs/virtual mac
     - `bcdedit /emssettings EMSPORT:1 EMSBAUDRATE:115200`
 1. Reboot the system for the SAC console to be enabled.
 
-    ![SAC console](./media/virtual-machines-serial-console/virtual-machine-windows-serial-console-connect.gif)
+    ![SAC console](./media/serial-console-windows/virtual-machine-windows-serial-console-connect.gif)
 
 If needed, the SAC can be enabled offline as well:
 
@@ -99,7 +99,7 @@ If you need to enable Windows boot loader prompts to display in the serial conso
 
 1. Connect to the serial console. If you successfully connect, the prompt is **SAC>**:
 
-   ![Connect to SAC](./media/virtual-machines-serial-console/virtual-machine-windows-serial-console-connect-sac.png)
+   ![Connect to SAC](./media/serial-console-windows/virtual-machine-windows-serial-console-connect-sac.png)
 1. Enter `cmd` to create a channel that has a CMD instance.
 
 1. Enter `ch -si 1` or press the `<esc>+<tab>` shortcut keys to switch to the channel that's running the CMD instance.
@@ -110,14 +110,14 @@ If you need to enable Windows boot loader prompts to display in the serial conso
 
 1. To start a PowerShell instance, enter `PowerShell` in the CMD instance, and then press **Enter**.
 
-   ![Open PowerShell instance](./media/virtual-machines-serial-console/virtual-machine-windows-serial-console-powershell.png)
+   ![Open PowerShell instance](./media/serial-console-windows/virtual-machine-windows-serial-console-powershell.png)
 
 ### Use the serial console for NMI calls
 A non-maskable interrupt (NMI) is designed to create a signal that software on a virtual machine won't ignore. Historically, NMIs have been used to monitor for hardware issues on systems that required specific response times. Today, programmers and system administrators often use NMI as a mechanism to debug or troubleshoot systems that are not responding.
 
 The serial console can be used to send an NMI to an Azure virtual machine by using the keyboard icon in the command bar. After the NMI is delivered, the virtual machine configuration will control how the system responds. Windows can be configured to crash and create a memory dump file when receiving an NMI.
 
-![Send NMI](./media/virtual-machines-serial-console/virtual-machine-windows-serial-console-nmi.png) <br>
+![Send NMI](./media/serial-console-windows/virtual-machine-windows-serial-console-nmi.png) <br>
 
 For information on configuring Windows to create a crash dump file when it receives an NMI, see [How to generate a crash dump file by using an NMI](https://support.microsoft.com/help/927069/how-to-generate-a-complete-crash-dump-file-or-a-kernel-crash-dump-file).
 
@@ -132,7 +132,7 @@ You can initiate a restart within the serial console by navigating to the power 
 
 This is useful in situations where you may want to access the boot menu without leaving the serial console experience.
 
-![Windows Serial Console Restart](./media/virtual-machines-serial-console/virtual-machine-serial-console-restart-button-windows.gif)
+![Windows Serial Console Restart](./media/serial-console-windows/virtual-machine-serial-console-restart-button-windows.gif)
 
 ## Disable the Serial Console
 By default, all subscriptions have serial console access enabled. You can disable the serial console at either the subscription level or VM/virtual machine scale set level. For detailed instructions, visit [Enable and disable the Azure Serial Console](./serial-console-enable-disable.md).

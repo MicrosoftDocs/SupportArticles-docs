@@ -29,7 +29,7 @@ Single-user mode is also useful in situations where your VM might be configured 
 
 To enter single-user mode, enter GRUB when your VM is booting, and modify the boot configuration in GRUB. See detailed instructions for entering GRUB in the next section. In general, if your VM has been configured to display GRUB, you can use the restart button within your VM's serial console to restart the VM and display GRUB.
 
-![The Linux Serial Console Restart button](./media/virtual-machines-serial-console/virtual-machine-serial-console-restart-button-bar.png)
+![The Linux Serial Console Restart button](./media/serial-console-grub-single-user-mode/virtual-machine-serial-console-restart-button-bar.png)
 
 ## General GRUB access
 To access GRUB, reboot your VM while the Serial Console pane is open. Some distributions require keyboard input to show GRUB, and others automatically show GRUB for a few seconds to allow user keyboard input to cancel the timeout.
@@ -41,7 +41,7 @@ You can restart your VM within Serial Console by hovering over the **Restart** b
 
 You can also restart your VM by running a SysRq "b" command if [SysRq](./serial-console-nmi-sysrq.md) is enabled. To learn what to expect from GRUB when you reboot, see the distribution-specific instructions in the next sections.
 
-![Linux Serial Console restart](./media/virtual-machines-serial-console/virtual-machine-serial-console-restart-button-ubuntu.gif)
+![Linux Serial Console restart](./media/serial-console-grub-single-user-mode/virtual-machine-serial-console-restart-button-ubuntu.gif)
 
 ## General single-user mode access
 You might need manual access to single-user mode when you haven't configured an account with password authentication. Modify the GRUB configuration to manually enter single-user mode. After you've done this, see the "Use single-user mode to reset or add a password" section for further instructions.
@@ -113,7 +113,7 @@ If you've set up GRUB and root access by using the preceding instructions, you c
 
    You'll be prompted for the administrator password before you can enter single-user mode. This password is the one you created in the previous instructions.
 
-    ![Animated image showing a command-line interface. The user selects a server, locates the end of the kernel line, and then enters the specified text.](./media/virtual-machines-serial-console/virtual-machine-linux-serial-console-rhel-enter-emergency-shell.gif)
+    ![Animated image showing a command-line interface. The user selects a server, locates the end of the kernel line, and then enters the specified text.](./media/serial-console-grub-single-user-mode/virtual-machine-linux-serial-console-rhel-enter-emergency-shell.gif)
 
 ### Enter single-user mode without root account enabled in RHEL
 If you didn't enable the root user by following the earlier instructions, you can still reset your root password by doing the following:
@@ -137,7 +137,7 @@ If you didn't enable the root user by following the earlier instructions, you ca
 1. You're now at root. You can reset your root password by entering `passwd` and then use the preceding instructions to enter single-user mode.
 1. After you're done, enter `reboot -f` to reboot.
 
-![Animated image showing a command-line interface. The user selects a server, locates the end of the kernel line, and enters the specified commands.](./media/virtual-machines-serial-console/virtual-machine-linux-serial-console-rhel-emergency-mount-no-root.gif)
+![Animated image showing a command-line interface. The user selects a server, locates the end of the kernel line, and enters the specified commands.](./media/serial-console-grub-single-user-mode/virtual-machine-linux-serial-console-rhel-emergency-mount-no-root.gif)
 
 > [!NOTE]
 > Running through the preceding instructions drops you into the emergency shell so that you can also perform tasks such as editing `fstab`. However, we ordinarily suggest that you reset your root password and use it to enter single-user mode.
@@ -215,7 +215,7 @@ GRUB access in SLES requires a bootloader configuration via YaST. To create the 
 
     The default timeout for GRUB is **1s**. You can modify this setting by changing the `GRUB_TIMEOUT` variable in the */etc/default/grub* file.
 
-![Initializing the bootloader configuration](./media/virtual-machines-serial-console/virtual-machine-linux-serial-console-sles-yast-grub-config.gif)
+![Initializing the bootloader configuration](./media/serial-console-grub-single-user-mode/virtual-machine-linux-serial-console-sles-yast-grub-config.gif)
 
 ### Single-user mode in SUSE SLES
 If SLES can't boot normally, you're automatically dropped into the emergency shell. To enter the emergency shell manually, do the following:
