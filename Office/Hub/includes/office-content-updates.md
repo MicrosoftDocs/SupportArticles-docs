@@ -2,6 +2,16 @@
 
 
 
+## Week of January 25, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/26/2021 | [Unable to copy and paste from Excel into Access](/office/troubleshoot/access/clipboard-data-damaged) | modified |
+| 1/27/2021 | [Differences between the 1900 and the 1904 date system](/office/troubleshoot/excel/1900-and-1904-date-system) | modified |
+| 1/30/2021 | [COM add-ins are not displayed in the COM Add-Ins dialog box](/office/troubleshoot/excel/com-add-ins-not-displayed) | modified |
+
+
 ## Week of January 18, 2021
 
 
