@@ -1,5 +1,5 @@
 ---
-title: Error 'DNS_PROBE_FINISHED_NXDOMAIN' when accessing OneDrive or Sharepoint
+title: Error when accessing OneDrive or Sharepoint
 description: Describes how to resolve an issue when unable to OneDrive or Sharepoint
 author: v-miegge
 ms.author: prbalusu
