@@ -3,7 +3,7 @@
   items:
   - name: Administration
     items:
-    - name: Error 'DNS_PROBE_FINISHED_NXDOMAIN' when accessing OneDrive or Sharepoint
+    - name: Error when accessing OneDrive or Sharepoint
       href: ../administration/error-accessing-onedrive-sharepoint.md
   - name: List and Libraries
     items:

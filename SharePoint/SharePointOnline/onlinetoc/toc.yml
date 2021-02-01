@@ -15,7 +15,7 @@
       href: ../administration/automatic-exif-property-import-unsupported.md
     - name: Deleting a content type from the SharePoint Content Type Hub
       href: ../administration/deleting-content-type-from-hub.md
-    - name: Error 'DNS_PROBE_FINISHED_NXDOMAIN' when accessing SharePoint or OneDrive
+    - name: Error when accessing SharePoint or OneDrive
       href: ../administration/error-accessing-sharepoint-onedrive.md
     - name: Invalid URL error when clicking an online prompted link
       href: ../administration/promoted-link-invalid-url.md
