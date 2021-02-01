@@ -44,4 +44,4 @@ The instructions of installing this download are included on the web page at the
 
 The download "Office2010Win32API_PtrSafe.exe" installs "Win32API_PtrSafe.txt", "Using Win32API_PtrSave.xps" and "UsingWin32API_PtrSafe.docx."  The latter two files contain important information about using the contents of Win32API_PtrSafe.txt when writing VBA code.
 
-For additional information about how to download Microsoft Support files, see [Receive Remote Assistance Support from Microsoft](https://support.microsoft.com/help/).
+For additional information about how to download Microsoft Support files, see [Receive Remote Assistance Support from Microsoft](https://support.microsoft.com/en-us/help).

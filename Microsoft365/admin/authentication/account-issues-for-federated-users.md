@@ -108,10 +108,6 @@ To resolve this issue, use one or more of the following methods:
 
      **Note** Directory synchronization may sync successfully without updating the user's UPN to the appropriate value if the user account is already licensed.
 
-     For more info about how to update the UPN in this case, see the following Microsoft Knowledge Base article: 
-
-     [2523192](https://support.microsoft.com/help/2523192) User names in Office 365, Azure, or Intune don't match the on-premises UPN or alternate login ID    
-
 
 ## More Information
 

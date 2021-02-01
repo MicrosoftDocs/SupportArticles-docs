@@ -140,4 +140,4 @@ To run the sample, follow these steps:
 4. When the form appears, click **Open**.   
 5. Select an appropriate Office file and click **OK**. 
 
-   Notice that the document properties of the Office file appear in the dialog box. You can edit the document properties.   
+   Notice that the document properties of the Office file appear in the dialog box. You can edit the document properties.
