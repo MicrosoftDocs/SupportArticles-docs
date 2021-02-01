@@ -21,5 +21,5 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot gray agent states
-            url: troubleshoot-gray-agent-statesd.md
+            url: troubleshoot-gray-agent-states.md
             
