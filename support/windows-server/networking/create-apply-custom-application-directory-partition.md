@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: rolandw, v-jomcc, kaushika
 ms.prod-support-area-path: DNS
-ms.technology: Networking
+ms.technology: networking
 ---
 # How to create and apply a custom application directory partition on an Active Directory integrated DNS zone
 

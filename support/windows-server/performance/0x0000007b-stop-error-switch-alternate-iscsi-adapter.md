@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: No Boot (not BugChecks)
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # 0x0000007B Stop error after replacing or switching to an alternate iSCSI boot adapter on a Windows Server 2008 R2-based or Windows 7-based computer
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, fszita, v-jomcc
 ms.prod-support-area-path: Schema update failure or conflict
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Error when you run the Active Directory Installation Wizard: The version of the Active Directory schema of the source forest is not compatible with the version of Active Directory on this computer
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: eldenc, kaushika
 ms.prod-support-area-path: Initial Cluster Creation or Adding node
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Creating a Failover Cluster Fails with Error 0xc000005e
 

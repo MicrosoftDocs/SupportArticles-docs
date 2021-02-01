@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, warrenw, arrenc
 ms.prod-support-area-path: Active Directory domain or forest functional level updates
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Domain controller promotion process shows the Windows Server Technical Preview option in the Domain and Forest functional level list
 

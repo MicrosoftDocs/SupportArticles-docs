@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # An update is available that integrates Windows Server Update Services (WSUS) 3.0 into Server Manager
 
@@ -180,5 +180,3 @@ For more information, click the following article number to view the article in 
 [948014](https://support.microsoft.com/help/948014) Description of the Windows Server Update Services 3.0 Service Pack 1 package  
 
 For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[824684](https://support.microsoft.com/help/824684) Description of the standard terminology that is used to describe Microsoft software updates

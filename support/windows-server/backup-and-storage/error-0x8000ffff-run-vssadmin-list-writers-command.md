@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
-ms.technology: BackupStorage 
+ms.technology: windows-server-backup-and-storage 
 ---
 # Error 0x8000FFFF when you run the vssadmin list writers command on a Windows Server 2003-based computer
 

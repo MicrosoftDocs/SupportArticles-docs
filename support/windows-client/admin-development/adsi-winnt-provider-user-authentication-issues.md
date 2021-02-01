@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory Services Interface (ADSI)
-ms.technology: WindowsAdministrationManagementDevelopment
+ms.technology: windows-client-administration-management-development
 ---
 # User authentication issues with the Active Directory Service Interfaces WinNT provider
 

@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-configuration-manager.md
+  href: welcome-configuration-manager.yml
 - name: Alerts, reporting, and queries
   items:
     - name: A log with a long line is truncated in CMTrace
@@ -272,6 +272,8 @@
           href: os-deployment-task-sequence-not-continue.md
         - name: The debug deployment isn't displayed
           href: debug-deployment-not-displayed.md
+        - name: Troubleshoot the Install Application task sequence step
+          href: troubleshoot-install-application-step.md  
     - name: Versions required for Windows deployment
       href: required-versions-windows-deployment.md
 - name: Setup, migration, backup, and recovery

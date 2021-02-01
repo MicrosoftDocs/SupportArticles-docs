@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rolandw, herbertm
 ms.prod-support-area-path: Domain controller scalability or performance (including LDAP)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Windows Server 2008 or Windows Server 2008 R2 Domain Controller delayed response to LDAP or Kerberos requests
 

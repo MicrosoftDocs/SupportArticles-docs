@@ -40,7 +40,3 @@ Assume that we are using the folder `C:\ClusterStorage\Volume1\Data1\` as an exa
 3. Select the **Security** tab, and then select the **Advanced** button at the bottom.
 4. Select the **Disable Inheritance** button, and then choose the **Convert inherited permissions into explicit permissions on this object** option.
 5. Retry the install again.
-
-## References
-
-Learn about the [Description of the standard terminology that is used to describe Microsoft software updates](https://support.microsoft.com/help/824684) that Microsoft uses to describe software updates.

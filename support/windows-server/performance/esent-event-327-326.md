@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Applications
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # ESENT Event ID 327 and 326 fill up the Application log
 

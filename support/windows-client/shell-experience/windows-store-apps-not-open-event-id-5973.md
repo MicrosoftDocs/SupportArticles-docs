@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, xiangwu
 ms.prod-support-area-path: Modern, Inbox and Microsoft Store Apps
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # Windows Store apps may not open and Event ID 5973 is logged in the Application log
 

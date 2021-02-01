@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, markm
 ms.prod-support-area-path: Partition and volume management
-ms.technology: BackupStorage 
+ms.technology: windows-client-backup-and-storage 
 ---
 # Overview of FAT, HPFS, and NTFS File Systems
 

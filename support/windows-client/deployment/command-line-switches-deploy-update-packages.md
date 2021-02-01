@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: eriprice, kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Command-line switches for Microsoft software update packages
 
@@ -36,8 +36,6 @@ For additional information about command-line switches used by Windows Installer
 [Command-Line Options](https://msdn2.microsoft.com/library/aa367988.aspx)  
 
  For additional information about the standard terminology that Microsoft is adopting to describe software updates, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[824684](https://support.microsoft.com/help/824684) Description of the standard terminology that is used to describe Microsoft software updates  
 
 ## More information
 

@@ -34,6 +34,9 @@ The damaged system file causes absent, incorrectly linked documents, and archive
 
 ## Resolution
 
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+
 To fix the issue, follow these steps.
 
 ### Step 1 Uninstall the recently installed software or service

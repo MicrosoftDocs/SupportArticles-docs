@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Data corruption and disk errors
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Change in the behavior of the format command in Windows Vista and later versions
 

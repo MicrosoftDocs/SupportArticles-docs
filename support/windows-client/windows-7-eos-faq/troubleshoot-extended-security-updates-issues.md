@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: v-elj, chawong, squin, scottmca, winciccore, kaushika
 ms.prod-support-area-path: Troubleshoot issues in ESU
-ms.technology: Windows 7 EoS FAQ
+ms.technology: windows-client-eos
 ---
 # Troubleshoot issues in ESU
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, LARRYGA
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to troubleshoot Event ID 1311 messages on a Windows domain
 
@@ -116,6 +116,7 @@ By default, site link bridging is turned on. Additionally, the best practice gui
 
 The following diagram uses plus signs (+) and minus signs (-) to illustrate physical network connections between Active Directory sites. Site AZ is listed in site link WEST and site GA is listed in site link EAST, but sites AZ and GA don't have fully routed network connections to sites WA and NY in an Active Directory configuration where site link bridging is enabled.
 
+```output
                   WA <-- Site Link WANY --> NY  
                   +-                        +-
                  +  -                      +  -  
@@ -124,11 +125,13 @@ The following diagram uses plus signs (+) and minus signs (-) to illustrate phys
              CA + + + AZ               IL + + + GA
 
             Site Link WEST           Site Link EAST
+```
 
 ### Verify that all sites are defined in site links
 
 Every site defined in Active Directory must be hosted or reside in a site link. For example if sites WA, CA, AZ, NY, IL, and GA are defined, and site links WEST, EAST and WANY are defined, event ID 1311 messages are logged if any one site (for example, AZ or GA) isn't listed in a site link where the sites are physically connected. Sites are orphaned when sites in a deleted site link aren't added to an appropriate existing site link.
 
+```output
                   WA -- Site Link WANY -- NY  
                  /                        /
                 /                        /
@@ -136,6 +139,7 @@ Every site defined in Active Directory must be hosted or reside in a site link. 
               CA    (AZ)               IL    (GA)
 
             Site Link WEST           Site Link EAST
+```
 
 Because sites AZ and GA are not listed in any site links, they are orphaned and the KCC does not consider them when it constructs the replication topology for Active Directory.
 
@@ -281,6 +285,7 @@ To resolve this issue, resize hardware, reconfigure site links and reconfigure s
 
 *Disjoint site links* is an Active Directory configuration in which the topology is broken into two parts or in which some sites don't replicate because site definitions and site link definitions are incorrect. For example, the following diagram shows a configuration in which Sitelink_ABC contains sites A, B, and C and Sitelink_DEF contains sites D, E, and F, but no site link connects any of the sites in Sitelink_ABC to any of the sites in Sitelink_DEF. To resolve the disjoint site links condition, a new site link must connect at least one site in Sitelink_ABC with at least one site in Sitelink_DEF (for example, a new site link between site A and site D).
 
+```output
                   A                        D  
                  / \                      / \
                 /   \                    /   \
@@ -288,9 +293,11 @@ To resolve this issue, resize hardware, reconfigure site links and reconfigure s
               B       C                E       F
 
             Sitelink_ABC              Sitelink_DEF
+```
 
 The following diagram shows another possible a disjoint site links configuration. In this case, a new site link must join any site in Sitelink_ABDC with at least one site in Sitelink_FG (for example, a new site link between site A and site F) to resolve the disjoint site links condition.
 
+```output
                   A                  F  
                  / \                  \
                 /   \                  \
@@ -302,6 +309,7 @@ The following diagram shows another possible a disjoint site links configuration
                   D                          G
 
             Sitelink_ABDC            Sitelink_FG
+```
 
 Disjoint site links are the most difficult improper configuration to troubleshoot. Look for disjoint site links only after you rule out all other known causes. Use a pencil and paper to graph site topology and locate orphaned sites.
 

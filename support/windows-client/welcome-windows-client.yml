@@ -17,7 +17,7 @@ landingContent:
 
  # Card
   - title: Deployment
-    linkLists:      
+    linkLists:
       - linkListType: how-to-guide
         links:
           - text: Deployment 
@@ -25,7 +25,7 @@ landingContent:
           - text: Windows 7 End of Support (EoS) FAQ
             url: ./windows-7-eos-faq/windows-7-end-support-faq.md
   - title: Identity and Access
-    linkLists:      
+    linkLists:
       - linkListType: how-to-guide
         links:
           - text: Active Directory
@@ -35,13 +35,13 @@ landingContent:
           - text: UserProfiles and Logon
             url: ./user-profiles-and-logon/userprofiles-and-logon-overview.md
   - title: Networking
-    linkLists:      
+    linkLists:
       - linkListType: how-to-guide
         links:
           - text: Networking
             url: ./networking/networking-overview.md
   - title: Storage and High Availability
-    linkLists:      
+    linkLists:
       - linkListType: how-to-guide
         links:
           - text: Backup and Storage
@@ -51,13 +51,15 @@ landingContent:
           - text: Virtualization
             url: ./virtualization/virtualization-overview.md
   - title: User Experience
-    linkLists:      
+    linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Application Virtualization (App-V)
+            url: ./app-v/app-v-overview.md
           - text: Application Management
             url: ./application-management/application-management-overview.md
           - text: Printing
-            url: ./printing/printing--overview.md
+            url: ./printing/printing-overview.md
           - text: Remote Desktop Services
             url: ./remote/remote-desktop-services-overview.md
           - text: System Management Components
@@ -65,7 +67,7 @@ landingContent:
           - text: UE-V
             url: ./ue-v/ue-v-overview.md
   - title: Windows Performance
-    linkLists:      
+    linkLists:
       - linkListType: how-to-guide
         links:
           - text: Performance
@@ -73,13 +75,13 @@ landingContent:
           - text: Shell Experience
             url: ./shell-experience/shell-experience-overview.md
   - title: Windows Security
-    linkLists:      
+    linkLists:
       - linkListType: how-to-guide
         links:
           - text: Windows Security
             url: ./windows-security/windows-security-overview.md
   - title: Management
-    linkLists:      
+    linkLists:
       - linkListType: how-to-guide
         links:
           - text: Admin Development
@@ -87,7 +89,7 @@ landingContent:
           - text: Windows Troubleshooters
             url: ./windows-troubleshooters/windows-troubleshooters-overview.md
   - title: Windows Troubleshooters
-    linkLists:      
+    linkLists:
       - linkListType: how-to-guide
         links:
           - text: Active and retired troubleshooters for Windows 10

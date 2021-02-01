@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: waltere, v-dehaas, kaushika
 ms.prod-support-area-path: WINS
-ms.technology: Networking
+ms.technology: networking
 ---
 # Troubleshooting WINS error event ID 4102, 4243, 4242, and 4286 messages
 

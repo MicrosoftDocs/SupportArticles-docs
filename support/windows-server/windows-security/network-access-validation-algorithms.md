@@ -1,5 +1,5 @@
 ---
-title: Network access validation algorithms
+title: Network access validation algorithms and examples for Windows
 description: Describes network access validation algorithms and examples.
 ms.date: 09/10/2020
 author: Deland-Han 
@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: tinab, kaushika
 ms.prod-support-area-path: Legacy authentication (NTLM)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Network access validation algorithms and examples for Windows Server 2003, Windows XP, and Windows 2000
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 103390
 
 ## Summary
 
-It's using access through the server message block (SMB) protocol as the example, but it applies to all other server applications that support NTLM authentication. This discussion doesn't cover the internal workings of this process. With this information, you can predict Windows network logon behavior under deterministic conditions.
+The following is a simplified algorithm that explains how Windows account validation is observed to function during network access using the NTLM protocol. It's using access through the server message block (SMB) protocol as the example, but it applies to all other server applications that support NTLM authentication. This discussion doesn't cover the internal workings of this process. With this information, you can predict Windows network logon behavior under deterministic conditions.
 
 When Kerberos is used to authenticate the user and obtain access to server resources, the process is different from what NTLM does.
 
@@ -30,7 +30,7 @@ Remember that the local database is the domain database and the only database on
 
 ## Background information
 
-When two Windows Server 2003-based, Windows XP-based, or Windows 2000-based computers communicate over a network, they use a high-level protocol called server message block (SMB). SMB commands are embedded in the transport protocols, such as NetBIOS Enhanced User Interface (NetBEUI) or TCP/IP. For example, when a client computer performs a NET USE command, an "SMB Session Setup and X" frame is sent out.
+When two Windows Server 2003-based, Windows XP-based, or Windows 2000-based computers communicate over a network, they use a high-level protocol called server message block (SMB). SMB commands are embedded in the transport protocols, such as NetBIOS Enhanced User Interface (NetBEUI) or TCP/IP. For example, when a client computer performs a `NET USE` command, an "SMB Session Setup and X" frame is sent out.
 
 In Windows, the "Session Setup" SMB includes the user account, a hash function of the encrypted password and logon domain. A domain controller will examine all this information to determine whether the client has permissions to complete the NET USE command.
 
@@ -127,6 +127,7 @@ The trusted domain controller checks its own domain database
 When the server obtains the information and finds the user in the local database, the server uses the name of the LOCAL database to compute the salt and the hash. Therefore, if the "source domain" as sent by the client is empty or is an unknown domain, the salt and therefore the password hash will not match. In these cases, the authentication attempt will fail with an "unknown user name or bad password" (STATUS_LOGON_FAILURE) error. The audit event for the attempt will report "incorrect password," symbol STATUS_WRONG_PASSWORD.
 
 A sample event:
+
 > Log Name: Security  
 Source: Microsoft-Windows-Security-Auditing  
 Event ID: 4625  
@@ -136,29 +137,29 @@ Keywords: Audit Failure
 Computer: server-computer1  
 Description:  
 An account failed to log on.  
-
+>
 > Subject:
-
+>
 > Security ID: NULL SID  
 Account Name: -  
 Account Domain: -  
 Logon ID: 0x0  
-
+>
 > Logon type: 3
-
+>
 > Account for which logon failed:
-
+>
 > Security ID: NULL SID  
 Account Name: ntadmin  
 Account Domain: client-computer1  
-
+>
 > Failure information:
-
+>
 > Failure Reason: Unknown user name or bad password.  
 Status: 0xc000006d  
 Sub Status: 0xc000006a  
 ...
-
+>
 > Detailed authentication information:
 
 > Logon Process: NtLmSsp  
@@ -262,13 +263,11 @@ If the domain that is specified in the SMB is NULL, that is, no domain is specif
 
 3. If no account is found on the trusted domain, the operating system must use the local guest account to guarantee consistent behavior for authentication against the server.
 
-4. For more information about how to restrict the lookup and logon of isolated names in trusted domains by using the LsaLookupRestrictIsolatedNameLevel and NeverPing registry entries, see the following articles:
-    1. [How to restrict the lookup of isolated names to external trusted domains in Windows Server](https://support.microsoft.com/help/818024)
-    1. [The Lsass.exe process may stop responding if you have many external trusts on an Active Directory domain controller](https://support.microsoft.com/en-US/help/923241)
+4. For more information about how to restrict the lookup and logon of isolated names in trusted domains by using the LsaLookupRestrictIsolatedNameLevel and NeverPing registry entries, see [The Lsass.exe process may stop responding if you have many external trusts on an Active Directory domain controller](https://support.microsoft.com/help/923241).
 
     - Guest accounts on trusted domains will never be available.
     - The actual, internal process is more complex than the algorithms that are described here.
-    - These algorithms do not discuss the actual mechanics of pass-through authentication. For more information, see [NTLM user authentication in Windows](https://support.microsoft.com/help/102716)
+    - These algorithms do not discuss the actual mechanics of pass-through authentication. For more information, see [NTLM user authentication in Windows](/troubleshoot/windows-server/windows-security/ntlm-user-authentication)
 
     - These algorithms do not discuss the password encryption process that is used in Windows Server 2003, Windows XP, and Windows 2000. A binary large object (BLOB) derived from a one-way password hash is sent as part of the authentication request. The content of this BLOB will depend on the authentication protocol chosen for the logon.
     - This article does not discuss the internal workings of the Microsoft Authentication Module.
@@ -280,10 +279,11 @@ The following are examples of these algorithms in action.
 
 ### Example 1
 
-You are logged on to the computer by using the same account name and password that is in the SCRATCH-DOMAIN domain account database. When you run the NET USE \\\\SCRATCH command for the domain controller for the SCRATCH-DOMAIN domain, the command is completed successfully. When you run the NET USE \\\\NET command for the domain controller that trusts the SCRATCH-DOMAIN domain, you receive the following error message:  
+You are logged on to the computer by using the same account name and password that is in the SCRATCH-DOMAIN domain account database. When you run the `NET USE \\SCRATCH` command for the domain controller for the SCRATCH-DOMAIN domain, the command is completed successfully. When you run the `NET USE \\NET` command for the domain controller that trusts the SCRATCH-DOMAIN domain, you receive the following error message:
+
 > System error 1326 has occurred. Logon failure: unknown user name or bad password.
 
-The \SCRATCH-DOMAIN\USER1 account has permissions on \\\\NET.
+The \\SCRATCH-DOMAIN\\USER1 account has permissions on \\\\NET.
 
 > [!NOTE]
 > This example assumes the following configurations.
@@ -292,21 +292,17 @@ Configurations
 
 Computer that has a local security authority:
 
-```console
--Login account: USER1
--Password: PSW1
+-Login account: USER1  
+-Password: PSW1  
 -Login Domain: LOCAL1
-```
 
 Active Directory domain controller:
 
-```console
-  -Server Name: NET</WWITEM>
-  -Domain:      NET-DOMAIN</WWITEM>
-  -Trust:       NET-DOMAIN Trust SCRATCH-DOMAIN (Therefore,
-                accounts on SCRATCH-DOMAIN can be granted permissions
+  -Server Name: NET\</WWITEM>  
+  -Domain:      NET-DOMAIN\</WWITEM>  
+  -Trust:       NET-DOMAIN Trust SCRATCH-DOMAIN (Therefore,  
+                accounts on SCRATCH-DOMAIN can be granted permissions  
                 in the NET- DOMAIN).
-```
 
 The NET-DOMAIN domain:
 
@@ -315,52 +311,46 @@ The NET-DOMAIN domain:
 
 Windows Server 2003:
 
-```console
--Server Name: SCRATCH
--Domain: SCRATCH-DOMAIN
--Domain Database contains account: USER1
+-Server Name: SCRATCH  
+-Domain: SCRATCH-DOMAIN  
+-Domain Database contains account: USER1  
 -Domain Database contains password: PSW1
-```
 
 In this example, the computer is logged on to its local domain, not the SCRATCH-DOMAIN domain where the computer's domain account resides.
 
 ### Example 2
 
-When you run the NET USE x: \\\\NET\share command, the following steps occur:
+When you run the `NET USE x: \\NET\share` command, the following steps occur:
 
 1. The computer sends out the following in the "Session Setup" SMB:
 
-    ```console
-    account = "USER1"
-    password = "PSW1"
-    domain = "LOCAL1"
-    ```
+    - account = "USER1"
+    - password = "PSW1"
+    - domain = "LOCAL1"
 
-1. The \\\\NET server receives the SMB and looked at the account name.
-1. The server examines its local domain account database and does not find a match.
-1. The server then examines the SMB domain name.
-1. The server does not trust "LOCAL1," so the server does not check its trusted domains.
-1. The server then checks its guest account.
-1. The guest account is disabled so the "System error 1326 has occurred. Logon failure: unknown user name or bad password." error message is generated.
+2. The \\\\NET server receives the SMB and looked at the account name.
+3. The server examines its local domain account database and does not find a match.
+4. The server then examines the SMB domain name.
+5. The server does not trust "LOCAL1," so the server does not check its trusted domains.
+6. The server then checks its guest account.
+7. The guest account is disabled so the "System error 1326 has occurred. Logon failure: unknown user name or bad password." error message is generated.
 
 ### Example 3
 
-When you run the NET USE x: \\\\SCRATCH\share command, the following steps occur:
+When you run the `NET USE x: \\SCRATCH\share` command, the following steps occur:
 
 1. The computer sends out the following in the "Session Setup" SMB:
 
-    ```console
-    account = "USER1"
-    password = "PSW1"
-    domain = "LOCAL1"
-    ```
+    - account = "USER1"
+    - password = "PSW1"
+    - domain = "LOCAL1"
 
 2. The \\\\SCRATCH server receives the SMB and examines the account name.
 3. The server examines its local domain account database and finds a match.
 4. The server then compares the SMB password to the domain account password.
 5. The passwords match.
 
-Therefore, the "Command Completes Successfully" message is generated. In Example 2 and Example 3, the trust relationship is unavailable. If the computer had been logged on to the SCRATCH-DOMAIN domain, the NET USE x: \\\\NET\share command would have been successful.
+Therefore, the "Command Completes Successfully" message is generated. In Example 2 and Example 3, the trust relationship is unavailable. If the computer had been logged on to the SCRATCH-DOMAIN domain, the `NET USE x: \\NET\share` command would have been successful.
 
 The ideal solution is to have all computers log on to a domain. In order to log on, the user must specify the domain, account, and password. After you do this, all NET USE -type commands will pass the correct domain, account, and password information. Administrators should try to avoid duplicate accounts on both computers and multiple domains. Windows Server 2003-based, Windows XP-based, and Windows 2000-based computers help avoid this configuration by using trusts between domains and by using members that can use domain databases.
 
@@ -374,17 +364,15 @@ NET USE X: \\NET\SHARE /USER:SCRATCH-DOMAIN\USER1 PSW1
 
 In this command, the follow is true:
 
-```console
-  - \\NET = The computer name of the domain controller being accessed.
-  - \SHARE = The share name.
-  - /USER: command line parameter that lets you specify the domain,
-    account and password that should be specified in the "Session Setup"
-    SMB.
-  - SCRATCH-DOMAIN = Domain name of the domain where the user
-    account resides.
-  - \USER1 = account to be validated against.
-  - PSW1 = password that matches account on the domain.
-```
+- \\\\NET = The computer name of the domain controller being accessed.
+- \\SHARE = The share name.
+- /USER: command line parameter that lets you specify the domain,
+account and password that should be specified in the "Session Setup"
+SMB.
+- SCRATCH-DOMAIN = Domain name of the domain where the user
+account resides.
+- \\USER1 = account to be validated against.
+- PSW1 = password that matches account on the domain.
 
 For more information about this command, type the following at the command prompt:
 
@@ -396,10 +384,10 @@ NET USE /?
 
 The Microsoft SMB client that is included in Windows Server 2003, Windows XP, and Windows 2000 sends NULL domain names in the "Session Setup SMB [x73]" SMB. The Microsoft SMB client handles the domain name by specifying the logon domain name and by sending a NULL character if the domain name is not specified in the NET USE command. The Microsoft SMB client will also exhibit the behavior described in Example 1.
 
-### Notes
-
-- The default domain name is specified in the LANMAN.INI file on the "DOMAIN =" line. This can be overridden by the /DOMAIN: switch with the NET LOGON command.
-- There are typically two representations for "NULL" in the SMB: A zero-length domain name and a one-byte domain name that consists of the question mark character (?). The SMB server catches the question mark and translates it to NULL before passing it to the local security authority (LSA).
+> [!NOTE]
+>
+> - The default domain name is specified in the LANMAN.INI file on the "DOMAIN =" line. This can be overridden by the `/DOMAIN:` switch with the `NET LOGON` command.
+> - There are typically two representations for "NULL" in the SMB: A zero-length domain name and a one-byte domain name that consists of the question mark character (?). The SMB server catches the question mark and translates it to NULL before passing it to the local security authority (LSA).
 
 ## Troubleshooting
 
@@ -409,21 +397,16 @@ A good tip for troubleshooting network access problems is to enable auditing by 
 
 1. From the Administrative Tools on a domain controller, start Active Directory Users and Computers.
 2. Right-click **Domain Controllers OU**, and then click **Properties**.
-3. On the **Group Policy** tab, double-click
- **Default Domain Controller Policy**.
-4. In the Policy Editor, click **Computer Settings**, click **Windows Settings**, click
- **Security Settings**, click **Local Policies**, and then click **Audit Policy**.
+3. On the **Group Policy** tab, double-click **Default Domain Controller Policy**.
+4. In the Policy Editor, click **Computer Settings**, click **Windows Settings**, click **Security Settings**, click **Local Policies**, and then click **Audit Policy**.
 5. Select the **Logon and Account Logon Success** option and the **Failure** option.
 
 ### Domain settings for Windows 2000 servers and members
 
 1. From the Administrative Tools on a domain controller, start Active Directory Users and Computers.
-2. Right-click the domain name, and then click
- **Properties**.
-3. On the **Group Policy** tab, double-click
- **Default Domain Policy**.
-4. In the Policy Editor, click **Computer Settings**, click **Windows Settings,** click
- **Security Settings**, click **Local Policies**, and then click **Audit Policy**.
+2. Right-click the domain name, and then click **Properties**.
+3. On the **Group Policy** tab, double-click **Default Domain Policy**.
+4. In the Policy Editor, click **Computer Settings**, click **Windows Settings,** click **Security Settings**, click **Local Policies**, and then click **Audit Policy**.
 5. Select the **Logon and Account Logon Success** option and the **Failure** option.
 
 ### Local settings for Windows 2000 servers and members
@@ -432,7 +415,7 @@ A good tip for troubleshooting network access problems is to enable auditing by 
 2. Open Audit Policy.
 3. Select the **Logon and Account Logon Success** option and the **Failure** option. Now, anytime that a network user accesses this server remotely, an audit trail will be logged in Event Viewer. To see these events in Event Viewer, click **Security** in the **Log** menu.
 
-For more information about trust relationships, pass-through authentication, user permissions, and domain logins, see the "Technical Overview of Windows Server 2003 Security Services." To do it, visit the following Microsoft Web site: [https://www.microsoft.com/windowsserver2003/techinfo/overview/security.mspx](https://www.microsoft.com/windowsserver2003/techinfo/overview/security.mspx)
+For more information about trust relationships, pass-through authentication, user permissions, and domain logins, see the "Technical Overview of Windows Server 2003 Security Services."
 
 ## More information
 

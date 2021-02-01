@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, sagiv, wincicadsec
 ms.prod-support-area-path: Active Directory Lightweight Directory Services (AD LDS) and Active Directory Application Mode (ADAM)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # LDS service startup fails after you manually change msDS-Behavior-Version in Windows Server 2019 and 2016
 

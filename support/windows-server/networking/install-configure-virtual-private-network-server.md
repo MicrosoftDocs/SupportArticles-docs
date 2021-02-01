@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: masoudh, kaushika
 ms.prod-support-area-path: Remote access
-ms.technology: Networking
+ms.technology: networking
 ---
 # How to install and configure a virtual private network server in Windows Server 2003  
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: IP Address Management (IPAM)
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Intranet site is identified as an Internet site when you use an FQDN or an IP address
 

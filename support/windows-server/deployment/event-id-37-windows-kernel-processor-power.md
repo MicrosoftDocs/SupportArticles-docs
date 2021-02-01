@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Deployment 
+ms.technology: windows-server-deployment 
 ---
 # Kernel processor power Event ID 37 after changing power policy in Windows Server 2016
 

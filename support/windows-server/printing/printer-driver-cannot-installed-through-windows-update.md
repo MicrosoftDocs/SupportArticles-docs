@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.prod-support-area-path: Management and Configuration Installing Print drivers
-ms.technology: PrintFaxScan
+ms.technology: windows-server-printing
 ---
 # A printer driver cannot be installed through Windows Update in Windows Server 2016 and Windows Server 2019
 

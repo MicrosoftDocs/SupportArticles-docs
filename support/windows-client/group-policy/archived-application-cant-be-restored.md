@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, erwong
 ms.prod-support-area-path: AppLocker or software restriction policies
-ms.technology: GroupPolicy
+ms.technology: windows-client-group-policy
 ---
 # Archived application can't be restored because of app update policies
 

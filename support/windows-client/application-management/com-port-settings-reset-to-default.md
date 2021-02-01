@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: COM and COM+ performance and stability
-ms.technology: ApplicationCompatibility
+ms.technology: windows-client-application-compatibility
 ---
 # Com port settings reset to default after making changes in Device Manager
 

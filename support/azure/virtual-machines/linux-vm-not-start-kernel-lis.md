@@ -29,6 +29,9 @@ This issue occurs because of changes that were made to the Kernel Application Bi
 
 ## Workaround
 
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+
 We recommend that you do not upgrade the LIS driver 4.1.3 on a VM that is using kernel 3.10.0-514.16.1. Instead, we recommend that you install LIS 4.2.0 or a later version if you use kernel 3.10.0-514.16.1.
 
 If LIS version 4.2.0 or later is not available in your Linux distribution package management system, you can manually download [LIS 4.2.0](https://www.microsoft.com/download/details.aspx?id=55106).

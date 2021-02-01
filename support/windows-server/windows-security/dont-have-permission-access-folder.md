@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davemid, kbsec
 ms.prod-support-area-path: Permissions, access control, and auditing
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # When you select Continue for folder access in Windows Explorer, your user account is added to the ACL for the folder
 

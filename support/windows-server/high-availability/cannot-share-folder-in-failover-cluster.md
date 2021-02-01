@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ctimon
 ms.prod-support-area-path: Cannot bring a resource online
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # You may receive error messages when you share a folder in a Windows Server 2008 failover cluster
 

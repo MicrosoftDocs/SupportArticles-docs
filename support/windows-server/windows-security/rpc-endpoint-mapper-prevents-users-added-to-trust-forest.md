@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Domain and forest trusts
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # RPC Endpoint Mapper client authentication prevents users and groups from being added to trusting forest
 

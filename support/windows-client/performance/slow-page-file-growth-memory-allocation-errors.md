@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, davean, eddo, delhan
 ms.prod-support-area-path: Applications
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 # Memory allocation errors can be caused by slow page file growth
 

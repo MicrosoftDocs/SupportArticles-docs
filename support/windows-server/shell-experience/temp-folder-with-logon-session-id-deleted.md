@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: File Explorer/Windows Explorer
-ms.technology: ShellExperience
+ms.technology: windows-server-shell-experience
 ---
 # %TEMP% folder that includes the logon session ID is deleted unexpectedly in Windows Server 2019
 

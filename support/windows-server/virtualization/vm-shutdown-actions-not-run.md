@@ -11,13 +11,13 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, raackley
 ms.prod-support-area-path: Virtual machine state
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # VM shutdown actions don't run when a host shuts down because of a low battery
 
 This article helps solve a problem that prevents virtual machine shutdown actions from running.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
+_Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;3058418
 
 ## Symptoms

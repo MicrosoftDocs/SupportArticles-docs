@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, markstan
 ms.prod-support-area-path: Installation and configuration
-ms.technology: Application Virtulization (App-V)
+ms.technology: windows-client-application-virtualization-app-v
 ---
 # Current list of App-V 5.x file versions
 

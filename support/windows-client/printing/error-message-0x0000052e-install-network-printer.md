@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Management and Configuration Installing Print drivers
-ms.technology: PrintFaxScan
+ms.technology: windows-client-printing
 ---
 # Error message when you try to install a network printer in Windows 7: "0x0000052e"
 

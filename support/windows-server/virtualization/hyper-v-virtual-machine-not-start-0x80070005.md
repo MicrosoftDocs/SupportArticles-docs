@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Virtual machine will not boot
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Hyper-V virtual machine may not start, and you receive an error 0x80070005: General access denied error
 

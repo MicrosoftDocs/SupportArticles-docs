@@ -25,6 +25,9 @@ This issue occurs if t he Boot Configuration Data (BCD) is corrupted.
 
 ## Resolution
 
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+
 To fix the issue, follow these steps.
 
 ### Step 1: Attach the OS disk of the VM to another VM as a data disk
