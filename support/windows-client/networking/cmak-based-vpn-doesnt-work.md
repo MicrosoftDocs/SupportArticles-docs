@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-jeffbo
 ms.prod-support-area-path: Remote access
 ms.technology: windows-client-networking
 ---

@@ -179,6 +179,3 @@ If you can't print or preview a webpage in Internet Explorer, see the following 
 
 [Unable to print or view the print preview of a webpage in Internet Explorer](https://support.microsoft.com/help/973479).
 
-## References
-
-Also, if you experience this issue in Internet Explorer 9, try the methods in [You receive a script error and are unable to print from Internet Explorer 9](https://support.microsoft.com/help/2652062/you-receive-a-script-error-and-are-unable-to-print-from-internet-explo).

@@ -9,3 +9,5 @@
     href: virtual-machines/welcome-virtual-machines.yml
   - name: Azure DevOps
     href: devops/welcome-azure-devops.yml
+- name: VM is not booting
+  items:

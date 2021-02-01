@@ -24,8 +24,8 @@ _Original KB number:_ &nbsp; 2021383
 
 When attempting to open a Compiled HTML Help (.CHM) file on Windows Vista or Windows 7, the file may open but display one of the following messages instead of the expected content:
 
-- Navigation to the webpage was canceled.
-- Action canceled.
+- > Navigation to the webpage was canceled.
+- > Action canceled.
 
 ## Cause
 
@@ -35,9 +35,9 @@ This will occur if the .CHM file has been flagged as downloaded from an untruste
 
 To resolve this issue, carry out the following steps:
 
-1. Right-click the .CHM file and choose Properties
-2. On the General tab, click the button labeled "Unblock"
-3. Click OK
+1. Right-click the .CHM file and choose **Properties**.
+2. On the **General** tab, click the button labeled **Unblock**.
+3. Click **OK**.
 
 ## More information
 

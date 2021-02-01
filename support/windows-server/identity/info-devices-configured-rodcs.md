@@ -1,5 +1,5 @@
 ---
-title: Info about devices configured as RODCs
+title: Information about devices from Riverbed Technology that are configured as RODCs
 description: Describes the information about devices from Riverbed Technology that are configured as RODCs.
 ms.date: 09/11/2020
 author: Deland-Han 
@@ -45,7 +45,7 @@ When a computer account is set up as domain controller, it receives certain flag
 
 As with any other computing device in a networking environment, Riverbed devices may come under attack by malware. Because of their ability to impersonate Active Directory users, Riverbed devices are attractive targets for such attacks.
 
-Microsoft strongly recommends using the same level of physical and network protection and auditing as you use for your Read-Write Domain Controllers (RWDCs). Administration of these devices should follow current guidance regarding securing privileged access at [aka.ms/privsec](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access). If you currently use Riverbed devices in locations that aren't secure enough for RWDCs, we strongly recommend that you review the placement of these devices.
+Microsoft strongly recommends using the same level of physical and network protection and auditing as you use for your Read-Write Domain Controllers (RWDCs). Administration of these devices should follow current guidance regarding securing privileged access at [Securing privileged access](/security/compass/overview). If you currently use Riverbed devices in locations that aren't secure enough for RWDCs, we strongly recommend that you review the placement of these devices.
 
 ## Operational implications
 
