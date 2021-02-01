@@ -41,7 +41,7 @@ For serial console documentation for Linux, see [Azure Serial Console for Linux]
 
 * The VM for virtual machine scale set instance must have [boot diagnostics](boot-diagnostics.md) enabled.
 
-    ![Boot diagnostics settings](../media/virtual-machines-serial-console/virtual-machine-serial-console-diagnostics-settings.png)
+    ![Boot diagnostics settings](./media/virtual-machines-serial-console/virtual-machine-serial-console-diagnostics-settings.png)
 
 ## Enable Serial Console functionality for Windows Server
 
@@ -117,7 +117,7 @@ A non-maskable interrupt (NMI) is designed to create a signal that software on a
 
 The serial console can be used to send an NMI to an Azure virtual machine by using the keyboard icon in the command bar. After the NMI is delivered, the virtual machine configuration will control how the system responds. Windows can be configured to crash and create a memory dump file when receiving an NMI.
 
-![Send NMI](../media/virtual-machines-serial-console/virtual-machine-windows-serial-console-nmi.png) <br>
+![Send NMI](./media/virtual-machines-serial-console/virtual-machine-windows-serial-console-nmi.png) <br>
 
 For information on configuring Windows to create a crash dump file when it receives an NMI, see [How to generate a crash dump file by using an NMI](https://support.microsoft.com/help/927069/how-to-generate-a-complete-crash-dump-file-or-a-kernel-crash-dump-file).
 
