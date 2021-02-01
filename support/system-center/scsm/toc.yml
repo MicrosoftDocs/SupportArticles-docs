@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-scsm.md
+  href: welcome-scsm.yml
 - name: Administrator console issues
   items:
     - name: Can't view deleted items
