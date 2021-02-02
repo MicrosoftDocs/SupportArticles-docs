@@ -68,19 +68,25 @@ Expression filters that are used in management packs use .NET Framework regex ex
 
 Search for one match containing `string1`:
 
-    ^(string1)$
+```csharp
+^(string1)$
+```
 
 ### Example 2
 
 Search for the two matches containing either `string1` or `string2`:
 
-    ^(string1)|^(string2)$
+```csharp
+^(string1)|^(string2)$
+```
 
 ### Example 3
 
 Search for any paths located in the two locations `/var/lib/string1/*` and `/var/lib/string2/*`:
 
-    ^(\/var\/lib\/string1\/.*)|^(\/var\/lib\/string2\/.*)$
+```csharp
+^(\/var\/lib\/string1\/.*)|^(\/var\/lib\/string2\/.*)$
+```
 
 ## Regular expressions via SDK
 
@@ -109,12 +115,12 @@ You can use comparison operators when you construct a criteria expression. The v
 |<=|Evaluates to **true** if the left operand is less than or equal to the right operand.| `Severity <= 3` |
 |LIKE|Evaluates to **true** if the left operand matches the pattern that is defined by the right operand. Use the characters in the [wildcard](#wildcard-operators-used-with-like-operator) table to define the pattern.| `Name 'LIKE SQL%'`<br/>Evaluates to **true** if the `Name` value is **SQLEngine**. <br/><br/>`Name LIKE '%SQL%'`<br/>Evaluates to **true** if the `Name` value is **MySQLEngine**. |
 |MATCHES|Evaluates to **true** if the left operand matches the regular expression defined by the right operand.| `Name MATCHES 'SQL*05'`<br/> Evaluates to **true** if the `Name` value is **SQL2005**. |
-|IS NULL|Evaluates to **true** if the value of the left operand is null.| `ConnectorId IS NULL`<br/> Evaluates to **true** if the `ConnectorId` property does not contain a value. |
-|IS NOT NULL|Evaluates to **true** if the value of the left operand is not null.| `ConnectorId IS NOT NULL`<br/> Evaluates to **true** if the `ConnectorId` property contains a value. |
+|IS NULL|Evaluates to **true** if the value of the left operand is null.| `ConnectorId IS NULL`<br/> Evaluates to **true** if the `ConnectorId` property doesn't contain a value. |
+|IS NOT NULL|Evaluates to **true** if the value of the left operand isn't null.| `ConnectorId IS NOT NULL`<br/> Evaluates to **true** if the `ConnectorId` property contains a value. |
 |IN|Evaluates to **true** if the value of the left operand is in the list of values defined by the right operand.<br/><br/>**Note** The **IN** operator is valid for use only with properties of type [Guid](/dotnet/api/system.guid).|`Id IN ('080F192C-52D2-423D-8953-B3EC8C3CD001', '080F192C-53B2-403D-8753-B3EC8C3CD002')`<br/>Evaluates to **true** if the value of the `Id` property is one of the two globally unique identifiers provided in the expression. |
 |AND|Evaluates to **true** if the left and right operands are both true.|`Name = 'SQL%' AND Description LIKE 'MyData%'` |
 |OR|Evaluates to **true** if either the left or right operand is true.|`Name = 'SQL%' OR Description LIKE 'MyData%'` |
-|NOT|Evaluates to **true** if the right operand is not true.|`NOT (Name = 'IIS' OR Name = 'SQL')` |
+|NOT|Evaluates to **true** if the right operand isn't true.|`NOT (Name = 'IIS' OR Name = 'SQL')` |
 ||||
 
 ### Wildcards
@@ -128,7 +134,7 @@ The following table defines the wildcard characters that you can use to construc
 |%|A wildcard that matches any number of characters.| `Name LIKE 'SQL%'` <br/>Evaluates to **true** if the `Name` value is **SQLEngine**. <br/><br/>`Name LIKE '%SQL%'`<br/> Evaluates to **true** if the `Name` value is **MySQLEngine**. |
 |\_|A wildcard that matches a single character.| `Name LIKE 'SQL200_'`<br/> Evaluates to **true** for the following `Name` values: <br/><br/>**SQL2000**<br/>**SQL2005**<br/><br/>**Note**: The expression evaluates to **false** for **SQL200** because the symbol \_ must match exactly one character in the `Name` value. |
 |[]|A wildcard that matches any one character that is enclosed in the character set.<br/><br/>**Note** Brackets are also used when qualifying references to [MonitoringObject](/previous-versions/system-center/developer/bb465607(v=msdn.10)?redirectedfrom=MSDN) properties. For more information, see [Defining Queries for Monitoring Objects](/previous-versions/system-center/developer/bb437594(v=msdn.10)?redirectedfrom=MSDN). |`Name LIKE 'SQL200[05]'`<br/>Evaluates to **true** for the following `Name` values:<br/><br/>**SQL2000**<br/>**SQL2005**<br/><br/>The expression evaluates to **false** for **SQL2003**.|
-|[^]|A wildcard that matches any one character that is not enclosed in the character set.|`Name LIKE 'SQL200[^05]'`<br/>Evaluates to **true** for **SQL2003**.<br/><br/>The expression evaluates to **false** for **SQL2000** and **SQL2005**. |
+|[^]|A wildcard that matches any one character that isn't enclosed in the character set.|`Name LIKE 'SQL200[^05]'`<br/>Evaluates to **true** for **SQL2003**.<br/><br/>The expression evaluates to **false** for **SQL2000** and **SQL2005**. |
 ||||
 
 ### DateTime comparisons
@@ -140,11 +146,13 @@ string qStr = "TimeCreated <= '" + myInstant.ToString("G") + "'";
 ManagementPackCriteria mpCriteria = new ManagementPackCriteria(qStr);
 ```
 
-All date values need to be converted to the G format (GMT) so that valid string comparisons can be made.
+Convert all date values to the **G format (GMT)** to make valid string comparisons.
 
 ### Integer value comparison to enumerations
 
-When you use an integer enumeration value in a query expression, cast the enumeration value to an integer. For example:
+When you use an integer enumeration value in a query expression, cast the enumeration value to an integer.
+
+For example:
 
 ```csharp
 string qStr = "Severity > " + (int)ManagementPackAlertSeverity.Warning;
