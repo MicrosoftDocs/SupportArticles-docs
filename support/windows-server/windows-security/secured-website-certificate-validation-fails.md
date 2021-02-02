@@ -34,23 +34,21 @@ After the user clicks **Continue to this website (not recommended)**, the user c
 
 This issue occurs because the website certificate has multiple trusted certification paths on the web server.
 
-For example, assume that the client computer that you are using trusts *Root certification authority (CA) certificate (2)*, and the web server trusts *Root CA certificate (1)* and *Root CA certificate (2)*. Additionally, the certificate has the following two certification paths to the trusted root CAs on the web server:
+For example, assume that the client computer that you're using trusts *Root certification authority (CA) certificate (2)*, and the web server trusts *Root CA certificate (1)* and *Root CA certificate (2)*. Additionally, the certificate has the following two certification paths to the trusted root CAs on the web server:
 
 1. Certification path 1: Website certificate - Intermediate CA certificate - Root CA certificate (1)
 2. Certification path 2: Website certificate - Intermediate CA certificate - Cross root CA certificate - Root CA certificate (2)
 
 When the computer finds multiple trusted certification paths during the certificate validation process, Microsoft CryptoAPI selects the best certification path by calculating the score of each chain. A score is calculated based on the quality and quantity of the information that a certificate path can provide. If the scores for the multiple certification paths are the same, the shortest chain is selected.
 
-When Certification path 1 and Certification path 2 have the same quality score, CryptoAPI selects the shorter path (Certification path 1) and sends the path to the client. However, the client computer can verify the certificate only by using the longer certification path that links to Root CA certificate (2). Therefore, the certificate validation fails.
+When Certification path 1 and Certification path 2 have the same quality score, CryptoAPI selects the shorter path (Certification path 1) and sends the path to the client. However, the client computer can verify the certificate only by using the longer certification path that links to Root CA certificate (2). So the certificate validation fails.
 
 ## Workaround
 
-To work around this issue, delete or disable the certificate from the certification path that you do not want to use.
-
-To do this, follow these steps:
+To work around this issue, delete or disable the certificate from the certification path that you don't want to use by following these steps:
 
 1. Log on to the web server as a system administrator.
-2. Add the Certificate snap-in to Microsoft Management Console. To do this, follow these steps:
+2. Add the Certificate snap-in to Microsoft Management Console by following these steps:
 
     1. Click **Start**, click **Run**, type **mmc**, and then press Enter.
     2. On the **File** menu, click **Add/Remove Snap-in**.
@@ -58,7 +56,7 @@ To do this, follow these steps:
     4. Select **Local computer (the computer this console is running on)**, and then click **Finish**.
     5. Click **OK**.
 
-3. Expand **Certificates (Local Computer)** in the management console, and then locate the certificate on the certificate path that you do not want to use.
+3. Expand **Certificates (Local Computer)** in the management console, and then locate the certificate on the certificate path that you don't want to use.
 
     > [!NOTE]
     > If the certificate is a root CA certificate, it is contained in **Trusted Root Certification Authorities**. If the certificate is an intermediate CA certificate, it is contained in **Intermediate Certification Authorities**.
@@ -70,7 +68,7 @@ To do this, follow these steps:
 
 5. Restart the server if the issue is still occurring.
 
-Additionally, if the **Turn off Automatic Root Certificates Update** Group Policy setting is disabled or not configured on the server, the certificate from the certification path that you do not want to use may be enabled or installed when the next chain building occurs. To change the Group Policy setting, follow these steps:
+Additionally, if the **Turn off Automatic Root Certificates Update** Group Policy setting is disabled or not configured on the server, the certificate from the certification path that you don't want to use may be enabled or installed when the next chain building occurs. To change the Group Policy setting, follow these steps:
 
 1. Click **Start**, click **Run**, type **gpedit.msc**, and then press Enter.
 
