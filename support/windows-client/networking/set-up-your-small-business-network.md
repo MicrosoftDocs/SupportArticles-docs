@@ -83,7 +83,7 @@ If your device has built-in wireless capabilities, then you don't need a wireles
 
 Hybrid networks use a combination of wireless and wired networks and offer the best of both network types so that you can use faster wired desktops and portable wireless mobile devices, such as laptops, tablets and smartphones. A hybrid network relies on special hybrid routers, hubs, switches, and Ethernet cables to connect wired and wireless devices. A hybrid router does two things - broadcasts a wireless signal and provides wired access ports. It's most commonly referred to as a wireless or Wi-Fi router with Ethernet ports or "LAN ports".
 
-A hybrid wired/wireless network seems to offer the best of both worlds in speed, mobility, affordability and security. If users need maximum Internet and file-sharing speed, they can plug into the network with an Ethernet cable. If they need to share a streaming video in the office hallway, they can access the network wirelessly. With the right planning, an organization can save money on CAT 5/CAT 6 cables and routers by maximizing the reach of the wireless network. With the right encryption and password management in place, the wireless portion of the network can be as secure as the wired.
+A hybrid wired/wireless network seems to offer the best of both worlds in speed, mobility, affordability and security. If users need maximum Internet and file-sharing speed, they can plug into the network with an Ethernet cable. If they need to share a streaming video in the office hallway, they can access the network wirelessly. With the right planning, an organization can save money on CAT 5/CAT six cables and routers by maximizing the reach of the wireless network. With the right encryption and password management in place, the wireless portion of the network can be as secure as the wired.
 
 |Hardware|How many|
 |---|---|
@@ -1176,7 +1176,7 @@ To set up a network security key, follow the instructions.
 8. Check on **Set up a new wireless network** and click **Next**.
 9. Input the **Network name (SSID)**, check on **Manually assign a network key**, and click **Next**.
 10. Input **Network key** and **Confirm network key** and click **Next**.
-11. Check on **Set up a network Manually** and click **Next**.
+11. Check on **Set up a network manually** and click **Next**.
 12. Click **Finish**.
 
 Make sure that you write the security key and keep it in a safe place. If you have a USB flash drive, you can also save your security key to the flash drive by following the instructions in the wizard.

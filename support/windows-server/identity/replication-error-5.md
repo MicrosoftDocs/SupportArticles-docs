@@ -116,7 +116,7 @@ Valid root causes for error 5: **access is denied** include:
 Active Directory errors and events like those cited in the symptoms section of this KB can also fail with error 8453 with similar error string **Replication Access was denied**. The following root cause reasons can cause AD operations to fail with 8453: **replication access was denied** but don't cause failures with error 5: **replication is denied**:
 
 1. NC head not permitted with the **replicating directory changes** permission.
-2. The security principal initiating replication not a member of a group that has been granted **replicating directory changes**.
+2. The security principal starting replication not a member of a group that has been granted **replicating directory changes**.
 3. Missing flags in the `UserAccountControl` attribute including `SERVER_TRUST_ACCOUNT` and `TRUSTED_FOR_DELEGATION`.
 4. RODC promoted into domain without having first run `ADPREP /RODCPREP`.
 
@@ -151,11 +151,11 @@ DCDIAG /TEST:CheckSecurityErrors was written to do specific tests (including an 
 
         The `RestrictRemoteClients` registry value is set by the following group policy setting:
 
-        **Computer Configuration** > **Administrative Templates** > **System** > **Remote Procedure Call** - **Restrictions for Unauthenticated RPC clients** 
+        **Computer Configuration** > **Administrative Templates** > **System** > **Remote Procedure Call** - **Restrictions for Unauthenticated RPC clients**
 
         A registry value of **0x2** is applied if the policy setting is enabled and set to **Authenticated without exceptions**.
 
-        This option allows only authenticated RPC clients to connect to RPC servers running on the computer on which the policy setting is applied. It doesn't permit exceptions. If you select this option, a system cannot receive remote anonymous calls using RPC. This setting should never be applied to a domain controller.
+        This option allows only authenticated RPC clients to connect to RPC servers running on the computer on which the policy setting is applied. It doesn't permit exceptions. If you select this option, a system can't receive remote anonymous calls using RPC. This setting should never be applied to a domain controller.
 
 2. Check **Access this computer from network** rights.
 
@@ -267,7 +267,7 @@ DCDIAG /TEST:CheckSecurityErrors was written to do specific tests (including an 
 
 6. UDP formatted Kerberos packet fragmentation
 
-    Network routers and switches may fragment or completely drop large UDP formatted network packets used by Kerberos and EDNS0 (DNS). Computers running Windows 2000 and Windows 2003 operating system families are vulnerable to UDP fragmentation relative to computers running Windows Server 2008 and 2008 R2.  
+    Network routers and switches may fragment or completely drop large UDP formatted network packets used by Kerberos and EDNS0 (DNS). Computers running Windows 2000 and Windows 2003 operating system families are vulnerable to UDP fragmentation compared to computers running Windows Server 2008 and 2008 R2.  
 
     User Action:
 
@@ -316,7 +316,7 @@ DCDIAG /TEST:CheckSecurityErrors was written to do specific tests (including an 
 
     > Trust relationship test. . . . . . : Failed Test to ensure DomainSid of domain \<domainname> is correct. [FATAL] Secure channel to domain \<domainname> is broken. [<%variable status code%>]
 
-    For example, if you have a multi-domain forest containing, root domain `Contoso.COM`, child domain `B.Contoso.COM`, grand child domain `C.B.Contoso.COM` and **tree domain in same forest** `Fabrikam.COM` where replication is failing between DCs in grand child domain `C.B.Contoso.COM` and tree domain `Fabrikam.COM`, then verify trust health between `C.B.Contoso.COM` and `B.Contoso.COM`, `B.Contoso.COM` and `Contoso.COM` then finally `Contoso.COM` and `Fabrikam.COM`.
+    For example, if you have a multi-domain forest containing, root domain `Contoso.COM`, child domain `B.Contoso.COM`, grand child domain `C.B.Contoso.COM`, and **tree domain in same forest** `Fabrikam.COM` where replication is failing between DCs in grand child domain `C.B.Contoso.COM` and tree domain `Fabrikam.COM`, then verify trust health between `C.B.Contoso.COM` and `B.Contoso.COM`, `B.Contoso.COM` and `Contoso.COM` then finally `Contoso.COM` and `Fabrikam.COM`.
 
     If a short cut trust exists between the destination domains, the trust path chain doesn't have to be validated. Instead validate the short cut trust between the destination and source domain.
 

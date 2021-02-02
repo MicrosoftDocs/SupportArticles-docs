@@ -1,6 +1,6 @@
 ---
 title: Security certificate validation fails
-description: Works around an issue where security certificate presented by a website isn't issued when it has multiple trusted certification paths to root CAs.
+description: Works around an issue where security certificate that's presented by a website isn't issued when it has multiple trusted certification paths to root CAs.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,7 +15,7 @@ ms.technology: windows-server-security
 ---
 # Certificate validation fails when a certificate has multiple trusted certification paths to root CAs
 
-This article provides workarounds for an issue where security certificate presented by a website isn't issued when it has multiple trusted certification paths to root CAs.
+This article provides workarounds for an issue where security certificate that's presented by a website isn't issued when it has multiple trusted certification paths to root CAs.
 
 _Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2831004
