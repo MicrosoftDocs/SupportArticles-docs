@@ -40,13 +40,13 @@ The Settings app Group Policy has two modes. An administrator can either specify
 
     If you want to show only Proxy and Ethernet, the string would be as follows:
 
-    **ShowOnly:Network-Proxy;Network-Ethernet**
+    **`ShowOnly:Network-Proxy;Network-Ethernet`**
 
     ![Using ShowOnly to hide all pages except Proxy and Ethernet](./media/use-settings-app-group-policy/showonly-string-example.png)
 
     If you want to hide Proxy and Ethernet, but enable access to everything else, the string would be as follows:
 
-    **Hide:Network-Proxy;Network-Ethernet**
+    **`Hide:Network-Proxy;Network-Ethernet`**
 
     ![Setting App restricted to Proxy and Ethernet only](./media/use-settings-app-group-policy/hidden-proxy-and-ethernet.png)
 
@@ -54,7 +54,7 @@ The Settings app Group Policy has two modes. An administrator can either specify
 
 To determine the URI of a Settings app page, look up the URI on the [ms-settings: URI scheme reference](/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference) page.
 
-For example, if you must control access to the Mobile hotspot settings, locate the Mobile hotspot entry on the webpage. The URI is **ms-settings:network-mobilehotspot**. Remove the **ms-settings:** part of the string. To restrict access to the Mobile hotspot settings page only, set your string as **Hide: network-mobilehotspot**.
+For example, if you must control access to the Mobile hotspot settings, locate the Mobile hotspot entry on the webpage. The URI is **`ms-settings:network-mobilehotspot`**. Remove the **ms-settings:** part of the string. To restrict access to the Mobile hotspot settings page only, set your string as **`Hide:network-mobilehotspot`**.
 
 If you must restrict more than one page, you must use a semicolon between each URI. For example, to restrict access to Mobile hotspot and Proxy, you would specify the following string:  
-**Hide:network-mobilehotspot; network-proxy**
+**`Hide:network-mobilehotspot;network-proxy`**

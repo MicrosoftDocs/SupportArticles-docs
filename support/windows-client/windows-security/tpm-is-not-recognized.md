@@ -13,7 +13,7 @@ ms.reviewer: kaushika, manojse, raverma, suhasm
 ms.prod-support-area-path: Secure Boot and UEFI
 ms.technology: windows-client-security
 ---
-# A Trusted Platform Module (TPM) isn't recognized on some Windows 7-based devices
+# A Trusted Platform Module (TPM) isn't recognized on some Windows 7 devices
 
 This article solves the issue that a TPM isn't recognized as a compatible device on some Windows 7 devices.
 
