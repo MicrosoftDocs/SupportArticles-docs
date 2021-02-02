@@ -102,7 +102,7 @@ Valid root causes for error 5: **access is denied** include:
 1. The **RestrictRemoteClients** setting in the registry has a value of **2**.
 2. The **Access this computer from network** user right isn't granted to the **Enterprise Domain Controllers** group or the administrator triggering immediate replication.
 3. The **CrashOnAuditFail** setting in the registry of the destination DC has a value of **2**.
-4. There's a time difference between the Key Distribution Center (KDC) used by the destination DC and the source DC that exceeds the maximum time skew that's allowed by Kerberos defined in Default Domain policy.
+4. There's a time difference between the Key Distribution Center (KDC) used by the destination DC and the source DC. The source DC exceeds the maximum time skew that's allowed by Kerberos defined in Default Domain policy.
 5. There's an SMB signing mismatch between the source and destination DCs.
 6. There's an **LMCompatiblity** mismatch between the source and destination DCs.
 7. Service principal names are either not registered or not present because of simple replication latency or a replication failure.
@@ -122,13 +122,22 @@ Active Directory errors and events like those cited in the symptoms section of t
 
 ## Resolution
 
-AD Replication failing with error 5 has multiple root causes. Attack the problem initially using tools like `DCDIAG`, `DCDIAG /TEST`: CheckSecurityError, and NETDIAG that exposes common problems. If still unresolved, walk the known causes list in most common, least complex, least disruptive order to least common, most complex, most disruptive order.
+AD Replication failing with error 5 has multiple root causes. Solve the problem initially using tools like:
+
+- DCDIAG
+- DCDIAG /TEST: CheckSecurityError
+- NETDIAG that exposes common problems
+
+If still unresolved, walk the known causes list in most common, least complex, least disruptive order to least common, most complex, most disruptive order.
 
 ### Run DCDIAG, DCDIAG /TEST:CheckSecurityError, and NETDIAG
 
-The generic DCDIAG runs multiple tests
+The generic DCDIAG runs multiple tests.
 
-DCDIAG /TEST:CheckSecurityErrors was written to do specific tests (including an SPN registration check) to troubleshoot Active Directory operations replication failing with error 5: **access is denied** and error 8453: **replication access was denied** but is NOT run as part of the default execution of DCDIAG.
+DCDIAG /TEST:CheckSecurityErrors was written to do specific tests (including an SPN registration check) to troubleshoot Active Directory operations replication failing with:
+
+- error 5: **access is denied**
+- error 8453: **replication access was denied** but is NOT run as part of the default execution of DCDIAG.
 
 1. Run DCDIAG on the destination DC
 2. Run DCDIAG /TEST:CheckSecurityError
@@ -159,7 +168,7 @@ DCDIAG /TEST:CheckSecurityErrors was written to do specific tests (including an 
 
 2. Check **Access this computer from network** rights.
 
-    In a default installation of Windows, the default domain controllers policy is linked to the domain controllers OU containing which grants the **access this computer from network** user right to the following security groups:
+    In a default installation of Windows, the default domain controllers policy is linked to the domain controllers OU containing. The containing grants the **access this computer from network** user right to the following security groups:
 
     |Local Policy|Default Domain controllers policy|
     |---|---|
@@ -191,9 +200,9 @@ DCDIAG /TEST:CheckSecurityErrors was written to do specific tests (including an 
 
     AD Replication fails when `HKLM\System\CurrentControlSet\Control\LSA\CrashOnAuditFail` = has a value of **2**,
 
-    A `CrashOnAduitFail` value of **2** is triggered when the **Audit: Shut down system immediately if unable to log security audits** setting in Group Policy has been enabled AND the local security event log becomes full.
+    A `CrashOnAduitFail` value of **2** is triggered when the **Audit: Shut down system immediately if unable to log security audits** setting in Group Policy has been enabled, and the local security event log becomes full.
 
-    Active Directory domain controllers are especially prone to maximum capacity security logs when auditing has been enabled AND the size of the security event log has been constrained by the **Do not overwrite events** (clear log manually) or **Overwrite as needed** options in Event Viewer or group policy equivalents.
+    Active Directory domain controllers are especially prone to maximum capacity security logs when auditing has been enabled, and the size of the security event log has been constrained by the **Do not overwrite events** (clear log manually) or **Overwrite as needed** options in Event Viewer or group policy equivalents.
 
     User Action:
 
