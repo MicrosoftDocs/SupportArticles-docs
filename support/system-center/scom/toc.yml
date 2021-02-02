@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-scom.md
+  href: welcome-scom.yml
 - name: Agents
   items:
   - name: A push installation fails with error 800706D3
