@@ -45,13 +45,13 @@ An administrator may see details in Event Viewer that resemble the following:
 |Event ID|Description|Resolution|
 |---|---|---|
 |103|Workplace Join discovery failed. Server returned http status 404.|KB [3045386](https://support.microsoft.com/help/3045386) |
-|103|Workplace Join discovery failed. Server returned http status 503.|KB [3045388](https://support.microsoft.com/help/3045388) |
+|103|Workplace Join discovery failed. Server returned http status 503.|KB 3045388 |
 |102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072EE7.<br/><br/>The server name or address could not be resolved. Could not connect to `'https://EnterpriseRegistration.domainTEST.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB [3045385](https://support.microsoft.com/help/3045385) |
-|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072F19.<br/><br/>It was not possible to connect to the revocation server or a definitive response could not be obtained. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB [3045384](https://support.microsoft.com/help/3045384) |
-|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072F8A.<br/><br/>The supplied certificate has been revoked. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB [3045383](https://support.microsoft.com/help/3045383) |
-|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072F0D.<br/><br/>The certificate authority is invalid or incorrect. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB [3045382](https://support.microsoft.com/help/3045382) |
-|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072EFD.<br/><br/>A connection with the server could not be established. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB [3045381](https://support.microsoft.com/help/3045381) |
-|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80004005.<br/><br/>An unknown error has occurred. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB [3045380](https://support.microsoft.com/help/3045380) |
+|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072F19.<br/><br/>It was not possible to connect to the revocation server or a definitive response could not be obtained. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB 3045384 |
+|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072F8A.<br/><br/>The supplied certificate has been revoked. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB 3045383 |
+|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072F0D.<br/><br/>The certificate authority is invalid or incorrect. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB 3045382 |
+|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072EFD.<br/><br/>A connection with the server could not be established. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB 3045381|
+|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80004005.<br/><br/>An unknown error has occurred. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB 3045380 |
 |200|"The maximum number of devices that can be joined to the workplace by the user has been reached."|KB [3045379](https://support.microsoft.com/help/3045379) |
 ||||
 
@@ -116,10 +116,6 @@ If you try to perform a Workplace Join to your local Active Directory, you shoul
 ### Update the root certificates
 
 Run [Microsoft Update](https://update.microsoft.com/), and make sure that the [Updates for Root Certificates](https://support.microsoft.com/help/931125) are all installed
-
-### Verify date and time settings, clear SSL state, and reregister DLL files
-
-Try the methods that are listed in [You cannot log in to or connect to secured Web sites in Internet Explorer](https://support.microsoft.com/help/813444).
 
 ### Verify that traffic is enabled if you are using a third-party proxy or firewall server
 
