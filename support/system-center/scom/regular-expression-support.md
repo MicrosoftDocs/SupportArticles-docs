@@ -19,68 +19,19 @@ Group calculation uses `PERL` regular expression syntax. By default, the matchin
 
 Group calculation is found in your management pack (MP) whenever you use the `Group Calc` module. The `GroupCalc` expression uses the `MatchesRegularExpression` operator to create dynamic group membership based on pattern matching expressions. The implementation of this operator passes the expression that is found in the MP XML to the `dbo.fn_MatchesRegularExpression` SQL call name. If this call returns a value of **0**, the match is false. If it returns a value of **1**, the match is true.
 
-> [!NOTE]
+> [!IMPORTANT]
 > The `dbo.fn_MatchesRegularExpression` SQL call name itself is case-sensitive, so the `MatchesRegularExpression` operator used in dynamic group membership criteria will be case-sensitive as well.
 
 GroupCalc also supports two special subelements that make abstract expressions of the following common regex style queries.
 
 ### GroupCalc special functions
 
-<table class="table">
-    <tbody>
-        <tr>
-            <td valign="top">
-            <p align="center">GroupCalc sub element</p>
-            </td>
-            <td colspan="2" valign="top">
-            <p align="center">Regex equivalent</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-            <p>ContainsSubstring</p>
-            </td>
-            <td colspan="2" valign="top">
-            <p>^*{O}.*$<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span>({O} is replaced by the substring)</span></p>
-            </td>
-        </tr>
-        <tr>
-            <td rowspan="4" valign="top">
-            <p>MatchesWildcard</p>
-            </td>
-            <td>
-            <p>MP expression</p>
-            </td>
-            <td>
-            <p>Regex equivalent</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-            <p>?</p>
-            </td>
-            <td>
-            <p>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-            <p>*</p>
-            </td>
-            <td>
-            <p>.*</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-            <p>#</p>
-            </td>
-            <td>
-            <p>[0-9]</p>
-            </td>
-        </tr>
-    </tbody>
-</table>
+|GroupCalc sub element|MP expression|Regex equivalent|
+|---|---|---|
+|ContainsSubstring||`^*{O}.*$` (Wherein `{O}` is replaced by the substring)
+|MatchesWildcard|`?`|`.`|
+|MatchesWildcard|`*`|`.*`|
+|MatchesWildcard|`#`|`[0-9]`|
 
 > [!NOTE]
 > If either of these two special operators are used, the evaluation is always case-sensitive.
@@ -110,6 +61,26 @@ Expression filters that are used in management packs use .NET Framework regex ex
 |New line character|\n |
 |Tab character|\t |
 |||
+
+## Operations Manager regular expression examples
+
+### Example 1
+
+Search for one match containing `string1`:
+
+    ^(string1)$
+
+### Example 2
+
+Search for the two matches containing either `string1` or `string2`:
+
+    ^(string1)|^(string2)$
+
+### Example 3
+
+Search for any paths located in the two locations `/var/lib/string1/*` and `/var/lib/string2/*`:
+
+    ^(\/var\/lib\/string1\/.*)|^(\/var\/lib\/string2\/.*)$
 
 ## Regular expressions via SDK
 
@@ -179,3 +150,8 @@ When you use an integer enumeration value in a query expression, cast the enumer
 string qStr = "Severity > " + (int)ManagementPackAlertSeverity.Warning;
 MonitoringAlertCriteria alertCriteria = new MonitoringAlertCriteria(qStr);
 ```
+
+## More information
+
+- [System Center Operations Manager troubleshooting](https://docs.microsoft.com/troubleshoot/system-center/scom/welcome-scom)
+- [Troubleshoot gray agent states in System Center Operations Manager](https://docs.microsoft.com/troubleshoot/system-center/scom/troubleshoot-gray-agent-states)
