@@ -104,9 +104,9 @@ If you use Process Monitor to track the Apps' executable or related files, you m
 
 2. For file subsystem:
 
-   1. **Program Files** - Read, Read and Execute, List folder Contents
-   2. **Windows** - Read, Read and Execute, List folder Contents
-   3. **Users\\\<userName>\AppData\Local\Microsoft\Windows\WER** - Special Permissions (List folder / read data, Create Folders /Append Data)
+   1. **Program Files** - Read, Read and Execute, and List folder Contents
+   2. **Windows** - Read, Read and Execute, and List folder Contents
+   3. **Users\\\<userName>\AppData\Local\Microsoft\Windows\WER** - Special Permissions (List folder/read data, and Create Folders/Append Data)
 
 ## Cause for issue 1
 
@@ -143,9 +143,9 @@ Registry and File System permission must be reverted back to a state that will a
 
 Check the folders listed below. Determine if the All Application Packages group has the access indicated. Most but not all sub directories of Windows, Program Files, and WER also grant permissions to the All Application Packages group.
 
-- Program Files - Read, Read and Execute, List folder Contents
-- Windows - Read, Read and Execute, List folder Contents
-- Users\<userName>\AppData\Local\Microsoft\Windows\WER - Special Permissions (List folder / read data, Create Folders /Append Data)
+- Program Files - Read, Read and Execute, and List folder Contents
+- Windows - Read, Read and Execute, and List folder Contents
+- Users\<userName>\AppData\Local\Microsoft\Windows\WER - Special Permissions (List folder/read data, and Create Folders/Append Data)
 
 ### Determine if registry permissions have changed
 
@@ -214,7 +214,7 @@ Have a Group Policy administrator do the following steps:
 - Browse to the path c:\Program Files, select **OK**.
 - Select the **Add** button.
 - Select the locations button and select the local machine name.
-- Add the All Application Packages group and grant them the Read, Read and Execute, List folder Contents permissions.
+- Add the All Application Packages group and grant them the Read, Read and Execute, and List folder Contents permissions.
 - Select **Apply** and **OK**.
 - Select the **Replace existing permissions on all subfolders and files with inheritable permissions** option.
 - Repeat for C:\Windows.
@@ -257,9 +257,9 @@ For more information, see [Microsoft Store Apps Fail to Start if the User Profil
 
 Windows XP and later versions of Windows have tightened permissions throughout the system. So extensive changes to default permissions shouldn't be necessary.
 
-Additional discretionary access control list (DACL) changes may invalidate all or most of the application compatibility testing done by Microsoft. Frequently, changes such as these haven't undergone the thorough testing that Microsoft has done on other settings. Support cases and field experience have shown that DACL edits change the fundamental behavior of the operating system, frequently in unintended ways. These changes affect application compatibility and stability and reduce functionality, about both performance and capability.
+Extra discretionary access control list (DACL) changes may invalidate all or most of the application compatibility testing done by Microsoft. Frequently, changes such as these haven't undergone the thorough testing that Microsoft has done on other settings. Support cases and field experience have shown that DACL edits change the fundamental behavior of the operating system, frequently in unintended ways. These changes affect application compatibility and stability and reduce functionality, about both performance and capability.
 
-Because of these changes, we don't recommend you modify file system DACLs on files that are included with the operating system on production systems. We recommend you evaluate any additional ACL changes against a known threat to understand any potential advantages that the changes may lend to a specific configuration. For these reasons, our guides make only minimal DACL changes and only to Windows 2000. For Windows 2000, several minor changes are required. These changes are described in the Windows 2000 Security Hardening Guide.
+Because of these changes, we don't recommend you modify file system DACLs on files that are included with the operating system on production systems. We recommend you evaluate any other ACL changes against a known threat to understand any potential advantages that the changes may lend to a specific configuration. For these reasons, our guides make only minimal DACL changes and only to Windows 2000. For Windows 2000, several minor changes are required. These changes are described in the Windows 2000 Security Hardening Guide.
 
 Extensive permission changes propagated throughout the registry and file system can't be undone. New folders, such as user profile folders that weren't present at the original installation of the operating system, may be affected. So you can't roll back the original DACLs if you:
 
@@ -278,4 +278,4 @@ Changes to the DACL in the %SystemDrive% folder may cause the following scenario
 
 To help you remove the worst results of such file and registry permissions, Microsoft will provide commercially reasonable efforts in line with your support contract. However, you can't currently roll back these changes. We can guarantee only that you can return to the recommended out-of-the-box settings by reformatting the hard disk drive and by reinstalling the operating system.
 
-For example, modifications to registry DACLs affect large parts of the registry hives and may cause systems to no longer function as expected. Modifying the DACLs on single registry keys poses less of a problem to many systems. However, we recommend that you carefully consider and test these changes before you implement them. Again, we can guarantee only that you can return to the recommended out-of-the-box settings if you reformat and reinstall the operating system.
+For example, modifications to registry DACLs affect large parts of the registry hives and may cause systems to no longer function as expected. Modifying the DACLs on single registry keys poses less of a problem to many systems. we recommend you carefully consider and test these changes before you implement them. And we can guarantee only that you can return to the recommended out-of-the-box settings if you reformat and reinstall the operating system.
