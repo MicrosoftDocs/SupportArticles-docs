@@ -102,7 +102,7 @@ Valid root causes for error 5: **access is denied** include:
 1. The **RestrictRemoteClients** setting in the registry has a value of **2**.
 2. The **Access this computer from network** user right isn't granted to the **Enterprise Domain Controllers** group or the administrator triggering immediate replication.
 3. The **CrashOnAuditFail** setting in the registry of the destination DC has a value of **2**.
-4. There's a time difference between the Key Distribution Center (KDC) used by the destination DC and the source DC that exceeds the maximum time skew allowed by Kerberos defined in Default Domain policy.
+4. There's a time difference between the Key Distribution Center (KDC) used by the destination DC and the source DC that exceeds the maximum time skew that's allowed by Kerberos defined in Default Domain policy.
 5. There's an SMB signing mismatch between the source and destination DCs.
 6. There's an **LMCompatiblity** mismatch between the source and destination DCs.
 7. Service principal names are either not registered or not present because of simple replication latency or a replication failure.
@@ -110,8 +110,8 @@ Valid root causes for error 5: **access is denied** include:
 9. The secure channel on the source or destination DC is invalid.
 10. Trust relationships in the trust chain are broken or invalid.
 11. The **KDCNames** setting in the `HKLM\System\CurrentControlSet\Control\LSA\Kerberos\Domains` section of the registry incorrectly contains the local Active Directory domain name.
-12. Some network adapters have a **Large Send Offload** feature that has been known to cause this issue.
-13. Antivirus software that uses a mini-firewall network adapter filter driver on the source or destination DC has been known to cause this issue.
+12. Some network adapters have a **Large Send Offload** feature.
+13. Antivirus software that uses a mini-firewall network adapter filter driver on the source or destination DC.
 
 Active Directory errors and events like those cited in the symptoms section of this KB can also fail with error 8453 with similar error string **Replication Access was denied**. The following root cause reasons can cause AD operations to fail with 8453: **replication access was denied** but don't cause failures with error 5: **replication is denied**:
 
@@ -122,7 +122,7 @@ Active Directory errors and events like those cited in the symptoms section of t
 
 ## Resolution
 
-AD Replication failing with error 5 has multiple root causes. Attack the problem initially using tools like `DCDIAG`, `DCDIAG /TEST`: CheckSecurityError, and NETDIAG that exposes common problems. If still unresolved, walk the list of known causes in most common, least complex, least disruptive order to least common, most complex, most disruptive order.
+AD Replication failing with error 5 has multiple root causes. Attack the problem initially using tools like `DCDIAG`, `DCDIAG /TEST`: CheckSecurityError, and NETDIAG that exposes common problems. If still unresolved, walk the known causes list in most common, least complex, least disruptive order to least common, most complex, most disruptive order.
 
 ### Run DCDIAG, DCDIAG /TEST:CheckSecurityError, and NETDIAG
 
@@ -210,11 +210,11 @@ DCDIAG /TEST:CheckSecurityErrors was written to do specific tests (including an 
 
 4. Excessive time skew
 
-    Kerberos policy settings in the default domain policy allow for a 5-minutes difference (default value) in system time between KDC domain controllers and a Kerberos target server to prevent replay attacks. Some documentation states that time between the client and the Kerberos target must have time within 5 minutes of each other. Others state that in the context of Kerberos authentication, the time that matters is the delta between the KDC used by the caller and the time on the Kerberos target. Also, Kerberos doesn't care that system time on the relevant DCs matches current time, only that relative time difference between the KDC and target DC is inside the (default 5 minutes or less) maximum time skew that's allowed by Kerberos policy.
+    Kerberos policy settings in the default domain policy allow for a 5-minutes difference (default value) in system time between KDC domain controllers and a Kerberos target server to prevent replay attacks. Some documentation states that time between the client and the Kerberos target must have time within 5 minutes of each other. Others state that in the context of Kerberos authentication, the time that matters is the delta between the KDC used by the caller and the time on the Kerberos target. Also, Kerberos doesn't care that system time on the relevant DCs matches current time. Only that relative time difference between the KDC and target DC is inside the (default 5 minutes or less) maximum time skew that's allowed by Kerberos policy.
 
-    In the context of Active Directory operations, the target server is the source DC being contacted by the destination DC. Every domain controller in an Active Directory forest (currently running the KDC service) is a potential KDC, so you'll need to consider time accuracy on all other DCs against the source DC including time on the destination DC itself.
+    In the context of Active Directory operations, the target server is the source DC being contacted by the destination DC. Every domain controller in an Active Directory forest (currently running the KDC service) is a potential KDC. So you'll need to consider time accuracy on all other DCs against the source DC including time on the destination DC itself.
 
-    Two methods to check time accuracy include  
+    Two methods to check time accuracy include:  
 
     ```console
     C:\> DCDIAG /TEST: CheckSecurityError
