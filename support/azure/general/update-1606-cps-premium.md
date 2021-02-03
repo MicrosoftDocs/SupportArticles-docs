@@ -337,7 +337,6 @@ The compliance scan output is written to the following location to which the upd
 | [3061512](https://support.microsoft.com/help/3061512)|MS15-069: Description of the security update for Windows: July 14, 2015|
 | [3060793](https://support.microsoft.com/help/3060793)|"0x0000001E" or "0x00000133" Stop error when you transfer data through a USB-based RNDIS device on Windows|
 | [3060383](https://support.microsoft.com/help/3060383)|Decimal symbol and digit grouping symbol are incorrect for the Swiss language locale in Windows|
-| [3059316](https://support.microsoft.com/help/3059316)|You cannot move the scrollbar on Windows by dragging the mouse|
 | [3055343](https://support.microsoft.com/help/3055343)|Stop error code 0xD1, 0x139, or 0x3B and cluster nodes go down in Windows Server 2012 R2 or Windows Server 2012|
 | [3055323](https://support.microsoft.com/help/3055323)|Update to enable a security feature in Windows 8.1 or Windows Server 2012 R2|
 | [3054464](https://support.microsoft.com/help/3054464)|Applications that use the AddEntry method may crash in Windows|
@@ -453,10 +452,8 @@ The compliance scan output is written to the following location to which the upd
 | [3078601](https://support.microsoft.com/help/3078601)|MS15-080: Description of the security update for Windows: August 11, 2015|
 | [3076895](https://support.microsoft.com/help/3076895)|MS15-084: Description of the security update for Windows XML core services: August 11, 2015|
 | [3075220](https://support.microsoft.com/help/3075220)|MS15-082: Description of the security update for RDP in Windows: August 11, 2015|
-| [3074553](https://support.microsoft.com/help/3074553)|MS15-101: Description of the security update for the .NET Framework 4.6 and 4.6 RC on Windows 8.1 and Windows Server 2012 R2: September 8, 2015|
 | [3074548](https://support.microsoft.com/help/3074548)|MS15-101: Description of the security update for the .NET Framework 4.5.1 and 4.5.2 on Windows 8.1, Windows RT 8.1, and Windows Server 2012 R2: September 8, 2015|
 | [3074545](https://support.microsoft.com/help/3074545)|MS15-101: Description of the security update for the .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2: September 8, 2015|
-| [3074232](https://support.microsoft.com/help/3074232)|MS15-101: Description of the security update for the .NET Framework 4.6 and 4.6 RC on Windows 8.1 and Windows Server 2012 R2: September 8, 2015|
 | [3074228](https://support.microsoft.com/help/3074228)|MS15-101: Description of the security update for the .NET Framework 4.5.1 and 4.5.2 on Windows 8.1, Windows RT 8.1, and Windows Server 2012 R2: September 8, 2015|
 | [3072630](https://support.microsoft.com/help/3072630)|MS15-074: Vulnerability in Windows Installer service could allow elevation of privilege: July 14, 2015|
 | [3072307](https://support.microsoft.com/help/3072307)|MS15-080: Description of the security update for the .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2: August 11, 2015|
