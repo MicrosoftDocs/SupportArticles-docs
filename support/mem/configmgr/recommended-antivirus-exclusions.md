@@ -14,21 +14,21 @@ _Original KB number:_ &nbsp; 327453
 
 ## Summary
 
-We recommend that you temporarily apply these procedures to evaluate a system. If your system performance or stability is improved by the recommendations that are made in this article, contact your antivirus software vendor for instructions or for an updated version of the antivirus software.
+We recommend you temporarily apply these procedures to evaluate a system. If your system performance or stability is improved by the recommendations that are made in this article, contact your antivirus software vendor for instructions or for an updated version of the antivirus software.
 
 > [!IMPORTANT]
 > This article contains information that shows how to help lower security settings or how to temporarily turn off security features on a computer. You can make these changes to understand the nature of a specific problem. Before you make these changes, we recommend that you evaluate the risks that are associated with implementing this workaround in your particular environment.
 
 Antivirus real-time protection can cause many problems on Configuration Manager site servers, site systems, and clients.
 
-The following is a non-comprehensive list of possible symptoms:
+The non-comprehensive list of possible symptoms:
 
-- Remote site system components are not installed. SiteComp.log, Distmgr.log, hman.log, or other Configuration Manager log files may contain errors such as error 80070005.
+- Remote site system components aren't installed. SiteComp.log, Distmgr.log, hman.log, or other Configuration Manager log files may contain errors such as error 80070005.
 - The Configuration Manager client cannot be installed through client push.
 - Client inventory information is inaccurate, missing, or out-of-date.
-- Backlogs occur in the *Install_Directory*\Inboxes folders on site servers.
+- Backlogs occur in the *Install_Directory*\Inboxes folders on-site servers.
 - Backlogs occur in the *Install_Directory*\MP\Outboxes subfolders on management points (MP).
-- Software Center is not populated by deployed software on client systems, or does not start. Also, the CCMRepair.log file may contain errors that resemble the following:
+- Software Center isn't populated by deployed software on client systems, or doesn't start. Also, the CCMRepair.log file may contain the following errors:
 
   > Database verification failed with result: 0x80004005 but DB: C:\Windows\CCM\filename.sdf could be opened, skipping DB repair.
 
@@ -57,7 +57,7 @@ We recommend that you add the following real-time protection exclusions to prev
 
 - Management points
   - *MP installation folder*\ServiceData
-  - Either of the following:
+  - Either of the following points:
     - *ConfigMgr installation folder*\MP\OUTBOXES
     - *Installation drive*\SMS\MP\OUTBOXES
 - Distribution points
@@ -82,19 +82,19 @@ We recommend that you add the following real-time protection exclusions to prev
 
 - POL00000.pol in *MP installation folder*\PolReqStaging
 
-### Do not scan outgoing files on MPs
+### Don't scan outgoing files on MPs
 
-- Most antivirus software has an option to scan files that are copied to a remote location (outgoing files). This should be disabled on management points.
-- For Windows Defender, the policy name is **Configure monitoring for incoming and outgoing file and program activity** and it should be set to **Scan only incoming files**.
+- Most antivirus software has an option to scan files that are copied to a remote location (outgoing files). This setting should be disabled on management points.
+- For Windows Defender, the policy name is **Configure monitoring for incoming and outgoing file and program activity**, and it should be set to **Scan only incoming files**.
 
     For more information, see [Enable and configure Windows Defender Antivirus always-on protection in Group Policy](/windows/security/threat-protection/windows-defender-antivirus/configure-real-time-protection-windows-defender-antivirus).
 
 ### Process exclusions
 
-Process Exclusions are necessary only if aggressive antivirus programs consider Configuration Manager executables (.exe) to be high-risk processes.
+Process exclusions are necessary only if aggressive antivirus programs consider Configuration Manager executables (.exe) to be high-risk processes.
 
 - *ConfigMgr installation folder*\bin\x64\Smsexec.exe
-- Either of the following:
+- Either of the following executables:
   - *Client installation folder*\Ccmexec.exe
   - *MP installation folder*\Ccmexec.exe
 - *Client installation folder*\RemCtrl\CmRcService.exe (client-side)
