@@ -100,7 +100,7 @@ If you use an older version of Configuration Manager or standalone WSUS servers,
 
 ### Reindex the WSUS database
 
-To reindex the WSUS database (SUSDB), use the [Re-index the WSUS Database](https://gallery.technet.microsoft.com/scriptcenter/6f8cde49-5c52-4abd-9820-f1d270ddea61) T-SQL script.
+To reindex the WSUS database (SUSDB), use the (Update link) [Re-index the WSUS Database](https://gallery.technet.microsoft.com/scriptcenter/6f8cde49-5c52-4abd-9820-f1d270ddea61) T-SQL script.
 
 The steps to connect to SUSDB and perform the reindex differ, depending on whether SUSDB is running in SQL Server or Windows Internal Database (WID). To determine where SUSDB is running, check value of the `SQLServerName` registry entry on the WSUS server located at the `HKEY_LOCAL_MACHINE\Software\Microsoft\Update Services\Server\Setup` subkey.
 
