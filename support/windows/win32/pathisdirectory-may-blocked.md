@@ -21,10 +21,10 @@ Applications that call the `PathIsDirectory` function may block the calling thre
 An application that is blocking a calling thread in a `PathIsDirectory` call may have a call stack that resembles the following:
 
 > 0:000> kn  
- # Child-SP          RetAddr           Call Site  
+\# Child-SP          RetAddr           Call Site  
 00 0000006f`3b59f108 00007ffc`94f48ba3 ntdll!ZwWaitForSingleObject+0x14  
 01 0000006f`3b59f110 00007ffc`8eebb303 KERNELBASE!WaitForSingleObjectEx+0x93  
-02 (Inline Function) --------`-------- WINHTTP!HTTP_USER_REQUEST::_HandleSyncPending+0x2d  
+02 (Inline Function) ---------------- WINHTTP!HTTP_USER_REQUEST::_HandleSyncPending+0x2d  
 03 0000006f`3b59f1b0 00007ffc`8eec9a85 WINHTTP!HTTP_USER_REQUEST::SendRequest+0x3f3  
 04 0000006f`3b59f2b0 00007ffc`8afff4fe WINHTTP!WinHttpSendRequest+0x585  
 05 0000006f`3b59f410 00007ffc`8b000135 davclnt!DavDoesServerDoDav+0x4ba  
@@ -37,10 +37,10 @@ An application that is blocking a calling thread in a `PathIsDirectory` call may
 0c 0000006f`3b59f740 00007ffc`956ed27c MPR!WNetGetResourceInformationW+0x4f  
 0d 0000006f`3b59f7d0 00007ff7`226f292e SHLWAPI!PathIsDirectoryW+0x60fc
 
-This occurs when the `WNetGetResourceInformation` function is called to obtain information about the specified server. In this call stack, the Web DAV network provider DLL (DAVCLNT.DLL) blocks the calling thread while it waits for the specified server to respond to an HTTP request. This operation may take up to two minutes to time out. The calling thread will be blocked until the server responds to the HTTP request or until the request times out.
+This occurs when the `WNetGetResourceInformation` function is called to obtain information about the specified server. In this call stack, the Web DAV network provider DLL (DAVCLNT.DLL) blocks the calling thread while it waits for the specified server to respond to an HTTP request. This operation may take up to two minutes to time out. The calling thread will be blocked until the server responds to the HTTP request or until the request times out.
 
 ## Resolution
 
-Applications can avoid this scenario if you remove the trailing backslash in the UNC name before **PathIsDirectory** is called, as this: `\\servername`.
+Applications can avoid this scenario if you remove the trailing backslash in the UNC name before **PathIsDirectory** is called, as this: `\\servername`.
 
-Alternatively, to avoid the delay in the HTTP request that is made by the Web DAV network provider, either disable the WebClient service or configure the service to start automatically.
+Alternatively, to avoid the delay in the HTTP request that is made by the Web DAV network provider, either disable the WebClient service or configure the service to start automatically.

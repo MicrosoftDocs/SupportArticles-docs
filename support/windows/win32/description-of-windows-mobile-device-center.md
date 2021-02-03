@@ -29,7 +29,7 @@ Windows Mobile Device Center offers device management and data synchronization b
 
 For Windows XP or earlier operating systems, you must use Microsoft ActiveSync.
 
-## More Information
+## More information
 
 Download and install Windows Mobile Device Center 6.1 if you run Windows Vista on your computer and you want to sync content between your mobile phone and your computer. Windows Mobile Device Center is compatible only with Windows Vista.
 

@@ -6,7 +6,7 @@ ms.prod-support-area-path: IISAdmin Service and Inetinfo Process Operation
 ---
 # Web applications return HTTP Error 503 and WAS event 5189 on Windows 10 Version 1709
 
-This article helps you resole the HTTP 503 error and 5189 event where after you upgrade to Version 1709 (Fall Creators Update) on Windows 10 or Windows Server 2016, web applications fail to start, and return an HTTP 503 error and WAS event 5189.
+This article helps you resole the HTTP 503 error and 5189 event where after you upgrade to Version 1709 (Fall Creators Update) on Windows 10 or Windows Server 2016, web applications fail to start, and return an HTTP 503 error and  Windows Activation Service (WAS) event 5189.
 
 _Original product version:_ &nbsp; Windows 10 Enterprise, Windows 10 Pro, Windows Server 2016 Standard, Windows Server 2016 Datacenter  
 _Original KB number:_ &nbsp; 4050891
@@ -45,7 +45,7 @@ To resolve this problem, manually delete the symbolic links that are created by 
 
 ## Cause
 
-The Windows Activation Service (WAS) creates a temporary configuration file for each IIS application pool in the `C:\inetpub\temp\appPools` folder during typical operation.
+The WAS creates a temporary configuration file for each IIS application pool in the `C:\inetpub\temp\appPools` folder during typical operation.
 
 During an initial upgrade phase, Windows Update scans the existing folders and files (outside the Windows folder), and records their paths to be restored after upgrade. However, because the configuration files are temporary, they are deleted when WAS is stopped.
 

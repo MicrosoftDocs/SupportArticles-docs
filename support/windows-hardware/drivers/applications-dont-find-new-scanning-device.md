@@ -5,7 +5,7 @@ ms.date: 01/29/2021
 ms.prod-support-area-path: Developer Tools\Windows Driver Kit (WDK, HLK)\Windows Driver Kit 10\Other Driver\Scanner
 ms.reviewer: jesweare
 ---
-# Applications do not find a new scanning device after another device is disconnected
+# Applications are unable to find a new scanning device after another device is disconnected
 
 This article helps you work around the error that occurs when an application does not find a scanning device if that scanner is connected after a different scanner is disconnected.
 

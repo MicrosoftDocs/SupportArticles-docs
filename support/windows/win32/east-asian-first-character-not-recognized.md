@@ -55,10 +55,11 @@ Consider the following scenario.
     DWORD Value: 0x00008000 (Hex value of 32,768)
 
 2. **For specific Windows class name:**  
- If you use this scenario, you have to apply following Windows Updates on your system. 
+ If you use this scenario, you have to apply following Windows Updates on your system.
 
-    | Windows 10 Version 1803| [KB4550944](https://support.microsoft.com/help/4550944) |
+    | Windows 10 Version| Article link |
     |---|---|
+    | Windows 10 Version 1803| [KB4550944](https://support.microsoft.com/help/4550944) |
     | Windows 10 Version 1809| [KB4550969](https://support.microsoft.com/help/4550969) |
     | Windows 10 Version 1903| [KB4541335](https://support.microsoft.com/help/4541335) |
     | Windows 10 Version 1909| [KB4541335](https://support.microsoft.com/help/4541335) |
@@ -77,7 +78,7 @@ Consider the following scenario.
     REG_SZ: Compatibility  
     String Value: \<WindowClassName>
 
-    **For example:** The workaround for specific Window Class Name as **Edit**
+    For example: The workaround for specific Window Class Name as **Edit**
   
     > KEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\CTF\Compatibility\AppCompatClassName  
     REG_SZ: Compatibility  

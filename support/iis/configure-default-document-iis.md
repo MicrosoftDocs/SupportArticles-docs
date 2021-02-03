@@ -9,7 +9,7 @@ ms.topic: how-to
 
 This article introduces how to configure the default document in Internet Information Services.
 
-We strongly recommend that all users upgrade to Microsoft Internet Information Services (IIS) version 7.0 running on Microsoft Windows Server 2008. IIS 7.0 significantly increases Web infrastructure security. For more information about IIS, see: [IIS](https://www.iis.net/)  
+We strongly recommend that all users upgrade to Microsoft Internet Information Services (IIS) version 7.0 running on Microsoft Windows Server 2008. IIS 7.0 significantly increases Web infrastructure security. For more information about IIS, see: [IIS](https://www.iis.net/).
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 320051

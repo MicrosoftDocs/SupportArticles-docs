@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 3058254
 
 ## Symptoms
 
-When you use Google Chrome (version 42.0 or later) to access a website that runs Microsoft Silverlight, you see that some content is missing or that the **Install Microsoft Silverlight** badge is displayed. When you reinstall Silverlight, the issue still occurs.
+When you use Google Chrome (version 42.0 or later versions) to access a website that runs Microsoft Silverlight, you see that some content is missing or that the **Install Microsoft Silverlight** badge is displayed. When you reinstall Silverlight, the issue still occurs.
 
 > [!NOTE]
 > This issue does not occur in Microsoft Internet Explorer, Mozilla Firefox, or Apple Safari. These browsers still support Silverlight content.
