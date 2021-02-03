@@ -287,6 +287,8 @@
       href: ../Sites/customizations-revert-to-default-settings.md
     - name: Error when trying to change site logo on O365 group SharePoint site
       href: ../sites/error-when-changing-o365-site-logo.md
+    - name: Error when trying to delete a SharePoint site
+      href: ../sites/compliance-policy-blocking-site-deletion.md
     - name: Issue when activating Announcement Tiles feature
       href: ../Sites/announcement-tiles-not-supported.md
     - name: Issue when creating an online site
