@@ -72,7 +72,7 @@ When you try to start SQL Server in this scenario, the SQL Server service doesnâ
 3. If the master database does exist but is unusable you can return the database to a usable state, take one of the following actions:
 
     - Check the permissions for the service account on the folder where the file is located.
-    - [Restore the master database](/sql/relational-databases/backup-restore/restore-the-master-database-transact-sql?view=sql-server-ver15) from a full database backup if you can start the server instance.
+    - [Restore the master database](/sql/relational-databases/backup-restore/restore-the-master-database-transact-sql) from a full database backup if you can start the server instance.
     - If server damage to master prevents you from starting SQL Server, [Rebuild the master database](/sql/relational-databases/databases/rebuild-system-databases).
 
         > [!IMPORTANT]
