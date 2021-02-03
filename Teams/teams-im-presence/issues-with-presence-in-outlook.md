@@ -18,7 +18,7 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-# Issues with user presence status in Outlook
+# User presence status issues in Outlook and Teams
 
 ## Symptoms
 
@@ -26,21 +26,21 @@ You see any of the following issues when you check the presence status for a use
 
 - The presence indicator is not visible.
 - The displayed presence is incorrect.
-- The presence status is **Status Unknown**.
+- The presence status is **Status unknown**.
 
   > [!NOTE]
-  > Outlook currently shows **Status Unknown** for federated (external) Teams contacts.
+  > Outlook currently shows **Status unknown** for federated (external) Teams contacts.
 
 ## Resolution
 
-To fix these issues, download and run the [Microsoft Support and Recovery Assistant (SARA)](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) for automated troubleshooting steps and fixes.
+To fix these issues, download and run the [Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) for automated troubleshooting steps and fixes.
 
 Or, follow these manual steps:
 
-1. Make sure that the Teams app on your computer is configured to display the presence status. for more information, see  [User presence in Teams](https://docs.microsoft.com/microsoftteams/presence-admins).
+1. Make sure that the Teams app on your computer is configured to display the presence status. For more information, see  [User presence in Teams](https://docs.microsoft.com/microsoftteams/presence-admins).
 
    > [!NOTE]
-   > The presence feature in Outlook requires Microsoft Teams to be installed and configured to display presence status.
+   > The presence feature in Outlook requires Microsoft Teams to be installed and configured to display the presence status.
 
 2. For the contact whose presence you can’t see, verify that their email address and Teams sign-in address are the same. If they are not, the contact should correct the addresses as necessary, sign out of Teams, and then sign back in.
 
@@ -49,11 +49,13 @@ Or, follow these manual steps:
    > [!WARNING]
    > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, back up any valuable data on the computer.
 
-   1. Start Registry Editor
+   1. Start Registry Editor.
 
-   2. Locate the following subkey: `HKEY_CURRENT_USER\Software\IM Providers`
+   2. Locate the following subkey:
 
-   3. Verify the following value:
+        `HKEY_CURRENT_USER\Software\IM Providers`
+
+   3. Verify the following values:
 
       - **Name**: DefaultIMApp
       - **Type**: REG_SZ
@@ -69,4 +71,4 @@ If these steps don’t resolve the issue, an administrator should create a suppo
 
 - The desktop and web logs from both the user and the contact. For information about how to collect logs, see [Use log files in troubleshooting Microsoft Teams](https://docs.microsoft.com/microsoftteams/log-files).
 
-  - For presence issues that affect contacts who are internal to your organization, provide the results from running the SARA tool.
+  - For presence issues that affect contacts who are internal to your organization, provide the output from the Support and Recovery Assistant tool.
