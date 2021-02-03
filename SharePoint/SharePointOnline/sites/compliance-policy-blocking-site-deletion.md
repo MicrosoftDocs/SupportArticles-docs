@@ -57,7 +57,7 @@ If you're an administrator, and you're unable to delete the site:
    > [!Note]
    > This selection activates the **Need Help?** pane on the right side of the screen.
 
-3. In the **Briefly describe your issue area**, enter **invalid retention policy**, and then select **Enter**.
+3. In the **Briefly describe your issue** area, enter **invalid retention policy**, and then select **Enter**.
 
 4. In the Run diagnostic section, select the **SharePoint Online root URL**, type or paste the **SharePoint site URL**, and then select **Run Tests**.
 
