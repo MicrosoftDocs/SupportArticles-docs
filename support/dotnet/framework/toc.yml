@@ -136,6 +136,8 @@
     href: nested-tablelayoutpanel-large-empty-spaces.md
   - name: Text is lost when you render an XPS DocumentPage
     href: far-eastern-fonts-text-lost-on-images-xps.md
+  - name: Timeout occurs when an application calls the Poll method
+    href: timeout-when-application-calls-poll-method.md
   - name: Warning when service references are added
     href: warning-add-service-reference-silverlight.md
   - name: Windows Forms applications don't release memory

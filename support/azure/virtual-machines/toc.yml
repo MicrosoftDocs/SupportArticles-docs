@@ -28,6 +28,8 @@
       href: connect-linux-vm-sshconnection.md
   - name: Windows
     items:
+    - name: Cannot RDP into Azure VM because of authentication errors
+      href: cannot-connect-rdp-azure-vm.md
     - name: CredSSP encryption oracle remediation
       href: credssp-encryption-oracle-remediation.md
     - name: No Internet access
@@ -36,17 +38,8 @@
       href: azure-vm-netlogon-not-starting.md
     - name: Network Store Interface service is not starting
       href: azure-vm-nsi-not-starting.md
-  - name: RDP
-    items:
-    - name: Cannot RDP into Azure VM
-      href: cannot-connect-rdp-azure-vm.md
     - name: Cannot RDP into Azure VM because of a brute force attack
       href: cannot-rdp-azure-vm-brute-force.md
-    - name: Azure VM cannot RDP - driver IRQL not less or equal
-      href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
-    - name: Azure VM cannot RDP - working on features
-      href: azure-vm-cannot-rdp-working-features.md
-
 - name: VM is not booting
   items:
   - name: Error code
@@ -89,7 +82,12 @@
     href: os-not-found.md
   - name: Troubleshoot Windows VM OS boot failure
     href: os-bucket-boot-failure.md
-
+  - name: 'VM stops at "Please wait for the Group Policy Client" screen'
+    href: vm-stops-at-please-wait-for-group-policy-client.md
+  - name: Azure VM cannot RDP - driver IRQL not less or equal
+    href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
+  - name: Azure VM cannot RDP - working on features
+    href: azure-vm-cannot-rdp-working-features.md
 - name: VM restart issues
   items:
   - name: Can't restart after applying kernel changes

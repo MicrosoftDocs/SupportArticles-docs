@@ -22,6 +22,8 @@
     href: analysis-services/enable-snapshot-transaction-isolation-level.md
   - name: Error 1032 in the application log
     href: analysis-services/error-1032-application-log.md
+  - name: Error and MDX query fails in SSAS multidimensional instance
+    href: analysis-services/error-mdx-query-fails-ssas-multidimensional-instance.md
   - name: Error when you connect to a named instance
     href: analysis-services/error-connect-named-instance.md
   - name: Error when you process a database or a cube
@@ -32,6 +34,8 @@
     href: analysis-services/error-use-powerpivot-excel-workbook.md
   - name: MDX query contains Aggregate returns error
     href: analysis-services/mdx-query-contains-aggregate-returns-error.md
+  - name: MDX query with calculated measure runs slowly
+    href: analysis-services/mdx-query-calculated-measure-run-slow.md
   - name: No properties and members of Dimension Hierarchy
     href: analysis-services/no-dimension-hierarchy-properties.md
   - name: Perform a distributed query with OLAP Server
@@ -44,6 +48,20 @@
     href: analysis-services/na-returns-run-a-multi-subselect-query.md
   - name: WMI Provider Error and 0x80004005 code
     href: analysis-services/wmi-provider-error-0x80004005-code.md
+
+- name: Azure SQL virtual machine
+  items:
+  - name: FCI installation fails with error on Azure VM
+    href: azure-sql/fci-installation-fails-error-azure-vm.md
+
+- name: Data Quality Services
+  items:
+  - name: DQS Export to 64-bit Excel file fails with error
+    href: data-quality-services/dqs-export-64-bit-excel-file-fails-error.md
+  - name: DQSInstaller may fail accessing temp folder
+    href: data-quality-services/dqsinstaller-may-fail-accessing-tmp-folder.md
+  - name: Error when you run the DQS Cleansing transformation
+    href: data-quality-services/error-you-run-dqs-cleansing-transformation.md
 
 - name: Database Engine
   items:
@@ -426,6 +444,8 @@
 
 - name: General Troubleshooting Information
   items:
+  - name: Answers questions about the MSDT
+    href: general/answers-questions-msdt.md
   - name: Connectivity Diagnostics Collector
     href: general/connectivity-diagnostics-collector.md
   - name: Determine the version, edition, and update level
@@ -434,6 +454,8 @@
     href: general/issue-detours-similar-techniques.md
   - name: End of support for SQL Server 2008
     href: general/end-support-sql-server-2008.md
+  - name: Information about MATS and SDP
+    href: general/information-mats-sdp.md
   - name: RS Diagnostics Collector collects information
     href: general/rs-diagnostics-collector-information.md
   - name: Setup data collection diagnostic tool
@@ -507,6 +529,8 @@
     href: analytics-platform-system/error-cetas-to-blob-storage.md
   - name: Evaluate PDW statistics accuracy
     href: analytics-platform-system/evaluate-pdw-statistics-accuracy.md
+  - name: Msg 104381 when you run a statement with ORDER BY clause
+    href: analytics-platform-system/msg-104381-running-statement-order-by.md
   - name: Operations Manager can't monitor APS appliance
     href: analytics-platform-system/operations-manager-cannot-monitor-aps.md
 
@@ -520,6 +544,8 @@
     href: reporting-services/cannot-start-reporting-services.md
   - name: Deadlocks occur when you view an SSRS report
     href: reporting-services/deadlocks-occur-view-ssrs-report.md
+  - name: Error when you load custom extensions in Data Tools
+    href: reporting-services/error-load-custom-extensions-data-tools.md
   - name: Exported report contains hidden rows and columns
     href: reporting-services/workbook-hidden-rows-columns.md
   - name: Key not valid for use in specified state
@@ -539,6 +565,8 @@
     href: linux/choosing-licensing-model-using-mssql-conf.md
   - name: Core dump on RHEL 7.4 when you run mssql-conf
     href: linux/core-dump-rhel-7-4-run-mssql-conf.md
+  - name: Restore operation fails on Linux servers
+    href: linux/database-restore-operation-fails-linux-server.md
 
 - name: Tools
   items:

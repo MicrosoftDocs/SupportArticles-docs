@@ -95,12 +95,6 @@ function FindProxyForURL(url, host)
 > [!NOTE]
 > This PAC always returns the proxy **proxyserver:portnumber**. For more information about how to write a PAC file and the different functions of a PAC file, see [Introduction of FindProxyForURL](https://findproxyforurl.com/).
 
-### Optimize performance by using PAC scripts
-
-For more information, see the following articles:
-
-- [Browser Is Slow to Respond When You Use an Automatic Configuration Script](https://support.microsoft.com/help/315810)
-
 ## References
 
 - [How can I configure Proxy AutoConfigURL Setting using Group Policy Preference (GPP)?](/archive/blogs/askie/how-can-i-configure-proxy-autoconfigurl-setting-using-group-policy-preference-gpp)

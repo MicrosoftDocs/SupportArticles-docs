@@ -56,7 +56,7 @@ _Original KB number:_ &nbsp; 321185
   |SQL Server 2012| [2755533](https://support.microsoft.com/help/2755533) How to obtain the latest service pack for SQL Server 2012<br/>| [2772858](https://support.microsoft.com/help/2772858) The SQL Server 2012 builds that were released after SQL Server 2012 Service Pack 1 was released<br/><br/> [2983249](https://support.microsoft.com/help/2983249) The SQL Server 2012 builds that were released after SQL Server 2012 Service Pack 2 was released<br/><br/> [3133750](https://support.microsoft.com/help/3133750) SQL Server 2012 SP3 build versions|
   |SQL Server 2008 R2| [2527041](https://support.microsoft.com/help/2527041) How to obtain the latest service pack for SQL Server 2008 R2| [981356](https://support.microsoft.com/help/981356) The SQL Server 2008 R2 builds that were released after SQL Server 2008 R2 was released<br/><br/> [2567616](https://support.microsoft.com/help/2567616) The SQL Server 2008 R2 builds that were released after SQL Server 2008 R2 Service Pack 1 was released<br/><br/> [2730301](https://support.microsoft.com/help/2730301) The SQL Server 2008 R2 builds that were released after SQL Server 2008 R2 Service Pack 2 was released|
   |SQL Server 2008| [968382](https://support.microsoft.com/help/968382) How to obtain the latest service pack for SQL Server 2008| [956909](https://support.microsoft.com/help/956909) The SQL Server 2008 builds that were released after SQL Server 2008 was released<br/><br/> [970365](https://support.microsoft.com/help/970365) The SQL Server 2008 builds that were released after SQL Server 2008 Service Pack 1 was released<br/><br/> [2402659](https://support.microsoft.com/help/2402659) The SQL Server 2008 builds that were released after SQL Server 2008 Service Pack 2 was released<br/><br/> [2629969](https://support.microsoft.com/help/2629969) The SQL Server 2008 builds that were released after SQL Server 2008 Service Pack 3 was released|
-  |SQL Server 2005| [913089](https://support.microsoft.com/help/913089) How to obtain the latest service pack for SQL Server 2005<br/>| [937137](https://support.microsoft.com/help/937137) The SQL Server 2005 builds that were released after SQL Server 2005 Service Pack 2 was released<br/><br/> [960598](https://support.microsoft.com/help/960598) The SQL Server 2005 builds that were released after SQL Server 2005 Service Pack 3 was released<br/><br/> [2485757](https://support.microsoft.com/help/2485757) The SQL Server 2005 builds that were released after SQL Server 2005 Service Pack 4 was released|
+  |SQL Server 2005| [913089](https://support.microsoft.com/help/913089) How to obtain the latest service pack for SQL Server 2005<br/>| [937137](https://support.microsoft.com/help/937137) The SQL Server 2005 builds that were released after SQL Server 2005 Service Pack 2 was released<br/><br/> [960598](https://support.microsoft.com/help/960598) The SQL Server 2005 builds that were released after SQL Server 2005 Service Pack 3 was released|
   ||||
 
 ## Determine which version and edition of SQL Server Database Engine is running
@@ -587,9 +587,6 @@ For more information, go to the following websites:
 |11.0.3000.00|SP1| RTW/PCU1| [2674319](https://support.microsoft.com/help/2674319)|November 7, 2012|
 |11.0.2424.00|RTM|CU11| [2908007](https://support.microsoft.com/help/2908007)|December 16, 2013|
 |11.0.2420.00|RTM|CU10| [2891666](https://support.microsoft.com/help/2891666)|October 21, 2013|
-|11.0.2419.00|RTM|CU9| [2867319](https://support.microsoft.com/help/2867319)|August 20, 2013|
-|11.0.2410.00|RTM|CU8| [2844205](https://support.microsoft.com/help/2844205)|June 17, 2013|
-|11.0.2405.00|RTM|CU7| [2823247](https://support.microsoft.com/help/2823247)|April 15, 2013|
 |11.0.2401.00|RTM|CU6| [2728897](https://support.microsoft.com/help/2728897)|February 18, 2013|
 |11.0.2395.00|RTM|CU5| [2777772](https://support.microsoft.com/help/2777772)|December 17, 2012|
 |11.0.2383.00|RTM|CU4| [2758687](https://support.microsoft.com/help/2758687)|October 15, 2012|
@@ -615,7 +612,6 @@ For more information, go to the following websites:
 |10.50.4302.00|SP2|CU11| [2926028](https://support.microsoft.com/help/2926028)|February 18, 2014|
 |10.50.4297.00|SP2|CU10| [2908087](https://support.microsoft.com/help/2908087)|December 17, 2013|
 |10.50.4295.00|SP2|CU9| [2887606](https://support.microsoft.com/help/2887606)|October 28, 2013|
-|10.50.4290.00|SP2|CU8| [2871401](https://support.microsoft.com/help/2871401)|August 22, 2013|
 |10.50.4285.00|SP2|CU7| [2844090](https://support.microsoft.com/help/2844090)|June 17, 2013|
 |10.50.4279.00|SP2|CU6| [2830140](https://support.microsoft.com/help/2830140)|April 15, 2013|
 |10.50.4276.00|SP2|CU5| [2797460](https://support.microsoft.com/help/2797460)|February 18, 2013|
@@ -630,7 +626,6 @@ For more information, go to the following websites:
 |10.50.2876.00|SP1|CU13| [2855792](https://support.microsoft.com/help/2855792)|June 17, 2013|
 |10.50.2874.00|SP1|CU12| [2828727](https://support.microsoft.com/help/2828727)|April 15, 2013|
 |10.50.2869.00|SP1|CU11| [2812683](https://support.microsoft.com/help/2812683)|February 18, 2013|
-|10.50.2868.00|SP1|CU10| [2783135](https://support.microsoft.com/help/2783135)|December 17, 2012|
 |10.50.2866.00|SP1|CU9| [2756574](https://support.microsoft.com/help/2756574)|October 15, 2012|
 |10.50.2861.00|SP1| MS12-070: QFE Security Update| [2716439](https://support.microsoft.com/help/2716439)|October 9, 2012|
 |10.50.2822.00|SP1|CU8| [2723743](https://support.microsoft.com/help/2723743)|August 31, 2012|
@@ -645,10 +640,8 @@ For more information, go to the following websites:
 |10.50.2500.0|SP1| RTW/PCU1| [2528583](https://support.microsoft.com/help/2528583)|July 12, 2011|
 |10.50.1815.00|RTM|CU13| [2679366](https://support.microsoft.com/help/2679366)|April 16, 2012|
 |10.50.1810.00|RTM|CU12| [2659692](https://support.microsoft.com/help/2659692)|February 21, 2012|
-|10.50.1809.00|RTM|CU11| [2633145](https://support.microsoft.com/help/2633145)|December 19, 2011|
 |10.50.1807.00|RTM|CU10| [2591746](https://support.microsoft.com/help/2591746)|October 17, 2011|
 |10.50.1804.00|RTM|CU9| [2567713](https://support.microsoft.com/help/2567713)|August 15, 2011|
-|10.50.1797.00|RTM|CU8| [2534352](https://support.microsoft.com/help/2534352)|June 20, 2011|
 |10.50.1790.00|RTM| MS11-049: QFE Security Update| [2494086](https://support.microsoft.com/help/2494086)|June 14, 2011|
 |10.50.1777.00|RTM|CU7| [2507770](https://support.microsoft.com/help/2507770)|April 18, 2011|
 |10.50.1765.00|RTM|CU6| [2489376](https://support.microsoft.com/help/2489376)|February 21, 2011|
@@ -669,7 +662,7 @@ For more information, go to the following websites:
 |10.00.6241.00|SP3| MS15-058: GDR Security Update| [3045311](https://support.microsoft.com/help/3045311)|July 14, 2015|
 |10.00.5890.00|SP3| MS15-058: QFE Security Update| [3045303](https://support.microsoft.com/help/3045303)|July 14, 2015|
 |10.00.5869.00|SP3| MS14-044: QFE Security Update| [2984340](https://support.microsoft.com/help/2984340), [2977322](https://support.microsoft.com/help/2977322)|August 12, 2014|
-|10.00.5867.00|(on-demand update package)|| [2888996](https://support.microsoft.com/help/2888996), [2877204](https://support.microsoft.com/help/2877204), [2920987](https://support.microsoft.com/help/2920987)| |
+|10.00.5867.00|(on-demand update package)|| [2877204](https://support.microsoft.com/help/2877204)| |
 |10.00.5861.00|SP3|CU17| [2958696](https://support.microsoft.com/help/2958696)|May 19, 2014|
 |10.00.5852.00|SP3|CU16| [2936421](https://support.microsoft.com/help/2936421)|March 17, 2014|
 |10.00.5850.00|SP3|CU15| [2923520](https://support.microsoft.com/help/2923520)|January 20, 2014|
@@ -684,8 +677,6 @@ For more information, go to the following websites:
 |10.00.5794.00|SP3|CU7| [2738350](https://support.microsoft.com/help/2738350)|September 17, 2012|
 |10.00.5788.00|SP3|CU6| [2715953](https://support.microsoft.com/help/2715953)|July 16, 2012|
 |10.00.5785.00|SP3|CU5| [2696626](https://support.microsoft.com/help/2696626)|May 21, 2012|
-|10.00.5775.00|SP3|CU4| [2673383](https://support.microsoft.com/help/2673383)|March 19, 2012|
-|10.00.5770.00|SP3|CU3| [2648098](https://support.microsoft.com/help/2648098)|January 16, 2012|
 |10.00.5768.00|SP3|CU2| [2633143](https://support.microsoft.com/help/2633143)|November 21, 2011|
 |10.00.5766.00|SP3|CU1| [2617146](https://support.microsoft.com/help/2617146)|October 17, 2011|
 |10.00.5538.00|SP3| MS15-058: GDR Security Update| [3045305](https://support.microsoft.com/help/3045305)|July 14, 2015|
@@ -693,7 +684,6 @@ For more information, go to the following websites:
 |10.00.5512.00|SP3| MS12-070: GDR Security Update| [2716436](https://support.microsoft.com/help/2716436)|October 9, 2012|
 |10.00.5500.00| SP3| RTW / PCU 3| [2546951](https://support.microsoft.com/help/2546951)|October 6, 2011|
 |10.00.4371.00|SP2| MS12-070: QFE Security Update| [2716433](https://support.microsoft.com/help/2716433)|October 9, 2012|
-|10.00.4333.00|SP2|CU11| [2715951](https://support.microsoft.com/help/2715951)|July 16, 2012|
 |10.00.4332.00|SP2|CU10| [2696625](https://support.microsoft.com/help/2696625)|May 21, 2012|
 |10.00.4330.00|SP2|CU9| [2673382](https://support.microsoft.com/help/2673382)|March 19, 2012|
 |10.00.4326.00|SP2|CU8| [2648096](https://support.microsoft.com/help/2648096)|January 16, 2012|
@@ -703,7 +693,6 @@ For more information, go to the following websites:
 |10.00.4311.00|SP2| MS11-049: QFE Security Update| [2494094](https://support.microsoft.com/help/2494094)|June 14, 2011|
 |10.00.4285.00|SP2|CU4| [2527180](https://support.microsoft.com/help/2527180)|May 16, 2011|
 |10.00.4279.00|SP2|CU3| [2498535](https://support.microsoft.com/help/2498535)|March 17, 2011|
-|10.00.4272.00|SP2|CU2| [2467239](https://support.microsoft.com/help/2467239)|January 17, 2011|
 |10.00.4266.00|SP2|CU1| [2289254](https://support.microsoft.com/help/2289254)|November 15, 2010|
 |10.00.4067.00|SP2| MS12-070: GDR Security Update| [2716434](https://support.microsoft.com/help/2716434)|October 9, 2012|
 |10.00.4064.00|SP2| MS11-049: GDR Security Update| [2494089](https://support.microsoft.com/help/2494089)|June 14, 2011|
@@ -713,13 +702,8 @@ For more information, go to the following websites:
 |10.00.2841.0|SP1| MS11-049: QFE Security Update| [2494100](https://support.microsoft.com/help/2494100)|June 14, 2011|
 |10.00.2821.00|SP1|CU14| [2527187](https://support.microsoft.com/help/2527187)|May 16, 2011|
 |10.00.2816.00|SP1|CU13| [2497673](https://support.microsoft.com/help/2497673)|March 17, 2011|
-|10.00.2808.00|SP1|CU12| [2467236](https://support.microsoft.com/help/2467236)|January 17, 2011|
 |10.00.2804.00|SP1|CU11| [2413738](https://support.microsoft.com/help/2413738)|November 15, 2010|
-|10.00.2799.00|SP1|CU10| [2279604](https://support.microsoft.com/help/2279604)|September 20, 2010|
-|10.00.2789.00|SP1|CU9| [2083921](https://support.microsoft.com/help/2083921)|July 19, 2010|
 |10.00.2775.00|SP1|CU8| [981702](https://support.microsoft.com/help/981702)|May 17, 2010|
-|10.00.2766.00|SP1|CU7| [979065](https://support.microsoft.com/help/979065)|March 26, 2010|
-|10.00.2757.00|SP1|CU6| [977443](https://support.microsoft.com/help/977443)|January 18, 2010|
 |10.00.2746.00|SP1|CU5| [975977](https://support.microsoft.com/help/975977)|November 16, 2009|
 |10.00.2734.00|SP1|CU4| [973602](https://support.microsoft.com/help/973602)|September 21, 2009|
 |10.00.2723.00|SP1|CU3| [971491](https://support.microsoft.com/help/971491)|July 20, 2009|
@@ -728,12 +712,7 @@ For more information, go to the following websites:
 |10.00.2573.00|SP1| MS11-049: GDR Security update| [2494096](https://support.microsoft.com/help/2494096)|June 14, 2011|
 |10.00.2531.00| SP1| RTW / PCU 1||April  2009|
 |10.00.1835.00|RTM|CU10| [979064](https://support.microsoft.com/help/979064)|March 15, 2010|
-|10.00.1828.00|RTM|CU9| [977444](https://support.microsoft.com/help/977444)|January 18, 2010|
 |10.00.1823.00|RTM|CU8| [975976](https://support.microsoft.com/help/975976)|November 16, 2009|
-|10.00.1818.00|RTM|CU7| [973601](https://support.microsoft.com/help/973601)|September 21, 2009|
-|10.00.1812.00|RTM|CU6| [971490](https://support.microsoft.com/help/971490)|July 20, 2009|
-|10.00.1806.00|RTM|CU5| [969531](https://support.microsoft.com/help/969531)|May 18, 2009|
-|10.00.1798.00|RTM|CU4| [963036](https://support.microsoft.com/help/963036)|March 16, 2009|
 |10.00.1787.00|RTM|CU3| [960484](https://support.microsoft.com/help/960484)|January 19, 2009|
 |10.00.1779.00|RTM|CU2| [958186](https://support.microsoft.com/help/958186)|November 19, 2008|
 |10.00.1763.00|RTM|CU1| [956717](https://support.microsoft.com/help/956717)|September 22, 2008|
@@ -746,58 +725,24 @@ For more information, go to the following websites:
 |---|---|---|---|---|
 |9.00.5324|SP4| MS12-070: QFE Security update| [2716427](https://support.microsoft.com/help/2716427)|October 9, 2012|
 |9.00.5292|SP4| MS11-049: QFE Security update| [2494123](https://support.microsoft.com/help/2494123)|June 14, 2011|
-|9.00.5266|SP4|CU3| [2507769](https://support.microsoft.com/help/2507769)|March 22, 2011|
-|9.00.5259|SP4|CU2| [2489409](https://support.microsoft.com/help/2489409)|February 21, 2010|
-|9.00.5254|SP4|CU1| [2464079](https://support.microsoft.com/help/2464079)|December 23, 2010|
 |9.00.5069|SP4| MS12-070: GDR Security update| [2716429](https://support.microsoft.com/help/2716429)|October 9, 2012|
 |9.00.5057|SP4| MS11-049: GDR Security update| [2494120](https://support.microsoft.com/help/2494120)|June 14, 2011|
 |9.00.5000| SP4| RTW / PCU4||December 16, 2010|
-|9.00.4340|SP3| MS11-049: QFE Security update| [2494112](https://support.microsoft.com/help/2494112)|June 14, 2011|
-|9.00.4325|SP3|CU15| [2507766](https://support.microsoft.com/help/2507766)|March 22, 2011|
-|9.00.4317|SP3|CU14| [2489375](https://support.microsoft.com/help/2489375)|February 21, 2011|
-|9.00.4315|SP3|CU13| [2438344](https://support.microsoft.com/help/2438344)|December 20, 2010|
-|9.00.4311|SP3|CU12| [2345449](https://support.microsoft.com/help/2345449)|October 18, 2010|
 |9.00.4309|SP3|CU11| [2258854](https://support.microsoft.com/help/2258854)|August 16, 2010|
 |9.00.4305|SP3|CU10| [983329](https://support.microsoft.com/help/983329)|June 21, 2010|
-|9.00.4294|SP3|CU9| [980176](https://support.microsoft.com/help/980176)|April 19, 2010|
 |9.00.4285|SP3|CU8| [978915](https://support.microsoft.com/help/978915)|February 16, 2010|
-|9.00.4273|SP3|CU7| [976951](https://support.microsoft.com/help/976951)|December 21, 2009|
-|9.00.4266|SP3|CU6| [974648](https://support.microsoft.com/help/974648)|October 19, 2009|
-|9.00.4262|SP3| MS09-062: QFE Security update| [970894](https://support.microsoft.com/help/970894)|October 13, 2009|
 |9.00.4230|SP3|CU5| [972511](https://support.microsoft.com/help/972511)|August 17, 2009|
 |9.00.4226|SP3|CU4| [970279](https://support.microsoft.com/help/970279)|June 15, 2009|
-|9.00.4220|SP3|CU3| [967909](https://support.microsoft.com/help/967909)|April 20, 2009|
 |9.00.4211|SP3|CU2| [961930](https://support.microsoft.com/help/961930)|February 16, 2009|
-|9.00.4207|SP3|CU1| [959195](https://support.microsoft.com/help/959195)|December 19, 2008|
 |9.00.4060|SP3| MS11-049: GDR Security update| [2494113](https://support.microsoft.com/help/2494113)|June 14, 2011|
-|9.00.4053|SP3| MS09-062: GDR Security update| [970892](https://support.microsoft.com/help/970892)|October 13, 2009|
 |9.00.4035|SP3| RTW| [955706](https://support.microsoft.com/help/955706)|December 15, 2008|
-|9.00.3356|SP2|CU17| [976952](https://support.microsoft.com/help/976952)|December 21, 2009|
-|9.00.3355|SP2|CU16| [974647](https://support.microsoft.com/help/974647)|October 19, 2009|
-|9.00.3353|SP2| MS09-062: QFE Security update| [970896](https://support.microsoft.com/help/970896)|October 13, 2009|
-|9.00.3330|SP2|CU15| [972510](https://support.microsoft.com/help/972510)|August 17, 2009|
-|9.00.3328|SP2|CU14| [970278](https://support.microsoft.com/help/970278)|June 15, 2009|
 |9.00.3325|SP2|CU13| [967908](https://support.microsoft.com/help/967908)|April 20, 2009|
-|9.00.3315|SP2|CU12| [960485](https://support.microsoft.com/help/960485)|February 16, 2009|
-|9.00.3310|SP2| MS09-004: QFE Security update| [960090](https://support.microsoft.com/help/960090)|February 10, 2009|
-|9.00.3301|SP2|CU11| [958735](https://support.microsoft.com/help/958735)|December 15, 2008|
-|9.00.3294|SP2|CU10| [956854](https://support.microsoft.com/help/956854)|October 21, 2008|
-|9.00.3282|SP2| MS08-052: Security update| [954607](https://support.microsoft.com/help/954607)|September 9, 2008|
 |9.00.3282|SP2|CU9| [953752](https://support.microsoft.com/help/953752)|August 18, 2008|
 |9.00.3257|SP2|CU8| [951217](https://support.microsoft.com/help/951217)|June 16, 2008|
 |9.00.3239|SP2|CU7| [949095](https://support.microsoft.com/help/949095)|April 14, 2008|
-|9.00.3233|SP2| MS08-040: QFE Security update| [948108](https://support.microsoft.com/help/948108)|July 8, 2008|
-|9.00.3228|SP2|CU6| [946608](https://support.microsoft.com/help/946608)|February 18, 2008|
-|9.00.3215|SP2|CU5| [943656](https://support.microsoft.com/help/943656)|December 17, 2007|
-|9.00.3200|SP2|CU4| [941450](https://support.microsoft.com/help/941450)|October 15, 2007|
-|9.00.3186|SP2|CU3| [939537](https://support.microsoft.com/help/939537)|August 20, 2007|
-|9.00.3175|SP2|CU2| [936305](https://support.microsoft.com/help/936305)|June 18, 2007|
-|9.00.3161|SP2|CU1| [935356](https://support.microsoft.com/help/935356)|April 16, 2007|
-|9.00.3152|SP2|Rollup| [933097](https://support.microsoft.com/help/933097)|May 15, 2007|
 |9.00.3080|SP3| MS09-062: GDR Security update| [970895](https://support.microsoft.com/help/970895)|October 13, 2009|
 |9.00.3077|SP4| MS09-004: GDR Security update| [960089](https://support.microsoft.com/help/960089)|February 10, 2009|
 |9.00.3073|SP5| MS08-052: GDR Security update| [954606](https://support.microsoft.com/help/954606)|September 9, 2008|
-|9.00.3068|SP6| MS08-040: GDR Security update| [948109](https://support.microsoft.com/help/948109)|July 8, 2008|
 |9.00.3042| SP2|| [937137](https://support.microsoft.com/help/937137)| |
 |9.00.2047| SP1||| |
 |9.00.1399| RTM||| |
@@ -837,8 +782,6 @@ Use the version number in the following table to identify the product or service
 |7.00.699|SQL Server 7.0 Service Pack 1|
 |7.00.623|SQL Server 7.0 RTM|
 |||
-
-For more information, click the following article number to go to the article in the Microsoft Knowledge Base: [301511](https://support.microsoft.com/help/301511) How to obtain the latest SQL Server 7.0 service pack
 
 ### SQL Server 6.5
 
