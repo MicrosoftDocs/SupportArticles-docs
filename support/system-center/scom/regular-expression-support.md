@@ -68,25 +68,19 @@ Expression filters that are used in management packs use .NET Framework regex ex
 
 Search for one match containing `string1`:
 
-```csharp
-^(string1)$
-```
+`^(string1)$`
 
 ### Example 2
 
 Search for the two matches containing either `string1` or `string2`:
 
-```csharp
-^(string1)|^(string2)$
-```
+`^(string1)|^(string2)$`
 
 ### Example 3
 
 Search for any paths located in the two locations `/var/lib/string1/*` and `/var/lib/string2/*`:
 
-```csharp
-^(\/var\/lib\/string1\/.*)|^(\/var\/lib\/string2\/.*)$
-```
+`^(\/var\/lib\/string1\/.*)|^(\/var\/lib\/string2\/.*)$`
 
 ## Regular expressions via SDK
 
