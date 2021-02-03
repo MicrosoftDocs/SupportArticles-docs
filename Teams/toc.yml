@@ -46,6 +46,8 @@
       href: ./known-issues/channel-cannot-be-recreated-after-deletion.md
     - name: Channel notifications settings don't update
       href: ./known-issues/notifications-cannot-manage.md
+    - name: Logon re-enabled user doesn't see previous joined teams
+      href: ./channels/logon-reenabled-user-not-see-previous-joined-teams.md
     - name: Rename a channel doesn't rename the corresponding folder
       href: ./known-issues/renaming-channel-does-not-rename-folder-sharepoint.md
   - name: Conferencing
