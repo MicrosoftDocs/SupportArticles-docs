@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot Azure AD Connect objects and attributes
 description: Describes how to determine why an object is not syncing in Azure AD.
-ms.date: 1/11/2021
+ms.date: 2/3/2021
 ms.prod-support-area-path: 
-ms.reviewer: jarrettr
+ms.reviewer: nualex
 ---
 
 # End-to-end troubleshooting of Azure AD Connect objects and attributes
@@ -18,22 +18,51 @@ Following the instructions in this article will allow you to:
 
 Over time, as you apply this troubleshooting method to your environment, you’ll be able to:
 
-- Identify the issues more quickly because you will predict the step in, which the issue will occur
+- Identify the issues more quickly because you will predict the step in which the issue will occur
 - Determine where the starting point might be to review the data
 - Determine the optimal resolution
 
 :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/aad-connect-flow-chart.png" alt-text="AAD Connect flow chart.":::
 
-For learning purposes, the steps presented here start on local Active Directory (AD) and move all the way up to Azure AD since this situation is the common direction of synchronization. However, the same principals apply to the inverse direction. (For instance, in attribute writeback issues.)
+For learning purposes, the steps presented here start on local Active Directory (AD) and move all the way up to Azure AD since this is the most common direction of synchronization. However, the same principals apply to the inverse direction (with attribute writeback, for instance).
 
 
 ## Prerequisites
 
 For a better understanding of this article, read the following prerequisite articles first as you will need to understand how to search for an object in the different sources (AD, AD CS, MV, etc.), and you will also need to know how to check the Connectors and Lineage of an object.
 
-- [Azure AD Connect: Accounts and permissio](https://docs.microsoft.com/azure/active-directory/hybrid/reference-connect-accounts-permissions)ns
+- [Azure AD Connect: Accounts and permissions](https://docs.microsoft.com/azure/active-directory/hybrid/reference-connect-accounts-permissions)
 - [Troubleshoot an object that is not synchronizing with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/tshoot-connect-object-not-syncing) 
 - [Troubleshoot object synchronization with Azure AD Connect sync](https://docs.microsoft.com/azure/active-directory/hybrid/tshoot-connect-objectsync)
+
+## Bad Troubleshooting Practice
+
+There is a flag in Azure AD called DirSyncEnabled that controls whether the tenant is prepared to accept synchronization of objects from on-premises AD.
+Based on Microsoft Support experience, we have seen many Customers falling into the urge of disabling DirSync on the tenant while troubleshooting object or attribute synchronization issues. It is very easy to turn off directory synchronization with a PowerShell cmdlet:
+
+``` PowerShell
+Set-MsolDirSyncEnabled -EnableDirSync $false "Please DON'T and keep reading!"
+```
+
+However, this can be catastrophic as it triggers a complex and lengthy backend operation to transfer SoA from local AD to Azure AD/Exchange Online for all the synced objects on the tenant. This operation is necessary to convert each object from DirSyncEnabled to cloud-only and clean up all the shadow properties synced from on-premises AD (e.g. ShadowUserPrincipalName, ShadowProxyAddresses, etc). Depending on the size of the tenant this operation can take more than 72 hours and it’s not possible to predict when it’s done. Never use this method to troubleshoot a sync issue as this will cause more harm and does not fix anything. You will be blocked from enabling DirSync again until this disabling operation is complete and, after re-enabling DirSync, AADC will have to re-match all the on-premises objects with existent Azure AD objects which can be disruptive.
+The only scenarios where it’s supported to disable DirSync are:
+
+-	You are decommissioning your on-premises synchronization server and you want to continue managing your identities entirely from the cloud. Meaning, moving from hybrid identities to cloud-only.
+-	You have some synced objects in the tenant that you want to keep as cloud-only in Azure AD and remove them from on-premises AD permanently.
+-	You are currently using a custom attribute as the SourceAnchor in AADC (e.g. employeeId) and you are re-installing AADC to start using ms-Ds-Consistency-Guid/ObjectGuid as the new SourceAnchor attribute (or vise-versa).
+-	Some scenarios involving risky mailbox/tenant migration strategies.
+
+You might need in some situations to temporarily stop synchronization or manually control AADC sync cycles, for instance, to run one sync step at a time. But instead of disabling DirSync, you can just stop the sync scheduler with the following cmdlet:
+
+``` PowerShell
+Set-ADSyncScheduler -SyncCycleEnabled $false
+```
+
+And when you’re ready, manually start a sync cycle with the following cmdlet:
+
+``` PowerShell
+Start-ADSyncSyncCycle
+```
 
 ## Glossary
 
@@ -70,10 +99,10 @@ Synchronization between ADDS and ADCS occurs at the import step, which is the mo
 
 If the connection with AD is successful, but the object or attribute is not present in ADCS (assuming the domain or object is in sync scope), then it is most likely an ADDS permission issue. The ADCA needs to have read permissions (at minimum ) over the object in AD in order to import data to ADCS. By default, the MSOL account has explicit read/write permissions for all user, group, and computer properties, but this situation might still be a problem if:
 
-- AADC is using a custom ADCA but was not provided enough permissions
+- AADC is using a custom ADCA but was not provided with enough permissions in AD
 - A parent OU has blocked inheritance, which prevents propagation of permissions from the root of the domain
 - The object or attribute itself has blocked inheritance, which prevents propagation of permissions
-- The object or attribute has an explicit Deny ACL attribute that prevents ADCA from reading it
+- The object or attribute has an explicit Deny permission that prevents ADCA from reading it
 
 ### Troubleshooting
 
@@ -89,15 +118,17 @@ Connection issues to ADDS can be caused by:
 
 - Invalid AD credentials, for instance, if the ADCA has expired or the password has changed.
 - A “failed-search” error occurs when DirSync Control fails to communicate with AD Replication Service, which is normally caused by high-network packet fragmentation.
-- Other problems caused by name resolution issues, network routing problems, blocked network ports, no writable DCs available, etc. In these cases, it is better to have Directory Services or Networking support teams involved.
+- A “no-start-ma” error occurs when there are name resolution issues (DNS) in AD
+- Many other problems can caused by name resolution issues, network routing problems, blocked network ports, high network packet fragmentation, no writable DCs available, etc. So in such cases, it is necessary to have Directory Services or Networking support teams involved to help troubleshooting the issue.
 
 **Troubleshooting Summary**
 
 - Identify, which DC is being used
+- Use preferred DCs to target the same DC
 - Correctly identify the ADCA
 - Use the ADConnectivityTool to identify the problem
 - Using the LDP tool, try to bind against the DC with the ADCA
-- Engage Directory Services or a network support team
+- Engage Directory Services or a network support team to help you troubleshoot the situation
 
 #### 2. Run the Synchronization Troubleshooter
 
@@ -152,6 +183,7 @@ The best way to troubleshoot permissions is to use the "Effective Access" featur
 **Troubleshooting summary**
 
 - Identify, which DC is being used
+- Use preferred DCs to target the same DC
 - Correctly identify the ADCA
 - Use the [Configure AD DS Connector Account Permissions](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-configure-ad-ds-connector-account) tool
 - Use the "Effective Access" feature in AD Users and Computers
@@ -405,7 +437,7 @@ The synchronization between MV and AADCS occurs on the delta/full synchronizatio
 
 4. Export the object to XML
 
-    For a more detailed analysis (or for offline analysis), you can collect all the database data related to the object by using the **Export-ADSyncObject** script. This exported information, together with the (outbound) sync rules configuration from ASC, will help determine, which rule is filtering out the object, i.e., which outbound scoping filter in the provisioning sync rules is preventing the object from connecting with the AADCS.
+    For a more detailed analysis (or for offline analysis), you can collect all the database data related to the object by using the **Export-ADSyncObject** script. This exported information, together with the (outbound) sync rules configuration, will help determine, which rule is filtering out the object, i.e., which outbound scoping filter in the provisioning sync rules is preventing the object from connecting with the AADCS.
 
     Here are some examples of **Export-ADsyncObject** syntax:
 
@@ -416,7 +448,7 @@ The synchronization between MV and AADCS occurs on the delta/full synchronizatio
 
 **Troubleshooting summary for objects**
 
-- Check the scoping filters on the inbound provisioning rules "Out to AAD"
+- Check the scoping filters on the outbound provisioning rules "Out to AAD"
 - Create a preview of the object
 - Run a full sync cycle
 - Export the object data with the **Export-ADSyncObject** script
@@ -449,7 +481,7 @@ The synchronization between MV and AADCS occurs on the delta/full synchronizatio
 
 5. **Export the object to XML**
 
-    For a more detailed analysis (or for offline analysis), you can collect all the database data related to the object by using the Export-ADSyncObject script. This exported information, together with the (outbound) sync rules configuration from ASC, will help determine what sync rule or transformation rule missing from the object is preventing the attribute from flowing to AADCS (see Export-ADSyncObject examples above).
+    For a more detailed analysis (or for offline analysis), you can collect all the database data related to the object by using the Export-ADSyncObject script. This exported information, together with the (outbound) sync rules configuration, will help determine what sync rule or transformation rule missing from the object is preventing the attribute from flowing to AADCS (see Export-ADSyncObject examples above).
 
 ### Troubleshooting summary for attributes
 
@@ -464,7 +496,6 @@ The synchronization between MV and AADCS occurs on the delta/full synchronizatio
 If you need to further debug the ADSync engine (also known as the MiiServer) in terms of sync rule processing, you can enable ETW tracing on the config file (C:\Program Files\Microsoft Azure AD Sync\Bin\miiserver.exe.config). This method will generate an extensive verbose text file showing all the processing of sync rules, but it may be difficult to interpret all of the information. Use it as a last resort or if indicated by Microsoft Support.
 
 ### Tools
-- ASC
 - Synchronization Service Manager UI
 - Synchronization Rules Editor
 - Export-ADsyncObject script
@@ -486,7 +517,7 @@ There are multiple components involved in the process of importing or exporting 
 - Internal firewalls and ISP connectivity problems (e.g., blocked network traffic)
 - The Azure AD Gateway in front of DirSync Webservice (also known as, the AdminWebService endpoint)
 - The DirSync Webservice API itself
-- The Azure AD Core directory service (also known as, service-side issues)
+- The Azure AD Core directory service
 
 Fortunately, the issues related to these components will most certainly generate an error in application event logs that can be traced by Microsoft Support so it is out of scope for this document. Nevertheless, there are still some "silent" issues that can be examined.
 
@@ -494,7 +525,7 @@ Fortunately, the issues related to these components will most certainly generate
 
 - **Multiple Active AADC servers exporting to AAD**
 
-    A typical cause for objects in Azure AD flipping attribute values back and forth is when there's more than one active AADConnect server, and one of these servers has lost contact with the local AD but is still connected to the internet and able to connect to Azure AD. Therefore, every time this "stale" server imports a change from AAD on a synchronized object made by the other active server, the sync engine will revert that change based on the stale AD data present in the ADCS.
+    A typical cause for objects in Azure AD flipping attribute values back and forth is when there's more than one active AADConnect server, and one of these servers lost contact with the local AD but is still connected to the internet and able to export data to Azure AD. Therefore, every time this "stale" server imports a change from AAD on a synchronized object made by the other active server, the sync engine will revert that change based on the stale AD data present in the ADCS. A typical symptom in this scenario occurs when you make a change in AD that is synced to Azure AD but a few minutes later (up to 30 minutes) the change is reverted back to the original value. To quickly mitigate this problem, go back to any old servers or virtual machines that have been decommissioned and check if the ADSync service is still running.
 
 
 - **Mobile attribute with DirSyncOverrides**
@@ -545,12 +576,9 @@ Fortunately, the issues related to these components will most certainly generate
  
 ### Tools
 
-
-- Get-AzureAD\<object type>
+- Get-AzureADUser -ObjectId \<UserPrincipalName> | Out-File
 - [AD Photo Edit tool](http://www.cjwdev.com/Software/ADPhotoEdit/Info.html) 
 - [Get-AzureADUserThumbnailPhoto](https://docs.microsoft.com/powershell/module/azuread/get-azureaduserthumbnailphoto?view=azureadps-2.0) 
 - LDIFDE
 - Get-ADUser -Identity \<username> | Out-File
-- DSExplorer (requires a Solution authoring workspace (SAW) machine)
 - AADConnector PowerShell Module (Decode AAD DN)
-
