@@ -37,4 +37,4 @@ To work around this issue on versions 42 to 44 of Chrome, follow these steps:
 1. Reopen the Silverlight page.
 1. Right-click the broken puzzle piece image, and then select **Run this Plugin**.
 
-[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
