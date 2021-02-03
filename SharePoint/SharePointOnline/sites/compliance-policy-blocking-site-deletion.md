@@ -69,4 +69,4 @@ If you're an administrator, and you're unable to delete the site:
 
 ## More information
 
-Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
+Still need help? Go to the [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
