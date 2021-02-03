@@ -67,6 +67,30 @@
   items:
   - name: Administration and Management
     items:
+    - name: SQL Server startup issues
+      items:
+      - name: SQL Server startup errors
+        href: admin/sql-server-startup-errors.md
+      - name: Access is denied error and SQL Server doesn't start
+        href: admin/event-id-7000-access-denied.md
+      - name: Error 17113 when you start SQL Server service
+        href: admin/error-17113-start-service.md
+      - name: Error 17182 when you start SQL Server service
+        href: admin/error-17182-protocols-disabled-start-failure.md
+      - name: Error 1068 when starting SQL Server
+        href: admin/agent-service-fails-start-stand-alone-server.md
+      - name: Error 1069 when starting SQL Server
+        href: admin/error-password-service-account-changed.md
+      - name: Event ID 17058 and SQL Server doesn't start
+        href: admin/event-id-17058-start-sql-server.md
+      - name: Event ID 1814 and SQL Server doesn't start
+        href: admin/event-id-1814-fail-start.md
+      - name: Event ID 33565 and SQL Server doesn't start
+        href: admin/event-id-33565-start-sql-server.md
+      - name: Event ID 33566 and SQL Server doesn't start
+        href: admin/event-id-33566-start-sql-server.md
+      - name: Event ID 7000 and SQL Server doesn't start
+        href: admin/event-id-7000-fail-start.md
     - name: 1450 and 665 errors when running DBCC
       href: admin/1450-and-665-errors-running-dbcc.md
     - name: 17053 and 926 errors when running DBCC
@@ -173,30 +197,6 @@
       href: admin/virtual-host-driver-lead-data-consistency.md
     - name: Words are not returned by an English word breaker
       href: admin/words-not-returned-by-english-word-breaker.md
-    - name: SQL Server startup issues
-      items:
-      - name: SQL Server startup errors
-        href: admin/sql-server-startup-errors.md
-      - name: Access is denied error and SQL Server doesn't start
-        href: admin/event-id-7000-access-denied.md
-      - name: Error 17113 when you start SQL Server service
-        href: admin/error-17113-start-service.md
-      - name: Error 17182 when you start SQL Server service
-        href: admin/error-17182-protocols-disabled-start-failure.md
-      - name: Error 1068 when starting SQL Server
-        href: admin/agent-service-fails-start-stand-alone-server.md
-      - name: Error 1069 when starting SQL Server
-        href: admin/error-password-service-account-changed.md
-      - name: Event ID 17058 and SQL Server doesn't start
-        href: admin/event-id-17058-start-sql-server.md
-      - name: Event ID 1814 and SQL Server doesn't start
-        href: admin/event-id-1814-fail-start.md
-      - name: Event ID 33565 and SQL Server doesn't start
-        href: admin/event-id-33565-start-sql-server.md
-      - name: Event ID 33566 and SQL Server doesn't start
-        href: admin/event-id-33566-start-sql-server.md
-      - name: Event ID 7000 and SQL Server doesn't start
-        href: admin/event-id-7000-fail-start.md
   - name: Client Application Development
     items:
     - name: Can't uninstall ODBC driver completely
