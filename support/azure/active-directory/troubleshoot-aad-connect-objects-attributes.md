@@ -578,7 +578,7 @@ Fortunately, the issues related to these components will most certainly generate
 
 - Get-AzureADUser -ObjectId \<UserPrincipalName> | Out-File
 - [AD Photo Edit tool](http://www.cjwdev.com/Software/ADPhotoEdit/Info.html) 
-- [Get-AzureADUserThumbnailPhoto](https://docs.microsoft.com/powershell/module/azuread/get-azureaduserthumbnailphoto?view=azureadps-2.0) 
+- [Get-AzureADUserThumbnailPhoto](https://docs.microsoft.com/powershell/module/azuread/get-azureaduserthumbnailphoto) 
 - LDIFDE
 - Get-ADUser -Identity \<username> | Out-File
 - AADConnector PowerShell Module (Decode AAD DN)
