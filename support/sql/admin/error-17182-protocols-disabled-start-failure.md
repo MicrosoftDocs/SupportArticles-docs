@@ -21,7 +21,7 @@ If all network protocols for a Microsoft SQL Server instance are disabled, SQL S
 
 - By using a command prompt:
 
-  > C:\Users\arcadmin>NET START MSSQLSERVER  
+  > C:\Users\username>NET START MSSQLSERVER  
   > The SQL Server (MSSQLSERVER) service is starting.  
   > The SQL Server (MSSQLSERVER) service could not be started.  
   > A service specific error occurred: 13.  
