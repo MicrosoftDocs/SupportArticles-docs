@@ -90,7 +90,7 @@ To work around this problem, follow these steps to make correct configuration ch
 16. On the **DPMReporterDataSource** configuration page, follow these steps:
 
     1. Select the **Using the following credentials** option.
-    2. Change the **Type of credentials** list selection  to **Windows user name and password**.
+    2. Change the **Type of credentials** list selection to **Windows user name and password**.
     3. Add the **DPMR$\<*DPMServerName*>** user account and password that you created in step 2.
     4. Select **Test connection** to determine whether the server can connect successfully.
     5. Select **Apply**.

@@ -205,7 +205,7 @@ The scheduled jobs might be disabled in SQL Server. To check and enable the jobs
 
 1. In SQL Server Management Studio, connect to the SQL Server instance for DPM, and then run the SQL query that's mentioned in the previous section to find the list of scheduled jobs.
 
-1. Expand **SQL Server Agent**  > **Jobs**. Compare the jobs that are listed there with the output from the SQL query that you ran in step 1. If a job from the query is listed as **Disabled** (arrow pointing down), right-click the job, select **Enable**, and then run the job manually from SQL Server by following the steps that are mentioned in the [Run the job manually at a command prompt](#run-the-job-manually-at-a-command-prompt) section.
+1. Expand **SQL Server Agent** > **Jobs**. Compare the jobs that are listed there with the output from the SQL query that you ran in step 1. If a job from the query is listed as **Disabled** (arrow pointing down), right-click the job, select **Enable**, and then run the job manually from SQL Server by following the steps that are mentioned in the [Run the job manually at a command prompt](#run-the-job-manually-at-a-command-prompt) section.
 
     ![enable job](./media/troubleshoot-scheduled-backup-job-failures/check-enable-jobs.png)
 

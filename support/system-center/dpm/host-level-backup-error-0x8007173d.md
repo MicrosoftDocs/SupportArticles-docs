@@ -16,20 +16,20 @@ _Original KB number:_ &nbsp; 2549533
 
 When using System Center Data Protection Manager (DPM) 2010 to perform a host level backup of guests located on a CSV in Windows Server 2008 Hyper-V cluster, some recovery point jobs fail intermittently with one or more of the following errors:
 
-> Type:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recovery point  
-Status:&nbsp;&nbsp;&nbsp; Failed  
+> Type:&nbsp;&nbsp;&nbsp;&nbsp;Recovery point  
+Status:&nbsp;&nbsp;Failed  
 Description:&nbsp;&nbsp;&nbsp;Failed to prepare a Cluster Shared Volume (CSV) for backup as another backup using the same CSV is in progress. (ID 32612 Details: Backup is in progress. Please wait for backup completion before trying this operation again (0x8007173D))  
 More information  
 End time:  
 Start time:  
 Time elapsed:  
 Data transferred:&nbsp;&nbsp; 0 MB  
-Cluster node&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N2-HyperV.contoso.COM  
-Recovery Point Type：&nbsp;&nbsp;&nbsp;Express Full  
-Source details:&nbsp;\Backup Using Child Partition Snapshot\Hyper-V Guest Name  
-Protection group: &nbsp;&nbsp;&nbsp;PG-NAME
+Cluster node&nbsp;&nbsp;&nbsp;N2-HyperV.contoso.COM  
+Recovery Point Type&nbsp;&nbsp;&nbsp;Express Full  
+Source details:&nbsp; \Backup Using Child Partition Snapshot\Hyper-V Guest Name  
+Protection group:&nbsp;&nbsp;&nbsp;PG-NAME
 
-> Type:&nbsp;&nbsp;&nbsp;&nbsp; Recovery point  
+> Type:&nbsp;&nbsp;&nbsp;&nbsp;Recovery point  
 Status:&nbsp; Failed  
 Description:&nbsp;&nbsp;&nbsp;An unexpected error occurred while the job was running. (ID 104 Details: The cluster resource could not be found (0x8007138F))  
 More information  
@@ -37,8 +37,8 @@ End time:
 Start time:  
 Time elapsed:&nbsp;&nbsp;&nbsp; 00:07:34  
 Data transferred:&nbsp;&nbsp;&nbsp;0 MB  
-Cluster node:&nbsp;&nbsp;&nbsp;N2-HyperV.contoso.COM  
-Recovery Point Type:&nbsp;&nbsp;&nbsp;Express Full  
+Cluster node&nbsp;&nbsp;&nbsp;N2-HyperV.contoso.COM  
+Recovery Point Type&nbsp;&nbsp;&nbsp;Express Full  
 Source details:&nbsp; \Backup Using Child Partition Snapshot\Hyper-V Guest Name  
 Protection group:&nbsp;&nbsp;&nbsp;PG-NAME
 
@@ -84,7 +84,7 @@ If you continue to see the 0x8007173D errors, investigate further using this pro
 3. From a command prompt, run the following command:
 
     ```console
-    Findstr /S "vsssnapshotrequestor.cpp(170) vsssnapshotrequestor.cpp(390) vsssnapshotrequestor.cpp(424) csvapi.cpp(400)  vsssnapshotrequestor.cpp(585) hypervwriterhelperplugin.cpp(960) datasetfixupsubtaskbase.cpp(227) vsssnapshotrequestor.cpp(1111) freesnapshotsubtask.cpp(671)"<DPMRA>.errlog >ALL-BACKUP-START-FINISH.TXT
+    Findstr /S "vsssnapshotrequestor.cpp(170) vsssnapshotrequestor.cpp(390) vsssnapshotrequestor.cpp(424) csvapi.cpp(400) vsssnapshotrequestor.cpp(585) hypervwriterhelperplugin.cpp(960) datasetfixupsubtaskbase.cpp(227) vsssnapshotrequestor.cpp(1111) freesnapshotsubtask.cpp(671)" <DPMRA>.errlog > ALL-BACKUP-START-FINISH.TXT
     ```
 
 Open the ALL-BACKUP-START-FINISH.TXT text file in notepad and remove any entries not within the time period of the Hyper-V backup times. You can see the order of the backups and the CSV retry attempts.
@@ -101,7 +101,7 @@ N1-DPMRACurr.errlog:0CF4  9-May 4:01:07 PM datasetfixupsubtaskbase.cpp(227)  NOR
 N1-DPMRACurr.errlog:0CF4  9-May 4:10:11 PM vsssnapshotrequestor.cpp(1111)    NORMAL CVssSnapshotRequestor::StartBackupComplete  
 N1-DPMRACurr.errlog:0CF4  9-May 4:10:19 PM freesnapshotsubtask.cpp(671)      NORMAL CFreeSnapshotSubTask: ReleaseSnapshot  
 
-### Example of failed backup even after four retries `CsvMaxRetryAttempt` = 3 and `CsvAttemptWaitTime` =  3 minutes
+### Example of failed backup even after four retries `CsvMaxRetryAttempt` = 3 and `CsvAttemptWaitTime` = 3 minutes
 
 > N2-DPMRACurr.errlog:0900  9-May 4:00:40 PM vsssnapshotrequestor.cpp(170) NORMAL                    CVssSnapshotRequestor::InitializeSnapshotCreation  
 N2-DPMRACurr.errlog:0900  9-May 4:00:45 PM vsssnapshotrequestor.cpp(390) NORMAL    CVssSnapshotRequestor: AddVolumeForSnapshot - Marked volume C:\ClusterStorage\Volume1\ to be snapshot  
@@ -121,7 +121,7 @@ To change the default auto retry interval and count, you can adjust the followin
 > [!NOTE]
 > These will affect all DPM jobs, not just Hyper-V Guest backup jobs.
 
-- `AutoRerunDelay` - The delay in time in minutes before which DPM will attempt to automatically rerun failed jobs. If multiple reruns are configured, this is the gap between the reruns as well.  The value of 0x3c = 60 minutes.
+- `AutoRerunDelay` - The delay in time in minutes before which DPM will attempt to automatically rerun failed jobs. If multiple reruns are configured, this is the gap between the reruns as well. The value of 0x3c = 60 minutes.
 - `AutoRerunNumberOfAttempts` - The number of times a failed job will be retried before giving up if it consistently fails. Default is one. Increasing this value may increase the load on your system. The reruns are done at the gap of `AutoRerunDelay`.
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Data Protection Manager\Configuration`

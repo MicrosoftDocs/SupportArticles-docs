@@ -53,7 +53,7 @@ The order of networks for this setting is initially configured based on the **Cl
 
 What you would need to do is add at least one additional network that can be used for the CSV redirected mode. Once you add the additional network, you should change the metrics so that you can configure which is used for CSV traffic.
 
-For example, say you added a new network with no default gateway and called it **CSV-LM Cluster**.  Cluster will automatically assign it a metric. This looks like below.
+For example, say you added a new network with no default gateway and called it **CSV-LM Cluster**. Cluster will automatically assign it a metric. This looks like below.
 
 ```powershell
 Get-ClusterNetwork | FT Name, Metric, Role
