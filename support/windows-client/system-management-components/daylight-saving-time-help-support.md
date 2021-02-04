@@ -12,6 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Help and Support
 ms.technology: windows-client-system-management-components
+adobe-target: true
 ---
 # Daylight saving time help and support
 
