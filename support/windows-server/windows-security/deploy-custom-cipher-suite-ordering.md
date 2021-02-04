@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4032720
 
 ## Summary
 
-To deploy your own cipher suite ordering for Schannel in Windows, you must prioritize cipher suites that are compatible with HTTP/2 by listing these first. Cipher suites that are on the HTTP/2 ([RFC 7540](https://tools.ietf.org/html/rfc7540)) block list must appear at the bottom of your list. For example:
+To deploy your own cipher suite ordering for Schannel in Windows, you must prioritize cipher suites that are compatible with HTTP/2 by listing these first. Cipher suites that are on the HTTP/2 ([RFC 7540](https://tools.ietf.org/html/rfc7540)) block list must appear at the bottom of your list. For example:
 
 Cipher block chaining (CBC) mode cipher suites:
 
@@ -36,7 +36,7 @@ Non-PFS (perfect forward secrecy) cipher suites:
 - TLS_RSA_WITH_AES_256_GCM_SHA384
 - TLS_RSA _WITH_AES_128_GCM_SHA256
 
-If the cipher suites that are on the block list are listed toward the top of your list, HTTP/2 clients and browsers may be unable to negotiate any HTTP/2-compatible cipher suite. This results in a failure to use the protocol.
+If the cipher suites that are on the block list are listed toward the top of your list, HTTP/2 clients and browsers may be unable to negotiate any HTTP/2-compatible cipher suite. This results in a failure to use the protocol.
 
 For example, when you use Chrome, you may receive the error ERR_SPDY_INADEQUATE_TRANSPORT_SECURITY.
 

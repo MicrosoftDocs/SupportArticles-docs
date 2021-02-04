@@ -28,11 +28,11 @@ Windows clients log the details of domain join operations in the %windir%\\debug
 
 ### Error 1
 
-> An attempt to resolve the DNS name of a DC in the domain being joined has failed. Please verify this client is configured to reach a DNS server that can resolve DNS names in the target domain.
+> An attempt to resolve the DNS name of a DC in the domain being joined has failed. Please verify this client is configured to reach a DNS server that can resolve DNS names in the target domain.
 
 #### Resolution
 
-When you type the domain name, make sure that you type the Domain Name System (DNS) name and not the Network Basic Input/Output System (NetBIOS) name. For example, if the DNS name of the target domain is `contoso.com`, make sure that you enter `contoso.com` instead of the NetBIOS domain name of "contoso."
+When you type the domain name, make sure that you type the Domain Name System (DNS) name and not the Network Basic Input/Output System (NetBIOS) name. For example, if the DNS name of the target domain is `contoso.com`, make sure that you enter `contoso.com` instead of the NetBIOS domain name of "contoso."
 
 Additionally, verify that the computer can reach a DNS server that hosts the DNS zone of the target domain or can resolve DNS names in that domain. Make sure that the correct DNS server is configured on this client as the preferred DNS, and that the client has connectivity to that server. To verify this, you can run one of the following commands:
 
@@ -50,7 +50,7 @@ nltest /dsgetdc:<DNS domain name>/force
 
 #### Resolution
 
-When you type the domain name, make sure that you type the DNS name and not the NetBIOS name.
+When you type the domain name, make sure that you type the DNS name and not the NetBIOS name.
 
 Additionally, verify that the computer can reach a DNS server that hosts the DNS zone of the target domain or can resolve DNS names in that domain. Make sure that the correct DNS server is configured on this client as the preferred DNS, and that the client has connectivity to that server. To verify this, you can run one of the following commands:
 
@@ -68,7 +68,7 @@ nltest /dsgetdc:<DNS domain name>/force
 
 #### Resolution
 
-When you type the domain name, make sure that you type the DNS name and not the NetBIOS name.
+When you type the domain name, make sure that you type the DNS name and not the NetBIOS name.
 Additionally, restart the computer before you try to join the computer to the domain.
 
 ### Error 4
@@ -79,7 +79,7 @@ Additionally, restart the computer before you try to join the computer to the do
 
 Restart the computer that you are trying to join to the domain to make sure that there are no latent connections to any of the domain servers.
 
-When you type the domain name, make sure that you type the DNS name and not the NetBIOS name.
+When you type the domain name, make sure that you type the DNS name and not the NetBIOS name.
 
 ### Error 5
 
@@ -97,7 +97,7 @@ nltest /dsgetdc:<netbios domain name>/force
 nltest /dsgetdc:<DNS domain name>/force
 ```
 
-When you type the domain name, make sure that you type the DNS name and not the NetBIOS name.
+When you type the domain name, make sure that you type the DNS name and not the NetBIOS name.
 
 Additionally, you can update the network adapter driver.
 
@@ -111,9 +111,9 @@ Before joining the computer to the domain, make sure that you have cleared all m
 
 Restart the computer that you are trying to join to the domain to make sure that there are no latent connections to any of the domain servers.
 
-When you type the domain name, make sure that you type the DNS name and not the NetBIOS name.
+When you type the domain name, make sure that you type the DNS name and not the NetBIOS name.
 
-The error may be transient. Try again later. If the issue persists, verify the status of the DC that the client is connecting to (active connections, network connectivity, and so on). You may want to restart the DC if the issue persists.
+The error may be transient. Try again later. If the issue persists, verify the status of the DC that the client is connecting to (active connections, network connectivity, and so on). You may want to restart the DC if the issue persists.
 
 ### Error 7
 
@@ -131,7 +131,7 @@ nltest /dsgetdc:<netbios domain name>/force
 nltest /dsgetdc:<DNS domain name>/force
 ```
 
-When you type the domain name, make sure that you type the DNS name and not the NetBIOS name. Make sure that you have the most up-to-date drivers installed for the client computer's network adapter. Verify connectivity between the client that is being joined and the target DC over the required ports and protocols. Disable the **TCP** **Chimney**  offload feature and IP offloading.
+When you type the domain name, make sure that you type the DNS name and not the NetBIOS name. Make sure that you have the most up-to-date drivers installed for the client computer's network adapter. Verify connectivity between the client that is being joined and the target DC over the required ports and protocols. Disable the **TCP** **Chimney**  offload feature and IP offloading.
 
 ### Error 8
 
@@ -139,12 +139,12 @@ When you type the domain name, make sure that you type the DNS name and not the
 
 #### Resolution
 
-Make sure that the DC that hosts the relative ID (RID) operations master is online and functional. For more information, see [Event ID 16650: The account-identifier allocator failed to initialize in Windows Server](/troubleshoot/windows-server/identity/event-16650-account-identifier-allocator-not-initialize).
+Make sure that the DC that hosts the relative ID (RID) operations master is online and functional. For more information, see [Event ID 16650: The account-identifier allocator failed to initialize in Windows Server](/troubleshoot/windows-server/identity/event-16650-account-identifier-allocator-not-initialize).
 
 > [!Note]
-> You can use the `net query fsmo` command to determine which DC has the RID Master role.
+> You can use the `net query fsmo` command to determine which DC has the RID Master role.
 
-Verify that Active Directory is replicating between all DCs. You can use the following command to detect any errors:
+Verify that Active Directory is replicating between all DCs. You can use the following command to detect any errors:
 
 ```console
 repadmin /replsummary /bysrc /bydest /sort:delta
@@ -156,7 +156,7 @@ repadmin /replsummary /bysrc /bydest /sort:delta
 
 #### Resolution
 
-Make sure that you have the most up-to-date drivers installed for the client computer's network adapter. Verify connectivity between the client that is being joined and the target DC over the required ports and protocols. Disable the **TCP Chimney**  offload feature and IP offloading.
+Make sure that you have the most up-to-date drivers installed for the client computer's network adapter. Verify connectivity between the client that is being joined and the target DC over the required ports and protocols. Disable the **TCP Chimney**  offload feature and IP offloading.
 
 This problem can also be caused by one of the following conditions:
 
@@ -164,9 +164,9 @@ This problem can also be caused by one of the following conditions:
 - A network device (router, firewall, or VPN device) is rejecting network packets between the client that is being joined and the DC.
 
 > [!NOTE]
-> The following articles contain port requirement information:  
+> The following articles contain port requirement information:  
 [832017 Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements)  
-[179442 How to configure a firewall for domains and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts)  
+[179442 How to configure a firewall for domains and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts)  
 
 ### Error 10
 
@@ -174,7 +174,7 @@ This problem can also be caused by one of the following conditions:
 
 #### Resolution
 
-This error occurs when you use the domain join UI to join a Windows 7 or Windows Server 2008 R2 workgroup computer to an Active Directory domain by specifying the target DNS domain. To fix this error, see [2018583 Windows 7 or Windows Server 2008 R2 domain join displays error "Changing the Primary Domain DNS name of this computer to "" failed...."](https://support.microsoft.com/help/2018583/windows-7-or-windows-server-2008-r2-domain-join-displays-error-changin).
+This error occurs when you use the domain join UI to join a Windows 7 or Windows Server 2008 R2 workgroup computer to an Active Directory domain by specifying the target DNS domain. To fix this error, see [2018583 Windows 7 or Windows Server 2008 R2 domain join displays error "Changing the Primary Domain DNS name of this computer to "" failed...."](https://support.microsoft.com/help/2018583/windows-7-or-windows-server-2008-r2-domain-join-displays-error-changin).
 
 ## Authentication error messages and resolutions
 
@@ -186,10 +186,10 @@ This error occurs when you use the domain join UI to join a Windows 7 or Window
 
 Make sure that you have permissions to add computers to the domain, and that you have not exceeded the quota that is defined by your Domain Administrator.
 
-To join a computer to the domain, the user account must be granted **Create computer object** permissions in Active Directory.
+To join a computer to the domain, the user account must be granted **Create computer object** permissions in Active Directory.
 
 > [!Note]
-> By default, a non-administrator user can join a maximum of 10 computers to an Active Directory domain.
+> By default, a non-administrator user can join a maximum of 10 computers to an Active Directory domain.
 
 ### Error 2
 
@@ -197,7 +197,7 @@ To join a computer to the domain, the user account must be granted **Create comp
 
 #### Resolution
 
-Check that the domain controllers (DCs) are registered by using correct IP addresses on the DNS server, and that their Service Principal Names (SPNs) are registered correctly in their Active Directory accounts.
+Check that the domain controllers (DCs) are registered by using correct IP addresses on the DNS server, and that their Service Principal Names (SPNs) are registered correctly in their Active Directory accounts.
 
 ### Error 3
 
@@ -205,7 +205,7 @@ Check that the domain controllers (DCs) are registered by using correct IP add
 
 #### Resolution
 
-Make sure that you have permissions to add computers to the domain. To join a computer to the domain, the user account must be granted the **Create computer object**  permission in Active Directory.
+Make sure that you have permissions to add computers to the domain. To join a computer to the domain, the user account must be granted the **Create computer object**  permission in Active Directory.
 
 Additionally, make sure that the specified user account is allowed to log on locally to the client computer. To do this, configure the **Allow log on locally** setting in Group Policy under **Computer Configuration > Windows Settings > Security Settings > Local Policies > User Rights Assignment**.
 
@@ -223,7 +223,7 @@ Make sure that you use the correct user name and password combination of an exis
 
 #### Resolution
 
-This error is likely a transient error that is logged when a domain join searches the target domain to determine whether a matching computer account was already created or whether the join operation has to dynamically create a computer account on the target domain.
+This error is likely a transient error that is logged when a domain join searches the target domain to determine whether a matching computer account was already created or whether the join operation has to dynamically create a computer account on the target domain.
 
 ### Error 6
 
@@ -231,7 +231,7 @@ This error is likely a transient error that is logged when a domain join searche
 
 #### Resolution
 
-This error can occur when the Kerberos token size is larger than the maximum default size. If this situation, you have to increase the Kerberos token size of the computer that you try to join to the domain. For more information, see the following Knowledge Base articles:  
+This error can occur when the Kerberos token size is larger than the maximum default size. If this situation, you have to increase the Kerberos token size of the computer that you try to join to the domain. For more information, see the following Knowledge Base articles:  
 [935744 "Not enough storage is available to complete this operation" error message when you use a domain controller to join a computer to a domain](/troubleshoot/windows-client/windows-security/not-enough-storage-available-complete-operation-error)  
 [327825 Problems with Kerberos authentication when a user belongs to many groups](/troubleshoot/windows-server/windows-security/kerberos-authentication-problems-if-user-belongs-to-groups)
 
@@ -241,7 +241,7 @@ This error can occur when the Kerberos token size is larger than the maximum def
 
 #### Resolution
 
-This problem is related to mismatched SMB Signing settings between the client computer and the DC that is being contacted for the domain join operation. Review the following documentation to further investigate the current and recommended values in your environment:  
+This problem is related to mismatched SMB Signing settings between the client computer and the DC that is being contacted for the domain join operation. Review the following documentation to further investigate the current and recommended values in your environment:  
 [281648 Error message: The account is not authorized to login from this station](/troubleshoot/windows-server/identity/account-not-authorized-login-from-this-station)
 [823659 Client, service, and program issues can occur if you change security settings and user rights assignments](https://support.microsoft.com/help/823659/client-service-and-program-issues-can-occur-if-you-change-security-set)
 

@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4494631
 
 ## Summary
 
-Remote Desktop Services (RDS) in Windows Server 2012 use Fair Share technology to manage resources. Fair Share technologies for CPU resources were introduced in Windows Server 2008 R2. In Windows Server 2012, RDS builds on the Fair Share technologies to add features for allocating network bandwidth and disk resources. Fair Share technologies are enabled by default, but you can disable them using Windows PowerShell and WMI. For more information about the related properties in WMI, see [Win32_TerminalServiceSetting class: Properties](/windows/desktop/termserv/win32-terminalservicesetting#properties).
+Remote Desktop Services (RDS) in Windows Server 2012 use Fair Share technology to manage resources. Fair Share technologies for CPU resources were introduced in Windows Server 2008 R2. In Windows Server 2012, RDS builds on the Fair Share technologies to add features for allocating network bandwidth and disk resources. Fair Share technologies are enabled by default, but you can disable them using Windows PowerShell and WMI. For more information about the related properties in WMI, see [Win32_TerminalServiceSetting class: Properties](/windows/desktop/termserv/win32-terminalservicesetting#properties).
 
 ## Fair Share CPU Scheduling
 
@@ -30,7 +30,7 @@ Fair Share CPU Scheduling dynamically distributes processor time across all Remo
 
 ## Dynamic Disk Fair Share
 
-When disk-intensive processes run in one or more Remote Desktop sessions, they can starve non-disk intensive processes and prevent them from ever accessing disk resources. To fix this issue, the Dynamic Disk Fair Share feature balances disk access among the different sessions by balancing disk IO and throttling excess disk usage.
+When disk-intensive processes run in one or more Remote Desktop sessions, they can starve non-disk intensive processes and prevent them from ever accessing disk resources. To fix this issue, the Dynamic Disk Fair Share feature balances disk access among the different sessions by balancing disk IO and throttling excess disk usage.
 
 ## Dynamic Network Fair Share
 

@@ -29,7 +29,7 @@ You don't have permission to access `http://www.microsoft.com` on this server.
 Reference #18.85c5d617.1549635923.277a7a1
 
 > [!NOTE]
-> In this message, the URL value is the URL of the site the user tried to reach and the reference number is a unique identifier for that user and access attempt.
+> In this message, the URL value is the URL of the site the user tried to reach and the reference number is a unique identifier for that user and access attempt.
 
 Examples of common CDN-hosted Microsoft websites include but aren't limited to the following:
 
@@ -48,14 +48,14 @@ Examples of common CDN-hosted Microsoft websites include but aren't limited to t
 
 ## Cause
 
-This issue occurs because of the measures that Akamai has implemented to protect its websites from denial-of-service attacks. If a single origin or source tries to connect too frequently, these measures automatically block any IP addresses from that origin or source. The exact thresholds that are used to determine when to block addresses are based on connection volume.
+This issue occurs because of the measures that Akamai has implemented to protect its websites from denial-of-service attacks. If a single origin or source tries to connect too frequently, these measures automatically block any IP addresses from that origin or source. The exact thresholds that are used to determine when to block addresses are based on connection volume.
 
-The blockage is usually temporary. As soon as the connection volume remains below the defined thresholds for a while, the block on the affected TCP/IP address is expected to be removed.
+The blockage is usually temporary. As soon as the connection volume remains below the defined thresholds for a while, the block on the affected TCP/IP address is expected to be removed.
 
 ## Resolution
 
 To resolve this issue, make sure that you (or your organization) are not trying to connect to these websites too frequently within a short time.
 
-For example, this issue can occur in an enterprise environment that uses devices that test network connectivity. Such a device tests Internet connectivity from an internal network by connecting to one or more Internet addresses that are considered reliable and responsive (such as Microsoft websites). The device reconnects to these sites at an interval that is set by the enterprise administrator. If that interval is too short, the protection measures on the Akamai CDN may identify the device as a potential threat and then block it. To fix the issue, the enterprise administrator may have to only reduce the recurrence interval of the test connections.
+For example, this issue can occur in an enterprise environment that uses devices that test network connectivity. Such a device tests Internet connectivity from an internal network by connecting to one or more Internet addresses that are considered reliable and responsive (such as Microsoft websites). The device reconnects to these sites at an interval that is set by the enterprise administrator. If that interval is too short, the protection measures on the Akamai CDN may identify the device as a potential threat and then block it. To fix the issue, the enterprise administrator may have to only reduce the recurrence interval of the test connections.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

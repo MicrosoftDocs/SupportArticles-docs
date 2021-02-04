@@ -27,10 +27,10 @@ Consider the following scenario:
 - You create a new default user profile and enable it.
 - A new user logs on by using a profile that is created from the default profile on a Windows 10, Windows Server 2016, or Windows Server 2019-based computer.
 
-In this scenario, you encounter one or more of the following issues:
+In this scenario, you encounter one or more of the following issues:
 
 - Desktop icons take a long time to appear.
-- Performance is poor when you start or browse in Internet Explorer or Microsoft Edge.
+- Performance is poor when you start or browse in Internet Explorer or Microsoft Edge.
 - ESENT errors like the following are recorded in the Event Log:
 
     > EventLogID: 454  
@@ -42,9 +42,9 @@ In this scenario, you encounter one or more of the following issues:
 
 ## Cause
 
-These issues occur because the default user profile includes a locked copy of another user's cache database.
+These issues occur because the default user profile includes a locked copy of another user's cache database.
 
-When a new user logs on to the computer, the default user profile content is incorporated into their new profile. As the Windows shell and desktop begin to load, the database can't be fully initialized for use. Applications that use the database experience negative performance or report errors.
+When a new user logs on to the computer, the default user profile content is incorporated into their new profile. As the Windows shell and desktop begin to load, the database can't be fully initialized for use. Applications that use the database experience negative performance or report errors.
 
 ## Resolution
 
@@ -61,7 +61,7 @@ To fix the issue, following these steps:
     Folder: C:\\Users\\\<affectedUserFolder>\\AppData\\Local\\Microsoft\\Windows\\WebCache
 
 > [!NOTE]
-> \<affectedUserFolder> is a placeholder for the user profile folder name. For example, for the Administrator user account, the folder is under C:\\Users\\Administrator. You must remove the above files and folders for each affected user account on the computer.
+> \<affectedUserFolder> is a placeholder for the user profile folder name. For example, for the Administrator user account, the folder is under C:\\Users\\Administrator. You must remove the above files and folders for each affected user account on the computer.
 
 ### How to view hidden files
 
@@ -72,8 +72,8 @@ To view hidden files, follow these steps:
 3. Unselect the **Hide protected operating system files (Recommended)** option, and then click **OK**.
 
 > [!NOTE]
-> We recommend that you re-select the two options after the issue is fixed.
+> We recommend that you re-select the two options after the issue is fixed.
 
 ## More information
 
-Because the cache database is designed to be generated per-user at the time of initial log on to an individual computer, Microsoft does not recommend or support the inclusion of the cache database in the default or any other user profile that is intended to be used as a template.
+Because the cache database is designed to be generated per-user at the time of initial log on to an individual computer, Microsoft does not recommend or support the inclusion of the cache database in the default or any other user profile that is intended to be used as a template.
