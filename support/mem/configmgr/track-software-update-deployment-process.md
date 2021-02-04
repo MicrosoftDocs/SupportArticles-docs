@@ -663,4 +663,4 @@ After the deployment and the deployment policy have been created on the server, 
 
 ## State message reporting
 
-Throughout the deployment phase, multiple state messages are raised to indicate the current state of the updates and the deployment itself. After these state messages are raised, they are processed in the way that's described in [State messaging data flow](state-messaging-description.md#state-messagingdata-flow).
+Throughout the deployment phase, multiple state messages are raised to indicate the current state of the updates and the deployment itself. After these state messages are raised, they are processed in the way that's described in [State messaging data flow](state-messaging-description.md#state-messaging-data-flow).
