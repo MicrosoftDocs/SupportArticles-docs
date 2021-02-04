@@ -20,6 +20,8 @@
     href: ./silverlight/playback-protected-video-content-fail-error.md
   - name: Run Silverlight Configuration tool
     href: ./silverlight/run-configuration-tool.md
+  - name: Silverlight may not work in Google Chrome
+    href: ./silverlight/silverlight-not-work-google-chrome.md
   - name: Slsvcutil.exe crashes
     href: ./silverlight/slsvcutil-tool-crashes.md
   - name: Type many characters into a Silverlight TextBox or RichTextBox

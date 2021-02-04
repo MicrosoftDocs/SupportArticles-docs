@@ -125,6 +125,8 @@
     href: http-error-500-19-webpage.md
   - name: HTTP error 501 - Not Implemented
     href: http-error-501-not-implemented.md
+  - name: HTTP error 503 and event 5189 from web applications
+    href: error-503-event-5189-web-application.md
   - name: Logs contain dots instead of logging field value
     href: iis-logs-contain-dots.md
   - name: Pages can't be displayed
@@ -206,6 +208,8 @@
   items:
   - name: Access to remote resources fails
     href: remote-resources-fails-requested-iis.md
+  - name: Configure the default document in IIS
+    href: configure-default-document-iis.md
   - name: Content types for HTTP compression
     href: content-types-http-compression.md
   - name: Enable SSL for all customers

@@ -60,6 +60,10 @@
 
 - name: Other Driver
   items:
+  - name: Applications don't find a new scanning device
+    href: applications-dont-find-new-scanning-device.md
+  - name: I/O timeout is 10 times shorter
+    href: io-timeout-shorter-specified-value.md
   - name: Unowned driver updates are installed unexpectedly
     href: unowned-driver-updates-installed-unexpectedly.md
 
