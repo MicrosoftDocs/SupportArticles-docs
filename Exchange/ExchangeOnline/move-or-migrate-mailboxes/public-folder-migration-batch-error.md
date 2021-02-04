@@ -88,7 +88,7 @@ To resolve this problem, use one of the following methods, as appropriate for yo
 
       **Note:** *$failedreport* is a variable that you can customize. *Path of the xml file* represents the actual path.
 
-   1. Retrieve the entry IDs of the recovered folders from *$failedreport* by running this cmdlet:
+   1. Retrieve the entry IDs of the recovered folders from *$failedreport* by running the following cmdlet:
 
       ```powershell
       $failedreport.Report.Entries|where {[string]$_ -like "*recovered*"}|%{[string]$_}
