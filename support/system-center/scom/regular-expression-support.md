@@ -62,25 +62,31 @@ Expression filters that are used in management packs use .NET Framework regex ex
 |Tab character|\t |
 |||
 
-## Operations Manager regular expression examples
+## Operations Manager regular expression (regex) examples
 
 ### Example 1
 
-Search for one match containing `string1`:
+Search for any matches containing a single string, `string1`:
 
-`^(string1)$`
+```perl
+^(string1)$
+```
 
 ### Example 2
 
-Search for the two matches containing either `string1` or `string2`:
+Search for any matches containing either of the two strings, `string1` or `string2`:
 
-`^(string1)|^(string2)$`
+```perl
+^(string1)|^(string2)$
+```
 
 ### Example 3
 
-Search for any paths located in the two locations `/var/lib/string1/*` and `/var/lib/string2/*`:
+Search for any matches to folders located recursively under the two folder paths, (`/var/lib/string1/*` or `/var/lib/string2/*`):
 
-`^(\/var\/lib\/string1\/.*)|^(\/var\/lib\/string2\/.*)$`
+```perl
+^(\/var\/lib\/string1\/.*)|^(\/var\/lib\/string2\/.*)$
+```
 
 ## Regular expressions via SDK
 
