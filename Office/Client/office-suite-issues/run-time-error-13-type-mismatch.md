@@ -21,7 +21,9 @@ appliesto:
 
 ## Symptoms
 
-"Run-time Error 13: Type Mismatch" This error occurs when setting the FW company as default.
+This error occurs when setting the FW company as default.
+
+"Run-time Error 13: Type Mismatch"
 
 ## Cause
 
@@ -29,4 +31,4 @@ There are multiple FRx versions on a workstation or server. Either a .dll file i
 
 ## Resolution
 
-ResolutionRun the FRxReg.exe located in the FRx directory. For additional information, see [How to register a .dll file](https://support.microsoft.com/help/844592/how-to-register-a-dll-file).
+Run the FRxReg.exe located in the FRx directory. For additional information, see [How to register a .dll file](https://support.microsoft.com/help/844592/how-to-register-a-dll-file).
