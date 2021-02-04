@@ -19,7 +19,7 @@ appliesto:
 
 ## Summary
 
-Beginning in the October 2019 update for Microsoft Office 365, coauthoring capabilities are no longer be available for files that are synced to a local computer through the OneDrive for Business (Groove.exe) sync client. 
+Beginning in the October 2019 update for Microsoft Office 365, coauthoring capabilities are no longer available for files that are synced to a local computer through the OneDrive for Business (Groove.exe) sync client. 
 
 After this update is applied, you will see the following changes:  
  
