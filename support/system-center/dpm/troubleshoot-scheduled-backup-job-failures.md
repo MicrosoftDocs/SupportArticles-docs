@@ -11,14 +11,14 @@ This article discusses how to troubleshoot scheduled backup job failures in Micr
 _Original product version:_ &nbsp; System Center Data Protection Manager  
 _Original KB number:_ &nbsp; 4456295
 
-Sometimes, recovery point jobs aren't run as scheduled even though the protection status of the respective data sources continues to appear as green (**OK**) in the DPM console. This problem usually occurs when SQL Server Agent fails to invoke the DPM engine to run the scheduled job.
+Sometimes, recovery point jobs aren't run as scheduled even though the protection status of the respective data sources continues to appear as green (**OK**) in the DPM console. This problem usually occurs when SQL Server Agent fails to invoke the DPM engine to run the scheduled job.
 
 > [!NOTE]
 > This problem doesn't affect ad-hoc manual jobs because SQL Server Agent isn't used when you run manual jobs from the DPM console.
 
 ## How scheduled job execution works
 
-When protection groups are set up, DPM creates backup jobs (incremental syncs, express full, and so on) in SQL Server for each data source, together with other maintenance jobs. A component that's known as `TriggerJob.exe` is used to invoke the DPM engine by passing the Job Definition ID for the data source to begin execution of the backup job. `TriggerJob.exe` is run by the SQL Server Agent Scheduler at the scheduled time through the following command syntax:
+When protection groups are set up, DPM creates backup jobs (incremental syncs, express full, and so on) in SQL Server for each data source, together with other maintenance jobs. A component that's known as `TriggerJob.exe` is used to invoke the DPM engine by passing the Job Definition ID for the data source to begin execution of the backup job. `TriggerJob.exe` is run by the SQL Server Agent Scheduler at the scheduled time through the following command syntax:
 
 ```console
 triggerjob.exe <JobDefinitionID> <ScheduleID> <FQDN-DPMServer>
@@ -31,9 +31,9 @@ C:\Program Files\Microsoft System Center 2012 R2\DPM\DPM\bin\TriggerJob.exe 1bd3
 ```
 
 > [!NOTE]
-> This path may differ depending on DPM version and whether it's an upgrade (same path) or a fresh installation (different path).
+> This path may differ depending on DPM version and whether it's an upgrade (same path) or a fresh installation (different path).
 
-For some reason, the command doesn't run and call `Triggerjob.exe`, the DPM engine isn't invoked. So the backup job doesn't run. Because SQL Server didn't run the command, DPM doesn't know about this failure and continues to display the protection status of the data sources as green.
+For some reason, the command doesn't run and call `Triggerjob.exe`, the DPM engine isn't invoked. So the backup job doesn't run. Because SQL Server didn't run the command, DPM doesn't know about this failure and continues to display the protection status of the data sources as green.
 
 The following sections provide a few techniques to troubleshoot scheduled backup job failures.
 
@@ -41,7 +41,7 @@ The following sections provide a few techniques to troubleshoot scheduled backup
 
 When a scheduled backup job fails to be invoked by SQL Server, DPM doesn't raise any alerts for those job failures because it was a failure on the SQL Server side. However, these events are captured in the Application log as SQL Server, Windows Error Reporting, or MSDPM events, depending on the cause of the problem. Make sure that you check the Application log in Event Viewer for any events from SQL Server that are related to the scheduled job failure. If your DPM computer is using remote SQL Server for DPMDB, review the Application log on the remote server.
 
-For example, the following event may be found in the Application log to indicate that the SQL Server Agent experience some problem when it tried to run the command line.
+For example, the following event may be found in the Application log to indicate that the SQL Server Agent experience some problem when it tried to run the command line.
 
 > Log Name: Application  
 > Source: SQLAgent$MSDPM2012  
@@ -96,19 +96,19 @@ Another sample event from DPM engine:
 
 You can try running the job manually from SQL Management Studio. To do this, follow these steps:
 
-1. Start SQL Server Management Studio, and connect to the SQL Server instance that's used for the DPMDB database. Expand **SQL Server Agent** > **Jobs**. The GUIDs values in the list under **Jobs** provide the **Schedule ID** for each job. Right-click a job, and then select **Start Job at Step** on the context menu.
+1. Start SQL Server Management Studio, and connect to the SQL Server instance that's used for the DPMDB database. Expand **SQL Server Agent** > **Jobs**. The GUIDs values in the list under **Jobs** provide the **Schedule ID** for each job. Right-click a job, and then select **Start Job at Step** on the context menu.
 
     ![Select start job at step](./media/troubleshoot-scheduled-backup-job-failures/start-job-at-step.png)
 
-2. If the job doesn't run, you should receive an error message that resembles the following.
+2. If the job doesn't run, you should receive an error message that resembles the following.
 
     ![job failure](./media/troubleshoot-scheduled-backup-job-failures/error-message.png)
 
-3. This message confirms that the SQL Server Agent wasn't able to run the job because of incorrect permissions or some other reason. See [Check the logon account credentials](#check-the-logon-account-credentials) section to troubleshoot this issue.
+3. This message confirms that the SQL Server Agent wasn't able to run the job because of incorrect permissions or some other reason. See [Check the logon account credentials](#check-the-logon-account-credentials) section to troubleshoot this issue.
 
 ## Run the job manually at a command prompt
 
-You can run `Triggerjob.exe` at a command line to manually check whether the command will be run and the backup job will start in DPM correctly. To do this, follow these steps:
+You can run `Triggerjob.exe` at a command line to manually check whether the command will be run and the backup job will start in DPM correctly. To do this, follow these steps:
 
 1. Start SQL Server Management Studio, and then connect to the SQL Server instance that's used for the DPMDB database. Expand **SQL Server Agent** > **Jobs**. Right-click one of the jobs, and then select **Properties**.
 
@@ -130,7 +130,7 @@ You can run `Triggerjob.exe` at a command line to manually check whether the com
       C:\Program Files\Microsoft System Center 2012 R2\DPM\DPM\bin\TriggerJob.exe F60C8734-2DF5-4E86-8C7D-43558BD5A071 2F481ACB-2C3D-4F48-8C70-CA989C3E8FF2 <FQDN of DPMServer>
       ```
 
-      If the command runs successfully, the problem is likely related to incorrect permissions or logon credentials. See the [Check the logon account credentials](#check-the-logon-account-credentials) section to troubleshoot this issue.
+      If the command runs successfully, the problem is likely related to incorrect permissions or logon credentials. See the [Check the logon account credentials](#check-the-logon-account-credentials) section to troubleshoot this issue.
 
     - At an elevated command prompt on the remote SQL server, run the following example command (if applicable):
 
@@ -138,10 +138,10 @@ You can run `Triggerjob.exe` at a command line to manually check whether the com
       C:\Program Files\Microsoft Data Protection Manager\DPM2012R2\SQLPrep\TriggerJob.exe F60C8734-2DF5-4E86-8C7D-43558BD5A071 2F481ACB-2C3D-4F48-8C70-CA989C3E8FF2 <FQDN of DPMServer>
       ```
 
-      In the remote SQL Server scenario, if the command finishes successfully on the DPM server but fails on the remote SQL Server, focus your troubleshooting efforts on the remote SQL Server to rule out any permissions, network, and firewall issues.
+      In the remote SQL Server scenario, if the command finishes successfully on the DPM server but fails on the remote SQL Server, focus your troubleshooting efforts on the remote SQL Server to rule out any permissions, network, and firewall issues.
 
       > [!NOTE]
-      > When you look at the list of Schedule IDs for the jobs in SQL Server, it might be challenging to find the mapping of the Schedule ID and the data source that it's associated with. You can run the following SQL query to find more details about the jobs that include some user-friendly information:
+      > When you look at the list of Schedule IDs for the jobs in SQL Server, it might be challenging to find the mapping of the Schedule ID and the data source that it's associated with. You can run the following SQL query to find more details about the jobs that include some user-friendly information:
 
         ```sql
         use DPMDB –Change to actual name of DPMDB if it is different
@@ -195,7 +195,7 @@ You can run `Triggerjob.exe` at a command line to manually check whether the com
         order by prot.FriendlyName
         ```
 
-        The output of the SQL query will resemble the following example. Based on this output, you can pick a Schedule ID for a data source that's small and quick for testing.
+        The output of the SQL query will resemble the following example. Based on this output, you can pick a Schedule ID for a data source that's small and quick for testing.
 
         ![Output of the SQL query](./media/troubleshoot-scheduled-backup-job-failures/output-query.png)
 
@@ -205,16 +205,16 @@ The scheduled jobs might be disabled in SQL Server. To check and enable the jobs
 
 1. In SQL Server Management Studio, connect to the SQL Server instance for DPM, and then run the SQL query that's mentioned in the previous section to find the list of scheduled jobs.
 
-1. Expand **SQL Server Agent**  > **Jobs**. Compare the jobs that are listed there with the output from the SQL query that you ran in step 1. If a job from the query is listed as **Disabled** (arrow pointing down), right-click the job, select **Enable**, and then run the job manually from SQL Server by following the steps that are mentioned in the [Run the job manually at a command prompt](#run-the-job-manually-at-a-command-prompt) section.
+1. Expand **SQL Server Agent**  > **Jobs**. Compare the jobs that are listed there with the output from the SQL query that you ran in step 1. If a job from the query is listed as **Disabled** (arrow pointing down), right-click the job, select **Enable**, and then run the job manually from SQL Server by following the steps that are mentioned in the [Run the job manually at a command prompt](#run-the-job-manually-at-a-command-prompt) section.
 
     ![enable job](./media/troubleshoot-scheduled-backup-job-failures/check-enable-jobs.png)
 
 ## Check the logon account credentials
 
-DPM enters the SQL Server Agent account name into the registry. It then checks that account each time that it starts. The internal interfaces to DPM are secured by using this account, so the account name must match the account name that the SQL Server Agent uses.
+DPM enters the SQL Server Agent account name into the registry. It then checks that account each time that it starts. The internal interfaces to DPM are secured by using this account, so the account name must match the account name that the SQL Server Agent uses.
 
 > [!NOTE]
-> The account that's used by SQL Server Agent and SQL Server services for the SQL Server instance that hosts DPMDB should be a local account (such as **MICROSOFT$DPM$Acct** or **NTAuthority\System**). If these services are configured to run under a domain service account, check whether there is any specific reason as to why those were configured to use a domain account. The scenarios that would require a domain account for SQL Server services include the following:
+> The account that's used by SQL Server Agent and SQL Server services for the SQL Server instance that hosts DPMDB should be a local account (such as **MICROSOFT$DPM$Acct** or **NTAuthority\System**). If these services are configured to run under a domain service account, check whether there is any specific reason as to why those were configured to use a domain account. The scenarios that would require a domain account for SQL Server services include the following:
 >
 > - Remote SQL Server: DPM is configured to use a remote SQL Server instance to host its DPMDB database.
 > - Library sharing is enabled: Check whether library sharing is enabled. If it's not, change the account to the local account at both locations (SQL Server services and the registry keys that are mentioned in step 2 in the following steps). Or, change the registry key values to match the domain account that's used by SQL Server services, depending on the situation.
@@ -235,22 +235,22 @@ Follow these steps to verify the account information and make changes as necessa
     > [!NOTE]
     > For the steps to verify the SQL Server accounts that are in the registry, see [System Center 2012 R2 Data Protection Manager install fails and generates ID: 4323: "A member could not be added"](https://support.microsoft.com/help/2930276).
 
-3. After you change the account information in the registry, restart the SQL Server Agent and the SQL Server services.
+3. After you change the account information in the registry, restart the SQL Server Agent and the SQL Server services.
 
 4. On the DPM server, select the protection group, select **Modify** on the ribbon, and then complete and update the protection group without making any changes.
 
     > [!NOTE]
     > This step is necessary to regenerate the jobs in SQL Server by using the updated account information.
 
-5. If you're using an account other than the **Microsoft$DPM$Acct** service account, update DDCOM launch and access permissions to match what was granted to **Microsoft$DPM$Acct**. To do this, follow these steps:
+5. If you're using an account other than the **Microsoft$DPM$Acct** service account, update DDCOM launch and access permissions to match what was granted to **Microsoft$DPM$Acct**. To do this, follow these steps:
 
-    1. Start DCOMCNFG.exe at a command prompt, and then navigate to **Component Services** > **Computers** > **My Computer** > **DCOM Config** > **Microsoft System Center Data Protection Manager 2010 Service**.
+    1. Start DCOMCNFG.exe at a command prompt, and then navigate to **Component Services** > **Computers** > **My Computer** > **DCOM Config** > **Microsoft System Center Data Protection Manager 2010 Service**.
 
     1. Right-click the service name, and then select **Properties**.
 
-    1. Select the **Security** tab, and then select **Edit** in the **Launch and Activation Permissions** area.
+    1. Select the **Security** tab, and then select **Edit** in the **Launch and Activation Permissions** area.
 
-    1. Add the new account, and grant all permissions to it.
+    1. Add the new account, and grant all permissions to it.
 
 6. Check the permissions on the following folders (in which Triggerjob.exe is located), as applicable:
 
@@ -272,7 +272,7 @@ If you're using a remote SQL Server instance for both DPM 2012 SP1 and DPM 2012 
 
     `%DPMInstall%\Program files\Microsoft Data Protection Manager\DPM2012R2\SQLPrep`
 
-This behavior causes the SQL Server Agent to fail to find Triggerjob.exe when DPM 2012 SP1 scheduled jobs are run. If this symptom matches your scenario, rerun DPM 2012 SP1 SQL Server Prep to resolve the issue.
+This behavior causes the SQL Server Agent to fail to find Triggerjob.exe when DPM 2012 SP1 scheduled jobs are run. If this symptom matches your scenario, rerun DPM 2012 SP1 SQL Server Prep to resolve the issue.
 
 For more information about this specific symptom, see this [System Center Data Protection Manager Blog article](https://techcommunity.microsoft.com/t5/system-center-blog/support-tip-after-installing-dpm-2012-r2-sql-prep-on-a-remote/ba-p/349002).
 
@@ -295,7 +295,7 @@ If you're using multiple network interface controllers (NICs) and different netw
 
 ## Proactively monitor for scheduled job failures
 
-You can set up an alert outside DPM to monitor for SQL Server Agent Scheduler failures. For example, if you have System Center 2012 Operations Manager deployed in your environment, you can configure it to monitor and generate alerts for warnings or errors messages that are generated by `SQLAgent$MSDPM2012` source. Or, you can specifically monitor for event ID 208.
+You can set up an alert outside DPM to monitor for SQL Server Agent Scheduler failures. For example, if you have System Center 2012 Operations Manager deployed in your environment, you can configure it to monitor and generate alerts for warnings or errors messages that are generated by `SQLAgent$MSDPM2012` source. Or, you can specifically monitor for event ID 208.
 
 > [!NOTE]
 > To avoid any surprises, make sure that you periodically check the status of recovery point jobs and their availability by reviewing recovery points in the **Recovery** task area in the DPM console.
