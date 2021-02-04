@@ -53,7 +53,8 @@ This article provides alternative steps to install the RSATClient so that all to
 
 ```console
 @echo off
-md ex expand -f:* WindowsTH-RSAT_WS_1709-x64.msu ex\
+md ex
+expand -f:* WindowsTH-RSAT_WS_1709-x64.msu ex\
 cd ex
 md ex
 copy ..\unattend_x64.xml ex\
