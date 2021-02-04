@@ -36,44 +36,44 @@ When you try to start SQL Server in this scenario, the SQL Server service doesnâ
     > \<Datetime> Server      Error: 17113, Severity: 16, State: 1.  
     \<Datetime> Server      Error 2(The system cannot find the file specified.) occurred while opening file 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\master.mdf' to obtain configuration information at startup. An invalid startup option might have caused the error. Verify your startup options, and correct or remove them if necessary.
 
-2. Verify the location of the master.mdf file.
+2. Verify the location of the master.mdf file. If the path is incorrect, fix the path by using SQL Server Configuration Manager or Registry Editor.
 
-    1. Using SQL Server Configuration Manager
+    1. **By using SQL Server Configuration Manager**:
 
-        Click the **Start** button, point to All Programs, point to Microsoft SQL Server, point to Configuration Tools, and then click **SQL Server Configuration Manager**.
+        Select **Start**, point to **All Programs**, point to **Microsoft SQL Server**, point to **Configuration Tools**, and then select **SQL Server Configuration Manager**.
 
         > [!NOTE]
-        > Because SQL Server Configuration Manager is a snap-in for the Microsoft Management Console program and not a stand-alone program, SQL Server Configuration Manager does not appear as an application in newer versions of Windows.
+        > Because SQL Server Configuration Manager is a snap-in for the Microsoft Management Console program and not a standalone program, SQL Server Configuration Manager does not appear as an application in newer versions of Windows. To open SQL Server Configuration Manager in Windows 10 or 8, follow the steps for your version of Windows.
 
         - Windows 10:  
-            To open SQL Server Configuration Manager, on the **Start** Page, type *SQLServerManager13.msc* (for SQL Server 2016 (13.x)). For previous versions of SQL Server replace 13 with a smaller number. Click **SQLServerManager13.msc** opens the Configuration Manager. To pin the Configuration Manager to the Start Page or Task Bar, right-click **SQLServerManager13.msc**, and then click Open file location. In the Windows File Explorer, right-click **SQLServerManager13.msc**, and then click Pin to Start or Pin to taskbar.
+            Select **Start** Page, enter *SQLServerManager13.msc* (for SQL Server 2016 (13.x)). For previous versions of SQL Server, replace 13 with the appropriate number. Select **SQLServerManager13.msc** to open the Configuration Manager. To pin the Configuration Manager to the Start Page or Task Bar, right-click **SQLServerManager13.msc**, and then select **Open file location**. In the Windows File Explorer, right-click **SQLServerManager13.msc**, and then select **Pin to Start** or **Pin to taskbar**.
 
         - Windows 8:  
-            To open SQL Server Configuration Manager, in the Search charm, under Apps, type *SQLServerManager\<version>.msc* such as *SQLServerManager13.msc*, and then press **Enter**.
+            Press Windows logo key+Q to open the Search charm. Under Apps, enter *SQLServerManager\<version_number>.msc* (for example, SQLServerManager13.msc), and then press Enter.
 
-        1. In SQL Server Configuration Manager, click SQL Server Services.
+        1. In SQL Server Configuration Manager, select **SQL Server Services**.
 
-        1. In the right pane, right-click SQL Server (\<instance_name>), and then click **Properties**.
-        1. On the **Startup Parameters** tab, select the row that starts with *-d* in the Existing Parameters: section. The current value shows as an editable value in Specify a startup parameter box. Fix the path to reflect the correct value and click **Update** button and click **OK** to save the changes.
-        1. Restart SQL service.
+        1. In the right pane, right-click **SQL Server (\<instance_name>)**, and then select **Properties**.
+        1. On the **Startup Parameters** tab, select the row that starts with *-d* in the **Existing Parameters** section. The current value is editable. Specify a startup parameter box. Fix the path to reflect the correct value, select **Update**, and then select **OK** to save the changes.
+        1. Restart the SQL Server service.
 
-        - For more information regarding configuring startup options, see [Configure Server Startup Options](/sql/database-engine/configure-windows/scm-services-configure-server-startup-options).
+        - For more information regarding configuring startup options, see [Configure Server Startup Options (SQL Server Configuration Manager)](/sql/database-engine/configure-windows/scm-services-configure-server-startup-options).
 
         - For more information regarding database engine service startup options, see [Database Engine Service Startup Options](/sql/database-engine/configure-windows/database-engine-service-startup-options).
 
-    2. Using Registry editor:
+    2. **By using Registry Editor**:
 
-        1. Navigate to `HKLM\Software\Microsoft\MicrosoftSQL Server\MSSQL{nn}.MyInstance` hive for your SQL server instance.
+        1. Navigate to the `HKLM\Software\Microsoft\MicrosoftSQL Server\MSSQL{nn}.MyInstance` hive for your SQL server instance.
 
-        1. Locate **SQLArg0** value under `MSSQLServer\Parameters`.
-        1. Modify the value to reflect the correct path for master database.
-        1. Restart SQL Service.
+        1. Locate the **SQLArg0** value under `MSSQLServer\Parameters`.
+        1. Change the value to reflect the correct path for the master database.
+        1. Restart the SQL Server Service.
 
-3. If the master database does exist but is unusable you can return the database to a usable state, take one of the following actions:
+3. If the master database does exist but is unusable you can return the database to a usable state by using one of the following methods:
 
     - Check the permissions for the service account on the folder where the file is located.
-    - [Restore the master database](/sql/relational-databases/backup-restore/restore-the-master-database-transact-sql) from a full database backup if you can start the server instance.
-    - If server damage to master prevents you from starting SQL Server, [Rebuild the master database](/sql/relational-databases/databases/rebuild-system-databases).
+    - [Restore the master database](/sql/relational-databases/backup-restore/restore-the-master-database-transact-sql) from a full database backup â€” if you can start the server instance.
+    - If server damage to the master prevents you from starting SQL Server, [rebuild the master database](/sql/relational-databases/databases/rebuild-system-databases).
 
-        > [!IMPORTANT]
+        > [!CAUTION]
         > Rebuilding the master database rebuilds all the system databases. Therefore, any user modifications to these databases will be lost.

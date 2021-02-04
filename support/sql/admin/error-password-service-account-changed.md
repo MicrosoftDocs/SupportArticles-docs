@@ -5,7 +5,7 @@ ms.date: 10/29/2020
 ms.prod-support-area-path: Security Issues
 ms.prod: sql
 ---
-# Logon failure and SQL Server service does not start successfully
+# Logon failure and SQL Server service does not start
 
 When you try to restart Microsoft SQL Server or the SQL Server Agent, the service doesn’t start, and you receive the following error message, depending on how you try to start the service:
 
@@ -74,7 +74,7 @@ Check which permissions are assigned to the \<Account Name> service account usin
 
 **User action**
 
-1. If the SQL Server Startup account is a Local User Account on the computer, open Computer Management (compmgmt.msc) and clear the **User Must change the password at next logon** property for SQL Server Startup Account under **Local Users & Groups**. Click **OK** and restart SQL Service.
+1. If the SQL Server Startup account is a Local User Account on the computer, open Computer Management (compmgmt.msc) and clear the **User Must change the password at next logon** property for SQL Server Startup Account under **Local Users & Groups**. Then, select **OK**, and restart the SQL Server service.
 
 1. If the SQL Server Startup account is a Windows Domain Account, open Active Directory Users and Computers, and then verify that the SQL Server Startup Account has the User **Must change the password at next logon** property enabled.
 
@@ -94,7 +94,7 @@ Type the correct password in the SQL Server service account on the SQL Server ho
 
 **User action**
 
-1. If SQL Server Startup account is a Local User Account on the computer, open Computer Management (compmgmt.msc), and clear the **Account is Locked Out** checkbox for the SQL Server Startup Account under **Local Users & Groups**, click **OK** and restart SQL Service.
+1. If SQL Server Startup account is a Local User Account on the computer, open Computer Management (compmgmt.msc), and clear the **Account is Locked Out** checkbox for the SQL Server Startup Account under **Local Users & Groups**. Then, select **OK**, and restart the SQL Server service.
 
 1. If SQL Server Startup account is a Windows Domain Account, open Active Directory Users and Computers, and verify that the SQL Server Startup Account has the **Account is Locked Out** property enabled.
 
