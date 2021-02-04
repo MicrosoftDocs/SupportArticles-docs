@@ -27,11 +27,11 @@ The **Require Secure Boot to be enabled on the device** setting is supported on 
 
 For more information about supported versions, see [Supported versions for device health attestation](/windows/security/information-protection/tpm/trusted-platform-module-overview#supported-versions-for-device-health-attestation).
 
-For more information about how MDM uses the Health Attestation Service, see [Protect, control, and report on the security status of Windows 10-based devices](/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices#protect-control-and-report-on-the-security-status-of-windows-10-based-devices).
+For more information about how MDM uses the Health Attestation Service, see [Protect, control, and report on the security status of Windows 10-based devices](/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices#protect-control-and-report-on-the-security-status-of-windows-10-based-devices).
 
 ## More Information
 
-To check whether your device meets the hardware requirements for the health attestation feature:
+To check whether your device meets the hardware requirements for the health attestation feature:
 
 1. Check the TPM version.
 
@@ -40,7 +40,7 @@ To check whether your device meets the hardware requirements for the health att
     :::image type="content" source="media/secure-boot-enabled-device-shows-not-compliant/tpm-info.png" alt-text="screenshot of TPM info" border="false":::
 
     > [!NOTE]
-    > If the TPM version is 1.2 and your device supports TPM 2.0, contact your device manufacturer to update to TPM 2.0.
+    > If the TPM version is 1.2 and your device supports TPM 2.0, contact your device manufacturer to update to TPM 2.0.
 
 2. Open an elevated command prompt, and run the `msinfo32` command.
 
@@ -48,7 +48,7 @@ To check whether your device meets the hardware requirements for the health att
 
     :::image type="content" source="media/secure-boot-enabled-device-shows-not-compliant/system-information.png" alt-text="screenshot of System Information":::
 
-4. Open an elevated PowerShell command prompt, and run the following command:
+4. Open an elevated PowerShell command prompt, and run the following command:
 
     ```powershell
     Confirm-SecureBootUEFI
@@ -56,7 +56,7 @@ To check whether your device meets the hardware requirements for the health att
 
     Verify that it returns the value of **True**.
 
-5. Run the following PowerShell command:
+5. Run the following PowerShell command:
 
     ```powershell
     manage-bde -protectors -get $env:systemdrive

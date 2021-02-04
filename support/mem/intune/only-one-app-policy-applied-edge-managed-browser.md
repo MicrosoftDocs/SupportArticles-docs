@@ -18,15 +18,15 @@ When you use Microsoft Intune to assign multiple configuration profiles that mak
 
 ## Cause
 
-Intune does not currently support merging Edge or Managed Browser policies.
+Intune does not currently support merging Edge or Managed Browser policies.
 
 ## Resolution
 
-To resolve this issue, configure a setting in only a single app configuration policy for each or group. For example, if you want to assign different Edge bookmarks to different groups, you can create and assign a different app configuration policy to each group, and make sure that no users exist in both groups. To do this, follow these steps (for example):
+To resolve this issue, configure a setting in only a single app configuration policy for each or group. For example, if you want to assign different Edge bookmarks to different groups, you can create and assign a different app configuration policy to each group, and make sure that no users exist in both groups. To do this, follow these steps (for example):
 
 1. Create one app that is assigned to the **All Users** group.
 2. Create two different app configuration policies that are associated with the same app.
-3. Assign *app configuration policy 1* that has setting **1** to include the **All Users** group, and exclude the selected group that will be targeted to the *app configuration policy 2*.
+3. Assign *app configuration policy 1* that has setting **1** to include the **All Users** group, and exclude the selected group that will be targeted to the *app configuration policy 2*.
 4. Assign *app configuration policy 2* that uses setting **2** to include the selected group.
 
 ## More information

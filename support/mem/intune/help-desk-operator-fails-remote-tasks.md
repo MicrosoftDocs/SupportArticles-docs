@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4074751
 
 ## Symptom
 
-When help desk operators perform remote tasks in Microsoft Intune, they receive the following error message:
+When help desk operators perform remote tasks in Microsoft Intune, they receive the following error message:
 
 > Initiating Factory reset failed
 

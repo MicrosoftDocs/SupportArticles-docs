@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4488562
 
 ## Symptoms
 
-Devices can't obtain SCEP certificates from the NDES server. Additionally, the following errors are logged:
+Devices can't obtain SCEP certificates from the NDES server. Additionally,&nbsp;the following errors are logged:
 
 - In **Failed Requests** on the Certificate Authority (CA):
 
@@ -25,27 +25,27 @@ Devices can't obtain SCEP certificates from the NDES server. Additionally, the 
 
 - In the Application log on the NDES server:
 
-    > Log Name:      Application  
-    > Source:        Microsoft-Windows-NetworkDeviceEnrollmentService  
-    > Event ID:      31  
-    > Level:         **Error**  
-    > User:          CONTOSO\SVC_NDES  
-    > Computer:      NDES1.contoso.com  
+    > Log Name:&nbsp;&nbsp;&nbsp;Application  
+    > Source:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Microsoft-Windows-NetworkDeviceEnrollmentService  
+    > Event ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 31  
+    > Level:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Error**  
+    > User:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CONTOSO\SVC_NDES  
+    > Computer:&nbsp;&nbsp;&nbsp;&nbsp;NDES1.contoso.com  
     > Description:  
-    > **The Network Device Enrollment Service cannot submit the certificate request (The requested certificate template is not supported by this CA.).  0x80004005**  
+    > **The Network Device Enrollment Service cannot submit the certificate request (The requested certificate template is not supported by this CA.).&nbsp; 0x80004005**  
     > Event Xml:
     > \<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">  
-    >  \<EventData Name="**EVENT_MSCEP_FAIL_SUBMIT**">  
-    >    \<Data Name="ErrorCode">**The requested certificate template is not supported by this CA.**\</Data>  
-    >    \<Data Name="ErrorMessage">**0x80004005**\</Data>  
-    >  \</EventData>  
+    >&nbsp; \<EventData Name="**EVENT_MSCEP_FAIL_SUBMIT**">  
+    >&nbsp;&nbsp;&nbsp; \<Data Name="ErrorCode">**The requested certificate template is not supported by this CA.**\</Data>  
+    >&nbsp;&nbsp;&nbsp; \<Data Name="ErrorMessage">**0x80004005**\</Data>  
+    >&nbsp; \</EventData>  
     >\</Event>
 
 ## Cause
 
 This issue occurs if the template name on the NDES server doesn't match the name on the CA.
 
-In this situation, you have to use a friendly name instead of the template name for the template.
+In this situation, you have to use a friendly name instead of the template name for the template.
 
 ## Resolution
 
@@ -61,7 +61,7 @@ To fix this issue, follow these steps:
    - `EncryptionTemplate`
    - `GeneralPurposeTemplate`
 
-   The following is an example that shows an incorrect value for `SignatureTemplate`:
+   The following is an example that shows an incorrect value for `SignatureTemplate`:
 
    :::image type="content" source="./media/devices-receive-scep-certificates-error-0x80094800/value.png" alt-text="Screenshot of incorrect value for SignatureTemplate." border="false":::
 

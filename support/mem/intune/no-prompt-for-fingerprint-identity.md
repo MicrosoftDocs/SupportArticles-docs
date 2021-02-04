@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4493781
 
 You have Intune app protection policies configured for some enlightened apps on Android devices. The **Allow fingerprint instead of PIN (Android 6.0+)** policy setting is set to **Yes**, users are not prompted for fingerprint authentication when using the targeted apps.
 
-This issue is typically seen with Samsung Galaxy Note 4 devices, but the issue can affect other devices as well.
+This issue is typically seen with Samsung Galaxy Note 4 devices, but the issue can affect other devices as well.
 
 ## Cause
 

@@ -25,7 +25,7 @@ On the Windows 10 device, event 32 and event 307 are logged in Admin logs under 
 
 :::image type="content" source="media/scep-deployment-to-win10-devices-fails/event-307.png" alt-text="screenshot of Event 307" border="false":::
 
-Event 30 is logged in CAPI2 log, as shown in the following screenshot:
+Event 30 is logged in CAPI2 log, as shown in the following screenshot:
 
 :::image type="content" source="media/scep-deployment-to-win10-devices-fails/event-30.png" alt-text="screenshot of Event 30":::
 
@@ -42,6 +42,6 @@ Therefore, the devices can no longer receive SCEP certificates.
 
 ## Resolution
 
-To fix the issue, reinstall both the NDES server role and Microsoft Intune Certificate Connector on the NDES server. During the reinstallation, RA certificates will be reissued to the NDES server.
+To fix the issue, reinstall both the NDES server role and Microsoft Intune Certificate Connector on the NDES server. During the reinstallation, RA certificates will be reissued to the NDES server.
 
-For more information about how to install the NDES server role and Intune Certificate Connector, see [Support Tip - How to configure NDES for SCEP certificate deployments in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-configure-ndes-for-scep-certificate/ba-p/455125).
+For more information about how to install the NDES server role and Intune Certificate Connector, see [Support Tip - How to configure NDES for SCEP certificate deployments in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-configure-ndes-for-scep-certificate/ba-p/455125).
