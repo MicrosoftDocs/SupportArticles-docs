@@ -15,14 +15,14 @@ _Original KB number:_ &nbsp; 4462900
 
 When you try to deploy a device configuration profile to iOS devices in Microsoft Intune, you notice the following behavior:
 
-- When the iOS device is locked, the device profile isn't applied to the device. In Intune in the Azure portal, the device is marked as noncompliant, and you see the following error message:
+- When the iOS device is locked, the device profile isn't applied to the device. In Intune in the Azure portal, the device is marked as noncompliant, and you see the following error message:
 
     > 2016341112 -iOS device is currently busy
 
     > [!NOTE]
     > This issue occurs even if the device is connected to the Internet and has the **Background App Refresh** setting turned on.
 
-- When the iOS device is unlocked, the profile is applied to the device successfully.
+- When the iOS device is unlocked, the profile is applied to the device successfully.
 
 ## Cause
 
@@ -32,7 +32,7 @@ This issue occurs because the iOS device is busy and can't complete evaluation o
 
 This is a function of the iOS platform and not specific to Intune. After the device is unlocked, the profile will be applied.
 
-There are certain times when a device cannot do what the server requests. When the device can't follow a command, it sends a **NotNow** status.
+There are certain times when a device cannot do what the server requests. When the device can't follow a command, it sends a **NotNow** status.
 
 |Status value|Description|
 |---|---|

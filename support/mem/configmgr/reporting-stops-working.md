@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4503578
 
 ## Symptoms
 
-After you move the reporting services point role to a new server, or you enable TLS 1.2 on the site servers, reporting no longer works in Configuration Manager.
+After you move the reporting services point role to a new server, or you enable TLS 1.2 on the site servers, reporting no longer works in Configuration Manager.
 
 The following error messages are logged in the Srsrp.log file on the reporting services point:
 
@@ -37,11 +37,11 @@ To do this, follow these steps:
 
    To do this, first determine your .NET Framework version number, and then follow these guidelines:
    - .NET Framework 4.6.2 supports TLS 1.1 and TLS 1.2. No additional changes are required.
-   - .NET Framework 4.6 and earlier versions [must be updated](/dotnet/framework/migration-guide/versions-and-dependencies)  to support TLS 1.1 and TLS 1.2.
+   - .NET Framework 4.6 and earlier versions [must be updated](/dotnet/framework/migration-guide/versions-and-dependencies)  to support TLS 1.1 and TLS 1.2.
 
      If you're using .NET Framework 4.5.1 or 4.5.2 on Windows 8.1, Windows RT 8.1, or Windows Server 2012, the relevant updates and details are also available from [the Download Center](https://www.microsoft.com/download/details.aspx?id=42883).
 
-   - All Configuration Manager client computers and site systems should have the following registry values set.
+   - All Configuration Manager client computers and site systems should have the following registry values set.
 
      **For 32-bit applications that are running on 32-bit systems or 64-bit applications that are running on 64-bit systems:**
 
@@ -55,7 +55,7 @@ To do this, follow these steps:
      "SchUseStrongCrypto"=dword:00000001
      ```
 
-     **For 32-bit applications that are running on 64-bit systems:**
+     **For 32-bit applications that are running on 64-bit systems:**
 
      ```
      [HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v2.0.50727]

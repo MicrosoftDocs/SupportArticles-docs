@@ -21,15 +21,15 @@ For more information about software updates in Configuration Manager, see [Softw
 
 When you create a software update group in the Configuration Manager console, an instance of the `SMS_AuthorizationList` class is created. This instance contains information about the software update group, and it has relationships with the software updates in the software update group.
 
-The following are logged in SMSProv.log:
+The following are logged in SMSProv.log:
 
-> CSspClassManager::PreCallAction, dbname=CM_PS1    SMS Provider  
-> PutInstanceAsync SMS_AuthorizationList       SMS Provider  
-> CExtProviderClassObject::DoPutInstanceInstance    SMS Provider  
-> Updating SDM content definition.   SMS Provider  
-> Try to sync permission table : Declare @Ids RBAC_Object_Type;insert into @Ids (ObjectKey, ObjectTypeID) values (N'ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_9D013E6D-EF76-43F6-ACC4-80749AB8D90A',34);exec spRBAC_SyncPermissions @ObjectIds=@Ids,@RoleIDs=N'',@AdminIDs=N''     SMS Provider  
-> Successfully synced permission table              SMS Provider  
-> Auditing: User CONTOSO\Admin created an instance of class SMS_AuthorizationList.    SMS Provider
+> CSspClassManager::PreCallAction, dbname=CM_PS1    SMS Provider  
+> PutInstanceAsync SMS_AuthorizationList       SMS Provider  
+> CExtProviderClassObject::DoPutInstanceInstance    SMS Provider  
+> Updating SDM content definition.   SMS Provider  
+> Try to sync permission table : Declare @Ids RBAC_Object_Type;insert into @Ids (ObjectKey, ObjectTypeID) values (N'ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_9D013E6D-EF76-43F6-ACC4-80749AB8D90A',34);exec spRBAC_SyncPermissions @ObjectIds=@Ids,@RoleIDs=N'',@AdminIDs=N''     SMS Provider  
+> Successfully synced permission table              SMS Provider  
+> Auditing: User CONTOSO\Admin created an instance of class SMS_AuthorizationList.    SMS Provider
 
 As part of the software update group creation process, SMSProv inserts data in appropriate CI_ tables, including the following:
 
@@ -40,34 +40,34 @@ As part of the software update group creation process, SMSProv inserts data in a
 - CI_CIDocuments
 - CI_LocalizedProperties
 
-SMSDBMON monitors when data is inserted into these tables and drops CI Notification (CIN) files in objmgr.box. The following are logged in SMSDBMon.log:
+SMSDBMON monitors when data is inserted into these tables and drops CI Notification (CIN) files in objmgr.box. The following are logged in SMSDBMon.log:
 
-> RCV: INSERT on CI_ConfigurationItems for CINotify_iud [16777264 ][60216]    SMS_DATABASE_NOTIFICATION_MONITOR  
-> RCV: UPDATE on CI_ConfigurationItems for CINotify_iud [16777264 ][60217]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: INSERT on CI_ConfigurationItems for CINotify_iud [16777264 ][60216]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: UPDATE on CI_ConfigurationItems for CINotify_iud [16777264 ][60217]    SMS_DATABASE_NOTIFICATION_MONITOR  
 > RCV: INSERT on CI_ConfigurationItemRelations_Flat for CI_ConfigurationItemRelations_Flat_From_iud [16777264 ][60218] SMS_DATABASE_NOTIFICATION_MONITOR  
 > RCV: INSERT on CI_ConfigurationItemRelations_Flat for CI_ConfigurationItemRelations_Flat_From_iud [16777264 ][60219] SMS_DATABASE_NOTIFICATION_MONITOR  
 > RCV: INSERT on CI_ConfigurationItemRelations_Flat for CI_ConfigurationItemRelations_Flat_From_iud [16777264 ][60220] SMS_DATABASE_NOTIFICATION_MONITOR  
 > RCV: INSERT on CI_ConfigurationItemRelations_Flat for CI_ConfigurationItemRelations_Flat_From_iud [16777264 ][60221] SMS_DATABASE_NOTIFICATION_MONITOR  
 > RCV: INSERT on CI_ConfigurationItemRelations_Flat for CI_ConfigurationItemRelations_Flat_From_iud [16777264 ][60222] SMS_DATABASE_NOTIFICATION_MONITOR  
 > RCV: INSERT on CI_ConfigurationItemRelations_Flat for CI_ConfigurationItemRelations_Flat_From_iud [16777264 ][60223] SMS_DATABASE_NOTIFICATION_MONITOR  
-> RCV: UPDATE on CI_ConfigurationItems for CINotify_iud [16777264 ][60224]    SMS_DATABASE_NOTIFICATION_MONITOR  
-> RCV: UPDATE on CI_ConfigurationItems for CINotify_iud [16777264 ][60225]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: UPDATE on CI_ConfigurationItems for CINotify_iud [16777264 ][60224]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: UPDATE on CI_ConfigurationItems for CINotify_iud [16777264 ][60225]    SMS_DATABASE_NOTIFICATION_MONITOR  
 > RCV: INSERT on RBAC_ChangeNotification for Rbac_Sync_ChangeNotification [363 ][60226] SMS_DATABASE_NOTIFICATION_MONITOR  
-> SND: Dropped E:\ConfigMgr\inboxes\objmgr.box\16777264.CIN [60225]    SMS_DATABASE_NOTIFICATION_MONITOR  
-> SND: Dropped E:\ConfigMgr\inboxes\hman.box\363.RBC [60226]    SMS_DATABASE_NOTIFICATION_MONITOR
+> SND: Dropped E:\ConfigMgr\inboxes\objmgr.box\16777264.CIN [60225]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> SND: Dropped E:\ConfigMgr\inboxes\hman.box\363.RBC [60226]    SMS_DATABASE_NOTIFICATION_MONITOR
 
-Object Replication Manager wakes up when files are dropped in objmgr.box and processes the software update group. The following are logged in ObjReplMgr.log:
+Object Replication Manager wakes up when files are dropped in objmgr.box and processes the software update group. The following are logged in ObjReplMgr.log:
 
-> File notification triggered.      SMS_OBJECT_REPLICATION_MANAGER  
-> +++Begin processing changed CIN objects      SMS_OBJECT_REPLICATION_MANAGER  
-> \***** Processing AuthorizationList ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_9D013E6D-EF76-43F6-ACC4- 80749AB8D90A \*****   SMS_OBJECT_REPLICATION_MANAGER  
-> Deleting notification file E:\ConfigMgr\inboxes\objmgr.box\16777264.CIN           SMS_OBJECT_REPLICATION_MANAGER  
-> +++Begin collecting targeting information for Affected CIs   SMS_OBJECT_REPLICATION_MANAGER  
-> +++Completed collecting targeting information for Affected CIs               SMS_OBJECT_REPLICATION_MANAGER  
-> Affected CIs (1): 16777264            SMS_OBJECT_REPLICATION_MANAGER  
-> CI 16777264 is NOT Targeted         SMS_OBJECT_REPLICATION_MANAGER  
-> Successfully processed AuthorizationList ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_9D013E6D-EF76-43F6-ACC4-80749AB8D90A   SMS_OBJECT_REPLICATION_MANAGER  
-> Set last row version for Configuration Item to 0x0000000000296047     SMS_OBJECT_REPLICATION_MANAGER
+> File notification triggered.      SMS_OBJECT_REPLICATION_MANAGER  
+> +++Begin processing changed CIN objects      SMS_OBJECT_REPLICATION_MANAGER  
+> \***** Processing AuthorizationList ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_9D013E6D-EF76-43F6-ACC4- 80749AB8D90A \*****   SMS_OBJECT_REPLICATION_MANAGER  
+> Deleting notification file E:\ConfigMgr\inboxes\objmgr.box\16777264.CIN           SMS_OBJECT_REPLICATION_MANAGER  
+> +++Begin collecting targeting information for Affected CIs   SMS_OBJECT_REPLICATION_MANAGER  
+> +++Completed collecting targeting information for Affected CIs               SMS_OBJECT_REPLICATION_MANAGER  
+> Affected CIs (1): 16777264            SMS_OBJECT_REPLICATION_MANAGER  
+> CI 16777264 is NOT Targeted         SMS_OBJECT_REPLICATION_MANAGER  
+> Successfully processed AuthorizationList ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_9D013E6D-EF76-43F6-ACC4-80749AB8D90A   SMS_OBJECT_REPLICATION_MANAGER  
+> Set last row version for Configuration Item to 0x0000000000296047     SMS_OBJECT_REPLICATION_MANAGER
 
 The changes to the CI_* tables are then replicated to the child sites through database replication, allowing the software update group to show up on the child site.
 
@@ -89,135 +89,135 @@ WHERE CI.CIType_ID = 9
 
 When a deployment for a software update group is created, an instance of the `SMS_UpdateGroupAssignment` class is created. This contains information about the deployment. The following are logged in SMSProv.log:
 
-> PutInstanceAsync SMS_UpdateGroupAssignment       SMS Provider  
-> CExtProviderClassObject::DoPutInstanceInstance        SMS Provider  
-> Auditing: User CONTOSO\Admin created an instance of class SMS_UpdateGroupAssignment.    SMS Provider
+> PutInstanceAsync SMS_UpdateGroupAssignment       SMS Provider  
+> CExtProviderClassObject::DoPutInstanceInstance        SMS Provider  
+> Auditing: User CONTOSO\Admin created an instance of class SMS_UpdateGroupAssignment.    SMS Provider
 
-Updates are then downloaded to the specified package source directory by the Software Updates Patch Downloader component. The following are logged in PatchDownloader.log in %TEMP% directory:
+Updates are then downloaded to the specified package source directory by the Software Updates Patch Downloader component. The following are logged in PatchDownloader.log in %TEMP% directory:
 
 > Trying to connect to the root\SMS namespace on the PS1SITE.CONTOSO.COM machine. Software Updates Patch Downloader  
-> Connected to \\\PS1SITE.CONTOSO.COM\root\SMS      Software Updates Patch Downloader  
-> Trying to connect to the \\\PS1SITE.CONTOSO.COM\root\sms\site_PS1 namespace on the PS1SITE.CONTOSO.COM machine.     Software Updates Patch Downloader  
-> Connected to \\\PS1SITE.CONTOSO.COM\root\sms\site_PS1     Software Updates Patch Downloader  
-> Download destination = \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1.1\windows6.1-kb2807986-x86.cab .       Software Updates Patch Downloader  
-> Contentsource = `http://wsus.ds.download.windowsupdate.com/msdownload/update/software/secu/2013/02/windows6.1-kb2807986-x86_83d5bb38d8c50d924f3dcd024b20fe33afbd9d14.cab`.      Software Updates Patch Downloader  
-> Downloading content for ContentID = 471, FileName = windows6.1-kb2807986-x86.cab.     Software Updates Patch Downloader  
-> Download `http://wsus.ds.download.windowsupdate.com/msdownload/update/software/secu/2013/02/windows6.1-kb2807986-x86_83d5bb38d8c50d924f3dcd024b20fe33afbd9d14.cab` to C:\Users\Admin\AppData\Local\Temp\2\CABBA79.tmp returns 0       Software Updates Patch Downloader  
-> Successfully moved C:\Users\Admin\AppData\Local\Temp\2\CABBA79.tmp to \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7- 455a-a51b-aaeca7b7d7e1.1\windows6.1-kb2807986-x86.cab       Software Updates Patch Downloader  
-> Renaming \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1.1 to \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1      Software Updates Patch Downloader  
-> Successfully moved \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1.1 to \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1      Software Updates Patch Downloader
+> Connected to \\\PS1SITE.CONTOSO.COM\root\SMS      Software Updates Patch Downloader  
+> Trying to connect to the \\\PS1SITE.CONTOSO.COM\root\sms\site_PS1 namespace on the PS1SITE.CONTOSO.COM machine.     Software Updates Patch Downloader  
+> Connected to \\\PS1SITE.CONTOSO.COM\root\sms\site_PS1     Software Updates Patch Downloader  
+> Download destination = \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1.1\windows6.1-kb2807986-x86.cab .       Software Updates Patch Downloader  
+> Contentsource = `http://wsus.ds.download.windowsupdate.com/msdownload/update/software/secu/2013/02/windows6.1-kb2807986-x86_83d5bb38d8c50d924f3dcd024b20fe33afbd9d14.cab`.      Software Updates Patch Downloader  
+> Downloading content for ContentID = 471, FileName = windows6.1-kb2807986-x86.cab.     Software Updates Patch Downloader  
+> Download `http://wsus.ds.download.windowsupdate.com/msdownload/update/software/secu/2013/02/windows6.1-kb2807986-x86_83d5bb38d8c50d924f3dcd024b20fe33afbd9d14.cab` to C:\Users\Admin\AppData\Local\Temp\2\CABBA79.tmp returns 0       Software Updates Patch Downloader  
+> Successfully moved C:\Users\Admin\AppData\Local\Temp\2\CABBA79.tmp to \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7- 455a-a51b-aaeca7b7d7e1.1\windows6.1-kb2807986-x86.cab       Software Updates Patch Downloader  
+> Renaming \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1.1 to \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1      Software Updates Patch Downloader  
+> Successfully moved \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1.1 to \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1      Software Updates Patch Downloader
 
-After the updates are downloaded, SMS Provider adds each update to the specified package. The following are logged in SMSProv.log:
+After the updates are downloaded, SMS Provider adds each update to the specified package. The following are logged in SMSProv.log:
 
-> Requested class =SMS_SoftwareUpdatesPackage    SMS Provider  
-> Requested num keys =1    SMS Provider  
-> CExtProviderClassObject::DoExecuteMethod AddUpdateContent    SMS Provider  
-> \*** SspPackageInst::AddUpdateContent ***    SMS Provider  
-> CObjectLock::UserHasLock: ********** User CONTOSO\Admin has lock for object SMS_SoftwareUpdatesPackage.PackageID="PS100001" with LockID: DCE6F1B5-1EE8-47CB-85A7-3027E51119A7 \**********     SMS Provider  
-> CObjectLock::ReleaseLock: \********** User CONTOSO\Admin has released lock for object SMS_SoftwareUpdatesPackage.PackageID="PS100001" with LockID: DCE6F1B5-1EE8-47CB-85A7-3027E51119A7 **********     SMS Provider  
-> SspPackageInst::AddContent() called for these ContentIDs - {471}    SMS Provider  
-> SspPackageInst::AddContent() called with these CIContentSourcePath - {"\\\PS1SITE\SOURCE\Updates\Win7"}    SMS Provider  
-> RefreshDPs value is FALSE. DP(s) will not be updated at the end of the operation    SMS Provider  
-> These Contents will be added to Software Updates Package - PS100001 with PackageSource - \\\PS1SITE\SOURCE\Updates\Win7    SMS Provider  
-> Adding Content with ID 471, UniqueID d09e9a92-20e7-455a-a51b-aaeca7b7d7e1 and ContentSource \\\PS1SITE\SOURCE\Updates\Win7 to the Package    SMS Provider  
-> ContentFileName = windows6.1-kb2807986-x86.cab, SourceURL = `http://wsus.ds.download.windowsupdate.com/msdownload/update/software/secu/2013/02/windows6.1-kb2807986- x86_83d5bb38d8c50d924f3dcd024b20fe33afbd9d14.cab`, ImportPath = , ContentFileHash = SHA1:83D5BB38D8C50D924F3DCD024B20FE33AFBD9D14      SMS Provider  
-> File Source = \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1\windows6.1-kb2807986-x86.cab    SMS Provider  
-> File Destination = \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1     SMS Provider  
-> CExtUserContext::LeaveThread : Releasing IWbemContextPtr=57376560      SMS Provider
+> Requested class =SMS_SoftwareUpdatesPackage    SMS Provider  
+> Requested num keys =1    SMS Provider  
+> CExtProviderClassObject::DoExecuteMethod AddUpdateContent    SMS Provider  
+> \*** SspPackageInst::AddUpdateContent ***    SMS Provider  
+> CObjectLock::UserHasLock: ********** User CONTOSO\Admin has lock for object SMS_SoftwareUpdatesPackage.PackageID="PS100001" with LockID: DCE6F1B5-1EE8-47CB-85A7-3027E51119A7 \**********     SMS Provider  
+> CObjectLock::ReleaseLock: \********** User CONTOSO\Admin has released lock for object SMS_SoftwareUpdatesPackage.PackageID="PS100001" with LockID: DCE6F1B5-1EE8-47CB-85A7-3027E51119A7 **********     SMS Provider  
+> SspPackageInst::AddContent() called for these ContentIDs - {471}    SMS Provider  
+> SspPackageInst::AddContent() called with these CIContentSourcePath - {"\\\PS1SITE\SOURCE\Updates\Win7"}    SMS Provider  
+> RefreshDPs value is FALSE. DP(s) will not be updated at the end of the operation    SMS Provider  
+> These Contents will be added to Software Updates Package - PS100001 with PackageSource - \\\PS1SITE\SOURCE\Updates\Win7    SMS Provider  
+> Adding Content with ID 471, UniqueID d09e9a92-20e7-455a-a51b-aaeca7b7d7e1 and ContentSource \\\PS1SITE\SOURCE\Updates\Win7 to the Package    SMS Provider  
+> ContentFileName = windows6.1-kb2807986-x86.cab, SourceURL = `http://wsus.ds.download.windowsupdate.com/msdownload/update/software/secu/2013/02/windows6.1-kb2807986- x86_83d5bb38d8c50d924f3dcd024b20fe33afbd9d14.cab`, ImportPath = , ContentFileHash = SHA1:83D5BB38D8C50D924F3DCD024B20FE33AFBD9D14      SMS Provider  
+> File Source = \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1\windows6.1-kb2807986-x86.cab    SMS Provider  
+> File Destination = \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1     SMS Provider  
+> CExtUserContext::LeaveThread : Releasing IWbemContextPtr=57376560      SMS Provider
 
 After all the updates are added to the package, SMS Provider updates the package and logs the following:
 
 > CExtUserContext::EnterThread : User=CONTOSO\Admin Sid=0x01050000000000051500000068830AA65AAB72A155BCE9324F040000 Caching IWbemContextPtr=00000000036B7E50 in
-Process 0xc68 (3176)    SMS Provider  
-> Context: SMSAppName=Configuration Manager Administrator console    SMS Provider  
-> Context: MachineName=PS1SITE.CONTOSO.COM    SMS Provider  
-> Context: UserName=CONTOSO\Admin    SMS Provider  
-> Context: ObjectLockContext=c00c315d-b15d-4b0e-9844-017205cc2443    SMS Provider  
-> Context: ApplicationName=Microsoft.ConfigurationManagement.exe    SMS Provider  
-> Context: ApplicationVersion=5.0.7958.1000     SMS Provider  
-> Context: LocaleID=MS\0x409    SMS Provider  
-> Context: __ProviderArchitecture=32      SMS Provider  
-> Context: \__RequiredArchitecture=0 (Bool)      SMS Provider  
-> Context: __ClientPreferredLanguages=en-US,en    SMS Provider  
-> Context:  __GroupOperationId=755382    SMS Provider  
-> Context:  __WBEM_CLIENT_AUTHENTICATION_LEVEL=6    SMS Provider  
-> CExtUserContext : Set ThreadLocaleID OK to: 1033    SMS Provider  
+Process 0xc68 (3176)    SMS Provider  
+> Context: SMSAppName=Configuration Manager Administrator console    SMS Provider  
+> Context: MachineName=PS1SITE.CONTOSO.COM    SMS Provider  
+> Context: UserName=CONTOSO\Admin    SMS Provider  
+> Context: ObjectLockContext=c00c315d-b15d-4b0e-9844-017205cc2443    SMS Provider  
+> Context: ApplicationName=Microsoft.ConfigurationManagement.exe    SMS Provider  
+> Context: ApplicationVersion=5.0.7958.1000     SMS Provider  
+> Context: LocaleID=MS\0x409    SMS Provider  
+> Context: __ProviderArchitecture=32      SMS Provider  
+> Context: \__RequiredArchitecture=0 (Bool)      SMS Provider  
+> Context: __ClientPreferredLanguages=en-US,en    SMS Provider  
+> Context:  __GroupOperationId=755382    SMS Provider  
+> Context:  __WBEM_CLIENT_AUTHENTICATION_LEVEL=6    SMS Provider  
+> CExtUserContext : Set ThreadLocaleID OK to: 1033    SMS Provider  
 > CSspClassManager::PreCallAction, dbname=CM_PS1 SMS Provider  
-> ExecMethodAsync : SMS_SoftwareUpdatesPackage.PackageID="PS100001"::RefreshPkgSource    SMS Provider  
-> Requested class =SMS_SoftwareUpdatesPackage    SMS Provider  
-> Requested num keys =1    SMS Provider  
-> CExtProviderClassObject::DoExecuteMethod RefreshPkgSource    SMS Provider  
-> Auditing: User CONTOSO\Admin called an audited method of an instance of class SMS_SoftwareUpdatesPackage.     SMS Provider  
-> CExtUserContext::LeaveThread : Releasing IWbemContextPtr=57376336    SMS Provider
+> ExecMethodAsync : SMS_SoftwareUpdatesPackage.PackageID="PS100001"::RefreshPkgSource    SMS Provider  
+> Requested class =SMS_SoftwareUpdatesPackage    SMS Provider  
+> Requested num keys =1    SMS Provider  
+> CExtProviderClassObject::DoExecuteMethod RefreshPkgSource    SMS Provider  
+> Auditing: User CONTOSO\Admin called an audited method of an instance of class SMS_SoftwareUpdatesPackage.     SMS Provider  
+> CExtUserContext::LeaveThread : Releasing IWbemContextPtr=57376336    SMS Provider
 
-When the update group assignment is created, SMS Provider inserts information about the assignment in the `CI_Assignments` table. This triggers SMSDBMON, which notifies Object Replication Manager to process the update group assignment by dropping a .CIA file in objmgr.box. The following are logged in SMSDBMON.log:
+When the update group assignment is created, SMS Provider inserts information about the assignment in the `CI_Assignments` table. This triggers SMSDBMON, which notifies Object Replication Manager to process the update group assignment by dropping a .CIA file in objmgr.box. The following are logged in SMSDBMON.log:
 
-> RCV: INSERT on CI_CIAssignments for CIAssignmentNotify_iu [16777222 ][60916]    SMS_DATABASE_NOTIFICATION_MONITOR  
-> RCV: INSERT on CrpChange_Notify for CrpChange_Notify_ins [14 ][60917]    SMS_DATABASE_NOTIFICATION_MONITOR  
-> RCV: UPDATE on CI_CIAssignments for CIAssignmentNotify_iu [16777222 ][60920]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: INSERT on CI_CIAssignments for CIAssignmentNotify_iu [16777222 ][60916]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: INSERT on CrpChange_Notify for CrpChange_Notify_ins [14 ][60917]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: UPDATE on CI_CIAssignments for CIAssignmentNotify_iu [16777222 ][60920]    SMS_DATABASE_NOTIFICATION_MONITOR  
 > RCV: UPDATE on CI_AssignmentTargetedCIs for CI_AssignmentTargetedCIs_CIAMGR [16777222 ][60921] SMS_DATABASE_NOTIFICATION_MONITOR  
-> RCV: UPDATE on CI_CIAssignments for CIAssignmentNotify_iu [16777222 ][60923]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: UPDATE on CI_CIAssignments for CIAssignmentNotify_iu [16777222 ][60923]    SMS_DATABASE_NOTIFICATION_MONITOR  
 > RCV: UPDATE on CI_AssignmentTargetedCIs for CI_AssignmentTargetedCIs_CIAMGR [16777222 ][60924] SMS_DATABASE_NOTIFICATION_MONITOR  
-> RCV: UPDATE on CI_CIAssignments for CIAssignmentNotify_iu [16777222 ][60926]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: UPDATE on CI_CIAssignments for CIAssignmentNotify_iu [16777222 ][60926]    SMS_DATABASE_NOTIFICATION_MONITOR  
 > RCV: UPDATE on CI_AssignmentTargetedCIs for CI_AssignmentTargetedCIs_CIAMGR [16777222 ][60927] SMS_DATABASE_NOTIFICATION_MONITOR  
-> SND: Dropped E:\ConfigMgr\inboxes\objmgr.box\16777222.CIA [60916]    SMS_DATABASE_NOTIFICATION_MONITOR  
-> SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\14.CRP [60917]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> SND: Dropped E:\ConfigMgr\inboxes\objmgr.box\16777222.CIA [60916]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\14.CRP [60917]    SMS_DATABASE_NOTIFICATION_MONITOR  
 > RCV: INSERT on PolicyAssignmentChg_Notify for PolicyAssignmentChg_Notify_iu [16786995 ][60929] SMS_DATABASE_NOTIFICATION_MONITOR  
 > SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16786995.PAC [60929] SMS_DATABASE_NOTIFICATION_MONITOR  
-> RCV: INSERT on PkgNotification for PkgNotify_Add [PS100001 ][60930]     SMS_DATABASE_NOTIFICATION_MONITOR  
-> SND: Dropped E:\ConfigMgr\inboxes\distmgr.box\PS100001.PKN [60930]      SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: INSERT on PkgNotification for PkgNotify_Add [PS100001 ][60930]     SMS_DATABASE_NOTIFICATION_MONITOR  
+> SND: Dropped E:\ConfigMgr\inboxes\distmgr.box\PS100001.PKN [60930]      SMS_DATABASE_NOTIFICATION_MONITOR  
 > RCV: INSERT on PolicyAssignmentChg_Notify for PolicyAssignmentChg_Notify_iu [16786995 ][60931] SMS_DATABASE_NOTIFICATION_MONITOR  
 > RCV: UPDATE on PolicyAssignmentChg_Notify for PolicyAssignmentChg_Notify_iu [16786995 ][60932] SMS_DATABASE_NOTIFICATION_MONITOR  
 > SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16786995.PAC [60931] SMS_DATABASE_NOTIFICATION_MONITOR
 
-After Object Replication Manager detects the CIA file in objmgr.box, it processes the file and creates the policy for the software update assignment. The following are logged in ObjMgr.log:
+After Object Replication Manager detects the CIA file in objmgr.box, it processes the file and creates the policy for the software update assignment. The following are logged in ObjMgr.log:
 
-> File notification triggered.    SMS_OBJECT_REPLICATION_MANAGER  
-> +++Begin processing changed CIA objects    SMS_OBJECT_REPLICATION_MANAGER  
-> \***** Processing Update Group Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745} \*****   SMS_OBJECT_REPLICATION_MANAGER  
-> Deleting notification file E:\ConfigMgr\inboxes\objmgr .box\16777222.CIA    SMS_OBJECT_REPLICATION_MANAGER  
-> CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745} has 3 Targeted CI(s)    SMS_OBJECT_REPLICATION_MANAGER  
-> PolicyID {3ACE84D4-7B2A-4D86-81AF-07E2AC255745} PolicyVersion 1.00 PolicyHash SHA256:63BAFA808F969849B40B2B727B49BC5093B965782716DDE3490528681CF27ACC     SMS_OBJECT_REPLICATION_MANAGER  
-> Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
-> Successfully created policy for CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}    SMS_OBJECT_REPLICATION_MANAGER  
-> Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
-> Successfully updated Policy Targeting for CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}   SMS_OBJECT_REPLICATION_MANAGER  
-> No file trigger for E:\ConfigMgr\inboxes\objmgr.box\16777222.CIV - status 2    SMS_OBJECT_REPLICATION_MANAGER  
-> Assigned CIs: [ 16777264 ]    SMS_OBJECT_REPLICATION_MANAGER  
-> Begin processing Assigned CI: [16777264]    SMS_OBJECT_REPLICATION_MANAGER  
-> Creating VersionInfo policy for CI 16777264   SMS_OBJECT_REPLICATION_MANAGER  
-> Creating VersionInfo policy ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_9D013E6D-EF76-43F6-ACC4- 80749AB8D90A/VI    SMS_OBJECT_REPLICATION_MANAGER  
-> 16777264 Referenced CIs: [ 929 930 1041 1042 1132 1133 ]    SMS_OBJECT_REPLICATION_MANAGER  
-> VersionInfo policy for CI 16777264 is Machine type    SMS_OBJECT_REPLICATION_MANAGER  
-> PolicyID ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_9D013E6D-EF76-43F6-ACC4-80749AB8D90A/VI PolicyVersion 1.00 PolicyHash SHA256:6EFE96F3D67773CA965EC67EC60B602FC78242509A096FCF44C2D5FDD5B2FC76     SMS_OBJECT_REPLICATION_MANAGER  
-> Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
-> Updated dependent policy references to CIA {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}     SMS_OBJECT_REPLICATION_MANAGER  
-> STATMSG: ID=5800 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_OBJECT_REPLICATION_MANAGER" SYS=PS1SITE.CONTOSO.COM SITE=PS1 PID=5404 TID=3380 GMTDATE=Thu Jan 23 20:31:38.889 2014 ISTR0="Microsoft Software Updates - 2014-01-23 03:30:52 PM" ISTR1="" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=1 AID0=414 AVAL0="{3ACE84D4-7B2A-4D86-81AF-07E2AC255745}"    SMS_OBJECT_REPLICATION_MANAGER  
-> Successfully updated CRCs for CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}      SMS_OBJECT_REPLICATION_MANAGER  
-> Successfully processed Update Group Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}     SMS_OBJECT_REPLICATION_MANAGER  
-> Set last row version for CI Assignment to 0x0000000000296628             SMS_OBJECT_REPLICATION_MANAGER
+> File notification triggered.    SMS_OBJECT_REPLICATION_MANAGER  
+> +++Begin processing changed CIA objects    SMS_OBJECT_REPLICATION_MANAGER  
+> \***** Processing Update Group Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745} \*****   SMS_OBJECT_REPLICATION_MANAGER  
+> Deleting notification file E:\ConfigMgr\inboxes\objmgr .box\16777222.CIA    SMS_OBJECT_REPLICATION_MANAGER  
+> CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745} has 3 Targeted CI(s)    SMS_OBJECT_REPLICATION_MANAGER  
+> PolicyID {3ACE84D4-7B2A-4D86-81AF-07E2AC255745} PolicyVersion 1.00 PolicyHash SHA256:63BAFA808F969849B40B2B727B49BC5093B965782716DDE3490528681CF27ACC     SMS_OBJECT_REPLICATION_MANAGER  
+> Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
+> Successfully created policy for CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}    SMS_OBJECT_REPLICATION_MANAGER  
+> Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
+> Successfully updated Policy Targeting for CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}   SMS_OBJECT_REPLICATION_MANAGER  
+> No file trigger for E:\ConfigMgr\inboxes\objmgr.box\16777222.CIV - status 2    SMS_OBJECT_REPLICATION_MANAGER  
+> Assigned CIs: [ 16777264 ]    SMS_OBJECT_REPLICATION_MANAGER  
+> Begin processing Assigned CI: [16777264]    SMS_OBJECT_REPLICATION_MANAGER  
+> Creating VersionInfo policy for CI 16777264   SMS_OBJECT_REPLICATION_MANAGER  
+> Creating VersionInfo policy ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_9D013E6D-EF76-43F6-ACC4- 80749AB8D90A/VI    SMS_OBJECT_REPLICATION_MANAGER  
+> 16777264 Referenced CIs: [ 929 930 1041 1042 1132 1133 ]    SMS_OBJECT_REPLICATION_MANAGER  
+> VersionInfo policy for CI 16777264 is Machine type    SMS_OBJECT_REPLICATION_MANAGER  
+> PolicyID ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_9D013E6D-EF76-43F6-ACC4-80749AB8D90A/VI PolicyVersion 1.00 PolicyHash SHA256:6EFE96F3D67773CA965EC67EC60B602FC78242509A096FCF44C2D5FDD5B2FC76     SMS_OBJECT_REPLICATION_MANAGER  
+> Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
+> Updated dependent policy references to CIA {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}     SMS_OBJECT_REPLICATION_MANAGER  
+> STATMSG: ID=5800 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_OBJECT_REPLICATION_MANAGER" SYS=PS1SITE.CONTOSO.COM SITE=PS1 PID=5404 TID=3380 GMTDATE=Thu Jan 23 20:31:38.889 2014 ISTR0="Microsoft Software Updates - 2014-01-23 03:30:52 PM" ISTR1="" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=1 AID0=414 AVAL0="{3ACE84D4-7B2A-4D86-81AF-07E2AC255745}"    SMS_OBJECT_REPLICATION_MANAGER  
+> Successfully updated CRCs for CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}      SMS_OBJECT_REPLICATION_MANAGER  
+> Successfully processed Update Group Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}     SMS_OBJECT_REPLICATION_MANAGER  
+> Set last row version for CI Assignment to 0x0000000000296628             SMS_OBJECT_REPLICATION_MANAGER
 
-After being notified by the Object Replication Manager, Policy Provider updates the policy for the clients. The following are logged in PolicyPv.log:
+After being notified by the Object Replication Manager, Policy Provider updates the policy for the clients. The following are logged in PolicyPv.log:
 
-> File notification triggered.    SMS_POLICY_PROVIDER  
-> Found 14.CRP    SMS_POLICY_PROVIDER  
-> Adding to delete list: E:\ConfigMgr\inboxes\policypv.box\policytargeteval\14.CRP    SMS_POLICY_PROVIDER  
-> Processing any pending PolicyAssignmentChg_Notify   SMS_POLICY_PROVIDER  
-> Updating ResPolicyMap    SMS_POLICY_PROVIDER  
-> Policy or Policy Target Change Event triggered.    SMS_POLICY_PROVIDER  
-> File notification triggered.    SMS_POLICY_PROVIDER  
-> Building Collection Change List from Collection Member Notification files    SMS_POLICY_PROVIDER  
-> --Handle PolicyAssignment Resigning    SMS_POLICY_PROVIDER  
-> Completed batch with beginning PADBID = 16786995 ending PADBID = 16786996.    SMS_POLICY_PROVIDER  
-> --Process Policy Changes    SMS_POLICY_PROVIDER  
-> Found some Policy changes, returning New LastRowversion=0x000000000029662B    SMS_POLICY_PROVIDER  
-> Processing Updated Policies    SMS_POLICY_PROVIDER  
-> Building Collection Change List from New and Targeting Changed Policies    SMS_POLICY_PROVIDER  
-> --Update Policy Targeting Map    SMS_POLICY_PROVIDER  
-> **** Evaluating Collection 14 for targeting changes ****    SMS_POLICY_PROVIDER  
-> Advanced client policy changes detected for collection 14, \** 5 Added & 0 Deleted ***.     SMS_POLICY_PROVIDER  
-> --Process Policy Targeting Map    SMS_POLICY_PROVIDER  
-> **** Process notification table to update resultant targeting table ****    SMS_POLICY_PROVIDER
+> File notification triggered.    SMS_POLICY_PROVIDER  
+> Found 14.CRP    SMS_POLICY_PROVIDER  
+> Adding to delete list: E:\ConfigMgr\inboxes\policypv.box\policytargeteval\14.CRP    SMS_POLICY_PROVIDER  
+> Processing any pending PolicyAssignmentChg_Notify   SMS_POLICY_PROVIDER  
+> Updating ResPolicyMap    SMS_POLICY_PROVIDER  
+> Policy or Policy Target Change Event triggered.    SMS_POLICY_PROVIDER  
+> File notification triggered.    SMS_POLICY_PROVIDER  
+> Building Collection Change List from Collection Member Notification files    SMS_POLICY_PROVIDER  
+> --Handle PolicyAssignment Resigning    SMS_POLICY_PROVIDER  
+> Completed batch with beginning PADBID = 16786995 ending PADBID = 16786996.    SMS_POLICY_PROVIDER  
+> --Process Policy Changes    SMS_POLICY_PROVIDER  
+> Found some Policy changes, returning New LastRowversion=0x000000000029662B    SMS_POLICY_PROVIDER  
+> Processing Updated Policies    SMS_POLICY_PROVIDER  
+> Building Collection Change List from New and Targeting Changed Policies    SMS_POLICY_PROVIDER  
+> --Update Policy Targeting Map    SMS_POLICY_PROVIDER  
+> **** Evaluating Collection 14 for targeting changes ****    SMS_POLICY_PROVIDER  
+> Advanced client policy changes detected for collection 14, \** 5 Added & 0 Deleted ***.     SMS_POLICY_PROVIDER  
+> --Process Policy Targeting Map    SMS_POLICY_PROVIDER  
+> **** Process notification table to update resultant targeting table ****    SMS_POLICY_PROVIDER
 
 SQL Server Profiler covering the entire process displays the following:
 
@@ -265,153 +265,153 @@ values(N'1.00', N'SHA256:6EFE96F3D67773CA965EC67EC60B602FC78242509A096FCF44C2D5F
 
 ## Create a deployment by using an automatic deployment rule
 
-Automatic deployment rule (ADR) execution is triggered manually, per a schedule or after software update synchronization is completed. The Rule Engine component evaluates the rule, and if any software updates match the defined criteria, the Rule Engine downloads the updates, creates a software update group, and creates a software update group assignment. The following example shows the process of software update group and deployment creation:
+Automatic deployment rule (ADR) execution is triggered manually, per a schedule or after software update synchronization is completed. The Rule Engine component evaluates the rule, and if any software updates match the defined criteria, the Rule Engine downloads the updates, creates a software update group, and creates a software update group assignment. The following example shows the process of software update group and deployment creation:
 
 RuleEngine.log shows beginning of rule processing:
 
-> Found notification file E:\ConfigMgr\inboxes\RuleEngine.box\1.RUL   SMS_RULE_ENGINE  
-> RuleSchedulerThred: Change in Rules Object Signalled.   SMS_RULE_ENGINE  
-> Constructing Rule 1 using Auto Deployment Rule Factory  SMS_RULE_ENGINE  
-> Populating Rule Skeleton            SMS_RULE_ENGINE  
-> Populating Criterion Skeleton       SMS_RULE_ENGINE  
-> Populating Action Skeleton          SMS_RULE_ENGINE  
-> Populating Action Skeleton          SMS_RULE_ENGINE  
-> CRuleHandler: Need to Process 1 rules           SMS_RULE_ENGINE
+> Found notification file E:\ConfigMgr\inboxes\RuleEngine.box\1.RUL   SMS_RULE_ENGINE  
+> RuleSchedulerThred: Change in Rules Object Signalled.   SMS_RULE_ENGINE  
+> Constructing Rule 1 using Auto Deployment Rule Factory  SMS_RULE_ENGINE  
+> Populating Rule Skeleton            SMS_RULE_ENGINE  
+> Populating Criterion Skeleton       SMS_RULE_ENGINE  
+> Populating Action Skeleton          SMS_RULE_ENGINE  
+> Populating Action Skeleton          SMS_RULE_ENGINE  
+> CRuleHandler: Need to Process 1 rules           SMS_RULE_ENGINE
 
-RuleEngine.log shows rule processing and query to run to find updates that match the defined criteria:
+RuleEngine.log shows rule processing and query to run to find updates that match the defined criteria:
 
-> CRuleHandler: Processing Rule with ID:1, Name:ADR_Test.    SMS_RULE_ENGINE  
-> Evaluating Update Criteria for AutoDeployment Rule 1    SMS_RULE_ENGINE  
-> Evaluating Update Criteria...    SMS_RULE_ENGINE  
-> Rule Criteria is: \<UpdateXML xmlns:xsi="`http://www.w3.org/2001/XMLSchema-instance`" xmlns:xsd="`http://www.w3.org/2001/XMLSchema`" Name="SMS_SoftwareUpdate" LocaleId="1033">\<UpdateXMLDescriptionItems>\<UpdateXMLDescriptionItem PropertyName="_Product" UIPropertyName="">\<MatchRules>\<string>'Product:a38c835c-2950-4e87-86cc- 6911a52c34a3'\</string>\</MatchRules>\</UpdateXMLDescriptionItem>\<UpdateXMLDescriptionItem PropertyName="IsSuperseded" UIPropertyName="">\<MatchRules>\<string>false\</string>\</MatchRules>\</UpdateXMLDescriptionItem>\<UpdateXMLDescriptionIte m PropertyName="_UpdateClassification" UIPropertyName="">\<MatchRules>\<string>'UpdateClassification:e0789628-ce08-4437- be74-2495b842f43b'\</string>\</MatchRules>\</UpdateXMLDescriptionItem>\</UpdateXMLDescriptionItems>\</UpdateXML>     SMS_RULE_ENGINE  
-> Inserting PropertyName:_Product, PropertyValue:'Product:a38c835c-2950-4e87-86cc-6911a52c34a3'      SMS_RULE_ENGINE  
-> Inserting PropertyName:IsSuperseded, PropertyValue:false    SMS_RULE_ENGINE  
-> Inserting PropertyName:_UpdateClassification, PropertyValue:'UpdateClassification:e0789628-ce08-4437-be74-2495b842f43b'     SMS_RULE_ENGINE  
-> Query to run is: select CI_ID from dbo.fn_ListUpdateCIs(1033) ci~where IsExpired=0~ and (IsSuperseded=0)~ and (CI_ID in (select CI_ID from v_CICategories_All where CategoryInstance_UniqueID in (N'Product:a38c835c-2950-4e87-86cc-6911a52c34a3')))~ and (CI_ID in (select CI_ID from v_CICategories_All where CategoryInstance_UniqueID in (N'UpdateClassification:e0789628-ce08-4437- be74-2495b842f43b')))    SMS_RULE_ENGINE  
-> Rule resulted in a total of 1 updates    SMS_RULE_ENGINE  
-> Evaluation Resultant XML is: \<EvaluationResultXML xmlns:xsi="`http://www.w3.org/2001/XMLSchema-instance`" xmlns:xsd="`http://www.w3.org/2001/XMLSchema`">\<DefinitionUpdates/>\<CI_IDs>\<CI_ID>4514\</CI_ID>\</CI_IDs>\</EvaluationResultXML>     SMS_RULE_ENGINE
+> CRuleHandler: Processing Rule with ID:1, Name:ADR_Test.    SMS_RULE_ENGINE  
+> Evaluating Update Criteria for AutoDeployment Rule 1    SMS_RULE_ENGINE  
+> Evaluating Update Criteria...    SMS_RULE_ENGINE  
+> Rule Criteria is: \<UpdateXML xmlns:xsi="`http://www.w3.org/2001/XMLSchema-instance`" xmlns:xsd="`http://www.w3.org/2001/XMLSchema`" Name="SMS_SoftwareUpdate" LocaleId="1033">\<UpdateXMLDescriptionItems>\<UpdateXMLDescriptionItem PropertyName="_Product" UIPropertyName="">\<MatchRules>\<string>'Product:a38c835c-2950-4e87-86cc- 6911a52c34a3'\</string>\</MatchRules>\</UpdateXMLDescriptionItem>\<UpdateXMLDescriptionItem PropertyName="IsSuperseded" UIPropertyName="">\<MatchRules>\<string>false\</string>\</MatchRules>\</UpdateXMLDescriptionItem>\<UpdateXMLDescriptionIte m PropertyName="_UpdateClassification" UIPropertyName="">\<MatchRules>\<string>'UpdateClassification:e0789628-ce08-4437- be74-2495b842f43b'\</string>\</MatchRules>\</UpdateXMLDescriptionItem>\</UpdateXMLDescriptionItems>\</UpdateXML>     SMS_RULE_ENGINE  
+> Inserting PropertyName:_Product, PropertyValue:'Product:a38c835c-2950-4e87-86cc-6911a52c34a3'      SMS_RULE_ENGINE  
+> Inserting PropertyName:IsSuperseded, PropertyValue:false    SMS_RULE_ENGINE  
+> Inserting PropertyName:_UpdateClassification, PropertyValue:'UpdateClassification:e0789628-ce08-4437-be74-2495b842f43b'     SMS_RULE_ENGINE  
+> Query to run is: select CI_ID from dbo.fn_ListUpdateCIs(1033) ci~where IsExpired=0~ and (IsSuperseded=0)~ and (CI_ID in (select CI_ID from v_CICategories_All where CategoryInstance_UniqueID in (N'Product:a38c835c-2950-4e87-86cc-6911a52c34a3')))~ and (CI_ID in (select CI_ID from v_CICategories_All where CategoryInstance_UniqueID in (N'UpdateClassification:e0789628-ce08-4437- be74-2495b842f43b')))    SMS_RULE_ENGINE  
+> Rule resulted in a total of 1 updates    SMS_RULE_ENGINE  
+> Evaluation Resultant XML is: \<EvaluationResultXML xmlns:xsi="`http://www.w3.org/2001/XMLSchema-instance`" xmlns:xsd="`http://www.w3.org/2001/XMLSchema`">\<DefinitionUpdates/>\<CI_IDs>\<CI_ID>4514\</CI_ID>\</CI_IDs>\</EvaluationResultXML>     SMS_RULE_ENGINE
 
 Download is initiated for actionable updates:
 
 > Enforcing Content Download Action SMS_RULE_ENGINE  
-> Download Rule Action XML is: \<ContentActionXML xmlns:xsi="`http://www.w3.org/2001/XMLSchema-instance`" xmlns:xsd="`http://www.w3.org/2001/XMLSchema`">\<PackageID>CS100006\</PackageID>\<ContentLocales>\<Locale>Locale:9\</Locale >\<Locale>Locale:0\</Locale>\</ContentLocales>\<ContentSources>\<Source Name="Internet" Order="1"/>\<Source Name="WSUS" Order="2"/>\<Source Name="UNC" Order="3" Location=""/>\</ContentSources>\</ContentActionXML>        SMS_RULE_ENGINE  
+> Download Rule Action XML is: \<ContentActionXML xmlns:xsi="`http://www.w3.org/2001/XMLSchema-instance`" xmlns:xsd="`http://www.w3.org/2001/XMLSchema`">\<PackageID>CS100006\</PackageID>\<ContentLocales>\<Locale>Locale:9\</Locale >\<Locale>Locale:0\</Locale>\</ContentLocales>\<ContentSources>\<Source Name="Internet" Order="1"/>\<Source Name="WSUS" Order="2"/>\<Source Name="UNC" Order="3" Location=""/>\</ContentSources>\</ContentActionXML>        SMS_RULE_ENGINE  
 > Criteria Filter Result XML is: \<EvaluationResultXML xmlns:xsi="`http://www.w3.org/2001/XMLSchema-instance`" xmlns:xsd="`http://www.w3.org/2001/XMLSchema`">  
-\<DefinitionUpdates/>\<CI_IDs>\<CI_ID>4514\</CI_ID>\</CI_IDs> \</EvaluationResultXML>    SMS_RULE_ENGINE  
-> 1 update(s) need to be downloaded in package "CS100006" (\\\CS1SITE\SOURCE\Updates\EPDefinitions)    SMS_RULE_ENGINE  
+\<DefinitionUpdates/>\<CI_IDs>\<CI_ID>4514\</CI_ID>\</CI_IDs> \</EvaluationResultXML>    SMS_RULE_ENGINE  
+> 1 update(s) need to be downloaded in package "CS100006" (\\\CS1SITE\SOURCE\Updates\EPDefinitions)    SMS_RULE_ENGINE  
 > List of update(s) which match the content rule criteria = {4514} SMS_RULE_ENGINE  
-> Downloading contents (count = 34) for UpdateID 4514              SMS_RULE_ENGINE  
-> List of update content(s) which match the content rule criteria = {737,738,739,740,741,742,2182,2183,2184,2185,2186,2187,2188,2189,3047,3048,3187,3188,3189,3190,3191,3192,3545,3546,3547 ,3548,3549,3550,3551,3552,3553,3554,3555,3556}     SMS_RULE_ENGINE  
-> Contents 737 is already present in the package "CS100006". Skipping download.         SMS_RULE_ENGINE  
-> Contents 738 is already present in the package "CS100006". Skipping download.    S MS_RULE_ENGINE  
+> Downloading contents (count = 34) for UpdateID 4514              SMS_RULE_ENGINE  
+> List of update content(s) which match the content rule criteria = {737,738,739,740,741,742,2182,2183,2184,2185,2186,2187,2188,2189,3047,3048,3187,3188,3189,3190,3191,3192,3545,3546,3547 ,3548,3549,3550,3551,3552,3553,3554,3555,3556}     SMS_RULE_ENGINE  
+> Contents 737 is already present in the package "CS100006". Skipping download.         SMS_RULE_ENGINE  
+> Contents 738 is already present in the package "CS100006". Skipping download.    S MS_RULE_ENGINE  
 > 1 of 1 updates are downloaded and will be added to the Deployment. SMS_RULE_ENGINE
 
 RuleEngine.log shows creation of update group and deployment:
 
-> We need to create a new UpdateGroup/Deployment          SMS_RULE_ENGINE  
-> Associated Update Group: ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_4d3480d5-de12-4864-b872-187479e2b381 with RBAC Scope SMS00UNA       SMS_RULE_ENGINE
+> We need to create a new UpdateGroup/Deployment          SMS_RULE_ENGINE  
+> Associated Update Group: ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_4d3480d5-de12-4864-b872-187479e2b381 with RBAC Scope SMS00UNA       SMS_RULE_ENGINE
 
 The following examples illustrate the update group creation process:
 
-In SMSDBMON.log:
+In SMSDBMON.log:
 
-> RCV: INSERT on CI_ConfigurationItems for CINotify_iud [16777275 ][66146]           SMS_DATABASE_NOTIFICATION_MONITOR  
-> RCV: INSERT on CI_ConfigurationItemRelations_Flat for CI_ConfigurationItemRelations_Flat_From_iud [16777275 ][66148]    SMS_DATABASE_NOTIFICATION_MONITOR  
-> RCV: INSERT on CI_ConfigurationItemRelations_Flat for CI_ConfigurationItemRelations_Flat_From_iud [16777275 ][66149]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: INSERT on CI_ConfigurationItems for CINotify_iud [16777275 ][66146]           SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: INSERT on CI_ConfigurationItemRelations_Flat for CI_ConfigurationItemRelations_Flat_From_iud [16777275 ][66148]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: INSERT on CI_ConfigurationItemRelations_Flat for CI_ConfigurationItemRelations_Flat_From_iud [16777275 ][66149]    SMS_DATABASE_NOTIFICATION_MONITOR  
 > ...  
-> SND: Dropped E:\ConfigMgr\inboxes\objmgr.box\16777275.CIN [66148]                   SMS_DATABASE_NOTIFICATION_MONITOR  
-> SND: Dropped E:\ConfigMgr\inboxes\objmgr.box\16777275.CIN [66149]                   SMS_DATABASE_NOTIFICATION_MONITOR
+> SND: Dropped E:\ConfigMgr\inboxes\objmgr.box\16777275.CIN [66148]                   SMS_DATABASE_NOTIFICATION_MONITOR  
+> SND: Dropped E:\ConfigMgr\inboxes\objmgr.box\16777275.CIN [66149]                   SMS_DATABASE_NOTIFICATION_MONITOR
 
-In ObjReplMgr.log:
+In ObjReplMgr.log:
 
-> File notification triggered.   SMS_OBJECT_REPLICATION_MANAGER  
-> \***** Processing AuthorizationList ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_4d3480d5-de12-4864-b872-187479e2b381 *****        SMS_OBJECT_REPLICATION_MANAGER  
-Deleting notification file E:\ConfigMgr\inboxes\objmgr.box\16777275.CIN       SMS_OBJECT_REPLICATION_MANAGER  
-> Added CI with CI_ID=4514 to the deployment       SMS_OBJECT_REPLICATION_MANAGER  
-> Created file trigger for E:\ConfigMgr\inboxes\objmgr.box\16777228.CIA             SMS_OBJECT_REPLICATION_MANAGER  
-> Created file trigger for E:\ConfigMgr\inboxes\objmgr.box\16777228.CIV             SMS_OBJECT_REPLICATION_MANAGER  
-> Successfully processed AuthorizationList ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_4d3480d5-de12-4864-b872- 187479e2b381    SMS_OBJECT_REPLICATION_MANAGER  
-> Set last row version for Configuration Item to 0x0000000000487EA9    SMS_OBJECT_REPLICATION_MANAGER
+> File notification triggered.   SMS_OBJECT_REPLICATION_MANAGER  
+> \***** Processing AuthorizationList ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_4d3480d5-de12-4864-b872-187479e2b381 *****        SMS_OBJECT_REPLICATION_MANAGER  
+Deleting notification file E:\ConfigMgr\inboxes\objmgr.box\16777275.CIN       SMS_OBJECT_REPLICATION_MANAGER  
+> Added CI with CI_ID=4514 to the deployment       SMS_OBJECT_REPLICATION_MANAGER  
+> Created file trigger for E:\ConfigMgr\inboxes\objmgr.box\16777228.CIA             SMS_OBJECT_REPLICATION_MANAGER  
+> Created file trigger for E:\ConfigMgr\inboxes\objmgr.box\16777228.CIV             SMS_OBJECT_REPLICATION_MANAGER  
+> Successfully processed AuthorizationList ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_4d3480d5-de12-4864-b872- 187479e2b381    SMS_OBJECT_REPLICATION_MANAGER  
+> Set last row version for Configuration Item to 0x0000000000487EA9    SMS_OBJECT_REPLICATION_MANAGER
 
 The following example shows the deployment creation process:
 
-In SMSDBMON.log:
+In SMSDBMON.log:
 
 > RCV: INSERT on CI_CIAssignments for CIAssignmentNotify_iu [16777228 ][66190] SMS_DATABASE_NOTIFICATION_MONITOR  
-> SND: Dropped E:\ConfigMgr\inboxes\objmgr.box\16777228.CIA [66190]            SMS_DATABASE_NOTIFICATION_MONITOR
+> SND: Dropped E:\ConfigMgr\inboxes\objmgr.box\16777228.CIA [66190]            SMS_DATABASE_NOTIFICATION_MONITOR
 
-In ObjReplMgr.log:
+In ObjReplMgr.log:
 
-> +++Begin processing changed CIA objects      SMS_OBJECT_REPLICATION_MANAGER  
-> \***** Processing Update Group Assignment {2ba787b6-4ee9-4b33-b0ff-8663d181c84d} *****    SMS_OBJECT_REPLICATION_MANAGER  
-> Deleting notification file E:\ConfigMgr\inboxes\objmgr.box\16777228.CIA    SMS_OBJECT_REPLICATION_MANAGER  
-> CI Assignment {2ba787b6-4ee9-4b33-b0ff-8663d181c84d} has 1 Targeted CI(s)   SMS_OBJECT_REPLICATION_MANAGER  
-> PolicyID {2ba787b6-4ee9-4b33-b0ff-8663d181c84d} PolicyVersion 1.00 PolicyHash SHA256:0C6D50CBFB36750CCA381B61E014A6C55D821001487C824F9112DAA1C64BAD32     SMS_OBJECT_REPLICATION_MANAGER  
-> Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
-> Successfully created policy for CI Assignment {2ba787b6-4ee9-4b33-b0ff-8663d181c84d}    SMS_OBJECT_REPLICATION_MANAGER  
-> Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
-> Successfully updated Policy Targeting for CI Assignment {2ba787b6-4ee9-4b33-b0ff-8663d181c84d}   SMS_OBJECT_REPLICATION_MANAGER  
-> Found file trigger for E:\ConfigMgr\inboxes\objmgr.box\16777228.CIV    SMS_OBJECT_REPLICATION_MANAGER  
-> Assigned CIs: [ 16777275 ]   SMS_OBJECT_REPLICATION_MANAGER  
-> Begin processing Assigned CI: [16777275]    SMS_OBJECT_REPLICATION_MANAGER  
-> Creating VersionInfo policy for CI 16777275   SMS_OBJECT_REPLICATION_MANAGER  
-> Creating VersionInfo policy ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_4d3480d5-de12-4864-b872-187479e2b381/VI    SMS_OBJECT_REPLICATION_MANAGER  
-> 16777275 Referenced CIs: [ 1395 1396 1397 1398 1399 1400 1401 3013 3014 3015 3016 3017 3018 3019 3020 3021 3959 3960 3961 4112 4113 4114 4115 4116 4117 4118 4502 4503 4504 4505 4506 4507 4508 4509 4510 4511 4512 4513 4514 ]       SMS_OBJECT_REPLICATION_MANAGER  
-> VersionInfo policy for CI 16777275 is Machine type   SMS_OBJECT_REPLICATION_MANAGER  
-> PolicyID ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_4d3480d5-de12-4864-b872-187479e2b381/VI PolicyVersion 1.00 PolicyHash SHA256:01BECBBF2B3EE56BD5B0742A04404C1C895A4C87B6915D55078AB157FEBA1E0F   SMS_OBJECT_REPLICATION_MANAGER  
-> Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
-> Updated dependent policy references to CIA {2ba787b6-4ee9-4b33-b0ff-8663d181c84d}    SMS_OBJECT_REPLICATION_MANAGER  
-> STATMSG: ID=5800 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_OBJECT_REPLICATION_MANAGER" SYS=PS1SITE.CONTOSO.COM SITE=PS1 PID=6176 TID=6868 GMTDATE=Thu Feb 06 20:09:17.989 2014 ISTR0="ADR_Test" ISTR1="" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=1 AID0=414 AVAL0="{2ba787b6-4ee9-4b33- b0ff-8663d181c84d}"   SMS_OBJECT_REPLICATION_MANAGER  
-> Successfully updated CRCs for CI Assignment {2ba787b6-4ee9-4b33-b0ff-8663d181c84d}    SMS_OBJECT_REPLICATION_MANAGER  
-> Successfully processed Update Group Assignment {2ba787b6-4ee9-4b33-b0ff-8663d181c84d}    SMS_OBJECT_REPLICATION_MANAGER  
-> Set last row version for CI Assignment to 0x0000000000487EB6    SMS_OBJECT_REPLICATION_MANAGER  
-> +++Completed processing changed CIA objects    SMS_OBJECT_REPLICATION_MANAGER
+> +++Begin processing changed CIA objects      SMS_OBJECT_REPLICATION_MANAGER  
+> \***** Processing Update Group Assignment {2ba787b6-4ee9-4b33-b0ff-8663d181c84d} *****    SMS_OBJECT_REPLICATION_MANAGER  
+> Deleting notification file E:\ConfigMgr\inboxes\objmgr.box\16777228.CIA    SMS_OBJECT_REPLICATION_MANAGER  
+> CI Assignment {2ba787b6-4ee9-4b33-b0ff-8663d181c84d} has 1 Targeted CI(s)   SMS_OBJECT_REPLICATION_MANAGER  
+> PolicyID {2ba787b6-4ee9-4b33-b0ff-8663d181c84d} PolicyVersion 1.00 PolicyHash SHA256:0C6D50CBFB36750CCA381B61E014A6C55D821001487C824F9112DAA1C64BAD32     SMS_OBJECT_REPLICATION_MANAGER  
+> Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
+> Successfully created policy for CI Assignment {2ba787b6-4ee9-4b33-b0ff-8663d181c84d}    SMS_OBJECT_REPLICATION_MANAGER  
+> Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
+> Successfully updated Policy Targeting for CI Assignment {2ba787b6-4ee9-4b33-b0ff-8663d181c84d}   SMS_OBJECT_REPLICATION_MANAGER  
+> Found file trigger for E:\ConfigMgr\inboxes\objmgr.box\16777228.CIV    SMS_OBJECT_REPLICATION_MANAGER  
+> Assigned CIs: [ 16777275 ]   SMS_OBJECT_REPLICATION_MANAGER  
+> Begin processing Assigned CI: [16777275]    SMS_OBJECT_REPLICATION_MANAGER  
+> Creating VersionInfo policy for CI 16777275   SMS_OBJECT_REPLICATION_MANAGER  
+> Creating VersionInfo policy ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_4d3480d5-de12-4864-b872-187479e2b381/VI    SMS_OBJECT_REPLICATION_MANAGER  
+> 16777275 Referenced CIs: [ 1395 1396 1397 1398 1399 1400 1401 3013 3014 3015 3016 3017 3018 3019 3020 3021 3959 3960 3961 4112 4113 4114 4115 4116 4117 4118 4502 4503 4504 4505 4506 4507 4508 4509 4510 4511 4512 4513 4514 ]       SMS_OBJECT_REPLICATION_MANAGER  
+> VersionInfo policy for CI 16777275 is Machine type   SMS_OBJECT_REPLICATION_MANAGER  
+> PolicyID ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_4d3480d5-de12-4864-b872-187479e2b381/VI PolicyVersion 1.00 PolicyHash SHA256:01BECBBF2B3EE56BD5B0742A04404C1C895A4C87B6915D55078AB157FEBA1E0F   SMS_OBJECT_REPLICATION_MANAGER  
+> Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
+> Updated dependent policy references to CIA {2ba787b6-4ee9-4b33-b0ff-8663d181c84d}    SMS_OBJECT_REPLICATION_MANAGER  
+> STATMSG: ID=5800 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_OBJECT_REPLICATION_MANAGER" SYS=PS1SITE.CONTOSO.COM SITE=PS1 PID=6176 TID=6868 GMTDATE=Thu Feb 06 20:09:17.989 2014 ISTR0="ADR_Test" ISTR1="" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=1 AID0=414 AVAL0="{2ba787b6-4ee9-4b33- b0ff-8663d181c84d}"   SMS_OBJECT_REPLICATION_MANAGER  
+> Successfully updated CRCs for CI Assignment {2ba787b6-4ee9-4b33-b0ff-8663d181c84d}    SMS_OBJECT_REPLICATION_MANAGER  
+> Successfully processed Update Group Assignment {2ba787b6-4ee9-4b33-b0ff-8663d181c84d}    SMS_OBJECT_REPLICATION_MANAGER  
+> Set last row version for CI Assignment to 0x0000000000487EB6    SMS_OBJECT_REPLICATION_MANAGER  
+> +++Completed processing changed CIA objects    SMS_OBJECT_REPLICATION_MANAGER
 
 The following example shows the Policy creation process:
 
-In SMSDBMON.log:
+In SMSDBMON.log:
 
-> RCV: INSERT on CrpChange_Notify for CrpChange_Notify_ins [15 ][66199]   SMS_DATABASE_NOTIFICATION_MONITOR  
-> RCV: INSERT on RBAC_ChangeNotification for Rbac_Sync_ChangeNotification [399 ][66200]   SMS_DATABASE_NOTIFICATION_MONITOR  
-> SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\15.CRP [66199]      SMS_DATABASE_NOTIFICATION_MONITOR  
-> SND: Dropped E:\ConfigMgr\inboxes\hman.box\399.RBC [66200]   SMS_DATABASE_NOTIFICATION_MONITOR  
-> RCV: INSERT on PolicyAssignmentChg_Notify for PolicyAssignmentChg_Notify_iu [16787957 ][66201]    SMS_DATABASE_NOTIFICATION_MONITOR  
-> SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16787957.PAC [66201]    SMS_DATABASE_NOTIFICATION_MONITOR  
-> RCV: INSERT on PolicyAssignmentChg_Notify for PolicyAssignmentChg_Notify_iu [16787957 ][66202]    SMS_DATABASE_NOTIFICATION_MONITOR  
-> RCV: UPDATE on PolicyAssignmentChg_Notify for PolicyAssignmentChg_Notify_iu [16787957 ][66203]    SMS_DATABASE_NOTIFICATION_MONITOR  
-> SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16787957.PAC [66202]    SMS_DATABASE_NOTIFICATION_MONITOR  
-> SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16787957.PAC [66203]    SMS_DATABASE_NOTIFICATION_MONITOR
+> RCV: INSERT on CrpChange_Notify for CrpChange_Notify_ins [15 ][66199]   SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: INSERT on RBAC_ChangeNotification for Rbac_Sync_ChangeNotification [399 ][66200]   SMS_DATABASE_NOTIFICATION_MONITOR  
+> SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\15.CRP [66199]      SMS_DATABASE_NOTIFICATION_MONITOR  
+> SND: Dropped E:\ConfigMgr\inboxes\hman.box\399.RBC [66200]   SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: INSERT on PolicyAssignmentChg_Notify for PolicyAssignmentChg_Notify_iu [16787957 ][66201]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16787957.PAC [66201]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: INSERT on PolicyAssignmentChg_Notify for PolicyAssignmentChg_Notify_iu [16787957 ][66202]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: UPDATE on PolicyAssignmentChg_Notify for PolicyAssignmentChg_Notify_iu [16787957 ][66203]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16787957.PAC [66202]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16787957.PAC [66203]    SMS_DATABASE_NOTIFICATION_MONITOR
 
-In PolicyPv.log:
+In PolicyPv.log:
 
-> File notification triggered.   SMS_POLICY_PROVIDER  
-> --Process Collection Changes    SMS_POLICY_PROVIDER  
-> Building Collection Change List from Collection Change Notification files    SMS_POLICY_PROVIDER  
-> --Process Collection Member Changes    SMS_POLICY_PROVIDER  
-> Building Collection Change List from Collection Member Notification files    SMS_POLICY_PROVIDER  
-> --Handle PolicyAssignment Resigning    SMS_POLICY_PROVIDER  
-> Found the certificate that matches the SHA1 hash.    SMS_POLICY_PROVIDER  
-> Completed batch with beginning PADBID = 16787957 ending PADBID = 16787958.    SMS_POLICY_PROVIDER  
-> --Process Policy Changes    SMS_POLICY_PROVIDER  
-> Found some Policy changes, returning New LastRowversion=0x0000000000487EB7    SMS_POLICY_PROVIDER  
-> Processing Updated Policies    SMS_POLICY_PROVIDER  
-> Building Collection Change List from New and Targeting Changed Policies    SMS_POLICY_PROVIDER  
-> --Update Policy Targeting Map    SMS_POLICY_PROVIDER  
-> **** Evaluating Collection 15 for targeting changes \****    SMS_POLICY_PROVIDER  
-> --Process Policy Targeting Map    SMS_POLICY_PROVIDER  
-> **** Process notification table to update resultant targeting table \****    SMS_POLICY_PROVIDER  
-> --Process Targeting and Collection Membership changes    SMS_POLICY_PROVIDER  
-> Updating Policy Map    SMS_POLICY_PROVIDER  
-> --UpdateMDMUserTargetingForUser    SMS_POLICY_PROVIDER  
-> Start Update MDM User Targeting For User  SMS_POLICY_PROVIDER  
-> --UpdatePolicyMapForPA    SMS_POLICY_PROVIDER  
-> Found 16787957.PAC    SMS_POLICY_PROVIDER  
-> Adding to delete list: E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16787957.PAC    SMS_POLICY_PROVIDER  
-> Updating ResPolicyMap    SMS_POLICY_PROVIDER
+> File notification triggered.   SMS_POLICY_PROVIDER  
+> --Process Collection Changes    SMS_POLICY_PROVIDER  
+> Building Collection Change List from Collection Change Notification files    SMS_POLICY_PROVIDER  
+> --Process Collection Member Changes    SMS_POLICY_PROVIDER  
+> Building Collection Change List from Collection Member Notification files    SMS_POLICY_PROVIDER  
+> --Handle PolicyAssignment Resigning    SMS_POLICY_PROVIDER  
+> Found the certificate that matches the SHA1 hash.    SMS_POLICY_PROVIDER  
+> Completed batch with beginning PADBID = 16787957 ending PADBID = 16787958.    SMS_POLICY_PROVIDER  
+> --Process Policy Changes    SMS_POLICY_PROVIDER  
+> Found some Policy changes, returning New LastRowversion=0x0000000000487EB7    SMS_POLICY_PROVIDER  
+> Processing Updated Policies    SMS_POLICY_PROVIDER  
+> Building Collection Change List from New and Targeting Changed Policies    SMS_POLICY_PROVIDER  
+> --Update Policy Targeting Map    SMS_POLICY_PROVIDER  
+> **** Evaluating Collection 15 for targeting changes \****    SMS_POLICY_PROVIDER  
+> --Process Policy Targeting Map    SMS_POLICY_PROVIDER  
+> **** Process notification table to update resultant targeting table \****    SMS_POLICY_PROVIDER  
+> --Process Targeting and Collection Membership changes    SMS_POLICY_PROVIDER  
+> Updating Policy Map    SMS_POLICY_PROVIDER  
+> --UpdateMDMUserTargetingForUser    SMS_POLICY_PROVIDER  
+> Start Update MDM User Targeting For User  SMS_POLICY_PROVIDER  
+> --UpdatePolicyMapForPA    SMS_POLICY_PROVIDER  
+> Found 16787957.PAC    SMS_POLICY_PROVIDER  
+> Adding to delete list: E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16787957.PAC    SMS_POLICY_PROVIDER  
+> Updating ResPolicyMap    SMS_POLICY_PROVIDER
 
 RuleEngine.log showing rule processing completes:
 
-> CRuleHandler: Rule 1 Successfully Applied!   SMS_RULE_ENGINE  
-> Updated Success Information for Rule: 1     SMS_RULE_ENGINE
+> CRuleHandler: Rule 1 Successfully Applied!   SMS_RULE_ENGINE  
+> Updated Success Information for Rule: 1     SMS_RULE_ENGINE
 
 ## Deployment evaluation and update installation on clients
 

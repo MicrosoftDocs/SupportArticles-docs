@@ -18,7 +18,7 @@ For essential information about how PXE works, see the companion article [Unders
 
 The solutions that are provided in [Troubleshooting PXE boot issues in Configuration Manager section](troubleshoot-pxe-boot-issues.md) can resolve most issues that affect PXE boot.
 
-If you can't resolve your PXE boot issue by using IP Helpers or reinstalling PXE, try the following troubleshooting steps.
+If you can't resolve your PXE boot issue by using IP Helpers or reinstalling PXE, try the following troubleshooting steps.
 
 ## Special consideration when co-hosting DHCP and WDS on the same server
 
@@ -34,19 +34,19 @@ When Dynamic Host Configuration Protocol (DHCP) and WDS are co-hosted on the sam
    WDSUTIL /Set-Server /UseDHCPPorts:No /DHCPOption60:Yes
    ```
 
-This recommendation requires that you configure WDS to run the `WDSUTIL` command. This recommendation conflicts with the best practice not to configure WDS when you install a ConfigMgr PXE-enabled DP. However, you can configure the two settings that are specified in the `WDSUTIL` command (`UseDHCPPorts` and `DHCPOption60`) by using alternative methods that don't require the `WDSUTIL` command. This way you don't have to configure WDS.
+This recommendation requires that you configure WDS to run the `WDSUTIL` command. This recommendation conflicts with the best practice not to configure WDS when you install a ConfigMgr PXE-enabled DP. However, you can configure the two settings that are specified in the `WDSUTIL` command (`UseDHCPPorts` and `DHCPOption60`) by using alternative methods that don't require the `WDSUTIL` command. This way you don't have to configure WDS.
 
 To configure these settings without having WDS enabled, follow these guidelines:
 
-- The `UseDHCPPorts` switch for `WDSUTIL` is actually the equivalent of setting the `UseDHCPPorts` registry key to a value of **0** in the following location:
+- The `UseDHCPPorts` switch for `WDSUTIL` is actually the equivalent of setting the `UseDHCPPorts` registry key to a value of **0** in the following location:
 
   `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WDSServer\Providers\WDSPXE`
 
   Using the `UseDHCPPorts` switch isn't necessary if the registry key is manually set. If WDS wasn't installed, this registry key may not exist.
 
-- The `DHCPOption60` switch configures an option for the DHCP service, not for the WDS service. Instead of using `WDSUTIL` to set this DHCP option, you can use an equivalent DHCP command to set the same option. To do it, use the `netsh` command, as described in [Configuring DHCP for Remote Boot Services](/previous-versions/windows/embedded/dd128762%28v=winembedded.51%29).
+- The `DHCPOption60` switch configures an option for the DHCP service, not for the WDS service. Instead of using `WDSUTIL` to set this DHCP option, you can use an equivalent DHCP command to set the same option. To do it, use the `netsh` command, as described in [Configuring DHCP for Remote Boot Services](/previous-versions/windows/embedded/dd128762%28v=winembedded.51%29).
 
-  To configure the WDS options according to these guidelines, close any DHCP consoles that are open, and then run the following commands at an elevated command prompt:
+  To configure the WDS options according to these guidelines, close any DHCP consoles that are open, and then run the following commands at an elevated command prompt:
   
   ```console
   netsh dhcp server \\<DHCP_server_machine_name> add optiondef 60 PXEClient String 0 comment=PXE support
@@ -56,9 +56,9 @@ To configure these settings without having WDS enabled, follow these guidelines:
   netsh dhcp server \\<DHCP_server_machine_name> set optionvalue 60 STRING PXEClient
   ```
   
-  These commands set up and enable DHCP Option 60 on a DHCP server. After you run these commands, if an option that is named `Unknown` is displayed instead of `060 PXE Client` in the DHCP console, restart the server so that these settings can take effect. After the restart, the option should be displayed correctly. This issue usually occurs only if a DHCP console was left open when the two commands were run.
+  These commands set up and enable DHCP Option 60 on a DHCP server. After you run these commands, if an option that is named `Unknown` is displayed instead of `060 PXE Client` in the DHCP console, restart the server so that these settings can take effect. After the restart, the option should be displayed correctly. This issue usually occurs only if a DHCP console was left open when the two commands were run.
 
-If DHCP is ever moved to another server and removed from the server that's hosting WDS, these steps should be reversed. Follow these steps on the WDS server:
+If DHCP is ever moved to another server and removed from the server that's hosting WDS, these steps should be reversed. Follow these steps on the WDS server:
 
 1. Run the following command at an elevated command prompt:
 
@@ -66,7 +66,7 @@ If DHCP is ever moved to another server and removed from the server that's hosti
    REG ADD HKLM\SYSTEM\CurrentControlSet\services\WDSServer\Providers\WDSPXE /v UseDHCPPorts /t REG_DWORD /d 1 /f
    ```
 
-2. Run the following commands at an elevated command prompt:
+2. Run the following commands at an elevated command prompt:
 
    ```console
    netsh dhcp server \\<DHCP_server_machine_name> delete optionvalue 60
@@ -77,18 +77,18 @@ If DHCP is ever moved to another server and removed from the server that's hosti
    ```
 
    > [!NOTE]
-   > The first of these commands disables DHCP option 60. The second command removes DHCP option 60 completely.
+   > The first of these commands disables DHCP option 60. The second command removes DHCP option 60 completely.
 
 ## Troubleshooting DHCP Discovery
 
-Before you start to troubleshoot the initial DHCP discovery stage of the PXE booting process, consider the following points:
+Before you start to troubleshoot the initial DHCP discovery stage of the PXE booting process, consider the following points:
 
 - In SMSPXE.log, you should see the MAC address or the **DHCPREQUEST** of the device that you're trying to start. If you don't see that, a router configuration issue might exist between the client and the DP.
-- Don't use DHCP options 60, 66, or 67. **It isn't supported**.
+- Don't use DHCP options 60, 66, or 67. **It isn't supported**.
 - Test whether the device can start when it's plugged into a switch on the same subnet as the PXE-enabled DP. If it can, the issue likely involves the router configuration.
-- Make sure that the DHCP (67 and 68), TFTP (69), and BINL (4011) ports are open between the client computer, the DHCP server, and the PXE DP.
+- Make sure that the DHCP (67 and 68), TFTP (69), and BINL (4011) ports are open between the client computer, the DHCP server, and the PXE DP.
 
-At this stage, there are no logs to refer to. A PXE error code is usually displayed if the PXE boot process fails before WinPE starts. Here are examples of the error messages that you might see:
+At this stage, there are no logs to refer to. A PXE error code is usually displayed if the PXE boot process fails before WinPE starts. Here are examples of the error messages that you might see:
 
 - PXE-E51: No DHCP or proxyDHCP offers were received.
 - PXE-E52: proxyDHCP offers were received. No DHCP offers were received.
@@ -97,17 +97,17 @@ At this stage, there are no logs to refer to. A PXE error code is usually displa
 - PXE-E77 bad or missing discovery server list.
 - PXE-E78: Could not locate boot server.
 
-Although it helps narrow the focus of troubleshooting, you might still have to capture a network trace of the issue by using a network monitoring tool, such as Netmon or [WireShark](https://www.wireshark.org/download.html). The network monitoring tool must be installed on both the PXE-enabled DP and a computer that's connected to a mirrored port on the switch. For more information about how to configure mirrored ports, refer to the manual provided by the manufacturer of the specific switch or routing device.
+Although it helps narrow the focus of troubleshooting, you might still have to capture a network trace of the issue by using a network monitoring tool, such as Netmon or [WireShark](https://www.wireshark.org/download.html). The network monitoring tool must be installed on both the PXE-enabled DP and a computer that's connected to a mirrored port on the switch. For more information about how to configure mirrored ports, refer to the manual provided by the manufacturer of the specific switch or routing device.
 
-The typical procedure is to start the network traces on both the DP and the computer that's connected to the mirrored port. Try to start the device through PXE. Then, stop the trace, and save it for further analysis.
+The typical procedure is to start the network traces on both the DP and the computer that's connected to the mirrored port. Try to start the device through PXE. Then, stop the trace, and save it for further analysis.
 
 Here is a sample trace of a DHCP conversation that was captured from the PXE-enabled DP:
 
 ![Trace of a DHCP conversation](./media/advanced-troubleshooting-pxe-boot/18489_en_1.png)
 
-You can see that the initial **DHCPDISCOVER** by the PXE client is followed by a **DHCPOFFER** from the DHCP server and the PXE DP. The request from the client (0.0.0.0) is made and then acknowledged by the DHCP server (10.238.0.14). After the PXE client has an IP address (10.238.0.3), it sends a request to the PXE DP (10.238.0.2). That DP then acknowledges the request by returning the network boot program details.
+You can see that the initial **DHCPDISCOVER** by the PXE client is followed by a **DHCPOFFER** from the DHCP server and the PXE DP. The request from the client (0.0.0.0) is made and then acknowledged by the DHCP server (10.238.0.14). After the PXE client has an IP address (10.238.0.3), it sends a request to the PXE DP (10.238.0.2). That DP then acknowledges the request by returning the network boot program details.
 
-Capture a simultaneous network trace on the client and the DP to determine whether the conversation is occurring as expected. Follow these guidelines:
+Capture a simultaneous network trace on the client and the DP to determine whether the conversation is occurring as expected. Follow these guidelines:
 
 - Make sure that the DHCP services are running and available.
 - Verify that the WDS service is running on the DP.
@@ -117,7 +117,7 @@ Capture a simultaneous network trace on the client and the DP to determine wheth
 
 ## Troubleshooting TFTP Transfer
 
-If the error on PXE boot refers to TFTP, you may be unable to transfer the boot files. The following are examples of the error messages that you may receive:
+If the error on PXE boot refers to TFTP, you may be unable to transfer the boot files. The following are examples of the error messages that you may receive:
 
 - PXE-E32: TFTP open timeout
 - PXE-E35: TFTP read timeout
@@ -126,11 +126,11 @@ If the error on PXE boot refers to TFTP, you may be unable to transfer the boot
 - PXE-E3B: TFTP Error - File not Found
 - PXE-T04: Access Violation
 
-A good way to troubleshoot these errors is to monitor the network by using Netmon or Wireshark. Below is an example of the data captured from a PXE client when a TFTP Open time-out occurs.
+A good way to troubleshoot these errors is to monitor the network by using Netmon or Wireshark. Below is an example of the data captured from a PXE client when a TFTP Open time-out occurs.
 
 ![Data when a TFTP Open time-out occurs](./media/advanced-troubleshooting-pxe-boot/18490_en_1.png)
 
-Here the client is sending read requests for the Wdsnbp.com file, but it isn't receiving a response. It indicates that something is preventing the acknowledgment from being received by the client. Here's what the data should look like.
+Here the client is sending read requests for the Wdsnbp.com file, but it isn't receiving a response. It indicates that something is preventing the acknowledgment from being received by the client. Here's what the data should look like.
 
 ![Data for sending read requests without receiving a response](./media/advanced-troubleshooting-pxe-boot/18491_en_1.png)
 
@@ -155,17 +155,17 @@ In this situation, you can try the following troubleshooting methods:
 
 ## Windows PE startup issues - drivers
 
-The most common issues that occur during this phase are driver-related. Overall, the latest version of Windows PE (WinPE) contains most network and mass storage drivers. Sometimes a required driver isn't included. So it must be imported into the boot WIM. The following guidelines apply to this process:
+The most common issues that occur during this phase are driver-related. Overall, the latest version of Windows PE (WinPE) contains most network and mass storage drivers. Sometimes a required driver isn't included. So it must be imported into the boot WIM. The following guidelines apply to this process:
 
 - Import only the drivers that you need for the boot image.
 - Consider adding only NIC or mass storage drivers. Other drivers aren't required.
 
-The SMSTS.log file (located in \<*SystemDrive*>:\Windows\temp\SMSTS) is the most useful resource to troubleshoot these issues. (Remember to enable the command prompt during startup so that you can examine this file.) If you don't see a log entry that has a valid IP address and resembles the following entry, you're probably experiencing a driver issue:
+The SMSTS.log file (located in \<*SystemDrive*>:\Windows\temp\SMSTS) is the most useful resource to troubleshoot these issues. (Remember to enable the command prompt during startup so that you can examine this file.) If you don't see a log entry that has a valid IP address and resembles the following entry, you're probably experiencing a driver issue:
 
 > SMSTS.log  
 > Found network adapter "Intel 21140-Based PCI Fast Ethernet Adapter (Emulated)" with IP Address \<IP address>
 
-To verify this situation, press F8, and then run `IPCONFIG` at the command prompt to determine whether the NIC is recognized and has a valid IP address.
+To verify this situation, press F8, and then run `IPCONFIG` at the command prompt to determine whether the NIC is recognized and has a valid IP address.
 
 ### WIM Files
 
@@ -173,11 +173,11 @@ Also make sure that both x86 and x64 boot images exist on the DP. You can see th
 
 `C:\RemoteInstall\SMSImages\<PackageID>`
 
-Make sure that **Deploy this boot image from the PXE-enabled distribution point** is set in the properties of the boot images.
+Make sure that **Deploy this boot image from the PXE-enabled distribution point** is set in the properties of the boot images.
 
 ## Configuration Manager Policy issues
 
-Another common issue that affects PXE boot involves Task Sequence deployments. In the following example, the Task Sequence is deployed to an unknown computer, but it's already in the database. The first symptom is that the PXE boot is aborted.
+Another common issue that affects PXE boot involves Task Sequence deployments. In the following example, the Task Sequence is deployed to an unknown computer, but it's already in the database. The first symptom is that the PXE boot is aborted.
 
 ![Task Sequence is deployed to an unknown computer](./media/advanced-troubleshooting-pxe-boot/18495_en_3.png)
 
@@ -194,7 +194,7 @@ Upon further investigation, you notice the following entry in the SMSPXE log:
 > 00:15:5D:00:19:CA, 32E5B71A-B626-4A4B-902E-7F94AD38B5B3: No boot action. Aborted.  
 > 00:15:5D:00:19:CA, 32E5B71A-B626-4A4B-902E-7F94AD38B5B3: Not serviced.
 
-You can see in this entry that when the NBS stored procedures ran, they found no available policy. So the boot action was aborted. The reverse can also be true. That is, when a computer is unknown but the Task Sequence is deployed to a collection of known computers.
+You can see in this entry that when the NBS stored procedures ran, they found no available policy. So the boot action was aborted. The reverse can also be true. That is, when a computer is unknown but the Task Sequence is deployed to a collection of known computers.
 
 You can try the following troubleshooting steps:
 
@@ -204,7 +204,7 @@ You can try the following troubleshooting steps:
 
 ## Need more help
 
-For more help to resolve this issue, see our [TechNet support forum](https://social.technet.microsoft.com/Forums/home?forum=configmanagerosd&filter=alltypes&sort=lastpostdesc) or [contact Microsoft Support](https://support.microsoft.com/).
+For more help to resolve this issue, see our [TechNet support forum](https://social.technet.microsoft.com/Forums/home?forum=configmanagerosd&filter=alltypes&sort=lastpostdesc) or [contact Microsoft Support](https://support.microsoft.com/).
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
 
