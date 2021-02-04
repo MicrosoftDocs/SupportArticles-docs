@@ -17,37 +17,37 @@ You create a Microsoft Deployment Toolkit (MDT) integrated UDI task sequence in 
 
 When this issue occurs, the following error messages are logged in SMSTS.log:
 
-> TSManager    Executing command line: smsswd.exe /run: cscript.exe //nologo "%deployroot%\Scripts\OSD_BaseVariables.vbs"  
-> InstallSoftware     ===================== [ smsswd.exe ] =======================  
-> InstallSoftware    PackageID = ''  
-> InstallSoftware    BaseVar = '', ContinueOnError=''  
-> InstallSoftware    ProgramName is logged, to ensure it not shown in log set 'OSDDoNotLogCommand' task sequence variable to 'True'  
-> InstallSoftware    ProgramName = 'cscript.exe //nologo "C:\\_SMSTaskSequence\WDPackage\Scripts\OSD_BaseVariables.vbs"'  
-> InstallSoftware    SwdAction = '0001'  
-> InstallSoftware    Command line for extension .exe is "%1" %*  
-> InstallSoftware    Set command line: Run command line  
-> InstallSoftware    Working dir 'not set'  
-> InstallSoftware    Executing command line: Run command line  
-> InstallSoftware    Process completed with exit code 200  
-> InstallSoftware    --------------------------------  
-> InstallSoftware    Initializing Objects  
-> InstallSoftware    --------------------------------  
+> TSManager    Executing command line: smsswd.exe /run: cscript.exe //nologo "%deployroot%\Scripts\OSD_BaseVariables.vbs"  
+> InstallSoftware     ===================== [ smsswd.exe ] =======================  
+> InstallSoftware    PackageID = ''  
+> InstallSoftware    BaseVar = '', ContinueOnError=''  
+> InstallSoftware    ProgramName is logged, to ensure it not shown in log set 'OSDDoNotLogCommand' task sequence variable to 'True'  
+> InstallSoftware    ProgramName = 'cscript.exe //nologo "C:\\_SMSTaskSequence\WDPackage\Scripts\OSD_BaseVariables.vbs"'  
+> InstallSoftware    SwdAction = '0001'  
+> InstallSoftware    Command line for extension .exe is "%1" %*  
+> InstallSoftware    Set command line: Run command line  
+> InstallSoftware    Working dir 'not set'  
+> InstallSoftware    Executing command line: Run command line  
+> InstallSoftware    Process completed with exit code 200  
+> InstallSoftware    --------------------------------  
+> InstallSoftware    Initializing Objects  
+> InstallSoftware    --------------------------------  
 > InstallSoftware  
-> InstallSoftware    --------------------------------  
-> InstallSoftware    Extracting TS Base Variable  
-> InstallSoftware    --------------------------------  
+> InstallSoftware    --------------------------------  
+> InstallSoftware    Extracting TS Base Variable  
+> InstallSoftware    --------------------------------  
 > InstallSoftware  
-> InstallSoftware    Reading OSD variable: [_SMSTSTaskSequence]  
-> InstallSoftware    Loading XML from variable string content...  
-> InstallSoftware    Using XPATH to query for [BaseVariableName]  
-> InstallSoftware    Failed to read XPATH query value, or value is empty.  
-> InstallSoftware    --------------------------------  
-> InstallSoftware     Exiting with [200]  
-> InstallSoftware    --------------------------------  
-> InstallSoftware    Command line cscript.exe //nologo "C:\\_SMSTaskSequence\WDPackage\Scripts\OSD_BaseVariables.vbs" returned 200  
-> TSManager    Process completed with exit code 200  
-> TSManager    !------------------------------------------------------------------!  
-> TSManager    Failed to run the action: Parse Base Variable.  
+> InstallSoftware    Reading OSD variable: [_SMSTSTaskSequence]  
+> InstallSoftware    Loading XML from variable string content...  
+> InstallSoftware    Using XPATH to query for [BaseVariableName]  
+> InstallSoftware    Failed to read XPATH query value, or value is empty.  
+> InstallSoftware    --------------------------------  
+> InstallSoftware     Exiting with [200]  
+> InstallSoftware    --------------------------------  
+> InstallSoftware    Command line cscript.exe //nologo "C:\\_SMSTaskSequence\WDPackage\Scripts\OSD_BaseVariables.vbs" returned 200  
+> TSManager    Process completed with exit code 200  
+> TSManager    !------------------------------------------------------------------!  
+> TSManager    Failed to run the action: Parse Base Variable.  
 > The code segment cannot be greater than or equal to 64K. (Error: 000000C8; Source: Windows)
 
 ## Cause
@@ -74,7 +74,7 @@ When the tasks in the task sequence aren't run in the proper order, the `OSD_Bas
 To fix the issue, in the task sequence:
 
 1. Make sure that the dynamic **Install Package** (displayed as **Install Software**) step is placed before the dynamic **Install Application** step.
-2. Make sure that all static **Install Package** and static **Install Application** steps are placed after the dynamic **Install Package** (displayed as **Install Software**) and dynamic **Install Application** steps.
+2. Make sure that all static **Install Package** and static **Install Application** steps are placed after the dynamic **Install Package** (displayed as **Install Software**) and dynamic **Install Application** steps.
 
 > [!NOTE]
 >

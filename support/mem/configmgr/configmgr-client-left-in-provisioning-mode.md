@@ -7,14 +7,14 @@ ms.reviewer: brianhun, aaroncz, mikecure, cmkbreview
 ---
 # Configuration Manager client left in provisioning mode after upgrade to Windows 10
 
-This article solves the issue that the Configuration Manager client is left in provisioning mode after performing an in-place upgrade to Windows 10.
+This article solves the issue that the Configuration Manager client is left in provisioning mode after performing an in-place upgrade to Windows 10.
 
 _Original product version:_ &nbsp; Configuration Manager (current branch)  
 _Original KB number:_ &nbsp; 4021950
 
 ## Symptoms
 
-When you use the **Upgrade an operating system from upgrade package** operating system task sequence to perform an in-place upgrade to Windows 10, the Configuration Manager client may be left in provisioning mode after the upgrade succeeds and the client restarts.
+When you use the **Upgrade an operating system from upgrade package** operating system task sequence to perform an in-place upgrade to Windows 10, the Configuration Manager client may be left in provisioning mode after the upgrade succeeds and the client restarts.
 
 ## Cause
 

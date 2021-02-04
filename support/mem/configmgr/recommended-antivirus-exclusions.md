@@ -26,8 +26,8 @@ The following is a non-comprehensive list of possible symptoms:
 - Remote site system components are not installed. SiteComp.log, Distmgr.log, hman.log, or other Configuration Manager log files may contain errors such as error 80070005.
 - The Configuration Manager client cannot be installed through client push.
 - Client inventory information is inaccurate, missing, or out-of-date.
-- Backlogs occur in the *Install_Directory*\Inboxes folders on site servers.
-- Backlogs occur in the *Install_Directory*\MP\Outboxes subfolders on management points (MP).
+- Backlogs occur in the *Install_Directory*\Inboxes folders on site servers.
+- Backlogs occur in the *Install_Directory*\MP\Outboxes subfolders on management points (MP).
 - Software Center is not populated by deployed software on client systems, or does not start. Also, the CCMRepair.log file may contain errors that resemble the following:
 
   > Database verification failed with result: 0x80004005 but DB: C:\Windows\CCM\filename.sdf could be opened, skipping DB repair.
@@ -37,7 +37,7 @@ The following is a non-comprehensive list of possible symptoms:
 
 ## Exclusions
 
-We recommend that you add the following real-time protection exclusions to prevent these problems.
+We recommend that you add the following real-time protection exclusions to prevent these problems.
 
 ### Default installation folders
 
@@ -100,7 +100,7 @@ Process Exclusions are necessary only if aggressive antivirus programs consider 
 - *Client installation folder*\RemCtrl\CmRcService.exe (client-side)
 - *ConfigMgr installation folder*\bin\x64\Sitecomp.exe
 - *ConfigMgr installation folder*\bin\x64\Smswriter.exe
-- *ConfigMgr installation folder*\bin\x64\Smssqlbkup.exe, or SMS_*SQLFQDN*\bin\x64\ Smssqlbkup.exe
+- *ConfigMgr installation folder*\bin\x64\Smssqlbkup.exe, or SMS_*SQLFQDN*\bin\x64\ Smssqlbkup.exe
 - *ConfigMgr installation folder*\bin\x64\Cmupdate.exe
 - *Client installation folder*\Ccmrepair.exe (client-side)
 - *%windir%*\CCMSetup\Ccmsetup.exe (client-side)

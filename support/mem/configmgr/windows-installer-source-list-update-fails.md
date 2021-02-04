@@ -34,7 +34,7 @@ To work around the issue, use one of the following methods:
 - Use HTTP for communication from clients to distribution points if you can.
 - For packages, enable **Copy the content in this package to a package share on distribution points** in the package properties.
 
-  For applications, add the location of the application source to the following Windows Installer source list registry subkeys:
+  For applications, add the location of the application source to the following Windows Installer source list registry subkeys:
 
   - `HKEY_CLASSES_ROOT\Installer\Products\<product code>\SourceList\Net`
   - `HKEY_CURRENT_USER\Software\Microsoft\Installer\Products\<product code>\SourceList\Net`

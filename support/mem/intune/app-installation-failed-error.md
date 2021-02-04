@@ -13,14 +13,14 @@ _Original KB number:_ &nbsp; 4492645
 
 ## Symptoms
 
-After an Android line-of-business (LOB) APK app is updated in the Intune portal, users who were assigned the app receive the following notification on their devices:
+After an Android line-of-business (LOB) APK app is updated in the Intune portal, users who were assigned the app receive the following notification on their devices:
 
 > App installation failed.
 
 ## Cause
 
-This issue occurs if users have removed the app from their devices. When the Intune service tries to update the app on a device, the update fails if the app is no longer installed on the device.
+This issue occurs if users have removed the app from their devices. When the Intune service tries to update the app on a device, the update fails if the app is no longer installed on the device.
 
 ## Resolution
 
-To fix the issue, have the users reinstall the app from the Company Portal to their devices.
+To fix the issue, have the users reinstall the app from the Company Portal to their devices.
