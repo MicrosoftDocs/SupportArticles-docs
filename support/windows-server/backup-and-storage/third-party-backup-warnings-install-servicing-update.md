@@ -29,7 +29,7 @@ Consider the following scenario:
 - The older-version folder under C:\\Windows\\servicing is emptied. For example, the following files are removed:  
     C:\\Windows\\servicing\\Version\\10.0.14393.0\\amd64_installed  
     C:\\Windows\\servicing\\Version\\10.0.14393.0\\x86_installed
-- You run `diskshadow /l output.txt`, and then `list writers detailed` at the diskshadow prompt.
+- You run `diskshadow /l output.txt`, and then `list writers detailed` at the diskshadow prompt.
 
 In this scenario, when you examine the system writer metadata in output.txt, you find the amd64_installed and x86_installed files are listed in the old version folder path that no longer exists.
 

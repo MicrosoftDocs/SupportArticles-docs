@@ -28,7 +28,7 @@ After you change the power policy for a Windows Server 2016-based server, you re
 Source: Microsoft-Windows-Kernel-Processor-Power  
 Type: Warning  
 Description:  
-The speed of processorxin group y is being limited by system firmware. The processor has been in this reduced performance state forz seconds since the last report.
+The speed of processorxin group y is being limited by system firmware. The processor has been in this reduced performance state forz seconds since the last report.
 
 > [!NOTE]
 > The values of x, y, and z in the Event ID message can vary.

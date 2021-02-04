@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article provides a solution to an issue that occurs when you start the Windows Deployment Services (WDS) server, the WDS server may not start.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 954410
 
 ## Symptoms
