@@ -572,12 +572,12 @@
     },
     {
       "source_path": "support/azure/virtual-machines/index.md",
-      "redirect_url": "/support/azure/virtual-machines/welcome-virtual-machines.md",
+      "redirect_url": "/support/azure/virtual-machines/welcome-virtual-machines",
       "redirect_document_id": false
     },
     {
       "source_path": "support/azure/general/index.md",
-      "redirect_url": "/support/azure/virtual-machines/welcome-general.md",
+      "redirect_url": "/support/azure/virtual-machines/welcome-general",
       "redirect_document_id": false
     },
     {
