@@ -7,14 +7,14 @@ ms.reviewer: alvinm
 ---
 # The Remove-SCVirtualMachine command may not remove a virtual machine from the Hyper-V host
 
-This article helps you fix an issue where the PowerShell command `Remove-SCVirtualMachine` with the `-force` option doesn't remove a virtual machine from the Hyper-V host.
+This article helps you fix an issue where the PowerShell command `Remove-SCVirtualMachine` with the `-force` option doesn't remove a virtual machine from the Hyper-V host.
 
 _Original product version:_ &nbsp; System Center 2012 Virtual Machine Manager  
 _Original KB number:_ &nbsp; 2680205
 
 ## Symptoms
 
-In System Center 2012 Virtual Machine Manager (VMM), using the PowerShell command `Remove-SCVirtualMachine` with the `-force` option to delete a virtual machine (VM) removes the VM from VMM but may not remove it from the Hyper-V host.
+In System Center 2012 Virtual Machine Manager (VMM), using the PowerShell command `Remove-SCVirtualMachine` with the `-force` option to delete a virtual machine (VM) removes the VM from VMM but may not remove it from the Hyper-V host.
 
 ## Cause
 

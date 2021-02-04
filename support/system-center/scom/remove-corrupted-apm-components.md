@@ -57,13 +57,13 @@ The following image is an example of a repair task.
 
 :::image type="content" source="media/remove-corrupted-apm-components/repair-task.png" alt-text="Screenshot of a repair task example.":::
 
-This task runs a lightweight repair or upgrade (depending on which command that you choose) of the agent, but changes only the `NOAPM=1` switch. The result is that all settings remain unchanged. The task only removes the APM service and components.
+This task runs a lightweight repair or upgrade (depending on which command that you choose) of the agent, but changes only the `NOAPM=1` switch. The result is that all settings remain unchanged. The task only removes the APM service and components.
 
-You can run such a command across hundreds of agents in a short time. Also, you can multi-select and then run this task on many agents at the same time.
+You can run such a command across hundreds of agents in a short time. Also, you can multi-select and then run this task on many agents at the same time.
 
 ## Remove APM - Method 1
 
-If you have no plans to use the APM feature in System Center 2016 Operations Manager, you might want to consider removing the maintenance packs that are imported by default. Maintenance packs such as the following discover many instances of sites, services, and classes in which APM components are installed on the agents:
+If you have no plans to use the APM feature in System Center 2016 Operations Manager, you might want to consider removing the maintenance packs that are imported by default. Maintenance packs such as the following discover many instances of sites, services, and classes in which APM components are installed on the agents:
 
 - Microsoft.SystemCenter.DataWarehouse.ApmReports.Library (Operations Manager APM Reports Library)
 - Microsoft.SystemCenter.Apm.Web (Operations Manager APM Web)
@@ -75,7 +75,7 @@ If you have no plans to use the APM feature in System Center 2016 Operations Man
 
 Delete the maintenance packs if you don't use the APM feature.
 
-Before you can delete the **Microsoft.SystemCenter.Apm.Infrastructure** maintenance pack, you have to remove a **RunAs** account profile association, and then clean up the `SecureReference` library manually by you delete the reference.
+Before you can delete the **Microsoft.SystemCenter.Apm.Infrastructure** maintenance pack, you have to remove a **RunAs** account profile association, and then clean up the `SecureReference` library manually by you delete the reference.
 
 To do this, follow these steps:
 
@@ -98,6 +98,6 @@ You can disable discoveries if you don't use the APM feature.
 
 :::image type="content" source="media/remove-corrupted-apm-components/disable-discoveries.png" alt-text="Screenshot of disabling discoveries.":::
 
-Then, run the `Remove-SCOMDisabledClassInstance` cmdlet in your Operations Manager command shell. This removes all the discovered instances that you don't use.  
+Then, run the `Remove-SCOMDisabledClassInstance` cmdlet in your Operations Manager command shell. This removes all the discovered instances that you don't use.  
 
 [!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
