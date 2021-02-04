@@ -32,15 +32,14 @@ When you try to delete a SharePoint site, the following message appears:
 
 ## Cause
 
-This error might occur because of a compliance policy which is currently invalid, or because an active valid policy is still present on the site.
+There are several reasons for this error to occur:
 
-In some situations, a valid policy can be present, and the SharePoint site shouldn't be deleted. In this situation, contact your administrator to determine whether you can exclude or remove this site from the policy.
+- There might be a compliance policy which is currently invalid.
+- A valid policy can be present, and the SharePoint site shouldn't be deleted. In this situation, contact your administrator to determine whether you can exclude or remove this site from the policy.
 
 ## Resolution
 
-To delete a site if it still has a valid compliance policy, disable or exclude the respective policy that's causing this issue from the [Compliance admin center](https://protection.office.com/).
-
-To resolve the issue of **Invalid retention hold**, try the following method, depending on your level of permissions.
+To remove the **Invalid retention hold**, try one of the following methods, depending on your level of permissions.
 
 ### Non-administrators
 
