@@ -1,12 +1,12 @@
 ---
 title: SQL Server startup errors  
-description: This article provides resolutions for the problem where SQL Server fails to start on a standalone server.
+description: This article provides resolutions for the problem where SQL Server fails to start on a stand-alone server.
 ms.date: 2/3/2020
 author: cobibi
 ms.author: v-yunhya
 ms.reviewer: ramakoni
 ---
-# SQL Server startup errors on a standalone server
+# SQL Server startup errors on a stand-alone server
 
 There are various reasons why SQL Server service might not start. At a high level, the causes can be classified into the following categories:
 
@@ -16,7 +16,7 @@ There are various reasons why SQL Server service might not start. At a high leve
 - Incorrect configuration of the SQL Server service
 - Issues that affect the certificate configuration
 
-This topic helps you troubleshoot most common SQL Server startup issues in these categories on a standalone server.
+This topic helps you troubleshoot most common SQL Server startup issues in these categories on a stand-alone server.
 
 _Applies to:_ &nbsp; SQL Server
 
