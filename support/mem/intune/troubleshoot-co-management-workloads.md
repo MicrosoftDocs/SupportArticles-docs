@@ -7,14 +7,14 @@ ms.reviewer: luche
 ---
 # Troubleshoot co-management workloads
 
-This article helps you understand and troubleshoot issues that you may encounter when you configure workloads in an Intune and Configuration Manager co-management environment. For more information about how to configure workloads, see [Support Tip: Configuring workloads in a co-managed environment](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Configuring-workloads-in-a-co-managed-environment/ba-p/707221).
+This article helps you understand and troubleshoot issues that you may encounter when you configure workloads in an Intune and Configuration Manager co-management environment. For more information about how to configure workloads, see [Support Tip: Configuring workloads in a co-managed environment](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Configuring-workloads-in-a-co-managed-environment/ba-p/707221).
 
 _Original product version:_ &nbsp; Microsoft Intune  
 _Original KB number:_ &nbsp; 4520147
 
 ## Before you start
 
-Before you start troubleshooting, it's important to collect some basic information about the issue and make sure that you follow all required configuration steps. This helps you better understand the problem and reduce the time to find a resolution. To do this, follow this checklist of pre-troubleshooting questions:
+Before you start troubleshooting, it's important to collect some basic information about the issue and make sure that you follow all required configuration steps. This helps you better understand the problem and reduce the time to find a resolution. To do this, follow this checklist of pre-troubleshooting questions:
 
 - What is your [current MDM authority](/mem/intune/fundamentals/mdm-authority-set)?
 - Did you [complete the prerequisites](/mem/configmgr/comanage/overview#prerequisites)?
@@ -23,7 +23,7 @@ Before you start troubleshooting, it's important to collect some basic informati
 - Did you join the Windows 10 devices to Azure Active Directory (Azure AD) through [Hybrid Azure AD join](/azure/active-directory/devices/hybrid-azuread-join-plan) or [Azure AD join](/azure/active-directory/devices/azureadjoin-plan)?
 - If you used [hybrid MDM with Configuration Manager and Microsoft Intune](/mem/configmgr/mdm/understand/what-happened-to-hybrid) before, did you [migrate to Intune standalone](/mem/intune/fundamentals/mdm-authority-set)?
 
-Most issues occur because one or more of these steps were not completed. If you find that a step was skipped or was not completed successfully, check the details of each step.
+Most issues occur because one or more of these steps were not completed. If you find that a step was skipped or was not completed successfully, check the details of each step.
 
 ## Frequently asked questions  
 
@@ -31,7 +31,7 @@ Most issues occur because one or more of these steps were not completed. If you 
 
 Here are the required [permissions and roles](/mem/configmgr/comanage/overview#permissions-and-roles) to configure co-management.
 
-### Question 2: What log can I use to validate workloads and determine where policies and apps come from in a co-management scenario?
+### Question 2: What log can I use to validate workloads and determine where policies and apps come from in a co-management scenario?
 
 You can use the following log file on Windows 10 devices:
 
@@ -43,7 +43,7 @@ You can find the supported workloads [here](/mem/configmgr/comanage/workloads).
 
 ### Question 4: Which workload does the resource access policies workload belong to?
 
-The [resource access policies workload](/mem/configmgr/comanage/workloads#resource-access-policies) is part of the device configuration workload.  
+The [resource access policies workload](/mem/configmgr/comanage/workloads#resource-access-policies) is part of the device configuration workload.  
 
 ### Question 5: What logs can be used to verify that workloads are working correctly?
 
@@ -51,7 +51,7 @@ You can use the following logs in the `%WinDir%\CCM\logs\` folder on the Windows
 
 - **CoManagementHandler.log**  
 
-  This file logs the processing of the configuration and the MDM information related to the device.
+  This file logs the processing of the configuration and the MDM information related to the device.
 
   Sample log snippet:
 
@@ -78,7 +78,7 @@ You can use the following logs in the `%WinDir%\CCM\logs\` folder on the Windows
 
 - **CIAgent.log**  
 
-  This file logs the current configuration and what it means for the status of the resource access policies.
+  This file logs the current configuration and what it means for the status of the resource access policies.
 
   Sample log snippet:
 
@@ -102,10 +102,10 @@ You can use the following logs in the `%WinDir%\CCM\logs\` folder on the Windows
 
 ### Question 6: What's the difference between Pilot Intune and Intune when I switch workloads?
 
-The difference between Pilot Intune and Intune is subtle but important. Both allow Intune to control a configured workload.
+The difference between Pilot Intune and Intune is subtle but important. Both allow Intune to control a configured workload.
 
-- The Pilot Intune setting is used to switch a workload only for the devices in a pilot collection that's created in Configuration Manager. This allows you to test in a staging environment without affecting all Windows 10 devices in the production environment.
-- The Intune setting is used when you finish testing in the staging environment and are ready to switch a workload for all Windows 10 devices that are enrolled in co-management.
+- The Pilot Intune setting is used to switch a workload only for the devices in a pilot collection that's created in Configuration Manager. This allows you to test in a staging environment without affecting all Windows 10 devices in the production environment.
+- The Intune setting is used when you finish testing in the staging environment and are ready to switch a workload for all Windows 10 devices that are enrolled in co-management.
 
 ## Common issues  
 
@@ -113,22 +113,22 @@ The difference between Pilot Intune and Intune is subtle but important. Both al
 
 This behavior is expected.
 
-When you switch [this](/mem/configmgr/comanage/workloads#endpoint-protection) workload, the Configuration Manager policies stay on the device until the next check-in to the Intune service. When the device checks in, the Intune policies overwrite the Configuration Manager policies. This behavior makes sure that the device still has protection policies during the transition. For more information about the check-in frequency, see [How long does it take for devices to get a policy, profile, or app after they are assigned?](/mem/intune/configuration/device-profile-troubleshoot#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)  
+When you switch [this](/mem/configmgr/comanage/workloads#endpoint-protection) workload, the Configuration Manager policies stay on the device until the next check-in to the Intune service. When the device checks in, the Intune policies overwrite the Configuration Manager policies. This behavior makes sure that the device still has protection policies during the transition. For more information about the check-in frequency, see [How long does it take for devices to get a policy, profile, or app after they are assigned?](/mem/intune/configuration/device-profile-troubleshoot#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)  
 
-### I can't find the Client apps workload in the Workloads tab of co-management Properties
+### I can't find the Client apps workload in the Workloads tab of co-management Properties
 
-Client apps for co-managed devices is a pre-release feature. You must [enable the pre-release feature](/mem/configmgr/core/servers/manage/pre-release-features#enabling-pre-release-features)  to make it visible.  
+Client apps for co-managed devices is a pre-release feature. You must [enable the pre-release feature](/mem/configmgr/core/servers/manage/pre-release-features#enabling-pre-release-features) to make it visible.  
 
 ### The Enablement tab in co-management properties displays 'Please ensure the proper prerequisites are installed.'
 
-You receive this message if you didn't install the CMG. After you install the CMG, you receive a message that resembles the following:
+You receive this message if you didn't install the CMG. After you install the CMG, you receive a message that resembles the following:
 
 > CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC"
 
 In this case, do the following:
 
 - If you are taking [Path 1: Auto-enroll existing clients](/mem/configmgr/comanage/quickstart-paths#bkmk_path1), you can ignore this message because CMG isn't used.
-- If you are taking [Path 2: Bootstrap with modern provisioning](/mem/configmgr/comanage/quickstart-paths#bkmk_path2), you must [install and configure the CMG](/mem/configmgr/core/clients/manage/cmg/setup-cloud-management-gateway) and onboard the app to Azure AD.
+- If you are taking [Path 2: Bootstrap with modern provisioning](/mem/configmgr/comanage/quickstart-paths#bkmk_path2), you must [install and configure the CMG](/mem/configmgr/core/clients/manage/cmg/setup-cloud-management-gateway) and onboard the app to Azure AD.
 
 ## References
 
@@ -147,7 +147,7 @@ For more information about Intune and Configuration Manager co-management and wo
 - [How to enable co-management in Configuration Manager](/mem/configmgr/comanage/how-to-enable)
 - [How to switch Configuration Manager workloads to Intune](/mem/configmgr/comanage/how-to-switch-workloads)
 
-If you have a question or want to get involved with our online community, visit our [Intune forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).
+If you have a question or want to get involved with our online community, visit our [Intune forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).
 
 You can also submit feedback and ideas to the Intune development team through our [uservoice site](https://microsoftintune.uservoice.com/forums/291681-ideas).
 
