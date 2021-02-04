@@ -10,4 +10,4 @@ author: genli
 ---
 # Email address domains used by Microsoft support agents
 
-Microsoft support agents use the following domains to send emails to our customers: microsoft.com, microsoftsupport.com and mail.support.microsoft.com.
+Microsoft support agents use the following domains to send emails to our customers: microsoft.com, microsoftsupport.com, and mail.support.microsoft.com.
