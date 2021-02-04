@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2506326
 
 ## Symptoms
 
-Agent status on the primary System Center Data Protection Manager (DPM) 2010 server shows as **OK** for all agents. However, you may experience one or more of the following symptoms:
+Agent status on the primary System Center Data Protection Manager (DPM) 2010 server shows as **OK** for all agents. However, you may experience one or more of the following symptoms:
 
 - The consistency check on the primary DPM server fails with the following error:
 
@@ -32,8 +32,8 @@ Agent status on the primary System Center Data Protection Manager (DPM) 2010 se
 
 ## Cause
 
-In a DPM 2010 primary - secondary configuration, the DPMRA service account on the primary DPM server is changed from the Local System account to a domain user account who is also part of the Local Admin group.
+In a DPM 2010 primary - secondary configuration, the DPMRA service account on the primary DPM server is changed from the Local System account to a domain user account who is also part of the Local Admin group.
 
 ## Resolution
 
-To resolve this issue, DPM services should be configured to run using the Local System account on the primary DPM server.
+To resolve this issue, DPM services should be configured to run using the Local System account on the primary DPM server.

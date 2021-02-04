@@ -37,7 +37,7 @@ This occurs due to incorrect SQL Server AlwaysOn settings for DPM backups where 
 
 ## Resolution
 
-Set **Make Readable Secondary** to **Yes** on all the nodes.
+Set **Make Readable Secondary** to **Yes** on all the nodes.
 
 ## More information
 
