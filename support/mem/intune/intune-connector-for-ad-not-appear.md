@@ -45,7 +45,7 @@ To do this, follow these steps:
     ```xml
     <system.net>
        <defaultProxy>
-          <proxy usesystemdefault="false" proxyaddress="http://<proxy server address>:<port>"&nbsp;/>
+          <proxy usesystemdefault="false" proxyaddress="http://<proxy server address>:<port>" />
        </defaultProxy>
      </system.net>
     ```

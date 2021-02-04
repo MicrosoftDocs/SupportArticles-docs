@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4488562
 
 ## Symptoms
 
-Devices can't obtain SCEP certificates from the NDES server. Additionally,&nbsp;the following errors are logged:
+Devices can't obtain SCEP certificates from the NDES server. Additionally, the following errors are logged:
 
 - In **Failed Requests** on the Certificate Authority (CA):
 
@@ -32,7 +32,7 @@ Devices can't obtain SCEP certificates from the NDES server. Additionally,&nbsp;
     > User:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CONTOSO\SVC_NDES  
     > Computer:&nbsp;&nbsp;&nbsp;&nbsp;NDES1.contoso.com  
     > Description:  
-    > **The Network Device Enrollment Service cannot submit the certificate request (The requested certificate template is not supported by this CA.).&nbsp; 0x80004005**  
+    > **The Network Device Enrollment Service cannot submit the certificate request (The requested certificate template is not supported by this CA.). 0x80004005**  
     > Event Xml:
     > \<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">  
     >&nbsp; \<EventData Name="**EVENT_MSCEP_FAIL_SUBMIT**">  
