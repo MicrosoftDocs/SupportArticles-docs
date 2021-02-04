@@ -1,6 +1,6 @@
 ---
 title: MDX query with calculated measure runs slowly
-description: This article provides a resolution for the problem when a Multidimensional Expressions (MDX) query is executed with a calculated measure in SSAS 2016, 2017 and 2019 tabular instance.
+description: This article provides a resolution for the problem when a Multidimensional Expressions (MDX) query is executed with a calculated measure in SSAS 2016, 2017 and 2019 tabular instance.
 ms.date: 01/14/2021
 ms.prod-support-area-path: 
 ms.reviewer: yinnw

@@ -23,7 +23,7 @@ When you try to restore an SQL database on a Microsoft SQL Server 2017 Linux ser
 
 ## Cause
 
-This problem may occur because the hard disk has run out of space. On Linux servers, SQL Server does not check the available space before the operation starts.
+This problem may occur because the hard disk has run out of space. On Linux servers, SQL Server does not check the available space before the operation starts.
 
 ## Workaround
 
