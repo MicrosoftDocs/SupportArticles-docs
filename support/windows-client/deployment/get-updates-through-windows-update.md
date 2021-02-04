@@ -12,6 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika, cpuckett, delhan
 ms.prod-support-area-path: Servicing
 ms.technology: windows-client-deployment
+adobe-target: true
 ---
 # How to get an update through Windows Update
 
