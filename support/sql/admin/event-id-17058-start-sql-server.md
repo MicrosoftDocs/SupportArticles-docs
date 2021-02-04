@@ -41,29 +41,7 @@ If the Microsoft SQL Server service can’t find the path that's configured to c
     > Computer:      \<Servername>  
     > Description:  
     > initerrlog: Could not open error log file 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVR\MSSQL\Log\ERRORLOG'. Operating system error = 3(The system cannot find the path specified.).  
-    > Event Xml: \<*following xml*>
 
-    ```xml
-    <Event xmlns="`http://schemas.microsoft.com/win/2004/08/events/event`">  
-    <System>  
-       <Provider Name="MSSQLSERVER" />  
-       <EventID Qualifiers="49152">17058\</EventID>  
-       <Level>2\</Level>  
-       <Task>2\</Task>  
-       <Keywords>0x80000000000000\</Keywords>  
-       <TimeCreated SystemTime="\<Datetime>" />  
-       <EventRecordID>2934\</EventRecordID>  
-       <Channel>Application\</Channel>  
-       <Computer>Servername\</Computer>  
-       <Security />  
-       </System>  
-       <EventData>  
-       <Data>C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVR\MSSQL\Log\ERRORLOG\</Data>  
-       <Data>3(The system cannot find the path specified.)\</Data>  
-       <Binary>A2420000100000000C0000007000720061006400730071006C00770069006E003100000000000000\</Binary>  
-       </EventData>  
-    </Event>  
-    ```
 
 2. Verify the path that's set for the ErrorLog file by using SQL Server Configuration Manager.
 
