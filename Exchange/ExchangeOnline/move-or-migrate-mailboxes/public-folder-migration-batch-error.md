@@ -83,12 +83,12 @@ To resolve this problem, use one of the following methods, as appropriate for yo
    1. Import the xml file by running the following cmdlet:
 
       ```powershell
-      $failedreport=Import-Clixml "Path of the xml file"
+      $failedreport=Import-Clixml "<Path of the xml file>"
       ```
 
-      **Note:** *$failedreport* is a variable that you can customize. *Path of the xml file* represents the actual path.
+      **Note:** `$failedreport` is a variable that you can customize. \<Path of the xml file> represents the actual path.
 
-   1. Retrieve the entry IDs of the recovered folders from *$failedreport* by running the following cmdlet:
+   1. Retrieve the entry IDs of the recovered folders from `$failedreport` by running the following cmdlet:
 
       ```powershell
       $failedreport.Report.Entries|where {[string]$_ -like "*recovered*"}|%{[string]$_}
@@ -101,18 +101,18 @@ To resolve this problem, use one of the following methods, as appropriate for yo
 2. Remove the recovered public folder by running the following cmdlet:
 
    ```powershell
-   Remove-PublicFolder -Identity "EntryID"
+   Remove-PublicFolder -Identity "<EntryID>"
    ```
 
-   Replace the *EntryID* placeholder with the entry ID that you found in step 1. For more information about this cmdlet, see the "Examples" section of [Remove-PublicFolder](/powershell/module/exchange/remove-publicfolder#examples).
+   Replace the \<EntryID> placeholder with the entry ID that you found in step 1. For more information about this cmdlet, see the "Examples" section of [Remove-PublicFolder](/powershell/module/exchange/remove-publicfolder#examples).
 
 3. Start the migration of the failed mailbox by running the following cmdlet:
 
    ```powershell
-   Start-MigrationUser "FailedMailbox"
+   Start-MigrationUser "<FailedMailbox>"
    ```
 
-   Replace the *FailedMailbox* placeholder with the identity of the failed migration mailbox that you noted in step 1. For more information about this cmdlet, see [Start-MigrationUser](/powershell/module/exchange/start-migrationuser).
+   Replace the \<FailedMailbox> placeholder with the identity of the failed migration mailbox that you noted in step 1. For more information about this cmdlet, see [Start-MigrationUser](/powershell/module/exchange/start-migrationuser).
 
 ### Method 2: Don't specify the ExcludeDumpster parameter
 
