@@ -1,6 +1,6 @@
 ---
 title: Run-Time Error 13 Type Mismatch when setting FW company as default
-description: You cannot set the FW company as default because there are multiple FRx versions on a workstation or server.
+description: You cannot set the FW company as default because there are multiple Microsoft FRx versions on a workstation or server.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -31,4 +31,4 @@ There are multiple FRx versions on a workstation or server. Either a .dll file i
 
 ## Resolution
 
-Run the FRxReg.exe located in the FRx directory. For additional information, see [How to register a .dll file](https://support.microsoft.com/help/844592/how-to-register-a-dll-file).
+Run the FRxReg.exe located in the FRx directory. For more information, see [How to register a .dll file](https://support.microsoft.com/help/844592/how-to-register-a-dll-file).
