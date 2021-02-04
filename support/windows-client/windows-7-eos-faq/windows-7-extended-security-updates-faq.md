@@ -12,6 +12,7 @@ localization_priority: medium
 ms.reviewer: v-elj, chawong, winciccore, kaushika
 ms.prod-support-area-path: Windows 7 Extended Security Updates (ESU)
 ms.technology: windows-client-eos
+adobe-target: true
 ---
 # FAQ about Windows 7 ESU
 
