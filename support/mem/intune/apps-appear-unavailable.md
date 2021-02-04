@@ -28,7 +28,7 @@ To resolve this issue, users must identify their enrolled device by following th
    :::image type="content" source="./media/apps-appear-unavailable/no-device.png" alt-text="Screenshot of no device shown.":::
 
 2. Select **My Devices**.
-3. On the **My Devices**  screen, select **Tap here**.
+3. On the **My Devices** screen, select **Tap here**.
 
    :::image type="content" source="./media/apps-appear-unavailable/my-deivce.png" alt-text="Screenshot of my devices.":::
 

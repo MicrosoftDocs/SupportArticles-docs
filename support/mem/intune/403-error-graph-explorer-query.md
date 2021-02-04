@@ -9,7 +9,7 @@ ms.prod-support-area-path: Intune Graph API
 This article provides a solution for the issue that a **403 Forbidden** error occurs when you try to use [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) to inspect or modify Microsoft Intune objects.
 
 _Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp;  
+_Original KB number:_ &nbsp; 4532174
 
 ## Symptoms
 
@@ -19,7 +19,7 @@ When you try to run queries in [Graph Explorer](https://developer.microsoft.com/
 > {  
 &nbsp; &nbsp; "error": {  
 &nbsp; &nbsp; &nbsp; &nbsp; "code": "Forbidden",  
-&nbsp; &nbsp; &nbsp; &nbsp; "message": "{\r\n \\"_version\\": 3,\r\n \\"Message\\": \\"Application is not authorized to perform this operation. Application must have one of the following scopes: DeviceManagementConfiguration.Read.All, DeviceManagementConfiguration.ReadWrite.All - Operation ID (for customer support): 00000000-0000-0000-0000-000000000000 - Activity ID: 5c977c7f-ae03-4be0-82c2-408eafb65caf - Url: <`https://fef.msub05.manage.microsoft.com/DeviceConfiguration_1911/StatelessDeviceConfigurationFEService/deviceManagement?api-version=5019-09-20`>\\",\r\n \\"CustomApiErrorPhrase\\": \\"\\",\r\n \\"RetryAfter\\": null,\r\n \\"ErrorSourceService\\": \\"\\",\r\n \\"HttpHeaders\\": \\"{}\\"\r\n}",  
+&nbsp; &nbsp; &nbsp; &nbsp; "message": "{\r\n &nbsp;\\"_version\\": 3,\r\n &nbsp;\\"Message\\": \\"Application is not authorized to perform this operation. Application must have one of the following scopes: DeviceManagementConfiguration.Read.All, DeviceManagementConfiguration.ReadWrite.All - Operation ID (for customer support): 00000000-0000-0000-0000-000000000000 - Activity ID: 5c977c7f-ae03-4be0-82c2-408eafb65caf - Url: <`https://fef.msub05.manage.microsoft.com/DeviceConfiguration_1911/StatelessDeviceConfigurationFEService/deviceManagement?api-version=5019-09-20`>\\",\r\n &nbsp;\\"CustomApiErrorPhrase\\": \\"\\",\r\n &nbsp;\\"RetryAfter\\": null,\r\n &nbsp;\\"ErrorSourceService\\": \\"\\",\r\n &nbsp;\\"HttpHeaders\\": \\"{}\\"\r\n}",  
 &nbsp; &nbsp; &nbsp; &nbsp; "innerError": {  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "request-id": "5c977c7f-ae03-4be0-82c2-408eafb65caf",  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "date": "2019-11-15T18:53:00"  

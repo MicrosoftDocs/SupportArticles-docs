@@ -22,7 +22,7 @@ Before a client can try to scan for updates, it needs the UpdateSource policy. T
 
 After a successful synchronization on a primary site, WSyncMgr updates **Last Sync Time** and **Content Version** in the database for the SUP. This is done by executing the `spProcessSUMSyncStateMessage` stored procedure. In the following sample SQL Server Profiler trace, this stored procedure is executed to update the content version to 36:
 
-> declare @Error int; exec spProcessSUMSyncStateMessage N'2014-01-17 17:59:54', N'PS1', N'{C2D17964-BBDD-4339- B9F3- 12D7205B39CC}', 1, 0, '36', @Error output, N'PS1SITE.CONTOSO.COM'
+> declare @Error int; exec spProcessSUMSyncStateMessage N'2014-01-17 17:59:54', N'PS1', N'{C2D17964-BBDD-4339-B9F3-12D7205B39CC}', 1, 0, '36', @Error output, N'PS1SITE.CONTOSO.COM'
 
 ### Step 2: SMSDBMON gets triggered and drops a .STN file in policypv.box
 

@@ -63,7 +63,7 @@ Once the transfer is complete, content is now accessible to client computers fro
 
 #### Syntax
 
-`ContentLibraryTransfer.exe  -SourceDrive <drive letter of source drive>  -TargetDrive <drive letter of destination drive>`
+`ContentLibraryTransfer.exe -SourceDrive <drive letter of source drive> -TargetDrive <drive letter of destination drive>`
 
 #### Example
 

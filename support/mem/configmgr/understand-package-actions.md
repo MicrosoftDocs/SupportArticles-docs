@@ -179,7 +179,7 @@ insert PkgNotification (PkgID, Priority, Type, TimeKey) values (N'PackageID', 2,
 
 #### Step 2: SMSDBMON detects the package change and notifies DistMgr by dropping a \<PackageID>.PKN file in DistMgr.box
 
-SMSDBMON detects a change in the `PkgNotification` table that causes it to drop a **\<*PackageID*>.PKN**  file in `DistMgr.box` to instruct DistMgr to process the package.
+SMSDBMON detects a change in the `PkgNotification` table that causes it to drop a **\<*PackageID*>.PKN** file in `DistMgr.box` to instruct DistMgr to process the package.
 
 > SMS_DATABASE_NOTIFICATION_MONITOR 4944 (0x1350) RCV: INSERT on PkgNotification for PkgNotify_Add [\<PackageID> ][850967]  
 > SMS_DATABASE_NOTIFICATION_MONITOR 4944 (0x1350)    SND: Dropped E:\ConfigMgr\inboxes\distmgr.box\\**\<PackageID>.PKN**  [850967]

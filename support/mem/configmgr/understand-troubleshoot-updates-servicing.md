@@ -113,7 +113,7 @@ To download the redistributable file, DMPDownloader reads from the Manifest.xml 
 You can manually download redistributable files by using the following command:
 
 ```console
-setupdl.exe /RedistUrl http://go.microsoft.com/fwlink/?LinkID=841450 /LnManifestUrl http://go.microsoft.com/fwlink/?LinkID=841442 /RedistVersion 201702 /NoUI  "C:\temp\redist"
+setupdl.exe /RedistUrl http://go.microsoft.com/fwlink/?LinkID=841450 /LnManifestUrl http://go.microsoft.com/fwlink/?LinkID=841442 /RedistVersion 201702 /NoUI "C:\temp\redist"
 ```  
 
 ### Step 4: DMPDownloader puts a .CMU file into the service connection point outbox

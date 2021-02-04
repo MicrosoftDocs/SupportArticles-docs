@@ -62,7 +62,7 @@ To disconnect the clients, use one of the following methods.
 
 1. Right-click **Application pools** in the **Internet Information Services (IIS) Manager** area, and then select **Add Application Pool** to create a test application pool.
 
-2. Select **Client web service** > **Manage application**  > **Advanced settings**, and then change the application pool to the test application pool that you created.
+2. Select **Client web service** > **Manage application** > **Advanced settings**, and then change the application pool to the test application pool that you created.
 
 ### Method2: Change the port for the WSUS website
 

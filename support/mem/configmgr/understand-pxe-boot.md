@@ -141,7 +141,7 @@ The `REMINST` share is created and WDS is configured:
 > [66C][Thu 09/04/2014 11:32:03]:Installed PXE
 
 On the remote DP, we can now see the following values added in `HKEY_LOCAL_MACHINE\Software\Microsoft\SMS\DP`:
-  
+
 ![Values added in registry](./media/understand-pxe-boot/18496_en_1.png)
 
 > [!NOTE]
