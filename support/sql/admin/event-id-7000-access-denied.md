@@ -21,7 +21,7 @@ When you configure the Microsoft SQL Server service to run under an account that
 
 - By using a command prompt:
 
-    > C:\Users\arcadmin>NET START MSSQLSERVER  
+    > C:\Users\username>NET START MSSQLSERVER  
     System error 5 has occurred.  
     Access is denied.
 
