@@ -354,7 +354,7 @@
       href: ./deployment/customize-default-local-user-profile.md
     - name: Download and burn an ISO file from VLSC
       href: ./deployment/iso-file-on-vlsc.md
-    - name: Error 0x80042468 when creating a single partition
+    - name: Error 0x80042468 when creating a single partition
       href: ./deployment/error-when-creating-single-partition.md
     - name: Event ID 10 is logged in Application log
       href: ./deployment/event-10-is-logged-in-application-log.md
@@ -398,11 +398,11 @@
       href: ./deployment/windows-setup-log-file-locations.md
     - name: Windows SIM can't generate a catalog
       href: ./deployment/windows-sim-unable-generate-catalog-error.md
-    - name: Windows 7 Upgrade Advisor tool failed to run
+    - name: Windows 7 Upgrade Advisor tool failed to run
       href: ./deployment/upgrade-advisor-tool-failed-to-run.md
     - name: WinRE can't be built after deploying an image
       href: ./deployment/winre-cannot-built-deploy-image-captured-non-uefi-computer.md
-    - name: You can't access an EFI system partition
+    - name: You can't access an EFI system partition
       href: ./deployment/cant-access-efi-system-partition.md
 - name: Group Policy
   items:
