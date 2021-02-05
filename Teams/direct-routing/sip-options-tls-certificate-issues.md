@@ -1,7 +1,7 @@
 ---
 title: SBC connectivity issues
-ms.author: v-todmc
-author: mccoybot
+author: meerak
+ms.author: mikebis
 manager: dcscontentpm
 ms.date: 1/21/2021
 audience: Admin
@@ -22,31 +22,58 @@ description: Describes how to diagnose SIP options or TLS certificate issues wit
 
 # SBC connectivity issues
 
+You might experience Session Border Controller (SBC) connectivity issues in Teams, such as the following:
+
+- Session Initiation Protocol (SIP) options are not received  
+- Problems with TLS connections
+- The SBC doesn’t respond
+- The SBC is marked as inactive in the Admin portal
+
+Such issues are most likely caused by either or both of the following conditions:
+
+- A TLS certificate issue
+- An SBC is not configured correctly for Direct Routing
+
+This article lists some common issues related to SIP options and TLS certificates, and provides resolutions that you can try.  
+
 ## Overview of the SIP options process
 
-1.	SBC sends an SIP options request to the Teams SIP proxy FQDN (for example, sip.pstnhub.microsoft.com).
-1.	The TLS connection is validated first. If there are any problems (such as the wrong TLS version or an invalid certificate), the connection is closed, and no SIP options are received by the SIP proxy.
-1.	If there are no problems, SIP options are received by the SIP proxy and the SBC FQDN in the Record-Route. If it doesn’t exist, then the Contact header is checked to see whether it belongs to any tenant.
-1.	If the SBC FQDN is valid and recognized, the SIP proxy returns the “200 OK” message by using the same TLS connection.
-1.	The SIP proxy sends SIP options to SBC and to the SBC FQDN that’s received in the Contact header of the SIP options request.
-1.	If the SBC responds to the SIP proxy with the “200 OK” response, it is marked in the Teams Admin portal as Active.
+1. The SBC send a TLS connection request with a TLS certificate to the SIP Proxy  FQDN (for example, sip.pstnhub.microsoft.com).
 
-> [!note]
-> In a [Hosted Model](https://docs.microsoft.com/microsoftteams/direct-routing-sbc-multiple-tenants), the SIP options are sent only to and from the hosted SBC. The status of derived SBCs will be based on the main SBC.
+2. The SIP Proxy checks the connection request.
 
-### SBS setup and communication issues using SIP options
+   - If the request is not valid, the TLS connection is closed and the SIP Proxy does not receive SIP options from the SBC.
+   - If the request is valid, then the TLS connection is established, and the SBC uses it to send SIP options to the SIP Proxy.
+
+3. After it receives SIP options, the SIP Proxy checks the Record-Route to determine whether the SBC FQDN belongs to a known tenant. If the FQDN information is not found there, it checks the Contact header.
+
+4. If the SBC FQDN is found and recognized, the SIP Proxy sends a “200 OK” message using the same TLS connection.
+
+5. Also, the SIP Proxy sends SIP options to the SBC FQDN listed in the Contact header of the SBC’s SIP options.
+
+6. After receiving SIP options from the SIP Proxy, the SBC responds with a “200 OK” message. This step confirms that the SBC is healthy.
+
+7. As the final step, the SBC is marked as Active in the Teams Admin portal.
+
+> [!NOTE]
+> In a [hosted model](https://docs.microsoft.com/microsoftteams/direct-routing-sbc-multiple-tenants), SIP options should be sent from only the hosted SBC. The status of SBCs in a derived trunk model are based on the main SBC.
+
+### SIP options issues
+
+After the TLS connection is successfully established and SBC is able to send and receive messages to and from the Teams SIP proxy, there might still be problems that affect the format or content of the SIP options messages.
 
 <details>
 <summary><b>Not receiving a “200 OK” response from SBC</b></summary>
 
-If you’re not receiving a “200 OK” response from SBC, here are a few things you can try. 
-- This situation might occur if you’re using an older version of TLS. To enforce stricter security, [enable TLS 1.2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2). 
-- Make sure that either your SBC certificate is self-signed or a certificate was obtained from a trusted Certificate Authority (CA). 
-- If you’re using the minimum required TLS, and no problem is affecting your SBC certificate, your issue most likely occurs because the FQDN is misconfigured in your SIP profile, and it isn’t recognized as belonging to the tenant. To resolve this, narrow down which configuration is causing the issue. The most likely culprits are the following conditions: 
-    - The FQDN name that’s provided by SBC in the Record Route or Contact Header differs from what was configured in the Microsoft system. 
-    - The FQDN Contact Header contains an IP address instead of the expected FQDN value. 
-    - The domain isn’t yet [fully validated](https://docs.microsoft.com/microsoft-365/admin/setup/add-domain). If you add an FQDN that wasn’t previously validated, you must validate it now. 
-    - After you register an SBC domain name, you must activate it by [adding at least one E3- or E5-licensed user](https://docs.microsoft.com/microsoftteams/direct-routing-connect-the-sbc#connect-the-sbc-to-the-tenant).
+If you’re not receiving a “200 OK” response from SBC, here are a few things you can try.
+
+- This situation might occur if you’re using an older version of TLS. To enforce stricter security, [enable TLS 1.2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2).
+- Make sure that either your SBC certificate is self-signed or a certificate was obtained from a trusted Certificate Authority (CA).
+- If you’re using the minimum required TLS, and no problem is affecting your SBC certificate, your issue most likely occurs because the FQDN is misconfigured in your SIP profile, and it isn’t recognized as belonging to the tenant. To resolve this, narrow down which configuration is causing the issue. The most likely culprits are the following conditions:
+  - The FQDN name that’s provided by SBC in the Record Route or Contact Header differs from what was configured in the Microsoft system.
+  - The FQDN Contact Header contains an IP address instead of the expected FQDN value.
+  - The domain isn’t yet [fully validated](https://docs.microsoft.com/microsoft-365/admin/setup/add-domain). If you add an FQDN that wasn’t previously validated, you must validate it now.
+  - After you register an SBC domain name, you must activate it by [adding at least one E3- or E5-licensed user](https://docs.microsoft.com/microsoftteams/direct-routing-connect-the-sbc#connect-the-sbc-to-the-tenant).
 
 </details>
 
@@ -54,7 +81,7 @@ If you’re not receiving a “200 OK” response from SBC, here are a few thing
 
 <summary><b>“200 OK” response received, but not SIP options</b></summary>
 
-SBC received the “200 OK” response and the FQDN name that’s provided by SBC in the Record Route or Contact Header, but it didn't receive the SIP options you were expecting. If this occurs, make sure that the domain name was entered correctly and that the FQDN DNS record resolves to the correct SBC IP address. 
+SBC received the “200 OK” response and the FQDN name that’s provided by SBC in the Record Route or Contact Header, but it didn't receive the SIP options you were expecting. If this occurs, make sure that the domain name was entered correctly and that the FQDN DNS record resolves to the correct SBC IP address.
 
 Another possible cause is that firewall rules aren’t allowing incoming traffic. Make sure that firewall rules are configured to allow incoming connections.
 
@@ -63,16 +90,18 @@ Another possible cause is that firewall rules aren’t allowing incoming traffic
 <details>
 <summary><b>SBC status is intermittently inactive</b></summary>
 
-During maintenance or outages, an IP address that the domain points to sometimes changes to a different datacenter while the SBC continues to send SIP options to the inactive or unresponsive datacenter. SBC must be both discoverable and configured to send SIP options to FQDNs. Otherwise, you might experience issues. 
-- Check the FQDN status of SBC. If the FQDNs are configured to send SIP options to the specific IP address that the FQDNs resolve to, update it to send SIP options to FQDNs (for example, sip.pstnhub.microsoft.com). 
-- Make sure that all devices on the path, such as SBCs and firewalls, are configured to allow communication both to and from all Microsoft-signaling FQDNs. 
-- To provide a failover when the connection from an SBC is made to a datacenter that's experiencing an issue, SBC must be configured to use all three SIP proxy FQDNs:
-    - sip.pstnhub.microsoft.com
-    - sip2.pstnhub.microsoft.com
-    - sip3.pstnhub.microsoft.com
+During maintenance or outages, an IP address that the domain points to sometimes changes to a different datacenter while the SBC continues to send SIP options to the inactive or unresponsive datacenter. SBC must be both discoverable and configured to send SIP options to FQDNs. Otherwise, you might experience issues.
 
-    > [!note]
-    > Devices that support DNS names can use sip-all.pstnhub.microsoft.com to resolve to all possible IP addresses. 
+- Check the FQDN status of SBC. If the FQDNs are configured to send SIP options to the specific IP address that the FQDNs resolve to, update it to send SIP options to FQDNs (for example, sip.pstnhub.microsoft.com).
+- Make sure that all devices on the path, such as SBCs and firewalls, are configured to allow communication both to and from all Microsoft-signaling FQDNs.
+- To provide a failover when the connection from an SBC is made to a datacenter that's experiencing an issue, SBC must be configured to use all three SIP proxy FQDNs:
+
+  - sip.pstnhub.microsoft.com
+  - sip2.pstnhub.microsoft.com
+  - sip3.pstnhub.microsoft.com
+
+  > [!NOTE]
+  > Devices that support DNS names can use sip-all.pstnhub.microsoft.com to resolve to all possible IP addresses.
 
 For more information, see [SIP Signaling: FQDNS](https://docs.microsoft.com/microsoftteams/direct-routing-plan#sip-signaling-fqdns).
 
@@ -91,27 +120,27 @@ For more information about certificates, see the “Public trusted certificate f
 <details>
 <summary><b>After successful domain name activation, no valid users are displayed</b></summary>
 
-After you successfully register an SBC domain name and add at least one E3- or E5-licensed user, the name can take up to 24-hours to activate. 
+After you successfully register an SBC domain name and add at least one E3- or E5-licensed user, the name can take up to 24-hours to activate.
 
 For a list of the licenses that are required for Direct Routing, see the ”Licensing and other requirements” section of [Plan Direct Routing](https://docs.microsoft.com/MicrosoftTeams/direct-routing-plan#licensing-and-other-requirements).
 
 For more information about this process, see the ”Connect the SBC to the tenant” section of [Connect your Session Border Controller (SBC) to Direct Routing](https://docs.microsoft.com/microsoftteams/direct-routing-connect-the-sbc#connect-the-sbc-to-the-tenant).
 </details>
 
-### TLS certificate-related issues with SBC setup
+### TLS connection issues
 
-After the TLS connection is successfully established and SBC is able to send and receive messages to and from the Teams SIP proxy, there might still be problems that affect the format or content of the SIP messages. The following section provides resolutions that you can try. 
- 
+If the TLS connection is closed right away and SIP Options are not sent, or 200 OK is not received from the SIP Proxy, then the problem might be with the TLS certificate. The certificate should be version 1.2 or higher.
+
+After the TLS connection is successfully established and SBC is able to send and receive messages to and from the Teams SIP proxy, there might still be problems that affect the format or content of the SIP messages. The following section provides resolutions that you can try.
+
 <details>
-<summary><b>Connection closes and SIP options don’t send, or “200 OK” message is not received</b></summary>
 
-If your connection closes and SIP options are not sent, or the “200 OK” message is not received, the cause might be that the SBC certificate is self-signed or is not assigned by a trusted certificate authority (CA). 
+<summary><b>SBC certificate is not from a trusted CA</b></summary>
 
-To resolve this problem, check the following:
-- This situation might occur if you’re using an older version of TLS. To enforce stricter security, [enable TLS 1.2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2). 
-- Make sure that either your SBC certificate is self-signed or a certificate obtained from a trusted Certificate Authority (CA). The certificate must contain at least one FQDN that belongs to any Microsoft 365 tenant. 
+Make sure that your SBC certificate is either self-signed or obtained from a trusted Certificate Authority (CA). The certificate must contain at least one FQDN that belongs to a Microsoft 365 tenant.
 
 For a list of supported CAs, see the “Public trusted certificate for the SBC” section of [Plan Direct Routing](https://docs.microsoft.com/MicrosoftTeams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
+
 </details>
 
 <details>
@@ -133,7 +162,6 @@ Request or renew the certificate from a trusted Certificate Authority (CA). Inst
 For a list of supported CAs, see the “Public trusted certificate for the SBC” section of [Plan Direct Routing](https://docs.microsoft.com/MicrosoftTeams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
 
 </details>
-
 
 <details>
 <summary><b>SBC or all required intermediary certificates are missing in SBC’s TLS “Hello” message</b></summary>
