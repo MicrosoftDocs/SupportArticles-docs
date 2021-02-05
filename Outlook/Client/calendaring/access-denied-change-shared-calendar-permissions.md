@@ -23,7 +23,7 @@ search.appverid: MET150
 
 ## Symptoms
 
-Assume that you have owner permissions to a user's shared calendar in Outlook for Mac. When you try to grant other users permissions to access the shared calendar, you receive an "Access is denied" error message. This error happens when you change the permissions in the **Calendar Properties** box.
+Assume that you have owner permissions to a user's shared calendar in Microsoft Outlook for Mac. When you try to grant  permissions for other users to access the shared calendar, you receive an "Access is denied" error message. This error happens when you change the permissions in the **Calendar Properties** box.
 
 Similar messages are displayed in the Outlook Mac logs:
 
@@ -45,4 +45,4 @@ This behavior is by design in Outlook for Mac.
 
 ## Resolution
 
-Let the original calendar owner grant other users permissions to access the shared calendar.
+Let the original calendar owner grant permissions to other users to access the shared calendar.
