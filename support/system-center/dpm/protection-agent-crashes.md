@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ---
 # Error ID 43 or 60 when you use System Center 2012 Data Protection Manager
 
-This article helps you fix an issue where error 43 or 60 occurs when you try to protect a server by using System Center 2012 Data Protection Manager (DPM).
+This article helps you fix an issue where error 43 or 60 occurs when you try to protect a server by using System Center 2012 Data Protection Manager (DPM).
 
 _Original product version:_ &nbsp; System Center 2012 Data Protection Manager, System Center 2012 R2 Data Protection Manager  
 _Original KB number:_ &nbsp; 3082409

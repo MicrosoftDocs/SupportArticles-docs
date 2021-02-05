@@ -18,7 +18,7 @@ When doing hard-link migrations in System Center 2012 Configuration Manager, the
 
 ## Cause
 
-The **Capture User State** task of System Center 2012 Configuration Manager has the ability to set the USMT option of `/efs` to either `skip` or `copyraw` via the option **Skip Files that use the Encrypting File System (EFS)**. However there is no option to set it to `hardlink`. Without the ability to change the `efs` option to `hardlink`, a hard-link to the EFS file is not created and instead a full copy of the file is created.
+The **Capture User State** task of System Center 2012 Configuration Manager has the ability to set the USMT option of `/efs` to either `skip` or `copyraw` via the option **Skip Files that use the Encrypting File System (EFS)**. However there is no option to set it to `hardlink`. Without the ability to change the `efs` option to `hardlink`, a hard-link to the EFS file is not created and instead a full copy of the file is created.
 
 ## Resolution
 

@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4498259
 
 ## Symptoms
 
-You integrate Upgrade Readiness with Configuration Manager to access client upgrade compatibility data in Configuration Manager. In this scenario, you may notice that Upgrade Readiness data is downloaded continuously. This causes many ConfigMgr.OMSUpgradeAnalytics_{*date code*}.OMS files to be added to the following folder:
+You integrate Upgrade Readiness with Configuration Manager to access client upgrade compatibility data in Configuration Manager. In this scenario, you may notice that Upgrade Readiness data is downloaded continuously. This causes many ConfigMgr.OMSUpgradeAnalytics_{*date code*}.OMS files to be added to the following folder:
 
 `C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD`
 
@@ -29,7 +29,7 @@ The initial download interval of Upgrade Readiness data is set by the following 
 
 `HKEY_LOCAL_MACHINE\Software\Microsoft\SMS\Components\SMS_DMP_DOWNLOADER\OMSUpgradeAnalyticsDownloadInterval`
 
-By default, this registry value is set to **10080 minutes** (7 days). However, the download interval automatically decreases when the SMS_DMP_DOWNLOADER thread runs. When the interval reaches zero (0), Upgrade Readiness data is downloaded continuously.
+By default, this registry value is set to **10080 minutes** (7 days). However, the download interval automatically decreases when the SMS_DMP_DOWNLOADER thread runs. When the interval reaches zero (0), Upgrade Readiness data is downloaded continuously.
 
 ## Resolution
 
@@ -37,7 +37,7 @@ To fix this issue, update to Configuration Manager current branch version 1902.
 
 ## Workaround
 
-To work around this issue without updating, make sure that the following registry value is set to **10080**:
+To work around this issue without updating, make sure that the following registry value is set to **10080**:
 
 `HKEY_LOCAL_MACHINE\Software\Microsoft\SMS\Components\SMS_DMP_DOWNLOADER\OMSUpgradeAnalyticsDownloadInterval`
 

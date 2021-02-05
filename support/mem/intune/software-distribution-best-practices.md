@@ -6,16 +6,16 @@ ms.prod-support-area-path: Software distribution
 ---
 # Best practices for Intune software distribution to Windows PC
 
-You can use Microsoft Intune to manage Windows PCs as computers by using the Intune software client. This article provides tips and best practices for using Intune to make software deployments to Windows PC clients. Intune deploys only software that can be installed silently without user interaction.
+You can use Microsoft Intune to manage Windows PCs as computers by using the Intune software client. This article provides tips and best practices for using Intune to make software deployments to Windows PC clients. Intune deploys only software that can be installed silently without user interaction.
 
 _Original product version:_ &nbsp; Microsoft Intune  
 _Original KB number:_ &nbsp; 2583929
 
 ## Prepare for software distribution
 
-Before you distribute an update or other software package, gather the necessary installation or update files. These files must include either an installation executable file such as Setup.exe or a Windows Installer file such as Application.msi. If the installer file requires other files or folders to complete the installation, put all these files into a single, accessible folder so that they can be added to the software package by the Intune Software Publishing wizard.
+Before you distribute an update or other software package, gather the necessary installation or update files. These files must include either an installation executable file such as Setup.exe or a Windows Installer file such as Application.msi. If the installer file requires other files or folders to complete the installation, put all these files into a single, accessible folder so that they can be added to the software package by the Intune Software Publishing wizard.
 
-For .exe files, Intune adds the `/Install` switch automatically. Most .exe files typically require additional command-line arguments to turn off the default user interaction and install the package silently. Microsoft Intune deployments support only .exe installer packages. If you want to deploy runtime executable files, use a third-party tool to create an installer package.
+For .exe files, Intune adds the `/Install` switch automatically. Most .exe files typically require additional command-line arguments to turn off the default user interaction and install the package silently. Microsoft Intune deployments support only .exe installer packages. If you want to deploy runtime executable files, use a third-party tool to create an installer package.
 
 For .msi files, Intune adds the `/quiet` switch automatically. The installer packages should detect that the installation is under the SYSTEM account, and automatically install in silent mode. However, this depends on how the software publisher creates the package. If an application installation requires user context, it probably can't be deployed by using Intune.
 
@@ -43,10 +43,10 @@ Before you deploy the software package, test whether the package can be installe
    - Skype (EXE): `/verysilent`
    - Skype (MSI): `/passive /qn`
    - Internet Explorer 10 (EXE): `/quiet /passive /norestart`
-   - Internet Explorer 11 (EXE): `/quiet /norestart`
+   - Internet Explorer 11 (EXE): `/quiet /norestart`
    - Notepad ++ (EXE): `/s`
    - Firefox (EXE): `-ms`
-   - Adobe Reader (EXE): `/sAll /rs /msi EULA_ACCEPT=YES`
+   - Adobe Reader (EXE): `/sAll /rs /msi EULA_ACCEPT=YES`
 
    If you aren't sure which switches to use for silent installation, run the command by adding the `/?` or `/help` switch.
 
@@ -54,22 +54,22 @@ Before you deploy the software package, test whether the package can be installe
 
    :::image type="content" source="./media/software-distribution-best-practices/switch.png" alt-text="Screenshot of switch.":::
 
-   In addition to the `/quiet` switch that is added by Intune, you must add the `/passive` and `/qn` switches to enable silent installation.
+   In addition to the `/quiet` switch that is added by Intune, you must add the `/passive` and `/qn` switches to enable silent installation.
 
 6. If the installation fails, determine which switches will force the package to install through the SYSTEM account. For help, contact the software publisher or search for the information on the internet.
 
 ## Test the software deployment
 
-Before you deploy the software to all Windows PCs, we recommend that you assign it as **Available**, and then manually install it from [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com/) on at least one PC. If the installation seems not to occur, check the following log to verify whether the package tried to install:
+Before you deploy the software to all Windows PCs, we recommend that you assign it as **Available**, and then manually install it from [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com/) on at least one PC. If the installation seems not to occur, check the following log to verify whether the package tried to install:
 
 `C:\Program Files\Microsoft\OnlineManagement\Logs\updates.log`
 
 > [!NOTE]
-> If the package starts installing and the log shows that it hasn't progressed for several hours, the process is likely stuck and waiting for user interaction.
+> If the package starts installing and the log shows that it hasn't progressed for several hours, the process is likely stuck and waiting for user interaction.
 
 ## Unsupported scenario: Deploy scripts or batch files
 
-The Intune service is usually used to deploy .msi or .exe files. Microsoft doesn't support using Intune to deploy custom scripts or batch files.
+The Intune service is usually used to deploy .msi or .exe files. Microsoft doesn't support using Intune to deploy custom scripts or batch files.
 
 ## References
 

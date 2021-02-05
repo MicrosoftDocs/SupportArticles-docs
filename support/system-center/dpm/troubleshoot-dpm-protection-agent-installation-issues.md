@@ -1,45 +1,45 @@
 ---
 title: Troubleshoot DPM protection agent installation issues
-description: Troubleshoot some of the most common problems when installing System Center 2016 Data Protection Manager protection agent.
+description: Troubleshoot some of the most common problems when installing System Center 2016 Data Protection Manager protection agent.
 ms.date: 08/22/2020
 ms.prod-support-area-path:
 ---
 # Troubleshoot Data Protection Manager 2016 protection agent installation issues
 
-This guide helps you understand and troubleshoot some of the most common problems when installing System Center 2016 Data Protection Manager (DPM) protection agent.
+This guide helps you understand and troubleshoot some of the most common problems when installing System Center 2016 Data Protection Manager (DPM) protection agent.
 
 _Original product version:_ &nbsp; System Center 2016 Data Protection Manager  
 _Original KB number:_ &nbsp; 4052731
 
-Before you start troubleshooting, we recommend that you first try to install the protection agents manually. For detailed instructions, see [Install the agent manually](/system-center/dpm/deploy-dpm-protection-agent#BKMK_Manual).
+Before you start troubleshooting, we recommend that you first try to install the protection agents manually. For detailed instructions, see [Install the agent manually](/system-center/dpm/deploy-dpm-protection-agent#BKMK_Manual).
 
-Also Make sure that you have [the latest update rollup](/system-center/dpm/release-build-versions) for DPM installed, then try to reinstall the protection agent.
+Also Make sure that you have [the latest update rollup](/system-center/dpm/release-build-versions) for DPM installed, then try to reinstall the protection agent.
 
 ## Prerequisite checks
 
 ### Verify COM+ services are running
 
-Make sure that COM+ services are running on the protected computers, then try to reinstall the protection agent.
+Make sure that COM+ services are running on the protected computers, then try to reinstall the protection agent.
 
-### Verify required applications are installed
+### Verify required applications are installed
 
-Make sure that you have [the required applications](/system-center/dpm/prepare-environment-for-dpm#protected-workloads) installed on the protected computers, then try to reinstall the protection agent.
+Make sure that you have [the required applications](/system-center/dpm/prepare-environment-for-dpm#protected-workloads) installed on the protected computers, then try to reinstall the protection agent.
 
 ## Unexpected restarts during DPM agent deployment
 
-When Microsoft Visual C++ 2012 Redistributable (x64) version 11.0.51106 or a later version isn't preinstalled, agent deployment fails, and a forced restart occurs without warning. This occurs even you clear the automatically restart option.
+When Microsoft Visual C++ 2012 Redistributable (x64) version 11.0.51106 or a later version isn't preinstalled, agent deployment fails, and a forced restart occurs without warning. This occurs even you clear the automatically restart option.
 
-To fix this issue, verify that the required version of Microsoft Visual C++ 2012 Redistributable (x64) is installed. To do this, at the command prompt, type the following command to query the related registry entries:
+To fix this issue, verify that the required version of Microsoft Visual C++ 2012 Redistributable (x64) is installed. To do this, at the command prompt, type the following command to query the related registry entries:
 
 ```console
 reg query \\<ComputerName>\HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall /s /f "Microsoft Visual C++ 2012 x64"
 ```
 
-If no results are returned, install Microsoft Visual C++ 2012 Redistributable (x64) version 11.0.51106 or a later version.
+If no results are returned, install Microsoft Visual C++ 2012 Redistributable (x64) version 11.0.51106 or a later version.
 
 ## Agent installation (or setdpmserver) fails with fatal error 0x80004005
 
-This issue occurs if Windows Management Instrumentation (WMI) isn't listed as a predefined exception in Windows Firewall.
+This issue occurs if Windows Management Instrumentation (WMI) isn't listed as a predefined exception in Windows Firewall.
 
 To fix the issue, follow these steps:
 
@@ -61,7 +61,7 @@ To fix the issue, go through the following checklist:
 
 3. Is a firewall enabled on the computer to be protected that could be blocking requests from the DPM server?
 
-    If a firewall is enabled, you must configure the firewall to allow communication between the DPM server and the computer to be protected. For information about how to configure the firewall, see [Set up firewall exceptions](/system-center/dpm/deploy-dpm-protection-agent#set-up-firewall-exceptions).
+    If a firewall is enabled, you must configure the firewall to allow communication between the DPM server and the computer to be protected. For information about how to configure the firewall, see [Set up firewall exceptions](/system-center/dpm/deploy-dpm-protection-agent#set-up-firewall-exceptions).
 
 4. Is a firewall enabled on the DPM server?
 
@@ -139,7 +139,7 @@ To fix the issue, we recommend that you increase the value of this parameter by 
 
 ## The RPC server is unavailable
 
-This issue occurs if a firewall is enabled on the remote computer.
+This issue occurs if a firewall is enabled on the remote computer.
 
 If a firewall is enabled on the remote computer on which you are installing the protection agents, you must run the `DPMAgentInstaller.exe` executable file before installation.
 
@@ -162,9 +162,9 @@ If you are protecting a server released earlier than Windows Server 2012, you mu
 
 ## Backup of data sources fails with agent upgrade error
 
-This issue occurs if the protection agent on some members of the cluster has not been upgraded.
+This issue occurs if the protection agent on some members of the cluster has not been upgraded.
 
-To fix the issue, upgrade the protection agent on all members of the cluster.
+To fix the issue, upgrade the protection agent on all members of the cluster.
 
 ## Error ID: 31008 appears because DPM only refreshes protection agents every 30 minutes
 
