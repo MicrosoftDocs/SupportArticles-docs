@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4015510
 
 ## Symptoms
 
-In Windows 10 and Windows Server version 1709 or later versions, if you do not grant dynamic-link library (DLL) access to the process token itself when you use the **LoadLibrary** function to load the DLL, you receive a "STATUS_DLL_NOT_FOUND" error message on impersonate threads.
+In Windows 10 and Windows Server version 1709 or later versions, if you do not grant dynamic-link library (DLL) access to the process token itself when you use the **LoadLibrary** function to load the DLL, you receive a "STATUS_DLL_NOT_FOUND" error message on impersonate threads.
 
 ## Cause
 
@@ -32,7 +32,7 @@ In Windows 10 and Windows Server version 1709 or later versions, if you do not g
 This behavior occurs for the following reasons:
 
 - It's assumed that all Windows-based operating systems have access rights to the DLL that's referred to by the process token.
-- Regardless of the condition that's described in the preceding bullet point, this problem is more obvious in Windows 10, Windows Server 2016, Windows Server 2019, and Windows Server, version 1909 than in earlier versions of Windows.
+- Regardless of the condition that's described in the preceding bullet point, this problem is more obvious in Windows 10, Windows Server 2016, Windows Server 2019, and Windows Server, version 1909 than in earlier versions of Windows.
 
 ## Workaround
 
