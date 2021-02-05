@@ -80,9 +80,9 @@ To resolve this issue, perform one of the following steps:
 
 Check the Application event log on the host to see if the following event is logged:
 
-> Log Name:      Application  
-> Source:        Microsoft-Windows-LoadPerf  
-> Event ID:      3012  
+> Log Name:      Application  
+> Source:        Microsoft-Windows-LoadPerf  
+> Event ID:      3012  
 > Description:  
 > The performance strings in the Performance registry value is corrupted when process Performance extension counter provider. The BaseIndex value from the Performance registry is the first DWORD in the Data section, LastCounter value is the second DWORD in the Data section, and LastHelp value is the third DWORD in the Data section.
 

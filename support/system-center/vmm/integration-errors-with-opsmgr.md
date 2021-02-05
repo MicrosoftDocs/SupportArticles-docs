@@ -1,13 +1,13 @@
 ---
 title: Potential integration issues with Operations Manager
-description: This article describes possible errors and issues you may encounter after configuring Operations Manager integration with System Center 2012 Virtual Machine Manager.
+description: This article describes possible errors and issues you may encounter after configuring Operations Manager integration with System Center 2012 Virtual Machine Manager.
 ms.date: 07/17/2020
 ms.prod-support-area-path: 
 ms.reviewer: alvinm
 ---
 # Potential integration issues with System Center Operations Manager
 
-This article presents possible errors and issues you may encounter after configuring Operations Manager integration with System Center 2012 Virtual Machine Manager (VMM 2012).
+This article presents possible errors and issues you may encounter after configuring Operations Manager integration with System Center 2012 Virtual Machine Manager (VMM 2012).
 
 _Original product version:_ &nbsp; System Center 2012 Virtual Machine Manager  
 _Original KB number:_ &nbsp; 2668088
