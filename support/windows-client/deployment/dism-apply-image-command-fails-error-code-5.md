@@ -38,7 +38,7 @@ The files that are installed by the Ubuntu package may cause `DISM /Apply-Image`
 
 ## Workaround
 
-Do not download and install the Ubuntu package before you capture the Windows 10 image by using the `DISM /Capture-Image` command. The Ubuntu package can be downloaded and installed after the Windows 10 image is applied to a device. You can install the Ubuntu package by following the steps in this [installation guide](/windows/wsl/install-win10).
+Do not download and install the Ubuntu package before you capture the Windows 10 image by using the `DISM /Capture-Image` command. The Ubuntu package can be downloaded and installed after the Windows 10 image is applied to a device. You can install the Ubuntu package by following the steps in this [installation guide](/windows/wsl/install-win10).
 
 ## More Information
 

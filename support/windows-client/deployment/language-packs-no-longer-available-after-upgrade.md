@@ -32,7 +32,7 @@ It is also possible that the Advanced language options are set to cause Windows 
 
 ## Resolution
 
-Follow Resolution 1 to install the language packs. If you have issues downloading or installing language packs, go to Resolution 2.  
+Follow Resolution 1 to install the language packs. If you have issues downloading or installing language packs, go to Resolution 2.  
 
 ### Resolution 1: Install the language packs
 
@@ -53,7 +53,7 @@ There are advanced language settings that may block the download of language pac
 2. Tap or click **Clock, Language and Region**. (If you are viewing Control Panel in icon display, select **Language**, and then go to step 4.)
 3. Tap or click **Language**.
 4. Tap or click **Advanced settings**.
-5. Examine the **Override for Windows display language** and **Override for default input method** lists. Make sure that the **Use language list (recommended)**  option is selected for both lists (see Figure 1). Then, tap or click **Save**.
+5. Examine the **Override for Windows display language** and **Override for default input method** lists. Make sure that the **Use language list (recommended)**  option is selected for both lists (see Figure 1). Then, tap or click **Save**.
 
     Figure 1: Advanced settings  
     ![Advanced settings](./media/language-packs-no-longer-available-after-upgrade/advanced-settings.jpg)

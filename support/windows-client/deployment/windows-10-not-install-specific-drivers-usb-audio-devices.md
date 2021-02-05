@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4021854
 
 ## Symptom
 
-When you connect a USB audio device to a Windows 10 Version 1703-based computer the first time, the operating system detects the device but loads the standard USB audio 2.0 driver (usbaudio2.sys) instead of the specific device driver.
+When you connect a USB audio device to a Windows 10 Version 1703-based computer the first time, the operating system detects the device but loads the standard USB audio 2.0 driver (usbaudio2.sys) instead of the specific device driver.
 
 ## Cause
 
@@ -44,10 +44,10 @@ If the device-specific driver is distributed through Windows Update, you can man
 
 ### Method 3
 
-If the device is not yet connected, first install the device-specific driver, such as by using the appropriate installer. After the device-specific driver is installed, Windows 10 will select that driver instead of the standard USB audio 2.0 driver when you first connect the device.
+If the device is not yet connected, first install the device-specific driver, such as by using the appropriate installer. After the device-specific driver is installed, Windows 10 will select that driver instead of the standard USB audio 2.0 driver when you first connect the device.
 
 > [!Note]
-> See the device manufacturer's user guide for specific instructions about how to install the driver.
+> See the device manufacturer's user guide for specific instructions about how to install the driver.
 
 ### Method 4
 
@@ -58,4 +58,4 @@ If the driver isn't distributed through Windows Update, you can manually reinsta
 3. Right-click (or tap and hold) the name of the device, and then select **Uninstall**.
 4. Restart the computer.
 
-When it restarts, Windows will try to reinstall the device by using the device-specific driver.
+When it restarts, Windows will try to reinstall the device by using the device-specific driver.
