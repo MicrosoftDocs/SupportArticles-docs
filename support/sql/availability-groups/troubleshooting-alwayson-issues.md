@@ -9,6 +9,9 @@ ms.prod: sql
 
 This article helps you resolve the common problem about AlwaysOn configuration on SQL server.
 
+> [!NOTE]
+> For a guided walk through experience of this article, see [Troubleshooting SQL Server AlwaysOn Issues](https://support.microsoft.com/sbs/topic/troubleshooting-sql-server-alwayson-issues-a1585e3d-3bb7-5440-bbee-677f7d14f334).
+
 _Original product version:_ &nbsp; SQL Server 2012 Enterprise, SQL Server 2014 Enterprise, SQL Server 2016 Enterprise  
 _Original KB number:_ &nbsp; 10179
 
