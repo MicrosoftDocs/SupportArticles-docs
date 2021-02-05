@@ -25,13 +25,10 @@
       href: ./known-issues/public-team-list-doesnt-display-all.md
     - name: Self-help diagnostics for Teams admins
       href: ./teams-administration/admin-self-help-diagnostics.md
-    - name: Teams remembered as a game by Xbox Game Bar affects Teams performance
-      href: ./teams-administration/performance-affected-when-teams-remembered-as-game.md
     - name: User doesn't receive welcome email when added by an administrator
       href: ./known-issues/welcome-email-not-received-in-teams.md
     - name: User information isn't updated
       href: ./teams-administration/user-information-not-updated.md
-
   - name: Authentication
     items:
     - name: Always log into the domain-joined PC account
@@ -202,6 +199,10 @@
     items:
     - name: Virtual Camera stops working on MacOS desktop client
       href: ./teams-on-mac/virtual-camera-doesnt-work-macos.md
+  - name: Teams on Windows
+    items:
+    - name: Teams remembered as XBox game
+      href: ./teams-on-windows/performance-affected-when-teams-remembered-as-game.md
   - name: Third-party programs
     items:
     - name: Dell Encryption prevents Teams from starting correctly
