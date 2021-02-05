@@ -23,12 +23,12 @@ When attempting to specify the storage location in the **Select Path** dialog of
 
 ETL logging will reveal a similar message:  
 
-> 567 01:51:46.950 02-16-2012 ErrorDialog.cs(306) "Error Dialog.Show: Code: 2409; DetailedErrorCode: ; DetailedErrorSource: NoneProblem: The specified path is not a valid folder path on *CLUSTERHOSTNAME.contoso.local*.Action: Specify a valid folder path on *CLUSTERHOSTNAME.contoso.local* which the virtual machine will be saved on." {00000000-0000-0000-0000-000000000000}
+> 567 01:51:46.950 02-16-2012 ErrorDialog.cs(306) "Error Dialog.Show: Code: 2409; DetailedErrorCode: ; DetailedErrorSource: NoneProblem: The specified path is not a valid folder path on *CLUSTERHOSTNAME.contoso.local*.Action: Specify a valid folder path on *CLUSTERHOSTNAME.contoso.local* which the virtual machine will be saved on." {00000000-0000-0000-0000-000000000000}
 
 ## Cause
 
-This error may occur if you select a local hard drive location on a cluster node rather than clustered storage (for example, you specify a local, non-clustered path such as *E:\\* or *E:\VMS*). Because this would result in creating a non-highly available (non-HA) virtual machine, this action is blocked on clustered hosts.
+This error may occur if you select a local hard drive location on a cluster node rather than clustered storage (for example, you specify a local, non-clustered path such as *E:\\* or *E:\VMS*). Because this would result in creating a non-highly available (non-HA) virtual machine, this action is blocked on clustered hosts.
 
 ## Resolution
 
-To resolve this error, click **OK** to dismiss the dialog and specify a clustered storage location such as a CSV or SAN volume.
+To resolve this error, click **OK** to dismiss the dialog and specify a clustered storage location such as a CSV or SAN volume.

@@ -13,26 +13,26 @@ _Original KB number:_ &nbsp; 4033452
 
 ## Symptoms
 
-When a tenant logs into the Windows Azure Pack (WAP) tenant portal and navigates to **Virtual Machines**, no virtual machines (VMs) appear in the list. This issue occurs even though VMs are available in the cloud and the VM list appears as expected in System Center Virtual Machine Manager (SCVMM).
+When a tenant logs into the Windows Azure Pack (WAP) tenant portal and navigates to **Virtual Machines**, no virtual machines (VMs) appear in the list. This issue occurs even though VMs are available in the cloud and the VM list appears as expected in System Center Virtual Machine Manager (SCVMM).
 
 This issue occurs when the following conditions are true:
 
-- At least one of the VMs in the affected cloud is located on a VMWare host.
-- At least one of the VMWare VMs has a snapshot.
+- At least one of the VMs in the affected cloud is located on a VMWare host.
+- At least one of the VMWare VMs has a snapshot.
 
 When this issue occurs, you see the following error:
 
-- The following events are logged in the `Microsoft-WindowsAzurePack-MgmtSvc-TenantSite` operational event log:
+- The following events are logged in the `Microsoft-WindowsAzurePack-MgmtSvc-TenantSite` operational event log:
 
-  > Log Name:      Microsoft-WindowsAzurePack-MgmtSvc-TenantSite/Operational  
-  > Source:        Microsoft-WindowsAzurePack-MgmtSvc-TenantSite  
-  > Date:          DATE  
-  > Event ID:      221  
+  > Log Name:      Microsoft-WindowsAzurePack-MgmtSvc-TenantSite/Operational  
+  > Source:        Microsoft-WindowsAzurePack-MgmtSvc-TenantSite  
+  > Date:          DATE  
+  > Event ID:      221  
   > Task Category: (2)  
-  > Level:         Error  
-  > Keywords:      None  
-  > User:          IIS APPPOOL\USER  
-  > Computer:      COMPUTER  
+  > Level:         Error  
+  > Keywords:      None  
+  > User:          IIS APPPOOL\USER  
+  > Computer:      COMPUTER  
   > Description:  
   > Failed to load list of Virtual Machines for SubscriptionId: '\<SUBSCRIPTION GUID>', Exception: 'DataServiceClientException: Error processing response stream. Server failed with following message:  
   > Unable to construct the property LastRestoredCheckpointId from the object returned from the cmdlet. Cause: Unable to convert from .NET Framework type System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 to type System.Nullable\`1[[System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.  
@@ -75,7 +75,7 @@ When this issue occurs, you see the following error:
 
 This issue is caused by a bug that is not scheduled to be fixed.
 
-The VMWare VM has an associated snapshot (called a *checkpoint* in Hyper-V), and Virtual Machine Manager stores its ID in the `VirtualMachineDB` database together with extra information. This extra information is appended to the GUID that is stored in the `LastRestoredCheckpointID` column in the `tbl_WLC_VmInstance` table.
+The VMWare VM has an associated snapshot (called a *checkpoint* in Hyper-V), and Virtual Machine Manager stores its ID in the `VirtualMachineDB` database together with extra information. This extra information is appended to the GUID that is stored in the `LastRestoredCheckpointID` column in the `tbl_WLC_VmInstance` table.
 
 To check whether you have an affected VM, run the following query:
 
@@ -108,7 +108,7 @@ update tbl_wlc_vminstance set lastrestoredcheckpointid = SUBSTRING(lastrestoredc
 > [!NOTE]
 > In this query, \<*COMPUTERNAME*> represents the actual name of the VM that you're trying to change.
 
-Running these queries fixes the issue temporarily. However, the bad values will be re-created by SCVMM. To prevent this from occurring without manual intervention, you can add the following trigger to the `tbl_wlc_vminstance` table so that it automatically removes the offending data each time a row is inserted or updated.
+Running these queries fixes the issue temporarily. However, the bad values will be re-created by SCVMM. To prevent this from occurring without manual intervention, you can add the following trigger to the `tbl_wlc_vminstance` table so that it automatically removes the offending data each time a row is inserted or updated.
 
 > [!IMPORTANT]
 > You have to run the first query to wipe all bad values from the database first because this trigger affects only newly inserted or updated rows in the database.

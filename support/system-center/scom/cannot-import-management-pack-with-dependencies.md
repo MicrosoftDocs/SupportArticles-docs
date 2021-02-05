@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 2698846
 
 ## Summary
 
-When importing a management pack in System Center Operations Manager that has a dependency on another management pack, the import may fail with the following message:
+When importing a management pack in System Center Operations Manager that has a dependency on another management pack, the import may fail with the following message:
 
 > \<ManagementPackName> could not be imported.
 >
