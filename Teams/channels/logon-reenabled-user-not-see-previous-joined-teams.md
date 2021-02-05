@@ -17,15 +17,15 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-# You don't see team members after your account is re-enabled for logon
+# You don't see team members after your account is re-enabled
 
 ## Symptoms
 
-Assume that your account is disabled for logon. By design, it's automatically removed as a member from all teams in Microsoft Teams. After your account is re-enabled for logon, you don't see the teams of which you were previously a member.
+Assume that your Microsoft Teams account is disabled for signing in. By design, the account is automatically removed as a member from all teams in this situation. After your account is re-enabled, you still don't see the teams of which you were previously a member.
 
 ## More information
 
-Wait for 24 to 48 hours and you will automatically be added back as a member of your teams. However, your membership won't be restored for private channels in teams. You must request the membership request to join private channels again.
+Wait for 24 to 48 hours for your account memberships to be automatically restored. However, your membership won't be restored for private channels in Teams. You must make new requests for membership to each private channel that you want to rejoin.
 
 To learn more, see [Private channels in Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/private-channels).
 
