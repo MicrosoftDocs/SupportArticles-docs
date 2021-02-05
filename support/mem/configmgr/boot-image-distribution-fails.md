@@ -28,6 +28,6 @@ The error message below is generated in the distmgr.log:
 
 ## More information
 
-This behavior is expected if the **NO_SMS_ON_DRIVE.SMS** file is placed on the drive after using it to host the content library.
+This behavior is expected if the **NO_SMS_ON_DRIVE.SMS** file is placed on the drive after using it to host the content library.
 
 To resolve the issue, remove the **NO_SMS_ON_DRIVE.SMS** file from the partition used to host the content library.

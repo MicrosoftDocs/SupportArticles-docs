@@ -13,29 +13,29 @@ _Original KB number:_ &nbsp; 4532174
 
 ## Symptoms
 
-When you try to run queries in [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) to inspect or modify Microsoft Intune objects under the `https://graph.microsoft.com/beta/deviceManagement` namespace, you receive an error message:
+When you try to run queries in [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) to inspect or modify Microsoft Intune objects under the `https://graph.microsoft.com/beta/deviceManagement` namespace, you receive an error message:
 
-> Failure - Status Code 403.  Looks like you may not have the permissions for this call. Please modify your permissions.  
+> Failure - Status Code 403.  Looks like you may not have the permissions for this call. Please modify your permissions.  
 > {  
-    "error": {  
-        "code": "Forbidden",  
-        "message": "{\r\n  \\"_version\\": 3,\r\n  \\"Message\\": \\"Application is not authorized to perform this operation. Application must have one of the following scopes: DeviceManagementConfiguration.Read.All, DeviceManagementConfiguration.ReadWrite.All - Operation ID (for customer support): 00000000-0000-0000-0000-000000000000 - Activity ID: 5c977c7f-ae03-4be0-82c2-408eafb65caf - Url: <`https://fef.msub05.manage.microsoft.com/DeviceConfiguration_1911/StatelessDeviceConfigurationFEService/deviceManagement?api-version=5019-09-20`>\\",\r\n  \\"CustomApiErrorPhrase\\": \\"\\",\r\n  \\"RetryAfter\\": null,\r\n  \\"ErrorSourceService\\": \\"\\",\r\n  \\"HttpHeaders\\": \\"{}\\"\r\n}",  
-        "innerError": {  
-            "request-id": "5c977c7f-ae03-4be0-82c2-408eafb65caf",  
-            "date": "2019-11-15T18:53:00"  
-        }  
-    }  
+&nbsp; &nbsp; "error": {  
+&nbsp; &nbsp; &nbsp; &nbsp; "code": "Forbidden",  
+&nbsp; &nbsp; &nbsp; &nbsp; "message": "{\r\n &nbsp;\\"_version\\": 3,\r\n &nbsp;\\"Message\\": \\"Application is not authorized to perform this operation. Application must have one of the following scopes: DeviceManagementConfiguration.Read.All, DeviceManagementConfiguration.ReadWrite.All - Operation ID (for customer support): 00000000-0000-0000-0000-000000000000 - Activity ID: 5c977c7f-ae03-4be0-82c2-408eafb65caf - Url: <`https://fef.msub05.manage.microsoft.com/DeviceConfiguration_1911/StatelessDeviceConfigurationFEService/deviceManagement?api-version=5019-09-20`>\\",\r\n &nbsp;\\"CustomApiErrorPhrase\\": \\"\\",\r\n &nbsp;\\"RetryAfter\\": null,\r\n &nbsp;\\"ErrorSourceService\\": \\"\\",\r\n &nbsp;\\"HttpHeaders\\": \\"{}\\"\r\n}",  
+&nbsp; &nbsp; &nbsp; &nbsp; "innerError": {  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "request-id": "5c977c7f-ae03-4be0-82c2-408eafb65caf",  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "date": "2019-11-15T18:53:00"  
+&nbsp; &nbsp; &nbsp; &nbsp; }  
+&nbsp; &nbsp; }  
 }  
 
 :::image type="content" source="media/403-error-graph-explorer-query/403-error.png" alt-text="screenshot of the 403 error details":::
 
 ## Cause
 
-This issue occurs because the required read and read/write permissions to Intune device configuration and policies aren't granted.
+This issue occurs because the required read and read/write permissions to Intune device configuration and policies aren't granted.
 
 ## Resolution
 
-To fix this issue, follow these steps:
+To fix this issue, follow these steps:
 
 1. Sign in to Graph Explorer by selecting **Sign In with Microsoft**, if you haven't already done this.
 
@@ -70,25 +70,25 @@ To fix this issue, follow these steps:
 
 ## More information
 
-The first time that you log on to Graph Explorer, you are prompted by a **Permissions requested** dialog box that resembles the following.
+The first time that you log on to Graph Explorer, you are prompted by a **Permissions requested** dialog box that resembles the following.
 
 :::image type="content" source="media/403-error-graph-explorer-query/permissions-requested-2.png" alt-text="screenshot of Permissions requested":::
 
-By selecting **Accept**, you grant the app permissions to your sign-in account. By selecting **Consent on behalf of your organization**, you allow other accounts to also use Graph Explorer to query Intune management objects. This creates an Enterprise application in Azure AD that has the following settings:
+By selecting **Accept**, you grant the app permissions to your sign-in account. By selecting **Consent on behalf of your organization**, you allow other accounts to also use Graph Explorer to query Intune management objects. This creates an Enterprise application in Azure AD that has the following settings:
 
 - Name: Graph explorer
-- Application ID: de8bc8b5-d9f9-48b1-a8ad-b748da725064
-- Object ID:  unique GUID
-- Enabled for user to sign in:  Yes
-- User assignment required:  No
-- Visible to users:  Yes
-- Users and groups: By default, only the account that first granted access in the **Permissions requested** dialog box.
+- Application ID: de8bc8b5-d9f9-48b1-a8ad-b748da725064
+- Object ID:  unique GUID
+- Enabled for user to sign in:  Yes
+- User assignment required:  No
+- Visible to users:  Yes
+- Users and groups: By default, only the account that first granted access in the **Permissions requested** dialog box.
 
-The following are the default user permissions that are set after you grant access under **User consent**.
+The following are the default user permissions that are set after you grant access under **User consent**.
 
 > [!NOTE]
 > You can view the permissions in the Azure portal in the following path:  
-> **Azure Active Directory** > **Enterprise applications** > **All applications** > **Graph explorer** > **Users and groups** > **\<*Account Name*>** > **Applications** > **Assignment Detail** > **Permissions & Consent**
+> **Azure Active Directory** > **Enterprise applications** > **All applications** > **Graph explorer** > **Users and groups** > **\<*Account Name*>** > **Applications** > **Assignment Detail** > **Permissions & Consent**
 
 |API Name|Type|Permission|Granted through|
 |---|---|---|---|
@@ -126,17 +126,17 @@ If you select **Consent on behalf of your organization**, you will have the foll
 
 ## Troubleshooting
 
-To reset your tenant to its default settings, you can safely delete and re-create a Graph Explorer enterprise application configuration. To do this, follow these steps:
+To reset your tenant to its default settings, you can safely delete and re-create a Graph Explorer enterprise application configuration. To do this, follow these steps:
 
-1. Sign in to the Azure portal, go to **Azure Active Directory** > **Enterprise Applications**, and then select **Graph explorer** from the list of applications.
+1. Sign in to the Azure portal, go to **Azure Active Directory** > **Enterprise Applications**, and then select **Graph explorer** from the list of applications.
 
 1. In the Graph explorer settings, select **Manage** > **Properties**.
 1. Select **Delete**, and acknowledge the warning dialog box.
-1. Wait for the **Application Graph explorer was deleted successfully** message from the Azure portal.
-1. Sign in to Graph Explorer by selecting **Sign In with Microsoft**. If the app is successfully deleted, you will be prompted to accept the default permissions.
+1. Wait for the **Application Graph explorer was deleted successfully** message from the Azure portal.
+1. Sign in to Graph Explorer by selecting **Sign In with Microsoft**. If the app is successfully deleted, you will be prompted to accept the default permissions.
 
    > [!NOTE]
-   > There may be several minutes of delay between when you remove access to Graph Explorer to when the permissions become effective in the application.
+   > There may be several minutes of delay between when you remove access to Graph Explorer to when the permissions become effective in the application.
 
 > [!IMPORTANT]
 > To avoid issues that affect browser caching, browse in **InPrivate** or **Incognito** mode when you troubleshoot access permissions.

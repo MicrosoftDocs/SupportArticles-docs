@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4045957
 
 ## Symptoms
 
-You use Microsoft Intune to assign Simple Certificate Enrollment Protocol (SCEP) certificates to devices that you manage. After you renew an expired certificate, new certificates can't be assigned to the devices. When you open the NDESPlugin.log file, the log stops at **Sending request to certificate registration point**.
+You use Microsoft Intune to assign Simple Certificate Enrollment Protocol (SCEP) certificates to devices that you manage. After you renew an expired certificate, new certificates can't be assigned to the devices. When you open the NDESPlugin.log file, the log stops at **Sending request to certificate registration point**.
 
 Additionally, if you [enable CAPI2 logging](/archive/blogs/benjaminperkins/enable-capi2-event-logging-to-troubleshoot-pki-and-ssl-certificate-issues) on the Network Device Enrollment Service (NDES) server, you receive the following error message:
 
@@ -22,7 +22,7 @@ Additionally, if you [enable CAPI2 logging](/archive/blogs/benjaminperkins/enabl
 
 ## Cause
 
-This problem occurs because the NDES policy module still uses the thumbprint from an expired client authentication certificate. That certificate was selected when the NDES policy module or Intune Certificate Connector was first installed.
+This problem occurs because the NDES policy module still uses the thumbprint from an expired client authentication certificate. That certificate was selected when the NDES policy module or Intune Certificate Connector was first installed.
 
 ## Resolution
 
@@ -43,13 +43,13 @@ To fix this problem, set the NDES policy module to use the new certificate. To d
 6. In the **Certificate Properties** dialog box, click the **Subject** tab, and then do the following:
 
    1. Under **Subject name,** click the **Type** drop-down box and select **Common Name**. In the **Value** box, enter the fully qualified domain name (FQDN) of the NDES server, then click **Add**.
-   2. Under **Alternative name**, click the **Type** list, and then select DNS.
+   2. Under **Alternative name**, click the **Type** list, and then select DNS.
    3. In the **Value** box, enter the FQDN of the NDES server, and then click **Add**.
 
 7. Click **OK** to close the **Certificate Properties** dialog box.
 8. Click **Enroll**, wait until the enrollment finishes successfully, and then click **Finish**.
 9. Double-click the new certificate, and then click the **Details** tab in the **Certificate** dialog box.
-10. Scroll down to locate and click **Thumbprint**, and then copy the hexadecimal string from the box.
+10. Scroll down to locate and click **Thumbprint**, and then copy the hexadecimal string from the box.
 11. Start Notepad.
 12. Paste the hexadecimal string, remove the spaces between the hexadecimal characters, and then save as a text file.
 
@@ -61,7 +61,7 @@ To fix this problem, set the NDES policy module to use the new certificate. To d
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy\NDESCertThumbprint`
 
     > [!NOTE]
-    > Don't copy any additional characters, such as the question mark at the beginning of the file.
+    > Don't copy any additional characters, such as the question mark at the beginning of the file.
 
 14. At an elevated command prompt, run the following command:
 

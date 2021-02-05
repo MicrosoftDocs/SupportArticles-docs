@@ -17,9 +17,9 @@ To do this, follow these steps:
 
 1. Open the WSUS Administrator console, and then select **Options** at the bottom of the console tree.
 2. Select **Products and Classifications** and verify that the **Windows Defender** check box is selected under the **Products** tab.
-3. Verify that the **Definition Updates** check box is selected under the **Classifications** tab, and then select **OK**.
+3. Verify that the **Definition Updates** check box is selected under the **Classifications** tab, and then select **OK**.
 
-4. Optional: approve the updates by using an automatic approval rule. To do this, follow these steps:
+4. Optional: approve the updates by using an automatic approval rule. To do this, follow these steps:
    1. At the bottom of the console tree, select **Options**.
    2. Select **Automatic Approvals**.
    3. Under step 1, select **New Rule...**, and then select the **When an update is in a specific classification** check box and the **When an update is in a specific product** check box.

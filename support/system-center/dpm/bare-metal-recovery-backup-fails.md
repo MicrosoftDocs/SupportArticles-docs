@@ -40,7 +40,7 @@ The following error entries are logged on the protected server:
 > Keywords:  
 > User: SYSTEM  
 > Computer: \<Servername>  
-> Description:  
+> Description:  
 > The backup operation that started at '\<Time>' has failed with following error code '0x8078015B' (Windows Backup encountered an error when accessing the remote shared folder. Please retry the operation after making sure that the remote shared folder is available and accessible.). Please review the event details for a solution, and then rerun the backup operation once the issue is resolved.
 
 > Log Name: Microsoft-Windows-SmbClient/Connectivity  
@@ -88,7 +88,7 @@ The following error entries are logged on the protected server:
 
 ## Cause
 
-Windows backup server writes directly to the DPM or Azure Backup Server share during backup. This issue occurs if the input/output (I/O) latency is greater than the standard SMB time-out (60 seconds).
+Windows backup server writes directly to the DPM or Azure Backup Server share during backup. This issue occurs if the input/output (I/O) latency is greater than the standard SMB time-out (60 seconds).
 
 ## Resolution
 
@@ -97,7 +97,7 @@ Windows backup server writes directly to the DPM or Azure Backup Server share du
 
 To fix the issue, follow these steps:
 
-1. On the protected server, open Registry Editor, and then add the `SessTimeout` registry entry as shown under the following subkey:
+1. On the protected server, open Registry Editor, and then add the `SessTimeout` registry entry as shown under the following subkey:
 
     |subkey|Name|Type|Data|
     |---|---|---|---|
@@ -105,21 +105,21 @@ To fix the issue, follow these steps:
     ||||
 
     > [!NOTE]
-    > The 1,200 seconds (20 minutes) time-out is a recommended value. Adjust the value as appropriate. You can review the Resilient File System (ReFS) event logs on the DPM or Azure Backup Server server to find any suspected I/O latency.
+    > The 1,200 seconds (20 minutes) time-out is a recommended value. Adjust the value as appropriate. You can review the Resilient File System (ReFS) event logs on the DPM or Azure Backup Server server to find any suspected I/O latency.
 
 2. Restart the protected server.
 
-    If you can't restart the protected server, stop and restart the Workstation (Lanmanworkstation) service.
+    If you can't restart the protected server, stop and restart the Workstation (Lanmanworkstation) service.
 
     > [!NOTE]
-    > Make sure that you check the list of dependencies for the Workstation (Lanmanworkstation) service. The services that depend on this service must also be restarted.
+    > Make sure that you check the list of dependencies for the Workstation (Lanmanworkstation) service. The services that depend on this service must also be restarted.
 
 ## More information
 
-When you use BMR backup, make sure that the following prerequisites are met:
+When you use BMR backup, make sure that the following prerequisites are met:
 
-- The latest update for DPM or Azure Backup Server is installed.
+- The latest update for DPM or Azure Backup Server is installed.
 
-- The replica size is set correctly. For more information, see [How to increase DPM 2016 replica when using Modern Backup Storage (MBS)](https://techcommunity.microsoft.com/t5/system-center-blog/how-to-increase-dpm-2016-replica-when-using-modern-backup/ba-p/351818).
+- The replica size is set correctly. For more information, see [How to increase DPM 2016 replica when using Modern Backup Storage (MBS)](https://techcommunity.microsoft.com/t5/system-center-blog/how-to-increase-dpm-2016-replica-when-using-modern-backup/ba-p/351818).
 
 - The [July 16, 2018-KB4345418 (OS Build 14393.2368)](https://support.microsoft.com/help/4345418) update or a later update is installed for ReFS.
