@@ -208,7 +208,7 @@
           href: fail-to-import-drivers.md
         - name: Insufficient permissions to migrate a driver package
           href: insufficient-permissions-to-migrate-driver-package.md
-        - name: Signed drivers are displayed as unsigned
+        - name: Signed drivers are displayed as unsigned
           href: signed-drivers-shown-as-unsigned.md
     - name: PXE boot
       items:
@@ -218,7 +218,7 @@
           href: advanced-troubleshooting-pxe-boot.md
         - name: Boot from a PXE server
           href: boot-from-pxe-server.md
-        - name: Failed to get the encrypted PXE password
+        - name: Failed to get the encrypted PXE password
           href: certificate-not-updated-on-pxe-dp.md
         - name: PXE boot doesn't work
           href: pxe-boot-not-work.md
@@ -334,7 +334,7 @@
           href: upgrade-to-configmgr-2012-sp1.md
         - name: Understand and troubleshoot Updates and Servicing
           href: understand-troubleshoot-updates-servicing.md
-    - name: Maintenance tasks default settings
+    - name: Maintenance tasks default settings
       href: maintenance-tasks-default-settings.md
 - name: Software update management
   items:

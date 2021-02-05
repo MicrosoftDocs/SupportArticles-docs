@@ -17,26 +17,26 @@ A Configuration Manager OSD task sequence fails during the **Setup Windows and C
 
 The following error messages are logged in the `X:\windows\temp\smstslog\smsts.log` file:
 
-> OSDSetupWindows    Installing hook to 'C:\WINDOWS'  
-> OSDSetupWindows    Command line for extension .EXE is "%1" %*  
-> OSDSetupWindows    Set command line: "X:\sms\bin\x64\OSDSETUPHOOK.EXE" "/install:C:\WINDOWS" /version:10.0  
-> OSDSetupWindows    Executing command line: "X:\sms\bin\x64\OSDSETUPHOOK.EXE" "/install:C:\WINDOWS" /version:10.0  
-> OSDSetupHook    Installing OSD setup hook  
-> OSDSetupHook    !shCmdFile.null(), HRESULT=80070005 (..\vistasetuphook.cpp,96)  
-> OSDSetupHook    Failed to install the setup hook. Permissions on the requested may be configured incorrectly.  
+> OSDSetupWindows    Installing hook to 'C:\WINDOWS'  
+> OSDSetupWindows    Command line for extension .EXE is "%1" %*  
+> OSDSetupWindows    Set command line: "X:\sms\bin\x64\OSDSETUPHOOK.EXE" "/install:C:\WINDOWS" /version:10.0  
+> OSDSetupWindows    Executing command line: "X:\sms\bin\x64\OSDSETUPHOOK.EXE" "/install:C:\WINDOWS" /version:10.0  
+> OSDSetupHook    Installing OSD setup hook  
+> OSDSetupHook    !shCmdFile.null(), HRESULT=80070005 (..\vistasetuphook.cpp,96)  
+> OSDSetupHook    Failed to install the setup hook. Permissions on the requested may be configured incorrectly.  
 > Access is denied. (Error: 80070005; Source: Windows)  
-> OSDSetupHook    pHook->install(sWindowsDir), HRESULT=80070005 (..\osdsetuphook.cpp,385)  
-> OSDSetupHook    Failed to install OSD setup hook (0x80070005)  
-> OSDSetupWindows    Process completed with exit code 2147942405  
-> OSDSetupWindows    exitCode, HRESULT=80070005 (setupwindows.cpp,785)  
-> OSDSetupWindows    Install setup hook failed with error code (80070005).  
-> OSDSetupWindows    this->installSetupHook(), HRESULT=80070005 (setupwindows.cpp,452)  
-> OSDSetupWindows    Failed to install setup hook (80070005)  
-> OSDSetupWindows    setup.run(), HRESULT=80070005 (setupwindows.cpp,1650)  
-> OSDSetupWindows    Exiting with code 0x80070005  
-> TSManager    Process completed with exit code 2147942405  
-> TSManager    !-----------------------------------------------------------------------!  
-> TSManager    Failed to run the action: Setup Windows and ConfigMgr. Permissions on the requested may be configured incorrectly.  
+> OSDSetupHook    pHook->install(sWindowsDir), HRESULT=80070005 (..\osdsetuphook.cpp,385)  
+> OSDSetupHook    Failed to install OSD setup hook (0x80070005)  
+> OSDSetupWindows    Process completed with exit code 2147942405  
+> OSDSetupWindows    exitCode, HRESULT=80070005 (setupwindows.cpp,785)  
+> OSDSetupWindows    Install setup hook failed with error code (80070005).  
+> OSDSetupWindows    this->installSetupHook(), HRESULT=80070005 (setupwindows.cpp,452)  
+> OSDSetupWindows    Failed to install setup hook (80070005)  
+> OSDSetupWindows    setup.run(), HRESULT=80070005 (setupwindows.cpp,1650)  
+> OSDSetupWindows    Exiting with code 0x80070005  
+> TSManager    Process completed with exit code 2147942405  
+> TSManager    !-----------------------------------------------------------------------!  
+> TSManager    Failed to run the action: Setup Windows and ConfigMgr. Permissions on the requested may be configured incorrectly.  
 > Access is denied. (Error: 80070005; Source: Windows)
 
 Here is the detail information about error code 80070005 (2147942405):
@@ -60,11 +60,11 @@ A custom SetupComplete.cmd file may be specified in one of the following ways:
 
 The SetupComplete.cmd file is located in the `%WINDIR%\Setup\Scripts` folder, in either the offline OS or the OS WIM image.
 
-For more information about the SetupComplete.cmd file, see [Add a Custom Script to Windows Setup](/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup).
+For more information about the SetupComplete.cmd file, see [Add a Custom Script to Windows Setup](/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup).
 
 ## Resolution
 
-To fix this issue, remove the custom SetupComplete.cmd file. In most cases, any actions being taken in the custom SetupComplete.cmd file can instead be moved as tasks in the task sequence.
+To fix this issue, remove the custom SetupComplete.cmd file. In most cases, any actions being taken in the custom SetupComplete.cmd file can instead be moved as tasks in the task sequence.
 
 Depending on how the custom SetupComplete.cmd file is specified, use one of the following methods to remove the file:
 

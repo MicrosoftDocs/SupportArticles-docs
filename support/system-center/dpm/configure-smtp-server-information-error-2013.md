@@ -14,14 +14,14 @@ _Original KB number:_ &nbsp; 2020373
 
 ## Symptoms
 
-Configuring SMTP server information in System Center Data Protection Manager 2010 and System Center 2012 Data Protection Manager (DPM) fails with the following error:
+Configuring SMTP server information in System Center Data Protection Manager 2010 and System Center 2012 Data Protection Manager (DPM) fails with the following error:
 
 > ID: 2013  
 > Details: Logon failure: unknown user name or bad password
 
 ## Cause
 
-It can occur if you configure credentials for a non-authenticated SMTP server as DPM expects credentials for an authenticated SMTP server. Configuring a non-authenticated SMTP server only supplies the SMTP server name, server port, and **from** address. Because of it, DPM passes incorrect information resulting in the error.
+It can occur if you configure credentials for a non-authenticated SMTP server as DPM expects credentials for an authenticated SMTP server. Configuring a non-authenticated SMTP server only supplies the SMTP server name, server port, and **from** address. Because of it, DPM passes incorrect information resulting in the error.
 
 ## Resolution
 

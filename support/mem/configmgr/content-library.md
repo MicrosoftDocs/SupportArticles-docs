@@ -28,30 +28,30 @@ In the left pane, the packages distributed to this distribution point are visibl
 
 The application also connects to the Configuration Manager provider machine, in order to determine which packages are distributed to the distribution point, whether or not they are actually in the distribution point's content library. For instance, a package that is pending distribution may not yet exist in the content library. Such a package would appear as **PENDING** in the tool, and no actions will be enabled for this package.
 
-**Disabled packages**: Some packages are present on the distribution point but not visible in the Configuration Manager console. These packages are marked with an asterisk (*). No actions may be done on these packages. Other packages may also be marked with an asterisk and have actions disabled. Three primary reasons for which might occur:
+**Disabled packages**: Some packages are present on the distribution point but not visible in the Configuration Manager console. These packages are marked with an asterisk (*). No actions may be done on these packages. Other packages may also be marked with an asterisk and have actions disabled. Three primary reasons for which might occur:
 
 - The package is the Configuration Manager client upgrade package. This would contain **ccmsetup.exe**.
 - The package is not accessible by the running user's RBAC rights. For instance, the **Application Author** role cannot see driver packages in the console, so any driver packages on the distribution point will be marked.
 - The package is orphaned on the distribution point.
 
-Packages can be validated by using **Package** > **Validate** on the tool strip. A package node must be selected in the left pane, not a content or folder. The tool connects to the WMI provider on the distribution point to do this. When the tool starts, packages that are missing one or more contents will be marked invalid. Validating the package will reveal which contents are missing. If all contents are present but the data is corrupted, validation will detect the corruption.
+Packages can be validated by using **Package** > **Validate** on the tool strip. A package node must be selected in the left pane, not a content or folder. The tool connects to the WMI provider on the distribution point to do this. When the tool starts, packages that are missing one or more contents will be marked invalid. Validating the package will reveal which contents are missing. If all contents are present but the data is corrupted, validation will detect the corruption.
 
-Additionally, packages can be redistributed using **Package** > **Redistribute** on the tool strip. Again, a package node must be selected in the left pane. This requires permission to redistribute packages.
+Additionally, packages can be redistributed using **Package** > **Redistribute** on the tool strip. Again, a package node must be selected in the left pane. This requires permission to redistribute packages.
 
-Using **Edit** > **Copy**, packages, contents, folders, and files can be copied out of the content library to a specified folder. The content library itself can't be copied. Multiple files can be selected (using Ctrl + click or Shift + click), but multiple folders can't.
+Using **Edit** > **Copy**, packages, contents, folders, and files can be copied out of the content library to a specified folder. The content library itself can't be copied. Multiple files can be selected (using Ctrl + click or Shift + click), but multiple folders can't.
 
-Packages can be searched using **Edit** > **Find Package**. This will search for your query in the package name and package ID.
+Packages can be searched using **Edit** > **Find Package**. This will search for your query in the package name and package ID.
 
 ### Limitations
 
-- The tool cannot manipulate the content library directly in any way. Changes to the content library may result in malfunctions.
+- The tool cannot manipulate the content library directly in any way. Changes to the content library may result in malfunctions.
 - The tool can redistribute packages, but only to the target distribution point.
-- When the distribution point is colocated with the site server, package data cannot be validated. Use the Configuration Manager console. (It will still inspect to make sure that all the package contents are present, though not necessarily intact).
+- When the distribution point is colocated with the site server, package data cannot be validated. Use the Configuration Manager console. (It will still inspect to make sure that all the package contents are present, though not necessarily intact).
 - Content cannot be deleted using this tool.
 
 ## Content Library Transfer tool
 
-The Content Library Transfer tool transfers content from one disk drive to another. It is designed to run on distribution point site systems. The tool supports distribution points colocated with a site or they can be remote.
+The Content Library Transfer tool transfers content from one disk drive to another. It is designed to run on distribution point site systems. The tool supports distribution points colocated with a site or they can be remote.
 
 The tool is useful for the scenario when the disk drive hosting the content library becomes full. After a hard disk is installed (or identified) with sufficient space to host the content library, **ContentLibraryTransfer.exe** is used transfer content from the old filled hard disk to the new (empty) drive.
 
@@ -63,7 +63,7 @@ Once the transfer is complete, content is now accessible to client computers fro
 
 #### Syntax
 
-`ContentLibraryTransfer.exe  -SourceDrive <drive letter of source drive>  -TargetDrive <drive letter of destination drive>`
+`ContentLibraryTransfer.exe -SourceDrive <drive letter of source drive> -TargetDrive <drive letter of destination drive>`
 
 #### Example
 
@@ -72,5 +72,5 @@ Once the transfer is complete, content is now accessible to client computers fro
 ### Limitations
 
 - The tool must run locally on the distribution point; it cannot be run from a remote machine.
-- The tool must run only when the distribution point is not actively being accessed by client computers. If the tool is run while client computers are accessing the content, the content library on the destination drive may have incomplete data or the data transfer might fail altogether leading to an unusable content library.
+- The tool must run only when the distribution point is not actively being accessed by client computers. If the tool is run while client computers are accessing the content, the content library on the destination drive may have incomplete data or the data transfer might fail altogether leading to an unusable content library.
 - The tool must only run when no content is being distributed to the distribution point. If the tool is run while content is being written to the distribution point, the content library on the destination drive may have incomplete data or the data transfer might fail altogether leading to an unusable content library.
