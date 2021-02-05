@@ -14,27 +14,27 @@ _Original KB number:_ &nbsp; 2009160
 
 ## Symptoms
 
-When you operate a server that is running Microsoft SQL Server and that has a highly concurrent workload, you notice some performance issues in which queries contribute significantly to high CPU usage or extreme memory grant requests.
+When you operate a server that is running Microsoft SQL Server and that has a highly concurrent workload, you notice some performance issues in which queries contribute significantly to high CPU usage or extreme memory grant requests.
 
 You may also experience other side effects, such as OOM conditions, memory pressure for plan cache eviction, or unexpected `RESOURCE_SEMAPHORE` waits.
 
-Additionally, you may notice that query plans for queries that consume lots of CPU or memories have the **OPTIMIZED** attribute for a Nested Loops join operator set to **True**.
+Additionally, you may notice that query plans for queries that consume lots of CPU or memories have the **OPTIMIZED** attribute for a Nested Loops join operator set to **True**.
 
 ## Cause
 
-This issue occurs in some cases because SQL Server query processor introduces a sort operation for optimization, although it is not required. This operation is known as an Optimized Nested Loops or Batch Sort.
+This issue occurs in some cases because SQL Server query processor introduces a sort operation for optimization, although it is not required. This operation is known as an Optimized Nested Loops or Batch Sort.
 
-In these cases, the plan touches only a smaller number of rows, and the setup cost for the sort operation may outweigh its benefits. Therefore, it causes poor performance.
+In these cases, the plan touches only a smaller number of rows, and the setup cost for the sort operation may outweigh its benefits. Therefore, it causes poor performance.
 
 ## Resolution
 
-To fix the issue, use trace flag 2340 to disable the optimization. Alternatively, to disable the optimization at the query level, apply the following query hint:
+To fix the issue, use trace flag 2340 to disable the optimization. Alternatively, to disable the optimization at the query level, apply the following query hint:
 
 ```sql
 USE HINT (DISABLE_OPTIMIZED_NESTED_LOOP)
 ```
 
-Before you use this trace flag, you can test your applications thoroughly to make sure that you get the expected performance benefits when you disable this optimization. This is because the sort optimization can be helpful when there is a large increase in the number of rows that are touched by the plan.
+Before you use this trace flag, you can test your applications thoroughly to make sure that you get the expected performance benefits when you disable this optimization. This is because the sort optimization can be helpful when there is a large increase in the number of rows that are touched by the plan.
 
 ## More information
 
