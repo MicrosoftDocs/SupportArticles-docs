@@ -1,6 +1,10 @@
 - name: OneDrive for Business Troubleshooting
   href: ../onedrive-welcome.md
   items:
+  - name: Administration
+    items:
+    - name: Error when accessing OneDrive or Sharepoint
+      href: ../administration/error-accessing-onedrive-sharepoint.md
   - name: List and Libraries
     items:
     - name: 401 error when Graph API access OneDrive data
