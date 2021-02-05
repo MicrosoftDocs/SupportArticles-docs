@@ -16,31 +16,31 @@ When you configure the Microsoft SQL Server service to run under an account that
 
 - By using the Services applet:
   
-    > Windows could not start the SQL Server (MSSQLSERVER) service on Local Computer.  
-    Error 5: Access is denied.
+    > `Windows could not start the SQL Server (MSSQLSERVER) service on Local Computer.`  
+    `Error 5: Access is denied.`
 
 - By using a command prompt:
 
     > C:\Users\username>NET START MSSQLSERVER  
-    System error 5 has occurred.  
-    Access is denied.
+    `System error 5 has occurred.`  
+    `Access is denied.`
 
 ## Resolution
 
 1. Open the System log, and verify that you see an error message entry that resembles the following:
 
-    > Log Name:      System  
-    Source:        Service Control Manager  
-    Date:          \<Datetime>  
-    Event ID:      7000  
-    Task Category: None  
-    Level:         Error  
-    Keywords:      Classic  
-    User:          N/A  
-    Computer:      \<Servername>  
-    Description:
+    > `Log Name:      System`  
+    `Source:        Service Control Manager`  
+    `Date:          \<Datetime>`  
+    `Event ID:      7000`  
+    `Task Category: None`  
+    `Level:         Error`  
+    `Keywords:      Classic`  
+    `User:          N/A`  
+    `Computer:      <Servername>`  
+    `Description:
     The SQL Server (MSSQLSERVER) service failed to start due to the following error:  
-    Access is denied.
+    Access is denied.`
 
 2. Using either Microsoft SQL Server Configuration Manager or Service Control Manager, note the service account for SQL Server service.
 3. Go to the SQL Server installation folder (for example `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Binn`) and do the following to check effective access of the SQL Service account:
@@ -51,7 +51,7 @@ When you configure the Microsoft SQL Server service to run under an account that
 > [!NOTE]
 > You can also use [Process Monitor](/sysinternals/downloads/procmon) tool to identify and isolate the permission issues. The following screenshot of an example output from Process Monitor shows the \<DomainName>\sqlsrvlogin SQL Server service account generating an Access Denied error.
 
-![Process Monitor](./media/event-id-7000-access-denied/process-monitor.png)
+![Process Monitor](./media/event-id-7000-access-denied/process-monitor.jpg)
 
 ## Reference
 

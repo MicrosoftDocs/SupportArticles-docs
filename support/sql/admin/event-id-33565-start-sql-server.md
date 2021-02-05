@@ -21,29 +21,29 @@ In Microsoft SQL Server Configuration Manager, you provision a server-side certi
 
 1. Check the Application event log and verify that you see two event entries that resemble the following:
 
-    > Log Name:      Application  
-    > Source:        MSSQLSERVER  
-    > Date:          \<Datetime>  
-    > Event ID:      26010  
-    > Task Category: Server  
-    > Level:         Information  
-    > Keywords:      Classic  
-    > User:          N/A  
-    > Computer:      \<ServerName>  
-    > Description:  
-    > The server could not load the certificate it needs to initiate an SSL connection. It returned the following error: 0x8009030d. Check certificates to make sure they are valid.
+    > `Log Name:      Application`  
+    > `Source:        MSSQLSERVER`  
+    > `Date:          <Datetime>`  
+    > `Event ID:      26010`  
+    > `Task Category: Server`  
+    > `Level:         Information`  
+    > `Keywords:      Classic`  
+    > `User:          N/A`  
+    > `Computer:      <Server name>`  
+    > `Description:  
+    The server could not load the certificate it needs to initiate an SSL connection. It returned the following error: 0x8009030d. Check certificates to make sure they are valid.`
 
-    > Log Name:      Application  
-    > Source:        MSSQLSERVER  
-    > Date:          \<Datetime>  
-    > Event ID:      33565  
-    > Task Category: Server  
-    > Level:         Error  
-    > Keywords:      Classic  
-    > User:          N/A  
-    > Computer:      \<ServerName>  
-    > Description:  
-    > Found the certificate [Cert Hash(sha1) "\<Cert Hash number>"] in the local computer store but the SQL Server service account does not have access to it.
+    > `Log Name:      Application`  
+    > `Source:        MSSQLSERVER`  
+    > `Date:          <Datetime>`  
+    > `Event ID:      33565`  
+    > `Task Category: Server`  
+    > `Level:         Error`  
+    > `Keywords:      Classic`  
+    > `User:          N/A`  
+    > `Computer:      <Server name>`  
+    > `Description:  
+    Found the certificate [Cert Hash(sha1) "<Cert Hash number>"] in the local computer store but the SQL Server service account does not have access to it.`
 
 2. If you see both Events 26010 and 33565, follow these steps:
 

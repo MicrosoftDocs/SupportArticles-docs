@@ -20,17 +20,17 @@ In Microsoft SQL Server Configuration Manager, you provision a server-side certi
 
 1. Check the Application log and verify that you see two event entries that resemble the following:
 
-    > Log Name:      Application  
-    > Source:        MSSQLSERVER  
-    > Date:          \<Datetime>  
-    > Event ID:      33556  
-    > Task Category: Server  
-    > Level:         Error  
-    > Keywords:      Classic  
-    > User:          N/A  
-    > Computer:      \<ServerName>  
-    > Description:  
-    > Invalid character in the thumbprint [Cert Hash(sha1) " \<Cert Hash number> "]. Please provide a certificate with a valid thumbprint.
+    > `Log Name:      Application`  
+    > `Source:        MSSQLSERVER`  
+    > `Date:          <Datetime>`  
+    > `Event ID:      33556`  
+    > `Task Category: Server`  
+    > `Level:         Error`  
+    > `Keywords:      Classic`  
+    > `User:          N/A`  
+    > `Computer:      <Server name>`  
+    > `Description:  
+    Invalid character in the thumbprint [Cert Hash(sha1) " \<Cert Hash number> "]. Please provide a certificate with a valid thumbprint.`
 
     > [!NOTE]
     > This error typically indicates that the certificate isn't provisioned through Configuration Manager. It's provisioned by manually copying the thumbprint value into the following registry key:
