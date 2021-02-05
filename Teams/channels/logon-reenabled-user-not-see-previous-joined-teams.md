@@ -21,7 +21,7 @@ search.appverid:
 
 ## Symptoms
 
-Assume that your Microsoft Teams account is disabled for signing in. By design, the account is automatically removed as a member from all teams in this situation. After your account is re-enabled, you still don't see the teams of which you were previously a member.
+Assume that your Microsoft Teams account is disabled for signing in. By design, the account is automatically removed as a member from all teams in this situation. However, even after your account is re-enabled, you still don't see the teams of which you were previously a member.
 
 ## More information
 
