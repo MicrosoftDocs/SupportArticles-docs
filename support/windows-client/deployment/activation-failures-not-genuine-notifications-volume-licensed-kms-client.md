@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 4487266
 
 This article applies to volume-licensed Windows 7 Service Pack 1 devices that use Key Management Service (KMS) activation and have the [KB 971033](https://support.microsoft.com/help/971033) update installed. Some users may receive the Windows Activation or "Windows is not genuine" notifications starting at or after 10:00 UTC, January 8, 2019.
 
-On January 9, 2019, we reverted a change that was made to Microsoft Activation and Validation servers. For devices that continue to report activation and "not genuine" notifications, you should remove [KB 971033](https://support.microsoft.com/help/971033) by following the steps in the [Resolution](#resolution) section.
+On January 9, 2019, we reverted a change that was made to Microsoft Activation and Validation servers. For devices that continue to report activation and "not genuine" notifications, you should remove [KB 971033](https://support.microsoft.com/help/971033) by following the steps in the [Resolution](#resolution) section.
 
 Windows editions that support volume-licensing activation include the following:
 
@@ -35,7 +35,7 @@ Windows editions that support volume-licensing activation include the following:
 - Windows 7 Enterprise N
 - Windows 7 Enterprise E
 
-For Windows editions that experience activation and "not genuine" errors that are not caused by the Microsoft Activation and Validation server change around January 8, 2019, we recommend that you follow standard activation troubleshooting.
+For Windows editions that experience activation and "not genuine" errors that are not caused by the Microsoft Activation and Validation server change around January 8, 2019, we recommend that you follow standard activation troubleshooting.
 
 ## Symptoms
 
@@ -43,7 +43,7 @@ For Windows editions that experience activation and "not genuine" errors that 
 
     :::image type="content" source="./media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/error-message-for-step-1.jpg" alt-text="Screenshot of error message." border="false":::
 
-2. A **This copy of windows is not genuine** watermark appears in the bottom-right corner of the Windows desktop on a black background.
+2. A **This copy of windows is not genuine** watermark appears in the bottom-right corner of the Windows desktop on a black background.
 
     :::image type="content" source="./media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/screenshot-of-the-watermark.jpg" alt-text="Screenshot of the watermark." border="false":::
 
@@ -51,7 +51,7 @@ For Windows editions that experience activation and "not genuine" errors that 
 
     :::image type="content" source="./media/activation-failures-not-genuine-notifications-volume-licensed-kms-client/command-output-error-0xc004f200.png" alt-text="Screenshot of the command output." border="false":::
 
-4. Activations that are made by using the `slmgr /ato` command fails and return the following message:
+4. Activations that are made by using the `slmgr /ato` command fails and return the following message:
 
     > Windows is running within the non-genuine notification period. Run 'slui.exe' to go online and validate Windows.
 
@@ -64,17 +64,17 @@ For Windows editions that experience activation and "not genuine" errors that 
 |Application|Microsoft-Windows-Security-SPP|8209|Genuine state set to non-genuine (0x00000000) for application Id 55c92734-d682-4d71-983e-d6ec3f16059f|
 |Application|Microsoft-Windows-Security-SPP|8208|Acquisition of genuine ticket failed (hr=0xC004C4A2) for template Id 66c92734-d682-4d71-983e-d6ec3f16059f|
 |Application|Windows Activation Technologies|13|Genuine validation result: hrOffline = 0x00000000, hrOnline =0xC004C4A2|
-|Application|Microsoft-Windows-Security-SPP|8196|License Activation Scheduler (sppuinotify.dll) was not able to automatically activate. Error code:  0xC004F200:|
+|Application|Microsoft-Windows-Security-SPP|8196|License Activation Scheduler (sppuinotify.dll) was not able to automatically activate. Error code:  0xC004F200:|
 |||||
 
 ## Cause
 
-A recent update to the Microsoft Activation and Validation unintentionally caused a "not genuine" error on volume-licensed Windows 7 clients that had [KB971033](https://support.microsoft.com/help/971033) installed. The change was introduced at 10:00:00 UTC on January 8, 2019, and was reverted at 4:30:00 UTC on January 9, 2019.
+A recent update to the Microsoft Activation and Validation unintentionally caused a "not genuine" error on volume-licensed Windows 7 clients that had [KB971033](https://support.microsoft.com/help/971033) installed. The change was introduced at 10:00:00 UTC on January 8, 2019, and was reverted at 4:30:00 UTC on January 9, 2019.
 
 > [!NOTE]
-> This timing coincides with the release of the "1B" January 2019 updates ([KB 4480960](https://support.microsoft.com/help/4480960) and [KB 4480970](https://support.microsoft.com/help/4480970)) that were released on Tuesday, January 8, 2019. These events are not related.
+> This timing coincides with the release of the "1B" January 2019 updates ([KB 4480960](https://support.microsoft.com/help/4480960) and [KB 4480970](https://support.microsoft.com/help/4480970)) that were released on Tuesday, January 8, 2019. These events are not related.
 
-Windows 7 devices that have [KB971033](https://support.microsoft.com/help/971033) installed but did not experience this issue between the time of the change (10:00:00 UTC, January 8, 2019) and the time of the reversion of that change (4:30:00 UTC, January 9, 2019)  should not experience the issue that is described in this article.
+Windows 7 devices that have [KB971033](https://support.microsoft.com/help/971033) installed but did not experience this issue between the time of the change (10:00:00 UTC, January 8, 2019) and the time of the reversion of that change (4:30:00 UTC, January 9, 2019)  should not experience the issue that is described in this article.
 
 [KB971033](https://support.microsoft.com/help/971033) contains the following text:
 
@@ -108,7 +108,7 @@ To determine whether [KB 971033](https://support.microsoft.com/help/971033) is i
 
     If [KB 971033](https://support.microsoft.com/help/971033) is currently installed, use one of the following methods to remove the update. We recommend that you restart the system after the update is removed.
 
-- In the **Installed Updates** item in Control Panel (**Control Panel** > **Windows Update** > **View update history** > **Installed Updates**), right-click **Update for Microsoft Windows (KB971033)**, and then select **Uninstall**.
+- In the **Installed Updates** item in Control Panel (**Control Panel** > **Windows Update** > **View update history** > **Installed Updates**), right-click **Update for Microsoft Windows (KB971033)**, and then select **Uninstall**.
 
 - Run the following command in a Command Prompt window as administrator:
 
@@ -122,7 +122,7 @@ To determine whether [KB 971033](https://support.microsoft.com/help/971033) is i
     dism /online /Remove-Package /PackageName:Microsoft-Windows-Security-WindowsActivationTechnologies-Package~31bf3856ad364e35~amd64~~7.1.7600.16395
     ```  
 
-After [KB 971033](https://support.microsoft.com/help/971033) is uninstalled, or after it no longer appears as installed, rebuild the activation-related files and then reactivate the system by running the following commands in a Command Prompt window as administrator:
+After [KB 971033](https://support.microsoft.com/help/971033) is uninstalled, or after it no longer appears as installed, rebuild the activation-related files and then reactivate the system by running the following commands in a Command Prompt window as administrator:
 
 ```console
 net stop sppuinotify
@@ -155,5 +155,5 @@ The following table lists the KMS client keys for each edition of Windows 7.
 
 > [!NOTE]
 >
-> - Scripts that contain the KMS client setup key must target the corresponding operating system edition.
-> - For services that do not have [KB 971033](https://support.microsoft.com/help/971033) installed but experience the issue that is mentioned in the [Symptoms](#symptoms) section, you can also rebuild activation-related files and reactivate the system by using the script that is mentioned in the list of reactivation commands.
+> - Scripts that contain the KMS client setup key must target the corresponding operating system edition.
+> - For services that do not have [KB 971033](https://support.microsoft.com/help/971033) installed but experience the issue that is mentioned in the [Symptoms](#symptoms) section, you can also rebuild activation-related files and reactivate the system by using the script that is mentioned in the list of reactivation commands.
