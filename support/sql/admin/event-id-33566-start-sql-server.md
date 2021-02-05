@@ -14,7 +14,8 @@ _Applies to:_ &nbsp; SQL Server
 
 In Microsoft SQL Server Configuration Manager, you provision a server-side certificate and enable the encryption. However, the SQL Server service doesn't start, and you receive the following error message:
 
-> Windows could not start the SQL Server (MSSQLSERVER) on Local Computer. For more information, review the System Event Log. If this is a non-Microsoft service, contact the service vendor, and refer to service-specific error code 13.
+> `Windows could not start the SQL Server (MSSQLSERVER) on Local Computer. For more information, review the System Event Log.`  
+`If this is a non-Microsoft service, contact the service vendor, and refer to service-specific error code 13.`
 
 ## Resolution
 

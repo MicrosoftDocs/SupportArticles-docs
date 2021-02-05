@@ -16,14 +16,14 @@ If the Microsoft SQL Server service can’t find the path that's configured to c
 
 - By using the Services applet:
 
-  > `Windows could not start the SQL Server (MSSQLSERVER) service on Local Computer.`
+  > `Windows could not start the SQL Server (MSSQLSERVER) service on Local Computer.`  
   > `Error 1067: The process terminated unexpectedly.`
 
 - By using a command prompt:
 
-    > The SQL Server (MSSQLSERVER) service is starting.
-    > The SQL Server (MSSQLSERVER) service could not be started.
-    > `A service specific error occurred: 13.`
+    > The SQL Server (MSSQLSERVER) service is starting.  
+    > The SQL Server (MSSQLSERVER) service could not be started.  
+    > `A service specific error occurred: 13.`  
     > `More help is available by typing NET HELPMSG 3523.`
 
 ## Resolution

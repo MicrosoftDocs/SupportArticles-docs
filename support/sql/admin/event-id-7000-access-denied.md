@@ -31,13 +31,13 @@ When you configure the Microsoft SQL Server service to run under an account that
 
     > `Log Name:      System`  
     `Source:        Service Control Manager`  
-    `Date:          \<Datetime>`  
+    `Date:          <Datetime>`  
     `Event ID:      7000`  
     `Task Category: None`  
     `Level:         Error`  
     `Keywords:      Classic`  
     `User:          N/A`  
-    `Computer:      <Servername>`  
+    `Computer:      <Server name>`  
     `Description:
     The SQL Server (MSSQLSERVER) service failed to start due to the following error:  
     Access is denied.`
