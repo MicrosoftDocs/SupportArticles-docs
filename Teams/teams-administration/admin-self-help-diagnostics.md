@@ -73,6 +73,7 @@ The following diagnostics are currently available with brief scenario descriptio
 | Teams Live Events | Validates that a user is able to schedule Teams live events. | Diag: Teams Live Events |
 | Teams Meeting Recordings | Validates that the user is properly configured to record a meeting in Teams | Diag: Meeting Recording
 | Teams Voicemail | Validates that a user is properly configured to use Voicemail in Teams | Diag: Voicemail |
+| Teams Call Forwarding | Validates that a user is properly configured to forward calls to the specified number | Diag: Teams Call Forwarding |
 
 More diagnostics will be added at a future date.
 
