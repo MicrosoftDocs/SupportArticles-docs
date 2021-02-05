@@ -21,7 +21,7 @@ You get the following error message when trying to install the SharePoint portal
 
 ## Cause
 
-This can occur if the SQL Server database being used is the 32-bit edition. SharePoint 2010 Foundation server requires a 64-bit version of SQL Server.
+This can occur if the SQL Server database being used is the 32-bit edition. SharePoint 2010 Foundation server requires a 64-bit version of SQL Server.
 
 ## Resolution
 

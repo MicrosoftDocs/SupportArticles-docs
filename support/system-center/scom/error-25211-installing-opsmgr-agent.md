@@ -7,14 +7,14 @@ ms.reviewer: danmul, michjohn, magoedte
 ---
 # Error 25211 when you try to install the System Center Operations Manager agent
 
-This article helps you fix an issue in which you can't install Microsoft System Center Operations Manager agent on Windows Server 2008 Service Pack 2 and receive error 25211.
+This article helps you fix an issue in which you can't install Microsoft System Center Operations Manager agent on Windows Server 2008 Service Pack 2 and receive error 25211.
 
 _Original product version:_ &nbsp; System Center 2016 Operations Manager, System Center 2012 R2 Operations Manager, Microsoft System Center 2012 Operations Manager  
 _Original KB number:_ &nbsp; 4036329
 
 ## Symptoms
 
-When you try to install the System Center Operations Manager agent on Windows Server 2008 Service Pack 2, the installation fails, and you receive the following error message:
+When you try to install the System Center Operations Manager agent on Windows Server 2008 Service Pack 2, the installation fails, and you receive the following error message:
 
 > Error 25211. Failed to install performance counters.. Error Code: -2147024809 (The parameter is incorrect.).
 
@@ -28,7 +28,7 @@ Additionally, the event log displays the following event:
 > Event Source: MsiInstaller  
 > Event Category: None  
 > Event ID: 10005  
-> User:  \<USER_NAME>  
+> User:  \<USER_NAME>  
 > Computer: \<COMPUTER_NAME>  
 > Description:  
 > Product: System Center Operations Manager \<VERSION> Agent -- Error 25211.Failed to install performance counters.. Error Code: -2147024809 (The parameter is incorrect.).
@@ -43,9 +43,9 @@ This issue occurs for any of the following reasons:
 
 ## Resolution
 
-To fix this issue, try the following steps in the given order:
+To fix this issue, try the following steps in the given order:
 
-1. Install the Operations Manager agent by running the following command at an elevated command prompt:
+1. Install the Operations Manager agent by running the following command at an elevated command prompt:
 
    ```console
    msiexec.exe /i MOMAgent.msi NOAPM=1
@@ -62,7 +62,7 @@ To fix this issue, try the following steps in the given order:
    Create the indicated **Performance** keys if they don't exist, and then reinstall the Operations Manager agent.
 
    > [!NOTE]
-   > You don't have to create values for the new registry keys.
+   > You don't have to create values for the new registry keys.
 
    If the issue persists, go to step 3.
 

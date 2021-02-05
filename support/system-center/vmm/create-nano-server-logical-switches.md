@@ -38,7 +38,7 @@ So we need to create logical switch in SCVMM considering the above constraint:
 
       [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/windows-server/virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming?redirectedfrom=MSDN)
 
-      Another key difference between NIC teaming and SET is that NIC teaming provides the choice of three different teaming modes, while SET supports only **Switch Independent** mode.
+      Another key difference between NIC teaming and SET is that NIC teaming provides the choice of three different teaming modes, while SET supports only **Switch Independent** mode.
 
       ![Teaming mode is selected as Switch Independent](./media/create-nano-server-logical-switches/switch-independent.png)
 
