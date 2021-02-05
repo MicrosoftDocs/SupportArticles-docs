@@ -85,7 +85,7 @@ To resolve this issue, use one or more of the following methods:
 
   To resolve this issue, remove the subdomain from the Office 365 portal. For more info about how to remove a domain, go to the following Microsoft website:
 
-   [Remove a domain](https://docs.microsoft.com/microsoft-365/admin/get-help-with-domains/remove-a-domain?view=o365-worldwide)
+   [Remove a domain](https://docs.microsoft.com/microsoft-365/admin/get-help-with-domains/remove-a-domain)
 
   After the domain is removed, you have to re-create the domain.
 

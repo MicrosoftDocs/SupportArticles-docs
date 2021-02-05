@@ -1,5 +1,6 @@
 ---
 title: Office 2010 product key change error step by step
+description: Fixes an issue in which the previously installed version of Office 2010 prompts the user to change the product key.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
