@@ -29,7 +29,7 @@ But if you deploy the same CLR objects using `CREATE ASSEMBLY` command in SQL Se
 
 ## Cause
 
-The issue occurs when the SQL CLR objects are so large that it takes a long time to deploy them to SQL Server. The default timeout value for connections is 15 seconds and for queries is 30 seconds respectively. When deploying large assemblies, the `CREATE ASSEMBLY` statement that gets executed on the SQL Server backend may take more than 30 seconds to return resulting in the error described in the [Symptoms](#symptoms) section.
+The issue occurs when the SQL CLR objects are so large that it takes a long time to deploy them to SQL Server. The default timeout value for connections is 15 seconds and for queries is 30 seconds respectively. When deploying large assemblies, the `CREATE ASSEMBLY` statement that gets executed on the SQL Server backend may take more than 30 seconds to return resulting in the error described in the [Symptoms](#symptoms) section.
 
 ## Resolution
 
