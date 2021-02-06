@@ -12,6 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika, hikono
 ms.prod-support-area-path: DCOM service startup and permissions
 ms.technology: windows-client-application-compatibility
+adobe-target: true
 ---
 # DCOM event ID 10016 is logged in Windows
 
