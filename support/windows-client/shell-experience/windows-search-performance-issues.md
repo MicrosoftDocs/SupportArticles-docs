@@ -11,7 +11,9 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: winciccore, kaushika
 ms.prod-support-area-path: Cortana and Search
+adobe-target: true
 ms.technology: windows-client-shell-experience
+adobe-target: true
 ---
 # Troubleshoot Windows Search performance
 
