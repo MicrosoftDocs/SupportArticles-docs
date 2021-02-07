@@ -83,7 +83,7 @@ $pf_stats.Report.Failures | group failuretype | ft -a
 
 **Note:** Replace the \<Mailbox1> placeholder with the identity of the failed public folder mailbox.
 
-The last failure in migration report in PowerShell usually refers to the "MapiExceptionPermanentImportFailure" issue. When you drill down to the failure, run the following Exchange Online PowerShell command to check the associated error message to see your current message size limitation.
+The last failure in the migration report usually refers to the "MapiExceptionPermanentImportFailure" issue. When you drill down to the failure, run the following Exchange Online PowerShell command to check the associated error message to see your current message size limitation.
 
 ```powershell
 $pf_stats.Report.Failures[-1].Message
