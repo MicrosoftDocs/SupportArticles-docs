@@ -91,7 +91,7 @@ Typically, you can manage files by using the software that creates them. If you 
 
 ## Cause 5: The file name includes a reserved name in the Win32 name space
 
-If the file name includes a reserved name, such as lpt1, in the Win32 name space, you can't delete the file. To resolve this issue, use a non-Win32 program to rename the file. You can use a POSIX tool or any other tool that uses the appropriate internal syntax to use the file.
+If the file name includes a reserved name in the Win32 name space, such as lpt1, you can't delete the file. To resolve this issue, use a non-Win32 program to rename the file. You can use a POSIX tool or any other tool that uses the appropriate internal syntax to use the file.
 
 Additionally, you can use some built-in commands to bypass the typical Win32 reserved name checks if you use a particular syntax to specify the path of the file.
 
@@ -107,7 +107,7 @@ You can't delete a file if the file name includes an invalid name. For example, 
 del "\\?\c:\<path_to_file_that contains a trailing space.txt>"
 ```
 
-The cause of this issue is similar to [Cause 4](#cause-4-files-exist-in-paths-that-are-deeper-than-max_path-characters). If you use typical Win32 syntax to open a file that has trailing spaces or trailing periods in its name, the trailing spaces or periods are stripped before the actual file is opened. For example, if you have two files in the same folder named *AFile.txt* and *AFile.txt* (note the space after the file name). If you try to open the second file by using standard Win32 calls, you open the first file instead. Similarly, if you have a file whose name is just a space character and you try to open it by using standard Win32 calls, you open the file's parent folder instead. In this situation, if you try to change security settings on these files, you either may not be able to do so, or you may unexpectedly change the settings on different files. If this behavior occurs, you may think that you have permission to a file that actually has a restrictive ACL.
+The cause of this issue is similar to [Cause 4](#cause-4-files-exist-in-paths-that-are-deeper-than-max_path-characters). If you use typical Win32 syntax to open a file that has trailing spaces or trailing periods in its name, the trailing spaces or periods are stripped before the actual file is opened. For example, you have two files in the same folder named *`AFile.txt`* and *`AFile.txt `*, note the space after the file name. If you try to open the second file by using standard Win32 calls, you open the first file instead. Similarly, if you have a file whose name is just a space character and you try to open it by using standard Win32 calls, you open the file's parent folder instead. In this situation, if you try to change security settings on these files, you either may not be able to do so, or you may unexpectedly change the settings on different files. If this behavior occurs, you may think that you have permission to a file that actually has a restrictive ACL.
 
 ## Combinations of causes
 
