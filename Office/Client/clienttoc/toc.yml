@@ -715,8 +715,6 @@
           href: ../office-suite-issues/office-temporary-files-not-delete.md
         - name: Document Information Panel is deprecated
           href: ../office-suite-issues/document-information-panel-deprecate.md
-        - name: Edit OLE document property with Dsofile.dll
-          href: ../office-suite-issues/dsofile.dll-allow-edit-document-property.md
         - name: Enable Office 2010 to run on a terminal server
           href: ../office-suite-issues/office-pro-plus-2010-terminal-server.md
         - name: Error 25090 with an Office application
