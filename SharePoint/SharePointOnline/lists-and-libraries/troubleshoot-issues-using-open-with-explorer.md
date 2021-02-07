@@ -24,7 +24,6 @@ ms.custom:
 
 This article discusses how to troubleshoot issues that you may experience when you use the "Open with Explorer" command in SharePoint Online.
 
-
 > [!NOTE]
 > The Open with Explorer command doesn't work in the Microsoft Edge browser, Google Chrome, Mozilla Firefox, or on the Mac platform. Open with Explorer only works with Internet Explorer. However, beginning August 17th, 2021, [Microsoft 365 apps will not longer support Internet Explorer 11](https://docs.microsoft.com/lifecycle/announcements/m365-ie11-microsoft-edge-legacy). 
 
@@ -39,7 +38,7 @@ When you browse to a SharePoint Online document library, you may receive intermi
 
 - **Your client does not support opening this list with Windows Explorer.**
 - **We're having a problem opening this location in File Explorer. Add this web site to your Trusted Sites list and try again.**
-- **We're having a problem opening this location in File Explorer. To open with File Explorer, you'll need to add this site to your Trusted Sites list and select the "Keep me signed in" check box when you sign in to the SharePoint Online site. For more information, see https://support.microsoft.com/kb/2629108.**
+- **We're having a problem opening this location in File Explorer. To open with File Explorer, you'll need to add this site to your Trusted Sites list and select the "Keep me signed in" check box when you sign in to the SharePoint Online site. For more information, see [https://support.microsoft.com/kb/2629108](/sharepoint/troubleshoot/lists-and-libraries/troubleshoot-issues-using-open-with-explorer).**
 - **We're having trouble opening this library in File Explorer. Syncing this library will give you a better experience.**
 
   ![We're having trouble opening this library in File Explorer error message](./media/troubleshoot-issues-using-open-with-explorer/error.png)
