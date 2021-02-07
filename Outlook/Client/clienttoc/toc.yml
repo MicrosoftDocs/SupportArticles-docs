@@ -31,8 +31,6 @@
       href: ../authentication/you-dont-have-permission-to-create-an-entry-in-this-folder-error.md
   - name: Calendaring
     items:
-    - name: Access Denied changing shared calendar permissions
-      href: ../calendaring/access-denied-change-shared-calendar-permissions.md
     - name: Attached Outlook items not retained
       href: ../calendaring/attached-outlook-items-not-retained.md
     - name: Calendar item body disappears in Outlook online mode
