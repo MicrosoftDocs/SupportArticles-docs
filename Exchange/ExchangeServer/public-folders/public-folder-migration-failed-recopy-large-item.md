@@ -89,7 +89,7 @@ The last failure in the migration report usually refers to the "MapiExceptionPer
 $pf_stats.Report.Failures[-1].Message
 ```
 
-The error message shows as follows:
+For example, the error message shows as follows:
 
 > Message           : MapiExceptionPermanentImportFailure: Data import failed (hr=0x80004005, ec=0)  
                      --> Cannot save changes made to an item to store. --> MapiExceptionMaxSubmissionExceeded: Unable to save changes. (hr=0x80004005, ec=1242)  
