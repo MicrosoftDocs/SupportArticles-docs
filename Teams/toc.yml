@@ -99,6 +99,8 @@
     items:
     - name: '"File is locked" or "item might not exist" error'
       href: ./files/cannot-upload-files-or-access-onedrive.md
+    - name: "\"The object specified does not belong to a list\" error"
+      href: ./files/object-specified-not-belong-to-list.md
     - name: Can't open files in a chat window
       href: ./known-issues/do-not-have-access-to-this-file-teams.md
     - name: Downloaded documents open in protected view
