@@ -12,6 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: TCP/IP communications
 ms.technology: networking
+adobe-target: true
 ---
 # Service overview and network port requirements for Windows
 

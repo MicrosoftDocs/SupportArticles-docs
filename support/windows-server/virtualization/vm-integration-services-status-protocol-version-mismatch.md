@@ -33,7 +33,7 @@ This is expected behavior that can be safely ignored.
 
 ## More Information
 
-Windows Server 2016, Windows Server 2019, and Windows 10 include an updated Hyper-V Time Sync service and a new VMIC channel handshake or protocol that is intentionally not backported to previous operating system releases.
+Windows Server 2016, Windows Server 2019, and Windows 10 include an updated Hyper-V Time Sync service and a new VMIC channel handshake or protocol that is intentionally not backported to previous operating system releases.
 
 In the reported issue, the down-level guest is behaving correctly. The secondary status that is reported through WMI or Windows PowerShell includes an error string that sounds alarming but that you can safely ignore.
 

@@ -21,7 +21,7 @@ The following screenshot shows an example **Discovered apps** list.
 
 ## More information
 
-This is expected behavior. What seem to be personal apps are actually system apps and services that are duplicated in the work profile. To view these apps on the Android Enterprise work profile device, tap **Settings** > **Work Profile** > **Apps**. Work apps are indicated by a briefcase icon.
+This is expected behavior. What seem to be personal apps are actually system apps and services that are duplicated in the work profile. To view these apps on the Android Enterprise work profile device, tap **Settings** > **Work Profile** > **Apps**. Work apps are indicated by a briefcase icon.
 
 :::image type="content" source="media/discovered-apps-list-personal-apps/work-apps.png" alt-text="screenshot of Work apps":::
 

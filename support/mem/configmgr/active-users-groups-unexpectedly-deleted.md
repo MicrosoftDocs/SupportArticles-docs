@@ -13,23 +13,23 @@ _Original KB number:_ &nbsp; 4537087
 
 ## Symptoms
 
-In a Configuration Manager current branch, version 1910, 1906, or 1902 environment, you use Active Directory User Discovery and Active Directory Group Discovery to discover users and groups. You also set up the **Delete Aged Discovery Data** task to delete aged discovery data.
+In a Configuration Manager current branch, version 1910, 1906, or 1902 environment, you use Active Directory User Discovery and Active Directory Group Discovery to discover users and groups. You also set up the **Delete Aged Discovery Data** task to delete aged discovery data.
 
 In this scenario, some active users and groups are unexpectedly deleted by the **Delete Aged Discovery Data** task.
 
 ## Cause
 
-The **Delete Aged Discovery Data** task uses the `sp_GetAgedDiscoveryItems` stored procedure to identify aged items. Active users and groups that aren't changed within the indicated time in the task are considered to be inactive. Therefore, the task deletes the items.
+The **Delete Aged Discovery Data** task uses the `sp_GetAgedDiscoveryItems` stored procedure to identify aged items. Active users and groups that aren't changed within the indicated time in the task are considered to be inactive. Therefore, the task deletes the items.
 
 ## Resolution
 
 ### For Configuration Manager current branch, version 1910
 
-This problem is fixed if you update to the globally available release of [Configuration Manager current branch version 1910](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1910) from [Update for Microsoft Endpoint Configuration Manager version 1910, early update ring](https://support.microsoft.com/help/4535819/). Otherwise, follow [The Delete Aged Discovery Data task incorrectly removes active records in Configuration Manager](https://support.microsoft.com/help/4537369) to fix the problem.
+This problem is fixed if you update to the globally available release of [Configuration Manager current branch version 1910](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1910) from [Update for Microsoft Endpoint Configuration Manager version 1910, early update ring](https://support.microsoft.com/help/4535819/). Otherwise, follow [The Delete Aged Discovery Data task incorrectly removes active records in Configuration Manager](https://support.microsoft.com/help/4537369) to fix the problem.
 
-### For Configuration Manager current branch, version 1906 and 1902
+### For Configuration Manager current branch, version 1906 and 1902
 
-To fix this problem, run the following TSQL query against the site database on the central administration site and primary sites.
+To fix this problem, run the following TSQL query against the site database on the central administration site and primary sites.
 
 > [!NOTE]
 > Before you run the TSQL query in your production environment, we recommend that you test it in a test environment and back up your site databases.

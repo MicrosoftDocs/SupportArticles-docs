@@ -130,10 +130,10 @@ If you are using SSL, verify the following settings:
 
 ## Synchronization fails due to issues with the EULA
 
-Synchronization issues can often be traced back to issues relating to the End User Licensing Agreement (EULA). To verify whether this is your issue, follow these steps:
+Synchronization issues can often be traced back to issues relating to the End User Licensing Agreement (EULA). To verify whether this is your issue, follow these steps:
 
 1. Review the SoftwareDistribution.log file on the WSUS server to find out why the EULAs are not getting downloaded. Look for *.txt* in the log to find relevant entries.
-2. Verify that the firewall is configured to allow communication with Microsoft Update. For more information, see [Connection from the WSUS server to the Internet](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#211-connection-from-the-wsus-server-to-the-internet).
+2. Verify that the firewall is configured to allow communication with Microsoft Update. For more information, see [Connection from the WSUS server to the Internet](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#211-connection-from-the-wsus-server-to-the-internet).
 3. Verify the [proxy server settings](software-update-point-installation-configuration.md#configure-proxy-setting-for-the-software-update-point).
 4. Run the following command from a Command Prompt to have WSUS download the missing content again, including EULAs:
 
@@ -141,7 +141,7 @@ Synchronization issues can often be traced back to issues relating to the End U
 
 ## Synchronization fails due to errors communicating with Microsoft Update
 
-When this issue occurs, you usually receive the following errors:
+When this issue occurs, you usually receive the following errors:
 
 > A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
 >
@@ -150,7 +150,7 @@ When this issue occurs, you usually receive the following errors:
 To troubleshoot this issue, follow these steps:
 
 1. Verify that the WSUS server can connect to the Internet.
-2. Verify that the firewall is configured to allow communication with Microsoft Update. For more information, see [Connection from the WSUS server to the Internet](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#211-connection-from-the-wsus-server-to-the-internet).
+2. Verify that the firewall is configured to allow communication with Microsoft Update. For more information, see [Connection from the WSUS server to the Internet](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#211-connection-from-the-wsus-server-to-the-internet).
 3. Verify the [proxy server settings](software-update-point-installation-configuration.md#configure-proxy-setting-for-the-software-update-point).
 
 ## WSUS Control Manager reports an error

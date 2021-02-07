@@ -15,22 +15,22 @@ _Original KB number:_ &nbsp; 4488257
 
 ## Symptoms
 
-When you run Microsoft R Server 9.0, 9.1, 9.2, 9.3.x, or Microsoft Machine Learning Server as part of Microsoft SQL Server 2017, you experience inconsistent results in Intel Math Kernel Library (MKL) computations. This issue occurs because of a missing **MKL_CBWR** environment variable.
+When you run Microsoft R Server 9.0, 9.1, 9.2, 9.3.x, or Microsoft Machine Learning Server as part of Microsoft SQL Server 2017, you experience inconsistent results in Intel Math Kernel Library (MKL) computations. This issue occurs because of a missing **MKL_CBWR** environment variable.
 
 ## Cause
 
-This issue occurs because a new feature was added to the Intel MKL library that's included together with Microsoft R Server and SQL Server 2017. For more information about this feature, see [Introduction to Conditional Numerical Reproducibility (CNR)](https://software.intel.com/content/www/us/en/develop/articles/introduction-to-the-conditional-numerical-reproducibility-cnr.html)
+This issue occurs because a new feature was added to the Intel MKL library that's included together with Microsoft R Server and SQL Server 2017. For more information about this feature, see [Introduction to Conditional Numerical Reproducibility (CNR)](https://software.intel.com/content/www/us/en/develop/articles/introduction-to-the-conditional-numerical-reproducibility-cnr.html)
 
 ## Resolution
 
-To fix this issue, configure conditional numeric reproducibility in Microsoft R Server or Machine Learning Server by setting the **MKL_CBWR=AUTO** system environment variable. To do this, follow these steps:
+To fix this issue, configure conditional numeric reproducibility in Microsoft R Server or Machine Learning Server by setting the **MKL_CBWR=AUTO** system environment variable. To do this, follow these steps:
 
 1. In Control Panel, select **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
 
 2. Create a new User or System variable, and specify the following values:
 
    - Set the variable name to **MKL_CBWR**.
-   - Set the variable value to **AUTO**.
+   - Set the variable value to **AUTO**.
 
 3. Restart Microsoft R Server.
 
@@ -38,7 +38,7 @@ To fix this issue, configure conditional numeric reproducibility in Microsoft R 
 
 Microsoft has confirmed that this is a problem in the Microsoft products.
 
-In future versions of Microsoft R Server, the **MKL_CBWR=AUTO** setting will be the default setting.
+In future versions of Microsoft R Server, the **MKL_CBWR=AUTO** setting will be the default setting.
 
 ## References
 

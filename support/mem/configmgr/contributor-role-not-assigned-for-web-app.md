@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4483868
 
 ## Summary
 
-Starting in Configuration Manager current branch version 1810, [the classic service deployment in Azure is deprecated](/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). When you create a cloud management gateway (CMG) by using the Azure Resource Manager (ARM) deployment type, **Contributor** role assignment is limited to resource groups when the service is deployed. **Contributor** role at the subscription level is no longer assigned for the web application. The web application will have only **Read** permission at the subscription level.
+Starting in Configuration Manager current branch version 1810, [the classic service deployment in Azure is deprecated](/mem/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). When you create a cloud management gateway (CMG) by using the Azure Resource Manager (ARM) deployment type, **Contributor** role assignment is limited to resource groups when the service is deployed. **Contributor** role at the subscription level is no longer assigned for the web application. The web application will have only **Read** permission at the subscription level.
 
 ## More information
 

@@ -192,4 +192,5 @@ Source Microsoft OLE DB Provider for ODBC Drivers
 
 ## References
 
-For more information, see [Microsoft ActiveX Data Objects (ADO)](/sql/ado/microsoft-activex-data-objects-ado).
+- [Microsoft ActiveX Data Objects (ADO)](/sql/ado/microsoft-activex-data-objects-ado)
+- [Using a Connection Object](/sql/ado/guide/data/using-a-connection-object)

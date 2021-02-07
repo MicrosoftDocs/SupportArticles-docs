@@ -19,7 +19,7 @@ After you upgrade to Configuration Manager current branch version 1806, the **En
 > Initialized COM OSDBitLocker  
 > Command line for extension .exe is "%1" %* OSDBitLocker  
 > Set command line: "OSDBitLocker.exe" /enable /wait:False /mode:TPM /pwd:AD /full:False  
-> FALSE, HRESULT=80070057 (..\main.cpp,238) OSDBitLocker  3580 (0x0DFC)  
+> FALSE, HRESULT=80070057 (..\main.cpp,238) OSDBitLocker  3580 (0x0DFC)  
 > Invalid command line argument '/full' OSDBitLocker 3580 (0x0DFC)  
 > ProcessCommandLine( argInfo ), HRESULT=80070057 (..\main.cpp,366) OSDBitLocker 3580 (0x0DFC)  
 > Process completed with exit code 2147942487 TSManager 3364 (0x0D24)

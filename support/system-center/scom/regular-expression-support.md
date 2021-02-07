@@ -1,28 +1,28 @@
 ---
 title: Regular expression support in Operations Manager
-description: This article describes regular expression matching in discoveries and groups when you author management packs in System Center Operations Manager.
+description: This article describes regular expression matching in discoveries and groups when you author management packs in System Center Operations Manager.
 ms.date: 06/22/2020
 ms.prod-support-area-path:
 ---
 # Regular expression support in System Center Operations Manager
 
-When you author management packs, you may have to include regular expression matching in discoveries and groups. Regular expressions may also be necessary for pattern matching in expression criteria in monitors and rules.
+When you author management packs, you may have to include regular expression matching in discoveries and groups. Regular expressions may also be necessary for pattern matching in expression criteria in monitors and rules.
 
 _Original product version:_ &nbsp; System Center Operations Manager  
 _Original KB number:_ &nbsp; 2702651
 
-Operations Manager supports two different types of regular expressions. You must know which element you are working in to be able to choose the correct expression. Group membership calculation and expression filters use distinctly different syntaxes for pattern matching.
+Operations Manager supports two different types of regular expressions. You must know which element you are working in to be able to choose the correct expression. Group membership calculation and expression filters use distinctly different syntaxes for pattern matching.
 
 ## Group calculation
 
-Group calculation uses `PERL` regular expression syntax. By default, the matching is case-insensitive, however you can specify that an expression must be case-sensitive by using a special attribute in the XML. For more information, see [SimpleCriteriaType](/previous-versions/system-center/developer/hh135104(v=msdn.10)?redirectedfrom=MSDN).
+Group calculation uses `PERL` regular expression syntax. By default, the matching is case-insensitive, however you can specify that an expression must be case-sensitive by using a special attribute in the XML. For more information, see [SimpleCriteriaType](/previous-versions/system-center/developer/hh135104(v=msdn.10)?redirectedfrom=MSDN).
 
 Group calculation is found in your management pack (MP) whenever you use the `Group Calc` module. The `GroupCalc` expression uses the `MatchesRegularExpression` operator to create dynamic group membership based on pattern matching expressions. The implementation of this operator passes the expression that is found in the MP XML to the `dbo.fn_MatchesRegularExpression` SQL call name. If this call returns a value of **0**, the match is false. If it returns a value of **1**, the match is true.
 
 > [!NOTE]
 > The `dbo.fn_MatchesRegularExpression` SQL call name itself is case-sensitive, so the `MatchesRegularExpression` operator used in dynamic group membership criteria will be case-sensitive as well.
 
-GroupCalc also supports two special subelements that make abstract expressions of the following common regex style queries.
+GroupCalc also supports two special subelements that make abstract expressions of the following common regex style queries.
 
 ### GroupCalc special functions
 
@@ -83,11 +83,11 @@ GroupCalc also supports two special subelements that make abstract expressions 
 </table>
 
 > [!NOTE]
-> If either of these two special operators are used, the evaluation is always case-sensitive.
+> If either of these two special operators are used, the evaluation is always case-sensitive.
 
 ## Expression filter matching criteria
 
-Expression filters that are used in management packs use .NET Framework regex expression syntax. Not all expressions work. However, the following .NET Framework regular expression syntax elements are supported. Expression filters exist in your management pack when you use the Expression Eval module.
+Expression filters that are used in management packs use .NET Framework regex expression syntax. Not all expressions work. However, the following .NET Framework regular expression syntax elements are supported. Expression filters exist in your management pack when you use the Expression Eval module.
 
 ### Operations Manager regex syntax
 
@@ -113,7 +113,7 @@ Expression filters that are used in management packs use .NET Framework regex ex
 
 ## Regular expressions via SDK
 
-The Operations Manager SDK has a **Matches** criteria operator for filtering objects. This operator uses the same functionality as `MatchesCriteria` in the GroupCalc case mentioned earlier.
+The Operations Manager SDK has a **Matches** criteria operator for filtering objects. This operator uses the same functionality as `MatchesCriteria` in the GroupCalc case mentioned earlier.
 
 When you use the SDK to construct a criteria expression to find objects in the Operations Manager database, the following syntax elements are valid and useful:
 

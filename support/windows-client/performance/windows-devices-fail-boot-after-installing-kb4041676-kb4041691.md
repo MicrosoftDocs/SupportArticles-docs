@@ -26,7 +26,7 @@ Microsoft is aware of a publishing issue with the October 10, 2017 monthly secur
 
 We have corrected the publishing issue as of the afternoon of October 10 and have validated the cumulative security updates. We recommend all customers take these cumulative security updates.
 
-We have reports of the following symptoms impacting Windows Server Update Services (WSUS) and System Center Configuration Manager (SCCM) customers. Mitigation plans for the following user reported scenarios can be found below.
+We have reports of the following symptoms impacting Windows Server Update Services (WSUS) and System Center Configuration Manager (SCCM) customers. Mitigation plans for the following user reported scenarios can be found below.
 
 1. WSUS/SCCM Administrators that synced the October 10 update (KB4041676 or KB4041691) before 4pm PDT October 10 may still have these KBs cached.
 2. WSUS/SCCM managed devices that downloaded the October 10 KB4041676 or KB4041691 update with publishing issues and have devices in a pending reboot state.
@@ -34,7 +34,7 @@ We have reports of the following symptoms impacting Windows Server Update Servic
 
 ## Issue details  
 
-### Scenario 1
+### Scenario 1
 
 WSUS/SCCM Administrators that synced the Delta Package versions of KB4041676 or KB4041691 before 4pm PDT October 10 may still have these KBs cached.
 
@@ -42,7 +42,7 @@ WSUS/SCCM Administrators that synced the Delta Package versions of KB4041676 or 
 
 WSUS/SCCM administrators should rescan for updates to automatically resolve the publishing issue. The issue is already resolved in WSUS hierarchies that have scanned since 4PM on October 10. Ensure your upstream and downstream servers are in sync.
 
-### Scenario 2
+### Scenario 2
 
 WSUS/SCCM managed devices that have downloaded and staged the Delta Package versions of KB4041676 or KB4041691 but have not rebooted to install.
 
@@ -88,7 +88,7 @@ dism /online /remove-package /PackageName:Package_for_RollupFix_Wrapper~31bf3856
 dism /online /remove-package /PackageName:Package_for_RollupFix_Wrapper~31bf3856ad364e35~x86~~14393.1770.1.6 /norestart >NUL 2>&1
 ```  
 
-### Scenario 3
+### Scenario 3
 
 WSUS/SCCM managed devices that installed the Delta Package versions of KB4041676 or KB4041691 and are unable to boot and/or see a recovery screen
 

@@ -9,6 +9,9 @@ ms.prod: sql
 
 This article helps you resolve various connectivity issues to SQL server.
 
+> [!NOTE]
+> For a guided walk through experience of this article, see [Solving Connectivity errors to SQL Server](https://support.microsoft.com/sbs/topic/ae23c94b-b64b-5056-8b62-22e1694bb889).
+
 _Original product version:_ &nbsp; Microsoft SQL Server  
 _Original KB number:_ &nbsp; 4009936
 

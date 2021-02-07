@@ -31,10 +31,10 @@ System Center 2012 R2 Service Manager update rollups are cumulative. The latest 
 |7.5.3079.315| [3009517](https://support.microsoft.com/help/3009517)|Update Rollup 5 for System Center 2012 R2 Service Manager|
 |7.5.3079.367| [3039363](https://support.microsoft.com/help/3039363)|Update Rollup 6 for System Center 2012 R2 Service Manager <br/><br/>**Note** You must install SCSM2012R2_OD_KB3064088_AMD64_7.5.3079.402.exe on your primary management server after you deploy this update.|
 |7.5.3079.402| [3039363](https://support.microsoft.com/help/3039363)|Hotfix for Update Rollup 6 for System Center 2012 R2 Service Manager <br/><br/> **Note** Don't install if you didn't install version 7.5.3079.367.|
-|7.5.3079.442| [3063263](https://support.microsoft.com/help/3063263)|Update Rollup 7 for System Center 2012 R2 Service Manager <br/><br/> **Note** You must install SCSM2012R2_OD_KB3099983_AMD64_7.5.3079.504.exe on your primary management server after you deploy this update.|
+|7.5.3079.442| [3063263](https://support.microsoft.com/help/3063263)|Update Rollup 7 for System Center 2012 R2 Service Manager <br/><br/> **Note** You must install SCSM2012R2_OD_KB3099983_AMD64_7.5.3079.504.exe on your primary management server after you deploy this update.|
 |7.5.3079.504| [3063263](https://support.microsoft.com/help/3063263)|Hotfix for Update Rollup 7 for System Center 2012 R2 Service Manager <br/><br/> **Note** Don't install if you didn't install version 7.5.3079.442.|
-|7.5.3079.571| [3129780](https://support.microsoft.com/help/3129780)|Update Rollup 9 for System Center 2012 R2 Service Manager <br/><br/> **Note** This version was withdrawn and replaced by 7.5.3079.607.|
-|7.5.3079.601| [3129780](https://support.microsoft.com/help/3129780)|Rerelease of Update Rollup 9 for System Center 2012 R2 Service Manager <br/><br/> **Note** This version was withdrawn and replaced by 7.5.3079.607.|
+|7.5.3079.571| [3129780](https://support.microsoft.com/help/3129780)|Update Rollup 9 for System Center 2012 R2 Service Manager <br/><br/> **Note** This version was withdrawn and replaced by 7.5.3079.607.|
+|7.5.3079.601| [3129780](https://support.microsoft.com/help/3129780)|Rerelease of Update Rollup 9 for System Center 2012 R2 Service Manager <br/><br/> **Note** This version was withdrawn and replaced by 7.5.3079.607.|
 |7.5.3079.607| [3129780](https://support.microsoft.com/help/3129780)|Supported release of Update Rollup 9 for System Center 2012 R2 Service Manager|
 ||||
 
