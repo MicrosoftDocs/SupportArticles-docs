@@ -86,7 +86,7 @@ DN paths for partitions where the error in the [Symptoms](#symptoms) section may
 ## Resolution
 
 > [!NOTE]
-> When the infrastructure master is assigned to a deleted NTDSA on a DNS application partition, like DomainDNSZones, it may also be missing for ForestDNSZones partition or vice versa. We recommends that you verify that the for both the DomainDNSZones and ForestDNSZones partitions assigned to live Windows Server 2003 or later domain controllers hosting the DNS Server role and partition in question.
+> When the infrastructure master is assigned to a deleted NTDSA on a DNS application partition, like DomainDNSZones, it may also be missing for ForestDNSZones partition or vice versa. We recommend that you verify that the for both the DomainDNSZones and ForestDNSZones partitions assigned to live Windows Server 2003 or later domain controllers hosting the DNS Server role and partition in question.
 
 To resolve this issue, use one of the following methods:
 

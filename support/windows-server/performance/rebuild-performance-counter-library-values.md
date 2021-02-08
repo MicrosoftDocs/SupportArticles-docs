@@ -106,7 +106,7 @@ Windows Server rebuilds all the counters because it reads all the .ini files in 
 
 If you continue to have problems when you start a .NET Framework application after you perform the procedures that are listed here, you may have to rebuild the Performance counters for the custom .NET Framework application. To do so, use the `/i` option in the .NET Framework Installer Tool (Installutil.exe). You must know the file names of the DLL files that create the performance counters.
 
-If you follow these procedures and remove the counters from the registry for all services installed on a system that has Microsoft System Center Operations Manager 2007 installed, you might have a broken Management Server. The counters for the Config Service, SDK Service, and Database Write modules aren't provided in the form of extensible counters in INI files. Instead, they are registered at the time of installation. So, when you try to start System Center Operations Manager 2007, you may receive an error message similar the following example because the performance counters are missing:
+If you follow these procedures and remove the counters from the registry for all services installed on a system that has Microsoft System Center Operations Manager 2007 installed, you might have a broken Management Server. The counters for the Config Service, SDK Service, and Database Write modules aren't provided in the form of extensible counters in INI files. Instead, they are registered at the time of installation. So, when you try to start System Center Operations Manager 2007, you may receive an error message similar to the following example because the performance counters are missing:
 
 > Event Type: Error  
 > Event Source: OpsMgr SDK Service  
