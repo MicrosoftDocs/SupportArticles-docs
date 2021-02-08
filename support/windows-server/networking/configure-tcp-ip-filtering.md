@@ -93,5 +93,3 @@ TCP/IP Filtering can filter only inbound traffic. This feature doesn't affect ou
 ## References
 
 For more information about TCP and UDP port numbers, see [Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).
-
-For more information about IPSec Policies, see [How To Configure IPSec Tunneling in Windows Server 2003](https://support.microsoft.com/help/816514).

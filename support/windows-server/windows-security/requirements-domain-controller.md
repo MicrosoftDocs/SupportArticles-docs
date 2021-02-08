@@ -164,5 +164,3 @@ Signature Algorithm:
 ## How to determine the domain controller GUID
 
 Start Ldp.exe and locate the domain-naming context. Double-click the name of the domain controller that you want to view. The list of attributes for that object contains "Object GUID" followed by a long number. The number is the GUID for that object.
-
-For more information about object identifiers, see [PKI: Object IDs associated with Microsoft cryptography](https://support.microsoft.com/help/287547).
