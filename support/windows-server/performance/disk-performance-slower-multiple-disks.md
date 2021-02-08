@@ -89,10 +89,6 @@ To align a disk partition on a RAID that has a 2,048-sector offset, follow these
     > [!NOTE]
     > This sample procedure is for a single partition per RAID group.
 
-For more information about multi-partition alignment per RAID group, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[923076](https://support.microsoft.com/help/923076) An updated version of the Disk Partition tool for Windows Server 2003 is available  
-
 ## More information
 
 To verify that an existing partition is aligned, divide the size of the stripe unit by the starting offset of the RAID disk group. Use the following syntax:  

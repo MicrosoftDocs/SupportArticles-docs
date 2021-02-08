@@ -51,6 +51,4 @@ To remove the incorrectly labeled mapped drive, follow these steps:
 
 ## More information
 
-For more information about similar problems on Windows-based computers, see [You may experience various problems when you work with files over the network on a Windows Server 2003-based or Windows 2000 Server-based computer](https://support.microsoft.com/help/923360).
-
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 830473
 
 ## More information
 
-The maximum length of the string that you can use at the command prompt is 2047 characters.
+The maximum length of the string that you can use at the command prompt is 8191 characters.
 
 This limitation applies to the command line, individual environment variables (such as the PATH variable) that are inherited by other processes, and all environment variable expansions. If you use Command Prompt to run batch files, this limitation also applies to batch file processing.
 
@@ -30,13 +30,13 @@ This limitation applies to the command line, individual environment variables (s
 
 The following list gives you some examples of how this limitation applies to commands that you run in Command Prompt and commands that you use in a batch file.
 
-- In Command Prompt, the total length of the following command line that you use at the command prompt cannot contain more than 2047 characters (as appropriate to your operating system):
+- In Command Prompt, the total length of the following command line that you use at the command prompt cannot contain more than 8191 characters (as appropriate to your operating system):
 
   ```console
   cmd.exe /k ExecutableFile.exe parameter1, parameter2... parameterN
   ```
 
-- In a batch file, the total length of the following command line that you use in the batch file cannot contain more than 2047 characters (as appropriate to your operating system):
+- In a batch file, the total length of the following command line that you use in the batch file cannot contain more than 8191 characters (as appropriate to your operating system):
 
   ```console
   cmd.exe /k ExecutableFile.exe parameter1, parameter2... parameterN
@@ -44,19 +44,19 @@ The following list gives you some examples of how this limitation applies to com
 
   This limitation applies to command lines that are contained in batch files when you use Command Prompt to run the batch file.
 
-- In Command Prompt, the total length of `EnvironmentVariable1` after you expand `EnvironmentVariable2` and `EnvironmentVariable3` cannot contain more than 2047 characters (as appropriate to your operating system):
+- In Command Prompt, the total length of `EnvironmentVariable1` after you expand `EnvironmentVariable2` and `EnvironmentVariable3` cannot contain more than 8191 characters (as appropriate to your operating system):
 
   ```console
   c:> set EnvironmentVariable1 = EnvironmentVariable2 EnvironmentVariable3
   ```
 
-- In a batch file, the total length of the following command line after you expand the environment variables in the command line cannot contain more than 2047 characters (as appropriate to your operating system):
+- In a batch file, the total length of the following command line after you expand the environment variables in the command line cannot contain more than 8191 characters (as appropriate to your operating system):
 
   ```console
   ExecutableFile.exe parameter1 parameter2
   ```
 
-- Even though the Win32 limitation for environment variables is 32,767 characters, Command Prompt ignores any environment variables that are inherited from the parent process and are longer than its own limitations of 2047 characters (as appropriate to the operating system). For more information about the `SetEnvironmentVariable` function, see [SetEnvironmentVariableA function](/windows/win32/api/processenv/nf-processenv-setenvironmentvariablea).
+- Even though the Win32 limitation for environment variables is 32,767 characters, Command Prompt ignores any environment variables that are inherited from the parent process and are longer than its own limitations of 8191 characters (as appropriate to the operating system). For more information about the `SetEnvironmentVariable` function, see [SetEnvironmentVariableA function](/windows/win32/api/processenv/nf-processenv-setenvironmentvariablea).
 
 ## How to work around the limitation
 
@@ -70,9 +70,9 @@ To work around the limitation, use one or more of the following methods (as appr
   ExecutableFile.exe c:\temp\ParameterFile.txt
   ```
 
-- Modify programs that use large environment variables so that the environment variables contain less than 2047 characters (as appropriate to your operating system).
+- Modify programs that use large environment variables so that the environment variables contain less than 8191 characters (as appropriate to your operating system).
 
-  For example, if the PATH environment variable contains more than 2047 characters (as appropriate to your operating system), use one or more of the following methods to reduce the number of characters:
+  For example, if the PATH environment variable contains more than 8191 characters (as appropriate to your operating system), use one or more of the following methods to reduce the number of characters:
 
   - Use shorter names for folders and files.
   - Reduce the depth of folder trees.
