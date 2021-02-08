@@ -16,18 +16,18 @@ ms.technology: windows-server-active-directory
 
 # DCPROMO answer file syntax for unattended promotion and demotion of domain controllers, Windows Server 2003 version
 
-This article describes the parameters and options that are used in the answer file to install and remove Active Directory Domain Services (AD DS) on domain controllers.
+This article describes the parameters and options that are used in the DCPROMO answer file to install and remove Active Directory Domain Services (AD DS) on domain controllers.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;947034
 
 ## Summary
 
-This article describes the syntax that you use to build answer files to perform unattended installations of Active Directory Domain Services on Windows Server 2008-based domain controllers. You can also use the answer files to remove AD DS in unattended mode.
+This article describes the syntax that you use to build answer files to perform unattended installations of AD DS on Windows Server 2008-based domain controllers. You can also use the answer files to remove AD DS in unattended mode.
 
 ## Introduction
 
-The Dcpromo.exe program (DCPROMO) was introduced in Windows 2000 Server to provide a GUI method of promoting and demoting Active Directory domain controllers. Administrators can use DCPROMO answer files to perform following unattended tasks:
+The Dcpromo.exe program (DCPROMO) was introduced in Microsoft Windows 2000 Server to provide a GUI method of promoting and demoting Active Directory domain controllers. Administrators can use DCPROMO answer files to do the following unattended tasks:
 
 - Promote workgroup and member servers to Active Directory domain controllers.
 - Upgrade Microsoft Windows NT 4.0 domain controllers to Active Directory domain controllers.
@@ -48,18 +48,18 @@ Windows Server 2012 replaced DCPROMO with PowerShell cmdlets. However, the Windo
 
 The DCPROMO answer file is an ASCII text file that provides automated user input for each page of the DCPROMO wizard.
 
-Subtle differences exist between the DCPROMO answer file syntax in Windows 2000 Server and in Microsoft Windows Server 2003. Despite these differences, Windows Server 2003 can read the Windows 2000 Server answer file syntax and interpret equivalent settings. However, the Windows Server 2003 answer file syntax may not work correctly on a Windows 2000 Server domain controller. For example, Windows 2000 Server cannot use the `RemoveApplicationPartitions` and `ConfirmGc` options.
+Subtle differences exist between the DCPROMO answer file syntax in Windows 2000 Server and in Windows Server 2003. Despite these differences, Windows Server 2003 can read the Windows 2000 Server answer file syntax and interpret equivalent settings. However, the Windows Server 2003 answer file syntax may not work correctly on a Windows 2000 Server domain controller. For example, Windows 2000 Server cannot use the `RemoveApplicationPartitions` and `ConfirmGc` options.
 
 If you have to use the same answer files on both Windows 2000 Server and Windows Server 2003 domain controllers, use the answer file syntax that is described in this article.
 
-To start DCPROMO in unattended mode, open an administrative Command Prompt window and run the following command:
+To start DCPROMO in unattended mode, open an administrative Command Prompt window, and run the following command:
 
 ```console
 dcpromo /answer:<answer.txt>
 ```
 
 > [!NOTE]  
-> In this command, \<*answer.txt*> is path and file name of the answer file that will be used for demotion or promotion. You can use this command whether you select **Start** > **Run** or use an unattended Setup file.
+> In this command, \<*answer.txt*> is the path and file name of the answer file that will be used for demotion or promotion. You can use this command whether you use the **Start** > **Run** command or an unattended Setup file.
 
 Each DCPROMO operation requires answers to specific fields in the [DCInstall] section of the answer file. The following list provides the required fields for each operation. The default values are used if the option is not specified. The default values for these fields are described in [Field Definitions](#field-definitions).
 
