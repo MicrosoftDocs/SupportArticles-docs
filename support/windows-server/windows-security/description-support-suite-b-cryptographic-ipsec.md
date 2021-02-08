@@ -536,8 +536,4 @@ The combinations that are described in the following table are not supported.
 
 For more information about Suite B, visit the following Web site: [Commercial National Security Algorithm Suite](https://apps.nsa.gov/iaarchive/programs/iad-initiatives/cnsa-suite.cfm)
 
-For more information about IPsec and connection security rules, visit the following Microsoft Web site: [https://go.microsoft.com/fwlink/?linkid=96525](https://go.microsoft.com/fwlink/?linkid=96525)  
-
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[949299](https://support.microsoft.com/help/949299) Description of the Crypto Operators security group that was added to Windows Vista Service Pack 1 to configure Windows Firewall for IPsec in Common Criteria mode
+For more information about IPsec and connection security rules, visit the following Microsoft Web site: [https://go.microsoft.com/fwlink/?linkid=96525](https://go.microsoft.com/fwlink/?linkid=96525)

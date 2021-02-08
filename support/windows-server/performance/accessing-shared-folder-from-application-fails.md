@@ -59,8 +59,6 @@ Also be aware that there is a difference between I/O to local drives and I/O to 
 
 Because of these differences, the API can return different kinds of errors. For local files, the API will not return networking errors. For networked files, the API can return file access errors like ERROR_ACCESS_DENIED and network errors like ERROR_UNEXP_NET_ERR because either kind of error can occur on a network. This behavior is by design and is documented in the Microsoft Developer Network (MSDN) Library in the following two locations:
 
-[Differences in Local and Network I/O](https://msdn.microsoft.com/library/windows/desktop/aa363942%28v=vs.85%29.aspx) 
+[Differences in Local and Network I/O](https://msdn.microsoft.com/library/windows/desktop/aa363942%28v=vs.85%29.aspx)
 
-[Description of a Network I/O Operation](https://msdn.microsoft.com/library/windows/desktop/aa363936%28v=vs.85%29.aspx) 
-
-For more information, click the following article number to view the article in the Microsoft Knowledge Base: [113996](https://support.microsoft.com/help/113996)  INFO: Mapping NT status error codes to Win32 error codes
+[Description of a Network I/O Operation](https://msdn.microsoft.com/library/windows/desktop/aa363936%28v=vs.85%29.aspx)

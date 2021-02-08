@@ -162,11 +162,9 @@ If you enable this policy setting, the print spooler will ignore the Driver Isol
 
   - The **Users can only point and print to computers in their forest** setting applies only to Windows Server 2003 and Windows XP SP1 (and later service packs).
 
-    For more information about Point and Print, see the following articles:
+    For more information about Point and Print, see the following article:
 
-  - [Windows Hardware Dev Center Archive](/previous-versions/windows/hardware/download/dn550976(v=vs.85))
-  
-  - [Description of the Point and Print Restrictions policy setting in Windows Server 2003 and Windows XP](https://support.microsoft.com/help/319939)
+    [Windows Hardware Dev Center Archive](/previous-versions/windows/hardware/download/dn550976(v=vs.85))
 
 ## Configure printer-specific settings for users
 
