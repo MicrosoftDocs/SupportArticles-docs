@@ -21,14 +21,14 @@ We recommend you temporarily apply these procedures to evaluate a system. If you
 
 Antivirus real-time protection can cause many problems on Configuration Manager site servers, site systems, and clients.
 
-The non-comprehensive list of possible symptoms:
+Possible symptoms include:
 
 - Remote site system components aren't installed. SiteComp.log, Distmgr.log, hman.log, or other Configuration Manager log files may contain errors such as error 80070005.
 - The Configuration Manager client cannot be installed through client push.
 - Client inventory information is inaccurate, missing, or out-of-date.
-- Backlogs occur in the *Install_Directory*\Inboxes folders on-site servers.
+- Backlogs occur in the *Install_Directory*\Inboxes folders on site servers.
 - Backlogs occur in the *Install_Directory*\MP\Outboxes subfolders on management points (MP).
-- Software Center isn't populated by deployed software on client systems, or doesn't start. Also, the CCMRepair.log file may contain the following errors:
+- Software Center isn't populated by deployed software on client systems, or doesn't start. Also, the CCMRepair.log file may contain an error similar to the following example:
 
   > Database verification failed with result: 0x80004005 but DB: C:\Windows\CCM\filename.sdf could be opened, skipping DB repair.
 
@@ -57,7 +57,7 @@ We recommend that you add the following real-time protection exclusions to preve
 
 - Management points
   - *MP installation folder*\ServiceData
-  - Either of the following points:
+  - Either of the following folders:
     - *ConfigMgr installation folder*\MP\OUTBOXES
     - *Installation drive*\SMS\MP\OUTBOXES
 - Distribution points
@@ -84,7 +84,7 @@ We recommend that you add the following real-time protection exclusions to preve
 
 ### Don't scan outgoing files on MPs
 
-- Most antivirus software has an option to scan files that are copied to a remote location (outgoing files). This setting should be disabled on management points.
+- Most antivirus software has an option to scan files that are copied to a remote location (outgoing files). This option should be disabled on management points.
 - For Windows Defender, the policy name is **Configure monitoring for incoming and outgoing file and program activity**. And it should be set to **Scan only incoming files**.
 
     For more information, see [Enable and configure Windows Defender Antivirus always-on protection in Group Policy](/windows/security/threat-protection/windows-defender-antivirus/configure-real-time-protection-windows-defender-antivirus).

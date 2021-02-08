@@ -125,7 +125,7 @@ After the updates are downloaded, SMS Provider adds each update to the specified
 > File Destination = \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1     SMS Provider  
 > CExtUserContext::LeaveThread : Releasing IWbemContextPtr=57376560      SMS Provider
 
-After all the updates are added to the package, SMS Provider updates the package and logs the following information:
+After all the updates are added to the package, SMS Provider updates the package and logs the following entries:
 
 > CExtUserContext::EnterThread : User=CONTOSO\Admin Sid=0x01050000000000051500000068830AA65AAB72A155BCE9324F040000 Caching IWbemContextPtr=00000000036B7E50 in
 Process 0xc68 (3176)    SMS Provider  
@@ -223,7 +223,7 @@ After being notified by the Object Replication Manager, Policy Provider updates 
 > --Process Policy Targeting Map    SMS_POLICY_PROVIDER  
 > **** Process notification table to update resultant targeting table ****    SMS_POLICY_PROVIDER
 
-SQL Server Profiler covering the entire process displays the following information:
+SQL Server Profiler covering the entire process displays the following entries:
 
 > insert into CI_CIAssignments (AssignmentAction, Description, AssignmentName, DesiredConfigType, DisableMomAlerts, DPLocality, AssignmentEnabled, EnforcementDeadline, EvaluationSchedule, ExpirationTime, LimitStateMessageVerbosity, LogComplianceToWinEvent, NonComplianceCriticality, NotifyUser, OverrideServiceWindows, PersistOnWriteFilterDevices, RaiseMomAlertsOnFailure, RandomizationEnabled, RebootOutsideOfServiceWindows, SendDetailedNonComplianceStatus, StartTime, StateMessagePriority, StateMessageVerbosity, SuppressReboot, UseBranchCache, UseGMTTimes, UserUIExperience, WoLEnabled, TargetCollectionID, LocaleID, Assignment_UniqueID, SourceSite, LastModifiedBy, AssignmentType, CreationTime, LastModificationTime, IsTombstoned) values (2, N'', N'Microsoft Software Updates - 2014-01-23 03:30:52 PM', 1, 0, 16, 1,
 '01/30/2014 15:30:00', null, null, 1, 0, null, 1, 0, 1, 0, null, 0, 0, '01/23/2014 15:31:00', 5, 5, 0, 1, 0, 1, 0, 14, 1033, N'{3ACE84D4-7B2A-
@@ -621,7 +621,7 @@ After the deployment and the deployment policy have been created on the server, 
     > Update (Site_D3A5F7EA-25D4-4C6B-B47C-C74997522A76/SUM_ada7cf51-66b0-4a00-b37b-68d569d6ff8b) Progress: Status = ciStateWaitInstall, PercentComplete = 0, DownloadSize = 0, Result = 0x0   UpdatesDeploymentAgent  
     > Update (Site_D3A5F7EA-25D4-4C6B-B47C-C74997522A76/SUM_e06056e3-0199-4c68-8ac3-bdddff356a0a) Progress: Status = ciStateWaitInstall, PercentComplete = 0, DownloadSize = 0, Result = 0x0   UpdatesDeploymentAgent
 
-    We also see this process in UpdatesHandler.log:
+    We also see this entry in UpdatesHandler.log:
 
     > Job {CEE4AA3A-DE7B-4D9F-8949-E421BBBF2993} is starting execution   UpdatesHandler  
     > CDeploymentJob::InstallUpdatesInBatch - Batch or non-batch install is not in progress for the job ({CEE4AA3A-DE7B-4D9F-8949-E421BBBF2993}). So allowing install..   UpdatesHandler  
@@ -647,7 +647,7 @@ After the deployment and the deployment policy have been created on the server, 
     > Async install completed.   WUAHandler  
     > Installation of updates completed.   WUAHandler
 
-    We also see the following messages in WindowsUpdate.log:
+    We also see the following entries in WindowsUpdate.log:
 
     > 2014-02-09 19:15:26:130 800 ed0 Agent \** START ** Agent: Installing updates [CallerId = CcmExec]  
     > 2014-02-09 19:15:26:130 800 ed0 Agent * Updates to install = 3  

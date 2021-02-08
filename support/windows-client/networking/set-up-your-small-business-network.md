@@ -39,7 +39,7 @@ Wired or Ethernet networks can transfer data from 10 Mbps to 1000 Mbps, dependin
 
 #### Drawbacks
 
-- You must run Ethernet cables between each device and a hub, switch, or router. This operation can be time-consuming and difficult when devices are in different rooms.
+- You must run Ethernet cables between each device and a hub, switch, or router. It can be time-consuming and difficult when devices are in different rooms.
 - The hardware is more expensive.
 
 #### Hardware requirements
@@ -83,7 +83,7 @@ If your device has built-in wireless capabilities, then you don't need a wireles
 
 Hybrid networks use a combination of wireless and wired networks and offer the best of both network types so that you can use faster wired desktops and portable wireless mobile devices, such as laptops, tablets and smartphones. A hybrid network relies on special hybrid routers, hubs, switches, and Ethernet cables to connect wired and wireless devices. A hybrid router does two things - broadcasts a wireless signal and provides wired access ports. It's most commonly referred to as a wireless or Wi-Fi router with Ethernet ports or "LAN ports".
 
-A hybrid wired/wireless network seems to offer the best of both worlds in speed, mobility, affordability and security. If users need maximum Internet and file-sharing speed, they can plug into the network with an Ethernet cable. If they need to share a streaming video in the office hallway, they can access the network wirelessly. With the right planning, an organization can save money on CAT 5/CAT six cables and routers by maximizing the reach of the wireless network. With the right encryption and password management in place, the wireless portion of the network can be as secure as the wired.
+A hybrid wired/wireless network seems to offer the best of both worlds in speed, mobility, affordability and security. If users need maximum Internet and file-sharing speed, they can plug into the network with an Ethernet cable. If they need to share a streaming video in the office hallway, they can access the network wirelessly. With the right planning, an organization can save money on CAT5/CAT6 cables and routers by maximizing the reach of the wireless network. With the right encryption and password management in place, the wireless portion of the network can be as secure as the wired.
 
 |Hardware|How many|
 |---|---|
@@ -1010,7 +1010,7 @@ To set up a network security key, follow the instructions.
 5. Click **Set up a connection or network**.
 6. Click **Set up a new network**.
 7. Click **Next**.
-The wizard will walk you through the process of creating a network name and security key. If your router supports it, the wizard will default to Wi-Fi Protected Access (WPA or WPA2) security. We recommend that you use WPA2, if possible. Because it offers better security than WPA or Wired Equivalent Privacy (WEP) security. With WPA2 or WPA, you can also use a passphrase.
+The wizard will walk you through the process of creating a network name and security key. If your router supports it, the wizard will default to Wi-Fi Protected Access (WPA or WPA2) security. We recommend that you use WPA2, if possible. WPA2 offers better security than WPA or Wired Equivalent Privacy (WEP) security. With WPA2 or WPA, you can also use a passphrase.
 
 Make sure that you write the security key and keep it in a safe place. If you have a USB flash drive, you can also save your security key to the flash drive by following the instructions in the wizard.
 
@@ -1285,7 +1285,7 @@ To join or create a workgroup, follow the instructions.
    > [!Note]
    > You might be asked for an administrator password or to confirm your choice.
 7. In **System Properties**, tap or click the **Device Name** tab and then tap or click **Change**.
-8. In the **Device Name/Domain Changes** dialog box, tap or click **Workgroup** and then select one of the following methods:  
+8. In the **Device Name/Domain Changes** dialog box, tap or click **Workgroup** and then take one of the following actions:  
    To join an existing workgroup, enter the name of the workgroup and tap or click **OK**.  
    To create a new workgroup, enter a name for the workgroup and tap or click **OK**.
 9. If your device was a member of a domain before you joined the workgroup, it will be removed from the domain and your device account on that domain will be disabled.
@@ -1322,7 +1322,7 @@ To join or create a workgroup, follow the instructions.
 1. Click **Start**.
 2. Right-click **My Device** and then click **Properties**.
 3. Under **Device name, domain, and workgroup settings**, tap or click **Change settings**.
-   > [!Note] 
+   > [!Note]
    > You might be asked for an administrator password or to confirm your choice.*  
 4. In **System** **Properties**, tap or click the **Device Name** tab and then tap or click **Change**.
 5. In the **Device Name/Domain Changes** dialog box, under **Member of,** click **Workgroup** and select one of the following:  
@@ -1398,7 +1398,7 @@ After you determine which of your devices you want to connect with wires and whi
 
 There are several different possible network configurations for a hybrid network. The most basic configuration has all the wired devices plugged into the Ethernet ports of the hybrid router, and the wireless devices connected to the router wirelessly. Then the wireless devices can communicate with the wired devices via the hybrid router.
 
-If you want to network more than four wired devices, you can string several routers together, both wired and wireless, in a daisy chain formation. You'll need enough wired routers to handle all of the wired devices (the number of devices divided by four) and enough wireless routers--in the right physical locations--to broadcast a Wi-Fi signal to every corner of the network. In this way, you can connect both computers and peripherals such as printers and fax machines and place them where it will easy to access them.
+If you want to network more than four wired devices, you can string several routers together, both wired and wireless, in a daisy chain formation. You'll need enough wired routers to handle all of the wired devices (the number of devices divided by four). And you'll need enough wireless routers in the right physical locations to broadcast a Wi-Fi signal to every corner of the network. In this way, you can connect both computers and peripherals such as printers and fax machines and place them where it will easy to access them.
 
 A hybrid wired/Wi-Fi network offers the best of both worlds: the speed and security of a wired network and the mobility and affordability of a wireless network. When you need the maximum Internet and file-sharing speed for your work, you can plug into the network with an Ethernet cable. If you need to show a streaming video to your colleague in the office hallway, you can access the network wirelessly. With the right planning, your small business can save money on CAT 5 cables and routers by maximizing the reach of the wireless network. And with the right encryption and password management in place, the wireless portion of the network can be as secure as the wired.
 
@@ -1572,7 +1572,7 @@ There are four network locations you can use for Windows 7 devices:
 
 - **Public.** The network is available for public use. Examples of public networks are public Internet access networks, such as those found in airports, libraries, and coffee shops. This network location helps keep your device from being seen by other devices around you and helps protect your device from malicious software on the Internet. You should also select this option if you're connected directly to the Internet without using a router or if you have a mobile broadband connection.
   > [!Note]
-  > This is the safest setting, but you cannot share printers or files.  
+  > This is the safest setting, but you can't share printers or files.  
 
 - **Domain.** The device is connected to a network that contains an Active Directory domain controller. A corporate network is one example of a domain network. This network location isn't available as an option. It must be set by the domain administrator.
 
@@ -1608,7 +1608,8 @@ To activate password-protected sharing, follow the instructions.
 6. Click the arrow to expand the Home or Work network profile.
 7. Under **Password protected sharing**, click **Turn on password protected sharing**.
 8. Click **Save changes**.
- ***Note:**You might be asked for an administrator password to confirm your choice.*  
+    > [!NOTE]
+    > You might be asked for an administrator password to confirm your choice.
 
 ### Network map
 

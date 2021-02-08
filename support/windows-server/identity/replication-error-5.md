@@ -102,7 +102,7 @@ Valid root causes for error 5: **access is denied** include:
 1. The **RestrictRemoteClients** setting in the registry has a value of **2**.
 2. The **Access this computer from network** user right isn't granted to the **Enterprise Domain Controllers** group or the administrator triggering immediate replication.
 3. The **CrashOnAuditFail** setting in the registry of the destination DC has a value of **2**.
-4. There's a time difference between the Key Distribution Center (KDC) used by the destination DC and the source DC. The source DC exceeds the maximum time skew that's allowed by Kerberos defined in Default Domain policy.
+4. There's a time difference between the Key Distribution Center (KDC) used by the destination DC and the source DC. The time difference exceeds the maximum time skew that's allowed by Kerberos defined in Default Domain policy.
 5. There's an SMB signing mismatch between the source and destination DCs.
 6. There's an **LMCompatiblity** mismatch between the source and destination DCs.
 7. Service principal names are either not registered or not present because of simple replication latency or a replication failure.
@@ -134,10 +134,12 @@ If still unresolved, walk the known causes list in most common, least complex, l
 
 The generic DCDIAG runs multiple tests.
 
-DCDIAG /TEST:CheckSecurityErrors was written to do specific tests (including an SPN registration check) to troubleshoot Active Directory operations replication failing with:
+`DCDIAG /TEST:CheckSecurityErrors` was written to do specific tests (including an SPN registration check) to troubleshoot Active Directory operations replication failing with:
 
 - error 5: **access is denied**
-- error 8453: **replication access was denied** but is NOT run as part of the default execution of DCDIAG.
+- error 8453: **replication access was denied**
+
+`DCDIAG /TEST:CheckSecurityErrors` isn't run as part of the default execution of DCDIAG.
 
 1. Run DCDIAG on the destination DC
 2. Run DCDIAG /TEST:CheckSecurityError
@@ -168,7 +170,7 @@ DCDIAG /TEST:CheckSecurityErrors was written to do specific tests (including an 
 
 2. Check **Access this computer from network** rights.
 
-    In a default installation of Windows, the default domain controllers policy is linked to the domain controllers OU containing. The containing grants the **access this computer from network** user right to the following security groups:
+    In a default installation of Windows, the default domain controllers policy is linked to the domain controllers OU containing. It grants the **access this computer from network** user right to the following security groups:
 
     |Local Policy|Default Domain controllers policy|
     |---|---|
@@ -219,7 +221,7 @@ DCDIAG /TEST:CheckSecurityErrors was written to do specific tests (including an 
 
 4. Excessive time skew
 
-    Kerberos policy settings in the default domain policy allow for a 5-minutes difference (default value) in system time between KDC domain controllers and a Kerberos target server to prevent replay attacks. Some documentation states that time between the client and the Kerberos target must have time within 5 minutes of each other. Others state that in the context of Kerberos authentication, the time that matters is the delta between the KDC used by the caller and the time on the Kerberos target. Also, Kerberos doesn't care that system time on the relevant DCs matches current time. Only that relative time difference between the KDC and target DC is inside the (default 5 minutes or less) maximum time skew that's allowed by Kerberos policy.
+    Kerberos policy settings in the default domain policy allow for a 5-minutes difference (default value) in system time between KDC domain controllers and a Kerberos target server to prevent replay attacks. Some documentation states that time between the client and the Kerberos target must have time within 5 minutes of each other. Others state that in the context of Kerberos authentication, the time that matters is the delta between the KDC used by the caller and the time on the Kerberos target. Also, Kerberos doesn't care that system time on the relevant DCs matches current time. It only cares that relative time difference between the KDC and target DC is inside the maximum time skew (default 5 minutes or less) allowed by Kerberos policy.
 
     In the context of Active Directory operations, the target server is the source DC being contacted by the destination DC. Every domain controller in an Active Directory forest (currently running the KDC service) is a potential KDC. So you'll need to consider time accuracy on all other DCs against the source DC including time on the destination DC itself.
 
@@ -239,7 +241,7 @@ DCDIAG /TEST:CheckSecurityErrors was written to do specific tests (including an 
 
     > 0xc000133: the time at the Primary Domain Controller is different than the time at the Backup Domain Controller or member server by too large an amount.
 
-    Network traces capturing the destination computer connecting to a shared folder on the source DC (and other operations) may show the on-screen error **an extended error has occurred**. while a network trace shows:
+    Network traces capturing the destination computer connecting to a shared folder on the source DC (and other operations) may show the on-screen error **an extended error has occurred**. But a network trace shows:
 
     > KerberosV5:TGS Request Realm > TGS request from source DC  
     > KerberosV5:KRB_ERROR - KRB_AP_ERR_TKE_NVV (33) > TGS response where KRB_AP_ERR_TKE_NYV > maps to Ticket not yet valid
@@ -276,7 +278,7 @@ DCDIAG /TEST:CheckSecurityErrors was written to do specific tests (including an 
 
 6. UDP formatted Kerberos packet fragmentation
 
-    Network routers and switches may fragment or completely drop large UDP formatted network packets used by Kerberos and EDNS0 (DNS). Computers running Windows 2000 and Windows 2003 operating system families are vulnerable to UDP fragmentation compared to computers running Windows Server 2008 and 2008 R2.  
+    Network routers and switches may fragment or completely drop large UDP formatted network packets used by Kerberos and EDNS0 (DNS). Computers running Windows 2000 and Windows 2003 operating system families are vulnerable to UDP fragmentation comparing to computers running Windows Server 2008 and 2008 R2.  
 
     User Action:
 
@@ -288,7 +290,7 @@ DCDIAG /TEST:CheckSecurityErrors was written to do specific tests (including an 
 
     - If the largest non-fragmented packet is less than 1,472 bytes, either (in order of preference)
 
-      - Modify your network infrastructure to properly support large UDP frames. This setting may require a firmware upgrade or config change on routers, switches, or firewalls.
+      - Modify your network infrastructure to properly support large UDP frames. It may require a firmware upgrade or config change on routers, switches, or firewalls.
 
         OR
 
@@ -325,7 +327,18 @@ DCDIAG /TEST:CheckSecurityErrors was written to do specific tests (including an 
 
     > Trust relationship test. . . . . . : Failed Test to ensure DomainSid of domain \<domainname> is correct. [FATAL] Secure channel to domain \<domainname> is broken. [<%variable status code%>]
 
-    For example, if you have a multi-domain forest containing, root domain `Contoso.COM`, child domain `B.Contoso.COM`, grand child domain `C.B.Contoso.COM`, and **tree domain in same forest** `Fabrikam.COM` where replication is failing between DCs in grand child domain `C.B.Contoso.COM` and tree domain `Fabrikam.COM`, then verify trust health between `C.B.Contoso.COM` and `B.Contoso.COM`, `B.Contoso.COM` and `Contoso.COM` then finally `Contoso.COM` and `Fabrikam.COM`.
+    For example, you have a multi-domain forest containing:
+
+    - root domain `Contoso.COM`
+    - child domain `B.Contoso.COM`
+    - grand child domain `C.B.Contoso.COM`
+    - **tree domain in same forest** `Fabrikam.COM`
+
+    If replication is failing between DCs in grand child domain `C.B.Contoso.COM` and tree domain `Fabrikam.COM`, verify trust health in the following order:
+
+    - between `C.B.Contoso.COM` and `B.Contoso.COM`
+    - between `B.Contoso.COM` and `Contoso.COM`
+    - between `Contoso.COM` and `Fabrikam.COM`
 
     If a short cut trust exists between the destination domains, the trust path chain doesn't have to be validated. Instead validate the short cut trust between the destination and source domain.
 

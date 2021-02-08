@@ -90,7 +90,7 @@ Fault offset: 0x00000000006d5eab
 Faulting process id: 0x29c4  
 **0xc000027b:** An application-internal exception has occurred. This error occurs when an **access denied** error happens during app initialization that is fatal and cause an exception that leads to the crash.
 
-If you use Process Monitor to track the Apps' executable or related files, you may see **access denied** is logged. It points to the missing permissions for the current logon user. The missing permissions include:
+If you use Process Monitor to track the Apps' executable or related files, you may see **access denied** is logged. It points to the missing permissions for the current logon user. It includes:
 
 1. Registry hives and its subkeys:
 
@@ -127,7 +127,7 @@ This issue occurs because the read permission is missing from any or all the key
 
 If you use Group Policy to manage permissions, or if you're unsure whether Group Policy is used to manage permissions, follow these steps:
 
-- Unjoin the computer from the domain or put the computer in a test OU with block policy inheritance enabled. This setting prevents the domain-based Group Policy from reapplying the permission changes and breaking the modern applications again after you've fixed them.
+- Unjoin the computer from the domain or put the computer in a test OU with block policy inheritance enabled. This action prevents the domain-based Group Policy from reapplying the permission changes and breaking the modern applications again after you've fixed them.
 - Add permissions where they're required per the following details.
 - Edit the Group Policy that manages to permissions so that it no longer breaks modern application.
 
@@ -264,7 +264,7 @@ Because of these changes, we don't recommend you modify file system DACLs on fil
 Extensive permission changes propagated throughout the registry and file system can't be undone. New folders, such as user profile folders that weren't present at the original installation of the operating system, may be affected. So you can't roll back the original DACLs if you:
 
 - remove a Group Policy setting that performs DACL changes
-- you apply the system defaults
+- apply the system defaults
 
 Changes to the DACL in the %SystemDrive% folder may cause the following scenarios:
 
@@ -278,4 +278,4 @@ Changes to the DACL in the %SystemDrive% folder may cause the following scenario
 
 To help you remove the worst results of such file and registry permissions, Microsoft will provide commercially reasonable efforts in line with your support contract. However, you can't currently roll back these changes. We can guarantee only that you can return to the recommended out-of-the-box settings by reformatting the hard disk drive and by reinstalling the operating system.
 
-For example, modifications to registry DACLs affect large parts of the registry hives and may cause systems to no longer function as expected. Modifying the DACLs on single registry keys poses less of a problem to many systems. we recommend you carefully consider and test these changes before you implement them. And we can guarantee only that you can return to the recommended out-of-the-box settings if you reformat and reinstall the operating system.
+For example, modifications to registry DACLs affect large parts of the registry hives and may cause systems to no longer function as expected. Modifying the DACLs on single registry keys poses less of a problem to many systems. We recommend you carefully consider and test these changes before you implement them. And we can guarantee only that you can return to the recommended out-of-the-box settings if you reformat and reinstall the operating system.
