@@ -36,7 +36,7 @@ This issue occurs if your account has the `RemotePowerShellEnable` parameter val
 To resolve this issue, have another administrator set the parameter value to **True** by running the following PowerShell command:
 
 ```powershell
-Set-Useruser@domain.com-RemotePowerShellEnabled $True
+Set-User user@contoso.com -RemotePowerShellEnabled $True
 ```
 
 > [!NOTE]
