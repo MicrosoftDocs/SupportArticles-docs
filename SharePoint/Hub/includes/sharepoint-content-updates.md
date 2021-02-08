@@ -2,6 +2,14 @@
 
 
 
+## Week of February 01, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/3/2021 | [Enable coauthoring for OneDrive-synced files](/sharepoint/troubleshoot/sync/enable-co-authoring-for-onedrive-synced-file) | modified |
+
+
 ## Week of January 25, 2021
 
 

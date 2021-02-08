@@ -15,6 +15,8 @@
       href: ../authentication/manage-the-google-sign-in-prompt-in-outlook-2016.md
   - name: Calendars
     items:
+    - name: Access Denied changing shared calendar permissions
+      href: ../calendars/access-denied-change-shared-calendar-permissions.md
     - name: Can't accept new meeting time proposals
       href: ../calendars/cannot-accept-new-meeting-time-proposals.md
     - name: Can't move a meeting between calendars
