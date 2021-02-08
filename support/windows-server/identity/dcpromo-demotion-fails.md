@@ -1,6 +1,6 @@
 ---
 title: DCPROMO demotion fails
-description: This article provides help to solve an issue where the demotion of a Microsoft Windows Server computer hosting the Active Directory Domain Services (AD DS) or domain controller server role fails.
+description: Solves an issue where the demotion of a Windows Server computer hosting the Active Directory Domain Services (AD DS) or domain controller server role fails.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,14 +15,14 @@ ms.technology: windows-server-active-directory
 ---
 # DCPROMO demotion fails if it's unable to contact the DNS infrastructure master
 
-This article provides help to solve an issue where the demotion of a Microsoft Windows Server computer hosting the Active Directory Domain Services (AD DS) or domain controller server role fails.
+This article solves an issue where the demotion of a Windows Server computer that hosts the Active Directory Domain Services (AD DS) or domain controller server role fails.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2694933
 
 ## Symptoms
 
-The graceful demotion of a Windows Server computer hosting the Active Directory Domain Services (AD DS) or domain controller server role fails with the on-screen error:
+The graceful demotion of a Windows Server computer hosting the AD DS or domain controller server role fails. You see the following on-screen error:
 
 > Title bar text: Active Directory Domain Services Installation Wizard  
 > Message Text:  
@@ -70,9 +70,13 @@ Where distinguishing elements in the LDAP output taken from the sample domain `C
 
 ## Cause
 
-The error above occurs when the domain controller being demoted cannot outbound replicate changes to the DC that owns the infrastructure FSMO or operational role for the partition referenced in the DCPROMO [log] error.
+The error occurs when the domain controller that's being demoted can't outbound replicate changes to the DC that owns the infrastructure FSMO or operational role for the partition referenced in the DCPROMO [log] error.
 
-Specifically, the demotion attempt is aborted to safeguard against data loss. In the case of DNS application partitions, the demotion is blocked to ensure that live and deleted DNS records, their ACLS, and metadata such as registration and deletion dates are replicated
+Specifically, the demotion attempt is aborted to safeguard against data loss. In the case of DNS application partitions, the demotion is blocked to ensure that the following data is replicated:
+
+- live and deleted DNS records
+- ACLS of the DNS records
+- metadata, such as registration and deletion dates
 
 DN paths for partitions where the error in the [Symptoms](#symptoms) section may occur include:
 
@@ -82,20 +86,20 @@ DN paths for partitions where the error in the [Symptoms](#symptoms) section may
 ## Resolution
 
 > [!NOTE]
-> When the infrastructure master is assigned to a deleted NTDSA on a DNS application partition, like DomainDNSZones, it may also be missing for ForestDNSZones partition or vice versa. Microsoft Commercial Support recommends that you verify that the for both the DomainDNSZones and ForestDNSZones partitions assigned to live Windows Server 2003 or later domain controllers hosting the DNS Server role and partition in question.
+> When the infrastructure master is assigned to a deleted NTDSA on a DNS application partition, like DomainDNSZones, it may also be missing for ForestDNSZones partition or vice versa. We recommends that you verify that the for both the DomainDNSZones and ForestDNSZones partitions assigned to live Windows Server 2003 or later domain controllers hosting the DNS Server role and partition in question.
 
 To resolve this issue, use one of the following methods:
 
-1. Use ADSIEDIT.MSC to assign the DN path for the `fsMORoleOwner` attribute to a live DC that was a direct replication partner of the original FSMO role owner then wait for that change to inbound replicate to the DC being demoted.
+1. Use `ADSIEDIT.MSC` to assign the DN path for the `fsMORoleOwner` attribute to a live DC that was a direct replication partner of the original FSMO role owner. Then wait for that change to inbound-replicate to the DC that's being demoted.
 
 2. Run the script in the **Resolution** section of [KB949257](https://support.microsoft.com/help/949257) for the partition in question.
 
-3. If the DC being demoted is not capable of inbound replicating changes for the directory partition in question, run the `DCPROMO /FORCEREMOVAL` command to forcefully demote the domain controller.
+3. If the DC that's being demoted can't inbound-replicate changes for the directory partition in question, run the `DCPROMO /FORCEREMOVAL` command to forcefully demote the domain controller.
 
 ## More information
 
-DCPromo attempts to outbound replicate changes on every locally held NC so that unique changes are not lost. In the case of data stored in DNS zones, DCPROMO attempts to outbound replicate the contents of DNS zones to the Infrastructure master for the DNS partition in question.
+DCPromo attempts to outbound-replicate changes on every locally held NC so that unique changes aren't lost. If data is stored in DNS zones, DCPROMO attempts to outbound replicate the contents of DNS zones to the infrastructure master for the DNS partition in question.
 
 Related problem:
 
-[KB949257](https://support.microsoft.com/kb/949257) describes a problem where the `ADPREP /RODCPREP` command fails when infrastructure master for one or more DNS application partition is assigned to a deleted NTDSA.
+[KB949257](https://support.microsoft.com/kb/949257) describes a problem where the `ADPREP /RODCPREP` command fails when infrastructure master for one or more DNS application partitions is assigned to a deleted NTDSA.
