@@ -170,7 +170,7 @@ The generic DCDIAG runs multiple tests.
 
 2. Check **Access this computer from network** rights.
 
-    In a default installation of Windows, the default domain controllers policy is linked to the domain controllers OU containing. It grants the **access this computer from network** user right to the following security groups:
+    In a default installation of Windows, the default domain controllers policy is linked to the domain controllers OU container. It grants the **access this computer from network** user right to the following security groups:
 
     |Local Policy|Default Domain controllers policy|
     |---|---|
@@ -221,7 +221,7 @@ The generic DCDIAG runs multiple tests.
 
 4. Excessive time skew
 
-    Kerberos policy settings in the default domain policy allow for a 5-minutes difference (default value) in system time between KDC domain controllers and a Kerberos target server to prevent replay attacks. Some documentation states that time between the client and the Kerberos target must have time within 5 minutes of each other. Others state that in the context of Kerberos authentication, the time that matters is the delta between the KDC used by the caller and the time on the Kerberos target. Also, Kerberos doesn't care that system time on the relevant DCs matches current time. It only cares that relative time difference between the KDC and target DC is inside the maximum time skew (default five minutes or less) allowed by Kerberos policy.
+    Kerberos policy settings in the default domain policy allow for a 5-minutes difference (default value) in system time between KDC domain controllers and a Kerberos target server to prevent replay attacks. Some documentation states that time between the client and the Kerberos target must have time within five minutes of each other. Others state that in the context of Kerberos authentication, the time that matters is the delta between the KDC used by the caller and the time on the Kerberos target. Also, Kerberos doesn't care that system time on the relevant DCs matches current time. It only cares that relative time difference between the KDC and target DC is inside the maximum time skew (default five minutes or less) allowed by Kerberos policy.
 
     In the context of Active Directory operations, the target server is the source DC being contacted by the destination DC. Every domain controller in an Active Directory forest (currently running the KDC service) is a potential KDC. So you'll need to consider time accuracy on all other DCs against the source DC including time on the destination DC itself.
 
@@ -331,10 +331,10 @@ The generic DCDIAG runs multiple tests.
 
     - root domain `Contoso.COM`
     - child domain `B.Contoso.COM`
-    - grand child domain `C.B.Contoso.COM`
+    - grandchild domain `C.B.Contoso.COM`
     - **tree domain in same forest** `Fabrikam.COM`
 
-    If replication is failing between DCs in grand child domain `C.B.Contoso.COM` and tree domain `Fabrikam.COM`, verify trust health in the following order:
+    If replication is failing between DCs in grandchild domain `C.B.Contoso.COM` and tree domain `Fabrikam.COM`, verify trust health in the following order:
 
     - between `C.B.Contoso.COM` and `B.Contoso.COM`
     - between `B.Contoso.COM` and `Contoso.COM`
