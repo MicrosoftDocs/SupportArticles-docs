@@ -37,7 +37,7 @@ The non-comprehensive list of possible symptoms:
 
 ## Exclusions
 
-We recommend that you add the following real-time protection exclusions to prevent these problems.
+We recommend that you add the following real-time protection exclusions to prevent these problems.
 
 ### Default installation folders
 
@@ -100,7 +100,7 @@ Process exclusions are necessary only if aggressive antivirus programs consider 
 - *Client installation folder*\RemCtrl\CmRcService.exe (client-side)
 - *ConfigMgr installation folder*\bin\x64\Sitecomp.exe
 - *ConfigMgr installation folder*\bin\x64\Smswriter.exe
-- *ConfigMgr installation folder*\bin\x64\Smssqlbkup.exe, or SMS_*SQLFQDN*\bin\x64\ Smssqlbkup.exe
+- *ConfigMgr installation folder*\bin\x64\Smssqlbkup.exe, or SMS_*SQLFQDN*\bin\x64\ Smssqlbkup.exe
 - *ConfigMgr installation folder*\bin\x64\Cmupdate.exe
 - *Client installation folder*\Ccmrepair.exe (client-side)
 - *%windir%*\CCMSetup\Ccmsetup.exe (client-side)

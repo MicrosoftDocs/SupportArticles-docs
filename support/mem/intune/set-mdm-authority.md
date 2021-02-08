@@ -6,7 +6,7 @@ ms.prod-support-area-path: General guidance or advisory
 ---
 # Setting the Mobile Device Management authority in Microsoft Intune
 
-The Mobile Device Management (MDM) authority determines where you will run mobile device management tasks. You can set the MDM authority to Microsoft Intune by using the Intune administrator portal.
+The Mobile Device Management (MDM) authority determines where you will run mobile device management tasks. You can set the MDM authority to Microsoft Intune by using the Intune administrator portal.
 
 _Original product version:_ &nbsp; Microsoft Intune  
 _Original KB number:_ &nbsp; 3103996
@@ -38,7 +38,7 @@ If you haven't yet set the MDM authority, follow these steps.
 
 A message indicates that you have successfully set your MDM authority to Intune.
 
-For complete details about how to manage mobile devices by using Microsoft Intune, see [Set the mobile device management authority](/mem/intune/fundamentals/mdm-authority-set).
+For complete details about how to manage mobile devices by using Microsoft Intune, see [Set the mobile device management authority](/mem/intune/fundamentals/mdm-authority-set).
 
 ## Change MDM authority to Office 365
 
@@ -46,4 +46,4 @@ To activate Office 365 MDM in addition to your existing Intune service, go to [h
 
 For more information, see [Set up Mobile Device Management (MDM) in Office 365](https://support.office.com/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd).
 
-If you want users to be managed only by Office 365 MDM, remove any assigned Intune or EMS licenses after you activate Office 365 MDM.
+If you want users to be managed only by Office 365 MDM, remove any assigned Intune or EMS licenses after you activate Office 365 MDM.

@@ -12,6 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Help and Support
 ms.technology: windows-client-system-management-components
+adobe-target: true
 ---
 # Daylight saving time help and support
 
@@ -25,7 +26,7 @@ _Original KB number:_ &nbsp; 22803
 
 ## Microsoft policy in response to daylight saving time and time zone changes
 
-Many applications and cloud services reference the underlying Windows operating system for daylight saving time (DST) and time zone (TZ) information. To make sure that Windows has the latest and most accurate time data, Microsoft continuously monitors DST and TZ changes that are announced by governments around the world. Microsoft makes an effort to incorporate these changes to Windows, and publishes an update through Windows Update (WU). Each DST and TZ update that is released through WU will have the latest time data and will also supersede any previously issued DST and TZ update.
+Many applications and cloud services reference the underlying Windows operating system for daylight saving time (DST) and time zone (TZ) information. To make sure that Windows has the latest and most accurate time data, Microsoft continuously monitors DST and TZ changes that are announced by governments around the world. Microsoft makes an effort to incorporate these changes to Windows, and publishes an update through Windows Update (WU). Each DST and TZ update that is released through WU will have the latest time data and will also supersede any previously issued DST and TZ update.
 
 ### Recommendations
 
@@ -33,11 +34,11 @@ In order for Microsoft to provide an update at the earliest and ensure a seamles
 
 - Ample advance notice (one year or more) of the planned change
 - Official published confirmation of planned changes to DST or time zones
-- Concentrated efforts to promote the change to affected citizens
+- Concentrated efforts to promote the change to affected citizens
 
 ### Standalone
 
-[KB 914387](https://support.microsoft.com/kb/914387) provides a list of DST updates that have been released. It also includes a short summary of the content that is included in each update. This allows a consistent means for customers and partners to be informed whenever such an update is made available.
+[KB 914387](https://support.microsoft.com/kb/914387) provides a list of DST updates that have been released. It also includes a short summary of the content that is included in each update. This allows a consistent means for customers and partners to be informed whenever such an update is made available.
 
 ### Monthly rollups
 
@@ -53,7 +54,7 @@ DST updates are also included in monthly rollup releases. You can find more info
 
 |Change type|Change details|Microsoft support policy|Solution|
 |---|---|---|---|
-|Change to a region's time zone rules|A subset of the region that shares a time zone makes a change to its DST requirements or changes the time bias of its time zone. A new time zone is required for the affected users within that region because the existing time zone has to remain unchanged for the rest of the users.<br/><br/>-or-<br/> <br/>New DST or TZ change that does not match the exact parameters of another TZ, including historical time data accuracy (from 2010).|Microsoft will introduce a new time zone for such scenarios.<br/><br/> A new Windows time zone entry will be created only when a country or region (including dependencies), or a first-order administrative division of a country or region (state, province, department, and so on), has a separate and distinct history of UTC offsets and DST rules from existing TZ entries. Additionally, a smaller geographic area (county, city, and so on) qualifies for a new Windows time zone entry when its current UTC offset and DST rule combination is not provided by another Windows time zone entry. <br/><br/> If there is insufficient lead time to engineer, test, and publish a Windows Update before these changes take effect, Microsoft will publish interim guidance on [the DST Blog](https://techcommunity.microsoft.com/t5/Daylight-Saving-Time-Time-Zone/bg-p/DSTBlog)  that can be used up until a Windows Update is made available.|Interim guidance and  Windows Update|
-|Changes to DST start and end dates|Modify an existing time zone by changing the DST rule or adding and removing DST to a time zone.<br/><br/>-or-<br/><br/>Modifying the time bias to an existing time zone.|Microsoft will publish a Windows Update that incorporates these DST changes to existing Windows time zones. In order to make sure that these updates are made available before these laws take effect, we recommend that governments provide ample notice (1 year or more) prior to the change taking effect.<br/><br/>If there is insufficient lead time to engineer, test, and publish a Windows Update before these changes take effect, Microsoft will publish interim guidance on [the DST Blog](https://techcommunity.microsoft.com/t5/Daylight-Saving-Time-Time-Zone/bg-p/DSTBlog)  that can be used up until a Windows Update is made available.|Interim guidance and Windows Update |
+|Change to a region's time zone rules|A subset of the region that shares a time zone makes a change to its DST requirements or changes the time bias of its time zone. A new time zone is required for the affected users within that region because the existing time zone has to remain unchanged for the rest of the users.<br/><br/>-or-<br/> <br/>New DST or TZ change that does not match the exact parameters of another TZ, including historical time data accuracy (from 2010).|Microsoft will introduce a new time zone for such scenarios.<br/><br/> A new Windows time zone entry will be created only when a country or region (including dependencies), or a first-order administrative division of a country or region (state, province, department, and so on), has a separate and distinct history of UTC offsets and DST rules from existing TZ entries. Additionally, a smaller geographic area (county, city, and so on) qualifies for a new Windows time zone entry when its current UTC offset and DST rule combination is not provided by another Windows time zone entry. <br/><br/> If there is insufficient lead time to engineer, test, and publish a Windows Update before these changes take effect, Microsoft will publish interim guidance on [the DST Blog](https://techcommunity.microsoft.com/t5/Daylight-Saving-Time-Time-Zone/bg-p/DSTBlog)  that can be used up until a Windows Update is made available.|Interim guidance and  Windows Update|
+|Changes to DST start and end dates|Modify an existing time zone by changing the DST rule or adding and removing DST to a time zone.<br/><br/>-or-<br/><br/>Modifying the time bias to an existing time zone.|Microsoft will publish a Windows Update that incorporates these DST changes to existing Windows time zones. In order to make sure that these updates are made available before these laws take effect, we recommend that governments provide ample notice (1 year or more) prior to the change taking effect.<br/><br/>If there is insufficient lead time to engineer, test, and publish a Windows Update before these changes take effect, Microsoft will publish interim guidance on [the DST Blog](https://techcommunity.microsoft.com/t5/Daylight-Saving-Time-Time-Zone/bg-p/DSTBlog)  that can be used up until a Windows Update is made available.|Interim guidance and Windows Update |
 | Changes to display names| A region that has an existing Windows time zone announces changes to the name referenced in the Windows time zone display name.| Microsoft will update the display name for the existing time zones for all supported languages and publish an update. <br/><br/> If there is insufficient lead time to engineer, test and publish a Windows Update before these changes take effect, Microsoft recommends using the existing time zone until a Windows Update is made available.|Windows Update|
 |||||

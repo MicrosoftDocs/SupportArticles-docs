@@ -107,7 +107,7 @@ To fix this issue, follow these steps:
 
 To allow a keyboard and mouse, add the following GUIDs to the device profile:
 
-- {4d36e96b-e325-11ce-bfc1-08002be10318}: Keyboard
+- {4d36e96b-e325-11ce-bfc1-08002be10318}: Keyboard
 - {4d36e96f-e325-11ce-bfc1-08002be10318}: Mouse
 
 To allow cameras, headphones and microphones, add the following GUIDs to the device profile:

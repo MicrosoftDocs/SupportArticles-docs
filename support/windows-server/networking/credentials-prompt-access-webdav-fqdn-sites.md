@@ -29,7 +29,7 @@ Consider the following scenario:
 
 In this scenario, you are prompted to enter your credentials or you are denied access even though the user account that you are using has sufficient permissions to access this site.
 
-You may also receive the following error message when you work with moved folders through the explorer view:
+You may also receive the following error message when you work with moved folders through the explorer view:
 
 > Your client does not support opening this list with Windows Explorer.
 
@@ -42,7 +42,7 @@ WinHTTP sends user credentials only in response to requests that occur on a loca
 If no proxy is configured, WinHTTP sends credentials only to local intranet sites.
 
 > [!NOTE]
-> If the URL contains no period in the server name, such as in the following example, the server is assumed to be on a local intranet site: `http://sharepoint/davshare`.
+> If the URL contains no period in the server name, such as in the following example, the server is assumed to be on a local intranet site: `http://sharepoint/davshare`.
 
 If the URL contains periods, the server is assumed to be on the Internet. The periods indicate that you use a FQDN address. Therefore, no credentials are automatically sent to this server unless a proxy is configured and unless this server is indicated for proxy bypass.
 

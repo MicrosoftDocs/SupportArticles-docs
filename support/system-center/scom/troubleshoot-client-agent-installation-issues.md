@@ -6,22 +6,22 @@ ms.prod-support-area-path:
 ---
 # Troubleshoot client agent installation issues in Operations Manager
 
-This guide helps you troubleshoot issues that the client agent of System Center 2012 Operations Manager (OpsMgr 2012 and OpsMgr 2012 R2) can't be installed.
+This guide helps you troubleshoot issues that the client agent of System Center 2012 Operations Manager (OpsMgr 2012 and OpsMgr 2012 R2) can't be installed.
 
 _Original product version:_ &nbsp; System Center 2012 Operations Manager, System Center 2012 R2 Operations Manager  
 _Original KB number:_ &nbsp; 10147
 
-The first step is to verify that the potential client computer meets the supported hardware and software configuration. The following article lists the requirements for a System Center 2012 Operations Manager client:
+The first step is to verify that the potential client computer meets the supported hardware and software configuration. The following article lists the requirements for a System Center 2012 Operations Manager client:
 
 [System Requirements for System Center 2012 - Operations Manager](/previous-versions/system-center/system-center-2012-R2/hh205990(v=sc.12))
 
-If the target client is a Unix/Linux computer, verify that both the distribution and version are supported. The following article lists the supported versions of Unix/Linux:
+If the target client is a Unix/Linux computer, verify that both the distribution and version are supported. The following article lists the supported versions of Unix/Linux:
 
 [Supported UNIX and Linux Operating System Versions](/previous-versions/system-center/system-center-2012-R2/hh212713(v=sc.12))
 
 ## Troubleshoot agent deployment via the Discovery Wizard
 
-If the agent will be deployed via discovery from the Operations Manager console, the agent will be installed from the management server or gateway server specified in the Discovery Wizard to manage the agent. It's not the server the Operations console was connected to when it opened. Therefore, any testing should be conducted from the management server or gateway specified when the wizard runs. Or, a different management server or gateway should be specified during the wizard to see if the same error occurs.
+If the agent will be deployed via discovery from the Operations Manager console, the agent will be installed from the management server or gateway server specified in the Discovery Wizard to manage the agent. It's not the server the Operations console was connected to when it opened. Therefore, any testing should be conducted from the management server or gateway specified when the wizard runs. Or, a different management server or gateway should be specified during the wizard to see if the same error occurs.
 
 ### The wizard doesn't display a list of potential agents to install
 
@@ -46,7 +46,7 @@ Additionally, if the LDAP query times out or is unable to resolve the potential 
 
 ### The target computer isn't in the list of potential agents after the initial discovery runs
 
-In this case, the computer may already be identified in the database as part of the management group. Or, the computer is listed under **Pending Actions** in the Operations console.
+In this case, the computer may already be identified in the database as part of the management group. Or, the computer is listed under **Pending Actions** in the Operations console.
 
 If the target computer is listed under **Administration** > **Pending Actions** in the Operations console, the existing action must either be approved or rejected before a new action can be performed. If the existing installation settings are sufficient, approve the pending installation from the console. Otherwise, reject the pending action, then rerun the discovery wizard.
 
@@ -64,8 +64,8 @@ The most common errors are listed below:
 
 These errors can be caused by one of the following reasons:
 
-- The account previously specified to perform the agent installation in the Discovery Wizard doesn't have permissions to connect to the target computer and install a Windows service. This requires local administrator permissions due to the requirement to write to the registry.
-- Group Policy restrictions on the management server computer account or the account used for agent push are preventing successful installation. For example, Group Policy Objects prevent the accounts from accessing the Windows folder, the registry, WMI, or administrative shares on the target computer.
+- The account previously specified to perform the agent installation in the Discovery Wizard doesn't have permissions to connect to the target computer and install a Windows service. This requires local administrator permissions due to the requirement to write to the registry.
+- Group Policy restrictions on the management server computer account or the account used for agent push are preventing successful installation. For example, Group Policy Objects prevent the accounts from accessing the Windows folder, the registry, WMI, or administrative shares on the target computer.
 - The Windows Firewall is blocking ports between the management server and the target computer.
 - Required services on the target computer aren't running.
 
@@ -73,24 +73,24 @@ These errors can be caused by one of the following reasons:
 
 - If the credentials specified in the wizard don't have local administrator permissions, add the account to the local Administrators security group on the target computer. Or use an account that's already a member of that group.
 - Block Group Policy inheritance on the target computer, or the user account performing the installation.
-- If agent installation is failing when using a domain account to push the agent from a management server, use Windows administrative tools to identify potential issues.
+- If agent installation is failing when using a domain account to push the agent from a management server, use Windows administrative tools to identify potential issues.
 
   Log on to the management server with the credentials in question and try the following tasks. If the account doesn't have permission to log on to the management server, the tools can be run under the credentials to be tested from a command prompt.
 
-  - Execute the `runas /user:<UserAccountName> "compmgmt.msc"` command. Select **Action** > **Connect to another computer**. After connected, try to open Event Viewer and browse any event logs.
+  - Execute the `runas /user:<UserAccountName> "compmgmt.msc"` command. Select **Action** > **Connect to another computer**. After connected, try to open Event Viewer and browse any event logs.
 
-  - Execute the `runas /user:<UserAccountName> "services.msc"` command. Select **Action** > **Connect to another computer**. After connected, try to start or stop **Print Spooler** or any other service on the target computer.
+  - Execute the `runas /user:<UserAccountName> "services.msc"` command. Select **Action** > **Connect to another computer**. After connected, try to start or stop **Print Spooler** or any other service on the target computer.
 
-  - Execute the `runas /user:<UserAccountName> "regedt32.exe"` command. Select **File** > **Connect Network Registry**. After connected, try to open HKLM on the remote machine.
+  - Execute the `runas /user:<UserAccountName> "regedt32.exe"` command. Select **File** > **Connect Network Registry**. After connected, try to open HKLM on the remote machine.
 
-  - Execute the `runas /user:<UserAccountName> "Explorer.exe"` command. Type `\\admin$` in the address bar.
+  - Execute the `runas /user:<UserAccountName> "Explorer.exe"` command. Type `\\admin$` in the address bar.
 
 If any of these tasks fail, use a different account that has Domain Administrator or Local Administrator (on the target computer) permissions. Also try the same tasks from a member server or workstation to see if the tasks fail from multiple computers.
 
 > [!NOTE]
-> Failure to connect to the `admin$` share may prevent the management server from copying setup files to the target. Failure to connect to the Windows Registry on the target computer can result in the Health Service not installed properly. Failure to connect to Service Control Manager can prevent setup from starting the service.
+> Failure to connect to the `admin$` share may prevent the management server from copying setup files to the target. Failure to connect to the Windows Registry on the target computer can result in the Health Service not installed properly. Failure to connect to Service Control Manager can prevent setup from starting the service.
 
-The following ports must be open between the management server and the target computer:
+The following ports must be open between the management server and the target computer:
 
 - RPC endpoint mapper Port number: 135 Protocol: TCP/UDP
 - NetBIOS name service Port number: 137 Protocol: TCP/UDP
@@ -124,7 +124,7 @@ For example, the following command defines an LDAP query and passes it to `New-W
 $query = New-LdapQueryDiscoveryCriteria -LdapQuery: "(sAMAccountType=805306369)(name=srv1.contoso.com*)" -Domain:"contoso.com"$discoConfig = New-WindowsDiscoveryConfiguration -LdapQueryDiscoveryCriteria:$query
 ```
 
-As another example, the following command defines a name-based WindowsDiscoveryConfiguration that will discover a specific computer or computers:
+As another example, the following command defines a name-based WindowsDiscoveryConfiguration that will discover a specific computer or computers:
 
 ```powershell
 $discoConfig = New-WindowsDiscoveryConfiguration -ComputerName: "srv1.contoso.com", "srv2.contoso.com"

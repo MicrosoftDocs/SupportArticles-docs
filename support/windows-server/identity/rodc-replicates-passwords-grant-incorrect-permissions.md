@@ -26,15 +26,15 @@ Normally, Read Only Domain Controllers (RODCs) only replicate user passwords for
 
 However, for some user accounts that are not members of **Allowed RODC Password Replication Group** or are not listed in the RODC account's msDS-RevealOnDemandGroup attribute, you may find that passwords for those accounts that are authenticated by the RODC may be cached by the RODC.
 
-For example, when you compare the output of the **Advanced Password Replication Policy** property by using Active Directory Users and Computers and the output of `repadmin /prp view RODC_name reveal`, the entries listed differ between the two.
+For example, when you compare the output of the **Advanced Password Replication Policy** property by using Active Directory Users and Computers and the output of `repadmin /prp view RODC_name reveal`, the entries listed differ between the two.
 
 ## Cause
 
 This problem is caused by incorrect permission configuration.
 
-By default, the **Enterprise Domain Controllers** group that contains only writeable DCs has the permission [Replicating Directory Changes All](/windows/win32/adschema/r-ds-replication-get-changes-all) on the domain partition. For example, on "DC=contoso,DC=com" in Active Directory.  
+By default, the **Enterprise Domain Controllers** group that contains only writeable DCs has the permission [Replicating Directory Changes All](/windows/win32/adschema/r-ds-replication-get-changes-all) on the domain partition. For example, on "DC=contoso,DC=com" in Active Directory.  
 
-However, when the issue occurs, the problem RODC also has the **Replicating Directory Changes All** permission on the domain because it was granted by an administrator either to the **Enterprise Read-only Domain Controllers** group or to the RODC object directly or indirectly via some other group membership.
+However, when the issue occurs, the problem RODC also has the **Replicating Directory Changes All** permission on the domain because it was granted by an administrator either to the **Enterprise Read-only Domain Controllers** group or to the RODC object directly or indirectly via some other group membership.
 
 Normally, RODCs will only replicate user passwords if the user accounts are a member of the **Allowed RODC Password Replication Group** or are listed in the RODC account's msDS-RevealOnDemandGroup attribute.
 
@@ -50,11 +50,11 @@ Follow these steps to help validate the permissions and determine where the wron
 
 ### Step 1
 
-Use LDP to view the "control access" permissions on the domain. To do this, following these steps:
+Use LDP to view the "control access" permissions on the domain. To do this, following these steps:
 
 1. Run the *LDP.exe* command on a domain controller.
 2. Connect to the tree (for example, DC=contoso,DC=com).
-3. Right-click the **DC=contoso,DC=com** node, select **Advanced**, and then select **Security Descriptor**.
+3. Right-click the **DC=contoso,DC=com** node, select **Advanced**, and then select **Security Descriptor**.
 4. Choose the option **Text dump** for a text view of the permissions or leave it unchecked to get a GUI security editor.
 5. Verify the permissions to make sure that the **Enterprise Read-only Domain Controllers** group only has permission **Replicating Directory Changes.**
 
@@ -62,17 +62,17 @@ Use LDP to view the "control access" permissions on the domain. To do this, fol
 
 Verify the group memberships of the RODC to determine whether **Replicating Directory Changes All** is being granted through another group.
 
-To obtain the true membership of the RODC, you can use a query for the **TokenGroups** attribute to retrieve the effective group list of the user by using the LDP tool.
+To obtain the true membership of the RODC, you can use a query for the **TokenGroups** attribute to retrieve the effective group list of the user by using the LDP tool.
 
 ![A query for the TokenGroups attribute](./media/rodc-replicates-passwords-grant-incorrect-permissions/query-for-the-tokengroups-attribute.jpg)
 
-Make sure that you select **Base** scope and add the required attribute. When you are scoping the search on an individual user, you get the list for that user. If the user is in many groups, you must extend the amount of data that LDP prints into the window on the right, select **Options\General** from the menu, and adjust the **Chars per**  field to a higher value:
+Make sure that you select **Base** scope and add the required attribute. When you are scoping the search on an individual user, you get the list for that user. If the user is in many groups, you must extend the amount of data that LDP prints into the window on the right, select **Options\General** from the menu, and adjust the **Chars per**  field to a higher value:
   
 ![General Options](./media/rodc-replicates-passwords-grant-incorrect-permissions/general-options.jpg)
 
 ### Step 3
 
-On Windows Server 2008 R2, Windows 7, Windows Server 2008, or Windows Vista, check whether you encounter the issue that is outlined in the following article:  
+On Windows Server 2008 R2, Windows 7, Windows Server 2008, or Windows Vista, check whether you encounter the issue that is outlined in the following article:  
 [The "Active Directory Users and Computers" MMC snap-in does not list all the accounts that have passwords cached on the RODC in Windows](https://support.microsoft.com/topic/the-active-directory-users-and-computers-mmc-snap-in-does-not-list-all-the-accounts-that-have-passwords-cached-on-the-rodc-in-windows-948c0ecc-9b60-f4f8-6cd8-fb61c8812a5b)
 
 ### Step 4
@@ -87,13 +87,13 @@ repadmin /showobjmeta *<dn of RODC account>' > rodc_meta.txt
 
 ### Step 5
 
-Similarly to step 4, confirm the consistency of the **Allowed RODC Password Replication** **Group**  and any other group configured on the **msDS-RevealOnDemandGroup** attribute to see if the incorrectly cached user passwords can be explained by inconsistent group membership on different DCs that may be caused by a replication problem.
+Similarly to step 4, confirm the consistency of the **Allowed RODC Password Replication** **Group**  and any other group configured on the **msDS-RevealOnDemandGroup** attribute to see if the incorrectly cached user passwords can be explained by inconsistent group membership on different DCs that may be caused by a replication problem.
 
 ### Step 6
 
-Verify that users who have their passwords cached by the RODC aren't accidentally a member of a group that is configured to have their passwords cached.
+Verify that users who have their passwords cached by the RODC aren't accidentally a member of a group that is configured to have their passwords cached.
 
 > [!Note]
-> The MMC will gather the password replication policy information from any domain controller (even the RODC itself), while the `repadmin /prp` command will always interrogate a read-write domain controller.
+> The MMC will gather the password replication policy information from any domain controller (even the RODC itself), while the `repadmin /prp` command will always interrogate a read-write domain controller.
 
 If there are any replication inconsistencies between the RODC and an RW DC, this may explain the difference in output of these two utilities/methods.

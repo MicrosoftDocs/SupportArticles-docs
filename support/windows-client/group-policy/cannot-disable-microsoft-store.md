@@ -30,4 +30,4 @@ On a computer that's running Windows 10 Pro, you upgrade to Windows 10, version 
 
 ## Cause
 
-This behavior is by design. In Windows 10, version 1511, Windows 10, version 1809, and Windows 10, version 1903, these policies are applicable to users of the Enterprise and Education editions only.
+This behavior is by design. In Windows 10, version 1511, Windows 10, version 1809, and Windows 10, version 1903, these policies are applicable to users of the Enterprise and Education editions only.

@@ -20,29 +20,29 @@ In this situation, the kiosk profile logon type is **AAD User** or **Group**. Ad
 
 - Assigned Access logs:
 
-    > Log Name:  Microsoft-Windows-AssignedAccess/Admin  
-    > Source:        Microsoft-Windows-AssignedAccess  
-    > Date:            *DateTime*  
-    > Event ID:      31000  
+    > Log Name: &nbsp;Microsoft-Windows-AssignedAccess/Admin  
+    > Source: &nbsp; &nbsp; &nbsp; &nbsp;Microsoft-Windows-AssignedAccess  
+    > Date: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*DateTime*  
+    > Event ID: &nbsp; &nbsp; &nbsp;31000  
     > Task Category: Applying Assigned Access for current user.  
-    > Level:         Error  
+    > Level: &nbsp; &nbsp; &nbsp; &nbsp; Error  
     > Keywords:  
-    > User:          *UserID*  
-    > Computer:      *ComputerName*  
+    > User: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*UserSID*  
+    > Computer: &nbsp; &nbsp; *ComputerName*  
     > Description:  
     > Error Unspecified error applying assigned access for current user, signing out...
 
 - AAD logs:
 
-    > Log Name:      Microsoft-Windows-AAD/Operational  
-    > Source:        Microsoft-Windows-AAD  
-    > Date:          *DateTime*  
-    > Event ID:      1098  
+    > Log Name: &nbsp; Microsoft-Windows-AAD/Operational  
+    > Source: &nbsp; &nbsp; &nbsp; &nbsp;Microsoft-Windows-AAD  
+    > Date: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*DateTime*  
+    > Event ID: &nbsp; &nbsp; &nbsp;1098  
     > Task Category: AadTokenBrokerPlugin Operation  
-    > Level:         Error  
-    > Keywords:      Error,Error  
-    > User:          *UserID*  
-    > Computer:      *ComputerName*  
+    > Level: &nbsp; &nbsp; &nbsp; &nbsp; Error  
+    > Keywords: &nbsp; &nbsp; &nbsp;Error,Error  
+    > User: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*UserSID*  
+    > Computer: &nbsp; &nbsp; *ComputerName*  
     > Description:  
     > Error: 0xCAA2000C The request requires user interaction.  
     > Code: interaction_required  
@@ -52,7 +52,7 @@ In this situation, the kiosk profile logon type is **AAD User** or **Group**. Ad
 
 This behavior is by design.
 
-This issue occurs because the users are targeted by conditional access policies that require multi-factor authentication (MFA). Multi-app kiosk currently doesn't support MFA.
+This issue occurs because the users are targeted by conditional access policies that require multi-factor authentication (MFA). Multi-app kiosk currently doesn't support MFA.
 
 ## Resolution
 

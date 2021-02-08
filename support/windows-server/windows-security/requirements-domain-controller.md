@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article describes the requirements that you need to fulfill to issue a domain controller certificate from a third-party certification authority (CA).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 291010
 
 ## Summary

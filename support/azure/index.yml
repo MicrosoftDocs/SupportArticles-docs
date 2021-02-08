@@ -49,3 +49,5 @@ productDirectory:
       text: Use Secure File Exchange to exchange files with Microsoft Support
     - url: https://docs.microsoft.com/azure/azure-portal/supportability/how-to-create-azure-support-request
       text: Create an Azure support request
+    - url: general/email-domains-support-agent.md
+      text: Email address domains used by Microsoft support agents

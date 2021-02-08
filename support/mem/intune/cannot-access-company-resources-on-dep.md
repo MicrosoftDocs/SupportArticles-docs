@@ -23,7 +23,7 @@ You have a DEP device that's enrolled in Microsoft Intune and has Conditional Ac
 
 This issue occurs if the following conditions are true:
 
-- The enrollment profile has **Select where users must authenticate** set to **Setup Assistant**.
+- The enrollment profile has **Select where users must authenticate** set to **Setup Assistant**.
 
     :::image type="content" source="media/cannot-access-company-resources-on-dep/user-affinity.png" alt-text="screenshot of User affinity":::
 
@@ -41,8 +41,8 @@ Set **Select where users must authenticate** to **Company Portal** in the enroll
 3. In the **Select where users must authenticate** list, select **Company Portal**.
 
     > [!NOTE]
-    > After you change the authentication method from **Setup Assistant** to **Company Portal**, Intune skips user authentication through the iOS Setup Assistant and, instead, uses modern authentication. This enables the user to use Azure Active Directory multi-factor authentication (MFA). This method can be enforced without blocking Apple DEP enrollment.
+    > After you change the authentication method from **Setup Assistant** to **Company Portal**, Intune skips user authentication through the iOS Setup Assistant and, instead, uses modern authentication. This enables the user to use Azure Active Directory multi-factor authentication (MFA). This method can be enforced without blocking Apple DEP enrollment.
 
 ## Resolution - Method 2
 
-Deploy the Company Portal app to the device. To do this, follow the steps in [Configure the Company Portal app to support iOS DEP devices](/mem/intune/apps/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices).
+Deploy the Company Portal app to the device. To do this, follow the steps in [Configure the Company Portal app to support iOS DEP devices](/mem/intune/apps/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices).

@@ -24,8 +24,8 @@ _Original KB number:_ &nbsp; 4018013
 
 Consider the following scenario:
 
-- You're using a Windows Server 2012, Windows Server 2012 R2, or Windows Server 2016 cluster.
-- You changed the **Properties** for the cluster network name resource so that the **DNSName** and **Name** property are different than the **Name** of the cluster network name resource. For example, you run the following PowerShell cmdlet:
+- You're using a Windows Server 2012, Windows Server 2012 R2, or Windows Server 2016 cluster.
+- You changed the **Properties** for the cluster network name resource so that the **DNSName** and **Name** property are different than the **Name** of the cluster network name resource. For example, you run the following PowerShell cmdlet:
 
     ```powershell
     Get-ClusterResource "ClusterNetworkNameResource" | Get-ClusterParameter
@@ -37,7 +37,7 @@ Consider the following scenario:
 
 - You create a file share in this cluster group with the **CA Feature** enabled.
 
-In this scenario, the CA Feature doesn't work correctly, and you receive the following event in the SMBWitnessClient log:
+In this scenario, the CA Feature doesn't work correctly, and you receive the following event in the SMBWitnessClient log:
 
 > Log Name: WitnessClientAdmin  
 Source: Microsoft-Windows-SMBWitnessClient  
@@ -47,7 +47,7 @@ Description:
 witness client failed to register with Witness Server for notification on NetName with error (The parameter is incorrect.)
 
 > [!Note]
-> This event could also be logged with for a file share without the CA feature enabled.
+> This event could also be logged with for a file share without the CA feature enabled.
 
 ## Cause
 

@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 4534430
 
 After you perform a Transparent Data Encryption (TDE) certificate or key rotation, drop the original certification, and then conduct a log backup using COMPRESSION+MAXTRANSFERSIZE, you receive the following error:
 
-> Msg 33111, Level 16, State 3, Line LineNumber  
+> Msg 33111, Level 16, State 3, Line LineNumber  
 Cannot find server certificate with thumbprint '%'.  
 Msg 3013, Level 16, State 1, LineLineNumber  
 BACKUP LOG is terminating abnormally.
