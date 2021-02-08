@@ -59,7 +59,7 @@ Microsoft supports Windows containers on the following versions and releases of 
 
 To deploy containers in Windows Server, you must install Docker Enterprise (see [Install Docker Engine - Enterprise on Windows Servers](https://docs.docker.com/install/windows/docker-ee/)). Docker provides full support for Docker Enterprise at [Docker support](https://success.docker.com/support).
 
-On these versions of Windows, the types of containers that Microsoft supports depends on whether your host is a physical computer or a virtual machine, and whether Windows is running with Hyper-V enabled.
+On these versions of Windows, the types of containers that Microsoft supports depends on whether your host is a physical computer or a virtual machine, and whether Windows is running with Hyper-V enabled. 
 
 ### Supported container types on a physical container host
 
