@@ -2,6 +2,15 @@
 
 
 
+## Week of February 01, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/3/2021 | [Restored deleted public folders from dumpster cause a migration batch failure](/exchange/troubleshoot/move-or-migrate-mailboxes/public-folder-migration-batch-error) | added |
+| 2/4/2021 | [Restored deleted public folders from dumpster cause a migration batch failure](/exchange/troubleshoot/move-or-migrate-mailboxes/public-folder-migration-batch-error) | modified |
+
+
 ## Week of January 25, 2021
 
 

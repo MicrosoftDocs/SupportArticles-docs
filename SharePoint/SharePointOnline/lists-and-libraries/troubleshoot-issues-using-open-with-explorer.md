@@ -26,7 +26,7 @@ This article discusses how to troubleshoot issues that you may experience when y
 
 
 > [!NOTE]
-> The Open with Explorer command doesn't work in the Microsoft Edge browser, Google Chrome, Mozilla Firefox, or on the Mac platform. Open with Explorer only works with Internet Explorer. However, beginning August 17th, 2021, [Microsoft 365 apps will not longer support Internet Explorer 11](https://docs.microsoft.com/lifecycle/announcements/m365-ie11-microsoft-edge-legacy). 
+> The Open with Explorer command doesn't work in the Microsoft Edge browser, Google Chrome, Mozilla Firefox, or on the Mac platform. Open with Explorer only works with Internet Explorer. However, beginning August 17th, 2021, [Microsoft 365 apps will no longer support Internet Explorer 11](https://docs.microsoft.com/lifecycle/announcements/m365-ie11-microsoft-edge-legacy). 
 
 > [!NOTE]
 > The Open with Explorer command is slower and less reliable than [syncing SharePoint files with the new OneDrive sync client](https://support.office.com/article/6de9ede8-5b6e-4503-80b2-6190f3354a88). The OneDrive sync client provides [Files On-Demand](https://support.office.com/article/0e6860d3-d9f3-4971-b321-7092438fb38e), which allows you to access all your files in OneDrive without using local storage space. 
