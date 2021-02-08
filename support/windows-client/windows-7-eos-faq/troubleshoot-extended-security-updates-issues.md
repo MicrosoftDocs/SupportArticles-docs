@@ -605,7 +605,6 @@ Windows Server Update Service (WSUS) continues to scan cab files for Windows 7 S
 - [Get help with Windows activation errors](https://support.microsoft.com/help/10738/windows-10-get-help-with-activation-errors)  
 - [FAQ about Extended Security Updates for Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)  
 - [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091)  
-- [Frequently asked questions about ESU for Windows Server and SQL Server 2008 and 2008 R2​](https://support.microsoft.com/help/4539036/faq-about-esu-for-windows-server-and-sql-server-2008-2008-r2)  
 - [How to use Windows Server 2008 and 2008 R2 extended security updates (ESU)​](/windows-server/get-started/extended-security-updates)  
 - [Extended Security Updates and Configuration Manager ​](https://techcommunity.microsoft.com/t5/configuration-manager-blog/extended-security-updates-and-configuration-manager/ba-p/825618)  
 - [What are Extended Security Updates for SQL Server?](/sql/sql-server/end-of-support/sql-server-extended-security-updates?view=sql-server-ver15&preserve-view=true)  

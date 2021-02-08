@@ -34,9 +34,6 @@ As specified in RFC 1122, TCP uses delayed acknowledgments to reduce the number 
 Typically, an acknowledgment is sent for every other TCP segment that is received on a connection unless the delayed ACK timer (200 milliseconds) expires. You can adjust the delayed ACK timer by editing the following registry entry.
 
 > [!IMPORTANT]
-> Before you edit this registry entry, you must first install the hotfix that is described in the following article:  
-[815230](https://support.microsoft.com/help/815230) Changing the TcpAckFrequency value to 1 does not have any effect  
->
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
 [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows
   

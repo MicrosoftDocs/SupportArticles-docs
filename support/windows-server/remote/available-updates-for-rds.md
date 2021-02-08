@@ -128,8 +128,6 @@ The hotfixes and updates are arranged by component areas within Remote Desktop S
 
 - [2964832](https://support2.microsoft.com/help/2964832) RemoteApp program pop-up window is hidden in Windows
 
-- [2930340](https://support.microsoft.com/help/2930340)  Ctrl+Alt+Insert Remote Desktop keyboard shortcut doesn't work in Windows 8.1 or Windows Server 2012 R2
-
 - [2925429](https://support.microsoft.com/help/2925429) Print jobs are lost or an application crashes in Microsoft Enterprise Desktop Virtualization 2.0 in Windows
 
 - [2916266](https://support.microsoft.com/help/2916266)  Mstsc.exe crashes when you print a large document from an RDS session
