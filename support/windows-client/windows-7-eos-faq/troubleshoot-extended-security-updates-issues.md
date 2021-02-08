@@ -289,7 +289,7 @@ The computer can't communicate with the Microsoft Activation and Validation Serv
 
 #### Actions to take
 
-Make sure that the computer is connected to the internet or has the Activation URLs white listed, and try again.
+Make sure that the computer is connected to the internet or has the Activation URLs in the allow list, and try again.
 
 For computers that don't connect directly to the internet, you can use VAMT Proxy activation or Phone activation as an alternative. For more information, see [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091#).
 
@@ -307,7 +307,7 @@ The computer can't connect to the Microsoft Activation service. It might not be 
 
 #### Actions to take
 
-Make sure that the computer is connected to internet or has the Activation URLs white listed, and try again.
+Make sure that the computer is connected to internet or has the Activation URLs in the allow list, and try again.
 
 For computers that don't connect directly to the internet, you can use VAMT Proxy activation or Phone activation as an alternative. For more information, see [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091#).
 
