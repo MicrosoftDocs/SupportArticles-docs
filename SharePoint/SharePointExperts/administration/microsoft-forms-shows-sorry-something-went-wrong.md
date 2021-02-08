@@ -29,7 +29,7 @@ You may see the following error in a web traffic trace captured when the error o
 
 **Required resource is disabled. Inner Message: AADSTS500014: The service principal for resource 'https://lists.office.com' is disabled.**
 
-This indicate that a subscription within the tenant has lapsed, or that the administrator for this tenant has disabled the application, preventing tokens from being issued for it.
+This indicates that a subscription within the tenant has lapsed, or that the administrator for this tenant has disabled the application, preventing tokens from being issued for it.
 
 ## Resolution
 
