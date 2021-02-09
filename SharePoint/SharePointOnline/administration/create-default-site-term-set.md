@@ -33,7 +33,7 @@ The local term store is only available when publishing is enabled in the site.
 
 ## Resolution
 
-Activate the local term store in site which is missing.
+Activate the local term store which is missing.
 
 If you need a local term store and don't want to activate the publishing feature, or if the feature isn't available (as it is on modern communication sites), follow these steps:
 
@@ -47,13 +47,13 @@ If you need a local term store and don't want to activate the publishing feature
 
 3. In the List settings, go to the **Columns** section and select **Create column**.
 
-   ![Add a Managed Metadata column](./media/create-default-site-term-set/create-column.png)
+   ![Add a Managed Metadata column, create the column](./media/create-default-site-term-set/create-column.png)
 
 4. Choose a name for the column, such as **LocalMMS** or **NewMMS**.
 
 5. Change the column type from **Single line of text** to **Managed Metadata**.
 
-   ![Add a Managed Metadata column](./media/create-default-site-term-set/change-column-type-to-managed-metadata.png)
+   ![Add a Managed Metadata column, add a name](./media/create-default-site-term-set/change-column-type-to-managed-metadata.png)
 
 6. Scroll down to **Term Set Settings** and choose **Customize your term set:**. You can provide description if you would like, but you should see the name of the column you put above there.
 
