@@ -13,6 +13,8 @@
       href: ../administration/sync-to-outlook-tasks-link-missing.md
     - name: Automatic EXIF property import unsupported
       href: ../administration/automatic-exif-property-import-unsupported.md
+    - name: Create a default Site collection Term Set if none is present
+      href: ../administration/create-default-site-term-set.md
     - name: Deleting a content type from the SharePoint Content Type Hub
       href: ../administration/deleting-content-type-from-hub.md
     - name: Error when accessing SharePoint or OneDrive
