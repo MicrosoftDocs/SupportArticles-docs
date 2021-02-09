@@ -2794,6 +2794,8 @@
       href: ./windows-security/performance-tuning-ntlm-authentication-maxconcurrentapi.md
   - name: Permissions, access control, and auditing
     items:
+    - name: Access checks using Windows APIs return incorrect results
+      href: ./windows-security/access-checks-windows-apis-return-incorrect-results.md    
     - name: Can't copy files from mapped drive to local directory
       href: ./windows-security/cannot-copy-files-from-mapped-drive-to-local-directory.md
     - name: Default permissions for MachineKeys folders
