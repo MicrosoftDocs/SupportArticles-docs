@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 3090265
 
 ## Summary
 
-When you deploy software updates in Configuration Manager, you typically add the updates to a software update group and then deploy the software update group to clients. When you create the deployment, the update policy is sent to client computers, and the update content files are downloaded from a distribution point to the local cache on the client computer. The updates are then available for installation on the client. In the following section, we examine this process in detail and show how the process can be tracked by using log files. This information may be helpful when you're trying to identify and resolve problems in the software update process.
+When you deploy software updates in Configuration Manager, you typically add the updates to a software update group and then deploy the software update group to clients. When you create the deployment, the update policy is sent to client computers. And the update content files are downloaded from a distribution point to the local cache on the client computer. The updates are then available for installation on the client. In the following section, we examine this process in detail and show how the process can be tracked by using log files. This information may be helpful when you're trying to identify and resolve problems in the software update process.
 
 For more information about software updates in Configuration Manager, see [Software updates introduction](software-updates-introduction.md).
 
@@ -31,7 +31,7 @@ The following are logged in SMSProv.log:
 > Successfully synced permission table              SMS Provider  
 > Auditing: User CONTOSO\Admin created an instance of class SMS_AuthorizationList.    SMS Provider
 
-As part of the software update group creation process, SMSProv inserts data in appropriate CI_ tables, including the following:
+As part of the software update group creation process, SMSProv inserts data in appropriate CI_ tables, including:
 
 - CI_ConfigurationItems
 - CI_ConfigurationItemRelations
@@ -69,7 +69,7 @@ Object Replication Manager wakes up when files are dropped in objmgr.box and pro
 > Successfully processed AuthorizationList ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_9D013E6D-EF76-43F6-ACC4-80749AB8D90A   SMS_OBJECT_REPLICATION_MANAGER  
 > Set last row version for Configuration Item to 0x0000000000296047     SMS_OBJECT_REPLICATION_MANAGER
 
-The changes to the CI_* tables are then replicated to the child sites through database replication, allowing the software update group to show up on the child site.
+The changes to the CI_* tables are then replicated to the child sites through database replication. This operation allows the software update group to show up on the child site.
 
 Software update groups are configuration items (CIs) themselves, and the CI **Type ID** for software update groups is **9**. You can view the software update groups by running the following SQL query:
 
@@ -87,7 +87,7 @@ WHERE CI.CIType_ID = 9
 
 ## Manually create a deployment for software update group
 
-When a deployment for a software update group is created, an instance of the `SMS_UpdateGroupAssignment` class is created. This contains information about the deployment. The following are logged in SMSProv.log:
+When a deployment for a software update group is created, an instance of the `SMS_UpdateGroupAssignment` class is created. The instance contains information about the deployment. The following are logged in SMSProv.log:
 
 > PutInstanceAsync SMS_UpdateGroupAssignment       SMS Provider  
 > CExtProviderClassObject::DoPutInstanceInstance        SMS Provider  
@@ -125,7 +125,7 @@ After the updates are downloaded, SMS Provider adds each update to the specified
 > File Destination = \\\PS1SITE\SOURCE\Updates\Win7\d09e9a92-20e7-455a-a51b-aaeca7b7d7e1     SMS Provider  
 > CExtUserContext::LeaveThread : Releasing IWbemContextPtr=57376560      SMS Provider
 
-After all the updates are added to the package, SMS Provider updates the package and logs the following:
+After all the updates are added to the package, SMS Provider updates the package and logs the following entries:
 
 > CExtUserContext::EnterThread : User=CONTOSO\Admin Sid=0x01050000000000051500000068830AA65AAB72A155BCE9324F040000 Caching IWbemContextPtr=00000000036B7E50 in
 Process 0xc68 (3176)    SMS Provider  
@@ -170,56 +170,60 @@ When the update group assignment is created, SMS Provider inserts information ab
 > RCV: UPDATE on PolicyAssignmentChg_Notify for PolicyAssignmentChg_Notify_iu [16786995 ][60932] SMS_DATABASE_NOTIFICATION_MONITOR  
 > SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16786995.PAC [60931] SMS_DATABASE_NOTIFICATION_MONITOR
 
-After Object Replication Manager detects the CIA file in objmgr.box, it processes the file and creates the policy for the software update assignment. The following are logged in ObjMgr.log:
+After Object Replication Manager detects the CIA file in objmgr.box, it processes the file and creates the policy for the software update assignment. The following are logged in ObjMgr.log:
 
-> File notification triggered.    SMS_OBJECT_REPLICATION_MANAGER  
-> +++Begin processing changed CIA objects    SMS_OBJECT_REPLICATION_MANAGER  
-> \***** Processing Update Group Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745} \*****   SMS_OBJECT_REPLICATION_MANAGER  
-> Deleting notification file E:\ConfigMgr\inboxes\objmgr .box\16777222.CIA    SMS_OBJECT_REPLICATION_MANAGER  
-> CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745} has 3 Targeted CI(s)    SMS_OBJECT_REPLICATION_MANAGER  
-> PolicyID {3ACE84D4-7B2A-4D86-81AF-07E2AC255745} PolicyVersion 1.00 PolicyHash SHA256:63BAFA808F969849B40B2B727B49BC5093B965782716DDE3490528681CF27ACC     SMS_OBJECT_REPLICATION_MANAGER  
-> Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
-> Successfully created policy for CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}    SMS_OBJECT_REPLICATION_MANAGER  
-> Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
-> Successfully updated Policy Targeting for CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}   SMS_OBJECT_REPLICATION_MANAGER  
-> No file trigger for E:\ConfigMgr\inboxes\objmgr.box\16777222.CIV - status 2    SMS_OBJECT_REPLICATION_MANAGER  
-> Assigned CIs: [ 16777264 ]    SMS_OBJECT_REPLICATION_MANAGER  
-> Begin processing Assigned CI: [16777264]    SMS_OBJECT_REPLICATION_MANAGER  
-> Creating VersionInfo policy for CI 16777264   SMS_OBJECT_REPLICATION_MANAGER  
-> Creating VersionInfo policy ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_9D013E6D-EF76-43F6-ACC4- 80749AB8D90A/VI    SMS_OBJECT_REPLICATION_MANAGER  
-> 16777264 Referenced CIs: [ 929 930 1041 1042 1132 1133 ]    SMS_OBJECT_REPLICATION_MANAGER  
-> VersionInfo policy for CI 16777264 is Machine type    SMS_OBJECT_REPLICATION_MANAGER  
-> PolicyID ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_9D013E6D-EF76-43F6-ACC4-80749AB8D90A/VI PolicyVersion 1.00 PolicyHash SHA256:6EFE96F3D67773CA965EC67EC60B602FC78242509A096FCF44C2D5FDD5B2FC76     SMS_OBJECT_REPLICATION_MANAGER  
-> Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
-> Updated dependent policy references to CIA {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}     SMS_OBJECT_REPLICATION_MANAGER  
-> STATMSG: ID=5800 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_OBJECT_REPLICATION_MANAGER" SYS=PS1SITE.CONTOSO.COM SITE=PS1 PID=5404 TID=3380 GMTDATE=Thu Jan 23 20:31:38.889 2014 ISTR0="Microsoft Software Updates - 2014-01-23 03:30:52 PM" ISTR1="" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=1 AID0=414 AVAL0="{3ACE84D4-7B2A-4D86-81AF-07E2AC255745}"    SMS_OBJECT_REPLICATION_MANAGER  
-> Successfully updated CRCs for CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}      SMS_OBJECT_REPLICATION_MANAGER  
-> Successfully processed Update Group Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}     SMS_OBJECT_REPLICATION_MANAGER  
-> Set last row version for CI Assignment to 0x0000000000296628             SMS_OBJECT_REPLICATION_MANAGER
+> File notification triggered.    SMS_OBJECT_REPLICATION_MANAGER  
+> +++Begin processing changed CIA objects    SMS_OBJECT_REPLICATION_MANAGER  
+> \***** Processing Update Group Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745} \*****   SMS_OBJECT_REPLICATION_MANAGER  
+> Deleting notification file E:\ConfigMgr\inboxes\objmgr .box\16777222.CIA    SMS_OBJECT_REPLICATION_MANAGER  
+> CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745} has 3 Targeted CI(s)    SMS_OBJECT_REPLICATION_MANAGER  
+> PolicyID {3ACE84D4-7B2A-4D86-81AF-07E2AC255745} PolicyVersion 1.00 PolicyHash SHA256:63BAFA808F969849B40B2B727B49BC5093B965782716DDE3490528681CF27ACC     SMS_OBJECT_REPLICATION_MANAGER  
+> Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
+> Successfully created policy for CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}    SMS_OBJECT_REPLICATION_MANAGER  
+> Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
+> Successfully updated Policy Targeting for CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}   SMS_OBJECT_REPLICATION_MANAGER  
+> No file trigger for E:\ConfigMgr\inboxes\objmgr.box\16777222.CIV - status 2    SMS_OBJECT_REPLICATION_MANAGER  
+> Assigned CIs: [ 16777264 ]    SMS_OBJECT_REPLICATION_MANAGER  
+> Begin processing Assigned CI: [16777264]    SMS_OBJECT_REPLICATION_MANAGER  
+> Creating VersionInfo policy for CI 16777264   SMS_OBJECT_REPLICATION_MANAGER  
+> Creating VersionInfo policy ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_9D013E6D-EF76-43F6-ACC4- 80749AB8D90A/VI    SMS_OBJECT_REPLICATION_MANAGER  
+> 16777264 Referenced CIs: [ 929 930 1041 1042 1132 1133 ]    SMS_OBJECT_REPLICATION_MANAGER  
+> VersionInfo policy for CI 16777264 is Machine type    SMS_OBJECT_REPLICATION_MANAGER  
+> PolicyID ScopeId_FC8FCC38-4BB1-4245-92F5-9CE841775019/AuthList_9D013E6D-EF76-43F6-ACC4-80749AB8D90A/VI PolicyVersion 1.00 PolicyHash SHA256:6EFE96F3D67773CA965EC67EC60B602FC78242509A096FCF44C2D5FDD5B2FC76     SMS_OBJECT_REPLICATION_MANAGER  
+> Notifying policy provider about changes in policy content/targeting    SMS_OBJECT_REPLICATION_MANAGER  
+> Updated dependent policy references to CIA {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}     SMS_OBJECT_REPLICATION_MANAGER  
+> STATMSG: ID=5800 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_OBJECT_REPLICATION_MANAGER" SYS=PS1SITE.CONTOSO.COM SITE=PS1 PID=5404 TID=3380 GMTDATE=Thu Jan 23 20:31:38.889 2014 ISTR0="Microsoft Software Updates - 2014-01-23 03:30:52 PM" ISTR1="" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=1 AID0=414 AVAL0="{3ACE84D4-7B2A-4D86-81AF-07E2AC255745}"    SMS_OBJECT_REPLICATION_MANAGER  
+> Successfully updated CRCs for CI Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}      SMS_OBJECT_REPLICATION_MANAGER  
+> Successfully processed Update Group Assignment {3ACE84D4-7B2A-4D86-81AF-07E2AC255745}     SMS_OBJECT_REPLICATION_MANAGER  
+> Set last row version for CI Assignment to 0x0000000000296628             SMS_OBJECT_REPLICATION_MANAGER
 
-After being notified by the Object Replication Manager, Policy Provider updates the policy for the clients. The following are logged in PolicyPv.log:
+After being notified by the Object Replication Manager, Policy Provider updates the policy for the clients. The following are logged in PolicyPv.log:
 
-> File notification triggered.    SMS_POLICY_PROVIDER  
-> Found 14.CRP    SMS_POLICY_PROVIDER  
-> Adding to delete list: E:\ConfigMgr\inboxes\policypv.box\policytargeteval\14.CRP    SMS_POLICY_PROVIDER  
-> Processing any pending PolicyAssignmentChg_Notify   SMS_POLICY_PROVIDER  
-> Updating ResPolicyMap    SMS_POLICY_PROVIDER  
-> Policy or Policy Target Change Event triggered.    SMS_POLICY_PROVIDER  
-> File notification triggered.    SMS_POLICY_PROVIDER  
-> Building Collection Change List from Collection Member Notification files    SMS_POLICY_PROVIDER  
-> --Handle PolicyAssignment Resigning    SMS_POLICY_PROVIDER  
-> Completed batch with beginning PADBID = 16786995 ending PADBID = 16786996.    SMS_POLICY_PROVIDER  
-> --Process Policy Changes    SMS_POLICY_PROVIDER  
-> Found some Policy changes, returning New LastRowversion=0x000000000029662B    SMS_POLICY_PROVIDER  
-> Processing Updated Policies    SMS_POLICY_PROVIDER  
-> Building Collection Change List from New and Targeting Changed Policies    SMS_POLICY_PROVIDER  
-> --Update Policy Targeting Map    SMS_POLICY_PROVIDER  
-> **** Evaluating Collection 14 for targeting changes ****    SMS_POLICY_PROVIDER  
-> Advanced client policy changes detected for collection 14, \** 5 Added & 0 Deleted ***.     SMS_POLICY_PROVIDER  
-> --Process Policy Targeting Map    SMS_POLICY_PROVIDER  
-> **** Process notification table to update resultant targeting table ****    SMS_POLICY_PROVIDER
+> File notification triggered.    SMS_POLICY_PROVIDER  
+> Found 14.CRP    SMS_POLICY_PROVIDER  
+> Adding to delete list: E:\ConfigMgr\inboxes\policypv.box\policytargeteval\14.CRP    SMS_POLICY_PROVIDER  
+> Processing any pending PolicyAssignmentChg_Notify   SMS_POLICY_PROVIDER  
+> Updating ResPolicyMap    SMS_POLICY_PROVIDER  
+> Policy or Policy Target Change Event triggered.    SMS_POLICY_PROVIDER  
+> File notification triggered.    SMS_POLICY_PROVIDER  
+> Building Collection Change List from Collection Member Notification files    SMS_POLICY_PROVIDER
+>
+> --Handle PolicyAssignment Resigning    SMS_POLICY_PROVIDER  
+> Completed batch with beginning PADBID = 16786995 ending PADBID = 16786996.    SMS_POLICY_PROVIDER
+>
+> --Process Policy Changes    SMS_POLICY_PROVIDER  
+> Found some Policy changes, returning New LastRowversion=0x000000000029662B    SMS_POLICY_PROVIDER  
+> Processing Updated Policies    SMS_POLICY_PROVIDER  
+> Building Collection Change List from New and Targeting Changed Policies    SMS_POLICY_PROVIDER
+>
+> --Update Policy Targeting Map    SMS_POLICY_PROVIDER  
+> **** Evaluating Collection 14 for targeting changes ****    SMS_POLICY_PROVIDER  
+> Advanced client policy changes detected for collection 14, \** 5 Added & 0 Deleted ***.     SMS_POLICY_PROVIDER
+>
+> --Process Policy Targeting Map    SMS_POLICY_PROVIDER  
+> **** Process notification table to update resultant targeting table ****    SMS_POLICY_PROVIDER
 
-SQL Server Profiler covering the entire process displays the following:
+SQL Server Profiler covering the entire process displays the following entries:
 
 > insert into CI_CIAssignments (AssignmentAction, Description, AssignmentName, DesiredConfigType, DisableMomAlerts, DPLocality, AssignmentEnabled, EnforcementDeadline, EvaluationSchedule, ExpirationTime, LimitStateMessageVerbosity, LogComplianceToWinEvent, NonComplianceCriticality, NotifyUser, OverrideServiceWindows, PersistOnWriteFilterDevices, RaiseMomAlertsOnFailure, RandomizationEnabled, RebootOutsideOfServiceWindows, SendDetailedNonComplianceStatus, StartTime, StateMessagePriority, StateMessageVerbosity, SuppressReboot, UseBranchCache, UseGMTTimes, UserUIExperience, WoLEnabled, TargetCollectionID, LocaleID, Assignment_UniqueID, SourceSite, LastModifiedBy, AssignmentType, CreationTime, LastModificationTime, IsTombstoned) values (2, N'', N'Microsoft Software Updates - 2014-01-23 03:30:52 PM', 1, 0, 16, 1,
 '01/30/2014 15:30:00', null, null, 1, 0, null, 1, 0, 1, 0, null, 0, 0, '01/23/2014 15:31:00', 5, 5, 0, 1, 0, 1, 0, 14, 1033, N'{3ACE84D4-7B2A-
@@ -265,7 +269,13 @@ values(N'1.00', N'SHA256:6EFE96F3D67773CA965EC67EC60B602FC78242509A096FCF44C2D5F
 
 ## Create a deployment by using an automatic deployment rule
 
-Automatic deployment rule (ADR) execution is triggered manually, per a schedule or after software update synchronization is completed. The Rule Engine component evaluates the rule, and if any software updates match the defined criteria, the Rule Engine downloads the updates, creates a software update group, and creates a software update group assignment. The following example shows the process of software update group and deployment creation:
+Automatic deployment rule (ADR) execution is triggered manually, per a schedule or after software update synchronization is completed. The Rule Engine component evaluates the rule. If any software updates match the defined criteria, the Rule Engine will:
+
+- download the updates
+- create a software update group
+- create a software update group assignment
+
+The following example shows the process of software update group and deployment creation:
 
 RuleEngine.log shows beginning of rule processing:
 
@@ -291,7 +301,7 @@ RuleEngine.log shows rule processing and query to run to find updates that match
 > Rule resulted in a total of 1 updates    SMS_RULE_ENGINE  
 > Evaluation Resultant XML is: \<EvaluationResultXML xmlns:xsi="`http://www.w3.org/2001/XMLSchema-instance`" xmlns:xsd="`http://www.w3.org/2001/XMLSchema`">\<DefinitionUpdates/>\<CI_IDs>\<CI_ID>4514\</CI_ID>\</CI_IDs>\</EvaluationResultXML>     SMS_RULE_ENGINE
 
-Download is initiated for actionable updates:
+Download is started for actionable updates:
 
 > Enforcing Content Download Action SMS_RULE_ENGINE  
 > Download Rule Action XML is: \<ContentActionXML xmlns:xsi="`http://www.w3.org/2001/XMLSchema-instance`" xmlns:xsd="`http://www.w3.org/2001/XMLSchema`">\<PackageID>CS100006\</PackageID>\<ContentLocales>\<Locale>Locale:9\</Locale >\<Locale>Locale:0\</Locale>\</ContentLocales>\<ContentSources>\<Source Name="Internet" Order="1"/>\<Source Name="WSUS" Order="2"/>\<Source Name="UNC" Order="3" Location=""/>\</ContentSources>\</ContentActionXML>        SMS_RULE_ENGINE  
@@ -368,54 +378,63 @@ In ObjReplMgr.log:
 
 The following example shows the Policy creation process:
 
-In SMSDBMON.log:
+In SMSDBMON.log:
 
-> RCV: INSERT on CrpChange_Notify for CrpChange_Notify_ins [15 ][66199]   SMS_DATABASE_NOTIFICATION_MONITOR  
-> RCV: INSERT on RBAC_ChangeNotification for Rbac_Sync_ChangeNotification [399 ][66200]   SMS_DATABASE_NOTIFICATION_MONITOR  
-> SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\15.CRP [66199]      SMS_DATABASE_NOTIFICATION_MONITOR  
-> SND: Dropped E:\ConfigMgr\inboxes\hman.box\399.RBC [66200]   SMS_DATABASE_NOTIFICATION_MONITOR  
-> RCV: INSERT on PolicyAssignmentChg_Notify for PolicyAssignmentChg_Notify_iu [16787957 ][66201]    SMS_DATABASE_NOTIFICATION_MONITOR  
-> SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16787957.PAC [66201]    SMS_DATABASE_NOTIFICATION_MONITOR  
-> RCV: INSERT on PolicyAssignmentChg_Notify for PolicyAssignmentChg_Notify_iu [16787957 ][66202]    SMS_DATABASE_NOTIFICATION_MONITOR  
-> RCV: UPDATE on PolicyAssignmentChg_Notify for PolicyAssignmentChg_Notify_iu [16787957 ][66203]    SMS_DATABASE_NOTIFICATION_MONITOR  
-> SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16787957.PAC [66202]    SMS_DATABASE_NOTIFICATION_MONITOR  
-> SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16787957.PAC [66203]    SMS_DATABASE_NOTIFICATION_MONITOR
+> RCV: INSERT on CrpChange_Notify for CrpChange_Notify_ins [15 ][66199]   SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: INSERT on RBAC_ChangeNotification for Rbac_Sync_ChangeNotification [399 ][66200]   SMS_DATABASE_NOTIFICATION_MONITOR  
+> SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\15.CRP [66199]      SMS_DATABASE_NOTIFICATION_MONITOR  
+> SND: Dropped E:\ConfigMgr\inboxes\hman.box\399.RBC [66200]   SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: INSERT on PolicyAssignmentChg_Notify for PolicyAssignmentChg_Notify_iu [16787957 ][66201]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16787957.PAC [66201]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: INSERT on PolicyAssignmentChg_Notify for PolicyAssignmentChg_Notify_iu [16787957 ][66202]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> RCV: UPDATE on PolicyAssignmentChg_Notify for PolicyAssignmentChg_Notify_iu [16787957 ][66203]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16787957.PAC [66202]    SMS_DATABASE_NOTIFICATION_MONITOR  
+> SND: Dropped E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16787957.PAC [66203]    SMS_DATABASE_NOTIFICATION_MONITOR
 
-In PolicyPv.log:
+In PolicyPv.log:
 
-> File notification triggered.   SMS_POLICY_PROVIDER  
-> --Process Collection Changes    SMS_POLICY_PROVIDER  
-> Building Collection Change List from Collection Change Notification files    SMS_POLICY_PROVIDER  
-> --Process Collection Member Changes    SMS_POLICY_PROVIDER  
-> Building Collection Change List from Collection Member Notification files    SMS_POLICY_PROVIDER  
-> --Handle PolicyAssignment Resigning    SMS_POLICY_PROVIDER  
-> Found the certificate that matches the SHA1 hash.    SMS_POLICY_PROVIDER  
-> Completed batch with beginning PADBID = 16787957 ending PADBID = 16787958.    SMS_POLICY_PROVIDER  
-> --Process Policy Changes    SMS_POLICY_PROVIDER  
-> Found some Policy changes, returning New LastRowversion=0x0000000000487EB7    SMS_POLICY_PROVIDER  
-> Processing Updated Policies    SMS_POLICY_PROVIDER  
-> Building Collection Change List from New and Targeting Changed Policies    SMS_POLICY_PROVIDER  
-> --Update Policy Targeting Map    SMS_POLICY_PROVIDER  
-> **** Evaluating Collection 15 for targeting changes \****    SMS_POLICY_PROVIDER  
-> --Process Policy Targeting Map    SMS_POLICY_PROVIDER  
-> **** Process notification table to update resultant targeting table \****    SMS_POLICY_PROVIDER  
-> --Process Targeting and Collection Membership changes    SMS_POLICY_PROVIDER  
-> Updating Policy Map    SMS_POLICY_PROVIDER  
-> --UpdateMDMUserTargetingForUser    SMS_POLICY_PROVIDER  
-> Start Update MDM User Targeting For User  SMS_POLICY_PROVIDER  
-> --UpdatePolicyMapForPA    SMS_POLICY_PROVIDER  
-> Found 16787957.PAC    SMS_POLICY_PROVIDER  
-> Adding to delete list: E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16787957.PAC    SMS_POLICY_PROVIDER  
-> Updating ResPolicyMap    SMS_POLICY_PROVIDER
+> File notification triggered.   SMS_POLICY_PROVIDER
+>
+> --Process Collection Changes    SMS_POLICY_PROVIDER  
+> Building Collection Change List from Collection Change Notification files    SMS_POLICY_PROVIDER
+>
+> --Process Collection Member Changes    SMS_POLICY_PROVIDER  
+> Building Collection Change List from Collection Member Notification files    SMS_POLICY_PROVIDER
+>
+> --Handle PolicyAssignment Resigning    SMS_POLICY_PROVIDER  
+> Found the certificate that matches the SHA1 hash.    SMS_POLICY_PROVIDER  
+> Completed batch with beginning PADBID = 16787957 ending PADBID = 16787958.    SMS_POLICY_PROVIDER
+>
+> --Process Policy Changes    SMS_POLICY_PROVIDER  
+> Found some Policy changes, returning New LastRowversion=0x0000000000487EB7    SMS_POLICY_PROVIDER  
+> Processing Updated Policies    SMS_POLICY_PROVIDER  
+> Building Collection Change List from New and Targeting Changed Policies    SMS_POLICY_PROVIDER
+>
+> --Update Policy Targeting Map    SMS_POLICY_PROVIDER  
+> **** Evaluating Collection 15 for targeting changes \****    SMS_POLICY_PROVIDER
+>
+> --Process Policy Targeting Map    SMS_POLICY_PROVIDER  
+> **** Process notification table to update resultant targeting table \****    SMS_POLICY_PROVIDER
+>
+> --Process Targeting and Collection Membership changes    SMS_POLICY_PROVIDER  
+> Updating Policy Map    SMS_POLICY_PROVIDER
+>
+> --UpdateMDMUserTargetingForUser    SMS_POLICY_PROVIDER  
+> Start Update MDM User Targeting For User  SMS_POLICY_PROVIDER
+>
+> --UpdatePolicyMapForPA    SMS_POLICY_PROVIDER  
+> Found 16787957.PAC    SMS_POLICY_PROVIDER  
+> Adding to delete list: E:\ConfigMgr\inboxes\policypv.box\policytargeteval\16787957.PAC    SMS_POLICY_PROVIDER  
+> Updating ResPolicyMap    SMS_POLICY_PROVIDER
 
-RuleEngine.log showing rule processing completes:
+RuleEngine.log shows completion of rule processing:
 
 > CRuleHandler: Rule 1 Successfully Applied!   SMS_RULE_ENGINE  
 > Updated Success Information for Rule: 1     SMS_RULE_ENGINE
 
 ## Deployment evaluation and update installation on clients
 
-After the deployment and the deployment policy have been created on the server, clients receive the policy on the next policy evaluation cycle. Before reviewing the deployment evaluation process, it's important to find the Deployment Unique ID of the deployment by adding the **Deployment Unique ID** column in the console. For the deployment in the following example, the **Deployment Unique ID** is {B040D195-8FA8-48D3-953F-17E878DAB23D}.
+After the deployment and the deployment policy have been created on the server, clients receive the policy on the next policy evaluation cycle. Before you review the deployment evaluation process, it's important to find the Deployment Unique ID of the deployment. To find the Deployment Unique ID, add the **Deployment Unique ID** column in the console. For the deployment in the following example, the **Deployment Unique ID** is {B040D195-8FA8-48D3-953F-17E878DAB23D}.
 
 1. Policy Agent receives the policy on manual policy retrieval or on schedule. When policy is received, the following are logged in PolicyAgent.log:
 
@@ -427,7 +446,7 @@ After the deployment and the deployment policy have been created on the server, 
     > Initializing download of policy 'CCM_Policy_Policy5.PolicyID="{B040D195-8FA8-48D3-953F-17E878DAB23D}",PolicySource="SMS:PR1",PolicyVersion="1.00"' from '`http://PR1SITE.CONTOSO.COM/SMS_MP/.sms_pol?{B040D195-8FA8-48D3-953F-17E878DAB23D}.SHA256:0EE489DB3036BE80BB43676340249A254278BEBDDD80B6004C11FF10F12BC9D6`' PolicyAgent_ReplyAssignments  
     > Download of policy CCM_Policy_Policy5.PolicyID="{B040D195-8FA8-48D3-953F-17E878DAB23D}",PolicySource="SMS:PR1",PolicyVersion="1.00" completed (DTS Job ID: {D53DAB18-ED97-4373-A3BE-3FBA5DB3C6C6}) PolicyAgent_PolicyDownload
 
-    After the policy is evaluated, the scheduler for the deadline is evaluated. This is done by the Scheduler component. In this example, deadline randomization is disabled in Computer Agent client settings. Therefore, the deployment evaluation is initiated on deadline and without randomization. This is shown in the Scheduler.log file as follows:
+    After the policy is evaluated, the scheduler for the deadline is evaluated. This operation is done by the Scheduler component. In this example, deadline randomization is disabled in Computer Agent client settings. So the deployment evaluation is started on deadline and without randomization. Here's what we see in the Scheduler.log file:
 
     > Initialized trigger ("3E692B0000080000") for schedule 'Machine/DEADLINE:{B040D195-8FA8-48D3-953F-17E878DAB23D}':  
     > Conditions=1 with deadline 4320 minutes  
@@ -440,7 +459,7 @@ After the deployment and the deployment policy have been created on the server, 
     > Randomization is disabled in client settings and this schedule is set to honor client setting.   Scheduler  
     > SMSTrigger '3E692B0000080000' for scheduler 'Machine/DEADLINE:{B040D195-8FA8-48D3-953F-17E878DAB23D}' will fire at 02/09/2014 07:15:00 PM without randomization.   Scheduler
 
-2. At the scheduled deadline, Scheduler notifies the Updates Deployment Agent to initiate the deployment evaluation process, as shown in Scheduler.log:
+2. At the scheduled deadline, Scheduler notifies the Updates Deployment Agent to start the deployment evaluation process, as shown in Scheduler.log:
 
     > Sending message for schedule 'Machine/DEADLINE:{B040D195-8FA8-48D3-953F-17E878DAB23D}' (Target: 'direct:UpdatesDeploymentAgent', Name: '')    Scheduler  
     > SMSTrigger '3E692B0000080000' (Schedule ID: 'Machine/DEADLINE:{B040D195-8FA8-48D3-953F-17E878DAB23D}', Message Name: '', Target: 'direct:UpdatesDeploymentAgent') will never fire again.     Scheduler  
@@ -452,7 +471,7 @@ After the deployment and the deployment policy have been created on the server, 
     > \<AssignmentID>{B040D195-8FA8-48D3-953F-17E878DAB23D}\</AssignmentID>  
     > \</CIAssignmentMessage>'    UpdatesDeploymentAgent  
 
-    Updates Deployment Agent starts the deployment evaluation process by requesting a software update scan to make sure that the deployed updates are still applicable. In UpdatesDeployment.log:
+    Updates Deployment Agent starts the deployment evaluation process by requesting a software update scan. The scan ensures that the deployed updates are still applicable. In UpdatesDeployment.log:
 
     > Assignment {B040D195-8FA8-48D3-953F-17E878DAB23D} has total CI = 3   UpdatesDeploymentAgent  
     > Deadline received for assignment ({B040D195-8FA8-48D3-953F-17E878DAB23D})   UpdatesDeploymentAgent  
@@ -468,7 +487,7 @@ After the deployment and the deployment policy have been created on the server, 
 
 3. At this point, the scan request is handled by Scan Agent component. Scan Agent calls WUAHandler to perform a scan and then hands the results back to Updates Handler and Updates Deployment Agent. For more information about the scan process, see [Software update scan on clients](track-software-update-compliance-assessment.md#software-update-scan-on-clients).
 
-    After the scan is completed, Updates Deployment Agent is notified. This is noted in UpdatesDeployment.log as follows:
+    After the scan is completed, Updates Deployment Agent is notified. Here's what we see in UpdatesDeployment.log:
 
     > DetectJob completion received for assignment ({B040D195-8FA8-48D3-953F-17E878DAB23D}) UpdatesDeploymentAgent  
     > Making updates available for assignment ({B040D195-8FA8-48D3-953F-17E878DAB23D}) UpdatesDeploymentAgent  
@@ -476,12 +495,12 @@ After the deployment and the deployment policy have been created on the server, 
     > Update (Site_D3A5F7EA-25D4-4C6B-B47C-C74997522A76/SUM_ada7cf51-66b0-4a00-b37b-68d569d6ff8b) Name (Security Update for Windows Server 2008 R2 x64 Edition (KB2712808)) ArticleID (2712808) added to the targeted list of deployment ({B040D195-8FA8-48D3-953F-17E878DAB23D}) UpdatesDeploymentAgent  
     > Update (Site_D3A5F7EA-25D4-4C6B-B47C-C74997522A76/SUM_3cbcf577-5139-49b8-afe8-620af5c52f95) Name (Security Update for Windows Server 2008 R2 x64 Edition (KB2705219)) ArticleID (2705219) added to the targeted list of deployment ({B040D195-8FA8-48D3-953F-17E878DAB23D}) UpdatesDeploymentAgent  
 
-4. Updates Deployment Agent raises state messages for the deployment to update the current **Evaluation** and **Compliance** state. This is noted in UpdatesDeployment.log as follows:
+4. Updates Deployment Agent raises state messages for the deployment to update the current **Evaluation** and **Compliance** state. Here's what we see in UpdatesDeployment.log:
 
     > Raised assignment ({B040D195-8FA8-48D3-953F-17E878DAB23D}) state message successfully. TopicType = Evaluate, StateId = 2, StateName = ASSIGNMENT_EVALUATE_SUCCESS    UpdatesDeploymentAgent  
     > Raised assignment ({B040D195-8FA8-48D3-953F-17E878DAB23D}) state message successfully. TopicType = Compliance, Signature = 5e176837, IsCompliant = False    UpdatesDeploymentAgent
 
-    Updates Deployment Agent now starts a job to download the software update files from the distribution point. This can be seen in UpdatesDeployment.log:
+    Updates Deployment Agent now starts a job to download the software update files from the distribution point. Here's what we see in UpdatesDeployment.log:
 
     > DownloadCIContents Job ({C531FD04-FADA-4F75-A399-EEA2D3EDB56C}) started for assignment ({B040D195-8FA8-48D3-953F-17E878DAB23D})   UpdatesDeploymentAgent  
     > Progress received for assignment ({B040D195-8FA8-48D3-953F-17E878DAB23D})   UpdatesDeploymentAgent  
@@ -489,7 +508,7 @@ After the deployment and the deployment policy have been created on the server, 
     > Update (Site_D3A5F7EA-25D4-4C6B-B47C-C74997522A76/SUM_ada7cf51-66b0-4a00-b37b-68d569d6ff8b) Progress: Status = ciStateDownloading, PercentComplete = 0, Result = 0x0   UpdatesDeploymentAgent  
     > Update (Site_D3A5F7EA-25D4-4C6B-B47C-C74997522A76/SUM_3cbcf577-5139-49b8-afe8-620af5c52f95) Progress: Status = ciStateDownloading, PercentComplete = 0, Result = 0x0   UpdatesDeploymentAgent
 
-    It is also noted in UpdatesHandler.log as follows:
+    We can also see in UpdatesHandler.log:
 
     > Initiating download for the job ({C531FD04-FADA-4F75-A399-EEA2D3EDB56C}). UpdatesHandler  
     > Update Id = 3cbcf577-5139-49b8-afe8-620af5c52f95, State = StateDownloading, Result = 0x0 UpdatesHandler  
@@ -497,7 +516,7 @@ After the deployment and the deployment policy have been created on the server, 
     > Update Id = e06056e3-0199-4c68-8ac3-bdddff356a0a, State = StateDownloading, Result = 0x0 UpdatesHandler  
     > Timeout Options: Priority = 2, DPLocality = 1048578, Location = 604800, Download = 864000, PerDPInactivity = 0, TotalInactivityTimeout = 0, bUseBranchCache = True, bPersistOnWriteFilterDevices = True, bOverrideServiceWindow = False UpdatesHandler
 
-5. Updates Handler initiates the download request from Content Access service for the three actionable updates that are listed above. Note that the download job is started for the child update in the bundle and that the Content ID is logged.
+5. Updates Handler starts the download request from Content Access service for the three actionable updates that are listed above. The download job is started for the child update in the bundle and the Content ID is logged.
 
     In UpdatesHandler.log
     > Bundle update (3cbcf577-5139-49b8-afe8-620af5c52f95) is requesting download from child updates for action (INSTALL) UpdatesHandler  
@@ -517,21 +536,21 @@ After the deployment and the deployment policy have been created on the server, 
     > Successfully created download request {856FA4CA-D02A-4E2C-841E-841ED3C7EC01} for content fbb5724a-aa0f-47f9-908a-47068fd8ad6f.1 ContentAccess  
     > Created and submitted a new Content Request for fbb5724a-aa0f-47f9-908a-47068fd8ad6f.1.System ContentAccess
 
-6. Content Transfer Manager starts working on the download job. It first requests the location for the content that must be downloaded. This location request is handled by Location Services, which sends the location request to the management point, obtains the location response, and then hands it back to the Content Transfer Manager. This can be seen in ContentTransferManager.log:
+6. Content Transfer Manager starts working on the download job. It first requests the location for the content that must be downloaded. This location request is handled by Location Services. Location Services sends the location request to the management point, obtains the location response, and then hands it back to the Content Transfer Manager. Here's what we see in ContentTransferManager.log:
 
     > Starting CTM job {E0452CF4-5B04-4A1A-B8EB-10B11B063249}. ContentTransferManager  
     > CTM job {E0452CF4-5B04-4A1A-B8EB-10B11B063249} entered phase CCM_DOWNLOADSTATUS_DOWNLOADING_DATA ContentTransferManager  
     > Queued location request '{C56C01F2-2388-4710-BF3B-A526DB40E35F}' for CTM job '{E0452CF4-5B04-4A1A-B8EB-10B11B063249}'. ContentTransferManager  
     > CCTMJob::EvaluateState(JobID={E0452CF4-5B04-4A1A-B8EB-10B11B063249}, State=RequestedLocations) ContentTransferManager
 
-    This is also noted in LocationServices.log:
+    We can also see in LocationServices.log:
 
     > Created filter for LS request {C56C01F2-2388-4710-BF3B-A526DB40E35F}.   LocationServices  
     > ContentLocationReply : \<ContentLocationReply SchemaVersion="1.00">\<ContentInfo PackageFlags="0">\<ContentHashValues/>\</ContentInfo>\<Sites>\<Site>\<MPSite SiteCode="PR1" MasterSiteCode="PR1" SiteLocality="LOCAL" IISPreferedPort="80" IISSSLPreferedPort="443"/>\<LocationRecords>\<LocationRecord>\<URL Name="<`http://PR1SITE.CONTOSO.COM/SMS_DP_SMSPKG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f`>" Signature="<`http://PR1SITE.CONTOSO.COM/SMS_DP_SMSSIG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f.1.tar`>"/>\<ADSite Name="Default-First-Site-Name"/>\<IPSubnets>\<IPSubnet Address="192.168.10.0"/>\<IPSubnet Address=""/>\</IPSubnets>\<Metric Value=""/>\<Version>7958\</Version>\<Capabilities SchemaVersion="1.0">\<Property Name="SSLState" Value="0"/>\</Capabilities>\<ServerRemoteName>PR1SITE.CONTOSO.COM\</ServerRemoteName>\<DPType>SERVER\</DPType>\<Windows Trust="1"/>\<Locality>LOCAL\</Locality>\</LocationRecord>\</LocationRecords>\</Site>\</Sites>\<RelatedContentIDs/>\</ContentLocationReply>   LocationServices  
     > Distribution Point='<`http://PR1SITE.CONTOSO.COM/SMS_DP_SMSPKG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f`>', Locality='LOCAL', DPType='SERVER', Version='7958', Capabilities='\<Capabilities SchemaVersion="1.0">\<Property Name="SSLState" Value="0"/>\</Capabilities>', Signature='<`http://PR1SITE.CONTOSO.COM/SMS_DP_SMSSIG$/fbb5724a-aa0f-47f9-908a-47068fd8ad6f.1.tar`>', ForestTrust='TRUE',   LocationServices  
     > Calling back with locations for location request {C56C01F2-2388-4710-BF3B-A526DB40E35F}   LocationServices
 
-    Content Transfer Manager receives the distribution point location for the requested content and starts a Data Transfer Service job to initiate the download of the update. We see this in ContentTransferManager.log:
+    Content Transfer Manager receives the distribution point location for the requested content and starts a Data Transfer Service job to start the download of the update. Here's what we see in ContentTransferManager.log:
 
     > CCTMJob::UpdateLocations({E0452CF4-5B04-4A1A-B8EB-10B11B063249})   ContentTransferManager  
     > CTM_NotifyLocationUpdate   ContentTransferManager  
@@ -593,7 +612,7 @@ After the deployment and the deployment policy have been created on the server, 
     > Hash matches ContentAccess 2/9/2014 7:15:12 PM 3532 (0x0DCC)  
     > Hash verification succeeded for content fbb5724a-aa0f-47f9-908a-47068fd8ad6f.1 downloaded under context System ContentAccess
 
-    Then Updates Deployment Agent raises a state message to update the current enforcement state and then starts the installation of the update. We see the following in UpdatesDeployment.log:
+    Then Updates Deployment Agent raises a state message to update the current enforcement state and then starts the installation of the update. We see the following message in UpdatesDeployment.log:
 
     > Raised assignment ({B040D195-8FA8-48D3-953F-17E878DAB23D}) state message successfully. TopicType = Enforce, StateId = 8, StateName = ASSIGNMENT_ENFORCE_ADVANCE_DOWNLOAD_SUCCESS   UpdatesDeploymentAgent  
     > Starting install for assignment ({B040D195-8FA8-48D3-953F-17E878DAB23D})   UpdatesDeploymentAgent  
@@ -602,7 +621,7 @@ After the deployment and the deployment policy have been created on the server, 
     > Update (Site_D3A5F7EA-25D4-4C6B-B47C-C74997522A76/SUM_ada7cf51-66b0-4a00-b37b-68d569d6ff8b) Progress: Status = ciStateWaitInstall, PercentComplete = 0, DownloadSize = 0, Result = 0x0   UpdatesDeploymentAgent  
     > Update (Site_D3A5F7EA-25D4-4C6B-B47C-C74997522A76/SUM_e06056e3-0199-4c68-8ac3-bdddff356a0a) Progress: Status = ciStateWaitInstall, PercentComplete = 0, DownloadSize = 0, Result = 0x0   UpdatesDeploymentAgent
 
-    We also see this in UpdatesHandler.log:
+    We also see this entry in UpdatesHandler.log:
 
     > Job {CEE4AA3A-DE7B-4D9F-8949-E421BBBF2993} is starting execution   UpdatesHandler  
     > CDeploymentJob::InstallUpdatesInBatch - Batch or non-batch install is not in progress for the job ({CEE4AA3A-DE7B-4D9F-8949-E421BBBF2993}). So allowing install..   UpdatesHandler  
@@ -612,7 +631,7 @@ After the deployment and the deployment policy have been created on the server, 
     > Got execute info for (3) updates   UpdatesHandler  
     > Updates installation started as batch   UpdatesHandler
 
-8. Windows Update Agent Handler then copies the downloaded binaries to the Windows Update Agent cache (C:\Windows\SoftwareDistribution\Download) directory and instructs Windows Update Agent to start the installation process. This can be seen in WUAHandler.log:
+8. Windows Update Agent Handler then copies the downloaded binaries to the Windows Update Agent cache (C:\Windows\SoftwareDistribution\Download) directory and instructs Windows Update Agent to start the installation process. Here's what we see in WUAHandler.log:
 
     > Adding file to list for CopyToCache(): C:\Windows\ccmcache\1\windows6.1-kb2705219-v2-x64.cab   WUAHandler  
     > CopyToCache() for update (fbb5724a-aa0f-47f9-908a-47068fd8ad6f) completed successfully   WUAHandler  
@@ -628,7 +647,7 @@ After the deployment and the deployment policy have been created on the server, 
     > Async install completed.   WUAHandler  
     > Installation of updates completed.   WUAHandler
 
-    We also see the following in WindowsUpdate.log:
+    We also see the following entries in WindowsUpdate.log:
 
     > 2014-02-09 19:15:26:130 800 ed0 Agent \** START ** Agent: Installing updates [CallerId = CcmExec]  
     > 2014-02-09 19:15:26:130 800 ed0 Agent * Updates to install = 3  
@@ -641,13 +660,13 @@ After the deployment and the deployment policy have been created on the server, 
     > 2014-02-09 19:15:39:327 788 9f8 COMAPI - Reboot required = Yes  
     > 2014-02-09 19:15:39:327 788 9f8 COMAPI -- END -- COMAPI: Install [ClientId = CcmExec]
 
-9. After the updates are installed, Updates Deployment Agent checks whether any updates require a reboot, and then it notifies the user if client settings are configured to allow such notifications. This is shown in UpdatesDeployment.log:
+9. After the updates are installed, Updates Deployment Agent checks whether any updates require a reboot. Then, it notifies the user if client settings are configured to allow such notifications. Here's what we see in UpdatesDeployment.log:
 
     > No installations in pipeline, notify reboot. NotifyUI = True   UpdatesDeploymentAgent  
     > Notify reboot with deadline = Sunday, Feb 09, 2014. - 19:15:39, Ignore reboot Window = False, NotifyUI = True UpdatesDeploymentAgent  
     > Raised assignment ({B040D195-8FA8-48D3-953F-17E878DAB23D}) state message successfully. TopicType = Enforce, StateId = 5, StateName = ASSIGNMENT_ENFORCE_PENDING_REBOOT   UpdatesDeploymentAgent
 
-10. After the computer restarts, a post-reboot detection scan is started for the deployment to verify that updates are installed and to raise state messages for the update and deployment to indicate that updates are installed and that enforcement was successful. This is noted in UpdatesDeployment.log:
+10. After the computer restarts, a post-reboot detection scan is started for the deployment. The scan verifies that updates are installed and raises state messages for the update and deployment to indicate that updates are installed and that enforcement was successful. Here's what we see in UpdatesDeployment.log:
 
     > CTargetedUpdatesManager::DetectRebootPendingUpdates - Total Pending reboot updates = 3   UpdatesDeploymentAgent  
     > Initiated detect for pending reboot updates after system restart - JobId = {53F4851F-7E63-4C7E-952D-78345039FFFC}   UpdatesDeploymentAgent  
@@ -663,4 +682,4 @@ After the deployment and the deployment policy have been created on the server, 
 
 ## State message reporting
 
-Throughout the deployment phase, multiple state messages are raised to indicate the current state of the updates and the deployment itself. After these state messages are raised, they are processed in the way that's described in [State messaging data flow](state-messaging-description.md#state-messaging-data-flow).
+Throughout the deployment phase, multiple state messages are raised to indicate the current state of the updates and the deployment itself. After these state messages are raised, they're processed in the way that's described in [State messaging data flow](state-messaging-description.md#state-messaging-data-flow).
