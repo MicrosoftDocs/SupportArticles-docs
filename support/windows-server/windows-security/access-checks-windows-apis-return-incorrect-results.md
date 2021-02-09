@@ -15,7 +15,7 @@ ms.technology: windows-server-security
 ---
 # Access checks using Windows APIs return incorrect results
 
-_Original product version:_ &nbsp;Windows Server 2019, all editions
+_Original product version:_ &nbsp;Windows Server 2019, all editions  
 _Original KB number:_ &nbsp;933071
 
 ## Symptoms
