@@ -26,7 +26,7 @@ In this scenario, the debug deployment for the task sequence is not displayed. I
 
 This behavior is by design. Only one deployment for any individual task sequence can be seen on a device at one time.
 
-Typically, the oldest deployment is the one that is displayed. If the non-debug deployment for the task sequence is created first, only that deployment is displayed. If the reverse occurs and the debug deployment is created first, only the debug deployment is displayed.
+Typically, the oldest deployment is the one that is displayed. If the non-debug deployment for the task sequence is created first, only that deployment is displayed. If the reverse occurs and the debug deployment is created first, only the debug deployment is displayed.
 
 ## Resolution
 
@@ -49,8 +49,8 @@ To resolve the issue, use one of the following methods:
   > [!NOTE]
   > This deletes any history for those deployments. If this action is not desired, use one of the other methods to resolve the issue.
 
-When you use one of the solutions that uses the `TSDebugMode` variable, you don't have to also create a debug deployment for the task sequence that is targeted to the device. A non-debug deployment is sufficient.
+When you use one of the solutions that uses the `TSDebugMode` variable, you don't have to also create a debug deployment for the task sequence that is targeted to the device. A non-debug deployment is sufficient.
 
 ## More information
 
-For more information about how to enable debugging for task sequences, see [Debug a task sequence](/mem/configmgr/osd/deploy-use/debug-task-sequence).
+For more information about how to enable debugging for task sequences, see [Debug a task sequence](/mem/configmgr/osd/deploy-use/debug-task-sequence).

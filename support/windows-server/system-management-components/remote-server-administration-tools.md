@@ -12,6 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Server Manager
 ms.technology: windows-server-system-management-components
+adobe-target: true
 ---
 # Remote Server Administration Tools (RSAT) for Windows
 

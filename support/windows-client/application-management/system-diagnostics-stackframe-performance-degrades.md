@@ -22,9 +22,9 @@ _Original KB number:_ &nbsp; 4057154
 
 ## Symptoms
 
-Starting in October 2017, after you upgrade to Windows 10 or .NET Framework 4.7.1, you notice a significant decrease in performance when you run .NET Framework applications that use the `System.Diagnostics.StackFrame` class.
+Starting in October 2017, after you upgrade to Windows 10 or .NET Framework 4.7.1, you notice a significant decrease in performance when you run .NET Framework applications that use the `System.Diagnostics.StackFrame` class.
 
-Applications typically rely on `StackFrame` when they throw .NET exceptions. If this occurs at a high rate (more than 10 incidents per second), applications can slow down significantly (tenfold) and run noticeably slower than before.
+Applications typically rely on `StackFrame` when they throw .NET exceptions. If this occurs at a high rate (more than 10 incidents per second), applications can slow down significantly (tenfold) and run noticeably slower than before.
 
 To determine your version of Windows, see [Which Windows operating system am I running?](https://support.microsoft.com/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808).
 
@@ -42,13 +42,13 @@ This issue is fixed in the following Windows updates.
 
 To work around this issue, use one of the following methods.
 
-## Workaround 1 (preferred): Use a different constructor for StackFrame that takes a Boolean argument
+## Workaround 1 (preferred): Use a different constructor for StackFrame that takes a Boolean argument
 
 If application developers are able to make changes to their applications, call the `System.Diagnostics.StackTrace.#ctor(Boolean)` constructor by using a false argument to avoid capturing source information. This avoids the section of the code in which performance is decreased.
 
 ## Workaround 2: Roll back the system version
 
-Roll back the system to the previous version of Windows 10 or .NET Framework. To do this, follow these steps.
+Roll back the system to the previous version of Windows 10 or .NET Framework. To do this, follow these steps.
 
 ### How to roll back to the previous version of Windows 10
 
@@ -72,8 +72,8 @@ After you complete these steps, Windows 10 restores the previous version of the 
 
 Steps for Windows 7 SP1 and Windows Server 2008 R2 SP1:
 
-1. Open the **Programs and Features** item in Control Panel.
-2. In the **Uninstall or change a program** list, locate and select **Microsoft .NET Framework 4.7.1**, and then select **Uninstall/Change**.
+1. Open the **Programs and Features** item in Control Panel.
+2. In the **Uninstall or change a program** list, locate and select **Microsoft .NET Framework 4.7.1**, and then select **Uninstall/Change**.
 
     :::image type="content" source="./media/system-diagnostics-stackframe-performance-degrades/uninstall-donet-framework-4dot-7dot1.png" alt-text="Uninstall .Net Framework 4.7.1 on Windows 7 SP1 and Windows Server 2008 R2 SP1.":::
 
@@ -89,7 +89,7 @@ Steps for Windows 7 SP1 and Windows Server 2008 R2 SP1:
 6. Restart your computer if you are prompted to do this.
 
 > [!NOTE]
-> After you uninstall .NET Framework 4.7.1, your computer no longer has any version of .NET Framework 4 installed. You must reinstall a version of .NET Framework 4.
+> After you uninstall .NET Framework 4.7.1, your computer no longer has any version of .NET Framework 4 installed. You must reinstall a version of .NET Framework 4.
 
 Steps for Windows 8.1, Windows Server 2012, Windows Server 2012 R2, and Windows 10 Version 1607:
 
@@ -101,7 +101,7 @@ Steps for Windows 8.1, Windows Server 2012, Windows Server 2012 R2, and Windows 
 3. Right-click one of the following items, depending on your Windows version, and then click **Uninstall**:
 
     - Windows Server 2012: **Update for Microsoft Windows (KB4033345)**  
-    - Windows 8.1 or Server 2012 R2: **Update for Microsoft Windows (KB4033369)**  
+    - Windows 8.1 or Server 2012 R2: **Update for Microsoft Windows (KB4033369)**  
     - Windows 10 Version 1607: **Update for Microsoft Windows (KB4033369)**
 
 4. Click **Yes** to confirm uninstallation.
@@ -111,9 +111,9 @@ Steps for Windows 8.1, Windows Server 2012, Windows Server 2012 R2, and Windows 
 
 For more information about how many .NET exceptions a particular application throws, see [Exception Performance Counters](/previous-versions/dotnet/netframework-4.0/kfhcywhs(v=vs.100)).
 
-For more information about how to measure the rate of exceptions for an application, see [Runtime Profiling](/previous-versions/dotnet/netframework-4.0/w4bz2147(v=vs.100)).
+For more information about how to measure the rate of exceptions for an application, see [Runtime Profiling](/previous-versions/dotnet/netframework-4.0/w4bz2147(v=vs.100)).
 
 > [!NOTE]
-> This issue does not change the number of exceptions that are thrown. However, it does significantly decrease the ability of applications to handle those exceptions. For more information about this issue, see [this GitHub post](https://github.com/Microsoft/dotnet/blob/master/releases/net471/KnownIssues/517815-BCL%20Applications%20making%20heavy%20use%20of%20System.Diagnostics.StackTrace%20might%20run%20more%20slowly%20on%20.NET%204.7.1.md).
+> This issue does not change the number of exceptions that are thrown. However, it does significantly decrease the ability of applications to handle those exceptions. For more information about this issue, see [this GitHub post](https://github.com/Microsoft/dotnet/blob/master/releases/net471/KnownIssues/517815-BCL%20Applications%20making%20heavy%20use%20of%20System.Diagnostics.StackTrace%20might%20run%20more%20slowly%20on%20.NET%204.7.1.md).
 
 Applications that use [IKVM library](https://www.ikvm.net/) are known to be affected by this issue if they probe for assemblies. Probing for assemblies is known to cause exceptions.

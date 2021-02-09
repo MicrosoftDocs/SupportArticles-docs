@@ -223,10 +223,7 @@ The third-party products that this article discusses are manufactured by compani
 
 Temporarily remove any teaming software. The following combination is known to be incompatible: Dual-Port Intel Pro 100+ Server Adapter with Intel Teaming Software running an SNMP component.
 
-For an updated version of the Intel SNMP agent (Ilansnmp.dll) and for more information, contact the network adapter manufacturer or the third-party software vendor. For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:  
-[811876](https://support.microsoft.com/help/811876) Network adapters disappear from the network adapters list and cluster server stops responding with the Intel SNMP agent installed
-
-[278431](https://support.microsoft.com/help/278431) Using teaming adapters with network load balancing may cause network problems
+For an updated version of the Intel SNMP agent (Ilansnmp.dll) and for more information, contact the network adapter manufacturer or the third-party software vendor.
 
 ### Method 3: Use the Group Policy Results tool to see which Group Policy objects are applied
 

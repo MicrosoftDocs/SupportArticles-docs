@@ -63,24 +63,11 @@ _Original KB number:_ &nbsp; 2974503
 |February 13, 2016| [3129784](https://support.microsoft.com/help/3129784)|Update Rollup 9 for System Center 2012 R2 Virtual Machine Manager|
 ||||
 
-## HNV troubleshooting and data collection
-
-| Knowledge Base article| Title |
-|---|---|
-| [3069275](https://support.microsoft.com/help/3069275)|Troubleshooting and data collection in Windows Server 2012 R2 Hyper-V Network Virtualization (HNV) environments|
-| [2968430](https://support.microsoft.com/help/2968430)|How to enable debug logging for Hyper-V Network Virtualization|
-|||
-
 ## Other known issues and solutions
 
 | Date added| Knowledge Base article| Title |
 |---|---|---|
-|June 11, 2014| [2970306](https://support.microsoft.com/help/2970306)|Intermittent connectivity issues and dropped connections from HNV-enabled VMs to Azure resources over S2S VPN through NVGRE gateway|
-|June 11, 2014| [2974395](https://support.microsoft.com/help/2974395)|Communication over HNV Gateway fails intermittently if SkipAsSource not set|
-|June 11, 2014| [2902166](https://support.microsoft.com/help/en-us)|Poor network performance on virtual machines on a Windows Server 2012 Hyper-V host if VMQ is enabled|
-|December 5, 2014| [3003527](https://support.microsoft.com/help/3003527)|Description of support boundaries for using Windows Network Load Balancer with Hyper-V Network Virtualization networks|
-|December 5, 2014| [3021753](https://support.microsoft.com/help/3021753)|Reduced MTU size that is reported to guest virtual machines in HNV environments may not function correctly|
+|June 11, 2014| [2902166](https://support.microsoft.com/help/2902166)|Poor network performance on virtual machines on a Windows Server 2012 Hyper-V host if VMQ is enabled|
 |May 13, 2015| [2986895](https://support.microsoft.com/help/2986895)|Virtual machines lose network connectivity when you use Broadcom NetXtreme 1-gigabit network adapters|
-|May 13, 2015| [3056701](https://support.microsoft.com/help/3056701)|Can't establish site-to-site VPN between HNV Gateway and Cisco ASA in Windows Server 2012 R2|
 |January 12, 2016| [3135020](https://support.microsoft.com/help/3135020)|Recommended hotfixes, updates, and known solutions for Windows Server 2012 R2 Hyper-V environments|
 ||||

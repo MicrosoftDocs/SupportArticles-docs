@@ -14,13 +14,13 @@ _Original KB number:_ &nbsp; 4459394
 
 ## Understanding state messaging
 
-State messaging in Configuration Manager is a mechanism that reflects a client condition at a certain point in time. Status messages, by contrast, work to help administrators track the workflow of data through various Configuration Manager components.
+State messaging in Configuration Manager is a mechanism that reflects a client condition at a certain point in time. Status messages, by contrast, work to help administrators track the workflow of data through various Configuration Manager components.
 
-A status message viewer is built right into the console so that status messages can be viewed and tracked. There's no equivalent viewer for state messages. The result of state messages is seen in reports, various data in the console (such as the number of systems that have to be updated), and in client logs.
+A status message viewer is built right into the console so that status messages can be viewed and tracked. There's no equivalent viewer for state messages. The result of state messages is seen in reports, various data in the console (such as the number of systems that have to be updated), and in client logs.
 
 State messages contain concise information about conditions in-place on the client. The state messaging system is used by specific components of Configuration Manager, such as software updates, desired configuration management, and network access protection.
 
-Critical software update data relies on the state messaging system in Configuration Manager. Understanding state messaging will become even more important in future versions of Configuration Manager as more components take advantage of it.
+Critical software update data relies on the state messaging system in Configuration Manager. Understanding state messaging will become even more important in future versions of Configuration Manager as more components take advantage of it.
 
 The following diagram provides a good description of how the state messaging system works.
 
@@ -28,9 +28,9 @@ The following diagram provides a good description of how the state messaging sys
 
 The green box represents the state messaging system. The components inside the box are those that feed information to the system.
 
-When state messages are received, two things occur: First, state messages are stored in the Windows Management Instrumentation (WMI) provider. Second, the state system scrapes WMI on a 15-minute cycle (default) for any state messages that have not yet been sent, and then forwards them to the management point. The cycle period can be changed.
+When state messages are received, two things occur: First, state messages are stored in the Windows Management Instrumentation (WMI) provider. Second, the state system scrapes WMI on a 15-minute cycle (default) for any state messages that have not yet been sent, and then forwards them to the management point. The cycle period can be changed.
 
-In the diagram, the client installation piece is shown separately for clarity. During the client installation, the management point is located and targeted for state messages. Before that point is reached, or if the management point is down for some reason, state messages about the client installation are forwarded to the fallback status point (FSP), if it's configured. For everything else, traffic goes directly to the management point.
+In the diagram, the client installation piece is shown separately for clarity. During the client installation, the management point is located and targeted for state messages. Before that point is reached, or if the management point is down for some reason, state messages about the client installation are forwarded to the fallback status point (FSP), if it's configured. For everything else, traffic goes directly to the management point.
 
 State messages that arrive at the management point are processed into .smx files by the MP Relay component, and put into the `auth\statesys.box\incoming` folder on the site server. Then, they are processed into the database to complete the workflow.
 
@@ -51,13 +51,13 @@ On the site server, edit the following registry entry to enable verbose logging,
 |`HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/SMS/Components/SMS_STATE_SYSTEM`|Verbose Logging|1|
 |||
 
-Tracing SQL commands requires that SQL tracing is enabled for Configuration Manager components. However, not much useful data can be obtained directly from the tracing. This is true even if Profiler is enabled. Instead, we will examine the Updatesdeployment.log and Statemessage.log files on the client. By interpreting the state messages in these logs, we can get a clear picture of what is occurring at the various steps in the process.
+Tracing SQL commands requires that SQL tracing is enabled for Configuration Manager components. However, not much useful data can be obtained directly from the tracing. This is true even if Profiler is enabled. Instead, we will examine the Updatesdeployment.log and Statemessage.log files on the client. By interpreting the state messages in these logs, we can get a clear picture of what is occurring at the various steps in the process.
 
-Before we examine log code examples, we have to understand the state message format. The state message itself consists of several parts, including **Topic Type** and **State Message ID**. At some locations in the logs, the **Topic Type** seems to already be interpreted for you.
+Before we examine log code examples, we have to understand the state message format. The state message itself consists of several parts, including **Topic Type** and **State Message ID**. At some locations in the logs, the **Topic Type** seems to already be interpreted for you.
 
-You won't always see **Topic Type** and **State Message ID** together in the same log, and one type of data without the other doesn't really help you determine what is needed. However, even if you have both **Topic Type** and **State Message ID**, the information isn't helpful unless you can interpret it.
+You won't always see **Topic Type** and **State Message ID** together in the same log, and one type of data without the other doesn't really help you determine what is needed. However, even if you have both **Topic Type** and **State Message ID**, the information isn't helpful unless you can interpret it.
 
-The following chart can help you to interpret the combination of `TopicType` and `StateID` to obtain meaningful data.
+The following chart can help you to interpret the combination of `TopicType` and `StateID` to obtain meaningful data.
 
 ```sql
 select * from v_StateNames  
@@ -132,11 +132,11 @@ select * from v_StateNames
 
 For more information, see [State messages in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/state-messaging-system-center-configuration-manager).
 
-The following example aligns and compares the Updatesdeployment.log and Statemessage.log files. Make sure that the logs refer to the same state message by aligning the same `TopicID` (green text). This clearly indicates that the two logs are referring to the same state message. The `TopicType` is shown in light blue text. Notice that one log might show the actual number that can be interpreted from the [State messaging data](#state-messaging-data) chart, and the other might show a generic value (already interpreted). The **State Message ID** (`StateId`) is shown in purple text.
+The following example aligns and compares the Updatesdeployment.log and Statemessage.log files. Make sure that the logs refer to the same state message by aligning the same `TopicID` (green text). This clearly indicates that the two logs are referring to the same state message. The `TopicType` is shown in light blue text. Notice that one log might show the actual number that can be interpreted from the [State messaging data](#state-messaging-data) chart, and the other might show a generic value (already interpreted). The **State Message ID** (`StateId`) is shown in purple text.
 
 :::image type="content" source="./media/state-messaging-description/logs.png" alt-text="Screenshot of log messages.":::
 
-By combining the `TopicType` and **State Message ID** (`StateId`) from the chart, you can track exactly what is occurring in the logs. In this example, these code examples show the following:
+By combining the `TopicType` and **State Message ID** (`StateId`) from the chart, you can track exactly what is occurring in the logs. In this example, these code examples show the following:
 
 - Update evaluation
 - The result of the evaluation
@@ -146,23 +146,23 @@ By combining the `TopicType` and **State Message ID** (`StateId`) from the char
 
 This is just one example of how state messages are sent into the state system.
 
-## State messaging data flow
+## State messaging data flow
 
 The following is an actual example of how state messaging data makes its way to the management point and is processed to the database.
 
-This example uses a test client. It starts by forcing the client to scrape WMI for all state messaging information, and then sends that information to the management point on its next polling cycle.
+This example uses a test client. It starts by forcing the client to scrape WMI for all state messaging information, and then sends that information to the management point on its next polling cycle.
 
 In WMI, state messages are stored in the `root\ccm\statemsg` namespace. In that namespace, there are two classes of interest: `CCM_StateMsg_SerialNum` and `CCM_StateMsg`.
 
-The `CCM_StateMsg_SerialNum` class is used to record the last serial number that's used for a state message. Every state message has a unique serial number, similar to the hardware inventory. In this manner, the site server can keep track of whether it's missing any state messages from the system. This is important because missing state messages may cause incomplete or inaccurate state reporting.
+The `CCM_StateMsg_SerialNum` class is used to record the last serial number that's used for a state message. Every state message has a unique serial number, similar to the hardware inventory. In this manner, the site server can keep track of whether it's missing any state messages from the system. This is important because missing state messages may cause incomplete or inaccurate state reporting.
 
 :::image type="content" source="./media/state-messaging-description/class.png" alt-text="Screenshot of CCM_StateMsg_SerialNum class.":::
 
-The `CCM_StateMsg` class contains the state messages themselves. In the class instance, you can find all the state messages that are recorded.
+The `CCM_StateMsg` class contains the state messages themselves. In the class instance, you can find all the state messages that are recorded.
 
 :::image type="content" source="./media/state-messaging-description/class-instance.png" alt-text="Instances of CCM_StateMsg.":::
 
-If you open one of these messages, you will find the details of the state message and some data that we previously discussed, as shown in the following example.
+If you open one of these messages, you will find the details of the state message and some data that we previously discussed, as shown in the following example.
 
 :::image type="content" source="./media/state-messaging-description/details.png" alt-text="Details of the state message.":::
 
@@ -184,15 +184,15 @@ $UpdatesStore = New-Object -ComObject Microsoft.CCM.UpdatesStore
 $UpdatesStore.RefreshServerComplianceState()
 ```
 
-This script can be found on the web in various locations. It uses the Configuration Manager SDK to cause the client to resend its data to the management point.
+This script can be found on the web in various locations. It uses the Configuration Manager SDK to cause the client to resend its data to the management point.
 
-Typically, a Visual Basic script (VBScript) is run by using cscript. Notice that the script may fail if you try to run it yourself. The problem is that Configuration Manager is a 32-bit application that's running on a 64-bit server. The default version of cscript is the 64-bit version and generally works fine with any VBScript. However, in this case, the call that's being made requires the 32-bit version of cscript that you must run out of the syswow64 folder.
+Typically, a Visual Basic script (VBScript) is run by using cscript. Notice that the script may fail if you try to run it yourself. The problem is that Configuration Manager is a 32-bit application that's running on a 64-bit server. The default version of cscript is the 64-bit version and generally works fine with any VBScript. However, in this case, the call that's being made requires the 32-bit version of cscript that you must run out of the syswow64 folder.
 
 :::image type="content" source="./media/state-messaging-description/cscript-command.png" alt-text="Screenshot of administrator command prompt." border="false":::
 
 When the next state message polling cycle occurs, all state messages are sent to the management point.
 
-In the Statemessage.log file, you can see that the state message information is pulled, formatted into XML, and then sent to the management point. The state message information should resemble the following:
+In the Statemessage.log file, you can see that the state message information is pulled, formatted into XML, and then sent to the management point. The state message information should resemble the following:
 
 > \<![LOG[StateMessage body: \<?xml version="1.0" encoding="UTF-16"?>  
 > \<Report>\<ReportHeader>\<Identification>\<Machine>\<ClientInstalled>1\</ClientInstalled>\<ClientType>1\</ClientType>\<ClientID>GUID:*GUID*\</ClientID>  
@@ -205,7 +205,7 @@ In the Statemessage.log file, you can see that the state message information i
 > [!NOTE]
 > This example is truncated to a single state message because of the size of the XML file.
 
-Although the Statemessage.log file records that the messages are dispatched to the management point, the state messaging system doesn't actually move data to the management point. In the following example, you can see that `CCMMessaging` does this. There's more that go on behind the scenes at this point. However, it's sufficient to know that `CCMMessaging` sends the data to the management point (in this case, the `MP_Relay` component).
+Although the Statemessage.log file records that the messages are dispatched to the management point, the state messaging system doesn't actually move data to the management point. In the following example, you can see that `CCMMessaging` does this. There's more that go on behind the scenes at this point. However, it's sufficient to know that `CCMMessaging` sends the data to the management point (in this case, the `MP_Relay` component).
 
 > \<![LOG[OutgoingMessage(Queue='mp_**mp_relay**endpoint', ID={A9E7A07D-223D-4F5D-93D5-15AF5B72E05C}): Delivered successfully to host '*host_name*'.]LOG]!>
 
@@ -231,7 +231,7 @@ The following is an example of an XML file opened in Internet Explorer. The comp
 
 :::image type="content" source="./media/state-messaging-description/xml.png" alt-text="An example .smx.xml file in Internet Explorer." border="false":::
 
-Finally, the state messages must be processed into the database. In the Statesys.log file, you can see such messages that resemble the following:
+Finally, the state messages must be processed into the database. In the Statesys.log file, you can see such messages that resemble the following:
 
 > Found new state messages to process, starting processing thread  
 > Thread "State Message Processing Thread #0" id:5076 started  
@@ -242,13 +242,13 @@ Finally, the state messages must be processed into the database. In the Statesy
 > CMessageProcessor - Processed 1 message files in this batch, with 0 bad files.  
 > Thread "State Message Processing Thread #0" id:5076 terminated normally
 
-The database processing component can be made visible by enabling SQL tracing. However, that doesn't help much here. Therefore, we must use the SQL profiler instead. The profiler gives us a hint of what is occurring behind the scenes - but not completely. There are several SQL stored procedures that are responsible for processing state messages. Additionally, that are several tables in the database that store state messaging data. The stored procedures that do state message processing generally start with the name `spProcess`. There are many of these.
+The database processing component can be made visible by enabling SQL tracing. However, that doesn't help much here. Therefore, we must use the SQL profiler instead. The profiler gives us a hint of what is occurring behind the scenes - but not completely. There are several SQL stored procedures that are responsible for processing state messages. Additionally, that are several tables in the database that store state messaging data. The stored procedures that do state message processing generally start with the name `spProcess`. There are many of these.
 
-Remember that the site server keeps track of state messages as they arrive to be able to flag any missing messages and periodically request a resync, as necessary. State messages are important. You don't want to miss any.
+Remember that the site server keeps track of state messages as they arrive to be able to flag any missing messages and periodically request a resync, as necessary. State messages are important. You don't want to miss any.
 
-As state messages arrive, the unique ID is read and stored in the database. As processing continues, the data is regularly updated. If a gap is detected, that data is flagged and stored as missing state messages in the `SR_MissingMessageRanges` table. Ideally, this table will be empty. However, in production, you may see data in the table. This table helps track state messages that require a resync.
+As state messages arrive, the unique ID is read and stored in the database. As processing continues, the data is regularly updated. If a gap is detected, that data is flagged and stored as missing state messages in the `SR_MissingMessageRanges` table. Ideally, this table will be empty. However, in production, you may see data in the table. This table helps track state messages that require a resync.
 
-The site control file is located in the database. To obtain the specific settings for `STATE_MESSAGE_SYSTEM`, run the following query on a primary or CAS site:
+The site control file is located in the database. To obtain the specific settings for `STATE_MESSAGE_SYSTEM`, run the following query on a primary or CAS site:
 
 ```sql
 select * from SC_Component_Property where ComponentID in (select ID from SC_Component where ComponentName like 'SMS_STATE_SYSTEM') and sitenumber in (select SiteNumber from SC_SiteDefinition where Sitecode = (Select ThisSiteCode from SMSData))
@@ -265,10 +265,10 @@ select * from SC_Component_Property where ComponentID in (select ID from SC_Comp
 |Max Chunks Fetched|||100|
 |Min Missing Message Age|||2880|
 |Resync Check Interval|||15|
-|Retry Config|REG_SZ|\<Config>\<Retry PatternID="0"  RetryQueue="0">7200,28800,86400\</Retry>\</Config>|0|
+|Retry Config|REG_SZ|\<Config>\<Retry PatternID="0"  RetryQueue="0">7200,28800,86400\</Retry>\</Config>|0|
 |||||
 
 > [!NOTE]
 >
-> - **Resync Check Interval** is set to **60** minutes. This is the schedule for checking systems that require state message resyncs.
-> - **Min Missing Message Age** is set to **2880**. This is how long a message must be missing before a resync is requested.
+> - **Resync Check Interval** is set to **60** minutes. This is the schedule for checking systems that require state message resyncs.
+> - **Min Missing Message Age** is set to **2880**. This is how long a message must be missing before a resync is requested.

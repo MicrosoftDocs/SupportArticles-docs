@@ -90,7 +90,7 @@
     href: dns-management-pack-discovery-fails.md
   - name: Domain controllers are unavailable or Not Monitored
     href: domain-controllers-unavailable.md
-  - name: Event 26001 is logged regularly
+  - name: Event 26001 is logged regularly
     href: event-26001-logged-regularly.md
   - name: Event ID 4625 when using Exchange 2010 management pack
     href: event-id-4625-audit-failure.md

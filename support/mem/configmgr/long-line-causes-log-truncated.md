@@ -18,4 +18,4 @@ In Microsoft System Center 2012 Configuration Manager, when you use the CMTrace 
 
 ## Workaround
 
-There are two workarounds to this issue. First, you can view the log file in Notepad. Viewing the log file in Notepad will allow you to see all of the content. Second, if you prefer to view the log in CMTrace you can edit the offending lines in Notepad (making them less than 8000 characters long) and then view the edited log in CMTrace.
+There are two workarounds to this issue. First, you can view the log file in Notepad. Viewing the log file in Notepad will allow you to see all of the content. Second, if you prefer to view the log in CMTrace you can edit the offending lines in Notepad (making them less than 8000 characters long) and then view the edited log in CMTrace.

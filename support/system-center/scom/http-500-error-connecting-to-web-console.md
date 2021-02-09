@@ -33,7 +33,7 @@ To fix the issue, verify the following settings, and then connect to the web con
          setspn -L DOMAIN\sdkdomainaccount
          ```
 
-      Here is sample output in which there are two management servers, *SCOM1* and *SCOM2*, and the SDK service is running under domain service account *CONTOSO\SCOMSdk*:
+      Here is sample output in which there are two management servers, *SCOM1* and *SCOM2*, and the SDK service is running under domain service account *CONTOSO\SCOMSdk*:
 
       > Registered ServicePrincipalNames for CN= SCOMSdk,OU=SCOMAccounts,DC= CONTOSO,DC=COM:  
       > MSOMSdkSvc/SCOM1  
@@ -84,7 +84,7 @@ To fix the issue, verify the following settings, and then connect to the web con
     > HTTP/serverFQDN  
     > HTTP/serverNETBIOSname
 
-3. The delegation for the web console is configured correctly in Active Directory. To do this, follow these steps:
+3. The delegation for the web console is configured correctly in Active Directory. To do this, follow these steps:
 
       1. Start the **Active Directory Users and Computers** MMC.
       2. In the console tree, select **Computers**.
@@ -98,7 +98,7 @@ To fix the issue, verify the following settings, and then connect to the web con
 
       7. In the **Select Users or Computers** dialog box, specify the domain account that the SDK service is running under, and then click **OK**.
   
-      8. In the **Add Services** dialog box, select service type `MSOMSdkSvc`, and then click **OK**.
+      8. In the **Add Services** dialog box, select service type `MSOMSdkSvc`, and then click **OK**.
   
       9. If you have multiple management servers, verify that MSOMSdkSvc SPNs for all management servers are listed.
   

@@ -32,7 +32,7 @@ The following steps explain the flow of events when you create a new package fro
 
 ### Step 1: Admin console creates an instance of the `SMS_PackageWMI` class
 
-After the administrator creates the package in the console, admin console creates an instance of the `SMS_Package` WMI class within the SMS Provider namespace for the newly created package. **SMSProv.log** shows the following:
+After the administrator creates the package in the console, admin console creates an instance of the `SMS_Package` WMI class within the SMS Provider namespace for the newly created package. **SMSProv.log** shows the following:
 
 > SMS Provider 4680 (0x1248) CExtProviderClassObject::DoPutInstanceInstance~  
 > SMS Provider 4680 (0x1248) Auditing: User CONTOSO\Admin created an instance of class SMS_Package.~  
@@ -44,7 +44,7 @@ When this WMI instance is created, SMS Provider inserts a row in the `SMSPackage
 insert SMSPackages (PkgID, Name, Version, Language, Manufacturer, Description, ISVString, Hash, NewHash, Source, SourceSite, StoredPkgPath, RefreshSchedule, LastRefresh, StoredPkgVersion, ShareName, PreferredAddress, StorePkgFlag, ShareType, HashVersion,Architecture, ImagePath,Permission, UseForcedDisconnect, ForcedRetryDelay, DisconnectDelay, IgnoreSchedule, Priority, PkgFlags, MIFFilename, MIFPublisher, MIFName, MIFVersion, SourceVersion, SourceDate, SourceSize, SourceCompSize, ImageFlags, PackageType, AlternateContentProviders, SourceLocaleID,  TransformReadiness, TransformAnalysisDate, UpdateMask, UpdateMaskEx, Action, DefaultImage) values (N'PackageID', N'Dummy1', N'', N'',N'',N'',N'',N'',N'',N'\\CS1SITE\SOURCE\Packages\Dummy1',N'CS1',N'',N'',N'04/10/1970 06:35:00', 0, N'',N'', 2, 1, 1, N'', N'', 15, 0, 2, 5, 0, 2, 16777216, N'',N'',N'',N'', 1, N'05/16/2016 15:22:12', 0, 0, 0, 0, N'', 1033, 0, N'1980/01/01 00:00:00', 0, 0, 2, 0)
 ```
 
-After the row is inserted, a trigger on the view inserts a row in `SMSPackages_G` and `SMS_Packages_L` tables. This in turn causes a trigger on the `SMSPackages_G` table to insert a row in `PkgNotification` table. The row in the `PkgNotification` table is used to notify DistMgr to process the package, and this notification is provided to DistMgr by the `SMSDBMON` component.
+After the row is inserted, a trigger on the view inserts a row in `SMSPackages_G` and `SMS_Packages_L` tables. This in turn causes a trigger on the `SMSPackages_G` table to insert a row in `PkgNotification` table. The row in the `PkgNotification` table is used to notify DistMgr to process the package, and this notification is provided to DistMgr by the `SMSDBMON` component.
 
 ```sql
 insert PkgNotification (PkgID, Priority, Type, TimeKey) values (N'PackageID', 2, 2, GetDate())
@@ -158,7 +158,7 @@ The following steps outline the flow of events when a package is distributed to 
 
 #### Step 1: The admin console adds the DP to the package by calling the `AddDistributionPoints` method on the `SMS_PackageWMI` class
 
-After the administrator distributes the package to a DP from the console, the admin console calls the `AddDistributionPoints` method of the `SMS_Package` class to add the specified DP to the package. **SMSProv.log** shows the following:
+After the administrator distributes the package to a DP from the console, the admin console calls the `AddDistributionPoints` method of the `SMS_Package` class to add the specified DP to the package. **SMSProv.log** shows the following:
 
 > SMS Provider 4616 (0x1208) Context: SMSAppName=Configuration Manager Administrator console~  
 > SMS Provider 4616 (0x1208) ExecMethodAsync : **SMS_Package.PackageID="\<PackageID>"::AddDistributionPoints~**  
@@ -168,7 +168,7 @@ After the administrator distributes the package to a DP from the console, the ad
 When this method is called, SMS Provider inserts a row in `PkgServers` with `Action` set to **2** (ADD).
 
 ```sql
-insert PkgServers (PkgID, NALPath, SiteCode, SiteName, SourceSite, LastRefresh, RefreshTrigger, UpdateMask, Action) select N'PackageID', N'['Display=\\PS1SITE.CONTOSO.COM\']MSWNET:['SMS_SITE=PS1']\\PS1SITE.CONTOSO.COM\', N'PS1', Sites.SiteName, N'CS1', N'04/10/1970 06:35:00', 0, 0, 2  from Sites where SiteCode = N'PS1'
+insert PkgServers (PkgID, NALPath, SiteCode, SiteName, SourceSite, LastRefresh, RefreshTrigger, UpdateMask, Action) select N'PackageID', N'['Display=\\PS1SITE.CONTOSO.COM\']MSWNET:['SMS_SITE=PS1']\\PS1SITE.CONTOSO.COM\', N'PS1', Sites.SiteName, N'CS1', N'04/10/1970 06:35:00', 0, 0, 2  from Sites where SiteCode = N'PS1'
 ```
 
 After a row is inserted in `PkgServers`, SMS Provider also inserts a row in the `PkgNotification` table. The row in the `PkgNotification` table is used to notify DistMgr to process the package, and this notification is provided to DistMgr by the `SMSDBMON` component.
@@ -179,7 +179,7 @@ insert PkgNotification (PkgID, Priority, Type, TimeKey) values (N'PackageID', 2,
 
 #### Step 2: SMSDBMON detects the package change and notifies DistMgr by dropping a \<PackageID>.PKN file in DistMgr.box
 
-SMSDBMON detects a change in the `PkgNotification` table that causes it to drop a **\<*PackageID*>.PKN**  file in `DistMgr.box` to instruct DistMgr to process the package.
+SMSDBMON detects a change in the `PkgNotification` table that causes it to drop a **\<*PackageID*>.PKN** file in `DistMgr.box` to instruct DistMgr to process the package.
 
 > SMS_DATABASE_NOTIFICATION_MONITOR 4944 (0x1350) RCV: INSERT on PkgNotification for PkgNotify_Add [\<PackageID> ][850967]  
 > SMS_DATABASE_NOTIFICATION_MONITOR 4944 (0x1350)    SND: Dropped E:\ConfigMgr\inboxes\distmgr.box\\**\<PackageID>.PKN**  [850967]
@@ -252,7 +252,7 @@ The sender component processes the send request and sends the compressed copy of
    > SMS_LAN_SENDER 6700 (0x1a2c) Checking for site-specific sending capacity.  Used 0 out of 3.~  
    > SMS_LAN_SENDER 6700 (0x1a2c) ~Created sending thread (**Thread ID = 1150**)
 
-2. The sending thread processes the send request and copies the compressed package file (**PCK** file) to the destination site along with the package instruction file (**SNI** file).
+2. The sending thread processes the send request and copies the compressed package file (**PCK** file) to the destination site along with the package instruction file (**SNI** file).
 
    > SMS_LAN_SENDER 4432 (0x1150) ~Trying the No. 1 address (out of 1)  
    > SMS_LAN_SENDER 4432 (0x1150) ~Passed the xmit file test, use the existing connection  
@@ -306,7 +306,7 @@ After this step, the sending site has no more work to do and the receiving site 
 
 #### Step 7: Despooler processes the PCK and SNI files
 
-During Step 5, **PCK** and **SNI** files were copied to the `SMS_SITE` share on the receiving site. On each Configuration Manager site, the *\inboxes\despoolr.box\receive* folder is shared as `SMS_SITE`. When these files arrive in the *despoolr.box\receive* folder, the `despooler` component wakes up to process the SNI file which is an instruction file.
+During Step 5, **PCK** and **SNI** files were copied to the `SMS_SITE` share on the receiving site. On each Configuration Manager site, the *\inboxes\despoolr.box\receive* folder is shared as `SMS_SITE`. When these files arrive in the *despoolr.box\receive* folder, the `despooler` component wakes up to process the SNI file which is an instruction file.
 
 1. The main despooler thread creates a despooling thread.
 
@@ -318,7 +318,7 @@ During Step 5, **PCK** and **SNI** files were copied to the `SMS_SITE` share on 
 
 2. (Sporadically) Despooling thread sometimes fails to process instruction on first attempt and retries after 5 minutes.
 
-   The despooling thread processes the instruction file, however in many cases, the first-time despooler tries to process an instruction file for a package it will fail with a '*package information hasn't arrived yet for this version*' message because the package metadata information hasn't yet replicated to the receiving site. When this happens, **despooler.log** shows '*error code = 12*' but retries this instruction after five minutes, which is successful as the package information replicates during this time. Step 7-3 shows the successful processing of the instruction on retry.
+   The despooling thread processes the instruction file, however in many cases, the first-time despooler tries to process an instruction file for a package it will fail with a '*package information hasn't arrived yet for this version*' message because the package metadata information hasn't yet replicated to the receiving site. When this happens, **despooler.log** shows '*error code = 12*' but retries this instruction after five minutes, which is successful as the package information replicates during this time. Step 7-3 shows the successful processing of the instruction on retry.
 
    > SMS_DESPOOLER 3816 (0xee8) ~Verifying signature for instruction E:\ConfigMgr\inboxes\despoolr.box\receive\ds_s76nc.ist of type MICROSOFT\|SMS\|MINIJOBINSTRUCTION\|PACKAGE  
    > SMS_DESPOOLER 3816 (0xee8) ~Signature checked out OK for instruction coming from site CS1, proceed with the instruction execution.  
@@ -340,7 +340,7 @@ During Step 5, **PCK** and **SNI** files were copied to the `SMS_SITE` share on 
 
 3. The despooling thread processes the instruction and writes content to the content library.
 
-   The despooling thread processes the instruction, uncompresses the PCK file to a temp location, then writes the content to the content library.
+   The despooling thread processes the instruction, uncompresses the PCK file to a temp location, then writes the content to the content library.
 
    > SMS_DESPOOLER 4072 (0xfe8) ~Received package \<PackageID> version 1. Compressed file -  E:\SMSPKG\\\<PackageID>.PCK.1 as E:\ConfigMgr\inboxes\despoolr.box\receive\PKGj3uib.TRY  
    > SMS_DESPOOLER 4072 (0xfe8) ~Old package storedUNC path is .  
@@ -355,7 +355,7 @@ During Step 5, **PCK** and **SNI** files were copied to the `SMS_SITE` share on 
    > SMS_DESPOOLER 4072 (0xfe8) ~Package \<PackageID> (version 0) exists in the distribution source, save the newer version (version 1).  
    > SMS_DESPOOLER 4072 (0xfe8) ~Stored Package \<PackageID>. Stored Package Version = 1
 
-   After successfully extracting the content to the content library, despooler updates `StoredPkgVersion` in the `SMSPackages_L` table and inserts a row in the `PkgNotification` table so that DistMgr can be notified to process the package.
+   After successfully extracting the content to the content library, despooler updates `StoredPkgVersion` in the `SMSPackages_L` table and inserts a row in the `PkgNotification` table so that DistMgr can be notified to process the package.
 
    ```sql
    update SMSPackages_L set StoredPkgPath = N'\\PS1SITE.CONTOSO.COM\E$\SMSPKG\<PackageID>.PCK', StoredPkgVersion = 1, UpdateMask = 160, UpdateMaskEx = 0, Action = 1 where PkgID = N'<PackageID>'
@@ -373,7 +373,7 @@ During Step 5, **PCK** and **SNI** files were copied to the `SMS_SITE` share on 
 
 #### Step 8: SMSDBMON notifies DistMgr to process the package
 
-SMSDBMON detects a change in the `PkgNotification` table and drops a PKN file in `DistMgr.box` to instruct DistMgr to process the package.
+SMSDBMON detects a change in the `PkgNotification` table and drops a PKN file in `DistMgr.box` to instruct DistMgr to process the package.
 
 > SMS_DATABASE_NOTIFICATION_MONITOR 1792 (0x700) RCV: INSERT on PkgNotification for PkgNotify_Add [\<PackageID> ][1035289]  
 > SMS_DATABASE_NOTIFICATION_MONITOR 1792 (0x700) SND: Dropped E:\ConfigMgr\inboxes\distmgr.box\\**\<PackageID>.PKN** [1035289]
@@ -438,7 +438,7 @@ DistMgr wakes up after detecting the PKN file and processes the package.
 
 #### Step 10: SMSDBMON notifies PkgXferMgr to process the job created in step 9-3
 
-After the PkgxferMgr job is created in step 9-3, SMSDBMON detects a change in the `DistributionJobs` table and drops a PKN file in `PkgTransferMgr.box` to instruct PkgXferMgr to process the job:
+After the PkgxferMgr job is created in step 9-3, SMSDBMON detects a change in the `DistributionJobs` table and drops a PKN file in `PkgTransferMgr.box` to instruct PkgXferMgr to process the job:
 
 > SMS_DATABASE_NOTIFICATION_MONITOR 1792 (0x700) RCV: UPDATE on DistributionJobs for DistributionJob_Creation [\<PackageID>][1035292]  
 > SMS_DATABASE_NOTIFICATION_MONITOR 1792 (0x700) SND: Dropped E:\ConfigMgr\inboxes\PkgTransferMgr.box\\**\<PackageID>.PKN** [1035292]
@@ -452,7 +452,7 @@ After the PkgxferMgr job is created in step 9-3, SMSDBMON detects a change in th
 
 2. The sending thread copies the content to the DP.
 
-   The sending thread starts copying the package contents to the DP. This process involves copying all of the files in the package to the DP in the `SMS_DP$` directory. Since the package was not redistributed to the DP, the Redistribute action is set to **0**, which means that if a file already exists in the content library on the DP, it does not get recopied.
+   The sending thread starts copying the package contents to the DP. This process involves copying all of the files in the package to the DP in the `SMS_DP$` directory. Since the package was not redistributed to the DP, the Redistribute action is set to **0**, which means that if a file already exists in the content library on the DP, it does not get recopied.
 
    > SMS_PACKAGE_TRANSFER_MANAGER 4844 (0x12ec) Sending thread starting for Job: 577, package: \<PackageID>, Version: 1, Priority: 2, server: PS1DP1.CONTOSO.COM, DPPriority: 200  
    > SMS_PACKAGE_TRANSFER_MANAGER 4844 (0x12ec) Sent status to the distribution manager for pkg \<PackageID>, version 1, status 0 and distribution point ["Display=\\\PS1DP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=PS1"]\\\PS1DP1.CONTOSO.COM\\~  
@@ -468,7 +468,7 @@ After the PkgxferMgr job is created in step 9-3, SMSDBMON detects a change in th
 
 3. The sending thread sends a status message to DistMgr.
 
-   After the sending thread finishes sending the content (success/failure), it sends the status to DistMgr so that DistMgr can process and update the status in the database. This status is sent to DistMgr by dropping an STA file containing the package status in the `DistMgr.box\incoming` directory.
+   After the sending thread finishes sending the content (success/failure), it sends the status to DistMgr so that DistMgr can process and update the status in the database. This status is sent to DistMgr by dropping an STA file containing the package status in the `DistMgr.box\incoming` directory.
 
    > SMS_PACKAGE_TRANSFER_MANAGER 4844 (0x12ec) **Sent status to the distribution manager** for pkg \<PackageID>, version 1, **status 3** and distribution point ["Display=\\\PS1DP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=PS1"]\\\PS1DP1.CONTOSO.COM\\~  
    > SMS_PACKAGE_TRANSFER_MANAGER 4844 (0x12ec) STATMSG: ID=8210 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_PACKAGE_TRANSFER_MANAGER" SYS=PS1SITE.CONTOSO.COM SITE=PS1 PID=5428 TID=4844 GMTDATE=Mon May 16 16:34:27.614 2016 ISTR0="\<PackageID>" ISTR1="1" ISTR2="PS1DP1.CONTOSO.COM" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=3 AID0=400 AVAL0="\<PackageID>" AID1=410 AVAL1="1" AID2=404 AVAL2="["Display=\\\PS1DP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=PS1"]\\\PS1DP1.CONTOSO.COM\\"  
@@ -507,14 +507,14 @@ The following steps outline the flow of events when a package is distributed to 
 
 ### Step 1: The administrator distributes the package to the DP. The administrator can do so from the admin console connected directly to the primary site in question or the central administration site, or a different primary site
 
-After the administrator distributes the package to a DP from the console, the admin console calls the `AddDistributionPoints` method of the `SMS_Package` class to add the specified DP to the package. **SMSProv.log** shows the following:
+After the administrator distributes the package to a DP from the console, the admin console calls the `AddDistributionPoints` method of the `SMS_Package` class to add the specified DP to the package. **SMSProv.log** shows the following:
 
 > SMS Provider 4416 (0x1140) Context: SMSAppName=Configuration Manager Administrator console~  
 > SMS Provider 4416 (0x1140) ExecMethodAsync : SMS_Package.PackageID="\<PackageID>"::AddDistributionPoints~  
 > SMS Provider 4416 (0x1140) CExtProviderClassObject::DoExecuteMethod AddDistributionPoints~  
 > SMS Provider 4416 (0x1140) Auditing: User CONTOSO\Admin called an audited method of an instance of class SMS_Package.~
 
-When this method is called, SMS Provider inserts a row in `PkgServers` with `Action` set to **2** (ADD):
+When this method is called, SMS Provider inserts a row in `PkgServers` with `Action` set to **2** (ADD):
 
 ```sql
 insert PkgServers (PkgID, NALPath, SiteCode, SiteName, SourceSite, LastRefresh, RefreshTrigger, UpdateMask, Action) select N'<PackageID>', N'["Display=\\PS1DP2.CONTOSO.COM\"]MSWNET:["SMS_SITE=PS1"]\\PS1DP2.CONTOSO.COM\', N'PS1', Sites.SiteName, N'PS1', N'04/10/1970 06:35:00', 0, 0, 2  from Sites where SiteCode = N'PS1'
@@ -527,7 +527,7 @@ If the administrator distributes this package with the console connected to the 
 
 ### Step 3: SMSDBMON notifies DistMgr to process the package
 
-After the change is replicated to the site where the DP resides, SMSDBMON detects a change in the `PkgNotification` table and drops a PKN file in `DistMgr.box` to instruct DistMgr to process the package:
+After the change is replicated to the site where the DP resides, SMSDBMON detects a change in the `PkgNotification` table and drops a PKN file in `DistMgr.box` to instruct DistMgr to process the package:
 
 > SMS_DATABASE_NOTIFICATION_MONITOR 1792 (0x700) RCV: INSERT on PkgNotification for PkgNotify_Add [\<PackageID>][1035417]  
 > SMS_DATABASE_NOTIFICATION_MONITOR 1792 (0x700) SND: Dropped E:\ConfigMgr\inboxes\distmgr.box\\\<PackageID>.PKN [1035417]
@@ -623,7 +623,7 @@ After the PkgxferMgr job is created, SMSDBMON this time detects a change in the 
 
 ### Step 7: SMS DP Provider adds the content to the content library
 
-After copying each file, PkgXferMgr instructs the DP to add the file to the content library by executing methods against the `SMS_DistributionPoint` WMI class in the SMS DP Provider namespace (root\SCCMDP). When the content is successfully added to the content Library, **SMSDPProv.log** shows the following:
+After copying each file, PkgXferMgr instructs the DP to add the file to the content library by executing methods against the `SMS_DistributionPoint` WMI class in the SMS DP Provider namespace (root\SCCMDP). When the content is successfully added to the content Library, **SMSDPProv.log** shows the following:
 
 > 1304 (0x518) Content '\<PackageID>.1' for package '\<PackageID>' has been added to content library successfully
 
@@ -690,11 +690,11 @@ DistMgr wakes up after detecting the PKN file and processes the package.
 
    Package processing thread (TID 11332) processes the package actions (add/update/remove) for the DP(s). In this case, the package was added to a DP and the package processing thread creates a DP thread to add the package to the DP. After creating DP thread(s), the package processing thread waits for all the DP threads to exit before moving further.
 
-   > SMS_DISTRIBUTION_MANAGER    11332 (0x2c44)    ~Processing package P010000F (SourceVersion:3;StoredVersion:3)  
-   > SMS_DISTRIBUTION_MANAGER    11332 (0x2c44)    No action specified for the package P010000F, however there may be package server changes for this package.  
-   > SMS_DISTRIBUTION_MANAGER    11332 (0x2c44)    Start adding package P010000F to server ["Display=\\\P01PDP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=P01"]\\\P01PDP1.CONTOSO.COM\\...  
-   > SMS_DISTRIBUTION_MANAGER    11332 (0x2c44)    ~Created DP processing thread 22444 for addition or update of package P010000F on server ["Display=\\\P01PDP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=P01"]\\\P01PDP1.CONTOSO.COM\\  
-   > SMS_DISTRIBUTION_MANAGER    11332 (0x2c44)    ~Waiting for all DP threads to complete for package P010000F processing thread.
+   > SMS_DISTRIBUTION_MANAGER    11332 (0x2c44)    ~Processing package P010000F (SourceVersion:3;StoredVersion:3)  
+   > SMS_DISTRIBUTION_MANAGER    11332 (0x2c44)    No action specified for the package P010000F, however there may be package server changes for this package.  
+   > SMS_DISTRIBUTION_MANAGER    11332 (0x2c44)    Start adding package P010000F to server ["Display=\\\P01PDP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=P01"]\\\P01PDP1.CONTOSO.COM\\...  
+   > SMS_DISTRIBUTION_MANAGER    11332 (0x2c44)    ~Created DP processing thread 22444 for addition or update of package P010000F on server ["Display=\\\P01PDP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=P01"]\\\P01PDP1.CONTOSO.COM\\  
+   > SMS_DISTRIBUTION_MANAGER    11332 (0x2c44)    ~Waiting for all DP threads to complete for package P010000F processing thread.
 
 3. DP thread creates a PkgXferMgr job to transfer content to the DPs and exits.
 
@@ -727,15 +727,15 @@ DistMgr wakes up after detecting the PKN file and processes the package.
 
 After the PkgxferMgr job is created, SMSDBMON this time detects a change in `DistributionJobs` table and drops a PKN file in `PkgTransferMgr.box` to instruct PkgXferMgr to process the job.
 
-> SMS_DATABASE_NOTIFICATION_MONITOR    29748 (0x7434)    RCV: UPDATE on DistributionJobs for DistributionJob_Creation [P010000F  ][145013]  
-> SMS_DATABASE_NOTIFICATION_MONITOR    29748 (0x7434)    SND: Dropped E:\ConfigMgr\inboxes\PkgTransferMgr.box\P010000F.PKN  [145013]
+> SMS_DATABASE_NOTIFICATION_MONITOR    29748 (0x7434)    RCV: UPDATE on DistributionJobs for DistributionJob_Creation [P010000F  ][145013]  
+> SMS_DATABASE_NOTIFICATION_MONITOR    29748 (0x7434)    SND: Dropped E:\ConfigMgr\inboxes\PkgTransferMgr.box\P010000F.PKN  [145013]
 
 ### Step 6: PkgXferMgr wakes up to process the job
 
 1. Main PkgXferMgr thread creates a pull DP sending thread to send the package to the specified DP.
 
-   > SMS_PACKAGE_TRANSFER_MANAGER    32936 (0x80a8)    Found send request with ID: 190, Package: P010000F, Version:3, Priority: 2, Destination: P01PDP1.CONTOSO.COM, DPPriority: 200  
-   > SMS_PACKAGE_TRANSFER_MANAGER    32936 (0x80a8)    ~Created sending thread (Thread ID = 0x2B4C)
+   > SMS_PACKAGE_TRANSFER_MANAGER    32936 (0x80a8)    Found send request with ID: 190, Package: P010000F, Version:3, Priority: 2, Destination: P01PDP1.CONTOSO.COM, DPPriority: 200  
+   > SMS_PACKAGE_TRANSFER_MANAGER    32936 (0x80a8)    ~Created sending thread (Thread ID = 0x2B4C)
 
 2. Pull DP sending thread sends a notification to the pull DP
 
@@ -769,14 +769,14 @@ After the PkgxferMgr job is created, SMSDBMON this time detects a change in `Dis
 
    **Phase 3:** Pull DP sending thread sends a package info bundle file which contains a metadata of the files that need to be downloaded. This file is a *\<PackageID>.TZ* file which generated from the package INI file from the site servers content library and is copied to the `SMS_DP$` directory on the pull DP.
 
-   > SMS_PACKAGE_TRANSFER_MANAGER    11084 (0x2b4c)    Pull DP Sending thread starting for Job: 190, package: P010000F, Version: 3, Priority: 2, server: P01PDP1.CONTOSO.COM, DPPriority: 200  
-   > SMS_PACKAGE_TRANSFER_MANAGER    11084 (0x2b4c)    Sending package info bundle P010000F to PullDP. ["Display=\\\P01PDP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=P01"]\\\P01PDP1.CONTOSO.COM\\
+   > SMS_PACKAGE_TRANSFER_MANAGER    11084 (0x2b4c)    Pull DP Sending thread starting for Job: 190, package: P010000F, Version: 3, Priority: 2, server: P01PDP1.CONTOSO.COM, DPPriority: 200  
+   > SMS_PACKAGE_TRANSFER_MANAGER    11084 (0x2b4c)    Sending package info bundle P010000F to PullDP. ["Display=\\\P01PDP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=P01"]\\\P01PDP1.CONTOSO.COM\\
 
    **Phase 4:** Pull DP sending thread creates an instance of `SMS_PullDPNotification` class on the pull DP within `root\SCCMDP` namespace, which contains the package ID, package version and an XML notification. After creating the instance of `SMS_PullDPNotification` class, it executes the `NotifyPullDP` method in the `SMS_DistributionPoint` class in the `root\SCCMDP` namespace which instructs the DP WMI Provider to notify the pull DP component to start downloading the content.
 
-   > SMS_PACKAGE_TRANSFER_MANAGER    11084 (0x2b4c)    ~Successfully performed WMI actions on pull DP P01PDP1.CONTOSO.COM.  
-   > SMS_PACKAGE_TRANSFER_MANAGER    11084 (0x2b4c)    ~ PullDP notification sent. Attempted count = 1/30, Restart time = 1/7/2019 4:06:04 PM Eastern Standard Time  
-   > SMS_PACKAGE_TRANSFER_MANAGER    11084 (0x2b4c)    Pull DP Sending thread complete~
+   > SMS_PACKAGE_TRANSFER_MANAGER    11084 (0x2b4c)    ~Successfully performed WMI actions on pull DP P01PDP1.CONTOSO.COM.  
+   > SMS_PACKAGE_TRANSFER_MANAGER    11084 (0x2b4c)    ~ PullDP notification sent. Attempted count = 1/30, Restart time = 1/7/2019 4:06:04 PM Eastern Standard Time  
+   > SMS_PACKAGE_TRANSFER_MANAGER    11084 (0x2b4c)    Pull DP Sending thread complete~
 
    Notification XML is generated by calling `fnGetPullDPXMLNotification`. Here's how a sample query that generates the notification XML query looks like which shows that the **Action** is **add** since the content was not redistributed:
 
@@ -810,7 +810,7 @@ After the PkgxferMgr job is created, SMSDBMON this time detects a change in `Dis
 
    A new pull DP sending thread starts after **Delay before polling (minutes)** value specified in the **Software Distribution Component Properties** to check the distribution status. In the below example, it queries the pull DP and finds that the content has been installed successfully and sends a status message to Distribution Manager.
 
-   > SMS_PACKAGE_TRANSFER_MANAGER    18724 (0x4924)    Pull DP Sending thread starting for Job: 194, package: P010000F, Version: 3, Priority: 2, server: P01PDP1.CONTOSO.COM, DPPriority: 200  
+   > SMS_PACKAGE_TRANSFER_MANAGER    18724 (0x4924)    Pull DP Sending thread starting for Job: 194, package: P010000F, Version: 3, Priority: 2, server: P01PDP1.CONTOSO.COM, DPPriority: 200  
    > SMS_PACKAGE_TRANSFER_MANAGER    18724 (0x4924)    ~Finished sending SWD package P010000F version 3 to distribution point P01PDP1.CONTOSO.COM  
    > SMS_PACKAGE_TRANSFER_MANAGER    18724 (0x4924)    Sent status to the distribution manager for pkg P010000F, version 3, status 3 and distribution point ["Display=\\\P01PDP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=P01"]\\\P01PDP1.CONTOSO.COM\\~  
    > SMS_PACKAGE_TRANSFER_MANAGER    18724 (0x4924)    STATMSG: ID=8210 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_PACKAGE_TRANSFER_MANAGER" SYS=P01SITE.CONTOSO.COM SITE=P01 PID=36968 TID=18724 GMTDATE=Mon Jan 07 22:22:16.059 2019 ISTR0="P010000F" ISTR1="3" ISTR2="P01PDP1.CONTOSO.COM" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=3 AID0=400 AVAL0="P010000F" AID1=410 AVAL1="3" AID2=404 AVAL2="["Display=\\\P01PDP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=P01"]\\\P01PDP1.CONTOSO.COM\\"  
@@ -822,100 +822,100 @@ After the PkgxferMgr job is created, SMSDBMON this time detects a change in `Dis
 
 On execution of the `NotifyPullDP` method, DP WMI Provider notifies CcmExec which hosts the pull DP component. **SMSDPProv.log** shows:
 
-> 4688 (0x1250)        Successfully notified PullDP
+> 4688 (0x1250)        Successfully notified PullDP
 
 ### Step 8: Pull DP loads the job(s) from WMI
 
 On receiving a notification, pull DP component loads the job(s) from WMI as well as validates the *\<PackageID>.TZ* file that was copied by PkgxferMgr.
 
-> PullDP    4404 (0x1134)    CPullDPService::LoadJobsFromXML for P010000F.3  
-> PullDP    4404 (0x1134)    - P010000F.3 - XML has 1 content jobs.  
-> PullDP    4404 (0x1134)    CPullDPPkgContJob::LoadContentJobFromXML(): Set JobState = NotStarted  
-> PullDP    4404 (0x1134)    - P010000F.3 - Loaded content job {C10457F9-DE3A-4B45-878C-345919AFF97E} for content Content_3c9813ba-d7ab-4963-929c-36f90f479613.1 from XML...  
-> PullDP    4404 (0x1134)    CPullDPPkgJob::LoadJobFromXML() successfully loaded job for package P010000F.3, there are 1 content jobs. ...  
-> PullDP    4404 (0x1134)    Successfully verified content info Hash E:\SMS_DP$\P010000F.tz :3ED23B9869F7E10E19439F11341405FF76E22022E56468DCF211475899BD2914  
-> PullDP    4404 (0x1134)    CPullDPService::ExecuteJobs(). 1 jobs to do  
+> PullDP    4404 (0x1134)    CPullDPService::LoadJobsFromXML for P010000F.3  
+> PullDP    4404 (0x1134)    - P010000F.3 - XML has 1 content jobs.  
+> PullDP    4404 (0x1134)    CPullDPPkgContJob::LoadContentJobFromXML(): Set JobState = NotStarted  
+> PullDP    4404 (0x1134)    - P010000F.3 - Loaded content job {C10457F9-DE3A-4B45-878C-345919AFF97E} for content Content_3c9813ba-d7ab-4963-929c-36f90f479613.1 from XML...  
+> PullDP    4404 (0x1134)    CPullDPPkgJob::LoadJobFromXML() successfully loaded job for package P010000F.3, there are 1 content jobs. ...  
+> PullDP    4404 (0x1134)    Successfully verified content info Hash E:\SMS_DP$\P010000F.tz :3ED23B9869F7E10E19439F11341405FF76E22022E56468DCF211475899BD2914  
+> PullDP    4404 (0x1134)    CPullDPService::ExecuteJobs(). 1 jobs to do  
 
 ### Step 9: Pull DP creates content job(s) to download the content associated with the package
 
-> PullDP    4404 (0x1134)    P010000F.3 Starting Download  there are 1 content jobs.  
-> PullDP    3812 (0xee4)    Content job {C10457F9-DE3A-4B45-878C-345919AFF97E} running.  
-> PullDP    3812 (0xee4)    ContentExecuteJob {C10457F9-DE3A-4B45-878C-345919AFF97E} (state: 1-NotStarted) for package P010000F.3 content Content_3c9813ba-d7ab-4963-929c-36f90f479613.1.
+> PullDP    4404 (0x1134)    P010000F.3 Starting Download  there are 1 content jobs.  
+> PullDP    3812 (0xee4)    Content job {C10457F9-DE3A-4B45-878C-345919AFF97E} running.  
+> PullDP    3812 (0xee4)    ContentExecuteJob {C10457F9-DE3A-4B45-878C-345919AFF97E} (state: 1-NotStarted) for package P010000F.3 content Content_3c9813ba-d7ab-4963-929c-36f90f479613.1.
 
 In the example above, the job *{C10457F9-DE3A-4B45-878C-345919AFF97E}* is associated with content *Content_3c9813ba-d7ab-4963-929c-36f90f479613.1*. For a package with multiple content items, you would see the number of jobs (with a unique ID) associated with the package.
 
-> PullDP    1320 (0x528)    P010000A.2 Starting Download  there are 2 content jobs.  
-> PullDP    5012 (0x1394)    ContentExecuteJob {55692006-DFE8-4357-86D9-9839C8BF79CF} (state: 1-NotStarted) for package P010000A.2 content 2484568c-7aba-44ae-8557-05b61d62e70d.  
-> PullDP    4112 (0x1010)    ContentExecuteJob {7175CD81-CF67-48C9-AA22-010BF60B640E} (state: 1-NotStarted) for package P010000A.2 content c085b4ba-8e8f-42bf-8e2d-bc1067697722.
+> PullDP    1320 (0x528)    P010000A.2 Starting Download  there are 2 content jobs.  
+> PullDP    5012 (0x1394)    ContentExecuteJob {55692006-DFE8-4357-86D9-9839C8BF79CF} (state: 1-NotStarted) for package P010000A.2 content 2484568c-7aba-44ae-8557-05b61d62e70d.  
+> PullDP    4112 (0x1010)    ContentExecuteJob {7175CD81-CF67-48C9-AA22-010BF60B640E} (state: 1-NotStarted) for package P010000A.2 content c085b4ba-8e8f-42bf-8e2d-bc1067697722.
 
 ### Step 10: (If applicable) Pull DP downloads content signature
 
 (If applicable) Content job creates a Data Transfer Service (DTS) job to download the package signature. The signature file is a TAR file which is downloaded from the `SMSSIG$` virtual directory from the source distribution point and contains the RDC signatures for each file in the content. The RDC signatures are used to determine if the file content have changed and whether to download delta content or full content. This step is only applicable for content that has changed, so you may not always see this step, and would see step 11 instead.
 
-> PullDP    3812 (0xee4)    Created SignatureDownload DTS job {3C962758-7ABE-40F2-A585-E5B59E378BEA} for package P010000F.3, content id Content_3c9813ba-d7ab-4963-929c-36f90f479613.1. JobState = NotStarted  
-> PullDP    3812 (0xee4)    CPullDPPkgContJob::NotifyDeltaDownload. JobState = [Downloading Signature] Content_3c9813ba-d7ab-4963-929c-36f90f479613.1 for package P010000F.3 content job id {C10457F9-DE3A-4B45-878C-345919AFF97E}  
-> PullDP    752 (0x2f0)    ContentExecuteJob {C10457F9-DE3A-4B45-878C-345919AFF97E} (state: 4-Downloading Signature) for package P010000F.3 content Content_3c9813ba-d7ab-4963-929c-36f90f479613.1.
+> PullDP    3812 (0xee4)    Created SignatureDownload DTS job {3C962758-7ABE-40F2-A585-E5B59E378BEA} for package P010000F.3, content id Content_3c9813ba-d7ab-4963-929c-36f90f479613.1. JobState = NotStarted  
+> PullDP    3812 (0xee4)    CPullDPPkgContJob::NotifyDeltaDownload. JobState = [Downloading Signature] Content_3c9813ba-d7ab-4963-929c-36f90f479613.1 for package P010000F.3 content job id {C10457F9-DE3A-4B45-878C-345919AFF97E}  
+> PullDP    752 (0x2f0)    ContentExecuteJob {C10457F9-DE3A-4B45-878C-345919AFF97E} (state: 4-Downloading Signature) for package P010000F.3 content Content_3c9813ba-d7ab-4963-929c-36f90f479613.1.
 
 **DataTransferService.log** shows the progress of the DTS job, which creates a BITS job to download the signature file and notifies upon completion:
 
-> DataTransferService    3812 (0xee4)    DTSJob {3C962758-7ABE-40F2-A585-E5B59E378BEA} created to download from '<`https://P01MP.CONTOSO.COM:443/SMS_DP_SMSSIG$`>' to 'E:\SMS_DP$\P010000F\Content_3c9813ba-d7ab-4963-929c-36f90f479613.1'.  
-> DataTransferService    3856 (0xf10)    Starting BITS download for DTS job '{3C962758-7ABE-40F2-A585-E5B59E378BEA}'.  
-> DataTransferService    3856 (0xf10)    Starting BITS job '{43647077-986C-4727-A954-B327ECA50302}' for DTS job '{3C962758-7ABE-40F2-A585-E5B59E378BEA}' under user 'S-1-5-18'.  
-> DataTransferService    3856 (0xf10)    Adding to BITS job: Content_3c9813ba-d7ab-4963-929c-36f90f479613.1.tar  
-> DataTransferService    2528 (0x9e0)    DTSJob {3C962758-7ABE-40F2-A585-E5B59E378BEA} successfully completed download.  
-> DataTransferService    3856 (0xf10)    Execute called for DTS job '{3C962758-7ABE-40F2-A585-E5B59E378BEA}'.  Current state: 'RetrievedData'.  
-> DataTransferService    3856 (0xf10)    DTSJob {3C962758-7ABE-40F2-A585-E5B59E378BEA} in state 'NotifiedComplete'.  
-> DataTransferService    3856 (0xf10)    DTS job {3C962758-7ABE-40F2-A585-E5B59E378BEA} has completed:
+> DataTransferService    3812 (0xee4)    DTSJob {3C962758-7ABE-40F2-A585-E5B59E378BEA} created to download from '<`https://P01MP.CONTOSO.COM:443/SMS_DP_SMSSIG$`>' to 'E:\SMS_DP$\P010000F\Content_3c9813ba-d7ab-4963-929c-36f90f479613.1'.  
+> DataTransferService    3856 (0xf10)    Starting BITS download for DTS job '{3C962758-7ABE-40F2-A585-E5B59E378BEA}'.  
+> DataTransferService    3856 (0xf10)    Starting BITS job '{43647077-986C-4727-A954-B327ECA50302}' for DTS job '{3C962758-7ABE-40F2-A585-E5B59E378BEA}' under user 'S-1-5-18'.  
+> DataTransferService    3856 (0xf10)    Adding to BITS job: Content_3c9813ba-d7ab-4963-929c-36f90f479613.1.tar  
+> DataTransferService    2528 (0x9e0)    DTSJob {3C962758-7ABE-40F2-A585-E5B59E378BEA} successfully completed download.  
+> DataTransferService    3856 (0xf10)    Execute called for DTS job '{3C962758-7ABE-40F2-A585-E5B59E378BEA}'.  Current state: 'RetrievedData'.  
+> DataTransferService    3856 (0xf10)    DTSJob {3C962758-7ABE-40F2-A585-E5B59E378BEA} in state 'NotifiedComplete'.  
+> DataTransferService    3856 (0xf10)    DTS job {3C962758-7ABE-40F2-A585-E5B59E378BEA} has completed:
 
 Pull DP receives the completion notification, and processes the signatures to determine if full or delta download is required.
 
-> PullDP    4300 (0x10cc)    DTS message for content job {C10457F9-DE3A-4B45-878C-345919AFF97E} received, searching 1 active jobs for any containing this content job.  DTS Job is {3C962758-7ABE-40F2-A585-E5B59E378BEA}  
-> PullDP    4300 (0x10cc)    DTS succeeded message received for P010000F.3, content job {C10457F9-DE3A-4B45-878C-345919AFF97E}, status is 0x0 :  
-> PullDP    3856 (0xf10)    ContentExecuteJob {C10457F9-DE3A-4B45-878C-345919AFF97E} (state: 5-Signature Downloaded) for package P010000F.3 content Content_3c9813ba-d7ab-4963-929c-36f90f479613.1.
+> PullDP    4300 (0x10cc)    DTS message for content job {C10457F9-DE3A-4B45-878C-345919AFF97E} received, searching 1 active jobs for any containing this content job.  DTS Job is {3C962758-7ABE-40F2-A585-E5B59E378BEA}  
+> PullDP    4300 (0x10cc)    DTS succeeded message received for P010000F.3, content job {C10457F9-DE3A-4B45-878C-345919AFF97E}, status is 0x0 :  
+> PullDP    3856 (0xf10)    ContentExecuteJob {C10457F9-DE3A-4B45-878C-345919AFF97E} (state: 5-Signature Downloaded) for package P010000F.3 content Content_3c9813ba-d7ab-4963-929c-36f90f479613.1.
 
 ### Step 11: Pull DP creates a DataTransferService (DTS) job for content download
 
 Pull DP creates a download job for the content. In this example, the content did not exist on the pull DP so a full download DTS job is created for the package. The DTS job can be used to track the download process in the **DataTransferService.log** in the next step:
 
-> PullDP    4300 (0x10cc)    DTS message for content job {C10457F9-DE3A-4B45-878C-345919AFF97E} received, searching 1 active jobs for any containing this content job.  DTS Job is {3C962758-7ABE-40F2-A585-E5B59E378BEA}  
-> PullDP    4300 (0x10cc)    DTS succeeded message received for P010000F.3, content job {C10457F9-DE3A-4B45-878C-345919AFF97E}, status is 0x0 :  
-> PullDP    3856 (0xf10)    ContentExecuteJob {C10457F9-DE3A-4B45-878C-345919AFF97E} (state: 5-Signature Downloaded) for package P010000F.3 content Content_3c9813ba-d7ab-4963-929c-36f90f479613.1. ...  
-> PullDP    3856 (0xf10)    File To Download: ConfigMgrTools.msi  
-> PullDP    3856 (0xf10)    Content_3c9813ba-d7ab-4963-929c-36f90f479613.1: 0 files already exists, 1 files to download  
-> PullDP    3856 (0xf10)    Created FullDownload(Manifest) DTS job {78635652-3D12-4A26-A51B-D553934ECB54} for package P010000F.3, content id Content_3c9813ba-d7ab-4963-929c-36f90f479613.1, content job id {C10457F9-DE3A-4B45-878C-345919AFF97E}.
+> PullDP    4300 (0x10cc)    DTS message for content job {C10457F9-DE3A-4B45-878C-345919AFF97E} received, searching 1 active jobs for any containing this content job.  DTS Job is {3C962758-7ABE-40F2-A585-E5B59E378BEA}  
+> PullDP    4300 (0x10cc)    DTS succeeded message received for P010000F.3, content job {C10457F9-DE3A-4B45-878C-345919AFF97E}, status is 0x0 :  
+> PullDP    3856 (0xf10)    ContentExecuteJob {C10457F9-DE3A-4B45-878C-345919AFF97E} (state: 5-Signature Downloaded) for package P010000F.3 content Content_3c9813ba-d7ab-4963-929c-36f90f479613.1. ...  
+> PullDP    3856 (0xf10)    File To Download: ConfigMgrTools.msi  
+> PullDP    3856 (0xf10)    Content_3c9813ba-d7ab-4963-929c-36f90f479613.1: 0 files already exists, 1 files to download  
+> PullDP    3856 (0xf10)    Created FullDownload(Manifest) DTS job {78635652-3D12-4A26-A51B-D553934ECB54} for package P010000F.3, content id Content_3c9813ba-d7ab-4963-929c-36f90f479613.1, content job id {C10457F9-DE3A-4B45-878C-345919AFF97E}.
 
 ### Step 12: DTS creates a BITS job which downloads the content and sends a completion notification
 
 **DataTransferService.log** shows the progress of the job. With verbose logging enabled for the pull DP, **PullDP.log** would show more information about the download progress as well.
 
-> DataTransferService    3856 (0xf10)    DTSJob {78635652-3D12-4A26-A51B-D553934ECB54} created to download from '<`https://P01MP.CONTOSO.COM:443/SMS_DP_SMSPKG$/Content_3c9813ba-d7ab-4963-929c-36f90f479613.1`>' to 'E:\SMS_DP$\P010000F\Content_3c9813ba-d7ab-4963-929c-36f90f479613.1\3'.  
-> DataTransferService    3812 (0xee4)    Starting BITS job '{04498466-5A8E-4A22-97F2-A66306143A20}' for DTS job '{78635652-3D12-4A26-A51B-D553934ECB54}' under user 'S-1-5-18'.  
-> DataTransferService    3812 (0xee4)    DTSJob {78635652-3D12-4A26-A51B-D553934ECB54} in state 'DownloadingData'.  
-> DataTransferService    752 (0x2f0)    DTS job {78635652-3D12-4A26-A51B-D553934ECB54} has completed:  
+> DataTransferService    3856 (0xf10)    DTSJob {78635652-3D12-4A26-A51B-D553934ECB54} created to download from '<`https://P01MP.CONTOSO.COM:443/SMS_DP_SMSPKG$/Content_3c9813ba-d7ab-4963-929c-36f90f479613.1`>' to 'E:\SMS_DP$\P010000F\Content_3c9813ba-d7ab-4963-929c-36f90f479613.1\3'.  
+> DataTransferService    3812 (0xee4)    Starting BITS job '{04498466-5A8E-4A22-97F2-A66306143A20}' for DTS job '{78635652-3D12-4A26-A51B-D553934ECB54}' under user 'S-1-5-18'.  
+> DataTransferService    3812 (0xee4)    DTSJob {78635652-3D12-4A26-A51B-D553934ECB54} in state 'DownloadingData'.  
+> DataTransferService    752 (0x2f0)    DTS job {78635652-3D12-4A26-A51B-D553934ECB54} has completed:  
 
 ### Step 13: Pull DP moves the content to Downloaded state
 
 After the DTS job finishes, pull DP is notified and moves the content to **Downloaded** state:
 
-> PullDP    3812 (0xee4)    DTS message for content job {C10457F9-DE3A-4B45-878C-345919AFF97E} received, searching 1 active jobs for any containing this content job.  DTS Job is {78635652-3D12-4A26-A51B-D553934ECB54}  
-> PullDP    3812 (0xee4)    DTS succeeded message received for P010000F.3, content job {C10457F9-DE3A-4B45-878C-345919AFF97E}, status is 0x0 :  
-> PullDP    3856 (0xf10)    ContentExecuteJob {C10457F9-DE3A-4B45-878C-345919AFF97E} (state: 9-Downloaded) for package P010000F.3 content Content_3c9813ba-d7ab-4963-929c-36f90f479613.1.
+> PullDP    3812 (0xee4)    DTS message for content job {C10457F9-DE3A-4B45-878C-345919AFF97E} received, searching 1 active jobs for any containing this content job.  DTS Job is {78635652-3D12-4A26-A51B-D553934ECB54}  
+> PullDP    3812 (0xee4)    DTS succeeded message received for P010000F.3, content job {C10457F9-DE3A-4B45-878C-345919AFF97E}, status is 0x0 :  
+> PullDP    3856 (0xf10)    ContentExecuteJob {C10457F9-DE3A-4B45-878C-345919AFF97E} (state: 9-Downloaded) for package P010000F.3 content Content_3c9813ba-d7ab-4963-929c-36f90f479613.1.
 
 ### Step 14: Content is moved to the content library and state moves to Succeeded
 
 After the content is successfully **Downloaded**, pull DP then moves the content to the content library (which is also known as Single Instance Storage). After the content is moved to the content library, the content moves to **SIApplied** state followed by the **Succeeded** state.
 
-> PullDP    3856 (0xf10)    CPullDPPkgContJob::ApplySingleInstancing(): JobState = Downloaded  
-> PullDP    3856 (0xf10)    CPullDPPkgContJob::NotifySIApplied(). JobState = SIApplied  
-> PullDP    3812 (0xee4)    Content job {C10457F9-DE3A-4B45-878C-345919AFF97E} running.  
-> PullDP    3812 (0xee4)    ContentExecuteJob {C10457F9-DE3A-4B45-878C-345919AFF97E} (state: 13-SIApplied) for package P010000F.3 content Content_3c9813ba-d7ab-4963-929c-36f90f479613.1.  
+> PullDP    3856 (0xf10)    CPullDPPkgContJob::ApplySingleInstancing(): JobState = Downloaded  
+> PullDP    3856 (0xf10)    CPullDPPkgContJob::NotifySIApplied(). JobState = SIApplied  
+> PullDP    3812 (0xee4)    Content job {C10457F9-DE3A-4B45-878C-345919AFF97E} running.  
+> PullDP    3812 (0xee4)    ContentExecuteJob {C10457F9-DE3A-4B45-878C-345919AFF97E} (state: 13-SIApplied) for package P010000F.3 content Content_3c9813ba-d7ab-4963-929c-36f90f479613.1.  
 > ...  
-> PullDP    3812 (0xee4)    CPullDPPkgContJob::NotifySucceeded(). Content job {C10457F9-DE3A-4B45-878C-345919AFF97E} for package P010000F.3 and content Content_3c9813ba-d7ab-4963-929c-36f90f479613.1 has completed successfully. JobState = Succeeded  
-> PullDP    3812 (0xee4)    Notification that content job {C10457F9-DE3A-4B45-878C-345919AFF97E} for package P010000F.3 has completed.
+> PullDP    3812 (0xee4)    CPullDPPkgContJob::NotifySucceeded(). Content job {C10457F9-DE3A-4B45-878C-345919AFF97E} for package P010000F.3 and content Content_3c9813ba-d7ab-4963-929c-36f90f479613.1 has completed successfully. JobState = Succeeded  
+> PullDP    3812 (0xee4)    Notification that content job {C10457F9-DE3A-4B45-878C-345919AFF97E} for package P010000F.3 has completed.
 
 After each content item is added to the content library, SMSDPProv.log is also notified and reports the following:
 
-> 4688 (0x1250)        Content 'Content_3c9813ba-d7ab-4963-929c-36f90f479613.1' for package 'P010000F' has been added to content library successfully
+> 4688 (0x1250)        Content 'Content_3c9813ba-d7ab-4963-929c-36f90f479613.1' for package 'P010000F' has been added to content library successfully
 
 Note that there may be multiple content items associated with a single package (for example, an application with more than a Deployment Type or a Software Update Package). For each content associated with the package, a DTS job is created for content download and the content is moved to the content library (**Succeeded** state) upon successful completion. Because of this, you may see multiple content items for a package move to **Succeeded** state in the **PullDP.log** but the overall package status may still remain in **In Progress** state if other content items that are part of the package are still be downloading.  
 
@@ -923,21 +923,21 @@ Note that there may be multiple content items associated with a single package (
 
 After all the content jobs for the package have completed successfully and applied to the content library, pull DP moves the package to **Succeeded** state.
 
-> PullDP    3812 (0xee4)   All 1 content jobs for P010000F.3 have completed, notify of success for this pull dp job.  
-> PullDP    3812 (0xee4)   P010000F.3 has completed successfully, will clear stored content job state.
+> PullDP    3812 (0xee4)   All 1 content jobs for P010000F.3 have completed, notify of success for this pull dp job.  
+> PullDP    3812 (0xee4)   P010000F.3 has completed successfully, will clear stored content job state.
 
 ### Step 16: Pull DP sends a state message to the management point (MP)
 
 After completion of the download, a state message is sent to the management point with **State ID 1** indicating **Success**.
 
-> PullDP    3812 (0xee4)    Report state message 0x00000001 (1) to MP for package 'P010000F.3'  
-> PullDP    3812 (0xee4)    Request was successful.  
-> PullDP    3812 (0xee4)    CPullDPResponse::ReportPackageState return value 0x00000000.
+> PullDP    3812 (0xee4)    Report state message 0x00000001 (1) to MP for package 'P010000F.3'  
+> PullDP    3812 (0xee4)    Request was successful.  
+> PullDP    3812 (0xee4)    CPullDPResponse::ReportPackageState return value 0x00000000.
 
 With verbose and debug logging enabled, you can see the entire message body:
 
-> PullDP    3812 (0xee4)    Sending Report  
-> PullDP    3812 (0xee4)    \<Report>\<ReportHeader>\<Identification>\<Machine>\<ClientInstalled>0\</ClientInstalled>\<ClientType>1\</ClientType>\<Unknown>0\</Unknown>\<ClientID IDType="0" IDFlag="1">925b0ab0-247b-466b-be0f-93d7cb032c87\</ClientID>\<ClientVersion>5.00.0000.0000\</ClientVersion>\<NetBIOSName>P01PDP1.CONTOSO.COM\</NetBIOSName>\<CodePage>437\</CodePage>\<SystemDefaultLCID>1033\</SystemDefaultLCID>\</Machine>\</Identification>\<ReportDetails>\<ReportContent>StateMessage\</ReportContent>\<ReportType>Full\</ReportType>\<Date>20190107200618.000000+000\</Date>\<Version>1.0\</Version>\<Format>1.1\</Format>\</ReportDetails>\</ReportHeader>  
+> PullDP    3812 (0xee4)    Sending Report  
+> PullDP    3812 (0xee4)    \<Report>\<ReportHeader>\<Identification>\<Machine>\<ClientInstalled>0\</ClientInstalled>\<ClientType>1\</ClientType>\<Unknown>0\</Unknown>\<ClientID IDType="0" IDFlag="1">925b0ab0-247b-466b-be0f-93d7cb032c87\</ClientID>\<ClientVersion>5.00.0000.0000\</ClientVersion>\<NetBIOSName>P01PDP1.CONTOSO.COM\</NetBIOSName>\<CodePage>437\</CodePage>\<SystemDefaultLCID>1033\</SystemDefaultLCID>\</Machine>\</Identification>\<ReportDetails>\<ReportContent>StateMessage\</ReportContent>\<ReportType>Full\</ReportType>\<Date>20190107200618.000000+000\</Date>\<Version>1.0\</Version>\<Format>1.1\</Format>\</ReportDetails>\</ReportHeader>  
 \<ReportBody>\<StateMessage MessageTime="20190107200618.000000+000" SerialNumber="3">\<Topic ID="P010000F" Type="902" IDType="0"/>\<State ID="1" Criticality="0"/>\<UserParameters Flags="0" Count="4">\<Param>P010000F\</Param>\<Param>["Display=\\\P01PDP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=P01"]\\\P01PDP1.CONTOSO.COM\\\</Param>\<Param>{04AD1BB3-5E54-457A-9873-DFB2E8035090}\</Param>\<Param>\</Param>\</UserParameters>\</StateMessage>\</ReportBody>
 
 During content download, there are intermediate state messages sent to the MP which include the download percentage. To see all available State IDs, see [Advanced troubleshooting tips for Content Distribution](advanced-troubleshooting-tips.md).
@@ -946,23 +946,23 @@ During content download, there are intermediate state messages sent to the MP wh
 
 After sending the **Success** state message, pull DP clears the job states for the package.
 
-> PullDP    3812 (0xee4)    Clearing content job states for all 1 content jobs in package P010000F.3.  
-> PullDP    3812 (0xee4)    CPullDPService::ClearCompletedJobs(), removing 1 completed jobs.  
-> PullDP    3812 (0xee4)    Removing job for package P010000F.3 from job array and WMI.  
-> PullDP    3812 (0xee4)    Clearing content job states for all 1 content jobs in package P010000F.3.
+> PullDP    3812 (0xee4)    Clearing content job states for all 1 content jobs in package P010000F.3.  
+> PullDP    3812 (0xee4)    CPullDPService::ClearCompletedJobs(), removing 1 completed jobs.  
+> PullDP    3812 (0xee4)    Removing job for package P010000F.3 from job array and WMI.  
+> PullDP    3812 (0xee4)    Clearing content job states for all 1 content jobs in package P010000F.3.
 
 ### Step 18: MP_Relay endpoint on the MP receives the state message and moves it to site server
 
 `MP_Relay` endpoint on the management point processes the state message and routes the state message SMX file to the `auth\statesys.box\incoming` directory on the site server. If the MP is co-located on the site server (example below), it's directly sent to the `inboxes\auth\statesys.box\incoming` directory. If the MP is remote, it moves it to `\mp\outboxes\StateMsg.box` directory on the MP, and MP file dispatch manager (MPFDM) moves the file to the `inboxes\auth\statesys.box\incoming` directory on the site server.
 
-> MP_RelayEndpoint    25912 (0x6538)    Mp Message Handler: start message processing for Relay. -----------------------  
-> MP_RelayEndpoint    25912 (0x6538)    Mp Message Handler: FileType=SMX  
-> MP_RelayEndpoint    25912 (0x6538)    Message Body :  
+> MP_RelayEndpoint    25912 (0x6538)    Mp Message Handler: start message processing for Relay. -----------------------  
+> MP_RelayEndpoint    25912 (0x6538)    Mp Message Handler: FileType=SMX  
+> MP_RelayEndpoint    25912 (0x6538)    Message Body :  
 > \<Report>\<ReportHeader>\<Identification>\<Machine>\<ClientInstalled>0\</ClientInstalled>\<ClientType>1\</ClientType>\<Unknown>0\</Unknown>\<ClientID IDType="0" IDFlag="1">925b0ab0-247b-466b-be0f-93d7cb032c87\</ClientID>\<ClientVersion>5.00.0000.0000\</ClientVersion>\<NetBIOSName>P01PDP1.CONTOSO.COM\</NetBIOSName>\<CodePage>437\</CodePage>\<SystemDefaultLCID>1033\</SystemDefaultLCID>\</Machine>\</Identification>\<ReportDetails>\<ReportContent>StateMessage\</ReportContent>\<ReportType>Full\</ReportType>\<Date>20190107200618.000000+000\</Date>\<Version>1.0\</Version>\<Format>1.1\</Format>\</ReportDetails>\</ReportHeader>  
 > \<ReportBody>\<StateMessage MessageTime="20190107200618.000000+000" SerialNumber="3">\<Topic ID="P010000F" Type="902" IDType="0"/>\<State ID="1" Criticality="0"/>\<UserParameters Flags="0" Count="4">\<Param>P010000F\</Param>\<Param>["Display=\\\P01PDP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=P01"]\\\P01PDP1.CONTOSO.COM\\\</Param>\<Param>{04AD1BB3-5E54-457A-9873-DFB2E8035090}\</Param>\<Param>\</Param>\</UserParameters>\</StateMessage>\</ReportBody>  
 > \</Report>  
-MP_RelayEndpoint    25912 (0x6538)    Inv-Relay Task: Processing message body  
-MP_RelayEndpoint    25912 (0x6538)    Relay: Outbox dir: E:\ConfigMgr\inboxes\auth\statesys.box\incoming
+MP_RelayEndpoint    25912 (0x6538)    Inv-Relay Task: Processing message body  
+MP_RelayEndpoint    25912 (0x6538)    Relay: Outbox dir: E:\ConfigMgr\inboxes\auth\statesys.box\incoming
 
 Note that verbose and debug logging should be enabled on the MP to see above log entries on the MP. Without verbose and debug logs, **MP_Relay.log** will just log "".  
 
@@ -970,15 +970,15 @@ Note that verbose and debug logging should be enabled on the MP to see above log
 
 After the state message SMX file arrives in the `StateSys.box\incoming` directory, State System component on the site server processes the message. All state messages are processed by calling `spProcessReport` stored procedure. For pull DP state messages, `spProcessReport` calls `spProcessPullDPMessage` which updates the `PullDPResponse` table with the state message details.
 
-> SMS_STATE_SYSTEM    23544 (0x5bf8)    CMessageProcessor - Processing file: N_6RB4OA3A.SMX  
-> SMS_STATE_SYSTEM    23544 (0x5bf8)    CMessageProcessor - the cmdline to DB exec dbo.spProcessStateReport N'?\<Report>\<ReportHeader>\<Identification>\<Machine>\<ClientInstalled>0\</ClientInstalled>\<ClientType>1\</ClientType>\<Unknown>0\</Unknown>\<ClientID IDType="0" IDFlag="1">925b0ab0-247b-466b-be0f-93d7cb032c87\</ClientID>\<ClientVersion>5.00.0000.0000\</ClientVersion>\<NetBIOSName>P01PDP1.CONTOSO.COM\</NetBIOSName>\<CodePage>437\</CodePage>\<SystemDefaultLCID>1033\</SystemDefaultLCID>\</Machine>\</Identification>\<ReportDetails>\<ReportContent>StateMessage\</ReportContent>\<ReportType>Full\</ReportType>\<Date>20190107200618.000000+000\</Date>\<Version>1.0\</Version>\<Format>1.1\</Format>\</ReportDetails>\</ReportHeader>~~        \<ReportBody>\<StateMessage MessageTime="20190107200618.000000+000" SerialNumber="3">\<Topic ID="P010000F" Type="902" IDType="0"/>\<State ID="1" Criticality="0"/>\<UserParameters Flags="0" Count="4">\<Param>P010000F\</Param>\<Param>["Display=\\\P01PDP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=P01"]\\\P01PDP1.CONTOSO.COM\\\</Param>\<Param>{04AD1BB3-5E54-457A-9873-DFB2E8035090}\</Param>\<Param>\</Param>\</UserParameters>\</StateMessage>\</ReportBody>\~~\</Report>~~'
+> SMS_STATE_SYSTEM    23544 (0x5bf8)    CMessageProcessor - Processing file: N_6RB4OA3A.SMX  
+> SMS_STATE_SYSTEM    23544 (0x5bf8)    CMessageProcessor - the cmdline to DB exec dbo.spProcessStateReport N'?\<Report>\<ReportHeader>\<Identification>\<Machine>\<ClientInstalled>0\</ClientInstalled>\<ClientType>1\</ClientType>\<Unknown>0\</Unknown>\<ClientID IDType="0" IDFlag="1">925b0ab0-247b-466b-be0f-93d7cb032c87\</ClientID>\<ClientVersion>5.00.0000.0000\</ClientVersion>\<NetBIOSName>P01PDP1.CONTOSO.COM\</NetBIOSName>\<CodePage>437\</CodePage>\<SystemDefaultLCID>1033\</SystemDefaultLCID>\</Machine>\</Identification>\<ReportDetails>\<ReportContent>StateMessage\</ReportContent>\<ReportType>Full\</ReportType>\<Date>20190107200618.000000+000\</Date>\<Version>1.0\</Version>\<Format>1.1\</Format>\</ReportDetails>\</ReportHeader>~~        \<ReportBody>\<StateMessage MessageTime="20190107200618.000000+000" SerialNumber="3">\<Topic ID="P010000F" Type="902" IDType="0"/>\<State ID="1" Criticality="0"/>\<UserParameters Flags="0" Count="4">\<Param>P010000F\</Param>\<Param>["Display=\\\P01PDP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=P01"]\\\P01PDP1.CONTOSO.COM\\\</Param>\<Param>{04AD1BB3-5E54-457A-9873-DFB2E8035090}\</Param>\<Param>\</Param>\</UserParameters>\</StateMessage>\</ReportBody>\~~\</Report>~~'
 
 Note that **StateSys.log** does not log the message body unless verbose logging for **StateSys.log** is enabled. To enable verbose logging for **StateSys.log**, see [Enable verbose logging](advanced-troubleshooting-tips.md#enable-verbose-logging).
 
 Here's the excerpt from `spProcessReport` stored procedure which processes the pull DP state messages:
 
 ```sql
-else if @TopicType=902 -- Pull Distribution Point  
+else if @TopicType=902 -- Pull Distribution Point  
         exec @Ret=spProcessPullDPMessage @SenderID=@SenderID, @MessageTime=@tmMessageTime, @PkgID=@TopicID, @PkgVersion=@MessageSerialNumber, @StateID=@StateID, @P1=@P1, @P2=@P2, @P3=@P3, @P4=@P4, @P5=@P5, @Error=@Error OUTPUT  
 ```
 
@@ -986,19 +986,19 @@ else if @TopicType=902 -- Pull Distribution Point 
 
 After `PullDPResponse` table is updated, SMSDBMON detects a change in the table and drops a *.PUL* file for DistMgr to process, where the name of the file identifies the row that was inserted/modified.
 
-> SMS_DATABASE_NOTIFICATION_MONITOR    29748 (0x7434)    RCV: INSERT on PullDPResponse for PullDPResponse_UpdIns [72057594037928008  ][145014]  
-> SMS_DATABASE_NOTIFICATION_MONITOR    29748 (0x7434)    SND: Dropped E:\ConfigMgr\inboxes\distmgr.box\incoming\72057594037928008.PUL  [145014]
+> SMS_DATABASE_NOTIFICATION_MONITOR    29748 (0x7434)    RCV: INSERT on PullDPResponse for PullDPResponse_UpdIns [72057594037928008  ][145014]  
+> SMS_DATABASE_NOTIFICATION_MONITOR    29748 (0x7434)    SND: Dropped E:\ConfigMgr\inboxes\distmgr.box\incoming\72057594037928008.PUL  [145014]
 
 ### Step 21: DistMgr updates the distribution status
 
 DistMgr processes the *.PUL* file, and retrieves the row from `PullDPResponse` table based on the file name and updates the package status. After the response is processed, DistMgr deletes the processed row from the `PullDPResponse` table.
 
-> SMS_DISTRIBUTION_MANAGER    32876 (0x806c)    SQL>>>select s.ID, s.PkgServer, s.SiteCode, p.StoredPkgVersion, s.Status, r.PkgVersion, r.ActionState, r.ActionData, p.PkgFlags, p.ShareType, CONVERT(VARCHAR(64), r.MessageTime, 127) AS MessageTime from PullDPResponse r join PkgStatus s on r.PkgStatusID = s.PKID AND r.PkgStatusID = 72057594037928008 join SMSPackages p on s.ID = p.PkgID  
-> SMS_DISTRIBUTION_MANAGER    32876 (0x806c)    ~Processing PullDP response P01 - ["Display=\\\P01PDP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=P01"]\\\P01PDP1.CONTOSO.COM\\  
-> SMS_DISTRIBUTION_MANAGER    32876 (0x806c)        Package P010000F, Version 3(3), ActionState 1, PkgStatus 0, ActionData =  
-> SMS_DISTRIBUTION_MANAGER    32876 (0x806c)    ~Successfully updated the package server status for ["Display=\\\P01PDP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=P01"]\\\P01PDP1.CONTOSO.COM\\ for package P010000F, Status 3  
-> SMS_DISTRIBUTION_MANAGER    32876 (0x806c)    SQL>>>DELETE FROM PullDPResponse WHERE PkgStatusID = 72057594037928008 AND MessageTime = '2019-01-07T20:06:18'  
-> SMS_DISTRIBUTION_MANAGER    32876 (0x806c)    ~Successfully processed PullDP response file E:\ConfigMgr\inboxes\distmgr.box\INCOMING\72057594037928008.PUL
+> SMS_DISTRIBUTION_MANAGER    32876 (0x806c)    SQL>>>select s.ID, s.PkgServer, s.SiteCode, p.StoredPkgVersion, s.Status, r.PkgVersion, r.ActionState, r.ActionData, p.PkgFlags, p.ShareType, CONVERT(VARCHAR(64), r.MessageTime, 127) AS MessageTime from PullDPResponse r join PkgStatus s on r.PkgStatusID = s.PKID AND r.PkgStatusID = 72057594037928008 join SMSPackages p on s.ID = p.PkgID  
+> SMS_DISTRIBUTION_MANAGER    32876 (0x806c)    ~Processing PullDP response P01 - ["Display=\\\P01PDP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=P01"]\\\P01PDP1.CONTOSO.COM\\  
+> SMS_DISTRIBUTION_MANAGER    32876 (0x806c)        Package P010000F, Version 3(3), ActionState 1, PkgStatus 0, ActionData =  
+> SMS_DISTRIBUTION_MANAGER    32876 (0x806c)    ~Successfully updated the package server status for ["Display=\\\P01PDP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=P01"]\\\P01PDP1.CONTOSO.COM\\ for package P010000F, Status 3  
+> SMS_DISTRIBUTION_MANAGER    32876 (0x806c)    SQL>>>DELETE FROM PullDPResponse WHERE PkgStatusID = 72057594037928008 AND MessageTime = '2019-01-07T20:06:18'  
+> SMS_DISTRIBUTION_MANAGER    32876 (0x806c)    ~Successfully processed PullDP response file E:\ConfigMgr\inboxes\distmgr.box\INCOMING\72057594037928008.PUL
 
 ### Step 22: Database replication replicates the status change to other sites
 
@@ -1012,14 +1012,14 @@ The following steps outline the flow of events that occur when a package is upda
 
 ### Step 1: The admin console executes the `RefreshPkgSource` method against the `SMS_Package` WMI class in the SMS Provider namespace
 
-After the administrator updates the package from the console, the admin console calls the `RefreshPkgSource` method of the `SMS_Package` class to update the package. **SMSProv.log** shows the following:
+After the administrator updates the package from the console, the admin console calls the `RefreshPkgSource` method of the `SMS_Package` class to update the package. **SMSProv.log** shows the following:
 
 > SMS Provider 4716 (0x126c) Context: SMSAppName=Configuration Manager Administrator console~  
 > SMS Provider 4716 (0x126c) ExecMethodAsync : **SMS_Package.PackageID="\<PackageID>"::RefreshPkgSource** ~  
 > SMS Provider 4716 (0x126c) CExtProviderClassObject::DoExecuteMethod RefreshPkgSource~  
 > SMS Provider 4716 (0x126c) Auditing: User CONTOSO\Admin called an audited method of an instance of class SMS_Package.~  
 
-When this method is called, SMS Provider updates `SMSPackages` to set **Action** to **1**(UPDATE) and inserts a row in `PkgNotification` table.
+When this method is called, SMS Provider updates `SMSPackages` to set **Action** to **1**(UPDATE) and inserts a row in `PkgNotification` table.
 
 ```sql
 update SMSPackages set Source = N'\\PS1SITE\SOURCE\Packages\200MB_1', StoredPkgVersion = 1, UpdateMask = 32, UpdateMaskEx = 8388608, Action = 1 where PkgID = N'PackageID'
@@ -1028,12 +1028,12 @@ insert PkgNotification (PkgID, Priority, Type, TimeKey) values (N'PackageID', 2,
 
 ### Step 2: SMSDBMON notifies DistMgr to process the package
 
-SMSDBMON detects a change in the `PkgNotification` table which causes it to drop a **\<*PackageID*>.PKN** file in `DistMgr.box` to instruct DistMgr to process the package:
+SMSDBMON detects a change in the `PkgNotification` table which causes it to drop a **\<*PackageID*>.PKN** file in `DistMgr.box` to instruct DistMgr to process the package:
 
 > SMS_DATABASE_NOTIFICATION_MONITOR 1792 (0x700) RCV: INSERT on PkgNotification for PkgNotify_Add [\<PackageID>][1036610]  
 > SMS_DATABASE_NOTIFICATION_MONITOR 1792 (0x700) SND: Dropped E:\ConfigMgr\inboxes\distmgr.box\\\<PackageID>.PKN [1036610]
 
-### Step 3: DistMgr wakes up to process the package after receiving the PKN file
+### Step 3: DistMgr wakes up to process the package after receiving the PKN file
 
 1. The main DistMgr thread starts a package processing thread.
 
@@ -1112,7 +1112,7 @@ SMSDBMON detects a change in the `PkgNotification` table which causes it to dr
    > SMS_DISTRIBUTION_MANAGER 5776 (0x1690) ~Setting CMiniJob transfer root to E:\SMSPKG\PS100039.DLT.1.2  
    > SMS_DISTRIBUTION_MANAGER 5776 (0x1690) ~Created minijob to send compressed copy of package PS100039 to site SS1. Transfer root = E:\SMSPKG\PS100039.DLT.1.2.  
 
-6. Package processing thread exits after processing the package:
+6. Package processing thread exits after processing the package:
 
    > SMS_DISTRIBUTION_MANAGER 5776 (0x1690) Package PS100039 is new or has changed, replicating to all applicable sites.  
    > SMS_DISTRIBUTION_MANAGER 5776 (0x1690) ~CDistributionSrcSQL::UpdateAvailableVersion PackageID=PS100039, Version=2, Status=2301  
@@ -1175,7 +1175,7 @@ The following steps outline the flow of events that occur when a package is redi
 ### Step 6: PkgXferMgr wakes up to process the job
 
 1. The main PkgXferMgr thread creates a sending thread.
-2. The sending thread or pull DP sending thread processes the job.
+2. The sending thread or pull DP sending thread processes the job.
 
    **Standard DP:**
 
@@ -1196,7 +1196,7 @@ The following steps outline the flow of events that occur when a package is redi
    > SMS_PACKAGE_TRANSFER_MANAGER 5272 (0x1498) ~Finished sending SWD package \<PackageID> version 1 to distribution point PS1DP1.CONTOSO.COM  
    > SMS_PACKAGE_TRANSFER_MANAGER 5272 (0x1498) STATMSG: ID=8200 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_PACKAGE_TRANSFER_MANAGER" SYS=PS1SITE.CONTOSO.COM SITE=PS1 PID=5428 TID=5272 GMTDATE=Mon May 16 20:06:36.827 2016 ISTR0="\<PackageID>" ISTR1="1" ISTR2="PS1DP1.CONTOSO.COM" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=2 AID0=400 AVAL0="\<PackageID>" AID1=410 AVAL1="1"
 
-   **Pull DP:**  
+   **Pull DP:**  
 
    Pull DP sending thread sends a notification to the pull DP to start downloading the content. Since the package was redistributed, the generated notification XML shows that **Action** is set to **redist**, which means that all the files will get re-downloaded by the pull DP even if they already exist in the content library on the pull DP.
 
@@ -1208,7 +1208,7 @@ The following steps outline the flow of events that occur when a package is redi
 
    On receiving a notification for a redistribute action, **PullDP.log** will show that all content will get redownloaded even if some/all of the content may exist in the content library.
 
-   > PullDP    3676 (0xe5c)    Content_3c9813ba-d7ab-4963-929c-36f90f479613.1: redistribute/redownload all files
+   > PullDP    3676 (0xe5c)    Content_3c9813ba-d7ab-4963-929c-36f90f479613.1: redistribute/redownload all files
 
    After this is done, the remaining process is similar to the process described in step 6 of [Distribute a package to pull DP](#distribute-a-package-to-pull-dp).
 

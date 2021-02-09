@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2976809
 
 ## Symptoms
 
-When you use the **Add Groups** or **Add Object** button while creating a report in System Center Operations Manager, no more than 500 objects are displayed in the Add Object Wizard even if more than 500 exist.
+When you use the **Add Groups** or **Add Object** button while creating a report in System Center Operations Manager, no more than 500 objects are displayed in the Add Object Wizard even if more than 500 exist.
 
 ## Cause
 

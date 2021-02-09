@@ -30,7 +30,7 @@ Please re-install a copy of the above file.
 
 This problem does not occur if you do not press any keys during startup.
 > [!Note]
-> This problem can occur on any Windows operating system prior to Windows 7, on both 32-bit and 64-bit platforms.
+> This problem can occur on any Windows operating system prior to Windows 7, on both 32-bit and 64-bit platforms.
 
 ## Cause
 

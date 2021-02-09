@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4477073
 
 ## Symptom
 
-When you try to install a Windows update, especially a cumulative update, you receive the following error message in WindowsUpdate.log:
+When you try to install a Windows update, especially a cumulative update, you receive the following error message in WindowsUpdate.log:
 
 > FATAL: CBS called Error with 0x800f0831
 
@@ -31,7 +31,7 @@ Additionally, you receive error messages that resemble the following in CBS.log:
 > WER: Generating failure report for package:\<Failed_Package> status: 0x800f0831, failure source: Execute, start state: Staged, target state: Installed, client id: DISM Package Manager Provider  
 
 > [!NOTE]
-> \<Failed_Package> represents the package that can't be installed. \<Missing_Package> represents the package for which the manifest is missing.
+> \<Failed_Package> represents the package that can't be installed. \<Missing_Package> represents the package for which the manifest is missing.
 
 ## Cause
 
@@ -42,6 +42,6 @@ This issue occurs because the update that can't be installed requires the manife
 To fix the issue, follow these steps:
 
 1. Go to [Microsoft Update Catalog](https://catalog.update.microsoft.com/).
-2. In the **Search** box, enter the package ID of the \<Missing_Package>.
-3. Download the package and then install it.
+2. In the **Search** box, enter the package ID of the \<Missing_Package>.
+3. Download the package and then install it.
 4. Reinstall the \<Failed_Package>.

@@ -71,9 +71,6 @@ This problem can happen if one of the following is true:
 - You have a group policy with a WMIFilter that queries `Win32_Product` class.
 - You have an application installed on the machine that queries `Win32_Product` class.
 
-> [!NOTE]
-> For more information about WmiFilters, see [HOWTO: Leverage Group Policies with WMI Filters](https://support.microsoft.com/help/555253).
-
 ## Resolution
 
 If you're using a group policy with the WMIFilter that queries `Win32_Product`, modify the filter to use `Win32reg_AddRemovePrograms`.

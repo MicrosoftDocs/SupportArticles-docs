@@ -301,7 +301,7 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
           4. On the WSUS server, open **Internet Information Services (IIS) Manager**.
           5. Expand **Web Sites**, right-click the website for the WSUS computer, then click **Properties**.
           6. Click the **Web Site** tab. The HTTP port setting is displayed in **TCP port** and the HTTPS port setting is displayed in **SSL port**.
-          7. In the Configuration Manager console, go to **Administration** > **Site Configuration** > **Servers and Site System Roles**, then click the \<*SiteSystemName*> right-hand pane.
+          7. In the Configuration Manager console, go to **Administration** > **Site Configuration** > **Servers and Site System Roles**, then click the \<*SiteSystemName*> right-hand pane.
           8. In the bottom pane, right-click **Software Update Point** and then click **Properties**.
           9. Go to the **General** tab, specify or verify the WSUS configuration port numbers.
 
@@ -354,7 +354,7 @@ Problems can be addressed the same way as scan failures in [step 3](#step-3-wind
 
 As mentioned earlier in this guide, when troubleshooting scan failures, check the WUAHandler.log and WindowsUpdate.log files. Because WUAHandler simply reports what Windows Update Agent reported, the error in WUAHandler would be the same error that was reported by the Windows Update Agent itself. More information about the error could be found in WindowsUpdate.log. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
 
-Generally speaking, there are many reasons why a software update scan might fail. It could be due to one of the issues mentioned above, or it could come down to a communication or firewall issue between the client and the software update point computer. Your best source of information will come from the logs and the error codes they contain. As a reference, see [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).
+Generally speaking, there are many reasons why a software update scan might fail. It could be due to one of the issues mentioned above, or it could come down to a communication or firewall issue between the client and the software update point computer. Your best source of information will come from the logs and the error codes they contain. As a reference, see [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).
 
 ### Step 6: Update store records the status and raises a state message for each update in WMI
 

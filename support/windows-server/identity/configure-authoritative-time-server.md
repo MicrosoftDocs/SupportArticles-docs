@@ -12,6 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Windows Time Service
 ms.technology: windows-server-active-directory
+adobe-target: true
 ---
 # How to configure an authoritative time server in Windows Server
 

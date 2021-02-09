@@ -17,7 +17,7 @@ ms.technology: windows-server-group-policy
 
 This article provides a solution to an issue where User Group Policy Preference (GPP) Scheduled Task item fails to apply.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2447414
 
 ## Symptoms

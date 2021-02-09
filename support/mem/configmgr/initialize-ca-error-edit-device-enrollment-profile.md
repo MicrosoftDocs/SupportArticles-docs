@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4508759
 
 Consider the following scenario in Configuration Manager:
 
-- You enable the following option in the management point properties to configure at least one management point for managing modern devices:
+- You enable the following option in the management point properties to configure at least one management point for managing modern devices:
 
   **Allow mobile devices and Mac computers to use this management point**
 
@@ -31,24 +31,24 @@ The message contains the following detail information:
 > System.ArgumentException  
 > Controls created on one thread cannot be parented to a control on a different thread.  
 > Stack Trace:  
-   at System.Windows.Forms.Control.ControlCollection.Add(Control value)  
-   at System.Windows.Forms.Form.ControlCollection.Add(Control value)  
-   at Microsoft.ConfigurationManagement.AdminConsole.ControlsInspector.SetInvalidControl(Control control, String errorMessage)  
-   at Microsoft.ConfigurationManagement.AdminConsole.ControlsInspector.SetInvalidControl(Control control)  
-   at Microsoft.ConfigurationManagement.AdminConsole.ControlsInspector.EvaluateControl(Control control)  
-   at Microsoft.ConfigurationManagement.AdminConsole.ControlsInspector.InspectAll()  
-   at Microsoft.ConfigurationManagement.AdminConsole.DeviceManagement.Enrollment.CreateEnrollmentProfileDialog.AddItemToListViewCAServers(String name, String fqdn, DataTable certTemplates)  
-   at Microsoft.ConfigurationManagement.AdminConsole.DeviceManagement.Enrollment. CreateEnrollmentProfileDialog.InitializationWorker_DoWork(Object sender, DoWorkEventArgs e)  
-   at System.ComponentModel.BackgroundWorker.OnDoWork(DoWorkEventArgs e)  
-   at System.ComponentModel.BackgroundWorker.WorkerThreadStart(Object argument)
+&nbsp; &nbsp;at System.Windows.Forms.Control.ControlCollection.Add(Control value)  
+&nbsp; &nbsp;at System.Windows.Forms.Form.ControlCollection.Add(Control value)  
+&nbsp; &nbsp;at Microsoft.ConfigurationManagement.AdminConsole.ControlsInspector.SetInvalidControl(Control control, String errorMessage)  
+&nbsp; &nbsp;at Microsoft.ConfigurationManagement.AdminConsole.ControlsInspector.SetInvalidControl(Control control)  
+&nbsp; &nbsp;at Microsoft.ConfigurationManagement.AdminConsole.ControlsInspector.EvaluateControl(Control control)  
+&nbsp; &nbsp;at Microsoft.ConfigurationManagement.AdminConsole.ControlsInspector.InspectAll()  
+&nbsp; &nbsp;at Microsoft.ConfigurationManagement.AdminConsole.DeviceManagement.Enrollment.CreateEnrollmentProfileDialog.AddItemToListViewCAServers(String name, String fqdn, DataTable certTemplates)  
+&nbsp; &nbsp;at Microsoft.ConfigurationManagement.AdminConsole.DeviceManagement.Enrollment. CreateEnrollmentProfileDialog.InitializationWorker_DoWork(Object sender, DoWorkEventArgs e)  
+&nbsp; &nbsp;at System.ComponentModel.BackgroundWorker.OnDoWork(DoWorkEventArgs e)  
+&nbsp; &nbsp;at System.ComponentModel.BackgroundWorker.WorkerThreadStart(Object argument)
 
 ## Cause
 
-This is a known issue in Configuration Manager current branch, version 1902.
+This is a known issue in Configuration Manager current branch, version 1902.
 
 ## Resolution
 
-To fix this issue, update to [Configuration Manager current branch version 1906](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1906).
+To fix this issue, update to [Configuration Manager current branch version 1906](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1906).
 
 ## Workaround
 

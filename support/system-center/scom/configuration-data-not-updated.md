@@ -1,6 +1,6 @@
 ---
 title: Configuration data isn't updated
-description: Fixes some configuration update issues in a System Center Operations Manager management group.
+description: Fixes some configuration update issues in a System Center Operations Manager management group.
 ms.date: 06/30/2020
 ms.prod-support-area-path: 
 ms.reviewer: RPesenko
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2635742
 
 ## Symptoms
 
-You may experience one or more of the following symptoms in a System Center Operations Manager management group:
+You may experience one or more of the following symptoms in a System Center Operations Manager management group:
 
 - Newly installed agents display as **Not Monitored** in the Operations console, yet existing agents are monitored.
 - One or more monitors on one or more agents may not change state when healthy or unhealthy conditions are met.
@@ -23,40 +23,40 @@ You may experience one or more of the following symptoms in a System Center Ope
 - The Operations Manager event log on one or more agents displays event 21026, indicating that the current configuration is still valid, even though the configuration for these agents should have been updated.
 - The file OpsMgrConnector.Config.xml in the management group folder under `Health Service State\Connector Configuration Cache` doesn't update for long periods of time relative to the rest of the management group on one or more agents.
 
-In addition, the Operations Manager event log may display one or more events with an ID 29106 when the System Center Configuration Management service restarts. For example:
+In addition, the Operations Manager event log may display one or more events with an ID 29106 when the System Center Configuration Management service restarts. For example:
 
-> Log Name:      Operations Manager  
-> Source:          OpsMgr Config Service  
-> Event ID:        29106  
-> Level:            Warning  
+> Log Name:      Operations Manager  
+> Source:          OpsMgr Config Service  
+> Event ID:        29106  
+> Level:            Warning  
 > Description:  
 > The request to synchronize state for OpsMgr Health Service identified by "da4d36df-ce22-8930-e6d4-45b783e9fdb1" failed due to the following exception "System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
 
-> Log Name:      Operations Manager  
-> Source:          OpsMgr Config Service  
-> Event ID:        29106  
-> Level:            Warning  
+> Log Name:      Operations Manager  
+> Source:          OpsMgr Config Service  
+> Event ID:        29106  
+> Level:            Warning  
 > Description:  
 > The request to synchronize state for OpsMgr Health Service identified by "fc1c815b-c0c4-242d-ae27-30db4ef99b54" failed due to the following exception "Microsoft.EnterpriseManagement.Common.DataItemDoesNotExistException: TypedManagedEntityId = 'ac8f3d08-ee2a-ae21-0e46-19c3da794183' is deleted.
 
 Collecting ETL logs against the Configuration Service at INF level might reveal lines similar to the following:
 
-> 3326  [ConfigurationChangeSetProvider.UpdateQueryTimestampFromResults]    \[configurationchangesetprovider_cs595]( 000000000343A92F )Timestamp = *04/11/2074* 08:57:09.  
-> 3327  [DatabaseAccessor.NotifyOnChanges]    \[databasenotification_cs329]( 0000000002E4BD4E )Firing change notification.  
-> 3328  [ConfigurationEngine.DatabaseHelper.OnConfigurationChange]    \[configurationengine_cs499]( 00000000023546E1 )IsIncremental=True, NumberOfChanges=0  
-> 3329  [StateManager.CollectDirty]    \[statemanager_cs39]( 00000000035D75A8 )State=274cda45-6031-c0e2-3659-0072251f5655 is dirty  
-    < large number of additional GUIDS >  
-> 3432  [StateManager.CollectDirty]    \[statemanager_cs39]( 00000000035D75A8 )State=6ec4fb2d-d1c1-72a8-32e6-fe26df42aba8 is dirty  
-> 3433  [StateManager.CollectDirty]    \[statemanager_cs45]( 00000000035D75A8 ) **NumberOfDirtyStates=104**  
-> 3434  [ConfigurationEngine.CommunicationHelper.NotifyDirtyStatesTask.Run]    \[configurationengine_cs869]Completed successfully  
-> 3435  [DatabaseAccessor.GetPollingIntervalMillisecondsTimeSpan]    [databaseaccessor_cs126]Database polling interval 0 milliseconds
+> 3326  [ConfigurationChangeSetProvider.UpdateQueryTimestampFromResults]    \[configurationchangesetprovider_cs595]( 000000000343A92F )Timestamp = *04/11/2074* 08:57:09.  
+> 3327  [DatabaseAccessor.NotifyOnChanges]    \[databasenotification_cs329]( 0000000002E4BD4E )Firing change notification.  
+> 3328  [ConfigurationEngine.DatabaseHelper.OnConfigurationChange]    \[configurationengine_cs499]( 00000000023546E1 )IsIncremental=True, NumberOfChanges=0  
+> 3329  [StateManager.CollectDirty]    \[statemanager_cs39]( 00000000035D75A8 )State=274cda45-6031-c0e2-3659-0072251f5655 is dirty  
+    < large number of additional GUIDS >  
+> 3432  [StateManager.CollectDirty]    \[statemanager_cs39]( 00000000035D75A8 )State=6ec4fb2d-d1c1-72a8-32e6-fe26df42aba8 is dirty  
+> 3433  [StateManager.CollectDirty]    \[statemanager_cs45]( 00000000035D75A8 ) **NumberOfDirtyStates=104**  
+> 3434  [ConfigurationEngine.CommunicationHelper.NotifyDirtyStatesTask.Run]    \[configurationengine_cs869]Completed successfully  
+> 3435  [DatabaseAccessor.GetPollingIntervalMillisecondsTimeSpan]    [databaseaccessor_cs126]Database polling interval 0 milliseconds
 
 > [!NOTE]
-> The timestamp in line 3326 is set to *04/11/2074*. If this appears in ETL logging, use the SQL queries in the [More information](#more-information) section to confirm the condition listed in the Cause section exists.
+> The timestamp in line 3326 is set to *04/11/2074*. If this appears in ETL logging, use the SQL queries in the [More information](#more-information) section to confirm the condition listed in the Cause section exists.
 
 ## Cause
 
-The System Center Management Configuration service uses a timestamp to determine when new configuration data needs to be calculated for agents and management servers. If the system clock on an agent is faster than the system clock on the management server, discovery data from this agent will set the timestamp for one or more managed instances hosted by that agent to the current agent system clock time. The System Center Configuration Management service will delay calculating configuration updates for the instances on that agent until the system clock on the management server is current with the timestamp for that discovery data. If the agent system clock was faster than management server system time when discovery data was sent, or the agent continues to send data with a future timestamp, then it is possible that the management group would experience the symptoms listed above.
+The System Center Management Configuration service uses a timestamp to determine when new configuration data needs to be calculated for agents and management servers. If the system clock on an agent is faster than the system clock on the management server, discovery data from this agent will set the timestamp for one or more managed instances hosted by that agent to the current agent system clock time. The System Center Configuration Management service will delay calculating configuration updates for the instances on that agent until the system clock on the management server is current with the timestamp for that discovery data. If the agent system clock was faster than management server system time when discovery data was sent, or the agent continues to send data with a future timestamp, then it is possible that the management group would experience the symptoms listed above.
 
 Setting the agent system clock time to match the management server system clock time will not reset the timestamp for the existing discovery data and the issue will remain until the management server system clock time exceeds the discovery data by the grooming interval, when the obsolete discovery data will be groomed normally.
 
@@ -70,7 +70,7 @@ Setting the agent system clock time to match the management server system clock 
 
 ## More information
 
-1. Use the following three queries to determine if this condition exists. The queries must be run against the `OperationsManager` database. If the timestamp with the greatest value in the table is greater than the current time (in UTC format), then the condition exists.
+1. Use the following three queries to determine if this condition exists. The queries must be run against the `OperationsManager` database. If the timestamp with the greatest value in the table is greater than the current time (in UTC format), then the condition exists.
 
     ```sql
     Select GetUTCDate()as 'Current Time',
@@ -83,7 +83,7 @@ Setting the agent system clock time to match the management server system clock 
     MAX(timegenerated) as 'DiscoverySourceToRelationship Timestamp' from DiscoverySourceToRelationship
     ```
 
-2. The following three queries can be used to determine which computers may have submitted discovery data with a future timestamp. If the system clocks on these agents are not current, set them to current time before taking any additional action.
+2. The following three queries can be used to determine which computers may have submitted discovery data with a future timestamp. If the system clocks on these agents are not current, set them to current time before taking any additional action.
 
     **Find all computers with `DiscoverySource Timestamp` more than one day in future**
 
@@ -139,7 +139,7 @@ Setting the agent system clock time to match the management server system clock 
     where TimeGenerated > GETUTCDATE()
     ```
 
-4. The following query can be used to see what additional data has been submitted to the database with a timestamp in the future. The tables related to maintenance mode should have several rows, assuming there are agents currently in maintenance mode that's scheduled to end at some time. All other tables should have timestamps with the current time, or in the past.
+4. The following query can be used to see what additional data has been submitted to the database with a timestamp in the future. The tables related to maintenance mode should have several rows, assuming there are agents currently in maintenance mode that's scheduled to end at some time. All other tables should have timestamps with the current time, or in the past.
 
    ```sql
     /*                                                            */

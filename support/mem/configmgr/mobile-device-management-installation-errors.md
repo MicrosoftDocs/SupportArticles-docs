@@ -19,7 +19,7 @@ When you attempt to enable a mobile device on a management point enabled for mob
 
 ## Cause
 
-This issue can occur if the .NET Framework 4 is installed on the server before IIS is enabled.
+This issue can occur if the .NET Framework 4 is installed on the server before IIS is enabled.
 
 ## Resolution
 
