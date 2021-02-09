@@ -7,7 +7,6 @@ ms.service: virtual-desktop
 manager: dscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.subservice: sessions-connectivity
 localization_priority: medium
 ms.reviewer: kaushika
 ms.date: 02/09/2021
