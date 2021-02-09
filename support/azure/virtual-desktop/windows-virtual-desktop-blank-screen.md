@@ -22,7 +22,7 @@ The following list contains known scenarios causing black screens, and the non-s
 
 |Issue|Version of Windows|Article #|
 |---|---|---|
-|The AppReadiness service sometimes fails to shutdown waiting for some COM objects to disconnect. Resulting in failed user sign in or black screen in WVD scenario.|Windows 2004|[October 1, 2020—KB4577063 (OS Build 19041.546) Preview (microsoft.com)](https://support.microsoft.com/topic/october-1-2020-kb4577063-os-build-19041-546-preview-7d0e27fb-f971-dbc6-aebe-f3026873412d)|
+|The AppReadiness service sometimes fails to shut down waiting for some COM objects to disconnect. Resulting in failed user sign-in or black screen in WVD scenario.|Windows 2004|[October 1, 2020—KB4577063 (OS Build 19041.546) Preview (microsoft.com)](https://support.microsoft.com/topic/october-1-2020-kb4577063-os-build-19041-546-preview-7d0e27fb-f971-dbc6-aebe-f3026873412d)|
 ||Windows 1909 & 1903|[September 16, 2020—KB4577062 (OS Builds 18362.1110 and 18363.1110) Preview (microsoft.com)](https://support.microsoft.com/topic/september-16-2020-kb4577062-os-builds-18362-1110-and-18363-1110-preview-0a7c8d93-3b09-a29f-3ff4-24898996ee15)|
 ||Windows 1809|[September 16, 2020—KB4577069 (OS Build 17763.1490) Preview (microsoft.com)](https://support.microsoft.com/topic/september-16-2020-kb4577069-os-build-17763-1490-preview-fcc63e7f-dbf1-ab01-9a11-1f79983e8526)|
 |Addresses an issue where the WVD user might experience a blank screen during sign-in.|Windows 2004|[November 30, 2020—KB4586853 (OS Builds 19041.662 and 19042.662) Preview (microsoft.com)](https://support.microsoft.com/topic/november-30-2020-kb4586853-os-builds-19041-662-and-19042-662-preview-8fb07fb8-a7dd-ea62-d65e-3305da09f92e)|
