@@ -100,7 +100,7 @@ If you use an older version of Configuration Manager or standalone WSUS servers,
 
 ### Reindex the WSUS database
 
-To reindex the WSUS database (SUSDB), use the [Re-index the WSUS Database](https://gallery.technet.microsoft.com/scriptcenter/6f8cde49-5c52-4abd-9820-f1d270ddea61) T-SQL script.
+To reindex the WSUS database (SUSDB), use the [Reindex the WSUS Database](reindex-the-wsus-database.md) T-SQL script.
 
 The steps to connect to SUSDB and perform the reindex differ, depending on whether SUSDB is running in SQL Server or Windows Internal Database (WID). To determine where SUSDB is running, check value of the `SQLServerName` registry entry on the WSUS server located at the `HKEY_LOCAL_MACHINE\Software\Microsoft\Update Services\Server\Setup` subkey.
 
@@ -366,10 +366,26 @@ WSUS maintenance tasks can be automated, assuming that a few requirements are me
 
 Needed/helpful links:
 
-- [WSUS Cleanup](https://gallery.technet.microsoft.com/scriptcenter/fd39c7d4-05bb-4c2d-8a99-f92ca8d08218)
-- [Re-index the WSUS Database](https://gallery.technet.microsoft.com/scriptcenter/6f8cde49-5c52-4abd-9820-f1d270ddea61)
+- [Reindex the WSUS Database](reindex-the-wsus-database.md)
 - [Agent XPs Server Configuration Option](/sql/database-engine/configure-windows/agent-xps-server-configuration-option)
 - [Weekend Scripter: Use the Windows Task Scheduler to Run a Windows PowerShell Script](https://devblogs.microsoft.com/scripting/weekend-scripter-use-the-windows-task-scheduler-to-run-a-windows-powershell-script/)
+
+### WSUS cleanup script
+
+```powershell
+[reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration")` 
+ | out-null 
+$wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer(); 
+$cleanupScope = new-object Microsoft.UpdateServices.Administration.CleanupScope; 
+$cleanupScope.DeclineSupersededUpdates = $true        
+$cleanupScope.DeclineExpiredUpdates = $true 
+$cleanupScope.CleanupObsoleteUpdates = $true 
+$cleanupScope.CompressUpdates = $true 
+#$cleanupScope.CleanupObsoleteComputers = $true 
+$cleanupScope.CleanupUnneededContentFiles = $true 
+$cleanupManager = $wsus.GetCleanupManager(); 
+$cleanupManager.PerformCleanup($cleanupScope);
+```
 
 ### Setting up the WSUS Cleanup task in Task Scheduler
 
@@ -382,7 +398,7 @@ The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/
 
     ![WSUS Create a task screen.](./media/wsus-maintenance-guide/create-task.jpg)
 
-2. Under the **Actions** tab, add a new action and specify the program/script you want to run. In this case, we need to use PowerShell and point it to the PS1 file we want it to run. I use the WSUS Cleanup script found [here](https://gallery.technet.microsoft.com/scriptcenter/fd39c7d4-05bb-4c2d-8a99-f92ca8d08218). This script performs cleanup options that Configuration Manager current branch version 1906 doesn't do. You can uncomment them if you are using standalone WSUS or an older version of Configuration Manager. If you would like a log, you can modify the last line of the script as follows:
+2. Under the **Actions** tab, add a new action and specify the program/script you want to run. In this case, we need to use PowerShell and point it to the PS1 file we want it to run. You can use the [WSUS Cleanup script](#wsus-cleanup-script). This script performs cleanup options that Configuration Manager current branch version 1906 doesn't do. You can uncomment them if you are using standalone WSUS or an older version of Configuration Manager. If you would like a log, you can modify the last line of the script as follows:
 
     ```powershell
     [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration") | out-null
@@ -412,7 +428,7 @@ The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/
 
 ### Setting up the SUSDB reindex for WID using SQLCMD and Task Scheduler
 
-1. Save the script [here](https://gallery.technet.microsoft.com/scriptcenter/6f8cde49-5c52-4abd-9820-f1d270ddea61) as a .sql file (for example, *SUSDBMaint.sql*).
+1. Save the [Reindex the WSUS database script](reindex-the-wsus-database.md) as a .sql file (for example, *SUSDBMaint.sql*).
 2. Create a basic task and give it a name:
 
     ![WSUS Create Basic Task Wizard screen.](./media/wsus-maintenance-guide/create-basic-task-wizard.jpg)

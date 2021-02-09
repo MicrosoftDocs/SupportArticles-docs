@@ -392,6 +392,8 @@
           href: high-network-bandwidth-usage.md
         - name: Optimize WSUS client performance
           href: optimize-wsus-client-performance.md
+        - name: Reindex the WSUS database
+          href: reindex-the-wsus-database.md  
         - name: The spDeleteUpdate stored procedure runs slowly
           href: spdeleteupdate-slow-performance.md          
         - name: Troubleshoot issues with WSUS client agents
