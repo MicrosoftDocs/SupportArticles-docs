@@ -232,6 +232,8 @@
       href: ./identity/disable-knowledge-consistency-checker-automatic-generation.md
     - name: Duplicate AD replication connections are created
       href: ./identity/duplicate-active-directory-replication-connections.md
+    - name: Get and use AD Replication Status Tool
+      href: ./identity/get-use-active-directory-replication-status-tool.md
     - name: Hotfixes for DFS technologies
       href: ./identity/distributed-file-system-hotfixes.md
     - name: How to restrict RPC traffic to a specific port
