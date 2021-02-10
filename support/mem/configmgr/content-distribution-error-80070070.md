@@ -18,7 +18,7 @@ When you have the BranchCache feature installed on the Configuration Manager sit
 > About to upload files from package source directory E:\SMSPKGSIG\C0101B18~~  
 > WARNING: Caught exception System.Runtime.InteropServices.COMException - **There is not enough space on the disk. (Exception from HRESULT: 0x80070070)** ~~  
 > Call stack:  
-> at Microsoft.ConfigurationManager.AzureRoles.ContentManager.BranchCacheContentInfoStreamClass.Complete()~~  
+> at Microsoft.ConfigurationManager.AzureRoles.ContentManager.BranchCacheContentInfoStreamClass.Complete()~~  
 > at Microsoft.ConfigurationManager.AzureRoles.ContentManager.ContentInfoStream.Close()~~  
 > at Microsoft.ConfigurationManager.AzureRoles.ContentManager.CryptoUtilities.EncryptAndUploadFileAndSaveContentInfo(String fileName, String contentInfoFullPath, CloudBlockBlob blob, EncryptionParams encryptionParams, IsCanceledCallback isCanceledDelegate)~~  
 > at Microsoft.ConfigurationManager.AzureRoles.ContentManager.ContentManager.RecursiveUpload(String packageId, ContentRouter contentRouter, CloudBlobContainer container, String sourceDir, String contentInfoDir, String relativeTargetPath, EncryptionParams encryptionParams, Int32& fileCounter)~~  

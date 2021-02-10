@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 2763004
 
 ## Symptoms
 
-If System Center Data Protection Manager 2010 (DPM 2010) backs up a SharePoint 2010 site and then the site has its name changed, DPM 2010 will be unable to recover the site. The renamed site will be treated as a list instead of a site.
+If System Center Data Protection Manager 2010 (DPM 2010) backs up a SharePoint 2010 site and then the site has its name changed, DPM 2010 will be unable to recover the site. The renamed site will be treated as a list instead of a site.
 
 ## Cause
 

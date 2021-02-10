@@ -13,11 +13,9 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Performance monitoring tools
 ms.technology: windows-server-performance
 ---
-# How to enable verbose startup, shutdown, logon, and logoff status messages in the Windows Server 2003 family  
+# How to enable verbose startup, shutdown, logon, and logoff status messages in the Windows Server 2003 family
 
 This article describes how to configure Windows so that you receive verbose startup, shutdown, logon, and logoff status messages. Verbose status messages may be helpful when you're troubleshooting slow startup, shutdown, logon, or logoff behavior.
-
-For a Microsoft Windows 2000 version of this article, see [316243](https://support.microsoft.com/help/316243).  
 
 _Original product version:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 325376

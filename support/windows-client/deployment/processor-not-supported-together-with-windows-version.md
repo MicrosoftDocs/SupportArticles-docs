@@ -12,6 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.prod-support-area-path: Servicing
 ms.technology: windows-client-deployment
+adobe-target: true
 ---
 # "The processor is not supported together with the Windows version that you are currently using" error when you scan or download Windows updates
 

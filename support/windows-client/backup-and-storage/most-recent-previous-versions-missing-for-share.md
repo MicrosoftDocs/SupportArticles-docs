@@ -40,13 +40,13 @@ To work around this issue, limit the number of previous versions that are kept o
 By default, Windows keeps only 64 snapshots per volume for previous versions. You can adjust this limit by creating or changing the following registry key:  
 `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VSS\Settings\MaxShadowCopies`  
 
-See [Registry Keys and Values for Backup and Restore](/windows/win32/backup/registry-keys-for-backup-and-restore) for more information.
+See [Registry Keys and Values for Backup and Restore](/windows/win32/backup/registry-keys-for-backup-and-restore) for more information.
 
-Setting this key to a value higher than the client system can handle prevents users from seeing the most recent previous versions. The client-side limit for each operating system is as follows:
+Setting this key to a value higher than the client system can handle prevents users from seeing the most recent previous versions. The client-side limit for each operating system is as follows:
 
 - Windows 8, Windows Server 2012, and later versions have a client-side limit of 500.
 - Windows Vista, Windows 7, Windows Server 2008, and Windows Server 2008 R2 have a client-side limit of 500 for the [Server Message Block](/windows/win32/fileio/microsoft-smb-protocol-and-cifs-protocol-overview) (SMB) version 1 (SMBv1) protocol and 64 for the SMB version 2 (SMBv2) protocol.
 - Windows XP and Windows Server 2003 have a client-side limit of 64.
 
 > [!Note]
-> The client-side limit isn't adjustable. It is only on the server that you can adjust the number of previous versions that are kept.
+> The client-side limit isn't adjustable. It is only on the server that you can adjust the number of previous versions that are kept.

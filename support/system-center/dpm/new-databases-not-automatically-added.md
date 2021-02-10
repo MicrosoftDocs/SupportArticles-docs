@@ -17,18 +17,18 @@ Consider the following scenario:
 
 - You're running Microsoft System Center Data Protection Manager on a primary and secondary server.
 - On the primary DPM server, Microsoft SQL Server auto protection is enabled.
-- DPM secondary protection is configured to protect the current SQL Server databases under the protected SQL Server instance.
+- DPM secondary protection is configured to protect the current SQL Server databases under the protected SQL Server instance.
 
 In this scenario, auto protection adds new databases to the SQL Server instance from the primary DPM server, as expected. However, new databases are not automatically added from the secondary DPM server.  
 
 ## Resolution
 
-To resolve this problem, enable SQL Server auto protection on the secondary DPM server. To do this, follow these steps:
+To resolve this problem, enable SQL Server auto protection on the secondary DPM server. To do this, follow these steps:
 
 1. On the secondary DPM server, locate the protection group that's associated with the SQL Server instance you want to auto protect.
 2. Right-click the protection group, and then select **Modify Protection Group** to start the wizard.
 3. On the **Select Group Members** screen, expand the appropriate server that's running SQL Server.
-4. Select the SQL Server instance by selecting the check box next to the name, and then right-click the name.
+4. Select the SQL Server instance by selecting the check box next to the name, and then right-click the name.
 5. Select the **Turn on auto protection** pop-up window, as shown in the following screenshot.
 
     ![turn on auto protection](./media/new-databases-not-automatically-added/turn-on-auto-protection.jpg)  
@@ -41,4 +41,4 @@ To resolve this problem, enable SQL Server auto protection on the secondary DPM 
 
 ## References
 
-For more information about SQL Server auto protection, see [Add databases to a SQL Server](/previous-versions//hh758042(v=technet.10)?redirectedfrom=MSDN).
+For more information about SQL Server auto protection, see [Add databases to a SQL Server](/previous-versions//hh758042(v=technet.10)?redirectedfrom=MSDN).

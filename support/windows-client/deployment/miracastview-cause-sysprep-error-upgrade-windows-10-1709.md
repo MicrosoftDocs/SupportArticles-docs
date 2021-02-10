@@ -26,7 +26,7 @@ Consider the following scenario:
 
 - On a Windows 10 Version 1703 based computer, MiracastView is a built-in app and is installed by default.
 - You upgrade the computer to Windows 10 Version 1709.
-- You open a Command Prompt window with administrator permission and run the following command:
+- You open a Command Prompt window with administrator permission and run the following command:
 
     ```console
     cd %windir%\System32\Sysprep
@@ -54,7 +54,7 @@ See `http://go.microsoft.com/fwlink/?LinkId=235160` for help diagnosing app depl
 
 ## Cause
 
-This issue occurs due to a bug in the way setup migrated the **Windows.MiracastView_6.3.0.0_neutral_neutral_cw5n1h2txyewy** package during the upgrade. This package will not function properly in the generalized image.
+This issue occurs due to a bug in the way setup migrated the **Windows.MiracastView_6.3.0.0_neutral_neutral_cw5n1h2txyewy** package during the upgrade. This package will not function properly in the generalized image.
 
 ## Workaround
 
@@ -62,8 +62,8 @@ To work around this issue, use either of the following methods.
 
 ### Method 1
 
-On the Windows 10 Version 1709 computer, copy Windows.MiracastView_6.3.0.0_neutral_neutral_cw5n1h2txyewy.xml from C:\\Windows.old\\ProgramData\\Microsoft\\Windows\\AppRepository\\ to C:\\ProgramData\\Microsoft\\Windows\\AppRepository.
+On the Windows 10 Version 1709 computer, copy Windows.MiracastView_6.3.0.0_neutral_neutral_cw5n1h2txyewy.xml from C:\\Windows.old\\ProgramData\\Microsoft\\Windows\\AppRepository\\ to C:\\ProgramData\\Microsoft\\Windows\\AppRepository.
 
 ### Method 2
 
-Copy the C:\\Windows\\MiracastView folder from a Windows 10 Version 1703 computer to the Windows 10 Version 1709 computer. Then, restart the computer to let Windows finish uninstalling MiracastView.
+Copy the C:\\Windows\\MiracastView folder from a Windows 10 Version 1703 computer to the Windows 10 Version 1709 computer. Then, restart the computer to let Windows finish uninstalling MiracastView.

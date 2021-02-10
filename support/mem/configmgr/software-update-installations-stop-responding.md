@@ -17,18 +17,18 @@ After you install Configuration Manager current branch version 1810 or 1806 to c
 
 - Folders are created in \%SystemRoot%\ccmcache for the new content. However, none (or only some) of the updates are downloaded to these folders.
 
-- **DataTransferService** jobs are created and completed. However, ContentTransferManager logs don't indicate that they were notified that the downloads were completed.
+- **DataTransferService** jobs are created and completed. However, ContentTransferManager logs don't indicate that they were notified that the downloads were completed.
 
 - Software center may show that updates are being installed and that some have a pending restart. Also, the **Programs and Features** > **View Installed Updates** item in Control Panel shows that the updates installed completely. However, the updates never actually finish.
 
 - For Operating System Deployment (OSD) scenarios, the task sequence stops responding on the **Install Software Updates** step.
 
-This issue occurs most frequently on Windows 10, version 1709. However, other versions of Windows are also affected.
+This issue occurs most frequently on Windows 10, version 1709. However, other versions of Windows are also affected.
 
 ## Resolution
 
-To resolve this issue for Configuration Manager, see [Update installations stop responding or never show completion in Configuration Manager, version 1810](https://support.microsoft.com/help/4490575).
+To resolve this issue for Configuration Manager, see [Update installations stop responding or never show completion in Configuration Manager, version 1810](https://support.microsoft.com/help/4490575).
 
 ## Workaround
 
-To work around this issue for Configuration Manager current branch version 1806, restart the SMS Agent Host service (Ccmexec.exe).
+To work around this issue for Configuration Manager current branch version 1806, restart the SMS Agent Host service (Ccmexec.exe).

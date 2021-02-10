@@ -28,7 +28,7 @@ To resolve this issue, the NDES certificate must be created as a v2 certificate.
 :::image type="content" source="./media/error-0x80090014-installing-ndes-certificate/certificate.png" alt-text="Screenshot of a V2 template.":::
 
 > [!NOTE]
-> The webserver template is a good example of this situation, although it should have **Client Authentication** added as an **Enhanced Key Usage** value.
+> The webserver template is a good example of this situation, although it should have **Client Authentication** added as an **Enhanced Key Usage** value.
 
 ## References
 

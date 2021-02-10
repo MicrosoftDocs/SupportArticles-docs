@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4471115
 
 ## Symptoms
 
-You use Dynamic Media in Configuration Manager. When the Task Sequence Wizard first starts in Windows PE, the initial communication to the management point to sync the time settings is successful, as shown in the following SMSTS.log entry:
+You use Dynamic Media in Configuration Manager. When the Task Sequence Wizard first starts in Windows PE, the initial communication to the management point to sync the time settings is successful, as shown in the following SMSTS.log entry:
 
 > TSMBootstrap Getting MP time information  
 > TSMBootstrap Set authenticator in transport  
@@ -24,7 +24,7 @@ You use Dynamic Media in Configuration Manager. When the Task Sequence Wizard fi
 > TSMBootstrap CLibSMSMessageWinHttpTransport::Send: URL:MP_ServerCCM_POST /ccm_system/request  
 > TSMBootstrap Request was successful.
 
-However, the later request to the management point to get location information fails, as shown in the following SMSTS.log entry:
+However, the later request to the management point to get location information fails, as shown in the following SMSTS.log entry:
 
 > TSMBootstrap IP: *192.168.0.100* *192.168.0.0*  
 > TSMBootstrap CLibSMSMessageWinHttpTransport::Send: URL: *MP_Server* GET /SMS_MP/.sms_aut?MPLOCATION&ir=192.168.0.100&ip=192.168.0.0  
@@ -40,13 +40,13 @@ However, the later request to the management point to get location information�
 > TSMBootstrap Failed to query *MP_Server* for MP location
 
 > [!NOTE]
-> The IP addresses in the first line of this log entry are the IP addresses of the client computer and its subnet.
+> The IP addresses in the first line of this log entry are the IP addresses of the client computer and its subnet.
 
-If multiple management points are defined in the Dynamic Media, the same failure occurs regardless of which management point Configuration Manager tries to communicate with. If you try to use the same URL in a browser, as in the following example, this also causes a **500** error:
+If multiple management points are defined in the Dynamic Media, the same failure occurs regardless of which management point Configuration Manager tries to communicate with. If you try to use the same URL in a browser, as in the following example, this also causes a **500** error:
 
 ***http://MP_Server/SMS_MP/.sms_aut?MPLOCATION&ir=192.168.15.100&ip=192.168.0.0***
 
-The Internet Information Services (IIS) logs on the management point do not reveal a matching **500** error entry. Instead, a **200** success entry is displayed. If you enable **Failed Request Tracing** in IIS for the **500** error message, you find the following error message:
+The Internet Information Services (IIS) logs on the management point do not reveal a matching **500** error entry. Instead, a **200** success entry is displayed. If you enable **Failed Request Tracing** in IIS for the **500** error message, you find the following error message:
 
 > CALL_ISAPI_EXTENSION DllName="*MP_Install_Directory*\getauth.dll"  
 > MODULE_SET_RESPONSE_ERROR_STATUS  
@@ -55,7 +55,7 @@ The Internet Information Services (IIS) logs on the management point do not rev
 
 For more information about how to enable failed request tracing in IIS for **500** error messages, see the [Troubleshooting Failed Requests Using Tracing in IIS 8.5](/iis/troubleshoot/using-failed-request-tracing/troubleshooting-failed-requests-using-tracing-in-iis-85).
 
-The MP_GetAuth.log file on the management point shows the following error entry that was logged when the client made the request that's recorded in the SMSTS.log:
+The MP_GetAuth.log file on the management point shows the following error entry that was logged when the client made the request that's recorded in the SMSTS.log:
 
 > MP_GetAuth_ISAPI MP GA Number of MPs in the Site = \<Number_Of_MPs_At_Site>  
 > MP_GetAuth_ISAPI MP GA: Actual Auth Reply Body :  
@@ -80,7 +80,7 @@ The issue doesn't occur for site-based media or the Preboot Execution Environmen
 
 ## Cause
 
-This issue occurs because there are multiple Unknown Computer objects for a specific website, and that site has several management points. This causes many results to be returned when `MPLOCATION` is called and the `GetMPLocationForIPSubnet` stored procedure runs.
+This issue occurs because there are multiple Unknown Computer objects for a specific website, and that site has several management points. This causes many results to be returned when `MPLOCATION` is called and the `GetMPLocationForIPSubnet` stored procedure runs.
 
 To run `GetMPLocationForIPSubnet` manually on the server that's running SQL Server through SQL Management Studio, run the following query:
 
@@ -92,7 +92,7 @@ In this scenario. this command returns several hundred rows. This large number o
 
 ## Resolution
 
-All sites should have only one Unknown Computer object per architecture. For example, there should be only one x64 object that's labeled **x64 Unknown Computer** and only one x86 object that's labeled **x86 Unknown Computer**. If a site has more than one Unknown Computer object per architecture, the extra Unknown Computer objects should be deleted. Deleting extra Unknown Computer objects can be done only from the SQL Server database. It cannot be done from the Configuration Manager console.
+All sites should have only one Unknown Computer object per architecture. For example, there should be only one x64 object that's labeled **x64 Unknown Computer** and only one x86 object that's labeled **x86 Unknown Computer**. If a site has more than one Unknown Computer object per architecture, the extra Unknown Computer objects should be deleted. Deleting extra Unknown Computer objects can be done only from the SQL Server database. It cannot be done from the Configuration Manager console.
 
 > [!NOTE]
 > Creating extra Unknown Computer objects to prevent the client computers from stealing the GUID of the Unknown Computer objects is not the correct method to fix this issue. For the correct method, see [A client computer can steal the Configuration Manager GUID of an Unknown Computer object during imaging](unknown-computer-object-guid-stolen.md).
@@ -109,11 +109,11 @@ To delete the extra Unknown Computer objects, follow these steps:
 
 5. In the results pane, sort the objects in the **All Unknown Computers** collection by selecting the **Site Code** column.
 
-6. Note whether there are multiple **x64 Unknown Computer** objects or **x86 Unknown Computer** objects for any individual site.
+6. Note whether there are multiple **x64 Unknown Computer** objects or **x86 Unknown Computer** objects for any individual site.
 
-7. If there are multiple **x64 Unknown Computer** objects or **x86 Unknown Computer** objects for any individual site, right-click the columns in the results pane, and add **Resource ID** to the list of columns.
+7. If there are multiple **x64 Unknown Computer** objects or **x86 Unknown Computer** objects for any individual site, right-click the columns in the results pane, and add **Resource ID** to the list of columns.
 
-8. Determine the lowest **Resource ID**  value for each **x64 Unknown Computer** object or each **x86 Unknown Computer** object for any one site. In most cases, for the first Primary site in an environment, the resource IDs for the original Unknown Computer objects for the sites will be **2046820352** (**x86 Unknown Computer**) and **2046820353** (**x64 Unknown Computer**).
+8. Determine the lowest **Resource ID**  value for each **x64 Unknown Computer** object or each **x86 Unknown Computer** object for any one site. In most cases, for the first Primary site in an environment, the resource IDs for the original Unknown Computer objects for the sites will be **2046820352** (**x86 Unknown Computer**) and **2046820353** (**x64 Unknown Computer**).
 
 9. After you determine the lowest **Resource ID**, all other **x64 Unknown Computer** objects or **x86 Unknown Computer** objects for any site can be deleted. Note all the Resource IDs that can be deleted and which site they belong to.
 
@@ -141,19 +141,19 @@ To delete the extra Unknown Computer objects, follow these steps:
     SELECT * FROM UnknownSystem_DISC WHERE ItemKey IN ('Extra_Resource_ID_1','Extra_Resource_ID_2', 'Extra_Resource_ID_3')
     ```
 
-    In this query, *Extra_Resource_ID_x* is the Resource ID of each of the extra Unknown Computer objects, as determined in step 9. For example, if the extra Resource IDs are **2046820354** and **2046820355**, the query would be as follows:
+    In this query, *Extra_Resource_ID_x* is the Resource ID of each of the extra Unknown Computer objects, as determined in step 9. For example, if the extra Resource IDs are **2046820354** and **2046820355**, the query would be as follows:
 
     ```sql
     SELECT * FROM UnknownSystem_DISC WHERE ItemKey IN ('2046820354','2046820355 ')
     ```
 
-16. Verify that the records that are returned by the query in step 15 are correct. If they are, then run the following query to delete the records:
+16. Verify that the records that are returned by the query in step 15 are correct. If they are, then run the following query to delete the records:
 
     ```sql
     DELETE FROM UnknownSystem_DISC WHERE ItemKey IN ('Extra_Resource_ID_1','Extra_Resource_ID_2', 'Extra_Resource_ID_3')
     ```
 
-    In this query, *Extra_Resource_ID_x* is the Resource ID of each of the extra Unknown Computer objects, as determined in step 9. For example, if the extra Resource IDs are **2046820354** and **2046820355**, the delete query would be as follows:
+    In this query, *Extra_Resource_ID_x* is the Resource ID of each of the extra Unknown Computer objects, as determined in step 9. For example, if the extra Resource IDs are **2046820354** and **2046820355**, the delete query would be as follows:
 
     ```sql
     DELETE FROM UnknownSystem_DISC WHERE ItemKey IN ('2046820354', '2046820355')

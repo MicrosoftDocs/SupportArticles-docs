@@ -14,9 +14,9 @@ _Original KB number:_ &nbsp; 2705504
 
 ## Symptoms
 
-Scenario: A Hyper-V host is managed by System Center 2012 Virtual Machine Manager (VMM) and it is hosting service templates. You want to reinstall the VMM agent on the host.
+Scenario: A Hyper-V host is managed by System Center 2012 Virtual Machine Manager (VMM) and it is hosting service templates. You want to reinstall the VMM agent on the host.
 
-If you remove the host from VMM, it will retain the VM information but all service template information will be lost. This will prevent any updates to service templates as well as scale-out actions.
+If you remove the host from VMM, it will retain the VM information but all service template information will be lost. This will prevent any updates to service templates as well as scale-out actions.
 
 ## Cause
 
@@ -24,4 +24,4 @@ This is a known issue in System Center 2012 Virtual Machine Manager. Removing a 
 
 ## Resolution
 
-Log on directly to the host where you want to reinstall the agent. Remove the agent and reinstall it manually using the latest agent files. On the VMM server, perform an **add host** action and select **reassociate**. This will re-register the host in VMM and the service templates will be restored.
+Log on directly to the host where you want to reinstall the agent. Remove the agent and reinstall it manually using the latest agent files. On the VMM server, perform an **add host** action and select **reassociate**. This will re-register the host in VMM and the service templates will be restored.

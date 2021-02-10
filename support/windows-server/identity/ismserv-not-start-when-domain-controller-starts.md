@@ -22,36 +22,36 @@ _Original KB number:_ &nbsp; 4530043
 
 ## Symptoms
 
-When you start a Windows Server domain controller (DC), it does not start correctly. When you check the System log in Event Viewer, you find the following entry for Event ID 7023:
+When you start a Windows Server domain controller (DC), it does not start correctly. When you check the System log in Event Viewer, you find the following entry for Event ID 7023:
 
-> Log Name:      System  
-Source:        Service Control Manager​  
-Event ID:      7023​  
-Level:         Error​  
+> Log Name:      System  
+Source:        Service Control Manager​  
+Event ID:      7023​  
+Level:         Error​  
 Description:​  
 The IsmServ service terminated with the following error:  
 The specified server cannot perform the requested operation.​  
 Event Xml:​  
 \<Event xmlns="`http://schemas.microsoft.com/win/2004/08/events/event`">  
 \...​  
-  \<EventData>​  
-    \<Data Name="param1">IsmServ</Data>​  
-    \<Data Name="param2">%%58</Data>​  
-  \</EventData>​  
+  \<EventData>​  
+    \<Data Name="param1">IsmServ</Data>​  
+    \<Data Name="param2">%%58</Data>​  
+  \</EventData>​  
 \</Event>​
 
 This event includes the following data parameters:
 
-- The **param1** parameter value, **IsmServ**: This represents the Intersite Messaging service (ISMserv.exe).
+- The **param1** parameter value, **IsmServ**: This represents the Intersite Messaging service (ISMserv.exe).
 - The **param2** parameter value, **58**: This maps to the ERROR_BAD_NET_RESP message ("The specified server cannot perform the requested​ operation").
 
 To collect more information about this problem, you can configure LDAP Event Tracing for Windows (ETW) to run at system startup. (For details about how to do this, see [More information](#more-information).) After you restart the DC, you should see the following lines in the log:
 
 > [Microsoft-Windows-LDAP-Client/Debug] Message=LDAP connection 0xec4b08a8 successfully resolved 'localhost' using GetHostByName.  
 ...  
-[Microsoft-Windows-LDAP-Client/Debug] Message=gethostbyname collected 2 records for '`dc1.contoso.com`'**[Microsoft-Windows-LDAP-Client/Debug] Message=LdapParallelConnect called for connection 0xec4b08a8 with timeout 45 sec 0 usec.  Total count is 2.**  
+[Microsoft-Windows-LDAP-Client/Debug] Message=gethostbyname collected 2 records for '`dc1.contoso.com`'**[Microsoft-Windows-LDAP-Client/Debug] Message=LdapParallelConnect called for connection 0xec4b08a8 with timeout 45 sec 0 usec.  Total count is 2.**  
 **[Microsoft-Windows-LDAP-Client/Debug] Message=No response yet...**  
-[Microsoft-Windows-LDAP-Client/Debug] Message=LdapParallelConnect finished for connection 0xec4b08a8.  Time taken was 1 sec.  Original timeout specified was 45 sec 0 usec.  
+[Microsoft-Windows-LDAP-Client/Debug] Message=LdapParallelConnect finished for connection 0xec4b08a8.  Time taken was 1 sec.  Original timeout specified was 45 sec 0 usec.  
 ...  
 [Microsoft-Windows-LDAP-Client/Debug] Message=LdapConnect failed to open connection 0xec4b08a8, error = 0x5b.  
 [Microsoft-Windows-LDAP-Client/Debug] Message=LdapConnect thread 0xce0 has connection 0xec4b08a8 as down.
@@ -90,7 +90,7 @@ To configure LDAP ETW, follow these steps:
     logman stop "g_os" -ets
     ```
 
-5. When you finish collecting data, run the following command at an elevated command prompt to stop tracing:
+5. When you finish collecting data, run the following command at an elevated command prompt to stop tracing:
 
     ```console
     logman delete "autosession\g_os" -et

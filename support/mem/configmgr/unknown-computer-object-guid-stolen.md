@@ -14,13 +14,13 @@ _Original KB number:_ &nbsp; 4471061
 
 ## Symptoms
 
-Configuration Manager current branch version 1702 included a new feature that lets you use the **Previous** button to retry a failed task sequence in the Task Sequence Wizard when it runs on Microsoft Windows Preinstallation Environment (Windows PE).
+Configuration Manager current branch version 1702 included a new feature that lets you use the **Previous** button to retry a failed task sequence in the Task Sequence Wizard when it runs on Microsoft Windows Preinstallation Environment (Windows PE).
 
 For more information about this feature, see [Return to previous page when a task sequence fails](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1702#return-to-previous-page-when-a-task-sequence-fails).
 
 This feature introduced the following issue:
 
-When the **Previous** button is selected, the client PC that's being imaged can steal the Configuration Manager Unique Identifier (GUID) of the Unknown Computer object that's being used (either the **x64 Unknown Computer** or the **x86 Unknown Computer**).
+When the **Previous** button is selected, the client PC that's being imaged can steal the Configuration Manager Unique Identifier (GUID) of the Unknown Computer object that's being used (either the **x64 Unknown Computer** or the **x86 Unknown Computer**).
 
 This issue was fixed in [Update rollup for Configuration Manager current branch, version 1702](https://support.microsoft.com/help/4019926).
 
@@ -40,9 +40,9 @@ Despite applying the update rollup in Configuration Manager current branch versi
 
 ## Cause
 
-This issue may continue to occur because the fix in the update rollup for Configuration Manager current branch version 1702 and later Configuration Manager current branch versions prevents the issue from occurring only going forward. It doesn't fix the issue if the issue currently exists in the environment.
+This issue may continue to occur because the fix in the update rollup for Configuration Manager current branch version 1702 and later Configuration Manager current branch versions prevents the issue from occurring only going forward. It doesn't fix the issue if the issue currently exists in the environment.
 
-Therefore, the issue can continue to occur in Configuration Manager current branch version 1702 or newer even after the version 1702 update rollup or a later version is applied. This is true unless the following steps are taken:
+Therefore, the issue can continue to occur in Configuration Manager current branch version 1702 or newer even after the version 1702 update rollup or a later version is applied. This is true unless the following steps are taken:
 
 - Update the boot images on distribution points.
 - Recreate the boot media by using the updated images.
@@ -51,25 +51,25 @@ Therefore, the issue can continue to occur in Configuration Manager current br
 ## Resolution
 
 > [!WARNING]
-> Do not try to fix this issue by recreating the Unknown Computer objects. This doesn't correctly fix the issue, and it doesn't prevent the issue from reoccurring going forward. Additionally, there are known issues that occur in environments that have multiple Unknown Computer objects for a single site. If you have previously tried to resolve this issue by recreating the Unknown Computer objects, see [Remove duplicate Unknown Computer objects](#remove-duplicate-unknown-computer-objects).
+> Do not try to fix this issue by recreating the Unknown Computer objects. This doesn't correctly fix the issue, and it doesn't prevent the issue from reoccurring going forward. Additionally, there are known issues that occur in environments that have multiple Unknown Computer objects for a single site. If you have previously tried to resolve this issue by recreating the Unknown Computer objects, see [Remove duplicate Unknown Computer objects](#remove-duplicate-unknown-computer-objects).
 
 To resolve this issue and prevent it from returning in the environment, follow these steps:
 
-1. Update all boot images in the environment. To do this, right-click the images in the Configuration Manager console, and then select **Update Distribution Points**. This puts the updated Configuration Manager binaries that contain the fix into the boot image. For more information, see [Update distribution points with the boot image](/mem/configmgr/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
+1. Update all boot images in the environment. To do this, right-click the images in the Configuration Manager console, and then select **Update Distribution Points**. This puts the updated Configuration Manager binaries that contain the fix into the boot image. For more information, see [Update distribution points with the boot image](/mem/configmgr/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image).
 
-2. If you use media in the environment, recreate all media in the environment after you update all boot images on the distribution points. This makes sure that the updated boot images that have the fix are in the media that's being used in the environment.
+2. If you use media in the environment, recreate all media in the environment after you update all boot images on the distribution points. This makes sure that the updated boot images that have the fix are in the media that's being used in the environment.
 
-    To prevent media that has old boot images from being used, the certificates for those boot images can be blocked in the Configuration Manager console under the **Administration** > **Security** > **Certificates** node. To make sure that the issue doesn't recur, we recommend that you block all certificates for all media created before the boot images were updated in step 1. The date on which the media was created is displayed in the **Start Date** column.
+    To prevent media that has old boot images from being used, the certificates for those boot images can be blocked in the Configuration Manager console under the **Administration** > **Security** > **Certificates** node. To make sure that the issue doesn't recur, we recommend that you block all certificates for all media created before the boot images were updated in step 1. The date on which the media was created is displayed in the **Start Date** column.
 
-    For more information about how to create media, see [Create task sequence media](/mem/configmgr/osd/deploy-use/create-task-sequence-media).
+    For more information about how to create media, see [Create task sequence media](/mem/configmgr/osd/deploy-use/create-task-sequence-media).
 
-3. The client computer that stole the GUID must be cleaned correctly.
+3. The client computer that stole the GUID must be cleaned correctly.
 
 To correctly clean the client that stole the GUID, follow these steps:
 
-1. Identify the computer that acquired the GUID. To do this, examine the properties of the Unknown Computer object (usually **x64 Unknown Computer**), note the value of **Configuration Manager Unique Identifier**, and then run a query in the Configuration Manager console to identify the computer object that has the same GUID. You can do all these steps from the console. You do not have to go into the SQL Server database to do this.
+1. Identify the computer that acquired the GUID. To do this, examine the properties of the Unknown Computer object (usually **x64 Unknown Computer**), note the value of **Configuration Manager Unique Identifier**, and then run a query in the Configuration Manager console to identify the computer object that has the same GUID. You can do all these steps from the console. You do not have to go into the SQL Server database to do this.
 
-2. After you identify the computer that acquired the stolen GUID, remotely connect to that computer, and then completely clean the Configuration Manager client. This involves more than simply uninstalling the client. Instead, you must follow steps 3-7.
+2. After you identify the computer that acquired the stolen GUID, remotely connect to that computer, and then completely clean the Configuration Manager client. This involves more than simply uninstalling the client. Instead, you must follow steps 3-7.
 
 3. On the client computer, under `C:\Windows\CCMSetup`, run the `CCMSetup.exe /uninstall` command at an elevated command prompt.
 
@@ -81,7 +81,7 @@ To correctly clean the client that stole the GUID, follow these steps:
     - C:\Windows\CCMSetup
 
      > [!NOTE]
-     > To fully delete these directories, you may have to restart the computer.
+     > To fully delete these directories, you may have to restart the computer.
 
 6. On the client computer, delete the following registry keys (if they exist):
 
@@ -104,16 +104,16 @@ To correctly clean the client that stole the GUID, follow these steps:
 
     9. Close the **Certificates** console.
 
-9. Delete the record of the offending computer from the Configuration Manager console. Again, you do not have to go into the SQL Server database to do this. You can delete the record from the Configuration Manager console. Make sure that you do this after you complete steps 1-8. Doing this first may cause the record to be recreated if the client reports are backed up before they are fully cleaned.
+9. Delete the record of the offending computer from the Configuration Manager console. Again, you do not have to go into the SQL Server database to do this. You can delete the record from the Configuration Manager console. Make sure that you do this after you complete steps 1-8. Doing this first may cause the record to be recreated if the client reports are backed up before they are fully cleaned.
 
 10. Reinstall the Configuration Manager client on the offending client computer.
 
 ## Remove duplicate Unknown Computer objects
 
-If the Unknown Computer objects have been recreated at the site when you tried to fix the problem, the extra Unknown Computer objects should be deleted. To accomplish this, all of the current Unknown Computer objects should be deleted for the affected site followed by creating a brand new set of Unknown Computer objects for the site. Deleting Unknown Computer objects can be completed only from the SQL Server database. It cannot be done from the Configuration Manager console.
+If the Unknown Computer objects have been recreated at the site when you tried to fix the problem, the extra Unknown Computer objects should be deleted. To accomplish this, all of the current Unknown Computer objects should be deleted for the affected site followed by creating a brand new set of Unknown Computer objects for the site. Deleting Unknown Computer objects can be completed only from the SQL Server database. It cannot be done from the Configuration Manager console.
 
 > [!NOTE]
-> It's acceptable to have multiple Unknown Computer objects if there are multiple primary sites. However, each site should have only one Unknown Computer object per architecture. For example, there should be only one x64 object that's labeled **x64 Unknown Computer** and only one x86 object that's labeled **x86 Unknown Computer**.
+> It's acceptable to have multiple Unknown Computer objects if there are multiple primary sites. However, each site should have only one Unknown Computer object per architecture. For example, there should be only one x64 object that's labeled **x64 Unknown Computer** and only one x86 object that's labeled **x86 Unknown Computer**.
 
 To delete the extra Unknown Computer objects, follow these steps:
 
@@ -127,9 +127,9 @@ To delete the extra Unknown Computer objects, follow these steps:
 
 5. In the results pane, sort the objects in the **All Unknown Computers** collection by selecting the **Site Code** column.
 
-6. Note whether there are multiple **x64 Unknown Computer** objects or **x86 Unknown Computer** objects for any individual site.
+6. Note whether there are multiple **x64 Unknown Computer** objects or **x86 Unknown Computer** objects for any individual site.
 
-7. If there are multiple **x64 Unknown Computer** objects or **x86 Unknown Computer** objects for any individual site, right-click the columns in the results pane, and add **Resource ID** to the list of columns.
+7. If there are multiple **x64 Unknown Computer** objects or **x86 Unknown Computer** objects for any individual site, right-click the columns in the results pane, and add **Resource ID** to the list of columns.
 
 8. Determine the **Resource ID** value for each **x64 Unknown Computer** object and each **x86 Unknown Computer** object for any one site. Make sure to note the resource ID for all of the Unknown Computer objects even if only one of the Unknown Computer objects is duplicated.
 
@@ -157,19 +157,19 @@ To delete the extra Unknown Computer objects, follow these steps:
     SELECT * FROM UnknownSystem_DISC WHERE ItemKey IN ('Resource_ID_1','Resource_ID_2', 'Resource_ID_3')
     ```
 
-    In this query, `Resource_ID_x` is the Resource ID of each of the Unknown Computer objects for the site, as determined in step 9. For example, if the Resource IDs are **2046820354** and **2046820355**, the query would be as follows:  
+    In this query, `Resource_ID_x` is the Resource ID of each of the Unknown Computer objects for the site, as determined in step 9. For example, if the Resource IDs are **2046820354** and **2046820355**, the query would be as follows:  
 
     ```sql
     SELECT * FROM UnknownSystem_DISC WHERE ItemKey IN ('2046820354','2046820355')
     ```
 
-16. Verify that the records that are returned by the query in step 15 are correct. If they are, then run the following query to delete the records:
+16. Verify that the records that are returned by the query in step 15 are correct. If they are, then run the following query to delete the records:
 
     ```sql
     DELETE FROM UnknownSystem_DISC WHERE ItemKey IN ('Resource_ID_1','Resource_ID_2', 'Resource_ID_3')
     ```
 
-    In this query, `Resource_ID_x` is the Resource ID of each of the Unknown Computer objects for the site, as determined in step 9. For example, if the Resource IDs are **2046820354** and **2046820355**, the delete query would be as follows:
+    In this query, `Resource_ID_x` is the Resource ID of each of the Unknown Computer objects for the site, as determined in step 9. For example, if the Resource IDs are **2046820354** and **2046820355**, the delete query would be as follows:
 
     ```sql
     DELETE FROM UnknownSystem_DISC WHERE ItemKey IN ('2046820354', '2046820355')
@@ -206,7 +206,7 @@ After this registry key value is updated, the Unknown Computer objects should be
 
 To speed up the recreation of the Unknown Computer records, restart the `SMS_DISCOVERY_DATA_MANAGER` thread by following these steps:
 
-1. Open the Configuration Manager console on the primary site from which the Unknown Computer objects are missing, and then go to **Monitoring** > **Overview** > **System Status** > **Component Status**.
+1. Open the Configuration Manager console on the primary site from which the Unknown Computer objects are missing, and then go to **Monitoring** > **Overview** > **System Status** > **Component Status**.
 
 2. On the toolbar, select **Start** > **Configuration Manager Service Manager**.
 
@@ -215,13 +215,13 @@ To speed up the recreation of the Unknown Computer records, restart the `SMS_DIS
 4. In the results pane, right-click **SMS_DISCOVERY_DATA_MANAGER** and select **Query**. The thread should display as **Running**.
 
 5. Right-click **SMS_DISCOVERY_DATA_MANAGER**, and then click **Stop**.
-6. Right-click **SMS_DISCOVERY_DATA_MANAGER**, and then click **Query**.
+6. Right-click **SMS_DISCOVERY_DATA_MANAGER**, and then click **Query**.
 
     > [!NOTE]
     > The thread should display as **Stopped**.
 
-7. Right-click **SMS_DISCOVERY_DATA_MANAGER**, and then click **Start**.
-8. Right-click **SMS_DISCOVERY_DATA_MANAGER**, and then click **Query**.
+7. Right-click **SMS_DISCOVERY_DATA_MANAGER**, and then click **Start**.
+8. Right-click **SMS_DISCOVERY_DATA_MANAGER**, and then click **Query**.
 
     > [!NOTE]
     > The thread should display as **Running**.
