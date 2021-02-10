@@ -119,7 +119,7 @@
       href: ./teams-im-presence/teams-user-not-send-message-in-sfb.md
     - name: Deleted messages with an @ mention send notifications with a channel link
       href: ./known-issues/deleted-messages-send-notifications-with-link.md
-    - name: Issues with user presence status in Outlook
+    - name: Issues with presence status in Outlook
       href: ./teams-im-presence/issues-with-presence-in-outlook.md
   - name: Meetings
     items:

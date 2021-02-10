@@ -1,8 +1,8 @@
 ---
-title: Issues with user presence status in Outlook
+title: User presence status issues in Outlook
 description: Fixes an issue in which the status of a user presence is displayed incorrectly.
 author: v-miegge
-ms.author: meerak
+ms.author: premgan
 manager: dcscontentpm
 audience: ITPro 
 ms.topic: troubleshooting 
@@ -18,7 +18,7 @@ appliesto:
 search.appverid: 
 - MET150
 ---
-# User presence status issues in Outlook and Teams
+# User presence status issues in Outlook
 
 ## Symptoms
 
@@ -33,33 +33,99 @@ You see any of the following issues when you check the presence status for a use
 
 ## Resolution
 
-To fix these issues, download and run the [Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) for automated troubleshooting steps and fixes.
+To fix these issues, download and run [Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) for automated troubleshooting steps and fixes.
 
-Or, follow these manual steps:
+Or, follow these manual steps and check whether the issue is resolved after each step:
 
-1. Make sure that the Teams app on your computer is configured to display the presence status. For more information, see  [User presence in Teams](https://docs.microsoft.com/microsoftteams/presence-admins).
+1. Make sure that the Teams app is installed on your computer. For more information, see [How do I get Microsoft Teams](https://support.microsoft.com/office/how-do-i-get-microsoft-teams-fc7f1634-abd3-4f26-a597-9df16e4ca65b).
+
+2. Make sure that the Teams app on your computer is running.
 
    > [!NOTE]
-   > The presence feature in Outlook requires Microsoft Teams to be installed and configured to display the presence status.
+   > The presence feature in Outlook requires Microsoft Teams to be installed, running and configured to display presence.
 
-2. For the contact whose presence you can’t see, verify that their email address and Teams sign-in address are the same. If they are not, the contact should correct the addresses as necessary, sign out of Teams, and then sign back in.
+3. For the contact whose presence you can’t see, verify that their email address and Teams sign-in address are the same. If they are not, the contact should correct the addresses as necessary, sign out of Teams, and then sign back in.
 
-3. If the issue persists, check the **registry settings** on your computer to verify that Teams is registered as the default instant messaging (IM) app.
+4. Check the **registry settings** on your computer to verify that Teams is registered as the default instant messaging (IM) app.
 
    > [!WARNING]
-   > Incorrectly editing the registry may severely damage your system. Before making changes to the registry, back up any valuable data on the computer.
+   > Incorrectly editing the registry may severely damage your system.
 
    1. Start Registry Editor.
 
-   2. Locate the following subkey:
+   1. Locate the following subkey:
 
-        `HKEY_CURRENT_USER\Software\IM Providers`
+      `HKEY_CURRENT_USER\Software\IM Providers`
 
-   3. Verify the following values:
+   1. Verify the following values:
 
       - **Name**: DefaultIMApp
       - **Type**: REG_SZ
       - **Data**: Teams
+
+      If the values that you see don’t match these, update the values.
+
+5. Check whether the **.tlb file** is present in the correct path. The location of the .tlb file is different for **64-bit** and **32-bit** versions of Office.
+
+   **For 64-bit Office**
+
+   `C:\users\<username>\appdata\local\microsoft\teamspresenceaddin\uc.tlb`
+
+   **For 32-bit Office**
+
+   `C:\users\<username>\appdata\local\microsoft\teamspresenceaddin\uc.win32.tlb`
+
+   **Note:** The name of the **.tlb file** is different for each version.
+
+   If you don’t know the bit version of Office that’s installed on your computer, see [What version of Office am I using?](https://support.microsoft.com/office/about-office-what-version-of-office-am-i-using-932788b8-a3ce-44bf-bb09-e334518b8b19).
+
+6. Check that all the following registry subkeys are correct for the version of Office that you’re running. If not, fix the incorrect entry to match the following values.
+
+   **For 64-bit Office**
+
+   **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0`
+   **Name**: (Default)
+   **Type**: REG_SZ
+   **Data**: Unified Collaboration API 1.0 Type Library
+
+   **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\0\Win64`
+   **Name**: (Default)
+   **Type**: REG_SZ
+   **Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.tlb`
+
+   **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\FLAGS`
+   **Name**: (Default)
+   **Type**: REG_SZ
+   **Data**: 0
+
+   **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\HELPDIR`
+   **Name**: (Default)
+   **Type**: REG_SZ
+   **Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.tlb`
+
+   **For 32-bit Office:**
+
+   **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0`
+   **Name**: (Default)
+   **Type**: REG_SZ
+   **Data**: `Unified Collaboration API 1.0 Type Library`
+
+   **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\0\Win32`
+   **Name**: (Default)
+   **Type**: REG_SZ
+   **Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.win32.tlb`
+
+   **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\FLAGS`
+   **Name**: (Default)
+   **Type**: REG_SZ
+   **Data**: 0
+
+   **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\HELPDIR`
+   **Name**: (Default)
+   **Type**: REG_SZ
+   **Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.win32.tlb`
+
+7. If the issue persists, uninstall and re-install Teams. For more information about how to uninstall the Teams app, see [Uninstall or remove apps and programs in Windows 10](https://support.microsoft.com/windows/uninstall-or-remove-apps-and-programs-in-windows-10-4b55f974-2cc6-2d2b-d092-5905080eaf98). To re-install Teams, see [How do I get Microsoft Teams](https://support.microsoft.com/office/how-do-i-get-microsoft-teams-fc7f1634-abd3-4f26-a597-9df16e4ca65b)
 
 ### Contact an administrator
 
@@ -71,4 +137,4 @@ If these steps don’t resolve the issue, an administrator should create a suppo
 
 - The desktop and web logs from both the user and the contact. For information about how to collect logs, see [Use log files in troubleshooting Microsoft Teams](https://docs.microsoft.com/microsoftteams/log-files).
 
-  - For presence issues that affect contacts who are internal to your organization, provide the output from the Support and Recovery Assistant tool.
+  - For presence issues that affect contacts who are internal to your organization, provide the output from running Microsoft Support and Recovery Assistant.
