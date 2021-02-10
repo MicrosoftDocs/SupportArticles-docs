@@ -67,12 +67,12 @@ The current version of ADREPLSTATUS as of this posting is 2.2.20717.1 (as report
 - ADREPLSTATUS won't work when the following security setting is enabled in Windows - *System cryptography: Use FIPS 140 compliant cryptographic algorithms, including encryption, hashing and signing algorithms*.
 - An additional check mark appears at the bottom of the column chooser when you right-click a column header.
 
-## Feedback
-
-The ADRPLSTATUS tool is supported by the Microsoft ADREPLSTATUS team. Administrators and support professionals who experience errors installing or executing ADREPLSTATUS can [submit a problem report](https://social.technet.microsoft.com/wiki/contents/articles/12707.active-directory-replication-status-tool-adreplstatus-resources-page.aspx).
-
-For known issues, the ADREPLSTATUS team will report the status at the same page. If your issue requires additional investigation, the ADREPLSTATUS team will contact you at the email address that you provided in your problem report.
-
-The time that's needed to provide a solution depends on the team's workload as well as problem complexity and cause. Code defects in the ADREPLSTATUS tool can typically be resolved relatively quickly. Tool failures due to external causes may take longer, unless a workaround can be found.
-
-The ADREPLSTATUS team can't fix Active Directory replication errors that are identified by the ADREPLSTATUS tool. Contact your support provider to fix the issue. You may also submit and research replication errors at [this TechNet Windows Server forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=winserverDS).
+> [!NOTE]
+>
+> The ADRPLSTATUS tool is supported by the Microsoft ADREPLSTATUS team. Administrators and support professionals who experience errors installing or executing ADREPLSTATUS can [submit a problem report](https://social.technet.microsoft.com/wiki/contents/articles/12707.active-directory-replication-status-tool-adreplstatus-resources-page.aspx).
+>
+> For known issues, the ADREPLSTATUS team will report the status at the same page. If your issue requires additional investigation, the ADREPLSTATUS team will contact you at the email address that you provided in your problem report.
+>
+> The time that's needed to provide a solution depends on the team's workload as well as problem complexity and cause. Code defects in the ADREPLSTATUS tool can typically be resolved relatively quickly. Tool failures due to external causes may take longer, unless a workaround can be found.
+>
+> The ADREPLSTATUS team can't fix Active Directory replication errors that are identified by the ADREPLSTATUS tool. Contact your support provider to fix the issue. You may also submit and research replication errors at [this TechNet Windows Server forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=winserverDS).
