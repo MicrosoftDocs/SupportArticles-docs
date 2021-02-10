@@ -83,44 +83,44 @@ Or, follow these manual steps and check whether the issue is resolved after each
 
    **For 64-bit Office**
 
-   - **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0`
+   **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0`
    - **Name**: (Default)
    - **Type**: REG_SZ
    - **Data**: Unified Collaboration API 1.0 Type Library
 
-   - **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\0\Win64`
+   **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\0\Win64`
    - **Name**: (Default)
    - **Type**: REG_SZ
    - **Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.tlb`
 
-   - **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\FLAGS`
+   **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\FLAGS`
    - **Name**: (Default)
    - **Type**: REG_SZ
    - **Data**: 0
 
-   - **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\HELPDIR`
+   **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\HELPDIR`
    - **Name**: (Default)
    - **Type**: REG_SZ
    - **Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.tlb`
 
    **For 32-bit Office:**
 
-   - **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0`
+   **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0`
    - **Name**: (Default)
    - **Type**: REG_SZ
    - **Data**: `Unified Collaboration API 1.0 Type Library`
 
-   - **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\0\Win32`
+   **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\0\Win32`
    - **Name**: (Default)
    - **Type**: REG_SZ
    - **Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.win32.tlb`
 
-   - **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\FLAGS`
+   **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\FLAGS`
    - **Name**: (Default)
    - **Type**: REG_SZ
    - **Data**: 0
 
-   - **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\HELPDIR`
+   **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\HELPDIR`
    - **Name**: (Default)
    - **Type**: REG_SZ
    - **Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.win32.tlb`
