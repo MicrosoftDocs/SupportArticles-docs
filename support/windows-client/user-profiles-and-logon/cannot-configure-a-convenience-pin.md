@@ -26,7 +26,7 @@ Users who are running Windows 10 Version 1607 or later version of Windows 10 and
 
 When users navigate to **Settings** > **Accounts** > **Sign-in options**, the option to set a PIN is unavailable (appears dimmed), and therefore it can't be configured.
 
-Additionally, if a user has already configured a convenience PIN in an earlier version of Windows 10 and then upgrades to Windows 10 Version 1607 or later, the PIN works until the user navigates to **Settings** > **Accounts** > **Sign-in options** > **I forgot my PIN**. In this situation, the option to create a PIN is unavailable (appears dimmed). This issue also does not affect Windows 10 Version 1511 and earlier.
+A user has already configured a convenience PIN in an earlier version of Windows 10, and then upgrades to Windows 10 Version 1607 or later. The PIN works until the user navigates to **Settings** > **Accounts** > **Sign-in options** > **I forgot my PIN**. In this situation, the option to create a PIN is unavailable (appears dimmed). This issue also does not affect Windows 10 Version 1511 and earlier.
 
 ## Cause
 

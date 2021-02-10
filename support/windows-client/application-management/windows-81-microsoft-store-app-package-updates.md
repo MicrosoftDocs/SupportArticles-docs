@@ -24,12 +24,7 @@ _Original KB number:_ &nbsp; 2971128
 
 When you're connected to the Internet, Windows 8.1 clients obtain updates to Microsoft Store apps directly from the Microsoft Store app. The Microsoft Store app is visible on the Windows Start screen.
 
-To update these Microsoft Store apps on computers that can't connect to the Microsoft Store site by using the Internet, Microsoft has a collection of downloadable updates available on the Windows Update Catalog. These updates can be distributed in the following ways:
-
-- System Center
-- WSUS
-- third-party equivalents
-- slipstreamed into the operating system image that's used by your organization
+To update these Microsoft Store apps on computers that can't connect to the Microsoft Store site by using the Internet, Microsoft has a collection of downloadable updates available on the Windows Update Catalog. These updates can be distributed by using System Center, WSUS, and third-party equivalents. Or, they can be slipstreamed into the operating system image that's used by your organization.
 
 The intent of this process isn't to bypass the Microsoft Store, but to enable computers that can't connect to the Microsoft Store to update Microsoft Store apps on a recurring basis.
 
