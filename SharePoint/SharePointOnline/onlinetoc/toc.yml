@@ -113,6 +113,8 @@
       href: ../lists-and-libraries/documents-not-displayed-in-web-browser-when-using-tls-1.2.md
     - name: Edit column doesn't display the edit link
       href: ../lists-and-libraries/edit-column-fails-displaying-edit-link.md
+    - name: Error when trying to create a list From Excel
+      href: ../lists-and-libraries/error-create-list-excel.md
     - name: Error when view or edit in Word or PowerPoint Online
       href: ../lists-and-libraries/error-when-view-or-edit-in-browser.md
     - name: Excel survey doesn't have full functionality
