@@ -1,6 +1,6 @@
 ---
-title: Cannot create a Hyper-V virtual switch
-description: Fixes an issue in which you cannot re-create a victual switch for Hyper-V on an upgraded 64-bit Windows-10-based computer.
+title: Can't create a Hyper-V virtual switch
+description: Fixes an issue in which you can't re-create a victual switch for Hyper-V on an upgraded 64-bit Windows-10-based computer.
 ms.data: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,9 +13,9 @@ ms.reviewer: kaushika, bobcombs, ajayps
 ms.prod-support-area-path: Hyper-V Network Virtualization (HNV)
 ms.technology: windows-client-hyper-v
 ---
-# Cannot create a Hyper-V virtual switch on 64-bit versions of Windows 10
+# Can't create a Hyper-V virtual switch on 64-bit versions of Windows 10
 
-This article provides a resolution to solve the error message that occurs when you try to re-create a Hyper-V virtual switch (vSwitch) for the same physical adapter.
+This article solves an error message when you try to re-create a Hyper-V virtual switch (vSwitch) for the same physical adapter.
 
 _Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3101106
@@ -32,7 +32,7 @@ Failed while adding virtual Ethernet switch connections.
 
 ## Cause
 
-This problem occurs because a new network setup functionality that was introduced in Windows 10 does not completely delete all objects from the previous vSwitch installation. This problem is scheduled to be fixed in the next Windows 10 update.
+This problem occurs because a new network setup functionality introduced in Windows 10 doesn't completely delete all objects from the previous vSwitch installation. This problem is scheduled to be fixed in the next Windows 10 update.
 
 ## Resolution
 

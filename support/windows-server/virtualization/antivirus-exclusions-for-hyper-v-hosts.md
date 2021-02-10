@@ -1,6 +1,6 @@
 ---
 title: Recommended antivirus exclusions for Hyper-V hosts
-description: This article describes the recommended antivirus exclusions for Hyper-V hosts for optimal operation of Hyper-V and the running virtual machines.
+description: Describes the recommended antivirus exclusions for Hyper-V hosts. The purpose is for optimal operation of Hyper-V and the running virtual machines.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 3105657
 
 ## Summary
 
-If antivirus software is installed and running on a Hyper-V host, there are several exclusions and options that you should configure for optimal operation of Hyper-V and the running virtual machines. These configurations will help avoid issues such as those that are described in [Virtual machines are missing, or error 0x800704C8, 0x80070037, or 0x800703E3 occurs when you try to start or create a virtual machine](https://support.microsoft.com/help/961804).
+If antivirus software is installed and running on a Hyper-V host, you should configure several exclusions and options for optimal operation of Hyper-V and the running virtual machines. These configurations will help avoid issues such as those that are described in [Virtual machines are missing, or error 0x800704C8, 0x80070037, or 0x800703E3 occurs when you try to start or create a virtual machine](https://support.microsoft.com/help/961804).
 
 Use the information that's provided in the [Configurations](#configurations) section to configure your antivirus software to coexist optimally with Hyper-V and your virtual machines.
 

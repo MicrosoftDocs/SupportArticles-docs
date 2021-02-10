@@ -22,11 +22,16 @@ _Original KB number:_ &nbsp; 2971128
 
 ## More information
 
-When you are connected to the Internet, Windows 8.1 clients obtain updates to Microsoft Store apps directly from the Microsoft Store app (visible on the Windows Start screen).
+When you're connected to the Internet, Windows 8.1 clients obtain updates to Microsoft Store apps directly from the Microsoft Store app. The Microsoft Store app is visible on the Windows Start screen.
 
-To update these Microsoft Store apps on computers that cannot connect to the Microsoft Store site by using the Internet, Microsoft has a collection of downloadable updates available on the Windows Update Catalog. These updates can be distributed by using System Center, WSUS and third-party equivalents, or slipstreamed into the operating system image that is used by your organization.
+To update these Microsoft Store apps on computers that can't connect to the Microsoft Store site by using the Internet, Microsoft has a collection of downloadable updates available on the Windows Update Catalog. These updates can be distributed in the following ways:
 
-The intent of this process is not to bypass the Microsoft Store, but to enable computers that cannot connect to the Microsoft Store to update Microsoft Store apps on a recurring basis.
+- System Center
+- WSUS
+- third-party equivalents
+- slipstreamed into the operating system image that's used by your organization
+
+The intent of this process isn't to bypass the Microsoft Store, but to enable computers that can't connect to the Microsoft Store to update Microsoft Store apps on a recurring basis.
 
 ## Frequently asked questions
 
@@ -64,19 +69,19 @@ No, Industry editions are not licensed for these applications and therefore upda
 
 ### How do I create an image that includes these apps
 
-We recommend installing the app updates as part of your post operating system deployment updates through WSUS. However, if you need an automated process, you can extract each .cab file to its respective MSI. Then, you can script the installation or deploy by using traditional application deployment technologies.
+We recommend installing the app updates as part of your post operating system deployment updates through WSUS. If you need an automated process, you can extract each .cab file to its respective MSI. Then you can script the installation or deploy by using traditional application deployment technologies.
 
-### Can I use this to reinstall the inbox apps that are removed after deploying Windows 8.1 images
+### Can I use this process to reinstall the inbox apps that are removed after deploying Windows 8.1 images
 
-No. This process is only designed to update apps already installed on the system. If you are able to enable temporary access to the Microsoft Store, you can install the apps again and then maintain them by using this process. Or, you will need to deploy a new image that contains the apps.
+No. This process is only designed to update apps already installed on the system. If you can enable temporary access to the Microsoft Store, you can install the apps again, and then maintain them by using this process. Or, you will need to deploy a new image that contains the apps.
 
 ### Can the packages be installed offline
 
-No. You cannot use dism.exe to install the updates offline. They must be installed through the .MSI installer to a running operating system.
+No. You can't use dism.exe to install the updates offline. They must be installed through the .MSI installer to a running operating system.
 
 ### When are the packages going to be shipped
 
-What follows is the release schedule for each Microsoft Store app:
+Here's the release schedule for each Microsoft Store app:
 
 |Microsoft Store App|Operating System|Release Date|Version|KB Number|
 |---|---|---|---|---|
