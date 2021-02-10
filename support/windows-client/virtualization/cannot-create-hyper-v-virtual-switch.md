@@ -22,13 +22,15 @@ _Original KB number:_ &nbsp; 3101106
 
 ## Symptoms
 
-After you delete a vSwitch on a computer that has been upgraded to Windows 10, you cannot re-create the vSwitch for the same physical adapter. When this problem occurs, you receive the following error message that indicates that the vSwitch still exists even though it is no longer listed in the Hyper-V Virtual Switch Manager:
+After you delete a vSwitch on a computer that has been upgraded to Windows 10, you can't re-create the vSwitch for the same physical adapter. When this problem occurs, you receive the following error message:
 
 > Virtual Switch Manager  
 Error applying Virtual Switch Properties changes  
 Failed while adding virtual Ethernet switch connections.
 
 :::image type="content" source="media/cannot-create-hyper-v-virtual-switch/error-applying-virtual-switch-properties-changes.png" alt-text="Alt text here.":::
+
+It indicates that the vSwitch still exists, even though it's no longer listed in the Hyper-V Virtual Switch Manager.
 
 ## Cause
 

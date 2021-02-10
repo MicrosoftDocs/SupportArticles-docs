@@ -32,7 +32,7 @@ An error event for Event ID 158 is logged. The event indicates that two or more 
 This problem may be caused by any one of several different situations. The two most common situations are the following ones:
 
 - Multiple paths to the same physical disk device are available. But Microsoft Multipath I/O (MPIO) isn't enabled. In this situation, the device is exposed to the system by all paths that are available. It causes the same device ID data (such as Device Serial Number, Vendor ID, Product ID, and so on) to be exposed multiple times.
-- If Virtual Hard Disks (VHD) are duplicated by using a copy-and-paste operation to create additional virtual machines (VMs), none of the internal data structures are changed. So, the VMs have the same disk GUIDs and the same ID information (such as Device Serial Number, Vendor ID, Product ID, and so on).
+- If Virtual Hard Disks (VHD) are duplicated by using a copy-and-paste operation to create more virtual machines (VMs), none of the internal data structures are changed. So, the VMs have the same disk GUIDs and the same ID information (such as Device Serial Number, Vendor ID, Product ID, and so on).
 
 ## Resolution
 

@@ -39,7 +39,7 @@ The intent of this process isn't to bypass the Microsoft Store, but to enable co
 
 Microsoft is releasing packages for Windows 8.1 Microsoft Store apps that are listed in the release chart at the end of this article.
 
-### Will non-inbox Microsoft Store app updates such as OneNote be released
+### Will non-inbox Microsoft Store app updates be released, such as OneNote
 
 No. We are currently targeting the Microsoft Store apps that are distributed by default with Windows 8.1 editions.
 

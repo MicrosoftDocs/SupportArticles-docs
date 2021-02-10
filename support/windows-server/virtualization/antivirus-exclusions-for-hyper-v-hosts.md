@@ -15,14 +15,16 @@ ms.technology: hyper-v
 ---
 # Recommended antivirus exclusions for Hyper-V hosts
 
-This article describes the recommended antivirus exclusions for Hyper-V hosts for optimal operation of Hyper-V and the running virtual machines.
+This article describes the recommended antivirus exclusions for Hyper-V hosts for optimal operation.
 
 _Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3105657
 
 ## Summary
 
-If antivirus software is installed and running on a Hyper-V host, you should configure several exclusions and options for optimal operation of Hyper-V and the running virtual machines. These configurations will help avoid issues such as those that are described in [Virtual machines are missing, or error 0x800704C8, 0x80070037, or 0x800703E3 occurs when you try to start or create a virtual machine](https://support.microsoft.com/help/961804).
+You may have antivirus software installed and running on a Hyper-V host. For optimal operation of Hyper-V and the running virtual machines, you should configure several exclusions and options. These configurations will help avoid issues, such as those that are described in the following article:
+
+[Virtual machines are missing, or error 0x800704C8, 0x80070037, or 0x800703E3 occurs when you try to start or create a virtual machine](https://support.microsoft.com/help/961804).
 
 Use the information that's provided in the [Configurations](#configurations) section to configure your antivirus software to coexist optimally with Hyper-V and your virtual machines.
 
@@ -45,38 +47,38 @@ Configure the real-time scanning component within your antivirus software to exc
 
 All directories that contain the following files:
 
-- Virtual Hard Disk file (*.vhd)
+- Virtual Hard Disk file (`*.vhd`)
 
-- Virtual Hard Disk v2 file (*.vhdx)
+- Virtual Hard Disk v2 file (`*.vhdx`)
 
-- Virtual Hard Disk snapshot file (*.avhd)
+- Virtual Hard Disk snapshot file (`*.avhd`)
 
-- Virtual Hard Disk v2 snapshot file (*.avhdx)
+- Virtual Hard Disk v2 snapshot file (`*.avhdx`)
 
-- VHD Set file (*.vhds)
+- VHD Set file (`*.vhds`)
 
-- Virtual PMEM VHD file (*.vhdpmem)
+- Virtual PMEM VHD file (`*.vhdpmem`)
 
-- Virtual Optical Disk images (*.iso)
+- Virtual Optical Disk images (`*.iso`)
 
-- Resilient Change Tracking file (*.rct)
-- Device state file (*.vsv)
+- Resilient Change Tracking file (`*.rct`)
+- Device state file (`*.vsv`)
 
     The processes that create, open, or update the file: vmms.exe, vmwp.exe, vmcompute.exe.
 
-- Memory state file (*.bin)
+- Memory state file (`*.bin`)
 
     The processes that create, open, or update the file: vmwp.exe
 
-- VM Configuration file (*.vmcx)
+- VM Configuration file (`*.vmcx`)
 
     The processes that create, open, or update the file: vmms.exe
 
-- VM Runtime State file (*.vmrs)
+- VM Runtime State file (`*.vmrs`)
 
     The processes that create, open, or update the file: vmms.exe, vmwp.exe, vmcompute.exe.
 
-- VM Guest State file (*.vmgs)
+- VM Guest State file (`*.vmgs`)
 
 ### Directory
 

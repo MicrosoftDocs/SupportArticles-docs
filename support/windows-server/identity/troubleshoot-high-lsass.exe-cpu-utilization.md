@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2550044
 
 This problem may be seen in the following ways:
 
-- A System Center Advisor alert has triggered which calls out that the Lsass.exe process is using a consistently large percentage of the CPU's capabilities (CPU utilization counter).
+- A System Center Advisor alert has been triggered. It calls out that the Lsass.exe process is using a consistently large percentage of the CPU's capabilities (CPU utilization counter).
 - During normal operation, a domain controller is responding slowly, or isn't responding at all to client service requests for authentication or directory lookups.
 - Active Directory domain clients consistently or frequently stop requesting service from a domain controller. Instead, they locate a different domain controller to gain services from.
 - Performance monitoring using Perfmon.msc or Task Manager reveals that the Lsass.exe process is using a consistently large percentage of the CPU's capabilities (Process Object, % Processor Time counter).
@@ -50,12 +50,12 @@ After the report has compiled, go to **Diagnostics** > **Reliability and Perform
 
 The report contains eight broad categories under **Diagnostic Results** that will contain information and conclusions in the report. It won't always tell the exact cause of the problem. But you can use it to determine where to investigate to find the exact cause.
 
-When facing high CPU usage by Lsass.exe, check the **Diagnostic Results** portion of the report. It shows general performance concerns. In addition, examining the Active Directory category will detail what actions the domain controller is busy doing at that time, such as what LDAP queries are affecting performance.
+When facing high CPU usage by Lsass.exe, check the **Diagnostic Results** portion of the report. It shows general performance concerns. Also examine the Active Directory category. It will detail what actions the domain controller is busy doing at that time, such as what LDAP queries are affecting performance.
 
-Domain controllers are often most effected by remote queries from computers in the environment asking expensive queries, or subjecting them to a higher volume of queries. The **Network** portion of the report is useful when determining the remote clients that are communicating most with the domain controller while the diagnostic was gathering data.
+Domain controllers are often most effected by remote queries from computers in the environment asking expensive queries, or subjecting them to a higher volume of queries. The **Network** portion of the report is useful to determine the remote clients that are communicating most with the domain controller while the diagnostic was gathering data.
 
 ## More information
 
 Local Security Authority Subsystem Service (Lsass.exe) is the process on an Active Directory domain controller. It's responsible for providing Active Directory database lookups, authentication, and replication.
 
-For more information about how to troubleshoot the Lsass.exe process using a great deal of CPU utilization on an Active Directory domain controller, see [Son of SPA: AD Data Collector Sets in Win2008 and beyond](/archive/blogs/askds/son-of-spa-ad-data-collector-sets-in-win2008-and-beyond).
+For more information about how to troubleshoot high CPU usage of the Lsass.exe process on an Active Directory domain controller, see [Son of SPA: AD Data Collector Sets in Win2008 and beyond](/archive/blogs/askds/son-of-spa-ad-data-collector-sets-in-win2008-and-beyond).
