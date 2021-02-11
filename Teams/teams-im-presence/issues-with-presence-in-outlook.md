@@ -85,19 +85,19 @@ Or, follow these manual steps and check whether the issue is resolved after each
 
       |For 64-bit Office|
       |-|
-      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0`<br/>**Name**: (Default)<br/>**Type**: REG_SZ<br/>**Data**: `Unified Collaboration API 1.0 Type Library`
-      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\0\Win64`<br/>**Name**: (Default)<br/>**Type**: REG_SZ<br/>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.tlb`|
-      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\FLAGS`<br/>**Name**: (Default)<br/>**Type**: REG_SZ<br/>**Data**: 0|
-      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\HELPDIR`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.tlb`|
+      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8}\1.0`<br/>**Name**: (Default)<br/>**Type**: REG_SZ<br/>**Data**: `Unified Collaboration API 1.0 Type Library`
+      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8}\1.0\0\Win64`<br/>**Name**: (Default)<br/>**Type**: REG_SZ<br/>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.tlb`|
+      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8}\1.0\FLAGS`<br/>**Name**: (Default)<br/>**Type**: REG_SZ<br/>**Data**: 0|
+      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8}\1.0\HELPDIR`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.tlb`|
 
     ### [For 32-bit Office](#tab/32)
 
       |For 32-bit Office|
       |-|
-      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `Unified Collaboration API 1.0 Type Library`|
-      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\0\Win32`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.win32.tlb`|
-      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\FLAGS`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: 0|
-      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\HELPDIR`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.win32.tlb`|
+      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8}\1.0`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `Unified Collaboration API 1.0 Type Library`|
+      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8}\1.0\0\Win32`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.win32.tlb`|
+      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8}\1.0\FLAGS`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: 0|
+      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8}\1.0\HELPDIR`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.win32.tlb`|
 
 
 7. If the issue persists, uninstall and re-install Teams. For more information about how to uninstall the Teams app, see [Uninstall or remove apps and programs in Windows 10](https://support.microsoft.com/windows/uninstall-or-remove-apps-and-programs-in-windows-10-4b55f974-2cc6-2d2b-d092-5905080eaf98). To re-install Teams, see [How do I get Microsoft Teams](https://support.microsoft.com/office/how-do-i-get-microsoft-teams-fc7f1634-abd3-4f26-a597-9df16e4ca65b)
