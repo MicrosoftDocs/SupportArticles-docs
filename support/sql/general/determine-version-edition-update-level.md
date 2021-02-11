@@ -1,7 +1,7 @@
 ---
 title: Determine the version, edition, and update level
 description: This article lists various builds or updates that are available for different versions of  SQL Server and describe the procedures to determine the version of SQL Server that is running on a given system.
-ms.date: 09/21/2020
+ms.date: 02/10/2021
 ms.prod-support-area-path: Installation, Patching and Upgrade
 ms.topic: how-to
 ms.prod: sql
@@ -155,7 +155,7 @@ on Windows NT 6.1 \<X64> (Build 7600: )
 
 ## SQL Server Reporting Services
 
-To determine the version of SQL Server Reporting Services, refer to the following topic in SQL Server Books Online: [How to: Detect Version Information (Reporting Services)](https://documentation.help/shmjqj7k/7fcd8cf3-c0cb-435e-84fb-bf87fde6253e.htm).  
+The version of SQL Server Reporting Services is displayed on the Reporting Services Web Service URL, for example: http://servername/reportserver. The version is also displayed in the Reporting Services Configuration tool.
 
 ## SQL Server Integration Services
 
@@ -313,6 +313,19 @@ To find the version of your instance of SQL Server CE and related information, s
 - [Description of the various build versions of SQL Server Compact Edition](https://support.microsoft.com/help/950550)
 
 - [SQL Server CE previous versions documentation](/previous-versions/sql/compact/)
+
+## Machine Learning services
+
+ For Windows servers, refer to the CAB file versions which change with SQL Server cumulative updates. Refer to the Rlauncher.config or PythonLauncher.Config files in the `Program Files\Microsoft SQL Server\MSSQL.nn\MSSQL\Binn` directory, to find the RHOME or PYTHONHOME folder locations of the CAB files. For the CAB versions that come with SQL Server CU versions, see [CAB downloads for offline installation of cumulative updates for SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/install/sql-ml-cab-downloads).
+
+ For Linux servers, the following command returns a list of all mssql specific installed packages, along with their version numbers: 
+```console
+apt-get list --installed | --grep mssql
+```
+
+ The version number of the mssql-server-extensibility package version is the SQL Server version of the Machine Learning Services feature.
+
+ The version number of the mssql-mlservices-packages-r or mssql-mlservices-packages-py refers to each language package files, for more information, see [Install SQL Server Machine Learning Services on Linux (Offline installation)] https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-machine-learning?view=sql-server-ver15#offline-installation.
 
 ## More information  
 
