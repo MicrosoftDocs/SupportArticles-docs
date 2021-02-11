@@ -81,7 +81,7 @@ Or, follow these manual steps and check whether the issue is resolved after each
 
 6. Check that all the following registry subkeys are correct for the version of Office that you’re running. If not, fix the incorrect entry to match the following values.
 
-    ### [For 64-bit Office](#tab/browser)
+    ### [For 64-bit Office](#tab/64)
 
      **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0`
      - **Name**: (Default)
@@ -103,7 +103,7 @@ Or, follow these manual steps and check whether the issue is resolved after each
      - **Type**: REG_SZ
      - **Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.tlb`
 
-    ### [For 32-bit Office](#tab/browser)
+    ### [For 32-bit Office](#tab/32)
 
      **Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0`
      - **Name**: (Default)
