@@ -33,7 +33,7 @@ You see any of the following issues when you check the presence status for a use
 
 ## Resolution
 
-To fix these issues, download and run [Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) for automated troubleshooting steps and fixes.
+To fix these issues, download and run [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-TeamsPresenceScenario) for automated troubleshooting steps and fixes.
 
 Or, follow these manual steps and check whether the issue is resolved after each step:
 
@@ -46,7 +46,7 @@ Or, follow these manual steps and check whether the issue is resolved after each
 
 3. For the contact whose presence you can’t see, verify that their email address and Teams sign-in address are the same. If they are not, the contact should correct the addresses as necessary, sign out of Teams, and then sign back in.
 
-4. Check the **registry settings** on your computer to verify that Teams is registered as the default instant messaging (IM) app.
+4. Check the registry settings on your computer to verify that Teams is registered as the default instant messaging (IM) app.
 
    > [!WARNING]
    > Incorrectly editing the registry may severely damage your system.
@@ -65,7 +65,7 @@ Or, follow these manual steps and check whether the issue is resolved after each
 
       If the values that you see don’t match these, update the values.
 
-5. Check whether the **.tlb file** is present in the correct path. The location of the .tlb file is different for **64-bit** and **32-bit** versions of Office.
+5. Check whether the .tlb file is present in the correct path. The location of the .tlb file is different for 64-bit and 32-bit versions of Office.
 
    **For 64-bit Office**
 
@@ -75,7 +75,7 @@ Or, follow these manual steps and check whether the issue is resolved after each
 
    `C:\users\<username>\appdata\local\microsoft\teamspresenceaddin\uc.win32.tlb`
 
-   **Note:** The name of the **.tlb file** is different for each version.
+   **Note:** The name of the .tlb file is different for each version.
 
    If you don’t know the bit version of Office that’s installed on your computer, see [What version of Office am I using?](https://support.microsoft.com/office/about-office-what-version-of-office-am-i-using-932788b8-a3ce-44bf-bb09-e334518b8b19).
 
@@ -85,19 +85,19 @@ Or, follow these manual steps and check whether the issue is resolved after each
 
       |For 64-bit Office|
       |-|
-      |**Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0`<br/>**Name**: (Default)<br/>**Type**: REG_SZ<br/>**Data**: `Unified Collaboration API 1.0 Type Library`
-      |**Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\0\Win64`<br/>**Name**: (Default)<br/>**Type**: REG_SZ<br/>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.tlb`|
-      |**Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\FLAGS`<br/>**Name**: (Default)<br/>**Type**: REG_SZ<br/>**Data**: 0|
-      |**Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\HELPDIR`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.tlb`|
+      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0`<br/>**Name**: (Default)<br/>**Type**: REG_SZ<br/>**Data**: `Unified Collaboration API 1.0 Type Library`
+      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\0\Win64`<br/>**Name**: (Default)<br/>**Type**: REG_SZ<br/>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.tlb`|
+      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\FLAGS`<br/>**Name**: (Default)<br/>**Type**: REG_SZ<br/>**Data**: 0|
+      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\HELPDIR`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.tlb`|
 
     ### [For 32-bit Office](#tab/32)
 
       |For 32-bit Office|
       |-|
-      |**Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `Unified Collaboration API 1.0 Type Library`|
-      |**Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\0\Win32`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.win32.tlb`|
-      |**Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\FLAGS`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: 0|
-      |**Subkey**: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\HELPDIR`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.win32.tlb`|
+      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `Unified Collaboration API 1.0 Type Library`|
+      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\0\Win32`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.win32.tlb`|
+      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\FLAGS`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: 0|
+      |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{ B9AA1F11-F480-4054-A84E-B5D9277E40A8} \1.0\HELPDIR`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.win32.tlb`|
 
 
 7. If the issue persists, uninstall and re-install Teams. For more information about how to uninstall the Teams app, see [Uninstall or remove apps and programs in Windows 10](https://support.microsoft.com/windows/uninstall-or-remove-apps-and-programs-in-windows-10-4b55f974-2cc6-2d2b-d092-5905080eaf98). To re-install Teams, see [How do I get Microsoft Teams](https://support.microsoft.com/office/how-do-i-get-microsoft-teams-fc7f1634-abd3-4f26-a597-9df16e4ca65b)
