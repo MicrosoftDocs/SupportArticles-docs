@@ -20,6 +20,10 @@ search.appverid: MET150
 
 _Original KB number:_ &nbsp; 4014125
 
+##note   
+“The IIS SMTP Virtual Server Component mentioned in this article is part of IIS 6.0, the support for which has ended with the support of Windows 2003 (https://support.microsoft.com/en-in/lifecycle/search/810). We also removed the feature in Windows Server 2012 (https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831568(v=ws.11)#smtp) We recommend you to use one of the supported Exchange server for relaying email to Office 365 instead of IIS SMTP.
+ 
+
 ## Introduction
 
 The way in which Microsoft mandates connector configuration for Exchange Online may require that certificates be applied to those connector settings. For more information, see [Configure a certificate-based connector to relay email messages through Office 365](/exchange/troubleshoot/connectors/office-365-notice).
