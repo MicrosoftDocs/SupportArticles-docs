@@ -48,20 +48,6 @@ Each of the following links provides information for all of the applicable produ
 
 Learn how to test updates: [Testing and Developing Supportability Roadmaps for ISV Applications (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
 
-## More information for currently supported versions of SQL Server
-
-  |Version|Service Pack information|Cumulative update information|
-  |---|---|---|
-  |SQL Server 2019|NA|[4518398](https://support.microsoft.com/help/4518398) SQL Server 2019 build versions |
-  |SQL Server 2017|None| [4047329](https://support.microsoft.com/help/4047329) SQL Server 2017 build versions|
-  |SQL Server 2016| [3177534](https://support.microsoft.com/help/3177534) How to obtain the latest service pack for SQL Server 2016| [3177312](https://support.microsoft.com/help/3177312) SQL Server 2016 build versions|
-  |SQL Server 2014| [2958069](https://support.microsoft.com/help/2958069) How to obtain the latest service pack for SQL Server 2014| [2936603](https://support.microsoft.com/help/2936603) SQL Server 2014 build versions|
-  |SQL Server 2012| [2755533](https://support.microsoft.com/help/2755533) How to obtain the latest service pack for SQL Server 2012<br/>| [2772858](https://support.microsoft.com/help/2772858) The SQL Server 2012 builds that were released after SQL Server 2012 Service Pack 1 was released<br/><br/> [2983249](https://support.microsoft.com/help/2983249) The SQL Server 2012 builds that were released after SQL Server 2012 Service Pack 2 was released<br/><br/> [3133750](https://support.microsoft.com/help/3133750) SQL Server 2012 SP3 build versions|
-  |SQL Server 2008 R2| [2527041](https://support.microsoft.com/help/2527041) How to obtain the latest service pack for SQL Server 2008 R2| [981356](https://support.microsoft.com/help/981356) The SQL Server 2008 R2 builds that were released after SQL Server 2008 R2 was released<br/><br/> [2567616](https://support.microsoft.com/help/2567616) The SQL Server 2008 R2 builds that were released after SQL Server 2008 R2 Service Pack 1 was released<br/><br/> [2730301](https://support.microsoft.com/help/2730301) The SQL Server 2008 R2 builds that were released after SQL Server 2008 R2 Service Pack 2 was released|
-  |SQL Server 2008| [968382](https://support.microsoft.com/help/968382) How to obtain the latest service pack for SQL Server 2008| [956909](https://support.microsoft.com/help/956909) The SQL Server 2008 builds that were released after SQL Server 2008 was released<br/><br/> [970365](https://support.microsoft.com/help/970365) The SQL Server 2008 builds that were released after SQL Server 2008 Service Pack 1 was released<br/><br/> [2402659](https://support.microsoft.com/help/2402659) The SQL Server 2008 builds that were released after SQL Server 2008 Service Pack 2 was released<br/><br/> [2629969](https://support.microsoft.com/help/2629969) The SQL Server 2008 builds that were released after SQL Server 2008 Service Pack 3 was released|
-  |SQL Server 2005| [913089](https://support.microsoft.com/help/913089) How to obtain the latest service pack for SQL Server 2005<br/>| [937137](https://support.microsoft.com/help/937137) The SQL Server 2005 builds that were released after SQL Server 2005 Service Pack 2 was released<br/><br/> [960598](https://support.microsoft.com/help/960598) The SQL Server 2005 builds that were released after SQL Server 2005 Service Pack 3 was released|
-  ||||
-
 ## Determine which version and edition of SQL Server Database Engine is running
 
 To determine the version of SQL Server, you can use any of the following methods.
