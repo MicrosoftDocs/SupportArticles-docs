@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 321185
 
 ## Summary
 
-- A downloadable version of an Excel workbook that contains all the build versions together with their current support lifecycle stage for 2005 through the current version is available. <span style="background-color: #FFFF00">[Click to download this Excel file now](https://aka.ms/SQLServerbuilds). (File name: *SQL Server Builds V3.xlsx*)</span>
+- A downloadable version of an Excel workbook that contains all the build versions together with their current support lifecycle stage for 2005 through the current version is available. [Click to download this Excel file now](https://aka.ms/SQLServerbuilds). (File name: *SQL Server Builds V3.xlsx*)
 
 - To learn what a specific version number of SQL Server maps to, or to find the KB article information for a specific cumulative update package or a service pack, search for the version number in the [SQL Server Complete Version](https://support.microsoft.com/help/321185/#completeversion) list tables.
 
