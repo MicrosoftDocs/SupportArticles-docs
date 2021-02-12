@@ -174,7 +174,7 @@ The best way to troubleshoot permissions is to use the "Effective Access" featur
 > Troubleshooting AD permissions can be tricky because a change in ACLs does not take immediate effect. Always consider that such changes are subject to AD replication.
 >
 > For example:
-> - Make sure that you are making the necessary changes directly to the closest domain controller (see the "[Connectivity with AD](#1-connectivity-with-ad)” section):
+> - Make sure that you are making the necessary changes directly to the closest domain controller (see the "Connectivity with AD” section):
 > - Wait for ADDS replications to occur.
 > - If possible, restart ADSync service to clear the cache.
 
@@ -579,7 +579,7 @@ Fortunately, the issues that affect these components usually generate an error i
 
 - Get-AzureADUser -ObjectId \<UserPrincipalName> | Out-File
 - [AD Photo Edit tool](http://www.cjwdev.com/Software/ADPhotoEdit/Info.html) 
-- [Get-AzureADUserThumbnailPhoto](https://docs.microsoft.com/powershell/module/azuread/get-azureaduserthumbnailphoto?view=azureadps-2.0) 
+- [Get-AzureADUserThumbnailPhoto](https://docs.microsoft.com/powershell/module/azuread/get-azureaduserthumbnailphoto) 
 - LDIFDE
 - Get-ADUser -Identity \<username> | Out-File
 - AADConnector PowerShell Module (Decode AAD DN)
