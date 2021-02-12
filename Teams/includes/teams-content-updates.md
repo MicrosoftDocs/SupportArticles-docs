@@ -2,6 +2,19 @@
 
 
 
+## Week of January 25, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/26/2021 | [Teams degraded performance if Teams is remembered as a game by Xbox Game Bar](/microsoftteams/troubleshoot/teams-administration/performance-affected-when-teams-remembered-as-game) | added |
+| 1/28/2021 | [SBC connectivity issues](/microsoftteams/troubleshoot/direct-routing/sip-options-tls-certificate-issues) | added |
+| 1/28/2021 | [A contact's presence is unknown in Teams](/microsoftteams/troubleshoot/teams-im-presence/contact-presence-status-unknown) | added |
+| 1/28/2021 | [Your actual presence status isn't displayed in Teams](/microsoftteams/troubleshoot/teams-im-presence/presence-not-show-actual-status) | added |
+| 1/30/2021 | [When setting up a Meet Now in Teams, the CVI information does not autopopulate](/microsoftteams/troubleshoot/known-issues/cvi-info-does-not-populate-in-meet-now) | modified |
+| 1/30/2021 | [A contact's presence is unknown in Teams](/microsoftteams/troubleshoot/teams-im-presence/contact-presence-status-unknown) | modified |
+
+
 ## Week of January 18, 2021
 
 
