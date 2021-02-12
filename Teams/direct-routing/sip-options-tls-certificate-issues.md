@@ -2,8 +2,8 @@
 title: SBC connectivity issues
 description: Describes how to diagnose SIP options or TLS certificate issues with SBC. 
 ms.date: 2/5/2021
-author: meerak
-ms.author: cloud-writer
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: Admin
 ms.topic: article
@@ -143,7 +143,7 @@ For a list of supported CAs, see the “Public trusted certificate for the SBC�
 <details>
 <summary><b>SBC doesn’t trust SIP proxy certificate</b></summary>
 
-If the SBC doesn't trust the SIP Proxy certificate, download and install the Baltimore CyberTrust root certificate on the SBC. To download the certificate, see [Microsoft 365 encryption chains](https://docs.microsoft.com/microsoft-365/compliance/encryption-office-365-certificate-chains?view=o365-worldwide).
+If the SBC doesn't trust the SIP Proxy certificate, download and install the Baltimore CyberTrust root certificate on the SBC. To download the certificate, see [Microsoft 365 encryption chains](https://docs.microsoft.com/microsoft-365/compliance/encryption-office-365-certificate-chains).
 
 For a list of supported CAs, see the “Public trusted certificate for the SBC” section of [Plan Direct Routing](https://docs.microsoft.com/MicrosoftTeams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
 
