@@ -2,6 +2,15 @@
 
 
 
+## Week of February 01, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/4/2021 | [Teams degraded performance if Teams is remembered as a game by Xbox Game Bar](/microsoftteams/troubleshoot/teams-on-windows/performance-affected-when-teams-remembered-as-game) | renamed |
+| 2/4/2021 | [Can't see previous joined teams after your account is re-enabled for logon](/microsoftteams/troubleshoot/channels/logon-reenabled-user-not-see-previous-joined-teams) | added |
+
+
 ## Week of January 25, 2021
 
 

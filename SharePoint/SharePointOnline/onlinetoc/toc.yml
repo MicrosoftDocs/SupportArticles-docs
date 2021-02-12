@@ -13,8 +13,12 @@
       href: ../administration/sync-to-outlook-tasks-link-missing.md
     - name: Automatic EXIF property import unsupported
       href: ../administration/automatic-exif-property-import-unsupported.md
+    - name: Create a default Site collection Term Set if none is present
+      href: ../administration/create-default-site-term-set.md
     - name: Deleting a content type from the SharePoint Content Type Hub
       href: ../administration/deleting-content-type-from-hub.md
+    - name: Error when accessing SharePoint or OneDrive
+      href: ../administration/error-accessing-sharepoint-onedrive.md
     - name: Invalid URL error when clicking an online prompted link
       href: ../administration/promoted-link-invalid-url.md
     - name: Issue when browsing to a SharePoint site
@@ -109,6 +113,8 @@
       href: ../lists-and-libraries/documents-not-displayed-in-web-browser-when-using-tls-1.2.md
     - name: Edit column doesn't display the edit link
       href: ../lists-and-libraries/edit-column-fails-displaying-edit-link.md
+    - name: Error when trying to create a list From Excel
+      href: ../lists-and-libraries/error-create-list-excel.md
     - name: Error when view or edit in Word or PowerPoint Online
       href: ../lists-and-libraries/error-when-view-or-edit-in-browser.md
     - name: Excel survey doesn't have full functionality
@@ -287,6 +293,8 @@
       href: ../Sites/customizations-revert-to-default-settings.md
     - name: Error when trying to change site logo on O365 group SharePoint site
       href: ../sites/error-when-changing-o365-site-logo.md
+    - name: Error when trying to delete a SharePoint site
+      href: ../sites/compliance-policy-blocking-site-deletion.md
     - name: Issue when activating Announcement Tiles feature
       href: ../Sites/announcement-tiles-not-supported.md
     - name: Issue when creating an online site
