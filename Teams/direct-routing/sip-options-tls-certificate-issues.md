@@ -64,7 +64,7 @@ After the TLS connection is successfully established, and the SBC is able to sen
 <details>
 <summary><b>SBC doesn't receive a “200 OK” response from SIP proxy</b></summary>
 
-This situation might occur if you’re using an earlier version of TLS. To enforce stricter security, [enable TLS 1.2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2).
+This situation might occur if you’re using an older version of TLS. To enforce stricter security, enable TLS 1.2.
 
 Make sure that your SBC certificate is not self-signed and that you got it from a trusted Certificate Authority (CA).
 
@@ -127,7 +127,7 @@ For more information about this process, see the ”Connect the SBC to the tenan
 
 ### TLS connection issues
 
-If the TLS connection is closed quickly, and SIP Options are not received from the SBC, or if the "200 OK" message is not received from the SBC, then the problem might be the TLS certificate version. The certificate should be [version 1.2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) or later.
+If the TLS connection is closed right away and SIP Options are not received from the SBC, or if 200 OK is not received from the SBC, then the problem might be with the TLS version. The TLS version configured on the SBC should be 1.2 or higher.
 
 <details>
 
