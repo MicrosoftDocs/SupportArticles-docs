@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 321185
 
 ## Summary
 
-- A downloadable version of an Excel workbook that contains all the build versions together with their current support lifecycle stage for 2005 through the current version is available. [Click to download this Excel file now](https://aka.ms/SQLServerbuilds). (File name: *SQL Server Builds V3.xlsx*)
+- A downloadable version of an Excel workbook that contains all the build versions together with their current support lifecycle stage for 2005 through the current version is available. **[Click to download this Excel file now](https://aka.ms/SQLServerbuilds)**. (File name: *SQL Server Builds V3.xlsx*)
 
 - To learn what a specific version number of SQL Server maps to, or to find the KB article information for a specific cumulative update package or a service pack, search for the version number in the [SQL Server Complete Version](https://support.microsoft.com/help/321185/#completeversion) list tables.
 
@@ -31,32 +31,22 @@ _Original KB number:_ &nbsp; 321185
 
 ## Latest updates available for currently supported versions of SQL Server
 
-  |Version|Most recent service pack|Latest cumulative update|Complete version information|
-  |---|---|---|---|
-  |SQL Server 2019|None|[CU9 for 2019](https://support.microsoft.com/help/5000642) (15.0.4102.2 - February 2021)<br/>[CU8 + GDR for 2019](https://support.microsoft.com/help/4583459) (15.0.4083.2 - January 2021)|[SQL Server 2019 builds](https://support.microsoft.com/help/4518398)|
-  |SQL Server 2017|None|[CU22 + GDR for 2017](https://support.microsoft.com/help/4583457) (14.0.3370.1 - January 2021)<br/>[CU22 for 2017](https://support.microsoft.com/help/4577467) (14.0.3356.20 - September 2020)|[SQL Server 2017 builds](https://support.microsoft.com/help/4047329)|
-  |SQL Server 2016|[SQL Server 2016 SP2](https://support.microsoft.com/help/4052908) (13.0.5026.0 - April 2018)|[CU16 for 2016 SP2](https://support.microsoft.com/help/5000645) (13.0.5882.1 - January 2021)<br/>[CU15 + GDR for 2016 SP2](https://support.microsoft.com/help/4583461) (13.0.5865.1 - February 2021)<br/>[CU15 + GDR for 2016 SP1](https://support.microsoft.com/help/4505221) (13.0.4604.0 - July 2019)<br/>[CU15 for 2016 SP1](https://support.microsoft.com/help/4495257) (13.0.4574.0 - May 2019)<br/>[CU14 for 2016 SP2](https://support.microsoft.com/help/4564903) (13.0.5830.85- August 2020)<br/>[CU9 for 2016 RTM](https://support.microsoft.com/help/4037357) (13.0.2216.0 - November 2017)|[SQL Server 2016 builds](https://support.microsoft.com/help/3177312)|
-  |SQL Server 2014|[SQL Server 2014 SP3](https://support.microsoft.com/help/4022619) (12.0.6024.0 - October 2018)|[CU4 + GDR for 2014 SP3](https://support.microsoft.com/help/4583462) (12.0.6433.1 - January 2021)<br/>[CU4 for 2014 SP3](https://support.microsoft.com/help/4022619) (12.0.6329.1 - July 2019)<br/>[CU18 for 2014 SP2](https://support.microsoft.com/help/4500180) (12.0.5687.1 - July 2019)<br/>[CU13 for 2014 SP1](https://support.microsoft.com/help/4019099) (12.0.4522.0 - August 2017)|[SQL Server 2014 builds](https://support.microsoft.com/help/321185/#sqlserver2014)|
-  |SQL Server 2012| [SQL Server 2012 SP4](https://support.microsoft.com/help/4018073) (11.0.7001.0 - September 2017)<br/>|[CU10 for 2012 SP3](https://support.microsoft.com/help/4025925) (11.0.6607.3 - August 2017)<br/>[CU16 for 2012 SP2](https://support.microsoft.com/help/3205054) (11.0.5678.0 - January 2017)<br/>[CU16 for 2012 SP1](https://support.microsoft.com/help/3052476) (11.0.3487.0 - May 2015)| [SQL Server 2012 builds](https://support.microsoft.com/help/321185/#sqlserver2012)|
-  |SQL Server 2008 R2|[SQL Server 2008 R2 SP3](https://support.microsoft.com/help/2979597) (10.50.6000.34 - September 2014)<br/><br/>**Note** Latest and final release for this version|None|[SQL Server 2008 R2 builds](https://support.microsoft.com/help/321185/#sqlserver2008r2)|
-  |SQL Server 2008|[SQL Server 2008 SP4](https://support.microsoft.com/help/2979596) (10.0.6000.29 - September 2014)<br/><br/>**Note** Latest and final release for this version|None|[SQL Server 2008 builds](https://support.microsoft.com/help/321185/#sqlserver2008)|
+Each of the following links provides information for all of the applicable products and technologies.
+
+  |Version|Latest Service Pack|Latest GDR|Latest cumulative update|Complete version information|General Guidance|
+  |---|---|---|---|---|---|
+  |SQL Server 2019|None|[GDR](https://support.microsoft.com/help/4583458) (15.0.2080.9 - January, 2021)|[CU9 for 2019](https://support.microsoft.com/help/5000642) (15.0.4102.2 - February 2021)<br/>[CU8 + GDR](https://support.microsoft.com/help/4583459) (15.0.4083.2 - January 2021)|[SQL Server 2019 builds](https://support.microsoft.com/help/4518398)|[SQL Server 2019 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
+  |SQL Server 2017|None|[GDR](https://support.microsoft.com/help/4583456) (14.0.2037.2 - January, 2021)|[CU22 + GDR](https://support.microsoft.com/help/4583457) (14.0.3370.1 - January 2021)<br/>[CU22](https://support.microsoft.com/help/4577467) (14.0.3356.20 - September 2020)|[SQL Server 2017 builds](https://support.microsoft.com/help/4047329)|[SQL Server 2017 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
+  |SQL Server 2016|[SP2](https://support.microsoft.com/help/4052908) (13.0.5026.0 - April 2018)<br/>[SP1](https://support.microsoft.com/help/3182545) (13.0.4001.0 - November 2016)|[GDR for SP2](https://support.microsoft.com/help/4583460) (13.0.5103.6 - January, 2021)<br/>[GDR for SP1](https://support.microsoft.com/help/4505219) (13.0.4259.0 - July, 2019)<br/>[GDR for RTM](https://support.microsoft.com/help/4058560) (13.0.1745.2 - January, 2018)|[CU16 for 2016 SP2](https://support.microsoft.com/help/5000645) (13.0.5882.1 - January 2021)<br/>[CU15 + GDR for SP2](https://support.microsoft.com/help/4583461) (13.0.5865.1 - January 2021)<br/>[CU15 + GDR for SP1](https://support.microsoft.com/help/4505221) (13.0.4604.0 - July 2019)<br/>[CU15 for SP1](https://support.microsoft.com/help/4495257) (13.0.4574.0 - May 2019)<br/>[CU14 for SP2](https://support.microsoft.com/help/4564903) (13.0.5830.85- August 2020)<br/>[CU9 for RTM](https://support.microsoft.com/help/4037357) (13.0.2216.0 - November 2017)|[SQL Server 2016 builds](https://support.microsoft.com/help/3177312)|[SQL Server 2016 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
+  |SQL Server 2014|[SP3](https://support.microsoft.com/help/4022619) (12.0.6024.0 - October 2018)<br/>[SP2](https://support.microsoft.com/help/3171021) (12.0.5000.0 - July 2016)<br/>[SP3](https://support.microsoft.com/help/3058865) (12.0.4100.1 - May 2015)|[GDR for SP3](https://support.microsoft.com/help/4583463) (12.0.6164.21 - January, 2021)<br/>[GDR for SP2](https://support.microsoft.com/help/4505217) (12.0.5223.6 - January, 2019)<br/>[GDR for SP1](https://support.microsoft.com/help/4032542) (August, 2017)<br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July, 2015)|[CU4 + GDR for SP3](https://support.microsoft.com/help/4583462) (12.0.6433.1 - January 2021)<br/>[CU4 for SP3](https://support.microsoft.com/help/4022619) (12.0.6329.1 - July 2019)<br/>[CU18 for SP2](https://support.microsoft.com/help/4500180) (12.0.5687.1 - July 2019)<br/>[CU13 for SP1](https://support.microsoft.com/help/4019099) (12.0.4522.0 - August 2017)|[SQL Server 2014 builds](https://support.microsoft.com/help/321185/#sqlserver2014)|[SQL Server 2014 Installation](https://www.microsoft.com/download/details.aspx?id=42299)|
+  |SQL Server 2012| [SP4](https://support.microsoft.com/help/4018073) (11.0.7001.0 - September 2017)<br/>[SP3](https://support.microsoft.com/help/3072779) (11.0.6020.0 - November 2015)<br/>[SP2](https://support.microsoft.com/help/2958429) (11.0.5058.0 - June 2014)<br/>[SP1](https://support.microsoft.com/help/2674319) (11.0.3000.00 - November 2012|[GDR for SP4](https://support.microsoft.com/help/4583465) (11.0.7507.2 - January, 2021)<br/>[GDR for SP3](https://support.microsoft.com/help/4057115) (January, 2018)<br/>[MS 16-136](/security-updates/SecurityBulletins/2016/ms16-136) (November, 2016)<br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (December, 2015)|[CU10 for SP3](https://support.microsoft.com/help/4025925) (11.0.6607.3 - August 2017)<br/>[CU16 for SP2](https://support.microsoft.com/help/3205054) (11.0.5678.0 - January 2017)<br/>[CU16 for SP1](https://support.microsoft.com/help/3052476) (11.0.3487.0 - May 2015)| [SQL Server 2012 builds](https://support.microsoft.com/help/321185/#sqlserver2012)|[SQL Server 2012 Installation](/previous-versions/sql/sql-server-2012/cc281837(v=sql.110))|
+  |SQL Server 2008 R2|[SP3](https://support.microsoft.com/help/2979597) (10.50.6000.34 - September 2014)<br/>[SP2](https://support.microsoft.com/help/2630458) (10.50.4000.0 - July 2012)|[GDR for SP3](https://support.microsoft.com/help/4057113) (January, 2018)<br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July, 2015)|None|[SQL Server 2008 R2 builds](https://support.microsoft.com/help/321185/#sqlserver2008r2)|[SQL Server 2008 R2 SP3 Installation](https://www.microsoft.com/download/details.aspx?id=44271)|
+  |SQL Server 2008|[SP4](https://support.microsoft.com/help/2979596) (10.0.6000.29 - September 2014)<br/>[SP3](https://support.microsoft.com/help/2546951) (10.00.5500.00 - October, 2011)|[GDR for SP4](https://support.microsoft.com/help/4057114) (January, 2018)<br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July, 2015)|None|[SQL Server 2008 builds](https://support.microsoft.com/help/321185/#sqlserver2008)|[SQL Server 2008 Servicing](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|
 
   > [!NOTE]
   > "Latest" = During the past 12 months
 
-## More information for currently supported versions of SQL Server
-
-  |Version|Service Pack information|Cumulative update information|
-  |---|---|---|
-  |SQL Server 2019|NA|[4518398](https://support.microsoft.com/help/4518398) SQL Server 2019 build versions |
-  |SQL Server 2017|None| [4047329](https://support.microsoft.com/help/4047329) SQL Server 2017 build versions|
-  |SQL Server 2016| [3177534](https://support.microsoft.com/help/3177534) How to obtain the latest service pack for SQL Server 2016| [3177312](https://support.microsoft.com/help/3177312) SQL Server 2016 build versions|
-  |SQL Server 2014| [2958069](https://support.microsoft.com/help/2958069) How to obtain the latest service pack for SQL Server 2014| [2936603](https://support.microsoft.com/help/2936603) SQL Server 2014 build versions|
-  |SQL Server 2012| [2755533](https://support.microsoft.com/help/2755533) How to obtain the latest service pack for SQL Server 2012<br/>| [2772858](https://support.microsoft.com/help/2772858) The SQL Server 2012 builds that were released after SQL Server 2012 Service Pack 1 was released<br/><br/> [2983249](https://support.microsoft.com/help/2983249) The SQL Server 2012 builds that were released after SQL Server 2012 Service Pack 2 was released<br/><br/> [3133750](https://support.microsoft.com/help/3133750) SQL Server 2012 SP3 build versions|
-  |SQL Server 2008 R2| [2527041](https://support.microsoft.com/help/2527041) How to obtain the latest service pack for SQL Server 2008 R2| [981356](https://support.microsoft.com/help/981356) The SQL Server 2008 R2 builds that were released after SQL Server 2008 R2 was released<br/><br/> [2567616](https://support.microsoft.com/help/2567616) The SQL Server 2008 R2 builds that were released after SQL Server 2008 R2 Service Pack 1 was released<br/><br/> [2730301](https://support.microsoft.com/help/2730301) The SQL Server 2008 R2 builds that were released after SQL Server 2008 R2 Service Pack 2 was released|
-  |SQL Server 2008| [968382](https://support.microsoft.com/help/968382) How to obtain the latest service pack for SQL Server 2008| [956909](https://support.microsoft.com/help/956909) The SQL Server 2008 builds that were released after SQL Server 2008 was released<br/><br/> [970365](https://support.microsoft.com/help/970365) The SQL Server 2008 builds that were released after SQL Server 2008 Service Pack 1 was released<br/><br/> [2402659](https://support.microsoft.com/help/2402659) The SQL Server 2008 builds that were released after SQL Server 2008 Service Pack 2 was released<br/><br/> [2629969](https://support.microsoft.com/help/2629969) The SQL Server 2008 builds that were released after SQL Server 2008 Service Pack 3 was released|
-  |SQL Server 2005| [913089](https://support.microsoft.com/help/913089) How to obtain the latest service pack for SQL Server 2005<br/>| [937137](https://support.microsoft.com/help/937137) The SQL Server 2005 builds that were released after SQL Server 2005 Service Pack 2 was released<br/><br/> [960598](https://support.microsoft.com/help/960598) The SQL Server 2005 builds that were released after SQL Server 2005 Service Pack 3 was released|
-  ||||
+Learn how to test updates: [Testing and Developing Supportability Roadmaps for ISV Applications (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
 
 ## Determine which version and edition of SQL Server Database Engine is running
 
@@ -313,9 +303,7 @@ To find the version of your instance of SQL Server CE and related information, s
 
 - [SQL Server CE previous versions documentation](/previous-versions/sql/compact/)
 
-## More information  
-
-Frequently asked questions
+## Frequently asked questions
 
 **Q1: How do you determine the version of SQL Server when SQL Server is not running?**
 
@@ -356,11 +344,19 @@ For more information, go to the following websites:
 
 - [Naming schema and Fix area descriptions for SQL Server software update packages](https://support.microsoft.com/help/822499)
 
+- [Description of the standard terminology that is used to describe Microsoft software updates](https://support.microsoft.com/help/824684)
+
 - [Description of the standard terminology that is used to describe Microsoft software updates](/troubleshoot/windows-client/deployment/standard-terminology-software-updates)
 
 - [An Incremental Servicing Model is available from the SQL Server team to deliver hotfixes for reported problems](https://support.microsoft.com/help/935897)
 
 - [Software release life cycle](http://wikipedia.org/wiki/software_release_life_cycle)
+
+- [SQL Server documentation](/sql/sql-server/?view=sql-server-ver15&preserve-view=true)
+
+- [SQL Server product information center](https://www.microsoft.com/sqlserver/default.aspx)
+
+- [SQL Server release blogs](https://aka.ms/sqlreleases)
 
 ## SQL Server complete version list tables  
 
