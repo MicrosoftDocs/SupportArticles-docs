@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User profiles
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-server-user-profiles
 ---
 # User profile cannot be loaded with Event ID 1509: DETAIL - The filename or extension is too long
 
-This article provides resolutions to fix the error: "User Profile Service failed the logon. User profile cannot be loaded".
+This article provides resolutions to fix the error "User Profile Service failed the logon. User profile cannot be loaded".
 
 _Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2536571
@@ -26,7 +26,7 @@ Some clients log on with temporary profile with error "User Profile Service fail
 
 > Log Name: Application  
 Source: Microsoft-Windows-User Profiles Service  
-Date: 3/28/2011 3:04:46 PM  
+Date: *\<DateTime>*  
 Event ID: 1509  
 Task Category: None  
 Level: Warning  
@@ -43,7 +43,7 @@ Windows cannot copy file
 
 ## Cause
 
-This can happen if the destination path of the user's profile is on a server with a long name and share folder name. For example: `\\servername\thisistheprofileshare` As the file is stored locally on `c:\users\username` the filename for copying to the destination will increase when this prefix is changed to `\\servername\thisistheprofileshare\` leading to a pathname longer than the supported 260 chars.
+This can happen if the destination path of the user's profile is on a server with a long name and share folder name. For example, \\\\servername\\thisistheprofileshare. As the file is stored locally on c:\\users\\username, the filename for copying to the destination will increase when this prefix is changed to \\\\servername\\thisistheprofileshare\\ leading to a pathname longer than the supported 260 chars.
 
 ## Resolution
 
@@ -51,14 +51,14 @@ Use one of the following methods to resolve the issue:
 
 1. You can use the "Empty Temporary Internet Files folder when browser is closed" option in Internet Explorer to delete all cached Internet files when a user quits Internet Explorer. This option doesn't delete cookie information. Cookie information (which is usually small) is copied when the profile is saved. To use this option, follow these steps:
 
-    1. In Internet Explorer, click Internet Options on the View (or Tools) menu.
+    1. In **Internet Explorer**, click **Internet Options** on the **View** (or **Tools**) menu.
 
-    2. Click the Advanced tab.
+    2. Click the **Advanced** tab.
 
-    3. Under Security, click the "Delete saved pages when browser closed" or "Empty Temporary Internet Files folder when browser is closed" check box to select it.
+    3. Under **Security**, click the **Delete saved pages when browser closed** or **Empty Temporary Internet Files folder when browser is closed** check box to select it.
 
-    4. Click OK.
+    4. Click **OK**.
 
 2. Enable the Group Policy Setting for "Delete cached copies of roaming profiles", located under in the following location:
 
-    `Computer Configuration\Administrative Templates\System\User Profiles`
+    Computer Configuration\\Administrative Templates\\System\\User Profiles

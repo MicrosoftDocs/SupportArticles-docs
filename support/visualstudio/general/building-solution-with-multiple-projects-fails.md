@@ -2,7 +2,7 @@
 title: The referenced project doesn't exist
 description: This article describes the Visual Studio 2010 build failure when building a solution with multiple projects and there exists dependency relationships among them, and provides a workaround.
 ms.date: 04/22/2020
-ms.prod-support-area-path: Language or compilers
+ms.prod-support-area-path: Language or compilers
 ms.reviewer: danmose
 ---
 # Visual Studio 2010 build fails with an error: The referenced project doesn't exist

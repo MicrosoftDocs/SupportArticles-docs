@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4013962
 
 If you wish to opt out of Visual Studio Dev Essentials, please follow these steps:
 
-1. Open an 'In Private' Internet Explorer browser session.
+1. Open an 'In Private' Internet Explorer browser session.
 
    > [!NOTE]
    > Not required, but helps ensure a clean log-in.
@@ -28,11 +28,11 @@ If you wish to opt out of Visual Studio Dev Essentials, please follow these step
 5. Enter your password, or complete sign in requirements.
 6. Upon successful sign in, a list of current subscriptions will be displayed.
 7. On the row associated with Visual Studio Dev Essentials, click **Leave Program**.
-8. A Pop-up window will be displayed, select **Confirm**.
+8. A Pop-up window will be displayed, select **Confirm**.
 
    > [!NOTE]
-   > Coming back to the Visual Studio Dev Essentials program is easy.  Simply follow steps 1 - 6, and select the box for 'Join Visual Studio Dev Essentials'.
+   > Coming back to the Visual Studio Dev Essentials program is easy.  Simply follow steps 1 - 6, and select the box for 'Join Visual Studio Dev Essentials'.
 
-For More Information About Visual Studio Dev Essentials click [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/).
+For More Information About Visual Studio Dev Essentials click [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/).
 
 ![Visual Studio](./media/opt-out-of-dev-essentials/visual-studio-image.png)

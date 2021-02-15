@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Diagnose Active Directory replication failures
 
@@ -43,16 +43,16 @@ Active Directory Domain Services (AD DS) replication has the following dependenc
 
 Use either of the following methods to view replications errors:
 
-- Run [AD Status Replication Tool](https://www.microsoft.com/download/details.aspx?id=30005) on the DCs.
+- Download and run the [Microsoft Support and Recovery Assistant tool](https://aka.ms/sara-adreplication) OR Run [AD Status Replication Tool](https://www.microsoft.com/download/details.aspx?id=30005) on the DCs.
 - Read the replication status in the `repadmin /showrepl` output.
 
-  - **Repadmin** is part of Remote Server Administrator Tools (RSAT). If you are using Windows 10, version 1803 or an earlier version of Windows, download [Remote Server Administration Tools (RSAT)](https://www.microsoft.com/download/details.aspx?id=45520).
+  - `Repadmin` is part of Remote Server Administrator Tools (RSAT). If you're using Windows 10, version 1803 or an earlier version of Windows, download [Remote Server Administration Tools (RSAT)](https://www.microsoft.com/download/details.aspx?id=45520).
   
   - In Windows 10, version 1809 and later version of Windows 10, you can install the RSAT feature through **Settings** > **Manage optional features**.
 
-### Use repadmin to identify forest-wide Active Directory replication errors
+### Use `repadmin` to identify forest-wide Active Directory replication errors
 
-You can create a Microsoft Excel spreadsheet for domain controllers by using the `repadmin/showrepl` command to view replication errors. To do this, follow these steps:
+You can create a Microsoft Excel spreadsheet for domain controllers by using the `repadmin/showrepl` command to view replication errors. To do it, follow these steps:
 
 1. Open a Command Prompt as an administrator:
 

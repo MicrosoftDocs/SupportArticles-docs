@@ -2,7 +2,7 @@
 title: FTP authorization rules aren't inherited
 description: This article provides resolutions for the problem that with User name physical directory (enable global virtual directories), FTP authorization rules aren't inherited in IIS.
 ms.date: 04/15/2020
-ms.prod-support-area-path: FTP authentication and authorization
+ms.prod-support-area-path: FTP authentication and authorization
 ms.technology: iis
 ms.reviewer: nanram
 ---
@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4294477
 
 In Microsoft Internet Information Services (IIS), if FTP user isolation is configured at the site-level to **User name physical directory (enable global virtual directories)**, FTP authorization rules do not adhere to the physical path of the application and will not be inherited as per the folder structure.
 
-Assume that an IIS FTP site has user isolation set to **User name physical directory (enable global virtual directories)**, and in the FTP authorization feature, read permissions are granted to all users. A folder named *Upload* is created under `\FTP\Localuser\<user_name>\`, and read and write access is granted to all users through the FTP authorization feature in IIS for this *Upload* folder. Despite having write permissions to the *Upload* folder, when a user whose user name matches the *<user_name>* folder in the path tries to upload a file in the *Upload* folder, the user receives an **Access denied** error message.
+Assume that an IIS FTP site has user isolation set to **User name physical directory (enable global virtual directories)**, and in the FTP authorization feature, read permissions are granted to all users. A folder named *Upload* is created under `\FTP\Localuser\<user_name>\`, and read and write access is granted to all users through the FTP authorization feature in IIS for this *Upload* folder. Despite having write permissions to the *Upload* folder, when a user whose user name matches the *<user_name>* folder in the path tries to upload a file in the *Upload* folder, the user receives an **Access denied** error message.
 
 The output from trying to upload an FTP file through the command-line FTP utility that is included in Windows resembles the following:
 

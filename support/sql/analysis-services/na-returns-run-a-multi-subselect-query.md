@@ -26,11 +26,7 @@ In this situation, you get **#N/A** cell values for the measure if the multi-mem
 
 ## Cause
 
-This behavior is by design. This design makes sure that the database does not expose real cell values that are secured by the cell security.
-
-## References
-
-Learn about the [Description of the standard terminology that is used to describe Microsoft software updates](https://support.microsoft.com/help/824684) that Microsoft uses to describe software updates.
+This behavior is by design. This design makes sure that the database does not expose real cell values that are secured by the cell security.
 
 ## Applies to
 

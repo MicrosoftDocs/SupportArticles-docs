@@ -11,55 +11,58 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, steved
 ms.prod-support-area-path: Power Management
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Desktop wakes up unexpectedly from sleep or hibernation
 
-This article provides the information on how to resolve the issue that desktop wakes up unexpectedly from sleep or hibernation.
+This article provides a solution to an issue where desktop wakes up unexpectedly from sleep or hibernation.
 
 _Original product version:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp; 2799178
 
 ## Symptoms
 
-A Windows 8 Desktop computer is automatically waking from sleep or hibernation at a certain time even if there is no "ACPI Wake Alarm" system device found by the operating system. 
+A Windows 8 Desktop computer is automatically waking from sleep or hibernation at a certain time even if there is no "ACPI Wake Alarm" system device found by the operating system.
 
 ## Cause
 
-For Windows 8 desktops or All-in-one computers, under Action Center / Automatic Maintenance, the checkbox is automatically enabled for "Allow scheduled maintenance to wake up my computer at the scheduled time". Also, the power policy / Advanced settings / Sleep / Allow wake timers will default to Enabled for AC power. 
+For Windows 8 desktops or All-in-one computers, under **Action Center** > **Automatic Maintenance**, the **Allow scheduled maintenance to wake up my computer at the scheduled time** checkbox is automatically enabled. Also, the power policy/Advanced settings/Sleep/Allow wake timers will default to Enabled for AC power.
 
-If the desktop machine does not have an "ACPI Wake Alarm" device (or if it is disabled in the BIOS), Windows 8 still uses the Real Time Clock (RTC) to program wake events, assuming the power policy / Advanced settings / Sleep / Allow wake timers is Enabled for AC power.
+If the desktop machine does not have an "ACPI Wake Alarm" device (or if it is disabled in the BIOS), Windows 8 still uses the Real Time Clock (RTC) to program wake events, assuming the power policy/Advanced settings/Sleep/Allow wake timers is Enabled for AC power.
 
 Windows 8 automatically configures a "Regular Maintenance" event in TaskScheduler to run at 3:00 AM every day. After initial installation of Window 8, Windows Update is preconfigured to initiate the regular maintenance task and wake event to ensure that it is run.
 
 >[!NOTE]
- On mobile computers, if there is no "ACPI Wake Alarm" device detected, Windows 8 disables "allow wake timers" on all in-box power plans, and "Allow scheduled maintenance to wake up my computer at the scheduled time" is not enabled.
+ On mobile computers, if there is no "ACPI Wake Alarm" device detected, Windows 8 disables "allow wake timers" on all in-box power plans, and **Allow scheduled maintenance to wake up my computer at the scheduled time** is not enabled.
 
 ## Resolution
 
-To prevent the Regular Maintenance task from waking the machine at 3:00am, go to Action Center / Automatic Maintenance and disable the checkbox for "Allow scheduled maintenance to wake up my computer at the scheduled time".
+To prevent the Regular Maintenance task from waking the machine at 3:00am, go to **Action Center** > **Automatic Maintenance** and disable the **Allow scheduled maintenance to wake up my computer at the scheduled time** checkbox.
 
 ## More information
 
 When an application schedules a maintenance trigger (such as Windows Update, if it has downloaded a qualified update to be installed under maintenance), the following actions will take place:
 
-1. From an Administrator command prompt, "Powercfg /waketimers" will indicate that the Regular Maintenance task is scheduled to run at 3:00 AM. For example:
+1. From an Administrator command prompt, `Powercfg /waketimers` will indicate that the Regular Maintenance task is scheduled to run at 3:00 AM. For example:
 
+    ```console
     C:\\> powercfg /waketimers
-Timer set by [PROCESS] \Device\HarddiskVolume1\Windows\System32\services.exe expires at 2:59:29 AM on 12/4/2012
- Reason: Windows will execute 'NT TASK\Microsoft\Windows\TaskScheduler\Regular Maintenance' scheduled task that requested waking the computer.
+    ```
+
+    Timer set by [PROCESS] \\Device\\HarddiskVolume1\\Windows\\System32\\services.exe expires at 2:59:29 AM on 12/4/2012
+    Reason: Windows will execute 'NT TASK\\Microsoft\\Windows\\TaskScheduler\\Regular Maintenance' scheduled task that requested waking the computer.
 
 2. Event ID: 808 will be logged in the Application and Services Logs/Microsoft/Windows/TaskScheduler/Maintenance log, to indicate the application, which caused the regular maintenance event to be scheduled. For example:
 
-    Level: Warning  
+    > Level: Warning  
     Source: TaskScheduler  
     Event ID: 808  
-    Maintenance Task "\Microsoft\Windows\WindowsUpdate\AUScheduledInstall" requests computer wakeup during next regular maintenance run.
+    Maintenance Task "\\Microsoft\\Windows\\WindowsUpdate\\AUScheduledInstall" requests computer wakeup during next regular maintenance run.
 
-Any application can be scheduled a regular maintenance task to run automatically, as described by the following MSDN links.
+Any application can schedule a regular maintenance task to run automatically, as described by the following links.
 
-[Being productive in the background – background tasks](/archive/blogs/windowsappdev/being-productive-in-the-background-background-tasks)
+- [Being productive in the background – background tasks](/archive/blogs/windowsappdev/being-productive-in-the-background-background-tasks)
 
-[https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.maintenancetrigger.aspx](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.maintenancetrigger.aspx)  
+- [MaintenanceTrigger Class](/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger)  
 
 The first application to make use of the Regular Maintenance task scheduling feature is Windows Update. The .NET Framework NGEN v4.0 utility has also been observed to cause the regular maintenance event to be scheduled.

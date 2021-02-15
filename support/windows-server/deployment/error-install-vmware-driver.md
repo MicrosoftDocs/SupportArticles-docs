@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # You can't install a VMWare driver on Windows Server 2008 R2
 
@@ -36,8 +36,8 @@ In this scenario, when you try to install the driver through Device Manager, the
 After the installation failure occurs, you try unsuccessfully to install another available Ethernet adapter from the VM Settings list. For example, you select Intel E1000. However, the second driver also doesn't install. Additionally, a log entry that resembles the following is logged in Setupapi.dev.log under **%windir%/inf/**:
 
 > dvi: {Plug and Play Service: Device Install for PCI\VEN_15AD&DEV_07B0&SUBSYS_07B015AD&REV_01\FF565000B37984FE00}  
-ump: Creating Install Process: DrvInst.exe 17:13:28.877  
-ump: Server install process exited with code 0xc0000142 17:13:28.877  
+ump: Creating Install Process: DrvInst.exe *\<DateTime>*  
+ump: Server install process exited with code 0xc0000142 *\<DateTime>*  
 ump: {Plug and Play Service: Device Install exit(c0000142)}  
 ndv: Device Install failed for new device...installing NULL driver.  
 dvi: {Plug and Play Service: Device Install for PCI\VEN_15AD&DEV_07B0&SUBSYS_07B015AD&REV_01\FF565000B37984FE00}  

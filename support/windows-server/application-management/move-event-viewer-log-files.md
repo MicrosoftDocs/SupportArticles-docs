@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jwojan
 ms.prod-support-area-path: Event System
-ms.technology: ApplicationCompatibility
+ms.technology: windows-server-application-compatibility
 ---
 # How to move Event Viewer log files to another location
 
@@ -87,9 +87,7 @@ To view the name and the location of Event Viewer log files, follow these steps:
 
 ## References
 
-For more information about how to view and manage logs in Event Viewer, see the following articles:
-
-- [How To Diagnose System Problems with Event Viewer in Microsoft Windows 2000](https://support.microsoft.com/help/302542)
+For more information about how to view and manage logs in Event Viewer, see the following article:
 
 - [How to Delete Corrupt Event Viewer Log Files](https://support.microsoft.com/help/172156)
 

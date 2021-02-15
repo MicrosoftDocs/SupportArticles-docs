@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: duanecr, kaushika
 ms.prod-support-area-path: Active Directory database issues and domain controller boot failures
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Error when you start your Windows-based domain controller: Directory Services cannot start
 
@@ -74,9 +74,6 @@ To resolve this problem, follow these steps:
 2. When the BIOS information appears, press F8.
 3. Select **Directory Services Restore Mode**, and then press ENTER.
 4. Log on by using the Directory Services Restore Mode password.
-    > [!NOTE]
-    > If you can't log on, visit the following Microsoft Knowledge Base article:  
-    [249321](https://support.microsoft.com/help/249321) Unable to log on if the boot partition drive letter has changed
 5. Click **Start**, select **Run**, type *cmd* in the **Open** box, and then click **OK**.
 6. At the command prompt, type *ntdsutil files info*.
 
@@ -107,9 +104,7 @@ To resolve this problem, follow these steps:
     - Database Backup path
     - Database Log files path
     - DSA Working Directory
-7. Verify that the files that are listed in the output in step 6 exist. If the files don't exist, follow the steps in the following Microsoft Knowledge Base article:
-
-    [240362](https://support.microsoft.com/help/240362) Directory Services does not start if Ntds.dit file is missing
+7. Verify that the files that are listed in the output in step 6 exist.
 8. Verify that the folders in the Ntdsutil output have the correct permissions. The correct permissions are specified in the following tables.
 
     **Windows Server 2003**
@@ -161,10 +156,6 @@ To resolve this problem, follow these steps:
     > [!NOTE]
     > If your domain controller is running Microsoft Small Business Server, you cannot perform this step, because Small Business Server cannot be added to an existing domain as an additional domain controller (replica). If you have a system state backup that is newer than the tombstone lifetime, restore that system state backup instead of removing Active Directory from the server. By default, the tombstone lifetime is 60 days.
 
-    For more information about how to restore a system state backup, click the following article number to view the article in the Microsoft Knowledge Base:
-
-    [240363](https://support.microsoft.com/help/240363) How to use the Backup program to back up and restore the system state
-
 14. If no system state backup is available, and there are no other healthy domain controllers in the domain, we recommend that you rebuild the domain by removing Active Directory and then reinstalling Active Directory on the server, creating a new domain. You can use the old domain name again or use a new domain name. You can also rebuild the domain by reformatting and reinstalling Windows on the server. However, removing Active Directory is quicker, and effectively removes the corrupted Active Directory database.
 
     If no system state backup is available, there are no other healthy domain controllers in the domain, and you must have the domain controller working immediately, perform a lossy repair by using either Ntdsutil or Esentutl.
@@ -208,9 +199,3 @@ To resolve this problem, follow these steps:
     - Windows Server 2003: [Creating a Backup and Recovery Plan](https://technet.microsoft.com/library/cc739288%28ws.10%29.aspx)
     - Windows 2000: [Chapter 14 - Data Backup and Recovery](https://technet.microsoft.com/library/bb727106.aspx)
     - Windows Small Business Server: [Windows Server Essentials (Small Business Server)](https://technet.microsoft.com/library/cc514417.aspx)
-
-## References
-
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[318116](https://support.microsoft.com/help/318116) Issues with Jet databases on compressed drives

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Backup and restore of virtual machines
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Back up and restore a Hyper-V VM by using BMR and data backup
 
@@ -28,7 +28,7 @@ Consider the following scenario:
 - The Hyper-V Virtual Machines data resides somewhere other than on the system drive.
 - You back up VM data and BMR by using Windows Server Backup (WSB).
 
-When the VM fails to load in this scenario, and you try to restore the BMR in the Windows Recovery environment (WinRE), the System data and the Hyper-V VM are restored. However, the VM is not left in a consistent state and may fail to start.
+When the VM fails to load in this scenario, and you try to restore the BMR in the Windows Recovery environment (WinRE), the system data and the Hyper-V VM are restored. However, the VM is not left in a consistent state and may fail to start.
 
 ## Cause
 

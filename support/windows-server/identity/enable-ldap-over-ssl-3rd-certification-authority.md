@@ -1,5 +1,5 @@
 ---
-title: Enable LDAP over SSL
+title: Enable Lightweight Directory Access Protocol (LDAP) over Secure Sockets Layer (SSL)
 description: Describes how to enable LDAP over SSL with a third-party certification authority.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: LDAP configuration and interoperability
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Enable LDAP over SSL with a third-party certification authority
 
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 321051
 
 The LDAP is used to read from and write to Active Directory. By default, LDAP traffic is transmitted unsecured. You can make LDAP traffic confidential and secure by using SSL/Transport Layer Security (TLS) technology. You can enable LDAP over SSL (LDAPS) by installing a properly formatted certificate from either a Microsoft certification authority (CA) or a non-Microsoft CA according to the guidelines in this article.
 
-There is no user interface for configuring LDAPS. Installing a valid certificate on a domain controller permits the LDAP service to listen for, and automatically accept, SSL connections for both LDAP and global catalog traffic.
+There's no user interface for configuring LDAPS. Installing a valid certificate on a domain controller permits the LDAP service to listen for, and automatically accept, SSL connections for both LDAP and global catalog traffic.
 
 ## Requirements for an LDAPS certificate
 
@@ -43,7 +43,7 @@ To enable LDAPS, you must install a certificate that meets the following require
 
 - The certificate was issued by a CA that the domain controller and the LDAPS clients trust. Trust is established by configuring the clients and the server to trust the root CA to which the issuing CA chains.
 
-- You must use the Schannel cryptographic service provider (CSP) to generate the key.
+- Use the Schannel cryptographic service provider (CSP) to generate the key.
 
 ## Create the certificate request
 
@@ -92,17 +92,17 @@ To request a Server Authentication certificate that is suitable for LDAPS, follo
 
     > Subject="E=admin@contoso.com, CN=<DC fqdn>, OU=Servers, O=Contoso, L=Redmond, S=Washington, C=US."
 
-2. Create the request file. To do this, type the following command at the command prompt, and then press ENTER:
+2. Create the request file by running the following command at the command prompt:
 
     ```console
     certreq -new request.inf request.req
     ```
 
-    A new file called *Request.req* is created. This is the base64-encoded request file.
+    A new file called *Request.req* is created. It's the base64-encoded request file.
 
 3. Submit the request to a CA. You can submit the request to a Microsoft CA or to a third-party CA.
 
-4. Retrieve the certificate that is issued, and then save the certificate as Certnew.cer in the same folder as the request file. To do this, follow these steps:
+4. Retrieve the certificate that's issued, and then save the certificate as Certnew.cer in the same folder as the request file by following these steps:
 
     1. Create a new file called *Certnew.cer*.
     2. Open the file in Notepad, paste the encoded certificate into the file, and then save the file.
@@ -110,13 +110,13 @@ To request a Server Authentication certificate that is suitable for LDAPS, follo
     > [!NOTE]
     > The saved certificate must be encoded as base64. Some third-party CAs return the issued certificate to the requestor as base64-encoded text in an e-mail message.
 
-5. Accept the issued certificate. To do this, type the following command at the command prompt, and then press ENTER:
+5. Accept the issued certificate by running the following command at the command prompt:
 
     ```console
     certreq -accept certnew.cer
     ```
 
-6. Verify that the certificate is installed in the computer's Personal store. To do this, follow these steps:
+6. Verify that the certificate is installed in the computer's Personal store by following these steps:
 
     1. Start Microsoft Management Console (MMC).
     2. Add the Certificates snap-in that manages certificates on the local computer.
@@ -156,11 +156,11 @@ After a certificate is installed, follow these steps to verify that LDAPS is ena
 
 The original recommendation in this article was to put certificates in the Local Machine's Personal store. Although this option is supported, you can also put certificates in the NTDS Service's Personal certificate store in Windows Server 2008 and in later versions of Active Directory Domain Services (AD DS). For more information about how to add the certificate to the NTDS service's Personal certificate store, see [Event ID 1220 - LDAP over SSL](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd941846(v=ws.10)).
 
-AD DS preferentially looks for certificates in this store over the Local Machine's store. This makes it easier to configure AD DS to use the certificate that you want it to use. This is because there might be multiple certificates in the Local Machines Personal store, and it can be difficult to predict which one is selected.
+AD DS preferentially looks for certificates in this store over the Local Machine's store. This makes it easier to configure AD DS to use the certificate that you want it to use. It's because there might be multiple certificates in the Local Machines Personal store, and it can be difficult to predict which one is selected.
 
 AD DS detects when a new certificate is dropped into its certificate store and then triggers an SSL certificate update without having to restart AD DS or restart the domain controller.
 
-A new rootDse operation that is named renewServerCertificate can be used to manually trigger AD DS to update its SSL certificates without having to restart AD DS or restart the domain controller. This attribute can be updated using adsiedit.msc, or by importing the change in LDAP Directory Interchange Format (LDIF) using ldifde.exe. For more information on using LDIF to update this attribute, see [renewServerCertificate](/openspecs/windows_protocols/ms-adts/4cf26e43-ae0b-4823-b00c-18205ab78065).
+A new rootDse operation that's named renewServerCertificate can be used to manually trigger AD DS to update its SSL certificates without having to restart AD DS or restart the domain controller. This attribute can be updated using adsiedit.msc, or by importing the change in LDAP Directory Interchange Format (LDIF) using ldifde.exe. For more information on using LDIF to update this attribute, see [renewServerCertificate](/openspecs/windows_protocols/ms-adts/4cf26e43-ae0b-4823-b00c-18205ab78065).
 
 Finally, if a Windows Server 2008 or a later version domain controller finds multiple certificates in its store, it automatically selects the certificate whose expiration date is furthest in the future. Then, if your current certificate is approaching its expiration date, you can drop the replacement certificate in the store, and AD DS automatically switches to use it.
 

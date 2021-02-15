@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Redirection (not printer)
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # RemoteFX USB redirected scanner doesn't start  
 

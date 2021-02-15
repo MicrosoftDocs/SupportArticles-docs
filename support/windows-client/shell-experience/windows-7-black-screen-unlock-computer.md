@@ -1,6 +1,6 @@
 ---
 title: Windows 7 black screen on computer unlock
-description: Describes an issue about Windows black screen when unlocking a computer. 
+description: Describes an issue about Windows black screen when unlocking a computer.
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
@@ -11,11 +11,11 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: robsmi, kaushika
 ms.prod-support-area-path: Desktop Shell
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # Windows 7 black screen on computer unlock
 
-This article describes an issue about Windows black screen when unlocking a computer.
+This article provides a solution to an issue where Windows black screen when unlocking a computer.
 
 _Original product version:_ &nbsp;Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp;2431700
@@ -38,31 +38,33 @@ A problem with some layer of security software causes the Desktop Window Manager
 ## Resolution
 
 1. A temporary workaround is to Stop and Disable the "Desktop Window Manager Session Manager" service. Disabling this service will turn off the "Aero" graphics display feature, which will disable certain features such as Aero Peek, Aero Snap, Aero Shake, and so on. To disable this service:
-    1. Click the Start button, type "services.msc" and then press the ENTER key, or click the icon that comes up under "Programs" in the Instant Search box.
+    1. Click the **Start** button, type *services.msc* and then press the ENTER key, or click the icon that comes up under **Programs** in the Instant Search box.
     2. Locate and then double-click the Desktop Window Manager Session Manager service.
-    3. Locate the "Startup type" dropdown and change the value to " disabled ".
-    4. Locate and click the button labeled " Stop ".
-    5. Click the Apply button, and then click the OK button.
-    
+    3. Locate the **Startup type** dropdown and change the value to "disabled".
+    4. Locate and click the button labeled "Stop".
+    5. Click the **Apply** button, and then click the **OK** button.
+
     Alternatively, you can run the following commands from an elevated CMD prompt to set the service properties of the Desktop Window Manager Session Manager service to not running and disabled:
-    
+
     ```console
     net stop UxSms
     sc config UxSms start= disabled
     ```
 
     To return the settings for the Desktop Window Manager Session Manager service to normal via the CMD line:
+
     ```console
     sc config UxSms start= auto
     net start UxSms
     ```
+
 2. Updated display drivers may resolve this issue. You can determine the manufacturer of the display adapter by following these steps:
 
-    1. Click Start, and in the "Search Programs and Folder" text box, type in "MSINFO32" (without quotation marks) and press ENTER.
+    1. Click **Start**, and in the **Search Programs and Folder** text box, type in *MSINFO32* (without quotation marks) and press ENTER.
         > [!NOTE]
         > The System Information tool should appear.
-    2. On the left-hand section called "System Summary" locate Components, and under Components locate and click on Display.
-    3. The right-hand section of System Information should now display information about the display system in the computer. The item called "Name" should indicate the type of display adapter.
+    2. On the left-hand section called **System Summary** locate Components, and under **Components** locate and click on **Display**.
+    3. The right-hand section of **System Information** should now display information about the display system in the computer. The item called "Name" should indicate the type of display adapter.
     4. At this point you can go to the Internet web site of the vendor, or the vendor of your computer to locate updated drivers.
     5. In some cases, you may be offered updated video drivers by running Windows Update.
     6. If you are not sure of which drivers to install, contact the vendor of your computer hardware for assistance in locating an updated display driver package.

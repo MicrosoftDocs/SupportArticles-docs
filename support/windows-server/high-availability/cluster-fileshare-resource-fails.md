@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Cannot bring a resource online
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Cluster fileshare resource fails on a failover cluster node and the cluster log contains "status 5. Tolerating..."
 
@@ -29,10 +29,10 @@ Consider the following scenario:
 
 In this scenario, you may notice that the highly available file server works fine on some of the cluster nodes but consistently fails on others. In examining the cluster log, you see something similar to the following entries with the first entry referring to "*status 5. Tolerating...*":
 
-> 00001b6c.000008c8::2013/01/23-04:00:13.797 WARN [RES] File Server <FileServer-(yoel-cluster)(Cluster Disk 6)>: Failed in NetShareGetInfo(yoel-cluster, share2), status 5. Tolerating...  
-00001b6c.000008c8::2013/01/23-04:00:13.797 ERR [RES] File Server <FileServer-(yoel-cluster)(Cluster Disk 6)>: Not a single share among 1 configured shares is online  
-00001b6c.000008c8::2013/01/23-04:00:13.797 ERR [RES] File Server <FileServer-(yoel-cluster)(Cluster Disk 6)>: File system check failed, number of shares verified: 1, last share status: 5.  
-00001b6c.000008c8::2013/01/23-04:00:13.797 ERR [RES] File Server <FileServer-(yoel-cluster)(Cluster Disk 6)>: Fileshares failed health check during online, status 5.
+> 00001b6c.000008c8::*\<DateTime>* WARN [RES] File Server <FileServer-(yoel-cluster)(Cluster Disk 6)>: Failed in NetShareGetInfo(yoel-cluster, share2), status 5. Tolerating...  
+00001b6c.000008c8::*\<DateTime>* ERR [RES] File Server <FileServer-(yoel-cluster)(Cluster Disk 6)>: Not a single share among 1 configured shares is online  
+00001b6c.000008c8::*\<DateTime>* ERR [RES] File Server <FileServer-(yoel-cluster)(Cluster Disk 6)>: File system check failed, number of shares verified: 1, last share status: 5.  
+00001b6c.000008c8::*\<DateTime>* ERR [RES] File Server <FileServer-(yoel-cluster)(Cluster Disk 6)>: Fileshares failed health check during online, status 5.
 
 ## Cause
 

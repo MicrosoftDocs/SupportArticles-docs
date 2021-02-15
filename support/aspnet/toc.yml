@@ -11,6 +11,8 @@
     href: cannot-debug-application.md
   - name: Can't write to event log
     href: fail-write-event-log.md
+  - name: Cache trimming occurs
+    href: cache-trimming-occurs.md
   - name: COM objects can't be printed
     href: asp-com-objects-fail-to-print.md
   - name: Code-behind model
@@ -35,6 +37,8 @@
     href: mvc-nuget-missing.md
   - name: Perform Fragment Caching by Using Visual C# .NET
     href: perform-fragment-caching.md
+  - name: Permissions of connect to a remote Access database
+    href: permissions-connect-a-remote-access-database.md
   - name: Register assemblies to use custom controls
     href: register-assembly-webform-custom-control.md
   - name: Request.ServerVariables() returns empty
@@ -55,6 +59,8 @@
     href: support-lifecycle-web-stack.md
   - name: Tilde notation maps to original urls
     href: tilde-notation-maps-original-url.md
+  - name: ThreadAbortException occurs if you use Response.End
+    href: threadabortexception-occurs-you-use-response-end.md
   - name: Unable to use session state server
     href: cannot-use-session-state-server.md
   - name: Upload a file to a web site
@@ -91,6 +97,8 @@
     href: performance-call-web-service.md
   - name: Troubleshoot OutOfMemoryException
     href: troubleshoot-outofmemoryexception.md
+  - name: Troubleshoot the View state is invalid error
+    href: troubleshooting-view-state-is-invalid-error.md
 
 - name: IISAdmin service and Inetinfo process operation
   items:
@@ -107,6 +115,8 @@
     href: system-security-securityexception.md
   - name: Can't use DataAdapter in web applications
     href: request-timed-out-dataadapter.md
+  - name: Debug mode in ASP.NET applications
+    href: debug-mode-applications.md
   - name: Error-logging capabilities of HTTP APIs
     href: error-logging-http-apis.md
   - name: Exceptions cause applications to quit
@@ -119,6 +129,8 @@
     href: high-memory-level.md
   - name: ThreadAbortException when you use Server.Transfer
     href: system-threading-threadabortexception.md
+  - name: Uninstallation of WoW64 Support component fails
+    href: uninstallation-wow64-support-component-fails.md
 
 
 - name: WWW administration and management
@@ -136,5 +148,7 @@
   items:
   - name: Control authorization permissions
     href: authorization-permissions.md
+  - name: Troubleshoot permission and security issues
+    href: troubleshoot-permissions-security-issues.md
   - name: Web applications can't write data to App_Data
     href: applicationpoolidentity-write-app-data.md

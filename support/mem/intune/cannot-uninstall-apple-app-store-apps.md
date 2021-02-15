@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4501069
 
 ## Symptoms
 
-An iOS device that's enrolled in Microsoft Intune contains some apps that are installed from the Apple App Store. In this scenario, these apps can't be uninstalled by using Intune.
+An iOS device that's enrolled in Microsoft Intune contains some apps that are installed from the Apple App Store. In this scenario, these apps can't be uninstalled by using Intune.
 
 ## Workaround
 

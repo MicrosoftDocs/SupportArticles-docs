@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, lynnroe, jwojan
 ms.prod-support-area-path: Event System
-ms.technology: ApplicationCompatibility
+ms.technology: windows-server-application-compatibility
 ---
 # How to delete corrupt Event Viewer Log files
 

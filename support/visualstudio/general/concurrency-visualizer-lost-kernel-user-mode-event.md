@@ -2,7 +2,7 @@
 title: Concurrency Visualizer reports lost kernel
 description: This article describes how to adjust ETW buffer to prevent lost kernel and user mode events reported by Visual Studio 2010 Concurrency Visualizer.
 ms.date: 04/27/2020
-ms.prod-support-area-path: Debuggers and analyzers
+ms.prod-support-area-path: Debuggers and analyzers
 ms.reviewer: dangrif
 ---
 # Visual Studio 2010 Concurrency Visualizer prevents lost kernel and user mode events by ETW buffer
@@ -14,11 +14,11 @@ _Original KB number:_ &nbsp; 2019117
 
 ## Symptoms
 
-Microsoft Visual Studio 2010 Concurrency Visualizer may report lost kernel and/or user mode events. One can prevent lost kernel and/or user mode events by adjusting ETW buffer settings in the Windows registry.
+Microsoft Visual Studio 2010 Concurrency Visualizer may report lost kernel and/or user mode events. One can prevent lost kernel and/or user mode events by adjusting ETW buffer settings in the Windows registry.
 
 ## Cause
 
-The Concurrency Visualizer in Visual Studio 2010's profiler (Premium and Ultimate editions) consumes events collected via ETW, which uses buffers to cache data before writing to disk. If this tool reports lost kernel and/or user mode events, the default settings for some buffers may be too low for your system or application.
+The Concurrency Visualizer in Visual Studio 2010's profiler (Premium and Ultimate editions) consumes events collected via ETW, which uses buffers to cache data before writing to disk. If this tool reports lost kernel and/or user mode events, the default settings for some buffers may be too low for your system or application.
 
 Lost kernel mode events are a critical failure reported in the Output and Report windows. Processing ends with no report.
 

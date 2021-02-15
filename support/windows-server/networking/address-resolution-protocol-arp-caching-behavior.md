@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, muratka
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: networking
 ---
 # Description of Address Resolution Protocol (ARP) caching behavior in TCP/IP implementations
 
@@ -45,8 +45,7 @@ Therefore, the "Reachable Time" value is somewhere between 15 seconds (30 × 0.5
 
 To see the current "Reachable Time" value, follow these steps:
 
-1. Click **Start**, type  
- cmd in the **Start Search** box, and then click **cmd** in the **Programs** list.
+1. Click **Start**, type *cmd* in the **Start Search** box, and then click **cmd** in the **Programs** list.
 
 2. If you are prompted for an administrator password or for confirmation, type your password, or click **Continue**.
 3. At the command prompt, type the following command:  

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, darank
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Recommended hotfixes and updates for Remote Desktop Services in Windows Server 2012 R2
 
@@ -80,7 +80,7 @@ Before you install the hotfix for any Remote Desktop Services role, you must hav
 
 |Date the update was added|Related Knowledge Base article|Title|Component|Why we recommend this update|
 |---|---|---|---|---|
-|March 2016| [3108326](https://support.microsoft.com/help/3108326)|Licensing servers become deadlocked under high load in Windows Server 2012 R2|lserver.dll|Latest version of Lserver.dll that resolves an issue in which multiple RD Licensing servers crash or restart on high load. Any RDSH that is configured in Per-Device mode would refuse all connections requests while their LS is in this state. Also includes [3092695](https://support.microsoft.com/help/3092695) and [3084952](https://support.microsoft.com/help/3084952) |
+|March 2016| [3108326](https://support.microsoft.com/help/3108326)|Licensing servers become deadlocked under high load in Windows Server 2012 R2|lserver.dll|Latest version of Lserver.dll that resolves an issue in which multiple RD Licensing servers crash or restart on high load. Any RDSH that is configured in Per-Device mode would refuse all connections requests while their LS is in this state. Also includes [3092695](https://support.microsoft.com/help/3092695) and [3084952](https://support.microsoft.com/help/3084952). |
 |January 2015| [3013108](https://support.microsoft.com/help/3013108)|RDS License Manager shows no issued free or temporary client access licenses in Windows Server 2012 R2|licmgr.exe|Latest version of Licmgr.exe that fixes an issue in which the RDS License Manager shows no issued free or temporary client access licenses in Windows Server 2012 R2.|
 ||||||
 

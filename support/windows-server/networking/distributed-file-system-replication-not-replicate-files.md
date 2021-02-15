@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DFSR
-ms.technology: Networking
+ms.technology: networking
 ---
 # DFSR no longer replicates files after restoring a virtualized server's snapshot
 
@@ -34,7 +34,7 @@ You notice the following behaviors on the restored server:
 
     > Log Name:      DFS Replication  
     Source:        DFSR  
-    Date:          3/2/2011 10:19:07 AM  
+    Date:          *\<DateTime>*  
     Event ID: **2212**  
     Task Category: None  
     Level:         Warning  
@@ -46,10 +46,10 @@ You notice the following behaviors on the restored server:
     >
     > Additional Information:  
     Volume: C:  
-    GUID: 92404560-E6C8-11DF-BCA2-806E6F6E6963  
+    GUID: *\<GUID>*  
     Log Name:      DFS Replication  
     Source:        DFSR  
-    Date:          3/2/2011 10:19:07 AM  
+    Date:          *\<DateTime>*  
     Event ID: **2104**  
     Task Category: None  
     Level:         Error  
@@ -65,7 +65,7 @@ You notice the following behaviors on the restored server:
     Database: C:\System Volume Information\DFSR  
     Log Name:      DFS Replication  
     Source:        DFSR  
-    Date:          3/2/2011 10:19:07 AM  
+    Date:          *\<DateTime>*  
     Event ID: **2004**  
     Task Category: None  
     Level:         Error  
@@ -80,7 +80,7 @@ You notice the following behaviors on the restored server:
     Volume: 92404560-E6C8-11DF-BCA2-806E6F6E6963  
     Log Name:      DFS Replication  
     Source:        DFSR  
-    Date:          3/2/2011 10:51:08 AM  
+    Date:          *\<DateTime>*  
     Event ID: **2106**  
     Task Category: None  
     Level:         Information  

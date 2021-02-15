@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User, computer, group, and object management
-ms.technology: ActiveDirectory
+ms.technology: windows-client-active-directory
 ---
 # The LsaLookupSids function may return the old user name instead of the new user name if the user name has changed
 
@@ -24,10 +24,10 @@ _Original KB number:_ &nbsp;946358
 
 Consider the following scenario:  
 
-- On the domain member computer, an application calls the LsaLookupSids function to translate a security identifier (SID) to a user name.
+- On the domain member computer, an application calls the **LsaLookupSids** function to translate a security identifier (SID) to a user name.
 - The user name has been changed on a domain controller.
 
-In this scenario, the LsaLookupSids function may return the old user name instead of the new user name. This behavior may prevent the application from working correctly.
+In this scenario, the **LsaLookupSids** function may return the old user name instead of the new user name. This behavior may prevent the application from working correctly.
 
 ## Cause
 
@@ -72,6 +72,6 @@ TechNet has an article that covers Sid-Name resolution approaches, including a d
 
 [How SIDs and Account Names Can Be Mapped in Windows](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff428139(v=ws.10))  
 
-For more information about the LsaLookupSids function, visit the following Microsoft Web site:
+For more information about the **LsaLookupSids** function, visit the following Microsoft Web site:
 
 [LsaLookupSids function](/windows/win32/api/ntsecapi/nf-ntsecapi-lsalookupsids)

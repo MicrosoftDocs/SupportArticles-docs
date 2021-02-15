@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, paulhut, nedpyle
 ms.prod-support-area-path: User Logon fails
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-server-user-profiles
 ---
 # Domain Controller doesn't allow interactive logon, shows an error: The security database on the server does not have a computer account for this workstation trust relationship
 
@@ -30,13 +30,13 @@ If you restart the computer in Directory Services Restore Mode (DSRM) and examin
 
 > Log Name:      System  
 Source:        NETLOGON  
-Date:          1/27/2010 1:34:29 PM  
+Date:          *\<DateTime>*  
 Event ID:      5721  
 Task Category: None  
 Level:         Error  
 Keywords:      Classic  
 User:          N/A  
-Computer:      `2008R2SPN-02.northwindtraders.com`  
+Computer:      *\<ComputerName>*  
 Description:  
 The session setup to the Windows NT or Windows 2000 Domain Controller `\\2008r2spn-01.northwindtraders.com` for the domain NWTRADERS failed because the Domain Controller did not have an account 2008R2SPN-02$ needed to set up the session by this computer 2008R2SPN-02.  
 ADDITIONAL DATA  
@@ -46,13 +46,13 @@ And
 
 > Log Name:      System  
 Source:        Microsoft-Windows-Security-Kerberos  
-Date:          1/27/2010 1:35:19 PM  
+Date:          *\<DateTime>*  
 Event ID:      3  
 Task Category: None  
 Level:         Error  
 Keywords:      Classic  
 User:          N/A  
-Computer:      `2008R2SPN-02.northwindtraders.com`  
+Computer:      *\<ComputerName>*  
 Description:  
 A Kerberos Error Message was received:  
 on logon session  
@@ -74,13 +74,13 @@ At every attempted logon, the **Security** event log will show:
 
 > Log Name:      Security  
 Source:        Microsoft-Windows-Security-Auditing  
-Date:          1/27/2010 2:51:13 PM  
+Date:          *\<DateTime>*  
 Event ID:      4625  
 Task Category: Logon  
 Level:         Information  
 Keywords:      Audit Failure  
 User:          N/A  
-Computer:      `2008spn-02.adatum.com`
+Computer:      *\<ComputerName>*  
 Description:  
 An account failed to log on.  
 >
@@ -138,13 +138,13 @@ You may also see a KDC 11 error for a duplicate SPN in the **System** event log:
 
 > Log Name:      System  
 Source:        Microsoft-Windows-Kerberos-Key-Distribution-Center  
-Date:          1/27/2010 2:45:03 PM  
+Date:          *\<DateTime>*  
 Event ID:      11  
 Task Category: None  
 Level:         Error  
 Keywords:      Classic  
 User:          N/A  
-Computer:      `2008spn-02.adatum.com`
+Computer:      *\<ComputerName>*  
 Description:  
 The KDC encountered duplicate names while processing a Kerberos authentication request. The duplicate name is host/2008spn-02.adatum.com (of type DS_SERVICE_PRINCIPAL_NAME). This may result in authentication failures or downgrades to NTLM. In order to prevent this from occurring remove the duplicate entries for host/2008spn-02.adatum.com in Active Directory.
 

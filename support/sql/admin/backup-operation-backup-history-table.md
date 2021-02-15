@@ -19,7 +19,7 @@ When you use a Volume Shadow Copy Service (VSS) application to backup files on a
 
 ## Cause
 
-This behavior occurs because VSS application calls the SQLWriter service on the system during backup operation.  For more information on how VSS applications interact with SQL Writer, review SQL Server Back up Applications - Volume Shadow Copy Service (VSS) and SQL Writer.
+This behavior occurs because VSS application calls the SQLWriter service on the system during backup operation. For more information on how VSS applications interact with SQL Writer, review SQL Server Back up Applications - Volume Shadow Copy Service (VSS) and SQL Writer.
 
 ## Precautions to take if you use the entries in the backupset history table for data recovery
 

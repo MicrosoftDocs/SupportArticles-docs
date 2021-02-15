@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4046801
 
 Consider the following scenario:
 
-- You have configured an instance of Microsoft SQL Server 2016 or 2017 as a publisher and distributor.
+- You have configured an instance of Microsoft SQL Server 2016 or 2017 as a publisher and distributor.
 
 - You have configured either a push or pull subscription to a remote subscriber that's not configured as a publisher or distributor.
 

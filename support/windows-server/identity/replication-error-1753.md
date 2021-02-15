@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory  
+ms.technology: windows-server-active-directory  
 ---
 # Active Directory Replication Error 1753: There are no more endpoints available from the endpoint mapper
 
@@ -320,8 +320,6 @@ Such invalid host-to IP mappings could be caused by stale entries in host / lmho
 Summary: Example 1 failed because an invalid host to IP mapping (in the HOST file in this case) caused the destination DC to resolve to a "source" DC that didn't have the AD service running (or even installed for that matter) so the replication SPN wasn't yet registered and the source DC returned error 1753. In the second case, an invalid host to IP mapping (again in the HOST file) caused the destination DC to connect to a DC that had registered the E351... replication SPN but that source had a different hostname and security identity than the intended source DC so the attempts failed with error -2146893022: The target principal name is incorrect.
 
 ### Related Content
-
-MSKB [839880](https://support.microsoft.com/kb/839880): Troubleshooting RPC Endpoint Mapper errors using the Windows Server 2003 Support Tools from the product CD
 
 MSKB [832017](https://support.microsoft.com/kb/832017/): Service overview and network port requirements for the Windows Server system
 

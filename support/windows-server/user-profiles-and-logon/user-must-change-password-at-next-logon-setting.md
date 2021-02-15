@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User profiles
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-server-user-profiles
 ---
-# User May Not Be Able to Change Their Password If You Configure the 'User Must Change Password at Next Logon' Setting
+# User may not be able to change their password if you configure the 'User must change password at next logon' setting
 
-This article provides some information about the issue that user may not be able to change their password, if you configure the 'User Must Change Password at Next Logon' setting.
+This article provides some information about the issue that user may not be able to change their password, if you configure the 'User must change password at next logon' setting.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 320325

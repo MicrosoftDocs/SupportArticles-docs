@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ctimon, v-vincli
 ms.prod-support-area-path: Cannot bring a resource online
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # How to recover a deleted computer object that supports a Network Name resource in a failover cluster
 
@@ -27,6 +27,7 @@ By default, the new security model in Windows Server 2008 or Windows Server 2008
 By default, the Computer Account is created in the Computers container. However, the Computer Account can be relocated to another organizational unit (OU). The Computer Account can also be pre-staged in an OU before the CAP is created. If these Computer Accounts are deleted from Active Directory, availability of the Network Name resource will be reduced.
 
 The computer accounts that are created in Active Directory represent the Network Name resources in a failover cluster. These accounts have the following distinct types:
+
 - The computer account that represents the name of the cluster is called the Cluster Name Object (CNO). This account is the primary security context for a cluster.
 - Other computer accounts that belong to Network Name resources in the same cluster are called Virtual Computer Objects (VCOs). These accounts are created by the CNO. If either of these accounts is deleted from Active Directory, the next time that the Network Name tries to go online, the Network Name fails, and the following error message is logged in the System log: Event ID: 1207
 
@@ -64,6 +65,7 @@ However, problems will occur even before the Network Name resource is cycled off
 To recover from the deletion of a Computer Object that is associated with a cluster Network Name resource is different for a CNO than recovering from the deletion of a Computer Object for a VCO.
 
 To recover a deleted computer object that corresponds to the CNO, follow these steps:
+
 1. Coordinate with a domain administrator to first recover the deleted Computer Object from the Deleted Objects container in Active Directory.
 
 2. Verify that the Computer Object has been restored to the correct location, and then enable the account.
@@ -76,6 +78,7 @@ To recover a deleted computer object that corresponds to the CNO, follow these s
 > The user who follows these steps in the Failover Cluster Management MMC snap-in must also have the "Reset Passwords" permission in the domain.
 
 To recover a deleted computer object that corresponds to a VCO, follow these steps:
+
 1. Coordinate with a domain administrator to first recover the deleted computer object from the Deleted Objects container in Active Directory.
 2. Verify that the computer object has been restored to the correct location, and then enable the account.
 3. View the security settings for the computer object, and then verify that the CNO still has permissions to the object.
@@ -84,12 +87,10 @@ To recover a deleted computer object that corresponds to a VCO, follow these ste
 
 ## References
 
-[947049](https://support.microsoft.com/help/947049) Description of the failover cluster security model in Windows Server 2008  
-
 For more information, visit the following Microsoft Web sites:
 
- [Recovering a Deleted Cluster Name Object (CNO) in a Windows Server 2008 Failover Cluster](/archive/blogs/askcore/recovering-a-deleted-cluster-name-object-cno-in-a-windows-server-2008-failover-cluster)
+[Recovering a Deleted Cluster Name Object (CNO) in a Windows Server 2008 Failover Cluster](/archive/blogs/askcore/recovering-a-deleted-cluster-name-object-cno-in-a-windows-server-2008-failover-cluster)
 
- [Event ID 1207 - Active Directory permissions for cluster accounts](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc773451(v=ws.10)?redirectedfrom=MSDN)
+[Event ID 1207 - Active Directory permissions for cluster accounts](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc773451(v=ws.10)?redirectedfrom=MSDN)
 
- [Active Directory backup and restore](https://technet.microsoft.com/library/bb727048.aspx)
+[Active Directory backup and restore](https://technet.microsoft.com/library/bb727048.aspx)

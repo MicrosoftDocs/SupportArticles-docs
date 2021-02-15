@@ -11,13 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Performance monitoring tools
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
-# How to enable verbose startup, shutdown, logon, and logoff status messages in the Windows Server 2003 family  
+# How to enable verbose startup, shutdown, logon, and logoff status messages in the Windows Server 2003 family
 
 This article describes how to configure Windows so that you receive verbose startup, shutdown, logon, and logoff status messages. Verbose status messages may be helpful when you're troubleshooting slow startup, shutdown, logon, or logoff behavior.
-
-For a Microsoft Windows 2000 version of this article, see [316243](https://support.microsoft.com/help/316243).  
 
 _Original product version:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 325376
@@ -85,4 +83,4 @@ To use enable verbose status messages by editing the registry, follow these step
 
 ## More information
 
-If verbose logging isn't enabled, you'll still receive normal status messages such as "Applying your personal settings..." or "Applying computer settings..." when you start up, shut down, log on, or log off from the computer. However, if verbose logging is enabled, you'll receive additional information, such as "RPCSS is starting" or "Waiting for machine group policies to finish...."
+If verbose logging isn't enabled, you'll still receive normal status messages such as "Applying your personal settings..." or "Applying computer settings..." when you start up, shut down, log on, or log off from the computer. However, if verbose logging is enabled, you'll receive additional information, such as "RPCSS is starting" or "Waiting for machine group policies to finish....".

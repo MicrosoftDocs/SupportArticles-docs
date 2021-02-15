@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Configuration of virtual machine settings
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Hyper-V virtual machines cannot reach the network when the vLan tagging is enabled on a Windows Server 2008-based computer
 
@@ -38,15 +38,15 @@ The Hyper-V Virtual Switch driver is responsible for routing vLan traffic for th
 
 To resolve this problem, follow these steps:
 
-1. Click Start, type regedit in the Start Search box, and then press ENTER.
+1. Click **Start**, type *regedit* in the Start Search box, and then press ENTER.
 2. Locate the following registry subkey:
 
-    **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4D36E972-E325 -11CE-BFC1-08002BE10318}**  
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4D36E972-E325 -11CE-BFC1-08002BE10318}`  
     Under this subkey, there is a sequence of subkeys. For example, you will see "0000, 0001."
 3. Select the subkey that matches the Intel network adapter to which the virtual networks are bound. You can determine this by matching the "Driver Desc" value to the name of the physical network adapter.
-4. Double-click the VlanFiltering registry entry.
-5. In the Value data box, type 0, and then click OK.
-6. On the File menu, click Exit.
+4. Double-click the **VlanFiltering** registry entry.
+5. In the Value data box, type *0*, and then click **OK**.
+6. On the **File** menu, click **Exit**.
 7. Restart the computer.
 
 > [!NOTE]

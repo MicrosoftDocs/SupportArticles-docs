@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jeffbo, travisa
 ms.prod-support-area-path: Kerberos authentication
-ms.technology: WindowsSecurity
+ms.technology: windows-client-security
 ---
 # "File system error" when pasting password into credential dialog box in Windows 10
 
@@ -71,6 +71,6 @@ To work around this issue, display the UAC elevation prompt on the standard user
 
 Changing the desktop when UAC is displayed might raise security concerns. However, the copy/paste mechanism of moving the password from password vault software to a UAC prompt invalidates the security protection that is provided by the Winlogon desktop.
 
-The reason why UAC prompts are displayed by default on the Winlogon desktop is so that no nonsecure process (for example, one that is not already running as SYSTEM) can spy on passwords or other information that is input into the UAC dialog box. However, as soon as the password is copied and on the clipboard on the standard user desktop, any process that is running in that desktop can read that data in plain text. In effect, the potential security breach has already occurred with no need for any process to try to read the password information from a UAC dialog box.
+The reason why UAC prompts are displayed by default on the Winlogon desktop is that no nonsecure process (for example, one that is not already running as SYSTEM) can spy on passwords or other information that is input into the UAC dialog box. However, as soon as the password is copied and on the clipboard on the standard user desktop, any process that is running in that desktop can read that data in plain text. In effect, the potential security breach has already occurred with no need for any process to try to read the password information from a UAC dialog box.
 
 Microsoft has verified that the security fix that is implemented in Windows 10 to enforce the correct security boundary from the standard desktop to the Winlogon desktop is the desired behavior, and this will likely remain the behavior in future versions of Windows.

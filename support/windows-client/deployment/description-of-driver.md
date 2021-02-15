@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, joeswart
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # A description of the driver
 
@@ -45,9 +45,6 @@ Obtain a WHQL-certified driver from the device manufacturer's Web site. For info
 > It is the responsibility of the specific hardware or software vendor to make sure that programs and device drivers are compatible with x64-based versions of Windows.
 
 If you experience problems when you try to install a 64-bit driver that is not included with 64-bit versions of Windows, make sure that the driver's .inf file is correctly decorated.
- For more information about the device driver .inf file decoration requirements, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[888728](https://support.microsoft.com/help/888728) A description of the device driver .inf file decoration requirements for Windows Server 2003 x64 Editions and Windows XP Professional x64 Edition  
 
 ### Technical support for Windows x64 editions
 

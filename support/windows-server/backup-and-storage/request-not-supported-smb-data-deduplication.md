@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Deduplication
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # SMB Read Andx requests for files managed by Data Deduplication error in Windows Server 2012: The request is not supported
 
@@ -77,12 +77,12 @@ Error messages may vary depending on type of access and application accessing fi
 
 Network **trace** shows STATUS_NOT_SUPPORTED for SMB1 Read Andx requests:
 
-1819 2013-02-07 08:20:42 XPclient 2012Srv SMB NT Create AndX Request, FID: 0xc003, Path: \Test-Dedup-file.pdf  
-1820 2013-02-07 08:20:42 2012Srv XPclient SMB NT Create AndX Response, FID: 0xc003  
+1819 *\<DateTime>* XPclient 2012Srv SMB NT Create AndX Request, FID: 0xc003, Path: \Test-Dedup-file.pdf  
+1820 *\<DateTime>* 2012Srv XPclient SMB NT Create AndX Response, FID: 0xc003  
 AllocationSize: 0  
 EndOfFile: 51362  
-1829 2013-02-07 08:20:42 XPclient 2012Srv SMB Read AndX Request, FID: 0xc003, 32768 bytes at offset 0  
-1830 2013-02-07 08:20:42 2012Srv XPclient SMB Read AndX Response, FID: 0xc003, 0 bytes, Error: STATUS_NOT_SUPPORTED  
+1829 *\<DateTime>* XPclient 2012Srv SMB Read AndX Request, FID: 0xc003, 32768 bytes at offset 0  
+1830 *\<DateTime>* 2012Srv XPclient SMB Read AndX Response, FID: 0xc003, 0 bytes, Error: STATUS_NOT_SUPPORTED  
 NTStatus: 0xC00000BB, Facility = FACILITY_SYSTEM, Severity = STATUS_SEVERITY_ERROR, Code = (187) STATUS_NOT_SUPPORTED  
 
 Error code 0xc00000bb = STATUS_NOT_SUPPORTED  

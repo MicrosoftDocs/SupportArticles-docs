@@ -22,11 +22,11 @@ File system error: The background thread running lazy writer encountered an I/O 
 
 ## More information
 
-This problem may occur if the available disk space is exhausted. This problem can cause an emergency shutdown of the service. The shutdown resembles a crash, although it is internally initiated.
+This problem may occur if the available disk space is exhausted. This problem can cause an emergency shutdown of the service. The shutdown resembles a crash, although it is internally initiated.
 
-During the rollback operation, some I/O is required to wrap up the transaction. Disk exhaustion can cause I/O failure. This makes it impossible to roll back the transaction deterministically to a consistent state. The server should not continue serving any data while it is in an inconsistent state. In this situation, the only way to recover is to shut down the server and then force it to restart.
+During the rollback operation, some I/O is required to wrap up the transaction. Disk exhaustion can cause I/O failure. This makes it impossible to roll back the transaction deterministically to a consistent state. The server should not continue serving any data while it is in an inconsistent state. In this situation, the only way to recover is to shut down the server and then force it to restart.
 
-When the server restarts, a cleanup operation occurs before any data is made available for querying. This operation can safely enumerate through all the files in the data directory. The cleanup removes any files that are not confirmed as valid and part of the expected data.
+When the server restarts, a cleanup operation occurs before any data is made available for querying. This operation can safely enumerate through all the files in the data directory. The cleanup removes any files that are not confirmed as valid and part of the expected data.
 
 ## Applies to
 

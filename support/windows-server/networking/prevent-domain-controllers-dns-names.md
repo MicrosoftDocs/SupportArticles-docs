@@ -1,6 +1,6 @@
 ---
-title: Prevent Domain Controllers from DNS Names
-description: Describes how to prevent Domain Controllers from Dynamically Registering DNS Names.
+title: Prevent domain controllers from dynamically registering DNS names
+description: Describes how to prevent domain controllers from dynamically registering DNS names.
 ms.date: 09/14/2020
 author: Deland-Han 
 ms.author: delhan
@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DNS
-ms.technology: Networking
+ms.technology: networking
 ---
-# How to prevent Domain Controllers from Dynamically Registering DNS Names
+# How to prevent domain controllers from dynamically registering DNS names
 
-This article describes how to prevent Domain Controllers from Dynamically Registering DNS Names.
+This article describes how to prevent domain controllers from dynamically registering DNS names.
 
 > [!IMPORTANT]
 > This article contains information about modifying the registry. Before you modify the registry, make sure to back it up and make sure that you understand how to restore the registry if a problem occurs. For information about how to back up, restore, and edit the registry, see [Windows registry information for advanced users](https://support.microsoft.com/help/256986)
@@ -36,4 +36,4 @@ The Netlogon service registers these records when a domain controller is restart
 
 `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\UseDynamicDns`
 
-The default value data for the UseDynamicDns REG_DWORD value is 0x1. Changing the UseDynamicDns REG_DWORD value to 0x0 disables dynamic registration and the records specified in `%windir%\system32\config\netlogon.dns` folder must be manually registered.
+The default value data for the UseDynamicDns REG_DWORD value is 0x1. Changing the UseDynamicDns REG_DWORD value to 0x0 disables dynamic registration and the records specified in %windir%\\system32\\config\\netlogon.dns folder must be manually registered.

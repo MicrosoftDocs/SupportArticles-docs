@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Help and Support
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # Event Tracing for Windows Simplified
 
@@ -26,7 +26,7 @@ ETW was first introduced in Windows 2000. It serves the purpose of providing com
 
 *A tracing mechanism for events raised by both user-mode applications and kernel-mode device drivers. Additionally, ETW gives you the ability to enable and disable logging dynamically, making it easy to perform detailed tracing in production environments without requiring reboots or application restarts. This allows large-scale server applications to write events with minimum disturbance*.
 
-As a quick overview: an *event provider*  writes events to an ETW session (it can be any user-mode application, managed application, driver etc.). When events are written, ETW adds more information about the time it took place, process, and thread ID that generated it, processor number, and CPU usage data of the logging thread. This info is used by the *event consumers;*  application that reads log files or listen to a session for real-time events and processes them.
+As a quick overview: an *event provider*  writes events to an ETW session (it can be any user-mode application, managed application, driver etc.). When events are written, ETW adds more information about the time it took place, process, and thread ID that generated it, processor number, and CPU usage data of the logging thread. This info is used by the *event consumers;*  application that reads log files or listens to a session for real-time events and processes them.
 
 A sample output from the *logman query providers* command:
 
@@ -56,7 +56,7 @@ Various utilities are available at the Microsoft Download Center in order to par
 
 ## More information
 
-The script below will generate an ETL trace; in this example data for the Provider - Microsoft-Windows-TerminalServices-RemoteConnectionManager.
+The script below will generate an ETL trace; in this example, data for the Provider - Microsoft-Windows-TerminalServices-RemoteConnectionManager.
 
 ```console
 @echo off

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Secure Boot and UEFI
-ms.technology: WindowsSecurity
+ms.technology: windows-client-security
 ---
 # Clear TPM fails with error code: 0x80290300
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;2561178
 
 ## Symptoms
 
-On certain laptops or notebooks, when you attempt to clear TPM information you may receive following error:
+On certain laptops or notebooks, when you attempt to clear TPM information you may receive the following error:
 
 > 0x80290300: A general error was detected when attempting to acquire the BIOS's response to a Physical Presence command.
 

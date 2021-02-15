@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, briansi
 ms.prod-support-area-path: Remote Desktop Services (Terminal Services) licensing
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Event ID 4105: The Terminal Services license server cannot update the license attributes for user \<UserName> in Active Directory Domain \<DomainName>
 
@@ -55,7 +55,7 @@ Scenario 2: The Terminal Server License Servers group is present but does not ha
 The Windows Server 2003 License server will only update the teminalServer attribute. Newer Terminal Server License Servers will try to update additional attributes when available. To accommodate that, the Windows Server 2008 schema update defines a property set used to grant permissions to all attributes required.
 
 > [!IMPORTANT]
-> Based on the User Interface language the account names and Property Set names might differ.
+> Based on the User Interface language, the account names and Property Set names might differ.
 
 ### Method 1: Use dsacls.exe
 

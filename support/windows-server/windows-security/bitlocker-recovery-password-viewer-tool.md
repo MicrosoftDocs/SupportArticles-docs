@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Bitlocker
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # How to use the BitLocker Recovery Password Viewer for Active Directory Users and Computers tool to view recovery passwords for Windows Vista
 
@@ -35,10 +35,6 @@ If you want to obtain the BitLocker Recovery Password Viewer tool for Windows XP
 
 You can use this tool to help locate BitLocker Drive Encryption recovery passwords for Windows Vista-based computers in Active Directory Domain Services (AD DS). The Active Directory Users and Computers Microsoft Management Console (MMC) snap-in must be installed via the Remote Server Administrator Tools (RSAT).
 
-For more information about RSAT tools, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[941314](https://support.microsoft.com/help/941314) Microsoft Remote Server Administration Tools for Windows Vista  
-
 > [!NOTE]
 > To use this tool to retrieve BitLocker Drive Encryption passwords, you must use an account that has sufficient rights. You must be a domain administrator, or you must be granted sufficient rights by a domain administrator.
 
@@ -52,13 +48,7 @@ Before you can use the BitLocker Recovery Password Viewer tool to view BitLocker
 - Windows Vista-based computers must be joined to the domain.
 - BitLocker Drive Encryption must have been enabled on the Windows Vista-based computers.
 
-## How to obtain the BitLocker Recovery Password Viewer tool
-
-### How to obtain the BitLocker Recovery Password Viewer tool for Windows Vista Enterprise, for Windows Vista Enterprise Service Pack 1, and for Windows Server 2008
-
-[Windows Vista and Windows Server 2008 for x86-based systems](https://www.microsoft.com/download/details.aspx?id=24626)  
-
-### How to obtain the BitLocker Recovery Password Viewer tool for Windows XP
+## How to obtain the BitLocker Recovery Password Viewer tool for Windows XP
 
 To obtain the BitLocker Recovery Password Viewer tool for Windows XP/Windows Server 2003, contact a Microsoft Support Professional.
 
@@ -216,7 +206,9 @@ Q5: How long does it take to search for a recovery password across all domains?
 A5: Generally, it takes no more than several seconds to search for a password ID across all the domains of a forest. However, you may experience decreased performance if the following conditions are true:
 
 - A global catalog server locates a recovery password in a domain.
-- The global catalog server can't connect to that particular domain. Q6: How do I troubleshoot problems that I may experience when I use the BitLocker Recovery Password Viewer tool?
+- The global catalog server can't connect to that particular domain.
+
+Q6: How do I troubleshoot problems that I may experience when I use the BitLocker Recovery Password Viewer tool?
 
 A6: Use the following information to help troubleshoot issues that you experience when you use the BitLocker Recovery Password Viewer tool:
 

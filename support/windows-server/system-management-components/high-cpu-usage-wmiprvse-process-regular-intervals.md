@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-sanair 
 ms.prod-support-area-path: WMI 
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # High CPU usage by WMIPRVSE.EXE process at regular intervals in Windows
 

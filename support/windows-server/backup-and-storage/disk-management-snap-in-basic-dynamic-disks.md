@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Partition and volume management
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # How to use the Disk Management Snap-in to manage Basic and Dynamic Disks  
 
@@ -102,7 +102,7 @@ To change a basic disk to a dynamic disk:
  **Convert to Dynamic Disk**.
 
    > [!NOTE]
-   > To right-click the basic disk, you must right-click the gray area that contains the disk title at the left of the Disk Management details pane (for example, Disk 0 ).
+   > To right-click the basic disk, you must right-click the gray area that contains the disk title at the left of the Disk Management details pane (for example, Disk 0).
 2. Click to select the check box next to the disk that you want to change, and then click OK.
 3. If you want to view the list of volumes in the disk, click Details in the **Disks to Convert** dialog box.
 4. Click Convert.

@@ -1,5 +1,5 @@
 ---
-title: Use Group Policy to remotely install softwares
+title: Use Group Policy to remotely install software
 description: Describes how to use Group Policy to remotely install software.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -11,9 +11,9 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Deploying software through Group Policy
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
-# Use Group Policy to remotely install softwares
+# Use Group Policy to remotely install software
 
 This article describes how to use Group Policy to automatically distribute programs to client computers or users.
 
@@ -26,7 +26,7 @@ You can use Group Policy to distribute computer programs by using the following 
 
 - Assigning software
 
-    You can assign a program distribution to users or computers. If you assign the program to a user, it is installed when the user logs on to the computer. When the user first runs the program, the installation is completed. If you assign the program to a computer, it is installed when the computer starts, and it is available to all users who log on to the computer. When a user first runs the program, the installation is completed.
+    You can assign a program distribution to users or computers. If you assign the program to a user, it's installed when the user logs on to the computer. When the user first runs the program, the installation is completed. If you assign the program to a computer, it's installed when the computer starts, and it's available to all users who log on to the computer. When a user first runs the program, the installation is completed.
 
 - Publishing software
 
@@ -37,10 +37,10 @@ You can use Group Policy to distribute computer programs by using the following 
 
 ## Create a distribution point
 
-To publish or assign a computer program, you must create a distribution point on the publishing server. To do this, follow these steps:
+To publish or assign a computer program, create a distribution point on the publishing server by following these steps:
 
 1. Log on to the server as an administrator.
-2. Create a shared network folder where you will put the Windows Installer package (.msi file) that you want to distribute.
+2. Create a shared network folder where you'll put the Windows Installer package (.msi file) that you want to distribute.
 3. Set permissions on the share to allow access to the distribution package.
 4. Copy or install the package to the distribution point. For example, to distribute a .msi file, run the administrative installation (`setup.exe /a`) to copy the files to the distribution point.
 
@@ -48,20 +48,20 @@ To publish or assign a computer program, you must create a distribution point on
 
 To create a Group Policy Object (GPO) to use to distribute the software package, follow these steps:
 
-1. Start the Active Directory Users and Computers snap-in. To do this, click **Start**, point to **Administrative Tools**, and then click **Active Directory Users and Computers**.
+1. Start the Active Directory Users and Computers snap-in by clicking **Start**, pointing to **Administrative Tools**, and then clicking **Active Directory Users and Computers**.
 2. In the console tree, right-click your domain, and then click **Properties**.
 3. Click the **Group Policy** tab, and then click **New**.
 4. Type a name for this new policy, and then press Enter.
 5. Click **Properties**, and then click the **Security** tab.
 6. Clear the **Apply Group Policy**  check box for the security groups that you don't want this policy to apply to.
 7. Select the **Apply Group Policy** check box for the groups that you want this policy to apply to.
-8. When you are finished, click **OK**.
+8. When you're finished, click **OK**.
 
 ## Assign a package
 
 To assign a program to computers that are running Windows Server 2003, Windows 2000, or Windows XP Professional, or to users who are logging on to one of these workstations, follow these steps:
 
-1. Start the Active Directory Users and Computers snap-in. To do this, click **Start**, point to **Administrative Tools**, and then click **Active Directory Users and Computers**.
+1. Start the Active Directory Users and Computers snap-in by clicking **Start**, pointing to **Administrative Tools**, and then clicking **Active Directory Users and Computers**.
 2. In the console tree, right-click your domain, and then click **Properties**.
 3. Click the **Group Policy** tab, select the policy that you want, and then click **Edit**.
 4. Under **Computer Configuration**, expand **Software Settings**.
@@ -80,7 +80,7 @@ To assign a program to computers that are running Windows Server 2003, Windows 2
 
 To publish a package to computer users and make it available for installation from the **Add or Remove Programs** list in Control Panel, follow these steps:
 
-1. Start the Active Directory Users and Computers snap-in. To do this, click **Start**, point to **Administrative Tools**, and then click **Active Directory Users and Computers**.
+1. Start the Active Directory Users and Computers snap-in by clicking **Start**, pointing to **Administrative Tools**, and then clicking **Active Directory Users and Computers**.
 2. In the console tree, right-click your domain, and then click **Properties**.
 3. Click the **Group Policy** tab, click the policy that you want, and then click **Edit**.
 4. Under **User Configuration**, expand **Software Settings**.
@@ -109,7 +109,7 @@ To publish a package to computer users and make it available for installation fr
 
 In some cases, you may want to redeploy a software package (for example, if you upgrade or change the package). To redeploy a package, follow these steps:
 
-1. Start the Active Directory Users and Computers snap-in. To do this, click **Start**, point to **Administrative Tools**, and then click **Active Directory Users and Computers**.
+1. Start the Active Directory Users and Computers snap-in by clicking **Start**, pointing to **Administrative Tools**, and then clicking **Active Directory Users and Computers**.
 2. In the console tree, right-click your domain, and then click **Properties**.
 3. Click the **Group Policy** tab, click the Group Policy Object that you used to deploy the package, and then click **Edit**.
 4. Expand the **Software Settings** container that contains the software installation item that you used to deploy the package.
@@ -125,13 +125,13 @@ In some cases, you may want to redeploy a software package (for example, if you 
 
 To remove a published or assigned package, follow these steps:
 
-1. Start the Active Directory Users and Computers snap-in. To do this, click **Start**, point to **Administrative Tools**, and then click **Active Directory Users and Computers**.
+1. Start the Active Directory Users and Computers snap-in by clicking **Start**, pointing to **Administrative Tools**, and then clicking **Active Directory Users and Computers**.
 2. In the console tree, right-click your domain, and then click **Properties**.
 3. Click the **Group Policy** tab, click the Group Policy Object that you used to deploy the package, and then click **Edit**.
 4. Expand the **Software Settings** container that contains the software installation item that you used to deploy the package.
 5. Click the software installation container that contains the package.
 6. In the right-pane of the **Group Policy** window, right-click the program, point to **All Tasks**, and then click **Remove**.
-7. Do one of the following:
+7. Perform one of the following actions:
    - Click **Immediately uninstall the software from users and computers**, and then click **OK**.
    - Click **Allow users to continue to use the software but prevent new installations**, and then click **OK**.
 8. Close the Group Policy snap-in, click **OK**, and then closet the Active Directory Users and Computers snap-in.
@@ -140,4 +140,4 @@ To remove a published or assigned package, follow these steps:
 
 Published packages are displayed on a client computer after you use a Group Policy to remove them.
 
-This situation can occur when a user has installed the program but has not used it. When the user first starts the published program, the installation is finished. Group Policy then removes the program.
+This situation can occur when a user has installed the program but hasn't used it. When the user first starts the published program, the installation is finished. Group Policy then removes the program.

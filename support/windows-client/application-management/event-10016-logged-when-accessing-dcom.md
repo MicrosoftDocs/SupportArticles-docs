@@ -11,7 +11,8 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, hikono
 ms.prod-support-area-path: DCOM service startup and permissions
-ms.technology: ApplicationCompatibility
+ms.technology: windows-client-application-compatibility
+adobe-target: true
 ---
 # DCOM event ID 10016 is logged in Windows
 
@@ -22,7 +23,7 @@ _Original KB number:_ &nbsp; 4022522
 
 ## Symptoms
 
-On a computer that is running Windows 10, Windows Server 2019, or Windows Server 2016, the following event is logged in the system event logs.
+On a computer that's running Windows 10, Windows Server 2019, or Windows Server 2016, the following event is logged in the system event logs.
 
 > Source:        Microsoft-Windows-DistributedCOM  
 Event ID:      10016  
@@ -58,15 +59,15 @@ to the user NT AUTHORITY\LOCAL SERVICE SID (S-1-5-19) from address LocalHost (us
 
 ## Cause
 
-These 10016 events are recorded when Microsoft components try to access DCOM components without the required permissions. In this case, this is expected and by design.
+These 10016 events are recorded when Microsoft components try to access DCOM components without the required permissions. In this case, this behavior is expected and by design.
 
-A coding pattern has been implemented where the code first tries to access the DCOM components with one set of parameters. If the first attempt is unsuccessful, it tries again with another set of parameters. The reason why it does not skip the first attempt is because there are scenarios where it can succeed. In those scenarios, it is preferable.
+A coding pattern has been implemented where the code first tries to access the DCOM components with one set of parameters. If the first attempt is unsuccessful, it tries again with another set of parameters. The reason why it doesn't skip the first attempt is because there are scenarios where it can succeed. In those scenarios, it's preferable.
 
 ## Workaround
 
-These events can be safely ignored because they do not adversely affect functionality and are by design. This is the recommend action for these events.
+These events can be safely ignored because they don't adversely affect functionality and are by design. It's the recommend action for these events.
 
-If desired, advanced users and IT professionals can suppress these events from view in the Event Viewer by creating a filter and manually editing the filter's XML query similar to the following:
+If desired, advanced users and IT professionals can suppress these events from view in the Event Viewer. To do it, create a filter and manually edit the filter's XML query similar to the following one:
 
 ```xml
 <QueryList>
@@ -103,8 +104,17 @@ If desired, advanced users and IT professionals can suppress these events from v
 </QueryList>
 ```
 
-In this query, **param4** corresponds to the COM Server application CLSID, **param5** corresponds to the APPID, and **param8** corresponds to the security context SID, all of which are recorded in the 10016 event logs.
+In this query:
+
+- **param4** corresponds to the COM Server application CLSID.
+- **param5** corresponds to the APPID.
+- **param8** corresponds to the security context SID.
+
+All of them are recorded in the 10016 event logs.
 
 For more information about manually constructing Event Viewer queries, see [Consuming Events](/windows/win32/wes/consuming-events).
 
-You can also work around this issue by modifying the permissions on DCOM components to prevent this error from being logged. However, we do not recommend this method because these errors do not adversely affect functionality and modifying the permissions can have unintended side effects.
+You can also work around this issue by modifying the permissions on DCOM components to prevent this error from being logged. However, we don't recommend this method because:
+
+- These errors don't adversely affect functionality
+- Modifying the permissions can have unintended side effects.

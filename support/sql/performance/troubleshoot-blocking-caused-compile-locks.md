@@ -15,11 +15,11 @@ _Original KB number:_ &nbsp; 263889
 
 ## Summary
 
-In Microsoft SQL Server, only one copy of a stored procedure plan is generally in cache at a time. Enforcing this requires serialization of some parts of the compilation process, and this synchronization is accomplished in part by using compile locks. If many connections are concurrently running the same stored procedure and a compile lock must be obtained for that stored procedure every time that it runs, session IDs (SPIDs) might begin to block one another as they each try to obtain an exclusive compile lock on the object.
+In Microsoft SQL Server, only one copy of a stored procedure plan is generally in cache at a time. Enforcing this requires serialization of some parts of the compilation process, and this synchronization is accomplished in part by using compile locks. If many connections are concurrently running the same stored procedure and a compile lock must be obtained for that stored procedure every time that it runs, session IDs (SPIDs) might begin to block one another as they each try to obtain an exclusive compile lock on the object.
 
 The following are some typical characteristics of compile blocking that can be observed in the blocking output:
 
-- `waittype` for the blocked and (usually) blocking session SPIDs is `LCK_M_X` (exclusive) and `waitresource` is of the form `OBJECT: dbid: object_id [[COMPILE]]`, where `object_id` is the object ID of the stored procedure.
+- `waittype` for the blocked and (usually) blocking session SPIDs is `LCK_M_X` (exclusive) and `waitresource` is of the form `OBJECT: dbid: object_id [[COMPILE]]`, where `object_id` is the object ID of the stored procedure.
 
 - Blockers have `waittype` NULL, status runnable. Blockees have `waittype` `LCK_M_X` (exclusive lock), status sleeping.
 
@@ -43,7 +43,7 @@ session_id   blocking_session_id   wait_type   wait_time   waitresource --------
 [[COMPILE]]
 ```
 
-In the `waitresource` column (6:834102), 6 is the database ID and 834102 is the object ID. This object ID belongs to a stored procedure, not to a table.
+In the `waitresource` column (6:834102), 6 is the database ID and 834102 is the object ID. This object ID belongs to a stored procedure, not to a table.
 
 ## More information
 
@@ -79,13 +79,13 @@ Stored procedure recompilation is one explanation for compile locks on a stored 
 
 2. **Stored procedure is prefixed with sp_**  
 
-   If your stored procedure name starts with the `sp_` prefix and is not in the master database, you see **sp_cache_miss**  before the cache hit for each execution even if you owner-qualify the stored procedure. This is because the `sp_` prefix tells SQL Server that the stored procedure is a system stored procedure, and system stored procedures have different name resolution rules. (The preferred location is in the master database.) The names of user-created stored procedures should not start with `sp_`.
+   If your stored procedure name starts with the `sp_` prefix and is not in the master database, you see **sp_cache_miss**  before the cache hit for each execution even if you owner-qualify the stored procedure. This is because the `sp_` prefix tells SQL Server that the stored procedure is a system stored procedure, and system stored procedures have different name resolution rules. (The preferred location is in the master database.) The names of user-created stored procedures should not start with `sp_`.
 
 3. **Stored procedure is invoked using a different case (upper /lower)**  
 
-   If an owner-qualified procedure is executed by using a different case (upper or lower) from the case that was used to create it, the procedure can trigger a CacheMiss event or request a COMPILE lock. Eventually, the procedure uses the cached plan and is not recompiled. But the request for a COMPILE lock can sometimes cause a **blocking chain** situation if there are many SPIDs that are trying to execute the same procedure by using a different case than the case that was used to create it. This is true regardless of the sort order or collation that is being used on the server or on the database. The reason for this behavior is that the algorithm that is being used to find the procedure in cache is based on hash values (for performance), and the hash values can change if the case is different.
+   If an owner-qualified procedure is executed by using a different case (upper or lower) from the case that was used to create it, the procedure can trigger a CacheMiss event or request a COMPILE lock. Eventually, the procedure uses the cached plan and is not recompiled. But the request for a COMPILE lock can sometimes cause a **blocking chain** situation if there are many SPIDs that are trying to execute the same procedure by using a different case than the case that was used to create it. This is true regardless of the sort order or collation that is being used on the server or on the database. The reason for this behavior is that the algorithm that is being used to find the procedure in cache is based on hash values (for performance), and the hash values can change if the case is different.
 
-   The workaround is to drop and create the procedure by using the same case as the one that is used when the application executes the procedure. You can also make sure that the procedure is executed from all applications by using the correct case (upper or lower).
+   The workaround is to drop and create the procedure by using the same case as the one that is used when the application executes the procedure. You can also make sure that the procedure is executed from all applications by using the correct case (upper or lower).
 
 4. **Stored procedure is invoked as a Language event**  
 

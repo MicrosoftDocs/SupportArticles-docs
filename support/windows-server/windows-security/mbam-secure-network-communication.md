@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: manojse, nacan, kaushika
 ms.prod-support-area-path: Bitlocker
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # MBAM and Secure Network Communication
 
@@ -47,21 +47,23 @@ Step 1: Encrypt Channel between MBAM Client and Administration & Monitoring Serv
 
 2. Using Certificate Approved by Certificate Authority  
 
-There are two ways to import a certificate
+   There are two ways to import a certificate
 
-  1. Request or Import a certificate from a CA using IIS:
-      - [Request an Internet Server Certificate in IIS](https://technet.microsoft.com/library/cc732906%28v=ws.10%29.aspx)  
-      - [Import a Server Certificate in IIS](https://technet.microsoft.com/library/cc732785%28v=ws.10%29.aspx)  
-  2. Request or Import a certificate into the Personal Certificate Store using Certificate Manager:
-     [https://windows.microsoft.com/windows-vista/Request-or-renew-a-certificate](https://windows.microsoft.com/windows-vista/request-or-renew-a-certificate)  
+      1. Request or Import a certificate from a CA using IIS:
 
-     Certificate Templates to be used:
+         - [Request an Internet Server Certificate in IIS](https://technet.microsoft.com/library/cc732906%28v=ws.10%29.aspx)  
+         - [Import a Server Certificate in IIS](https://technet.microsoft.com/library/cc732785%28v=ws.10%29.aspx)
 
-     MBAM Client to MBAM Administration & Monitoring Server: Use Standard Web Server Template.
+      2. Request or Import a certificate into the Personal Certificate Store using Certificate Manager:  
+      [Windows help and learning](https://windows.microsoft.com/windows-vista/request-or-renew-a-certificate)  
 
-     After you have certificate ready, when you execute MBAM Setup, we will show you the thumbprint of the certificate in "Configure Network Communication Security" wizard for MBAM Setup.
+         Certificate Templates to be used:
 
-     ![Have certificate ready](./media/mbam-secure-network-communication/certificate-ready.png)
+         MBAM Client to MBAM Administration & Monitoring Server: Use Standard Web Server Template.
+
+         After you have certificate ready, when you execute MBAM Setup, we will show you the thumbprint of the certificate in "Configure Network Communication Security" wizard for MBAM Setup.
+
+         ![Have certificate ready](./media/mbam-secure-network-communication/certificate-ready.png)
 
 Step 2: Encrypt Channel between MBAM Administration & Monitoring Server and MBAM Recovery & Hardware SQL DB.
 
@@ -75,13 +77,13 @@ When you execute MBAM Setup Program on a server where you'll install MBAM Recove
 
 ![The thumbprint in "Configure Network Communication Security" wizard.](./media/mbam-secure-network-communication/certificate-thumbprint.png)
 
-Step 3: How to Configure SSL for SQL Compliance and Audit DB Server.  
+Step 3: How to configure SSL for SQL Compliance and Audit DB Server.  
 
 > [!Note]
 > You'll have to configure SSL for SQL before you run MBAM Setup on your server.
 
 1. Open SQL Reporting Services Configuration Manager on Server where you installed MBAM Audit Reports Role.
-2. Connect to your Server and Click Web Service URL.
+2. Connect to your Server and click Web Service URL.
      ![Select Web Service URL](./media/mbam-secure-network-communication/web-service-url.png)
 
 3. Click Advanced and then select your certificate. See image below:
@@ -91,17 +93,17 @@ Step 3: How to Configure SSL for SQL Compliance and Audit DB Server.
 4. Repeat "Step 3" for Report Manager URL in SQL Reporting Services Configuration Manager.
 5. Now when you open MBAM Reports it will use SSL to connect to SQL SSRS.
 
-Step 4: Configure SQL to force encryption on all protocols  
+Step 4: Configure SQL to force encryption on all protocols.  
 
 1. Log in to SQL Server and Open SQL Server Configuration Manager.
 2. Expand SQL Server Network Configuration and select "Protocols for MSSQLSERVER".
-3. Right Click on "Protocols for MSSQLSERVER" and Select Yes for Force Encryption.
+3. Right click on "Protocols for MSSQLSERVER" and select Yes for Force Encryption.
 
     ![Protocols for MSSQLSERVER Properties window](./media/mbam-secure-network-communication/force-encrypt.jpg)
 
 4. Select Certificates tab and choose your certificate from drop-down.
 5. Click Apply and restart your SQL Services.
-6. When you try to restart SQL Services, you'll hit an error message " The request failed or the service didn't respond in a timely fashion. Consult the event log or other applicable error logs for details."
+6. When you try to restart SQL Services, you'll hit an error message "The request failed or the service didn't respond in a timely fashion. Consult the event log or other applicable error logs for details."
 7. It fails since SQL account doesn't have rights on Private keys of the certificate.
 8. Open Certificate Manager MMC console and give the SQL account that is used for SQL services Full access on the certificate.
     ![Certificate Manager MMC console](./media/mbam-secure-network-communication/sql-per.jpg)

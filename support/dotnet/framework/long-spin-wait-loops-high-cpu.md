@@ -14,13 +14,13 @@ _Original KB number:_ &nbsp; 4527212
 
 ## Symptoms
 
-You experience higher than expected CPU or memory usage on Azure VMs that were recently deployed on computers that are driven by Intel Skylake processors. According to Intel, this change affects VM performance and overall workload or application execution.
+You experience higher than expected CPU or memory usage on Azure VMs that were recently deployed on computers that are driven by Intel Skylake processors. According to Intel, this change affects VM performance and overall workload or application execution.
 
-The issue is caused by an increase in the *pause* instruction delay for Intel Skylake processors. You may notice this issue particularly in .NET Framework applications. This is because the Pause Latency change affects long spin-wait loops that are common in .NET Framework.
+The issue is caused by an increase in the *pause* instruction delay for Intel Skylake processors. You may notice this issue particularly in .NET Framework applications. This is because the Pause Latency change affects long spin-wait loops that are common in .NET Framework.
 
 ## Cause
 
-In the most recent Skylake microarchitecture, Intel increased the Pause Latency value to up to 140 cycles. In earlier-generation microarchitecture, the Pause Latency value is about 10 cycles. According to Intel, this change was made to improve resource sharing. For more information about the change and its effects, see section 8.4.7 of the following Intel PDF document: [Intel 64 and IA-32 Architectures Optimization Reference Manual](https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-optimization-manual.pdf).
+In the most recent Skylake microarchitecture, Intel increased the Pause Latency value to up to 140 cycles. In earlier-generation microarchitecture, the Pause Latency value is about 10 cycles. According to Intel, this change was made to improve resource sharing. For more information about the change and its effects, see section 8.4.7 of the following Intel PDF document: [Intel 64 and IA-32 Architectures Optimization Reference Manual](https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-optimization-manual.pdf).
 
 ## Resolution
 
@@ -57,22 +57,22 @@ For more information about timers, see the **AppContext for library consumers** 
 
 - **Does this change cause any harm if we also have UseNetCoreTimer enabled on all kinds of hardware?**
 
-    The timer fix is not currently enabled by default in any version of .NET Framework. We don't recommend that you change the default setting at the local level.
+    The timer fix is not currently enabled by default in any version of .NET Framework. We don't recommend that you change the default setting at the local level.
 
 - **Are there any other known issues caused by the Pause Latency change in Skylake?**
 
-    The new Pause Latency measurement also consumes additional CPU time during startup. Typically, the value is about 10 ms of CPU time. The increased duration is considered to be necessary to get more reliable measurements and improve the ability to fix the issue. However, .NET Framework applications may also be short-running tools. The frequent use of such tools may cause greater CPU usage than before the fix was applied. This was considered to be an acceptable tradeoff in order to fix a larger problem and enable the fix by default in .NET Framework 4.8.
+    The new Pause Latency measurement also consumes additional CPU time during startup. Typically, the value is about 10 ms of CPU time. The increased duration is considered to be necessary to get more reliable measurements and improve the ability to fix the issue. However, .NET Framework applications may also be short-running tools. The frequent use of such tools may cause greater CPU usage than before the fix was applied. This was considered to be an acceptable tradeoff in order to fix a larger problem and enable the fix by default in .NET Framework 4.8.
 
 - **Is the Skylake Pause Latency fix guaranteed to solve my issue?**
 
-    No, the fix isn't guaranteed. There could be other, unrelated elements outside this issue that affect specific workload performance. The effectiveness of the fix is gated on measurement quality. There are bounds in use to make sure that we don't overscale spin counts in .NET Framework. However, bad measurements can occur when the VM is heavily loaded. This can prevent the fix from being effective. In the worst case (excluding the tradeoff that is mentioned in A2), this situation would be similar to the fix not being applied.
+    No, the fix isn't guaranteed. There could be other, unrelated elements outside this issue that affect specific workload performance. The effectiveness of the fix is gated on measurement quality. There are bounds in use to make sure that we don't overscale spin counts in .NET Framework. However, bad measurements can occur when the VM is heavily loaded. This can prevent the fix from being effective. In the worst case (excluding the tradeoff that is mentioned in A2), this situation would be similar to the fix not being applied.
 
-- **Do we have any guidance for support engineers about how we can detect that any perceived performance issue is caused by this change?**  
+- **Do we have any guidance for support engineers about how we can detect that any perceived performance issue is caused by this change?**  
 
-    You can determine this by profiling the application that's used. Comparing profiles that have similar loads between a pre-Skylake-based VM and a Skylake-based VM may show much more time relatively spent in `clr!AwareLock::Contention` on the Skylake VM. That would indicate that the pause delay fix would be useful if the VM runs on a Skylake processor.
+    You can determine this by profiling the application that's used. Comparing profiles that have similar loads between a pre-Skylake-based VM and a Skylake-based VM may show much more time relatively spent in `clr!AwareLock::Contention` on the Skylake VM. That would indicate that the pause delay fix would be useful if the VM runs on a Skylake processor.
 
 For the timer fix, the call stack would show that `clr!AwareLock::Contention` is called by `mscorlib.ni!System.Threading.TimerQueueTimer.Fire()`. If the `Fire()` method or other methods on `TimerQueueTimer` are the primary source of contention, this would indicate that the timer fix would help.
 
-It's also possible to monitor lock contention rates by using Performance Monitor. For more information, see the **Contention Rate / Sec** and **Total # of Contentions** entries for **.NET CLR LocksAndThreads** in the **Lock and thread performance counters** section in [Performance Counters in the .NET Framework](/dotnet/framework/debug-trace-profile/performance-counters#lock-and-thread-performance-counters).
+It's also possible to monitor lock contention rates by using Performance Monitor. For more information, see the **Contention Rate / Sec** and **Total # of Contentions** entries for **.NET CLR LocksAndThreads** in the **Lock and thread performance counters** section in [Performance Counters in the .NET Framework](/dotnet/framework/debug-trace-profile/performance-counters#lock-and-thread-performance-counters).
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

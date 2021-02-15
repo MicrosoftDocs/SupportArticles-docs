@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Configuring and using Backup software
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # "VSS Error XML document is too long. hr = 0x80070018" error when you perform a backup in Windows
 
@@ -24,18 +24,32 @@ _Original KB number:_ &nbsp; 3098315
 
 When you perform a backup in Windows Server 2012 and earlier (back to Windows Server 2008), one of the following errors is logged in the Application log:
 
+> Log Name: Application  
+Source: VSS  
+Event ID: 8193  
+Level: Error  
+Description:  
+Volume Shadow Copy Service error: Unexpected error calling routine  
+XML document is too long. hr = 0x80070018, The program issued a command but the command length is incorrect.  
+>
+> Operation: Writer Modifying Backup Document
+>
+> Context: Execution  
+Context: Requestor  
+Writer Instance ID: {14BE9B90-62D7-4A2D-B57F-53D21EAB0789}
+
 ## Cause
 
 When a Volume Shadow Copy Service (VSS)-based backup is performed, each of the subscribed VSS writers is queried for a list of components. The problem that's described in the [Symptoms](#symptoms) section occurs when that list generates a metadata file that's larger than the size limitation.
 
 Common causes:
 
-- Too many files in the TemporaryInternetFiles directory-specifically, in C:\Windows\Microsoft.NET\Framework64\v2.0.50727\TemporaryInternetFiles. This causes the System Writer to hit the size limit of the VSS metadata file.
+- Too many files in the TemporaryInternetFiles directory-specifically, in C:\\Windows\\Microsoft.NET\\Framework64\\v2.0.50727\\TemporaryInternetFiles. This causes the System Writer to hit the size limit of the VSS metadata file.
 - VSS Writer has added too many components to its metadata file.
 
 ## Resolution
 
-If there are too many files in TemporaryInternetFiles, back up and then delete the files from the C:\Windows\Microsoft.NET\Framework64\v2.0.50727\TemporaryInternetFiles location. Then, the system writer should be able to complete without errors.
+If there are too many files in TemporaryInternetFiles, back up and then delete the files from the C:\\Windows\\Microsoft.NET\\Framework64\\v2.0.50727\\TemporaryInternetFiles location. Then, the system writer should be able to complete without errors.
 
 If you can't identify the writer that's causing the failure, collect a sample of the writer metadata document, and then review the components for each writer.
 
@@ -59,46 +73,42 @@ Each component is represented by the lines between the "+ Component" name and th
 
 Hyper-V example
 
-```console
-"Microsoft Hyper-V VSS Writer:\006F792F-99EA-4A4A-A241-F8853A3B0CB6"
- - Name: 006F792F-99EA-4A4A-A241-F8853A3B0CB6
- - Logical path:
- - Full path: \006F792F-99EA-4A4A-A241-F8853A3B0CB6
- - Caption: Offline\i$
- - Type: VSS_CT_FILEGROUP [2]
- - Is selectable: TRUE
- - Is top level: TRUE
- - Notify on backup complete: FALSE
- - Components:
- - File List: Path = D:\Hyper-V\Virtual Machines\, Filespec = 006F792F-99EA-4A4A-A241-F8853A3B0CB6.xml
- - File List: Path = D:\Hyper-V\Snapshots, Filespec = A544BB47-0349-4EED-ABDC-DFE66CAF2927.xml
- - File List: Path = D:\Hyper-V\Snapshots\A544BB47-0349-4EED-ABDC-DFE66CAF2927, Filespec = *
- - Paths affected by this component:
- - D:\Hyper-V\Snapshots
- - D:\Hyper-V\Snapshots\A544BB47-0349-4EED-ABDC-DFE66CAF2927
- - D:\Hyper-V\Virtual Machines\
- - Volumes affected by this component:
- - \\?\Volume{9710864d-1433-11e5-93ef-806e6f6e6963}\ [D:\]
-```
+> "Microsoft Hyper-V VSS Writer:\006F792F-99EA-4A4A-A241-F8853A3B0CB6"  
+\- Name: 006F792F-99EA-4A4A-A241-F8853A3B0CB6  
+\- Logical path:  
+\- Full path: \\006F792F-99EA-4A4A-A241-F8853A3B0CB6  
+\- Caption: Offline\\i$  
+\- Type: VSS_CT_FILEGROUP [2]  
+\- Is selectable: TRUE  
+\- Is top level: TRUE  
+\- Notify on backup complete: FALSE  
+\- Components:  
+\- File List: Path = D:\\Hyper-V\\Virtual Machines\\, Filespec = 006F792F-99EA-4A4A-A241-F8853A3B0CB6.xml  
+\- File List: Path = D:\\Hyper-V\Snapshots, Filespec = A544BB47-0349-4EED-ABDC-DFE66CAF2927.xml  
+\- File List: Path = D:\\Hyper-V\\Snapshots\\A544BB47-0349-4EED-ABDC-DFE66CAF2927, Filespec = *  
+\ Paths affected by this component:  
+\- D:\\Hyper-V\\Snapshots  
+\- D:\\Hyper-V\\Snapshots\\A544BB47-0349-4EED-ABDC-DFE66CAF2927  
+\- D:\\Hyper-V\\Virtual Machines\\  
+\- Volumes affected by this component:  
+\- \\\\?\\Volume{9710864d-1433-11e5-93ef-806e6f6e6963}\\ [D:\\]
 
-SQL example
+SQL example:
 
-```sql
-- Component Dependencies:SQL - + Component "SqlServerWriter:\SQL2012\model"
- - Name: model
- - Logical path: SQL2012
- - Full path: \SQL2012\model
- - Caption:
- - Type: VSS_CT_FILEGROUP [2]
- - Is selectable: TRUE
- - Is top level: TRUE
- - Notify on backup complete: TRUE
- - Components:
- - File List: Path = C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA, Filespec = model.mdf
- - File List: Path = C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA, Filespec = modellog.ldf
- - Paths affected by this component:
- - C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\DATA
- - Volumes affected by this component:
- - \\?\Volume{e18ba371-5b9e-11e4-9400-806e6f6e6963}\ [C:\]
- - Component Dependencies:
-```
+> \- Component Dependencies:SQL - + Component "SqlServerWriter:\\SQL2012\\model"  
+\- Name: model  
+\- Logical path: SQL2012  
+\- Full path: \\SQL2012\\model  
+\- Caption:  
+\- Type: VSS_CT_FILEGROUP [2]  
+\- Is selectable: TRUE  
+\- Is top level: TRUE  
+\- Notify on backup complete: TRUE  
+\- Components:  
+\- File List: Path = C:\\Program Files\\Microsoft SQL Server\\MSSQL11.MSSQLSERVER\\ MSSQL\DATA, Filespec = model.mdf  
+\- File List: Path = C:\\Program Files\\Microsoft SQL Server\\MSSQL11.MSSQLSERVER\\MSSQL\\DATA, Filespec = modellog.ldf  
+\- Paths affected by this component:  
+\- C:\\Program Files\\Microsoft SQL Server\\MSSQL11.MSSQLSERVER\\MSSQL\\DATA  
+\- Volumes affected by this component:  
+\- \\\\?\\Volume{e18ba371-5b9e-11e4-9400-806e6f6e6963}\\ [C:\\]  
+\- Component Dependencies:

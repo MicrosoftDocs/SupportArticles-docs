@@ -15,15 +15,15 @@ _Original KB number:_ &nbsp; 4502458
 
 ## Symptoms
 
-Assume that you set up an SQL Server audit to have a server audit specification that uses the `DATABASE_CHANGE_GROUP` event. When a user runs `RESTORE VERIFYONLY` on a database backup file, the `CREATE DATABASE` permission is logged to the Audit log.
+Assume that you set up an SQL Server audit to have a server audit specification that uses the `DATABASE_CHANGE_GROUP` event. When a user runs `RESTORE VERIFYONLY` on a database backup file, the `CREATE DATABASE` permission is logged to the Audit log.
 
 ## Cause
 
-The `CREATE DATABASE` permission is required to run `RESTORE VERIFYONLY`. When that permission is checked, a corresponding event is logged to the Audit log for the `DATABASE_CHANGE_GROUP` audit specification.
+The `CREATE DATABASE` permission is required to run `RESTORE VERIFYONLY`. When that permission is checked, a corresponding event is logged to the Audit log for the `DATABASE_CHANGE_GROUP` audit specification.
 
 ## Workaround
 
-To work around this issue, use a query such as the following to filter the Audit log records that are related to running `RESTORE VERIFYONLY`:
+To work around this issue, use a query such as the following to filter the Audit log records that are related to running `RESTORE VERIFYONLY`:
 
 ```sql
 select * from fn_get_audit_file('C:\path\to\file.sqlaudit', default, default) where statement NOT LIKE '%RESTORE VERIFYONLY%'
@@ -34,7 +34,3 @@ select * from fn_get_audit_file('C:\path\to\file.sqlaudit', default, default) wh
 - [RESTORE Statements - VERIFYONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)
 
 - [GRANT Database Permissions (Transact-SQL)](/sql/t-sql/statements/grant-database-permissions-transact-sql).
-
-## References
-
-Learn about the [terminology](https://support.microsoft.com/help/824684) that Microsoft uses to describe software updates.

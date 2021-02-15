@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory database issues and domain controller boot failures
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to use Ntdsutil to manage Active Directory files from the command line in Windows Server 2003
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 816120
 
 ## How to start your computer in Directory Services Restore mode
 
-Windows Server 2003 Directory Service opens its files in exclusive mode. Which means that the files can't be managed while the server is operating as a domain controller.
+Windows Server 2003 Directory Service opens its files in exclusive mode, which means that the files can't be managed while the server is operating as a domain controller.
 
 To start the server in Directory Services Restore mode, follow these steps:
 

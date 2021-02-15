@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, timr, masoudh
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: networking
 ---
 # Description of the Portqry.exe command-line utility
 
@@ -37,7 +37,7 @@ Portqry.exe reports the status of a TCP/IP port in one of the following three wa
 
 - Filtered
 
-  The port on the computer that you selected is being filtered. Portqry.exe did not receive a response from the port. A process may or may not be listening on the port. By default, TCP ports are queried three times, and UDP ports are queried one time before a report indicates that the port is filtered.
+  The port on the computer that you selected is being filtered. Portqry.exe didn't receive a response from the port. A process may or may not be listening on the port. By default, TCP ports are queried three times, and UDP ports are queried one time before a report indicates that the port is filtered.
 
 Portqry.exe can query a single port, an ordered list of ports, or a sequential range of ports.
 
@@ -49,7 +49,7 @@ The following command tries to resolve `reskit.com` to an IP address and then qu
 portqry -n reskit.com -p tcp -e 25
 ```
 
-The following command tries to resolve 169.254.0.11 to a host name and then queries TCP ports 143,110, and 25 (in that order) on the host that you selected. This command also creates a log file (Portqry.log) that contains a log of the command that you ran and its output.
+The following command tries to resolve 169.254.0.11 to a host name. It then queries TCP ports 143,110, and 25 (in that order) on the host that you selected. This command also creates a log file (Portqry.log) that contains a log of the command that you ran and its output.
 
 ```console
 portqry -n 169.254.0.11 -p tcp -o 143,110,25 -l portqry.log
@@ -68,4 +68,5 @@ Portqry.exe is available for download from the Microsoft Download Center. To dow
 
 For more information about PortQry version 2.0, see [New features and functionality in PortQry version 2.0](https://support.microsoft.com/help/832919).
 
-For more information about Port requirements for the Microsoft Windows Server System, see [Service overview and network port requirements for Windows](https://support.microsoft.com/help/832017).
+For more information about Port requirements for the Microsoft Windows Server System, see:  
+[Service overview and network port requirements for Windows](https://support.microsoft.com/help/832017).

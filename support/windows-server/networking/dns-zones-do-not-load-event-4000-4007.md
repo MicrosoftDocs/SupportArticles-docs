@@ -1,6 +1,6 @@
 ---
-title: DNS zones do not load with event 4000 and 4007
-description: DNS zones are not loaded on the DNS console. Provides a resolution.
+title: DNS zones don't load with event 4000 and 4007
+description: DNS zones aren't loaded on the DNS console. Provides a resolution.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -11,18 +11,18 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DNS
-ms.technology: Networking
+ms.technology: networking
 ---
-# DNS zones do not load and event ID 4000 and 4007 are logged
+# DNS zones don't load and event ID 4000 and 4007 are logged
 
-This article provides a resolution to solve the event ID 4000 and 4007 that are logged when the DNS zones are not loaded on the DNS console.
+This article solves an issue that event IDs 4000 and 4007 are logged when the DNS zones aren't loaded on the DNS console.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2751452
 
 ## Symptoms
 
-You may encounter a situation where one of the DNS server's in the environment starts showing an issue where the zones are not loaded on the DNS console and you see Event ID 4000 and 4007 logged in the DNS event logs:
+One of the DNS servers in your environment starts showing an issue that the zones aren't loaded on the DNS console. And Event IDs 4000 and 4007 are logged in the DNS event logs:
 
 Event ID 4000:
 
@@ -40,9 +40,9 @@ When you try to perform any operation on the AD-integrated zones using DNSCMD, y
 
 ## Cause
 
-This happens when that particular DC/DNS server has lost its Secure channel with itself or PDC.
+This issue happens when that particular DC/DNS server has lost its Secure channel with itself or PDC.
 
-This can also happen in a single DC environment where that DC/DNS server holds all the FSMO roles and is pointing to itself as Primary DNS server.
+This issue can also happen in a single DC environment where that DC/DNS server holds all the FSMO roles and is pointing to itself as Primary DNS server.
 
 ## Resolution
 
@@ -62,4 +62,4 @@ In case you have other Domain Controller/DNS server present in the environment, 
 
 DNS zones should load now.
 
-If this is the only DC in the environment and there are no other DNS Servers available, then perform the same steps but replace the `PDC.Domain.com` with the server's own IP address (since it itself is the PDC).
+If it's the only domain controller in the environment and there are no other DNS Servers available, follow the same steps but replace the `PDC.Domain.com` with the server's own IP address (since it itself is the PDC).

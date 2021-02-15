@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4018656
 
 ## Symptoms
 
-In Configuration Manager, you experience errors when you try to service a server group (cluster patching) on a child primary site that has a remote management point. Error messages that resemble the following are logged in the MP_ClientID.log file:
+In Configuration Manager, you experience errors when you try to service a server group (cluster patching) on a child primary site that has a remote management point. Error messages that resemble the following are logged in the MP_ClientID.log file:
 
 > CMPDBConnection::ExecuteSQL(): ICommandText::Execute() failed with 0x80040E09  
 > MPDB ERROR - EXTENDED INFORMATION  

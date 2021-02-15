@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: sgoad, nedpyle, tjung, kaushika
 ms.prod-support-area-path: COM and COM+ performance and stability
-ms.technology: ApplicationCompatibility
+ms.technology: windows-client-application-compatibility
 ---
 # USMT 4.0 migration from x86 to x64 results in corrupted COM+ components
 
@@ -31,7 +31,7 @@ Opening COMEXP.MSC or DCOMCNFG.EXE and navigating to Component Services\Computer
 
 > You do not have permission to perform the requested action.
 
-Additionally you may see Event ID 4434 logged in the Application log:
+Additionally, you may see Event ID 4434 logged in the Application log:
 
 > Log Name: Application  
 Source: Complus  

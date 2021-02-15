@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: 'Management and Configuration: Print queue backup and migration'
-ms.technology: PrintFaxScan
+ms.technology: windows-server-printing
 ---
 # Back up and then restore printers when you upgrade from Windows Server 2003 to Windows Server 2008
 

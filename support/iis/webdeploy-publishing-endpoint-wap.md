@@ -2,7 +2,7 @@
 title: Web Deploy publishing endpoint is changed
 description: This article describes a change in functionality that's provided by Windows Azure Pack.
 ms.date: 03/19/2020
-ms.prod-support-area-path: Deployment and migration
+ms.prod-support-area-path: Deployment and migration
 ms.topic: article
 ---
 # WebDeploy publishing endpoint is changed in WAP-Websites [UR6]
@@ -46,7 +46,7 @@ Example of the old publishing profile:
 
 ## Changes in WAP Websites V2U7
 
-In V2U7 (July 2015), this change was refined slightly in response to customer concerns so that only new installations of WAP Websites will change the WebDeploy endpoint from the Publisher to the Worker. It will let existing systems continue to operate without a publishing change while the new method is pushed out to new WAP Website deployments.  
+In V2U7 (July 2015), this change was refined slightly in response to customer concerns so that only new installations of WAP Websites will change the WebDeploy endpoint from the Publisher to the Worker. It will let existing systems continue to operate without a publishing change while the new method is pushed out to new WAP Website deployments.  
 
 In V2U7, you can control the WebDeploy publishing configuration to use either the publisher or the web worker by using the following PowerShell cmdlets:
 

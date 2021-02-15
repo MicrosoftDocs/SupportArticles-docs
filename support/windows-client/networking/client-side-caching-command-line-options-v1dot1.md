@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Folder redirection and Offline Files and Folders (CSC)
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Features and functions in version 1.1 of the Client-Side Caching Command-Line Options command-line tool
 
@@ -66,7 +66,7 @@ The background Client-Side Caching agent doesn't try to reconnect the server. If
 
     If a user's cache is security enhanced by using the user's Windows NT 4.0 SID, the cache can't be accessed from the Windows Server 2003 account unless the cache entries are restamped by using the Windows Server 2003 SID.
 - /ISENABLED or /ISCSCENABLED - Use either of these switches to determine whether CSC is enabled on your client computer.
-- /PIN2: \\\\**server**\\**share**\\**path**[/USER] [/SYSTEM] [/USERINHERIT] [/SYSTEMINHERIT] - Use this switch to pin shared resources. You can use the /USER option to pin a file. This action has the same result as using the **Offline Files** dialog box to cache the file. The /SYSTEM option specifies that the shared resource must be administratively pinned by configuring the Group Policy settings. The /USERINHERIT option and the / SYSTEMINHERIT]INHERIT option designates how the pin data is inherited. You can use any combination of the pin types.
+- /PIN2: \\\\**server**\\**share**\\**path**[/USER] [/SYSTEM] [/USERINHERIT] [/SYSTEMINHERIT] - Use this switch to pin shared resources. You can use the /USER option to pin a file. This action has the same result as using the **Offline Files** dialog box to cache the file. The /SYSTEM option specifies that the shared resource must be administratively pinned by configuring the Group Policy settings. The /USERINHERIT option and the /SYSTEMINHERIT]INHERIT option designates how the pin data is inherited. You can use any combination of the pin types.
 
 - /PIN2: **filename** /FILELIST [/UNICODE] [/USER] [/SYSTEM] [/USERINHERIT] [/SYSTEMINHERIT]  
 - Use this switch if you want to use a file that describes all the objects to pin as parameters. The file contains the Universal Naming Convention (UNC) path of the objects to pin. The objects are separated by a carriage return/linefeed. For example, use the following command: CSCCMD /PIN: **MyShare.txt** /FILELIST  
@@ -78,7 +78,7 @@ The background Client-Side Caching agent doesn't try to reconnect the server. If
     //MyServer/MyShare //MyServer1/MyShare1
 
     > [!NOTE]
-    > The /PIN switch does not copy the content of the shared resource into the local cache. Pinning is not sufficient to make the files available offline. After you use the /PIN switch, you must run the CSCCMD command together with the /FILL switch to copy the content of the shared resource to the local cache and to make sure that the shared resource is available offline. The /USERINHERIT option and the / SYSTEMINHERIT]INHERIT option designates how the pin data is inherited. You can use any combination of the pin types.
+    > The /PIN switch does not copy the content of the shared resource into the local cache. Pinning is not sufficient to make the files available offline. After you use the /PIN switch, you must run the CSCCMD command together with the /FILL switch to copy the content of the shared resource to the local cache and to make sure that the shared resource is available offline. The /USERINHERIT option and the /SYSTEMINHERIT]INHERIT option designates how the pin data is inherited. You can use any combination of the pin types.
 - /UNPIN2: \\\\**server**\\**share**\\**path**[/USER] [/SYSTEM] [/USERINHERIT] [/SYSTEMINHERIT] [/RECURSE]  
 - Use this switch to unpin a shared resource or to remove a shared resource from the local cache. If you use this switch with the /RECURSE option, the CSCCMD tool unpins all children of the path. If you use this switch with the /RECURSE2 option, the CSCCMD tool unpins the path and children of the path. You can use any combination of the pin types.
 - /UNPIN2: **filename** /FILELIST [/UNICODE] [/USER] [/SYSTEM] [/USERINHERIT] [/SYSTEMINHERIT] - Use this switch to unpin a specific set of shared resources by using a file. You can use any combination of the pin types.

@@ -13,11 +13,11 @@ _Original KB number:_ &nbsp; 2723596
 
 ## Summary
 
-The properties included in the ISA Segment define how BizTalk Server generates the ISA segment for an X12-encoded interchange. Segment terminator indicates the end of an EDI segment. In an X12 interchange, the segment terminator is defined as the character in the last character position of the ISA segment.
+The properties included in the ISA Segment define how BizTalk Server generates the ISA segment for an X12-encoded interchange. Segment terminator indicates the end of an EDI segment. In an X12 interchange, the segment terminator is defined as the character in the last character position of the ISA segment.
 
 The help file installed with BizTalk Server 2010 includes incorrect information for segment terminator and suffix.
 
-The default value is **~** if the type is `Char`, and **7e** if the type is `Hex`. This data element cannot be left empty. If you do, you will receive an error **Specify a valid value for the separator**. The segment terminator is set along with a suffix setting.
+The default value is **~** if the type is `Char`, and **7e** if the type is `Hex`. This data element cannot be left empty. If you do, you will receive an error **Specify a valid value for the separator**. The segment terminator is set along with a suffix setting.
 
 ## Segment terminator
 
@@ -40,12 +40,12 @@ If you designate a **Suffix**, the Segment terminator data element can't be empt
 The following are ways to configure all combinations in the user interface:
 
 1. **Segment Terminator** set (for example **~**, **A** or **D**) plus **Suffix** - **None**/**CR**/**LF**/**CRLF**.
-2. **Segment Terminator** not set blank, **Suffix** set to **None** - When you apply the setting, the error is **Specify a valid value for the separator**.
+2. **Segment Terminator** not set blank, **Suffix** set to **None** - When you apply the setting, the error is **Specify a valid value for the separator**.
 3. **Segment Terminator** is blank, **Suffix** set to **CR** - To configure this, set **Segment Terminator** to **D (hex)** and set **Suffix** to **None**.
 4. **Segment Terminator** is blank, **Suffix** set to **LF** - To configure this, set **Segment Terminator** to **A (hex)** and set **Suffix** to **None**.
-5. **Segment Terminator** is blank, **Suffix** set to **CR LF** - To configure this, set **Segment Terminator** to **D (hex)** and set **Suffix** to **LF** in User Interface. Essentially, **CR** and **LF** are split into **Segment Terminator** and **Suffix**.
+5. **Segment Terminator** is blank, **Suffix** set to **CR LF** - To configure this, set **Segment Terminator** to **D (hex)** and set **Suffix** to **LF** in User Interface. Essentially, **CR** and **LF** are split into **Segment Terminator** and **Suffix**.
 
 The default remains the same for **Segment terminator** = **~** and **Suffix** = **None**.
 
 > [!NOTE]
-> **Character set and separator** user interface displays **Char** by default. To see the `Hex` value, select **Hex** from the dropdown and the previously entered `Hex` value will be displayed.
+> **Character set and separator** user interface displays **Char** by default. To see the `Hex` value, select **Hex** from the dropdown and the previously entered `Hex` value will be displayed.

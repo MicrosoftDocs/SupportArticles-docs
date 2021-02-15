@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Permissions, access control, and auditing
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
-# We are seeing an error where we are unable to Access the security log
+# We are seeing an error where we are unable to access the security log
 
-This article helps to fix the error where we are unable to Access the security log.
+This article helps to fix the error where we are unable to access the security log.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2751670

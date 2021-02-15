@@ -2,7 +2,7 @@
 title: WebSocketModule isn't loaded in IIS 8.0
 description: This article provides resolutions to enable the WebSocket Protocol feature and avoid the WebSocketModule is not loaded error in IIS 8.0.
 ms.date: 04/15/2020
-ms.prod-support-area-path: WWW modules and features
+ms.prod-support-area-path: WWW modules and features
 ms.technology: iis
 ms.reviewer: piyushjo
 ---

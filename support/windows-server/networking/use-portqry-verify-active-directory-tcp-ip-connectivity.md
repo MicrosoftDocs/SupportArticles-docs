@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: networking
 ---
 # How to use PortQry to troubleshoot Active Directory connectivity issues
 
@@ -96,7 +96,7 @@ This example demonstrates how to use PortQry to determine if the LDAP service is
 
 By default, LDAP is configured to listen to port 389. The example call specifies the server to query using the UDP protocol:
 
-`PortQry -n myserver -p udp -e 389`
+`PortQry -n <fqdn> -p udp -e 389`
 
 PortQry automatically resolves UDP port 389 using the %SystemRoot%\System32\Drivers\\...\Services file included in Windows Server 2003 and later computers. In the example output below, the port resolves to an LDAP service that is active and PortQry reports that the port is LISTENING or FILTERED.
 
@@ -104,11 +104,11 @@ PortQry then sends a formatted LDAP query to which it receives a response. It re
 
 #### Sample output
 
-> C:\\>portqry -n `mydc.reskit.com` -e 389 -p udp
+> C:\\>portqry -n *\<fqdn>* -e 389 -p udp
 >
 > Querying target system called:
 >
-> `mydc.reskit.com`
+> *\<fqdn>*
 >
 > Attempting to resolve name to IP address...
 >
@@ -120,7 +120,7 @@ PortQry then sends a formatted LDAP query to which it receives a response. It re
 >
 > LDAP query response:
 >
-> currentdate: 10/11/2001 23:10:21 (unadjusted GMT)  
+> currentdate: *\<DateTime>* (unadjusted GMT)  
 subschemaSubentry:  
 CN=Aggregate,CN=Schema,CN=Configuration,DC=reskit,DC=com  
 dsServiceName: CN=NTDS  
@@ -138,8 +138,8 @@ supportedLDAPVersion: 3
 supportedLDAPPolicies: MaxPoolThreads  
 highestCommittedUSN: 815431405  
 supportedSASLMechanisms: GSSAPI  
-dnsHostName: `MYDC.reskit.com`  
-ldapServiceName: `reskit.com:mydc$@RESKIT.COM`  
+dnsHostName: *\<HostName>*  
+ldapServiceName: *\<ServiceName>*  
 serverName:  
 CN=MYDC,CN=Servers,CN=EU,CN=Sites,CN=Configuration,DC=reskit,DC=com  
 supportedCapabilities: 1.2.840.113556.1.4.800  
@@ -159,13 +159,13 @@ This example demonstrates how to use PortQry to determine which services or appl
 
 By default, the RPC end point mapper database is configured to listen to port 185. The example call specifies the server to query using the UDP protocol:
 
-`portqry -n mydc.reskit.com -p udp -e 135`
+`portqry -n <fqdn> -p udp -e 135`
 
 #### Sample output
 
 > Querying target system called:
 >
-> `mydc.reskit.com`
+> *\<fqdn>*
 >
 > Attempting to resolve name to IP address...
 >

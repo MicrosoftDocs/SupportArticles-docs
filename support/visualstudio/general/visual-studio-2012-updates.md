@@ -2,7 +2,7 @@
 title: Overview of Visual Studio 2012 updates
 description: This article introduces the updates that were released after Visual Studio 2012 was released.
 ms.date: 04/20/2020
-ms.prod-support-area-path: Integrated development environment (IDE)
+ms.prod-support-area-path: Integrated development environment (IDE)
 ms.reviewer: meyoun
 ---
 # Overview of Visual Studio 2012 updates

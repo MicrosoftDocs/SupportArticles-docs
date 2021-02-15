@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Available Remote Desktop Services updates in Windows Server 2016
 
@@ -102,7 +102,7 @@ February 2018
 - Addresses an issue where Japanese keyboard layout wasn't functioning properly during Remote Assistance session  
 - Addresses an issue where the language bar disappears after closing MSRA connection  
 - Addresses issue where logons to a Remote Desktop VDI Farm fail after the connection broker loses access to the SQL Database for more than two minutes. This causes virtual machines from collections to go to an Unknown state. The Administrator must restart the Remote Desktop Connection Broker service to recover from the failure.
-- Addresses an issue where users can see a black screen instead of the desktop when Intel Graphics is used for acceleration in RDP sharing in Citrix  
+- Addresses an issue where users can see a black screen instead of the desktop when Intel Graphics is used for acceleration in RDP sharing in Citrix.  
 - Addresses issue where some Remote Desktop Protocol (RDP) clients that used an absolute URI (instead of a relative URI) were blocked by the Web Application Proxy (WAP) server from connecting to the Remote Desktop Gateway. This affected RDP clients on iOS, Mac, Android, and the Windows modern RDP client app. The error is "We couldn't connect to the gateway because of an error. If this keeps occurring, ask your admin or tech support for help. Error code: 0x03000008."  
 
 To fix these issues, install [February 22, 2018, Windows Cumulative Update](https://support.microsoft.com/help/4077525).  
@@ -161,7 +161,7 @@ To fix these issues, install [July 18, 2017 Windows Cumulative Update](https://s
 June 2017
 
 - Addressed an issue in which a 2012 R2 (or earlier version) Remote Desktop License Server causes the 2016 Remote Desktop Services Host to crash and stop giving sessions to clients.  
-- Addressed an issue in which Mstsc.exe is missing the **OK** and **Cancel** buttons from Local Devices and Resources in the Norwegian Language P ack.  
+- Addressed an issue in which Mstsc.exe is missing the **OK** and **Cancel** buttons from Local Devices and Resources in the Norwegian Language Pack.  
 
 To resolve these issues, install [June 27, 2017 Windows Cumulative Update](https://support.microsoft.com/help/4022723).  
 
@@ -219,7 +219,7 @@ To resolve this issue, install [September 29, 2016, Windows Cumulative Update](h
 
 General OS updates  
 
-- [KB4093120](https://support.microsoft.com/help/4093120)  Addresses an issue that causes the high contrast theme setting to be applied incorrectly when a user logs in using RDP.  
+- [KB4093120](https://support.microsoft.com/help/4093120) Addresses an issue that causes the high contrast theme setting to be applied incorrectly when a user logs in using RDP.  
 - [KB4093120](https://support.microsoft.com/help/4093120) Addresses an issue that prevents User Profile Disks (UPDs) from loading. This loading failure generates the error "We can't sign into your account", and users receive a temporary profile.  
 - [KB4103720](https://support.microsoft.com/help/4103720) Addresses an issue that may cause an error when connecting to a Remote Desktop server. For more information, see CredSSP updates for CVE-2018-0886.  
 - [KB4103720](https://support.microsoft.com/help/4103720) Addresses an issue that can cause excessive memory usage when using smart cards on a Windows Terminal Server system.  
@@ -231,41 +231,41 @@ General OS updates
 - [KB4338822](https://support.microsoft.com/help/4338822) Addresses an issue that makes Microsoft Outlook unresponsive during remote sessions if the system stays locked after the removal of a smart card.  
 - [KB4343884](https://support.microsoft.com/help/4343884) Addresses an issue that causes svchost.exe to stop working intermittently. This issue occurs when the SessionEnv service is running, which causes a partial load of the user's configuration during a Remote Desktop session.  
 - [KB4343884](https://support.microsoft.com/help/4343884) Addresses an issue when RDP fails due to server exceeding connection limit  
-- [KB4457127](https://support.microsoft.com/help/4457127) Makes the visibility Group Policy for the Settings Page available under User Configuration and Computer Configuration. The GPOs are at the following paths:  
+- [KB4457127](https://support.microsoft.com/help/4457127) Makes the visibility Group Policy for the Settings Page available under User Configuration and Computer Configuration.  
 - [KB4457127](https://support.microsoft.com/help/4457127) Addresses an issue that causes a Remote Desktop Session Host server to occasionally stop responding during login.  
 - [KB4457127](https://support.microsoft.com/help/4457127) Addresses an issue that causes login to fail when using a smart card to log in to a Remote Desktop Server. The error is "STATUS_LOGON_FAILURE".  
 - [KB4088889](https://support.microsoft.com/help/4088889) Addresses issue with system performance that causes logons to become unresponsive with the message "Please wait for the Remote Desktop Configuration" because of a deadlock in the WinRM service.  
 - [KB4077525](https://support.microsoft.com/help/4077525) Addresses an issue where users can see a black screen instead of the desktop when Intel Graphics is used for acceleration in RDP sharing in Citrix (**general os**).
-- [KB4051033](https://support.microsoft.com/help/4051033) - Addressed a token leak in **services.exe** that occurs after you apply update [3175024](https://support.microsoft.com/help/3175024). This results in a kernel session object leak that degrades system performance over time. This especially affects Terminal Server implementations, where more user logons typically occur
-- [KB4038801](https://support.microsoft.com/help/4038801) - Addressed an issue in which console and RDP logons permanently stop responding at "Applying user profile settings" because of a deadlock between DPAPI/LSASS and RDR. After the deadlock occurs, new logons fail until the logon computer is restarted.
-- [KB4038801](https://support.microsoft.com/help/4038801) - Addressed an issue in which the Remote Desktop's idle time-out warning doesn't appear after the idle time elapses.  
-- [KB4034661](https://support.microsoft.com/help/)  - Addressed an issue in which a black screen appears when launching an application on Citrix XenApp that was deployed from Windows Server 2016. For more details, see [CTX225819](https://support.citrix.com/article/CTX225819).  
-- [KB4025334](https://support.microsoft.com/help/4034661)  - Addressed an issue in which a remote desktop connection with Windows 2016 RDS server fails authentication when using smartcards.  
-- [KB4019472](https://support.microsoft.com/help/4019472)  - Addressed an issue that causes a device to crash every time that a user logs off from a remote session by using a Virtual Desktop Agent (VDA).  
-- [KB4013429](https://support.microsoft.com/help/4013429)  - Addressed an issue in which Remote Desktop Servers crash with aStop 0x27in RxSelectAndSwitchPagingFileObject when RDP clients connect and utilize redirected drives, printers, or removable USB drives.  
-- [KB4009938](https://support.microsoft.com/help/4009938)  - Addressed an issue in which u sers cannot connect to Remote Desktop server due to deadlock in connection termination sequence (black screen).  
-- [KB4001885](https://support.microsoft.com/help/4001885)  - Addressed an inability to  log on to an RDP server after some time (days) remotely or from console.  
+- [KB4051033](https://support.microsoft.com/help/4051033) Addressed a token leak in **services.exe** that occurs after you apply update [3175024](https://support.microsoft.com/help/3175024). This results in a kernel session object leak that degrades system performance over time. This especially affects Terminal Server implementations, where more user logons typically occur
+- [KB4038801](https://support.microsoft.com/help/4038801) Addressed an issue in which console and RDP logons permanently stop responding at "Applying user profile settings" because of a deadlock between DPAPI/LSASS and RDR. After the deadlock occurs, new logons fail until the logon computer is restarted.
+- [KB4038801](https://support.microsoft.com/help/4038801) Addressed an issue in which the Remote Desktop's idle time-out warning doesn't appear after the idle time elapses.  
+- [KB4034661](https://support.microsoft.com/help/4034661) Addressed an issue in which a black screen appears when launching an application on Citrix XenApp that was deployed from Windows Server 2016. For more details, see [CTX225819](https://support.citrix.com/article/CTX225819).  
+- [KB4025334](https://support.microsoft.com/help/4034661) Addressed an issue in which a remote desktop connection with Windows 2016 RDS server fails authentication when using smartcards.  
+- [KB4019472](https://support.microsoft.com/help/4019472) Addressed an issue that causes a device to crash every time that a user logs off from a remote session by using a Virtual Desktop Agent (VDA).  
+- [KB4013429](https://support.microsoft.com/help/4013429) Addressed an issue in which Remote Desktop Servers crash with aStop 0x27in RxSelectAndSwitchPagingFileObject when RDP clients connect and utilize redirected drives, printers, or removable USB drives.  
+- [KB4009938](https://support.microsoft.com/help/4009938) Addressed an issue in which u sers cannot connect to Remote Desktop server due to deadlock in connection termination sequence (black screen).  
+- [KB4001885](https://support.microsoft.com/help/4001885) Addressed an inability to  log on to an RDP server after some time (days) remotely or from console.  
 
 Device Redirection & Printing  
 
 - [KB4057142](https://support.microsoft.com/help/4057142) Addressed an issue where RDP USB CD/DVD drive redirection fails with error "This device cannot start. (Code 10).  STATUS_DEVICE_POWER_FAILURE."
-- [KB4038801](https://support.microsoft.com/help/4038801) - Addressed an issue in which redirecting multiple RemoteFX USB devices causes a Stop error.  
-- [KB4038801](https://support.microsoft.com/help/4038801) - Addressed an issue in which using a smart card to log on to a Remote Desktop Server sometimes causes the server to stop responding.
-- [KB4011347](https://support.microsoft.com/help/)  - Addressed an issue in which l andscape print jobs submitted over RDP printer redirection are clipped in v4 print drivers.  
+- [KB4038801](https://support.microsoft.com/help/4038801) Addressed an issue in which redirecting multiple RemoteFX USB devices causes a Stop error.  
+- [KB4038801](https://support.microsoft.com/help/4038801) Addressed an issue in which using a smart card to log on to a Remote Desktop Server sometimes causes the server to stop responding.
+- [KB4011347](https://support.microsoft.com/help/4011347) Addressed an issue in which l andscape print jobs submitted over RDP printer redirection are clipped in v4 print drivers.  
 
 Licensing  
 
-- [KB4457127](https://support.microsoft.com/help/) Addresses an issue that displays the report date as "Unknown" in the Remote Desktop License Manager.
+- [KB4457127](https://support.microsoft.com/help/4457127) Addresses an issue that displays the report date as "Unknown" in the Remote Desktop License Manager.
 - [KB4088889](https://support.microsoft.com/help/4088889) Addressed an issue where Remote Desktop License report is corrupted when it reaches greater than 4Kb size limit.
-- [KB4022723](https://support.microsoft.com/help/)   - Addressed an issue in which a 2012 R2 (or earlier version) Remote Desktop License Server causes the 2016 Remote Desktop Services Host to crash and stop giving sessions to clients.  
+- [KB4022723](https://support.microsoft.com/help/4022723) Addressed an issue in which a 2012 R2 (or earlier version) Remote Desktop License Server causes the 2016 Remote Desktop Services Host to crash and stop giving sessions to clients.  
 
 MultiPoint Services  
 
-- [KB4093120](https://support.microsoft.com/help/) Addresses an issue in Windows Multipoint Server 2016 that may generate the error "The MultiPoint service is not responding on this machine. To fix the issue try restarting the machine."  
+- [KB4093120](https://support.microsoft.com/help/4093120) Addresses an issue in Windows Multipoint Server 2016 that may generate the error "The MultiPoint service is not responding on this machine. To fix the issue try restarting the machine."  
 - [KB4025334](https://support.microsoft.com/help/4025334) Addressed an issue in which Windows Multipoint Server (WMS) 2016 doesn't allow you to configure per device licensing.  
 - [KB4025334](https://support.microsoft.com/help/4025334) Addressed an issue in Windows Multipoint Server 2016 where DisplayToast () fails when using a custom shell.  
-- [KB4019472](https://support.microsoft.com/help/4019472)  - Addressed an issue in which MultiPoint is not supporting Windows 10 resolutions.  
-- [KB4001885](https://support.microsoft.com/help/4001885)  - Addressed an issue in which A rare race condition causes MultiPoint servers to become unresponsive after startup. Users can't log in to any stations.  
+- [KB4019472](https://support.microsoft.com/help/4019472) Addressed an issue in which MultiPoint is not supporting Windows 10 resolutions.  
+- [KB4001885](https://support.microsoft.com/help/4001885) Addressed an issue in which A rare race condition causes MultiPoint servers to become unresponsive after startup. Users can't log in to any stations.  
 
 RemoteApp  
 
@@ -273,24 +273,24 @@ RemoteApp
 - [KB4088889](https://support.microsoft.com/help/4088889) Addresses a race condition in RemoteApp that occurs when an activated RemoteApp window opens behind the previous foreground window.
 - [KB4041688](https://support.microsoft.com/help/4041688) Addressed an issue in which the language bar stays open after closing a RemoteApp application, which prevents sessions from being disconnected.
 - [KB4041688](https://support.microsoft.com/help/4041688) Addressed an issue in which the working directory of RemoteApps on Server 2016 is set to %windir%\System32 regardless of the application's directory.
-- [KB4038801](https://support.microsoft.com/help/4038801) - Addressed RemoteApp display issues that occur when you minimize and restore a RemoteApp to full-screen mode.  
-- [KB4025334](https://support.microsoft.com/help/4025334)  - Addressed an issue in which File Explorer doesn't refresh automatically when using RemoteApps on Windows Server 2016.  
-- [KB4001885](https://support.microsoft.com/help/4001885)  - Addressed an issue in which s ometimes the user is unable to see a RemoteApp window on the client, even though it appears on the server.  
+- [KB4038801](https://support.microsoft.com/help/4038801) Addressed RemoteApp display issues that occur when you minimize and restore a RemoteApp to full-screen mode.  
+- [KB4025334](https://support.microsoft.com/help/4025334) Addressed an issue in which File Explorer doesn't refresh automatically when using RemoteApps on Windows Server 2016.  
+- [KB4001885](https://support.microsoft.com/help/4001885) Addressed an issue in which s ometimes the user is unable to see a RemoteApp window on the client, even though it appears on the server.  
 
 Remote Assistance  
 
 - [KB4103720](https://support.microsoft.com/help/4103720) Addresses an issue when MSRA is missing previously existing option to specify sessionID.  
-- [KB4077525](https://support.microsoft.com/help/4077525) Addresses an issue where the Japanese keyboard layout was not functioning properly during Remote Assistance session  
+- [KB4077525](https://support.microsoft.com/help/4077525) Addresses an issue where the Japanese keyboard layout was not functioning properly during Remote Assistance session.  
 - [KB4077525](https://support.microsoft.com/help/4077525) Addresses an issue where the language bar disappears after closing MSRA connection.  
-- [KB4009938](https://support.microsoft.com/help/4009938)   - Addressed an issue in which the Request Control function doesn't work with Remote Assistance if the user being assisted is on Windows Server 2008 R2 or Windows Server 2012.  
+- [KB4009938](https://support.microsoft.com/help/4009938) Addressed an issue in which the Request Control function doesn't work with Remote Assistance if the user being assisted is on Windows Server 2008 R2 or Windows Server 2012.  
 
 Remote Desktop Client (Mstsc.exe)  
 
 - [KB4093120](https://support.microsoft.com/help/4093120) The Remote Desktop Client (RDP) update will enhance the error message that is presented when an updated client fails to connect to a server that has not been updated.  
 - [KB4103720](https://support.microsoft.com/help/4103720) Addresses an issue that may cause an error when connecting to a Remote Desktop server. For more information, see CredSSP updates for CVE-2018-0886.  
-- [KB4284833](https://support.microsoft.com/help/4284833)  Addresses an issue that causes a connection failure when a Remote Desktop connection doesn't read the bypass list for a proxy that has multiple entries.  
-- [KB4034661](https://support.microsoft.com/help/4034661)  Addressed an issue in Windows 10 1607 where a Remote Desktop client that is trying to connect via an RD gateway can't connect or disconnects intermittently.  
-- [KB4025334](https://support.microsoft.com/help/4025334)  - Addressed an issue in which a n RDP client leaks a USER handle for every Audio redirection.  
+- [KB4284833](https://support.microsoft.com/help/4284833) Addresses an issue that causes a connection failure when a Remote Desktop connection doesn't read the bypass list for a proxy that has multiple entries.  
+- [KB4034661](https://support.microsoft.com/help/4034661) Addressed an issue in Windows 10 1607 where a Remote Desktop client that is trying to connect via an RD gateway can't connect or disconnects intermittently.  
+- [KB4025334](https://support.microsoft.com/help/4025334) Addressed an issue in which a n RDP client leaks a USER handle for every Audio redirection.  
 - [KB4022723](https://support.microsoft.com/help/4022723) Addressed an issue in which Mstsc.exe is missing the **OK**  and **Cancel** buttons from Local Devices and Resources in Norwegian Language Pack.  
 - [KB4015217](https://support.microsoft.com/help/4015217) Addressed an issue that was causing connections (after the first connection request) from a Remote Desktop Client to a Remote Desktop session to fail after upgrading from Windows 10 version 1511 to Windows 10, version 1607.  
 - [KB4001753](https://support.microsoft.com/help/4001753) Addressed a connectivity issue from a 32-bit application to a Remote Desktop Gateway that doesn't have HTTP tunneling enabled.  
@@ -298,7 +298,7 @@ Remote Desktop Client (Mstsc.exe)
 Remote Desktop Connection Broker  
 
 - [KB4077525](https://support.microsoft.com/help/4077525) Addresses issue where logons to a Remote Desktop VDI collection start to fail after a period of server uptime. The Performance Counter Remote Desktop Connection Broker Redirector Counterset/RPC Contexts will show incremental growth during logon hours. When the value reaches 40, new connections to the farm fail or time out.  
-- [KB4077525](https://support.microsoft.com/help/4077525)  Addresses issue where logons to a Remote Desktop VDI Farm fails after the connection broker loses access to the SQL Database for more than two minutes. This causes virtual machines from collections to go to an Unknown state. The Administrator must restart the Remote Desktop Connection Broker service to recover from the failure..  
+- [KB4077525](https://support.microsoft.com/help/4077525) Addresses issue where logons to a Remote Desktop VDI Farm fails after the connection broker loses access to the SQL Database for more than two minutes. This causes virtual machines from collections to go to an Unknown state. The Administrator must restart the Remote Desktop Connection Broker service to recover from the failure..  
 
 Remote Desktop Gateway  
 
@@ -311,7 +311,7 @@ Remote Desktop Gateway
 
 Remote Desktop Virtualization Host  
 
-- [KB4013429](https://support.microsoft.com/help/4013429)  - Addressed an issue in which t he RD Virtualization Host role fails to install on nested VM.  
+- [KB4013429](https://support.microsoft.com/help/4013429) Addressed an issue in which t he RD Virtualization Host role fails to install on nested VM.  
 
 Remote Desktop Web Access  
 

@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4477957
 
 ## Summary
 
-On May 1, 2019, the new era in the Japanese calendar will begin. Microsoft is preparing for these changes and plans to ship updates in each monthly rollup release. This is the first transition from one era to another since January 1989, and also the first in the history of .NET Framework. This article is intended to help developers test and verify how eras work in .NET applications, how applications are affected by the era change, and what you, as a developer, have to do to make sure that your applications handle the upcoming Japanese era changes successfully.
+On May 1, 2019, the new era in the Japanese calendar will begin. Microsoft is preparing for these changes and plans to ship updates in each monthly rollup release. This is the first transition from one era to another since January 1989, and also the first in the history of .NET Framework. This article is intended to help developers test and verify how eras work in .NET applications, how applications are affected by the era change, and what you, as a developer, have to do to make sure that your applications handle the upcoming Japanese era changes successfully.
 
 For more information about Windows updates for the Japanese era change, see [KB 4469068](https://support.microsoft.com/help/4469068).
 
@@ -33,14 +33,14 @@ The following releases contain the Japanese era updates for .NET Framework. They
 
 ### Knowledge base articles by .NET Framework version for Japanese era updates
 
-The servicing updates that are listed in the following table contain all the Japanese era updates for .NET Framework that were already included in the previously released updates. The servicing updates also contain a new quality update that removes the dependency on single quotation marks to output the Gannen character in Japanese era formatting, so that either :::no-loc text="\"y年\""::: or :::no-loc text="\"y'年'\""::: of the custom date and time format string enable .NET Framework to format year number 1 to :::no-loc text="元":::. These updates are available on Windows Update, Windows Server Update Service (WSUS), and Windows Update Catalog.
+The servicing updates that are listed in the following table contain all the Japanese era updates for .NET Framework that were already included in the previously released updates. The servicing updates also contain a new quality update that removes the dependency on single quotation marks to output the Gannen character in Japanese era formatting, so that either :::no-loc text="\"y年\""::: or :::no-loc text="\"y'年'\""::: of the custom date and time format string enable .NET Framework to format year number 1 to :::no-loc text="元":::. These updates are available on Windows Update, Windows Server Update Service (WSUS), and Windows Update Catalog.
 
 |Windows 10, version 1507|Windows 10, version 1607 (Anniversary Update) / Windows Server 2016|Windows 10, version 1703 (Creators Update)|Windows 10, version 1709 (Fall Creators Update)|Windows 10, version 1803 (April 2018 Update)|Windows 10, version 1809 (October 2018 Update) / Windows Server 2019|
 |---|---|---|---|---|---|
 |[4489872](https://support.microsoft.com/help/4489872)|[4489889](https://support.microsoft.com/help/4489889)|[4489888](https://support.microsoft.com/help/4489888)|[4489890](https://support.microsoft.com/help/4489890)|[4489894](https://support.microsoft.com/help/4489894)|[4489192](https://support.microsoft.com/help/4489192)|
 |||||||
 
-Microsoft released a .NET framework security and quality rollup for Windows 8.1 and earlier supported versions of Windows in May 2019 as below. All security and quality rollups released later to these updates will also contain Japanese era updates.
+Microsoft released a .NET framework security and quality rollup for Windows 8.1 and earlier supported versions of Windows in May 2019 as below. All security and quality rollups released later to these updates will also contain Japanese era updates.
 
 |.NET Framework|Windows Server 2008|Windows 7 / Windows Server 2008 R2|Windows Server 2012|Windows 8.1 / Windows Server 2012 R2|
 |---|---|---|---|---|
@@ -50,15 +50,15 @@ Microsoft released a .NET framework security and quality rollup for Windows 8.1
 ||||||
 
 > [!NOTE]
-> Microsoft did not release a .NET Framework security and quality rollup for Windows 8.1 and earlier supported versions of Windows in March 2019. If you want to deploy the latest updates for .NET Framework that contain all the Japanese era updates for Windows 8.1 and earlier supported versions of Windows, see the [Changes for Security Only update customers](#changes-for-security-only-update-customers) section.
+> Microsoft did not release a .NET Framework security and quality rollup for Windows 8.1 and earlier supported versions of Windows in March 2019. If you want to deploy the latest updates for .NET Framework that contain all the Japanese era updates for Windows 8.1 and earlier supported versions of Windows, see the [Changes for Security Only update customers](#changes-for-security-only-update-customers) section.
 
 ## Changes for Security Only update customers
 
 This section is for customers who rely on the Security Only (SO) updates for Windows 8.1 and earlier versions of supported Windows.
 
-Similar to the .NET Framework updates for Windows 10 that are listed in the previous section, the updates that are listed in the following table contain all the Japanese era updates for .NET Framework that were already included in previously released updates and a new quality update to remove the dependency on using single quotation marks to output the Gannen character in Japanese era formatting.
+Similar to the .NET Framework updates for Windows 10 that are listed in the previous section, the updates that are listed in the following table contain all the Japanese era updates for .NET Framework that were already included in previously released updates and a new quality update to remove the dependency on using single quotation marks to output the Gannen character in Japanese era formatting.
 
-These updates don't include any new security updates or new additional quality and reliability improvements that were not already included in previously released updates, except the update for the single quotation mark issue. Therefore, users who rely on the Security Only (SO) updates and the Monthly Rollup (MO) updates for Windows 8.1 and earlier supported versions of Windows can also select these updates for the new Japanese era. These updates are available through Windows Server Update Service (WSUS) and Windows Update Catalog only.
+These updates don't include any new security updates or new additional quality and reliability improvements that were not already included in previously released updates, except the update for the single quotation mark issue. Therefore, users who rely on the Security Only (SO) updates and the Monthly Rollup (MO) updates for Windows 8.1 and earlier supported versions of Windows can also select these updates for the new Japanese era. These updates are available through Windows Server Update Service (WSUS) and Windows Update Catalog only.
 
 |.NET Framework|Windows Server 2008|Windows 7 / Windows Server 2008 R2|Windows Server 2012|Windows 8.1 / Windows Server 2012 R2|
 |---|---|---|---|---|
@@ -68,19 +68,19 @@ These updates don't include any new security updates or new additional quality a
 ||||||
 
 > [!IMPORTANT]
-> After you install update 4488669 on Windows 7 Service Pack 1 (SP1), Windows Server 2008 R2 Service Pack 1 (SP1), or Windows Server 2008 Service Pack 2 (SP2), .NET applications may not start after you upgrade .NET Framework from version 4.5.2 to version 4.6 or a later version. Microsoft is working on a resolution to this issue and will provide an update in an upcoming release. For more information, see [KB 4488669](https://support.microsoft.com/help/4488669).
+> After you install update 4488669 on Windows 7 Service Pack 1 (SP1), Windows Server 2008 R2 Service Pack 1 (SP1), or Windows Server 2008 Service Pack 2 (SP2), .NET applications may not start after you upgrade .NET Framework from version 4.5.2 to version 4.6 or a later version. Microsoft is working on a resolution to this issue and will provide an update in an upcoming release. For more information, see [KB 4488669](https://support.microsoft.com/help/4488669).
 
 ## Test the new Japanese era on .NET Framework
 
-For all the versions of .NET Framework in the Knowledge Base articles table, and also for .NET Core running on Windows, calendar era information is provided by the Windows operating system and retrieved from the system registry when you apply the updates for .NET Framework. To make it easier for you to prepare for the Japanese era change, you can control when you add the placeholder registry entry to your systems, and choose the timing that meets your needs. Currently, the placeholder registry for the Windows operating system is supported for the following systems:
+For all the versions of .NET Framework in the Knowledge Base articles table, and also for .NET Core running on Windows, calendar era information is provided by the Windows operating system and retrieved from the system registry when you apply the updates for .NET Framework. To make it easier for you to prepare for the Japanese era change, you can control when you add the placeholder registry entry to your systems, and choose the timing that meets your needs. Currently, the placeholder registry for the Windows operating system is supported for the following systems:
 
 - Windows Client: Windows 7 SP1 and later
 - Windows Server: Windows Server 2008 R2 SP1 and later
 
 > [!NOTE]
-> We will offer additional new Japanese era updates for Windows Server 2008 SP2 and Windows Embedded & IoT, Windows Embedded Compact 7 and later versions, Windows Embedded Standard/POSReady 7 and later versions, and Windows 10 IoT.
+> We will offer additional new Japanese era updates for Windows Server 2008 SP2 and Windows Embedded & IoT, Windows Embedded Compact 7 and later versions, Windows Embedded Standard/POSReady 7 and later versions, and Windows 10 IoT.
 
-An update to Windows will add the new era value to the registry after the era name and abbreviated era name are known. .NET on Windows will automatically reflect this update.
+An update to Windows will add the new era value to the registry after the era name and abbreviated era name are known. .NET on Windows will automatically reflect this update.
 
 ## Recommended test scenarios to cover
 
@@ -94,7 +94,7 @@ An update to Windows will add the new era value to the registry after the era n
 
     This test scenario is to verify the Gannen (:::no-loc text="元年":::) convention in formatting operations as the first year of a new Japanese calendar era.
 
-    By default, .NET adopts the Gannen (:::no-loc text="元年":::) convention in formatting operations. You can restore the previous behavior. That behavior always represents the year as "1" instead of as Gannen (:::no-loc text="元年":::). To do this, set the following value to **true**:
+    By default, .NET adopts the Gannen (:::no-loc text="元年":::) convention in formatting operations. You can restore the previous behavior. That behavior always represents the year as "1" instead of as Gannen (:::no-loc text="元年":::). To do this, set the following value to **true**:
 
     `Switch.System.Globalization.FormatJapaneseFirstYearAsANumber`
 
@@ -136,4 +136,4 @@ Customers need only install the latest update listed above in the [Knowledge Bas
 
 - Handling a new era in the Japanese calendar in .NET - [.NET Blog](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/)
 - Using the Registry to Test the New Japanese era on Windows - [August 2018 blog](https://blogs.msdn.microsoft.com/shawnste/2018/08/07/using-the-registry-to-test-the-new-japanese-era-on-windows/)
-- Gannen vs Ichinen - [November 2018 blog](/archive/blogs/shawnste/gannen-vs-ichinen)
+- Gannen vs Ichinen - [November 2018 blog](/archive/blogs/shawnste/gannen-vs-ichinen)

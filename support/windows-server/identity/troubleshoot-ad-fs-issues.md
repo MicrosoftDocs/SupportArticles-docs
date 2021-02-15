@@ -11,13 +11,13 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, abizerh, fszita, meerak
 ms.prod-support-area-path: Active Directory Federation Services (AD FS)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Troubleshoot AD FS issues in Azure Active Directory and Office 365
 
 This article discusses workflow troubleshooting for authentication issues for federated users in Azure Active Directory or Office 365.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3079872
 
 ## Symptoms
@@ -242,7 +242,7 @@ _Original KB number:_ &nbsp; 3079872
 
     7. The **Extended Protection** option for Windows Authentication is enabled for the AD FS or LS virtual directory. It may cause issues with specific browsers. Sometimes you may see AD FS repeatedly prompting for credentials, and it might be related to the Extended protection setting that's enabled for Windows Authentication for the AD FS or LS application in IIS.
 
-        :::image type="content" source="./media/troubleshoot-ad-fs-issues/extended-protection .png" alt-text="Enable Extended Protection option.":::
+        :::image type="content" source="./media/troubleshoot-ad-fs-issues/extended-protection.png" alt-text="Enable Extended Protection option.":::
 
         When Extended Protection for authentication is enabled, authentication requests are bound to both the Service Principal Names (SPNs) of the server to which the client tries to connect and to the outer Transport Layer Security (TLS) channel over which Integrated Windows Authentication occurs. Extended protection enhances the existing Windows Authentication functionality to mitigate authentication relays or "man in the middle" attacks. However, certain browsers don't work with the Extended protection setting; instead they repeatedly prompt for credentials and then deny access. Disabling Extended protection helps in this scenario.
 

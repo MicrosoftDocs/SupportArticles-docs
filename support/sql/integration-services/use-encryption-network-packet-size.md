@@ -27,11 +27,11 @@ In this scenario, you will notice the following:
   > The SaveToSQLServer method has encountered OLE DB error code 0x80004005 (Communication link failure).The SQL statement that was issued has failed.  
 
   > [!NOTE]
-  > You also run into the above error message when saving maintenance plans created in SQL Server Management Studio as SSIS packages to MSDB databases since that operation inherently uses encryption for connections to SQL Server.
+  > You also run into the above error message when saving maintenance plans created in SQL Server Management Studio as SSIS packages to MSDB databases since that operation inherently uses encryption for connections to SQL Server.
 
 - Data collector feature in SQL Server that uses SSIS, runs into various issues as noted below:
 
-  - A Data Collection Set job reports the following errors in the Job History:  
+  - A Data Collection Set job reports the following errors in the Job History:
 
   > dcexec: Error: Internal error at Main (Reason: The system cannot find the file specified).  
 dcexec: Error: Internal error at Main (Reason: The handle is invalid).
@@ -42,7 +42,7 @@ dcexec: Error: Internal error at Main (Reason: The handle is invalid).
 
 If you review the Data Collector logs you will find an error message similar to the following:
 
-> SSIS error. Component name: TaskForCollectionItem_1, Code: -1073602332, Subcomponent: (null), Description: Error 0xC0014062 while preparing to load the package. The LoadFromSQLServer method has encountered OLE DB error code 0x80004005 (Communication link failure).  The SQL statement that was issued has failed.
+> SSIS error. Component name: TaskForCollectionItem_1, Code: -1073602332, Subcomponent: (null), Description: Error 0xC0014062 while preparing to load the package. The LoadFromSQLServer method has encountered OLE DB error code 0x80004005 (Communication link failure). The SQL statement that was issued has failed.
 
 The problem could happen with any operation that uses either [Application.LoadFromSqlServer(String, String, String, String, IDTSEvents) Method](/dotnet/api/microsoft.sqlserver.dts.runtime.application.loadfromsqlserver) or [Application.SaveToSqlServer(Package, IDTSEvents, String, String, String) Method](/dotnet/api/microsoft.sqlserver.dts.runtime.application.savetosqlserver) methods when both the conditions (encryption and large packet size) discussed in this section are true.
 
@@ -63,7 +63,7 @@ RECONFIGURE WITH OVERRIDE
 GO
 ```
 
-The network packet size can also be altered via the Server Properties page in Object Explorer. Select the **Advanced** option and type in the new value for **Network Packet Size** and click **OK**.
+The network packet size can also be altered via the Server Properties page in Object Explorer. Select the **Advanced** option and type in the new value for **Network Packet Size** and click **OK**.
 
 > [!NOTE]
 > You do not need to restart SQL Server for the change to be effective. After this setting is changed, all new connections receive the new value.
@@ -84,10 +84,10 @@ GO
 
 2. Set the **Network Packet Size** to a value greater than 16K.
 
-3. Right click on **Data Collection** in **Object Explorer** (OE) and **Disable Data Collection**.
+3. Right click on **Data Collection** in **Object Explorer** (OE) and **Disable Data Collection**.
 
 4. Right click on **Data Collection** in OE and select **Enable Data Collection**.
 
-5. Right click on **Server Activity** in the collection sets and select **Start Data Collection Set**.
+5. Right click on **Server Activity** in the collection sets and select **Start Data Collection Set**.
 
 6. To get the error, right click on **Server Activity** and select **Collect and Upload Now**. (The DC logs show the error in detail).

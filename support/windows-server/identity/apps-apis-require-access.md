@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davemm
 ms.prod-support-area-path: User, computer, group, and object management
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Some applications and APIs require access to authorization information on account objects
 
@@ -52,8 +52,6 @@ If the domain is in pre-Windows 2000 compatibility access mode, the **Everyone**
 
 If the domain isn't in pre-Windows 2000 compatibility access mode, you may have to enable certain applications to read the TGGAU. Because the **Windows Authorization Access Group** doesn't exist on Windows 2000, it's recommended that you create a domain local group for this purpose, and that you add the user or computer account that requires access to the TGGAU attribute to that group. This group would have to be given access to the `tokenGroupsGlobalAndUniversal` attribute on user objects, on computer objects, and on `iNetOrgPerson` objects.
 
-For more information about how to do it by using a sample script, see [How to programmatically apply access permissions for Windows Server 2003 built-in groups in the Active Directory directory service](https://support.microsoft.com/help/331947).
-
 ### Mixed mode domains and upgraded domains
 
 When a Windows Server 2003 domain controller is added to a Windows 2000 domain, the access compatibility selection that was previously selected isn't changed. So mixed mode domains and domains that were upgraded to Windows Server 2003 that were in pre-Windows 2000 compatibility access mode continue to have the **Everyone** group in the **Pre-Windows 2000 Compatibility Access** group. Additionally, the **Everyone** group still has access to the TGGAU attribute. In this mode, applications and functions have access to TGGAU.
@@ -61,7 +59,7 @@ When a Windows Server 2003 domain controller is added to a Windows 2000 domain, 
 If the mixed mode domain isn't in pre-Windows 2000 compatibility access mode, you can grant permissions by means of the WAA group:
 
 - The WAA group is automatically created when a Windows Server 2003 domain controller is promoted to the Floating Single Master Operations Server.
-- The WAA group isn't automatically granted access to the TGGAU attribute on mixed-mode domains and on upgraded domains. For more information about a script that demonstrates how to apply these permissions, see [How to programmatically apply access permissions for Windows Server 2003 built-in groups in the Active Directory directory service](https://support.microsoft.com/help/331947).
+- The WAA group isn't automatically granted access to the TGGAU attribute on mixed-mode domains and on upgraded domains.
 
 After the Windows Authorization Access (WAA) group has access to the TGGAU attribute, you can place the accounts that require access in the WAA group.
 

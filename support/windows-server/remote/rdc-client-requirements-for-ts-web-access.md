@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Application compatibility
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # RDC client requirements for Terminal Services Web Access
 
@@ -91,7 +91,7 @@ If you are not an administrator, contact the system administrator if you have pr
 
 ### Related Topic
 
-- For more information about security update for Remote Desktop Client version 6.0 and 6.1, see Microsoft Knowledge Base article [956744: MS09-044: Description of the security update for Remote Desktop Client version 6.0 and 6.1: August 11, 2009](https://support.microsoft.com/KB/956744)  
+- For more information about security update for Remote Desktop Client version 6.0 and 6.1, see Microsoft Knowledge Base article [956744: MS09-044: Description of the security update for Remote Desktop Client version 6.0 and 6.1: August 11, 2009](https://support.microsoft.com/KB/956744).  
 - Depending on your version of Windows Server, visit one of the following:
   - The [Remote Desktop Services](https://technet.microsoft.com/windowsserver/ee236407.aspx) home page (Windows Server 2008 R2) on the Windows Server TechCenter.
   - The [Terminal Services](https://technet.microsoft.com/library/cc754746%28WS.10%29.aspx) home page (Windows Server 2008) on the Windows Server TechCenter.

@@ -7,7 +7,7 @@ ms.topic: how-to
 ---
 # Use Visual C# to store and retrieve custom information from an application configuration file
 
-This article introduces how to store custom information from a configuration file that you can retrieve later during run time by its associated application. This is helpful when you must define data that is associated with an application.
+This article introduces how to store custom information from a configuration file that you can retrieve later during run time by its associated application. It's helpful when you must define data that's associated with an application.
 
 _Original product version:_ &nbsp; Visual C#  
 _Original KB number:_ &nbsp; 815786
@@ -75,7 +75,7 @@ To create a console application that reads the contents of an associated configu
     using System.Collections.Specialized;
     ```
 
-10. Add a reference to *System.Configuration.dll*. To do this, follow these steps:
+10. Add a reference to *System.Configuration.dll* by following these steps:
     1. On the **Project** menu, select **Add Reference**.
     2. In the **Add Reference** dialog box, select the **.NET** tab.
     3. Find and select the Component Name of `System.Configuration`.
@@ -110,7 +110,7 @@ To create a console application that reads the contents of an associated configu
 
 15. The `AllKeys` property of `NameValueCollection` references a string array that has an entry for each key that the application retrieves. Use a foreach construction to iterate through the `AllKeys` array to access each key that the application retrieves. Each key entry in `AllKeys` is a string data type.
 
-    Inside the `foreach` construction, use `Console.WriteLine` to display the key and its associated value in the Console window. The current key that the application processes is in `s`. Use this as an index in the `sAllNameValueCollection` to obtain its associated value.
+    Inside the `foreach` construction, use `Console.WriteLine` to display the key and its associated value in the Console window. The current key that the application processes is in `s`. Use it as an index in the `sAllNameValueCollection` to obtain its associated value.
 
     ```csharp
      foreach (string s in sAll.AllKeys)
@@ -186,7 +186,7 @@ Key: Key2 Value:2
 - You must use the following syntax for the configuration file name:  
     \<ApplicationName>.\<ApplicationType>.config
 
-    Where \<ApplicationName> is the name of the application. \<ApplicationType> is the type of application (for example, .exe), and .config is the required suffix.
+    Where \<ApplicationName> is the name of the application. \<ApplicationType> is the type of application, such as `.exe`. And `.config` is the required suffix.
 
 ## References
 

@@ -48,5 +48,5 @@ To fix the issue, follow these steps on the WSUS server:
    > \<add key="maxInstalledPrerequisites" value="400"/>
 
 4. Change the value from **400** to **800**.
-5. Save the web.config file.
+5. Save the web.config file.
 6. Run `IISReset`.

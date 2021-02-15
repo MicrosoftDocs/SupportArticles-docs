@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # A black screen may appear while sign-in by using remote desktop
 
@@ -30,13 +30,13 @@ While sign in into a remote server by using remote desktop, the following issues
 
 1. A slow sign-in process.
 
-2. A black screen appears for a while, until the regular desktop appear.
+2. A black screen appears for a while, until the regular desktop appears.
 
 ## Resolution
 
 1. Disable the use of **Bitmap Caching** on the Remote Desktop Protocol (RDP) client.
 
-2. Verity that the server, client, and the network equipment using the "**MTU**" size.
+2. Verify that the server, client, and the network equipment using the "**MTU**" size.
 
 ## More information
 
@@ -45,4 +45,3 @@ Configure bitmap caching
 Troubleshooting Specific Remote Desktop problems.
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]
-

@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, larryga
 ms.prod-support-area-path: No Boot (not BugChecks)
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
-# How to troubleshoot the "NTLDR Is Missing" error message
+# How to troubleshoot the "NTLDR is missing" error message
 
-This article describes how to troubleshoot the "NTLDR Is Missing" error message.
+This article describes how to troubleshoot the "NTLDR is missing" error message.
 
 _Original product version:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 318728
@@ -27,7 +27,7 @@ This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 
 
 This step-by-step article describes methods that you can use to troubleshoot the "NTLDR Is Missing" error message that you may receive when you try to start Microsoft Windows 2000.
 
-### How to Troubleshoot the "NTLDR Is Missing" Error Message
+### How to troubleshoot the "NTLDR is missing" error message
 
 When you start your Windows 2000-based computer, you may receive the following error message:  
 >NTLDR is missing  
@@ -42,7 +42,7 @@ To resolve this issue, verify that the BIOS on your computer is current, and the
 > [!IMPORTANT]
 > Microsoft recommends that you fully back up your data on a regular basis. This is the best defense against data loss, and it must be a part of any disaster recovery plan.
 
-#### Verify That the BIOS on the Computer Is Current
+#### Verify that the BIOS on the computer is current
 
 Make sure that the latest revision for BIOS is installed on the computer. Contact the computer manufacturer to inquire about how to obtain, and then install the latest BIOS update that is available for the computer.
 
@@ -50,7 +50,7 @@ For information about how to configure and how to verify the correct BIOS settin
 
 To repair the Windows startup environment, use one or more of the following methods, as appropriate to your situation.
 
-#### Method 1: Use a Boot Disk to Start the Computer
+#### Method 1: Use a boot disk to start the computer
 
 1. Create a Windows 2000 boot disk that contains the following files:  
 Ntldr  
@@ -155,7 +155,7 @@ installation you want to repair.
 
         Setup examines the disks, and then completes the repair process.  
 
-#### If Setup Cannot Locate Windows 2000
+#### If setup cannot locate Windows 2000
 
 If you do not have a Windows 2000 Emergency Repair Disk, and if Setup cannot locate the Windows 2000 installation, follow these steps:
 

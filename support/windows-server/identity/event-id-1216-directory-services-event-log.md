@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory Lightweight Directory Services (AD LDS) and Active Directory Application Mode (ADAM)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Numerous "Event ID 1216" Events in Directory Services Event Log
 
@@ -32,8 +32,8 @@ You may find multiple instances of the following entry in the Directory Services
 Event Source:NTDS LDAP  
 Event Category:LDAP Interface  
 Event ID:1216  
-Date:11/19/2000  
-Time:9:12:58 PM  
+Date:*\<DateTime>*  
+Time:*\<DateTime>*  
 User:N/A  
 Computer:Computer  
 Description:  

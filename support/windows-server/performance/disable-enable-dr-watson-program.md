@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Blue Screen/Bugcheck
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Disable or enable Dr. Watson for Windows
 
@@ -33,7 +33,7 @@ _Original KB number:_ &nbsp; 188296
 2. Locate and then click the registry key: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\AeDebug`.
 
     > [!NOTE]
-    > Steps three and four are optional, However, they are necessary if you want to restore the default use of Dr. Watson.
+    > Steps three and four are optional. However, they are necessary if you want to restore the default use of Dr. Watson.
 
 3. Click the **AeDebug** key, and then click **Export Registry File** on the **Registry** menu.
 
@@ -56,7 +56,7 @@ Registry entries for debugger programs are located in the **AeDebug** key in Win
 
 ## Enable Dr. Watson
 
-1. At a command prompt, type the `drwtsn32 -i` command, and then press ENTER:
+1. At a command prompt, type the `drwtsn32 -i` command, and then press ENTER.
 
 2. Double-click the .reg file that you created in steps three and four that were discussed earlier.
 

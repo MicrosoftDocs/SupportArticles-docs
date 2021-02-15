@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4475751
 
 ## Summary
 
-If you install Microsoft SQL Server on Linux by using the mssql-conf Setup tool, and if you purchased the appropriate license through the Volume Licensing Service Center (VLSC), you can select one of the appropriate PAID options from among the following SQL Server editions:
+If you install Microsoft SQL Server on Linux by using the mssql-conf Setup tool, and if you purchased the appropriate license through the Volume Licensing Service Center (VLSC), you can select one of the appropriate PAID options from among the following SQL Server editions:
 
 - Evaluation (free, no production use rights, 180-day limit)
 - Developer (free, no production use rights)
@@ -32,7 +32,7 @@ For more information, see the following sections from [SQL Server on Linux Frequ
 
 **How does licensing work on Linux?**  
 
-SQL Server is licensed the same way for both Windows and Linux. You select the platform of your choice during the licensing process. For more information, see [How to license SQL Server](https://www.microsoft.com/sql-server/sql-server-2017?rtc=1).
+SQL Server is licensed the same way for both Windows and Linux. You select the platform of your choice during the licensing process. For more information, see [How to license SQL Server](https://www.microsoft.com/sql-server/sql-server-2017?rtc=1).
 
 **Which edition of SQL Server should I choose if I have already purchased it?**  
 
@@ -56,5 +56,5 @@ Choose an edition of SQL Server:
 
 - I bought a license through a retail sales channel and have a product key to enter.
 
-If you obtained your license through Volume Licensing as part of an Enterprise Agreement or through your MSDN subscription, you must select from among options 4 through 7.
+If you obtained your license through Volume Licensing as part of an Enterprise Agreement or through your MSDN subscription, you must select from among options 4 through 7.
 If you purchased a Standard edition through a retail channel, you must select option 8.

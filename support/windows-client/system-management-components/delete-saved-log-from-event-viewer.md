@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Event Viewer
-ms.technology: SysManagementComponents
+ms.technology: windows-client-system-management-components
 ---
 # How to delete "Saved Logs" from the Event Viewer
 

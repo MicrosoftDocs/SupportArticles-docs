@@ -1,6 +1,6 @@
 ---
-title: The Directory is not empty
-description: Provides a solution to an issue when you import a saved GPO using GPMC.
+title: Importing a GPO using GPMC fails with an error (The Directory is not empty)
+description: Provides solutions to an issue when you import a saved GPO using GPMC.
 ms.date: 09/15/2020
 author: Deland-Han 
 ms.author: delhan
@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle, oweindl
 ms.prod-support-area-path: Group Policy management - GPMC or AGPM
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
-# Importing a GPO using GPMC fails with The Directory is not empty
+# Importing a GPO using GPMC fails with "The Directory is not empty"
 
-This article provides a solution to an issue when you import a saved GPO using Group Policy Management Console (GPMC).
+This article provides solutions to an issue where importing a saved GPO using Group Policy Management Console (GPMC) fails.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2667462
@@ -34,14 +34,17 @@ As the Import is done on the SysVol share, DFSR replication might interfere with
 
 To prevent the conflicting operations from occurring, use DFSRDIAG.EXE to suspend replication on the DC the GPMC import is happening on. The command requires the user to specify the Replication Group name, the Partner name (in this case the DC used for the import is the partner) and the amount of time in minutes to suspend replication. DFSR will automatically resume replication once the number of minutes specified has elapsed.
 
-1. Open an administrative command prompt
-2. Run this command DFSRDIAG StopNow /rgname:"Domain System Volume" /partner:\<DcName> /time:\<number of minutes to suspend replication>
-3. Import the Group Policy
+1. Open an administrative Command Prompt window.
+2. Run this command: `DFSRDIAG StopNow /rgname:"Domain System Volume" /partner:<DcName> /time:<number of minutes to suspend replication>`.
+
+    > [!NOTE]
+    > In this command, \<*DcName*> represents the domain controller name, and \<*number of minutes to suspend replication*> represents how long replication is suspended.
+3. Import the Group Policy.
 
 > [!NOTE]
 > DFSR will log event 5106 when replication is stopped and again when it resumes. You can use these events to monitor the service state.
 
-Event 5106 when replication is paused
+Event 5106 when replication is paused:
 
 > Log Name: DFS Replication  
 Source: DFSR  
@@ -61,7 +64,7 @@ Duration, in minutes, for current mode: 5
 Connection ID: 79E6D60D-6044-4775-A9BE-D98DAF557BD6  
 Replication Group ID: Domain System Volume
 
-Event 5106 when replication is Resumed
+Event 5106 when replication is Resumed:
 
 > Log Name: DFS Replication  
 Source: DFSR  
@@ -83,24 +86,22 @@ Replication Group ID: Domain System Volume
 
 ## Resolution 2
 
-To resolve the issue, in case the import needs to happen more often, add a filter for DFSR to exclude the tempory directories from replication. These temporary directories are:
+To resolve the issue, in case the import needs to happen more often, add a filter for DFSR to exclude the temporary directories from replication. These temporary directories are:
 
 - MachineOld
 - UserOld
 - MachineStaging
 - UserStaging
-- AdmOldTo modify the DFSR filter, edit this object in AD as mentioned below:
+- AdmOld
 
-```console
+To modify the DFSR filter, edit this object in AD as mentioned as follows:
+
 CN=SYSVOL Share,CN=Content,CN=Domain System Volume,CN=DFSR-GlobalSettings,CN=System,DC=Contoso,DC=Com
-```
 
 and modify the msdfsr-directoryfilter attribute.
 
 Append the five directories to the end of the already existing exclusions, it should look like this:
 
-```console
 DO_NOT_REMOVE_NtFrs_PreInstall_Directory,NtFrs_PreExisting___See_EventLog,MachineOld,UserOld,MachineStaging,UserStaging,AdmOld
-```
 
-To make DFSR read the new settings from AD, run "dfsrdiag PollAD".
+To make DFSR read the new settings from AD, run `dfsrdiag PollAD`.

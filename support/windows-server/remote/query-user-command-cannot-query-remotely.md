@@ -11,9 +11,9 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Remote desktop sessions
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
-# Query User command does not query Information from Remote Server
+# Query user command does not query information from remote server
 
 This article provides help to fix an issue where the `query user` command doesn't query information from a remote server.
 

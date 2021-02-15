@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, apurvash, justinha, justintu
 ms.prod-support-area-path: User, computer, group, and object management
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 8589: The DS cannot derive a service principal name (SPN)
 
@@ -59,7 +59,7 @@ You will see any of the following errors/warning when troubleshooting Active Dir
 
     > An Warning Event occurred. EventID: 0x80000785
     >
-    > Time Generated: 07/21/2010 18:25:37
+    > Time Generated: *\<DateTime>*
     >
     > Event String: The attempt to establish a replication link for the following writable directory partition failed.  
     Directory partition:  
@@ -222,9 +222,9 @@ Example Scenario
 
     > Liverpool\LIVCONTOSODCDSA Options: IS_GC  
     Site Options: (none)  
-    DSA object GUID: 139af056-538d-4bea-a78d-9ba81d9a0403
+    DSA object GUID: *\<GUID>*
     >
-    > DSA invocationID: e166f5b7-5adc-4670-b147-783ae1850263
+    > DSA invocationID: *\<InvocationID>*
     >
     > ==== INBOUND NEIGHBORS ======================================
     >
@@ -232,17 +232,17 @@ Example Scenario
     >
     > Charlotte\CONTOSOROOTDC1 via RPC
     >
-    > DSA object GUID: bd630d6d-f6c1-4958-971d-7e4671c3f93a
+    > DSA object GUID: *\<GUID>*
     >
-    > Last attempt @ 2012-03-08 12:43:05 was successful.
+    > Last attempt @ *\<DateTime>* was successful.
     >
     > CN=Configuration,DC=Contoso,DC=com
     >
     > Houston\5THWARDCORPDC via RPC
     >
-    > DSA object GUID: 1eb475f2-1265-46af-a04c-be48aea706b0
+    > DSA object GUID: *\<GUID>*
     >
-    > Last attempt @ 2012-03-08 12:31:21 failed, result 8589 (0x218d):
+    > Last attempt @ *\<DateTime>* failed, result 8589 (0x218d):
     >
     > The DS cannot derive a service principal name (SPN) with which to mutually authenticate the target server because the corresponding server object in the local DS database has no serverReference attribute.
     >
@@ -256,7 +256,7 @@ Directory Services Event Log:
 
 > Log Name: Directory Service  
 Source: Microsoft-Windows-ActiveDirectory_DomainService  
-Date: 3/8/2012 12:31:21 PM  
+Date: *\<DateTime>*  
 Event ID: 1411  
 Task Category: DS RPC Client  
 Level: Error  
@@ -267,7 +267,7 @@ Description:
 Active Directory Domain Services failed to construct a mutual authentication service principal name (SPN) for the following directory service.  
 >
 > Directory service:
-3dab7f9b-92e7-4391-b8db-71df532c1493._msdcs.Contoso.com  
+*\<GUID>*._msdcs.Contoso.com  
 >
 > The call was denied. Communication with this directory service might be affected.
 >

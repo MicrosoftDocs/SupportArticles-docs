@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 2019689
 
 ## Symptoms
 
-You have a Web site that is hosted on IIS 7.0 or later versions. When you browse to dynamic content in the Web site by using a Web browser, you may receive an error message that resembles the following:
+You have a Web site that is hosted on IIS 7.0 or later versions. When you browse to dynamic content in the Web site by using a Web browser, you may receive an error message that resembles the following:
 
 > Error Summary  
 HTTP Error 404.17 - Not Found  
@@ -34,13 +34,13 @@ Logon User Anonymous
 
 This error occurs because the HTTP Handler configured to handle the request has certain preconditions set, but its Application pool does not meet some or all of these preconditions. This causes the static file handler to be used to process the request instead. The processing of the request then fails and the **404.17** status returned because the request is for a dynamic resource and not a static one.
 
-For example, consider the following handler mapping:
+For example, consider the following handler mapping:
 
 ```xml
 <add name="PageHandlerFactory-ISAPI-2.0" path="*.aspx" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv2.0,bitness32" responseBufferLimit="0" />
 ```
 
-In this case, a **404.17** error is returned if the *.aspx resource being requested from the site is handled in an Application pool that is not running in `Classic` Mode, is not 32 bit, or is not running the 2.0 version of the .NET Framework.   In order for the resource to be served correctly in this example, all three pre-conditions must be met.  Specifically, the application pool hosting this resource would have to be configured for `Classic` Mode, it would need to be configured to use the 2.0 version of the .NET Framework, and it would need to be set for 32-bit applications.
+In this case, a **404.17** error is returned if the *.aspx resource being requested from the site is handled in an Application pool that is not running in `Classic` Mode, is not 32 bit, or is not running the 2.0 version of the .NET Framework.   In order for the resource to be served correctly in this example, all three pre-conditions must be met.  Specifically, the application pool hosting this resource would have to be configured for `Classic` Mode, it would need to be configured to use the 2.0 version of the .NET Framework, and it would need to be set for 32-bit applications.
 
 ## Resolution
 
@@ -58,13 +58,13 @@ To resolve this issue, configure the Application Pool hosting the application to
 
 ## More information
 
-The information in this section is meant to help identify which handlers are configured for the web site and application mentioned in the error, as well as help identify the pre-conditions that are configured for that handler.
+The information in this section is meant to help identifying which handlers are configured for the web site and application mentioned in the error, as well as help identify the pre-conditions that are configured for that handler.
 
-### Appcmd.exe Commands
+### Appcmd.exe commands
 
 The following commands can be used to identify the handlers configured for the Web Site listed in the output of the error.
 
-### List Application Pool
+### List application pool
 
 The following commands show how to determine what application pool the application is running in, and then list the preconditions configured for that application pool.
 
@@ -76,7 +76,7 @@ C:\Windows\System32\inetsrv>appcmd.exe list apppools
 APPPOOL "DefaultAppPool" (MgdVersion:v2.0,MgdMode:Integrated,state:Started)
 ```
 
-### List Handlers
+### List handlers
 
 This command will output the handlers configured for the specific application in the default web site.
 
@@ -86,14 +86,14 @@ C:\Windows\System32\inetsrv>appcmd.exe list config "Default Web Site/application
 
 ```xml
 <system.webServer>
-  <handlers accessPolicy="Read, Script">
-    <add name="PageHandlerFactory-ISAPI-2.0" path="*.aspx" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv2.0,bitness32" responseBufferLimit="0" />
-    <add name="StaticFile" path="*" verb="*" modules="StaticFileModule,DefaultDocumentModule,DirectoryListingModule" resourceType="Either" requireAccess="Read" />
-  </handlers>
+  <handlers accessPolicy="Read, Script">
+    <add name="PageHandlerFactory-ISAPI-2.0" path="*.aspx" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv2.0,bitness32" responseBufferLimit="0" />
+    <add name="StaticFile" path="*" verb="*" modules="StaticFileModule,DefaultDocumentModule,DirectoryListingModule" resourceType="Either" requireAccess="Read" />
+  </handlers>
 </system.webServer>
 ```
 
-In the case of ASP.NET, there may be many handlers configured for a *.aspx resource. In some cases, the handler may just need to be changed to match the application pool the application is running in. Below is a list of the different ASP.NET 2.0 Handlers with their various pre-condition settings.
+In the case of ASP.NET, there may be many handlers configured for a *.aspx resource. In some cases, the handler may just need to be changed to match the application pool the application is running in. Below is a list of the different ASP.NET 2.0 Handlers with their various pre-condition settings.
 
 - ASP.NET 2.0 Integrated Mode 32/64-bit Handler
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, milanmil
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Certificate used by Wired or Wireless Network policies is missing in GPO settings report
 
@@ -43,7 +43,7 @@ You set the following CA certificates to be used by the authentication:
     DC = contoso  
     DC = com  
 
-    :::image type="content" source="./media/root-ca-certificate-doesnt-appear/certificate- multiple-subject-names.png" alt-text="The first certificate has multiple subject names.":::
+    :::image type="content" source="./media/root-ca-certificate-doesnt-appear/certificate-multiple-subject-names.png" alt-text="The first certificate has multiple subject names.":::
 
 - The second certificate has a single subject name:
 

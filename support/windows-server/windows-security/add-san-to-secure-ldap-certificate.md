@@ -1,5 +1,5 @@
 ---
-title: Add SAN to secure LDAP certificate
+title: Add SAN to secure Lightweight Directory Access Protocol (LDAP) certificate
 description: Describes how to add a subject alternative name to a secure LDAP certificate.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity 
+ms.technology: windows-server-security 
 ---
 # Add a subject alternative name to a secure LDAP certificate
 
@@ -22,9 +22,9 @@ _Original KB number:_ &nbsp; 931351
 
 ## Summary
 
-The LDAP certificate is submitted to a certification authority (CA) that is configured on a Windows Server 2003-based computer. The SAN lets you connect to a domain controller by using a Domain Name System (DNS) name other than the computer name. This article includes information about how to add SAN attributes to a certification request that is submitted to an enterprise CA, a stand-alone CA, or a third-party CA.
+The LDAP certificate is submitted to a certification authority (CA) that is configured on a Windows Server 2003-based computer. The SAN lets you connect to a domain controller by using a Domain Name System (DNS) name other than the computer name. This article includes information about how to add SAN attributes to a certification request that's submitted to an enterprise CA, a stand-alone CA, or a third-party CA.
 
-This article also discusses how to do the following:
+This article also discusses how to do the following actions:
 
 - Configure a CA to accept a SAN attribute from a certificate request.
 - Create and submit a certificate request to an enterprise CA.
@@ -36,7 +36,7 @@ This article also discusses how to do the following:
 
 When you submit a certificate request to an enterprise CA, the certificate template must be configured to use the SAN in the request instead of using information from the Active Directory directory service. The Version 1 Web Server template can be used to request a certificate that will support LDAP over the Secure Sockets Layer (SSL). Version 2 templates can be configured to retrieve the SAN either from the certificate request or from Active Directory. To issue certificates that are based on Version 2 templates, the enterprise CA must be running on a computer that is running Windows Server 2003 Enterprise Edition.
 
-When you submit a request to a stand-alone CA, certificate templates are not used. Therefore, the SAN must always be included in the certificate request. SAN attributes can be added to a request that is created by using the Certreq.exe program. Or, SAN attributes can be included in requests that are submitted by using the web enrollment pages.
+When you submit a request to a stand-alone CA, certificate templates aren't used. Therefore, the SAN must always be included in the certificate request. SAN attributes can be added to a request that is created by using the Certreq.exe program. Or, SAN attributes can be included in requests that are submitted by using the web enrollment pages.
 
 ### Use web enrollment pages to submit a certificate request to an enterprise CA
 
@@ -114,7 +114,7 @@ To submit a certificate request that includes a SAN to a stand-alone CA, follow 
     `san:dns=corpdc1.fabrikam.com&dns=ldap.fabrikam.com`
 
 12. Click **Submit**.
-13. If the CA is not configured to issue certificates automatically, a **Certificate Pending** webpage is displayed and requests that you wait for an administrator to issue the certificate that was requested.
+13. If the CA isn't configured to issue certificates automatically, a **Certificate Pending** webpage is displayed and requests that you wait for an administrator to issue the certificate that was requested.
 
     To retrieve a certificate that an administrator has issued, connect to `http://<servername>/certsrv`, and then click **Check on a Pending Certificate**. Click the requested certificate, and then click **Next**.
 
@@ -144,7 +144,7 @@ To use the Certreq.exe utility to create and submit a certificate request, follo
     certreq -submit certnew.req certnew.cer
     ```
 
-    This command submits the certificate request to the CA. If there is more than one CA in the environment, the `-config` switch can be used in the command line to direct the request to a specific CA. If you do not use the `-config` switch, you are prompted to select the CA to which the request should be submitted.
+    This command submits the certificate request to the CA. If there's more than one CA in the environment, the `-config` switch can be used in the command line to direct the request to a specific CA. If you don't use the `-config` switch, you're prompted to select the CA to which the request should be submitted.
 
     The `-config` switch uses the following format to refer to a specific CA:
 
@@ -156,15 +156,15 @@ To use the Certreq.exe utility to create and submit a certificate request, follo
     certreq -submit -config "corpca1.fabrikam.com\Corporate Policy CA1" certnew.req certnew.cer
     ```
 
-    If this CA is an enterprise CA and if the user who submits the certificate request has Read and Enroll permissions for the template, the request is submitted. The issued certificate is saved in the Certnew.cer file. If the CA is a stand-alone CA, the certificate request will be in a pending state until it is approved by the CA administrator. The output from the certreq -submit  command contains the Request ID number of the submitted request. As soon as the certificate is approved, it can be retrieved by using the Request ID number.
+    If this CA is an enterprise CA and if the user who submits the certificate request has Read and Enroll permissions for the template, the request is submitted. The issued certificate is saved in the Certnew.cer file. If the CA is a stand-alone CA, the certificate request will be in a pending state until it's approved by the CA administrator. The output from the certreq -submit  command contains the Request ID number of the submitted request. As soon as the certificate is approved, it can be retrieved by using the Request ID number.
 
-1. Use the Request ID number to retrieve the certificate. To do this, type the following command, and then press ENTER:
+1. Use the Request ID number to retrieve the certificate by running the following command:
 
     ```console
     certreq -retrieve RequestID certnew.cer
     ```
 
-    You can also use the `-config` switch here to retrieve the certificate request from a specific CA. If the `-config` switch is not used, you are prompted to select the CA from which to retrieve the certificate.
+    You can also use the `-config` switch here to retrieve the certificate request from a specific CA. If the `-config` switch isn't used, you're prompted to select the CA from which to retrieve the certificate.
 
 1. At the command prompt, type the following command, and then press ENTER:
 
@@ -176,7 +176,7 @@ To use the Certreq.exe utility to create and submit a certificate request, follo
 
 ## Submit a certificate request to a third-party CA
 
-If you want to submit a certificate request to a third-party CA, first use the Certreq.exe tool to create the certificate request file. You can then submit the request to the third-party CA by using whatever method is appropriate for that vendor. The third-party must be able to process certificate requests in the CMC format.
+If you want to submit a certificate request to a third-party CA, first use the Certreq.exe tool to create the certificate request file. You can then submit the request to the third-party CA by using whatever method is appropriate for that vendor. The third-party CA must be able to process certificate requests in the CMC format.
 
 > [!NOTE]
 > Most vendors refer to the certificate request as a Certificate Signing Request (CSR).

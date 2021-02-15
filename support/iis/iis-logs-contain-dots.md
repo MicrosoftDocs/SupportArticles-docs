@@ -5,7 +5,7 @@ ms.date: 12/11/2020
 ms.prod-support-area-path: Health, Diagnostic, and Performance Features
 ms.reviewer: mlaing, bretb
 ---
-# IIS logs contain "..." instead of expected logging field value
+# IIS logs contain <...> instead of expected logging field value
 
 This article helps you resolve the problem where Internet Information Services (IIS) logs contain `...` instead of expected logging field value.
 

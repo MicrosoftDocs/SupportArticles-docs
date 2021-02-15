@@ -58,7 +58,7 @@ This section demonstrates how to add and modify the `<authentication>` and `<aut
 
 ## Create a sample database table to store users details
 
-This section demonstrates how to create a sample database to store the user name, password, and role for the users. You need the role column if you want to store user roles in the database and implement role-based security.
+This section shows how to create a sample database to store the user name, password, and role for the users. You need the role column if you want to store user roles in the database and implement role-based security.
 
 1. On the **Start** menu, select **Run**, and then type notepad to open Notepad.
 2. Highlight the following SQL script code, right-click the code, and then select **Copy**. In Notepad, select **Paste** on the **Edit** menu to paste the following code:
@@ -86,7 +86,7 @@ This section demonstrates how to create a sample database to store the user name
     ```
 
 3. Save the file as *Users.sql*.
-4. On the SQL Server computer, open *Users.sql* in Query Analyzer. From the list of databases, select **pubs**, and run the script. This creates a sample users table and populates the table in the Pubs database to be used with this sample application.
+4. On the SQL Server computer, open *Users.sql* in Query Analyzer. From the list of databases, select **pubs**, and run the script. This operation creates a sample users table and populates the table in the Pubs database to be used with this sample application.
 
 ## Create a Logon.aspx page
 
@@ -216,7 +216,7 @@ This section presents the code that is placed in the code-behind page (Logon.asp
         }
        ```
 
-    - Generate the authentication ticket, encrypt it, create a cookie, add it to the response, and redirect the user. This gives you more control in how you create the cookie. You can also include custom data along with the `FormsAuthenticationTicket` in this case.
+    - Generate the authentication ticket, encrypt it, create a cookie, add it to the response, and redirect the user. This operation gives you more control in how you create the cookie. You can also include custom data along with the `FormsAuthenticationTicket` in this case.
 
         ```csharp
         private void cmdLogin_ServerClick(object sender, System.EventArgs e)
@@ -295,7 +295,7 @@ This section creates a test page to which users are redirected after they authen
 
 - You may want to store the SQL connection information in the configuration file (*Web.config*) so that you can easily modify it if necessary.
 
-- You may consider adding code to prevent hackers who try to use different combinations of passwords from logging on. For example, you can include logic that accepts only two or three logon attempts. If the user can't log on in a certain number of attempts, you may want to set a flag in the database to not allow that user to log on until that user re-enables his or her account by visiting a different page or by calling your support line. In addition, you should add appropriate error handling wherever necessary.
+- You may consider adding code to prevent hackers who try to use different combinations of passwords from logging on. For example, you can include logic that accepts only two or three logon attempts. If users can't log on in some attempts, you may want to set a flag in the database to not allow them to log on until the users re-enable their accounts by visiting a different page or by calling your support line. Also, you should add appropriate error handling wherever necessary.
 
 - Because the user is identified based on the authentication cookie, you may want to use Secure Sockets Layer (SSL) on this application so that no one can deceive the authentication cookie and any other valuable information that is being transmitted.
 
@@ -303,7 +303,7 @@ This section creates a test page to which users are redirected after they authen
 
 - The timeout parameter of the `<authentication>` configuration section controls the interval at which the authentication cookie is regenerated. You can choose a value that provides better performance and security.
 
-- Certain intermediary proxies and caches on the Internet may cache Web server responses that contain `Set-Cookie` headers, which are then returned to a different user. Because forms-based authentication uses a cookie to authenticate users, this can cause users to accidentally (or intentionally) impersonate another user by receiving a cookie from an intermediary proxy or cache that wasn't originally intended for them.
+- Certain intermediary proxies and caches on the Internet may cache Web server responses that contain `Set-Cookie` headers, which are then returned to a different user. Because forms-based authentication uses a cookie to authenticate users, this behavior can cause users to accidentally (or intentionally) impersonate another user by receiving a cookie from an intermediary proxy or cache that wasn't originally intended for them.
 
 ## References
 

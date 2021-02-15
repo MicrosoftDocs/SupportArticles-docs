@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: networking
 ---
 # New features and functionality in PortQry version 2.0  
 
@@ -97,7 +97,7 @@ Sending LDAP query to UDP port 389...
 >
 > LDAP query response:  
 >
-> currentdate: 12/13/2003 05:42:40 (unadjusted GMT)  
+> currentdate: *\<DateTime>* (unadjusted GMT)  
 subschemaSubentry: CN=Aggregate,CN=Schema,CN=Configuration,DC=domain,DC=example,DC=com  
 dsServiceName: CN=NTDS Settings,CN=myserver,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=domain,DC=example,DC=com  
 namingContexts: DC=domain,DC=example,DC=com  
@@ -1041,7 +1041,7 @@ The PortQry local mode of operation is designed to give you detailed information
 
         > Portqry Version 2.0 Log File
         >
-        > System Date: Sat Oct 04 08:54:06 2003
+        > System Date: *\<DateTime>*
         >
         > Command run:  
          portqry -wport 135 -v -l test.txt
@@ -1057,7 +1057,7 @@ The PortQry local mode of operation is designed to give you detailed information
         > verbose output requested
         >
         > ============  
-        System Date: Sat Oct 04 08:54:07 2003
+        System Date: *\<DateTime>*
         >
         > ======================================================
         >
@@ -1105,7 +1105,7 @@ The PortQry local mode of operation is designed to give you detailed information
         D:\WINDOWS\system32\OLEAUT32.dll (0x77120000)  
         D:\WINDOWS\system32\COMRes.dll (0x77050000)  
         D:\WINDOWS\system32\VERSION.dll (0x77C00000)  
-        System Date: Sat Oct 04 08:56:08 2003
+        System Date: *\<DateTime>*
         >
         > ======================================================
         >
@@ -1154,7 +1154,7 @@ The PortQry local mode of operation is designed to give you detailed information
         D:\WINDOWS\system32\VERSION.dll (0x77C00000)  
         >
         > escape key pressed: stopped watching port 135  
-        System Date: Sat Oct 04 09:09:12 2003
+        System Date: *\<DateTime>*
         >
         > ========= end of log file =========
 
@@ -1164,7 +1164,7 @@ The PortQry local mode of operation is designed to give you detailed information
 
     > PortQry Version 2.0 Log File
     >
-    > System Date: Tue Oct 07 14:01:13 2003
+    > System Date: *\<DateTime>*
     >
     > Command run:  
      portqry -wpid 1276 -wt 2 -v -l pid.txt
@@ -1184,7 +1184,7 @@ The PortQry local mode of operation is designed to give you detailed information
     Service Type: runs in its own process
     >
     > ============  
-    System Date: Tue Oct 07 14:01:14 2003
+    System Date: *\<DateTime>*
     >
     > ======================================================
     >
@@ -1266,7 +1266,7 @@ The PortQry local mode of operation is designed to give you detailed information
     C:\WINDOWS\System32\security.dll (0x71F60000)
     >
     > escape key pressed: stopped watching PID 1276  
-    System Date: Tue Oct 07 14:01:16 2003
+    System Date: *\<DateTime>*
     >
     > ========= end of log file =========
 
@@ -1281,13 +1281,7 @@ For additional information about how to use PortQry, click the following article
 
 [310099](https://support.microsoft.com/help/310099) Description of the Portqry.exe command-line utility  
 
-[310456](https://support.microsoft.com/help/310456) How to use Portqry to troubleshoot Active Directory connectivity issues  
-
-[310298](https://support.microsoft.com/help/310298) How to use Portqry.exe to troubleshoot Microsoft Exchange Server connectivity issues  
-
-[310513](https://support.microsoft.com/help/310513) How to make Portqry.exe only report listening ports  
-
 > [!IMPORTANT]
 > The PortQueryUI tool provides a graphical user interface and is available for download. PortQueryUI has several features that can make using PortQry easier. To obtain the PortQueryUI tool, visit the following Microsoft Web site:
-
-[https://download.microsoft.com/download/3/f/4/3f4c6a54-65f0-4164-bdec-a3411ba24d3a/PortQryUI.exe](https://download.microsoft.com/download/3/f/4/3f4c6a54-65f0-4164-bdec-a3411ba24d3a/portqryui.exe)
+>
+> [https://download.microsoft.com/download/3/f/4/3f4c6a54-65f0-4164-bdec-a3411ba24d3a/PortQryUI.exe](https://download.microsoft.com/download/3/f/4/3f4c6a54-65f0-4164-bdec-a3411ba24d3a/portqryui.exe)

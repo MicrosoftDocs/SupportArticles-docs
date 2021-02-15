@@ -11,7 +11,8 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Windows Time Service
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
+adobe-target: true
 ---
 # How to configure an authoritative time server in Windows Server
 
@@ -90,10 +91,6 @@ To configure the PDC in the root of an Active Directory forest to synchronize wi
    ```cmd
    net stop w32time && net start w32time
    ```
-
-## Time Servers available on the internet
-
-For a list of available time servers, see [A list of the Simple Network Time Protocol (SNTP) time servers that are available on the Internet](https://support.microsoft.com/help/262680).
 
 ## Troubleshooting
 

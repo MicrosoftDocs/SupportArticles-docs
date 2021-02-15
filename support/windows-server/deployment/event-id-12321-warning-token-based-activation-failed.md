@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, joscon
 ms.prod-support-area-path: Activation
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Event ID 12321 Warning Token Based Activation failed
 
@@ -46,4 +46,4 @@ SLMGR /ILC \<token-based-license-filename>
 
 ## More information
 
-Token-Based activation functionality was enabled in Service Pack 2 for Windows Vista and Windows Server 2008
+Token-Based activation functionality was enabled in Service Pack 2 for Windows Vista and Windows Server 2008.

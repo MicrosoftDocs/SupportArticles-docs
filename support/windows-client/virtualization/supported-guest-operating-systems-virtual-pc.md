@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, benarm, kledman
 ms.prod-support-area-path: Virtual machine creation
-ms.technology: HyperV
+ms.technology: windows-client-hyper-v
 ---
 # Supported Guest Operating Systems in Virtual PC
 
@@ -54,13 +54,10 @@ You can use the following operating systems as a guest operating system in a gue
 Additionally, you can install most x86-based operating systems in the Windows Virtual PC environment. For technical issues with third-party operating systems, contact the operating system vendor for support. Support for Microsoft operating systems whose lifecycles have ended may be limited or not available. Microsoft provides support for technical issues with the Windows Virtual PC program, regardless of the installed guest operating system.
 
 For information about how to install any of these guest operating systems on a virtual machine, see the Windows Virtual PC documentation.  
- [https://www.microsoft.com/windows/virtual-pc/support/default.aspx](https://www.microsoft.com/windows/virtual-pc/support/default.aspx) 
+ [https://www.microsoft.com/windows/virtual-pc/support/default.aspx](https://www.microsoft.com/windows/virtual-pc/support/default.aspx)
 
 Windows XP Mode and Windows Virtual PC frequently asked questions:  
- [https://www.microsoft.com/windows/virtual-pc/support/faq.aspx](https://www.microsoft.com/windows/virtual-pc/support/faq.aspx) 
-
-For information about guest operating systems that are supported on a Hyper-V virtual machine, see following Knowledge Base article:  
- [https://support.microsoft.com/kb/954958/en-us](https://support.microsoft.com/help/en-us) 
+ [https://www.microsoft.com/windows/virtual-pc/support/faq.aspx](https://www.microsoft.com/windows/virtual-pc/support/faq.aspx)
 
 Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.  
 

@@ -24,7 +24,7 @@ You may experience performance degradation in SQL Server. When this issue occurs
     where name = 'SchemaMgr Store'
     ```
 
-- This issue can be accompanied by an increase in `CMEMTHREAD` waits and lock blocking, in which the locks `wait_resource` refers to a `COMPILE` lock type. You can see the information by running the following T-SQL script:
+- This issue can be accompanied by an increase in `CMEMTHREAD` waits and lock blocking, in which the locks `wait_resource` refers to a `COMPILE` lock type. You can see the information by running the following T-SQL script:
 
     ```sql
     select * from sys.dm_exec_requests where wait_type = 'CMEMTHREAD'

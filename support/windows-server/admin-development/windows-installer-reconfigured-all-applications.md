@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Windows Management Instrumentation (WMI)
-ms.technology: WindowsAdministrationManagementDevelopment
+ms.technology: windows-server-administration-management-development
 ---
 # Event log message indicates that the Windows Installer reconfigured all installed applications
 
@@ -70,9 +70,6 @@ This problem can happen if one of the following is true:
 
 - You have a group policy with a WMIFilter that queries `Win32_Product` class.
 - You have an application installed on the machine that queries `Win32_Product` class.
-
-> [!NOTE]
-> For more information about WmiFilters, see [HOWTO: Leverage Group Policies with WMI Filters](https://support.microsoft.com/help/555253).
 
 ## Resolution
 

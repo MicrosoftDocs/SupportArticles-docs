@@ -14,11 +14,11 @@ _Original KB number:_ &nbsp; 4483429
 
 ## Symptoms
 
-When you create a Xamarin Android or Xamarin.Forms app in Visual Studio 2015, you may receive an error message that resembles the following message:
+When you create a Xamarin Android or Xamarin.Forms app in Visual Studio 2015, you may receive an error message that resembles the following message:
 
 > Xamarin.Android for Visual Studio requires Java Development Kit. Please install it or set Java Development Kit path on Tools->Options->Xamarin->Android Settings menu.
 
-For example, you see an error message dialog box that's similar to the following screenshot:
+For example, you see an error message dialog box that's similar to the following screenshot:
 
 :::image type="content" source="./media/jdk-missing-create-xamarin-app/error-message-dialog.png" alt-text="error message dialog box":::
 

@@ -11,9 +11,9 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
-# "Service-Specific Error Code -2147944102" Error Message If You Try to Start the BITS Service
+# "Service-Specific Error Code -2147944102" error message if you try to start the BITS service
 
 This article provides a solution to an error 2147944102 that occurs when you start the Background Intelligent Transfer Service (BITS) Service.
 
@@ -83,7 +83,3 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 ## More information
 
 The issue described in "Symptoms" section of this article may also occur after you install Microsoft Software Update Services (SUS) 1.0 or the Automatic Updates 2.2 client on a Windows 2000 Server-based computer with Terminal Services installed.
-
-For additional information about SUS, click the article number below to view the article in the Microsoft Knowledge Base:
-
-[322365](https://support.microsoft.com/help/322365) Server Requirements and Recommendations for Installing Microsoft Software Update Services

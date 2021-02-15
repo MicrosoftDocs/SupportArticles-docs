@@ -29,15 +29,15 @@ In this scenario, the distribution agent fails, and you receive the following er
 
 Agent profiles are managed and persisted in the `msdb` database. Changes to an agent profile are persisted in `msdb` and can't be sent to other distributors in the distribution database AG.
 
-Replication agents are associated with profile through `profile_id`. After a failover, the agent might be unable to find the correct profile. Alternatively, it might find the wrong profile. Because a nondefault profile in one distributor could differ from another distributor, or it may never have existed, or it may have a different `profile_id`.
+Replication agents are associated with profile through `profile_id`. After a failover, the agent might be unable to find the correct profile. Alternatively, it might find the wrong profile. Because a nondefault profile in one distributor could differ from another distributor, or it may never have existed, or it may have a different `profile_id`.
 
-The distribution agent job issues the `sp_MShelp_distribution_agentid` stored procedure to get the agent ID when it starts. If the profile does not exist, or if the profile IDs are different, the distribution agent job does not get the agent ID, and it returns **the subscription does not exist** error message.
+The distribution agent job issues the `sp_MShelp_distribution_agentid` stored procedure to get the agent ID when it starts. If the profile does not exist, or if the profile IDs are different, the distribution agent job does not get the agent ID, and it returns **the subscription does not exist** error message.
 
 ## Workaround
 
 To work around this issue, use one of the following methods:
 
-- Specify the parameters in the distribution agent command directly, instead of using the agent profile. Also, apply the changes to the distribution agent job in all Distributor replicas.
+- Specify the parameters in the distribution agent command directly, instead of using the agent profile. Also, apply the changes to the distribution agent job in all Distributor replicas.
 
 - Make sure that the agent profile is created in all Distributors that are participating in the distribution database in the AG, and make sure that the profile IDs are the same.
 

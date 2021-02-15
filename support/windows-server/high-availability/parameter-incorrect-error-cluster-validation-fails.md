@@ -1,6 +1,6 @@
 ---
 title: (The parameter is incorrect) error and cluster validation fails against Validate Resource status 
-description: Helps to resolve the error (The parameter is incorrect), when cluster validation fails against the Validate Resource status
+description: Helps to resolve an error (The parameter is incorrect) that occurs when cluster validation fails against the Validate Resource status
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
@@ -11,22 +11,22 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Cannot bring a resource online
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
-# "The parameter is incorrect" error and cluster validation fails against "Validate Resource" status
+# Error (The parameter is incorrect) and cluster validation fails against "Validate Resource" status
 
-This article helps to resolve the error "The parameter is incorrect", when cluster validation fails against the Validate Resource status.
+This article helps to resolve the error "The parameter is incorrect" that occurs when cluster validation fails against the Validate Resource status.
 
 _Original product version:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4561946
 
 ## Symptoms
 
-When you check the Active Directory organizational unit (OU), cluster validation fails against the **Validate Resource**  status, and you receive the following error message:  
+When you check the Active Directory organizational unit (OU), cluster validation fails against the "Validate Resource" status, and you receive the following error message:  
 
->An error occurred while executing the test. The operation has failed. An error occurred while checking the Active Directory organizational unit for the cluster name resource. The parameter is incorrect.
+> An error occurred while executing the test. The operation has failed. An error occurred while checking the Active Directory organizational unit for the cluster name resource. The parameter is incorrect.
 
-![An error occurred while executing the test. The operation has failed. An error occurred while checking the Active Directory organizational unit for the cluster name resource. The parameter is incorrect.](./media/parameter-incorrect-error-cluster-validation-fails/parameter-incorrect-error.jpg)
+:::image type="content" source="./media/parameter-incorrect-error-cluster-validation-fails/parameter-incorrect-error.jpg" alt-text="Screenshot of the error message." border="false":::
 
 If you try to create the client access points, the process can still fail if the IP address used is the same as the address in the error message.  
 
@@ -34,7 +34,7 @@ This problem can also occur after you grant CNO permission to the cluster OU, an
 
 ## Cause
 
-The parameter error is caused when authenticated users don't have default Read permissions on the default **Computers** container. 
+The parameter error is caused when authenticated users don't have default Read permissions on the default **Computers** container.
 
 ## Resolution
 

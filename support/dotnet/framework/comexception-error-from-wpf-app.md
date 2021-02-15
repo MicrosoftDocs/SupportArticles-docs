@@ -20,11 +20,11 @@ Consider the following scenario:
 - You install the [May 2017 Preview of Quality Rollup for the .NET Framework 4.6, 4.6.1, and 4.6.2](https://support.microsoft.com/help/4014606) (KB 4104606) on the device.
 - You then install the .NET Framework 4.7 on the device.
 
-In this scenario, the WPF applications fail and generate error messages:
+In this scenario, the WPF applications fail and generate error messages:
 
-> Exception type: System.TypeInitializationException  
+> Exception type: System.TypeInitializationException  
 > Message: The type initializer for 'MS.Win32.Penimc.UnsafeNativeMethods' threw an exception.  
-> InnerException: System.Runtime.InteropServices.COMException  
+> InnerException: System.Runtime.InteropServices.COMException  
 > Message of the inner exception: Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG))
 
 ## Resolution
@@ -37,11 +37,11 @@ To resolve this problem, install the July 25, 2017, update for the .NET Framewor
 
 - Windows 8.1 and Windows Server 2012 R2
 
-    [Download the stand-alone package](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=4035509) from the Microsoft Update catalog. For more information about this update, see [KB 4035509](https://support.microsoft.com/help/4035509).
+    [Download the stand-alone package](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=4035509) from the Microsoft Update catalog. For more information about this update, see [KB 4035509](https://support.microsoft.com/help/4035509).
 
 - Windows Server 2012
 
-    [Download the stand-alone package](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=4035508) from the Microsoft Update catalog. For more information about this update, see [KB 4035508](https://support.microsoft.com/help/4035508).
+    [Download the stand-alone package](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=4035508) from the Microsoft Update catalog. For more information about this update, see [KB 4035508](https://support.microsoft.com/help/4035508).
 
 ## Workaround
 
@@ -49,7 +49,7 @@ To work around this problem, uninstall and then reinstall the .NET Framework 4.7
 
 ### Uninstall the .NET Framework 4.7
 
-1. In Control Panel, select **Uninstall a program** in the **Programs** category.
+1. In Control Panel, select **Uninstall a program** in the **Programs** category.
 2. In the list of programs, locate and select **Microsoft .NET Framework 4.7**, and then select **Uninstall/Change**.
 3. In the .NET Framework 4.7 Maintenance wizard, select **Remove.NET Framework 4.7 from this computer**, and then select **Next**.
 4. If the following warning window appears, select **Continue**.
@@ -64,7 +64,7 @@ To reinstall the Microsoft .NET Framework 4.7, use one of the following methods.
 
 #### Method 1: Manually download and install the .NET Framework 4.7
 
-1. Download the [web installer for the .NET Framework 4.7](https://www.microsoft.com/download/details.aspx?id=55170).
+1. Download the [web installer for the .NET Framework 4.7](https://www.microsoft.com/download/details.aspx?id=55170).
 2. Install the .NET Framework 4.7.
 
 #### Method 2: Use Windows Update to install the .NET Framework 4.7
@@ -81,7 +81,7 @@ To reinstall the Microsoft .NET Framework 4.7, use one of the following methods.
 
 5. Wait for the installation to complete.
 
-### Temporarily disable touch and stylus support for WPF applications  
+### Temporarily disable touch and stylus support for WPF applications  
 
 To temporarily disable touch and stylus support, use one of the following methods.
 

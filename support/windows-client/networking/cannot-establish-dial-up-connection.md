@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: masoudh, kaushika
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Error when you try to establish a dial-up connection: Error 734: The PPP link control protocol was terminated
 
@@ -56,13 +56,3 @@ To resolve this issue:
 8. Click the **Security** tab.
 9. Under **Security options**, click **Allow unsecured password** in the **Validate my identity as follows** box, and then click **OK**.
 10. Double-click the connection, and then click **Dial** to verify that you can establish a dial-up connection.
-
-## More information
-
-For additional information about how to troubleshoot a similar 'Error 734' error message, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[282795](https://support.microsoft.com/help/282795) Windows 2000 RAS Error 734 with a Bianca/Brick-XS Multiple-Protocol Router
-
-For additional information about how to use MSN Internet Services in Windows 2000, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[238510](https://support.microsoft.com/help/238510) Using MSN Internet Services in Windows 2000

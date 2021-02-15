@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, joeswart
 ms.prod-support-area-path: Applications
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Registry changes in x64-based versions of Windows
 
@@ -27,15 +27,15 @@ _Original KB number:_ &nbsp; 896459
 
 Computers that are running an x64-based version of Microsoft Windows Server 2003 or Microsoft Windows XP Professional x64 Edition use a different registry layout to handle both 32-bit and 64-bit programs. The registry layout changes in x64 Edition versions of the Windows operating system make sure that the programs hard-coded .dll paths, program settings, and other parameter values are not overwritten.
 
-To prevent 32-bit registry settings from overwriting the 64-bit registry settings, computers that are running an x64-based version of Microsoft Store the settings for 32-bit programs in a new branch in the registry. Users do not notice any changes during program installation. The registry redirection process enables program installations and program configuration settings to access the correct registry sub key without user intervention.
+To prevent 32-bit registry settings from overwriting the 64-bit registry settings, computers that are running an x64-based version of Microsoft Store the settings for 32-bit programs in a new branch in the registry. Users do not notice any changes during program installation. The registry redirection process enables program installations and program configuration settings to access the correct registry subkey without user intervention.
 
 32-bit programs and 64-bit programs that are running on an x64-based version of Windows operate in different modes and use the following sections in the registry:
 
-- Native mode 64-bit programs run in Native mode and access keys and values that are stored in the following registry sub key:
+- Native mode 64-bit programs run in Native mode and access keys and values that are stored in the following registry subkey:
 
     `HKEY_LOCAL_MACHINE\Software`
 
-- 32-bit programs run in WOW64 mode and access keys and values that are stored in the following registry sub key:
+- 32-bit programs run in WOW64 mode and access keys and values that are stored in the following registry subkey:
 
     `HKEY_LOCAL_MACHINE\Software\WOW6432node`
 
@@ -43,11 +43,11 @@ To prevent 32-bit registry settings from overwriting the 64-bit registry setting
 
 To support the coexistence of 32-bit and 64-bit COM registration and program states, the WOW64 subsystem presents 32-bit programs by using another view of the registry. The WOW64 subsystem uses registry redirection to intercept registry calls at the bit level. Registry redirection also makes sure that the registry calls are directed to the correct branches in the registry.
 
-When you install a new program or when you run a program on a Windows x64 Edition computer, registry calls made by 64-bit programs access the `HKEY_LOCAL_MACHINE\Software` registry sub key without redirection. WOW64 intercepts registry calls to `HKEY_LOCAL_MACHINE\Software` that are made by 32-bit programs, and then redirects them to the `HKEY_LOCAL_MACHINE\Software\WOW6432node` sub key. By redirecting only the 32-bit program calls, WOW64 makes sure that programs always write to the appropriate registry sub key. Registry redirection does not require program code modification, and this process is transparent to the user.
+When you install a new program or when you run a program on a Windows x64 Edition computer, registry calls made by 64-bit programs access the `HKEY_LOCAL_MACHINE\Software` registry subkey without redirection. WOW64 intercepts registry calls to `HKEY_LOCAL_MACHINE\Software` that are made by 32-bit programs, and then redirects them to the `HKEY_LOCAL_MACHINE\Software\WOW6432node` subkey. By redirecting only the 32-bit program calls, WOW64 makes sure that programs always write to the appropriate registry subkey. Registry redirection does not require program code modification, and this process is transparent to the user.
 
-### Registry sub keys that are included in redirection
+### Registry subkeys that are included in redirection
 
-The following registry sub keys are redirected in current versions of the Windows x64 Edition operating system:
+The following registry subkeys are redirected in current versions of the Windows x64 Edition operating system:
 
 - `HKEY_LOCAL_MACHINE\Software\Classes` 
 - `HKEY_LOCAL_MACHINE\Software\Microsoft\Ole` 
@@ -75,43 +75,43 @@ The following list contains some examples of the "last writer wins" philosophy:
 
 ## Shared registry keys
 
-Certain registry sub keys contain constant information that exists in only one copy of the registry even though these keys appear in both the 32-bit and 64-bit registry views. This is referred to as registry reflection.
+Certain registry subkeys contain constant information that exists in only one copy of the registry even though these keys appear in both the 32-bit and 64-bit registry views. This is referred to as registry reflection.
 
-In current versions of the Windows x64 Edition operating systems, the following registry sub keys are shared across 32-bit and 64-bit program and are not rewritten based on the 32-bit or 64-bit level of the program or process:
+In current versions of the Windows x64 Edition operating systems, the following registry subkeys are shared across 32-bit and 64-bit program and are not rewritten based on the 32-bit or 64-bit level of the program or process:
 
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\SYSTEMCERTIFICATES
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\CRYPTOGRAPHY\SERVICES
-- HKEY_LOCAL_MACHINE\SOFTWARE\CLASSES\HCP
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\ENTERPRISECERTIFICATES
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\MSMQ
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\NETWORKCARDS
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\PROFILELIST
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\PERFLIB
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\PRINT
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\PORTS
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\CONTROL PANEL\CURSORS\SCHEMES
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\TELEPHONY\LOCATIONS
-- HKEY_LOCAL_MACHINE\SOFTWARE\POLICIES
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\GROUP POLICY
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\POLICIES
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\SETUP\OC MANAGER
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\SOFTWARE\MICROSOFT\SHARED TOOLS\MSINFO
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\SETUP
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\CTF\TIP
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\CTF\SYSTEMSHARED
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\FONTS
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\FONTSUBSTITUTES
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\FONTDPI
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\FONTMAPPER
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\RAS
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\DRIVER SIGNING
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\NON-DRIVER SIGNING
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\CRYPTOGRAPHY\CALAIS\CURRENT
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\CRYPTOGRAPHY\CALAIS\READERS
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\TIME ZONE
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\TRANSACTION SERVER
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\DFS
-- HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\TERMSERVLICENSING
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\SYSTEMCERTIFICATES`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\CRYPTOGRAPHY\SERVICES`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\CLASSES\HCP`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\ENTERPRISECERTIFICATES`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\MSMQ`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\NETWORKCARDS`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\PROFILELIST`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\PERFLIB`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\PRINT`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\PORTS`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\CONTROL PANEL\CURSORS\SCHEMES`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\TELEPHONY\LOCATIONS`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\POLICIES`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\GROUP POLICY`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\POLICIES`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\SETUP\OC MANAGER`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\SOFTWARE\MICROSOFT\SHARED TOOLS\MSINFO`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\SETUP`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\CTF\TIP`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\CTF\SYSTEMSHARED`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\FONTS`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\FONTSUBSTITUTES`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\FONTDPI`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\FONTMAPPER`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\RAS`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\DRIVER SIGNING`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\NON-DRIVER SIGNING`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\CRYPTOGRAPHY\CALAIS\CURRENT`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\CRYPTOGRAPHY\CALAIS\READERS`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\TIME ZONE`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\TRANSACTION SERVER`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\DFS`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\TERMSERVLICENSING`
 
 > [!IMPORTANT]
 > Registry key reflection may change in later operating system versions. Software developers are encouraged to avoid writing program code that is based on previously-documented lists of reflected keys. Instead, code should be written to verify reflection status before the program makes calls to the 32-bit or 64-bit logical view of the registry.
@@ -124,7 +124,7 @@ Both 32-bit and 64-bit versions of Registry Editor are included with x64 Edition
 
 1. Log on to the Windows x64 Edition computer by using an account that has administrative permissions.
 2. Click **Start**, click **Run**, type regedit in the **Open** box, and then click **OK**.
-3. In Registry Editor, locate and examine the following registry sub key: `HKEY_LOCAL_MACHINE\Software\WOW6432node` 
+3. In Registry Editor, locate and examine the following registry subkey: `HKEY_LOCAL_MACHINE\Software\WOW6432node` 
 
 ### To start the 32-bit version of Registry Editor
 

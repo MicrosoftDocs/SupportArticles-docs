@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, justintu, v-jesits
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 8461
 
@@ -66,8 +66,8 @@ The specific symptoms are as follows:
     > [12142] Enqueued 2011-11-26 06:05:55 at priority 40  
     SYNC FROM SOURCE  
     NC dc=west,dc=contoso,dc=com  
-    DSA Boulder\BoulderDC DC DSA object GUID c7f89ed3-0f4a-4ae7-8a20-b025b4556358  
-    DSA transport addr c7f89ed3-0f4a-4ae7-8a20-b025b4556358._msdcs.contoso.com  
+    DSA Boulder\BoulderDC DC DSA object GUID *\<GUID>*  
+    DSA transport addr *\<GUID>*._msdcs.contoso.com  
     ASYNCHRONOUS_OPERATION NEVER_COMPLETED NEVER_NOTIFY PREEMPTED
 
 - Symptom 5:
@@ -206,9 +206,9 @@ message occurs frequently, it indicates that the
 replication is occurring slowly and that the server may  
 have difficulty keeping up with changes.  
 Object DN: CN=JUSTINTU,OU=Workstations,DC=contoso,DC=com  
-Object GUID: 2530ee74-85e3-4276-15f2-ba6a310471eb  
+Object GUID: *\<GUID>*  
 Partition DN: DC=contoso,DC=com  
-Server: 4e901384-2aa1-3008-c5a2-e37f9f67d7e0._msdcs.contoso.com  
+Server: *\<GUID>*._msdcs.contoso.com  
 Elapsed Time (secs): 13  
 User Action:  
 A common reason for seeing this delay is that this object is especially large, either in the size of its values, or in the number of values. You should first consider whether the application can be changed to reduce the amount of data stored on the object, or the number of values.If this is a large group or distribution list, you might consider raising the forest version to Windows Server 2003, since this will enable replication to work more efficiently. You should evaluate whether the server platform provides sufficient performance in terms of memory and processing power. Finally, you may want to consider tuning the Active Directory database by moving the database and logs to separate disk partitions.  
@@ -226,19 +226,19 @@ Disk
 Network
 
 > Queue contains 55 items.  
-Current task began executing at 2011-11-26 01:55:33.  
+Current task began executing at *\<DateTime>*.  
 Task has been executing for 508 minutes, 53 seconds.  
 [6485] Enqueued 2011-11-26 01:55:33 at priority 590  
 SYNC FROM SOURCE NC DC=corp,DC=contoso,DC=com  
 DC Houston\5thWardDC  
-DC object GUID c130e148-1e40-4a0e-be6d-356eec2be0bd  
-DC transport addr c130e148-1e40-4a0e-be6d-356eec2be0bd._msdcs.contoso.com  
+DC object GUID *\<GUID>*  
+DC transport addr *\<GUID>*._msdcs.contoso.com  
 FORCE  
-[12142] Enqueued 2011-11-26 06:05:55 at priority 40  
+[12142] Enqueued *\<DateTime>* at priority 40  
 SYNC FROM SOURCE NC dc=west,dc=contoso,dc=com  
 DC Boulder\BoulderDC  
-DC object GUID c7f89ed3-0f4a-4ae7-8a20-b025b4556358  
-DC transport addr c7f89ed3-0f4a-4ae7-8a20-b025b4556358._msdcs.contoso.com  
+DC object GUID *\<GUID>*  
+DC transport addr *\<GUID>*._msdcs.contoso.com  
 ASYNCHRONOUS_OPERATION NEVER_COMPLETED NEVER_NOTIFY PREEMPTED
 
 ## More information
@@ -318,7 +318,7 @@ To limit the output so that only the desired Source DC is displayed, use the fol
 ```console
 Repadmin /showrepl /verbose DCNameDomainDN SourceDcDSAObjectGUID
 
-Repadmin /showrepl /verbose 5thwardCorpDC c7f89ed3-0f4a-4ae7-8a20-b025b4556358 dc=corp,dc=contoso,dc=com
+Repadmin /showrepl /verbose 5thwardCorpDC <GUID> dc=corp,dc=contoso,dc=com
 ```
 
 `Repadmin /showutdvec`  
@@ -342,23 +342,23 @@ In the output, document the following:
 
 Source DC  
 
-> Dallas\2008DC1 @ USN 451265 @ Time 2013-07-10 13:30:43  
-Dallas\SourceDC @ USN 1126541 @ Time 2013-07-12 08:17:16  
-Houston\2012DC3 @ USN 469842 @ Time 2013-07-10 13:14:27  
-66a1b264-80b8-44f8-8356-9ebcd7a34f15 @ USN 32811 @ Time  2013-06-06 08:26:56  
-Dallas\2012DC2 @ USN 460219 @ Time   2013-07-10 13:30:44  
-Dallas\DestinationDC @ USN 1353465 @ Time  2013-07-11 14:16:40  
-Dallas\2003DC1 @ USN 15556 @ Time 2013-07-10 13:21:50
+> Dallas\2008DC1 @ USN 451265 @ Time *\<DateTime>*  
+Dallas\SourceDC @ USN 1126541 @ Time *\<DateTime>*  
+Houston\2012DC3 @ USN 469842 @ Time *\<DateTime>*  
+66a1b264-80b8-44f8-8356-9ebcd7a34f15 @ USN 32811 @ Time  *\<DateTime>*  
+Dallas\2012DC2 @ USN 460219 @ Time   *\<DateTime>*  
+Dallas\DestinationDC @ USN 1353465 @ Time  *\<DateTime>*  
+Dallas\2003DC1 @ USN 15556 @ Time *\<DateTime>*
 
 Destination DC  
 
-> Dallas\2008DC1 @ USN 451265 @ Time 2013-07-10 13:30:43  
-Dallas\SourceDC @ USN 801224 @ Time 2013-07-11 14:17:04  
-Houston\2012DC3 @ USN 469842 @ Time 2013-07-10 13:14:27  
-66a1b264-80b8-44f8-8356-9ebcd7a34f15 @ USN 32811 @ Time 2013-06-06 08:26:56  
-Dallas\2012DC2 @ USN 460219 @ Time  2013-07-10 13:30:44  
-Dallas\DestinationDC @ USN 1359087 @ Time  2013-07-12 07:59:37  
-Dallas\2003DC1 @ USN 15556 @ Time 2013-07-10 13:21:50
+> Dallas\2008DC1 @ USN 451265 @ Time *\<DateTime>*  
+Dallas\SourceDC @ USN 801224 @ Time *\<DateTime>*  
+Houston\2012DC3 @ USN 469842 @ Time *\<DateTime>*  
+66a1b264-80b8-44f8-8356-9ebcd7a34f15 @ USN 32811 @ Time *\<DateTime>*  
+Dallas\2012DC2 @ USN 460219 @ Time  *\<DateTime>*  
+Dallas\DestinationDC @ USN 1359087 @ Time  *\<DateTime>*  
+Dallas\2003DC1 @ USN 15556 @ Time *\<DateTime>*
 
 Source DC  
 
@@ -510,9 +510,9 @@ The description section of the event contains the following data:
 The following object changes were applied to the local Active Directory Domain Services database.  
 Property: 900dd (sAMAccountName)  
 Object: CN=xtestingusers14167,CN=Users,DC=north,DC=fabrikam,DC=com Object  
-GUID: 984a8f06-aa4b-4f80-8b40-0f78b5066ae0  
+GUID: *\<GUID>*  
 Remote version: 1  
-Remote timestamp: 2013-07-10 14:24:31  
+Remote timestamp: *\<DateTime>*  
 Remote Originating USN: 540828
 
 The Property section contains both the attributeID and the lDAPDisplayName of the attribute.

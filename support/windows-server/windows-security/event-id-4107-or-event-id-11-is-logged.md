@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika，egomes
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Event ID 4107 or Event ID 11 is logged in the Application log
 
@@ -56,7 +56,7 @@ This error occurs because the Microsoft Certificate Trust List Publisher certifi
 
 To resolve the problem, follow these steps:
 
-1. Open a command prompt. To do this, select **Start**, select **All Programs**, select **Accessories**, and then select **Command Prompt**.
+1. Open a command prompt. Select **Start**, select **All Programs**, select **Accessories**, and then select **Command Prompt**.
 
 1. At the command prompt, type the following command, and then press ENTER:
 
@@ -65,11 +65,11 @@ To resolve the problem, follow these steps:
     ```
 
     > [!NOTE]
-    > The `certutil` command must be run for every user on the workstation. Each user must login and follow steps 1 and 2 above.
+    > The `certutil` command must be run for every user on the workstation. Each user must log in and follow steps 1 and 2 above.
 
-1. If the expired certificate is cached in one of the local system profiles, you must delete the contents of some directories by using Windows Explorer. To do this, follow these steps:
+1. If the expired certificate is cached in one of the local system profiles, you must delete the contents of some directories by using Windows Explorer. To do it, follow these steps:
 
-   1. Start Windows Explorer. To do this, select **Start**, select **All Programs**, select **Accessories**, and then select **Windows Explorer**.
+   1. Start Windows Explorer. Select **Start**, select **All Programs**, select **Accessories**, and then select **Windows Explorer**.
 
         > [!NOTE]
         > You must enable hidden folders to view the directories whose contents you must delete. To enable hidden files and folders, follow these steps:
@@ -100,8 +100,10 @@ To resolve the problem, follow these steps:
 
 ## More information
 
-Additionally, event ID 4107 can also be logged with a **The data is invalid** error instead of the **A required certificate is not within its validity period when verifying against the current system clock or the timestamp in the signed file** error.
+Event ID 4107 can also be logged with **The data is invalid** error instead of the following error:  
 
-This error **Data is invalid** indicates the object returned from the network was not a valid cab file and hence Windows could not parse it correctly. Instances of such an error can occur when the network retrieval attempt for the cab file fails to go through a proxy. If the proxy returns some data or message instead of a standard HTTP error code, Windows will try to parse the message received from the proxy expecting it to be the cab. This will fail with the **data is invalid** error.
+**A required certificate is not within its validity period when verifying against the current system clock or the timestamp in the signed file**
 
-To address this error, you need to remove the invalid entry in the cache by clearing the cache following the steps outlined in the [Resolution](#resolution) section.
+This error **Data is invalid** indicates the object returned from the network wasn't a valid cab file. So Windows couldn't parse it correctly. Instances of such an error can occur when the network retrieval attempt for the cab file fails to go through a proxy. If the proxy returns some data or message instead of a standard HTTP error code, Windows will try to parse the message received from the proxy, expecting it to be the cab. This situation will fail with the **data is invalid** error.
+
+To address this error, you need to remove the invalid entry in the cache by clearing the cache following the steps in the [Resolution](#resolution) section.

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Blue Screen/Bugcheck
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # How to troubleshoot a STOP 0xC000021A error in Windows XP or Windows Server 2003
 
@@ -103,20 +103,10 @@ If the previous steps in this article don't resolve the problem, start the compu
 > - Choosing the Last Known Good Configuration startup option provides a way to recover from problems such as a newly added driver that may be incorrect for your hardware. However, it doesn't solve problems that are caused by corrupted or missing drivers or files.
 > - When you choose the Last Known Good Configuration option, only the information in registry key HKLM\System\CurrentControlSet is restored. Any changes you have made in other registry keys remain.
 
-### In-place upgrade
-
-If the previous steps in this article do not resolve the problem, perform an in-place upgrade. For more information about how to do this, click the following article numbers to view the articles in the Microsoft Knowledge Base: [292175](https://support.microsoft.com/help/292175) How to perform an in-place upgrade of Windows 2000  
- [978788](https://support.microsoft.com/help/978788) How to perform an in-place upgrade (reinstallation) of Windows XP  
- [816579](https://support.microsoft.com/help/816579) How to perform an in-place upgrade of Windows Server 2003  
-
 ### Remove incompatible software by using the Recovery Console
 
 If the previous steps in this article don't resolve the problem, remove incompatible software by using the Recovery Console. Complete steps that describe how to do this are beyond the scope of this article. However, you may be able to use the following articles as guidelines for performing this procedure.
 
-[313670](https://support.microsoft.com/help/313670) How to replace a driver by using Recovery Console in Windows 2000  
- [816104](https://support.microsoft.com/help/816104) How to replace a driver by using Recovery Console in Windows Server 2003  
- [326215](https://support.microsoft.com/help/326215) How to use the Recovery Console on a Windows Server 2003-based computer that does not start  
- [229716](https://support.microsoft.com/help/229716) Description of the Windows 2000 Recovery Console  
- [307654](https://support.microsoft.com/help/307654) How to install and use the Recovery Console in Windows XP  
- [307545](https://support.microsoft.com/help/307545) How to recover from a corrupted registry that prevents Windows XP from starting  
- [216417](https://support.microsoft.com/help/216417) How to install the Windows Recovery Console
+[816104](https://support.microsoft.com/help/816104) How to replace a driver by using Recovery Console in Windows Server 2003  
+[326215](https://support.microsoft.com/help/326215) How to use the Recovery Console on a Windows Server 2003-based computer that does not start  
+[307654](https://support.microsoft.com/help/307654) How to install and use the Recovery Console in Windows XP  

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Cannot bring a resource online
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Error messages occur if you try to bring a cluster group online after a cluster stops
 
@@ -61,8 +61,8 @@ A list of possible owners of the resource is displayed. This list indicates that
 
 4. In Cluster Administrator, bring the group that was previously in the offline state online again.  
 
->[!NOTE]
- After the group comes online, if you have problems reviewing the resources in Cluster Administrator, quit Cluster Administrator, and then reconnect to the cluster.
+> [!NOTE]
+> After the group comes online, if you have problems reviewing the resources in Cluster Administrator, quit Cluster Administrator, and then reconnect to the cluster.
 
 ## Status
 

@@ -18,24 +18,24 @@ The proxyAddresses attribute in Active Directory is a multi-value property that 
 
 The following terminology is used in this article:
 
-- Initial domain: This is the first provisioned domain in the tenant. For example, `contoso.onmicrosoft.com`.
+- Initial domain: It's the first provisioned domain in the tenant. For example, `contoso.onmicrosoft.com`.
 - Microsoft Online Email Routing Address (MOERA): The MOERA is constructed from the user's userPrincipalName attribute in Active Directory and is automatically assigned to the cloud account during the initial sync. For example, `user@contoso.onmicrosoft.com`.
-- Primary SMTP address: This is the primary email address of an Exchange recipient object. For example, SMTP:`user@contoso.com`.
-- Secondary SMTP address: This is the secondary email address of an Exchange recipient object, which can have multiple secondary email addresses. For example, smtp:`user@contoso.com`.
+- Primary SMTP address: It's the primary email address of an Exchange recipient object. For example, SMTP:`user@contoso.com`.
+- Secondary SMTP address: It's the secondary email address of an Exchange recipient object, which can have multiple secondary email addresses. For example, smtp:`user@contoso.com`.
 - User principal name (UPN): The UPN can be the sign-in name of the user.
-- mail attribute: This is an attribute in Active Directory, the value of which represents the email address of a user.
-- mailNickName attribute: This is an attribute in Active Directory, the value of which represents the alias of a user in an Exchange organization.
+- mail attribute: It's an attribute in Active Directory, the value of which represents the email address of a user.
+- mailNickName attribute: It's an attribute in Active Directory, the value of which represents the alias of a user in an Exchange organization.
 
 ## Scenario 1: User doesn't have the mail, mailNickName, or proxyAddresses attribute set
 
 You created an on-premises user object that has the following attributes set:
 
 > UPN: `onprema@contoso.com`  
-> mail: <not set>  
+> mail: \<not set>  
 > mailNickName: \<not set>  
 > proxyAddresses: \<not set>  
 
-Next, it's synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operations are performed as a result of system calculation:
+Next, it's synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operations are performed because of system calculation:
 
 - Populate the mailNickName attribute by using the user part of the UPN.
 - Populate the MOERA by using the format mailNickName@initial domain.
@@ -59,7 +59,7 @@ You created an on-premises user object that has the following attributes set:
 > mailNickName: \<not set>  
 > proxyAddresses: \<not set>
 
-Next, it's synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operations are performed as a result of system calculation.
+Next, it's synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operations are performed because of system calculation.
 
 - Populate the mailNickName attribute by using the user's part of the mail attribute.
 - Populate the MOERA by using the format of mailNickName@initial domain.
@@ -84,7 +84,7 @@ You created an on-premises user object that has the following attributes set:
 > mailNickName: \<not set>  
 > proxyAddresses: {smtp:`us1@contoso.onmicrosoft.com`,smtp:`us1@contoso.microsoftonline.com`,x500:/ o=MicrosoftOnline/ ou=External(FYDIBOHF25SPDLT)/ cn=Recipients/ cn=us1,SMTP:`us1@contoso.com`}
 
-Next, it's synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operations are performed as a result of system calculation:
+Next, it's synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operations are performed because of system calculation:
 
 - Populate the mailNickName  attribute by using the user's part of the UPN.
 - Populate the MOERA by using mailNickName@initial domain.
@@ -103,14 +103,14 @@ The following attributes are set in Azure AD on the synchronized user object:
 > mailNickName: us1  
 > proxyAddresses: {smtp:`us1@contoso.onmicrosoft.com`,SMTP:`us1@contoso.com`}
 
-Then, you change the values of the proxyAddresses attribute to the following:
+Then, you change the values of the proxyAddresses attribute to the following ones:
 
 > UPN: `us1@contoso.com`
 > mail: \<not set>  
 > mailNickName: \<not set>  
 > proxyAddresses: {smtp:`newus1@contoso.onmicrosoft.com`,smtp:`newus1@contoso.microsoftonline.com`,x500:/o=MicrosoftOnline/ou=External (FYDIBOHF25SPDLT)/cn=Recipients/cn=us1,SMTP:`newus1@contoso.com`}
 
-In this scenario, the following operations are performed as a result of system calculation:
+In this scenario, the following operations are performed because of system calculation:
 
 - Add the primary SMTP address that's specified in the proxyAddresses attribute.
 - Update the mail attribute by using the value of primary SMTP address specified in the proxyAddresse s attribute.
@@ -132,7 +132,7 @@ You created an on-premises user object that has the following attributes set:
 > mailNickName: \<not set>  
 > proxyAddresses: \<not set>
 
-Next, it's synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operations are performed as a result of system calculation:
+Next, it's synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operations are performed because of system calculation:
 
 - Populate the mailNickName attribute by using the user part of the UPN.
 - Populate the MOERA  by using the format mailNickName@initial domain.
@@ -149,7 +149,7 @@ The following attributes are set in Azure AD on the synchronized user object:
 
 Then, you remove the Exchange Online license. Nothing changes in Azure AD. All attributes remain the same.
 
-Then, you change the values of the proxyAddresses attribute to the following:
+Then, you change the values of the proxyAddresses attribute to the following ones:
 
 > UPN: `us2@contoso.com`  
 > mail: \<not set>  
@@ -176,7 +176,7 @@ You created two on-premises user objects that have the following attributes set:
 > mailNickName: \<not set>  
 > proxyAddresses: \<not set>
 
-Next, it's synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operations are performed as a result of system calculation:
+Next, it's synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operations are performed because of system calculation:
 
 - Populate the mailNickName attribute by using the user's part of the UPN.
 - Populate the MOERA  by using the format mailNickName@initial domain.
@@ -191,14 +191,14 @@ The following attributes are set in Azure AD on the synchronized user object:
 > mailNickName: us4
 > proxyAddresses: {smtp:`us4@contoso.com`,SMTP:`us4@contoso.onmicrosoft.com`}
 
-Then, you change the values of the proxyAddresses attribute of the on-premises user to the following:
+Then, you change the values of the proxyAddresses attribute of the on-premises user to the following ones:
 
 > UPN: `us4@contoso.com`  
 > mail: \<not set>  
 > mailNickName: newus4  
 > proxyAddresses: \<not set>
 
-In this scenario, the following operations are performed as a result of system calculation:
+In this scenario, the following operations are performed because of system calculation:
 
 - Update the mailNickName attribute by using the same value as the mailNickName attribute.
 - Keep the mail attribute unchanged.
@@ -224,7 +224,7 @@ You created two on-premises user objects that have the following attributes set:
 > mailNickName: samenick  
 > proxyAddresses: \<not set>
 
-Next, they are synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operations are performed as a result of system calculation:
+Next, they are synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operations are performed because of system calculation:
 
 - Duplicate mailNickName  values are detected.
 - Populate the mailNickName attribute by appending four random digits.

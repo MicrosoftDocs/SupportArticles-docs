@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-sanair
 ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
-ms.technology: Networking
+ms.technology: networking
 ---
 # You cannot open file shares or Group Policy snap-ins on a domain controller
 
@@ -181,12 +181,10 @@ Run the Group Policy Update utility (Gpupdate.exe) with the force switch. To do 
   
     ![Screenshot of typing cmd](./media/cannot-open-file-shares-group-policy-snap-ins/type-cmd.png)
 
-3. At the command prompt, type `gpupdate /force`, and then press Enter.For more information about the Group Policy Update utility, see [A description of the Group Policy Update Utility.](https://support.microsoft.com/help/298444)  
+3. At the command prompt, type `gpupdate /force`, and then press Enter.
 
     > [!NOTE]
     > The Group Policy Update utility does not exist in Windows 2000 Server. In Windows 2000 Server, the equivalent command is `secedit /refreshpolicy machine_policy /enforce`.
-
-For more information about using the `Secedit` command in Windows 2000 Server, see [Using SECEDIT to force a Group Policy refresh immediately](https://support.microsoft.com/help/227302).
 
 Step 6 - Check the application event log
 

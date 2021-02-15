@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Partition and volume management
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Windows support for hard disks that are larger than 2 TB
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2581408
 
 ## Summary
 
-In order for an operating system to fully support storage devices that have capacities that exceed 2 terabytes (2 TB, or 2 trillion bytes), the device must be initialized by using the GUID partition table (GPT) partitioning scheme. This scheme supports addressing of the full range of storage capacity. If the user intends to start the computer from one of these large disks, the system's base firmware interface must use the Unified Extensible Firmware Interface (UEFI) and not BIOS.
+In order for an operating system to fully support storage devices that have capacities that exceed 2 terabytes (2 TB, or 2 trillion bytes), the device must be initialized by using the GUID Partition Table (GPT) partitioning scheme. This scheme supports addressing of the full range of storage capacity. If the user intends to start the computer from one of these large disks, the system's base firmware interface must use the Unified Extensible Firmware Interface (UEFI) and not BIOS.
 
 This article outlines Microsoft support across all Windows versions since Windows XP. It also describes the requirements to address the full storage capability of these devices.
 
@@ -33,13 +33,13 @@ This article outlines Microsoft support across all Windows versions since Window
 
 ### More information
 
-The management of modern storage devices is addressed by using a scheme called Logical Block Addressing (LBA). This is the arrangement of the logical sectors that constitute the media. *LBA0* represents the first logical sector of the device, and the last LBA designation represents the last logical sector of the device, one label per sector. To determine the capacity of the storage device, you multiply the number of logical sectors within the device by the size of each logical sector. The current size standard is 512 bytes. For example, to achieve a device that has a capacity of 2 TB, you must have 3,906,250,000 512-byte sectors. However, a computer system requires 32 bits (1 s and 0 s) of information to represent this large number. Therefore, any storage capacity that is greater than what can be represented by using 32 bits would require an additional bit. That is, 33 bits.
+The management of modern storage devices is addressed by using a scheme called Logical Block Addressing (LBA). It's the arrangement of the logical sectors that constitute the media. *LBA0* represents the first logical sector of the device, and the last LBA designation represents the last logical sector of the device, one label per sector. To determine the capacity of the storage device, you multiply the number of logical sectors within the device by the size of each logical sector. The current size standard is 512 bytes. For example, to achieve a device that has a capacity of 2 TB, you must have 3,906,250,000 512-byte sectors. However, a computer system requires 32 bits (1 s and 0 s) of information to represent this large number. Therefore, any storage capacity that is greater than what can be represented by using 32 bits would require an additional bit. That is, 33 bits.
 
 The problem in this computation is that the partitioning scheme that is used by most modern Windows-based computers is MBR (master boot record). This scheme sets a limit of 32 for the number of bits that are available to represent the number of logical sectors.
 
-The 2-TB barrier is the result of this 32-bit limitation. Because the maximum number that can be represented by using 32 bits is 4,294,967,295, this translates to 2.199 TB of capacity by using 512-byte sectors (approximately 2.2 TB). Therefore, a capacity beyond 2.2 TB is not addressable by using the MBR partitioning scheme.
+The 2-TB barrier is the result of this 32-bit limitation. Because the maximum number that can be represented by using 32 bits is 4,294,967,295, it translates to 2.199 TB of capacity by using 512-byte sectors (approximately 2.2 TB). Therefore, a capacity beyond 2.2 TB isn't addressable by using the MBR partitioning scheme.
 
-To make more bits available for addressing, the storage device must be initialized by using GPT. This partitioning scheme lets up to 64 bits of information be used within logical sectors. This translates to a theoretical limitation of 9.4 ZB (9.4 zettabytes, or 9.4 billion terabytes). However, the issue that affects GPT is that most currently available systems are based on the aging BIOS platform. BIOS supports only MBR-initialized disks to start the computer. To restart from a device that is initialized by using GPT, your system must be UEFI-capable. By default, many current systems can support UEFI. Microsoft expects that most future systems will have this support. Customers should consult with their system vendor to determine the ability of their systems to support UEFI and disks that have storage capacities that are greater than 2 TB.
+To make more bits available for addressing, the storage device must be initialized by using GPT. This partitioning scheme lets up to 64 bits of information be used within logical sectors. It translates to a theoretical limitation of 9.4 ZB (9.4 zettabytes, or 9.4 billion terabytes). However, the issue that affects GPT is that most currently available systems are based on the aging BIOS platform. BIOS supports only MBR-initialized disks to start the computer. To restart from a device that is initialized by using GPT, your system must be UEFI-capable. By default, many current systems can support UEFI. Microsoft expects that most future systems will have this support. Customers should consult with their system vendor to determine the ability of their systems to support UEFI and disks that have storage capacities that are greater than 2 TB.
 
 ## Overall requirements for a non-bootable data volume
 
@@ -95,7 +95,7 @@ The following tables list Microsoft support for the various concepts that are di
 |Windows XP|Supported|Not Supported|Not Supported|
 |||||
 
-Hybrid-MBR is an alternative style of partitioning that is not supported by any version of Windows.
+Hybrid-MBR is an alternative style of partitioning that isn't supported by any version of Windows.
 
 ### Table 2: Windows support for system firmware
 
@@ -117,14 +117,14 @@ Hybrid-MBR is an alternative style of partitioning that is not supported by any 
 
 ### Table 4: Windows support for large-capacity disks as non-booting data volumes
 
-| System| >2 TB single disk - MBR| >2 TB single disk - Hybrid-MBR| >2 TB single disk - GPT |
+| System| >2-TB single disk - MBR| >2-TB single disk - Hybrid-MBR| >2-TB single disk - GPT |
 |---|---|---|---|
 |Windows 7|Supports up to 2 TB of addressable capacity**|Not Supported|Supports full capacity|
 |Windows Vista|Supports up to 2 TB of addressable capacity**|Not Supported|Supports full capacity|
 |Windows XP|Supports up to 2 TB of addressable capacity**|Not Supported|Not Supported|
 |||||
 
-Capacity beyond 2 TB cannot be addressed by Windows if the disk is initialized by using the MBR partitioning scheme. For example, for a 3 TB single disk that is initialized by using MBR, Windows can create partitions up to the first 2 TB. However, the remaining capacity cannot be addressed and, therefore, cannot be used.
+Capacity beyond 2 TB cannot be addressed by Windows if the disk is initialized by using the MBR partitioning scheme. For example, for a 3-TB single disk that is initialized by using MBR, Windows can create partitions up to the first 2 TB. However, the remaining capacity cannot be addressed and, therefore, cannot be used.
 
 ## Initialize a data disk by using GPT
 
@@ -146,15 +146,15 @@ The following steps show how to initialize a fresh disk by using the GPT partiti
 
     ![Screenshot of the Online disk status](./media/support-for-hard-disks-exceeding-2-tb/check-online-status.jpg)
 
-4. After the disk is initialized, you must create a partition, and then format that partition by using a file system. This is to be able to store data in that partition, and assign a name and a drive letter to that partition. To do this, right-click the unallocated space on the right side of the status row for that disk, and then click **New Simple Volume**. Follow the steps in the partition wizard to complete this process.
+4. After the disk is initialized, you must create a partition, and then format that partition by using a file system. It's to be able to store data in that partition, and assign a name and a drive letter to that partition. To do it, right-click the unallocated space on the right side of the status row for that disk, and then click **New Simple Volume**. Follow the steps in the partition wizard to complete this process.
 
 ### Convert an MBR disk to GPT
 
 If you have previously initialized the disk by using the MBR partitioning scheme, follow these steps to initialize the disk by using the GPT scheme. Make sure that you back up any important data before you try these steps.
 
-1. Click **Start**, type *diskmgmt.msc* in the **Start search** box, right-click diskmgmt.msc, and then click **Run as Administrator**. If it is necessary, enter the credentials for a user account that has Administrator privileges.
+1. Click **Start**, type *diskmgmt.msc* in the **Start search** box, right-click diskmgmt.msc, and then click **Run as Administrator**. If it's necessary, enter the credentials for a user account that has Administrator privileges.
 
-2. In the Disk Management window, examine the disk status rows at the bottom. In the following example, the user has a 3 TB disk that was previously initialized by using the MBR partitioning scheme. That device is labeled here as *Disk 1*.
+2. In the Disk Management window, examine the disk status rows at the bottom. In the following example, the user has a 3-TB disk that was previously initialized by using the MBR partitioning scheme. That device is labeled here as *Disk 1*.
 
     ![Screenshot of the disk status in the Disk Management window](./media/support-for-hard-disks-exceeding-2-tb/disk-status-checking.jpg)
 
@@ -167,7 +167,7 @@ If you have previously initialized the disk by using the MBR partitioning scheme
 
     ![Screenshot of clicking Convert to GPT Disk](./media/support-for-hard-disks-exceeding-2-tb/convert-to-gpt-disk.jpg)
 
-5. Now that the disk is initialized to access the full storage capacity, you must create a partition, and then format that partition by using a file system. This is to be able to store data in that partition, and assign a name and a drive letter to that partition. To do this, right-click the unallocated space on the right side of the status row for that disk, and then click **New Simple Volume**. Follow the steps in the partition wizard to complete this process.
+5. Now that the disk is initialized to access the full storage capacity, you must create a partition, and then format that partition by using a file system. It's to be able to store data in that partition, and assign a name and a drive letter to that partition. To do it, right-click the unallocated space on the right side of the status row for that disk, and then click **New Simple Volume**. Follow the steps in the partition wizard to complete this process.
 
 ## Known issues or limitations
 
@@ -175,14 +175,14 @@ Because the transition to a single-disk capacity of greater than 2 TB has occurr
 
 To this point, the following incorrect behavior is known to occur when Windows handles single-disk storage capacity of greater than 2 TB:
 
-- The numeric capacity beyond 2 TB overflows. This results in the system being able to address only the capacity beyond 2 TB. For example, on a 3 TB disk, the available capacity may be only 1 TB.
+- The numeric capacity beyond 2 TB overflows. It results in the system being able to address only the capacity beyond 2 TB. For example, on a 3-TB disk, the available capacity may be only 1 TB.
 
-- The numeric capacity beyond 2 TB is truncated. This results in no more than 2 TB of addressable space. For example, on a 3 TB disk, the available capacity may be only 2 TB.
+- The numeric capacity beyond 2 TB is truncated. It results in no more than 2 TB of addressable space. For example, on a 3-TB disk, the available capacity may be only 2 TB.
 
-- The storage device is not detected correctly. In this case, it is not displayed in either the Device Manager or Disk Management windows. Many storage controller manufacturers offer updated drivers that provide support for storage capacities of more than 2 TB. Contact your storage controller manufacturer or OEM to determine what downloadable support is available for single-disk capacities that are greater than 2 TB.
+- The storage device isn't detected correctly. In this case, it isn't displayed in either the Device Manager or Disk Management windows. Many storage controller manufacturers offer updated drivers that provide support for storage capacities of more than 2 TB. Contact your storage controller manufacturer or OEM to determine what downloadable support is available for single-disk capacities that are greater than 2 TB.
 
 ## SCSI sense data
 
 When a disk encounters errors that are related to unreadable or unwritable sectors, it reports those errors and the relevant SCSI sense data to the operating system. SCSI sense data may contain information about LBA for sectors that were found to be unreadable or unwritable.
 
-For LBA address space that is greater than 2 TB, the disk requires SCSI sense data in Descriptor format. This format is not supported by Windows 7 or Windows Server 2008 R2, which retrieves SCSI sense data in Fixed format. Therefore, the retrieved SCSI sense data either does not contain information about bad sectors or it contains incorrect information about bad sectors. Administrators should note this limitation when they look for bad sector LBA information that is recorded in the Windows event log.
+For LBA address space that is greater than 2 TB, the disk requires SCSI sense data in Descriptor format. This format isn't supported by Windows 7 or Windows Server 2008 R2, which retrieves SCSI sense data in Fixed format. Therefore, the retrieved SCSI sense data either does not contain information about bad sectors or it contains incorrect information about bad sectors. Administrators should note this limitation when they look for bad sector LBA information that's recorded in the Windows event log.

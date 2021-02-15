@@ -1,6 +1,6 @@
 ---
 title: High Availability overview
-description: Overview of High Availability troubleshooting articles.
+description: Overview of High Availability troubleshooting articles for Windows Server.
 ms.date: 11/09/2020
 author: Deland-Han
 ms.author: delhan
@@ -10,9 +10,9 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
-# High Availability documentation
+# High Availability troubleshooting documentation for Windows Server
 
 The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve High Availability-related issues. The topics are divided into subcategories. Browse the content or use the search feature to find relevant content.
 

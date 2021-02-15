@@ -302,22 +302,22 @@ Review the problems and solutions for application installation issues:
 
 - Loss of network connectivity as described in [Lost Network Connections](#LostNetworkConnections)  
 
-- Installation error 30029 while installing the 2007 Microsoft Office system or related files as described in [The 2007 Microsoft Office System](#MicrosoftOfficeSystem)  
+- Installation error 30029 while installing the 2007 Microsoft Office system or related files as described in [The 2007 Microsoft Office System](#MicrosoftOfficeSystem)  
 
 ####  <a name="BlockedExecutables"></a> Blocked Executables
 
-**Problem:** If installation source files are downloaded from the Internet, it is likely that they will be marked with one or more NTFS file system data streams. For more information about NTFS data streams, see [File Streams](/windows/win32/fileio/file-streams). The existence of NTFS file system data streams might cause an **Open File – Security Warning** prompt to be displayed. The installation will not proceed until you click **Run** at the prompt.  
+**Problem:** If installation source files are downloaded from the Internet, it is likely that they will be marked with one or more NTFS file system data streams. For more information about NTFS data streams, see [File Streams](/windows/win32/fileio/file-streams). The existence of NTFS file system data streams might cause an **Open File – Security Warning** prompt to be displayed. The installation will not proceed until you click **Run** at the prompt.  
 
-Figure 2 shows, you can view NTFS file system data streams using the **More** command and the [Streams utility](/sysinternals/downloads/streams).  
+Figure 2 shows, you can view NTFS file system data streams using the **More** command and the [Streams utility](/sysinternals/downloads/streams).  
 
 ![NTFS data streams](./media/troubleshooting-reference/TroubleshootingReference2.jpg "TroubleshootingReference2")  
-Figure 2. NTFS data streams  
+Figure 2. NTFS data streams  
 
-**Figure 2. NTFS data streams**
+**Figure 2. NTFS data streams**
 
-**Possible Solution 1:** Right\-click the installation source file, and then click **Properties**. Click **Unblock**, and then click **OK** to remove the NTFS file system data streams from the file. Repeat this process for each installation source file that is blocked by the existence of one or more NTFS file system data streams.  
+**Possible Solution 1:** Right\-click the installation source file, and then click **Properties**. Click **Unblock**, and then click **OK** to remove the NTFS file system data streams from the file. Repeat this process for each installation source file that is blocked by the existence of one or more NTFS file system data streams.  
 
-**Possible Solution 2:** Use the Streams utility, as  REF \_Ref308173670 \\h Figure 2 shows, to remove the NTFS file system data streams from the installation source file. The Streams utility can remove NTFS file system data streams from one or more files or folders at once.  
+**Possible Solution 2:** Use the Streams utility, as  REF \_Ref308173670 \\h Figure 2 shows, to remove the NTFS file system data streams from the installation source file. The Streams utility can remove NTFS file system data streams from one or more files or folders at once.  
 
 ####  <a name="LostNetworkConnections"></a> Lost Network Connections
 
@@ -327,7 +327,7 @@ Figure 2. NTFS data streams
 
 ####  <a name="MicrosoftOfficeSystem"></a> The 2007 Microsoft Office System
 
-**Problem:** While deploying the 2007 Office system and including a Windows Installer patch \(MSP\) file, the installation may fail with error code 30029.  
+**Problem:** While deploying the 2007 Office system and including a Windows Installer patch \(MSP\) file, the installation may fail with error code 30029.  
 
  Further investigation in the ZTIApplications.log shows the following messages:  
 
@@ -356,7 +356,7 @@ Review the problems and solutions for automatic logon issues:
 **Possible Solution:** Be sure that the GPO is applied to specific organizational units \(OUs\) and not included in the default domain GPO. When you add computers to the domain, specify that they be added to an OU that is not affected by a GPO that enforces a logon security banner. In the Task Sequence Editor, include as one of the last task sequence steps a script that relocates the computer account to the desired OU.  
 
 > [!NOTE]
-> If you are reusing existing Active Directory&reg; Domain Services \(AD DS\) accounts, ensure that prior to deploying to the target computer you have relocated the target computer's account to an OU that is not affected by the GPO that enforces the security logon banner.  
+> If you are reusing existing Active Directory&reg; Domain Services \(AD DS\) accounts, ensure that prior to deploying to the target computer you have relocated the target computer's account to an OU that is not affected by the GPO that enforces the security logon banner.  
 
 ####  <a name="PromtedforUserCredentials"></a> Prompted for User Credentials
 
@@ -374,33 +374,33 @@ Review the problems and solutions for automatic logon issues:
 
 Review database\-related problems and solutions:  
 
-- Errors generated as a result of improperly configured firewalls on database server as described in [Blocked SQL Server Browser Requests](#BlockedSQLServerBrowserRequests)  
+- Errors generated as a result of improperly configured firewalls on database server as described in [Blocked SQL Server Browser Requests](#BlockedSQLServerBrowserRequests)  
 
 - Errors generated as a result of broken connections with the database server as described in [Named Pipe Connections](#NamedPipeConnections)  
 
-####  <a name="BlockedSQLServerBrowserRequests"></a> Blocked SQL Server Browser Requests
+####  <a name="BlockedSQLServerBrowserRequests"></a> Blocked SQL Server Browser Requests
 
-**Problem:** During the MDT deployment process, information can be retrieved from Microsoft SQL Server&reg; databases. However, errors might be generated that relate to an improperly configured firewall on the database server.  
+**Problem:** During the MDT deployment process, information can be retrieved from Microsoft SQL Server&reg; databases. However, errors might be generated that relate to an improperly configured firewall on the database server.  
 
-**Possible Solution:** The Windows Firewall in Windows Server helps prevent unauthorized access to computer resources. However, if the firewall is configured incorrectly, attempts to connect to a SQL Server instance may be blocked. To access an instance of SQL Server that is behind the firewall, configure the firewall on the computer that is running SQL Server. For more information on configuring firewall ports for SQL Server, see [Configure the Windows Firewall to Allow SQL Server Access](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access).
+**Possible Solution:** The Windows Firewall in Windows Server helps prevent unauthorized access to computer resources. However, if the firewall is configured incorrectly, attempts to connect to a SQL Server instance may be blocked. To access an instance of SQL Server that is behind the firewall, configure the firewall on the computer that is running SQL Server. For more information on configuring firewall ports for SQL Server, see [Configure the Windows Firewall to Allow SQL Server Access](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access).
 
 ####  <a name="NamedPipeConnections"></a> Named Pipe Connections  
 
-**Problem:** During the MDT deployment process, information can be retrieved from SQL Server databases. However, errors might be generated that relate to broken SQL Server connections. These can be caused by not enabling named pipe connections in Microsoft SQL Server.  
+**Problem:** During the MDT deployment process, information can be retrieved from SQL Server databases. However, errors might be generated that relate to broken SQL Server connections. These can be caused by not enabling named pipe connections in Microsoft SQL Server.  
 
-**Possible Solution:** To resolve these problems, enable named pipes in SQL Server. Also, specify the **SQLShare** property, which it is required when making a connection to an external database using named pipes. When connecting using named pipes, use integrated security to make the connection to the database. In the case of LTI deployments, the user account that you specify makes the connection to the database. For ZTI deployments that use Configuration Manager, the network access account connects to the database. Because Windows PE has no security context by default, you must make a network connection to the database server to establish a security context for the user who will be making the connection.  
+**Possible Solution:** To resolve these problems, enable named pipes in SQL Server. Also, specify the **SQLShare** property, which it is required when making a connection to an external database using named pipes. When connecting using named pipes, use integrated security to make the connection to the database. In the case of LTI deployments, the user account that you specify makes the connection to the database. For ZTI deployments that use Configuration Manager, the network access account connects to the database. Because Windows PE has no security context by default, you must make a network connection to the database server to establish a security context for the user who will be making the connection.  
 
 The network share that the **SQLShare** property specifies provides a means to connect to the server to gain a proper security context. You must have Read access to the share. When the connection is made, you can then establish the named pipe connection to the database. The **SQLShare** property is not needed and should not be used when making a TCP\/IP connection to the database.  
 
-Enable named pipe connections by performing the following tasks based on the version of SQL Server you are using:  
+Enable named pipe connections by performing the following tasks based on the version of SQL Server you are using:  
 
-- Enable named pipe connections for SQL Server 2008 R2 as described in [Enable Named Pipe Connections in SQL Server 2008 R2](#EnableNamedPipeConnectionsinSQLServer).  
+- Enable named pipe connections for SQL Server 2008 R2 as described in [Enable Named Pipe Connections in SQL Server 2008 R2](#EnableNamedPipeConnectionsinSQLServer).  
 
-- Enable named pipe connections for SQL Server 2005 as described in [Enable Named Pipe Connections in SQL Server 2005](#EnableNamedPipeConnectionsinSQL).  
+- Enable named pipe connections for SQL Server 2005 as described in [Enable Named Pipe Connections in SQL Server 2005](#EnableNamedPipeConnectionsinSQL).  
 
-#####  <a name="EnableNamedPipeConnectionsinSQLServer"></a> Enable Named Pipe Connections in SQL Server 2008 R2
+#####  <a name="EnableNamedPipeConnectionsinSQLServer"></a> Enable Named Pipe Connections in SQL Server 2008 R2
 
-To enable named pipe connections in SQL Server 2008 R2, perform the following steps:  
+To enable named pipe connections in SQL Server 2008 R2, perform the following steps:  
 
 1. On the computer running SQL Server 2008 R2 that hosts the database to be queried, click **Start**, and then point to **All Programs**. Point to **Microsoft SQL Server 2008 R2**, and then click **SQL Server Management Studio**.  
 
@@ -424,7 +424,7 @@ To enable named pipe connections in SQL Server 2008 R2, perform the following 
 
 10. In the **Warning** dialog box, click **OK**.  
 
-11. In the **Sql Server Configuration Manager** console, go to SQL Server Configuration Manager \(Local\) \/ SQL Server Services.  
+11. In the **Sql Server Configuration Manager** console, go to SQL Server Configuration Manager \(Local\) \/ SQL Server Services.  
 
 12. In the details pane, right\-click <strong>SQL Server*\(sql\_instance\)</strong><em>, and then click **Restart</em>* \(where *sql\_instance* in the name of the SQL Server instance that you configured in step 2\).  
 
@@ -434,9 +434,9 @@ To enable named pipe connections in SQL Server 2008 R2, perform the following 
 
     For additional information, [How to enable remote connections in SQL Server 2008](/archive/blogs/walzenbach/how-to-enable-remote-connections-in-sql-server-2008).  
 
-#####  <a name="EnableNamedPipeConnectionsinSQL"></a> Enable Named Pipe Connections in SQL Server 2005
+#####  <a name="EnableNamedPipeConnectionsinSQL"></a> Enable Named Pipe Connections in SQL Server 2005
 
-To enable named pipe connections in SQL Server 2005, perform the following steps:  
+To enable named pipe connections in SQL Server 2005, perform the following steps:  
 
 1. On the computer running SQL Server 2005 that hosts the database to be queried, click **Start**, and then point to **All Programs**. Point to **Microsoft SQL Server 2005**, point to **Configuration Tools**, and then click **SQL Server Surface Area Configuration**.  
 
@@ -458,7 +458,7 @@ To enable named pipe connections in SQL Server 2005, perform the following ste
 
 8. Click **OK**.  
 
-9. Close SQL Server 2005 Surface Area Configuration.  
+9. Close SQL Server 2005 Surface Area Configuration.  
 
    For additional information, see the Microsoft Support article [How to configure SQL Server 2005 to allow remote connections](https://support.microsoft.com/help/914277)  
 
@@ -466,13 +466,13 @@ To enable named pipe connections in SQL Server 2005, perform the following ste
 
 Review MDT\-related problems and solutions:  
 
-- Prompted for user credentials and may receive error 0x80070035 as described in [Credentials_script](#Credentials_script)  
+- Prompted for user credentials and may receive error 0x80070035 as described in [Credentials_script](#Credentials_script)  
 
 - Error message "Wuredist.cab not found" appears as described in [ZTIWindowsUpdate](#ZTIWindowsUpdate)  
 
 ####  <a name="Credentials_script"></a> Credentials\_script
 
-**Problem:** During the last start\-up of a newly deployed computer, the user is prompted to provide user credentials and may receive error 0x80070035, which indicates that the network path was not found.  
+**Problem:** During the last start\-up of a newly deployed computer, the user is prompted to provide user credentials and may receive error 0x80070035, which indicates that the network path was not found.  
 
 **Possible Solution:** Be sure that the WIM file does not include a MININT or \_SMSTaskSequence folder. To delete these folders, first use the ImageX utility to mount the WIM file, and then delete the folders.  
 
@@ -513,9 +513,9 @@ Review Windows Deployment Wizard–related problems and solutions:
 
 ####  <a name="WizardPagesareNotSkipped"></a> Wizard Pages Are Not Skipped
 
-**Problem:** A wizard page is displayed even though the MDT DB or CustomSettings.ini file specify that the wizard should be skipped.  
+**Problem:** A wizard page is displayed even though the MDT DB or CustomSettings.ini file specify that the wizard should be skipped.  
 
-**Possible Solution:** To properly skip a wizard page, include all properties that would be specified on that wizard page where appropriate in the MDT DB or CustomSettings.ini file along with appropriate values. If a property is configured improperly for a skipped wizard page, that page will be shown. For more information about which properties are required to ensure that a wizard page is skipped, see the section, "Providing Properties for Skipped Deployment Wizard Pages", in the MDT document *Toolkit Reference*.  
+**Possible Solution:** To properly skip a wizard page, include all properties that would be specified on that wizard page where appropriate in the MDT DB or CustomSettings.ini file along with appropriate values. If a property is configured improperly for a skipped wizard page, that page will be shown. For more information about which properties are required to ensure that a wizard page is skipped, see the section, "Providing Properties for Skipped Deployment Wizard Pages", in the MDT document *Toolkit Reference*.  
 
 ### Disks and Partitioning
 
@@ -535,7 +535,7 @@ Deploying BitLocker requires a specific configuration for proper deployment. The
 
 - USB devices, CD drives, DVD drives, or other removable media devices on the target computer that appear as multiple drive letters, as described in [Devices Appear as Multiple Drive Letters](#DevicesAppearasMultipleDriveLetters)  
 
-- Shrinking drive C on the target computer to provide sufficient unallocated disk space as described in [Problems with Shrinking Disks](#ProblemswithShrinkingDisks)  
+- Shrinking drive C on the target computer to provide sufficient unallocated disk space as described in [Problems with Shrinking Disks](#ProblemswithShrinkingDisks)  
 
 #####  <a name="ZTIBde.wsf"></a> ZTIBde.wsf Script Fails with the Error "Unable to open registry key 'HKEY\_CURRENT\_USER\\Control Panel\\International\\LocaleName' for reading"
 
@@ -551,11 +551,11 @@ Deploying BitLocker requires a specific configuration for proper deployment. The
 
 #####  <a name="ProblemswithShrinkingDisks"></a> Problems with Shrinking Disks
 
-**Problem:** Not enough unallocated disk space exists on the target computer to enable BitLocker. To deploy BitLocker on a target computer, at least 2 gigabytes \(GB\) of unallocated disk space is required to create the system volume. The *system volume* is the volume that contains the hardware\-specific files needed to load Windows after the BIOS has booted the computer.  
+**Problem:** Not enough unallocated disk space exists on the target computer to enable BitLocker. To deploy BitLocker on a target computer, at least 2 gigabytes \(GB\) of unallocated disk space is required to create the system volume. The *system volume* is the volume that contains the hardware\-specific files needed to load Windows after the BIOS has booted the computer.  
 
-**Possible Solution 1:** On existing computers, use the Diskpart tool to shrink drive C so that the system volume can be created. In some instances, though, the Diskpart tool may not be able to shrink drive C sufficiently to provide 2 GB of unallocated disk space, possibly because of fragmented disk space within drive C.  
+**Possible Solution 1:** On existing computers, use the Diskpart tool to shrink drive C so that the system volume can be created. In some instances, though, the Diskpart tool may not be able to shrink drive C sufficiently to provide 2 GB of unallocated disk space, possibly because of fragmented disk space within drive C.  
 
-One possible solution to this problem is to defragment drive C. To do so, perform the following steps:  
+One possible solution to this problem is to defragment drive C. To do so, perform the following steps:  
 
 1. Run the Diskpart `shrink querymax` command to identify the maximum amount of disk space that can be unallocated.  
 
@@ -617,13 +617,13 @@ The second phase of this protocol takes place between the client computer and a 
 
 Review the following solutions for PXE boot issues:  
 
-- Disable Windows PE logging to SetupAPI.log as described in [Disable Windows PE Logging in Windows Deployment Services](#DisableWindowsPELogginginWindowsDeploymentServices).  
+- Disable Windows PE logging to SetupAPI.log as described in [Disable Windows PE Logging in Windows Deployment Services](#DisableWindowsPELogginginWindowsDeploymentServices).  
 
 - Ensure that DHCP is configured properly as described in [Ensure the Proper DHCP Configuration](#EnsuretheProperDHCPConfiguration).  
 
 - Improve the response times for assigning IP addresses to PXE client computers as described in [Improve PXE IP Address Assignment Response Time](#ImprovePXEIPAddressAssignmentResponseTime).  
 
-#####  <a name="DisableWindowsPELogginginWindowsDeploymentServices"></a> Disable Windows PE Logging in Windows Deployment Services
+#####  <a name="DisableWindowsPELogginginWindowsDeploymentServices"></a> Disable Windows PE Logging in Windows Deployment Services
 
 The first procedure recommended is to make sure that logging to setupapi.log has been disabled.  
 
@@ -635,7 +635,7 @@ Is there a router between the client computer and the remote installation server
 
 #####  <a name="ImprovePXEIPAddressAssignmentResponseTime"></a> Improve PXE IP Address Assignment Response Time
 
-Check the following elements if it is taking a long time \(15–20 seconds\) for the PXE client computer to retrieve an IP address:  
+Check the following elements if it is taking a long time \(15–20 seconds\) for the PXE client computer to retrieve an IP address:  
 
 - Are the network adapter on the target computer and the switch or router set to the same speed \(automatic, duplex, full, and so on\)  
 
@@ -651,24 +651,24 @@ Check the following elements if it is taking a long time \(15–20 seconds\) fo
 
 Review Sysprep\-related problems and solutions:  
 
-- The target computer is not appearing in the correct AD DS OU as described in [The Computer Account Is in the Wrong OU](#ComputerAccountisintheWrongOU).  
+- The target computer is not appearing in the correct AD DS OU as described in [The Computer Account Is in the Wrong OU](#ComputerAccountisintheWrongOU).  
 
 ####  <a name="ComputerAccountisintheWrongOU"></a> The Computer Account Is in the Wrong OU
 
 **Problem:** The target computer is properly joined to the domain, but the computer account is in the wrong OU.  
 
-**Possible Solution 1:** If an account pre\-exists for the target computer, the account will remain in its original OU. To move the account to the specified OU, add a task sequence step that uses an automation tool, such as a Microsoft Visual Basic&reg; Scripting Edition, to move the account.  
+**Possible Solution 1:** If an account pre\-exists for the target computer, the account will remain in its original OU. To move the account to the specified OU, add a task sequence step that uses an automation tool, such as a Microsoft Visual Basic&reg; Scripting Edition, to move the account.  
 
-**Possible Solution 2:** Verify that the specified OU is in the correct format and that it exists. The correct OU format should be `OU=Reception,OU=NYC,DC=Woodgrovebank,DC=com`.  
+**Possible Solution 2:** Verify that the specified OU is in the correct format and that it exists. The correct OU format should be `OU=Reception,OU=NYC,DC=Woodgrovebank,DC=com`.  
 
 ### Configuration Manager
 
-**Problem:** The error message shown in  REF \_Ref308174600 \\h Figure 3 is displayed when you attempt to create a Configuration Manager PXE service point using the **Create self\-signed PXE certificate** option.  
+**Problem:** The error message shown in  REF \_Ref308174600 \\h Figure 3 is displayed when you attempt to create a Configuration Manager PXE service point using the **Create self\-signed PXE certificate** option.  
 
 ![Error message](./media/troubleshooting-reference/TroubleshootingReference3.jpg "TroubleshootingReference3")  
-Figure  SEQ Figure \\\* ARABIC 3. PXE service point error  
+Figure  SEQ Figure \\\* ARABIC 3. PXE service point error  
 
-**Figure  SEQ Figure \\\* ARABIC 3. PXE service point error**
+**Figure  SEQ Figure \\\* ARABIC 3. PXE service point error**
 
 **Possible Solution:** If a PXE service point previously existed on the server you are configuring, the PXE service point may not have deleted the self\-created certificates when you uninstalled it. Delete the PXE certificate folder from C:\\Documents and Settings\\*user\_name*\\Application Data\\Microsoft\\Crypto\\RSA, where *user\_name* is the name of the user performing the current configuration or who performed the previous configuration. The New Site Role Wizard in the Configuration Manager console should successfully finish when you have deleted the folder.  
 
@@ -690,7 +690,7 @@ Review task sequence–related problems and solutions:
 
 **Problem:** Task sequence may not finish successfully or has unpredictable behavior.  
 
-**Possible Solution:** The **Install Operating System** task sequence step \(for LTI\) or the **Apply Operating System Image** task sequence step \(for UDI and ZTI\) may have been modified after the creation of the task sequence step can lead to unpredictable results. For example, if a task sequence was created to deploy a 32\-bit Windows 8.1 image, and then later the **Install Operating System** task sequence step or the **Apply Operating System Image** task sequence step was changed to reference a 64\-bit Windows 8.1 image, the task sequence may not run successfully.  
+**Possible Solution:** The **Install Operating System** task sequence step \(for LTI\) or the **Apply Operating System Image** task sequence step \(for UDI and ZTI\) may have been modified after the creation of the task sequence step can lead to unpredictable results. For example, if a task sequence was created to deploy a 32\-bit Windows 8.1 image, and then later the **Install Operating System** task sequence step or the **Apply Operating System Image** task sequence step was changed to reference a 64\-bit Windows 8.1 image, the task sequence may not run successfully.  
 
 It is recommended that a new task sequence is created to deploy a different operating system image.  
 
@@ -778,25 +778,25 @@ Review WIM\-related problems and solutions:
 
   **Possible Solution:** Restore the .wim file from backup media.  
 
-### Windows PE
+### Windows PE
 
-Review Windows PE–related problems and solutions:  
+Review Windows PE–related problems and solutions:  
 
 - The LTI or ZTI deployment process is not initiated because of insufficient RAM or wireless network adapters as described in [Deployment Process Not Initiated—Limited RAM or Wireless Network Adapter](#LimitedRamorWirelessNetworkAdapter).  
 
-- The LTI or ZTI deployment process is not initiated because of missing Windows PE components as described in [Deployment Process Not Initiated—Missing Components](#MissingComponents).  
+- The LTI or ZTI deployment process is not initiated because of missing Windows PE components as described in [Deployment Process Not Initiated—Missing Components](#MissingComponents).  
 
 - The LTI or ZTI deployment process is not initiated because of missing or incorrect device drivers as described in [Deployment Process Not Initiated—Missing or Incorrect Drivers](#MissingorIncorrectDrivers).  
 
 ####  <a name="LimitedRamorWirelessNetworkAdapter"></a> Deployment Process Not Initiated—Limited RAM or Wireless Network Adapter
 
-**Problem:** When deploying an image to certain target computers, Windows PE starts, runs **wpeinit**, opens a Command Prompt window but does not actually start the deployment process. Troubleshooting the problem by mapping a network drive from the target computer indicates that the network adapter drivers are not loaded.  
+**Problem:** When deploying an image to certain target computers, Windows PE starts, runs **wpeinit**, opens a Command Prompt window but does not actually start the deployment process. Troubleshooting the problem by mapping a network drive from the target computer indicates that the network adapter drivers are not loaded.  
 
 **Possible Solution 1:** The Deployment Wizard is not starting, because there is insufficient RAM. Verify that the target computer has at least 512 MB of RAM and that no shared video memory consumes more than 64 MB of the 512 MB.  
 
-The versions of Windows PE that MDT supports are unable to run on a target computer that has less than 512 MB of RAM.  
+The versions of Windows PE that MDT supports are unable to run on a target computer that has less than 512 MB of RAM.  
 
-**Possible Solution 2:** Do not include the wireless drivers in the Windows PE image.  
+**Possible Solution 2:** Do not include the wireless drivers in the Windows PE image.  
 
 ####  <a name="MissingComponents"></a> Deployment Process Not Initiated—Missing Components
 

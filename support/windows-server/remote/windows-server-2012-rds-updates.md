@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Available updates for Remote Desktop Services
 
@@ -24,9 +24,9 @@ _Original KB number:_ &nbsp;2821526
 
 This article summarizes the available hotfixes and updates for issues that can occur in Remote Desktop Services for Windows Server 2012 environments.  
 
-For Windows Server 2008 R2 Remote Desktop Services updates, see [KB2601888](https://support.microsoft.com/help/2601888)
+For Windows Server 2008 R2 Remote Desktop Services updates, see [KB2601888](https://support.microsoft.com/help/2601888).
 
-For Windows Server 2012 R2 Remote Desktop Services updates, see [KB2933664](https://support.microsoft.com/help/2933664)  
+For Windows Server 2012 R2 Remote Desktop Services updates, see [KB2933664](https://support.microsoft.com/help/2933664).  
 
 Many of the updates listed later in this article are already included in the normal Windows Update monthly rollups. Select the "Recommended Updates" Windows Update setting to obtain these.  
 
@@ -43,11 +43,11 @@ The hotfixes and updates are arranged by component areas within Remote Desktop S
 
 [3020396](https://support.microsoft.com/help/3020396) Sysprep.exe process crashes when you use the SCVMM tool to create a VM template of a Windows Server 2012 image
 
-[3015693](https://support.microsoft.com/help/3015693)"0x000000AB" Stop error in Windows Server 2012-based RDS server when you log off from a Remote Desktop session
+[3015693](https://support.microsoft.com/help/3015693) "0x000000AB" Stop error in Windows Server 2012-based RDS server when you log off from a Remote Desktop session
 
 [2981330](https://support.microsoft.com/help/2981330) WTSQuerySessionInformation API function always returns zero bytes for WTSIncomingBytes and WTSOutgoingBytes
 
-[2954110](https://support.microsoft.com/help/2954110)"Windows was unable to save all the data for the file" error when you log off from an RD Session Host server
+[2954110](https://support.microsoft.com/help/2954110) "Windows was unable to save all the data for the file" error when you log off from an RD Session Host server
 
 [2903333](https://support.microsoft.com/help/2903333) Terminal Services client connection error 0xC000035B when you use LmCompatibility
 
@@ -55,7 +55,7 @@ The hotfixes and updates are arranged by component areas within Remote Desktop S
 
 [2861935](https://support.microsoft.com/help/2861935) Virtual machine backup fails in a Windows Server 2012 VDI deployment that enables user profile disks
 
-[2852483](https://support.microsoft.com/help/2852483)  Memory leak occurs in the Dwm.exe process on a Remote Desktop computer that is running Windows 8 or Windows Server 2012
+[2852483](https://support.microsoft.com/help/2852483) Memory leak occurs in the Dwm.exe process on a Remote Desktop computer that is running Windows 8 or Windows Server 2012
 
 [2802311](https://support.microsoft.com/help/2802311) RDP virtual static channels don't work and an operation stalls in Windows Server 2012
 

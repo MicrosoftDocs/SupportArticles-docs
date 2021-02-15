@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: timtho, kaushika
 ms.prod-support-area-path: Group Policy management - GPMC or AGPM
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # The Dcgpofix tool doesn't restore security settings in the Default Domain Controller Policy to their original state
 
@@ -30,15 +30,11 @@ It's best to use the Dcgpofix tool only in disaster recovery scenarios. The Dcpr
 
 The Dcgpofix tool can't know what state the security settings were in before you run Dcpromo. Therefore, the Dcgpofix tool can't return the security settings to precisely the original state. Instead, the Dcgpofix tool recreates the two default Group Policy objects (GPOs) and creates the settings based on the operations that are performed only during Dcpromo.
 
-If you have a new installation of Microsoft Windows Server 2003 and no security changes are made to the operating system before you run Dcpromo, the recreated Default Domain Controller Policy that is created by Dcgpofix will be almost the same as the Default Domain Controller Policy just after you run Dcpromo. However, there will be some differences in the settings in the Default Domain Controller Policy in this case.
+If you have a new installation of Windows Server 2003 and no security changes are made to the operating system before you run Dcpromo, the recreated Default Domain Controller Policy that is created by Dcgpofix will be almost the same as the Default Domain Controller Policy just after you run Dcpromo. However, there will be some differences in the settings in the Default Domain Controller Policy in this case.
 
 ## Resolution
 
 For general backup and restore of the Default Domain Policy and Default Domain Controller Policy, and also for other GPOs, Microsoft recommends that you use the Group Policy Management Console (GPMC) to create regular backups of these GPOs. You can then use GPMC in conjunction with these backups to restore the exact security settings that are contained in these GPOs.
-
-For more information about the GPMC, visit the following Microsoft Web site:
-
- [https://www.microsoft.com/windowsserver2003/gpmc/default.mspx](https://www.microsoft.com/windowsserver2003/gpmc/default.mspx) 
 
 If you're in a disaster recovery scenario and you don't have any backed-up versions of the Default Domain Policy or the Default Domain Controller Policy, you may consider using the Dcgpofix tool. If you use the Dcgpofix tool, Microsoft recommends that as soon as you run it, you review the security settings in these GPOs and manually adjust the security settings to suit your requirements. A fix isn't scheduled to be released because Microsoft recommends you use GPMC to back up and restore all GPOs in your environment. The Dcgpofix tool is a disaster-recovery tool that will restore your environment to a functional state only. It is best not to use it as a replacement for a backup strategy using GPMC. It is best to use the Dcgpofix tool only when a GPO backup for the Default Domain Policy and Default Domain Controller Policy doesn't exist.
 

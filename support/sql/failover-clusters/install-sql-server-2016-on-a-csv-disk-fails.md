@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4082888
 
 ## Symptoms
 
-Assume that you try to install an instance of Microsoft SQL Server 2016 on a CSV disk, you may receive an error that resembles the following:
+Assume that you try to install an instance of Microsoft SQL Server 2016 on a CSV disk, you may receive an error that resembles the following:
 
 > TITLE: Microsoft SQL Server 2016 Setup
 >
@@ -27,20 +27,16 @@ Assume that you try to install an instance of Microsoft SQL Server 2016 on a C
 
 ## Cause
 
-The folder that has been chosen for the database locations has **Inheritable Permissions** button enabled.
+The folder that has been chosen for the database locations has **Inheritable Permissions** button enabled.
 
 ## Workaround
 
 The workaround for this issue is as follows:
 
-Assume that we are using the folder `C:\ClusterStorage\Volume1\Data1\` as an example.
+Assume that we are using the folder `C:\ClusterStorage\Volume1\Data1\` as an example.
 
 1. Navigate to `C:\ClusterStorage\Volume1\`.
-2. Right-click the **Data1** folder, and then select the **Properties** button.
+2. Right-click the **Data1** folder, and then select the **Properties** button.
 3. Select the **Security** tab, and then select the **Advanced** button at the bottom.
 4. Select the **Disable Inheritance** button, and then choose the **Convert inherited permissions into explicit permissions on this object** option.
 5. Retry the install again.
-
-## References
-
-Learn about the [Description of the standard terminology that is used to describe Microsoft software updates](https://support.microsoft.com/help/824684) that Microsoft uses to describe software updates.

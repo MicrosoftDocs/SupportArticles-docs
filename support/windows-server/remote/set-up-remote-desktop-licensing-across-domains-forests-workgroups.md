@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, akhleshs, sabinn
 ms.prod-support-area-path: Remote Desktop Services (Terminal Services) licensing
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Best practices for setting up RDS licensing across Active Directory domains/forests or work groups
 
@@ -46,10 +46,10 @@ Here is more information on these scenarios:
 
   Consider the following points while configuring RDS and RDS licensing servers in a work group environment:
 
-  - We can use ONLY Per Device CALs in a work group environment. So, you should install only Per Device CALs on RDS licensing server
-  - Per User CAL tracking and reporting is not supported in work group mode
-  - RDS Host and RDS licensing server roles can both be installed on the same server
-  - If you install RDS licensing server on a different server in the work group, ensure that the RDS server is able to access RDS licensing server
+  - We can use ONLY Per Device CALs in a work group environment. So, you should install only Per Device CALs on RDS licensing server.
+  - Per User CAL tracking and reporting is not supported in work group mode.
+  - RDS Host and RDS licensing server roles can both be installed on the same server.
+  - If you install RDS licensing server on a different server in the work group, ensure that the RDS server is able to access RDS licensing server.
 
   In Windows 2008 R2, automatic license server discovery is no longer supported for RD Session Host servers. You must specify the name of a license server for the RD Session Host server to use by using Remote Desktop Session Host Configuration snap-in. For more information, see [Specify a License Server for an RD Session Host Server to Use](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770585(v=ws.11)).
 
@@ -59,7 +59,7 @@ Here is more information on these scenarios:
 
   - You can install both (Per Device and Per User) CALs on RDS licensing server.
 
-  - The computer account for the license server must be a member of the Terminal Server License Servers group in AD DS. If the license server is installed on a domain controller, the Network Service account must also be a member of the Terminal Server License Servers group
+  - The computer account for the license server must be a member of the Terminal Server License Servers group in AD DS. If the license server is installed on a domain controller, the Network Service account must also be a member of the Terminal Server License Servers group.
 
   - To restrict the issuance of RDS CALs, you can add RDS Host Servers into Terminal Server Computers group on RDS licensing server and then enable the License server security group policy setting on RDS licensing server.
 

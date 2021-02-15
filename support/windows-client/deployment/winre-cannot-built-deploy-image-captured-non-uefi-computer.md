@@ -11,11 +11,11 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # WinRE can't be built after you deploy a Windows 8.1 image
 
-This article describes an issue in which you can't deploy a Windows 8.1-based image to a UEFI computer when the image was captured from a non-UEFI computer.
+This article provides a solution to an issue in which you can't deploy a Windows 8.1-based image to a UEFI computer when the image was captured from a non-UEFI computer.
 
 _Original product version:_ &nbsp;Windows 8.1  
 _Original KB number:_ &nbsp;2952359
@@ -26,50 +26,50 @@ Assume that you have a Windows 8.1 image that was captured from a non-UEFI compu
 
 When this issue occurs, messages that resemble the following are logged in the setupact.log file. The messages indicate that the setup process can't find the staged WinRE image, and that the WinRE can't be built:
 
-> 2014-01-29 16:42:34, Info [setup.exe] WinReInstallOnTargetOS Beginning WinRE installation.  
-2014-01-29 16:42:34, Info [setup.exe] winreCheckRegKeyTest hook (S) present or enabled  
-2014-01-29 16:42:34, Info [setup.exe] WinReInstallOnTargetOS System setup is in progress.  
-2014-01-29 16:42:34, Info [setup.exe] WinReInstallOnTargetOS Checking for downlevel WinRE installation.  
-2014-01-29 16:42:34, Info [setup.exe] ReAgentXMLParser::ParseConfigFile (xml file: \Recovery\ReAgentOld.xml) returning 0X3  
-2014-01-29 16:42:34, Info [setup.exe] ReAgentConfig::ParseConfigFile returned with 0x3  
-2014-01-29 16:42:34, Info [setup.exe] WinReInstallOnTargetOS Getting current WinRE configuration.  
-2014-01-29 16:42:34, Info [setup.exe] WinReInstallOnTargetOS Disabling extra ReAgentConfig BCD checks for legacy setup.  
-2014-01-29 16:42:34, Info [setup.exe] WinReInstallOnTargetOS No source winre.wim was specified. Checking for a staged winre.wim.  
-2014-01-29 16:42:34, Info [setup.exe] WinReInstallOnTargetOS Searching for OEM Winre.wim  
-2014-01-29 16:42:34, Info [setup.exe] WinReInstallOnTargetOS Error 0X2 while searching for OEM winre.wim  
-2014-01-29 16:42:34, Warning [setup.exe] WinReInstallOnTargetOS (WinRE)WinREInstall() returning FALSE, gle = 0x64E  
+> \<DateTime>, Info [setup.exe] WinReInstallOnTargetOS Beginning WinRE installation.  
+\<DateTime>, Info [setup.exe] winreCheckRegKeyTest hook (S) present or enabled  
+\<DateTime>, Info [setup.exe] WinReInstallOnTargetOS System setup is in progress.  
+\<DateTime>, Info [setup.exe] WinReInstallOnTargetOS Checking for downlevel WinRE installation.  
+\<DateTime>, Info [setup.exe] ReAgentXMLParser::ParseConfigFile (xml file: \\Recovery\\ReAgentOld.xml) returning 0X3  
+\<DateTime>, Info [setup.exe] ReAgentConfig::ParseConfigFile returned with 0x3  
+\<DateTime>, Info [setup.exe] WinReInstallOnTargetOS Getting current WinRE configuration.  
+\<DateTime>, Info [setup.exe] WinReInstallOnTargetOS Disabling extra ReAgentConfig BCD checks for legacy setup.  
+\<DateTime>, Info [setup.exe] WinReInstallOnTargetOS No source winre.wim was specified. Checking for a staged winre.wim.  
+\<DateTime>, Info [setup.exe] WinReInstallOnTargetOS Searching for OEM Winre.wim  
+\<DateTime>, Info [setup.exe] WinReInstallOnTargetOS Error 0X2 while searching for OEM winre.wim  
+\<DateTime>, Warning [setup.exe] WinReInstallOnTargetOS (WinRE)WinREInstall() returning FALSE, gle = 0x64E  
 
 ## Cause
 
-This issue occurs because the ImageLocation path tag is set to the \Recovery\WindowsRE value and the WinREStaged state tag is set to 1 in the Reagent.xml file. For more information, go to the [more information](#more-information) section.
+This issue occurs because the ImageLocation path tag is set to the \\Recovery\\WindowsRE value and the WinREStaged state tag is set to 1 in the Reagent.xml file. For more information, go to the [more information](#more-information) section.
 
 ## Resolution
 
 To resolve this issue, use one of the following methods:
 
-1. Use the Windows 8.1 image that was captured from a UEFI computer to deploy to a UEFI computer.
-2. Change the Reagent.xml file that is located in the \Windows\System32\Recovery\Reagent.xml path inside the captured .wim file from non-UEFI computers by making the following changes:
-   - Remove the value of the ImageLocation path tag by using "".
-   - Set the value of the WinREStaged state tag to 0.
+- Use the Windows 8.1 image that was captured from a UEFI computer to deploy to a UEFI computer.
+- Change the Reagent.xml file that is located in the \\Windows\\System32\\Recovery\\Reagent.xml path inside the captured .wim file from non-UEFI computers by making the following changes:
+  - Remove the value of the ImageLocation path tag by using "".
+  - Set the value of the WinREStaged state tag to 0.
 
 For example, change the XML file as follows:
 
-```console
+```xml
 <?xml version='1.0' encoding='utf-8' standalone='yes'?>
 <WindowsRE version="2.0">
- <WinreBCD id=""></WinreBCD>
- <WinreLocation path="" id="0" offset="0"></WinreLocation>
- <ImageLocation path="" id="0" offset="0"></ImageLocation>
- <PBRImageLocation path="" id="0" offset="0" index="0"></PBRImageLocation>
- <PBRCustomImageLocation path="" id="0" offset="0" index="0"></PBRCustomImageLocation>
- <InstallState state="0"></InstallState>
- <OsInstallAvailable state="0"></OsInstallAvailable>
- <CustomImageAvailable state="0"></CustomImageAvailable>
- <WinREStaged state="0"></WinREStaged>
- <ScheduledOperation state="4"></ScheduledOperation>
- <OperationParam path=""></OperationParam>
- <OsBuildVersion path=""></OsBuildVersion>
- <OemTool state="0"></OemTool>
+    <WinreBCD id=""></WinreBCD>
+    <WinreLocation path="" id="0" offset="0"></WinreLocation>
+    <ImageLocation path="" id="0" offset="0"></ImageLocation>
+    <PBRImageLocation path="" id="0" offset="0" index="0"></PBRImageLocation>
+    <PBRCustomImageLocation path="" id="0" offset="0" index="0"></PBRCustomImageLocation>
+    <InstallState state="0"></InstallState>
+    <OsInstallAvailable state="0"></OsInstallAvailable>
+    <CustomImageAvailable state="0"></CustomImageAvailable>
+    <WinREStaged state="0"></WinREStaged>
+    <ScheduledOperation state="4"></ScheduledOperation>
+    <OperationParam path=""></OperationParam>
+    <OsBuildVersion path=""></OsBuildVersion>
+    <OemTool state="0"></OemTool>
 </WindowsRE>
 ```
 
@@ -77,38 +77,39 @@ For example, change the XML file as follows:
 
 ### An example of the Reagent.xml file
 
-After you capture the Windows 8.1 image from a non-UEFI computer by using Microsoft Deployment Toolkit (MDT) 2013, the \Windows\System32\Recovery\Reagent.xml file inside the WIM image may resemble the following:
+After you capture the Windows 8.1 image from a non-UEFI computer by using Microsoft Deployment Toolkit (MDT) 2013, the \\Windows\\System32\\Recovery\\Reagent.xml file inside the WIM image may resemble the following:
 
-```console
+```xml
 <?xml version='1.0' encoding='utf-8'?>
 <WindowsRE version="2.0">
- <WinreBCD id="{00000000-0000-0000-0000-000000000000}"/>
- <WinreLocation path="" id="0" offset="0" guid="{00000000-0000-0000-0000-000000000000}"/>
- <ImageLocation path="\Recovery\WindowsRE" id="4238117423" offset="1048576" guid="{00000000-0000-0000-0000-000000000000}"/>
- <PBRImageLocation path="" id="0" offset="0" guid="{00000000-0000-0000-0000-000000000000}" index="0"/>
- <PBRCustomImageLocation path="" id="0" offset="0" guid="{00000000-0000-0000-0000-000000000000}" index="0"/>
- <InstallState state="0"/>
- <OsInstallAvailable state="0"/>
- <CustomImageAvailable state="0"/>
- <IsAutoRepairOn state="1"/>
- <WinREStaged state="1"/>
- <OperationParam path=""/>
- <OsBuildVersion path="9600.16384.amd64fre.winblue_rtm.130821-1623"/>
- <OemTool state="0"/>
- <IsServer state="0"/>
- <DownlevelWinreLocation path="" id="0" offset="0" guid="{00000000-0000-0000-0000-000000000000}"/>
- <ScheduledOperation state="4"/>
+    <WinreBCD id="{00000000-0000-0000-0000-000000000000}"/>
+    <WinreLocation path="" id="0" offset="0" guid="{00000000-0000-0000-0000-000000000000}"/>
+    <ImageLocation path="\Recovery\WindowsRE" id="4238117423" offset="1048576" guid="{00000000-0000-0000-0000-000000000000}"/>
+    <PBRImageLocation path="" id="0" offset="0" guid="{00000000-0000-0000-0000-000000000000}" index="0"/>
+    <PBRCustomImageLocation path="" id="0" offset="0" guid="{00000000-0000-0000-0000-000000000000}" index="0"/>
+    <InstallState state="0"/>
+    <OsInstallAvailable state="0"/>
+    <CustomImageAvailable state="0"/>
+    <IsAutoRepairOn state="1"/>
+    <WinREStaged state="1"/>
+    <OperationParam path=""/>
+    <OsBuildVersion path="9600.16384.amd64fre.winblue_rtm.130821-1623"/>
+    <OemTool state="0"/>
+    <IsServer state="0"/>
+    <DownlevelWinreLocation path="" id="0" offset="0" guid="{00000000-0000-0000-0000-000000000000}"/>
+    <ScheduledOperation state="4"/>
 </WindowsRE>
 ```
 
-In this file, the WinRE image location is set to path \Recovery\WindowsRE, and WinREStaged is set to 1. These settings only work well when you deploy them on non-UEFI computers. If you use the image together with this xml file to build the OS on a UEFI computer such as Surface Pro or Surface Pro 2, the WinRE environment can't be built. Because of the lack of a WinRE environment, BitLocker can't be enabled.
+In this file, the WinRE image location is set to path \\Recovery\\WindowsRE, and WinREStaged is set to 1. These settings only work well when you deploy them on non-UEFI computers. If you use the image together with this xml file to build the OS on a UEFI computer such as Surface Pro or Surface Pro 2, the WinRE environment can't be built. Because of the lack of a WinRE environment, BitLocker can't be enabled.
 
 ### BitLocker does not work when WinRE is disabled
 
 When WinRE is disabled, you can't enable BitLocker, and you receive an error message that resembles the following:
+
 > This PC doesn't support entering a BitLocker recovery password during startup. Ask your administrator to configure Windows Recovery Environment so that you can use BitLocker.
 
-You can also use the Reagentc.exe /info command to receive the WinRE status to confirm whether it's enabled. For example, you receive the following results when you run the command:
+You can also use the `Reagentc.exe /info` command to receive the WinRE status to confirm whether it's enabled. For example, you receive the following results when you run the command:
 
 ```console
 C:\WINDOWS\system32>Reagentc.exe /info

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # How to enable Windows Remote Shell
 
@@ -29,7 +29,7 @@ To enable Windows Remote Shell, you need to deploy the server-side and client-si
 ### Server Side  
 
 > [!NOTE]
-> The server definition in the article describe a Windows host that get into remote management shell.
+> The server definition in the article describes a Windows host that gets into remote management shell.
 
 1. Log into the Windows console.
 2. Optional (For Windows Vista serves as remote server): Start the service "Windows Remote Management " and set it for auto start after reboot.
@@ -76,6 +76,6 @@ winrs -r:DC1 dir
 > [!NOTE]
 > In Windows Workgroup environment, there is a need to add a trust for the server that the client initiate a connection to it by using the command `winrm set winrm/config/client @{TrustedHosts="%servername1%,"%servername2%"}`.
 >
-> Verity the new settings by using the command `winrm enumerate winrm/config/listener`.
+> Verify the new settings by using the command `winrm enumerate winrm/config/listener`.
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]

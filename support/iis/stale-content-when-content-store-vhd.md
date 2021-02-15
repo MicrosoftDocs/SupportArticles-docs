@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 2814040
 Consider the following scenario.
 
 - You are hosting a web application on IIS 8.0 or earlier.
-- You stored the content for your web application is on a VHD.
+- You stored the content for your web application on a VHD.
 - When you make an update to the content, such as adding a new version of an image file or editing text on a page, you expect that the updated content will be served to incoming web requests.
 
 In this scenario, the updated content is not display, and incoming web requests are responded to with the old content version.

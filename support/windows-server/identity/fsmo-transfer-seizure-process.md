@@ -11,18 +11,18 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory FSMO
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
-# Flexible Single Master Operation Transfer and Seizure Process  
+# Flexible Single Master Operation transfer and seizure process  
 
 This article describes how Flexible Single Master Operations (FSMO) roles are transferred from one domain controller to another and how this role can be forcefully appointed in the event that the domain controller that previously held the role is no longer available.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 223787
 
-## Transferring the Flexible Single Master Operation Role
+## Transferring the Flexible Single Master Operation role
 
-The transfer of an FSMO role is the suggested form of moving a FSMO role between domain controllers and can be initiated by the administrator or by demoting a domain controller, but is not initiated automatically by the operating system. This includes a server in a shut-down state. FSMO roles aren't automatically relocated during the shutdown process--this must be considered when shutting down a domain controller that has an FSMO role for maintenance, for example.
+The transfer of an FSMO role is the suggested form of moving a FSMO role between domain controllers and can be initiated by the administrator or by demoting a domain controller, but is not initiated automatically by the operating system. This includes a server in a shut-down state. FSMO roles aren't automatically relocated during the shutdown process—this must be considered when shutting down a domain controller that has an FSMO role for maintenance, for example.
 
 In a graceful transfer of an FSMO role between two domain controllers, a synchronization of the data that is maintained by the FSMO role owner to the server receiving the FSMO role is performed prior to transferring the role to ensure that any changes have been recorded before the role change.
 
@@ -46,7 +46,7 @@ When a domain controller is demoted, the operational attribute "GiveAwayAllFsmoR
 
 In all transfers, if the role is a domain-specific role, the role can be moved only to another domain controller in the same domain. Otherwise, any domain controller in the enterprise is a candidate.
 
-## Seizing the Flexible Single Master Operation Role
+## Seizing the Flexible Single Master Operation role
 
 Administrators should use extreme caution in seizing FSMO roles. This operation, in most cases, should be performed only if the original FSMO role owner will not be brought back into the environment.
 
@@ -69,7 +69,8 @@ LDAP://DC=MICROSOFT,DC=COM
 
 ## References
 
-For more information about FSMO roles in general, see the following article in the Microsoft Knowledge Base:
- [197132](https://support.microsoft.com/help/197132) Windows 2000 Active Directory FSMO Roles
-For more information about the correct placement of FSMO roles, see the following article in the Microsoft Knowledge Base:
- [223346](https://support.microsoft.com/help/223346) FSMO Placement and Optimization on Windows 2000 Domains
+For more information about FSMO roles in general, see the following article in the Microsoft Knowledge Base:  
+[197132](https://support.microsoft.com/help/197132) Windows 2000 Active Directory FSMO Roles
+
+For more information about the correct placement of FSMO roles, see the following article in the Microsoft Knowledge Base:  
+[223346](https://support.microsoft.com/help/223346) FSMO Placement and Optimization on Windows 2000 Domains

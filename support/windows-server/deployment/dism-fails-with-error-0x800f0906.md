@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # DISM fails with 0x800f0906 or runs continuously when you convert Windows Server 2012 R2 Core to Server with a GUI
 
@@ -68,18 +68,18 @@ The CBS.log file shows one of the following two errors:
 
 - Error 1
 
-    > 2014-11-19 06:38:42, Info CBS Session: 30409734_2213032090 initialized by client WindowsUpdateAgent.  
-    2014-11-19 06:38:42, Info CBS Opened cabinet package, package directory: \\\\?  \C:\Windows\SoftwareDistribution\Download\ea6d57731136ce0c61adfa2056bd76ba\, sandbox location: \\\\?  \C:\Windows\SoftwareDistribution\Download\ea6d57731136ce0c61adfa2056bd76ba\, cabinet location: \\\\?  \C:\Windows\SoftwareDistribution\Download\ea6d57731136ce0c61adfa2056bd76ba\windows8.1-kb3000850-x64-express.cab, manifest location: \\\\?  \C:\Windows\SoftwareDistribution\Download\ea6d57731136ce0c61adfa2056bd76ba\update.mum  
+    > *\<DateTime>*, Info CBS Session: 30409734_2213032090 initialized by client WindowsUpdateAgent.  
+    *\<DateTime>*, Info CBS Opened cabinet package, package directory: \\\\?  \C:\Windows\SoftwareDistribution\Download\ea6d57731136ce0c61adfa2056bd76ba\, sandbox location: \\\\?  \C:\Windows\SoftwareDistribution\Download\ea6d57731136ce0c61adfa2056bd76ba\, cabinet location: \\\\?  \C:\Windows\SoftwareDistribution\Download\ea6d57731136ce0c61adfa2056bd76ba\windows8.1-kb3000850-x64-express.cab, manifest location: \\\\?  \C:\Windows\SoftwareDistribution\Download\ea6d57731136ce0c61adfa2056bd76ba\update.mum  
     . . .  
     . . .  
     . . .  
-    2014-11-19 06:38:49, Info DPX Extraction of file: amd64_microsoft-windows-c..  t-resources-mrmcore_31bf3856ad364e35_6.3.9600.17418_none_dc8ca600359fa9c4\mrmcorer.dll failed because it is not present in the container.  
-    2014-11-19 06:38:49, Info CBS Asynchronous Session: 30409734_2213032090 finalized. [HRESULT = 0x80070002 - ERROR_FILE_NOT_FOUND]
+    *\<DateTime>*, Info DPX Extraction of file: amd64_microsoft-windows-c..  t-resources-mrmcore_31bf3856ad364e35_6.3.9600.17418_none_dc8ca600359fa9c4\mrmcorer.dll failed because it is not present in the container.  
+    *\<DateTime>*, Info CBS Asynchronous Session: 30409734_2213032090 finalized. [HRESULT = 0x80070002 - ERROR_FILE_NOT_FOUND]
 
 - Error 2
 
-    > 2014-11-19 23:41:22, Info CBS Not able to find package: Package_for_KB2959977~31bf3856ad364e35~amd64~6.3.1.1 from the cached windows update index. [HRESULT = 0x800f090d - CBS_E_MISSING_PACKAGE_MAPPING_INDEX]  
-    2014-11-19 23:41:22, Info CBS Failed to find package: Package_for_KB2959977~31bf3856ad364e35~amd64~~6.3.1.1 from the index mapping [HRESULT = 0x800f090d - CBS_E_MISSING_PACKAGE_MAPPING_INDEX]
+    > *\<DateTime>*, Info CBS Not able to find package: Package_for_KB2959977~31bf3856ad364e35~amd64~6.3.1.1 from the cached windows update index. [HRESULT = 0x800f090d - CBS_E_MISSING_PACKAGE_MAPPING_INDEX]  
+    *\<DateTime>*, Info CBS Failed to find package: Package_for_KB2959977~31bf3856ad364e35~amd64~~6.3.1.1 from the index mapping [HRESULT = 0x800f090d - CBS_E_MISSING_PACKAGE_MAPPING_INDEX]
 
 > [!NOTE]
 > The updates that appear during the error may different. The cause of these errors is in the CBS component and the index file, not the updates themselves. The sample output and the list of updates that are mentioned in the error are based on internal testing of a default but updated Windows Server 2012 R2 Core installation that has no additional features or roles enabled.

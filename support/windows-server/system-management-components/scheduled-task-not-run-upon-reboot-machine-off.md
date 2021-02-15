@@ -1,6 +1,6 @@
 ---
 title: Scheduled task may not run upon reboot if machine was off at time of task
-description: Helps to solve the issue that a scheduled task may not run upon reboot if the machine is off at the time of the task
+description: Helps to solve an issue where a scheduled task may not run upon reboot if the machine is off at the time of the task.
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan 
@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Task Scheduler
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # Scheduled task may not run upon reboot if the machine is off at the time of task
 
-This article helps to solve the issue that a scheduled task may not run upon reboot if the machine is off at the time of the task.
+This article helps solve an issue where a scheduled task may not run upon reboot if the machine is off at the time of the task.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2437520
@@ -30,4 +30,4 @@ This issue can occur if the task trigger was set to run One Time when created. I
 
 ## Resolution
 
-You can work around this issue by setting a time and date under the Expire option of the task. This option can be reached by opening the Properties of the task, selecting the Triggers tab, and then clicking the Edit button for the trigger in question. If a date and time are set for the Expire option, the task will attempt to refire on reboot if its previous trigger time was missed.
+You can work around this issue by setting a time and date under the **Expire** option of the task. This option can be reached by opening the **Properties** of the task, selecting the **Triggers** tab, and then clicking the **Edit** button for the trigger in question. If a date and time are set for the **Expire** option, the task will attempt to refire on reboot if its previous trigger time was missed.

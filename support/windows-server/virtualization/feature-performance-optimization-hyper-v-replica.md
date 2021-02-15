@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, prvijay
 ms.prod-support-area-path: Hyper-V Replica
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Feature and performance optimization of Hyper-V Replica (HVR)
 
@@ -30,9 +30,9 @@ Using the registry keys mentioned in this article, administrators will have the 
 
 All the registry keys that are discussed in this article are available under the following node:
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization\Replication`  
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization\Replication`
+  
 The list of the registry keys discussed in this article:
-
 
 - DisableCertRevocationCheck
 - MaximumActiveTransfers
@@ -50,7 +50,8 @@ However, due to deployment restrictions, this check would fail if the certificat
 
 Supported Values: 0, 1
 
-Input interpretation: 
+Input interpretation:
+
 - 0: Certificate revocation check is enabled
 - 1: Certificate revocation check is disabled
  Default value: 0
@@ -65,12 +66,13 @@ An optimal value for the number of parallel transfers is got by dividing the ava
 
 Supported Values: Specify any integer value between 1 and 1024.
 
-Input interpretation: 
+Input interpretation:
+
 - 1: Change log file for each replicating VMs log file is sent sequentially.
 - 2: At any point, change log files from 2 replicating VMs are sent in parallel
 - 3: At any point, change log files from 3 replicating VMs are sent in parallel
 - N: At any point, change log files from N replicating VMs are sent in parallel.  
- 
+
 Default value: 3 (At any point, log files from 3 VMs are sent in parallel)
 
 Primary/Replica server: This key is applicable on any server that has a VM on which replication is enabled (primary server). This key does not  throttle the number of incoming connections. The vmms service needs to be restarted after changing this key.
@@ -81,15 +83,17 @@ Description: On the Replica server, Hyper-V Replica receives the incoming log fi
 
 Supported Values: Any value between 0 and 260
 
-Input Interpretation: 
+Input Interpretation:
+
 - Setting a value '0' indicates that the 4 VHDs per VM are processed in parallel.
 - Setting any other value indicates the corresponding set of VHDs per VM that can be processed in parallel.  
 
 Default value: This name is not created by default under the Replication registry node. Administrators would need to manually create a DWORD under the following registry key and set the corresponding value.
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Virtualization\Replication` 
->[!Note]
- If the value is not present or set to 0, it indicates that the replica server will process 4 VHDs in parallel per VM .
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Virtualization\Replication`
+
+> [!Note]
+> If the value is not present or set to 0, it indicates that the replica server will process 4 VHDs in parallel per VM.
 
 Primary/Replica server: This key is applicable only on the Hyper-V server that receives replication traffic (replica server). VMMS does not need to be restarted for the key to take effect.
 
@@ -99,27 +103,32 @@ Description: The Hyper-V Replica server can receive the VM replicas from differe
 
 Supported Values: Any value greater than 0
 
-Input Interpretation: 
+Input Interpretation:
+
 - Setting a value '0' indicates that the apply-log operation can happen on any number of VMs from one server.
 - Setting any other value (1..N) controls the number of VMs from a single primary server, on which (parallel) apply-log operations can happen.  
 
  Default value: This name is not created by default under the Replication registry node. Administrators would need to manually create a DWORD under the following registry key and set the corresponding value.
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization\Replication` 
-Note: If the key is not present or set to 0, it indicates that the replica server will process all the apply log operations in parallel.
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization\Replication`
+
+> [!Note]
+> If the key is not present or set to 0, it indicates that the replica server will process all the apply log operations in parallel.
 
 Primary/Replica server: This key is applicable only on the Hyper-V server that receives replication traffic (replica server).
 
 #### ApplyChangeReplicaDiskThrottle
 
-Description: On the Replica server, Hyper-V Replica receives the incoming log file and applies the log file to the corresponding Replica VM. Based on the scale of the deployment and the disk subsystem, administrators might wish to throttle the apply-log disk operations by modifying this registry key. 
+Description: On the Replica server, Hyper-V Replica receives the incoming log file and applies the log file to the corresponding Replica VM. Based on the scale of the deployment and the disk subsystem, administrators might wish to throttle the apply-log disk operations by modifying this registry key.
 
 Supported Values: Any value greater than and equal to zero.
 
-Input Interpretation: 
+Input Interpretation:
+
 - 0 indicates that the apply-log operation in unbounded (maximum queue depth of 256 per VHD).
 - Setting any other value dictates the queue depth across all replicated VHDs.
  Default value: This name is not created by default under the Replication registry node. Administrators would need to manually create a DWORD under the following registry key and set the corresponding value.
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization\Replication` 
- Primary/Replica server: This key is applicable only on the Hyper-V server that receives replication traffic (replica server).
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization\Replication`
+
+Primary/Replica server: This key is applicable only on the Hyper-V server that receives replication traffic (replica server).

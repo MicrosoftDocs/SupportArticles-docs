@@ -11,11 +11,11 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: rnitsch, kaushika
 ms.prod-support-area-path: Remote access
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Modern Apps can't connect when you use a Check Point VPN connection
 
-This article discusses that Modern Apps can't connect to the Internet after you connect to the corporate network by using Check Point VPN software.
+This article provides a solution to an issue where Modern Apps can't connect to the Internet after you connect to the corporate network by using Check Point VPN software.
 
 _Original product version:_ &nbsp;Windows 8  
 _Original KB number:_ &nbsp;2855849
@@ -23,6 +23,7 @@ _Original KB number:_ &nbsp;2855849
 ## Symptoms
 
 Consider the following scenario:
+
 - You use a version of Check Point Endpoint Remote Access VPN that is earlier than E80.50.
 - You're running Windows 8 Modern Applications (Store Apps) and classic desktop applications successfully.
 - You connect to the corporate network by having the Check Point VPN client software in "hub mode" (that is, all traffic is routed through the virtual network adapter).
@@ -38,7 +39,7 @@ This issue occurs because the installed firewall can't set rules that allow Mode
 
 To resolve this issue, install Check Point VPN E80.50 (expected to be available Fall 2013) from the following Check Point Support Center website:
 
-[Remote Access (VPN) Clients](https://supportcenter.checkpoint.com/supportcenter/portal?eventsubmit_doshowproductpage&producttab=overview&product=175) 
+[Remote Access (VPN) Clients](https://supportcenter.checkpoint.com/supportcenter/portal?eventsubmit_doshowproductpage&producttab=overview&product=175)
 
 ## Workaround
 
@@ -48,24 +49,18 @@ To resolve this issue, install Check Point VPN E80.50 (expected to be available 
 To work around this issue, run following Windows PowerShell script to change the hidden property for the virtual network interface in the registry:
 
 ```powershell
-foreach ($subkey in (gci "HKLM:\SYSTEM\CurrentControlSet\Control\Class\{4D36E972-E325-11CE-BFC1-08002bE10318} -erroraction silentlycontinue)) 
-
+foreach ($subkey in (gci "HKLM:\SYSTEM\CurrentControlSet\Control\Class\{4D36E972-E325-11CE-BFC1-08002bE10318} -erroraction silentlycontinue))
 {
-
-if ((get-itemproperty $subkey.pspath).ComponentID eq cp_apvna) 
-
-{
-
-set-itemproperty $subkey.pspath name Characteristics value 0x1
-
-} 
-
+    if ((get-itemproperty $subkey.pspath).ComponentID eq cp_apvna)
+    {
+        set-itemproperty $subkey.pspath name Characteristics value 0x1
+    }
 }
 ```
 
 > [!NOTE]
 > This script is also documented at the following Check Point website:
-[Microsoft Store (Windows 8) application fails to communicate via VPN tunnel](https://supportcenter.checkpoint.com/supportcenter/portal?eventsubmit_dogoviewsolutiondetails=&solutionid=sk92881&js_peid=p-114a7ba5fd7-10001&partition=general&product=endpoint) 
+[Microsoft Store (Windows 8) application fails to communicate via VPN tunnel](https://supportcenter.checkpoint.com/supportcenter/portal?eventsubmit_dogoviewsolutiondetails=&solutionid=sk92881&js_peid=p-114a7ba5fd7-10001&partition=general&product=endpoint)
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: MSI
-ms.technology: ApplicationCompatibility
+ms.technology: windows-client-application-compatibility
 ---
 # "HRESULT: 0x80070BC9" error message while you're installing an MSI package during Windows setup or hotfix installation
 
@@ -28,13 +28,13 @@ While you're installing an MSI package, you may receive an error message that re
 
 If you capture an MSI log, you see the following "more information" pointer to the CBS log:
 
-> MSI (s) (1C:38) [12:30:50:375]: Note: 1: 1935 2: {matching guid id} 3: 0x80070BC9 4:
+> MSI (s) (1C:38) \<DateTime>: Note: 1: 1935 2: {matching guid id} 3: 0x80070BC9 4:
 >
-> MSI (s) (1C:38) [14:30:50:375]: Assembly Error (sxs): Look into Component Based Servicing Log located at 1608941560ndir\logs\cbs\cbs.log to get more diagnostic information.
+> MSI (s) (1C:38) \<DateTime>: Assembly Error (sxs): Look into Component Based Servicing Log located at 1608941560ndir\logs\cbs\cbs.log to get more diagnostic information.
 
 If you examine the CBS log, you may also see a message whose time stamp corresponds to the time of the failure:  
 
-> 2013-02-14 12:30:29, Error CSI 00001928 (F) Impactful transactions are disabled at this time, cannot continue.[gle=0x80004005]
+> \<DateTime>, Error CSI 00001928 (F) Impactful transactions are disabled at this time, cannot continue.[gle=0x80004005]
 
 > [!NOTE]
 > This issue may occur under any of the following conditions:  

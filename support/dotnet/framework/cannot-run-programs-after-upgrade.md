@@ -32,7 +32,7 @@ To resolve this issue, try one of the following methods.
 
 - Scan Windows Update, and then install the latest .NET Framework updates that apply to .NET Framework 4.6 and 4.6.1 immediately after you install .NET Framework 4.6 or 4.6.1.
 
-- Upgrade to .NET Framework 4.6.2 or a newer version of .NET Framework instead of upgrading to .NET Framework 4.6 or 4.6.1. To do this, download any of the following installers:  
+- Upgrade to .NET Framework 4.6.2 or a newer version of .NET Framework instead of upgrading to .NET Framework 4.6 or 4.6.1. To do this, download any of the following installers:  
 
   - [.NET Framework 4.6.2 Web installer](https://go.microsoft.com/fwlink/?linkid=780597)
   - [.NET Framework 4.6.2 Offline installer](https://go.microsoft.com/fwlink/?linkid=780601)

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm, wincicadsec, mohak
 ms.prod-support-area-path: Kerberos authentication
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Problems with Kerberos authentication when a user belongs to many groups
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 327825
 
 ## Symptoms
 
-A user who belongs to a large number of security groups has problems authenticating. When authenticating, the user may see a message such as **HTTP 400 - Bad Request (Request Header too long**. The user also has problems accessing resources, and the user's Group Policy settings may not update correctly.
+A user who belongs to a large number of security groups has problems authenticating. When authenticating, the user may see a message such as **HTTP 400 - Bad Request (Request Header too long)**. The user also has problems accessing resources, and the user's Group Policy settings may not update correctly.
 
 For more information about the context of the error, see [HTTP 400 Bad Request (Request Header too long) responses to HTTP requests](/troubleshoot/iis/http-bad-request-response-kerberos).
 
@@ -102,7 +102,7 @@ If you have a `MaxTokenSize` value of **0x0000FFFF (64K)**, you may be able to b
 
 ## Known issues that affect MaxTokenSize
 
-A `MaxTokenSize` value of 48,000 bytes should be sufficient for most implementations. this is the default value in Windows Server 2012 and later versions. However, if you decide to use a larger value, review the known issues in this section.
+A `MaxTokenSize` value of 48,000 bytes should be sufficient for most implementations. This is the default value in Windows Server 2012 and later versions. However, if you decide to use a larger value, review the known issues in this section.
 
 - Size limit of 1,010 group SIDs for the LSA access token
 

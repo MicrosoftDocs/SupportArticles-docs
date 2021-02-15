@@ -24,7 +24,7 @@ When you try to sign in to Microsoft Intune Connector for Active Directory, you 
 
 ## Cause
 
-This issue occurs because the account isn't assigned an Intune or Microsoft Office license.
+This issue occurs because the account isn't assigned an Intune or Microsoft Office license.
 
 ## Resolution
 

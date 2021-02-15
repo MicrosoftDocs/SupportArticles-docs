@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-dgit
 ms.prod-support-area-path: 'Management and Configuration: General issues'
-ms.technology: PrintFaxScan
+ms.technology: windows-server-printing
 ---
 # The standard port monitor for TCP/IP
 

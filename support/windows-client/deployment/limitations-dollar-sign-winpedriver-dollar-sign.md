@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Limitations of $WinPeDriver$ when used in conjunction with other driver injection methods
 
@@ -28,7 +28,7 @@ There are several different methods for including out-of-box drivers into Winpe 
 
 ## Purpose
 
-Consider the following scenario: you're creating a custom Windows Pre-installation Environment (WinPE) image for the purposes of installing Windows operating systems that needs an out-of-box storage controller driver before running Setup.exe to manipulate the disks. Additionally, you want to provide "up-to-date" drivers for inclusion via the \$WinPEDriver$ folder feature of Setup, to include later versions of the same driver.
+Consider the following scenario: you're creating a custom Windows Pre-installation Environment (WinPE) image for the purposes of installing Windows operating systems that needs an out-of-box storage controller driver before running Setup.exe to manipulate the disks. Additionally, you want to provide "up-to-date" drivers for inclusion via the \\$WinPEDriver$ folder feature of Setup, to include later versions of the same driver.
 
 The $WinPEDriver$ feature is intended as a method to provide drivers at installation time. However, it's a feature of Setup.exe, and as such isn't invoked until after Setup.exe launches. Drivers for present devices that are injected manually into the WinPE boot.wim driverstore using DISM are loaded into memory at boot time. These two mechanisms are separate, and there are some caveats to using them together.
 
@@ -58,17 +58,17 @@ Keep in mind that there are some drivers that can be included and/or loaded that
 It's but one method for including the same driver into Windows Preinstallation Environment (WinPE) as well as making it available to the installing operating system; other methods are possible using the information further in this document.
 
 1. Set up the technician's machine:
-    1. Install OPK / AIK to supported technicians machine
-    1. Copy Windows bits to be modified to local HDD c:\bin
-    1. Locate/download/extract drivers to include into media
+    1. Install OPK/AIK to supported technicians machine.
+    2. Copy Windows bits to be modified to local HDD c:\\bin.
+    3. Locate/download/extract drivers to include into media.
 2. Prepare USB device per web page make sure to name device "INSTALL_WIN7". This name is used later and if you change this, you must change the name in the sample script described in step #6 and the example below (web page links are listed at end of document)
 3. Create WinPE files for copy to USB device, open Administrative command prompt and run:
-    1. *Copype.cmd \<arch> \<path>*  
-    1. *Copy \<pathto>\winpe.wim to \ISO\sources\boot.wim*  
+    1. `Copype.cmd <arch> <path>`  
+    2. `Copy <pathto> winpe.wim to \ISO\sources\boot.wim`
 4. Mount boot.wim:
-    1. *Dism /get-wiminfo /wimfile:\<pathto>\boot.wim*  
-    1. *Dism /mount-wim /wimfile:\<pathto>\boot.wim /index:1 /mountdir:\<pathto>\Mount*  
-5. Open an Administrative Command Prompt and edit \mount\windows\system32\startnet.cmd (using Notepad.exe or similar).
+    1. `Dism /get-wiminfo /wimfile:\<pathto>\boot.wim`
+    2. `Dism /mount-wim /wimfile:<pathto>\boot.wim /index:1 /mountdir:<pathto>\Mount`
+5. Open an Administrative Command Prompt and edit \\mount\\windows\\system32\\startnet.cmd (using Notepad.exe or similar).
 6. The following sample script identifies USB devices and makes drivers available during WinPE using Drvload.exe. Cut and paste the script into the startnet.cmd file that you've open.
 
     > [!NOTE]
@@ -94,18 +94,18 @@ It's but one method for including the same driver into Windows Preinstallation E
     Dism /unmount-wim /mountdir:<pathto>mount /commit
     ```
 
-9. Copy all files in the \ISO folder to a USB Flash Device (should be formatted FAT32 and marked as Active).
-10. Create folder on root of USB Flash Device named $WinpeDriver$.
-11. Copy drivers into this folder (for example \<USB_drv>\$WinpeDriver$\DriverX).
-12. Open Administrative cmd prompt and create file \<USB_drv>\InstallOS.bat, cutting and pasting the following line into the batch file:  
- *drvload %usbdrv%\$winpedriver$\<device>\filename.INF*  
+9. Copy all files in the \\ISO folder to a USB Flash Device (should be formatted FAT32 and marked as Active).
+10. Create a folder on root of USB Flash Device named $WinpeDriver$.
+11. Copy drivers into this folder (for example \<USB_drv>\\$WinpeDriver$\\DriverX).
+12. Open Administrative cmd prompt and create file \<USB_drv>\\InstallOS.bat, cutting and pasting the following line into the batch file:  
+ drvload %usbdrv%\\$winpedriver$\\\<device>\\filename.INF  
 13. To include Windows OS installation source files from DVD:
 
-    1. Create the following folder on the USB thumbstick: \<USB_drv>\\\<OS>\Sources (for example e:\Win2008r2x64\Sources).
-    2. Select and copy DVD\sources\\* to \<USB_drv>\\\<OS>\sources (you may exclude boot.wim)
-    3. To manually launch setup.exe when booted to WinPE, select \<USB_drv>\\\<OS>\Sources\Setup.exe and add any appropriate switches as needed.
+    1. Create the following folder on the USB thumbstick: \<USB_drv>\\\<OS>\Sources (for example e:\\Win2008r2x64\\Sources).
+    2. Select and copy DVD\\sources\\* to \<USB_drv>\\\<OS>\\sources (you may exclude boot.wim)
+    3. To manually launch setup.exe when booted to WinPE, select \<USB_drv>\\\<OS>\\Sources\\Setup.exe and add any appropriate switches as needed.
     4. For fully automated deployment, add the following line to the InstallOS.bat file, adding any appropriate switches:  
-        *%usbdrv%\<OS>\Sources\Setup.exe*
+        %usbdrv%\\\<OS>\\Sources\\Setup.exe
 
 14. TEST by booting to a USB device on TEST machine
 
@@ -117,25 +117,25 @@ Methods for including drivers into WinPE include:
 
     Steps for gathering information, mounting, injecting, and unmounting WIM:
 
-    a. *DISM /get-wiminfo /wimfile:\<pathto>boot.wim*  
-    b. *DISM /mount-wim /wimfile:\<pathto>boot.wim /index:n /mountdir:\<pathto>mount*  
-    c. *DISM /add-driver /image:\<pathto>mount /  driverpath:\<pathto>driverINF* [and conversely */remove-driver* if needed]  
-    d. *DISM /unmount-wim /commit /mountdir:\<pathto>mount*  
+    1. `DISM /get-wiminfo /wimfile:<pathto>boot.wim`
+    2. `DISM /mount-wim /wimfile:<pathto>boot.wim /index:n /mountdir:<pathto>mount`
+    3. `DISM /add-driver /image:<pathto>mount / driverpath:<pathto>driverINF` [and conversely `/remove-driver` if needed]
+    4. `DISM /unmount-wim /commit /mountdir:<pathto>mount`  
 2. Runtime driver load via Drvload.exe - Loads driver into memory and starts the device. Doesn't propagate the driver to the installed OS.
 3. Runtime driver load via Devcon.exe - Devcon is provided via sample source code in the Windows Device Driver Kit (DDK)/Windows Driver Kit (WDK). You must create and compile your own copy. Devcon is used to manipulate drivers, such as loading drivers into memory and starting devices. Doesn't propagate the driver to the installed OS. (Link in References section)
 4. $WinPEDriver$ folder- Setup.exe will attempt to load all drivers in the $WinPEDriver$ directory into memory, and also will schedule them for injection into the installing OS.
 5. Runtime answer file (unattend.xml) with DriverPath - Path (and credentials if necessary) must be provided in unattend.xml. It's used to access files in central repository that can be on a network share or local. Setup will attempt to load all drivers in the driver store provided in the unattend.xml and also will schedule them for injection into the installed OS.  
 
-### Launching Windows installation
+### Launch Windows installation
 
 There are several methods for launching the installation of the operating system from WinPE, including:
 
-1. Injecting setup packages into boot.wim.
-    a. Custom WinPE can be modified to auto launch Windows Setup.exe.  
-    b. Can also be used for language packs and scripting support.
+1. Injecting setup packages into boot.wim.  
+    1. Custom WinPE can be modified to auto launch Windows Setup.exe.  
+    2. Can also be used for language packs and scripting support.
 2. Launching setup.exe from startnet.cmd or winpeshl.ini.
-    a. locate USB stick/Hdd  
-    b. Launch \path\setup.exe \</switches>
+    1. locate USB stick/Hdd  
+    2. Launch \\path\\setup.exe \</switches>
 3. Custom front end to replace cmd.exe (see links for Windows RE in reference section).
 4. Booting from regular Windows Setup media, which first boots up to WinPE (Boot.wim) and can take input from attached USB device or network storage. This method isn't discussed in this article.
 
@@ -144,23 +144,22 @@ There are several methods for launching the installation of the operating system
 Next, following the progression from installation to inclusion of out-of-box drivers, there are a few methods available to include out-of-box drivers in Windows:
 
 1. Dism.exe
-    a. *Dism /get-wiminfo /wimfile:\<pathto>Install.wim*  
-    b. *Dism /mount-wim /wimfile:\<pathto>Install.wim /index:n /mountdir:\<pathto>mount*  
-    c. *Dism /add-driver [and conversely /remove-driver] /image:\<pathto>mount /driverpath:\<pathto>driverINF*  
-    d. *Dism /unmounts-wim /commit /mountdir:\<pathto>mount*  
-2. \$WinPEDriver$
+    1. `Dism /get-wiminfo /wimfile:<pathto>Install.wim`  
+    2. `Dism /mount-wim /wimfile:<pathto>Install.wim /index:n /mountdir:<pathto>mount`
+    3. `Dism /add-driver [and conversely /remove-driver] /image:<pathto>mount /driverpath:<pathto>driverINF`
+    4. `Dism /unmounts-wim /commit /mountdir:<pathto>mount`  
+2. \\$WinPEDriver$
 3. Running a script during unattended installation
-    a. unattend.xml (driverstore) in WinPE and Audit Mode (more information is in the References and Links section).  
-    b. Setupcomplete.cmd 'can' be used for driver injection, but is advised against as it's a poor user experience and can cause delays in booting to the desktop for the first time.
+    1. unattend.xml (driverstore) in WinPE and Audit Mode (more information is in the References and Links section).  
+    2. Setupcomplete.cmd can be used for driver injection, but is advised against as it's a poor user experience and can cause delays in booting to the desktop for the first time.
 4. Drvload.exe
-    a. Only injects drivers into the currently running OS, which if there's WinPE is typically RAM disk.  
-    b. Drvload \<pathto.INF> (can be scripted in startnet.cmd (see examples))
+    1. Only injects drivers into the currently running OS, which if there's WinPE is typically RAM disk.  
+    2. Drvload \<pathto.INF> (can be scripted in startnet.cmd (see examples))
 
 > [!NOTE]
 > If the driver to be used has the same name as an in-box driver (natively included in image) these newly injected drivers will not be used by the booting operating system and you should contact the driver manufacture for updated drivers. (If familiar with the Windows Logo Kit (WLK), see Devfund0005)
 >
-> If a driver is loaded during WinPE pass (initial boot) there is no native mechanism in place to remove that driver until the operating
-system reboots.,
+> If a driver is loaded during WinPE pass (initial boot) there is no native mechanism in place to remove that driver until the operating system reboots.
 
 There are multiple methods for each step of the process of adding drivers to Windows. The methods provide for an extensible and malleable deployment scenario. You'll want to determine which method below works best for the given situation.
 
@@ -175,37 +174,38 @@ Necessary setup/tools:
 Using DISM.exe:
 
 1. Install either the OEM Preinstallation Kit (OPK) or the Windows Automated Installation Kit (Windows AIK)
-2. Click on Start->Programs->Windows OPK (or Windows AIK) and open an Administrative Deployment Tools Command Prompt.
-3. Copy boot.wim to the hard drive (ex. c:\Bin). You can also generate new WinPE using Copype.cmd; however, this will not automatically launch setup.exe without additional customizations.
+2. Click on **Start** > **Programs** > **Windows OPK** (or **Windows AIK**) and open an Administrative Deployment Tools Command Prompt.
+3. Copy boot.wim to the hard drive (ex. c:\\Bin). You can also generate new WinPE using Copype.cmd; however, this will not automatically launch setup.exe without additional customizations.
 4. Use DISM to identify the number of indexes in the boot.wim. If you're copying the boot.wim from installation media it will have two indexes. Typically we'll modify index #2; otherwise, index #1.  
-    *dism /ge* *t-wiminfo /wimfile:\<wim_file>*  
+    `dism /get-wiminfo /wimfile:<wim_file>`  
     > [!NOTE]
     > Files injected into one index will not be available to other indices.
-5. Create a 'Mount' folder (ex. c:\Bin\mount)
+5. Create a 'Mount' folder (ex. c:\\Bin\\mount)
 6. Use DISM to mount the wim.  
-    *DISM /mount-wim /wimfile:c:\bin\boot.wim /index:1 /mountdir:c:\bin\mount*  
-7. Place driver in locatable folder (ex. c:\bin\driver).
+    `DISM /mount-wim /wimfile:c:\bin\boot.wim /index:1 /mountdir:c:\bin\mount`
+7. Place driver in locatable folder (ex. c:\\bin\\driver).
 8. Use DISM to add the driver to the mounted WIM image.  
-    *dism /image:c:\bin\mount /Add-Driver /driverpath:\<path to INF>*  
+    `dism /image:c:\bin\mount /Add-Driver /driverpath:<path to INF>`
 9. Confirm success by checking the DISM log or ensuring that DISM returns completion at the command prompt.
-10. Unmount and commit changes to Boot.wim. Close all handles to any open windows that may be open below c:\bin\mount before running this command (also make sure that the command prompt is at or above the c:\bin directory structure).  
-    *dism /unmount-wim /mountdir:c:\bin\mount /commit*  
-11. Once DISM successfully unmounts WIM, we can set up things for moving to USB/DVD. If you get an error during dismount, you may want to remount the wim to confirm that the packages were injected. DISM parameters /cleanup-wim and /get-packages may be helpful here. Refer to the References and Links section at the end of this document for instructions on creating bootable WinPE media on an optical or USB flash drive.
+10. Unmount and commit changes to Boot.wim. Close all handles to any open windows that may be open below c:\\bin\\mount before running this command (also make sure that the command prompt is at or above the c:\\bin directory structure).  
+    `dism /unmount-wim /mountdir:c:\bin\mount /commit`  
+11. Once DISM successfully unmounts WIM, we can set up things for moving to USB/DVD. If you get an error during dismount, you may want to remount the wim to confirm that the packages were injected. DISM parameters `/cleanup-wim` and `/get-packages` may be helpful here. Refer to the References and Links section at the end of this document for instructions on creating bootable WinPE media on an optical or USB flash drive.
 
-### Using \$WinpeDriver$
+### Using \\$WinpeDriver$
 
-$WinpeDrivers$ is an additional folder structure that Setup.exe looks for and if found, is parsed to pull in additional drivers. Setup will recursively parse files and folders under this \$WinpeDriver$ folder looking for *.INF files and attempts to install these discovered drivers into the driverstore.
+$WinpeDrivers$ is an additional folder structure that Setup.exe looks for and if found, is parsed to pull in additional drivers. Setup will recursively parse files and folders under this \\$WinpeDriver$ folder looking for *.INF files and attempts to install these discovered drivers into the driverstore.
 
-Folder structure can look something like this on the root of the USB device:  
-\$WinpeDriver$  
- └\WiFi  
-  └\Wireless1  
+Folder structure can look something like this on the root of the USB device:
+
+\\$WinpeDriver$  
+ └\\WiFi  
+  └\\Wireless1  
    └Wireless.INF  
    └Wireless.SYS  
    └Wireless.CAT (Needed by operating system)
 
 > [!NOTE]
-> If you look in the \Windows\Panther\Setupact.log you can see reference to this folder:
+> If you look in the \\Windows\\Panther\\Setupact.log you can see reference to this folder:
     *PnPIBS: Checking for pre-configured driver paths ...*  
     *PnPIBS: Checking for pre-configured driver directory C:\$WinPEDriver$.*  
     *PnPIBS: Checking for pre-configured driver directory D:\$WinPEDriver$.*  
@@ -222,12 +222,12 @@ Below is an example snippet of an AutoUnattend.xml with Drvstore from an AIK Una
 <DriverPaths>
 <!-- First PathAndCredentials list item -->
    <PathAndCredentials wcm:action="add" wcm:keyValue="1">
-      <Path>\\myFirstDriverPath\DriversFolder</Path>
-<Credentials>
-         <Domain>MyDomain</Domain>
-         <Username>MyUsername</Username>
-         <Password>MyPassword</Password>
-      </Credentials>
+        <Path>\\myFirstDriverPath\DriversFolder</Path>
+        <Credentials>
+                <Domain>MyDomain</Domain>
+                <Username>MyUsername</Username>
+                <Password>MyPassword</Password>
+        </Credentials>
    </PathAndCredentials>
 <!-- Second PathAndCredentials list item -->
    <PathAndCredentials wcm:action="add" wcm:keyValue="2">
@@ -246,10 +246,10 @@ Below is an example snippet of an AutoUnattend.xml with Drvstore from an AIK Una
 Drvload is a tool in WinPE used to add in drivers once you're booted up to the built-in WinPE Command Prompt. When using Drvload, the drivers will need to be identified and placed somewhere. WinPE's startnet.cmd can be used to script Drvload, as well as either of the following actions while booting or booted to WinPE:
 
 1. Running scripts to:
-    a. Identify installation media, usually a USB device.  
-    b. Add out of box drivers  
-    c. Configure hard drives and recovery partitions  
-    d. Launch setup.exe or apply WIMs as needed.
+    1. Identify installation media, usually a USB device.  
+    2. Add out of box drivers  
+    3. Configure hard drives and recovery partitions  
+    4. Launch setup.exe or apply WIMs as needed.
 2. Post deployment/application of WIM validationFor developers that want to create their own tool to use for injecting or manipulating drivers, DevCon.exe may be a useful utility. For more information on DevCon.exe, see the References and Links section.
 
 ### Example startnet.cmd
@@ -262,7 +262,7 @@ Methods for identifying installation media using WinPE Startnet.cmd (first file 
 
     - Create a bootable WinPE USB flash drive with a disk volume label of "INSTALL_WIN7". Then put the following lines at the beginning of startnet.cmd to look for the "INSTALL_WIN7" disk volume label:
 
-        ```cmd
+        ```console
         "INSTALL_WIN7" disk volume label:
         :ChkVar
         :: Locating USB Device
@@ -276,7 +276,7 @@ Methods for identifying installation media using WinPE Startnet.cmd (first file 
 
     - Create 'tag' files on the media as an alternative drive location method for comparison:
 
-        ```cmd
+        ```console
         :SetOSvar
         @echo off
         IF NOT DEFINED usbdrv (
@@ -297,16 +297,16 @@ Methods for identifying installation media using WinPE Startnet.cmd (first file 
 
     Below is an example of the text needed in the startnet.cmd file that will look for 'InstallOS.bat' and if found, launch it:
 
-    *IF EXIST %usbdrv%\InstallOS.bat call InstallOS.bat*  
-    *Echo %time% %date%*  
+    ```console
+    IF EXIST %usbdrv%\InstallOS.bat call InstallOS.bat  
+    Echo %time% %date%
+    ```
 
     > [!NOTE]
     > As indicated by its name, InstallOS.bat can do much more than just add drivers to WinPE. However, for the purpose of this document additional scripting detail will not be discussed.
-4. At this point %usbdrv% is defined with the drive letter for the USB flash device so drivers present in %usbdrv%\$WinpeDriver$ folder can be injected through scripting in the InstallOS.bat.
+4. At this point %usbdrv% is defined with the drive letter for the USB flash device so drivers present in %usbdrv%\\$WinpeDriver$ folder can be injected through scripting in the InstallOS.bat.
 
-    For example, in InstallOS.bat add:
-
-    *Drvload.exe %usbdrv%\$winpedriver$\<device>\filename.INF*  
+    For example, in InstallOS.bat add `Drvload.exe %usbdrv%\$winpedriver$\<device>\filename.INF`.
 
 Using this method, the driver that is made available for the operating system is first picked up and used by WinPE.
 
@@ -320,37 +320,37 @@ If your requirement is to create a WinPE environment that loads out of box drive
 
 ## References and Links
 
-[Add Device Drivers during Windows Setup](https://technet.microsoft.com/library/cc766485%28ws.10%29.aspx)
+- [Add Device Drivers during Windows Setup](/previous-versions/windows/it-pro/windows-vista/cc766485(v=ws.10))
 
-[What Is Deployment Image Servicing and Management?](https://technet.microsoft.com/library/dd744566%28ws.10%29.aspx)
+- [What Is Deployment Image Servicing and Management?](/previous-versions/windows/it-pro/windows-7/dd744566(v=ws.10))
 
-[Deployment Image Servicing and Management Command-Line Options](https://technet.microsoft.com/library/dd744382%28ws.10%29.aspx)
+- [Deployment Image Servicing and Management Command-Line Options](/previous-versions/windows/it-pro/windows-7/dd744382(v=ws.10))
 
-[Drvload Command-Line Options](https://technet.microsoft.com/library/dd744511%28ws.10%29.aspx)
+- [Drvload Command-Line Options](/previous-versions/windows/it-pro/windows-7/dd744511(v=ws.10))
 
-[DevCon](https://technet.microsoft.com/query/ff544707)
+- [DevCon](/windows-hardware/drivers/devtest/devcon)
 
-[Understanding Device Drivers and Deployment](https://technet.microsoft.com/library/dd744517%28ws.10%29.aspx)
+- [Understanding Device Drivers and Deployment](/previous-versions/windows/it-pro/windows-7/dd744517(v=ws.10))
 
-[Driver Paths in Unattend.xml](https://technet.microsoft.com/library/cc749300%28ws.10%29.aspx)
+- [Driver Paths in Unattend.xml](/previous-versions/windows/it-pro/windows-vista/cc749300(v=ws.10))
 
-[Add a Package to a Windows PE Image](https://technet.microsoft.com/library/dd799312%28ws.10%29.aspx)
+- [Add a Package to a Windows PE Image](/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10))
 
-[What Is Windows RE?](https://technet.microsoft.com/library/dd744514%28ws.10%29.aspx)
+- [What Is Windows RE?](/previous-versions/windows/it-pro/windows-7/dd744514(v=ws.10))
 
-[How Windows RE Works](https://technet.microsoft.com/library/dd744291%28ws.10%29.aspx)
+- [How Windows RE Works](/previous-versions/windows/it-pro/windows-7/dd744291(v=ws.10))
 
-[Walkthrough: Create a Bootable Windows PE RAM Disk on CD-ROM](https://technet.microsoft.com/library/dd799303%28ws.10%29.aspx) 
+- [Walkthrough: Create a Bootable Windows PE RAM Disk on CD-ROM](/previous-versions/windows/it-pro/windows-7/dd799303(v=ws.10))
 
-[Walkthrough: Create a Bootable Windows PE RAM Disk on a USB Flash Disk](https://technet.microsoft.com/library/dd744530%28ws.10%29.aspx) 
+- [Walkthrough: Create a Bootable Windows PE RAM Disk on a USB Flash Disk](/previous-versions/windows/it-pro/windows-7/dd744530(v=ws.10))
 
-[How Configuration Passes Work](https://technet.microsoft.com/library/dd744341%28ws.10%29.aspx)
+- [How Configuration Passes Work](/previous-versions/windows/it-pro/windows-7/dd744341(v=ws.10))
 
-[Copype.cmd](https://msdn.microsoft.com/library/ff794790%28v=winembedded.60%29.aspx)
+- [Copype.cmd](/previous-versions/windows/embedded/ff794790(v=winembedded.60))
 
-[Windows Automated Installation Kit (AIK) for Win7/2008r2](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=5753) 
+- [Windows Automated Installation Kit (AIK) for Win7/2008r2](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=5753)
 
-[Windows OEM Preinstallation Kit (OPK)](https://www.microsoft.com/oem/en/downloads/pages/technical-downloads.aspx)
+- [Windows OEM Preinstallation Kit (OPK)](https://www.microsoft.com/oem/en/downloads/pages/technical-downloads.aspx)
 
 > [!NOTE]
 > You will need an account to be able to download files from the OEM site.

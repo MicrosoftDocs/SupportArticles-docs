@@ -11,18 +11,18 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: eldenc, kaushika
 ms.prod-support-area-path: 'Errors and troubleshooting: General issues'
-ms.technology: PrintFaxScan
+ms.technology: windows-server-printing
 ---
 # Users can't print after you install a service pack, update rollup, or printer hotfix on a Windows-based server
 
-This article describes an issue where you can't print after you install a service pack or printer hotfix on a server.
+This article provides help to solve an issue where you can't print after you install a service pack or printer hotfix on a server.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;832219
 
 ## Symptoms
 
-After you install Microsoft Windows 2000 Service Pack 2 (SP2), a service pack for Windows Server 2003 or Windows Server 2012 R2, an update rollup, or a hotfix that updates the Unidrvui.dll file, users may experience both of the following symptoms:
+After you install Windows 2000 Service Pack 2 (SP2), a service pack for Windows Server 2003 or Windows Server 2012 R2, an update rollup, or a hotfix that updates the Unidrvui.dll file, users may experience both of the following symptoms:
 
 - When a client or server tries to print, the Print Spooler service appears to stop responding (or "hang"), and the following error message appears:
 
@@ -49,12 +49,14 @@ To resolve this issue, schedule sufficient time for the server to complete the p
 ## Workaround
 
 > [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
+> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
 If you can't wait for the server to complete the parsing of all the Unidrv-based printer drivers, manually remove all cached binary printer description files (.bud files), and then let them be automatically re-created. Depending on the speed of your server, this automatic re-creation may be completed in a shorter time. Typically, this operation is completed within 30 minutes.
 
 > [!NOTE]
-> When Print Spooler starts, it installs a newer version of Unidrv.dll. As a result, the .bud files are out of date. The .bud files are the compiled versions of .ppd files and can be completely regenerated from those .ppd files. Because of this, you can remove the .bud files. To do this, follow these steps:
+> When Print Spooler starts, it installs a newer version of Unidrv.dll. As a result, the .bud files are out of date. The .bud files are the compiled versions of .ppd files and can be completely regenerated from those .ppd files. Because of this, you can remove the .bud files.
+
+To do this, follow these steps:
 
 1. Stop the Print Spooler service. To do this, run the following command from a command prompt:
 
@@ -63,28 +65,28 @@ If you can't wait for the server to complete the parsing of all the Unidrv-based
     ```
 
 2. Search for all .bud files, and then make sure that they're stamped with the current time and date. The files appear with today's date.
-3. Remove all .bud files that have a date and time stamp that is before today's date. These files are located in the following folder: 
+3. Remove all .bud files that have a date and time stamp that is before today's date. These files are located in the following folder:
 
-    %SYSTEMROOT%\System32\Spool\Drivers\w32x86\3
+    %SYSTEMROOT%\\System32\\Spool\\Drivers\\w32x86\\3
 
-4. Remove the following registry key if it exists: 
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\PostSPUpgrade` 
+4. Remove the following registry key if it exists:  
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\PostSPUpgrade`
 
     To do this, follow these steps:
-    
-    1. Click **Start**, click **Run**, type regedit in the **Open** box, and then click **OK**.
-    2. Locate, and then click the following registry subkey: 
-        `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print` 
+
+    1. Click **Start**, click **Run**, type *regedit* in the **Open** box, and then click **OK**.
+    2. Locate, and then click the following registry subkey:  
+        `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print`
     3. On the **Registry** menu, click **Export Registry File**.
-    4. In the **File name** box, type printkey, and then click **Save**.
-    
+    4. In the **File name** box, type *printkey*, and then click **Save**.
+
         > [!NOTE]
         > If you later have to restore the **Print** registry key, you can do so by double-clicking the Printkey.reg file that you saved.
-    5. Locate, and then click the following registry subkey if it exists:
-        `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\PostSPUpgrade` 
-    
+    5. Locate, and then click the following registry subkey if it exists:  
+        `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\PostSPUpgrade`
+
     6. On the **Edit** menu, click **Delete**, and then click **Yes** to confirm the removal of the **PostSPUpgrade** registry key.
-    
+
         > [!NOTE]
         > The **PostSPUpgrade** registry key may reappear after you restart the computer. This behavior occurs if other .bud files exist that have not yet been parsed. After these files have been parsed, this registry key is automatically removed.
 5. Restart the server.

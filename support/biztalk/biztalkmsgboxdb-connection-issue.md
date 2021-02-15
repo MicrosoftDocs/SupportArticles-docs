@@ -47,7 +47,7 @@ Most of the BizTalk indexes are GUID-based. Many tests have shown that as long a
 
 You can use the `DBCC DBREINDEX` SQL command to rebuild an index in the other BizTalk Server databases. For an example of how to use the `DBCC DBREINDEX` SQL command, right-click the `bts_RebuildIndexes` stored procedure, and then click **Properties**.
 
-Microsoft only supports rebuilding database indexes during BizTalk Server downtime. You should stop all host instances and SQL Server Agent before you rebuild an index. When you run the `bts_RebuildIndexes` stored procedure in BizTalk Server 2006 and later versions, you may receive one of the following error messages:
+Microsoft only supports rebuilding database indexes during BizTalk Server downtime. You should stop all host instances and SQL Server Agent before you rebuild an index. When you run the `bts_RebuildIndexes` stored procedure in BizTalk Server 2006 and later versions, you may receive one of the following error messages:
 
 - Error message 1
 
@@ -58,7 +58,7 @@ Microsoft only supports rebuilding database indexes during BizTalk Server downti
 
     > Msg 5239, Level 16, State 1, Procedure bts_RebuildIndexes, Line 4 Unable to process object ID 722101613 (object 'TrackingData') because this DBCC command does not support objects of this type.
 
-This problem occurs because the `TrackingData` object is a view in BizTalk Server 2006 and later versions. To resolve this problem, do the following and then execute the `bts_RebuildIndexes` stored procedure:
+This problem occurs because the `TrackingData` object is a view in BizTalk Server 2006 and later versions. To resolve this problem, do the following and then execute the `bts_RebuildIndexes` stored procedure:
 
 1. Comment out the following line in the `bts_RebuildIndexes` stored procedure.
 

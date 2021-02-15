@@ -2,7 +2,7 @@
 title: Disable the Save Embedded Files dialog box
 description: This article displays how the Save Embedded Files dialog can be disabled.
 ms.date: 03/19/2020
-ms.prod-support-area-path: WWW modules and features
+ms.prod-support-area-path: WWW modules and features
 ms.reviewer: jamesche
 ms.topic: how-to
 ---

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Managing printers through Group Policy
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # Group Policy Printer Preferences fails to set the default printer when new user profile is created
 
@@ -28,7 +28,7 @@ Using Group Policy Preferences to create a new printer mapping and set that prin
 Event ID 4098 is logged in the Application Log:  
 Log Name:      Application  
 Source:        Group Policy Printers  
-Date:          13/01/2009 4:07:48 PM  
+Date:          *\<DateTime>*  
 Event ID:      4098  
 Task Category: (2)  
 Level:         Warning  

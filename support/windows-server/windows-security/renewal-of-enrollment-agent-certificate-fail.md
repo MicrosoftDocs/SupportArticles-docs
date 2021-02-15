@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Renewal of "Enrollment Agent" certificate used by NDES may fail
 
@@ -62,7 +62,7 @@ Use the certreq.exe tool to renew the Exchange Enrollment Agent (Offline request
     > MachineKeySet set to "True" so the certificate and its private key will be stored in computer certificate store.
 
    > [!Note]
-     to open the computer certificate store, please refer to the following technet article:
+   > To open the computer certificate store, please refer to the following technet article:
     Add the Certificates Snap-in to an MMC
     [Add the Certificates Snap-in to an MMC](https://technet.microsoft.com/library/cc754431%28v=ws.10%29.aspx#bkmk_computer)  
 

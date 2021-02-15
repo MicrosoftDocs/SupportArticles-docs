@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
-ms.technology: GroupPolicy
+ms.technology: windows-client-group-policy
 ---
 # Windows 7 Clients intermittently fail to apply group policy at startup
 
@@ -32,17 +32,17 @@ The behavior is caused by a race condition between network initialization, locat
 
 The following sequence of events reflects the condition:
 
-> Information 8/9/2010 2:42:11 PM EventLog 6006 indicates system shutdown  
-Information 8/9/2010 2:43:10 PM e1kexpress 33 indicates that your network connection link has been established with \<speed/duplex>  
-Information 8/9/2010 2:43:20 PM EventLog 6005 indicates event log service has started  
-Information 8/9/2010 2:43:25 PM Dhcp-Client 50036 indicates dhcp client service has started  
-Error 8/9/2010 2:43:29 PM NETLOGON 5719 indicates netlogon unable to reach any of the domain controllers  
-Error 8/9/2010 2:43:31 PM GroupPolicy 1055 indicates group policy processing failed  
-Information 8/9/2010 2:59:07 PM GroupPolicy 1503 indicates group policy processing succeeded  
+> Information \<DateTime> EventLog 6006 indicates system shutdown  
+Information \<DateTime> e1kexpress 33 indicates that your network connection link has been established with \<speed/duplex>  
+Information \<DateTime> EventLog 6005 indicates event log service has started  
+Information \<DateTime> Dhcp-Client 50036 indicates dhcp client service has started  
+Error \<DateTime> NETLOGON 5719 indicates netlogon unable to reach any of the domain controllers  
+Error \<DateTime> GroupPolicy 1055 indicates group policy processing failed  
+Information \<DateTime> GroupPolicy 1503 indicates group policy processing succeeded  
 
 This can be confirmed via the netlogon logs as well:
 
->8/09 14:43:29 [SESSION] \Device\NetBT_Tcpip_{53267BA1-EB8C-4348-BD81-41C3FF162EE9}: Transport Added (169.254.214.170) 08/09 14:43:29 [SESSION] Winsock Addrs: 169.254.214.170 (1) Address changed. 8/09 14:43:29 [CRITICAL] NetpDcGetDcNext: _ldap._tcp.dc._msdcs.contoso.com.: Cannot Query DNS. 1460 0x5b4 08/09 14:43:29 [CRITICAL] NetpDcGetNameIp: `contoso.com`.: No data returned from DnsQuery. 08/09 14:43:29 [CRITICAL] DBG: NlDiscoverDc: Cannot find DC. 08/09 14:43:29 [CRITICAL] DBG: NlSessionSetup: Session setup: cannot pick trusted DC 08/09 14:43:29 [SESSION] DBG: NlSetStatusClientSession: Set connection status to c000005e 08/09 14:43:29 [SESSION] DBG: NlSessionSetup: Session setup Failed
+>\<DateTime> [SESSION] \Device\NetBT_Tcpip_{53267BA1-EB8C-4348-BD81-41C3FF162EE9}: Transport Added (\<IP Address>) \<DateTime> [SESSION] Winsock Addrs: \<IP Address> (1) Address changed. \<DateTime> [CRITICAL] NetpDcGetDcNext: _ldap._tcp.dc._msdcs.contoso.com.: Cannot Query DNS. 1460 0x5b4 \<DateTime> [CRITICAL] NetpDcGetNameIp: `contoso.com`.: No data returned from DnsQuery. \<DateTime> [CRITICAL] DBG: NlDiscoverDc: Cannot find DC. \<DateTime> [CRITICAL] DBG: NlSessionSetup: Session setup: cannot pick trusted DC \<DateTime> [SESSION] DBG: NlSetStatusClientSession: Set connection status to c000005e \<DateTime> [SESSION] DBG: NlSessionSetup: Session setup Failed
 
 ## Resolution
 

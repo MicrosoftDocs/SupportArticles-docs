@@ -11,13 +11,13 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Davjoh
 ms.prod-support-area-path: Remote desktop sessions
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Available updates for Terminal Services (Remote Desktop Services) in Windows Server 2008
 
 This article summarizes the available hotfixes and updates for issues that can occur in Terminal Services for Windows Server 2008 environments.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2312539
 
 ## Summary
@@ -47,8 +47,6 @@ These hotfixes and updates are arranged by component areas within Terminal Servi
 
 [978829](https://support.microsoft.com/help/978829) The CTRL and ALT keys in a Terminal Service session get stuck when you unlock a local computer
 
-[976110](https://support.microsoft.com/help/976110) A terminal server session that is shadowed is incorrectly disconnected when the terminal server session that is shadowing stops shadowing on a computer that is running Windows Vista or Windows Server 2008
-
 [971338](https://support.microsoft.com/help/971338) The terminal server roaming profile of a user account is not loaded correctly on a terminal server that is running Windows Server 2008 R2 or Windows Server 2008 after the user password is changed during session logon
 
 [971253](https://support.microsoft.com/help/971253) You receive a blank screen when you log on to a terminal server that is running Windows Server 2008
@@ -57,11 +55,7 @@ These hotfixes and updates are arranged by component areas within Terminal Servi
 
 [970067](https://support.microsoft.com/help/970067) You find high CPU usage for the Wmiprvse.exe process on a terminal server that is running Windows Server 2008 when you run the Windows System Resource Manager
 
-[969851](https://support.microsoft.com/help/969851) Instead of the specified startup program, the whole desktop is started on a remote desktop connection when you change the "Terminal Services Profile" setting for the user account
-
 [969940](https://support.microsoft.com/help/969940) When you start a terminal session to a computer that is running Windows Server 2008 and that has the terminal server role installed, the full Windows desktop starts instead of the program that is specified by the terminal server
-
-[969851](https://support.microsoft.com/help/969851) Instead of the specified startup program, the whole desktop is started on a remote desktop connection when you change the "Terminal Services Profile" setting for the user account
 
 [941641](https://support.microsoft.com/help/941641) Remote Desktop Connection 6.0 prompts you for credentials before you establish a remote desktop connection
 
@@ -80,8 +74,6 @@ These hotfixes and updates are arranged by component areas within Terminal Servi
 [979163](https://support.microsoft.com/help/979163) Many pages are printed when you try to print an Excel worksheet by using a redirected printer if the Terminal Services Easy Print feature is used
 
 ### Licensing
-
-[2542272](https://support.microsoft.com/help/2542272) You receive a temporary TS CAL when the DN of a user account contains the forward slash-mark character in Windows Server 2008 if Per User licensing mode is used
 
 [2028637](https://support.microsoft.com/help/2028637) A domain administrator or local administrator incorrectly receives a warning message "Cannot find a valid Terminal Services Licensing Server" when this user account logs on to a Windows Server 2008 Terminal server
 

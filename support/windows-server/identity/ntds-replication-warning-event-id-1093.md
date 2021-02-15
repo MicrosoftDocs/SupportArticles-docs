@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, bobbiez, tonnyp
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # NTDS replication warning with Event ID 1093
 
@@ -38,7 +38,7 @@ Active Directory could not update the following object with attribute changes be
 > Object:  
 CN=user01,OU=OU1,OU=OU2,OU=Users,DC=contoso,DC=com  
 Object GUID:  
-cbb55175-d09e-4929-a310-5561c3097271  
+*\<GUID>*  
 Attribute:  
 24 (userCertificate)  
 >
@@ -46,7 +46,7 @@ Attribute:
 Version:  
 10277  
 Time of change:  
-2013-07-24 15:36:05  
+*\<DateTime>*  
 Update sequence number:  
 614514713  
 For more information, see Help and Support Center at `https://go.microsoft.com/fwlink/events.asp`.

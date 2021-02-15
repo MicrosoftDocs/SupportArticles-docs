@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Error C0190003 after you install updates in Windows Server 2012 R2
 
-This article describes an issue that triggers an error when you restart a Windows Server 2012 R2-based computer after you install updates.
+This article provides a workaround for an issue that triggers an error when you restart a Windows Server 2012 R2-based computer after you install updates.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;3074603
@@ -23,6 +23,7 @@ _Original KB number:_ &nbsp;3074603
 ## Symptoms
 
 Consider the following scenario:
+
 - You try to install many updates from Windows Update. This includes update 3000850.
 - You're using a native 4K sector disk as a system drive.
 
@@ -52,12 +53,13 @@ fsutil resource setlog maxextents 100 C:\
 > [!NOTE]
 > This command increases the maximum number of containers for the boot drive (drive C) to 100. (The default value is 20.) If you set the value to 100 and still experience the same error, you may want to try a higher number.
 
-If you've already experienced the issue that's described in the "Symptoms" section, you can recover from the issue by following these steps:
+If you've already experienced the issue that's described in the [Symptoms](#symptoms) section, you can recover from the issue by following these steps:
+
 1. While the error message is displayed, press the power button to turn off the computer.
 2. Press the power button and then immediately press the F8 key. This displays the **Advanced Boot Options** menu.
 3. Select **Repair Your Computer**, and then press Enter.
-4. On the Choose an option menu, select **Troubleshoot**.
-5. On the Advanced options menu, select **Command Prompt**.
+4. On the **Choose an option** menu, select **Troubleshoot**.
+5. On the **Advanced options** menu, select **Command Prompt**.
 6. Select the administrator account, and then enter the password.
 7. At a command prompt (cmd.exe), run the following command:
 
@@ -66,14 +68,12 @@ If you've already experienced the issue that's described in the "Symptoms" secti
     ```
 
 8. Close the command prompt.
-9. On the Choose an option menu, select **Continue**.
+9. On the **Choose an option** menu, select **Continue**.
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section. 
+Microsoft has confirmed that this is a problem in Windows Server 2012 R2.
 
 ## References
 
-For more info about the Microsoft support policy for 4K sector hard disks, see the following Knowledge Base article:
-
-[Microsoft support policy for 4K sector hard drives in Windows](https://support.microsoft.com/help/2510009)
+[Microsoft support policy for 4K sector hard drives in Windows](/troubleshoot/windows-server/backup-and-storage/support-policy-4k-sector-hard-drives)

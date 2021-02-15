@@ -2,7 +2,7 @@
 title: Use the FTP Utility
 description: This article explains how to use the FTP utility.
 ms.date: 03/23/2020
-ms.prod-support-area-path: FTP authentication and authorization
+ms.prod-support-area-path: FTP authentication and authorization
 ms.reviewer: kevinz
 ms.topic: how-to
 ---

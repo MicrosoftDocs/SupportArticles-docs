@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Windows Time Service
-ms.technology: ActiveDirectory
+ms.technology: windows-client-active-directory
 ---
 # Windows Time service doesn't start automatically on a workgroup computer
 
@@ -22,11 +22,11 @@ _Original KB number:_ &nbsp; 2385818
 
 ## Symptoms
 
-On a workgroup computer that's running Windows 7, Windows Server 2008 R2, or a later version of Windows, the Windows Time service stops immediately after system startup. This issue occurs even after the Startup Type is changed from **Manual** to **Automatic**. Additionally, the following event is logged in the System log:
+On a workgroup computer that's running Windows 7, Windows Server 2008 R2, or a later version of Windows, the Windows Time service stops immediately after system startup. This issue occurs even after the Startup Type is changed from **Manual** to **Automatic**.
 
 ## Cause
 
-This issue occurs because the Windows Time service is configured as the Trigger-Start service. and this has been implemented as the default setting in Windows 7 and Windows Server 2008 R2.
+This issue occurs because the Windows Time service is configured as the Trigger-Start service, and this has been implemented as the default setting in Windows 7 and Windows Server 2008 R2.
 
 Services and background processes have a significant effect on the performance of the system. The Trigger-Start service has been implemented in Windows 7 and Windows Service 2008 R2 in order to reduce the total number of auto-start services on the system. The goal is to improve the stability of the whole system, and this includes improving performance and reducing power consumption. Under this implementation, the Service Control Manager has been enhanced to handle starting and stopping services by using specific system events.
 
@@ -75,4 +75,4 @@ To start the Windows Time service at system startup, use any of the following me
 
 ## More information
 
-The Windows Time service on a workgroup computer is not started automatically at system startup by the Trigger-Start service. However, the Windows Time service is started by the Time Synchronization setting that's registered on the Task Scheduler Library at 01:00 a.m. every Sunday for Time Synchronization. Therefore, the default setting can be kept as is.
+The Windows Time service on a workgroup computer is not started automatically at system startup by the Trigger-Start service. However, the Windows Time service is started by the Time Synchronization setting that's registered on the Task Scheduler Library at 01:00 a.m. every Sunday for Time Synchronization. Therefore, the default setting can be kept as it is.

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Connection Configuration in Terminal Server
 
@@ -32,9 +32,9 @@ Citrix's Metaframe product may be installed on the Terminal Server so Citrix's I
 
 On a Citrix Winframe Server or on a Terminal Server with Metaframe installed, customers have the option of creating different connection types for different ICA clients (for example, Macintosh clients, asynch clients, SPX clients).
 
-Right-clicking a defined connection brings up a menu that allows you to edit the connection configuration
+Right-clicking a defined connection brings up a menu that allows you to edit the connection configuration.
 
-Notice that the connection Name, Type, and Transport are unavailable. The name can be changed under Connection/Rename. But the Type and Transport cannot be changed.
+Notice that the connection Name, Type, and Transport are unavailable. The name can be changed under Connection/Rename, but the Type and Transport cannot be changed.
 
 The Lan Adapter drop-down list shows "All Lan Adapters..." and any installed adapters. Notice that the connection by default applies to all installed adapters, so just because you have multiple adapters does not mean you must define new connections. You can, but it is not a requirement.
 
@@ -139,6 +139,6 @@ This allows users to:
 
 This allows all of the above plus permission to:
 
-- Shadow (ICA Clients only)
-- Reset sessions
+- Shadow (ICA Clients only).
+- Reset sessions.
 - Delete sessionsAlong with Guest, User, and Full permissions, there's a more granular set of permissions called Special Access that is used to grant each of the above individually.

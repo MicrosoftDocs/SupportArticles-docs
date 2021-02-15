@@ -11,9 +11,9 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Performance (audio and video) and RemoteFX
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
-# Remote Desktop cannot Connect to the VDI-based remote computer after enabling Microsoft RemoteFX 3D Video Adapter
+# Remote Desktop cannot connect to the VDI-based remote computer after enabling Microsoft RemoteFX 3D Video Adapter
 
 This article provides a solution to an issue where Remote Desktop can't connect to a Virtual Desktop Infrastructure (VDI)-based remote computer.
 
@@ -24,18 +24,28 @@ _Original KB number:_ &nbsp; 2820155
 
 After installing the RemoteFX 3D Video Adapter on a VDI-based physical machine or a virtual machine that is hosted on a Hyper-V server, when you try to connect to the machine using Remote Desktop connection, it may fail. Additionally, you may receive the error message that is similar to the following:
 
-Remote Desktop can't connect to the remote computer for one of these reasons:
-
-1. Remote access to the server is not enabled
-2. The remote computer is turned off
-3. The remote computer is not available on the network
-
-Make sure the remote computer is turned on and connected to the network, and that remote access is enabled.
+> Remote Desktop can't connect to the remote computer for one of these reasons:
+>
+> 1. Remote access to the server is not enabled
+> 2. The remote computer is turned off
+> 3. The remote computer is not available on the network
+>
+> Make sure the remote computer is turned on and connected to the network, and that remote access is enabled.
 
 You may also receive the following error in the Windows Event Log:
 
+> Log Name: Microsoft-Windows-TerminalServices-LocalSessionManager/Operational  
+Source:       Microsoft-Windows-TerminalServices-LocalSessionManager  
+Date:          \<Date>\<Time>  
+Event ID:    17  
+Level:         Error  
+User:          SYSTEM  
+Computer: machinename.domain.com  
+Description:  
+Remote Desktop Service start failed. The relevant status code was 0x800706b5.  
+
 > [!NOTE]
-> that you can connect to the computer using RDP if you remove the RemoteFX 3D Video Adapter from the VM.
+> You can connect to the computer using RDP if you remove the RemoteFX 3D Video Adapter from the VM.
 
 ## Cause
 
@@ -43,7 +53,7 @@ With the release of Service Pack 1 for Windows 7 and Windows Server 2008 R2, a n
 
 For more information on Microsoft RemoteFX, visit the following Microsoft Web site:
 
-[Microsoft RemoteFX](https://technet.microsoft.com/library/ff817578%28v=ws.10%29.aspx) 
+[Microsoft RemoteFX](https://technet.microsoft.com/library/ff817578%28v=ws.10%29.aspx)
 
 ## Resolution
 
@@ -51,25 +61,24 @@ To resolve the problem, you must enable the RemoteFX Windows Firewall rule manua
 
 To enable the RemoteFX rule by using Windows Firewall with Advanced Security
 
-1. Click the Start button, and then click Control Panel.
-2. In the Control Panel windows click Windows Firewall.
-3. In the left pane, click Allow a program or feature through Windows Firewall.
-4. Click Change settings. If you're prompted for an administrator password or confirmation, type the password or provide confirmation.
-5. Under Allowed programs and features, select the check box next to Remote Desktop - RemoteFX, and then use the check boxes in the columns to select the network location types you want to allow communication on.
-6. Click OK.
+1. Click the **Start** button, and then click **Control Panel**.
+2. In the **Control Panel** windows click **Windows Firewall**.
+3. In the left pane, click **Allow a program or feature through Windows Firewall**.
+4. Click **Change settings**. If you're prompted for an administrator password or confirmation, type the password or provide confirmation.
+5. Under **Allowed programs and features**, select the check box next to **Remote Desktop - RemoteFX**, and then use the check boxes in the columns to select the network location types you want to allow communication on.
+6. Click **OK**.
 
 Alternatively, if you enable Remote Desktop by using the System properties window, the rule is enabled automatically.
 
-1. Click the Start button, and then click Control Panel.
-2. Click on System  icon.
-3. Under Control Panel Home, click Remote settings.
-4. Click the Remote tab. Under Remote Desktop, Select Don't allow connections to this computer and the click Apply  
+1. Click the **Start** button, and then click **Control Panel**.
+2. Click on **System** icon.
+3. Under Control Panel Home, click **Remote settings**.
+4. Click the **Remote** tab. Under **Remote Desktop**, Select **Don't allow connections to this computer** and the click **Apply**.  
 5. Now select either option depending on your security requirements:
-6.
-   - Allow connections from computers running any version of Remote Desktop (less secure)
-   - Allow connections only from computers running Remote Desktop with Network Level Authentication (more secure)  
+   - **Allow connections from computers running any version of Remote Desktop (less secure)**
+   - **Allow connections only from computers running Remote Desktop with Network Level Authentication (more secure)**  
 
-7. Click on Apply and the OK.
+6. Click on **Apply** and then **OK**.
 
 ## More information
 

@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 2229865
 
 ## Changes in the TSAware behavior
 
-From .Net 3.5 Framework SP1 onwards, the [/TSAWARE](/previous-versions/visualstudio/visual-studio-2008/01cfys9z(v=vs.90)) flag is set to ON by default in the PE header of the image produced by the included C# and Visual Basic. NET compilers. It can be verified by running dumpbin.exe on any C#/VB.net assembly built by using those compilers as follows:
+From .Net 3.5 Framework SP1 onwards, the [/TSAWARE](/previous-versions/visualstudio/visual-studio-2008/01cfys9z(v=vs.90)) flag is set to ON by default in the PE header of the image produced by the included C# and Visual Basic. NET compilers. It can be verified by running dumpbin.exe on any C#/VB.net assembly built by using those compilers as follows:
 
 ```console
 Dumpbin /Headers <assembly_name>.exe(dll)

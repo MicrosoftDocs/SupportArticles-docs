@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davidg 
 ms.prod-support-area-path: Legacy authentication (NTLM)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # How to disable automatic machine account password changes
 
@@ -42,14 +42,16 @@ You can disable the machine account password changes on a workstation by setting
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
-1. Start Registry Editor. To do so, select **Start**, select **Run**, type regedit in the **Open** box, and then select **OK**.
+1. Start **Registry Editor**. To do so, select **Start**, select **Run**, type *regedit* in the **Open** box, and then select **OK**.
 2. Locate and then select the following registry subkey:
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters`
 
 3. In the right pane, select the **DisablePasswordChange** entry.
 4. On the **Edit** menu, select **Modify**.
 5. In the **Value data** box, type a value of **1**, and then select **OK**.
-6. Quit Registry Editor. In Windows NT version 4.0 and Windows 2000, Windows Server 2003, Windows Server 2008, and Windows Server 2008 R2, you can disable the machine account password change by setting the **RefusePasswordChange** registry entry to a value of **1** on all domain controllers in the domain instead of on all workstations. To do so, follow these steps.
+6. Quit **Registry Editor**.
+
+In Windows NT version 4.0 and Windows 2000, Windows Server 2003, Windows Server 2008, and Windows Server 2008 R2, you can disable the machine account password change by setting the **RefusePasswordChange** registry entry to a value of **1** on all domain controllers in the domain instead of on all workstations. To do so, follow these steps.
 
 > [!NOTE]
 > On Windows NT 4.0 domain controllers, you must change the **RefusePasswordChange** registry entry to a value of **1** on all backup domain controllers (BDCs) in the domain before you make the change on the primary domain controller (PDC). Failure to follow this order will cause event ID 5722 to be logged in the event log of the PDC.

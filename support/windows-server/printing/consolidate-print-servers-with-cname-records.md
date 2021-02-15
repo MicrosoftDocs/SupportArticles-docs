@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: 'Management and Configuration: General issues'
-ms.technology: PrintFaxScan
+ms.technology: windows-server-printing
 ---
 # Consolidate print servers by using DNS alias (CNAME) records
 
@@ -69,7 +69,7 @@ To predict the network load, the recommended method is to trace the network traf
 
 ### Additional things to consider before you use this solution
 
-- The solution in the MoreInformation section works only if clients use DNS or another name resolution method that incorporates DNS when they connect to the print server. Clients cannot take advantage of this solution if they:
+- The solution in the More Information section works only if clients use DNS or another name resolution method that incorporates DNS when they connect to the print server. Clients cannot take advantage of this solution if they:
   - Are connected directly by Internet Protocol (IP) to the print servers.
   - Use only network basic input/output system (NetBIOS).
   - Use Windows Internet Name Service (WINS) but do not use WINS reverse lookup.

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Firmware update failures in Windows 8.1
 
@@ -35,20 +35,22 @@ This article describes how to determine whether your PC is using Windows Update 
 Windows PCs that use Windows Update to install firmware updates will have "System Firmware Update" entries in the **View your update history for Windows** page of Windows Update.
 
 To view your update history in Windows Update:
-1. On the Start screen, type update history, and then click **View your update history for Windows**.
-2. In the search box, enter Windows Update, and then select **View update history**. You can also view the error codes that are returned for a failed firmware update by selecting the failed System Firmware Update entry in your update history. The update history page in Windows Update includes a status column, and this indicates which updates failed to install successfully. You can select the entry and open it to see details about the installation, including the installation status and error details. 
+
+1. On the **Start** screen, type *update history*, and then click **View your update history for Windows**.
+2. In the search box, enter *Windows Update*, and then select **View update history**. You can also view the error codes that are returned for a failed firmware update by selecting the failed System Firmware Update entry in your update history. The update history page in Windows Update includes a status column, and this indicates which updates failed to install successfully. You can select the entry and open it to see details about the installation, including the installation status and error details.
 
 A computer that uses UEFI to update firmware may also have entries for updatable firmware components in Device Manager. To determine whether your computer uses UEFI to update firmware, follow these steps:
+
 1. From the computer's desktop, open File Manager.
 2. In File Manager, right-click **This PC**, and then click **Properties**.
 3. Click **Device Manager**.
-4. If your computer is using UEFI to manage firmware, there will be a Firmware group under the PC root of Device Manager. Expand the Firmware group to see each updatable firmware component. 
+4. If your computer is using UEFI to manage firmware, there will be a Firmware group under the PC root of Device Manager. Expand the Firmware group to see each updatable firmware component.
 
     Firmware that wasn't installed successfully will have a "banged out" (!) entry under the Firmware group.
 5. You can right-click a failed firmware component and then click **Properties** to see the error codes that were returned. By combining the preceding two checks, you can determine whether your computer is updating firmware through both Windows Update and UEFI.
 
 > [!IMPORTANT]
-> Firmware entries in Device Manager are not guaranteed to be returned from UEFI. In some cases, Windows drivers may install firmware that then is listed under the Firmware group. If you are uncertain about whether your PC is using UEFI, contact your PC manufacturer. You can also view the Hardware IDs details for a particular firmware resource in its properties. UEFI firmware resources are prepended by UEFI\ in the device hardware ID. 
+> Firmware entries in Device Manager are not guaranteed to be returned from UEFI. In some cases, Windows drivers may install firmware that then is listed under the Firmware group. If you are uncertain about whether your PC is using UEFI, contact your PC manufacturer. You can also view the Hardware IDs details for a particular firmware resource in its properties. UEFI firmware resources are prepended by UEFI\\ in the device hardware ID.
 
 ### Transient vs. non-transient failure codes
 
@@ -65,9 +67,9 @@ For example, your PC may require a certain level of battery power (for example, 
 
 Windows will make a total of three installation attempts after the next three restarts for other transient failures such as a lack of system resources or other reasons that are returned by your UEFI system firmware. If your firmware update fails to install on the third and final restart, Windows won't try to install the firmware update again, and it will be marked as failed in both Device Manager and Windows Update history. The update won't be tried again until your PC manufacturer releases a new update that replaces the failed update.
 
-#### Non-transient failures 
+#### Non-transient failures
 
-Non-transient firmware update failures are caused by a condition that can't be repaired. Windows doesn't try to reinstall firmware updates that fail because of non-transient conditions. 
+Non-transient firmware update failures are caused by a condition that can't be repaired. Windows doesn't try to reinstall firmware updates that fail because of non-transient conditions.
 
 Installation of the update won't be retried until your PC manufacturer releases a new update the replaces the failed update.
 
@@ -80,12 +82,11 @@ Windows retries firmware updates as follows.
 |Non-transient|0|
 |||
 
-
 ### Windows Update power checks
 
 Because your computer may require a certain level of battery power (for example 25 percent) to install firmware updates, Windows Update monitors your battery power level to prevent your computer from needlessly failing a firmware update during an *interactive install*.
 
-During an interactive install, a user manually checks for updates from the Windows Update control panel or the Settings app and then manually starts the update process. An *automatic background install*  occurs in the background, staging the new updates that are available for your PC and notifying you that your PC requires a restart. Most of your updates are installed automatically in the background. 
+During an interactive install, a user manually checks for updates from the Windows Update control panel or the Settings app and then manually starts the update process. An *automatic background install* occurs in the background, staging the new updates that are available for your PC and notifying you that your PC requires a restart. Most of your updates are installed automatically in the background.
 
 Windows Update will verify that your PC has at least 40-percent battery power before it starts firmware updates during an interactive install. During an automatic background install, Windows Update doesn't check for the 40-percent battery power threshold. This behavior occurs because Windows won't try to restart your PC until you have at least 40-percent battery power. Additionally, it will automatically retry installation of failed firmware updates when the battery charges to 40 percent or more.
 
@@ -102,7 +103,8 @@ The following table lists the LastAttemptStatus error that's reported by UEFI sy
 Contact your PC manufacturer for support with failed firmware updates.
 
 > [!IMPORTANT]
-> - If your PC restarts but does not meet the minimum battery power required by UEFI system firmware, the firmware update may fail to install and will fail with one of the power failure codes in the following table. Windows Update may prompt you to reboot your PC after your battery charges to 40% in the case of a firmware update that has failed a battery power check. 
+>
+> - If your PC restarts but does not meet the minimum battery power required by UEFI system firmware, the firmware update may fail to install and will fail with one of the power failure codes in the following table. Windows Update may prompt you to reboot your PC after your battery charges to 40% in the case of a firmware update that has failed a battery power check.
 > - Windows and UEFI ignore available A/C power and check only the available battery power level. If your battery will not charge above the required level, you may be unable to install future firmware updates. If the battery for your PC does not charge, contact your PC manufacturer.
 > - Transient failures that are not power-related will transition from displaying a "pending reboot" status in Windows Update to "failed" after the third failed installation attempt.
 > - Non-transient firmware updates or transient firmware updates that have failed all three install attempts will not be retried until they are replaced by a new firmware update from your PC manufacturer.

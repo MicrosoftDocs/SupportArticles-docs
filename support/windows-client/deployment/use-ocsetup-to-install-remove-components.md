@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jomcc
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # How to use the Ocsetup.exe tool to install or to remove Windows optional components in Windows Vista
 
@@ -58,7 +58,7 @@ Windows optional components are parts of the Windows operating system that can b
 
 The Ocsetup.exe tool provides functionality that resembles the functionality that the Sysocmgr.exe tool provides in Microsoft Windows XP and in Microsoft Windows Server 2003. In Windows Vista, Windows Defender Software Explorer and Windows Update use the Ocsetup.exe tool. In Windows Server 2008, Server Manager uses the Ocsetup.exe tool.
 
-The Ocsetup.exe tool is used as a wrapper for Package Manager (Pkgmgr.exe) and for Windows Installer (Msiexec.exe). Ocsetup.exe is a command-line utility that can be used to perform scripted installs and scripted uninstalls of Windows optional components. The Ocsetup.exe tool replaces the Sysocmgr.exe tool that Windows XP and Windows Server 2003i use.
+The Ocsetup.exe tool is used as a wrapper for Package Manager (Pkgmgr.exe) and for Windows Installer (Msiexec.exe). Ocsetup.exe is a command-line utility that can be used to perform scripted installs and scripted uninstalls of Windows optional components. The Ocsetup.exe tool replaces the Sysocmgr.exe tool that Windows XP and Windows Server 2003 use.
 
 Windows optional components can be MSI-based or component-based. The Ocsetup.exe tool detects the type of optional component that is passed as a parameter. Additionally, the Ocsetup.exe tool calls the correct child process to install or to remove the optional component. If the optional component is MSI-based, the Ocsetup.exe tool calls Msiexec.exe. If the optional component is component-based, the Ocsetup.exe tool calls Pkgmgr.exe. The Ocsetup.exe tool returns back to the caller the exit code that is received from Pkgmgr.exe, from Msiexec.exe, or from the custom bootstrapping application.
 

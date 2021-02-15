@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, aarthit, toklima
 ms.prod-support-area-path: Storage hardware
-ms.technology: BackupStorage
+ms.technology: windows-client-backup-and-storage
 ---
 # Event ID 158 is logged for identical disk GUIDs
 
@@ -36,10 +36,10 @@ This problem may be caused by any one of several different situations. The two m
 
 ## Resolution
 
-To resolve this problem if multiple paths are available to the physical disk devices, enable MPIO. If MPIO is enabled, the system can claim the drives and expose only one instance of each disk device when the computer is restarted.
+To resolve this problem, if multiple paths are available to the physical disk devices, enable MPIO. If MPIO is enabled, the system can claim the drives and expose only one instance of each disk device when the computer is restarted.
 
 ## More Information
 
 For more information about how to enable MPIO, see [Installing and Configuring MPIO](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee619752(v=ws.10)).
 
-If multiple VHDs are identified as duplicates, use the `ResetDiskIdentifier` parameter of the `Set-VHD` Windows PowerShell cmdlet. For more information about the `Set-VHD` cmdlet, see [Set-VHD](/powershell/module/hyper-v/set-vhd?redirectedfrom=MSDN&view=win10-ps).
+If multiple VHDs are identified as duplicates, use the `ResetDiskIdentifier` parameter of the `Set-VHD` Windows PowerShell cmdlet. For more information about the `Set-VHD` cmdlet, see [Set-VHD](/powershell/module/hyper-v/set-vhd).

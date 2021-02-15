@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: adjudele, cpuckett, kaushika
 ms.prod-support-area-path: Live Migration
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Troubleshoot live migration issues
 
-This article provides information on solving the problem of live migration in windows server 2016.
+This article provides information on solving the problem of live migration in Windows Server 2016.
 
 _Original product version:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4558514
@@ -111,7 +111,7 @@ Make sure the cluster network isn't configured and that **Allow cluster network 
 
 **Description**
 
-Live Migration Fails With (0x8007271D)
+Live migration fails With (0x8007271D).
 
  **Action**
 
@@ -236,7 +236,7 @@ Here's how to fix this issue:
 
     ![Steps to fix this issue](./media/troubleshoot-live-migration-issues/hyper-v-manager-console.png)
 
-2. Open **Windows PowerShell** with **Run as administrator** and **** run the following cmdlet:
+2. Open **Windows PowerShell** with **Run as administrator** and run the following cmdlet:
 
     ```powershell
      PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true  
@@ -273,13 +273,13 @@ The Virtual Machine Management Service disabled the listener for Virtual Machine
 
 **Resolution**
 
-Open a **Command Prompt** with **Run as administrator**  and run the following cmdlet:
+Open a **Command Prompt** with **Run as administrator** and run the following cmdlet:
 
 ```console
 gpupdate /force
 ```
 
-If the computer policy couldn't be updated successfully. You receive this error message:
+If the computer policy couldn't be updated successfully, you receive this error message:
 
 The processing of Group Policy failed. Windows couldn't apply the registry-based policy settings for the Group Policy object LocalGPO. Group Policy settings won't be resolved until this event is resolved. View the event details for more information on the file name and path that caused the failure.
 
@@ -345,7 +345,7 @@ Here's how to fix this issue:
 2. Set Constrained Delegation for both Hyper-V hosts. Here's how to do this:
       1. Open **Active Directory Users and Computers**, find the Hyper-V host computer account, open the **Properties** dialog, and move to the **Delegation** tab.
       2. Select the **Trust this computer for delegation to specified services only** and **Use any authentication protocol** options.
-      3. Click **Add** and **** select the computer account of another Hyper-V host.
+      3. Click **Add** and select the computer account of another Hyper-V host.
       4. Add **cifs** (required to migrate storage) and **Microsoft Virtual System Migration Service** (required to migrate virtual machine).
 
 Wait up to 15 minutes for Keberos tickets to time out or run the **KLIST PURGE -li 0x3e7** cmdlet.  

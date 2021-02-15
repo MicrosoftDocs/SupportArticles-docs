@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, sajijohn, markgray
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # Unable to create DSN using Group Policy Preferences, unspecified error 0x80004005
 
@@ -30,9 +30,9 @@ Description: The computer \<Preference Name> preference item in the \<GPO Name>.
 
 If client-side debug logging is enabled, the following error messages may be recorded in the debug log:
 
-> 2009-08-19 14:49:25.106 [pid=0x70,tid=0x91c] Invalid keyword-value pairs [ hr = 0x80004005 "Unspecified error" ]  
-2009-08-19 14:49:25.106 [pid=0x70,tid=0x91c] createDsn [ hr = 0x80004005 "Unspecified error" ]  
-2009-08-19 14:49:25.106 [pid=0x70,tid=0x91c] Properties handled. [ hr = 0x80004005 "Unspecified error" ]
+> *\<DateTime>* [pid=0x70,tid=0x91c] Invalid keyword-value pairs [ hr = 0x80004005 "Unspecified error" ]  
+*\<DateTime>* [pid=0x70,tid=0x91c] createDsn [ hr = 0x80004005 "Unspecified error" ]  
+*\<DateTime>* [pid=0x70,tid=0x91c] Properties handled. [ hr = 0x80004005 "Unspecified error" ]
 
 To enable GPP debug logging, enable the relevant policy setting below:
 
@@ -65,11 +65,3 @@ For more information about the valid SQL Server-specific keyword/value pairs for
 
 When configuring SQL connections, the only way to make the connection transparent for the user is to set **Trusted_Connection** to **Yes**. Otherwise, the user will be prompted for credentials when trying to connect.
 You must also ensure that attributes not listed in the above MSDN link, including username and password, are left blank (not configured) within the policy when configuring SQL connections.
-
-## More information
-
-For more information about using ODBC with Microsoft SQL Server, visit the following Microsoft Web sites:
-
-[Using ODBC with Microsoft SQL Server](/previous-versions/ms811006(v=msdn.10))
-[123008](https://support.microsoft.com/kb/123008)  How To Set Up ODBC Data Sources When Distributing Apps
-[229929](https://support.microsoft.com/kb/229929)  INFO: Registry Entries and Keywords for SQL Server Connection Strings

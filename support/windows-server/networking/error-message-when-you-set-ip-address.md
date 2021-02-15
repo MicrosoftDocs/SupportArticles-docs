@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca, TERRYBA
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: networking
 ---
 # Error message when you try to set an IP address on a network adapter
 
@@ -33,7 +33,7 @@ If you select **Yes**, you see the TCP/IP properties. Then, you can change the I
 
 > [!NOTE]
 > On a computer that is running Windows Server 2008, you receive the following error message:
-
+>
 > Cannot rename this connection. A connection with the name you specified already exists. Specify a different name.
 
 ## Cause

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika，scottmca, partset, pachary
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Information about power management setting on a network adapter
 
@@ -22,13 +22,17 @@ _Original KB number:_ &nbsp; 2740020
 
 ## Summary
 
-The enhancements made to Windows 7 for managing power settings for network adapters greatly reduces the number of spurious wakes, allowing computers to sleep for longer periods of time when idle. Furthermore, you can configure the power management settings to meet the needs of your users through device properties, standard registry settings.
+The enhancements made to Windows 7 for managing power settings for network adapters greatly reduces the number of spurious wakes. It allows computers to sleep for longer periods of time when idle. Furthermore, you can configure the power management settings to meet the needs of your users through device properties, standard registry settings.
 
-When deploying Windows 7 or Windows Server 2008 R2, you may want to disable the **Allow the computer to turn off this device to save power** network adapter power management setting on some computers.
+When deploying Windows 7 or Windows Server 2008 R2, you may want to disable the following network adapter power management setting on some computers:
+
+**Allow the computer to turn off this device to save power**
 
 ## More information
 
-The **Allow the computer to turn off this device to save power** setting controls how the network card is handled when the computer enters sleep and can be used if a driver misrepresents how it handles sleep states. Windows never turns off the network card due to inactivity. When this setting is checked(enabled), Windows puts the network card to sleep and when it resumes it puts it back to D0. When this setting is not checked(disabled), Windows completely halts the device and on resume reinitializes it. This setting is useful if a network card driver says it supports going to different sleep states and back to D0 but it ultimately doesn't support this functionality.
+The **Allow the computer to turn off this device to save power** setting controls how the network card is handled when the computer enters sleep. This setting can be used if a driver misrepresents how it handles sleep states.
+
+Windows never turns off the network card due to inactivity. When this setting is checked(enabled), Windows puts the network card to sleep and when it resumes it puts it back to D0. When this setting isn't checked(disabled), Windows completely halts the device and on resume reinitializes it. This setting is useful if a network card driver says it supports going to different sleep states and back to D0 but it ultimately doesn't support this functionality.
 
 You can use Device Manager to change the power management settings for a network adapter. To disable this setting in **Device Manager**, expand **Network Adapters**, right-click the adapter, select **Properties**, select the **Power Management** tab, and then clear the **Allow the computer to turn off this device to save power** check box.
 
@@ -40,14 +44,14 @@ In Windows 7 or Windows Server 2008 R2, you have two additional check boxes on t
 > [!NOTE]
 > For above mentioned settings to work, you may also have to enable BIOS settings to enable WOL. The specific BIOS settings depend on the manufacturer of the computer.
 
-However, with some Windows 7 or Windows Server 2008 R2 installations, you may want to use the registry to disable the **Allow the computer to turn off this device to save power** network adapter power management setting or to configure the wake options described above.
+However, with some Windows 7 or Windows Server 2008 R2 installations, you may want to use the registry to disable the **Allow the computer to turn off this device to save power** network adapter power management setting. Or you may want to use the registry to configure the wake options described above.
 
 ## How to use Registry Editor to disable network adapter power management on a single computer
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
-To use Registry Editor to disable the **Allow the computer to turn off this device to save power** network adapter setting for a single computer, follow these steps:
+To disable the network adapter power management setting for a single computer, follow these steps:
 
 1. Select **Start**, select **Run**, type *regedit* in the **Open** box, and then select **OK**.
 2. Locate and then select the following registry subkey:  
@@ -75,7 +79,7 @@ You have three options for the power management properties of the Network Card:
 
 The different possible combinations that exist along with their DWORD values (in decimal and hex) are:
 
-- Option 1 and option 2 are checked, Option 3 is unchecked: This is default and hence its value is **0**.
+- Option 1 and option 2 are checked, Option 3 is unchecked: This combination is default and hence its value is **0**.
 - Option 1, option 2, and option 3 are all checked: The value becomes **0x100 (256)**.
 - Only option 1 is checked: The value becomes **0x110 (272)**.
 - Option 1 is unchecked (Note that option 2 and option 3 will be greyed out as a result): The value becomes **0x118 (280)**.
@@ -83,15 +87,15 @@ The different possible combinations that exist along with their DWORD values (in
 A conflict happens for the DWORD value for the last step where Option 1 is only checked, if the following steps are done exactly as mentioned below:
 
 - If you check all the boxes, then the value is **256 (0x100)**.
-- If you uncheck the box 1, which will grey out the other two, the value becomes **280 (0x118)**.
+- If you uncheck the box 1, the other two will be greyed out, and the value becomes **280 (0x118)**.
 - If you check all the boxes except, the third one, PNPCapabilities value becomes **0**.
 - If step 2 is repeated, the value becomes **24 (0x18)**.
 
 Now, the values are different for the same setting because the way it has been achieved.
 
-For deployment purpose, to keep the value for **Allow the Computer to turn off this device to save power** cleared, one needs to use the value **24 (0x18)**. Reason being, by default the option 1 and 2 are checked, which is same as DWORD value **0** of this key (even though the key does not exist in the registry by default). Hence, creating this key with a value **24 (0x18)** in the deployment script/build process will inject this entry in the registry, which in turn should uncheck the first box during server startup.
+For deployment purpose, to keep option 1 cleared, one needs to use the value **24 (0x18)**. By default, option 1 and 2 are checked. It's the same as DWORD value **0** of this key, even though the key doesn't exist in the registry by default. Hence, creating this key with a value **24 (0x18)** in the deployment script/build process will inject this entry in the registry, which in turn should uncheck the first box during server startup.
 
-In the same way, if you want to keep the **Allow the Computer to turn off this device to save power** checked and the Option 2 and 3 cleared, the required value would be **10 (0x16)**.
+In the same way, if you want to keep option 1 checked while option 2 and 3 cleared, the required value would be **10 (0x16)**.
 
 > [!NOTE]
 > This is entirely by design.

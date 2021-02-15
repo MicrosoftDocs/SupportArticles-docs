@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: eldenc, kaushika
 ms.prod-support-area-path: Cluster service fails to start
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Cluster service startup options
 
@@ -99,8 +99,6 @@ When the Cluster service is running correctly, press CTRL+C to stop the service.
 
 > [!NOTE]
 > You can use the ClusterLogLevel environment variable to control the output level when you use the debug switch.
-
-For more information, see [How to enable cluster logging in Microsoft Cluster Server](https://support.microsoft.com/help/168801).
 
 ### FixQuorum
 

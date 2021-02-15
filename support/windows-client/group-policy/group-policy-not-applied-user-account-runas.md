@@ -1,6 +1,6 @@
 ---
 title: Group Policy is not applied to a user account for RunAs.exe or "Run as different user" 
-description: Provides some information for the issue that group Policy is not applied to a user account for RunAs.exe or "Run as different user"
+description: Provides some information for the issue where group Policy is not applied to a user account for RunAs.exe or "Run as different user"
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan 
@@ -11,11 +11,11 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
-ms.technology: GroupPolicy
+ms.technology: windows-client-group-policy
 ---
 # Group Policy is not applied to a user account for RunAs.exe or "Run as different user"
 
-This article provides some information for the issue that group Policy is not applied to a user account for RunAs.exe or "Run as different user".
+This article provides some information for the issue where Group Policy is not applied to a user account for RunAs.exe or "Run as different user".
 
 _Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4569309
@@ -32,23 +32,24 @@ This behavior is by design.
 
 ## More information
 
->[!Important]  
-Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.  
+> [!Important]  
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.  
 
 Group Policy settings are not intended to apply to the alternate user account that is specified by Runas.exe or **Run as different user**.  
 
-Runas.exe can load the user profile that is associated with the alternate account. If a user previously signed in to Windows on that workstation by using that account, the associated user profile might contain registry keys and values that were set by Group Policy processing events at that time. However, this behavior depends on whether the user includes the **/noprofile** switch in the command. If the user starts a process or application by using **runas /noprofile**, and then specifies the alternate account, Windows does not load the alternate user profile. Therefore, the alternate user profile does not provide a reliable way to apply Group Policy settings.  
+Runas.exe can load the user profile that is associated with the alternate account. If a user previously signed in to Windows on that workstation by using that account, the associated user profile might contain registry keys and values that were set by Group Policy processing events at that time. However, this behavior depends on whether the user includes the `/noprofile` switch in the command. If the user starts a process or application by using `runas /noprofile`, and then specifies the alternate account, Windows does not load the alternate user profile. Therefore, the alternate user profile does not provide a reliable way to apply Group Policy settings.  
 
-If you want to prevent users from using Runas.exe or **Run as different user**, follow these steps.  
->[!Important]
-After you apply these settings, any functionality that depends on the "Run as" feature does not work.
+If you want to prevent users from using Runas.exe or **Run as different user**, follow these steps.
+
+> [!Important]
+> After you apply these settings, any functionality that depends on the "Run as" feature does not work.
 
 1. Disable the **Secondary Logon** service (seclogon.exe).
 2. Use Software Restriction Policies or AppLocker to prevent access to the Runas.exe binary file.
-3. Use Group Policy to remove the **Run as different user** menu item. The Group Policy Object (GPO) changes to **User Configuration\Administrative Templates\Start Menu and Taskbar \Show "Run as different user" command on Start**.
-4. In the Windows registry, set the following entry:  
-Subkey: **HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\**  
-Entry name: **HideRunAsVerb**  
-Type: **DWORD**  
-Value: **1**  
+3. Use Group Policy to remove the **Run as different user** menu item. The Group Policy Object (GPO) changes to User Configuration\\Administrative Templates\\Start Menu and Taskbar\\Show "Run as different user" command on Start.
+4. In the Windows registry, set the following entry:
 
+    - Subkey: `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\`
+    - Entry name: HideRunAsVerb
+    - Type: DWORD
+    - Value: 1

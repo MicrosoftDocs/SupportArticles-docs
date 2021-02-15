@@ -11,13 +11,13 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory 
+ms.technology: windows-server-active-directory 
 ---
 # Active Directory replication error 1722: The RPC server is unavailable
 
 This article helps fix the error 1722 of Active Directory replication.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, WIndows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2102154
 
 ## Symptoms
@@ -93,7 +93,7 @@ This article describes the symptoms, cause, and resolution for resolving Active 
 
     > The following error occurred during the attempt to synchronize naming context \<DNS name of directory partition> from domain controller \<source Dc host name> to domain controller \<destination DC hostname>:The RPC server is unavailable. This operation will not continue. This condition may be caused by a DNS lookup problem. For information about troubleshooting common DNS lookup problems, see the following Microsoft Web site: [DNS Lookup Problem](https://go.microsoft.com/fwlink/?LinkId=5171)
 
-1. NTDS KCC, NTDS General or Microsoft-Windows-ActiveDirectory_DomainService events with the 1722 status are logged in the directory service event log.
+1. NTDS Knowledge Consistency Checker (KCC), NTDS General, or Microsoft-Windows-ActiveDirectory_DomainService events with the 1722 status are logged in the directory service event log.
 
     Active Directory events that commonly cite the 1722 status include but are not limited to:
 
@@ -126,7 +126,7 @@ RPC error 1722 / 0x6ba / RPC_S_SERVER_UNAVAILABLE is logged when a lower layer p
 
 Basic troubleshooting steps to identify the problem.
 
-### Verify the startup value and service status are correct for RPC, RPC Locator and Kerberos Key Distribution Center
+### Verify the startup value and service status are correct for RPC, RPC Locator, and Kerberos Key Distribution Center
 
 Verify the startup value and service status are correct for the Remote Procedure Call (RPC), Remote Procedure Call (RPC) Locator and Kerberos Key Distribution Center.
 
@@ -135,11 +135,11 @@ The OS version will determine the correct values for the source and destination 
 |Service Name|Windows 2000|Windows 2003 /R2|Windows 2008|Windows 2008 R2|
 |---|---|---|---|---|
 |Remote Procedure Call (RPC)|Started / Automatic|Started / Automatic|Started / Automatic|Started / Automatic|
-|Remote Procedure Call (RPC) Locator|Started / Automatic (Domain Controllers)Not  started / Manual(Member Servers)|Not  started / Manual|Not  started / Manual|Not  started / Manual|
-|Kerberos Key Distribution Center (KDC)|Started / Automatic (Domain Controllers)Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)Not started / Disabled(Member Servers) |
+|Remote Procedure Call (RPC) Locator|Started / Automatic (Domain Controllers)<br/> <br/>Not  started / Manual(Member Servers)|Not  started / Manual|Not  started / Manual|Not  started / Manual|
+|Kerberos Key Distribution Center (KDC)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers) |
 ||||||
 
-If you make any changes to match the settings above, reboot the machine and verify both the startup value and service status match the values documented in the table above.
+If you make any changes to match the settings above, restart the machine. Verify both the startup value and service status match the values documented in the table above.
 
 ### Verify the ClientProtocols key exists under HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc, and that it contains the correct default protocols
 
@@ -151,24 +151,24 @@ If you make any changes to match the settings above, reboot the machine and veri
 | ncacn_ip_udp| REG_SZ| rpcrt4.dll|
 ||||
 
-If the **ClientProtocols** key or any of the 4 default values are missing, import the key from a known good server.
+If the **ClientProtocols** key or any of the four default values are missing, import the key from a known good server.
 
 ### Verify DNS is working
 
-DNS lookup failures are the cause of a large amount of 1722 RPC errors when it comes to replication.
+DNS lookup failures are the cause of a large number of 1722 RPC errors when it comes to replication.
 
 There are a few tools to use to help identify DNS errors:
 
 - `DCDIAG /TEST:DNS /V /E /F:<filename.log>`  
 
-    The `DCDIAG /TEST:DNS` command can validate DNS health of Windows 2000 Server (SP3 or later), Windows Server 2003 and Windows Server 2008 family domain controllers. This test was first introduced with Windows Server 2003 Service Pack 1.
+    The `DCDIAG /TEST:DNS` command can validate DNS health of Windows 2000 Server (SP3 or later), Windows Server 2003, and Windows Server 2008 family domain controllers. This test was first introduced with Windows Server 2003 Service Pack 1.
 
     There are seven test groups for this command.
 
   - Authentication (Auth)
-  - Basic (Basc)
+  - Basic (`Basc`)
   - Records registration (RReg)
-  - Dynamic update (Dyn)
+  - Dynamic update (`Dyn`)
   - Delegations (Del)
   - Forwarders/Root hints (Forw)
 
@@ -259,11 +259,11 @@ There are a few tools to use to help identify DNS errors:
 
 - `ping -a <IP_of_problem_server>`
 
-    This is a simple quick test to validate the host record for a domain controller is resolving to the correct machine.  
+    It's a simple quick test to validate the host record for a domain controller is resolving to the correct machine.  
 
 - `dnslint /s IP /ad IP`
 
-    DNSLint is a Windows utility that helps you to diagnose common DNS name resolution issues. The output for this is an htm file with much information including:
+    DNSLint is a Windows utility that helps you to diagnose common DNS name resolution issues. The output is an htm file with much information including:
 
     **DNS server: localhost**
 
@@ -296,7 +296,7 @@ There are a few tools to use to help identify DNS errors:
 
     For more information, see [Description of the DNSLint utility](https://support.microsoft.com/kb/321045).
 
-### Verify network ports are not blocked by a firewall or third party application listening on the required ports
+### Verify network ports are not blocked by a firewall or third-party application listening on the required ports
 
 The endpoint mapper (listening on port 135) tells the client which randomly assigned port a service (FRS, AD replication, MAPI, and so on) is listening on.
 
@@ -325,7 +325,7 @@ Example syntax:
 
 A graphical version of portqry, called Portqryui can be found at [PortQryUI - User Interface for the PortQry Command Line Port Scanner](https://www.microsoft.com/download/details.aspx?id=24009).
 
-If the Dynamic Port range has ports being blocked, please use the below links to configure a port range that is manageable for the customer.
+If the Dynamic Port range has ports being blocked, use the below links to configure a port range that is manageable for the customer.
 
 Additional important links for configuration and working with Firewalls and Domain Controllers:
 
@@ -369,7 +369,7 @@ The settings can be found under the following registry keys:
 
 Additional Troubleshooting:
 
-If the above don't provide a solution to the 1722, then you can use the following Diagnostic logging to gather more information:
+If the above don't provide a solution to the 1722, use the following Diagnostic logging to gather more information:
 
 > Windows Server 2003 SP2 computers logs extended RPC Server info in NTDS Replication events 1960, 1961, 1962 and 1963.  
 > Crank up NTDS Diagnostic logging

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, CCLAY, 
 ms.prod-support-area-path: User profiles
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-server-user-profiles
 ---
 # How to dynamically create security-enhanced redirected folders or home folders  
 
@@ -70,9 +70,9 @@ But there's no proof that this has happened. The earlier versions of the article
 By the end of May 2017, all supported operating systems converted the ACE to:  
 *\<Folder-User> - Full Control (Apply onto: This Object only)*
 
-But this doesn't affect the daily operations of the folders for the users, it makes a difference when the administrator has to work on the contents of the home folders or redirected folders.
+But this doesn't affect the daily operations of the folders for the users. It makes a difference when the administrator has to work on the contents of the home folders or redirected folders.
 
-If you want to make sure the user to get the inheritable full control on all child objects, you've to:
+If you want to make sure that the user gets the inheritable full control on all child objects, you've to:
 
 1. Create the folder matching for the users samaccountname by yourself.
 2. Set the permissions that are needed for the folder, omit the Everyone ACEs above, and make sure that you have the ACE:

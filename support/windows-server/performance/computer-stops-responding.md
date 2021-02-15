@@ -1,6 +1,6 @@
 ---
-title: The computer stops responding
-description: Describes how to resolve an issue where the computer stops responding or takes longer than you expect.
+title: The computer stops responding or the Applying computer settings screen appears for longer than you expect
+description: Describes how to resolve an issue where the computer stops responding or the Applying computer settings screen appears for longer than you expect.
 ms.date: 09/14/2020
 author: Deland-Han 
 ms.author: delhan
@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, cbutch, v-jomcc
 ms.prod-support-area-path: System Hang
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
-# When you restart a computer, the computer stops responding, or the Applying computer settings screen appears for longer than you expect
+# When you restart a computer, the computer stops responding, or the "Applying computer settings" screen appears for longer than you expect
 
-This article provides a solution to an issue where the computer stops responding or takes longer than you expect.
+This article provides a solution to an issue where the computer stops responding or the "Applying computer settings" screen appears for longer than you expect.
 
 _Original product version:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 905716
@@ -34,16 +34,19 @@ When you restart a Windows Server 2003-based computer or a Windows 2000 Server-b
 - The server responds slowly to graphical user interface (GUI) functions.
 - When you try to open Disk Management, you receive one of the following messages:
 
-    > Waiting to connect  
+    > Waiting to connect
+  
     > Connecting to Logical Disk Manager service  
-    > Disk Management never opens.
+    Disk Management never opens.
 - When applying security patches, whether from Windows Update or manually, the system stops at "Inspecting your configuration."
 
 ## Cause
 
-This problem occurs because of a problem with version 6. *x* of APC PowerChute Business Edition Software.
+This problem occurs because of a problem with version 6.*x* of APC PowerChute Business Edition Software.
 
-APC has issued the following official statement about this issue: The APC 6.x software uses Sun Microsystems Java Cryptography Extension(JCE) 1.2.1 Package. The digital certificate that was used to sign the JCE 1.2.1 jar files expired on July 27, 2005. Because of this, the system causes the above detailed symptoms.
+APC has issued the following official statement about this issue:
+
+The APC 6.x software uses Sun Microsystems Java Cryptography Extension(JCE) 1.2.1 Package. The digital certificate that was used to sign the JCE 1.2.1 jar files expired on July 27, 2005. Because of this, the system causes the above detailed symptoms.
 
 ## Resolution
 
@@ -66,12 +69,11 @@ To resolve this problem, follow these steps:
     4. In the right pane, right-click **APCPBEServer**, and then click **Properties**.
     5. In the **Startup type** list, click to select **Disabled**, and then click **OK**.
 4. Restart the computer.
-5. Install the latest version of the APC PowerChute software. For more information about how to obtain an update for the PowerChute Business Edition version 6. x software, visit the following APC Web site:  
-    [http://www.apc.com](http://www.apc.com/)
+5. Install the latest version of the APC PowerChute software. For more information about how to obtain an update for the PowerChute Business Edition version 6. x software, visit the [APC Web site](https://www.apc.com/).
 
 ## Workaround
 
-To work around this problem, re-register Msiexec.exe. To do this, click **Start**, click **Run**, type msiexec /regserver, and then click OK.
+To work around this problem, re-register Msiexec.exe. To do this, click **Start**, click **Run**, type `msiexec /regserver`, and then click **OK**.
 
 ## More information
 

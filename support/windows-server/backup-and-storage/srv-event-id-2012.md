@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, WalterE
 ms.prod-support-area-path: Configuring and using Backup software
-ms.technology: BackupStorage 
+ms.technology: windows-server-backup-and-storage 
 ---
 # Reason for System Event Log srv Event ID: 2012 - While transmitting or receiving data, the server encountered a network error
 
@@ -32,7 +32,7 @@ In this scenario, you see multiple events with Source Srv ID 2012 in the system 
 
 > Log Name: System  
 Source: srv  
-Date: 07.08.2013 10:23:04  
+Date: *\<DateTime>*  
 Event ID: 2012  
 Task Category: None  
 Level: Warning  

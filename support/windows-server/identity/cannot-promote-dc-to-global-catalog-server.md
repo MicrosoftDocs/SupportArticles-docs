@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory topology (sites, subnets, and connection objects)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # You cannot promote a Windows Server domain controller to be a global catalog server
 
@@ -55,8 +55,8 @@ In the following example, object 5070 references object 5072. However, object 50
 
 > 5070 4111 1 1459 true 3 DOMAIN DOMAIN 5072 196619 - 6f73dba6-33e1-41e5-9330-c09a60a37942 4  
  objectclass: 196619, 65536  
-5071 2 2 - false 2004-10-19 22:19:37 - 1376281 com com - - - - -  
-5072 5071 5 - false 2004-10-19 22:19:37 - 1376281 domain domain  
+5071 2 2 - false *\<DateTime>* - 1376281 com com - - - - -  
+5072 5071 5 - false *\<DateTime>* - 1376281 domain domain  
 
 ## Resolution
 
@@ -92,11 +92,11 @@ The event description states that the computer is identified as a global catalog
 3. Verify that the **GC** flag is present on the server.  
 
 For example, when you type the command, you receive a message that is similar to the following if the **GC** flag is present:  
-> DC: \\\Server_Name
+> DC: \\\\Server_Name
 >
-> Address: \\\IP Address
+> Address: \\\\IP Address
 >
-> Dom Guid: 47bc7d87-309e-4a2a-bac3-c9866a66bab8
+> Dom Guid: *\<GUID>*
 >
 > Dom Name: Domain_name
 >

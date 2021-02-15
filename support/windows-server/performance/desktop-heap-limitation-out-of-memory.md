@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: System Hang
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
-# You may receive an error (Out of Memory) because of the desktop heap limitation
+# You may receive an error "Out of Memory" because of the desktop heap limitation
 
-This article helps fix an error (Out of Memory) that occurs when you open many application windows in Windows.
+This article helps fix an error "Out of Memory" that occurs when you open many application windows in Windows.
 
 _Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 947246
@@ -82,6 +82,4 @@ Check whether the problem is fixed. If the problem is fixed, you are finished wi
 
 ## References
 
-- ["Out of Memory" error message appears when you have a large number of programs running](https://support.microsoft.com/help/126962)
-
-- [Desktop Heap Overview](/archive/blogs/kocoreinternals/desktop-heap-overview)
+[Desktop Heap Overview](/archive/blogs/kocoreinternals/desktop-heap-overview)

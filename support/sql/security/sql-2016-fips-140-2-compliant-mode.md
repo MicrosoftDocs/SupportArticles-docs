@@ -39,7 +39,7 @@ SQL Server 2016 can be configured and run in a manner that is compliant with FIP
 
 ## Which applications can be FIPS 140-2 compliant?
 
-All applications that perform encryption or hashing and that run on a certified version of Windows can be compliant by using only the certified instances of the approved algorithms and by complying with the key-generation and key-management requirements. This requires either using the Windows function for key generation and key management or complying with key-generation and key-management requirements within the application. Areas in a FIPS-compliant application may exist where noncompliant algorithms or processes are enabled. For example, some internal processes that stay in the system and some external data that's slated to be additionally encrypted by a certified algorithm instance are allowed.
+All applications that perform encryption or hashing and that run on a certified version of Windows can be compliant by using only the certified instances of the approved algorithms and by complying with the key-generation and key-management requirements. This requires either using the Windows function for key generation and key management or complying with key-generation and key-management requirements within the application. Areas in a FIPS-compliant application may exist where noncompliant algorithms or processes are enabled. For example, some internal processes that stay in the system and some external data that's slated to be additionally encrypted by a certified algorithm instance are allowed.
 
 ## Is SQL Server 2016 always FIPS 140-2 compliant?
 
@@ -49,7 +49,7 @@ No. SQL Server 2016 can be FIPS 140-2 compliant because it can be configured and
 
 ### Operating system requirements
 
-You must install SQL Server 2016 on a host that's running one of the following operating systems:
+You must install SQL Server 2016 on a host that's running one of the following operating systems:
 
 - Windows Server 2012
 - Windows Server 2012 R2
@@ -103,12 +103,12 @@ You can verify that the server is running in FIPS mode by looking for these mess
 
 - The selection of encryption for SSIS (UseEncryption=True) will generate an error that states that the available encryption is incompatible with FIPS compliance and are not allowed. In other words, no encryption of the message process is performed.
 
-- When you use encryption together with legacy DTS, encryption isn't compliant with FIPS 140-2. For DTS, FIPS mode in Windows isn't checked. Therefore, it's the responsibility of the user to select no encryption to remain compliant.
+- When you use encryption together with legacy DTS, encryption isn't compliant with FIPS 140-2. For DTS, FIPS mode in Windows isn't checked. Therefore, it's the responsibility of the user to select no encryption to remain compliant.
 
 - Because most SQL Server 2016 encryption and hashing processes are already FIPS 140-2 compliant, executing at full compliance (that is, with FIPS mode in Windows turned on) will have little or no effect on the use or on the performance of the application.
 
 ## Where can I learn more about FIPS 140-2?
 
-For more information about FIPS 140-2 and how to download it, go to the [NIST website](https://csrc.nist.gov/groups/STM/cmvp/standards.html).
+For more information about FIPS 140-2, see [CMVP FIPS 140-2 Standards and Documents](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/fips-140-2).
 
 Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft doesn't guarantee the accuracy of this third-party contact information.

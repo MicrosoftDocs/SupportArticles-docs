@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory Federation Services (AD FS)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Considerations for disabling and replacing TLS 1.0 in AD FS
 
-This article provides guidance and considerations for disabling and replacing TLS 1.0 in Active Directory Federation Services (AD FS.
+This article provides guidance and considerations for disabling and replacing TLS 1.0 in Active Directory Federation Services (AD FS).
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3194197
@@ -198,11 +198,11 @@ PipelineIterationInfo : {0, 1}
 
 When we analyze the network traces, we don't see any ClientHello. Also, the client itself (ADFS) is closing the connection (TCP FIN) when we would expect it to send the ClientHello:
 
-> 3794 16:22:31 31/05/2016 4.0967400 (4588) adfs1 nexus.microsoftonline-p.com.nsatc.net TCP 8192 TCP: [Bad CheckSum]Flags=CE....S., SrcPort=56156, DstPort=HTTPS(443)  
-4013 16:22:32 31/05/2016 4.1983176 (0) nexus.microsoftonline-p.com.nsatc.net adfs1 TCP 2097152 TCP:Flags=...A..S., SrcPort=HTTPS(443), DstPort=56156  
-4021 16:22:32 31/05/2016 4.1983388 (0) adfs1 nexus.microsoftonline-p.com.nsatc.net TCP 131328 TCP: [Bad CheckSum]Flags=...A...., SrcPort=56156, DstPort=HTTPS(443)  
-4029 16:22:32 31/05/2016 4.1992083 (4588) adfs1 nexus.microsoftonline-p.com.nsatc.net TCP 131328 TCP: [Bad CheckSum]Flags=...A...F, SrcPort=56156, DstPort=HTTPS(443)  
-4057 16:22:32 31/05/2016 4.2999711 (0) nexus.microsoftonline-p.com.nsatc.net adfs1 TCP 0 TCP:Flags=...A.R.., SrcPort=HTTPS(443), DstPort=56156
+> 3794 *\<DateTime>* 4.0967400 (4588) adfs1 nexus.microsoftonline-p.com.nsatc.net TCP 8192 TCP: [Bad CheckSum]Flags=CE....S., SrcPort=56156, DstPort=HTTPS(443)  
+4013 *\<DateTime>* 4.1983176 (0) nexus.microsoftonline-p.com.nsatc.net adfs1 TCP 2097152 TCP:Flags=...A..S., SrcPort=HTTPS(443), DstPort=56156  
+4021 *\<DateTime>* 4.1983388 (0) adfs1 nexus.microsoftonline-p.com.nsatc.net TCP 131328 TCP: [Bad CheckSum]Flags=...A...., SrcPort=56156, DstPort=HTTPS(443)  
+4029 *\<DateTime>* 4.1992083 (4588) adfs1 nexus.microsoftonline-p.com.nsatc.net TCP 131328 TCP: [Bad CheckSum]Flags=...A...F, SrcPort=56156, DstPort=HTTPS(443)  
+4057 *\<DateTime>* 4.2999711 (0) nexus.microsoftonline-p.com.nsatc.net adfs1 TCP 0 TCP:Flags=...A.R.., SrcPort=HTTPS(443), DstPort=56156
 
 The reason for this is that the SChannel registry keys were created. These remove support for SSL 3.0 or TLS 1.0 as a client.
 
@@ -244,24 +244,24 @@ Retry-After: 30
 Server: Microsoft-IIS/8.0  
 request-id: 33c23dc6-2359-44a5-a819-03f3f8e85aae  
 X-CalculatedBETarget: db4pr04mb394.eurprd04.prod.outlook.com  
-X-AutoDiscovery-Error: LiveIdBasicAuth:FederatedStsUnreachable:\<X-forwarded-for:179.159.146.135>\<FederatedSTSFailure>System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send.;  
+X-AutoDiscovery-Error: LiveIdBasicAuth:FederatedStsUnreachable:\<X-forwarded-for:*\<IP Address>*>\<FederatedSTSFailure>System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send.;  
 X-DiagInfo: DB4PR04MB394  
 X-BEServer: DB4PR04MB394  
 X-AspNet-Version: 4.0.30319  
-Set-Cookie: X-BackEndCookie2=; expires=Tue, 27-May-1986 11:30:37 GMT; path=/Autodiscover; secure; HttpOnly  
-Set-Cookie: X-BackEndCookie=; expires=Tue, 27-May-1986 11:30:37 GMT; path=/Autodiscover; secure; HttpOnly  
+Set-Cookie: X-BackEndCookie2=; expires=*\<DateTime>*; path=/Autodiscover; secure; HttpOnly  
+Set-Cookie: X-BackEndCookie=; expires=*\<DateTime>*; path=/Autodiscover; secure; HttpOnly  
 X-Powered-By: ASP.NET  
 X-FEServer: AM3PR05CA0056  
-Date: Fri, 27 May 2016 11:30:38 GMT  
+Date: *\<DateTime>*  
 Content-Length: 0
 
 Analyzing network traces in the WAP server, we can see several connections coming from our cloud, as follows. WAP terminates (TCP RST) these connections soon after it receives the Client Hello.
 
-> 3282 13:30:37 27/05/2016 10.8024332 (0) 132.245.225.68 62047 (0xF25F) 10.10.1.5 443 (0x1BB) TCP 52 (0x34) 32 8192 TCP:Flags=CE....S., SrcPort=62047, DstPort=HTTPS(443), PayloadLen=0, Seq=1681718623, Ack=0, Win=8192 ( Negotiating scale factor 0x8 ) = 8192  
-3285 13:30:37 27/05/2016 10.8025263 (0) 10.10.1.5 443 (0x1BB) 132.245.225.68 62047 (0xF25F) TCP 52 (0x34) 32 8192 TCP: [Bad CheckSum]Flags=.E.A..S., SrcPort=HTTPS(443), DstPort=62047, PayloadLen=0, Seq=3949992650, Ack=1681718624, Win=8192 ( Negotiated scale factor 0x8 ) = 8192  
-3286 13:30:37 27/05/2016 10.8239153 (0) 132.245.225.68 62047 (0xF25F) 10.10.1.5 443 (0x1BB) TCP 40 (0x28) 20 517 TCP:Flags=...A...., SrcPort=62047, DstPort=HTTPS(443), PayloadLen=0, Seq=1681718624, Ack=3949992651, Win=517  
-3293 13:30:37 27/05/2016 10.8244384 (0) 132.245.225.68 62047 (0xF25F) 10.10.1.5 443 (0x1BB) TLS 156 (0x9C) 136 517 TLS:TLS Rec Layer-1 HandShake: Client Hello.  
-3300 13:30:37 27/05/2016 10.8246757 (4) 10.10.1.5 443 (0x1BB) 132.245.225.68 62047 (0xF25F) TCP 40 (0x28) 20 0 TCP: [Bad CheckSum]Flags=...A.R.., SrcPort=HTTPS(443), DstPort=62047, PayloadLen=0, Seq=3949992651, Ack=1681718740, Win=0 (scale factor 0x0) = 0
+> 3282 *\<DateTime>* 10.8024332 (0) 132.245.225.68 62047 (0xF25F) 10.10.1.5 443 (0x1BB) TCP 52 (0x34) 32 8192 TCP:Flags=CE....S., SrcPort=62047, DstPort=HTTPS(443), PayloadLen=0, Seq=1681718623, Ack=0, Win=8192 ( Negotiating scale factor 0x8 ) = 8192  
+3285 *\<DateTime>* 10.8025263 (0) 10.10.1.5 443 (0x1BB) 132.245.225.68 62047 (0xF25F) TCP 52 (0x34) 32 8192 TCP: [Bad CheckSum]Flags=.E.A..S., SrcPort=HTTPS(443), DstPort=62047, PayloadLen=0, Seq=3949992650, Ack=1681718624, Win=8192 ( Negotiated scale factor 0x8 ) = 8192  
+3286 *\<DateTime>* 10.8239153 (0) 132.245.225.68 62047 (0xF25F) 10.10.1.5 443 (0x1BB) TCP 40 (0x28) 20 517 TCP:Flags=...A...., SrcPort=62047, DstPort=HTTPS(443), PayloadLen=0, Seq=1681718624, Ack=3949992651, Win=517  
+3293 *\<DateTime>* 10.8244384 (0) 132.245.225.68 62047 (0xF25F) 10.10.1.5 443 (0x1BB) TLS 156 (0x9C) 136 517 TLS:TLS Rec Layer-1 HandShake: Client Hello.  
+3300 *\<DateTime>* 10.8246757 (4) 10.10.1.5 443 (0x1BB) 132.245.225.68 62047 (0xF25F) TCP 40 (0x28) 20 0 TCP: [Bad CheckSum]Flags=...A.R.., SrcPort=HTTPS(443), DstPort=62047, PayloadLen=0, Seq=3949992651, Ack=1681718740, Win=0 (scale factor 0x0) = 0
 
 We also see that Client Hello is using TLS 1.0:
 
@@ -269,7 +269,7 @@ We also see that Client Hello is using TLS 1.0:
 \+ NetEvent:  
 \+ MicrosoftWindowsNDISPacketCapture: Packet Fragment (170 (0xAA) bytes)  
 \+ Ethernet: Etype = Internet IP (IPv4),DestinationAddress:[00-0D-3A-24-43-98],SourceAddress:[12-34-56-78-9A-BC]  
-\+ Ipv4: Src = 132.245.225.68, Dest = 10.10.1.5, Next Protocol = TCP, Packet ID = 31775, Total IP Length = 156  
+\+ Ipv4: Src = *\<IP Address>*, Dest = *\<IP Address>*, Next Protocol = TCP, Packet ID = 31775, Total IP Length = 156  
 \+ Tcp: Flags=...AP..., SrcPort=62047, DstPort=HTTPS(443), PayloadLen=116, Seq=1681718624 - 1681718740, Ack=3949992651, Win=517  
  TLSSSLData: Transport Layer Security (TLS) Payload Data  
 \- TLS: TLS Rec Layer-1 HandShake: Client Hello.  
@@ -324,8 +324,6 @@ Workarounds:
 ## References
 
 - [Payment Card Industry (PCI) Data Security Standard (DSS)](/microsoft-365/compliance/offering-pci-dss)
-
-- [ADDS: Security: Transitioning from TLS 1.0 to TLS 1.1 and TLS 1.2](https://support.microsoft.com/help/3081394)
 
 - [Error While Configuring WAP–”The Underlying Connection Was Closed”–Part 2](/archive/blogs/keithab/error-while-configuring-wapthe-underlying-connection-was-closedpart-2)  
 

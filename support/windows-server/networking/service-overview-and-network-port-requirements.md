@@ -11,7 +11,8 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: networking
+adobe-target: true
 ---
 # Service overview and network port requirements for Windows
 
@@ -300,7 +301,7 @@ System service name: **MSDTC**
 |Application protocol|Protocol|Ports|
 |---|---|---|
 |RPC|TCP|135|
-|Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**<br/>**random port number between 49152 - 65535**²|
+|Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 5000**<br/>**random port number between 49152 - 65535**²|
 ||||
 
 ¹ For more information about how to customize this port, see Distributed Transaction Coordinator in the [References](#references) section.
@@ -1394,10 +1395,6 @@ For information about how to plan for and to deploy MOM, see [System Center Deve
 ### Systems Management Server
 
 For more information about the ports that are used by SMS 2003, see [Ports that Systems Management Server 2003 uses to communicate through a firewall or through a proxy server](https://support.microsoft.com/help/826852).
-
-### SQL Server
-
-For more information about the ports that are used by SQL Server 7.0 and SQL Server 2000 for OLAP, see [INF: TCP Ports Used by OLAP Services when Connecting Through a Firewall](https://support.microsoft.com/help/301901).
 
 ### Terminal Services
 

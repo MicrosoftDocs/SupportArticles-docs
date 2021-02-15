@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, STEFANG
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: networking
 ---
 # How to configure an ISA Server computer for a large number of authentication requests
 
@@ -34,14 +34,14 @@ Windows member servers only issue up to two concurrent NTLM authentication reque
 ### Add a registry key
 
 > [!WARNING]
-> Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk. 
+> Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
 
 Follow these steps to increase the number of concurrent authentication calls in progress at one time between the ISA Server computer and the domain controller.
 
-1. Start Registry Editor. To do this, click Start , click Run, type Regedt32.exe, and then click OK.
-2. Locate the following registry key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters  
+1. Start **Registry Editor**. To do this, click **Start** , click **Run**, type *Regedt32.exe*, and then click **OK**.
+2. Locate the following registry key: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters`  
 
-3. On the Edit menu, click Add Value, and then add the following registry information:
+3. On the **Edit** menu, click **Add Value**, and then add the following registry information:
 
     - Value Name: MaxConcurrentApi
     - Data Type: REG_DWORD
@@ -49,12 +49,10 @@ Follow these steps to increase the number of concurrent authentication calls in 
 
     Windows 2008 R2 maximum value is 150.
 4. Restart the NETLOGON service. To use the higher values, you need to install an update:
- [975363](https://support.microsoft.com/help/975363) A time-out error occurs when many NTLM authentication requests are sent from a Domain Member for users from remote Domains in a high latency network
+ [975363](https://support.microsoft.com/help/975363) A time-out error occurs when many NTLM authentication requests are sent from a Domain Member for users from remote Domains in a high latency network.
 
 > [!NOTE]
-> When you increase the value of the MaxConcurrentApi entry to a value that is greater than 5, make sure that you monitor the number of requests that are sent to the domain controller. To do this, install the update that is described in the following Knowledge Base article on the servers: [928576](https://support.microsoft.com/help/928576) New performance counters for Windows Server 2003 let you monitor the performance of Netlogon authentication  
-
-This update enables you to track the use of the Netlogon calls.
+> When you increase the value of the MaxConcurrentApi entry to a value that is greater than 5, make sure that you monitor the number of requests that are sent to the domain controller.
 
 If you have a computer that is running Microsoft Windows 2000 Advanced Server, you can use the Network Load Balancing component (previously known as WLBS) of Windows 2000 Advanced Server to distribute incoming access requests among multiple IAS servers. This helps the server perform better when network traffic is high.
 
@@ -62,11 +60,9 @@ To load balance the Web requests and authentication and to increase performance,
 
 You should set the value on the resource server and all intermediate DCs handling the NTLM authentication request on the path to the user domain. In a multi-level Active Directory Forest contoso.com with domains users.contoso.com with the users and servers.contoso.com with the resource servers, this means that you have to set this on the resource servers and DCs in server.contoso.com and DCs in contoso.com.
 
-Another way to improve performance may be to authenticate the client computer by using Kerberos, but this is not supported with Internet Explorer 6 and earlier versions. earlier. For more information, click the following article number to view the article in the Microsoft Knowledge Base: [321728](https://support.microsoft.com/help/321728) Internet Explorer does not support Kerberos authentication with proxy servers
+Another way to improve performance may be to authenticate the client computer by using Kerberos, but this is not supported with Internet Explorer 6 and earlier versions. earlier.
 
 ## References
-
-For more information about a similar problem that is experienced on an Internet Authentication Server (IAS) computer, click the following article number to view the article in the Microsoft Knowledge Base: [246118](https://support.microsoft.com/help/246118) How to configure your IAS server for a large number of authentication requests  
 
 Information about the update for Windows Server 2008 R2 that increases the limit documented above:
 

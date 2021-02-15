@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, JAMIRC
 ms.prod-support-area-path: IP Address Management (IPAM)
-ms.technology: Networking
+ms.technology: networking
 ---
 # Install and configure IP version 6 in Windows Server 2003 Enterprise Server
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: No Boot (not BugChecks)
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Available switch options for the Windows XP and the Windows Server 2003 Boot.ini files
 
@@ -23,10 +23,6 @@ _Original KB number:_ &nbsp; 833721
 ## Summary
 
 You can add many different switches to the Boot.ini file that will modify the way that Microsoft Windows XP or Microsoft Windows Server 2003 start.
-
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[102873](https://support.microsoft.com/help/102873) Boot.ini and ARC path naming conventions and usage  
 
 ## More information
 
@@ -43,49 +39,25 @@ The `/basevideo` switch forces the system into standard 640x480 16-color VGA mod
 
 This switch sets the baud rate of the debug port that is used for kernel debugging. For example, type `/baudrate=9600`. The default baud rate is 9600 kilobits per second (Kbps) if a modem is attached. The default baud rate is 115,200 Kbps for a null-modem cable. 9,600 is the normal rate for remote debugging over a modem. If this switch is in the Boot.ini file, the `/debug` switch is automatically enabled.
 
-For more information about modem configuration, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[148954](https://support.microsoft.com/help/148954) How to set up a remote debug session using a modem  
-
-For more information about null modem configuration, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[151981](https://support.microsoft.com/help/151981) How to set up a remote debug session using a null modem cable  
-
 ### /crashdebug
 
 This switch loads the kernel debugger when you start the operating system. The switch remains inactive until a Stop message error occurs. `/crashdebug` is useful if you experience random kernel errors. With this switch, you can use the COM port for normal operations while Windows is running. If Windows crashes, the switch converts the port to a debug port. (This action turns on remote debugging.)
 
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[151981](https://support.microsoft.com/help/151981) How to set up a remote debug session using a null modem cable  
-
 ### /debug
 
-This switch turns on the kernel debugger when you start Windows. The switch can be activated at any time by a host debugger that is connected to the computer, if you want to turn on live remote debugging of a Windows system through the COM ports. Unlike the `/crashdebug` switch, /debug uses the COM port whether you are debugging or not. Use this switch when you are debugging problems that are regularly reproducible.
-
-For more information about remote debugging, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[121543](https://support.microsoft.com/help/121543) Setting up for remote debugging  
+This switch turns on the kernel debugger when you start Windows. The switch can be activated at any time by a host debugger that is connected to the computer, if you want to turn on live remote debugging of a Windows system through the COM ports. Unlike the `/crashdebug` switch, `/debug` uses the COM port whether you are debugging or not. Use this switch when you are debugging problems that are regularly reproducible.
 
 ### /debugport=comnumber
 
 This switch specifies the communications port to use for the debug port, where **number** is the communications port, such as COM1, that you want to use. By default, `/debugport` uses COM2 if it exists. Otherwise, the switch uses COM1. If you include this switch in the Boot.ini file, the /debug switch becomes active.
 
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[151981](https://support.microsoft.com/help/151981) How to set up a remote debug session using a null modem cable  
-
 ### /maxmem=number  
 
-This switch specifies the amount of RAM, in bytes, that Windows can use. For example, if you want Windows to use less than 64 MB of memory, use the `/maxmem=64`switch.
+This switch specifies the amount of RAM, in bytes, that Windows can use. For example, if you want Windows to use less than 64 MB of memory, use the `/maxmem=64` switch.
 
 However, the `/maxmem` switch does not account for memory holes. Therefore, we recommend that you use the `/burnmemory` switch instead. The `/burnmemory` switch accounts for memory holes.
 
 For example, if you use the `/Maxmem=64` switch, and the system requires 64 MB of memory to load, there may not actually be 64-MB available to the system because of a memory hole. In this scenario, Windows would not start.
-
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[108393](https://support.microsoft.com/help/108393) MAXMEM option in Windows NT Boot.ini file  
 
 ### /noguiboot
 
@@ -105,22 +77,14 @@ For x86-based systems, this switch stops the operating system from dynamically a
 
 ### /fastdetect:comnumber
 
-This switch turns off serial and bus mouse detection in the Ntdetect.com file for the specified port. Use this switch if you have a component other than a mouse that is attached to a serial port during the startup process. For example, type /fastdetect:com **number**, where **number** is the number of the serial port. Ports may be separated with commas to turn off more than one port. If you use `/fastdetect`, and you do not specify a communications port, serial mouse detection is turned off on all communications ports.
+This switch turns off serial and bus mouse detection in the `Ntdetect.com` file for the specified port. Use this switch if you have a component other than a mouse that is attached to a serial port during the startup process. For example, type /fastdetect:com **number**, where **number** is the number of the serial port. Ports may be separated with commas to turn off more than one port. If you use `/fastdetect`, and you do not specify a communications port, serial mouse detection is turned off on all communications ports.
 
 > [!NOTE]
 > In earlier versions of Windows, including Windows NT 4.0, this switch was named `/noserialmice`.
 
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[131976](https://support.microsoft.com/help/131976) How to disable detection of devices on serial ports  
-
 ### /sos
 
-The /sos switch displays the device driver names while they are being loaded. By default, the Windows Loader screen only echoes progress dots. Use this switch with the `/basevideo` switch to determine the driver that is triggering a failure.
-
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[99743](https://support.microsoft.com/help/99743) Purpose of the Boot.ini file in Windows 2000 or Windows NT
+The `/sos` switch displays the device driver names while they are being loaded. By default, the Windows Loader screen only echoes progress dots. Use this switch with the `/basevideo` switch to determine the driver that is triggering a failure.
 
 ### /PAE
 
@@ -136,7 +100,7 @@ With this switch, you can define the actual kernel that is loaded at startup. Fo
 
 ### /bootlog
 
-This switch turns on boot logging to a file that is named **systemroot** \Ntbtlog.txt. For more information about boot logging, see Windows Help.
+This switch turns on boot logging to a file that is named systemroot\Ntbtlog.txt. For more information about boot logging, see Windows Help.
 
 ### /burnmemory=number  
 
@@ -145,14 +109,6 @@ This switch specifies the amount of memory, in megabytes, that Windows cannot us
 ### /3GB
 
 This switch forces x86-based systems to allocate 3 GB of virtual address space to programs and 1 GB to the kernel and to executive components. A program must be designed to take advantage of the additional memory address space. With this switch, user mode programs can access 3 GB of memory instead of the usual 2 GB that Windows allocates to user mode programs. The switch moves the starting point of kernel memory to 3 GB. Some configurations of Microsoft Exchange Server 2003 and Microsoft Windows Server 2003 may require this switch.
-
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[823440](https://support.microsoft.com/help/823440) You must use the /3GB switch when you install Exchange Server 2003 on a Windows Server 2003-based system
-
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[171793](https://support.microsoft.com/help/171793) Information on application use of 4GT RAM tuning
 
 ### /safeboot: parameter
 
@@ -185,23 +141,11 @@ Use this switch to customize the amount of memory that is allocated to processes
 > [!NOTE]
 > Microsoft Product Support Services strongly recommends using a range of memory for the `/USERVA` switch that lies within the range of 2900-3030. This range is wide enough to provide a large enough pool of system page table entries for all currently observed issues. Usually a setting of `/userva=2900` will provide close to the maximum available number of system page table entries possible.
 
-For more information about how to use the `/USERVA`switch, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[316739](https://support.microsoft.com/help/316739) How to use the /USERVA switch in the Boot.ini file to tune /3GB configurations  
-
 For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:
-
-- [810371](https://support.microsoft.com/help/810371) Using the /userva switch on Windows Server 2003-based Exchange Servers  
 
 - [323427](https://support.microsoft.com/help/323427) How to manually edit the Boot.ini file in a Windows Server 2003 environment  
 
-- [317526](https://support.microsoft.com/help/317526) How to edit the Boot.ini file in Windows Server 2003  
-
-- [317521](https://support.microsoft.com/help/317521) Description of the Bootcfg command and its uses  
-
-- [289022](https://support.microsoft.com/help/289022) HOW TO: Edit the Boot.ini file in Windows XP  
-
-- [291980](https://support.microsoft.com/help/291980) A discussion about the Bootcfg command and its uses  
+- [289022](https://support.microsoft.com/help/289022) HOW TO: Edit the Boot.ini file in Windows XP
 
 ### /usepmtimer
 

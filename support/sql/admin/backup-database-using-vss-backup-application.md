@@ -50,7 +50,7 @@ DatabaseID         DatabaseName
 
 ## More information
 
-Writers (like SQL Writer) add components using [IVssCreateWriterMetadata::AddComponent](/windows/win32/api/vswriter/nf-vswriter-ivsscreatewritermetadata-addcomponent), specifying the following component information:
+Writers (like SQL Writer) add components using [IVssCreateWriterMetadata::AddComponent](/windows/win32/api/vswriter/nf-vswriter-ivsscreatewritermetadata-addcomponent), specifying the following component information:
 
 - Type
 - Name
@@ -67,7 +67,7 @@ For more information, see [VSS Metadata](/windows/win32/vss/vss-metadata).
 
 You can use one or more of the following methods to identify if you are running into this issue:
 
-- Various backup applications may raise custom messages about `SqlServerWriter` (or SQLWriter) not being found.
-- When you execute from a command prompt on the target SQL Server machine, you will not see `SqlServerWriter` in the output.  
+- Various backup applications may raise custom messages about `SqlServerWriter` (or SQLWriter) not being found.
+- When you execute from a command prompt on the target SQL Server machine, you will not see `SqlServerWriter` in the output.  
 
     vssadmin list writers

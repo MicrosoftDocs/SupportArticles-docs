@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevemat, ELDENC
 ms.prod-support-area-path: Cluster service fails to start
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # How to troubleshoot the Cluster service account when it modifies computer objects
 
-This article describes how to troubleshoot the Cluster service when it creates or modifies a computer object in Active Directory for a server cluster (virtual server). For more information about computer objects about the Cluster service, see [Description of the properties of the cluster Network Name resource in Windows Server 2003](https://support.microsoft.com/help/302389).
+This article describes how to troubleshoot the Cluster service when it creates or modifies a computer object in Active Directory for a server cluster (virtual server).
 
 _Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 307532

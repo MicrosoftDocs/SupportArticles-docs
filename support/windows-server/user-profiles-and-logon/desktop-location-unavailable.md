@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
 ms.prod-support-area-path: User profiles
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-server-user-profiles
 ---
 # Error occurs during desktop setup and desktop location is unavailable when you log on to Windows for the first time
 
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp;3048895
 
 After you install the update in [Vulnerability in Windows User Profile service could allow elevation of privilege: January 13, 2015 (MS15-003)](https://support.microsoft.com/help/3021674), you meet the following issues:
 
-- Profiles don't load when users log on to a computer for the first time. Or, you log on to a computer where policy then deletes the cached profile after a date interval when you log off.
+- Profiles don't load when users log on to a computer for the first time. Or, you log on to a computer where policy deletes the cached profile after a date interval when you log off.
 
     > [!NOTE]
     > Logons that use mandatory user profiles or Virtual Desktop Infrastructure (VDI) may also be affected.
@@ -33,10 +33,13 @@ After you install the update in [Vulnerability in Windows User Profile service c
 - Services don't start because of profile load failures. Affected services include but aren't limited to the following:
   - Local Service
   - Network Service
-  - MSSQLWhen this issue occurs, related events are logged. See [the events that are logged in Event Viewer](#more-information).
+  - MSSQL
+
+When this issue occurs, related events are logged. See [the events that are logged in Event Viewer](#more-information).
 
 Process Monitor may indicate that a **CreateFile** operation fails with an **ACCESS DENIED** result to the following path, depending on how file access is constrained:
-**\<drive>**:\documents & settings\\\<username>\local settings\Application Data\Microsoft\Windows\UsrClasss.dat
+**\<drive>**:\documents & settings\\\<username>\local settings\Application Data\Microsoft\Windows\UsrClasss.dat.
+
 The screenshot of Process Monitor can be seen here:
 
 :::image type="content" source="./media/desktop-location-unavailable/process-monitor.jpg" alt-text="The screenshot of Process Monitor.":::

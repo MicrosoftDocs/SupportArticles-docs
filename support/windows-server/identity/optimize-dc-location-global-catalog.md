@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory topology (sites, subnets, and connection objects)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to optimize the location of a domain controller or global catalog that resides outside of a client's site
 
@@ -167,9 +167,3 @@ Use the "Sites Covered by the global catalog locator DNS SRV Records" Net Logon 
 #### Windows Server 2003
 
 To configure Windows Server 2003-based domain controllers, use the "Priority Set in the domain controller locator DNS SRV Records" Net Logon service Group Policy.
-
-## References
-
-For more information, click the following article number to go to the article in the Microsoft Knowledge Base:
-
-[267855](https://support.microsoft.com/help/267855) Problems with many domain controllers with Active Directory Integrated DNS Zones

@@ -11,13 +11,13 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, akhleshs
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # User GPP Scheduled Task item fails to apply and logs event ID: 4098 with 0x80070005 Access is denied
 
 This article provides a solution to an issue where User Group Policy Preference (GPP) Scheduled Task item fails to apply.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2447414
 
 ## Symptoms
@@ -31,16 +31,16 @@ Additionally, you see the following event log in the Application log:
 
 Additionally if you enable Group Policy tracing for GPP Scheduled Tasks Client Side Extension, you'll see the following messages logged in the GPP User log file:
 
-> 2010-10-12 09:59:01.337 [pid=0x3a0,tid=0x8c8] Starting class \<TaskV2> - \<GPP item name>.  
-2010-10-12 09:59:01.337 [pid=0x3a0,tid=0x8c8] Set user security context.  
-2010-10-12 09:59:01.337 [pid=0x3a0,tid=0x8c8] Adding child elements to RSOP.  
-2010-10-12 09:59:01.352 [pid=0x3a0,tid=0x8c8] WorkItem.Init [hr = 0x80070005 "Access is denied."]  
-2010-10-12 09:59:01.352 [pid=0x3a0,tid=0x8c8] Properties handled. [hr = 0x80070005 "Access is denied."]
-2010-10-12 09:59:01.352 [pid=0x3a0,tid=0x8c8] Set system security context.  
-2010-10-12 09:59:01.540 [pid=0x3a0,tid=0x8c8] EVENT : The user '\<GPP item name>' preference item in the '\<GPO name> {GPO GUID}' Group Policy object did not apply because it failed with error code '0x80070005 Access is denied.'%100790273  
-2010-10-12 09:59:01.540 [pid=0x3a0,tid=0x8c8] Error suppressed. [hr = 0x80070005 "Access is denied."]  
-2010-10-12 09:59:01.540 [pid=0x3a0,tid=0x8c8] Completed class \<TaskV2> - \<GPP item name>.  
-2010-10-12 09:59:01.540 [pid=0x3a0,tid=0x8c8] Completed class \<ScheduledTasks>.
+> *\<DateTime>* [pid=0x3a0,tid=0x8c8] Starting class \<TaskV2> - \<GPP item name>.  
+*\<DateTime>* [pid=0x3a0,tid=0x8c8] Set user security context.  
+*\<DateTime>* [pid=0x3a0,tid=0x8c8] Adding child elements to RSOP.  
+*\<DateTime>* [pid=0x3a0,tid=0x8c8] WorkItem.Init [hr = 0x80070005 "Access is denied."]  
+*\<DateTime>* [pid=0x3a0,tid=0x8c8] Properties handled. [hr = 0x80070005 "Access is denied."]
+*\<DateTime>* [pid=0x3a0,tid=0x8c8] Set system security context.  
+*\<DateTime>* [pid=0x3a0,tid=0x8c8] EVENT : The user '\<GPP item name>' preference item in the '\<GPO name> {GPO GUID}' Group Policy object did not apply because it failed with error code '0x80070005 Access is denied.'%100790273  
+*\<DateTime>* [pid=0x3a0,tid=0x8c8] Error suppressed. [hr = 0x80070005 "Access is denied."]  
+*\<DateTime>* [pid=0x3a0,tid=0x8c8] Completed class \<TaskV2> - \<GPP item name>.  
+*\<DateTime>* [pid=0x3a0,tid=0x8c8] Completed class \<ScheduledTasks>.
 
 You can enable GPP tracing through group policy:  
     `Computer Configuration\Policies\Administrative Templates\System\Group Policy\Logging and Tracing\Configure Schedulled Tasks preference logging and tracing`  

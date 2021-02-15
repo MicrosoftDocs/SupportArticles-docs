@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User, computer, group, and object management
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Troubleshoot Group Policy object processing failures that occur across multiple forests
 
@@ -65,9 +65,9 @@ The Network Monitor trace shows that Kerberos authentication fails and that NTLM
 
 The following information is logged in the Userenv.log file:
 
-> USERENV(ec0.86c) 13:36:18:156 ProcessGPO: Deferring search for \<LDAP://CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=nils,DC=com>  
-USERENV(ec0.86c) 13:36:18:484 GetMachineDomainDS: ldap_bind_s failed with 82  
-USERENV(ec0.86c) 13:36:18:500 GetGPOInfo: Leaving with 0
+> USERENV(ec0.86c) *\<DateTime>* ProcessGPO: Deferring search for \<LDAP://CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=nils,DC=com>  
+USERENV(ec0.86c) *\<DateTime>* GetMachineDomainDS: ldap_bind_s failed with 82  
+USERENV(ec0.86c) *\<DateTime>* GetGPOInfo: Leaving with 0
 
 ## Resolution for Scenario 1
 
@@ -86,37 +86,37 @@ Cross-forest GPOs are not applied if ICMP is not enabled. Group Policy processin
 
 In this scenario, the following information is logged in the Userenv.log file:
 
-> USERENV(22c.91c) 15:58:22:322 ProcessGPOs:  
-USERENV(22c.91c) 15:58:22:322 ProcessGPOs:  
-USERENV(22c.91c) 15:58:22:332 ProcessGPOs: Starting user Group Policy (Background) processing...  
-USERENV(22c.91c) 15:58:22:332 ProcessGPOs:  
-USERENV(22c.91c) 15:58:22:341 ProcessGPOs:  
-USERENV(22c.91c) 15:58:22:341 EnterCriticalPolicySectionEx: Entering with timeout 600000 and flags 0x0  
-USERENV(22c.91c) 15:58:22:341 EnterCriticalPolicySectionEx: User critical section has been claimed. Handle = 0x734  
-USERENV(22c.91c) 15:58:22:351 EnterCriticalPolicySectionEx: Leaving successfully.  
-USERENV(22c.91c) 15:58:22:351 ProcessGPOs: Machine role is 2.  
-USERENV(22c.91c) 15:58:22:370 PingComputer: Adapter speed 10000000 bps  
-USERENV(22c.91c) 15:58:22:446 PingComputer: First time: 76  
-USERENV(22c.91c) 15:58:27:247 PingComputer: Second send failed with 11010  
-USERENV(22c.91c) 15:58:27:314 PingComputer: First time: 73  
-USERENV(22c.91c) 15:58:32:496 PingComputer: Second send failed with 11010  
-USERENV(22c.91c) 15:58:32:563 PingComputer: First time: 73  
-USERENV(22c.91c) 15:58:37:745 PingComputer: Second send failed with 11010  
-USERENV(22c.91c) 15:58:37:745 PingComputer: No data available  
-USERENV(22c.91c) 15:58:37:926 PingComputer: Adapter speed 10000000 bps  
-USERENV(22c.91c) 15:58:38:003 PingComputer: First time: 75  
-USERENV(958.95c) 15:58:42:517 LibMain: Process Name: C:\WINDOWS\system32\userinit.exe  
-USERENV(22c.91c) 15:58:42:994 PingComputer: Second send failed with 11010  
-USERENV(22c.91c) 15:58:43:070 PingComputer: First time: 77  
-USERENV(22c.91c) 15:58:48:243 PingComputer: Second send failed with 11010  
-USERENV(22c.91c) 15:58:48:396 PingComputer: First time: 159  
-USERENV(22c.91c) 15:58:53:492 PingComputer: Second send failed with 11010  
-USERENV(22c.91c) 15:58:53:492 PingComputer: No data available  
-USERENV(22c.91c) 15:58:53:492 ProcessGPOs: DSGetDCName failed with 59.  
-USERENV(22c.91c) 15:58:53:502 ProcessGPOs: No WMI logging done in this policy cycle.  
-USERENV(22c.91c) 15:58:53:502 ProcessGPOs: Processing failed with error 59.  
-USERENV(22c.91c) 15:58:53:502 LeaveCriticalPolicySection: Critical section 0x734 has been released.  
-USERENV(22c.91c) 15:58:53:512 ProcessGPOs: User Group Policy has been applied.
+> USERENV(22c.91c) *\<DateTime>* ProcessGPOs:  
+USERENV(22c.91c) *\<DateTime>* ProcessGPOs:  
+USERENV(22c.91c) *\<DateTime>* ProcessGPOs: Starting user Group Policy (Background) processing...  
+USERENV(22c.91c) *\<DateTime>* ProcessGPOs:  
+USERENV(22c.91c) *\<DateTime>* ProcessGPOs:  
+USERENV(22c.91c) *\<DateTime>* EnterCriticalPolicySectionEx: Entering with timeout 600000 and flags 0x0  
+USERENV(22c.91c) *\<DateTime>* EnterCriticalPolicySectionEx: User critical section has been claimed. Handle = 0x734  
+USERENV(22c.91c) *\<DateTime>* EnterCriticalPolicySectionEx: Leaving successfully.  
+USERENV(22c.91c) *\<DateTime>* ProcessGPOs: Machine role is 2.  
+USERENV(22c.91c) *\<DateTime>* PingComputer: Adapter speed 10000000 bps  
+USERENV(22c.91c) *\<DateTime>* PingComputer: First time: 76  
+USERENV(22c.91c) *\<DateTime>* PingComputer: Second send failed with 11010  
+USERENV(22c.91c) *\<DateTime>* PingComputer: First time: 73  
+USERENV(22c.91c) *\<DateTime>* PingComputer: Second send failed with 11010  
+USERENV(22c.91c) *\<DateTime>* PingComputer: First time: 73  
+USERENV(22c.91c) *\<DateTime>* PingComputer: Second send failed with 11010  
+USERENV(22c.91c) *\<DateTime>* PingComputer: No data available  
+USERENV(22c.91c) *\<DateTime>* PingComputer: Adapter speed 10000000 bps  
+USERENV(22c.91c) *\<DateTime>* PingComputer: First time: 75  
+USERENV(958.95c) *\<DateTime>* LibMain: Process Name: C:\WINDOWS\system32\userinit.exe  
+USERENV(22c.91c) *\<DateTime>* PingComputer: Second send failed with 11010  
+USERENV(22c.91c) *\<DateTime>* PingComputer: First time: 77  
+USERENV(22c.91c) *\<DateTime>* PingComputer: Second send failed with 11010  
+USERENV(22c.91c) *\<DateTime>* PingComputer: First time: 159  
+USERENV(22c.91c) *\<DateTime>* PingComputer: Second send failed with 11010  
+USERENV(22c.91c) *\<DateTime>* PingComputer: No data available  
+USERENV(22c.91c) *\<DateTime>* ProcessGPOs: DSGetDCName failed with 59.  
+USERENV(22c.91c) *\<DateTime>* ProcessGPOs: No WMI logging done in this policy cycle.  
+USERENV(22c.91c) *\<DateTime>* ProcessGPOs: Processing failed with error 59.  
+USERENV(22c.91c) *\<DateTime>* LeaveCriticalPolicySection: Critical section 0x734 has been released.  
+USERENV(22c.91c) *\<DateTime>* ProcessGPOs: User Group Policy has been applied.
 
 ## Cause for Scenario 2
 

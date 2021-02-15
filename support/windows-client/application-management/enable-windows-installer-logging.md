@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: MSI
-ms.technology: ApplicationCompatibility
+ms.technology: windows-client-application-compatibility
 ---
 # Enable Windows Installer logging
 

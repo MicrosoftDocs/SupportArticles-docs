@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, darank
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Available updates for Remote Desktop Services in Windows Server 2012 R2
 
@@ -127,8 +127,6 @@ The hotfixes and updates are arranged by component areas within Remote Desktop S
 - [2964833](https://support.microsoft.com/help/2964833) Windows 8.1 or Windows 7 cannot connect over DirectAccess to a Remote Desktop Session Host server farm
 
 - [2964832](https://support2.microsoft.com/help/2964832) RemoteApp program pop-up window is hidden in Windows
-
-- [2930340](https://support.microsoft.com/help/2930340)  Ctrl+Alt+Insert Remote Desktop keyboard shortcut doesn't work in Windows 8.1 or Windows Server 2012 R2
 
 - [2925429](https://support.microsoft.com/help/2925429) Print jobs are lost or an application crashes in Microsoft Enterprise Desktop Virtualization 2.0 in Windows
 

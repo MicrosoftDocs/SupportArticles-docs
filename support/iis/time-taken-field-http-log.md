@@ -2,7 +2,7 @@
 title: Time-taken fields in IIS HTTP logging
 description: This article describes the functionality of the time-taken field in Internet Information Services (IIS) 6.0 and IIS 7.0 HTTP logging, and also describes the values that are stored in the time-taken field.
 ms.date: 04/17/2020
-ms.prod-support-area-path: Health, diagnostic, and performance features
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.reviewer: mlaing
 ms.topic: article
 ---
@@ -27,6 +27,3 @@ Beginning in IIS 7.0, the time-taken field includes network time. Before HTTP.sy
 > - The response size is less than or equal to 2 KB, and the response size is from memory.
 > - TCP buffering is used. Applications that use *HTTPAPI.dll* can set the `HTTP_SEND_RESPONSE_FLAG_BUFFER_DATA` flag to enable TCP buffering on Windows. This allows the server to send all of the response data to the client without having to wait for the client's corresponding acknowledgements.
 
-## References
-
-[How to configure Web site logging in Windows Server 2003](https://support.microsoft.com/help/324279)

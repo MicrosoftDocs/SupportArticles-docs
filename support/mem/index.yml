@@ -13,8 +13,8 @@ productDirectory:
   - title: Microsoft Endpoint Configuration Manager
     imageSrc: "../media/hub-landing/logo-configmgr.png"
     summary: Troubleshooting articles for Microsoft Endpoint Configuration Manager
-    url: configmgr/welcome-configuration-manager.md
+    url: configmgr/welcome-configuration-manager.yml
   - title: Microsoft Intune
     imageSrc: "../media/hub-landing/logo-intune.png"
     summary: Troubleshooting articles for Microsoft Intune
-    url: intune/welcome-intune.md
+    url: intune/welcome-intune.yml

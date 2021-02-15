@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Permissions, access control, and auditing
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Overview of the impersonate a client after authentication and the create global objects security settings (821546.KB.EN-US.2.2)
 
@@ -52,7 +52,7 @@ For more information about Impersonate functions (such as ImpersonateClient, Imp
 
 #### Troubleshooting for issue 1
 
-- Some Programs That Use Impersonation May Not Work Correctly After You Install Windows 2000 SP4  
+- Some programs that use impersonation may not work correctly after you install Windows 2000 SP4.  
 
     After you install Windows 2000 Service Pack 4 (SP4) on your computer, some programs that use impersonation may not work correctly.
 
@@ -72,7 +72,7 @@ For more information about Impersonate functions (such as ImpersonateClient, Imp
     > [!NOTE]
     > To troubleshoot situations where you cannot determine the user account that is used to run the program, and where you want to verify that the symptoms that you are experiencing are caused by the user right, assign the "Impersonate a client after authentication" user right to the Everyone group, and then start the program. If the program works correctly, the issue that you are experiencing may be caused by the new security setting.
 
-- You Receive an "Error While Trying to Run Project" Error Message When You Debug a Web Application in Visual Studio .NET
+- You receive an "Error while trying to run project" error message when you debug a web application in Visual Studio .NET.
 
 ### Issue 2: the "Create Global Objects" User Right (SeCreateGlobalPrivilege)
 
@@ -80,7 +80,7 @@ The "Create global objects" user right (SeCreateGlobalPrivilege) is a Windows 20
 
 #### Troubleshooting for issue 2
 
-- Some Programs May Not Work Correctly After You Install Windows 2000 SP4  
+- Some programs may not work correctly after you install Windows 2000 SP4.  
 
   After you install Windows 2000 Service Pack 4 (SP4) on your computer, some programs may not work correctly. This issue may occur in situations when the user account that is used to run the program does not have the "Create global objects" user right.
 
@@ -93,7 +93,7 @@ The "Create global objects" user right (SeCreateGlobalPrivilege) is a Windows 20
   6. Click **OK**.
 
     > [!NOTE]
-    > To troubleshoot situations where you cannot determine the user account that is used to run the program and where you want to verify that the symptoms that you are experiencing are caused by the user right, assign the "Create global objects"" user right to the Everyone group, and then start the program. If the program works correctly, the issue that you are experiencing may be caused by the new security setting.
-- You Receive a "Not Enough Memory" Error Message When You Search for Clips in an Office XP Document in a Terminal Services Session  
+    > To troubleshoot situations where you cannot determine the user account that is used to run the program and where you want to verify that the symptoms that you are experiencing are caused by the user right, assign the "Create global objects" user right to the Everyone group, and then start the program. If the program works correctly, the issue that you are experiencing may be caused by the new security setting.
+- You receive a "Not enough memory" error message when you search for clips in an Office XP document in a Terminal Services session.  
 
-- Computer Stops Responding (Hangs) When You Restart a Windows 2000 Server-Based Computer After You Install McAfee Parental Control  
+- Computer stops responding (hangs) when you restart a Windows 2000 Server-based computer after you install McAfee Parental Control.  

@@ -76,7 +76,7 @@ Fragmentation in the VA space is often caused by one or more of the following sc
 
 When using data from a database or other data source, it's important to limit the amount of data returned. For example, caching the result of a query that returns an entire database table in order to avoid the cost of retrieving parts of data from the database when needed is not a good approach. Doing so can easily cause high memory and lead to an OOM condition. Allowing a user to initiate a similar query (for example, return all employees in a company or all customers in the state of Texas with a last name starting with the letter S) is another common way to create a high memory situation.
 
-Always limit the amount of data that can be returned from a database. Don't allow queries such as `SELECT * FROM. . .` because you then have no control over how much data is displayed in your page.
+Always limit the amount of data that can be returned from a database. Don't allow queries such as `SELECT * FROM. . .` because you then have no control over how much data is displayed in your page.
 
 It's equally important to ensure that you're not displaying a large data result in UI elements such as the GridView control. In addition to the memory required for the returned data, you'll also be consuming large amounts of data in strings and in UI elements required to render the results. By implementing paging and validating input so that large sets of data aren't returned, you can avoid this problem.
 

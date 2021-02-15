@@ -11,14 +11,14 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup and configuration of clustered services and applications
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # How to configure FTP for IIS in a Windows Server failover cluster
 
 This article describes how to configure FTP for Internet Information Services (IIS) 8.0 or a later version in a Windows Server failover cluster. The procedures in this article apply only to the FTP service.  
 
 > [!NOTE]
-For more information about how to configure Web services in a failover cluster, click the following article number to view the article in the Microsoft Knowledge Base:
+> For more information about how to configure Web services in a failover cluster, click the following article number to view the article in the Microsoft Knowledge Base:
 >
 > [970759](https://support.microsoft.com/help/970759) Configuring IIS World Wide Web Publishing Service in a Windows Server failover cluster
 
@@ -216,12 +216,12 @@ Function Online( )
     If bOnline <> True Then
         Resource.LogInformation "The resource failed to come online because ftpsvc could not be started."
         Online = False
-        Exit Functiond
+        Exit Function
     End If
 
     Online = true
 
-End Functiond
+End Function
 
 'Cluster resource offline entry point
 'On offline, do nothing.

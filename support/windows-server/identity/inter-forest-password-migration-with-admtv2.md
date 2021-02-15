@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
 ms.prod-support-area-path: Active Directory Migration Tool (ADMT)
-ms.technology: ActiveDirectory 
+ms.technology: windows-server-active-directory 
 ---
 # How to Troubleshoot Inter-Forest Password Migration with ADMTv2
 
@@ -26,12 +26,9 @@ If you perform intra-forest migrations by using the Active Directory Migration T
 
 However, if you use ADMTv2 to perform inter-forest password migration when you clone user accounts, this operation relies on dependencies that the administrator must configure. This article discusses the dependencies and troubleshooting steps for common problems associated with this operation.
 
-For additional information about how to install and configure ADMT, click the article number below to view the article in the Microsoft Knowledge Base: [260871](https://support.microsoft.com/help/260871) HOW TO: Set Up ADMT for Windows NT 4.0 to Windows 2000 Migration  
-
 ### Configuration
 
 Beyond basic configuration, ADMTv2 requires the following dependencies when used to perform inter-forest password migration:
-
 
 - Service Pack 6a (SP6a) or later must be installed on Microsoft Windows NT 4.0 domain controllers.
 
@@ -64,7 +61,7 @@ This error may be caused by one of the following configuration problems:
 
 - The encryption key was created and installed, but ADMT is running on a different computer than the computer that created the encryption key. Password Migration encryption keys are valid per-computer instead of per-domain.
 
-- WRN1:7557 Failed to copy the password for {user.} A strong password has been generated instead. Unable to copy password. Access is denied.
+- WRN1:7557 Failed to copy the password for {user}. A strong password has been generated instead. Unable to copy password. Access is denied.
 If this error message appears in the Migration.log file, verify the following:
 
 - The following registry key value is set on the target domain controllers: HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\LSA\RestrictAnonymous = 0 

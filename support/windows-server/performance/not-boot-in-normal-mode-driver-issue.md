@@ -11,9 +11,9 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: No Boot (not BugChecks)
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
-# Not Boot In Normal Mode - Driver Issue
+# Not boot in Normal Mode - driver issue
 
 This article provides some information about Windows does not boot in Normal Mode due to a driver issue.
 
@@ -49,6 +49,7 @@ The problem might be either with Windows Driver or Third-Party applications. In 
 - After replacing all entries, save SafeBoot.reg file and double-click on it.
 - Now restart your computer in Normal Mode.  
 
-Note editing registry is not recommended by users only experienced administrators should edit the registry.
+> [!Note]
+> Editing registry is not recommended by users only experienced administrators should edit the registry.
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]

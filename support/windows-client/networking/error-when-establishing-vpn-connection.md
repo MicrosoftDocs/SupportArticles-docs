@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Remote access
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # You receive an "Error 721" error message when you try to establish a VPN connection through your Windows Server-based remote access server
 
@@ -28,8 +28,6 @@ If you try to establish a virtual private network (VPN) connection to a corporat
 
 > [!NOTE]
 > The 721 error description may vary.
-
-If you are using a Microsoft Windows NT Server 4.0-based remote access server, the following event may be logged in the System log of the server:
 
 ## Cause
 

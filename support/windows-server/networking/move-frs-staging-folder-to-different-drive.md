@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: FRS
-ms.technology: Networking
+ms.technology: networking
 ---
 # How to reset the File Replication service staging folder to a different logical drive
 
@@ -75,8 +75,8 @@ To modify the FrsStagingPath attribute using the Adsiedit.msc tool that is inclu
     Event Source:NtFrs  
     Event Category:None  
     Event ID:13563  
-    Date:3/6/2001  
-    Time:7:13:01 PM  
+    Date:*\<DateTime>*  
+    Time:*\<DateTime>*  
     User:N/A  
     Computer:AC2  
     Description: The File Replication service has detected that the staging path for the replica set DOMAIN SYSTEM VOLUME (SYSVOL SHARE) has changed.  

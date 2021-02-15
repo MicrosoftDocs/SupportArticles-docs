@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, ryanman
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
-ms.technology: GroupPolicy
+ms.technology: windows-client-group-policy
 ---
 # Save documents to OneDrive by default is a OneDrive Group Policy Administrative Templates discrepancy in Windows 8.1
 
@@ -34,4 +34,4 @@ This policy setting lets you disable OneDrive as the default save location. It d
 
 Actually, the policy name should be: **Save documents to the local PC by default**  
 
-And the policy description should read: This policy setting lets you select the local PC as the default save location. It does not prevent apps and users from saving files on OneDrive. If you enable this policy setting files will be saved locally by default. Users will still be able to change the value of this setting to save to OneDrive by default. They will also be able to open and save files on OneDrive using the OneDrive app and file picker and Microsoft Store apps will still be able to access OneDrive using the WinRT API. If you disable or do not configure this policy setting users with a connected account will save files to OneDrive by default.
+And the policy description should read: This policy setting lets you select the local PC as the default save location. It does not prevent apps and users from saving files on OneDrive. If you enable this policy setting files will be saved locally by default. Users will still be able to change the value of this setting to save to OneDrive by default. They will also be able to open and save files on OneDrive using the OneDrive app and file picker and Microsoft Store apps will still be able to access OneDrive using the WinRT API. If you disable or do not configure this policy setting, users with a connected account will save files to OneDrive by default.

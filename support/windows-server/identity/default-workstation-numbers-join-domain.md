@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Domain join issues
-ms.technology: ActiveDirectory 
+ms.technology: windows-server-active-directory 
 ---
 # Default limit to number of workstations a user can join to the domain
 
@@ -22,9 +22,7 @@ _Original KB number:_ &nbsp;243327
 
 ## Summary
 
-By default, Windows 2000 allows authenticated users to join 10 machine accounts to the domain. If a user attempts to join an 11th machine account, the error messages listed in the following Microsoft Knowledge Base Article are displayed:
-
- [251335](https://support.microsoft.com/help/251335) Domain users cannot join workstation or server to a domain  
+By default, Windows 2000 allows authenticated users to join 10 machine accounts to the domain.
 
 This default was implemented to prevent misuse, but can be overridden by an administrator by making a change to an object in Active Directory.
 

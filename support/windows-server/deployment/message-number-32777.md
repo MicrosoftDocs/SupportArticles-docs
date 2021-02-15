@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
 ms.prod-support-area-path: Activation
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Error when you try to activate Windows Server 2003 over the Internet: Message Number 32777
 
@@ -90,19 +90,19 @@ Turn off certificate revocation in Internet Explorer to permit Windows activatio
 
 Because other issues may generate error message number 32777, you can view the Setuplog.txt file to determine whether the issue described in this article is the cause of this error. Status code 407 typically indicates the occurrence of the issue described in this article. The following is an example of Status code 407 as it appears in a Setuplog.txt file:
 
-> 03/03/2003 09:37:51,d:\dnsrv\base\ntsetup\oobe\msobmain\msobmain.cpp,4423,,DISPID_EXTERNAL_CONNECTEDTOINTERNETEx  
-03/03/2003 09:37:51,d:\dnsrv\base\ntsetup\oobe\msobcomm\connmgr.cpp,1560,,tries to connect to the WPA HTTP server  
-03/03/2003 09:37:51,d:\dnsrv\base\ntsetup\oobe\msobcomm\connmgr.cpp,2170,,Disabled RAS Autodial for current logon session  
-03/03/2003 09:37:51,d:\dnsrv\base\ntsetup\oobe\msobcomm\connmgr.cpp,1480,,HTTP status code from WPA HTTP server 407  
-03/03/2003 09:37:51,d:\dnsrv\base\ntsetup\oobe\msobcomm\connmgr.cpp,2184,,Restore value of RAS Autodial for current logon session  
-03/03/2003 09:37:51,d:\dnsrv\base\ntsetup\oobe\msobcomm\connmgr.cpp,1657,,could connect to WPA HTTP server  
-03/03/2003 09:37:51,OOBE Trace,0,,GetPreferredConnection: null  
-03/03/2003 09:37:51,OOBE Trace,0,,UseModem: false  
-03/03/2003 09:37:51,d:\dnsrv\base\ntsetup\oobe\msobmain\msobmain.cpp,3049,,DISPID_EXTERNAL_CONNECT  
-03/03/2003 09:37:51,d:\dnsrv\base\ntsetup\oobe\msobmain\msobmain.cpp,3054,,DISPID_EXTERNAL_RECONNECT  
-03/03/2003 09:37:51,d:\dnsrv\base\ntsetup\oobe\msobmain\msobmain.cpp,4500,,DISPID_EXTERNAL_ACTIVATE  
-03/03/2003 09:37:52,d:\dnsrv\base\ntsetup\oobe\msobmain\msobmain.cpp,6979,,Waiting for response from m_pLicenseAgent->AsyncProcessHandshakeRequest()  
-03/03/2003 09:37:52,d:\dnsrv\base\ntsetup\oobe\msobmain\msobmain.cpp,5724,,m_pLicenseAgent->AsyncProcessHandshakeRequest() failed. Error = 32777  
-03/03/2003 09:37:52,d:\dnsrv\base\ntsetup\oobe\msobmain\msobmain.cpp,311,,Windows Product Activation error.  
-03/03/2003 09:37:52,d:\dnsrv\base\ntsetup\oobe\msobmain\msobmain.cpp,313,,ReturnActivationStatus: Status = 7, Detail = 32777  
-03/03/2003 09:37:52,OOBE Trace,0,,Activation failed. Error = 7
+> *\<DateTime>*,d:\dnsrv\base\ntsetup\oobe\msobmain\msobmain.cpp,4423,,DISPID_EXTERNAL_CONNECTEDTOINTERNETEx  
+*\<DateTime>*,d:\dnsrv\base\ntsetup\oobe\msobcomm\connmgr.cpp,1560,,tries to connect to the WPA HTTP server  
+*\<DateTime>*,d:\dnsrv\base\ntsetup\oobe\msobcomm\connmgr.cpp,2170,,Disabled RAS Autodial for current logon session  
+*\<DateTime>*,d:\dnsrv\base\ntsetup\oobe\msobcomm\connmgr.cpp,1480,,HTTP status code from WPA HTTP server 407  
+*\<DateTime>*,d:\dnsrv\base\ntsetup\oobe\msobcomm\connmgr.cpp,2184,,Restore value of RAS Autodial for current logon session  
+*\<DateTime>*,d:\dnsrv\base\ntsetup\oobe\msobcomm\connmgr.cpp,1657,,could connect to WPA HTTP server  
+*\<DateTime>*,OOBE Trace,0,,GetPreferredConnection: null  
+*\<DateTime>*,OOBE Trace,0,,UseModem: false  
+*\<DateTime>*,d:\dnsrv\base\ntsetup\oobe\msobmain\msobmain.cpp,3049,,DISPID_EXTERNAL_CONNECT  
+*\<DateTime>*,d:\dnsrv\base\ntsetup\oobe\msobmain\msobmain.cpp,3054,,DISPID_EXTERNAL_RECONNECT  
+*\<DateTime>*,d:\dnsrv\base\ntsetup\oobe\msobmain\msobmain.cpp,4500,,DISPID_EXTERNAL_ACTIVATE  
+*\<DateTime>*,d:\dnsrv\base\ntsetup\oobe\msobmain\msobmain.cpp,6979,,Waiting for response from m_pLicenseAgent->AsyncProcessHandshakeRequest()  
+*\<DateTime>*,d:\dnsrv\base\ntsetup\oobe\msobmain\msobmain.cpp,5724,,m_pLicenseAgent->AsyncProcessHandshakeRequest() failed. Error = 32777  
+*\<DateTime>*,d:\dnsrv\base\ntsetup\oobe\msobmain\msobmain.cpp,311,,Windows Product Activation error.  
+*\<DateTime>*,d:\dnsrv\base\ntsetup\oobe\msobmain\msobmain.cpp,313,,ReturnActivationStatus: Status = 7, Detail = 32777  
+*\<DateTime>*,OOBE Trace,0,,Activation failed. Error = 7

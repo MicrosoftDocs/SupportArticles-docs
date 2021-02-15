@@ -10,7 +10,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Windows Time Service
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Windows Time Service settings aren't preserved during an in-place upgrade to Windows Server 2016 or Windows 10 Version 1607
 
@@ -59,7 +59,7 @@ Windows computers that are manually configured as an Authoritative Time Server l
 
 You may also notice that the Authoritative NTP server doesn't respond to NTP client requests. This includes failures that occur when you test the NTP server availability by using the `w32tm.exe /stripchart` tool. For example, the text output may resemble the following output:
 
-> c:>w32tm /stripchart /computer:\<myAuthoritativeTimeServer> Tracking \<myAuthoritativeTimeServer> [10.1.1.100:123]. The current time is 10/28/2016 9:00:00 AM. 09:00:00 error: 0x800705B4:
+> c:>w32tm /stripchart /computer:\<myAuthoritativeTimeServer> Tracking \<myAuthoritativeTimeServer> [10.1.1.100:123]. The current time is *\<DateTime>*. *\<DateTime>* error: 0x800705B4:
 
 > [!NOTE]
 > This issue shouldn't occur when you do an in-place upgrade of the following operating systems:
@@ -207,8 +207,8 @@ To verify that the Windows Time service can now preserve its configuration, foll
 
     > c:\<w32tm /stripchart /computer:\<myTimeServer>  
     Tracking \<myTimeServer> [10.1.1.100:123].  
-    The current time is 10/28/2016 9:00:00 AM.  
-    09:00:00 d:+00.0013494s o:-00.0891868s [ * ]  
+    The current time is *\<DateTime>*.  
+    *\<DateTime>* d:+00.0013494s o:-00.0891868s [ * ]  
 
 3. For advanced users, query the W32time configuration, and make sure that the time providers are configured as expected. If you used Method 1 as the workaround, you can compare the post-upgrade configuration to the saved pre-configuration data. For example, the command output resembles the following:
 

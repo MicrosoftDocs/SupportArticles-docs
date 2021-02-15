@@ -97,6 +97,8 @@
     href: region-access-request-process.md
   - name: Container support policy
     href: support-policy-containers.md
+  - name: Delete a corrupted Azure Analysis Services database
+    href: delete-corrupted-azure-analysis-services-database.md
   - name: Deploy TLS 1.2 in Azure Pack
     href: tls-support-deployment-guide.md 
   - name: Error when you try to copy content to Azure
@@ -105,6 +107,8 @@
     href: search-tips-find-troubleshooting-content.md
   - name: Use Secure File Exchange to exchange files
     href: secure-file-exchange-transfer-files.md
+  - name: Domains used by Microsoft support agents
+    href: email-domains-support-agent.md
 
 - name: Other common issues
   items:

@@ -86,6 +86,8 @@
     href: express-not-supported-production-environment.md
   - name: Instances where HTTP.sys doesn't cache
     href: instances-httpsys-not-cache.md
+  - name: Can't access Web sites when security event log is full
+    href: users-cannot-access-web-sites-when-log-full.md
 
 - name: Health, diagnostic, and performance features
   items:
@@ -111,6 +113,8 @@
     href: http-403-forbidden-access-website.md
   - name: HTTP error 403.7
     href: http-error-403-7-forbidden-web-app.md
+  - name: HTTP error 404 file not found on a server
+    href: troubleshoot-404-file-not-found-error.md
   - name: HTTP error 404.13
     href: http-404-13-website.md
   - name: HTTP error 404.17 when you visit a Web site
@@ -121,6 +125,8 @@
     href: http-error-500-19-webpage.md
   - name: HTTP error 501 - Not Implemented
     href: http-error-501-not-implemented.md
+  - name: HTTP error 503 and event 5189 from web applications
+    href: error-503-event-5189-web-application.md
   - name: Logs contain dots instead of logging field value
     href: iis-logs-contain-dots.md
   - name: Pages can't be displayed
@@ -173,6 +179,8 @@
     href: calling-postcompletion-cause-crash.md
   - name: Can't call MTS COM from ASP
     href: server-execution-fail-call-mts-com-asp.md
+  - name: Default maximum stack size of a thread
+    href: default-maximum-stack-size-thread.md
   - name: Event handles may leak
     href: event-handles-leaked.md
   - name: Event ID 115 when you connect HTTPS websites
@@ -198,14 +206,26 @@
 
 - name: WWW administration and management
   items:
+  - name: Access to remote resources fails
+    href: remote-resources-fails-requested-iis.md
+  - name: Configure the default document in IIS
+    href: configure-default-document-iis.md
   - name: Content types for HTTP compression
     href: content-types-http-compression.md
   - name: Enable SSL for all customers
     href: enable-ssl-all-customers.md
+  - name: Error when you configure 32-bit managed handlers
+    href: error-when-you-configure-32-bit-handlers.md
   - name: HTTP error 400 when you send requests
     href: http-bad-request-response-kerberos.md
+  - name: HTTP error 500.0 when you visit a Web site
+    href: http-error-500-when-you-visit-web-site.md
   - name: HTTP status code
     href: http-status-code.md
+  - name: HTTPS connections fail and SSL bindings are deleted
+    href: https-connections-fail-ssl-bindings-deleted.md
+  - name: IIS events are not displayed remotely
+    href: iis-events-not-display-remotely.md
 
 - name: WWW authentication and authorization
   items:
@@ -237,6 +257,12 @@
     href: 401-error-preauthentication-header.md
   - name: HTTP error 403.7
     href: http-403-forbidden-open-webpage.md
+  - name: IIS authenticates browser clients
+    href: iis-authenticates-browser-client.md
+  - name: IIS may reject requests with HTTP 403.7 or 403.16 errors
+    href: errors-403-7-reject-client-certificate-rquest.md
+  - name: Information associated with IIS site isn't deleted
+    href: information-associated-iis-site-is-not-deleted.md
   - name: Impersonation fails when UAC is enabled
     href: impersonation-fails-uac-enabled.md
   - name: Read and analyze a client certificate
@@ -247,7 +273,7 @@
     href: shared-configuration-require-same-version.md
   - name: ShutdownTimeLimit property doesn't work
     href: shutdowntimelimit-not-apply-to-wcf.md
-  - name: Troubleshoot Kerberos failures
+  - name: Troubleshoot Kerberos failures
     href: troubleshoot-kerberos-failures-ie.md
   - name: Understanding identities
     href: understanding-identities.md

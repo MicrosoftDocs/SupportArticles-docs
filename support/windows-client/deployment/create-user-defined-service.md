@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Create a user-defined service
 
@@ -25,15 +25,15 @@ _Original KB number:_ &nbsp; 137890
 
 ## Summary
 
-The Windows NT Resource Kit provides two utilities that allow you to create a Windows NT user-defined service for Windows NT applications and some 16-bit applications (but not for batch files).
+The Windows NT Resource Kit provides two utilities that allow you to create a Windows NT user-defined service for Windows NT applications and some 16-bit applications, but not for batch files.
 
 Instrsrv.exe installs and removes system services from Windows NT and Srvany.exe allows any Windows NT application to run as a service.
 
 ## Steps to create a user-defined service
 
-To create a Windows NT user-defined service, perform the following steps:
+To create a Windows NT user-defined service, follow these steps:
 
-1. At a MS-DOS command prompt(running CMD.EXE), type the following command:
+1. At an MS-DOS command prompt(running CMD.EXE), type the following command:
 
     ```console
     path \INSTSRV.EXE My Service path \SRVANY.EXE
@@ -49,7 +49,11 @@ To create a Windows NT user-defined service, perform the following steps:
     > [!WARNING]
     > Using Registry Editor incorrectly can cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that problems resulting from the incorrect use of Registry Editor can be solved. Use Registry Editor at your own risk.
 
-    For information about how to edit the registry, view the **Changing Keys And Values** online Help topic or the **Add and Delete Information in the Registry** and **Edit Registry Data** online Help topics in Registry Editor.
+    For information about how to edit the registry, view the following online Help topics in Registry Editor:
+
+    - **Changing Keys And Values**
+    - **Add and Delete Information in the Registry**
+    - **Edit Registry Data**
 
     > [!NOTE]
     > You should back up the registry before you edit it.
@@ -58,13 +62,13 @@ To create a Windows NT user-defined service, perform the following steps:
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\<My Service>`
 
-3. From the **Edit** menu, click **Add Key**. Type the following and click **OK**:
+3. From the **Edit** menu, select **Add Key**. Type the following entries, and select **OK**:
 
     - Key Name: **Parameters**
     - Class: \<leave blank>
 
 4. Select the **Parameters** key.
-5. From the **Edit** menu, click **Add Value**. Type the following and click **OK**:
+5. From the **Edit** menu, select **Add Value**. Type the following entries, and select **OK**:
 
     - Value Name: **Application**
     - Data Type: REG_SZ
@@ -74,17 +78,17 @@ To create a Windows NT user-defined service, perform the following steps:
 
 6. Close Registry Editor.
 
-By default, a newly created service is configured to run automatically when the system is restarted. To change this setting to **Manual**, run the Services applet from Control Panel and change the **Startup** value to **Manual**. A service set to **Manual** can be started in one of several ways:
+By default, a newly created service is configured to run automatically when the system is restarted. To change this setting to **Manual**, run the Services applet from Control Panel. Then change the **Startup** value to **Manual**. A service set to **Manual** can be started in one of several ways:
 
 - From the Services applet in Control Panel
 
-- From a MS-DOS command prompt, type the following:
+- From an MS-DOS command prompt, type the following command:
 
     ```console
     NET START <My Service>
     ```
 
-- Use the Sc.exe utility from the Resource Kit. Type the following from a MS-DOS command prompt:
+- Use the Sc.exe utility from the Resource Kit. Type the following command from an MS-DOS command prompt:
 
     ```console
     <path>\Sc.exe start <My Service>

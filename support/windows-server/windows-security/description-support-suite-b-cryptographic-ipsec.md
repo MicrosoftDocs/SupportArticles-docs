@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, clayse
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Description of the support for Suite B cryptographic algorithms that was added to IPsec
 
@@ -27,29 +27,32 @@ Support for Windows Vista Service Pack 1 (SP1) ends on July 12, 2011. To continu
 This article describes the support for Suite B cryptographic algorithms that was added in Windows Vista Service Pack 1 (SP1) and in Windows Server 2008. Suite B is a group of cryptographic algorithms that are approved by the United States National Security Agency (NSA).
 
 Suite B is used as an interoperable cryptographic framework for protecting sensitive data. Support has been extended to the Suite B algorithms for the following areas:
+
 - Main mode
 - Quick mode
 - Authentication settings  
 
-This article also describes the Internet Protocol security (IPsec) policy configuration syntax that uses Suite B algorithms.  
+This article also describes the Internet Protocol security (IPsec) policy configuration syntax that uses Suite B algorithms.
+  
 >[!Note]
- This content supercedes some content published on archived [https://technet.microsoft.com/library/dd125380(v=ws.10).aspx.](https://technet.microsoft.com/library/dd125380%28v=ws.10%29.aspx) 
+> This content supercedes some content published on archived [IPsec algorithms and methods supported in Windows](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd125380(v=ws.10)).
 
 ## More information
 
 ### Support limitations
 
 Support limitations for Suite B include the following:
+
 - The creation and enforcement of IPsec policy by using Suite B algorithms is supported only in Windows Vista Service Pack 1 (SP1), in Windows Server 2008, or in later versions of Windows.
 - The authoring of policies that contain Suite B algorithms is supported via the "Windows Firewall with Advanced Security" Microsoft Management Console (MMC) snap-in for Windows 7 and for later versions of Windows.
 - The Netsh advfirewall help command does not display configuration options for Suite B algorithms. This applies only to Windows Vista SP1.
 
 ### Definitions
 
-
-- Suite B 
+- Suite B
 
 Suite B is a set of standards that are specified by the National Security Agency (NSA). Suite B provides the industry with a common set of cryptographic algorithms that can be used to create products that meet the widest range of U.S. government needs. Suite B includes specification of the following types of algorithms:
+
   - Integrity
   - Encryption
   - Key exchange
@@ -533,8 +536,4 @@ The combinations that are described in the following table are not supported.
 
 For more information about Suite B, visit the following Web site: [Commercial National Security Algorithm Suite](https://apps.nsa.gov/iaarchive/programs/iad-initiatives/cnsa-suite.cfm)
 
-For more information about IPsec and connection security rules, visit the following Microsoft Web site: [https://go.microsoft.com/fwlink/?linkid=96525](https://go.microsoft.com/fwlink/?linkid=96525)  
-
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[949299](https://support.microsoft.com/help/949299) Description of the Crypto Operators security group that was added to Windows Vista Service Pack 1 to configure Windows Firewall for IPsec in Common Criteria mode
+For more information about IPsec and connection security rules, visit the following Microsoft Web site: [https://go.microsoft.com/fwlink/?linkid=96525](https://go.microsoft.com/fwlink/?linkid=96525)

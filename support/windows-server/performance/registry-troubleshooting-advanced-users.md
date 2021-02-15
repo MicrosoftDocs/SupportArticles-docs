@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: No Boot (not BugChecks)
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Registry troubleshooting steps for advanced users
 
@@ -52,7 +52,9 @@ Other files may be corrupted. You must determine whether only the registry hives
 - The random access memory (RAM)
 - The cache
 - The processor
-- The disk controllerIf you suspect faulty hardware, the hardware vendor must thoroughly investigate the condition of all computer components.
+- The disk controller
+
+If you suspect faulty hardware, the hardware vendor must thoroughly investigate the condition of all computer components.
 
 ### The Registry Is Written to at Shutdown
 

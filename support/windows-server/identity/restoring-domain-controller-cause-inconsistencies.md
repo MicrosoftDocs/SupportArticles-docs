@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory backup, restore, or disaster recovery
-ms.technology: ActiveDirectory 
+ms.technology: windows-server-active-directory 
 ---
 # Restoring a domain controller may cause inconsistencies between domain controllers
 
@@ -53,23 +53,23 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 
 ## More information
 
-When you restore a domain controller, the highest committed USN is rolled back to the point when the backup was created. The domain controller's invocation ID is retired and a new one is assigned. When a partner tries to replicate the first time after the restoration, the follow message is recorded:
+When you restore a domain controller, the highest committed USN is rolled back to the point when the backup was created. The domain controller's invocation ID is retired and a new one is assigned. When a partner tries to replicate the first time after the restoration, the following message is recorded:
 
-Event Type: Information
-Event Source: NTDS Replication
-Event Category: (5)
-Event ID: 1587
-Date: 3/16/2001
-Time: 10:52:35 AM
-User: CONTOSO\CO-NA-DC-01$
-Computer: CO-DC-02
-Description:
-The Directory Service Agent (DSA) corresponding to objectGuid d0a6a575-9702-4f4e-bf68-bb2a9f875188 has asked for changes starting at a bookmark preceding the local DSA's most recent restore from backup at USN 94727614. The bookmark is being adjusted as follows: Previous Invocation ID: bc546028-fae7-4978-abe0-d294694da32b 
-Previous Object Update USN: 95853579 
-Previous Property Update USN: 95853579 
-New Invocation ID: ae6286cb-740b-4bb3-ace7-9577efa9dc9f 
-New Object Update USN: 94727614 
-New Property Update USN: 94727614 
+> Event Type: Information  
+Event Source: NTDS Replication  
+Event Category: (5)  
+Event ID: 1587  
+Date: *\<DateTime>*  
+Time: *\<DateTime>*  
+User: CONTOSO\\CO-NA-DC-01$  
+Computer: CO-DC-02  
+Description:  
+The Directory Service Agent (DSA) corresponding to objectGuid   d0a6a575-9702-4f4e-bf68-bb2a9f875188 has asked for changes starting at a bookmark preceding the local DSA's most recent restore from backup at USN 94727614. The bookmark is being adjusted as follows: Previous Invocation ID: bc546028-fae7-4978-abe0-d294694da32b  
+Previous Object Update USN: 95853579  
+Previous Property Update USN: 95853579  
+New Invocation ID: ae6286cb-740b-4bb3-ace7-9577efa9dc9f  
+New Object Update USN: 94727614  
+New Property Update USN: 94727614  
 
 This event is typical for a restored domain controller. By itself, this does not indicate a problem. This is a problem if objects that are created on the restored domain controller "silently" do not replicate out.
 
@@ -82,11 +82,3 @@ You restore domain controller 1 from a backup on which the highest USN is 50. Af
 In some cases, you can detect this state. Use Ldp or ADSI Edit to read the current highestCommittedUSN attribute on the rootDSE object on the restored domain controller. Then, compare that to the output from the **repadmin /showreps /verbose** command on one of its partners. In the Repadmin output, look for the "USN ###/OU" value for the restored domain controller for each naming context. If the value in Repadmin is higher than the highestCommittedUSN attribute, the restored domain controller is experiencing the problem.
 
 If the restored domain controller has originated enough updates that its highestCommittedUSN attribute has reached or exceeded the "up-to-dateness" vector that is recorded on the other domain controllers (as in the example in this article), some changes will never be considered for replication. However, new changes are replicated out. The unreplicated changes are referred to as "lingering objects."
-
-## References
-
-For additional information about lingering objects, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[317097](https://support.microsoft.com/help/317097) Lingering Objects Prevent Active Directory Replication from Occurring
-
-[3125191](https://support.microsoft.com/help/3125191) Event ID 1587 is generated on a Domain Controller when there are more than two domain controllers in the same site as a Lync server

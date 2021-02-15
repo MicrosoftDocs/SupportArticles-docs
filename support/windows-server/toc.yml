@@ -1,5 +1,5 @@
 - name: Windows Server
-  href: welcome-windows-server.md
+  href: welcome-windows-server.yml
 - name: Active Directory
   items:
   - name: Active Directory
@@ -8,6 +8,8 @@
     items:
     - name: c00002e2 error or "Choose an option" is displayed
       href: ./identity/domain-controller-not-start-c00002e2-error.md
+    - name: Directory Services event 2095 when USN rollback occurs
+      href: ./identity/detect-and-recover-from-usn-rollback.md
     - name: Event 2089 if you don't back up a domain controller
       href: ./identity/ntds-replication-event-2089-backup-latency-interval.md
     - name: Event ID 1587 after you restore domain controller
@@ -22,6 +24,8 @@
       href: ./identity/ad-database-offline-defragmentation.md
     - name: Relocate a SYSVOL tree
       href: ./identity/relocate-sysvol-tree-frs-for-replication.md
+    - name: RODC replicates passwords
+      href: ./identity/rodc-replicates-passwords-grant-incorrect-permissions.md
     - name: Syskey.exe utility is no longer supported
       href: ./identity/syskey-exe-utility-is-no-longer-supported.md
     - name: SYSVOL folder isn't replicated between domain controllers
@@ -32,6 +36,8 @@
       href: ./identity/ca-cant-use-certificate-template.md
     - name: Back up recovery agent EFS private key
       href: ./identity/back-up-recovery-agent-efs-private-key.md
+    - name: Can't select CA-compatible certificate templates
+      href: ./identity/cannot-select-windows-server-2016-ca-compatible-certificate-templates.md
     - name: Can't share files with multiple EFS certificates
       href: ./identity/cant-share-files-multiple-efs-certificates.md
     - name: Certificate Services doesn't start
@@ -50,12 +56,16 @@
       href: ./identity/uninstall-reinstall-ca-role.md
     - name: How to remove manually Enterprise Windows Certificate Authority
       href: ./identity/delete-enterprise-windows-certificate-authority.md
+    - name: Move a certification authority to another server
+      href: ./identity/move-certification-authority-to-another-server.md
     - name: Move Certificate Server database and log files
       href: ./identity/move-certificate-server-database-log-files.md
     - name: Required trusted root certificates
       href: ./identity/trusted-root-certificates-are-required.md
     - name: Set different validity period for subordinate CA
       href: ./identity/set-enterprise-subordinate-ca-validity-period.md
+    - name: Set up certificate-based authentication across forests without trust for a web server
+      href: ./identity/set-up-certificate-based-authentication-across-forest-without-trust.md
     - name: Valid root CA certificates are untrusted
       href: ./identity/valid-root-ca-certificates-untrusted.md
     - name: Version 3 templates don't appear in certificate web enrollment
@@ -72,6 +82,8 @@
       href: ./identity/adws-service-crashes-after-you-upgrade.md
     - name: Database garbage collection process
       href: ./identity/database-garbage-collection-caculation-of-allowed-intervals.md
+    - name: Error when you configure a server with Server Manager
+      href: ./identity/fail-to-configure-server-using-server-manager.md
     - name: ESENT event IDs 1000, 1202, 412, and 454
       href: ./identity/esent-events-1000-1202-412-454.md
     - name: Event IDs 5788 and 5789 occur
@@ -80,6 +92,8 @@
       href: ./identity/complete-semantic-database-analysis-ad-db.md
     - name: How to use Ntdsutil to manage Active Directory files
       href: ./identity/use-ntdsutil-manage-ad-files.md
+    - name: ISMServ.exe fails to start when domain controller starts
+      href: ./identity/ismserv-not-start-when-domain-controller-starts.md
   - name: Active Directory domain or forest functional level updates
     items:
     - name: '"Adprep could not contact a replica" error when running "Adprep /rodcprep" command'
@@ -90,6 +104,8 @@
       href: ./identity/domain-controller-promotion-windows-server-technical-preview.md
     - name: How to configure firewall for domains and trusts
       href: ./identity/config-firewall-for-ad-domains-and-trusts.md
+    - name: Raise Active Directory domain and forest functional levels
+      href: ./identity/raise-active-directory-domain-forest-functional-levels.md
   - name: Active Directory Federation Services (AD FS)
     items:
     - name: ADFS 2.0 certificate error
@@ -104,6 +120,8 @@
       href: ./identity/availability-description-afds.md
     - name: Change AD FS 2.0 service communications certificate
       href: ./identity/change-ad-fs-2-dot-0-service-communications.md
+    - name: Description of the Extranet Smart Lockout feature
+      href: ./identity/extranet-smart-lockout-feature.md
     - name: Disable and replace TLS 1.0 in ADFS
       href: ./identity/disable-and-replace-tls-1dot0.md
     - name: Error 0x80072EE7 when you perform Workplace Join
@@ -174,7 +192,15 @@
       href: ./identity/active-directory-replication-error-1256.md
     - name: Active Directory Replication Error 8451
       href: ./identity/active-directory-replication-error-8451.md
-    - name: Active Directory replication event ID 2108 and 1084
+    - name: Active Directory replication Event ID 1388 or 1988
+      href: ./identity/active-directory-replication-event-id-1388-1988.md
+    - name: Active Directory replication Event ID 1925
+      href: ./identity/active-directory-replication-event-id-1925-dns-lookup.md
+    - name: Active Directory replication Event ID 2042
+      href: ./identity/active-directory-replication-event-id-2042.md
+    - name: Active Directory replication Event ID 2087
+      href: ./identity/active-directory-replication-event-id-2087.md
+    - name: Active Directory replication Event ID 2108 and 1084
       href: ./identity/replication-event-id-2108-1084.md
     - name: AD operations fail with Win32 error 1127
       href: ./identity/replication-error-1127.md
@@ -206,6 +232,8 @@
       href: ./identity/disable-knowledge-consistency-checker-automatic-generation.md
     - name: Duplicate AD replication connections are created
       href: ./identity/duplicate-active-directory-replication-connections.md
+    - name: Get and use AD Replication Status Tool
+      href: ./identity/get-use-active-directory-replication-status-tool.md
     - name: Hotfixes for DFS technologies
       href: ./identity/distributed-file-system-hotfixes.md
     - name: How to restrict RPC traffic to a specific port
@@ -214,6 +242,8 @@
       href: ./identity/information-lingering-objects.md
     - name: Lingering objects still remain
       href: ./identity/lingering-objects-remain.md
+    - name: Manually replicating data between domain controllers fails
+      href: ./identity/target-principal-name-is-incorrect-when-replicating-data.md
     - name: Modify the default intra-site DC replication interval
       href: ./identity/modify-default-intra-site-dc-replication-interval.md
     - name: NTDS Replication Warning Event ID 1093
@@ -254,6 +284,8 @@
       href: ./identity/remote-procedure-call-failed-and-did-not-execute-error.md
     - name: Troubleshoot Event ID 1311 messages
       href: ./identity/troubleshoot-event-id-1311-messages.md
+    - name: Troubleshoot Jet database errors and recovery steps
+      href: ./identity/jet-database-errors-recovery-steps.md
     - name: Troubleshoot replication error 8418
       href: ./identity/replication-error-8418.md
     - name: Troubleshoot replication error 8456 or 8457
@@ -264,6 +296,10 @@
       href: ./identity/replication-error-8606.md
     - name: Use Ntdsutil to find and clean up duplicate security identifiers
       href: ./identity/ntdsutil-find-clean-duplicate-security-identifiers.md
+  - name: Active Directory Rights Management Services
+    items:
+    - name: Event ID 84 occurs in AD RMS in Windows Server
+      href: ./identity/event-id-84-occurs-ad-rms-windows-server.md
   - name: Active Directory topology (sites, subnets, and connection objects)
     items:
     - name: Active Directory services and domains (Part 1)
@@ -294,6 +330,8 @@
       href: ./identity/cannot-add-domain-controller-node-failover-cluster.md
     - name: Can't select DNS Server role when adding a domain controller into an existing AD domain
       href: ./identity/auto-install-dns-server-role-disabled-promte-domain-controller.md
+    - name: Create an Active Directory server 
+      href: ./identity/create-an-active-directory-server.md
     - name: DC promotion stops responding
       href: ./identity/dc-promotion-not-respond-netbios-disabled.md
     - name: DCPROMO demotion fails
@@ -324,12 +362,16 @@
       href: ./identity/dcpromo-replication-phase-error.md
     - name: Move Windows Server to a domain fails
       href: ./identity/wizard-not-gain-access-to-domain.md
+    - name: NETLOGON share isn't present after you install AD DS on a new full or read-only domain controller
+      href: ./identity/netlogon-share-not-present-after-install-ad-ds-on-full-read-only-domain-controller.md
     - name: Newly promoted domain controller fails to advertise after DCpromo
       href: ./identity/newly-promoted-domain-controller-fail-advertise.md
   - name: Domain controller scalability or performance (including LDAP)
     items:
     - name: DC returns only 5000 values in LDAP response
       href: ./identity/domain-controller-returns-500-values-ldap-response.md
+    - name: Domain controller is not functioning correctly
+      href: ./identity/domain-controller-not-functioning-correctly.md
     - name: Event ID 1644 when LDAP queries are run
       href: ./identity/ldap-queries-run-slowly.md
     - name: How to troubleshoot high Lsass.exe CPU utilization
@@ -360,14 +402,20 @@
       href: ./identity/sync-center-slow-syncing-of-offline-files.md
     - name: Troubleshooting AD Replication error 1908
       href: ./identity/ad-replication-error-1908-not-find-domain-controller.md
+    - name: Troubleshoot errors when joining computers to a domain
+      href: ./identity/troubleshoot-errors-join-computer-to-domain.md
     - name: Unable to join computers to a domain
       href: ./identity/cannot-join-computer-to-domain.md
+    - name: Using domain join UI to join a computer to AD domain fails
+      href: ./identity/fail-to-join-computer-to-ad-domain.md
   - name: LDAP configuration and interoperability
     items:
     - name: Enable LDAP over SSL
       href: ./identity/enable-ldap-over-ssl-3rd-certification-authority.md
     - name: How to enable LDAP signing in Windows Server
       href: ./identity/enable-ldap-signing-in-windows-server.md
+    - name: How to turn on debug logging of the LDAP client
+      href: ./identity/turn-on-debug-logging-ldap-client.md
     - name: LDAP paged queries with subordinate referrals are not chased properly
       href: ./identity/ldap-paged-queries-subordinate-referrals-not-chased.md
     - name: LDAP queries return partial attribute list
@@ -422,6 +470,8 @@
       href: ./identity/fail-to-access-data-from-source-control-explorer.md
     - name: Can't add user or object to directory service
       href: ./identity/cannot-add-user-object-differ-by-diacritic-mark-character.md
+    - name: Can't start Active Directory Users and Computers Tool
+      href: ./identity/cannot-start-active-directory-users-and-computers-tool.md
     - name: Compatibility with user accounts ending with the dollar sign
       href: ./identity/compatibility-user-accounts-end-dollar-sign.md
     - name: Define Security Templates by Security Templates Snap-In
@@ -498,6 +548,10 @@
     items:
     - name: Configure W32Time against a large time offset
       href: ./identity/configure-w32ime-against-huge-time-offset.md
+    - name: Convert date/time attributes to standard time format
+      href: ./identity/convert-datetime-attributes-to-standard-format.md
+    - name: 'Error message when you run the "w32tm /resync" command'
+      href: ./identity/error-message-run-w32tm-resync-no-time-data-available.md
     - name: 'Event 142: The time service has stopped advertising'
       href: ./identity/w32time-event-142-time-service-stopped-advertising.md
     - name: How to configure authoritative time server
@@ -526,6 +580,8 @@
       href: ./admin-development/convert-string-guid-to-hexadecimal-string.md
   - name: Windows Management Instrumentation (WMI)
     items:
+    - name: Best practice of configuring EventLog forwarding performance
+      href: ./admin-development/configure-eventlog-forwarding-performance.md
     - name: Suggested hotfixes for WMI issues
       href: ./admin-development/hotfixes-for-wmi-issues.md
     - name: Windows Installer reconfigured all applications
@@ -564,12 +620,18 @@
     items:
     - name: 0x80004027 error when you remotely access COM+ object
       href: ./application-management/0x80004027-remotely-access-com-plus-object.md
+    - name: Error code 80080005 when start many COM+ applications
+      href: ./application-management/error-8008005-when-start-complus-applications.md
   - name: DTC startup, configuration, connectivity, and cluster
     items:
     - name: How to configure DTC to work through firewalls
       href: ./application-management/configure-dtc-to-work-through-firewalls.md
     - name: How to enable network DTC access
       href: ./application-management/enable-network-dtc-access.md
+    - name: Rebuild or move MSDTC installation to be used with SQL failover cluster
+      href: ./application-management/rebuild-move-msdtc-installation-used-with-sql-failover-cluster.md
+    - name: Troubleshoot connectivity issues in MS DTC with DTCPing  tool
+      href: ./application-management/ms-dtc-connectivity-issues.md
   - name: Event System
     items:
     - name: Description of the Shutdown Event Tracker
@@ -620,7 +682,7 @@
       href: ./backup-and-storage/enable-debug-tracing-features-vss.md
     - name: Error 3266/3013 when you perform database backup/restore
       href: ./backup-and-storage/database-backup-error-3266-3013.md
-    - name: Error message when you do a system state backup
+    - name: Error message when you do a system state backup
       href: ./backup-and-storage/error-when-you-do-system-state-backup.md
     - name: Event ID 8193 when you perform a backup
       href: ./backup-and-storage/event-id-8193-when-you-perform-backup.md
@@ -628,7 +690,7 @@
       href: ./backup-and-storage/use-backup-feature-back-up-restore-data.md
     - name: No VSS writers when running the "vssadmin list writers" command
       href: ./backup-and-storage/no-vss-writers-listed-run-vssadmin-list-writers.md
-    - name: Return codes that are used by the Robocopy utility
+    - name: Return codes that are used by the Robocopy utility
       href: ./backup-and-storage/return-codes-used-robocopy-utility.md
     - name: Server backup process fails and error 0x80070005
       href: ./backup-and-storage/cannot-back-up-server-error-0x80070005.md
@@ -702,6 +764,8 @@
       href: ./backup-and-storage/error-setup-unable-create-new-system-partition.md
     - name: Enabling MPIO with SAS disks decreases performance
       href: ./backup-and-storage/enabling-mpio-with-sas-decreases-performance.md
+    - name: MPIO option not available in Disk Management
+      href: ./backup-and-storage/mpio-option-not-available-disk-management.md
   - name: Partition and volume management
     items:
     - name: '"You do not have permission" error'
@@ -744,8 +808,12 @@
       href: ./backup-and-storage/automating-disk-cleanup-tool.md
     - name: How to set up dynamic boot partition mirroring on GPT disks
       href: ./backup-and-storage/set-up-dynamic-boot-partition-mirroring.md
+    - name: Intel SSD D3-S4510 and Intel SSD D3-S4610 series 1.92 TB and 3.84 TB drives unresponsive
+      href: ./backup-and-storage/intel-ssd-d3-s4510-s4610-series-1-dot-92-3-dot-84-tb-drives-unresponsive.md
     - name: New logging mechanism for VDS
       href: ./backup-and-storage/new-vds-logging-mechanism.md
+    - name: ReFS volume using DPM becomes unresponsive
+      href: ./backup-and-storage/refs-volume-dpm-unresponsive.md
     - name: Restore system/boot drive letter
       href: ./backup-and-storage/restore-system-boot-drive-letter.md
     - name: Simple volumes may become inaccessible
@@ -786,12 +854,16 @@
       href: ./backup-and-storage/error-0x8000ffff-run-vssadmin-list-writers-command.md
     - name: Error 0x80042409 when doing a VSS restore
       href: ./backup-and-storage/event-12289-vss-backup-restore.md
+    - name: Event ID 513 when running VSS in Windows Server
+      href: ./backup-and-storage/event-id-513-vss-windows-server.md
     - name: No VSS writers are listed when running vssadmin list writers
       href: ./backup-and-storage/no-vss-writers-listed-run-vssadmin-list.md
     - name: Shadow copies are deleted when running an FCI classification job
       href: ./backup-and-storage/shadow-copies-deleted-run-file-classification-infrastructure.md
     - name: System state backup using Windows Server Backup fail
       href: ./backup-and-storage/system-writer-not-found-in-backup.md
+    - name: Third-party backup warnings after installing a servicing update
+      href: ./backup-and-storage/third-party-backup-warnings-install-servicing-update.md
     - name: Volume Shadow Copy Service take longer to go online
       href: ./backup-and-storage/volume-shadow-copy-service-take-longer-online.md
     - name: VSS event 8193 when restarting the Cryptographic Services service
@@ -802,6 +874,12 @@
       href: ./backup-and-storage/vss-warnings-sbs-2011.md
     - name: VSS writers report failed on virtual machine
       href: ./backup-and-storage/vss-writers-report-failed-virtual-machine.md
+- name: Containers
+  items:
+  - name: Management of Containers
+    items:
+    - name: Support policy for Windows containers and Docker in on-premises scenarios
+      href: ./containers/support-for-windows-containers-docker-on-premises-scenarios.md
 - name: Deployment
   items:
   - name: Deployment
@@ -836,26 +914,14 @@
       href: ./deployment/change-volume-licensing-product-key.md
     - name: How to rebuild the Tokens.dat file
       href: ./deployment/rebuild-tokens-dotdat-file.md
+    - name: Specified database is not a valid VAMT database error
+      href: ./deployment/specified-database-not-valid-vamt-error.md
     - name: Unknown devices in Device manager
       href: ./deployment/unknown-device-vmbus-virtual-machine.md
     - name: Windows Activation fails with error 0x8007267C
       href: ./deployment/windows-activation-fails-with-error-0x8007267.md
     - name: Windows installation fails with error
       href: ./deployment/error-product-key-not-match-windows-images-installation.md
-  - name: Bitlocker
-    items:
-    - name: Computer Record is Rejected in MBAM
-      href: ./deployment/computer-record-rejected-in-mbam.md
-    - name: Error when opening reports in MBAM
-      href: ./deployment/error-when-opening-reports-mbam.md
-    - name: Error when viewing reports in MBAM
-      href: ./deployment/server-error-click-reports-tab-mbam.md
-    - name: MBAM Enterprise Reports aren't updated
-      href: ./deployment/mbam-enterprise-report-not-updated.md
-    - name: MBAM fails to take ownership of the TPM
-      href: ./deployment/error-mbam-take-ownership-tpm.md
-    - name: MBAM setup fails if SSRS is not configured properly
-      href: ./deployment/mbam-setup-fails.md
   - name: Devices and Drivers
     items:
     - name: '"Stop 0x0000007B" error'
@@ -868,6 +934,8 @@
       href: ./deployment/default-core-parking-behavior-changes.md
     - name: Enable Plug and Play feature for parallel port devices
       href: ./deployment/enable-plug-play-for-parallel-port-devices.md
+    - name: Event ID 37 after you change power policy
+      href: ./deployment/event-id-37-windows-kernel-processor-power.md
     - name: Event ID 56 is logged
       href: ./deployment/event-id-56-logged.md
     - name: Fail to insert a smart card in a reader
@@ -914,11 +982,13 @@
       href: ./deployment/failed-schedule-software-protection.md
     - name: Fix Windows Update errors
       href: ./deployment/fix-windows-update-errors.md
-    - name: How To Use the Recovery Consol
+    - name: How to block user access to Windows Update
+      href: ./deployment/block-user-access-windows-update.md
+    - name: How To use the Recovery Consol
       href: ./deployment/use-recovery-console-not-start.md
     - name: Install Microsoft Product Support Reporting Tool
       href: ./deployment/microsoft-product-support-reporting-tool-v5220030.md
-    - name: List of updates
+    - name: List of updates
       href: ./deployment/list-updates.md
     - name: Re-register Windows client/server in WSUS
       href: ./deployment/re-register-windows-clientserver-in-wsus.md
@@ -928,7 +998,7 @@
       href: ./deployment/systeminfo-not-display-all-updates.md
     - name: Temporarily deactivate the kernel mode filter driver
       href: ./performance/deactivate-kernel-mode-filter-driver.md
-    - name: Why you may be prompted to restart your computer
+    - name: Why you may be prompted to restart your computer
       href: ./deployment/why-prompted-restart-computer.md
     - name: Windows Server 2008 Service Pack 2
       href: ./deployment/windows-server-2008-service-pack-2.md
@@ -994,6 +1064,8 @@
       href: ./deployment/windows-deployment-service-not-start.md
     - name: Windows Internal Database (WID) installation fails
       href: ./deployment/error-install-windows-internal-database.md
+    - name: Windows Server support and installation instructions for the AMD Rome family of processors
+      href: ./deployment/windows-server-support-installation-for-amd-role-family-processor.md
     - name: WSUS clients can't install updates
       href: ./deployment/wsus-clients-cant-install-updates.md
 - name: Group Policy
@@ -1030,8 +1102,10 @@
       href: ./group-policy/loopback-processing-of-group-policy.md
     - name: How to set event log security locally or via Group Policy
       href: ./group-policy/set-event-log-security-locally-or-via-group-policy.md
-    - name: How to give users access to Group Policy Objects
+    - name: How to give users access to Group Policy Objects
       href: ./group-policy/give-users-access-group-policy-objects.md
+    - name: Manage Group Policy administrative template files
+      href: ./group-policy/manage-group-policy-adm-file.md
     - name: Permissions for this GPO are inconsistent
       href: ./group-policy/permissions-this-gpo-inconsistent.md
     - name: Remove this item if it is no longer applied option
@@ -1078,6 +1152,8 @@
       href: ./group-policy/set-roaming-profile-path-all-users-applies-all-acccounts.md
     - name: A Group Policy setting isn't available in the security policy settings list
       href: ./group-policy/default-owner-objects-created-members-administrators-group-not-available.md
+    - name: AuthZ fails with an Access Denied error
+      href: ./group-policy/authz-fails-access-denied-error-application-access-check.md
     - name: Error 0x80004005 when you create DSN with GPP
       href: ./group-policy/creating-dsn-with-gpp-fails.md
     - name: Event 1202 with status 0x534 logged
@@ -1106,7 +1182,7 @@
       href: ./group-policy/group-policy-add-maxtokensize-registry-entry.md
     - name: User GPP Scheduled Task item fails to apply
       href: ./group-policy/user-gpp-scheduled-task-item-fails-apply.md
-    - name: Userenv errors occur and events are logged
+    - name: Userenv errors occur and events are logged
       href: ./group-policy/userenv-errors-occur-events-are-logged.md
     - name: WMI Group Policy filters don't work
       href: ./group-policy/wmi-group-policy-filters-not-working.md
@@ -1128,8 +1204,12 @@
       href: ./group-policy/force-authoritative-non-authoritative-synchronization.md
     - name: Minimize SYSVOL size by removing administrative templates
       href: ./group-policy/minimize-sysvol-size-removing-templates.md
+    - name: Rebuild the SYSVOL tree and its content in a domain 
+      href: ./group-policy/rebuild-sysvol-tree-and-content-in-a-domain.md
     - name: RODCs don't replicate SYSVOL shared directory
       href: ./group-policy/events-6804-2843-rodcs-not-replicate-sysvol.md
+    - name: Troubleshoot missing SYSVOL and NETLOGON shares
+      href: ./group-policy/missing-sysvol-and-netlogon-shares.md
 - name: High Availability
   items:
   - name: High Availability
@@ -1163,7 +1243,7 @@
   - name: Cannot failover a group
     items:
     - name: SMB 3.0 features in Windows Server 2012 file server
-      href: ./high-availability/smb-3- file-server-features.md
+      href: ./high-availability/smb-3-file-server-features.md
   - name: Cluster node is hanging
     items:
     - name: Memory dump file is corrupted
@@ -1174,7 +1254,7 @@
       href: ./high-availability/switches-start-cluster-service.md
     - name: Cluster Service Stops Responding on a Cluster Node
       href: ./high-availability/cluster-service-stops-responding-a-cluster-node.md
-    - name: How to troubleshoot the Cluster service account
+    - name: How to troubleshoot the Cluster service account
       href: ./high-availability/troubleshoot-cluster-service-account.md
     - name: Troubleshoot Cluster service startup issues
       href: ./high-availability/troubleshoot-cluster-service-startup-issues.md
@@ -1186,6 +1266,8 @@
     items:
     - name: CAP in failover cluster doesn't come online
       href: ./high-availability/unable-to-get-computer-object-using-guid.md
+    - name: Cluster validation test on Active Directory configuration fails
+      href: ./high-availability/cluster-validation-test-fails-multi-site-cluster-scenario.md
     - name: Error "An item with the same key has already been added"
       href: ./high-availability/error-an-item-with-the-same-key-has-already-been-added.md
     - name: Failover cluster validation fails
@@ -1216,6 +1298,10 @@
       href: ./high-availability/guest-cluster-nodes-in-hyper-v-not-create-or-join.md
     - name: Unable to join a node into a cluster
       href: ./high-availability/cannot-join-a-node-into-a-cluster.md
+  - name: Node removed from the cluster
+    items:
+    - name: Cluster IP address resources fail on both nodes when one node disconnects
+      href: ./high-availability/cluster-ip-resources-fail-2-node-2-site-fsw-cluster.md
   - name: Print clusters and High Availability Printing
     items:
     - name: How to set up a clustered print server
@@ -1248,6 +1334,8 @@
       href: ./high-availability/shadow-copies-of-shared-folders.md
     - name: Configure volume mount points on a server cluster
       href: ./high-availability/configure-volume-mount-points-server-cluser.md
+    - name: Create file shares on a cluster
+      href: ./high-availability/create-file-shares-on-a-cluster.md
     - name: Enable support using clustered RAID controllers
       href: ./high-availability/enable-support-using-raid-controllers.md
     - name: Event ID 1222 when you create failover cluster
@@ -1264,8 +1352,12 @@
       href: ./high-availability/microsoft-support-policy-failover-clusters.md
     - name: NetBIOS and WINS not bind to cluster IP address resources
       href: ./high-availability/netbios-wins-dont-bind-cluster-ip-address-resources.md
+    - name: 'Recommended private "Heartbeat" configuration on a cluster server'
+      href: ./high-availability/private-heartbeat-configuration-on-cluster-server.md
     - name: Recommended updates for Windows Server 2008 R2 SP1 Failover Clusters
       href: ./high-availability/updates-for-windows-server-2008-r2-sp1-failover-cluster.md
+    - name: SMB features don't work with non-default Cluster Network Name Configuration
+      href: ./high-availability/smb-features-dont-work-non-default-cluster-network-name-configuration.md
     - name: Third-party storage software solutions support policy
       href: ./high-availability/3rd-party-storage-software-solutions-support.md
     - name: Unexpected warning messages in a virtualized failover cluster
@@ -1290,6 +1382,8 @@
       href: ./networking/configure-dfs-use-domain-names.md
     - name: DFS Namespaces service and its configuration data
       href: ./networking/dfs-namespaces-service-configuration-data.md
+    - name: Domain users fail to access a share on a file server
+      href: ./networking/target-account-name-incorrect-error-access-file-share.md
     - name: DNS CNAME alias fails to connect a SMB file server share
       href: ./networking/dns-cname-alias-cannot-access-smb-file-server-share.md
     - name: Error messages on SMB connections
@@ -1304,6 +1398,8 @@
       href: ./networking/guest-access-in-smb2-is-disabled-by-default.md
     - name: Hotfixes for File Services technologies
       href: ./networking/hotfixes-for-file-services-technologies.md
+    - name: How to allow remote users to access your network
+      href: ./networking/allow-remote-users-to-access-your-network.md
     - name: How to create a virtual directory on an existing Web site
       href: ./networking/create-virtual-directory-folder-remote-computer.md
     - name: How to manually decommission a root server
@@ -1316,6 +1412,8 @@
       href: ./networking/mapped-network-drive-disconnected.md
     - name: Name of redirected folder isn't user name
       href: ./networking/redirected-documents-folder-name-not-user-name.md
+    - name: Network performance of SMB Direct is reduced
+      href: ./networking/reduced-performance-after-smb-encryption-signing.md
     - name: NFS Server and File Permissions
       href: ./networking/nfs-server-file-permissions.md
     - name: Problems occur when administrative shares are missing
@@ -1324,6 +1422,8 @@
       href: ./networking/recovery-process-of-dfs-namespace.md
     - name: Robocopy may report error 1338 or 87
       href: ./networking/robocopy-may-report-error-1338-87.md
+    - name: Overview of Server Message Block signing
+      href: ./networking/overview-server-message-block-signing.md
     - name: Setting primary and secondary WINS server options
       href: ./networking/setting-wins-server-options.md
     - name: System error 1331 when you connect to a share
@@ -1356,10 +1456,14 @@
       href: ./networking/dfsr-event-id-2213.md
     - name: DFSR Health Report shows Event ID 4302
       href: ./networking/dfsr-diagnostics-shows-sharing-violations-events.md
+    - name: Error when changing DFS replication group or namespace
+      href: ./networking/value-does-not-fall-within-the-expected-range.md
     - name: How to configure DFSR logging
       href: ./networking/change-dfsr-debug-log-settings.md
     - name: Security setting changes delays on DFSR replication partners
       href: ./networking/security-setting-changes-not-appear-dfsr-replication.md
+    - name: SYSVOL DFSR migration fails after in-place upgrade
+      href: ./networking/sysvol-dfsr-migration-fails-after-in-place-upgrade.md
     - name: Troubleshoot journal_wrap errors on Sysvol and DFS replica sets
       href: ./networking/how-frs-uses-usn-change-journal-ntfs-file-system.md
     - name: Troubleshoot missing SYSVOL and Netlogon shares
@@ -1368,6 +1472,8 @@
       href: ./networking/support-policy-for-dfsr-dfsn-deployment.md
   - name: DNS
     items:
+    - name: Accessing a server locally by using its FQDN or CNAME alias fails
+      href: ./networking/accessing-server-locally-with-fqdn-cname-alias-denied.md
     - name: Active Directory-integrated DNS zone serial number behavior
       href: ./networking/ad-integrated-dns-zone-serial-no-dot-behavior.md
     - name: Avoid registering unwanted NIC in DNS
@@ -1392,20 +1498,30 @@
       href: ./networking/dns-name-queries-not-success.md
     - name: DNS records don't show in DNS zones
       href: ./networking/dns-records-not-present.md
-    - name: DNS server logs event 7062
+    - name: DNS registers duplicate SRV records for a DC
+      href: ./networking/dns-registers-duplicate-srv-records-for-dc.md
+    - name: DNS Servers don't resolve queries for top-level domains
+      href: ./networking/dns-server-not-resolve-queries-for-top-level-domain.md
+    - name: DNS Server logs event 7062
       href: ./networking/dns-server-logs-event-7062.md
     - name: DNS Server vulnerability to Cache snooping attacks
       href: ./networking/dns-server-cache-snooping-attacks.md
     - name: DNS zone transfer options are unexpectedly reset
       href: ./networking/dns-zone-transfer-options-reset.md
-    - name: DNS Server becomes an island
+    - name: DNS Server becomes an island
       href: ./networking/dns-server-becomes-island.md
     - name: Event 4015 when running DNS on RODC
       href: ./networking/rodc-logs-event-4015-error-00002095.md
+    - name: Events 407 and 408 when querying DNS server
+      href: ./networking/events-407-408-in-dns-server-event-log.md
     - name: Event ID 4000 and 4007 when DNS zones not loaded
       href: ./networking/dns-zones-do-not-load-event-4000-4007.md
     - name: Forwarders and conditional forwarders resolution timeouts
       href: ./networking/forwarders-resolution-timeouts.md
+    - name: GetAddrInfo fails with error 11001
+      href: ./networking/getaddrinfo-fails-error-11001-call-af-inet6-family.md
+    - name: How to configure DNS dynamic updates
+      href: ./networking/configure-dns-dynamic-updates-windows-server-2003.md
     - name: How to create a custom application directory partition
       href: ./networking/create-apply-custom-application-directory-partition.md
     - name: How to enable or disable DNS updates
@@ -1422,7 +1538,7 @@
       href: ./networking/no-dynamic-updates-on-reverse-lookup-zone.md
     - name: Prevent Domain Controllers from DNS Names
       href: ./networking/prevent-domain-controllers-dns-names.md
-    - name: Records aren't deleted if scavenging manually
+    - name: Records aren't deleted if scavenging manually
       href: ./networking/records-arent-deleted.md
     - name: Root hints reappear after removed
       href: ./networking/root-hints-reappear-after-removed.md
@@ -1438,13 +1554,15 @@
       href: ./networking/troubleshoot-dns-name-resolution.md
     - name: Verify that SRV DNS records have been created
       href: ./networking/verify-srv-dns-records-have-been-created.md
+    - name: WINS registration fails if a server points to itself for WINS name resolution
+      href: ./networking/wins-registration-fails-if-server-point-to-itself-for-wins-name-resolution.md
   - name: Dynamic Host Configuration Protocol (DHCP)
     items:
     - name: Can't add a DHCP reservation
       href: ./networking/cant-add-dhcp-reservation.md
     - name: DHCP client can't get a DHCP-assigned IP address
       href: ./networking/dhcp-client-fail-obtain-valid-ip-address.md
-    - name: DHCP Server sends a DHCPNAK to clients
+    - name: DHCP Server sends a DHCPNAK to clients
       href: ./networking/dhcp-server-sends-dhcpnak-clients.md
     - name: Dynamic updates of DNS registrations are delayed
       href: ./networking/dhcp-dynamic-updates-of-dns-registrations-delayed.md
@@ -1470,12 +1588,16 @@
       href: ./networking/move-frs-staging-folder-to-different-drive.md
     - name: NTFRS_xxxxxxxx is added to a folder name
       href: ./networking/ntfrs-added-to-folder-name.md
+    - name: NTFRS error event 13559 and replication stops
+      href: ./networking/ntfrs-error-event-13559-replication-stops.md
     - name: Recovering missing FRS objects and attributes in AD
       href: ./networking/recovering-missing-frs-objects-attributes-ad.md
     - name: Troubleshoot the File Replication Service
       href: ./networking/troubleshoot-file-replication-service-ditributed-file-system.md
     - name: Use BurFlags to reinitialize FRS
       href: ./networking/use-burflags-to-reinitialize-frs.md
+    - name: Windows Server version 1709 no longer supports FRS
+      href: ./networking/windows-server-version-1709-no-longer-supports-frs.md
   - name: IP Address Management (IPAM)
     items:
     - name: An incorrect IP address is returned
@@ -1518,10 +1640,14 @@
       href: ./networking/windows-server-2012-directaccess-hotfixes.md
   - name: TCP/IP communications
     items:
-    - name: a SMB server is unresponsive
+    - name: A SMB server is unresponsive
       href: ./networking/smb-server-unresponsive.md
+    - name: Accessing websites hosted on Akamai CDN fails
+      href: ./networking/access-denied-visit-website-hosted-akamai-cdn.md
     - name: Address Resolution Protocol (ARP) caching behavior
       href: ./networking/address-resolution-protocol-arp-caching-behavior.md
+    - name: Blank default gateway after configuring Static IP address 
+      href: ./networking/blank-default-gateway-configure-static-ip-address.md
     - name: Configure ISA Server computer for authentication requests
       href: ./networking/configure-isa-server-computer.md
     - name: Configure proxy server settings
@@ -1568,7 +1694,7 @@
       href: ./networking/diagnostic-logging-troubleshoot-workplace-join-issues.md
     - name: How to use PortQry to troubleshoot AD connectivity issues
       href: ./networking/use-portqry-verify-active-directory-tcp-ip-connectivity.md
-    - name: How to configure TCP/IP Filtering
+    - name: How to configure TCP/IP Filtering
       href: ./networking/configure-tcp-ip-filtering.md
     - name: Information about Network Monitor 3
       href: ./networking/network-monitor-3.md
@@ -1592,6 +1718,12 @@
       href: ./networking/reserve-a-range-of-ephemeral-ports.md
     - name: Service overview and network port requirements
       href: ./networking/service-overview-and-network-port-requirements.md
+    - name: Slow performance occurs when you copy data to a TCP server
+      href: ./networking/slow-performance-copy-data-tcp-server-sockets-api.md
+    - name: SMB sharing inaccessible when TCP port 445 is listening
+      href: ./networking/smb-sharing-not-accessible-when-tcp-port-445-listen.md
+    - name: TCP Chimney Offload, Receive Side Scaling, and Network Direct Memory Access features
+      href: ./networking/information-about-tcp-chimney-offload-rss-netdma-feature.md
     - name: TCP features in Windows
       href: ./networking/description-tcp-features.md
     - name: TCP traffic stops
@@ -1602,12 +1734,18 @@
       href: ./networking/registry-entry-control-tcp-acknowledgment-behavior.md
     - name: The Automatic Metric feature for IPv4 routes
       href: ./networking/automatic-metric-for-ipv4-routes.md
+    - name: The default dynamic port range for TCP/IP has changed
+      href: ./networking/default-dynamic-port-range-tcpip-chang.md
     - name: Use WHOIS to research Internet domains
       href: ./networking/research-internet-domains-with-whois.md
     - name: Virtual machines lose network connectivity
       href: ./networking/vm-lose-network-connectivity-broadcom.md
     - name: WSAEMSGSIZE - Error 10040 in Winsock 2.0
       href: ./networking/wsaemsgsize-error-10040-in-winsock-2.md
+  - name: Webwindows-client and WebDAV
+    items:
+    - name: Accessing FQDN sites requires credentials
+      href: ./networking/credentials-prompt-access-webdav-fqdn-sites.md
   - name: Windows Firewall with Advanced Security (WFAS)
     items:
     - name: Error 0x000006D9 when you share a printer
@@ -1626,6 +1764,8 @@
       href: ./networking/event-id-236-sr-iov-enabled.md
     - name: Kernel event ID 2 when MSFT_NetLbfoTeamNic is called
       href: ./networking/kernel-event-id-2-msft-netLbfoteamnic-class.md
+    - name: LACP Timer configured incorrectly when creating a new NIC Team for LBFO 
+      href: ./networking/lacp-timer-configured-incorrectly-create-nic-lbfo.md
     - name: Poor network performance on VMs when VMQ is enabled
       href: ./networking/poor-network-performance-hyper-v-host-vm.md
     - name: Services not automatically restart with NIC teaming
@@ -1694,6 +1834,8 @@
       href: ./performance/use-dumpchk-to-check-memory-dump-file.md
   - name: Boot is slow
     items:
+    - name: Computer freezes when connected by using RDP
+      href: ./performance/sbsl-issue-create-rdp-connection-to-computer.md
     - name: Large WMI repository causes slow logon
       href: ./performance/large-wmi-repository-cause-slow-logon.md
     - name: Service using gMSA account doesn't start
@@ -1750,8 +1892,6 @@
       href: ./performance/manually-rebuild-performance-counters.md
     - name: Monitor performance of remote computers
       href: ./performance/monitor-remote-computer-performance.md
-    - name: Number of physical processors is incorrectly reported
-      href: ./performance/number-physical-processors-is-incorrect.md
     - name: QueryPerformanceCounter function perform poorly in some program
       href: ./performance/programs-queryperformancecounter-function-perform-poorly.md
     - name: Rebuild Performance Counter Library values
@@ -1782,12 +1922,18 @@
       href: ./performance/add-processors-to-computer.md
     - name: Error occurs while deleting registry keys
       href: ./performance/error-while-deleting-key.md
+    - name: High CPU usage when searching in Settings app
+      href: ./performance/high-cpu-usage-search-in-settings-app.md
     - name: Kernel memory dump files are generated
       href: ./performance/kernel-memory-dump-files-generated.md
     - name: Large memory support in Windows Server 2003
       href: ./performance/how-pae-awe-work-together.md
+    - name: Performance issues with custom default user profile 
+      href: ./performance/performance-issues-custom-default-user-profile.md
     - name: Slow performance when using power plan
       href: ./performance/slow-performance-when-using-power-plan.md
+    - name: Slow performance with files over the network
+      href: ./performance/slow-performance-file-server.md
   - name: System Hang
     items:
     - name: Compress large registry hives
@@ -1856,6 +2002,8 @@
       href: ./printing/consolidate-print-servers-with-cname-records.md
   - name: 'Management and Configuration: Installing Print drivers'
     items:
+    - name: A printer driver cannot be installed through Windows Update
+      href: ./printing/printer-driver-cannot-installed-through-windows-update.md
     - name: How to configure Internet printing
       href: ./printing/manage-connect-printers-use-web-browser.md
     - name: How to find a compatible printer driver
@@ -1892,6 +2040,8 @@
       href: ./remote/deny-user-permissions-to-logon-to-rd-session-host.md
     - name: Error 2147944102 when you start BITS service
       href: ./remote/service-specific-error-code-2147944102.md
+    - name: Fair Share is enabled by default in RDS
+      href: ./remote/fair-share-enabled-by-default-in-rds.md
     - name: How to add a user to Terminal Services RDP permissions
       href: ./remote/add-user-services-rdp-permissions.md
     - name: How to enable Windows Remote Shell
@@ -2038,6 +2188,8 @@
       href: ./remote/deactivate-reactivate-license-server.md
     - name: Event ID 4105 when RD Licensing runs
       href: ./remote/terminalservices-licensing-event-4105.md
+    - name: Event ID 44 on an RDS licensing server
+      href: ./remote/event-44-rds-licensing-server.md
     - name: How to intall and configure the external connector
       href: ./remote/install-and-configure-the-external-connector.md
     - name: How to move Terminal Services CALs
@@ -2082,6 +2234,8 @@
       href: ./remote/rds-client-not-connect-to-rd-session-host-server.md
     - name: Remote Desktop Connection 6.0 prompts for credentials
       href: ./remote/remote-desktop-connection-6-prompts-credentials.md
+    - name: Remote Desktop IP Virtualization does not work
+      href: ./remote/remote-desktop-ip-virtualization-not-work.md
     - name: Remote Desktop or RemoteApp session doesn't terminate
       href: ./remote/rd-or-remoteapp-session-not-terminate.md
     - name: Single-application sharing with Terminal Server
@@ -2104,6 +2258,12 @@
       href: ./remote/error-control-remote-desktop-session-vdi-collection.md
     - name: VDI collection requires two-way trust
       href: ./remote/vdi-collection-requires-two-way-trust.md
+- name: Resources
+  items:
+  - name: Virtual Agent
+    items:
+    - name: Introducing Virtual Support Agent for Windows Commercial
+      href: ./resources/introducing-virtual-support-agent-windows-commercial.md
 - name: Security and Malware
   items:
   - name: Security and Malware
@@ -2130,6 +2290,8 @@
       href: ./shell-experience/windows-search-is-disabled-by-default.md
   - name: Desktop Shell
     items:
+    - name: Can't configure a language pack
+      href: ./shell-experience/cannot-configure-language-pack-windows-server-desktop-experience.md
     - name: Can't use the "runas" command
       href: ./shell-experience/access-denied-runas-command-run-as-administrator.md
     - name: Enable and use the Run As feature
@@ -2164,6 +2326,10 @@
     items:
     - name: Remote Assistance connection doesn't work with FIPS encryption
       href: ./shell-experience/fips-encryption-not-allow-remote-assistance-connection.md
+  - name: Start Menu
+    items:
+    - name: Start menu shortcuts aren't immediately accessible
+      href: ./shell-experience/start-menu-shortcuts-arent-immediately-accessible.md
   - name: Windows Media Player
     items:
     - name: How to enable the user experience features
@@ -2180,6 +2346,10 @@
   items:
   - name: System Management Components
     href: ./system-management-components/system-management-components-overview.md
+  - name: Event Viewer
+    items:
+    - name: Security event log forwarding fails with Error 0x138C and 5004
+      href: ./system-management-components/security-event-log-forwarding-fails-error-0x138c-5004.md
   - name: Help and Support
     items:
     - name: Event Tracing for Windows is simplified
@@ -2188,13 +2358,15 @@
       href: ./system-management-components/windows-server-2003-service-pack-1-support-tools.md
   - name: Microsoft Management Console (MMC)
     items:
+    - name: A slow service does not start due to time-out error
+      href: ./system-management-components/service-not-start-events-7000-7011-time-out-error.md
     - name: Can't connect to Device Manager remotely
       href: ./system-management-components/error-connect-device-manager-remotely.md
     - name: Error 1783 when you open Services.msc
       href: ./system-management-components/error-1783-services-msc.md
     - name: Fail to enable analytic or debug event log
       href: ./system-management-components/error-when-enabling-analytic-debug-event-log.md
-    - name: Remotely edit the registry of a client computer
+    - name: Remotely edit the registry of a client computer
       href: ./system-management-components/remotely-edit-the-registry.md
     - name: Troubleshoot service startup permissions
       href: ./system-management-components/service-startup-permissions.md
@@ -2240,6 +2412,8 @@
       href: ./system-management-components/event-5605-query-mscluster-namespace.md
     - name: Microsoft-Windows-RPC-Events Event 11 after reboot
       href: ./system-management-components/rpc-events-event-11-after-reboot.md
+    - name: New WMI arbitrator behavior
+      href: ./system-management-components/new-wmi-arbitrator-behavior-in-windows-server.md
 - name: UserProfiles and Logon
   items:
   - name: UserProfiles and Logon
@@ -2302,6 +2476,8 @@
       href: ./virtualization/back-up-restore-hyper-v-vm-bmr-data-backup.md
     - name: Back up virtual machines from parent partition
       href: ./virtualization/back-up-hyper-v-vm-from-parent-partition.md
+    - name: Backing up VMs that belong to a guest cluster
+      href: ./virtualization/error-back-up-vms-in-guest-cluster.md
     - name: Can't export a virtual machine
       href: ./virtualization/error-occurred-attempt-export-virtual-machine.md
     - name: Error 0x80070005 when exporting VMs to network share
@@ -2314,6 +2490,8 @@
     items:
     - name: Caching in the virtual storage stack
       href: ./virtualization/hyper-v-storage-caching-layers-data-consistency-requirements.md
+    - name: Copy and paste don't work when you connect to Hyper-V virtual machine
+      href: ./virtualization/copy-paste-not-work-hyper-v-vm-vmconnect-enhanced-session-mode.md
     - name: Dynamic Memory allocation in a Virtual Machine does not change
       href: ./virtualization/dynamic-memory-allocation-virtual-machine-not-change.md
     - name: Ghost NIC built from VMware Templates
@@ -2362,6 +2540,8 @@
       href: ./virtualization/antivirus-exclusions-for-hyper-v-hosts.md
     - name: Can't import a virtual machine
       href: ./virtualization/cant-import-virtual-machine.md
+    - name: Event 7000 after installing the Hyper-V role
+      href: ./virtualization/event-7000-installing-hyper-v-role-windows-server.md
     - name: Hyper-V VMM service fails with event ID 14050
       href: ./virtualization/hyper-v-vmm-service-fails-event-id-14050.md
     - name: Incompatible version errors are logged
@@ -2370,7 +2550,7 @@
       href: ./virtualization/bios-update-for-hyper-v.md
     - name: Recommended updates for Windows Server 2012 R2 Hyper-V environments
       href: ./virtualization/updates-for-windows-server-2012-r2-hyper-v.md
-    - name: Recommended hotfixes, updates, and known solutions
+    - name: Recommended hotfixes, updates, and known solutions
       href: ./virtualization/hotfixes-updates-known-solutions.md
     - name: Run programs on non-Microsoft hardware virtualization software
       href: ./virtualization/software-runs-on-non-microsoft-virtualization-software.md
@@ -2394,6 +2574,8 @@
       href: ./virtualization/uptime-value-hyper-v-management-console-change-to-resume-time.md
     - name: VMBus device doesn't load
       href: ./virtualization/vmbus-device-not-load.md
+    - name: VM Integration Services status reports protocol version mismatch
+      href: ./virtualization/vm-integration-services-status-protocol-version-mismatch.md
   - name: Live Migration
     items:
     - name: Can't migrate a virtual machine from one host to another
@@ -2438,12 +2620,16 @@
       href: ./virtualization/fail-to-start-selected-virtual-machine.md
     - name: Hyper-V virtual machine fails to start
       href: ./virtualization/hyper-v-virtual-machine-not-start-0x80070005.md
+    - name: Restored Hyper-V virtual machines may not Start
+      href: ./virtualization/restored-hyper-v-virtual-machines-not-start.md
     - name: Virtual machine doesn't start
       href: ./virtualization/error-not-enough-memory-system-start-virtual-machine.md
   - name: Virtual Switch Manager (vmswitch)
     items:
     - name: Can't create Virtual switch in Hyper-V
       href: ./virtualization/error-applying-virtual-switch-properties-changes.md
+    - name: Creating V-switches within the hyper-V environment fails
+      href: ./virtualization/creating-v-switches-hyper-v-environment-fails.md
     - name: Default limit of 256 dynamic MAC addresses
       href: ./virtualization/default-limit-256-dynamic-mac-addresses.md
     - name: Network connectivity is lost if VMQ is enabled
@@ -2456,18 +2642,34 @@
     href: ./windows-security/windows-security-overview.md
   - name: Account lockouts
     items:
+    - name: Account Lockout and Management Tools
+      href: ./windows-security/account-lockout-and-management-tool.md
     - name: Administrator account password expiration behavior
       href: ./windows-security/admin-account-password-expiration-policy.md
     - name: Enumerate locked out user accounts using Saved Queries
       href: ./windows-security/enumerate-locked-out-user-accounts-saved-queries.md
     - name: Rename administrator and guest accounts
       href: ./windows-security/rename-administrator-and-guest-account.md
+    - name: Use EventCombMT utility to search event logs for account lockouts
+      href: ./windows-security/use-eventcombmt-to-search-logs-for-account-lockout.md
   - name: Bitlocker
     items:
     - name: How to configure MBAM with Secure Network Communication
       href: ./windows-security/mbam-secure-network-communication.md
     - name: How to use BitLocker Recovery Password Viewer
       href: ./windows-security/bitlocker-recovery-password-viewer-tool.md
+    - name: Computer Record is Rejected in MBAM
+      href: ./windows-security/computer-record-rejected-in-mbam.md
+    - name: Error when opening reports in MBAM
+      href: ./windows-security/error-when-opening-reports-mbam.md
+    - name: Error when viewing reports in MBAM
+      href: ./windows-security/server-error-click-reports-tab-mbam.md
+    - name: MBAM Enterprise Reports aren't updated
+      href: ./windows-security/mbam-enterprise-report-not-updated.md
+    - name: MBAM fails to take ownership of the TPM
+      href: ./windows-security/error-mbam-take-ownership-tpm.md
+    - name: MBAM setup fails if SSRS is not configured properly
+      href: ./windows-security/mbam-setup-fails.md
   - name: Certificates and public key infrastructure (PKI)
     items:
     - name: '"Http error 500.0" when getting the NDES enrollment challenge password'
@@ -2488,8 +2690,6 @@
       href: ./windows-security/clients-cant-authenticate-server.md
     - name: Crypt32 8 events continuously reported
       href: ./windows-security/crypt32-event-8.md
-    - name: Disable Hyper-V to use virtualization software
-      href: ./windows-security/fciv-availability-and-description.md
     - name: Event ID 4107 or Event ID 11 is logged
       href: ./windows-security/event-id-4107-or-event-id-11-is-logged.md
     - name: How to decommission Windows enterprise CA and remove related objects
@@ -2536,10 +2736,14 @@
       href: ./windows-security/rpc-endpoint-mapper-prevents-users-added-to-trust-forest.md
   - name: Kerberos authentication
     items:
+    - name: Authentication failure on NTLM and Kerberos servers
+      href: ./windows-security/authentication-fails-non-windows-ntlm-kerberos-server.md
     - name: Constrained delegation for CIFS fails with ACCESS_DENIED
       href: ./windows-security/constrained-delegation-access-denied.md
     - name: Event ID 27 KDC error on domain controllers
       href: ./windows-security/event-id-27-kdc-errors.md
+    - name: How to force Kerberos to use TCP instead of UDP
+      href: ./windows-security/force-kerberos-use-tcp-instead-udp.md
     - name: KDC event  16 or 27 if DES for Kerberos is disabled
       href: ./windows-security/kdc-event-16-27-des-encryption-disabled.md
     - name: KDC service on an RODC can't start and generates error 1450
@@ -2590,6 +2794,8 @@
       href: ./windows-security/performance-tuning-ntlm-authentication-maxconcurrentapi.md
   - name: Permissions, access control, and auditing
     items:
+    - name: Access checks using Windows APIs return incorrect results
+      href: ./windows-security/access-checks-windows-apis-return-incorrect-results.md    
     - name: Can't copy files from mapped drive to local directory
       href: ./windows-security/cannot-copy-files-from-mapped-drive-to-local-directory.md
     - name: Default permissions for MachineKeys folders
@@ -2614,6 +2820,10 @@
       href: ./windows-security/error-add-user-to-security-permissions.md
     - name: SeImpersonatePrivilege and SeCreateGlobalPrivilege
       href: ./windows-security/seImpersonateprivilege-secreateglobalprivilege.md
+    - name: Security auditing settings aren't applied when you deploy domain-based policy
+      href: ./windows-security/security-auditing-settings-not-applied-when-deploy-domain-based-policy.md
+    - name: SIDs not resolve into friendly names
+      href: ./windows-security/sids-not-resolve-into-friendly-names.md
     - name: User Account Control and remote restrictions
       href: ./windows-security/user-account-control-and-remote-restriction.md
     - name: we are unable to Access the security log
@@ -2624,10 +2834,14 @@
       href: ./windows-security/computer-cant-identify-network.md
     - name: Configure preshared key to use L2TP
       href: ./windows-security/configure-preshared-key-to-use-l2tp.md
+    - name: Deploy custom cipher suite ordering
+      href: ./windows-security/deploy-custom-cipher-suite-ordering.md
     - name: Reset domain controller's password with Netdom.exe
       href: ./windows-security/use-netdom-reset-domain-controller-password.md
     - name: Secure Channel Problems Detected
       href: ./windows-security/secure-channel-problems-detected.md
+    - name: SSL/TLS communication problems after installing an update
+      href: ./windows-security/ssltls-communication-problems-after-install-kb931125.md
   - name: Security templates
     items:
     - name: Apply predefined security templates
@@ -2636,3 +2850,7 @@
     items:
     - name: Enabling smart card logon
       href: ./windows-security/enabling-smart-card-logon-third-party-certification-authorities.md
+- name: Windows Server End of Support (EoS) FAQ
+  items:
+  - name: End of support for Windows Server 2008 and Windows Server 2008 R2
+    href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.md

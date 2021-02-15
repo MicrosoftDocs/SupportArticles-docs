@@ -78,16 +78,15 @@ In this scenario, the SQL Server service crashes, and no results are returned fo
 
 This issue occurs because the special characters `--` exist in the query to the Oracle linked server. These characters are used as a comment symbol.
 
-The SQL Server process crashes because the third-party linked server provider is loaded inside SQL Server process and it incorrectly modifies heap memory that does not belong to it. If the [Heap Functions](/windows/win32/memory/heap-functions) inside a process is unstable, for protection from data corruption, the process is automatically shut down by the OS. If the third-party linked server provider is enabled together with the **Allow inprocess** option, the SQL Server process crashes when this third-party linked server experiences the described issue.
+The SQL Server process crashes because the third-party linked server provider is loaded inside SQL Server process and it incorrectly modifies heap memory that does not belong to it. If the [Heap Functions](/windows/win32/memory/heap-functions) inside a process is unstable, for protection from data corruption, the process is automatically shut down by the OS. If the third-party linked server provider is enabled together with the **Allow inprocess** option, the SQL Server process crashes when this third-party linked server experiences the described issue.
 
 ## Workaround
 
 To work around this issue, use one of the following methods:
 
 - Remove the comments symbol.
-- Replace  the comments symbol with the comments symbol: `/* */`.
+- Replace the comments symbol with the comments symbol: `/* */`.
 
 ## More information
 
 Contact the third-party provider for information and fixes. For latest OLEDB provider version, see [64-bit Oracle Data Access Components (ODAC) Downloads](https://www.oracle.com/database/technologies/odac-downloads.html).
-

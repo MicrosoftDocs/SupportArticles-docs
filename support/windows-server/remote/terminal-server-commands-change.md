@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Terminal Server commands: change
 
@@ -49,7 +49,7 @@ Parameters: none
 Security Restrictions: Only administrators can run `change logon`.
 
 > [!NOTE]
-> The `change logon` command disables logons from client sessions other than the system console. Users that are currently logged on are not affected. Client sessions are always re-enabled when you restart the system. If you are connected to the Terminal Server from a remote location and disable client sessions, and if you log off before re-enabling client sessions, you will not be able to reconnect. You need to logon at the system console in order to re-enable sessions.
+> The `change logon` command disables logons from client sessions other than the system console. Users that are currently logged on are not affected. Client sessions are always re-enabled when you restart the system. If you are connected to the Terminal Server from a remote location and disable client sessions, and if you log off before re-enabling client sessions, you will not be able to reconnect. You need to log on at the system console in order to re-enable sessions.
 
 ## Change port
 
@@ -68,7 +68,7 @@ Parameters: COMx=COMy maps COM port x to port y.
 `/?` (help): Displays the syntax for the command and information about the command's options.
 
 > [!NOTE]
-> Most MS-DOS applications support only COM1 though COM4 serial ports. Change port maps a serial port to a different port number, allowing applications that cannot access high-numbered COM ports to access the serial port. For example, to map COM12 to COM1 for use by an MS-DOS application, type `change port com12=com1`. Remapping works only for the current session and is not retained if you logoff and then log on again.  
+> Most MS-DOS applications support only COM1 though COM4 serial ports. Change port maps a serial port to a different port number, allowing applications that cannot access high-numbered COM ports to access the serial port. For example, to map COM12 to COM1 for use by an MS-DOS application, type `change port com12=com1`. Remapping works only for the current session and is not retained if you log off and then log on again.  
 
 Run `change port` without any parameters to display the available COM ports and the current COM port mappings.
 

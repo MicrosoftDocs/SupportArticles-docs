@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DFSR
-ms.technology: Networking
+ms.technology: networking
 ---
 # Security setting changes on folders don't appear immediately on DFSR replication partners
 
@@ -26,22 +26,21 @@ Assume that you have the Distributed File System (DFS) Replication role service 
 
 For example, if you grant a user Modify permissions to a folder on a domain controller, the user can access the files on a replication partner only under the folder. The user does not immediately have permissions to access the folders (parent folder and subfolders).
 
->[!NOTE]
-The changes appear on replication partners for the folders after 7 to 10 minutes. 
+> [!NOTE]
+> The changes appear on replication partners for the folders after 7 to 10 minutes.
 
 ## Cause
 
-This issue occurs because when you make folder security changes remotely, there's a delay before the redirector sends the **Close** statement for the parent folder. Therefore, the receiving NTFS driver doesn't immediately stamp the change with a USN Close statement in the NTFS Journal for the DFSR USN consumer. 
+This issue occurs because when you make folder security changes remotely, there's a delay before the redirector sends the **Close** statement for the parent folder. Therefore, the receiving NTFS driver doesn't immediately stamp the change with a USN Close statement in the NTFS Journal for the DFSR USN consumer.
 
 ## Workaround
 
 To work around this issue, use one of the following methods:
+
 - Avoid changing folder permissions remotely even if you use Windows Server Core Edition. Instead, make security changes on the target itself. You may also consider having at least two domain controllers with GUI implemented one with the primary domain controller (PDC) emulator operations master (also known as flexible single master operations or FSMO) role for introducing the changes locally, and one as potential backup for this operations master role.
 - On the server on which you use Windows Explorer to make security setting changes, create the **NoRemoteRecursiveEvents** and the **NoRemoteChangeNotify** registry entries, and set the registry value to **1** in one of the following registry subkeys:
-  - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer` 
-  - `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer` 
+  - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer`
+  - `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer`
 
-    >[!NOTE]
-    You must restart the computer to make these registry entries work.
-
-    For more information about these registry entries, see the "Installation information" section in ﻿ ﻿ ﻿ [Folder tree flickers when you view a mapped network drive in Microsoft Windows Explorer]().
+    > [!NOTE]
+    > You must restart the computer to make these registry entries work.

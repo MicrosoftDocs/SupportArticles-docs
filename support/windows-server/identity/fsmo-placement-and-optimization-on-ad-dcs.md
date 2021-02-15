@@ -1,6 +1,6 @@
 ---
 title: FSMO placement and optimization on AD DCs
-description: Describes how Active Directory Flexible Single-Master (FSMO) roles are positioned in both the forest and the domain for operations that are optimally performed on a single domain controller.
+description: Describes how Active Directory Flexible Single-Master Operation (FSMO) roles are positioned in both the forest and the domain for operations that are optimally performed on a single domain controller.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, larryli
 ms.prod-support-area-path: DCPromo and the installation of domain controllers
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # FSMO placement and optimization on Active Directory domain controllers
 
-This article describes the placement of Active Directory Flexible Single-Master (FSMO) roles in the domain and forest for operations that are best performed on a single domain controller.
+This article describes the placement of Active Directory Flexible Single-Master Operation (FSMO) roles in the domain and forest for operations that are best performed on a single domain controller.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 223346

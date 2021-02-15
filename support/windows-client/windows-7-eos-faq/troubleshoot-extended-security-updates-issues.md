@@ -11,7 +11,8 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: v-elj, chawong, squin, scottmca, winciccore, kaushika
 ms.prod-support-area-path: Troubleshoot issues in ESU
-ms.technology: Windows 7 EoS FAQ
+ms.technology: windows-client-eos
+adobe-target: true
 ---
 # Troubleshoot issues in ESU
 
@@ -117,7 +118,7 @@ This problem can occur in either of the following circumstances:
 
 1. Check the computer's update history to make sure that all ESU prerequisite updates have been installed successfully.
 
-For a list of the required updates and information about how to get them, see [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091).
+    For a list of the required updates and information about how to get them, see [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091).
 2. Make sure that the key that you're installing is the correct key for the computer and its operating system.
 3. Restart the computer, and try again.
 
@@ -183,9 +184,10 @@ Content decoding has failed
 
 This may occur if TLS 1.0 is disabled and the `HKEY_LOCAL_MACHINE\System\CurrenteControlSet\Control\SecurityProviders\Schannel\Protocols\TLS 1.0\Client` subkey is set as follows:
 
-- **DisabledByDefault:** 1
-- **Enabled:** 0
- **Actions to take**  
+- DisabledByDefault: 1
+- Enabled: 0
+
+#### Actions to take
 
 This method forces the activation process to use TLS 1.2 by default so that TLS 1.0 can remain disabled.
 
@@ -197,7 +199,7 @@ To resolve this issue, follow these steps.
     Create or set a **REG_DWORD** value of **DefaultSecureProtocols**, and set it to **0x800**.
 3. If the computer is X64, you must also set the following additional registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp`  
     Create or set a **REG_DWORD** value of **DefaultSecureProtocols**, and set it to **0x800**.
-4. Restart the computer, and then try to run the `slmgr.vbs /ato`  command again.
+4. Restart the computer, and then try to run the `slmgr.vbs /ato` command again.
 
 ### Slmgr activation  
 
@@ -248,13 +250,13 @@ The activation ID that you used in the activation command isn't correct.
 To get the activation ID, follow these steps:
 
 1. Open an elevated Command Prompt window.
-2. Run the following command: `cscript /h:cscript`  
+2. Run the following command: `cscript /h:cscript`.  
 3. Run one of the following commands, depending on your version of Windows.
    - For Windows 7: `slmgr /dlv`  
    - For Windows Server 2008 SP2: `slmgr /dlv all`
 4. In the command output, copy the activation ID of the ESU key.
 
-To use the activation ID, run the following command: `slmgr /ato <Activation ID>`
+To use the activation ID, run the following command: `slmgr /ato <Activation ID>`.
 
 > [!NOTE]
 > In this command, \<Activation ID> represents the activation ID of the ESU key.
@@ -288,7 +290,7 @@ The computer can't communicate with the Microsoft Activation and Validation Serv
 
 #### Actions to take
 
-Make sure that the computer is connected to internet or has the Activation URLs white listed, and try again.
+Make sure that the computer is connected to the internet or has the Activation URLs in the allow list, and try again.
 
 For computers that don't connect directly to the internet, you can use VAMT Proxy activation or Phone activation as an alternative. For more information, see [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091#).
 
@@ -306,7 +308,7 @@ The computer can't connect to the Microsoft Activation service. It might not be 
 
 #### Actions to take
 
-Make sure that the computer is connected to internet or has the Activation URLs white listed, and try again.
+Make sure that the computer is connected to internet or has the Activation URLs in the allow list, and try again.
 
 For computers that don't connect directly to the internet, you can use VAMT Proxy activation or Phone activation as an alternative. For more information, see [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091#).
 
@@ -322,7 +324,7 @@ The `slmgr /ato` command didn't correctly pass the ESU activation ID.
 
 #### Action to take
 
-To use the activation ID, run the following command: `slmgr /ato <Activation ID>`
+To use the activation ID, run the following command: `slmgr /ato <Activation ID>`.
 
 > [!NOTE]
 > In this command, \<Activation ID> represents the activation ID of the ESU key.
@@ -421,7 +423,7 @@ The confirmation ID is incorrect.
 ##### Actions to take
 
 1. Call the [Microsoft Licensing Activation Centers](https://www.microsoft.com/Licensing/existing-customer/activation-centers) again. They'll walk you through the steps to get a confirmation ID.
-2. In an elevated Command Prompt window, run the following command: `slmgr /atp <Confirmation ID> <ESU Activation ID>`
+2. In an elevated Command Prompt window, run the following command: `slmgr /atp <Confirmation ID> <ESU Activation ID>`.
 
 > [!NOTE]
 > In this command, \<Confirmation ID> represents the confirmation ID that you obtained in step 1, and \<ESU Activation ID> represents the activation ID of the ESU product key.
@@ -489,10 +491,11 @@ In the case of a desktop client or server computer, follow these steps to verify
     - [VAMT online or proxy activation](/windows/deployment/volume-activation/install-configure-vamt)
     - Phone activation​
     - By using the `slmgr /ato` command. To do this, follow these steps:
-          1. Open an elevated Command Prompt window.
-          2. Run `slmgr /ipk <ESU key>` and wait for the success message.
-            Note
-            In this command, **\<ESU key>** represents the ESU product key for the computer.
+
+        1. Open an elevated Command Prompt window.
+        2. Run `slmgr /ipk <ESU key>` and wait for the success message.
+           > [!Note]
+           > In this command, **\<ESU key>** represents the ESU product key for the computer.
 
 3. Run `slmgr /ato <Activation ID>`.
 
@@ -603,7 +606,6 @@ Windows Server Update Service (WSUS) continues to scan cab files for Windows 7 S
 - [Get help with Windows activation errors](https://support.microsoft.com/help/10738/windows-10-get-help-with-activation-errors)  
 - [FAQ about Extended Security Updates for Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)  
 - [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091)  
-- [Frequently asked questions about ESU for Windows Server and SQL Server 2008 and 2008 R2​](https://support.microsoft.com/help/4539036/faq-about-esu-for-windows-server-and-sql-server-2008-2008-r2)  
 - [How to use Windows Server 2008 and 2008 R2 extended security updates (ESU)​](/windows-server/get-started/extended-security-updates)  
 - [Extended Security Updates and Configuration Manager ​](https://techcommunity.microsoft.com/t5/configuration-manager-blog/extended-security-updates-and-configuration-manager/ba-p/825618)  
 - [What are Extended Security Updates for SQL Server?](/sql/sql-server/end-of-support/sql-server-extended-security-updates?view=sql-server-ver15&preserve-view=true)  

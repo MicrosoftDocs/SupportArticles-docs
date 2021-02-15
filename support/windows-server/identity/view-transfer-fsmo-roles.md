@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory FSMO
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to view and transfer FSMO roles  
 
@@ -96,9 +96,3 @@ Use the Active Directory Schema Master snap-in to transfer the schema master rol
 4. In the console tree, right-click **Active Directory Users and Computers**, point to All Tasks, and then click Operations Master.
 5. Click the appropriate tab for the role that you want to transfer (RID, PDC, or Infrastructure), and then click Change.
 6. Click OK to confirm that you want to transfer the role, and then click Close.
-
-## References
-
-For additional information about a related topic, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[255690](https://support.microsoft.com/help/255690) How to view and transfer FSMO roles in the graphical user interface

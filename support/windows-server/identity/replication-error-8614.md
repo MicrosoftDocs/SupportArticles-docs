@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Troubleshoot Active Directory replication error 8614
 
@@ -196,8 +196,6 @@ Basically, the cause and resolution steps for replication error status 8614 appl
     - [Information about lingering objects in a Windows Server Active Directory forest](https://support.microsoft.com/help/910205).
 
     - [Event ID 1388 or 1988: A lingering object is detected](/previous-versions/orphan-topics/ws.10/cc780362(v=ws.10))
-
-    - [Outdated Active Directory objects generate event ID 1988 in Windows Server 2003](https://support.microsoft.com/help/870695)
 
     Repadmin syntax is shown here:
 

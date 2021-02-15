@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: scottmca, kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Error message: Windows SIM was unable to generate a catalog or Parameter count mismatch
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;2524737
 
 ## Symptoms
 
-When generating a catalog (.clg) in Windows System Image Manager (WSIM) or clicking Edit Unattend.xml in Microsoft Deployment Toolkit(MDT) and trying to generate a catalog file, it may take extended period of time before producing the error message and you may receive the following error messages:
+When generating a catalog (.clg) in Windows System Image Manager (WSIM) or clicking Edit Unattend.xml in Microsoft Deployment Toolkit (MDT) and trying to generate a catalog file, it may take extended period of time before producing the error message and you may receive the following error messages:
 
 > Windows SIM was unable to generate a catalog. For troubleshooting assistance, see the topic: 'Windows System Image Manager Technical Reference' in the Windows OPK or Windows AIK User's Guide.
 System.InvalidOperationException: The operation failed to complete.  

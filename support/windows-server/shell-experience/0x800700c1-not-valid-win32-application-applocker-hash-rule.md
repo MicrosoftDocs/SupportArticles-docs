@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: danesc, kaushika
 ms.prod-support-area-path: 1st Party Applications
-ms.technology: ShellExperience
+ms.technology: windows-server-shell-experience
 ---
 # Error when you create an AppLocker hash rule for a file in Windows: 0x800700C1: not a valid Win32 application
 
@@ -71,7 +71,7 @@ On Windows 8 and Windows Server 2012-based computers, or on Windows 7 and Window
 ...  
 \</AppLockerPolicy>  
 
-In this example, the AppLocker policy has two rules. The first rule ("Allow Calculator") is a hash rule that allows Calculator.exe to run. The second rule ("Deny Contoso") is a publisher rule that blocks any file that belongs to the Attack of Zombies game that is published by Contoso. As both Calculator.exe and Zombies.exe both meet one of the two conditions that were mentioned earlier, Windows Authenticode Signature verification fails. Before you apply MS12-024, Calculator.exe is allowed by the "Allow Calculator" rule, and Zombies.exe is blocked by the "Deny Contoso" rule. However, after you apply MS12-024, AppLocker can't process the SHA2 Authenticode hash for Calculator.exe and considers Zombies.exe as an unsigned file. Therefore, neither of the rules is triggered, and unexpected behavior occurs.
+In this example, the AppLocker policy has two rules. The first rule ("Allow Calculator") is a hash rule that allows Calculator.exe to run. The second rule ("Deny Contoso") is a publisher rule that blocks any file that belongs to the Attack of Zombies game that is published by Contoso. As both Calculator.exe and Zombies.exe meet one of the two conditions that were mentioned earlier, Windows Authenticode Signature verification fails. Before you apply MS12-024, Calculator.exe is allowed by the "Allow Calculator" rule, and Zombies.exe is blocked by the "Deny Contoso" rule. However, after you apply MS12-024, AppLocker can't process the SHA2 Authenticode hash for Calculator.exe and considers Zombies.exe as an unsigned file. Therefore, neither of the rules is triggered, and unexpected behavior occurs.
 
 ## References
 

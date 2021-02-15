@@ -2,7 +2,7 @@
 title: Adjust visual experience settings
 description: This article describes how to make visual experience settings  adjustments in Visual Studio 2010.
 ms.date: 04/24/2020
-ms.prod-support-area-path: Integrated development environment (IDE)
+ms.prod-support-area-path: Integrated development environment (IDE)
 ms.reviewer: jbartlet
 ms.topic: how-to
 ---
@@ -17,9 +17,9 @@ _Original KB number:_ &nbsp; 2023207
 
 By default, Visual Studio 2010 automatically adjusts the Visual Studio visual experience to maximize performance and responsiveness across client configurations. For example, the use of gradients and animations in the Visual Studio integrated development environment (IDE) is reduced when running Visual Studio over Remote Desktop or in a virtual machine environment. By default Visual Studio 2010 also makes use of hardware graphics acceleration when it's available on the client. For most customers, these Visual Studio default settings will provide the best user experience, however there can be situations, for example because of bugs in a graphics hardware driver, where manual adjustments will result in an improved experience.
 
-Examples of symptoms that may be resolved through manual adjustments include:
+Examples of symptoms that may be resolved through manual adjustments include:
 
-- The Visual Studio main window does render correctly or completely.
+- The Visual Studio main window does render correctly or completely.
 - A Visual Studio window contains blurry or distorted text and icons.
 
 ## Override Visual Studio visual experience

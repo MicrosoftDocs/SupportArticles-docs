@@ -11,7 +11,8 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: .NET Framework installation
-ms.technology: ApplicationCompatibility
+ms.technology: windows-client-application-compatibility
+adobe-target: true
 ---
 # .NET Framework 3.5 installation errors: 0x800F0906, 0x800F081F, 0x800F0907, 0x800F0922
 
@@ -126,7 +127,7 @@ To use the **Add Roles and Features Wizard**, follow these steps:
 
 5. On the **Specify Alternate Source Path** page, type the path of the *SxS* folder as a local path or as a network share path. The screenshot for this step is listed below.
 
-    ![path of the SxS folder](./media/dotnet-framework-35-installation-error/path_of_the_SxS_folder.png)  
+    ![Path of the SxS folder](./media/dotnet-framework-35-installation-error/path-of-the-sxs-folder.png)  
 
 6. Click **OK**.
 7. Click **Install** to finish the wizard.
@@ -199,7 +200,7 @@ To do this, follow these steps:
     To fix this issue, follow these steps:
 
     1. Open the .NET Framework installation files folder.
-    2. Open *Sources* folder
+    2. Open *Sources* folder.
     3. Right-click the *SXS* folder, and then click **Properties**.
     4. Click **Security** and make sure that there is a check mark next to **Read & Execute**. If the check mark isn't there, click the **Edit** button and turn it on.
     5. Press Windows Key + X keyboard shortcut.  

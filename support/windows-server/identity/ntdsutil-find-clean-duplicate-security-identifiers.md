@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Use Ntdsutil to find and clean up duplicate security identifiers
 
@@ -44,8 +44,8 @@ To look for a duplicate SID, follow these steps:
 2. To connect to the server that stores your Security Account Maintenance (SAM) database, type `connect to serverDNSNameOfServer`  at the SAM command prompt, and then press Enter.
 3. At the SAM command prompt, type **check duplicate sid**, and then press Enter.
 
-    >[!Note]
-      A display of duplicates appears.
+    > [!Note]
+    > A display of duplicates appears.
 
 ### Clean up a duplicate SID
 
@@ -53,7 +53,7 @@ To look for a duplicate SID, follow these steps:
 2. Connect to the server that stores your Security Account Maintenance (SAM) database. At the SAM command prompt, type 'connect to serverDNSNameOfServer' and then press Enter.
 3. At the SAM command prompt, type **cleanup duplicate sid**, and then press Enter.
 
-    >[!Note]
-      Ntdsutil confirms the removal of the duplicate.
+    > [!Note]
+    > Ntdsutil confirms the removal of the duplicate.
 4. At the SAM command prompt, type **q**, and then press Enter.
 5. After finished using Ntdsutil, type **q**, and then press Enter.  

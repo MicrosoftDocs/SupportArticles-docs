@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, abgupta
 ms.prod-support-area-path: Integration components
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Degraded integration services message for non-Windows guests
 

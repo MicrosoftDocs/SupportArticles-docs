@@ -17,8 +17,8 @@ _Original KB number:_ &nbsp; 2922898
 
 Consider the following scenario:
 
-- You have Microsoft SQL Server 2012 or a later version installed on a server.
-- The instance of SQL Server is a primary replica in AlwaysOn Availability Groups environment.
+- You have Microsoft SQL Server 2012 or a later version installed on a server.
+- The instance of SQL Server is a primary replica in AlwaysOn Availability Groups environment.
 - The **autogrow** option for transaction log files is set in SQL Server.
 
 In this scenario, the transaction log may become large and run out of disk space or exceed the **MaxSize** option set for the transaction log at the primary replica and you receive an error message that resembles the following:
@@ -34,7 +34,7 @@ This occurs when the logged changes at primary replica are not yet hardened on t
 
 ## Troubleshooting
 
-There are two scenarios that can lead to log growth in an availability database and the 'AVAILABILITY_REPLICA' log_reuse_wait_desc:
+There are two scenarios that can lead to log growth in an availability database and the 'AVAILABILITY_REPLICA' log_reuse_wait_desc:
 
 - Scenario 1: Latency delivering logged changes to secondary
 
@@ -86,7 +86,7 @@ There are two scenarios that can lead to log growth in an availability database 
 
 ## Workaround
 
-After you identify the secondary database that makes this occur, try one or more of the following methods to work around this issue temporarily:
+After you identify the secondary database that makes this occur, try one or more of the following methods to work around this issue temporarily:
 
 - Take the database out of the availability group for the offending secondary.
 
@@ -108,9 +108,9 @@ After you identify the secondary database that makes this occur, try one or more
 
 - For more information about the Redo operation blocking problem, see: [AlwaysON - HADRON Learning Series: lock_redo_blocked/redo worker Blocked on Secondary Replica](https://techcommunity.microsoft.com/t5/SQL-Server-Support/AlwaysON-HADRON-Learning-Series-lock-redo-blocked-redo-worker/ba-p/317628)
 
-- For more information about AVAILABILITY_REPLICA-based log_reuse_wait columns, see: [Factors that can delay log truncation](/previous-versions/sql/sql-server-2008-r2/ms345414(v=sql.105))
+- For more information about AVAILABILITY_REPLICA-based log_reuse_wait columns, see: [Factors that can delay log truncation](/previous-versions/sql/sql-server-2008-r2/ms345414(v=sql.105))
 
-- For more information about the `sys.dm_hadr_database_replica_states` view, see: [sys.dm_hadr_database_replica_states (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql?redirectedfrom=MSDN&view=sql-server-ver15&preserve-view=true)
+- For more information about the `sys.dm_hadr_database_replica_states` view, see: [sys.dm_hadr_database_replica_states (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql?redirectedfrom=MSDN&view=sql-server-ver15&preserve-view=true)
 
 - For more information about how to monitor and troubleshoot logged changes that are not arriving and are not being applied in a timely manner, see: [Monitor performance for AlwaysOn availability groups](/previous-versions/sql/sql-server-2012/dn135338(v=sql.110))
 

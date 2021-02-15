@@ -2,7 +2,7 @@
 title: Can't change identity of application pool
 description: This article fixes an problem in which you can't change the identity of an application pool by using Internet Information Services Manager from a remote computer.
 ms.date: 03/23/2020
-ms.prod-support-area-path: WWW authentication and authorization
+ms.prod-support-area-path: WWW authentication and authorization
 ---
 # Error when you change the identity of an application pool by using IIS Manager from a remote computer: Keyset does not exist
 

@@ -146,8 +146,8 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
   |Column|Values|
   |---|---|
-  |Action|0 - NONE<br/>1 - UPDATE<br/>2 - ADD<br/>3 - DELETE<br/>4 - VALIDATE<br/>5 - CANCEL|
-  |PackageType|0 - Regular Package<br/>3 - Driver Package<br/>4 - Task Sequence<br/>5 - Software Updates Package<br/>6 - Device Settings Package<br/>7 - Virtual App Package<br/>8 - Content Package (Application)<br/>257 - Operating System Image<br/>258 - Boot Image<br/>259 - OS Installation Package<br/>260 - VHD Package|
+  |Action|0 - NONE<br/>1 - UPDATE<br/>2 - ADD<br/>3 - DELETE<br/>4 - VALIDATE<br/>5 - CANCEL|
+  |PackageType|0 - Regular Package<br/>3 - Driver Package<br/>4 - Task Sequence<br/>5 - Software Updates Package<br/>6 - Device Settings Package<br/>7 - Virtual App Package<br/>8 - Content Package (Application)<br/>257 - Operating System Image<br/>258 - Boot Image<br/>259 - OS Installation Package<br/>260 - VHD Package|
   |||
 
 - `PkgServers` - Contains a list of all the packages along with the DPs they are currently targeted to.
@@ -156,7 +156,7 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
   |Column|Values|
   |---|---|
-  |Action|0 - NONE<br/>1 - UPDATE<br/>2 - ADD<br/>3 - DELETE<br/>4 - VALIDATE<br/>5 - CANCEL|
+  |Action|0 - NONE<br/>1 - UPDATE<br/>2 - ADD<br/>3 - DELETE<br/>4 - VALIDATE<br/>5 - CANCEL|
   |||
 
 - `PkgStatus` - Contains a list of the current package status for each package for each DP.
@@ -165,8 +165,8 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
   |Column|Values|
   |---|---|
-  |Type|1 - SITE (MASTER)<br/>2 - DP (COPY)<br/><br/>Type 1 rows are created for each site the package is targeted to. PkgServer for this row is the site server FQDN.<br/> <br/>Type 2 rows are created for each DP the package is targeted to. PkgServer is the DP NALPATH.|
-  |Status|0 - NONE<br/>1 - SENT<br/>2 - RECEIVED<br/>3 - INSTALLED<br/>4 - RETRY<br/>5 - FAILED<br/>6 - REMOVED<br/>7 - PENDING REMOVE (Not Used)<br/>8 - REMOVE FAILED<br/>9 - RETRY REMOVE|
+  |Type|1 - SITE (MASTER)<br/>2 - DP (COPY)<br/><br/>Type 1 rows are created for each site the package is targeted to. PkgServer for this row is the site server FQDN.<br/> <br/>Type 2 rows are created for each DP the package is targeted to. PkgServer is the DP NALPATH.|
+  |Status|0 - NONE<br/>1 - SENT<br/>2 - RECEIVED<br/>3 - INSTALLED<br/>4 - RETRY<br/>5 - FAILED<br/>6 - REMOVED<br/>7 - PENDING REMOVE (Not Used)<br/>8 - REMOVE FAILED<br/>9 - RETRY REMOVE|
     |||
 
 - `DistributionJobs` - Contains a list of Package Transfer Manager Jobs along with their current state.
@@ -175,8 +175,8 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
   |Column|Values|
   |---|---|
-  |Action|0 - NONE<br/>1 - UPDATE<br/>2 - ADD<br/>3 - DELETE<br/>4 - VALIDATE<br/>5 - CANCEL|
-  |State|0 - PENDING<br/>1 - READY<br/>2 - STARTED<br/>3 - INPROGRESS<br/>4 - PENDING RESTART<br/>5 - COMPLETE<br/>6 - FAILED<br/>7 - CANCELED<br/>8 - SUSPENDED|
+  |Action|0 - NONE<br/>1 - UPDATE<br/>2 - ADD<br/>3 - DELETE<br/>4 - VALIDATE<br/>5 - CANCEL|
+  |State|0 - PENDING<br/>1 - READY<br/>2 - STARTED<br/>3 - INPROGRESS<br/>4 - PENDING RESTART<br/>5 - COMPLETE<br/>6 - FAILED<br/>7 - CANCELED<br/>8 - SUSPENDED|
   |||
 
 - `DistributionPoints` - Contains a list of all the distribution points.
@@ -185,7 +185,7 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
   |Column|Values|
   |---|---|
-  |Action|0  -  NONE<br/>1  -  UPDATE<br/>2  -  ADD<br/>3  -  DELETE<br/>4  -  VALIDATE<br/>5  -  CANCEL|
+  |Action|0  -  NONE<br/>1  -  UPDATE<br/>2  -  ADD<br/>3  -  DELETE<br/>4  -  VALIDATE<br/>5  -  CANCEL|
   |||
 
 - `PullDPResponse` - Temporarily contains the package status response sent from the pull DPs. DistMgr processes the response and updates `PkgStatus`.
@@ -194,7 +194,7 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
   |Column|Values|
   |---|---|
-  |ActionState|1 - SUCCESS<br/>2 - WARNING<br/>4 - ERROR<br/>8 - DOWNLOAD STARTED<br/>16 - DOWNLOAD IN PROGRESS<br/>32 - DOWNLOADED<br/>64 - CANCELED<br/>128 - CANCELLATION REQUESTED|
+  |ActionState|1 - SUCCESS<br/>2 - WARNING<br/>4 - ERROR<br/>8 - DOWNLOAD STARTED<br/>16 - DOWNLOAD IN PROGRESS<br/>32 - DOWNLOADED<br/>64 - CANCELED<br/>128 - CANCELLATION REQUESTED|
   |||
 
 - `PkgNotification` - Notification table monitored by SMSDBMON to trigger DistMgr to process a package. Type column defines the type of package notification. Rows in this table are removed after SMSDBMON triggers DistMgr.
@@ -203,7 +203,7 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
   |Column|Values|
   |---|---|
-  |Type|0 - UNKNOWN<br/>1 - PACKAGE<br/>2 - PROGRAM<br/>4 - PACKAGE SERVER (DP)<br/>8 - PACKAGE ACCESS ACCOUNT<br/>15 - ALL|
+  |Type|0 - UNKNOWN<br/>1 - PACKAGE<br/>2 - PROGRAM<br/>4 - PACKAGE SERVER (DP)<br/>8 - PACKAGE ACCESS ACCOUNT<br/>15 - ALL|
   |||
 
 - **Pull DP state messages** - List of state message IDs raised by pull DP
@@ -212,7 +212,7 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
   |Column|Values|
   |---|---|
-  |State ID|1  -  SUCCESS<br/>2  -  WARNING<br/>4  -  FAILURE<br/>8  -  DOWNLOAD STARTED<br/>16 - DOWNLOAD IN PROGRESS<br/>32 - DOWNLOADED<br/>64 - CANCELED|
+  |State ID|1  -  SUCCESS<br/>2  -  WARNING<br/>4  -  FAILURE<br/>8  -  DOWNLOAD STARTED<br/>16 - DOWNLOAD IN PROGRESS<br/>32 - DOWNLOADED<br/>64 - CANCELED|
   |||
 
   Sample State Message Report:
@@ -294,7 +294,7 @@ Here are some SQL queries that may be helpful when troubleshooting various conte
   SELECT distinct DPSD.DPName, DPSD.PackageID, SP.Name, DPSD.MessageState, DPSD.LastStatusTime, DPSD.SiteCode
   FROM vSMS_DPStatusDetails DPSD
   JOIN SMSPackages_All SP ON DPSD.PackageID = SP.PkgID
-  WHERE DPSD.LastStatusTime > DATEAdd(dd,-3,GETDate())  
+  WHERE DPSD.LastStatusTime < DATEAdd(dd,-3,GETDate())  
   AND MessageState = 2
   ```
 
@@ -304,7 +304,7 @@ Here are some SQL queries that may be helpful when troubleshooting various conte
   SELECT distinct DPSD.DPName, DPSD.PackageID, SP.Name, DPSD.MessageState, DPSD.LastStatusTime, DPSD.SiteCode
   FROM vSMS_DPStatusDetails DPSD
   JOIN SMSPackages_All SP ON DPSD.PackageID = SP.PkgID
-  WHERE DPSD.LastStatusTime > DATEAdd(dd,-3,GETDate())
+  WHERE DPSD.LastStatusTime < DATEAdd(dd,-3,GETDate())
   AND MessageState = 4
   ```
 

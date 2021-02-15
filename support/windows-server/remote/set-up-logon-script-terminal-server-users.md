@@ -11,9 +11,9 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
-# How to Set Up a Logon Script Only for Terminal Server Users
+# How to set up a logon script only for Terminal Server users
 
 This article provides the steps to set up a logon script only for Terminal Server users.
 

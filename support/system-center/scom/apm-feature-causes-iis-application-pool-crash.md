@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4464228
 
 ## Symptom
 
-The APM feature in System Center 2016 Operations Manager agent may cause a crash for the Internet Information Services (IIS) application pool running under .NET Framework 2.0 runtime.
+The APM feature in System Center 2016 Operations Manager agent may cause a crash for the Internet Information Services (IIS) application pool running under .NET Framework 2.0 runtime.
 
 ## Cause
 

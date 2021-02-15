@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # The Remote Desktop Services or Terminal Services Role fails to install when FireWall Service is set to disabled
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2027551
 
 ## Symptoms
 
-When installing the Remote Desktop Services Role on Windows Server 2008 server, you may receive following error:
+When installing the Remote Desktop Services Role on Windows Server 2008 server, you may receive the following error:
 
 > Attempt to configure Terminal Server failed with error code *0x800706D9*. "There are no more endpoints available from the endpoint mapper"
 

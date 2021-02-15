@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, roumaago
 ms.prod-support-area-path: Container
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Application Programming Interface (API) call of performance counters is delayed inside a container
 

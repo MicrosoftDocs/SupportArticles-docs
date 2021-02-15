@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Windows device enrollment problems in Microsoft Intune
 description: Suggestions for troubleshooting some of the most common problems when you enroll Windows devices in Intune.
-ms.date: 07/29/2019
+ms.date: 12/22/2020
 ms.reviewer: mghadial
 ---
 # Troubleshoot Windows device enrollment problems in Microsoft Intune
@@ -22,7 +22,7 @@ Collect the following information about the problem:
 - What platform (Android, iOS/iPadOS, Windows) has the problem?
 - How many users are affected? Are all users affected or just some?
 - How many devices are affected? Are all devices affected or just some?
-- What is the MDM authority?
+- What is the mobile device management (MDM) authority?
 - How is enrollment being performed? Is it "Bring your own device" (BYOD) or Apple Automated Device Enrollment (ADE) with enrollment profiles?
 
 ## Error messages
@@ -76,7 +76,7 @@ There are several possible solutions to this issue:
 
 Error 0x801c0003: "This user is not allowed to enroll. You can try again or contact your system administrator with the error code 801c0003."
 
-**Cause:** The **Users may join devices to Azure AD** setting is set to **None**. This prevents new users from joining their devices to Azure AD. Therefore Intune enrollment fails.
+**Cause:** The **Users may join devices to Azure AD** setting is set to **None**. It prevents new users from joining their devices to Azure AD. Therefore Intune enrollment fails.
 
 #### Resolution
 
@@ -91,7 +91,7 @@ Error 8018000a: "Something went wrong. The device is already enrolled.  You can 
 
 **Cause:** One of the following conditions is true:
 
-- A different user has already enrolled the device in Intune or joined the device to Azure AD. To determine whether this is the case, go to **Settings** > **Accounts** > **Work Access**. Look for a message that's similar to the following: "Another user on the system is already connected to a work or school. Please remove that work or school connection and try again."
+- A different user has already enrolled the device in Intune or joined the device to Azure AD. To determine whether this is the case, go to **Settings** > **Accounts** > **Work Access**. Look for a message that's similar to **Another user on the system is already connected to a work or school. Please remove that work or school connection and try again.**
 
 #### Resolution
 
@@ -118,7 +118,10 @@ Assign a valid Intune license to the user, and then enroll the device.
 
 **Cause:** One of the following conditions is true:
 
-- You use both Mobile Device Management (MDM) for Microsoft 365 and Intune on the tenant, and the user who tries to enroll the device doesn't have a valid Intune license or an Office 365 license.
+- You use both MDM for Microsoft 365 and Intune on the tenant. And the user who tries to enroll the device doesn't have a valid Intune license or an Office 365 license. In this situation, you may receive the following error message:
+
+  > Something went wrong.  
+  > Looks like we can't connect to the URL for your organization's MDM terms of use. Try again, or contact your system administrator with the problem information from this page.
 - The MDM terms and conditions in Azure AD is blank or doesn't contain the correct URL.
 
 #### Resolution
@@ -127,7 +130,7 @@ To fix this issue, use one of the following methods:
 
 ##### Assign a valid license to the user
 
-Go to the [Microsoft 365 Admin Center](https://admin.microsoft.com), and then assign either an Intune or an Microsoft 365 license to the user.
+Go to the [Microsoft 365 Admin Center](https://admin.microsoft.com), and then assign either an Intune or a Microsoft 365 license to the user.
 
 ##### Correct the MDM terms of use URL
 
@@ -198,7 +201,7 @@ To fix this issue in a stand-alone Intune environment, follow these steps:
 
 ### A setup failure has occurred during bulk enrollment.
 
-**Cause:** The Azure AD user accounts in the account package (Package_GUID) for the respective provisioning package aren't allowed to join devices to Azure AD. These Azure AD accounts are automatically created when you set up a provisioning package with Windows Configuration Designer (WCD) or the Set up School PCs app, and these accounts are then used to join the devices to Azure AD.
+**Cause:** The Azure AD user accounts in the account package (Package_GUID) for the respective provisioning package aren't allowed to join devices to Azure AD. These Azure AD accounts are automatically created when you set up a provisioning package with Windows Configuration Designer (WCD) or the **Set up School PCs** app. And these accounts are then used to join the devices to Azure AD.
 
 #### Resolution
 
@@ -210,7 +213,7 @@ To fix this issue in a stand-alone Intune environment, follow these steps:
 
 For more information about how to create a provisioning package for Windows Configuration Designer, see [Create a provisioning package for Windows 10](/windows/configuration/provisioning-packages/provisioning-create-package).
 
-For more information about the Set up School PCs app, see [Use the Set up School PCs app](/education/windows/use-set-up-school-pcs-app).
+For more information about the **Set up School PCs** app, see [Use the Set up School PCs app](/education/windows/use-set-up-school-pcs-app).
 
 ### Auto MDM Enroll: Failed
 
@@ -228,18 +231,18 @@ When you try to enroll a Windows 10 device automatically by using Group Policy, 
 
 **Cause:** One of the following conditions is true:
 
-- The UPN contains an unverified or non-routable domain, such as .local (like joe@contoso.local).
+- The UPN contains an unverified or non-routable domain, such as `.local` (like joe@contoso.local).
 - **MDM user scope** is set to **None**.
 
 #### Resolution
 
-If the UPN contains an unverified or non-routable domain, follow these steps: 
+If the UPN contains an unverified or non-routable domain, follow these steps:
 
-1. On the server that Active Directory Domain Services (AD DS) runs on, open **Active Directory Users and Computers** by typing **dsa.msc** in the **Run** dialog, and then click **OK**.    
-2. Click **Users** under your domain, and then do the following:  
-    - If there's only one affected user, right-click the user, and then click **Properties**. On the **Account** tab, in the UPN suffix drop-down list under **User logon name**, select a valid UPN suffix such as contoso.com, and then click **OK**.    
+1. On the server that Active Directory Domain Services (AD DS) runs on, open **Active Directory Users and Computers** by typing **dsa.msc** in the **Run** dialog, and then click **OK**.
+2. Click **Users** under your domain, and then follow these steps:  
+    - If there's only one affected user, right-click the user, and then click **Properties**. On the **Account** tab, in the UPN suffix drop-down list under **User logon name**, select a valid UPN suffix such as contoso.com, and then click **OK**.
     - If there are multiple affected users, select the users, in the **Action** menu, click **Properties**. On the **Account** tab, select the **UPN suffix** check box, select a valid UPN suffix such as contoso.com in the drop-down list, and then click **OK**.
-3. Wait for the next synchronization, or force a Delta Sync from the Synchronization Server by running the following commands in an elevated PowerShell prompt:
+3. Wait for the next synchronization. Or force a Delta Sync from the Synchronization Server by running the following commands in an elevated PowerShell prompt:
 
     ```powershell
     Import-Module ADSync
@@ -281,7 +284,7 @@ Make sure that the required access to internet-based services for Autopilot isn'
 #### Resolution
 Update the device to Pro edition or higher
 
-### Registering your device for mobile management (Failed:3, 0x801C03EA).
+### Registering your device for mobile management (Failed: 3, 0x801C03EA).
 
 **Cause:** The device has a TPM chip that supports version 2.0, but hasn't yet been upgraded to version 2.0.
 
@@ -319,22 +322,22 @@ For more information about how to deploy a Windows device in kiosk mode with Aut
 
 Error 0x80070774: Something went wrong. Confirm you are using the correct sign-in information and that your organization uses this feature. You can try to do this again or contact your system administrator with the error code 80070774.
 
-This issue typically occurs before the device is restarted in a Hybrid Azure AD Autopilot scenario, when the device times out during the initial Sign in screen. It means that the domain controller can't be found or successfully reached because of connectivity issues. Or that the device has entered a state which can't join the domain.
+This issue typically occurs before the device is restarted in a Hybrid Azure AD Autopilot scenario, when the device times out during the initial sign-in screen. It means that the domain controller can't be found or successfully reached because of connectivity issues. Or, the device has entered a state that can't join the domain.
 
-**Cause:** The most common cause is that Hybrid Azure AD Join is being used and the Assign user feature is configured in the Autopilot profile. Using the Assign user feature performs an Azure AD join on the device during the initial sign-in screen which puts the device in a state where it can't join your on-premises domain. Therefore, the Assign user feature should only be used in standard Azure AD Join Autopilot scenarios.  The feature should be not used in Hybrid Azure AD Join scenarios.
+**Cause:** The most common cause is that Hybrid Azure AD Join is used, and the Assign user feature is configured in the Autopilot profile. Using the Assign user feature performs an Azure AD join on the device during the initial sign-in screen. It puts the device in a state that can't join your on-premises domain. Therefore, the Assign user feature should only be used in standard Azure AD Join Autopilot scenarios. The feature shouldn't be used in Hybrid Azure AD Join scenarios.
 
-Another possible cause for this error is that the Autopilot object's associated AzureAD device has been deleted. To resolve this, delete the Autopilot object and reimport the hash to generate a new one.
+Another possible cause for this error is that the Autopilot object's associated AzureAD device has been deleted. To resolve this issue, delete the Autopilot object and reimport the hash to generate a new one.
 
 #### Resolution
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose >  **Devices** > **Windows** > **Windows devices**.
-2. Select the device which is experiencing the issue > click the ellipsis (…) on the rightmost side.
+2. Select the device which is experiencing the issue, and then click the ellipsis (…) on the rightmost side.
 3. Select **Unassign user** and wait for the process to finish.
-4. Verify that the Hybrid Azure AD Autopilot profile is assigned before re-attempting OOBE.
+4. Verify that the Hybrid Azure AD Autopilot profile is assigned before reattempting OOBE.
 
 #### Second resolution
 
-If the issue persists, on the server that hosts the Offline Domain Join Intune Connector, check to see if Event ID 30312 is logged within the ODJ Connector Service log. Event 30312 resembles the following:
+If the issue persists, on the server that hosts the Offline Domain Join Intune Connector, check to see if Event ID 30312 is logged within the ODJ Connector Service log. Event 30312 resembles the following event:
 
 ```
 Log Name:      ODJ Connector Service
@@ -380,12 +383,12 @@ This issue is usually caused by incorrectly delegating permissions to the organi
 **Cause:** This issue can arise if all the following conditions are true:
 
 - You're using the Enrollment Status Page to track Microsoft Store for Business apps.
-- You have an Azure AD Conditional Access policy that uses the require a device to marked as compliant control.
+- You have an Azure AD Conditional Access policy that uses the **Require device to be marked as compliant** control.
 - The policy applies to All Cloud apps and Windows.
 
 #### Resolution
 
-Try either of the following:
+Try one of the following methods:
 
 - Target your Intune compliance policies to devices. Make sure that compliance can be determined before the user logs on.
 - Use offline licensing for store apps. This way, the Windows client doesn't have to check with the Microsoft Store before determining device compliance.

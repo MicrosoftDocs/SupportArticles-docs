@@ -19,15 +19,15 @@ When you use the `SyndicationFeed.Load` method to read from an RSS source, you m
 > System.Xml.XmlException: Error in line 7 position 47. An error was encountered when parsing the feed's XML. Refer to the inner exception for more details.  
 > String was not recognized as a valid DateTime.
 
-Some feeds function may correctly while other feeds function incorrectly.
+Some feeds function may correctly while other feeds function incorrectly.
 
 ## Cause
 
-This problem occurs because of the date format that is used in the feed.  The `SyndicationFeed.Load` method expects to receive feeds that are in standard format. The following is an example of standard format:
+This problem occurs because of the date format that is used in the feed.  The `SyndicationFeed.Load` method expects to receive feeds that are in standard format. The following is an example of standard format:
 
 `Mon, 05 Oct 2009 08:00:06 GMT`
 
-However, some feeds use a different format. For example, some feeds may use the following format:
+However, some feeds use a different format. For example, some feeds may use the following format:
 
 `Wed Oct 07 08:00:07 GMT 2009`
 

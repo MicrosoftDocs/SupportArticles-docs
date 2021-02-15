@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, shawnrab, spat
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Error when a user requests certificate from CA web enrollment pages: No certificate templates could be found
 
-This article provides help to solve an error (No certificate templates could be found) that occurs when you request certificates from CA web enrollment pages.
+This article provides help to solve an error "No certificate templates could be found" that occurs when you request certificates from CA web enrollment pages.
 
 _Original product version:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 811418

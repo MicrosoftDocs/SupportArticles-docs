@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Windows Server backup may fail because of the SQL Server VSS writer
 
@@ -33,7 +33,7 @@ Source: Microsoft-Windows-Backup
 Event ID: 521  
 Level: Error  
 Description:  
-Backup started at '9/1/2011 5:29:01 PM' failed as Volume Shadow copy operation failed for backup volumes with following error code '2155348129'. Please rerun backup once issue is resolved.
+Backup started at '*\<DateTime>*' failed as Volume Shadow copy operation failed for backup volumes with following error code '2155348129'. Please rerun backup once issue is resolved.
 
 If you examine the application event log more, you will notice numerous errors from sources SQLWriter and SQLVDI.
 

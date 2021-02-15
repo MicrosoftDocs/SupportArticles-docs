@@ -41,11 +41,11 @@ Additionally, you can't start the SQL Server Analysis Services clustered instanc
 
 ## Cause
 
-This issue occurs because when you set up the clustered instance of Analysis Services, the service SID isn't granted the **Log on as a service local policy user** right (SeServiceLogonRight).
+This issue occurs because when you set up the clustered instance of Analysis Services, the service SID isn't granted the **Log on as a service local policy user** right (SeServiceLogonRight).
 
 ## Resolution
 
-To fix this issue, grant the SQL Server Analysis Services service SID the local policy user Log on as a service right.
+To fix this issue, grant the SQL Server Analysis Services service SID the local policy user Log on as a service right.
 
 - For a default instance of SQL Server Analysis Services, t he name of the service SID is `NT SERVICE\MSSQLServerOLAPService`.
 - For a named instance, the name is `NT SERVICE\MSOLAP$\<instance name>`.
@@ -57,7 +57,7 @@ To grant the **Log on as a service right** to the service SID, follow these step
 3. Click **User Rights Assignment**.
 4. In the right pane, right-click **Log on as a service**, and then click **Properties**.
 5. Click **Add User or Group**.
-6. Click the **Locations**  button, select the server name, and then click **OK**.
+6. Click the **Locations** button, select the server name, and then click **OK**.
 7. In **Enter the object names to select** box, type *NT SERVICE\MSSQLServerOLAPService*, and then click **OK**.
 
    > [!NOTE]

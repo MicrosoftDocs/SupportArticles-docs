@@ -15,18 +15,18 @@ _Original KB number:_ &nbsp; 4230836
 
 ## Symptoms
 
-When you install a cumulative update to Microsoft SQL Server, setup may complete successfully. However, you may find the following error logged in the system's Application event log:
+When you install a cumulative update to Microsoft SQL Server, setup may complete successfully. However, you may find the following error logged in the system's Application event log:
 
 ```console
-Log Name:      Application  
-Source:        MsiInstaller  
-Date:         date time  
-Event ID:      1024  
+Log Name:      Application  
+Source:        MsiInstaller  
+Date:         date time  
+Event ID:      1024  
 Task Category: None  
-Level:         Error  
-Keywords:      Classic  
-User:          SYSTEM  
-Computer:     host_name  
+Level:         Error  
+Keywords:      Classic  
+User:          SYSTEM  
+Computer:     host_name  
 Description:  
 Product: SQL Server 2016 Database Engine Services - Update '  {DDCDC225-F14E-411F-925A-7CF68238240F}' could not be installed. Error code 1642. Windows Installer can create logs to help troubleshoot issues with installing software packages. Use the following link for instructions on turning on logging support: http://go.microsoft.com/fwlink/?LinkId=23127  
 Event Xml:  
@@ -65,7 +65,7 @@ This issue occurs in several scenarios in which an MSI installer package failure
 
 You can safely ignore this message in the Application event log when the following conditions are true:
 
-- Setup of the SQL Server cumulative update completed successfully.
+- Setup of the SQL Server cumulative update completed successfully.
 
 - No error messages are recorded in the Summary.txt file.
 

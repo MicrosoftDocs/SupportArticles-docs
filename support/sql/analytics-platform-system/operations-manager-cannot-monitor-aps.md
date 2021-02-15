@@ -17,13 +17,13 @@ _Original KB number:_ &nbsp; 4034603
 
 Consider the following scenario:
 
-- You installed the Microsoft System Center Operations Manager Management Packs.
-- You add a SQL Server Analytics Platform System (APS) appliance by running `new-apsappliance.ps1`.
+- You installed the Microsoft System Center Operations Manager Management Packs.
+- You add a SQL Server Analytics Platform System (APS) appliance by running `new-apsappliance.ps1`.
 - You set up the Watcher and Monitoring accounts.
 
 In this scenario, the appliance isn't monitored, and you experience one of the following issues:
 
-- **Issue A:** The appliance isn't discovered and isn't visible in Operations Manager.
+- **Issue A:** The appliance isn't discovered and isn't visible in Operations Manager.
 - **Issue B:** The appliance is listed in Operations Manager but is in the **NOT MONITORED** state.
 
 ## Cause
@@ -32,7 +32,7 @@ This issue is caused by an error that occurs during discovery. To see the error 
 
 - **Scenario A:**
 
-    Errors for the APS watcher account, such as an incorrect password.
+    Errors for the APS watcher account, such as an incorrect password.
 
 - **Scenario B:**
 
@@ -60,7 +60,7 @@ To fix this issue, follow these steps as appropriate for the error scenario.
   - Verify that the appliance is added to the registry of the watcher node.
 
     > [!NOTE]
-    > The IP that's specified must be for the APS Control Node IP. It should be located under the following registry subkey:
+    > The IP that's specified must be for the APS Control Node IP. It should be located under the following registry subkey:
     > `HKLM\SOFTWARE\Microsoft\Analytics Platform System\Management Pack\Appliances`
 
   - Verify that SQL Server Native Client is installed.

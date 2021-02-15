@@ -11,13 +11,13 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Certificate management
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # You receive various certificate-related error messages when connecting to a Terminal server that is running Windows Server 2008 or Windows Server 2008 R2
 
 This article provides a solution to various certificate-related error messages when you connect to a Terminal server.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2000960
 
 ## Symptoms
@@ -55,7 +55,7 @@ the certificate is not from a trusted certifying authority.
 
 ## Cause
 
-The issue occurs because an incorrect certificate is used to make the Terminal server session or remote desktop session.
+The issue occurs because an incorrect certificate is used to make the Terminal server session or remote desktop session.
 
 ## Resolution
 

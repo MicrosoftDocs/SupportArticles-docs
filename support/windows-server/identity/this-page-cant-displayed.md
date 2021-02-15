@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, fszita, maweeras, timccu, abizerh
 ms.prod-support-area-path: Active Directory Federation Services (AD FS)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # ADFS 2.0 error: This page cannot be displayed
 
@@ -62,7 +62,7 @@ To resolve this problem, follow these steps in the order. These steps will help 
 
     In the following screenshot, the first URL is for the web application, and the second URL is for the AD FS service.
 
-    :::image type="content" source="./media/this-page-cant-displayed/error-displays-ie- developer tool.png" alt-text="The screenshot for IE Developer tool.":::
+    :::image type="content" source="./media/this-page-cant-displayed/error-displays-ie-developer-tool.png" alt-text="The screenshot for IE Developer tool.":::
 
 - How to fix
 

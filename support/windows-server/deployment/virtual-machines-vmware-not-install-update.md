@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: henrche, kaushika
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # VMware driver installation fails in Windows Server 2008 R2 SP1
 
@@ -34,8 +34,8 @@ When you try to install the driver in Device Manager in virtual machines, it fai
 Moreover, a log that resembles the following is logged in the setupapi.dev.log file that is located in the %windir%/inf folder:
 
 > dvi: {Plug and Play Service: Device Install for PCI\VEN_15AD&DEV_07B0&SUBSYS_07B015AD&REV_01\FF565000B37984FE00}  
-ump: Creating Install Process: DrvInst.exe 17:13:28.877  
-ump: Server install process exited with code 0xc0000142 17:13:28.877  
+ump: Creating Install Process: DrvInst.exe *\<DateTime>*  
+ump: Server install process exited with code 0xc0000142 *\<DateTime>*  
 ump: {Plug and Play Service: Device Install exit(c0000142)}  
 ndv: Device Install failed for new device...installing NULL driver.  
 dvi: {Plug and Play Service: Device Install for PCI\VEN_15AD&DEV_07B0&SUBSYS_07B015AD&REV_01\FF565000B37984FE00}  

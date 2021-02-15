@@ -98,7 +98,7 @@ Value  Setting
 1      Local Intranet Zone
 2      Trusted sites Zone
 3      Internet Zone
-4      Restricted Sites Zon
+4      Restricted Sites Zone
 ```
 
 > [!NOTE]

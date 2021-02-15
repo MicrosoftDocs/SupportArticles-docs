@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Redirection (not printer)
-ms.technology: RDS
+ms.technology: windows-client-rds
 ---
 # Some USB devices are not available through RemoteFX USB redirection
 

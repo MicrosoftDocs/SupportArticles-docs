@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Data corruption and disk errors
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # System logs multiple events that specify Event ID 640
 
@@ -46,7 +46,7 @@ To determine the cause of Event ID 640, examine the "...FromDb" fields in the ev
 
 The "...FromDb" fields appear in bold in the following example of an event log entry:  
 
-> services (836,D,35) Error -1919 validating header page on flush map file '\<Drive>:\\\<Path>\\\<FileName>.jfm'. The flush map file will be invalidated. Additional information: **[SignDbHdrFromDb:Create time:00/00/1900 00:00:00.000 Rand:0 Computer:] [SignFmHdrFromDb:Create time:00/00/1900 00:00:00.000 Rand:0 Computer:]** [SignDbHdrFromFm:Create time:12/03/2019 06:18:40.407 Rand:559408839 Computer:] [SignFmHdrFromFm:Create time:12/03/2019 06:18:40.751 Rand:4291821429 Computer:]
+> services (836,D,35) Error -1919 validating header page on flush map file '\<Drive>:\\\<Path>\\\<FileName>.jfm'. The flush map file will be invalidated. Additional information: **[SignDbHdrFromDb:Create time:00/00/1900 00:00:00.000 Rand:0 Computer:] [SignFmHdrFromDb:Create time:00/00/1900 00:00:00.000 Rand:0 Computer:]** [SignDbHdrFromFm:Create time:*\<DateTime>* Rand:559408839 Computer:] [SignFmHdrFromFm:Create time:*\<DateTime>* Rand:4291821429 Computer:]
 
 > [!Note]
 > In this example, \<Drive>:\\\<Path>\\\<FileName> represents the actual path and name of the flush map file.

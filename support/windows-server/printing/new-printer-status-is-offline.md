@@ -11,13 +11,13 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, AndrewYa
 ms.prod-support-area-path: 'Errors and troubleshooting: General issues'
-ms.technology: PrintFaxScan
+ms.technology: windows-server-printing
 ---
 # The new printer status is Offline after you delete a print queue and then restart a Windows-based computer
 
 This article provides a solution to an issue where the new printer status is Offline after you delete a print queue and then restart a Windows-based computer.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2027593
 
 ## Symptoms

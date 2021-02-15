@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User Logon fails
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-server-user-profiles
 ---
 # You experience log-off problems on a Windows XP-based, Windows Server 2003-based, Windows 2000-based, or Windows NT 4.0-based computer
 
@@ -74,9 +74,9 @@ To use the Microsoft User Profile Hive Cleanup Service (UPHClean), follow these 
     > [!NOTE]
     > UPHClean runs as a service in Windows and will start automatically every time that Windows starts.
 8. To confirm that UPHClean is installed and running, click **Start**, and then click **Run**.
-9. In **Open** box, type the following text, and then click **OK:
+9. In **Open** box, type the following text, and then click **OK**:
 
-    services.msc
+    *services.msc*
 10. In Services, in the **Name** column, locate **User Profile Hive Cleanup**. In the **Status** column, confirm that the User Profile Hive Cleanup service is **Started**.
 
 > [!IMPORTANT]

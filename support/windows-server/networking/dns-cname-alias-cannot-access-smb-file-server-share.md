@@ -1,5 +1,5 @@
 ---
-title: Cannot access SMB file server
+title: Can't access SMB file server
 description: Describes an issue that blocks SMB file server share access to files and other resources through the DNS CNAME alias in some scenarios and successful in other scenarios. Provides a resolution.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, waltere, nedpyle
 ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
-ms.technology: Networking
+ms.technology: networking
 ---
 # SMB file server share access is unsuccessful through DNS CNAME alias
 
@@ -24,22 +24,22 @@ _Original KB number:_ &nbsp; 3181029
 
 Configuration
 
-- You are running an SMB file server, such as Windows Server. The server has files and resources that are configured by using their NetBIOS name, the DNS fully qualified domain name (FQDN), and their alias (CNAME).
-- You have a client that's running Windows 7, Windows Server 2008 R2 or a later version of Windows.
+- You're running an SMB file server, such as Windows Server. The server has files and resources that are configured by using their NetBIOS name, the DNS fully qualified domain name (FQDN), and their alias (CNAME).
+- You have a client that's running Windows 7, Windows Server 2008 R2, or a later version of Windows.
 
 Scenarios
 
 - When an application or user uses the actual storage name (the NetBIOS name or the FQDN) for files or other resources on the server that's using SMB, access is successful.
-- When an application or user uses the CNAME alias for files or other resources on the server that's using SMB, and you try to connect to a share on the file server with its DNS CNAME alias. For example, you try to connect to a share on the file server by using its DNS CNAME alias as in the following:
+- When an application or user uses the CNAME alias for files or other resources on the server that's using SMB, and you try to connect to a share on the file server with its DNS CNAME alias. For example, you try to connect to a share on the file server by using its DNS CNAME alias:
 
   ```console
   NET USE * \\CNAME\share_name
   ```
 
-  In this case, you experience the following:
+  In this case, you experience the following behaviors:
 
   - Access from a Windows Server 2008 R2 or Windows 7 client is successful.
-  - Access from a Windows Server 2012 R2, Windows 8.1 or a later version of Windows client is unsuccessful. In this case, you receive an error message that resembles the following:
+  - Access from a Windows Server 2012 R2, Windows 8.1, or a later version of Windows client is unsuccessful. In this case, you receive an error message that resembles the following one:
   
     > Open Folder
     >
@@ -51,7 +51,7 @@ Scenarios
 
 - If you use Network Monitor, Wire Shark, or Microsoft Message Analyzer to examine the network trace when the SMB Session Setup is successful, the session goes to the TREE Connect.
 
-  However, if you examine the network trace when the SMB Session Setup is unsuccessful, the session fails with a Kerberos KRB_AP_ERR_MODIFIED error. The following is an example of an unsuccessful SMB Session Setup request in a network trace:
+  However, if you examine the network trace when the SMB Session Setup is unsuccessful, the session fails with a Kerberos KRB_AP_ERR_MODIFIED error. Here's an example of an unsuccessful SMB Session Setup request in a network trace:
 
   > MessageNumber DiagnosisTypes Timestamp Source Destination Module Summary  
   112 None DateTime Client Server SMB2 Negotiate, Status: Success, 2780879Guid: {12f74af4-be82-11e5-b5c2-005056890096}, DialectRevision: SMB 2.  
@@ -75,7 +75,13 @@ Scenarios
   > [!NOTE]
   > This try would fail on older SMB implementations (Like AIX Samba 3.5.8), that cannot be configured for Kerberos authentication and does not listen to SMB direct host port 445, but only on NetBIOS port 139.
 
-- If the file server name was resolved through some other mechanism such as NetBIOS or Link-Local Multicast Name Resolution (LLMNR) or Peer Name Resolution Protocol (PNRP) processes, the SMB client uses the user supplied name such as the following:
+- If the file server name was resolved through some other mechanism such as
+  
+  - NetBIOS
+  - Link-Local Multicast Name Resolution (LLMNR)
+  - Peer Name Resolution Protocol (PNRP) processes
+  
+  the SMB client uses the user supplied name such as the following one:
 
   ```console
   CNAME\share_name
@@ -95,7 +101,7 @@ DWORD value: 1
 >
 > This command automatically registers SPNs for the alternate names.
 
-We do not recommend that you resolve this issue for a file server that is not Windows-based by typing the following commands in an elevated Command Prompt window on a Windows-based computer. Be aware that you would have to be logged on with Domain Administrator credentials and then press Enter at the command prompt to register the SPN for the CNAME of the non-Windows-based File Server storage device:
+We don't recommend that you resolve this issue for a file server that isn't Windows-based by typing the following commands in an elevated Command Prompt window on a Windows-based computer. You would have to be logged on with Domain Administrator credentials. Then press Enter at the command prompt to register the SPN for the CNAME of the non-Windows-based File Server storage device:
 
 ```console
 SETSPN -a host/alias_name targetserver
@@ -118,13 +124,13 @@ To collect a network trace, follow these steps:
     netsh trace start NetConnection capture=yes maxsize=100 filemode=circular overwrite=yes traceFile=c:\%COMPUTERNAME%_Repro_trace.etl
     ```
 
-2. Delete any existing File Server network connections. To do this, type the following command, and then press Enter:
+2. Delete any existing File Server network connections by running the following command:
 
     ```console
     NET USE * /DELETE
     ```
 
-3. Initialize all name caching. To do this, delete the existing caching by following these steps:
+3. Initialize all name caching by deleting the existing cache:
    1. To delete the DNS cache, type the following command, and then press Enter:
 
       ```console
@@ -160,10 +166,6 @@ To collect a network trace, follow these steps:
     ```console
     netsh trace stop
     ```
-
-## SDP Report Networking
-
-For more information about how to collect SDP Report Networking, see [[SDP 3][9b9d2b88-02f1-4a27-807d-0bb44178cdab] Networking Diagnostic for Windows](https://support.microsoft.com/help/2562677).
 
 ## Collect registry settings
 
@@ -207,7 +209,7 @@ Additionally, apply the following hotfixes:
 - [List of currently available hotfixes for the File Services technologies in Windows Server 2008 and in Windows Server 2008 R2](https://support.microsoft.com/help/2473205)
 - [List of currently available hotfixes for the File Services technologies in Windows Server 2012 and in Windows Server 2012 R2](https://support.microsoft.com/help/2899011)
 - [Add DisableStrictNameChecking registry key](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff660057(v=ws.10))
-- [DisableStrictNameChecking; server alias does not work from the actual server](https://social.technet.microsoft.com/forums/windowsserver/94f9b04f-e0a4-41a7-bbf3-b68e9a4c98db/disablestrictnamechecking-server-alias-does-not-work-from-the-actual-server)
+- [DisableStrictNameChecking; server alias doesn't work from the actual server](https://social.technet.microsoft.com/forums/windowsserver/94f9b04f-e0a4-41a7-bbf3-b68e9a4c98db/disablestrictnamechecking-server-alias-does-not-work-from-the-actual-server)
 - [Why do we need SPN for File Server (NAS / RAS / File Share System) DNS Alias (Cname)](/archive/blogs/sqlserverfaq/why-do-we-need-spn-for-file-server-nas-ras-file-share-system-dns-alias-cname)
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

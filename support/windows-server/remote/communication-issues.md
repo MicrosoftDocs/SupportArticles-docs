@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, robertvi
 ms.prod-support-area-path: Load Balancing and Connection Broker
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Communication issues occur when Remote Desktop Connection Broker connects to SQL Server in Windows Server 2012 R2
 

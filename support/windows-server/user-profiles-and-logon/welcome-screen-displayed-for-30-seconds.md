@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User profiles
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-server-user-profiles
 ---
 # The Welcome screen may be displayed for 30 seconds, and the logon script interacts with me when I try to log on to a computer that is running Windows Vista or Windows Server 2008
 
@@ -37,7 +37,7 @@ To resolve this issue, configure the value of the DelayedDesktopSwitchTimeout re
 To configure the value of the DelayedDesktopSwitchTimeout registry entry, follow these steps  
 
 1. Click **Start**, type regedit in the **Start Search** box, and then press ENTER.
-2. Locate the following registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`
+2. Locate the following registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`.
 3. Double-click the **DelayedDesktopSwitchTimeout** registry entry.
 4. In the **Value data** box, type 5, and then click **OK**.
 5. On the **File** menu, click **Exit**.
@@ -45,7 +45,7 @@ To configure the value of the DelayedDesktopSwitchTimeout registry entry, follow
 ## Steps to reproduce the problem
 
 > [!NOTE]
-> The "Run logon scripts synchronously" Group Policy setting is in the following location in the Group Policy Management Console:Local Computer Policy\User Configuration\Administrative Templates\System\Script
+> The "Run logon scripts synchronously" Group Policy setting is in the following location in the Group Policy Management Console:Local Computer Policy\User Configuration\Administrative Templates\System\Script.
 
 1. Enable the "Run logon scripts synchronously" Group Policy in the Group Policy Management Console. To do this, follow these steps:  
 

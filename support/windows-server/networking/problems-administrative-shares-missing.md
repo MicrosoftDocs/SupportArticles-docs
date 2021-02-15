@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, msadoff
 ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
-ms.technology: Networking
+ms.technology: networking
 ---
 # Overview of problems that may occur when administrative shares are missing
 
@@ -38,63 +38,69 @@ The following list is a comprehensive list of the problematic behavior that may 
 
 - If the affected computer is a domain controller, you may receive error messages on client computers during network logon or during the times when they try to join the domain. Sometimes, you can log on with client computers that are running Microsoft Windows 2000 or Microsoft Windows XP, but you cannot log on with client computers that are running Microsoft Windows 95, Microsoft Windows 98, or Microsoft Windows Millennium Edition. On Windows 9x-based computers, you may receive an error message that is similar to either of the following ones:  
 
-    >- The domain password you supplied is not correct, or access to your logon server has been denied.
+  - > The domain password you supplied is not correct, or access to your logon server has been denied.
 
-    >- The logon server did not recognize your domain password, or access to the server has been denied.
+  - > The logon server did not recognize your domain password, or access to the server has been denied.
 
-    When you try to log on to the network on a Windows 2000-based or Windows XP-based computer, you may receive an error message that is similar to:  
-    >No logon server is available to service the logon request.  
+    When you try to log on to the network on a Windows 2000-based or Windows XP-based computer, you may receive an error message that is similar to:
+  
+     > No logon server is available to service the logon request.  
 
-    When you try to join the domain, you may receive an error message that is similar to:  
-    >The following error occurred attempting to join the domain '**Domain_Name**': The network name cannot be found.
+     When you try to join the domain, you may receive an error message that is similar to:  
+     > The following error occurred attempting to join the domain '**Domain_Name**': The network name cannot be found.
 
 - When you try to access or view the affected computer remotely by using a UNC path, a mapped drive, the net use command, the net view command, or by browsing the network in Network Neighborhood or My Network Places, you may receive an error message that is similar to one of the followings:
 
-    >- The server is not configured for transactions.
+  - > The server is not configured for transactions.
 
-    >- System error 53 has occurred. The network path was not found.
+  - > System error 53 has occurred. The network path was not found.
 
-    >- **Domain_Name** is not accessible.
+  - > **Domain_Name** is not accessible.
 
 - You may receive errors when you try to perform administrative tasks on a domain controller. For example, MMC snap-ins such as Active Directory Users and Computers or Active Directory Sites and Services may not start, and you may receive an error message that is similar to the following one:  
 
-    >Naming Information cannot be located because: Login attempt failed.
+     > Naming Information cannot be located because: Login attempt failed.
 
 - When you try to add a user to a security group, you may receive an error message that is similar to:  
 
-    >Object Picker cannot open because no locations from which to choose objects can be found.
+     > Object Picker cannot open because no locations from which to choose objects can be found.
 
 - When you try to run Netdom.exe from the Windows 2000 Support Tools to find the FSMO roles, you may receive an error message that is similar to the following one:  
 
-    >Unable to update the password. The value provided as the current password is incorrect.
+     > Unable to update the password. The value provided as the current password is incorrect.
 
 - When you try to run Dcdiag.exe from the Windows 2000 Support Tools, you may receive an error message that is similar to the following one:  
-    >Failed with 67: The network name cannot be found  
+     > Failed with 67: The network name cannot be found  
 
-  The results from Dcdiag.exe may also list LDAP bind errors that are similar to the following one:  
-    >LDAP bind failed with error 1323.
+     The results from Dcdiag.exe may also list LDAP bind errors that are similar to the following one:  
+     > LDAP bind failed with error 1323.
 
 - When you try to run Netdiag.exe from the Windows 2000 Support Tools, you may receive an error message that is similar to:  
 
-    >DC list test . . . . . . . . . . . : Failed  
-    Failed to enumerate DCs by using the browser. [NERR_BadTransactConfig]
+     > DC list test . . . . . . . . . . . : Failed  
+     Failed to enumerate DCs by using the browser. [NERR_BadTransactConfig]
 
 - If you run a network trace when you try to connect to the affected computer, you may see results that are similar to the following one:
 
-    ```console
-    C session setup & X, Username = username, and C tree connect & X, Share = \\<Server_Name>\IPC$  
-    R session setup & X - DOS Error, (67) BAD_NET_NAME
-    ```
+     ```console
+     C session setup & X, Username = username, and C tree connect & X, Share = \\<Server_Name>\IPC$  
+     R session setup & X - DOS Error, (67) BAD_NET_NAME
+     ```
 
 - On the server, the WINS service may not start or the WINS console may display a red X, or both.
 
 - NetBT 4311 events that are similar to the following ones may be logged in Event Viewer:
 
+     > Event ID: 4311  
+     Event Source: NetBT  
+     Event Type: Error  
+     Description: Initialization failed because the driver device could not be created
+
 - The Terminal Services Licensing console may not start, and you may receive an error message that is similar to:
 
-    >- No Terminal Services license server is available in the current domain or workgroup. To connect to another license server, click license, click connect and click the server name.
+  - > No Terminal Services license server is available in the current domain or workgroup. To connect to another license server, click license, click connect and click the server name.
 
-    >- The network address is invalid
+  - > The network address is invalid
 
 ## Cause
 
@@ -107,13 +113,13 @@ Infection by one of these malicious programs can come directly from the Internet
 An example of a malicious program that targets administrative shares is the `Win32.Agobot` program.  
   
 Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.  
->[!NOTE]
->The `Win32.Agobot` program is only an example. Malicious programs become obsolete as antivirus vendors discover them and add them to their virus definitions. However, malicious users frequently develop new programs and variants to avoid detection by antivirus software.
+> [!NOTE]
+> The `Win32.Agobot` program is only an example. Malicious programs become obsolete as antivirus vendors discover them and add them to their virus definitions. However, malicious users frequently develop new programs and variants to avoid detection by antivirus software.
 
 ## Resolution
 
->[!IMPORTANT]
->This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
+> [!IMPORTANT]
+> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
 [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
 
 To verify whether a computer is affected by this issue, follow these steps:  
@@ -123,8 +129,8 @@ To verify whether a computer is affected by this issue, follow these steps:
     1. Click **Start**, click **Run**, type regedit, and then press ENTER.
     2. Locate and then click the following registry subkey: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanmanServer\Parameters`  
     3. If the AutoShareServer and AutoShareWks DWORD values in the **LanmanServer\Parameters** subkey are configured with a value data of 0, change that value to 1.
-        >[!NOTE]
-        >If these values do not exist, you do not have to create them because the default behavior is to automatically create the administrative shares.
+        > [!NOTE]
+        > If these values do not exist, you do not have to create them because the default behavior is to automatically create the administrative shares.
     4. Quit Registry Editor.
 
 2. Restart the computer. Typically, computers that are running Windows Server 2003, Windows XP, Windows 2000, or Windows NT 4.0 automatically create the administrative shares during startup.

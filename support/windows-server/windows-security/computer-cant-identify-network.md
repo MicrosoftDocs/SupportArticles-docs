@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, clandis, ioanc
 ms.prod-support-area-path: Secure channel issues
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # A computer can't identify the network when the computer is running Windows Vista, Windows Server 2008, Windows 7, or Windows Server 2008 R2, and is a member of a child domain
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: 'Management and Configuration: Printers via Group Policy'
-ms.technology: PrintFaxScan 
+ms.technology: windows-server-printing 
 ---
 # Use Group Policy settings to control printers in Active Directory
 
@@ -33,11 +33,11 @@ There are two kinds of configurations that can be set for printers in a Group Po
 
 ## Configure printer-specific settings for computers
 
-1. Click **Start**, point to **Programs**, point to **Administrative Tools**, and then click **Active Directory Users and Computers**.
+1. Select **Start**, point to **Programs**, point to **Administrative Tools**, and then select **Active Directory Users and Computers**.
 
-2. Click the Active Directory container of the domain that you want to manage (an organizational unit or a domain). Right-click that container, and then click **Properties**.
+2. Select the Active Directory container of the domain that you want to manage (an organizational unit or a domain). Right-click that container, and then select **Properties**.
 
-3. Click the **Group Policy** tab, and then click **New** to create a new Group Policy setting.
+3. Select the **Group Policy** tab, and then select **New** to create a new Group Policy setting.
 
 4. In the Local Group Policy Editor, expand the following folders:
 
@@ -49,15 +49,15 @@ The following settings can be enabled under **Computer Configuration**:
 
 - **Allow Printers to be published:** Enables or disables the publishing of printers in the directory.
 
-- **Allow Print Spooler to accept client connections:** Controls whether the print spooler will accept client connections. When the policy is not configured, the spooler will not accept client connections until a user shares out a local printer or opens the print queue on a printer connection. At this point, the spooler will start accepting client connections automatically.
+- **Allow Print Spooler to accept client connections:** Controls whether the print spooler will accept client connections. When the policy isn't configured, the spooler won't accept client connections until a user shares out a local printer or opens the print queue on a printer connection. At this point, the spooler will start accepting client connections automatically.
 
-- **Allow pruning of published printers:** Determines whether the domain controller can prune (that is, delete from Active Directory) the printers that are published by this computer. By default, the pruning service on the domain controller prunes printer objects from Active Directory if the computer that published them does not respond to contact requests. When the computer that published the printers restarts, it republishes any deleted printer objects.
+- **Allow pruning of published printers:** Determines whether the domain controller can prune (delete from Active Directory) the printers that are published by this computer. By default, the pruning service on the domain controller prunes printer objects from Active Directory if the computer that published them doesn't respond to contact requests. When the computer that published the printers restarts, it republishes any deleted printer objects.
 
 - **Automatically publish new printers in the Active Directory:** By default, this setting is turned on. It can be turned off so that only shared printers that are selected are put in the directory.
 
-- **Check published state:** Used to verify that published printers are published in Active Directory. By default, the published state is not verified
+- **Check published state:** Used to verify that published printers are published in Active Directory. By default, the published state isn't verified.
 
-- **Custom Support URL in Printers folder's left pane:**  This policy bit is designed for administrators to add customized support URLs for the server. If this bit is not selected, the navigation pane of the Printers folder displays URLs for selected printer plus a vendor support URL if it is available. If this bit is selected and the customized support URL is provided, the previously mentioned two support URLs are replaced by the customized URL. The default is not selected. (hat is, no customized support URL).
+- **Custom Support URL in Printers folder's left pane:**  This policy bit is designed for administrators to add customized support URLs for the server. If this bit isn't selected, the navigation pane of the Printers folder displays URLs for selected printer plus a vendor support URL if it's available. If this bit is selected and the customized support URL is provided, the previously mentioned two support URLs are replaced by the customized URL. The default isn't selected, which means no customized support URL.
 
 - **Computer Location:** Specifies the default location criteria that are used when searching for printers. This setting is a component of the Location Tracking feature of Windows printers. To use this setting, enable Location Tracking by enabling the **Pre-populate printer search location text** setting. When Location Tracking is enabled, the system uses the specified location as a criterion when users search for printers. The value that you type here overrides the actual location of the computer that is conducting the search.
 
@@ -75,27 +75,32 @@ The following settings can be enabled under **Computer Configuration**:
 
     The pruning service periodically contacts computers that have published printers to verify that the printers are still available for use.
 
-    If a computer does not respond to the contact attempt, the attempt is retried a specified number of times, at a specified interval. The **Directory pruning retry** setting determines the number of times that the attempt is retried. The default value is two retries. The **Directory Pruning Interval** setting determines the time interval between retries. The default value is eight hours. If the computer has not responded by the last contact attempt, its printers are pruned from the directory
+    If a computer doesn't respond to the contact attempt, the attempt is retried a specified number of times, at a specified interval. The **Directory pruning retry** setting determines the number of times that the attempt is retried. The default value is two retries. The **Directory Pruning Interval** setting determines the time interval between retries. The default value is eight hours. If the computer hasn't responded by the last contact attempt, its printers are pruned from the directory
 
 - **Pre-populate printer search location text:** Enables the physical Location Tracking setting for Windows printers.
 
-    Use Location Tracking to design a location scheme for your enterprise and assign computers and printers to locations in the scheme. Location Tracking overrides the standard method that is used to locate and associate computers and printers. The standard method uses a printer's IP address and subnet mask to estimate its physical location and proximity to computers. If you enable this setting, users can browse for printers by location without knowing the printer's location or location naming scheme.
+   Use Location Tracking to design a location scheme for your enterprise and assign computers and printers to locations in the scheme. Location Tracking overrides the standard method that is used to locate and associate computers and printers. The standard method uses a printer's IP address and subnet mask to estimate its physical location and proximity to computers. If you enable this setting, users can browse for printers by location without knowing the printer's location or location naming scheme.
 
-    Enabling Location Tracking adds a **Browse** button in the **Add Printer** wizard's **Printer Name and Sharing Location** screen and to the **General** tab in the **Printer Properties** dialog box. By default, if you enable the Group Policy Computer location setting, the default location that you entered appears in the **Location**  field.
+   Enabling Location Tracking adds a **Browse** button in the following locations:
 
-- **Printer Browsing:** If you enable this setting, the print subsystem announces shared printers for printer browsing. You should disable this setting if you do not want the print subsystem to add shared printers to the browse list. If this setting is not configured, shared printers are not added to the browse list if a Directory service is available but are added if a Directory service is unavailable.
+  - The **Add Printer** wizard's **Printer Name and Sharing Location** screen
+  - The **General** tab in the **Printer Properties** dialog box
 
-- **Prune printers that are not automatically republished:** This setting determines whether printers can be pruned from the directory. It is best to leave this setting unconfigured. However, if you find that printers are being pruned even though the computer from which they are published is functioning and on the network, you can enable this policy to prevent the pruning service from deleting the published printers during network outages or situations in which dial-up links that are up only intermittently are used. To prevent printers from being removed from Active Directory, enable this policy, and retain the default selection of **Never** in the **Prune non-republishing printers** list.
+   By default, if you enable the Group Policy Computer location setting, the default location that you entered appears in the **Location**  field.
 
-- **Web-based printing:** This policy bit is designed for administrators to disable Internet printing entirely. When this policy bit is selected, none of the shared printers on the server are published to the web, and none of the shared printers are able to accept incoming jobs from other clients by using HTTP. The default is not selected.
+- **Printer Browsing:** If you enable this setting, the print subsystem announces shared printers for printer browsing. Disable this setting if you don't want the print subsystem to add shared printers to the browse list. If this setting isn't configured, shared printers aren't added to the browse list if a Directory service is available. They're added if a Directory service is unavailable.
+
+- **Prune printers that are not automatically republished:** This setting determines whether printers can be pruned from the directory. It's best to leave this setting unconfigured. However, if you find that printers are being pruned even though the computer from which they are published is functioning and on the network, you can enable this policy to prevent the pruning service from deleting the published printers during network outages or situations in which dial-up links that are up only intermittently are used. To prevent printers from being removed from Active Directory, enable this policy, and retain the default selection of **Never** in the **Prune non-republishing printers** list.
+
+- **Web-based printing:** This policy bit is designed for administrators to disable Internet printing entirely. When this policy bit is selected, none of the shared printers on the server are published to the web. And none of the shared printers are able to accept incoming jobs from other clients by using HTTP. The default is not selected.
 
 ### New additional Group Policy Objects in Windows Server 2008 R2
 
-1. On the domain controller, click **Start**, click **Administrative Tools**, and then click **Group Policy Management**. Or, click **Start**, click **Run**, type *GPMC.MSC*, and then press **Enter**.
+1. On the domain controller, select **Start**, select **Administrative Tools**, and then select **Group Policy Management**. Or, select **Start**, select **Run**, type `GPMC.MSC`, and then press **Enter**.
 2. Expand the forest and then domains.
 3. Under your domain, select the OU where you want to create this policy.
 4. Right-click the OU, and then select **Create a GPO in this domain, and link it here**.
-5. Give the GPO a name, and then click **OK**. Right-click the newly created Group Policy Object, and then click **Edit**. This opens Group Policy Management Editor.
+5. Give the GPO a name, and then select **OK**. Right-click the newly created Group Policy Object, and then select **Edit** to open Group Policy Management Editor.
 6. In Group Policy Management Editor, expand the following folders:
    - **Computer Configuration**
    - **Policies**
@@ -103,21 +108,21 @@ The following settings can be enabled under **Computer Configuration**:
    - **Control Panel**
    - **Printers**
 
-The following additional settings can be enabled under **Computer Configuration**:
+The following extra settings can be enabled under **Computer Configuration**:
 
-- **Add Printer wizard** - Network scan page (Managed network): This policy sets the maximum number of printers (of each type) that the Add Printer wizard will display on a computer on a managed network when the computer is able to reach a domain controller (for example, a domain-joined laptop on a corporate network).
+- **Add Printer wizard** - Network scan page (Managed network): This policy sets the maximum number of printers of each type that the Add Printer wizard will display on a computer on a managed network when the computer can reach a domain controller. For example, a domain-joined laptop on a corporate network.
 
-- **Add Printer wizard - Network scan page (Unmanaged network)**: This policy sets the maximum number of printers (of each type) that the Add Printer wizard will display on a computer on an unmanaged network when the computer is not able to reach a domain controller (for example, a domain-joined laptop on a home network).
+- **Add Printer wizard - Network scan page (Unmanaged network)**: This policy sets the maximum number of printers of each type that the Add Printer wizard will display on a computer on an unmanaged network when the computer can't reach a domain controller. For example, a domain-joined laptop on a home network.
 
 - **Always render print jobs on the server**: When printing through a print server, determines whether the print spooler on the client will process print jobs itself or pass them on to the server to do the work. This policy setting affects printing to a Windows print server only.
 
-- **Execute print drivers in isolated processes**: This policy setting determines whether the print spooler will execute print drivers in an isolated or separate process. When print drivers are loaded in an isolated process (or isolated processes), a print driver failure will not cause the print spooler service to fail.
+- **Execute print drivers in isolated processes**: This policy setting determines whether the print spooler will execute print drivers in an isolated or separate process. When print drivers are loaded in an isolated process or isolated processes, a print driver failure won't cause the print spooler service to fail.
 
 - **Extend Point and Print connection to search Windows Update**: This policy setting allows you to manage where client computers search for Point and Print drivers. If you enable this policy setting, the client computer will continue to search for compatible Point and Print drivers from Windows Update after it fails to find the compatible driver from the local driver store and the server driver cache.
 
 - **Only use Package Point and print**: This policy restricts client computers to use package point and print only. If this setting is enabled, users will be able to point and print only to printers that use package-aware drivers. When using package point and print, client computers will check the driver signature of all drivers that are downloaded from print servers.
 
-- **Override print driver execution compatibility setting reported by print driver**: This policy setting determines whether the print spooler will override the Driver Isolation compatibility that is reported by the print driver. This enables executing print drivers in an isolated process even if the driver does not report compatibility.
+- **Override print driver execution compatibility setting reported by print driver**: This policy setting determines whether the print spooler will override the Driver Isolation compatibility that's reported by the print driver. It enables executing print drivers in an isolated process even if the driver does not report compatibility.
 
 If you enable this policy setting, the print spooler will ignore the Driver Isolation compatibility flag value that is reported by the print driver.
 
@@ -157,17 +162,15 @@ If you enable this policy setting, the print spooler will ignore the Driver Isol
 
   - The **Users can only point and print to computers in their forest** setting applies only to Windows Server 2003 and Windows XP SP1 (and later service packs).
 
-    For more information about Point and Print, see the following articles:
+    For more information about Point and Print, see the following article:
 
-  - [Windows Hardware Dev Center Archive](/previous-versions/windows/hardware/download/dn550976(v=vs.85))
-  
-  - [Description of the Point and Print Restrictions policy setting in Windows Server 2003 and Windows XP](https://support.microsoft.com/help/319939)
+    [Windows Hardware Dev Center Archive](/previous-versions/windows/hardware/download/dn550976(v=vs.85))
 
 ## Configure printer-specific settings for users
 
-1. Click **Start**, point to **Programs**, point to **Administrative Tools**, and then click **Active Directory Users and Computers**.
-2. Click the Active Directory container of the domain you want to manage (an Organizational Unit or a domain). Right-click that container, and then click **Properties**.
-3. Click **New** to create a new Group Policy.
+1. Select **Start**, point to **Programs**, point to **Administrative Tools**, and then select **Active Directory Users and Computers**.
+2. Select the Active Directory container of the domain you want to manage (an Organizational Unit or a domain). Right-click that container, and then select **Properties**.
+3. Select **New** to create a new Group Policy.
 4. In Group Policy editor, expand the following folders:
 
     - **User Configuration**

@@ -34,13 +34,13 @@ To work around this problem, use one of the following methods:
 
 ### Use separate accounts for the replication agents created for different databases
   
-You can specify this while you are creating replication agents. You have to make sure all permissions touch points are taken care of. The procedure to change the security settings for already-created replication agents can be found at [View and modify replication security settings](/sql/relational-databases/replication/security/view-and-modify-replication-security-settings).
+You can specify this while you are creating replication agents. You have to make sure all permissions touch points are taken care of. The procedure to change the security settings for already-created replication agents can be found at [View and modify replication security settings](/sql/relational-databases/replication/security/view-and-modify-replication-security-settings).
 
 ### Use registry settings to increase the desktop heap size
   
 You can change the following registry entries:
 
-- `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\SessionViewSize` (for example, increase the value from 48 to 64).
+- `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\SessionViewSize` (for example, increase the value from 48 to 64).
 
 - `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\SubSystems\Windows` (for example, increase the third value of `SharedSection` by 256 kilobytes)
 
@@ -48,9 +48,9 @@ You have to apply the changes on both nodes. You have to save the registry keys 
 
 ### Change the replication agents from running continuously to running on a scheduled basis
   
-This makes sure that the replication agents run only when it's necessary, and not to stay idle constantly (because this wastes resources).
+This makes sure that the replication agents run only when it's necessary, and not to stay idle constantly (because this wastes resources).
 
-Instructions about how to change the replication agent schedule are available at [Specify synchronization schedules](/sql/relational-databases/replication/specify-synchronization-schedules).
+Instructions about how to change the replication agent schedule are available at [Specify synchronization schedules](/sql/relational-databases/replication/specify-synchronization-schedules).
 
 ### Change the server location on which the replication agents are running
   
@@ -135,8 +135,8 @@ We recommend that the desktop heap use remain between 80 percent and 90 percent.
 ## Steps to use LiveKD to enumerate the desktop heap values
 
 1. Download [Debugging Tools for Windows as part of the SDK](https://developer.microsoft.com/windows/downloads/sdk-archive/).
-2. Run `Sdksetup.exe`, and then install Debugging Tools for Windows.
-3. [Download LiveKD](/sysinternals/downloads/livekd).
+2. Run `Sdksetup.exe`, and then install Debugging Tools for Windows.
+3. [Download LiveKD](/sysinternals/downloads/livekd).
 4. Create a `C:\debugger` folder.
 5. Copy all the files from the location where you installed the debugging tools to `C:\debugger`. The default path is `C:\Program Files (x86)\Windows Kits\8.0\Debuggers\x64`.
 6. Extract LiveKD to `C:\debugger`.
@@ -175,20 +175,20 @@ We recommend that the desktop heap use remain between 80 percent and 90 percent.
     ......Unable to enumerate user-mode unloaded modules, NTSTATUS 0xC0000147
     ```
 
-10. Run `!dskheap` to receive the following output:
+10. Run `!dskheap` to receive the following output:
 
     ```console
     kd> !dskheap
     *** ERROR: Module load completed but symbols could not be loaded for LiveKdD.SYS
-    Winstation\Desktop            Heap Size(KB)   Used Rate(%)
+    Winstation\Desktop            Heap Size(KB)   Used Rate(%)
     ------------------------------------------------------------
-    WinSta0\Default                  20480                 0%
-    WinSta0\Disconnect                  96                 4%
-    WinSta0\Winlogon                   192                 2%
-    Service-0x0-3e7$\Default           768                 1%
-    Service-0x0-3e4$\Default           768                 0%
-    Service-0x0-3e5 $\Default           768                 0%
-    Service-0x0-10a75$\Default         768                 0%
+    WinSta0\Default                  20480                 0%
+    WinSta0\Disconnect                  96                 4%
+    WinSta0\Winlogon                   192                 2%
+    Service-0x0-3e7$\Default           768                 1%
+    Service-0x0-3e4$\Default           768                 0%
+    Service-0x0-3e5 $\Default           768                 0%
+    Service-0x0-10a75$\Default         768                 0%
     ------------------------------------------------------
     Total Desktop: (23840 KB - 7 desktops)
     Session ID:  0
@@ -202,9 +202,9 @@ We recommend that the desktop heap use remain between 80 percent and 90 percent.
     3. Connect to the `root\cimv2` namespace.
     4. Click **Query**, and then type `select * from win32_logonsession`.
     5. Double-click the entry that contains 997.
-    6. Select **UUID** in the object editor, and then click **Associators** to show the actual logon name. Refer to the following screenshot:
+    6. Select **UUID** in the object editor, and then click **Associators** to show the actual logon name. Refer to the following screenshot:
 
-        ![Select UUID, click Associators to show the actual logon name](./media/sql-replication-agents-not-run/select-uuid-click-associators.png)
+        ![Select UUID, click Associators to show the actual logon name](./media/sql-replication-agents-not-run/select-uuid-click-associators.png)
 
 ## Considerations if you use Remote Desktop Protocol
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kimnich, kaushika
 ms.prod-support-area-path: Folder redirection and Offline Files and Folders (CSC)
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Redirecting the user's Documents folder to their home directory fails when Grant the user exclusive rights to Documents is selected
 
@@ -28,7 +28,7 @@ The following error is logged in the Application Event Log:
 
 > Log Name: Application  
 Source: Microsoft-Windows-Folder Redirection  
-Date: 1/7/2011 4:52:57 PM  
+Date: \<DateTime>  
 Event ID: 502  
 Task Category: None  
 Level: Error  

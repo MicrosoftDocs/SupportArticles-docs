@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # You may get VSS warnings in the Application Event log of SBS 2011 Standard
 
@@ -26,7 +26,7 @@ In Small Business Server 2011 Standard, you may see warnings in the application 
 
 > Log Name: Application  
 Source: VSS  
-Date: 4/11/2011 9:48:48 AM  
+Date: *\<DateTime>*  
 Event ID: 8230  
 Task Category: None  
 Level: Warning  
@@ -75,7 +75,7 @@ If the VSSAccessControl registry key does not contain the exact right accounts, 
 
 > Log Name: Application  
 Source: VSS  
-Date: 4/11/2011 12:23:15 PM  
+Date: *\<DateTime>*  
 Event ID: 8213  
 Task Category: None  
 Level: Error  

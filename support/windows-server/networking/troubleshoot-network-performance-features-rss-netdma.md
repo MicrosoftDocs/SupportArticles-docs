@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: whall, kaushika
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: networking
 ---
 # How to troubleshoot advanced network performance features such as RSS and NetDMA
 
@@ -103,7 +103,7 @@ You can check the following two other settings that affect TCPchimney offloading
 These commands enable TCP offloading to be set up specifically for a certain application or port combination. Output from both netsh commands is as follows:
 
 > [!NOTE]
-> This operation requires elevated privileges (Run as administrator)
+> This operation requires elevated privileges (Run as administrator).
 
 ![chimney settings ](./media/troubleshoot-network-performance-features-rss-netdma/netsh-cmd-output.png)
 

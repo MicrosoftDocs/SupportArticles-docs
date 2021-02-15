@@ -37,6 +37,8 @@
     href: uninstall-visual-studio-2012.md
   - name: Visual Studio 2015 and 2013 features doesn't work
     href: visual-studio-2015-2013-feature-not-work.md
+  - name: Windows Installer may display inaccurate progress
+    href: windows-installer-display-inaccurate-progress.md
 
 - name: Third-party tools installed with Visual Studio
   items:

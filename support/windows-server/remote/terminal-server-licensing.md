@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
 ms.prod-support-area-path: Remote Desktop Services (Terminal Services) licensing
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Terminal Server licensing
 
@@ -51,6 +51,6 @@ Terminal Server License Manager creates seven temporary files in the System32 di
 
 It is possible to have more than seven JETx.TMP files. If the server is powered off without using the shutdown routine or if the server is shut down inside an RDP client session, the JETx.TMP files are not cleaned up. Shutting down the server through an RDP client session is generally not an issue, since services are written to handle power outages by committing cached data very quickly. Administrators should be aware, however, that the normal shutdown procedures are not followed. If you shut down the server at the console, all services are stopped before the server shuts down. The server shuts down immediately, without stopping services correctly if the shutdown is performed through a client session. Because services are not notified, the JETx.TMP files will already exist when the server is restarted. The Terminal Server License Manager service will create seven new JETx.TMP files.
 
-If JETx.TMP files numbered 1-7 exist, the server will create new files numbered 8-14. If you deleted files 1-7 (which could be done since they would not be open) and shutdown the system through the RDP client again, the new files created at startup would again be numbered 1-7. So, the highest numbered files are not necessarily the files that are in use
+If JETx.TMP files numbered 1-7 exist, the server will create new files numbered 8-14. If you deleted files 1-7 (which could be done since they would not be open) and shutdown the system through the RDP client again, the new files created at startup would again be numbered 1-7. So, the highest numbered files are not necessarily the files that are in use.
 
 If left over JETx.TMP files are an issue, delete JET*.TMP files. Only the closed, unused files will be deleted. You cannot delete open files, or delete files in use.

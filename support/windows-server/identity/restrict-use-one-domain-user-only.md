@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User, computer, group, and object management
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to restrict use of a computer to one domain user only
 
@@ -39,8 +39,8 @@ By using group policy capabilities in Windows 2000/2003 Domain, you can prevent 
 
    1. Create a new domain-wide GPO and enable "Deny logon locally" user right to the source domain user account/sIn the target domain.  
 
-      >[!NOTE]
-       Some services (Like Backup software services) may effect by this policy, and wouldn't function.
+      > [!NOTE]
+      > Some services (Like Backup software services) may effect by this policy, and wouldn't function.
        To eliminate future problems, apply this policy and use GPO security filter feather.
 
        Deny logon locally

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 8418: The replication operation failed because of a schema mismatch between the servers involved
 
@@ -261,7 +261,7 @@ The following example events show both an internal ID and extended error data
 
 > Log Name: Directory Service  
 Source: Microsoft-Windows-ActiveDirectory_DomainService  
-Date: 12/7/2011 8:41:47 PM  
+Date: *\<DateTime>*  
 Event ID: 1173  
 Task Category: Internal Processing  
 Level: Warning  
@@ -283,7 +283,7 @@ The following example event identifies a specific object on which replication bl
 
 > Log Name: Directory Service  
 Source: Microsoft-Windows-ActiveDirectory_DomainService  
-Date: 12/7/2011 5:57:30 PM  
+Date: *\<DateTime>*  
 Event ID: 1203  
 Task Category: Replication  
 Level: Warning  
@@ -293,12 +293,12 @@ Computer: `GB-JDT-DMV-N55.contoso.com`
 Description:  
 The directory service could not replicate the following object from the source directory service at the following network address because of an Active Directory Domain Services schema mismatch.  
 Object: CN=Machine,CN={54EFB8A2-33F1-4E04-B4AD-229ABA513555},CN=Policies,CN=System,DC=contoso,DC=com  
-Network address: 869a9e4b-69c2-4a96-b8ba-b5f8464d2ec8._msdcs.contoso.com  
+Network address: *\<GUID>*._msdcs.contoso.com  
 Active Directory Domain Services will attempt to synchronize the schema before attempting to synchronize the following directory partition. Directory partition:  
 DC=contoso,DC=comiption:  
 The directory service could not replicate the following object from the source directory service at the following network address because of an Active Directory Domain Services schema mismatch. Object:  
 CN=Machine,CN={54EFB8A2-33F1-4E04-B4AD-229ABA513555},CN=Policies,CN=System,DC=contoso,DC=com Network address:  
-569a9e4b-69c2-4a96-b8ba-b5f8464d2ec8._msdcs.contoso.com  
+*\<GUID>*._msdcs.contoso.com  
 Active Directory Domain Services will attempt to synchronize the schema before attempting to synchronize the following directory partition. Directory partition: DC=contoso,DC=com
 
 Review the data collected  
@@ -337,23 +337,23 @@ Example
 The two entries fro replication metadata for a problem object as displayed by `Repadmin.exe` shows no ldapdisplayname:
 
 > USN DSA Org USN Org. Time/Date Version Attribute  
-24260 f4617e99-9688-42a6-8562-43fdd2d5cda4 18085395 2002-05-24 12:00:02 2  
-24260 f4617e99-9688-42a6-8562-43fdd2d5cda4 18086114 2002-05-24 12:11:25 3
+24260 f4617e99-9688-42a6-8562-43fdd2d5cda4 18085395 *\<DateTime>* 2  
+24260 f4617e99-9688-42a6-8562-43fdd2d5cda4 18086114 *\<DateTime>* 3
 
 If any of the metadata fields has no associated name try using ldp.exe  to expose the internal attributeid
 
 The metadata for the same object above as displayed in LDP.exe shows the AttributeID associated with the data
 
-> AttID Ver Loc.USN Originating DSA Org.USN Org.Time/Date 250000 2 24260  
-f4617e99-9688-42a6-8562-43fdd2d5cda4 18085395 2002-05-24 12:00:02 250004 3 24260  
-f4617e99-9688-42a6-8562-43fdd2d5cda4 18086114 2002-05-24 12:11:25  
+> AttID Ver Loc.USN Originating DSA Org.USN Org.Time/Date  
+250000 2 24260  f4617e99-9688-42a6-8562-43fdd2d5cda4 18085395 *\<DateTime>*  
+250004 3 24260  f4617e99-9688-42a6-8562-43fdd2d5cda4 18086114 *\<DateTime>*  
 
 The attribute ID can be used to help identify the problem attribute but requires the engagement of Microsoft Support.
 
-·         Version comparison - attributes to be replicated will have higher version numbers on the source.
+Version comparison - attributes to be replicated will have higher version numbers on the source.
 
 > [!NOTE]
-In the DCpromo scenario, the destination object will most likely not yet exist.
+> In the DCpromo scenario, the destination object will most likely not yet exist.
 
 If ONLY the object can be identified from the event data, dump the attribute values of the trigger object.
 

@@ -11,13 +11,13 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, slight
 ms.prod-support-area-path: Active Directory Certificate Services
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # A Certification Authority can't use a certificate template
 
 This article provides a solution to an issue where a certificate template is unable to load and certificate requests are unsuccessful using the same template.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 283218
 
 ## Summary
@@ -51,8 +51,8 @@ If authenticated users have been removed from the ACLs of a template, the follow
     Event Source:CertSvc  
     Event Category:None  
     Event ID: 53  
-    Date:08/14/2000  
-    Time:05:13:33  
+    Date: *\<DateTime>*  
+    Time: *\<DateTime>*  
     User:N/A  
     Computer: MUSGRAVE  
     Description:  
@@ -64,8 +64,8 @@ If authenticated users have been removed from the ACLs of a template, the follow
 Event Source:CertSvc  
 Event Category:None  
 Event ID: 78  
-Date:08/14/2000  
-Time:05:13:12  
+Date: *\<DateTime>*  
+Time: *\<DateTime>*  
 User:N/A  
 Computer: MUSGRAVE  
 Description:  

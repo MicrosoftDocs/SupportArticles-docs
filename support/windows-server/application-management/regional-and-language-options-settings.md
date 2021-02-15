@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: markreno, kaushika
 ms.prod-support-area-path: Multilingual User Interface (MUI) and Input Method Editor (IME)
-ms.technology: ApplicationCompatibility
+ms.technology: windows-server-application-compatibility
 ---
 # How the Regional and Language Options settings in Windows Server 2003 are applied
 
@@ -87,12 +87,6 @@ When the **IgnoreRemoteKeyboardLayout** entry is set to **1**, new user profiles
 
 > [!NOTE]
 > This registry entry may not work if you're not running Windows Server 2003 Service Pack 1.
-
-For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:
-
-[842136](https://support.microsoft.com/help/842136) The IgnoreRemoteKeyboardLayout registry entry has no effect in Windows Server 2003  
-
-[824721](https://support.microsoft.com/help/824721) Windows Server 2003 Service Pack 1 list of updates  
 
 ## Existing user profiles
 

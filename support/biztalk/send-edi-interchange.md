@@ -14,9 +14,9 @@ _Original KB number:_ &nbsp; 2655256
 
 ## Summary
 
-The steps outlined in [Walkthrough (X12): Sending Batched EDI Interchanges](/biztalk/core/walkthrough-x12-sending-batched-edi-interchanges), needs clarification on step 8. This step requires a send port that picks up the batched interchange by subscribing on the context properties `EDI.ToBeBatched==False`, `EDI.BatchName` and, `EDI.DestinationPartyName`.
+The steps outlined in [Walkthrough (X12): Sending Batched EDI Interchanges](/biztalk/core/walkthrough-x12-sending-batched-edi-interchanges), needs clarification on step 8. This step requires a send port that picks up the batched interchange by subscribing on the context properties `EDI.ToBeBatched==False`, `EDI.BatchName` and, `EDI.DestinationPartyName`.
 
-`DestinationPartyName` needs to be promoted in a pipeline custom component or an orchestration. It can also be entered in the **Parties** > **Agreement** > **Interchange Settings** > **Identifiers** > **Additional Agreement Resolver** > **DestinationPartyName**.
+`DestinationPartyName` needs to be promoted in a pipeline custom component or an orchestration. It can also be entered in the **Parties** > **Agreement** > **Interchange Settings** > **Identifiers** > **Additional Agreement Resolver** > **DestinationPartyName**.
 
 The filter criteria for the send port can also be modified to only include `EDI.ToBeBatched==False` and `EDI.BatchName`.
 
@@ -46,7 +46,7 @@ You might also receive an error in the application event log similar to:
 
 ## Workaround 1
 
-Enter the **destinationpartyname** value in **Parties** > **Agreement** > **Interchange Settings** > **Identifiers** > **Additional Agreement Resolver** > **DestinationPartyName**.
+Enter the **destinationpartyname** value in **Parties** > **Agreement** > **Interchange Settings** > **Identifiers** > **Additional Agreement Resolver** > **DestinationPartyName**.
 
 This will allow you to use the filter criteria `EDI.ToBeBatched==False`, `EDI.BatchName`, and `EDI.DestinationPartyName` as documented in the tutorial.
 

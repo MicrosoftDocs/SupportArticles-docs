@@ -2,7 +2,7 @@
 title: Configuring IIS World Wide Web Publishing Service
 description: This article describes how to configure IIS World Wide Web Publishing Service in a Windows Server failover cluster.
 ms.date: 03/31/2020
-ms.prod-support-area-path: WWW authentication and authorization
+ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: bretb, ahmedb, ctimon, mlaing
 ---
 # Configuring IIS World Wide Web Publishing Service in a Windows Server failover cluster
@@ -96,7 +96,7 @@ On each of the other cluster nodes, use the shared configuration that you just e
 1. Navigate to **Administrative Tools**, and then select **Internet Information Services (IIS) Manager**.
 2. Select the **server name** node.
 3. Double-click the **Shared Configuration** icon.
-4. On the **Shared Configuration** page, select the **Enable shared configuration** check box.
+4. On the **Shared Configuration** page, select the **Enable shared configuration** check box.
 5. Type the physical path of the file share (`\\<fileserver>\<share>`), the user account, and the password that you entered previously, and then select **Apply** in the **Actions** pane.
 6. In the **Encryption Keys Password** dialog box, type the encryption key password that you set earlier, and then select **OK**.
 7. In the **Shared Configuration** dialog box, select **OK**.

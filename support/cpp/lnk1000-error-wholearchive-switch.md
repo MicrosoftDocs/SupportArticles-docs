@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4020481
 
 ## Symptoms
 
-If you use the **/WHOLEARCHIVE** switch together with link.exe in Microsoft Visual Studio 2015, you receive an error message that resembles the following:
+If you use the **/WHOLEARCHIVE** switch together with link.exe in Microsoft Visual Studio 2015, you receive an error message that resembles the following:
 
 > LINK : fatal error LNK1000: unknown error at 000000013FA24241; consult documentation for technical support options
 

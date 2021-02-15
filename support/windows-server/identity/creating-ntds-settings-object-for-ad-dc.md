@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
 ms.prod-support-area-path: Domain join issues
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Active Directory installation stalls at the Creating the NTDS settings object stage
 
@@ -32,7 +32,7 @@ Regardless of how long you wait, the installation never proceeds beyond this poi
 
     > Log Name: Directory Service  
     Source: Microsoft-Windows-ActiveDirectory_DomainService  
-    Date: 7/24/2012 7:16:55 PM  
+    Date: *\<DateTime>*  
     Event ID: **1963**  
     Task Category: DS RPC Client  
     Level: Error  
@@ -62,7 +62,7 @@ Regardless of how long you wait, the installation never proceeds beyond this poi
 
     > Log Name: Directory Service  
     Source: Microsoft-Windows-ActiveDirectory_DomainService  
-    Date: 7/24/2012 7:16:55 PM  
+    Date: *\<DateTime>*  
     Event ID: **1962**  
     Task Category: DS RPC Client  
     Level: Error  
@@ -83,7 +83,7 @@ Regardless of how long you wait, the installation never proceeds beyond this poi
 
     > Log Name: Directory Service  
     Source: Microsoft-Windows-ActiveDirectory_DomainService  
-    Date: 7/24/2012 7:16:55 PM  
+    Date: *\<DateTime>*  
     Event ID: **1125**  
     Task Category: Setup  
     Level: Error  

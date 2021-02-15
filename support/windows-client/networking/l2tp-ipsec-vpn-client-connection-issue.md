@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, MASOUDH
 ms.prod-support-area-path: Remote access
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # How to troubleshoot a Microsoft L2TP/IPSec virtual private network client connection
 
@@ -28,7 +28,7 @@ When you troubleshoot L2TP/IPSec connections, it is useful to understand how an 
 
 A common configuration failure in an L2TP/IPSec connection is a misconfigured or missing certificate, or a misconfigured or missing preshared key. If the IPSec layer cannot establish an encrypted session with the VPN server, it will fail silently. As a result, the L2TP layer does not see a response to its connection request. There will be a long delay (typically 60 seconds), and then you may receive an error message that says that there was no response from the server or that there was no response from the modem or communication device. If you receive this error message before you receive the prompt for your name and password, IPSec did not establish its session. If that occurs, examine your certificate or preshared key configuration, or send the isakmp log to your network administrator.
 
-A second common problem that prevents a successful IPSec session is using a Network Address Translator (NAT). Many small networks use a router with NAT functionality to share a single Internet address among all the computers on the network. The original version of IPSec drops a connection that goes through a NAT because it detects the NAT's address-mapping as packet tampering. Home networks frequently use a NAT. This blocks using L2TP/IPSec unless the client and the VPN gateway both support the emerging IPSec NAT-Traversal (NAT-T) standard. For more information, see the "NAT Traversal" section.
+A second common problem that prevents a successful IPSec session is using a Network Address Translation (NAT). Many small networks use a router with NAT functionality to share a single Internet address among all the computers on the network. The original version of IPSec drops a connection that goes through a NAT because it detects the NAT's address-mapping as packet tampering. Home networks frequently use a NAT. This blocks using L2TP/IPSec unless the client and the VPN gateway both support the emerging IPSec NAT-Traversal (NAT-T) standard. For more information, see the "NAT Traversal" section.
 
 If the connection fails after you receive the prompt for your name and password, the IPSec session has been established and there is probably something wrong with your name and password. Other server settings may also be preventing a successful L2TP connection. If they are, send the PPP log to your administrator.
 

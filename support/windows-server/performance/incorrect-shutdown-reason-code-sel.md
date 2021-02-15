@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Shutdown is slow or hangs
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # An incorrect shutdown reason code written to SEL on user initiated shutdown
 
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 2001061
 After reboot from a manual shutdown (`START`->`Shutdown`), the Windows System Eventlog shows two events 1074. The first entry contains the correct reason code provided by the user, the second looks similar to:  
 >Log Name:      System  
 Source:        USER32  
-Date:          7/29/2009 12:00:26 PM  
+Date:          *\<DateTime>*  
 Event ID:      1074  
 Task Category: None  
 Level:         Information  

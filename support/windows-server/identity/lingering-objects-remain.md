@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Lingering objects may remain after you bring an out-of-date global catalog server back online
 
@@ -150,7 +150,7 @@ The value of the object's **DN** attribute includes the domain of the object. Wh
 
     Repadmin produces results that resemble the following:
 
-    > Default-First-Site-Name\WS2016-DC-01 DSA Options: IS_GC Site Options: (none) DSA object GUID: 13b233ed-011b-446c-9431-46e1a46ff284 DSA invocationID: 24f78175-6905-4eb2-9969-3be92f5fd638
+    > Default-First-Site-Name\WS2016-DC-01 DSA Options: IS_GC Site Options: (none) DSA object GUID: \<GUID> DSA invocationID: \<invocationID>
 
 4. Note the value of the **DSA object GUID**. This is the **objectGUID** value of the DC.
 
@@ -184,7 +184,7 @@ If you have only a few objects and global catalogs, follow these steps to delete
 
         The value should resemble the following:
 
-        <GUID=85dd0fee-de1b-461c-b9c0-27e9e8249484>: <GUID=eeeb70e5-4501-4895-a572-94a87e8f8ac7>
+        \<GUID=*\<GUID>*>: \<GUID=*\<GUID>*>
 
         > [!IMPORTANT]
         > In the value, do not omit the spaces before and after the colon.
@@ -292,7 +292,7 @@ If you have to delete a large number of lingering objects, you can delete more e
 
     Each pair should resemble the following:
 
-    **<GUID=85dd0fee-de1b-461c-b9c0-27e9e8249484>: <GUID=eeeb70e5-4501-4895-a572-94a87e8f8ac7>**  
+    **\<GUID=*\<GUID>*>: \<GUID=*\<GUID>*>**  
 
     > [!IMPORTANT]
     > In the value, do not omit the spaces before and after the colon.
@@ -309,7 +309,7 @@ Because the lingering objects may not exist on every listed server, errors in th
 
 #### Error when running Walkservers.cmd to modify many lingering objects in the environment
 
-> Object <GUID=ae856ce5-839a-4e44-b2fb-f37082ca2555> : <GUID=514f7510-451a-4297-8129-9b4c8ab79axx> could not be removed. Error number is: -2147016672. Error description is: .
+> Object \<GUID=*\<GUID>*> : \<GUID=*\<GUID>*> could not be removed. Error number is: -2147016672. Error description is: .
 
 ##### Cause for this error
 
@@ -317,7 +317,7 @@ This error occurs when the script runs against the GUID of a DC that does not co
 
 ##### Example
 
-In the following example, the lingering object to be removed is located in the corp.company.local domain. However, the <GUID=ae856ce5-839a-4e44-b2fb-f37082ca2555> entry in the Objects-list.txt file is associated with a DC that resides in the company.local domain. This DC does not have a read/write naming context for the corp.company.local domain.
+In the following example, the lingering object to be removed is located in the corp.company.local domain. However, the <GUID=*\<GUID>*> entry in the Objects-list.txt file is associated with a DC that resides in the company.local domain. This DC does not have a read/write naming context for the corp.company.local domain.
 
 The following search produces multiple objects that represent the same user (Joe), and lists their **objectGUID** values.
 
@@ -328,17 +328,17 @@ Getting 4 entries:
 1> canonicalName: corp.company.local/Corporate Users/Exec/User, Joe;  
 1> cn: User, Joe; 1> description: CEO;  
 1> displayName: User, Joe; 1> distinguishedName: CN=User\, Joe,OU=Exec,OU=Corporate Users,DC=corp,DC=company,DC=local;   4> objectClass: top; person; organizationalPerson; user;  
-1> objectGUID: 814226ed-3414-4193-b96d-3a5ea4bf9351; 1> name: User, Joe;  
+1> objectGUID: *\<GUID>*; 1> name: User, Joe;  
 \>> Dn: CN=User\, Joe,OU=Migration,DC=corp,DC=company,DC=local 1> canonicalName: corp.company.local/Migration/User, Joe;  
 1> cn: User, Joe;  
 1> description: Disabled Account; 1> displayName: User, Joe;  1> distinguishedName: CN=User\, Joe,OU=Migration,DC=corp,DC=company,DC=local;  
 4> objectClass: top; person; organizationalPerson; user;  
-1> objectGUID: 514f7510-451a-4297-8129-9b4c8ab79axx;  
+1> objectGUID: *\<GUID>*;  
 1> name: User, Joe;
 
-In this example, presume that there is a DC in the corp.company.local domain that is named CORP-DC-01. Running the command `repadmin /showreps CORP-DC-01` produces the **objectGUID** value c4fd9c30-b433-40a1-a862-9fdf1f804dc8. This GUID replaces the previous GUID in the Objects-list.txt file. The entry for this lingering object now appears as follows:
+In this example, presume that there is a DC in the corp.company.local domain that is named CORP-DC-01. Running the command `repadmin /showreps CORP-DC-01` produces the **objectGUID** value *\<GUID>*. This GUID replaces the previous GUID in the Objects-list.txt file. The entry for this lingering object now appears as follows:
 
-\<GUID=c4fd9c30-b433-40a1-a862-9fdf1f804dc8> : \<GUID=514f7510-451a-4297-8129-9b4c8ab79a7c>
+\<GUID=*\<GUID>*> : \<GUID=*\<GUID>*>
 
 The first GUID is the GUID of the domain controller in the corp.company.local domain. The second GUID is the GUID of the lingering object. After this change, the Walk-servers.cmd script runs successfully.
 
@@ -355,9 +355,9 @@ For an example of the second case, consider a global catalog server that has the
 
 > Loc.USN      Originating DC   Org.USN  Org.Time/Date        Ver Attribute  
 =======       =============== ========= =============        === =========  
-143543261     d20f71f3-6147-4f80-a0c2-470541ef09e6 104742409 2011-04-18 11:46:541 objectClass  
-Up-To-Dateness Vector of a RW-replica:  d20f71f3-6147-4f80-a0c2-470541ef09e6 @ USN 104583382 @ Time 2011-04-17 03:07:40  
-Up-To-Dateness Vector of a GC:  d20f71f3-6147-4f80-a0c2-470541ef09e6 @ USN 104762881 @ Time 2011-04-18 16:22:04
+143543261     d20f71f3-6147-4f80-a0c2-470541ef09e6 104742409 *\<DateTime>* objectClass  
+Up-To-Dateness Vector of a RW-replica:  d20f71f3-6147-4f80-a0c2-470541ef09e6 @ USN 104583382 @ Time *\<DateTime>*  
+Up-To-Dateness Vector of a GC:  d20f71f3-6147-4f80-a0c2-470541ef09e6 @ USN 104762881 @ Time *\<DateTime>*
 
 In this case the DC created the object after replication with the DCs in its own domain started failing, but it still replicated with global catalog servers in other domains.
 

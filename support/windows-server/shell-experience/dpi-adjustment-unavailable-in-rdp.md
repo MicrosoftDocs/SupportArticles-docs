@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, sashalon
 ms.prod-support-area-path: DPI and Display Issues
-ms.technology: ShellExperience
+ms.technology: windows-server-shell-experience
 ---
 # The DPI adjustment isn't available in a Remote Session (RDP)
 
@@ -22,11 +22,11 @@ _Original KB number:_ &nbsp;2544872
 
 ## Summary
 
-When regular users connect to a remote session, they are unable to change the resolution of the display or the DPI settings. The DPI settings would normally be used to make a global change to the size of the fonts and other user-interface elements; for example, to increase the UI legibility. Changes to the global DPI settings, can only be done by an administrator logged on to the console of the Windows Server or PC, and a reboot will be required. The DPI setting affects the entire user interface; including the logon interface (LogonUI).
+When regular users connect to a remote session, they are unable to change the resolution of the display or the DPI settings. The DPI settings would normally be used to make a global change to the size of the fonts and other user-interface elements; for example, to increase the UI legibility. Changes to the global DPI settings can only be done by an administrator logged on to the console of the Windows Server or PC, and a reboot will be required. The DPI setting affects the entire user interface, including the logon interface (LogonUI).
 
-Regular users (and users in a remote session) can adjust many UI elements individually however, using the "Window Color and Appearance" in the Personalization Control Panel applet.  
+Regular users (and users in a remote session) can adjust many UI elements individually, however, using the "Window Color and Appearance" in the Personalization Control Panel applet.  
 
-In order to provide a solution to users, it is recommended that an Administrator create several Themes with different-sized fonts and UI elements, named in a discoverable way (for example "120 dpi Theme", "150 dpi Theme"). This will enable remote desktop users to easily select a Theme with scaled-up user interface elements, from a familiar place in Windows (i.e. Personalization applet; also accessible via a right-click on the desktop).
+In order to provide a solution to users, it is recommended that an Administrator create several Themes with different-sized fonts and UI elements, named in a discoverable way (for example, "120 dpi Theme", "150 dpi Theme"). This will enable remote desktop users to easily select a Theme with scaled-up user interface elements, from a familiar place in Windows (for example, Personalization applet; also accessible via a right-click on the desktop).
 
 ## More information
 

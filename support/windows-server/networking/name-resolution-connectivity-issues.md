@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, JOELSCH, 
 ms.prod-support-area-path: DNS
-ms.technology: Networking
+ms.technology: networking
 ---
 # Name resolution and connectivity issues on a Routing and Remote Access Server that also runs DNS or WINS
 

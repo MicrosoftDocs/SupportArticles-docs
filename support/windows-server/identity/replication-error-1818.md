@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 1818: The remote procedure call was cancelled
 
@@ -50,7 +50,7 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
     >
     > *\<Sitename>\\\<DCname> via RPC DC*  
     >
-    > *DC object GUID: b8b5a0e4-92d5-4a88-a601-61971d7033af Last attempt @ 2009-11-25 10:56:55 failed, result 1818 (0x71a): Can't retrieve message string 1818*  
+    > *DC object GUID: \<GUID> Last attempt @ 2009-11-25 10:56:55 failed, result 1818 (0x71a): Can't retrieve message string 1818*  
     >
     > *(0x71a), error 1815. 823 consecutive failure(s). Last success @ (never).*  
 
@@ -64,9 +64,9 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
     >
     > *Site Options: IS_INTER_SITE_AUTO_TOPOLOGY_DISABLED*  
     >
-    > *DC object GUID: d46a672b-f6be-431e-81c6-23b1f284f8c9*  
+    > *DC object GUID: \<GUID>*  
     >
-    > *DC invocationID: 5d74f6b0-08f1-408a-b4d5-4759adafe219*  
+    > *DC invocationID: \<InvocationID>*  
     >
     > *==== INBOUND NEIGHBORS =====================================*  
     >
@@ -74,9 +74,9 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
     >
     > *\<Sitename>\\\<DCname> via RPC DC*  
     >
-    > *DC object GUID: b8b5a0e4-92d5-4a88-a601-61971d7033af*  
+    > *DC object GUID: \<GUID>*  
     >
-    > *Last attempt @ 2011-11-11 10:45:49 failed, result 1818 (0x71a):*  
+    > *Last attempt @ \<DateTime> failed, result 1818 (0x71a):*  
     >
     > *Can't retrieve message string 1818 (0x71a), error 1815. 123 consecutive*  
     >
@@ -93,27 +93,27 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
 
     The following entries will be logged in the DCPROMO logs
 
-    > *06/29/2010 22:31:36 [INFO] EVENTLOG (Informational): NTDS General / Service Control : 1004*  
+    > *\<DateTime> [INFO] EVENTLOG (Informational): NTDS General / Service Control : 1004*  
     >
     > *Active Directory Domain Services was shut down successfully.*  
     >
     >  
     >
-    > *06/29/2010 22:31:38 [INFO] NtdsInstall for \<FQDN fo the domain> returned 1818*  
+    > *\<DateTime> [INFO] NtdsInstall for \<FQDN fo the domain> returned 1818*  
     >
-    > *06/29/2010 22:31:38 [INFO] DsRolepInstallDs returned 1818*  
+    > *\<DateTime> [INFO] DsRolepInstallDs returned 1818*  
     >
-    > *06/29/2010 22:31:38 [ERROR] Failed to install to Directory Service (1818)*  
+    > *\<DateTime> [ERROR] Failed to install to Directory Service (1818)*  
     >
-    > *06/29/2010 22:31:38 [ERROR] DsRolepFinishSysVolPropagation (Abort Promote) failed with 8001*  
+    > *\<DateTime> [ERROR] DsRolepFinishSysVolPropagation (Abort Promote) failed with 8001*  
     >
-    > *06/29/2010 22:31:38 [INFO] Starting service NETLOGON*  
+    > *\<DateTime> [INFO] Starting service NETLOGON*  
     >
-    > *06/29/2010 22:31:38 [INFO] Configuring service NETLOGON to 2 returned 0*  
+    > *\<DateTime> [INFO] Configuring service NETLOGON to 2 returned 0*  
     >
-    > *06/29/2010 22:31:38 [INFO] The attempted domain controller operation has completed*  
+    > *\<DateTime> [INFO] The attempted domain controller operation has completed*  
     >
-    > *06/29/2010 22:31:38 [INFO] DsRolepSetOperationDone returned 0*  
+    > *\<DateTime> [INFO] DsRolepSetOperationDone returned 0*  
 
 5. While trying to rehost a partition on the Global catalog
 

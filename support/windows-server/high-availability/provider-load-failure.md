@@ -1,5 +1,5 @@
 ---
-title: Provider load failure 
+title: Error (Provider load failure) when you add a node to a Failover Cluster
 description: Provides a solution to an error that occurs when you try to add a node to a Windows Server 2008-based Failover Cluster.
 ms.date: 09/17/2020
 author: Deland-Han 
@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevenek, rspitz
 ms.prod-support-area-path: Initial Cluster Creation or Adding node
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Error message "Provider load failure" when you try to add a node to a Windows Server 2008-based Failover Cluster
 
@@ -32,10 +32,10 @@ The error "Provider Load Failure" is returned from WMI when a query is performed
 
 Follow these steps to determine if you are experiencing this issue, on both the server you are attempting to add to the cluster as well as the node that is already part of the cluster:
 
-1. Open WMI Tester - wbemtest.exe
-2. Click on Connect  button
-3. Type root\cimv2  in the Namespace and then click on Connect
-4. Click Query  button and then input SELECT Domain FROM Win32_ComputerSystem
+1. Open WMI Tester - wbemtest.exe.
+2. Select **Connect**.
+3. In the **Namespace** box enter *root\\cimv2*, and then select **Connect**.
+4. Select **Query** and then enter `SELECT Domain FROM Win32_ComputerSystem`.
 
 If you get the "Provider load failure" error, you are experiencing the problem documented in this article, on this server.
 
@@ -51,14 +51,15 @@ To resolve this problem you need to correct the registration information for the
     > [!NOTE]
     > This do not necessarily need to be a Cluster node.
 
-2. Open the Registry Editor by clicking the Start button, typing regedit into the Search box, and then pressing ENTER.‌  
+2. To open Registry Editor, select **Start** and then enter *regedit*.‌
+
     Administrator permission required if you are prompted for an administrator password or confirmation, type the password or provide confirmation.
 3. Navigate to the following key:
 
     `HKEY_CLASSES_ROOT\CLSID\{D63A5850-8F16-11CF-9F47-00AA00BF345C}\InprocServer32`
-4. Click the key or the subkey that you want to back up
-5. Click the File menu, and then click Export.
-6. In the Save in box, select the location where you want to save the backup copy, and then type a name for the backup file in the File name box. Save it as a .REG  file.
+4. Select the key or the subkey that you want to back up.
+5. Select the **File** menu, and then select **Export**.
+6. In the **Save** in box, select the location where you want to save the backup copy, and then type a name for the backup file in the **File name** box. Save it as a .REG file.
 7. Copy the above saved .REG file to the problem server.
 8. Access the file on the problem server and double-click the file to merge it into the registry.
 9. Restart the server.

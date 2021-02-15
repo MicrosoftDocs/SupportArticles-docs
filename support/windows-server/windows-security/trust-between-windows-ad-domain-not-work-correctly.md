@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: slight, kaushika
 ms.prod-support-area-path: Domain and forest trusts
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Trust between a Windows NT domain and an Active Directory domain can't be established or it doesn't work as expected
 
@@ -60,7 +60,9 @@ To troubleshoot trust configuration issues between a Windows NT 4.0-based domain
 - Name resolution
 - Security settings
 - User rights
-- Group membership for Microsoft Windows 2000 or Microsoft Windows Server 2003To do this, use the following methods.
+- Group membership for Microsoft Windows 2000 or Microsoft Windows Server 2003
+
+To do this, use the following methods.
 
 ### Method one: Verify the correct configuration of name resolution
 
@@ -232,7 +234,8 @@ After the computer restarts, wait 10 minutes to make sure that all security poli
 #### Windows NT 4.0
 
 > [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows  
+> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base: [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows
+  
 In Windows NT 4.0, the current security settings must be verified by using the Regedt32 tool to view the registry. To do this, follow these steps:
 
 1. Click **Start**, click **Run**, type *regedt32*, and then click **OK**.
@@ -277,7 +280,7 @@ To verify the required user rights on a Windows 2000-based computer, follow thes
 3. In the right-pane, double-click **Access this computer from the network**.
 4. Click to select the **Local Policy Setting** check box next to the **Everyone** group in the **Assigned to** list, and then click **OK**.
 5. Double-click **Deny access to this computer from the network**.
-6. Verify that there are no principle groups in the **Assigned to** list, and then click **OK**. For example, make sure that Everyone, Authenticated Users, and other groups, aren't listed.
+6. Verify that there are no principle groups in the **Assigned to** list, and then click **OK**. For example, make sure that Everyone, Authenticated Users, and other groups aren't listed.
 7. Click **OK**, and then quit Local Security Policy.
 
 To verify the required user rights on a Windows Server 2003-based computer, follow these steps:

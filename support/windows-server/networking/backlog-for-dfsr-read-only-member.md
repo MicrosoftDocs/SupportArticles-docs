@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rolandw, wincicadsec
 ms.prod-support-area-path: DFSR
-ms.technology: Networking 
+ms.technology: networking 
 ---
 # A backlog is reported for a DFSR Read-Only member after you remove a replication file filter
 

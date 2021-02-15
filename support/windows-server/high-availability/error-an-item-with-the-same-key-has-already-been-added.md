@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Errors when running the Validation Wizard
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Error: "An item with the same key has already been added"
 
@@ -36,8 +36,8 @@ A sample output for an adapter would look like this -
  **Name : Intel(R) PRO/1000 MT Desktop Adapter  
 GUID: {7488FB48-851A-40B6-AB47-1EA7408C762F}** 
  
->[!Note]
- This scenario typically occurs if an operating system image is being used to deploy cluster nodes and that image was not correctly prepared for deployment by running sysprep.
+> [!Note]
+> This scenario typically occurs if an operating system image is being used to deploy cluster nodes and that image was not correctly prepared for deployment by running sysprep.
 
 ## Resolution
 

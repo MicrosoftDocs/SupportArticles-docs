@@ -2,7 +2,7 @@
 title: Configure intermediate certificates in IIS
 description: This article describes how to configure intermediate certificates on a computer that is running Internet Information Services (IIS) for server authentication.
 ms.date: 03/27/2020
-ms.prod-support-area-path: WWW authentication and authorization
+ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: Mlaing, lprete
 ms.topic: how-to
 ---

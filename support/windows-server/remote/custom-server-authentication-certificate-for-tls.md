@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mjacquet
 ms.prod-support-area-path: Certificate management
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Force Remote Desktop Services in Windows 7 to use a custom server authentication certificate for TLS
 

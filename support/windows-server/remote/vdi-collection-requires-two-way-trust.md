@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Virtual Desktop Infrastructure (VDI)
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Server 2012 VDI collection require two-way trust when adding user group of external domain
 
@@ -24,20 +24,20 @@ _Original KB number:_ &nbsp; 2877933
 
 Consider the following scenario:
 
-1. RDCB and RDVH are in DomainA
+1. RDCB and RDVH are in DomainA.
 
-2. RD users are in DomainB\RD_USER_GROUP, RD_USER_GROUP is a "Security Group - Universal"
+2. RD users are in DomainB\RD_USER_GROUP, RD_USER_GROUP is a "Security Group - Universal".
 
-3. DomainA and DomainB are in different forests
+3. DomainA and DomainB are in different forests.
 
-4. DomainA one-way trusts DomainB
+4. DomainA one-way trusts DomainB.
 
-When you tried to add DomainB\RD_USER_GROUP directly to VDI collection in DomainA, we got an error "The security identifier could not be resolved. Ensure that a two-way trust exists for the domain of selected users"
+When you tried to add DomainB\RD_USER_GROUP directly to VDI collection in DomainA, we got an error "The security identifier could not be resolved. Ensure that a two-way trust exists for the domain of selected users".
 
 ## Cause
 
-Two-way trust is required for this scenario to work
+Two-way trust is required for this scenario to work.
 
 ## Resolution
 
-Change one-way trust to two-way trust
+Change one-way trust to two-way trust.

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, milanmil, philh, herbertm
 ms.prod-support-area-path: Active Directory Certificate Services
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Valid root CA certificates distributed using GPO might intermittently appear as untrusted
 
@@ -42,8 +42,8 @@ Administrators should be able to identify and troubleshoot untrusted root CA cer
 
 Focus your troubleshooting efforts on **Build Chain/Verify Chain Policy** errors within the CAPI2 log containing the following signatures. For example:
 
-> Error 4/10/2020 8:58:46 AM CAPI2 11 Build Chain  
-> Error 4/10/2020 8:58:46 AM CAPI2 30 Verify Chain Policy
+> Error *\<DateTime>* CAPI2 11 Build Chain  
+> Error *\<DateTime>* CAPI2 30 Verify Chain Policy
 >
 > Result A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider.  
 > [value] 800b0109

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jarrettr, wincicadsec, Jitesh.Thakur
 ms.prod-support-area-path: Active Directory domain or forest functional level updates
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 keywords: KCD, Kerberos constrained delegation, s4u2proxy, s4u2self, service account, computer account, machine account
 ---
 # How to configure Kerberos Constrained Delegation for Web Enrollment proxy pages
@@ -38,7 +38,7 @@ This section describes how to implement Service for User to Proxy (S4U2Proxy) or
 
 ### 1. Add an SPN to the service account
 
-Associate the service account with a Service Principle Name (SPN). To do this, follow these steps:
+Associate the service account with a Service Principal Name (SPN). To do this, follow these steps:
 
 1. In **Active Directory Users and Computers**, connect to the domain, and then select **PKI** > **PKI Users**.  
 
@@ -47,13 +47,12 @@ Associate the service account with a Service Principle Name (SPN). To do this, f
 4. Type the new SPN string, select **Add** (as shown in the following figure), and then select **OK**.  
 
    :::image type="content" source="./media/configure-kerberos-constrained-delegation/active-directory-users-computers.png" alt-text="Guidance to configure the HTTP SPNs.":::
+  
+   You can also use Windows PowerShell to configure the SPN. To do this, open an elevated PowerShell window, and then run `setspn -s SPN Accountname`. For example, run the following command:
 
-   > [!NOTE]  
-   > You can also use Windows PowerShell to configure the SPN. To do this, open an elevated PowerShell window, and then run **setspn -s *SPN* *Accountname***. For example, run the following command:
-   >  
-   > ```powershell
-   > setspn -s HTTP/webenroll2016.contoso.com web_svc
-   > ```
+   ```console
+   setspn -s HTTP/webenroll2016.contoso.com web_svc
+   ```
 
 ### 2. Configure the delegation
 
@@ -113,17 +112,17 @@ You can assign a name to the Web Enrollment role that clients can use to connect
 
 For example, suppose the computer name of your Web Enrollment server is WEBENROLLMAC (in the Contoso domain). You want incoming connections to use the name ContosoWebEnroll instead. In this case, the connection URL would be the following:
 
-> `https://contosowebenroll.contoso.com/certsrv`
+`https://contosowebenroll.contoso.com/certsrv`
 
 It would not be the following:
 
-> `https://WEBENROLLMAC.contoso.com/certsrv`
+`https://WEBENROLLMAC.contoso.com/certsrv`
 
 To use such a configuration, follow these steps:
 
 1. In the DNS zone file for the domain, create an alias record or a host name record that maps the new connection name to the Web Enrollment role IP address. Use the Ping tool to test the routing configuration.  
 
-   In the example that was previously discussed, the Contoso.com zone file has an alias record that maps ContosoWebEnroll to the IP address of the Web Enrollment role.
+   In the example that was previously discussed, the `Contoso.com` zone file has an alias record that maps ContosoWebEnroll to the IP address of the Web Enrollment role.
 2. Configure the new name as an SPN for the Web Enrollment front-end server. To do this, follow these steps:
    1. In Active Directory Users and Computers, connect to the domain, and then select **Computers**.
    2. Right-click the computer account of the Web Enrollment front-end server, and then select **Properties**.
@@ -180,10 +179,10 @@ To enable the web enrollment pages, create a domain certificate for the website,
 
 ## Related topics
 
-For more information about these processes, see [Authenticating Web Application Users](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759501%28v%3dws.10%29).
+For more information about these processes, see [Authenticating Web Application Users](/previous-versions/windows/it-pro/windows-server-2003/cc759501%28v%3dws.10%29).
 
 For more information about the S4U2self and S4U2proxy protocol extensions, see the following articles:
 
-- [[MS-SFU]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol](https://docs.microsoft.com/openspecs/windows_protocols/ms-sfu/3bff5864-8135-400e-bdd9-33b552051d94)  
-- [4.1 S4U2self Single Realm Example](https://docs.microsoft.com/openspecs/windows_protocols/ms-sfu/6a8dfc0c-2d32-478a-929f-5f9b1b18a169)  
-- [4.3 S4U2proxy Example](https://docs.microsoft.com/openspecs/windows_protocols/ms-sfu/c920c148-8a9c-42e9-b8e9-db5755cd281b)
+- [[MS-SFU]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol](/openspecs/windows_protocols/ms-sfu/3bff5864-8135-400e-bdd9-33b552051d94)  
+- [4.1 S4U2self Single Realm Example](/openspecs/windows_protocols/ms-sfu/6a8dfc0c-2d32-478a-929f-5f9b1b18a169)  
+- [4.3 S4U2proxy Example](/openspecs/windows_protocols/ms-sfu/c920c148-8a9c-42e9-b8e9-db5755cd281b)

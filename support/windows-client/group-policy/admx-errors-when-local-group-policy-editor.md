@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Group Policy management - GPMC or AGPM
-ms.technology: GroupPolicy
+ms.technology: windows-client-group-policy
 ---
 # .admx errors when running Local Group Policy Editor (gpedit.msc)  
 
@@ -26,7 +26,9 @@ This issue occurs when the following conditions are true:
 
 - You install an additional language pack on a computer.
 - You set both the Override for Windows display language and Override for default input method options for the new language under the Advanced settings of the Language in Control Panel.
-- You change the system language. For example, you receive the following error messages when you change to the Japanese language on the computer:
+- You change the system language.
+
+For example, you receive the following error messages when you change to the Japanese language on the computer:
 
 |Error files|Text of the errors in Japanese|Screenshot of the errors|
 |---|---|---|
@@ -40,15 +42,15 @@ This issue occurs because several system core files have to be updated when they
 
 ## Workaround
 
-To work around the issue, reinstall the following updates, depending on the error that you receive:
-
+To work around the issue, reinstall the following update, depending on the error that you receive:
+  
 - When you receive the Inetres.admx error, reinstall the update 3021952 that is described in [Description of the security update for Internet Explorer: February 10, 2015 (MS15-009)](https://support.microsoft.com/help/3021952).
-- When you receive the Printing.admx error, reinstall the update 2934018 that is one of the updates available in [Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 update: April 2014 (2919355)](https://support.microsoft.com/help/en-us).
+- When you receive the Printing.admx error, reinstall the update 2934018 that is one of the updates available in [Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 update: April 2014 (2919355)](https://support.microsoft.com/help/2919355).
 
 >[!NOTE]  
->  
->- When you install this update (2919355) from Windows Update, updates 2932046, 2937592, 2938439, 2934018, and 2959977 are included in the installation.
->- We recommend that you download and install any needed language pack before you install updates.
+>
+> - When you install this update (2919355) from Windows Update, updates 2932046, 2937592, 2938439, 2934018, and 2959977 are included in the installation.
+> - We recommend that you download and install any needed language pack before you install updates.
 
 ## Status
 

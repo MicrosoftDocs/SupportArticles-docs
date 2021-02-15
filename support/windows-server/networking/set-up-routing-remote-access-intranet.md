@@ -11,9 +11,9 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Remote access
-ms.technology: Networking
+ms.technology: networking
 ---
-# How To Set Up Routing and Remote Access for an Intranet  
+# How to set up Routing and Remote Access for an Intranet  
 
 This article describes how to set up routing and remote access for an Intranet.
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, austinm
 ms.prod-support-area-path: WinRM
-ms.technology: SysManagementComponents
+ms.technology: windows-client-system-management-components
 ---
 # How to configure WINRM for HTTPS
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2019527
 
 ## Summary
 
-By default WinRM uses Kerberos for authentication so Windows never sends the password to the system requesting validation. To get a list of your authentication settings type the following command:
+By default WinRM uses Kerberos for authentication so Windows never sends the password to the system requesting validation. To get a list of your authentication settings, type the following command:
 
 ```console
 winrm get winrm/config
@@ -30,7 +30,7 @@ winrm get winrm/config
 
 The purpose of configuring WinRM for HTTPS is to encrypt the data being sent across the wire.
 
-WinRM HTTPS requires a local computer Server Authentication certificate with a CN matching the hostname, that is not expired, revoked, or self-signed to be installed.
+WinRM HTTPS requires a local computer Server Authentication certificate with a CN matching the hostname to be installed. The certificate mustn't be expired, revoked, or self-signed.
 
 To install or view certificates for the local computer:
 
@@ -41,7 +41,7 @@ To install or view certificates for the local computer:
 5. Go through the wizard selecting **Computer account**.
 6. Install or view the certificates under **Certificates (Local computer)** > **Personal** > **Certificates**.
 
-If you do not have a Server Authenticating certificate consult your certificate administrator. If you have a microsoft Certificate server, you may be able to request a certificate using the web certificate template from `HTTPS://<MyDomainCertificateServer>/certsrv`.
+If you don't have a Server Authenticating certificate, consult your certificate administrator. If you have a microsoft Certificate server, you may be able to request a certificate using the web certificate template from `HTTPS://<MyDomainCertificateServer>/certsrv`.
 
 Once the certificate is installed type the following to configure WINRM to listen on HTTPS:
 
@@ -49,7 +49,7 @@ Once the certificate is installed type the following to configure WINRM to liste
 winrm quickconfig -transport:https
 ```
 
-If you do not have an appropriate certificate, you can run the following with the authentication methods configured for WinRM however the data will not be encrypted.
+If you don't have an appropriate certificate, you can run the following command with the authentication methods configured for WinRM. However, the data won't be encrypted.
 
 ```console
 winrm quickconfig
@@ -57,17 +57,17 @@ winrm quickconfig
 
 ## More information
 
-By default WinRM HTTP uses port 80. On Windows 7 and higher the default port is 5985.
+By default WinRM HTTP uses port 80. On Windows 7 and higher, the default port is 5985.
 
-By default WinRM HTTPS uses port 443. On Windows 7 and higher the default port is 5986.
+By default WinRM HTTPS uses port 443. On Windows 7 and higher, the default port is 5986.
 
-To confirm WinRM is listening on HTTPS type the following:
+To confirm WinRM is listening on HTTPS, type the following command:
 
 ```console
 winrm enumerate winrm/config/listener
 ```
 
-To confirm a computer certificate has been installed use the Certificates MMC add-in or type the following:
+To confirm a computer certificate has been installed, use the Certificates MMC add-in or type the following command:
 
 ```console
 Winrm get http://schemas.microsoft.com/wbem/wsman/1/config
@@ -85,7 +85,7 @@ To be used for SSL, a certificate must have a CN matching the hostname, be appro
 Open the certificates MMC add-in and confirm the following attributes are correct:
 
 - The date of the computer falls between the **Valid from:** to the **To:** date on the **General** tab.
-- Host name matches the **Issued to:** on the **General** tab or it matches one of the **Subject Alternative Name** exactly as displayed on the **Details** tab.
+- Host name matches the **Issued to:** on the **General** tab, or it matches one of the **Subject Alternative Name** exactly as displayed on the **Details** tab.
 - That the **Enhanced Key Usage** on the **Details** tab contains **Server authentication**.
 - On the **Certification Path** tab that the **Current Status** is **This certificate is OK**.
 

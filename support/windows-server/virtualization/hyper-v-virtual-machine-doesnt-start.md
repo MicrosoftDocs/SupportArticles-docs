@@ -1,6 +1,6 @@
 ---
-title: Hyper-V virtual machine doesn't start
-description: Describes an issue that triggers an error when you try to start a virtual machine that's running in a Windows Server 2012 R2 Hyper-V environment. Occurs when McAfee VirusScan is installed. A workaround is provided.
+title: Hyper-V virtual machine doesn't start and triggers 0x80070057 error
+description: Describes an issue that triggers an error when you try to start a virtual machine that's running in a Windows Server 2012 R2 Hyper-V environment. This issue occurs when McAfee VirusScan is installed. A workaround is provided.
 ms.date: 09/17/2020
 author: Deland-Han 
 ms.author: delhan
@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Configuration of virtual machine settings
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Hyper-V virtual machine doesn't start and triggers 0x80070057 error
 
@@ -37,7 +37,7 @@ Hyper-V Manager
 An error occurred while attempting to start the selected virtual machine(s).
 >
 > [Content]  
-'<VM_Name>' failed to start.  
+'\<VM_Name>' failed to start.  
 Synthetic SCSI Controller (Instance ID): Failed to Power on with Error 'One or more arguments are invalid'.  
 Attachment '\<SCSI ID>' failed to open because of error: 'One or more arguments are invalid'.
 
@@ -52,8 +52,6 @@ If you click **See details in the message window**, the following information is
 >
 > [^] Hide details [Close]
 
-Additionally, you may notice that the following event is logged:
-
 ## Cause
 
 This is a known issue in McAfee VirusScan Enterprise 8.8 Patch 5.
@@ -64,21 +62,22 @@ This is a known issue in McAfee VirusScan Enterprise 8.8 Patch 5.
 >
 > - This section contains information about opening or modifying the registry.
 > - The following information is intended for system administrators. Registry modifications are irreversible and could cause system failure if done incorrectly.
-> - Before you proceed, Intel Security strongly recommends that you back up your registry and understand the restore process. For more information, see [https://support.microsoft.com/kb/256986](https://support.microsoft.com/help/256986).
+> - Before you proceed, Intel Security strongly recommends that you back up your registry and understand the restore process. For more information, see [Windows registry information for advanced users](/troubleshoot/windows-server/performance/windows-registry-advanced-users).
 
 To work around this issue, disable the mfedisk.sys driver in the registry:
 
 1. Open Registry editor (regedit.exe).
 2. Locate the following subkey:
 
-    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\\{4d36e967-e325-11ce-bfc1-08002be10318}
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e967-e325-11ce-bfc1-08002be10318}`
 
 3. Modify the UpperFilters value by deleting "mfedisk" from this string.
 4. Restart the computer.
 
 ## More information
 
-This issue is documented in the following McAfee KB article: [https://kc.mcafee.com/corporate/index?page=content&id=KB84987](https://kc.mcafee.com/corporate/index?page=content&id=kb84987)  
+This issue is documented in the following McAfee KB article:
 
-Third-party information disclaimer
-Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
+[Hyper-V VMs using pass-through disks do not boot after installing VirusScan Enterprise 8.8 Patch 5](https://kc.mcafee.com/corporate/index?page=content&id=kb84987)
+
+[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]

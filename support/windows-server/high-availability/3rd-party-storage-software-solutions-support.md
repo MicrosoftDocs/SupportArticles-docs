@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup and configuration of clustered services and applications
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Overview of the Microsoft third-party storage software solutions support policy
 
@@ -28,9 +28,7 @@ If you are using third-party storage solutions that run in conjunction with Micr
 
 ### The Designed for Windows Logo program, Exchange, and SQL Server
 
-Exchange, SQL Server, and other Microsoft software products that run on Windows do not have separate Hardware Compatibility Tests for qualifying hardware to be used in conjunction with them. They rely on the Designed for Windows Logo program for hardware devices to qualify storage hardware and other hardware components for use with various Windows desktop and server operating systems. A block storage hardware target (such as small computer system interface [SCSI], Fibre Channel, or iSCSI) that receives the Designed for Windows (DFW) logo is qualified to receive support for Exchange, SQL Server, SharePoint Portal Server, and other Microsoft programs that run on Windows. 
-
-For additional information about support for iSCSI, click the following article number to view the article in the Microsoft Knowledge Base: [839686](https://support.microsoft.com/help/839686) Support for iSCSI technology components in Exchange Server  
+Exchange, SQL Server, and other Microsoft software products that run on Windows do not have separate Hardware Compatibility Tests for qualifying hardware to be used in conjunction with them. They rely on the Designed for Windows Logo program for hardware devices to qualify storage hardware and other hardware components for use with various Windows desktop and server operating systems. A block storage hardware target (such as small computer system interface [SCSI], Fibre Channel, or iSCSI) that receives the Designed for Windows (DFW) logo is qualified to receive support for Exchange, SQL Server, SharePoint Portal Server, and other Microsoft programs that run on Windows.
 
 ### Third-party software that is running on Designed for Windows targets
 
@@ -67,21 +65,8 @@ The third-party products that this article discusses are manufactured by compani
 
 ## References
 
-For additional information about how storage solutions are supported for Microsoft Exchange 5.5, Microsoft Exchange Server 2003, Microsoft SQL Server 7.0, and Microsoft SQL Server 2000, click the following article numbers to view the articles in the Microsoft Knowledge Base: [317173](https://support.microsoft.com/help/317173) Exchange Server and network-attached storage  
+For additional information about how storage solutions are supported for Microsoft Exchange 5.5, Microsoft Exchange Server 2003, Microsoft SQL Server 7.0, and Microsoft SQL Server 2000, click the following article numbers to view the articles in the Microsoft Knowledge Base:
 
-[317172](https://support.microsoft.com/help/317172) Exchange Server 5.5 and network-attached storage  
- [833770](https://support.microsoft.com/help/833770) Support for SQL Server 2000 on iSCSI technology components  
-
-[839687](https://support.microsoft.com/help/839687) Microsoft support policy on the use of network-attached storage devices with Exchange Server 2003  
-
-For additional information, click the following article numbers to view the articles in the Microsoft Knowledge Base: [839686](https://support.microsoft.com/help/839686) Support for iSCSI technology components in Exchange Server  
-
-[822896](https://support.microsoft.com/help/822896) Exchange Server 2003 data back up and Volume Shadow Copy services  
-
-[812504](https://support.microsoft.com/help/812504) Network-attached storage and server cluster support  
-
-[328879](https://support.microsoft.com/help/328879) Using Exchange Server with Storage Attached Network and network-attached storage devices  
-
-[288212](https://support.microsoft.com/help/288212) Exchange and network-attached storage devices  
+[833770](https://support.microsoft.com/help/833770) Support for SQL Server 2000 on iSCSI technology components  
 
 [304261](https://support.microsoft.com/help/304261) Support for network database files

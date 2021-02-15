@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, mattburr
 ms.prod-support-area-path: 'Errors and troubleshooting: General issues'
-ms.technology: PrintFaxScan
+ms.technology: windows-client-printing
 ---
 # When attempting to add an IPP printer over HTTPS, you receive an error
 
@@ -36,26 +36,27 @@ This issue occurs because Windows does not trust or cannot validate the SSL cert
 
 This can be resolved by either:
 
-- Configuring the print server to use a valid SSL certificate from an external certificate authority trusted by the workstation
-- If both the print server and the workstation are in the same domain, configuring the print server to use a valid SSL certificate from an enterprise certificate authority
-- If the print server is using a self-signed certificate, installing the self-signed certificate on the workstation
+- Configuring the print server to use a valid SSL certificate from an external certificate authority trusted by the workstation.
+- If both the print server and the workstation are in the same domain, configuring the print server to use a valid SSL certificate from an enterprise certificate authority.
+- If the print server is using a self-signed certificate, installing the self-signed certificate on the workstation.
 
-**How to Install an IPP Print Server's Self-Signed Certificate on a Windows Client**  
+### How to Install an IPP Print Server's Self-Signed Certificate on a Windows Client
+
 If your print server is using self-signed certificates, the following steps can be used to install the self-signed certificate on the client(s) so they are able to use the printer.
 
 > [!NOTE]
 > This should only be performed for SSL certificates from servers you trust.
 
 1. Log on to the client as an administrator
-2. Find Internet Explorer in the start menu, right-click on it, and click Run as administrator
-3. In Internet Explorer, browse to the Print Server using HTTPS (for example, https://PrintServerName/)
-4. In the address bar, the words "Certificate Error" should appear on the right side next to a Red shield icon - click on the error
-5. Click "View Certificates"
-6. On the certificate window, click "Install Certificate..."
-7. Select "Place all certificates in the following store"
-8. Click "Browse..."
-9. Select "Trusted Root Certification Authorities" and click OK
-10. Click Next, then click Finish
-11. A security warning will appear that you are adding a certificate from a source that cannot be validated.  Click Yes to trust this SSL certificate.
-12. Close Internet Explorer
-13. The printer can now be installed
+2. Find Internet Explorer in the start menu, right-click on it, and click **Run as administrator**.
+3. In Internet Explorer, browse to the Print Server using HTTPS (for example, `https://PrintServerName/`)
+4. In the address bar, the words "Certificate Error" should appear on the right side next to a Red shield icon - click on the error.
+5. Click **View Certificates**.
+6. On the certificate window, click **Install Certificate...**.
+7. Select **Place all certificates in the following store**.
+8. Click **Browse...**.
+9. Select **Trusted Root Certification Authorities** and click **OK**.
+10. Click **Next**, then click **Finish**.
+11. A security warning will appear that you are adding a certificate from a source that cannot be validated.  Click **Yes** to trust this SSL certificate.
+12. Close Internet Explorer.
+13. The printer can now be installed.

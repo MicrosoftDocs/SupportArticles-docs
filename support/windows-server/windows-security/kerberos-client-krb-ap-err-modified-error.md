@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Kerberos authentication
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # The kerberos client received a KRB_AP_ERR_MODIFIED error from the server
 
-The article helps you to resolve the error: The kerberos client received a KRB_AP_ERR_MODIFIED error from the server.  
+The article helps you to resolve the issue that the kerberos client received a KRB_AP_ERR_MODIFIED error from the server.  
 
 _Original product version:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 558115
@@ -34,9 +34,9 @@ Type: Error
 
 During access to the IIS 6 web site that support Windows Integrated Authentication, the following issues may occur:
 
-1. Mismatch DNS name resolution. The issue is common in a NLB environment that uses multiple IPs or network adapters.
-1. The user doesn't have a Local NTFS access permission.
-1. The Web Site is using Application Pool with a poor permission setting.
+1. Mismatch DNS name resolution. The issue is common in an NLB environment that uses multiple IPs or network adapters.
+2. The user doesn't have a Local NTFS access permission.
+3. The Web Site is using Application Pool with a poor permission setting.
 
 ## Resolution
 
@@ -61,4 +61,3 @@ Authentication and Access Control Diagnostics 1.0 (x86)
 Internet Information Services Diagnostic Tools
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]
-

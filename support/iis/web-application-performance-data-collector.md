@@ -30,7 +30,7 @@ If you chose the application pool option in the SDP, then you receive a list of 
 
 ![troubleshoot2](./media/web-application-performance-data-collector/2846152.png)
 
-Once you hit NEXT, the SDP detects all the web sites that are running in the application pool that you choose and it checks whether the time-taken field in enabled in the IIS logs for those web sites or not. If you don't enable the time-taken field, then the SDP enables the time-taken filed in IIS logs. Post that, the SDP asks you the number of memory dumps you want to collect for the process in question. By default, the option 3 is in selected status and it collects three or more memory dumps for troubleshooting a slow response or a hung process.
+Once you hit NEXT, the SDP detects all the web sites that are running in the application pool that you choose and it checks whether the time-taken field is enabled in the IIS logs for those web sites or not. If you don't enable the time-taken field, then the SDP enables the time-taken filed in IIS logs. Post that, the SDP asks you the number of memory dumps you want to collect for the process in question. By default, the option 3 is in selected status and it collects three or more memory dumps for troubleshooting a slow response or a hung process.
 
 ![troubleshoot3](./media/web-application-performance-data-collector/2846153.png)
 

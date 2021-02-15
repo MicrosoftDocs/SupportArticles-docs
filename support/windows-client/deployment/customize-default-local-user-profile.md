@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Customize the default local user profile when you prepare an image of Windows
 
@@ -74,7 +74,7 @@ For more information about Windows AIK, see [Windows Automated Installation Kit 
 
     If you are prompted for an administrator password or for confirmation, type the password or provide confirmation.
 
-1. At the command prompt, type the following command, and then press ENTER:
+2. At the command prompt, type the following command, and then press ENTER:
 
     ```console
     %systemroot%\system32\sysprep\sysprep.exe /oobe /shutdown /generalize /unattend:c:\answerfile\unattend.xml
@@ -83,23 +83,23 @@ For more information about Windows AIK, see [Windows Automated Installation Kit 
     > [!NOTE]
     > Sysprep.exe is located in the `%systemdrive%\Windows\System32\sysprep` directory.
 
-1. To confirm that the CopyProfile command successfully completed, open the `%systemroot%\panther\unattendgc\setupact.log` file.
-1. Search for lines that resemble the following (in the specialize pass):
+3. To confirm that the CopyProfile command successfully completed, open the `%systemroot%\panther\unattendgc\setupact.log` file.
+4. Search for lines that resemble the following (in the specialize pass):
 
     > [shell unattend] CopyProfileDirectory from c:\Users\Administrator succeeded.  
     > [shell unattend] CopyProfile succeeded.
 
     This line confirms whether the CopyProfile command succeeded and which user profile was copied to the default user profile.
 
-1. Capture the image.
+5. Capture the image.
 
-1. Deploy the image. For more information about how to use Sysprep to capture and deploy an image, see [Sysprep Technical Reference.](/previous-versions/windows/it-pro/windows-vista/cc766049(v=ws.10)).
+6. Deploy the image. For more information about how to use Sysprep to capture and deploy an image, see [Sysprep Technical Reference](/previous-versions/windows/it-pro/windows-vista/cc766049(v=ws.10)).
 
 > [!NOTE]
 >
 > - You must use the `/generalize` switch with sysprep.exe so that the Copy Profile parameter can be used. The `/unattend` option is used to point to the desired Unattend.xml file. Therefore, in this example, the Unattend.xml file is located in the `c:\answerfile` folder.
 > - The built-in administrator account profile is deleted when you perform a clean Windows installation or when you run the Sysprep tool. The CopyProfile setting is processed before the built-in administrator account is deleted. Therefore, any customizations that you make will appear in the new user account profile. This includes the built-in administrator account profile settings.
-> - If there are multiple user profiles, Windows sysprep may select an unexpected profile to copy to the default user profile. For more information, see [All customizations to default user profile lost](https://support.microsoft.com/help/2101557).
+> - If there are multiple user profiles, Windows sysprep may select an unexpected profile to copy to the default user profile.
 > - Not all customizations will propagate to new profiles. Some settings are reset by the new user logon process. To configure those settings, use Group Policy settings or scripting.
 
 ## What to consider if you use automated image build and deployment systems

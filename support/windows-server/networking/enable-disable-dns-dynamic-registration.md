@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DNS
-ms.technology: Networking
+ms.technology: networking
 ---
 # How to enable or disable DNS updates in Windows 2000 and in Windows Server 2003
 
@@ -82,15 +82,11 @@ This key disables DNS update registration for all adaptors on this computer. Wit
 > 1 Disables DNS update registration
 
 > [!NOTE]
-> For DNS updates to operate on any adaptor, DNS update must be enabled at the system level and at the adaptor level. To disable DNS update for a particular adaptor, add the DisableDynamicUpdate value to an interface name registry subkey and set its value to  
-
-1 . To disable DNS updates on all adaptors in a computer, add the DisableDynamicUpdate value to the following subkey, and then set its value to 1:
-
-`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
-
-> [!NOTE]
-> When this registry value is set to 1, the **Register this connection's addresses in DNS** check box will not reflect the changes made to this registry key. (This check box is located on the
- **DNS** tab of each network interface's **TCP/IP advanced properties**.) If the check box was selected before the registry change, it will stay selected after this registry change. This registry setting is not an adaptor-specific setting, but a global setting that affects all interfaces. This global setting is not revealed in the user interface.
+> For DNS updates to operate on any adaptor, DNS update must be enabled at the system level and at the adaptor level. To disable DNS update for a particular adaptor, add the DisableDynamicUpdate value to an interface name registry subkey and set its value to 1 . To disable DNS updates on all adaptors in a computer, add the DisableDynamicUpdate value to the following subkey, and then set its value to 1:
+>
+> `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
+>
+> When this registry value is set to 1, the **Register this connection's addresses in DNS** check box will not reflect the changes made to this registry key. (This check box is located on the **DNS** tab of each network interface's **TCP/IP advanced properties**.) If the check box was selected before the registry change, it will stay selected after this registry change. This registry setting is not an adaptor-specific setting, but a global setting that affects all interfaces. This global setting is not revealed in the user interface.
 
 Windows 2000 doesn't add this entry to the registry. You can add it by editing the registry or by using a program that edits the registry.
 

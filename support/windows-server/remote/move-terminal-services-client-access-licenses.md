@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Remote Desktop Services (Terminal Services) licensing
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # How to move Terminal Services CALs from one license server to another in Windows 2000, Windows Server 2003 and Windows Server 2008
 
@@ -41,9 +41,11 @@ To move the CALs, follow these steps.
 4. In the Terminal Server Licensing snap-in, right-click the Terminal Services license server, and then click **Properties**. In the **Installation method** list, click **Telephone**, and then click **OK**.
 5. Right-click the Terminal Services license server, and then click **Install Licenses**. The **Welcome to the Terminal Server CAL Installation Wizard** dialog box appears.
 6. Click **Next**. In the **Obtain Client License Key Pack** dialog box, you'll find the license server ID.
-7. Use this license server ID to obtain a CAL Key Pack ID. To install CALs on the new license server, you must have a CAL Key Pack ID. You can receive a CAL Key Pack ID from the Microsoft Clearinghouse or by visiting the following Microsoft Web site: [https://activate.microsoft.com](https://activate.microsoft.com)
-To contact the Microsoft Clearinghouse, use the following telephone number:1-888-571-2048
-The representative at the Microsoft Clearinghouse will give you a new CAL Key Pack ID. You can also contact Microsoft Customer Support Services at the following telephone number: 1-800-936-3100
+7. Use this license server ID to obtain a CAL Key Pack ID. To install CALs on the new license server, you must have a CAL Key Pack ID. You can receive a CAL Key Pack ID from the Microsoft Clearinghouse or by visiting the following Microsoft Web site: [Remote Desktop Services](https://activate.microsoft.com).
+
+    To contact the Microsoft Clearinghouse, use the following telephone number: 1-888-571-2048.
+
+    The representative at the Microsoft Clearinghouse will give you a new CAL Key Pack ID. You can also contact Microsoft Customer Support Services at the following telephone number: 1-800-936-3100.
 
     For more information, click the following article number to view the article in the Microsoft Knowledge Base:
 

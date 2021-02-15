@@ -16,9 +16,9 @@ _Original KB number:_ &nbsp; 2871474
 
 Consider the following scenario:
 
-- You use Microsoft SQL Server 2017 on Windows, SQL Server 2016, 2014, or 2012 Change Data Capture for Oracle by Attunity.
+- You use Microsoft SQL Server 2017 on Windows, SQL Server 2016, 2014, or 2012 Change Data Capture for Oracle by Attunity.
 - You create a CDC instance to capture changes from Oracle database tables.
-- The change capture values are stored in SQL Server change capture databases.
+- The change capture values are stored in SQL Server change capture databases.
 - The transaction log on the SQL Server database grows, and transactions aren't marked for truncation as data changes are captured.
 
 In this scenario, the SQL Server database transaction log file growth accumulates and consumes too much disk space over time.
@@ -80,7 +80,7 @@ REPLICATION <your_cdc_database>
     ```
 
 4. To make sure that the transaction log can be reused, confirm that there is no other reuse reason indicated on the database:
-  
+  
     ```sql
     select log_reuse_wait_desc, name from sys.databases where name = 'your_cdc_database'
     ```

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User profiles
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-server-user-profiles
 ---
 # Description of Windows Identity Foundation
 
@@ -64,15 +64,10 @@ The following files are available for download from the Microsoft Download Cente
 |Windows5.2-KB974405-x64.exe|Windows Server 2003 SP2|x64|1.2 MB|
 |Windows5.2-KB974405-x86.exe|Windows Server 2003 SP2|x86|1.2 MB|
 
-#### Windows Vista SP2, Windows Server 2008 SP2, Windows 7 and Windows Server 2008 R2
-
-[Download the Windows Identity Foundation packages for Windows Vista SP2, Windows Server 2008 SP2, Windows 7 and Windows Server 2008 R2 package now.](https://www.microsoft.com/download/details.aspx?familyid=eb9c345f-e830-40b8-a5fe-ae7a864c4d76)  
-
-Release Date: November 16, 2009
-
 For more information about how to download Microsoft support files, click the following article number to view the article in the Microsoft Knowledge Base:  
-[119591](https://support.microsoft.com/help/119591) How to obtain Microsoft support files from online services  
- Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file.  
+[119591](https://support.microsoft.com/help/119591) How to obtain Microsoft support files from online services
+  
+Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file.  
 
 ## More information
 
@@ -86,7 +81,7 @@ For more information about technical details and white papers, go to the followi
 If you have Windows Identity Foundation installed on Windows Server 2008 or on Windows Server 2003, Windows Identity Foundation will be automatically uninstalled when you upgrade your Windows operating system to Windows Server 2008 R2. You have to install the Windows Identity Foundation installation package for Windows Server 2008 R2 after your Windows operating system upgrade.
 
 If you have Windows Identity Foundation installed on Windows Server 2003, Windows Identity Foundation will remain on the upgraded operating system when you upgrade your Windows operating system to Windows Server 2008. We recommend that you uninstall the Windows Identity Foundation before you upgrade your Windows operating system and then reinstall Windows Identity Foundation for Windows Server 2008. You can use the following command to silently uninstall Windows Identity Foundation on Windows Server 2003:
-`%windir%\\$NtUninstallKB974405$\\spuninst\\spuninst.exe /quiet`
+`%windir%\\$NtUninstallKB974405$\\spuninst\\spuninst.exe /quiet`.
 
 If an error occurs when you run this command, we recommend that you uninstall Windows Identity Foundation by using Programs and Features in Control Panel.
 

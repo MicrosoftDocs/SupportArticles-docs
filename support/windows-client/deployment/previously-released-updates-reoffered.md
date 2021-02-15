@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Previously released Windows updates are reoffered for some systems
 
@@ -64,7 +64,7 @@ Resolution Install the language packs that are required for the environment befo
 
 ### Scenario 3
 
-Images that were built by using the November 2014 volume license media in which a language pack was later installed may be reoffered [2967917](https://support.microsoft.com/help/) (July 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2)
+Images that were built by using the November 2014 volume license media in which a language pack was later installed may be reoffered.
 
 Resolution: Use Windows Update to complete the installation of the missing language components
 

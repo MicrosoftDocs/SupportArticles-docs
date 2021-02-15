@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Crypt32 8 events continuously reported in Windows
 
@@ -28,8 +28,8 @@ The following event is recorded in the Application log:
 Event Source: Crypt32  
 Event Category: None  
 Event ID: 8  
-Date: 3/15/2010  
-Time: 11:27:57 AM  
+Date: \<DateTime>  
+Time: \<DateTime>  
 User: N/A  
 Computer: SERVER1  
 Description:  
@@ -41,8 +41,8 @@ The following similar event may also be recorded:
 Event Source: Crypt32  
 Event Category: None  
 Event ID: 8  
-Date: 3/15/2010  
-Time: 11:27:57 AM  
+Date: \<DateTime>  
+Time: \<DateTime>  
 User: N/A  
 Computer: SERVER1  
 Description:  

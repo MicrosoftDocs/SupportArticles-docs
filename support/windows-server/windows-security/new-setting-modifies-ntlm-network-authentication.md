@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Legacy authentication (NTLM)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # New setting modifies NTLM network authentication behavior
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 906305
 
 ## Introduction
 
-Beginning with Microsoft Windows Server 2003 Service Pack 1 (SP1) there is a change to NTLM network authentication behavior. Domain users can use their old password to access the network for one hour after the password is changed. Existing components that are designed to use Kerberos for authentication are not affected by this change.
+Beginning with Microsoft Windows Server 2003 Service Pack 1 (SP1), there is a change to NTLM network authentication behavior. Domain users can use their old password to access the network for one hour after the password is changed. Existing components that are designed to use Kerberos for authentication are not affected by this change.
 
 The goal of this change is to allow background processes such as services to continue running for some time until an administrator has the opportunity to update the credentials for the new password.
 

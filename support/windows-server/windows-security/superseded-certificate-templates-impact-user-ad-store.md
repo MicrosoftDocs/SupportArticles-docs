@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Superseded Certificate Templates and impact on user's AD store
 
@@ -24,14 +24,15 @@ _Original KB number:_ &nbsp; 2884551
 
 The deletion of certificates, based on the certificate templates being superseded by other certificate templates, from user's AD store worked in XP/W2k3 as part of the autoenrollment.  
 Repro Steps (Vista and later):
+
 1. Configure user autoenrollment policy (make sure that policy is enabled and both check boxes are check in the autoenrollement configuration window.
-2. Duplicate User certificate template (name it for example TestTemplate1), make sure that the certificate publishing in AD is activated and assign to the test user read, enroll, and autoenroll permissions on the template
-3. Publish the TestTemplate1 template on the CA
+2. Duplicate User certificate template (name it for example TestTemplate1), make sure that the certificate publishing in AD is activated and assign to the test user read, enroll, and autoenroll permissions on the template.
+3. Publish the TestTemplate1 template on the CA.
 4. Log on as test user and make sure that the user gets the certificate based on the template TestTemplate1 over autoenrollment.
 5. Configure new certificate template by duplicating TestTemplate1 (name it for example TestTemplate2), set in the superseeded tab that TestTemplate2 superseeds the TestTemplate1, make sure that the certificate publishing in AD is activated and double check that test user has Read, Enroll, and Autoenroll permissions set for TestTemplate2.
-6. Publish the TestTemplate2 template on the CA
+6. Publish the TestTemplate2 template on the CA.
 7. Log on as test user and check that the user gets certificate based on the new template TestTemplate2 over autoenrollment.
-8. On the DC, open dsa.msc, find the test user, open the properties and there will be two certificates published in AD, one based on TestTemplate1 and the other based on TestTemplate2 (on XP/W2k3 there would be only one, since the certificate based on the template being superseded, TestTemplate1, would have been deleted)
+8. On the DC, open dsa.msc, find the test user, open the properties and there will be two certificates published in AD, one based on TestTemplate1 and the other based on TestTemplate2 (on XP/W2k3 there would be only one, since the certificate based on the template being superseded, TestTemplate1, would have been deleted).
 
 ## Cause
 

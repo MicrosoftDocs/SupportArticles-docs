@@ -11,7 +11,8 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: v-elj, chawong, winciccore, kaushika
 ms.prod-support-area-path: Windows 7 Extended Security Updates (ESU)
-ms.technology: Windows 7 EoS FAQ
+ms.technology: windows-client-eos
+adobe-target: true
 ---
 # FAQ about Windows 7 ESU
 
@@ -39,7 +40,7 @@ ESU is available for Windows 7 Professional and Windows 7 Enterprise.
 
 ESU has been available in the Volume Licensing Service Center (VLSC) since April 1, 2019, and from Cloud Solution Providers (CSPs) since Monday, December 2, 2019.
 
-### Where can I find out more information about purchasing and installing Windows 7 ESU in Year 2?
+### Where can I find out more about purchasing and installing Windows 7 ESU in Year 2?
 
 The process for purchasing and installing ESU in Year 2 is identical to the process for Year 1. For more information, see [Year two of Extended Security Updates for Windows 7 and Windows Server 2008](https://aka.ms/ESU-Year2).
 
@@ -57,13 +58,13 @@ Direct requests for ESU for Windows Server 2008 R2 for Embedded Systems and SQL 
 
 ### Is there a deadline for organizations to purchase ESU for Windows 7?
 
-Organizations can purchase ESU at any time during the three years that the offer is available (2020, 2021, and 2022). If an organization waits and purchases ESU for the first time in year two or year three, they'll also have to pay for the preceding years. It is because the security updates that are offered under the ESU program are cumulative.
+Organizations can purchase ESU at any time during the three years that the offer is available (2020, 2021, and 2022). If an organization waits and purchases ESU for the first time in year two or year three, they'll also have to pay for the preceding years. It's because the security updates that are offered under the ESU program are cumulative.
 
-Although organizations can purchase ESU at any time, they should be aware that without ESU, they won't have received bug fixes or security updates since January 14, 2020. Additionally, Microsoft Support no longer provides any form of support for these customers.
+Although organizations can purchase ESU at any time, they won't have received bug fixes or security updates since January 14, 2020 without ESU. Additionally, Microsoft Support no longer provides any form of support for these customers.
 
 ### If an organization waits and purchases ESU for the first time in Year 2 or Year 3, do they have to purchase licenses for the preceding year(s) as well?
 
-Yes. Because the updates are cumulative, organizations do have to pay for the preceding years if they purchase Windows 7 ESU for the first time in year two or year three. That is, customers must have purchased coverage for year 1 of Extended Security Updates in order to buy year 2, and coverage for year 2 in order to buy year 3. Customers may buy coverage for previous years at the same time they buy coverage for a current period. It is not necessary to buy a certain period of coverage within that coverage period.
+Yes. Because the updates are cumulative, organizations must pay for the preceding years if they purchase Windows 7 ESU for the first time in year two or year three. That is, customers must have purchased coverage for year 1 of ESU in order to buy year 2, and coverage for year 2 in order to buy year 3. Customers may buy coverage for previous years at the same time they buy coverage for a current period. It's unnecessary to buy a certain period of coverage within that coverage period.
 
 ### How does the ESU purchasing transaction work for CSP Partners?
 
@@ -112,7 +113,7 @@ No.
 
 ### How will licensing work for Windows 7 ESU in virtual machine environments?
 
-ESU is licensed per device. Therefore, for traditional on-premises or dedicated Virtual Desktop Infrastructure (VDI), each endpoint that accesses a VM that runs Windows 7 ESU has to have an ESU license. In other words, it's not the VMs that have to be counted, but the terminals. If the customer moves to Windows Virtual Desktop (WVD), ESU is covered for no additional cost for the full three-year coverage period.  
+ESU is licensed per device. For traditional on-premises or dedicated Virtual Desktop Infrastructure (VDI), each endpoint that accesses a VM that runs Windows 7 ESU must have an ESU license. In other words, it's not the VMs that must be counted, but the terminals. If the customer moves to Windows Virtual Desktop (WVD), ESU is covered for no extra cost for the full three-year coverage period.  
 
 ### Will ESU be available through Unified Support?
 
@@ -124,7 +125,7 @@ No. ESU is out-of-scope for MPSA.
 
 ### I purchased Windows 7 ESU and this purchase isn't on the invoice for the same calendar month. Why dose it happen?
 
-If you purchase Windows 7 ESU before the monthly invoice generation date, the purchase will be shown on the previous month's invoice, instead of the current calendar month's invoice.
+If you purchase Windows 7 ESU before the monthly invoice generation date, the purchase will be shown on the previous month's invoice. It won't be shown on the current calendar month's invoice.
 
 For example, in March, if CSP purchased ESU before March 6, the purchase would show on February's invoice.
 
@@ -140,7 +141,7 @@ Yes. Windows 7 ESU will include support for the .NET Framework 4.5.2-4.8 release
 
 ### Do Windows 7 Embedded products qualify?
 
-Yes, there is an ESU program specifically for embedded devices. For more information, see [ESU for Windows 7 Embedded](#esu-for-windows-7-embedded).  
+Yes, there's an ESU program specifically for embedded devices. For more information, see [ESU for Windows 7 Embedded](#esu-for-windows-7-embedded).  
 
 ### Can Windows 7 Pro OEM customers purchase Windows 7 ESU?
 
@@ -163,11 +164,11 @@ SCEP definition and engine updates will continue for Windows 7 regardless of ESU
 
 ### Is technical support included?
 
-No. Customers that purchase directly from Microsoft (for example, VL customers or CSP direct Partners) can use an active support contract such as Software Assurance or Premier or Unified Support to request assistance with Windows 7. Partners can also use their Partner Support Plans to request assistance for Windows 7.  
+No. Customers that purchase directly from Microsoft (for example, VL customers or CSP direct Partners) can use an active support contract, such as Software Assurance or Premier or Unified Support, to request assistance with Windows 7. Partners can also use their Partner Support Plans to request assistance for Windows 7.  
 
 ### Can customers get technical support on-premises for Windows 7 after the end-of-support date if they do not purchase ESU?
 
-No. If customers have Windows 7 and don't purchase ESU, those customers can't log support tickets for Windows 7 even if they have support plans.  
+No. If customers have Windows 7 and don't purchase ESU, they can't log support tickets for Windows 7, even if they have support plans.  
 
 ### Can an organization that purchases ESU use its Unified or Premier Support agreements to submit support incidents?
 
@@ -177,7 +178,7 @@ Yes. Organizations that use VL to purchase ESU can submit support incidents by u
 
 No. CSP customers should use their partners for technical support or purchase a pay-per-incident plan through Microsoft Professional support.  
 
-### Can partners submit support incidents on behalf of their customers?
+### Can partners submit support incidents for their customers?
 
 Yes. CSP direct Partners can use their existing Partner Support plans to request assistance for Windows 7 ESU if the customer has purchased ESU. Resellers should work together with their CSP indirect Partners to request assistance for Windows 7 questions regarding devices that are covered by ESU.
 
@@ -193,7 +194,7 @@ We continue to work to fully automate the validation process. If a customer purc
 
 ### What type of response should customers expect if they encounter an issue that requires a new feature?
 
-No new product enhancements will be made for Windows 7. ESU helps keep Windows 7 devices secure for a limited time, and assist customers during the transition to a supported version of Windows. If an investigation into a customer issue determines that a product enhancement that is available in a recent release (such as Windows 10) resolves the issue, Microsoft Support will recommend that the customers upgrade to the most recent release.  
+No new product enhancements will be made for Windows 7. ESU helps keep Windows 7 devices secure for a limited time, and assist customers during the transition to a supported version of Windows. If an investigation into a customer issue determines that a product enhancement in a recent release (such as Windows 10) resolves the issue, Microsoft Support will recommend that the customers upgrade to the most recent release.  
 
 ### After customers purchase ESU, will Microsoft help troubleshoot issues that aren't related to an extended security update?
 
@@ -231,18 +232,28 @@ Yes. Before a customer deploys ESU, they should read [Obtaining Extended Securit
 
 For instructions to install and activate the Windows 7 ESU Multiple Activation Key (MAK), and more information about purchasing, see [Obtaining Extended Security Updates for eligible Windows devices](https://aka.ms/Windows7ESU).
 
-For instructions to install and activate Windows 7 ESU MAK keys on multiple devices that are part of an on-premises Active Directory domain, see [Activate Windows 7 ESUs on multiple devices with a MAK](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/activate-windows-7-esus-on-multiple-devices-with-a-mak/ba-p/1167196).
+For more information about how to install and activate Windows 7 ESU MAK keys on multiple devices in an on-premises Active Directory domain, see the following article:
+
+[Activate Windows 7 ESUs on multiple devices with a MAK](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/activate-windows-7-esus-on-multiple-devices-with-a-mak/ba-p/1167196).
 
 > [!Note]
 > Installing MAK keys adds the ability to receive ESU. It doesn't replace the current product activation key (for example, OEM, KMS), nor does it reactivate the system. Organizations will have to install a new MAK key for every year that they deploy ESU.
 
-### Do I need to uninstall the Windows 7 ESU Year 1 MAK key in order to install the Year 2 key?
+### Do I need to uninstall the Windows 7 ESU Year 1 MAK key to install the Year 2 key?
 
-No. Nothing needs to be done to the Year 1 key in order to install the Year 2 key. The installation process for Year 2 is identical to Year 1 (see previous question, above).
+No. Nothing needs to be done to the Year 1 key to install the Year 2 key. The installation process for Year 2 is identical to Year 1 (see previous question, above).
+
+### Can Windows 7 ESU Year 1 updates be applied to a device after January 12, 2021 if the Year 1 key is installed on the device?
+
+Yes, updates can be installed at any time. That allows you to maintain your existing patch rollout process when the Year 1 key is installed and activated on a device. The same applies for Year 2 and Year 3. For more information, see [What are the coverage dates for the three Windows 7 ESU SKUs](#what-are-the-coverage-dates-for-the-three-windows-7-esu-skus).
 
 ### Why are the ESU License Preparation Packages necessary?
 
-The Extended Security Updates (ESU) License Preparation Packages ([Extended Security Updates (ESU) Licensing Preparation Package for Windows 7 SP1 and Windows Server 2008 R2 SP1](https://support.microsoft.com/help/4538483/extended-security-updates-esu-licensing-preparation-package) and [Extended Security Updates (ESU) Licensing Preparation Package for Windows Server 2008 SP2](https://support.microsoft.com/help/4538484/extended-security-updates-esu-licensing-preparation-package)) address activation experience requirements that we identified while testing and evaluating by using a large population of preview customers. We introduced the ESU License Preparation Packages on February 11, 2020, to provide a consistent user experience going forward, minimize the number of package installations, and reduce overall customer disruption.  
+The Extended Security Updates (ESU) License Preparation Packages ([Extended Security Updates (ESU) Licensing Preparation Package for Windows 7 SP1 and Windows Server 2008 R2 SP1](https://support.microsoft.com/help/4538483/extended-security-updates-esu-licensing-preparation-package) and [Extended Security Updates (ESU) Licensing Preparation Package for Windows Server 2008 SP2](https://support.microsoft.com/help/4538484/extended-security-updates-esu-licensing-preparation-package)) address activation experience requirements that we identified while testing and evaluating by using a large population of preview customers. We introduced the ESU License Preparation Packages on February 11, 2020 to:
+
+- provide a consistent user experience going forward
+- minimize the number of package installations
+- reduce overall customer disruption
 
 ### How will Microsoft deliver ESU for organizations that purchase through volume licensing (VL)?
 
@@ -263,7 +274,7 @@ Yes. Organizations have to purchase, install, and activate new keys for each of 
 
 ### How can I determine when my ESU key will expire?
 
-The yearly ESU MAK keys do not expire. However, they do not enable the device to install updates beyond their designated time frame. For example, a device with only a Year 1 ESU MAK key would continue to be able to install updates made available during Year 1 even after the Year 1 time frame ends, but it would not receive any further updates in Year 2.
+The yearly ESU MAK keys don't expire. However, they don't enable the device to install updates beyond their designated time frame. For example, a device with only a Year 1 ESU MAK key can continue to install updates made available during Year 1 even after the Year 1 time frame ends. But it won't receive any further updates in Year 2.
 
 ### If an organization has to reinstall Windows 7, how will the additional activation of ESU be managed?
 
@@ -272,7 +283,14 @@ The yearly ESU MAK keys do not expire. However, they do not enable the device to
 
 ### What delivery options are available for Extended Security Updates?
 
-ESU is delivered through all the usual update delivery channels, including Configuration Manager (current branch, version 1910 or later), Windows Update (WU), Windows Server Update Service (WSUS), and Microsoft Update Catalog. The update is programmed to look for the MAK activation on the endpoint, and will install only on those systems together with the MAK key. [Learn more about Extended Security Updates and Configuration Manager](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/Extended-Security-Updates-and-Configuration-Manager/ba-p/825618).
+ESU is delivered through all the usual update delivery channels, including:
+
+- Configuration Manager (current branch, version 1910 or later)
+- Windows Update (WU)
+- Windows Server Update Service (WSUS)
+- Microsoft Update Catalog
+
+The update is programmed to look for the MAK activation on the endpoint, and will install only on those systems together with the MAK key. [Learn more about Extended Security Updates and Configuration Manager](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/Extended-Security-Updates-and-Configuration-Manager/ba-p/825618).
 
 > [!Note]
 > The ESU License Preparation Packages ([Extended Security Updates (ESU) Licensing Preparation Package for Windows 7 SP1 and Windows Server 2008 R2 SP1](https://support.microsoft.com/help/4538483/extended-security-updates-esu-licensing-preparation-package) and [Extended Security Updates (ESU) Licensing Preparation Package for Windows Server 2008 SP2](https://support.microsoft.com/help/4538484/extended-security-updates-esu-licensing-preparation-package)) are available through all of the previously mentioned channels except Windows Update.  
@@ -316,6 +334,7 @@ Organizations that purchase ESU through volume licensing should request addition
 1. On the VLSC home page, select **Contact Us**.
 2. Select your region, and then select **Support Web Form**  in the **Contact Info** section.
 3. In the form, complete the required information.
+
 Most organizations that purchase ESU through CSP shouldn't have to request additional activations. For exceptional scenarios in which additional activations are required, Partners should use Partner Center to open a support request.  
 
 ### Can customers activate Windows 7 ESU through a phone?
@@ -332,7 +351,7 @@ Yes, there is an ESU program specifically for embedded devices. This program inc
 - [Windows Embedded Standard 7](https://docs.microsoft.com/lifecycle/products/windows-embedded-standard-7)
 - [Windows Embedded POSReady 7](https://docs.microsoft.com/lifecycle/products/windows-embedded-posready-7)
 
-The ESU for Windows 7 Embedded also includes Windows Server 2008 R2 for Embedded Systems and Microsoft SQL Server 2008 R2 for Embedded Systems. You should direct all embedded ESU requests to the original equipment manufacturer (OEM) of the device.
+The ESU for Windows 7 Embedded also includes Windows Server 2008 R2 for Embedded Systems and Microsoft SQL Server 2008 R2 for Embedded Systems. Direct all embedded ESU requests to the original equipment manufacturer (OEM) of the device.
 
 ### Where can I find more information about the embedded ESU program?
 
@@ -348,7 +367,7 @@ Contact your OEM for ESU pricing.
 
 ### Will my customer’s devices running Windows Embedded Standard 7 be unprotected after October 13, 2020?
 
-When security updates are available, Microsoft releases these monthly – on the second Tuesday of each month. If there are no critical or important updates released between October 14, 2020 and November 9, 2020, those devices will have the most current security updates from Microsoft. However, when the November 10, 2020 security updates are released, devices running WES will be unprotected and a security risk. 
+When security updates are available, Microsoft releases these monthly – on the second Tuesday of each month. If there are no critical or important updates released between October 14, 2020 and November 9, 2020, those devices will have the most current security updates from Microsoft. However, when the November 10, 2020 security updates are released, devices running WES will be unprotected and a security risk.
 
 ### How are "critical" and "important" updates defined?
 

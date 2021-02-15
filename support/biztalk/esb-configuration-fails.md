@@ -20,7 +20,7 @@ The following error is thrown during ESB 2.2 configuration:
 
 ## Cause
 
-The error (Unrecognized element 'typeConfig') occurs because the `typeConfig` element in *ESB.config* is no longer valid since ESB Toolkit 2.2 uses Unity 2.0.
+The error (Unrecognized element 'typeConfig') occurs because the `typeConfig` element in *ESB.config* is no longer valid since ESB Toolkit 2.2 uses Unity 2.0.
 
 For more information about Unity 2.0, visit [The Unity Configuration Schema](/previous-versions/msp-n-p/ff660914(v=pandp.20)).
 

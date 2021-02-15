@@ -1,7 +1,7 @@
 ---
 title: Windows Server Update Services (WSUS) maintenance guide for Configuration Manager
 description: Describes the complete guide to WSUS maintenance for Configuration Manager environments.
-ms.date: 09/11/2020
+ms.date: 12/21/2020
 ms.prod-support-area-path: Software update point configuration
 ms.reviewer: mstewart, erice
 ---
@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4490644
 
 Questions are often along the lines of **How should I properly run this maintenance in a Configuration Manager environment**, or **How often should I run this maintenance**. It's not uncommon for conscientious Configuration Manager administrators to be unaware that WSUS maintenance should be run at all. Most of us just set up WSUS servers because it's a prerequisite for a software update point (SUP). Once the SUP is set up, we close the WSUS console and pretend it doesn't exist. Unfortunately, it can be problematic for Configuration Manager clients, and the overall performance of the WSUS/SUP server.
 
-With the understanding that this maintenance needs to be done, you're wondering what maintenance you need to do and how often you need to be doing it. The answer is that you should perform monthly maintenance. Maintenance is easy and doesn't take long for WSUS servers that have been well maintained from the start. However, if it has been some time since WSUS maintenance was done, the cleanup may be more difficult or time consuming the first time. It will be much easier or faster in subsequent months.
+With the understanding that this maintenance needs to be done, you're wondering what maintenance you need to do and how often you need to be doing it. The answer is that you should perform monthly maintenance. Maintenance is easy and doesn't take long for WSUS servers that have been well maintained from the start. However, if it has been some time since WSUS maintenance was done, the cleanup may be more difficult or time consuming the first time. It will be much easier or faster in subsequent months.
 
 ## Maintain WSUS while supporting Configuration Manager current branch version 1906 and later versions
 
@@ -33,7 +33,7 @@ For more information about software update maintenance in Configuration Manager,
 
 1. Before you start the maintenance process, read all of the information and instructions in this article.
 
-1. When using WSUS along with downstream servers, WSUS servers are added from the top down, but should be removed from the bottom up. When syncing or adding updates, they go to the upstream WSUS server first, then replicate down to the downstream servers. When performing a cleanup and removing items from WSUS servers, you should start at the bottom of the hierarchy.
+1. When using WSUS along with downstream servers, WSUS servers are added from the top down, but should be removed from the bottom up. When syncing or adding updates, they go to the upstream WSUS server first, then replicate down to the downstream servers. When performing a cleanup and removing items from WSUS servers, you should start at the bottom of the hierarchy.
 
 1. WSUS maintenance can be performed simultaneously on multiple servers in the same tier. When doing so, ensure that one tier is done before moving onto the next one. The cleanup and reindex steps described below should be run on all WSUS servers, regardless of whether they are a replica WSUS server or not. For more information about determining if a WSUS server is a replica, see [Decline superseded updates](#decline-superseded-updates).
 
@@ -100,9 +100,9 @@ If you use an older version of Configuration Manager or standalone WSUS servers,
 
 ### Reindex the WSUS database
 
-To reindex the WSUS database (SUSDB), use the [Re-index the WSUS Database](https://gallery.technet.microsoft.com/scriptcenter/6f8cde49-5c52-4abd-9820-f1d270ddea61) T-SQL script.
+To reindex the WSUS database (SUSDB), use the [Reindex the WSUS Database](reindex-the-wsus-database.md) T-SQL script.
 
-The steps to connect to SUSDB and perform the reindex differ, depending on whether SUSDB is running in SQL Server or Windows Internal Database (WID). To determine where SUSDB is running, check value of the `SQLServerName` registry entry on the WSUS server located at the `HKEY_LOCAL_MACHINE\Software\Microsoft\Update Services\Server\Setup` subkey.
+The steps to connect to SUSDB and perform the reindex differ, depending on whether SUSDB is running in SQL Server or Windows Internal Database (WID). To determine where SUSDB is running, check value of the `SQLServerName` registry entry on the WSUS server located at the `HKEY_LOCAL_MACHINE\Software\Microsoft\Update Services\Server\Setup` subkey.
 
 If the value contains just the server name or server\instance, SUSDB is running on a SQL Server. If the value includes the string `##SSEE` or `##WID` in it, SUSDB is running in WID, as shown:
 
@@ -142,7 +142,7 @@ If SUSDB was installed on full SQL Server, launch SQL Server Management Studio a
 
 #### Running the script
 
-To run the script in either SQL Server Management Studio or SQL Server Management Studio Express, select **New Query**, paste the script in the window, and then select **Execute**. When it's finished, a **Query executed successfully** message will be displayed in the status bar. And the **Results** pane will contain messages related to what indexes were rebuilt.
+To run the script in either SQL Server Management Studio or SQL Server Management Studio Express, select **New Query**, paste the script in the window, and then select **Execute**. When it's finished, a **Query executed successfully** message will be displayed in the status bar. And the **Results** pane will contain messages related to what indexes were rebuilt.
 
 ![Execute the SQL statement.](./media/wsus-maintenance-guide/execute-query.jpg)
 
@@ -162,13 +162,13 @@ The following SQL query can be run against the SUSDB database, to quickly determ
 Select COUNT(UpdateID) from vwMinimalUpdate where IsSuperseded=1 and Declined=0
 ```
 
-If you are using Configuration Manager current branch version 1906 or a later version, we recommend that you automatically decline the superseded updates by enabling the **Decline expired updates in WSUS according to supersedence rules** option in the software update point configuration for the top-most site.
+If you are using Configuration Manager current branch version 1906 or a later version, we recommend that you automatically decline the superseded updates by enabling the **Decline expired updates in WSUS according to supersedence rules** option in the software update point configuration for the top-most site.
 
 ![Decline expired updates option](./media/wsus-maintenance-guide/decline-option.png)
 
 When you use this option, you can see how many updates were declined by reviewing the WsyncMgr.log file after the synchronization process finishes. If you use this option, you don't need to use the script described later in this section (either by manually running it or by setting up as task to run it on a schedule).
 
-If you are using standalone WSUS servers or an older version of configuration Manager, you can [manually decline superseded updates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800975(v=ws.11)#declining-updates) by using the WSUS console. Or you can run this [PowerShell script](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/69/06/Decline-SupersededUpdatesWithExclusionPeriod.ps1.txt). To download the script, right-click the link, and then select **Save target as...**. Download the script, remove the `.txt` file extension, and save the file with a `.PS1` extension.
+If you are using standalone WSUS servers or an older version of configuration Manager, you can [manually decline superseded updates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800975(v=ws.11)#declining-updates) by using the WSUS console. Or you can run this [PowerShell script](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/69/06/Decline-SupersededUpdatesWithExclusionPeriod.ps1.txt). To download the script, right-click the link, and then select **Save target as...**. Download the script, remove the `.txt` file extension, and save the file with a `.PS1` extension.
 
 > [!NOTE]
 > This script is provided as is. It should be fully tested in a lab before you use it in production. Microsoft makes no guarantees regarding the use of this script in any way. Always run the script with the `-SkipDecline` parameter first, to get a summary of how many superseded updates will be declined.
@@ -244,7 +244,7 @@ For more information, see [Use the Server Cleanup Wizard](/previous-versions/win
 
 ![The WSUS Server Cleanup Wizard start page.](./media/wsus-maintenance-guide/wizard-start.jpg)
 
-After it reports the number of items it has removed, the cleanup finishes. If you do not see this information returned on your WSUS server, it is safe to assume that the cleanup timed out. In that case, you will need to start it again or use the [SQL alternative](#troubleshooting).
+After it reports the number of items it has removed, the cleanup finishes. If you do not see this information returned on your WSUS server, it is safe to assume that the cleanup timed out. In that case, you will need to start it again or use the [SQL alternative](#troubleshooting).
 
 ![The WSUS Server Cleanup Wizard when finished.](./media/wsus-maintenance-guide/finish.jpg)
 
@@ -292,7 +292,7 @@ DROP TABLE #results
 
 If errors occur when you attempt to use the PowerShell script to decline superseded updates, an alternative SQL script can be run against SUDB.
 
-1. If Configuration Manager is used along with WSUS, check **Software Update Point Component Properties** > **Supersedence Rules** to see how quickly superseded updates expire, such as immediately or after *X* months. Make a note of this setting.
+1. If Configuration Manager is used along with WSUS, check **Software Update Point Component Properties** > **Supersedence Rules** to see how quickly superseded updates expire, such as immediately or after *X* months. Make a note of this setting.
 
     ![Screenshot of Supersedence Rules.](./media/wsus-maintenance-guide/supersedence-rule.png)
 
@@ -354,7 +354,7 @@ If the update is no longer in WSUS, it can be imported from the Microsoft Update
 ## Automating WSUS maintenance
 
 > [!NOTE]
-> If you are using Configuration Manager version1906 or a later version, automate the cleanup procedures by enabling the **WSUS Maintenance** options in the software update point configuration of the top-level site. These options handle all cleanup operations that are performed by the WSUS Server Cleanup Wizard. However, you should still automatically back up and reindex the WSUS database on a schedule.
+> If you are using Configuration Manager version1906 or a later version, automate the cleanup procedures by enabling the **WSUS Maintenance** options in the software update point configuration of the top-level site. These options handle all cleanup operations that are performed by the WSUS Server Cleanup Wizard. However, you should still automatically back up and reindex the WSUS database on a schedule.
 
 WSUS maintenance tasks can be automated, assuming that a few requirements are met first.
 
@@ -366,23 +366,39 @@ WSUS maintenance tasks can be automated, assuming that a few requirements are me
 
 Needed/helpful links:
 
-- [WSUS Cleanup](https://gallery.technet.microsoft.com/scriptcenter/fd39c7d4-05bb-4c2d-8a99-f92ca8d08218)
-- [Re-index the WSUS Database](https://gallery.technet.microsoft.com/scriptcenter/6f8cde49-5c52-4abd-9820-f1d270ddea61)
+- [Reindex the WSUS Database](reindex-the-wsus-database.md)
 - [Agent XPs Server Configuration Option](/sql/database-engine/configure-windows/agent-xps-server-configuration-option)
 - [Weekend Scripter: Use the Windows Task Scheduler to Run a Windows PowerShell Script](https://devblogs.microsoft.com/scripting/weekend-scripter-use-the-windows-task-scheduler-to-run-a-windows-powershell-script/)
+
+### WSUS cleanup script
+
+```powershell
+[reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration")` 
+ | out-null 
+$wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer(); 
+$cleanupScope = new-object Microsoft.UpdateServices.Administration.CleanupScope; 
+$cleanupScope.DeclineSupersededUpdates = $true        
+$cleanupScope.DeclineExpiredUpdates = $true 
+$cleanupScope.CleanupObsoleteUpdates = $true 
+$cleanupScope.CompressUpdates = $true 
+#$cleanupScope.CleanupObsoleteComputers = $true 
+$cleanupScope.CleanupUnneededContentFiles = $true 
+$cleanupManager = $wsus.GetCleanupManager(); 
+$cleanupManager.PerformCleanup($cleanupScope);
+```
 
 ### Setting up the WSUS Cleanup task in Task Scheduler
 
 > [!NOTE]
-> As mentioned previously, if you are using Configuration Manager current branch version 1906 or a later version, automate the cleanup procedures by enabling the **WSUS Maintenance** options in the software update point configuration of the top-level site. For standalone WSUS servers or older versions of Configuration Manager, you can continue to use the following steps.
+> As mentioned previously, if you are using Configuration Manager current branch version 1906 or a later version, automate the cleanup procedures by enabling the **WSUS Maintenance** options in the software update point configuration of the top-level site. For standalone WSUS servers or older versions of Configuration Manager, you can continue to use the following steps.
 
-The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/08/11/weekend-scripter-use-the-windows-task-scheduler-to-run-a-windows-powershell-script.aspx) blog post mentioned in the previous section contains basic directions and troubleshooting for this step. However, I'll walk you through the process in the following steps.
+The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/08/11/weekend-scripter-use-the-windows-task-scheduler-to-run-a-windows-powershell-script.aspx) blog post mentioned in the previous section contains basic directions and troubleshooting for this step. However, I'll walk you through the process in the following steps.
 
-1. Open **Task Scheduler** and select **Create a Task**. On the **General** tab, set the name of the task, the user to run the PowerShell script as most people use a service account. Select **Run whether a user is logged on or not**, and then add a description if you wish.
+1. Open **Task Scheduler** and select **Create a Task**. On the **General** tab, set the name of the task, the user that you want to run the PowerShell script as (most people use a service account). Select **Run whether a user is logged on or not**, and then add a description if you wish.
 
     ![WSUS Create a task screen.](./media/wsus-maintenance-guide/create-task.jpg)
 
-2. Under the **Actions** tab, add a new action and specify the program/script you want to run. In this case, we need to use PowerShell and point it to the PS1 file we want it to run. I use the WSUS Cleanup script found [here](https://gallery.technet.microsoft.com/scriptcenter/fd39c7d4-05bb-4c2d-8a99-f92ca8d08218). This script performs cleanup options that Configuration Manager current branch version 1906 doesn't do. You can uncomment them if you are using standalone WSUS or an older version of Configuration Manager. If you would like a log, you can modify the last line of the script as follows:
+2. Under the **Actions** tab, add a new action and specify the program/script you want to run. In this case, we need to use PowerShell and point it to the PS1 file we want it to run. You can use the [WSUS Cleanup script](#wsus-cleanup-script). This script performs cleanup options that Configuration Manager current branch version 1906 doesn't do. You can uncomment them if you are using standalone WSUS or an older version of Configuration Manager. If you would like a log, you can modify the last line of the script as follows:
 
     ```powershell
     [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration") | out-null
@@ -402,7 +418,7 @@ The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/
 
     ![WSUS add a line of script to start the task.](./media/wsus-maintenance-guide/add-line.jpg)
 
-3. On the **Triggers** tab, set your schedule for once a month or on any schedule you want. Again, you must ensure that you don't sync your WSUS during the entire cleanup and reindex time.
+3. On the **Triggers** tab, set your schedule for once a month or on any schedule you want. Again, you must ensure that you don't sync your WSUS during the entire cleanup and reindex time.
 
     ![Set the WSUS Edit Trigger for the task.](./media/wsus-maintenance-guide/edit-trigger.jpg)
 
@@ -412,7 +428,7 @@ The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/
 
 ### Setting up the SUSDB reindex for WID using SQLCMD and Task Scheduler
 
-1. Save the script [here](https://gallery.technet.microsoft.com/scriptcenter/6f8cde49-5c52-4abd-9820-f1d270ddea61) as a .sql file (for example, *SUSDBMaint.sql*).
+1. Save the [Reindex the WSUS database script](reindex-the-wsus-database.md) as a .sql file (for example, *SUSDBMaint.sql*).
 2. Create a basic task and give it a name:
 
     ![WSUS Create Basic Task Wizard screen.](./media/wsus-maintenance-guide/create-basic-task-wizard.jpg)
@@ -458,11 +474,11 @@ The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/
 
     ![WSUS New Job Schedule screen.](./media/wsus-maintenance-guide/new-job-schedule.png)
 
-6. While creating the maintenance plan, consider adding a backup of the SUSDB into the plan as well. I back up first, then reindex. It may add more time to the schedule.
+6. While creating the maintenance plan, consider adding a backup of the SUSDB into the plan as well. I usually back up first, then reindex. It may add more time to the schedule.
 
 ### Putting it all together
 
-When running it in a hierarchy, the WSUS cleanup run should be done from the bottom of the hierarchy up. However, when using the script to decline superseded updates, the run should be done from the top down. Declining superseded updates is really a type of addition to an update rather than a removal. You're actually adding a type of **approval** in this case.
+When running it in a hierarchy, the WSUS cleanup run should be done from the bottom of the hierarchy up. However, when using the script to decline superseded updates, the run should be done from the top down. Declining superseded updates is really a type of addition to an update rather than a removal. You're actually adding a type of **approval** in this case.
 
 Since a sync can't be done during the actual cleanup, it's suggested to schedule/complete all tasks overnight. Then check on their completion via the logging the following morning, before the next scheduled sync. If something failed, maintenance can be rescheduled for the next night, once the underlying issue is identified and resolved.
 
@@ -476,17 +492,17 @@ The answer is that you probably could, but I wouldn't. If my coworker across the
 
 |Time|Tier|Tasks|
 |---|---|---|
-|12:00 AM|Tier1-**Decline**| |
-|12:15 AM|Tier2-**Decline**| |
-|12:30 AM|Tier3-**Decline**| |
-|1:00 AM|Tier3 WSUS Cleanup| |
+|12:00 AM|Tier1-**Decline**| |
+|12:15 AM|Tier2-**Decline**| |
+|12:30 AM|Tier3-**Decline**| |
+|1:00 AM|Tier3 WSUS Cleanup| |
 |2:00 AM|Tier3 Reindex|Tier2 WSUS Cleanup|
 |3:00 AM|Tier1-Cleanup|Tier2 Reindex|
-|4:00 AM|Tier1 Reindex| |
+|4:00 AM|Tier1 Reindex| |
 ||||
 
 > [!NOTE]
-> If you're using Configuration Manager current branch version 1906 or a later version to perform WSUS Maintenance, Configuration Manager performs the cleanup after synchronization using the top-down approach. In this scenario, you can schedule the WSUS database backup and reindexing jobs to run before the configured sync schedule without worrying about any of the other steps, because Configuration Manager will handle everything else.
+> If you're using Configuration Manager current branch version 1906 or a later version to perform WSUS Maintenance, Configuration Manager performs the cleanup after synchronization using the top-down approach. In this scenario, you can schedule the WSUS database backup and reindexing jobs to run before the configured sync schedule without worrying about any of the other steps, because Configuration Manager will handle everything else.
 
 For more information about SUP maintenance in Configuration Manager, see the following articles:
 

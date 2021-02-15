@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Transport Layer Security (TLS)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Steps to disable the TLS 1.0 and 1.1 on the MBAM Servers and force the use of TLS 1.2
 

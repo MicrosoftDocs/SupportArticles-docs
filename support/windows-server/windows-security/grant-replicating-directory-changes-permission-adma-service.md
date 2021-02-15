@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dweiss
 ms.prod-support-area-path: Permissions, access control, and auditing
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # How to grant the "Replicating Directory Changes" permission for the Microsoft Metadirectory Services ADMA service account
 
@@ -33,15 +33,15 @@ The Replicating Directory Changes permission, known as the Replicate Directory C
 
 ### Setting permissions by using the ACL editor
 
-1. Open the Active Directory Users and Computers snap-in
-2. On the View menu, click Advanced Features.
-3. Right-click the domain object, such as "company.com", and then click Properties.
-4. On the Security tab, if the desired user account is not listed, click Add; if the desired user account is listed, proceed to step 7.
-5. In the Select Users, Computers, or Groups dialog box, select the desired user account, and then click Add.
-6. Click OK to return to the Properties dialog box.
+1. Open the **Active Directory Users and Computers** snap-in
+2. On the **View** menu, click **Advanced Features**.
+3. Right-click the domain object, such as "`company.com`", and then click **Properties**.
+4. On the **Security** tab, if the desired user account is not listed, click **Add**; if the desired user account is listed, proceed to step 7.
+5. In the **Select Users, Computers, or Groups** dialog box, select the desired user account, and then click **Add**.
+6. Click **OK** to return to the **Properties** dialog box.
 7. Click the desired user account.
-8. Click to select the Replicating Directory Changes check box from the list.
-9. Click Apply, and then click OK.
+8. Click to select the **Replicating Directory Changes** check box from the list.
+9. Click **Apply**, and then click **OK**.
 10. Close the snap-in.
 
 ### Setting permissions by using Adsiedit
@@ -50,15 +50,15 @@ The Replicating Directory Changes permission, known as the Replicate Directory C
 >Using Adsiedit incorrectly can cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that problems resulting from the incorrect use of Adsiedit can be solved. Use Adsiedit at your own risk.  
 
 1. Install the Windows 2000 Support tools if they have not already been installed.  
-2. Run Adsiedit.msc as an administrator of the domain. Expand the Domain Naming Context (Domain NC) node. This node contains an object that begins with "DC=" and reflects the correct domain name. Right-click this object, and then click Properties.
-3. Click the Security tab.
-4. If the desired user account is not listed, click Add, otherwise proceed to step 8.
-5. In the Select Users, Computers, or Groups dialog box, select the desired user account, and then click Add.
-6. Click OK to return to the Properties dialog box.
-7. Click Apply, and then click OK.
+2. Run Adsiedit.msc as an administrator of the domain. Expand the Domain Naming Context (Domain NC) node. This node contains an object that begins with "DC=" and reflects the correct domain name. Right-click this object, and then click **Properties**.
+3. Click the **Security** tab.
+4. If the desired user account is not listed, click **Add**, otherwise proceed to step 8.
+5. In the **Select Users, Computers, or Groups** dialog box, select the desired user account, and then click **Add**.
+6. Click **OK** to return to the **Properties** dialog box.
+7. Click **Apply**, and then click **OK**.
 8. Select the desired user account
-9. Click to select the Replicating Directory Changes check box.
-10. Click Apply, and then click OK.
+9. Click to select the **Replicating Directory Changes** check box.
+10. Click **Apply**, and then click **OK**.
 11. Close the snap-in.  
 
 >[!NOTE]

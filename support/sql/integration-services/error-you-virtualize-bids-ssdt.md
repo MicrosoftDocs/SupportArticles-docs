@@ -15,10 +15,10 @@ _Original KB number:_ &nbsp; 2679533
 
 ## Summary
 
-When attempting to virtualize (sequence) Microsoft SQL Server Business Intelligence Development Studio (BIDS) or SQL Server Data Tools (SSDT) with Microsoft Application Virtualization (App-V), the resulting package fails with the following error:
+When attempting to virtualize (sequence) Microsoft SQL Server Business Intelligence Development Studio (BIDS) or SQL Server Data Tools (SSDT) with Microsoft Application Virtualization (App-V), the resulting package fails with the following error:
 
 > Invalid license data
 
 ## More information
 
-The sequencing of any version of SQL Server Business Intelligence Development Studio (BIDS) or SQL Server Data Tools (SSDT) is not supported. This includes but is not limited to all versions of SQL Server, including SQL Server Management Studio.
+The sequencing of any version of SQL Server Business Intelligence Development Studio (BIDS) or SQL Server Data Tools (SSDT) is not supported. This includes but is not limited to all versions of SQL Server, including SQL Server Management Studio.

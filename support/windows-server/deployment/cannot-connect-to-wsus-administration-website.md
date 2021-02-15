@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Unable to connect to WSUS Administration Website
 
@@ -26,15 +26,15 @@ _Original KB number:_ &nbsp; 2737219
 - In addition to this when you open Windows Small Business Server Console you get error message "**An error occurred while retrieving updates information**" under "**Updates**" tab.
 
 **You see HTTP Error 500 in IIS log file for WSUS Administration Website:**  
-> 2012-07-21 20:42:13 fe80::e3a4:2b81:92b4:c6e7%11 GET /selfupdate/iuident.cab - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 - 500 24 50 3715  
-2012-07-21 20:42:13 fe80::e3a4:2b81:92b4:c6e7%11 POST /reportingwebservice/reportingwebservice.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 422  
-2012-07-21 20:42:13 fe80::e3a4:2b81:92b4:c6e7%11 POST /ApiRemoting30/WebService.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 6  
-2012-07-21 20:42:14 fe80::e3a4:2b81:92b4:c6e7%11 POST /ServerSyncWebService/serversyncwebservice.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 601  
-2012-07-21 20:42:14 fe80::e3a4:2b81:92b4:c6e7%11 POST /ClientWebService/Client.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 508  
-2012-07-21 20:42:14 fe80::e3a4:2b81:92b4:c6e7%11 POST /ReportingWebService/ReportingWebService.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Windows-Update-Agent 500 24 50 12078  
-2012-07-21 20:42:16 fe80::e3a4:2b81:92b4:c6e7%11 POST /SimpleAuthWebService/SimpleAuth.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 547  
-2012-07-21 20:42:16 fe80::e3a4:2b81:92b4:c6e7%11 POST /DssAuthWebService/DssAuthWebService.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 483  
-2012-07-21 20:43:01 fe80::e3a4:2b81:92b4:c6e7%11 POST /ApiRemoting30/WebService.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+4.0.30319.1) 500 24 50 8  
+> *\<DateTime>* fe80::e3a4:2b81:92b4:c6e7%11 GET /selfupdate/iuident.cab - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 - 500 24 50 3715  
+*\<DateTime>* fe80::e3a4:2b81:92b4:c6e7%11 POST /reportingwebservice/reportingwebservice.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 422  
+*\<DateTime>* fe80::e3a4:2b81:92b4:c6e7%11 POST /ApiRemoting30/WebService.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 6  
+*\<DateTime>* fe80::e3a4:2b81:92b4:c6e7%11 POST /ServerSyncWebService/serversyncwebservice.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 601  
+*\<DateTime>* fe80::e3a4:2b81:92b4:c6e7%11 POST /ClientWebService/Client.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 508  
+*\<DateTime>* fe80::e3a4:2b81:92b4:c6e7%11 POST /ReportingWebService/ReportingWebService.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Windows-Update-Agent 500 24 50 12078  
+*\<DateTime>* fe80::e3a4:2b81:92b4:c6e7%11 POST /SimpleAuthWebService/SimpleAuth.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 547  
+*\<DateTime>* fe80::e3a4:2b81:92b4:c6e7%11 POST /DssAuthWebService/DssAuthWebService.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+2.0.50727.4927) 500 24 50 483  
+*\<DateTime>* fe80::e3a4:2b81:92b4:c6e7%11 POST /ApiRemoting30/WebService.asmx - 8530 - fe80::e3a4:2b81:92b4:c6e7%11 Mozilla/4.0+(compatible;+MSIE+6.0;+MS+Web+Services+Client+Protocol+4.0.30319.1) 500 24 50 8  
 
  **After enabling Failed Request Tracing on "WSUS Administration" and "ApiRemoting30" Websites  for Http status code 500, results in the following errors.**  
 > `http://<ServerName>:8530/ApiRemoting30/WebService.asmx`
@@ -65,7 +65,7 @@ ErrorCode The request is not supported. (0x80070032)
 
 > Log Name:      Application  
 Source:        Windows Server Update Services  
-Date:          7/22/2012 2:11:15 AM  
+Date:          *\<DateTime>*  
 Event ID:      7053  
 Task Category: None  
 Level:         Error  

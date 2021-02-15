@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4502457
 
 ## Symptoms
 
-Assume that a user who is running Microsoft SQL Server cannot send Database Mail. In this situation, the Database mail log (sysmail_event_log) shows the following entry:
+Assume that a user who is running Microsoft SQL Server cannot send Database Mail. In this situation, the Database mail log (sysmail_event_log) shows the following entry:
 
 > **Exception Information:** Exception Type: Microsoft.SqlServer.Management.SqlIMail.Server.Common.BaseException  
 Message: The Transaction not longer valid.  
@@ -30,16 +30,16 @@ at Microsoft.SqlServer.Management.SqlIMail.IMailProcess.QueueItemProcesser.Proce
 
 > [!NOTE]
 >
-> - The phrase **not longer valid** appears this way in the **Message** field to mean that the transaction **is no longer valid**.
-> - You may see the same message in the Application log. The mail message will stay in "retry" state in `sysmail_unsentitems`, and will remain unsent until the DatabaseMail.exe external program can run successfully.
+> - The phrase **not longer valid** appears this way in the **Message** field to mean that the transaction **is no longer valid**.
+> - You may see the same message in the Application log. The mail message will stay in "retry" state in `sysmail_unsentitems`, and will remain unsent until the DatabaseMail.exe external program can run successfully.
 
 ## Cause
 
-The SQL Server default connection option uses **SET NUMERIC_ARITHABORT ON**. When you run `sp_send_dbmail`, the mail message is queued to **ExternalMailQueue**. When a message appears in the queue, the activation stored procedure triggers the DatabaseMail.exe external executable. When **DatabaseMail.exe**  is connected to SQL Server, it runs `sp_readrequest` in order to read messages from the queue. During the execution of `sp_readrequest`, you may notice that the exception occurs.
-The following `SELECT` statement is run in `sp_readrequest` (you have to collect statement-level tracing to see this `SELECT` statement):
+The SQL Server default connection option uses **SET NUMERIC_ARITHABORT ON**. When you run `sp_send_dbmail`, the mail message is queued to **ExternalMailQueue**. When a message appears in the queue, the activation stored procedure triggers the DatabaseMail.exe external executable. When **DatabaseMail.exe** is connected to SQL Server, it runs `sp_readrequest` in order to read messages from the queue. During the execution of `sp_readrequest`, you may notice that the exception occurs.
+The following `SELECT` statement is run in `sp_readrequest` (you have to collect statement-level tracing to see this `SELECT` statement):
 
 ```SQL
-DatabaseMail - DatabaseMail - Id\<ProcessId>        \<NTUserName>        \<SPID>                \<StartTime>              msdb        \<LoginSid>  \<SessionLoginName>
+DatabaseMail - DatabaseMail - Id\<ProcessId>        \<NTUserName>        \<SPID>                \<StartTime>              msdb        \<LoginSid>  \<SessionLoginName>
 -- network protocol: TCP/IP
 set quoted_identifier on
 set arithabort off
@@ -54,7 +54,7 @@ set language us_english
 set dateformat mdy
 set datefirst 7
 set transaction isolation level read committed
-2 - Pooled        1        1 - Non-DAC
+2 - Pooled        1        1 - Non-DAC
 RPC:Starting <BinaryData> 4 <NTUserName> DatabaseMail - DatabaseMail - Id<ProcessId> <NTUserName> <SPID> <StartTime> sp_readrequest msdb <LoginSid> <SessionLoginName> exec sp_readrequest @receive_timeout=600000
 
 SP:StmtStarting <BinaryData> 4 <NTUserName> DatabaseMail - DatabaseMail - Id<ProcessId> <NTUserName> <SPID> <StartTime> sp_readrequest msdb <LoginSid> <SessionLoginName>
@@ -71,7 +71,7 @@ Exception 4 <servername> DatabaseMail - DatabaseMail - Id<ProcessId> <NTUserName
 Verify that SET options are correct for use with indexed views and/or indexes on computed columns and/or filtered indexes and/or query notifications and/or XML data type methods and/or spatialindex operations.
 ```
 
-When DatabaseMail.exe encounters the exception, a rollback is tried but fails. The exception causes the transaction to go out of scope. For this reason, a **transaction not longer valid** message is logged in the Database Mail log.
+When DatabaseMail.exe encounters the exception, a rollback is tried but fails. The exception causes the transaction to go out of scope. For this reason, a **transaction not longer valid** message is logged in the Database Mail log.
 
 However, the root cause of the problem is that Error 1934 occurs because of an incompatible **SET** option when the XML data type method (`MailRequest.Properties.value('(MailItemId)[1]', 'int')`) is used in the `SELECT` statement.
 
@@ -85,8 +85,4 @@ However, the root cause of the problem is that Error 1934 occurs because of an i
 
 ## Resolution
 
-To resolve this problem, change the default connection option to **SET NUMERIC_ROUNDABORT OFF**.
-
-## References
-
-Learn about the [terminology](https://support.microsoft.com/help/824684) that Microsoft uses to describe software updates.
+To resolve this problem, change the default connection option to **SET NUMERIC_ROUNDABORT OFF**.

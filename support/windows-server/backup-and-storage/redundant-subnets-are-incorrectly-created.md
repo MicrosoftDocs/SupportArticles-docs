@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Roger.Blume, winciccore
 ms.prod-support-area-path: iSCSI
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Redundant subnets are incorrectly created in an iSCSI IPv6 network
 

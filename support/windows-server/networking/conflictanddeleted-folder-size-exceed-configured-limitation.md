@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, clandis, cdan
 ms.prod-support-area-path: DFSR
-ms.technology: Networking
+ms.technology: networking
 ---
 # The ConflictAndDeleted folder size may exceed its configured limitation
 
@@ -38,8 +38,8 @@ To clean up the ConflictAndDeleted folder content of a replicated folder, run th
 wmic /namespace:\\root\microsoftdfs path dfsrreplicatedfolderinfo where "replicatedfoldername='<ReplicatedFolderName>'" call cleanupconflictdirectory
 ```
 
->[!Note]
->In this command, \<ReplicatedFolderName> represents the name of the replicated folder.
+> [!Note]
+> In this command, \<ReplicatedFolderName> represents the name of the replicated folder.
 
 To clean up the ConflictAndDeleted folder content of all of the replicated folders in a replication group, enter the following command:  
 
@@ -47,16 +47,16 @@ To clean up the ConflictAndDeleted folder content of all of the replicated folde
 wmic /namespace:\\root\microsoftdfs path dfsrreplicatedfolderinfo where "replicationgroupname='<ReplicationGroupName>'" call cleanupconflictdirectory
 ```
 
->[!Note]
->In this command,\<ReplicationGroupName> represents the name of the replication group.
+> [!Note]
+> In this command,\<ReplicationGroupName> represents the name of the replication group.
 
->[!Note]
->If you have not run a WMIC command on the computer before, a short pause occurs while the computer installs WMIC.
+> [!Note]
+> If you have not run a WMIC command on the computer before, a short pause occurs while the computer installs WMIC.
 
 Depending on the size of the ConflictAndDeleted folder, this process may take a few minutes. The process empties the ConflictAndDeleted folder and reduces or deletes the ConflictAndDeletedManifest.xml file.  
 
->[!Note]
-If any conflicts or deletions occur while **cleanupconflictdirectory** runs, the information that is related to those conflicts or deletions remains in the ConflictAndDeleted folder and the ConflictAndDeletedManifest.xml file when the process finishes.  After the cleanup, the file is much smaller, and the total size of the ConflictAndDeleted folder is less than the quota maximum mark.
+> [!Note]
+> If any conflicts or deletions occur while **cleanupconflictdirectory** runs, the information that is related to those conflicts or deletions remains in the ConflictAndDeleted folder and the ConflictAndDeletedManifest.xml file when the process finishes.  After the cleanup, the file is much smaller, and the total size of the ConflictAndDeleted folder is less than the quota maximum mark.
 
 ## Status
 

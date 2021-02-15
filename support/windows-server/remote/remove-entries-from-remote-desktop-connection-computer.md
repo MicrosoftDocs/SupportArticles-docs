@@ -1,6 +1,6 @@
 ---
 title: Remove entries from Remote Desktop Connection Computer
-description: This articles introduces how to remove entries from the Remote Desktop Connection Computer box.
+description: Introduces how to remove entries from the Remote Desktop Connection Computer box.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, imranu
 ms.prod-support-area-path: Connecting to a session or desktop
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # How to remove entries from the Remote Desktop Connection Computer box
 
@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 312169
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
-After you use the Remote Desktop Connection tool to make a connection to another computer, the name of the computer to which you connected is added to the **Remote Desktop Connection Computer** box. This makes it easy for you to quickly select the same computer at a later time. However, the Remote Desktop Connection tool does not provide a way to clear the list of computers or remove one or more entries from the Computer box.
+After you use the Remote Desktop Connection tool to connect to another computer, the name of the computer is added to the **Remote Desktop Connection Computer** box. It's easy for you to quickly select the same computer at a later time. However, the tool doesn't provide a way to clear the list of computers or remove one or more entries from the Computer box.
 
 ## Remove entries in the Windows Remote Desktop Connection client
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jarrettr
 ms.prod-support-area-path: Microsoft Management Console (MMC)
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # How to troubleshoot SMS Administrator console connectivity
 
@@ -91,13 +91,13 @@ After you consider these issues, complete the troubleshooting procedures that ar
 
 Make sure that the user can connect to the SMS namespace and the SMS_'sitecode' namespaces. To do this, follow these steps:
 
-1. Click Start, click Run, and then type *wbemtest*.
-2. Click Connect, type *\\\\siteserver\\root\\sms*, and then click Login.
-3. Click Enum Classes, click Recursive, and then click OK.
-4. In the Query Result list, double-click SMS_ProviderLocation.
-5. Click Instances, and then double-click the line that contains the target site code. For example, SMS_ProviderLocation.SiteCode="**xxx**."
-6. In the Properties section, locate the NamespacePath line. You may have to double-click this line to see the whole line.
-7. Copy the NamespacePath value to the clipboard. For example, copy the following value:\\\\ **server_name**\\root\\sms\\site_**xxx**  
+1. Click **Start**, click **Run**, and then type *wbemtest*.
+2. Click **Connect**, type *\\\\siteserver\\root\\sms*, and then click **Login**.
+3. Click **Enum Classes**, click **Recursive**, and then click **OK**.
+4. In the **Query Result** list, double-click **SMS_ProviderLocation**.
+5. Click **Instances**, and then double-click the line that contains the target site code. For example, SMS_ProviderLocation.SiteCode="**xxx**."
+6. In the **Properties** section, locate the NamespacePath line. You may have to double-click this line to see the whole line.
+7. Copy the NamespacePath value to the clipboard. For example, copy the following value:\\\\ **server_name**\\root\\sms\\site_**xxx**.  
 
 If you successfully complete this procedure, you can connect to the site server and enumerate the SMS namespace.
 
@@ -106,9 +106,9 @@ If you successfully complete this procedure, you can connect to the site server 
 Determine whether you can connect to the server that the provider is located on. The server is defined in the NamespacePath value that you determined in the "How to troubleshoot SMS namespace connectivity" section. Typically, this server is the same server.
 
 1. Close all WBEMtest windows that may be open.
-2. Click Connect, paste the NamespacePath that you copied in step 7, and then click Login.
-3. Click Enum Classes, click Recursive, and then click OK
-4. In the **Query Result** list, double-click SMS_Site.
+2. Click **Connect**, paste the NamespacePath that you copied in step 7, and then click **Login**.
+3. Click **Enum Classes**, click **Recursive**, and then click **OK**.
+4. In the **Query Result** list, double-click **SMS_Site**.
 
 If you receive an "access denied" error message when you perform this procedure, this may be because of one of the following causes:
 
@@ -120,11 +120,11 @@ If you receive an "access denied" error message when you perform this procedure,
     > For more information about how to secure SMS site systems, visit the following Microsoft Web site: [https://technet.microsoft.com/library/cc179764.aspx](https://technet.microsoft.com/library/cc179764.aspx)
 
 2. The account that is used does not have the appropriate permissions to the namespace of the provider. To modify or to verify the permissions, follow these steps:
-   1. On the server on which you enumerated the SMS site, click Start, click Run, type *wmimgmt.msc*, and then click OK.
-   2. Right-click WMI Control, and then click Properties.
-   3. On the Security tab, expand Root, and then click SMS.
-   4. Click Security in the results pane to see the permissions.
-   5. Click Advanced, click SMS Admins, and then click View-edit.
+   1. On the server on which you enumerated the SMS site, click **Start**, click **Run**, type *wmimgmt.msc*, and then click **OK**.
+   2. Right-click **WMI Control**, and then click **Properties**.
+   3. On the **Security** tab, expand **Root**, and then click **SMS**.
+   4. Click **Security** in the results pane to see the permissions.
+   5. Click **Advanced**, click **SMS Admins**, and then click **View-edit**.
 
       For the SMS namespace, the SMS Admins group must have the following permissions:
       - Enable account
@@ -143,14 +143,11 @@ Use the troubleshooting procedures that are described in this section if any one
 Windows XP SP2 and Windows Server 2003 SP1 include the Windows Firewall feature. If you run the **SMS Administrator Console** on a Windows XP SP2-based or a Windows Server 2003 SP1-based computer that has the firewall enabled, you must enable the Unsecapp.exe program and TCP port 135 to pass through the Windows Firewall. To do this, follow these steps:
 
 1. Click **Start**, click **Run**, type *firewall.cpl*, and then click **OK**.
-2. On the **General** tab, click **On** to turn on the firewall. Click to clear the
- **Don't allow exceptions** check box.
+2. On the **General** tab, click **On** to turn on the firewall. Click to clear the **Don't allow exceptions** check box.
 
 3. On the **Exceptions** tab, click **Add Program**.
 
-4. Click **Browse**, type *%windir%\\System32\\Wbem\\Unsecapp.exe* in the **File name** box, and then click **Open**. If you have to define the scope, click
- **Change scope**, and then click **OK**. Click **OK**  
-to close the **Add a Program** dialog box.
+4. Click **Browse**, type *%windir%\\System32\\Wbem\\Unsecapp.exe* in the **File name** box, and then click **Open**. If you have to define the scope, click **Change scope**, and then click **OK**. Click **OK** to close the **Add a Program** dialog box.
 5. In the **Programs and Services** list, click to select the **Unsecapp.exe** check box.
 
 6. Click **Add Port**.
@@ -189,7 +186,8 @@ You may not resolve this issue by adding these exceptions to Windows Firewall. Y
 
 ##### Determine whether the default DCOM permissions have been changed
 
-Check for the DefaultAccessPermission value under the following registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Ole`
+Check for the DefaultAccessPermission value under the following registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Ole`.
+
 This indicates the default DCOM permissions have been changed. If this value does not exist, the default DCOM permissions are in effect. To resolve this problem, delete the DefaultAccessPermission value. This will reset all default DCOM permissions. This is a measure of last resort and is not guaranteed to correct the problem.
 
 > [!IMPORTANT]
@@ -200,20 +198,18 @@ This indicates the default DCOM permissions have been changed. If this value doe
 To delete the DefaultAccessPermission value, follow these steps:
 
 1. Click **Start**, click **Run**, type *regedit*, and then click **OK**.
-2. Locate and then click the following registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Ole`
+2. Locate and then click the following registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Ole`.
 
 3. In the right pane, right-click **DefaultAccessPermission**, and then click **Delete**.
 4. In the **Confirm Value Delete** dialog box, click **Yes**.
 5. Exit Registry Editor.
-6. Log off from the computer, and then log back on to the computer. For more information about DCOM issues and their symptoms, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[900960](https://support.microsoft.com/help/900960) You cannot perform actions such as search and drag when you use a Windows Server 2003-based computer  
+6. Log off from the computer, and then log back on to the computer.  
 
 #### Include the Anonymous Logon security group in the Everyone security group
 
 If the procedures that are previously described do not resolve the permissions issue for the SMS Administrator console, it may be difficult to do the following:
 
-- Determine which resource requires anonymous access on the computer that is running Windows XP
+- Determine which resource requires anonymous access on the computer that is running Windows XP.
 - Modify the permissions on all the necessary resourcesIn these situations, you may have to force the computer that is running Windows XP to include the Anonymous Logon security group in the Everyone security group. To support this functionality, Windows XP includes the EveryoneIncludesAnonymous registry entry.
 
 If the EveryoneIncludesAnonymous registry entry is set to REG_DWORD 0x1, the Local Security Authority (LSA) includes the security identifier (SID) of the Everyone security group in the anonymous user's access token. To set the value of the EveryoneIncludesAnonymous registry entry, use either of the following methods.
@@ -237,7 +233,7 @@ If the EveryoneIncludesAnonymous registry entry is set to REG_DWORD 0x1, the Loc
 1. Click **Start**, click **Run**, type *regedit*, and then click **OK**.
 
 2. Locate and then click the following registry key:
- `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa`  
+ `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa`.  
 
 3. Right-click **EveryoneIncludesAnonymous**, and then click **Modify**.
 
@@ -262,17 +258,17 @@ Start the WMI Control on the site server. Do not start the WMI control on the pr
 Analyze this log on the site server. You see all the WMI traffic that is generated. Look for the query for SMS_Providerlocation that occurred when an SMS Administrator console tried to connect. If this query is present, you can confirm that there is communication between the console and the site server. Test connectivity from the site server back to the requesting SMS Administrator console. Connectivity may not exist in the following scenarios:
 
 - The remote procedure call (RPC) server is unavailable.
-If WBEMtest connectivity testing determines that the remote procedure call (RPC) server is unavailable, see the following Microsoft Knowledge Base article: [229091](https://support.microsoft.com/help/229091) SMS: Remote administrator gets a "Connection failed" error when connecting to Site Server  
 
 - There is a DNS name resolution issue.
 The "Connection Failed "error message may also occur if name resolution is not completed correctly. To determine whether you are experiencing a name resolution issue, use the WBEMtest tool and try to connect to the site server by using the IP address. For example, use \\111.222.333.444\\root\\default as the address. If you can connect when you use the IP address, but you cannot connect when you use the netBIOS name of the site server, you are experiencing a name resolution issue. To resolve this issue, confirm either the WINS or the DNS configurations.
 
-When you expand nodes in a remote SMS Administrator Console, the SMS site server makes a DCOM connection to the computer on which the console is installed. If an invalid DNS record exists for the computer on which the console is installed, the SMS site server may try to connect to the wrong IP address. When this occurs, the console node will fail to expand, and the console computer will log the "WMI connection has been dropped" error in the AdminUI.log. To troubleshoot this, run the `nslookup <console_computer_name>` command to make sure that the name resolves to the correct IP address. If an invalid DNS registration exists for the console computer, remove the invalid DNS registration. Additionally, determine how the invalid DNS registration was created to prevent it from happening again. For example, the console computer may have registered a VPN address, but the VPN address was not removed from DNS when the VPN was disconnected. After you resolve the DNS issue, run the following command at a command prompt on the SMS 2003 site server: `ipconfig /flushdns`
+When you expand nodes in a remote SMS Administrator Console, the SMS site server makes a DCOM connection to the computer on which the console is installed. If an invalid DNS record exists for the computer on which the console is installed, the SMS site server may try to connect to the wrong IP address. When this occurs, the console node will fail to expand, and the console computer will log the "WMI connection has been dropped" error in the AdminUI.log. To troubleshoot this, run the `nslookup <console_computer_name>` command to make sure that the name resolves to the correct IP address. If an invalid DNS registration exists for the console computer, remove the invalid DNS registration. Additionally, determine how the invalid DNS registration was created to prevent it from happening again. For example, the console computer may have registered a VPN address, but the VPN address was not removed from DNS when the VPN was disconnected. After you resolve the DNS issue, run the following command at a command prompt on the SMS 2003 site server: `ipconfig /flushdns`.
+
 If you cannot resolve the fully qualified domain name of the Windows XP SP2-based computer by using DNS, create an entry in the hosts file on the SMS 2003 site server to map the Windows XP SP2-based computer's fully qualified domain name to its IP address.
 
 #### Known issues with Microsoft ISA server or Checkpoint VPN software
 
-If you cannot expand some nodes on a remote console over a remote connection from a Windows 2003 SP1 computer: Remote Procedure Call-based operations may fail if certain firewall and VPN products deny network requests. These network requests may fail on computers where you apply Windows Server 2003 Service Pack 1 (SP1) to a Windows Server 2003-based computer or your OEM or retail installation media includes SP1 updates. The following products may deny these network requests:
+If you cannot expand some nodes on a remote console over a remote connection from a Windows 2003 SP1 computer, Remote Procedure Call-based operations may fail if certain firewall and VPN products deny network requests. These network requests may fail on computers where you apply Windows Server 2003 Service Pack 1 (SP1) to a Windows Server 2003-based computer or your OEM or retail installation media includes SP1 updates. The following products may deny these network requests:
 
 - Firewall or virtual private network (VPN) products from Checkpoint Software Technologies
 - Microsoft Internet Security and Acceleration (ISA) Server
@@ -285,4 +281,4 @@ To resolve this issue, configure the client and the server to restrict the range
 
 ## References
 
-For more information about how to help secure remote WMI connections, visit the following Microsoft Web site: [Maintaining WMI Security](https://docs.microsoft.com/windows/win32/wmisdk/maintaining-wmi-security)
+For more information about how to help secure remote WMI connections, visit the following Microsoft Web site: [Maintaining WMI Security](https://docs.microsoft.com/windows/win32/wmisdk/maintaining-wmi-security).

@@ -11,9 +11,9 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
 ms.prod-support-area-path: Remote desktop sessions
-ms.technology: RDS 
+ms.technology: windows-server-rds 
 ---
-# Single-Application Sharing with Terminal Server
+# Single-application sharing with Terminal Server
 
 This article describes how to set up a Terminal Server and Terminal Server Client for single-application sharing.
 

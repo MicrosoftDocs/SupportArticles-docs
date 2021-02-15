@@ -2,7 +2,7 @@
 title: HTTP error 403.7 when you run applications
 description: This article discusses where an HTTP Error 403.7 - Forbidden error occurs when you run a Web application that is hosted on a server that is running IIS 7.0, and provides resolutions.
 ms.date: 03/27/2020
-ms.prod-support-area-path: Health, diagnostic, and performance features
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ---
 # HTTP error 403.7 when you run a web application that's hosted on a server that is running IIS 7.0
 

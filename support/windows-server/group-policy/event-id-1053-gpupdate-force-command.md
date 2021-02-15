@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Rajsin
 ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # Event ID 1053 is logged when you use the Gpupdate /force command, or you restart a domain controller
 
@@ -35,8 +35,8 @@ When you use the `Gpupdate /force` command on a Microsoft Windows Server 2003-ba
 Windows cannot determine the user or computer name. (Not enough storage is available to complete this operation. ). Group Policy processing aborted. For more information, see [Help and Support Center](https://go.microsoft.com/fwlink/events.asp).  
 
 Additionally, if you enable USERENV logging, the following entries may be logged in the Userenv.log file:  
-USERENV(1b4.eb4) 13:30:54:531 MyGetUserName: GetUserNameEx failed with 14.  
-USERENV(1b4.eb4) 13:30:54:531 MyGetUserName: Retrying call to GetUserNameEx in 1/2 second.
+> USERENV(1b4.eb4) *\<DateTime>* MyGetUserName: GetUserNameEx failed with 14.  
+USERENV(1b4.eb4) *\<DateTime>* MyGetUserName: Retrying call to GetUserNameEx in 1/2 second.
 
 ## Resolution
 

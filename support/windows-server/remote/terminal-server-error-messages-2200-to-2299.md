@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: willgloy, kaushika
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Terminal Server error messages: 2200 to 2299
 
@@ -20,16 +20,13 @@ This article describes Terminal Server error messages 2200 to 2299.
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;186555
 
-
 ## Error 2200
 
 > This workstation is already logged on to the local-area network.
 
 Explanation: This message should occur only on a down-level computer. Any action to correct the problem should be performed on that computer. A user is already logged on at this workstation.
 
-Action: To see who is currently logged on at the workstation, type:
-
-NET CONFIG WORKSTATION 
+Action: To see who is currently logged on at the workstation, type `NET CONFIG WORKSTATION`.
 
 ## Error 2201
 
@@ -57,14 +54,11 @@ Action: Use a valid password.
 
 Explanation: This message should occur only on a down-level computer. Any action to correct the problem should be performed on that computer. Your user name wasn't added as a new message alias for one of the following reasons:
 
-
 - The Messenger service isn't started on your workstation.
-
 - Your user name and your workstation's computer name are the same, and your workstation's computer name is already a message alias.
-
 - Your user name is in use as a message alias on another computer on the network. In this case, you can't receive messages at the local workstation using this name.
 
-Action: Start the Messenger service on your workstation if it's not already started. Then use the NET NAME command to add your user name as a message alias. If your user name is being used as a message alias on another computer, delete the alias on that computer. Then use the NET NAME command to add your user name as a message alias on this computer.
+Action: Start the Messenger service on your workstation if it's not already started. Then use the `NET NAME` command to add your user name as a message alias. If your user name is being used as a message alias on another computer, delete the alias on that computer. Then use the `NET NAME` command to add your user name as a message alias on this computer.
 
 ## Error 2205
 
@@ -92,7 +86,7 @@ Action: No action is needed.
 
 ## Error 2208
 
-NOTE: Error 2208 isn't a valid error message.
+Error 2208 isn't a valid error message.
 
 ## Error 2209
 
@@ -100,9 +94,7 @@ NOTE: Error 2208 isn't a valid error message.
 
 Explanation: This message should occur only on a down-level computer. Any action to correct the problem should be performed on that computer. An administrator has paused the Netlogon service. No one can log on until the Netlogon service is continued.
 
-Action: The administrator must continue the Netlogon service by typing the following command:
-
-NET CONTINUE NETLOGON 
+Action: The administrator must continue the Netlogon service by typing the command `NET CONTINUE NETLOGON`.
 
 ## Error 2210
 
@@ -170,9 +162,7 @@ Action: Copy the backup version of the file.
 
 Explanation: You specified an unknown group name.
 
-Action: Check the spelling of the group name. To display a list of the groups in the security database, type:
-
-NET GROUP 
+Action: Check the spelling of the group name. To display a list of the groups in the security database, type `NET GROUP`.
 
 ## Error 2221
 
@@ -180,9 +170,7 @@ NET GROUP
 
 Explanation: You specified an unknown user name.
 
-Action: Check the spelling of the user name. To display a list of the users in the security database, type:
-
-NET USER 
+Action: Check the spelling of the user name. To display a list of the users in the security database, type `NET USER`.
 
 ## Error 2222
 
@@ -198,9 +186,7 @@ Action: Check the spelling of the resource's name. Before you can assign user pe
 
 Explanation: You tried to create a group with a group name that already exists.
 
-Action: Use a different group name for the new group. To display a list of group names established on the server, type:
-
-NET GROUP 
+Action: Use a different group name for the new group. To display a list of group names established on the server, type `NET GROUP`.
 
 ## Error 2224
 
@@ -208,9 +194,7 @@ NET GROUP
 
 Explanation: You tried to create a user account with a user name that already exists.
 
-Action: Use a different user name for the new user account. To display a list of existing user names, type:
-
-NET USER 
+Action: Use a different user name for the new user account. To display a list of existing user names, type `NET USER`.
 
 ## Error 2225
 
@@ -314,9 +298,7 @@ Action: No action is needed.
 
 Explanation: This user isn't a member of this group.
 
-Action: To see a list of users in this group, type:
-
-NET GROUP groupname 
+Action: To see a list of users in this group, type `NET GROUP groupname`.
 
 ## Error 2238
 
@@ -356,7 +338,7 @@ Action: If you need to log on, have your network administrator change the logon 
 
 Explanation: Your password has expired. You'll not be able to perform any network tasks until you change your password.
 
-Action: To change your password, press CTRL+ALT+DELETE, and then select Change Password.
+Action: To change your password, press CTRL+ALT+DELETE, and then select **Change Password**.
 
 ## Error 2243
 
@@ -382,7 +364,7 @@ Explanation: The password you specified isn't long enough.
 
 Action: Use a longer password. See your network administrator to find the required length for passwords on your system.
 
-## Error 2246:
+## Error 2246
 
 > The password of this user is too recent to change.
 
@@ -420,13 +402,12 @@ Action: Use the Synchronize With Domain option in Server Manager to synchronize 
 
 Explanation: This network connection doesn't exist.
 
-Action: To display a list of shared resources to which your computer is connected, type:
-
-NET USE 
+Action: To display a list of shared resources to which your computer is connected, type `NET USE`.
 
 ## Error 2251
 
 > This asg_type is invalid.
+
 Explanation: A software error occurred.
 
 Action: Contact technical support.
@@ -489,9 +470,7 @@ Action: Stop forwarding messages and allow messages to be received by the local 
 
 Explanation: You tried to add a message alias that already exists on this computer.
 
-Action: Use a different name if you want to add a new message alias. To display the list of aliases on this computer, type:
-
-NET NAME 
+Action: Use a different name if you want to add a new message alias. To display the list of aliases on this computer, type `NET NAME`.
 
 ## Error 2277
 
@@ -499,13 +478,9 @@ NET NAME
 
 Explanation: The maximum number of message aliases on each computer is limited by the system hardware. You've reached this limit. This limit also affects the number of other domains you can specify with the OTHDOMAINS option of the NET CONFIG WORKSTATION command.
 
-Action: To find the limit for your system, see your hardware documentation or ask your administrator. To display a list of current message aliases, type:
+Action: To find the limit for your system, see your hardware documentation or ask your administrator. To display a list of current message aliases, type `NET NAME`.
 
-NET NAME 
-
-To delete a message alias to make room for a new message alias or another domain specified by the OTHDOMAINS option, type:
-
-NET NAME alias /DELETE 
+To delete a message alias to make room for a new message alias or another domain specified by the OTHDOMAINS option, type `NET NAME alias /DELETE`.
 
 ## Error 2278
 
@@ -529,7 +504,7 @@ Action: No action is needed.
 
 Explanation: An error occurred when the workstation was receiving or processing a domain-wide message.
 
-Action: Check the workstation's Event log, by selecting System from the Log menu using Event Viewer. Stop and restart the Messenger service. If the problem persists, contact technical support.
+Action: Check the workstation's Event log, by selecting **System** from the **Log** menu using Event Viewer. Stop and restart the Messenger service. If the problem persists, contact technical support.
 
 ## Error 2281
 
@@ -561,9 +536,7 @@ Action: Send the message again later.
 
 Explanation: This message should occur only on a down-level computer. Any action to correct the problem should be performed on that computer. The Messenger service must be running for you to use this command.
 
-Action: To start the Messenger service, type:
-
-NET START MESSENGER 
+Action: To start the Messenger service, type `NET START MESSENGER`.
 
 ## Error 2285
 
@@ -571,9 +544,7 @@ NET START MESSENGER
 
 Explanation: You tried to delete a message alias that's not on your computer.
 
-Action: To display a list of aliases on your computer and to check the spelling of the aliases, type:
-
-NET NAME 
+Action: To display a list of aliases on your computer and to check the spelling of the aliases, type `NET NAME`.
 
 ## Error 2286
 

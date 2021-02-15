@@ -46,6 +46,9 @@ This issue occurs when one of following conditions is true:
 
 ## Resolution
 
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+
 To fix the issue, try the one of following resolutions:
 
 ### Resolution for error 1 and error 2

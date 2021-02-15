@@ -27,15 +27,15 @@ VMM servers should include all exclusions that are detailed in the following Mic
 
 [3119208](https://support.microsoft.com/help/3119208) Recommended antivirus exclusions for System Center Virtual Machine Manager and managed hosts
 
-Additionally, exclude items from the following location:
+Also exclude items from the following location:
 
 `%ProgramData%\ASRLogs`
 
-#### Clustered Services (VMM and Azure Recovery Services Agent installed on Hyper-V clusters) 
+#### Clustered Services (VMM and Azure Recovery Services Agent installed on Hyper-V clusters)
 
-For information about recommended exclusions for Cluster Services, see the following KB article:
+For information about recommended exclusions for Cluster Services, see the following article:
 
-[250355](https://support.microsoft.com/help/250355) Antivirus software that is not cluster-aware may cause problems with Cluster Services
+[Antivirus software that isn't cluster-aware may cause problems with Cluster Services](/troubleshoot/windows-server/high-availability/not-cluster-aware-antivirus-software-cause-issue)
 
 #### Azure Site Recovery Hyper-V to Azure deployment: Antivirus exclusion guidance
 
@@ -56,16 +56,16 @@ Additionally, exclude all items from the following locations:
 
 Exclude the following directories:
 
-- The installation path of the Scout agent; by default, it is `C:\Program Files (x86)\InMage Systems`.
-- The Application cache directory; by default, it goes under the installation path. If configured separately, check here. By default, the path is `C:\Program Files (x86)\InMage Systems\hostconfigwxcommon.exe`. Check the Application cache on the **Agent** tab.
+- The installation path of the Scout agent, which is `C:\Program Files (x86)\InMage Systems` by default.
+- The Application cache directory. By default, it goes under the installation path. If configured separately, check here. The default path is `C:\Program Files (x86)\InMage Systems\hostconfigwxcommon.exe`. Check the Application cache on the **Agent** tab.
 - In case of MSCS cluster volumes, exclude the InMageClusterLog folder under every cluster volume.
 
-#### Master-target (MT) servers 
+#### Master-target (MT) servers
 
 Exclude the following directories:
 
-- The installation path of Scout MT; by default, it is `C:\Program Files (x86)\InMage Systems`.
-- The target cache directory; by default, it goes under the installation path. If configured separately, check here. By default, the path is `C:\Program Files (x86)\InMage Systems\hostconfigwxcommon.exe`. Check the Application cache on the **Agent** tab.
+- The installation path of Scout MT, which is `C:\Program Files (x86)\InMage Systems` by default.
+- The target cache directory. By default, it goes under the installation path. If configured separately, check here. The default path is `C:\Program Files (x86)\InMage Systems\hostconfigwxcommon.exe`. Check the Application cache on the **Agent** tab.
 - All Retention log volumes.
 - The `C:\SRV` path and all subfolders.
 
@@ -73,10 +73,10 @@ Exclude the following directories:
 
 #### Source servers (Configuration Server, Process Server, Master Target) 
 
-Exclude the installation path of the Azure Site Recovery agent; by default, it is `C:\Program Files(x86)\Azure Site Recovery`.
+Exclude the installation path of the Azure Site Recovery agent, which is `C:\Program Files(x86)\Azure Site Recovery` by default.
 
-Exclude the installation path of the Recovery Services agent; by default, it is `C:\Program Files\Microsoft Azure Recovery Services Agent`.
+Exclude the installation path of the Recovery Services agent, which is `C:\Program Files\Microsoft Azure Recovery Services Agent` by default.
 
 #### Protected VMs  
 
-Guest virtual machines (VMs) that are protected by Azure Recovery Services should exclude the installation folder where the guest agent is installed. By default, it is `C:\Program Files (x86)\Azure Site Recovery`.
+Guest virtual machines (VMs) that are protected by Azure Recovery Services should exclude the installation folder where the guest agent is installed. The default path is `C:\Program Files (x86)\Azure Site Recovery`.

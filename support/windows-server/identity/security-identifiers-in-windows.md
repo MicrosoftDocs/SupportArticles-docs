@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User, computer, group, and object management
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Well-known security identifiers in Windows operating systems
 
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 243330
 
 A security identifier (SID) is a unique value of variable length that is used to identify a security principal (such as a security group) in Windows operating systems. SIDs that identify generic users or generic groups is well known. Their values remain constant across all operating systems.
 
-This information is useful for troubleshooting issues that involve security. It is also useful for troubleshooting display issues in the Windows access control list (ACL) editor. Windows tracks a security principal by its SID. To display the security principal in the ACL editor, Windows resolves the SID to its associated security principal name.
+This information is useful for troubleshooting issues that involve security. It's also useful for troubleshooting display issues in the Windows access control list (ACL) editor. Windows tracks a security principal by its SID. To display the security principal in the ACL editor, Windows resolves the SID to its associated security principal name.
 
 > [!NOTE]
 > This article describes circumstances under which the ACL editor displays a security principal SID instead of the security principal name.
@@ -66,11 +66,11 @@ All versions of Windows use the following well-known SIDs.
 |S-1-5-18|Local System|A service account that is used by the operating system.|
 |S-1-5-19|NT Authority|Local Service|
 |S-1-5-20|NT Authority|Network Service|
-|S-1-5-21domain-500|Administrator|A user account for the system administrator. By default, it is the only user account that is given full control over the system.|
-|S-1-5-21domain-501|Guest|A user account for people who do not have individual accounts. This user account does not require a password. By default, the Guest account is disabled.|
+|S-1-5-21domain-500|Administrator|A user account for the system administrator. By default, it's the only user account that is given full control over the system.|
+|S-1-5-21domain-501|Guest|A user account for people who don't have individual accounts. This user account doesn't require a password. By default, the Guest account is disabled.|
 |S-1-5-21domain-502|KRBTGT|A service account that is used by the Key Distribution Center (KDC) service.|
 |S-1-5-21domain-512|Domain Admins|A global group whose members are authorized to administer the domain. By default, the Domain Admins group is a member of the Administrators group on all computers that have joined a domain, including the domain controllers. Domain Admins is the default owner of any object that is created by any member of the group.|
-|S-1-5-21domain-513|Domain Users|A global group that, by default, includes all user accounts in a domain. When you create a user account in a domain, it is added to this group by default.|
+|S-1-5-21domain-513|Domain Users|A global group that, by default, includes all user accounts in a domain. When you create a user account in a domain, it's added to this group by default.|
 |S-1-5-21domain-514|Domain Guests|A global group that, by default, has only one member, the domain's built-in Guest account.|
 |S-1-5-21domain-515|Domain Computers|A global group that includes all clients and servers that have joined the domain.|
 |S-1-5-21domain-516|Domain Controllers|A global group that includes all domain controllers in the domain. New domain controllers are added to this group by default.|
@@ -85,14 +85,14 @@ All versions of Windows use the following well-known SIDs.
 |S-1-5-32-545|Users|A built-in group. After the initial installation of the operating system, the only member is the Authenticated Users group. When a computer joins a domain, the Domain Users group is added to the Users group on the computer.|
 |S-1-5-32-546|Guests|A built-in group. By default, the only member is the Guest account. The Guests group allows occasional or one-time users to log on with limited privileges to a computer's built-in Guest account.|
 |S-1-5-32-547|Power Users|A built-in group. By default, the group has no members. Power users can create local users and groups; modify and delete accounts that they have created; and remove users from the Power Users, Users, and Guests groups. Power users also can install programs; create, manage, and delete local printers; and create and delete file shares.|
-|S-1-5-32-548|Account Operators|A built-in group that exists only on domain controllers. By default, the group has no members. By default, Account Operators have permission to create, modify, and delete accounts for users, groups, and computers in all containers and organizational units of Active Directory except the `Builtin` container and the Domain Controllers OU. Account Operators do not have permission to modify the Administrators and Domain Admins groups, nor do they have permission to modify the accounts for members of those groups.|
+|S-1-5-32-548|Account Operators|A built-in group that exists only on domain controllers. By default, the group has no members. By default, Account Operators have permission to create, modify, and delete accounts for users, groups, and computers in all containers and organizational units of Active Directory except the `Builtin` container and the Domain Controllers OU. Account Operators don't have permission to modify the Administrators and Domain Admins groups, nor do they have permission to modify the accounts for members of those groups.|
 |S-1-5-32-549|Server Operators|A built-in group that exists only on domain controllers. By default, the group has no members. Server Operators can log on to a server interactively; create and delete network shares; start and stop services; back up and restore files; format the hard disk of the computer; and shut down the computer.|
 |S-1-5-32-550|Print Operators|A built-in group that exists only on domain controllers. By default, the only member is the Domain Users group. Print Operators can manage printers and document queues.|
 |S-1-5-32-551|Backup Operators|A built-in group. By default, the group has no members. Backup Operators can back up and restore all files on a computer, regardless of the permissions that protect those files. Backup Operators also can log on to the computer and shut it down.|
-|S-1-5-32-552|Replicators|A built-in group that is used by the File Replication service on domain controllers. By default, the group has no members. Do not add users to this group.|
+|S-1-5-32-552|Replicators|A built-in group that is used by the File Replication service on domain controllers. By default, the group has no members. Don't add users to this group.|
 |S-1-5-32-582|Storage Replica Administrators|A built-in group that grants complete and unrestricted access to all features of Storage Replica.|
 |S-1-5-64-10|NTLM Authentication|An SID that is used when the NTLM authentication package authenticated the client.|
-|S-1-5-64-14|SChannel Authentication|An SID that is used when the SChannel authentication package authenticated the client.|
+|S-1-5-64-14|`SChannel` Authentication|An SID that is used when the `SChannel` authentication package authenticated the client.|
 |S-1-5-64-21|Digest Authentication|An SID that is used when the Digest authentication package authenticated the client.|
 |S-1-5-80|NT Service|An NT Service account prefix.|
 ||||
@@ -102,15 +102,15 @@ All versions of Windows use the following well-known SIDs.
 When you add a domain controller that runs Windows Server 2003 or a later version to a domain, Active Directory adds the security principals in the following table.
 
 > [!NOTE]
-> The Windows ACL editor may not display these security principles by name. Active Directory does not resolve these SIDs to their corresponding names until the [PDC Emulator FSMO Role](/openspecs/windows_protocols/ms-adts/f96ff8ec-c660-4d6c-924f-c0dbbcac1527) transfers to or is seized by a domain controller that runs Windows Server 2003 or later.
+> The Windows ACL editor may not display these security principles by name. Active Directory doesn't resolve these SIDs to their corresponding names until the [PDC Emulator FSMO Role](/openspecs/windows_protocols/ms-adts/f96ff8ec-c660-4d6c-924f-c0dbbcac1527) transfers to or is seized by a domain controller that runs Windows Server 2003 or later.
 
 |SID|Name|Description|
 |---|---|---|
-|S-1-3-2|Creator Owner Server|This SID is not used in Windows 2000.|
-|S-1-3-3|Creator Group Server|This SID is not used in Windows 2000.|
-|S-1-5-8|Proxy|This SID is not used in Windows 2000.|
+|S-1-3-2|Creator Owner Server|This SID isn't used in Windows 2000.|
+|S-1-3-3|Creator Group Server|This SID isn't used in Windows 2000.|
+|S-1-5-8|Proxy|This SID isn't used in Windows 2000.|
 |S-1-5-15|This Organization|A group that includes all users from the same organization. Only included with AD accounts and only added by a Windows Server 2003 or later domain controller.|
-|S-1-5-32-554|Builtin\Pre-Windows 2000 Compatible Access|An alias added by Windows 2000. A backward compatibility group which allows read access on all users and groups in the domain.|
+|S-1-5-32-554|Builtin\Pre-Windows 2000 Compatible Access|An alias added by Windows 2000. A backward compatibility group that allows read access on all users and groups in the domain.|
 |S-1-5-32-555|Builtin\Remote Desktop Users|An alias. Members in this group are granted the right to log on remotely.|
 |S-1-5-32-556|Builtin\Network Configuration Operators|An alias. Members in this group can have some administrative privileges to manage configuration of networking features.|
 |S-1-5-32-557|Builtin\Incoming Forest Trust Builders|An alias. Members of this group can create incoming, one-way trusts to this forest.|
@@ -118,7 +118,7 @@ When you add a domain controller that runs Windows Server 2003 or a later versio
 |S-1-5-32-559|Builtin\Performance Log Users|An alias. Members of this group have remote access to schedule logging of performance counters on this computer.|
 |S-1-5-32-560|Builtin\Windows Authorization Access Group|An alias. Members of this group have access to the computed tokenGroupsGlobalAndUniversal attribute on User objects.|
 |S-1-5-32-561|Builtin\Terminal Server License Servers|An alias. A group for Terminal Server License Servers. When Windows Server 2003 Service Pack 1 is installed, a new local group is created.|
-|S-1-5-32-562|Builtin\Distributed COM Users|An alias. A group for COM to provide computerwide access controls that govern access to all call, activation, or launch requests on the computer.|
+|S-1-5-32-562|Builtin\Distributed COM Users|An alias. A group for COM to provide computer-wide access controls that govern access to all call, activation, or launch requests on the computer.|
 ||||
 
 ## SIDs added by Windows Server 2008 and later versions
@@ -126,7 +126,7 @@ When you add a domain controller that runs Windows Server 2003 or a later versio
 When you add a domain controller that runs Windows Server 2008 or a later version to a domain, Active Directory adds the security principals in the following table.
 
 > [!NOTE]
-> The Windows ACL editor may not display these security principles by name. Active Directory does not resolve these SIDs to their corresponding names until the PDC emulator FSMO role transfers to or is seized by a domain controller that runs Windows Server 2008 or later.
+> The Windows ACL editor may not display these security principles by name. Active Directory doesn't resolve these SIDs to their corresponding names until the PDC emulator FSMO role transfers to or is seized by a domain controller that runs Windows Server 2008 or later.
 
 |SID|Name|Description|
 |---|---|---|
@@ -134,7 +134,7 @@ When you add a domain controller that runs Windows Server 2008 or a later versio
 |S-1-5-21 *domain* -498|Enterprise Read-only Domain Controllers|A universal group. Members of this group are read-only domain controllers in the enterprise.|
 |S-1-5-21 *domain* -521|Read-only Domain Controllers|A global group. Members of this group are read-only domain controllers in the domain.|
 |S-1-5-21 *domain* -571|Allowed RODC Password Replication Group|A domain local group. Members in this group can have their passwords replicated to all read-only domain controllers in the domain.|
-|S-1-5-21 *domain* -572|Denied RODC Password Replication Group|A domain local group. Members in this group cannot have their passwords replicated to any read-only domain controllers in the domain.|
+|S-1-5-21 *domain* -572|Denied RODC Password Replication Group|A domain local group. Members in this group can't have their passwords replicated to any read-only domain controllers in the domain.|
 |S-1-5-32-569|Builtin\Cryptographic Operators|A built-in local group. Members are authorized to perform cryptographic operations.|
 |S-1-5-32-573|Builtin\Event Log Readers|A built-in local group. Members of this group can read event logs from local computer.|
 |S-1-5-32-574|Builtin\Certificate Service DCOM Access|A built-in local group. Members of this group are allowed to connect to Certification Authorities in the enterprise.|
@@ -157,7 +157,7 @@ When you add a domain controller that runs Windows Server 2008 or a later versio
 When you add a domain controller that runs Windows Server 2012 or a later version to a domain, Active Directory adds the security principals in the following table.
 
 > [!NOTE]
-> The Windows ACL editor may not display these security principles by name. Active Directory does not resolve these SIDs to their corresponding names until the PDC emulator FSMO role transfers to or is seized by a domain controller that runs Windows Server 2012 or later.
+> The Windows ACL editor may not display these security principles by name. Active Directory doesn't resolve these SIDs to their corresponding names until the PDC emulator FSMO role transfers to or is seized by a domain controller that runs Windows Server 2012 or later.
 
 |SID|Name|Description|
 |---|---|---|
@@ -172,7 +172,7 @@ When you add a domain controller that runs Windows Server 2012 or a later versio
 
 ## Capability SIDs
 
-Windows 8 introduced [capability security identifiers (SIDs)](/windows/security/identity-protection/access-control/security-identifiers#capability-sids). A capability SID identifies a capability in a unique and immutable manner. A capability represents an unforgettable token of authority that grants access to resources (such as documents, a camera, locations, and so forth) to Universal Windows Applications. An app that has a capability is granted access to the associated resource. An app that does not have a capability is denied access to the resource.
+Windows 8 introduced [capability security identifiers (SIDs)](/windows/security/identity-protection/access-control/security-identifiers#capability-sids). A capability SID identifies a capability in a unique and immutable manner. A capability represents an unforgettable token of authority that grants access to resources (such as documents, a camera, locations, and so forth) to Universal Windows Applications. An app that has a capability is granted access to the associated resource. An app that doesn't have a capability is denied access to the resource.
 
 All capability SIDs that the operating system is aware of are stored in the Windows registry in the following subkey:
 
@@ -181,7 +181,7 @@ All capability SIDs that the operating system is aware of are stored in the Wind
 This subkey also contains any capability SID that is added by first-party or third-party applications. All Capability SIDs begin at `S-1-15-3`.
 
 > [!IMPORTANT]
-> Active Directory does not resolve capability SIDs to names. This behavior is by design.
+> Active Directory doesn't resolve capability SIDs to names. This behavior is by design.
 
 ## References
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Blue Screen/Bugcheck
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # When you toggle Terminal Services to Application Server mode, some programs may stop working
 
@@ -20,8 +20,8 @@ This article describes the issue that some programs may stop working, when you t
 _Original product version:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 252330
 
->[!note]
-This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. For more information, see the [Microsoft Support Lifecycle Policy](https://docs.microsoft.com/lifecycle/).
+> [!note]
+> This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. For more information, see the [Microsoft Support Lifecycle Policy](https://docs.microsoft.com/lifecycle/).
 
 ## Summary
 

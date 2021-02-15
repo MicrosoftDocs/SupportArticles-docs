@@ -11,9 +11,9 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Connecting to a session or desktop
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
-# Error Message: An Application Error Has Occurred and an Application Error Log Is Being Generated
+# Error message: an application error has occurred and an application error log is being generated
 
 This article provides help to solve an issue that occurs when you log on to a computer running Terminal Server Edition.
 
@@ -52,12 +52,12 @@ To resolve this problem, obtain the latest service pack for Windows NT Server 4.
 
 To work around this issue, delete the invalid registry value:
 
-1. Start Registry Editor (Regedt32.exe).
+1. Start **Registry Editor** (Regedt32.exe).
 2. Locate the following registry key: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Terminal Server\Install\IniFile Times`
 3. Locate the invalid value (this is usually a value with no name).
 4. Click the invalid value.
-5. On the Edit menu, click Delete, and then click Yes.
-6. Quit Registry Editor.
+5. On the **Edit** menu, click **Delete**, and then click **Yes**.
+6. Quit **Registry Editor**.
 
 ## Status
 

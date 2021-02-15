@@ -11,13 +11,13 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, rnitsch
 ms.prod-support-area-path: Folder redirection and Offline Files and Folders (CSC)
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Current hotfixes for Windows 7 SP1 enterprise clients that have folder redirection enabled
 
 This article lists the hotfixes that are currently available for Windows 7 clients that are used in an Active Directory environment that makes use of data centralization, including folder redirection, offline files, and file server access.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Original product version:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2820927
 
 ## Summary
@@ -55,8 +55,6 @@ DFS Namespace, Offline Files, Shell, Folder Redirection, and Group Policy Prefer
 
 |Date added|Knowledge Base Article|Title|Why we recommend this hotfix|Hotfix type and availability|
 |---|---|---|---|---|
-| 07/11/2014| [3015999](https://support.microsoft.com/help/3015999)|Stop Error 0x27 occurs when you try to move a folder on a network share from one place to another|This hotfix contains the most current version of csc.sys (6.1.7601.22863).|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
-| 07/11/2014| [3015999](https://support.microsoft.com/help/3015999)|Stop Error 0x27 occurs when you try to move a folder on a network share from one place to another|This hotfix contains the most current version of cscsvc.dll  (6.1.7601.22863).|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
 | 23/01/2014| [2831206](https://support.microsoft.com/help/2831206)|DFS network path goes offline in Windows 7 or Windows Server 2008 R2 when Transparent Caching Group Policy setting is enabled|This hotfix contains the most current version of cscdll.dll and cscapi.dll.|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
 |23/05/2014| [2967567](https://support.microsoft.com/help/2967567)|Cannot access DFS root when the DFS path is offline and you log on to a Windows-based computer for the first time|This hotfix contains the most current version of cscui.dll.|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
 ||||||

@@ -1,0 +1,96 @@
+### YamlMime:Landing
+
+title: Windows client troubleshooting # < 60 chars
+summary: This library provides solutions enabling IT Pros to troubleshoot and support devices running Windows client operating systems in a server environment. To bring you the most accurate content, this library is managed by a team that works directly with the Windows product group and support professionals.
+metadata:
+  title: Windows client troubleshooting document
+  description: Documentation for troubleshooting common issues with Windows clients. # Required; article description that is displayed in search results. < 160 chars.
+  ms.prod: windows-client
+  ms.topic: landing-page # Required
+  author: Deland-Han  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: delhan #Required; microsoft alias of author; optional team alias.
+  ms.date: 01/07/2021
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Deployment
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Deployment 
+            url: ./deployment/deployment-overview.md
+          - text: Windows 7 End of Support (EoS) FAQ
+            url: ./windows-7-eos-faq/windows-7-end-support-faq.md
+  - title: Identity and Access
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Active Directory
+            url: ./identity/active-directory-overview.md
+          - text: Group Policy
+            url: ./group-policy/group-policy-overview.md
+          - text: UserProfiles and Logon
+            url: ./user-profiles-and-logon/userprofiles-and-logon-overview.md
+  - title: Networking
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Networking
+            url: ./networking/networking-overview.md
+  - title: Storage and High Availability
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Backup and Storage
+            url: ./backup-and-storage/backup-and-storage-overview.md
+          - text: High Availability
+            url: ./high-availability/high-availability-overview.md
+          - text: Virtualization
+            url: ./virtualization/virtualization-overview.md
+  - title: User Experience
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Application Virtualization (App-V)
+            url: ./app-v/app-v-overview.md
+          - text: Application Management
+            url: ./application-management/application-management-overview.md
+          - text: Printing
+            url: ./printing/printing-overview.md
+          - text: Remote Desktop Services
+            url: ./remote/remote-desktop-services-overview.md
+          - text: System Management Components
+            url: ./system-management-components/system-management-components-overview.md
+          - text: UE-V
+            url: ./ue-v/ue-v-overview.md
+  - title: Windows Performance
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Performance
+            url: ./performance/performance-overview.md
+          - text: Shell Experience
+            url: ./shell-experience/shell-experience-overview.md
+  - title: Windows Security
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Windows Security
+            url: ./windows-security/windows-security-overview.md
+  - title: Management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Admin Development
+            url: ./admin-development/admin-development-overview.md
+          - text: Windows Troubleshooters
+            url: ./windows-troubleshooters/windows-troubleshooters-overview.md
+  - title: Windows Troubleshooters
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Active and retired troubleshooters for Windows 10
+            url: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md

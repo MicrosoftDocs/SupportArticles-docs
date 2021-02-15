@@ -2,11 +2,11 @@
 title: Data collection strategies of common IIS Web Server-related issues
 description: This article describes the data collection strategies to troubleshoot common IIS Web Server-related issues in Windows Server.
 ms.date: 10/28/2020
-ms.prod-support-area-path: Health, diagnostic, and performance features
+ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.reviewer: paulboc
 ---
 # Data collection strategies to troubleshoot common IIS Web Server-related issues in Windows Server
-
+The IIS web-server allows administrators, site owners and web-application owners a rich set of possibilities to generate telemetry and metrics on how hosted web applications are performing: from the IIS request logs, to failed request log tracing, event viewer entries and many more. These pieces of telemetry can be scattered in various places on the Windows Server that is running IIS and collecting all of them when troubleshooting problems may prove time consuming, especially if the number of hosted applications is large. The IIS support team has constructed a tool to help with this specific task: LogCather is a tool that allows the collection of IIS telemetry and configuration related data to one centralized location, allowing administrators to target the entire server or only a subset of the hosted applications, and to define a time period for which the data will be collected.
 ## Symptoms
 
 Connection issues occur when you run ASP.NET, ASP.NET Core, or other kinds of websites and web applications on an IIS web server that's running on Windows Server.

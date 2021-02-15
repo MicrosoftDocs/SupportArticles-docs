@@ -11,11 +11,11 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Legacy authentication (NTLM)
-ms.technology: WindowsSecurity
+ms.technology: windows-client-security
 ---
 # Enabling debug logging for the Netlogon service
 
-This article describes the steps to enable logging of the Netlogon service in Windows to monitor or troubleshoot authentication, DC locator, account lockout, or other domain communication-related issues.
+This article describes the steps to enable logging of the `Netlogon` service in Windows to monitor or troubleshoot authentication, DC locator, account lockout, or other domain communication-related issues.
 
 _Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 109626
@@ -34,7 +34,7 @@ The version of Netlogon.dll that has tracing included is installed by default on
 > [!NOTE]
 > These steps also apply to Windows 10.
 
-To enable Netlogon logging:
+To enable `Netlogon` logging:
 
 1. Open a Command Prompt window (administrative Command Prompt window for Windows Server 2012 R2 and later versions).
 2. Type the following command, and then press Enter:  
@@ -43,7 +43,7 @@ To enable Netlogon logging:
     Nltest /DBFlag:2080FFFF
     ```
 
-3. It's typically not necessary to stop and restart the Netlogon service for Windows Server 2012 R2 or later operating systems to enable Netlogon logging. Netlogon-related activity is logged to %windir%\debug\netlogon.log. Verify new writes to this log to determine whether a restart of the Netlogon service is necessary. If you have to restart the service, open a Command Prompt window (administrative Command Prompt window for Windows 10, and Windows Server 2012 R2 and later versions), and then run the following commands:
+3. It's typically unnecessary to stop and restart the `Netlogon` service for Windows Server 2012 R2 or later to enable `Netlogon` logging. Netlogon-related activity is logged to %windir%\debug\netlogon.log. Verify new writes to this log to determine whether a restart of the `Netlogon` service is necessary. If you have to restart the service, open a Command Prompt window (administrative Command Prompt window for Windows 10, and Windows Server 2012 R2 and later versions). Then run the following commands:
 
     ```console
     net stop netlogon
@@ -55,7 +55,7 @@ To enable Netlogon logging:
     > - In some circumstances, you may have to perform an authentication against the system in order to obtain a new entry in the log to verify that logging is enabled.
     > - Using the computer name may cause no new test authentication entry to be logged.
 
-To disable Netlogon logging, follow these steps:
+To disable `Netlogon` logging, follow these steps:
 
 1. Open a Command Prompt window (administrative Command Prompt window for Windows Server 2012 R2 and higher).
 2. Type the following command, and then press Enter:  
@@ -64,7 +64,7 @@ To disable Netlogon logging, follow these steps:
      Nltest /DBFlag:0x0
     ```
 
-3. It's typically not necessary to stop and restart the Netlogon service for Windows Server 2012 R2 or later versions of the operating system to disable Netlogon logging. Netlogon-related activity is logged to %windir%\debug\netlogon.log. Verify that no new information is being written to this log to determine whether a restart of the Netlogon service is necessary. If you have to restart the service, then open a Command Prompt window (administrative Command Prompt window for Windows 10, and Windows Server 2012 R2 and later versions), and then run the following commands:  
+3. It's typically unnecessary to stop and restart the `Netlogon` service for Windows Server 2012 R2 or later versions to disable `Netlogon` logging. Netlogon-related activity is logged to %windir%\debug\netlogon.log. Verify that no new information is being written to this log to determine whether a restart of the `Netlogon` service is necessary. If you have to restart the service, open a Command Prompt window (administrative Command Prompt window for Windows 10, and Windows Server 2012 R2 and later versions). Then run the following commands:  
 
     ```console
     net stop netlogon
@@ -74,14 +74,14 @@ To disable Netlogon logging, follow these steps:
 #### Alternative methods to enable Netlogon logging
 
 - In all versions of Windows, you can use the registry method that's provided in the [Enable/Disable logging by using registry method](#enabledisable-logging-by-using-registry-method) section.
-- On computers that are running Windows Server 2012 R2 and later versions of the operating system, you can also use the following policy setting to enable verbose Netlogon logging (value is set in bytes):  
+- On computers that are running Windows Server 2012 R2 and later versions of the operating system, you can also use the following policy setting to enable verbose `Netlogon` logging (value is set in bytes):  
 
     \Computer Configuration\Administrative Templates\System\Net Logon\Specify log file debug output level
 
 > [!NOTE]
 >
-> - A value of decimal 545325055 is equivalent to 0x2080FFFF (which enables verbose Netlogon logging). This Group Policy setting is specified in bytes.
-> - The Group Policy method can be used to enable Netlogon logging on a larger number of systems more efficiently. We don't recommend that you enable Netlogon logging in policies that apply to all systems (such as the Default Domain Policy). Instead, consider narrowing the scope to systems that may be causing problems by doing either of the following:
+> - A value of decimal 545325055 is equivalent to 0x2080FFFF (which enables verbose `Netlogon` logging). This Group Policy setting is specified in bytes.
+> - The Group Policy method can be used to enable `Netlogon` logging on a larger number of systems more efficiently. We don't recommend that you enable `Netlogon` logging in policies that apply to all systems, such as the Default Domain Policy. Instead, consider narrowing the scope to systems that may be causing problems by using one of the following methods:
 >
 >   - Create a new policy by using this Group Policy setting, and then provide the Read and Apply Group Policy rights to a group that contains only the required computer accounts.
 >   - Move computer objects into a different OU, and then apply the policy settings at that OU level.
@@ -93,7 +93,7 @@ To enable logging, you may have to obtain a checked build of Netlogon.dll.
 1. Start Registry Editor.
 2. If it exists, delete the Reg_SZ value of the following registry entry, create a REG_DWORD value with the same name, and then add the 2080FFFF hexadecimal value:  
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters\DBFlag`
-3. It's typically not necessary to stop and restart the Netlogon service for Windows Server 2012 R2 and later versions of the operating system to enable Netlogon logging. Netlogon-related activity is logged to %windir%\debug\netlogon.log. Verify the new writes to this log to determine whether a restart of the Netlogon service is necessary. If you have to restart the service, open a Command Prompt window (administrative Command Prompt window for Windows Server 2012 R2/Windows 10 and above), and then run the following commands:  
+3. It's typically unnecessary to stop and restart the `Netlogon` service for Windows Server 2012 R2 and later versions to enable `Netlogon` logging. Netlogon-related activity is logged to %windir%\debug\netlogon.log. Verify the new writes to this log to determine whether a restart of the `Netlogon` service is necessary. If you have to restart the service, open a Command Prompt window (administrative Command Prompt window for Windows Server 2012 R2/Windows 10 and above). Then run the following commands:  
 
     ```console
     net stop netlogon
@@ -105,20 +105,20 @@ To enable logging, you may have to obtain a checked build of Netlogon.dll.
 > - In some circumstances, you may have to do an authentication against the system to obtain a new entry in the log to verify that logging is enabled.
 > - Using the computer name may cause no new test authentication entry to be logged.
 
-To disable Netlogon logging, follow these steps:
+To disable `Netlogon` logging, follow these steps:
 
 1. In Registry Editor, change the data value to 0x0 in the following registry key:
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters\DBFlag`
 2. Exit Registry Editor.
-3. It's typically not necessary to stop and restart the Netlogon service for Windows Server 2012 R2, Windows 10, or later versions of the operating system to disable Netlogon logging. Netlogon-related activity is logged to %windir%\debug\netlogon.log. Verify that no new information is being written to this log to determine whether a restart of the Netlogon service is necessary. If you have to restart the service, open a Command Prompt window (administrative Command Prompt window for Windows Server 2012 R2/Windows 10 and later versions of the operating system), and then run the following commands:  
+3. It's typically unnecessary to stop and restart the `Netlogon` service for Windows Server 2012 R2, Windows 10, or later versions to disable `Netlogon` logging. Netlogon-related activity is logged to %windir%\debug\netlogon.log. Verify that no new information is being written to this log to determine whether a restart of the `Netlogon` service is necessary. If you have to restart the service, open a Command Prompt window (administrative Command Prompt window for Windows Server 2012 R2/Windows 10 and later versions of the operating system). Then run the following commands:  
 
     ```console
     net stop netlogon
     net start netlogon
     ```
 
-Setting the maximum log file size for Netlogon logs:
+Set the maximum log file size for `Netlogon` logs:
 
 - The **MaximumLogFileSize** registry entry can be used to specify the maximum size of the Netlogon.log file. By default, this registry entry doesn't exist, and the default maximum size of the Netlogon.log file is 20 MB. When the file reaches 20 MB, it's renamed to Netlogon.bak, and a new Netlogon.log file is created. This registry entry has the following parameters:
 
@@ -127,7 +127,7 @@ Setting the maximum log file size for Netlogon logs:
   - Value Type: REG_DWORD
   - Value Data: \<maximum log file size in bytes>
 
-- Remember that the total disk space that's used by Netlogon logging is the size that's specified in the maximum log file size times two (2). It's required to accommodate space for the Netlogon.log and Netlogon.bak file. For example, a setting of 50 MB can require 100 MB of disk space. Which provides 50 MB for Netlogon.log and 50 MB for Netlogon.bak.
+- Remember that the total disk space that's used by `Netlogon` logging is the size that's specified in the maximum log file size times two (2). It's required to accommodate space for the Netlogon.log and Netlogon.bak file. For example, a setting of 50 MB can require 100 MB of disk space, which provides 50 MB for Netlogon.log and 50 MB for Netlogon.bak.
 - As mentioned earlier, on Windows Server 2012 R2 and later versions of the operating system, you can use the following policy setting to configure the log file size (value is set in bytes):  
 
    \Computer Configuration\Administrative Templates\System\Net Logon\Maximum Log File Size

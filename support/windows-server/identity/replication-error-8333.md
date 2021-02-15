@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 8333: Directory Object Not Found
 
@@ -37,10 +37,10 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
 
     | Event Source| Event ID| Event String |
     |---|---|---|
-    | NTDS Replication| 2108| This event contains REPAIR PROCEDURES for the 1084 event that has previously been logged. This message indicates a specific issue with the consistency of the Active Directory database on this replication destination. A database error occurred while applying replicated changes to the following object. The database had unexpected contents, preventing the change from being made. Object: OU=TestOU,DC=contoso,DC=com Object GUID: 1284b336-6e2a-4b80-86ce-d48f558e9aa2 Source domain controller: A52b57e3-92b9-4264-822b-72963eaf1030._msdcs.contoso.com Additional Data Primary Error value: 8333 Directory object not found. Secondary Error value: -1601 JET_errRecordNotFound, The key was not found |
+    | NTDS Replication| 2108| This event contains REPAIR PROCEDURES for the 1084 event that has previously been logged. This message indicates a specific issue with the consistency of the Active Directory database on this replication destination. A database error occurred while applying replicated changes to the following object. The database had unexpected contents, preventing the change from being made. Object: OU=TestOU,DC=contoso,DC=com Object GUID: *\<GUID>* Source domain controller: A52b57e3-92b9-4264-822b-72963eaf1030._msdcs.contoso.com Additional Data Primary Error value: 8333 Directory object not found. Secondary Error value: -1601 JET_errRecordNotFound, The key was not found |
     | <br/>NTDS General| 2031| The DS Service Configuration object is not found. It might have been accidentally deleted. The Active Directory will be able to operate normally, but you will not be able to set certain service parameters, such as LDAP limits, default query policies, and SPN mappings. DS Service Configuration object: CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=contoso,DC=com Error: 8333 (Directory object not found.) User Action: Try to restore the DS Service Configuration object. |
 
-3. There may be output from "repadmin /replsum"  
+3. There may be output from `repadmin /replsum`  
 
     > DC-1-03 03h:14m:11s 1 / 52 1 (8333) Directory object not found.  
      DC-2-01 03h:13m:39s 1 / 26 3 (8333) Directory object not found.  
@@ -49,11 +49,11 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
 
 4. DCPromo may fail while promoting a new domain controller and you'll see the following errors in the DCPROMO log  
 
-     > 12/15 11:01:44 [INFO] Creating new domain users, groups, and computer objects  
-     12/15 11:01:44 [INFO] Error - Active Directory is missing critical information after installation and cannot continue. If this is a replica domain controller, rejoin this server to the domain. (8333)  
-     12/15 11:01:45 [INFO] NtdsInstall for `contoso.com` returned 8333  
-     12/15 11:01:45 [INFO] DsRolepInstallDs returned 8333  
-     12/15 11:01:45 [ERROR] Failed to install to Directory Service (8333)  
+     > *\<DateTime>* [INFO] Creating new domain users, groups, and computer objects  
+     *\<DateTime>* [INFO] Error - Active Directory is missing critical information after installation and cannot continue. If this is a replica domain controller, rejoin this server to the domain. (8333)  
+     *\<DateTime>* [INFO] NtdsInstall for `contoso.com` returned 8333  
+     *\<DateTime>* [INFO] DsRolepInstallDs returned 8333  
+     *\<DateTime>* [ERROR] Failed to install to Directory Service (8333)  
 
     > [!NOTE]
     > Error 8333 translates to ERROR_DS_OBJ_NOT_FOUND or "Directory object not found."
@@ -72,7 +72,7 @@ The error status 8333 "Directory Object Not Found" has multiple root causes incl
 
     | **Source**| **Event ID**| **Description** |
     |---|---|---|
-    |NTDS Replication| 2108|This event contains REPAIR PROCEDURES for the 1084 event that has previously been logged. This message indicates a specific issue with the consistency of the Active Directory Domain Services database on this replication destination. A database error occurred while applying replicated changes to the following object. The database had unexpected contents, preventing the change from being made.Object: CN=chduffey,OU=IT,OU=Corp,DC=contoso,DC=com<br/>Object GUID: 13557897-e45d-4af6-8f25-15b306d6e927<br/>Source domain controller: c4efaf4e-d652-4630-8623-afec5ebc8532._msdcs.contso.comAdditional Data<br/>Primary Error value: 8333 Directory Object Not Found.|
+    |NTDS Replication| 2108|This event contains REPAIR PROCEDURES for the 1084 event that has previously been logged. This message indicates a specific issue with the consistency of the Active Directory Domain Services database on this replication destination. A database error occurred while applying replicated changes to the following object. The database had unexpected contents, preventing the change from being made.Object: CN=chduffey,OU=IT,OU=Corp,DC=contoso,DC=com<br/>Object GUID: *\<GUID>*<br/>Source domain controller: c4efaf4e-d652-4630-8623-afec5ebc8532._msdcs.contso.comAdditional Data<br/>Primary Error value: 8333 Directory Object Not Found.|
     |NTDS General| 1168| Error -1073741790(c0000022) has occurred (Internal ID 3000b3a). Please contact Microsoft Product Support Services for assistance.|
     | Microsoft-Windows-<br/>ActiveDirectory_DomainService| 1084|Internal event: Active Directory could not update the following object with changes received from the following source domain controller. This is because an error occurred during the application of the changes to Active Directory on the domain controller.|
     | NTDS Replication| 1699|The local domain controller failed to retrieve the changes requested for the following directory partition. As a result, it was unable to send the change requests to the domain controller at the following network address. 8446 The replication operation failed to allocate memory|
@@ -113,7 +113,7 @@ Investigation of the 8333 "Directory Object Not Found" error message should begi
 
         | **Source**| **Event ID**| **Description** |
         |---|---|---|
-        |NTDS Replication| 2108|This event contains REPAIR PROCEDURES for the 1084 event that has previously been logged. This message indicates a specific issue with the consistency of the Active Directory Domain Services database on this replication destination. A database error occurred while applying replicated changes to the following object. The database had unexpected contents, preventing the change from being made.Object: CN=chduffey,OU=IT,OU=Corp,DC=contoso,DC=com<br/>Object GUID: 13557897-e45d-4af6-8f25-15b306d6e927<br/>Source domain controller: c4efaf4e-d652-4630-8623-afec5ebc8532._msdcs.contso.comAdditional Data<br/>Primary Error value: 8333 Directory Object Not Found.|
+        |NTDS Replication| 2108|This event contains REPAIR PROCEDURES for the 1084 event that has previously been logged. This message indicates a specific issue with the consistency of the Active Directory Domain Services database on this replication destination. A database error occurred while applying replicated changes to the following object. The database had unexpected contents, preventing the change from being made.Object: CN=chduffey,OU=IT,OU=Corp,DC=contoso,DC=com<br/>Object GUID: *\<GUID>*<br/>Source domain controller: c4efaf4e-d652-4630-8623-afec5ebc8532._msdcs.contso.comAdditional Data<br/>Primary Error value: 8333 Directory Object Not Found.|
         |NTDS General| 1168| Error -1073741790(c0000022) has occurred (Internal ID 3000b3a). Please contact Microsoft Product Support Services for assistance.|
         | Microsoft-Windows-<br/>ActiveDirectory_DomainService| 1084|Internal event: Active Directory could not update the following object with changes received from the following source domain controller. This is because an error occurred during the application of the changes to Active Directory on the domain controller.|
         | NTDS Replication| 1699|The local domain controller failed to retrieve the changes requested for the following directory partition. As a result, it was unable to send the change requests to the domain controller at the following network address. 8446 The replication operation failed to allocate memory|
@@ -191,7 +191,7 @@ There are multiple approaches to check for Lingering Objects including:
 
         The work being performed by repldiag may also be performed with the built-in directory services replication tool: Repadmin.exe.
 
-        For support professionals preferring to use repadmin.exe, the partial command will be Repadmin /removelingeringobjects. Repldiag.exe provides an advantage over Repadmin.exe in that it can be used to search all directory partitions, on all servers in the forest with a single command.
+        For support professionals preferring to use repadmin.exe, the partial command will be `Repadmin /removelingeringobjects`. Repldiag.exe provides an advantage over Repadmin.exe in that it can be used to search all directory partitions, on all servers in the forest with a single command.
 
         If Lingering objects are detected:
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Description of the standard terminology that is used to describe Microsoft software updates
 
@@ -42,7 +42,7 @@ A widely released fix for a product-specific, security-related vulnerability. Se
 
 ### Additional information
 
-Microsoft security updates are available for customers to download and are accompanied by two documents: a security bulletin and a Microsoft Knowledge Base article. For more information about the format of Microsoft Knowledge Base articles for Microsoft security updates, see [Description of the format of Microsoft Knowledge Base articles for Microsoft Security Updates](https://support.microsoft.com/help/824689).
+Microsoft security updates are available for customers to download and are accompanied by two documents: a security bulletin and a Microsoft Knowledge Base article.
 
 ## Service pack
 
@@ -58,22 +58,48 @@ A widely released fix for a specific problem. An update addresses a noncritical,
 
 ## Update rollup
 
-A tested, cumulative set of hotfixes, security updates, critical updates, and updates that are packaged together for easy deployment. A rollup generally targets a specific area, such as security, or a component of a product, such as Internet Information Services (IIS).
+A tested, cumulative set of hotfixes, security updates, critical updates, and updates that are packaged together for easy deployment. A rollup generally targets a specific area, such as:
+
+- Security
+- A component of a product, such as Internet Information Services (IIS).
 
 ## Security-only update
 
-An update that collects all the new security updates for a given month and for a given product, addressing security-related vulnerabilities and distributed through Windows Server Update Services (WSUS), System Center Configuration Manager and Microsoft Update Catalog. Security vulnerabilities are rated by their severity. The severity rating is indicated in the Microsoft security bulletin as critical, important, moderate, or low. This Security-only update would be displayed under the title Security Only Quality Update when you download or install the update and will be classified as an *Important* update.
+An update that collects all the new security updates for a given month and for a given product, addressing security-related vulnerabilities. It's distributed through Windows Server Update Services (WSUS), System Center Configuration Manager and Microsoft Update Catalog. Security vulnerabilities are rated by their severity. The severity rating is indicated in the Microsoft security bulletin as critical, important, moderate, or low. This Security-only update would be displayed under the title Security Only Quality Update when you download or install the update.  It will be classified as an *Important* update.
 
 ## Monthly Rollup
 
-A tested, cumulative set of updates. They include both security and reliability updates that are packaged together and distributed over Windows Update, WSUS, System Center Configuration Manager and Microsoft Update Catalog for easy deployment. The Monthly Rollup is product-specific, addresses both new security issues and nonsecurity issues in a single update and will proactively include updates that were released in the past. Security vulnerabilities are rated by their severity. The severity rating is indicated in the Microsoft security bulletin as critical, important, moderate, or low. This Monthly Rollup would be displayed under the title Security Monthly Quality Rollup when you download or install. This Monthly Rollup will be classified as an *Important* update on Windows Update and will automatically download and install if your Windows Update settings are configured to automatically download and install Important updates.
+A tested, cumulative set of updates. They include both security and reliability updates that are packaged together and distributed over the following channels for easy deployment:
+
+- Windows Update
+- WSUS
+- System Center Configuration Manager
+- Microsoft Update Catalog
+
+The Monthly Rollup is product-specific and addresses both new security issues and nonsecurity issues in a single update. It will proactively include updates that were released in the past. Security vulnerabilities are rated by their severity. The severity rating is indicated in the Microsoft security bulletin as critical, important, moderate, or low. This Monthly Rollup would be displayed under the title Security Monthly Quality Rollup when you download or install. This Monthly Rollup will be classified as an *Important* update on Windows Update. It will automatically download and install if your Windows Update settings are configured to automatically download and install Important updates.
 
 ## Preview of Monthly Rollup
 
-A tested, cumulative set of new updates that are packaged together and distributed over Windows Update, WSUS, System Center Configuration Manager and Microsoft Update Catalog ahead of the release of the next Monthly Rollup for customers to proactively download, test, and provide feedback. The Preview of Monthly Rollup is product-specific and addresses new non-security updates, and includes fixes from the latest Monthly Rollup. This Preview of Monthly Rollup would be displayed under the title Preview of Monthly Quality Rollup when you download or install and will be classified as an "Optional" update.
+A tested, cumulative set of new updates that are packaged together and distributed over:
+
+- Windows Update
+- WSUS
+- System Center Configuration Manager
+- Microsoft Update Catalog
+
+It's distributed ahead of the release of the next Monthly Rollup for customers to proactively download, test, and provide feedback.
+
+The Preview of Monthly Rollup is product-specific and addresses new non-security updates, and includes fixes from the latest Monthly Rollup. This Preview of Monthly Rollup would be displayed under the title Preview of Monthly Quality Rollup when you download or install. It will be classified as an "Optional" update.
 
 ## Servicing Stack Updates (SSU)
 
-The servicing stack is the code that installs other operating system updates. Additionally, it contains the component-based servicing stack (CBS), which is a key underlying component for several elements of Windows deployment, such as DISM, SFC, changing Windows features or roles, and repairing components. The CBS is a small component that typically does not have updates released every month.
+The servicing stack is the code that installs other operating system updates. Additionally, it contains the component-based servicing stack (CBS), which is a key underlying component for several elements of Windows deployment, such as:
+
+- DISM
+- SFC
+- Changing Windows features or roles
+- Repairing components
+
+The CBS is a small component that typically doesn't have updates released every month.
 
 For more information, see [Servicing stack updates](/windows/deployment/update/servicing-stack-updates).

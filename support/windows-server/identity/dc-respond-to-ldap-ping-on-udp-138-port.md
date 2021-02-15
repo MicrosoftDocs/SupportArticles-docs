@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: LDAP configuration and interoperability
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How Domain Controllers respond to LDAP Ping on UDP 138 port
 
@@ -41,10 +41,6 @@ To make Windows Server 2008 or later to reply to LDAP Ping, configure either of 
 1. Move to %windir%\system32\drivers\etc folder
 
 2. Add IP address and hostname of client to LMHOSTS file.
-
-See following links for details:
-
-[Domain Browsing with TCP/IP and LMHOSTS Files](https://support.microsoft.com/help/150800) 
 
 (B) Add WINS server
 

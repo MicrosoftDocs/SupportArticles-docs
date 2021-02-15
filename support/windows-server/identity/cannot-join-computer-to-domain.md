@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Domain join issues
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Unable to Join Windows Server 2008 R2 or Windows 7 Computer to Active Directory Domain
 
@@ -31,18 +31,18 @@ When trying to join the Windows Server 2008 R2 machine to the domain by specifyi
 
 In the `%windir%\debug\Netsetup.log` on the client you see the following sequence:
 
-> 10/30/2009 13:21:53:672 NetpValidateName: checking to see if 'CLIENT-NAME' is valid as type 1 name  
-> 10/30/2009 13:21:53:672 NetpCheckNetBiosNameNotInUse for 'CLIENT-NAME'[MACHINE] returned 0x0  
-> 10/30/2009 13:21:53:672 NetpValidateName: name 'CLIENT-NAME' is valid for type 1  
-> 10/30/2009 13:21:53:688  
+> *\<DateTime>* NetpValidateName: checking to see if 'CLIENT-NAME' is valid as type 1 name  
+> *\<DateTime>* NetpCheckNetBiosNameNotInUse for 'CLIENT-NAME'[MACHINE] returned 0x0  
+> *\<DateTime>* NetpValidateName: name 'CLIENT-NAME' is valid for type 1  
+> *\<DateTime>*  
 >
-> 10/30/2009 13:21:53:688 NetpValidateName: checking to see if 'CLIENT-NAME' is valid as type 5 name  
-> 10/30/2009 13:21:53:688 NetpValidateName: name 'CLIENT-NAME' is valid for type 5  
-> 10/30/2009 13:21:53:719  
+> *\<DateTime>* NetpValidateName: checking to see if 'CLIENT-NAME' is valid as type 5 name  
+> *\<DateTime>* NetpValidateName: name 'CLIENT-NAME' is valid for type 5  
+> *\<DateTime>*  
 >
-> 10/30/2009 13:21:53:719 **NetpValidateName: checking to see if `domain.com`** is valid as type 3 name  
-> 10/30/2009 13:22:01:847 **NetpCheckDomainNameIsValid for `domain.com` returned 0x54b, last error is 0x0**  
-> 10/30/2009 13:22:01:847 **NetpCheckDomainNameIsValid [ Exists ] for `domain.com` returned 0x54b**  
+> *\<DateTime>* **NetpValidateName: checking to see if `domain.com`** is valid as type 3 name  
+> *\<DateTime>* **NetpCheckDomainNameIsValid for `domain.com` returned 0x54b, last error is 0x0**  
+> *\<DateTime>* **NetpCheckDomainNameIsValid [ Exists ] for `domain.com` returned 0x54b**  
 
 When trying to join the Windows Server 2008 R2 computer to the domain by specifying the NetBIOS name in the domain join UI, you receive a different error:
 
@@ -50,34 +50,34 @@ When trying to join the Windows Server 2008 R2 computer to the domain by specify
 
 In the `%windir%\debug\Netsetup.log` on the client you see the following sequence:
 
-> 10/30/2009 13:23:32:998 -----------------------------------------------------------------  
-10/30/2009 13:23:32:998 NetpDoDomainJoin  
-10/30/2009 13:23:32:998 NetpMachineValidToJoin: 'CLIENT-NAME'  
-10/30/2009 13:23:32:998  OS Version: 6.1  
-10/30/2009 13:23:32:998  Build number: 7600 (7600.win7_rtm.090713-1255)  
-10/30/2009 13:23:32:998  SKU: Windows Server 2008 R2 Enterprise  
-10/30/2009 13:23:32:998 NetpDomainJoinLicensingCheck: ulLicenseValue=1, Status: 0x0  
-10/30/2009 13:23:32:998 NetpGetLsaPrimaryDomain: status: 0x0  
-10/30/2009 13:23:32:998 NetpMachineValidToJoin: status: 0x0  
-10/30/2009 13:23:32:998 NetpJoinDomain  
-10/30/2009 13:23:32:998  Machine: CLIENT-NAME  
-10/30/2009 13:23:32:998  Domain: Domain_Name  
-10/30/2009 13:23:32:998  MachineAccountOU: (NULL)  
-10/30/2009 13:23:32:998  Account: Domain_Name\admx054085  
-10/30/2009 13:23:32:998  Options: 0x27  
-10/30/2009 13:23:32:998 NetpLoadParameters: loading registry parameters...  
-10/30/2009 13:23:32:998 NetpLoadParameters: DNSNameResolutionRequired not found, defaulting to '1' 0x2  
-10/30/2009 13:23:32:998 NetpLoadParameters: DomainCompatibilityMode not found, defaulting to '0' 0x2  
-10/30/2009 13:23:32:998 NetpLoadParameters: status: 0x2  
-10/30/2009 13:23:32:998 NetpValidateName: checking to see if 'Domain_Name' is valid as type 3 name  
-10/30/2009 13:23:32:998 NetpValidateName:  'Domain_Name' is not a valid Dns domain name: 0x2554  
-10/30/2009 13:23:33:107 NetpCheckDomainNameIsValid [ Exists ] for 'Domain_Name' returned 0x0  
-10/30/2009 13:23:33:107 NetpValidateName: name 'Domain_Name' is valid for type 3  
-10/30/2009 13:23:33:107 NetpDsGetDcName: trying to find DC in domain 'Domain_Name', flags: 0x40001010  
-10/30/2009 13:23:33:107 **NetpDsGetDcName: failed to find a DC in the specified domain: 0x54b, last error is 0x0**  
-10/30/2009 13:23:33:107 **NetpJoinDomainOnDs: NetpDsGetDcName returned: 0x54b**  
-10/30/2009 13:23:33:107 **NetpJoinDomainOnDs: Function exits with status of: 0x54b**  
-10/30/2009 13:23:33:107 **NetpDoDomainJoin: status: 0x54b**  
+> *\<DateTime>* -----------------------------------------------------------------  
+*\<DateTime>* NetpDoDomainJoin  
+*\<DateTime>* NetpMachineValidToJoin: 'CLIENT-NAME'  
+*\<DateTime>*  OS Version: 6.1  
+*\<DateTime>*  Build number: 7600 (7600.win7_rtm.090713-1255)  
+*\<DateTime>*  SKU: Windows Server 2008 R2 Enterprise  
+*\<DateTime>* NetpDomainJoinLicensingCheck: ulLicenseValue=1, Status: 0x0  
+*\<DateTime>* NetpGetLsaPrimaryDomain: status: 0x0  
+*\<DateTime>* NetpMachineValidToJoin: status: 0x0  
+*\<DateTime>* NetpJoinDomain  
+*\<DateTime>*  Machine: CLIENT-NAME  
+*\<DateTime>*  Domain: Domain_Name  
+*\<DateTime>*  MachineAccountOU: (NULL)  
+*\<DateTime>*  Account: Domain_Name\admx054085  
+*\<DateTime>*  Options: 0x27  
+*\<DateTime>* NetpLoadParameters: loading registry parameters...  
+*\<DateTime>* NetpLoadParameters: DNSNameResolutionRequired not found, defaulting to '1' 0x2  
+*\<DateTime>* NetpLoadParameters: DomainCompatibilityMode not found, defaulting to '0' 0x2  
+*\<DateTime>* NetpLoadParameters: status: 0x2  
+*\<DateTime>* NetpValidateName: checking to see if 'Domain_Name' is valid as type 3 name  
+*\<DateTime>* NetpValidateName:  'Domain_Name' is not a valid Dns domain name: 0x2554  
+*\<DateTime>* NetpCheckDomainNameIsValid [ Exists ] for 'Domain_Name' returned 0x0  
+*\<DateTime>* NetpValidateName: name 'Domain_Name' is valid for type 3  
+*\<DateTime>* NetpDsGetDcName: trying to find DC in domain 'Domain_Name', flags: 0x40001010  
+*\<DateTime>* **NetpDsGetDcName: failed to find a DC in the specified domain: 0x54b, last error is 0x0**  
+*\<DateTime>* **NetpJoinDomainOnDs: NetpDsGetDcName returned: 0x54b**  
+*\<DateTime>* **NetpJoinDomainOnDs: Function exits with status of: 0x54b**  
+*\<DateTime>* **NetpDoDomainJoin: status: 0x54b**  
 
 Domain joins by Windows Server 2003 computers to the same target domain succeed by specifying the NetBIOS domain name in the domain join UI. Domain joins using the FQDN also fail.  
 You can also successfully join the same Windows Server 2008 R2 machine to a different Active Directory domain in the same forest specifying the FQDN domain name.

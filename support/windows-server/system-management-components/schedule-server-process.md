@@ -1,6 +1,6 @@
 ---
-title: Schedule a Server Process in 
-description: This article describes how to schedule a Server Process, provides a step-by-step resolution.
+title: Schedule a server process in 
+description: This article describes how to schedule a server process, provides a step-by-step resolution.
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan 
@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, markstan
 ms.prod-support-area-path: Task Scheduler
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
-# How To Schedule a Server Process
+# How to schedule a server process
 
-This article describes how to schedule a Server Process in Windows Server 2003
+This article describes how to schedule a server process in Windows Server 2003.
 
 _Original product version:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 324283
@@ -26,13 +26,13 @@ This step-by-step article describes how to schedule a program to start automatic
 
 ### Schedule the Task
 
-1. Click Start, point to Control Panel, then point to Scheduled Tasks, and then click Add Scheduled Task.  
-    The Scheduled Task Wizard appears. Click Next.  
-2. A list of programs that are available on your computer is displayed. If the program that you want to schedule is in this list, click it, and then click Next. If the program you want to run is not in this list, click Browse to locate the program, click the program, and then click Open.
-3. Type a name for the task, and then click the interval that you want to use for this task (for example, daily, weekly, monthly, or one time only). Click Next.
-4. If you chose to schedule the task daily, weekly, monthly, or one time only, you receive a time or date option. Select the date (or dates) and the time (or times) that you want to schedule the task for, and then click Next.
-5. Type the user name and password that will be used to run this program. Make sure that the user name is in the *domain* \ *user* format where *domain* is your NetBIOS domain name and *user* is the user account that you want to schedule the task under. Click Next.
-6. Click Finish to schedule the task.
+1. Click **Start**, point to **Control Panel**, then point to **Scheduled Tasks**, and then click **Add Scheduled Task**.  
+    The **Scheduled Task Wizard** appears. Click **Next**.  
+2. A list of programs that are available on your computer is displayed. If the program that you want to schedule is in this list, click it, and then click **Next**. If the program you want to run is not in this list, click **Browse** to locate the program, click the program, and then click **Open**.
+3. Type a name for the task, and then click the interval that you want to use for this task (for example, daily, weekly, monthly, or one time only). Click **Next**.
+4. If you choose to schedule the task daily, weekly, monthly, or one time only, you receive a time or date option. Select the date (or dates) and the time (or times) that you want to schedule the task for, and then click **Next**.
+5. Type the user name and password that will be used to run this program. Make sure that the user name is in the *domain* \ *user* format where *domain* is your NetBIOS domain name and *user* is the user account that you want to schedule the task under. Click **Next**.
+6. Click **Finish** to schedule the task.
 
 ### Troubleshooting
 

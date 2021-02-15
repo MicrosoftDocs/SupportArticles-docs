@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, MVP
 ms.prod-support-area-path: Remote desktop sessions
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # You can't establish a Remote Desktop session to a computer running one of the affected products
 
@@ -37,8 +37,8 @@ Additionally, when you view System Event log on the affected server you see the 
 Event Source: TermService  
 Event Category: None  
 Event ID: 1036  
-Date: 24.07.2005  
-Time: 18:57:44  
+Date: *\<DateTime>*  
+Time: *\<DateTime>*  
 User: N/A  
 Computer: Servername  
 Description:  

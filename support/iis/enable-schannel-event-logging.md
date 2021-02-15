@@ -39,7 +39,7 @@ This registry key is present already in Windows and Windows Server.
 
 ## Logging options
 
-The default value for Schannel event logging is *0x00000001* in Windows, which means that error messages are logged. Additionally, you can log multiple events by specifying the hexadecimal value that equates to the logging options that you want. This is a combination DWORD, which combines individual values for the desired result. For example, to log **error messages** (0x00000001) and **warnings** (0x00000002), set the value to *0x00000003*.
+The default value for Schannel event logging is *0x00000001* in Windows, which means that error messages are logged. Additionally, you can log multiple events by specifying the hexadecimal value that equates to the logging options that you want. This is a combination DWORD, which combines individual values for the desired result. For example, to log **error messages** (0x00000001) and **warnings** (0x00000002), set the value to *0x00000003*.
 
 |Value|Description|
 |---|---|
@@ -55,7 +55,7 @@ The default value for Schannel event logging is *0x00000001* in Windows, which
 
 ## More information
 
-Schannel event logging is different from schannel logging. Use schannel logging to enable Windows products to log debug information using the checked version of Schannel.dll
+Schannel event logging is different from schannel logging. Use schannel logging to enable Windows products to log debug information using the checked version of Schannel.dll.
 
 ## Applies to
 

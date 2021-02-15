@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Install Remote Desktop Session Host role service in Windows Server without Connection Broker role service
 
@@ -75,13 +75,13 @@ Unless otherwise noted, these steps apply to both workgroup computer and DC case
 1. Add the users that you want to allow to connect to the Remote Desktop Users group. To do this, use the following tools:
 
    - To find the Remote Desktop Users group on a DC, open Active Directory Users and Computers and navigate to the **Builtin** container.
-   - To find the Remote Desktop Users group on a workgroup server, open Computer Management and then navigate to **Local Users and Groups\Groups**.
+   - To find the Remote Desktop Users group on a workgroup server, open Computer Management and then navigate to **Local Users and Groups\\Groups**.
 
 1. Change the local policy of the computer to add your remote desktop users to the **Allow logon through Remote Desktop Services** local policy object. To do this, follow these steps:
 
     1. Open Local Security Policy.
-    2. Navigate to **Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment**.
-    3. Double-click **Allow log on through Remote Desktop Services** and then select **Add User or Group**.
+    2. Navigate to **Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment**.
+    3. Double-click **Allow log on through Remote Desktop Services**, and then select **Add User or Group**.
     4. Type **Remote Desktop Users** (or the user names of each user account that you want to add, separated by semicolons), and then select **OK** two times.
 
 1. Configure the Remote Desktop Session Host role service to use the local RDS license server.

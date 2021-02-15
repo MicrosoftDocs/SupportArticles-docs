@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Boot is slow
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Service configured to use gMSA account on a Windows Server 2012 R2-based DC doesn't start
 

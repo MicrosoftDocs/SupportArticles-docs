@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davidg, georgev
 ms.prod-support-area-path: 'Management and Configuration: General issues'
-ms.technology: PrintFaxScan
+ms.technology: windows-server-printing
 ---
 # How to add the Print Directory feature for folders in Windows XP, in Windows Vista, in Windows 7
 
@@ -45,7 +45,7 @@ To do this, follow these steps:
     ```
 
 3. On the **File** menu, click **Exit**, and then click **Yes** to save the changes.
-4. In the **Save As** dialog box, type the following text in the **File name** box, and then click **Save**: %windir%\Printdir.bat  
+4. In the **Save As** dialog box, type the following text in the **File name** box, and then click **Save**: %windir%\Printdir.bat.  
 
 #### Step 2: Create a new action for file folders
 
@@ -93,7 +93,7 @@ To do this, follow these steps:
     ```
 
 3. On the **File** menu, click **Exit**, and then click **Yes** to save the changes.
-4. In the **Save As** dialog box, type the following text in the **File name** box, and then click **Save: %windir%\Printdir.bat  
+4. In the **Save As** dialog box, type the following text in the **File name** box, and then click **Save: %windir%\Printdir.bat.  
 
     > [!NOTE]
     > If you receive a dialog box that says you don't have permission to save in this location, you can save the file to the desktop. Next, you click **Start**, click **Run**, type **%windir%** , and then click **OK**. Then, you can copy the file from the desktop to the location.

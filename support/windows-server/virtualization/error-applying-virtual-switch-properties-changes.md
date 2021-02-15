@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Virtual Switch Manager (vmswitch)
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # You receive "Error applying virtual switch properties changes" error on a Windows Server 2019 (Build 17763)-based Hyper-V server
 
-This article provides help to solve an error (Error applying virtual switch properties changes) that occurs when you create Hyper-V virtual switch in Microsoft Windows Server 2019 (Build 17763).
+This article provides help to solve an error "Error applying virtual switch properties changes" that occurs when you create Hyper-V virtual switch in Microsoft Windows Server 2019 (Build 17763).
 
 _Original product version:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 4492254

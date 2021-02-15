@@ -66,7 +66,7 @@
   - name: Declare an array of points to functions
     href: declare-pointers-to-functions.md
   - name: Expand a pointer in Watch window
-    href: expand-pointer- debugger-watch-window.md
+    href: expand-pointer-debugger-watch-window.md
   - name: Start default browser programmatically
     href: start-internet-browser.md
   - name: Use SqlDataAdapter to update databases
@@ -82,7 +82,7 @@
 - name: Integrated Development Environment (IDE)
   items:
   - name: Visual Studio crashes at startup
-    href: visual-studio-2013- startup-crashes.md
+    href: visual-studio-2013-startup-crashes.md
 
 - name: Language or Compilers
   items:
@@ -110,6 +110,8 @@
     href: readfromstream-return-access-denied.md
   - name: Redirecting error from Command Prompt
     href: redirecting-error-command-prompt.md
+  - name: Troubleshoot Visual C++ Compiler or Visual C++ Linker
+    href: troubleshoot-visual-c-compile-linker.md
   - name: Unnested loops cause C1061 compiler error
     href: unnested-loops-cause-c1061-error.md
   - name: Use try-catch-finally to catch exceptions

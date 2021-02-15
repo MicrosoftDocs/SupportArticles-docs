@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 2019126
 
 ## Symptoms
 
-You configure a Microsoft SQL Server Data Collector [collection set.](/previous-versions/sql/sql-server-2008-r2/bb677279(v=sql.105)) Then, you notice that new data is not being uploaded to the [Management Data Warehouse](/sql/relational-databases/data-collection/management-data-warehouse) database. When you view the [collection set logs](/sql/relational-databases/data-collection/view-collection-set-logs-sql-server-management-studio), you receive one of the following error messages:
+You configure a Microsoft SQL Server Data Collector [collection set.](/previous-versions/sql/sql-server-2008-r2/bb677279(v=sql.105)) Then, you notice that new data is not being uploaded to the [Management Data Warehouse](/sql/relational-databases/data-collection/management-data-warehouse) database. When you view the [collection set logs](/sql/relational-databases/data-collection/view-collection-set-logs-sql-server-management-studio), you receive one of the following error messages:
 
 - Error message 1
 
@@ -44,17 +44,17 @@ You configure a Microsoft SQL Server Data Collector [collection set.](/previous-
 
 ## Cause
 
-This problem occurs when one or more Data Collector cache files are corrupted. The corruption may be caused for one of the following reasons:
+This problem occurs when one or more Data Collector cache files are corrupted. The corruption may be caused for one of the following reasons:
 
 - Data Collector encountered an exception.
 - The disk runs out of free space while Data Collector is writing to a cache file.
-- A firmware or a driver problem occurs.
+- A firmware or a driver problem occurs.
 
 ## Resolution
 
 Locate the corrupted cache file and delete it. To do this, follow these steps:
 
-1. Start SQL Server Management Studio, and connect to the instance of SQL Server where the error occurs.
+1. Start SQL Server Management Studio, and connect to the instance of SQL Server where the error occurs.
 2. Expand the **Management** folder, right-click **Data Collection**, and select **Properties**.
 3. If a directory is displayed for **Cache directory**, this is the location of the Data Collector cache files. Go to step 5.
 4. If a directory is not displayed for **Cache directory**, the default cache directory is the local temporary directory of the account that executes the collection set. This account may be the SQL Server Agent service account. For example, on Windows Server 2008, if the collection set was executed by an account that is named *sqlacct*, this account's temporary directory is located in a path that resembles the following: `C:\Users\sqlacct\AppData\Local\Temp`.

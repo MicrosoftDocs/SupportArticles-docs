@@ -30,7 +30,7 @@ Additionally the following messages are logged in the SQL Server Errorlog file:
   > Error: 26023, Severity: 16, State: 1.  
   Server TCP provider failed to listen on ['any'\<ipv6> 1963]. Tcp port is already in use.  
   Error: 9692, Severity: 16, State: 1.  
-  The Service Broker protocol transport cannot listen on port 1963 because it is in use by another process.  
+  The Service Broker protocol transport cannot listen on port 1963 because it is in use by another process.
 
 - For failed logins:
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Permissions, access control, and auditing
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Mark an attribute as confidential in Windows Server 2003 Service Pack 1
 
@@ -215,8 +215,8 @@ In the following sample Ldp.exe output, Ldp.exe identifies the systemFlags attri
 1> cn: Employee-ID;  
 1> distinguishedName: CN=Employee-ID,CN=Schema,CN=Configuration,DC=domain,DC=com;  
 1> instanceType: 0x4 = ( IT_WRITE );  
-1> whenCreated: 08/05/2005 14:58:58 Central Standard Time;  
-1> whenChanged: 08/05/2005 14:58:58 Central Standard Time;  
+1> whenCreated: \<DateTime>;  
+1> whenChanged: \<DateTime>;  
 1> uSNCreated: 220;  
 1> attributeID: 1.2.840.113556.1.4.35;  
 1> attributeSyntax: 2.5.5.12 = ( SYNTAX_UNICODE_TYPE );  
@@ -246,8 +246,8 @@ In the following sample Ldp.exe output, Ldp.exe identifies the systemFlags attri
 1> cn: Employee-Number;  
 1> distinguishedName: CN=Employee-Number,CN=Schema,CN=Configuration,DC=warrenw,DC=com;  
 1> instanceType: 0x4 = ( IT_WRITE );  
-1> whenCreated: 08/05/2005 14:58:58 Central Standard Time;  
-1> whenChanged: 08/05/2005 14:58:58 Central Standard Time;  
+1> whenCreated: \<DateTime>;  
+1> whenChanged: \<DateTime>;  
 1> uSNCreated: 221;  
 1> attributeID: 1.2.840.113556.1.2.610;  
 1> attributeSyntax: 2.5.5.12 = ( SYNTAX_UNICODE_TYPE );  

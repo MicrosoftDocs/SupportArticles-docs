@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, lanaef, alrad, ckinder
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # How to decommission a Windows enterprise certification authority and remove all related objects
 
@@ -156,7 +156,7 @@ These objects are as follows:
 - crlDistributionPoint object
   - Located in CN=ServerName,CN=CDP,CN=Public Key Service,CN=Services,CN=Configuration,DC=ForestRoot,DC=com.
   - Contains the CRL periodically published by the CA.
-  - Published CRL Distribution Point (CDP) location
+  - Published CRL Distribution Point (CDP) location.
 
 - certificationAuthority object
   - Located in CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=ForestRoot,DC=com.

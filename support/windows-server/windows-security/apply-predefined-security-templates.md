@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Security templates
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # How to apply predefined security templates in Windows Server 2003
 
@@ -35,7 +35,7 @@ Microsoft Windows Server 2003 includes several predefined security templates tha
     > [!NOTE]
     > In Microsoft Windows 2000, two miscellaneous security templates exist, ocfiless (for file servers) and ocfilesw (for workstations). In Windows Server 2003, these files have been superseded by the Setup security.inf file.
 
-- Domain controller default security (DC security.inf):
+- Domain controller default security (DC security.inf)
 
     This template is created when a server is promoted to a domain controller. It reflects file, registry, and system service default security settings. If you reapply this template, these settings are set to the default values. However, the template may overwrite permissions on new files, registry keys, and system services created by other programs.
 
