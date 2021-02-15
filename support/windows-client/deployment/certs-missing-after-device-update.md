@@ -1,7 +1,7 @@
 ---
 title: Certificates are missing after you update a device to a newer version of Windows 10
 description: This article provides workarounds for an issue in which a device loses its system and user certificates after an update.
-ms.date: 12/29/2020
+ms.date: 02/15/2020
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dscontentpm
@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: deployment
-ms.technology: servicing
+ms.technology: windows-client-deployment
 keywords: managed devices, certificates, WSUS, MECM
 ---
 
