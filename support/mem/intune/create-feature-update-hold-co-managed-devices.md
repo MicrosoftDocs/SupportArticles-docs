@@ -39,7 +39,7 @@ To set the target release version policy setting, follow these steps:
    - Description: Enter a description.
    - OMA-URI: `./Vendor/MSFT/Policy/Config/Update/TargetReleaseVersion`
    - Data type: **String**
-   - Value: Enter the version that you want to specify. Use the version values from the **Semi-Annual Channel** table in [Windows 10 release information](/windows/release-information/). For example, enter **1909**.
+   - Value: Enter the version that you want to specify. For example, enter **1909** (for Windows 10 1909) or **2004** (for Windows 10 20H1) or **2009** (for Windows 10 20H2)
 6. Select **Next**.
 7. (Optional) In **Scope tags**, assign a tag, if it's necessary, and then select **Next**.
 8. In **Assignments**, select the groups that will receive the profile, and then select **Next**.
