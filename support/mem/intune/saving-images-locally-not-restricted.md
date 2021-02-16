@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4037345
 
 ## Symptoms
 
-You use the following Intune app protection policy setting for Outlook for iOS to prevent corporate data from being saved to the local device storage:
+You use the following Intune app protection policy setting for Outlook for iOS to prevent corporate data from being saved to the local device storage:
 
 **Select which storage services corporate data can be saved to**
 
@@ -22,7 +22,7 @@ However, users can still save images in email messages to local storage.
 
 ## Cause
 
-This behavior is by design. Currently the **Select which storage services corporate data can be saved to** data relocation setting does not apply to images in email messages in Outlook for iOS.
+This behavior is by design. Currently the **Select which storage services corporate data can be saved to** data relocation setting does not apply to images in email messages in Outlook for iOS.
 
 ## More information
 

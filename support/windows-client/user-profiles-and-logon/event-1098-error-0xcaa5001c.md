@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User Logon fails
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-client-user-profiles
 ---
 # Event 1098: Error: 0xCAA5001C Token broker operation failed in Windows 10
 

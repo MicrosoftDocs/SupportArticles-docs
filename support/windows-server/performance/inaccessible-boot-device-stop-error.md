@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Blue Screen/Bugcheck
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Stop error (INACCESSIBLE_BOOT_DEVICE) after you reconfigure critical hardware devices
 
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 3024175
 
 Consider the following scenario:
 
-- You are using a computer that is running Windows Server 2012 R2, Windows 8.1, Windows Server 2012, or Windows 8.
+- You are using a computer that is running Windows.
 - The operating system includes two drivers that are configured to load at startup. For example, the system includes driverA.sys and driverB.sys, and you expect both to load at startup.
 - When the computer starts, driverA.sys is used in the boot-up process but driverB.sys is not. Therefore, the system reconfigures the Start Type setting for driverB.sys from Boot Start to Demand Start.
 - You change the computer hardware configuration. For example, you replace the PCI slot on an SAS controller to which the boot-up hard disk drive is attached. After you make this change, a device that is required to start the machine may require driverB.sys, which is now set to Demand Start instead of Boot Start.
@@ -44,8 +44,6 @@ Because of this feature, drivers that are necessary to start the system under al
 ## Resolution
 
 To resolve this issue, restart the system in safe mode. In safe mode, any change to a driver's Start Type setting is reversed, and the values are re-created.
-
-For more information about how to start in safe mode, see [How to easily enter safe mode in windows 8? (One-click series)](https://support.microsoft.com/help/2809468).
 
 ## More information
 

@@ -11,22 +11,22 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tea, v-jesits, johnbay
 ms.prod-support-area-path: Permissions, access control, and auditing
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Some SIDs do not resolve into friendly names
 
-This article provides some information about the issue where some security identifiers (SIDS) do not resolve into friendly names.
+This article provides some information about the issue where some security identifiers (SIDS) do not resolve into friendly names.
 
 _Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4502539
 
 ## Symptoms
 
-In some places in the Windows UI, you see Windows account security identifiers (SIDS) that do not resolve to friendly names. These places include the following:
+In some places in the Windows UI, you see Windows account security identifiers (SIDS) that do not resolve to friendly names. These places include the following:
 
 - File Explorer
 - Security Audit reports
-- The access control list (ACL) editor in Registry Editor, as shown in the following examples:
+- The access control list (ACL) editor in Registry Editor, as shown in the following examples:
 
     ![A capability SID, visible in the ACL editor, does not resolve to a friendly name](./media/sids-not-resolve-into-friendly-names/permissions-for-classes.png)
     ![A capability SID that appears on the Advanced ACL editor does not resolve to a friendly name](./media/sids-not-resolve-into-friendly-names/advanced-security-settings-for-classes.png)
@@ -35,7 +35,7 @@ In some places in the Windows UI, you see Windows account security identifiers 
 
 Windows Server 2012 and Windows 8 introduced a type of SID that is known as a capability SID. By design, a capability SID does not resolve to a friendly name.
 
-Capability SIDs uniquely and immutably identify capabilities. In this context, a capability is an unforgeable token of authority that grants a Windows component or a Universal Windows Application access to resources such as documents, cameras, locations, and so forth. An application that "has" a capability is granted access to the resource that is associated with the capability. An application that "does not have" a capability is denied access to the associated resource.
+Capability SIDs uniquely and immutably identify capabilities. In this context, a capability is an unforgeable token of authority that grants a Windows component or a Universal Windows Application access to resources such as documents, cameras, locations, and so forth. An application that "has" a capability is granted access to the resource that is associated with the capability. An application that "does not have" a capability is denied access to the associated resource.
 
 The most commonly used capability SID is the following:  
 S-1-15-3-1024-1065365936-1281604716-3511738428-1654721687-432734479-3232135806-4053264122-3456934681

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Installation and configuration of Hyper-V
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Event 7000 after installing the Hyper-V role in Windows Server
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4483865
 
 ## Symptoms
 
-After you install the Hyper-V role in Windows Server, version 1903, Windows Server, version 1909 and Windows Server 2019 and then restart the system to complete the role installation, the virtual machine security process (VMSP) logs the following error message in Event Viewer:
+After you install the Hyper-V role in Windows Server, version 1903, Windows Server, version 1909 and Windows Server 2019 and then restart the system to complete the role installation, the virtual machine security process (VMSP) logs the following error message in Event Viewer:
 
 > Log Name: System  
 Source: Service Control Manager  
@@ -32,4 +32,4 @@ Description: "The VMSP service failed to start due to the following error: A dev
 
 ## More information
 
-You can safely ignore this error message. There are no errors that are related to the VMSP, which is installed after you install the Hyper-V role. Although the error message is logged, there is no loss in  the functionality of the virtual switch.
+You can safely ignore this error message. There are no errors that are related to the VMSP, which is installed after you install the Hyper-V role. Although the error message is logged, there is no loss in  the functionality of the virtual switch.

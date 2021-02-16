@@ -29,6 +29,9 @@ This issue occurs for one of the following reasons:
 
 ## Resolution
 
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+
 To fix this issue, stop (de-allocate) and restart the VM. Then, check whether the issue persists. If the issue persists, follow these steps.
 
 ### Step 1: Verify whether the Windows partition is marked as active

@@ -7,5 +7,9 @@
     href: cloud-services/welcome-cloud-services.yml
   - name: Virtual Machines
     href: virtual-machines/welcome-virtual-machines.yml
+  - name: Virtual Desktop
+    href: virtual-desktop/welcome-virtual-desktop.yml
   - name: Azure DevOps
     href: devops/welcome-azure-devops.yml
+- name: VM is not booting
+  items:

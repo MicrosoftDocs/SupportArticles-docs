@@ -11,13 +11,13 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # The WDS server may not start, and an error is logged in the System log when you start the WDS server
 
 This article provides a solution to an issue that occurs when you start the Windows Deployment Services (WDS) server, the WDS server may not start.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 954410
 
 ## Symptoms

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Remote access
-ms.technology: Networking
+ms.technology: networking
 ---
 # Error when you try to access shared resources on a computer: System error 53 has occurred or System error 51 has occurred
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika,joscon
 ms.prod-support-area-path: Performance monitoring tools
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Programs that use the QueryPerformanceCounter function may perform poorly
 

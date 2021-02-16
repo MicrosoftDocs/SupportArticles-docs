@@ -86,7 +86,3 @@ However, the root cause of the problem is that Error 1934 occurs because of an i
 ## Resolution
 
 To resolve this problem, change the default connection option to **SET NUMERIC_ROUNDABORT OFF**.
-
-## References
-
-Learn about the [terminology](https://support.microsoft.com/help/824684) that Microsoft uses to describe software updates.

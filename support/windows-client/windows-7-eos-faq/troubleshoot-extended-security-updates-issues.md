@@ -11,7 +11,8 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: v-elj, chawong, squin, scottmca, winciccore, kaushika
 ms.prod-support-area-path: Troubleshoot issues in ESU
-ms.technology: Windows 7 EoS FAQ
+ms.technology: windows-client-eos
+adobe-target: true
 ---
 # Troubleshoot issues in ESU
 
@@ -289,7 +290,7 @@ The computer can't communicate with the Microsoft Activation and Validation Serv
 
 #### Actions to take
 
-Make sure that the computer is connected to the internet or has the Activation URLs white listed, and try again.
+Make sure that the computer is connected to the internet or has the Activation URLs in the allow list, and try again.
 
 For computers that don't connect directly to the internet, you can use VAMT Proxy activation or Phone activation as an alternative. For more information, see [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091#).
 
@@ -307,7 +308,7 @@ The computer can't connect to the Microsoft Activation service. It might not be 
 
 #### Actions to take
 
-Make sure that the computer is connected to internet or has the Activation URLs white listed, and try again.
+Make sure that the computer is connected to internet or has the Activation URLs in the allow list, and try again.
 
 For computers that don't connect directly to the internet, you can use VAMT Proxy activation or Phone activation as an alternative. For more information, see [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091#).
 
@@ -605,7 +606,6 @@ Windows Server Update Service (WSUS) continues to scan cab files for Windows 7 S
 - [Get help with Windows activation errors](https://support.microsoft.com/help/10738/windows-10-get-help-with-activation-errors)  
 - [FAQ about Extended Security Updates for Windows 7](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)  
 - [Obtaining Extended Security Updates for eligible Windows devices](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/obtaining-extended-security-updates-for-eligible-windows-devices/ba-p/1167091)  
-- [Frequently asked questions about ESU for Windows Server and SQL Server 2008 and 2008 R2​](https://support.microsoft.com/help/4539036/faq-about-esu-for-windows-server-and-sql-server-2008-2008-r2)  
 - [How to use Windows Server 2008 and 2008 R2 extended security updates (ESU)​](/windows-server/get-started/extended-security-updates)  
 - [Extended Security Updates and Configuration Manager ​](https://techcommunity.microsoft.com/t5/configuration-manager-blog/extended-security-updates-and-configuration-manager/ba-p/825618)  
 - [What are Extended Security Updates for SQL Server?](/sql/sql-server/end-of-support/sql-server-extended-security-updates?view=sql-server-ver15&preserve-view=true)  

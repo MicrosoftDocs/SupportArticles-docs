@@ -11,13 +11,13 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rhensing
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Why you may be prompted to restart your computer after you install a security update on a Windows-based computer
 
 This article describes why you may be prompted to restart your Microsoft Windows-based computer after you install a security update.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 887012
 
 ## Why you may be prompted to restart your computer

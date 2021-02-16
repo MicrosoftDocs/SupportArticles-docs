@@ -13,9 +13,9 @@ _Original KB number:_ &nbsp; 4528414
 
 ## Symptoms
 
-When you use Endpoint Protection together with Configuration Manager, you experience the following issues:
+When you use Endpoint Protection together with Configuration Manager, you experience the following issues:
 
-- In the Configuration Manager console, you open the **Assets and Compliance** workspace under the **Devices** node. In that workspace, you notice that the **Endpoint Protection Definition Last Version** and **Endpoint Protection Last Update Time** columns display out-of-date values for some devices. However, the clients show that they have the latest versions applied.
+- In the Configuration Manager console, you open the **Assets and Compliance** workspace under the **Devices** node. In that workspace, you notice that the **Endpoint Protection Definition Last Version** and **Endpoint Protection Last Update Time** columns display out-of-date values for some devices. However, the clients show that they have the latest versions applied.
 - Topic type 1901 (State_Topictype_Ep_Am_Health) isn't logged in StateMessage.log on the clients.
 - The following error messages are logged in ExternalEventAgent.log on the clients:
 
@@ -36,7 +36,7 @@ Additionally, the following registry keys don't exist on the client:
 
 ## Cause
 
-This issue occurs because the instance of the `MSFT_MpComputerStatus` class doesn't exist in the `root\Microsoft\ProtectionManagement` namespace. The client queries this instance to populate the related registry keys.
+This issue occurs because the instance of the `MSFT_MpComputerStatus` class doesn't exist in the `root\Microsoft\ProtectionManagement` namespace. The client queries this instance to populate the related registry keys.
 
 ## Resolution
 
@@ -54,7 +54,7 @@ After you run this command, the following conditions are true:
 
 - The instance of `MSFT_MpComputerStatus` is populated in the `root\Microsoft\ProtectionManagement` namespace.
 - Topic type 1901 is logged in StateMessage.log.
-- The affected values in the Configuration Manager console are updated.
+- The affected values in the Configuration Manager console are updated.
 
 ## More information
 

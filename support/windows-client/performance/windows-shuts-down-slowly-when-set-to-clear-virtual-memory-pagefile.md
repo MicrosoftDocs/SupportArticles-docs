@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Shutdown is slow or hangs
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 # Windows shuts down slowly when it is set to clear the virtual memory pagefile on shutdown
 

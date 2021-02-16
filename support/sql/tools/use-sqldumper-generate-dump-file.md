@@ -291,7 +291,7 @@ ALTER SERVER CONFIGURATION   set FAILOVER CLUSTER PROPERTY SqlDumperDumpPath ='C
 ALTER SERVER CONFIGURATION   set FAILOVER CLUSTER PROPERTY SqlDumperDumpFlags =296;
 ```
 
-Alternatively, you can use PowerShell scripts. For example, for a named instance SQL2017A:
+Alternatively, you can use PowerShell scripts. For example, for a named instance SQL2017AG:
 
 ```console
 Get-ClusterResource -Name "SQL Server (SQL2017AG)" | Set-ClusterParameter -Name "SqlDumperDumpPath" -Value "C:\temp"

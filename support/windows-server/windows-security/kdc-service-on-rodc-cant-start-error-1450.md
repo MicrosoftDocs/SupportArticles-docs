@@ -12,7 +12,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Kerberos authentication
-ms.technology: windows-security
+ms.technology: windows-server-security
 ---
 
 # KDC service on an RODC can't start and generates error 1450
@@ -46,10 +46,10 @@ For information about how to identify orphan **krbtgt_*#####*** accounts, see [M
 
 The procedure that you use to resolve this issue depends on whether you have enabled the [AD Recycle Bin](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379542(v=ws.10)) feature in Active Directory. Select one of the following methods:
 
-- [Recovery Method 1 (AD Recycle Bin feature not enabled)](#method1)
-- [Recovery Method 2 (AD Recycle Bin feature enabled)](#method2)
+- [Recovery Method 1 (AD Recycle Bin feature not enabled)](#recovery-method-1-ad-recycle-bin-feature-not-enabled)
+- [Recovery Method 2 (AD Recycle Bin feature enabled)](#recovery-method-2-ad-recycle-bin-feature-enabled)
 
-### <a id="method1"></a>Recovery Method 1 (AD Recycle Bin feature not enabled)
+### Recovery Method 1 (AD Recycle Bin feature not enabled)
 
 If the AD Recycle Bin feature wasn't enabled, follow these steps on a writeable domain controller (RWDC) or global catalog server (GC).
 
@@ -77,7 +77,7 @@ If the AD Recycle Bin feature wasn't enabled, follow these steps on a writeable 
 
 After you finish these steps, you may have to reset the password of the RODC computer account (also known as the "machine account"). To do this, follow the steps in [Use Netdom.exe to reset machine account passwords of a Windows Server domain controller](https://docs.microsoft.com/troubleshoot/windows-server/windows-security/use-netdom-reset-domain-controller-password).
 
-### <a id="method2"></a>Recovery Method 2 (AD Recycle Bin feature enabled)
+### Recovery Method 2 (AD Recycle Bin feature enabled)
 
 If the AD Recycle Bin feature is enabled, follow these steps.
 

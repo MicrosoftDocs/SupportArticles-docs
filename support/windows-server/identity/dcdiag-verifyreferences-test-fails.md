@@ -11,13 +11,13 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, harsur, rolandw, justintu, arrenc
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # DCDiag VerifyReferences test fails when you use DFSR to replicate SYSVOL
 
 This article provides a solution to an error that occurs when you use the Distributed File System Replication (DFSR) service to replicate the sysvol folder.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3110032
 
 ## Symptoms

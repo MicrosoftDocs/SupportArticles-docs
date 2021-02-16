@@ -44,11 +44,9 @@ Refer to [https://github.com/Azure/WALinuxAgent/wiki/FAQ](https://github.com/Azu
 
 ## Minimum supported version of Windows VM Agent
 
-To get support for Windows Agent and extensions in Azure, the Windows Agent on the Windows VM must be later than or equal to 2.7.1198.781.
+To get support for Windows Agent and extensions in Azure, the Windows Agent on the Windows VM must be later than or equal to 2.7.41491.911.
 
-**Starting in June of 2020**, the minimum supported version will be 2.7.41491.911 for the Windows agent. 
-
-- If the Windows Agent is earlier than 2.7.1198.781, or if the Windows system is out-of-support, we may require you to update the agent before we can offer support. 
+- If the Windows Agent is earlier than 2.7.41491.911, or if the Windows system is out-of-support, we may require you to update the agent before we can offer support. 
  To upgrade the Windows Agent, see [About the virtual machine agent and extensions for Windows VMs](https://docs.microsoft.com/azure/virtual-machines/extensions/agent-windows). 
 
 ## Frequently asked questions

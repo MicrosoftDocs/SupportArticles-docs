@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Backup and restore of virtual machines
-ms.technology: HyperV 
+ms.technology: hyper-v 
 ---
 # Errors when backing up VMs that belong to a guest cluster in Windows
 
@@ -38,7 +38,7 @@ When you use a third-party backup application to back up your VM that is in a gu
 
 - Error 4
 
-    > Error   Event 19100   Hyper-V-VMMS 19100    'BackupVM' background disk merge failed to complete: General access denied error (0x80070005)
+    > Error   Event 19100   Hyper-V-VMMS 19100    'BackupVM' background disk merge failed to complete: General access denied error (0x80070005)
 
 ## Cause and resolution
 
@@ -48,7 +48,7 @@ When you use a third-party backup application to back up your VM that is in a gu
 
 - For error 2
 
-    This issue occurs because the VHDS disk is used as a Cluster Shared Volume (CSV), which cannot be used for creating checkpoints. To fix this issue, you need to use each disk as a shared disk instead of as a Cluster Shared Volume. This can be done by using the **Remove from Cluster Shared Volume** option.
+    This issue occurs because the VHDS disk is used as a Cluster Shared Volume (CSV), which cannot be used for creating checkpoints. To fix this issue, you need to use each disk as a shared disk instead of as a Cluster Shared Volume. This can be done by using the **Remove from Cluster Shared Volume** option.
 
 - For error 3
 

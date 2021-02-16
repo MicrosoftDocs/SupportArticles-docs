@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, wesk, amirsc
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # USB device drivers are removed unexpectedly after Windows 10 is updated
 
@@ -26,7 +26,7 @@ Consider the following scenario:
 
 - You have developed an application that works on Windows 10 Long Term Servicing Branch (LTSB).
 - The application relies on custom or third-party universal serial bus (USB) device drivers.
-- The application logic expects to find these drivers in the INF cache. Therefore, devices are automatically identified without having to specify the driver on each connection.
+- The application logic expects to find these drivers in the INF cache. Therefore, devices are automatically identified without having to specify the driver on each connection.
 - You install some Windows updates.
 
 In this scenario, the drivers are silently removed from the INF cache. Therefore, the application cannot use the drivers as expected.
@@ -41,19 +41,19 @@ Command line: C:\\Windows\\system32\\rundll32.exe C:\\Windows\\system32\\pnpclea
 
 > [!Note]
 >
-> - The parent svchost.exe process is hosting the task scheduler service.
+> - The parent svchost.exe process is hosting the task scheduler service.
 > - The specific scheduled task that is run in this scenario is located in the following path:  
 > **Task Scheduler (Local)**/**Task Scheduler Library**/**Microsoft**/**Windows**/**rempl**
 
 ## Cause
 
-This issue occurs because Windows receives an update reliability tool during a Windows Update installation of KB 4023057. The tool is designed to clean up the INF driver cache as part of its remediation procedures.
+This issue occurs because Windows receives an update reliability tool during a Windows Update installation of KB 4023057. The tool is designed to clean up the INF driver cache as part of its remediation procedures.
 
 ## Workaround
 
 The applicability rules for the Windows update reliability tool have been improved. In addition, the latest version of this tool (10.0.14393.10020 or a later version) should not cause the issue.
 
-As a workaround, you can completely block the update reliability tool from running. To do this, run the following commands:
+As a workaround, you can completely block the update reliability tool from running. To do this, run the following commands:
 
 ```console
 takeown /f "C:\Program Files\rempl" /r /d y

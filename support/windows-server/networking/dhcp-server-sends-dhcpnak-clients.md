@@ -11,13 +11,13 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, prasadk 
 ms.prod-support-area-path: Dynamic Host Configuration Protocol (DHCP)
-ms.technology: Networking
+ms.technology: networking
 ---
 # DHCP Server with Deactivated Scope sends a DHCPNAK to clients
 
 This article provides a solution to an issue when you start a Dynamic Host Configuration Protocol (DHCP) client.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 228597
 
 ## Symptoms

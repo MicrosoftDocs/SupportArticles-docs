@@ -3,7 +3,7 @@
   - name: 501 syntax error when you use FtpWebRequest
     href: ftpwebrequest-behavior.md
   - name: A ClickOnce application fails to run
-    href: manifest-definitions-dont-match-reference.md
+    href: manifest-definitions-do-not-match-reference.md
   - name: Applications crash at startup
     href: applications-crash-at-startup.md
   - name: Patching fails
@@ -136,6 +136,8 @@
     href: nested-tablelayoutpanel-large-empty-spaces.md
   - name: Text is lost when you render an XPS DocumentPage
     href: far-eastern-fonts-text-lost-on-images-xps.md
+  - name: Timeout occurs when an application calls the Poll method
+    href: timeout-when-application-calls-poll-method.md
   - name: Warning when service references are added
     href: warning-add-service-reference-silverlight.md
   - name: Windows Forms applications don't release memory

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Event ID 513 when running VSS in Windows Server
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 3209092
 
 ## Symptoms
 
-In Windows Server, when an application calls the Volume Shadow Copy Service (VSS) to run a backup, Event 513 may be generated:
+In Windows Server, when an application calls the Volume Shadow Copy Service (VSS) to run a backup, Event 513 may be generated:
 > Log Name: Application  
 Source: Microsoft-Windows-CAPI2  
 Event ID: 513  
@@ -40,7 +40,7 @@ Access is denied.
 
 ## Cause
 
-This problem occurs because VSS System Writer does not have permission to read the NT AUTHORITY\\SERVICE (service account). When System Writer runs as a cryptographic service and tries to read the Mslldp.sys information from a Microsoft Link-Layer Discovery Protocol driver, the "access denied" error is generated.
+This problem occurs because VSS System Writer does not have permission to read the NT AUTHORITY\\SERVICE (service account). When System Writer runs as a cryptographic service and tries to read the Mslldp.sys information from a Microsoft Link-Layer Discovery Protocol driver, the "access denied" error is generated.
 
 ## Workaround
 

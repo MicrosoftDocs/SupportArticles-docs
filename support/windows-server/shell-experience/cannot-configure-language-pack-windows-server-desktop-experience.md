@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, garrmc, estalin, v-jesits
 ms.prod-support-area-path: Desktop Shell
-ms.technology: ShellExperience
+ms.technology: windows-server-shell-experience
 ---
 # Cannot configure a language pack for Windows Server 2019 Desktop Experience
 
@@ -34,7 +34,7 @@ Then, follow the steps in [Configure the display language.](#configure-the-displ
 
 ### Method 2: Use LPKSetup
 
-Alternatively, you can add a new Windows display language without installing update 4476976. To do this, you must get the desired language pack CAB file, install the CAB file by using LPKSetup.exe, and then use the **Language** page to set your preferred language.
+Alternatively, you can add a new Windows display language without installing update 4476976. To do this, you must get the desired language pack CAB file, install the CAB file by using LPKSetup.exe, and then use the **Language** page to set your preferred language.
 
 To use LPKSetup.exe, follow these steps:
 
@@ -47,12 +47,12 @@ Then, follow the steps in [the next section.](#configure-the-display-language)
 
 ### Configure the display language
 
-To  configure a new Windows display language, follow these steps:
+To  configure a new Windows display language, follow these steps:
 
 1. Start the **Settings** application, select **Time & Language**, and then select **Language**.
 2. On the **Language** page, under the **Preferred languages** heading, select **Add a language**.
 3. In the **Choose a language to install** dialog box, select an entry that matches the language pack language, and then select **Next**.
-4. In the **Install language features** dialog box, select **Install**. The **Windows display language**  box should now include the newly added language.
+4. In the **Install language features** dialog box, select **Install**. The **Windows display language**  box should now include the newly added language.
 5. To switch to the new language, select it from the **Windows display language** box, sign out of the current Windows session, and then sign back in.
 
 ## Status

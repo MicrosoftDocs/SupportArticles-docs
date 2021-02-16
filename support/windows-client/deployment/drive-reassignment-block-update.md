@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment 
+ms.technology: windows-client-deployment 
 ---
 # Error on a computer that has a USB device or SD card attached: This PC can't be upgraded to Windows 10
 
@@ -30,22 +30,22 @@ If you are trying to upgrade to the May 2019 Feature Update for Windows 10 (Wind
 
 ## Cause
 
-If you have an external USB device, SD memory card or UFS card attached when installing Windows 10, version 1903, you may get an error message stating "This PC can't be upgraded to Windows 10." This is caused by inappropriate drive reassignment during installation.
+If you have an external USB device, SD memory card or UFS card attached when installing Windows 10, version 1903, you may get an error message stating "This PC can't be upgraded to Windows 10." This is caused by inappropriate drive reassignment during installation.
 
-An external USB device, SD memory card, or UFS card that is attached to the computer can cause an inappropriate drive reassignment on Windows 10-based computers during the installation of the Windows 10, version 1903 update. For this reason, there is an update hold on computers to prevent them from receiving Windows 10, version 1903 if this situation is detected. This generates the error message that is mentioned in the [Symptoms](#symptoms) section if the upgrade is tried again on an affected computer.
+An external USB device, SD memory card, or UFS card that is attached to the computer can cause an inappropriate drive reassignment on Windows 10-based computers during the installation of the Windows 10, version 1903 update. For this reason, there is an update hold on computers to prevent them from receiving Windows 10, version 1903 if this situation is detected. This generates the error message that is mentioned in the [Symptoms](#symptoms) section if the upgrade is tried again on an affected computer.
 
 ### Sample scenario
 
-An update to Windows 10, version 1903 is tried on a computer that has a thumb drive inserted into a USB port. Before the update, the thumb drive is mounted in the system as drive G based on the existing drive configuration. However, after the feature update is installed, the device is assigned a different drive letter (for example, drive H).
+An update to Windows 10, version 1903 is tried on a computer that has a thumb drive inserted into a USB port. Before the update, the thumb drive is mounted in the system as drive G based on the existing drive configuration. However, after the feature update is installed, the device is assigned a different drive letter (for example, drive H).
 
 > [!NOTE]
 > The drive reassignment is not limited to removable drives. Internal hard drives may also be affected.
 
-To safeguard your update experience, we have applied a hold on devices with an external USB device or SD memory card attached from being offered Windows 10, version 1903 until this issue is resolved.
+To safeguard your update experience, we have applied a hold on devices with an external USB device or SD memory card attached from being offered Windows 10, version 1903 until this issue is resolved.
 
 ## Workaround
 
-To work around this problem, remove all external media, such as USB devices, SD cards, and UFS cards, from your computer. Then, restart installation of the Windows 10, version 1903 feature update. The update should now proceed normally.
+To work around this problem, remove all external media, such as USB devices, SD cards, and UFS cards, from your computer. Then, restart installation of the Windows 10, version 1903 feature update. The update should now proceed normally.
 
 If you are using installation media (USB flash drive, DVD, or ISO file) to install Windows 10, copy the files on the installation media to your local drive, and then start the installation from the local drive.
 

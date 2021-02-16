@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, justintu
 ms.prod-support-area-path: User Logon fails
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-client-user-profiles
 ---
 # Facial recognition logon doesn't work after you apply a Group Policy setting in Windows 10
 

@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-dpm.md
+  href: welcome-dpm.yml
 - name: Agents
   items:
     - name: Agent communication issues
@@ -62,7 +62,7 @@
   items:
     - name: Reporting Services Server cannot connect to the DPM database
       href: schedule-email-report-error.md
-- name: Setup, installation and secondary DPM server protection
+- name: Setup, installation，and secondary DPM server protection
   items:
     - name: Backup of deduplicated volumes fails on a secondary DPM server
       href: deduplicated-volumes-backup-fails.md
@@ -80,6 +80,8 @@
       href: error-4323-install-dpm-2012-r2.md
     - name: Error 832 installing DPM 2016
       href: installation-error-832.md
+    - name: Upgrade to DPM 2016 with VMware protection
+      href: upgrade-dpm-vmware-vm-protection.md
 - name: SharePoint farm protection
   items:
     - name: Can't protect a SharePoint farm

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Windows Script Host (CScript or WScript)
-ms.technology: ApplicationCompatibility
+ms.technology: windows-client-application-compatibility
 ---
 # How to change registry values or permissions from a command line or a script
 

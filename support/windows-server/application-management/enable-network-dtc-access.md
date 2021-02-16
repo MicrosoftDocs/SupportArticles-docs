@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DTC startup, configuration, connectivity, and cluster
-ms.technology: ApplicationCompatibility
+ms.technology: windows-server-application-compatibility
 ---
 # How to enable network DTC access
 

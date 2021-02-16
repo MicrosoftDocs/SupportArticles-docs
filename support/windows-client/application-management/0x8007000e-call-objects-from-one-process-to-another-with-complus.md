@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: COM+ administration, configuration, and security
-ms.technology: ApplicationCompatibility 
+ms.technology: windows-client-application-compatibility 
 ---
 # Error when you call many objects from one process to another by using COM+: Not enough storage is available to complete this operation (0x8007000e)
 

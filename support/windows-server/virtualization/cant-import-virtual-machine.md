@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dewitth
 ms.prod-support-area-path: Installation and configuration of Hyper-V
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # You cannot import a virtual machine by using Hyper-V Manager or System Center Virtual Machine Manager (SCVMM) on a Hyper-V server
 

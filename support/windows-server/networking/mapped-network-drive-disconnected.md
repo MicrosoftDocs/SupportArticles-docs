@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
-ms.technology: Networking
+ms.technology: networking
 ---
 # A mapped network drive appears to be disconnected after you install or upgrade to Symantec AntiVirus 10.0 or to Symantec Client Security 3.0
 
@@ -50,7 +50,5 @@ To remove the incorrectly labeled mapped drive, follow these steps:
 > Replace the **Server_Name** placeholder with the name of the server that hosts the mapped network drive. Replace the **Share_Name** placeholder with the name of the mapped network drive.
 
 ## More information
-
-For more information about similar problems on Windows-based computers, see [You may experience various problems when you work with files over the network on a Windows Server 2003-based or Windows 2000 Server-based computer](https://support.microsoft.com/help/923360).
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ctimon
 ms.prod-support-area-path: Initial Cluster Creation or Adding node
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # The implications of using the /forcequorum switch to start the Cluster service in Windows Server 2008
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jarrettr
 ms.prod-support-area-path: Microsoft Management Console (MMC)
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # How to troubleshoot SMS Administrator console connectivity
 
@@ -203,9 +203,7 @@ To delete the DefaultAccessPermission value, follow these steps:
 3. In the right pane, right-click **DefaultAccessPermission**, and then click **Delete**.
 4. In the **Confirm Value Delete** dialog box, click **Yes**.
 5. Exit Registry Editor.
-6. Log off from the computer, and then log back on to the computer. For more information about DCOM issues and their symptoms, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[900960](https://support.microsoft.com/help/900960) You cannot perform actions such as search and drag when you use a Windows Server 2003-based computer  
+6. Log off from the computer, and then log back on to the computer.  
 
 #### Include the Anonymous Logon security group in the Everyone security group
 
@@ -260,7 +258,6 @@ Start the WMI Control on the site server. Do not start the WMI control on the pr
 Analyze this log on the site server. You see all the WMI traffic that is generated. Look for the query for SMS_Providerlocation that occurred when an SMS Administrator console tried to connect. If this query is present, you can confirm that there is communication between the console and the site server. Test connectivity from the site server back to the requesting SMS Administrator console. Connectivity may not exist in the following scenarios:
 
 - The remote procedure call (RPC) server is unavailable.
-If WBEMtest connectivity testing determines that the remote procedure call (RPC) server is unavailable, see the following Microsoft Knowledge Base article: [229091](https://support.microsoft.com/help/229091) SMS: Remote administrator gets a "Connection failed" error when connecting to Site Server  
 
 - There is a DNS name resolution issue.
 The "Connection Failed "error message may also occur if name resolution is not completed correctly. To determine whether you are experiencing a name resolution issue, use the WBEMtest tool and try to connect to the site server by using the IP address. For example, use \\111.222.333.444\\root\\default as the address. If you can connect when you use the IP address, but you cannot connect when you use the netBIOS name of the site server, you are experiencing a name resolution issue. To resolve this issue, confirm either the WINS or the DNS configurations.

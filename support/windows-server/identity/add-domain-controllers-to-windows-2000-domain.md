@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: arrenc, kaushika
 ms.prod-support-area-path: DCPromo and the installation of domain controllers
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to upgrade Windows 2000 domain controllers to Windows Server 2003
 
@@ -251,10 +251,6 @@ If Exchange 2000 schema changes have already been installed but you have NOT run
     > [!NOTE]
     > You may need to change the **Schema Update Allowed** registry subkey if you receive the following error message:
     > Schema update is not allowed on this DC because the registry key is not set or the DC is not the schema FSMO Role Owner.
-
-    For more information about how to change this registry subkey, click the following article number to view the article in the Microsoft Knowledge Base:
-
-    [285172](https://support.microsoft.com/help/285172) Schema update require Write access to schema in Active Directory  
 
 7. Verify that the LDAPDisplayNames for the CN=ms-Exch-Assistant-Name, CN=ms-Exch-LabeledURI, and CN=ms-Exch-House-Identifier attributes in the schema naming context now appear as msExchAssistantName, msExchLabeledURI, and msExchHouseIdentifier before you run the Windows Server 2003 `adprep /forestprep` commands.
 8. Go to the "[Overview: Upgrading Windows 2000 domain controllers to Windows Server 2003](#overview-upgrading-windows-2000-domain-controllers-to-windows-server-2003)" section to run the `adprep /forestprep` and `/domainprep` commands.

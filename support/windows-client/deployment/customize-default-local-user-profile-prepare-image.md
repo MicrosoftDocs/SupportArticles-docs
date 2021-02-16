@@ -1,5 +1,5 @@
 ---
-title: How to customize the default local user profile when you prepare an image
+title: How to customize the default local user profile when you prepare an image of Windows
 description: Describes how to customize the default local user profile when you prepare an image of Windows XP or Windows Server 2003.
 ms.date: 09/14/2020
 author: Deland-Han
@@ -11,9 +11,9 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: pleblanc, scottmca, toshikas, clandis, kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
-# How to customize the default local user profile when you prepare an image
+# How to customize the default local user profile when you prepare an image of Windows
 
 This article discusses how to customize the default local user profile settings when you create an image in Windows.
 
@@ -32,36 +32,38 @@ After you deploy the image, these settings are applied to all new users who log 
 > [!NOTE]
 > This article supersedes all previously published procedures for customizing default local user profiles when you prepare images.
 
-For more information about the steps to customize the default local user profile for Windows Vista or later operating systems, click the following article number to view the article in the Microsoft Knowledge Base: 
+For more information about the steps to customize the default local user profile for Windows Vista or later operating systems, see [How to customize default user profiles in Windows Vista, Windows Server 2008, Windows 7, and in Windows Server 2008 R2](/troubleshoot/windows-client/deployment/customize-default-local-user-profile).
 
-[973289](https://support.microsoft.com/help/973289) How to customize default user profiles in Windows Vista, Windows Server 2008, Windows 7, and in Windows Server 2008 R2
-
-### How to customize the default local user profile in Windows XP or in Windows Server 2003
+## How to customize the default local user profile in Windows XP or in Windows Server 2003
 
 In Windows XP and in Windows Server 2003, updates that you've installed may change the method that you use to customize the default local user profile. For more information, see the following sections.
 
-#### Windows XP Service Pack 2 (SP2)
+### Windows XP Service Pack 2 (SP2)
 
 The default behavior is to automatically copy customizations from the administrator profile to the default user profile. Therefore, no additional steps are required to customize the profile.
 
-#### Windows Server 2003 Service Pack 1 (SP1) or Windows Server 2003 SP2
+### Windows Server 2003 Service Pack 1 (SP1) or Windows Server 2003 SP2
 
 The default behavior is to automatically copy customizations from the administrator profile to the default user profile. Therefore, no additional steps are required to customize the profile. You can disable this functionality by setting a parameter in the Sysprep.inf file. This parameter prevents the Minisetup process from copying customizations from the administrator profile. To do this, set the parameter in the "UNATTENDED" section of the Sysprep.inf file as follows:
 
+```inf
 [UNATTENDED]  
 UpdateServerProfileDirectory=0
+```
 
-#### Windows XP Service Pack 3 (SP3) or hotfix 887816 is applied
+### Windows XP Service Pack 3 (SP3) or hotfix 887816 is applied
 
 Hotfix 887816 disables the automatic copying of customizations. Therefore, you must configure a parameter in the Sysprep.inf file to enable the Minisetup process to copy the customizations from the administrator profile. To do this, set the parameter in the "UNATTENDED" section, as follows:
 
+```inf
 [UNATTENDED]  
 UpdateServerProfileDirectory=1
+```
 
 > [!NOTE]
 > Windows XP SP3 includes hotfix 887816.
 
-#### Windows XP or Windows Server 2003
+### Windows XP or Windows Server 2003
 
 To use this CopyProfile setting in Windows XP SP2 together with hotfix 887816, in Windows XP SP3, or in Windows Server 2003 SP1, the UpdateServerProfileDirectory setting must be present in the Sysprep.inf file when you run the Sysprep tool. Therefore, when you use automated image build and deployment tools, such as the Microsoft Deployment Toolkit or System Center Configuration Manager, the UpdateServerProfileDirectory setting must be included during the reference image build and capture process.
 
@@ -69,11 +71,12 @@ To use this CopyProfile setting in Windows XP SP2 together with hotfix 887816, i
 
 For more information about how to configure default local user profile settings, visit the following Microsoft website:
 
-[Configuring Default User Settings – Full Update for Windows 7 and Windows Server 2008 R2](/archive/blogs/deploymentguys/configuring-default-user-settings-full-update-for-windows-7-and-windows-server-2008-r2) 
+[Configuring Default User Settings – Full Update for Windows 7 and Windows Server 2008 R2](/archive/blogs/deploymentguys/configuring-default-user-settings-full-update-for-windows-7-and-windows-server-2008-r2)
 
 ## More information
 
 The procedure that is described in this article supersedes all previously published procedures for customizing default local user profiles when you prepare images. This behavior applies to the following operating systems:
+
 - Windows Server 2003
 - Windows XP
 

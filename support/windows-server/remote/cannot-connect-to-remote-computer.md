@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: RDWeb
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # You cannot connect to a remote computer or start a remote application when you use Terminal Services Web Access or Remote Web Workspace on a Windows XP SP3-based or Windows Small Business Server 2003 SP1-based computer
 

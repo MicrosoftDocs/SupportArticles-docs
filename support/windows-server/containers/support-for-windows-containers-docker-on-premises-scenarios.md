@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Management of Containers
-ms.technology: Containers
+ms.technology: windows-server-containers
 ---
 # Support policy for Windows containers and Docker in on-premises scenarios
 
@@ -33,10 +33,10 @@ Microsoft defines the supported host configurations in the following terms:
 
 - **Docker engine**: Docker is a third-party application for managing containers. Docker Enterprise runs on Windows Server; Docker Desktop for Windows runs in Windows 10. For more information about Docker, see [Docker on Windows](/virtualization/windowscontainers/manage-docker/configure-docker-daemon).
 
-- **Container type**: Microsoft supports Windows Server containers, Hyper-V containers, and Linux containers. However, not all host configurations can support all of the container types. For general information about Windows containers and container types, see [Containers on Windows](/virtualization/windowscontainers/about/index).
+- **Container type**: Microsoft supports Windows Server containers, Hyper-V containers, and Linux containers. However, not all host configurations can support all of the container types. For general information about Windows containers and container types, see [Containers on Windows](/virtualization/windowscontainers/about/index).
 
 > [!NOTE]
-> The Linux Containers on Windows (LCOW) feature is under active development. For more information, see [Linux Containers on Windows](/virtualization/windowscontainers/deploy-containers/linux-containers). You can track ongoing progress in the [Moby](https://github.com/moby/moby/issues/33850) project on GitHub.
+> The Linux Containers on Windows (LCOW) feature is under active development. For more information, see [Linux Containers on Windows](/virtualization/windowscontainers/deploy-containers/linux-containers). You can track ongoing progress in the [Moby](https://github.com/moby/moby/issues/33850) project on GitHub.
 
 ### Host component support
 
@@ -48,14 +48,14 @@ Microsoft supports Windows containers on the following versions and releases of 
 
 - Windows Server 2019 (1809) Standard or Datacenter editions
 - Windows Server 2016 (1803) Standard or Datacenter editions
-- Windows Server 2016 (1709) Standard or Datacenter editions
+- Windows Server 2016 (1709) Standard or Datacenter editions
 - Windows Server 2016 (1607) Standard, Datacenter, or Nano Server editions
 - Windows IoT core (only available to Windows Insider members)
 
 > [!NOTE]
 > You cannot host containers on Windows Server, Nano Server edition, on any Windows Server release later than 1607.
 >
-> Microsoft supports Windows containers on both LTSC and Semi-annual Channel (SAC) releases. For information about the support lifecycles for Windows versions and releases, see [Windows Server Semi-Annual Channel overview](/windows-server/get-started/semi-annual-channel-overview).
+> Microsoft supports Windows containers on both LTSC and Semi-annual Channel (SAC) releases. For information about the support lifecycles for Windows versions and releases, see [Windows Server Semi-Annual Channel overview](/windows-server/get-started/semi-annual-channel-overview).
 
 To deploy containers in Windows Server, you must install Docker Enterprise (see [Install Docker Engine - Enterprise on Windows Servers](https://docs.docker.com/install/windows/docker-ee/)). Docker provides full support for Docker Enterprise at [Docker support](https://success.docker.com/support).
 
@@ -81,10 +81,10 @@ On these versions of Windows, the types of containers that Microsoft supports de
 
 ## Supported configurations for Windows 10 container hosts
 
-Microsoft supports containers on Windows 10 Professional or Enterprise with Anniversary Update (version 1607) or later, with the following requirements:
+Microsoft supports containers on Windows 10 Professional or Enterprise with Anniversary Update (version 1607) or later, with the following requirements:
 
 - Hyper-V must be enabled
-- Docker Desktop for Windows must be installed (see [Install Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/)). Docker Desktop for Windows is the Community Edition (Docker CE) and is ideal for developers and small teams looking to get started with Docker and experimenting with container-based apps.
+- Docker Desktop for Windows must be installed (see [Install Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/)). Docker Desktop for Windows is the Community Edition (Docker CE) and is ideal for developers and small teams looking to get started with Docker and experimenting with container-based apps.
 
     Microsoft does not provide support for Docker Desktop for Windows. Support is only provided through the [Docker Community Forums](https://forums.docker.com/c/docker-desktop-for-windows). For more information, see "What if I have problems or questions?" in the Docker for Windows FAQ at [Docker FAQ](https://docs.docker.com/docker-for-windows/faqs).
 
@@ -136,13 +136,13 @@ The Azure Service Fabric is not available to orchestrate on-premises containers.
 
 - **Docker swarm:** Docker swarm is a feature of the Docker engine. Docker swarm is fully supported by Docker. For more information about using Docker swarm with Windows containers, see [Getting started with swarm mode](/virtualization/windowscontainers/manage-containers/swarm-mode).
 
-- **Kubernetes:** Kubernetes for on-premises Windows Server deployments is still in preview (Beta). Microsoft will not provide any support until the official announcement of general availability. Until then, use the following resources:
+- **Kubernetes:** Kubernetes for on-premises Windows Server deployments is still in preview (Beta). Microsoft will not provide any support until the official announcement of general availability. Until then, use the following resources:
   
   - For the latest information about functionality with Windows Server 2016 and Windows Server 2019, see [Kubernetes on Windows](/virtualization/windowscontainers/kubernetes/getting-started-kubernetes-windows).
   
   - To track development and participate in community preview efforts, follow the Kubernetes [#SIG-Windows community](https://github.com/kubernetes/community/blob/master/sig-windows/README.md).
 
-- **Red Hat OpenShift (Windows Server 2019 only):** Red Hat OpenShift on Windows Server 2019 is still in private preview. Microsoft will not provide support until the announcement of general availability.
+- **Red Hat OpenShift (Windows Server 2019 only):** Red Hat OpenShift on Windows Server 2019 is still in private preview. Microsoft will not provide support until the announcement of general availability.
 
 ## Supported container images
 
@@ -151,7 +151,7 @@ Microsoft offers four container base images for Windows:
 - **Windows Server core**: If your application needs the full .NET framework, this is the best image to use.
 - **Nano Server**: For applications that only require .NET Core, Nano Server will provide a much slimmer image.
 - **Windows**: You may find your application depends on a component or .dll that is missing in Server Core or Nano Server images, such as GDI libraries. This image carries the full dependency set of Windows.
-- **Windows IoT core**: This image is purpose-built for IoT applications. You should use this container image when targeting an IoT Core host.
+- **Windows IoT core**: This image is purpose-built for IoT applications. You should use this container image when targeting an IoT Core host.
 
 > [!NOTE]
 > The IoT Core base image is only available to members of the Windows Insider program.
@@ -168,36 +168,36 @@ As outlined in [Supported container hosts](#supported-configurations-for-contain
 |Windows IoT core|Not supported|Not supported|Not supported|Windows Server containers|
 |||
 
-If you plan to work with container hosts that run different versions and releases of Windows, you will also need to consider the versions and releases of the container images. Some container features are not backward-compatible, so some newer base OS images may not run on container hosts with older OS versions. For more detailed information about compatibility issues between base OS image versions and host OS versions, see [Windows Container Version Compatibility](/virtualization/windowscontainers/deploy-containers/version-compatibility).
+If you plan to work with container hosts that run different versions and releases of Windows, you will also need to consider the versions and releases of the container images. Some container features are not backward-compatible, so some newer base OS images may not run on container hosts with older OS versions. For more detailed information about compatibility issues between base OS image versions and host OS versions, see [Windows Container Version Compatibility](/virtualization/windowscontainers/deploy-containers/version-compatibility).
 
 ### Support for container workloads
 
-Microsoft fully supports its container base OS images, as described in this section. For support of Microsoft applications in containers, see GitHub, the Microsoft forums, or the [Microsoft repository on DockerHub](https://hub.docker.com/u/microsoft/) for the custom container image in question.
+Microsoft fully supports its container base OS images, as described in this section. For support of Microsoft applications in containers, see GitHub, the Microsoft forums, or the [Microsoft repository on DockerHub](https://hub.docker.com/u/microsoft/) for the custom container image in question.
 
 When running third-party applications in Windows containers, refer to the application vendor for support. In particular, confirm with the application vendor that they support running the application in a Windows container.
 
 ## Supported networking configurations
 
-Microsoft fully supports [Windows container networking](/virtualization/windowscontainers/container-networking/architecture) functionality. This functionality includes the Host Networking Service (HNS) and Host Compute Service (HCS). HNS and HCS work together to create containers (HCS) and attach endpoints to a network (HNS). Additionally, it includes the following container network drivers (for full descriptions of these drivers, see [Windows Container Network Drivers](/virtualization/windowscontainers/container-networking/network-drivers-topologies)):
+Microsoft fully supports [Windows container networking](/virtualization/windowscontainers/container-networking/architecture) functionality. This functionality includes the Host Networking Service (HNS) and Host Compute Service (HCS). HNS and HCS work together to create containers (HCS) and attach endpoints to a network (HNS). Additionally, it includes the following container network drivers (for full descriptions of these drivers, see [Windows Container Network Drivers](/virtualization/windowscontainers/container-networking/network-drivers-topologies)):
 
 - **Network Address Translation (NAT)**: This is the default driver for container networks. NAT networks support port forwarding and mapping from container hosts to container endpoints. Microsoft supports multiple NAT networks on Windows 10 container hosts that have [Windows 10, version 1703 (also known as the Creators Update)](/windows/whats-new/whats-new-windows-10-version-1703) installed.
 
-- **Transparent**: When configured with a user-specified subnet, transparent networks support static IP addresses from the physical network or dynamic IP addresses assigned by an external DHCP server. When using a transparent network for containers on a virtual container host, you must configure MAC address spoofing.
+- **Transparent**: When configured with a user-specified subnet, transparent networks support static IP addresses from the physical network or dynamic IP addresses assigned by an external DHCP server. When using a transparent network for containers on a virtual container host, you must configure MAC address spoofing.
 
-- **Overlay**: Microsoft supports overlay networks for use with Docker swarm or Kubernetes orchestration. To use overlay networks, your configuration must meet the following requirements:
+- **Overlay**: Microsoft supports overlay networks for use with Docker swarm or Kubernetes orchestration. To use overlay networks, your configuration must meet the following requirements:
 
-  - Your container hosts run Windows Server 2019, Windows Server 2016, or Windows 10 Creators Update.
+  - Your container hosts run Windows Server 2019, Windows Server 2016, or Windows 10 Creators Update.
   
   - Your deployment meets the requirements listed in [Using overlay networks](https://docs.docker.com/network/overlay/#operations-for-all-overlay-networks).
   
-  - When using Kubernetes, you are using Flannel or OVN control panes.
+  - When using Kubernetes, you are using Flannel or OVN control panes.
 
     > [!NOTE]
-    > Kubernetes for on-premises Windows Server deployments is still in preview (Beta). For information about Kubernetes support, see [Supported container orchestrators](#supported-container-orchestrators).
+    > Kubernetes for on-premises Windows Server deployments is still in preview (Beta). For information about Kubernetes support, see [Supported container orchestrators](#supported-container-orchestrators).
 
-- **L2Bridge**: Microsoft supports L2Bridge networks to assign containers to the same IP subnet as the container host. To use L2Bridge networks, your configuration must meet the following requirements:
+- **L2Bridge**: Microsoft supports L2Bridge networks to assign containers to the same IP subnet as the container host. To use L2Bridge networks, your configuration must meet the following requirements:
 
-  - Your container hosts run Windows Server 2019, Windows Server 2016, or Windows 10 Creators Update.
+  - Your container hosts run Windows Server 2019, Windows Server 2016, or Windows 10 Creators Update.
   
   - IP addresses must be assigned statically from the same prefix as the container host.
   
@@ -213,7 +213,7 @@ Microsoft does not support the following features for container networking:
 
 - IPSec encryption for container communication
 
-- HTTP proxy configuration for containers. You can track a preliminary PR for this feature at [Changes to support registry modification in containers](https://github.com/Microsoft/hcsshim/pull/163).
+- HTTP proxy configuration for containers. You can track a preliminary PR for this feature at [Changes to support registry modification in containers](https://github.com/Microsoft/hcsshim/pull/163).
 
 - Attaching endpoints to running Hyper-V containers (hot-add)
 
@@ -227,9 +227,9 @@ Microsoft does not support the following commands and options for Docker:
 
 ## Supported service accounts for containers
 
-Microsoft supports Active Directory group Managed Service Accounts (gMSAs) for containers.
+Microsoft supports Active Directory group Managed Service Accounts (gMSAs) for containers.
 
-Containers cannot be domain-joined. By using Group Managed Service Accounts (gMSAs), Windows containers themselves and the services they host can be configured to use a specific gMSA as their domain identity. Any service running as Local System or Network Service will use the Windows container's identity just like they use the domain-joined host's identity. For information about using gMSAs, see:
+Containers cannot be domain-joined. By using Group Managed Service Accounts (gMSAs), Windows containers themselves and the services they host can be configured to use a specific gMSA as their domain identity. Any service running as Local System or Network Service will use the Windows container's identity just like they use the domain-joined host's identity. For information about using gMSAs, see:
 
 - [Getting Started with Group Managed Service Accounts](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj128431%28v=ws.11%29)
 

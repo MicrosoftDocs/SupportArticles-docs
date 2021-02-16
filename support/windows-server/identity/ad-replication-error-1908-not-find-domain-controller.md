@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Domain join issues
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 1908: Could not find the domain controller for this domain.
 
@@ -27,13 +27,14 @@ _Original KB number:_ &nbsp; 2712026
 
 1. REPADMIN.exe reports that replication attempt has failed with status 1908.  
 
-    REPADMIN commands that commonly cite the 1908 status include but are not limited to:  
-    · REPADMIN /ADD  
-    · REPADMIN /REPLSUM *  
-    · REPADMIN /REHOST  
-    · REPADMIN /SHOWVECTOR /LATENCY  
-    · REPADMIN /SHOWREPS  
-    · REPADMIN /SHOWREPL  
+    REPADMIN commands that commonly cite the 1908 status include but are not limited to:
+
+    - `REPADMIN /ADD`
+    - `REPADMIN /REPLSUM *`
+    - `REPADMIN /REHOST`
+    - `REPADMIN /SHOWVECTOR /LATENCY`
+    - `REPADMIN /SHOWREPS`
+    - `REPADMIN /SHOWREPL`
 
     Sample output from `repadmin /syncall` command:
 

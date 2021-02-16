@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, samirj
 ms.prod-support-area-path: Wireless networking and 802.1X authentication
-ms.technology: Networking
+ms.technology: networking
 ---
 # Configure a L2TP/IPsec server behind a NAT-T device
 

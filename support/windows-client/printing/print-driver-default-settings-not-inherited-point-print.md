@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.prod-support-area-path: Management and Configuration Installing Print drivers
-ms.technology: PrintFaxScan
+ms.technology: windows-client-printing
 ---
 # Print driver default settings are not inherited through "Point and Print" in Windows 10 Version 1709
 
@@ -25,10 +25,10 @@ _Original KB number:_ &nbsp; 4052855
 Consider the following scenario:
 
 - You have a client that is running Windows 10 Version 1709 or Windows Server Version 1709.
-- You have a print server that is running Windows Server 2016, Windows Server 2012, or Windows Server 2012 R2, or Windows Server 2008 R2.
+- You have a print server that is running Windows Server 2016, Windows Server 2012, or Windows Server 2012 R2, or Windows Server 2008 R2.
 - You install printer drivers by using the "Point and Print" process.
 
-In this scenario, the client does not inherit default settings from the print server.
+In this scenario, the client does not inherit default settings from the print server.
 
 ## Cause
 
@@ -41,15 +41,15 @@ To fix this issue, set the printer settings manually on the client following the
 1. Right-click the **Start** button, and then select **Settings**.
 2. Select **Devices**.
 3. In the center of the **Devices** window, select **Devices and printers**.
-4. In the **Devices and Printers**  window, right-click the icon of a printer that you installed from the server computer. Then, select **Printing preferences**.
+4. In the **Devices and Printers**  window, right-click the icon of a printer that you installed from the server computer. Then, select **Printing preferences**.
     > [!Note]
-    > The **Printing Preferences** dialog box opens.
-5. In the dialog box, select the **Advanced**  button.
+    > The **Printing Preferences** dialog box opens.
+5. In the dialog box, select the **Advanced**  button.
     > [!Note]
-    > The **Advanced Options** dialog box opens. You can change the printer settings in this dialog box.
+    > The **Advanced Options** dialog box opens. You can change the printer settings in this dialog box.
 
 ## Status
 
-Microsoft has confirmed that this is an issue in the Microsoft products that are listed in the "Applies to" section.
+Microsoft has confirmed that this is an issue in the Microsoft products that are listed in the "Applies to" section.
 
 This issue has been fixed in Windows 10, version 1803 and Windows Server, version 1803.

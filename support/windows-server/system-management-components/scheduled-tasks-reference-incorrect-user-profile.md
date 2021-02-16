@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, anwill
 ms.prod-support-area-path: Task Scheduler
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # Scheduled tasks reference incorrect user profile paths
 

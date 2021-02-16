@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Performance monitoring tools
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 # You cannot modify user environment variables in the System Properties dialog box if you log on by using a standard user account
 

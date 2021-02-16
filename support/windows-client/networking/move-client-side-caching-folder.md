@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Folder redirection and Offline Files and Folders (CSC)
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Move the client-side caching (CSC) folder to a new location in Windows
 

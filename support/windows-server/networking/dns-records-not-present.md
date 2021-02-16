@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DNS
-ms.technology: Networking  
+ms.technology: networking  
 ---
 # Cumulative list of reasons that cause DNS records to disappear from DNS zones
 
@@ -49,8 +49,6 @@ Scavenging is the most common culprit when DNS records go missing from DNS zones
 
 TechNet: [Using DNS aging and scavenging](https://technet.microsoft.com/library/cc757041%28ws.10%29.aspx)
 
-[KB2211826](https://support.microsoft.com/help/2211826) DNS Aging and Scavenging not removing records AND how to scavenge them as quickly as possible
-
 ### Cause 2: DNS zones are CNF or conflict mangled in Active Directory  
 
 With exceptions, Active Directory allows for any domain controller to originate creating an object in a writable directory partition. When two domain controllers create the same object or container inside a replication window, the directory applies conflict resolution logic to determine which object should remain and which object should be quarantined.
@@ -70,8 +68,6 @@ SRV record loss associated with a mass restart has the same issue with last-writ
 A good solution to this problem is to configure the DNS client on domain controllers point off-box DNS Servers addresses as primary for name resolution. Designate local hub DNS servers per region and have all the DNS servers in that region point that one DNS server. The hublet DNS servers all point to a single DNS server in a tiered hub-and-spoke model. All DNS servers can point themselves as secondary's but not primaries. Because restarts triggered by Windows Update usually occur at 03:00, as long as there's only one hublet DNS server per time zone, you'll never meet this issue.
 
 Check the Active Directory object version on the dnsNode object that contains the missing record. If it's a large number, this might be your issue. A possibility is to move the exclusion of the SRV records to local policy to stop the constant deregistrations.
-
-Update There's a [hotfix for this issue for Windows Server 2008 R2](https://support.microsoft.com/help/2698279).
 
 However, there's an issue with the new behavior. In the new behavior, the SRV records are removed only one time, specifically the first time that the policy is applied. Because the records are non-linked multivalued attribute, a condition can occur where multiple domain controllers remove SRV records on different DNS servers before Active Directory coverage of the zone. When the underlying attribute is fully converged, the last DNS server to receive a deletion is the only version that is kept. Only the records that were removed on that DNS server are removed from the SRV record. The SRV records removed on other DNS servers seem to come back. Manual cleanup may be required after the all domain controllers have applied the GPO and the affected SRV records are fully converged.
 
@@ -112,8 +108,6 @@ Other events are logged for registration failures of host A and PTR records. Che
 This behavior is by design. The DNS records (A record/PTR) are automatically updated during the next DHCP renew request from the client.
 
 ## More information
-
-[KB885279](https://support.microsoft.com/help/885279) Net Logon policies are not applied on a high-speed computer that is a Windows Server 2003-based domain controller
 
 [KB306602](https://support.microsoft.com/help/306602) How to optimize the location of a domain controller or global catalog that resides outside of a client's site
 

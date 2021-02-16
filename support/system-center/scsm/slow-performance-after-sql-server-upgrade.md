@@ -46,7 +46,7 @@ SET COMPATIBILITY_LEVEL = 110
 
 To do this, following these steps:
 
-1. Open SQL Server Configuration Manager and select **SQL Server Services**.
+1. Open SQL Server Configuration Manager and select **SQL Server Services**.
 2. Right-click the instance of SQL Server that you use, select **Properties**, and then select the **Startup Parameters** tab.
 3. Type **-T9481** in the text box, and then select **Add**.
 
@@ -60,37 +60,37 @@ To do this, use the following query:
 ```sql
 IF (0 = @ReturnUserRoleInfo)
  BEGIN
-       INSERT INTO #BaseManagedEntityWithUserRoleInstanceScope
-       SELECT T.[BaseManagedEntityId], T.[UserRoleId], NULL AS [ScopeId]
-       FROM
-       (
-            SELECT E.[BaseManagedEntityId], E.UserRoleId
-            FROM #BaseManagedEntityWithUserRoleOperationTypeScope E
-            INNER JOIN dbo.[RecursiveMembership] as RM
-            ON E.[BaseManagedEntityId] = RM.[ContainedEntityId]
-            INNER JOIN #UserRoleWithScope AS L
-            ON E.[UserRoleId] = L.[UserRoleId]
-            INNER JOIN dbo.[UserRoleGroupType] AS URIS
-            ON (URIS.[GroupId] = RM.[ContainerEntityId] OR (URIS.[GroupId] IS NULL))
-            AND (URIS.TypeId IS NULL)
-            AND (URIS.[ScopeType] = 2 OR URIS.[ScopeType] = 8)
-            AND (URIS.[ScopeId] = L.[ScopeId])
-            UNION ALL
-            SELECT E.[BaseManagedEntityId], E.UserRoleId
-            FROM #BaseManagedEntityWithUserRoleOperationTypeScope E
-            INNER JOIN dbo.[RecursiveMembership] as RM
-            ON E.[BaseManagedEntityId] = RM.[ContainedEntityId]
-            INNER JOIN dbo.[TypedManagedEntity] AS TMECONTAINER
-            ON RM.[ContainerEntityId] = TMECONTAINER.BaseManagedEntityId
-            INNER JOIN dbo.[DerivedManagedTypes] AS DMTCONTAINER
-            ON TMECONTAINER.[ManagedTypeId] = DMTCONTAINER.DerivedTypeId
-            INNER JOIN #UserRoleWithScope AS L
-            ON E.[UserRoleId] = L.[UserRoleId]
-            INNER JOIN dbo.[UserRoleGroupType] AS URIS
-            ON  (URIS.TypeId = DMTCONTAINER.[BaseTypeId])
-            AND (URIS.TypeId IS NOT NULL)
-            AND (URIS.[ScopeType] = 2 OR URIS.[ScopeType] = 8)
-            AND (URIS.[ScopeId] = L.[ScopeId])
+       INSERT INTO #BaseManagedEntityWithUserRoleInstanceScope
+       SELECT T.[BaseManagedEntityId], T.[UserRoleId], NULL AS [ScopeId]
+       FROM
+       (
+            SELECT E.[BaseManagedEntityId], E.UserRoleId
+            FROM #BaseManagedEntityWithUserRoleOperationTypeScope E
+            INNER JOIN dbo.[RecursiveMembership] as RM
+            ON E.[BaseManagedEntityId] = RM.[ContainedEntityId]
+            INNER JOIN #UserRoleWithScope AS L
+            ON E.[UserRoleId] = L.[UserRoleId]
+            INNER JOIN dbo.[UserRoleGroupType] AS URIS
+            ON (URIS.[GroupId] = RM.[ContainerEntityId] OR (URIS.[GroupId] IS NULL))
+            AND (URIS.TypeId IS NULL)
+            AND (URIS.[ScopeType] = 2 OR URIS.[ScopeType] = 8)
+            AND (URIS.[ScopeId] = L.[ScopeId])
+            UNION ALL
+            SELECT E.[BaseManagedEntityId], E.UserRoleId
+            FROM #BaseManagedEntityWithUserRoleOperationTypeScope E
+            INNER JOIN dbo.[RecursiveMembership] as RM
+            ON E.[BaseManagedEntityId] = RM.[ContainedEntityId]
+            INNER JOIN dbo.[TypedManagedEntity] AS TMECONTAINER
+            ON RM.[ContainerEntityId] = TMECONTAINER.BaseManagedEntityId
+            INNER JOIN dbo.[DerivedManagedTypes] AS DMTCONTAINER
+            ON TMECONTAINER.[ManagedTypeId] = DMTCONTAINER.DerivedTypeId
+            INNER JOIN #UserRoleWithScope AS L
+            ON E.[UserRoleId] = L.[UserRoleId]
+            INNER JOIN dbo.[UserRoleGroupType] AS URIS
+            ON  (URIS.TypeId = DMTCONTAINER.[BaseTypeId])
+            AND (URIS.TypeId IS NOT NULL)
+            AND (URIS.[ScopeType] = 2 OR URIS.[ScopeType] = 8)
+            AND (URIS.[ScopeId] = L.[ScopeId])
        ) AS T OPTION (QUERYTRACEON 9481)
 ```
 

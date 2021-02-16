@@ -1,5 +1,5 @@
 ---
-title: SYSPREP and CAPTURE task sequence fails
+title: SYSPREP and CAPTURE task sequence fails with error 0x80070070
 description: Helps fix a 0x80070070 error that occurs when Deployment Toolkit fails to complete sysprep and capture task sequence.
 ms.date: 09/15/2020
 author: Deland-Han 
@@ -11,9 +11,9 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, vineetm
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
-# SYSPREP and CAPTURE task sequence fails with Error: 0x80070070
+# SYSPREP and CAPTURE task sequence fails with error 0x80070070
 
 This article helps fix a 0x80070070 error that occurs when Deployment Toolkit fails to complete sysprep and capture task sequence.
 
@@ -36,15 +36,15 @@ Failed to run the last action: Apply Windows PE. Execution of task sequence fail
 
 In BDD.log we can see following information:
 
---- Applying bootable Windows PE Image -----  
+> --- Applying bootable Windows PE Image -----  
 LTI applying Windows PE  
 Will boot into Windows PE architecture x64 to match OS being deployed.
-Copying `\\Server\Deploymentshare\Boot\LiteTouchPE_x64.wim` to E:\sources.boot.wim  
-MDT was copying the LiteTouchPE.wim to E:\ LiteTouchPE.wim that is the first partition in hard drive.
+Copying \\\\Server\\Deploymentshare\\Boot\\LiteTouchPE_x64.wim to E:\\sources.boot.wim  
+MDT was copying the LiteTouchPE.wim to E:\\LiteTouchPE.wim that is the first partition in hard drive.
 
 ## Cause
 
-By default MDT copies the LiteTouchPE.wim from the deployment share to the first partition (which has a drive letter assigned) in the hard drive to complete the sysprep and capture task sequence. In the above example, the drive letter was assigned as E:\ for 'System Reserved' partition.
+By default MDT copies the LiteTouchPE.wim from the deployment share to the first partition (which has a drive letter assigned) in the hard drive to complete the sysprep and capture task sequence. In the above example, the drive letter was assigned as E:\\ for 'System Reserved' partition.
 
 ## Resolution
 
@@ -58,4 +58,4 @@ To resolve this particular issue, follow the below steps:
 By default Windows 7 is installed from a media or WDS, you will have first partition as 'System Reserved' partition of 100-MB size, on the disk selected (generally disk 0) and it will NOT have a drive letter assigned. If the image is deployed from MDT (2010), then the 'System Reserved' partition will be 300 MB and will be allocated after the OS partition.
 
 How to capture the image using MDT:
-[https://blogs.technet.com/b/askcore/archive/2009/10/06/how-to-run-a-sysprep-and-capture-task-sequence-from-mdt-2010.aspx](https://blogs.technet.com/b/askcore/archive/2009/10/06/how-to-run-a-sysprep-and-capture-task-sequence-from-mdt-2010.aspx)
+[How to run a Sysprep and Capture Task Sequence From MDT 2010](/archive/blogs/askcore/how-to-run-a-sysprep-and-capture-task-sequence-from-mdt-2010)

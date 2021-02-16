@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, wincicadsec, jitha
 ms.prod-support-area-path: Active Directory Certificate Services
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to set up certificate-based authentication across forests without trust for a web server
 
-This article describes how to set up a web server to use smart cards for cross-forest certificate-based authentication when the user forests and the resource forest do not trust one another.
+This article describes how to set up a web server to use smart cards for cross-forest certificate-based authentication when the user forests and the resource forest do not trust one another.
 
 _Original product version:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4509680
@@ -24,19 +24,19 @@ _Original KB number:_ &nbsp; 4509680
 
 Consider an environment that uses the following configuration:
 
-- A user forest that is named `Contoso.com`.
-- A resource forest that is named `Fabrikam.com`. The forest has `Tailspintoys.com` added as an alternate User Principal Name (UPN).
+- A user forest that is named `Contoso.com`.
+- A resource forest that is named `Fabrikam.com`. The forest has `Tailspintoys.com` added as an alternate User Principal Name (UPN).
 - There is no trust between the two forests.
 - User smart cards use certificates that have Subject Alternative Name (SAN) entries of the format `user@tailspintoys.com`.
 - An IIS web server that is configured for Active Directory Certificate Based Authentication.
 
-Configure Active Directory and the web server as described in the following procedures.
+Configure Active Directory and the web server as described in the following procedures.
 
 ## Configure Active Directory
 
 To configure the resource forest to authenticate smart cards, follow these steps:
 
-1. Make sure that a Kerberos Authentication Certificate that has a KDC Authentication extended key usage (EKU) has been issued to the domain controllers.
+1. Make sure that a Kerberos Authentication Certificate that has a KDC Authentication extended key usage (EKU) has been issued to the domain controllers.
 2. Make sure that the Issuing CA certificate of the user's certificate is installed in the Enterprise NTAUTH store.
 
     To publish the Issuing CA certificate in the domain, run the following command at a command prompt:
@@ -47,7 +47,7 @@ To configure the resource forest to authenticate smart cards, follow these steps
 
     In this command, \<filename> represents the name of the CA certificate file, which has a .cer extension.
 
-3. Users must have accounts that use the alternate UPN of the resource forest.
+3. Users must have accounts that use the alternate UPN of the resource forest.
 
     :::image type="content" source="./media/set-up-certificate-based-authentication-across-forest-without-trust/user-account-has-alternate-upn.png" alt-text="Screenshot of User Properties dialog box.":::
 
@@ -79,22 +79,22 @@ To configure the IIS Web server in the resource forest, follow these steps:
 
     :::image type="content" source="./media/set-up-certificate-based-authentication-across-forest-without-trust/set-ssl-settings-to-require.png" alt-text="Screenshot of setting Required SSL.":::
 
-    Make sure that no other authentication type is enabled on the website. We don't recommend enabling Certificate Based Authentication with any other authentication type because the DS Mapper service, which is responsible for mapping the user's presented certificate to the user account in Active Directory, is designed to only work with the **Active Directory Client Certificate Authentication** type. If you enable Anonymous Authentication, you may experience unexpected outcomes.  
+    Make sure that no other authentication type is enabled on the website. We don't recommend enabling Certificate Based Authentication with any other authentication type because the DS Mapper service, which is responsible for mapping the user's presented certificate to the user account in Active Directory, is designed to only work with the **Active Directory Client Certificate Authentication** type. If you enable Anonymous Authentication, you may experience unexpected outcomes.  
 
     :::image type="content" source="./media/set-up-certificate-based-authentication-across-forest-without-trust/other-authentication-types.png" alt-text="Screenshot of other authentication types.":::
 
 ## More information
 
-If you want to set up delegation on this resource web server to query a backend server, such as a database server or a CA, you may also configure constrained delegation by using a custom service account. Additionally, you must set up the web server for constrained delegation (S4U2Self) or protocol transition. For more information, see [How to configure Kerberos Constrained Delegation for Web Enrollment proxy pages](/troubleshoot/windows-server/identity/configure-kerberos-constrained-delegation).
+If you want to set up delegation on this resource web server to query a backend server, such as a database server or a CA, you may also configure constrained delegation by using a custom service account. Additionally, you must set up the web server for constrained delegation (S4U2Self) or protocol transition. For more information, see [How to configure Kerberos Constrained Delegation for Web Enrollment proxy pages](/troubleshoot/windows-server/identity/configure-kerberos-constrained-delegation).
 
 If you want to skip the UPN in the SAN attribute of the user smart card certificate, you have to either explicitly map by using [AltSecID attributes](/previous-versions/dotnet/articles/bb905527%28v=msdn.10%29#BKMK_ClientCertificate.), or use [name hints](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff404287%28v=ws.10%29).
 
 > [!NOTE]
 > We do not recommend this approach to configuring smart card certificates.
 
-If you publish the SAN attribute as the intended UPN in the user's certificate, you should not enable AltSecID.
+If you publish the SAN attribute as the intended UPN in the user's certificate, you should not enable AltSecID.
 
-To check the NTAuth store on the web server, open a Command Prompt window and run the following command:
+To check the NTAuth store on the web server, open a Command Prompt window and run the following command:
 
 ```console
 Certutil -viewstore -enterprise NTAUTH

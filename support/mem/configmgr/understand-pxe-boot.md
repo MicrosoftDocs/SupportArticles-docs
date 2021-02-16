@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4468601
 
 ## Introduction
 
-Preboot Execution Environment (PXE) boot in System Center 2012 Configuration Manager (ConfigMgr 2012 or ConfigMgr 2012 R2) and later versions enables administrators to easily access the Windows Preinstallation Environment (WinPE) across the network via PXE. PXE is an industry standard created by Intel that provides pre-boot services within the devices firmware that enables devices to download network boot programs to client computers.
+Preboot Execution Environment (PXE) boot in System Center 2012 Configuration Manager (ConfigMgr 2012 or ConfigMgr 2012 R2) and later versions enables administrators to easily access the Windows Preinstallation Environment (WinPE) across the network via PXE. PXE is an industry standard created by Intel that provides pre-boot services within the devices firmware that enables devices to download network boot programs to client computers.
 
 Configuration Manager relies on the Windows Deployment Services (WDS) server role via the WDS PXE provider. In ConfigMgr 2012 and later versions, the SMS PXE provider (SMSPXE) registers with the WDS service and supplies the logic for the PXE client requests.
 
@@ -141,7 +141,7 @@ The `REMINST` share is created and WDS is configured:
 > [66C][Thu 09/04/2014 11:32:03]:Installed PXE
 
 On the remote DP, we can now see the following values added in `HKEY_LOCAL_MACHINE\Software\Microsoft\SMS\DP`:
-  
+
 ![Values added in registry](./media/understand-pxe-boot/18496_en_1.png)
 
 > [!NOTE]
@@ -162,7 +162,7 @@ The Distribution Point should now be PXE-enabled and ready to accept incoming re
 
 Whenever a new PXE-enabled distribution point is configured, there are additional steps that need to be completed to enable full functionality. One of these is that you must distribute the x86 and x64 boot images to the new PXE-enabled DP.
 
-To do this, navigate to **Software Library** > **Operating Systems** > **Boot Images** > **Boot Image (x86)**, and then right-click and select **Distribute Content** > **Add the Boot Image to the PXE enabled DP**. Repeat this process for **Boot Image (x64)**.
+To do this, navigate to **Software Library** > **Operating Systems** > **Boot Images** > **Boot Image (x86)**, and then right-click and select **Distribute Content** > **Add the Boot Image to the PXE enabled DP**. Repeat this process for **Boot Image (x64)**.
 
 Once this is done, Distribution Manager will start processing the request and initiate the distribution to the remote DP:
 
@@ -225,7 +225,7 @@ SMSPXE discovers the new image:
 > PXE::CBootImageManager::InstallBootFilesForImage  
 > Temporary path to copy extract files from: C:\RemoteInstall\SMSTempBootFiles\RR200004.
 
-Make sure that these boot images are configured to deploy from the PXE-enabled DP. Right-click the boot image and select **Properties** > **Data Source**, and then select **Deploy this boot image from the PXE-enabled distribution point**.
+Make sure that these boot images are configured to deploy from the PXE-enabled DP. Right-click the boot image and select **Properties** > **Data Source**, and then select **Deploy this boot image from the PXE-enabled distribution point**.
 
 ## The PXE boot process
 
@@ -242,7 +242,7 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
 
    The PXE client then identifies the vendor and machine-specific information so that it can request the location and file name of the appropriate boot image file.
 
-2. The DHCP server and the PXE-enabled DP then send a **DHCPOFFER** to the client containing all of the relevant TCP/IP parameters.
+2. The DHCP server and the PXE-enabled DP then send a **DHCPOFFER** to the client containing all of the relevant TCP/IP parameters.
 
    In the example DHCP offer below, it doesn't contain the server name or boot file information because this is the offer from the DHCP server rather than the PXE enabled DP.
 
@@ -253,7 +253,7 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
 
    ![DHCPACK contains the same details as the DHCPOFFER](./media/understand-pxe-boot/18499_en_3.png)
 
-5. At this point, we still don't have the boot file information, however now the client has an IP address. Next, the PXE client sends a new **DHCPREQUEST** to the PXE-enabled DP after receiving a **DHCPOFFER** from the earlier **DHCPDISCOVER** broadcast.
+5. At this point, we still don't have the boot file information, however now the client has an IP address. Next, the PXE client sends a new **DHCPREQUEST** to the PXE-enabled DP after receiving a **DHCPOFFER** from the earlier **DHCPDISCOVER** broadcast.
 6. The PXE-enabled DP sends a **DHCPACK** that contains the BootFileName location and the WDS network boot program (NBP).
 
    ![DHCPACK contains BootFileName and WDS network boot program](./media/understand-pxe-boot/18500_en_3.png)
@@ -315,7 +315,7 @@ In the PXE boot process, the client must first acquire TCP/IP parameters and the
 Once WinPE has booted, the TS boot shell is initiated from the SMS folder that's included in the WinPE image (this folder is injected into the boot WIM when it's imported into Configuration Manager). You can see this process logged in **SMSTS.log** that's located under `X:\Windows\Temp\SMSTS\`.
 
 > [!TIP]
-> To access this login WinPE, enable the command prompt on the boot image. To do this, right-click **Boot Image** > **Properties** > **Customization**, and then check **Enable command support (testing only)**. You can then access the command prompt by pressing F8 in WinPE.
+> To access this login WinPE, enable the command prompt on the boot image. To do this, right-click **Boot Image** > **Properties** > **Customization**, and then check **Enable command support (testing only)**. You can then access the command prompt by pressing F8 in WinPE.
 
 Here is the initial TS boot shell process:
 
@@ -346,7 +346,7 @@ Followed by the Task Sequence Manager boot strap:
 > Succeeded loading resource DLL 'X:\sms\bin\i386\1033\TSRES.DLL'  
 > Succeeded loading resource DLL 'X:\sms\bin\i386\TSRESNLC.DLL'  
 > Current OS version is 6.2.9200.0  
-> Adding SMS bin folder "X:\sms\bin\i386" to the system environment PATH  
+> Adding SMS bin folder "X:\sms\bin\i386" to the system environment PATH  
 > PXE Boot with Root = X:\\  
 > Executing from PXE in WinPE  
 > Loading TsPxe.dll from X:\sms\bin\i386\TsPxe.dll

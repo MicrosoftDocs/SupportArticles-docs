@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, austinm
 ms.prod-support-area-path: WinRM
-ms.technology: SysManagementComponents
+ms.technology: windows-client-system-management-components
 ---
 # How to configure WINRM for HTTPS
 

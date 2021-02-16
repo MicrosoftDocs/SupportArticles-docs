@@ -28,6 +28,9 @@ This issue occurs if a binary is from a different version of Windows than the op
 
 ## Resolution
 
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+
 To fix the issue, follow these steps.
 
 ### Step 1: Attach the OS disk of the VM to another VM as a data disk

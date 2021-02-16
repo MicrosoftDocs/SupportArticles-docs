@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory Certificate Services
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Version 3 (CNG) templates won't appear in Windows Server 2008 or Windows Server 2008 R2 certificate web enrollment
 

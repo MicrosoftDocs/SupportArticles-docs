@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jerrycif
 ms.prod-support-area-path: Certificate management
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # RDS Connection Broker or RDMS fails after you disable TLS 1.0 in Windows Server
 

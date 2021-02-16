@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Virtual Desktop Infrastructure (VDI)
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Server 2012 VDI collection require two-way trust when adding user group of external domain
 

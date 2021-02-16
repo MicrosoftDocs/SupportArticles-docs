@@ -11,7 +11,8 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Storage hardware
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
+adobe-target: true
 ---
 # USB Device not recognized error when you try to access a USB external hard drive
 

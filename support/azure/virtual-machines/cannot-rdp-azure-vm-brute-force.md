@@ -12,7 +12,7 @@ Open ports on Internet-facing virtual machines are targets for brute force attac
 
 ## Symptoms
 
-1. When you make a Remote Desktop Protocol (RDP) connection to a Window VM in Azure, you may receive the following general error messages:
+1. When you make a Remote Desktop Protocol (RDP) connection to a Windows VM in Azure, you may receive the following general error messages:
 
     - An internal error has occurred.
     - Remote Desktop Services session has ended. Your network administrator might have ended the connection. Try connecting again, or contact technical support for assistance.

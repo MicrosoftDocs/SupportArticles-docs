@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Modern, Inbox and Microsoft Store Apps
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # Error message in the Xbox Music app, Windows Media Player, Groove Music, or Movies &TV when you wake a Windows 10-based or Windows 8-based computer
 

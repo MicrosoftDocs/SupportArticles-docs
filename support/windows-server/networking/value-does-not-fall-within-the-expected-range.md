@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, takondo, fanx
 ms.prod-support-area-path: DFSR
-ms.technology: Networking
+ms.technology: networking
 ---
 # Error "Value does not fall within the expected range" when changing a DFS replication group or namespace in Windows Server 2016 or Windows Server 2012 R2
 
@@ -22,14 +22,14 @@ _Original KB number:_ &nbsp; 4049095
 
 ## Symptoms
 
-You install the .NET Framework 4.7 on a computer that has Windows Server 2016 or Windows Server 2012 R2 installed. When you try to do one of the following operations in the DFS Management console, you receive a "Value does not fall within the expected range." error message:
+You install the .NET Framework 4.7 on a computer that has Windows Server 2016 or Windows Server 2012 R2 installed. When you try to do one of the following operations in the DFS Management console, you receive a "Value does not fall within the expected range." error message:
 
 - Create a new replication group and add (select **Add**) servers to the new replication group.
 - Add a new member to an existing replication group and search (select **Browse**) for a server that you want to add.
 - Create or edit a new namespace and search (select **Browse**) for a server that you want to add.
 
 > [!NOTE]
-> This issue also occurs when your computer contains the CLR.dll version 4.7.2102.0, even if you have not installed the .NET Framework 4.7.
+> This issue also occurs when your computer contains the CLR.dll version 4.7.2102.0, even if you have not installed the .NET Framework 4.7.
 
 ## Resolution
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jaysenb, delhan
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Error when you upgrade to Windows Storage Server 2016 or Windows Server 2016: Windows cannot verify the digital signature for this file
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 3193460
 
 ## Symptoms
 
-When you try to upgrade the system to Windows Storage Server 2016 or Windows Server 2016, the process fails at 95 percent completion, and you receive the following error message:
+When you try to upgrade the system to Windows Storage Server 2016 or Windows Server 2016, the process fails at 95 percent completion, and you receive the following error message:
 
 > The following errors(s) occurred:  
 Windows cannot verify the digital signature for this file. A recent hardware or software change might have installed a file that is signed incorrectly or damaged, or that might be malicious software form an unknown source An error occurred during automated setup. You must configure your nodes(s) manually.

@@ -1,6 +1,11 @@
 - name: Welcome
   href: welcome-windowsdeveloper.md
 
+- name: General
+  items:
+  - name: Description of Windows Mobile Device Center
+    href: description-of-windows-mobile-device-center.md
+
 - name: Windows SDK
   items:
   - name: Component development
@@ -17,6 +22,8 @@
     items:
     - name: Call Shell APIs from a multithreaded apartment
       href: shell-functions-multithreaded-apartment.md
+    - name: East Asian first character isn't recognized
+      href: east-asian-first-character-not-recognized.md
     - name: GetMessage ignores messages
       href: getmessage-ignores-posted-messages.md
     - name: SystemParametersInfo works incorrectly
@@ -27,6 +34,8 @@
       href: icon-overlay-handlers-windows-shell.md
     - name: IME crashes with cross-thread sent messages
       href: ime-crash-processing-cross-thread-sent-message.md
+    - name: PathIsDirectory may be blocked when called by a UNC server
+      href: pathisdirectory-may-blocked.md
     - name: Screen Saver command line arguments
       href: screen-saver-command-line.md
     - name: Warning 1946 when you install an Installer package
@@ -57,6 +66,8 @@
       href: dxgi-cannot-draw-cursor.md
     - name: Former MIDI API causes applications to hang
       href: midi-device-app-hangs.md
+    - name: GDI APIs may fail when large pages are used
+      href: gdi-apis-may-fail-when-large-pages-used.md
     - name: Get status of printer and print job
       href: printer-print-job-status.md
     - name: Interoperability between GDI and GDI+
@@ -89,6 +100,10 @@
       href: close-non-blocked-socket-memory-leak.md
     - name: Send small data packets over TCP by using Winsock
       href: data-segment-tcp-winsock.md
+    - name: Use the DnsQuery to resolve host names
+      href: use-dnsquery-resolve-host-names.md
+    - name: Win32_NetworkAdapterConfiguration class is unable to retrieve information
+      href: win32-networkadapterconfiguration-unable-retrieve-information.md
   - name: Security development
     items:
     - name: Changing krbtgt password fails
@@ -123,7 +138,11 @@
       href: setsystemtimeadjustment-less-than-16.md
     - name: Troubleshoot errors in Event Viewer
       href: troubleshoot-event-message-not-found.md
+    - name: User32.dll or Kernel32.dll does not initialize
+      href: user32-kernel32-not-initialize.md
   - name: Windows administration and management development
     items:
+    - name: Change Windows Active Directory user password through LDAP
+      href: change-windows-active-directory-user-password.md
     - name: MSI packages fail to run
       href: msi-packages-wmi-queries-cannot-run.md

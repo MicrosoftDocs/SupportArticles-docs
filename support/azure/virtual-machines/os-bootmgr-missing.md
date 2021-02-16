@@ -31,6 +31,9 @@ There are several reasons this error could occur:
 
 ## Solution
 
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+
 ### Process overview
 
 1. Create and access a Repair VM.
@@ -43,6 +46,9 @@ There are several reasons this error could occur:
 > When encountering this error, the Guest OS is not operational. Troubleshoot this issue in offline mode to resolve this issue.
 
 ### Create and access a repair VM
+
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 1. Use steps 1-3 of the [VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands) to prepare a Repair VM.
 1. Using Remote Desktop Connection, connect to the Repair VM.
@@ -113,7 +119,7 @@ Verify the OS partition which holds the BCD store for the disk is marked as acti
 
       2. Write down the identifier of the Windows Boot loader. This identifier is the one with the path `\windows\system32\winload.exe`.
 
-         ![Mitigation 2 - Windows Identifier 1](media/os-bootmgr-missing/6-boot configuration data-windows-identifier.png)
+         ![Mitigation 2 - Windows Identifier 1](media/os-bootmgr-missing/6-boot-configuration-data-windows-identifier.png)
 
    2. For Generation 2 VM:
 

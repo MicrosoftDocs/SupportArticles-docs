@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Windows OOBE fails when you start a new Windows-based computer for the first time
 
@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 4020048
 ## Symptoms
 
 When you start a new Windows-based computer for the first time, the Windows Out-Of-Box Experience (OOBE) process guides you through various setup operations. In rare cases, you may encounter one of the following issues during OOBE.
-  
+  
 ### Issue 1  
 
 Windows OOBE displays the following error message:
@@ -31,17 +31,17 @@ Windows OOBE displays the following error message:
 
 ### Issue 2  
 
-Windows OOBE does not transition to the next page, and you receive a "Just a moment..." prompt for an extended time.
+Windows OOBE does not transition to the next page, and you receive a "Just a moment..." prompt for an extended time.
 
 ## Cause
 
-This issue occurs because the specific timing of the OOBE process causes a deadlock situation. This issue does not involve hardware, and you can easily fix it.
+This issue occurs because the specific timing of the OOBE process causes a deadlock situation. This issue does not involve hardware, and you can easily fix it.
 
 ## Workaround
 
-For Issue 1 ("Something went wrong - But you can try again"), click **Try again**  at the bottom of the screen. The OOBE process should continue as expected.
+For Issue 1 ("Something went wrong - But you can try again"), click **Try again**  at the bottom of the screen. The OOBE process should continue as expected.
 
-For Issue 2 ("Just a moment..."), press and hold the power button until the system turns off, and then turn on the system again. The OOBE process should resume and complete as expected.
+For Issue 2 ("Just a moment..."), press and hold the power button until the system turns off, and then turn on the system again. The OOBE process should resume and complete as expected.
 
 ## More information
 

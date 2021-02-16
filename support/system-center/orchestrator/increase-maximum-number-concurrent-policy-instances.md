@@ -26,7 +26,7 @@ Increasing the Desktop Heap is a Windows system wide change and requires a reboo
 
 ## Increase Desktop Heap
 
-Opalis Integration Server processes all use varying amounts of Desktop Heap depending on which objects and how many objects exist in each policy. As a guideline, calculations are set on the basis of each policymodule.exe consuming 10 KB of Desktop Heap. As outlined in [User32.dll or Kernel32.dll does not initialize](https://support.microsoft.com/help/184802/), Desktop Heap for the non-interactive desktops is identified by the third parameter of the `SharedSection=` segment of the following registry value:
+Opalis Integration Server processes all use varying amounts of Desktop Heap depending on which objects and how many objects exist in each policy. As a guideline, calculations are set on the basis of each policymodule.exe consuming 10 KB of Desktop Heap. As outlined in [User32.dll or Kernel32.dll does not initialize](https://support.microsoft.com/help/184802/), Desktop Heap for the non-interactive desktops is identified by the third parameter of the `SharedSection=` segment of the following registry value:
 
 `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\SubSystems\Windows`
 
@@ -42,7 +42,7 @@ Example: If it's desired to have 100 concurrent policy instances, then **100 * 1
 
 **SharedSection=1024,3072,1024**
 
-Because the Service Control Manager creates a new desktop in the noninteractive window station for every service process that is running under a user account, a larger desktop value for the third parameter of the `SharedSection=` segment will reduce the number of user account services that can run successfully on the system.
+Because the Service Control Manager creates a new desktop in the noninteractive window station for every service process that is running under a user account, a larger desktop value for the third parameter of the `SharedSection=` segment will reduce the number of user account services that can run successfully on the system.
 
 ## Increase maximum concurrent policy instances
 

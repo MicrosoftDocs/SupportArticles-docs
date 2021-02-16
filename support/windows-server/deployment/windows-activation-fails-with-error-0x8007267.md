@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, deepaksr, kledman
 ms.prod-support-area-path: Activation
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Windows Activation fails with error code: 0x8007267C
 
@@ -32,15 +32,15 @@ This issue will occur if the machine attempting to activate does not have a DNS 
 No DNS servers configured for local system  
 DNS_ERROR_NO_DNS_SERVERS
 
-## Resolution 1:  Register DNS server in the network properties and test name resolution
+## Resolution 1:  Register DNS server in the network properties and test name resolution
 
 To resolve this problem, client connectivity to a DNS server must be resolved. The following steps may help to expose the problem:
 
-1. On the client getting the error, open a command prompt and run `IPCONFIG /all`.
+1. On the client getting the error, open a command prompt and run `IPCONFIG /all`.
 2. Verify the assigned IP address, subnet mask, DNS server and default gateway are set with the correct values for your environment.
 3. Verify basic IP connectivity to the DNS Server using the PING command using the address of the DNS server from step 1.  
 
-    `ping <DNS Server IP address>`
+    `ping <DNS Server IP address>`
 
 If connectivity to the DNS server is failing, consider using the following as a guide to troubleshoot further:
 
@@ -52,12 +52,12 @@ After resolving the connectivity issues to the DNS server, reattempt activation 
 cscript \windows\system32\slmgr.vbs -ato
 ```
 
-## Resolution 2:  Use a MAK (multiple activation key) and phone based activation
+## Resolution 2:  Use a MAK (multiple activation key) and phone based activation
 
-If you do not have a DNS server connected to the network, you can switch to a MAK product key to activate your volume license installation. If you are using MSDN media or TechNet media, you must change the product key to the product key provided. The MSDN product key or the TechNet product key for Windows Server 2008 or for Windows Vista Enterprise is the MAK product key.  
+If you do not have a DNS server connected to the network, you can switch to a MAK product key to activate your volume license installation. If you are using MSDN media or TechNet media, you must change the product key to the product key provided. The MSDN product key or the TechNet product key for Windows Server 2008 or for Windows Vista Enterprise is the MAK product key.  
 
-Use the following command to change the product key to the MAK product key:
+Use the following command to change the product key to the MAK product key:
 
 `slmgr -ipk xxxxx-xxxxx-xxxxx-xxxxx-xxxxx-xxxxx`
 
-Then, launch the phone activation wizard to complete the activation of the machine *slui 04*.
+Then, launch the phone activation wizard to complete the activation of the machine *slui 04*.

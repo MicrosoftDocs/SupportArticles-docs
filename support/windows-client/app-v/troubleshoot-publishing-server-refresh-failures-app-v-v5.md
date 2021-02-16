@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
 ms.prod-support-area-path: 
-ms.technology: Application Virtulization (App-V)
+ms.technology: windows-client-application-virtualization-app-v
 ---
 # How to troubleshoot publishing server refresh failures in App-V v5
 

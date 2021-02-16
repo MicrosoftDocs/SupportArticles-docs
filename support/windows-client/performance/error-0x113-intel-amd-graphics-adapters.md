@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, chadbee, tidavis
 ms.prod-support-area-path: Blue Screen/Bugcheck
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
 # Stop error 0x113 if you use Intel and AMD graphics adapters on a Windows 8.1-based computer
 

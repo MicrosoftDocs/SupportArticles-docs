@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # How to do an in-place upgrade on Windows 7
 
-If you've already done the emergency repair process and the computer still doesn't operate normally, you may want to do a repair or in-place upgrade of the existing installation.
+After you've done the emergency repair process, the computer still doesn't operate normally. In this situation, you may want to do a repair or in-place upgrade of the existing installation.
 
 _Original product version:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2255099
@@ -29,10 +29,10 @@ An in-place upgrade is the final alternative before you have to reinstall the op
 
 ## How to do a repair installation of Windows 7
 
-Doing a repair installation will restore the current Windows installation to the version of the installation DVD. This also requires the installation of all updates that aren't included on the installation DVD.
+A repair installation will restore the current Windows installation to the version of the installation DVD. It also requires the installation of all updates that aren't included on the installation DVD.
 
 > [!NOTE]
-> Doing a repair installation will not damage files and applications that are currently installed on your computer.
+> A repair installation won't damage files and applications that are currently installed on your computer.
 
 To do a repair installation of Windows 7, follow these steps:
 
@@ -43,7 +43,7 @@ To do a repair installation of Windows 7, follow these steps:
     > [!NOTE]
     > If Windows does not automatically detect the DVD, follow these steps:
 
-      1. Select **Start**, and then type *Drive:\setup.exe* in the **Start Search** box.
+      1. Select **Start**, and then type *`Drive:\setup.exe`* in the **Start Search** box.
 
          > [!NOTE]
          > The *Drive* placeholder is the drive letter of the computer's DVD drive.
@@ -52,7 +52,7 @@ To do a repair installation of Windows 7, follow these steps:
       3. In the **Setup** window, select **Install Now**.
 
 4. Select **Go online to obtain the latest updates for installation (recommended)**.
-5. Type the CD key if you're prompted to do this.
+5. Type the CD key if you're prompted.
 6. Select the operating system in **Install Windows** page you want to **Upgrade** or **Inplace**.
 7. select **Yes** to accept the Microsoft Software License Terms.
 8. On the **Which type of installation do you want?** screen, select **Upgrade**.

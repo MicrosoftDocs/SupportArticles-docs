@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle, rolandw, aconkle, 
 ms.prod-support-area-path: Domain controller scalability or performance (including LDAP)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Windows Server 2008 and newer domain controller returns only 5000 values in an LDAP response
 

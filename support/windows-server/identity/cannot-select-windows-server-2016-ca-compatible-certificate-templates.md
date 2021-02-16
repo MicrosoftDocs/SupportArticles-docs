@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, v-tea, evalan 
 ms.prod-support-area-path: Active Directory Certificate Services
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Cannot select Windows Server 2016 CA-compatible certificate templates from Windows Server 2016 or later-based CAs or CEP servers
 
@@ -24,9 +24,9 @@ _Original KB number:_ &nbsp; 4508802
 
 Consider either of the following scenarios:
 
-- You configure a Windows Server 2016-based certificate enrollment policy (CEP) server or certificate enrollment server (CES).
-- You install a new Windows Server 2016 Certification Authority (CA).
-- You configure the compatibility settings of a certificate template by setting **Certification Authority** to **Windows Server 2016** and **Certificate recipient** to **Windows 10 / Windows Server 2016**.
+- You configure a Windows Server 2016-based certificate enrollment policy (CEP) server or certificate enrollment server (CES).
+- You install a new Windows Server 2016 Certification Authority (CA).
+- You configure the compatibility settings of a certificate template by setting **Certification Authority** to **Windows Server 2016** and **Certificate recipient** to **Windows 10 / Windows Server 2016**.
 
     ![Compatiblity tab of a certificate template, showing the compatibility level set to Windows Server 2016 and Windows 10.](./media/cannot-select-windows-server-2016-ca-compatible-certificate-templates/compatibility-settings-of-a-certificate-template.png)
 
@@ -34,7 +34,7 @@ When Windows 10 users try to request certificates by using the CA Web enrollment
 
 ## Cause
 
-This is a known issue in Windows Server 2016 and later versions. The CEP or CES server provides certificate templates only to clients that have the following compatibility settings:
+This is a known issue in Windows Server 2016 and later versions. The CEP or CES server provides certificate templates only to clients that have the following compatibility settings:
 
 - **Certification Authority**: Windows Server 2012 R2 or an earlier version
 - **Certificate recipient**: Windows 8.1 (or an earlier version) and Windows Server 2012 R2 (or an earlier version)
@@ -43,14 +43,14 @@ This is a known issue in Windows Server 2016 and later versions. The CEP or CES
 
 To work around this issue, follow these steps:
 
-1. Configure the compatibility settings of the certificate template as follows:
+1. Configure the compatibility settings of the certificate template as follows:
    - **Certificate Authority**: **Windows Server 2012 R2**  
    - **Certificate recipient**: **Windows 8.1 / Windows Server 2012 R2**  
 
     ![Compatiblity tab of a certificate template, showing the compatibility level set to Windows Server 2012 R2 and Windows 8.1.](./media/cannot-select-windows-server-2016-ca-compatible-certificate-templates/compatibility-settings-certificate-template.png)
 
 2. Wait 30 minutes for the CEP server to receive the updated template information (or use the IISReset tool to restart the server).
-3. On the client computer, clear the client-side Enrollment Policy Cache by using the following command in a Command Prompt window:
+3. On the client computer, clear the client-side Enrollment Policy Cache by using the following command in a Command Prompt window:
 
     ```console
      certutil -f -policyserver * -policycache delete

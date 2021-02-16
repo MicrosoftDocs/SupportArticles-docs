@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Command-line switches that are supported by a software installation package, an update package, or a hotfix package that was created by using Microsoft Self-Extractor
 

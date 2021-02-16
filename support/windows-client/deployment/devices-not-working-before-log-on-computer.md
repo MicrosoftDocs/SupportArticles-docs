@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, ajayps, arrenc, v-phoebh
 ms.prod-support-area-path: Devices and Drivers
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Devices are not working before you log on a computer that's running Windows 10
 
@@ -56,7 +56,7 @@ This issue may occur in either of the following conditions:
     When system firmware incorrectly clears the BME bit for internal devices during startup, those devices are blocked until a successful user logon.
 2. Device drivers cannot handle the BME bit locked by the OS until a user logs on.
 
-    The **Disable new DMA devices when this computer is locked** policy is applied intermittently on Windows 10 Version 1703 computers in specific scenarios. Windows 10, version 1709 computers consistently apply that policy, and this causes firmware or driver issues.
+    The **Disable new DMA devices when this computer is locked** policy is applied intermittently on Windows 10 Version 1703 computers in specific scenarios. Windows 10, version 1709 computers consistently apply that policy, and this causes firmware or driver issues.
 
 ## More information
 

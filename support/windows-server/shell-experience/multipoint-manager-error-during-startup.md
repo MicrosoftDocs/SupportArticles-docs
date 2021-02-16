@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Desktop Shell
-ms.technology: ShellExperience
+ms.technology: windows-server-shell-experience
 ---
 # Error when you start Multipoint Manager in Windows Server 2016
 

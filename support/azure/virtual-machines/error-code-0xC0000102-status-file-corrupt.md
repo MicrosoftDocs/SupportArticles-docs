@@ -28,6 +28,9 @@ Error 0xC0000102 is a STATUS_FILE_CORRUPT_ERROR, which means a corrupted file is
 
 ## Solution
 
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+
 To resolve this issue, follow these steps:
 
 1.	Create and Access a Repair VM

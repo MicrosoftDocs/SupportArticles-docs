@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Group Policy management - GPMC or AGPM
-ms.technology: GroupPolicy
+ms.technology: windows-client-group-policy
 ---
 # Can't disable Microsoft Store in Windows 10 Pro through Group Policy
 
@@ -30,4 +30,4 @@ On a computer that's running Windows 10 Pro, you upgrade to Windows 10, version 
 
 ## Cause
 
-This behavior is by design. In Windows 10, version 1511, Windows 10, version 1809, and Windows 10, version 1903, these policies are applicable to users of the Enterprise and Education editions only.
+This behavior is by design. In Windows 10, version 1511, Windows 10, version 1809, and Windows 10, version 1903, these policies are applicable to users of the Enterprise and Education editions only.

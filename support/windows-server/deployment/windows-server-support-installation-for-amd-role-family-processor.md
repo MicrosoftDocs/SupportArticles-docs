@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Windows Server support and installation instructions for the AMD Rome family of processors
 
@@ -28,14 +28,14 @@ _Original KB number:_ &nbsp; 4514607
 
 - Windows Server 2016
 
-    Windows Server 2016 supports AMD EPYC 7xx2-series CPUs. The support is limited to no more than 255 logical processors. Windows Server 2016 does not support X2APIC mode, and you should disable this mode in the computer's basic input/output system (BIOS).
+    Windows Server 2016 supports AMD EPYC 7xx2-series CPUs. The support is limited to no more than 255 logical processors. Windows Server 2016 does not support X2APIC mode, and you should disable this mode in the computer's basic input/output system (BIOS).
 
 - Windows Server 2012 R2
 
-    Windows Server 2012 R2 supports AMD EPYC 7xx2-series CPUs. The support is limited to no more than 255 logical processors. Windows Server 2012 R2 does not support X2APIC mode, and you should disable this mode in the computer's BIOS.
+    Windows Server 2012 R2 supports AMD EPYC 7xx2-series CPUs. The support is limited to no more than 255 logical processors. Windows Server 2012 R2 does not support X2APIC mode, and you should disable this mode in the computer's BIOS.
 
     > [!NOTE]
-    > Windows Server 20012 R2 is in [extended support cycle](/lifecycle/products/?alpha=Windows%20Server%202012%20R2). We recommend that you upgrade to the latest modern Windows Server 2019 operating system.
+    > Windows Server 20012 R2 is in [extended support cycle](/lifecycle/products/?alpha=Windows%20Server%202012%20R2). We recommend that you upgrade to the latest modern Windows Server 2019 operating system.
 
 ## AMD Processor SKU support
 
@@ -59,7 +59,7 @@ The following table lists support for each AMD processor SKU and Windows Server 
 
 ## Install Windows Server on a computer that uses AMD EPYC 7xx2 (AMD Rome) processors
 
-To install Windows Server on a computer that uses AMD EPYC 7xx2 (AMD Rome) processors, follow these steps:
+To install Windows Server on a computer that uses AMD EPYC 7xx2 (AMD Rome) processors, follow these steps:
 
 1. In the computer's BIOS, disable the SMT settings (such as the logical processors setting).
 2. In the computer's BIOS, disable the X2APIC setting.
@@ -76,7 +76,7 @@ To install Windows Server on a computer that uses AMD EPYC 7xx2 (AMD Rome) proc
 
 - Task Manager displays an incorrect number of sockets.
 
-    For example, for a single-CPU one-socket system, Task Manager displays two sockets. For a two-socket system, Task Manager displays four sockets.
+    For example, for a single-CPU one-socket system, Task Manager displays two sockets. For a two-socket system, Task Manager displays four sockets.
 
 - Task manager displays an incorrect number of Numa nodes.
 

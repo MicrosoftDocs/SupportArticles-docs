@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, danma
 ms.prod-support-area-path: File Associations
-ms.technology: ShellExperience
+ms.technology: windows-client-shell-experience
 ---
 # Sometimes you cannot associate a program with an extension in Windows 7
 

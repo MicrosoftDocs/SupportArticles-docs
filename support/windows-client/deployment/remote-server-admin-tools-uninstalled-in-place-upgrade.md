@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jeffbo, warrenw
 ms.prod-support-area-path: setup
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Windows 10 Remote Server Admin Tools is uninstalled during in-place upgrade
 

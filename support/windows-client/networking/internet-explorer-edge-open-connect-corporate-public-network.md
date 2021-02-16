@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-tea, v-jesits, dantes, arrenc
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # An Internet Explorer or Edge window opens when your computer connects to a corporate network or a public network
 
@@ -32,7 +32,7 @@ You notice the following behavior:
 - The default browser (for example, **Internet Explorer** or **Edge**) opens, and shows a web page such as a sign-in page for the network or the MSN portal page.
 - The network icon on the Task Bar shows an alert symbol (for example,:::image type="content" source="./media/internet-explorer-edge-open-connect-corporate-public-network/network-status-alert.png" alt-text="Network status alert" border="false":::). If you hover over the icon, you see a message such as "No connectivity" or "Limited Internet access."
 
-After you sign in to the network, you can use the network in the usual manner. After you use the network for a few seconds, the network alert on the Task Bar disappears.
+After you sign in to the network, you can use the network in the usual manner. After you use the network for a few seconds, the network alert on the Task Bar disappears.
 
 ## Cause
 
@@ -40,9 +40,9 @@ This behavior is by design.
 
 ## More information
 
-Windows uses the Network Location Awareness (NLA) service to detect the properties of a network and determine how to manage connections to that network. NLA uses a component that is named the Network Connectivity Status Indicator (NCSI) to determine whether the computer has successfully connected to the network, and whether the network has intranet or internet connectivity.
+Windows uses the Network Location Awareness (NLA) service to detect the properties of a network and determine how to manage connections to that network. NLA uses a component that is named the Network Connectivity Status Indicator (NCSI) to determine whether the computer has successfully connected to the network, and whether the network has intranet or internet connectivity.
 
-NCSI uses both active and passive probes. These probes are triggered by changes in any of the network interfaces. When you connect your computer to a network as described in the [Symptoms](#symptoms)  section, NCSI begins a process that includes one or more of the following:
+NCSI uses both active and passive probes. These probes are triggered by changes in any of the network interfaces. When you connect your computer to a network as described in the [Symptoms](#symptoms)  section, NCSI begins a process that includes one or more of the following:
 
 - [NCSI active probes and the network status alert](#ncsi-active-probes-and-the-network-status-alert)
 - [Authentication and the automatic sign-in page](#authentication-and-the-automatic-sign-in-page)
@@ -54,7 +54,7 @@ The active probe process consists of the following steps:
 
 - Windows 10 or later versions:
    1. NCSI sends a DNS request to resolve the address of the `www.msftconnecttest.com` FQDN.
-   2. If NCSI receives a valid response from a DNS server, NCSI sends a plain HTTP GET request to `http://www.msftconnecttest.com`/connecttest.txt.
+   2. If NCSI receives a valid response from a DNS server, NCSI sends a plain HTTP GET request to `http://www.msftconnecttest.com`/connecttest.txt.
    3. If NCSI successfully downloads the text file, it makes sure that the file contains Microsoft Connect Test.
    4. NCSI sends another DNS request to resolve the address of the `dns.msftncsi.com` FQDN.
 
@@ -63,14 +63,14 @@ The active probe process consists of the following steps:
 
 - Windows 8.1 or earlier versions:
   1. NCSI sends a DNS request to resolve the address of the `www.msftncsi.com` FQDN.
-  2. If NCSI receives a valid response from a DNS server, NCSI sends a plain HTTP GET request to `http://www.msftncsi.com`/ncsi.txt.
+  2. If NCSI receives a valid response from a DNS server, NCSI sends a plain HTTP GET request to `http://www.msftncsi.com`/ncsi.txt.
   3. If NCSI successfully downloads the text file, it makes sure that the file contains Microsoft NCSI.
   4. NCSI sends another DNS request to resolve the address of the `dns.msftncsi.com` FQDN.
 
      - If any of these requests fails, the network alert appears in the Task Bar (as described in Symptoms). If you hover over the icon, you see a message such as "No connectivity" or "Limited Internet access" (depending on which requests failed).
-     - If all of these requests succeed, the Task Bar shows the usual network icon. If you hover over the icon, you see a message such as "Internet access."
+     - If all of these requests succeed, the Task Bar shows the usual network icon. If you hover over the icon, you see a message such as "Internet access."
 
-NCSI and the NLA service combine these responses with other information to build a profile of the network connection, or identify its existing profile. The network connection profile provides the information that Windows needs to configure the appropriate Windows Firewall profile:
+NCSI and the NLA service combine these responses with other information to build a profile of the network connection, or identify its existing profile. The network connection profile provides the information that Windows needs to configure the appropriate Windows Firewall profile:
 
 - For Active Directory-authenticated networks: Firewall domain profile.
 - For networks that the user has marked as "private": Firewall private profile.
@@ -86,7 +86,7 @@ NCSI and the NLA service combine these responses with other information to build
 
 If the network requires credentials, Windows opens the default browser (such as Internet Explorer or Edge). If the network has a sign-in page, that page appears in the browser.
 
-This behavior was introduced to improve the Windows user experience. In earlier versions of Windows, when you connect to a network that requires you to authenticate, the browser window does not open automatically. You may see a message that states that you must take further action in order to connect fully to the network. To complete the connection, you must click the message to open a browser window (or manually open a browser window) and enter a user name and password.
+This behavior was introduced to improve the Windows user experience. In earlier versions of Windows, when you connect to a network that requires you to authenticate, the browser window does not open automatically. You may see a message that states that you must take further action in order to connect fully to the network. To complete the connection, you must click the message to open a browser window (or manually open a browser window) and enter a user name and password.
 
 Because the network does not allow internet access without credentials, the network alert appears in the Task Bar.
 
@@ -97,7 +97,7 @@ In addition to the active probes that this article describes, NCSI monitors the 
 > [!Note]
 > The NCSI passive monitoring process does not transfer any information to or from your computer, and does not read any of the information that other applications transfer.
 
-In some cases, such as when you connect to a network that uses a proxy server to connect to the internet or when network restrictions prevent NCSI from completing its active probe process, Windows opens the MSN Portal page in the default browser. If you analyze a network trace on the computer, it shows an HTTP connection to `http://www.msftconnecttest.com/redirect` that is followed by a connection to the MSN Portal. Windows opens this page for the benefit of the passive probe process. If the page loads, NCSI concludes that the computer has internet access. As the different probes fail and then succeed, the network status alert appears and then disappears.
+In some cases, such as when you connect to a network that uses a proxy server to connect to the internet or when network restrictions prevent NCSI from completing its active probe process, Windows opens the MSN Portal page in the default browser. If you analyze a network trace on the computer, it shows an HTTP connection to `http://www.msftconnecttest.com/redirect` that is followed by a connection to the MSN Portal. Windows opens this page for the benefit of the passive probe process. If the page loads, NCSI concludes that the computer has internet access. As the different probes fail and then succeed, the network status alert appears and then disappears.
 
 > [!Note]
 > To prevent the browser window from opening when the computer connects to a network that has a proxy server, you have to configure the network firewall to allow access to the following URLs on port 80:
