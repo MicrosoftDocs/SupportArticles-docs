@@ -485,7 +485,7 @@
     - name: Fail to run Get-ADGroupMember for domain local group
       href: ./identity/get-adgroupmember-error-remote-forest-members.md
     - name: RSoP Planning mode is not supported in a cross-forest scenario
-      href: ./identity/gpo-processing-failures-across-foreast.md
+      href: ./identity/rsop-not-supported-across-multiple-forests.md
     - name: How to change display names of Active Directory users
       href: ./identity/change-display-names-ad-users.md
     - name: How to enable Kerberos event logging
