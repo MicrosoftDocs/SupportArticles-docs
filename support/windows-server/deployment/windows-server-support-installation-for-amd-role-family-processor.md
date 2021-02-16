@@ -1,7 +1,7 @@
 ---
 title: Windows Server support and installation instructions for the AMD Rome family of processors
 description: Lists the AMD Rome processors that are supported by Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2. Additionally lists support caveats and installation instructions.
-ms.date: 12/04/2020
+ms.date: 0216/2021
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -24,11 +24,11 @@ _Original KB number:_ &nbsp; 4514607
 
 - Windows Server 2019
 
-    Windows Server 2019 supports AMD EPYC 7xx2-series CPUs. Use the Windows Server 2019 refreshed media image released early October 2019 from appropriate licensing channel as applicable.
+    Windows Server 2019 supports AMD EPYC 7xx2-series CPUs. Use the refreshed media image of Windows Server 2019 that was released in early October, 2019. You can obtain this image from the appropriate licensing channel, as applicable.
 
 - Windows Server 2016
 
-    Windows Server 2016 supports AMD EPYC 7xx2-series CPUs. The support is limited to no more than 255 logical processors. Windows Server 2016 does not support X2APIC mode, and you should disable this mode in the computer's basic input/output system (BIOS).
+    Windows Server 2016 supports AMD EPYC 7xx2-series CPUs. The support is limited to no more than 255 logical processors. Windows Server 2016 does not support X2APIC mode, and you should disable this mode in the computer's basic input/output system (BIOS). Use the refreshed media image of Windows Server 2019 that was released in early October, 2019. You can obtain this image from the appropriate licensing channel, as applicable.
 
 - Windows Server 2012 R2
 
