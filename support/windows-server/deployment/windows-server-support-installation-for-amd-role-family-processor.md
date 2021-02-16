@@ -1,7 +1,7 @@
 ---
 title: Windows Server support and installation instructions for the AMD Rome family of processors
 description: Lists the AMD Rome processors that are supported by Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2. Additionally lists support caveats and installation instructions.
-ms.date: 0216/2021
+ms.date: 02/16/2021
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
