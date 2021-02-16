@@ -316,11 +316,11 @@ To find the version of your instance of SQL Server CE and related information, s
 
 ## PolyBase
 
-To find the version of PolyBase and related features, refer to the discovery report that runs within the SQL Setup tools.
+To find the version of PolyBase and related features, refer to a fresh discovery report that runs within the SQL Setup tools.
 
-In Windows or Linux, find the installation folder \Setup Bootstrap\Log\. The Summary.txt file shows a discovery report of all features.
+In Windows or Linux, find the installation folder \Setup Bootstrap\Log\. The summary.txt file shows a discovery report of all features and versions. However, if the most recent setup action was to add PolyBase to an existing SQL Server instance, the summary.txt file will not contain the PolyBase feature. This is because the discovery report will have run before the PolyBase feature was added. 
 
-You can refresh the Summary.txt report by running the features discovery report from SQL Server Setup. For more information, see [Validate a SQL Server Installation](https://docs.microsoft.com/sql/database-engine/install-windows/validate-a-sql-server-installation).  
+It is recommended to refresh the Summary.txt report by running the features discovery report from SQL Server Setup. For more information, see [Validate a SQL Server Installation](https://docs.microsoft.com/sql/database-engine/install-windows/validate-a-sql-server-installation).  
 
 ## Machine Learning services
 
