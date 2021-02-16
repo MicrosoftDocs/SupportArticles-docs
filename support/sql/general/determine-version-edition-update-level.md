@@ -155,7 +155,7 @@ on Windows NT 6.1 \<X64> (Build 7600: )
 
 ## SQL Server Reporting Services
 
-The version of SQL Server Reporting Services is displayed on the Reporting Services Web Service URL, for example: http://servername/reportserver. The version is also displayed in the Reporting Services Configuration tool.
+The version of SQL Server Reporting Services (SSRS) is displayed on the Reporting Services Web Service URL, for example: http://servername/reportserver. The version is also displayed in the Reporting Services Configuration tool.
 
 ## SQL Server Integration Services
 
@@ -313,6 +313,14 @@ To find the version of your instance of SQL Server CE and related information, s
 - [Description of the various build versions of SQL Server Compact Edition](https://support.microsoft.com/help/950550)
 
 - [SQL Server CE previous versions documentation](/previous-versions/sql/compact/)
+
+## PolyBase
+
+To find the version of PolyBase and related features, refer to the discovery report that runs within the SQL Setup tools.
+
+In Windows or Linux, find the installation folder \Setup Bootstrap\Log\. The Summary.txt file shows a discovery report of all features.
+
+You can refresh the Summary.txt report by running the features discovery report from SQL Server Setup. For more information, see [Validate a SQL Server Installation](https://docs.microsoft.com/sql/database-engine/install-windows/validate-a-sql-server-installation).  
 
 ## Machine Learning services
 
