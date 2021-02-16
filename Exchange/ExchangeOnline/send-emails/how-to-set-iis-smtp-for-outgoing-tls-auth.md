@@ -21,7 +21,7 @@ search.appverid: MET150
 _Original KB number:_ &nbsp; 4014125
 
 > [!NOTE]
-> The IIS SMTP Virtual Server Component mentioned in this article is part of IIS 6.0, the support for which has ended with the support of [Windows Server 2003](https://support.microsoft.com/lifecycle/search/810). The feature is also removed in [Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831568(v=ws.11)#smtp). It is recommended that you use one of the supported Exchange Server to relay email to Office 365 instead of IIS SMTP.
+> The IIS SMTP Virtual Server Component that is mentioned in this article is part of IIS 6.0, the support for which has ended with the support of [Windows Server 2003](https://support.microsoft.com/lifecycle/search/810). The feature is also removed in [Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831568(v=ws.11)#smtp). It is recommended that you use one of the supported Exchange Server to relay email to Office 365 instead of IIS SMTP.
 
 ## Introduction
 
