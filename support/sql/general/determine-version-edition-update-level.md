@@ -322,7 +322,7 @@ apt-get list --installed | --grep mssql
 
  The version number of the mssql-server-extensibility package version is the SQL Server version of the Machine Learning Services feature.
 
- The version number of the mssql-mlservices-packages-r or mssql-mlservices-packages-py refers to each language package files, for more information, see [Install SQL Server Machine Learning Services on Linux (Offline installation)] https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-machine-learning?view=sql-server-ver15#offline-installation.
+ The version number of the mssql-mlservices-packages-r or mssql-mlservices-packages-py refers to each language package files, for more information, see [Install SQL Server Machine Learning Services on Linux (Offline installation)](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning#offline-installation).
 
 ## More information  
 
