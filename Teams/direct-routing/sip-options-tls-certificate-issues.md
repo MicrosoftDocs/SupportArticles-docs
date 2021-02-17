@@ -8,7 +8,6 @@ manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
 ms.service: msteams
-ms.prod: microsoft-teams
 localization_priority: Normal
 search.appverid:
 - SPO160
