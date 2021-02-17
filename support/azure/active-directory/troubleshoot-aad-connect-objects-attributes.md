@@ -47,7 +47,7 @@ The only scenarios in which this command is supported to disable DirSync are the
 
 - You are decommissioning your on-premises synchronization server, and you want to continue managing your identities entirely from the cloud instead of from hybrid identities.
 - You have some synced objects in the tenant that you want to keep as cloud-only in Azure AD and remove from on-premises AD permanently.
-- You are currently using a custom attribute as the SourceAnchor in AADC (for example, employeeId), and you are re-installing AADC to start using **ms-Ds-Consistency-Guid/ObjectGuid** as the new SourceAnchor attribute (or vise-versa).
+- You are currently using a custom attribute as the SourceAnchor in AADC (for example, employeeId), and you are re-installing AADC to start using **ms-Ds-Consistency-Guid/ObjectGuid** as the new SourceAnchor attribute (or vice versa).
 - You have some scenarios that involve risky mailbox and tenant migration strategies.
 
 In some situations, you might have to temporarily stop synchronization or manually control AADC sync cycles. For example, you might have to stop synchronization to be able to run one sync step at a time. However, instead of disabling DirSync, you can stop only the sync scheduler by running the following cmdlet:
@@ -106,7 +106,7 @@ If the connection with AD is successful, but the object or attribute is not pres
 
 #### Connectivity with AD
 
-In the Synchronization Service Manager, the “Import from AD” step shows whichdomain controller is contacted under **Connection Status**. You will most likely see an error here when there is a connectivity issue that affects AD.
+In the Synchronization Service Manager, the “Import from AD” step shows which domain controller is contacted under **Connection Status**. You will most likely see an error here when there is a connectivity issue that affects AD.
 
 :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/import-from-ad-connection-status.png" alt-text="Import from AD connection status screen.":::
 
