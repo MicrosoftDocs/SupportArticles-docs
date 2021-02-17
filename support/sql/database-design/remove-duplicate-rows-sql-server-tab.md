@@ -13,7 +13,7 @@ This article lists the script that you can use to remove duplicate rows from a S
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 70956
 
-## Summary
+## Create Sample Data
 
 Let's create a sample Microsoft SQL Server table with some sample data:
 
@@ -29,6 +29,8 @@ insert into original_table values (2)
 insert into original_table values (2)
 insert into original_table values (2)
 ```
+
+## Method 1
 
 You can use the following script to remove the duplicate rows:
 
@@ -57,6 +59,8 @@ When this script is executed, it follows these steps:
 2. It deletes all rows from the original table that also reside in the duplicate table.
 3. It moves the rows in the duplicate table back into the original table.
 4. It drops the duplicate table.
+
+## Method 2
 
 Starting with SQL Server 2005, the [ROW_NUMBER function](https://docs.microsoft.com/sql/t-sql/functions/row-number-transact-sql) was introduced, which makes this operation much simpler:
 
