@@ -6,7 +6,8 @@ author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 audience: Admin
-ms.prod: microsoft-teams
+ms.topic: troubleshooting
+ms.service: msteams
 localization_priority: Normal
 search.appverid:
 - SPO160
