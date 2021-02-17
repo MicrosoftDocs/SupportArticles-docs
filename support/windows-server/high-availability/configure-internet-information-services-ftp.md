@@ -216,12 +216,12 @@ Function Online( )
     If bOnline <> True Then
         Resource.LogInformation "The resource failed to come online because ftpsvc could not be started."
         Online = False
-        Exit Functiond
+        Exit Function
     End If
 
     Online = true
 
-End Functiond
+End Function
 
 'Cluster resource offline entry point
 'On offline, do nothing.
