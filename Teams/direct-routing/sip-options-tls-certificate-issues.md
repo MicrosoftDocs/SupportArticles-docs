@@ -61,6 +61,8 @@ This article lists some common issues that are related to SIP options and TLS ce
 
 After the TLS connection is successfully established, and the SBC is able to send and receive messages to and from the Teams SIP proxy, there might still be problems that affect the format or content of SIP options.
 
+<br>
+
 <details>
 <summary><b>SBC doesn't receive a “200 OK” response from SIP proxy</b></summary>
 
@@ -129,6 +131,8 @@ For more information about this process, see the ”Connect the SBC to the tenan
 
 If the TLS connection is closed right away and SIP Options are not received from the SBC, or if 200 OK is not received from the SBC, then the problem might be with the TLS version. The TLS version configured on the SBC should be 1.2 or higher.
 
+<br>
+
 <details>
 
 <summary><b>SBC certificate is self-signed or not from a trusted CA</b></summary>
@@ -151,7 +155,7 @@ For a list of supported CAs, see the “Public trusted certificate for the SBC�
 <details>
 <summary><b>SBC certificate is invalid</b></summary>
 
-If the Health Dashboard for Direct Routing in the Teams admin center indicates that the SBC certificate is expired or revoked, request or renew the certificate from a trusted Certificate Authority (CA). Then, install it on the SBC.
+If the [Health Dashboard for Direct Routing](https://docs.microsoft.com/microsoftteams/direct-routing-health-dashboard) in the Teams admin center indicates that the SBC certificate is expired or revoked, request or renew the certificate from a trusted Certificate Authority (CA). Then, install it on the SBC.
 
 For a list of supported CAs, see the “Public trusted certificate for the SBC” section of [Plan Direct Routing](https://docs.microsoft.com/MicrosoftTeams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
 
