@@ -59,14 +59,14 @@ FROM duplicate_table
 DROP TABLE duplicate_table
 ```
 
-This method is simple. However, it requires that you have sufficient space available in the database to temporarily build the duplicate table, and it also incurs overhead due to the data being moved.
-
 When this script is executed, it follows these steps:
 
 1. It moves one instance of any duplicate row in the original table to a duplicate table.
 2. It deletes all rows from the original table that also reside in the duplicate table.
 3. It moves the rows in the duplicate table back into the original table.
 4. It drops the duplicate table.
+
+This method is simple. However, it requires that you have sufficient space available in the database to temporarily build the duplicate table, and it also incurs overhead due to the data being moved.
 
 Also, if your table has an [IDENTITY](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql-identity-property) column, you would have to use [SET IDENTITY_INSERT ON](https://docs.microsoft.com/sql/t-sql/statements/set-identity-insert-transact-sql) when inserting the data back into the original table.
 
@@ -102,6 +102,4 @@ Method 2 is simple and effective:
 - It does not require joining the original table with itself (for example, with a subquery returning all duplicate records using a combination of GROUP BY and HAVING).
 - For best performance, you should have a corresponding index on the table with the `key_value` as the index key, and any sorting columns that you may have used in the ORDER BY expression.
 
-However, it will not work outdated versions of SQL server that do not support the [ROW_NUMBER function](https://docs.microsoft.com/sql/t-sql/functions/row-number-transact-sql).
-
-In which case, method 1 or something similar to it will have to be used.
+However, it will not work on outdated versions of SQL server that do not support the [ROW_NUMBER function](https://docs.microsoft.com/sql/t-sql/functions/row-number-transact-sql), in which case, method 1 or something similar to it will have to be used instead.
