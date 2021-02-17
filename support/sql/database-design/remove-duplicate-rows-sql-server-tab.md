@@ -15,7 +15,50 @@ _Original KB number:_ &nbsp; 70956
 
 ## Summary
 
-You can use the following script to remove duplicate rows from a Microsoft SQL Server table:
+Let's create a sample Microsoft SQL Server table with some sample data:
+
+```sql
+create table original_table (key_value int )
+
+insert into original_table values (1)
+insert into original_table values (1)
+insert into original_table values (1)
+
+insert into original_table values (2)
+insert into original_table values (2)
+insert into original_table values (2)
+insert into original_table values (2)
+```
+
+You can use the following script to remove the duplicate rows:
+
+```sql
+SELECT DISTINCT *
+INTO duplicate_table
+FROM original_table
+GROUP BY key_value
+HAVING COUNT(key_value) > 1
+
+DELETE original_table
+WHERE key_value
+IN (SELECT key_value
+FROM duplicate_table)
+
+INSERT original_table
+SELECT *
+FROM duplicate_table
+
+DROP TABLE duplicate_table
+```
+
+When this script is executed, it follows these steps:
+
+1. It moves one instance of any duplicate row in the original table to a duplicate table.
+2. It deletes all rows from the original table that also reside in the duplicate table.
+3. It moves the rows in the duplicate table back into the original table.
+4. It drops the duplicate table.
+
+Starting with SQL Server 2005, the [ROW_NUMBER function](https://docs.microsoft.com/sql/t-sql/functions/row-number-transact-sql) was introduced, which makes this operation much simpler:
 
 ```sql
 DELETE T
