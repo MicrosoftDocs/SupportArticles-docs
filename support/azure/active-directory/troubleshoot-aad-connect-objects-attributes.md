@@ -280,11 +280,6 @@ Main resources:
 - Set-ADSync<Feature>Permissions - Apply default AADC permissions in ADDS
 - RepAdmin - Check AD object metadata and AD replication status
 
-Additional resources:
-
-- Network trace of a delta or full import step (because LDAP traffic is encrypted)
-- Fiddler trace (there's no HTTP/S traffic)
-
 ## Step 2: Synchronization between ADCS and MV
 
 :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/adcs-metaverse-flow-chart.png" alt-text="ADCS to MetaVerse flow chart.":::
@@ -298,7 +293,6 @@ This step checks whether the object or attribute flows from CS to MV (in other w
 The synchronization between ADCS and MV occurs on the delta/full synchronization step. At this point, AADC reads the staged data in ADCS, processes all sync rules, and updates the respective MV object. This MV object will contain CS links (or connectors) pointing to the CS objects that contribute to its properties and the lineage of sync rules that were applied in the synchronization step. During this stage, AADC generates more load on the SQL Server (or LocalDB) and networking layers.
 
 ### Troubleshooting ADCS > MV for objects
-
 
 - **Check the inbound sync rules for provisioning**
 
@@ -358,7 +352,7 @@ The synchronization between ADCS and MV occurs on the delta/full synchronization
 
     :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/connector-space-object-properties-lineage.png" alt-text="Connector Space Object Properties lineage screen.":::
  
-    If there are multiple connectors (multiple AD forests) linked to the MV object, you might have to examine the **Metaverse Object Properties** to determine which connector is contributing with the attribute that you're trying to troubleshoot. After you’ve identified the connector, examine the lineage of that ADCS object.
+    If there are multiple connectors (multiple AD forests) linked to the MV object, you might have to examine the **Metaverse Object Properties** to determine which connector is contributing the attribute value to the attribute that you're trying to troubleshoot. After you’ve identified the connector, examine the lineage of that ADCS object.
 
     :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/metaverse-object-properties.png" alt-text="Metaverse Object Properties screen.":::
 
