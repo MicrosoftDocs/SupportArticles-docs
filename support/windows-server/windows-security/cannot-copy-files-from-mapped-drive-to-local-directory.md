@@ -29,7 +29,7 @@ With User Account Control (UAC) enabled, you may receive the following error whe
 
 ## Cause
 
-The underlying cause is UAC and the interaction with split token. When an administrator signs in to a machine with Admin Approval Mode enabled (AAM), the user is granted two access tokens:
+The underlying cause is UAC and the interaction with split token. When an administrator signs in to a machine with Admin Approval Mode (AAM) enabled, the user is granted two access tokens:
 
 - a full administrator access token
 - a filtered standard user access token

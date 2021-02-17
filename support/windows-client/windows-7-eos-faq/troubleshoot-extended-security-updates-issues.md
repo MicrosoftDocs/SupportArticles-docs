@@ -195,9 +195,14 @@ To resolve this issue, follow these steps.
 
 1. If update [3140245](https://support.microsoft.com/help/3140245) isn't installed on the computer, use Windows Update to install it.
 2. Open **regedit**, and navigate to the following registry subkey:
-     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp`  
+
+     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp`
+
     Create or set a **REG_DWORD** value of **DefaultSecureProtocols**, and set it to **0x800**.
-3. If the computer is X64, you must also set the following registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp`  
+3. If the computer is x64, you must also set the following registry key:
+  
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp`
+
     Create or set a **REG_DWORD** value of **DefaultSecureProtocols**, and set it to **0x800**.
 4. Restart the computer, and then try to run the `slmgr.vbs /ato` command again.
 

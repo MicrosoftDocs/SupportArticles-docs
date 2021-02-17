@@ -26,7 +26,7 @@ Users who are running Windows 10 Version 1607 or later version of Windows 10 and
 
 When users navigate to **Settings** > **Accounts** > **Sign-in options**, the option to set a PIN is unavailable (appears dimmed), and therefore it can't be configured.
 
-A user has already configured a convenience PIN in an earlier version of Windows 10, and then upgrades to Windows 10 Version 1607 or later. The PIN works until the user navigates to **Settings** > **Accounts** > **Sign-in options** > **I forgot my PIN**. In this situation, the option to create a PIN is unavailable (appears dimmed). This issue also does not affect Windows 10 Version 1511 and earlier.
+A user has already configured a convenience PIN in an earlier version of Windows 10, and then upgrades to Windows 10 Version 1607 or later. The PIN works until the user navigates to **Settings** > **Accounts** > **Sign-in options** > **I forgot my PIN**. In this situation, the option to create a PIN is unavailable (appears dimmed). This issue doesn't affect Windows 10 Version 1511 and earlier.
 
 ## Cause
 
@@ -34,7 +34,7 @@ Windows 10 Version 1607 and later include new functionality that differentiates 
 
 Windows Hello for Business has strong user authentication properties that are frequently and mistakenly assumed to be functioning when the Windows Hello for Business infrastructure isn't in place and when a user is using a convenience PIN. This change prevents the creation of a PIN in Windows 10 and later version without Windows Hello for Business.
 
-Additionally, a user can't create a convenience PIN in Windows 10 Version 1607 and later version when the following policies are both enabled, unless the device is joined to Azure Active Directory in some way.
+Additionally, a user can't create a convenience PIN in Windows 10 version 1607 and later version when the following policies are both enabled, unless the device is joined to Azure Active Directory in some way:
 
 - Use Convenience PIN
 - Use Windows Hello for Business  
@@ -58,7 +58,7 @@ To use a convenience PIN in Windows 10 Version 1607 or later, the following Grou
 > [!NOTE]
 >
 > - The GPO specifies Windows Server 2012, Windows 8, Windows RT, Windows Server 2012 R2, Windows 8.1, and Windows RT 8.1 only. This is incorrect and will be updated at a later date. This policy does apply to Windows 10 and lets the user set a convenience PIN.
-> - Enabling a PIN in this manner does not provide the same level of security as using a PIN with the Windows Hello for Business infrastructure configured.
+> - Enabling a PIN in this manner doesn't provide the same level of security as using a PIN with the Windows Hello for Business infrastructure configured.
 
 PIN complexity: Manage PIN complexity in the standard way by using policies that are found in the following location:
 
