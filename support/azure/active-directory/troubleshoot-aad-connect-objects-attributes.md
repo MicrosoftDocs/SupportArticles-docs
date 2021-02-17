@@ -201,12 +201,12 @@ This is less likely to affect AADConnect because it causes greater problems. How
 Another approach is to use the RepAdmin tool to check the object's replication metadata on all domain controllers, get the value from all domain controllers, and check replication status between domain controllers:
 
 - Attribute value from all domain controllers:<br />
-    `repadmin /showattr \* \"DC=contoso,DC=com\" /subtree /filter:\"sAMAccountName=User01\" /attrs:pwdLastSet,UserPrincipalName`
+    `repadmin /showattr * "DC=contoso,DC=com" /subtree /filter:"sAMAccountName=User01" /attrs:pwdLastSet,UserPrincipalName`
 
     :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/repadmin-showattr.png" alt-text="RepAdmin tool using showattr.":::
 
 - Object metadata from all DCs:<br />
-    `repadmin /showobjmeta \* \"CN=username,DC=contoso,DC=com\" \> username-ObjMeta.txt`
+    `repadmin /showobjmeta * "CN=username,DC=contoso,DC=com" > username-ObjMeta.txt`
 
     :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/repadmin-showobjmeta.png" alt-text="RepAdmin tool with showobjmeta command.":::
  
@@ -238,7 +238,7 @@ Another approach is to use the RepAdmin tool to check the object's replication m
 
     You can use the **Get-ADSyncConnector** cmdlet to retrieve the object types that are enabled on the Connector, as shown in the next image. The following are the object types that should be enabled by default:
 
-    `(Get-ADSyncConnector \| where Name -eq \"Contoso.com\").ObjectInclusionList` 
+    `(Get-ADSyncConnector | where Name -eq "Contoso.com").ObjectInclusionList` 
 
     The following are the object types that should be enabled by default:
 
@@ -253,7 +253,7 @@ Another approach is to use the RepAdmin tool to check the object's replication m
 
     To check for enabled attributes in ADDS Connector, use the Synchronization Manager, as shown in the next image, or run the following PowerShell cmdlet:
 
-    `(Get-ADSyncConnector \| where Name -eq \"Contoso.com\").AttributeInclusionList`
+    `(Get-ADSyncConnector | where Name -eq "Contoso.com").AttributeInclusionList`
 
     :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/ad-connector-sync-manager.png" alt-text="AD Connector Synchronization Manager.":::
 
@@ -300,7 +300,7 @@ The synchronization between ADCS and MV occurs on the delta/full synchronization
 
     To get a list of inbound provisioning sync rules, run the following command:
 
-    `Get-ADSyncRule \| where {\$\_.Name -like \"In From AD\*\" -and \$\_.LinkType -eq \"Provision\"} \| select Name,Direction,LinkType,Precedence,Disabled \| ft`
+    `Get-ADSyncRule | where {$_.Name -like "In From AD*" -and $_.LinkType -eq "Provision"} | select Name,Direction,LinkType,Precedence,Disabled | ft`
 
     :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/get-adsyncrule.png" alt-text="Get-ADSyncRule to check inbound provisioning rules."::: 
 
@@ -324,9 +324,9 @@ The synchronization between ADCS and MV occurs on the delta/full synchronization
 
     Here are some examples of **Export-ADsyncObject** syntax:
 
-    - `Import-Module .\\Export-ADsyncObject.psm1`
-    - `Export-ADsyncObject -DistinguishedName \'CN=TestUser,OU=Sync,DC=Domain,DC=Contoso,DC=com\' -ConnectorName \'Domain.Contoso.com\'`
-    - `Export-ADsyncObject -ObjectId \'{46EBDE97-7220-E911-80CB-000D3A3614C0}\' -Source Metaverse -Verbose`
+    - `Import-Module .\Export-ADsyncObject.psm1`
+    - `Export-ADsyncObject -DistinguishedName 'CN=TestUser,OU=Sync,DC=Domain,DC=Contoso,DC=com' -ConnectorName 'Domain.Contoso.com'`
+    - `Export-ADsyncObject -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -Source Metaverse -Verbose`
 
 **Troubleshooting summary (objects)**
 
@@ -411,7 +411,7 @@ The synchronization between MV and AADCS occurs in the delta/full synchronizatio
 
     To get a list of inbound provisioning sync rules, run the following command:
 
-    `Get-ADSyncRule \| where {\$\_.Name -like \"Out to AAD\*\" -and \$\_.LinkType -eq \"Provision\"} \| select Name,Direction,LinkType,Precedence,Disabled \| ft`
+    `Get-ADSyncRule | where {$_.Name -like "Out to AAD*" -and $_.LinkType -eq "Provision"} | select Name,Direction,LinkType,Precedence,Disabled | ft`
 
     :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/outbound-sync-rules.png" alt-text="Get-ADSyncRule to check outbound sync rules.":::
 
@@ -435,9 +435,9 @@ The synchronization between MV and AADCS occurs in the delta/full synchronizatio
 
     Here are some examples of **Export-ADsyncObject** syntax:
 
-    - `Import-Module .\\Export-ADsyncObject.psm1`
-    - `Export-ADsyncObject -ObjectId \'{46EBDE97-7220-E911-80CB-000D3A3614C0}\' -Source Metaverse -Verbose`
-    - `Export-ADsyncObject -DistinguishedName \'CN={2B4B574735713744676B53504C39424D4C72785247513D3D}\' -ConnectorName \'Contoso.onmicrosoft.com - AAD\'`
+    - `Import-Module .\Export-ADsyncObject.psm1`
+    - `Export-ADsyncObject -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -Source Metaverse -Verbose`
+    - `Export-ADsyncObject -DistinguishedName 'CN={2B4B574735713744676B53504C39424D4C72785247513D3D}' -ConnectorName 'Contoso.onmicrosoft.com - AAD'`
 
 
 **Troubleshooting summary for objects**
@@ -571,9 +571,9 @@ Fortunately, the issues that affect these components usually generate an error i
  
 ### Resources
 
-- Get-AzureADUser -ObjectId \<UserPrincipalName> | Out-File
+- Get-AzureADUser -ObjectId <UserPrincipalName> | Out-File
 - [AD Photo Edit tool](http://www.cjwdev.com/Software/ADPhotoEdit/Info.html) 
 - [Get-AzureADUserThumbnailPhoto](https://docs.microsoft.com/powershell/module/azuread/get-azureaduserthumbnailphoto) 
 - LDIFDE
-- Get-ADUser -Identity \<username> | Out-File
+- Get-ADUser -Identity <username> | Out-File
 - AADConnector PowerShell Module (Decode AAD DN)
