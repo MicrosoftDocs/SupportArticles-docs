@@ -13,9 +13,15 @@ This article lists the script that you can use to remove duplicate rows from a S
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 70956
 
-## Create Sample Data
+## Summary
 
-Let's create a sample Microsoft SQL Server table with some sample data:
+In this page, we will demonstrate two common methods for deleting duplicate records from a Microsoft SQL Server table.
+
+First, we'll start with creating a sample table and data, and then present the two methods to delete the duplicates.
+
+### Create Sample Data
+
+Let's create a sample table with some data:
 
 ```sql
 create table original_table (key_value int )
@@ -30,7 +36,7 @@ insert into original_table values (2)
 insert into original_table values (2)
 ```
 
-## Method 1
+### Method 1
 
 You can use the following script to remove the duplicate rows:
 
@@ -53,6 +59,8 @@ FROM duplicate_table
 DROP TABLE duplicate_table
 ```
 
+This method is simple. However, it requires that you have sufficient space available in the database to temporarily build the duplicate table, and it also incurs overhead due to the data being moved.
+
 When this script is executed, it follows these steps:
 
 1. It moves one instance of any duplicate row in the original table to a duplicate table.
@@ -60,7 +68,9 @@ When this script is executed, it follows these steps:
 3. It moves the rows in the duplicate table back into the original table.
 4. It drops the duplicate table.
 
-## Method 2
+Also, if your table has an [IDENTITY](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql-identity-property) column, you would have to use [SET IDENTITY_INSERT ON](https://docs.microsoft.com/sql/t-sql/statements/set-identity-insert-transact-sql) when inserting the data back into the original table.
+
+### Method 2
 
 Starting with SQL Server 2005, the [ROW_NUMBER function](https://docs.microsoft.com/sql/t-sql/functions/row-number-transact-sql) was introduced, which makes this operation much simpler:
 
@@ -84,10 +94,14 @@ When this script is executed, it follows these steps:
 2. It does NOT sort the partitioned data based on anything because of the `(SELECT NULL)` expression. If your duplicates deletion logic requires choosing which records to delete and which to retain based on sorting order of other column(s), you may use the ORDER BY expression accordingly.
 3. It deletes all records that received a `DupRank` value higher than 1, which would indicate that they're duplicates.
 
-This method is simple and effective:
+## More information
+
+Method 2 is simple and effective:
 
 - It does not require you to temporarily copy the duplicate records to another table.
 - It does not require joining the original table with itself (for example, with a subquery returning all duplicate records using a combination of GROUP BY and HAVING).
 - For best performance, you should have a corresponding index on the table with the `key_value` as the index key, and any sorting columns that you may have used in the ORDER BY expression.
-- This method will not work on outdated versions of SQL server that do not support the ROW_NUMBER function.
-- See more info on the [ROW_NUMBER function](https://docs.microsoft.com/sql/t-sql/functions/row-number-transact-sql).
+
+However, it will not work outdated versions of SQL server that do not support the [ROW_NUMBER function](https://docs.microsoft.com/sql/t-sql/functions/row-number-transact-sql).
+
+In which case, method 1 or something similar to it will have to be used.
