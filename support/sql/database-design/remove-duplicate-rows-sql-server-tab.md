@@ -84,8 +84,6 @@ When this script is executed, it follows these steps:
 2. It does NOT sort the partitioned data based on anything because of the `(SELECT NULL)` expression. If your duplicates deletion logic requires choosing which records to delete and which to retain based on sorting order of other column(s), you may use the ORDER BY expression accordingly.
 3. It deletes all records that received a `DupRank` value higher than 1, which would indicate that they're duplicates.
 
-## More information
-
 This method is simple and effective:
 
 - It does not require you to temporarily copy the duplicate records to another table.
