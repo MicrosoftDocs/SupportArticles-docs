@@ -28,12 +28,12 @@ _Original KB number:_ &nbsp; 4514607
   > [!NOTE]  
   > Considerations for Windows Server 2016:
   >
-  > - The support is limited to no more than 255 logical processors. 
+  > - The support is limited to no more than 255 logical processors.
   > - Windows Server 2012 R2 does not support X2APIC mode, and you should disable this mode in the computer's BIOS.
 
 - Windows Server 2012 R2
 
-    Windows Server 2012 R2 supports AMD EPYC 7xx2-series CPUs. 
+    Windows Server 2012 R2 supports AMD EPYC 7xx2-series CPUs.
 
     > [!NOTE]
     > Windows Server 20012 R2 is in [extended support cycle](/lifecycle/products/?alpha=Windows%20Server%202012%20R2). We recommend that you upgrade to the latest modern Windows Server 2019 operating system.
