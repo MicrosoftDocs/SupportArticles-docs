@@ -61,9 +61,7 @@ This article lists some common issues that are related to SIP options and TLS ce
 ### SIP OPTIONS issues
 
 After the TLS connection is successfully established, and the SBC is able to send and receive messages to and from the Teams SIP proxy, there might still be problems that affect the format or content of SIP OPTIONS.
-
-<br>
-
+<br><br>
 <details>
 <summary><b>SBC doesn't receive a “200 OK” response from SIP proxy</b></summary>
 
@@ -131,9 +129,7 @@ For more information about this process, see the ”Connect the SBC to the tenan
 ### TLS connection issues
 
 If the TLS connection is closed right away and SIP OPTIONS are not received from the SBC, or if 200 OK is not received from the SBC, then the problem might be with the TLS version. The TLS version configured on the SBC should be 1.2 or higher.
-
-<br>
-
+<br><br>
 <details>
 
 <summary><b>SBC certificate is self-signed or not from a trusted CA</b></summary>
