@@ -28,9 +28,9 @@ The steps that are provided here start at the local Active Directory level and p
 
 For a better understanding of this article, first read the following prerequisite articles for a better understanding of how to search for an object in different sources (AD, AD CS, MV, and so on), and to understand how to check the connectors and lineage of an object.
 
-- [Azure AD Connect: Accounts and permissions](https://docs.microsoft.com/azure/active-directory/hybrid/reference-connect-accounts-permissions)
-- [Troubleshoot an object that is not synchronizing with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/tshoot-connect-object-not-syncing) 
-- [Troubleshoot object synchronization with Azure AD Connect sync](https://docs.microsoft.com/azure/active-directory/hybrid/tshoot-connect-objectsync)
+- [Azure AD Connect: Accounts and permissions](/hybrid/reference-connect-accounts-permissions)
+- [Troubleshoot an object that is not synchronizing with Azure Active Directory](/hybrid/tshoot-connect-object-not-syncing) 
+- [Troubleshoot object synchronization with Azure AD Connect sync](/hybrid/tshoot-connect-objectsync)
 
 ## Bad troubleshooting practices
 
@@ -110,7 +110,7 @@ In the Synchronization Service Manager, the “Import from AD” step shows whic
 
 :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/import-from-ad-connection-status.png" alt-text="Import from AD connection status screen.":::
 
-If you have to further troubleshoot connectivity for AD, especially if no errors surfaced in AADConnect server or if you are still in the process of installing the product, start by using the [ADConnectivityTool](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-adconnectivitytools#adconnectivitytool-during-installation).
+If you have to further troubleshoot connectivity for AD, especially if no errors surfaced in AADConnect server or if you are still in the process of installing the product, start by using the [ADConnectivityTool](/hybrid/how-to-connect-adconnectivitytools#adconnectivitytool-during-installation).
 
 Connection issues to ADDS have the following causes:
 
@@ -130,7 +130,7 @@ Connection issues to ADDS have the following causes:
 
 #### Run the Synchronization Troubleshooter
 
-After you troubleshoot AD connectivity, run the [Troubleshoot Object Synchronization](https://docs.microsoft.com/azure/active-directory/hybrid/tshoot-connect-objectsync) tool because this alone can detect the most obvious reasons for an object or attribute not to synchronize.
+After you troubleshoot AD connectivity, run the [Troubleshoot Object Synchronization](/hybrid/tshoot-connect-objectsync) tool because this alone can detect the most obvious reasons for an object or attribute not to synchronize.
 
 :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/aadconnect-troubleshooting.png" alt-text="AADConnect Troubleshooting screen.":::
 
@@ -183,7 +183,7 @@ The best way to troubleshoot permissions is to use the "Effective Access" featur
 - Identify which domain controller is used.
 - Use preferred domain controllers to target the same domain controller.
 - Correctly identify the ADCA.
-- Use the [Configure AD DS Connector Account Permissions](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-configure-ad-ds-connector-account) tool.
+- Use the [Configure AD DS Connector Account Permissions](/hybrid/how-to-connect-configure-ad-ds-connector-account) tool.
 - Use the "Effective Access" feature in AD Users and Computers.
 - Use the LDP tool to bind against the domain controller that has the ADCA, and try to read the failing object or attribute.
 - Temporarily add the ADCA to the Enterprise admins or Domain admins, and restart the ADSync service.
@@ -230,7 +230,7 @@ Another approach is to use the RepAdmin tool to check the object's replication m
 
 - **Attribute filtering with Azure AD app and attribute filtering**
 
-    An easy-to-miss scenario for attributes not synchronizing is when Azure AD Connect is configured with the [Azure AD app and attribute filtering](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-custom#azure-ad-app-and-attribute-filtering) feature. To check whether the feature is enabled, and for which attributes, take a **General Diagnostics Report**.
+    An easy-to-miss scenario for attributes not synchronizing is when Azure AD Connect is configured with the [Azure AD app and attribute filtering](/hybrid/how-to-connect-install-custom#azure-ad-app-and-attribute-filtering) feature. To check whether the feature is enabled, and for which attributes, take a **General Diagnostics Report**.
 
 - **Object type excluded in ADDS Connector configuration**
 
@@ -262,7 +262,7 @@ Another approach is to use the RepAdmin tool to check the object's replication m
 
 **Troubleshooting Summary**
 
-- Check the [Azure AD app and attribute filtering](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-custom#azure-ad-app-and-attribute-filtering) feature
+- Check the [Azure AD app and attribute filtering](/hybrid/how-to-connect-install-custom#azure-ad-app-and-attribute-filtering) feature
 - Verify that the object type is included in ADCS.
 - Verify that the attribute is included in ADCS.
 - Run a full import.
@@ -272,7 +272,7 @@ Another approach is to use the RepAdmin tool to check the object's replication m
 Main resources:
 
 - Get-ADSyncConnectorAccount - Identify the correct Connector account used by AADC
-- [ADConnectivityTool](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-adconnectivitytools#adconnectivitytool-during-installation)  - Identify connectivity problems with ADDS
+- [ADConnectivityTool](/hybrid/how-to-connect-adconnectivitytools#adconnectivitytool-during-installation)  - Identify connectivity problems with ADDS
 - Trace-ADSyncToolsADImport (ADSyncTools) - Trace data being imported from ADDS
 - LDIFDE - Dump object from ADDS to compare data between ADDS and ADCS
 - LDP - Test AD Bind connectivity and permissions to read object in the security context of ADCA
@@ -547,14 +547,14 @@ Fortunately, the issues that affect these components usually generate an error i
 
 4. **UserPrincipalName changes do not update in Azure AD**
 
-    If the **UserPrincipalName** attribute is not updated in Azure AD, while other attributes sync as expected, it's possible that a feature that's named [SynchronizeUpnForManagedUsers](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) is not enabled on the tenant. This is a common scenario.
+    If the **UserPrincipalName** attribute is not updated in Azure AD, while other attributes sync as expected, it's possible that a feature that's named [SynchronizeUpnForManagedUsers](/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) is not enabled on the tenant. This is a common scenario.
 
     Before this feature was added, any updates to the UPN that came from on-premises after the user was provisioned in Azure AD and assigned a license were “silently” ignored. An admin would have to use MSOnline or Azure AD PowerShell to update the UPN directly in Azure AD. After this feature is updated, any updates to UPN will flow to Azure AD regardless of whether the user is licensed (managed).
 
     > [!NOTE]
     > After it's enabled, this feature cannot be disabled.
 
-    **UserPrincipalName** updates will work if the user is NOT licensed. However, without the [SynchronizeUpnForManagedUsers](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) feature, **UserPrincipalName** changes after the user is provisioned and is assigned a licensed that will NOT be updated in AAD. Notice that Microsoft does not disable this feature on behalf of the customer.
+    **UserPrincipalName** updates will work if the user is NOT licensed. However, without the [SynchronizeUpnForManagedUsers](/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) feature, **UserPrincipalName** changes after the user is provisioned and is assigned a licensed that will NOT be updated in AAD. Notice that Microsoft does not disable this feature on behalf of the customer.
 
 
 5. **Invisible characters and ProxyCalc internals**
@@ -573,7 +573,7 @@ Fortunately, the issues that affect these components usually generate an error i
 
 - Get-AzureADUser -ObjectId <UserPrincipalName> | Out-File
 - [AD Photo Edit tool](http://www.cjwdev.com/Software/ADPhotoEdit/Info.html) 
-- [Get-AzureADUserThumbnailPhoto](https://docs.microsoft.com/powershell/module/azuread/get-azureaduserthumbnailphoto) 
+- [Get-AzureADUserThumbnailPhoto](/powershell/module/azuread/get-azureaduserthumbnailphoto) 
 - LDIFDE
 - Get-ADUser -Identity <username> | Out-File
 - AADConnector PowerShell Module (Decode AAD DN)
