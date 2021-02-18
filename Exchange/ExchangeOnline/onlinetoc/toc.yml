@@ -423,8 +423,6 @@
       href: ../outlook-on-the-web-issues/cannot-open-documents-on-network-file-share.md
     - name: Can't save templates in My Templates in OWA
       href: ../outlook-on-the-web-issues/cannot-save-template-in-owa.md
-    - name: Incorrect time zone in OWA
-      href: ../outlook-on-the-web-issues/incorrect-setting.md
     - name: Incorrect time zone in read receipt
       href: ../outlook-on-the-web-issues/read-receipt-incorrect-timezone.md
     - name: Missing search results items
