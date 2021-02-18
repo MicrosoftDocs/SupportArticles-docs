@@ -2,6 +2,24 @@
 
 
 
+## Week of February 08, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/9/2021 | [Create a default Site collection Term Set if none is present](/sharepoint/troubleshoot/administration/create-default-site-term-set) | added |
+| 2/10/2021 | [Error when trying to create a list From Excel - Something went wrong. The file does not exist](/sharepoint/troubleshoot/lists-and-libraries/error-create-list-excel) | added |
+| 2/12/2021 | [Documents aren't displayed in web browser when you're using TLS 1.2](/sharepoint/troubleshoot/lists-and-libraries/documents-not-displayed-in-web-browser-when-using-tls-1.2) | modified |
+
+
+## Week of February 01, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/3/2021 | [Enable coauthoring for OneDrive-synced files](/sharepoint/troubleshoot/sync/enable-co-authoring-for-onedrive-synced-file) | modified |
+
+
 ## Week of January 25, 2021
 
 

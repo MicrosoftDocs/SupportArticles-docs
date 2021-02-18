@@ -29,7 +29,7 @@ Additionally, you learn that TLS 1.0 has been disabled on the SharePoint web fro
 
 ## Cause  
 
-TLS 1.2 is not currently supported because Office Online Server (and Microsoft Offices Online) uses .NET Framework 4.*x* to establish network connections. By default, .NET Framework 4.*x* doesn't support TLS 1.2.    
+TLS 1.2 is not currently supported because Office Online Server (and Office Web Apps Server) uses .NET Framework 4.*x* to establish network connections. By default, .NET Framework 4.*x* doesn't support TLS 1.2.    
 
 ## Resolution  
 

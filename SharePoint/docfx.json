@@ -124,7 +124,11 @@
       "searchScope": "SharePoint Support",
       "titleSuffix": "SharePoint"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "feedback_product_url": {
+        "OneDrive/*.md": "https://onedrive.uservoice.com/"
+      }
+    },
     "template": [],
     "dest": "OfficeDocs-Support-SharePoint",
     "markdownEngineName": "markdig"

@@ -2,6 +2,15 @@
 
 
 
+## Week of February 01, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/3/2021 | [Run-Time Error 13 Type Mismatch when setting FW company as default](/office/troubleshoot/office-suite-issues/run-time-error-13-type-mismatch) | modified |
+| 2/6/2021 | Dsofile.dll lets you edit OLE document property | removed |
+
+
 ## Week of January 25, 2021
 
 

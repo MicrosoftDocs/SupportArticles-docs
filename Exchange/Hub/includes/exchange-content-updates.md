@@ -2,6 +2,24 @@
 
 
 
+## Week of February 08, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/8/2021 | [Bad Request when connecting to Exchange Online PowerShell](/exchange/troubleshoot/administration/bad-request-error-when-connecting-to-exchange-online-powershell) | modified |
+| 2/12/2021 | The time zone setting is set incorrectly to (UTC) Monrovia, Reykjavik | removed |
+
+
+## Week of February 01, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/3/2021 | [Restored deleted public folders from dumpster cause a migration batch failure](/exchange/troubleshoot/move-or-migrate-mailboxes/public-folder-migration-batch-error) | added |
+| 2/4/2021 | [Restored deleted public folders from dumpster cause a migration batch failure](/exchange/troubleshoot/move-or-migrate-mailboxes/public-folder-migration-batch-error) | modified |
+
+
 ## Week of January 25, 2021
 
 
