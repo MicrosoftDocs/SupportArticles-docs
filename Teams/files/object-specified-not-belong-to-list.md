@@ -28,9 +28,7 @@ When you select the **Files** tab in a channel in Microsoft Teams, you receive t
 
 ## Cause
 
-This error occurs if the name of the document library on your SharePoint site was changed from its default, "Shared Documents," to another name. For example, the default name was changed to "Renamed Documents," as shown in the following screenshot.
-
-   :::image type="content" source="media/object-specified-not-belong-to-list/renamed-documents.png" alt-text="Screenshot of the renamed document library in All Files.":::
+This error occurs if the name of the document library on your SharePoint site was changed from its default, "Shared Documents," to another name.
 
 ## Resolution
 
@@ -38,4 +36,8 @@ To resolve this issue, revert the name the document library to "Shared Documents
 
 1. Open the SharePoint site in [SharePoint Designer](https://www.microsoft.com/download/details.aspx?id=35491).
 2. Go to **All Files**.
-3. Right-click the document library, select **Rename**, and then change the name to **Shared Documents**.
+3. Locate the document library folder by its new name. For example, the default name was changed to "Renamed Documents," as shown in the following screenshot.
+
+   :::image type="content" source="media/object-specified-not-belong-to-list/renamed-documents.png" alt-text="Screenshot of the renamed document library in All Files.":::
+
+4. Right-click the folder, select **Rename**, and then change the name to **Shared Documents**.
