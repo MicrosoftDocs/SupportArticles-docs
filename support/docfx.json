@@ -81,7 +81,7 @@
         "system-center/**/*.md": "luche"
       },
       "ms.localizationpriority": {
-        "**/*.md": "Normal"
+        "**/*.md": "medium"
       },
       "ms.reviewer": {
         "**/*.md": "DEV_Triage, DaleChe, RamaKoni, DelHan, SureshKa, SueHar",
