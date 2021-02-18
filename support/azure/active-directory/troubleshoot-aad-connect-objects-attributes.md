@@ -28,7 +28,7 @@ The steps that are provided here start at the local Active Directory level and p
 For a better understanding of this article, first read the following prerequisite articles for a better understanding of how to search for an object in different sources (AD, AD CS, MV, and so on), and to understand how to check the connectors and lineage of an object.
 
 - [Azure AD Connect: Accounts and permissions](/azure/active-directory/hybrid/reference-connect-accounts-permissions)
-- [Troubleshoot an object that is not synchronizing with Azure Active Directory](/azure/active-directory/hybrid/tshoot-connect-object-not-syncing) 
+- [Troubleshoot an object that is not synchronizing with Azure Active Directory](/azure/active-directory/hybrid/tshoot-connect-object-not-syncing)
 - [Troubleshoot object synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/tshoot-connect-objectsync)
 
 ## Bad troubleshooting practices
@@ -63,22 +63,22 @@ Start-ADSyncSyncCycle
 
 ## Glossary
 
-| Acronym/abbreviation | Name/description |
+|Acronym/abbreviation|Name/description|
 |---|---|
-| AADC | Azure AD Connect |
-| AADCA | AAD Connector Account |
-| AADCS | Azure AD Connector Space |
-| AADCS:AttributeA | Attribute 'A' in Azure AD Connector Space |
-| ACLs | Access Control Lists (also known as ADDS permissions) |
-| ADCA | AD Connector Account |
-| ADCS | Active Directory Connector Space |
-| ADCS:AttributeA | Attribute 'A' in Active Directory Connector Space  |
-| ADDS or AD | Active Directory Domain Services |
-| CS | Connector Space |
-| MV |Metaverse |
-| MSOL Account | Automatically generated AD Connector Account (MSOL_########) |
-| MV:AttributeA | Attribute 'A' in the Metaverse object	|
-| SoA | Source of Authority |
+|AADC|Azure AD Connect|
+|AADCA|AAD Connector Account|
+|AADCS|Azure AD Connector Space|
+|AADCS:AttributeA |Attribute 'A' in Azure AD Connector Space|
+|ACLs|Access Control Lists (also known as ADDS permissions)|
+|ADCA|AD Connector Account|
+|ADCS|Active Directory Connector Space|
+|ADCS:AttributeA |Attribute 'A' in Active Directory Connector Space|
+|ADDS or AD |Active Directory Domain Services|
+|CS|Connector Space|
+|MV|Metaverse|
+|MSOL Account|Automatically generated AD Connector Account (MSOL_########)|
+|MV:AttributeA|Attribute 'A' in the Metaverse object|
+|SoA|Source of Authority|
 
 ## Step 1: Synchronization between ADDS and ADCS
 
@@ -425,7 +425,7 @@ The synchronization between MV and AADCS occurs in the delta/full synchronizatio
 
    :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/metaverse-search.png" alt-text="Metaverse Search screen.":::
   
-  If no AADCS connector is present, the object is most likely set to **cloudFiltered=True**. You can verify whether the object is cloud-filtered by examining the MV attributes for which sync rule is contributing with the **cloudFiltered** value.
+   If no AADCS connector is present, the object is most likely set to **cloudFiltered=True**. You can verify whether the object is cloud-filtered by examining the MV attributes for which sync rule is contributing with the **cloudFiltered** value.
 
 3. **Run a Preview on AADCS object**
 
@@ -574,7 +574,7 @@ Fortunately, the issues that affect these components usually generate an error i
 ### Resources
 
 - Get-AzureADUser `-ObjectId <UserPrincipalName>` | Out-File
-- [AD Photo Edit tool](http://www.cjwdev.com/Software/ADPhotoEdit/Info.html) 
+- [AD Photo Edit tool](http://www.cjwdev.com/Software/ADPhotoEdit/Info.html)
 - [Get-AzureADUserThumbnailPhoto](/powershell/module/azuread/get-azureaduserthumbnailphoto)
 - LDIFDE
 - Get-ADUser `-Identity <username>` | Out-File
