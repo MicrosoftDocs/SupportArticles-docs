@@ -31,7 +31,7 @@ When you try to start SQL Server in this scenario, the SQL Server service doesnâ
 
 ## Resolution
 
-1. Check [SQL Server error log](https://docs.microsoft.com/sql/tools/configuration-manager/viewing-the-sql-server-error-log) and verify that the cause is the inaccessibility of the master database. For example, you might see a log entry that resembles the following:
+1. Check [SQL Server error log](/sql/tools/configuration-manager/viewing-the-sql-server-error-log) and verify that the cause is the inaccessibility of the master database. For example, you might see a log entry that resembles the following:
 
     > `<Datetime> Server      Error: 17113, Severity: 16, State: 1.`  
     `<Datetime> Server      Error 2(The system cannot find the file specified.) occurred while opening file 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\master.mdf' to obtain configuration information at startup. An invalid startup option might have caused the error. Verify your startup options, and correct or remove them if necessary.`
@@ -46,7 +46,9 @@ When you try to start SQL Server in this scenario, the SQL Server service doesnâ
         > Because SQL Server Configuration Manager is a snap-in for the Microsoft Management Console program and not a standalone program, SQL Server Configuration Manager does not appear as an application in newer versions of Windows. To open SQL Server Configuration Manager in Windows 10 or 8, follow the steps for your version of Windows.
 
         - Windows 10:  
-            Select **Start** Page, enter *SQLServerManager13.msc* (for SQL Server 2016 (13.x)). For previous versions of SQL Server, replace 13 with the appropriate number. Select **SQLServerManager13.msc** to open the Configuration Manager. To pin the Configuration Manager to the Start Page or Task Bar, right-click **SQLServerManager13.msc**, and then select **Open file location**. In the Windows File Explorer, right-click **SQLServerManager13.msc**, and then select **Pin to Start** or **Pin to taskbar**.
+            1. Select **Start** Page, enter *SQLServerManager13.msc* (for SQL Server 2016 (13.x)). For previous versions of SQL Server, replace 13 with the appropriate number.
+            2. Select **SQLServerManager13.msc** to open the Configuration Manager. To pin the Configuration Manager to the Start Page or Task Bar, right-click **SQLServerManager13.msc**, and then select **Open file location**.
+            3. In the Windows File Explorer, right-click **SQLServerManager13.msc**, and then select **Pin to Start** or **Pin to taskbar**.
 
         - Windows 8:  
             Press Windows logo key+Q to open the Search charm. Under Apps, enter *SQLServerManager\<version_number>.msc* (for example, SQLServerManager13.msc), and then press Enter.

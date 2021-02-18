@@ -39,7 +39,7 @@ Here's how to resolve this problem:
 
 2. Check the SQL Server error log, and verify that you see error message entries that resemble the following:
 
-    > `<Datetime> spid9s      Server name is '<*ServerName*>'. This is an informational message only. No user action is required.`  
+    > `<Datetime> spid9s      Server name is '<ServerName>'. This is an informational message only. No user action is required.`  
     > `<Datetime> spid17s     Error: 17182, Severity: 16, State: 1.`  
     > `<Datetime> spid17s     TDSSNIClient initialization failed with error 0xd, status code 0x4. Reason: **All protocols are disabled. The data is invalid**.`  
     > `<Datetime> spid17s     Error: 17182, Severity: 16, State: 1.`  
