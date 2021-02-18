@@ -23,16 +23,16 @@ Here's an example of Cisco AnyConnect VPN:
 
 :::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/error.png" alt-text="Error 0x87D13BA2 ":::
 
-This issue may occur even though the application is successfully installed on the device.
+This issue may occur even though the app is successfully installed on the device.
 
 ## Cause
 
 This issue occurs under the following conditions:
 
-- multiple applications are included in a macOS package.
-- the macOS MDM client doesn't report back the installation status of all individual applications included in the bundle.
+- multiple applications are included in a macOS app package.
+- the macOS MDM client doesn't report back the installation status of all individual applications included in the package.
 
-Any application with multiple components may result in this error, such as Cisco AnyConnect VPN.
+Any app with multiple components may result in this error, such as Cisco AnyConnect VPN.
 
 ## Resolution
 
@@ -42,8 +42,9 @@ To fix this issue and allow the macOS LOB app to correctly report its status, fo
 2. Run the following command to extract the `.intunemac` file:
 
    ```console
-   unzip <package_name>.intunemac
+   unzip <Package_Name>.intunemac
    ```
+
    In our example, run `unzip AnyConnect.pkg.intunemac`.
   
    :::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/unzip.png" alt-text="Extract the file":::
@@ -109,7 +110,7 @@ To fix this issue and allow the macOS LOB app to correctly report its status, fo
    </PackageMetadata>
    ```
 
-5. Run the following command to repackage the archive:
+5. Run the following command to repackage the IntuneMacPackage folder:
 
    ```console
    zip -q --symlinks -0 -r <Package_Name>.intunemac <IntuneMacPackage_Folder_Location>
