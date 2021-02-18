@@ -1,5 +1,5 @@
 ---
-title: Contact card doesn't show user details or presence
+title: Contact card doesn't show user photo, details, or presence
 description: You can't see user's details or presence information in Outlook contact card, in Search People box, or in the TO field when a policy is applied.
 author: simonxjx
 ms.author: v-six
@@ -11,12 +11,13 @@ localization_priority: Normal
 ms.custom: 
 - Outlook for Windows
 - CSSTroubleshoot
-ms.reviewer: bobz
+- CI 142155
+ms.reviewer: bobz, tasitae
 appliesto:
 - Outlook 2016
 search.appverid: MET150
 ---
-# A recipient's details or presence information doesn't appear in Outlook contact card
+# A recipient's photo, details, or presence information doesn't appear in Outlook contact card
 
 _Original KB number:_ &nbsp; 4467874
 
@@ -24,9 +25,9 @@ _Original KB number:_ &nbsp; 4467874
 
 You experience one or more of the following symptoms in Microsoft Outlook:
 
-- An Outlook contact card doesn't display a recipient's details or presence information.
+- An Outlook contact card doesn't display a recipient's photo, details, or presence information.
 - When you try to search for a recipient by using the **Search People** box, the search results display the user name without the presence information. Additionally, when you click to open the user's contact card, only minimal details are displayed.
-- No presence information is displayed for a recipient who's listed in the **TO** field. When you open that recipient's contact card, no details are displayed.
+- No presence information is displayed for a recipient who's listed in the **TO** field. When you open that recipient's contact card, no photo or details are displayed.
 
 ## Cause
 
@@ -50,6 +51,10 @@ Before you troubleshoot this issue, you must differentiate between the followi
 
 Presence information and contact card details will not be displayed for a recipient that's just an SMTP address.
 
-If the recipient exists in the GAL and includes information, remove the registry key that's mentioned in the Cause section to resolve this issue.
+If the recipient exists in the GAL and includes information, remove the registry key that's mentioned in the Cause section to resolve this issue. Additionally, the `DownloadDetailsFromAD` setting is typically set by a Group Policy object (GPO), so you can also use Group Policy Object Editor to manage the setting.
+
+1. Start Group Policy Object Editor.
+2. Under **User Configuration**, expand **Administrative Templates** > **Microsoft Outlook 2016**, and then select the **Outlook Social Connector** node.
+3. Double-click the **Do not download photos from Active Directory** setting, select **Disabled** or **Not Configured**, and then select **OK**.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
