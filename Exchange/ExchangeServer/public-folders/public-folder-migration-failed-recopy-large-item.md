@@ -28,6 +28,8 @@ When you perform a public folder migration from Exchange Server on-premises to E
 
 > [AS8PR05MB8070] **Failed to recopy large item**: Item ([len=70, data=000000001A447390AA6611 CD9BC800AA002FC45A0900C1F54ED028C6E54FBFB688ACA28186DB00012A8622020000C1F54ED028C6E54FBFB688ACA28186DB00012A8638D70000]) MessageClass:"IPM.Post", Size: (**16.63 MB** (17,436,461 bytes)), Folder: ([len=46, data=000000001A447390AA6611CD9BC800AA002FC45A0300C1F54ED028C6E54FBFB688ACA28186DB00012A8622020000])
 
+Alternatively, you receive a "MapiExceptionPermanentImportFailure" or "MapiExceptionMaxSubmissionExceeded" failure type (that's discussed in the "[More information](#more-information)" section).
+
 In this case, the large item size to be migrated is 16.63 MB, which is less than the maximum item size set on the Exchange Online public folder mailboxes and less than the Exchange Online organization's limit.
 
 By default, the maximum item size (`MaxReceiveSize` or `MaxSendSize`) that can be sent or received in Exchange Online public folder mailboxes is 35 MB, and it can be increased up to 150 MB.
@@ -51,7 +53,7 @@ Here's how to increase the public folder limits in Exchange Server on-premises:
    If you want to get the identity of the public folders where the `MaxItemSize` value is set, run the following Exchange Management Shell command:
 
    ```powershell
-   Get-PublicFolder \ -Recurse | where {$_.MaxItemSize -gt 0}| FT Identity
+   Get-PublicFolder \ -Recurse | where {$_.MaxItemSize -ne $null}| FT Identity, MaxItemSize
    ```
 
 2. Increase the `MaxItemSize` value on the public folder by running the following Exchange Management Shell command:
