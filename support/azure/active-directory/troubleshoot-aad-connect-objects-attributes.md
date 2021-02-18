@@ -11,7 +11,7 @@ editor: v-jesits
 
 This article is intended to establish a common practice for how to troubleshoot synchronization issues in Azure Active Directory (Azure AD). This method applies to situations in which an object or attribute doesn't synchronize to Azure Active AD and doesn’t display any errors on the sync engine, in the Application viewer logs, or in the Azure AD logs. It’s easy to get lost in the details if there’s no obvious error. However, by using best practices, you can isolate the issue and provide insights for Microsoft Support engineers.
 
-As you apply this troubleshooting method to your environment, over time, you’ll be able to do the following:
+As you apply this troubleshooting method to your environment, over time, you’ll be able to do the following steps:
 
 - Troubleshoot the sync engine logic from end to end.
 - Resolve synchronization issues more efficiently.
@@ -21,7 +21,7 @@ As you apply this troubleshooting method to your environment, over time, you’l
 
 :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/aad-connect-flow-chart.png" alt-text="AAD Connect flow chart.":::
 
-The steps that are provided here start at the local Active Directory level and progress toward Azure AD. This is the most common direction of synchronization. However, the same principles apply to the inverse direction (for example, for attribute writeback).
+The steps that are provided here start at the local Active Directory level and progress toward Azure AD. These steps are the most common direction of synchronization. However, the same principles apply to the inverse direction (for example, for attribute writeback).
 
 ## Prerequisites
 
@@ -42,7 +42,7 @@ Set-MsolDirSyncEnabled -EnableDirSync $false "Please DON'T and keep reading!"
 
 However, this can be catastrophic because it triggers a complex and lengthy back-end operation to transfer SoA from local AD to Azure AD/Exchange Online for all the synced objects on the tenant. This operation is necessary to convert each object from DirSyncEnabled to cloud-only, and clean up all the shadow properties that are synced from on-premises AD (for example, ShadowUserPrincipalName and ShadowProxyAddresses). Depending on the size of the tenant, this operation can take more than 72 hours. Also, it’s not possible to predict when the operation will finish. Never use this method to troubleshoot a sync issue because this will cause additional harm and won't fix the issue. You'll be blocked from enabling DirSync again until this disabling operation is complete. Also, after you re-enable DirSync, AADC must again match all the on-premises objects with existent Azure AD objects. This process can be disruptive.
 
-The only scenarios in which this command is supported to disable DirSync are the following:
+The only scenarios in which this command is supported to disable DirSync are as follows:
 
 - You are decommissioning your on-premises synchronization server, and you want to continue managing your identities entirely from the cloud instead of from hybrid identities.
 - You have some synced objects in the tenant that you want to keep as cloud-only in Azure AD and remove from on-premises AD permanently.
@@ -90,15 +90,15 @@ Determine whether the object or attribute is present and consistent in ADCS. If 
 
 ### Description
 
-Synchronization between ADDS and ADCS occurs at the import step. This is the moment when AADC reads from the source directory and stores data in the database. That is, when data is staged in the connector space. During a delta import from AD, AADC requests all the new changes that occurred after a given directory watermark. This call is initiated by AADC by using the Directory Services DirSync Control against the Active Directory Replication Service. This provides the last watermark as the last successful AD import, and gives AD the point-in-time reference from when all the (delta) changes should be retrieved. A full import is different because AADC will import from AD all the data (in sync scope), and then mark as obsolete (and delete) all the objects that are still in ADCS but were not imported from AD. All the data between AD and AADC is transferred through LDAP and is encrypted by default.
+Synchronization between ADDS and ADCS occurs at the import step, and is the moment when AADC reads from the source directory and stores data in the database. That is, when data is staged in the connector space. During a delta import from AD, AADC requests all the new changes that occurred after a given directory watermark. This call is initiated by AADC by using the Directory Services DirSync Control against the Active Directory Replication Service. This step provides the last watermark as the last successful AD import, and gives AD the point-in-time reference from when all the (delta) changes should be retrieved. A full import is different because AADC will import from AD all the data (in sync scope), and then mark as obsolete (and delete) all the objects that are still in ADCS but were not imported from AD. All the data between AD and AADC is transferred through LDAP and is encrypted by default.
 
 :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/aadc-connection-options.png" alt-text="AADC connection options.":::
 
 If the connection with AD is successful, but the object or attribute is not present in ADCS (assuming the domain or object is in sync scope), the issue most likely involves ADDS permissions. The ADCA requires ay least read permissions on the object in AD in order to import data to ADCS. By default, the MSOL account has explicit read/write permissions for all user, group, and computer properties. However, this situation might still be problematic if the following conditions are true:
 
 - AADC uses a custom ADCA, but it was not provided sufficient permissions in AD.
-- A parent OU has blocked inheritance. This prevents propagation of permissions from the root of the domain.
-- The object or attribute itself has blocked inheritance. This prevents propagation of permissions.
+- A parent OU has blocked inheritance, which prevents propagation of permissions from the root of the domain.
+- The object or attribute itself has blocked inheritance, which prevents propagation of permissions.
 - The object or attribute has an explicit Deny permission that prevents ADCA from reading it.
 
 ### Troubleshooting
@@ -114,8 +114,8 @@ If you have to further troubleshoot connectivity for AD, especially if no errors
 Connection issues to ADDS have the following causes:
 
 - Invalid AD credentials. For example, the ADCA has expired or the password has changed.
-- A “failed-search” error. This occurs when DirSync Control doesn't communicate with the AD Replication Service, typically because of high-network packet fragmentation.
-- A “no-start-ma” error. This occurs when there are name resolution issues (DNS) in AD.
+- A “failed-search” error, which occurs when DirSync Control doesn't communicate with the AD Replication Service, typically because of high-network packet fragmentation.
+- A “no-start-ma” error, which occurs when there are name resolution issues (DNS) in AD.
 - Other problems that can be caused by name resolution issues, network routing problems, blocked network ports, high network packet fragmentation, no writable DCs available, and so on. In such cases, you will likely have to involve the Directory Services or networking support teams to help troubleshoot.
 
 Troubleshooting summary
@@ -137,12 +137,12 @@ After you troubleshoot AD connectivity, run the [Troubleshoot Object Synchroniza
 
 A lack of AD permissions can affect both directions of the synchronization:
 
-- When you import from ADDS to ADCS, a lack of permissions can cause AADC to skip objects or attributes so that AADC cannot get ADDS updates in the import stream. This is because the ADCA does not have enough permissions to read the object.
+- When you import from ADDS to ADCS, a lack of permissions can cause AADC to skip objects or attributes so that AADC cannot get ADDS updates in the import stream. This error occurs because the ADCA does not have enough permissions to read the object.
 - When you export from ADCS to ADDS, a lack of permissions generates a "permission-issue" export error.
 
 To check permissions, open the **Properties** window of an AD object, select **Security** > **Advanced**, and then examine the object's allow/deny ACLs by selecting the **Disable Inheritance** button (if inheritance is enabled). You can sort the column contents by **Type** to locate all the “deny” permissions. AD permissions can vary widely. However, by default, you might only see one “Deny ACL” for “Exchange Trusted Subsystem.” Most permissions will be marked as **Allow**.
 
-The most relevant default permissions are the following:
+The following default permissions are the most relevant:
 
 - Authenticated Users
 
@@ -194,7 +194,7 @@ Troubleshooting summary
 
 #### AD replications
 
-This is less likely to affect AADConnect because it causes greater problems. However, when AADConnect is importing data from a domain controller by using delayed replication, it will not import the latest information from AD. This causes sync issues in which an object or attribute that was recently created or changed in AD does not sync to AAD because it was not replicated to the domain controller that AADConnect is contacting. To verify that this is the issue, check the domain controller that AADC uses for import (see “Connectivity to AD”), and use the **AD Users and Computers** console to directly connect to this server (see **Change Domain Controller** in the next image). Then, verify that the data on this server corresponds to the latest data, and whether it is consistent with the respective ADCS data. At this stage, AADC will generate a greater load on the domain controller and networking layer.
+This issue is less likely to affect AADConnect because it causes greater problems. However, when AADConnect is importing data from a domain controller by using delayed replication, it will not import the latest information from AD, which causes sync issues in which an object or attribute that was recently created or changed in AD does not sync to AAD because it was not replicated to the domain controller that AADConnect is contacting. To verify that this is the issue, check the domain controller that AADC uses for import (see “Connectivity to AD”), and use the **AD Users and Computers** console to directly connect to this server (see **Change Domain Controller** in the next image). Then, verify that the data on this server corresponds to the latest data, and whether it is consistent with the respective ADCS data. At this stage, AADC will generate a greater load on the domain controller and networking layer.
 
 :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/change-domain-controller.png" alt-text="Active Directory Change Domain Controller option.":::
 
@@ -301,7 +301,7 @@ The synchronization between ADCS and MV occurs on the delta/full synchronization
 
 - **Check the inbound sync rules for provisioning**
 
-  An object that is present in ADCS but missing in MV indicates that there were no scoping filters on any of the provisioning sync rules that applied to that object. This means that the “In from AD” sync rules shown in the next image). Therefore, the object was not projected to MV. This might occur if there are disabled or customized sync rules.
+  An object that is present in ADCS but missing in MV indicates that there were no scoping filters on any of the provisioning sync rules that applied to that object. Therefore, the object was not projected to MV. This issue might occur if there are disabled or customized sync rules.
 
   To get a list of inbound provisioning sync rules, run the following command:
 
@@ -311,7 +311,7 @@ The synchronization between ADCS and MV occurs on the delta/full synchronization
 
 - **Check the lineage of the ADCS object**
 
-  You can retrieve the failing object from the ADCS by searching on "DN or Anchor" in "Search Connector Space." On the **Lineage** tab, you will probably see that the object is a **Disconnector** (no links to MV), and the lineage is empty. This is also a good place to check whether the object has any errors, in case there is a sync error tab.
+  You can retrieve the failing object from the ADCS by searching on "DN or Anchor" in "Search Connector Space." On the **Lineage** tab, you will probably see that the object is a **Disconnector** (no links to MV), and the lineage is empty. Also, check whether the object has any errors, in case there is a sync error tab.
 
   :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/connector-space-object-properties.png" alt-text="Connector Space Object Properties in ADCS.":::
 
@@ -405,13 +405,13 @@ This step checks whether the object or attribute flows from MV to AADCS. At this
 
 #### Description
 
-The synchronization between MV and AADCS occurs in the delta/full synchronization step. This is when AADC reads the data in MV, processes all sync rules, and updates the respective AADCS object. This MV object will contain CS links (also known as connectors) that point to the CS objects that contribute to its properties and the lineage of the sync rules that were applied in the synchronization step. At this point, AADC generates more load on SQL Server (or localDB) and the networking layer.
+The synchronization between MV and AADCS occurs in the delta/full synchronization step, when AADC reads the data in MV, processes all sync rules, and updates the respective AADCS object. This MV object will contain CS links (also known as connectors) that point to the CS objects that contribute to its properties and the lineage of the sync rules that were applied in the synchronization step. At this point, AADC generates more load on SQL Server (or localDB) and the networking layer.
 
 #### Troubleshooting MV to AADCS for objects
 
 1. **Check the outbound sync rules for provisioning**
 
-   An object that is present in MV but missing in AADCS indicates that there were no scoping filters on any of the provisioning sync rules that applied to that object. For example, see the “Out to AAD” sync rules shown in the next image. Therefore, the object was not provisioned in AADCS. This can occur if there are disabled or customized sync rules.
+   An object that is present in MV but missing in AADCS indicates that there were no scoping filters on any of the provisioning sync rules that applied to that object. For example, see the “Out to AAD” sync rules shown in the next image. Therefore, the object was not provisioned in AADCS. This error can occur if there are disabled or customized sync rules.
 
    To get a list of inbound provisioning sync rules, run the following command:
 
@@ -421,7 +421,7 @@ The synchronization between MV and AADCS occurs in the delta/full synchronizatio
 
 2. **Check the lineage of the ADCS object**
 
-   To retrieve the failing object from the MV, use a **Metaverse Search**, and then examine the connectors tab. On this tab, you can determine whether the MV object is linked to an AADCS object. This is also a good place to check whether the object has any errors, in case a sync error tab is present.
+   To retrieve the failing object from the MV, use a **Metaverse Search**, and then examine the connectors tab. On this tab, you can determine whether the MV object is linked to an AADCS object. Also, check whether the object has any errors, in case a sync error tab is present.
 
    :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/metaverse-search.png" alt-text="Metaverse Search screen.":::
   
@@ -433,7 +433,7 @@ The synchronization between MV and AADCS occurs in the delta/full synchronizatio
 
 4. **Export the object to XML**
 
-   For a more detailed analysis or offline analysis, you can collect all the database data that's related to the object by using the **Export-ADSyncObject** script. This exported information, together with the (outbound) sync rules configuration, can help determine which rule is filtering out the object. This means that it can determine which outbound scoping filter in the provisioning sync rules is preventing the object from connecting with the AADCS).
+   For a more detailed analysis or offline analysis, you can collect all the database data that's related to the object by using the **Export-ADSyncObject** script. This exported information, together with the (outbound) sync rules configuration, can help determine which rule is filtering out the object, and can determine which outbound scoping filter in the provisioning sync rules is preventing the object from connecting with the AADCS).
 
    Here are some examples of **Export-ADsyncObject** syntax:
 
@@ -531,9 +531,9 @@ Fortunately, the issues that affect these components usually generate an error i
 
 - **ThumbnailPhoto attribute (KB4518417)**
 
-    There is a general misconception that after you sync **ThumbnailPhoto** from AD for the first time, you can no longer update it. This is only partly true.
+    There is a general misconception that after you sync **ThumbnailPhoto** from AD for the first time, you can no longer update it, which is only partly true.
 
-    Usually, the **ThumbnailPhoto** in Azure AD is continually updated. However, an issue occurs if the updated picture is no longer retrieved from Azure AD by the respective workload or partner (for example, EXO or SfBO). This causes the false impression that the picture was not synced from on-premises AD to Azure AD.
+    Usually, the **ThumbnailPhoto** in Azure AD is continually updated. However, an issue occurs if the updated picture is no longer retrieved from Azure AD by the respective workload or partner (for example, EXO or SfBO). This issue causes the false impression that the picture was not synced from on-premises AD to Azure AD.
 
 ### Basic steps to troubleshoot ThumbnailPhoto
 
@@ -548,7 +548,7 @@ Fortunately, the issues that affect these components usually generate an error i
 
 4. **UserPrincipalName changes do not update in Azure AD**
 
-   If the **UserPrincipalName** attribute is not updated in Azure AD, while other attributes sync as expected, it's possible that a feature that's named [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) is not enabled on the tenant. This is a common scenario.
+   If the **UserPrincipalName** attribute is not updated in Azure AD, while other attributes sync as expected, it's possible that a feature that's named [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) is not enabled on the tenant. This scenario occurs frequently.
 
    Before this feature was added, any updates to the UPN that came from on-premises after the user was provisioned in Azure AD and assigned a license were “silently” ignored. An admin would have to use MSOnline or Azure AD PowerShell to update the UPN directly in Azure AD. After this feature is updated, any updates to UPN will flow to Azure AD regardless of whether the user is licensed (managed).
 
@@ -559,7 +559,7 @@ Fortunately, the issues that affect these components usually generate an error i
 
 5. **Invisible characters and ProxyCalc internals**
 
-   Issues that involve invalid characters that don't produce any sync error are more troublesome in **UserPrincipalName** and **ProxyAddresses** attributes because of the cascading effect in ProxyCalc processing that will “silently” discard the value  from on-premises AD. This occurs as follows:
+   Issues that involve invalid characters that don't produce any sync error are more troublesome in **UserPrincipalName** and **ProxyAddresses** attributes because of the cascading effect in ProxyCalc processing that will **silently** discard the value from on-premises AD. This situation occurs as follows:
 
    1. The resulting **UserPrincipalName** in Azure AD will be the **MailNickName** or **CommonName** @ (at) initial domain. For example, instead of John.Smith@Contoso.com, the **UserPrincipalName** in AAD might become smithj@Contoso.onmicrosoft.com because there's an invisible character in the UPN value from on-premises AD.
 
