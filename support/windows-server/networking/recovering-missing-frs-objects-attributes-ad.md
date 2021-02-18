@@ -35,9 +35,6 @@ This article describes:
 ## More information
 
 To function correctly, FRS relies on containers, objects, and attributes that are stored in Active Directory and that are replicated among domain controllers in a given domain. Critical objects include FRS member and subscriber objects. Required attributes (by schema class definition) and optional attributes include the Schedule attribute, the FRS-File-Filter attribute, the FRS-Folder-Filter attribute, and the FRS database location. Schema definitions define the containers or the location in which FRS objects reside.
- For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[296183](https://support.microsoft.com/help/296183) FRS: Overview of Active Directory objects that are used by FRS  
 
 FRS supports two replica set types: DFS and `SYSVOL`. Dcpromo.exe indirectly creates containers, objects, and attributes for `SYSVOL` replica sets. The DFS snap-in (Dfsgui.msc) creates objects when you enable replication between two or more targets in a DFS Root or a DFS Link, or when you add new members to an existing FRS replica set.
 

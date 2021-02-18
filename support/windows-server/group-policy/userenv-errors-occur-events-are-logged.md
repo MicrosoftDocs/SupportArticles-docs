@@ -456,7 +456,7 @@ For more information about how to troubleshoot the missing Sysvol and Netlogon s
 
 For more information about how to rebuild the Sysvol share in Windows Server 2003, see [How to rebuild the SYSVOL tree and its content in a domain](https://support.microsoft.com/help/315457).
 
-After you make sure that the Sysvol share is available, make sure that the Sysvol folder, the Sysvol share, and the root folder of the volume that contains the Sysvol folder are configured with the correct permissions. For more information about the permissions that are required by the Sysvol share and the Sysvol folder, see [Event ID 1000, 1001 is logged every five minutes in the Application event log](https://support.microsoft.com/help/290647).
+After you make sure that the Sysvol share is available, make sure that the Sysvol folder, the Sysvol share, and the root folder of the volume that contains the Sysvol folder are configured with the correct permissions.
 
 Additionally, on Windows 2000 Server, the Everyone group must be granted Full Control permission on the root folder of the volume that contains the Sysvol folder. On Windows Server 2003, the Everyone group must be granted the Read & Execute special permission to "This folder only," and the domain\Users group must be granted the following standard permissions:
 

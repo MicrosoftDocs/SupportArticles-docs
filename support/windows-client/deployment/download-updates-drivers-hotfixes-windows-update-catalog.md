@@ -56,7 +56,7 @@ To search for updates from the Windows Update Catalog, follow these steps:
 1. In the **Search** text box, type your search terms. For example, you might type *Windows Vista Security*.
 2. Click **Search**, or press **Enter**.
 3. Browse the list that is displayed to select the updates that you want to download.
-4. Click **Download** to download the updates.
+4. Click **Download** to download the updates.
 5. To search for additional updates to download, repeat steps 2a through 2d.
 
 ### Step 3: Download updates
@@ -64,8 +64,8 @@ To search for updates from the Windows Update Catalog, follow these steps:
 To download updates from the Windows Update Catalog, follow these steps:
 
 1. Click the **Download** button under **Search** box.
-2. Click the updates link on the pop-up page and **Save** to the default path, or right-click the link and select **Save target as**  to the specified path. You can either type the full path of the folder, or you can click **Browse**  to locate the folder.
-3. Close the **Download** and the **Windows Update Catalog** Window.
+2. Click the updates link on the pop-up page and **Save** to the default path, or right-click the link and select **Save target as**  to the specified path. You can either type the full path of the folder, or you can click **Browse**  to locate the folder.
+3. Close the **Download** and the **Windows Update Catalog** Window.
 4. Find the location that you specified in step 3b.
     > [!NOTE]
     > If you have downloaded device drivers for installation, go to "Installing Drivers."

@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 This article describes an issue in which an **Error [0x80070005] Access is denied** error occurs during a server backup process in Windows Server 2012 Essentials.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
+_Original product version:_ &nbsp;Windows Server 2012  
 _Original KB number:_ &nbsp;2747459
 
 ## Symptoms

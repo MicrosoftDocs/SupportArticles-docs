@@ -12,6 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: TCP/IP communications
 ms.technology: networking
+adobe-target: true
 ---
 # Service overview and network port requirements for Windows
 
@@ -1394,10 +1395,6 @@ For information about how to plan for and to deploy MOM, see [System Center Deve
 ### Systems Management Server
 
 For more information about the ports that are used by SMS 2003, see [Ports that Systems Management Server 2003 uses to communicate through a firewall or through a proxy server](https://support.microsoft.com/help/826852).
-
-### SQL Server
-
-For more information about the ports that are used by SQL Server 7.0 and SQL Server 2000 for OLAP, see [INF: TCP Ports Used by OLAP Services when Connecting Through a Firewall](https://support.microsoft.com/help/301901).
 
 ### Terminal Services
 

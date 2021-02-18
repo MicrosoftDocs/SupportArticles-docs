@@ -22,11 +22,11 @@ _Original KB number:_ &nbsp; 4016973
 
 ## Symptoms
 
-When you start a Modern app, such as Microsoft.MSN.Money.exe or Microsoft.Photos.exe, on Windows 10, version 1607, Windows 10, version 1809 or Windows 10, version 1903, you notice that the application is blocked by your security software.
+When you start a Modern app, such as Microsoft.MSN.Money.exe or Microsoft.Photos.exe, on Windows 10, version 1607, Windows 10, version 1809 or Windows 10, version 1903, you notice that the application is blocked by your security software.
 
 ## Cause
 
-This issue occurs because the individual files within an application package are not digitally signed even though the packages are catalog-signed.
+This issue occurs because the individual files within an application package are not digitally signed even though the packages are catalog-signed.
 
 ## Workaround
 
