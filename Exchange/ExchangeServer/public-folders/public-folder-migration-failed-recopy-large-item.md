@@ -79,7 +79,7 @@ Here's how to increase the public folder limits in Exchange Server on-premises:
 To find a "MapiExceptionPermanentImportFailure" failure type, you can retrieve the failures on the statistics of the public folder mailbox migration request by running the following Exchange Online PowerShell commands:
 
 ```powershell
-$pf_stats = Get-PublicFolderMailboxMigrationRequest | where {$_.TargetMailbox -eq "Mailbox1"} | Get-PublicFolderMailboxMigrationRequestStatistics -IncludeReport 
+$pf_stats = Get-PublicFolderMailboxMigrationRequest | where {$_.TargetMailbox -eq "<Mailbox1>"} | Get-PublicFolderMailboxMigrationRequestStatistics -IncludeReport 
 $pf_stats.Report.Failures | group failuretype | ft -a 
 ```
 
