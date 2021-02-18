@@ -102,3 +102,5 @@ In this case, the limitation value is 0x800000 (8 MB) and the large item size 
 **Note:** To get the size limitation in MB, divide the limitation value by 1MB by running the command (as shown in the following screenshot):
 
 :::image type="content" source="media/public-folder-migration-failed-recopy-large-item/windows-powershell.png" alt-text="Screenshot of the limitation value divide by 1 MB.":::
+
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
