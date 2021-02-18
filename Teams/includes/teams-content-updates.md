@@ -2,6 +2,16 @@
 
 
 
+## Week of February 08, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/10/2021 | [User presence status issues in Outlook](/microsoftteams/troubleshoot/teams-im-presence/issues-with-presence-in-outlook) | added |
+| 2/11/2021 | [SBC connectivity issues](/microsoftteams/troubleshoot/direct-routing/sip-options-tls-certificate-issues) | modified |
+| 2/12/2021 | [SBC connectivity issues](/microsoftteams/troubleshoot/direct-routing/sip-options-tls-certificate-issues) | modified |
+
+
 ## Week of February 01, 2021
 
 
