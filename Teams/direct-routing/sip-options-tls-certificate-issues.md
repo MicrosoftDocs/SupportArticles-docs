@@ -42,8 +42,8 @@ This article lists some common issues that are related to SIP options and TLS ce
 
 - The SIP proxy checks the connection request.
 
-   - If the request is not valid, the TLS connection is closed and the SIP proxy does not receive SIP OPTIONS from the SBC.
-   - If the request is valid, the TLS connection is established, and the SBC uses it to send SIP OPTIONS to the SIP proxy.
+  - If the request is not valid, the TLS connection is closed and the SIP proxy does not receive SIP OPTIONS from the SBC.
+  - If the request is valid, the TLS connection is established, and the SBC uses it to send SIP OPTIONS to the SIP proxy.
 
 - After it receives SIP OPTIONS, the SIP proxy checks the Record-Route to determine whether the SBC FQDN belongs to a known tenant. If the FQDN information is not detected there, the SIP proxy checks the Contact header.
 
@@ -73,10 +73,10 @@ Make sure that your SBC certificate is not self-signed and that you got it from 
 
 If you’re using the minimum required version of TLS, and your SBC certificate is valid, then the issue might occur because the FQDN is misconfigured in your SIP profile and not recognized as belonging to any tenant. Check for the following conditions, and fix any errors that you find:
 
-  - The FQDN provided by the SBC in the Record-Route or Contact header is different from what is configured in Teams.
-  - The Contact header contains an IP address instead of the FQDN.
-  - The domain isn’t [fully validated](/microsoft-365/admin/setup/add-domain). If you add an FQDN that wasn’t validated previously, you must validate it now.
-  - After you register an SBC domain name, you must activate it by [adding at least one E3- or E5-licensed user](/microsoftteams/direct-routing-connect-the-sbc#connect-the-sbc-to-the-tenant).
+- The FQDN provided by the SBC in the Record-Route or Contact header is different from what is configured in Teams.
+- The Contact header contains an IP address instead of the FQDN.
+- The domain isn’t [fully validated](/microsoft-365/admin/setup/add-domain). If you add an FQDN that wasn’t validated previously, you must validate it now.
+- After you register an SBC domain name, you must activate it by [adding at least one E3- or E5-licensed user](/microsoftteams/direct-routing-connect-the-sbc#connect-the-sbc-to-the-tenant).
 
 </details>
 
