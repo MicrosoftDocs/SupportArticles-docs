@@ -56,13 +56,13 @@ Under certain circumstances, the system logs the following Event ID 51 event mes
 In this case, no harmful effects are experienced. For example, Event ID 51 is logged when blank media such as CDR, CDRW, DVDR, is inserted into a writable drive while a USB device is plugged in. The system logs the event even though the disc is writable, and the USB device is still usable. In these particular cases, you can safely ignore the log entries. No action is required.
 
 > [!NOTE]
-> On Windows XP and Windows Server 2003, the DeviceName may be truncated because of the size limitation of the event log entry. As a result, the displayed hard disk number, or the device object name itself may be incorrect. This is because a large amount of information is stored in the data section, which reduces the space that is available for the DeviceName. In this case, you can find the appropriate device by looking at the destination disk data that is stored in the data section. For more information, see the [Decode the data section of an Event ID 51 event message](#decode-the-data-section-of-an-event-id-51-event-message) section.
+> On Windows XP and Windows Server 2003, the DeviceName may be truncated because of the size limitation of the event log entry. As a result, the displayed hard disk number, or the device object name itself may be incorrect. Because a large amount of information is stored in the data section, the space that's available for the DeviceName is reduceed. In this case, you can find the appropriate device by looking at the destination disk data that's stored in the data section. For more information, see [Decode the data section of an Event ID 51 event message](#decode-the-data-section-of-an-event-id-51-event-message).
 
 On Windows Vista and later versions, the event log entry size has been increased, and DeviceName isn't truncated.
 
 You can use the binary data associated with any DISK error (Event ID 7, 9, 11, 51, and other Event IDs) to help you identify the problem by decoding the data section.
 
-An Event ID 51 has an additional Command Descriptor Block (CDB) box. Consider the following information when you review the data section of an Event ID 51 event message.
+An Event ID 51 has an extra Command Descriptor Block (CDB) box. Consider the following information when you review the data section of an Event ID 51 event message.
 
 ## Decode the data section of an Event ID 51 event message
 

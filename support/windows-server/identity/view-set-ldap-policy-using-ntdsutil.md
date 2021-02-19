@@ -55,11 +55,11 @@ The LDAP administration limits are:
 
     Default value: 4,096 bytes
 
-- MaxNotificationPerConnection - The Maximum number of outstanding notification requests that are permitted on a single connection. When this limit is reached the server returns a **busy** error to any new notification searches that are performed on that connection.
+- MaxNotificationPerConnection - The Maximum number of outstanding notification requests that are permitted on a single connection. When this limit is reached, the server returns a **busy** error to any new notification searches that are performed on that connection.
 
     Default value: 5
 
-- MaxPageSize - This value controls the maximum number of objects that are returned in a single search result, independent of how large each returned object is. To perform a search where the result might exceed this number of objects, the client must specify the paged search control. This is to group the returned results in groups that are no larger than the MaxPageSize value. To summarize, MaxPageSize controls the number of objects that are returned in a single search result.
+- MaxPageSize - This value controls the maximum number of objects that are returned in a single search result, independent of how large each returned object is. To perform a search where the result might exceed this number of objects, the client must specify the paged search control. It's to group the returned results in groups that are no larger than the MaxPageSize value. To summarize, MaxPageSize controls the number of objects that are returned in a single search result.
 
     Default value: 1,000
 
@@ -75,7 +75,7 @@ The LDAP administration limits are:
 
     Default value: 120 seconds
 
-- MaxTempTableSize - While a query is processed, the dblayer may try to create a temporary database table to sort and select intermediate results from. The MaxTempTableSize limit controls how large this temporary database table can be. If the temporary database table would contain more objects than the value for MaxTempTableSize, the dblayer performs a much less efficient parsing of the complete DS database and of all the objects in the DS database.
+- MaxTempTableSize - While a query is processed, the `dblayer` may try to create a temporary database table to sort and select intermediate results from. The MaxTempTableSize limit controls how large this temporary database table can be. If the temporary database table would contain more objects than the value for MaxTempTableSize, the `dblayer` performs a much less efficient parsing of the complete DS database and of all the objects in the DS database.
 
     Default value: 10,000 records
 
