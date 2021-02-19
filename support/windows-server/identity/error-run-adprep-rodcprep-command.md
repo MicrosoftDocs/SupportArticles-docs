@@ -1,6 +1,6 @@
 ---
-title: Error when running the `Adprep /rodcprep` command in Windows Server 2008
-description: The `Adprep /rodcprep` command isn't completed successfully. The reason is that the infrastructure master for one or more active directory Non-Domain Naming Contexts (NDNCs) isn't reachable. A resolution is provided.
+title: Error when running the Adprep /rodcprep command in Windows Server 2008
+description: The Adprep /rodcprep command isn't completed successfully. The reason is that the infrastructure master for one or more active directory Non-Domain Naming Contexts (NDNCs) isn't reachable. A resolution is provided.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory domain or forest functional level updates
 ms.technology: windows-server-active-directory
 ---
-# Error when you run the Adprep /rodcprep command in Windows Server 2008: Adprep could not contact a replica for partition DC=DomainDnsZones,DC=Contoso,DC=com
+# Error when you run the `Adprep /rodcprep` command in Windows Server 2008: Adprep could not contact a replica for partition DC=DomainDnsZones,DC=Contoso,DC=com
 
 This article solves a problem that the `Adprep /rodcprep` command isn't completed successfully because the infrastructure master for one or more active directory NDNCs isn't reachable.
 
