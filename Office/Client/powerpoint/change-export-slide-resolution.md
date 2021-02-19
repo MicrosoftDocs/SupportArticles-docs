@@ -1,5 +1,5 @@
 ---
-title: How to change the export resolution of a PowerPoint slide
+title: How to export high resolution slides from PowerPoint (high dpi)
 description: Describes how to change the dots per inch (dpi) setting of a PowerPoint slide when you save it as a picture. To do this, you must add a new registry value.
 author: simonxjx
 manager: dcscontentpm
@@ -19,7 +19,7 @@ appliesto:
 - Microsoft Office PowerPoint 2003
 ---
 
-# How to change the export resolution of a PowerPoint slide
+# How to export high resolution slides from PowerPoint (high dpi)
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
