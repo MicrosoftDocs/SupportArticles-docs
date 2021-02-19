@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Out of Memory issues
-description: This article describes Out of Memory issues that occur in ASP.NET.
+description: This article describes the Out of Memory issues that occur in ASP.NET.
 ms.date: 03/26/2020
 ms.prod-support-area-path: Health, diagnostic, and performance features
 ms.reviewer: bretb, kaorif
@@ -14,9 +14,9 @@ _Original KB number:_ &nbsp; 2020006
 
 ## Symptoms
 
-One of the most common issues that we see in Microsoft Customer Support Services is `OutOfMemoryException` scenarios. So we've put together a collection of resources to assist in troubleshooting and identifying the cause of memory issues.
+One of the most common issues that we see in Microsoft Customer Support Services is `OutOfMemoryException` scenarios. So we've put together a collection of resources to help troubleshooting and identifying the cause of memory issues.
 
-Before we cover the details of troubleshooting an `OutOfMemoryException`, it's important to understand what causes this problem. Contrary to what many developers believe, the amount of RAM that is installed doesn't impact the possibility of an `OutOfMemoryException`. A 32-bit operating system can address 4 GB of virtual address space, whatever the amount of physical memory that is installed in the box. Out of that, 2 GB is reserved for the operating system (Kernel-mode memory) and 2 GB is allocated to user-mode processes. The 2 GB allocated for Kernel-mode memory is shared among all processes, but each process gets its own 2 GB of user-mode address space. (This all assumes that you aren't running with the `/3gb` switch enabled.)
+Before we cover the details of troubleshooting an `OutOfMemoryException`, it's important to understand what causes this problem. Contrary to what many developers believe, the amount of RAM that's installed doesn't impact the possibility of an `OutOfMemoryException`. A 32-bit operating system can address 4 GB of virtual address space, whatever the amount of physical memory that is installed in the box. Out of that, 2 GB is reserved for the operating system (Kernel-mode memory) and 2 GB is allocated to user-mode processes. The 2 GB allocated for Kernel-mode memory is shared among all processes, but each process gets its own 2 GB of user-mode address space. It all assumes that you aren't running with the `/3gb` switch enabled.
 
 When an application needs to use memory, it reserves a chunk of the virtual address space and then commits memory from that chunk. It is exactly what the .NET Framework's garbage collector (GC) does when it needs memory to grow the managed heaps. When the GC needs a new segment for the small object heap (where objects smaller than 85 KB reside), it makes an allocation of 64 MB. When it needs a new segment for the large object heap, it makes an allocation of 16 MB. These large allocations must be satisfied from contiguous blocks of the 2 GB of address space that the process has to work with. If the operating system is unable to satisfy the GC's request for a contiguous block of memory, a `System.OutOfMemoryException` (OOM) occurs.
 
@@ -39,25 +39,25 @@ When an OOM occurs, you may notice one or more of the following symptoms:
   On Internet Information Services (IIS) 7, you can use [Troubleshooting Failed Requests Using Tracing in IIS 7](/iis/troubleshoot/using-failed-request-tracing/troubleshooting-failed-requests-using-tracing-in-iis) to troubleshoot long-running requests.
 - Users may report an error message in the application because of the OOM.
 
-When it comes to determining the cause for an OOM condition, you're actually working to determine the cause for either a high memory situation or a fragmented address space. While there's no way to document all of the possible causes of these situations, there are some common causes that we see regularly.
+When it comes to determining the cause for an OOM condition, you're actually working to determine the cause for either a high memory situation or a fragmented address space. While we can't document all of the possible causes of these situations, there're some common causes that we see regularly.
 
 The following information outlines common causes of OOM conditions and the resolutions on resolving each of these causes.
 
 ## String concatenation
 
-Strings in a managed application (an application written by using the .NET Framework) are immutable. When a new value is assigned to a string, a copy is made of the existing string and the new value is assigned to the new string. It doesn't typically cause any problems, but when a large number of strings are concatenated, it ends up causing many more string allocations than a developer might realize, and which can lead to memory growth and OOM conditions.
+Strings in a managed application (an application written by using the .NET Framework) are immutable. When a new value is assigned to a string, a copy is made of the existing string. And the new value is assigned to the new string. It doesn't typically cause any problems, but when a large number of strings are concatenated, it ends up causing many more string allocations than a developer might realize, and which can lead to memory growth and OOM conditions.
 
 To avoid OOM due to string concatenation, make sure that you're using the `StringBuilder` class. For more information, see [How to improve string concatenation performance in Visual C#](https://support.microsoft.com/help/306822).
 
 ## Fragmentation in the managed heap
 
-The garbage collector (GC) in a managed application compacts the heaps to reduce the amount of fragmentation. However, it's possible to pin objects in a managed application, and pinned objects cannot be moved during heap compaction because doing so would change the address at which the object is located. If an application pins a large number of objects and/or pins objects for a long time, that can cause fragmentation in the managed heap. Which can lead to the GC growing the managed heap more often and causing an OOM condition.
+The garbage collector (GC) in a managed application compacts the heaps to reduce the amount of fragmentation. However, it's possible to pin objects in a managed application. And pinned objects can't be moved during heap compaction, because doing so would change the address at which the object is located. If an application pins a large number of objects and/or pins objects for a long time, that can cause fragmentation in the managed heap. Which can lead to the GC growing the managed heap more often and causing an OOM condition.
 
 We've worked on minimizing OOM conditions because of pinning since the .NET Framework 1.0. Incremental improvements have been made in each version. However, there are still design patterns you can implement that will be beneficial if you have a need to pin objects.
 
 ## Fragmentation in the Virtual Address (VA) space
 
-As discussed previously, each process has a certain amount of memory allocated to it, and that memory represents the VA space for the process. If the VA space becomes fragmented, it increases the likelihood that the GC won't be able to obtain a large block of contiguous memory to grow the managed heaps, and that can lead to an OOM condition.
+Each process has a certain amount of memory allocated to it, and that memory represents the VA space for the process. If the VA space becomes fragmented, it increases the likelihood that the GC won't be able to obtain a large block of contiguous memory to grow the managed heaps. And it can lead to an OOM condition.
 
 Fragmentation in the VA space is often caused by one or more of the following scenarios:
 

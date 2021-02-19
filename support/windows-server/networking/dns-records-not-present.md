@@ -1,6 +1,6 @@
 ---
-title: Causes of DNS records not showing in DNS zones
-description: Lists different reasons that DNS records disappear from DNS zones.
+title: DNS records not shown in DNS zones
+description: Lists different reasons why DNS records disappear from DNS zones.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -30,9 +30,9 @@ Multiple root causes exist, and they're listed in the following table:
 
 |Cause|Issue|Synopsis|
 |---|---|---|
-|1|DNS Scavenging is misconfigured.|The Scavenging feature on one or more DNS Servers was configured to have overly aggressive settings and is prematurely deleting DNS records for AD-integrated DNS zones. <br/>|
+|1|DNS Scavenging is misconfigured.|The Scavenging feature on one or more DNS Servers was configured to have overly aggressive settings and is prematurely deleting DNS records for AD-integrated DNS zones.|
 |2|DNS zones are CNF or conflict mangled in Active Directory.|The container representing the DNS zone in Active Directory has become CNF or conflict mangled, and was replaced by a different container that may first be empty or contain a subset of the records contained in the previous instance of the zone.|
-|3|DnsAvoidRegisterRecord defined in a Group Policy Object (GPO).|A code defect exists if SRV record registration is excluded by using the "DC locator DNS records not registered by the DCs" Group Policy setting. This modifies the DnsAvoidRegisterRecords registry setting under the "hklm\software\policies\microsoft\netlogon\parameters" registry subkey.<br/>|
+|3|DnsAvoidRegisterRecord defined in a Group Policy Object (GPO).|A code defect exists if SRV record registration is excluded by using the **DC locator DNS records not registered by the DCs** Group Policy setting. It modifies the DnsAvoidRegisterRecords registry setting under the `hklm\software\policies\microsoft\netlogon\parameters` registry subkey.|
 |4|Windows Server 2008 zone transfer delete bug.|The zone transfer deletion bug causes records to be deleted from secondary zones residing on Windows Server 2008 DNS Servers following zone transfer.|
 |5|Host "A" record deleted when the IP address is changed in Windows Vista, Windows Server 2008, Windows 7, or Windows Server 2008 R2.|A timing bug results in the premature deletion of host "A" records when the DNS Server IP is changed on a Windows Vista, Windows Server 2008, Windows 7, or Windows Server 2008 R2-based computer.|
 |6|DHCP clients configured with Option 81 de-register host "A" records during host "AAAA" registration.|Windows 7 and Windows Server 2008 R2-based computers that receive DHCP-assigned addresses that have Option 81 defined on the DHCP server de-register host "A" records during "AAAA" record registration.|
@@ -67,13 +67,13 @@ SRV record loss associated with a mass restart has the same issue with last-writ
 
 A good solution to this problem is to configure the DNS client on domain controllers point off-box DNS Servers addresses as primary for name resolution. Designate local hub DNS servers per region and have all the DNS servers in that region point that one DNS server. The hublet DNS servers all point to a single DNS server in a tiered hub-and-spoke model. All DNS servers can point themselves as secondary's but not primaries. Because restarts triggered by Windows Update usually occur at 03:00, as long as there's only one hublet DNS server per time zone, you'll never meet this issue.
 
-Check the Active Directory object version on the dnsNode object that contains the missing record. If it's a large number, this might be your issue. A possibility is to move the exclusion of the SRV records to local policy to stop the constant deregistrations.
+Check the Active Directory object version on the dnsNode object that contains the missing record. If it's a large number, it might be your issue. A possibility is to move the exclusion of the SRV records to local policy to stop the constant deregistrations.
 
 However, there's an issue with the new behavior. In the new behavior, the SRV records are removed only one time, specifically the first time that the policy is applied. Because the records are non-linked multivalued attribute, a condition can occur where multiple domain controllers remove SRV records on different DNS servers before Active Directory coverage of the zone. When the underlying attribute is fully converged, the last DNS server to receive a deletion is the only version that is kept. Only the records that were removed on that DNS server are removed from the SRV record. The SRV records removed on other DNS servers seem to come back. Manual cleanup may be required after the all domain controllers have applied the GPO and the affected SRV records are fully converged.
 
 ### Cause 4: Windows Server 2008 zone transfer delete bug  
 
-This is resolved by installing Windows Server 2008 Service Pack 2 or [KB953317](https://support.microsoft.com/help/953317). This issue is specific to Windows Server 2008 DNS zones that are hosting secondary copies of DNS zones, and it doesn't occur when the Microsoft DNS Server role is installed on Windows Server 2008 R2, Windows Server 2003 R2, Windows Server 2003, or Windows 2000 Server computers.
+This issue is resolved by installing Windows Server 2008 Service Pack 2, or [KB953317](https://support.microsoft.com/help/953317). This issue is specific to Windows Server 2008 DNS zones that are hosting secondary copies of DNS zones. It doesn't occur when the Microsoft DNS Server role is installed on computers running other versions of Windows.
 
 ### Cause 5: Host "A" record deleted when the IP address is changed in Windows Vista, Windows Server 2008, Windows 7, or Windows Server 2008 R2
 
@@ -91,7 +91,7 @@ This problem occurs if Option 81 is defined and ISATAP or 6to4 interfaces are pr
 
 ### Cause 7: Timing issue caused when you change DNS server IP unless KB2520155 is installed  
 
-This issue occurs because of an issue in the DNS Client service. When the DNS server configuration information is changed on a client, the DNS Client service deletes the DNS host record of the client from the old DNS server and then adds it to the new DNS server. Because the DNS record is present on the new server that is a part of the same domain, the record isn't updated. However, the old DNS server replicates the deletion operation to the new DNS server and to other DNS servers. So the new DNS server deletes the record, and the record is deleted across the domain.
+This issue occurs because of an issue in the DNS Client service. When the DNS server configuration information is changed on a client, the DNS Client service deletes the DNS host record of the client from the old DNS server. It then adds it to the new DNS server. Because the DNS record is present on the new server, which is a part of the same domain, the record isn't updated. However, the old DNS server replicates the deletion operation to the new DNS server and to other DNS servers. So the new DNS server deletes the record, and the record is deleted across the domain.
 
 Install [KB2520155](https://support.microsoft.com/help/2520155) on Windows Vista, Windows 7, Windows Server 2008, and Windows Server 2008 R2 computers.
 
@@ -101,7 +101,7 @@ Multiple root causes exist for DNS record registration failures.
 
 NETLOGON event 577X events are logged for record registration failures of SRV records by the NETLOGON service.
 
-Other events are logged for registration failures of host A and PTR records. Check System logs for these failures. Such events may be logged by the clients that register these records, or by the DHCP servers that register the records on the clients behalf.
+Other events are logged for registration failures of host A and PTR records. Check System logs for these failures. Such events may be logged by the clients that register these records. Or they may be logged by the DHCP servers that register the records on the clients' behalf.
 
 ### Cause 9: Converting an active dynamic lease to a reservation deletes the A and PTR records for that client  
 

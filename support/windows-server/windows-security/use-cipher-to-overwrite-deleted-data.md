@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 814599
 
 ## Summary
 
-Administrators can use Cipher.exe to encrypt and decrypt data on drives that use the NTFS file system and to view the encryption status of files and folders from a command prompt. The version of Cipher.exe that is included with Windows Server 2003 includes the ability to overwrite data that you have deleted so that it cannot be recovered or accessed.
+Administrators can use Cipher.exe to encrypt and decrypt data on drives that use the NTFS file system. They can also use it to view the encryption status of files and folders from a command prompt. The version of Cipher.exe that's included with Windows Server 2003 includes the ability to overwrite data that you have deleted so that it can't be recovered or accessed.
 
 When you delete files or folders, the data is not initially removed from the hard disk. Instead, the space on the disk that was occupied by the deleted data is *deallocated*. After it is deallocated, the space is available for use when new data is written to the disk. Until the space is overwritten, you can recover the deleted data by using a low-level disk editor or data-recovery software.
 
@@ -36,10 +36,10 @@ When you encrypt plain text files, Encrypting File System (EFS) makes a backup c
 To overwrite deleted data on a volume by using Cipher.exe, use the `/w` switch with the cipher command:
 
 1. Quit all programs.
-2. Click **Start**, click **Run**, type *cmd*, and then press ENTER.
-3. Type `cipher /w: folder`, and then press ENTER, where **folder** is any folder in the volume that you want to clean. For example, the c`ipher /w:c:\test` command causes all deallocated space on drive C to be overwritten. If `C:\folder` is a Mount Point or points to a folder on another volume, all deallocated space on that volume will be cleaned.
+2. Select **Start** > **Run**, type *cmd*, and then press ENTER.
+3. Type `cipher /w: folder`, and then press ENTER, where **folder** is any folder in the volume that you want to clean. For example, the `cipher /w:c:\test` command causes all deallocated space on drive C to be overwritten. If `C:\folder` is a Mount Point or points to a folder on another volume, all deallocated space on that volume will be cleaned.
 
-Data that is not allocated to files or folders is overwritten. This permanently removes the data. This can take a long time if you are overwriting a large amount of space.
+Data that isn't allocated to files or folders is overwritten. It permanently removes the data. It can take a long time if you are overwriting a large amount of space.
 
 ## References
 
