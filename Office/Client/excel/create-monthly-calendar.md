@@ -1,5 +1,5 @@
 ---
-title: How to create a monthly calendar in Excel
+title: Create and insert a calendar in Excel
 description: Describes how to use a Microsoft Excel worksheet to create a monthly calendar. Sample Visual Basic procedures are included. Procedures help you to customize the calendar to meet your personal requirements.
 author: simonxjx
 manager: dcscontentpm
@@ -21,7 +21,7 @@ appliesto:
 - Excel 2003
 ---
 
-# How to create a monthly calendar in Excel
+# Create and insert a calendar in Excel
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
@@ -33,32 +33,32 @@ This article contains a sample Microsoft Visual Basic for Applications macro (Su
 
 Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements.
 
-To create the calendar, follow these steps. 
+To create the calendar, follow these steps.
 
 ### Microsoft Excel 2003
 
-1. Create a new workbook.    
-2. On the Tools menu, point to Macro, and then click Visual Basic Editor.    
-3. On the Insert menu, click Module.    
-4. Copy the Visual Basic for Applications code below into the module sheet.    
-5. On the File menu, click "Close and Return to Microsoft Excel."    
-6. Click the Sheet1 tab.    
+1. Create a new workbook.
+2. On the Tools menu, point to Macro, and then click Visual Basic Editor.
+3. On the Insert menu, click Module.
+4. Copy the Visual Basic for Applications code below into the module sheet.
+5. On the File menu, click "Close and Return to Microsoft Excel."
+6. Click the Sheet1 tab.
 7. On the Tools menu, point to Macro, and then click Macros.
-8. Click CalendarMaker, and then click Run to create the calendar.    
+8. Click CalendarMaker, and then click Run to create the calendar.
 
 ### Microsoft Excel 2007 or later
 
-1. Create a new workbook.    
-2. On the Developer ribbon, Click Visual Basic.    
-3. On the Insert menu, click Module.    
-4. Copy the Visual Basic for Applications code below into the module sheet.    
-5. On the File menu, click "Close and Return to Microsoft Excel."    
-6. Click the Sheet1 tab.    
-7. On the Developer ribbon, click Macros   
-8. Click CalendarMaker, and then click Run to create the calendar.    
+1. Create a new workbook.
+2. On the Developer ribbon, Click Visual Basic.
+3. On the Insert menu, click Module.
+4. Copy the Visual Basic for Applications code below into the module sheet.
+5. On the File menu, click "Close and Return to Microsoft Excel."
+6. Click the Sheet1 tab.
+7. On the Developer ribbon, click Macros.
+8. Click CalendarMaker, and then click Run to create the calendar.
 
 > [!NOTE]
-> If the Developer Ribbon is not showing go to Excel Options and enable it. In Excel 2007 you will find it in the Popular menu and in Excel 2010 you will find it in the Customize Ribbon menu. 
+> If the Developer Ribbon is not showing go to Excel Options and enable it. In Excel 2007 you will find it in the Popular menu and in Excel 2010 you will find it in the Customize Ribbon menu.
 
 ### Sample Visual Basic Procedure
 
