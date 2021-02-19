@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 320727
 
 ## Summary
 
-The `IComparable` and `IComparer` interfaces are discussed in the same article for two reasons. These interfaces are frequently used together, and although the interfaces are similar (and have similar names), they serve different purposes.
+The `IComparable` and `IComparer` interfaces are discussed in the same article for two reasons. These interfaces are frequently used together. Although the interfaces are similar and have similar names, they serve different purposes.
 
 If you have an array of types (such as string or integer) that already support `IComparer`, you can sort that array without providing any explicit reference to `IComparer`. In that case, the elements of the array are cast to the default implementation of `IComparer` (`Comparer.Default`) for you. However, if you want to provide sorting or comparison capability for your custom objects, you must implement either or both of these interfaces.
 
@@ -22,7 +22,7 @@ This article references the Microsoft .NET Framework Class Library namespace `Sy
 
 ## IComparable
 
-The role of `IComparable` is to provide a method of comparing two objects of a particular type. It is necessary if you want to provide any ordering capability for your object. Think of `IComparable` as providing a default sort order for your objects. For example, if you have an array of objects of your type, and you call the `Sort` method on that array, `IComparable` provides the comparison of objects during the sort. When you implement the `IComparable` interface, you must implement the `CompareTo` method, as follows:
+The role of `IComparable` is to provide a method of comparing two objects of a particular type. It's necessary if you want to provide any ordering capability for your object. Think of `IComparable` as providing a default sort order for your objects. For example, if you have an array of objects of your type, and you call the `Sort` method on that array, `IComparable` provides the comparison of objects during the sort. When you implement the `IComparable` interface, you must implement the `CompareTo` method, as follows:
 
 ```csharp
 // Implement IComparable CompareTo method - provide default sort order.

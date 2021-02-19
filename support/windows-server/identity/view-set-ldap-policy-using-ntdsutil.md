@@ -1,5 +1,5 @@
 ---
-title: View and set LDAP policy by using Ntdsutil
+title: View and set Lightweight Directory Access Protocol (LDAP) policy with Ntdsutil
 description: The article describes the most important LDAP query policy limits.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 315071
 
 ## Summary
 
-To make sure that domain controllers can support service-level guarantees, you must specify operational limits for a number of LDAP operations. These limits prevent specific operations from adversely affecting the performance of the server, and also make the server more resilient to some types of attacks.
+To make sure that domain controllers can support service-level guarantees, you must specify operational limits for many LDAP operations. These limits prevent specific operations from adversely affecting the performance of the server. They also make the server more resilient to some types of attacks.
 
 LDAP policies are implemented by using objects of the `queryPolicy` class. Query Policy objects can be created in the Query Policies container, which is a child of the Directory Service container in the configuration naming context. For example, cn=Query-Policies,cn=Directory Service,cn=Windows NT,cn=Services **configuration naming context**.
 
@@ -126,13 +126,13 @@ If you change the values for the query policy that a domain controller is curren
 
 ## Considerations for changing query values
 
-To maintain domain server resiliency, we do not recommend that you increase the timeout value of 120 seconds. Forming more efficient queries is a preferred solution. For more information about creating efficient queries, see [
-Creating More Efficient Microsoft Active Directory-Enabled Applications](/previous-versions/ms808539(v=msdn.10)).
+To maintain domain server resiliency, we do not recommend that you increase the timeout value of 120 seconds. Forming more efficient queries is a preferred solution. For more information about creating efficient queries, see [Creating More Efficient Microsoft Active Directory-Enabled Applications](/previous-versions/ms808539(v=msdn.10)).
 
-However, if changing the query is not an option, increase the timeout value only on one domain controller or only on one site. For instructions, see the next section. If the setting is applied to one domain controller, reduce the DNS LDAP priority on the domain controller so that clients less likely use the server for authentication. On the domain controller with the increase priority, use the following registry setting to set `LdapSrvPriority`:  
+However, if changing the query isn't an option, increase the timeout value only on one domain controller or only on one site. For instructions, see the next section. If the setting is applied to one domain controller, reduce the DNS LDAP priority on the domain controller, so that clients less likely use the server for authentication. On the domain controller with the increase priority, use the following registry setting to set `LdapSrvPriority`:
+
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters`
 
-On the **Edit** menu, click **Add Value**, and then add the following registry value:
+On the **Edit** menu, select **Add Value**, and then add the following registry value:
 
 - Entry name: LdapSrvPriority
 - Data type: REG_DWORD
@@ -152,7 +152,7 @@ For more information, see [How to optimize the location of a domain controller o
 
 ## Sample script
 
-You can use the following text to create a Ldifde file. You can import this file to create the policy with a timeout value of 10 minutes. Copy this text to Ldappolicy.ldf, and then run the following command, where **forest root** is the distinguished name of your forest root. Leave DC=X as-is. This is a constant that will be replaced by the forest root name when the script runs. The constant X does not indicate a domain controller name.
+You can use the following text to create a Ldifde file. You can import this file to create the policy with a timeout value of 10 minutes. Copy this text to Ldappolicy.ldf, and then run the following command, where **forest root** is the distinguished name of your forest root. Leave DC=X as-is. It's a constant that will be replaced by the forest root name when the script runs. The constant X doesn't indicate a domain controller name.
 
 ```console
 ldifde -i -f ldappolicy.ldf -v -c DC=X DC= forest root
