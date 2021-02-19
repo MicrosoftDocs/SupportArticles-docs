@@ -1,6 +1,6 @@
 ---
 title: SBC connectivity issues
-description: Describes how to diagnose SIP options or TLS certificate issues with SBC. 
+description: Describes how to diagnose SIP OPTIONS or TLS certificate issues with SBC. 
 ms.date: 2/5/2021
 author: cloud-writer
 ms.author: meerak
@@ -24,7 +24,7 @@ ms.reviewer: mikebis
 
 When you use Direct Routing, you might experience the following Session Border Controller (SBC) connectivity issues:
 
-- Session Initiation Protocol (SIP) options are not received.
+- Session Initiation Protocol (SIP) OPTIONS are not received.
 - Transport Layer Security (TLS) connections problems occur.
 - The SBC doesn’t respond.
 - The SBC is marked as inactive in the Admin portal.
@@ -36,31 +36,31 @@ Such issues are most likely caused by either or both of the following conditions
 
 This article lists some common issues that are related to SIP options and TLS certificates, and provides resolutions that you can try.  
 
-## Overview of the SIP options process
+## Overview of the SIP OPTIONS process
 
 - The SBC sends a TLS connection request that includes a TLS certificate to the SIP proxy server Fully Qualified Domain Name (FQDN) (for example, sip.pstnhub.microsoft.com).
 
 - The SIP proxy checks the connection request.
 
-   - If the request is not valid, the TLS connection is closed and the SIP proxy does not receive SIP options from the SBC.
-   - If the request is valid, the TLS connection is established, and the SBC uses it to send SIP options to the SIP proxy.
+   - If the request is not valid, the TLS connection is closed and the SIP proxy does not receive SIP OPTIONS from the SBC.
+   - If the request is valid, the TLS connection is established, and the SBC uses it to send SIP OPTIONS to the SIP proxy.
 
-- After it receives SIP options, the SIP proxy checks the Record-Route to determine whether the SBC FQDN belongs to a known tenant. If the FQDN information is not detected there, the SIP proxy checks the Contact header.
+- After it receives SIP OPTIONS, the SIP proxy checks the Record-Route to determine whether the SBC FQDN belongs to a known tenant. If the FQDN information is not detected there, the SIP proxy checks the Contact header.
 
 - If the SBC FQDN is detected and recognized, the SIP proxy sends a “200 OK” message by using the same TLS connection.
 
-- The SIP proxy sends SIP options to the SBC FQDN that is listed in the Contact header of the SBC SIP options.
+- The SIP proxy sends SIP OPTIONS to the SBC FQDN that is listed in the Contact header of the SBC SIP OPTIONS.
 
-- After receiving SIP options from the SIP proxy, the SBC responds by sending a “200 OK” message. This step confirms that the SBC is healthy.
+- After receiving SIP OPTIONS from the SIP proxy, the SBC responds by sending a “200 OK” message. This step confirms that the SBC is healthy.
 
 - As the final step, the SBC is marked as **Active** in the Teams Admin portal.
 
 > [!NOTE]
-> In a [hosted model](https://docs.microsoft.com/microsoftteams/direct-routing-sbc-multiple-tenants), SIP options should be sent from only the hosted SBC. The status of SBCs that are in a derived trunk model are based on the main SBC.
+> In a [hosted model](https://docs.microsoft.com/microsoftteams/direct-routing-sbc-multiple-tenants), SIP OPTIONS should be sent from only the hosted SBC. The status of SBCs that are in a derived trunk model are based on the main SBC.
 
-### SIP options issues
+### SIP OPTIONS issues
 
-After the TLS connection is successfully established, and the SBC is able to send and receive messages to and from the Teams SIP proxy, there might still be problems that affect the format or content of SIP options.
+After the TLS connection is successfully established, and the SBC is able to send and receive messages to and from the Teams SIP proxy, there might still be problems that affect the format or content of SIP OPTIONS.
 
 <br>
 
@@ -82,9 +82,9 @@ If you’re using the minimum required version of TLS, and your SBC certificate 
 
 <details>
 
-<summary><b>SBC receives “200 OK” response but not SIP options</b></summary>
+<summary><b>SBC receives “200 OK” response but not SIP OPTIONS</b></summary>
 
-The SBC receives the “200 OK” response from the SIP proxy but not the SIP options that were sent. If this error occurs, make sure that the FQDN that's listed in the Record-Route or Contact header is correct and resolves to the correct IP address.
+The SBC receives the “200 OK” response from the SIP proxy but not the SIP OPTIONS that were sent. If this error occurs, make sure that the FQDN that's listed in the Record-Route or Contact header is correct and resolves to the correct IP address.
 
 Another possible cause for this issue might be firewall rules that are preventing incoming traffic. Make sure that firewall rules are configured to allow incoming connections.
 
@@ -93,9 +93,9 @@ Another possible cause for this issue might be firewall rules that are preventin
 <details>
 <summary><b>SBC status is intermittently inactive</b></summary>
 
-This issue might occur if the SBC is configured to send SIP options not to FQDNs but to the specific IP addresses that they resolve to. During maintenance or outages, these IP addresses might change to a different datacenter. Therefore, the SBC will be sending SIP options to an inactive or unresponsive datacenter. Do the following:
+This issue might occur if the SBC is configured to send SIP OPTIONS not to FQDNs but to the specific IP addresses that they resolve to. During maintenance or outages, these IP addresses might change to a different datacenter. Therefore, the SBC will be sending SIP OPTIONS to an inactive or unresponsive datacenter. Do the following:
 
-- Make sure that the SBC is discoverable and configured to send SIP options to only FQDNs.
+- Make sure that the SBC is discoverable and configured to send SIP OPTIONS to only FQDNs.
 - Make sure that all devices in the route, such as SBCs and firewalls, are configured to allow communication to and from all Microsoft-signaling FQDNs.
 - To provide a failover option when the connection from an SBC is made to a datacenter that's experiencing an issue, the SBC must be configured to use all three SIP proxy FQDNs:
 
@@ -130,7 +130,7 @@ For more information about this process, see the ”Connect the SBC to the tenan
 
 ### TLS connection issues
 
-If the TLS connection is closed right away and SIP Options are not received from the SBC, or if 200 OK is not received from the SBC, then the problem might be with the TLS version. The TLS version configured on the SBC should be 1.2 or higher.
+If the TLS connection is closed right away and SIP OPTIONS are not received from the SBC, or if 200 OK is not received from the SBC, then the problem might be with the TLS version. The TLS version configured on the SBC should be 1.2 or higher.
 
 <br>
 
