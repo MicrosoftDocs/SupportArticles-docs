@@ -1,11 +1,11 @@
 ---
-title: Use IComparable and IComparer in Visual C#
-description: This article describes how to use the IComparable and IComparer interfaces in Visual C#.
+title: Use `IComparable` and `IComparer` in Visual C#
+description: This article describes how to use the `IComparable` and `IComparer` interfaces in Visual C#.
 ms.date: 04/14/2020
 ms.prod-support-area-path: 
 ms.topic: how-to
 ---
-# Use the IComparable and IComparer interfaces in Visual CSharp
+# Use the `IComparable` and `IComparer` interfaces in Visual CSharp
 
 This article describes the use of `IComparer` and `IComparable` interfaces in Visual C#.
 
@@ -20,7 +20,7 @@ If you have an array of types (such as string or integer) that already support `
 
 This article references the Microsoft .NET Framework Class Library namespace `System.Collections`.
 
-## IComparable
+## `IComparable`
 
 The role of `IComparable` is to provide a method of comparing two objects of a particular type. It's necessary if you want to provide any ordering capability for your object. Think of `IComparable` as providing a default sort order for your objects. For example, if you have an array of objects of your type, and you call the `Sort` method on that array, `IComparable` provides the comparison of objects during the sort. When you implement the `IComparable` interface, you must implement the `CompareTo` method, as follows:
 
@@ -35,9 +35,9 @@ int IComparable.CompareTo(object obj)
 
 The comparison in the method is different depending on the data type of the value that is being compared. `String.Compare` is used in this example because the property that is chosen for the comparison is a string.
 
-## IComparer
+## `IComparer`
 
-The role of `IComparer` is to provide additional comparison mechanisms. For example, you might want to provide ordering of your class on several fields or properties, ascending and descending order on the same field, or both.
+The role of `IComparer` is to provide more comparison mechanisms. For example, you might want to provide ordering of your class on several fields or properties, ascending and descending order on the same field, or both.
 
 Using `IComparer` is a two-step process. First, declare a class that implements `IComparer`, and then implement the `Compare` method:
 
@@ -70,11 +70,11 @@ public static IComparer sortYearAscending()
 }
 ```
 
-In this example, the object is used as the second argument when you call the overloaded `Array.Sort` method that accepts `IComparer`. The use of `IComparer` isn't limited to arrays. It's accepted as an argument in a number of different collection and control classes.
+In this example, the object is used as the second argument when you call the overloaded `Array.Sort` method that accepts `IComparer`. The use of `IComparer` isn't limited to arrays. It's accepted as an argument in many different collection and control classes.
 
 ## Step-by-step example
 
-The following example demonstrates the use of these interfaces. To demonstrate `IComparer` and `IComparable`, a class named `car` is created. The `car` object has the make and year properties. An ascending sort for the make field is enabled through the `IComparable` interface, and a descending sort on the make field is enabled through the `IComparer` interface. Both ascending and descending sorts are provided for the year property through the use of `IComparer`.
+The following example demonstrates the use of these interfaces. To demonstrate `IComparer` and `IComparable`, a class named `car` is created. The `car` object has the make and year properties. An ascending sort for the make field is enabled through the `IComparable` interface, and a descending sort on the make field is enabled through the `IComparer` interface. Both ascending and descending sorts are provided for the year property by using `IComparer`.
 
 1. In Visual C#, create a new Console Application project. Name the application *ConsoleEnum*.
 

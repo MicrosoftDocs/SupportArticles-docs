@@ -62,13 +62,13 @@ On Windows Vista and later versions, the event log entry size has been increased
 
 You can use the binary data associated with any DISK error (Event ID 7, 9, 11, 51, and other Event IDs) to help you identify the problem by decoding the data section.
 
-An Event ID 51 has an additional command descriptor block (CDB) box. You must consider the following information when reviewing the data section of an Event ID 51 event message.
+An Event ID 51 has an additional Command Descriptor Block (CDB) box. Consider the following information when you review the data section of an Event ID 51 event message.
 
 ## Decode the data section of an Event ID 51 event message
 
-When you decode the data section in the example that is in the [Summary](#summary) section, you can see that an attempt to perform a write operation to LUN 3 starting at sector 0x2975820a for 0x0080 sectors fails because the bus was reset but the request will be retried. Later, this article lists the specific steps to decode this example.
+When you decode the data section of the example in the [Summary](#summary) section, you can see that an attempt to perform a write operation to LUN 3 starting at sector 0x2975820a for 0x0080 sectors fails because the bus was reset but the request will be retried. Later, this article lists the specific steps to decode this example.
 
-The following tables describe what each offset represents.
+The following tables describe what each offset represents:
 
 |Offset|Length|Values|
 |---|---|---|
@@ -105,7 +105,7 @@ In the example that is in the [Summary](#summary) section, the error code is lis
 
 ErrorCode = 0x80040033
 
-This is the code for error 51. This code is the same for all Event ID 51 event messages:
+This code is the code for error 51. This code is the same for all Event ID 51 event messages:
 
 > IO_WARNING_PAGING_FAILURE
 
@@ -120,7 +120,7 @@ In the example in the [Summary](#summary) section, the final status code is list
 
 FinalStatus = 0x00000000
 
-This maps to `STATUS_SUCCESS` and implies that the request will be retried.
+It maps to `STATUS_SUCCESS` and implies that the request will be retried.
 
 > [!NOTE]
 > When you interpret the hexadecimal data in the Event ID to the status code, remember that the values are represented in the little endian format.
@@ -144,7 +144,7 @@ It may be easier to identify the volume by using the symbolic link listed to the
 
 ### The SCSI Request Block (SRB) parameters
 
-In the example in the [Summary](#summary) section, the ScsiStatus is **0x02** (first byte in line **0038**), and SrbStatus is **0x84** (second byte in line **0038**). This provides the following information:
+In the example in the [Summary](#summary) section, the ScsiStatus is **0x02** (first byte in line **0038**), and SrbStatus is **0x84** (second byte in line **0038**). It provides the following information:
 
 > 0038: 02 84 00 00 00 29 06 00
 
@@ -210,11 +210,11 @@ SRB status masks:
 
 You must break down SRB status masks because they are a substatus. They are combined with the SRB status codes.
 
-In the earlier **0x84** example, **0x8_** is a status mask. Therefore, `SRB_STATUS_AUTOSENSE_VALID` and **0x04** is the SRB status code. This means `SRB_STATUS_ERROR`.
+In the earlier **0x84** example, **0x8_** is a status mask. Therefore, `SRB_STATUS_AUTOSENSE_VALID` and **0x04** is the SRB status code. It means `SRB_STATUS_ERROR`.
 
 ### The sense code
 
-If the SRB status is that the autosense is valid, the sense codes provide additional information. In the example in the [Summary](#summary) section, the sense code is **0x06** (seventh byte in line **0038**), and the additional sense code is **0x29** (sixth octet in line **0038**). It provides the following information:
+If the SRB status is that the autosense is valid, the sense codes provide more information. In the example in the [Summary](#summary) section, the sense code is **0x06** (seventh byte in line **0038**), and the additional sense code is **0x29** (sixth octet in line **0038**). It provides the following information:
 
 > 0038: 02 84 00 00 00 29 06 00
 
