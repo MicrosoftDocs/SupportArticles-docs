@@ -17,7 +17,7 @@ There are several reasons that a software update scan could fail. Most problems 
 
 For more information about software updates in Configuration Manager, see [Software updates introduction](software-updates-introduction.md).
 
-When you troubleshoot software update scan failures, focus on the WUAHandler.log and WindowsUpdate.log files. Because WUAHandler just reports what the Windows Update Agent reported, the error in the WUAHandler.log file would be the same error that was reported by the Windows Update Agent itself. Most information about the error will likely be found in the WindowsUpdate.log file. For more information about how to read the WindowsUpdate.log file, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
+When you troubleshoot software update scan failures, focus on the WUAHandler.log and WindowsUpdate.log files. WUAHandler just reports what the Windows Update Agent reported. So the error in the WUAHandler.log file would be the same error that was reported by the Windows Update Agent itself. Most information about the error will likely be found in the WindowsUpdate.log file. For more information about how to read the WindowsUpdate.log file, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
 
 ## Scan failures due to missing or corrupted components
 
@@ -50,7 +50,7 @@ Errors 0x80244021, 0x8024401B, 0x80240030, and 0x8024402C are caused by proxy-re
 
 Verify the proxy settings on the client, and make sure that they are configured correctly. The Windows Update Agent uses WinHTTP to scan for available updates. When there's a proxy server between the client and the WSUS computer, the proxy settings must be configured correctly on the clients to enable them to communicate with WSUS by using the computer's FQDN.
 
-For proxy issues, WindowsUpdate.log may report errors that resemble the following:
+For proxy issues, WindowsUpdate.log may report errors that resemble the following ones:
 
 > 0x80244021 or HTTP Error 502 - Bad gateway
 
@@ -60,14 +60,14 @@ For proxy issues, WindowsUpdate.log may report errors that resemble the followin
 
 > 0x8024402C - The proxy server or target server name cannot be resolved
 
-In most cases, you can bypass the proxy for local addresses because the WSUS computer is located within the intranet. However, if the client is connected to the Internet, you must make sure that the proxy server is configured to enable that communication.
+In most cases, you can bypass the proxy for local addresses because the WSUS computer is located within the intranet. But if the client is connected to the Internet, you must make sure that the proxy server is configured to enable that communication.
 
 To view WinHTTP proxy settings, run one of the following commands:
 
 - On Windows XP: `proxycfg.exe`
 - On Windows Vista and later versions: `netsh winhttp show proxy`
 
-Because proxy settings that are configured in Internet Explorer are part of the WinINET proxy settings, WinHTTP proxy settings aren't necessarily the same as the proxy settings that are configured in Internet Explorer. However, if the proxy settings are set correctly in Internet Explorer, you can import the proxy configuration from Internet Explorer. To import proxy configuration from Internet Explorer, run one of the following commands:
+Proxy settings that are configured in Internet Explorer are part of the WinINET proxy settings. WinHTTP proxy settings aren't necessarily the same as the proxy settings that are configured in Internet Explorer. However, if the proxy settings are set correctly in Internet Explorer, you can import the proxy configuration from Internet Explorer. To import proxy configuration from Internet Explorer, run one of the following commands:
 
 - On Windows XP: `proxycfg.exe -u`
 - On Windows Vista and later versions: `netsh winhttp import proxy source =ie`
@@ -78,7 +78,7 @@ For more information, see [How the Windows Update client determines which proxy 
 
 Errors: 0x80072ee2, 0x8024401C, 0x80244023, or 0x80244017 (HTTP Status 401), 0x80244018 (HTTP Status 403)
 
-Verify connectivity with the WSUS computer. During a scan, the Windows Update Agent has to communicate with the `ClientWebService` and `SimpleAuthWebService` virtual directories on the WSUS computer in order to run a scan. If the client can't communicate with the WSUS computer, the scan fails. This issue can occur for several reasons, including:
+Verify connectivity with the WSUS computer. During a scan, the Windows Update Agent must communicate with the `ClientWebService` and `SimpleAuthWebService` virtual directories on the WSUS computer to run a scan. If the client can't communicate with the WSUS computer, the scan fails. This issue can occur for several reasons, including:
 
 - port configuration
 - proxy configuration
@@ -102,7 +102,7 @@ If these tests are successful, review the Internet Information Services (IIS) lo
 
 If any of these tests fails, check for name resolution issues on the client. Verify that you can resolve the FQDN of the WSUS computer.
 
-Also, verify the proxy settings on the client to make sure that they are configured correctly. For more information, see the [Scan failures due to proxy-related issues](#scan-failures-due-to-proxy-related-issues) section.
+Also verify the proxy settings on the client to make sure that they are configured correctly. For more information, see the [Scan failures due to proxy-related issues](#scan-failures-due-to-proxy-related-issues) section.
 
 Finally, verify that the WSUS ports can be accessed. WSUS can be configured to use any of the following ports:
 
@@ -115,7 +115,7 @@ For clients to communicate with the WSUS computer, the appropriate ports must be
 
 ### Determine the port settings used by WSUS and the software update point
 
-Port settings are configured when the software update point site system role is created. These port settings must be the same as the port settings that are used by the WSUS website. Otherwise, WSUS Synchronization Manager will not connect to the WSUS computer that is running on the software update point to request synchronization. The following procedures provide information about how to verify the port settings that are used by WSUS and the software update point.
+Port settings are configured when the software update point site system role is created. These port settings must be the same as the port settings that are used by the WSUS website. Otherwise, WSUS Synchronization Manager won't connect to the WSUS computer that's running on the software update point to request synchronization. The following procedures show how to verify the port settings that are used by WSUS and the software update point.
 
 #### Determine the WSUS port settings in IIS 6.0
 
@@ -154,13 +154,14 @@ Error 0x80072f0c translates to **A certificate is required to complete client au
 
 ### Check SSL configuration
 
-When the site is configured in **HTTPS only** mode, the software update point is automatically configured to use SSL. When the site is in **HTTPS or HTTP** mode, you can choose whether to configure the software update point to use SSL. When the software update point is configured to use SSL, the WSUS computer must also be explicitly configured to use SSL. Before you configure SSL, you should review the [certificate requirements](/previous-versions/system-center/system-center-2012-R2/gg699362(v=technet.10)) and make sure that a server authentication certificate is installed on the software update point server.
+When the site is configured in **HTTPS only** mode, the software update point is automatically configured to use SSL. When the site is in **HTTPS or HTTP** mode, you can choose whether to configure the software update point to use SSL. When the software update point is configured to use SSL, the WSUS computer must also be explicitly configured to use SSL. Before you configure SSL, you should review the [certificate requirements](/previous-versions/system-center/system-center-2012-R2/gg699362(v=technet.10)). And make sure that a server authentication certificate is installed on the software update point server.
 
 #### Verify that the software update point is configured for SSL
 
 1. On the Configuration Manager console, go to **Administration** > **Site Configuration** > **Servers and Site System Roles**, and then select **\<SiteSystemName>** in the right pane.
 2. In the bottom pane, right-click **Software Update Point**, and then select **Properties**.
-3. On the **General** tab, verify that the **Require SSL communication to the WSUS Server** option is enabled.
+3. On the **General** tab, verify that the following option is enabled:  
+    **Require SSL communication to the WSUS Server**
 
 #### Verify that the WSUS computer is configured for SSL
 

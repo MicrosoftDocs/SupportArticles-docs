@@ -28,7 +28,7 @@ There are two reasons why you might see an OOM condition.
 1. Your process is using much memory (typically over 800 MB in a 32-bit environment.)
 2. The virtual address space is fragmented, reducing the likelihood that a large, contiguous allocation will succeed.
 
-It's also possible to see an OOM condition because of a combination of 1 and 2. See [Troubleshooting System.OutOfMemoryExceptions in ASP.NET](/archive/blogs/webtopics/troubleshooting-system-outofmemoryexceptions-in-asp-net) for more information.
+It's also possible to see an OOM condition because of a combination of 1 and 2. For more information, see [Troubleshooting System.OutOfMemoryExceptions in ASP.NET](/archive/blogs/webtopics/troubleshooting-system-outofmemoryexceptions-in-asp-net).
 
 When an OOM occurs, you may notice one or more of the following symptoms:
 
@@ -39,25 +39,25 @@ When an OOM occurs, you may notice one or more of the following symptoms:
   On Internet Information Services (IIS) 7, you can use [Troubleshooting Failed Requests Using Tracing in IIS 7](/iis/troubleshoot/using-failed-request-tracing/troubleshooting-failed-requests-using-tracing-in-iis) to troubleshoot long-running requests.
 - Users may report an error message in the application because of the OOM.
 
-When it comes to determining the cause for an OOM condition, you're actually working to determine the cause for either a high memory situation or a fragmented address space. While we can't document all of the possible causes of these situations, there're some common causes that we see regularly.
+When it comes to determining the cause for an OOM condition, you're actually working to determine the cause for either a high memory situation or a fragmented address space. While we can't document all of the possible causes of these situations, there are some common causes that we see regularly.
 
 The following information outlines common causes of OOM conditions and the resolutions on resolving each of these causes.
 
 ## String concatenation
 
-Strings in a managed application (an application written by using the .NET Framework) are immutable. When a new value is assigned to a string, a copy is made of the existing string. And the new value is assigned to the new string. It doesn't typically cause any problems, but when a large number of strings are concatenated, it ends up causing many more string allocations than a developer might realize, and which can lead to memory growth and OOM conditions.
+Strings in a managed application (an application written by using the .NET Framework) are immutable. When a new value is assigned to a string, a copy is made of the existing string. And the new value is assigned to the new string. It doesn't typically cause any problems. But when a large number of strings are concatenated, it ends up causing many more string allocations than a developer might realize. And it can lead to memory growth and OOM conditions.
 
-To avoid OOM due to string concatenation, make sure that you're using the `StringBuilder` class. For more information, see [How to improve string concatenation performance in Visual C#](https://support.microsoft.com/help/306822).
+To avoid OOM because of string concatenation, make sure that you're using the `StringBuilder` class. For more information, see [How to improve string concatenation performance in Visual C#](https://support.microsoft.com/help/306822).
 
 ## Fragmentation in the managed heap
 
-The garbage collector (GC) in a managed application compacts the heaps to reduce the amount of fragmentation. However, it's possible to pin objects in a managed application. And pinned objects can't be moved during heap compaction, because doing so would change the address at which the object is located. If an application pins a large number of objects and/or pins objects for a long time, that can cause fragmentation in the managed heap. Which can lead to the GC growing the managed heap more often and causing an OOM condition.
+The garbage collector (GC) in a managed application compacts the heaps to reduce the amount of fragmentation. However, it's possible to pin objects in a managed application. Pinned objects can't be moved during heap compaction. Doing so would change the address at which the object is located. If an application pins a large number of objects, and/or it pins objects for a long time, it can cause fragmentation in the managed heap. It can lead to the GC growing the managed heap more often and causing an OOM condition.
 
 We've worked on minimizing OOM conditions because of pinning since the .NET Framework 1.0. Incremental improvements have been made in each version. However, there are still design patterns you can implement that will be beneficial if you have a need to pin objects.
 
 ## Fragmentation in the Virtual Address (VA) space
 
-Each process has a certain amount of memory allocated to it, and that memory represents the VA space for the process. If the VA space becomes fragmented, it increases the likelihood that the GC won't be able to obtain a large block of contiguous memory to grow the managed heaps. And it can lead to an OOM condition.
+Each process has a certain amount of memory allocated to it, and that memory represents the VA space for the process. If the VA space becomes fragmented, it increases the likelihood that the GC can't obtain a large block of contiguous memory to grow the managed heaps. And it can lead to an OOM condition.
 
 Fragmentation in the VA space is often caused by one or more of the following scenarios:
 
@@ -74,20 +74,20 @@ Fragmentation in the VA space is often caused by one or more of the following sc
 
 ## Return large sets of data
 
-When using data from a database or other data source, it's important to limit the amount of data returned. For example, caching the result of a query that returns an entire database table in order to avoid the cost of retrieving parts of data from the database when needed is not a good approach. Doing so can easily cause high memory and lead to an OOM condition. Allowing a user to initiate a similar query (for example, return all employees in a company or all customers in the state of Texas with a last name starting with the letter S) is another common way to create a high memory situation.
+When using data from a database or other data source, it's important to limit the amount of data returned. For example, caching a query result that returns an entire database table to avoid the cost of retrieving parts of data from the database when needed isn't a good approach. Doing so can easily cause high memory and lead to an OOM condition. Allowing a user to start a similar query is another common way to create a high memory situation. For example, return all employees in a company or all customers in the state of Texas with a last name starting with the letter S.
 
 Always limit the amount of data that can be returned from a database. Don't allow queries such as `SELECT * FROM. . .` because you then have no control over how much data is displayed in your page.
 
-It's equally important to ensure that you're not displaying a large data result in UI elements such as the GridView control. In addition to the memory required for the returned data, you'll also be consuming large amounts of data in strings and in UI elements required to render the results. By implementing paging and validating input so that large sets of data aren't returned, you can avoid this problem.
+It's equally important to ensure that you aren't displaying a large data result in UI elements, such as the GridView control. Besides the memory required for the returned data, you'll also consume large amounts of data in strings and in UI elements that are required to render the results. By implementing paging and validating input so that large sets of data aren't returned, you can avoid this problem.
 
 ## Run in a production environment with tracing enabled
 
-ASP.NET tracing is a powerful feature for troubleshooting applications, but it should never be left on in a production environment. ASP.NET tracing uses data structures such as `DataTables` to store trace information, and over time, these can cause a high memory condition that can lead to OOM.
+ASP.NET tracing is a powerful feature for troubleshooting applications. But it should never be left on in a production environment. ASP.NET tracing uses data structures such as `DataTables` to store trace information, and over time, they can cause a high memory condition that can lead to OOM.
 
 Tracing should be disabled in a production environment. You can do so by setting the `enabled` attribute of the `<trace>` element to false in your *web.config* file. Enabling retail deployment by using `<deploy retail="true" />` also disables tracing in your applications.
 
 ## Leak native resources
 
-Many managed resources will also make use of native resources. Because the GC doesn't clean up native resources, a developer is responsible for implementing (and calling) the Dispose method in order to clean up native resources. If you're using a type that implements the `IDisposable` interface and you don't call the `Dispose` method, you risk leaking native resources and causing an OOM condition.
+Many managed resources will also make use of native resources. Because the GC doesn't clean up native resources, a developer is responsible for implementing and calling the Dispose method to clean up native resources. If you're using a type that implements the `IDisposable` interface, and you don't call the `Dispose` method, you risk leaking native resources and causing an OOM condition.
 
 These objects should implement the `iDisposable` interface and you should call the `Dispose` method on these objects when you no longer need them.
