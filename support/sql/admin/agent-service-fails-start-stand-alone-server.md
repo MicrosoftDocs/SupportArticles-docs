@@ -1,20 +1,20 @@
 ---
-title: Agent Service fails to start on stand-alone server
+title: Agent Service fails to start on standalone server
 description: This article provides the resolutions for the problems where the SQL Server service and the SQL Server Agent Service may not start on a stand-alone server.
 ms.date: 12/01/2020
 ms.prod-support-area-path: Security Issues
 ms.prod: sql
 ---
-# The SQL Server service and the SQL Server Agent Service fail to start on a stand-alone server
+# The SQL Server service and the SQL Server Agent Service fail to start on a standalone server
 
-This article helps you resolve the problems where the SQL Server service and the SQL Server Agent Service may not start on a stand-alone server.
+This article helps you resolve the problems where the SQL Server service and the SQL Server Agent Service may not start on a standalone server.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 307288
 
 ## Symptoms
 
-- Issue 1: On a stand-alone server, the MSSQLSERVER service may fail to start, and you receive the following error message:
+- Issue 1: On a standalone server, the MSSQLSERVER service may fail to start, and you receive the following error message:
 
   > `An error 1068 - (The dependency service or group failed to start.) occurred while performing this service operation on the MSSQLServer Service.`
 
@@ -39,7 +39,7 @@ This problem occurs when all the following conditions are true:
 
 ## Cause
 
-The Issue 1 and Issue 2 occurs because the server is a stand-alone computer, the NetLogon service does not start on the server, hence no domain-wide logon authentications are possible.
+The Issue 1 and Issue 2 occurs because the server is a standalone computer, the NetLogon service does not start on the server, hence no domain-wide logon authentications are possible.
 
 The Issue 3 occurs because SQL Server services try to start before NetLogon service starts.
 
@@ -75,4 +75,4 @@ sc.exe qc MSSQLSERVER ::view dependencies sc.exe config MSSQLSERVER depend=iphlp
 
 ## More information
 
-On a stand-alone computer, the NetLogon Service should be set for **manual** startup.
+On a standalone computer, the NetLogon Service should be set for **manual** startup.
