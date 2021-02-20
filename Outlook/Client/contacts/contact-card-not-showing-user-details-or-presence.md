@@ -31,16 +31,11 @@ You experience one or more of the following symptoms in Microsoft Outlook:
 
 ## Cause
 
-This issue occurs if the Outlook client is set in Online mode, and the following policy registry key is applied in your organization:
+This issue occurs if the following policy registry key is applied in your organization:
 
 Key: `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\Outlook\SocialConnector`  
 DWORD: **DownloadDetailsFromAD**  
 Values: **0**
-
-This registry sub key tells the Outlook client not to reach out to the online global address list (GAL) for the recipient's information. Instead, the Outlook client will only use the information that's in the offline address book (OAB). An online client doesn't download the OAB, which is why no recipient details are displayed.
-
-> [!NOTE]
-> When `DownloadDetailsFromAD` = 0, the information that's displayed in the **People** pane depends on the source location of the contact details. If the information is available only in Active Directory, the information isn't displayed in the **People** pane.
 
 ## Resolution
 
