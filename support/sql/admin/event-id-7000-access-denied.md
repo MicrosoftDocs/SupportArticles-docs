@@ -45,13 +45,13 @@ When you configure the Microsoft SQL Server service to run under an account that
 2. Using either Microsoft SQL Server Configuration Manager or Service Control Manager, note the service account for SQL Server service.
 3. Go to the SQL Server installation folder (for example `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Binn`) and do the following to check effective access of the SQL Service account:
     1. Right-click the file or folder, select **Properties**, and then select the **Security** tab.
-    1. Select **Advanced**, select the **Effective Access** tab, and then select Select a User to either type in the SQL Service account or select from the list
+    1. Select **Advanced**, select the **Effective Access** tab, and then select **Select a User** to either type in the SQL Service account or select from the list.
     1. Select **View Effective** access to understand and resolve the permissions issue. For example, if the Deny permission is added to the user or the group that the SQL Server service account is member of, remove the Deny permission and restart the SQL Server service.
 
-> [!NOTE]
-> You can also use [Process Monitor](/sysinternals/downloads/procmon) tool to identify and isolate the permission issues. The following screenshot of an example output from Process Monitor shows the \<DomainName>\sqlsrvlogin SQL Server service account generating an Access Denied error.
+    > [!NOTE]
+    > You can also use [Process Monitor](/sysinternals/downloads/procmon) tool to identify and isolate the permission issues. The following screenshot of an example output from Process Monitor shows the \<DomainName>\sqlsrvlogin SQL Server service account generating an Access Denied error.
 
-[![Process Monitor](./media/event-id-7000-access-denied/process-monitor.jpg)](./media/event-id-7000-access-denied/process-monitor.jpg#lightbox)
+    [![Process Monitor](./media/event-id-7000-access-denied/process-monitor.jpg)](./media/event-id-7000-access-denied/process-monitor.jpg#lightbox)
 
 ## Reference
 

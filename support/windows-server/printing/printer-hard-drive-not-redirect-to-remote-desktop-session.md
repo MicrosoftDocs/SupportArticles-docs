@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2492632
 
 Consider the following scenario:
 
-1. You install the Terminal Services or Remote Desktop Services role on a computer that is running Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2.
+1. You install the Terminal Services or Remote Desktop Services role on a Windows Server computer.
 2. You enable printer redirection and\or hard drive redirection on the computer.
 3. You connect to the server by using the Remote Desktop Connection (mstsc.exe) utility from a client machine.
 

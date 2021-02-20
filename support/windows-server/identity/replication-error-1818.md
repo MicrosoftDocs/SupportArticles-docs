@@ -241,4 +241,4 @@ Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CAL
 
 ## More information
 
-[Active Directory changes do not replicate in Windows Server 2003](https://support.microsoft.com/default.aspx?scid=kb;EN-US;830746)
+[Active Directory changes do not replicate](/troubleshoot/windows-server/identity/active-directory-changes-not-replicate)
