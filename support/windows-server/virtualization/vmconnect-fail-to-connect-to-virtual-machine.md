@@ -1,6 +1,6 @@
 ---
 title: Can't use Vmconnect to connect to virtual machine
-description: Describes an error message that you receive when you try to use Vmconnect.exe to connect to a virtual machine in Windows Server 2008. To resolve this error, you must verify that the required registry keys are configured to enable remote authentication.
+description: Describes an error message that you receive when you try to use Vmconnect.exe to connect to a virtual machine in Windows Server. To resolve this error, you must verify that the required registry keys are configured to enable remote authentication.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -63,19 +63,19 @@ The "How to create the registry entry" section describes how to create the regis
 
 #### How to create the registry entry
 
-Follow these steps, and then quit Registry Editor:
+Follow these steps, and then quit **Registry Editor**:
 
-1. Click **Start**, click **Run**, type regedit, and then click **OK**.
+1. Click **Start**, click **Run**, type *regedit*, and then click **OK**.
 
 2. Locate and then click the following key in the registry:
  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Credssp\PolicyDefaults\AllowDefaultCredentials`  
 
 3. On the **Edit** menu, point to **New**, and then click **String Value**.
-4. Type Hyper-V, and then press ENTER.
+4. Type *Hyper-V*, and then press ENTER.
 
 5. On the **Edit** menu, click **Modify**.
 
-6. Type Microsoft Virtual Console Service/*, and then click **OK**.
+6. Type *Microsoft Virtual Console Service/\**, and then click **OK**.
 
 ### Method 2: Use Group Policy settings
 

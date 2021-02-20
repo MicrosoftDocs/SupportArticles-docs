@@ -26,7 +26,7 @@ The **ADSI OpenDsObject** method or the **ADsOpenDsObject C helper** function al
 
 ## More information
 
-The Active Directory Service Interfaces WinNT provider uses the WNetAddConnection2 function to make a connection to `\\servername\IPC$` in order to establish these credentials with the remote server. This method is useful because it doesn't require special privileges for NT clients and it works on Windows NT, Windows 95, Windows 98 and it supports authentication across untrusted domains.
+The Active Directory Service Interfaces WinNT provider uses the WNetAddConnection2 function to make a connection to `\\servername\IPC$` in order to establish these credentials with the remote server. This method is useful because it doesn't require special privileges for NT clients and it works on Windows and it supports authentication across untrusted domains.
 
 Unfortunately, there are several drawbacks inherent in the WNetAddConnection2 function, and they are as follows:
 
@@ -48,7 +48,7 @@ However, it works after the logged on user of the client is added to the Adminis
 
 It also works if you use the following script code.
 
-```console
+```vbscript
 Set objLogon = CreateObject("LoginAdmin.ImpersonateUser")  
 objLogon.Logon "Administrator", "AdminPassword", "Machinename"  
 Set oNS = GetObject("IIS:")
