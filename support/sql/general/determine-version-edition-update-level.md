@@ -315,7 +315,7 @@ To find the version of PolyBase and related features in Windows, first try these
 Get-Process mpdwsvc -FileVersionInfo | Format-Table -AutoSize
 ```
 
-1. If the PolyBase service is not running or cannot start:
+2. If the PolyBase service is not running or cannot start:
 
 ```powershell
 cd 'C:\Program Files\Microsoft SQL Server'
