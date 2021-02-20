@@ -305,6 +305,27 @@ To find the version of your instance of SQL Server CE and related information, s
 
 ## PolyBase
 
+### Windows 
+
+To find the version of PolyBase and related features in Windows, first try these two approaches. 
+
+1. If the PolyBase service is running, use: 
+
+```powershell
+Get-Process mpdwsvc -FileVersionInfo | Format-Table -AutoSize
+```
+
+1. If the PolyBase service is not running or cannot start:
+
+```powershell
+cd 'C:\Program Files\Microsoft SQL Server'
+ls mpdwsvc.exe -r -ea silentlycontinue | % versioninfo | Format-Table -AutoSize
+```  
+
+Alternatively, try SQL Setup steps in the next section.
+    
+### Windows or Linux
+
 To find the version of PolyBase and related features, refer to a fresh discovery report that runs within the SQL Setup tools.
 
 In Windows or Linux, find the installation folder \Setup Bootstrap\Log\. The summary.txt file shows a discovery report of all features and versions. However, if the most recent setup action was to add PolyBase to an existing SQL Server instance, the summary.txt file will not contain the PolyBase feature. This is because the discovery report will have run before the PolyBase feature was added. 
