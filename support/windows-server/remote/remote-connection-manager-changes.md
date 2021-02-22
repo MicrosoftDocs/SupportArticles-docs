@@ -29,7 +29,7 @@ Starting in Windows Server 2016, RCM no longer queries the user object in AD DS.
 Additionally, consider the following scenario:
 
 - You install Windows Server 2016 with the Remote Desktop Session Host role.
-- You configure a local user account to start an application during logon by using the Local Users and Groups tool in Computer Management.
+- You configure a local user account to start an application during logon. You do so by using the Local Users and Groups tool in Computer Management.
 
 In this scenario, you expect the user to be presented with the application in the Remote Desktop Session only. However, by default in Remote Desktop Session Host (RDSH) in Windows Server, a full Remote Desktop Session is presented, and the application setup process in the profile doesn't start.
 
@@ -47,9 +47,12 @@ Then, restart the Remote Desktop Service. If the server doesn't have the Remote 
 
 ## More information
 
-The attributes that are on the **Remote Desktop Services Profile** tab of the users object properties in AD DS are not applied to the user when the user logs on to a Windows Server Remote Desktop Session Host (RDSH) server. Also, no warning is generated and no event is logged because the user's attributes are not enforced, and because everything is working as designed.
+When a user logs on to a RDSH server, the attributes on the **Remote Desktop Services Profile** tab of the users object properties in AD DS aren't applied to the user. Also, no warning is generated and no event is logged because the user's attributes aren't enforced, and because everything is working as designed.
 
-For example, if you are using the RDS attributes to specify a Remote Desktop roaming profile, users won't load that profile but will use a local profile instead. In this situation, there are no error message or logged events. The only way that you can know whether the user profile isn't the RDS roaming profile is if you notice that the desktop environment is not the expected layout, or if you view the profile types in the system Control Panel applet.
+For example, if you are using the RDS attributes to specify a Remote Desktop roaming profile, users won't load that profile but will use a local profile instead. In this situation, there are no error message or logged events. You can only know whether the user profile isn't the RDS roaming profile in one of the following ways:
+
+- You notice that the desktop environment isn't the expected layout.
+- You view the profile types in the system Control Panel applet.
 
 Remote Desktop Services Profile tab in Active Directory Users and Computers:
 

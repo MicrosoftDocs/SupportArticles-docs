@@ -15,7 +15,7 @@ ms.technology: windows-server-active-directory
 ---
 # Troubleshoot domain controller replication error 1727-The remote procedure call failed and did not execute
 
-This article provides a resolution to solve the error message **"The remote procedure call failed and did not execute"**. This error occurs during domain controller (DC) replication on Windows Server.
+This article solves the error message **"The remote procedure call failed and did not execute"**. This error occurs during domain controller (DC) replication on Windows Server.
 
 _Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows Server 2019, Windows Server 2012 R2, Windows Server 2016  
 _Original KB number:_ &nbsp; 4019721
@@ -52,8 +52,8 @@ Possible root causes include:
 
 This problem occurs when one of the following conditions is true:
 
-- The server is backlogged and doesn't respond to the TCP ACK or the response message. Therefore, the sender abandons the TCP session.
-- The network is too slow or unreliable to be able to deliver the TCP ACK or the response message.
+- The server is backlogged and doesn't respond to the TCP ACK or the response message. So, the sender abandons the TCP session.
+- The network is too slow or unreliable. It can't deliver the TCP ACK or the response message.
 
 ## Resolution
 
@@ -64,7 +64,7 @@ To resolve this problem, determine any recent changes that would affect the netw
 1. Take a double-sided network capture while you reproduce the problem. To do so, follow these steps:
 
    1. Start a network capture on both DCs.
-   2. Manually initiate replication between the two DCs.
+   2. Manually start replication between the two DCs.
    3. Stop both sides of the trace when you receive the error.
 
 2. Examine the RPC conversation between the two DCs. Determine whether there's ever a case in which the message that's sent from the requestor DC doesn't incur a response from the replication partner.
@@ -82,7 +82,7 @@ Follow these steps on the destination DC:
 
 1. Verify whether the source DC is listening on TCP port 135. To do so, run the `PortQry.exe -n -e 135` command.
 
-    If the port status is FILTERED, the AD replication failure is likely to fail and return error 1722, instead. Try resolving error 1722, and then check whether the AD replication succeeds. If the problem persists, restart the detailed troubleshooting steps.
+    If the port status is FILTERED, the AD replication failure is likely to fail and return error 1722 instead. Try resolving error 1722, and then check whether the AD replication succeeds. If the problem persists, restart the detailed troubleshooting steps.
 
     If the status isn't FILTERED, the commands return the RPC endpoint mapper database. Search for **MS NT Directory DRS Interface** to find the upper-range port in the endpoint mapper database that the source DC is listening on for AD replication. You may get one or more entries. Make a note of the ports for ncacn_ip_tcp.
 

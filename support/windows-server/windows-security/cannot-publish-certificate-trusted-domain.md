@@ -141,7 +141,7 @@ To enable the child domain users to obtain certificates and have them published 
     > [!NOTE]
     > In Windows Server domains, the Cert Publishers group is a Domain Global group. You must manually add the Cert Publishers group to each child domain.
 
-    You can enable the child domain users to obtain certificates and to have them published in Windows Server domains. To do this, change the group type to **Domain Local**, and include the CA server from the parent domain. This procedure creates the same configuration that is present in a freshly installed Windows Server domain. The user interface (UI) does not let you change the group type. However, you can use the dsmod command to change the Cert Publishers group from a Domain Global group to a Domain Local group. To do this, use the following syntax:
+    You can enable the child domain users to obtain certificates and to have them published in Windows Server domains. To do so, change the group type to **Domain Local**, and include the CA server from the parent domain. This procedure creates the same configuration that is present in a freshly installed Windows Server domain. The user interface (UI) does not let you change the group type. However, you can use the `dsmod` command to change the Cert Publishers group from a Domain Global group to a Domain Local group:
 
     ```console
     dsmod group Group Distinguished Name -scope l
@@ -167,14 +167,14 @@ To enable the child domain users to obtain certificates and have them published 
 
 ### For [Scenario 2](#scenario-2): single-level domain or parent domain
 
-On the single-level domain controller or on the parent domain controller, at a command prompt, run the following two commands, keeping the quotation marks:
+On the single-level domain controller or on the parent domain controller, run the following two commands, keeping the quotation marks:
 
 ```console
 dsacls "cn=adminsdholder,cn=system, dc=<your domain>,dc=<com>" /G "<CA's domain> \Cert Publishers:WP;userCertificate"
 dsacls "cn=adminsdholder,cn=system, dc=<your domain>,dc=<com>" /G "<CA's domain> \Cert Publishers:RP;userCertificate"
 ```
 
-Where dc=\<your domain>,dc=\<com> is the distinguished name (DN) of your child domain. and where \<CA's domain> is the domain name where the CA is located.
+Where dc=\<your domain>,dc=\<com> is the distinguished name (DN) of your child domain. Where \<CA's domain> is the domain name that the CA is located.
 
 ## Status
 

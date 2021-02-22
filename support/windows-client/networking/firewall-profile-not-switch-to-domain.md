@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4550028
 
 ## Symptoms
 
-When you use a third-party virtual private network (VPN) client to connect to a domain network, you notice that Windows Firewall doesn't always switch from the Public or Private profile to the Domain profile as expected.
+You use a third-party virtual private network (VPN) client to connect to a domain network. In this scenario, Windows Firewall doesn't always switch from the Public or Private profile to the Domain profile as expected.
 
 ## Cause
 
@@ -30,7 +30,7 @@ A time lag in some third-party VPN clients sometimes causes this issue. The lag 
 
 ## Resolution
 
-To fix this issue, we recommend that you contact the VPN provider for a solution to reduce the time lag that is caused by adding domain routes.
+To fix this issue, we recommend that you contact the VPN provider for a solution to reduce the time lag caused by adding domain routes.
 
 For VPN providers, you can use callback APIs to add routes as soon as the VPN adapter arrives at Windows. For example:
 
@@ -69,9 +69,14 @@ When the issue occurs, the flow of events is as follows:
 
 - The user connects to the VPN.
 - During VPN tunnel setup, the VPN interface is created and assigned an IP address, and necessary routes are added to the interface. The following conditions apply:
-  - TCP/IP immediately adds a host route and on-link subnet routes if the address is of a certain type (DHCP, IPv6 link local, IPv6 temporary) or if Optimistic Duplicate Address Detection (DAD) is enabled for that address. Otherwise, TCP/IP adds those routes after the DAD is successfully completed.
+  - TCP/IP immediately adds a host route and on-link subnet routes in one of the following situations:
+  
+    - The address is of a certain type, such as DHCP, IPv6 link local, and IPv6 temporary.
+    - Optimistic Duplicate Address Detection (DAD) is enabled for that address.
+
+    Otherwise, TCP/IP adds those routes after the DAD is successfully completed.
   - The VPN client is responsible for the necessary routes for the VPN networks, such as making the VPN interface routable to the VPN DNS server.
-- The first route change triggers Network Connection Status Indicator (NCSI) detection, and the Network Location Awareness (NLA) service tries to authenticate to the domain controller to assign the correct profile to the firewall.
+- The first route change triggers Network Connection Status Indicator (NCSI) detection. And the Network Location Awareness (NLA) service tries to authenticate to the domain controller to assign the correct profile to the firewall.
 - The authentication starts by having the NLA service call the **DsGetDcName** function to retrieve the DC name. It's done by a DNS name resolution for the name, such as_ldap._tcp.CNNDC._sites.dc._msdcs.\<domainname>.
-- If this name resolution occurs before the necessary VPN routes to the VPN DNS server are added to the VPN interface, this DNS name resolution fails and returns "DsGetDcName function Failed with ERROR_NO_SUCH_DOMAIN." Then, this result is cached.
+- If this name resolution occurs before the necessary VPN routes to the VPN DNS server are added to the VPN interface, this DNS name resolution fails. And it returns "DsGetDcName function Failed with ERROR_NO_SUCH_DOMAIN." Then, this result is cached.
 - The DNS name resolution failure might also create a negative DNS cache. The negative cache causes additional failure when the NLA service retries the domain detection.
