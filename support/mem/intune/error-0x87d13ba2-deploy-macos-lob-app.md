@@ -83,19 +83,19 @@ To fix this problem and enable the macOS LOB app to correctly report its status,
 
 4. Remove all **MacOSLobChildApp** elements except the one for the main application in the package. Update the **MacOSLobApp** element by using the BundleId and BuildNumber of the main application, and then save the Detection.xml file.
 
-In the example, the BundleId of the main application is **com.cisco.anyconnect.gui**. Remove all **MacOSLobChildApp** elements except the following one:
+   In the example, the BundleId of the main application is **com.cisco.anyconnect.gui**. Remove all **MacOSLobChildApp** elements except the following one:
 
    ```xml
    <MacOSLobChildApp BundleId="com.cisco.anyconnect.gui" BuildNumber="4.9.05042" VersionNumber="4.9.05042"/>
    ```
 
-Then, change the **MacOSLobApp** element to:
+   Then, change the **MacOSLobApp** element to:
 
     ```xml
     <MacOSLobApp PackageType="pkg" PackageName="AnyConnect.pkg" BundleId="com.cisco.pkg.anyconnect.gui" BuildNumber="4.9.05042">
     ```
 
-The following is the updated Detection.xml file:
+   The following is the updated Detection.xml file:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
