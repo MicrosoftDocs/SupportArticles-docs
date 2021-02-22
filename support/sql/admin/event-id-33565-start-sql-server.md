@@ -51,7 +51,7 @@ In Microsoft SQL Server Configuration Manager, you provision a server-side certi
    > - The two events indicate that the SQL Server service account doesn't have permissions to the certificate that's provisioned in Configuration Manager. You must assign the required permissions to the service account to fix this issue.
    > - If you don't see both Event 26010 and 33565, you might be experiencing a different issue that's not addressed in this article.
 
-    1. Select **Start** > **Run**, enter **mmc**, and then open **Certificate Snap-in** in the MMC console.
+    1. Select **Start** > **Run**, enter *mmc*, and then open **Certificate Snap-in** in the MMC console.
     1. On the **Console** menu, select **Add/Remove Snap-in**.
     1. Select **Add** > **Certificates**, and then select **Add** again.
 
