@@ -1,6 +1,6 @@
 ---
 title: Error 0x87D13BA2 deploying a macOS LOB app
-description: Solves the 0x87D13BA2 error when you deploy a macOS LOB app that contains multiple components.
+description: Fixes the 0x87D13BA2 error when you deploy a macOS LOB app that contains multiple components.
 author: helenclu
 ms.author: luche
 ms.reviewer: markstan
@@ -9,12 +9,13 @@ ms.prod-support-area-path: App management
 ---
 # Error 0x87D13BA2 when you deploy a macOS LOB app
 
-This article solves the following error when you deploy a macOS LOB app in Intune:  
-&nbsp;&nbsp;&nbsp;One or more apps contain invalid bundleIds. (0x87D13BA2)
+This article fixes a problem that occurs when you try to deploy a macOS LOB app in Microsoft Intune, and you receive the following error message:
+
+> One or more apps contain invalid bundleIds. (0x87D13BA2)
 
 ## Symptoms
 
-You publish a macOS line-of-business (LOB) app using Intune. When you select the app in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), the **Device install status** shows the following information about the app:
+You publish a macOS line-of-business (LOB) app by using Intune. When you select the app in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), the **Device install status** shows the following information about the app:
 
 - **Status**: Failed
 - **Status details**: One or more apps contain invalid bundleIds. (0x87D13BA2)
@@ -23,22 +24,22 @@ Here's an example of Cisco AnyConnect VPN:
 
 :::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/error.png" alt-text="Error 0x87D13BA2 ":::
 
-This issue may occur even though the app is successfully installed on the device.
+This problem can occur even if the app is successfully installed on the device.
 
 ## Cause
 
-This issue occurs under the following conditions:
+This problem occurs under the following conditions:
 
-- multiple applications are included in a macOS app package.
-- the macOS MDM client doesn't report back the installation status of all individual applications included in the package.
+- Multiple applications are included in a macOS app package.
+- The macOS MDM client doesn't report the installation status of all individual applications that are included in the package.
 
-Any app with multiple components may result in this error, such as Cisco AnyConnect VPN.
+Any app that has multiple components, such as Cisco AnyConnect VPN, can generate this error message.
 
 ## Resolution
 
-To fix this issue and allow the macOS LOB app to correctly report its status, follow these steps:
+To fix this problem and enable the macOS LOB app to correctly report its status, follow these steps:
 
-1. Copy the [wrapped application](/mem/intune/apps/lob-apps-macos) in `.intunemac` format to a macOS device. Place the `.intunemac` file in a temporary folder.
+1. Copy the [wrapped application](/mem/intune/apps/lob-apps-macos) in `.intunemac` format to a macOS device. Put the `.intunemac` file into a temporary folder.
 2. Run the following command to extract the `.intunemac` file:
 
    ```console
@@ -49,10 +50,10 @@ To fix this issue and allow the macOS LOB app to correctly report its status, fo
   
    :::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/unzip.png" alt-text="Extract the file":::
 
-   The content of the package will be extracted to a child folder named IntuneMacPackage under the temporary folder.
+   The content of the package will be extracted to a child folder that's named IntuneMacPackage under the temporary folder.
 3. Open the IntuneMacPackage/Metadata/Detection.xml file in a text editor.
 
-    Here's a sample Detection.xml file of Cisco AnyConnect VPN:
+   Here's a sample Detection.xml file of Cisco AnyConnect VPN:
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -80,21 +81,21 @@ To fix this issue and allow the macOS LOB app to correctly report its status, fo
     </PackageMetadata>
     ```
 
-4. Remove all **MacOSLobChildApp** elements except the one for the main application in the package. Update the **MacOSLobApp** element with the BundleId and BuildNumber of the main application, then save the Detection.xml file.
+4. Remove all **MacOSLobChildApp** elements except the one for the main application in the package. Update the **MacOSLobApp** element by using the BundleId and BuildNumber of the main application, and then save the Detection.xml file.
 
-   In the example, the BundleId of the main application is **com.cisco.anyconnect.gui**. First remove all **MacOSLobChildApp** elements except the following one:
+In the example, the BundleId of the main application is **com.cisco.anyconnect.gui**. Remove all **MacOSLobChildApp** elements except the following one:
 
    ```xml
    <MacOSLobChildApp BundleId="com.cisco.anyconnect.gui" BuildNumber="4.9.05042" VersionNumber="4.9.05042"/>
    ```
 
-    Then change the **MacOSLobApp** element to:
+Then, change the **MacOSLobApp** element to:
 
     ```xml
     <MacOSLobApp PackageType="pkg" PackageName="AnyConnect.pkg" BundleId="com.cisco.pkg.anyconnect.gui" BuildNumber="4.9.05042">
     ```
 
-    Below is the updated Detection.xml file:
+The following is the updated Detection.xml file:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -116,7 +117,7 @@ To fix this issue and allow the macOS LOB app to correctly report its status, fo
    zip -q --symlinks -0 -r <Package_Name>.intunemac <IntuneMacPackage_Folder_Location>
    ```
 
-   \<Package_Name> is the wanted name of the `.intunemac` file. And \<IntuneMacPackage_Folder_Location> is the location of the IntuneMacPackage folder created in step 2.
+   **Note:** \<*Package_Name*> is the desired name of the `.intunemac` file, and \<*IntuneMacPackage_Folder_Location*> is the location of the IntuneMacPackage folder that you created in step 2.
 
    For our example, run the following command:
 
@@ -124,4 +125,4 @@ To fix this issue and allow the macOS LOB app to correctly report its status, fo
    zip -q --symlinks -0 -r AnyConnect.intunemac IntuneMacPackage
    ```
 
-6. Add the new `.intunemac` file to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), then sync the device.
+6. Add the new `.intunemac` file to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then sync the device.
