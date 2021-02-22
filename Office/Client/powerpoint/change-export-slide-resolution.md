@@ -1,5 +1,5 @@
 ---
-title: How to export high resolution slides from PowerPoint (high dpi)
+title: How to export high resolution (high dpi) slides from PowerPoint
 description: Describes how to change the dots per inch (dpi) setting of a PowerPoint slide when you save it as a picture. To do this, you must add a new registry value.
 author: simonxjx
 manager: dcscontentpm
@@ -19,11 +19,11 @@ appliesto:
 - Microsoft Office PowerPoint 2003
 ---
 
-# How to export high resolution slides from PowerPoint (high dpi)
+# How to export high-resolution (high-dpi) slides from PowerPoint
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-You can change the export resolution in Microsoft PowerPoint by saving a slide in a picture format. There are two steps to this process: using the system registry to change the default resolution setting for exported slides, and then actually saving the slide as a picture at the new resolution.
+You can change the export resolution in Microsoft PowerPoint by saving a slide in a picture format. There are two steps to this process: Use the system registry to change the default resolution setting for exported slides, and then save the slide as a picture at the new resolution.
 
 ## Step 1: Change the export resolution setting
 
@@ -33,11 +33,11 @@ You can change the export resolution in Microsoft PowerPoint by saving a slide i
 By default, the export resolution of a PowerPoint slide that you want to save as a picture is 96 dots per inch (dpi). To change the export resolution, follow these steps:
 
 1. Exit all Windows-based programs.
-2. Right-click the **Start** button and then **Run**. (In Windows 7, select **Start**, and then **Run**.)  
-3. In the **Open** box, type regedit, and then select **OK**.
+2. Right-click **Start**, and then select **Run**. (In Windows 7, select **Start**, and then select **Run**.)
+3. In the **Open** box, type **regedit**, and then select **OK**.
 4. Locate one of the following registry subkeys, depending on the version of PowerPoint that you're using:
 
-    PowerPoint 2016, 2019, PowerPoint for Office 365
+   PowerPoint 2016, 2019, PowerPoint for Office 365
 
    **HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\PowerPoint\Options**
 
@@ -57,11 +57,11 @@ By default, the export resolution of a PowerPoint slide that you want to save as
 
    **HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\PowerPoint\Options**
 
-5. Click the **Options** subkey, point to **New** on the **Edit** menu, and then click **DWORD (32-bit) Value**.
-6. Type ExportBitmapResolution, and then press Enter.
-7. Make sure that **ExportBitmapResolution** is selected, and then click **Modify** on the **Edit** menu.
-8. In the Edit DWORD Value dialog box, select **Decimal**.
-9. In the **Value data** box, type the value of the resolution that you want such as 300. Or, use the parameters in the following table.
+5. Select the **Options** subkey, point to **New** on the **Edit** menu, and then select **DWORD (32-bit) Value**.
+6. Enter **ExportBitmapResolution**, and then press Enter.
+7. Make sure that **ExportBitmapResolution** is selected, and then select **Modify** on the **Edit** menu.
+8. In the **Edit DWORD Value** dialog box, select **Decimal**.
+9. In the **Value data** box, specify a resolution of **300**. Or, use the parameters from the following table.
 
     |Decimal value|Full-screen pixels (horizontal × vertical)|Widescreen pixels (horizontal × vertical)|Dots per inch (horizontal and vertical)|
     |---|---|---|---|
@@ -96,38 +96,38 @@ By default, the export resolution of a PowerPoint slide that you want to save as
     > [!NOTE]
     > You may want to change the picture's save location in the **Save in** box. You may also want to change the name of the picture in the **File name** box.
 
-4. Select **Save**. You will be prompted with the following dialog box:
+4. Select **Save**. You will be prompted by the following dialog box:
 
     ![Select Current Slide Only.](./media/change-export-slide-resolution/current-slide.png)
 
-    Select **Current Slide Only**. The slide is saved in the new format and resolution, in the location that you specified in the **Save in** box.
+    Select **Current Slide Only**. The slide is saved in the new format and resolution in the location that you specified in the **Save in** box.
 5. To verify that the slide is saved in the resolution that you specified, right-click the picture, and then select **Properties**.
 
 ## Limitations
 
-When you set the ExportBitmapResolution registry value in PowerPoint, there's a maximum DPI limitation to consider for some versions of PowerPoint.
+When you set the **ExportBitmapResolution** registry value in PowerPoint, there's a maximum DPI limitation to consider for some versions of PowerPoint.
 
-Maximum DPI is dependent upon the slide size. The formula is:
-maxdpi = (sqrt(100,000,000 / (slide with * slide height)), where slide width/height are in inches.
+Maximum DPI is dependent upon the slide size. The formula is as follows:
+maxdpi = (sqrt(100,000,000 / (slide with * slide height)), where slide width and height are in inches.
 
 For example, for a standard 13.3" x 7.5" slide, the equation would be:
 sqrt(100,000,000 / (13.333 * 7.5) ) = 1000.
 
 ### PowerPoint 2019, 2016, 2013, and 365
 
-There is no fixed DPI limit. Slide export is only limited by how big the resulting bitmap gets. PowerPoint can support creating bitmaps up to ~100,000,000 pixels (width x height). For standard widescreen slides (13.3" x 7.5") this means a maximum DPI of 1000. For the old style 10" x 7.5" slides this means a maximum of 1155 DPI, but depending on slide size, this can be more or less.
+There is no fixed DPI limit. Slide export is limited only by how large the resulting bitmap gets. PowerPoint can support bitmaps up to 100,000,000 pixels (width x height). For standard widescreen slides (13.3" x 7.5"), this means a maximum DPI of 1,000. For the older style 10" x 7.5" slides, this typically means a maximum DPI of 1,155.
 
 ### PowerPoint 2010 and older
 
-The maximum resolution that PowerPoint can export is 3072 pixels, based on the longest edge of the slide. For example, the standard 10" × 7.5" slide has a maximum effective DPI value of 307. The 3070-pixel result (10 × 307 = 3070) falls within the 3072 limit. However, any DPI setting that's greater than 307 for a standard slide reverts to the limit of 3072.
+The maximum resolution that PowerPoint can export is 3,072 pixels, based on the longest edge of the slide. For example, the standard 10" × 7.5" slide has a maximum effective DPI value of 307. The 3,070-pixel result (10 × 307 = 3070) falls within the 3,072-pixel limit. However, any DPI setting that's greater than 307 for a standard slide reverts to the limit of 3,072.
 
 |Decimal value|Pixels (horizontal × vertical)|Dots per inch (horizontal and vertical)|
 |---|---|---|
 |307|3072 × 2304|307 dpi|
 
-The 3072-pixel limit also applies to saving the slide programmatically.
+The 3,072-pixel limit also applies to saving the slide programmatically.
 
-For example, the following code programmatically saves a picture with dimensions of 3072 × 2304 pixels:
+For example, the following code programmatically saves a picture that has the dimensions of 3072 × 2304 pixels:
 
 ```powershell
 ActiveWindow.Selection.SlideRange(1).export
