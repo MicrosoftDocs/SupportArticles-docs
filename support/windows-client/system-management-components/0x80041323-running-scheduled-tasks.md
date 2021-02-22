@@ -24,9 +24,7 @@ _Original KB number:_ &nbsp; 2696472
 
 Consider the scenario:  
 
-- You have Windows installed.
-
-- The Operating System runs high number of Scheduled tasks under one user account.
+- You have a Windows-based computer that runs high number of Scheduled tasks under one user account.
 
 - The tasks are failing intermittently and under the LastRun option, you may see following error message
 
