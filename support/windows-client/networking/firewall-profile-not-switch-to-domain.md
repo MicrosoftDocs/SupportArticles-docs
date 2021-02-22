@@ -1,6 +1,6 @@
 ---
 title: Firewall profile doesn't switch to Domain when you use a third-party VPN
-description: Addresses an issue in which Windows Firewall profile doesn't switch to Domain when you connect to domain network by using a third-party VPN client.
+description: Fixes an issue in which Windows Firewall profile doesn't switch to Domain when you connect to domain network by using a third-party VPN client.
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
@@ -46,7 +46,7 @@ In user mode, there are IpHelper APIs. For example:
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-To work around this issue, disable negative cache to help the NLA service when it retries domain detection. To do this, use the following methods.
+To work around this issue, disable negative cache to help the Network Location Awareness (NLA) service when it retries domain detection. To do so, use the following methods.
 
 - First, disable Domain Discovery negative cache by adding the **NegativeCachePeriod** registry key to following subkey:
 
@@ -69,9 +69,9 @@ When the issue occurs, the flow of events is as follows:
 
 - The user connects to the VPN.
 - During VPN tunnel setup, the VPN interface is created and assigned an IP address, and necessary routes are added to the interface. The following conditions apply:
-  - TCPIP immediately adds a host route and on-link subnet routes if the address is of a certain type (DHCP, IPv6 link local, IPv6 temporary) or if Optimistic Duplicate Address Detection (DAD) is enabled for that address. Otherwise, TCPIP adds those routes after the DAD is successfully completed.
+  - TCP/IP immediately adds a host route and on-link subnet routes if the address is of a certain type (DHCP, IPv6 link local, IPv6 temporary) or if Optimistic Duplicate Address Detection (DAD) is enabled for that address. Otherwise, TCP/IP adds those routes after the DAD is successfully completed.
   - The VPN client is responsible for the necessary routes for the VPN networks, such as making the VPN interface routable to the VPN DNS server.
 - The first route change triggers Network Connection Status Indicator (NCSI) detection, and the Network Location Awareness (NLA) service tries to authenticate to the domain controller to assign the correct profile to the firewall.
-- The authentication starts by having the NLA service call the **DsGetDcName** function to retrieve the DC name. This is done by a DNS name resolution for the name, such as_ldap._tcp.CNNDC._sites.dc._msdcs.\<domainname>.
+- The authentication starts by having the NLA service call the **DsGetDcName** function to retrieve the DC name. It's done by a DNS name resolution for the name, such as_ldap._tcp.CNNDC._sites.dc._msdcs.\<domainname>.
 - If this name resolution occurs before the necessary VPN routes to the VPN DNS server are added to the VPN interface, this DNS name resolution fails and returns "DsGetDcName function Failed with ERROR_NO_SUCH_DOMAIN." Then, this result is cached.
 - The DNS name resolution failure might also create a negative DNS cache. The negative cache causes additional failure when the NLA service retries the domain detection.
