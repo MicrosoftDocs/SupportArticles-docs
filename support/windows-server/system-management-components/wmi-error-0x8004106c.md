@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2404366
 
 You're unable to run WMI queries. You may receive an error similar to the following if you run a query. In this example, the following query was run from the root\\cimv2 namespace:  
 
-```powershell
+```sql
 Select * From Win32_LogicalDisk Where FreeSpace > 200000
 ```
 
@@ -40,7 +40,7 @@ This error can occur if the WMI Provider service has reached its quota limit.
 
 Raise the memory quota of the WMI Provider service by carrying out the following steps:
 
-1. Go to Start > **Run** and type *wbemtest.exe*.
+1. Go to **Start** > **Run** and type *wbemtest.exe*.
 2. Select **Connect**.
 3. In the namespace text box, type *root*.
 4. Select **Connect**.
