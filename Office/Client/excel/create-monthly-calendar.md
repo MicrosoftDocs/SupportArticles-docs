@@ -27,40 +27,43 @@ appliesto:
 
 ## Summary
 
-This article contains a sample Microsoft Visual Basic for Applications macro (Sub procedure) that prompts you for the month and year and creates a monthly calendar using a worksheet. 
+This article contains a sample Microsoft Visual Basic for Applications macro (sub-procedure) that prompts you for the month and year and creates a monthly calendar by using a worksheet. 
 
 ## Resolution
 
-Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements.
+> [!NOTE]
+>
+> Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements.
 
 To create the calendar, follow these steps.
 
 ### Microsoft Excel 2003
 
-1. Create a new workbook.
-2. On the Tools menu, point to Macro, and then click Visual Basic Editor.
-3. On the Insert menu, click Module.
-4. Copy the Visual Basic for Applications code below into the module sheet.
-5. On the File menu, click "Close and Return to Microsoft Excel."
-6. Click the Sheet1 tab.
-7. On the Tools menu, point to Macro, and then click Macros.
-8. Click CalendarMaker, and then click Run to create the calendar.
+1. Create a workbook.
+2. On the **Tools** menu, point to **Macro**, and then select **Visual Basic Editor**.
+3. On the **Insert** menu, select **Module**.
+4. Paste the Visual Basic for Applications script from the "Sample Visual Basic procedure" section into the module sheet.
+5. On the **File** menu, select **Close and Return to Microsoft Excel**.
+6. Select the **Sheet1** tab.
+7. On the **Tools** menu, point to **Macro**, and then select **Macros**.
+8. Select **CalendarMaker**, and then select **Run** to create the calendar.
 
 ### Microsoft Excel 2007 or later
 
-1. Create a new workbook.
-2. On the Developer ribbon, Click Visual Basic.
-3. On the Insert menu, click Module.
-4. Copy the Visual Basic for Applications code below into the module sheet.
-5. On the File menu, click "Close and Return to Microsoft Excel."
-6. Click the Sheet1 tab.
-7. On the Developer ribbon, click Macros.
-8. Click CalendarMaker, and then click Run to create the calendar.
+1. Create a workbook.
+2. On the **Developer** ribbon, select **Visual Basic**.
+3. On the **Insert* menu, select **Module**.
+4. Paste the Visual Basic for Applications script from the "Sample Visual Basic procedure" section into the module sheet.
+5. On the **File** menu, select **Close and Return to Microsoft Excel**.
+6. Select the **Sheet1** tab.
+7. On the **Developer* ribbon, click **Macros**.
+8. Select **CalendarMaker**, and then select **Run* to create the calendar.
 
 > [!NOTE]
-> If the Developer Ribbon is not showing go to Excel Options and enable it. In Excel 2007 you will find it in the Popular menu and in Excel 2010 you will find it in the Customize Ribbon menu.
+> 
+> If the Developer ribbon is not visible, open Excel Options to enable it. In Excel 2007, the option is available on the **Popular** menu. In Excel 2010, the option is available on the **Customize Ribbon** menu.
 
-### Sample Visual Basic Procedure
+### Sample Visual Basic procedure
 
 ```vb
   Sub CalendarMaker()
@@ -250,4 +253,4 @@ To create the calendar, follow these steps.
 
 ```
 
-You can add other code to customize the calendar to meet your needs. Insert extra rows for entry on the screen for each day or resize the screen to see all of the calendar based on screen size and resolution.
+You can add other code to customize the calendar to meet your needs. Insert extra rows for entry on the screen for each day or resize the screen to see the whole calendar based on screen size and resolution.
