@@ -26,7 +26,7 @@ Administrators can use Cipher.exe to encrypt and decrypt data on drives that use
 
 When you delete files or folders, the data isn't initially removed from the hard disk. Instead, the space on the disk that was occupied by the deleted data is *deallocated*. After it's deallocated, the space is available to use when new data is written to the disk. Until the space is overwritten, you can recover the deleted data by using a low-level disk editor or data-recovery software.
 
-When you encrypt plain text files, Encrypting File System (EFS) makes a backup copy of the file so that the data is not lost if an error occurs during the encryption process. After the encryption is complete, the backup copy is deleted. As with other deleted files, the data isn't removed until it has been overwritten. The Windows Server 2003 version of the Cipher utility is designed to prevent unauthorized recovery of such data.
+When you encrypt plain text files, Encrypting File System (EFS) makes a backup copy of the file. So the data isn't lost if an error occurs during the encryption process. After the encryption is complete, the backup copy is deleted. As with other deleted files, the data isn't removed until it has been overwritten. The Windows Server 2003 version of the Cipher utility is designed to prevent unauthorized recovery of such data.
 
 ## Use the Cipher security tool to overwrite deleted data
 

@@ -38,7 +38,7 @@ Multiple root causes exist, and they're listed in the following table:
 |6|DHCP clients configured with Option 81 deregister host "A" records during host "AAAA" registration.|Windows 7 and Windows Server 2008 R2-based computers which receive DHCP-assigned addresses have Option 81 defined on the DHCP server. They deregister host "A" records during "AAAA" record registration.|
 |7|Timing issue caused when you change DNS server IP unless KB2520155 is installed.|A DNS client's DNS Host record is deleted after you change the DNS server IP address on the same client. |
 |8|Record registration failures make records vulnerable to the scavenging process.|DNS dynamic update protocol updates for existing records fail. So the records timestamp doesn't update. It makes the record vulnerable to deletion by a correctly configured DNS Scavenging process.|
-|9|DNS records are deleted when a given Windows client dynamic lease is changed to a reservation.|DNS records that are currently registered by a DHCP-enabled Windows client are deleted by the DHCP server. The deletion occurs when the client's dynamic lease is transitioned to a reservation and the following settings are enabled:<ul><li>"Always dynamically update DNS A and PTR records" </li><li>"Discard A and PTR records when lease is deleted"</li><li>"Dynamically update DNS A and PTR records for DHCP clients that don't request update"</li></ul>Affected DNS records include the host "A," host "AAAA," and PTR records.|
+|9|DNS records are deleted when a given Windows client dynamic lease is changed to a reservation.|DNS records that are currently registered by a DHCP-enabled Windows client are deleted by the DHCP server. The deletion occurs when the client's dynamic lease is transitioned to a reservation, and the following settings are enabled:<ul><li>"Always dynamically update DNS A and PTR records" </li><li>"Discard A and PTR records when lease is deleted"</li><li>"Dynamically update DNS A and PTR records for DHCP clients that don't request update"</li></ul>Affected DNS records include the host "A," host "AAAA," and PTR records.|
 ||||
 
 ## Resolution
@@ -75,9 +75,9 @@ However, there's an issue with the new behavior. In the new behavior, the SRV re
 
 This issue is resolved by installing Windows Server 2008 Service Pack 2, or [KB953317](https://support.microsoft.com/help/953317). This issue is specific to Windows Server 2008 DNS zones that are hosting secondary copies of DNS zones. It doesn't occur when the Microsoft DNS Server role is installed on computers running other versions of Windows.
 
-### Cause 5: Host "A" record is deleted when the IP address is changed in Windows Vista, Windows Server 2008, Windows 7, or Windows Server 2008 R2
+### Cause 5: Host "A" record is deleted when the IP address is changed
 
-Assume that you change DNS servers' IP addresses on a TCP/IP network stack on Windows Server 2008 or Windows Server 2008 R2, and then restart the computer. In this scenario, sometimes the deletion of the host "A" record occurs on the original DNS server after the registration of the host A record on the newly configured DNS server IP address (Active Directory Integrated DNS). From a user perspective, anything that depends on name resolution is broken.
+Assume that you change DNS servers' IP addresses on a TCP/IP network stack on Windows Server 2008 or Windows Server 2008 R2. Then you restart the computer. In this scenario, sometimes the deletion of the host "A" record occurs on the original DNS server after the registration of the host A record on the newly configured DNS server IP address (Active Directory Integrated DNS). From a user perspective, anything that depends on name resolution is broken.
 
 When the DNS server IP is changed on the client, the client sends an SOA update to delete its "A" Record from the old DNS server. And it sends another update to register its "A" Record to the new DNS Server.
 
