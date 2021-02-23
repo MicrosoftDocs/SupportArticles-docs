@@ -31,9 +31,9 @@ Multiple root causes exist, and they're listed in the following table:
 |Cause|Issue|Synopsis|
 |---|---|---|
 |1|DNS Scavenging is misconfigured.|The Scavenging feature on one or more DNS Servers was configured to have overly aggressive settings and is prematurely deleting DNS records for AD-integrated DNS zones.|
-|2|DNS zones are CNF or conflict mangled in Active Directory.|The container representing the DNS zone in Active Directory has become CNF or conflict mangled. And it was replaced by a different container that may first be empty or contain a subset of the records contained in the previous instance of the zone.|
+|2|DNS zones are CNF or conflict mangled in Active Directory.|The container representing the DNS zone in Active Directory has become CNF or conflict mangled. It was replaced by a different container that may first be empty or contain a subset of the records contained in the previous instance of the zone.|
 |3|DnsAvoidRegisterRecord defined in a Group Policy Object (GPO).|A code defect exists if SRV record registration is excluded by using the **DC locator DNS records not registered by the DCs** Group Policy setting. It modifies the DnsAvoidRegisterRecords registry setting under the `hklm\software\policies\microsoft\netlogon\parameters` registry subkey.|
-|4|Windows Server 2008 zone transfer deletion bug.|The zone transfer deletion bug causes records to be deleted from secondary zones residing on Windows Server 2008 DNS Servers following zone transfer.|
+|4|Windows Server 2008 zone transfer deletion bug.|The bug causes records to be deleted from secondary zones on Windows Server 2008 DNS Servers following zone transfer.|
 |5|Host "A" record is deleted when the IP address is changed. It occurs in Windows Vista, Windows Server 2008, Windows 7, or Windows Server 2008 R2.|A timing bug causes the premature deletion of host "A" records when the DNS Server IP is changed.|
 |6|DHCP clients configured with Option 81 deregister host "A" records during host "AAAA" registration.|Windows 7 and Windows Server 2008 R2-based computers which receive DHCP-assigned addresses have Option 81 defined on the DHCP server. They deregister host "A" records during "AAAA" record registration.|
 |7|Timing issue caused when you change DNS server IP unless KB2520155 is installed.|A DNS client's DNS Host record is deleted after you change the DNS server IP address on the same client. |
@@ -51,7 +51,10 @@ TechNet: [Using DNS aging and scavenging](https://technet.microsoft.com/library/
 
 ### Cause 2: DNS zones are CNF or conflict mangled in Active Directory  
 
-With exceptions, Active Directory allows for any domain controller to originate creating an object in a writable directory partition. When two domain controllers create the same object or container inside a replication window, the directory applies conflict resolution logic to determine which object should remain and which object should be quarantined.
+With exceptions, Active Directory allows for any domain controller to originate creating an object in a writable directory partition. When two domain controllers create the same object or container inside a replication window, the directory applies conflict resolution logic to determine:
+
+- which object should remain.
+- which object should be quarantined.
 
 When the replication of objects causes a name conflict (two objects have the same name within the same container, or have the same container name), the directory automatically renames one of the objects to have a unique name. Specifically, a "*CNF:\<GUID>" string is appended to the DN path of the created object. And the instance created by the last writer domain controller remains.
 
@@ -69,7 +72,11 @@ A good solution to this problem is to configure the DNS client on domain control
 
 Check the Active Directory object version on the dnsNode object that contains the missing record. If it's a large number, it might be your issue. A possibility is to move the exclusion of the SRV records to local policy to stop the constant deregistrations.
 
-However, there's an issue with the new behavior. In the new behavior, the SRV records are removed only once, specifically the first time that the policy is applied. Because the records are non-linked multi-valued attribute, a condition can occur where multiple domain controllers remove SRV records on different DNS servers before Active Directory coverage of the zone. When the underlying attribute is fully converged, the last DNS server to receive a deletion is the only version that's kept. Only the records that were removed on that DNS server are removed from the SRV record. The SRV records removed on other DNS servers seem to come back. Manual cleanup may be required after the all domain controllers have applied the GPO and the affected SRV records are fully converged.
+However, there's an issue with the new behavior. In the new behavior, the SRV records are removed only once, specifically the first time that the policy is applied. Because the records are non-linked multi-valued attribute, the following condition can occur:
+
+> Multiple domain controllers remove SRV records on different DNS servers before Active Directory coverage of the zone.
+
+When the underlying attribute is fully converged, the last DNS server to receive a deletion is the only version that's kept. Only the records that were removed on that DNS server are removed from the SRV record. The SRV records removed on other DNS servers seem to come back. Manual cleanup may be required after the all domain controllers have applied the GPO and the affected SRV records are fully converged.
 
 ### Cause 4: Windows Server 2008 zone transfer delete bug  
 
