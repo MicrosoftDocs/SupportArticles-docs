@@ -1,11 +1,12 @@
 ---
 title: Uninstall SQL Server Management Studio
 description: This article describes how to uninstall the Microsoft SQL Server Management Studio that is included with SQL Server 2014 and earlier versions of the product.
-ms.date: 11/19/2020
+ms.date: 02/23/2021
 ms.prod-support-area-path: Management Studio
 ms.topic: how-to
 ms.prod: sql
 ---
+
 # Uninstall SQL Server Management Studio
 
 This article describes how to uninstall the Microsoft SQL Server Management Studio that is included with SQL Server 2014 and earlier versions of the product.
@@ -19,8 +20,7 @@ This step-by-step article describes how to uninstall the SQL Server Management S
 
 > Setup has detected a version of SQL Server Management Studio on this machine. SQL Server Management Studio and SQL Server Management Studio Express cannot be installed on the same machine. To install SQL Server Management Studio Express, you must first uninstall SQL Server Management Studio, and then, rerun SQL Server Management Studio Express Edition Setup. For more information, see article 909953 in the Microsoft Knowledge Base.
 
-> [!NOTE]
-> Starting with SQL Server 2016, SQL Server management studio is offered as a separate download and hence can be installed as a standalone application. As such you can you can use any of the processes documented in [Uninstall or remove apps and programs in Windows 10](https://support.microsoft.com/windows/uninstall-or-remove-apps-and-programs-in-windows-10-4b55f974-2cc6-2d2b-d092-5905080eaf98). The steps below are only applicable to SQL Server 2014 and earlier versions, wherein SSMS may have been installed as a shared feature during setup.
+The steps below are only applicable to SSMS that is installed with SQL Server 2014 and earlier versions. As such, you can use any of the processes documented in [Uninstall or remove apps and programs in Windows 10](https://support.microsoft.com/windows/uninstall-or-remove-apps-and-programs-in-windows-10-4b55f974-2cc6-2d2b-d092-5905080eaf98). However, starting with SQL Server 2016, SQL Server Management Studio is offered as a separate download. Therefore these steps don’t work with SSMS 16 and later.
 
 ## Windows 10 / 2016 +
 
