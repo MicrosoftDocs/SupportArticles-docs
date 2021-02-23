@@ -28,9 +28,15 @@ The IPC$ share is created by the Windows Server service. This special share exis
 
 ## Configure anonymous access by using network access policy settings
 
-In Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2, the IPC$ share can't be managed or restricted. However, an administrator has controls over any named pipes that were enabled so that they can be accessed anonymously by using the [Network access: Named Pipes that can be accessed anonymously](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/jj852278(v=ws.10)) security policy setting. If the policy setting is configured to have no entries (such as a Null value), no named pipes can be accessed anonymously. And you have to make sure that no applications or services in the environment rely on anonymous access to any named pipes on the server.
+The IPC$ share can't be managed or restricted in the following versions of Windows:
 
-Although Windows Server 2003 no longer prevents anonymous access to IPC$ share, the following security policy setting defines whether the Everyone group is added to an anonymous session:
+- Windows Server 2003
+- Windows Server 2008
+- Windows Server 2008 R2
+
+However, an administrator has controls over any named pipes that were enabled. They can be accessed anonymously by using the [Network access: Named Pipes that can be accessed anonymously](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/jj852278(v=ws.10)) security policy setting. If the policy setting is configured to have no entries, such as a Null value, no named pipes can be accessed anonymously. And you must ensure that no applications or services in the environment rely on anonymous access to any named pipes on the server.
+
+Windows Server 2003 no longer prevents anonymous access to IPC$ share. The following security policy setting defines whether the Everyone group is added to an anonymous session:
 
 [Network access: Let Everyone permissions apply to anonymous users](/previous-versions/windows/it-pro/windows-server-2003/cc778182(v=ws.10))
 

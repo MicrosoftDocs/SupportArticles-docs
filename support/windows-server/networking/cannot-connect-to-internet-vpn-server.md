@@ -63,7 +63,7 @@ To resolve this issue, configure the client computers to use the default gateway
         > Configure a pool of static IP addresses on a different network segment than the network segment on which the internal LAN exists.
     6. To exclude a range of IP addresses from the static address pool, type the starting IP address of the range that you want to exclude in the **From** box, type the ending IP address of the range that you want to exclude in the **To** box, and then select **Add**.
     7. Select **OK**, select **OK**, and then select **Continue**.
-    8. Select the **Protocols** tab, select **TCP/IP Protocol**, select **Properties**, select the **Routing** tab, and then select the **Enable IP Forwarding** check box if it isn't already selected).
+    8. Select the **Protocols** tab, select **TCP/IP Protocol** > **Properties**. Select the **Routing** tab, and then select the **Enable IP Forwarding** check box if it isn't already selected.
     9. Select **OK**, and then select **Close**.
     10. Select **Yes** to restart the computer.
 
@@ -95,7 +95,7 @@ Add a static route on the client computer that uses the following configuration:
 > [!NOTE]
 > The Routing and Remote Access server assigns this first IP address to its wide area network (WAN) Miniport driver.
 
-For example, to add a static route to a network that has the IP address of 192.168.10.0, the subnet mask of 255.255.255.0, and the gateway (the first IP address of the range assigned to the static IP address pool) of 192.168.1.1, type the following command at the command prompt, and then press ENTER:
+For example, to add a static route to a network that has the IP address of 192.168.10.0, the subnet mask of 255.255.255.0, and the gateway (the first IP address of the range assigned to the static IP address pool) of 192.168.1.1, run the following command:
 
 ```console
 route -p add 192.168.10.0 mask 255.255.255.0 192.168.1.1

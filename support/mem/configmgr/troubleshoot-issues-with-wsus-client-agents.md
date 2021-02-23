@@ -202,7 +202,7 @@ Once done, you can copy these user proxy settings to the WinHTTP proxy settings 
 
 ## Rebuild the Automatic Update Agent Store
 
-When there're issues downloading updates and there're errors relating to the software distribution store, complete the following steps on the client:
+When there are issues downloading updates and there are errors relating to the software distribution store, complete the following steps on the client:
 
 - Stop the Automatic Updates service by running `sc stop wuauserv` from a Command Prompt.
 - Rename the software distribution folder (for example, C:\Windows\SoftwareDistribution).
