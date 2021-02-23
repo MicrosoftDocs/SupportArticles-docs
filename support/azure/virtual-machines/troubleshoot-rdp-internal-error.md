@@ -12,7 +12,7 @@ ms.service: virtual-machines-windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 10/22/2018
+ms.date: 02/23/2020
 ms.author: genli
 ---
 
@@ -131,7 +131,7 @@ To begin, connect to the [Serial Console and open a PowerShell instance](./seria
 3. Reset the permission for the MachineKeys folder.
 
     ```powershell
-    remove-module psreadline icacls
+    remove-module psreadline 
 
     md c:\temp
 
