@@ -22,13 +22,13 @@ When you experience issues with the WSUS client agents, they can manifest themse
 
 ## Verify that the client is configured correctly
 
-When you troubleshoot issues with a WSUS client agent, the first thing is to make sure the client is properly configured. Make sure that the proper Active Directory Group Policy is being received by the client and that the details of the WSUS server are present. You can do this by running the following command from a Command Prompt:
+When you troubleshoot issues with a WSUS client agent, the first thing is to make sure the client is properly configured. Make sure that the proper Active Directory Group Policy is being received by the client and that the details of the WSUS server are present. You can do this by running the following command from a Command Prompt:
 
 ```console
 GPRESULT /V > GPRESULT.TXT
 ```
 
-Open the text file in Notepad and find the name of your WSUS policy. For example, if your WSUS policy is named **WSUS**, it will be visible in the GPRESULT.TXT file within the **Computer Settings** section under the **Applied Group Policy Objects** heading as shown in the example below:
+Open the text file in Notepad and find the name of your WSUS policy. For example, if your WSUS policy is named **WSUS**, it will be visible in the GPRESULT.TXT file within the **Computer Settings** section under the **Applied Group Policy Objects** heading as shown in the example below:
 
 > Applied Group Policy Objects  
 > \-----------------------------  
@@ -51,7 +51,7 @@ For more information about configuring Group Policy for WSUS clients, see [Confi
 
 Background Intelligent Transfer Service (BITS) is the service used by WSUS to download updates from Microsoft Update to the main WSUS server, as well as from WSUS servers to their clients. Some download issues may be caused by problems with BITS on the server or client computers. When you troubleshoot download problems, you should ensure that BITS is running properly on all affected computers.
 
-The BITS service must run under the **LocalSystem** account by default. To configure the service to run under the correct account, follow these steps:
+The BITS service must run under the **LocalSystem** account by default. To configure the service to run under the correct account, follow these steps:
 
 1. Open a Command Prompt and run the following command:
 
@@ -59,7 +59,7 @@ The BITS service must run under the **LocalSystem** account by default. To conf
     sc config bits obj= LocalSystem
     ```
 
-    A space must occur between **obj=** and **LocalSystem**. If successful, you should receive the following output:
+    A space must occur between **obj=** and **LocalSystem**. If successful, you should receive the following output:
 
     > [SC] ChangeServiceConfig SUCCESS
 
@@ -71,7 +71,7 @@ To view the BITS service status, open a Command Prompt and run the following com
 sc query bits
 ```
 
-If BITS is running, you should see the following output:
+If BITS is running, you should see the following output:
 
 > SERVICE_NAME: bits  
 > TYPE: 20 WIN32_SHARE_PROCESS  
@@ -93,7 +93,7 @@ sc start bits
 > [!NOTE]
 > You must be logged on as a local administrator to stop and restart BITS.
 
-### BITS fails to start
+### BITS fails to start
 
 If the BITS service fails to start, look in the event log for any BITS-related error. You can use the following table to diagnose the cause of these errors.
 
@@ -103,8 +103,8 @@ If the BITS service fails to start, look in the event log for any BITS-related e
 |ERROR_SERVICE_NOT_IN_EXE|0x8007043B|BITS is not listed as one of the services in the netsvcs svchost group|
 |ERROR_SERVICE_DISABLED|0x80070422|BITS has been disabled. Enable the BITS service.|
 |ERROR_SERVICE_DEPENDENCY_DELETED ERROR_SERVICE_DEPENDENCY_FAIL|0x80070433, 0x8007042c|A service appearing in the BITS service dependency list cannot be started. Make sure the dependency list for the BITS service is correct:<br/> **Windows Vista:** RpcSs, EventSystem (also http.sys and LanManWorkstation when peercaching is enabled)<br/> **Windows Server 2003:** Rpcss, EventSystem<br/> **Windows XP:** Rpcss<br/> **Windows 2000:** Rpcss, SENS, Wmi|
-|ERROR_PATH_NOT_FOUND| 0x80070003|Pre-Windows Vista: %ALLUSERSPROFILE%\Microsoft\Network doesn't exist|
-|ERROR_FILE_NOT_FOUND| 0x80070002|The **Parameters** key is missing. Ensure that the following keys and values exist:<br/>`HKLM\SYSTEM\CurrentControlSet\Services\BITS\Parameters\ServiceDll`= `%SystemRoot%\System32\qmgr.dll`<br/><br/>|
+|ERROR_PATH_NOT_FOUND| 0x80070003|Pre-Windows Vista: %ALLUSERSPROFILE%\Microsoft\Network doesn't exist|
+|ERROR_FILE_NOT_FOUND| 0x80070002|The **Parameters** key is missing. Ensure that the following keys and values exist:<br/>`HKLM\SYSTEM\CurrentControlSet\Services\BITS\Parameters\ServiceDll`= `%SystemRoot%\System32\qmgr.dll`<br/><br/>|
 |REGDB_E_CLASSNOTREG, EVENT_E_INTERNALERROR|0x80040154, 0x80040206|BITS for Windows 2000 is dependent on SENS and EventSystem services. If the COM+ catalog is corrupted, BITS may fail with this error code.|
 ||||
 
@@ -114,13 +114,13 @@ If the client is properly configured to receive updates, BITS is configured corr
 
 |Error name|Error code|Description|
 |---|---|---|
-| E_INVALIDARG|0x80070057|An incorrect proxy server name was specified in the user's Internet Explorer proxy settings. This error is also seen when credentials are supplied for authentication schemes that are not NTLM/Negotiate, but the user name or password is null. Change the user's Internet Explorer proxy settings to be a valid proxy server. Or change the credentials not to be NULL user name/password for schemes other than NTLM/Negotiate. |
-| ERROR_WINHTTP_NAME_NOT_RESOLVED| 0x80072ee7|The server/proxy could not be resolved by BITS. Internet Explorer on the same machine in the context of the job owner would see the same problem. Try downloading the same file via the web browser using the context of the job owner.|
-| ERROR_HTTP_INVALID_SERVER_RESPONSE| 0x80072f78|This is a transient error and the job will continue downloading.|
-| BG_E_INSUFFICIENT_RANGE_SUPPORT| 0x80200013|BITS uses range headers in HTTP requests to request parts of a file. If the server or proxy server doesn't understand range requests and returns the full file instead of the requested range, BITS puts the job into the ERROR state with this error. Capture the network traffic during the error and examine if HTTP GET requests with **Range** header are getting valid responses. Check proxy servers to ensure that they are configured correctly to support Range requests. |
-| BG_E_MISSING_FILE_SIZE| 0x80200011|When BITS sends a HEAD request and the server/proxy doesn't return Content-Length header in the response, BITS puts the job in ERROR state with this error. Check the proxy server and WSUS server to ensure that they are configured correctly. Some versions of the Apache 2.0 proxy server are known to exhibit this behavior.|
-| BG_E_HTTP_ERROR_403| 0x80190193|When the server returns HTTP 403 response in any of the requests, BITS puts the job in ERROR state with this error code. HTTP 403 corresponds to **Forbidden: Access is denied**. Check access permissions for the account running the job.|
-| ERROR_NOT_LOGGED_ON| 0x800704dd|The SENS service is not receiving user logon notifications. BITS (version 2.0 and later) depends on logon notifications from Service Control Manager, which in turn depends on the SENS service. Ensure that the SENS service is started and running correctly.|
+| E_INVALIDARG|0x80070057|An incorrect proxy server name was specified in the user's Internet Explorer proxy settings. This error is also seen when credentials are supplied for authentication schemes that are not NTLM/Negotiate, but the user name or password is null. Change the user's Internet Explorer proxy settings to be a valid proxy server. Or change the credentials not to be NULL user name/password for schemes other than NTLM/Negotiate. |
+| ERROR_WINHTTP_NAME_NOT_RESOLVED| 0x80072ee7|The server/proxy could not be resolved by BITS. Internet Explorer on the same machine in the context of the job owner would see the same problem. Try downloading the same file via the web browser using the context of the job owner.|
+| ERROR_HTTP_INVALID_SERVER_RESPONSE| 0x80072f78|This is a transient error and the job will continue downloading.|
+| BG_E_INSUFFICIENT_RANGE_SUPPORT| 0x80200013|BITS uses range headers in HTTP requests to request parts of a file. If the server or proxy server doesn't understand range requests and returns the full file instead of the requested range, BITS puts the job into the ERROR state with this error. Capture the network traffic during the error and examine if HTTP GET requests with **Range** header are getting valid responses. Check proxy servers to ensure that they are configured correctly to support Range requests. |
+| BG_E_MISSING_FILE_SIZE| 0x80200011|When BITS sends a HEAD request and the server/proxy doesn't return Content-Length header in the response, BITS puts the job in ERROR state with this error. Check the proxy server and WSUS server to ensure that they are configured correctly. Some versions of the Apache 2.0 proxy server are known to exhibit this behavior.|
+| BG_E_HTTP_ERROR_403| 0x80190193|When the server returns HTTP 403 response in any of the requests, BITS puts the job in ERROR state with this error code. HTTP 403 corresponds to **Forbidden: Access is denied**. Check access permissions for the account running the job.|
+| ERROR_NOT_LOGGED_ON| 0x800704dd|The SENS service is not receiving user logon notifications. BITS (version 2.0 and later) depends on logon notifications from Service Control Manager, which in turn depends on the SENS service. Ensure that the SENS service is started and running correctly.|
 ||||
 
 ### Repair a corrupted BITS configuration
@@ -183,7 +183,7 @@ If the client agent fails to start and run properly, check the Windows Update Ag
 
 You can also [reset Windows Update components](/windows/deployment/update/windows-update-resources#how-do-i-reset-windows-update-components).
 
-After you run the fix or update the agent, run `wuauclt /detectnow` from a Command Prompt and check windowsupdate.log to make sure there is no issues.
+After you run the fix or update the agent, run `wuauclt /detectnow` from a Command Prompt and check windowsupdate.log to make sure there is no issues.
 
 ## Make sure the WSUS server is reachable from the client
 
@@ -196,19 +196,19 @@ If the WSUS server is unreachable from the client, the most likely causes includ
 
 Use standard troubleshooting procedures to verify name resolution is working on the network. If name resolution is working, the next step is to check for proxy issues. Check windowsupdate.log (C:\windows\) to see if there are any proxy related errors. If yes then you can run the [proxycfg](/previous-versions/windows/desktop/ms761351(v=vs.85)) command to check the WinHTTP proxy settings.
 
-If there are proxy errors, go to Internet Explorer > **Tools** > **Connections** > **LAN Settings**, configure the correct proxy, and then make sure you can access the WSUS URL specified.
+If there are proxy errors, go to Internet Explorer > **Tools** > **Connections** > **LAN Settings**, configure the correct proxy, and then make sure you can access the WSUS URL specified.
 
-Once done, you can copy these user proxy settings to the WinHTTP proxy settings by using the `proxycfg -u` command. After the proxy settings are specified, run `wuauclt /detectnow` from a Command Prompt and check windowsupdate.log for errors.
+Once done, you can copy these user proxy settings to the WinHTTP proxy settings by using the `proxycfg -u` command. After the proxy settings are specified, run `wuauclt /detectnow` from a Command Prompt and check windowsupdate.log for errors.
 
 ## Rebuild the Automatic Update Agent Store
 
-When there are issues downloading updates and there are errors relating to the software distribution store, complete the following steps on the client:
+When there are issues downloading updates and there are errors relating to the software distribution store, complete the following steps on the client:
 
-- Stop the Automatic Updates service by running `sc stop wuauserv` from a Command Prompt.
+- Stop the Automatic Updates service by running `sc stop wuauserv` from a Command Prompt.
 - Rename the software distribution folder (for example, C:\Windows\SoftwareDistribution).
-- Restart the Automatic Update service by running `sc start wuauserv` from a Command Prompt.
-- From a Command Prompt, run `wuauclt /resetauthorization /detectnow`.
-- From a Command Prompt, run `wuauclt /reportnow`.
+- Restart the Automatic Update service by running `sc start wuauserv` from a Command Prompt.
+- From a Command Prompt, run `wuauclt /resetauthorization /detectnow`.
+- From a Command Prompt, run `wuauclt /reportnow`.
 
 ## Check for clients with the same SUSclient ID
 
@@ -216,11 +216,11 @@ You may experience an issue where only one WSUS client appears in the console. O
 
 For those clients that are not working properly due to having the same `SUSclientID`, complete the following steps:
 
-- Stop the Automatic Updates service by running `sc stop wuauserv` from a Command Prompt.
+- Stop the Automatic Updates service by running `sc stop wuauserv` from a Command Prompt.
 - Delete the `SUSclientID` registry key from the following location:
 
     `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\WindowsUpdate`
 
-- Restart the Automatic Update service by running `sc start wuauserv` from a Command Prompt.
-- From a Command Prompt, run `wuauclt /resetauthorization /detectnow`.
-- From a Command Prompt, run `wuauclt /reportnow`.
+- Restart the Automatic Update service by running `sc start wuauserv` from a Command Prompt.
+- From a Command Prompt, run `wuauclt /resetauthorization /detectnow`.
+- From a Command Prompt, run `wuauclt /reportnow`.

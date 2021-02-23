@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 2486643
 
 ## Symptoms
 
-When you execute the Invoke Web Services object in Microsoft System Center Orchestrator or Opalis Integration Server, you receive one or more of the following errors in the **Error Summary Text** published data:
+When you execute the Invoke Web Services object in Microsoft System Center Orchestrator or Opalis Integration Server, you receive one or more of the following errors in the **Error Summary Text** published data:
 
 > Unable to generate a temporary class (result=1).  
 > error CS0029: Cannot implicitly convert type 'Opalis.WebServices.DynamicProxy.CustomType' to 'Opalis.WebServices.DynamicProxy.CustomType[]'  
@@ -21,16 +21,16 @@ When you execute the Invoke Web Services object in Microsoft System Center Orche
 
 ## Cause
 
-A known issue with WSDL.exe can cause a proxy class to be generated incorrectly if an array of complex type includes an element that's also an array of complex type and for which only one element exists.
+A known issue with WSDL.exe can cause a proxy class to be generated incorrectly if an array of complex type includes an element that's also an array of complex type and for which only one element exists.
 
 > [!NOTE]
-> WSDL.exe is included in the Microsoft .NET Framework.
+> WSDL.exe is included in the Microsoft .NET Framework.
 
 ## Workaround
 
 There are three workarounds available:
 
-- You can generate the proxy class manually by using WSDL.exe and then change the proxy class in which the data type was inappropriately created as a two-dimensional array (for example, `CustomType[][]`) so that it's a single-dimensional array (for example, `CustomType[]`).
+- You can generate the proxy class manually by using WSDL.exe and then change the proxy class in which the data type was inappropriately created as a two-dimensional array (for example, `CustomType[][]`) so that it's a single-dimensional array (for example, `CustomType[]`).
 
 - You can change the data type in the desired Web Services Description Language (WSDL) so that a second, optional element is included in the definition. You can do this by adding an element such as the following example:
 

@@ -25,12 +25,12 @@ _Original KB number:_ &nbsp; 4051625
 Consider the following scenario:
 
 - You have external monitors that are connected to a docking station.
-- You have a portable computer that is running Windows 10 version 1703.
+- You have a portable computer that is running Windows 10 version 1703.
 - In **Power Options**, the **Lid close action** setting is configured to "Do nothing."
 - You turn on the computer and then close the lid.
 - You attach the computer to the docking station.
 
-In this scenario, the computer doesn't detect the external monitors. Therefore, the external monitors display a black screen.
+In this scenario, the computer doesn't detect the external monitors. Therefore, the external monitors display a black screen.
 
 ## Workaround
 
@@ -42,4 +42,4 @@ Use either of the following methods to force detection of the external monitors:
 To work around this issue, use one of the following methods:
 
 - Change **Lid close action** to any setting other than "Do nothing.". Before you make this change, make sure that the change does not affect your docking experience.
-- Upgrade to Windows 10 Version 1709 that does not have this issue.
+- Upgrade to Windows 10 Version 1709 that does not have this issue.

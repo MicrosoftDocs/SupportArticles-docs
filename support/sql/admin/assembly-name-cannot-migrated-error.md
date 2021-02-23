@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4465462
 
 ## Summary
 
-In Microsoft SQL Server 2017, you use the built-in database compatibility checker to determine the upgrade compatibility of a Microsoft System Center Configuration Manager database. You also have `CLR Strict Security` enabled. When you run the check, you receive informational messages regarding the following indicated assemblies:
+In Microsoft SQL Server 2017, you use the built-in database compatibility checker to determine the upgrade compatibility of a Microsoft System Center Configuration Manager database. You also have `CLR Strict Security` enabled. When you run the check, you receive informational messages regarding the following indicated assemblies:
 
 > Assembly [DcmObjectModel_SQLCLR] cannot be migrated to SQL Server 2017. For more details, please see: Line 1, Column 1.  
 Assembly [MessageHandlerService] cannot be migrated to SQL Server 2017. For more details, please see: Line 1, Column 1.  

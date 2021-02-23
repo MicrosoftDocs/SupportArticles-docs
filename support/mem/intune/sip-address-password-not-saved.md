@@ -14,13 +14,13 @@ _Original KB number:_ &nbsp; 4499250
 
 ## Symptoms
 
-Microsoft Intune users can sign in successfully to the Skype for Business app on Android Enterprise devices for the initial authentication. However, after the app is closed or the device is restarted, the credentials are lost upon reopening the app. Users are then prompted to re-enter their credentials to reauthenticate. Additionally, they are required to enter the SIP information again.
+Microsoft Intune users can sign in successfully to the Skype for Business app on Android Enterprise devices for the initial authentication. However, after the app is closed or the device is restarted, the credentials are lost upon reopening the app. Users are then prompted to re-enter their credentials to reauthenticate. Additionally, they are required to enter the SIP information again.
 
-This issue occurs even if users select the **Save my Password** option.
+This issue occurs even if users select the **Save my Password** option.
 
 ## Cause
 
-This issue may occur if the **Add and Remove accounts** policy setting is set to **Block**.
+This issue may occur if the **Add and Remove accounts** policy setting is set to **Block**.
 
 ## Resolution
 

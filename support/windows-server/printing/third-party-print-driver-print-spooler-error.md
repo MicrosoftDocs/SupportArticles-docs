@@ -27,20 +27,20 @@ You may experience any of the following symptoms on your Windows-based client co
 - During the install or upgrade of a third-party print driver, you may receive the following error messages:
 
   - Operation failed with error 0x00000057
-  - Printer driver was not installed.  Operation could not be completed (error 0x00000057)
+  - Printer driver was not installed.  Operation could not be completed (error 0x00000057)
   - Operation failed with error 0x000005b3
-  - Operation could not be completed (error 0x00000bc4). No printers were found.
-  - Windows cannot connect to the printer. Operation could not be completed (error 0x00000002)
+  - Operation could not be completed (error 0x00000bc4). No printers were found.
+  - Windows cannot connect to the printer. Operation could not be completed (error 0x00000002)
 
 - When you try to start or stop the Print Spooler service, you may receive the following error message:
 
     > Spooler subsystem app has encountered a problem and needs to close
 
-- When you click **Start**, and then click **Printers and Faxes** in Windows XP, or **Devices and Printers** in Windows Vista or later, you may receive the following error message:
+- When you click **Start**, and then click **Printers and Faxes** in Windows XP, or **Devices and Printers** in Windows Vista or later, you may receive the following error message:
 
     > Spooler subsystem app has encountered an error and needs to close
 
-- When you click **Start**, and then click **Printers and Faxes** in Windows XP, or **Devices and Printers** in Windows Vista or later to try to view your printers, no printers appear.  This issue may occur even if you have printers installed.
+- When you click **Start**, and then click **Printers and Faxes** in Windows XP, or **Devices and Printers** in Windows Vista or later to try to view your printers, no printers appear.  This issue may occur even if you have printers installed.
 
 ## Cause
 

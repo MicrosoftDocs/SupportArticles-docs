@@ -25,7 +25,7 @@ This issue occurs if the default redirect URI for the application registration o
 
 To fix the issue, do the following:
 
-- If you use PowerShell, make sure that the default redirect URI is set.
+- If you use PowerShell, make sure that the default redirect URI is set.
 
   Here is an example:
 

@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article lists the hotfixes that are currently available for Windows 7 clients that are used in an Active Directory environment that makes use of data centralization, including folder redirection, offline files, and file server access.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Original product version:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2820927
 
 ## Summary

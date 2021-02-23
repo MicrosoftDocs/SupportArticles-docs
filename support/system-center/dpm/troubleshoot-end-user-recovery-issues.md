@@ -38,9 +38,9 @@ In this case, check whether shadow copies are enabled on the file server locally
 
 In this case, check whether valid recovery points are available in DPM. If no recovery points are seen in DPM, wait for one to be created or create one manually and check again.
 
-If valid recovery points are available on DPM, first verify that the DPM shares are in order. To do this, use the `net share` command on the DPM server and verify that every folder or share protected by DPM has a corresponding share on DPM pointing to its replica volume.
+If valid recovery points are available on DPM, first verify that the DPM shares are in order. To do this, use the `net share` command on the DPM server and verify that every folder or share protected by DPM has a corresponding share on DPM pointing to its replica volume.
 
-For each protected share, DPM creates a corresponding share on the DPM server as **\\\\\<DPM Server FQDN>\\\<File server FQDN>.\<share_name>**.
+For each protected share, DPM creates a corresponding share on the DPM server as **\\\\\<DPM Server FQDN>\\\<File server FQDN>.\<share_name>**.
 
 If the DPM shares aren't available, check for proper EUR configuration on the DPM server. To do this, open SQL Server Management Studio, expand **Databases**, right-click **DPMDB** and then click **New Query**. Type the following query and click **Execute**:
 
@@ -54,7 +54,7 @@ If only some shares are missing, run a synchronization for the particular data s
 
 ## Check Active Directory for incorrect redirections
 
-Another common issue with the previous versions list is invalid redirections within Active Directory. This is typically caused by protecting a share with one DPM server and then migrating the protection to a new one. When this is done, the entries in Active Directory may not be updated. So the redirections still point to the old DPM server, causing the previous versions list to be empty.
+Another common issue with the previous versions list is invalid redirections within Active Directory. This is typically caused by protecting a share with one DPM server and then migrating the protection to a new one. When this is done, the entries in Active Directory may not be updated. So the redirections still point to the old DPM server, causing the previous versions list to be empty.
 
 To check the redirections in Active Directory, sign in to a domain controller in the domain and run the following command:
 

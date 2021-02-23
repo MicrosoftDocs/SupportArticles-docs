@@ -23,7 +23,7 @@ In this scenario, the Windows 10 device displays a status of **Not compliant**.
 
 ## Cause
 
-The issue occurs when BitLocker encryption isn't finished. Based on factors such as the disk size, number of files, and BitLocker settings, BitLocker encryption may take a long time. After encryption is complete, the device will be shown as **Compliant**.
+The issue occurs when BitLocker encryption isn't finished. Based on factors such as the disk size, number of files, and BitLocker settings, BitLocker encryption may take a long time. After encryption is complete, the device will be shown as **Compliant**.
 
 ## More information
 

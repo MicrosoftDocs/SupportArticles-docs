@@ -1,20 +1,20 @@
 ---
 title: Error 415 adding hosts to SCVMM
-description: Fixes an issue in which you can't add hosts to System Center 2012 Virtual Machine Manager Service Pack 1 and receive error 415.
+description: Fixes an issue in which you can't add hosts to System Center 2012 Virtual Machine Manager Service Pack 1 and receive error 415.
 ms.date: 04/26/2020
 ms.prod-support-area-path: 
 ms.reviewer: dewitth, markstan
 ---
 # Adding a Host to System Center 2012 Virtual Machine Manager SP1 fails with error 415
 
-This article fixes an issue in which you can't add hosts to System Center 2012 Virtual Machine Manager Service Pack 1 and receive error 415.
+This article fixes an issue in which you can't add hosts to System Center 2012 Virtual Machine Manager Service Pack 1 and receive error 415.
 
 _Original product version:_ &nbsp; System Center 2012 Virtual Machine Manager Service Pack 1  
 _Original KB number:_ &nbsp; 2818420
 
 ## Symptoms
 
-Adding hosts to System Center 2012 Virtual Machine Manager Service Pack 1 fails and error 415 may be present in the VMM job history. The verbatim of the error is:
+Adding hosts to System Center 2012 Virtual Machine Manager Service Pack 1 fails and error 415 may be present in the VMM job history. The verbatim of the error is:
 
 > Error ( 415 )
 > Agent installation failed copying C:\Program Files:\Microsoft System Center\Virtual Machine Manager\agents\I386\3.1.6011.0\msiInstaller.exe to \\\servername\ADMIN$\msiInstaller.exe.
@@ -39,15 +39,15 @@ This can occur if the ports normally opened during vmmAgent installation failed 
 
 ### Step 1: Verify that the Admin$ share is present and accessible by the VMM Run As account
 
-Log on to the VMM server using the credentials specified for the **Run As** account used to run the job. This account must be able to connect to \\\\\<servername>\admin$ and copy a file to that share. If this fails, proceed to step 2.
+Log on to the VMM server using the credentials specified for the **Run As** account used to run the job. This account must be able to connect to \\\\\<servername>\admin$ and copy a file to that share. If this fails, proceed to step 2.
 
 ### Step 2: Verify that the Run As account is a local administrator on the target machine
 
-Log on to the target host and examine the local users and groups. Verify that this account is a member of the local administrators group.
+Log on to the target host and examine the local users and groups. Verify that this account is a member of the local administrators group.
 
 ### Step 3: Open the required ports
 
-To open the required ports, open **Advanced Firewall** settings, choose **Inbound Rules** and scroll down to the bottom of the list. Make sure that the five items below are all enabled. In the first image below, only **Windows Remote Management** is enabled.
+To open the required ports, open **Advanced Firewall** settings, choose **Inbound Rules** and scroll down to the bottom of the list. Make sure that the five items below are all enabled. In the first image below, only **Windows Remote Management** is enabled.
 
 ![Windows Remote Management is enabled](./media/adding-host-error-415/wf1.png)
 
@@ -67,6 +67,6 @@ netsh advfirewall firewall set rule group="Windows Remote Management" new enable
 
 ### Step 4: Enable the File Sharing role
 
-If step 1 above did not resolve the issue, enable the **File Server** role. In **Roles and Features**, place a check in **File Server**. Reboot is optional but recommended.
+If step 1 above did not resolve the issue, enable the **File Server** role. In **Roles and Features**, place a check in **File Server**. Reboot is optional but recommended.
 
 ![Enable the File Server role](./media/adding-host-error-415/role.png)

@@ -685,7 +685,7 @@ At this time, CI Agent has been checking with CI State Store for the Enforcement
    > 01-13-2016 17:56:47.667    CIStateStore    2728 (0xaa8)    [ScopeId_GUID/DeploymentType_GUID:6] CIEnforceState changed: Enforcing --> EnforcementSuccess  
    > 01-13-2016 17:56:47.729    CIStateStore    2348 (0x92c)    An existing CI state is changed  
    > 01-13-2016 17:56:47.776    CIStateStore    2728 (0xaa8)    [ScopeId_GUID/RequiredApplication_GUID:10] CIEnforceState changed: Enforcing --> EnforcementSuccess
-2. Once it receives this new enforcement state from CI State Store, CI Agent will mark its jobs complete and transition to reporting the enforcement state. In CIAgent.log:
+2. Once it receives this new enforcement state from CI State Store, CI Agent will mark its jobs complete and transition to reporting the enforcement state. In CIAgent.log:
 
    > 01-13-2016 17:56:47.823    CIAgent    2348 (0x92c)    JobTaskHelper - Initiating next task if needed  
    > 01-13-2016 17:56:47.823    CIAgent    2348 (0x92c)    Job({ID}): Already Completed : Task(ScopeId_GUID/DeploymentType_GUID.6.Enforce)  

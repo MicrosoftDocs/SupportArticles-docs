@@ -12,6 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika, dbansal
 ms.prod-support-area-path: TCP/IP communications
 ms.technology: networking
+adobe-target: true
 ---
 # Guidance for configuring IPv6 in Windows for advanced users
 

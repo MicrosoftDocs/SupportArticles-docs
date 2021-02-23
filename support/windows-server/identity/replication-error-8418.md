@@ -350,7 +350,7 @@ The metadata for the same object above as displayed in LDP.exe shows the Attribu
 
 The attribute ID can be used to help identify the problem attribute but requires the engagement of Microsoft Support.
 
-·         Version comparison - attributes to be replicated will have higher version numbers on the source.
+Version comparison - attributes to be replicated will have higher version numbers on the source.
 
 > [!NOTE]
 > In the DCpromo scenario, the destination object will most likely not yet exist.

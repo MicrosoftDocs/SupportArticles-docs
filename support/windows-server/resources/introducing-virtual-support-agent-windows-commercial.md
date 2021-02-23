@@ -34,7 +34,7 @@ The Virtual Support Agent for Windows Commercial is currently available on the S
 - Choose the relevant product, such as Windows Server 2012 R2 or a later version of Windows Server.
 - Select a category from the list.
 - Select a problem from the list.
-- If the Virtual Support Agent has a technical solution to the selected problem category, it opens at the bottom-right corner of the screen as an option.
+- If the Virtual Support Agent has a technical solution to the selected problem category, it opens at the bottom-right corner of the screen as an option.
 
 ## References
 

@@ -99,7 +99,7 @@ For more information about Windows AIK, see [Windows Automated Installation Kit 
 >
 > - You must use the `/generalize` switch with sysprep.exe so that the Copy Profile parameter can be used. The `/unattend` option is used to point to the desired Unattend.xml file. Therefore, in this example, the Unattend.xml file is located in the `c:\answerfile` folder.
 > - The built-in administrator account profile is deleted when you perform a clean Windows installation or when you run the Sysprep tool. The CopyProfile setting is processed before the built-in administrator account is deleted. Therefore, any customizations that you make will appear in the new user account profile. This includes the built-in administrator account profile settings.
-> - If there are multiple user profiles, Windows sysprep may select an unexpected profile to copy to the default user profile. For more information, see [All customizations to default user profile lost](https://support.microsoft.com/help/2101557).
+> - If there are multiple user profiles, Windows sysprep may select an unexpected profile to copy to the default user profile.
 > - Not all customizations will propagate to new profiles. Some settings are reset by the new user logon process. To configure those settings, use Group Policy settings or scripting.
 
 ## What to consider if you use automated image build and deployment systems

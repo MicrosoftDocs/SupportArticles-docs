@@ -13,14 +13,14 @@ _Original KB number:_ &nbsp; 4051995
 
 ## Symptom
 
-After you add a tape to the tape library, **Unrecognized** is displayed as the tape label in System Center Data Protection Manager. Therefore, you can't recover data from the tape.
+After you add a tape to the tape library, **Unrecognized** is displayed as the tape label in System Center Data Protection Manager. Therefore, you can't recover data from the tape.
 
 ## Cause
 
 The issue may occur for any of the following reasons:
 
 - The tape contains content that was not created by DPM.
-- The tape is associated with a protection group whose name contains special characters, such as `|`, `/`, `(`, `)` and `.`.
+- The tape is associated with a protection group whose name contains special characters, such as `|`, `/`, `(`, `)` and `.`.
 - The tape is damaged.
 
 ## Resolution

@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4487249
 
 ## Symptoms
 
-When you select a Web App that's deployed to an Apple iOS device, you receive the following error message:
+When you select a Web App that's deployed to an Apple iOS device, you receive the following error message:
 
 > Safari cannot open the page because the address is invalid
 
