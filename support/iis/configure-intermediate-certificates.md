@@ -1,5 +1,5 @@
 ---
-title: Configure intermediate certificates in IIS
+title: Configure intermediate certificates in Internet Information Services
 description: Describes how to configure intermediate certificates on a computer that is running Internet Information Services (IIS) for server authentication.
 ms.date: 03/27/2020
 ms.prod-support-area-path: WWW authentication and authorization
@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 954755
 
 ## Summary
 
-When a client computer tries to establish server-authenticated Secure Sockets Layer (SSL) connections with an IIS Web server, the server certificate chain is validated on the client computer. For this certificate validation to complete successfully, the intermediate certificates in the server certificate chain must be configured correctly on the server. If these certificates are configured incorrectly, the server authentication may fail. It also applies to any program that uses SSL/ Transport Layer Security (TLS) for authentication.
+When a client computer tries to establish server-authenticated Secure Sockets Layer (SSL) connections with an IIS Web server, the server certificate chain is validated on the client computer. To complete this certificate validation successfully, the intermediate certificates in the server certificate chain must be configured correctly on the server. If these certificates are configured incorrectly, the server authentication may fail. It also applies to any program that uses SSL/Transport Layer Security (TLS) for authentication.
 
 ## Impact
 
