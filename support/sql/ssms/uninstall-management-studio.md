@@ -69,3 +69,4 @@ To uninstall SQL Server from Windows Server 2008, Windows Server 2012 and Window
 ## References
 
 [Download SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms)
+[Shared components that remain installed after you uninstall SSMS](sql/ssms/download-sql-server-management-studio-ssms)
