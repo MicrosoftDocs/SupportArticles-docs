@@ -1,6 +1,6 @@
 ---
 title: How to remove orphaned domains from Active Directory
-description: Describes how to remove domain meta-data from Active Directory if this procedure isn't used or if all domain controllers are taken offline but not demoted first.
+description: Describes how to remove domain meta-data from Active Directory if domain controllers aren't demoted.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp;230306
 
 ## Summary
 
-Typically, when the last domain controller for a domain is demoted, the administrator selects the **This server is the last domain controller in the domain** option in the DCPromo tool. This operation removes the domain meta-data from Active Directory. This article describes how to remove domain meta-data from Active Directory if this procedure isn't used or if all domain controllers are taken offline but not demoted first.
+Typically, when the last domain controller for a domain is demoted, the administrator selects the **This server is the last domain controller in the domain** option in the DCPromo tool. This procedure removes the domain meta-data from Active Directory. This article describes how to remove domain meta-data from Active Directory if this procedure isn't used or if all domain controllers are taken offline but not demoted first.
 
 > [!CAUTION]
 > The administrator must verify that replication has occurred since the demotion of the last domain controller before manually removing the domain meta-data. Using the NTDSUTIL tool improperly can result in partial or complete loss of Active Directory functionality.
@@ -41,8 +41,8 @@ Typically, when the last domain controller for a domain is demoted, the administ
 3. Click **Start**, point to **Programs** > **Accessories**, and then click **Command Prompt**.
 4. At the command prompt, type: *ntdsutil*.
 5. Type: *metadata cleanup*, and then press Enter.
-6. Type: *connections*, and then press Enter. This menu is used to connect to the specific server on which the changes will occur. If the currently logged-on user isn't a member of the Enterprise Admins group, alternate credentials can be supplied by specifying the credentials to use before making the connection. To do so, type: set creds domainname username password, and then press Enter. For a null password, type: null for the password parameter.
-7. Type: *connect to server **\<servername>***, where **\<servername>** is the name of the domain controller holding the Domain Naming Master FSMO Role, and then press Enter. You should receive confirmation that the connection is successfully established. If an error occurs, verify that the domain controller used in the connection is available and that the credentials you supplied have administrative permissions on the server.
+6. Type: *connections*, and then press Enter. This menu is used to connect to the specific server on which the changes will occur. If the currently logged-on user isn't a member of the Enterprise Admins group, alternate credentials can be supplied by specifying the credentials to use before making the connection. To do so, type: *set `creds` \<domainname> \<username> password*, and then press Enter. For a null password, type: *null for the password parameter*.
+7. Type: *connect to server **\<servername>***, where **\<servername>** is the name of the domain controller that holds the Domain Naming Master FSMO Role. Then press Enter. You should receive confirmation that the connection is successfully established. If an error occurs, verify that the domain controller used in the connection is available. And verify that the credentials you supplied have administrative permissions on the server.
 8. Type: *quit*, and then press Enter. The **Metadata Cleanup** menu is displayed.
 9. Type: *select operation target*, and then press Enter.
 10. Type: *list domains*, and then press Enter. A list of domains in the forest is displayed, each with an associated number.
