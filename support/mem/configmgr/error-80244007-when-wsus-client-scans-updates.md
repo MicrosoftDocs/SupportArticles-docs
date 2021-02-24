@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4096317
 
 ## Symptom
 
-You use WSUS to deploy software updates to computers that are in your organization. When a WSUS client computer scans for updates on the WSUS server, the following error message is logged in the WindowsUpdate.log file on the client computer:
+You use WSUS to deploy software updates to computers in your organization. When a WSUS client computer scans for updates on the WSUS server, you see the following error message in the WindowsUpdate.log file on the client computer:
 
 > WS error: \<detail>\<ErrorCode>InvalidParameters\</ErrorCode>\<Message>parameters.InstalledNonLeafUpdateIDs\</Message>\<ID>GUID\</ID>\<Method>`http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService/SyncUpdates`"\</Method>\</detail>"
 >

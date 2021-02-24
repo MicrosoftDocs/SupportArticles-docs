@@ -1,14 +1,14 @@
 ---
 title: Configure intermediate certificates in IIS
-description: This article describes how to configure intermediate certificates on a computer that is running Internet Information Services (IIS) for server authentication.
+description: Describes how to configure intermediate certificates on a computer that is running Internet Information Services (IIS) for server authentication.
 ms.date: 03/27/2020
 ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: Mlaing, lprete
 ms.topic: how-to
 ---
-# Configure intermediate certificates on a computer that is running IIS for server authentication
+# Configure intermediate certificates on a computer that's running IIS for server authentication
 
-This article describes how to configure intermediate certificates on a computer that is running Internet Information Services (IIS) for server authentication.
+This article describes how to configure intermediate certificates on a computer that's running Internet Information Services (IIS) for server authentication.
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 954755
@@ -19,7 +19,7 @@ When a client computer tries to establish server-authenticated Secure Sockets La
 
 ## Impact
 
-Client computers can't connect to the server that is running IIS. This situation occurs because the client computers can't authenticate the servers that don't have intermediate certificates that are configured correctly.
+Client computers can't connect to the server that's running IIS. It occurs because the client computers can't authenticate the servers that don't have the intermediate certificates configured correctly.
 
 We recommend you correctly configure the intermediate certificates on the server.
 
@@ -27,7 +27,7 @@ We recommend you correctly configure the intermediate certificates on the server
 
 X.509 certificate validation consists of several phases. These phases include certificate path discovery and path validation.
 
-As part of certificate path discovery, the intermediate certificates must be located to build the certificate path up to a trusted root certificate. An intermediate certificate is a certificate that is useful in determining if a certificate was ultimately issued by a valid root certification authority (CA). These certificates can be obtained from the cache or from the certificate store on the client computer. Servers can also provide the information to the client computer.
+As part of certificate path discovery, the intermediate certificates must be located to build the certificate path up to a trusted root certificate. An intermediate certificate is a certificate that's useful in determining if a certificate was ultimately issued by a valid root certification authority (CA). These certificates can be obtained from the cache or from the certificate store on the client computer. Servers can also provide the information to the client computer.
 
 In the SSL negotiation, the server certificate is validated on the client. In this case, the server provides the certificates to the client computer together with the intermediate issuing certificates that the client computer can use to build the certificate path. The complete certificate chain, except for the root certificate, is sent to the client computer.
 
@@ -41,14 +41,14 @@ If a server operator installs an SSL certificate together with the relevant issu
     1. At a command prompt, type *Mmc.exe*.
     2. If you aren't running the program as the built-in Administrator, you'll be prompted for permission to run the program. In the **Windows Security** dialog box, click **Allow**.
     3. On the **File** menu, select **Add/Remove Snap-in**.
-    4. In the **Add or Remove Snap-ins** dialog box, select the **Certificates** snap-in in the **Available snap-ins** list, select **Add**, and then select **OK**.
+    4. In the **Add or Remove Snap-ins** dialog box, select the **Certificates** snap-in in the **Available snap-ins** list. Then select **Add** > **OK**.
     5. In the **Certificates snap-in** dialog box, select **Computer account**, and then select **Next**.
     6. In the **Select computer** dialog box, select **Finish**.
     7. In the **Add or Remove Snap-ins** dialog box, select **OK**.
 2. To add an intermediate certificate, follow these steps:
     1. In the Certificates MMC snap-in, expand **Certificates**, right-click **Intermediate Certification Authorities**, point to **All Tasks**, and then select **Import**.
     2. In the **Certificate Import Wizard**, select **Next**.
-    3. In the **File to Import** page, type the file name of the certificate that you want to import in the **File name** box, and then select **Next**.
+    3. In the **File to Import** page, type the file name of the certificate that you want to import in the **File name** box. Then select **Next**.
     4. Select **Next**, and then complete the **Certificate Import Wizard**.
 
 ## References

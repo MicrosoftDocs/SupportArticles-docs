@@ -22,21 +22,21 @@ _Original KB number:_ &nbsp;299656
 
 ## Summary
 
-Instead of storing your user account password in clear-text, Windows generates and stores user account passwords by using two different password representations, generally known as "hashes." When you set or change the password for a user account to a password that contains fewer than 15 characters, Windows generates both a LAN Manager hash (LM hash) and a Windows NT hash (NT hash) of the password. These hashes are stored in the local Security Accounts Manager (SAM) database or in Active Directory.
+Instead of storing your user account password in clear-text, Windows generates and stores user account passwords by using two different password representations, known as "hashes." When you set or change the password for a user account to a password that contains fewer than 15 characters, Windows generates both a LAN Manager hash (LM hash) and a Windows NT hash (NT hash) of the password. These hashes are stored in the local Security Accounts Manager (SAM) database or in Active Directory.
 
-The LM hash is relatively weak compared to the NT hash, and it's therefore prone to fast brute force attack. Therefore, you may want to prevent Windows from storing an LM hash of your password. This article describes how to do this so that Windows only stores the stronger NT hash of your password.
+The LM hash is relatively weak compared to the NT hash, and it's prone to fast brute force attack. So you may want to prevent Windows from storing an LM hash of your password. This article describes how to do this so that Windows only stores the stronger NT hash of your password.
 
 ## More information
 
-Windows 2000-based servers and Windows Server 2003-based servers can authenticate users who connect from computers that are running all earlier versions of Windows. However, versions of Windows earlier than Windows 2000 don't use Kerberos for authentication. For backward compatibility, Windows 2000 and Windows Server 2003 support LAN Manager (LM) authentication, Windows NT (NTLM) authentication, and NTLM version 2 (NTLMv2) authentication. The NTLM, NTLMv2, and Kerberos all use the NT hash, also known as the Unicode hash. The LM authentication protocol uses the LM hash.
+Windows 2000-based and Windows Server 2003-based servers can authenticate users. The users connect from computers that are running all earlier versions of Windows. However, versions of Windows earlier than Windows 2000 don't use Kerberos for authentication. For backward compatibility, Windows 2000 and Windows Server 2003 support LAN Manager (LM) authentication, Windows NT (NTLM) authentication, and NTLM version 2 (NTLMv2) authentication. The NTLM, NTLMv2, and Kerberos all use the NT hash, also known as the Unicode hash. The LM authentication protocol uses the LM hash.
 
 It's best to prevent storage of the LM hash if you don't need it for backward compatibility. If your network contains Windows 95, Windows 98, or Macintosh clients, you may experience the following problems if you prevent the storage of LM hashes for your domain:
 
-- Users without an LM hash won't be able to connect to a Windows 95-based computer or a Windows 98-based computer that's acting as a server unless the Directory Services Client for Windows 95 and Windows 98 is installed on the server.
-- Users on Windows 95-based computers or Windows 98-based computers won't be able to authenticate to servers by using their domain account unless they have the Directory Services Client installed on their computers.
-- Users on Windows 95-based computers or Windows 98-based computers won't be able to authenticate by using a local account on a server if the server has disabled LM hashes unless they have the Directory Services Client installed on their computers.
-- Users may not be able to change their domain passwords from a Windows 95-based computer or a Windows 98-based computer, or they may experience account lockout issues when they try to change their passwords from these earlier clients.
-- Users of Macintosh Outlook 2001 clients may not be able to access their mailboxes on Microsoft Exchange servers. Users may see the following error in Outlook:
+- Users without an LM hash can't connect to a Windows 95-based or Windows 98-based computer that's acting as a server unless the Directory Services Client for Windows 95 and Windows 98 is installed on the server.
+- Users on Windows 95-based or Windows 98-based computers can't authenticate to servers by using their domain account unless they have the Directory Services Client installed on their computers.
+- Users on Windows 95-based or Windows 98-based computers can't authenticate by using a local account on a server if the server has disabled LM hashes unless they have the Directory Services Client installed on their computers.
+- Users can't change their domain passwords from a Windows 95-based or Windows 98-based computer, or they may experience account lockout issues when they try to change their passwords from these earlier clients.
+- Users of Macintosh Outlook 2001 clients can't access their mailboxes on Microsoft Exchange servers. Users may see the following error in Outlook:
     > The logon credentials supplied were incorrect. Make sure your username and domain are correct, then type your password again.
 
 To prevent Windows from storing an LM hash of your password, use any of the following methods.
