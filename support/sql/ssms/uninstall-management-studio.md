@@ -1,10 +1,10 @@
 ---
 title: Uninstall SQL Server Management Studio
 description: This article describes how to uninstall the Microsoft SQL Server Management Studio that is included with SQL Server 2014 and earlier versions of the product.
-ms.date: 02/23/2021
-ms.prod-support-area-path: Management Studio
-ms.topic: how-to
 ms.prod: sql
+ms.prod-support-area-path: ssms
+ms.topic: how-to
+ms.date: 02/23/2021
 ---
 
 # Uninstall SQL Server Management Studio
@@ -42,7 +42,7 @@ To uninstall SQL Server Management Studio from Windows 10, Windows Server 2016, 
 
 1. On the **Select Features** page, specify the features to remove select Management Tools – Basic from the specified instance of SQL Server.
 
-1. On the **Ready to Remove** page, review the list of components and features that will be uninstalled. Click **Remove** to begin uninstalling.
+1. On the **Ready to Remove** page, review the list of components and features that will be uninstalled. Select **Remove** to begin uninstalling.
 
 ## Windows 2008 - 2012 R2
 
@@ -58,11 +58,11 @@ To uninstall SQL Server from Windows Server 2008, Windows Server 2012 and Window
 
    ![Remove product image](./media/uninstall-management-studio/remove-product.png)
 
-1. On the **Select Instance** page, use the drop-down box to specify an instance of [!INCLUDEssNoVersion] to remove, or specify the option to remove only the [!INCLUDEssNoVersion] shared features and management tools. To continue, select **Next**.
+1. On the **Select Instance** page, use the drop-down box to specify an instance of SQL Server to remove, or specify the option to remove only the SQL Server shared features and management tools. To continue, select **Next**.
 
-1. On the **Select Features** page, specify the features to remove from the specified instance of [!INCLUDEssNoVersion].
+1. On the **Select Features** page, specify the features to remove from the specified instance of SQL Server.
 
-1. On the **Ready to Remove** page, review the list of components and features that will be uninstalled. Click **Remove** to begin uninstalling.
+1. On the **Ready to Remove** page, review the list of components and features that will be uninstalled. Select **Remove** to begin uninstalling.
 
 1. Refresh the **Programs and Features** window to verify the SQL Server instance has been removed successfully, and determine which, if any, SQL Server components still exist. Remove these components from this window as well, if you choose.
 
