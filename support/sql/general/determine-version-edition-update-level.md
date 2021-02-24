@@ -406,7 +406,7 @@ For more information, go to the following websites:
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
-|14.0.3381.3|None| CU23| [5000685](https://support.microsoft.com/help/5000685)|February 25, 2021|
+|14.0.3381.3|None| CU23| [5000685](https://support.microsoft.com/help/5000685)|February 24, 2021|
 |14.0.3370.1|None| CU22 + GDR| [4583457](https://support.microsoft.com/help/4583457)|January 12, 2021|
 |14.0.3356.20|None| CU22| [4577467](https://support.microsoft.com/help/4577467)|September 10, 2020|
 |14.0.3335.7|None| CU21| [4557397](https://support.microsoft.com/help/4557397)|July 01, 2020|
@@ -444,7 +444,7 @@ For more information, go to the following websites:
 |13.0.5850.14|SP2|CU15| [4577775](https://support.microsoft.com/help/4577775)|September 28, 2020|
 |13.0.5830.85|SP2|CU14| [4564903](https://support.microsoft.com/help/4564903)|August 06, 2020|
 |13.0.5820.21|SP2|CU13| [4549825](https://support.microsoft.com/help/4549825)|May 28, 2020|
-|13.0.5698.0|SP2|CU12| [4536648](https://support.microsoft.com/help/4536648)|February 25, 2020|
+|13.0.5698.0|SP2|CU12| [4536648](https://support.microsoft.com/help/4536648)|February 24, 2020|
 |13.0.5598.27|SP2|CU11| [4527378](https://support.microsoft.com/help/4527378)|December 09, 2019|
 |13.0.5492.2| SP2|CU10| [4524334](https://support.microsoft.com/help/4524334)|October 08, 2019|
 | 13.0.5426.0|SP2|CU8| [4505830](https://support.microsoft.com/help/4505830)|July 31, 2019|
