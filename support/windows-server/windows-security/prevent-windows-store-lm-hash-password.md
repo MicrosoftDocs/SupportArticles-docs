@@ -1,6 +1,6 @@
 ---
 title: Prevent Windows from storing an LM hash of the password in AD and local SAM databases
-description: Provides three methods to prevent Windows from storing a LAN manager hash of your password in Active Directory and local SAM databases.
+description: Provides three methods to prevent Windows from storing a LAN manager hash of your password.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,22 +15,22 @@ ms.technology: windows-server-security
 ---
 # How to prevent Windows from storing a LAN manager hash of your password in Active Directory and local SAM databases
 
-This article provides three methods to prevent Windows from storing an LM hash of your password in Active Directory and local SAM databases.
+This article provides three methods to prevent Windows from storing a LAN Manager (LM) hash of your password in Active Directory and local Security Accounts Manager (SAM) databases.
 
 _Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp;299656
 
 ## Summary
 
-Instead of storing your user account password in clear-text, Windows generates and stores user account passwords by using two different password representations, known as "hashes." When you set or change the password for a user account to a password that contains fewer than 15 characters, Windows generates both a LAN Manager hash (LM hash) and a Windows NT hash (NT hash) of the password. These hashes are stored in the local Security Accounts Manager (SAM) database or in Active Directory.
+Windows doesn't store your user account password in clear-text. Instead, it generates and stores user account passwords by using two different password representations, known as "hashes." When you set or change the password for a user account to a password that contains fewer than 15 characters, Windows generates both an LM hash and a Windows NT hash (NT hash) of the password. These hashes are stored in the local SAM database or in Active Directory.
 
-The LM hash is relatively weak compared to the NT hash, and it's prone to fast brute force attack. So you may want to prevent Windows from storing an LM hash of your password. This article describes how to do this so that Windows only stores the stronger NT hash of your password.
+The LM hash is relatively weak compared to the NT hash, and it's prone to fast brute force attack. So you may want to prevent Windows from storing an LM hash of your password. This article describes how to make Windows only store the stronger NT hash of your password.
 
 ## More information
 
 Windows 2000-based and Windows Server 2003-based servers can authenticate users. The users connect from computers that are running all earlier versions of Windows. However, versions of Windows earlier than Windows 2000 don't use Kerberos for authentication. For backward compatibility, Windows 2000 and Windows Server 2003 support LAN Manager (LM) authentication, Windows NT (NTLM) authentication, and NTLM version 2 (NTLMv2) authentication. The NTLM, NTLMv2, and Kerberos all use the NT hash, also known as the Unicode hash. The LM authentication protocol uses the LM hash.
 
-It's best to prevent storage of the LM hash if you don't need it for backward compatibility. If your network contains Windows 95, Windows 98, or Macintosh clients, you may experience the following problems if you prevent the storage of LM hashes for your domain:
+It's best to prevent storage of the LM hash if you don't need it for backward compatibility. If your network contains Windows 95, Windows 98, or Macintosh clients, you may experience the following problems when you prevent the storage of LM hashes for your domain:
 
 - Users without an LM hash can't connect to a Windows 95-based or Windows 98-based computer that's acting as a server unless the Directory Services Client for Windows 95 and Windows 98 is installed on the server.
 - Users on Windows 95-based or Windows 98-based computers can't authenticate to servers by using their domain account unless they have the Directory Services Client installed on their computers.
