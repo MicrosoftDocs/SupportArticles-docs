@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot deployment of SCEP certificate profiles to devices with Microsoft Intune | Microsoft Docs
+title: Troubleshoot deployment of SCEP certificate profiles to devices with Microsoft Intune
 description: Troubleshoot sending a SCEP certificate profile to a device with Intune.
 ms.date: 01/30/2020
 ms.reviewer: lacranda

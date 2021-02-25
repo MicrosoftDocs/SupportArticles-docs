@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot use of SCEP certificate profiles to provision certificates with Microsoft Intune | Microsoft Docs
+title: Troubleshoot use of SCEP certificate profiles to provision certificates with Microsoft Intune
 description: Troubleshoot the use of SCEP by devices to request certificates for use with Intune, including communication from devices to NDES, NDES to certification authorities, and from the Intune Certificate Connector to the Intune service.  
 ms.date: 01/30/2020
 ms.reviewer: lacranda

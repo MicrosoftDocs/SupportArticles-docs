@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot device actions in Microsoft Intune - Azure | Microsoft Docs
+title: Troubleshoot device actions in Microsoft Intune
 description: Get help troubleshooting device action issues.
 ms.date: 08/02/2019
 ms.reviewer: coferro
@@ -40,7 +40,7 @@ No. And you don't need to enter the dashes.
 
 ### How do I tell who started a Retire/Wipe?
 
-In the the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs** > check the **Initiated By** column.
+In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs**, check the **Initiated By** column.
 If you don't see an entry, the most likely person to have initiated the action is the user of the device. They probably used the Company Portal app or portal.manage.microsoft.com.
 
 ### Why wasn't my application uninstalled after using Retire?
@@ -52,7 +52,7 @@ Because it wasn't considered a managed application. In this context, a managed a
 
 ### Why is Wipe grayed out for Android Enterprise Work Profile devices?
 
-This is expected behavior. Google doesn't allow Factory Resetting of Work Profile devices from the MDM Provider.
+This behavior is expected. Google doesn't allow Factory Resetting of personally-owned Work Profile devices from the MDM Provider.
 
 ### Why can I sign back into my Office apps after my device was retired?
 
@@ -60,7 +60,7 @@ Because retiring a device doesn't revoke access tokens. You can use Conditional 
 
 ### How can I monitor a Retire/Wipe action after it was issued?
 
-In the the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs**.
+In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs**.
 
 ### Why do wipes sometimes show as Pending indefinitely?
 
@@ -76,12 +76,12 @@ The device will remain in **Retire/Wipe Pending** state until the MDM certificat
 
 To combat Ransom ware, Google removed the  passcode reset feature on the Device Admin API (applies to Android version 7.0 or higher devices).
 
-### Why do I get a "Not Supported" message when I issue a passcode reset to my Android 8.0 or later Work Profile enrolled device?
+### Why do I get a "Not Supported" message when I issue a passcode reset to my Android 8.0 or later personally-owned work profile enrolled device?
 
 Because the Reset Token hasn't been activated on the device. To activate the Reset Token:
 
-1. You must require a Work Profile passcode in your Configuration Policy.
-2. The end user must set an appropriate Work Profile passcode.
+1. You must require a personally-owned work profile passcode in your Configuration Policy.
+2. The end user must set an appropriate personally-owned work profile passcode.
 3. The end user must accept the secondary prompt to allow passcode reset.
 After these steps are complete, you should no longer receive this response.
 
@@ -93,13 +93,13 @@ Because one of your compliance policies requires a passcode.
 
 ### I can't restart a Windows 10 device after using the wipe action
 
-This can be caused if you use the choose the **Wipe device, and continue to wipe even if devices loses power. If you select this option, please be aware that it might prevent some Windows 10 devices from starting up again.** on a Windows 10 device.
+This issue can be caused if you choose the **Wipe device, and continue to wipe even if devices lose power. If you select this option, please be aware that it might prevent some Windows 10 devices from starting up again.** on a Windows 10 device.
 
-This may be caused when the installation of Windows has major corruption that is preventing the operating system from reinstalling. In such a case, the process fails and leaves the system in the [Windows Recovery Environment](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
+This issue may be caused when the installation of Windows has major corruption that is preventing the operating system from reinstalling. In such a case, the process fails and leaves the system in the [Windows Recovery Environment](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
 
 ### I can't restart a BitLocker encrypted device after using the wipe action
 
-This can be caused if you use the choose the **Wipe device, and continue to wipe even if devices loses power. If you select this option, please be aware that it might prevent some Windows 10 devices from starting up again.** option on a BitLocker encrypted device.
+This can be caused if you choose the **Wipe device, and continue to wipe even if devices lose power. If you select this option, please be aware that it might prevent some Windows 10 devices from starting up again.** option on a BitLocker encrypted device.
 
 To resolve this issue, use bootable media to re-install Windows 10 on the device.
 
