@@ -30,12 +30,12 @@ The LM hash is relatively weak compared to the NT hash, and it's prone to fast b
 
 Windows 2000-based and Windows Server 2003-based servers can authenticate users. The users connect from computers that are running all earlier versions of Windows. However, versions of Windows earlier than Windows 2000 don't use Kerberos for authentication. For backward compatibility, Windows 2000 and Windows Server 2003 support LAN Manager (LM) authentication, Windows NT (NTLM) authentication, and NTLM version 2 (NTLMv2) authentication. The NTLM, NTLMv2, and Kerberos all use the NT hash, also known as the Unicode hash. The LM authentication protocol uses the LM hash.
 
-It's best to prevent storage of the LM hash if you don't need it for backward compatibility. If your network contains Windows 95, Windows 98, or Macintosh clients, you may experience the following problems when you prevent the storage of LM hashes for your domain:
+It's best to prevent the storage of the LM hash if you don't need it for backward compatibility. If your network contains Windows 95, Windows 98, or Macintosh clients, you may experience the following problems when you prevent the storage of LM hashes for your domain:
 
-- Users without an LM hash can't connect to a Windows 95-based or Windows 98-based computer that's acting as a server unless the Directory Services Client for Windows 95 and Windows 98 is installed on the server.
-- Users on Windows 95-based or Windows 98-based computers can't authenticate to servers by using their domain account unless they have the Directory Services Client installed on their computers.
-- Users on Windows 95-based or Windows 98-based computers can't authenticate by using a local account on a server if the server has disabled LM hashes unless they have the Directory Services Client installed on their computers.
-- Users can't change their domain passwords from a Windows 95-based or Windows 98-based computer, or they may experience account lockout issues when they try to change their passwords from these earlier clients.
+- Users without an LM hash can't connect to a Windows 95-based or Windows 98-based computer that's acting as a server. This issue doesn't occur if the Directory Services Client for Windows 95 and Windows 98 is installed on the server.
+- Users on Windows 95-based or Windows 98-based computers can't authenticate to servers by using their domain account. This issue doesn't occur if the users have the Directory Services Client installed on their computers.
+- Users on Windows 95-based or Windows 98-based computers can't authenticate by using a local account on a server that has disabled LM hashes. This issue doesn't occur if the users have the Directory Services Client installed on their computers.
+- Users can't change their domain passwords from a Windows 95-based or Windows 98-based computer. Or, users may experience account lockout issues when they try to change their passwords from these earlier clients.
 - Users of Macintosh Outlook 2001 clients can't access their mailboxes on Microsoft Exchange servers. Users may see the following error in Outlook:
     > The logon credentials supplied were incorrect. Make sure your username and domain are correct, then type your password again.
 
@@ -43,7 +43,7 @@ To prevent Windows from storing an LM hash of your password, use any of the foll
 
 ### Method 1: Implement the NoLMHash policy by using group policy
 
-To disable the storage of LM hashes of a user's passwords in the local computer's SAM database by using Local Group Policy (Windows XP or Windows Server 2003) or in a Windows Server 2003 Active Directory environment by using Group Policy in Active Directory (Windows Server 2003), follow these steps:
+To disable the storage of LM hashes of a user's passwords, you can use Local Group Policy in the local computer's SAM database for Windows XP or Windows Server 2003. Or, use Group Policy in a Windows Server 2003 Active Directory environment. Follow these steps:
 
 1. In Group Policy, expand **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Policies**, and then click **Security Options**.
 2. In the list of available policies, double-click **Network security: Do not store LAN Manager hash value on next password change**.
@@ -107,4 +107,4 @@ To add this DWORD value by using Registry Editor, follow these steps:
 
 ### Method 3: Use a password that's at least 15 characters long
 
-The simplest way to prevent Windows from storing an LM hash of your password is to use a password that is at least 15 characters long. In this case, Windows stores an LM hash value that can't be used to authenticate the user.
+The simplest way to prevent Windows from storing an LM hash of your password is to use a password that's at least 15 characters long. In this case, Windows stores an LM hash value that can't be used to authenticate the user.
