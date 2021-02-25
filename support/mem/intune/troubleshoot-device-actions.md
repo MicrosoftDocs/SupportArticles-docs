@@ -52,11 +52,11 @@ It wasn't considered a managed application. In this context, a managed applicati
 
 ### Why is Wipe grayed out for Android Enterprise Work Profile devices?
 
-This behavior is expected. Google doesn't allow Factory Resetting of personally-owned Work Profile devices from the MDM Provider.
+This behavior is expected. Google doesn't allow Factory Resetting of personally owned Work Profile devices from the MDM Provider.
 
 ### Why can I sign back into my Office apps after my device was retired?
 
-Because retiring a device doesn't revoke access tokens. You can use Conditional Access policies to mitigate this condition.
+Retiring a device doesn't revoke access tokens. You can use Conditional Access policies to mitigate this condition.
 
 ### How can I monitor a Retire/Wipe action after it was issued?
 
@@ -76,12 +76,12 @@ The device will remain in **Retire/Wipe Pending** state until the MDM certificat
 
 To combat Ransom ware, Google removed the  passcode reset feature on the Device Admin API (applies to Android version 7.0 or higher devices).
 
-### Why do I get a "Not Supported" message when I issue a passcode reset to my Android 8.0 or later personally-owned work profile enrolled device?
+### Why do I get a "Not Supported" message when I issue a passcode reset to my Android 8.0 or later personally owned work profile enrolled device?
 
 The Reset Token hasn't been activated on the device. To activate the Reset Token:
 
-1. You must require a personally-owned work profile passcode in your Configuration Policy.
-2. The end user must set an appropriate personally-owned work profile passcode.
+1. You must require a personally owned work profile passcode in your Configuration Policy.
+2. The end user must set an appropriate personally owned work profile passcode.
 3. The end user must accept the secondary prompt to allow passcode reset.
 
 After these steps are complete, you should no longer receive this response.
@@ -102,7 +102,7 @@ This issue may be caused when the installation of Windows has major corruption t
 
 This issue can be caused if you choose the **Wipe device, and continue to wipe even if devices lose power. If you select this option, please be aware that it might prevent some Windows 10 devices from starting up again.** option on a BitLocker encrypted device.
 
-To resolve this issue, use bootable media to re-install Windows 10 on the device.
+To resolve this issue, use bootable media to reinstall Windows 10 on the device.
 
 ## Next steps
 
