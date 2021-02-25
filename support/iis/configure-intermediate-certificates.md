@@ -31,9 +31,9 @@ As part of certificate path discovery, the intermediate certificates must be loc
 
 In the SSL negotiation, the server certificate is validated on the client. In this case, the server provides the certificates to the client computer together with the intermediate issuing certificates that the client computer uses to build the certificate path. The complete certificate chain, except for the root certificate, is sent to the client computer.
 
-IIS determines the set of certificates that it sends to clients for TLS/SSL by building a certificate chain of a configured server authentication certificate in the local computer context. The intermediate certificates must be configured correctly by adding them to intermediate CA certificate store in the local computer account on the server.
+By building a certificate chain of a configured server authentication certificate in the local computer context, IIS determines the set of certificates that it sends to clients for TLS/SSL. The intermediate certificates must be configured correctly by adding them to intermediate CA certificate store in the local computer account on the server.
 
-If a server operator installs an SSL certificate together with the relevant issuing CA certificates, and then the server operator later renews the SSL certificate, the server operator must make sure that the intermediate issuing certificates are updated at the same time.
+If a server operator installs an SSL certificate together with the relevant issuing CA certificates, and later renews the SSL certificate, the server operator must ensure the intermediate issuing certificates are updated at the same time.
 
 ## Configure intermediate certificates
 
