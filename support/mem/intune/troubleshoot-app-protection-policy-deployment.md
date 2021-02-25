@@ -101,7 +101,7 @@ When you assign the policy to a user group, make sure that the user is in the us
 >
 > - The Intune app protection policy must be assigned to user groups and not device groups.
 > - If the affected device uses Apple Device Enrollment Program (DEP), make sure that **User Affinity** is enabled. User Affinity is required for any app that requires user authentication under DEP.
-> - If the affected device uses Android Enterprise, only work personally-owned profiles will support app protection policies.
+> - If the affected device uses Android Enterprise, only personally-owned work profiles will support app protection policies.
 
 ### Verify that the managed app is targeted
 
