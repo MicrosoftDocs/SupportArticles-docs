@@ -6,7 +6,7 @@ ms.reviewer: lacranda
 ---
 # Troubleshoot NDES reporting of certificate deployments in Microsoft Intune
 
-Use the following information to confirm that NDES and the Microsoft Intune Certificate Connector successfully report to Intune that the certificate was delivered to a device. Reporting to Intune is the last phase for using SCEP certificate profiles to provision Windows devices with a certificate.
+Reporting to Intune is the last phase for using SCEP certificate profiles to provision Windows devices with a certificate. Confirm that NDES and the Microsoft Intune Certificate Connector successfully report to Intune that the certificate was delivered to a device.
 
 This article applies to the step 6 of the [SCEP communication workflow](troubleshoot-scep-certificate-profiles.md).
 
@@ -20,7 +20,7 @@ If reporting was successful, you'll find entries that resemble the following exa
 
 - **NDESPlugin.log**:
 
-  ```
+  ```output
   Calling Notifyrequest ...
   Sending request to certificate registration point.
   Exiting Notify with 0x0
@@ -36,7 +36,7 @@ If reporting was successful, you'll find entries that resemble the following exa
 
 - **CertificateRequestStatus**:
 
-  Go to the *%ProgramFiles%\Microsoft Intune\CertificateRequestStatus* folder where you'll see the **Failed**, **Processing**, and **Succeed** folders that contain certificate request status files.
+  Go to the *%ProgramFiles%\Microsoft Intune\CertificateRequestStatus* folder. You'll see the **Failed**, **Processing**, and **Succeed** folders that contain certificate request status files.
 
   If the certificate request is successfully processed, you'll see new files in the **Succeed** folder. You can use *Notepad.exe* to open the files and view the data that's uploaded to the Intune Service by the Intune Certificate Connector. Data that uploaded includes details like **CertificateSerialNumber**, **UserID**, **DeviceID**, and **Thumbprint**.
 
@@ -44,7 +44,7 @@ If reporting was successful, you'll find entries that resemble the following exa
 
 If you don't see any new files being created in the *Succeed* folder, check whether there are any files stuck in the *Processing* folder.
 
-Verify that the Intune Connector Service is started on the NDES server, and there are no errors in Ndesconnector.svclog.
+Verify that the Intune Connector Service is started on the NDES server. And there are no errors in Ndesconnector.svclog.
 
 ## Next steps
 

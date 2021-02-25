@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot use of SCEP certificate profiles to provision certificates with Microsoft Intune
-description: Troubleshoot the use of SCEP by devices to request certificates for use with Intune, including communication from devices to NDES, NDES to certification authorities, and from the Intune Certificate Connector to the Intune service.  
+title: Troubleshoot use of Simple Certificate Enrollment Protocol (SCEP) certificate profiles to provision certificates with Microsoft Intune
+description: Troubleshoot the use of SCEP by devices to request certificates for use with Intune, including communication from devices to Network Device Enrollment Service (NDES), NDES to certification authorities, and from the Intune Certificate Connector to the Intune service.  
 ms.date: 01/30/2020
 ms.reviewer: lacranda
 ---
@@ -12,7 +12,7 @@ Use of Simple Certificate Enrollment Protocol (SCEP) certificate profiles can be
 - Helping you to narrow down where a problem exists in that communication flow
 - Identifying the key log files that are referenced in subsequent articles for troubleshooting certificate profiles
 
-The information in this and the related SCEP certificate troubleshooting articles applies to using SCEP certificate profiles with Android, iOS/iPad, and Windows devices. Similar information for macOS is not available at this time.
+The information in this article and the related SCEP certificate troubleshooting articles applies to using SCEP certificate profiles with Android, iOS/iPad, and Windows devices. Similar information for macOS isn't available at this time.
 
 To troubleshoot Network Device Enrollment Service (NDES), see the following articles:
 
@@ -93,7 +93,7 @@ The following list includes logs or consoles that are referenced in the subseque
 
 ### Logs for Android devices
 
-For devices that run Android, use the **Android Company Portal** app log file, **OMADM.log**. Before you collect and review logs, enable ensure [Verbose Logging](/mem/intune/user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android) is enabled, and then reproduce the issue.
+For devices that run Android, use the **Android Company Portal** app log file, **OMADM.log**. Before you collect and review logs, ensure [Verbose Logging](/mem/intune/user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android) is enabled, and then reproduce the issue.
 
 To collect the OMADM.logs from a device, see [Upload and email logs using a USB cable](/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android).
 
