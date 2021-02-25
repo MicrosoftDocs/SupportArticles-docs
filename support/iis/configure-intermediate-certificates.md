@@ -19,7 +19,7 @@ When a client computer tries to establish server-authenticated Secure Sockets La
 
 ## Impact
 
-Client computers can't connect to the server that's running IIS. It occurs because the client computers can't authenticate the servers that don't have the intermediate certificates configured correctly.
+Client computers can't connect to the server that's running IIS. This situation occurs because the servers don't have the intermediate certificates configured correctly. The client computers can't authenticate these servers.
 
 We recommend you correctly configure the intermediate certificates on the server.
 
@@ -29,7 +29,7 @@ X.509 certificate validation consists of several phases. These phases include ce
 
 As part of certificate path discovery, the intermediate certificates must be located to build the certificate path up to a trusted root certificate. An intermediate certificate is a certificate that's useful in determining if a certificate was ultimately issued by a valid root certification authority (CA). These certificates can be obtained from the cache or from the certificate store on the client computer. Servers can also provide the information to the client computer.
 
-In the SSL negotiation, the server certificate is validated on the client. In this case, the server provides the certificates to the client computer together with the intermediate issuing certificates that the client computer can use to build the certificate path. The complete certificate chain, except for the root certificate, is sent to the client computer.
+In the SSL negotiation, the server certificate is validated on the client. In this case, the server provides the certificates to the client computer together with the intermediate issuing certificates that the client computer uses to build the certificate path. The complete certificate chain, except for the root certificate, is sent to the client computer.
 
 IIS determines the set of certificates that it sends to clients for TLS/SSL by building a certificate chain of a configured server authentication certificate in the local computer context. The intermediate certificates must be configured correctly by adding them to intermediate CA certificate store in the local computer account on the server.
 
