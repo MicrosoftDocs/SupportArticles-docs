@@ -76,7 +76,7 @@ However, there's an issue with the new behavior. In the new behavior, the SRV re
 
 > Multiple domain controllers remove SRV records on different DNS servers before Active Directory coverage of the zone.
 
-When the underlying attribute is fully converged, the last DNS server to receive a deletion is the only version that's kept. Only the records that were removed on that DNS server are removed from the SRV record. The SRV records removed on other DNS servers seem to come back. Manual cleanup may be required after the all domain controllers have applied the GPO and the affected SRV records are fully converged.
+When the underlying attribute is fully converged, the last DNS server to receive a deletion is the only version that's kept. Only the records that were removed on that DNS server are removed from the SRV record. The SRV records removed on other DNS servers seem to come back. Manual cleanup may be required after all domain controllers have applied the GPO and the affected SRV records are fully converged.
 
 ### Cause 4: Windows Server 2008 zone transfer delete bug  
 
@@ -98,7 +98,7 @@ This problem occurs if Option 81 is defined and ISATAP or 6to4 interfaces are pr
 
 ### Cause 7: Timing issue caused when you change DNS server IP unless KB2520155 is installed  
 
-This issue occurs because of an issue in the DNS Client service. When the DNS server configuration information is changed on a client, the DNS Client service deletes the DNS host record of the client from the old DNS server. It then adds it to the new DNS server. The DNS record is present on the new server, which is a part of the same domain. So the record isn't updated. But the old DNS server replicates the deletion operation to the new DNS server and to other DNS servers. So the new DNS server deletes the record, and the record is deleted across the domain.
+This issue occurs because of an issue in the DNS Client service. When the DNS server configuration information is changed on a client, the DNS Client service deletes the DNS host record of the client from the old DNS server. It then adds the record to the new DNS server. The DNS record is present on the new server, which is a part of the same domain. So the record isn't updated. But the old DNS server replicates the deletion operation to the new DNS server and to other DNS servers. So the new DNS server deletes the record, and the record is deleted across the domain.
 
 Install [KB2520155](https://support.microsoft.com/help/2520155) on Windows Vista, Windows 7, Windows Server 2008, and Windows Server 2008 R2 computers.
 
