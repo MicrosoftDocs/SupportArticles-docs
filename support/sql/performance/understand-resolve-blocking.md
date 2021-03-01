@@ -5,6 +5,7 @@ ms.date: 03/01/2021
 ms.prod-support-area-path: Performance
 ms.reviewer: ramakoni
 ms.prod: sql
+ms.technology: performance 
 ---
 # Understand and resolve SQL Server blocking problems
 **Applies to:** SQL Server (all supported versions), Azure SQL Managed Instance
@@ -18,7 +19,7 @@ The article describes blocking in SQL Server and demonstrates how to troubleshoo
 In this article, the term connection refers to a single logged-on session of the database. Each connection appears as a session ID (SPID) or session_id in many DMVs. Each of these SPIDs is often referred to as a process, although it is not a separate process context in the usual sense. Rather, each SPID consists of the server resources and data structures necessary to service the requests of a single connection from a given client. A single client application may have one or more connections. From the perspective of SQL Server, there is no difference between multiple connections from a single client application on a single client computer and multiple connections from multiple client applications or multiple client computers; they are atomic. One connection can block another connection, regardless of the source client.
 
 > [!NOTE]
-> **This content is focused on SQL Server instances, including Azure SQL Managed Instances.** For more on blocking in Azure SQL Database, see [Understand and resolve Azure SQL Database blocking problems](/azure/azure-sql/database/understand-resolve-blocking.md).
+> **This content is focused on SQL Server instances, including Azure SQL Managed Instances.** For information specific to troubleshooting blocking in Azure SQL Database, see [Understand and resolve Azure SQL Database blocking problems](/azure/azure-sql/database/understand-resolve-blocking.md).
 
 ## What is blocking
 
@@ -35,8 +36,6 @@ For queries executed within a transaction, the duration for which the locks are 
 * [Row Versioning-based Isolation Levels in the Database Engine](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Row_versioning)
 * [Transactions](/sql/t-sql/language-elements/transactions-transact-sql)
 
-
-
 When locking and blocking persists to the point where there is a detrimental effect on system performance, it is due to one of the following reasons:
 
 * A SPID holds locks on a set of resources for an extended period of time before releasing them. This type of blocking resolves itself over time but can cause performance degradation.
@@ -52,9 +51,6 @@ There may be a tendency to focus on server-side tuning and platform issues when 
 Pay attention to database performance during the design and construction phase of the database and application. In particular, the resource consumption, isolation level, and transaction path length should be evaluated for each query. Each query and transaction should be as lightweight as possible. Good connection management discipline must be exercised, without it, the application may appear to have acceptable performance at low numbers of users, but the performance may degrade significantly as the number of users scales upward. 
 
 With proper application and query design, SQL Server is capable of supporting many thousands of simultaneous users on a single server, with little blocking.
-
-
-
 
 ## Troubleshoot blocking
 
@@ -391,10 +387,9 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
 
    After sending a query to the server, all applications must immediately fetch all result rows to completion. If an application does not fetch all result rows, locks can be left on the tables, blocking other users. If you are using an application that transparently submits SQL statements to the server, the application must fetch all result rows. If it does not (and if it cannot be configured to do so), you may be unable to resolve the blocking problem. To avoid the problem, you can restrict poorly behaved applications to a reporting or a decision-support database, separate from the main OLTP database.
 
-   Resolution:
+   **Resolution**:
 
    The application must be rewritten to fetch all rows of the result to completion. This does not rule out the use of [OFFSET and FETCH in the ORDER BY clause](/sql/t-sql/queries/select-order-by-clause-transact-sql#using-offset-and-fetch-to-limit-the-rows-returned) of a query to perform server-side paging.
-
 
 4. Blocking Caused by a Distributed Client/Server Deadlock
 
@@ -442,27 +437,19 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
 
     Both examples A and B are fundamental issues that application developers must be aware of. They must code applications to handle these cases appropriately.
 
-   Resolutions:
+   **Resolutions**:
 
-   Two reliable solutions are to use either a query timeout or bound connections.
-
-   * Query Timeout
-
-     When a query timeout has been provided, if the distributed deadlock occurs, it will be broken when timeout happens. See the DB-Library or ODBC documentation for more information on using a query timeout.
-
-   * Bound Connections
-
-      This feature allows a client having multiple connections to bind them into a single transaction space, so the connections do not block each other. For more information, see the "Using Bound Connections" topic in SQL Server 7.0 Books Online.
+   When a query timeout has been provided, if the distributed deadlock occurs, it will be broken when timeout happens. Reference your connection provider documentation for more information on using a query timeout.
 
 5. Blocking caused by a session in a rollback state
     A data modification query that is KILLed, or canceled outside of a user-defined transaction, will be rolled back. This can also occur as a side effect of the client network session disconnecting, or when a request is selected as the deadlock victim. This can often be identified by observing the output of sys.dm_exec_requests, which may indicate the ROLLBACK **command**, and the **percent_complete column** may show progress. 
     
-   A data modification query that is KILLed, or canceled outside of a user-defined transaction, will be rolled back. This can also occur as a side effect of the client computer restarting and its network session disconnecting. Likewise, a query selected as the deadlock victim will be rolled back. A data modification query often cannot be rolled back any faster than the changes were initially applied. For example, if a `DELETE`, `INSERT`, or `UPDATE` statement had been running for an hour, it could take at least an hour to roll back. This is expected behavior, because the changes made must be rolled back, or transactional and physical integrity in the database would be compromised. Because this must happen, SQL Server marks the SPID in a golden or rollback state (which means it cannot be KILLed or selected as a deadlock victim). This can often be identified by observing the output of `sp_who`, which may indicate the ROLLBACK command. The Status column of `sys.sysprocesses` will indicate a ROLLBACK status, which will also appear in `sp_who` output or in SQL Server Management Studio Activity Monitor.
+   A data modification query that is KILLed, or canceled outside of a user-defined transaction, will be rolled back. This can also occur as a side effect of the client computer restarting and its network session disconnecting. Likewise, a query selected as the deadlock victim will be rolled back. A data modification query often cannot be rolled back any faster than the changes were initially applied. For example, if a `DELETE`, `INSERT`, or `UPDATE` statement had been running for an hour, it could take at least an hour to roll back. This is expected behavior, because the changes made must be rolled back, or transactional and physical integrity in the database would be compromised. Because this must happen, SQL Server marks the SPID in a golden or rollback state (which means it cannot be KILLed or selected as a deadlock victim). This can often be identified by observing the output of `sp_who`, which may indicate the ROLLBACK command. The Status column of `sys.dm_exec_sessions` will indicate a ROLLBACK status.
        
     > [!Note]
     > Lengthy rollbacks are rare when the [Accelerated Database Recovery feature](../accelerated-database-recovery.md) is enabled. This feature was introduced in SQL Server 2019.
     
-    Resolution:
+    **Resolution**:
   
       You must wait for the session to finish rolling back the changes that were made.
   
@@ -472,11 +459,13 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
 
 6. Blocking Caused by an Orphaned Connection
 
-   If the client application traps or the client workstation is restarted, the network session to the server may not be immediately canceled under some conditions. From the SQL Server instance's perspective, the client still appears to be present, and any locks acquired may still be retained. For more information, see [How to troubleshoot orphaned connections in SQL Server](https://support.microsoft.com/help/137983).
+   If the client application traps or the client workstation is restarted, the network session to the server may not be immediately canceled under some conditions. From the SQL Server instance's perspective, the client still appears to be present, and any locks acquired may still be retained.  
 
-   Resolution:
+   **Resolution**:
 
-   If the client application has disconnected without appropriately cleaning up its resources, you can terminate the SPID by using the `KILL` command. The `KILL` command takes the SPID value as input. For example, to kill SPID 9, issue the following command:
+   If the client application has disconnected without appropriately cleaning up its resources, you can terminate the SPID by using the `KILL` command. For reference, see [KILL (Transact-SQL)](/sql/t-sql/language-elements/kill-transact-sql). 
+
+   The `KILL` command takes the SPID value as input. For example, to kill SPID 9, issue the following command:
 
    ```sql
    KILL 99
