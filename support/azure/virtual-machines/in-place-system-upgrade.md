@@ -1,7 +1,7 @@
 ---
 title: Performing an in-place system upgrade for Windows 10 based Azure VMs and workarounds for other versions of Azure Windows VMs
 description: Describes how to perform an in-place system upgrade for Windows 10 based Azure VMs and workarounds for other versions of Azure Windows VMs
-ms.date: 07/21/2020
+ms.date: 03/01/2021
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---
