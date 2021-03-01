@@ -9,7 +9,7 @@ ms.prod-support-area-path: App management
 ---
 # Error 0x87D13BA2 when you deploy a macOS LOB app
 
-This article fixes a problem that occurs when you try to deploy a macOS LOB app in Microsoft Intune, and you receive the following error message:
+This article fixes a problem that occurs when you deploy a macOS LOB app in Microsoft Intune, and you receive the following error message:
 
 > One or more apps contain invalid bundleIds. (0x87D13BA2)
 
