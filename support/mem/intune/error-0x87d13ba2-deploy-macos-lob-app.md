@@ -117,7 +117,8 @@ To fix this problem and enable the macOS LOB app to correctly report its status,
    zip -q --symlinks -0 -r <Package_Name>.intunemac <IntuneMacPackage_Folder_Location>
    ```
 
-   **Note:** \<*Package_Name*> is the desired name of the `.intunemac` file, and \<*IntuneMacPackage_Folder_Location*> is the location of the IntuneMacPackage folder that you created in step 2.
+   > [!NOTE]
+   > \<*Package_Name*> is the desired name of the `.intunemac` file, and \<*IntuneMacPackage_Folder_Location*> is the location of the IntuneMacPackage folder that you created in step 2.
 
    For our example, run the following command:
 
