@@ -76,7 +76,7 @@ Create an Azure VM that is running the supported version of the required operati
 1. Start the VM.
 1. Run the in-place upgrade.
 
-#### Step 2: Upload the VHD to Azure
+#### Step 2: Upload the VHD to Azure
 
 Follow the steps in the following article to upload the VHD to Azure and to deploy the VM.
 
