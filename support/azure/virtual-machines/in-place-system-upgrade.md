@@ -51,8 +51,8 @@ This process takes from 45 to 60 minutes and requires to reboot the VM:
 3. To prevent data loss, backup the Windows 10 VM using [Azure Backup](https://docs.microsoft.com/azure/backup) or a 3rd-Party backup solution from the [Azure Marketplace  - Backup & Recovery](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
 4. Check that the backup was successful - turn off the original Windows 10 VM, and verify that a new VM can be successfully restored from the backup and that all applications are running normally.
 5. Either the original Windows 10 VM or the restored VM can be used as a source for in-place system upgrade, but both VMs can’t be running at the same time unless the system name of the VM and IP addresses on one of the VMs has been changed to prevent conflicts.
-6. Connect to the Windows 10 VM and go to **Settings** > **Updates & Security** > **Windows Update**.
-7. In Windows Update simple select **Check for Updates**.
+6. Connect to the Windows 10 VM, and then go to **Settings** > **Updates & Security** > **Windows Update**.
+7. In Windows Update, select **Check for Updates**.
 8. When the Feature Update appears, select **Download and install now**.
 9. The Feature Update will download, install, and user settings and data will be preserved. The VM will reboot automatically.
 10. General questions can be emailed to Azure VM team at azurevmupgrade@microsoft.com.
@@ -69,22 +69,14 @@ Create an Azure VM that is running the supported version of the required operati
 
 ### Method 2: Download and upgrade the VHD  
 
-#### Step 1: Download the VHD of the VM
+#### Step 1: Download and perform in-place upgrade in a local VM
 
-1. In Azure portal, open the Storage account.
-2. Select the Storage account that contains the VHD file.
-3. Select the container for the VHD file.
-4. Select the VHD file, and then select the **Download** button.
-
-    :::image type="content" source="media/in-place-system-upgrade/4017843_en_1.png" alt-text="Screenshot of downloading the Azure VM VHD file.":::
-
-#### Step 2: Perform an in-place upgrade
-
+1. [Download the VHD of the VM](https://docs.microsoft.com/azure/virtual-machines/windows/download-vhd).
 1. Attach the VHD to a local Hyper-V VM.
-2. Start the VM.
-3. Run the in-place upgrade.
+1. Start the VM.
+1. Run the in-place upgrade.
 
-#### Step 3: Upload the VHD to Azure
+#### Step 2: Upload the VHD to Azure
 
 Follow the steps in the following article to upload the VHD to Azure and to deploy the VM.
 
