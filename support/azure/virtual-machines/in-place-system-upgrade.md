@@ -1,6 +1,6 @@
 ---
 title: Performing an in-place system upgrade for Windows 10 based Azure VMs and workarounds for other versions of Windows Azure VMs
-description: Describes how to work around the unsupported in-place system upgrade on a Windows Azure VM.
+description: Describes how to perform an in-place system upgrade for Windows 10 based Azure VMs and workarounds for other versions of Windows Azure VMs
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
@@ -17,10 +17,11 @@ _Original KB number:_ &nbsp; 4014997
 Consider the following scenario:
 
 - You have a virtual machine (VM) that is running Microsoft Windows in a Microsoft Azure environment.
-- •	When running an in-place upgrade of the VM to a newer version of the operating system, the upgrade fails or stops responding (hangs) and requires direct console access to stop upgrading and roll back.
+- When running an in-place upgrade of the VM to a newer version of the operating system, the upgrade fails or stops responding (hangs) and requires direct console access to stop upgrading and roll back.
 
-> [!NOTE]
-> In-place system upgrades are supported for specific versions of Windows Azure VMs. 
+## Cause
+
+In-place system upgrades are supported for specific versions of Azure Windows VMs. We are working to make in-place system upgrades (Feature Update) supported by other versions soon.
 
 Windows Operating System versions that **support** in-place system upgrade:
 
@@ -29,7 +30,7 @@ Windows Operating System versions that **support** in-place system upgrade:
 - Windows 10, version 1803, all editions
 - Windows 10 Enterprise multi-session, all editions
 
-Windows Operating System versions that don’t yet support in-place system upgrade: 
+Windows Operating System versions that **don’t currently support** in-place system upgrade: 
 
 - Windows Server 2019
 - Windows Server 2016
@@ -43,12 +44,8 @@ Windows Operating System versions that don’t yet support in-place system upgra
 - Windows 7 Enterprise
 - Windows Server version 1709
 - Windows Server version 1803
-
-## Cause
-
-In-place system upgrades are supported for specific versions of Windows Azure VMs. We are working to make In-place system upgrades (Feature Update) supported by other versions soon.
-
-## Supported In-place system upgrade process for Windows 10
+- 
+## Supported in-place system upgrade process for Windows 10
 
 This process takes from 45 to 60 minutes and requires to restart the VM:
 
@@ -56,12 +53,12 @@ This process takes from 45 to 60 minutes and requires to restart the VM:
 2. Check that the Windows 10 VM has at least 2 GB RAM and 20 GB of free disk space on the System Disk (C:\ Drive).
 3. To prevent data loss, backup the Windows 10 VM using Azure Backup or a 3rd-Party backup solution from the Azure Marketplace Backup & Recovery.
 4. Check that the backup was successful - turn off the original Windows 10 VM, and verify that a new VM can be successfully restored from the backup and that all applications are running normally.
-5. Either the original Windows 10 VM or the restored VM can be used as a source for In-place system upgrade, but both VMs can’t be running at the same time unless the system name of the VM and IP Addresses on one of the VMs has been changed to prevent conflicts.
+5. Either the original Windows 10 VM or the restored VM can be used as a source for in-place system upgrade, but both VMs can’t be running at the same time unless the system name of the VM and IP Addresses on one of the VMs has been changed to prevent conflicts.
 6. Connect to the Windows 10 VM and go to Settings > Updates & Security > Windows Update.
 7. In Windows Update simple click Check for Updates.
 8. When the Feature Update appears, click Download and install now.
 9. The Feature Update will download, install, and user settings and data will be preserved. The VM will restart (reboot) automatically.
-10. General questions can be directed to the azurevmupgrade@microsoft.com.
+10. General questions can be emailed to Azure VM team at azurevmupgrade@microsoft.com.
 
 ## Workaround approaches
 
