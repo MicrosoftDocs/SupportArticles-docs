@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4014997
 
 ## Symptoms
 
-When running an in-place upgrade of an Azure Windows VM to a newer version of the operating system, the upgrade fails or stops responding (hangs) and requires direct console access to stop upgrading and roll back.
+When you perform an in-place upgrade of an Azure Windows VM to a newer version of the operating system, the upgrade fails or stops responding (hangs).
 
 ## Cause
 
