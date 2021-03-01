@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4014997
 
 Consider the following scenario:
 
-- You have a virtual machine (VM) that is running Microsoft Windows in a Microsoft Azure environment.
+- You have a virtual machine (VM) that is running Microsoft Windows in a Microsoft Azure environment.
 - You run an in-place upgrade of the VM to a newer version of the operating system. 
  In this scenario, the upgrade may fail or become blocked and require direct console access to unblock it.
 
@@ -25,7 +25,7 @@ Consider the following scenario:
 
 ## Cause
 
-Microsoft does not support an upgrade of the operating system of an Azure VM. 
+Microsoft does not support an upgrade of the operating system of an Azure VM. 
 
 ## Workaround
 
@@ -54,7 +54,7 @@ Microsoft does not support an upgrade of the operating system of an Azure VM. In
 2. Start the VM.
 3. Run the in-place upgrade.
 
-#### Step 3: Upload the VHD to Azure
+#### Step 3: Upload the VHD to Azure
 
 Follow the steps in the following article to upload the VHD to Azure and to deploy the VM.
 
