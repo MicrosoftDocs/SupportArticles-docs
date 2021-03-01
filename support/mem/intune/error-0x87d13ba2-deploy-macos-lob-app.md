@@ -95,7 +95,7 @@ To fix this problem and enable the macOS LOB app to correctly report its status,
     <MacOSLobApp PackageType="pkg" PackageName="AnyConnect.pkg" BundleId="com.cisco.pkg.anyconnect.gui" BuildNumber="4.9.05042">
     ```
 
-   The following is the updated Detection.xml file:
+   Below is the updated Detection.xml file:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
