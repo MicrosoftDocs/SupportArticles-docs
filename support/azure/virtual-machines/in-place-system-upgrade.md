@@ -1,7 +1,7 @@
 ---
 title: Performing an in-place system upgrade for Windows 10-based Azure VMs and workarounds for other versions of Azure Windows VMs
 description: Describes how to perform an in-place system upgrade for Windows 10 based Azure VMs and workarounds for other versions of Azure Windows VMs
-ms.date: 03/01/2021
+ms.date: 03/02/2021
 ms.prod-support-area-path: 
 ms.reviewer: 
 ---
@@ -59,7 +59,7 @@ This process takes from 45 to 60 minutes and requires to reboot the VM:
 
 ## Workaround approaches
 
-To work around this issue, create an Azure VM that runs a supported version of an operating system, and then migrate the workload (Method 1, preferred), or download and upgrade the VHD of the VM (Method 2).
+To work around this issue, create an Azure VM that runs a supported version of an operating system, and then migrate the workload (Method 1, preferred). Alternatively, download and upgrade the VHD of the VM (Method 2).
 
 ### Method 1: Deploy a newer system and migrate the workload
 
