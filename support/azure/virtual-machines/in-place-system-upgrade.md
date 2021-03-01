@@ -49,15 +49,15 @@ Windows Operating System versions that **don’t currently support** in-place sy
 
 This process takes from 45 to 60 minutes and requires to restart the VM:
 
-1. Check that the Windows 10 VM isn’t using Azure Disk Encryption or Ephemeral OS Disk features – these features aren’t currently supported.
+1. Check that the Windows 10 VM isn’t using [Azure Disk Encryption](https://docs.microsoft.com[/azure/virtual-machines/windows/disk-encryption-overview) or [Ephemeral OS Disk](https://docs.microsoft.com/azure/virtual-machines/ephemeral-os-disks) features – these features aren’t currently supported.
 2. Check that the Windows 10 VM has at least 2 GB RAM and 20 GB of free disk space on the System Disk (C:\ Drive).
-3. To prevent data loss, backup the Windows 10 VM using Azure Backup or a 3rd-Party backup solution from the Azure Marketplace Backup & Recovery.
+3. To prevent data loss, backup the Windows 10 VM using [Azure Backup](https://docs.microsoft.com/azure/backup) or a 3rd-Party backup solution from the [Azure Marketplace  - Backup & Recovery](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
 4. Check that the backup was successful - turn off the original Windows 10 VM, and verify that a new VM can be successfully restored from the backup and that all applications are running normally.
 5. Either the original Windows 10 VM or the restored VM can be used as a source for in-place system upgrade, but both VMs can’t be running at the same time unless the system name of the VM and IP Addresses on one of the VMs has been changed to prevent conflicts.
-6. Connect to the Windows 10 VM and go to Settings > Updates & Security > Windows Update.
-7. In Windows Update simple click Check for Updates.
-8. When the Feature Update appears, click Download and install now.
-9. The Feature Update will download, install, and user settings and data will be preserved. The VM will restart (reboot) automatically.
+6. Connect to the Windows 10 VM and go to **Settings** > **Updates & Security** > **Windows Update**.
+7. In Windows Update simple select **Check for Updates**.
+8. When the Feature Update appears, select **Download and install now**.
+9. The Feature Update will download, install, and user settings and data will be preserved. The VM will restart automatically.
 10. General questions can be emailed to Azure VM team at azurevmupgrade@microsoft.com.
 
 ## Workaround approaches
@@ -66,7 +66,7 @@ To work around this issue, create an Azure VM that runs a supported version of a
 
 ### Method 1: Deploy a newer system and migrate the workload
 
-Microsoft does not support an upgrade of the operating system of an Azure VM. Instead, you can create an Azure VM that is running the supported version of the required operating system, and then migrate the workload. Instructions for how to migrate Windows Server roles and features are available in the following TechNet topic:
+Create an Azure VM that is running the supported version of the required operating system, and then migrate the workload. Here’s how to migrate Windows Server roles and features: 
 
 [Install, use, and remove Windows Server migration tools](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134202(v=ws.11)?redirectedfrom=MSDN)
 
@@ -95,7 +95,7 @@ Follow the steps in the following article to upload the VHD to Azure and to depl
 
 ### Method 3: Request to join Azure VM Upgrade Preview
 
-If you want to upgrade an Operating System version that isn’t supported yet, request to join a Private or Public Preview program at azurevmrequest@microsoft.com. Availability is limited.
+If you want to upgrade a Windows operating system version that isn’t supported yet, request to join a Private or Public Preview program at azurevmrequest@microsoft.com. Availability is limited.
 
 ## References
 
