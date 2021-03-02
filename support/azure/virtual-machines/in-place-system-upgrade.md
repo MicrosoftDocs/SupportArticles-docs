@@ -19,7 +19,7 @@ Consider the following scenario:
 - You have a virtual machine (VM) that is running Windows in a Microsoft Azure environment.
 - You run an in-place upgrade of the VM to a newer version of the operating system.
 
- In this scenario, the upgrade may fails or stops responding (hangs).
+ In this scenario, the upgrade may fail or become blocked and require direct console access.
 
 > [!NOTE]
 > Microsoft supports in-place system upgrades for certain versions of Windows Azure VMs, as follows:
