@@ -64,7 +64,7 @@ This process requires 45-60 minutes to complete and for the VM to restart. To do
 7. When the Feature Update item appears, select **Download and install now**.
 8. The update will download and install. User settings and data will be preserved, and the VM will restart automatically.
 
-If you have general questions about this procedure, write to the [azurevmupgrade@microsoft.com](mailto:azurevmupgrade@microsoft.com) alias.
+If you have general questions about this procedure, write to [azurevmupgrade@microsoft.com](mailto:azurevmupgrade@microsoft.com).
 
 ## Workaround
 
