@@ -90,7 +90,9 @@ The "Windows 7 Extended Security Updates 2020" SKU is available on the CSP price
 
 ### Does Windows 7 ESU renew automatically for year two?
 
-No. Windows 7 ESU will be made available as a separate SKU for each of the years in which it's offered (2020, 2021, and 2022). To continue ESU coverage, customers will have to separately purchase the SKU and activate a new key for each year.  
+No. Windows 7 ESU will be made available as a separate SKU for each of the years in which it's offered (2020, 2021, and 2022). To continue ESU coverage, customers will have to separately purchase the SKU for each year.  
+
+Additional, in order to install Year two SKU, customers must purchase the Year one SKU. Installation and activation of the Year one SKU is not required.
 
 ### What are the coverage dates for the three Windows 7 ESU SKUs?
 
