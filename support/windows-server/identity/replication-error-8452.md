@@ -83,20 +83,26 @@ _Original KB number:_ &nbsp; 2023704
 
     |Event|Source|Event String|
     |---|---|---|
-    |NTDS General|1586|The checkpoint with the PDC was unsuccessful. The checkpointing process will be retried again in four hours. A full synchronization of the security database to downlevel domain controllers may take place if this machine is promoted to be the PDC before the next successful checkpoint. The error returned was: The naming context is in the process of being removed or is not replicated from the specified server.|
+    |NTDS General|1586|The checkpoint with the primary domain controller (PDC) was unsuccessful. The checkpointing process will be retried again in four hours. A full synchronization of the security database to downlevel domain controllers may take place if this machine is promoted to be the PDC before the next successful checkpoint. The error returned was: The naming context is in the process of being removed or is not replicated from the specified server.|
     ||||  
 
 ## Cause
 
-This error most commonly occurs when replication topology in a DC that is starting replication differs from the replication topology defined in the destination DCs copy of Active Directory.
+This error most commonly occurs when replication topology in a DC that's starting replication differs from the replication topology defined in the destination DC's copy of Active Directory.
 
 The error naturally occurs when the replication topology in an Active Directory forest is being modified by:
 
-- New partitions being added or removed from the forest (that is, the promotion or demotion of the first/last DC in a domain, or the addition/ removal of an application partition including default DNS application partitions)
+- New partitions being added or removed from the forest. It means the promotion or demotion of the first/last DC in a domain. Or it means the addition/ removal of an application partition including default DNS application partitions.
 - The addition or removal of directory partitions on existing DCs (that is, the promotion/demotion of global catalog or addition/removal of an application partition).
-- Changes in replication topology or settings (that is, the promotion of new DCs, the demotion of existing DCs, changes to preferred/nominated bridgeheads, the building of alternate replication paths in response to replication failures or offline DCs, as well as site and site link changes).
+- Changes in replication topology or settings. It means the following changes:
 
-The error can be transient in a forest undergoing the changes above until the set of source DCs and partitions that each destination DC replicates from has inbound replicated by triggering replication operations.
+  - The promotion of new DCs
+  - The demotion of existing DCs
+  - Changes to preferred/nominated bridgeheads
+  - The building of alternate replication paths in response to replication failures or offline DCs
+  - Site and site link changes.
+
+In a forest undergoing the changes above, the error can be transient until the set of source DCs and partitions from which each destination DC replicates has inbound replicated by triggering replication operations.
 
 The error can be persistent when replication failures prevent the end-to-end replication of topology changes in the forest.
 
@@ -110,17 +116,17 @@ In rare conditions, the error can be caused by corruption in attributes like `ha
 
 The [More information](#more-information) section of this article contains explanations as to why the diagnostic and administrative tools listed in the [Symptoms](#symptoms) section of this article generate the 8452 error.
 
-In summary, Error 8452 happens if anyone of the following is true:
+In summary, Error 8452 happens if any of the following conditions is true:
 
-1. When DC1 <- DC2 replication is started for an NC, on DC1 there's no replica link for the NC from DC2.
+1. When DC1 <- DC2 replication is started for an naming context (NC), on DC1 there's no replica link for the NC from DC2.
 2. When DC1 <- DC2 replication in started for an NC, the NC is in the process of being removed on DC2.
 3. In mixed domain environment, PDC FSMO role is transferred from DC2 to DC1, but on DC1 there's no replica link from DC2.
 
 ## Resolution
 
-1. Wait. As mentioned, this condition is usually transient and doesn't normally warrant troubleshooting.
+1. Wait. As mentioned, this condition is transient and doesn't normally warrant troubleshooting.
 
-    If replication topology changes of the type listed in the Cause section of this article are taking place in your Active Directory forest, wait for the error condition to correct itself with time.  
+    If replication topology changes of the type listed in the [Cause](#cause) section are taking place in your Active Directory forest, wait for the error condition to correct itself with time.  
 
 2. Avoid the use of the `repadmin /syncall` command and equivalents until domain controllers starting replication and the destination DCs being replicated to agree source DCs and directory partitions being replicated.
 
@@ -150,7 +156,7 @@ There are two cases where error 8452 might be observed in this scenario:
 
 Case 1: Change the replication topology to make DC2 inbound replicate from DC4 so that the current topology becomes DC1 <- DC2 <- DC4.
 
-If we call `repadmin /syncall` on DC1 before knowledge of the DC2 <- DC4 topology change inbound replicates to DC1, the `syncall` operation will start DC2 <- DC3 replications because DC1 still has the old replication topology stored locally. Because on DC2 at this moment KCC has created a replica link from DC4 and has deleted the replica link from DC3, the replication from DC2 <- DC3 can't be executed and the operation logs error 8452.
+If we call `repadmin /syncall` on DC1 before knowledge of the DC2 <- DC4 topology change inbound replicates to DC1, the `syncall` operation will start DC2 <- DC3 replications because DC1 still has the old replication topology stored locally. On DC2 at this moment, KCC has created a replica link from DC4 and has deleted the replica link from DC3. So the replication from DC2 <- DC3 can't be executed and the operation logs error 8452.
 
 Case 2: Suppose an NC on DC3 is being removing while we call `repadmin /syncall <the NC>` on DC1. DC2 <- DC3 replication will be started as before. Because the NC on DC3 is in the process of being removed, it isn't a valid replication source, the error 8452 will be observed.
 
@@ -188,7 +194,7 @@ NTDS replication event 1586 is generated in a mixed domain environment that cont
 
 ### Demotion
 
-There's another scenario that **DRAERR_NoReplica** error will be returned. When we demote a DC, it will use DC locator to find a DC to replicate local changes to. If the found DC doesn't replicate directly with the being-deleted DC, **DRAERR_NoReplica** will be returned and DC locator will be called to find a destination DC. In this scenario, the error isn't logged hence it isn't observed.
+There's another scenario that **DRAERR_NoReplica** error will be returned. When we demote a DC, it will use DC locator to find a DC to replicate local changes to. If the found DC doesn't replicate directly with the being-deleted DC, **DRAERR_NoReplica** will be returned and DC locator will be called to find a destination DC. In this scenario, the error isn't logged so it isn't observed.
 
 ### Related Links
 
