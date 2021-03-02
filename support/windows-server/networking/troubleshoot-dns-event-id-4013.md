@@ -95,7 +95,7 @@ _Original KB number:_ &nbsp; 2001093
 
 The copy of Active Directory in some domain controllers contains references to other domain controllers in the forest. These domain controllers try to inbound replicate all locally held directory partitions during Windows startup, as part of an initial synchronization or **init sync**.
 
-In an attempt to boot with the latest DNS zone contents, Microsoft DNS servers that host AD-integrated copies of DNS zones delay DNS service startup for several minutes after Windows startup. The delay won't occur if Active Directory has completed its initial synchronization during Windows startup. Meanwhile, Active Directory is delayed from inbound replicating directory partitions, until it can resolve the CNAME GUID of its source domain controller to an IP address on the DNS servers used by the destination domain controller for name resolution. The duration of the hang while preparing network connections depends on the number of locally held directory partitions residing in a domain controller's copy of Active Directory. Most domain controllers have at least the following five partitions:
+In an attempt to boot with the latest DNS zone contents, Microsoft DNS servers that host AD-integrated copies of DNS zones delay DNS service startup for several minutes after Windows startup. The delay won't occur if Active Directory has completed its initial synchronization during Windows startup. Meanwhile, Active Directory is delayed from inbound replicating directory partitions. Replication is delayed until it can resolve the CNAME GUID of its source domain controller to an IP address on the DNS servers used by the destination domain controller for name resolution. The duration of the hang while preparing network connections depends on the number of locally held directory partitions residing in a domain controller's copy of Active Directory. Most domain controllers have at least the following five partitions:
 
 - schema
 - configuration
@@ -107,11 +107,16 @@ And these domain controllers can experience a 15-20 minute startup delay. The ex
 
 DNS Event ID 4013 in the DNS event log indicates that DNS service startup was delayed. It's because inbound replication of Active Directory partitions hadn't occurred.
 
-Multiple conditions can exacerbate slow Windows startup, and the logging of DNS event 4013 on DNS servers that are configured to host AD-integrated zones (which implicitly reside on computers acting as domain controllers). These conditions include:
+Multiple conditions can exacerbate the following issues:
 
-- Configuring a DNS server hosting AD-integrated DNS zones whose copy of Active Directory contains knowledge of other domain controllers in the forest to point to itself exclusively for DNS name resolution.
-- Configuring a DNS server hosting AD-integrated DNS zones whose copy of Active Directory contains knowledge of other domain controllers in the forest to point DNS servers that either don't exist, are currently offline, aren't accessible on the network, or that don't host the required zones and records that are needed to inbound-replicate Active Directory. Examples include the domain controller CNAME GUID record and its corresponding host A or AAAA record of potential source domain controllers.
-- Booting a domain controller and DNS hosting AD-integrated DNS zones whose copy of Active Directory contains knowledge of other domain controllers on what is effectively an isolated network because:
+- slow Windows startup
+- the logging of DNS event 4013 on DNS servers that are configured to host AD-integrated zones, which implicitly reside on computers acting as domain controllers. 
+
+These conditions include:
+
+- Configuring a DNS server hosting AD-integrated DNS zones. Its copy of Active Directory contains knowledge of other domain controllers in the forest to point to itself exclusively for DNS name resolution.
+- Configuring a DNS server hosting AD-integrated DNS zones. Its copy of Active Directory contains knowledge of other domain controllers in the forest to point DNS servers that either don't exist, are currently offline, aren't accessible on the network, or that don't host the required zones and records that are needed to inbound-replicate Active Directory. Examples include the domain controller CNAME GUID record and its corresponding host A or AAAA record of potential source domain controllers.
+- Booting a domain controller and DNS server hosting AD-integrated DNS zones. Its copy of Active Directory contains knowledge of other domain controllers on what is effectively an isolated network because:
   - The network adapter or network stack on the caller or target computer is either disabled or non-functional.
   - The domain controller has been booted on an isolated network.
   - The local domain controller's copy of Active Directory contains references to stale domain controllers that no longer exist on the network.
