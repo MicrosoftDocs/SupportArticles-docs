@@ -19,7 +19,7 @@ Consider the following scenario:
 - You have a virtual machine (VM) that is running Windows in a Microsoft Azure environment.
 - You run an in-place upgrade of the VM to a newer version of the operating system.
 
- In this scenario, the upgrade fails or becomes blocked, and direct console access is necessary to unblock it.
+ In this scenario, the upgrade fails or stops responding (hangs).
 
 > [!NOTE]
 > Microsoft supports in-place system upgrades for certain versions of Windows Azure VMs, as follows:
@@ -54,7 +54,7 @@ Microsoft supports in-place system upgrades for only specific versions of Window
 
 This process requires 45-60 minutes to complete and for the VM to restart. To do the in-place system upgrade, follow these steps:
 
-1. Verify that the Windows 10 VM doesn’t use [Azure Disk Encryption](https://docs.microsoft.com/azure/virtual-machines/windows/disk-encryption-overview) or [Ephemeral OS Disk](https://azure.microsoft.com/blog/ephemeral-os-disk-limited-public-preview/). These features are currently not supported.
+1. Verify that the Windows 10 VM doesn’t use [Azure Disk Encryption](https://docs.microsoft.com/azure/virtual-machines/windows/disk-encryption-overview) or [Ephemeral OS Disk](https://docs.microsoft.com/azure/virtual-machines/ephemeral-os-disks). These features are currently not supported.
 2. Verify that the Windows 10 VM has at least 2 GB of RAM and 12 GB of free disk space on the system disk (drive C).
 3. To prevent data loss, back up the Windows 10 VM by using [Azure Backup](https://docs.microsoft.com/azure/backup/) or a third-party backup solution from [Azure Marketplace Backup & Recovery](https://azuremarketplace.microsoft.com/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
 4. Check whether the backup was successful. To do this, turn off the original Windows 10 VM, and verify that a new VM can be successfully restored from the backup and that all applications are running successfully.
@@ -84,24 +84,16 @@ Microsoft does not support an upgrade of most Azure VM operating systems.  Inste
 
 ### Method 2: Download and upgrade the VHD  
 
-#### Step 1: Download the VHD of the VM
+#### Step 1: Download and perform in-place upgrade in a local VM
 
-1. In the Azure portal, open the Storage account blade .
-2. Select the storage account that contains the VHD file.
-3. Select the container for the VHD file.
-4. Select the VHD file, and then select the **Download** button.
-
-    :::image type="content" source="media/in-place-system-upgrade/4017843_en_1.png" alt-text="Screenshot of downloading the Azure VM VHD file.":::
-
-#### Step 2: Do an in-place upgrade
-
+1. [Download the VHD of the VM](https://docs.microsoft.com/azure/virtual-machines/windows/download-vhd).
 1. Attach the VHD to a local Hyper-V VM.
-2. Start the VM.
-3. Run the in-place upgrade.
+1. Start the VM.
+1. Run the in-place upgrade.
 
-#### Step 3: Upload the VHD to Azure
+#### Step 2: Upload the VHD to Azure
 
-Follow the steps from the following article to upload the VHD to Azure and to deploy the VM:
+Follow the steps in the following article to upload the VHD to Azure and to deploy the VM.
 
 [Upload a Windows VHD from an on-premises VM to Azure](https://docs.microsoft.com/azure/virtual-machines/windows/upload-image)
 
