@@ -65,10 +65,7 @@ This process requires 45-60 minutes to complete and for the VM to restart. To do
 5. Connect to the Windows 10 VM, and go to **Settings** > **Updates & Security** > **Windows Update**.
 6. In Windows Update, select **Check for updates**.
 7. When the Feature Update item appears, select **Download and install now**.
-8. The update will download and install.
-
-   > [!NOTE]
-   > User settings and data will be preserved, and the VM will restart automatically.
+8. The update will download and install. User settings and data will be preserved, and the VM will restart automatically.
 
 If you have general questions about this procedure, write to the [azurevmupgrade@microsoft.com](mailto:azurevmupgrade@microsoft.com) alias.
 
