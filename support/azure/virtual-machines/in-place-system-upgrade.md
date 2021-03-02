@@ -47,7 +47,7 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 - Windows Server, version 1709
 - Windows Server, version 1803
 
-## Supported in-place system upgrade process for Windows 10 Azure VMs
+## In-place system upgrade process for Windows 10 Azure VMs
 
 This process requires 45-60 minutes to complete and for the VM to restart. To do the in-place system upgrade, follow these steps:
 
