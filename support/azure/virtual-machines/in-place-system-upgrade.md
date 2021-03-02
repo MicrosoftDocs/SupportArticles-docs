@@ -32,7 +32,7 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 - Windows 10, version 1803, all editions
 - Windows 10 Enterprise multi-session, all editions
 
-## Windows versions not yet supported for in-place system upgrades (consider using a workaround):
+### Windows versions not yet supported for in-place system upgrades (consider using a workaround):
 
 - Windows Server 2019
 - Windows Server 2016
@@ -47,7 +47,7 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 - Windows Server, version 1709
 - Windows Server, version 1803
 
-### Supported in-place system upgrade process (Feature Update) for Windows 10 and Windows 10 Multi-session
+## In-place system upgrade process for a Windows 10 VM
 
 This process requires 45-60 minutes to complete and for the VM to restart. To do the in-place system upgrade, follow these steps:
 
@@ -72,7 +72,7 @@ To work around an Azure VM that’s running a version of the operating system th
 
 ### Method 1: Deploy a newer system and migrate the workload
 
- Create an Azure VM that runs a supported version of the operating system, and then migrate the workload. To do this, you will use Windows Server migration tools. For instructions to migrate Windows Server roles and features , see the following Microsoft Ignite topic:
+ Create an Azure VM that runs a supported version of the operating system, and then migrate the workload. To do this, you will use Windows Server migration tools. For instructions to migrate Windows Server roles and features, see the following Microsoft Ignite topic:
 
 [Install, use, and remove Windows Server migration tools](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134202(v=ws.11)?redirectedfrom=MSDN)
 
@@ -91,7 +91,7 @@ Follow the steps in the following article to upload the VHD to Azure and to depl
 
 [Upload a Windows VHD from an on-premises VM to Azure](https://docs.microsoft.com/azure/virtual-machines/windows/upload-image)
 
-### Method 3: Request to join Azure IaaS VM Upgrade Preview
+### Method 3: Request to join Azure VM Upgrade Preview
 
 If you’re interested in upgrading an operating system version that’s not yet supported, you might be able to join a Private or Public Preview program, depending on capacity and availability. Please email your request to [azurevmrequest@microsoft.com](mailto:azurevmrequest@microsoft.com).
 
