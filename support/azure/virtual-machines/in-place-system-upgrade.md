@@ -48,7 +48,7 @@ Consider the following scenario:
 
 ## Cause
 
-Microsoft supports in-place system upgrades for only specific versions of Windows Azure VMs. We’re working to broaden support of In-place system upgrade (as a Feature Update) to other versions soon.
+Microsoft supports in-place system upgrades for only specific versions of Windows Azure VMs. We’re working to broaden support of in-place system upgrade (as a Feature Update) to other versions soon.
 
 ### Supported in-place system upgrade process (Feature Update) for Windows 10 and Windows 10 Multi-session
 
@@ -60,7 +60,7 @@ This process requires 45-60 minutes to complete and for the VM to restart. To do
 4. Check whether the backup was successful. To do this, turn off the original Windows 10 VM, and verify that a new VM can be successfully restored from the backup and that all applications are running successfully.
 
    > [!NOTE]
-   > Either the original Windows 10 VM or the restored VM can be used as a source for In-place system upgrade. However, both VMs can’t be running at the same time unless the system name of the VM and the IP addresses on one of the VMs was changed to prevent conflicts.
+   > Either the original Windows 10 VM or the restored VM can be used as a source for in-place system upgrade. However, both VMs can’t be running at the same time unless the system name of the VM and the IP addresses on one of the VMs was changed to prevent conflicts.
 
 5. Connect to the Windows 10 VM, and go to **Settings** > **Updates & Security** > **Windows Update**.
 6. In Windows Update, select **Check for updates**.
@@ -75,7 +75,7 @@ To work around an Azure VM that’s running a version of the operating system th
 
 ### Method 1: Deploy a newer system and migrate the workload
 
-Create an Azure VM that runs a supported version of the operating system, and then migrate the workload. To do this, you will use Windows Server migration tools. For instructions to migrate Windows Server roles and features , see the following Microsoft Ignite topic:
+ Create an Azure VM that runs a supported version of the operating system, and then migrate the workload. To do this, you will use Windows Server migration tools. For instructions to migrate Windows Server roles and features , see the following Microsoft Ignite topic:
 
 [Install, use, and remove Windows Server migration tools](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134202(v=ws.11)?redirectedfrom=MSDN)
 
