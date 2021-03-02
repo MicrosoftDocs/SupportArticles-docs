@@ -20,6 +20,11 @@ ms.author: alsin
 # Common errors within the Azure Serial Console
 There are a set of known errors within the Azure Serial Console. This is a list of those errors and mitigation steps for them.
 
+> [!NOTE]
+> Following these steps deploys Cloud Shell into a network isolation scenario, which disables Serial Console due to its current interaction with Cloud Shell. The Serial Console team is aware and this is a known issue and is addressing it.
+> 
+> 
+
 ## Common errors
 
 Error                             |   Mitigation
