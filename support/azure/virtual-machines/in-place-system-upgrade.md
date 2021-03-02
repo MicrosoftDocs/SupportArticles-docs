@@ -47,7 +47,7 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 - Windows Server, version 1709
 - Windows Server, version 1803
 
-### Supported in-place system upgrade process (Feature Update) for Windows 10 and Windows 10 Multi-session
+## Supported in-place system upgrade process for Windows 10 Azure VMs
 
 This process requires 45-60 minutes to complete and for the VM to restart. To do the in-place system upgrade, follow these steps:
 
@@ -91,7 +91,7 @@ Follow the steps in the following article to upload the VHD to Azure and to depl
 
 [Upload a Windows VHD from an on-premises VM to Azure](https://docs.microsoft.com/azure/virtual-machines/windows/upload-image)
 
-### Method 3: Request to join Azure IaaS VM Upgrade Preview
+### Method 3: Request to join Azure VM Upgrade Preview
 
 If you’re interested in upgrading an operating system version that’s not yet supported, you might be able to join a Private or Public Preview program, depending on capacity and availability. Please email your request to [azurevmrequest@microsoft.com](mailto:azurevmrequest@microsoft.com).
 
