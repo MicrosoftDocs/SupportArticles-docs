@@ -65,10 +65,7 @@ This process requires 45-60 minutes to complete and for the VM to restart. To do
 5. Connect to the Windows 10 VM, and go to **Settings** > **Updates & Security** > **Windows Update**.
 6. In Windows Update, select **Check for updates**.
 7. When the Feature Update item appears, select **Download and install now**.
-8. The update will download and install.
-
-   > [!NOTE]
-   > User settings and data will be preserved, and the VM will restart automatically.
+8. The update will download and install. User settings and data will be preserved, and the VM will restart automatically.
 
 If you have general questions about this procedure, write to the [azurevmupgrade@microsoft.com](mailto:azurevmupgrade@microsoft.com) alias.
 
@@ -78,7 +75,7 @@ To work around an Azure VM that’s running a version of the operating system th
 
 ### Method 1: Deploy a newer system and migrate the workload
 
-Microsoft does not support an upgrade of most Azure VM operating systems.  Instead, you can create an Azure VM that runs a supported version of the operating system, and then migrate the workload. To do this, you will use Windows Server migration tools. For instructions to migrate Windows Server roles and features , see the following Microsoft Ignite topic:
+Create an Azure VM that runs a supported version of the operating system, and then migrate the workload. To do this, you will use Windows Server migration tools. For instructions to migrate Windows Server roles and features , see the following Microsoft Ignite topic:
 
 [Install, use, and remove Windows Server migration tools](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134202(v=ws.11)?redirectedfrom=MSDN)
 
