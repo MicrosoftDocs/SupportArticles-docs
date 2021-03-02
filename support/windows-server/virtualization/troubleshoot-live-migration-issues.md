@@ -28,7 +28,7 @@ This article lists live migration issues in Windows Server 2016.
 
 ### Information regarding Event ID 21502
 
-#### Failed to live migrate because a virtual switch used by the VM does not exist on the destination node "Host2"
+#### Failed to live migrate because a virtual switch used by the VM doesn't exist on the destination node "Host2"
 
 **Description**
 
@@ -48,7 +48,7 @@ Open the **Hyper-V Manager** console and select **Virtual Switch Manager**. If t
 
 Make sure to select the correct virtual switch under the VM's settings.  
 
-#### Failed to live migrate because the action "Move" did not complete. Error Code: 0x80071398
+#### Failed to live migrate because the action "Move" didn't complete. Error Code: 0x80071398
 
 **Description**
 
@@ -79,21 +79,21 @@ Open **Windows PowerShell** with **Run as administrator**, and run the following
 
 The owner node must have all cluster nodes.
 
-Alternatively, open the Failover Cluster Manager (FCM) **** under roles, select the virtual machine like shown in the following screenshot. On the bottom tab, select **Resource**, right-click "**Virtual MachineVM1**," select the **Advanced Policies** tab, and check that all nodes are selected. Perform the same operation for "**Virtual Machine Configuration VM1.** Make sure the VM has the same virtual switch on all nodes.  
+Alternatively, open the Failover Cluster Manager (FCM) under roles, select the virtual machine like shown in the following screenshot. On the bottom tab, select **Resource**, right-click "**Virtual MachineVM1**," select the **Advanced Policies** tab, and check that all nodes are selected. Perform the same operation for "**Virtual Machine Configuration VM1.** Make sure the VM has the same virtual switch on all nodes.  
 
-#### Failed to get the network address for the destination node "Host2": A cluster Network is not available for this operation. (0x000013AB)  
+#### Failed to get the network address for the destination node "Host2": A cluster Network isn't available for this operation. (0x000013AB)  
 
 **Description**
 
 Live migration of "VM" failed.
 
-Failed to get the network address for the destination node "Host2": A cluster Network is not available for this operation. (0x000013AB).
+Failed to get the network address for the destination node "Host2": A cluster Network isn't available for this operation. (0x000013AB).
 
 **Action**
 
 0x13ab 5035 ERROR_NETWORK_NOT_AVAILABLE
 
-A cluster network is not available for this operation. winerror.h
+A cluster network isn't available for this operation. winerror.h
 
 **Resolution**
 
@@ -126,7 +126,7 @@ As Win32 error code "0x271d"
  Here's how to fix this issue:  
 
 1. Check Firewall settings and Antivirus exclusion.
-2. Check if TCP ports 6600 and 3343 (for clustering) are listening on both sides. To do this, run the following cmdlet:
+2. Check if TCP ports 6600 and 3343 (for clustering) are listening on both sides by running the following cmdlet:
 
     ```console
     C:\>netstat -ano | findstr /I /C:"6600"
@@ -156,7 +156,7 @@ Live migration of "VM" failed.
 
 Virtual machine migration operation for "VM" failed at migration destination "HYP1."
 
-"VM" Synthetic SCSI Controller: Failed to restore with Error **"** A virtual disk support provider for the specified file was not found." (0xC03A0014).
+"VM" Synthetic SCSI Controller: Failed to restore with Error "A virtual disk support provider for the specified file was not found." (0xC03A0014).
 
  "VM": Attachment "C:\ClusterStorage\library\SW_DVD9_NTRL_SQL_Svr_Standard_Edtn_2019Dec2019_64Bit_English_OEM_VL_X22-22109.ISO" failed to open because of error: "A virtual disk support provider for the specified file was not found." (0xC03A0014).  
 
@@ -166,7 +166,7 @@ Need to remove the ISO.
 
 0xc03a0014 -1069940716 ERROR_VIRTDISK_PROVIDER_NOT_FOUND
 
- A virtual disk support provider for the specified file was not found.  
+ A virtual disk support provider for the specified file wasn't found.  
 
 **Resolution**
 
@@ -218,11 +218,11 @@ For more information, see the following websites:
 - [Simplified SMB Multichannel and Multi-NIC Cluster Networks](https://docs.microsoft.com/windows-server/failover-clustering/smb-multichannel)  
 - [A live migration of a virtual machine by using Virtual Machine Manager fails with error 0x8007274D](https://support.microsoft.com/help/2853203)  
 
-#### Failed to live migrate because the hardware on the destination computer is not compatible with the hardware requirements of this virtual machine
+#### Failed to live migrate because the hardware on the destination computer isn't compatible with the hardware requirements of this virtual machine
 
 **Description**
 
-The virtual machine cannot be moved to the destination computer. The hardware on the destination computer is not compatible with the hardware requirements of this virtual machine.
+The virtual machine cannot be moved to the destination computer. The hardware on the destination computer isn't compatible with the hardware requirements of this virtual machine.
 
 **Action**
 
@@ -258,7 +258,7 @@ Here's how to fix this issue:
 
 1. Check the processor compatibility is flagged. To do this, open the **Hyper-V Manager** console and select **Virtual Machine Settings** > **Processor** > **Processor Compatibility**.
 2. Make sure the BIOS of the host has the same settings.
-3. Make sure the **Spectre** or **Meltdown** patch exposes different features of the CPU. See [Protecting guest virtual machines from CVE-2017-5715 (branch target injection)](https://docs.microsoft.com/virtualization/hyper-v-on-windows/CVE-2017-5715-and-hyper-v-vms) for more information.
+3. Make sure the **Spectre** or **Meltdown** patch exposes different features of the CPU. For more information, see [Protecting guest virtual machines from CVE-2017-5715 (branch target injection)](https://docs.microsoft.com/virtualization/hyper-v-on-windows/CVE-2017-5715-and-hyper-v-vms).
 4. Run the [Get-SpeculationControlSettings](https://support.microsoft.com/help/4074629) cmdlet and check the results. It should be the same on all nodes.  
 
 #### Failed to live migrate because "Virtual Machine Name" failed at migration source "Source Host Name"
@@ -285,7 +285,7 @@ The processing of Group Policy failed. Windows couldn't apply the registry-based
 
 In this case, restore a backup or copy the **GroupPolicy** folder in the path **C:\Windows\System32\\** to the problematic server from a working server.  
 
-#### Failed to live migrate because "vm1" could not initialize memory: Ran out of memory (0x8007000E)
+#### Failed to live migrate because "vm1" couldn't initialize memory: Ran out of memory (0x8007000E)
 
 **Description**
 
@@ -368,7 +368,7 @@ Virtual Machines running on Windows Server 2012 Hyper-V hosts may fail to start 
 
 Logon failure: the user has not been granted the requested logon type at this computer
 
-Additionally, when you perform a recovery checkpoint and try to convert it to a reference point by using the ConvertToReferencePoint method, the conversion may fail. You may receive an error message that's similar to the following:
+Additionally, when you perform a recovery checkpoint and try to convert it to a reference point by using the ConvertToReferencePoint method, the conversion may fail. You may receive an error message that's similar to the following one:
 
 Failed to write VHD attachment "VHDX_NAME" to "VM_NAME": Account restrictions are preventing this user from signing in. For example, blank passwords aren't allowed, sign-in times are limited, or a policy restriction has been enforced. (0x8007052f)
 
@@ -439,12 +439,12 @@ HRESULT = 0x80048054
 
 **Resolution**
 
-Enable or disable oplocks and lease oplocks on a qtree. If oplocks and lease oplocks are enabled at the storage system level, enable or disable oplocks and lease oplocks on an individual qtree by running the respective cmdlets:
+Enable or disable `oplocks` and lease `oplocks` on a `qtree`. If `oplocks` and lease `oplocks` are enabled at the storage system level, enable or disable oplocks and lease oplocks on an individual `qtree` by running the respective cmdlets:
 
-- **qtree oplocks qtree_name enable**  
-- **qtree oplocks qtree_name disable**  
+- `qtree oplocks qtree_name enable`  
+- `qtree oplocks qtree_name disable`
 
-If the **cifs.oplocks.enable** option is set to **On**, the qtree oplocks cmdlet for a qtree takes effect immediately. If the **cifs.oplocks.enable** option is set to **Off**, the qtree oplocks command doesn't take effect until you change the option to **On**.
+If the **cifs.oplocks.enable** option is set to **On**, the `qtree oplocks` cmdlet for a qtree takes effect immediately. If the **cifs.oplocks.enable** option is set to **Off**, the `qtree oplocks` command doesn't take effect until you change the option to **On**.
 
 Here's how to fix this issue:
 

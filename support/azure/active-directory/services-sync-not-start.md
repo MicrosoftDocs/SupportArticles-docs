@@ -24,7 +24,7 @@ You discover that one or more Azure Active Directory synchronization services do
 2. In the list of services, right-click **Microsoft Azure AD Sync**, and then click **Properties**.
 3. Click the **Log On** tab.
 4. Make sure that the account is set to the directory synchronization service account. For example: AAD_<*nnnnnnnnnnnn*> or MSOL_<*nnnnnnnnnnnn*>.
-5. If the account is not set to the directory synchronization service account, select the directory synchronization service account.
+5. If the account isn't set to the directory synchronization service account, select the directory synchronization service account.
 
     The directory synchronization service account is located in the Users organizational unit (OU) of the forest domain. If this account is in another location, move it to the Users OU of the forest domain.
 
@@ -37,12 +37,12 @@ You discover that one or more Azure Active Directory synchronization services do
 2. In the list of services, right-click **Windows Azure Active Directory Synchronization Service**, and then select **Properties**.
 3. Select the **Log On** tab.
 4. Make sure that the account is set to the directory synchronization service account. For example: AAD_<*nnnnnnnnnnnn*> or MSOL_<*nnnnnnnnnnnn*>.
-5. If the account is not set to the directory synchronization service account, select the directory synchronization service account.
+5. If the account isn't set to the directory synchronization service account, select the directory synchronization service account.
 
     The directory synchronization service account is located in the Users OU of the forest domain. If this account is in another location, move it to the Users OU of the forest domain.
 
     > [!NOTE]
-    > If the account does not exist, run the Azure Active Directory Synchronization tool Configuration Wizard.
+    > If the account doesn't exist, run the Azure Active Directory Synchronization tool Configuration Wizard.
 6. Repeat steps 2-5 for the Forefront Identity Manager Synchronization Service.  
 
 ## Resolution 2: Make sure that the directory synchronization account is set to log on as a service in Group Policy
