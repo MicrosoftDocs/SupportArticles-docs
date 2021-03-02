@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2001093
 
 ## Symptoms
 
-- On a Windows-based computer that's hosting Active Directory domain controllers, the DNS server roles stop responding for 15 to 25 minutes. This issue occurs after the **Preparing network connections** message is displayed and before the Windows logon prompt (Ctrl+Alt+Del) is displayed.
+- On a Windows-based computer that's hosting Active Directory domain controllers, the DNS server roles stop responding for 15 to 25 minutes. This issue occurs after the **Preparing network connections** message is displayed, and before the Windows logon prompt (Ctrl+Alt+Del) is displayed.
 - The following DNS Event ID 4013 is logged in the DNS event log of domain controllers that are hosting the DNS server role after Windows starts:
 
     > Event Type: Warning  
@@ -63,7 +63,7 @@ _Original KB number:_ &nbsp; 2001093
   - DC2 is configured to use DC1 for preferred DNS and itself for alternate DNS.
   - All domain controllers have uninterruptible power supplies (UPS) and electrical generator backups.
   - The data center experiences frequent power outages of 2 to 10 hours. UPS devices keep the domain controllers operating until generators supply power, but they can't run the HVAC system. Temperature protection built into server class computers shuts down the domain controllers when internal temperatures reach manufacturer limits.
-  - When power is eventually restored, the domain controllers hang for 20 minutes. This issue occurs after **Preparing network connections** is displayed and before the logon prompt is displayed.
+  - When power is eventually restored, the domain controllers hang for 20 minutes. This issue occurs after **Preparing network connections** is displayed, and before the logon prompt is displayed.
   - DNS Event ID 4013 is logged in the DNS event log.
 
    Opening the DNS management console (DNSMGMT.MSC) fails and generates the following error message:
@@ -81,7 +81,7 @@ _Original KB number:_ &nbsp; 2001093
   - The domain controller has no alternative DNS server specified or points to a domain controller over a wide-area network (WAN) link.
   - The domain controller is restarted because of a power outage.
   - During restart, the WAN link may not be operational.
-  - When the domain controller is started, it may hang for 20 minutes. This issue occurs after **Preparing network connections** is displayed and before the logon prompt is displayed.
+  - When the domain controller is started, it may hang for 20 minutes. This issue occurs after **Preparing network connections** is displayed, and before the logon prompt is displayed.
   - DNS Event ID 4013 is logged in the DNS event log.
   - Opening the DNS management console (DNSMGMT.MSC) fails and generates the following error message:
 
@@ -103,7 +103,7 @@ In an attempt to boot with the latest DNS zone contents, Microsoft DNS servers t
 - forest-wide DNS application partition
 - domain-wide DNS application partition
 
-And these domain controllers can experience a 15-20 minute startup delay. The existence of additional partitions increases the startup delay.
+And these domain controllers can experience a 15-20 minute startup delay. The existence of extra partitions increases the startup delay.
 
 DNS Event ID 4013 in the DNS event log indicates that DNS service startup was delayed. It's because inbound replication of Active Directory partitions hadn't occurred.
 
@@ -129,7 +129,7 @@ Value name:  Repl Perform Initial Synchronizations
 Value type:  REG_DWORD  
 Value data: 0
 
-This configuration change isn't recommended for use in production environments or in any environment on an ongoing basis. The use of `Repl Perform Initial Synchronizations` should be used only in critical situations to resolve temporary and specific problems. The default setting should be restored after such problems are resolved.
+This configuration change isn't recommended for use in production environments, or in any environment on an ongoing basis. The use of `Repl Perform Initial Synchronizations` should be used only in critical situations to resolve temporary and specific problems. The default setting should be restored after such problems are resolved.
 
 Other feasible options include:
 
@@ -141,7 +141,7 @@ Other feasible options include:
 
   Configuring domain controllers to point to a single DNS server's IP address, including the 127.0.0.1 loopback address, represents a single point of failure. This setting is tolerable in a forest with only one domain controller, but not in forests with multiple domain controllers.
 
-  Hub-site domain controllers should point to DNS servers in the same site as them for preferred and alternate DNS server and then finally to itself as an additional alternate DNS server.
+  Hub-site domain controllers should point to DNS servers in the same site as them for preferred and alternate DNS server and then finally to itself as another alternate DNS server.
 
   Branch site domain controllers should configure the preferred DNS server IP address to point to a hub-site DNS server, the alternate DNS server IP address to point to an in-site DNS server or one in the closest available site, and finally to itself using the 127.0.0.1 loopback address or current static IP address.
 
@@ -166,7 +166,7 @@ Other feasible options include:
 
 - Make sure that destination domain controllers can resolve source domain controllers using DNS (for example, avoid fallback).
 
-  Your should ensure that domain controllers can successfully resolve the guided CNAME records to host records of current and potential source domain controllers. Doing so can avoid high latency that's introduced by name resolution fallback logic.
+  You should ensure that domain controllers can successfully resolve the guided CNAME records to host records of current and potential source domain controllers. Doing so can avoid high latency that's introduced by name resolution fallback logic.
 
   Domain controllers should point to DNS servers that:
 
@@ -178,7 +178,7 @@ Other feasible options include:
 
 - Optimize domain controllers for name resolution fallback.
 
-  The inability to configure DNS properly so that domain controllers could resolve the domain controller CNAME GUID records to host records in DNS was very common. To ensure end-to-end replication of Active Directory partitions, Windows Server 2003 SP1 and later domain controllers were modified to perform name resolution fallback:
+  The inability to configure DNS properly so that domain controllers could resolve the domain controller CNAME GUID records to host records in DNS was common. To ensure end-to-end replication of Active Directory partitions, Windows Server 2003 SP1 and later domain controllers were modified to perform name resolution fallback:
 
   - from domain controller CNAME GUID to fully qualified hostname.
   - from fully qualified hostname to NetBIOS computer name.
@@ -187,7 +187,7 @@ Other feasible options include:
   - a destination domain controller couldn't resolve the domain controller CNAME GUID record to a host record.
   - name resolution fallback is occurring.
 
-  WINS, HOST files, and LMHOST files can all be configured so that destination domain controllers can resolve the names of current and potential source domain controllers. Of the three solutions, the use of WINS is more scalable since WINS supports dynamic updates.
+  WINS, HOST files, and LMHOST files can all be configured. So destination domain controllers can resolve the names of current and potential source domain controllers. Of the three solutions, the use of WINS is more scalable, because WINS supports dynamic updates.
 
   The IP addresses and names for computers inevitably become stale. This issue causes static entries in HOST and LMHOST files to become invalid over time. When this issue occurs, queries for one domain controller may be incorrectly resolved to another domain controller. And no name query is observed in a network trace.
 
@@ -219,7 +219,7 @@ Other feasible options include:
 
   - The installation of some hotfixes, service packs, and applications may require a reboot.
   - Some customers reboot domain controllers on a scheduled basis (every seven days, every 30 days).
-  - Schedule reboots, and the installation of software that requires a reboot, in a smart way to prevent the only DNS server or potential source replication partner that a destination domain controller points to for name resolution from being rebooted at the same time.
+  - Schedule reboots, and the installation of software that requires a reboot, in a smart way. Doing so to prevent the only DNS server, or potential source replication partner that a destination domain controller points to for name resolution, from being rebooted at the same time.
 
   If Windows Update or management software is installing software that requires reboot, stagger the installs on targeted domain controllers so that half the available DNS servers that domain controllers point to for name resolution reboot at the same time.
 
@@ -232,7 +232,7 @@ Other feasible options include:
 
 May 10, 2010 testing by the Active Directory development team:
 
-DNS waits for NTDS and it can't start until the initial replication of the directory has been completed. Because up-to-date DNS data might not be replicated onto the domain controller yet. On the other hand, NTDS needs DNS to resolve the IP address of the source domain controller for the replication. If DC1 points to DC2 as its DNS server and DC2 points to DC1 as its DNS server and both DC1 and DC2 reboot simultaneously, there will be a slow startup because of this mutual dependency. The root cause of this slow startup is DNSQueryTimeouts.
+DNS waits for NTDS and it can't start until the initial replication of the directory has been completed. It's because up-to-date DNS data might not be replicated onto the domain controller yet. On the other hand, NTDS needs DNS to resolve the IP address of the source domain controller for the replication. If DC1 points to DC2 as its DNS server, and DC2 points to DC1 as its DNS server, and both DC1 and DC2 reboot simultaneously, there will be a slow startup because of this mutual dependency. The root cause of this slow startup is DNSQueryTimeouts.
 
 If the DNS Server service runs well when NTDS starts, NTDS takes only two DNS queries to resolve the IP address of the source domain controller:
 
