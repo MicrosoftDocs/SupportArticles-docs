@@ -21,8 +21,9 @@ Consider the following scenario:
 
  In this scenario, the upgrade may fail or become blocked and require direct console access.
 
-> [!NOTE]
-> Microsoft supports in-place system upgrades for certain versions of Windows Azure VMs, as follows:
+## Cause
+
+In-place system upgrades are supported for specific versions of Azure Windows VMs. We’re working to broaden support of in-place system upgrade (as a Feature Update) to other versions soon.
 
 ### Windows versions supported for in-place system upgrades:
 
@@ -45,10 +46,6 @@ Consider the following scenario:
 - Windows 7 Enterprise
 - Windows Server, version 1709
 - Windows Server, version 1803
-
-## Cause
-
-Microsoft supports in-place system upgrades for only specific versions of Windows Azure VMs. We’re working to broaden support of in-place system upgrade (as a Feature Update) to other versions soon.
 
 ### Supported in-place system upgrade process (Feature Update) for Windows 10 and Windows 10 Multi-session
 
