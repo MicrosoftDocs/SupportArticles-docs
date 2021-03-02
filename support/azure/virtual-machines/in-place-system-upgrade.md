@@ -72,7 +72,7 @@ To work around an Azure VM that’s running a version of the operating system th
 
 ### Method 1: Deploy a newer system and migrate the workload
 
- Create an Azure VM that runs a supported version of the operating system, and then migrate the workload. To do this, you will use Windows Server migration tools. For instructions to migrate Windows Server roles and features , see the following Microsoft Ignite topic:
+ Create an Azure VM that runs a supported version of the operating system, and then migrate the workload. To do this, you will use Windows Server migration tools. For instructions to migrate Windows Server roles and features, see the following Microsoft Ignite topic:
 
 [Install, use, and remove Windows Server migration tools](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134202(v=ws.11)?redirectedfrom=MSDN)
 
