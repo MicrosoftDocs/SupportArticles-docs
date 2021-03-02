@@ -232,7 +232,7 @@ Other feasible options include:
 
 May 10, 2010 testing by the Active Directory development team:
 
-DNS waits for NTDS and it can't start until the initial replication of the directory has been completed. It's because up-to-date DNS data might not be replicated onto the domain controller yet. On the other hand, NTDS needs DNS to resolve the IP address of the source domain controller for the replication. If DC1 points to DC2 as its DNS server, and DC2 points to DC1 as its DNS server, and both DC1 and DC2 reboot simultaneously, there will be a slow startup because of this mutual dependency. The root cause of this slow startup is DNSQueryTimeouts.
+DNS waits for NTDS and it can't start until the initial replication of the directory has been completed. It's because up-to-date DNS data might not be replicated onto the domain controller yet. On the other hand, NTDS needs DNS to resolve the IP address of the source domain controller for the replication. Assume that DC1 points to DC2 as its DNS server, and DC2 points to DC1 as its DNS server. When both DC1 and DC2 reboot simultaneously, there will be a slow startup because of this mutual dependency. The root cause of this slow startup is DNSQueryTimeouts.
 
 If the DNS Server service runs well when NTDS starts, NTDS takes only two DNS queries to resolve the IP address of the source domain controller:
 
@@ -247,7 +247,7 @@ If the DNS Server service isn't available when NTDS starts, NTDS will need to se
 - four for fully qualified name
 - two for single-label name
 
-Latency for each DNS query is controlled by DNSQueryTimeouts. By default, DNSQueryTimeouts is set to **1 1 2 4 4**. It means that DNS client will wait 12 (1 + 1 + 2 + 4 + 4) seconds for the DNS server response. Each naming context source takes 120 seconds to resolve the IP address. If there are five naming contexts (Configuration, Schema, domain, ForestDnsZones, DomainDnsZones) and one single replication source, then it will take 850 (170 X 5) seconds, or greater than 14 minutes, for NTDS to finish initial replication.
+Latency for each DNS query is controlled by DNSQueryTimeouts. By default, DNSQueryTimeouts is set to **1 1 2 4 4**. It means that DNS client will wait 12 (1 + 1 + 2 + 4 + 4) seconds for the DNS server response. Each naming context source takes 120 seconds to resolve the IP address. Assume that there are five naming contexts (Configuration, Schema, domain, ForestDnsZones, DomainDnsZones), and one single replication source. In this scenario, it will take 850 (170 X 5) seconds, or greater than 14 minutes, for NTDS to finish initial replication.
 
 Several tests were done to validate the above behavior.
 
