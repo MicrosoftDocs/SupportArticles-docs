@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4039613
 
 ## Symptoms
 
-If a user is move to Microsoft 365 and add a delegate who has a mailbox in the on-premises environment, the delegate can't send on behalf of the user. The folder access and meeting invite-forwarding rule work as expected.
+If your mailbox is migrated to Exchange Online and add a delegate who has the mailbox in the on-premises environment, the delegate can't send emails on behalf of you with the mailbox in Exchange Online. The folder access and meeting invite-forwarding rule work as expected.
 
 ## Cause
 
