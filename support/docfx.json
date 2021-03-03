@@ -48,8 +48,7 @@
     "globalMetadata": {
       "breadcrumb_path": "/support/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/SupportArticles-docs", 
+      "feedback_system": "None", 
       "searchScope": ["Troubleshoot"]
     },
 
