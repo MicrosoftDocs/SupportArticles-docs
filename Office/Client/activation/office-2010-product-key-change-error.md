@@ -1,5 +1,6 @@
 ---
 title: Office 2010 product key change error step by step
+description: Fixes an issue in which the previously installed version of Office 2010 prompts the user to change the product key.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -79,7 +80,7 @@ This issue can be resolved by removing the Office 2010 registry values.
 ## Reference materials
 
 - [2186281: Overview of product code GUID numbering in Office 2010](https://support.microsoft.com/kb/2186281)
-- [895456: How to change the product key for Office XP, Office 2003 and 2007 Office Systems](https://support.microsoft.com/kb/895456)
+- [Change your Office product key](https://support.microsoft.com/office/change-your-office-product-key-d78cf8f7-239e-4649-b726-3a8d2ceb8c81)
 
 ## Send us feedback
 

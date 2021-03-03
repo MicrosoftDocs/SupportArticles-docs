@@ -45,7 +45,7 @@ This issue occurs because the size limit of a history conversation file is 1 meg
 
 ## Resolution
 
-To resolve this issue, make sure that all Lync clients are updated with the [November 10, 2015, security update (KB3101496)](https://support.microsoft.com/help/3101496)  for Lync 2013 (Skype for Business). Lync 2010 clients will have to first be upgraded to Lync 2013 and then updated with the November 2015 security update KB3101496.
+To resolve this issue, make sure that all Lync clients are updated with the [November 10, 2015, security update (KB3101496)](https://support.microsoft.com/help/3101496) for Lync 2013 (Skype for Business). Lync 2010 clients will have to first be upgraded to Lync 2013 and then updated with the November 2015 security update KB3101496.
 
 ## More information
 

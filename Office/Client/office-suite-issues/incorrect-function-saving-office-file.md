@@ -46,10 +46,6 @@ For more information about how to do this with your third-party CD-ROM recording
 
 ## More Information
 
-For more information about the CD-ROM writing function that is available in some Microsoft Windows operating systems, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[317525](https://support.microsoft.com/help/317525) Description of the CD-ROM recording feature in Windows Server 2003
-
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 
 The information and the solution in this document represent the current view of Microsoft Corporation on these issues as of the date of publication. This solution is available through Microsoft or through a third-party provider. Microsoft does not specifically recommend any third-party provider or third-party solution that this article might describe. There might also be other third-party providers or third-party solutions that this article does not describe. Because Microsoft must respond to changing market conditions, this information should not be interpreted to be a commitment by Microsoft. Microsoft cannot guarantee or endorse the accuracy of any information or of any solution that is presented by Microsoft or by any mentioned third-party provider.
