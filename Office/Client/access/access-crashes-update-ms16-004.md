@@ -136,8 +136,6 @@ For more information about this security update, see the following Microsoft Kno
 
 - [Microsoft Security Bulletin MS16-004 - Critical](https://technet.microsoft.com/library/security/ms16-004)
 
-- [MS16-004: Description of the security update for the 2007 Microsoft Office Suite: January 12, 2016](https://support.microsoft.com/help/2881067)
-
 - [MS16-004: Description of the security update for Office 2010: January 12, 2016](https://support.microsoft.com/help/2881029)
 
 - [MS16-004: Description of the security update for Office 2013: January 12, 2016](https://support.microsoft.com/help/3039794)

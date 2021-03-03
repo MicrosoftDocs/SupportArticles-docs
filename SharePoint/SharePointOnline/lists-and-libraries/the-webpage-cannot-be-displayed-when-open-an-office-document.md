@@ -47,7 +47,7 @@ In this scenario, when you try to open a document from SharePoint Online by usin
 
 To work around this issue, remove the Microsoft SharePoint Foundation Support program component from the Office 2013 installation on the affected computer or computers. To do this, follow the "Install or remove individual Office program components" section of [Install or remove individual Office programs and components](https://support.office.com/article/1b8f3c9b-bdd2-4a4f-8c88-aa756546529d).
 
-After you complete these steps, repair 2007 Office. For more information about how to repair the installation, click the following article number to go to [How to install the individual 2007 Office features or to repair the installed 2007 Office programs](https://support.microsoft.com/help/924611).
+After you complete these steps, repair 2007 Office. For more information about how to repair the installation, see [Repair an Office application](https://support.microsoft.com/office/repair-an-office-application-7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b).
 
 > [!NOTE]
 > When you follow these steps, set the **Microsoft SharePoint Foundation Support** component within Office Tools to **Not Available**. This solution doesn't apply to scenarios in which SharePoint Designer 2013 is installed on the affected computer.

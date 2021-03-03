@@ -33,6 +33,7 @@ This article lists the known issues for Microsoft Teams Rooms, by feature area.
 | Application not launching |  After updating to application version 4.4.41.0, the system boots to black screen, or go to the logon screen after few minutes. | Follow the steps in [Microsoft Teams Rooms application does not start after update to version 4.4.41.0](https://docs.microsoft.com/microsoftteams/troubleshoot/teams-administration/teams-rooms-app-wont-start-after-update) to fix this issue.  | None |
 |  App out of date         |    The Microsoft Teams Rooms console shows a "system config out of date" error.                |   [Use the Microsoft Teams Rooms recovery tool](https://docs.microsoft.com/MicrosoftTeams/rooms/recovery-tool)             |  None |
 |  Device updated to unsupported version of Windows 10   |    Windows 10 device updated from version 1803 to version 1809, which is not supported. The supported version is 1903. |   This can happen if the [Group Policy or MDM setting for DeferFeatureUpdatesPeriodinDays](https://docs.microsoft.com/windows/deployment/update/waas-configure-wufb) setting, which lets you defer feature updates for a specified number of days, is set to the maximum of 365 days. <br><br> Windows 10 version 1809 isn't supported with Microsoft Teams Rooms, while version 1903 is supported. However, as of March 27, 2020, version 1809 is over 365 days old. If this setting isn't changed, Windows attempts to install version 1809, which may cause issues with Microsoft Teams Rooms.<br><br>To avoid this situation, **remove** any Group Policy or MDM setting for deferring updates. This allows Windows to update to the latest, supported OS version. <br><br>**IMPORTANT** The Group Policy or MDM setting must be **removed** (left unconfigured) and **not set to 0**. If the policy is set to 0, Windows takes the latest available version which may not be supported. |  None |
+|||||
 
 
 
@@ -42,13 +43,15 @@ This article lists the known issues for Microsoft Teams Rooms, by feature area.
 | Issue title |  Behavior \/ Symptom | Known workaround | KB Article |
 |  ---        |      ---             |   ---            | --- |
 |Virtual keyboard missing   | The virtual keyboard doesn't appear when you need to enter information in Microsoft Teams Rooms. This issue occurs in Windows 10, version 1903. | Install 2020-04 Cumulative Update for Windows 10, version 1903 for x64-based Systems through Windows Updates.  | None | 
+|||||
 
 <a name="Hardware"> </a>  
 ## Hardware
 
 | Issue title |  Behavior \/ Symptom | Known workaround | KB Article |
 |  ---        |      ---             |   ---            |   --- |
-| Monitors not detected | When you run Microsoft Teams Rooms on a Surface Pro (Model 2017) device, monitors are not detected. |  Hold down the Surface Pro power button for 20 or more seconds. When you do this, the device restarts and clears the graphics cache. |[KB4055681](https://support.microsoft.com/help/4055681/monitors-are-not-detected-when-you-run-skype-room-systems-on-a-surface)       | 
+| Monitors not detected | When you run Microsoft Teams Rooms on a Surface Pro (Model 2017) device, monitors are not detected. |  Hold down the Surface Pro power button for 20 or more seconds. When you do this, the device restarts and clears the graphics cache. |  None  |
+|||||
 
 <a name="Limits"> </a>
 ## Limitations and expected behaviors

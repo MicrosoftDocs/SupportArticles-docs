@@ -63,11 +63,8 @@ It's assumed that the ISA/TMG firewall and reverse proxy rule are implemented co
 - The AD FS server must receive a faithful copy of SAML requests from the Internet client.    
 - Internet clients must receive faithful copies of SAML responses as if the clients were directly attached to the on-premises AD FS server.    
 
-For information about common problems that can cause this configuration to fail, see the following resources: 
+For information about common problems that can cause this configuration to fail, see the following resource:
 
-- The following Microsoft Knowledge Base article 
-
-   [2535789](https://support.microsoft.com/help/2535789) Non-browser clients can't sign in after you set up AD FS in a "firewall-published" configuration    
 - The following Microsoft TechNet article:
 
    [Using a Third-Party Proxy as a Replacement to an AD FS 2.0 Federation Server Proxy](https://technet.microsoft.com/library/hh852618%28v=ws.10%29.aspx)   
