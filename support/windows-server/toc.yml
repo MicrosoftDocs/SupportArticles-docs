@@ -2186,6 +2186,8 @@
       href: ./remote/remote-desktop-listener-certificate-configurations.md
     - name: Deactivate or reactivate a license server
       href: ./remote/deactivate-reactivate-license-server.md
+    - name: Error after configuration of RD Connection Broker servers for high availability
+      href: ./remote/error-configuration-rd-connection-brokers-high-availability.md
     - name: Event ID 4105 when RD Licensing runs
       href: ./remote/terminalservices-licensing-event-4105.md
     - name: Event ID 44 on an RDS licensing server

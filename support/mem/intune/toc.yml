@@ -30,6 +30,8 @@
     href: deploy-windows-update-packages-as-win32-apps.md
   - name: Error when you open a web app on iOS 
     href: invalid-address-open-web-app.md
+  - name: Error 0x87D13BA2 when you deploy a macOS LOB app
+    href: error-0x87d13ba2-deploy-macos-lob-app.md  
   - name: Fingerprint authentication not prompted for policy-managed apps
     href: no-prompt-for-fingerprint-identity.md
   - name: macOS LOB apps aren't deployed

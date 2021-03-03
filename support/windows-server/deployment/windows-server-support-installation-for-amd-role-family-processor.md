@@ -15,7 +15,7 @@ ms.technology: windows-server-deployment
 ---
 # Windows Server support and installation instructions for the AMD Rome family of processors
 
-This article introduces the Windows Server operating system (OS) install instructions and support statements for AMD EPYC 7xx2 processors. Additionally, this article describes several known limitations to the support for these processors.
+This article introduces the Windows Server operating system (OS) installation instructions and support statements for AMD EPYC 7xx2 processors. Additionally, this article describes several known limitations to the support for these processors.
 
 _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4514607

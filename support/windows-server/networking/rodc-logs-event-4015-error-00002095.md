@@ -1,6 +1,6 @@
 ---
 title: RODC logs DNS event 4015 with error code 00002095
-description: Describes event ID 4015 that occurs when you run the Domain Name Service (DNS) role on a Read-Only Domain Controller (RODC) and a Windows 2008 writable Domain Controller (hosting DNS) isn't accessible.
+description: Describes event ID 4015 that occurs when you run the Domain Name Service (DNS) role on a Read-Only Domain Controller (RODC) and a writable Domain Controller (hosting DNS) isn't accessible.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,14 +15,14 @@ ms.technology: networking
 ---
 # RODC logs DNS event 4015 every three minutes with error code 00002095
 
-This article describes event ID 4015 that occurs when you run the Domain Name Service (DNS) role on a Read-Only Domain Controller (RODC) and a Windows 2008 writable Domain Controller (hosting DNS) isn't accessible.
+This article describes event ID 4015 that occurs when you run the Domain Name Service (DNS) role on a Read-Only Domain Controller (RODC) and a writable Domain Controller (hosting DNS) isn't accessible.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 969488
 
 ## Symptoms
 
-If we're running the Domain Name Service (DNS) role on a Read-Only Domain Controller (RODC) and a Windows 2008 writable Domain Controller (hosting DNS) isn't accessible, we see the following event being logged on the RODC.
+If we're running the Domain Name Service (DNS) role on a Read-Only Domain Controller (RODC) and a writable Domain Controller (hosting DNS) isn't accessible, we see the following event being logged on the RODC.
 
 > Log Name: DNS Server  
 Source: Microsoft-Windows-DNS-Server-Service  
@@ -49,7 +49,7 @@ Once a DC is returned from the DSGETDC call, it uses the result to search for th
 
 Possible causes of the 4105 error:
 
-1) No writeable Windows 2008 DC is accessible, or none returned from DSGETDC call
+1) No writeable DC is accessible, or none returned from DSGETDC call
 
 2) The DSGETDC call was successful, but the DC returned doesn't have the DNS Server Role installed, or doesn't register an NS record in DNS.
 
@@ -63,12 +63,13 @@ Where `DOMAIN.COM` is your domain name.
 
 ## Resolution
 
-To resolve either cause above, ensure that a writable Windows 2008 DC is accessible from the RODC, that the DNS Server Role is installed on that DC, and that the NS record is registered in DNS for the Windows 2008 writable DC.
+To resolve either cause above, ensure that a writable DC is accessible from the RODC, that the DNS Server Role is installed on that DC, and that the NS record is registered in DNS for the writable DC.
 
 ## More information
 
 For more information about the DSGETDC function, see TechNet article:
- [DsGetDcNameA function](https://msdn.microsoft.com/library/ms675983%28vs.85%29.aspx)
+
+[DsGetDcNameA function](/windows/win32/api/dsgetdc/nf-dsgetdc-dsgetdcnamea)
 
 ## Disclaimer
 
