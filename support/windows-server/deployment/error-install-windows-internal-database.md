@@ -1,6 +1,6 @@
 ---
 title: MSSQL$MICROSOFT##WID service was unable to log on as NT SERVICE\MSSQL$MICROSOFT##WID error when you install WID in Windows Server 2012
-description: Describes an issue in which installation of WID fails on a computer that's running Windows Server 2012. Provides workarounds.
+description: Describes an issue where you can't install Windows Internal Database on a computer running Windows Server 2012. Provides workarounds.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,14 +15,14 @@ ms.technology: windows-server-deployment
 ---
 # Error when you install WID in Windows Server 2012: MSSQL$MICROSOFT##WID service was unable to log on as NT SERVICE\MSSQL$MICROSOFT##WID
 
-This article provides workarounds for an issue in which installation of WID fails on a computer that's running Windows Server 2012.
+This article works around an issue where you can't install Windows Internal Database (WID) on a computer running Windows Server 2012.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2832204
 
 ## Symptoms
 
-When you install Active Directory Federation Services (ADFS) by using the Add Roles and Features Wizard in Windows Server 2012, the Windows Internal Database (WID) installation fails. Additionally, you receive the following error message:
+When you install Active Directory Federation Services (ADFS) by using the Add Roles and Features Wizard in Windows Server 2012, the WID installation fails. Additionally, you receive the following error message:
 
 > The MSSQL$MICROSOFT##WID service was unable to log on as NT SERVICE\MSSQL$MICROSOFT##WID with the currently configured password due to the following error:  
 Logon failure: the user has not been granted the requested logon type at this computer.  
@@ -45,7 +45,7 @@ When WID is installed, the NT SERVICE\MSSQL$MICROSOFT##WID local virtual account
 
 To work around the issue, use one of the following methods:
 
-- Assign the **Log on as a service** user right to NT SERVICE\ALL SERVICES in the GPO that defines the user right.
+- Assign the user right **Log on as a service** to NT SERVICE\ALL SERVICES in the GPO that defines the user right.
 - Exclude the computer from the GPO that defines the user right.
 
 ## More information
