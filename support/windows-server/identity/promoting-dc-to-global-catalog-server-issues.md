@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 910204
 
 This article discusses the following topics:
 
-- The event messages that are logged in the Directory Services log for Windows Server 2003  
+- The event messages that are logged in the Directory Services log for Windows Server  
 - The possible causes of the global catalog promotion failure  
 - Ways to determine the cause of the global catalog promotion failure  
 - Ways to resolve the global catalog promotion failure  
