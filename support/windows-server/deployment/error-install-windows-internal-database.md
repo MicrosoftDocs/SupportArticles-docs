@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;2832204
 
 ## Symptoms
 
-When you install Active Directory Federation Services (ADFS) by using the Add Roles and Features Wizard in Windows Server 2012, the Windows Internal Database (WID) installation fails, and you receive the following error message:
+When you install Active Directory Federation Services (ADFS) by using the Add Roles and Features Wizard in Windows Server 2012, the Windows Internal Database (WID) installation fails. Additionally, you receive the following error message:
 
 > The MSSQL$MICROSOFT##WID service was unable to log on as NT SERVICE\MSSQL$MICROSOFT##WID with the currently configured password due to the following error:  
 Logon failure: the user has not been granted the requested logon type at this computer.  
@@ -39,7 +39,7 @@ If you have already assigned this user right to the service account, and the use
 
 ## Cause
 
-When WID is installed, the NT SERVICE\MSSQL$MICROSOFT##WID local virtual account is created, and this account is granted the **Log on as a service** user right by local Group Policy. If the local Group Policy setting is overwritten by a Group Policy Object (GPO) that is linked to a site, domain, or organizational unit, the NT SERVICE\MSSQL$MICROSOFT##WID account doesn't have the necessary user rights. So WID can't be installed.
+When WID is installed, the NT SERVICE\MSSQL$MICROSOFT##WID local virtual account is created. This account is granted the **Log on as a service** user right by local Group Policy. If a Group Policy Object (GPO) that's linked to a site, domain, or organizational unit overwrites the local Group Policy setting, the NT SERVICE\MSSQL$MICROSOFT##WID account doesn't have the necessary user rights. So WID can't be installed.
 
 ## Workaround
 
