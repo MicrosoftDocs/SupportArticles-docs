@@ -10,6 +10,17 @@ Use the following information to help you troubleshoot deployment of Simple Cert
 
 This article references Step 1 of the [SCEP communication flow overview](troubleshoot-scep-certificate-profiles.md).
 
+## Verify that the trusted certificate profile is applied correctly
+
+The trusted certificate profile must be applied to the same entity, that the SCEP certificate profile is applied.
+
+You cannot mix user and device assignments.
+
+| Trusted certificate profiles assigned | to user | to device | both |
+| --- | --- | --- | --- |
+| SCEP Profile assigned to user | Yes | No | Yes |
+| SCEP Profile assigned to device | No | Yes | No |
+
 ## Android
 
 SCEP certificate profiles for Android come down to the device as a SyncML and are logged in the [OMADM log](troubleshoot-scep-certificate-profiles.md#logs-for-android-devices).
