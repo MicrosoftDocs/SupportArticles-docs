@@ -40,10 +40,11 @@ Error message 3
 
 ##  Resolution
 
-To fix this issue, disable the restriction on opening documents of certain types. 
-### Method 1: Disable the restriction by yourself
-**Word 2013 and Word 2010**
+To fix this issue, disable the restriction on opening documents of certain types.
 
+### Method 1: Disable the restriction by yourself
+
+**Word 2013 and Word 2010**
  
 1. Click the **File** tab.    
 2. Under **Help**, click **Options**.
@@ -83,10 +84,8 @@ To disable or enable the file restriction yourself, follow these steps:
 6. In the **Value data** box, type 0, and then click **OK**.    
 7. On the **File** menu, click **Exit** to exit Registry Editor.    
 
-**Word 2003**
-
-For more information about how to disable the restriction in Word 2003, see [Information about certain file types that are blocked after you install Office 2003 Service Pack 3.](https://support.microsoft.com/help/938810)    
 ### Method 2 Using Administrative Template files and the Office Customization Tool to disable the restriction
+
 #### Word 2013, Word 2010, and Word 2007  
 
 Download the Administrative Template files and Office Customization Tool from the following websites: 

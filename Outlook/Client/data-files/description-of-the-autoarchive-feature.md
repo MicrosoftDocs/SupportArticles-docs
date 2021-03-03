@@ -25,8 +25,6 @@ search.appverid: MET150
 ---
 # Description of the AutoArchive feature in Outlook
 
-For a Microsoft Outlook 2002 version of this article, see [290847](https://support.microsoft.com/help/290847).
-
 _Original KB number:_ &nbsp; 830119
 
 ## More information

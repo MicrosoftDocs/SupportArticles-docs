@@ -34,6 +34,9 @@ When the Litigation Hold feature is enabled for users in Microsoft Office 365 De
 This issue occurs when the Litigation Hold feature prevents email messages in the Recoverable Items folder from being deleted. When the Recoverable Items folder reaches the set quota, the customer receives a report of the user who is on litigation hold and the status of the Recoverable Items folder storage.
 
 This issue may also occur if a request has been made to archive mailboxes for electronic discovery purposes.
+
+## Resolution
+
 To resolve this issue, follow these steps:
 
 1. To review per-folder statistics for an affected mailbox, including a basic analysis of duplicate items, use the *-* IncludeAnalysis switch with the Get-MailboxFolderStatistics cmdlet. For example:
@@ -70,4 +73,4 @@ For more information about mailbox plans and quotas, see [Mailbox is over the si
 
 Exchange 2010
 
-Please escalate the case to Microsoft. You may [submit a support incident online](https://support.microsoft.com/help/2694621) to Microsoft Online Services Support. Or, you can [contact Microsoft Online Services Support by telephone](https://support.microsoft.com/help/2573289).
+Please escalate the case to Microsoft.

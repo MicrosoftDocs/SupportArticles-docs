@@ -188,7 +188,7 @@ For more information, see the following articles:  
 
 #### Help users recover missing message
 
-- Check whether an item was deleted, and then recover the item if it's necessary. To do this, see[How to recover deleted items in Office 365 dedicated/ITAR](https://support.microsoft.com/help/3139942).
+- Check whether an item was deleted, and then recover the item if it's necessary. To do this, see [Recover deleted messages in a user's mailbox in Exchange Online](/exchange/recipients-in-exchange-online/manage-user-mailboxes/recover-deleted-messages).
 
 - Search and investigate missing items. To do this, see the following articles:
   - [How to use mailbox audit logs in Office 365 dedicated](https://support.microsoft.com/help/4021960/how-to-use-mailbox-audit-logs-in-office-365-dedicated)
