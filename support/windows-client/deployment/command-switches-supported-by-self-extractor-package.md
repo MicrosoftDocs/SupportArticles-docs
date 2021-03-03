@@ -1,6 +1,6 @@
 ---
 title: Command-line switches supported by Self-Extractor packages
-description: Describes the command-line switches that are supported by a software installation package, an update package, or a hotfix package that was created by using Microsoft Self-Extractor.
+description: Describes the command-line switches supported by a software installation package, an update package, or a hotfix package created by using Microsoft Self-Extractor.
 ms.date: 09/23/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,9 +13,9 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
 ms.technology: windows-client-deployment
 ---
-# Command-line switches that are supported by a software installation package, an update package, or a hotfix package that was created by using Microsoft Self-Extractor
+# Command-line switches supported by a software installation package, an update package, or a hotfix package created by Microsoft Self-Extractor
 
-This article describes the command-line switches that are supported by a software installation package, an update package, or a hotfix package that's created by using Microsoft Self-Extractor.
+This article describes the command-line switches supported by a software installation package, an update package, or a hotfix package that's created by using Microsoft Self-Extractor.
 
 _Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 912203
@@ -34,7 +34,7 @@ If you run the .exe file from a command line, several switches may be available 
 > [!NOTE]
 > Not all switches may be available in all packages.
 
-To determine which switches are available in the package, use one of the following Help switches when you run the package at a command line:
+To determine which switches are available in the package, use one of the following Help switches:
 
 - `/?`
 - `/h`
@@ -44,8 +44,8 @@ The following table lists the command-line switches that are supported by Micros
 
 | Switch| Description |
 |---|---|
-| `/extract:[path]`|Extracts the content of the package to the path folder. If a path is not specified, then a **Browse** dialog box appears.|
-| `/log:[path to log file]`|Enables verbose logging for the update installation.<br/><br/>In addition to the path information, the file name must be included. Because the command does not create a folder that does not exist, only an existing folder name should be provided. In addition to the file name that is specified, a separate log file will be created for each .msi file that is run.|
+| `/extract:[path]`|Extracts the content of the package to the path folder. If a path isn't specified, then a **Browse** dialog box appears.|
+| `/log:[path to log file]`|Enables verbose logging for the update installation.<br/><br/>Besides the path information, the file name must be included. Because the command doesn't create a folder that doesn't exist, only an existing folder name should be provided. Besides the file name that is specified, a separate log file will be created for each .msi file that is run.|
 | `/lang:lcid`|Sets the user interface to the specified locale when multiple locales are available in the package.|
 |`/quiet`|Runs the package in silent mode.|
 | `/passive`|Runs the update without any interaction from the user.|
