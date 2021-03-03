@@ -49,7 +49,7 @@ The following sequence shows the process of a TCP connection being established:
 
 Frame 1:
 
-As you see in the first frame, the client, NTW3, sends a SYN segment (TCP ....S.). It's a request to the server to synchronize the sequence numbers. It specifies its initial sequence number (ISN). The ISN is incremented by 1, 8221821+1=8221822, and that is sent to the server. To initialize a connection, the client and server must synchronize each other's sequence numbers. There's also an option for the Maximum Segment Size (MSS) to be set, which is defined by the length (len: 4). This option communicates the MSS the sender wants to receive. The Acknowledgment field (ack: 0) is set to zero because it's the first part of the three-way handshake.
+As you see in the first frame, the client, NTW3, sends a SYN segment (`TCP ....S.`). It's a request to the server to synchronize the sequence numbers. It specifies its initial sequence number (ISN). The ISN is incremented by 1, 8221821+1=8221822, and that is sent to the server. To initialize a connection, the client and server must synchronize each other's sequence numbers. There's also an option for the Maximum Segment Size (MSS) to be set, which is defined by the length (len: 4). This option communicates the MSS the sender wants to receive. The Acknowledgment field (ack: 0) is set to zero because it's the first part of the three-way handshake.
 
 ```console
 
@@ -94,7 +94,7 @@ TCP: Frame Padding
 
 Frame 2:
 
-As you see in the second frame, the server, BDC3, sends an ACK and a SYN (TCP .A..S.). In this segment, the server is acknowledging the request of the client for synchronization. Meanwhile, the server is also sending its request to the client for synchronization of its sequence numbers. There's one major difference in this segment. The server transmits an acknowledgment number (8221823) to the client. The acknowledgment is just proof to the client that the ACK is specific to the SYN the client initiated. The process of acknowledging the client's request allows the server to increment the client's sequence number by one and uses it as its acknowledgment number.
+As you see in the second frame, the server, BDC3, sends an ACK and a SYN (`TCP .A..S.`). In this segment, the server is acknowledging the request of the client for synchronization. Meanwhile, the server is also sending its request to the client for synchronization of its sequence numbers. There's one major difference in this segment. The server transmits an acknowledgment number (8221823) to the client. The acknowledgment is just proof to the client that the ACK is specific to the SYN the client initiated. The process of acknowledging the client's request allows the server to increment the client's sequence number by one and uses it as its acknowledgment number.
 
 ```console
 
@@ -139,7 +139,7 @@ TCP: Frame Padding
 
 Frame 3:
 
-As you see in the third frame, the client sends an ACK (TCP .A....). In this segment, the client is acknowledging the request from the server for synchronization. The client uses the same algorithm the server implemented in providing an acknowledgment number. The client's acknowledgment of the server's request for synchronization completes the process of establishing a reliable connection and the three-way handshake.
+As you see in the third frame, the client sends an ACK (`TCP .A....`). In this segment, the client is acknowledging the request from the server for synchronization. The client uses the same algorithm the server implemented in providing an acknowledgment number. The client's acknowledgment of the server's request for synchronization completes the process of establishing a reliable connection and the three-way handshake.
 
 ```console
 
@@ -182,7 +182,7 @@ Although the three-way handshake only requires three packets to be transmitted o
 
 Frame 4:
 
-In this session of frames, you see the client sending a FIN that's accompanied by an ACK (TCP .A...F). This segment has two basic functions. First, when the FIN parameter is set, it will inform the server that it has no more data to send. Second, the ACK is essential in identifying the specific connection they've established.
+In this session of frames, you see the client sending a FIN that's accompanied by an ACK (`TCP .A...F`). This segment has two basic functions. First, when the FIN parameter is set, it will inform the server that it has no more data to send. Second, the ACK is essential in identifying the specific connection they've established.
 
 ```console
 
@@ -261,7 +261,7 @@ TCP: Window = 28672 (0x7000)
 
 Frame 6:
 
-After receiving the FIN from the client computer, the server will ACK. Even though TCP has established connections between the two computers, the connections are still independent of one another. So the server must also transmit a FIN (TCP .A...F) to the client.
+After receiving the FIN from the client computer, the server will ACK. Even though TCP has established connections between the two computers, the connections are still independent of one another. So the server must also transmit a FIN (`TCP .A...F`) to the client.
 
 ```console
 
