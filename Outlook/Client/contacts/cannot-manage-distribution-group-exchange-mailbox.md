@@ -50,7 +50,7 @@ To resolve this issue, see [How to manage groups with groups in Exchange 2010](h
 
 When an Outlook client connects to an Exchange 2010 or Exchange 2013 mailbox, the Directory connection is now directed through an Exchange server that has the Client Access Server (CAS) role. For Exchange 2016, the Directory connection is made to the Exchange server with the Mailbox server role. The Exchange server intercepts the calls for group management and then processes them through RBAC. If the RBAC engine determines that the user can manage this group, it lets the call be completed. However, if you have the Closest GC registry value configured on the Outlook client, Outlook continues to connect through the global catalog server instead of going through the Exchange server. The use of the closest global catalog and DS Server registry values is not supported with mailboxes in Exchange 2010 and later versions.
 
-To resolve this issue, see [How to configure Outlook to a specific global catalog server or to the closest global catalog server](https://support.microsoft.com/help/319206).
+To resolve this issue, see [Add or Remove the Global Catalog](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc755257(v=ws.10)).
 
 ### Cause 4
 

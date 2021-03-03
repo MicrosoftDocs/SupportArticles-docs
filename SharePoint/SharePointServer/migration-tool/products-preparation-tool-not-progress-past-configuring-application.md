@@ -125,7 +125,7 @@ Software prerequisites that are required for the installation of SharePoint Serv
 - [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?linkid=273961)   
 - Application Server Role and Web Server (IIS) Role: Enable the Web Server (IIS) role and the Application Server role in Server Manager   
 - Microsoft SQL Server 2008 R2 SP1 Native Client   
-- [Windows Identity Foundation (KB974405)](https://go.microsoft.com/fwlink/p/?linkid=226830)   
+- [Description of Windows Identity Foundation](/troubleshoot/windows-server/user-profiles-and-logon/windows-identity-foundation)   
 - [Microsoft Sync Framework Runtime v1.0 SP1 (x64)](https://go.microsoft.com/fwlink/p/?linkid=224449)   
 - [Microsoft AppFabric 1.1 for Windows Server](https://www.microsoft.com/download/details.aspx?id=27115)   
 - [Windows Identity Extensions](https://go.microsoft.com/fwlink/p/?linkid=252368)   

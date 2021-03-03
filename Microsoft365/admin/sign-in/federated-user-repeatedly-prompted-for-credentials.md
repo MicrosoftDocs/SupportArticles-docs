@@ -122,12 +122,6 @@ On each AD FS federation server and on each AD FS federation server proxy, use t
 
 [Configuring Authentication in IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733010(v=ws.10))
 
-For more information about how to resolve this error, see the following Microsoft Knowledge Base articles:
-
-- [907273](https://support.microsoft.com/help/907273) Troubleshooting HTTP 401 errors in IIS
-
-- [871179](https://support.microsoft.com/help/871179) You receive an "HTTP Error 401.1 - Unauthorized: Access is denied due to invalid credentials" error message when you try to access a Web site that is part of an IIS 6.0 application pool
-
 ### Resolution 2: Correct the AD FS federation server farm SPN
 
 >[!NOTE]
