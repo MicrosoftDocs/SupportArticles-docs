@@ -308,10 +308,6 @@ To perform a Maintenance Mode repair, follow these steps:
 5. Click **Repair Word** (**Repair Office**), and then click **Next**.   
 6. Click **Reinstall Word** (**Reinstall Office**), and then click **Install**.   
  
-For more information about Word 2007 or Word 2010, click the following article number to view the article in the Microsoft Knowledge Base: 
-
-[924611](https://support.microsoft.com/help/924611) How to install the individual 2007 Office features or to repair the installed 2007 Office programs
-
 ### Templates and add-ins
 
 #### Global Template (Normal.dotm or Normal.dot)

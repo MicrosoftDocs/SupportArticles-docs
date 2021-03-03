@@ -138,7 +138,7 @@ Gateway sending HTTP response: StatusCode: 201, ReasonPhrase: 'Created', Version
 
 - Based on the error "You do not have permission to view this directory or page using the credentials that you supplied", we explored permissions of the "Workflow Management Site" IIS virtual server on WFM in our lab. We have "Anonymous" and "Windows Authentication" set as enabled.
 - Disabling "Anonymous" authentication instantly reproduced the error.
-- If you are using Claims authentication (Windows claims, Forms authentication or a Trusted Identity provider), the application will be configured for Forms authentication in the web.config, along with ensuring that Anonymous Authentication and Forms Authentication are enabled in IIS configuration (https://support.microsoft.com/en-in/help/2655719/sharepoint-authentication-settings-in-central-administration-do-not-ma) 
+- If you are using Claims authentication (Windows claims, Forms authentication or a Trusted Identity provider), the application will be configured for Forms authentication in the web.config, along with ensuring that Anonymous Authentication and Forms Authentication are enabled in IIS configuration. 
 - We by default use windows claim authentication starting SP 2013 and WFM > SP communication happens over Oauth on top of that. 
 - We identified that "Anonymous" authentication was disabled on WFM server in your DEV farm. Enabling it fixed the issue.
 - We were able to publish and run the workflows successfully. 
