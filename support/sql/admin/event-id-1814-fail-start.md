@@ -17,6 +17,13 @@ If the Microsoft SQL Server service can’t create the Tempdb file during startu
 > `Windows could not start the SQL Server (MSSQLSERVER) on Local Computer. For more information, review the System Event log.`  
 `If this is a non-Microsoft service, contact the service vendor, and refer to service-specific error code 1814.`
 
+## Cause
+
+This problem can occur because of the following reasons:
+
+- The hard disk that was hosting Tempdb was removed or the drive letter changed for some reason.
+- There are space constraints at the OS layer.
+
 ## Resolution
 
 1. Open the Application log, and verify that you see error message entries that resemble the following:
@@ -57,7 +64,4 @@ If the Microsoft SQL Server service can’t create the Tempdb file during startu
     `Description:
     Could not create tempdb. You may not have enough disk space available. Free additional disk space by deleting other files on the tempdb drive and then restart SQL Server. Check for additional errors in the operating system error log that may indicate why the tempdb files could not be initialized.`
 
-2. This problem can occur because of the following reasons:
-    1. The hard disk that was hosting Tempdb was removed or the drive letter changed for some reason.
-    1. There are space constraints at the OS layer.
-3. To resolve the problem, move the Tempdb file to a different location by using the procedure that's mentioned in the **Failure Recovery Procedure** section of [Move System Databases](https://docs.microsoft.com/sql/relational-databases/databases/move-system-databases#Failure).
+1. To resolve the problem, move the Tempdb file to a different location by using the procedure that's mentioned in the **Failure Recovery Procedure** section of [Move System Databases](/sql/relational-databases/databases/move-system-databases#Failure).

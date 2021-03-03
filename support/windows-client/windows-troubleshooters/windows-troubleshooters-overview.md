@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: windows-troubleshooters
+ms.technology: windows-client-troubleshooter
 ---
 # Windows Troubleshooters documentation
 
