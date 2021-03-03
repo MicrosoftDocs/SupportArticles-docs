@@ -19,18 +19,20 @@ search.appverid: MET150
 ---
 # O365 Groups - common tasks
 
-<a id="top" />Tenant administrators perform many common tasks to manage O365 groups. Here's a quick reference for doing these tasks. The tasks are divided into sections to help you sort through them quickly. Select a task to navigate directly to it.
+## Summary
+
+Tenant administrators perform many common tasks to manage O365 groups. Here's a quick reference for doing these tasks. The tasks are divided into sections to help you sort through them quickly. Select a task to navigate directly to it.
 
 - Office 365 Groups creation & display
   - [Control Office 365 group creation](#control-office-365-group-creation)
   - [Display an Office 365 group associated with a team](#display-an-office-365-group-associated-with-a-team)
 - Office 365 group delegation
-  - [Enable specific users to "Send As" an Office 365 group](#enable-specific-users)
+  - [Enable specific users to "Send As" an Office 365 group](#enable-specific-users-to-send-as-an-office-365-group)
   - [Control user access to specific group resources](#control-user-access-to-specific-group-resources)
   - [Prevent group members from changing a group calendar](#prevent-group-members-from-changing-a-group-calendar)
   - [Office 365 group limits](#office-365-group-limits)
 - Office 365 Groups email address management
-  - [Remove the onmicrosoft.com email address](#remove-the-email-address)
+  - [Remove the onmicrosoft.com email address](#remove-the-onmicrosoftcom-email-address)
   - [Customize email addresses stamped onto new Office 365 groups](#customize-email-addresses-stamped-onto-new-office-365-groups)
   - [Change email addresses of existing groups after adding a domain to a tenant](#change-email-addresses-of-existing-groups-after-adding-a-domain-to-a-tenant)
   - [Add or remove a secondary email address from an Office 365 Group](#add-or-remove-a-secondary-email-address-from-an-office-365-group)
@@ -46,9 +48,9 @@ search.appverid: MET150
   - [Office 365 group deletion](#office-365-group-deletion)
   - [Export Office 365 Groups information](#export-office-365-groups-information)
 - Useful scripts for Office 365 Groups management
-  - [Sample 1: See all the groups together with created date, owner, and membership count](#sample-one)
-  - [Sample 2: Create a report for users in a group](#sample-two)
-  - [Sample 3: Assign "Send As" permissions on a group](#sample-three)
+  - [Sample 1: See all the groups together with created date, owner, and membership count](#sample-1-see-all-the-groups-together-with-created-date-owner-and-membership-count)
+  - [Sample 2: Create a report for users in a group](#sample-2-create-a-report-for-users-in-a-group)
+  - [Sample 3: Assign "Send As" permissions on a group](#sample-3-assign-send-as-permissions-on-a-group)
 
 ## Office 365 Groups creation & display
 
@@ -74,7 +76,7 @@ You can also use the following tools to control Office 365 group creation:
 
   Worried that users might give offensive names to the Office 365 groups that they create? Use the Office 365 Groups naming policy to block specific words and limit group names to certain criteria, such as department names. See [Office 365 Groups naming policy](/microsoft-365/admin/create-groups/groups-naming-policy?view=o365-worldwide&preserve-view=true).
 
-[Back to top](#top)
+[Back to top](#summary)
 
 ### Display an Office 365 group associated with a team
 
@@ -104,11 +106,11 @@ All new teams have an associated Office 365 group. By default, this Office 365 g
    > [!NOTE]
    > The value **$false** unhides the group from the Exchange client, and **$true** hides it.
 
-[Back to top](#top)
+[Back to top](#summary)
 
 ## Office 365 group delegation
 
-### <a id="enable-specific-users" />Enable specific users to "Send As" an Office 365 group
+### Enable specific users to Send As an Office 365 group
 
 You can assign "Send As" permissions to allow specific users to send messages on behalf of an Office 365 group:
 
@@ -121,7 +123,7 @@ You can assign "Send As" permissions to allow specific users to send messages on
 
 For more information, see [Allow members to send as or send on behalf of a Group](/microsoft-365/admin/create-groups/allow-members-to-send-as-or-send-on-behalf-of-group?view=o365-worldwide&preserve-view=true).
 
-[Back to top](#top)
+[Back to top](#summary)
 
 ### Control user access to specific group resources
 
@@ -134,7 +136,7 @@ An Office 365 group has the following resources:
 
 A user must be the member of the Office 365 group to access any of these resources. You can't delegate access to a group resource individually. However, you can grant access to group conversations, files, calendar invitations, and notebooks to individual guests. See [Adding guests to Office 365 Groups](https://support.office.com/article/adding-guests-to-office-365-groups-bfc7a840-868f-4fd6-a390-f347bf51aff6).
 
-[Back to top](#top)
+[Back to top](#summary)
 
 ### Prevent group members from changing a group calendar
 
@@ -146,7 +148,7 @@ For example, the following command makes the calendar read-only for all members 
 Set-UnifiedGroup Group1 -CalendarMemberReadOnly
 ```
 
-[Back to top](#top)
+[Back to top](#summary)
 
 ### Office 365 group limits
 
@@ -165,11 +167,11 @@ This table shows the size and membership limits that apply to Office 365 Groups.
 |Distribution Group as a member of an Office 365 group|A distribution group that has more than 1,000 members cannot be added to an Office 365 group. This also includes the nested distribution group members.|
 |||
 
-[Back to top](#top)
+[Back to top](#summary)
 
 ## Office 365 Groups email management
 
-### <a id="remove-the-email-address" />Remove the onmicrosoft.com email address
+### Remove the onmicrosoft.com email address
 
 The *\<domain>.onmicrosoft.com* email address is a Microsoft Online Email Routing Address (MOERA). At least one MOERA must be attached to a group at any one time. Therefore, you can't remove the onmicrosoft.com address from a group. However, you can change the MOERA domain to be a secondary email address of the group.
 
@@ -183,7 +185,7 @@ Set-UnifiedGroup Marketing -PrimarySmtpAddress marketing@contoso.com
 
 To learn more about MOERA addresses, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad).
 
-[Back to top](#top)
+[Back to top](#summary)
 
 ### Customize email addresses stamped onto new Office 365 groups
 
@@ -192,7 +194,7 @@ You can create an email address policy to automatically stamp customized email a
 > [!NOTE]
 > The email address policy does not change the email addresses of Office 365 groups that were in use before the policy was created.
 
-[Back to top](#top)
+[Back to top](#summary)
 
 ### Change email addresses of existing groups after adding a domain to a tenant
 
@@ -218,7 +220,7 @@ Set-UnifiedGroup -Identity $O365Group.identity -EmailAddresses @{add=$Newemailid
 > [!NOTE]
 > Replace *groups.contoso.com* with the domain name that you want to add, and make sure that the new name is an accepted domain.
 
-[Back to top](#top)
+[Back to top](#summary)
 
 ### Add or remove a secondary email address from an Office 365 Group
 
@@ -238,7 +240,7 @@ Remove:
 Set-UnifiedGroup Group1 -EmailAddresses @{remove="group1@secondary.contoso.com"}
 ```
 
-[Back to top](#top)
+[Back to top](#summary)
 
 ### Control delivery of group email messages to new members
 
@@ -257,7 +259,7 @@ Group owners can enable/disable the subscription from group settings by selectin
 
 Individual users can start and stop receiving group email messages by selecting the **Follow in Inbox/Stop following in Inbox** option on the group. See [Follow a group in Outlook](https://support.microsoft.com/office/e147fc19-f548-4cd2-834f-80c6235b7c36).
 
-[Back to top](#top)
+[Back to top](#summary)
 
 ### Get a copy of group email messages you send
 
@@ -288,18 +290,18 @@ Get-Mailbox -ResultSize Unlimited | ForEach {Set-MailboxMessageConfiguration -Id
 > [!NOTE]
 > This setting takes up to an hour to take effect.
 
-[Back to top](#top)
+[Back to top](#summary)
 
 ### Email issues in Office 365 Groups
 
 #### Issue 1: Messages sent from external users to an Office 365 group are not received
 
-If your sender receives a non-delivery report (NDR) that has the status code 550 5.7.193, make sure that the Office 365 group is enabled to receive messages from external users.
+If your sender receives a non-delivery report (NDR) that has the status code 550 5.7.193, make sure that the Office 365 group is enabled to receive email messages from external users.
 
 ##### For Office 365 group owners
 
 1. Open the [Groups hub](https://outlook.office365.com/people/group/owner).
-2. Edit the group that's not receiving emails from external users.
+2. Edit the group that's not receiving messages from external users.
 3. Make sure that you select the **Let people outside the organization email the group** check box.
 
    ![Select the Let people outside the organization email the group checkbox](./media/o365-group-tasks/outside-checkbox.png)
@@ -319,15 +321,27 @@ If your sender receives a non-delivery report (NDR) that has the status code 550
 
 Make sure that all group members have subscribed to the desired messages. See [Follow a group in Outlook](https://support.microsoft.com/office/e147fc19-f548-4cd2-834f-80c6235b7c36).
 
-To check the message status of members who have subscribed to group emails, run the following command:
+To check the message status of members who have subscribed to group email messages, run the following command:
 
 ```powershell
 Get-UnifiedGroup <GroupName> | Get-UnifiedGroupLinks -LinkType Subscribers
 ```
 
-See [Message trace in the Security & Compliance Center](/microsoft-365/security/office-365-security/message-trace-scc?view=o365-worldwide&preserve-view=true).
+To configure all group members to receive messages that are sent to a Microsoft 365 group, run the following command:
 
-[Back to top](#top)
+```powershell
+$Group = "<Address of Microsoft 365 Groups>"
+Get-UnifiedGroupLinks $Group -LinkType Member | % {Add-UnifiedGroupLinks -Identity $Group -LinkType subscriber -Links $_.Guid.toString() -Confirm:$false}
+```
+
+Here's an example that resubscribes all members of the group testg@contoso.onmicrosoft.com to receive messages in their Inbox:
+
+```powershell
+$group="testg@contoso.onmicrosoft.com"
+Get-UnifiedGroupLinks $Group -LinkType Member | % {Add-UnifiedGroupLinks -Identity $Group -LinkType subscriber -Links $_.Guid.toString() -Confirm:$false}
+```
+
+[Back to top](#summary)
 
 ## Other tasks
 
@@ -356,7 +370,7 @@ Restoring an Office 365 group restores any services that are related to the grou
 
 Use the Exchange admin center (EAC) or Azure Active Directory (Azure AD) PowerShell to restore a deleted group. See [Restore a deleted Office 365 Group](/microsoft-365/admin/create-groups/restore-deleted-group?view=o365-worldwide&preserve-view=true).
 
-[Back to top](#top)
+[Back to top](#summary)
 
 ### Convert to an Office 365 group
 
@@ -368,7 +382,7 @@ You can upgrade distribution lists one at a time, or several at the same time. I
 
 Also, see [Upgrade distribution lists to Office 365 Groups in Outlook](/microsoft-365/admin/manage/upgrade-distribution-lists?view=o365-worldwide&preserve-view=true).
 
-[Back to top](#top)
+[Back to top](#summary)
 
 ### Access Office 365 groups from Exchange clients
 
@@ -382,13 +396,13 @@ The following Outlook clients can access Office 365 groups:
 - Outlook for Android and Outlook for iOS
 - Outlook on the web (OWA)
 
-[Back to top](#top)
+[Back to top](#summary)
 
 ### Office 365 group migration
 
 Currently, there is no default tool or method available to migrate Office 365 groups between tenants.
 
-[Back to top](#top)
+[Back to top](#summary)
 
 ### Office 365 group deletion
 
@@ -410,7 +424,7 @@ Deleted office 365 groups and related services (such as Teams, SharePoint sites,
    Remove-AzureADMSDeletedDirectoryObject -Id <objectId>
    ```
 
-[Back to top](#top)
+[Back to top](#summary)
 
 ### Export Office 365 Groups information
 
@@ -438,19 +452,19 @@ To list all Office 365 groups together with tracking information about the group
 
 ![Search for added group](./media/o365-group-tasks/search.png)
 
-[Back to top](#top)
+[Back to top](#summary)
 
 ## Useful scripts for Office 365 Groups management
 
-### <a id="sample-one" />Sample 1: See all the groups together with created date, owner, and membership count
+### Sample 1: See all the groups together with created date, owner, and membership count
 
 ```powershell
 Get-UnifiedGroup | Select-Object Id, DisplayName, ManagedBy, Alias, AccessType, WhenCreated, @{Expression={([array](Get-UnifiedGroupLinks -Identity $_.Id -LinkType Members)).Count }; Label='Members'} | Sort-Object whencreated | Format-Table displayname, alias, managedby, Members, accesstype, whencreated
 ```
 
-[Back to top](#top)
+[Back to top](#summary)
 
-### <a id="sample-two" />Sample 2: Create a report for users in a group
+### Sample 2: Create a report for users in a group
 
 ```powershell
 $Groups = Get-UnifiedGroup -ResultSize Unlimited
@@ -467,9 +481,9 @@ Get-UnifiedGroupLinks -Identity $group.Name -LinkType Members | ForEach-Object {
 } | Export-CSV ".\Office365GroupMembers.csv" -NoTypeInformation -Encoding UTF8
 ```
 
-[Back to top](#top)
+[Back to top](#summary)
 
-### <a id="sample-three" />Sample 3: Assign "Send As" permissions on a group
+### Sample 3: Assign Send As permissions on a group
 
 ```powershell
 $groupAlias = "group1"
@@ -478,4 +492,4 @@ $groupsRecipientDetails = Get-Recipient -RecipientTypeDetails groupmailbox -Iden
 Add-RecipientPermission -Identity $groupsRecipientDetails.Name -Trustee $userAlias -AccessRights SendAs
 ```
 
-[Back to top](#top)
+[Back to top](#summary)
