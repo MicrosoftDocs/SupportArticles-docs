@@ -33,6 +33,7 @@ This situation usually indicates a problem in the Remote Desktop licensing confi
 
 ## Resolution
 
+First, [check the RD Licensing configuration](#check-the-rd-licensing-configuration). If you still have problems, check the [additional troubleshooting methods](#additional-troubleshooting-methods).
 
 ### Check the RD Licensing configuration
 
@@ -61,7 +62,7 @@ You can check the RD Licensing configuration by using Server Manager and RD Lice
 1. On the RD Connection Broker computer, open Server Manager.
 2. In Server Manager, select **Remote Desktop Services** > **Overview** > **Edit Deployment Properties** > **RD Licensing**.
    :::image type="content" source="media/cannot-connect-rds-no-license-server/server-manager-rd-config.png" alt-text="Remote Desktop licensing settings in Server Manager":::
-3. Select the Remote Desktop licensing mode (either **Per User** or  **Per Device**, as appropriate for you deployment).
+3. Select the Remote Desktop licensing mode (either **Per User** or  **Per Device**, as appropriate for your deployment).
    > [!NOTE]  
    > If you use domain-joined servers for your RDS deployment, you can use both Per User and Per Device CALs. If you use workgroup servers for your RDS deployment, you have to use Per Device CALs In that case, Per User CALs are not permitted.
 4. Specify a license server.
@@ -72,7 +73,7 @@ You can check the RD Licensing configuration by using Server Manager and RD Lice
 2. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Remote Desktop Services** > **Remote Desktop Session Host** > **Licensing**.
    :::image type="content" source="media/cannot-connect-rds-no-license-server/local-gp-editor-licensing-config.png" alt-text="List of policies for Remote Desktop licensing":::
 3. In the policy list, right-click **Use the specified Remote Desktop license servers** and then select **Properties**.
-4. Select **Enabled**, and then under **License servers to use**, enter the name of the license server (if you have more than one license server, use commas to separate their names).
+4. Select **Enabled**, and then under **License servers to use**, enter the name of the license server. If you have more than one license server, use commas to separate their names.
    :::image type="content" source="media/cannot-connect-rds-no-license-server/local-gp-specify-license-server.png" alt-text="Policy settings for Remote Desktop license servers":::
 5. Select **OK**, and then in the policy list, right-click **Set the Remote Desktop licensing mode** and then select **Properties**.
 6. Select **Enabled**, and then under **Specify the licensing mode for the Remote Desktop Session Host server** select **Per Device** or **Per User**, as appropriate for your deployment.
@@ -80,11 +81,11 @@ You can check the RD Licensing configuration by using Server Manager and RD Lice
 
 ### Additional troubleshooting methods
 
-If you have verified that the licensing configuration is correct and the system is still not correctly issuing CALs, follow these steps.
+If you have verified that the licensing configuration is correct and the system still isn't correctly issuing CALs, follow these steps.
 
 1. [Use RD Licensing Diagnoser to check for issues](#extra1)
 2. [Make sure that the versions of your RDS CALs, RD Session Hosts, and RD License Servers are compatible](#extra2)
-3. [Make sure that you are using the appropriate type of RDS CAL for your RDS environment](#extra3)
+3. [Make sure that you're using the appropriate type of RDS CAL for your RDS environment](#extra3)
 
 #### <a id="extra1"></a>1. Use RD Licensing Diagnoser to check for issues
 
@@ -122,6 +123,6 @@ The following table shows which RDS CAL and license server versions are compatib
 
 For more information, see [RDS CAL version compatibility](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-client-access-license#rds-cal-version-compatibility)
 
-#### <a id="extra3"></a>3. Make sure that you are using the appropriate type of RDS CAL for your RDS environment
+#### <a id="extra3"></a>3. Make sure that you're using the appropriate type of RDS CAL for your RDS environment
 
-If you use domain-joined servers for your RDS deployment, you can use both Per User and Per Device CALs. If you use workgroup servers for your RDS deployment, you have to use Per Device CALs In that case, Per User CALs are not permitted.
+If you use domain-joined servers for your RDS deployment, you can use both Per User and Per Device CALs. If you use workgroup servers for your RDS deployment, you have to use Per Device CALs In that case, Per User CALs aren't permitted.
