@@ -2180,6 +2180,8 @@
       href: ./remote/remotefx-usb-redirected-scanner-not-start.md
   - name: Remote Desktop Services (Terminal Services) licensing
     items:
+    - name: Cannot connect to RDS because there are no RD Licensing servers available to issue licenses
+      href: ./remote/cannot-connect-rds-no-license-server.md
     - name: '"Licenses are not available for this Remote Desktop" error in Licensing Diagnosis'
       href: ./remote/rdsh-administrator-on-get-error-licensing-diagnosis.md
     - name: Configure RDP listener certificates
