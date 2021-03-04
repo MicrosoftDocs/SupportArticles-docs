@@ -37,7 +37,7 @@ To enable and disable the above key automatically, download and run the followin
 - [Enable-Local-Logging2016](https://msdnshared.blob.core.windows.net/media/2018/06/Enable-Local-Logging2016.zip)
 - [Disable-Local-Logging2016](https://msdnshared.blob.core.windows.net/media/2018/06/Disable-Local-Logging2016.zip)
 
-Reproduce the issue and collect the logs for review. The logs are stored under %temp% for sign-in or activation issues.
+Reproduce the issue and collect the logs for review. The logs (the <MachineName>-<Date>-<Time>.log format) are stored under %temp% for sign-in or activation issues.
 
 **For installation or patching issues, run the following commands to add the registry keys:**
 
@@ -50,7 +50,7 @@ reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v PipelineLogging /t REG_DW
 ```
 Restart the Microsoft Office Click-to-Run Service inside Services.msc for the logging to take effect.
 
-Reproduce the issue and collect the logs for review. The logs are stored under %windir%\temp and %temp% for installation or patching issues.
+Reproduce the issue and collect the logs for review. The logs (the <MachineName>-<Date>-<Time>.log format) are stored under %windir%\temp and %temp% for installation or patching issues.
 
 > [!NOTE]
 > Note the time stamp when you run the repro so that you can collect the correct logs.
