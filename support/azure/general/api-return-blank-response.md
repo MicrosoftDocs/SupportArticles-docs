@@ -8,7 +8,7 @@ ms.author: genli
 author: genli
 ms.reviewer: 
 ---
-# Azure API is returning blank response
+# Azure API returns blank response
 
 Referring to the article on [Azure API Management Troubleshooting Series](apim-troubleshooting-series.md), this is the first scenario of the lab. Make sure you have followed the lab setup instructions as per [this](https://github.com/prchanda/apimlab), to recreate the problem.
 
