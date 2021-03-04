@@ -121,7 +121,7 @@ The following table shows which RDS CAL and license server versions are compatib
 |**2016 license server** |Yes |Yes |Yes |No |
 |**2019 license server** |Yes |Yes |Yes |Yes |
 
-For more information, see [RDS CAL version compatibility](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-client-access-license#rds-cal-version-compatibility)
+For more information, see [RDS CAL version compatibility](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-client-access-license#rds-cal-version-compatibility).
 
 #### <a id="extra3"></a>3. Make sure that you're using the appropriate type of RDS CAL for your RDS environment
 
