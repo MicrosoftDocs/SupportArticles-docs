@@ -54,4 +54,4 @@ Starting with version 6.1806.x.x, the Intune Connector Service logs events in th
 
 ## Next steps
 
-For additional assistance, use the [Troubleshooting SCEP certificate profile deployment in Microsoft Intune](troubleshoot-scep-certificate-profiles.md) guide.
+For further assistance, use the [Troubleshooting SCEP certificate profile deployment in Microsoft Intune](troubleshoot-scep-certificate-profiles.md) guide.
