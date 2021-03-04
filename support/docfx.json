@@ -48,7 +48,7 @@
     "globalMetadata": {
       "breadcrumb_path": "/support/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None",
+      "feedback_system": "None", 
       "searchScope": ["Troubleshoot"]
     },
 
