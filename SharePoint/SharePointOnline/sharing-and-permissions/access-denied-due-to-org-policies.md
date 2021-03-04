@@ -1,11 +1,11 @@
 ---
 title: SharePoint Online or OneDrive for Business access denied due to organizational policies error message 
 ms.author: v-todmc
-author: McCoyBot
+author: mccoybot
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 11/24/2020
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
 ms.custom: 
@@ -28,18 +28,24 @@ appliesto:
 Users receive the following error message when they try to sign in to SharePoint or OneDrive:
 
 > **Access Denied**<br/>
-> Due to organizational policies, you can't access this resource from this network location.
+> Due to organizational policies, you can't access this resource from this **network location**.
 
 ## Cause
 
-This error might occur for administrators or users because of the implementation of a location-based policy. 
+There are similar errors with different root causes so please ensure you check below before proceeding. 
+
+If you are receiving an error message that states "Due to organizational policies, you can't access this resource" it may be due to [Information Barriers](/sharepoint/information-barriers).
+
+If you are receiving an error message that states "Due to organizational policies, you can't access this resource from this untrusted device" it may be due to an [Unmanaged Device Policy] (/sharepoint/control-access-from-unmanaged-devices).
+
+If you are receiving an error message that states "Due to organizational policies, you can't access this resource from this **network location**." please continue with solution provided below. 
 
 ## Resolution
 
 To resolve this issue, try the following method, depending on your level of permissions.
 
 ### Non-administrators
-If you receive this error message, contact your [Microsoft 365 Administrator](https://docs.microsoft.com/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide). 
+If you receive this error message, contact your [Microsoft 365 Administrator](/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide&preserve-view=true). 
 
 ### Administrators
 
@@ -60,4 +66,4 @@ If you are an administrator, and you have locked yourself out of SharePoint and 
  
 ## More information
 
-For more information about location-based policies, see [Control access to SharePoint and OneDrive data based on network location](https://docs.microsoft.com/sharepoint/control-access-based-on-network-location).
+For more information about location-based policies, see [Control access to SharePoint and OneDrive data based on network location](/sharepoint/control-access-based-on-network-location).

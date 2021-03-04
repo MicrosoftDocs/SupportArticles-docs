@@ -44,7 +44,7 @@ Get-OwaMailboxPolicy | Set-OwaMailboxPolicy -BlockedMimeTypes @{Remove = "text/x
 Get-OwaMailboxPolicy | Set-OwaMailboxPolicy –AllowedMimeTypes @{Add = "text/xml", "application/xml"}
 ```
 
-Things to consider:d
+Things to consider:
 
 - It may take several minutes before changes to the Outlook Web App policy take effect.
 - Be aware that by changing the Outlook Web App mailbox policy to include file types that are blocked by default, you may make your system more vulnerable to security threats.
