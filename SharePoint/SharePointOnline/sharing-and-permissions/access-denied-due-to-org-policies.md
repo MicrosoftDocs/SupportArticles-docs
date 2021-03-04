@@ -5,7 +5,7 @@ author: mccoybot
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 11/24/2020
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
 ms.custom: 
