@@ -45,7 +45,7 @@ If you are receiving an error message that states "Due to organizational policie
 To resolve this issue, try the following method, depending on your level of permissions.
 
 ### Non-administrators
-If you receive this error message, contact your [Microsoft 365 Administrator](https://docs.microsoft.com/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide). 
+If you receive this error message, contact your [Microsoft 365 Administrator](/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide&preserve-view=true). 
 
 ### Administrators
 
@@ -66,4 +66,4 @@ If you are an administrator, and you have locked yourself out of SharePoint and 
  
 ## More information
 
-For more information about location-based policies, see [Control access to SharePoint and OneDrive data based on network location](https://docs.microsoft.com/sharepoint/control-access-based-on-network-location).
+For more information about location-based policies, see [Control access to SharePoint and OneDrive data based on network location](/sharepoint/control-access-based-on-network-location).
