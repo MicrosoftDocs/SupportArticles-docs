@@ -47,7 +47,7 @@ Then, restart the Remote Desktop Service. If the server doesn't have the Remote 
 
 ## More information
 
-When a user logs on to a RDSH server, the attributes on the **Remote Desktop Services Profile** tab of the users object properties in AD DS aren't applied to the user. The user's attributes aren't enforced, and everything is working as designed. So, no warning is generated, and no event is logged.
+When a user logs on to an RDSH server, the attributes on the **Remote Desktop Services Profile** tab of the users object properties in AD DS aren't applied to the user. The user's attributes aren't enforced, and everything is working as designed. So, no warning is generated, and no event is logged.
 
 For example, if you use the RDS attributes to specify a Remote Desktop roaming profile, users won't load that profile. They will use a local profile instead. In this situation, there are no error message or logged events. You can only know whether the user profile isn't the RDS roaming profile in one of the following ways:
 
