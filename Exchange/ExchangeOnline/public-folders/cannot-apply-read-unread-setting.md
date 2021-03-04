@@ -1,5 +1,5 @@
 ---
-title: Can't apply read setting to public folders
+title: Unable to apply read setting to public folders
 description: Fixes an issue in which you can't apply the read and unread setting to a parent public folder and all its subfolders.
 author: MaryQiu1987
 ms.author: v-maqiu
