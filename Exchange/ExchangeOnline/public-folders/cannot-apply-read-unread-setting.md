@@ -1,5 +1,5 @@
 ---
-title: Can't apply read and unread information tracking to users
+title: Can't apply read setting to public folders
 description: Fixes an issue in which you can't apply the read and unread setting to a parent public folder and all its subfolders.
 author: MaryQiu1987
 ms.author: v-maqiu
@@ -17,7 +17,7 @@ appliesto:
 - Exchange Online
 search.appverid: MET150
 ---
-# Can't apply the read and unread setting to a parent public folder and its subfolders
+# Unable to apply read setting to public folders
 
 ## Symptoms
 
@@ -40,6 +40,12 @@ Here's how to apply the read and unread information tracking to users by using P
 
    **Note:** Replace \<\PF> with your parent public folder identity.
 
+   Here's an example:
+
+   ```powershell
+   Set-PublicFolder -Identity \Marketing -PerUserReadStateEnabled $true
+   ```
+
 3. Apply read and unread information tracking on the child public folders by setting the `PerUserReadStateEnabled` value to **True** in the following cmdlet:
 
    ```powershell
@@ -47,6 +53,12 @@ Here's how to apply the read and unread information tracking to users by using P
    ```
 
    **Note:** Replace \<\PF> with your parent public folder identity.
+
+   Here's an example:
+
+   ```powershell
+   Get-PublicFolder \Marketing -GetChildren | foreach{Set-PublicFolder -Identity $_.identity -PerUserReadStateEnabled $True}
+   ```
 
 ## Status
 
