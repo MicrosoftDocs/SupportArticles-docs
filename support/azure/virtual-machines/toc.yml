@@ -15,7 +15,7 @@
     href: gpu-disabled-upgrade-ubuntu.md
   - name: Fail to create a VM with Ed25519 SSH keys
     href: ed25519-ssh-keys.md
-  - name: In-place system upgrade is not supported
+  - name: In-place system upgrade for Windows-based Azure VMs
     href: in-place-system-upgrade.md
   - name: Upgrade VM to contain more than 64 vCPUs
     href: vm-cannot-upgrade-64-vcpu.md
