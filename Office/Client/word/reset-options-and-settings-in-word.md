@@ -418,6 +418,7 @@ Note In the following table, "Template" refers to either the Normal.dot template
 |View toolbars|Template|
 |View/toolbar|Template|
 |Document Parts|Template|
+|||
 
 AutoCorrect lists are shared between Office programs. Any changes that you make to the AutoCorrect entries and settings when you are in one program are immediately available to the other programs. Additionally, Word can store AutoCorrect items that are made up of formatted text and graphics.
 
@@ -429,3 +430,4 @@ Information about AutoCorrect is stored in various locations. These locations ar
 |AutoCorrect entries used only by Word (formatted text and graphics)|Normal.dot|
 |AutoCorrect settings (correct two initial capitals, capitalize names of days, replace text as you type)|Registry|
 |AutoCorrect settings used only by Word (corrects accidental usage of CAPS LOCK key, capitalizes first letter of sentences)|Registry|
+|||
