@@ -46,7 +46,7 @@ For best results, collect a VMM debug trace when you reproduce this issue, and t
 
 Follow these steps to collect SRS logs from the Azure Site Recovery portal:
 
-1. Log on to the [Azure portal](http://portal.azure.com).
+1. Log on to the [Azure portal](https://portal.azure.com).
 2. Select **Recovery Services vaults**.
 3. Select the vault that hosts your ASR data.
 4. Select **Site Recovery jobs**.
