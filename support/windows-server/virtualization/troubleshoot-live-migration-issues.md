@@ -200,7 +200,7 @@ An existing connection was forcibly closed by the remote host.
 
 **Resolution**
 
-Check if the TCP ports 6600 and 3343 (for clustering) are listening on both sides. To do this, run the following cmdlet:
+Check if the TCP ports 6600 and 3343 (for clustering) are listening on both sides by running the following cmdlet:
 
 ```console
 netstat -ano | findstr /I /C:"6600"
@@ -256,7 +256,7 @@ To allow for migration of this virtual machine to a server with a different proc
 
 Here's how to fix this issue:
 
-1. Check the processor compatibility is flagged. To do this, open the **Hyper-V Manager** console and select **Virtual Machine Settings** > **Processor** > **Processor Compatibility**.
+1. Check the processor compatibility is flagged. To do it, open the **Hyper-V Manager** console and select **Virtual Machine Settings** > **Processor** > **Processor Compatibility**.
 2. Make sure the BIOS of the host has the same settings.
 3. Make sure the **Spectre** or **Meltdown** patch exposes different features of the CPU. For more information, see [Protecting guest virtual machines from CVE-2017-5715 (branch target injection)](https://docs.microsoft.com/virtualization/hyper-v-on-windows/CVE-2017-5715-and-hyper-v-vms).
 4. Run the [Get-SpeculationControlSettings](https://support.microsoft.com/help/4074629) cmdlet and check the results. It should be the same on all nodes.  
@@ -341,8 +341,8 @@ Failed to establish a connection with host "DESTINATION-SERVER": The credentials
 
 Here's how to fix this issue:
 
-1. Enable Kerberos Authentication for live migrations on both Hyper-V hosts. To do this, select **Hyper-V Settings**  > **Live Migrations** **> Advanced Features >** **Use Kerberos under Authentication Protocol**.
-2. Set Constrained Delegation for both Hyper-V hosts. Here's how to do this:
+1. Enable Kerberos Authentication for live migrations on both Hyper-V hosts. To do it, select **Hyper-V Settings**  > **Live Migrations** **> Advanced Features >** **Use Kerberos under Authentication Protocol**.
+2. Set Constrained Delegation for both Hyper-V hosts. Here's how to do it:
       1. Open **Active Directory Users and Computers**, find the Hyper-V host computer account, open the **Properties** dialog, and move to the **Delegation** tab.
       2. Select the **Trust this computer for delegation to specified services only** and **Use any authentication protocol** options.
       3. Click **Add** and select the computer account of another Hyper-V host.
@@ -358,7 +358,7 @@ Live migration of "Virtual Machine VM name" failed.
 
 Failed to create Planned Virtual Machine at migration destination: Logon failure: the user has not been granted the requested logon type at this computer. (0x80070569)
 
-Virtual Machines running on Windows Server 2012 Hyper-V hosts may fail to start and you may receive an error message that's similar to the following:
+Virtual Machines running on Windows Server 2012 Hyper-V hosts may fail to start and you may receive an error message that's similar to the following one:
 
 >Error 0x80070569 ("VM_NAME" failed to start worker process: Logon Failure: The user has not been granted the requested logon type at this computer.)  
 
@@ -395,7 +395,7 @@ The Virtual Machine Management Service failed to establish a connection for a Vi
 Here's how to fix this issue:
 
 1. Check for various corruptions of the **Registry.pol** under the **C:\Windows\System32\GroupPolicy\Machine** path.
-2. Open the file in Notepad. It must start with **PReg** signature.  
+2. Open the file in Notepad. It must start with `PReg` signature.  
 
 #### Fail to live migrate because the target principal name is incorrect. (0x80090322)  
 
@@ -439,12 +439,12 @@ HRESULT = 0x80048054
 
 **Resolution**
 
-Enable or disable `oplocks` and lease `oplocks` on a `qtree`. If `oplocks` and lease `oplocks` are enabled at the storage system level, enable or disable oplocks and lease oplocks on an individual `qtree` by running the respective cmdlets:
+Enable or disable `oplocks` and lease `oplocks` on a `qtree`. If `oplocks` and lease `oplocks` are enabled at the storage system level, enable or disable `oplocks` and lease `oplocks` on an individual `qtree` by running the respective cmdlets:
 
 - `qtree oplocks qtree_name enable`  
 - `qtree oplocks qtree_name disable`
 
-If the **cifs.oplocks.enable** option is set to **On**, the `qtree oplocks` cmdlet for a qtree takes effect immediately. If the **cifs.oplocks.enable** option is set to **Off**, the `qtree oplocks` command doesn't take effect until you change the option to **On**.
+If the **cifs.oplocks.enable** option is set to **On**, the `qtree oplocks` cmdlet for a `qtree` takes effect immediately. If the **cifs.oplocks.enable** option is set to **Off**, the `qtree oplocks` command doesn't take effect until you change the option to **On**.
 
 Here's how to fix this issue:
 
@@ -558,7 +558,7 @@ Live migration of "VM" failed.
 
 Virtual machine migration operation for "VM" failed at migration source "Host5."
 
- Failed to perform migration on virtual machine "VM" because virtual machine migration limit "2" was reached, please wait for completion of an ongoing migration operation.  
+> Failed to perform migration on virtual machine "VM" because virtual machine migration limit "2" was reached, please wait for completion of an ongoing migration operation.  
 
 **Action**
 
