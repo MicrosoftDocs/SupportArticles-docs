@@ -43,7 +43,7 @@ Ensure your client apps, client operating system (OS) and servers are enabled fo
 For more information, see the following articles:
 
 - [How to enable TLS 1.2 on clients](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client)
-- [Preparing for TLS 1.2 in Office 365 and Office 365 GCC - Microsoft 365 Compliance](https://docs.microsoft.com/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide)
+- [Preparing for TLS 1.2 in Office 365 and Office 365 GCC - Microsoft 365 Compliance](https://docs.microsoft.com/microsoft-365/compliance/prepare-tls-1.2-in-office-365)
 
 ### Native support for Windows operating systems and servers
 
