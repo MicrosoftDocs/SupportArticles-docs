@@ -5,7 +5,7 @@ ms.date: 10/10/2020
 ms.prod-support-area-path: 
 ms.service: azure
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Advanced search tips for finding Microsoft troubleshooting content

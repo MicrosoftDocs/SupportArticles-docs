@@ -5,7 +5,7 @@ ms.date: 03/05/2021
 ms.prod-support-area-path: 
 ms.service: backup
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: markstan
 ---
 # How to troubleshoot Azure Recovery Services

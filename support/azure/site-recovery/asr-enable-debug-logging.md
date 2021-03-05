@@ -5,7 +5,7 @@ ms.date: 03/05/2021
 ms.prod-support-area-path: 
 ms.service: backup
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: markstan
 ---
 # How to enable debug logging for the Azure Site Recovery in Hyper-V Site Protection
