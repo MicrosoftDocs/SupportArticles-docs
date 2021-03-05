@@ -83,7 +83,10 @@ C:\Program Files\Microsoft\Exchange Server\V15\ClientAccess\Owa\bin**
 **Note** For Exchange Server 2010, the scripts will be in the “V14” folder instead.
 
 1. Launch Exchange Management Shell as an administrator and run the following commands:
-1. Exit Exchange Management Shell and open a Command Prompt as an administrator.
+
+   **.\UpdateCas.ps1.\UpdateConfigFiles.ps1**
+
+1. Exit Exchange Management Shell and open a command prompt as an administrator.
 1. Run the **iisreset** command.
 1. Restart the server.
 
