@@ -1,7 +1,7 @@
 ---
 title: How to troubleshoot Azure Recovery Services
 description: Describes how to troubleshoot Azure Recovery Services (ASR).
-ms.date: 10/10/2020
+ms.date: 03/05/2021
 ms.prod-support-area-path: 
 ms.service: backup
 ms.author: genli
@@ -46,10 +46,10 @@ For best results, collect a VMM debug trace when you reproduce this issue, and t
 
 Follow these steps to collect SRS logs from the Azure Site Recovery portal:
 
-1. Log on to [Microsoft Azure](http://manage.windowsazure.com).
-2. Select **Recovery Services**.
+1. Log on to the [Azure portal](http://portal.azure.com).
+2. Select **Recovery Services vaults**.
 3. Select the vault that hosts your ASR data.
-4. Select **Jobs**.
+4. Select **Site Recovery jobs**.
 5. Locate your job, and then select it.
 6. Select **ExportJob** to begin the export process.
 7. Select **Export**.
