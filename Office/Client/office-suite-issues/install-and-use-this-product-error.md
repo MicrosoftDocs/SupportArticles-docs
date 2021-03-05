@@ -24,11 +24,11 @@ appliesto:
 - Office Starter 2010
 ---
 
-#  "To install and use this product..." error when you install Office 2010
+# "To install and use this product..." error when you install Office 2010
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-##  Symptoms
+## Symptoms
 
 When you try to install Microsoft Office 2010, the installation does not finish, and you receive the following error message:
 
@@ -49,19 +49,19 @@ When you try to install Microsoft Office 2010, the installation does not finish,
 
 **Note** Office 2010 x64 does not support Windows XP and Windows Server 2003.
 
-##  Cause
+## Cause
 
 This issue occurs when one of the following conditions is true:
 
 - The operating system on which you are trying to install Office 2010 does not meet the system requirements for the product. For example, you are trying to install Office 2010 on a Windows XP-based computer that does not have Windows XP Service Pack 3 installed.   
-- The Office 2010 Setup program (Setup.exe) is configured to run in compatibility mode. That is, the Setup program is set to run under a particular operating system, such as Microsoft Windows 95.   
+- The Office 2010 Setup program (Setup.exe) is configured to run in compatibility mode. That is, the Setup program is set to run under a particular operating system, such as Microsoft Windows 95.
 
-
-##  Resolution
+## Resolution
 
 Follow the two methods provided to resolve your problem:
 
-#### Method 1: Verify Office 2010 system requirements
+### Method 1: Verify Office 2010 system requirements
+
  All Microsoft Office 2010 editions have these operating system requirements:
 
 |Operating System| Minimum Required Version| Architecture |
@@ -76,7 +76,6 @@ Check your computer and determine if you are running one of these minimal requir
 
 If you are not sure how to check the version of Windows installed on your computer, follow the steps  
 
- 
 1. Click **Start,** type msinfo32 in the **Start Search** or **Search programs and files**, then press ENTER.
  ![search page](./media/install-and-use-this-product-error/search-page.png)    
 2. Locate your operating system next to the **OS Name** line and your architecture type next to the **System Type** line.
@@ -92,9 +91,11 @@ If you are not sure how to check the version of Windows installed on your comput
  
 If you meet the minimum system requirements, visit the following TechNet webpage to make sure you meet the minimum hardware requirements:
 
-[System requirements for Office 2010](https://technet.microsoft.com/library/ee624351.aspx) 
-#### Method 2: Turn off compatibility mode
- To resolve this issue, you must disable compatibility mode before you try to install Office 2010. To do this, follow these steps: 
+[System requirements for Office 2010](https://technet.microsoft.com/library/ee624351.aspx)
+
+### Method 2: Turn off compatibility mode
+
+To resolve this issue, you must disable compatibility mode before you try to install Office 2010. To do this, follow these steps: 
  
 1. Right-click the Office 2010 **Setup.exe** file. The screen shot for step 1 and 2 is under the step 2.    
 2. Click **Properties**.
@@ -107,14 +108,11 @@ If you meet the minimum system requirements, visit the following TechNet webpage
 
    ![Click Apply, and then click OK](./media/install-and-use-this-product-error/click-apply-and-then-click-ok.png)  
 1. Double-click **Setup.exe** to install Office 2010.    
-  
 
-##  More Information
+## More Information
 
-- [ How to obtain the latest Windows Vista service pack](https://support.microsoft.com/help/935791)
+- [How to obtain the latest Windows Vista service pack](https://support.microsoft.com/help/935791)
 
-- [ How to obtain the latest Windows XP service pack](https://support.microsoft.com/help/322389)
+- [How to obtain the latest Windows XP service pack](https://support.microsoft.com/help/322389)
 
-- [ How to obtain the latest service pack for Windows Server 2003](https://support.microsoft.com/help/889100) 
-
-- [ How to obtain the latest service pack for Windows Server 2008](https://support.microsoft.com/help/968849)
+- [How to obtain the latest service pack for Windows Server 2008](https://support.microsoft.com/help/968849)

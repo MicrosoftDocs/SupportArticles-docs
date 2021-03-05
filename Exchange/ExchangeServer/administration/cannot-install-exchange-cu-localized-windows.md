@@ -43,7 +43,7 @@ One of the following errors occurs when you try to install an Exchange Cumulativ
 
 ## Cause
 
-The calling server (Exchange server) uses an isolated username or security identifier (SID) to resolve names. If the server does not resolve the name locally, it sends requests to domain controllers (DCs) in all trusted domains to do the name resolution. For more information, see [How to restrict the lookup of isolated names to external trusted domains in Windows Server](https://support.microsoft.com/help/818024).
+The calling server (Exchange server) uses an isolated username or security identifier (SID) to resolve names. If the server does not resolve the name locally, it sends requests to domain controllers (DCs) in all trusted domains to do the name resolution.
 
 ## Resolution
 

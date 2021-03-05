@@ -48,7 +48,7 @@ To resolve this issue, use one of the following methods.
 
 ### Method 1
 
-Set the permission for the **Everyone** group of the registry subkeys that are listed in the error message to Full Control. To do this, use the easy fix solution and follow the steps in [How do I restore security settings to the default settings](https://support.microsoft.com/help/313222).
+Set the permission for the **Everyone** group of the registry subkeys that are listed in the error message to Full Control.
 
 ### Method 2
 
