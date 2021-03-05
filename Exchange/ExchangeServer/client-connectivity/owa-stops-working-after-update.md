@@ -1,5 +1,5 @@
 ---
-title: OWA returns "Could not load file or assembly" error after a security update installed on Exchange Server
+title: OWA or ECP stop working after installing security update
 description: OWA/ECP stops working after installing a security update on Exchange server without elevated permissions.
 author: batre
 ms.author: v-matham
@@ -15,38 +15,76 @@ ms.custom:
 search.appverid:
 - MET150
 appliesto:
+- Exchange Server 2013 Enterprise
+- Exchange Server 2013 Standard
 - Exchange Server 2010 Enterprise
 - Exchange Server 2010 Standard
 ---
 
-# OWA returns "Could not load file or assembly" error after a security update installed on Exchange Server
+# OWA or ECP stop working after installing security update
 
 ## Symptoms
 
-After installing a security update on Exchange Server, users get the following error when trying to use Outlook Web Access (OWA):
+After you install a security update on a server that’s running Exchange, either Outlook on the web (OWA) or Exchange Control Panel (ECP), or both these applications stop working on the server.
 
-> "Could not load file or assembly ‘Microsoft.Exchange.Common, Version=15.0.0.0 …”
+OWA displays the following error message:
+
+>:-(<br/>
+Something went wrong<br/>
+Your request couldn’t be completed. HTTP Status code: 500
+
+![Something went wrong. Your request couldn’t be completed. HTTP Status code: 500](./media/owa-stops-working-after-update/ExchangeServer-OWA-SomethingWentWrong.png)
+
+ECP displays the following error message:
+
+>Server Error in ‘/ecp’ Application.<br>
+Could not load file or assembly ‘Microsoft.Exchange.Common, Version=15.0.0.0 …Culture=neutral, PublicKeyToken=31bf3856ad364e54’ or one of its dependencies. The system cannot find the file specified.
 
 ![Server Error in ecp Application Could not load file or assembly Microsoft.Exchange.Common](./media/owa-stops-working-after-update/Could-not-load-file-or-assembly.png)
 
-You might also see an HTTP 500 error when accessing OWA or the Exchange Control Panel (ECP).
-These errors happen because the security update was not installed with elevated permissions.
+## Cause
+
+These errors occur if the security update was manually installed on a server that has UAC (User Account Control) enabled, but without using elevated permissions.
 
 ## Resolution
 
-Reinstall the security update with elevated permissions:
+Use elevated permissions to reinstall the security update on the server.
 
-1. From the **Start** menu, type **cmd**.
+1. Select **Start**, and then type **cmd**.
 1. Right-click **Command Prompt** from the search results, and then select **Run as administrator**.
-1. If the **User Account Control** windows appears, verify that the default action is the one you want, and then select **Continue**.
+1. If the **User Account Control** windows appears, select the option to launch an elevated command prompt, and then select **Continue**. If the UAC window doesn’t appear, continue to the next step.
 1. Type the full path of the .msp file for the security update, and then press **Enter**.
+1. After the update installs, reboot the server.
 
-If that doesn't solve the issue:
+Verify that you can access OWA and ECP on the server without getting an error message.
 
-1. Launch the **Exchange Management Shell** as administrator.
-1. Type the following commands, pressing **Enter** after each:
+If the ECP error message continues to display, do the following:
 
-   > cd $exscripts;UpdateCas.ps1<br/>
-   > cd $exscripts;UpdateConfigFiles.ps1
+1. Launch **IIS Manager** on the server. 
+1. Browse to:
 
+   **Exchange Backend website** > **ECP Virtual directory**
+
+1. Select **Applications settings** > **BinsearchFolder**
+1. Check the paths to the Exchange directories that are listed. You might see directory paths similar to:
+
+   **%ExchangeInstallDir%bin;%ExchangeInstallDir%bin\CmdletExtensionAgents;%ExchangeInstallDir%ClientAccess\Owa\bin**
+
+1. Replace the paths with the following paths.<br>
+**Note** The path must be where Exchange Server is installed. In the following example, it is assumed to be installed on C: drive and the version is Exchange Server 2013. If it is installed on a different drive on your server, or if you’re using a different version such as Exchange Server 2010, then use the path and version information appropriate for your installation.  
+
+   **C:\Program Files\Microsoft\Exchange Server\V15\bin;<br/>
+C:\Program Files\Microsoft\Exchange Server\V15\bin\CmdletExtensionAgents;<br/>
+C:\Program Files\Microsoft\Exchange Server\V15\ClientAccess\Owa\bin**
+
+1. Navigate to a folder that includes Exchange Server scripts. By default, scripts are in the following location for Exchange Server 2013:
+
+   **C:\Program Files\Microsoft\Exchange Server\v15\Bin\directory**<br/>
+**Note** For Exchange Server 2010, the scripts will be in the “V14” folder instead.
+
+1. Launch Exchange Management Shell as an administrator and run the following commands:
+1. Exit Exchange Management Shell and open a Command Prompt as an administrator.
+1. Run the **iisreset** command.
 1. Restart the server.
+
+Verify that you no longer get an error message when you access ECP.
