@@ -68,7 +68,7 @@ To resolve this issue, make sure that a remote mailbox is provisioned for the ac
 
 This behavior is by design when directory synchronization is configured and the `RemoteRecipientType` attribute is set incorrectly.
 
-You can't use the `New-RemoteMailbox` or `Set-RemoteMailbox` cmdlet to set the `Type` parameter of the mailbox to **Shared**. Therefore, in order to set the attribute values correctly, the `Set-ADUser` cmdlet is required.
+You can use the `New-RemoteMailbox` or `Set-RemoteMailbox` cmdlet to set the `Type` parameter of the mailbox to **Shared** with Exchange 2013 CU21 or later, Exchange 2016 CU10 or later, and Exchange 2019 and this process should only be used if you don't have Exchange 2013 or above with the latest or the previous CU or if you do but receive the error "remoteMailbox.RemoteRecipientType must include ProvisionMailbox" when changing the remote mailbox type to shared. Therefore, in order to set the attribute values correctly, the `Set-ADUser` cmdlet is required.
 
 > [!NOTE]
 > Under most circumstances, Microsoft does not support the use of non-Exchange tools to manually change Exchange attributes. Because of the limitation in these cmdlets, this behavior is identified as an exception to this support stance.
