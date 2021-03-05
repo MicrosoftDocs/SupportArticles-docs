@@ -15,10 +15,10 @@ ms.custom:
 search.appverid:
 - MET150
 appliesto:
-- Exchange Server 2013 Enterprise
-- Exchange Server 2013 Standard
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
+- Exchange Server 2019 
+- Exchange Server 2016 
+- Exchange Server 2013
+- Exchange Server 2010 Service Pack 3
 ---
 
 # OWA or ECP stop working after installing security update
