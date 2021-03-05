@@ -5,7 +5,7 @@ ms.date: 08/14/2020
 ms.prod-support-area-path:  Azure\Azure Information Protection\AIP Service\Policy issues
 ms.service: azure-advanced-threat-protection
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # How to troubleshoot Azure Information Protection policy issues
