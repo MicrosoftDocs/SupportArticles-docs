@@ -111,7 +111,6 @@
         "browsers/**/*.md": "internet-explorer"
       },
       "ms.technology": {
-        "**/*.md": "",
         "biztalk/**/*.md": "",
         "dotnet/**/*.md": "",
         "aspnet/**/*.md": "",
