@@ -44,7 +44,7 @@ Once all the databases on the server have been checkpointed, run the command `DB
 
 For more information on issues that may arise from large buffer pools, see [SQL Server : large RAM and DB Checkpointing](https://techcommunity.microsoft.com/t5/sql-server-support/sql-server-large-ram-and-db-checkpointing/ba-p/318973).
 
-Starting with SQL Server 2017 CU2 and SQL Server 2019 CU9, the following logging and XEvents were added to help identify long buffer pool scans:
+Starting with [SQL Server 2017 CU23](https://prod.support.services.microsoft.com/topic/kb5000685-cumulative-update-23-for-sql-server-2017-22b653c7-8487-4564-9db2-b5c1bd465145?preview=true#bkmk_13741858) and [SQL Server 2019 CU9](https://support.microsoft.com/topic/kb5000642-cumulative-update-9-for-sql-server-2019-97ad5c3e-e002-4b6d-b566-698bf70ca44a#bkmk_13744390), the following logging and XEvents were added to help identify long buffer pool scans:
 
 ### errorlog message
 
