@@ -117,8 +117,6 @@ Get help from the [Microsoft Community](https://answers.microsoft.com/) online 
 
 If error 1935 happens when you install Office 2010 Service Pack 1 (SP1), follow the steps in the [Description of Office 2010 update: September 13, 2011](https://support.microsoft.com/help/2553092) knowledge base article.
 
-For related information about the 1935 error, read [Error 1935 during install of the .NET Framework](https://support.microsoft.com/help/308096).
-
 You may experience error 1935 when you install Office 2010 Service Pack 2 (SP2). As Office 2010 includes .NET Programmability Support, this issue may be caused by the interference between Windows Installer (msiexec.exe) and Windows Search (SearchIndexer.exe) or another module in the assembly file copy process. This issue may also occur when you apply other updates, for example, a hotfix for Microsoft .NET Framework components. To work around this issue, use one of the following steps:
 
 - Method 1: Retry installation of Office 2010 SP2   

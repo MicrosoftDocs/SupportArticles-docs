@@ -20,13 +20,13 @@ appliesto:
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-##  Symptoms
+## Symptoms
 
 When you attempt to Save a resource to the Enterprise Resource Pool, you may receive the following error message:
 
 > "The resource could not be saved due to the following reasons: The resource account is already in use."
 
-##  Cause
+## Cause
 
 You receive this message when all three conditions listed below are met:
 
@@ -36,7 +36,7 @@ You receive this message when all three conditions listed below are met:
 
 This creates two different accounts in Project Web App (PWA), one as a Resource and one as a User. When you go to Delete Enterprise Objects you will see the account listed twice, once as a resource and once as a user, but you can't identify which is a user vs. a resource in this view.
 
-##  Resolution
+## Resolution
 
 You will delete the user and then modify the resource to include the User Logon Account. But first, you need to be able to identify which is the resource and which is the user. To do this follow the below steps:
 
@@ -48,9 +48,6 @@ You will delete the user and then modify the resource to include the User Logon 
 6. On the Resources ribbon click Edit. Check the box for Associate resource with a user account.    
 7. Change Account Status to "Active". Enter the user's name in the User logon account field. Click Save.    
 
-
-##  More Information
-
-In this version of Project Server and Project Online duplicate resource names are allowed. For more information, see [Duplicate REsource Names are allowed in PWA 2013](https://support.microsoft.com/help/2800961).
+## More Information
 
 A related article that pertains to Project Server 2013: [Cannot enter User Logon Account for new resource"](https://support.microsoft.com/help/2816252).

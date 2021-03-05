@@ -308,10 +308,6 @@ To perform a Maintenance Mode repair, follow these steps:
 5. Click **Repair Word** (**Repair Office**), and then click **Next**.   
 6. Click **Reinstall Word** (**Reinstall Office**), and then click **Install**.   
  
-For more information about Word 2007 or Word 2010, click the following article number to view the article in the Microsoft Knowledge Base: 
-
-[924611](https://support.microsoft.com/help/924611) How to install the individual 2007 Office features or to repair the installed 2007 Office programs
-
 ### Templates and add-ins
 
 #### Global Template (Normal.dotm or Normal.dot)
@@ -422,6 +418,7 @@ Note In the following table, "Template" refers to either the Normal.dot template
 |View toolbars|Template|
 |View/toolbar|Template|
 |Document Parts|Template|
+|||
 
 AutoCorrect lists are shared between Office programs. Any changes that you make to the AutoCorrect entries and settings when you are in one program are immediately available to the other programs. Additionally, Word can store AutoCorrect items that are made up of formatted text and graphics.
 
@@ -433,3 +430,4 @@ Information about AutoCorrect is stored in various locations. These locations ar
 |AutoCorrect entries used only by Word (formatted text and graphics)|Normal.dot|
 |AutoCorrect settings (correct two initial capitals, capitalize names of days, replace text as you type)|Registry|
 |AutoCorrect settings used only by Word (corrects accidental usage of CAPS LOCK key, capitalizes first letter of sentences)|Registry|
+|||

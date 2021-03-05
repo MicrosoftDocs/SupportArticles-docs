@@ -85,7 +85,7 @@ To resolve this issue, use one or more of the following methods:
 
   To resolve this issue, remove the subdomain from the Office 365 portal. For more info about how to remove a domain, go to the following Microsoft website:
 
-   [Remove a domain](https://docs.microsoft.com/microsoft-365/admin/get-help-with-domains/remove-a-domain?view=o365-worldwide)
+   [Remove a domain](https://docs.microsoft.com/microsoft-365/admin/get-help-with-domains/remove-a-domain)
 
   After the domain is removed, you have to re-create the domain.
 
@@ -107,10 +107,6 @@ To resolve this issue, use one or more of the following methods:
      If minor changes are not synced to the Office 365 user account, a directory synchronization problem may cause this issue.
 
      **Note** Directory synchronization may sync successfully without updating the user's UPN to the appropriate value if the user account is already licensed.
-
-     For more info about how to update the UPN in this case, see the following Microsoft Knowledge Base article: 
-
-     [2523192](https://support.microsoft.com/help/2523192) User names in Office 365, Azure, or Intune don't match the on-premises UPN or alternate login ID    
 
 
 ## More Information
