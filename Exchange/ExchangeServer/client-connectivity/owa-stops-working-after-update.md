@@ -53,7 +53,8 @@ Use elevated permissions to reinstall the security update on the server.
 
 1. Select **Start**, and then type **cmd**.
 1. Right-click **Command Prompt** from the search results, and then select **Run as administrator**.
-1. If the **User Account Control** window appears, select the option to launch an elevated command prompt, and then select **Continue**. If the window doesn’t appear, continue to the next step.
+1. If the **User Account Control** window appears, select the option to launch an elevated command prompt, and then select **Continue**. 
+If the window doesn’t appear, continue to the next step.
 1. Type the full path of the .msp file for the security update, and then press **Enter**.
 1. After the update installs, reboot the server.
 
