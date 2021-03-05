@@ -31,10 +31,9 @@ The following situations might cause this error to occur.
 ### SIPDomain is not enabled in the tenant
 
 This issue can be resolved by following these steps:
- 
+
 1. Connect to Skype for Business Online with PowerShell:
 
-   - [Skype for Business Online, Windows PowerShell Module](https://www.microsoft.com/download/details.aspx?id=39366)
    - [Manage Skype for Business Online with Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell)
 
 2. Verify that SIPDomain is enabled by running [Get-CsOnlineSipDomain](https://docs.microsoft.com/powershell/module/skype/get-csonlinesipdomain).
