@@ -120,6 +120,9 @@ When a quota is reached, the auto-split process should create a new public folde
 Get-PublicFolder \pfname |Ft name, *content*
 ```
 
-For more information, read this [blog article](https://techcommunity.microsoft.com/t5/exchange-team-blog/public-folders-and-exchange-online/ba-p/594318).
+For more information, read the following Blog articles:
+
+- [How Exchange Online automatically cares for your public folder mailboxes (via AutoSplit)](https://techcommunity.microsoft.com/t5/exchange-team-blog/how-exchange-online-automatically-cares-for-your-public-folder/bc-p/2157425/emcs_t)
+- [Public Folders and Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/public-folders-and-exchange-online/ba-p/594318)
 
 If the auto-split process failed to create a new mailbox, please submit a support request to Microsoft Support for further assistance.
