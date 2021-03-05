@@ -1,7 +1,7 @@
 ---
 title: Understand and resolve blocking problems
 description: This article provide instruction on first understanding what blocking is in terms of SQL Server and furthermore how to investigate its occurrence.
-ms.date: 03/01/2021
+ms.date: 03/05/2021
 ms.prod-support-area-path: Performance
 ms.reviewer: ramakoni
 ms.prod: sql
@@ -341,7 +341,7 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
 
     Reports built-in to SSMS from the [Query Store](/sql/relational-databases/performance/best-practice-with-the-query-store) (introduced in SQL Server 2016) are also a highly recommended and valuable tool for identifying the most costly queries, suboptimal execution plans.
 
-    If you have a long-running query that is blocking other users and cannot be optimized, consider moving it from an OLTP environment to a dedicated reporting system, or use AlwaysOn availability groups to synchronize a [read-only replica of the database](read-scale-out.md).
+    If you have a long-running query that is blocking other users and cannot be optimized, consider moving it from an OLTP environment to a dedicated reporting system, or use AlwaysOn availability groups to synchronize a [read-only replica of the database](/sql/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups).
 
 2. Blocking caused by a sleeping SPID that has an uncommitted transaction
 
@@ -399,19 +399,19 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
 
      If the client has multiple open connections, and a single thread of execution, the following distributed deadlock may occur. For brevity, the term `dbproc` used here refers to the client connection structure.
 
-        ```console
-        SPID1------blocked on lock------->SPID2
-         /\ (waiting to write results
-         | back to client)
-         | |
-         | | Server side
-         | ================================|==================================
-         | <-- single thread --> | Client side
-         | \/
-         dbproc1 <------------------- dbproc2
-         (waiting to fetch (effectively blocked on dbproc1, awaiting
-         next row) single thread of execution to run)
-        ```
+    ```console
+    SPID1------blocked on lock------->SPID2
+      /\ (waiting to write results
+      | back to client)
+      | |
+      | | Server side
+      | ================================|==================================
+      | <-- single thread --> | Client side
+      | \/
+      dbproc1 <------------------- dbproc2
+      (waiting to fetch (effectively blocked on dbproc1, awaiting
+      next row) single thread of execution to run)
+    ```
 
      In the case shown above, a single client application thread has two open connections. It asynchronously submits a SQL operation on dbproc1. This means it does not wait on the call to return before proceeding. The application then submits another SQL operation on dbproc2, and awaits the results to start processing the returned data. When data starts coming back (whichever dbproc first responds--assume this is dbproc1), it processes to completion all the data returned on that dbproc. It fetches results from dbproc1 until SPID1 gets blocked on a lock held by SPID2 (because the two queries are running asynchronously on the server). At this point, dbproc1 will wait indefinitely for more data. SPID2 is not blocked on a lock, but tries to send data to its client, dbproc2. However, dbproc2 is effectively blocked on dbproc1 at the application layer as the single thread of execution for the application is in use by dbproc1. This results in a deadlock that SQL Server cannot detect or resolve because only one of the resources involved is a SQL Server resource.
 
@@ -419,19 +419,19 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
 
      Even if a separate thread exists for each connection on the client, a variation of this distributed deadlock may still occur as shown by the following.
 
-        ```console
-        SPID1------blocked on lock-------->SPID2
-         /\ (waiting on net write) Server side
-         | |
-         | |
-         | INSERT |SELECT
-         | ================================|==================================
-         | <-- thread per dbproc --> | Client side
-         | \/
-         dbproc1 <-----data row------- dbproc2
-         (waiting on (blocked on dbproc1, waiting for it
-         insert) to read the row from its buffer)
-        ```
+    ```console
+    SPID1------blocked on lock-------->SPID2
+      /\ (waiting on net write) Server side
+      | |
+      | |
+      | INSERT |SELECT
+      | ================================|==================================
+      | <-- thread per dbproc --> | Client side
+      | \/
+      dbproc1 <-----data row------- dbproc2
+      (waiting on (blocked on dbproc1, waiting for it
+      insert) to read the row from its buffer)
+    ```
 
      This case is similar to Example A, except dbproc2 and SPID2 are running a `SELECT` statement with the intention of performing row-at-a-time processing and handing each row through a buffer to dbproc1 for an `INSERT`, `UPDATE`, or `DELETE` statement on the same table. Eventually, SPID1 (performing the `INSERT`, `UPDATE`, or `DELETE`) becomes blocked on a lock held by SPID2 (performing the `SELECT`). SPID2 writes a result row to the client dbproc2. Dbproc2 then tries to pass the row in a buffer to dbproc1, but finds dbproc1 is busy (it is blocked waiting on SPID1 to finish the current `INSERT`, which is blocked on SPID2). At this point, dbproc2 is blocked at the application layer by dbproc1 whose SPID (SPID1) is blocked at the database level by SPID2. Again, this results in a deadlock that SQL Server cannot detect or resolve because only one of the resources involved is a SQL Server resource.
 
@@ -447,7 +447,7 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
    A data modification query that is KILLed, or canceled outside of a user-defined transaction, will be rolled back. This can also occur as a side effect of the client computer restarting and its network session disconnecting. Likewise, a query selected as the deadlock victim will be rolled back. A data modification query often cannot be rolled back any faster than the changes were initially applied. For example, if a `DELETE`, `INSERT`, or `UPDATE` statement had been running for an hour, it could take at least an hour to roll back. This is expected behavior, because the changes made must be rolled back, or transactional and physical integrity in the database would be compromised. Because this must happen, SQL Server marks the SPID in a golden or rollback state (which means it cannot be KILLed or selected as a deadlock victim). This can often be identified by observing the output of `sp_who`, which may indicate the ROLLBACK command. The Status column of `sys.dm_exec_sessions` will indicate a ROLLBACK status.
        
     > [!Note]
-    > Lengthy rollbacks are rare when the [Accelerated Database Recovery feature](../accelerated-database-recovery.md) is enabled. This feature was introduced in SQL Server 2019.
+    > Lengthy rollbacks are rare when the [Accelerated Database Recovery feature](/sql/relational-databases/accelerated-database-recovery-concepts) is enabled. This feature was introduced in SQL Server 2019.
     
     **Resolution**:
   
