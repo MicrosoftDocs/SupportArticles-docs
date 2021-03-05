@@ -24,13 +24,12 @@ description: Explains why tab might stop functioning after enabling Conditional 
 
 ## Summary
 
-After enabling Conditional Access on the tenant in Microsoft Teams, tabs no longer functioning in the desktop client as expected. However, the tabs load when using the Web Client.
+After enabling Conditional Access on the tenant in Microsoft Teams, some tabs no longer functioning in the desktop client as expected. However, the tabs load when using the Web Client.
 
-The tabs affected include PowerBI, Forms, VSTS, PowerApps, and SharePoint List. 
+The tabs affected are the website tabs and app tabs (such as Power BI, Forms, VSTS, PowerApps, and SharePoint List) that open an AAD authentication dialog requiring users to sign in with their AAD credentials.
 
 ## More information
 
-To see affected tabs you must use Teams in Edge, Internet Explorer, or Chrome with the [Windows 10 Accounts extension](https://chrome.google.com/webstore/detail/windows-10-accounts/ppnbnpeolgkicgegkbkbjmhlideopiji) installed. Some tabs still depend on web authentication, which doesn't work in the Desktop Client when Conditional Access is enabled. Microsoft is working with partners to enable these scenarios. To date we have enabled Planner, OneNote, and Stream.
-
+To see affected tabs you must use Teams in Edge, Internet Explorer, or Chrome with the [Windows 10 Accounts extension](https://chrome.google.com/webstore/detail/windows-10-accounts/ppnbnpeolgkicgegkbkbjmhlideopiji) installed. Some tabs still depend on web authentication, which doesn't work in the Desktop Client when Conditional Access is enabled. Microsoft is working with partners to enable AAD single sign-on support, which does support Conditional Access.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
