@@ -43,3 +43,19 @@ Once all the databases on the server have been checkpointed, run the command `DB
 ## More information
 
 For more information on issues that may arise from large buffer pools, see [SQL Server : large RAM and DB Checkpointing](https://techcommunity.microsoft.com/t5/sql-server-support/sql-server-large-ram-and-db-checkpointing/ba-p/318973).
+
+Starting with SQL Server 2017 CU2 and SQL Server 2019 CU9, the following logging and XEvents were added to help identify long buffer pool scans:
+
+### errorlog message
+
+If a scan takes more than 10 seconds, a message will be printed as follows:
+
+> Buffer Pool scan took 14 seconds: database ID 7, command 'BACKUP DATABASE', operation 'FlushCache', scanned buffers 115, total iterated buffers 204640239, wait time 0 ms. See 'https://go.microsoft.com/fwlink/?linkid=2132602' for more information.
+
+### XEvent buffer_pool_scan_complete
+
+If a scan takes more than 1 second, an XEvent will be recorded as follows when the event is enabled. The threshold is smaller to be able to optionally capture at a finer-granularity.
+
+|name|database_id|elapsed_time_ms|command|operation|scanned_buffers|total_iterated_buffers|
+|-|-|-|-|-|-|-|
+|buffer_pool_scan_complete|7|1308|BACKUP DATABASE|FlushCache|243|19932814|
