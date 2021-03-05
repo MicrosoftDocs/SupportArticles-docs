@@ -92,9 +92,11 @@ For more information, see:
 Ensure that the following registry strings are configured as shown:
 
 - **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client**
+
   - "DisabledByDefault"=dword:00000000
   - "Enabled"=dword:00000001
 - **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server**
+
   - "DisabledByDefault"=dword:00000000
   - "Enabled"=dword:00000001
 - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft.NETFramework\v4.0.30319**
@@ -129,10 +131,12 @@ For example, **Configuration Manager** clients, remote site system roles not ins
 - For 32-bit applications that are running on **32-bit OSs** and for 64-bit applications that are running on **64-bit OSs**, update the following subkey values:
 
   - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v2.0.50727**
+
     - "SystemDefaultTlsVersions" = dword:00000001
     - "SchUseStrongCrypto" = dword:00000001
   
   - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319**
+
     - "SystemDefaultTlsVersions" = dword:00000001
     - "SchUseStrongCrypto" = dword:00000001
 
