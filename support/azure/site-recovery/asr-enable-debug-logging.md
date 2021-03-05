@@ -59,7 +59,7 @@ To enable debug logging for the ASR Provider, use the following steps:
 6. Collect debug logs from the folder \<installation folder>\Temp. The default location will be *C:\Program Files\Microsoft Azure Recovery Services Agent\Temp*.
 7. Use these steps to collect SRS logs from the Azure Site Recovery portal:
 
-    1. Log on to the [Microsoft Azure portal](https://portal.azure.com).
+    1. Log on to the [Azure portal](https://portal.azure.com).
     2. Select **Recovery Services vaults**.
     3. Select the vault that hosts your ASR data.
     4. Select **Site Recovery jobs**.
