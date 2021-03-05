@@ -48,12 +48,16 @@
     "globalMetadata": {
       "breadcrumb_path": "/support/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None",
+      "feedback_system": "None", 
+      "feedback_github_repo": "MicrosoftDocs/SupportArticles-docs", 
       "searchScope": ["Troubleshoot"]
     },
 
     "fileMetadata": {
-
+      "feedback_system": {
+        "azure/*.md": "GitHub",
+        "azure/**/*.md": "GitHub"
+      },
       "layout": {
         "**/index.yml": "LandingPage"
       },
