@@ -24,11 +24,11 @@ _Original KB number:_ &nbsp; 4514607
 
 - Windows Server 2019
 
-    Windows Server 2019 supports AMD EPYC 7*xx*2-series CPUs. Use the Windows Server 2019 refreshed media image that was released in early October 2019. Obtain the image from an appropriate licensing channel, as applicable.
+    Windows Server 2019 supports AMD EPYC 7*xx*2-series CPUs. Use the Windows Server 2019 refreshed media image that was released in early October 2019. You can obtain this image from the appropriate licensing channel, as applicable.
 
 - Windows Server 2016
 
-    Windows Server 2016 supports AMD EPYC 7*xx*2-series CPUs. The support is limited to no more than 255 logical processors. Windows Server 2016 does not support X2APIC mode. You should disable this mode in the computer BIOS.
+    Windows Server 2016 supports AMD EPYC 7*xx*2-series CPUs. The support is limited to no more than 255 logical processors. Windows Server 2016 does not support X2APIC mode. You should disable this mode in the computer BIOS. Use the latest refreshed media image (minimum version: FMR February 2018). You can obtain this image from the appropriate licensing channel, as applicable." 
 
 - Windows Server 2012 R2
 
