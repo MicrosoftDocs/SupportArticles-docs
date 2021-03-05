@@ -143,7 +143,7 @@ Windows Server 2008 R2 and later versions are supported for the following roles 
     > [!NOTE]
     > Third-party clustered roles are supported by the vendor
 
-    For more information about licensing restrictions that are related to Remote Desktop Services in Microsoft Azure, see [Virtual machines Licensing FAQ](http://www.windowsazure.com/pricing/licensing-faq/#header-3). For technical information about how to configure Remote Desktop Services in Microsoft Azure for session hosting by using Windows Server 2012 or Windows Server 2012 R2, see [Azure Desktop Hosting - Reference Architecture and Deployment Guides](/previous-versions/azure/dn451351(v=azure.100)?redirectedfrom=MSDN).
+    For more information about licensing restrictions that are related to Remote Desktop Services in Microsoft Azure, see [Virtual machines Licensing FAQ](https://azure.microsoft.com/pricing/licensing-faq/). For technical information about how to configure Remote Desktop Services in Microsoft Azure for session hosting by using Windows Server 2012 or Windows Server 2012 R2, see [Azure Desktop Hosting - Reference Architecture and Deployment Guides](/previous-versions/azure/dn451351(v=azure.100)?redirectedfrom=MSDN).
 
 The following roles are not supported on Microsoft Azure Virtual Machines:
 

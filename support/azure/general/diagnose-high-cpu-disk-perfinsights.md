@@ -5,7 +5,7 @@ ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.service: virtual-machines
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # How to use PerfInsights to diagnose high CPU or disk usage issues
