@@ -39,7 +39,7 @@ Additionally, when you do a recovery checkpoint and try to convert it to a refer
 
 ## Cause
 
-This issue occurs because the NT Virtual Machine\Virtual Machines special identity doesn't have the Log on as a Service right on the Hyper-V host computer. Usually, the Virtual Machine Management Service (VMMS) replaces this user permission at every Group Policy refresh to ensure it's always present. However, you may notice that the Group Policy refresh doesn't function correctly in certain situations.
+This issue occurs because the NT Virtual Machine\Virtual Machines special identity doesn't have the `Log on` as a Service right on the Hyper-V host computer. Usually, the Virtual Machine Management Service (VMMS) replaces this user permission at every Group Policy refresh to ensure it's always present. However, you may notice that the Group Policy refresh doesn't function correctly in certain situations.
 
 ## Workaround
 
@@ -56,7 +56,7 @@ Take the following steps on the Hyper-V host machine:
 1. Sign in to the machine as a Domain Administrator.
 2. Install the Group Policy Management feature from the Server Manager console.
 3. After installation, open the GPMC MMC snap-in and browse to the policy that manages User Rights.
-4. Edit the policy to include NT Virtual Machine\Virtual Machines in the entries for Log on as a Service.
+4. Edit the policy to include NT Virtual Machine\Virtual Machines in the entries for `Log on` as a Service.
 5. Close the policy editor and start a `gpupdate /force` on the Hyper-V host computer to refresh policy. (You may need to wait several minutes for Active Directory replication to occur).
 
 ### Method 3
@@ -67,18 +67,24 @@ Take the following steps on a client computer running Windows 8 that supports th
 2. Install the Client Hyper-V feature.
 3. Install the Windows 8 Remote Server Administration Tools (RSAT).
 4. Open the Group Policy Management console and browse to the policy that manages User Rights.
-5. Edit the policy to include NT Virtual Machine\Virtual Machines on the entries for Log on as a Service user right.
+5. Edit the policy to include NT Virtual Machine\Virtual Machines on the entries for `Log on` as a Service user right.
 6. Close the policy editor on the client.
 7. Start `gpupdate /force` on the Hyper-V host to refresh policy. (You may need to wait several minutes for Active Directory replication to occur).
 
 ## Best practices about Hyper-V hosts
 
-A Microsoft recommended best practice for Hyper-V servers is to not install any additional roles or features that don't specifically support virtualization. As an example, in a Hyper-V Cluster, the Hyper-V Role and the Failover Clustering feature are installed to support highly available virtualized workloads. Hyper-V hosts play a critical role in an organizations' virtualization strategy. Microsoft recommends that the Hyper-V servers be managed in a separate OU in Active Directory (if they're domain-joined). Only group policies that apply specifically to Hyper-V host machines should be applied to this OU. It minimizes the risk of a policy conflict affecting the proper functioning in a Hyper-V host.
+A Microsoft recommended best practice for Hyper-V servers is to not install any additional roles or features that don't specifically support virtualization. As an example in a Hyper-V Cluster, the Hyper-V Role and the Failover Clustering feature are installed to support highly available virtualized workloads. Hyper-V hosts play a critical role in an organizations' virtualization strategy. If Hyper-V servers are domain-joined, Microsoft recommends the Hyper-V servers be managed in a separate OU in Active Directory. Only group policies that apply specifically to Hyper-V host machines should be applied to this OU. It minimizes the risk of a policy conflict affecting the proper functioning in a Hyper-V host.
 
 ## Best practices about management of user rights, file system permissions, and registry permissions via Group Policy
 
-Although you can manage user rights assignments, file system permissions, and registry permissions via Group Policy objects, the management interface available in Group Policy will overwrite any user rights, file system permissions, or registry permissions defined locally on the computer. Thus, you should always use these capabilities with caution, and insure that the group policy objects that set these items apply only to the computers that actually need these items. Since these items aren't cumulative, any group policy object that applies user rights, file system permissions, or registry permissions must contain all security principals or service accounts that may be operating on the computers where the group policy objects apply.
+You can manage the following permissions via Group Policy objects:
+
+- User rights assignments
+- File system permissions
+- Registry permissions
+
+But the management interface available in Group Policy will overwrite any user rights, file system permissions, or registry permissions defined locally on the computer. So you should always use these capabilities with caution, and insure that the group policy objects that set these items apply only to the computers that actually need these items. Since these items aren't cumulative, any group policy object that applies user rights, file system permissions, or registry permissions must contain all security principals or service accounts that may be operating on the computers where the group policy objects apply.
 
 ## Best practices about the Default Domain Policy
 
-The Default Domain Policy is used programmatically by the operating system and maintains critical, domain-wide policies that can only be set in this policy object. Because of this, the Default Domain Policy should only be modified when absolutely necessary. To manage group policy settings for the entire domain, administrators should create new policy objects linked at the domain level. Whenever possible, policies should be applied at the OU level rather than the domain level, to insure that settings are applied only to the users and computers that require them.
+The Default Domain Policy is used programmatically by the operating system and maintains critical, domain-wide policies that can only be set in this policy object. So the Default Domain Policy should only be modified when necessary. To manage group policy settings for the entire domain, administrators should create new policy objects linked at the domain level. Whenever possible, policies should be applied at the OU level rather than the domain level, to insure that settings are applied only to the users and computers that require them.

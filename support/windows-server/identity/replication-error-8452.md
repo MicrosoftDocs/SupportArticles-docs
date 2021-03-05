@@ -83,7 +83,7 @@ _Original KB number:_ &nbsp; 2023704
 
     |Event|Source|Event String|
     |---|---|---|
-    |NTDS General|1586|The checkpoint with the primary domain controller (PDC) was unsuccessful. The checkpointing process will be retried again in four hours. A full synchronization of the security database to downlevel domain controllers may take place if this machine is promoted to be the PDC before the next successful checkpoint. The error returned was: The naming context is in the process of being removed or is not replicated from the specified server.|
+    |NTDS General|1586|The checkpoint with the Primary Domain Controller (PDC) was unsuccessful. The checkpointing process will be retried again in four hours. A full synchronization of the security database to downlevel domain controllers may take place if this machine is promoted to be the PDC before the next successful checkpoint. The error returned was: The naming context is in the process of being removed or is not replicated from the specified server.|
     ||||  
 
 ## Cause
@@ -118,7 +118,7 @@ The [More information](#more-information) section of this article contains expla
 
 In summary, Error 8452 happens if any of the following conditions is true:
 
-1. When DC1 <- DC2 replication is started for an naming context (NC), on DC1 there's no replica link for the NC from DC2.
+1. When DC1 <- DC2 replication is started for a Naming Context (NC), on DC1 there's no replica link for the NC from DC2.
 2. When DC1 <- DC2 replication in started for an NC, the NC is in the process of being removed on DC2.
 3. In mixed domain environment, PDC FSMO role is transferred from DC2 to DC1, but on DC1 there's no replica link from DC2.
 
@@ -190,7 +190,7 @@ The `showrepl` (or `showreps`) command of `repadmin` reports the replication sta
 
 ### NTDS replication event 1586
 
-NTDS replication event 1586 is generated in a mixed domain environment that contains both Windows NT 4.0 and Active Directory DCs. In this mixed domain environment, Active Directory domain controllers replicate amongst themselves using the DS replication protocol, while the Active Directory PDC replicates to NT4 BDCs using the legacy `netlogon` replication protocol. In this case, the Active Directory PDC FSMO role holder is the single point for replication to NT4 BDCs in a common domain. The PDC maintains a checkpoint for each BDC representing the most recent replicated change. If the PDC FSMO role is transferred to another Active Directory DC in the domain, the information about each individual BDC's checkpoint must be replicated to the new PDC FSMO role. So, the new PDC FSMO role holder must have a direct replication relationship with the old PDC FSMO role holder. If the new PDC doesn't replicate directly with the old PDC (that is, on the new PDC there's no replica link from old PDC), then we'll see error 8452 in event 1586.
+NTDS replication event 1586 is generated in a mixed domain environment that contains both Windows NT 4.0 and Active Directory DCs. In this mixed domain environment, Active Directory domain controllers replicate among themselves using the DS replication protocol, while the Active Directory PDC replicates to NT4 BDCs using the legacy `netlogon` replication protocol. In this case, the Active Directory PDC FSMO role holder is the single point for replication to NT4 BDCs in a common domain. The PDC maintains a checkpoint for each BDC representing the most recent replicated change. If the PDC FSMO role is transferred to another Active Directory DC in the domain, the information about each individual BDC's checkpoint must be replicated to the new PDC FSMO role. So, the new PDC FSMO role holder must have a direct replication relationship with the old PDC FSMO role holder. If the new PDC doesn't replicate directly with the old PDC (that is, on the new PDC there's no replica link from old PDC), then we'll see error 8452 in event 1586.
 
 ### Demotion
 
