@@ -42,7 +42,7 @@ To determine which objects share the proxy address of a specified user, follow t
 2. Run the following command:
 
     ```powershell
-    Get-Recipient | Where-Object {$_.EmailAddresses -match "user@contoso.onmicrosoft.com"} | Format-List Name, RecipientType, emailaddresses
+    Get-EXORecipient | Where-Object {$_.EmailAddresses -match "user@contoso.onmicrosoft.com"} | Format-List Name, RecipientType, emailaddresses
     ```
 
     This command lists all mail recipients that have a type that matches the proxy address of a specified user. The duplicate proxy address may be associated with any of the following:
