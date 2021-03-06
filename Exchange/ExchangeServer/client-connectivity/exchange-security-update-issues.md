@@ -22,7 +22,7 @@ appliesto:
 - Exchange Server 2010 Service Pack 3
 ---
 
-# Issues due to Exchange Server security updates CVE-2021-26855
+# Issues due to Exchange Server security updates
 
 This article provides a list of known issues that users might encounter when installing Cumulative Updates (CUs) and Security Updates (SUs) for the versions of Microsoft Exchange Server specified in the Applies to section.
 
@@ -36,7 +36,7 @@ This script automates all four of the commands found in the [Hafnium blog post](
 > [!IMPORTANT]
 > This article applies to clients running Windows 7, Windows Server 2008 R2, and later versions of both operating systems.
 
-When you apply a Cumulative Update (for Exchange Server 2013, Exchange Server 2016 or Exchange Server2019) or Rollup package (for Exchange Server2010), the update process updates the Outlook on the web files and .config files if required. Any customized Exchange or Internet Information Server (IIS) settings that you made in Exchange XML application configuration files on the Exchange server (for example, web.config files, EdgeTransport.exe.config files, any [customized logon.aspx Outlook on the web files](http://technet.microsoft.com/library/ee633483%28exchg.140%29.aspx) will be overwritten when you install an Exchange CU. Be sure save this information so you can easily re-apply the settings after the install. After you install the Exchange CU, you need to re-configure these settings.
+When you apply a Cumulative Update (for Exchange Server 2013, Exchange Server 2016 or Exchange Server2019) or Rollup package (for Exchange Server2010), the update process updates the Outlook on the web files and .config files if required. Any customized Exchange or Internet Information Server (IIS) settings that you made in Exchange XML application configuration files on the Exchange server (for example, web.config files, EdgeTransport.exe.config files, any [customized logon.aspx Outlook on the web files](https://docs.microsoft.com/previous-versions/exchange-server/exchange-140/ee633483(v=exchg.140)?redirectedfrom=MSDN) will be overwritten when you install an Exchange CU. Be sure save this information so you can easily re-apply the settings after the install. After you install the Exchange CU, you need to re-configure these settings.
 
 ### How to confirm the installation of Security Updates completed successfully
 
@@ -48,7 +48,9 @@ When you apply a Cumulative Update (for Exchange Server 2013, Exchange Server 20
 
 Run the following command and check and make sure if file version is matching with below table:
 
-    Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
+```
+Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
+```
 
 | Exchange version  | Patched systems file versions  |
 |---|---|
@@ -62,8 +64,9 @@ Run the following command and check and make sure if file version is matching wi
 
 **Issue**
 
-OWA and ECP may experience HTTP 500 errors after installation. After providing credentials to log on to OWA/ECP, it may fail with an error similar to :
-"Could not load file or assembly Microsoft.Exchange.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The system cannot find the file specified."
+OWA and ECP may experience HTTP 500 errors after installation. After providing credentials to log on to OWA/ECP, it may fail with an error similar to:
+
+>Could not load file or assembly Microsoft.Exchange.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The system cannot find the file specified.
 
 **Resolution**
 
@@ -71,11 +74,11 @@ If this occurs, run the following scripts to restore the configuration for OWA a
 The scripts can be found in the folder: \Program Files\Microsoft\Exchange Server\v15\Bin\ directory. (Where “V15“ will be “V14” for Exchange 2010)
 The scripts are located in the following location: \Program Files\Microsoft\Exchange Server\v15\Bin\ directory. Where “V15“ will be “V14” for Exchange 2010.
 
-Run the scripts '.\UpdateCas.ps1' and '.\UpdateConfigFiles.ps1'
+Run the scripts `.\UpdateCas.ps1` and `.\UpdateConfigFiles.ps1`.
 
 Then go to a command prompt as administrator and run `iisreset`.
 
-If this fails please review and follow the steps in [this Docs article](https://docs.microsoft.com/en-us/exchange/troubleshoot/client-connectivity/owa-stops-working-after-update).
+If this fails please review and follow the steps in [this Docs article](https://docs.microsoft.com/exchange/troubleshoot/client-connectivity/owa-stops-working-after-update).
 
 ### ECP Missing Images
 
@@ -93,7 +96,7 @@ After Security Update installation, OWA or ECP may show missing images similar t
 **Issue**
 This error may be seen when installing the Security Update:
 
->"The upgrade patch cannot be installed by the Windows Installer service because the program to be upgraded may be missing, or the upgrade patch may update a different version of the program. Verify that the program to be upgraded exists on your computer and that you have the correct upgrade patch."
+>The upgrade patch cannot be installed by the Windows Installer service because the program to be upgraded may be missing, or the upgrade patch may update a different version of the program. Verify that the program to be upgraded exists on your computer and that you have the correct upgrade patch.
 
 **Resolution**
 
@@ -107,7 +110,7 @@ The Installation fails because services cannot stop properly.
 
 **Resolution**
 
-Try the best practice to reboot the server first before installing the Cumulative Update or Security Update. Also make sure anti-virus is ruled out (set proper [exclusions](https://docs.microsoft.com/Exchange/antispam-and-antimalware/windows-antivirus-software?view=exchserver-2019) or consider turning it off for the time of the installation). In some cases where services still wouldn’t stop/start as expected, try the following steps:
+Try the best practice to reboot the server first before installing the Cumulative Update or Security Update. Also make sure anti-virus is ruled out (set proper [exclusions](https://docs.microsoft.com/Exchange/antispam-and-antimalware/windows-antivirus-software?view=exchserver-2019&preserve-view=true) or consider turning it off for the time of the installation). In some cases where services still wouldn’t stop/start as expected, try the following steps:
 
 1. Rename the C:\ExchangeSetupLogs folder (such as ExchangeSetupLogs-OLD)
 2. Change the startup type of Exchange services in the services.msc console to Automatic (note: do this only for the Exchange services which were active prior to the setup attempt. POP3 and IMAP4 are stopped by default and only need to run if there are indeed any users who need them).
@@ -149,7 +152,7 @@ To find the DC that holds the schema master run the following from administrativ
 
 When you install this update rollup on a computer that isn’t connected to the internet, you may experience a long installation time. Additionally, you may receive the following message:
 
->"Creating Native images for .Net assemblies."
+>Creating Native images for .Net assemblies.
 
 **Resolution** 
 
@@ -170,7 +173,7 @@ To fix this issue, follow these steps:
 
 You may see the following error: 
 
->"Installation cannot continue. The Setup Wizard has determined that this Interim Update is incompatible with the current Microsoft Exchange Server 2013 Cumulative Update 23 configuration."
+>Installation cannot continue. The Setup Wizard has determined that this Interim Update is incompatible with the current Microsoft Exchange Server 2013 Cumulative Update 23 configuration.
 
 **Resolution** 
 
