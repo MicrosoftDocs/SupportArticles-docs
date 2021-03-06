@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 910206
 
 ## Summary
 
-This article discusses the following three scenarios:
+This article discusses the following scenarios:
 
 - [Scenario 1: A GPO does not apply when a user logs on in a trusted domain](#symptoms-for-scenario-1).
 - [Scenario 2: A cross-forest GPO application fails if Internet Control Message Protocol (ICMP) is not enabled](#symptoms-for-scenario-2).
@@ -52,11 +52,11 @@ This scenario is specific to external trusts between domains in separate forests
 
 ## Cause for Scenario 1
 
-The issue occurs because the security context of the computer account is being used. Therefore, NTLM cannot be used. Kerberos authentication is required.
+The problem occurs because the security context of the computer account is being used. Therefore, NTLM cannot be used. Kerberos authentication is required.
 
 ## Troubleshooting steps for Scenario 1
 
-To troubleshoot this issue, follow these steps:
+To troubleshoot this problem, follow these steps:
 
 1. Use Network Monitor to take simultaneous traces from the client computer in Forest 1 and from the logon domain controller in Forest 2.
 2. Enable USERENV logging. For more information about how to do this, see [How to enable user environment debug logging in retail builds of Windows](https://support.microsoft.com/help/221833).
@@ -71,14 +71,14 @@ USERENV(ec0.86c) *\<DateTime>* GetGPOInfo: Leaving with 0
 
 ## Resolution for Scenario 1
 
-To resolve this problem, apply the hotfix 896683 to the Windows Server 2003-based domain controller in Forest 2.
+To resolve this problem, apply hotfix 896683 to the Windows Server 2003-based domain controller in Forest 2.
 
 A user in a trusted external domain cannot log on to a Windows Server 2003-based domain even though the **Allow Cross-Forest User Policy and Roaming User Profiles** Group Policy setting is enabled  
 
 This hotfix enables the GPO without requiring Kerberos authentication.
 
 > [!NOTE]
-> This issue does not apply to forest trusts between two Windows 2003-based forests that provide full Kerberos support.
+> This problem does not apply to forest trusts between two Windows 2003-based forests that provide full Kerberos support.
 
 ## Symptoms for Scenario 2
 
@@ -120,7 +120,7 @@ USERENV(22c.91c) *\<DateTime>* ProcessGPOs: User Group Policy has been applied.
 
 ## Cause for Scenario 2
 
-This issue can occur when clients authenticate and pull Group Policy settings across a wide area network (WAN) link. The process that is used to detect link speed involves sending a large ICMP ping request. For example, a ping request is sent that is larger than 2 KB. The ICMP echo request is fragmented into separate IP packets by the client's own network interface, by a WAN router, or by both the interface and the router. Because some IP attacks involve malformed ICMP packets, many routers are configured to discard fragmented ICMP packets.
+This problem can occur when clients authenticate and pull Group Policy settings across a wide area network (WAN) link. The process that is used to detect link speed involves sending a large ICMP ping request. For example, a ping request is sent that is larger than 2 KB. The ICMP echo request is fragmented into separate IP packets by the client's own network interface, by a WAN router, or by both the interface and the router. Because some IP attacks involve malformed ICMP packets, many routers are configured to discard fragmented ICMP packets.
 
 ## Resolution for Scenario 2
 
@@ -157,9 +157,9 @@ These registry settings must be configured manually because Group Policy is not 
   - Policy name: Group Policy slow link detection
   - Policy setting: Enabled with a value of 0
 
-These registry changes can be scripted with the Reg.ini file if you must apply the changes to many computers. You can then create a GPO that applies these settings to make sure that the settings are retained after this issue is resolved.
+These registry changes can be scripted by using the Reg.ini file if you must apply the changes to many computers. Then, you can create a GPO that applies these settings to make sure that the settings are retained after this problem is resolved.
 
-You may also want to modify the Default User profile so that it contains the user-side settings. Therefore, all new profiles will successfully apply Group Policy settings. After you implement these settings, the Userenv.log file shows correct Group Policy processing. The following information is logged in the Userenv.log file:
+You mught also want to modify the Default User profile so that it contains the user-side settings. Therefore, all new profiles will successfully apply Group Policy settings. After you implement these settings, the Userenv.log file shows correct Group Policy processing. The following information is logged in the Userenv.log file:
 
 > USERENV(21c.6f4) 17:09:54:872 ProcessGPOs:  
   USERENV(21c.6f4) 17:09:54:872 ProcessGPOs:  
@@ -178,10 +178,10 @@ You may also want to modify the Default User profile so that it contains the use
 
 ## Symptoms for Scenario 3
 
-Administrators cannot use the RSoP Planning mode to plan for scenarios that span forests in Windows Server 2003. For example, you cannot plan for a scenario where a user logs on to a workstation in Forest 1 from Forest 2. When you try to run RSoP Planning mode in a cross-forest environment, you may receive the following Group Policy error message:
+Administrators cannot use the RSoP Planning mode to plan for scenarios that span forests in Windows Server 2003. For example, you cannot plan for a scenario where a user logs on to a workstation in Forest 1 from Forest 2. When you try to run RSoP Planning mode in a cross-forest environment, you might receive the following Group Policy error message:
 
 > Cross forest planning mode scenarios are not currently supported.
 
 ## Cause for Scenario 3
 
-This issue occurs because RSoP Planning mode does not support cross-forest scenarios. In many scenarios, RSoP cannot validate the information that is returned from a domain controller that is located in another forest. The Authenticated Users group must have Read permissions for relevant policies to successfully read a particular policy in a cross-forest environment.
+This problem occurs because RSoP Planning mode does not support cross-forest scenarios. In many scenarios, RSoP cannot validate the information that is returned from a domain controller that is located in another forest. The Authenticated Users group must have read permissions for relevant policies to successfully read a particular policy in a cross-forest environment.
