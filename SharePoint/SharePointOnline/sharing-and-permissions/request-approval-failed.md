@@ -13,6 +13,9 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - SharePoint Online
+- SharePoint Server 2019
+- SharePoint Server 2016
+- SharePoint Server 2010
 ---
 
 # "Access Denied" to Access Requests list or "Request approval failed" when you process a pending request
@@ -27,11 +30,9 @@ When users who have **Full Control** permissions to the site clicks **Access req
 
 Also, when users browse to the **Access Requests** list and then click **Approve** or **Decline** for a pending request, they receive the following error message:
 
-```adoc
-Sending approval
-
+>Sending approval<br>
 Request approval failed
-```
+
 
 ## Solution
 
