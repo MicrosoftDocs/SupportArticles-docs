@@ -167,9 +167,10 @@ When you install this update rollup on a computer that isn’t connected to the 
 
 **Resolution** 
 
-This issue is caused by network requests to connect to the following website:
-‎
-[http://crl.microsoft.com/pki/crl/products/CodeSigPCA.crl](http://crl.microsoft.com/pki/crl/products/CodeSigPCA.crl)
+This issue is caused by network requests to connect to the following URL:
+
+``http://crl.microsoft.com/pki/crl/products/CodeSigPCA.crl``
+
 These network requests are attempts to access the certificate revocation list for each assembly that native image generation (Ngen) compiles to native code. However, because the server that’s running Exchange Server isn’t connected to the internet, each request must wait to time out before the process can continue.
 
 To fix this issue, follow these steps:
