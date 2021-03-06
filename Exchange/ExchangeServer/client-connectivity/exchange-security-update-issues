@@ -24,7 +24,7 @@ appliesto:
 
 # Issues due to Exchange Server security updates CVE-2021-26855
 
-The article provides the solution to the issues that occur after you install the security updates CVE-2021-26855 for Exchange server.
+This article provides a list of known issues that users might encounter when installing Cumulative Updates (CUs) and Security Updates (SUs) for the versions of Microsoft Exchange Server specified in the Applies to section.
 
 ## Checking vulnerabilities and verify the update installation
 
