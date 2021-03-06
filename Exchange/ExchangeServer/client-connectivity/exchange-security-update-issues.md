@@ -39,7 +39,7 @@ This script automates all four of the commands found in the [Hafnium blog post](
 <summary>Customized OWA or .config files</summary>
 
 > [!IMPORTANT]
-> This article applies to clients running Windows 7, Windows Server 2008 R2, and later versions of both operating systems.
+> Before you apply a Cumulative Update, make a backup copy of customized files.
 
 When you apply a Cumulative Update (for Exchange Server 2013, 2016 or 2019) or Rollup package (for Exchange Server2010), the update process updates the Outlook on the web files and .config files if required. Any customized Exchange or Internet Information Server (IIS) settings that you made in Exchange XML application configuration files on the Exchange server (for example, web.config files, EdgeTransport.exe.config files, any [customized logon.aspx Outlook on the web files](https://docs.microsoft.com/previous-versions/exchange-server/exchange-140/ee633483(v=exchg.140)?redirectedfrom=MSDN) will be overwritten when you install an Exchange CU. Be sure save this information so you can easily re-apply the settings after the install. After you install the Exchange CU, you need to re-configure these settings.
 </details>
@@ -69,7 +69,7 @@ Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
 
 </details>
 
-## Known issues after installing the security updates
+## Resolve errors during CU or SU installation
 
 ### OWA or ECP 500 errors
 
@@ -96,7 +96,6 @@ If this fails please review and follow the steps in [this Docs article](https://
 **Issue**
 
 After Security Update installation, OWA or ECP may show missing images similar to the below:
-‎
 
 **Resolution**
 
@@ -158,7 +157,7 @@ Also see `C:\ExchangeSetupLogs\ExchangeSetup.log` for the following error:
 If the error exists, then run `.\setup.exe /PrepareAD /IAcceptExchangeServerLicenseTerms` from a machine in the same domain as the schema master (user must be a member of the **Enterprise Admin**, **Domain Admin**, and **Schema Admin**)
 To find the DC that holds the schema master run the following from administrative command prompt on the DC: `netdom query fsmo`.
 
-### Error during install: Creating Native images for .NET assemblies.
+### Error during install: Creating Native images for .NET assemblies
 
 **Issue**
 
