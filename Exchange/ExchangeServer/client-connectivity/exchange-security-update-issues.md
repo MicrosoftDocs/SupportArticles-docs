@@ -31,7 +31,6 @@ This article provides a list of known issues that users might encounter when ins
 <details>
 <summary>Testing for Vulnerabilities</summary>
 
-### Script for checking Vulnerabilities
 This script automates all four of the commands found in the [Hafnium blog post](https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/). It also has a progress bar and some performance tweaks to make the CVE-2021-26855 test run much faster. You can download the latest script at [Exchange Support GitHub repository](https://github.com/microsoft/CSS-Exchange/tree/main/Security).
 <br/>
 </details>
@@ -175,10 +174,12 @@ This issue is caused by network requests to connect to the following website:
 These network requests are attempts to access the certificate revocation list for each assembly that native image generation (Ngen) compiles to native code. However, because the server that’s running Exchange Server isn’t connected to the internet, each request must wait to time out before the process can continue.
 
 To fix this issue, follow these steps:
-1. In Internet Explorer, select Internet Options on the Tools menu, and then select Advanced.
-‎ 2. In the Security section, clear the Check for publisher’s certificate revocation check box, and then select OK.
-‎ Note : Clear this security option only if the computer is in a tightly-controlled environment.
-‎ 3. When the Setup process is finished, select the Check for publisher’s certificate revocation check box again.
+
+1. In Internet Explorer, select **Internet Options** on the **Tools** menu, and then select **Advanced**.
+1. In the **Security** section, clear the Check for publisher’s certificate revocation check box, and then select **OK**. 
+    > [!NOTE]
+    > Clear this security option only if the computer is in a tightly-controlled environment.
+1. When the Setup process is finished, select the Check for publisher’s certificate revocation check box again.
 
 ### Security Update Installation fails due to previous IU installation
 
