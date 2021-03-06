@@ -26,19 +26,27 @@ appliesto:
 
 This article provides a list of known issues that users might encounter when installing Cumulative Updates (CUs) and Security Updates (SUs) for the versions of Microsoft Exchange Server specified in the Applies to section.
 
-## Checking vulnerabilities and verify the update installation
+## Check vulnerabilities and verify the update
+</br>
+<details>
+<summary>Testing for Vulnerabilities</summary>
 
 ### Script for checking Vulnerabilities
 This script automates all four of the commands found in the [Hafnium blog post](https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/). It also has a progress bar and some performance tweaks to make the CVE-2021-26855 test run much faster. You can download the latest script at [Exchange Support GitHub repository](https://github.com/microsoft/CSS-Exchange/tree/main/Security).
+<br/>
+</details>
 
-### Customized OWA or .config files
+<details>
+<summary>Customized OWA or .config files</summary>
 
 > [!IMPORTANT]
 > This article applies to clients running Windows 7, Windows Server 2008 R2, and later versions of both operating systems.
 
 When you apply a Cumulative Update (for Exchange Server 2013, 2016 or 2019) or Rollup package (for Exchange Server2010), the update process updates the Outlook on the web files and .config files if required. Any customized Exchange or Internet Information Server (IIS) settings that you made in Exchange XML application configuration files on the Exchange server (for example, web.config files, EdgeTransport.exe.config files, any [customized logon.aspx Outlook on the web files](https://docs.microsoft.com/previous-versions/exchange-server/exchange-140/ee633483(v=exchg.140)?redirectedfrom=MSDN) will be overwritten when you install an Exchange CU. Be sure save this information so you can easily re-apply the settings after the install. After you install the Exchange CU, you need to re-configure these settings.
+</details>
 
-### How to confirm the installation of Security Updates completed successfully
+<details>
+<summary>How to verify the installation of Security Updates completed successfully</summary>
 
 ### Option 1 (recommended)
 
@@ -60,7 +68,9 @@ Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
 | Exchange Server 2016  |  For CU18: 15.01.2106.013</br>For CU19: 15.01.2176.009|
 | Exchange Server 2013  | For CU23: 15.00.1497.012  |
 
-## Resolution to the issues
+</details>
+
+## Issues after installing the update
 
 ### OWA or ECP 500 errors
 
@@ -182,7 +192,7 @@ You may see the following error:
 
 You need to uninstall the previous installed IU before applying this SU as it is cumulative. You can find previous IU’s in add/remove programs.
 
-## Additional information for installing the update
+## Additional information
 
 ### How to install this update for customers who deploy CAS-CAS Proxying - CAS Proxy Deployment Guidance in Exchange 2010
 
