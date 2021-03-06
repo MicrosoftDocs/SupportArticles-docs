@@ -44,7 +44,7 @@ When you apply a Cumulative Update (for Exchange Server 2013, Exchange Server 20
 
  Run the [HealthChecker script](https://aka.ms/exchangehealthchecker) and check the Build number.
  
- .[The image about the result of HealthChecker](./media/exchange-security-update-issues/result-healthchecker.png)
+ ![The image about the result of HealthChecker](./media/exchange-security-update-issues/result-healthchecker.png)
 
 ### Option 2
 
@@ -188,7 +188,7 @@ You need to uninstall the previous installed IU before applying this SU as it is
 
 If your scenario meets both the following conditions, apply the update rollup on the internet-facing Client Access servers (CAS) before you apply the update rollup on the non–internet-facing CAS: 
 - You’re a CAS Proxy Deployment Guidance customer.
-- You have deployed [CAS-CAS proxying](http://technet.microsoft.com/library/bb310763%28exchg.140%29.aspx).
+- You have deployed [CAS-CAS proxying](https://docs.microsoft.com/previous-versions/exchange-server/exchange-140/bb310763(v=exchg.140)?redirectedfrom=MSDN).
 
 > [!NOTE]
 > For other Exchange Server 2010 configurations, you don’t have to apply the update rollup on your servers in any particular order.
