@@ -1,0 +1,25 @@
+---
+title: Issues due to Exchange Server security updates
+description: Works around the issues that occur after you install the security updates for Exchange server.
+author: Cloud-Writer
+ms.author: meerak
+manager: dcscontentpm
+audience: ITPro
+ms.topic: troubleshooting
+ms.prod: exchange-server-it-pro
+localization_priority: Normal
+ms.reviewer: batre; ninob
+ms.custom: 
+- CI 144977
+- Exchange Server
+- CSSTroubleshoot
+search.appverid:
+- MET150
+appliesto:
+- Exchange Server 2019 
+- Exchange Server 2016 
+- Exchange Server 2013
+- Exchange Server 2010 Service Pack 3
+---
+
+# Issues due to Exchange Server security updates
