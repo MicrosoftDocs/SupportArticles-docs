@@ -26,30 +26,22 @@ appliesto:
 
 This article provides a list of known issues that users might encounter when installing Cumulative Updates (CUs) and Security Updates (SUs) for the versions of Microsoft Exchange Server specified in the Applies to section.
 
-## Check vulnerabilities and verify the update
+## Check for Indicators of Compromise (IOC) and verify the update
 </br>
 <details>
-<summary>Testing for vulnerabilities</summary></br>
+<summary>Looking Indicators of Compromise (IOC)</summary>
+</br>
 
-This script automates all four of the commands found in the [Hafnium blog post](https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/). It also has a progress bar and some performance tweaks to make the CVE-2021-26855 test run much faster. You can download the latest script at [Exchange Support GitHub repository](https://github.com/microsoft/CSS-Exchange/tree/main/Security).
-<br/>
+This script automates all four of the commands found in the [Microsoft Threat Intelligence Center (MSTIC) Blog](https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/). It also has a progress bar and some performance tweaks to make the CVE-2021-26855 test run much faster. You can download the latest script at the Exchange Support GitHub repository [aka.ms/TestProxyLogon](https://aka.ms/TestProxyLogon).  
+</br>
 </details>
 
 <details>
-<summary>Customized OWA or .config files</summary></br>
-
-> [!IMPORTANT]
-> Before you apply a CU, make a backup copy of your customized files.
-
-When you apply a CU (for Exchange Server 2013, 2016 or 2019) or Rollup package (for Exchange Server 2010), the process updates Outlook on the web files and .config files if required. Any customized Exchange or Internet Information Server (IIS) settings that you made in Exchange XML application configuration files on the Exchange server (for example, web.config files, EdgeTransport.exe.config files, any [customized logon.aspx Outlook on the web files](https://docs.microsoft.com/previous-versions/exchange-server/exchange-140/ee633483(v=exchg.140)?redirectedfrom=MSDN) will be overwritten when you install an Exchange CU. Be sure save this information so you can easily re-apply the settings after the install. 
-</details>
-
-<details>
-<summary>How to verify the installation of Security Updates completed successfully</summary></br>
+<summary>How to verify the installation of Security Updates completed successfully</summary>
 
 ### Option 1 (Recommended)
 
- Run the [HealthChecker script](https://aka.ms/exchangehealthchecker) and check the b6uild number.
+ Run the [HealthChecker script](https://aka.ms/exchangehealthchecker) and check the build number.
  
  ![The image about the result of HealthChecker](./media/exchange-security-update-issues/result-healthchecker.png)
 
@@ -63,8 +55,8 @@ Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
 
 | Exchange version  | Patched systems file versions  |
 |---|---|
-| Exchange Server 2019  |  For CU7: 15.02.0721.013</br> For CU8: 15.02.0792.010|
-| Exchange Server 2016  |  For CU18: 15.01.2106.013</br>For CU19: 15.01.2176.009|
+| Exchange Server 2019  | For CU7: 15.02.0721.013</br>For CU8: 15.02.0792.010|
+| Exchange Server 2016  | For CU18: 15.01.2106.013</br>For CU19: 15.01.2176.009|
 | Exchange Server 2013  | For CU23: 15.00.1497.012  |
 
 </details>
@@ -148,7 +140,7 @@ You receive the following error during Setup:
 
 **Resolution**
 
-If the above are seen in the setup logs, consider running [Exchange Setup log reviewer script](https://github.com/microsoft/CSS-Exchange/blob/main/Setup/SetupLogReviewer.ps1)This script reviews the ExchangeSetup.log and determines if it is a known issue and reports an action to take to resolve the issue.
+If the above are seen in the setup logs, consider running the Exchange Setup log reviewer script [SetupLogReviewer.ps1](https://aka.ms/ExSetupScripts) This script reviews the ExchangeSetup.log and determines if it is a known issue and reports an action to take to resolve the issue.
 
 Also see `C:\ExchangeSetupLogs\ExchangeSetup.log` for the following error:
 
@@ -196,6 +188,13 @@ You may see the following error:
 You need to uninstall the previous installed IU before applying this SU as it is cumulative. You can find previous IU’s in add/remove programs.
 
 ## Additional information
+
+### Customized OWA or .config files
+
+> [!IMPORTANT]
+> Before you apply a CU, make a backup copy of your customized files.
+
+When you apply a CU (for Exchange Server 2013, 2016 or 2019) or Rollup package (for Exchange Server 2010), the process updates Outlook on the web files and .config files if required. Any customized Exchange or Internet Information Server (IIS) settings that you made in Exchange XML application configuration files on the Exchange server (for example, web.config files, EdgeTransport.exe.config files, any [customized logon.aspx Outlook on the web files](https://docs.microsoft.com/previous-versions/exchange-server/exchange-140/ee633483(v=exchg.140)?redirectedfrom=MSDN) will be overwritten when you install an Exchange CU. Be sure save this information so you can easily re-apply the settings after the install. 
 
 ### How to install this update for customers who deploy CAS-CAS Proxying - CAS Proxy Deployment Guidance in Exchange 2010
 
