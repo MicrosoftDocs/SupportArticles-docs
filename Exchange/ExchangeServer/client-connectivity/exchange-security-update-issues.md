@@ -1,7 +1,7 @@
 ---
 title: Issues due to Exchange Server security updates
 description: Works around the issues that occur after you install the security updates for Exchange server.
-author: meerak
+author: genlin
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
@@ -29,7 +29,7 @@ This article provides a list of known issues that users might encounter when ins
 ## Checking vulnerabilities and verify the update installation
 
 ### Script for checking Vulnerabilities
-This script automates all four of the commands found in the [Hafnium blog post](https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/) . It also has a progress bar and some performance tweaks to make the CVE-2021-26855 test run much faster. You can download the latest script at [Exchange Support GitHub repository](https://github.com/microsoft/CSS-Exchange/tree/main/Security).
+This script automates all four of the commands found in the [Hafnium blog post](https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/). It also has a progress bar and some performance tweaks to make the CVE-2021-26855 test run much faster. You can download the latest script at [Exchange Support GitHub repository](https://github.com/microsoft/CSS-Exchange/tree/main/Security).
 
 ### Customized OWA or .config files
 
