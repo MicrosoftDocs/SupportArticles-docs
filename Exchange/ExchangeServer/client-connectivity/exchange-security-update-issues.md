@@ -77,7 +77,7 @@ Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
 
 OWA and ECP may experience HTTP 500 errors after installation. After providing credentials to log on to OWA/ECP, it may fail with an error similar to:
 
->Could not load file or assembly Microsoft.Exchange.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The system cannot find the file specified.
+> Could not load file or assembly Microsoft.Exchange.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The system cannot find the file specified.
 
 **Resolution**
 
@@ -176,8 +176,10 @@ To fix this issue, follow these steps:
 
 1. In Internet Explorer, select **Internet Options** on the **Tools** menu, and then select **Advanced**.
 1. In the **Security** section, clear the Check for publisher’s certificate revocation check box, and then select **OK**. 
+ 
     > [!NOTE]
     > Clear this security option only if the computer is in a tightly-controlled environment.
+  
 1. When the Setup process is finished, select the Check for publisher’s certificate revocation check box again.
 
 ### Security Update Installation fails due to previous IU installation
