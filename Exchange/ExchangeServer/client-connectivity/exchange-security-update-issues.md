@@ -43,6 +43,8 @@ When you apply a Cumulative Update (for Exchange Server 2013, Exchange Server 20
 ### Option 1 (recommended)
 
  Run the [HealthChecker script](https://aka.ms/exchangehealthchecker) and check the Build number.
+ 
+ .[The image about the result of HealthChecker](./media/exchange-security-update-issues/result-healthchecker.png)
 
 ### Option 2
 
@@ -94,6 +96,7 @@ After Security Update installation, OWA or ECP may show missing images similar t
 ### The upgrade patch cannot be installed by the Windows Installer service
 
 **Issue**
+
 This error may be seen when installing the Security Update:
 
 >The upgrade patch cannot be installed by the Windows Installer service because the program to be upgraded may be missing, or the upgrade patch may update a different version of the program. Verify that the program to be upgraded exists on your computer and that you have the correct upgrade patch.
