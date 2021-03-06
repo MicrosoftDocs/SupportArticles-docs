@@ -8,7 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.reviewer: batre; ninob
+ms.reviewer: mbro; robwhal
 ms.custom: 
 - CI 144977
 - Exchange Server
@@ -29,33 +29,33 @@ This article provides a list of known issues that users might encounter when ins
 ## Check vulnerabilities and verify the update
 </br>
 <details>
-<summary>Testing for Vulnerabilities</summary>
+<summary>Testing for vulnerabilities</summary></br>
 
 This script automates all four of the commands found in the [Hafnium blog post](https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/). It also has a progress bar and some performance tweaks to make the CVE-2021-26855 test run much faster. You can download the latest script at [Exchange Support GitHub repository](https://github.com/microsoft/CSS-Exchange/tree/main/Security).
 <br/>
 </details>
 
 <details>
-<summary>Customized OWA or .config files</summary>
+<summary>Customized OWA or .config files</summary></br>
 
 > [!IMPORTANT]
-> Before you apply a Cumulative Update, make a backup copy of customized files.
+> Before you apply a CU, make a backup copy of your customized files.
 
-When you apply a Cumulative Update (for Exchange Server 2013, 2016 or 2019) or Rollup package (for Exchange Server2010), the update process updates the Outlook on the web files and .config files if required. Any customized Exchange or Internet Information Server (IIS) settings that you made in Exchange XML application configuration files on the Exchange server (for example, web.config files, EdgeTransport.exe.config files, any [customized logon.aspx Outlook on the web files](https://docs.microsoft.com/previous-versions/exchange-server/exchange-140/ee633483(v=exchg.140)?redirectedfrom=MSDN) will be overwritten when you install an Exchange CU. Be sure save this information so you can easily re-apply the settings after the install. After you install the Exchange CU, you need to re-configure these settings.
+When you apply a CU (for Exchange Server 2013, 2016 or 2019) or Rollup package (for Exchange Server 2010), the process updates Outlook on the web files and .config files if required. Any customized Exchange or Internet Information Server (IIS) settings that you made in Exchange XML application configuration files on the Exchange server (for example, web.config files, EdgeTransport.exe.config files, any [customized logon.aspx Outlook on the web files](https://docs.microsoft.com/previous-versions/exchange-server/exchange-140/ee633483(v=exchg.140)?redirectedfrom=MSDN) will be overwritten when you install an Exchange CU. Be sure save this information so you can easily re-apply the settings after the install. 
 </details>
 
 <details>
-<summary>How to verify the installation of Security Updates completed successfully</summary>
+<summary>How to verify the installation of Security Updates completed successfully</summary></br>
 
-### Option 1 (recommended)
+### Option 1 (Recommended)
 
- Run the [HealthChecker script](https://aka.ms/exchangehealthchecker) and check the Build number.
+ Run the [HealthChecker script](https://aka.ms/exchangehealthchecker) and check the b6uild number.
  
  ![The image about the result of HealthChecker](./media/exchange-security-update-issues/result-healthchecker.png)
 
 ### Option 2
 
-Run the following command and check and make sure if file version is matching with below table:
+Run the following command and verify that the file version matches the information in the table below the screenshot.
 
 ```
 Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
@@ -95,11 +95,11 @@ If this fails please review and follow the steps in [this Docs article](https://
 
 **Issue**
 
-After Security Update installation, OWA or ECP may show missing images similar to the below:
+After Security Update installation, OWA or ECP may show missing images similar to the following:
 
 **Resolution**
 
- The SU was not installed properly. Make sure to always follow the best practice by running the update from an administrative command prompt and then reboot after the application. To mitigate this issue the MSP will need to be uninstalled and reinstalled using the best practices from above.
+The SU was not installed properly. Make sure to always follow the best practice by running the update from an administrative command prompt and then reboot after the application. To mitigate this issue the MSP will need to be uninstalled and reinstalled using the best practices from above.
 
 ### The upgrade patch cannot be installed by the Windows Installer service
 
@@ -117,11 +117,11 @@ This means the Cumulative Update or Security Update version mismatch and it did 
 
 **Issue**
 
-The Installation fails because services cannot stop properly.
+The Installation fails because services don't stop properly.
 
 **Resolution**
 
-Try the best practice to reboot the server first before installing the Cumulative Update or Security Update. Also make sure anti-virus is ruled out (set proper [exclusions](https://docs.microsoft.com/Exchange/antispam-and-antimalware/windows-antivirus-software?view=exchserver-2019&preserve-view=true) or consider turning it off for the time of the installation). In some cases where services still wouldn’t stop/start as expected, try the following steps:
+Try the best practice to reboot the server first before installing the Cumulative Update or Security Update. Also make sure antivirus software is ruled out (set proper [exclusions](https://docs.microsoft.com/Exchange/antispam-and-antimalware/windows-antivirus-software?view=exchserver-2019&preserve-view=true) or consider turning it off for the time of the installation). In some cases where services still wouldn’t stop/start as expected, try the following steps:
 
 1. Rename the C:\ExchangeSetupLogs folder (such as ExchangeSetupLogs-OLD)
 2. Change the startup type of Exchange services in the services.msc console to Automatic (note: do this only for the Exchange services which were active prior to the setup attempt. POP3 and IMAP4 are stopped by default and only need to run if there are indeed any users who need them).
