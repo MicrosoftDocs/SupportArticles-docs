@@ -70,7 +70,7 @@ Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
 
 </details>
 
-## Issues after installing the update
+## Known issues after installing the security updates
 
 ### OWA or ECP 500 errors
 
