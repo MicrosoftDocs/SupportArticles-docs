@@ -1,7 +1,7 @@
 ---
 title: Issues due to Exchange Server security updates
 description: Works around the issues that occur after you install the security updates for Exchange server.
-author: genlin
+author: meerak
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
