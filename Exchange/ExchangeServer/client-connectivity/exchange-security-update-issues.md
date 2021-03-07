@@ -1,5 +1,5 @@
 ---
-title: Issues due to Exchange Server security updates
+title: Repair failed installations of Exchange cumulative and security updates
 description: Works around the issues that occur after you install the security updates for Exchange server.
 author: genlin
 ms.author: meerak
@@ -22,7 +22,7 @@ appliesto:
 - Exchange Server 2010 Service Pack 3
 ---
 
-# Issues due to Exchange Server security updates
+# Repair failed installations of Exchange cumulative and security updates
 
 This article provides a list of known issues that users might encounter when installing Cumulative Updates (CUs) and Security Updates (SUs) for the versions of Microsoft Exchange Server specified in the Applies to section.
 
@@ -37,7 +37,7 @@ This script automates all four of the commands found in the [Microsoft Threat In
 </details>
 
 <details>
-<summary>How to verify the installation of Security Updates completed successfully</summary>
+<summary>How to verify the installation of Cumulative Updates & Security Updates</summary>
 
 ### Option 1 (Recommended)
 
@@ -92,6 +92,114 @@ After Security Update installation, OWA or ECP may show missing images similar t
 **Resolution**
 
 The SU was not installed properly. Make sure to always follow the best practice by running the update from an administrative command prompt and then reboot after the application. To mitigate this issue the MSP will need to be uninstalled and reinstalled using the best practices from above.
+## Blank page after logging in EAC or OWA  
+
+**Issue**
+
+When you log in the Exchange Admin Center(EAC) or Outlook on the web (OWA) in Microsoft Exchange Server 2016 or Exchange Server 2013, you get a blank page. When this issue occurs, event ID 15021 may be logged.  
+
+**Cause**
+
+This issue occurs if the SSL binding on 0.0.0.0:444 has one of more of the following issues:  
+
+- The binding is installed incorrectly  
+- The binding doesn’t have a certificate assigned.  
+- The binding contains incorrect information.  
+
+**Workaround**
+
+1. On the CAS server, open Internet Information Services (IIS).  
+
+2. Expand **Sites**, click **Default Web Site**, and then click **Bindings** on the **Actions** pane.  
+
+3. In the **Site Bindings** dialog box, open the binding for https on IP address \* and port 443.  
+
+4. Verify that a valid SSL certificate is specified for the site. If not, specify a valid SSL certificate, for example the **Microsoft Exchange** certificate, and restart the IIS service by running the following command in the Elevated PowerShell window: 
+    ````Powershell
+    Restart-Service WAS,W3SVC  
+    ````
+
+   ![Verify the SSL certificate for the SSL binding for the default web site on the CAS server.](./media/exchange-security-update-issues/front-end-binding.png)  
+
+5. On the mailbox server, do the same verification for the **Exchange Back End** site.  
+    ![Verify the SSL certificate for the SSL binding for the Exchange Back End site on the Mailbox server.](./media/exchange-security-update-issues/back-end-binding.png)  
+
+More information available at [support.microsoft.com](https://support.microsoft.com/en-us/topic/you-get-a-blank-page-after-logging-in-eac-or-owa-in-exchange-2013-or-exchange-2016-a24db2f2-4d67-806b-670b-efb8f08605f7)
+
+## Event ID 1309 and you cannot access EAC or OWA
+
+**Issue**  
+
+You successfully installed Microsoft Exchange Server 2016 or Exchange Server 2013. The installation process may have failed or been interrupted at some stage and then resumed and finally completed successfully. However, when you try to access Exchange Control Panel (ECP) or Outlook Web App (OWA), you receive the following error message:
+
+something went wrong
+
+Sorry, we can't get that information right now. Please try again later. If the problem continues, contact your helpdesk.
+
+**Cause**  
+
+This issue occurs if SharedWebConfig.config is missing from either of the following locations:
+
+- C:\Program Files\Microsoft\Exchange Server\V15\FrontEnd\HttpProxy
+- C:\Program Files\Microsoft\Exchange Server\V15\ClientAccess
+
+**Resolution**  
+
+To resolve this issue, follow these steps:  
+
+1. On the server that's facing the problem, identify the location that the file is missing from.
+2. Generate the missing file:
+
+    1. Run `cd %ExchangeInstallPath%\bin` to change the current directory to the bin folder that's under the Exchange installation path.
+    2. Use the DependentAssemblyGenerator.exe tool to generate the file:
+
+        - If the file is missing from *C:\Program Files\Microsoft\Exchange Server\V15\ClientAccess*, run the following command:
+
+        ```console
+        DependentAssemblyGenerator.exe -exchangePath "%ExchangeInstallPath%\bin" -exchangePath "%ExchangeInstallPath%\ClientAccess" -configFile "%ExchangeInstallPath%\ClientAccess\SharedWebConfig.config"
+        ```
+
+        - If the file is missing from *C:\Program Files\Microsoft\Exchange Server\V15\FrontEnd\HttpProxy*, run the following command:
+
+        ```console
+        DependentAssemblyGenerator.exe -exchangePath "%ExchangeInstallPath%\bin" -exchangePath "%ExchangeInstallPath%\FrontEnd\HttpProxy" -configFile "%ExchangeInstallPath%\FrontEnd\HttpProxy\SharedWebConfig.config"
+        ```
+
+3. Restart the server or open a elevated PowerShell session and Run 
+
+```Powershell
+Restart-Service WAS,W3SVC
+```
+
+More information available at [support.microsoft.com](https://docs.microsoft.com/en-us/exchange/troubleshoot/client-connectivity/event-1309-code-3005-cannot-access-owa-ecp)
+
+### Exchange Server 2019 setup does not run as expected if started from PowerShell using Setup.exe
+
+**Issue**  
+
+Consider the following scenario:
+
+- You plan to run an unattended setup to upgrade Microsoft Exchange Server 2019, Microsoft Exchange Server 2016, or Microsoft Exchange Server 2013 from PowerShell or command prompt using Setup.exe
+- The setup media is located on D: drive
+- The unattended installation is started from PowerShell or command prompt as "`setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" instead of "`.\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell) or "`D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell or command prompt).
+
+In this situation, the Exchange Server Setup program starts, and may indicate that it's successfully completed. However, Exchange itself isn't updated.
+
+**Cause:**  
+
+When you run a command in PowerShell or command prompt, the paths in the System environment variable "Path" are first checked to verify the command being executed, before the current path in PowerShell or command prompt is checked, unless:
+
+- ".\" is entered in front of the command or program being executed in PowerShell, or
+- the Tab key is used to automatically add the ".\" in front of the command or program being executed in PowerShell, or
+- the full path is used to run the setup.exe (for example "`D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`") in PowerShell or command prompt.
+
+A setup.exe file located in `C:\Program Files\Microsoft\Exchange Server\V15\bin` is found and executed by PowerShell, instead of the setup.exe in the current path.
+
+**Workaround:**  
+
+If you run an upgrade, use "`.\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell) or "`D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell and command prompt) to start the command.
+
+More information available at [support.microsoft.com](https://docs.microsoft.com/exchange/troubleshoot/setup/ex2019-setup-does-not-run-correctly-started-powershell)
 
 ### The upgrade patch cannot be installed by the Windows Installer service
 
@@ -141,8 +249,13 @@ You receive the following error during Setup:
 **Resolution**
 
 If the above are seen in the setup logs, consider running the Exchange Setup log reviewer script [SetupLogReviewer.ps1](https://aka.ms/ExSetupScripts) This script reviews the ExchangeSetup.log and determines if it is a known issue and reports an action to take to resolve the issue.
+Once you have downloaded the script just point it to the Exchange Setup log like below and review the output:
 
-Also see `C:\ExchangeSetupLogs\ExchangeSetup.log` for the following error:
+````PowerShell
+.\SetupLogReviewer.ps1 -SetupLog C:\ExchangeSetupLogs\ExchangeSetup.log
+````
+
+Otherwise you can review the log located at `C:\ExchangeSetupLogs\ExchangeSetup.log` for the following error:
 
 "Setup encountered a problem while validating the state of Active Directory: Exchange organization-level objects have not been created, and setup cannot create them because the local computer is not in the same domain and site as the schema master.  Run setup with the /prepareAD parameter on a computer in the domain domainnname and site Default-First-Site-Name, and wait for replication to complete."
 
