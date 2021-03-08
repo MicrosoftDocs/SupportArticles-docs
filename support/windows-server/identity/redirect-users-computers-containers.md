@@ -1,6 +1,6 @@
 ---
 title: Redirect users and computers containers
-description: Describes how to use the redirusr and redircmp utilities to redirect user, computer, and group accounts in Active Directory domains.
+description: Describes how to use redirusr and redircmp to redirect user, computer, and group accounts in Active Directory domains.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -22,14 +22,14 @@ _Original KB number:_ &nbsp; 324949
 
 ## Summary
 
-In a default installation of an Active Directory domain, user accounts, computer accounts, and groups are put in CN=objectclass containers instead of being put in a more desirable organizational unit class container. Similarly, user accounts, computer accounts, and groups that were created by using earlier-version APIs are put in the CN=Users and CN=computers containers.
+In a default installation of an Active Directory domain, user accounts, computer accounts, and groups are put in CN=objectclass containers instead of a more desirable organizational unit (OU) class container. Similarly, user accounts, computer accounts, and groups that were created by using earlier-version APIs are put in the CN=Users and CN=computers containers.
 
 > [!IMPORTANT]
 > Some applications require specific security principals to be located in default containers like CN=Users or CN=Computers. Verify that your applications have such dependencies before you move them out of the CN=users and CN=computes containers.
 
 ## More information
 
-Users, computers, and groups that are created by earlier-version APIs place objects in the DN path that is specified in the WellKnownObjects attribute that is located in the domain NC head. The following code example shows the relevant paths in the WellKnownObjects attribute from the CONTOSO.COM domain NC head.
+Users, computers, and groups created by earlier-version APIs place objects in the DN path specified in the WellKnownObjects attribute. The WellKnownObjects attribute is located in the domain NC head. The following code example shows the relevant paths in the WellKnownObjects attribute from the CONTOSO.COM domain NC head.
 
 Dn: DC=CONTOSO,DC=COM
 
@@ -48,7 +48,7 @@ B:32:AA312825768811D1ADED00C04FD8D5CD:CN=Computers,DC=CONTOSO,DC=COM;
 B:32:A9D1CA15768811D1ADED00C04FD8D5CD:CN=Users,DC=GPN,DC=COM;
 ```
 
-Examples of operations that use earlier-version APIs that reply on the paths that are defined in the WellKnownObjects attribute include the following.
+Operations using earlier-version APIs which reply on the paths defined in the WellKnownObjects attribute include:
 
 | Operation| Operating system versions |
 |---|---|
@@ -59,7 +59,7 @@ Examples of operations that use earlier-version APIs that reply on the paths tha
 |NETDOM ADD, where the /ou command is either not specified or supported|All versions|
 |||
 
-It is helpful to make the default container for user, computer, and security groups an organizational unit for several reasons, including:
+It's helpful to make the default container for user, computer, and security groups an OU for several reasons, including:
 
 - Group policies can be applied on organizational unit containers but not on CN class containers, where security principals are put by default.
 
@@ -80,7 +80,7 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
 
     Windows Server 2003 versions of the Active Directory Users & Computers snap-in can follow the steps in [Protect an Organizational Unit from Accidental Deletion](https://gallery.technet.microsoft.com/scriptcenter/c307540f-bd91-485f-b27e-995ae5cea1e2).
 
-    Windows Server 2008 and newer versions of the Active Directory Users and Computers snap-in feature a **Protect object against accidental deletion** check box that you can select when you create a new organizational unit container. You can also select this check box on the **Object** tab of the **Properties** dialog box for an existing organizational unit container.
+    Windows Server 2008 and newer versions of the Active Directory Users and Computers snap-in feature a **Protect object against accidental deletion** check box that you can select when you create a new OU container. You can also select it on the **Object** tab of the **Properties** dialog box for an existing OU container.
 
     A scripted option is documented in [Script to Protect Organizational Units (OUs) from Accidental Deletion](https://gallery.technet.microsoft.com/scriptcenter/c307540f-bd91-485f-b27e-995ae5cea1e2).
 
@@ -110,15 +110,15 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
 
 2. Transition the domain to the Windows Server 2003 domain in the Active Directory Users and Computers snap-in (Dsa.msc) or in the Domains and Trusts (Domains.msc) snap-in. For more information about increasing the domain functional level, see [How to raise domain and forest functional levels](https://support.microsoft.com/help/322692).
 
-3. Create the organizational unit container where you want computers that are created with earlier-version APIs to be located, if the desired organizational unit container doesn't already exist.
+3. Create the OU container where you want computers that are created with earlier-version APIs to be located, if the desired OU container doesn't exist.
 
-4. Run the Redircmp.exe file at a command prompt by using the following syntax, where **container-dn** is the distinguished name of the organizational unit that will become the default location for newly created computer objects that are created by down-level APIs:
+4. Run Redircmp.exe at a command prompt by using the following syntax. In the command, *container-dn* is the distinguished name of the OU that will become the default location for newly created computer objects that are created by down-level APIs:
 
     ```console
     redircmp container-dn container-dn
     ```
 
-    Redircmp.exe is installed in the `%Systemroot%\System32` folder on Windows Server 2003-based or newer computers. For example, to change the default location for a computer that is created with earlier-version APIs such as Net User to the OU=mycomputers container in the CONTOSO.COM domain, use the following syntax:
+    Redircmp.exe is installed in the `%Systemroot%\System32` folder in Windows Server 2003 or later versions. To change the default location for a computer that is created with earlier-version APIs such as Net User to the OU=mycomputers container in the CONTOSO.COM domain, use the following syntax:
 
     ```console
     C:\windows\system32>redircmp ou=mycomputers,DC=contoso,dc=com
@@ -147,7 +147,7 @@ Redircmp and Redirusr change the wellKnownObjects attribute on the primary domai
 
 ### Error messages that you receive if the domain functional level is not Windows Server 2003
 
-If you try to redirect the users or computer organizational unit in a domain that has not transitioned to the Windows Server 2003 domain functional level, you receive the following error messages.
+If you try to redirect the users or computer OU in a domain that hasn't transitioned to the Windows Server 2003 domain functional level, you receive the following error messages:
 
 - Error message 1:
 
@@ -163,7 +163,7 @@ If you try to redirect the users or computer organizational unit in a domain tha
 
 ### Error messages that you receive if you log on without the required permissions
 
-If you try to redirect the users or computer organizational unit by using incorrect credentials in the target domain, you may receive the following error messages:
+If you try to redirect the users or computer OU by using incorrect credentials in the target domain, you may receive the following error messages:
 
 - Error message 1
 
@@ -179,7 +179,7 @@ If you try to redirect the users or computer organizational unit by using incorr
 
 ### Error messages that you receive if you redirect to an organizational unit that doesn't exist
 
-If you try to redirect the users or computer organizational unit to an organizational unit that doesn't exist, you may receive the following error messages:
+If you try to redirect the users or computer OU to an OU that doesn't exist, you may receive the following error messages:
 
 - Error message 1:
 

@@ -1,6 +1,6 @@
 ---
 title: Roaming user profiles versioning
-description: Describes incompatibilities between roaming user profiles in Windows 10 or Windows Server 2016 and the roaming user profiles in earlier versions of Windows.
+description: Describes incompatibilities of roaming user profiles between Windows 10 or Windows Server 2016 and earlier versions of Windows.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,23 +15,23 @@ ms.technology: windows-server-user-profiles
 ---
 # Roaming user profiles of earlier versions of Windows are incompatible with Windows 10, Windows Server 2016, and later versions
 
-This article describes incompatibilities between roaming user profiles in Windows 10 or Windows Server 2016 and the roaming user profiles in earlier versions of Windows.
+This article describes incompatibilities of roaming user profiles between Windows 10 or Windows Server 2016 and earlier versions of Windows.
 
 _Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2016  
 _Original KB number:_ &nbsp; 3056198
 
 ## Symptoms
 
-Roaming user profiles in Windows 10, Windows Server 2016 and later versions are incompatible with roaming user profiles in earlier versions of Windows.
+Roaming user profiles in Windows 10, Windows Server 2016, and later versions are incompatible with roaming user profiles in earlier versions of Windows.
 
 For example, when you try to deploy Windows 10 in an environment that uses roaming profiles in Windows 7, you experience the following behavior:
 
-- After you use a user account that has an existing Windows 7 or Windows 8.1 profile to log on to a Windows 10-based computer for the first time, the components from Windows 10 read and change the profile state.
+- You use a user account that has an existing Windows 7 or Windows 8.1 profile to log on to a Windows 10 computer for the first time. In this situation, the components from Windows 10 read and change the profile state.
 
 - Certain Windows 7, Windows 8.1, or Windows 10 features may not work as expected because the expected profile state isn't present.
 For example, Start menu does not start. Cortana, Taskbar is unresponsive, and taskbar icons are missing.
 
-- When you try to use the same user account to log on to a Windows 7-based computer, the user profile modification that was performed in Windows 10 may not work as expected in Windows 7 or Windows 8.1.
+- You try to use the same user account to log on to a Windows 7 computer. The user profile modification that was performed in Windows 10 may not work as expected in Windows 7 or Windows 8.1.
 
 After you use a user account that has an existing Windows 7, Windows 8, or Windows 8.1 profile to log on to a Windows 10-based computer for the first time, a *v5* or *v6* version of the profile is created.
 
