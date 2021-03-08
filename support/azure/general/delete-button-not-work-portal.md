@@ -5,7 +5,7 @@ ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.service: azure
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # The Delete button may not work in some Azure portal blades
