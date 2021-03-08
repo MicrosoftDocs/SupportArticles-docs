@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ms.reviewer: 
 ms.service: azure
 ms.author: genli
-author: genli
+author: genlin
 ---
 # Email address domains used by Microsoft support professionals
 
