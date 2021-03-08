@@ -30,7 +30,7 @@ Users receive this non-delivery report (NDR) when sending email messages. Also, 
 
 This error message appears in the [protocol log](/exchange/mail-flow/connectors/protocol-logging) file of the server's Send connector.
 
-## Error 3
+## Error 3 - 451 5.7.3 Must issue a STARTTLS command first
 
 This error message appears in the [protocol log](/exchange/mail-flow/connectors/protocol-logging) file of the Send or Receive connector.
 
