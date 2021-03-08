@@ -470,10 +470,6 @@ The original-release version of the Windows Server 2003 Administration Tools Pac
 
 Remote Access User Extensions have been removed from the original-release version of the Windows Server 2003 Administration Tools Pack. The Remote Access User Extensions are available if the version of the Adminpak.msi file that is included in Windows Server 2003 Service Pack 2 (SP2) is installed on your Windows XP Professional-based computer. If you have the RTM or SP1 version of the Adminpak.msi file installed, you must uninstall it and then install the Windows Server 2003 SP2 version.
 
-For more information about how to obtain the latest Windows Server 2003 service pack, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[889100](https://support.microsoft.com/help/889100) How to obtain the latest service pack for Windows Server 2003  
-
 #### Remote Desktop
 
 Connect to Console mode is supported against Windows Server 2003-based and Windows XP-based computers only.  

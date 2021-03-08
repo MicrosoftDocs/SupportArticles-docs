@@ -59,7 +59,7 @@ The issue occurs because the security context of the computer account is being u
 To troubleshoot this issue, follow these steps:
 
 1. Use Network Monitor to take simultaneous traces from the client computer in Forest 1 and from the logon domain controller in Forest 2.
-2. Enable USERENV logging. For more information about how to do this, see [How to enable user environment debug logging in retail builds of Windows](https://support.microsoft.com/help/221833).
+2. Enable USERENV logging.
 
 The Network Monitor trace shows that Kerberos authentication fails and that NTLM authentication is not used.
 
