@@ -21,11 +21,9 @@ appliesto:
 
 ## Overview
 
-The Microsoft Support and Recovery Assistant (SaRA) uses Robust Office Inventory Scan (ROIScan) to collect information about Microsoft 365 Apps installations. SaRA can help you collect information about the computer properties, installed product, product properties, install sources, licensing (OSPP), patch detection or feature states.
+The Microsoft Support and Recovery Assistant (SaRA) uses Robust Office Inventory Scan (ROIScan) to collect information about Microsoft 365 Apps installations. SaRA can help you collect information about the computer properties, installed product, product properties, install sources, licensing (OSPP), patch detection, or feature states.
 
 For more information about SaRA, see [About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
-
-You can also use ROIScan as a script, without installing SaRA.
 
 ## System requirements
 
@@ -55,7 +53,7 @@ To install SaRA and automatically start collecting ROIScan data, select one of t
 > [!Note]
 > In addition to Normal ROIScan, Full ROIScan creates verbose .xml files for [MSI based installations of Office products[(https://docs.microsoft.com/deployoffice/install-different-office-visio-and-project-versions-on-the-same-computer#installation-technologies-used-by-office), which are helpful in scenarios that require in-depth analysis of file versions and file states.
 
-##Collect the Robust Office Inventory Scan from SaRA
+## Collect the Robust Office Inventory Scan from SaRA
 
 When you have SaRA installed, collect the ROIScan data:
 
@@ -65,29 +63,17 @@ When you have SaRA installed, collect the ROIScan data:
  
 1. Select **Normal Robust Office Inventory Scan** or **Full Robust Office Inventory Scan**: 
  
-1. When you are prompted to confirm that you are using the affected machine, select **Yes**, and then **Next**.
+1. When you're prompted to confirm that you are using the affected machine, select **Yes**, and then **Next**.
  
-   After selecting **Next** you might be prompted for a SaRA restart in order to validate the user/admin permissions.
+   After selecting **Next**, you might be prompted for a SaRA restart in order to validate the user/admin permissions.
 
    > [!Note]
    >The scan may take several minutes to run.
 
-1.	You will be notified when the scan is complete and can proceed to the output by selecting Next:
+1.	You will be notified when the scan is complete and can view the output by selecting **Next**.
  
-1.	The last page gives you the option to view the log, as well as sending it directly to Microsoft if you have an active support request.
- 
-## Use the Robust Office Inventory Scan script without installing SaRA
+1.	The last page gives you the option to view the log, and send it directly to Microsoft if you have an active support request.
 
-Alternatively, you can collect the ROIScan log using the Robust Office Inventory Scan script directly (without a SaRA installation):
-
-1.	Download ROIScan_full.vbs.
- 
-2.	Double-click the script.
-
->[!Note]
->You must run the ROIScan.vbs script as Administrator. 
-
-After the log file is created, it opens automatically. The default file name is **<computer_name>_ROIScan.log** and the default location is the current TEMP folder. To navigate to the TEMP folder, press the Windows key, type **Run** and select the **Run** app, then type **%temp%** and select **OK**. 
 
 ## Tips to analyze a ROIScan log
 
@@ -96,14 +82,14 @@ If you are not currently working with Microsoft on a support request and would l
 Besides the title line, the ROIScan log is grouped into three sections: **Computer**, **Review Items**, and **Products Inventory**.
 
 ### Computer
-- This section contains current user and operating system specific data:
+- This section contains current user and operating system-specific data:
    - Windows Installer Version
    - Computer Name
    - OS Details: OS Name, Service pack, Version, Codepage, Country Code, Language as LCID, 64-bit or 32-bit
    - Current User: Username, IsAdmin, SID.
    - Logfile Name 
    - ROI Script Build
-- Data in this section is collected only, with no additional analyses performed.
+- Data in this section is collected only, with no additional analyses done.
 
 ### Review items
 - This section includes three categories of review items to make you aware if something in the “Products Inventory” requires attention:
