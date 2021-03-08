@@ -341,7 +341,7 @@ Follow these steps below to install the latest .NET Framework
 9.  Ensure all Exchange services are in their normal start Mode and started. You
     can use PowerShell to run: Get-service \*exch\*
 
-10. Take the server out of [Maintenance Mode](/Exchange/high-availability/manage-ha/manage-dags?redirectedfrom=MSDN&view=exchserver-2019#performing-maintenance-on-dag-members).
+10. Take the server out of [Maintenance Mode](/Exchange/high-availability/manage-ha/manage-dags?redirectedfrom=MSDN&view=exchserver-2019#performing-maintenance-on-dag-members&preserve-view=true).
     For example:  
     set-servercomponentstate \<server_name\> -Component serverwideoffline -State
     active - Requester Maintenance
