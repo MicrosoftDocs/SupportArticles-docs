@@ -279,6 +279,8 @@
       href: ../administration/winrm-time-out-add-mailbox-server-to-existing-dag.md
   - name: Client Connectivity
     items:
+    - name: "Issues after install security updates"
+      href: ../client-connectivity/exchange-security-update-issues.md
     - name: "\"Insecure connection\" error in Outlook for iOS or Android"
       href: ../client-connectivity/insecure-connection-secure-connection-unavailable-outlook-ios-android.md
     - name: "\"You've exceeded the storage limit for your mailbox\" error"
