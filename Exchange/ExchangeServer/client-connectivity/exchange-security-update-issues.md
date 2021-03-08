@@ -267,7 +267,7 @@ Either upgrade to the correct CU or download the correct SU for the intended CU.
 
 **Issue**
 
-The installation fails because services don't stop properly.
+The installation fails because services didn't stop properly.
 
 **Resolution**
 
@@ -307,7 +307,7 @@ Check the state of the services. If they are **Disabled**, set them to **Automat
 
 **Issue**
 
-You receive the following error message during Setup in the Setup logs: 
+You receive the following error message during Setup in the Setup logs:
 
 >Setup encountered a problem while validating the state of Active Directory or Mailbox Server Role isn’t installed on this computer.
 
@@ -372,18 +372,82 @@ Do the following:
 </details>
 
 <details>
+<summary>Setup fails with "Cannot start the service" error
+</br>
+
+**Issue**
+
+The CU setup might fail with the following error message:
+>Cannot start the service Microsoft Exchange Service Host
+
+You might find that the Microsoft Exchange Service Host and/or all other Exchange services are stopped and in **Disabled** mode.
+
+**Resolution**
+
+Do the following:
+
+1. Rename the C:\ExchangeSetupLogs folder (for example, ExchangeSetupLogs-OLD).
+2. Change the startup type for all Exchange services in the services.msc console to **Automatic**.
+3. Assuming that the Exchange CU media is on D: drive, open a command prompt as administrator and resume setup by using the following command:
+`D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`
+
+</br>
+</details>
+
+
+<details>
 <summary>SU installation fails due to IU</summary>
 </br>
 
 **Issue**
 
-During the SU installation, you might see the following error message: 
+During the SU installation, you might see the following error message:
 
 >Installation cannot continue. The Setup Wizard has determined that this Interim Update is incompatible with the current Microsoft Exchange Server 2013 Cumulative Update 23 configuration.
 
 **Resolution**
 
 Uninstall the previously installed Interim Update (IU) before applying this SU because the updates are cumulative. You can find previous IUs in **Add/Remove programs**.
+
+</br>
+</details>
+
+<details>
+<summary>Setup installs older CU or fails to install language pack</summary>
+</br>
+
+**Issue**
+
+You're upgrading to the latest CU but Setup either displays that it is installing an existing CU on the server OR fails with the following error message:
+
+Couldn't open package **'C:\Program Files\Microsoft\Exchange Server\V15\bin\Setup\<package name>**. This installation package could
+not be opened. Verify that the package exists and that you can access it, or contact the application vendor to verify that this is a valid Windows Installer package. Error code is 1619.
+
+**Cause**
+
+These issues occur if you start the installation from Windows PowerShell and use the Setup.EXE command.
+
+**Resolution**
+
+If the Exchange CU media is on D: drive, run an upgrade using PowerShell by using either of the following commands:
+"`.\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell) or "`D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell and command prompt)
+
+</br>
+</details>
+
+<details>
+<summary>Restart fom previous installation is pending</summary>
+</br>
+
+**Issue**
+
+You keep getting the following error message even after restarting the server several times:
+
+>Microsoft Exchange Server setup cannot continue because a restart from a previous installation or update is pending.
+
+**Resolution**
+
+Follow the information provided in [A Restart from a Previous Installation is Pending](/previous-versions/office/exchange-server-analyzer/cc164360(v=exchg.80)) to fix the issue.
 
 </br>
 </details>
