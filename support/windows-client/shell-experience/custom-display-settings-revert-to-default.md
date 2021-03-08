@@ -15,7 +15,7 @@ ms.technology: windows-client-shell-experience
 ---
 # Custom display settings may revert to default display settings after you install a Windows Vista Service Pack on a computer that uses multiple monitors
 
-This article provides a solution to an issue where custom display settings revert to default display settings after you install a Windows Vista Service Pack on a computer that uses multiple monitors.
+This article provides a solution to an issue where custom display settings revert to default display settings. This issue occurs after you install a Windows Vista Service Pack on a computer that uses multiple monitors.
 
 _Original product version:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 949742
@@ -35,7 +35,7 @@ This issue occurs because certain device drivers are reinstalled to correctly se
 
 ## Resolution
 
-To resolve this issue, reset the custom display settings on the computer. To do this, follow these steps:
+To resolve this issue, reset the custom display settings on the computer by following these steps:
 
 1. Click **Start**, type *personalization* in the **Start Search** box, and then click **Personalization** in the **Programs** list.
 2. Under **Personalize appearance and sounds**, click **Display Settings**.
