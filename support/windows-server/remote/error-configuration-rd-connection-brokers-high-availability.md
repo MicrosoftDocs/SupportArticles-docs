@@ -17,13 +17,13 @@ ms.technology: windows-server-rds
 
 _Original product version:_ &nbsp; Windows Server 2016
 
-You receive this error message after completing [the configuration of the Remote Desktop Connection Broker (RD Connection Broker) server for high availability](/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-3-configure-the-connection-brokers-for-high-availability).
+You receive the following error message after completing [the configuration of the Remote Desktop Connection Broker (RD Connection Broker) server for high availability](/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-3-configure-the-connection-brokers-for-high-availability).
 
 > Could not create the database \<DatabaseName>. Please check that the broker server has access to the SQL server, the path for -DatabaseFilePath parameter exists and contains the SQL Server database file, the connection to SQL database is correct and SQL database is online. See the SQL Server and broker event log for more details.
 
-## Step 1: Make sure the configuration wizard has the correct information
+## Configure RD Connection Broker for High Availability wizard
 
-Make sure the information in the **Database connection string** field is correct when [configuring the RD Connection Broker server for high availability](/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-3-configure-the-connection-brokers-for-high-availability). Here's how the string looks like:
+When [configuring the RD Connection Broker server for high availability](/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-3-configure-the-connection-brokers-for-high-availability), the **Database connection string** field should be as follows:
 
 DRIVER=SQL Server Native Client \<VersionNumber>;SERVER=\<SQL Server Name>;Trusted_Connection=Yes;APP=Remote Desktop Services Connection Broker;Database=\<New database file name>
 
@@ -32,12 +32,12 @@ DRIVER=SQL Server Native Client \<VersionNumber>;SERVER=\<SQL Server Name>;Trust
 > [!NOTE]
 >
 > - The string value is case-sensitive. Make sure the value for "Trusted_Connection" is "Yes" and not "YES".
-> - Make sure the SQL Server Native Client version is compatible with the SQL server.
+> - The SQL Server Native Client version should be compatible with the SQL server.
 > - Don't include the file extension when you input the file name into the string.
 
-## Step 2: Make sure the correct permission has been assigned to the RD Connection Broker server on the SQL server
+## Permission on SQL Server for RD Connection Broker server
 
-Here's how to do this:
+Verify that correct permission is assigned to the RD Connection Broker Server on the SQL Server. To do that, follow these steps:
 
 1. Sign in to the SQL server.
 2. Open **Microsoft SQL Management Studio**.
