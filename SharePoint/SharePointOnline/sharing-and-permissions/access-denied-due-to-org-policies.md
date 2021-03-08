@@ -34,11 +34,11 @@ Users receive the following error message when they try to sign in to SharePoint
 
 There are similar errors with different root causes so please ensure you check below before proceeding. 
 
-- If you are receiving an error message that states **"Due to organizational policies, you can't access this resource"** it may be due to [Information Barriers](/sharepoint/information-barriers).
+- If you are receiving an error message that states "Due to organizational policies, **you can't access this resource**" it may be due to [Information Barriers](/sharepoint/information-barriers).
 
-- If you are receiving an error message that states **"Due to organizational policies, you can't access this resource from this untrusted device"** it may be due to an [Unmanaged Device Policy] (/sharepoint/control-access-from-unmanaged-devices).
+- If you are receiving an error message that states "Due to organizational policies, you can't access this resource from this **untrusted device**" it may be due to an [Unmanaged Device Policy](/sharepoint/control-access-from-unmanaged-devices).
 
-- If you are receiving an error message that states **"Due to organizational policies, you can't access this resource from this network location."** please continue with solution provided below. 
+- If you are receiving an error message that states "Due to organizational policies, you can't access this resource from this **network location**." please continue with solution provided below. 
 
 ## Resolution
 
