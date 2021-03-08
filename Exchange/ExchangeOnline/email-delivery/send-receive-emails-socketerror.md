@@ -22,15 +22,15 @@ search.appverid: MET150
 ---
 # Can't send or receive email messages through Office 365
 
-## Error 1 - 421 4.4.2 Connection dropped due to SocketError
+## Error 1: 421 4.4.2 Connection dropped due to SocketError
 
 Users receive this non-delivery report (NDR) when sending email messages. Also, this error message appears in the server's [Queue Viewer](/exchange/mail-flow/queues/queue-viewer).
 
-## Error 2 - TLS negotiation failed with error SocketError
+## Error 2: TLS negotiation failed with error SocketError
 
 This error message appears in the [protocol log](/exchange/mail-flow/connectors/protocol-logging) file of the server's Send connector.
 
-## Error 3 - 451 5.7.3 Must issue a STARTTLS command first
+## Error 3: 451 5.7.3 Must issue a STARTTLS command first
 
 This error message appears in the [protocol log](/exchange/mail-flow/connectors/protocol-logging) file of the Send or Receive connector.
 
@@ -38,11 +38,11 @@ This error message appears in the [protocol log](/exchange/mail-flow/connectors/
 
 Transport Layer Security (TLS) 1.0 and 1.1 protocols are deprecated for Office 365. Microsoft Exchange Online starts enforcing mail flow endpoints because of the deprecation. Office 365 no longer accepts email connections that use TLS 1.0 or TLS 1.1 from external senders. Additionally, Exchange Online no longer uses TLS 1.0 or TSL 1.1 to send outbound email messages.
 
-## Solution 1 - Install latest Windows and Exchange updates
+## Solution 1: Install latest Windows and Exchange updates
 
 Install latest Windows and Exchange updates because some Windows and Exchange versions require latest updates for TLS 1.2 to be enabled.
 
-## Solution 2 - Enable TSL 1.2 on the server by modifying subkeys
+## Solution 2: Enable TSL 1.2 on the server by modifying subkeys
 
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. As a preventive measure, [back up the registry for restoration](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692) before you modify it.
