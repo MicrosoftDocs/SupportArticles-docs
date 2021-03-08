@@ -10,7 +10,7 @@ ms.prod: exchange-server-it-pro
 localization_priority: Normal
 ms.reviewer: mbro; robwhal
 ms.custom: 
-- CI 144977
+- CI 145217
 - Exchange Server
 - CSSTroubleshoot
 search.appverid:
@@ -302,7 +302,7 @@ Check the state of the services. If they are **Disabled**, set them to **Automat
 </details>
 
 <details>
-<summary>Error during Setup</summary>
+<summary>Error during Setup in Setup log</summary>
 </br>
 
 **Issue**
@@ -396,7 +396,7 @@ Do the following:
 
 
 <details>
-<summary>SU installation fails due to IU</summary>
+<summary>SU installation fails due to existing IU</summary>
 </br>
 
 **Issue**
@@ -448,6 +448,22 @@ You keep getting the following error message even after restarting the server se
 **Resolution**
 
 Follow the information provided in [A Restart from a Previous Installation is Pending](/previous-versions/office/exchange-server-analyzer/cc164360(v=exchg.80)) to fix the issue.
+
+</br>
+</details>
+
+<details>
+<summary>Mallow stops working after CU or SU installation</summary>
+
+**Issue**
+
+Mallow stops working after you install a CU or an SU.
+
+**Resolution**
+
+1. Make sure that all Exchange services are enabled and running.
+2. Make sure that the server is not in [Maintenance mode](/exchange/high-availability/manage-ha/manage-dags?view=exchserver-2019#performing-maintenance-on-dag-members)
+3. Make sure there’s enough free space available in the [Exchange message queue database](/exchange/back-pressure-exchange-2013-help#free-hard-drive-space-for-the-message-queue-database).
 
 </br>
 </details>
