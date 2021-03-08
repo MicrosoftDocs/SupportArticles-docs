@@ -92,12 +92,12 @@ If the update is applicable, DMPdownloader downloads the payload and redistribut
 > INFO: setupdl.exe: Start Configuration Manager Setup  
 > INFO: Downloading files to \\\CAS.Contoso.com\EasySetupPayload\c63b412d-7c4b-4c0d-be8c-18fb35b2ff79\redist  
 > INFO: Downloading component manifest...  
-> INFO: Downloading [http://go.microsoft.com/fwlink/?LinkID=746984](https://go.microsoft.com/fwlink/?LinkID=746984) as ConfigMgr.LN.Manifest.cab  
+> INFO: Downloading `http://go.microsoft.com/fwlink/?LinkID=746984` as ConfigMgr.LN.Manifest.cab  
 > No proxy information is specified. Connect without proxy.  
 > INFO: WinHttpQueryHeaders() in Download() returned OK (200)  
-> INFO: Downloading [http://go.microsoft.com/fwlink/?LinkID=746986](https://go.microsoft.com/fwlink/?LinkID=746986) as ConfigMgr.Manifest.cab  
+> INFO: Downloading `http://go.microsoft.com/fwlink/?LinkID=746986` as ConfigMgr.Manifest.cab  
 > INFO: Extracted file C:\windows\TEMP\ConfigMgr.LN.Manifest.xml  
-> INFO: File will be downloaded from [http://go.microsoft.com/fwlink/?LinkID=808179](https://go.microsoft.com/fwlink/?LinkID=808179).
+> INFO: File will be downloaded from `http://go.microsoft.com/fwlink/?LinkID=808179`.
 
 After the update is successfully downloaded, the following is logged in ConfigMgrSetup.log:
 
@@ -186,7 +186,7 @@ Download failures may occur during the following phases:
 
     You can test by using the direct download link in Internet Explorer to get the output. For example, use:
 
-    [http://download.microsoft.com/download/E/3/A/E3A89E8D-F1F4-4AAA-BF2F-1C157142894B/609F1263-04E0-49A8-940B-09E0E34DE2D2.cab](https://download.microsoft.com/download/E/3/A/E3A89E8D-F1F4-4AAA-BF2F-1C157142894B/609F1263-04E0-49A8-940B-09E0E34DE2D2.cab)
+    `http://download.microsoft.com/download/E/3/A/E3A89E8D-F1F4-4AAA-BF2F-1C157142894B/609F1263-04E0-49A8-940B-09E0E34DE2D2.cab`
 
 You can replace the package GUID in the sample URLs by using the GUID that is returned by the following SQL query:
 

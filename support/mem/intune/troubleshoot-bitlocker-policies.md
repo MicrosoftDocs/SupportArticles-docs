@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting tips for BitLocker policies in Microsoft Intune
 description: Describes how to enable BitLocker encryption on a device by using Intune policy and how to verify that your policy successfully deployed to a device. 
-ms.date: 01/29/2020
+ms.date: 11/25/2020
 --- 
 # Troubleshoot BitLocker policies in Microsoft Intune
 
@@ -16,7 +16,9 @@ With Microsoft Intune, you have the following methods to manage BitLocker on Win
 - **Device Configuration policies** - Certain built-in policy options are available in Intune when you create a device configuration profile to manage endpoint protection. To find these options, [create a device profile for endpoint protection](/mem/intune/protect/endpoint-protection-configure#create-a-device-profile-containing-endpoint-protection-settings), selecting **Windows 10 and later** for the *Platform*, and then selecting the **Windows Encryption** category for *Settings*.
 
    You can read about the available options and features here: [Windows Encryption](/mem/intune/protect/endpoint-protection-windows-10#windows-encryption).
+- **Endpoint Security policies** - Certain built-in policy options are available in Intune when you create an Endpoint Security profile for disk encryption. To find these options, [create a profile for disk encryption](/mem/intune/protect/endpoint-security-policy.md#create-an-endpoint-security-policy), selecting **Windows 10 and later** for the *Platform*, and then selecting the **BitLocker** for the *Profile type*.
 
+   You can read about the available options and features here: [Disk Encryption](/mem/intune/protect/endpoint-security-disk-encryption-profile-settings).
 - **Security baselines** - [Security baselines](/mem/intune/protect/security-baselines) are known groups of settings and default values that are recommended by the relevant security team to help secure Windows devices. Different baseline sources, like the *MDM Security Baseline* or *Microsoft Defender ATP Baseline* can manage the same settings as well different settings than each other. They can also manage the same settings you manage with device configuration policies.
 
 In addition to Intune, for hardware that is compliant with Modern Standby and HSTI, when using either of these features, BitLocker Device Encryption is automatically turned on whenever the user joins a device to Azure AD. Azure AD provides a portal where recovery keys are also backed up, so users can retrieve their own recovery key for self-service, if required.
@@ -193,6 +195,8 @@ The following are more resources that might help when you work with BitLocker:
 - [BitLocker frequently asked questions](/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions)
 - [BitLocker CSP documentation](/windows/client-management/mdm/bitlocker-csp)
 - [Intune Windows Encryption policy settings](/mem/intune/protect/endpoint-protection-windows-10#windows-encryption)
+- [Intune Disk Encryption policy settings for BitLocker](/mem/intune/protect/endpoint-security-disk-encryption-profile-settings#bitlocker)
+- [Intune Encryption report](/mem/intune/protect/encryption-monitor#view-encryption-details)
 - [Hardware independent automatic BitLocker encryption using AAD/MDM](/archive/blogs/home_is_where_i_lay_my_head/hardware-independent-automatic-bitlocker-encryption-using-aadmdm)
 - [CSP Policy for BitLocker Encryption on Auto-Pilot Devices](https://techcommunity.microsoft.com/t5/Windows-10-security/CSP-policy-for-bitLocker-encryption-on-autopilot-devices/m-p/284537)
 - [Walkthrough creating and deploying BitLocker policy with Intune](/archive/blogs/cbernier/windows-10-intune-windows-bitlocker-management-yes)

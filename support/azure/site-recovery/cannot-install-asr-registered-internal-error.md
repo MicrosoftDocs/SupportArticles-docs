@@ -5,7 +5,7 @@ ms.date: 10/10/2020
 ms.prod-support-area-path: 
 ms.service: backup
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: NicholaD
 ---
 # Error when you try to install Microsoft Azure Site Recovery Provider: ASR cannot be registered due to an internal error

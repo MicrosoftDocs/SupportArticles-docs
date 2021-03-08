@@ -5,7 +5,7 @@ ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.service: data-factory
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # A loading error occurs on Contents tab in Azure Data Factory, version 1

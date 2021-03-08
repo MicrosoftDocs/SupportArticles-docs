@@ -5,7 +5,7 @@ ms.date: 10/10/2020
 ms.prod-support-area-path: 
 ms.service: azure
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Advanced search tips for finding Microsoft troubleshooting content
@@ -121,5 +121,5 @@ If you want your case resolved as quickly as possible, follow this tips to avoid
 |---|---|---|
 |Use the appropriate severity||The severity should accurately reflect the impact of the problem. Sev-A should be restricted to problems that completely block a user or service frequently and have no workarounds.|
 |Provide a meaningful title|**Bad examples**<br/>1. Operation X <br/>2. OS version Y <br/>3. Error message Z <br/>4. Operation X on Windows 10<br/><br/> **Better**<br/>1. Operation X fails on major / minor version Y with Error Z <br/>2. Operation W intermittently fails on major / minor version X with error Y due to triggering configuration Z |Remove ambiguity, and try to capture "what", "who" "how" and "when" context in your title.<br/><br/>Microsoft has released 10 versions of Windows 10 to date. Each version contains new capabilities and behavior changes and bug fixes.|
-|Provide a meaningful problem description and repro steps that allow Microsoft to understand the problem and reproduce it in-house if the customer is unable to collect data|| The single biggest contributors to slow root cause determination are poor problem description and lack of steps to reproduce the issue. Having the right data often enables Microsoft to identify root cause within hours or days for many type of issues. Some issues (memory or kernel related, for example) may take longer.Include "IS | DOES" and "IS | DOES NOT" context in your problem statement|
+|Provide a meaningful problem description and repro steps that allow Microsoft to understand the problem and reproduce it in-house if the customer is unable to collect data||The single biggest contributors to slow root cause determination are poor problem description and lack of steps to reproduce the issue.<br/>Having the right data often enables Microsoft to identify root cause within hours or days for many type of issues. Some issues (memory or kernel related, for example) may take longer.<br/>Include "IS \| DOES" and "IS \| DOES NOT" context in your problem statement|
 ||||
