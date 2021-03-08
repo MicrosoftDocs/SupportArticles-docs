@@ -67,7 +67,7 @@ Follow these steps on both computers to control RPC dynamic port allocation. The
     Data Type: REG_SZ  
     Data: Y
 
-    This signifies that RPC should dynamically assign ports from the list of Internet ports.
+    This value signifies that RPC should dynamically assign ports from the list of Internet ports.
 
 12. Configure your firewall to allow incoming access to the specified dynamic ports and to port 135 (the RPC Endpoint Mapper port).
 
@@ -77,4 +77,4 @@ Follow these steps on both computers to control RPC dynamic port allocation. The
     PortsInternetAvailable : REG_SZ : Y  
     UseInternetPorts : REG_SZ : Y
 
-DTC also requires that you can resolve computer names by way of NetBIOS or DNS. Test if NetBIOS can resolve the names by using ping and the server name. The client computer must be able to resolve the name of the server, and the server must be able to resolve the name of the client. If NetBIOS can't resolve the names, add entries to the LMHOSTS files on the computers.
+DTC also requires you can resolve computer names by way of NetBIOS or DNS. Test if NetBIOS can resolve the names by using ping and the server name. The client computer must be able to resolve the name of the server. And the server must be able to resolve the name of the client. If NetBIOS can't resolve the names, add entries to the LMHOSTS files on the computers.

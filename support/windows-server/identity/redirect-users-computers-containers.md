@@ -15,21 +15,21 @@ ms.technology: windows-server-active-directory
 ---
 # Redirect the users and computers containers in Active Directory domains
 
-This article describes how to use the redirusr and redircmp utilities to redirect user, computer, and group accounts that are created by earlier-version APIs so that they are put in admin-specified organizational unit containers.
+You can use the redirusr and redircmp utilities to redirect the user, computer, and group accounts that are created by earlier-version APIs. So they are put in admin-specified organizational unit containers.
 
 _Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 324949
 
 ## Summary
 
-In a default installation of an Active Directory domain, user accounts, computer accounts, and groups are put in CN=objectclass containers instead of a more desirable organizational unit (OU) class container. Similarly, user accounts, computer accounts, and groups that were created by using earlier-version APIs are put in the CN=Users and CN=computers containers.
+In a default installation of an Active Directory domain, user, computer, and group accounts are put in CN=objectclass containers instead of a more desirable organizational unit (OU) class container. Similarly, the accounts that were created by using earlier-version APIs are put in the CN=Users and CN=computers containers.
 
 > [!IMPORTANT]
 > Some applications require specific security principals to be located in default containers like CN=Users or CN=Computers. Verify that your applications have such dependencies before you move them out of the CN=users and CN=computes containers.
 
 ## More information
 
-Users, computers, and groups created by earlier-version APIs place objects in the DN path specified in the WellKnownObjects attribute. The WellKnownObjects attribute is located in the domain NC head. The following code example shows the relevant paths in the WellKnownObjects attribute from the CONTOSO.COM domain NC head.
+Users, computers, and groups created by earlier-version APIs place objects in the DN path that's specified in the WellKnownObjects attribute. The WellKnownObjects attribute is located in the domain NC head. The following code example shows the relevant paths in the WellKnownObjects attribute from the CONTOSO.COM domain NC head.
 
 Dn: DC=CONTOSO,DC=COM
 
@@ -48,7 +48,7 @@ B:32:AA312825768811D1ADED00C04FD8D5CD:CN=Computers,DC=CONTOSO,DC=COM;
 B:32:A9D1CA15768811D1ADED00C04FD8D5CD:CN=Users,DC=GPN,DC=COM;
 ```
 
-Operations using earlier-version APIs which reply on the paths defined in the WellKnownObjects attribute include:
+The following operations use earlier-version APIs, which reply on the paths defined in the WellKnownObjects attribute:
 
 | Operation| Operating system versions |
 |---|---|
@@ -92,9 +92,9 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
 
 2. Transition the domain to the Windows Server 2003 domain functional level or newer in either the Active Directory Users and Computers snap-in (Dsa.msc) or the Domains and Trusts (Domains.msc) snap-in. For more information about increasing the domain functional level, see [How to raise domain and forest functional levels](https://support.microsoft.com/help/322692).
 
-3. Create the organizational unit container where you want users who are created with earlier-version APIs to be located, if the organization unit container that you want does not already exist.
+3. Create the OU container where you want users who are created with earlier-version APIs to be located, if the OU container that you want doesn't exist.
 
-4. Run the Redirusr.exe file at the command prompt by using the following syntax, where **container-dn** is the distinguished name of the organizational unit that will become the default location for newly created user objects created by down-level APIs:
+4. Run Redirusr.exe at the command prompt by using the following syntax. In the command, *container-dn* is the distinguished name of the OU that will become the default location for newly created user objects created by down-level APIs:
 
     ```console
     c:\windows\system32\redirusr <DN path to alternate OU>
@@ -118,7 +118,7 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
     redircmp container-dn container-dn
     ```
 
-    Redircmp.exe is installed in the `%Systemroot%\System32` folder in Windows Server 2003 or later versions. To change the default location for a computer that is created with earlier-version APIs such as Net User to the OU=mycomputers container in the CONTOSO.COM domain, use the following syntax:
+    Redircmp.exe is installed in the `%Systemroot%\System32` folder in Windows Server 2003 or later versions. To change the default location for a computer created with earlier-version APIs, such as Net User, to the OU=mycomputers container in the CONTOSO.COM domain, use the following syntax:
 
     ```console
     C:\windows\system32>redircmp ou=mycomputers,DC=contoso,dc=com
@@ -147,7 +147,7 @@ Redircmp and Redirusr change the wellKnownObjects attribute on the primary domai
 
 ### Error messages that you receive if the domain functional level is not Windows Server 2003
 
-If you try to redirect the users or computer OU in a domain that hasn't transitioned to the Windows Server 2003 domain functional level, you receive the following error messages:
+You try to redirect the users or computer OU in a domain that hasn't transitioned to the Windows Server 2003 domain functional level. In this situation, you receive the following error messages:
 
 - Error message 1:
 
@@ -179,7 +179,7 @@ If you try to redirect the users or computer OU by using incorrect credentials i
 
 ### Error messages that you receive if you redirect to an organizational unit that doesn't exist
 
-If you try to redirect the users or computer OU to an OU that doesn't exist, you may receive the following error messages:
+You try to redirect the users or computer OU to an OU that doesn't exist. In this situation, you may receive the following error messages:
 
 - Error message 1:
 
