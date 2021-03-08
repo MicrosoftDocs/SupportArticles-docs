@@ -80,7 +80,7 @@ To install Windows Server on a computer that uses AMD EPYC 7*xx*2 (AMD Rome) pro
 
     For example, for a single-CPU one-socket system, Task Manager displays two sockets. For a two-socket system, Task Manager displays four sockets.
 
-- Task manager displays an incorrect number of Numa nodes.
+- Task Manager displays an incorrect number of Numa nodes.
 
     For example, for a one-socket system, Task Manager displays two Numa nodes. For a two-socket system, Task Manager displays four Numa nodes.
 
