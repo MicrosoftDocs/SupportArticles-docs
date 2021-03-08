@@ -47,7 +47,7 @@ To turn off AutoSave on an individual computer, do the following:
 6.	Navigate to the key: **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\powerpoint**
 7.	Create the new DWORD value for this key the same way you did for the Word key in steps 3 through 5.
   
-For IT administrators to turn off AutoSave for all users by default, create the DWORD value **autosavebydefaultadminchoice** in the following keys and set its value to **2**:
+For IT administrators looking to turn off AutoSave for all users using Group Policies, create the DWORD key **autosavebydefaultadminchoice** in the following registry hives and set its **Hexadecimal value** to **2**:
 
 - **HKEY_CURRENT_USER\software\policies\microsoft\office\16.0\word**
 - **HKEY_CURRENT_USER\software\policies\microsoft\office\16.0\powerpoint**
