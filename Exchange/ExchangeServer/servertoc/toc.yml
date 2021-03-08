@@ -279,8 +279,6 @@
       href: ../administration/winrm-time-out-add-mailbox-server-to-existing-dag.md
   - name: Client Connectivity
     items:
-    - name: "Issues after install security updates"
-      href: ../client-connectivity/exchange-security-update-issues.md
     - name: "\"Insecure connection\" error in Outlook for iOS or Android"
       href: ../client-connectivity/insecure-connection-secure-connection-unavailable-outlook-ios-android.md
     - name: "\"You've exceeded the storage limit for your mailbox\" error"
@@ -375,6 +373,8 @@
       href: ../client-connectivity/performance-issues-connect-to-exchange.md
     - name: Redirects to Exchange Server 2010 when connecting to Exchange Server 2016 or 2013
       href: ../client-connectivity/exchange-server-2013-2016-redirect-to-2010-owa-ecp.md
+    - name: "Repair failed CU/SU installations"
+      href: ../client-connectivity/exchange-security-update-issues.md  
     - name: Repair update messages due to TimeZoneMatchCheck failures
       href: ../client-connectivity/repair-update-messages-triggered-by-timezonematchcheck.md
     - name: Security warning when accessing OWA or ECP
