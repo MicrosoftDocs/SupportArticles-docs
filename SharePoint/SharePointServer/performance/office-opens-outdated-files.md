@@ -28,14 +28,14 @@ When you open a Word or PowerPoint file from SharePoint On-Premises in a Microso
 
 
 ## Cause
-This behavior is by design. With SharePoint Online, Word or PowerPoint will show the file right away from the local cache but will immediately merge the current file from the server.  This allows for a much faster file open process and allows users to work with the document more quickly. This AutoSave feature isn't available in SharePoint On-Premises, so the merge doesn’t show until the Updates Available button is pressed.
+This behavior is by design. The AutoSave feature isn't available in SharePoint On-Premises, so the merge doesn’t show until the Updates Available button is pressed.
 
 ## Workaround
 
 If you want Office to open the current file on the server every time, you can turn off AutoSave.
 
-> **Important**<br/>
-> If you turn AutoSave off and then open files from SharePoint Online, real-time co-authoring will not work.  You would need to manually turn AutoSave on to get real-time co-authoring to work.
+>**Important**<br/>
+>If you turn AutoSave off and then open files from SharePoint Online, real-time co-authoring will not work.  You would need to manually turn AutoSave on to get real-time co-authoring to work.
 
 To turn off AutoSave on an individual computer, do the following:
 
