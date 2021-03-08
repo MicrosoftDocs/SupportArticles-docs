@@ -1,6 +1,6 @@
 ---
-title: Configure DTC to work through a firewall
-description: Describes how to configure Microsoft Distributed Transaction Coordinator (DTC) to work through firewalls.
+title: Configure Distributed Transaction Coordinator (DTC) to work through a firewall
+description: Describes how to configure DTC to work through firewalls.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -26,9 +26,9 @@ You can configure DTC to communicate through firewalls, including network addres
 
 DTC uses Remote Procedure Call (RPC) dynamic port allocation. By default, RPC dynamic port allocation randomly selects port numbers above 1024. By modifying the registry, you can control which ports RPC dynamically allocates for incoming communication. You can then configure your firewall to confine incoming external communication to only those ports and port 135 (the RPC Endpoint Mapper port).
 
-You must provide one incoming dynamic port for DTC. You may need to provide additional incoming dynamic ports for other subsystems that rely on RPC.
+You must provide one incoming dynamic port for DTC. You may need to provide more incoming dynamic ports for other subsystems that rely on RPC.
 
-The registry keys and values described in this article do not appear in the registry by default; you must add them by using Registry Editor.
+The registry keys and values described in this article don't appear in the registry by default; you must add them by using Registry Editor.
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Window](https://support.microsoft.com/help/322756).

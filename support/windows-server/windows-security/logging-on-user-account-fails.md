@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 328889
 
 ## Symptoms
 
-When a user tries to log on to a computer by using a local computer account or a domain user account, the logon request may fail, and you receive the following error message:
+When a user tries to log on to a computer by using a local computer account or a domain user account, the logon request may fail. And you receive the following error message:
 
 > Logon Message: The system cannot log you on due to the following error: During a logon attempt, the user's security context accumulated too many security IDs. Please try again or consult your system administrator.
 
@@ -49,7 +49,7 @@ When the list of SIDs is built, the LSA also inserts several generic, well-known
 > - Using Kerberos or NTLM as the authentication protocol has no bearing on access token limit.
 > - The Kerberos client setting **MaxTokenSize** is discussed in [Problems with Kerberos authentication when a user belongs to many groups](https://support.microsoft.com/help/327825). *Token* in the Kerberos Context refers to the buffer for the tickets received by a Windows Kerberos host. Depending on the size of the ticket, the type of SIDs and whether SID compression is enabled, the buffer can hold fewer or many more SIDs than that would fit into the access token.
 
-The list of custom SIDs will include the following:
+The list of custom SIDs will include:
 
 - The primary SIDs of the user/computer and the security groups the account is member of.
 - The SIDs in the **SIDHistory** attribute of the groups in scope of the logon.
@@ -66,7 +66,7 @@ Because of these differences, it's possible that the user can log on to a comput
 You can find out about the domain group memberships of an affected user with NTDSUTIL. It has a Group Membership Evaluation tool that also works across forests boundaries. The tool also works for users who are well above the limit of 1,024 SIDs, or who are in so many groups that Kerberos fails ticket retrieval even with 65,535 bytes of the buffer. Follow these steps:
 
 1. Open a command prompt on a computer that has AD Management Tools (Domain Controller or a computer that has RSAT).
-1. Switch to the *gro mem eva* tool and then get the available commands as the following screenshot:
+1. Switch to the *`gro mem eva`* tool and then get the available commands as the following screenshot:
 
     ![Screenshot of running gro mem eva commands](./media/logging-on-user-account-fails/gro-mem-eva-commands.png)
 
@@ -94,8 +94,8 @@ See the following guide to read a TSV file:
 - **One Level MemberOf Count**: How many SIDs does this entry add to the collection on a single level (this entries' member of)?
 - **Total MemberOf Count**: How many SIDs does this entry add to the collection in total?
 - **Group Owner**: For environments that have delegated group management, you may get hints on how is using too many groups to *attack* user logon.
-- **Group Type**: Kind Of Sid. WellKnown, user SID, global, and universal security groups would be in all tokens created for this user. Domain local security group would only be in this resource domain. This can be important when a user has logon problems only in a certain resource domain.
-- **Member WhenChanged (UTC)**: Latest change to the group membership. This can help correlate with the time when the user(s) first reported logon issues.
+- **Group Type**: Kind Of Sid. WellKnown, user SID, global, and universal security groups would be in all tokens created for this user. Domain local security group would only be in this resource domain. It can be important when a user has logon problems only in a certain resource domain.
+- **Member WhenChanged (UTC)**: Latest change to the group membership. It can help correlate with the time when the user(s) first reported logon issues.
 
 Hints to find groups to target for a change:
 
@@ -157,11 +157,11 @@ Options to reduce the number of SIDs in the user token include the following. Th
 
 The resolution applies to the situation in which administrator account cannot log on to the computer.
 
-When the user whose logon fails because of too many group memberships is a member of the Administrators group, an administrator who has the credentials for the Administrator account (that is, an account that has a well-known relative identifier [RID] of 500) must restart a domain controller by selecting the **Safe Mode** startup option (or by selecting the **Safe Mode** with Networking startup option). In safe mode, he must then log on to the domain controller by using the Administrator account credentials.
+When the user whose logon fails because of too many group memberships is a member of the Administrators group, an administrator who has the credentials for the Administrator account (that is, an account that has a well-known relative identifier [RID] of 500) must restart a domain controller by selecting the **Safe Mode** startup option (or by selecting the **Safe Mode** with Networking startup option). In safe mode, the user must then log on to the domain controller by using the Administrator account credentials.
 
 Microsoft has changed the token generation algorithm so that the LSA can create an access token for the Administrator account so that the administrator can log on regardless of how many transitive groups or intransitive groups that the Administrator account is a member of. When one of these safe mode startup options is used, the access token that is created for the Administrator account includes the SIDs of all Built-in and all Domain Global groups that the Administrator account is a member of.
 
-These groups typically include the following:
+These groups typically include:
 
 - Everyone (S-1-1-0)
 - BUILTIN\Users (S-1-5-32-545)
@@ -192,7 +192,7 @@ The access token of users always contains the SIDs of the user, global, and univ
 
 ## More information
 
-The generic SIDs of an account often include the following:
+The generic SIDs of an account often include:
 
 - Everyone (S-1-1-0)
 - BUILTIN\Users (S-1-5-32-545)

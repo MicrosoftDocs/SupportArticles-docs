@@ -1,6 +1,6 @@
 ---
 title: Redirect users and computers containers
-description: This article describes how to use the redirusr and redircmp utilities to redirect user, computer, and group accounts in Active Directory domains.
+description: Describes how to use the redirusr and redircmp utilities to redirect user, computer, and group accounts in Active Directory domains.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -59,15 +59,15 @@ Examples of operations that use earlier-version APIs that reply on the paths tha
 |NETDOM ADD, where the /ou command is either not specified or supported|All versions|
 |||
 
-It is helpful to make the default container for user, computer, and security groups an organizational unit for several reasons, including the following:
+It is helpful to make the default container for user, computer, and security groups an organizational unit for several reasons, including:
 
 - Group policies can be applied on organizational unit containers but not on CN class containers, where security principals are put by default.
 
 - The best practice is to arrange security principals into an organizational unit hierarchy that mirrors your organizational structure, geographic layout, or administration model.
 
-If you are redirecting the CN=Users and CN=Computers folders, be aware of the following issues:
+If you're redirecting the CN=Users and CN=Computers folders, be aware of the following issues:
 
-- The target domain must be configured to run in the Windows Server 2003 domain functional level or higher. For the Windows Server 2003 domain functional level, this means that:
+- The target domain must be configured to run in the Windows Server 2003 domain functional level or higher. For the Windows Server 2003 domain functional level, it means that:
 
   - Windows Server 2003 `ADPREP /FORESTPREP` or newer
   - Windows Server 2003 `ADPREP /DOMAINPREP` or newer
@@ -76,11 +76,11 @@ If you are redirecting the CN=Users and CN=Computers folders, be aware of the fo
 
 - Unlike CN=USERS and CN=COMPUTERS, organizational unit containers are subject to accidental deletions by privileged user accounts, including administrators.
 
-    CN=USERS and CN=COMPUTERS containers are system-protected objects that cannot, and must not, be removed for backward compatibility. However, they can be renamed. Organizational units, on the other hand, are subject to accidental tree deletions by administrators.
+    CN=USERS and CN=COMPUTERS containers are system-protected objects that can't, and mustn't, be removed for backward compatibility. But they can be renamed. Organizational units are subject to accidental tree deletions by administrators.
 
     Windows Server 2003 versions of the Active Directory Users & Computers snap-in can follow the steps in [Protect an Organizational Unit from Accidental Deletion](https://gallery.technet.microsoft.com/scriptcenter/c307540f-bd91-485f-b27e-995ae5cea1e2).
 
-    Windows Server 2008 and newer versions of the Active Directory Users and Computers snap-in feature a **Protect object against accidental deletion** check box that you can click to select when you create a new organizational unit container. You can also select this check box on the **Object** tab of the **Properties** dialog box for an existing organizational unit container.
+    Windows Server 2008 and newer versions of the Active Directory Users and Computers snap-in feature a **Protect object against accidental deletion** check box that you can select when you create a new organizational unit container. You can also select this check box on the **Object** tab of the **Properties** dialog box for an existing organizational unit container.
 
     A scripted option is documented in [Script to Protect Organizational Units (OUs) from Accidental Deletion](https://gallery.technet.microsoft.com/scriptcenter/c307540f-bd91-485f-b27e-995ae5cea1e2).
 
@@ -110,7 +110,7 @@ If you are redirecting the CN=Users and CN=Computers folders, be aware of the fo
 
 2. Transition the domain to the Windows Server 2003 domain in the Active Directory Users and Computers snap-in (Dsa.msc) or in the Domains and Trusts (Domains.msc) snap-in. For more information about increasing the domain functional level, see [How to raise domain and forest functional levels](https://support.microsoft.com/help/322692).
 
-3. Create the organizational unit container where you want computers that are created with earlier-version APIs to be located, if the desired organizational unit container does not already exist.
+3. Create the organizational unit container where you want computers that are created with earlier-version APIs to be located, if the desired organizational unit container doesn't already exist.
 
 4. Run the Redircmp.exe file at a command prompt by using the following syntax, where **container-dn** is the distinguished name of the organizational unit that will become the default location for newly created computer objects that are created by down-level APIs:
 
@@ -163,7 +163,7 @@ If you try to redirect the users or computer organizational unit in a domain tha
 
 ### Error messages that you receive if you log on without the required permissions
 
-If you try to redirect the users or computer organizational unit by using incorrect credentials in the target domain, you may receive the following error messages.
+If you try to redirect the users or computer organizational unit by using incorrect credentials in the target domain, you may receive the following error messages:
 
 - Error message 1
 
@@ -177,9 +177,9 @@ If you try to redirect the users or computer organizational unit by using incorr
     >
     > Error, unable to modify the wellKnownObjects attribute. Verify that the domain functional level of the domain is at least Windows Server 2003: Insufficient Rights Redirection was NOT successful.
 
-### Error messages that you receive if you redirect to an organizational unit that does not exist
+### Error messages that you receive if you redirect to an organizational unit that doesn't exist
 
-If you try to redirect the users or computer organizational unit to an organizational unit that does not exist, you may receive the following error messages.
+If you try to redirect the users or computer organizational unit to an organizational unit that doesn't exist, you may receive the following error messages:
 
 - Error message 1:
 
