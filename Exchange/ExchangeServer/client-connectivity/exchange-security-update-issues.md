@@ -302,6 +302,52 @@ You need to uninstall the previous installed IU before applying this SU as it is
 
 ## Additional information
 
+### How to update .NET when migrating from an unsupported CU
+
+If you are upgrading Exchange Server from an unsupported CU to the current CU and no intermediate CUs are available, you should first upgrade to the latest version of .NET that's supported by your version of Exchange Server and then immediately upgrade to the current CU. This method doesn't replace the need to keep your Exchange servers up to date and on the latest supported CU. Microsoft makes no claim that an upgrade failure will not occur using this method, which may result in the need to contact Microsoft Support Services.
+
+> [!IMPORTANT]
+> Versions of the .NET Framework that aren't listed in the tables on the [supportability matrix](https://docs.microsoft.com/en-us/Exchange/plan-and-deploy/supportability-matrix?view=exchserver-2019#exchange-2019) are not supported on any version of Exchange. This includes minor and patch-level releases of the .NET Framework.  
+
+Follow these steps below to install the latest .NET Framework
+
+1.  Put the Server into [Maintenance
+    Mode](https://docs.microsoft.com/en-us/Exchange/high-availability/manage-ha/manage-dags?redirectedfrom=MSDN&view=exchserver-2019#performing-maintenance-on-dag-members).
+    For example,
+
+    set-servercomponentstate \<server_name\> -Component serverwideoffline -State
+    inactive -Requester Maintenance
+
+2.  Stop all of the Exchange Services.
+
+3.  Either by the services MMC
+
+4.  Or by utilizing Powershell. Run the below command twice to stop all Exchange
+    services. We do not recommend using the -Force command to stop all the
+    services.
+
+    Get-service \*exch\* \| stop-service
+
+5.  Download and install the correct new .Net Version according to the
+    [supportability
+    table](https://docs.microsoft.com/en-us/exchange/plan-and-deploy/supportability-matrix?view=exchserver-2019#exchange-2019).
+
+6.  After the install is complete, reboot the server.
+
+7.  Update to the newest Cumulative Update available for Exchange 2013, 2016, or
+    2019.
+
+8.  Make sure to reboot the server after the Cumulative Update is installed.
+
+9.  Ensure all Exchange services are in their normal start Mode and started. You
+    can use PowerShell to run: Get-service \*exch\*
+
+10. Take the server out of [Maintenance
+    Mode](https://docs.microsoft.com/en-us/Exchange/high-availability/manage-ha/manage-dags?redirectedfrom=MSDN&view=exchserver-2019#performing-maintenance-on-dag-members).
+    For example:  
+    set-servercomponentstate \<server_name\> -Component serverwideoffline -State
+    active - Requester Maintenance
+
 ### Customized OWA or .config files
 
 > [!IMPORTANT]
