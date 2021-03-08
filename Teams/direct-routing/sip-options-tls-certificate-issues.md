@@ -161,7 +161,7 @@ For a list of supported CAs, see the **Public trusted certificate for the SBC** 
 <details>
 <summary><b>SBC certificate or intermediary certificates are missing in the SBC TLS "Hello" message</b></summary>
 
-Check that a valid SBC certificate and all required intermediary certificates are installed correctly, and that the TLS connection settings on the SBC are correct.
+Check that a valid SBC certificate and all required intermediate certificates are installed correctly, and that the TLS connection settings on the SBC are correct.
 
 Sometimes, even if everything looks correct, a closer examination of the packet capture might reveal that the TLS certificate is not provided to the Teams infrastructure.
 

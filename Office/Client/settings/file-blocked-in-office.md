@@ -52,14 +52,8 @@ To resolve this issue, try the following general resolutions to change the File 
 
 ## More Information
 
-For more application-specific resolution methods that you can try, see the following articles.
+For more application-specific resolution methods that you can try, see the following article.
 
 Word: [I receive an error message when I try to open or save a file in Word](https://support.microsoft.com/help/922849)
-
-Excel: [I receive an error message when I try to open or save a file in Excel](https://support.microsoft.com/help/922848)
-
-PowerPoint: [I receive an error message when I try to open or save a file in PowerPoint](https://support.microsoft.com/help/922847)
-
-Visio: [I receive an error message when I try to open or save a file in Visio](https://support.microsoft.com/help/2832600)
 
 The issue can also occur when you open an embedded or linked Office file in an Office application. For example, you have a Visio object embedded in a Word document. When you try to open the Visio object, you receive a similar error message in Word. To resolve this issue, you must change the File Block settings in the application that owns the blocked file type. In this example, you must change the File Block settings in Visio instead of in Word. If the error message mentions Excel file type, go to Excel to change the File Block settings.

@@ -36,9 +36,7 @@ Lync Server 2010 server roles are compatible with Windows Server 2012. For this 
 [2493736](https://support.microsoft.com/help/2493736) Updates for Lync Server 2010
 
 > [!IMPORTANT]
-> After you install Lync 2010 Server on Windows Server 2012, the Lync Server 2010 application pools are configured to use the Microsoft .NET Framework 4.0. However, the Lync Server 2010 application pools use the .NET Framework 2.0. For information about how to change the version of the .NET Framework that is used by the Lync Server 2010 application pools, click the following article number to view the article in the Microsoft Knowledge Base: 
-> 
-> [2777747](https://support.microsoft.com/help/2777747) "404.17 - Not Found" error message when you try to connect to a Lync Server 2010 web service:    
+> After you install Lync 2010 Server on Windows Server 2012, the Lync Server 2010 application pools are configured to use the Microsoft .NET Framework 4.0. However, the Lync Server 2010 application pools use the .NET Framework 2.0.
 
 ### Windows 8
 

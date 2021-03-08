@@ -126,7 +126,7 @@
     },
     "fileMetadata": {
       "feedback_product_url": {
-        "OneDrive/*.md": "https://onedrive.uservoice.com/"
+        "OneDrive/**.md": "https://onedrive.uservoice.com/"
       }
     },
     "template": [],
