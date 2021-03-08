@@ -99,7 +99,7 @@ Try the following options to help recover your lost, unsaved, or corrupted Word 
 </a>
 
 Check the Desktop Recycle Bin to see if your document is there.
-- **Commercial customers**: Check the  Sharepoint Recycle Bin. For more information, see [Restore deleted items from the site collection recycle bin](https://support.microsoft.com/en-us/office/restore-deleted-items-from-the-site-collection-recycle-bin-5fa924ee-16d7-487b-9a0a-021b9062d14b).  
+- **Commercial customers**: Check the  Sharepoint Recycle Bin. For more information, see [Restore items in the recycle bin that were deleted from SharePoint or Team](https://support.microsoft.com/office/restore-items-in-the-recycle-bin-that-were-deleted-from-sharepoint-or-teams-6df466b6-55f2-4898-8d6e-c0dff851a0be).
 
 
 </td>
