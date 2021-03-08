@@ -59,7 +59,7 @@ During the sign in process, Lync 2013 caches your credentials and other informat
 ### Resolution for Lync 2010
 
 1. Update the Lync client to the latest version that's available on the Downloads page of the Office 365 portal.    
-2. Update the [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/download/details.aspx?id=41950) to the latest version.    
+2. Update the [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/download/details.aspx?id=28177) to the latest version.    
 3. Clear your cached certificates, credentials and connections.
 
 #### Additional troubleshooting steps for Lync 2013 and Lync 2010
