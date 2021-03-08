@@ -27,6 +27,7 @@ appliesto:
 This article provides a list of known issues that users might encounter when installing Cumulative Updates (CUs) and Security Updates (SUs) for the versions of Microsoft Exchange Server specified in the Applies to section.
 
 ## Check for Indicators of Compromise (IOC) and verify the update
+
 </br>
 <details>
 <summary>Looking Indicators of Compromise (IOC)</summary>
@@ -42,7 +43,7 @@ This script automates all four of the commands found in the [Microsoft Threat In
 ### Option 1 (Recommended)
 
  Run the [HealthChecker script](https://aka.ms/exchangehealthchecker) and check the build number.
- 
+
  ![The image about the result of HealthChecker](./media/exchange-security-update-issues/result-healthchecker.png)
 
 ### Option 2
@@ -124,7 +125,7 @@ This issue occurs if the SSL binding on 0.0.0.0:444 has one of more of the follo
 5. On the mailbox server, do the same verification for the **Exchange Back End** site.  
     ![Verify the SSL certificate for the SSL binding for the Exchange Back End site on the Mailbox server.](./media/exchange-security-update-issues/back-end-binding.png)  
 
-More information available at [support.microsoft.com](https://support.microsoft.com/en-us/topic/you-get-a-blank-page-after-logging-in-eac-or-owa-in-exchange-2013-or-exchange-2016-a24db2f2-4d67-806b-670b-efb8f08605f7)
+More information available at [support.microsoft.com](/topic/you-get-a-blank-page-after-logging-in-eac-or-owa-in-exchange-2013-or-exchange-2016-a24db2f2-4d67-806b-670b-efb8f08605f7)
 
 ## Event ID 1309 and you cannot access EAC or OWA
 
@@ -171,7 +172,7 @@ To resolve this issue, follow these steps:
 Restart-Service WAS,W3SVC
 ```
 
-More information available at [support.microsoft.com](https://docs.microsoft.com/en-us/exchange/troubleshoot/client-connectivity/event-1309-code-3005-cannot-access-owa-ecp)
+More information available at [support.microsoft.com](/exchange/troubleshoot/client-connectivity/event-1309-code-3005-cannot-access-owa-ecp)
 
 ### Exchange Server 2019 setup does not run as expected if started from PowerShell using Setup.exe
 
@@ -307,12 +308,12 @@ You need to uninstall the previous installed IU before applying this SU as it is
 If you are upgrading Exchange Server from an unsupported CU to the current CU and no intermediate CUs are available, you should first upgrade to the latest version of .NET that's supported by your version of Exchange Server and then immediately upgrade to the current CU. This method doesn't replace the need to keep your Exchange servers up to date and on the latest supported CU. Microsoft makes no claim that an upgrade failure will not occur using this method, which may result in the need to contact Microsoft Support Services.
 
 > [!IMPORTANT]
-> Versions of the .NET Framework that aren't listed in the tables on the [supportability matrix](https://docs.microsoft.com/en-us/Exchange/plan-and-deploy/supportability-matrix?view=exchserver-2019#exchange-2019) are not supported on any version of Exchange. This includes minor and patch-level releases of the .NET Framework.  
+> Versions of the .NET Framework that aren't listed in the tables on the [supportability matrix](/Exchange/plan-and-deploy/supportability-matrix?view=exchserver-2019#exchange-2019&preserve-view=true) are not supported on any version of Exchange. This includes minor and patch-level releases of the .NET Framework.  
 
 Follow these steps below to install the latest .NET Framework
 
 1.  Put the Server into [Maintenance
-    Mode](https://docs.microsoft.com/en-us/Exchange/high-availability/manage-ha/manage-dags?redirectedfrom=MSDN&view=exchserver-2019#performing-maintenance-on-dag-members).
+    Mode](/Exchange/high-availability/manage-ha/manage-dags?redirectedfrom=MSDN&view=exchserver-2019#performing-maintenance-on-dag-members&preserve-view=true).
     For example,
 
     set-servercomponentstate \<server_name\> -Component serverwideoffline -State
@@ -328,9 +329,7 @@ Follow these steps below to install the latest .NET Framework
 
     Get-service \*exch\* \| stop-service
 
-5.  Download and install the correct new .Net Version according to the
-    [supportability
-    table](https://docs.microsoft.com/en-us/exchange/plan-and-deploy/supportability-matrix?view=exchserver-2019#exchange-2019).
+5.  Download and install the correct new .Net Version according to the [supportability table](/exchange/plan-and-deploy/supportability-matrix?view=exchserver-2019#exchange-2019&preserve-view=true).
 
 6.  After the install is complete, reboot the server.
 
@@ -342,8 +341,7 @@ Follow these steps below to install the latest .NET Framework
 9.  Ensure all Exchange services are in their normal start Mode and started. You
     can use PowerShell to run: Get-service \*exch\*
 
-10. Take the server out of [Maintenance
-    Mode](https://docs.microsoft.com/en-us/Exchange/high-availability/manage-ha/manage-dags?redirectedfrom=MSDN&view=exchserver-2019#performing-maintenance-on-dag-members).
+10. Take the server out of [Maintenance Mode](/Exchange/high-availability/manage-ha/manage-dags?redirectedfrom=MSDN&view=exchserver-2019#performing-maintenance-on-dag-members).
     For example:  
     set-servercomponentstate \<server_name\> -Component serverwideoffline -State
     active - Requester Maintenance
