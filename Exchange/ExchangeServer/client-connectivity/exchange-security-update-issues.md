@@ -427,7 +427,8 @@ Follow these steps to install the latest version of the .NET Framework:
 
 6. Reboot the server after the CU is installed.
 
-7. Ensure all Exchange services are in their normal start mode and have started. You can use PowerShell to run the following command to start them:>/br>
+7. Ensure all Exchange services are in their normal start mode and have started. You can use PowerShell to run the following command to start them:
+
     `Get-service \*exch\*`
 
 8. Take the server out of [Maintenance Mode](/Exchange/high-availability/manage-ha/manage-dags?redirectedfrom=MSDN&view=exchserver-2019#performing-maintenance-on-dag-members&preserve-view=true). Run the following command:
