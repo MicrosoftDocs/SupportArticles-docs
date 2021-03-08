@@ -279,7 +279,7 @@ Use the best practice to reboot the server before installing the CU or SU. For t
     **Note**: Do so only for the Exchange services that were active prior to the setup attempt. The POP3 and IMAP4 services are stopped by default and need to run only if there are users who need them.
 
 3. Try the setup again.
-The setup process might get interrupted in a phase in which services are already disabled. Restarting it in this updated phase may record the “before” state of services as disabled and try to restore this state.
+
 
 </br>
 </details>
@@ -328,7 +328,7 @@ If you find this error, run the following command from a machine which is in the
 
 `.\setup.exe /PrepareAD /IAcceptExchangeServerLicenseTerms`
 
-**Note**: The machine must be a member of the **Enterprise Admin**, **Domain Admin**, and **Schema Admin** groups.
+**Note**: The user who runs the command must be a member of the **Enterprise Admin**, **Domain Admin**, and **Schema Admin** groups.
 
 To find the Domain Controller (DC) which holds the schema master, run the following command from administrative command prompt on the DC:
 
@@ -436,7 +436,7 @@ If the Exchange CU media is on D: drive, run an upgrade using PowerShell by usin
 </details>
 
 <details>
-<summary>Restart fom previous installation is pending</summary>
+<summary>Restart from previous installation is pending</summary>
 </br>
 
 **Issue**
@@ -453,11 +453,11 @@ Follow the information provided in [A Restart from a Previous Installation is Pe
 </details>
 
 <details>
-<summary>Mallow stops working after CU or SU installation</summary>
+<summary>Mailflow stops working after CU or SU installation</summary>
 
 **Issue**
 
-Mallow stops working after you install a CU or an SU.
+Mailflow stops working after you install a CU or an SU.
 
 **Resolution**
 
@@ -475,20 +475,19 @@ Mallow stops working after you install a CU or an SU.
 <summary>Update .NET when migrating from an unsupported CU</summary>
 </br>
 
-If you're upgrading Exchange Server from an unsupported CU to the current CU and no intermediate CUs are available, you should first upgrade to the latest version of .NET that's supported by your version of Exchange Server and then immediately upgrade to the current CU. This method doesn't replace the need to keep your Exchange servers up to date and on the latest supported CU. Microsoft makes no claim that an upgrade failure will not occur by using this method, which may result in the need to contact Microsoft Support Services.
+If you're upgrading Exchange Server from an unsupported CU to the current CU and no intermediate CUs are available, you should first upgrade to the latest version of .NET that's supported by your version of Exchange Server and then immediately upgrade to the current CU. This method doesn't replace the need to keep your Exchange servers up to date and on the latest supported CU. Microsoft makes no claim that an upgrade failure will not occur by using this method.
 
 > [!IMPORTANT]
 > Versions of the .NET Framework that aren't listed in the tables in the [Exchange Server supportability matrix](/Exchange/plan-and-deploy/supportability-matrix?view=exchserver-2019#exchange-2019&preserve-view=true) are not supported on any version of Exchange. This includes minor and patch-level releases of the .NET Framework.  
 
 Follow these steps to install the latest version of the .NET Framework:
 
-1. Put the Server into [Maintenance Mode](/Exchange/high-availability/manage-ha/manage-dags?redirectedfrom=MSDN&view=exchserver-2019#performing-maintenance-on-dag-members&preserve-view=true).
+1. Put the server into [Maintenance Mode](/Exchange/high-availability/manage-ha/manage-dags?redirectedfrom=MSDN&view=exchserver-2019#performing-maintenance-on-dag-members&preserve-view=true).
     Run the following command:
 
     `set-servercomponentstate \<server_name\> -Component serverwideoffline -State inactive -Requester Maintenance`
 
-2. Stop all Exchange Services by using either the Services MMC or PowerShell. If you want to use PowerShell, run the following command twice to stop all Exchange
-    services:
+2. Stop all Exchange Services by using either the Services MMC or PowerShell. If you want to use PowerShell, run the following command twice to stop all Exchange services:
 
     `Get-service \*exch\* \| stop-service`
 
