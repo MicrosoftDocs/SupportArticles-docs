@@ -1,7 +1,7 @@
 ---
 title: Use SaRA to collect data about Microsoft 365 Apps installations
 description: Explains how to use the Microsoft Support and Recovery Assistant (SaRA) uses Robust Office Inventory Scan (ROIScan) to collect information about Microsoft 365 Apps installations. 
-author: mibrelea
+author: v-matham
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: article
 ms.custom: CSSTroubleshoot
+ms.prod: office-perpetual-itpro
 ms.author: v-matham
 appliesto:
 - Office 365
@@ -47,8 +48,8 @@ If you are running Windows 7 (any edition), you must have .NET Framework 4.5 ins
 
 To install SaRA and automatically start collecting ROIScan data, select one of the following links:
 
-[Advanced diagnostics – Normal ROIScan](http://aka.ms/sara-roiscannormal)
-[Advanced diagnostics – Full ROIScan](http://aka.ms/sara-roiscanfull)
+[Advanced diagnostics – Normal ROIScan](https://aka.ms/sara-roiscannormal)
+[Advanced diagnostics – Full ROIScan](https://aka.ms/sara-roiscanfull)
 
 > [!Note]
 > In addition to Normal ROIScan, Full ROIScan creates verbose .xml files for [MSI based installations of Office products[(https://docs.microsoft.com/deployoffice/install-different-office-visio-and-project-versions-on-the-same-computer#installation-technologies-used-by-office), which are helpful in scenarios that require in-depth analysis of file versions and file states.
