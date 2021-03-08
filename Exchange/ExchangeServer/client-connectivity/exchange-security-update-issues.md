@@ -83,8 +83,7 @@ Run the following scripts to restore the configuration for OWA and ECP:
 
 The scripts are located in the following path: \Program Files\Microsoft\Exchange Server\v15\Bin\ directory.
 
-> [!NOTE]
-> For Exchange Server 2010, the path will use “V14“ instead of “V15”.
+**Note**: For Exchange Server 2010, the path will use “V14“ instead of “V15”.
 
 Then open a command prompt as administrator and run `iisreset`.
 
@@ -277,8 +276,7 @@ Use the best practice to reboot the server before installing the CU or SU. For t
 1. Rename the C:\ExchangeSetupLogs folder (for example, ExchangeSetupLogs-OLD).
 2. Change the startup type for Exchange services in the services.msc console to **Automatic**.
 
-    > [!NOTE]
-    > Do so only for the Exchange services that were active prior to the setup attempt. The POP3 and IMAP4 services are stopped by default and need to run only if there are users who need them.
+    **Note**: Do so only for the Exchange services that were active prior to the setup attempt. The POP3 and IMAP4 services are stopped by default and need to run only if there are users who need them.
 
 3. Try the setup again.
 The setup process might get interrupted in a phase in which services are already disabled. Restarting it in this updated phase may record the “before” state of services as disabled and try to restore this state.
@@ -298,8 +296,7 @@ Exchange services don't start after you complete installing the SU installation.
 
 Check the state of the services. If they are **Disabled**, set them to **Automatic** and start them manually.
 
-> [!NOTE]
-> The services **MSExchangeIMAP4**, **MSExchangeIMAP4BE**, **MSExchangePOP3** and **MSExchangePOP3BE** are typically disabled by default. Check the Exchange log located at `C:\ExchangeSetupLogs\ServiceControl.log` to see which services were disabled during the SU installation.
+**Note**: The services **MSExchangeIMAP4**, **MSExchangeIMAP4BE**, **MSExchangePOP3** and **MSExchangePOP3BE** are typically disabled by default. Check the Exchange log located at `C:\ExchangeSetupLogs\ServiceControl.log` to see which services were disabled during the SU installation.
 
 </br>
 </details>
@@ -331,8 +328,7 @@ If you find this error, run the following command from a machine which is in the
 
 `.\setup.exe /PrepareAD /IAcceptExchangeServerLicenseTerms`
 
-> [!NOTE]
-> The machine must be a member of the **Enterprise Admin**, **Domain Admin**, and **Schema Admin** groups.
+**Note**: The machine must be a member of the **Enterprise Admin**, **Domain Admin**, and **Schema Admin** groups.
 
 To find the Domain Controller (DC) which holds the schema master, run the following command from administrative command prompt on the DC:
 
@@ -416,8 +412,7 @@ Follow these steps to install the latest version of the .NET Framework:
 
     `Get-service \*exch\* \| stop-service`
 
-    > [!NOTE]
-    > It is not recommended to use the -Force command to stop all the services.
+    **Note**: It is not recommended to use the -Force command to stop all the services.
 
 3. Download and install the correct version of the .NET Framework according to the [Exchange Server supportability matrix](/exchange/plan-and-deploy/supportability-matrix?view=exchserver-2019#exchange-2019&preserve-view=true).
 
