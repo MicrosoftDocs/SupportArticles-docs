@@ -368,7 +368,7 @@
     - name: OWA doesn't redirect to ADFS login
       href: ../client-connectivity/owa-not-redirect-adfs-login.md
     - name: OWA or ECP stop working after installing Exchange Server security update
-      href: ../client-connectivity/owa-stops-working-after-update
+      href: ../client-connectivity/owa-stops-working-after-update.md
     - name: Password expiration isn't notified
       href: ../client-connectivity/owa-password-expiration-notification.md
     - name: Performance issues on Exchange connection
