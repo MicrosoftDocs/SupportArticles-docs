@@ -38,7 +38,7 @@ To install, collect, and send the Network Monitor trace file so that it can be r
 
 1. Get the NetMon.exe tool from the following location:
     
-    [Microsoft Network Monitor 3.1 OneClick](https://www.microsoft.com/download/details.aspx?id=6537)   
+    [Microsoft Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865)   
 2. Download and save **OneClick_Autorun.exe** to your desktop.   
 3. Install Network Monitor 1 OneClick. To do this, run the OneClick_Autorun.exe file.
 
