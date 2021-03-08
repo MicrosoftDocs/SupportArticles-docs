@@ -372,7 +372,7 @@ Do the following:
 </details>
 
 <details>
-<summary>Setup fails with "Cannot start the service" error
+<summary>Setup fails with "Cannot start the service" error</summary>
 </br>
 
 **Issue**
@@ -420,7 +420,7 @@ Uninstall the previously installed Interim Update (IU) before applying this SU b
 
 You're upgrading to the latest CU but Setup either displays that it is installing an existing CU on the server OR fails with the following error message:
 
-Couldn't open package **'C:\Program Files\Microsoft\Exchange Server\V15\bin\Setup\<package name>**. This installation package could
+> Couldn't open package **'C:\Program Files\Microsoft\Exchange Server\V15\bin\Setup\\\<package name>**. This installation package could
 not be opened. Verify that the package exists and that you can access it, or contact the application vendor to verify that this is a valid Windows Installer package. Error code is 1619.
 
 **Cause**
@@ -443,7 +443,7 @@ If the Exchange CU media is on D: drive, run an upgrade using PowerShell by usin
 
 You keep getting the following error message even after restarting the server several times:
 
->Microsoft Exchange Server setup cannot continue because a restart from a previous installation or update is pending.
+> Microsoft Exchange Server setup cannot continue because a restart from a previous installation or update is pending.
 
 **Resolution**
 
