@@ -34,8 +34,8 @@ This behavior is by design. The AutoSave feature isn't available in SharePoint O
 
 If you want Office to open the current file on the server every time, you can turn off AutoSave.
 
->**Important**<br/>
->If you turn AutoSave off and then open files from SharePoint Online, real-time co-authoring will not work.  You would need to manually turn AutoSave on to get real-time co-authoring to work.
+> [!IMPORTANT]
+> If you turn AutoSave off and then open files from SharePoint Online, real-time co-authoring will not work.  You would need to manually turn AutoSave on to get real-time co-authoring to work.
 
 To turn off AutoSave on an individual computer, do the following:
 
