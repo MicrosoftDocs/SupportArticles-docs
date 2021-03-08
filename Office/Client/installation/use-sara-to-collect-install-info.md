@@ -1,5 +1,5 @@
 ---
-title: Use Microsoft Support and Recovery Assistant to collect data about Microsoft 365 Apps installations
+title: Use SaRA to collect data about Microsoft 365 Apps installations
 description: Explains how to use the Microsoft Support and Recovery Assistant (SaRA) uses Robust Office Inventory Scan (ROIScan) to collect information about Microsoft 365 Apps installations. 
 author: mibrelea
 manager: dcscontentpm
@@ -17,7 +17,7 @@ appliesto:
 - Office 2010
 ---
 
-# Use Microsoft Support and Recovery Assistant to collect data about Microsoft 365 Apps installations
+# Use SaRA to collect data about Microsoft 365 Apps installations
 
 ## Overview
 
