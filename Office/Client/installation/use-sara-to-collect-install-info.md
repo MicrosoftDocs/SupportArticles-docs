@@ -19,7 +19,7 @@ appliesto:
 
 # Use SaRA to collect data about Microsoft 365 Apps installations
 
-## Overview
+## Summary
 
 The Microsoft Support and Recovery Assistant (SaRA) uses Robust Office Inventory Scan (ROIScan) to collect information about Microsoft 365 Apps installations. SaRA can help you collect information about the computer properties, installed product, product properties, install sources, licensing (OSPP), patch detection, or feature states.
 
