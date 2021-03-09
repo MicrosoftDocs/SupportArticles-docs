@@ -451,6 +451,8 @@
       href: ../public-folders/add-reviewer-permission-public-folder-calendar-powershell.md
     - name: Can't apply permissions to subfolders
       href: ../public-folders/can’t-apply-permissions-public-folder-subfolders.md
+    - name: Can't apply the read and unread setting
+      href: ../public-folders/cannot-apply-read-unread-setting.md
     - name: Can't connect to public folders via Outlook or OWA
       href: ../public-folders/outlook-or-owa-cannot-connect-to-public-folders.md
     - name: Can't delete items
@@ -519,4 +521,3 @@
       href: ../user-and-shared-mailboxes/set-automatic-replies.md
     - name: The Read status of email messages isn't updated
       href: ../user-and-shared-mailboxes/email-message-read-status-not-update.md
-
