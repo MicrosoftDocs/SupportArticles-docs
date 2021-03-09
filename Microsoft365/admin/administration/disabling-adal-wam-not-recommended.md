@@ -31,7 +31,7 @@ Disabling ADAL or WAM authentication as a solution to fix sign-in or activation 
 
 ## More information
 
-Microsoft 365 apps (for example, Office client apps) use Azure Active Directory Authentication Library (ADAL) framework-based [Modern Authentication](https://docs.microsoft.com/office365/enterprise/office-365-client-support-modern-authentication) by default. Starting with build 16.0.7967, Microsoft 365 apps use [Web Account Manager](https://docs.microsoft.com/azure/active-directory/devices/concept-primary-refresh-token#key-terminology-and-components) (WAM) for sign-in workflows on Windows builds that are later than 15000 (Windows 10, version 1703, build 15063.138).
+Microsoft 365 apps (for example, Office client apps) use Azure Active Directory Authentication Library (ADAL) framework-based [Modern Authentication](/microsoft-365/enterprise/modern-auth-for-office-2013-and-2016) by default. Starting with build 16.0.7967, Microsoft 365 apps use [Web Account Manager](https://docs.microsoft.com/azure/active-directory/devices/concept-primary-refresh-token#key-terminology-and-components) (WAM) for sign-in workflows on Windows builds that are later than 15000 (Windows 10, version 1703, build 15063.138).
 
 ADAL enables sign-in features such as Multi-Factor Authentication (MFA), smart card, and certificate-based authentication for Office client apps across different platforms. Furthermore, on Windows devices, some of the security-related features are available exclusively via WAM and are otherwise not possible. Additionally, all future innovations will be implemented on WAM.
 

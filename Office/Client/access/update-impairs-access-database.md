@@ -43,8 +43,6 @@ Method 1: Apply the fix from the appropriate link below:
 
 Office 2010: [https://support.microsoft.com/kb/2597986](https://support.microsoft.com/help/2597986)
 
-Office 2007:  [https://support.microsoft.com/kb/2687441](https://support.microsoft.com/help/2687441)
-
 Office 2003:  [https://support.microsoft.com/kb/2687323](https://support.microsoft.com/help/2687323)
 
 Method 2: Re-register MSCOMCTL.OCX from an elevated command prompt
@@ -134,7 +132,5 @@ Problems have also surfaced in other Office products after adding the patch, tho
 See these KB articles for more information on the security update: 
 
 - [MS12-060: Description of the security update for Office 2010: August 14, 2012](https://support.microsoft.com/help/2597986)
-
-- [MS12-060: Description of the security update for 2007 Office system: August 14, 2012](https://support.microsoft.com/help/2687441)
 
 - [MS12-060: Description of the security update for Office 2003 and Office 2003 Web Components: August 14, 2012](https://support.microsoft.com/help/2687323)

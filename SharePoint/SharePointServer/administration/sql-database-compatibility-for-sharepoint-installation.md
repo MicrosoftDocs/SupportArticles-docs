@@ -34,13 +34,13 @@ This issue happens because content databases that are created by SharePoint Serv
 SharePoint Server 2016 content databases that are deployed on SQL Server versions 2016 and 2017 are tested and validated to work best with compatibility level 110. Therefore, we strongly recommend that you set the database compatibility level to 110 for SharePoint Server 2016 content databases. To change the compatibility level, run the following TSQL command:
 
 ```sql
-ALTER DATABASEdatabase_nameSET COMPATIBILITY_LEVEL = 110
+ALTER DATABASE database_nameSET COMPATIBILITY_LEVEL = 110
 ```
 
 You can view the compatibility level of all the databases in an instance of SQL Server by using the following TSQL query:
 
 ```sql
-SELECT name,compatibility_levelFROM sys.databases
+SELECT name, compatibility_level FROM sys.databases
 ```
 
 ## More information
