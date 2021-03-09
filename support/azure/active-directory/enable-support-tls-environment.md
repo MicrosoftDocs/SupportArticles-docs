@@ -17,8 +17,6 @@ These services are being deprecated for the following reasons:
 
 - To comply with the latest compliance standards for the [Federal Risk and Authorization Management Program (FedRAMP)](https://www.fedramp.gov/).
 - To improve security posture when customer interact with our cloud services.
-- Identity customers are asking to meet their compliance obligations to their customers.
-- To stay aligned with **Office 365**. Office 365 has started deprecation of **Transport Layer Security (TLS) versions 1.1** and **1.0** for its services.
 
 The services are being deprecated on the following dates:
 
@@ -27,17 +25,17 @@ The services are being deprecated on the following dates:
 
 ## Enable support for TLS 1.2 in your environment
 
-Use **TLS 1.2** and modern cipher suites with client-server and browser-server combination for maintaining a secure connection to **Azure Active Directory** (Azure AD), **Office 365** and **Microsoft 365** services.
-
 Ensure your client apps, client operating system (OS) and servers are enabled for **TLS 1.2**.
+
+Use **TLS 1.2** and modern cipher suites with client-server and browser-server combination for maintaining a secure connection to **Azure Active Directory** (Azure AD), **Office 365** and **Microsoft 365** services.
 
 ### Steps to enable TLS 1.2 on clients
 
 1. Update the **Windows OS** and default TLS used for **WinHTTP**.
-2. Identify and reduce dependency on clients app that don’t support **TLS 1.2**.
+2. Identify and reduce dependency on the client apps that don’t support **TLS 1.2**.
 3. Enable **TLS 1.2** on popular server roles communicating with **Azure AD**.
 4. Update and configure the **.NET Framework** to support **TLS 1.2**.
-5. Ensure you use the latest updated browser. Microsoft recommends the use of the new Edge browser (based on Chromium)  [Microsoft Edge release notes for Stable Channel](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel).
+5. Ensure that you use the latest updated browser. Microsoft recommends the use of the new Edge browser (based on Chromium)  [Microsoft Edge release notes for Stable Channel](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel).
 6. Ensure your web proxy supports **TLS 1.2**. Check with your vendor for additional information on how to update a web proxy.
 
 For more information, see the following articles:
@@ -49,7 +47,7 @@ For more information, see the following articles:
 
 **Windows 8.1**, **Windows Server 2012 R2**, **Windows 10**, **Windows Server 2016**, and later versions of Windows natively support **TLS 1.2** for client-server communications over **WinHTTP**.
 
-Earlier versions of Windows, such as **Windows 7** or **Windows Server 2012**, don't enable **TLS 1.1** or **TLS 1.2** by default for secure communications using **WinHTTP**.
+Earlier versions of Windows, such as **Windows 7** or **Windows Server 2008**, don't enable **TLS 1.1** or **TLS 1.2** by default for secure communications using **WinHTTP**.
 
 For these earlier versions of Windows, install [Update 3140245](https://support.microsoft.com/help/3140245) to enable the following registry values, which can be set to add **TLS 1.1** and **TLS 1.2** to the default secure protocols list for **WinHTTP**.
 
