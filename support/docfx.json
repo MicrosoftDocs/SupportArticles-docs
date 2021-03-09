@@ -48,12 +48,16 @@
     "globalMetadata": {
       "breadcrumb_path": "/support/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None",
+      "feedback_system": "None", 
+      "feedback_github_repo": "MicrosoftDocs/SupportArticles-docs", 
       "searchScope": ["Troubleshoot"]
     },
 
     "fileMetadata": {
-
+      "feedback_system": {
+        "azure/*.md": "GitHub",
+        "azure/**/*.md": "GitHub"
+      },
       "layout": {
         "**/index.yml": "LandingPage"
       },
@@ -81,7 +85,7 @@
         "system-center/**/*.md": "luche"
       },
       "ms.localizationpriority": {
-        "**/*.md": "Normal"
+        "**/*.md": "medium"
       },
       "ms.reviewer": {
         "**/*.md": "DEV_Triage, DaleChe, RamaKoni, DelHan, SureshKa, SueHar",
@@ -111,7 +115,6 @@
         "browsers/**/*.md": "internet-explorer"
       },
       "ms.technology": {
-        "**/*.md": "",
         "biztalk/**/*.md": "",
         "dotnet/**/*.md": "",
         "aspnet/**/*.md": "",

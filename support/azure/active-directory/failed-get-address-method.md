@@ -25,7 +25,7 @@ This problem occurs if you're running an earlier version of the Microsoft Online
 To resolve this issue, follow these steps:
 
 1. Uninstall any versions of the Microsoft Online Services Sign-in Assistant that are currently installed on the directory synchronization computer.
-2. Install the latest version of the Microsoft Online Services Sign-In Assistant from [Microsoft Online Services Sign-In Assistant for IT Professionals RTW](https://www.microsoft.com/download/details.aspx?id=41950).
+2. Install the latest version of the Microsoft Online Services Sign-In Assistant from [Microsoft Online Services Sign-In Assistant for IT Professionals RTW](https://www.microsoft.com/download/details.aspx?id=28177).
 
 ## More information
 

@@ -5,7 +5,7 @@ ms.date: 01/14/2021
 ms.prod-support-area-path: 
 ms.service: automation
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # How to reinstall Operations Management Suite (OMS) Agent for Linux

@@ -1,12 +1,12 @@
 ---
 title: SQL Server startup errors  
-description: This article provides resolutions for the problem where SQL Server fails to start on a stand-alone server.
+description: This article provides resolutions for the problem where SQL Server fails to start on a standalone server.
 ms.date: 2/3/2020
 author: cobibi
 ms.author: v-yunhya
 ms.reviewer: ramakoni
 ---
-# SQL Server startup errors on a stand-alone server
+# SQL Server startup errors on a standalone server
 
 There are various reasons why SQL Server service might not start. At a high level, the causes can be classified into the following categories:
 
@@ -16,7 +16,7 @@ There are various reasons why SQL Server service might not start. At a high leve
 - Incorrect configuration of the SQL Server service
 - Issues that affect the certificate configuration
 
-This topic helps you troubleshoot most common SQL Server startup issues in these categories on a stand-alone server.
+This topic helps you troubleshoot most common SQL Server startup issues in these categories on a standalone server.
 
 _Applies to:_ &nbsp; SQL Server
 
@@ -48,7 +48,7 @@ Troubleshooting typically requires that you are an administrator on the SQL Serv
 
 |Error message from Services Applet|Review|
 |---|---|
-|The dependency service or group failed to start. |[The SQL Server service and the SQL Server Agent Service fail to start on a stand-alone server](/troubleshoot/sql/admin/agent-service-fails-start-stand-alone-server)|
+|The dependency service or group failed to start. |[The SQL Server service and the SQL Server Agent Service fail to start on a standalone server](/troubleshoot/sql/admin/agent-service-fails-start-stand-alone-server)|
 |Windows could not start the SQL Server (MSSQLSERVER) service on Local Computer. <br/> Error 1069: The service did not start due to a logon failure.|[Logon failure and SQL Server service does not start successfully](/troubleshoot/sql/admin/error-password-service-account-changed)|
 |Windows could not start the SQL Server (MSSQLSERVER) on Local Computer. For more information, review the System Event Log.<br/> If this is a non-Microsoft service, contact the service vendor, and refer to service-specific error code 13.|[SQL Server can't start if all the protocols are disabled](https://review.docs.microsoft.com/troubleshoot/sql/admin/error-17182-protocols-disabled-start-failure)|
 |Windows could not start the SQL Server (MSSQLSERVER) service on Local Computer.<br/>Error 1067: The process terminated unexpectedly.|[Event ID 17058 and SQL Server doesn't start](/troubleshoot/sql/admin/event-id-17058-start-sql-server)|
