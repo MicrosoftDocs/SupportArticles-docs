@@ -39,8 +39,8 @@ An unhandled exception was generated during the execution of the current web req
 Stack Trace:  
 [ServiceAdapterException: An error occurred while processing message request type 'ValidationGetRequest'. See exception details for more information.]  
 Microsoft.MasterDataServices.WebUI.ServiceAdapter.InspectResponseForErrors(MessageRequest request, MessageResponse response) +687  
-Microsoft.MasterDataServices.WebUI.ServiceAdapter.ExecuteRequest(MdmServiceOperation`2 operation, TRequestType request) +75  
-Microsoft.MasterDataServices.WebUI.ServiceAdapter.GetValidationStatus(Int32 versionInternalId, Nullable`1 entityInternalId, Nullable`1 memberType, String notificationUserName, IList`1 memberIds, Boolean omitSummary, Boolean omitIssuesList, Int32 pageNumber, Int32 pageSize, String sortColumn, SortDirection sortDirection) +678  
+Microsoft.MasterDataServices.WebUI.ServiceAdapter.ExecuteRequest(MdmServiceOperation 2 operation, TRequestType request) +75  
+Microsoft.MasterDataServices.WebUI.ServiceAdapter.GetValidationStatus(Int32 versionInternalId, Nullable 1 entityInternalId, Nullable 1 memberType, String notificationUserName, IList 1 memberIds, Boolean omitSummary, Boolean omitIssuesList, Int32 pageNumber, Int32 pageSize, String sortColumn, SortDirection sortDirection) +678  
 Microsoft.MasterDataServices.WebUI.ServiceAdapter.GetValidationStatus(Int32 versionInternalId, Int32 pageNumber, Int32 pageSize, String sortColumn, SortDirection sortDirection) +133  
 Microsoft.MasterDataServices.WebUI.Common.Validations.LoadGrid() +355  
 Microsoft.MasterDataServices.WebUI.Audit.Dimensions.LoadGrid() +26  
