@@ -26,7 +26,7 @@ By default, Windows 2000 allows authenticated users to join 10 machine accounts 
 
 This default was implemented to prevent misuse. But an administrator can make a change to an object in Active Directory to override it.
 
-Users in the Administrators or Domain Administrators groups, and those users who have delegated permissions on containers in Active Directory to create and delete computer accounts, aren't restricted by this limitation.
+In the Administrators or Domain Administrators groups, those users who have delegated permissions on containers in Active Directory to create and delete computer accounts aren't restricted by this limitation.
 
 ## More information
 

@@ -1,6 +1,6 @@
 ---
 title: Custom display settings revert to the default
-description: Describes the issue in which custom display settings may revert to default display settings. This occurs when some device drivers are reinstalled to service the underlying components during installation of a Windows Vista service pack.
+description: Describes the issue in which custom display settings may revert to default display settings. This issue occurs when some device drivers are reinstalled to service the underlying components during installation of a Windows Vista service pack.
 ms.date: 09/23/2020
 author: Deland-Han
 ms.author: delhan
