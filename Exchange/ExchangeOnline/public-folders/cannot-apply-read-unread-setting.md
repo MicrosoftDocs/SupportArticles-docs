@@ -17,11 +17,11 @@ appliesto:
 - Exchange Online
 search.appverid: MET150
 ---
-# Unable to apply read setting to public folders
+# Can't apply read setting to public folders in Exchange Online
 
 ## Symptoms
 
-In Exchange admin center, when you select the **Apply the read and unread setting to this folder and all its subfolders** check box on a parent public folder, you receive the following error message:
+In the Exchange admin center (EAC), when you select the **Apply the read and unread setting to this folder and all its subfolders** check box on a parent public folder, you receive the following error message:
 
 > The operation couldn't be performed because '\public folder identity' couldn't be found.
 
@@ -29,10 +29,10 @@ In Exchange admin center, when you select the **Apply the read and unread settin
 
 ## Workaround
 
-Here's how to apply the read and unread information tracking to users by using PowerShell:
+Here's how to apply read and unread information tracking to users by using PowerShell:
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-using-mfa-and-modern-authentication).
-2. Apply the read and unread information tracking on the parent public folder by setting the `PerUserReadStateEnabled` value to **True** in the following cmdlet:
+2. Apply read and unread information tracking on the parent public folder by running the following cmdlet to set the `PerUserReadStateEnabled` value to **True**:
 
    ```powershell
    Set-PublicFolder -Identity "<\PF>" -PerUserReadStateEnabled $True
@@ -46,7 +46,7 @@ Here's how to apply the read and unread information tracking to users by using P
    Set-PublicFolder -Identity \Marketing -PerUserReadStateEnabled $true
    ```
 
-3. Apply read and unread information tracking on the child public folders by setting the `PerUserReadStateEnabled` value to **True** in the following cmdlet:
+3. Apply read and unread information tracking on the child public folders by running the following cmdlet to set the `PerUserReadStateEnabled` value to **True**:
 
    ```powershell
    Get-PublicFolder "<\PF>" -GetChildren | foreach{Set-PublicFolder -Identity $_.identity -PerUserReadStateEnabled $True}
@@ -62,4 +62,4 @@ Here's how to apply the read and unread information tracking to users by using P
 
 ## Status
 
-This issue is under investigation and this article will be updated when it's fixed.
+This issue is under investigation. This article will be updated when the issue is fixed.
