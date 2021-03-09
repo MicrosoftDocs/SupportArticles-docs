@@ -436,7 +436,7 @@ If the Exchange CU media is on D: drive, run an upgrade using PowerShell by usin
 </details>
 
 <details>
-<summary>Restart fom previous installation is pending</summary>
+<summary>Restart from previous installation is pending</summary>
 </br>
 
 **Issue**
