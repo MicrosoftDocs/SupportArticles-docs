@@ -22,10 +22,11 @@ On a Windows Server 2016 or Windows Server 2019 Core edition computer that has G
 You receive the following result in the PowerShell window:
 
 ```powershell
-Backup-GPO -Name FolderRedirection -Path C:\GPO\
+PS C:\> Backup-GPO -Name FolderRedirection -Path <path>
+
 Backup-GPO : The data is invalid. (Exception from HRESULT: 0x8007000D)
 At line:1 char:1
-+ Backup-GPO -Name FolderRedirection -Path C:\GPO\
++ Backup-GPO -Name FolderRedirection -Path <path>
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : NotSpecified: (:) [Backup-GPO], COMException
     + FullyQualifiedErrorId : System.Runtime.InteropServices.COMException,Microsoft.GroupPolicy.Commands.BackupGpoComm
