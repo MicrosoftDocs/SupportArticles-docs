@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows 10 auto-enrollment in Intune
 description: Learn how to troubleshoot auto-enrollment.
-ms.date: 8/3/2020
+ms.date: 08/03/2020
 ms.reviewer: jchombe
 ---
 
@@ -63,8 +63,8 @@ Before you start troubleshooting, it's best to verify that everything is configu
 
    ![Azure AD Device settings](./media/troubleshoot-windows-auto-enrollment/device-setting.png)
 
-  - The **Users may join devices to Azure AD** setting is set to **All**.
-  - The number of devices that a user has in Azure AD doesn't exceed the **Maximum number of devices per user** quota.
+   - The **Users may join devices to Azure AD** setting is set to **All**.
+   - The number of devices that a user has in Azure AD doesn't exceed the **Maximum number of devices per user** quota.
   
   **In Intune enrollment restrictions:**
 

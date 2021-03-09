@@ -5,7 +5,7 @@ ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.service: api-management
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Azure API Management Troubleshooting Series

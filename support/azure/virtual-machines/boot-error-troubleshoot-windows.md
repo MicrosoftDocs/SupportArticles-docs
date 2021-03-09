@@ -105,7 +105,7 @@ To enable dump log and Serial Console, run the following script.
    In this script, we assume that the drive letter that is assigned to the attached OS disk is F. Replace it with the appropriate value in your VM.
 
    ```
-   reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM.hiv
+   reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
    
    REM Enable Serial Console
    bcdedit /store F:\boot\bcd /set {bootmgr} displaybootmenu yes
@@ -131,7 +131,7 @@ To enable dump log and Serial Console, run the following script.
 4. If there's not enough space or the VM is large (G, GS or E series), you could change the location where this file will be created and refer that to any other data disk, which is attached to the VM. To change the location, you must change the following key:
 
    ```
-   reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM.hiv
+   reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
 
    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "<DRIVE LETTER OF YOUR DATA DISK>:\MEMORY.DMP" /f
    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "<DRIVE LETTER OF YOUR DATA DISK>:\MEMORY.DMP" /f

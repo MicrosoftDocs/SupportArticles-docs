@@ -129,13 +129,13 @@ To fix the issue, following these steps:
 
 This issue occurs if the configuration parameter `IRPStackSize` of the server is too small for the server to use a local device.
 
-To fix the issue, we recommend that you increase the value of this parameter by following the steps in [Antivirus software may cause Event ID 2011](https://support.microsoft.com/help/177078).
+To fix the issue, we recommend that you increase the value of this parameter.
 
 ## Event ID 2011: Not enough memory to complete the transaction. Close some applications and retry
 
 This issue occurs if the configuration parameter `IRPStackSize` of the server is too small for the server to use a local device.
 
-To fix the issue, we recommend that you increase the value of this parameter by following the steps in [Antivirus software may cause Event ID 2011](https://support.microsoft.com/help/177078).
+To fix the issue, we recommend that you increase the value of this parameter.
 
 ## The RPC server is unavailable
 
