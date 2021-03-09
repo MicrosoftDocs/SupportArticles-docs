@@ -475,8 +475,8 @@ Mail flow stops after you install a CU or an SU.
 To get mail flow working again, make sure that the following requirements are met:
 
 1. All Exchange services are enabled and running.
-2. The server is not in [Maintenance mode](/exchange/high-availability/manage-ha/manage-dags?view=exchserver-2019#performing-maintenance-on-dag-members)
-3. There is enough free space available in the [Exchange message queue database](/exchange/back-pressure-exchange-2013-help#free-hard-drive-space-for-the-message-queue-database).
+2. The server is not in [Maintenance mode](/exchange/high-availability/manage-ha/manage-dags?view=exchserver-2019#performing-maintenance-on-dag-members&preserve-view=true)
+3. There is enough free space available in the [Exchange message queue database](/exchange/back-pressure-exchange-2013-help#free-hard-drive-space-for-the-message-queue-database&preserve-view=true).
 
 </br>
 </details>
