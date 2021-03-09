@@ -1,5 +1,5 @@
 ---
-title: 0x8007000D when you run the Backup-GPO PowerShell CmdLet in Windows Server Core edition
+title: Error 0x8007000D when you run the Backup-GPO PowerShell CmdLet in Windows Server Core edition
 description: Describes an issue in which you receive error 0x8007000D when you run the Backup-GPO PowerShell CmdLet in Windows Server Core edition.
 ms.date: 03/10/2021
 author: Deland-Han
@@ -13,9 +13,9 @@ ms.reviewer: herbertm
 ms.prod-support-area-path: Group Policy management - GPMC or AGPM
 ms.technology: windows-server-group-policy
 ---
-# 0x8007000D when you run the Backup-GPO PowerShell CmdLet in Windows Server Core edition
+# Error 0x8007000D when you run the Backup-GPO PowerShell CmdLet in Windows Server Core edition
 
-On a Windows Server 2016 or Windows Server 2019 Core edition computer that has Group Policy Management Console (GPMC) feature installed, you can't use the `Backup-GPO` PowerShell CmdLet to back up a group policy that contains folder redirection settings.
+On a computer that is running Windows Server 2016 or Windows Server 2019 Core edition and has Group Policy Management Console (GPMC) feature installed, you can't use the `Backup-GPO` PowerShell CmdLet to back up a group policy that contains folder redirection settings.
 
 ## PowerShell output example
 
