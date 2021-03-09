@@ -49,7 +49,7 @@ Here are three workarounds for this issue.
  
 - Run group policy backups on Desktop version of Windows Server 2016 or Windows Server 2019.
 - Run group policy backups remotely from Windows 10 workstation with Remote Service Administration Tools (RSAT) installed for GPMC.
-- Run the `wbadmin a systemstatebackup` command instead. This backup includes both Active Directory database and sysvol folder content.
+- Run the `wbadmin` application with the `systemstatebackup` option instead. This backup includes both Active Directory database and sysvol folder content.
 
 ## Reference
 
