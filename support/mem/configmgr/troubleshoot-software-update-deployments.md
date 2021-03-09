@@ -26,9 +26,9 @@ When software update deployment fails, the problem generally falls into one of t
 
 1. When updates don't get downloaded to the client, first check the CAS.log, ContentTransferManager.log, and DataTransferService.log files for errors. To learn about how updates are downloaded, see [Track the software update deployment process in Configuration Manager](track-software-update-deployment-process.md)
 
-2. Verify that the client is in the appropriate boundary associated with the boundary group for the distribution point. For more information about boundary groups, see [Configuring boundaries and boundary groups in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427326(v=technet.10)?redirectedfrom=MSDN).
+2. Verify that the client is in the appropriate boundary associated with the boundary group for the distribution point. For more information about boundary groups, see [Configuring boundaries and boundary groups in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh427326(v=technet.10)).
 
-3. Check the Software Update Package status and verify that the updates are downloaded and installed on the distribution points. If the content is not installed on the distribution point that's associated with the client's boundary group, check whether fallback for content location must be enabled. For more information, see [What is fallback and what does it mean?](/archive/blogs/cmpfekevin/what-is-fallback-and-what-does-it-mean).
+3. Check the Software Update Package status and verify that the updates are downloaded and installed on the distribution points. If the content isn't installed on the distribution point that's associated with the client's boundary group, check whether fallback for content location must be enabled. For more information, see [What is fallback and what does it mean?](/archive/blogs/cmpfekevin/what-is-fallback-and-what-does-it-mean).
 
 4. If the client receives the download location but fails to download content, try to download the content manually by accessing the URL for the content. You can find the URL by reviewing DataTransferServices.log.
 
@@ -49,7 +49,7 @@ If possible, [enable verbose and debug logging](enable-verbose-logging.md) if th
 
    ServiceWindowManager.log contains information about maintenance windows and their start and end time. This information can be very useful when you troubleshoot issues related to software update installation on clients.
 
-    To find a list of available maintenance windows (service windows) on a client, open ServiceWindowManager.log, and search for the **Refreshing Service Windows** string. Immediately following this line, you will see a list of the applicable service windows on the computer, as in the following example:
+    To find a list of available maintenance windows (service windows) on a client, open ServiceWindowManager.log, and search for the **Refreshing Service Windows** string. Immediately following this line, you'll see a list of the applicable service windows on the computer, as in the following example:
 
     > Refreshing Service Windows..... ServiceWindowManager  
     > Populating instance of ServiceWindow with ID=7cb56688-692f-4fae-b398-0e3ff4413adb, ScheduleString=02C159C0381A200002C159C0381B200002C159C0381C200002C159C0381D200002C159C0381E2000, Type=6 ServiceWindowManager  
@@ -80,7 +80,7 @@ If possible, [enable verbose and debug logging](enable-verbose-logging.md) if th
     > StartTime is 02/10/14 22:00:00 ServiceWindowManager  
     > Duration for the Service Window is Total days: 0, hours: 07, mins: 00, secs: 00 ServiceWindowManager
 
-    Generally, service windows with IDs containing all lowercase alpha-numeric characters are non-business hour (NBH) maintenance windows. These are based on business hours configured in Software Center. However, service windows with IDs containing all uppercase alpha-numeric characters are maintenance windows defined for the collection in the Configuration Manager console. In the example, all service windows are non-business hour windows except the one with ID 1E957DDD-0A26-434C-952A-586F3E31E319 (which is a maintenance window defined for the collection that holds the client).
+    Generally, service windows with IDs containing all lowercase alpha-numeric characters are non-business hour (NBH) maintenance windows. They're based on business hours configured in Software Center. However, service windows with IDs containing all uppercase alpha-numeric characters are maintenance windows defined for the collection in the Configuration Manager console. In the example, all service windows are non-business hour windows except the one with ID 1E957DDD-0A26-434C-952A-586F3E31E319 (which is a maintenance window defined for the collection that holds the client).
 
 2. Review the UpdatesDeployment.log file, and locate the following line to check whether the deployment was set to ignore the maintenance window:
 
@@ -100,7 +100,7 @@ If possible, [enable verbose and debug logging](enable-verbose-logging.md) if th
 
    To review audit status messages, navigate to Configuration Manager console > **Monitoring**  > **System Status** > **Status Message Queries**. Right-click **All Status Messages**, click **Show Messages**, select the timeframe, and then click **OK**.
 
-   In the Configuration Manager **Status Message Viewer** window, navigate to **View** > **Filter**, and then filter for **Message ID = 30197**. If the deployment was modified, you'll see a status message that resembles the following:
+   In the Configuration Manager **Status Message Viewer** window, navigate to **View** > **Filter**, and then filter for **Message ID = 30197**. If the deployment was modified, you'll see a status message that resembles the following one:
 
    > Severity Type Site code Date / Time System Component Message ID Description  
    > Information Audit PR1 2/9/2014 11:57:49 PM PR1SITE.CONTOSO.COM Microsoft.ConfigurationManagement.exe 30197 User "DOMAIN\User" modified updates assignment 4 ({BAFB1BDB-7A6C-4DCF-9866-6C22DF92346A}).

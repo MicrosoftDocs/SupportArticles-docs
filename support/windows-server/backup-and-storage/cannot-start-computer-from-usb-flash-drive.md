@@ -13,7 +13,7 @@ ms.reviewer: kaushika, huiwu
 ms.prod-support-area-path: Partition and volume management
 ms.technology: windows-server-backup-and-storage
 ---
-# You cannot start a computer from a USB flash drive that is formatted to use the FAT32 file system
+# You can't start a computer from a USB flash drive that is formatted to use the FAT32 file system
 
 This article provides a workaround to solve the issue that the computer startup fails when you use a USB flash drive that's formatted to use the FAT32 file system.
 
@@ -26,7 +26,7 @@ You format a USB flash drive to use the FAT32 file system. When you try to start
 
 ## Cause
 
-This issue occurs because the USB flash drive is listed as removable media. Therefore, the Windows operating system does not create a master boot record (MBR) on the USB flash drive when you format the flash drive to use the FAT32 file system. The USB flash drive is treated as a super floppy disk. The FAT32 startup code does not support starting a computer from a super floppy disk without an MBR.
+This issue occurs because the USB flash drive is listed as removable media. Therefore, the Windows operating system doesn't create a master boot record (MBR) on the USB flash drive when you format the flash drive to use the FAT32 file system. The USB flash drive is treated as a super floppy disk. The FAT32 startup code doesn't support starting a computer from a super floppy disk without an MBR.
 
 The BIOS tries to transfer the control of the startup from the USB flash drive to the FAT32 startup code, even though the FAT32 startup code doesn't support this scenario.
 
