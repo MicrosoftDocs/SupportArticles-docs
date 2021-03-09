@@ -36,7 +36,7 @@ This issue occurs because IIS Manager performs a lookup operation to look for a 
 
 To resolve this problem, add a friendly name to the certificate. Follow these steps to resolve this problem:
 
-1. Select **Start**, select **Run**, type **certmgr.mmc**, and then select **OK**.
+1. Select **Start**, select **Run**, type **certmgr.msc**, and then select **OK**.
 2. Select **File**, select **Add/Remove Span-ins**.
 3. Select **Certificates**, and select **Add**, and then select **OK**.
 4. Select **Computer account**, and select **Next**, and then select **Finish**.
