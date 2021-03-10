@@ -22,7 +22,7 @@ You discover that one or more Azure Active Directory synchronization services do
 
 1. Click **Start**, type services.msc in the search box, and then press Enter.
 2. In the list of services, right-click **Microsoft Azure AD Sync**, and then click **Properties**.
-3. Click the `Log On` tab.
+3. Select the **`Log On`** tab.
 4. Make sure that the account is set to the directory synchronization service account. For example: AAD_<*nnnnnnnnnnnn*> or MSOL_<*nnnnnnnnnnnn*>.
 5. Select the directory synchronization service account if the account isn't set to it.
 
@@ -35,7 +35,7 @@ You discover that one or more Azure Active Directory synchronization services do
 
 1. Select **Start**, type services.msc in the search box, and then press Enter.
 2. In the list of services, right-click **Windows Azure Active Directory Synchronization Service**, and then select **Properties**.
-3. Select the `Log On` tab.
+3. Select the **`Log On`** tab.
 4. Make sure that the account is set to the directory synchronization service account. For example: AAD_<*nnnnnnnnnnnn*> or MSOL_<*nnnnnnnnnnnn*>.
 5. Select the directory synchronization service account if the account isn't set to it.
 
