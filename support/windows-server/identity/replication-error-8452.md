@@ -83,18 +83,20 @@ _Original KB number:_ &nbsp; 2023704
 
     |Event|Source|Event String|
     |---|---|---|
-    |NTDS General|1586|The checkpoint with the Primary Domain Controller (PDC) was unsuccessful. The checkpointing process will be retried again in four hours. A full synchronization of the security database to downlevel domain controllers may take place if this machine is promoted to be the PDC before the next successful checkpoint. The error returned was: The naming context is in the process of being removed or is not replicated from the specified server.|
+    |NTDS General|1586|The checkpoint with the PDC was unsuccessful. The checkpointing process will be retried again in four hours. A full synchronization of the security database to downlevel domain controllers may take place if this machine is promoted to be the PDC before the next successful checkpoint. The error returned was: The naming context is in the process of being removed or is not replicated from the specified server.|
     ||||  
 
 ## Cause
 
-This error most commonly occurs when replication topology in a DC that's starting replication differs from the replication topology defined in the destination DC's copy of Active Directory.
+This error most commonly occurs in the following situation:
+
+&nbsp;&nbsp;&nbsp;Replication topology in a DC that's starting replication differs from the replication topology defined in the destination DC's copy of Active Directory.
 
 The error naturally occurs when the replication topology in an Active Directory forest is being modified by:
 
-- New partitions being added or removed from the forest. It means the promotion or demotion of the first/last DC in a domain. Or it means the addition/ removal of an application partition including default DNS application partitions.
+- New partitions being added or removed from the forest (the promotion or demotion of the first/last DC in a domain, or the addition/removal of an application partition including default DNS application partitions).
 - The addition or removal of directory partitions on existing DCs (that is, the promotion/demotion of global catalog or addition/removal of an application partition).
-- Changes in replication topology or settings. It means the following changes:
+- Changes in replication topology or settings:
 
   - The promotion of new DCs
   - The demotion of existing DCs
@@ -102,7 +104,7 @@ The error naturally occurs when the replication topology in an Active Directory 
   - The building of alternate replication paths in response to replication failures or offline DCs
   - Site and site link changes.
 
-In a forest undergoing the changes above, the error can be transient until the set of source DCs and partitions from which each destination DC replicates has inbound replicated by triggering replication operations.
+The error can be transient in a forest undergoing the changes above, until the set of source DCs and partitions which each destination DC replicates from has inbound replicated by triggering replication operations.
 
 The error can be persistent when replication failures prevent the end-to-end replication of topology changes in the forest.
 
@@ -186,7 +188,7 @@ Case 2: the NC is being removed on src DC when we call `repadmin /replicate <des
 
 ### DCDIAG
 
-The `showrepl` (or `showreps`) command of `repadmin` reports the replication status for each source DC from which the destination DC has an inbound connection object. The replications test of dcdiag checks for timely replication between DCs. If error 8452 is in `repadmin /showrepl` report or `dcdiag /test:replications` report, the reason is that the replicated NC is being removed on the source DC when the last replication happened.
+The `showrepl` (or `showreps`) command of `repadmin` reports the replication status for each source DC from which the destination DC has an inbound connection object. The replications test of dcdiag checks for timely replication between DCs. If error 8452 is in `repadmin /showrepl` or `dcdiag /test:replications` report, the reason is that the replicated NC is being removed on the source DC when the last replication happened.
 
 ### NTDS replication event 1586
 
