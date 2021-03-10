@@ -523,3 +523,5 @@ To install or uninstall Update Rollup 32 for Exchange Server 2010 SP3 on a Doubl
 3. In the **Current system locale** list, select **English (United States)**, and then select **OK**.
 
 Now you can install or uninstall Update Rollup 32 as needed. After the process completes, revert the language setting as appropriate.
+
+[Back to top](#summary)
