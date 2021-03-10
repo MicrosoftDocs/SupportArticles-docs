@@ -34,24 +34,24 @@ This issue can occur when the [LmCompatibilityLevel](/previous-versions/windows/
 
 `HKLM\SYSTEM\CurrentControlSet\Control\Lsa\LmCompatibilityLevel`
 
-For example, if you set this value to **5** (Send NTLMv2 response only. Refuse LM & NTLM), then the DC won't accept any requests that use NTLM authentication. When MS-CHAP or MS-CHAPv2 are configured, RAS in Windows Server 2008 R2 uses NTLM to hash the password by default. Because the DC will only accept NTLMv2, the request will be denied.
+For example, when you set this value to **5** (Send NTLMv2 response only. Refuse LM & NTLM), the DC won't accept any requests that use NTLM authentication. When MS-CHAP or MS-CHAPv2 are configured, RAS in Windows Server 2008 R2 will default to NTLM to hash the password. Because the DC only accepts NTLMv2, the request will be denied.
 
 > [!NOTE]
-> Additional tests you can perform to confirm this is the issue include:
+> Other tests you can perform to confirm this issue include:
 >
 > - Test a clear text method such as PAP. As the password is not hashed authentication should succeed  
 > (WARNING: PAP authentication should be used for testing only)
-> - You can also test MS-CHAPv2 using credentials configured locally on the RAS server. Because there is no request sent to the DC in this scenario, authentication should succeed.
+> - Test MS-CHAPv2 by using credentials configured locally on the RAS server. Because no request is sent to the DC in this scenario, authentication should succeed.
 
 ## Resolution
 
-If for whatever reason you must use MS-CHAPv2, you can enable NTLMv2 authentication is RAS by adding this registry entry:
+If you must use MS-CHAPv2, you can enable NTLMv2 authentication by adding this registry entry:
 
 1. Select **Start** > **Run**, type *regedit* in the **Open** box, and then select **OK**.
-2. Locate and then select the following registry subkey:  
+2. Locate and select the following registry subkey:  
    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\RemoteAccess\Policy`
 3. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
 4. Type *Enable NTLMv2 Compatibility*, and then press ENTER.
 5. On the **Edit** menu, select **Modify**.
 6. In the **Value data** box, type *1*, and then select **OK**.
-7. Quit Registry Editor.
+7. Exit Registry Editor.
