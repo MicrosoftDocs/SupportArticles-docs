@@ -58,7 +58,7 @@ To resolve this problem, use one of the following methods:
 
 - Make sure that WinRM is configured correctly on the server. To do this, follow these steps:
 
-    1. Run WinRM Quick Config. To do this, click **Start**, type *WinRM Quick Config* in the **Start Search** box, and then press ENTER.
+    1. Run WinRM QuickConfig. To do this, click **Start**, type *WinRM QuickConfig* in the **Start Search** box, and then press ENTER.
 
     2. Make sure that both tests pass and that no actions are required. If any actions are required, click **Yes**  in the prompt window to allow the WinRM configuration changes to be made.
 
