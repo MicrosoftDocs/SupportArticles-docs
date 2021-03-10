@@ -35,7 +35,7 @@ Assume that you use the inbox Windows Internal Database (WID) in Windows Server.
 
 ## Cause
 
-This issue is an expected behavior. It's because of the current dependencies between RDS and Windows Internal Database. RDMS and Connection Broker depend on TLS 1.0 to authenticate with the database. WID doesn't currently support TLS 1.2. So, disabling TLS 1.0 breaks this communication.
+This behavior is expected because of the current dependencies between RDS and Windows Internal Database (WID). RDMS and Connection Broker depend on TLS 1.0 to authenticate with the database. WID doesn't currently support TLS 1.2. So, disabling TLS 1.0 breaks this communication.
 
 > [!NOTE]
 > RDS deployments that use Connection Broker have to establish an encrypted channel to WID by using one of the following methods:
