@@ -33,17 +33,17 @@ The simplest and safest way to prevent lock escalation is to keep transactions s
 - Break up large batch operations into several smaller operations. For example, suppose you ran the following query to remove several hundred thousand old records from an audit table, and then you found that it caused a lock escalation that blocked other users:
 
     ```sql
-    DELETE FROM LogMessages WHERE LogDate < '2/1/2002'
+    DELETE FROM LogMessages WHERE LogDate < '20020102';
     ```
 
   By removing these records a few hundred at a time, you can dramatically reduce the number of locks that accumulate per transaction and prevent lock escalation. For example:
 
     ```sql
-    SET ROWCOUNT 500
-    delete_more:
-    DELETE FROM LogMessages WHERE LogDate < '2/1/2002'
-    IF @@ROWCOUNT > 0 GOTO delete_more
-    SET ROWCOUNT 0
+    WHILE (1 = 1)
+    BEGIN
+        DELETE TOP(500) FROM LogMessages WHERE LogDate < '20020102';
+        IF @@ROWCOUNT < 500 BREAK;
+    END;
     ```
 
 - Reduce the query's lock footprint by making the query as efficient as possible. Large scans or large numbers of Bookmark Lookups may increase the chance of lock escalation; additionally, it increases the chance of deadlocks, and adversely affects concurrency and performance. After you find the query that causes lock escalation, look for opportunities to create new indexes or to add columns to an existing index to remove index or table scans and to maximize the efficiency of index seeks. Consider pasting the query into a Query Analyzer query window to perform an automatic index analysis on it. To do so, on the Query menu, click Index Tuning Wizard in SQL Server 2000, or click Perform Index Analysis in SQL Server 7.0.
@@ -55,10 +55,10 @@ The simplest and safest way to prevent lock escalation is to keep transactions s
 - Lock escalation cannot occur if a different SPID is currently holding an incompatible table lock. Lock escalation always escalates to a table lock, and never to page locks. Additionally, if a lock escalation attempt fails because another SPID holds an incompatible TAB lock, the query that attempted escalation does not block while waiting for a TAB lock. Instead, it continues to acquire locks at its original, more granular level (row, key, or page), periodically making additional escalation attempts. Therefore, one method to prevent lock escalation on a particular table is to acquire and to hold a lock on a different connection that is not compatible with the escalated lock type. An IX (intent exclusive) lock at the table level does not lock any rows or pages, but it is still not compatible with an escalated S (shared) or X (exclusive) TAB lock. For example, assume that you must run a batch job that modifies many rows in the mytable table and that has caused blocking that occurs because of lock escalation. If this job always completes in less than an hour, you might create a Transact-SQL job that contains the following code, and schedule the new job to start several minutes before the batch job's start time:
 
     ```sql
-    BEGIN TRAN
-    SELECT * FROM mytable (UPDLOCK, HOLDLOCK) WHERE 1=0
-    WAITFOR DELAY '1:00:00'
-    COMMIT TRAN
+    BEGIN TRAN;
+    SELECT * FROM mytable (UPDLOCK, HOLDLOCK) WHERE 1 = 0;
+    WAITFOR DELAY '1:00:00';
+    COMMIT TRAN;
     ```
 
   This query acquires and holds an IX lock on mytable for one hour, which prevents lock escalation on the table during that time. This batch does not modify any data or block other queries (unless the other query forces a table lock with the TABLOCK hint or if an administrator has disabled page or row locks by using an `sp_indexoption` stored procedure).
