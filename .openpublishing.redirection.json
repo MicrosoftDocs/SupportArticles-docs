@@ -793,12 +793,12 @@
     {
       "source_path": "support/windows-server/identity/active-directory-services-domains-part-one.md",
       "redirect_url": "/troubleshoot/windows-server/identity/active-directory-overview",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/identity/troubleshoot-directory-services-issues.md",
       "redirect_url": "/troubleshoot/windows-server/identity/active-directory-overview",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/windows-client/deployment/unattended-setup-parameters-for-unattend-dot-txt.md",
