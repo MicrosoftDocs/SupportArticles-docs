@@ -28,7 +28,7 @@ The following changes are made:
 - Windows will never prompt for a syskey password during startup.
 - Windows will no longer support installing an Active Directory domain controller by using Install-From-Media (IFM) that was externally encrypted by the syskey.exe utility.
 
-If an operating system (OS) was externally encrypted by the syskey.exe utility, you can upgrade it to Windows 10 version 1709, Windows Server version 2004, or a later version of Windows.
+If an operating system (OS) was externally encrypted by the syskey.exe utility, you can't upgrade it to Windows 10 version 1709, Windows Server version 2004, or a later version of Windows.
 
 ## Workaround
 

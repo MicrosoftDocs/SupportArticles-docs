@@ -165,7 +165,7 @@ Options to reduce the number of SIDs in the user token include the following. Th
 
 The resolution applies to the situation in which administrator account can't log on to the computer.
 
-When the user whose logon fails because of too many group memberships is a member of the Administrators group, an administrator who has the credentials for the Administrator account (that is, an account that has a well-known relative identifier [RID] of 500) must restart a domain controller by selecting the **Safe Mode** startup option (or by selecting the **Safe Mode** with Networking startup option). In safe mode, the user must then log on to the domain controller by using the Administrator account credentials.
+When the user whose logon fails because of too many group memberships is a member of the Administrators group, an administrator who has the credentials for the Administrator account (that is, an account that has a well-known relative identifier [RID] of 500) must restart a domain controller by selecting the **Safe Mode** startup option (or by selecting the **Safe Mode** with Networking startup option). In safe mode, the administrator must then log on to the domain controller by using the Administrator account credentials.
 
 Microsoft has changed the token generation algorithm. The LSA can create an access token for the Administrator account so that the administrator can log on regardless of how many transitive groups or intransitive groups that the Administrator account is a member of. When one of these safe mode startup options is used, the access token that is created for the Administrator account includes the SIDs of all Built-in and all Domain Global groups that the Administrator account is a member of.
 

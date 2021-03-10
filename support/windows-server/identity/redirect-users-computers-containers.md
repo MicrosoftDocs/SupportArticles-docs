@@ -15,14 +15,14 @@ ms.technology: windows-server-active-directory
 ---
 # Redirect the users and computers containers in Active Directory domains
 
-You can use the redirusr and redircmp utilities to redirect the user, computer, and group accounts that are created by earlier-version APIs. So they are put in admin-specified organizational unit containers.
+You can use redirusr and redircmp to redirect user, computer, and group accounts that are created by earlier-version APIs. So they are put in admin-specified organizational unit (OU) containers.
 
 _Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 324949
 
 ## Summary
 
-In a default installation of an Active Directory domain, user, computer, and group accounts are put in CN=objectclass containers instead of a more desirable organizational unit (OU) class container. Similarly, the accounts that were created by using earlier-version APIs are put in the CN=Users and CN=computers containers.
+In a default installation of an Active Directory domain, user, computer, and group accounts are put in CN=objectclass containers instead of a more desirable OU class container. Similarly, the accounts that were created by using earlier-version APIs are put in the CN=Users and CN=computers containers.
 
 > [!IMPORTANT]
 > Some applications require specific security principals to be located in default containers like CN=Users or CN=Computers. Verify that your applications have such dependencies before you move them out of the CN=users and CN=computes containers.
@@ -48,7 +48,7 @@ B:32:AA312825768811D1ADED00C04FD8D5CD:CN=Computers,DC=CONTOSO,DC=COM;
 B:32:A9D1CA15768811D1ADED00C04FD8D5CD:CN=Users,DC=GPN,DC=COM;
 ```
 
-The following operations use earlier-version APIs, which reply on the paths defined in the WellKnownObjects attribute:
+For example, the following operations use earlier-version APIs, which reply on the paths defined in the WellKnownObjects attribute:
 
 | Operation| Operating system versions |
 |---|---|
@@ -61,9 +61,9 @@ The following operations use earlier-version APIs, which reply on the paths defi
 
 It's helpful to make the default container for user, computer, and security groups an OU for several reasons, including:
 
-- Group policies can be applied on organizational unit containers but not on CN class containers, where security principals are put by default.
+- Group policies can be applied on OU containers but not on CN class containers, where security principals are put by default.
 
-- The best practice is to arrange security principals into an organizational unit hierarchy that mirrors your organizational structure, geographic layout, or administration model.
+- The best practice is to arrange security principals into an OU hierarchy that mirrors your organizational structure, geographic layout, or administration model.
 
 If you're redirecting the CN=Users and CN=Computers folders, be aware of the following issues:
 
@@ -74,7 +74,7 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
   - All domain controllers in the target domain must run Windows Server 2003 or newer.
   - Windows Server 2003 domain functional level or higher must be enabled.
 
-- Unlike CN=USERS and CN=COMPUTERS, organizational unit containers are subject to accidental deletions by privileged user accounts, including administrators.
+- Unlike CN=USERS and CN=COMPUTERS, OU containers are subject to accidental deletions by privileged user accounts, including administrators.
 
     CN=USERS and CN=COMPUTERS containers are system-protected objects that can't, and mustn't, be removed for backward compatibility. But they can be renamed. Organizational units are subject to accidental tree deletions by administrators.
 
@@ -86,7 +86,7 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
 
 - Exchange Server 2000 and 2003 `setup /domainprep` fails with errors.
 
-## Redirect CN=Users to an administrator-specified organizational unit
+## Redirect CN=Users to an administrator-specified OU
 
 1. Log on with domain administrator credentials in the z domain where the CN=Users container is being redirected.
 
@@ -104,7 +104,7 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
 
     `c:\windows\system32>redirusr ou=myusers,DC=contoso,dc=com`
 
-## Redirect CN=Computers to an administrator-specified organizational unit
+## Redirect CN=Computers to an administrator-specified OU
 
 1. Log on with Domain Administrator credentials in the domain where the CN=computers container is being redirected.
 
@@ -125,7 +125,7 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
     ```
 
     > [!NOTE]
-    > When Redircmp.exe is run to redirect the CN=Computers container to an organizational unit that is specified by an administrator, the CN=Computers container will no longer be a protected object. This means that the Computers container can now be moved, deleted, or renamed. If you use ADSIEDIT to view attributes on the CN=Computers container, you will see that the systemflags attribute was changed from **-1946157056** to **0**. This is by design.
+    > When Redircmp.exe is run to redirect the CN=Computers container to an OU specified by an administrator, the CN=Computers container will no longer be a protected object. This means that the Computers container can now be moved, deleted, or renamed. If you use ADSIEDIT to view attributes on the CN=Computers container, you will see that the systemflags attribute was changed from **-1946157056** to **0**. This is by design.
 
 ## Description of error messages
 
@@ -177,7 +177,7 @@ If you try to redirect the users or computer OU by using incorrect credentials i
     >
     > Error, unable to modify the wellKnownObjects attribute. Verify that the domain functional level of the domain is at least Windows Server 2003: Insufficient Rights Redirection was NOT successful.
 
-### Error messages that you receive if you redirect to an organizational unit that doesn't exist
+### Error messages that you receive if you redirect to an OU that doesn't exist
 
 You try to redirect the users or computer OU to an OU that doesn't exist. In this situation, you may receive the following error messages:
 
