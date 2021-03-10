@@ -28,7 +28,7 @@ This article describes the methods to verify the installation of Microsoft Excha
 
 - Assess the health of on-premises Exchange Servers
   - [Check for Indicators of Compromise (IOCs)](#check-for-indicators-of-compromise-iocs)
-  - [Verify the installation of CUs & SUs](#verify-the-installation-of-cus-&-sus)
+  - [Verify the installation of CUs & SUs](#verify-the-installation-of-cus--sus)
 - Resolve errors during CU or SU installation
   - [HTTP 500 errors in OWA or ECP](#http-500-errors-in-owa-or-ecp)
   - [Missing images in ECP](#missing-images-in-ecp)
@@ -47,7 +47,7 @@ This article describes the methods to verify the installation of Microsoft Excha
   - [Mail flow has stopped](#mail-flow-has-stopped)
 - Additional information
   - [Update .NET when migrating from an unsupported CU](#update-net-when-migrating-from-an-unsupported-cu)
-  - [Handle customized OWA or .config  files](#handle-customized-owa-or-config-files)
+  - [Handle customized OWA or .config files](#handle-customized-owa-or-config-files)
   - [Install the update for CAS-CAS Proxying deployment](#install-the-update-for-cas-cas-proxying-deployment)
   - [Install the update on DBCS version of Windows Server 2012](#install-the-update-on-dbcs-version-of-windows-server-2012)
 
@@ -336,7 +336,7 @@ Do the following:
   
 4. After the Setup process completes, select the **Check for publisher’s certificate revocation** check box again.
 
-### Setup fails with "Cannot start the service" error<a id="setup-fails-with-cannot-start-the-service-error"></a>
+### Setup fails with "Cannot start the service" error
 
 **Issue**
 
@@ -461,7 +461,7 @@ Follow these steps to install the latest version of the .NET Framework:
 
     `set-servercomponentstate \<server_name\> -Component serverwideoffline -State active - Requester Maintenance`
 
-### Handle customized OWA or .config  files
+### Handle customized OWA or .config files
 
 > [!IMPORTANT]
 > Before you apply a CU, make a backup copy of your customized files.
