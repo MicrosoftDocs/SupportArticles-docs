@@ -365,12 +365,16 @@
       href: ../client-connectivity/outlook-connection-issue-caused-by-rpc-encryption-requirement.md
     - name: OWA doesn't redirect to ADFS login
       href: ../client-connectivity/owa-not-redirect-adfs-login.md
+    - name: OWA or ECP stop working after installing Exchange Server security update
+      href: ../client-connectivity/owa-stops-working-after-update.md
     - name: Password expiration isn't notified
       href: ../client-connectivity/owa-password-expiration-notification.md
     - name: Performance issues on Exchange connection
       href: ../client-connectivity/performance-issues-connect-to-exchange.md
     - name: Redirects to Exchange Server 2010 when connecting to Exchange Server 2016 or 2013
       href: ../client-connectivity/exchange-server-2013-2016-redirect-to-2010-owa-ecp.md
+    - name: "Repair failed CU/SU installations"
+      href: ../client-connectivity/exchange-security-update-issues.md  
     - name: Repair update messages due to TimeZoneMatchCheck failures
       href: ../client-connectivity/repair-update-messages-triggered-by-timezonematchcheck.md
     - name: Security warning when accessing OWA or ECP
@@ -415,7 +419,7 @@
     items:
     - name: Get-DistributionGroupMember not return all members
       href: ../distribution-list/get-distributiongroupmember-not-return-members.md
-  - name: Mailflow
+  - name: Mail flow
     items:
     - name: 451 4.4.0 DNS query failed
       href: ../mailflow/dns-query-failed.md

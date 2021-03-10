@@ -53,7 +53,3 @@ Administrator can deploy the Print ticket safe mode Group Policy setting to pre
 For more information about new printing functionalities in Microsoft Office, visit the following Microsoft website:
 
 [Improved End-User Experience](https://msdn.microsoft.com/library/ff551567%28vs.85%29.aspx)
-
-For more information about resolving this problem without using group policy, visit the following Microsoft website:
-
-[My Print button and some printer settings aren't available](https://office.microsoft.com/help/my-print-button-and-some-printer-settings-are-unavailable-ha010378053.aspx)
