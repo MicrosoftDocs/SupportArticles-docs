@@ -1,6 +1,6 @@
 ---
 title: Error occurs when importing a solution
-description: Provides a solution to an error that occurs when importing a solution in Microsoft Dynamics 365.
+description: Describes an error that occurs when importing a solution in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 

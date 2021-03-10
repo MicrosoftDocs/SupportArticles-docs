@@ -1,6 +1,6 @@
 ---
 title: Email cannot be sent
-description: Provides a solution to an error that occurs when you try to test and enable a mailbox in Microsoft Dynamics 365.
+description: Describes an error that occurs when you try to test and enable a mailbox in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 

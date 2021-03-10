@@ -1,6 +1,6 @@
 ---
 title: Error when configuring CRM for Outlook
-description: Provides a solution to an error that occurs when you configure CRM for Outlook.
+description: Describes a solution to an error that occurs when you configure CRM for Outlook.
 ms.reviewer: debrau, chanson
 ms.topic: troubleshooting
 ms.date: 

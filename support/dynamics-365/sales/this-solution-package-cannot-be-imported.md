@@ -1,6 +1,6 @@
 ---
 title: This solution package cannot be imported
-description: Provides a solution to the 8004801a error that occurs when you try to import a solution in Microsoft Dynamics 365.
+description: Describes a solution to the 8004801a error that occurs when you try to import a solution in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 
