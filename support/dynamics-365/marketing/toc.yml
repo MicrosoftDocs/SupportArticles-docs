@@ -1,0 +1,6 @@
+- name: Welcome
+  href: welcome-marketing.yml
+- name: Marketing
+  items:
+    - name: The Campaign Activity can be distributed only once
+      href: the-campaign-activity-can-be-distributed-only-once-error.md
