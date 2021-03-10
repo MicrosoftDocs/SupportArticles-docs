@@ -88,9 +88,10 @@ _Original KB number:_ &nbsp; 2023704
 
 ## Cause
 
-This error most commonly occurs in the following situation:
+This error most commonly occurs when the following replication topologies are different:
 
-&nbsp;&nbsp;&nbsp;Replication topology in a DC that's starting replication differs from the replication topology defined in the destination DC's copy of Active Directory.
+- The replication topology in a DC that's starting replication.
+- The replication topology that's defined in the destination DC's copy of Active Directory.
 
 The error naturally occurs when the replication topology in an Active Directory forest is being modified by:
 
@@ -104,7 +105,7 @@ The error naturally occurs when the replication topology in an Active Directory 
   - The building of alternate replication paths in response to replication failures or offline DCs
   - Site and site link changes.
 
-The error can be transient in a forest undergoing the changes above, until the set of source DCs and partitions which each destination DC replicates from has inbound replicated by triggering replication operations.
+The error can be transient in a forest undergoing the above changes. It remains transient until the set of source DCs and partitions which each destination DC replicates from has inbound replicated by triggering replication operations.
 
 The error can be persistent when replication failures prevent the end-to-end replication of topology changes in the forest.
 
@@ -130,7 +131,7 @@ In summary, Error 8452 happens if any of the following conditions is true:
 
 1. Wait. As mentioned, this condition is transient and doesn't normally warrant troubleshooting.
 
-    If replication topology changes of the type listed in the [Cause](#cause) section are taking place in your Active Directory forest, wait for the error condition to correct itself with time.  
+    Assume that replication topology changes of the type listed in the [Cause](#cause) section are taking place in your Active Directory forest. In this situation, wait for the error condition to correct itself with time.  
 
 2. Avoid the use of the `repadmin /syncall` command and equivalents until domain controllers starting replication and the destination DCs being replicated to agree source DCs and directory partitions being replicated.
 
@@ -176,7 +177,7 @@ Case 1: Suppose we change the replication topology on DC2 to make it inbound rep
 
 Starting the Active Directory Sites and Services UI focused on DC1s copy of Active Directory still shows that DC2 has an inbound connection object from source DC3. Right-clicking on DCs inbound connection object from DC2 and choosing **replicate now** will start a DC2 <- DC3 replication on DC2. However, the KCC on DC2 already removed the replica link inbound replicating to DC2 from DC3 and created a replica link to DC2. Because the replication attempt DC2 <-> DC2 can't be executed, the request fails error 8452.
 
-Case 2: Suppose we're removing an NC on DC3 when we right-click the connection object and select **replicate now** on DC1 to start DC2 <- DC3 replication for this NC. Because the NC on DC3 is in the process of being removed, DC3 isn't a valid replication source. So we'll see error 8452.
+Case 2: Suppose we're removing an NC on DC3 when we right-click the connection object, and select **replicate now** on DC1 to start DC2 <- DC3 replication for this NC. Because the NC on DC3 is in the process of being removed, DC3 isn't a valid replication source. So we'll see error 8452.
 
 ### `repadmin /replicate` or `repadmin /sync`
 
