@@ -28,8 +28,13 @@ appliesto:
 
 This article describes the methods to verify the installation of Microsoft Exchange Server Cumulative Updates (CUs) and Security Updates (SUs) on your servers, lists known issues that might occur when installing CUs and SUs, and provides resolutions to fix the issues.
 
+## Assess the health of on-premises Exchange Servers
+
 - [Check for Indicators of Compromise (IOCs)](#check-for-indicators-of-compromise-iocs)
 - [Verify the installation of CUs & SUs](#verify-the-installation-of-cus--sus)
+
+## Resolve errors during CU or SU installation
+
 - [HTTP 500 errors in OWA or ECP](#http-500-errors-in-owa-or-ecp)
 - [Missing images in ECP](#missing-images-in-ecp)
 - [Blank page in EAC or OWA](#blank-page-in-eac-or-owa)
@@ -45,12 +50,13 @@ This article describes the methods to verify the installation of Microsoft Excha
 - [Setup installs older CU or fails to install language pack](#setup-installs-older-cu-or-fails-to-install-language-pack)
 - [Restart from previous installation is pending](#restart-from-previous-installation-is-pending)
 - [Mail flow has stopped](#mail-flow-has-stopped)
+
+## Additional information
+
 - [Update .NET when migrating from an unsupported CU](#update-net-when-migrating-from-an-unsupported-cu)
 - [Handle customized OWA or .config files](#handle-customized-owa-or-config-files)
 - [Install the update for CAS-CAS Proxying deployment](#install-the-update-for-cas-cas-proxying-deployment)
 - [Install the update on DBCS version of Windows Server 2012](#install-the-update-on-dbcs-version-of-windows-server-2012)
-
-## Assess the health of on-premises Exchange Servers
 
 ### Check for Indicators of Compromise (IOCs)
 
@@ -81,8 +87,6 @@ Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
 | Exchange Server 2013  | For CU23: 15.00.1497.012  |
 
 [Back to top](#summary)
-
-## Resolve errors during CU or SU installation
 
 ### HTTP 500 errors in OWA or ECP
 
@@ -454,8 +458,6 @@ To get mail flow working again, make sure that the following requirements are me
 3. There is enough free space available in the [Exchange message queue database](/exchange/back-pressure-exchange-2013-help#free-hard-drive-space-for-the-message-queue-database&preserve-view=true).
 
 [Back to top](#summary)
-
-## Additional information
 
 ### Update .NET when migrating from an unsupported CU
 
