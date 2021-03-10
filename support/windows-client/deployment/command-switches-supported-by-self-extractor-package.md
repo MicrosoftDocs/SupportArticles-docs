@@ -1,6 +1,6 @@
 ---
-title: Command-line switches supported by Self-Extractor packages
-description: Describes the command-line switches supported by a software installation package, an update package, or a hotfix package created by using Microsoft Self-Extractor.
+title: Command line switches supported by Self-Extractor packages
+description: Describes the command line switches supported by a software installation package, an update package, or a hotfix package created by using Microsoft Self-Extractor.
 ms.date: 09/23/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,9 +13,9 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
 ms.technology: windows-client-deployment
 ---
-# Command-line switches supported by a software installation package, an update package, or a hotfix package created by Microsoft Self-Extractor
+# Command-line switches supported by a software installation package, an update package, or a hotfix package created with Microsoft Self-Extractor
 
-This article describes the command-line switches supported by a software installation package, an update package, or a hotfix package that's created by using Microsoft Self-Extractor.
+This article describes the command line switches supported by a software installation package, an update package, or a hotfix package that's created by using Microsoft Self-Extractor.
 
 _Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 912203
