@@ -1,6 +1,6 @@
 ---
 title: The solution is installed as a managed one
-description: Provides a solution to an error that occurs when attempting to import a solution in Dynamics 365.
+description: Provides a solution to the 80048041 error that occurs when attempting to import a solution in Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 

@@ -40,4 +40,4 @@ This is due to the Discovery search from Exchange Admin Center (EAC). Whenever d
 
 Make sure all the required virtual directories are present and internal URLs are published on those virtual directories.
 
-For more information on how to configure Exchange virtual directories, see [Configure mail flow and client access on Exchange servers Step 4: Configure external URLs](/Exchange/plan-and-deploy/post-installation-tasks/configure-mail-flow-and-client-access?view=exchserver-2019#step-4-configure-external-urls).
+For more information on how to configure Exchange virtual directories, see [Configure mail flow and client access on Exchange servers Step 4: Configure external URLs](/Exchange/plan-and-deploy/post-installation-tasks/configure-mail-flow-and-client-access?view=exchserver-2019#step-4-configure-external-urls&preserve-view=true).

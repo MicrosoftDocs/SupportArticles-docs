@@ -1,6 +1,6 @@
 ---
 title: The solution package was on 365 Online
-description: Provides a solution to an error that occurs when attempting to import a solution in Dynamics 365.
+description: Provides a solution to the code 8004806B error that occurs when attempting to import a solution in Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 

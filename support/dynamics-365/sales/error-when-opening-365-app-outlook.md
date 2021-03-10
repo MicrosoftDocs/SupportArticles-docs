@@ -1,6 +1,6 @@
 ---
 title: Error when opening 365 App for Outlook
-description: Provides a solution to an error that occurs when you try to open the Dynamics 365 App for Outlook.
+description: Provides a solution to an error that occurs when you try to open the App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 

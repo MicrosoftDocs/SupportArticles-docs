@@ -1,6 +1,6 @@
 ---
 title: Operation failed because you're offline
-description: Provides a solution to an error that occurs when you access the Microsoft Dynamics CRM App for Outlook.
+description: Provides a solution to the connection issue that occurs when you access the Microsoft Dynamics CRM App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 

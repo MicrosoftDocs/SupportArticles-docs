@@ -1,6 +1,6 @@
 ---
 title: MailboxNotEnabledForRESTAPI warning occurs
-description: Provides a solution to an error that occurs in Microsoft Dynamics 365 mailbox alert.
+description: Provides a solution to an error that occurs in a Microsoft Dynamics 365 mailbox alert.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 

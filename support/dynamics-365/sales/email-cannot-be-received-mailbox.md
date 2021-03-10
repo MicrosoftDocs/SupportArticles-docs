@@ -1,6 +1,6 @@
 ---
 title: Email cannot be received for the mailbox
-description: Provides a solution to an error that occurs when you attempt to test and enable a mailbox in Microsoft Dynamics 365.
+description: Fix an issue that occurs when you try to test and enable a mailbox in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 

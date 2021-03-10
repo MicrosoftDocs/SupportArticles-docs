@@ -1,6 +1,6 @@
 ---
 title: Error when using 365 App for Outlook
-description: Provides a solution to an error that occurs when you try to use the Dynamics 365 App for Outlook.
+description: Fixes an issue that occurs when you try to use the Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 

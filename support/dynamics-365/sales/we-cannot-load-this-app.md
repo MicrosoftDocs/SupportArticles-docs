@@ -1,6 +1,6 @@
 ---
 title: We cannot load this app
-description: Provides a solution to an error that occurs when you try to open the Dynamics 365 App for Outlook.
+description: Describes an error that occurs when you try to open the Dynamics 365 App for Outlook. Provides a solution.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 

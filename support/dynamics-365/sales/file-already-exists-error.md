@@ -1,6 +1,6 @@
 ---
 title: File already exists error
-description: Provides a solution to an error that occurs when you configure Microsoft Dynamics CRM for Microsoft Office Outlook.
+description: Provides a solution to an error that occurs when you configure CRM for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 

@@ -1,6 +1,6 @@
 ---
 title: Action not available
-description: Provides a solution to an error that occurs when you select a solution in Dynamics 365 and then select the Apply Solution Upgrade button.
+description: Provides a solution to action not available error when you select a solution in Dynamics 365 and then select the Apply Solution Upgrade button.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 

@@ -1,6 +1,6 @@
 ---
-title: An error calculating dependencies
-description: Provides a solution to an error that occurs when you try to import a solution in Microsoft Dynamics 365.
+title: There was an error calculating dependencies for this component
+description: Provides a solution to an error in which solution import failed when you try to import a solution in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 

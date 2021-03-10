@@ -1,6 +1,6 @@
 ---
 title: IncomingMailboxInternalCrmError
-description: Provides a solution to an error that occurs within a Dynamics 365 mailbox record.
+description: Provides a solution to an error that occurs in a Dynamics 365 mailbox record.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 

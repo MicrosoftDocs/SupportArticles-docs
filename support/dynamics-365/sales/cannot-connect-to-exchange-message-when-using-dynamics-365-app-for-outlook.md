@@ -49,7 +49,7 @@ This typically occurs when using a Microsoft Exchange on-premises mailbox and ma
     Get-WebServicesVirtualDirectory | FL
     ```
 
-    More information about this command can be found in [Set-WebServicesVirtualDirectory](/powershell/module/exchange/set-webservicesvirtualdirectory?view=exchange-ps).
+    More information about this command can be found in [Set-WebServicesVirtualDirectory](/powershell/module/exchange/set-webservicesvirtualdirectory?view=exchange-ps&preserve-view=true).
 
     For more details on authentication requirements for allowing an Outlook Add-in to make asynchronous Exchange Web Service (EWS) requests, see [Authentication and permission considerations for makeEwsRequestAsync](/office/dev/add-ins/outlook/web-services#authentication-and-permission-considerations-for-makeewsrequestasync).
 
@@ -89,7 +89,7 @@ This typically occurs when using a Microsoft Exchange on-premises mailbox and ma
     If the prior command does not successfully retrieve the certificate, this indicates an issue with the certificate configuration that may require you to create and configure a new certificate. The following are some resources with steps for creating and configuring a new certificate:
 
     - [Exchange OAuth authentication couldn't find the authorization certificate with thumbprint error when running Hybrid Configuration](/exchange/troubleshoot/administration/exchange-oauth-authentication-could-not-find-the-authorization)
-    - [Create a new Exchange Server self-signed certificate](/Exchange/architecture/client-access/create-self-signed-certificates?view=exchserver-2019)
-    - [Set-AuthConfig](/powershell/module/exchange/set-authconfig?view=exchange-ps)
+    - [Create a new Exchange Server self-signed certificate](/Exchange/architecture/client-access/create-self-signed-certificates?view=exchserver-2019&preserve-view=true)
+    - [Set-AuthConfig](/powershell/module/exchange/set-authconfig?view=exchange-ps&preserve-view=true)
 
 If any changes were required after following the steps above, close and reopen Outlook to see if the issue has been resolved. If the issue persists and your Microsoft Exchange administrator has verified OAuth is enabled and the certificate is valid, it may be necessary to contact Microsoft Support.

@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4052727
 
 ## Symptoms
 
-When you attempt to Test and Enable a mailbox in Dynamics 365, one of the following alerts is logged:
+When you attempt to test and enable a mailbox in Dynamics 365, one of the following alerts is logged:
 
 - > Email cannot be sent because the email address of the mailbox \<Mailbox Name> requires an approval by an Office 365 administrator. The mailbox didn't synchronize. The owner of the email server profile Microsoft Exchange Online  has been notified.  
 **Email Server Error Code:**  OutgoingEmailS2SApprovalNeeded

@@ -1,6 +1,6 @@
 ---
-title: Cannot find any organization on the server
-description: Provides a solution to an error that occurs when you try to connect Microsoft Dynamics CRM for Office Outlook.
+title: Cannot find any organization on the server when connecting CRM for Outlook
+description: Provides a solution to an issue in which you receive Cannot find any organizations on the server when you try to connect Microsoft Dynamics CRM for Office Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 

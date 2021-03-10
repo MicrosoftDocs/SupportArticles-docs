@@ -1,6 +1,6 @@
 ---
 title: Exception appears within Server-Side Sync
-description: Provides a solution to an error that occurs within a Microsoft Dynamics 365 mailbox record.
+description: Provides a solution to UnknownIncomingEmailIntegrationError that occurs within a Microsoft Dynamics 365 mailbox record.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 

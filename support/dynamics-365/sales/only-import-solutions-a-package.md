@@ -1,6 +1,6 @@
 ---
 title: Only import solutions with a package
-description: Provides a solution to an error that occurs when you try to import a solution in Microsoft Dynamics 365.
+description: Provides a solution to the 80048068 error that occurs when you try to import a solution in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 

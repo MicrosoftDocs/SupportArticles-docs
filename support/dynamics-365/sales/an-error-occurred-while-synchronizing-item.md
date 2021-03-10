@@ -1,6 +1,6 @@
 ---
-title: An error occurred while synchronizing item
-description: Provides a solution to an error that occurs within a Dynamics 365 mailbox record.
+title: Crm.80040216. An unexpected error occurred while synchronizing item
+description: Provides a solution to the error code 80040216 that occurs within a Dynamics 365 mailbox record.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 

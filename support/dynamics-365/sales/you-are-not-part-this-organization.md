@@ -1,6 +1,6 @@
 ---
 title: You aren't part of this organization
-description: Provides a solution to an error that occurs when you try to use the Dynamics 365 App for Outlook.
+description: Describes an error that occurs when you try to use the Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 
