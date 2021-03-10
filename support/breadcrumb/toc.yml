@@ -110,3 +110,28 @@
       - name: Virtual Machines
         tocHref: /troubleshoot/azure/virtual-machines/
         topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
+
+    - name: Dynamics 365
+      tocHref: /troubleshoot/dynamics-365/
+      topicHref: /troubleshoot/dynamics-365/
+      items:
+      - name: Fraud Protection
+        tocHref: /troubleshoot/dynamics-365/fraud-protection/
+        topicHref: /troubleshoot/dynamics-365/fraud-protection/welcome-fraud-protection
+      - name: Marketing
+        tocHref: /troubleshoot/dynamics-365/marketing/
+        topicHref: /troubleshoot/dynamics-365/marketing/welcome-marketing
+      - name: Sales
+        tocHref: /troubleshoot/dynamics-365/sales/
+        topicHref: /troubleshoot/dynamics-365/sales/welcome-sales
+
+    - name: Power Platform
+      tocHref: /troubleshoot/power-platform/
+      topicHref: /troubleshoot/power-platform/
+      items:
+      - name: Power Apps
+        tocHref: /troubleshoot/power-platform/power-apps/
+        topicHref: /troubleshoot/power-platform/power-apps/welcome-power-apps
+      - name: Power Automate
+        tocHref: /troubleshoot/power-platform/power-automate/
+        topicHref: /troubleshoot/power-platform/power-automate/welcome-power-automate
