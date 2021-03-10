@@ -56,7 +56,7 @@ To resolve the errors, enable TSL 1.2 on the server that sends and receive email
 4. Double-click the `Enabled` value, type *1* in the **Value Data** box, and then select **OK**.
 5. Restart the server for the settings to take effect.
 
-## More information
+## Related articles
 
 For more information about TLS guidance, see the following articles:
 
