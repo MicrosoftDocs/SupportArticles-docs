@@ -464,6 +464,8 @@
       href: ./networking/access-denied-access-smb-file-share.md
     - name: Can access offline files even if the file server is removed
       href: ./networking/access-offline-files-file-server-removed-from-network.md
+    - name: Can't access shared folders from File Explorer
+      href: ./networking/cannot-access-shared-folder-file-explorer.md
     - name: Error when accessing an administrative share
       href: ./networking/cannot-logon-access-administrative-share.md
     - name: Mapped drive connection to network share is lost
