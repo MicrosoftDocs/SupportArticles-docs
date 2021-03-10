@@ -1,6 +1,6 @@
 ---
-title: Explanation of the three-way handshake via TCP/IP
-description: Discusses the process of the TCP three-way handshake that occurs between a client and server when starting or ending a TCP connection.
+title: The three-way handshake via TCP/IP
+description: Discusses the process of the Transmission Control Protocol (TCP) three-way handshake between a client and server when starting or ending a TCP connection.
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 172983
 
 ## Summary
 
-This article is intended for audiences who are familiar with Transmission Control Protocol/Internet Protocol (TCP/IP). It discusses the process of the TCP three-way handshake that occurs between a client and server when starting or ending a TCP connection.
+This article is intended for audiences who are familiar with Transmission Control Protocol/Internet Protocol (TCP/IP). It discusses the process of the TCP three-way handshake between a client and server when starting or ending a TCP connection.
 
 ## More information
 
@@ -49,7 +49,7 @@ The following sequence shows the process of a TCP connection being established:
 
 Frame 1:
 
-As you see in the first frame, the client, NTW3, sends a SYN segment (`TCP ....S.`). It's a request to the server to synchronize the sequence numbers. It specifies its initial sequence number (ISN). The ISN is incremented by 1, 8221821+1=8221822, and that is sent to the server. To initialize a connection, the client and server must synchronize each other's sequence numbers. There's also an option for the Maximum Segment Size (MSS) to be set, which is defined by the length (len: 4). This option communicates the MSS the sender wants to receive. The Acknowledgment field (ack: 0) is set to zero because it's the first part of the three-way handshake.
+As you see in the first frame, the client, NTW3, sends a SYN segment (`TCP ....S.`). It's a request to the server to synchronize the sequence numbers. It specifies its initial sequence number (ISN). The ISN is incremented by 1 (8221821+1=8221822), and is sent to the server. To start a connection, the client and server must synchronize each other's sequence numbers. There's also an option for the Maximum Segment Size (MSS) to be set, which is defined by the length (len: 4). This option communicates the MSS the sender wants to receive. The Acknowledgment field (ack: 0) is set to zero because it's the first part of the three-way handshake.
 
 ```console
 
@@ -94,7 +94,7 @@ TCP: Frame Padding
 
 Frame 2:
 
-As you see in the second frame, the server, BDC3, sends an ACK and a SYN (`TCP .A..S.`). In this segment, the server is acknowledging the request of the client for synchronization. Meanwhile, the server is also sending its request to the client for synchronization of its sequence numbers. There's one major difference in this segment. The server transmits an acknowledgment number (8221823) to the client. The acknowledgment is just proof to the client that the ACK is specific to the SYN the client initiated. The process of acknowledging the client's request allows the server to increment the client's sequence number by one and uses it as its acknowledgment number.
+As you see in the second frame, the server, BDC3, sends an ACK and SYN segment (`TCP .A..S.`). In this segment, the server is acknowledging the request of the client for synchronization. Meanwhile, the server is also sending its request to the client for synchronization of its sequence numbers. There's one major difference in this segment. The server transmits an acknowledgment number (8221823) to the client. The acknowledgment is just proof to the client that the ACK is specific to the SYN the client initiated. The process of acknowledging the client's request allows the server to increment the client's sequence number by one and uses it as its acknowledgment number.
 
 ```console
 
@@ -139,7 +139,7 @@ TCP: Frame Padding
 
 Frame 3:
 
-As you see in the third frame, the client sends an ACK (`TCP .A....`). In this segment, the client is acknowledging the request from the server for synchronization. The client uses the same algorithm the server implemented in providing an acknowledgment number. The client's acknowledgment of the server's request for synchronization completes the process of establishing a reliable connection and the three-way handshake.
+As you see in the third frame, the client sends an ACK segment (`TCP .A....`). In this segment, the client is acknowledging the request from the server for synchronization. The client uses the same algorithm the server implemented in providing an acknowledgment number. The client's acknowledgment of the server's request for synchronization completes the process of establishing a reliable connection and the three-way handshake.
 
 ```console
 
@@ -178,7 +178,7 @@ TCP: Window = 8760 (0x2238)
 
 ### Ending a connection
 
-Although the three-way handshake only requires three packets to be transmitted over our networked media, the termination of this reliable connection needs to transmit four packets. Because a TCP connection is full-duplex (that is, data can be flowing in each direction independent of the other), each direction must be terminated independently.
+Although the three-way handshake only requires three packets to be transmitted over our networked media, the termination of this reliable connection needs to transmit four packets. Because a TCP connection is full-duplex ( data can flow in each direction independent of the other), each direction must be terminated independently.
 
 Frame 4:
 
