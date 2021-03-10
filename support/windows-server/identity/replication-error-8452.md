@@ -94,7 +94,7 @@ This error most commonly occurs in the following situation:
 
 The error naturally occurs when the replication topology in an Active Directory forest is being modified by:
 
-- New partitions being added or removed from the forest (the promotion or demotion of the first/last DC in a domain, or the addition/removal of an application partition including default DNS application partitions).
+- New partitions being added or removed from the forest. For example, the promotion or demotion of the first/last DC in a domain. Or the addition/removal of an application partition including default DNS application partitions.
 - The addition or removal of directory partitions on existing DCs (that is, the promotion/demotion of global catalog or addition/removal of an application partition).
 - Changes in replication topology or settings:
 
@@ -112,7 +112,9 @@ The error is most commonly seen in replication scenarios triggered by REPADMIN.E
 
 Windows 2000 domain controllers are particularly prone to this error during GC demotion as they're slow to remove objects from read-only partitions. Object removal during GC demotion improved dramatically on Windows Server 2003 and later OS versions.
 
-The NTDS Replication event 1586 is caused when the PDC FSMO role for the domain has been seized or transferred to a domain controller that wasn't a direct replication partner of the previous role holder.
+The NTDS Replication event 1586 occurs in the following situation:
+
+&nbsp;&nbsp;&nbsp;The primary domain controller (PDC) FSMO role for the domain has been seized or transferred to a domain controller that wasn't a direct replication partner of the previous role holder.
 
 In rare conditions, the error can be caused by corruption in attributes like `hasMasterNCs` or `msds-hasMasterNCs`.
 
