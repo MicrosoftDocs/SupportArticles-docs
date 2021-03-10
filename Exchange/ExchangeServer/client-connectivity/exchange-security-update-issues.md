@@ -51,8 +51,6 @@ This article describes the methods to verify the installation of Microsoft Excha
   - [Install the update for CAS-CAS Proxying deployment](#install-the-update-for-cas-cas-proxying-deployment)
   - [Install the update on DBCS version of Windows Server 2012](#install-the-update-on-dbcs-version-of-windows-server-2012)
 
-
-
 ## Assess the health of on-premises Exchange Servers
 
 ### Check for Indicators of Compromise (IOCs)
