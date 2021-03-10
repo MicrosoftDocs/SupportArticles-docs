@@ -24,6 +24,8 @@ appliesto:
 
 # Repair failed installations of Exchange Cumulative and Security updates
 
+<a id="summary"></a>
+
 This article describes the methods to verify the installation of Microsoft Exchange Server Cumulative Updates (CUs) and Security Updates (SUs) on your servers, lists known issues that might occur when installing CUs and SUs, and provides resolutions to fix the issues.
 
 - [Check for Indicators of Compromise (IOCs)](#check-for-indicators-of-compromise-iocs)
