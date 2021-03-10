@@ -114,7 +114,7 @@ Windows 2000 domain controllers are particularly prone to this error during GC d
 
 The NTDS Replication event 1586 occurs in the following situation:
 
-&nbsp;&nbsp;&nbsp;The primary domain controller (PDC) FSMO role for the domain has been seized or transferred to a domain controller that wasn't a direct replication partner of the previous role holder.
+&nbsp;&nbsp;&nbsp;The primary domain controller (PDC) Flexible Single Master Operation (FSMO) role for the domain has been seized or transferred to a domain controller that wasn't a direct replication partner of the previous role holder.
 
 In rare conditions, the error can be caused by corruption in attributes like `hasMasterNCs` or `msds-hasMasterNCs`.
 
@@ -124,7 +124,7 @@ In summary, Error 8452 happens if any of the following conditions is true:
 
 1. When DC1 <- DC2 replication is started for a Naming Context (NC), on DC1 there's no replica link for the NC from DC2.
 2. When DC1 <- DC2 replication in started for an NC, the NC is in the process of being removed on DC2.
-3. In mixed domain environment, PDC FSMO role is transferred from DC2 to DC1, but on DC1 there's no replica link from DC2.
+3. In mixed domain environment, the PDC FSMO role is transferred from DC2 to DC1, but on DC1 there's no replica link from DC2.
 
 ## Resolution
 
