@@ -40,19 +40,21 @@ These network adapters are also sold under different model numbers by some serve
 
 This issue is resolved in Broadcom driver b57nd60a.sys version 16.8 and newer. In March 2015, Broadcom published driver version 17.0 for download. In April 2015, HP published version 16.8 of the driver for their affected network adapters. Contact your server OEM if you need a driver that's specific to your server.
 
-If you're unable to update your network adapter driver to resolve the issue, you can work around the issue by disabling VMQ on each affected Broadcom network adapter by using the `Set-NetAdapterVmq` Windows PowerShell command.
+If you can't update your network adapter driver to resolve the issue, you can work around the issue by disabling VMQ on each affected Broadcom network adapter by using the `Set-NetAdapterVmq` PowerShell command.
 
-For example, you can disable VMQ on each adapter by using the following commands if:
+Consider the following scenario:
 
-- you have a dual-port network adapter, and
-- the ports are named NIC 1 and NIC 2 in Windows
+- You have a dual-port network adapter.
+- The ports are named NIC 1 and NIC 2 in Windows.
+
+In this scenario, you can disable VMQ on each adapter by using the following commands:
 
 ```powershell
 Set-NetAdapterVmq -Name "NIC 1" -Enabled $False
 Set-NetAdapterVmq -Name "NIC 2" -Enabled $False
 ```
 
-You can confirm that VMQ is disabled on the correct network adapters by using the [Get-NetAdapterVmq](/powershell/module/netadapter/get-netadaptervmq?view=win10-ps&preserve-view=true)  Windows PowerShell command.
+You can confirm that VMQ is disabled on the correct network adapters by using the [Get-NetAdapterVmq](/powershell/module/netadapter/get-netadaptervmq?view=win10-ps&preserve-view=true) PowerShell command.
 
 > [!NOTE]
 > By default, VMQ is disabled on the Hyper-V virtual switch for virtual machines that are using 1-gigabit network adapters. VMQ is enabled on a Hyper-V virtual switch only when the system is using 10-gigabit or faster network adapters. This means that by disabling VMQ on the Broadcom network adapter, you aren't losing network performance or any other benefits because this is the default. However, you need to do this to work around the driver issue.
