@@ -1,4 +1,4 @@
-- name: Welcome
+- name: Dynamics 365 Marketing
   href: welcome-marketing.yml
 - name: Marketing
   items:

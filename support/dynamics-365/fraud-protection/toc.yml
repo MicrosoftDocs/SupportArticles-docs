@@ -1,4 +1,4 @@
-- name: Welcome
+- name: Dynamics 365 Fraud Protection
   href: welcome-fraud-protection.yml
 - name: Application
   items:

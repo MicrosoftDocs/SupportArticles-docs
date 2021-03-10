@@ -1,4 +1,4 @@
-- name: Welcome
+- name: Dynamics 365 Sales
   href: welcome-sales.yml
   items:
   - name: Access Issues
