@@ -41,7 +41,7 @@ This error occurs if the solution includes a relationship from one entity to ano
     \<NavPaneOrder>0\</NavPaneOrder>
 
     > [!NOTE]
-    > It's possible the number in your example may be something other than 0 but some other number less than 10,000. As mentioned in the [Symptom](#symptom) section, you can refer to the message in the log file to confirm the nav pane order value that caused the failure.
+    > It's possible the number in your example may be something other than 0 but some other number less than 10,000. As mentioned in the [Symptoms](#symptoms) section, you can refer to the message in the log file to confirm the nav pane order value that caused the failure.
 
 4. After finding the invalid NavPaneOrder section, update the incorrect number to a value greater than or equal to 10000.
 

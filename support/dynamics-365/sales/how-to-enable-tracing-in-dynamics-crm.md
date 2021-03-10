@@ -41,7 +41,7 @@ The following are the optional registry entries.
 |TraceCallStack|DWORD|A value of 0 or 1|If you use a value of 0, the call stack is not included in the trace file. If you use a value of 1, the call stack is included in the trace file.|
 |TraceFileSizeLimit|DWORD|A size between 1 MB and 100 MB|The TraceFileSizeLimit registry entry specifies the maximum size of trace files. New files are created when the limit is reached.|
 
-If you do not create the optional registry entries, the default data values are used. For more information about the default data values, see the [Default data values for optional registry entries](#default-data-values-for-optional-registry-entries) section. If you create the registry entries but do not specify data values for the registry entries, tracing will not work.
+If you do not create the optional registry entries, the default data values are used. For more information about the default data values, see the [Default data values for optional registry entries](#default-data-values-for-optional-registry-values) section. If you create the registry entries but do not specify data values for the registry entries, tracing will not work.
 
 ## Enable trace settings through Windows PowerShell
 

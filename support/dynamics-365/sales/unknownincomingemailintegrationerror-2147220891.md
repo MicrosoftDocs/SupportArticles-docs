@@ -1,5 +1,5 @@
 ---
-title: UnknownIncomingEmailIntegrationError
+title: UnknownIncomingEmailIntegrationError -2147220891
 description: Provides a solution to an error that occurs within mailbox alerts in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
@@ -28,9 +28,9 @@ When viewing the alerts section within a mailbox record in Dynamics 365, you see
 
 Error code 80040265 and -2147220891 indicates an IsvAborted error.
 
-If you see the first message listed in the [Symptom](#symptom) section, it's typically caused by a workflow or custom plugin that runs on the creation of an email record.
+If you see the first message listed in the [Symptoms](#symptoms) section, it's typically caused by a workflow or custom plugin that runs on the creation of an email record.
 
-If you see the second message listed in the [Symptom](#symptom) section, it's typically caused by a workflow or custom plugin that runs on the creation of an appointment, contact, or task record.
+If you see the second message listed in the [Symptoms](#symptoms) section, it's typically caused by a workflow or custom plugin that runs on the creation of an appointment, contact, or task record.
 
 ## Resolution
 

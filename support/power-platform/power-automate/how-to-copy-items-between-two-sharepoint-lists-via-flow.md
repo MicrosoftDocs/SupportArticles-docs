@@ -1,7 +1,6 @@
 ---
 title: How to copy items between two SharePoint lists via Flow
-description: Describes the procedure to copy all the items of a SharePoint list in one site to to a second SharePoint site.
-by building a flow.
+description: Describes the procedure to copy all the items of a SharePoint list in one site to to a second SharePoint site by building a flow.
 ms.reviewer: 
 ms.topic: how-to
 ms.date: 

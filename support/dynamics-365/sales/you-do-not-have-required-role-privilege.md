@@ -28,4 +28,4 @@ Disable Admin Mode.
 
 ## More information
 
-[Manage Sandbox instances](dynamics365/admin/manage-sandbox-instances)
+[Manage Sandbox instances](/dynamics365/admin/manage-sandbox-instances)

@@ -32,7 +32,7 @@ MFA can also be configured from **Microsoft 365 admin center**. A subset of Azur
 
 :::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/select-mfa-from-microsoft-365-admin-center.png" alt-text="Select Azure multi-factor authentication from Microsoft 365 admin center":::
 
-:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/remember-multi-factor-authentication-optionpng" alt-text="The remember multi-factor authentication option details":::
+:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/remember-multi-factor-authentication-option.png" alt-text="The remember multi-factor authentication option details":::
 
 The **remember multi-factor authentication** setting can help you to reduce the number of user logons by using a persistent cookie. This policy controls the Azure AD settings that are documented in [Remember Multi-Factor Authentication for trusted devices](/azure/active-directory/authentication/howto-mfa-mfasettings#remember-multi-factor-authentication-for-trusted-devices).
 

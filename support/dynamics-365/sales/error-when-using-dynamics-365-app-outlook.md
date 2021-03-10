@@ -1,5 +1,5 @@
 ---
-title: Error when you use Dynamics 365 App for Outlook
+title: This email is saved in another mailbox when you use Dynamics 365 App for Outlook
 description: This article provides a resolution for the problem that occurs when you use Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting

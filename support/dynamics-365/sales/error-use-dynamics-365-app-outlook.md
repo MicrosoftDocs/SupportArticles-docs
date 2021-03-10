@@ -1,5 +1,5 @@
 ---
-title: Error when you use Dynamics 365 App for Outlook
+title: business unit is disabled when you use Dynamics 365 App for Outlook
 description: This article provides a resolution for the problem that occurs when you attempt to use the Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting

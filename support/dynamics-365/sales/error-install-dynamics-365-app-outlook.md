@@ -1,5 +1,5 @@
 ---
-title: Error when you install Dynamics 365 App for Outlook 
+title: IncomingEmailS2SApprovalNeeded when you install Dynamics 365 App for Outlook 
 description: This article provides a resolution for the problem that occurs when you attempt to install Dynamics 365 App for Outlook, the Status column shows Issue when adding to Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting

@@ -21,4 +21,4 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Perform specific operations
-            url: microsoft-dynamics-365-how-to-articles.md
+            url: dynamics-365-how-to-articles.md
