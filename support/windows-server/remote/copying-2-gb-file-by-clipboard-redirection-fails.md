@@ -1,6 +1,6 @@
 ---
 title: Copying files exceeding 2 GB fails
-description: When you try to copy a file larger than 2 GB over a Remote Desktop Services or Terminal Services session through Clipboard Redirection (copy and paste) by using Remote Desktop Protocol (RDP) client 6.0 or later, the file fails to copy, and you don't see an error message.
+description: When you try to copy a file larger than 2 GB by using Remote Desktop Protocol (RDP) client 6.0 or later, the file fails to copy. And you don't see an error message.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,14 +15,14 @@ ms.technology: windows-server-rds
 ---
 # Copying files larger than 2 GB over a Remote Desktop Services or Terminal Services session by using Clipboard redirection (copy and paste) fails silently
 
-This article provides help to work around the issue where copying files that's larger than 2 GB over a Remote Desktop Services or Terminal Services session by using Clipboard redirection fails.
+This article works around an issue where copying files larger than 2 GB over a Remote Desktop Services or Terminal Services session by using Clipboard redirection fails.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2258090
 
 ## Symptoms
 
-When you try to copy a file that is larger than 2 GB over a Remote Desktop Services or a Terminal Services session through Clipboard redirection (copy and paste) by using the Remote Desktop Protocol (RDP) client 6.0 or a later version, the file isn't copied. And, you don't receive an error message.
+When you try to copy a file larger than 2 GB over a Remote Desktop Services or a Terminal Services session through Clipboard redirection (copy and paste) by using RDP client 6.0 or a later version, the file isn't copied. And you don't receive an error message.
 
 ## Cause
 
@@ -34,7 +34,7 @@ To resolve this issue, use one of the following methods:
 
 - Use Drive Redirection through Remote Desktop Services or a Terminal Services session if you want to transfer files larger than 2 GB.
 
-- Use command-line alternatives such as `XCopy` to copy files larger than 2 GB over a Remote Desktop Services or Terminal Services session. For example, you can use the following command:
+- Use command-line alternatives to copy files larger than 2 GB over a Remote Desktop Services or Terminal Services session. For example, use the following command:
 
     ```console
     xcopy \\tsclient\c\myfiles\LargeFile d:\temp  
@@ -44,10 +44,10 @@ To resolve this issue, use one of the following methods:
 
 - Copy and paste files
 
-  You can copy and paste the files between one of the following scenarios by using the Copy and Paste feature:
+  You can use the Copy and Paste feature in the following scenarios:
 
-  - The remote session and the local computer
-  - The local computer and the remote session
+  - Copy and paste files between the remote session and the local computer.
+  - copy and paste files between the local computer and the remote session.
 
   However, it's limited to files that are smaller than 2 GB.
 
