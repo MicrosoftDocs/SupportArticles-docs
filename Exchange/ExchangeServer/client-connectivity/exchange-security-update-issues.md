@@ -26,30 +26,27 @@ appliesto:
 
 This article describes the methods to verify the installation of Microsoft Exchange Server Cumulative Updates (CUs) and Security Updates (SUs) on your servers, lists known issues that might occur when installing CUs and SUs, and provides resolutions to fix the issues.
 
-- Assess the health of on-premises Exchange Servers
-  - [Check for Indicators of Compromise (IOCs)](#check-for-indicators-of-compromise-iocs)
-  - [Verify the installation of CUs & SUs](#verify-the-installation-of-cus--sus)
-- Resolve errors during CU or SU installation
-  - [HTTP 500 errors in OWA or ECP](#http-500-errors-in-owa-or-ecp)
-  - [Missing images in ECP](#missing-images-in-ecp)
-  - [Blank page in EAC or OWA](#blank-page-in-eac-or-owa)
-  - [Can't access EAC or OWA after Exchange installation](#cant-access-eac-or-owa-after-exchange-installation)
-  - [Exchange Server setup does not run](#exchange-server-setup-does-not-run)
-  - [Upgrade patch can't be installed](#upgrade-patch-cant-be-installed)
-  - [Installation fails due to services not stopping](#installation-fails-due-to-services-not-stopping)
-  - [Services don't start after SU installation](#services-dont-start-after-su-installation)
-  - [Error during Setup in Setup log](#error-during-setup-in-setup-log)
-  - [Error during update rollup installation](#error-during-update-rollup-installation)
-  - [Setup fails with "Cannot start the service" error](#setup-fails-with-cannot-start-the-service-error)
-  - [SU installation fails because of existing IU](#su-installation-fails-because-of-existing-iu)
-  - [Setup installs older CU or fails to install language pack](#setup-installs-older-cu-or-fails-to-install-language-pack)
-  - [Restart from previous installation is pending](#restart-from-previous-installation-is-pending)
-  - [Mail flow has stopped](#mail-flow-has-stopped)
-- Additional information
-  - [Update .NET when migrating from an unsupported CU](#update-net-when-migrating-from-an-unsupported-cu)
-  - [Handle customized OWA or .config files](#handle-customized-owa-or-config-files)
-  - [Install the update for CAS-CAS Proxying deployment](#install-the-update-for-cas-cas-proxying-deployment)
-  - [Install the update on DBCS version of Windows Server 2012](#install-the-update-on-dbcs-version-of-windows-server-2012)
+- [Check for Indicators of Compromise (IOCs)](#check-for-indicators-of-compromise-iocs)
+- [Verify the installation of CUs & SUs](#verify-the-installation-of-cus--sus)
+- [HTTP 500 errors in OWA or ECP](#http-500-errors-in-owa-or-ecp)
+- [Missing images in ECP](#missing-images-in-ecp)
+- [Blank page in EAC or OWA](#blank-page-in-eac-or-owa)
+- [Can't access EAC or OWA after Exchange installation](#cant-access-eac-or-owa-after-exchange-installation)
+- [Exchange Server setup does not run](#exchange-server-setup-does-not-run)
+- [Upgrade patch can't be installed](#upgrade-patch-cant-be-installed)
+- [Installation fails due to services not stopping](#installation-fails-due-to-services-not-stopping)
+- [Services don't start after SU installation](#services-dont-start-after-su-installation)
+- [Error during Setup in Setup log](#error-during-setup-in-setup-log)
+- [Error during update rollup installation](#error-during-update-rollup-installation)
+- [Setup fails with "Cannot start the service" error](#setup-fails-with-cannot-start-the-service-error)
+- [SU installation fails because of existing IU](#su-installation-fails-because-of-existing-iu)
+- [Setup installs older CU or fails to install language pack](#setup-installs-older-cu-or-fails-to-install-language-pack)
+- [Restart from previous installation is pending](#restart-from-previous-installation-is-pending)
+- [Mail flow has stopped](#mail-flow-has-stopped)
+- [Update .NET when migrating from an unsupported CU](#update-net-when-migrating-from-an-unsupported-cu)
+- [Handle customized OWA or .config files](#handle-customized-owa-or-config-files)
+- [Install the update for CAS-CAS Proxying deployment](#install-the-update-for-cas-cas-proxying-deployment)
+- [Install the update on DBCS version of Windows Server 2012](#install-the-update-on-dbcs-version-of-windows-server-2012)
 
 ## Assess the health of on-premises Exchange Servers
 
@@ -57,15 +54,17 @@ This article describes the methods to verify the installation of Microsoft Excha
 
 Use the following script that automates testing for all four vulnerabilities described in the [Microsoft Threat Intelligence Center (MSTIC) blog post](https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/). The script provides a progress bar and performance tweaks to make the test for CVE-2021-26855 test run fast. Download the latest version of the script from the Exchange Support GitHub repository [aka.ms/TestProxyLogon](https://aka.ms/TestProxyLogon).  
 
+[Back to top](#summary)
+
 ### Verify the installation of CUs & SUs
 
-### Option 1 (Recommended)
+#### Option 1 (Recommended)
 
 Run the [HealthChecker script](https://aka.ms/exchangehealthchecker) and check the build number.
 
 ![Screenshot of the result of HealthChecker](./media/exchange-security-update-issues/result-healthchecker.png)
 
-### Option 2
+#### Option 2
 
 Run the following command and verify that the file version in the output matches the information in the table below.
 
@@ -78,6 +77,8 @@ Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
 | Exchange Server 2019  | For CU7: 15.02.0721.013</br>For CU8: 15.02.0792.010|
 | Exchange Server 2016  | For CU18: 15.01.2106.013</br>For CU19: 15.01.2176.009|
 | Exchange Server 2013  | For CU23: 15.00.1497.012  |
+
+[Back to top](#summary)
 
 ## Resolve errors during CU or SU installation
 
@@ -102,6 +103,8 @@ Reinstall the security update from an elevated command prompt.
 
 For more information, see [OWA or ECP stops working after you install a security update](https://docs.microsoft.com/exchange/troubleshoot/client-connectivity/owa-stops-working-after-update).
 
+[Back to top](#summary)
+
 ### Missing images in ECP
 
 **Issue**
@@ -115,8 +118,8 @@ This issue occurs if the SU is not installed properly.
 **Resolution**
 
 Uninstall and reinstall the .msp file by running the update from an administrative command prompt. Then reboot the server after the installation is complete.
-</br>
-</details>
+
+[Back to top](#summary)
 
 ### Blank page in EAC or OWA
 
@@ -156,6 +159,8 @@ This issue occurs if the SSL binding on 0.0.0.0:444 has one or more of the follo
     ![The SSL certificate for the SSL binding for the Exchange Back End site on the Mailbox server.](./media/exchange-security-update-issues/back-end-binding.png)  
 
 For more information, see [this article](/topic/you-get-a-blank-page-after-logging-in-eac-or-owa-in-exchange-2013-or-exchange-2016-a24db2f2-4d67-806b-670b-efb8f08605f7).
+
+[Back to top](#summary)
 
 ### Can't access EAC or OWA after Exchange installation
 
@@ -205,6 +210,8 @@ Do the following:
 
     For more information, see [this article](/exchange/troubleshoot/client-connectivity/event-1309-code-3005-cannot-access-owa-ecp).
 
+[Back to top](#summary)
+
 ### Exchange Server setup does not run
 
 **Issue**
@@ -232,6 +239,8 @@ Run the upgrade by using "`.\setup.exe /m:upgrade /IAcceptExchangeServerLicenseT
 
 For more information, see [this article](https://docs.microsoft.com/exchange/troubleshoot/setup/ex2019-setup-does-not-run-correctly-started-powershell).
 
+[Back to top](#summary)
+
 ### Upgrade patch can't be installed
 
 **Issue**
@@ -246,6 +255,8 @@ This error message displays if the versions of the CU and SU don't match.
 **Resolution**
 
 Either upgrade to the correct CU or download the correct SU for the intended CU.
+
+[Back to top](#summary)
 
 ### Installation fails due to services not stopping
 
@@ -264,6 +275,8 @@ Use the best practice to reboot the server before installing the CU or SU. For t
 
 Then run the setup again.
 
+[Back to top](#summary)
+
 ### Services don't start after SU installation
 
 **Issue**
@@ -275,6 +288,8 @@ Exchange services don't start after you complete installing the SU installation.
 Check the state of the services. If they are **Disabled**, set them to **Automatic** and start them manually.
 
 **Note**: The services **MSExchangeIMAP4**, **MSExchangeIMAP4BE**, **MSExchangePOP3**, and **MSExchangePOP3BE** are typically disabled by default. Check the Exchange log located at `C:\ExchangeSetupLogs\ServiceControl.log` to see which services were disabled during the SU installation.
+
+[Back to top](#summary)
 
 ### Error during Setup in Setup log
 
@@ -305,7 +320,9 @@ If you find this error, run the following command from a machine that is in the 
 
 To find the Domain Controller (DC) which holds the schema master, run the following command from administrative command prompt on the DC:
 
-`netdom query fsmo`.
+`netdom query fsmo`
+
+[Back to top](#summary)
 
 ### Error during update rollup installation
 
@@ -336,6 +353,8 @@ Do the following:
   
 4. After the Setup process completes, select the **Check for publisher’s certificate revocation** check box again.
 
+[Back to top](#summary)
+
 ### Setup fails with "Cannot start the service" error
 
 **Issue**
@@ -352,7 +371,10 @@ Do the following:
 1. Rename the C:\ExchangeSetupLogs folder (for example, ExchangeSetupLogs-OLD).
 2. Change the startup type for all Exchange services in the services.msc console to **Automatic**.
 3. Assuming that the Exchange CU media is on D: drive, open a command prompt as administrator and resume setup by using the following command:
-`D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`
+
+   `D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`
+
+[Back to top](#summary)
 
 ### SU installation fails because of existing IU
 
@@ -379,6 +401,8 @@ This error message may also display on a server that has no IUs installed but is
   
 4. After the Setup process completes, select the **Check for publisher’s certificate revocation** check box again.
 
+[Back to top](#summary)
+
 ### Setup installs older CU or fails to install language pack
 
 **Issue**
@@ -397,6 +421,8 @@ These issues occur if you start the installation from Windows PowerShell and use
 If the Exchange CU media is on D: drive, run an upgrade using PowerShell by using either of the following commands:
 "`.\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell) or "`D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell and command prompt)
 
+[Back to top](#summary)
+
 ### Restart from previous installation is pending
 
 **Issue**
@@ -408,6 +434,8 @@ You keep getting the following error message even after restarting the server se
 **Resolution**
 
 Follow the information provided in [A Restart from a Previous Installation is Pending](/previous-versions/office/exchange-server-analyzer/cc164360(v=exchg.80)) to fix the issue.
+
+[Back to top](#summary)
 
 ### Mail flow has stopped
 
@@ -422,6 +450,8 @@ To get mail flow working again, make sure that the following requirements are me
 1. All Exchange services are enabled and running.
 2. The server is not in [Maintenance mode](/exchange/high-availability/manage-ha/manage-dags?view=exchserver-2019#performing-maintenance-on-dag-members&preserve-view=true)
 3. There is enough free space available in the [Exchange message queue database](/exchange/back-pressure-exchange-2013-help#free-hard-drive-space-for-the-message-queue-database&preserve-view=true).
+
+[Back to top](#summary)
 
 ## Additional information
 
@@ -461,12 +491,16 @@ Follow these steps to install the latest version of the .NET Framework:
 
     `set-servercomponentstate \<server_name\> -Component serverwideoffline -State active - Requester Maintenance`
 
+[Back to top](#summary)
+
 ### Handle customized OWA or .config files
 
 > [!IMPORTANT]
 > Before you apply a CU, make a backup copy of your customized files.
 
 When you apply a CU (for Exchange Server 2013, 2016 or 2019) or Rollup package (for Exchange Server 2010), the process updates OWA files and .config files if necessary. As a result, any customization that you may have made to Exchange or Internet Information Server (IIS) settings in Exchange XML application configuration files on the Exchange server will be overwritten when you install an Exchange CU. Examples of such application configuration files include web.config files, EdgeTransport.exe.config files, and any customized logon.aspx Outlook on the web files. Make sure to save this information so you can easily reapply the settings after the CU is installed.
+
+[Back to top](#summary)
 
 ### Install the update for CAS-CAS Proxying deployment
 
@@ -478,6 +512,8 @@ If your scenario meets both the following conditions, apply the update rollup on
 > [!NOTE]
 > For other Exchange Server 2010 configurations, you don’t have to apply the update rollup on your servers in a specific order.
 
+[Back to top](#summary)
+
 ### Install the update on DBCS version of Windows Server 2012
 
 To install or uninstall Update Rollup 32 for Exchange Server 2010 SP3 on a Double Byte Character Set (DBCS) version of Windows Server 2012, the language preference for non-Unicode programs should not be set to the default language. If it is, then you must change this setting before beginning the installation.
@@ -487,6 +523,3 @@ To install or uninstall Update Rollup 32 for Exchange Server 2010 SP3 on a Doubl
 3. In the **Current system locale** list, select **English (United States)**, and then select **OK**.
 
 Now you can install or uninstall Update Rollup 32 as needed. After the process completes, revert the language setting as appropriate.
-
-</br>
-</details>
