@@ -21,7 +21,7 @@ appliesto:
 
 ## Summary
 
-As previously communicated in the Microsoft Admin Center (such as communication MC240160 in February 2021) we're moving all our online services to Transport Layer Security (TLS) 1.2+. The changes to enforce TLS 1.2+ in our services started on October 15, 2020 and will continue to be added to all Microsoft 365 environments for the next few months. If you haven't taken steps to prepare for this change, your connectivity to Microsoft 365 might be affected.
+As previously communicated in the Microsoft 365 Admin Center (such as communication MC240160 in February 2021) we're moving all our online services to Transport Layer Security (TLS) 1.2+. The changes to enforce TLS 1.2+ in our services started on October 15, 2020 and will continue to be added to all Microsoft 365 environments for the next few months. If you haven't taken steps to prepare for this change, your connectivity to Microsoft 365 might be affected.
 
 ## Known Issues
 
