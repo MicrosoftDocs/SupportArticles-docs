@@ -13,14 +13,14 @@ _Original KB number:_ &nbsp; 2583929
 
 ## Prepare for software distribution
 
-Before you distribute an update or other software package, gather the necessary installation or update files. These files must include:
+Before you distribute an update or other software package, gather the necessary installation or update files. These files must include one of the following files:
 
-- an installation executable file such as Setup.exe, or,
-- a Windows Installer file such as Application.msi.
+- An installation executable file, such as Setup.exe.
+- A Windows Installer file, such as Application.msi.
 
 If the installer file requires other files or folders to complete the installation, put all these files into a single and accessible folder. So they can be added to the software package by the Intune Software Publishing wizard.
 
-For .exe files, Intune adds the `/Install` switch automatically. Most .exe files typically require extra command-line arguments to turn off the default user interaction and install the package silently. Microsoft Intune deployments support only .exe installer packages. If you want to deploy runtime executable files, use a third-party tool to create an installer package.
+For .exe files, Intune adds the `/Install` switch automatically. Most .exe files typically require extra command-line arguments to turn off the default user interaction, and install the package silently. Microsoft Intune deployments support only .exe installer packages. If you want to deploy runtime executable files, use a third-party tool to create an installer package.
 
 For .msi files, Intune adds the `/quiet` switch automatically. The installer packages should detect that the installation is under the SYSTEM account, and automatically install in silent mode. However, it depends on how the software publisher creates the package. If an application installation requires user context, it probably can't be deployed by using Intune.
 
