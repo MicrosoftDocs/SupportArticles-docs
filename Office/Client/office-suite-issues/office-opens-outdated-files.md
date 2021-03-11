@@ -27,7 +27,7 @@ description: When you open a Word or PowerPoint file from SharePoint on-premises
 When you open a Word or PowerPoint file from SharePoint on-premises in a Microsoft 365 desktop app, you see the local cached file instead of the current server document contents. An **Updates Available** button appears in the middle of the status bar at the bottom of the app window.
 
 ## Cause
-This behavior is by design. The AutoSave feature isn't available in SharePoint on-premises. Therefore, the app doesn't merge the changes from the SharePoint Server until you select **Updates Available**.
+This behavior is by design. The AutoSave feature isn't available in SharePoint on-premises. Therefore, the app doesn't merge the changes from the SharePoint server until you select **Updates Available**.
 
 ## Workaround
 
