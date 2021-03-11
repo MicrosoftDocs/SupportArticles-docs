@@ -15,7 +15,7 @@ ms.technology: windows-server-security
 ---
 # Service fails to start and you receive an error 1079 on a computer that's running Windows 7
 
-This article helps fix the error 1079 that occurs when some services fail to start on a computer that's running Windows 7.
+This article helps fix error 1079 that occurs when some services fail to start on a computer that's running Windows 7.
 
 _Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2478117
@@ -42,11 +42,11 @@ Set the service and any dependent services to run under the **NT AUTHORITY\Local
 
 For example, for the Windows Firewall service, follow the steps:
 
-1. Click **Start**, type *Services.msc* in the **Search programs and files** box, and then press Enter.
+1. Select **Start**, type *`Services.msc`* in the **Search programs and files** box, and then press Enter.
 2. Locate and double-click the **Windows Firewall** service.
-3. Click the **Log On** tab.
-4. In **This account** text box, type *NT AUTHORITY\LocalService*.
+3. Select the **`Log On`** tab.
+4. In **This account** text box, type *`NT AUTHORITY\LocalService`*.
 5. Set both **Password** fields blank.
-6. Click **Apply** and then **OK**.
+6. Select **Apply**, and then select **OK**.
 7. Repeat these steps for the **Base Filtering Engine** service.
 8. Restart both services.
