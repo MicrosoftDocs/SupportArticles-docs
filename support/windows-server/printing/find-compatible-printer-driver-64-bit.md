@@ -113,7 +113,7 @@ Some printer manufacturers may interpret different printer emulations in differe
 
     \\\ **print server name**\\**printer name**
 10. Select **Next**.
-11. In the **Install Printer Software** page, Select the correct manufacturer under the **Manufacturer** column. Then, select the name of a printer that supports the same printer emulation as your printer. Select **Next** > **Finish**. For example, you have an HP LaserJet printer that supports Post Script (PS) emulation. Try to locate another HP LaserJet printer model that has a similar model number and supports Post Script emulation.
+11. In the **Install Printer Software** page, select the correct manufacturer under the **Manufacturer** column. Then select the name of a printer that supports the same printer emulation as your printer. Select **Next** > **Finish**. For example, you have an HP LaserJet printer that supports Post Script (PS) emulation. Try to locate another HP LaserJet printer model that has a similar model number and supports Post Script emulation.
 12. In Printers and Faxes, right-click the printer that you added, and then select **Properties**.
 13. Select the **General** tab, and then select **Print Test Page**.
 14. If the test page prints correctly, you have found a matching printer driver. If the test page is unreadable, find another printer driver, or try another emulation type.
