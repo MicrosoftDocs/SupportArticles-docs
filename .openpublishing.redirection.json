@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-server/identity/gpo-processing-failures-across-foreast.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/rsop-not-supported-across-multiple-forests",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/azure/general/sdp-321382d70-df1d-4c0c-bdc6-9ba62752e851-asr.md",
       "redirect_url": "/troubleshoot/azure/site-recovery/sdp-321382d70-df1d-4c0c-bdc6-9ba62752e851-asr",
       "redirect_document_id": true
