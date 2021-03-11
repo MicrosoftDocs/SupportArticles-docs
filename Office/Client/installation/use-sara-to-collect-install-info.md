@@ -54,31 +54,35 @@ To install Support and Recovery Assistant and automatically start collecting ROI
 > [!NOTE]
 > In addition to Normal ROIScan, Full ROIScan creates verbose .xml files for [MSI-based installations of Office products](https://docs.microsoft.com/deployoffice/install-different-office-visio-and-project-versions-on-the-same-computer#installation-technologies-used-by-office). These are helpful in scenarios that require in-depth analysis of file versions and file states.
 
-## Collect the Robust Office Inventory Scan from SaRA
+## Collect the Robust Office Inventory Scan
 
 After Support and Recovery Assistant is successfully installed, collect the ROIScan data:
 
 1. Select **Advanced diagnostics** > **Next**.
+![Advanced Diagnostics window choose next).](./media/use-sara-to-collect-install-info/open-screen.png)
  
 1. Select **Office** > **Next**.
- 
-1. Select **Normal Robust Office Inventory Scan** or **Full Robust Office Inventory Scan**: 
+
+    ![Select Office and then Next).](./media/use-sara-to-collect-install-info/advanced-diagnostics.png)
+
+1. Select **Normal Robust Office Inventory Scan** or **Full Robust Office Inventory Scan**.
+![Choose whether to run normal or full scan).](./media/use-sara-to-collect-install-info/select-diagnostic.png)
  
 1. When you are prompted to confirm that you are using the affected computer, select **Yes** > **Next**.
- 
+![Confirm you are using the affected computer).](./media/use-sara-to-collect-install-info/affected-machine.png)
+
    After you select **Next**, you might be prompted for a Support and Recovery Assistant restart in order to validate the user or admin permissions.
 
    > [!NOTE]
    > - The scan may take several minutes to run.
    > - You are notified when the scan is finished. You can view the output by selecting **Next**.
-   > -	The last page gives you the option to view the log, and send it directly to Microsoft if you have an active support request.
-
+   > - The last page gives you the option to view the log, and send it directly to Microsoft if you have an active support request.
 
 ## Tips to analyze a ROIScan log
 
 If you are not currently working with Microsoft on a support request, and you want to review the ROIScan log yourself, review the following details:
 
-Aside from the title line, the ROIScan log is grouped into three sections: **Computer**, **Review Items**, and **Products Inventory**.
+Aside from the title line, the ROIScan log is grouped into three sections: Computer, Review Items, and Products Inventory.
 
 ### Computer
 - This section contains current user and operating system-specific data:
