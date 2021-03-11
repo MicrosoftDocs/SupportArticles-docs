@@ -67,7 +67,7 @@ The Windows Server 2003 Administration Tools Pack is located in the I386 folder 
 
 |Windows 2000 Server Adminpak|Windows Server 2003 original (RTM) Adminpak|Windows Server 2003 SP1 Adminpak|Windows Server 2003 SP2 Adminpak|Remote Server Administration Tool (RSAT)|
 |---|---|---|---|---|
-| Installs and runs on these operating systems |
+| Installs and runs on these operating systems |||||
 |Windows Server 2003 32-bit family|No|Yes|Yes|Yes|
 |Windows Server 2003 64-bit family|No|No|Yes|Yes|
 |Windows XP Professional with Service Pack 2|No|Yes|Yes|Yes|
@@ -79,7 +79,7 @@ The Windows Server 2003 Administration Tools Pack is located in the I386 folder 
 |Windows 7|No|No|No|No|Yes, RSAT for Windows 7|
 |Windows Server 2008|No|No|No|No|Yes, RSAT for Windows Server 2008|
 |Windows Server 2008 R2|No|No|No|No|Yes, RSAT for Windows Server 2008|
-| Remotely manages these operating systems |
+| Remotely manages these operating systems |||||
 |Windows Server 2003 32-bit family|Yes|Yes|Yes|Yes|
 |Windows Server 2003 64-bit family|Yes|Yes|Yes|Yes|
 |Windows 2000 Server family|Yes|Yes|Yes|Yes|

@@ -263,6 +263,7 @@ You can use these methods to troubleshoot Jet database errors:
     Troubleshooting any error reported by ESE logical or application logical consistency when physical consistency is still failing will lead you down an improper troubleshooting path.
 
     Equivalent NTDSUTIL and ESENTUTL commands for each later are shown below:
+
     |Layer|NTDSUTIL command|ESENTUTL equivalent command|
     |---|---|---|
     | 1. Physical consistency| no equivalent| `ESENTUTL /K` |
