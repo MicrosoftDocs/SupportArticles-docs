@@ -1,6 +1,6 @@
 ---
-title: MSSQL$MICROSOFT##WID service was unable to log on as NT SERVICE\MSSQL$MICROSOFT##WID error when you install WID in Windows Server 2012
-description: Describes an issue in which installation of WID fails on a computer that's running Windows Server 2012. Provides workarounds.
+title: MSSQL$MICROSOFT##WID service was unable to log on as NT SERVICE\MSSQL$MICROSOFT##WID
+description: Describes an issue where you can't install Windows Internal Database on a computer running Windows Server 2012. Provides workarounds.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,14 +15,14 @@ ms.technology: windows-server-deployment
 ---
 # Error when you install WID in Windows Server 2012: MSSQL$MICROSOFT##WID service was unable to log on as NT SERVICE\MSSQL$MICROSOFT##WID
 
-This article provides workarounds for an issue in which installation of WID fails on a computer that's running Windows Server 2012.
+This article works around an issue where you can't install Windows Internal Database (WID) on a computer running Windows Server 2012.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;2832204
 
 ## Symptoms
 
-When you install Active Directory Federation Services (ADFS) by using the Add Roles and Features Wizard in Windows Server 2012, the Windows Internal Database (WID) installation fails, and you receive the following error message:
+When you install Active Directory Federation Services (AD FS) by using the Add Roles and Features Wizard in Windows Server 2012, the WID installation fails. And you receive the following error message:
 
 > The MSSQL$MICROSOFT##WID service was unable to log on as NT SERVICE\MSSQL$MICROSOFT##WID with the currently configured password due to the following error:  
 Logon failure: the user has not been granted the requested logon type at this computer.  
@@ -39,13 +39,13 @@ If you have already assigned this user right to the service account, and the use
 
 ## Cause
 
-When WID is installed, the NT SERVICE\MSSQL$MICROSOFT##WID local virtual account is created, and this account is granted the **Log on as a service** user right by local Group Policy. If the local Group Policy setting is overwritten by a Group Policy Object (GPO) that is linked to a site, domain, or organizational unit, the NT SERVICE\MSSQL$MICROSOFT##WID account doesn't have the necessary user rights. So WID can't be installed.
+When WID is installed, the `NT SERVICE\MSSQL$MICROSOFT##WID` local virtual account is created. This account is granted the **`Log on as a service`** user right by local Group Policy. If a Group Policy Object (GPO) that's linked to a site, domain, or organizational unit overwrites the local Group Policy setting, the NT SERVICE\MSSQL$MICROSOFT##WID account doesn't have the necessary user rights. So WID can't be installed.
 
 ## Workaround
 
 To work around the issue, use one of the following methods:
 
-- Assign the **Log on as a service** user right to NT SERVICE\ALL SERVICES in the GPO that defines the user right.
+- Assign the **`Log on as a service`** user right to NT SERVICE\ALL SERVICES in the GPO that defines the user right.
 - Exclude the computer from the GPO that defines the user right.
 
 ## More information
