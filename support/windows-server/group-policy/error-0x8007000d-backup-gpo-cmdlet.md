@@ -13,13 +13,13 @@ ms.reviewer: herbertm
 ms.prod-support-area-path: Group Policy management - GPMC or AGPM
 ms.technology: windows-server-group-policy
 ---
-# Error 0x8007000D when you run the Backup-GPO PowerShell CmdLet in Windows Server Core edition
+# Error 0x8007000D when running the Backup-GPO PowerShell CmdLet in Windows Server Core edition
 
-On a computer that is running Windows Server 2016 or Windows Server 2019 Core edition and has Group Policy Management Console (GPMC) feature installed, you can't use the `Backup-GPO` PowerShell CmdLet to back up a group policy that contains folder redirection settings.
+On a computer that is running Windows Server 2016 or Windows Server 2019 Core edition and has the Group Policy Management Console (GPMC) feature installed, the `Backup-GPO` PowerShell CmdLet can't be used to back up a group policy that contains folder redirection settings.
 
 ## PowerShell output example
 
-You receive the following result in the PowerShell window:
+This result appears in the PowerShell window:
 
 ```powershell
 PS C:\> Backup-GPO -Name FolderRedirection -Path <path>
@@ -35,17 +35,17 @@ At line:1 char:1
 
 > [!Note]
 > - The error code **0x8007000D** stands for **ERROR_INVALID_DATA**.
-> - The issue does not occurs when you run this command on a Windows Server 2016 or Windows Server 2019 Desktop version.
+> - The issue doesn't occurs when running this command on a Windows Server 2016 or Windows Server 2019 Desktop version.
 
 ## Cause
 
-This issue is a known issue because some modules aren't present by default in Windows Server Core editions.
+Some modules aren't present by default in Windows Server Core editions.
 
-During backup processing, system checks settings related to the type of policy found. On Windows Server Core version, a library related to the Client-Side Extension (CSE) which is used for Folder Redirection policies isn't present, that leads to raise a COM Exception.
+During the backup process, the system checks settings related to the type of policy found. On Windows Server Core version, a Client-Side Extension (CSE) related library used for Folder Redirection policies isn't present. This causes a COM Exception.
  
-## How to work around this issue
+## Workarounds
  
-Here are three workarounds for this issue.
+Here are three workarounds:
  
 - Run group policy backups on Desktop version of Windows Server 2016 or Windows Server 2019.
 - Run group policy backups remotely from Windows 10 workstation with Remote Service Administration Tools (RSAT) installed for GPMC.
