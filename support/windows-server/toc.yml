@@ -302,8 +302,6 @@
       href: ./identity/event-id-84-occurs-ad-rms-windows-server.md
   - name: Active Directory topology (sites, subnets, and connection objects)
     items:
-    - name: Active Directory services and domains (Part 1)
-      href: ./identity/active-directory-services-domains-part-one.md
     - name: Can't promote a DC to global catalog server
       href: ./identity/cannot-promote-dc-to-global-catalog-server.md
     - name: Fail to create a DFS namespace
@@ -528,8 +526,6 @@
       href: ./identity/lingering-object-liquidator-tool.md
     - name: Troubleshoot AD replication error 8589
       href: ./identity/replication-error-8589.md
-    - name: Troubleshoot Directory Services issues
-      href: ./identity/troubleshoot-directory-services-issues.md
     - name: Use Adminpak to remotely administer computers
       href: ./identity/use-adminpak-remotely-administer-computers.md
     - name: Use Directory Service to manage AD objects
