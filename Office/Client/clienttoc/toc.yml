@@ -761,6 +761,8 @@
           href: ../office-suite-issues/office-docuemnt-image-quality-loss.md
         - name: Manage templates in Office program
           href: ../office-suite-issues/manage-office-program-templates.md
+        - name: Microsoft 365 apps open files from SharePoint On-Premises that aren’t the current version
+          href: ../office-suite-issues/office-opens-outdated-files.md
         - name: Missing file error with a web page file
           href: ../office-suite-issues/web-page-missing-file-error.md
         - name: Missing fonts issue in documents
