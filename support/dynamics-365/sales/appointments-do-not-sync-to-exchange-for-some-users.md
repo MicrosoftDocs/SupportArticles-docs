@@ -34,7 +34,7 @@ Microsoft is aware of an [issue with the Exchange Web Services API](https://gith
 - (GMT+03:00) Istanbul - Turkey Standard Time
 - (GMT+03:00) Minsk - Belarus Standard Time
 - (GMT+04:00) Astrakhan, Ulyanovsk - Astrakhan Standard Time
-- (GMT+04:00) Baku - Azerbaijan Standard Time​
+- (GMT+04:00) Baku - Azerbaijan Standard Time
 - (GMT+04:00) Izhevsk, Samara - Russia Time Zone 3
 - (GMT+04:00) Moscow, St. Petersburg, Volgograd - Russian Standard Time
 - (GMT+04:00) Yerevan - Caucasus Standard Time

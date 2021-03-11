@@ -24,17 +24,17 @@ The products that have a status of TBD are being considered for future compatibi
 
 The following products have been tested or are currently being tested for compatibility with Dynamics CRM 2013. The **Minimum CRM version** and **CRM build number** fields list the minimum Microsoft Dynamics CRM version that has been tested and that is compatible with the listed product.
 
-| Product| Minimum CRM version| CRM build number| Status |
+|Product|Minimum CRM version|CRM build number|Status|
 |---|---|---|---|
 |.NET Framework 4.5.2|Update Rollup 2|6.0.2.46|Compatible|
-|.NET Framework 4.6|SP1 UR4|6.1.4.0145|Compatible| 
+|.NET Framework 4.6|SP1 UR4|6.1.4.0145|Compatible|
 |Active Directory Federation Services in Windows Server 2008 (AD FS 2.0)|RTM|6.0.0.809|Compatible|
 |Active Directory Federation Services in Windows Server 2008 R2|RTM|6.0.0.809|Compatible|
 |Active Directory Federation Services in Windows Server 2012|RTM|6.0.0.809|Compatible|
 |Active Directory Federation Services in Windows Server 2012 R2|RTM|6.0.0.809|Compatible|
 |Apple OS X Yosemite (web client only)|SP1 UR3|6.1.3.119|Compatible|
 |Azure virtual machines ([support for Microsoft Azure virtual machines](/troubleshoot/azure/virtual-machines/server-software-support))|-|-|Not Compatible|
-| [Citrix XenApp 6.5](/previous-versions/dynamicscrm-2013/implementation-guide/hh699743(v=crm.6))|RTM|6.0.0.809|Compatible|
+|[Citrix XenApp 6.5](/previous-versions/dynamicscrm-2013/implementation-guide/hh699743(v=crm.6))|RTM|6.0.0.809|Compatible|
 |CRM 2011 for Outlook Client|Update Rollup 12|5.0.9690.3236|Compatible|
 |Exchange Online (E3 SKU Only)|RTM|6.0.0.809|Compatible|
 |Exchange Server 2000|-|-|Not Compatible|
@@ -49,9 +49,9 @@ The following products have been tested or are currently being tested for compat
 |IIS 7.0|RTM|6.0.0.809|Compatible|
 |IIS 7.5|RTM|6.0.0.809|Compatible|
 |IIS 8.0|RTM|6.0.0.809|Compatible|
-| [Internet Explorer 8 (no longer supported)](https://www.microsoft.com/windowsforbusiness/end-of-ie-support)|RTM|6.0.0.809|Compatible|
-| [Internet Explorer 9 (no longer supported)](https://www.microsoft.com/windowsforbusiness/end-of-ie-support)|RTM|6.0.0.809|Compatible|
-| [Internet Explorer 10 (no longer supported)](https://www.microsoft.com/windowsforbusiness/end-of-ie-support)|RTM|6.0.0.809|Compatible|
+|[Internet Explorer 8 (no longer supported)](https://www.microsoft.com/windowsforbusiness/end-of-ie-support)|RTM|6.0.0.809|Compatible|
+|[Internet Explorer 9 (no longer supported)](https://www.microsoft.com/windowsforbusiness/end-of-ie-support)|RTM|6.0.0.809|Compatible|
+|[Internet Explorer 10 (no longer supported)](https://www.microsoft.com/windowsforbusiness/end-of-ie-support)|RTM|6.0.0.809|Compatible|
 |Internet Explorer 11|Update Rollup 2|6.0.2.43|Compatible|
 |Internet Explorer 12|SP1 UR 4|6.1.4.0145|Compatible|
 |Microsoft Edge|SP1 UR 4|6.1.4.0145|Compatible|

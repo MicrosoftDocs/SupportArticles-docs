@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4477072
 
 ## Symptoms
 
-​After updating a Flow, calls to that Flow from PowerApps start failing.
+After updating a Flow, calls to that Flow from PowerApps start failing.
 
 - If a new input is added to a Flow without a Power App being updated, the Flow will fail with an error message like:
 
@@ -32,7 +32,7 @@ _Original KB number:_ &nbsp; 4477072
 
     > Unable to process template language expressions in action 'Send_an_email' inputs at line '1' and column '1899': 'The template language expression 'json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$connections']['shared_office365']['connectionId']' cannot be evaluated because property 'shared_office365' doesn't exist, available properties are 'shared_flowpush'. Please see `https://aka.ms/logicexpressions` for usage details.'.
 
-- ​If a response output is removed, PowerApps will treat the value as blank and the PowerApp will behave unexpectedly.  
+- If a response output is removed, PowerApps will treat the value as blank and the PowerApp will behave unexpectedly.  
 
 ## Cause
 
@@ -55,7 +55,7 @@ Types of changes most likely to break a PowerApps ability to call a flow include
 - Removing an output from a Respond to PowerApps actions.
 
     :::image type="content" source="media/best-practices-when-updating-a-flow/remove-output.png" alt-text="Removing a Respond to PowerApps output in Flow.":::
-​​​​​​​
+
 Other changes to the inputs or outputs won't break the integration between PowerApps and Flow but will require the Power App to be updated so that it can use them.
 
 ## Resolution

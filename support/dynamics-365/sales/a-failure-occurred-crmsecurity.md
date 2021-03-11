@@ -35,18 +35,18 @@ By default, Dynamics 365 requires that the approval of an email address in Dynam
 If you select the **Download Log File** button, you see details like the following example:
 
 > "Unhandled Exception: System.ServiceModel.FaultException'1[[Microsoft.Xrm.Sdk.OrganizationServiceFault, Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]: System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> Microsoft.Crm.CrmException: The Queue: a5efd992-dbc6-48af-ad61-09e0258edb68 email `example@contoso.com` doesn't match with UPN. User 39ff663e-a75a-e811-a986-000d3a3672b5 should be a global administrator to approve mailbox in organization 6b591077-eeba-4e6b-ae2b-e259a3249388.  
-at Microsoft.Crm.Dialogs.ApproveEmailAddressDialogPage.ConfigureForm()​  
-at Microsoft.Crm.Application.Controls.AppUIPage.OnPreRender(EventArgs e)​  
-at Microsoft.Crm.Application.Controls.AppPage.OnPreRender(EventArgs e)​  
-at System.Web.UI.Control.PreRenderRecursiveInternal()​  
-at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)​  
-at System.Web.UI.Page.HandleError(Exception e)​  
-at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)​  
-at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)​  
-at System.Web.UI.Page.ProcessRequest()​  
-at System.Web.UI.Page.ProcessRequest(HttpContext context)​  
-at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()​  
-at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)​  
+at Microsoft.Crm.Dialogs.ApproveEmailAddressDialogPage.ConfigureForm()  
+at Microsoft.Crm.Application.Controls.AppUIPage.OnPreRender(EventArgs e)  
+at Microsoft.Crm.Application.Controls.AppPage.OnPreRender(EventArgs e)  
+at System.Web.UI.Control.PreRenderRecursiveInternal()  
+at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)  
+at System.Web.UI.Page.HandleError(Exception e)  
+at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)  
+at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)  
+at System.Web.UI.Page.ProcessRequest()  
+at System.Web.UI.Page.ProcessRequest(HttpContext context)  
+at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()  
+at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)  
 at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&
 completedSynchronously): Microsoft Dynamics CRM has experienced an error. Reference number
 for administrators or support: #3A5E4FEADetail:  
@@ -54,29 +54,29 @@ for administrators or support: #3A5E4FEADetail:
   \<ActivityId>1174984e-933a-4577-b387-679ddc61f455\</ActivityId  
   \<ErrorCode> \*\*-2147220970\*\* \</ErrorCode>  
   \<ErrorDetails xmlns:d2p1="https://schemas.datacontract.org/2004/07/System.Collections.Generic" />  
-    \<Message>System.Web.HttpUnhandledException (0x80004005): Exception of type \'System.Web.HttpUnhandledException\' was thrown. ---&gt; Microsoft.Crm.CrmException: \*\*The Queue: a5efd992-dbc6-48af-ad61-09e0258edb68 email `example@contoso.com` doesn't match with UPN. User 39ff663e-a75a-e811-a986-000d3a3672b5 should be a global administrator to approve mailbox in organization 6b591077-eeba-4e6b-ae2b-e259a3249388\*\*.​  
+    \<Message>System.Web.HttpUnhandledException (0x80004005): Exception of type \'System.Web.HttpUnhandledException\' was thrown. ---&gt; Microsoft.Crm.CrmException: \*\*The Queue: a5efd992-dbc6-48af-ad61-09e0258edb68 email `example@contoso.com` doesn't match with UPN. User 39ff663e-a75a-e811-a986-000d3a3672b5 should be a global administrator to approve mailbox in organization 6b591077-eeba-4e6b-ae2b-e259a3249388\*\*.  
    at Microsoft.Crm.Dialogs.ApproveEmailAddressDialogPage.ConfigureForm()  
-   at Microsoft.Crm.Application.Controls.AppUIPage.OnPreRender(EventArgs e)​  
-   at Microsoft.Crm.Application.Controls.AppPage.OnPreRender(EventArgs e)​  
-   at System.Web.UI.Control.PreRenderRecursiveInternal()​  
-   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)​  
-   at System.Web.UI.Page.HandleError(Exception e)​  
+   at Microsoft.Crm.Application.Controls.AppUIPage.OnPreRender(EventArgs e)  
+   at Microsoft.Crm.Application.Controls.AppPage.OnPreRender(EventArgs e)  
+   at System.Web.UI.Control.PreRenderRecursiveInternal()  
    at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)  
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)​  
-   at System.Web.UI.Page.ProcessRequest()​  
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)​  
+   at System.Web.UI.Page.HandleError(Exception e)  
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)  
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)  
+   at System.Web.UI.Page.ProcessRequest()  
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)  
    at
-System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()​  
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)​  
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously): Microsoft Dynamics CRM has experienced an error. Reference number for administrators or support: #3A5E4FEA</Message>​  
+System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()  
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)  
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously): Microsoft Dynamics CRM has experienced an error. Reference number for administrators or support: #3A5E4FEA</Message>  
   \<Timestamp>2018-12-04T18:17:41.8971683Z\</Timestamp  
   \<ExceptionRetriable>false</ExceptionRetriable>  
-  \<ExceptionSource i:nil="true" />​  
-  \<InnerFault>​  
+  \<ExceptionSource i:nil="true" />  
+  \<InnerFault>  
   \<ActivityId>1174984e-933a-4577-b387-679ddc61f455</ActivityId  
-  \<ErrorCode> \*\*-2147220906\*\* \</ErrorCode>​
-\<ErrorDetails xmlns:d3p1="https://schemas.datacontract.org/2004/07/System.Collections.Generic" />  ​
-\<Message>The Queue: a5efd992-dbc6-48af-ad61-09e0258edb68 email `testdl@MyContosoDemo.onmicrosoft.com` doesn't match with UPN. User 39ff663e-a75a-e811-a986-000d3a3672b5 should be a global administrator to approve mailbox in organization 6b591077-eeba-4e6b-ae2b-e259a3249388.\</Message>  ​
+  \<ErrorCode> \*\*-2147220906\*\* \</ErrorCode>
+\<ErrorDetails xmlns:d3p1="https://schemas.datacontract.org/2004/07/System.Collections.Generic" />  
+\<Message>The Queue: a5efd992-dbc6-48af-ad61-09e0258edb68 email `testdl@MyContosoDemo.onmicrosoft.com` doesn't match with UPN. User 39ff663e-a75a-e811-a986-000d3a3672b5 should be a global administrator to approve mailbox in organization 6b591077-eeba-4e6b-ae2b-e259a3249388.\</Message>  
 \<Timestamp>2018-12-04T18:17:41.8981705Z\</Timestamp  
 \<ExceptionRetriable>false\</ExceptionRetriable>  
 \<ExceptionSource i:nil="true" />  
@@ -86,4 +86,4 @@ System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.I
 \</InnerFault>  
 \<OriginalException i:nil="true" />  
 \<TraceText i:nil="true" />  
-\</OrganizationServiceFault>​"
+\</OrganizationServiceFault>"

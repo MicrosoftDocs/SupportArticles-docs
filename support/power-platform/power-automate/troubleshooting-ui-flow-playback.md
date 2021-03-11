@@ -43,21 +43,21 @@ If the scenario isn't mentioned above, you can try if the following steps help t
 
 Playback
 
-- Don't use the keyboard and mouse during playback​.
-- Try to adjust your app has the same initial state as the recording time​.
-- Use the same keyboard and locale setting as recording time​.
-- If you're using coordinate offset fallback​
-  - Current coordinate-based fallback is conservative and ensures the control is the same as what was recorded, including the size​.
-  - Use the same resolution and scale setting as recording time.​
-  - Maximize the app size to minimize disruption​.
+- Don't use the keyboard and mouse during playback.
+- Try to adjust your app has the same initial state as the recording time.
+- Use the same keyboard and locale setting as recording time.
+- If you're using coordinate offset fallback
+  - Current coordinate-based fallback is conservative and ensures the control is the same as what was recorded, including the size.
+  - Use the same resolution and scale setting as recording time.
+  - Maximize the app size to minimize disruption.
 
-​Recording
+Recording
 
 - Ensure the same keyboard layouts you're using to record will be the same as for playback.
 - Use shortcuts instead of selecting. For instance, copy paste with ctrl + c & ctrl + v instead of right-click copy.
-- Use **enter static text** if you're working with strings for better readability​.
+- Use **enter static text** if you're working with strings for better readability.
 - When you insert text into a field already have text inside, you should select ctrl+A and backspace to clear up the field first.
-- Playback uses accessibility by default, it can fallback to coordinate as well if you turn it on​.
-  - Use a standard resolution, and scale setting that across your recording and playback devices​.
-  - Maximize the application window that you're recording​.
-  - Finish the recording in one monitor if possible​.
+- Playback uses accessibility by default, it can fallback to coordinate as well if you turn it on.
+  - Use a standard resolution, and scale setting that across your recording and playback devices.
+  - Maximize the application window that you're recording.
+  - Finish the recording in one monitor if possible.
