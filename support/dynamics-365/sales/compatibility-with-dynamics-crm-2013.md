@@ -111,7 +111,6 @@ The following products have been tested or are currently being tested for compat
 |Windows Server 2012 Standard|RTM|6.0.0.809|Compatible|
 |Windows Server 2012 R2 (CRM server)|Update Rollup 2|6.0.2.43|Compatible|
 |Windows Small Business Server|-|-|Not compatible|
-|||||
 
 \* For non-production environments only.
 

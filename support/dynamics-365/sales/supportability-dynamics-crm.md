@@ -64,49 +64,49 @@ The following support is provided for these components with Microsoft Dynamics C
 
 | Platform| Browser| App| CRM 2016 version| Build number |
 |---|---|---|---|---|
-|Android 4.4|Yes|Yes|RTM|8.0.0.2074||
-|Android 5.0|Yes|Yes|RTM|8.0.0.2074||
+|Android 4.4|Yes|Yes|RTM|8.0.0.2074|
+|Android 5.0|Yes|Yes|RTM|8.0.0.2074|
 |Blackberry 6|Yes|No|RTM|8.0.0.2074|
 |Blackberry 7|Yes|No|RTM|8.0.0.2074|
 |Blackberry 10|Yes|No|RTM|8.0.0.2074|
 |iOS7|Yes|Yes|RTM|8.0.0.2074|
-|iOS8|Yes|Yes|RTM|8.0.0.2074||
-|iOS9|Yes|Yes|RTM|8.0.0.2074||
-|Windows Phone 8.1|Yes|Yes|RTM|8.0.0.2074||
-|Windows Phone 10|Yes|Yes|RTM|8.0.0.2074||
+|iOS8|Yes|Yes|RTM|8.0.0.2074|
+|iOS9|Yes|Yes|RTM|8.0.0.2074|
+|Windows Phone 8.1|Yes|Yes|RTM|8.0.0.2074|
+|Windows Phone 10|Yes|Yes|RTM|8.0.0.2074|
 
 ### CRM for Phones support for Dynamics CRM 2015
 
 | Platform| Browser| App| CRM 2015 version| Build number |
 |---|---|---|---|---|
-|Android 4.0|Yes|Yes|RTM|7.0.0.3543||
-|Android 4.1|Yes|Yes|RTM|7.0.0.3543||
-|Android 4.2|Yes|Yes|RTM|7.0.0.3543||
-|Android 4.3|Yes|Yes|RTM|7.0.0.3543||
-|Android 4.4|Yes|Yes|RTM with October 2014 App Update|7.0.0.3543||
+|Android 4.0|Yes|Yes|RTM|7.0.0.3543|
+|Android 4.1|Yes|Yes|RTM|7.0.0.3543|
+|Android 4.2|Yes|Yes|RTM|7.0.0.3543|
+|Android 4.3|Yes|Yes|RTM|7.0.0.3543|
+|Android 4.4|Yes|Yes|RTM with October 2014 App Update|7.0.0.3543|
 |Blackberry 6|Yes|No|RTM|7.0.0.3543|
 |Blackberry 7|Yes|No|RTM|7.0.0.3543|
 |Blackberry 10|Yes|No|RTM|7.0.0.3543|
 |iOS6|Yes|Yes|RTM|7.0.0.3543|
-|iOS7|Yes|Yes|RTM|7.0.0.3543||
-|iOS8|Yes|Yes|RTM with CRM 2015 App Update|7.0.0.3543||
-|Windows Phone 8|Yes|Yes|RTM|7.0.0.3543||
-|Windows Phone 8.1|Yes|Yes|RTM|7.0.0.3543||
+|iOS7|Yes|Yes|RTM|7.0.0.3543|
+|iOS8|Yes|Yes|RTM with CRM 2015 App Update|7.0.0.3543|
+|Windows Phone 8|Yes|Yes|RTM|7.0.0.3543|
+|Windows Phone 8.1|Yes|Yes|RTM|7.0.0.3543|
 
 ### CRM for Phones support for Dynamics CRM 2013
 
 | Platform| Browser| App| CRM 2013 version| Build number |
 |---|---|---|---|---|
-|Android 4.0|Yes|Yes|RTM|6.0.0.809||
-|Android 4.1|Yes|Yes|RTM|6.0.0.809||
-|Android 4.2|Yes|Yes|RTM|6.0.0.809||
-|Android 4.3|Yes|Yes|RTM|6.0.0.809||
-|Android 4.4|Yes|Yes|SP1 UR3|6.1.0.581||
+|Android 4.0|Yes|Yes|RTM|6.0.0.809|
+|Android 4.1|Yes|Yes|RTM|6.0.0.809|
+|Android 4.2|Yes|Yes|RTM|6.0.0.809|
+|Android 4.3|Yes|Yes|RTM|6.0.0.809|
+|Android 4.4|Yes|Yes|SP1 UR3|6.1.0.581|
 |Blackberry 6|Yes|No|RTM|6.0.0.809|
 |Blackberry 7|Yes|No|RTM|6.0.0.809|
 |Blackberry 10|Yes|No|RTM|6.0.0.809|
 |iOS6|Yes|Yes|RTM|6.0.0.809|
-|iOS7|Yes|Yes|RTM|6.0.0.809||
-|iOS8|Yes|Yes|SP1 UR3|6.1.3.119||
-|Windows Phone 8|Yes|Yes|RTM|6.0.0.809||
-|Windows Phone 8.1|Yes|Yes|RTM|6.0.0.809||
+|iOS7|Yes|Yes|RTM|6.0.0.809|
+|iOS8|Yes|Yes|SP1 UR3|6.1.3.119|
+|Windows Phone 8|Yes|Yes|RTM|6.0.0.809|
+|Windows Phone 8.1|Yes|Yes|RTM|6.0.0.809|

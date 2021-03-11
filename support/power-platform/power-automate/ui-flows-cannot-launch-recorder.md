@@ -39,7 +39,7 @@ UI flows recorder won't launch. Instead, the UI flows wizard will prompt you to 
 
     There should be an icon in the system tray:
 
-    :::image type="content" source="media/imui-flows-cannot-launch-recorder/iconage.png" alt-text="UI Flows tray icon.":::
+    :::image type="content" source="media/ui-flows-cannot-launch-recorder/icon.png" alt-text="UI Flows tray icon.":::
 
     If the icon isn't present, you can manually start the service by searching for **UI flows** in the **start** menu:
 
