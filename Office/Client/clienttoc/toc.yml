@@ -637,6 +637,8 @@
           href: ../installation/office-installtion-need-msxml.md
         - name: Office setup issues
           href: ../installation/office-setup-issues.md
+        - name: Use SaRA to collect data about Microsoft 365 Apps installations
+          href: ../installation/use-sara-to-collect-install-info.md
         - name: The ability to uninstall Office updates
           href: ../installation/ability-to-uninstall-office.md
         - name: Windows Installer service could not be accessed
