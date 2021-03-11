@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: rspitz, kaushika
 ms.prod-support-area-path: Cannot bring a resource online
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Network Name resource fails to come online in a Windows Server 2008 R2 Service Pack 1 failover cluster
 

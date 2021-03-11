@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Connecting to a session or desktop
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Event ID 10000 is logged in the Application log on a Windows Server 2003-based computer that has Terminal Server enabled
 

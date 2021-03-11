@@ -22,10 +22,10 @@ In this scenario, you experience the following issues:
 
 - Existing clients can't download content from the CMG. Errors entries that resemble the following are logged in DataTransferservice.log:
 
-  > 12-28-2018 16:06:39.334    DataTransferService    3544 (0xdd8)    Target URL scheme is HTTPS: https://\<CMGname>.cloudapp.net:443/downloadrestservice.svc/getcontentxmlsecure?pid=XXX00052&cid=XXX00052&tid=GUID:\<GUID>&iss=\<MPserver>.Internal.fqdn&alg=1.2.840.113549.1.1.11&st=2018-12-28T22:06:39&et=2018-12-29T06:06:39  
+  > 12-28-2018 16:06:39.334 &nbsp; &nbsp;DataTransferService &nbsp; &nbsp;3544 (0xdd8) &nbsp; &nbsp;Target URL scheme is HTTPS: https://\<CMGname>.cloudapp.net:443/downloadrestservice.svc/getcontentxmlsecure?pid=XXX00052&cid=XXX00052&tid=GUID:\<GUID>&iss=\<MPserver>.Internal.fqdn&alg=1.2.840.113549.1.1.11&st=2018-12-28T22:06:39&et=2018-12-29T06:06:39  
   > [CCMHTTP] AsyncCallback(): WINHTTP_CALLBACK_STATUS_SECURE_FAILURE Encountered  
-  > 12-28-2018 16:06:39.391    DataTransferService    3544 (0xdd8)  
-  > [CCMHTTP]            : WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID is set
+  > 12-28-2018 16:06:39.391 &nbsp; &nbsp;DataTransferService &nbsp; &nbsp;3544 (0xdd8)  
+  > [CCMHTTP] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID is set
 
 - Client files can't be downloaded from CMG to set up new clients. Errors entries that resemble the following are logged in Ccmsetup.log:
 
@@ -36,17 +36,17 @@ In this scenario, you experience the following issues:
   > [CCMHTTP] ERROR: URL=https://\<CMGname>.cloudapp.net/downloadrestservice.svc/getcontentxmlsecure?pid=XXX002B9&cid=XXX002B9, Port=0, Options=224, Code=0, Text=CCM_E_NO_CLIENT_PKI_CERT 19/02/2019 13:49:35 ccmsetup 8548 (0x2164)  
   > GetDirectoryList failed with a non-recoverable failure, 0x87d00454 19/02/2019 13:49:35 ccmsetup 8548 (0x2164)  
   > Failed to get directory list from 'https://\<CMGname>.cloudapp.net/downloadrestservice.svc/getcontentxmlsecure?pid=XXX002B9&cid=XXX002B9'. Error 0x87d00454 19/02/2019 13:49:35 ccmsetup 8548 (0x2164)  
-  > Failed to correctly receive a WEBDAV HTTPS request.. (StatusCode at WinHttpQueryHeaders: 0) and StatusText: ''  19/02/2019 13:49:35 ccmsetup 8548 (0x2164)  
+  > Failed to correctly receive a WEBDAV HTTPS request.. (StatusCode at WinHttpQueryHeaders: 0) and StatusText: '' &nbsp;19/02/2019 13:49:35 ccmsetup 8548 (0x2164)  
   > Failed to check url https://\<CMGname>.cloudapp.net/downloadrestservice.svc/getcontentxmlsecure?pid=XXX002B9&cid=XXX002B9. Error 0x80004005 19/02/2019 13:49:35 ccmsetup 8548 (0x2164)  
   > [CCMHTTP] AsyncCallback(): WINHTTP_CALLBACK_STATUS_SECURE_FAILURE Encountered 19/02/2019 13:49:36 ccmsetup 8548 (0x2164)  
-  > [CCMHTTP]            : WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID is set
+  > [CCMHTTP] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID is set
 
 > [!NOTE]
 > **WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID** means that the host name in the certificate common name is incorrect.
 
 ## Cause
 
-This issue occurs because the clients try to access the CMG cloud service by looking for the default FQDN of \<*CMGname*>.CloudApp.net, and this name doesn't match the actual FQDN of \<*CMGname*>.\<*your domain*>. Therefore, the **WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID** error is reported.
+This issue occurs because the clients try to access the CMG cloud service by looking for the default FQDN of \<*CMGname*>.CloudApp.net, and this name doesn't match the actual FQDN of \<*CMGname*>.\<*your domain*>. Therefore, the **WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID** error is reported.
 
 > [!NOTE]
 > When you enable CMG as a cloud distribution point, the globally unique CMG service name that you choose must also be a globally unique Azure storage account name. An Azure storage account name is always created under the CloudApp.net subdomain. Because the CloudApp.net domain is owned by Microsoft, a third-party certificate provider can't create a certificate for CloudApp.net.

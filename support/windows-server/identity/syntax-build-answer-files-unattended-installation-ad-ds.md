@@ -1,7 +1,7 @@
 ---
-title: How to use unattended mode to install and remove Active Directory Domain Services on Windows Server 2008-based domain controllers
+title: DCPROMO answer file syntax for unattended promotion and demotion of domain controllers, Windows Server 2003 version
 description: Describes the parameters and options that are used in the answer file to install and remove AD DS on domain controllers.
-ms.date: 09/07/2020
+ms.date: 02/09/2021
 author: Deland-Han
 ms.author: delhan
 manager: dscontentpm
@@ -11,44 +11,57 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: justinha, kaushika
 ms.prod-support-area-path: DCPromo and the installation of domain controllers
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
-# How to use unattended mode to install and remove Active Directory Domain Services on Windows Server 2008-based domain controllers
 
-This article describes the parameters and options that are used in the answer file to install and remove AD DS on domain controllers.
+# DCPROMO answer file syntax for unattended promotion and demotion of domain controllers, Windows Server 2003 version
+
+This article describes the parameters and options that are used in the DCPROMO answer file to install and remove Active Directory Domain Services (AD DS) on domain controllers.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;947034
 
 ## Summary
 
-This article describes the syntax that you use to build answer files to perform unattended installations of Active Directory Domain Services on Windows Server 2008-based domain controllers. You can also use the answer files to remove AD DS in unattended mode.
+This article describes the syntax that you use to build answer files to perform unattended installations of AD DS on Windows Server 2008-based domain controllers. You can also use the answer files to remove AD DS in unattended mode.
 
 ## Introduction
 
-The Active Directory Domain Services Installation Wizard (Dcpromo.exe) performs the following tasks:
+The Dcpromo.exe program (DCPROMO) was introduced in Microsoft Windows 2000 Server to provide a GUI method of promoting and demoting Active Directory domain controllers. Administrators can use DCPROMO answer files to do the following unattended tasks:
 
-- Installs Active Directory Domain Services (AD DS) on Windows Server 2008-based workgroup servers and member servers
-- Removes AD DS from Windows Server 2008-based domain controllers
+- Promote workgroup and member servers to Active Directory domain controllers.
+- Upgrade Microsoft Windows NT 4.0 domain controllers to Active Directory domain controllers.
+- Demote domain controllers.
 
-You can use this wizard together with an answer file to perform these tasks in unattended mode.
+Windows Server 2003 updated the syntax for DCPROMO answer files.
+
+Windows Server 2012 replaced DCPROMO with PowerShell cmdlets. However, the Windows Server 2003 version of the DCPROMO answer file syntax remains fully supported on the following Windows versions:
+
+- Windows Server 2019
+- Windows Server 2016
+- Windows Server 2012 R2
+- Windows Server 2012
+- Windows Server 2008 R2
+- Windows Server 2008
 
 ## More information
 
-The answer file is an ASCII text file that provides automated user input for each page of the Active Directory Domain Services Installation Wizard.
+The DCPROMO answer file is an ASCII text file that provides automated user input for each page of the DCPROMO wizard.
 
-To run the Active Directory Domain Services Installation Wizard in unattended mode, use the following command at a command prompt:
+Subtle differences exist between the DCPROMO answer file syntax in Windows 2000 Server and in Windows Server 2003. Despite these differences, Windows Server 2003 can read the Windows 2000 Server answer file syntax and interpret equivalent settings. However, the Windows Server 2003 answer file syntax may not work correctly on a Windows 2000 Server domain controller. For example, Windows 2000 Server cannot use the `RemoveApplicationPartitions` and `ConfirmGc` options.
+
+If you have to use the same answer files on both Windows 2000 Server and Windows Server 2003 domain controllers, use the answer file syntax that is described in this article.
+
+To start DCPROMO in unattended mode, open an administrative Command Prompt window, and run the following command:
 
 ```console
-dcpromo /unattend:<path of the answer file>
+dcpromo /answer:<answer.txt>
 ```
 
-> [!NOTE]
-> The \<path of the answer file> placeholder represents the path of the answer file that will be used to install or remove AD DS. You must be logged on as a local administrator for the computer to run this command.
+> [!NOTE]  
+> In this command, \<*answer.txt*> is the path and file name of the answer file that will be used for demotion or promotion. You can use this command whether you use the **Start** > **Run** command or an unattended Setup file.
 
-### Field values
-
-Fields in the "[DCInstall]" section of the answer file specify the details of the installation or removal operation. The following list provides the common fields that are used for each operation. The default values are used if the option isn't specified. The default values for these fields are described in the "Field definitions" section.
+Each DCPROMO operation requires answers to specific fields in the [DCInstall] section of the answer file. The following list provides the required fields for each operation. The default values are used if the option is not specified. The default values for these fields are described in [Field Definitions](#field-definitions).
 
 - For new forest installations, the following options apply:
 

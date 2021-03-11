@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ahmedb, dewitth
 ms.prod-support-area-path: Initial Cluster Creation or Adding node
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # You receive an error message, and event ID 1289 is logged when you try to create a cluster 
 

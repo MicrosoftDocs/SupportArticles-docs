@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DNS
-ms.technology: Networking
+ms.technology: networking
 ---
 # How to move Windows DNS zones to another Windows server  
 
@@ -69,9 +69,3 @@ To move zone files from one server to another, follow these steps:
 > - Logging
 > - Security
 > - Any specific registry setting made under any keys other than the key that is specified in step 5 and step 7
-
-## References
-
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[172221](https://support.microsoft.com/help/172221) How to move one or more zone files to a new Windows NT DNS server

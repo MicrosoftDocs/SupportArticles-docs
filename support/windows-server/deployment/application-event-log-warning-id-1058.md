@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, match
 ms.prod-support-area-path: Activation
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Application Event Log Warning ID 1058 (Security-SPP) may be logged after reboot on OEM systems
 

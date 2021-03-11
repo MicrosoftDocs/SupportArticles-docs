@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Server Manager
-ms.technology: SysManagementComponents
+ms.technology: windows-client-system-management-components
 ---
 # DNS manager console is missing for RSAT client in Windows 10
 
@@ -53,7 +53,8 @@ This article provides alternative steps to install the RSATClient so that all to
 
 ```console
 @echo off
-md ex expand -f:* WindowsTH-RSAT_WS_1709-x64.msu ex\
+md ex
+expand -f:* WindowsTH-RSAT_WS_1709-x64.msu ex\
 cd ex
 md ex
 copy ..\unattend_x64.xml ex\

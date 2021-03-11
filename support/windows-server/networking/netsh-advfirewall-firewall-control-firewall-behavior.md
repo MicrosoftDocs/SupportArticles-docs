@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Windows Firewall with Advanced Security (WFAS)
-ms.technology: Networking
+ms.technology: networking
 ---
 # Use netsh advfirewall firewall instead of netsh firewall to control Windows Firewall behavior
 

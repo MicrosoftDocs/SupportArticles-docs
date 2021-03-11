@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mniehaus, aaroncz
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # MDT Media Deployment USB drive not bootable on x86 UEFI system
 

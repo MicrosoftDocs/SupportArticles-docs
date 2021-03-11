@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davfish, clandis
 ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
-ms.technology: Networking
+ms.technology: networking
 ---
 # About the DFS Namespaces service and its configuration data
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # Windows Deployment Service fails to start with error information of 0x5
 

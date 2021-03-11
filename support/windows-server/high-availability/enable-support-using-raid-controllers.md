@@ -1,5 +1,5 @@
 ---
-title: Enable support using RAID controllers
+title: Enable support for Clustered Windows Servers that use clustered RAID controllers
 description: Describes the steps required to enable a Direct Attached clustered RAID Storage Solution for Clustered Windows Servers.
 ms.date: 09/17/2020
 author: Deland-Han 
@@ -11,13 +11,13 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Setup and configuration of clustered services and applications
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
-# Enable Support for Clustered Windows Servers using clustered RAID controllers
+# Enable support for Clustered Windows Servers that use clustered RAID controllers
 
-This article provides a solution to an issue occurs when you run a cluster validation wizard.
+This article provides a solution to an issue where the validation may fail when you run a cluster validation wizard for Windows Server-based Failover Cluster.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2839292
 
 ## Symptoms
@@ -44,15 +44,15 @@ To add the key to the registry, follow these steps:
 2. Locate and then select the following registry subkey:
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ClusDIsk\Parameters`
-3. Right-click on the Parameters key and then choose New.
-4. Select DWORD and give it a name of AllowBusTypeRAID.
+3. Right-click **Parameters** and then select **New**.
+4. Select **DWORD** and give it a name of **AllowBusTypeRAID**.
 5. Once the key is created, give it a value of 0x01.
-6. Click on OK.
+6. Click **OK**.
 7. Exit the Registry editor.
 8. Restart the computer.
 
 ## More information
 
-For more information on validated solutions for Cluster in a Box Validation Kit, visit the following TechNet article:
+For more information on validated solutions for Cluster in a Box Validation Kit, visit the following article:
 
-[https://technet.microsoft.com/windowsserver/jj542413.aspx](https://technet.microsoft.com/windowsserver/jj542413.aspx)
+[Windows Server Storage documentation](/windows-server/storage/storage)

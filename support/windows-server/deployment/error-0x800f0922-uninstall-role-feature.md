@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment 
+ms.technology: windows-server-deployment 
 ---
 # Error 0x800f0922 when trying to uninstall Windows Server roles or features
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4094128
 
 ## Symptoms
 
-When you try to uninstall a Windows Server role or feature by using **Server Manager** or the PowerShell cmdlet `Uninstall-WindowsFeature`, the attempt fails, and you receive error code **0x800f0922** and the following error message: 
+When you try to uninstall a Windows Server role or feature by using **Server Manager** or the PowerShell cmdlet `Uninstall-WindowsFeature`, the attempt fails, and you receive error code **0x800f0922** and the following error message: 
 
 > CBS_E_INSTALLERS_FAILED  
 Processing advanced installers and generic commands failed
@@ -64,8 +64,8 @@ SQM: Upload requested for report: PackageChangeEnd_Microsoft-Windows-Deployment-
 SQM: Ignoring upload request because the sample type is not enabled: Standard  
 FinalCommitPackagesState: Completed persisting state of packages  
 Enabling LKG boot option  
-Exec: Processing complete.  Session: 30651968_3203616141, Package: Microsoft-Windows-ServerCore-Package~31bf3856ad364e35~amd64`~~`6.3.9600.16384 [HRESULT = 0x800f0922 - CBS_E_INSTALLERS_FAILED]  
-Failed to perform operation.  [HRESULT = 0x800f0922 - CBS_E_INSTALLERS_FAILED]  
+Exec: Processing complete.  Session: 30651968_3203616141, Package: Microsoft-Windows-ServerCore-Package~31bf3856ad364e35~amd64`~~`6.3.9600.16384 [HRESULT = 0x800f0922 - CBS_E_INSTALLERS_FAILED]  
+Failed to perform operation.  [HRESULT = 0x800f0922 - CBS_E_INSTALLERS_FAILED]  
 Session: 30651968_3203616141 finalized. Reboot required: no [HRESULT = 0x800f0922 - CBS_E_INSTALLERS_FAILED]  
 Failed to FinalizeEx using worker session [HRESULT = 0x800f0922]
 
@@ -75,4 +75,4 @@ This issue can occur if there are more than 65,000 files in the Windows Temp dir
 
 ## Resolution
 
-To resolve the problem, delete the contents of the Windows Temp folder (normally `C:\Windows\Temp`), and then again try to remove the Windows Server role or feature.
+To resolve the problem, delete the contents of the Windows Temp folder (normally `C:\Windows\Temp`), and then again try to remove the Windows Server role or feature.

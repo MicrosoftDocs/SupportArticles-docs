@@ -11,13 +11,13 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: System Hang
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Windows registry information for advanced users
 
 This article describes the Windows registry and provides information about how to edit and back up it.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 256986
 
 ## Description of the registry

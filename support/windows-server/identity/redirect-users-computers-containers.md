@@ -1,6 +1,6 @@
 ---
 title: Redirect users and computers containers
-description: This article describes how to use the redirusr and redircmp utilities to redirect user, computer, and group accounts in Active Directory domains.
+description: Describes how to use redirusr and redircmp to redirect user, computer, and group accounts in Active Directory domains.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -11,25 +11,25 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User, computer, group, and object management
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Redirect the users and computers containers in Active Directory domains
 
-This article describes how to use the redirusr and redircmp utilities to redirect user, computer, and group accounts that are created by earlier-version APIs so that they are put in admin-specified organizational unit containers.
+You can use redirusr and redircmp to redirect user, computer, and group accounts that are created by earlier-version APIs. So they are put in admin-specified organizational unit (OU) containers.
 
 _Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 324949
 
 ## Summary
 
-In a default installation of an Active Directory domain, user accounts, computer accounts, and groups are put in CN=objectclass containers instead of being put in a more desirable organizational unit class container. Similarly, user accounts, computer accounts, and groups that were created by using earlier-version APIs are put in the CN=Users and CN=computers containers.
+In a default installation of an Active Directory domain, user, computer, and group accounts are put in CN=objectclass containers instead of a more desirable OU class container. Similarly, the accounts that were created by using earlier-version APIs are put in the CN=Users and CN=computers containers.
 
 > [!IMPORTANT]
 > Some applications require specific security principals to be located in default containers like CN=Users or CN=Computers. Verify that your applications have such dependencies before you move them out of the CN=users and CN=computes containers.
 
 ## More information
 
-Users, computers, and groups that are created by earlier-version APIs place objects in the DN path that is specified in the WellKnownObjects attribute that is located in the domain NC head. The following code example shows the relevant paths in the WellKnownObjects attribute from the CONTOSO.COM domain NC head.
+Users, computers, and groups created by earlier-version APIs place objects in the DN path that's specified in the WellKnownObjects attribute. The WellKnownObjects attribute is located in the domain NC head. The following code example shows the relevant paths in the WellKnownObjects attribute from the CONTOSO.COM domain NC head.
 
 Dn: DC=CONTOSO,DC=COM
 
@@ -48,7 +48,7 @@ B:32:AA312825768811D1ADED00C04FD8D5CD:CN=Computers,DC=CONTOSO,DC=COM;
 B:32:A9D1CA15768811D1ADED00C04FD8D5CD:CN=Users,DC=GPN,DC=COM;
 ```
 
-Examples of operations that use earlier-version APIs that reply on the paths that are defined in the WellKnownObjects attribute include the following.
+For example, the following operations use earlier-version APIs, which reply on the paths defined in the WellKnownObjects attribute:
 
 | Operation| Operating system versions |
 |---|---|
@@ -59,42 +59,42 @@ Examples of operations that use earlier-version APIs that reply on the paths tha
 |NETDOM ADD, where the /ou command is either not specified or supported|All versions|
 |||
 
-It is helpful to make the default container for user, computer, and security groups an organizational unit for several reasons, including the following:
+It's helpful to make the default container for user, computer, and security groups an OU for several reasons, including:
 
-- Group policies can be applied on organizational unit containers but not on CN class containers, where security principals are put by default.
+- Group policies can be applied on OU containers but not on CN class containers, where security principals are put by default.
 
-- The best practice is to arrange security principals into an organizational unit hierarchy that mirrors your organizational structure, geographic layout, or administration model.
+- The best practice is to arrange security principals into an OU hierarchy that mirrors your organizational structure, geographic layout, or administration model.
 
-If you are redirecting the CN=Users and CN=Computers folders, be aware of the following issues:
+If you're redirecting the CN=Users and CN=Computers folders, be aware of the following issues:
 
-- The target domain must be configured to run in the Windows Server 2003 domain functional level or higher. For the Windows Server 2003 domain functional level, this means that:
+- The target domain must be configured to run in the Windows Server 2003 domain functional level or higher. For the Windows Server 2003 domain functional level, it means that:
 
   - Windows Server 2003 `ADPREP /FORESTPREP` or newer
   - Windows Server 2003 `ADPREP /DOMAINPREP` or newer
   - All domain controllers in the target domain must run Windows Server 2003 or newer.
   - Windows Server 2003 domain functional level or higher must be enabled.
 
-- Unlike CN=USERS and CN=COMPUTERS, organizational unit containers are subject to accidental deletions by privileged user accounts, including administrators.
+- Unlike CN=USERS and CN=COMPUTERS, OU containers are subject to accidental deletions by privileged user accounts, including administrators.
 
-    CN=USERS and CN=COMPUTERS containers are system-protected objects that cannot, and must not, be removed for backward compatibility. However, they can be renamed. Organizational units, on the other hand, are subject to accidental tree deletions by administrators.
+    CN=USERS and CN=COMPUTERS containers are system-protected objects that can't, and mustn't, be removed for backward compatibility. But they can be renamed. Organizational units are subject to accidental tree deletions by administrators.
 
     Windows Server 2003 versions of the Active Directory Users & Computers snap-in can follow the steps in [Protect an Organizational Unit from Accidental Deletion](https://gallery.technet.microsoft.com/scriptcenter/c307540f-bd91-485f-b27e-995ae5cea1e2).
 
-    Windows Server 2008 and newer versions of the Active Directory Users and Computers snap-in feature a **Protect object against accidental deletion** check box that you can click to select when you create a new organizational unit container. You can also select this check box on the **Object** tab of the **Properties** dialog box for an existing organizational unit container.
+    Windows Server 2008 and newer versions of the Active Directory Users and Computers snap-in feature a **Protect object against accidental deletion** check box that you can select when you create a new OU container. You can also select it on the **Object** tab of the **Properties** dialog box for an existing OU container.
 
     A scripted option is documented in [Script to Protect Organizational Units (OUs) from Accidental Deletion](https://gallery.technet.microsoft.com/scriptcenter/c307540f-bd91-485f-b27e-995ae5cea1e2).
 
 - Exchange Server 2000 and 2003 `setup /domainprep` fails with errors.
 
-## Redirect CN=Users to an administrator-specified organizational unit
+## Redirect CN=Users to an administrator-specified OU
 
 1. Log on with domain administrator credentials in the z domain where the CN=Users container is being redirected.
 
 2. Transition the domain to the Windows Server 2003 domain functional level or newer in either the Active Directory Users and Computers snap-in (Dsa.msc) or the Domains and Trusts (Domains.msc) snap-in. For more information about increasing the domain functional level, see [How to raise domain and forest functional levels](https://support.microsoft.com/help/322692).
 
-3. Create the organizational unit container where you want users who are created with earlier-version APIs to be located, if the organization unit container that you want does not already exist.
+3. Create the OU container where you want users who are created with earlier-version APIs to be located, if the OU container that you want doesn't exist.
 
-4. Run the Redirusr.exe file at the command prompt by using the following syntax, where **container-dn** is the distinguished name of the organizational unit that will become the default location for newly created user objects created by down-level APIs:
+4. Run Redirusr.exe at the command prompt by using the following syntax. In the command, *container-dn* is the distinguished name of the OU that will become the default location for newly created user objects created by down-level APIs:
 
     ```console
     c:\windows\system32\redirusr <DN path to alternate OU>
@@ -104,28 +104,28 @@ If you are redirecting the CN=Users and CN=Computers folders, be aware of the fo
 
     `c:\windows\system32>redirusr ou=myusers,DC=contoso,dc=com`
 
-## Redirect CN=Computers to an administrator-specified organizational unit
+## Redirect CN=Computers to an administrator-specified OU
 
 1. Log on with Domain Administrator credentials in the domain where the CN=computers container is being redirected.
 
 2. Transition the domain to the Windows Server 2003 domain in the Active Directory Users and Computers snap-in (Dsa.msc) or in the Domains and Trusts (Domains.msc) snap-in. For more information about increasing the domain functional level, see [How to raise domain and forest functional levels](https://support.microsoft.com/help/322692).
 
-3. Create the organizational unit container where you want computers that are created with earlier-version APIs to be located, if the desired organizational unit container does not already exist.
+3. Create the OU container where you want computers that are created with earlier-version APIs to be located, if the desired OU container doesn't exist.
 
-4. Run the Redircmp.exe file at a command prompt by using the following syntax, where **container-dn** is the distinguished name of the organizational unit that will become the default location for newly created computer objects that are created by down-level APIs:
+4. Run Redircmp.exe at a command prompt by using the following syntax. In the command, *container-dn* is the distinguished name of the OU that will become the default location for newly created computer objects that are created by down-level APIs:
 
     ```console
     redircmp container-dn container-dn
     ```
 
-    Redircmp.exe is installed in the `%Systemroot%\System32` folder on Windows Server 2003-based or newer computers. For example, to change the default location for a computer that is created with earlier-version APIs such as Net User to the OU=mycomputers container in the CONTOSO.COM domain, use the following syntax:
+    Redircmp.exe is installed in the `%Systemroot%\System32` folder in Windows Server 2003 or later versions. To change the default location for a computer created with earlier-version APIs, such as Net User, to the OU=mycomputers container in the CONTOSO.COM domain, use the following syntax:
 
     ```console
     C:\windows\system32>redircmp ou=mycomputers,DC=contoso,dc=com
     ```
 
     > [!NOTE]
-    > When Redircmp.exe is run to redirect the CN=Computers container to an organizational unit that is specified by an administrator, the CN=Computers container will no longer be a protected object. This means that the Computers container can now be moved, deleted, or renamed. If you use ADSIEDIT to view attributes on the CN=Computers container, you will see that the systemflags attribute was changed from **-1946157056** to **0**. This is by design.
+    > When Redircmp.exe is run to redirect the CN=Computers container to an OU specified by an administrator, the CN=Computers container will no longer be a protected object. This means that the Computers container can now be moved, deleted, or renamed. If you use ADSIEDIT to view attributes on the CN=Computers container, you will see that the systemflags attribute was changed from **-1946157056** to **0**. This is by design.
 
 ## Description of error messages
 
@@ -147,7 +147,7 @@ Redircmp and Redirusr change the wellKnownObjects attribute on the primary domai
 
 ### Error messages that you receive if the domain functional level is not Windows Server 2003
 
-If you try to redirect the users or computer organizational unit in a domain that has not transitioned to the Windows Server 2003 domain functional level, you receive the following error messages.
+You try to redirect the users or computer OU in a domain that hasn't transitioned to the Windows Server 2003 domain functional level. In this situation, you receive the following error messages:
 
 - Error message 1:
 
@@ -163,7 +163,7 @@ If you try to redirect the users or computer organizational unit in a domain tha
 
 ### Error messages that you receive if you log on without the required permissions
 
-If you try to redirect the users or computer organizational unit by using incorrect credentials in the target domain, you may receive the following error messages.
+If you try to redirect the users or computer OU by using incorrect credentials in the target domain, you may receive the following error messages:
 
 - Error message 1
 
@@ -177,9 +177,9 @@ If you try to redirect the users or computer organizational unit by using incorr
     >
     > Error, unable to modify the wellKnownObjects attribute. Verify that the domain functional level of the domain is at least Windows Server 2003: Insufficient Rights Redirection was NOT successful.
 
-### Error messages that you receive if you redirect to an organizational unit that does not exist
+### Error messages that you receive if you redirect to an OU that doesn't exist
 
-If you try to redirect the users or computer organizational unit to an organizational unit that does not exist, you may receive the following error messages.
+You try to redirect the users or computer OU to an OU that doesn't exist. In this situation, you may receive the following error messages:
 
 - Error message 1:
 

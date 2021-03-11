@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, AJAYPS
 ms.prod-support-area-path: User Logon fails
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-server-user-profiles
 ---
 # User profiles may fail to load after you install the Windows 8.1, or Windows Server 2012 R2 April 2014 update
 

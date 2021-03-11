@@ -1,6 +1,6 @@
 ---
 title: Performance overview
-description: Overview of Performance troubleshooting articles.
+description: Overview of Windows clients performance troubleshooting articles.
 ms.date: 11/09/2020
 author: Deland-Han
 ms.author: delhan
@@ -10,9 +10,9 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
-# Performance documentation
+# Windows clients performance troubleshooting documentation
 
 The topics in this section provide solutions and scenario guides to help you troubleshoot and self-solve Performance-related issues. The topics are divided into subcategories. Browse the content or use the search feature to find relevant content.
 

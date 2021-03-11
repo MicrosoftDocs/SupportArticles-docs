@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory backup, restore, or disaster recovery
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # NTDS Replication Event 2089 is logged if Windows Server 2003 SP1 and later domain controllers aren't backed up in a given time period
 

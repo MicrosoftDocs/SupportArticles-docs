@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Microsoft Management Console (MMC)
-ms.technology: SysManagementComponents
+ms.technology: windows-client-system-management-components
 ---
 # The Windows Trace Session Manager service does not start and Event ID 7000 occurs
 

@@ -232,6 +232,8 @@
       href: ./identity/disable-knowledge-consistency-checker-automatic-generation.md
     - name: Duplicate AD replication connections are created
       href: ./identity/duplicate-active-directory-replication-connections.md
+    - name: Get and use AD Replication Status Tool
+      href: ./identity/get-use-active-directory-replication-status-tool.md
     - name: Hotfixes for DFS technologies
       href: ./identity/distributed-file-system-hotfixes.md
     - name: How to restrict RPC traffic to a specific port
@@ -294,6 +296,10 @@
       href: ./identity/replication-error-8606.md
     - name: Use Ntdsutil to find and clean up duplicate security identifiers
       href: ./identity/ntdsutil-find-clean-duplicate-security-identifiers.md
+  - name: Active Directory Rights Management Services
+    items:
+    - name: Event ID 84 occurs in AD RMS in Windows Server
+      href: ./identity/event-id-84-occurs-ad-rms-windows-server.md
   - name: Active Directory topology (sites, subnets, and connection objects)
     items:
     - name: Active Directory services and domains (Part 1)
@@ -478,8 +484,8 @@
       href: ./identity/dsa-object-cannot-be-deleted.md
     - name: Fail to run Get-ADGroupMember for domain local group
       href: ./identity/get-adgroupmember-error-remote-forest-members.md
-    - name: GPO processing failures across multiple forests
-      href: ./identity/gpo-processing-failures-across-foreast.md
+    - name: RSoP Planning mode is not supported in a cross-forest scenario
+      href: ./identity/rsop-not-supported-across-multiple-forests.md
     - name: How to change display names of Active Directory users
       href: ./identity/change-display-names-ad-users.md
     - name: How to enable Kerberos event logging
@@ -676,7 +682,7 @@
       href: ./backup-and-storage/enable-debug-tracing-features-vss.md
     - name: Error 3266/3013 when you perform database backup/restore
       href: ./backup-and-storage/database-backup-error-3266-3013.md
-    - name: Error message when you do a system state backup
+    - name: Error message when you do a system state backup
       href: ./backup-and-storage/error-when-you-do-system-state-backup.md
     - name: Event ID 8193 when you perform a backup
       href: ./backup-and-storage/event-id-8193-when-you-perform-backup.md
@@ -684,7 +690,7 @@
       href: ./backup-and-storage/use-backup-feature-back-up-restore-data.md
     - name: No VSS writers when running the "vssadmin list writers" command
       href: ./backup-and-storage/no-vss-writers-listed-run-vssadmin-list-writers.md
-    - name: Return codes that are used by the Robocopy utility
+    - name: Return codes that are used by the Robocopy utility
       href: ./backup-and-storage/return-codes-used-robocopy-utility.md
     - name: Server backup process fails and error 0x80070005
       href: ./backup-and-storage/cannot-back-up-server-error-0x80070005.md
@@ -982,7 +988,7 @@
       href: ./deployment/use-recovery-console-not-start.md
     - name: Install Microsoft Product Support Reporting Tool
       href: ./deployment/microsoft-product-support-reporting-tool-v5220030.md
-    - name: List of updates
+    - name: List of updates
       href: ./deployment/list-updates.md
     - name: Re-register Windows client/server in WSUS
       href: ./deployment/re-register-windows-clientserver-in-wsus.md
@@ -992,7 +998,7 @@
       href: ./deployment/systeminfo-not-display-all-updates.md
     - name: Temporarily deactivate the kernel mode filter driver
       href: ./performance/deactivate-kernel-mode-filter-driver.md
-    - name: Why you may be prompted to restart your computer
+    - name: Why you may be prompted to restart your computer
       href: ./deployment/why-prompted-restart-computer.md
     - name: Windows Server 2008 Service Pack 2
       href: ./deployment/windows-server-2008-service-pack-2.md
@@ -1096,7 +1102,7 @@
       href: ./group-policy/loopback-processing-of-group-policy.md
     - name: How to set event log security locally or via Group Policy
       href: ./group-policy/set-event-log-security-locally-or-via-group-policy.md
-    - name: How to give users access to Group Policy Objects
+    - name: How to give users access to Group Policy Objects
       href: ./group-policy/give-users-access-group-policy-objects.md
     - name: Manage Group Policy administrative template files
       href: ./group-policy/manage-group-policy-adm-file.md
@@ -1176,7 +1182,7 @@
       href: ./group-policy/group-policy-add-maxtokensize-registry-entry.md
     - name: User GPP Scheduled Task item fails to apply
       href: ./group-policy/user-gpp-scheduled-task-item-fails-apply.md
-    - name: Userenv errors occur and events are logged
+    - name: Userenv errors occur and events are logged
       href: ./group-policy/userenv-errors-occur-events-are-logged.md
     - name: WMI Group Policy filters don't work
       href: ./group-policy/wmi-group-policy-filters-not-working.md
@@ -1248,7 +1254,7 @@
       href: ./high-availability/switches-start-cluster-service.md
     - name: Cluster Service Stops Responding on a Cluster Node
       href: ./high-availability/cluster-service-stops-responding-a-cluster-node.md
-    - name: How to troubleshoot the Cluster service account
+    - name: How to troubleshoot the Cluster service account
       href: ./high-availability/troubleshoot-cluster-service-account.md
     - name: Troubleshoot Cluster service startup issues
       href: ./high-availability/troubleshoot-cluster-service-startup-issues.md
@@ -1502,7 +1508,7 @@
       href: ./networking/dns-server-cache-snooping-attacks.md
     - name: DNS zone transfer options are unexpectedly reset
       href: ./networking/dns-zone-transfer-options-reset.md
-    - name: DNS Server becomes an island
+    - name: DNS Server becomes an island
       href: ./networking/dns-server-becomes-island.md
     - name: Event 4015 when running DNS on RODC
       href: ./networking/rodc-logs-event-4015-error-00002095.md
@@ -1532,7 +1538,7 @@
       href: ./networking/no-dynamic-updates-on-reverse-lookup-zone.md
     - name: Prevent Domain Controllers from DNS Names
       href: ./networking/prevent-domain-controllers-dns-names.md
-    - name: Records aren't deleted if scavenging manually
+    - name: Records aren't deleted if scavenging manually
       href: ./networking/records-arent-deleted.md
     - name: Root hints reappear after removed
       href: ./networking/root-hints-reappear-after-removed.md
@@ -1556,7 +1562,7 @@
       href: ./networking/cant-add-dhcp-reservation.md
     - name: DHCP client can't get a DHCP-assigned IP address
       href: ./networking/dhcp-client-fail-obtain-valid-ip-address.md
-    - name: DHCP Server sends a DHCPNAK to clients
+    - name: DHCP Server sends a DHCPNAK to clients
       href: ./networking/dhcp-server-sends-dhcpnak-clients.md
     - name: Dynamic updates of DNS registrations are delayed
       href: ./networking/dhcp-dynamic-updates-of-dns-registrations-delayed.md
@@ -1688,7 +1694,7 @@
       href: ./networking/diagnostic-logging-troubleshoot-workplace-join-issues.md
     - name: How to use PortQry to troubleshoot AD connectivity issues
       href: ./networking/use-portqry-verify-active-directory-tcp-ip-connectivity.md
-    - name: How to configure TCP/IP Filtering
+    - name: How to configure TCP/IP Filtering
       href: ./networking/configure-tcp-ip-filtering.md
     - name: Information about Network Monitor 3
       href: ./networking/network-monitor-3.md
@@ -2180,6 +2186,8 @@
       href: ./remote/remote-desktop-listener-certificate-configurations.md
     - name: Deactivate or reactivate a license server
       href: ./remote/deactivate-reactivate-license-server.md
+    - name: Error after configuration of RD Connection Broker servers for high availability
+      href: ./remote/error-configuration-rd-connection-brokers-high-availability.md
     - name: Event ID 4105 when RD Licensing runs
       href: ./remote/terminalservices-licensing-event-4105.md
     - name: Event ID 44 on an RDS licensing server
@@ -2360,7 +2368,7 @@
       href: ./system-management-components/error-1783-services-msc.md
     - name: Fail to enable analytic or debug event log
       href: ./system-management-components/error-when-enabling-analytic-debug-event-log.md
-    - name: Remotely edit the registry of a client computer
+    - name: Remotely edit the registry of a client computer
       href: ./system-management-components/remotely-edit-the-registry.md
     - name: Troubleshoot service startup permissions
       href: ./system-management-components/service-startup-permissions.md
@@ -2544,7 +2552,7 @@
       href: ./virtualization/bios-update-for-hyper-v.md
     - name: Recommended updates for Windows Server 2012 R2 Hyper-V environments
       href: ./virtualization/updates-for-windows-server-2012-r2-hyper-v.md
-    - name: Recommended hotfixes, updates, and known solutions
+    - name: Recommended hotfixes, updates, and known solutions
       href: ./virtualization/hotfixes-updates-known-solutions.md
     - name: Run programs on non-Microsoft hardware virtualization software
       href: ./virtualization/software-runs-on-non-microsoft-virtualization-software.md
@@ -2684,8 +2692,6 @@
       href: ./windows-security/clients-cant-authenticate-server.md
     - name: Crypt32 8 events continuously reported
       href: ./windows-security/crypt32-event-8.md
-    - name: Disable Hyper-V to use virtualization software
-      href: ./windows-security/fciv-availability-and-description.md
     - name: Event ID 4107 or Event ID 11 is logged
       href: ./windows-security/event-id-4107-or-event-id-11-is-logged.md
     - name: How to decommission Windows enterprise CA and remove related objects
@@ -2790,6 +2796,8 @@
       href: ./windows-security/performance-tuning-ntlm-authentication-maxconcurrentapi.md
   - name: Permissions, access control, and auditing
     items:
+    - name: Access checks using Windows APIs return incorrect results
+      href: ./windows-security/access-checks-windows-apis-return-incorrect-results.md    
     - name: Can't copy files from mapped drive to local directory
       href: ./windows-security/cannot-copy-files-from-mapped-drive-to-local-directory.md
     - name: Default permissions for MachineKeys folders

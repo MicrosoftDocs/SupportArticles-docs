@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User profiles
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-server-user-profiles
 ---
 # The Welcome screen may be displayed for 30 seconds, and the logon script interacts with me when I try to log on to a computer that is running Windows Vista or Windows Server 2008
 

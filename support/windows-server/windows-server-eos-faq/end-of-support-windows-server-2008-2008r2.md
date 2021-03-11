@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, squin, suehar, v-jeffbo
 ms.prod-support-area-path: 
-ms.technology: Windows Server EoS FAQ
+ms.technology: windows-server-eos
 ---
 # End of support for Windows Server 2008 and Windows Server 2008 R2
 
@@ -22,14 +22,14 @@ _Original KB number:_ &nbsp; 4456235
 
 ## Summary
 
-Windows Server 2008 and Windows Server 2008 R2 are approaching the end of their [support lifecycle](/lifecycle/). This means that as of the dates in the table below there will be no additional:
+Windows Server 2008 and Windows Server 2008 R2 are approaching the end of their [support lifecycle](/lifecycle/). This means that as of the dates in the table below there will be no additional:
 
 - Free security updates on-premises
 - Non-security updates
 - Free support options
 - Online technical content update
 
-Customers who use Windows Server 2008 or Windows Server 2008 R2 products and services should migrate to Microsoft Azure to take advantage of three additional years of **Critical** and **Important** security updates at no additional charge and modernize when ready. For environments other than Azure, we recommend customers upgrade to the latest version before the deadline. For customers who cannot meet the end-of-support deadline may purchase Extended Security Updates to keep server workloads protected until they upgrade (some restrictions apply).
+Customers who use Windows Server 2008 or Windows Server 2008 R2 products and services should migrate to Microsoft Azure to take advantage of three additional years of **Critical** and **Important** security updates at no additional charge and modernize when ready. For environments other than Azure, we recommend customers upgrade to the latest version before the deadline. For customers who cannot meet the end-of-support deadline may purchase Extended Security Updates to keep server workloads protected until they upgrade (some restrictions apply).
 
 ## More information
 

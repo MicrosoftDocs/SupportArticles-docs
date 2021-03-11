@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jtierney
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # "Certutil -view" command does not return issued certificates correctly
 

@@ -1,5 +1,5 @@
 ---
-title: Error message when installing RSAT
+title: Error (This update is not applicable to your computer) when installing RSAT
 description: Provides a solution to an error that occurs when you install the Remote Server Administration Tools.
 author: Deland-Han 
 ms.author: delhan
@@ -10,7 +10,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Error message when installing RSAT: This update is not applicable to your computer
 

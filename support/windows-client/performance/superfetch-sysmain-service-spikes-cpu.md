@@ -11,9 +11,9 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Applications
-ms.technology: Performance
+ms.technology: windows-client-performance
 ---
-# SuperFetch(SysMain) service spikes the CPU for 1-2 minute when a 64-bit application is running in Windows Vista or in Windows 7
+# SuperFetch(SysMain) service spikes the CPU for 1-2 minutes when a 64-bit application is running in Windows
 
 This article provides a workaround for an issue where the system experiences CPU spike for 1-2 minutes when a 64-bit application runs in the 64-bit version of Windows.
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;2723033
 
 ## Symptoms
 
-When a 64-bit application compiled with /LARGEADDRESSAWARE:NO option is running in the 64-bit versions of Windows Vista or in the 64-bit versions of Windows 7, the system may experience CPU spike for 1-2 minutes and this goes on in-definitely. In this situation, the Task Manager shows the svchost.exe process hosting the SysMain(SuperFetch) service is consuming the CPU utilization.
+When a 64-bit application compiled with /LARGEADDRESSAWARE:NO option is running in the 64-bit versions of Windows, the system may experience CPU spike for 1-2 minutes and this goes on in-definitely. In this situation, the Task Manager shows the svchost.exe process hosting the SysMain(SuperFetch) service is consuming the CPU utilization.
 
 ## Cause
 

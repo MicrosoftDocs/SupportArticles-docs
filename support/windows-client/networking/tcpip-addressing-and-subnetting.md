@@ -11,7 +11,8 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: windows-client-networking
+adobe-target: true
 ---
 # Understand TCP/IP addressing and subnetting basics
 

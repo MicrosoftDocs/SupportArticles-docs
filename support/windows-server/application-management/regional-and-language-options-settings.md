@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: markreno, kaushika
 ms.prod-support-area-path: Multilingual User Interface (MUI) and Input Method Editor (IME)
-ms.technology: ApplicationCompatibility
+ms.technology: windows-server-application-compatibility
 ---
 # How the Regional and Language Options settings in Windows Server 2003 are applied
 

@@ -1,6 +1,6 @@
 ---
 title: Compute MD5 or SHA-1 cryptographic hash values
-description: Discusses how and why you can use the MD5 or SHA-1 cryptographic hash values to verify which file you installed on your computer.
+description: Discusses how to verify which file you installed on your computer by using the MD5 or SHA-1 cryptographic hash values.
 ms.date: 09/22/2020
 author: Deland-Han
 ms.author: delhan
@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment 
+ms.technology: windows-client-deployment 
 ---
 # How to compute the MD5 or SHA-1 cryptographic hash values for a file
 
@@ -26,9 +26,9 @@ When you apply the hashing algorithm to an arbitrary amount of data, such as a b
 
 ## Use FCIV to compute MD5 or SHA-1 cryptographic hash values
 
-You can use the File Checksum Integrity Verifier (FCIV) utility to compute the MD5 or SHA-1 cryptographic hash values of a file. For additional information about the File Checksum Integrity Verifier (FCIV) utility, click the following article number to view the article in the Microsoft Knowledge Base:
+You can use the File Checksum Integrity Verifier (FCIV) utility to compute the MD5 or SHA-1 cryptographic hash values of a file. For more information about the FCIV utility, see the following article:
 
-[Availability and description of the File Checksum Integrity Verifier utility](/troubleshoot/windows-server/windows-security/fciv-availability-and-description)
+[Availability and description of the File Checksum Integrity Verifier utility](/troubleshoot/windows-server/windows-security/fciv-availability-and-description).
 
 To compute the MD5 and the SHA-1 hash values for a file, type the following command at a command line:
 

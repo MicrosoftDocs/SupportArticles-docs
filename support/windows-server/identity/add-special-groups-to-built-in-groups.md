@@ -11,9 +11,9 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User, computer, group, and object management
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
-# How to Add Special Groups to Built-In Groups
+# How to add special groups to built-in groups
 
 This article describes how to add special groups to built-in groups.
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 292781
 
 ## Summary
 
-If you, as the administrator, delete one of the memberships of a special group, such as Authenticated Users, from a Built-in Domain Local Users group on a domain controller in Windows 2000, you cannot readd the group by using the Active Directory Users and Computers tool. To add one of the special groups to a domain local group on a domain controller, use the `net localgroup` command.
+If you, as the administrator, delete one of the memberships of a special group, such as Authenticated Users, from a Built-in Domain Local Users group on a domain controller in Windows, you cannot readd the group by using the Active Directory Users and Computers tool. To add one of the special groups to a domain local group on a domain controller, use the `net localgroup` command.
 
 For example, use the following command to add the Authenticated Users group back to the Built-in Domain Local Users group on a domain controller:
 
@@ -30,7 +30,7 @@ For example, use the following command to add the Authenticated Users group back
 
 ## More information
 
-In Windows 2000, there are certain special groups that are created by the system and that are used for special purposes. A list of these special groups in Windows 2000 includes:
+In Windows, there are certain special groups that are created by the system and that are used for special purposes. A list of these special groups includes:
 
 Authenticated Users  
 Anonymous Logon  

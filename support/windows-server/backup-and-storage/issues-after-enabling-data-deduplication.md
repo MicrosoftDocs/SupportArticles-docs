@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, vimalsh
 ms.prod-support-area-path: Deduplication
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Known issues after you enable data deduplication on CSV
 

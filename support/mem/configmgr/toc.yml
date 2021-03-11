@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-configuration-manager.md
+  href: welcome-configuration-manager.yml
 - name: Alerts, reporting, and queries
   items:
     - name: A log with a long line is truncated in CMTrace
@@ -208,7 +208,7 @@
           href: fail-to-import-drivers.md
         - name: Insufficient permissions to migrate a driver package
           href: insufficient-permissions-to-migrate-driver-package.md
-        - name: Signed drivers are displayed as unsigned
+        - name: Signed drivers are displayed as unsigned
           href: signed-drivers-shown-as-unsigned.md
     - name: PXE boot
       items:
@@ -218,7 +218,7 @@
           href: advanced-troubleshooting-pxe-boot.md
         - name: Boot from a PXE server
           href: boot-from-pxe-server.md
-        - name: Failed to get the encrypted PXE password
+        - name: Failed to get the encrypted PXE password
           href: certificate-not-updated-on-pxe-dp.md
         - name: PXE boot doesn't work
           href: pxe-boot-not-work.md
@@ -272,6 +272,8 @@
           href: os-deployment-task-sequence-not-continue.md
         - name: The debug deployment isn't displayed
           href: debug-deployment-not-displayed.md
+        - name: Troubleshoot the Install Application task sequence step
+          href: troubleshoot-install-application-step.md  
     - name: Versions required for Windows deployment
       href: required-versions-windows-deployment.md
 - name: Setup, migration, backup, and recovery
@@ -332,7 +334,7 @@
           href: upgrade-to-configmgr-2012-sp1.md
         - name: Understand and troubleshoot Updates and Servicing
           href: understand-troubleshoot-updates-servicing.md
-    - name: Maintenance tasks default settings
+    - name: Maintenance tasks default settings
       href: maintenance-tasks-default-settings.md
 - name: Software update management
   items:
@@ -390,6 +392,8 @@
           href: high-network-bandwidth-usage.md
         - name: Optimize WSUS client performance
           href: optimize-wsus-client-performance.md
+        - name: Reindex the WSUS database
+          href: reindex-the-wsus-database.md  
         - name: The spDeleteUpdate stored procedure runs slowly
           href: spdeleteupdate-slow-performance.md          
         - name: Troubleshoot issues with WSUS client agents

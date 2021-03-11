@@ -1,6 +1,6 @@
 ---
 title: Can't delete files on NTFS file system
-description: This article describes why you may not be able to delete a file or folder on an NTS file system volume, and recommends resolutions for each of the possible causes.
+description: Describes why you can't delete a file or folder on an NTS file system volume. Provides resolutions for each of the possible causes.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Data corruption and disk errors
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # You can't delete a file or a folder on an NTFS file system volume
 
-This article describes why you're not able to delete a file or a folder on an NTFS file system volume, and provides help to solve this issue.
+This article describes why can't delete a file or a folder on an NTFS file system volume. It also provides help to solve this issue.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 320081
@@ -25,33 +25,39 @@ _Original KB number:_ &nbsp; 320081
 
 ## Cause 1: The file uses an ACL
 
-You may not be able to delete a file if the file uses an Access Control List (ACL). To resolve this issue, change the permissions on the file. You may have to take ownership of the files to be able to change the permissions.
+You can't delete a file if the file uses an Access Control List (ACL). To resolve this issue, change the permissions on the file. You may have to take ownership of the files to change the permissions.
 
-Administrators have the implicit ability to take ownership of any file even if they have not been explicitly granted any permission to the file. File owners have the implicit ability to modify file permissions even if they are not explicitly granted any permissions to the file. Therefore, you may have to take ownership of a file, give yourself permissions to delete the file, and then delete the file.
+Administrators have the implicit ability to take ownership of any file, even if they haven't been explicitly granted any permission to the file. File owners have the implicit ability to modify file permissions, even if they aren't explicitly granted any permissions to the file. So, you may have to take ownership of a file, give yourself permissions to delete the file, and then delete the file.
 
 ### You can't use certain security tools to display or to modify permissions because the file has a non-canonical ACL
 
 To work around this issue, use another tool (for example, a later build of Cacls.exe).
 
-The Access Control Entries (ACEs) in an ACL have a certain preferred sequence depending on their type. For example, ACEs that deny access typically come before ACEs that grant access. However, nothing prevents a program from writing an ACL that has ACEs in any arbitrary sequence. In some earlier versions of Windows, issues occurred when Microsoft Windows tried to read these non-canonical ACLs. Sometimes, you cannot modify these ACLs correctly by using the Microsoft Windows Explorer graphical security editor. This issue has been corrected in later versions of Windows. If you are experiencing this issue, use the most recent version of Cacls.exe. Even if you cannot display or edit an ACL in place, you can write a new ACL that lets you gain access to the file.
+The Access Control Entries (ACEs) in an ACL have a certain preferred sequence depending on their type. For example, ACEs that deny access typically come before ACEs that grant access. However, nothing prevents a program from writing an ACL that has ACEs in any arbitrary sequence. In some earlier versions of Windows, issues occurred when Windows tried to read these non-canonical ACLs. Sometimes you can't modify these ACLs correctly by using the Microsoft Windows Explorer graphical security editor. This issue has been corrected in later versions of Windows. If you experience this issue, use the most recent version of Cacls.exe. Even if you can't display or edit an ACL in place, you can write a new ACL to gain access to the file.
 
 ## Cause 2: The file is being used
 
-You may not be able to delete a file if the file is being used. To resolve this issue, determine the process that has the open handle, and then close that process.
+You can't delete a file if the file is being used. To resolve this issue, determine the process that has the open handle, and then close that process.
 
-Depending on how the file is opened (for example, it is open for exclusive access instead of shared access), you may not be able to delete a file that is in use. You can use a variety of tools to help you determine the processes that have open handles to files whenever you want.
+Depending on how the file is opened, you may not be able to delete a file that's in use. For example, the file is open for exclusive access instead of shared access. You can use various tools to determine the processes that have open handles to files whenever you want.
 
-The symptoms of this issue may vary. You may be able to use the Delete command to delete a file, but the file is not deleted until the process that has the file open releases the file. Additionally, you may not be able to access the Security dialog box for a file that is pending deletion. To resolve this issue, determine the process that has the open handle, and then close that process.
+The symptoms of this issue may vary. You can use the Delete command to delete a file. But the file isn't deleted until the process that has the file open releases the file. Additionally, you may not be able to access the Security dialog box for a file that's pending deletion. To resolve this issue, determine the process that has the open handle, and then close that process.
 
 ## Cause 3: File system corruption is preventing access to the file
 
-You may not be able to delete the file if the file system is corrupted. To resolve this issue, run the Chkdsk utility on the disk volume to correct any errors.
+You can't delete the file if the file system is corrupted. To resolve this issue, run the Chkdsk utility on the disk volume to correct any errors.
 
-Bad sectors on the disk, other faulty hardware, or software bugs can corrupt the file system and put files in a problematic state. Typical operations may fail in a variety of ways. When the file system detects corruption, it logs an event to the event log and you typically receive a message that prompts you to run Chkdsk. Depending on the nature of the corruption, Chkdsk may or may not be able to recover file data; however, Chkdsk returns the file system to an internally consistent state.
+The following reasons can corrupt the file system and put files in a problematic state:
+
+- Bad sectors on the disk
+- Other faulty hardware
+- Software bugs
+
+Typical operations may fail in various ways. When the file system detects corruption, it logs an event to the event log and you typically receive a message that prompts you to run Chkdsk. Depending on the nature of the corruption, Chkdsk may or may not recover file data. However, Chkdsk returns the file system to an internally consistent state.
 
 ## Cause 4: Files exist in paths that are deeper than MAX_PATH characters
 
-You may not be able to open, edit, or delete a file if there are issues with the file path.
+You can't open, edit, or delete a file if there are issues with the file path.
 
 ### Resolution 1: Use an autogenerated 8.3 name to access the file
 
@@ -59,7 +65,7 @@ To resolve this issue, you may want to use the autogenerated 8.3 name to access 
 
 ### Resolution 2: Rename or move a deep folder
 
-Rename the folder so that the target files that are deeper than the `MAX_PATH` no longer exist. If you do this, start at the root folder (or any other convenient place), and then rename folders so that they have shorter names. If this step does not resolve this issue (for example, if a file is more than 128 folders deep), go to [Resolution 4](#resolution-4-use-a-network-share-that-is-as-deep-as-the-folder).
+Rename the folder so that the target files that are deeper than the `MAX_PATH` no longer exist. If you do so, start at the root folder or any other convenient place. Then rename folders so that they have shorter names. If this step doesn't resolve this issue, for example, if a file is more than 128 folders deep, go to [Resolution 4](#resolution-4-use-a-network-share-that-is-as-deep-as-the-folder).
 
 ### Resolution 3: Map a drive to a folder in the structure of the path
 
@@ -73,41 +79,41 @@ In this path, the total character count is over 255 characters. To short the len
 
 ### Resolution 4: Use a network share that is as deep as the folder
 
-If resolutions 1, 2, and 3 are not convenient or don't resolve the issue, create a network share that is as deep in the folder tree as you can, and then rename the folders by accessing the share.
+If resolutions 1, 2, and 3 aren't convenient or don't resolve the issue, create a network share that's as deep in the folder tree as you can. Then rename the folders by accessing the share.
 
 ### Resolution 5: Use a tool that can traverse deep paths
 
-Many Windows programs expect the maximum path length to be shorter than 255 characters. Therefore, these programs only allocate enough internal storage to handle these typical paths. NTFS does not have this limit and it can hold much longer paths.
+Many Windows programs expect the maximum path length to be shorter than 255 characters. These programs only allocate enough internal storage to handle these typical paths. NTFS doesn't have this limit, and it can hold much longer paths.
 
-You may experience this issue if you create a share at some point in your folder structure that is already fairly deep, and then create a deep structure below that points by using the share. Some tools that operate locally on the folder tree may not be able to traverse the whole tree starting from the root. You may have to use these tools in a special way so that they can traverse the share. (The CreateFile API documentation describes a method to traverse the whole tree in this situation.)
+You may experience this issue if you create a share at some point in your folder structure that's already fairly deep, and then create a deep structure below that point by using the share. Some tools that operate locally on the folder tree may not be able to traverse the whole tree starting from the root. You may have to use these tools in a special way so that they can traverse the share. The CreateFile API documentation describes a method to traverse the whole tree in this situation.
 
 Typically, you can manage files by using the software that creates them. If you have a program that can create files that are deeper than `MAX_PATH`, you can typically use that same program to delete or manage the files. You can typically delete files that are created on a share by using the same share.
 
 ## Cause 5: The file name includes a reserved name in the Win32 name space
 
-If the file name includes a reserved name (for example, lpt1) in the Win32 name space, you may not be able to delete the file. To resolve this issue, use a non-Win32 program to rename the file. You can use a POSIX tool or any other tool that uses the appropriate internal syntax to use the file.
+If the file name includes a reserved name in the Win32 name space, such as lpt1, you can't delete the file. To resolve this issue, use a non-Win32 program to rename the file. You can use a POSIX tool or any other tool that uses the appropriate internal syntax to use the file.
 
-Additionally, you may be able to use some built-in commands to bypass the typical Win32 reserved name checks if you use a particular syntax to specify the path of the file.
+Additionally, you can use some built-in commands to bypass the typical Win32 reserved name checks if you use a particular syntax to specify the path of the file.
 
-If you open a handle to a file by using the typical Win32 CreateFile mechanism, certain file names are reserved for old-style DOS devices. For backward compatibility, these file names are not permitted and they cannot be created by using typical Win32 file calls. However, this issue is not a limitation of NTFS.
+If you open a handle to a file by using the typical Win32 CreateFile mechanism, certain file names are reserved for old-style DOS devices. For backward compatibility, these file names aren't permitted, and they can't be created by using typical Win32 file calls. This issue isn't a limitation of NTFS.
 
-You may be able to use a Win32 program to bypass the typical name checks that are performed when a file is created (or deleted) by using the same technique that you use to traverse folders that are deeper than `MAX_PATH`. Additionally, some POSIX tools are not subject to these name checks.
+You can use a Win32 program to bypass the typical name checks that are done when a file is created or deleted by using the same technique that you use to traverse folders deeper than `MAX_PATH`. Additionally, some POSIX tools aren't subject to these name checks.
 
 ## Cause 6: The file name includes an invalid name in the Win32 name space
 
-You may not be able to delete a file if the file name includes an invalid name (for example, the file name has a trailing space or a trailing period or the file name is made up of a space only). To resolve this issue, use a tool that uses the appropriate internal syntax to delete the file. You can use the `"\\?\"` syntax with some tools to operate on these files, for example:
+You can't delete a file if the file name includes an invalid name. For example, the file name has a trailing space or a trailing period, or the file name is made up of a space only. To resolve this issue, use a tool that uses the appropriate internal syntax to delete the file. You can use the `"\\?\"` syntax with some tools to operate on these files. Here's an example:
 
 ```console
 del "\\?\c:\<path_to_file_that contains a trailing space.txt>"
 ```
 
-The cause of this issue is similar to [Cause 4](#cause-4-files-exist-in-paths-that-are-deeper-than-max_path-characters). However, if you use typical Win32 syntax to open a file that has trailing spaces or trailing periods in its name, the trailing spaces or periods are stripped before the actual file is opened. Therefore, if you have two files in the same folder named *AFile.txt* and *AFile.txt* (note the space after the file name), if you try to open the second file by using standard Win32 calls, you open the first file instead. Similarly, if you have a file whose name is just a space character and you try to open it by using standard Win32 calls, you open the file's parent folder instead. In this situation, if you try to change security settings on these files, you either may not be able to do this or you may unexpectedly change the settings on different files. If this behavior occurs, you may think that you have permission to a file that actually has a restrictive ACL.
+The cause of this issue is similar to [Cause 4](#cause-4-files-exist-in-paths-that-are-deeper-than-max_path-characters). If you use typical Win32 syntax to open a file that has trailing spaces or trailing periods in its name, the trailing spaces or periods are stripped before the actual file is opened. For example, you have two files in the same folder named *`AFile.txt`* and *`AFile.txt `*, note the space after the file name. If you try to open the second file by using standard Win32 calls, you open the first file instead. Similarly, if you have a file whose name is just a space character and you try to open it by using standard Win32 calls, you open the file's parent folder instead. In this situation, if you try to change security settings on these files, you either may not be able to do so, or you may unexpectedly change the settings on different files. If this behavior occurs, you may think that you have permission to a file that actually has a restrictive ACL.
 
 ## Combinations of causes
 
-Sometimes, you may experience combinations of these causes, which can make the procedure to delete a file more complex. For example, if you log on as the computer's administrator, you may experience a combination of [Cause 1](#cause-1-the-file-uses-an-acl) (you do not have permissions to delete a file) and [Cause 5](#cause-5-the-file-name-includes-a-reserved-name-in-the-win32-name-space) (the file name contains a trailing character that causes file access to be redirected to a different or nonexistent file) and you may not be able to delete the file. If you try to resolve [Cause 1](#cause-1-the-file-uses-an-acl) by taking ownership of the file and adding permissions, you still may not be able to delete the file because the ACL editor in the user interface cannot access the appropriate file because of [Cause 6](#cause-6-the-file-name-includes-an-invalid-name-in-the-win32-name-space).
+Sometimes, you may experience combinations of these causes. It can make the procedure to delete a file more complex. For example, if you log on as the computer's administrator, you may experience a combination of [Cause 1](#cause-1-the-file-uses-an-acl) (you don't have permissions to delete a file) and [Cause 5](#cause-5-the-file-name-includes-a-reserved-name-in-the-win32-name-space) (the file name contains a trailing character that causes file access to be redirected to a different or nonexistent file), and you can't delete the file. If you try to resolve [Cause 1](#cause-1-the-file-uses-an-acl) by taking ownership of the file and adding permissions, you still may not be able to delete the file, because the ACL editor in the user interface can't access the appropriate file due to [Cause 6](#cause-6-the-file-name-includes-an-invalid-name-in-the-win32-name-space).
 
-In this situation, you can use the Subinacl utility with the `/onlyfile` switch (this utility is included in the Resource Kit) to change ownership and permissions on a file that is otherwise inaccessible, for example:
+In this situation, you can use the Subinacl utility with the `/onlyfile` switch (this utility is included in the Resource Kit) to change ownership and permissions on a file that's otherwise inaccessible. Here's an example:
 
 ```console
 subinacl /onlyfile "\\?\c:\<path_to_problem_file>" /setowner= domain\administrator /grant= domain\administrator=F

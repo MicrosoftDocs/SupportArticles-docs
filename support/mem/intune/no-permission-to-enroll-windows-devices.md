@@ -21,9 +21,9 @@ When you try to [enroll your Windows devices in Intune by using the Intune Compa
 
 ## Cause
 
-This issue occurs if the account that you use to log on to Windows isn't a member of the local Administrators group.
+This issue occurs if the account that you use to log on to Windows isn't a member of the local Administrators group.
 
-This behavior is expected. Local administrative privileges are required for Bring Your Own Device (BYOD) enrollment in Intune.
+This behavior is expected. Local administrative privileges are required for Bring Your Own Device (BYOD) enrollment in Intune.
 
 ## Resolution
 
@@ -32,4 +32,4 @@ You can use either of the following alternative enrollment methods to enroll you
 - [Enroll Windows devices in Intune by using the Windows Autopilot](/mem/intune/enrollment/enrollment-autopilot)
 - [Join your work device to your organization's network](/azure/active-directory/user-help/user-help-join-device-on-network)
 
-These enrollment methods use the local system account. Therefore, you can use them to enroll your devices without having to be a local administrator.
+These enrollment methods use the local system account. Therefore, you can use them to enroll your devices without having to be a local administrator.

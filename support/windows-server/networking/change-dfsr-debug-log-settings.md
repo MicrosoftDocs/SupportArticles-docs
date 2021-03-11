@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: DFSR
-ms.technology: Networking
+ms.technology: networking
 ---
 # How to configure DFSR logging
 
@@ -113,9 +113,8 @@ StagingLowWatermarkPercent: 60
 
 You can also realize the debug log settings in the header of every log file:
 
-· FRS Log Sequence: 3 Index: 6 Computer:DFSRMember1 TimeZone:W. Europe Daylight Time (GMT+-2:00) Build:[Nov 23 2005 00:36:45 built by: dnsrv_r2] Enterprise=1
-
-· Configuration logLevel: 4 maxEntryCount: 400000 maxFileCount:200 LogPath:\\\\.\C: \WINDOWS\debug\
+- FRS Log Sequence: 3 Index: 6 Computer:DFSRMember1 TimeZone:W. Europe Daylight Time (GMT+-2:00) Build:[Nov 23 2005 00:36:45 built by: dnsrv_r2] Enterprise=1
+- Configuration logLevel: 4 maxEntryCount: 400000 maxFileCount:200 LogPath:\\\\.\C: \WINDOWS\debug\
 
 ## More information
 

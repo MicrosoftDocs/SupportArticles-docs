@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot and review Wi-Fi device profile logs in Microsoft Intune - Azure | Microsoft Docs
+title: Troubleshoot and review Wi-Fi device profile logs
 description: Understand and troubleshoot Wi-Fi device configuration profile issues on Android, iOS/iPadOS, and Windows devices in Microsoft Intune. Review logs, and see some common issues and possible resolutions.
 ms.date: 07/20/2020
 ms.reviewer: tycast

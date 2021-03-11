@@ -40,7 +40,7 @@ Correct the problem that's preventing the OpalisActionService process from acces
 
 1. Verify database instance is running
 
-    If the database instance isn't running, it can't accept the connections from the OpalisActionService service. When the OpalisActionService service is unable to make initial contact with the database, it's designed to terminate. It only occurs if connectivity can't be obtained at service start. If the Action Server is installed on the same server as the database, a failure to start the OpalisActionService service at machine startup could be a result of the database instance not having started yet. This can be resolved by establishing a dependency in the OpalisActionService service on the database instance service.
+    If the database instance isn't running, it can't accept the connections from the OpalisActionService service. When the OpalisActionService service is unable to make initial contact with the database, it's designed to terminate. It only occurs if connectivity can't be obtained at service start. If the Action Server is installed on the same server as the database, a failure to start the OpalisActionService service at machine startup could be a result of the database instance not having started yet. This can be resolved by establishing a dependency in the OpalisActionService service on the database instance service.
 
 2. Verify database server hostname
 
@@ -60,4 +60,4 @@ Correct the problem that's preventing the OpalisActionService process from acces
 
 6. User account permission
 
-    The user account is defined by using the Opalis Integration Server Database Configuration utility. If using Microsoft SQL Server as the database server with **Windows Authentication** as the selected security provider, the user account that starts the OpalisActionService service is leveraged. The configured account must have **Read** and **Write** permissions to the Opalis database.
+    The user account is defined by using the Opalis Integration Server Database Configuration utility. If using Microsoft SQL Server as the database server with **Windows Authentication** as the selected security provider, the user account that starts the OpalisActionService service is leveraged. The configured account must have **Read** and **Write** permissions to the Opalis database.

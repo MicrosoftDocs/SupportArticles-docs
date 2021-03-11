@@ -18,29 +18,29 @@ You use Active Directory integration to make agent assignments in Microsoft Syst
 
 When this issue occurs, the following events are logged in the Operations Manager event log:
 
-> Log Name:      Operations Manager  
-> Source:        OpsMgr Connector  
-> Date:          \<Date> \<Time>  
-> Event ID:      20012  
+> Log Name:      Operations Manager  
+> Source:        OpsMgr Connector  
+> Date:          \<Date> \<Time>  
+> Event ID:      20012  
 > Task Category: None  
-> Level:         Information  
-> Keywords:      Classic  
-> User:          N/A  
-> Computer:      scomagent.contoso.com  
+> Level:         Information  
+> Keywords:      Classic  
+> User:          N/A  
+> Computer:      scomagent.contoso.com  
 > Description:  
 > The OpsMgr Connector did not find any connection policy in Active Directory for management group \<Management_Group>
 
-> Log Name:      Operations Manager  
-> Source:        HealthService  
-> Date:          \<Date> \<Time>  
-> Event ID:      2000  
+> Log Name:      Operations Manager  
+> Source:        HealthService  
+> Date:          \<Date> \<Time>  
+> Event ID:      2000  
 > Task Category: Health Service  
-> Level:         Error  
-> Keywords:      Classic  
-> User:          N/A  
-> Computer:      scomagent.contoso.com  
+> Level:         Error  
+> Keywords:      Classic  
+> User:          N/A  
+> Computer:      scomagent.contoso.com  
 > Description:  
-> The Management Group \<Management_Group> failed to start. **The error message is the environment is incorrect.(0x8007000A).**  A previous message with more detail may have been logged.
+> The Management Group \<Management_Group> failed to start. **The error message is the environment is incorrect.(0x8007000A).**  A previous message with more detail may have been logged.
 
 When [diagnostic tracing](https://support.microsoft.com/help/942864/) is enabled, the following error messages are logged in the TracingGuidsNative.log file:
 
@@ -73,6 +73,6 @@ To fix the issue, follow these steps to limit the number of SCPs:
 10. On the **Domain** page, select the domain of the computers, and then select **Next**.
 11. On the **Inclusion Criteria** page, enter the LDAP query that you copied in step 6, and then select **Next**.
 12. On the **Exclusion Criteria** page, type the FQDN of computers that you explicitly want to prevent from being managed by this management server, and then select **Next**.
-13. On the **Agent Failover** page, select **Manually configure failover**, select no more than nine (9) management servers, and then select **Create**.
+13. On the **Agent Failover** page, select **Manually configure failover**, select no more than nine (9) management servers, and then select **Create**.
 14. In the **Management Server Properties** dialog box, click **OK**.
 15. Wait for one hour for the agent assignment setting to propagate in AD DS, and then check whether the issue is fixed.

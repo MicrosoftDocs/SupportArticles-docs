@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Shadow copies are deleted on Windows Server 2008 R2 when you try to run an FCI classification job
 

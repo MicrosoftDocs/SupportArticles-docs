@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, bburgin, garymu
 ms.prod-support-area-path: Domain join issues
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Sync Center: Slow syncing of offline files on some file servers
 

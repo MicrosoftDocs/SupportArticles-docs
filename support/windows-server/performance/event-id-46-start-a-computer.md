@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, cachen
 ms.prod-support-area-path: No Boot (not BugChecks)
-ms.technology: Performance 
+ms.technology: windows-server-performance 
 ---
 # Event ID 46 is logged when you start a computer
 

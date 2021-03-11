@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ctimon, v-vincli
 ms.prod-support-area-path: Cannot bring a resource online
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # How to recover a deleted computer object that supports a Network Name resource in a failover cluster
 

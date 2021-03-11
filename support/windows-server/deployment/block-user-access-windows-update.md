@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # How to block user access to Windows Update on Windows Server
 
@@ -22,9 +22,9 @@ _Original KB number:_ &nbsp; 4014345
 
 ## Symptoms
 
-The default settings in Windows Server allow user who is not an administrator to scan for and apply Windows Updates. Administrators may want to change this setting to limit access to Windows Updates, especially in Remote Desktop Services Host deployments.
+The default settings in Windows Server allow user who is not an administrator to scan for and apply Windows Updates. Administrators may want to change this setting to limit access to Windows Updates, especially in Remote Desktop Services Host deployments.
 
 ## More Information
 
-To change this setting, use the Group Policy "Remove access to use all Windows update features." The full path to this Group Policy is:  
+To change this setting, use the Group Policy "Remove access to use all Windows update features." The full path to this Group Policy is:  
 Computer Configuration\\Administrative Templates\\Windows Components\\Windows update\\Remove access to use all Windows update features

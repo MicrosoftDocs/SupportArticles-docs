@@ -11,9 +11,9 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
-# You receive a 80072EE6 error code when you download an update from Windows Server Update Services in Windows 7-based or Windows Server 2008 R2-based computer
+# You receive a 80072EE6 error code when you download an update from Windows Server Update Services
 
 This article helps resolve the 80072EE6 error code that occurs when you download an update from Windows Server Update Services.
 
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2724184
 
 Consider the following scenario:
 
-- You have a computer that is running Windows 7 or Windows Server 2008 R2
+- You have a computer that is running Windows
 - You configure Windows Server Update Services (WSUS) over the Group Policy 'Specify intranet Microsoft update service location'.
 - While trying to perform Windows Update, the update operation may fail. Additionally, you receive the following error code:
 

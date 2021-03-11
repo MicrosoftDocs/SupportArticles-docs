@@ -113,6 +113,8 @@
     href: http-403-forbidden-access-website.md
   - name: HTTP error 403.7
     href: http-error-403-7-forbidden-web-app.md
+  - name: HTTP error 404 file not found on a server
+    href: troubleshoot-404-file-not-found-error.md
   - name: HTTP error 404.13
     href: http-404-13-website.md
   - name: HTTP error 404.17 when you visit a Web site
@@ -123,6 +125,8 @@
     href: http-error-500-19-webpage.md
   - name: HTTP error 501 - Not Implemented
     href: http-error-501-not-implemented.md
+  - name: HTTP error 503 and event 5189 from web applications
+    href: error-503-event-5189-web-application.md
   - name: Logs contain dots instead of logging field value
     href: iis-logs-contain-dots.md
   - name: Pages can't be displayed
@@ -175,6 +179,8 @@
     href: calling-postcompletion-cause-crash.md
   - name: Can't call MTS COM from ASP
     href: server-execution-fail-call-mts-com-asp.md
+  - name: Default maximum stack size of a thread
+    href: default-maximum-stack-size-thread.md
   - name: Event handles may leak
     href: event-handles-leaked.md
   - name: Event ID 115 when you connect HTTPS websites
@@ -202,6 +208,8 @@
   items:
   - name: Access to remote resources fails
     href: remote-resources-fails-requested-iis.md
+  - name: Configure the default document in IIS
+    href: configure-default-document-iis.md
   - name: Content types for HTTP compression
     href: content-types-http-compression.md
   - name: Enable SSL for all customers
@@ -210,6 +218,8 @@
     href: error-when-you-configure-32-bit-handlers.md
   - name: HTTP error 400 when you send requests
     href: http-bad-request-response-kerberos.md
+  - name: HTTP error 500.0 when you visit a Web site
+    href: http-error-500-when-you-visit-web-site.md
   - name: HTTP status code
     href: http-status-code.md
   - name: HTTPS connections fail and SSL bindings are deleted

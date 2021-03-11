@@ -17,34 +17,34 @@ WSUS synchronization fails, and you receive the following error message:
 
 > SoapException: Fault occurred  
 at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)  
-   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)  
-   at Microsoft.UpdateServices.ServerSyncWebServices.ServerSync.ServerSyncProxy.GetUpdateData(Cookie cookie, UpdateIdentity[] updateIds)  
-   at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.WebserviceGetUpdateData(UpdateIdentity[] updateIds, List\`1 allMetadata, List\`1 allFileUrls, Boolean isForConfig)  
-   at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.GetUpdateDataInChunksAndImport(List\`1 neededUpdates, List\`1 allMetadata, List\`1 allFileUrls, Boolean isConfigData)  
-   at Microsoft.UpdateServices.ServerSync.Cat
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)  
+   at Microsoft.UpdateServices.ServerSyncWebServices.ServerSync.ServerSyncProxy.GetUpdateData(Cookie cookie, UpdateIdentity[] updateIds)  
+   at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.WebserviceGetUpdateData(UpdateIdentity[] updateIds, List\`1 allMetadata, List\`1 allFileUrls, Boolean isForConfig)  
+   at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.GetUpdateDataInChunksAndImport(List\`1 neededUpdates, List\`1 allMetadata, List\`1 allFileUrls, Boolean isConfigData)  
+   at Microsoft.UpdateServices.ServerSync.Cat
 
 Additionally, an error message that resembles the following is logged in the WSUS log file (`%ProgramFiles%\Update Services\LogFiles\SoftwareDistribution.log`) on the WSUS server:
 
 > \<Date> \<Time> Error WsusService.25 SoapUtilities.LogException USS ThrowException: Actor = **https://fe2.update.microsoft.com/v6**/ServerSyncWebService/ServerSyncWebService.asmx, Method = "`http://www.microsoft.com/SoftwareDistribution/GetUpdateData`", ID=\<ID>, ErrorCode=InternalServerError, Message=  
-   at Microsoft.UpdateServices.Internal.SoapUtilities.LogException(SoapException e)  
-   at Microsoft.UpdateServices.Internal.WebServiceCommunicationHelper. ProcessWebServiceProxyException(SoapHttpClientProtocol& webServiceObject, Exception exceptionInfo)  
-   at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.WebserviceGetUpdateData(UpdateIdentity[] updateIds, List\`1 allMetadata, List\`1 allFileUrls, List\`1& updatesWithSecureFileData, Boolean isForConfig)  
-   at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.GetUpdateDataInChunksAndImport(List\`1 neededUpdates, List\`1 allMetadata, List\`1 allFileUrls, Boolean isConfigData)  
-   at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.GetAndSaveUpdateMetadata(List\`1 updates)  
-   at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.ExecuteSyncProtocol(Boolean allowRedirect)  
-   at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.CatalogSyncThreadProcess()  
-   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)  
-   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)  
-   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)  
-   at System.Threading.ThreadHelper.ThreadStart()
+   at Microsoft.UpdateServices.Internal.SoapUtilities.LogException(SoapException e)  
+   at Microsoft.UpdateServices.Internal.WebServiceCommunicationHelper. ProcessWebServiceProxyException(SoapHttpClientProtocol& webServiceObject, Exception exceptionInfo)  
+   at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.WebserviceGetUpdateData(UpdateIdentity[] updateIds, List\`1 allMetadata, List\`1 allFileUrls, List\`1& updatesWithSecureFileData, Boolean isForConfig)  
+   at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.GetUpdateDataInChunksAndImport(List\`1 neededUpdates, List\`1 allMetadata, List\`1 allFileUrls, Boolean isConfigData)  
+   at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.GetAndSaveUpdateMetadata(List\`1 updates)  
+   at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.ExecuteSyncProtocol(Boolean allowRedirect)  
+   at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.CatalogSyncThreadProcess()  
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)  
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)  
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)  
+   at System.Threading.ThreadHelper.ThreadStart()
 \<Date> \<Time> Error WsusService.25 SoapUtilities.LogException USS ThrowException: Actor = **https://fe2.update.microsoft.com/v6**/ServerSyncWebService/ServerSyncWebService.asmx, Method = "`http://www.microsoft.com/SoftwareDistribution/GetUpdateData`", ID=\<ID>, ErrorCode=InternalServerError, Message=  
-   at Microsoft.UpdateServices.Internal.SoapUtilities.LogException(SoapException e)  
-   at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.ExecuteSyncProtocol(Boolean allowRedirect)  
-   at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.CatalogSyncThreadProcess()  
-   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)  
-   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)  
-   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)  
-   at System.Threading.ThreadHelper.ThreadStart()
+   at Microsoft.UpdateServices.Internal.SoapUtilities.LogException(SoapException e)  
+   at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.ExecuteSyncProtocol(Boolean allowRedirect)  
+   at Microsoft.UpdateServices.ServerSync.CatalogSyncAgentCore.CatalogSyncThreadProcess()  
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)  
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)  
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)  
+   at System.Threading.ThreadHelper.ThreadStart()
 
 ## Cause
 
@@ -54,7 +54,7 @@ This issue occurs if the WSUS servers are configured to use the old synchronizat
 
 To fix the issue, change the synchronization endpoint in WSUS configuration to **<https://sws.update.microsoft.com>**.
 
-To do this, follow these steps on the topmost WSUS server that connects directly to Microsoft Update, such as the root WSUS server in a WSUS hierarchy:
+To do this, follow these steps on the topmost WSUS server that connects directly to Microsoft Update, such as the root WSUS server in a WSUS hierarchy:
 
 1. Close all WSUS consoles.
 2. At an elevated PowerShell command prompt, run the following PowerShell scripts.
@@ -79,7 +79,7 @@ To do this, follow these steps on the topmost WSUS server that connects direct
    Restart-Service *Wsus* -v
    ```
 
-   WSUS servers that are running Windows Server 2008 (without the latest update) or earlier versions may be using the **<https://update.microsoft.com/v6>** or **<https://www.update.microsoft.com>** synchronization endpoints. Because these versions of Windows don't support SHA256 certificate authentication, use the following settings in the PowerShell scripts:
+   WSUS servers that are running Windows Server 2008 (without the latest update) or earlier versions may be using the **<https://update.microsoft.com/v6>** or **<https://www.update.microsoft.com>** synchronization endpoints. Because these versions of Windows don't support SHA256 certificate authentication, use the following settings in the PowerShell scripts:
 
    ```powershell
    $config.MUUrl = " https://sws1.update.microsoft.com"

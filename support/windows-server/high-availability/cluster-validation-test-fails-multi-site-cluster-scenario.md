@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, robsim, cpuckett
 ms.prod-support-area-path: Errors when running the Validation Wizard
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Cluster validation test on Active Directory configuration fails in a multi-site cluster scenario
 
@@ -31,7 +31,7 @@ Regardless of the errors, the cluster nodes can successfully communicate with so
 
 ## More information
 
-When you start a cluster validation test on a node, the node selects a domain controller to be used for the test. During the Active Directory configuration validation, all computers that are selected as part of the validation are pointed to use this domain controller. In a multi-site cluster scenario, the network communications may be designed in way where computers are only allowed to communicate with domain controllers that are in their local site. Therefore, these computers are prevented from communications with remote domain controllers. In this scenario, computers in other sites are not able to communicate with the selected domain controller, which leads to the failure of the cluster validation test.
+When you start a cluster validation test on a node, the node selects a domain controller to be used for the test. During the Active Directory configuration validation, all computers that are selected as part of the validation are pointed to use this domain controller. In a multi-site cluster scenario, the network communications may be designed in way where computers are only allowed to communicate with domain controllers that are in their local site. Therefore, these computers are prevented from communications with remote domain controllers. In this scenario, computers in other sites are not able to communicate with the selected domain controller, which leads to the failure of the cluster validation test.
 
 If the computers can communicate to a domain controller in the domain, and the domain controllers are successfully replicating, then the functionality of your failover cluster is not impacted.
 

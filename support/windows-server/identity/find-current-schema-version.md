@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Schema update - known issues, best practices, workflow review
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to find the current Schema Version
 

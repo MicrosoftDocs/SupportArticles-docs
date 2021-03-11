@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Partition and volume management
-ms.technology: BackupStorage
+ms.technology: windows-client-backup-and-storage
 ---
 # Access is denied error message appears when permissions are correct
 

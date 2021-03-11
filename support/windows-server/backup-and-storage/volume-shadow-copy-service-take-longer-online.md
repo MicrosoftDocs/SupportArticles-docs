@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ronsto
 ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
-ms.technology: BackupStorage
+ms.technology: windows-server-backup-and-storage
 ---
 # Disk volumes take longer to go online when you use the Volume Shadow Copy Service on computers that run many I/O operations
 

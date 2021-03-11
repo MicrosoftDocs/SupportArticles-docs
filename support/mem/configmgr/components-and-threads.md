@@ -80,7 +80,7 @@ Distribution Manager (DistMgr) performs a variety of operations to distribute co
   DWORD value can be between **1** and **500**.
 
   > [!NOTE]
-  > Do not change this value without consulting Microsoft support professional. This thread is single-threaded and doesn't create more threads to perform work.
+  > Do not change this value without consulting Microsoft support professional. This thread is single-threaded and doesn't create more threads to perform work.
 
 - **DP certificate monitoring thread**
 
@@ -113,7 +113,7 @@ Distribution Manager (DistMgr) performs a variety of operations to distribute co
 
   Log Entry for identification: `Starting the shared DP reassignment thread, thread ID = 0x9C0C (39948)`
 
-  This thread is started by the main DistMgr thread, and handles DP reassignments for standard and pull distribution points when a *.DPU* file is dropped in `DistMgr.box`. This thread reads the `SharedDPImportThreadLimit` Site Control File (SCF) property for `SMS_DISTRIBUTION_MANAGER` component to determine the number of threads it can start for performing DP reassignments simultaneously. The default value of `SharedDPImportThreadLimit` SCF Property is **50**, but it can be changed if necessary. However, if this SCF property doesn't exist for some reason, the default value of **50** is used for `SharedDPImportThreadLimit`.
+  This thread is started by the main DistMgr thread, and handles DP reassignments for standard and pull distribution points when a *.DPU* file is dropped in `DistMgr.box`. This thread reads the `SharedDPImportThreadLimit` Site Control File (SCF) property for `SMS_DISTRIBUTION_MANAGER` component to determine the number of threads it can start for performing DP reassignments simultaneously. The default value of `SharedDPImportThreadLimit` SCF Property is **50**, but it can be changed if necessary. However, if this SCF property doesn't exist for some reason, the default value of **50** is used for `SharedDPImportThreadLimit`.
 
   > [!NOTE]
   > This thread does create more threads to perform DP reassignments. Each worker thread handles reassignment of a specific DP.
@@ -122,7 +122,7 @@ Distribution Manager (DistMgr) performs a variety of operations to distribute co
 
   Log entry for identification: `Starting the DP upgrade processing thread, thread ID = 0x1968 (6504)`
 
-  This thread is started by the main DistMgr thread, and handles DP installations and upgrades for standard and pull distribution points. It calls `spGetDPsForUpgrade` to get a list of DPs that need to be upgraded. This thread reads the `DPUpgradeThreadLimit` Site Control File (SCF) property for `SMS_DISTRIBUTION_MANAGER` component to determine the number of threads it can start for performing DP Installations/Upgrades simultaneously. The default value of `DPUpgradeThreadLimit` SCF Property is **50**, but it can be changed if necessary. However, if this SCF property doesn't exist for some reason, the default value of **5** is used for `DPUpgradeThreadLimit`.
+  This thread is started by the main DistMgr thread, and handles DP installations and upgrades for standard and pull distribution points. It calls `spGetDPsForUpgrade` to get a list of DPs that need to be upgraded. This thread reads the `DPUpgradeThreadLimit` Site Control File (SCF) property for `SMS_DISTRIBUTION_MANAGER` component to determine the number of threads it can start for performing DP Installations/Upgrades simultaneously. The default value of `DPUpgradeThreadLimit` SCF Property is **50**, but it can be changed if necessary. However, if this SCF property doesn't exist for some reason, the default value of **5** is used for `DPUpgradeThreadLimit`.
 
   > [!NOTE]
   > This thread does create more threads to perform DP installation/upgrade work. Each worker thread handles installation/upgrade of a specific DP.
@@ -134,7 +134,7 @@ Distribution Manager (DistMgr) performs a variety of operations to distribute co
   These threads are started by the main DistMgr thread. The number of package processing threads is determined by the **Maximum number of packages** thread setting in the **Software Distribution Component Configuration** properties. Each package processing thread performs the hashing of the package content and creates a compressed copy of the content.
 
   > [!NOTE]
-  > Although all package processing threads run simultaneously, they are responsible for hashing and compressing package source. There is a Critical Section around the compression, meaning only one thread can be compressing content at a time. If a bunch of new, large packages are created and distributed, the per-package threads can block in a chain waiting for their turn to get the compression lock.
+  > Although all package processing threads run simultaneously, they are responsible for hashing and compressing package source. There is a Critical Section around the compression, meaning only one thread can be compressing content at a time. If a bunch of new, large packages are created and distributed, the per-package threads can block in a chain waiting for their turn to get the compression lock.
 
   Depending on the package actions (add/update/delete), each package processing thread also creates:
 
@@ -284,7 +284,7 @@ This is used to configure rate limits to control the network bandwidth that is i
 - **Pulse mode**: Specifies the size of the data blocks that are sent to the distribution point. You can also specify a time delay between sending each data block. Use this option when you must send data across a low-bandwidth network connection to the distribution point. For example, you might have constraints to send 1 KB of data every five seconds, regardless of the speed of the link or its usage at a given time.
 - **Limited to specified maximum transfer rates by hour**: Specify this setting to have a site send data to a distribution point by using only the percentage of time that you configure. When you use this option, Configuration Manager does not identify the networks available bandwidth, but instead divides the time it can send data into slices of time. Then data is sent for a short block of time, which is followed by blocks of time when data is not sent. For example, if the maximum rate is set to 50%, Configuration Manager transmits data for a period of time followed by an equal period of time when no data is sent. The actual size amount of data, or size of the data block, is not managed. Instead, only the amount of time during which data is sent is managed.
 
-For more information on these settings, see [Configuring Content Management in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682115(v=technet.10)?redirectedfrom=MSDN#BKMK_ModifyDistributionPointSettings).
+For more information on these settings, see [Configuring Content Management in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682115(v=technet.10)?redirectedfrom=MSDN#BKMK_ModifyDistributionPointSettings).
 
 ### How this affects Sender and PkgXferMgr threads
 

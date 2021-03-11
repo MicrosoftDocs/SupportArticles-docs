@@ -48,12 +48,16 @@
     "globalMetadata": {
       "breadcrumb_path": "/support/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None",
+      "feedback_system": "None", 
+      "feedback_github_repo": "MicrosoftDocs/SupportArticles-docs", 
       "searchScope": ["Troubleshoot"]
     },
 
     "fileMetadata": {
-
+      "feedback_system": {
+        "azure/*.md": "GitHub",
+        "azure/**/*.md": "GitHub"
+      },
       "layout": {
         "**/index.yml": "LandingPage"
       },
@@ -81,7 +85,7 @@
         "system-center/**/*.md": "luche"
       },
       "ms.localizationpriority": {
-        "**/*.md": "Normal"
+        "**/*.md": "medium"
       },
       "ms.reviewer": {
         "**/*.md": "DEV_Triage, DaleChe, RamaKoni, DelHan, SureshKa, SueHar",
@@ -97,7 +101,6 @@
         "dotnet/**/*.md": ".net",
         "aspnet/**/*.md": "asp.net",
         "sql/**/*.md": "sql",
-        "previous-versions/visualstudio/foxpro/*.md": "visual-foxpro",
         "host-integration-server/**/*.md": "host-integration-server",
         "visualstudio/**/*.md": "visual-studio-family",
         "webapps/**/*.md": "web-apps-server",
@@ -107,19 +110,14 @@
         "windows-hardware/drivers/**/*.md": "windows-hardware",
         "mem/intune/**/*.md": "intune",
         "mem/configmgr/**/*.md": "configuration-manager",
-        "previous-versions/configmgr/*.md": "configuration-manager",
         "system-center/**/*.md": "system-center",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
-        "previous-versions/dotnet/**/*.md": ".net",
-        "previous-versions/visualstudio/**/*.md": "visual-studio-family",
-        "previous-versions/*.md": "previous-versions",
         "browsers/**/*.md": "internet-explorer"
       },
       "ms.technology": {
         "biztalk/**/*.md": "",
         "dotnet/**/*.md": "",
         "aspnet/**/*.md": "",
-        "previous-versions/visualstudio/foxpro/*.md": "",
         "host-integration-server/**/*.md": "",
         "visualstudio/**/*.md": "",
         "webapps/**/*.md": "",
@@ -127,7 +125,6 @@
         "windows-hardware/drivers/**/*.md": "",
         "mem/intune/**/*.md": "microsoft-graph",
         "mem/configmgr/**/*.md": "",
-        "previous-versions/configmgr/*.md": "",
         "system-center/dpm/**/*.md": "data-protection-manager",
         "system-center/scom/**/*.md": "operations-manager",
         "system-center/orchestrator/**/*.md": "orchestrator",
@@ -151,7 +148,6 @@
         "host-integration-server/**/*.md": "Host Integration Server",
         "aspnet/**/*.md": "ASP.NET",
         "sql/**/*.md": "SQL Server",
-        "previous-versions/visualstudio/foxpro/*.md": "Visual FoxPro",
         "visualstudio/**/*.md": "Visual Studio",
         "visualstudio/silverlight/**/*.md": "Silverlight",
         "cpp/**/*.md": "Visual C++",
@@ -164,7 +160,6 @@
         "browsers/**/*.md": "Browsers",
         "mem/intune/**/*.md": "Intune",
         "mem/configmgr/**/*.md": "Configuration Manager",
-        "previous-versions/configmgr/*.md": "Configuration Manager",
         "system-center/dpm/**/*.md": "Data Protection Manager",
         "system-center/scom/**/*.md": "Operations Manager",
         "system-center/orchestrator/**/*.md": "Orchestrator",
@@ -195,9 +190,7 @@
         "azure/**/*.md": [ "Azure" ],
         "mem/intune/**/*.md": [ "Intune" ],
         "mem/configmgr/**/*.md": [ "Configuration Manager" ],
-        "previous-versions/configmgr/*.md": [ "Configuration Manager" ],
         "system-center/**/*.md": [ "System Center" ],
-        "previous-versions/**/*.md": [ "Previous Versions" ]
       }
     },
 

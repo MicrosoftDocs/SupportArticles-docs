@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory Certificate Services
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Certificate Services (certsvc) doesn't start after upgrade to Windows Server 2016
 

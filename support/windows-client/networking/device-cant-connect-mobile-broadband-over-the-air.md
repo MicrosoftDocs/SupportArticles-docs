@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: TCP/IP communications
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Devices can't connect to mobile broadband after over-the-air update from mobile operator
 

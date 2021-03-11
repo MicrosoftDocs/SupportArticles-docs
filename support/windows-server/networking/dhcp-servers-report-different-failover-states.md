@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, joelch, waltere
 ms.prod-support-area-path: Dynamic Host Configuration Protocol (DHCP)
-ms.technology: Networking
+ms.technology: networking
 ---
 # DHCP servers report different failover states or do not replicate lease information in a Windows Server 2012-based DHCP failover relationship
 

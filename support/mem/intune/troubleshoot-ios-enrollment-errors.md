@@ -2,6 +2,7 @@
 title: Troubleshooting iOS/iPadOS device enrollment problems in Microsoft Intune
 description: Suggestions for troubleshooting some of the most common problems when you enroll iOS/iPadOS devices in Intune.
 ms.reviewer: mghadial
+ms.date: 12/21/2020
 ---
 
 # Troubleshoot iOS/iPadOS device enrollment problems in Microsoft Intune
@@ -158,7 +159,7 @@ Verify that a valid APNs certificate is added to Intune. For more information, s
 Renew the APNs certificate, and then re-enroll the device.
 
 > [!IMPORTANT]
-> Make sure that you renew the APNs certificate. Don't replace the APNs certificate. If you replace the certificate, you have to re-enroll all iOS/iPadOS devices in Intune. 
+> Make sure that you renew the APNs certificate. Don't replace the APNs certificate. If you replace the certificate, you have to re-enroll all iOS/iPadOS devices in Intune.
 
 - To renew the APNs certificate in Intune standalone, see [Renew Apple MDM push certificate](/mem/intune/enrollment/apple-mdm-push-certificate-get#renew-apple-mdm-push-certificate).
 - To renew the APNs certificate in Microsoft 365, see [Create an APNs Certificate for iOS/iPadOS devices](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
@@ -180,7 +181,12 @@ iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR 
 #### Resolution
 Fix the connection issue, or use a different network connection to enroll the device. You may also have to contact Apple if the issue persists.
 
-## Resolutions when syncing tokens between Intune and ABM/ASM for automated device enrollment 
+## Sync token errors between Intune and ADE (DEP)
+
+This section includes token sync errors with:
+
+- Apple Business Manager (ABM)
+- Apple School Manager (ASM)
 
 ### Expired or invalid token
 
@@ -249,7 +255,15 @@ Contact support so they can retry to sync from Intune's side.
 
 #### Resolution
 
-Contact support so they can retry to sync from Intune's side.
+Contact the [Intune support team](/mem/get-support). They can retry syncing from the Intune service.
+
+### Required cursor
+
+**Cause:** The cursor was not initially set by Intune during the sync.
+
+#### Resolution
+
+Contact support so they can fix the sync from Intune's side to return the cursor.
 
 ### Apple profile not found
 
@@ -301,7 +315,7 @@ Open the **Settings** app and select Company Portal. In the Company Portal setti
 ## Next steps
 
 - [Troubleshoot device enrollment in Intune](troubleshoot-device-enrollment-in-intune.md)
-- [Ask a question on the Intune forum](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
+- [Ask a question on the Intune forum](/answers/products/mem)
 - [Check the Microsoft Intune Support Team Blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Check the Microsoft Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
 - [Overall Token Sync errors](https://developer.apple.com/documentation/devicemanagement/device_assignment/authenticating_with_a_device_enrollment_program_dep_server/interpreting_error_codes)

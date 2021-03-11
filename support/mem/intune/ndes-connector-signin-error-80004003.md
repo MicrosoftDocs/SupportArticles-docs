@@ -43,4 +43,4 @@ To fix the issue, assign a valid Intune license to the account that you use to s
 
 ## More information
 
-For more information about how to configure NDES for SCEP certificate deployment, see [Configure infrastructure to support SCEP with Intune](/mem/intune/protect/certificates-scep-configure).
+For more information about how to configure NDES for SCEP certificate deployment, see [Configure infrastructure to support SCEP with Intune](/mem/intune/protect/certificates-scep-configure).

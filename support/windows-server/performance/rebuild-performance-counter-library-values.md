@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Performance monitoring tools
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Manually rebuild performance counter library values
 
@@ -25,7 +25,10 @@ _Original KB number:_ &nbsp; 300956
 
 When you use the System Monitor tool, some counters may be missing or don't contain counter data. The base set of performance counter libraries may become corrupted and may need to be rebuilt. Additionally, you may need to rebuild any custom (Microsoft .NET Framework application created) counters or any extensible counters.
 
-This behavior may occur if certain extensible counters corrupt the registry, or if some Windows Management Instrumentation (WMI)-based programs modify the registry.
+This behavior may occur in the following situations:
+
+- certain extensible counters corrupt the registry.
+- some Windows Management Instrumentation (WMI)-based programs modify the registry.
 
 ## Rebuild the base performance counters
 
@@ -54,25 +57,25 @@ To rebuild the base performance counter libraries manually, follow these steps:
     - **Last Counter**  
     - **Last Help**
 
-    You can also use the Exctrlst.exe tool to locate the performance counter dynamic-link library files (DLLs) that are installed, and then access the registry to remove the DWORD values. You now have a workable performance registry that contains only system base counters.
+    You can also use the Exctrlst.exe tool to locate the performance counter dynamic-link library files (DLLs) that are installed. Then access the registry to remove the DWORD values. You now have a workable performance registry that contains only system base counters.
 
     > [!NOTE]
     > Removing the values from the **Performance** subkey in the registry may cause any installed .NET Framework applications not to work the next time that they are started. If this occurs, use the `lodctr /R` command in the [Re-add the extensible counters](#re-add-the-extensible-counters) section to rebuild the Performance counters. If you continue to have problems when you start a .NET Framework application, see the [Reinstall custom .NET Framework assembly performance counters](#reinstall-custom-net-framework-assembly-performance-counters) section in this article.
 
 ## Re-add the extensible counters
 
-You must re-add the extensible counters from the list of services. Before you do this, you must identify the .ini file that is used to load the counters:
+You must add the extensible counters again from the list of services. Before you do so, you must identify the .ini file that is used to load the counters:
 
 1. Open a Command Prompt window.
 2. At the command prompt, type `cd %Systemroot%\System32`, and then press ENTER.
 3. At the command prompt, type `findstr drivername *.ini`, and then press ENTER.
-4. Note the name of the .ini file for each drivername in the list.
+4. Note the name of the .ini file for each driver name in the list.
 5. At the command prompt, type the `lodctr <inifile>` command, and then press ENTER.
 
     > [!NOTE]
     > In this command, \<inifile> represents the name of the .ini file for the driver that you want to reload.
 
-    For example, if you want to reload the ASP driver, the list that you noted in step 4 shows that Axperf.ini is the .ini file for the ASP driver (axperf.ini:drivername=ASP). Therefore, to reload the ASP driver, type `lodctr axperf.ini` at the command prompt, and then press ENTER.
+    For example, if you want to reload the ASP driver, the list that you noted in step 4 shows that Axperf.ini is the .ini file for the ASP driver (`axperf.ini:drivername=ASP`). To reload the ASP driver, type `lodctr axperf.ini` at the command prompt, and then press ENTER.
 
 6. Repeat step 5 for each .ini file in the list.
 
@@ -101,9 +104,9 @@ Windows Server rebuilds all the counters because it reads all the .ini files in 
 
 ## Reinstall custom .NET Framework assembly performance counters
 
-If you continue to have problems when you start a .NET Framework application after you perform the procedures that are listed here, you may have to rebuild the Performance counters for the custom .NET Framework application. To do this, use the `/i` option in the .NET Framework Installer Tool (Installutil.exe). You must know the file names of the DLL files that create the Performance counters.
+If you continue to have problems when you start a .NET Framework application after you perform the procedures that are listed here, you may have to rebuild the Performance counters for the custom .NET Framework application. To do so, use the `/i` option in the .NET Framework Installer Tool (Installutil.exe). You must know the file names of the DLL files that create the performance counters.
 
-If you follow these procedures and remove the counters from the registry for all services installed on a system that has Microsoft System Center Operations Manager 2007 installed, you might have a broken Management Server. This is because the counters for the Config Service, SDK Service, and Database Write modules are not provided in the form of extensible counters in INI files. Instead, they are registered at the time of installation. Therefore, when you try to start System Center Operations Manager 2007, you may receive an error message that resembles the following because the performance counters are missing:
+If you follow these procedures and remove the counters from the registry for all services installed on a system that has Microsoft System Center Operations Manager 2007 installed, you might have a broken Management Server. The counters for the Config Service, SDK Service, and Database Write modules aren't provided in the form of extensible counters in INI files. Instead, they are registered at the time of installation. So, when you try to start System Center Operations Manager 2007, you may receive an error message similar to the following example because the performance counters are missing:
 
 > Event Type: Error  
 > Event Source: OpsMgr SDK Service  
@@ -115,7 +118,7 @@ If you follow these procedures and remove the counters from the registry for all
 > Computer: MOM  
 > Description: The System Center Operations Manager SDK Service failed due to an unhandled exception.
 
-To resolve this problem in System Center Operations Manager 2007, you must reinstall the .NET Framework assemblies that created the performance counters. To do this, use the `/i` option in the .NET Framework Installer Tool (Installutil.exe) to reinstall the following assemblies:
+To resolve this problem in System Center Operations Manager 2007, you must reinstall the .NET Framework assemblies that created the performance counters. To do so, use the `/i` option in the .NET Framework Installer Tool (Installutil.exe) to reinstall the following assemblies:
 
 - Microsoft.Mom.ConfigService.dll
 - Microsoft.Mom.Sdk.ServiceDataLayer.dll

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, CCLAY, 
 ms.prod-support-area-path: User profiles
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-server-user-profiles
 ---
 # How to dynamically create security-enhanced redirected folders or home folders  
 

@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Windows Firewall with Advanced Security (WFAS)
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # Internet firewalls can prevent browsing and file sharing
 

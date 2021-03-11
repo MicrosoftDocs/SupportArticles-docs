@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 1818: The remote procedure call was cancelled
 
@@ -241,4 +241,4 @@ Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CAL
 
 ## More information
 
-[Active Directory changes do not replicate in Windows Server 2003](https://support.microsoft.com/default.aspx?scid=kb;EN-US;830746)
+[Active Directory changes do not replicate](/troubleshoot/windows-server/identity/active-directory-changes-not-replicate)

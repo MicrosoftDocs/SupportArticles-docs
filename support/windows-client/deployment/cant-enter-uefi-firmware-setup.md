@@ -1,6 +1,6 @@
 ---
 title: Can't enter UEFI firmware setup
-description: Provides a solution to an issue that you can't enter UEFI firmware setup when in native UEFI mode.
+description: Provides a solution to an issue where you can't enter UEFI firmware setup when in native UEFI mode.
 ms.date: 09/16/2020
 author: Deland-Han 
 ms.author: delhan
@@ -11,11 +11,11 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, match, jaysenb
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
-# Cannot enter UEFI firmware setup when in native UEFI mode on Windows 7 and Windows 8
+# Cannot enter UEFI firmware setup when in native UEFI mode in Windows 7 and Windows 8
 
-This article provides a solution to an issue that you can't enter UEFI firmware setup when in native UEFI mode.
+This article provides a solution to an issue where you can't enter UEFI firmware setup when in native UEFI mode.
 
 _Original product version:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2804597
@@ -24,10 +24,10 @@ _Original KB number:_ &nbsp; 2804597
 
 Consider the following scenario:
 
-- You enter UEFI F/W setup by pressing F1 key during POST
-- Navigate to "Startup" page and change the "UEFI/Legacy Boot" setting from "Both" to UEFI Only"
-- Exit UEFI F/W setup using F10 key to save your changes
-- You then boot the system from the Windows 7/Windows 8 installation DVD and do a normal installation
+- You enter UEFI F/W setup by pressing F1 key during POST.
+- Navigate to **Startup** page and change the **UEFI/Legacy Boot** setting from **Both** to **UEFI Only**.
+- Exit UEFI F/W setup using F10 key to save your changes.
+- You then boot the system from the Windows 7/Windows 8 installation DVD and do a normal installation.
 
 After Windows 7/Windows 8 setup completes, you're no longer able to enter the UEFI F/W setup option when using the F1 key during POST.
 
@@ -44,4 +44,4 @@ Contact your hardware vendor to see if there is a firmware update available to r
 
 ## More information
 
-LOAD_OPTION_CATEGORY_APP bit of Attributes in Boot#### is deleted by bcdedit.exe /export, then bcdedit.exe /import /clean process. It may also be cleared by installing Windows Vista or later. This can cause the UEFI Boot Manager failure to enter UEFI firmware menu.
+LOAD_OPTION_CATEGORY_APP bit of Attributes in Boot#### is deleted by `bcdedit.exe /export`, then `bcdedit.exe /import /clean` process. It may also be cleared by installing Windows Vista or later. This can cause the UEFI Boot Manager failure to enter UEFI firmware menu.

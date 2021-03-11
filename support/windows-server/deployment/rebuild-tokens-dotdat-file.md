@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
 ms.prod-support-area-path: Activation
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # How to rebuild the Tokens.dat file when you troubleshoot Windows activation issues
 

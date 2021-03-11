@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Network Load Balancing (NLB)
-ms.technology: Networking
+ms.technology: networking
 ---
 # Network Load Balancing - Concept and notes
 

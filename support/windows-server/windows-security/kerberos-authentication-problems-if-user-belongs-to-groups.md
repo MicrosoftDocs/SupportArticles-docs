@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm, wincicadsec, mohak
 ms.prod-support-area-path: Kerberos authentication
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Problems with Kerberos authentication when a user belongs to many groups
 

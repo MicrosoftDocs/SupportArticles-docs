@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.prod-support-area-path: Setup
-ms.technology: Deployment
+ms.technology: windows-client-deployment
 ---
 # Network provider settings are removed during an in-place upgrade to Windows 10
 
@@ -22,11 +22,11 @@ _Original KB number:_ &nbsp; 4013822
 
 ## Symptoms
 
-When you perform an in-place upgrade to Windows 10, version 1809, version 1709, version 1703, or version 1607, the third-party network provider settings are removed from the computer.
+When you perform an in-place upgrade to Windows 10, version 1809, version 1709, version 1703, or version 1607, the third-party network provider settings are removed from the computer.
 
 ## Cause
 
-This is a known issue in the Windows 10 upgrade process. After the upgrade, the Provider list (`HKLM\SYSTEM\CurrentControlSet\Control\NetworkProvider`) is reset, and the third-party provider registry settings (under `HKLM\System\CurrentControlSet\Services\`) are removed.
+This is a known issue in the Windows 10 upgrade process. After the upgrade, the Provider list (`HKLM\SYSTEM\CurrentControlSet\Control\NetworkProvider`) is reset, and the third-party provider registry settings (under `HKLM\System\CurrentControlSet\Services\`) are removed.
 
 ## Workaround
 
@@ -40,9 +40,9 @@ To work around this issue, use one of the following methods.
 
 1. Before you upgrade, manually back up the contents of the Provider list at `HKLM\SYSTEM\CurrentControlSet\Control\NetworkProvider` and the respective third-party provider settings (under `HKLM\System\CurrentControlSet\Services\`).
 2. Run the upgrade.
-3. After the upgrade is completed, restore the registry settings that were backed up in step 1.
+3. After the upgrade is completed, restore the registry settings that were backed up in step 1.
 
-### Method 2
+### Method 2
 
 If you are experiencing issues that affect the third-party network provider settings after you upgrade, manually restore the registry keys that were deleted by the installer.
 
@@ -58,14 +58,14 @@ To verify the network providers list, follow these steps:
 
     :::image type="content" source="./media/network-provider-settings-removed-in-place-upgrade/advanced-settings.png" alt-text="Advanced Settings" border="false":::
 
-This third-party network providers list is stored in the following registry location:  
+This third-party network providers list is stored in the following registry location:  
 `HKLM\SYSTEM\CurrentControlSet\Control\NetworkProvider\Order\ProviderOrder`  
 **Default value**: RDPNP,LanmanWorkstation,webclient  
 `HKLM\System\CurrentControlSet\Control\NetworkProvider\HwOrder\ProviderOrder`  
 **Default value**: RDPNP,LanmanWorkstation,webclient
 > [!Note]
 > Each string value has its own settings under `HKLM\System\CurrentControlSet\Services`.  
-For example, the following are the default network providers:
+For example, the following are the default network providers:
 >
 > - `HKLM\System\CurrentControlSet\Services\RDPNP\NetworkProvider`
 > - `HKLM\System\CurrentControlSet\Services\LanmanWorkstation\NetworkProvider`

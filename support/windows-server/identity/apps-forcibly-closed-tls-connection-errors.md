@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: sureshka, arrenc, juburke, stacygr, jburchel, diassis, stefze, mastewa, ardenw, kaushika
 ms.prod-support-area-path: Transport Layer Security (TLS)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows
 

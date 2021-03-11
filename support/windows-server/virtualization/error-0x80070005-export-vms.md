@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Backup and restore of virtual machines
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Error 0x80070005 when you export Hyper-V VMs over the Network
 
@@ -28,7 +28,7 @@ You use Hyper-V on a computer that is running Windows Server 2008 or Windows Ser
 - In Hyper-V Manager, you try to export a virtual machine to a network share.
 - You have the full control permissions on the network share.
 
-In this scenario, the export may fail with an error that resembles the following:
+In this scenario, the export may fail with an error that resembles the following:
 
 > **An error occurred while attempting to export the virtual machine.**  
 Failed to copy file during export.  
@@ -44,23 +44,23 @@ This problem occurs because the Hyper-V host does not have permission on the net
 Ensure the permissions allow the Computer account of the Hyper-V host performing the Export to update the shared folder.
 
 > [!NOTE]
-> While following steps are specific to 2008, the idea is the same for updating the share and NTFS permissions if the share is hosted on another version of Windows.
+> While following steps are specific to 2008, the idea is the same for updating the share and NTFS permissions if the share is hosted on another version of Windows.
 
 ### Update the NTFS level permissions
 
-1. On the destination server, right-click on the shared folder and select **Properties**.
+1. On the destination server, right-click on the shared folder and select **Properties**.
 2. Select the **Security** tab.
 3. Click **Edit** button and click the **Add** button in the permissions dialog box.
 4. Click **Oject Types** and select **Computers** if not already done and click **OK**.  
 5. In the dialog **Enter the object names to select** provide the name of Hyper-V host machine and click **Check Names**.  
-6. With the Hyper-V host machine name select, click **Allow** by Full control and click **OK**.  
+6. With the Hyper-V host machine name select, click **Allow** by Full control and click **OK**.  
 
 ### Update the share level permissions
 
-1. On the destination server, Right-click on the shared folder and select Properties.
+1. On the destination server, Right-click on the shared folder and select Properties.
 2. Select the **Sharing** tab.
 3. Click **Advanced Sharing...**.
 4. On the **Advanced Sharing** dialog, click **Permissions** and then **Add**.
 5. Click **Oject Types** and select **Computers** if not already done and click **OK**.
 6. In the dialog **Enter the object names to select** provide the name of Hyper-V host machine and click **Check Names**.  
-7. With the Hyper-V host machine name select, click **Allow** by Full control and click **OK**.
+7. With the Hyper-V host machine name select, click **Allow** by Full control and click **OK**.

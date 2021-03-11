@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, ajayps
 ms.prod-support-area-path: Remote access
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # DirectAccess clients may be unable to connect with error 0x80092013
 

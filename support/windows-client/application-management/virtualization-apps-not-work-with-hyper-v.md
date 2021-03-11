@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: 1st Party Applications
-ms.technology: ApplicationCompatibility
+ms.technology: windows-client-application-compatibility
 ---
 # Virtualization applications don't work together with Hyper-V, Device Guard, and Credential Guard
 

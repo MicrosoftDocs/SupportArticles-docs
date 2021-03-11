@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevepar, eltons
 ms.prod-support-area-path: Configuration of virtual machine settings
-ms.technology: HyperV
+ms.technology: hyper-v
 ---
 # Copy-and-paste operations don't work when you connect to a Hyper-V virtual machine by using VMConnect Enhanced Session Mode
 
@@ -30,7 +30,7 @@ Enhanced Session Mode enables the transfer of files to and from virtual machines
 
 ## Resolution
 
-To successfully copy files to and from Hyper-V virtual machines when you use VMConnect through Enhanced Session Mode, make sure that you don't enable the following policy:
+To successfully copy files to and from Hyper-V virtual machines when you use VMConnect through Enhanced Session Mode, make sure that you don't enable the following policy:
 
 - Policy path: Computer Configuration\\Policies\\Administrative Templates\\Windows Components\\Terminal Services\\Terminal Server\\Device and Resource Redirection
 

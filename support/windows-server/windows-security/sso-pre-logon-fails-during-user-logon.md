@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, waynmc, tfairman
 ms.prod-support-area-path: Kerberos authentication
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # SSO with pre-logon fails during user logon after a restart
 

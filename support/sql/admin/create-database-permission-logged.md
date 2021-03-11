@@ -34,7 +34,3 @@ select * from fn_get_audit_file('C:\path\to\file.sqlaudit', default, default) wh
 - [RESTORE Statements - VERIFYONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)
 
 - [GRANT Database Permissions (Transact-SQL)](/sql/t-sql/statements/grant-database-permissions-transact-sql).
-
-## References
-
-Learn about the [terminology](https://support.microsoft.com/help/824684) that Microsoft uses to describe software updates.

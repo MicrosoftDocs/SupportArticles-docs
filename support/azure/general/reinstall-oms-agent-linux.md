@@ -1,23 +1,23 @@
 ---
 title: How to reinstall Operations Management Suite (OMS) Agent for Linux
 description: Describes how to reinstall Operations Management Suite (OMS) Agent for Linux.
-ms.date: 08/14/2020
+ms.date: 01/14/2021
 ms.prod-support-area-path: 
 ms.service: automation
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # How to reinstall Operations Management Suite (OMS) Agent for Linux
 
-This article describes the steps that you can take to remove the Operations Management Suite (OMS) Agent for Linux and then reinstall it. 
+This article describes the steps that you can take to remove the Operations Management Suite (OMS) Agent for Linux and then reinstall it.
 
 _Original product version:_ &nbsp; Azure Automation  
 _Original KB number:_ &nbsp; 4131455
 
 ## Prerequisites
 
-Before you reinstall the OMS Agent, make sure that you have the following items:
+Before you reinstall the OMS Agent, verify that you have the following items:
 
 - A login account to the Linux-computer that has the ability to use **sudo**.
 - The workspace identifier and primary key of your OMS workspace. To get this, open the Azure portal, navigate to **Log Analytics**, select your workspace, and then select **Advanced settings**. The blade that open includes a property that's named **Workspace Id** and another that's named **Primary Key**.
@@ -33,35 +33,43 @@ To remove the existing agent and then install the new agent, follow these ste
     wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh
     ```  
 
-3. Run `sudo sh onboard_agent.sh --purge`. This downloads the most recent version of the installation script and runs the uninstallation operation that will remove all existing agent components. 
-4. Remove the `/etc/opt/microsoft/omsagent` and `/var/opt/microsoft/omsagent` folders. 
-5. Run the following command: 
+3. Run `sudo sh onboard_agent.sh --purge`. This downloads the most recent version of the installation script and runs the un-installation operation that will remove all existing agent components.
+4. Remove the `/etc/opt/microsoft/omsagent` and `/var/opt/microsoft/omsagent` folders.
+5. Run the following command:
 
     ```bash
     sudo sh onboard_agent.sh -w <workspaceid> -s <primarykey>
     ```
 
-    - In this command, replace \<workspaceid> and \<primarykey> with the appropriate values from the actual Azure workspace ID and primary key, respectively. 
+    - In this command, replace \<workspaceid> and \<primarykey> with the appropriate values from the actual Azure workspace ID and primary key, respectively.
     - If you're using a cloud service other than Azure public cloud, you must add the **-d** parameter that identifies the domain that's to be used. For example, if you use the Azure US Government cloud, run the following command:
 
-        ```bash
-        sudo sh onboard_agent.sh -w workspaceid -s primarykey -d opinsights.azure.us
-        ```  
+      ```bash
+      sudo sh onboard_agent.sh -w workspaceid -s primarykey -d opinsights.azure.us
+      ```  
 
 ## Verify the agent reinstallation
 
 To verify that the installation finished successfully, you can run a script that initiates a check of the agent. To initiate the check, follow these steps:
 
-1. Connect to the Linux computer, and then open a terminal session. 
-2. Run the following command
+1. Connect to the Linux computer, and then open a terminal session.
+2. Run the one of these two commands to check the agent:
 
-    ```bash
-    sudo -u omsagent /opt/microsoft/omsconfig/Scripts/PerformRequiredConfigurationChecks.py
-    ```
+   If the agent is running **python2**, run this command:
 
-If the script runs successfully, you should get output that resembles the following:
+   ```bash
+   sudo su omsagent -c 'python2 /opt/microsoft/omsconfig/Scripts/PerformRequiredConfigurationChecks.py'
+   ```
 
-```
+   If the agent is running **python3**, run this command:
+
+   ```bash
+   sudo su omsagent -c 'python3 /opt/microsoft/omsconfig/Scripts/PerformRequiredConfigurationChecks.py'
+   ```
+
+If the script runs successfully, you will get a result similar to this output:
+
+```bash
 instance of PerformRequiredConfigurationChecks
 {
     ReturnValue=0

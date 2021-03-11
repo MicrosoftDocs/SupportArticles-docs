@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Windows Firewall with Advanced Security (WFAS)
-ms.technology: WindowsSecurity
+ms.technology: windows-client-security
 ---
 # How to enable diagnostic logging for Windows Security Center
 

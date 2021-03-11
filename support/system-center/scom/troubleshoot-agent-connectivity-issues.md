@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot agent connectivity issues
-description: Troubleshoot issues that Operations Manager agents have problem connecting to the management server in System Center 2012 Operations Manager and later versions.
+description: Troubleshoot issues that Operations Manager agents have problem connecting to the management server in System Center 2012 Operations Manager and later versions.
 ms.date: 08/22/2020
 ms.prod-support-area-path:
 ---
 # Troubleshoot agent connectivity issues in Operations Manager
 
-This guide helps you troubleshoot issues that Operations Manager agents have problem connecting to the management server in System Center 2012 Operations Manager (OpsMgr 2012) and later versions.
+This guide helps you troubleshoot issues that Operations Manager agents have problem connecting to the management server in System Center 2012 Operations Manager (OpsMgr 2012) and later versions.
 
 To learn more about Operations Manager agent and how they communicate with management servers, see [Agents](/previous-versions/system-center/system-center-2012-R2/hh230741(v=sc.12)#agents) and [Communication Between Agents and Management Servers](/previous-versions/system-center/system-center-2012-R2/hh230741(v=sc.12)#communication-between-agents-and-management-servers).
 
@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 10066
 
 ## Check the Health Service
 
-Whenever you experience connectivity problems in Operations Manager, first make sure that the Health Service is running without errors on both the client agent and the management server.
+Whenever you experience connectivity problems in Operations Manager, first make sure that the Health Service is running without errors on both the client agent and the management server.
 To determine whether the service is running, follow these steps:
 
 1. Press the Windows key+R.
@@ -29,11 +29,11 @@ To determine whether the service is running, follow these steps:
 
 ## Check antivirus exclusions
 
-If the Health Service is up and running, the next thing is to confirm that antivirus exclusions are properly configured. For the latest information about recommended antivirus exclusions for Operations Manager, see [Recommendations for antivirus exclusions that relate to Operations Manager](antivirus-exclusions-recommendations.md)).
+If the Health Service is up and running, the next thing is to confirm that antivirus exclusions are properly configured. For the latest information about recommended antivirus exclusions for Operations Manager, see [Recommendations for antivirus exclusions that relate to Operations Manager](antivirus-exclusions-recommendations.md)).
 
 ## Check network issues
 
-In Operations Manager, the agent computer must be able to successfully connect to TCP port 5723 on the management server. If this is failing, you will likely receive event ID 21016 and 21006 on the client agent.
+In Operations Manager, the agent computer must be able to successfully connect to TCP port 5723 on the management server. If this is failing, you will likely receive event ID 21016 and 21006 on the client agent.
 
 In addition to TCP port 5723, the following ports must be enabled:
 
@@ -41,7 +41,7 @@ In addition to TCP port 5723, the following ports must be enabled:
 - TCP and UDP port 88 for Kerberos authentication
 - TCP and UDP port 53 for Domain Name Service (DNS)
 
-Additionally, you must ensure that RPC communications complete successfully over the network. Problems with RPC communication usually manifest themselves when pushing an agent from the management server. RPC communication problems usually cause the client push to fail with an error similar to the following:
+Additionally, you must ensure that RPC communications complete successfully over the network. Problems with RPC communication usually manifest themselves when pushing an agent from the management server. RPC communication problems usually cause the client push to fail with an error similar to the following:
 
 > The Operation Manager Server failed to perform specified operation on computer agent1.contoso.com.
 >
@@ -50,7 +50,7 @@ Additionally, you must ensure that RPC communications complete successfully over
 > Error Code: 800706BA  
 > Error Description: The RPC server is unavailable
 
-This error typically occurs when either non-standard ephemeral ports are used or when the ephemeral ports are blocked by a firewall. For example, if non-standard high range RPC ports have been configured, a network trace will show a successful connection to RPC port 135 followed by a connection attempt using a non-standard RPC port such as 15595. The following is an example:
+This error typically occurs when either non-standard ephemeral ports are used or when the ephemeral ports are blocked by a firewall. For example, if non-standard high range RPC ports have been configured, a network trace will show a successful connection to RPC port 135 followed by a connection attempt using a non-standard RPC port such as 15595. The following is an example:
 
 > 18748 MS Agent TCP TCP: Flags=CE....S., SrcPort=52457, DstPort=15595, PayloadLen=0, Seq=1704157139, Ack=0, Win=8192  
 > 18750 MS Agent TCP TCP:[SynReTransmit #18748] Flags=CE....S., SrcPort=52457, DstPort=15595, PayloadLen=0, Seq=1704157139, Ack=0,  
@@ -81,13 +81,13 @@ You can also configure the RPC dynamic port range through the registry. For more
 
 If everything seems to be configured correctly and you still experience the error, it may be caused by one of the following conditions:
 
-1. DCOM has been restricted to a certain port. To verify, run `dcomcnfg.exe`, go to **My Computer** > **Properties** > **Default Protocols**, ensure that there is no custom setting.
+1. DCOM has been restricted to a certain port. To verify, run `dcomcnfg.exe`, go to **My Computer** > **Properties** > **Default Protocols**, ensure that there is no custom setting.
 
-2. WMI is configured to use a custom endpoint. To check if you have a static endpoint configured for WMI, run `dcomcnfg.exe`, go to **My Computer** > **DCOM Config** > **Windows Management and Instrumentation** > **Properties** > **Endpoints**, ensure that there is no custom setting.
+2. WMI is configured to use a custom endpoint. To check if you have a static endpoint configured for WMI, run `dcomcnfg.exe`, go to **My Computer** > **DCOM Config** > **Windows Management and Instrumentation** > **Properties** > **Endpoints**, ensure that there is no custom setting.
 
 3. The agent computer is running the Exchange Server 2010 Client Access server role. The Exchange Server 2010 Client Access service changes the port range to 6005 through 65535. The range was expanded to provide sufficient scaling for large deployments. Don't change these port values without fully understanding the consequences.
 
-For more information about port and firewall requirements, see [Firewalls](/previous-versions/system-center/system-center-2012-R2/dn249696(v=sc.12)#firewalls). You can also find the minimum required network connectivity speeds in the same article.
+For more information about port and firewall requirements, see [Firewalls](/previous-versions/system-center/system-center-2012-R2/dn249696(v=sc.12)#firewalls). You can also find the minimum required network connectivity speeds in the same article.
 
 > [!NOTE]
 > Troubleshooting network problems is an extremely large issue, so it's best to consult a networking engineer if you suspect that an underlying network problem is causing your agent connectivity issues in Operations Manager. We also have some basic, generalized network troubleshooting information available from our Windows Directory Services support team available at [Troubleshooting networks without NetMon](/archive/blogs/askds/troubleshooting-networks-without-netmon).
@@ -112,7 +112,7 @@ The takeaway here is that if the client agents and management servers don't lie 
 
 - Confirm that the gateway certificate exists in **Local Computer** > **Personal** > **Certificates** on the gateway server. Confirm that the gateway certificate exists in **Local Computer** > **Operations Manager** > **Certificates** on the gateway server.
 
-- Confirm that registry value `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Operations Manager\3.0\Machine Settings\ChannelCertificateSerialNumber` exists and has the value of the certificate (from the Local Computer/Personal/Certificates folder within the details in the **Serial number** field) reversed within it on the gateway server.
+- Confirm that registry value `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Operations Manager\3.0\Machine Settings\ChannelCertificateSerialNumber` exists and has the value of the certificate (from the Local Computer/Personal/Certificates folder within the details in the **Serial number** field) reversed within it on the gateway server.
 
 - Confirm that registry value `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Operations Manager\3.0\Machine Settings\ChannelCertificateSerialNumber` exists and has the value of the certificate (from the Local Computer/Personal/Certificates folder within the details in the **Serial number** field) reversed within it on the management server to which the gateway or agent is connecting.
 
@@ -134,9 +134,9 @@ For details on how certificate-based authentication functions in Operations Mana
 
 ## Check for a disjointed namespace on the client agent
 
-A disjoint namespace occurs when the client computer has a primary DNS suffix that doesn't match the DNS name of the Active Directory domain that the client belongs to. For example, a client that uses a primary DNS suffix of *corp.contoso.com* in an Active Directory domain that's named *na.corp.contoso.com* is using a disjoint namespace.
+A disjoint namespace occurs when the client computer has a primary DNS suffix that doesn't match the DNS name of the Active Directory domain that the client belongs to. For example, a client that uses a primary DNS suffix of *corp.contoso.com* in an Active Directory domain that's named *na.corp.contoso.com* is using a disjoint namespace.
 
-When the client agent or the management server has a disjointed namespace, Kerberos authentication can fail. Though this is an Active Directory issue and not an Operations Manager issue, it does affect agent connectivity.
+When the client agent or the management server has a disjointed namespace, Kerberos authentication can fail. Though this is an Active Directory issue and not an Operations Manager issue, it does affect agent connectivity.
 
 For more information, see [Disjoint Namespace](/previous-versions/windows/it-pro/windows-server-2003/cc731125(v=ws.10)).
 
@@ -165,7 +165,7 @@ For more information, see [Update Rollup 8 for System Center 2012 Operations Man
 
 If everything else checks out, check the Operations Manager event log for any error events generated by the OpsMgr Connector. Common causes and resolutions for various OpsMgr Connector events are listed below.
 
-### Event ID 21006 and 21016 appear on the client agent
+### Event ID 21006 and 21016 appear on the client agent
 
 Examples of these events:
 
@@ -229,12 +229,12 @@ An example of this event:
 > Computer: \<ComputerName>  
 > Description:Failed to initialize security context for target MSOMHSvc/******The error returned is 0x80090311(No authority could be contacted for authentication.). This error can apply to either the Kerberos or the SChannel package.
 
-Event IDs 21006, 21016 and 20057 are usually caused by firewalls or network problems that are preventing communication over the required ports. To troubleshoot this issue, check the firewalls between the client agent and the management server. The following ports must be open to enable correct authentication and communication:
+Event IDs 21006, 21016 and 20057 are usually caused by firewalls or network problems that are preventing communication over the required ports. To troubleshoot this issue, check the firewalls between the client agent and the management server. The following ports must be open to enable correct authentication and communication:
 
 - TCP and UDP port 389 for LDAP.
 - TCP and UDP port 88 for Kerberos authentication.
 
-### Event ID 2010 and 2003 appear on the client agent
+### Event ID 2010 and 2003 appear on the client agent
 
 Examples of these events:
 
@@ -328,7 +328,7 @@ Examples of these events:
 > Description:  
 > The OpsMgr Connector connected to \<ComputerName>, but the connection was closed immediately after authentication occurred. The most likely cause of this error is that the agent is not authorized to communicate with the server, or the server has not received configuration. Check the event log on the server for the presence of 20000 events, indicating that agents which are not approved are attempting to connect.
 
-When you see these events, it indicates that authentication occurred but then the connection was closed. This usually occurs because the agent hasn't been configured. To verify this, check whether event ID 20000 **A device which is not part of this management group has attempted to access this health service** is received on the management server.
+When you see these events, it indicates that authentication occurred but then the connection was closed. This usually occurs because the agent hasn't been configured. To verify this, check whether event ID 20000 **A device which is not part of this management group has attempted to access this health service** is received on the management server.
 
 These event logs can also occur if client agents are stuck in a **Pending** status and not visible in the console.
 
@@ -344,7 +344,7 @@ If so, you can resolve this by running the following command to manually approve
 Get-SCOMPendingManagement| Approve-SCOMPendingManagement
 ```
 
-### Event ID 21023 appears on the client agent, while Event ID 29120, 29181 and 21024 appear on the management server
+### Event ID 21023 appears on the client agent, while Event ID 29120, 29181 and 21024 appear on the management server
 
 Some examples of these events are included below.
 
@@ -436,7 +436,7 @@ In most cases, this should allow enough time for the synchronization process to 
 #### Method 2
 
 1. Install [Update Rollup 3](https://support.microsoft.com/help/2965445/) or later for System Center 2012 R2 Operations Manager.
-2. Add the following registry value on the server that's running System Center 2012 R2 Operations Manager to configure the timeout:
+2. Add the following registry value on the server that's running System Center 2012 R2 Operations Manager to configure the timeout:
 
     - Registry subkey: `HKEY_LOCAL_MACHINE\Software\Microsoft Operations Manager\3.0\Config Service`
     - DWORD name: `CommandTimeoutSeconds`
@@ -449,24 +449,24 @@ In most cases, this should allow enough time for the synchronization process to 
 
 Other OpsMgr Connector error events and the corresponding troubleshooting suggestions are listed below:
 
-| Event| Description| More information|
+| Event| Description| More information|
 |---|---|---|
-| 20050|The specified certificate could not be loaded because the Enhanced Key Usage that's specified doesn't meet OpsMgr requirements. The certificate must have the following usage types: %n %n Server Authentication (1.3.6.1.5.5.7.3.1)%n Client Authentication (1.3.6.1.5.5.7.3.2)%n|Confirm the object identifier on the certificate.|
-| 20057|Failed to initialize security context for target %1 The error returned is %2(%3). This error can apply to either the Kerberos package or the SChannel package.|Check for duplicate or incorrect SPNs.|
-| 20066|A certificate for use with Mutual Authentication was specified. However, that certificate could not be found. The ability for this Health Service to communicate will likely be affected.|Check the certificate.|
-| 20068|The certificate that is specified in the registry at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Operations Manager\3.0\Machine Settings` cannot be used for authentication because the certificate does not contain a usable private key or because the private key is not present. The error is %1(%2).|Check for a missing or unassociated private key. Investigate the certificate. Re-import the certificate, or create a new certificate and import.|
-| 20069|The specified certificate could not be loaded because the KeySpec must be AT_KEYEXCHANGE|Check the certificate. Check the object identifier on the certificate.|
-| 20070|The OpsMgr Connector connected to %1. However, the connection was closed immediately after authentication occurred. The most likely cause of this error is that the agent is not authorized to communicate with the server or that the server has not received configuration. Check the event log on the server for the presence of 20000 events. These indicate that agents that are not approved are trying to connect.|Authentication occurred but the connection was closed. Confirm that ports are open and check agent pending approval.|
-| 20071|The OpsMgr Connector connected to %1. However, the connection was closed immediately without authentication occurring. The most likely cause of this error is a failure to authenticate either this agent or the server. Check the event log on the server and on the agent for events that indicate a failure to authenticate.|Authentication has failed. Check firewalls and port 5723. The agent computer must be able to reach port 5723 on the Management Server. Also confirm that TCP & UDP port 389 for LDAP, port 88 for Kerberos and port 53 for DNS are available.|
-| 20072|The remote certificate %1 was not trusted. The error is %2(%3).|Check whether the certificate is located in the trusted store.|
-| 20077|The certificate that is specified in the registry at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Operations Manager\3.0\Machine Settings` cannot be used for authentication because the certificate cannot be queried for property information. The specific error is %2(%3).%n %n. This typically means that no private key was included with the certificate. Please double-check to make sure that the certificate contains a private key.|There is a missing or unassociated private key. Investigate the certificate. Re-import the certificate, or create a new certificate and import.|
-| 21001|The OpsMgr Connector could not connect to %1 because mutual authentication failed. Verify that the SPN is registered correctly on the server and that, if the server is in a separate domain, there is a full-trust relationship between the two domains.|Check SPN registration.|
-| 21005|The OpsMgr Connector could not resolve the IP for %1. The error code is %2(%3). Please verify that DNS is working correctly in your environment.|This is usually a name resolution issue. Check DNS.|
-| 21006|The OpsMgr Connector could not connect to %1:%2. The error code is %3(%4). Please verify that there is network connectivity, that the server is running and has registered its listening port, and that there are no firewalls that are blocking traffic to the destination.|This is likely a general connectivity issue. Check the firewalls and confirm that port 5723 is open.|
-| 21007|The OpsMgr Connector cannot create a mutually authenticated connection to %1 because it is not in a trusted domain.|A trust is not established. Confirm that the certificate is in place and is configured correctly.|
-| 21016|OpsMgr could not set up a communications channel to %1, and there are no failover hosts. Communication will resume when %1 is available and communication from this computer is enabled.|This usually indicates an authentication failure. Confirm that the agent was approved for monitoring and that all ports are open.|
-| 21021|No certificate could be loaded or created. This Health Service will be unable to communicate with other health services. Look for previous events in the event log for more detail.|Check the certificate.|
-| 21022|No certificate was specified. This Health Service will be unable to communicate with other health services unless those health services are in a domain that has a trust relationship with this domain. If this health service has to communicate with health services in untrusted domains, please configure a certificate.|Check the certificate.|
-| 21035| Registration of an SPN for this computer with the "%1" service class failed with error "%2." This may cause Kerberos authentication to or from this Health Service to fail.|This indicates a problem with SPN registration. Investigate SPNs for Kerberos authentication.|
-| 21036|The certificate that is specified in the registry at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Operations Manager\3.0\Machine Settings` cannot be used for authentication. The error is %1(%2).|This is usually a missing or unassociated private key. Investigate the certificate. Re-import the certificate, or create a new certificate and import it.|
+| 20050|The specified certificate could not be loaded because the Enhanced Key Usage that's specified doesn't meet OpsMgr requirements. The certificate must have the following usage types: %n %n Server Authentication (1.3.6.1.5.5.7.3.1)%n Client Authentication (1.3.6.1.5.5.7.3.2)%n|Confirm the object identifier on the certificate.|
+| 20057|Failed to initialize security context for target %1 The error returned is %2(%3). This error can apply to either the Kerberos package or the SChannel package.|Check for duplicate or incorrect SPNs.|
+| 20066|A certificate for use with Mutual Authentication was specified. However, that certificate could not be found. The ability for this Health Service to communicate will likely be affected.|Check the certificate.|
+| 20068|The certificate that is specified in the registry at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Operations Manager\3.0\Machine Settings` cannot be used for authentication because the certificate does not contain a usable private key or because the private key is not present. The error is %1(%2).|Check for a missing or unassociated private key. Investigate the certificate. Re-import the certificate, or create a new certificate and import.|
+| 20069|The specified certificate could not be loaded because the KeySpec must be AT_KEYEXCHANGE|Check the certificate. Check the object identifier on the certificate.|
+| 20070|The OpsMgr Connector connected to %1. However, the connection was closed immediately after authentication occurred. The most likely cause of this error is that the agent is not authorized to communicate with the server or that the server has not received configuration. Check the event log on the server for the presence of 20000 events. These indicate that agents that are not approved are trying to connect.|Authentication occurred but the connection was closed. Confirm that ports are open and check agent pending approval.|
+| 20071|The OpsMgr Connector connected to %1. However, the connection was closed immediately without authentication occurring. The most likely cause of this error is a failure to authenticate either this agent or the server. Check the event log on the server and on the agent for events that indicate a failure to authenticate.|Authentication has failed. Check firewalls and port 5723. The agent computer must be able to reach port 5723 on the Management Server. Also confirm that TCP & UDP port 389 for LDAP, port 88 for Kerberos and port 53 for DNS are available.|
+| 20072|The remote certificate %1 was not trusted. The error is %2(%3).|Check whether the certificate is located in the trusted store.|
+| 20077|The certificate that is specified in the registry at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Operations Manager\3.0\Machine Settings` cannot be used for authentication because the certificate cannot be queried for property information. The specific error is %2(%3).%n %n. This typically means that no private key was included with the certificate. Please double-check to make sure that the certificate contains a private key.|There is a missing or unassociated private key. Investigate the certificate. Re-import the certificate, or create a new certificate and import.|
+| 21001|The OpsMgr Connector could not connect to %1 because mutual authentication failed. Verify that the SPN is registered correctly on the server and that, if the server is in a separate domain, there is a full-trust relationship between the two domains.|Check SPN registration.|
+| 21005|The OpsMgr Connector could not resolve the IP for %1. The error code is %2(%3). Please verify that DNS is working correctly in your environment.|This is usually a name resolution issue. Check DNS.|
+| 21006|The OpsMgr Connector could not connect to %1:%2. The error code is %3(%4). Please verify that there is network connectivity, that the server is running and has registered its listening port, and that there are no firewalls that are blocking traffic to the destination.|This is likely a general connectivity issue. Check the firewalls and confirm that port 5723 is open.|
+| 21007|The OpsMgr Connector cannot create a mutually authenticated connection to %1 because it is not in a trusted domain.|A trust is not established. Confirm that the certificate is in place and is configured correctly.|
+| 21016|OpsMgr could not set up a communications channel to %1, and there are no failover hosts. Communication will resume when %1 is available and communication from this computer is enabled.|This usually indicates an authentication failure. Confirm that the agent was approved for monitoring and that all ports are open.|
+| 21021|No certificate could be loaded or created. This Health Service will be unable to communicate with other health services. Look for previous events in the event log for more detail.|Check the certificate.|
+| 21022|No certificate was specified. This Health Service will be unable to communicate with other health services unless those health services are in a domain that has a trust relationship with this domain. If this health service has to communicate with health services in untrusted domains, please configure a certificate.|Check the certificate.|
+| 21035| Registration of an SPN for this computer with the "%1" service class failed with error "%2." This may cause Kerberos authentication to or from this Health Service to fail.|This indicates a problem with SPN registration. Investigate SPNs for Kerberos authentication.|
+| 21036|The certificate that is specified in the registry at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Operations Manager\3.0\Machine Settings` cannot be used for authentication. The error is %1(%2).|This is usually a missing or unassociated private key. Investigate the certificate. Re-import the certificate, or create a new certificate and import it.|
 ||||

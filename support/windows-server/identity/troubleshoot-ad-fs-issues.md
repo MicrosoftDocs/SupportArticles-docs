@@ -11,13 +11,13 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, abizerh, fszita, meerak
 ms.prod-support-area-path: Active Directory Federation Services (AD FS)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Troubleshoot AD FS issues in Azure Active Directory and Office 365
 
 This article discusses workflow troubleshooting for authentication issues for federated users in Azure Active Directory or Office 365.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3079872
 
 ## Symptoms

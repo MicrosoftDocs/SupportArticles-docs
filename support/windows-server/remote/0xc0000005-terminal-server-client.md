@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Connecting to a session or desktop
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Error message: an application error has occurred and an application error log is being generated
 

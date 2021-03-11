@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tode
 ms.prod-support-area-path: Boot is slow
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Http <-> Crypto deadlock causes slow boot and service start failure on SSL-enabled
 

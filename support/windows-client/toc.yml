@@ -94,6 +94,8 @@
       href: ./application-management/change-registry-values-permissions.md
 - name: App-V
   items:
+  - name: App-V
+    href: ./app-v/app-v-overview.md
   - name: Administration
     items:
     - name: Launch processes inside the App-V 5.0 virtualized environment
@@ -352,7 +354,7 @@
       href: ./deployment/customize-default-local-user-profile.md
     - name: Download and burn an ISO file from VLSC
       href: ./deployment/iso-file-on-vlsc.md
-    - name: Error 0x80042468 when creating a single partition
+    - name: Error 0x80042468 when creating a single partition
       href: ./deployment/error-when-creating-single-partition.md
     - name: Event ID 10 is logged in Application log
       href: ./deployment/event-10-is-logged-in-application-log.md
@@ -390,19 +392,17 @@
       href: ./deployment/sysprep-capture-task-sequence-fails.md
     - name: System restore points are disabled after upgrade
       href: ./deployment/system-restore-points-disabled.md
-    - name: Unattended setup parameters for unattend.txt
-      href: ./deployment/unattended-setup-parameters-for-unattend-dot-txt.md
     - name: Windows optional component setup tool
       href: ./deployment/use-ocsetup-to-install-remove-components.md
     - name: Windows setup log file locations
       href: ./deployment/windows-setup-log-file-locations.md
     - name: Windows SIM can't generate a catalog
       href: ./deployment/windows-sim-unable-generate-catalog-error.md
-    - name: Windows 7 Upgrade Advisor tool failed to run
+    - name: Windows 7 Upgrade Advisor tool failed to run
       href: ./deployment/upgrade-advisor-tool-failed-to-run.md
     - name: WinRE can't be built after deploying an image
       href: ./deployment/winre-cannot-built-deploy-image-captured-non-uefi-computer.md
-    - name: You can't access an EFI system partition
+    - name: You can't access an EFI system partition
       href: ./deployment/cant-access-efi-system-partition.md
 - name: Group Policy
   items:
@@ -464,6 +464,8 @@
       href: ./networking/access-denied-access-smb-file-share.md
     - name: Can access offline files even if the file server is removed
       href: ./networking/access-offline-files-file-server-removed-from-network.md
+    - name: Can't access shared folders from File Explorer
+      href: ./networking/cannot-access-shared-folder-file-explorer.md
     - name: Error when accessing an administrative share
       href: ./networking/cannot-logon-access-administrative-share.md
     - name: Mapped drive connection to network share is lost
@@ -472,6 +474,8 @@
       href: ./networking/mapped-drives-not-available-from-elevated-command.md
     - name: Mapped network drive may fail to reconnect
       href: ./networking/mapped-network-drive-fail-reconnect.md
+    - name: Saving and restoring existing Windows shares
+      href: ./networking/saving-restoring-existing-windows-shares.md
     - name: Slow network performance on remote network computer
       href: ./networking/slow-network-performance-remote-computer.md
     - name: System error 85 with NET USE command
@@ -731,7 +735,7 @@
 - name: 'Printing '
   items:
   - name: 'Printing '
-    href: ./printing/printing--overview.md
+    href: ./printing/printing-overview.md
   - name: 'Errors and troubleshooting: General issues'
     items:
     - name: Can't install a Secure WSD printer from Print Management Console

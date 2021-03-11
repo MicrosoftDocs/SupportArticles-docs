@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: ajayps, kaushika
 ms.prod-support-area-path: Remote access
-ms.technology: Networking
+ms.technology: windows-client-networking
 ---
 # DirectAccess clients can connect over Teredo but not through IP-HTTPS
 
@@ -125,4 +125,4 @@ When the client is behind a NAT device, it will try to use Teredo. Many business
 
 Having this in mind, IP-HTTPS was built to provide a backup connection that is reliable and always reachable. A DirectAccess client will make use of this when other methods (such as Teredo or 6to4) fail.
 
-More information about transition technologies can be found at [IPv6 transition technologies](https://technet.microsoft.com/library/bb726951.aspx).
+More information about transition technologies can be found at [IPv6 transition technologies](/previous-versions//bb726951(v=technet.10)).

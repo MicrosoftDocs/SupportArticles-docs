@@ -5,7 +5,7 @@ ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.service: cost-management-billing
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Error when creating a VM as an Azure Enterprise user: Contact your reseller for accurate pricing

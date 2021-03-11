@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory domain or forest functional level updates
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to raise Active Directory domain and forest functional levels
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 322692
 
 ## Summary
 
-For information about Windows Server 2016 and new features in Active Directory Domain Services (AD DS), see [What's new in Active Directory Domain Services for Windows Server 2016](/windows-server/identity/whats-new-active-directory-domain-services).
+For information about Windows Server 2016 and new features in Active Directory Domain Services (AD DS), see [What's new in Active Directory Domain Services for Windows Server 2016](/windows-server/identity/whats-new-active-directory-domain-services).
 
 This article discusses raising the domain and forest functional levels that are supported by Microsoft Windows Server 2003-based or newer domain controllers. There are four releases of Active Directory, and only the levels that have changed from Windows NT Server 4.0 require special consideration. Therefore, the other level changes are mentioned by using the newer, current, or older versions of the domain controller operating system, of the domain, or of the forest functional level.
 
@@ -66,7 +66,7 @@ You can set the following values for this attribute:
 
 #### Mixed mode and native mode settings
 
-The ntMixedDomain  attribute is on the naming context (NC) head for the domain, that is, DC=corp, DC=contoso, DC=com.
+The ntMixedDomain  attribute is on the naming context (NC) head for the domain, that is, DC=corp, DC=contoso, DC=com.
 
 You can set the following values for this attribute:
 

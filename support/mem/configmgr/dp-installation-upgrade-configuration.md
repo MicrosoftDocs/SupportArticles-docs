@@ -18,9 +18,9 @@ When troubleshooting DP removal issues, it is important to remember that the DP 
 
 ## DP installation
 
-The DP installation involves the steps listed below. These steps cover a typical DP installation initiated from the Configuration Manager console after the administrator has finished the DP installation wizard. Each step is described, followed by an example of how the step can be monitored by examination of the associated log file. If you have a problem with DP installation, the log files should show you exactly where in the process the problem is occurring and provide vital clues to why the process is failing.  
+The DP installation involves the steps listed below. These steps cover a typical DP installation initiated from the Configuration Manager console after the administrator has finished the DP installation wizard. Each step is described, followed by an example of how the step can be monitored by examination of the associated log file. If you have a problem with DP installation, the log files should show you exactly where in the process the problem is occurring and provide vital clues to why the process is failing.  
 
-### Step 1: The admin console creates an instance of the `SMS_SCI_SysResUse` WMI class for the new DP
+### Step 1: The admin console creates an instance of the `SMS_SCI_SysResUse` WMI class for the new DP
 
 After the administrator completes the DP installation wizard, the admin console creates an instance of the `SMS_SCI_SysResUse` WMI class within the SMS Provider namespace. **SMSProv.log** shows the creation of this instance and contains other useful entries such as the *SMSAppName*, *MachineName*, *UserName*, *ApplicationName*, which can be helpful when investigating problems.
 
@@ -53,7 +53,7 @@ When this WMI instance is created, SMS Provider also inserts a row in the databa
 insert into vSMS_SC_SysResUse (SiteNumber, RoleName, NALPath, NALResType) values (1, N'SMS Site System', N'["Display=\\PS1DP1.CONTOSO.COM\"]MSWNET:["SMS_SITE=PS1"]\\PS1DP1.CONTOSO.COM\', N'Windows NT Server')
 ```
 
-### Step 2(optional): SMS Provider adds the newly created DP to a boundary group if specified during the wizard
+### Step 2(optional): SMS Provider adds the newly created DP to a boundary group if specified during the wizard
 
 During the DP installation wizard, the administrator has the option to specify whether the new DP should be added to an existing or a new boundary group. SMS Provider is responsible for making these changes and logs the following entries:
 
@@ -64,14 +64,14 @@ During the DP installation wizard, the administrator has the option to specify w
 > SMS Provider 4180 (0x1054) CExtUserContext::LeaveThread : Releasing IWbemContextPtr=73828272~  
 > SMS Provider 4180 (0x1054) ~
 
-### Step 3: SMSDBMON detects a site control change and notifies HMAN to process site control file
+### Step 3: SMSDBMON detects a site control change and notifies HMAN to process site control file
 
 SMSDBMON constantly monitors various tables in the database and thus detects a change to the site control file related tables (in step 1). On receiving (denoted as RCV in the log) a change, SMSDBMON notifies the appropriate components by dropping/sending (denoted as SND in the log) files in the component inbox. In this case, SMSDBMON notifies HMAN to process the site control file for changes:
 
 > SMS_DATABASE_NOTIFICATION_MONITOR 2580 (0xa14) RCV: UPDATE on SiteControl for SiteControl_AddUpd_HMAN [PS1 ][1027921]  
 > SMS_DATABASE_NOTIFICATION_MONITOR 2580 (0xa14) SND: Dropped E:\ConfigMgr\inboxes\HMAN.box\PS1.SCU [1027921]
 
-### Step 4: HMAN processes the site control file and processes all distribution points
+### Step 4: HMAN processes the site control file and processes all distribution points
 
 HMAN wakes up to process the SCU file dropped by SMSDBMON, and then starts processing the site control file. During this process, HMAN will look at all distribution points to determine if any DPs are new or changed.
 
@@ -106,13 +106,13 @@ Note that for any distribution points that haven't changed, HMAN logs an entry:
 > [!NOTE]
 > If HMAN encounters a failure trying to insert or update any of the DPs, the entire transaction is rolled back and none of the DPs are processed. If this continues, you will see issues where DPs do not get installed or DP property changes do not take effect.  
 
-### Step 5: HMAN finishes processing the site control file and raises a status message
+### Step 5: HMAN finishes processing the site control file and raises a status message
 
 When HMAN finishes processing the site control file, it raises a status message with ID 3306 which means *Hierarchy Manager successfully processed `E:\ConfigMgr\inboxes\hman.box\PS1.SCU`*, which in our example represents the site control file for site *ConfigMgr Primary Site 1 (PS1)*:
 
 > SMS_HIERARCHY_MANAGER 2448 (0x990) **STATMSG: ID=3306** SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_HIERARCHY_MANAGER" SYS=PS1SITE.CONTOSO.COM SITE=PS1 PID=1956 TID=2448 GMTDATE=Wed May 11 18:33:34.813 2016 ISTR0="E:\ConfigMgr\inboxes\HMAN.box\PS1.SCU" ISTR1="ConfigMgr Primary Site 1" ISTR2="PS1" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=0
 
-### Step 6: SMSDBMON detects a change in `DistributionPoints` table, and notifies DistMgr to install the DP
+### Step 6: SMSDBMON detects a change in `DistributionPoints` table, and notifies DistMgr to install the DP
 
 SMSDBMON detects a change in the `DistributionPoints` table (from step 4a) and instructs DistMgr to begin the DP installation by dropping a **\<*DPID*>.INS** file into the `DistMgr.box` folder:
 
@@ -125,7 +125,7 @@ In this example, 32 is the distribution point ID. You can find the DP name from 
 SELECT * FROM DistributionPoints WHERE DPID = 32
 ```
 
-### Step 7: DistMgr wakes up to process the INS file and starts a DP upgrade worker thread to install the DP
+### Step 7: DistMgr wakes up to process the INS file and starts a DP upgrade worker thread to install the DP
 
 DistMgr wakes up to process the *.INS* file that was dropped by SMSDBMON. DP installations and upgrades are handled by the main DP upgrade processing thread. To perform the DP installation, the DP upgrade processing thread uses a thread from the DP upgrade processing thread pool which is set to use a maximum of 50 threads by default. In the following log entries, the main DP upgrade processing thread ID is 2860, which creates a new worker thread with ID 4788 (0x12b4) for the DP installation:
 
@@ -136,7 +136,7 @@ Next, DP processing worker thread 4788 (0x12b4) starts the installation process 
 > SMS_DISTRIBUTION_MANAGER 4788 (0x12b4) ~Processing 32.INS  
 > SMS_DISTRIBUTION_MANAGER 4788 (0x12b4) ~DPID 32 - NAL Path ["Display=\\\PS1DP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=PS1"]\\\PS1DP1.CONTOSO.COM\\ , ServerName = PS1DP1.CONTOSO.COM, DPDrive = , IsMulticast = 0, PXE = 0, RemoveWDS = 0
 
-### Step 8: DistMgr DP upgrade worker thread installs the DP
+### Step 8: DistMgr DP upgrade worker thread installs the DP
 
 Here, DistMgr thread 4788 starts the actual DP installation where it completes the following:
 
@@ -229,13 +229,13 @@ If the DP is enabled for PXE, PXE installation is initiated when **ConfigurePXE*
 > CcmInstallPXE: Deleting the DP mutex key for WDS.  
 > Installed PXE
 
-### Step 10: DP installation finishes successfully
+### Step 10: DP installation finishes successfully
 
 Once the DP installation finishes successfully, the worker thread raises a status message with ID 2399 which means 'Successfully completed the installation or upgrade of the distribution point on computer \<*DPNALPath*>':
 
 > SMS_DISTRIBUTION_MANAGER 4788 (0x12b4) **STATMSG: ID=2399** SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_DISTRIBUTION_MANAGER" SYS=PS1SITE.CONTOSO.COM SITE=PS1 PID=1956 TID=4788 GMTDATE=Wed May 11 18:36:58.062 2016 ISTR0="["Display=\\\PS1DP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=PS1"]\\\PS1DP1.CONTOSO.COM\\" ISTR1="PS1DP1.CONTOSO.COM" ISTR2="" ISTR3="" ISTR4="" ISTR5="" ISTR6="" ISTR7="" ISTR8="" ISTR9="" NUMATTRS=1 AID0=404 AVAL0="["Display=\\\PS1DP1.CONTOSO.COM\\"]MSWNET:["SMS_SITE=PS1"]\\\PS1DP1.CONTOSO.COM\\"  
 
-### Step 11 (for Pull DPs only): DistMgr upgrade processing thread instructs DP WMI Provider to install pull DP by running pulldp.msi
+### Step 11 (for Pull DPs only): DistMgr upgrade processing thread instructs DP WMI Provider to install pull DP by running pulldp.msi
 
 If the DP is configured to be a pull DP, the DistMgr upgrade processing thread starts another DP upgrade worker thread to perform the pull DP installation. This DP upgrade worker thread instructs the SMS DP Provider to run `pulldp.msi` to install the pull DP.
 
@@ -265,22 +265,22 @@ Pull DP installation progress can be reviewed and monitored by looking at the MS
 
 Distribution point upgrade involves the steps listed below. These steps cover a typical DP upgrade that is initiated after upgrading a ConfigMgr 1511 site to ConfigMgr 1602. Note that the process is similar when installing a service pack or cumulative update on various Configuration Manager 2012 versions.  
 
-### Step 1: Upgrade results in a site reset, which reinstalls DistMgr component and drops resetdps.trn file in DistMgr.box
+### Step 1: Upgrade results in a site reset, which reinstalls DistMgr component and drops resetdps.trn file in DistMgr.box
 
 After the site upgrade finishes successfully, a site reset is initiated to re-install all the Configuration Manager components. As part of this process, Site Component Manager (SiteComp) reinstalls Distribution Manager and while reinstalling DistMgr, it creates `resetdps.trn` file in `DistMgr.box` to instruct DistMgr to upgrade all the DPs.
 
-> SMS_SITE_COMPONENT_MANAGER    4364 (0x110c)    Reinstalling component SMS_DISTRIBUTION_MANAGER...  
-> SMS_SITE_COMPONENT_MANAGER    4364 (0x110c)    Updating DistributionPoints table  
-> SMS_SITE_COMPONENT_MANAGER    4364 (0x110c)    Creating E:\ConfigMgr\inboxes\distmgr.box\resetdps.trn file.
+> SMS_SITE_COMPONENT_MANAGER    4364 (0x110c)    Reinstalling component SMS_DISTRIBUTION_MANAGER...  
+> SMS_SITE_COMPONENT_MANAGER    4364 (0x110c)    Updating DistributionPoints table  
+> SMS_SITE_COMPONENT_MANAGER    4364 (0x110c)    Creating E:\ConfigMgr\inboxes\distmgr.box\resetdps.trn file.
 
-### Step 2: DistMgr starts upgrade of all the DPs after detecting the resetdps.trn file
+### Step 2: DistMgr starts upgrade of all the DPs after detecting the resetdps.trn file
 
 DistMgr starts up after reinstallation and detects the resetdps.trn file:
 
 > SMS_DISTRIBUTION_MANAGER    3048 (0xbe8)    SMS_EXECUTIVE started SMS_DISTRIBUTION_MANAGER as thread ID 4984 (0x1378).  
 > SMS_DISTRIBUTION_MANAGER    4984 (0x1378)   Found file resetdps.trn, will upgrade all the Distribution Points
 
-### Step 3: DistMgr upgrade processing thread starts DP upgrade worker threads to perform the DP upgrade
+### Step 3: DistMgr upgrade processing thread starts DP upgrade worker threads to perform the DP upgrade
 
 DistMgr upgrade processing thread starts and starts DP upgrade worker threads to upgrade all the DPs. Each of these worker threads work simultaneously and upgrade multiple DPs at once. For DP upgrade processing, we can start up to 50 threads by default, however this is a configurable site control value and is governed by the `DPUpgradeThreadLimit` property for `SMS_DISTRIBUTION_MANAGER` component.
 
@@ -295,7 +295,7 @@ Each individual DP upgrade worker thread starts upgrading a distribution point. 
 > SMS_DISTRIBUTION_MANAGER    2248 (0x8c8)    ~Processing 5.INS  
 > SMS_DISTRIBUTION_MANAGER    2248 (0x8c8)    ~DPID 5 - NAL Path ["Display=\\\PS1SYS.CONTOSO.COM\\"]MSWNET:["SMS_SITE=PS1"]\\\PS1SYS.CONTOSO.COM\\ , ServerName = PS1SYS.CONTOSO.COM, DPDrive = , IsMulticast = 0, PXE = 1, RemoveWDS = 0
 
-### Step 4: DP upgrade worker thread performs the DP Upgrade
+### Step 4: DP upgrade worker thread performs the DP Upgrade
 
 DP upgrade worker thread performs the upgrade of the DP. This process is identical to the DP installation process step 8.
 
@@ -311,7 +311,7 @@ DP upgrade worker thread performs the upgrade of the DP. This process is identic
 > SMS_DISTRIBUTION_MANAGER    2248 (0x8c8)    DP registry settings have been successfully updated on PS1SYS.CONTOSO.COM  
 > SMS_DISTRIBUTION_MANAGER    2248 (0x8c8)    ConfigurePXE
 
-#### Step 5: DP upgrade worker threads resets the pull DP installation state
+#### Step 5: DP upgrade worker threads resets the pull DP installation state
 
 DP upgrade worker thread resets the installation state for the pull DP so that it can be updated. Note that this is logged even for Standard DPs but isn't relevant for standard DPs.
 

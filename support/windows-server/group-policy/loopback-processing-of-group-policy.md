@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, slight
 ms.prod-support-area-path: Group Policy management - GPMC or AGPM
-ms.technology: GroupPolicy
+ms.technology: windows-server-group-policy
 ---
 # Loopback processing of Group Policy
 

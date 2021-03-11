@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, clandis, cdan
 ms.prod-support-area-path: DFSR
-ms.technology: Networking
+ms.technology: networking
 ---
 # The ConflictAndDeleted folder size may exceed its configured limitation
 
@@ -39,7 +39,7 @@ wmic /namespace:\\root\microsoftdfs path dfsrreplicatedfolderinfo where "replica
 ```
 
 > [!Note]
-> In this command, \<ReplicatedFolderName> represents the name of the replicated folder.
+> In this command, \<ReplicatedFolderName> represents the name of the replicated folder.
 
 To clean up the ConflictAndDeleted folder content of all of the replicated folders in a replication group, enter the following command:  
 
@@ -56,7 +56,7 @@ wmic /namespace:\\root\microsoftdfs path dfsrreplicatedfolderinfo where "replica
 Depending on the size of the ConflictAndDeleted folder, this process may take a few minutes. The process empties the ConflictAndDeleted folder and reduces or deletes the ConflictAndDeletedManifest.xml file.  
 
 > [!Note]
-> If any conflicts or deletions occur while **cleanupconflictdirectory** runs, the information that is related to those conflicts or deletions remains in the ConflictAndDeleted folder and the ConflictAndDeletedManifest.xml file when the process finishes.  After the cleanup, the file is much smaller, and the total size of the ConflictAndDeleted folder is less than the quota maximum mark.
+> If any conflicts or deletions occur while **cleanupconflictdirectory** runs, the information that is related to those conflicts or deletions remains in the ConflictAndDeleted folder and the ConflictAndDeletedManifest.xml file when the process finishes.  After the cleanup, the file is much smaller, and the total size of the ConflictAndDeleted folder is less than the quota maximum mark.
 
 ## Status
 

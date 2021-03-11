@@ -129,6 +129,8 @@
     href: installation-configuration-wizard-errors.md
   - name: Troubleshoot Azure AD Connect installation issues
     href: installation-issues.md
+  - name: Troubleshoot Azure AD Connect objects and attributes
+    href: troubleshoot-aad-connect-objects-attributes.md
   - name: Troubleshoot password sync issues
     href: troubleshoot-pwd-sync.md
   - name: Unable to add subdomain
@@ -181,6 +183,8 @@
     href: faq-set-up-enterprise-work-remotely.md
   - name: The term is not recognized error in Azure PowerShell
     href: term-cmdlet-name-not-recognized-aad-cmdlet.md
+  - name: Troubleshoot dynamic groups
+    href: troubleshoot-dynamic-groups.md
   - name: Troubleshoot MFA issues
     href: troubleshoot-azure-mfa-issue.md
   - name: Unable to register a device

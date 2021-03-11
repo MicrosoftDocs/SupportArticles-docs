@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: peterlo, kaushika
 ms.prod-support-area-path: Performance monitoring tools
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Server service configuration and tuning
 

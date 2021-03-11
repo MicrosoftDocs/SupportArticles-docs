@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
 ms.prod-support-area-path: Active Directory Migration Tool (ADMT)
-ms.technology: ActiveDirectory  
+ms.technology: windows-server-active-directory  
 ---
 # ADMT 3.2 installation incomplete, MMC console error "cannot open database 'ADMT' requested by the login"
 

@@ -16,22 +16,22 @@ For this example, let's say that you distributed a package to a distribution poi
 
 1. First, review **DistMgr.log** on the site (primary/secondary) where the DP resides.
 
-   1. Look for *~Processing package* entries in the log and identify the package processing thread for the package ID in question. Filter DistMgr.log for the thread ID you identified. Review step 4 in [Distribute a package to standard DP](understand-package-actions.md#distribute-a-package-to-standard-dp) to see log excerpts.
+   1. Look for *~Processing package* entries in the log and identify the package processing thread for the package ID in question. Filter DistMgr.log for the thread ID you identified. Review step 4 in [Distribute a package to standard DP](understand-package-actions.md#distribute-a-package-to-standard-dp) to see log excerpts.
    2. Review the filtered log and check if a DP thread was created for the DP in question. Filter **DistMgr.log** for the thread ID to make this easier.
    3. Review the filtered log and check whether a PkgXferMgr job was created.
 
 2. Review **PkgXferMgr.log** on the site (primary/secondary) where the DP resides.
 
-   1. Look for *Found send request with ID* entries in the log and identify the sending thread for the affected DP/package combination. Filter **PkgXferMgr.log** for the thread ID identified. Review step 6 in [Distribute a package to standard DP](understand-package-actions.md#distribute-a-package-to-standard-dp) to see log excerpts.
+   1. Look for *Found send request with ID* entries in the log and identify the sending thread for the affected DP/package combination. Filter **PkgXferMgr.log** for the thread ID identified. Review step 6 in [Distribute a package to standard DP](understand-package-actions.md#distribute-a-package-to-standard-dp) to see log excerpts.
    2. Review the filtered log to see if the content was successfully transferred to the DP or if there was an error.
 
-3. For Standard DPs, PkgXferMgr copies the content file(s) to the DP, it instructs the DP WMI Provider to add the file to the content library by calling WMI methods. Review **SMSDPProv.log** on the DP to ensure that content was added to the content library. Review step 7 in [Distribute a package to standard DP](understand-package-actions.md#distribute-a-package-to-standard-dp) to see log excerpts.
+3. For Standard DPs, PkgXferMgr copies the content file(s) to the DP, it instructs the DP WMI Provider to add the file to the content library by calling WMI methods. Review **SMSDPProv.log** on the DP to ensure that content was added to the content library. Review step 7 in [Distribute a package to standard DP](understand-package-actions.md#distribute-a-package-to-standard-dp) to see log excerpts.
 
    For pull DPs, PkgXferMgr notifies pull DP to initiate the content download. Review steps 8-16 in [Distribute a package to pull DP](understand-package-actions.md#distribute-a-package-to-standard-dp) to understand the flow and review **PullDP.log** and **DataTransferService.log** to ensure content was downloaded successfully.
 
 4. For standard DPs, PkgXferMgr sends a status message to DistMgr. Review **DistMgr.log** to verify if the status message was processed successfully. Review step 8 in [Distribute a package to standard DP](understand-package-actions.md#distribute-a-package-to-standard-dp) to see log excerpts.
 
-   For pull DPs, pull DP sends a state message to indicate success. Review steps 16-22 in [Distribute a package to pull DP](understand-package-actions.md#distribute-a-package-to-pull-dp) to understand the flow and review the relevant logs to ensure state message is processed successfully.
+   For pull DPs, pull DP sends a state message to indicate success. Review steps 16-22 in [Distribute a package to pull DP](understand-package-actions.md#distribute-a-package-to-pull-dp) to understand the flow and review the relevant logs to ensure state message is processed successfully.
 
 5. If multiple sites are involved, ensure that database replication is working and the database links between relevant sites are active.
 
@@ -43,7 +43,7 @@ For this example, let's say that you distributed a package to a distribution poi
 
   This usually happens temporarily while the content is in transit from one site to another. Review the Sender/Despooler logs to ensure that there are no issues with site communications. If you see errors during site to site communication (**Scheduler** -> **Sender** -> **Despooler**), focus on resolving those errors before troubleshooting the above message in **DistMgr.log**. Review [Distribute a package to DP across sites](understand-package-actions.md#distribute-a-package-to-dp-across-sites) to understand the log flow.
 
-  If there are no errors, it may be necessary to force the parent site to resend the package to the affected site. See [Resend compressed copy of a package to a site](advanced-troubleshooting-tips.md#resend-compressed-copy-of-a-package-to-a-site) for more information.
+  If there are no errors, it may be necessary to force the parent site to resend the package to the affected site. See [Resend compressed copy of a package to a site](advanced-troubleshooting-tips.md#resend-compressed-copy-of-a-package-to-a-site) for more information.
 
 - **DistMgr.log** may show that it's busy processing other packages and is using all the available threads for package processing.
 
@@ -53,7 +53,7 @@ For this example, let's say that you distributed a package to a distribution poi
 
   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Components\SMS_DISTRIBUTION_MANAGER`
 
-  If the **Packages Being Processed** values do not change and are stuck over a long period of time, it is possible that DistMgr is hung/stuck. If this happens, capture a [process dump](/sysinternals/downloads/procdump) of SMSExec.exe for review.
+  If the **Packages Being Processed** values do not change and are stuck over a long period of time, it is possible that DistMgr is hung/stuck. If this happens, capture a [process dump](/sysinternals/downloads/procdump) of SMSExec.exe for review.
 
   If there are many packages in the queue but the queue is moving, it may be necessary to review and change the thread configuration.
 
@@ -63,7 +63,7 @@ For this example, let's say that you distributed a package to a distribution poi
 
   In most cases, this issue occurs when the main DistMgr thread is making a WMI call to a remote DP but WMI on the DP is not responding, causing DistMgr to wait for it indefinitely. Filtering the **DistMgr.log** for the main DistMgr thread can provide clues about the DP it's trying to communicate with. Once identified, check if the DP is responding and WMI is functional on the DP. If necessary, reboot the DP to see if that helps.
 
-  If the filtered **DistMgr.log** doesn't provide any clues, capture a [process dump](/sysinternals/downloads/procdump) of SMSExec.exe while in problem state for review.
+  If the filtered **DistMgr.log** doesn't provide any clues, capture a [process dump](/sysinternals/downloads/procdump) of SMSExec.exe while in problem state for review.
 
 ## Common PkgXferMgr issues
 
@@ -78,7 +78,7 @@ For this example, let's say that you distributed a package to a distribution poi
 
   After PkgXferMgr copies the content file to the DP, it executes WMI methods to instruct the remote DP to add the file to the content library. If the remote DP fails to add the file to the content library, you will see a generic WMI error (**0x80041001 = WBEM_E_FAILED**) in **PkgXferMgr.log**.
 
-  When this happens, it is necessary to review **SMSDPProv.log** on the DP to identify the reason that the DP failed to add the file to the content library. If you see **File/Path not found** errors in **SMSDPProv.log**, you would need to capture a [Process Monitor](/sysinternals/downloads/procmon) trace to determine the reason for failure.
+  When this happens, it is necessary to review **SMSDPProv.log** on the DP to identify the reason that the DP failed to add the file to the content library. If you see **File/Path not found** errors in **SMSDPProv.log**, you would need to capture a [Process Monitor](/sysinternals/downloads/procmon) trace to determine the reason for failure.
 
 - **PkgXferMgr.log** shows that only one connection is allowed to the DP:
 
@@ -88,7 +88,7 @@ For this example, let's say that you distributed a package to a distribution poi
 
   > SMS_PACKAGE_TRANSFER_MANAGER 21216 (0x52e0) ~Address to DPNAME.CONTOSO.COM is currently in pulse mode, therefore only one connection is allowed.
 
-    If **PkgXferMgr.log** shows that '*only one connection is allowed*' to the DP, it means that the DP is configured for bandwidth throttling. If this is the case, PkgXferMgr can only use one thread for the DP, and as a result only send one package to the DP at a time. See [Bandwidth control and threads](components-and-threads.md#bandwidth-control-and-threads) for more information.
+    If **PkgXferMgr.log** shows that '*only one connection is allowed*' to the DP, it means that the DP is configured for bandwidth throttling. If this is the case, PkgXferMgr can only use one thread for the DP, and as a result only send one package to the DP at a time. See [Bandwidth control and threads](components-and-threads.md#bandwidth-control-and-threads) for more information.
 
 - **PkgXferMgr.log** shows the address is closed:
 
@@ -550,11 +550,11 @@ Once you confirm that the required content for a Package is missing in the Conte
 
   For file/path not found errors, the problem is likely due to the fact that the content library on the site server is missing content files for the package. As a result, PkgXferMgr is not able to send the files to the DP.
 
-  In these cases, you can identify the content ID from the log and track the content from `PkgLib` to `FileLib` to ensure that the files exist. You can also use Content Library Explorer to check if the package content files are available in the content library, however Content Library Explorer can take some time to load and it may be easier to manually track the content from `PkgLib` to `FileLib`. Alternatively, you can capture a [Process Monitor](/sysinternals/downloads/procmon) trace to verify if the necessary files are missing from the content library on the site server.
+  In these cases, you can identify the content ID from the log and track the content from `PkgLib` to `FileLib` to ensure that the files exist. You can also use Content Library Explorer to check if the package content files are available in the content library, however Content Library Explorer can take some time to load and it may be easier to manually track the content from `PkgLib` to `FileLib`. Alternatively, you can capture a [Process Monitor](/sysinternals/downloads/procmon) trace to verify if the necessary files are missing from the content library on the site server.
 
   If the site that is missing content in the content library is the package source site, it is necessary to update the package to increment the **Package Source** version so that DistMgr takes a snapshot of the content from the package source directory again and re-populates the missing content.
 
-  If the site missing the content in the content library is different from the package source site, you can force the package source site to resend the compressed copy of the package to the affected site. See [Resend compressed copy of a package to a site](advanced-troubleshooting-tips.md#resend-compressed-copy-of-a-package-to-a-site) for more information.
+  If the site missing the content in the content library is different from the package source site, you can force the package source site to resend the compressed copy of the package to the affected site. See [Resend compressed copy of a package to a site](advanced-troubleshooting-tips.md#resend-compressed-copy-of-a-package-to-a-site) for more information.
 
 - DistMgr/PkgXferMgr log shows a network error:
 

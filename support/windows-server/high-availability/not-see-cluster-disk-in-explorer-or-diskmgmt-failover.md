@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Errors when running the Validation Wizard
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # You do not see the cluster disk in explorer or diskmgmt on Failover in a Windows 2008 or Windows 2008 R2 Cluster
 

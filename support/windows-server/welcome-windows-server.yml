@@ -45,13 +45,15 @@ landingContent:
   - title: Storage and High Availability
     linkLists:      
       - linkListType: how-to-guide
-        links:
+        links:          
           - text: Backup and Storage 
             url: ./backup-and-storage/backup-and-storage-overview.md
           - text: High Availability 
             url: ./high-availability/high-availability-overview.md
           - text: Virtualization 
             url: ./virtualization/virtualization-overview.md
+          - text: Containers
+            url: ./containers/support-for-windows-containers-docker-on-premises-scenarios.md
   - title: User Experience
     linkLists:      
       - linkListType: how-to-guide
@@ -86,3 +88,9 @@ landingContent:
         links:
           - text: Admin Development 
             url: ./admin-development/admin-development-overview.md
+  - title: Virtual Support Agent
+    linkLists:      
+      - linkListType: how-to-guide
+        links:
+          - text: Introducing Virtual Support Agent for Windows Commercial
+            url: ./resources/introducing-virtual-support-agent-windows-commercial.md

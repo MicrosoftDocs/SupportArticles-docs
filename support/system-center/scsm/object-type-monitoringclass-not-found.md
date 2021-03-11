@@ -21,7 +21,7 @@ When you work with a System Center Operations Manager connector in the System Ce
 > Severity: Error  
 > Message: An object of type MonitoringClass with Id \<GUID> was not found.
 
-The \<GUID> value that is reported will depend on the management pack that causes the problem.
+The \<GUID> value that is reported will depend on the management pack that causes the problem.
 
 ## Cause
 

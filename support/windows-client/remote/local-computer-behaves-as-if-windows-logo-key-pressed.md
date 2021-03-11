@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, yaimairi
 ms.prod-support-area-path: Connecting to a session or desktop
-ms.technology: RDS
+ms.technology: windows-client-rds
 ---
 # Local computer behaves as if the Windows logo key is pressed after you switch from a Remote Desktop session
 
@@ -28,7 +28,7 @@ After you start a RDP session to a remote computer, your local computer behaves 
 
 This issue occurs if you use particular settings for your Remote Desktop connection and you take the following steps:
 
-1. Before you connect to the remote computer, open the **Local Resources** tab of the **Remote Desktop Connection** dialog box, and set **Apply Windows key combinations** to either **On the remote computer** or **Only when using the full screen**.
+1. Before you connect to the remote computer, open the **Local Resources** tab of the **Remote Desktop Connection** dialog box, and set **Apply Windows key combinations** to either **On the remote computer** or **Only when using the full screen**.
 
     :::image type="content" source="./media/local-computer-behaves-as-if-windows-logo-key-pressed/set-apply-windows-key-combinations.png" alt-text="Setting the Apply Windows key combinations option on the Local Resources tab of the Remote Desktop connection dialog box." border="false":::
 
@@ -43,4 +43,4 @@ This issue occurs if you use particular settings for your Remote Desktop connect
 
 ## Workaround
 
-To work around this issue, press and release the Windows logo key again after you return to the local computer.
+To work around this issue, press and release the Windows logo key again after you return to the local computer.

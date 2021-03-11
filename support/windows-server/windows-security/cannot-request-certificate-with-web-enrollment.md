@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: akhleshs, kaushika
 ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
-ms.technology: WindowsSecurity
+ms.technology: windows-server-security
 ---
 # Not able to request certificate using web enrollment
 
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2885758
 
 When you browse the CA website to request a certificate, and click on "Request a certificate" and then click on "Create and submit a request to this CA", you get the following message:
 
-> In order to complete certificate enrollment, the web site for the CA must be configured to use HTTPS authentication 
+> In order to complete certificate enrollment, the web site for the CA must be configured to use HTTPS authentication
 
 You may also see the following message next to address bar:
 
@@ -42,20 +42,18 @@ If you hit "OK" on the above message, you get a pop-up window with the following
 
 ## Cause
 
-If you're running CA servers on Windows 2008 R2 and above and trying to request a computer certificate templates V3 using web enrollment (CAWE), it will not work. 
+If you're running CA servers on Windows 2008 R2 and above and trying to request a computer certificate templates V3 using web enrollment (CAWE), it will not work.
 
 This was an enhancement that we introduced in Windows 2008 R2.
 
 Now web enrollment (CAWE) doesn't support V3 templates.
 
-You can use mmc, auto enrollment and certreq.exe to request a V3 template.
+You can use mmc, auto enrollment, and certreq.exe to request a V3 template.
 
 ## Resolution
 
 Here are some possible solutions of this issue:
 
-· Use mmc, auto enrollment or certreq.exe to request a V3 certificate template.
-
-· If you're hosting CA web enrollment (CAWE) on a server other than CA server, then please ensure that constrained delegation for Kerberos is enabled on the computer account of the server hosting CAWE role.
-
-· Also, make your CA website is using SSL that is, https and not http.
+- Use mmc, auto enrollment, or certreq.exe to request a V3 certificate template.
+- If you're hosting CA web enrollment (CAWE) on a server other than CA server, then please ensure that constrained delegation for Kerberos is enabled on the computer account of the server hosting CAWE role.
+- Also, make your CA website is using SSL that is, https and not http.

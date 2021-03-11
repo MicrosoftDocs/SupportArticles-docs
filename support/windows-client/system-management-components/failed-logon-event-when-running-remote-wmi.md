@@ -1,6 +1,6 @@
 ---
 title: Failed logon event when running remote WMI
-description: Provides a solution to a failed logon event when you run remote WMI command.
+description: Describes an issue where a failed logon event is generated when you run remote WMI command.
 ms.date: 09/16/2020
 author: Deland-Han 
 ms.author: delhan
@@ -11,11 +11,11 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: WMI
-ms.technology: SysManagementComponents
+ms.technology: windows-client-system-management-components
 ---
 # Failed logon event generated when running remote WMI command
 
-This article provides a solution to a failed logon event when you run remote WMI command.
+This article describes an issue where a failed logon event is generated when you run remote WMI command.
 
 _Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2816192

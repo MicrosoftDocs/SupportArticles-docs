@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: User profiles
-ms.technology: UserProfilesAndLogon
+ms.technology: windows-server-user-profiles
 ---
 # Relocation of the Users and the ProgramData directories to a drive other than the drive that has the Windows directory
 

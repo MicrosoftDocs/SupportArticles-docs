@@ -11,13 +11,13 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, trined
 ms.prod-support-area-path: Servicing
-ms.technology: Deployment
+ms.technology: windows-server-deployment
 ---
 # List of updates in Windows Server 2003 Service Pack 2
 
 This article lists problems that are fixed in Microsoft Windows Server 2003 Service Pack 2 (SP2).
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 914962
 
 ## Summary

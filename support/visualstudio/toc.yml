@@ -10,16 +10,22 @@
   href: ./install/toc.yml
 - name: Silverlight
   items:
+  - name: An update is available for Silverlight 5
+    href: ./silverlight/update-available.md
   - name: Applications crash with 0xC0000094 exception
     href: ./silverlight/application-exception-0xc0000094-vmware.md
   - name: Can't display DRM protected subtitles
     href: ./silverlight/drm-protected-subtitles-not-supported.md
+  - name: Playback of protected video content fails
+    href: ./silverlight/playback-protected-video-content-fail-error.md
   - name: Run Silverlight Configuration tool
     href: ./silverlight/run-configuration-tool.md
+  - name: Silverlight may not work in Google Chrome
+    href: ./silverlight/silverlight-not-work-google-chrome.md
   - name: Slsvcutil.exe crashes
     href: ./silverlight/slsvcutil-tool-crashes.md
-  - name: An update is available for Silverlight 5
-    href: ./silverlight/update-available.md
+  - name: Type many characters into a Silverlight TextBox or RichTextBox
+    href: ./silverlight/type-characters-into-silverlight-textbox-richtextbox.md 
 - name: Subscriptions
   items:
   - name: Opt out of dev essentials

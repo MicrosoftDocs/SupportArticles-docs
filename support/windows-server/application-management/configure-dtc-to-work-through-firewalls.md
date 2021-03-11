@@ -1,6 +1,6 @@
 ---
-title: Configure DTC to work through a firewall
-description: Describes how to configure Microsoft Distributed Transaction Coordinator (DTC) to work through firewalls.
+title: Configure Distributed Transaction Coordinator (DTC) to work through a firewall
+description: Describes how to configure DTC to work through firewalls.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jmeier
 ms.prod-support-area-path: DTC startup, configuration, connectivity, and cluster
-ms.technology: ApplicationCompatibility
+ms.technology: windows-server-application-compatibility
 ---
 # Configure Microsoft Distributed Transaction Coordinator (DTC) to work through a firewall
 
@@ -26,18 +26,18 @@ You can configure DTC to communicate through firewalls, including network addres
 
 DTC uses Remote Procedure Call (RPC) dynamic port allocation. By default, RPC dynamic port allocation randomly selects port numbers above 1024. By modifying the registry, you can control which ports RPC dynamically allocates for incoming communication. You can then configure your firewall to confine incoming external communication to only those ports and port 135 (the RPC Endpoint Mapper port).
 
-You must provide one incoming dynamic port for DTC. You may need to provide additional incoming dynamic ports for other subsystems that rely on RPC.
+You must provide one incoming dynamic port for DTC. You may need to provide more incoming dynamic ports for other subsystems that rely on RPC.
 
-The registry keys and values described in this article do not appear in the registry by default; you must add them by using Registry Editor.
+The registry keys and values described in this article don't appear in the registry by default; you must add them by using Registry Editor.
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Window](https://support.microsoft.com/help/322756).
 
-Follow these steps to control RPC dynamic port allocation. You will have to do this on both computers. Note also that the firewall must be open in both directions for the specified ports:
+Follow these steps on both computers to control RPC dynamic port allocation. The firewall must be open in both directions for the specified ports:
 
 1. To start Registry Editor, select **Start**, select **Run**, type *regedt32*, and then select **OK**.
 
-   You must use Regedt32.exe, rather than Regedit.exe, because Regedit.exe does not support the REG_MULTI_SZ data type that is required for the Ports value.
+   Use Regedt32.exe instead of Regedit.exe. Regedit.exe doesn't support the REG_MULTI_SZ data type that's required for the Ports value.
 
 2. In Registry Editor, select **HKEY_LOCAL_MACHINE** in the **Local Machine** window.
 3. Expand the tree by double-selecting the folders named in the `HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc` path.
@@ -59,7 +59,7 @@ Follow these steps to control RPC dynamic port allocation. You will have to do t
     Data Type: REG_SZ  
     Data: Y
 
-    This signifies that the ports listed under the Ports value are to be made Internet-available.
+    This value signifies that the ports listed under the Ports value are to be made Internet-available.
 
 11. Follow steps 6 through 9 to add another key for Internet, by using these values:
 
@@ -67,14 +67,14 @@ Follow these steps to control RPC dynamic port allocation. You will have to do t
     Data Type: REG_SZ  
     Data: Y
 
-    This signifies that RPC should dynamically assign ports from the list of Internet ports.
+    This value signifies that RPC should dynamically assign ports from the list of Internet ports.
 
 12. Configure your firewall to allow incoming access to the specified dynamic ports and to port 135 (the RPC Endpoint Mapper port).
 
-13. Restart the computer. When RPC restarts, it will assign incoming ports dynamically, based on the registry values that you have specified. For example, to open ports 5000 through 5020 inclusive, create these named values:
+13. Restart the computer. When RPC restarts, it will assign incoming ports dynamically, based on the registry values that you've specified. For example, to open ports 5000 through 5020 inclusive, create these named values:
 
     > Ports : REG_MULTI-SZ : 5000-5020  
     PortsInternetAvailable : REG_SZ : Y  
     UseInternetPorts : REG_SZ : Y
 
-DTC also requires that you are able to resolve computer names by way of NetBIOS or DNS. You can test whether or not NetBIOS can resolve the names by using ping and the server name. The client computer must be able to resolve the name of the server, and the server must be able to resolve the name of the client. If NetBIOS cannot resolve the names, you can add entries to the LMHOSTS files on the computers.
+DTC also requires you can resolve computer names by way of NetBIOS or DNS. Test if NetBIOS can resolve the names by using ping and the server name. The client computer must be able to resolve the name of the server. And the server must be able to resolve the name of the client. If NetBIOS can't resolve the names, add entries to the LMHOSTS files on the computers.

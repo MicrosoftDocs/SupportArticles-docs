@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Microsoft Management Console (MMC)
-ms.technology: SysManagementComponents
+ms.technology: windows-server-system-management-components
 ---
 # Error 1783: The stub received bad data
 

@@ -1,6 +1,6 @@
 ---
-title: Adprep could not contact a replica error when running Adprep /rodcprep command in Windows Server 2008
-description: Describes a problem in which the Adprep /rodcprep command isn't completed successfully because the infrastructure master for one or more active directory NDNCs isn't reachable. A resolution is provided.
+title: Error when running the Adprep /rodcprep command in Windows Server 2008
+description: The Adprep /rodcprep command isn't completed successfully. The reason is that the infrastructure master for one or more active directory Non-Domain Naming Contexts (NDNCs) isn't reachable. A resolution is provided.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory domain or forest functional level updates
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
-# Error when you run the Adprep /rodcprep command in Windows Server 2008: Adprep could not contact a replica for partition DC=DomainDnsZones,DC=Contoso,DC=com
+# Error when you run the `Adprep /rodcprep` command in Windows Server 2008: Adprep could not contact a replica for partition DC=DomainDnsZones,DC=Contoso,DC=com
 
-This article provides a resolution for a problem in which the `Adprep /rodcprep` command isn't completed successfully because the infrastructure master for one or more active directory NDNCs isn't reachable.
+This article solves a problem that the `Adprep /rodcprep` command isn't completed successfully because the infrastructure master for one or more active directory NDNCs isn't reachable.
 
 _Original product version:_ &nbsp;Windows Server 2012 R2  
 _Original KB number:_ &nbsp;949257
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp;949257
 
 When you run the `Adprep /rodcprep` command on Windows Server 2008, you receive the following error message:
 
-> dprep could not contact a replica for partition DC=DomainDnsZones,DC=Contoso,DC=com
+> Adprep could not contact a replica for partition DC=DomainDnsZones,DC=Contoso,DC=com
 >
 > Adprep failed the operation on partition DC=DomainDnsZones,DC=Contoso,DC=com Skipping to next partition.
 >
@@ -38,7 +38,7 @@ When you run the `Adprep /rodcprep` command on Windows Server 2008, you receive 
 
 ## Cause
 
-This problem occurs when the `Adprep /rodcprep` command tries to contact the infrastructure master for each application partition in the forest. The command does this to set the permissions that are required for Read-Only Domain Controller (RODC) replication. The `Adprep /rodcprep` command fails if one of the following conditions is true:
+This problem occurs when the `Adprep /rodcprep` command tries to contact the infrastructure master for each application partition in the forest. The command does it to set the permissions that are required for Read-Only Domain Controller (RODC) replication. The `Adprep /rodcprep` command fails if one of the following conditions is true:
 
 - The partition or the partitions that are referenced in the error message no longer exist.
 - The infrastructure master for the referenced partition or partitions has been forcefully demoted or is offline.
@@ -49,7 +49,7 @@ To resolve this problem if the partition no longer exists, do a metadata cleanup
 
 [partition management](https://technet.microsoft.com/library/cc730970%28ws.10%29.aspx)
 
-If the specified partition exists, specify an infrastructure role owner that is online for the partition. You can do this by manually modifying the **fSMORoleOwner** attribute on the object, as described in the "More information" section.
+If the specified partition exists, specify an infrastructure role owner that is online for the partition. You can do it by manually modifying the **fSMORoleOwner** attribute on the object, as described in the "More information" section.
 
 ## More information
 

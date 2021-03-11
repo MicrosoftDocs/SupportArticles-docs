@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, raackley
 ms.prod-support-area-path: Administration
-ms.technology: RDS
+ms.technology: windows-server-rds
 ---
 # Remote Desktop Services tools aren't functional after you remove a server from Server Manager
 

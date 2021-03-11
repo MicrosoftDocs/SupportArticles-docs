@@ -11,11 +11,11 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Performance monitoring tools
-ms.technology: Performance
+ms.technology: windows-server-performance
 ---
 # Manually rebuild performance counters for Windows Server 2008 64 bit or Windows Server 2008 R2 systems
 
-This article provides help to solve an issue where some performance counter libraries become corrupted and need to be rebuilt.
+This article helps solve an issue where some performance counter libraries become corrupted and need to be rebuilt.
 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2554336
@@ -52,7 +52,7 @@ To resolve this issue, use the following methods.
 
 ### Ensure that the counters aren't disabled in the registry
 
-The counters may be disabled via registry settings. Check the following registry locations to ensure that the counters have not been disabled:
+The counters may be disabled via registry settings. Check the following registry locations to ensure that the counters haven't been disabled:
 
 `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\%servicename%\Performance`
 
@@ -90,9 +90,9 @@ To rebuild all performance counters including extensible and third-party counter
 
 5. Create a new Data Collector Set (don't use an existing Data Collector Set).
 
-Sometimes, running `lodctr /R` may not recover all counters. If you notice this happening, verify the file `c:\windows\system32\PerfStringBackup.INI` contains the proper information. You may be able to copy this file from an identical machine in order to restore the counters. There may be slight differences in this file from machine to machine, but if you notice a drastic difference in size, it may be missing information. Always create a backup copy before replacing, and there is no guarantee that copying this file from another machine will restore all counters. If possible, compare the file to backups of the machine to see if the file size has decreased at some point in time.
+Sometimes, running `lodctr /R` may not recover all counters. If you notice this happening, verify the file `c:\windows\system32\PerfStringBackup.INI` contains the proper information. You can copy this file from an identical machine to restore the counters. There may be slight differences in this file from machine to machine. But if you notice a drastic difference in size, it may be missing information. Always create a backup copy before replacing. There's no guarantee that copying this file from another machine will restore all counters. If possible, compare the file to backups of the machine to see if the file size has reduced at some point in time.
 
-For a number of counters, the location of the ini files to install perf counters is under `windows\winsxs`, for example, those for IIS:
+For many counters, the location of the ini files to install perf counters is under `windows\winsxs`, such as the ini files for IIS.
 
 If you see the following errors:
 
@@ -112,9 +112,9 @@ Keywords: Classic
 Description:  
 Unable to read the first counter index value from the registry. The error code returned by the registry is data DWORD 0.
 
-You will need to use the counter install ini files in the directory `c:\Windows\winsxs`.
+You'll need to use the counter install ini files in the directory `c:\Windows\winsxs`.
 
-It is possible that multiple folders exist for counters that you need to repair. In those cases, you might need to use trial and error to find the correct ini files.
+Multiple folders may exist for counters that you need to repair. In those cases, you might need to use trial and error to find the correct ini files.
 
 For example,
 
@@ -124,7 +124,7 @@ In this example, try installing the infoctrs.ini from each folder using:
 
 `Lodtr infoctrs.ini`
 
-When it is successful, you will see the following entry in the application log:
+When it's successful, you'll see the following entry in the application log:
 
 > Log Name: Application  
 Source: Microsoft-Windows-LoadPerf  
@@ -139,7 +139,7 @@ amd64_microsoft-windows-iis-w3svc*
 
 `lodctr w3ctrs.ini`
 
-After which you will see:
+After which you'll see:
 
 > Log Name: Application  
 Source: Microsoft-Windows-LoadPerf  
@@ -152,7 +152,7 @@ Following these steps, rerun `WINMGMT /RESYNCPERF`.
 
 ## More information
 
-There's a hotfix for known issues with PerfDisk.dll on Windows Server 2008 and Vista systems. This hotfix has been rolled into Service Pack 2 for these operating systems. If you are at Service Pack 1 or below, apply the hotfix 961382.
+There's a hotfix for known issues with PerfDisk.dll on Windows Server 2008 and Vista systems. This hotfix has been rolled into Service Pack 2 for these operating systems. If you're at Service Pack 1 or below, apply the hotfix 961382.
 
 ## References
 

@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Active Directory replication
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 8477: The replication request has been posted; waiting for reply
 
@@ -26,6 +26,7 @@ _Original KB number:_ &nbsp; 2758780
 ## Symptoms
 
 This article describes the symptoms, cause, and resolution steps involved in troubleshooting Active Directory Replication error 8477: "The replication request has been posted; waiting for reply".
+
 The symptoms discussed in this article are commonly related to the occurrence of event 8477, however may also be observed with other events related to slow or delayed replication. When troubleshooting such issues, consideration should be given to all factors that may cause replication delays and be remediated accordingly.
 
 ### Output from repadmin.exe /showreps /verbose may report the replication attempt has failed with error 8477 - "The replication request has been posted; waiting for reply"  

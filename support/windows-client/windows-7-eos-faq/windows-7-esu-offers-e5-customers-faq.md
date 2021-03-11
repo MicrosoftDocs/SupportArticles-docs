@@ -11,7 +11,7 @@ ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: v-elj, chawong, winciccore, kaushika
 ms.prod-support-area-path: E5 ESU offers
-ms.technology: Windows 7 EoS FAQ
+ms.technology: windows-client-eos
 ---
 # FAQ about Windows 7 ESU offers for E5 customers
 

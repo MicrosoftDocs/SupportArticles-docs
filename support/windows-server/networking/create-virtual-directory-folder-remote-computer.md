@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
-ms.technology: Networking
+ms.technology: networking
 ---
 # How to create a virtual directory on an existing Web site to a folder that resides on a remote computer  
 
@@ -90,27 +90,3 @@ To delete a virtual directory, follow these steps:
     1. Right-click the Web site that you want (for example, **Default Web Site**), and then click **Stop**.
     2. Right-click the Web site, and then click **Start**.
 7. Quit the Internet Information Services snap-in.
-
-## References
-
-For more information about publishing a Web, click the following article numbers to view the articles in the Microsoft Knowledge Base:
-
-[198523](https://support.microsoft.com/help/198523) How to publish a FrontPage Web  
-
-[205729](https://support.microsoft.com/help/205729) How to publish a FrontPage Web from a remote server to a local computer  
-
-[194093](https://support.microsoft.com/help/194093) How to publish a FrontPage Web to the Internet or an intranet  
-
-[181127](https://support.microsoft.com/help/181127) How to publish your Web to a server without FrontPage extensions  
-
-[194092](https://support.microsoft.com/help/194092) How to publish your Web to a server without FrontPage extensions in FrontPage 98  
-
-For more information about issues related to IIS, click the following article numbers to view the articles in the Microsoft Knowledge Base:
-
-[297954](https://support.microsoft.com/help/297954) How to troubleshoot the Web server in Windows 2000  
-
-[299970](https://support.microsoft.com/help/299970) How to use NTFS permissions to protect a Web Page running on IIS 4.0 or 5  
-
-[216705](https://support.microsoft.com/help/216705) How to set permissions on a FrontPage Web on IIS  
-
-[214806](https://support.microsoft.com/help/214806) How to enable pass-through authentication for UNC virtual directories

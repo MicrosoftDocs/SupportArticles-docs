@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: robbe, kaushika
 ms.prod-support-area-path: Setup and configuration of clustered services and applications
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Changing the IP address of network adapters in cluster server
 

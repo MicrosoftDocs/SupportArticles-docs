@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: waltere, v-dehaas, kaushika
 ms.prod-support-area-path: WINS
-ms.technology: Networking
+ms.technology: networking
 ---
 # Troubleshooting WINS error event ID 4102, 4243, 4242, and 4286 messages
 
@@ -39,8 +39,6 @@ If the servers are located across routers, verify that there isn't a lost networ
 ### WINS Event ID 4243 Event Message
 
 The following event ID message is an example of an event ID 4243 message. The data section contains important information for troubleshooting: The translation of error code 4243 is WINS_EVT_RPLPULL_PUSH_NTF_EXC.
-
- [316836](https://support.microsoft.com/help/316836) Windows Server WINS event log messages, 4210 to 5300  
 
 The WINS Server event log messages contain data that you can use to determine the reason for an error. Change the view of the data section of the event from bytes to words. The second data word in the data section is associated with the type of error that was logged. The type of error that was logged is the key to troubleshooting this issue.
 The translation of the second data word (e0000008) in the data section in the example is "WINS_COMM_FAIL - A communication failure occurred. Check for disconnected or unreachable systems."
@@ -138,10 +136,6 @@ To resolve this issue, you can either wait for the issue to resolve by itself or
         ```
 
     2. Look for total number of sessions and used ports, examine the state of the sessions to determine whether the number of sessions has reached the maximum value. By default, the maximum value is 5000.
-
-For additional information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[137984](https://support.microsoft.com/help/137984) TCP connection states and Netstat output  
 
 If the output indicates that the server has exhausted all the ports between 1024 and 5000, the server has run out of ephemeral ports. To resolve this issue, follow these steps:
 

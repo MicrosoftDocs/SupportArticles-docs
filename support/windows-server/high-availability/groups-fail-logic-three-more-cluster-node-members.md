@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: stevemat, jeffwade, kaushika
 ms.prod-support-area-path: Root cause of an unexpected failover
-ms.technology: HighAvailability
+ms.technology: windows-server-high-availability
 ---
 # Failover behavior on clusters of three or more nodes
 

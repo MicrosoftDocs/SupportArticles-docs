@@ -1,5 +1,5 @@
 ---
-title: Restore IIS and clean up Active Directory
+title: Restore IIS and clean up Active Directory when you uninstall AD FS 2.0
 description: Explains how to restore IIS or clean up Active Directory when you uninstall Active Directory Federation Services 2.0.
 ms.date: 09/15/2020
 author: Deland-Han 
@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, clandis
 ms.prod-support-area-path: Active Directory Federation Services (AD FS)
-ms.technology: ActiveDirectory
+ms.technology: windows-server-active-directory
 ---
 # How to restore IIS and clean up Active Directory when you uninstall Active Directory Federation Services 2.0
 
@@ -20,7 +20,7 @@ This article describes how to restore Internet Information Services (IIS) and cl
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 982813
 
-## INTRODUCTION
+## Introduction
 
 The Active Directory Federation Services 2.0(AD FS 2.0) uninstallation wizard uninstalls AD FS 2.0 from your computer. However, you may still have to manually restore or cleanup settings in either of the following situations:
 
@@ -35,9 +35,7 @@ If you run the AD FS 2.0 Federation Server Configuration Wizard after reinstalli
 
 - The Configuration Results page may show the component Deploy browser sign-in Web site listed with status Configuring components...  when the following error message is displayed:
 
-    > Cannot copy the Web site files to C:\inetpub\adfs\ls because the directory already exists. Either remove the directory and rerun the configuration wizard, or update the existing Web site manually.
-
-## More information
+    > Cannot copy the Web site files to C:\\inetpub\\adfs\\ls because the directory already exists. Either remove the directory and rerun the configuration wizard, or update the existing Web site manually.
 
 You can use the following methods to clean up or restore the original configuration:
 
@@ -69,10 +67,10 @@ To manually remove these directories from the decommissioned federation server o
 6. Right-click **ADFSAppPool**, and then select **Remove**.
 
     > [!NOTE]
-    > The next two steps show how to remove the \adfs directory from the "inetpub" directory. If you have made custom changes to the content within this directory, we recommend that you back up this content to another location before removing the directory.
+    > The next two steps show how to remove the \\adfs directory from the "inetpub" directory. If you have made custom changes to the content within this directory, we recommend that you back up this content to another location before removing the directory.
 
 7. In Windows Explorer, browse to the "inetpub" directory. This directory is located in the following path:  
-    `%systemdrive%\inetpub`
+    %systemdrive%\\inetpub
 
 8. Right-click the **Adfs** directory, and then click **Delete**.
 
@@ -86,13 +84,12 @@ To manually delete this container in Active Directory, follow these steps:
 
     ```powershell
     Add-PsSnapin Microsoft.Adfs.Powershell  
-
     Get-AdfsProperties
     ```
 
 2. Note the **CertificateSharingContainer** property in the output from the previous step.
 3. Log on to a server where the ADSIEdit tool (ADSIEdit.msc) is installed.
-4. Click **Start**, click **Run**, type ADSIEdit.msc , and then press ENTER.
+4. Click **Start**, click **Run**, type *ADSIEdit.msc*, and then press ENTER.
 5. In the ADSIEdit tool, connect to the Default naming context by following these steps:
     1. Right-click **ADSI Edit**, and then click **Connect to**.
     2. Under **Connection Point**, click **Select a well-known Naming Context**, and then select **Default naming context**.
@@ -101,5 +98,5 @@ To manually delete this container in Active Directory, follow these steps:
     **Default naming context, {your domain partition}, CN=Program Data, CN=Microsoft, CN=ADFS**
 
     > [!NOTE]
-    > Under **CN=ADFS**, you see a container named **CN={GUID}** for each AD FS 2.0 farm that you have deployed, where **{GUID}** matches the **CertificateSharingContainer** property that you captured by using the **Get-AdfsProperties** PowerShell command in step 1.
+    > Under **CN=ADFS**, you see a container named **CN={GUID}** for each AD FS 2.0 farm that you have deployed, where **{GUID}** matches the **CertificateSharingContainer** property that you captured by using the `Get-AdfsProperties` PowerShell command in step 1.
 7. Right-click the appropriate **{GUID}** container, and then select **Delete**.
