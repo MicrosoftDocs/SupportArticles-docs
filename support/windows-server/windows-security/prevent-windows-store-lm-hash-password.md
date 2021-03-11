@@ -99,7 +99,7 @@ To add this DWORD value by using Registry Editor, follow these steps:
 
 3. On the **Edit** menu, point to **New**, and then click **DWORD Value**.
 4. Type *`NoLMHash`*, and then press ENTER.
-5. On the **Edit** menu, Select **Modify**.
+5. On the **Edit** menu, select **Modify**.
 6. Type *1*, and then select **OK**.
 7. Restart your computer, and then change your password.
 
