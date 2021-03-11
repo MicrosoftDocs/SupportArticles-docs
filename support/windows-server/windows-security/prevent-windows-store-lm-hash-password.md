@@ -1,5 +1,5 @@
 ---
-title: Prevent Windows from storing an LM hash of the password in AD and local SAM databases
+title: Prevent Windows from storing an LAN Manager (LM) hash of the password in AD and local SAM databases
 description: Provides three methods to prevent Windows from storing a LAN manager hash of your password.
 ms.date: 09/08/2020
 author: Deland-Han
@@ -41,13 +41,13 @@ It's best to prevent the storage of the LM hash if you don't need it for backwar
 
 To prevent Windows from storing an LM hash of your password, use any of the following methods.
 
-### Method 1: Implement the NoLMHash policy by using group policy
+### Method 1: Implement the NoLMHash policy by using Group Policy
 
 To disable the storage of LM hashes of a user's passwords, you can use Local Group Policy in the local computer's SAM database for Windows XP or Windows Server 2003. Or, use Group Policy in a Windows Server 2003 Active Directory environment. Follow these steps:
 
-1. In Group Policy, expand **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Policies**, and then click **Security Options**.
+1. In Group Policy, expand **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Policies**, and then select **Security Options**.
 2. In the list of available policies, double-click **Network security: Do not store LAN Manager hash value on next password change**.
-3. Click **Enabled** > **OK**.
+3. Select **Enabled** > **OK**.
 
 ### Method 2: Implement the NoLMHash policy by editing the registry
 
