@@ -201,7 +201,7 @@ You can use these methods to troubleshoot Jet database errors:
     Many but not all SATA and IDE drives don't support the write flush command. SAS drives do support it.
 
     Active Directory databases and log files should use SAS drives on SAS controllers DCs that have a battery backup on any write caching element.
-2. If 0xc00002e1 (c00002e1) and 0xc00002e2 (c00002e2) are virtual guest domain controllers that are running on Windows Server 2012 Hyper-V hosts, install corrective fixes from [Loss of consistency with IDE-attached virtual hard disks when a Hyper-V host server experiences an unplanned restart](https://support.services.microsoft.com/topic/loss-of-consistency-with-ide-attached-virtual-hard-disks-when-a-hyper-v-host-server-experiences-an-unplanned-restart-e0f0bc5b-bf04-2a75-4360-06ae11a13aa6) on hosts and guest DCs as required.
+2. If 0xc00002e1 (c00002e1) and 0xc00002e2 (c00002e2) are virtual guest domain controllers that are running on Windows Server 2012 Hyper-V hosts, install corrective fixes from [Loss of consistency with IDE-attached virtual hard disks when a Hyper-V host server experiences an unplanned restart](https://support.microsoft.com/topic/loss-of-consistency-with-ide-attached-virtual-hard-disks-when-a-hyper-v-host-server-experiences-an-unplanned-restart-e0f0bc5b-bf04-2a75-4360-06ae11a13aa6) on hosts and guest DCs as required.
 3. Check whether the event that preceded the LSASS 0xc00002e1 (c00002e1) and 0xc00002e2 (c00002e2) boot errors indicates one of the following issues:
 
     - Unscheduled power outage.
@@ -263,12 +263,14 @@ You can use these methods to troubleshoot Jet database errors:
     Troubleshooting any error reported by ESE logical or application logical consistency when physical consistency is still failing will lead you down an improper troubleshooting path.
 
     Equivalent NTDSUTIL and ESENTUTL commands for each later are shown below:
+
     |Layer|NTDSUTIL command|ESENTUTL equivalent command|
     |---|---|---|
     | 1. Physical consistency| no equivalent| `ESENTUTL /K` |
     | 2. ESE logical consistency| NTDSUTIL FILES INTEGRITY| `ESENTUTL /G` |
     | 3. Application logical consistency <br/>| NTDSUTIL ->Semantic database analysis<br/><br/>+<br/><br/>NTDSUTIL -> Offline Defrag| No equivalent. Run NTDSUTIL -> SDA<br/><br/>+<br/><br/>`ESENTUTL / D` |
     ||||
+
 14. Look up the user action for the first failing Jet error encountered during step 13. Perform remediation if possible.
 15. Repair the Jet database:
 
@@ -280,10 +282,9 @@ You can use these methods to troubleshoot Jet database errors:
 
 ## More Information
 
-For more information, see the following Microsoft articles:
+For more information, see the following Microsoft article:
 
-- [Domain controller does not start, c00002e2 error occurs, or "Choose an option" is displayed](https://support.microsoft.com/topic/domain-controller-does-not-start-c00002e2-error-occurs-or-choose-an-option-is-displayed-cb4acc41-1c1d-dc2b-95ea-9b2e424e0aa4)
-- ["Directory Services cannot start" error message when you start your Windows-based or SBS-based domain controller](https://support.microsoft.com/topic/-directory-services-cannot-start-error-message-when-you-start-your-windows-based-or-sbs-based-domain-controller-cce355c0-9fdd-65c5-3c18-b8e8728cc4a3)
+[Domain controller does not start, c00002e2 error occurs, or "Choose an option" is displayed](/troubleshoot/windows-server/identity/domain-controller-not-start-c00002e2-error)
 
 ### What is a lost IO / Lost Flush
 

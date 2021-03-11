@@ -12,10 +12,6 @@ This article helps you resolve the problem where the client application might in
 _Original product version:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 911359
 
-> [!NOTE]
-> Not sure if this is the right fix? We've added this issue to our
-[memory dump diagnostic](https://home.diagnostics.support.microsoft.com/selfhelp?knowledgebasearticlefilter=2027760) which can confirm.
-
 ## Symptoms
 
 When a client application tries to create a Microsoft COM+ component, the client application may intermittently receive an error message.

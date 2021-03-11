@@ -80,7 +80,7 @@ Once the scope of the applications affected is determined, perform the steps bel
     4. Launch the application on the App-V client to see if the error continues to occur.
 
     > [!NOTE]
-    > If the application OSD file is using the %SFT_SOFTGRIDSERVER% environment variable for the server name, verify the environment variable is configured on the App-V client by performing the steps documented in [An application on an App-V client fails to launch with Error Code: 0A-10000002](https://support.microsoft.com/help/2271342).
+    > If the application OSD file is using the %SFT_SOFTGRIDSERVER% environment variable for the server name, verify the environment variable is configured on the App-V client.
 
 3. Delete the application from the cache on the App-V client.
 
@@ -184,7 +184,7 @@ Once the scope of the applications affected is determined, perform the steps bel
     4. Repeat steps 1-3 for all applications that fail to stream.
 
     > [!NOTE]
-    > If the application OSD file is using the %SFT_SOFTGRIDSERVER% environment variable for the server name, verify the environment variable is configured on the App-V Client by performing the steps documented in [An application on an App-V client fails to launch with Error Code: 0A-10000002](https://support.microsoft.com/help/2271342).
+    > If the application OSD file is using the %SFT_SOFTGRIDSERVER% environment variable for the server name, verify the environment variable is configured on the App-V Client.
 
 7. Clear the cache on the App-V client.
 
