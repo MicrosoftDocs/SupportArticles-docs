@@ -20,9 +20,6 @@ This article describes the TCP Chimney Offload, Receive Side Scaling (RSS), and 
 _Original product version:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 951037
 
-> [!NOTE]
-> Not sure if this is the right fix? We've added this issue to our [memory dump diagnostic](https://home.diagnostics.support.microsoft.com/selfhelp?knowledgebasearticlefilter=2027760) which can confirm.
-
 ## TCP Chimney Offload overview
 
 TCP Chimney Offload is a networking technology that helps transfer the workload from the CPU to a network adapter during network data transfer. In Windows Server 2008, TCP Chimney Offload enables the Windows networking subsystem to offload the processing of a TCP/IP connection to a network adapter that includes special support for TCP/IP offload processing.

@@ -26,9 +26,7 @@ When you apply the hashing algorithm to an arbitrary amount of data, such as a b
 
 ## Use FCIV to compute MD5 or SHA-1 cryptographic hash values
 
-You can use the File Checksum Integrity Verifier (FCIV) utility to compute the MD5 or SHA-1 cryptographic hash values of a file. For more information about the FCIV utility, see the following article:
-
-[Availability and description of the File Checksum Integrity Verifier utility](/troubleshoot/windows-server/windows-security/fciv-availability-and-description).
+You can use the File Checksum Integrity Verifier (FCIV) utility to compute the MD5 or SHA-1 cryptographic hash values of a file.
 
 To compute the MD5 and the SHA-1 hash values for a file, type the following command at a command line:
 

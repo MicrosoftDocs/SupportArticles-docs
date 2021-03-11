@@ -33,10 +33,6 @@ After you upgrade all computers that are based on Windows 95, Windows 98, Window
 
 ## More information
 
-For additional information about installing the appropriate Active Directory Client Extension, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[288358](https://support.microsoft.com/help/288358) How to install the Active Directory client extension  
-
 When you install Active Directory Client Extensions on a computer that is running Windows 98, the system files that provide NTLM 2 support are also automatically installed. These files are Secur32.dll, Msnp32.dll, Vredir.vxd, and Vnetsup.vxd. If you remove Active Directory Client Extension, the NTLM 2 system files are not removed because the files provide both enhanced security functionality and security-related fixes.
 
 By default, NTLM 2 session security encryption is restricted to a maximum key length of 56 bits. Optional support for 128-bit keys is automatically installed if the system satisfies United States export regulations. To enable 128-bit NTLM 2 session security support, you must install Microsoft Internet Explorer 4.x or 5 and upgrade to 128-bit secure connection support before you install the Active Directory Client Extension.

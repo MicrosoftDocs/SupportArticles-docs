@@ -57,9 +57,3 @@ Alternately, you can override Windows Photo Gallery's image size limit by editin
 
 > [!Note]
 > Entering a value of 0 will disable the image size limit. However, this is not recommended, because if Windows Photo Gallery then attempts to open a large or corrupt file, it could potentially result in a hang or crash.
-
-## More information
-
-You may also encounter problems opening high-resolution images in Microsoft Paint. For more information, please see the following article in the Microsoft Knowledge Base:
-
-[Unable to scan or open high resolution file in Paint on Windows Vista or Windows 7](https://support.microsoft.com/help/2722535)
