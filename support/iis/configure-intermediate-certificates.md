@@ -19,7 +19,7 @@ When a client computer tries to establish server-authenticated Secure Sockets La
 
 ## Impact
 
-Client computers can't connect to the server that's running IIS. Because the servers don't have the intermediate certificates configured correctly, The client computers can't authenticate these servers.
+Client computers can't connect to the server that's running IIS. Because the servers don't have the intermediate certificates configured correctly, the client computers can't authenticate these servers.
 
 We recommend that you correctly configure the intermediate certificates on the server.
 
@@ -33,7 +33,7 @@ In the SSL negotiation, the server certificate is validated on the client. In th
 
 A certificate chain of a configured server authentication certificate is built in the local computer context. In this way, IIS determines the set of certificates that it sends to clients for TLS/SSL. To configure the intermediate certificates correctly, add them to the intermediate CA certificate store in the local computer account on the server.
 
-Asssume that a server operator installs an SSL certificate together with the relevant issuing CA certificates. When the SSL certificate is renewed later, the server operator must ensure the intermediate issuing certificates are updated at the same time.
+Assume that a server operator installs an SSL certificate together with the relevant issuing CA certificates. When the SSL certificate is renewed later, the server operator must ensure the intermediate issuing certificates are updated at the same time.
 
 ## Configure intermediate certificates
 
