@@ -27,7 +27,7 @@ The following products have been tested or are currently being tested for compat
 | Product| Minimum CRM version| CRM build number| Status |
 |---|---|---|---|
 |.NET Framework 4.5.2|Update Rollup 2|6.0.2.46|Compatible|
-|.NET Framework 4.6|SP1 UR4|6.1.4.0145|Compatible| |
+|.NET Framework 4.6|SP1 UR4|6.1.4.0145|Compatible| 
 |Active Directory Federation Services in Windows Server 2008 (AD FS 2.0)|RTM|6.0.0.809|Compatible|
 |Active Directory Federation Services in Windows Server 2008 R2|RTM|6.0.0.809|Compatible|
 |Active Directory Federation Services in Windows Server 2012|RTM|6.0.0.809|Compatible|
