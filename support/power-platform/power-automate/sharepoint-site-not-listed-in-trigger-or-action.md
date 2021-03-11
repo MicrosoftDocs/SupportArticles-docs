@@ -28,7 +28,7 @@ Users can still use SharePoint sites not listed by typing in the using the desir
 
 ### Resolution 1 - Select Enter custom value
 
-:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/create-item.png" alt-text="SharePoint screenshot in Flow"border="false":::
+:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/create-item.png" alt-text="SharePoint screenshot in Flow":::
 
 ### Resolution 2 - Get the SharePoint site URL
 
@@ -38,10 +38,10 @@ You can also use any URL from your SharePoint site. The Flow designer will clean
 
 ### Resolution 3 - Type the SharePoint URL directly into the dropdown text box
 
-:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/long-site-address.png" alt-text="SharePoint screenshot dropdown long url"border="false":::
+:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/long-site-address.png" alt-text="SharePoint screenshot dropdown long url":::
 
 The Flow designer will clean up any URL and point it directly to the SharePoint site.
 
-:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/short-site-address.png" alt-text="SharePoint screenshot dropdown short url"border="false":::
+:::image type="content" source="media/sharepoint-site-not-listed-in-trigger-or-action/short-site-address.png" alt-text="SharePoint screenshot dropdown short url":::
 
 The dropdown should fill in the SharePoint site automatically. Make sure you have access to the SharePoint site.
