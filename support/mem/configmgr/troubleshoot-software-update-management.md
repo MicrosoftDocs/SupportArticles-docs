@@ -137,9 +137,9 @@ The first thing the client does is set the WSUS server that will be its update s
 
     |Registry subkey|Value name|Type|Data|
     |---|---|---|---|
-    |`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\WindowsUpdate`|WUServer|REG_SZ|The full WSUS server URL including the port. For example, *<`http://PS1Site.Contoso.com:8530`>*|
+    |`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\WindowsUpdate`|`WUServer`|REG_SZ|The full WSUS server URL including the port. For example, *<`http://PS1Site.Contoso.com:8530`>*|
     |`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\WindowsUpdate`|WUStatusServer|REG_SZ|The full WSUS server URL including the port. For example, *<`http://PS1Site.Contoso.com:8530`>*|
-    |`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\WindowsUpdate\AU`|UseWUServer|REG_DWORD|0x1|
+    |`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\WindowsUpdate\AU`|`UseWUServer`|REG_DWORD|0x1|
 
     For an existing client, we could expect to see the following message in WUAHandler.log to denote when content version has incremented:
 
@@ -185,7 +185,12 @@ Scan results will include superseded updates only when they're superseded by ser
 
 #### Troubleshoot issues in step 2
 
-Many issues with software update scan can be caused by missing or corrupted files or registry keys, or by component registration issues. To fix such issues, see [Scan failures due to missing or corrupted components](troubleshoot-software-update-scan-failures.md#scan-failures-due-to-missing-or-corrupted-components).
+Many issues with software update scan can be caused by one of the following reasons:
+
+- Missing or corrupted files or registry keys.
+- Component registration issues.
+
+To fix such issues, see [Scan failures due to missing or corrupted components](troubleshoot-software-update-scan-failures.md#scan-failures-due-to-missing-or-corrupted-components).
 
 There's a known issue where a 32-bit Windows 7 ConfigMgr 2012 R2 client requesting an update scan fails to return scan results to Configuration Manager. It causes the client to report incorrect compliance status and the updates fail to install when Configuration Manager requests the update cycle. However, if you use the Windows Update control panel applet, the updates usually install fine. When you're experiencing this problem, you receive a message similar to the following one in WindowsUpdate.log:
 
@@ -256,7 +261,12 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
 
      > Group policy settings were overwritten by a higher authority (Domain Controller) to: Server <`http://server`> and Policy ENABLED
 
-     The software update point for client installation and software updates must be the same server and must be specified in the Active Directory Group Policy setting with the correct name format and port information. For example, it would be *<`http://server1.contoso.com:80`>* if the software update point was using the default website.
+     The software update point for client installation and software updates must meet the following requirements:
+
+     - They're the same server.
+     - They're specified in the Active Directory Group Policy setting with the correct name format and port information.
+
+     For example, it would be *<`http://server1.contoso.com:80`>* if the software update point was using the default website.
 
   2. If the server URL is correct, access the server using a URL similar to the following one to verify connectivity between the client and the WSUS computer:
 
@@ -277,7 +287,7 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
         - Other network-related connectivity issues.
         - Port configuration problems, so it's a good idea to verify that the port settings are correct. WSUS can be configured to use any of the following ports: 80, 443 or 8530, 8531.
 
-          For clients to communicate with the WSUS computer, the appropriate ports must be allowed on the firewall on the WSUS computer. Port settings are configured when the software update point site system role is created. These port settings must be the same as the port settings used by the WSUS website or WSUS Synchronization Manager will fail to connect to WSUS running on the software update point to request synchronization. The following procedures provide information about how to verify the port settings used by WSUS and the software update point.
+          For clients to communicate with the WSUS computer, the appropriate ports must be allowed on the firewall on the WSUS computer. Port settings are configured when the software update point site system role is created. These port settings must be the same as the port settings used by the WSUS website. Otherwise, WSUS Synchronization Manager will fail to connect to WSUS running on the software update point to request synchronization. The following procedures provide information about how to verify the port settings used by WSUS and the software update point.
 
           1. Determine the WSUS port settings used in IIS 7.0 and later versions.
           2. Determine the WSUS port settings in IIS 6.0.
@@ -300,7 +310,7 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
 
                 > Could not open connection to the host, on port \<*PortNumber*>
 
-                This error suggests that the firewall rules aren't configured to allow communication for the WSUS computer. This error can also suggest that an intermediate network device is blocking that port. To verify, try the same test from a client on the same local subnet. If it works, the computers are configured correctly, but a router or firewall between segments is blocking the port and causing the failure.
+                This error suggests that the firewall rules aren't configured to allow communication for the WSUS computer. This error can also suggest that an intermediate network device is blocking that port. To verify, try the same test from a client on the same local subnet. If it works, the computers are configured correctly. However, a router or firewall between segments is blocking the port and causing the failure.
 
         - IIS availability problems.
 
@@ -346,7 +356,7 @@ There are many reasons why a software update scan might fail. It could be becaus
 
 ### Step 5: WUAHandler parses the scan results
 
-WUAHandler then parses the results, which include the applicability state for each update. As part of this process, superseded updates are pruned out. Additionally, the applicability state is checked for all updates that align to the criteria submitted by CCMExec to the Windows Update Agent. The important thing to understand here is that you should see applicability results for updates whether those updates are in a deployment or not.
+WUAHandler then parses the results, which include the applicability state for each update. As part of this process, superseded updates are pruned out. The applicability state is checked for all updates that align to the criteria submitted by CCMExec to the Windows Update Agent. The important thing to understand here is that you should see applicability results for updates whether those updates are in a deployment or not.
 
 The following entries are logged in WUAHandler.log:
 

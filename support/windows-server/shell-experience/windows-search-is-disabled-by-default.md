@@ -26,14 +26,17 @@ When you try to search from the **Start** menu or from Cortana on a Windows Serv
 
 ## Cause
 
-By default, the Windows Search service is set to **Disabled** in Windows Server 2016. It's because indexing of the volumes can cause problems in certain scenarios, such as with Cluster Shared Volumes (CSV) and in running Remote Desktop Session Host (RDSH) with multiple simultaneous sessions.
+By default, the Windows Search service is set to **Disabled** in Windows Server 2016. It's because indexing of the volumes can cause problems in the following scenarios：
+
+- Certain scenarios, such as with Cluster Shared Volumes (CSV).
+- Running Remote Desktop Session Host (RDSH) with multiple simultaneous sessions.
 
 ## Resolution
 
 If you do one of the following actions:
 
-You plan to use Windows Server 2016 as your client desktop computer.
-You want Windows Search functionality from the **Start** menu regardless.
+- You plan to use Windows Server 2016 as your client desktop computer.
+- You want Windows Search functionality from the **Start** menu.
 
 you can re-enable the Windows Search service by following these steps:
 
