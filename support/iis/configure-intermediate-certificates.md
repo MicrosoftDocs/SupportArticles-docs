@@ -1,6 +1,6 @@
 ---
-title: Configure intermediate certificates in Internet Information Services
-description: Describes how to configure intermediate certificates on a computer that is running Internet Information Services (IIS) for server authentication.
+title: Configure intermediate certificates in Internet Information Services (IIS)
+description: Describes how to configure intermediate certificates on a computer that's running IIS for server authentication.
 ms.date: 03/27/2020
 ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: Mlaing, lprete
@@ -8,32 +8,32 @@ ms.topic: how-to
 ---
 # Configure intermediate certificates on a computer that's running IIS for server authentication
 
-This article describes how to configure intermediate certificates on a computer that's running Internet Information Services (IIS) for server authentication.
+This article describes how to configure intermediate certificates on a computer that's running IIS for server authentication.
 
 _Original product version:_ &nbsp; Internet Information Services  
 _Original KB number:_ &nbsp; 954755
 
 ## Summary
 
-When a client computer tries to establish server-authenticated Secure Sockets Layer (SSL) connections with an IIS Web server, the server certificate chain is validated on the client computer. To complete this certificate validation successfully, the intermediate certificates in the server certificate chain must be configured correctly on the server. If these certificates are configured incorrectly, the server authentication may fail. It also applies to any program that uses SSL/Transport Layer Security (TLS) for authentication.
+When a client computer tries to establish server-authenticated Secure Sockets Layer (SSL) connections with an IIS Web server, it validates the server certificate chain. To complete this certificate validation successfully, the intermediate certificates in the server certificate chain must be configured correctly on the server. Otherwise, the server authentication may fail. It also applies to any program that uses SSL or Transport Layer Security (TLS) for authentication.
 
 ## Impact
 
-Client computers can't connect to the server that's running IIS. This situation occurs because the servers don't have the intermediate certificates configured correctly. The client computers can't authenticate these servers.
+Client computers can't connect to the server that's running IIS. Because the servers don't have the intermediate certificates configured correctly, The client computers can't authenticate these servers.
 
-We recommend you correctly configure the intermediate certificates on the server.
+We recommend that you correctly configure the intermediate certificates on the server.
 
 ## Technical details
 
-X.509 certificate validation consists of several phases. These phases include certificate path discovery and path validation.
+X.509 certificate validation consists of several phases, including certificate path discovery and path validation.
 
-As part of certificate path discovery, the intermediate certificates must be located to build the certificate path up to a trusted root certificate. An intermediate certificate is a certificate that's useful in determining if a certificate was ultimately issued by a valid root certification authority (CA). These certificates can be obtained from the cache or from the certificate store on the client computer. Servers can also provide the information to the client computer.
+As part of certificate path discovery, the intermediate certificates must be located to build the certificate path up to a trusted root certificate. An intermediate certificate is useful to determine if a certificate was ultimately issued by a valid root certification authority (CA). These certificates can be obtained from the cache or the certificate store on the client computer. Servers can also provide the information to the client computer.
 
-In the SSL negotiation, the server certificate is validated on the client. In this case, the server provides the certificates to the client computer together with the intermediate issuing certificates that the client computer uses to build the certificate path. The complete certificate chain, except for the root certificate, is sent to the client computer.
+In the SSL negotiation, the server certificate is validated on the client. In this case, the server provides the certificates to the client computer, together with the intermediate issuing certificates that the client computer uses to build the certificate path. The complete certificate chain, except for the root certificate, is sent to the client computer.
 
-By building a certificate chain of a configured server authentication certificate in the local computer context, IIS determines the set of certificates that it sends to clients for TLS/SSL. The intermediate certificates must be configured correctly by adding them to intermediate CA certificate store in the local computer account on the server.
+A certificate chain of a configured server authentication certificate is built in the local computer context. In this way, IIS determines the set of certificates that it sends to clients for TLS/SSL. To configure the intermediate certificates correctly, add them to the intermediate CA certificate store in the local computer account on the server.
 
-If a server operator installs an SSL certificate together with the relevant issuing CA certificates, and later renews the SSL certificate, the server operator must ensure the intermediate issuing certificates are updated at the same time.
+Asssume that a server operator installs an SSL certificate together with the relevant issuing CA certificates. When the SSL certificate is renewed later, the server operator must ensure the intermediate issuing certificates are updated at the same time.
 
 ## Configure intermediate certificates
 
