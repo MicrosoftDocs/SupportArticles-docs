@@ -72,6 +72,6 @@ For example, see the following figure.
 
 For example, for a single-CPU one-socket system, Task Manager displays two sockets. For a two-socket system, Task Manager displays four sockets.
 
-### Task Manager displays an incorrect number of NUMA nodes
+### Task Manager displays an incorrect number of NUMA nodes with more than 64 logical processors enabled
 
 For example, for a one-socket system, Task Manager displays two NUMA nodes. For a two-socket system, Task Manager displays four NUMA nodes.
