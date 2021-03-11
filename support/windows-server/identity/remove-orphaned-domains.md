@@ -1,6 +1,6 @@
 ---
 title: How to remove orphaned domains from Active Directory
-description: Describes how to remove domain meta-data from Active Directory if domain controllers aren't demoted before they are taken offline.
+description: How to remove domain metadata from Active Directory when domain controllers are removed.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -20,12 +20,12 @@ _Original KB number:_ &nbsp;230306
 
 ## Summary
 
-Typically, when the last domain controller for a domain is demoted, the administrator selects the **This server is the last domain controller in the domain** option in the DCPromo tool. This procedure removes the domain meta-data from Active Directory. This article describes how to remove domain meta-data from Active Directory if this procedure isn't used, or if all domain controllers are taken offline but not demoted first.
+Typically, when the last domain controller for a domain is demoted, the administrator selects the **This server is the last domain controller in the domain** option in the DCPromo tool. This procedure removes the domain metadata from Active Directory. This article describes how to remove domain metadata from Active Directory if this procedure isn't used, or if all domain controllers are taken offline but not demoted first.
 
 > [!CAUTION]
 > The administrator must verify that replication has occurred since the demotion of the last domain controller before manually removing the domain meta-data. Using the NTDSUTIL tool improperly can cause partial or complete loss of Active Directory functionality.
 
-## Removing Orphaned Domains from Active Directory
+## Removing orphaned domains from Active Directory
 
 1. Determine the domain controller that holds the Domain Naming Master Flexible Single Master Operations (FSMO) role. To identify the server holding this role:
     1. Start the Active Directory Domains and Trusts Microsoft Management Console (MMC) snap-in from the **Administrative Tools** menu.
