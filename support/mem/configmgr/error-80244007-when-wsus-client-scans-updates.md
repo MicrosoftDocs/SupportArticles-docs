@@ -1,12 +1,12 @@
 ---
-title: Error 80244007 when WSUS client scans for updates
-description: Describes an issue in which Windows Server Update Services clients fail to scan for updates with error SyncUpdates_WithRecovery failed.
+title: Error 80244007 when a Windows Server Update Services (WSUS) client scans for updates
+description: Describes an issue in which WSUS clients can't scan for updates.
 ms.date: 08/12/2020
 ms.prod-support-area-path:
 ---
-# Error 80244007 when Windows Server Update Services client scans for updates
+# Error 80244007 when a WSUS client scans for updates
 
-This article helps you fix an issue where you receive the **[80244007] SyncUpdates_WithRecovery failed** error when a Windows Server Update Services (WSUS) client scans for updates.
+This article helps you fix an issue where you receive the **[80244007] SyncUpdates_WithRecovery failed** error when a WSUS client scans for updates.
 
 _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 4096317
