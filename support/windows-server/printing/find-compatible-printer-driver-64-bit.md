@@ -113,7 +113,7 @@ Some printer manufacturers may interpret different printer emulations in differe
 
     \\\ **print server name**\\**printer name**
 10. Select **Next**.
-11. In the **Install Printer Software** page, select the correct manufacturer under the **Manufacturer** column. Then select the name of a printer that supports the same printer emulation as your printer. Select **Next** > **Finish**. For example, you have an HP LaserJet printer that supports Post Script (PS) emulation. Try to locate another HP LaserJet printer model that has a similar model number and supports Post Script emulation.
+11. In the **Install Printer Software** page, select the correct manufacturer under the **Manufacturer** column. Then select the name of a printer that supports the same printer emulation as your printer. Select **Next** > **Finish**. For example, you have an HP LaserJet printer that supports PostScript emulation. Try to locate another HP LaserJet printer model that has a similar model number and supports PostScript emulation.
 12. In Printers and Faxes, right-click the printer that you added, and then select **Properties**.
 13. Select the **General** tab, and then select **Print Test Page**.
 14. If the test page prints correctly, you have found a matching printer driver. If the test page is unreadable, find another printer driver, or try another emulation type.
@@ -123,14 +123,13 @@ Some printer manufacturers may interpret different printer emulations in differe
 You can use the name of your printer to get more information to find a compatible printer driver. For example:
 
 - The Canon LBP-2460 PS printer driver is for Canon Laser Beam printers.
-- The 2460 series prints 24 pages per minute by using Post Script emulation.
+- The 2460 series prints 24 pages per minute by using PostScript emulation.
 
 If the printer contains PS2 in the name, it typically refers to PostScript level 2. PS3 in the device name typically refers to PostScript level 3.
 
-For some printers, a printer driver has v.**the PostScript emulator version that the printer uses** in the title. For example:
+For some printers, a printer driver has v.*the PostScript emulator version that the printer uses* in the title. For example, the Canon LBP-8III Plus PS-1 v51.4 uses version 51.4 of the PS1 language.
 
-- The Canon LBP-8III Plus PS-1 v51.4 uses version 51.4 of the PS1 language.
-- For laser printers in the US and Europe, almost 80% of network laser printers use either PostScript or PCL as their main language. Of this 80%, PCL5 is the most common PCL type that's used and PostScript level 2 is the most common Post Script type.
+For laser printers in the US and Europe, almost 80% of network laser printers use either PostScript or PCL as their main language. Of this 80%, PCL5 is the most common PCL type that's used and PostScript level 2 is the most common PostScript type.
 
 Some personal laser printers are less standard. Typically, PostScript level 3 is a superset of PostScript level 2. So if you have a printer that understands PostScript level 3, and a driver that uses PostScript level 2, the printed test may be decipherable. Similarly, PCL6/XL is based on PCL5e, and PCL5e is based on PCL5.
 
