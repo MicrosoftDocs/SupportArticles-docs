@@ -4,6 +4,8 @@ description: Fixes error 0xC0000102 (Status File Corrupt) that occurs on an Azur
 ms.date: 12/8/2020
 ms.prod-support-area-path: 
 ms.reviewer: jarrettr
+ms.service: virtual-machines
+ms.collection: windows
 ---
 
 # Windows stop error 0xC0000102 Status File Corrupt

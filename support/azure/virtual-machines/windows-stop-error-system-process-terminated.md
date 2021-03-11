@@ -1,14 +1,14 @@
 ---
 title: Windows stop error Status System Process Terminated
 description: This article provides steps to resolve issues where the operating system encounters the stop error 0xC000021A, which prevents the booting of an Azure virtual machine.
-services: virtual-machines-windows, azure-resource-manager
+services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: v-miegge
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
-
-ms.service: virtual-machines-windows
+ms.service: virtual-machines
+ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting

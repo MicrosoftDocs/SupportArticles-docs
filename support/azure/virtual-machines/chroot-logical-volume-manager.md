@@ -1,14 +1,14 @@
 ---
 title: Recover Linux VMs using chroot where LVM (Logical Volume Manager) is used - Azure VMs
 description: Recovery of Linux VMs with LVMs. 
-services: virtual-machines-linux
+services: virtual-machines
 documentationcenter: ''
 author: vilibert
 manager: dcscontentpm
 editor: ''
 tags: Linux chroot LVM
-
-ms.service: virtual-machines-linux
+ms.service: virtual-machines
+ms.collection: linux
 ms.devlang: na
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux

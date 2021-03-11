@@ -1,14 +1,14 @@
 ---
 title: Troubleshoot Linux VM starting issues due to file system errors | Microsoft Docs
 description: Learn how to troubleshoot Linux VM starting issues due to file system errors
-services: virtual-machines-linux
+services: virtual-machines
 documentationcenter: ''
 author: v-miegge
 manager: dcscontentpm
 editor: ''
 tags: ''
-
-ms.service: virtual-machines-linux
+ms.service: virtual-machines
+ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux

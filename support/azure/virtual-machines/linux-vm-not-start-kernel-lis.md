@@ -7,6 +7,8 @@ ms.service: linux-vms
 ms.author: genli
 author: genli
 ms.reviewer: delhan, craigw
+ms.service: virtual-machines
+ms.collection: linux
 ---
 # A Linux VM does not start correctly with kernel 3.10.0-514.16 after an LIS upgrade
 

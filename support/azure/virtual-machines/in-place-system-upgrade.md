@@ -4,6 +4,8 @@ description: Describes how to work around the unsupported in-place system upgrad
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Steps for in-place system upgrades for supported Windows 10 Azure VMs and workarounds for unsupported versions
 
