@@ -12,7 +12,7 @@ This article describes common error cases and configuration that can result in F
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4513672
 
-## Common error case 1
+## Error with status code "ViralServicePlanRequired"
 
 > Failed to create the Common Data Service database in this environment with status code 'ViralServicePlanRequired'
 
@@ -45,7 +45,7 @@ This error occurs in organizations that have disabled self-service signups. Self
 
 1. Create the database as an environment admin directly from [Power Platform admin center](https://admin.powerplatform.microsoft.com)  
 
-## Common error case 2
+## Error with status code "AADApplicationDisabled"
 
 > Failed to create the Common Data Service database in this environment with status code 'AADApplicationDisabled'.
 
@@ -57,15 +57,21 @@ To resolve, tenant administrators will need to go to the **Enterprise Applicatio
 
 :::image type="content" source="./media/flow-approval-cds-provisioning-errors/properties-settings.png" alt-text="Set the Enabled for users to sign-in option to Yes.":::
 
-## The Common Data Service database for this environment is disabled
+## Error "Database is disabled"
+
+> The Common Data Service database for this environment is disabled
 
 The Common Data Service instance has been disabled in this environment. It isn't expected, and is related to the expiration of all Flow & CDS plans within your AAD tenancy. To ensure the database can be enabled, make sure at least one user has active plans.
 
-## The Common Data Service Database for this environment isn't ready yet
+## Error "Database isn't ready yet"
+
+> The Common Data Service Database for this environment is not ready yet.
 
 The database for this instance is still being provisioned, or has failed provisioning. Rerunning a Flow that uses approvals will attempt to reprovision the instance.  
 
-## The current user doesn't have permissions to create a Common Data Service database for this environment
+## Error "User has no permission to create database"
+
+> The current user doesn't have permissions to create a Common Data Service database for this environment.
 
 For non-Default Flow and PowerApps environments, only environment admins can directly (through the Flow Admin portal) or indirectly (through Flow Approvals) create the Common Data Service database.
 
