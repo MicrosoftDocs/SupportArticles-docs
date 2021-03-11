@@ -18,7 +18,7 @@ When trying to run a UI flow during Test run or Flow run, the user gets the err
 
 > UnableToLaunchApplication
 
-:::image type="content" source="media/troubleshoot-ui-flow-playback-unabletolaunchapplication/unabletolaunchapplication.png" alt-text="UnableToLaunchApplication_Error" border="false":::
+:::image type="content" source="media/troubleshoot-ui-flow-playback-unabletolaunchapplication/unabletolaunchapplication.png" alt-text="UnableToLaunchApplication_Error":::
 
 The error is visible in the UI flow Test Page or See detail page of the UI flow run instance.
 

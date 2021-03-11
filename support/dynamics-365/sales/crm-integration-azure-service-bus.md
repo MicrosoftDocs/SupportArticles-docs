@@ -36,7 +36,7 @@ When the procedures in this article have been completed, ACS access control will
 
 First, retrieve the list of service endpoints. The steps in this article will need to be done for each of the service endpoints. To find the service endpoints in Microsoft Dynamics CRM, navigate to **Settings**, select **Customizations**, select **Customize the System**, and select **Service Endpoints**.
 
-![Retrieve the list of service endpoints](./media/crm-integration-azure-service-bus/retrieve-service-endpoints.jpg)
+:::image type="content" source="media/crm-integration-azure-service-bus/retrieve-service-endpoints.jpg" alt-text="Retrieve the list of service endpoints.":::
 
 > [!NOTE]
 > If the service endpoint connection mode is **Federated**, the same steps will need to be repeated in the following instructions for `https://.accesscontrol.windows.net/v2/mgmt/web` or `https://.accesscontrol.usgovcloudapi.net/v2/mgmt/web`.
@@ -47,7 +47,7 @@ To configure access control for a service namespace:
 
     If you don't have access, contact the solution developer to follow the steps.
 
-    ![Contact the solution developer](./media/crm-integration-azure-service-bus/access-control-service.jpg)
+    :::image type="content" source="media/crm-integration-azure-service-bus/access-control-service.jpg" alt-text="Contact the solution developer.":::
 
 2. Under **Service Settings**, select **Service Identities**.
 
@@ -56,16 +56,16 @@ To configure access control for a service namespace:
     > [!NOTE]
     > If your organization URL contains `crm9.dynamics.com`, [click here](https://go.microsoft.com/fwlink/?linkid=832559 ) to download the public certificate and save it to your disk. Also, select the check box next to `crm9.dynamics.com`.
 
-    ![Select the check box](./media/crm-integration-azure-service-bus/select-check-box.jpg)
+    :::image type="content" source="media/crm-integration-azure-service-bus/select-check-box.jpg" alt-text="Select the check box.":::
 
 4. Select **Add**.
 
-    ![Select add](./media/crm-integration-azure-service-bus/edit-service-identity.jpg)
+    :::image type="content" source="media/crm-integration-azure-service-bus/edit-service-identity.jpg" alt-text="Select add.":::
 
 5. Under **Type**, choose **X509**, and then select **Add**. In the **Add Credential** screen (shown below), browse to the public certificate you previously saved to disk, and select **Save**.
 
-    ![Save the certificate you previously saved to disk](./media/crm-integration-azure-service-bus/add-credential.jpg)
+    :::image type="content" source="media/crm-integration-azure-service-bus/add-credential.jpg" alt-text="Save the certificate you previously saved to disk.":::
 
 6. You should now see the current (soon to expire) and new certificates in the Credentials list.
 
-    ![The new certificates are added successfully](./media/crm-integration-azure-service-bus/new-certificates.jpg)
+    :::image type="content" source="media/crm-integration-azure-service-bus/new-certificates.jpg" alt-text="The new certificates are added successfully.":::

@@ -20,7 +20,7 @@ When creating or saving flows or connections, or when navigating pages within th
 - > "Client Request Aborted"
 - > "Network Error"
 
-![Network error example](./media/client-request-aborted-failed-fetch/network-error.png)
+:::image type="content" source="media/client-request-aborted-failed-fetch/network-error.png" alt-text="Network error example.":::
 
 ## Cause
 

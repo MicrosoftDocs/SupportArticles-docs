@@ -22,7 +22,7 @@ Conditional access policies are managed through the Azure portal and may have s
 
 The following screenshot shows an MFA policy example that requires MFA for specific users when they access the Azure management portal.
 
-:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/require-mfa-for-azure-portal.png" alt-text="Require multi-factor authorization for a user when accessing the Azure Management portal" border="false":::
+:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/require-mfa-for-azure-portal.png" alt-text="Require multi-factor authorization for a user when accessing the Azure Management portal":::
 
 You can also open the MFA configuration from the Azure portal. To do this, select **Azure Active Directory** > **Users and groups** > **All users** > **Multi-Factor Authentication**, and then configure policies by using the **service settings** tab.
 
@@ -113,11 +113,11 @@ If you enable a conditional access policy after flows and connections are creat
 
 > AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access \<service>.
 
-:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/error-details.png" alt-text="Details of the error message including Time, Status, Error, Error Details, and how to fix" border="false":::
+:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/error-details.png" alt-text="Details of the error message including Time, Status, Error, Error Details, and how to fix":::
 
 When users view connections on the Flow portal, they see an error message that resembles the following:
 
-:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/status-error.png" alt-text="Status error that users see in Flow saying failed to refresh access token for service" border="false":::
+:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/status-error.png" alt-text="Status error that users see in Flow saying failed to refresh access token for service":::
 
 To resolve this issue, users must sign in to the Flow portal under conditions that match the access policy of the service that they are trying to access (such as multi-factor, corporate network, and so on), and then repair or re-create the connection.
 
@@ -125,7 +125,7 @@ To resolve this issue, users must sign in to the Flow portal under conditions th
 
 If users don't sign in to Flow by using criteria that matches the policies, the automatic connection creation to first-party Microsoft services that are controlled by the conditional access policies fail. Users must manually create and authenticate the connections by using criteria that matches the conditional access policy of the service that they try to access. This behavior also applies to 1-click templates that are created from the Flow portal.
 
-:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/automatic-connection-creation-error.png" alt-text="Automatic connection creation error with AADSTS50076" border="false":::
+:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/automatic-connection-creation-error.png" alt-text="Automatic connection creation error with AADSTS50076":::
 
 To resolve this issue, users must sign in to the Flow portal under conditions that match the access policy of the service they try to access (such as multi-factor, corporate network, and so on) before they create a template.
 
@@ -135,7 +135,7 @@ If users don't sign in to Flow by using criteria that matches the policies, they
 
 > AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access \<service>.
 
-:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/aadsts50076-error.png" alt-text="AADSTS50076 error when attempting to create a connection" border="false":::
+:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/aadsts50076-error.png" alt-text="AADSTS50076 error when attempting to create a connection":::
 
 To resolve this issue, users must sign in under conditions that match the access policy of the service that they are trying to access, and then re-create the connection.
 
@@ -157,9 +157,9 @@ When you try to share ownership or run-only permissions by using SharePoint list
 
 More importantly, users may also be unable to discover or run their flows from SharePoint. This is because, currently, the conditional access policy information is not passed between Power Automate and SharePoint to enable SharePoint to make an access decision.
 
-:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/add-a-sharepoint-list-or-library-as-owner.png" alt-text="Share Flows with SharePoint lists and libraries" border="false":::
+:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/add-a-sharepoint-list-or-library-as-owner.png" alt-text="Share Flows with SharePoint lists and libraries":::
 
-:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/owner-see-site-url-and-list-id.png" alt-text="Owners can see the site url and list ID" border="false":::
+:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/owner-see-site-url-and-list-id.png" alt-text="Owners can see the site url and list ID":::
 
 #### Effect 7 - Creation of SharePoint out-of-box flows
 

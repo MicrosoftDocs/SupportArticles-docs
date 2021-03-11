@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4553206
 
 When trying to create a UI Flow from My flows, you may see this message:
 
-![Error when creating a UI Flow from My flows](./media/unable-create-ui-flow/error-occur-ui-flows.png)
+:::image type="content" source="media/unable-create-ui-flow/error-occur-ui-flows.png" alt-text="Error when creating a UI Flow from My flows.":::
 
 ## Cause
 

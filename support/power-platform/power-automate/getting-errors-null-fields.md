@@ -21,7 +21,7 @@ In Microsoft Power Automate, when you create a flow, here's what could happen wi
 
    - > **InvalidTemplate**. Unable to process template language expressions. The provided value is of type 'Null'.
 
-   ![Invalid template runtime error](./media/getting-errors-null-fields/invaildtemplate-error.png)
+   :::image type="content" source="media/getting-errors-null-fields/invaildtemplate-error.png" alt-text="Invalid template runtime error.":::
 
 ## Cause
 
@@ -36,20 +36,20 @@ You can set up a condition check for null field. Here are the steps to create a 
 
 1. Add a new condition action.
 
-    ![Condition action](./media/getting-errors-null-fields/add-new-condition-action.png)
+    :::image type="content" source="media/getting-errors-null-fields/add-new-condition-action.png" alt-text="Condition action.":::
 
 2. Choose dynamic content output (for example, user email) you want to check.
-    ![Condition for null with email](./media/getting-errors-null-fields/choose-user-email.png)
+    :::image type="content" source="media/getting-errors-null-fields/choose-user-email.png" alt-text="Condition for null with email.":::
 
 3. Set the operation to be (for example) **is not equal to**.
 4. Put the value field as the expression value **null**.
-    ![Put the value field as null](./media/getting-errors-null-fields/expression-value-null.png)
+    :::image type="content" source="media/getting-errors-null-fields/expression-value-null.png" alt-text="Put the value field as null.":::
 
 ## Runtime error resolution
 
 You can also use the coalesce function to provide default values when a value is null. For example, using **coalesce(trigger().outputs, '')** will default to empty string when **trigger().outputs** is null.
 
-![Use coalesce function with ''](./media/getting-errors-null-fields/coalesce-function-provide-default-values.png)
+:::image type="content" source="media/getting-errors-null-fields/coalesce-function-provide-default-values.png" alt-text="Use coalesce function with ''.":::
 
 > [!NOTE]
 > If you're still getting a runtime error, it may be caused by reference null properties in an object. You should use the question mark operator **?**. For example, to handle null outputs from a trigger, you can use this expression:  

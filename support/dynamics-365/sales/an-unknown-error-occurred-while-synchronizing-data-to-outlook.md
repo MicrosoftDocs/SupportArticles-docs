@@ -20,7 +20,7 @@ In the Microsoft Dynamics CRM 2011 Outlook client, this may produce the followin
 
 > An unknown error occurred while synchronizing data to Outlook
 
-:::image type="content" source="media/an-unknown-error-occurred-while-synchronizing-data-to-outlook/error.jpg" alt-text="CRM 2011 sample synchronization error for appointments with blank organizer" border="false":::
+:::image type="content" source="media/an-unknown-error-occurred-while-synchronizing-data-to-outlook/error.jpg" alt-text="CRM 2011 sample synchronization error for appointments with blank organizer":::
 
 ## Cause
 

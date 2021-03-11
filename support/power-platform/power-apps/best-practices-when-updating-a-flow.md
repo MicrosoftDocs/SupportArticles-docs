@@ -18,17 +18,17 @@ _Original KB number:_ &nbsp; 4477072
 
 - If a new input is added to a Flow without a Power App being updated, the Flow will fail with an error message like:
 
-    ![Flow missing input error](./media/best-practices-when-updating-a-flow/flow-fail-error-message.png)
+    :::image type="content" source="media/best-practices-when-updating-a-flow/flow-fail-error-message.png" alt-text="Flow missing input error.":::
 
     > Unable to process template language expressions in action 'Send_me_a_mobile_notification' inputs at line '1' and column '1900': 'The template language expression 'triggerBody()['Sendmeamobilenotification_Text']' cannot be evaluated because property 'Sendmeamobilenotification_Text' cannot be selected. Please see `https://aka.ms/logicexpressions` for usage details.'.
 
 - If the connections required to run a flow change, an error complaining about connections should appear:
 
     In PowerApps, it may look like
-    ![PowerApps Flow failure error](./media/best-practices-when-updating-a-flow/powerapp-error.png)
+    :::image type="content" source="media/best-practices-when-updating-a-flow/powerapp-error.png" alt-text="PowerApps Flow failure error.":::
 
     Or in Flow
-    ![Error in Flow](./media/best-practices-when-updating-a-flow/flow-run-failed.png)
+    :::image type="content" source="media/best-practices-when-updating-a-flow/flow-run-failed.png" alt-text="Error in Flow.":::
 
     > Unable to process template language expressions in action 'Send_an_email' inputs at line '1' and column '1899': 'The template language expression 'json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$connections']['shared_office365']['connectionId']' cannot be evaluated because property 'shared_office365' doesn't exist, available properties are 'shared_flowpush'. Please see `https://aka.ms/logicexpressions` for usage details.'.
 
@@ -42,19 +42,19 @@ Types of changes most likely to break a PowerApps ability to call a flow include
 
 - Adding a new Ask in PowerApps token.
 
-    ![Adding a PowerApps token](./media/best-practices-when-updating-a-flow/ask-powerapps.png)  
+    :::image type="content" source="media/best-practices-when-updating-a-flow/ask-powerapps.png" alt-text="Adding a PowerApps token.":::
 
 - Adding a new connection. For example, by adding a new action from a Connector that wasn't previously used like the SharePoint Connector.
 
-    ![Adding a connection in Flow](./media/best-practices-when-updating-a-flow/add-new-connection.png)
+    :::image type="content" source="media/best-practices-when-updating-a-flow/add-new-connection.png" alt-text="Adding a connection in Flow.":::
 
 - Changing an existing connection. For example, changing an existing connection to a new connection.
 
-    ![Changing a connection in Flow](./media/best-practices-when-updating-a-flow/change-existing-connection.png)
+    :::image type="content" source="media/best-practices-when-updating-a-flow/change-existing-connection.png" alt-text="Changing a connection in Flow.":::
 
 - Removing an output from a Respond to PowerApps actions.
 
-    ![Removing a Respond to PowerApps output in Flow](./media/best-practices-when-updating-a-flow/remove-output.png)
+    :::image type="content" source="media/best-practices-when-updating-a-flow/remove-output.png" alt-text="Removing a Respond to PowerApps output in Flow.":::
 ​​​​​​​
 Other changes to the inputs or outputs won't break the integration between PowerApps and Flow but will require the Power App to be updated so that it can use them.
 
@@ -72,7 +72,7 @@ Other changes to the inputs or outputs won't break the integration between Power
 
     While developing a Power App, making changes to a Flow not used by a live version of the PowerApp is easy. After making changes to the inputs, outputs, or connections of a non-published Flow,  reselect the Flow from the Flows Pane.
 
-    ![Updating a Flow definition in PowerApps](./media/best-practices-when-updating-a-flow/reselect-flow.png)
+    :::image type="content" source="media/best-practices-when-updating-a-flow/reselect-flow.png" alt-text="Updating a Flow definition in PowerApps.":::
 
     It will update the definition of the Flow in the PowerApp validating that the correct input, outputs, and connections are used in the Power App.
 

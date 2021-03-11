@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4023606
 
 - You receive a "Hmmm ... We couldn't sign you in" error message and identifier that resembles the following image:
 
-  ![Error screen](./media/troubleshoot-startup-issues-in-powerapps-web-authoring/error.png)
+  :::image type="content" source="media/troubleshoot-startup-issues-in-powerapps-web-authoring/error.png" alt-text="Error screen.":::
 
   > [!NOTE]
   > View the [Common errors matrix](#common-error-matrix), later in this article, to see all error codes.

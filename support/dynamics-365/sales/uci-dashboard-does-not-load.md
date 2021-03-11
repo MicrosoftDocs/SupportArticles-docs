@@ -26,11 +26,11 @@ This issue is caused when there's a subgrid on the dashboard that has been confi
 
 For example, the control configuration may look something like this:
 
-![Subgrid custom control configuration for only web form factor](./media/uci-dashboard-does-not-load/select-add-custom-control-configuration.png)
+:::image type="content" source="media/uci-dashboard-does-not-load/select-add-custom-control-configuration.png" alt-text="Subgrid custom control configuration for only web form factor.":::
 
 Alternately, it may be caused by a control configuration that isn't used for any form factor, such as something like this:
 
-![Unused subgrid custom control configuration](./media/uci-dashboard-does-not-load/unused-editable-grid.png)
+:::image type="content" source="media/uci-dashboard-does-not-load/unused-editable-grid.png" alt-text="Unused subgrid custom control configuration.":::
 
 This issue was tracked by the following work item:
 
@@ -44,6 +44,6 @@ In some cases, the custom control being used may not allow being set for all for
 
 For example, the first control configuration from the [Cause](#cause) section above can be changed to something like this to mitigate the issue:
 
-![Subgrid custom control configuration for all form factors](./media/uci-dashboard-does-not-load/configuration-all-form-factors.png)
+:::image type="content" source="media/uci-dashboard-does-not-load/configuration-all-form-factors.png" alt-text="Subgrid custom control configuration for all form factors.":::
 
 Alternately, if this issue is happening because a control configuration that isn't used on any form factor, that control configuration can be removed.

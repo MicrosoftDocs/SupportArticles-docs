@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4555804
 
 When trying to run UI flows, you may see this error:
 
-:::image type="content" source="media/issue-with-ui-flows-error-uiaelementnotfound/uiaelementnotfound-error.jpg" alt-text="UIAElementNotFound error" border="false":::
+:::image type="content" source="media/issue-with-ui-flows-error-uiaelementnotfound/uiaelementnotfound-error.jpg" alt-text="UIAElementNotFound error":::
 
 ## Verifying issue
 
@@ -25,15 +25,15 @@ This error occurs if your UI flows has the property **Use coordinates** set to *
 - Select and expand the Launch \<Application Name> step in your UI flow.
 - Select the **Show more** link.
 
-  :::image type="content" source="media/issue-with-ui-flows-error-uiaelementnotfound/show-more.jpg" alt-text="UIAElementNotFoundErrorLaunchApplication" border="false":::
+  :::image type="content" source="media/issue-with-ui-flows-error-uiaelementnotfound/show-more.jpg" alt-text="UIAElementNotFoundErrorLaunchApplication":::
 
 - Verify that the properties Screen width, Screen height, Screen scale matches the display settings in your PC (shown in next step).
 
-  :::image type="content" source="media/issue-with-ui-flows-error-uiaelementnotfound/properties.jpg" alt-text="UIAElementNotFoundError LaunchApplication Show More" border="false":::
+  :::image type="content" source="media/issue-with-ui-flows-error-uiaelementnotfound/properties.jpg" alt-text="UIAElementNotFoundError LaunchApplication Show More":::
 
 - Display Settings in your PC [View display settings in Windows 10](https://support.microsoft.com/windows/view-display-settings-in-windows-10-37f0e05e-98a9-474c-317a-e85422daa8bb)
 
-  :::image type="content" source="media/issue-with-ui-flows-error-uiaelementnotfound/scale-and-layout-setting.jpg" alt-text="UIAElementNotFoundError Display Settings" border="false":::
+  :::image type="content" source="media/issue-with-ui-flows-error-uiaelementnotfound/scale-and-layout-setting.jpg" alt-text="UIAElementNotFoundError Display Settings":::
 
 ## Solving steps
 

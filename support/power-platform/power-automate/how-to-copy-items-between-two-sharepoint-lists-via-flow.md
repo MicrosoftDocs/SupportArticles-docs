@@ -24,7 +24,7 @@ In the following example, we assume that the **Title** column is the same in bot
 
 The first step is to set up your trigger on the source SharePoint list. Because you want to capture all item changes (not only new items), you should select the **SharePoint - When an existing item is modified** trigger.
 
-:::image type="content" source="media/how-to-copy-items-between-two-sharepoint-lists-via-flow/when-an-existing-item-is-modified.png" alt-text="Sharepoint - When an existing item is modified trigger with site address and list name" border="false":::
+:::image type="content" source="media/how-to-copy-items-between-two-sharepoint-lists-via-flow/when-an-existing-item-is-modified.png" alt-text="Sharepoint - When an existing item is modified trigger with site address and list name":::
 
 > [!NOTE]
 > Although the trigger name mentions only modifications to existing items, the trigger also reacts to new items that are added to the list.

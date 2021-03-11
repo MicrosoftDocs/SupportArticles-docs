@@ -18,7 +18,7 @@ When trying to run a UI flow during Test run or Flow run, the user gets one of t
 
 > KeyboardIdMismatch. The keyboard on the machine '0x0000040c040c' does not match the keyboardLayout in the script '0x000004090409'.
 
-:::image type="content" source="media/ui-flow-playback-error-keyboardidmismatch/keyboardIdmismatch.png" alt-text="KeyboardMismatch error" border="false":::
+:::image type="content" source="media/ui-flow-playback-error-keyboardidmismatch/keyboardIdmismatch.png" alt-text="KeyboardMismatch error":::
 
 The error is visible in the UI flow Test Page or See detail page of the UI flow run instance.
 

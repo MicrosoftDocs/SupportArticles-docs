@@ -33,7 +33,7 @@ at Microsoft.Crm.Application.Outlook.Config.ConfigEngine.Configure(Object stateI
 
 This issue is caused by duplicate site-map entries in the site-map XML relative to the \<SubArea Id> tag. A duplicate site-map entry will sometimes contain a trailing **(1)** at the end of the title, as seen in the screenshot below:
 
-:::image type="content" source="media/dynamics-crm-for-office-outlook-installation-fails-during-initializing-orgnization/example.png" alt-text="Accounts(1)" border="false":::
+:::image type="content" source="media/dynamics-crm-for-office-outlook-installation-fails-during-initializing-orgnization/example.png" alt-text="Accounts(1)":::
 
 However, it also possible to experience this error without seeing a duplicated entity name in the web client UI. Instead, the issue may also occur where the \<SubArea Id> tag references the same name, while the Entity parameter is different, as highlighted below:
 

@@ -83,7 +83,7 @@ To update absolute URLs, follow these steps:
 
 Use this method to remove document locations that are associated with some records. After you do this, a user who is accessing those records will again receive the following prompt to create a document location for the records.
 
-:::image type="content" source="media/validation-error-when-setting-server-based-sharepoint-integration-for-crm/create-folder-prompt.png" alt-text="prompt to create a document location for the records" border="false":::
+:::image type="content" source="media/validation-error-when-setting-server-based-sharepoint-integration-for-crm/create-folder-prompt.png" alt-text="prompt to create a document location for the records":::
 
 To delete absolute URLs, follow these steps:
 

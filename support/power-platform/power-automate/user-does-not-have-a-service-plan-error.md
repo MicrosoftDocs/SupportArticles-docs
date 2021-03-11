@@ -21,7 +21,7 @@ You may receive this error when doing any of these actions on a flow that uses *
 - Saving/Save as on the flow
 - Any other permanent modification to the flow
 
-![Example error](./media/user-does-not-have-a-service-plan-error/error-on-flow.png)
+:::image type="content" source="media/user-does-not-have-a-service-plan-error/error-on-flow.png" alt-text="Example error.":::
 
 ## Cause
 

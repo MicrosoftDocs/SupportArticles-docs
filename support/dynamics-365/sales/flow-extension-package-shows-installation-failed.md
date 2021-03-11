@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4560419
 
 Power Platform Admin Center is showing "Installation failed" for Microsoft Flow Extensions Package version 1.0.0.3.
 
-![Microsoft Flow Extensions Package Installation Failed](./media/flow-extension-package-shows-installation-failed/installation-failed-status.png)
+:::image type="content" source="media/flow-extension-package-shows-installation-failed/installation-failed-status.png" alt-text="Microsoft Flow Extensions Package Installation Failed.":::
 
 ## Cause
 

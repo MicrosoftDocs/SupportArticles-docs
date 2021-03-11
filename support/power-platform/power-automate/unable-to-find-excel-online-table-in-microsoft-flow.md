@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4527553
 
 When trying to access information in an Excel spreadsheet that is not formatted as a table, you may not be able to see a table present in the drop-down menu.
 
-:::image type="content" source="media/unable-to-find-excel-online-table-in-microsoft-flow/no-table-in-dropdown.png" alt-text="Excel table drop-down has no table" border="false":::
+:::image type="content" source="media/unable-to-find-excel-online-table-in-microsoft-flow/no-table-in-dropdown.png" alt-text="Excel table drop-down has no table":::
 
 Entering a custom value that does not exist or leaving the table input blank will produce an error that begins with **Error executing the api**.
 
