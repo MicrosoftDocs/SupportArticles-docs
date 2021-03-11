@@ -269,6 +269,7 @@ You can use these methods to troubleshoot Jet database errors:
     | 2. ESE logical consistency| NTDSUTIL FILES INTEGRITY| `ESENTUTL /G` |
     | 3. Application logical consistency <br/>| NTDSUTIL ->Semantic database analysis<br/><br/>+<br/><br/>NTDSUTIL -> Offline Defrag| No equivalent. Run NTDSUTIL -> SDA<br/><br/>+<br/><br/>`ESENTUTL / D` |
     ||||
+
 14. Look up the user action for the first failing Jet error encountered during step 13. Perform remediation if possible.
 15. Repair the Jet database:
 
