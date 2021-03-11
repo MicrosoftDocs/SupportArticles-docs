@@ -21,7 +21,7 @@ ms.reviewer: sharepoint_triage
 description: When you open a Word or PowerPoint file from SharePoint on-premises in a Microsoft 365 desktop app, you see the local cached file instead of the current server document contents.
 ---
 
-# Microsoft 365 apps open files from SharePoint On-Premises that aren’t the current version
+# Microsoft 365 apps open files from SharePoint on-premises that aren’t the current version
 
 ## Symptoms
 When you open a Word or PowerPoint file from SharePoint on-premises in a Microsoft 365 desktop app, you see the local cached file instead of the current server document contents. An **Updates Available** button appears in the middle of the status bar at the bottom of the app window.
