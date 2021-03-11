@@ -39,10 +39,12 @@ You can set up a condition check for null field. Here are the steps to create a 
     :::image type="content" source="media/getting-errors-null-fields/add-new-condition-action.png" alt-text="Condition action.":::
 
 2. Choose dynamic content output (for example, user email) you want to check.
+
     :::image type="content" source="media/getting-errors-null-fields/choose-user-email.png" alt-text="Condition for null with email.":::
 
 3. Set the operation to be (for example) **is not equal to**.
 4. Put the value field as the expression value **null**.
+
     :::image type="content" source="media/getting-errors-null-fields/expression-value-null.png" alt-text="Put the value field as null.":::
 
 ## Runtime error resolution

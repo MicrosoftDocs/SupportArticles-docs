@@ -47,6 +47,7 @@ See the [Notes](#notes) below for ways to find the current time zone.
 ### Using the expression
 
 Power Automate has an expression function for converting time zone.
+
 :::image type="content" source="media/converting-time-zone-power-automate/expression-function.png" alt-text="Convert time zone expression in Power Automate.":::
 
 ```console

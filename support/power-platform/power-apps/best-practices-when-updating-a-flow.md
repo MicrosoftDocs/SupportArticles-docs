@@ -25,9 +25,11 @@ After updating a Flow, calls to that Flow from PowerApps start failing.
 - If the connections required to run a flow change, an error complaining about connections should appear:
 
     In PowerApps, it may look like
+
     :::image type="content" source="media/best-practices-when-updating-a-flow/powerapp-error.png" alt-text="PowerApps Flow failure error.":::
 
     Or in Flow
+
     :::image type="content" source="media/best-practices-when-updating-a-flow/flow-run-failed.png" alt-text="Error in Flow.":::
 
     > Unable to process template language expressions in action 'Send_an_email' inputs at line '1' and column '1899': 'The template language expression 'json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$connections']['shared_office365']['connectionId']' cannot be evaluated because property 'shared_office365' doesn't exist, available properties are 'shared_flowpush'. Please see `https://aka.ms/logicexpressions` for usage details.'.

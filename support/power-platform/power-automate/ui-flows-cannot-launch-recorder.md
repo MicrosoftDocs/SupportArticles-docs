@@ -31,6 +31,7 @@ UI flows recorder won't launch. Instead, the UI flows wizard will prompt you to 
     - In Google Chrome, navigate to [chrome://extensions](chrome://extensions)
 
     Verify that the extension is enabled in the extensions page:
+
     :::image type="content" source="media/ui-flows-cannot-launch-recorder/verify-extension-is-enabled.png" alt-text="Edge Chromium Extension Page.":::
 
     Enable the extension by toggling the switch on the card.
