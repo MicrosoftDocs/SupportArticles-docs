@@ -44,7 +44,7 @@ Consult also this page [Troubleshoot Linux VM starting issues because fstab erro
 **kernel**
 This script does change the default kernel. The script does replace the broken kernel with the previous version installed.
 
-Consult also this page [How to recover an Azure Linux virtual machine from kernel-related boot issues](https://docs.microsoft.com/en-gb/troubleshoot/azure/virtual-machines/kernel-related-boot-issues). To understand what messages might be logged on the serial-console. In case you see a kernel-related boot issue.
+Consult also this page [How to recover an Azure Linux virtual machine from kernel-related boot issues](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/kernel-related-boot-issues). To understand what messages might be logged on the serial-console. In case you see a kernel-related boot issue.
 
 **initrd**
 This script corrects two issues that can happen when a new kernel gets installed.
@@ -89,6 +89,6 @@ With the above steps, a repair VM is created. In the next step, we use the scrip
 - EFI based images aren't supported.
 
 
-## Feedback
+## Next steps
 
 If you come across any bug or would like to see an enhancement on the script base of Azure Linux Auto Recover, report them on [GitHub](https://github.com/Azure/repair-script-library/issues).

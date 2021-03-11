@@ -14,7 +14,7 @@ ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 1/25/2021
-ms.author: v-todmc
+ms.author: genli
 ---
 
 # Azure VM stopped at “Please wait for the Group Policy Client” screen
