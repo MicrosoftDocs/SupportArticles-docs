@@ -49,7 +49,7 @@ To prevent Windows from storing an LM hash of your password, use any of the foll
 
 ### Method 1: Implement the NoLMHash policy by using Group Policy
 
-To disable the storage of LM hashes of a user's passwords, you can use Local Group Policy in the local computer's SAM database for Windows XP or Windows Server 2003. Or, use Group Policy in a Windows Server 2003 Active Directory environment. Follow these steps:
+To disable the storage of LM hashes of a user's passwords in the local computer's SAM database in Windows XP or Windows Server 2003, use Local Group Policy. To disable the storage of LM hashes of a user's passwords in a Windows Server 2003 Active Directory environment, use Group Policy in Active Directory. Follow these steps:
 
 1. In Group Policy, expand **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Policies**, and then select **Security Options**.
 2. In the list of available policies, double-click **Network security: Do not store LAN Manager hash value on next password change**.
