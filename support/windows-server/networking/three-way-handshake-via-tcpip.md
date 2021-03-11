@@ -178,7 +178,7 @@ TCP: Window = 8760 (0x2238)
 
 ### Ending a connection
 
-Although the three-way handshake only requires three packets to be transmitted over our networked media, the termination of this reliable connection needs to transmit four packets. Because a TCP connection is full-duplex ( data can flow in each direction independent of the other), each direction must be terminated independently.
+Although the three-way handshake only requires three packets to be transmitted over our networked media, the termination of this reliable connection needs to transmit four packets. Because a TCP connection is full-duplex (data can flow in each direction independent of the other), each direction must be terminated independently.
 
 Frame 4:
 
