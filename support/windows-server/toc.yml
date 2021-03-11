@@ -1084,6 +1084,8 @@
       href: ./group-policy/use-group-policy-to-install-software.md
   - name: Group Policy management - GPMC or AGPM
     items:
+    - name: Error 0x8007000D when runing Backup-GPO in Server Core
+      href: ./group-policy/error-0x8007000d-backup-gpo-cmdlet.md
     - name: AGPM and GPRESULT are not working
       href: ./group-policy/agpm-gpresult-not-working.md
     - name: Changes to GPO permissions aren't saved
