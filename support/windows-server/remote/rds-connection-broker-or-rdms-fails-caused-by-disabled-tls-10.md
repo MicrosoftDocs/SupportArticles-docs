@@ -1,6 +1,6 @@
 ---
-title: RDS Connection Broker or RDMS fails
-description: Addresses an issue in which RDS Connection Broker or RDMS fails after you disable TLS 1.0 in Windows Server.
+title: Remote Desktop service (RDS) Connection Broker or Remote Desktop Management service (RDMS) fails
+description: Addresses an issue in which RDS Connection Broker or RDMS fails after you disable Transport Layer Security (TLS) 1.0 in Windows Server.
 ms.date: 12/2/2020
 author: Deland-Han
 ms.author: delhan
@@ -35,7 +35,7 @@ Assume that you use the inbox Windows Internal Database (WID) in Windows Server.
 
 ## Cause
 
-This is expected behavior. This is because of the current dependencies between RDS and Windows Internal Database. RDMS and Connection Broker depend on TLS 1.0 to authenticate with the database. WID doesn't currently support TLS 1.2. So, disabling TLS 1.0 breaks this communication.
+This behavior is expected because of the current dependencies between RDS and Windows Internal Database (WID). RDMS and Connection Broker depend on TLS 1.0 to authenticate with the database. WID doesn't currently support TLS 1.2. So, disabling TLS 1.0 breaks this communication.
 
 > [!NOTE]
 > RDS deployments that use Connection Broker have to establish an encrypted channel to WID by using one of the following methods:

@@ -55,9 +55,5 @@ For additional help, type the following command at the command prompt, and then 
 > [!NOTE]
 > In this command, the placeholder **tool name** represents the name of the tool for which you want to obtain help.
 
-For more information about how to obtain Windows Server 2003 SP1, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[889100](https://support.microsoft.com/help/889100) How to obtain the latest service pack for Windows Server 2003  
-
 > [!NOTE]
 > If you have an earlier version of the Windows Support Tools installed on your computer, you must remove this version before you install the Windows Server 2003 SP1 Support Tools.
