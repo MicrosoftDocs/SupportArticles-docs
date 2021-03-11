@@ -1,6 +1,6 @@
 ---
 title: ESENT Event ID 327 and 326
-description: Provides a solution to an issue where ESENT Event ID 327 and 326 are filled up the Application log file.
+description: Provides a solution to an issue where ESENT Event IDs 327 and 326 are filled up the Application log file.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,7 +15,7 @@ ms.technology: windows-server-performance
 ---
 # ESENT Event ID 327 and 326 fill up the Application log
 
-This article provides a solution to an issue where ESENT Event ID 327 and 326 are filled up the Application log file.
+This article provides a solution to an issue where ESENT Event IDs 327 and 326 are filled up the Application log file.
 
 _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 2900773
@@ -49,7 +49,7 @@ As a result, the application event log will be filled up and other events may be
 
 ## Cause
 
-This issue occurs when there is a problem with the data in the SystemIdentity.mdb database file.
+This issue occurs when there's a problem with the data in the SystemIdentity.mdb database file.
 
 ## Resolution
 

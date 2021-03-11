@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot software update deployments
-description: Describes how to troubleshoot software update deployments that don't run successfully, such as updates fail to download and there are unexpected reboots during update installation.
+description: Describes how to troubleshoot software update deployments that don't run successfully. For example, updates fail to download and there are unexpected reboots during update installation.
 ms.date: 05/25/2020
 ms.prod-support-area-path:
 ---
@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 3090264
 
 ## Summary
 
-When you deploy software updates in Configuration Manager (ConfigMgr 2012 or ConfigMgr 2012 R2), you typically add the updates to a software update group and then deploy the software update group to clients. When you create the deployment, the update policy is sent to client computers, and the update content files are downloaded from a distribution point to the local cache on the client computer. The updates are then available for installation on the client. Normally this process is completed successfully with little effort. However, issues may sometimes arise that cause update deployment to fail. We cover the two most common failure scenarios and provide troubleshooting suggestions for each.
+When you deploy software updates in Configuration Manager (ConfigMgr 2012 or ConfigMgr 2012 R2), you typically add the updates to a software update group and then deploy the software update group to clients. When you create the deployment, the update policy is sent to client computers. The update content files are downloaded from a distribution point to the local cache on the client computer. The updates are then available for installation on the client. Normally this process is completed successfully with little effort. However, issues may sometimes arise that cause update deployment to fail. We cover the two most common failure scenarios and provide troubleshooting suggestions for each.
 
 For more information about software updates in Configuration Manager, see [Software updates introduction](software-updates-introduction.md).
 

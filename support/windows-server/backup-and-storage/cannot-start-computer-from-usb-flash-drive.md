@@ -1,6 +1,6 @@
 ---
-title: Cannot start computer from a USB flash drive
-description: Describes an issue in which you cannot start a computer from an external removable USB hard disk that is formatted to use the FAT32 file system. This occurs because the USB drive is treated as a floppy disk. Provides a resolution.
+title: Can't start computer from a USB flash drive
+description: Describes an issue in which you can't start a computer from an external removable USB hard disk that's formatted to use the FAT32 file system. This issue occurs because the USB drive is treated as a floppy disk. Provides a resolution.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -28,7 +28,7 @@ You format a USB flash drive to use the FAT32 file system. When you try to start
 
 This issue occurs because the USB flash drive is listed as removable media. Therefore, the Windows operating system doesn't create a master boot record (MBR) on the USB flash drive when you format the flash drive to use the FAT32 file system. The USB flash drive is treated as a super floppy disk. The FAT32 startup code doesn't support starting a computer from a super floppy disk without an MBR.
 
-The BIOS tries to transfer the control of the startup from the USB flash drive to the FAT32 startup code, even though the FAT32 startup code doesn't support this scenario.
+The BIOS tries to transfer the control of the startup from the USB flash drive to the FAT32 startup code. However, the FAT32 startup code doesn't support this scenario.
 
 ## Workaround
 
@@ -46,4 +46,10 @@ Currently, the Windows operating system uses signatures at offset 3 in the boot 
 
 ## How to determine whether the boot sector is FAT32, FAT16, or NTFS
 
-To determine whether the USB flash drive was formatted by using the FAT32, FAT16, or NTFS file system, you must check two strings in the boot sector. If the strings contain FAT32, FAT16 or NTFS, the boot sector was formatted in that particular file system format.
+To determine whether the USB flash drive was formatted by using one of the following file systems:
+
+- FAT32
+- FAT16
+- NTFS
+
+you must check two strings in the boot sector. If the strings contain FAT32, FAT16 or NTFS, the boot sector was formatted in that particular file system format.
