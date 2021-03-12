@@ -61,7 +61,7 @@ For servers configured to enable 256 processor threads and that are running eith
 4. Install the latest Windows Server updates.
 5. Restart the system and enable the SMT and the x2APIC settings for Windows Server 2019 in the BIOS.
 
-## Known UI limitations for Windows Server 2012R2/ 2016 Task Manager, WMI, or PowerShell queries to pull CPU information
+## Known UI limitations for Windows Server 2012R2/2016 Task Manager, WMI, or PowerShell queries to pull CPU information
 
 ### Task Manager does not display L2 and L3 cache sizes, or displays incorrect L2 and L3 cache sizes
 
