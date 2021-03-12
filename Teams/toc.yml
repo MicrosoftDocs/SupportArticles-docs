@@ -179,6 +179,8 @@
     items:
     - name: Websites aren't viewable
       href: ./known-issues/cannot-view-website-teams-web-client.md
+    - name: '"This site cant be reached" error when accessing SharePoint site'
+      href: /SharePoint/SharePointOnline/Sites/err-invalid-response-accessing-sharepoint-site.md
   - name: Tabs
     items:
     - name: Can't rename legacy OneNote tabs
