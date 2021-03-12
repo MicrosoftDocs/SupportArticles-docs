@@ -50,6 +50,7 @@ This article describes the methods to verify the installation of Microsoft Excha
 - [Setup installs older CU or fails to install language pack](#setup-installs-older-cu-or-fails-to-install-language-pack)
 - [Restart from previous installation is pending](#restart-from-previous-installation-is-pending)
 - [Mail flow has stopped](#mail-flow-has-stopped)
+- [Exchange Setup or PrepareAD error](#exchange-setup-or-preparead-error)
 
 ## Additional information
 
