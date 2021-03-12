@@ -11,6 +11,8 @@
       href: ../administration/temporary-adjustments-in-sharepoint-online.md
     - name: '"Sync to Outlook" button and "Task" link are missing'
       href: ../administration/sync-to-outlook-tasks-link-missing.md
+    - name: Authentication errors when client doesn't have TLS 1.2 support
+      href: ../administration/authentication-errors-tls12-support.md
     - name: Automatic EXIF property import unsupported
       href: ../administration/automatic-exif-property-import-unsupported.md
     - name: Create a default Site collection Term Set if none is present
