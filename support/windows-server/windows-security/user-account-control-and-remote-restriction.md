@@ -52,22 +52,22 @@ To disable UAC remote restrictions, follow these steps:
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`
 
-3. If the **LocalAccountTokenFilterPolicy** registry entry doesn't exist, follow these steps:
+3. If the **`LocalAccountTokenFilterPolicy`** registry entry doesn't exist, follow these steps:
 
-    1. On the **Edit** menu, point to **New**, and then click **DWORD Value**.
+    1. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
     2. Type *LocalAccountTokenFilterPolicy*, and then press ENTER.
 
-4. Right-click **LocalAccountTokenFilterPolicy**, and then click **Modify**.
-5. In the **Value data** box, type *1*, and then click **OK**.
+4. Right-click **LocalAccountTokenFilterPolicy**, and then select **Modify**.
+5. In the **Value data** box, type *1*, and then select **OK**.
 6. Exit Registry Editor.
 
 ### Did this fix the problem
 
-Check whether the problem is fixed. If the problem is fixed, you're finished with this article. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus/).
+Check whether the problem is fixed. If the problem isn't fixed, [contact support](https://support.microsoft.com/contactus/).
 
 ## UAC remote settings
 
-The **LocalAccountTokenFilterPolicy** registry entry in the registry can have a value of 0 or of 1. These values change the behavior of the registry entry to the behavior that's described in the following table.
+The **LocalAccountTokenFilterPolicy** registry entry can have a value of 0 or 1. These values change the behavior of the registry entry to the one described in the following table.
 
 |Value|Description|
 |---|---|
