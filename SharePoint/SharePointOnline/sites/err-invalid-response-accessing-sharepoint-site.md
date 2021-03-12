@@ -13,7 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.author: v-matham
 appliesto:
 - SharePoint Online
-- - Microsoft Teams
+- Microsoft Teams
 ---
 
 # "This site can't be reached" error when accessing SharePoint site
