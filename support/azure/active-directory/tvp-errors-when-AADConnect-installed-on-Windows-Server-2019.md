@@ -2,7 +2,8 @@
 title: Table Valued Parameter errors when Azure AD Connect is installed on Windows Server 2019
 description: Describes an issue in which an Azure AD Connect synchronization generates errors in Windows Server 2019.
 ms.date: 3/10/2021
-author: v-jcmackin
+author: jc-mackin
+ms.author: v-jcmackin
 ms.reviewer: riantu, nualex, wufrank
 editor: 
 ---
