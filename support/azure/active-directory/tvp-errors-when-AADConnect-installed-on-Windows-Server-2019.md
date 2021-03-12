@@ -1,5 +1,5 @@
 ---
-title: Table Valued Parameter errors when Azure AD Connect is installed on Windows Server 2019
+title: Table-Valued Parameter errors when Azure AD Connect is installed on Windows Server 2019
 description: Describes an issue in which an Azure AD Connect synchronization generates errors in Windows Server 2019.
 ms.date: 3/10/2021
 author: jc-mackin
@@ -8,9 +8,9 @@ ms.reviewer: riantu, nualex, wufrank
 editor: 
 ---
 
-# Table Valued Parameter errors when Azure AD Connect is installed on Windows Server 2019
+# Table-Valued Parameter errors when Azure AD Connect is installed on Windows Server 2019
 
-This article describes a problem which causes errors in Azure AD Connect synchronization after it is installed on Windows Server 2019 servers. 
+This article describes a problem in which synchronization errors appear   after Azure AD Connect is installed on Windows Server 2019 servers.
 
 _Original product version:_ &nbsp; Azure Active Directory, Windows Server 2019
 
@@ -52,7 +52,7 @@ Azure AD Sync 1.5.45.0"
 
 This event indicates an error when attempting an operation (read/write) over the SQL database by using table valued parameters.
 
->[!NOTE]For more information on TVP, visit [Use Table-Valued Parameters (Database Engine) - SQL Server | Microsoft Docs](https://docs.microsoft.com/en-us/sql/relational-databases/tables/use-table-valued-parameters-database-engine?view=sql-server-ver15#:~:text=Table%2Dvalued%20parameters%20are%20declared,temporary%20table%20or%20many%20parameters) 
+>For more information on TVP, visit [Use Table-Valued Parameters (Database Engine) - SQL Server | Microsoft Docs](https://docs.microsoft.com/sql/relational-databases/tables/use-table-valued-parameters-database-engine?text=Table-valued%20parameters%20are%20declared,temporary%20table%20or%20many%20parameters).
 
 ## Cause
 The root cause of this issue is related to language settings for programs that do not support Unicode.
