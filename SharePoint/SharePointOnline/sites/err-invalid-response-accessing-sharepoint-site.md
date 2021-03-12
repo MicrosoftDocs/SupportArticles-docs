@@ -1,5 +1,5 @@
 ---
-title: "This site can't be reached" error when accessing SharePoint site
+title: "This site can't be reached" and ERR_INVALID_RESPONSE error when accessing SharePoint site
 description: You get the error "This site can't be reached" and error code "ERR_INVALID_RESPONSE" when you try to access a SharePoint site from your browser or Microsoft Teams.
 author: v-matham
 manager: dcscontentpm
@@ -16,7 +16,7 @@ appliesto:
 - Microsoft Teams
 ---
 
-# "This site can't be reached" error when accessing SharePoint site
+# "This site can't be reached" and ERR_INVALID_RESPONSE error when accessing SharePoint site
 
 ## Symptoms
 
@@ -32,9 +32,17 @@ The homepage of the SharePoint site might have been deleted.
 
 ## Resolution
 
-Check if the homepage is in the SharePoint Recycle bin or site collection recycle bin. For more information about recovering files from those locations, see [Restore items in the recycle bin that were deleted from SharePoint or Teams](https://support.microsoft.com/office/restore-items-in-the-recycle-bin-that-were-deleted-from-sharepoint-or-teams-6df466b6-55f2-4898-8d6e-c0dff851a0be).
+Check if the homepage is in the Recycle bin or site collection recycle bin. For more information about recovering files from those locations, see [Restore items in the recycle bin that were deleted from SharePoint or Teams](https://support.microsoft.com/office/restore-items-in-the-recycle-bin-that-were-deleted-from-sharepoint-or-teams-6df466b6-55f2-4898-8d6e-c0dff851a0be).
 
-If the homepage is not in the Recycle bin or site collection recycle bin, create a new homepage:
+If the homepage isn't in the Recycle bin or site collection recycle bin, do one of the following:
+
+**Make an existing page the homepage**
+
+1. Go to the Site Pages library.
+1. Select the three vertical dots after the name of the page you want to use as the homepage.
+1. Select **Make homepage**.
+
+**Create a new homepage**
 
 1. Go to the Site Pages library and select **New**.
 1. Select **Site page** from the drop-down menu.
