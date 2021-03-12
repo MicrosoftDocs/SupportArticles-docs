@@ -50,9 +50,9 @@ BAIL: MMS(7996): ..\syncstage.cpp(414): 0x80004005 (Unspecified error)
 Azure AD Sync 1.5.45.0"
 ```
 
-This event indicates an error when attempting an operation (read/write) over the SQL database by using table valued parameters.
+This event indicates an error when attempting an operation (read/write) over the SQL database by using table-valued parameters.
 
->For more information on TVP, visit [Use Table-Valued Parameters (Database Engine) - SQL Server | Microsoft Docs](https://docs.microsoft.com/sql/relational-databases/tables/use-table-valued-parameters-database-engine?text=Table-valued%20parameters%20are%20declared,temporary%20table%20or%20many%20parameters).
+>For more information on table-valued parameters, visit [Use Table-Valued Parameters (Database Engine) - SQL Server | Microsoft Docs](https://docs.microsoft.com/sql/relational-databases/tables/use-table-valued-parameters-database-engine?text=Table-valued%20parameters%20are%20declared,temporary%20table%20or%20many%20parameters).
 
 ## Cause
 The root cause of this issue is related to language settings for programs that do not support Unicode.
