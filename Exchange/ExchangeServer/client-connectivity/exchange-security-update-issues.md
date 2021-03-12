@@ -38,6 +38,7 @@ This article describes the methods to verify the installation of Microsoft Excha
 - [HTTP 500 errors in OWA or ECP](#http-500-errors-in-owa-or-ecp)
 - [Missing images in ECP](#missing-images-in-ecp)
 - [Blank page in EAC or OWA](#blank-page-in-eac-or-owa)
+- [Can't sign in to Outlook on the web or EAC if Exchange Server OAuth certificate is expired](#cant-sign-in-to-outlook-on-the-web-or-eac-if-exchange-server-oauth-certificate-is-expired)
 - [Can't access EAC or OWA after Exchange installation](#cant-access-eac-or-owa-after-exchange-installation)
 - [Exchange Server setup does not run](#exchange-server-setup-does-not-run)
 - [Upgrade patch can't be installed](#upgrade-patch-cant-be-installed)
@@ -168,6 +169,27 @@ This issue occurs if the SSL binding on 0.0.0.0:444 has one or more of the follo
     ![The SSL certificate for the SSL binding for the Exchange Back End site on the Mailbox server.](./media/exchange-security-update-issues/back-end-binding.png)  
 
 For more information, see [this article](/topic/you-get-a-blank-page-after-logging-in-eac-or-owa-in-exchange-2013-or-exchange-2016-a24db2f2-4d67-806b-670b-efb8f08605f7).
+
+[Back to top](#summary)
+
+### Can't sign in to Outlook on the web or EAC if Exchange Server OAuth certificate is expired
+
+**Issue**
+
+When you try to sign in to Outlook on the web or the EAC in Exchange Server, the web browser freezes or reports that the redirect limit was reached. Additionally, Event 1003 is logged in the event viewer. For example, the following entry is logged:
+
+>Event ID: 1003
+>Source: MSExchange Front End HTTPS Proxy
+>[Owa] An internal server error occurred. The unhandled exception was: System.NullReferenceException: Object reference not set to an instance of an object.
+>   at Microsoft.Exchange.HttpProxy.FbaModule.ParseCadataCookies(HttpApplication httpApplication)
+
+**Cause**
+
+This issue occurs because the Exchange Server Open Authentication (OAuth) certificate is expired.
+
+**Resolution**
+
+Follow the resolution steps in this [article](https://docs.microsoft.com/en-us/exchange/troubleshoot/administration/cannot-access-owa-or-ecp-if-oauth-expired#resolution).
 
 [Back to top](#summary)
 
