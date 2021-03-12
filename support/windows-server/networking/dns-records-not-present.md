@@ -118,6 +118,4 @@ This behavior is by design. The DNS records (A record/PTR) are automatically upd
 
 [KB306602](https://support.microsoft.com/help/306602) How to optimize the location of a domain controller or global catalog that resides outside of a client's site
 
-[KB267855](https://support.microsoft.com/help/267855) Problems with many domain controllers with Active Directory integrated DNS zones
-
 [KB953317](https://support.microsoft.com/help/953317) A primary DNS zone file may not transfer to the secondary DNS servers in Windows Server 2008

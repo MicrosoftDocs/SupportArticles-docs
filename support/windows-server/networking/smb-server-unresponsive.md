@@ -39,5 +39,3 @@ By examining the memory dump file through the Debugging Tools for Windows (WinDb
 ## More information
 
 For detailed information about how to dump a kernel, see [How to generate a kernel or a complete memory dump file in Windows Server 2008 and Windows Server 2008 R2](https://support.microsoft.com/help/969028).
-
-To test our automated memory.dmp analysis site, which can identify most Microsoft hotfixes for crashes and Stop errors, go to [Support Diagnostics](https://home.diagnostics.support.microsoft.com/selfhelp?knowledgebasearticlefilter=2027760).
