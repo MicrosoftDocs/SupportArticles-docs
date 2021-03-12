@@ -277,7 +277,7 @@
     items:
     - name: '"HTTP request is unauthorized" error'
       href: ../Sites/calendar-overlay-unsupported.md
-    - name: '"This site cant be reached" error when accessing SharePoint site'
+    - name: '"This site cant be reached" and ERR_INVALID_RESPONSE error when accessing SharePoint site'
       href: ../Sites/err-invalid-response-accessing-sharepoint-site.md
     - name: '"You do not have an e-mail address" error with creating an online alert'
       href: ../sites/do-not-have-an-e-mail-address-when-create-an-alert.md
