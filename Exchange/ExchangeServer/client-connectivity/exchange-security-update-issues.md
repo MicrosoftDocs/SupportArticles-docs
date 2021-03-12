@@ -82,9 +82,11 @@ Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
 
 | Exchange version  | File versions of patched systems   |
 |---|---|
-| Exchange Server 2019  | For CU8: 15.02.0792.010</br>For CU7: 15.02.0721.013</br>For CU6: 15.02.0659.012</br>For CU5: 15.02.0595.008</br>For CU4: 15.02.0529.013</br>For CU3: 15.02.0464.015 |
-| Exchange Server 2016  | For CU19: 15.01.2176.009</br>For CU18: 15.01.2106.013</br>For CU17: 15.01.2044.013</br>For CU16: 15.01.1979.008</br>For CU15: 15.01.1913.012</br>For CU14: 15.01.1847.012</br>For CU13: 15.01.1779.008</br>For CU12: 15.01.1713.010 |
+| Exchange Server 2019  | For CU8: 15.02.0792.010</br>For CU7: 15.02.0721.013</br>For CU6: 15.02.0659.012</br>For CU5: 15.02.0595.008</br>For CU4: 15.02.0529.013</br>For CU3: 15.02.0464.015</br>For CU2: 15.02.0397.011</br>For CU1: 15.02.0330.011</br>For RTM: 15.02.0221.018 |
+| Exchange Server 2016  | For CU19: 15.01.2176.009</br>For CU18: 15.01.2106.013</br>For CU17: 15.01.2044.013</br>For CU16: 15.01.1979.008</br>For CU15: 15.01.1913.012</br>For CU14: 15.01.1847.012</br>For CU13: 15.01.1779.008</br>For CU12: 15.01.1713.010</br>For CU11: 15.01.1591.018</br>For CU10: 15.01.1531.012</br>For CU9: 15.01.1466.013</br>For CU8: 15.01.1415.008 |
 | Exchange Server 2013  | For CU23: 15.00.1497.012</br>For CU22: 15.00.1473.006</br>For CU21: 15.00.1395.012  |
+
+For details about the available SUs, see [Description of the security update for Microsoft Exchange Server 2019, 2016, and 2013: March 2, 2021 (KB5000871)](/topic/description-of-the-security-update-for-microsoft-exchange-server-2019-2016-and-2013-march-2-2021-kb5000871-9800a6bb-0a21-4ee7-b9da-fa85b3e1d23b).
 
 [Back to top](#summary)
 
@@ -456,6 +458,38 @@ To get mail flow working again, make sure that the following requirements are me
 1. All Exchange services are enabled and running.
 2. The server is not in [Maintenance mode](/exchange/high-availability/manage-ha/manage-dags?view=exchserver-2019#performing-maintenance-on-dag-members&preserve-view=true)
 3. There is enough free space available in the [Exchange message queue database](/exchange/back-pressure-exchange-2013-help#free-hard-drive-space-for-the-message-queue-database&preserve-view=true).
+
+[Back to top](#summary)
+
+### Exchange Setup or PrepareAD error
+
+**Issue**
+
+When you run either Exchange setup or the PrepareAD command, the process fails with the following error message:
+
+>The well-known object entry B:<guid>:CN=Recipient Management\0ADEL:<guid>,CN=Deleted Objects,DC=contoso,DC=com on the otherWellKnownObjects attribute in the container object CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com points to an invalid DN or a deleted object. Remove the entry, and then rerun the task. at Microsoft.Exchange.Configuration.Tasks.Task.ThrowError(Exception exception, ErrorCategory errorCategory, Object target, String helpUrl)
+
+**Cause:**
+
+This issue occurs because “otherWellKnownObjects”, the object referenced in the error, is no longer in Active Directory. So the link to the object needs to be removed.
+
+**Resolution:**
+
+Download and run the [SetupAssist.ps1]((https://aka.ms/ExSetupAssist)) script.
+
+````powershell
+.\SetupAssist.ps1 -OtherWellKnownObjects
+````
+
+The script will dump the otherWellKnownObjects attribute into a file named ExchangeContainerOriginal.txt. Then it will check the file for deleted objects. If any are found, the script will generate a new file named ExchangeContainerImport.txt and use it to remove the bad values.
+
+If the script asks you to verify the results, do the following:
+
+1. Review the ExchangeContainerImport.txt file for the changes made by the script.
+2. Import the ExchangeContainerImport.txt file into Active Directory by following the instructions provided by the script.
+3. Rerun the PrepareAD command.
+
+Now you should be able to continue with the setup.
 
 [Back to top](#summary)
 
