@@ -193,6 +193,8 @@
     href: unexpected-error-reset-pwd.md
   - name: Verify account error when resetting password
     href: cannot-verify-account-reset-pwd.md
+  - name: Error AADSTS50011 - reply URL mismatch
+    href: error-code-AADSTS50011-reply-url-mismatch.md
 
 - name: Integration issues
   items:
