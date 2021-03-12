@@ -40,8 +40,8 @@ If the homepage isn't in the recycle bin or site collection recycle bin, do eith
 
 1. Go to the Site Pages library.
 
-Example Site Pages library URL:
-https://contoso.sharepoint.com/SitePages/Forms/ByAuthor.aspx
+   Example Site Pages library URL:
+   https://contoso.sharepoint.com/SitePages/Forms/ByAuthor.aspx
 
 1. Select the three vertical dots after the name of the page that you want to use as the homepage.
 1. Select **Make homepage**.
