@@ -1,7 +1,7 @@
 ---
-title: Cannot connect to RDS because there are no RD Licensing servers available to issue licenses
+title: Cannot connect to RDS because no RD Licensing servers are available
 description: This article describes how to troubleshoot RDS connection errors that are related to Remote Desktop licensing.
-ms.date: 03/09/2021
+ms.date: 03/11/2021
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dscontentpm
