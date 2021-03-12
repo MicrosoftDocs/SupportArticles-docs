@@ -155,7 +155,7 @@
   items:
   - name: Can't delete a directory using portal
     href: cannot-delete-directory-azure-portal.md
-  - name: Can't open Azure AD Module Powershell
+  - name: Can't open Azure AD Module PowerShell
     href: cant-open-aad-module-powershell.md
   - name: Can't verify account when resetting password
     href: could-not-verify-account-reset-pwd.md
