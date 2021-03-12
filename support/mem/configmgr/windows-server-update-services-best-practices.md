@@ -101,10 +101,11 @@ For information about declining superseded updates and other WSUS maintenance it
 
 By default, WSUS isn't configured to use SSL for client communication. The first post-install step should be to configured SSL on WSUS to make sure security between server-client communications.
 
-You must take the following actions:
+You must take one the following actions:
 
 - Create a self-signed certificate. It isn't ideal because every client would have to trust this certificate.
-- Obtain one from a third-party certificate provider, or from your internal certificate infrastructure.
+- Obtain one from a third-party certificate provider.
+- Obtain one from your internal certificate infrastructure.
 
 Your certificate must have the short server name, FQDN, and SAN names (aliases) that it goes by.
 
