@@ -15,20 +15,20 @@ ms.technology: windows-server-performance
 ---
 # You may receive an error "Out of Memory" because of the desktop heap limitation
 
-This article helps fix an error "Out of Memory" that occurs when you open many application windows in Windows.
+This article helps fix an "Out of Memory" error that occurs when you open many application windows in Windows.
 
 _Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 947246
 
 ## Symptoms
 
-After you open many application windows in Windows, you may be unable to open any additional windows. A window may open sometimes, but it won't contain the expected components. Additionally, you may receive an error message that resembles the following one:
+After you open many application windows in Windows, you may be unable to open any additional windows. A window may open sometimes, but it won't contain the expected components. Additionally, you receive an error message that resembles:
 
 > Out of Memory
 
 ## Cause
 
-This problem occurs because of the desktop heap limitation. If you close some windows, and then you try to open other windows, these windows may open. However, this method doesn't affect the desktop heap limitation.
+This problem occurs because of the desktop heap limitation. When you close some windows, and then try to open other windows, these windows may open. However, this method doesn't affect the desktop heap limitation.
 
 ## Resolution
 
@@ -37,14 +37,14 @@ This problem occurs because of the desktop heap limitation. If you close some wi
 
 To resolve this problem, modify the desktop heap size by following these steps:
 
-1. Click **Start**, type *regedit* in the **Start Search** box, and then click regedit.exe in the **Programs** list.
+1. Click **Start**, type *regedit* in the **Start Search** box, and then select regedit.exe in the **Programs** list.
 
     > [!NOTE]
     > If you are prompted for an administrator password or for confirmation, type your password, or click **Continue**.
 
-2. Locate and then click the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\SubSystems` registry subkey.
+2. Locate and then select the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\SubSystems` registry subkey.
 
-3. Right-click the **Windows** entry, and then click **Modify**.
+3. Right-click the **Windows** entry, and then select **Modify**.
 
 4. In the **Value data** section of the **Edit String** dialog box, locate the `SharedSection` entry, and then increase the second value and the third value for this entry.
 
@@ -71,14 +71,14 @@ Windows 7 Service Pack 1 (64 bit) / Windows Server 2008 R2, 2012 R2 (64 bit)
 
 > SharedSection=1024, 20480,768
 
-Memory allocations are dynamic in later operating systems. Therefore, there's no limitation for memory allocation. However, if you allocate too much memory to the desktop heap, negative performance may occur. It's the reason why we don't recommend that you set a value that is over **20480**.
+Memory allocations are dynamic in later operating systems. There's no limitation for memory allocation. However, if you allocate too much memory to the desktop heap, negative performance may occur. It's why we don't recommend that you set a value that is over **20480**.
 
 > [!NOTE]
-> The desktop heap size is not affected by the physical RAM on the computer. Therefore, you cannot improve the performance by adding physical RAM.
+> The desktop heap size isn't affected by the physical RAM on the computer. You can't improve the performance by adding physical RAM.
 
 ### Did this fix the problem
 
-Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus/).
+Check if the problem is fixed. If the problem isn't fixed, [contact support](https://support.microsoft.com/contactus/).
 
 ## References
 
