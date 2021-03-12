@@ -17,50 +17,50 @@ ms.author: malachma
 
 ---
 
-# Auto Repair a Linux VM by using Azure Linux Auto Repair (ALAR)
+# Use Azure Linux Auto Repair (ALAR) to fix a Linux VM
 
-With the help of the ALAR scripts for Linux, you to get your Virtual Machine automatically recovered. 
-You don't need to do any manual steps. These scripts simplify the recovery procedure and allow even 
-unexperienced users getting a VM recovered.
+The next time that you have to run a repair on your Azure Linux virtual machine (VM), you can automate the job by putting the Azure Linux Auto Repair (ALAR) scripts to work for you. You no longer have to run the job manually. These scripts simplify the recovery process and enable even inexperienced users to recover their Linux VM easily.
 
-ALAR is part of the vm repair extension [Repair a Linux VM by using the Azure Virtual Machine repair commands](./repair-linux-vm-using-azure-virtual-machine-repair-commands.md). 
+ALAR is part of the VM repair extension that's described in [Repair a Linux VM by using the Azure Virtual Machine repair commands](./repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
-The repair scenarios covered by ALAR are
-- malformed /etc/fstab
-   syntax error
-   missing disk
-- damaged initrd or missing initrd line in the /boot/grub/grub.cfg
-- Boot problematic because of a corrupt kernel image
+ALAR covers the following repair scenarios:
+- Malformed /etc/fstab file:
+   - Syntax errors
+   - Missing disk
+- Damaged initrd or missing initrd line in the /boot/grub/grub.cfg file
+- Startup problems caused by a corrupted kernel image
 
-## The ALAR Scripts
+## The ALAR scripts
 
 **fstab**
-This script does strip off any lines in the /etc/fstab file, which the system doesn't need to start the system successful. It makes a copy of the original file first.
-After the system got rebooted, the file `/etc/fstab`can be altered to add any lines with the correct mount options.
+This script strips off any lines in the /etc/fstab file that the system doesn't need to start successfully. The system first makes a copy of the original file.
+After the system restarts, the /etc/fstab file can be updated to add lines for the correct mount options.
 
-Consult also this page [Troubleshoot Linux VM starting issues because fstab errors](./linux-virtual-machine-cannot-start-fstab-errors.md) to better understand the scenarios that can arise if the information in the file `/etc/fstab` isn't correct.
+For more information about problems that are caused by a bad /etc/fstab file, see [Troubleshoot Linux VM starting issues because fstab errors](./linux-virtual-machine-cannot-start-fstab-errors.md). 
 
 **kernel**
-This script does change the default kernel. The script does replace the broken kernel with the previous version installed.
+This script changes the default kernel. The script replaces the broken kernel with the previously installed version.
 
-Consult also this page [How to recover an Azure Linux virtual machine from kernel-related boot issues](https://docs.microsoft.com/en-gb/troubleshoot/azure/virtual-machines/kernel-related-boot-issues). To understand what messages might be logged on the serial-console. In case you see a kernel-related boot issue.
+For more information about messages that might be logged on the serial console for kernel-related startup events, see [How to recover an Azure Linux virtual machine from kernel-related boot issues](https://docs.microsoft.com/en-gb/troubleshoot/azure/virtual-machines/kernel-related-boot-issues).
 
 **initrd**
-This script corrects two issues that can happen when a new kernel gets installed.
+This script corrects two problems that might occur when a new kernel is installed:
+   - The Grub.cfg file is missing an `initrd` line.
+   - The initrd image is missing.
 
-The grub.cfg file is missing an `initrd` line or the initrd image is missing at all. So it either fixes the grub.cfg file and creates a new initrd image if the image is missing.
+Depending on the specific problem, the script either repairs the Grub.cfg file or creates a new initrd image to replace a missing image.
 
-Initrd related boot issues may show up in the following ways.
+Initrd-related startup problems can appear as the following logged symptoms.
+
 ![Not syncing VFS](media/repair-linux-vm-using-ALAR/not-syncing-VFS.png)
 ![No working init found](media/repair-linux-vm-using-ALAR/no-working-init-found.png)
-In both cases the following information is logged before.
+
+In both cases, the following information is logged before the error entries are logged.
+
 ![Unpacking failed](media/repair-linux-vm-using-ALAR/unpacking-failed.png)
 
-
-
 ## How to use ALAR
-The ALAR scripts, with the help of the Azure Virtual Machine repair extension, use the command `run` and its option `--run-id`. The script-id for the automated recovery is: **linux-alar-fki** 
-For instance
+The ALAR scripts use the repair extension `run` command and its `--run-id` option. The script-id for the automated recovery is: **linux-alar-fki**. For example:
 
 ```azurecli-interactive
 az vm repair create --verbose -g centos7 -n cent7 --repair-username rescue --repair-password 'password!234’
@@ -74,20 +74,18 @@ az vm repair run --verbose -g centos7 -n cent7 --run-id linux-alar-fki --paramet
 az vm repair restore --verbose -g centos7 -n cent7
  ```
 
-With the above steps, a repair VM is created. In the next step, we use the script `initrd` to get an initrd boot issue fixed. In the last step, the restore operation is executed.
+These steps create a repair task. In the next step, you will use the `initrd` script to fix an initrd-related startup problem. In the last step, you will run the restore operation.
 
   [!NOTE]
-> You can pass over either a single recover-operation or multiple operations, i.e.,
-> fstab; ‘fstab,initrd’. 
-> Separate the recover operation with a comma – no spaces allowed!
-
+> You can pass over either a single recover-operation or multiple operations. For multiple operations, delineate them by using commas without spaces:
+   > - ‘fstab’
+   > - ‘fstab,initrd’
 
 ## Limitations
-- encrypted images aren't supported.
+- Encrypted images aren't supported.
 - Classic VMs aren't supported.
-- EFI based images aren't supported.
-
+- EFI-based images aren't supported.
 
 ## Feedback
 
-If you come across any bug or would like to see an enhancement on the script base of Azure Linux Auto Recover, report them on [GitHub](https://github.com/Azure/repair-script-library/issues).
+If you experience a bug or want to request an enhancement to the script base of ALAR, post a comment on [GitHub](https://github.com/Azure/repair-script-library/issues).
