@@ -476,7 +476,7 @@ This issue occurs because “otherWellKnownObjects”, the object referenced in 
 
 **Resolution:**
 
-Download and run the [SetupAssist.ps1]((https://aka.ms/ExSetupAssist)) script.
+Download and run the [SetupAssist.ps1](https://aka.ms/ExSetupAssist) script.
 
 ````powershell
 .\SetupAssist.ps1 -OtherWellKnownObjects
