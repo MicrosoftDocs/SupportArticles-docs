@@ -1084,6 +1084,8 @@
       href: ./group-policy/use-group-policy-to-install-software.md
   - name: Group Policy management - GPMC or AGPM
     items:
+    - name: Error 0x8007000D when runing Backup-GPO in Server Core
+      href: ./group-policy/error-0x8007000d-backup-gpo-cmdlet.md
     - name: AGPM and GPRESULT are not working
       href: ./group-policy/agpm-gpresult-not-working.md
     - name: Changes to GPO permissions aren't saved
@@ -2176,6 +2178,8 @@
       href: ./remote/remotefx-usb-redirected-scanner-not-start.md
   - name: Remote Desktop Services (Terminal Services) licensing
     items:
+    - name: Cannot connect to RDS because no RD Licensing servers are available
+      href: ./remote/cannot-connect-rds-no-license-server.md
     - name: '"Licenses are not available for this Remote Desktop" error in Licensing Diagnosis'
       href: ./remote/rdsh-administrator-on-get-error-licensing-diagnosis.md
     - name: Configure RDP listener certificates
