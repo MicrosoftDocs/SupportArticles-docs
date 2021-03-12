@@ -177,6 +177,8 @@
       href: ./teams-sign-in/error-missing-out-sign-in-teams.md
   - name: Sites
     items:
+    - name: '"This site can't be reached" error when accessing SharePoint site'
+      href: SharePoint\SharePointOnline\sites\err-invalid-response-accessing-sharepoint-site.md
     - name: Websites aren't viewable
       href: ./known-issues/cannot-view-website-teams-web-client.md
   - name: Tabs
