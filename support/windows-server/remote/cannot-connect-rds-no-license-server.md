@@ -66,7 +66,7 @@ You can check the RD Licensing configuration by using Server Manager and RD Lice
 3. Select the Remote Desktop licensing mode (either **Per User** or  **Per Device**, as appropriate for your deployment).
 
    > [!NOTE]  
-   > If you use domain-joined servers for your RDS deployment, you can use both Per User and Per Device CALs. If you use workgroup servers for your RDS deployment, you have      > to use Per Device CALs In that case, Per User CALs are not permitted.
+   > If you use domain-joined servers for your RDS deployment, you can use both Per User and Per Device CALs. If you use workgroup servers for your RDS deployment, you have to use Per Device CALs In that case, Per User CALs are not permitted.
 4. Specify a license server.
 
 #### <a id=nordcb></a>Configure licensing for an RDS deployment that includes only the RD Session Host role and the RD Licensing role
@@ -77,7 +77,7 @@ You can check the RD Licensing configuration by using Server Manager and RD Lice
 3. In the policy list, right-click **Use the specified Remote Desktop license servers**, and then select **Properties**.
 4. Select **Enabled**, and then enter the name of the license server under **License servers to use**. If you have more than one license server, use commas to separate their names.
    :::image type="content" source="media/cannot-connect-rds-no-license-server/local-gp-specify-license-server.png" alt-text="Policy settings for Remote Desktop license servers":::
-5. Select **OK**. 
+5. Select **OK**.  
 6. In the policy list, right-click **Set the Remote Desktop licensing mode**, and then select **Properties**.
 7. Select **Enabled**.
 8. Under **Specify the licensing mode for the Remote Desktop Session Host server**, select **Per Device** or **Per User**, as appropriate for your deployment.
