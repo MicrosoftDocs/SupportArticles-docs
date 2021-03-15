@@ -30,7 +30,7 @@ To open the SAML-based single sign-on configuration page:
 ## General troubleshooting
 
 ### Problem when customizing the SAML claims sent to an application
-To learn how to customize the SAML attribute claims sent to your application, see [Claims mapping in Azure Active Directory](../develop/active-directory-claims-mapping.md).
+To learn how to customize the SAML attribute claims sent to your application, see [Claims mapping in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-claims-mapping).
 
 ### Errors related to misconfigured apps
 Verify both the configurations in the portal match what you have in your app. Specifically, compare Client/Application ID, Reply URLs, Client Secrets/Keys, and App ID URI.
