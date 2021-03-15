@@ -9,6 +9,8 @@
     href: error-code-AADSTS50011-reply-url-mismatch.md
   - name: Error AADSTS50105 - user not assigned a role
     href: error-code-AADSTS50105-user-not-assigned-role.md
+  - name: Error AADSTS650056 - misconfigured app
+    href: error-code-AADSTS650056-misconfigured-app.md
   - name: Error AADSTS70001 - app not found in directory
     href: error-code-AADSTS70001-app-not-found-in-directory.md
   - name: Error AADSTS75005 - not a valid saml request
