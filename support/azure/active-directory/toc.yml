@@ -1,12 +1,14 @@
 - name: Welcome
   href: welcome-azure-ad.yml
-  
-- name: Sign-in and Multi-factor authentication
-  items:
+
+- name: App Integration and Development 
   - name: Troubleshoot signing in to SAML-based single sign-on configured apps
     items:
     - name: Error AADSTS50011 - reply URL mismatch
       href: error-code-AADSTS50011-reply-url-mismatch.md
+      
+- name: Sign-in and Multi-factor authentication
+  items:
   - name: An unknown error occurred
     href: unknown-error-occurred-sign-in-assistant.md
   - name: Authorization_RequestDenied error when changing password
