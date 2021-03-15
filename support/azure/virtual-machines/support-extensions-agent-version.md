@@ -4,6 +4,8 @@ description: Describes the minimum version support for Linux and Windows virtual
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.subservice: extensions
 ---
 # Minimum version support for virtual machine agents in Azure
 

@@ -4,6 +4,8 @@ description: Discusses support policy for the VM agent for Microsoft Azure Virtu
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.subservice: extensions
 ---
 # Support for VM agent extensions in Microsoft Azure
 
