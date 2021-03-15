@@ -47,7 +47,7 @@ This current version of the RML Utilities for SQL Server supersedes any earlier 
 
 ## Obtain the RML Utilities for SQL Server
 
-The following files are available for download from the Download Center:  
+The following file is available for download from the Download Center:  
 
 The RML Utilities for SQL Server, x64 version [Download the RMLSetup_AMD64.msi package now.](https://www.microsoft.com/download/details.aspx?id=4511)
 
