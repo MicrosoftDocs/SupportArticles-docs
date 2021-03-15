@@ -1,7 +1,7 @@
 ---
 title: Virtual camera on MacOS Teams stops working
-ms.author: v-todmc
-author: mccoybot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 7/13/2020
 audience: Admin

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Teams Channel notifications settings can't be managed
 description: Discusses an issue that Microsoft Teams Channel notifications can't be managed by the User notification settings when it's modified.
-author: TobyTu
+author: helenclu
 ms.author: kellybos
 manager: dcscontentpm
 audience: ITPro 

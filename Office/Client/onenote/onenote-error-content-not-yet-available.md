@@ -1,7 +1,7 @@
 ---
 title: Content Not Yet Available error in OneNote
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 4/24/2020
 audience: Admin
@@ -57,7 +57,7 @@ Check to see whether the page (or section) is in one of the following states:
 - **Stored in OneDrive for Business.** Follow the steps in [Restore your OneDrive](https://support.office.com/article/restore-your-onedrive-fa231298-759d-41cf-bcd0-25ac53eb8a15) to restore the content to a previous state.
 - **Stored in SharePoint Online**. If so, follow the steps in [Restore your OneDrive](https://support.office.com/article/restore-your-onedrive-fa231298-759d-41cf-bcd0-25ac53eb8a15) to identify whether the content is in a restorable state. 
     > [!NOTE]
-    > SharePoint Online retains backups of all content for 14 additional days beyond actual deletion. If content cannot be restored through the Recycle Bin or [Files Restore](https://support.office.com/article/restore-your-onedrive-fa231298-759d-41cf-bcd0-25ac53eb8a15), an [administrator can contact Microsoft Support to request a restoration](https://docs.microsoft.com/microsoft-365/admin/contact-support-for-business-products?view=o365-worldwide&tabs=online) any time inside the 14-day window.
+    > SharePoint Online retains backups of all content for 14 additional days beyond actual deletion. If content cannot be restored through the Recycle Bin or [Files Restore](https://support.office.com/article/restore-your-onedrive-fa231298-759d-41cf-bcd0-25ac53eb8a15), an [administrator can contact Microsoft Support to request a restoration](/microsoft-365/admin/contact-support-for-business-products?view=o365-worldwide&tabs=online&preserve-view=true) any time inside the 14-day window.
 
 ## More information
 

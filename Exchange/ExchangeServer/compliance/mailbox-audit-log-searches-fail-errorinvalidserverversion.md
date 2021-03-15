@@ -1,7 +1,7 @@
 ---
 title: Mailbox Audit Log searches fail with exception ErrorInvalidServerVersion
 description: When you run Search-MailboxAuditLog or New-MailboxAuditLogSearch command to search Mailbox Audit Logs, it fails with exception "ErrorInvalidServerVersion". This article provides a resolution.
-author: TobyTu
+author: helenclu
 ms.author: cmcgurk
 manager: dcscontentpm
 audience: ITPro 

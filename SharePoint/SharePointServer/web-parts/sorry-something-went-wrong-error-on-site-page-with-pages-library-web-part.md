@@ -1,8 +1,8 @@
 ---
 title: Sorry, something went wrong error on a Site Page with a Pages library web part added
 description: Describes how to resolve a 'Sorry, something went wrong' error on a Site Page with a Pages library web part added.
-author: McCoyBot
-ms.author: v-todmc
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

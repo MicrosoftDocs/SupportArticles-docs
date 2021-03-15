@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.service: skype-for-business-online
 ms.topic: article
-ms.author: v-zht
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto:
 - Skype for Business Online

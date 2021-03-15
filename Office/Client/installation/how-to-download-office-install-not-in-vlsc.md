@@ -1,7 +1,7 @@
 ---
 title: How to download and run Office 2019 installation files not in VLSC
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 03/03/2020
 audience: Admin

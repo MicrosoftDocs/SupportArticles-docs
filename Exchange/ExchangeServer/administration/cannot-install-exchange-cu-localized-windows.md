@@ -1,7 +1,7 @@
 ---
 title: Can't install Exchange Cumulative Update on a localized version of Windows Server
 description: Fixes an issue in which you can't install an Exchange CU on a localized version of Windows Server.
-author: TobyTu
+author: helenclu
 ms.author: yusenko
 manager: dcscontentpm
 audience: ITPro

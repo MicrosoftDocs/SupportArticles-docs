@@ -1,7 +1,7 @@
 ---
 title: Microsoft Teams admin center error FAILED_TO_AUTO_DISCOVER_DOMAIN
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 3/19/2020
 audience: ITPro
