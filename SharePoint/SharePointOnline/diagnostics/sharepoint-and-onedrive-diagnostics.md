@@ -18,7 +18,7 @@ ms.custom:
 - CI 122279
 - CSSTroubleshoot 
 ms.reviewer: salarson
-description: Troubleshoot issues in SharePoint Online and OneDrive using diagnostics.
+description: SharePoint Online and OneDrive Diagnostics 
 ---
 
 # How to troubleshoot issues in SharePoint Online and OneDrive using diagnostics
@@ -75,9 +75,6 @@ Currently, these diagnostics are only available for administrators and can be ac
 4. This will activate the “Need help?” pane on the right-hand side of your screen.
  
     :::image type="content" source="media/sharepoint-and-onedrive-diagnostics/sharepoint-and-onedrive-diagnostics-3.jpg" alt-text="The Need Help? screen.":::
-
-    > [!NOTE]
-    > Diagnostics can also be rendered in O365 assistant. However, the queries may be different.
  
 5.	If you would like to render one of our specific diagnostics, enter one of the queries listed in the table above under "Shortcut cmd" into the “Need help?” text box.
 
