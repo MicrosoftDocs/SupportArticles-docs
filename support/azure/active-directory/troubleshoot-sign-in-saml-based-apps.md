@@ -26,3 +26,7 @@ To open the SAML-based single sign-on configuration page:
 1.  Select the application you want to configure for single sign-on.
 1. Once the application loads, select **Single sign-on** from the application’s left-hand navigation menu.
 1. Select SAML-based SSO.
+
+
+- [Error AADSTS50011 - The reply URL specified in the request does not match the reply URLs configured for the application](error-code-AADSTS50011-reply-url-mismatch.md)
+- 
