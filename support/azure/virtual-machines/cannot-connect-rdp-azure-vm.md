@@ -4,6 +4,8 @@ description: This article can help you troubleshoot authentication errors that o
 ms.date: 12/10/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Troubleshoot authentication errors when you use RDP to connect to Azure VM
 

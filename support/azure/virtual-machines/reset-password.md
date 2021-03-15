@@ -1,14 +1,14 @@
 ---
 title: How to reset local Linux password on Azure VMs | Microsoft Docs
 description: Introduce the steps to reset the local Linux password on Azure VM
-services: virtual-machines-linux
+services: virtual-machines
 documentationcenter: ''
 author: Deland-Han
 manager: dcscontentpm
 editor: ''
 tags: ''
-
-ms.service: virtual-machines-linux
+ms.service: virtual-machines
+ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting

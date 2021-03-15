@@ -1,19 +1,20 @@
 ---
 title: Azure VM stops (Please wait for the Group Policy Client) screen
 description: Describes what to do if an Azure Virtual Machine stops at the (Please wait for the Group Policy Client) screen.
-services: virtual-machines-windows, azure-resource-manager
+services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: mccoybot
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
 ms.assetid: 3f6383b5-81fa-49ea-9434-2fe475e4cbef
-ms.service: virtual-machines-windows
+ms.service: virtual-machines
+ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 1/25/2021
-ms.author: v-todmc
+ms.author: genli
 ---
 
 # Azure VM stopped at “Please wait for the Group Policy Client” screen

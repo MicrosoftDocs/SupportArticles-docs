@@ -1,12 +1,13 @@
 ---
 title: Linux VM boots to Grub Rescue
 description: Virtual machine failed to boot because the virtual machine entered a rescue console
-services: virtual-machines-windows
+services: virtual-machines
 documentationcenter: ''
 author: v-miegge
 manager: dcscontentpm
 editor: ''
-ms.service: virtual-machines-windows
+ms.service: virtual-machines
+ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.devlang: na
