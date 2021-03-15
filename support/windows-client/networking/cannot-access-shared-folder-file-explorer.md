@@ -102,7 +102,7 @@ You can enable the guest access from your computer by using one of the following
     > [!NOTE]
     > You must create the key if it doesn't exist. Press and hold (right-click) **Windows**, select **New** > **Key**, and then name the key *LanmanWorkstation*.
 
-3. Press and hold (right-click) **LanmanWorkstation**, select **New** > **DWORD (32-bit) Value**, and then name it *AllowInsecureGuestAuth*. Double-click it, set the **Value data** to *1*, and then press Enter.
+3. Press and hold (right-click) **LanmanWorkstation**, select **New** > **DWORD (32-bit) Value**, and then name it *AllowInsecureGuestAuth*. Double-click it, set the **Value data** to *1*, and then press Enter.
 
 **Method 2**: Enable insecure guest logons with **Local Group Policy Editor**
 
