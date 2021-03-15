@@ -17,10 +17,8 @@ _Original KB number:_ &nbsp; 2905736
 |Microsoft Knowledge Base article|Description|Notes|
 |---|---|---|
 | [2905740](https://support.microsoft.com/help/2905740)|The other Release Management component does not work after you uninstall the client or server||
-| [2905741](https://support.microsoft.com/help/2905741)|Error when you click View Request in a Release Management for Visual Studio 2013 approval notification: Page not found|This issue is fixed in [Description of Visual Studio 2013 Update 1](https://support.microsoft.com/help/2911573).|
 | [2905742](https://support.microsoft.com/help/2905742)|Deployment agents that rely on shadow accounts do not work with Release Management Server for Visual Studio 2013||
 | [2905743](https://support.microsoft.com/help/2905743)|Deployment fails when you use the HTTPS protocol in Release Management|This issue is fixed in [Description of Visual Studio 2013 Update 1](https://support.microsoft.com/help/2911573).|
-| [2905744](https://support.microsoft.com/help/2905744)|Error during a deployment in Release Management 2013: Could not find the file or assembly System.Management.Automation ||
 | [2907777](https://support.microsoft.com/help/2907777)|Error when you try to connect through Release Management Client: The server specified could not be reached ||
 | [2907779](https://support.microsoft.com/help/2907779)|Release Management Client crashes and logs a error (MissingSatelliteAssemblyException)||
 | [2989381](https://support.microsoft.com/help/2989381)|TFS builds are not displayed in Release Management template when you upgrade from Release Management 2013 Update 1||

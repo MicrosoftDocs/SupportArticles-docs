@@ -297,11 +297,7 @@ To find the version of your instance of SQL Azure and related information, see t
 
 ## SQL Server CE
 
-To find the version of your instance of SQL Server CE and related information, see the following resources:
-
-- [Description of the various build versions of SQL Server Compact Edition](https://support.microsoft.com/help/950550)
-
-- [SQL Server CE previous versions documentation](/previous-versions/sql/compact/)
+To find the version of your instance of SQL Server CE and related information, see [SQL Server CE previous versions documentation](/previous-versions/sql/compact/).
 
 ## PolyBase
 
@@ -763,9 +759,7 @@ For more information, go to the following websites:
 |9.00.3282|SP2|CU9| [953752](https://support.microsoft.com/help/953752)|August 18, 2008|
 |9.00.3257|SP2|CU8| [951217](https://support.microsoft.com/help/951217)|June 16, 2008|
 |9.00.3239|SP2|CU7| [949095](https://support.microsoft.com/help/949095)|April 14, 2008|
-|9.00.3080|SP3| MS09-062: GDR Security update| [970895](https://support.microsoft.com/help/970895)|October 13, 2009|
 |9.00.3077|SP4| MS09-004: GDR Security update| [960089](https://support.microsoft.com/help/960089)|February 10, 2009|
-|9.00.3073|SP5| MS08-052: GDR Security update| [954606](https://support.microsoft.com/help/954606)|September 9, 2008|
 |9.00.3042| SP2|| [937137](https://support.microsoft.com/help/937137)| |
 |9.00.2047| SP1||| |
 |9.00.1399| RTM||| |
