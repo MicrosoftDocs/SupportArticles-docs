@@ -8,7 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.prod: exchange-server-it-pro
 localization_priority: Normal
-ms.reviewer: mbro; robwhal
+ms.reviewer: mbro; robwhal; batre
 ms.custom: 
 - CI 145217
 - Exchange Server
@@ -51,6 +51,7 @@ This article describes the methods to verify the installation of Microsoft Excha
 - [Restart from previous installation is pending](#restart-from-previous-installation-is-pending)
 - [Mail flow has stopped](#mail-flow-has-stopped)
 - [Exchange Setup or PrepareAD error](#exchange-setup-or-preparead-error)
+- [Exchange setup fails with error code 1603](#exchange-setup-fails-with-error-code-1603)
 
 ## Additional information
 
@@ -418,8 +419,7 @@ This error message may also display on a server that has no IUs installed but is
 
 You're upgrading to the latest CU but Setup either displays that it is installing an existing CU on the server OR fails with the following error message:
 
-> Couldn't open package **'C:\Program Files\Microsoft\Exchange Server\V15\bin\Setup\\\<package name>**. This installation package could
-not be opened. Verify that the package exists and that you can access it, or contact the application vendor to verify that this is a valid Windows Installer package. Error code is 1619.
+> Couldn't open package **'C:\Program Files\Microsoft\Exchange Server\V15\bin\Setup\\\<package name>**. This installation package could not be opened. Verify that the package exists and that you can access it, or contact the application vendor to verify that this is a valid Windows Installer package. Error code is 1619.
 
 **Cause**
 
@@ -443,6 +443,11 @@ You keep getting the following error message even after restarting the server se
 **Resolution**
 
 Follow the information provided in [A Restart from a Previous Installation is Pending](/previous-versions/office/exchange-server-analyzer/cc164360(v=exchg.80)) to fix the issue.
+
+If you still see the error message, do the following:
+
+1. Run the [HealthChecker script](https://aka.ms/exchangehealthchecker).
+1. Run the [SetupAssist.ps1](https://aka.ms/ExSetupAssist) script.
 
 [Back to top](#summary)
 
@@ -491,6 +496,29 @@ If the script asks you to verify the results, do the following:
 3. Rerun the PrepareAD command.
 
 Now you should be able to continue with the setup.
+
+[Back to top](#summary)
+
+### Exchange setup fails with error code 1603
+
+**Issue**
+
+You see the following error message during Exchange installation:
+
+>Installing product F:\exchangeserver.msi failed. Fatal error during installation. Error code is 1603. Last error reported by the MSI package is 'The installer has insufficient privileges to access this directory: C:\Program Files\Microsoft\Exchange Server\V15\FrontEnd\HttpProxy\owa\auth\15.1.2106'.
+
+**Resolution**
+
+1. Make sure that the setup is run by using a local administrator account.
+2. Check whether the following permissions are assigned to the folder specified in the error:
+    1. Read permission to Authenticated users
+    1. Full Control permission to System
+    1. Full Control to <local_machine>\administrators>
+3. Make sure that inheritance is enabled on the folder. If it isn't, then enable inheritance.
+
+After updating folder permissions, resume setup.
+
+If the error message still occurs, follow the steps provided in [this article](/troubleshoot/windows-server/application-management/msi-installation-error-1603).
 
 [Back to top](#summary)
 
