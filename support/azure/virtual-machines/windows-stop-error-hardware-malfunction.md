@@ -1,12 +1,13 @@
 ---
 title: Windows stop error - Hardware malfunction
 description: This article provides steps to resolve issues where Windows Server 2008 virtual machines crash with an error message that states that there was a hardware malfunction.
-services: virtual-machines-windows
+services: virtual-machines
 documentationcenter: ''
 author: mibufo
 editor: ''
 tags: azure-resource-manager
-ms.service: virtual-machines-windows
+ms.service: virtual-machines
+ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting

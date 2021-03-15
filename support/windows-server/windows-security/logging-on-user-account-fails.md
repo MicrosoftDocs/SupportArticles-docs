@@ -1,6 +1,6 @@
 ---
 title: Logging on a user account fails
-description: Describes a problem in Windows Server that occurs when a user who is a member of more than 1,010 security groups tries to log on. Provides a resolution.
+description: Describes a problem when a user who is a member of more than 1,010 security groups tries to log on. Provides a resolution.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,14 +15,14 @@ ms.technology: windows-server-security
 ---
 # Logging on a user account that is a member of more than 1,010 groups may fail on a Windows Server-based computer
 
-This article provides a solution to an issue where logging on a user account that is a member of more than 1,010 groups fails.
+This article solves an issue where logging on a user account that's a member of more than 1,010 groups fails.
 
 _Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 328889
 
 ## Symptoms
 
-When a user tries to log on to a computer by using a local computer account or a domain user account, the logon request may fail, and you receive the following error message:
+When a user tries to log on to a computer by using a local computer account or a domain user account, the logon request may fail. And you receive the following error message:
 
 > Logon Message: The system cannot log you on due to the following error: During a logon attempt, the user's security context accumulated too many security IDs. Please try again or consult your system administrator.
 
@@ -36,11 +36,11 @@ The error is **STATUS_TOO_MANY_CONTEXT_IDS**.
 
 ## Cause
 
-When a user logs on to a computer, the Local Security Authority (LSA, a part of the Local Security Authority Subsystem) generates an access token that represents the user's security context. The access token consists of unique security identifiers (SID) for every group that the user is a member of. These SIDs include transitive groups and SID values from SIDHistory of the user and the group accounts.
+When a user logs on to a computer, the Local Security Authority (LSA, a part of the Local Security Authority Subsystem) generates an access token. The token represents the user's security context. The access token consists of unique security identifiers (SID) for every group that the user is a member of. These SIDs include transitive groups and SID values from SIDHistory of the user and the group accounts.
 
 The array that contains the SIDs of the user's group memberships in the access token can contain no more than 1,024 SIDs. The LSA cannot drop any SID from the token. So, if there are more SIDs, the LSA fails to create the access token and the user will be unable to log on.
 
-When the list of SIDs is built, the LSA also inserts several generic, well-known SIDs in addition to the SIDs for the user's group memberships (evaluated transitively). Thus, if a user is a member of more than about 1,010 custom security groups, the total number of SIDs can exceed the 1,024 SID limit.
+When the list of SIDs is built, the LSA also inserts several generic, well-known SIDs besides the SIDs for the user's group memberships (evaluated transitively). So, if a user is a member of more than about 1,010 custom security groups, the total number of SIDs can exceed the 1,024 SID limit.
 
 > [!IMPORTANT]
 >
@@ -49,7 +49,7 @@ When the list of SIDs is built, the LSA also inserts several generic, well-known
 > - Using Kerberos or NTLM as the authentication protocol has no bearing on access token limit.
 > - The Kerberos client setting **MaxTokenSize** is discussed in [Problems with Kerberos authentication when a user belongs to many groups](https://support.microsoft.com/help/327825). *Token* in the Kerberos Context refers to the buffer for the tickets received by a Windows Kerberos host. Depending on the size of the ticket, the type of SIDs and whether SID compression is enabled, the buffer can hold fewer or many more SIDs than that would fit into the access token.
 
-The list of custom SIDs will include the following:
+The list of custom SIDs will include:
 
 - The primary SIDs of the user/computer and the security groups the account is member of.
 - The SIDs in the **SIDHistory** attribute of the groups in scope of the logon.
@@ -63,10 +63,15 @@ Because the **SIDHistory** attribute can contain multiple values, the limit of 1
 
 Because of these differences, it's possible that the user can log on to a computer in one domain, but not to a computer in another domain. The user might also be able to log on to one server in a domain, but not to another server in the same domain.
 
-You can find out about the domain group memberships of an affected user with NTDSUTIL. It has a Group Membership Evaluation tool that also works across forests boundaries. The tool also works for users who are well above the limit of 1,024 SIDs, or who are in so many groups that Kerberos fails ticket retrieval even with 65,535 bytes of the buffer. Follow these steps:
+You can find out about the domain group memberships of an affected user with NTDSUTIL. It has a Group Membership Evaluation tool that also works across forests boundaries. The tool also works for the following users:
+
+- users who are well above the limit of 1,024 SIDs
+- users who are in so many groups that Kerberos fails ticket retrieval even with 65,535 bytes of the buffer
+
+Follow these steps:
 
 1. Open a command prompt on a computer that has AD Management Tools (Domain Controller or a computer that has RSAT).
-1. Switch to the *gro mem eva* tool and then get the available commands as the following screenshot:
+1. Switch to the *`gro mem eva`* tool and then get the available commands as the following screenshot:
 
     ![Screenshot of running gro mem eva commands](./media/logging-on-user-account-fails/gro-mem-eva-commands.png)
 
@@ -91,11 +96,11 @@ See the following guide to read a TSV file:
 
 - **SID type:** Tells you if it's the primary SID of the Group/User or SIDHistory.
 - **SID History Count**: How many SIDs from SIDHistory does this account introduce?
-- **One Level MemberOf Count**: How many SIDs does this entry add to the collection on a single level (this entries' member of)?
+- **One Level MemberOf Count**: How many SIDs does this entry add to the collection on a single level (the entries' member of)?
 - **Total MemberOf Count**: How many SIDs does this entry add to the collection in total?
 - **Group Owner**: For environments that have delegated group management, you may get hints on how is using too many groups to *attack* user logon.
-- **Group Type**: Kind Of Sid. WellKnown, user SID, global, and universal security groups would be in all tokens created for this user. Domain local security group would only be in this resource domain. This can be important when a user has logon problems only in a certain resource domain.
-- **Member WhenChanged (UTC)**: Latest change to the group membership. This can help correlate with the time when the user(s) first reported logon issues.
+- **Group Type**: Kind Of Sid. WellKnown, user SID, global, and universal security groups would be in all tokens created for this user. Domain local security group would only be in this resource domain. It can be important when a user has logon problems only in a certain resource domain.
+- **Member WhenChanged (UTC)**: Latest change to the group membership. It can help correlate with the time when the user(s) first reported logon issues.
 
 Hints to find groups to target for a change:
 
@@ -103,9 +108,9 @@ Hints to find groups to target for a change:
 
 - Groups that introduce many other groups through nesting have a great leverage to reduce the SID count.
 
-- Look for clues in the group name to determine whether the group may not be used any longer. For example, we had a customer who has a group per application in their software deployment solution, and we found groups that contained *office2000* or *access2000*.
+- Look for clues in the group name to determine whether the group may not be used any longer. For example, we had a customer who has a group per application in their software deployment solution. And we found groups that contained *office2000* or *access2000*.
 
-- Pass the report of the group list to your service and application administrators to identify groups that aren't needed any longer, maybe only for this user in this business unit or department.
+- Pass the report of the group list to your service and application administrators. Identify groups that aren't needed any longer, maybe only for this user in this business unit or department.
 
 Limitations:
 
@@ -138,9 +143,12 @@ To fix this problem, use one of the following methods, as appropriate for your s
 
 ### Method 1
 
-This resolution applies to the situation in which the user who encounters the logon error is not an administrator, and administrators can successfully log on to the computer or to the domain.
+This resolution applies to the following situation:
 
-This resolution must be performed by an administrator who has permissions to change the group memberships that the affected user is a member of. The administrator must change the user's group memberships to make sure that the user is no longer a member of more than about 1,010 security groups (considering the transitive group memberships and the local group memberships).
+- The user who encounters the logon error isn't an administrator.
+- Administrators can successfully log on to the computer or the domain.
+
+This resolution must be performed by an administrator who has permissions to change the user's group memberships. The administrator must change the user's group memberships to make sure that the user is no longer a member of more than about 1,010 security groups. Consider the transitive group memberships and the local group memberships.
 
 Options to reduce the number of SIDs in the user token include the following. The data collection from NTDSUTIL should help you see what groups are in the scope for change or removal:
 
@@ -155,13 +163,13 @@ Options to reduce the number of SIDs in the user token include the following. Th
 
 ### Method 2
 
-The resolution applies to the situation in which administrator account cannot log on to the computer.
+The resolution applies to the situation in which administrator account can't log on to the computer.
 
-When the user whose logon fails because of too many group memberships is a member of the Administrators group, an administrator who has the credentials for the Administrator account (that is, an account that has a well-known relative identifier [RID] of 500) must restart a domain controller by selecting the **Safe Mode** startup option (or by selecting the **Safe Mode** with Networking startup option). In safe mode, he must then log on to the domain controller by using the Administrator account credentials.
+When the user whose logon fails because of too many group memberships is a member of the Administrators group, an administrator who has the credentials for the Administrator account (that is, an account that has a well-known relative identifier [RID] of 500) must restart a domain controller by selecting the **Safe Mode** startup option (or by selecting the **Safe Mode** with Networking startup option). In safe mode, the administrator must then log on to the domain controller by using the Administrator account credentials.
 
-Microsoft has changed the token generation algorithm so that the LSA can create an access token for the Administrator account so that the administrator can log on regardless of how many transitive groups or intransitive groups that the Administrator account is a member of. When one of these safe mode startup options is used, the access token that is created for the Administrator account includes the SIDs of all Built-in and all Domain Global groups that the Administrator account is a member of.
+Microsoft has changed the token generation algorithm. The LSA can create an access token for the Administrator account so that the administrator can log on regardless of how many transitive groups or intransitive groups that the Administrator account is a member of. When one of these safe mode startup options is used, the access token that is created for the Administrator account includes the SIDs of all Built-in and all Domain Global groups that the Administrator account is a member of.
 
-These groups typically include the following:
+These groups typically include:
 
 - Everyone (S-1-1-0)
 - BUILTIN\Users (S-1-5-32-545)
@@ -183,7 +191,7 @@ After this change is made, users should be able to log on successfully after a t
 
 ### Method 3
 
-This option has the biggest appeal if you have many groups that are created to grant access to resources that are used on a specific set of servers, and they are of no relevance to many other servers.
+This option has the biggest appeal if you have many groups that are created to grant access to resources that are used on a specific set of servers, and they aren't relevant to many other servers.
 The access token of users always contains the SIDs of the user, global, and universal groups. However, it only contains the SIDs of Domain-Local groups of the domain where the resource servers are. Therefore, from 600 groups a user is member of, 400 are helping with giving access to file server resources on two groups of servers, and then the following ideas may be feasible:
 
 - Split up your servers into multiple groups per the number of Domain-Local groups.
@@ -192,7 +200,7 @@ The access token of users always contains the SIDs of the user, global, and univ
 
 ## More information
 
-The generic SIDs of an account often include the following:
+The generic SIDs of an account often include:
 
 - Everyone (S-1-1-0)
 - BUILTIN\Users (S-1-5-32-545)
@@ -220,7 +228,7 @@ SIDs for frequently used Primary Groups:
 - Domain\Domain Users (S-1-5-21-xxxxxxxx-yyyyyyyy-zzzzzzzz-513)
 - Domain\Domain Admins (S-1-5-21-xxxxxxxx-yyyyyyyy-zzzzzzzz-512)
 
-SIDs that document how the Logon Session got verified, one of the following:
+SIDs that document how the Logon Session got verified, one of the following values:
 
 - Authentication authority asserted identity (S-1-18-1)
 - Service asserted identity (S-1-18-2)
@@ -239,7 +247,7 @@ SIDs that describe the consistency level of the token, the most common examples:
 - Medium Mandatory Level (S-1-16-8192)
 - High Mandatory Level (S-1-16-12288)
 
-The access-token includes a SID relative to the user/computer origin, one of the following:
+The access-token includes a SID relative to the user/computer origin, one of the following values:
 
 - NT AUTHORITY\OTHER_ORGANIZATION (S-1-5-1000)
 - NT AUTHORITY\This Organization (S-1-5-15) if the account is from the same forest as the computer.

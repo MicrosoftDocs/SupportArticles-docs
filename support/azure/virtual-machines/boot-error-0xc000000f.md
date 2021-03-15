@@ -4,6 +4,8 @@ description: Fixes a Boot error code 0xc000000f that occurs on an Azure virtual 
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: jarrettr
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Boot error code 0xC000000F in an Azure VM
 

@@ -1,17 +1,16 @@
 ---
 title: VM startup is stuck on "Getting Windows ready. Don't turn off your computer" in Azure | Microsoft Docs
 description: Introduce the steps to troubleshoot the issue in which VM startup is stuck on "Getting Windows ready. Don't turn off your computer."
-services: virtual-machines-windows
+services: virtual-machines
 documentationcenter: ''
 author: Deland-Han
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
-
-ms.service: virtual-machines-windows
+ms.service: virtual-machines
+ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
-
 ms.topic: article
 ms.date: 09/18/2018
 ms.author: delhan

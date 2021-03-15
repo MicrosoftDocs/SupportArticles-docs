@@ -403,6 +403,8 @@
       href: replication/sql-transaction-log-grows.md
     - name: Duplicate key rows from sys.syscommittab table
       href: replication/duplicate-keys-sys-syscommittab-table.md
+    - name: Error message when you run the Distribution Agent
+      href: replication/error-run-distribution-agent.md
     - name: Fail to enumerate subscription properties
       href: replication/enumerate-subscription-properties.md
     - name: Install service packs and hotfixes
@@ -515,6 +517,13 @@
     href: integration-services/ssis-package-fails-use-dqs-cleansing-component.md
   - name: Use encryption and network packet size
     href: integration-services/use-encryption-network-packet-size.md
+
+- name: Master Data Services
+  items:
+  - name: MDS entity-based staging may fail
+    href: master-data-services/mds-entity-based-staging-fail.md
+  - name: MDS Validate Version command fails
+    href: master-data-services/mds-validate-version-command-fails.md
 
 - name: MDAC and ADO
   items:

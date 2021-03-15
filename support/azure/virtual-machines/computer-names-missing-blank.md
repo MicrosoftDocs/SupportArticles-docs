@@ -4,6 +4,8 @@ description: Fixes an issue in which computer names of virtual machines that use
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Computer names of specialized virtual machines are missing or blank in Azure
 

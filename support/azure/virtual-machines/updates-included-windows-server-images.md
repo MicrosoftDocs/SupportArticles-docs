@@ -4,6 +4,8 @@ description: Discusses that updates are included in Windows Server images that a
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.collection: windows
 ---
 # Updates are included in Windows Server images from Azure Marketplace
 

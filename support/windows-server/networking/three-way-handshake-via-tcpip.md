@@ -1,6 +1,6 @@
 ---
-title: Explanation of the three-way handshake via TCP/IP
-description: Discusses the process of the TCP three-way handshake that occurs between a client and server when initiating or terminating a TCP connection.
+title: The three-way handshake via TCP/IP
+description: Discusses the process of the Transmission Control Protocol (TCP) three-way handshake between a client and server when starting or ending a TCP connection.
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,18 +15,18 @@ ms.technology: networking
 ---
 # Explanation of the three-way handshake via TCP/IP
 
-This article discusses the process of the TCP three-way handshake that occurs between a client and server when initiating or terminating a TCP connection.
+This article discusses the Transmission Control Protocol (TCP) three-way handshake process between a client and server when starting or ending a TCP connection.
 
 _Original product version:_ &nbsp;  Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 172983
 
 ## Summary
 
-This article is intended for audiences who are familiar with Transmission Control Protocol/Internet Protocol (TCP/IP) and discusses the process of the TCP three-way handshake that occurs between a client and server when initiating or terminating a TCP connection.
+This article is intended for audiences who are familiar with Transmission Control Protocol/Internet Protocol (TCP/IP). It discusses the process of the TCP three-way handshake between a client and server when starting or ending a TCP connection.
 
 ## More information
 
-The Transmission Control Protocol (TCP) level of the TCP/IP transport protocol is connection-oriented. Connection-oriented means that, before any data can be transmitted, a reliable connection must be obtained and acknowledged. TCP level data transmissions, connection establishment, and connection termination maintain specific control parameters that govern the entire process. The control bits are listed as follows:
+The TCP level of the TCP/IP transport protocol is connection-oriented. Connection-oriented means that, before any data can be transmitted, a reliable connection must be obtained and acknowledged. TCP level data transmissions, connection establishment, and connection termination maintain specific control parameters that govern the entire process. The control bits are listed as follows:
 
 URG: Urgent Pointer field significant  
 ACK: Acknowledgment field significant  
@@ -39,17 +39,17 @@ There are two scenarios where a three-way handshake will take place:
 
 - Establishing a connection (an active open)
 
-- Terminating a connection (an active close)
+- Ending a connection (an active close)
 
 The following sample information was obtained from a Network Monitor capture. Network Monitor is a protocol analyzer that can be obtained from Microsoft Systems Management Server.
 
-### Establishing a Connection
+### Establishing a connection
 
 The following sequence shows the process of a TCP connection being established:
 
 Frame 1:
 
-As you see in the first frame, the client, NTW3, sends a SYN segment (TCP ....S.). This is a request to the server to synchronize the sequence numbers. It specifies its initial sequence number (ISN), which is incremented by 1, 8221821+1=8221822, and that is sent to the server. To initialize a connection, the client and server must synchronize each other's sequence numbers. There's also an option for the Maximum Segment Size (MSS) to be set, which is defined by the length (len: 4). This option communicates the maximum segment size the sender wants to receive. The Acknowledgment field (ack: 0) is set to zero because this is the first part of the three-way handshake.
+As you see in the first frame, the client, NTW3, sends a SYN segment (`TCP ....S.`). It's a request to the server to synchronize the sequence numbers. It specifies its initial sequence number (ISN). The ISN is incremented by 1 (8221821+1=8221822), and is sent to the server. To start a connection, the client and server must synchronize each other's sequence numbers. There's also an option for the Maximum Segment Size (MSS) to be set, which is defined by the length (len: 4). This option communicates the MSS the sender wants to receive. The Acknowledgment field (ack: 0) is set to zero because it's the first part of the three-way handshake.
 
 ```console
 
@@ -94,7 +94,7 @@ TCP: Frame Padding
 
 Frame 2:
 
-In the second frame, the server, BDC3, sends an ACK and a SYN on this segment (TCP .A..S.). In this segment, the server is acknowledging the request of the client for synchronization. At the same time, the server is also sending its request to the client for synchronization of its sequence numbers. There's one major difference in this segment. The server transmits an acknowledgment number (8221823) to the client. The acknowledgment is just proof to the client that the ACK is specific to the SYN the client initiated. The process of acknowledging the client's request allows the server to increment the client's sequence number by one and uses it as its acknowledgment number.
+As you see in the second frame, the server, BDC3, sends an ACK and SYN segment (`TCP .A..S.`). In this segment, the server is acknowledging the request of the client for synchronization. Meanwhile, the server is also sending its request to the client for synchronization of its sequence numbers. There's one major difference in this segment. The server transmits an acknowledgment number (8221823) to the client. The acknowledgment is just proof to the client that the ACK is specific to the SYN the client initiated. The process of acknowledging the client's request allows the server to increment the client's sequence number by one and uses it as its acknowledgment number.
 
 ```console
 
@@ -139,7 +139,7 @@ TCP: Frame Padding
 
 Frame 3:
 
-In the third frame, the client sends an ACK on this segment (TCP .A....). In this segment, the client is acknowledging the request from the server for synchronization. The client uses the same algorithm the server implemented in providing an acknowledgment number. The client's acknowledgment of the server's request for synchronization completes the process of establishing a reliable connection, thus the three-way handshake.
+As you see in the third frame, the client sends an ACK segment (`TCP .A....`). In this segment, the client is acknowledging the request from the server for synchronization. The client uses the same algorithm the server implemented in providing an acknowledgment number. The client's acknowledgment of the server's request for synchronization completes the process of establishing a reliable connection and the three-way handshake.
 
 ```console
 
@@ -176,13 +176,13 @@ TCP: Window = 8760 (0x2238)
 
 ```
 
-### Terminating a Connection
+### Ending a connection
 
-Although the three-way handshake only requires three packets to be transmitted over our networked media, the termination of this reliable connection will necessitate the transmission of four packets. Because a TCP connection is full-duplex (that is, data can be flowing in each direction independent of the other), each direction must be terminated independently.
+Although the three-way handshake only requires three packets to be transmitted over our networked media, the termination of this reliable connection needs to transmit four packets. Because a TCP connection is full-duplex (data can flow in each direction independent of the other), each direction must be terminated independently.
 
 Frame 4:
 
-In this session of frames, you see the client sending a FIN that is accompanied by an ACK (TCP .A...F). This segment has two basic functions. First, when the FIN parameter is set, it will inform the server that it has no more data to send. Second, the ACK is essential in identifying the specific connection they have established.
+In this session of frames, you see the client sending a FIN that's accompanied by an ACK (`TCP .A...F`). This segment has two basic functions. First, when the FIN parameter is set, it will inform the server that it has no more data to send. Second, the ACK is essential in identifying the specific connection they've established.
 
 ```console
 
@@ -261,7 +261,7 @@ TCP: Window = 28672 (0x7000)
 
 Frame 6:
 
-After receiving the FIN from the client computer, the server will ACK. Even though TCP has established connections between the two computers, the connections are still independent of one another. Therefore, the server must also transmit a FIN (TCP .A...F) to the client.
+After receiving the FIN from the client computer, the server will ACK. Even though TCP has established connections between the two computers, the connections are still independent of one another. So the server must also transmit a FIN (`TCP .A...F`) to the client.
 
 ```console
 
