@@ -26,3 +26,13 @@ To open the SAML-based single sign-on configuration page:
 1.  Select the application you want to configure for single sign-on.
 1. Once the application loads, select **Single sign-on** from the application’s left-hand navigation menu.
 1. Select SAML-based SSO.
+
+## General troubleshooting
+
+### Problem when customizing the SAML claims sent to an application
+To learn how to customize the SAML attribute claims sent to your application, see [Claims mapping in Azure Active Directory](../develop/active-directory-claims-mapping.md).
+
+### Errors related to misconfigured apps
+Verify both the configurations in the portal match what you have in your app. Specifically, compare Client/Application ID, Reply URLs, Client Secrets/Keys, and App ID URI.
+
+Compare the resource you’re requesting access to in code with the configured permissions in the **Required Resources** tab to make sure you only request resources you’ve configured.
