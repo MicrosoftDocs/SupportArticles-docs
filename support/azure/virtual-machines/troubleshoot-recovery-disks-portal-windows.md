@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot a Windows VM in the Azure portal | Microsoft Docs
 description: Learn how to troubleshoot Windows virtual machine problems in Azure by connecting the OS disk to a recovery VM through the Azure portal.
-services: virtual-machines-windows
+services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 editor: ''
-ms.service: virtual-machines-windows
-
+ms.service: virtual-machines
+ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure

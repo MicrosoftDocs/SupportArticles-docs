@@ -1,14 +1,13 @@
 ---
 title: CRITICAL SERVICE FAILED when booting an Azure VM | Microsoft Docs
 description: Learn how to troubleshoot the "0x0000005A-CRITICAL SERVICE FAILED" error that occurs when booting | Microsoft Docs
-services: virtual-machines-windows
+services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 editor: ''
-
-ms.service: virtual-machines-windows
-
+ms.service: virtual-machines
+ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure

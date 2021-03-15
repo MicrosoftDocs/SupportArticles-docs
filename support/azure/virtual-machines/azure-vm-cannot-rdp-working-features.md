@@ -4,6 +4,8 @@ description: Troubleshoot Azure VM cannot RDP - working on features.
 ms.date: 12/16/2020
 ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.collection: windows
 ---
 
 # Azure VM cannot RDP - working on features
