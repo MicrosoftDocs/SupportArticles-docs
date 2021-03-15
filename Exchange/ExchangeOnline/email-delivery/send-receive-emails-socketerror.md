@@ -20,30 +20,28 @@ appliesto:
 - Exchange Online
 search.appverid: MET150
 ---
-# Mail flow errors caused by TLS 1.0 and TLS 1.1 disablement
+# Can't send or receive emails when using TLS 1.0 or TLS 1.1
 
-## Error 1: 421 4.4.2 Connection dropped due to SocketError
+This issue occurs because Transport Layer Security (TLS) 1.0 and TLS 1.1 protocols are deprecated in Office 365. If Exchange Server (on-premises) uses TLS 1.1 or TLS 1.1, Office 365 users can't send mail to or receive mail from the on-premises server users, and vice versa. Additionally, one of following errors occurs on the mail flow.
+
+## 421 4.4.2 Connection dropped due to SocketError
 
 Users receive this non-delivery report (NDR) when sending email messages. Also, this error message appears in the server's [Queue Viewer](/exchange/mail-flow/queues/queue-viewer).
 
-## Error 2: TLS negotiation failed with error SocketError
+## TLS negotiation failed with error SocketError
 
 This error message appears in the [protocol log](/exchange/mail-flow/connectors/protocol-logging) file of the server's Send connector.
 
-## Error 3: 451 5.7.3 Must issue a STARTTLS command first
+## 451 5.7.3 Must issue a STARTTLS command first
 
-This error message appears in the [protocol log](/exchange/mail-flow/connectors/protocol-logging) file of the Send or Receive connector.
-
-## Cause: TLS 1.0 and TLS 1.1 disablement
-
-Transport Layer Security (TLS) 1.0 and 1.1 protocols are deprecated for Office 365. Office 365 no longer accepts email connections that use TLS 1.0 or TLS 1.1 from external senders. Additionally, Exchange Online no longer uses TLS 1.0 or TLS 1.1 to send outbound email messages.
+This error message appears in the [protocol log](/exchange/mail-flow/connectors/protocol-logging) file of the server's Send or Receive connector.
 
 ## Solution: Enable TLS 1.2
 
+To resolve the errors, enable TLS 1.2 on the on-premises server that sends and receives email messages. Here's how to enable TLS 1.2 by modifying the registry values:
+
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. As a preventive measure, [back up the registry for restoration](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692) before you modify it.
-
-To resolve the errors, enable TLS 1.2 on the server that sends and receive email messages. Here's how to enable TLS 1.2 by modifying the registry values:
 
 1. Install latest Windows and Exchange updates because some Windows and Exchange versions require latest updates for TLS 1.2 to be enabled.
 2. Locate each of the following registry subkeys:
