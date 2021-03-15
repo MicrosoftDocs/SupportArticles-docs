@@ -1,7 +1,7 @@
 ---
 title: Error AADSTS50011 - The reply URL specified in the request does not match the reply URLs configured for the application.
-description: Describes a problem in which you receive an error message when signing in to SAML-based single sign-on configured app that has been configured to use Azure Active Directory as an Identity Provider (IdP).
-ms.date: 03/12/2021
+description: Describes a problem in which you receive an error message when signing in to SAML-based single sign-on configured app that has been configured to use Azure Active Directory as an Identity Provider (IdP). The error you receive is Error AADSTS50011 - The reply URL specified in the request does not match the reply URLs configured for the application.
+ms.date: 03/15/2021
 ms.prod-support-area-path: 
 ms.reviewer: bernawy
 ---

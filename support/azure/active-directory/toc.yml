@@ -5,6 +5,8 @@
   items:
   - name: Troubleshoot signing in to SAML-based single sign-on configured apps
     href: troubleshoot-sign-in-saml-based-apps.md
+  - name: Error AADSTS70001 - app not found in directory
+    href: error-code-AADSTS70001-app-not-found-in-directory.md
   - name: Error AADSTS50011 - reply URL mismatch
     href: error-code-AADSTS50011-reply-url-mismatch.md
 
