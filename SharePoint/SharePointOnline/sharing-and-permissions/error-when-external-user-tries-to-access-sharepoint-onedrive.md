@@ -1,11 +1,11 @@
 ---
 title: Error message when an external user tries to access SharePoint Online or OneDrive for Business
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 8/5/2020
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot

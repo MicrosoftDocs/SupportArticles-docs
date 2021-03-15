@@ -1,8 +1,8 @@
 ---
 title: Quality of Service for Skype for Business/Lync - configuration and best practice guide
 description: Outlines best practices for Quality of Service configurations in Skype for Business and Lync.
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 8/27/2019
 audience: ITPro

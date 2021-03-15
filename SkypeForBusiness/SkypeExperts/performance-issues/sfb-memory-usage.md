@@ -1,6 +1,7 @@
 ---
 title: The Great Skype for Business Memory Mystery
-author: TobyTu
+description: Describes the Great Skype for Business Memory Mystery.
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
