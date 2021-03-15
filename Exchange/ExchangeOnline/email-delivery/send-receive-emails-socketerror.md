@@ -1,6 +1,6 @@
 ---
 title: SocketError when sending/receiving emails
-description: Fixes an issue in which users receive a 421 4.4.2 non-delivery report when sending email messages or admins see the errors on the server. This issue occurs because of the deprecation of Transport Layer Security (TLS) 1.0 and 1.1.
+description: Fixes an issue in which errors occur on the mail flow when sending or receive email messages using Transport Layer Security (TLS) 1.0 or TLS 1.1.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
