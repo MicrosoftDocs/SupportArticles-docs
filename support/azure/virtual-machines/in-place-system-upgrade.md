@@ -51,13 +51,13 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 
 This process requires 45-60 minutes to complete and for the VM to restart. To do the in-place system upgrade, follow these steps:
 
-1. Verify that the Windows 10 VM doesn’t use [Azure Disk Encryption](https://docs.microsoft.com/azure/virtual-machines/windows/disk-encryption-overview) or [Ephemeral OS Disk](https://docs.microsoft.com/azure/virtual-machines/ephemeral-os-disks). These features are currently not supported.
-2. Verify that the Windows 10 VM has at least 2 GB of RAM and 12 GB of free disk space on the system disk.
-3. To prevent data loss, back up the Windows 10 VM by using [Azure Backup](https://docs.microsoft.com/azure/backup/) or a third-party backup solution from [Azure Marketplace Backup & Recovery](https://azuremarketplace.microsoft.com/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
-4. Check whether the backup was successful. To do so, turn off the original Windows 10 VM, and verify that a new VM can be successfully restored from the backup and that all applications are running successfully.
+1. Verify that the Windows 10 VM doesn't use [Azure Disk Encryption](https://docs.microsoft.com/azure/virtual-machines/windows/disk-encryption-overview) or [Ephemeral OS Disk](https://docs.microsoft.com/azure/virtual-machines/ephemeral-os-disks). These features are currently not supported.
+2. Verify that the Windows 10 VM has at least 2 GB of RAM, and 12 GB of free disk space on the system disk.
+3. To prevent data loss, back up the Windows 10 VM by using [Azure Backup](https://docs.microsoft.com/azure/backup/). Or use a third-party backup solution from [Azure Marketplace Backup & Recovery](https://azuremarketplace.microsoft.com/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
+4. Check whether the backup was successful. To do so, turn off the original Windows 10 VM. Verify that a new VM can be successfully restored from the backup, and that all applications are running successfully.
 
    > [!NOTE]
-   > Either the original Windows 10 VM or the restored VM can be used as a source for in-place system upgrade. However, both VMs can’t be running at the same time unless the system name of the VM and the IP addresses on one of the VMs was changed to prevent conflicts.
+   > Either the original Windows 10 VM or the restored VM can be used as a source for in-place system upgrade. But both VMs can’t be running at the same time, unless the system name of the VM and the IP addresses on one of the VMs was changed to prevent conflicts.
 
 5. Connect to the Windows 10 VM, and go to **Settings** > **Updates & Security** > **Windows Update**.
 6. In Windows Update, select **Check for updates**.
@@ -68,7 +68,7 @@ If you have general questions about this procedure, write to [azurevmupgrade@mic
 
 ## Workaround
 
-To work around an Azure VM that’s running a version of the operating system that’s not supported for in-place upgrades, create an Azure VM that's running a supported version, and then either migrate the workload (Method 1, preferred) or download and upgrade the VHD of the VM (Method 2).
+To work around this issue, create an Azure VM that's running a supported version. And then either migrate the workload (Method 1, preferred), or download and upgrade the VHD of the VM (Method 2).
 
 ### Method 1: Deploy a newer system and migrate the workload
 

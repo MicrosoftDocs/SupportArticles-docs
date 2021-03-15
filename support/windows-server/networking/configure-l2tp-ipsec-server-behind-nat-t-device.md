@@ -49,13 +49,13 @@ To create and configure the **AssumeUDPEncapsulationContextOnSendRule** registry
 
    - 0
 
-        A value of 0 (zero) configures Windows so that it can't establish security associations with servers that are located behind NAT devices. It's the default value.
+        It's the default value. When it's set to 0, Windows can't establish security associations with servers located behind NAT devices.
    - 1
 
-        A value of 1 configures Windows so that it can establish security associations with servers that are located behind NAT devices.
+         When it's set to 1, Windows can establish security associations with servers that are located behind NAT devices.
    - 2
 
-        A value of 2 configures Windows so that it can establish security associations when both the server and the Windows Vista or Windows Server 2008-based VPN client computer are behind NAT devices.
+         When it's set to 2, Windows can establish security associations when both the server and VPN client computer (Windows Vista or Windows Server 2008-based) are behind NAT devices.
 
 8. Select **OK**, and then exit Registry Editor.
 9. Restart the computer.
