@@ -15,7 +15,7 @@ ms.technology: windows-server-user-profiles
 keywords: ProfSvc
 ---
 
-# Managing Profile Service Slow Link Detection
+# Managing User Profile Service slow link detection
 
 This article describes how to optimize slow link detection to effectively balance the quality of the bandwidth estimate against the amount of time spent calculating the estimate.
 

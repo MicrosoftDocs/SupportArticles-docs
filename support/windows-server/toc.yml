@@ -2458,6 +2458,8 @@
       href: ./user-profiles-and-logon/create-security-enhanced-redirected-folder.md
     - name: How to delete a user profile
       href: ./user-profiles-and-logon/delete-user-profile.md
+    - name: Managing User Profile Service slow link detection
+      href: ./user-profiles-and-logon/manage-profile-service-slow-link-detection.md
     - name: Logon issues when you enable "Run logon scripts synchronously"
       href: ./user-profiles-and-logon/welcome-screen-displayed-for-30-seconds.md
     - name: Profile loading fails
