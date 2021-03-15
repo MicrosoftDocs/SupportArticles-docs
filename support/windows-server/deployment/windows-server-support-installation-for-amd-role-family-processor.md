@@ -59,7 +59,7 @@ For servers configured to enable 256 processor threads and that are running eith
 2. Disable the x2APIC settings and IOMMU in the BIOS.
 3. Use the OS media to install Windows Server.
 4. Install the latest Windows Server updates.
-5. Restart the system and enable the SMT and the x2APIC settings for Windows Server 2019 in the BIOS.
+5. Restart the system and enable the SMT, x2APIC and IOMMU settings for Windows Server 2019 in the BIOS.
 
 ## Known UI limitations for Windows Server 2012R2/2016 Task Manager, WMI, or PowerShell queries to pull CPU information
 
