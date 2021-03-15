@@ -4,9 +4,9 @@
 - name: App Integration and Development 
   items:
   - name: Troubleshoot signing in to SAML-based single sign-on configured apps
-    items:
-    - name: Error AADSTS50011 - reply URL mismatch
-      href: error-code-AADSTS50011-reply-url-mismatch.md
+    href: troubleshoot-sign-in-saml-based-apps.md
+  - name: Error AADSTS50011 - reply URL mismatch
+    href: error-code-AADSTS50011-reply-url-mismatch.md
 
 - name: Sign-in and Multi-factor authentication
   items:
