@@ -23,7 +23,7 @@ _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Win
 
 ## Summary
 
-Windows User Profile Service uses slow link detection to determine whether to download a roaming user profile to the client computer when the user signs in. If the service determines that the connection to the client computer is slow (or if you disable slow link detection) the client loads the local copy of the roaming user profile, and records the following event:
+Windows User Profile Service uses slow link detection to determine whether to download a roaming user profile to the client computer when the user signs in. If the service determines that the connection to the client computer is slow (or if you disable slow link detection) the client loads the local copy of the roaming user profile. The service also records an event that resembles the following:
 
 > Log Name:      Application  
 > Source:        Microsoft-Windows-User Profiles Service  
@@ -38,24 +38,15 @@ The user might also receive a message that resembles the following:
 
 > Your roaming profile isn't synchronized with the server because a slow network connection is detected. You've been signed in with a local profile.
 
-The default configuration of the slow link detection settings should correctly identify slow links in most deployments. However, if Windows does not appear to be identifying slow links correctly, consider modifying the slow link detection settings. For example, if the User Profile Service determines that a network connection is a fast link but in reality the connection is slow, the user sign-in experience may be unusually slow. The user might see the “Waiting for the User Profile Service” message for an unacceptably long time.
+The default configuration of the slow link detection settings should correctly identify slow links in most deployments. However, if Windows does not appear to identify slow links correctly, consider modifying the slow link detection settings. For example, if the User Profile Service determines that a network connection is a fast link, but in reality the connection is slow, the user sign-in experience may be unusually slow. The user might see the “Waiting for the User Profile Service” message for an unacceptably long time.
 
 ## More information
 
-### Settings that control slow link detection
+### How Windows detects slow links
 
-Windows provides several Group Policy settings that control slow link detection. The following table describes some of the most important of these policies. For more information about using these policies, see [Policy CSP - ADMX_UserProfiles: ADMX_UserProfiles/SlowLinkTimeOut](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-userprofiles#admx-userprofiles-slowlinktimeout).
+When slow link detection is enabled, the User Profile Service uses a temporary file on the server to perform a set of file writes and reads. To calculate the link speed and delay during these operations, the service uses statistics that are measured by the Network Location Awareness (NLA) service.
 
-> [!IMPORTANT]  
-> The policy [**Disable detection of slow network connections**](https://gpsearch.azurewebsites.net/#2571), when enabled, turns off slow link detection. In that case, the policies described in this article are ignored.
-
-|Policy |Purpose |
-| --- | --- |
-|[Control&nbsp;slow&nbsp;network connection timeout for user profiles](https://gpsearch.azurewebsites.net/#2582) |If you enable this policy setting, you can change how long Windows waits for a response from the server before considering the connection to be slow.<br /><br />If you disable or do not configure this policy setting, Windows considers the network connection to be slow if the server returns less than 500 kilobits of data per second or takes 120 milliseconds to respond. |
-|[Wait&nbsp;for&nbsp;remote user profile](https://gpsearch.azurewebsites.net/#2581) |If you enable this policy setting, the system waits for the remote copy of the roaming user profile to load, even when loading is slow.<br />![Checkbox that appears on the sign-in page.](./media/manage-profile-service-slow-link-detection/profile-slow-link-checkbox.png)<br />If you disable this policy setting or do not configure it, when a remote profile is slow to load, the system loads the local copy of the roaming user profile. |
-|[Prompt user when a slow network connection is detected](https://gpsearch.azurewebsites.net/#2572) |If you enable this policy setting, users will be allowed to define whether they want their roaming profile to be downloaded when a slow link with their roaming profile server is detected. |
-
-In addition to the policies, the following registry entry defines **PingBufferSize**, which the slow link detection algorithm uses in its calculations.
+The size of the temporary file is specified by the **PingBufferSize** registry entry. This entry is defined as follows:
 
 - **Subkey:** "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon"  
 - **Value:** "PingBufferSize"  
@@ -67,11 +58,7 @@ In addition to the policies, the following registry entry defines **PingBufferSi
     > [!NOTE]  
     > The maximum value of **PingBufferSize** depends on the version of Windows, as described later in the article.
 
-### Slow link detection process
-
-When slow link detection is enabled, the User Profile Service uses a temporary file on the server to perform a set of file writes and reads. To calculate the link speed and delay during these operations, the service uses statistics that are measured by the Network Location Awareness (NLA) service.
-
-The quality of the estimate depends on the sizing of *PingBufferSize* and how well the metrics of the algorithm match the actual transfer patterns and network topology.
+The quality of the estimate depends on the sizing of **PingBufferSize** and how well the metrics of the algorithm match the actual transfer patterns and network topology.
 
 #### How slow link detection works in older operating systems
 
@@ -93,6 +80,19 @@ The new algorithm uses a different file access pattern. Instead of writing data 
 2. Read the data four times (4 &times; (*PingBufferSize* + 8 KB)).
 
 This algorithm produces more accurate delay and throughput measurements, and the new maximum **PingBufferSize** provides more flexibility. However, if the link is very slow, a large **PingBufferSize** might slow down the algorithm itself to the point where it delays the whole process of downloading the user profile.
+
+#### Settings that control slow link detection
+
+Windows provides several Group Policy settings that control slow link detection. The following table describes some of the most important of these policies. For more information about using these policies, see [Policy CSP - ADMX_UserProfiles: ADMX_UserProfiles/SlowLinkTimeOut](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-userprofiles#admx-userprofiles-slowlinktimeout).
+
+> [!IMPORTANT]  
+> The policy [**Disable detection of slow network connections**](https://gpsearch.azurewebsites.net/#2571), when enabled, turns off slow link detection. In that case, the policies described in this article are ignored.
+
+|Policy |Purpose |
+| --- | --- |
+|[Control&nbsp;slow&nbsp;network connection timeout for user profiles](https://gpsearch.azurewebsites.net/#2582) |If you enable this policy setting, you can change how long Windows waits for a response from the server before it considers the connection to be slow.<br /><br />If you disable or don't configure this policy setting, Windows considers the network connection to be slow if the server returns less than 500 kilobits of data per second or takes 120 milliseconds to respond. |
+|[Wait&nbsp;for&nbsp;remote user profile](https://gpsearch.azurewebsites.net/#2581) |If you enable this policy setting, the system waits for the remote copy of the roaming user profile to load, even if the download speed is slow.<br />![Checkbox that appears on the sign-in page.](./media/manage-profile-service-slow-link-detection/profile-slow-link-checkbox.png)<br />If you disable this policy setting or don't configure it, when a remote profile is slow to download, the system loads the local copy of the roaming user profile. |
+|[Prompt user when a slow network connection is detected](https://gpsearch.azurewebsites.net/#2572) |If you enable this policy setting, users will be allowed to define whether they want their roaming profile to be downloaded when a slow link with their roaming profile server is detected. |
 
 ### Testing the factors that affect profile download speed for your deployment
 
