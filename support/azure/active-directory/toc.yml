@@ -15,6 +15,8 @@
     href: error-code-AADSTS650056-misconfigured-app.md
   - name: Error AADSTS70001 - app not found in directory
     href: error-code-AADSTS70001-app-not-found-in-directory.md
+  - name: Error AADSTS75011 - authentication method mismatch
+    href: error-code-AADSTS75011-auth-method-mismatch.md
   - name: Error AADSTS75005 - not a valid saml request
     href: error-code-AADSTS75005-not-a-valid-saml-request.md
   - name: Error AADSTS750054 - SAML request or response not present
