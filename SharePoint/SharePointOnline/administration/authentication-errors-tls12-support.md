@@ -39,7 +39,7 @@ As previously communicated in the Microsoft 365 Admin Center (for example, commu
 
    **Resolution**
    
-   For more information about how to configure .NET Framework to enable TLS 1.2+, see [Configure for strong cryptography](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client#configure-for-strong-cryptography).
+   For more information about how to configure .NET Framework to enable TLS 1.2+, see [Configure for strong cryptography](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client#configure-for-strong-cryptography).
 
 - **Issue 2**
 
@@ -49,7 +49,7 @@ As previously communicated in the Microsoft 365 Admin Center (for example, commu
 
    **Resolution**
    
-   For more information, see [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](https://docs.microsoft.com/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide).<br/>
+   For more information, see [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide&preserve-view=true).<br/>
 
 - **Issue 3**
 
