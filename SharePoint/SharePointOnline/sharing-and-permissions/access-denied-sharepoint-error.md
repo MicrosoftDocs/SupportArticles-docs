@@ -1,7 +1,7 @@
 ---
 title: SharePoint Online or OneDrive for Business access denied error message 
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 8/5/2020

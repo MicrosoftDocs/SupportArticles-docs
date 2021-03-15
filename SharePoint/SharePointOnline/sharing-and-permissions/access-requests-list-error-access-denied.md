@@ -1,7 +1,7 @@
 ---
 title: Access Denied error when trying to access an "Access Requests" list in SharePoint
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 8/5/2020

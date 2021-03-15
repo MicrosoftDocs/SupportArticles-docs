@@ -1,7 +1,7 @@
 ---
 title: Error in SharePoint "Something went wrong" when configuring SPFx component in a SharePoint Online page
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 4/16/2020
 audience: ITPro

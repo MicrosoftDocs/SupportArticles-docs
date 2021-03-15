@@ -1,7 +1,7 @@
 ---
 title: OneDrive for Business stopped at "Setting up..." screen
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 2/20/2020
 audience: Admin

@@ -1,7 +1,7 @@
 ---
 title: Access Denied message when trying to approve an Approval Workflow task in SharePoint
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 8/5/2020

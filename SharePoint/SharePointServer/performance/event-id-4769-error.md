@@ -1,7 +1,7 @@
 ---
 title: Event ID 4769 errors in SharePoint OnPrem audit log
-ms.author: v-todmc
-author: mccoybot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 8/27/2020
 audience: ITPro

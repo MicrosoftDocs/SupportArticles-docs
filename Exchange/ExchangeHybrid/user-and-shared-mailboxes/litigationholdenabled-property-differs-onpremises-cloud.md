@@ -1,7 +1,7 @@
 ---
 title: LitigationHoldEnabled property differs between on-premises and Exchange Online
 description: After you onboard an on-premises mailbox to Exchange Online, you notice that the LitigationHoldEnabled value for a mailbox does not match.
-author: TobyTu
+author: helenclu
 ms.author: alinastr
 manager: dcscontentpm
 audience: ITPro 

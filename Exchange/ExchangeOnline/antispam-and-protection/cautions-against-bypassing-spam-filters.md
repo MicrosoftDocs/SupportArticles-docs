@@ -5,7 +5,7 @@ author: simonxjx
 audience: ITPro
 ms.service: o365-proplus-itpro
 ms.topic: article
-ms.author: v-zht
+ms.author: luche
 ms.custom: 
 - Exchange Online
 - CSSTroubleshoot

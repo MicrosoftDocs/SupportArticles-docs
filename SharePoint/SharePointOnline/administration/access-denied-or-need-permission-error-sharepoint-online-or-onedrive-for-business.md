@@ -1,7 +1,7 @@
 ---
 title: Access Denied, You need permission to access this site, or User not found in the directory errors in SharePoint Online and OneDrive for Business
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 7/18/2019
