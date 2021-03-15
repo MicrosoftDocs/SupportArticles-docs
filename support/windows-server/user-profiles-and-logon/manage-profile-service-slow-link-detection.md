@@ -42,6 +42,8 @@ The default configuration of the slow link detection settings should correctly i
 
 ## More information
 
+The following sections describe how the slow link detection algorithm works, and recommends a starting point and factors to consider in your own testing and tuning.
+
 ### How Windows detects slow links
 
 When slow link detection is enabled, the User Profile Service uses a temporary file on the server to perform a set of file writes and reads. To calculate the link speed and delay during these operations, the service uses statistics that are measured by the Network Location Awareness (NLA) service.
