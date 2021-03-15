@@ -5,6 +5,8 @@
   items:
   - name: Troubleshoot signing in to SAML-based single sign-on configured apps
     href: troubleshoot-sign-in-saml-based-apps.md
+  - name: Error AADSTS50003 - certificate or key not configured
+    href: error-code-AADSTS50003-cert-or-key-not-configured.md
   - name: Error AADSTS50011 - reply URL mismatch
     href: error-code-AADSTS50011-reply-url-mismatch.md
   - name: Error AADSTS50105 - user not assigned a role
