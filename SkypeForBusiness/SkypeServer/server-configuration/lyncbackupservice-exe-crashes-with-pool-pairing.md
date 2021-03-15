@@ -4,7 +4,7 @@ ms.author: luche
 author: helenclu
 manager: dcscontentpm
 ms.date: 10/4/2019
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal

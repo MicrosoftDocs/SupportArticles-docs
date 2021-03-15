@@ -33,7 +33,7 @@ Typically in this situation, the lookup fails and Outlook eventually performs an
 
 To verify you're experiencing this issue, use [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/) to test the Outlook Autodiscover process, and then search the text in the test results for the "IMAP" text string. Typically, "IMAP" doesn't appear in the test results unless a third-party web server is responding to Autodiscover requests.
 
-For more information about the Autodiscover service, see [How the Autodiscover service works](https://docs.microsoft.com/Exchange/architecture/client-access/autodiscover?redirectedfrom=MSDN&view=exchserver-2019#works).
+For more information about the Autodiscover service, see [How the Autodiscover service works](/Exchange/architecture/client-access/autodiscover?redirectedfrom=MSDN&view=exchserver-2019#works&preserve-view=true).
 
 ## Resolution
 

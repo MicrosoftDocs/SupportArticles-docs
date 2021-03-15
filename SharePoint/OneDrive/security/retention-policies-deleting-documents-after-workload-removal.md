@@ -5,7 +5,7 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 06/10/2020
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.prod: onedrive
 ms.custom: 

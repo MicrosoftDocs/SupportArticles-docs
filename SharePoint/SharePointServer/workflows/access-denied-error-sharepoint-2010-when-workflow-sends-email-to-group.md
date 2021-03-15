@@ -4,7 +4,7 @@ ms.author: luche
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: sharepoint-powershell
 ms.custom: CSSTroubleshoot

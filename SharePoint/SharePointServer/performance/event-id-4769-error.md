@@ -68,7 +68,7 @@ This action takes effect immediately. No other administrative action is required
 
 Setting a non-existent SPN is a common, safe practice recommended in scenarios where a nonfunctional SPN is needed. 
 
-For more information about this, see [Example deployment of KCD with Office Online Server and Analysis Services](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-analysis-services-and-kerberos-constrained-delegation-kcd?view=asallproducts-allversions#example-deployment-of-kcd-with-office-online-server-and-analysis-services). 
+For more information about this, see [Example deployment of KCD with Office Online Server and Analysis Services](/analysis-services/instances/install-windows/configure-analysis-services-and-kerberos-constrained-delegation-kcd?view=asallproducts-allversions#example-deployment-of-kcd-with-office-online-server-and-analysis-services&preserve-view=true). 
 
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

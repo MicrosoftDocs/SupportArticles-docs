@@ -5,7 +5,7 @@ author: helenclu
 ms.author: gabesl
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: article 
+ms.topic: article
 ms.prod: office 365
 localization_priority: Normal
 ms.custom: 

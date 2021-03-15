@@ -24,7 +24,7 @@ appliesto:
 
 Assume that you deploy Microsoft Exchange Server 2013 or Exchange Server 2016 on Windows Server 2012 R2. The Exchange Management Shell fails to start, and you receive an error message that resembles the following:
 
-```
+```powershell
 VERBOSE: Connecting to Exch1.contoso.com.
 New-PSSession : Cannot find path '' because it does not exist.
 At line:1 char:1
@@ -44,7 +44,7 @@ The issue happens if Windows Management Framework (WMF) 5.0 is installed on the 
     $PSVersionTable
     ```
 
-2. If the PSVersion displays 5.0, you have WMF 5.0 installed on the server.
+2. If the Version displays 5.0, you have WMF 5.0 installed on the server.
 
 ## Resolution
 

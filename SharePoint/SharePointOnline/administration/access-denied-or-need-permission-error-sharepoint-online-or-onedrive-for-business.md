@@ -5,7 +5,7 @@ author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 7/18/2019
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: sharepoint-online
 ms.custom: CSSTroubleshoot

@@ -2,9 +2,9 @@
 title: Error (You're missing out) when signing in Teams
 description: Describes an issue in which an error (You're missing out) occurs when you sign in Teams
 author: helenclu
-ms.author: clake
+ms.author: luche
 manager: dcscontentpm
-audience: ITPro 
+audience: ITPro
 ms.topic: article 
 ms.service: o365-proplus-itpro
 localization_priority: Normal

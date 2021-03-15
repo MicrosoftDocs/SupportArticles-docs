@@ -5,6 +5,7 @@ author: helenclu
 ms.author: corbinm
 manager: dcscontentpm
 localization_priority: Normal
+audience: Admin
 search.appverid: 
 - MET150
 ms.prod: skype-for-business-itpro

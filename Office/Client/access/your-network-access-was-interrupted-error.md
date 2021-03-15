@@ -27,7 +27,7 @@ description: Describes how to resolve an error where the connection is dropped w
 ## Symptoms
 When opening Access from a mapped drive, using linked tables mapped to a drive, or executing VBA code based on mapped drive locations, you get the error "Your network access was interrupted. To continue, close the database, and then open it again." 
 
-![your-network-access-was-interrupted-error.png](media/your-network-access-was-interrupted-error.png)
+![your network access was interrupted](media/your-network-access-was-interrupted-error.png)
 
 ## Cause
 Access requires a fast and stable network connection when opening databases over a local area network. There are two common causes using mapped drives which may result in an interruption to the network connection:

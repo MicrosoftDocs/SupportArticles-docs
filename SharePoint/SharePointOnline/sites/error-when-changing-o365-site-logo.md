@@ -52,9 +52,9 @@ To resolve this issue, try one of the following workarounds:
 Listed below are other recommendations that may help resolve the issue.
 
 1. To make changes to the logo, title, description, and other settings, you must have owner or designer permissions on the SharePoint site. For more information, see [Manage site permissions](https://support.office.com/article/manage-your-sharepoint-site-settings-8376034d-d0c7-446e-9178-6ab51c58df42?ui=en-US&rs=en-US&ad=US#__bkmkmngsitepermissions).
-2. Make sure the O365 group property "HiddenFromAddressListsEnabled" is not set to True. Exchange or Global administrators should use [Set-UnifiedGroup](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/set-unifiedgroup?view=exchange-ps) to set HiddenFromAddressListsEnabled to False.
+2. Make sure the O365 group property "HiddenFromAddressListsEnabled" is not set to True. Exchange or Global administrators should use [Set-UnifiedGroup](/powershell/module/exchange/users-and-groups/set-unifiedgroup?view=exchange-ps&preserve-view=true) to set HiddenFromAddressListsEnabled to False.
 3. Make sure that Address Book Policies (ABP) are set on the group mailbox. Check with your Exchange admins if [Removing an address book policy](https://docs.microsoft.com/exchange/address-books/address-book-policies/remove-an-address-book-policy) for a group mailbox is an option. 
-4. If the O365 group is deleted but the SharePoint site still exists, the Site Information Panel might show a spinning icon. If so, [restore the O365 group from the recycle bin](https://docs.microsoft.com/microsoft-365/admin/create-groups/restore-deleted-group?view=o365-worldwide) if it was deleted within the past 30 days. 
+4. If the O365 group is deleted but the SharePoint site still exists, the Site Information Panel might show a spinning icon. If so, [restore the O365 group from the recycle bin](/microsoft-365/admin/create-groups/restore-deleted-group?view=o365-worldwide&preserve-view=true) if it was deleted within the past 30 days. 
 
 For more information, see [Manage your SharePoint site settings](https://support.office.com/article/manage-your-sharepoint-site-settings-8376034d-d0c7-446e-9178-6ab51c58df42?ui=en-US&rs=en-US&ad=US).
 

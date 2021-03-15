@@ -17,7 +17,7 @@ ms.custom:
 - CI 115576
 - CSSTroubleshoot 
 ms.reviewer: lucaband 
-description: Explains why you receive the error "Something went wrong" when configuring an SPFx component on a page in SharePoint Online.
+description: Describes the "Something went wrong" error when configuring an SPFx component on a page in SharePoint Online.
 ---
 
 # "Something went wrong" error configuring SPFx component in a SharePoint Online page
