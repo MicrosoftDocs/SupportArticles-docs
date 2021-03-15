@@ -514,7 +514,7 @@
     - name: Public folder meetings cannot be modified in OWA
       href: /exchange/troubleshoot/calendars/public-folder-meetings-not-modified-in-owa?context=/exchange/troubleshoot/context/server-context
     - name: Public folder migration failed to recopy large item
-      href: ../public-folders/public-folder-migration-failed-recopy-large-item.md
+      href: ../public-folders/large-items-skipped.md
     - name: Public folder migration stops at 95%
       href: ../public-folders/public-folder-migration-fails.md
     - name: Troubleshoot public folder replication issues
