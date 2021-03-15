@@ -1,7 +1,7 @@
 ---
 title: User Impersonation messages are classified as phishing but not as user impersonation
 description: This article describes an issue that User Impersonation messages are classified as phishing, provides a workaround.
-author: TobyTu
+author: helenclu
 audience: ITPro
 ms.prod: office 365
 ms.topic: troubleshooting

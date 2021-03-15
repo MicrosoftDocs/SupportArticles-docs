@@ -1,7 +1,7 @@
 ---
 title: Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive
-ms.author: v-todmc
-author: mccoybot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 8/28/2020
 audience: Admin
@@ -43,8 +43,8 @@ Diagnostic capabilities first appeared within the M365 Admin Center support port
 
 There are currently nine diagnostics covering various areas within Sharepoint and OneDrive. Each diagnostic is listed below with a brief description of its function and shortcut command:
 
-| Diagnostic | Description | Shortcut cmd |
-| --- | --- | -- |
+| Diagnostic | Description | Shortcut cmd | Support Article |
+| --- | --- | -- | -- |
 | **External sharing** | Diagnose issues with sharing, such as determining why external users are unable to access content. | Diag: External Sharing |
 | **OneDrive provisioning** | Diagnose issues that may occur during the provisioning of a OneDrive site collection. | Diag: OneDrive Provisioning |
 | **Site and page performance** | Diagnose why a site or page may be loading slowly. | Diag: SharePoint Site and Page Performance |
@@ -55,7 +55,9 @@ There are currently nine diagnostics covering various areas within Sharepoint an
 | **Modernization** | Evaluates whether a view can be rendered in Modern mode. | Diag: Classic View to Modern |
 | **Access denied to a site or the web** |  Diagnose permission-related issues when accessing a site or the web. | Diag: Access Denied to Site |
 | **Unable to synchronize OneDrive with a sync client** | Validates that the OneDrive library can be synchronized via the sync client. | Diag: OneDrive Sync |
-| **Unable to synchronize a SharePoint Document Library with sync client** |   Validates that the SharePoint document library is configured properly to allow synchronization of files. | Diag: Library Sync |
+| **Unable to synchronize a SharePoint Document Library with sync client** |  Validates that the SharePoint document library is configured properly to allow synchronization of files. | Diag: Library Sync |
+| **Access Denied due to organizational policies** |  If you are an administrator, and you have locked yourself out of SharePoint and OneDrive because of a location-based policy this diagnostic can unlock you. | Diag: Access Denied due to Network Location Restriction |[Access Denied due to organizational policies](https://docs.microsoft.com/sharepoint/troubleshoot/sharing-and-permissions/access-denied-due-to-org-policies)
+| **Invalid retention hold** | This diagnostic can be used to detect and remove an invalid retention hold that may be blocking an administrator from deleting a site.  | Diag: Invalid retention policy |[A compliance policy is currently blocking this site deletion](https://docs.microsoft.com/sharepoint/troubleshoot/sites/compliance-policy-blocking-site-deletion)
 
 ### How do I run these diagnostics?
 

@@ -1,7 +1,7 @@
 ---
 title: Install and maintain SaRA tool from a network share
 description: Learn how to install SaRA from a network share and update the SaRA files so that SaRA installations use the latest files.
-author: McCoyBot
+author: helenclu
 ms.author: v-maqiu
 manager: dcscontentpm 
 audience: ITPro 

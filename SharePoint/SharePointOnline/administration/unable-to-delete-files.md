@@ -1,7 +1,7 @@
 ---
 title: Unable to delete items in SharePoint and OneDrive
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 02/10/2020
 audience: ITPro

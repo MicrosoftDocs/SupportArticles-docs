@@ -1,7 +1,7 @@
 ---
 title: How to enable Microsoft 365 Apps for enterprise ULS logging
 description: There are times during troubleshooting an Office issue when the traditional log settings are not gathering enough information. This article describes how to collect more verbose logging details. 
-author: McCoyBot
+author: helenclu
 manager: dcscontentpm
 ms.date: 01/31/2020
 localization_priority: Normal

@@ -1,7 +1,7 @@
 ---
 title: Can't read encrypted or restricted message sent to shared mailbox in Outlook
 description: Provide two workarounds to an issue in which a user who was granted Full Access permission to a shared mailbox can't read encrypted or restricted message sent to the shared mailbox in Outlook.
-author: TobyTu
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

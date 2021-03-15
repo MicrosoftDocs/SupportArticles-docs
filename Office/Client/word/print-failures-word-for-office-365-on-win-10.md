@@ -1,7 +1,7 @@
 ---
 title: How to troubleshoot printing failures in Word for O365 on Windows 10
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 3/4/2020
 audience: Admin

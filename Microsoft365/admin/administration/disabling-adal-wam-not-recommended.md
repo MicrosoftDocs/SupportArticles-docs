@@ -1,7 +1,7 @@
 ---
 title: Disabling ADAL or WAM to fix Office sign-in or activation issues not recommended
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 4/24/2020
 audience: Admin
