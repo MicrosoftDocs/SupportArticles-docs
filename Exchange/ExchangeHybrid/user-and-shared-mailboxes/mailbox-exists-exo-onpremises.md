@@ -1,7 +1,7 @@
 ---
 title: How to recover when a mailbox exists in both Exchange Online and on-premises
 description: This article describes an issue in which a mailbox that exists in both Exchange Online and on-premises. Provides two solutions.
-author: TobyTu
+author: helenclu
 ms.author: benwinz
 manager: dcscontentpm
 audience: ITPro 

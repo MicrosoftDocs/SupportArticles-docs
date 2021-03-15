@@ -1,7 +1,7 @@
 ---
 title: How to activate guest users in the Microsoft Teams admin center
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 04/28/2020
 audience: Admin

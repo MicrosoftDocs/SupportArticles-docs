@@ -1,7 +1,7 @@
 ---
 title: Office file previews in Windows Explorer may not show after switching from 64-bit Office to 32-bit Office
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 02/13/2020
 audience: ITPro

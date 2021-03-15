@@ -1,7 +1,7 @@
 ---
 title: Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive
-ms.author: v-todmc
-author: mccoybot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 8/28/2020
 audience: Admin

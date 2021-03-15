@@ -1,7 +1,7 @@
 ---
 title: You receive an error when copying MSG email files in Outlook that contain multiple attachments or recipients
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 2/26/2020
 audience: Admin

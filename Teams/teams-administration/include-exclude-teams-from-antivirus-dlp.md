@@ -1,10 +1,10 @@
 ---
 title: How to include or exclude Teams from antivirus or DLP applications
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 9/9/2019
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: msteams
 localization_priority: Normal
