@@ -19,6 +19,8 @@
     href: error-code-AADSTS75005-not-a-valid-saml-request.md
   - name: Error AADSTS750054 - SAML request or response not present
     href: error-code-AADSTS750054-saml-request-not-present.md
+  - name: User redirected to incorrect reply URL or localhost
+    href: reply-url-redirected-to-localhost.md
 
 - name: Sign-in and Multi-factor authentication
   items:
