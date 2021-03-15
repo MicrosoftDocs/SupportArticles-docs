@@ -25,9 +25,14 @@ _Original KB number:_ &nbsp; 926179
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
-By default, Windows Vista and the Windows Server 2008 don't support Internet Protocol security (IPsec) network address translation (NAT) Traversal (NAT-T) security associations to servers that are located behind a NAT device. If the virtual private network (VPN) server is behind a NAT device, a Windows Vista or Windows Server 2008-based VPN client computer can't make a Layer 2 Tunneling Protocol (L2TP)/IPsec connection to the VPN server. This scenario includes VPN servers that are running Windows Server 2008 and Microsoft Windows Server 2003.
+By default, Windows Vista and Windows Server 2008 don't support Internet Protocol security (IPsec) network address translation (NAT) Traversal (NAT-T) security associations to servers that are located behind a NAT device. If the virtual private network (VPN) server is behind a NAT device, a Windows Vista or Windows Server 2008-based VPN client computer can't make a Layer 2 Tunneling Protocol (L2TP)/IPsec connection to the VPN server. This scenario includes VPN servers that are running Windows Server 2008 and Windows Server 2003.
 
-Because of the way in which NAT devices translate network traffic, you may experience unexpected results when you put a server behind a NAT device and then use an IPsec NAT-T environment. If you must have IPsec for communication, we recommend that you use public IP addresses for all servers that you can connect to from the Internet. If you must put a server behind a NAT device, and then use an IPsec NAT-T environment, you can enable communication by changing a registry value on the VPN client computer and the VPN server.
+Because of the way in which NAT devices translate network traffic, you may experience unexpected results in the following scenario:
+
+- You put a server behind a NAT device.
+- You use an IPsec NAT-T environment.
+
+If you must use IPsec for communication, use public IP addresses for all servers that you can connect to from the Internet. If you must put a server behind a NAT device, and then use an IPsec NAT-T environment, you can enable communication by changing a registry value on the VPN client computer and the VPN server.
 
 ## Set AssumeUDPEncapsulationContextOnSendRule registry key
 
