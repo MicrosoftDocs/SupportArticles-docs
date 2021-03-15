@@ -32,10 +32,6 @@ Alternately, it may be caused by a control configuration that isn't used for an
 
 :::image type="content" source="media/uci-dashboard-does-not-load/unused-editable-grid.png" alt-text="Unused subgrid custom control configuration.":::
 
-This issue was tracked by the following work item:
-
-- [Bug 1791995: Custom controls don't render on dashboards if they're not defined for every form factor](https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/1791995).
-
 ## Resolution
 
 The bug is fixed in the 2004.3 release. However, customers can work around the issue sooner by adding a control configuration for all form factors.
