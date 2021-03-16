@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 293781
 
 ## Summary
 
-As part of a public key infrastructure (PKI) trust management procedure, some administrators may decide to remove trusted root certificates from a Windows-based domain, server, or client. However, the root certificates that are listed in the [Necessary and trusted root certificates](#necessary-and-trusted-root-certificates) section in this article are required for the operating system to operate correctly. Removal of the following certificates may limit functionality of the operating system, or may cause the computer to fail. You shouldn't remove them.
+As part of a public key infrastructure (PKI) trust management procedure, some administrators may decide to remove trusted root certificates from a Windows-based domain, server, or client. However, the root certificates that are listed in the [Necessary and trusted root certificates](#necessary-and-trusted-root-certificates) section in this article are required for the operating system to operate correctly. Removal of the following certificates may limit functionality of the operating system, or may cause the computer to fail. Don't remove them.
 
 ## Necessary and trusted root certificates
 

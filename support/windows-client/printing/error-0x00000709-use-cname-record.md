@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 2546625
 Consider the following scenario:
 
 - You have printers that are hosted on a system that is running Windows Server 2008 R2.
-- You must provide an alternative UNC path for the print server. And you decide to do so by using a CNAME (alias) resource record in DNS.
+- You provide an alternative UNC path for the print server. And you decide to do so by using a CNAME (alias) resource record in DNS.
 - Clients try to connect to the printers by using the CNAME record in the UNC path.
 
 In this scenario, clients can't connect to the printers if they use the CNAME record in the UNC path. Besides, attempts to connect to the shared printers fail with the following error:
@@ -55,7 +55,7 @@ To work around this issue, follow these steps on the print server, and then rest
     > [!NOTE]
     > The Hosts file entry must be entered as a NetBIOS name instead of as an FQDN.
 
-The following example is for illustration only. You must use names and IP addresses that are valid for your network.
+The following example is for illustration only. Use names and IP addresses that are valid for your network.
 
 Use NetBIOS name: 192.168.0.10 CNAME
 
