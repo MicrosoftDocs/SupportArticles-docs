@@ -1,7 +1,7 @@
 ---
 title: Enable or disable a firewall rule on a guest OS in Azure VM | Microsoft Docs
 description: Learn how to use online or offline remote tools or registry settings to enable or disable guest OS firewall rules on a remote Azure VM.
-services: virtual-machines-windows
+services: virtual-machines
 documentationcenter: ''
 author: Deland-Han
 manager: dcscontentpm
@@ -10,6 +10,7 @@ tags: ''
 
 ms.service: virtual-machines
 ms.topic: troubleshooting
+ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli

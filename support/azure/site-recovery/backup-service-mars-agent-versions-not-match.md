@@ -5,7 +5,7 @@ ms.date: 08/14/2020
 ms.prod-support-area-path: 
 ms.service: backup
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Azure Backup service version and Microsoft Azure Recovery Services Agent versions do not match

@@ -17,8 +17,6 @@ When large page sizes are configured for virtual memory allocations and/or when 
 > [!NOTE]
 > VAD-spanning can occur if memory management facilities such as heap managers and/or garbage collectors request contiguous virtual address ranges(each of which has its own VAD), but attempts to use them as a single block of memory.
 
-- [CheckBitmapBits function](/previous-versions/windows/desktop/wcs/checkbitmapbits)
-- [CreateColorTransform function](/previous-versions/windows/desktop/wcs/createcolortransform)
 - [SetDIBitsToDevice function](/windows/win32/api/wingdi/nf-wingdi-setdibitstodevice)
 - [StretchDIBits function](/windows/win32/api/wingdi/nf-wingdi-stretchdibits)
 - [GetBitmapBits function](/windows/win32/api/wingdi/nf-wingdi-getbitmapbits)

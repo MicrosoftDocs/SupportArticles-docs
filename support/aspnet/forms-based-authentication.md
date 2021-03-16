@@ -16,9 +16,6 @@ This article demonstrates how to implement forms-based authentication by using a
 _Original product version:_ &nbsp; ASP.NET  
 _Original KB number:_ &nbsp; 301240
 
-> [!NOTE]
-> For a Visual Basic .NET version of this article, see [How To Implement Forms-Based Authentication in Your ASP.NET Application by Using Visual Basic .NET](https://support.microsoft.com/help/308157).
-
 ## Requirements
 
 The following list outlines the recommended hardware, software, network infrastructure, and service packs that you need:

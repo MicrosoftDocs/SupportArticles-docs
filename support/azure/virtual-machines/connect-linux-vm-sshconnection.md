@@ -4,6 +4,8 @@ description: Resolves an issue in which SSH fails because the /var/empty/sshd fi
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: vilibert, vilibert, ramakk
+ms.service: virtual-machines
+ms.collection: linux
 ---
 # Can't connect a Linux VM using SSH connection
 

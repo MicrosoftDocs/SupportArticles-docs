@@ -251,7 +251,7 @@ Function FindSiteIndex(collection, siteName)
 End Function
 
 'Find the index of the application pool on this node
-Function FindAppPoolIndeS(collection, appPoolName)
+Function FindAppPoolIndex(collection, appPoolName)
     Dim i
     FindAppPoolIndex = -1
 

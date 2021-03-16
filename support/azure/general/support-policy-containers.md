@@ -6,7 +6,7 @@ ms.prod-support-area-path:
 ms.reviewer: 
 ms.service: container-service
 ms.author: genli
-author: genli
+author: genlin
 ---
 # Support policy for containers and related services on Azure
 

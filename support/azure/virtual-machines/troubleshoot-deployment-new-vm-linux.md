@@ -1,17 +1,16 @@
 ---
 title: Troubleshoot Linux VM deployment| Microsoft Docs
 description: Troubleshoot Resource Manager deployment issues when you create a new Linux virtual machine in Azure
-services: virtual-machines-linux, azure-resource-manager
+services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: v-miegge
 manager: dcscontentpm
 editor: ''
 tags: top-support-issue, azure-resource-manager
-
-ms.service: virtual-machines-linux
+ms.service: virtual-machines
+ms.collection: linux
 ms.workload: na
 ms.tgt_pltfrm: vm-linux
-
 ms.topic: troubleshooting
 ms.date: 03/03/2021
 ms.author: danis

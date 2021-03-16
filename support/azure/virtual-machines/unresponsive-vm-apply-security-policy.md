@@ -1,13 +1,14 @@
 ---
 title: Azure VM is unresponsive while applying Security Policy to the system
 description: This article provides steps to resolve issues where the load screen is stuck when VM is unresponsive while applying security policy to the system in an Azure VM.
-services: virtual-machines-windows
+services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 editor: ''
 tags: azure-resource-manager
-ms.service: virtual-machines-windows
+ms.service: virtual-machines
+ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
