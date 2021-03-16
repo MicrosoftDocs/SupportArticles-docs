@@ -229,7 +229,7 @@ Basically, the cause and resolution steps for replication error status 8614 appl
 
     | Syntax| Online help (Windows Server 2008 and later)|Enable on a single DC|Enable on all DCs in forest|Enable on all GCs in forest|
     |---|---|---|---|---|
-    | `repadmin /regkey <DSA_LIST> <{+|-}key> [value [/reg_sz]`]| `Repadmin /help:regkey` || `repadmin /regkey <fully qualified computer name> +strict` | `repadmin /regkey * +strict` | `repadmin /regkey gc: +strict` |
+    | `repadmin /regkey <DSA_LIST> <{+|-}key> [value [/reg_sz]`]| `Repadmin /help:regkey` | `repadmin /regkey <fully qualified computer name> +strict` | `repadmin /regkey * +strict` | `repadmin /regkey gc: +strict` |
     ||||||
 
 7. Set **Allow replication with divergent and corrupt partner** to 1 on the 8614 DC.
