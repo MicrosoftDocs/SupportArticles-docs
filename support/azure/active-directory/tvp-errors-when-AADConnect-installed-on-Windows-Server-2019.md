@@ -82,7 +82,7 @@ To change the setting, follow these steps:
 
 5. Select **OK**, and then restart the server.
 
-:::image type="content" source="media/tvp-errors-aadconnect-ws19/region-settings-unicode.png" alt-text="Screenshot of region language settings with the option selected to use Unicode U T F 8 for worldwide language support .":::
+     :::image type="content" source="media/tvp-errors-aadconnect-ws19/region-settings-unicode.png" alt-text="Screenshot of region language settings with the option selected to use Unicode U T F 8 for worldwide language support .":::
 
 ## More information
 
