@@ -63,7 +63,7 @@ To start the Windows Time service at system startup, use any of the following me
 
 - Method 2  
 
-    Run the `sc triggerinfo w32time start/networkon stop/networkoff` command to define a trigger event that suits your environment. In this example, the command determines whether an IP address is given to a host, and then it starts or stops the service.
+    Run the `sc triggerinfo w32time start/networkon stop/networkoff` command to define a trigger event that suits your environment. In this example, the command determines whether an IP address is given to a host. Then it starts or stops the service.
 
 - Method 3  
 
@@ -80,4 +80,4 @@ To start the Windows Time service at system startup, use any of the following me
 
 ## More information
 
-The Windows Time service on a workgroup computer isn't started automatically at system startup by the Trigger-Start service. However, the Windows Time service is started by the Time Synchronization setting that's registered on the Task Scheduler Library at 01:00 a.m. every Sunday for Time Synchronization. So the default setting can be kept as it is.
+The Windows Time service on a workgroup computer isn't started automatically at system startup by the Trigger-Start service. However, the Windows Time service is started by the Time Synchronization setting. The setting is registered on the Task Scheduler Library at 01:00 a.m. every Sunday for Time Synchronization. So the default setting can be kept as it is.

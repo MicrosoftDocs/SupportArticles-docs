@@ -263,9 +263,9 @@ Basically, the cause and resolution steps for replication error status 8614 appl
 
     Monitor end-to-end replication in your Active Directory forest daily by using an Active Directory monitoring application. One inexpensive but effective option is to run `repadmin /showrepl * /csv` and then parse the results in Excel. (See [Method 2: Monitor replication by using a command line](information-lingering-objects.md#method-2-monitor-replication-by-using-a-command-line-command).)
 
-    Identify DCs that are approaching replication failures for 50 percent and for 90 percent of tombstone lifetime, and put them on a watch list. At 50 percent of TSL, make a strong push to resolve replication errors. At 90 percent, consider demoting DCs that are causing replication errors. If it's necessary, use the `dcpromo /forceremoval` command.
+    Identify DCs that are approaching replication failures for 50 percent and for 90 percent of tombstone lifetime. Then put them on a watch list. At 50 percent of TSL, make a strong push to resolve replication errors. At 90 percent, consider demoting DCs that are causing replication errors. If it's necessary, use the `dcpromo /forceremoval` command.
 
-    Again, replication errors that are logged on a destination DC may be caused by a problem on one of the following conditions:
+    Again, replication errors that are logged on a destination DC may be caused by a problem on:
 
     - The source DC
     - The destination DC
