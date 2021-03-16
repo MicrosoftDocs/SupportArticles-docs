@@ -1,14 +1,14 @@
 ---
 title: Performance diagnostics for Azure virtual machines| Microsoft Docs
 description: Introduces Azure Performance Diagnostics for Windows.
-services: virtual-machines-windows
+services: virtual-machines
 documentationcenter: ''
 author: anandhms
 manager: dcscontentpm
 editor: przlplx
 tags: ''
-
-ms.service: virtual-machines-windows
+ms.service: virtual-machines
+ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 

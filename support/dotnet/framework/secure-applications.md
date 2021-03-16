@@ -58,8 +58,6 @@ There are many ways to increase the security of ASP.NET web applications and web
 
 New Technology File System (NTFS) file permissions continue to be an important layer of security for web applications. ASP.NET applications include many more file types than previous web application environments. The files that anonymous user accounts must have access to isn't obvious.
 
-For additional information about the minimum file permissions that common ASP.NET file types must have, visit [HOW TO: Configure NTFS File Permissions for Security of ASP.NET Applications](https://support.microsoft.com/help/815153).
-
 ## Configure SQL Server security for applications that are built on the .NET Framework
 
 By default, SQL Server doesn't grant users the ability to query or update databases. This rule also applies to ASP.NET applications and the ASPNET user account. To enable ASP.NET applications to gain access to data that is stored in a SQL Server database, the database administrator must grant rights to the ASPNET account.

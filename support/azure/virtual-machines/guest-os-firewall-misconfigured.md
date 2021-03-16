@@ -1,14 +1,14 @@
 ---
 title: Azure VM Guest OS firewall is misconfigured | Microsoft Docs
 description: Learn how to use the Serial Console or offline method to diagnose and fix a misconfigured guest operating system firewall on a remote Azure VM.
-services: virtual-machines-windows
+services: virtual-machines
 documentationcenter: ''
 author: Deland-Han
 manager: dcscontentpm
 editor: ''
 tags: ''
-
 ms.service: virtual-machines
+ms.collection: windows
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows

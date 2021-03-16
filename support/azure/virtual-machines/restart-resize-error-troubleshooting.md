@@ -7,7 +7,6 @@ author: Deland-Han
 manager: dcscontentpm
 editor: ''
 tags: top-support-issue
-
 ms.service: virtual-machines
 ms.topic: troubleshooting
 ms.date: 06/15/2018

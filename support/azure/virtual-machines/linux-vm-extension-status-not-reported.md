@@ -4,6 +4,8 @@ description: Discusses a problem in which the Linux VM extension status is not r
 ms.date: 07/21/2020
 ms.prod-support-area-path: 
 ms.reviewer: danis, danis
+ms.service: virtual-machines
+ms.collection: linux
 ---
 # Linux VM extension status isn't reported after Azure Linux Agent 2.2.19 update
 
