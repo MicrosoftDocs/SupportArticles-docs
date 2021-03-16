@@ -83,6 +83,4 @@ The modified `<sessionState>` element should appear as follows:
 
 ## References
 
-- [Using NET STOP and NET START commands to force IIS services to re-read the registry](https://support.microsoft.com/help/236166)
-
-- [Session State](/previous-versions/dotnet/netframework-1.1/87069683(v=vs.71))
+[Session State](/previous-versions/dotnet/netframework-1.1/87069683(v=vs.71))
