@@ -23,7 +23,7 @@ _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Win
 
 ## Summary
 
-Windows User Profile Service uses slow link detection to determine whether to download a roaming user profile to the client computer when the user signs in. If the service determines that the connection to the client computer is slow (or if you disable slow link detection) the client loads the local copy of the roaming user profile. The service also records an event that resembles the following:
+Windows User Profile Service can use slow link detection to determine whether to download a roaming user profile to the client computer when the user signs in. If the service determines that the connection to the client computer is slow (or if you disable slow link detection) the client skips the download and loads the local copy of the roaming user profile. The service also records an event that resembles the following:
 
 > Log Name:      Application  
 > Source:        Microsoft-Windows-User Profiles Service  
@@ -112,6 +112,8 @@ The following values are the defaults for the [policy and registry settings](#se
 
 We've tested slow link detection by using < 10 Mbit/s broadband links plus VPN, Wi-Fi networks, and LAN connections. This testing shows that a **PingBufferSize** of **1,048,576** (1 MB) provides an effective balance between effectively identifying slow links and delaying the link detection process. We recommend that you use this value to start testing. Depending on your environment, the actual value that you should use might be lower or higher.
 
+To make sure that slow link detection works reliably under a variety of conditions, you should test several combinations of profiles (both full and incremental sync) and network conditions.
+
 #### Network factors to consider
 
 - **Slowest potential speeds**.
@@ -135,6 +137,8 @@ When the user signs in to Windows, the User Profile Service enumerates all of th
 For testing purposes, consider the time needed to download the entire user profile.
 
 Also, consider the largest profile you have. Because the User Profile Service enumerates the files, the "size" of a profile depends both on the number of files and the total amount of data in those files.
+
+Make sure that the user sign-in experience meets the SLA even when doing a full download of the largest profile.
 
 #### Tuning the user profiles
 
