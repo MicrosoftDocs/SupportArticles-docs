@@ -117,7 +117,7 @@ If you have the `SendToBluetooth` add-in installed, your Office programs might b
 
 ## More information
 
-Disclaimer: The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 Below is some additional information related to the `SendToBluetooth` add-in.
 
