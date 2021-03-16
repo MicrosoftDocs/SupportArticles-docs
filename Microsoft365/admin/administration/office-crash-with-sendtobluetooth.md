@@ -149,7 +149,4 @@ HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Visio\Addins
 6. Change the Value data to 0, and then click OK and then close the Registry Editor.   
 7. Start your Office program that was crashing to determine if the registry change has improved the stability of the program.   
 
-
-##  More Information
-
-Disclaimer: The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]

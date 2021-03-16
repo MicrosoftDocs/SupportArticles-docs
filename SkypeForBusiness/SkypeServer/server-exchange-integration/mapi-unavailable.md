@@ -210,6 +210,6 @@ To determine whether your Office installation is Click-to-Run or MSI-based, foll
 |-|-|
 |![The screenshot for Word click to run](./media/mapi-unavailable/click-to-run.png)|![The screenshot for Word MSI](./media/mapi-unavailable/word-msi.png)|
 
-Third-party information disclaimerThe third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
