@@ -215,6 +215,8 @@ To convert files, follow these steps:
 > [!NOTE]
 > You'll use PowerShell SSH to connect to your virtual machine for the remainder of these tutorials.
 
-**Next steps**: Learning the basics of package managers, and installing applications in Linux.
+## Next steps
+
+[Part 1.2 - Linux special directories, elevated users, and package managers](/troubleshoot/aspnetcore/linux-special-directories-users-package-managers)
 
 [!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
