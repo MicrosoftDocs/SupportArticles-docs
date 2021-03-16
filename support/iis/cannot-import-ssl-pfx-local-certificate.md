@@ -1,6 +1,6 @@
 ---
 title: Can't import SSL private key certificate
-description: This article describes a behavior that may occur when you try to import an SSL private key certificate (.pfx) file into the local computer personal certificate store.
+description: An error may occur when you try to import an SSL private key certificate (.pfx) file into the local computer personal certificate store by using Internet Information Services (IIS) Manager.
 ms.date: 03/26/2020
 ms.prod-support-area-path: WWW authentication and authorization
 ms.reviewer: v-jomcc
@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 919074
 
 ## Symptoms
 
-You try to import an SSL .pfx file into the local computer personal certificate store. When you do it, you may experience one of the following symptoms depending on how you try to import the .pfx file:
+You try to import an SSL .pfx file into the local computer personal certificate store. In this situation, you may experience one of the following symptoms, depending on how you try to import the .pfx file:
 
 - If you try to import the .pfx file by using IIS Manager, you receive the following error message:
 
@@ -33,7 +33,7 @@ This behavior occurs when one or more of the following conditions are true:
 
 - You have insufficient permissions to access the `DriveLetter:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys` folder on the computer.
 - A third-party registry sub key exists that prevents IIS from accessing the cryptographic service provider.
-- You're logged on to the computer remotely through a Terminal Services session, and the user profile isn't stored locally on the server that has Terminal Services enabled.
+- You're logged on to the computer remotely through a Terminal Services session. And the user profile isn't stored locally on the server that has Terminal Services enabled.
 
 To resolve this behavior, use one of the following resolutions, as appropriate for your situation.
 

@@ -15,11 +15,7 @@ _Original KB number:_ &nbsp; 2771441
 
 ## Summary
 
-This article applies to Visual Studio 2012 releases. To remove previous pre-release product versions, see the following articles:
-
-- [How to uninstall Visual Studio 11 Beta](https://support.microsoft.com/help/2710678/how-to-uninstall-visual-studio-11-beta)
-- [How to uninstall Visual Studio 11 Developer Preview](https://support.microsoft.com/help/2693272/how-to-uninstall-visual-studio-11-developer-preview)
-- [How to uninstall Visual Studio 2012 Release Candidate](https://support.microsoft.com/help/2744926/how-to-uninstall-visual-studio-2012-release-candidate)
+This article applies to Visual Studio 2012 releases. To remove previous pre-release product versions, see [How to uninstall Visual Studio 2012 Release Candidate](https://support.microsoft.com/help/2744926/how-to-uninstall-visual-studio-2012-release-candidate).
 
 If you want to install the latest Visual Studio 2012 release over the Release Candidate, you do not need to uninstall Visual Studio 2012 Release Candidate because Visual Studio 2012 will be upgraded to the newer version.
 

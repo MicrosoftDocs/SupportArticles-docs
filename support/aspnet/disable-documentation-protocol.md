@@ -47,8 +47,6 @@ To disable the documentation web services protocol for an ASP.NET application, f
 
 ## References
 
-- [HOW TO: Secure an ASP.NET Application Using Client-Side Certificates](https://support.microsoft.com/help/315588)
-
 - [How To Create the Web.config File for an ASP.NET Application](https://support.microsoft.com/help/815179)
 
 - [How To Edit the Configuration of an ASP.NET Application](https://support.microsoft.com/help/815178)
