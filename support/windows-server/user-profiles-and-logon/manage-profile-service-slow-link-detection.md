@@ -38,7 +38,7 @@ The user might also receive a message that resembles the following:
 
 > Your roaming profile isn't synchronized with the server because a slow network connection is detected. You've been signed in with a local profile.
 
-The default configuration of the slow link detection settings should correctly identify slow links in most deployments. However, if Windows does not appear to identify slow links correctly, consider modifying the slow link detection settings. For example, if the User Profile Service determines that a network connection is a fast link, but in reality the connection is slow, the user sign-in experience may be unusually slow. The user might see the “Waiting for the User Profile Service” message for an unacceptably long time.
+The default configuration of the slow link detection settings should correctly identify slow links in most deployments. However, if Windows does not appear to identify slow links correctly, consider modifying the slow link detection settings. For example, if the User Profile Service determines that a network connection is a fast link, but in reality the connection is slow, the user sign-in experience might be unusually slow. The user might see the “Waiting for the User Profile Service” message for an unacceptably long time.
 
 ## More information
 
@@ -110,16 +110,16 @@ The following values are the defaults for the [policy and registry settings](#se
 - **Time to wait**: 120 milliseconds
 - **PingBufferSize**: 65,536 bytes
 
-We've tested slow link detection by using < 10 Mbit/s broadband links plus VPN, Wi-Fi networks, and LAN connections. This testing shows that a **PingBufferSize** of **1,048,576** (1 MB) provides an effective balance between effectively identifying slow links and delaying the link detection process. We recommend that you use this value to start testing. Depending on your environment, the actual value that you should use might be lower or higher.
+We've tested slow link detection by using < 10-Mbit/s broadband links plus VPN, Wi-Fi networks, and LAN connections. This testing shows that a **PingBufferSize** of **1,048,576** (1 MB) provides an effective balance between effectively identifying slow links and delaying the link detection process. We recommend that you use this value to start testing. Depending on your environment, the actual value that you should use might be lower or higher.
 
-To make sure that slow link detection works reliably under a variety of conditions, you should test several combinations of profiles (both full and incremental sync) and network conditions.
+To make sure that slow link detection works reliably under a variety of conditions, test several combinations of profiles (both full and incremental sync) and network conditions.
 
 #### Network factors to consider
 
 - **Slowest potential speeds**.
   Account for the slowest network links that you expect your users to have. Typically, these include mobile carrier connections (such as LTE or UMTS) and home internet connections (such as DSL and cable).
 
-  These networks tend to have asymmetric speeds. They download files at higher speeds than they upload files. By using four times as many reads as writes of the same data, the new slow link detection algorithm is well suited to analyzing asymmetric-speed networks.
+  These networks tend to have asymmetric speeds. They download files at higher speeds than they upload files. Because it uses four times as many reads as writes of the same data, the new slow link detection algorithm is well suited to analyzing asymmetric-speed networks.
 
   > [!NOTE]  
   > When a user signs out of Windows, Windows uploads any profile files that were updated during the user session. A link that has been identified as a fast link may still produce a slow sign-out experience.
