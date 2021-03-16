@@ -186,7 +186,7 @@ To work around this issue in a Click-to-Run version of Skype for Business 2016, 
 
 13. Optional: Use the method that is described in Workaround 1 to examine the new registry value that was created by MFCMapi and verify that it's in the correct Outlook Profile for the affected user.
 
-    ![Outlook profiles screenshot](./media/mapi-unavailable/outlook-profiles-2.png)
+    ![Outlook profiles screenshot 2](./media/mapi-unavailable/outlook-profiles-2.png)
 
 14. Close all MFCMapi windows and Registry Editor, and then test MAPI connectivity. Also, completely log off from Skype, and verify that the program is not running.
 15. Log back on to Skype, wait a minute or two, and then check the Skype configuration. You should now see **MAPI Status** displayed as **OK**.
