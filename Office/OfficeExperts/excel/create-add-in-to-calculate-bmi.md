@@ -22,36 +22,38 @@ appliesto:
 
 # Create An Excel Add-In to Calculate Body Mass Index (BMI)
 
-This article was written by [Raddini Rahayu](https://mvp.microsoft.com/en-us/mvp/raddini%20gusti%20rahayu-4038228), Microsoft MVP.
+This article was written by [Raddini Rahayu](https://mvp.microsoft.com/en-US/mvp/raddini%20gusti%20rahayu-4038228), Microsoft MVP.
 
-## Introduction 
+## Introduction
 
 Excel Add-In is a file that contains code of VBA to adds additional Excel function that doesn't exist in Excel function by default. This file is saved in .xlam format and always loaded when Excel starts up. The additional or custom Excel function can also be called a UDF (User-Defined Function) that is a custom function that is created by user.
 
 In using Add-In, at first you must install it on your computer then it will always be used for all workbook. In this article, you will be shown how to create custom function in the Add-In using VBA code, save file that contains Add-In, install the Add-In, using custom function from Add-In and uninstall the Add-In.
 
-## Case 
+## Case
 
 In this case below, I will share about how to create a custom function to calculate BMI (Body Mass Index).
 
-Body Mass Index is a simple index of weight and height that is commonly used to classify underweight, overweight, and obesity in adults. BMI values ​​are age-independent and same for both sexes. The classifications of BMI are shown in the following table: 
+Body Mass Index is a simple index of weight and height that is commonly used to classify underweight, overweight, and obesity in adults. BMI values ​​are age-independent and same for both sexes. The classifications of BMI are shown in the following table:
 
-![classifications of BMI ](./media/create-add-in-to-calculate-bmi/classifications-of-bmi.png)
+![classifications of BMI](./media/create-add-in-to-calculate-bmi/classifications-of-bmi.png)
 
 The BMI scale used here is only suitable for adults aged 20-65 and here is the calculation:
-![calculation](./media/create-add-in-to-calculate-bmi/calculation.png)
+![calculation screenshot](./media/create-add-in-to-calculate-bmi/calculation.png)
 
-## What To Do 
+## What To Do
 
 ### Step 1: Coding VBA Code
 
 1. Open Microsoft Excel, then press Alt+F11on keyboard, so VBE (Visual Basic Editor) window is displayed.
 
 2. Open a module by selecting Module on Insert menu and write this script:
+
     ```vb
     Function BMI(weight, height) BMI = weight / (height / 100) ^ 2 End Function
     ```
-    ![write-script](./media/create-add-in-to-calculate-bmi/write-script.png)
+
+    ![screenshot of write script](./media/create-add-in-to-calculate-bmi/write-script.png)
 
 3. Close the VBE window and back to Excel. Then save the file with click on Save button or press CTRL+S on your keyboard, so the Save as dialog box is displayed.
 
@@ -61,7 +63,7 @@ The BMI scale used here is only suitable for adults aged 20-65 and here is the c
 
 2. For the file type, choose Excel Add-In (.xlam) format. Then close the workbook.
 
-    ![select file format](./media/create-add-in-to-calculate-bmi/select-xlam-format.png)   
+    ![select file format](./media/create-add-in-to-calculate-bmi/select-xlam-format.png)
 
     > [!NOTE]
     > You can save your Add-In file anywhere you want. But if you want it to be listed on Excel bulit-in, you should save it into the default location. On my computer with Windows 7 operating system, the default location for any versions of Microsoft Excel is:
@@ -80,9 +82,9 @@ Until this step, we have finished creating a custom function that is saved in Ex
 4. On the Add-Insdialog box, find the Add-In that we want installed to (in this case is BMI calculation), make sure the BMI calculation checkbox is unchecked. Then click OK.
 
     ![uncheck BMI calculation option in Excel Options](./media/create-add-in-to-calculate-bmi/uncheck-bmi-calculation.png)
-    
+
     ![uncheck BMI calculation option in Developer tab](./media/create-add-in-to-calculate-bmi/uncheck-bmi-calculation-in-developer-tab.png)
-   
+
     > [!NOTE]
     > This step is applied to the file which is saved in default Add-Ins location. If you want to installing Add-In that is saved in another location, you should click on Browse button in the Add-Ins dialog box. When Browse dialog box is displayed, go to the file location, choose the Add-In file and then click Open.
 
