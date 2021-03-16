@@ -1,215 +1,107 @@
 ---
-title: Issues due to Exchange Server security updates
-description: Works around the issues that occur after you install the security updates for Exchange server.
-author: genlin
-ms.author: meerak
+title: Troubleshooting Azure VM allocation failures | Microsoft Docs
+description: Troubleshoot allocation failures when you create, restart, or resize a VM in Azure
+services: virtual-machines
+documentationcenter: ''
+author: DavidCBerry13
 manager: dcscontentpm
-audience: ITPro
+editor: ''
+tags: top-support-issue,azure-resource-manager,azure-service-management
+
+ms.service: virtual-machines 
 ms.topic: troubleshooting
-ms.prod: exchange-server-it-pro
-localization_priority: Normal
-ms.reviewer: batre; ninob
-ms.custom: 
-- CI 144977
-- Exchange Server
-- CSSTroubleshoot
-search.appverid:
-- MET150
-appliesto:
-- Exchange Server 2019 
-- Exchange Server 2016 
-- Exchange Server 2013
-- Exchange Server 2010 Service Pack 3
+ms.date: 11/06/2020
+ms.author: daberry
+
 ---
+# Troubleshoot allocation failures when you create, restart, or resize VMs in Azure
 
-# Issues due to Exchange Server security updates
+When you create a virtual machine (VM), restart stopped (deallocated) VMs, or resize a VM, Microsoft Azure allocates compute resources to your subscription. We are continually investing in additional infrastructure and features to make sure that we always have all VM types available to support customer demand. However, you may occasionally experience resource allocation failures because of unprecedented growth in demand for Azure services in specific regions. This problem can occur when you try to create or start VMs in a region while the VMs display the following error code and message:
 
-This article provides a list of known issues that users might encounter when installing Cumulative Updates (CUs) and Security Updates (SUs) for the versions of Microsoft Exchange Server specified in the Applies to section.
+**Error code**: AllocationFailed or ZonalAllocationFailed
 
-## Check vulnerabilities and verify the update
-</br>
-<details>
-<summary>Testing for vulnerabilities</summary>
-
-This script automates all four of the commands found in the [Hafnium blog post](https://www.microsoft.com/security/blog/2021/03/02/hafnium-targeting-exchange-servers/). It also has a progress bar and some performance tweaks to make the CVE-2021-26855 test run much faster. You can download the latest script at [Exchange Support GitHub repository](https://github.com/microsoft/CSS-Exchange/tree/main/Security).
-<br/>
-</details>
-
-<details>
-<summary>Customized OWA or .config files</summary>
-
-> [!IMPORTANT]
-> This article applies to clients running Windows 7, Windows Server 2008 R2, and later versions of both operating systems.
-
-When you apply a Cumulative Update (for Exchange Server 2013, 2016 or 2019) or Rollup package (for Exchange Server2010), the update process updates the Outlook on the web files and .config files if required. Any customized Exchange or Internet Information Server (IIS) settings that you made in Exchange XML application configuration files on the Exchange server (for example, web.config files, EdgeTransport.exe.config files, any [customized logon.aspx Outlook on the web files](https://docs.microsoft.com/previous-versions/exchange-server/exchange-140/ee633483(v=exchg.140)?redirectedfrom=MSDN) will be overwritten when you install an Exchange CU. Be sure save this information so you can easily re-apply the settings after the install. After you install the Exchange CU, you need to re-configure these settings.
-</details>
-
-<details>
-<summary>How to verify the installation of Security Updates completed successfully</summary>
-
-### Option 1 (recommended)
-
- Run the [HealthChecker script](https://aka.ms/exchangehealthchecker) and check the Build number.
- 
- ![The image about the result of HealthChecker](./media/exchange-security-update-issues/result-healthchecker.png)
-
-### Option 2
-
-Run the following command and check and make sure if file version is matching with below table:
-
-```
-Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
-```
-
-| Exchange version  | Patched systems file versions  |
-|---|---|
-| Exchange Server 2019  |  For CU7: 15.02.0721.013</br> For CU8: 15.02.0792.010|
-| Exchange Server 2016  |  For CU18: 15.01.2106.013</br>For CU19: 15.01.2176.009|
-| Exchange Server 2013  | For CU23: 15.00.1497.012  |
-
-</details>
-
-## Known issues after installing the security updates
-
-### OWA or ECP 500 errors
-
-**Issue**
-
-OWA and ECP may experience HTTP 500 errors after installation. After providing credentials to log on to OWA/ECP, it may fail with an error similar to:
-
->Could not load file or assembly Microsoft.Exchange.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The system cannot find the file specified.
-
-**Resolution**
-
-If this occurs, run the following scripts to restore the configuration for OWA and ECP.
-The scripts can be found in the folder: \Program Files\Microsoft\Exchange Server\v15\Bin\ directory. (Where “V15“ will be “V14” for Exchange 2010)
-The scripts are located in the following location: \Program Files\Microsoft\Exchange Server\v15\Bin\ directory. Where “V15“ will be “V14” for Exchange 2010.
-
-Run the scripts `.\UpdateCas.ps1` and `.\UpdateConfigFiles.ps1`.
-
-Then go to a command prompt as administrator and run `iisreset`.
-
-If this fails please review and follow the steps in [this Docs article](https://docs.microsoft.com/exchange/troubleshoot/client-connectivity/owa-stops-working-after-update).
-
-### ECP Missing Images
-
-**Issue**
-
-After Security Update installation, OWA or ECP may show missing images similar to the below:
-‎
-
-**Resolution**
-
- The SU was not installed properly. Make sure to always follow the best practice by running the update from an administrative command prompt and then reboot after the application. To mitigate this issue the MSP will need to be uninstalled and reinstalled using the best practices from above.
-
-### The upgrade patch cannot be installed by the Windows Installer service
-
-**Issue**
-
-This error may be seen when installing the Security Update:
-
->The upgrade patch cannot be installed by the Windows Installer service because the program to be upgraded may be missing, or the upgrade patch may update a different version of the program. Verify that the program to be upgraded exists on your computer and that you have the correct upgrade patch.
-
-**Resolution**
-
-This means the Cumulative Update or Security Update version mismatch and it did not meet the requirements. You need to upgrade to the correct Cumulative Update first or validate that you have downloaded the correct Cumulative Update for your intended Cumulative Update.
-
-### Installation fails because service cannot stop properly
-
-**Issue**
-
-The Installation fails because services cannot stop properly.
-
-**Resolution**
-
-Try the best practice to reboot the server first before installing the Cumulative Update or Security Update. Also make sure anti-virus is ruled out (set proper [exclusions](https://docs.microsoft.com/Exchange/antispam-and-antimalware/windows-antivirus-software?view=exchserver-2019&preserve-view=true) or consider turning it off for the time of the installation). In some cases where services still wouldn’t stop/start as expected, try the following steps:
-
-1. Rename the C:\ExchangeSetupLogs folder (such as ExchangeSetupLogs-OLD)
-2. Change the startup type of Exchange services in the services.msc console to Automatic (note: do this only for the Exchange services which were active prior to the setup attempt. POP3 and IMAP4 are stopped by default and only need to run if there are indeed any users who need them).
-3. Run setup again.
-The reason is that setup may get interrupted in a phase where services are already disabled. Starting setup again in this phase may record the “before” state of services as disabled and will try to restore this state.
-
-### Services are not started after Security Update installation is completed
-
-**Issue**
-
-Services are not started after Security Update installation is completed.
-
-**Resolution**
-
-After the application of the security update, you notice that the Exchange services are not starting, check the service state, if they are Disabled, set them to Automatic and start them manually. Please note that the services **MSExchangeIMAP4**, **MSExchangeIMAP4BE**, **MSExchangePOP3** and **MSExchangePOP3BE** are typically disabled by default you can refer to the log `C:\ExchangeSetupLogs\ServiceControl.log` to see what was disabled during setup by searching for Disabling services.
-
-### Error during Setup: Setup encountered a problem while validating the state of Active Directory or Mailbox Server Role Isn’t Installed on this Computer
-
-**Issue**
-
-You receive the following error during Setup: 
-
->Setup encountered a problem while validating the state of Active Directory or Mailbox Server Role Isn’t Installed on this Computer.
-
-**Resolution**
-
-If the above are seen in the setup logs, consider running [Exchange Setup log reviewer script](https://github.com/microsoft/CSS-Exchange/blob/main/Setup/SetupLogReviewer.ps1)This script reviews the ExchangeSetup.log and determines if it is a known issue and reports an action to take to resolve the issue.
-
-Also see `C:\ExchangeSetupLogs\ExchangeSetup.log` for the following error:
-
-"Setup encountered a problem while validating the state of Active Directory: Exchange organization-level objects have not been created, and setup cannot create them because the local computer is not in the same domain and site as the schema master.  Run setup with the /prepareAD parameter on a computer in the domain domainnname and site Default-First-Site-Name, and wait for replication to complete."
-
-If the error exists, then run `.\setup.exe /PrepareAD /IAcceptExchangeServerLicenseTerms` from a machine in the same domain as the schema master (user must be a member of the **Enterprise Admin**, **Domain Admin**, and **Schema Admin**)
-To find the DC that holds the schema master run the following from administrative command prompt on the DC: `netdom query fsmo`.
-
-### Error during install: Creating Native images for .NET assemblies.
-
-**Issue**
-
-When you install this update rollup on a computer that isn’t connected to the internet, you may experience a long installation time. Additionally, you may receive the following message:
-
->Creating Native images for .Net assemblies.
-
-**Resolution** 
-
-This issue is caused by network requests to connect to the following website:
-‎
-[http://crl.microsoft.com/pki/crl/products/CodeSigPCA.crl](http://crl.microsoft.com/pki/crl/products/CodeSigPCA.crl)
-These network requests are attempts to access the certificate revocation list for each assembly that native image generation (Ngen) compiles to native code. However, because the server that’s running Exchange Server isn’t connected to the internet, each request must wait to time out before the process can continue.
-
-To fix this issue, follow these steps:
-
-1. In Internet Explorer, select **Internet Options** on the **Tools** menu, and then select **Advanced**.
-1. In the **Security** section, clear the Check for publisher’s certificate revocation check box, and then select **OK**. 
-    > [!NOTE]
-    > Clear this security option only if the computer is in a tightly-controlled environment.
-1. When the Setup process is finished, select the Check for publisher’s certificate revocation check box again.
-
-### Security Update Installation fails due to previous IU installation
-
-**Issue**
-
-You may see the following error: 
-
->Installation cannot continue. The Setup Wizard has determined that this Interim Update is incompatible with the current Microsoft Exchange Server 2013 Cumulative Update 23 configuration.
-
-**Resolution** 
-
-You need to uninstall the previous installed IU before applying this SU as it is cumulative. You can find previous IU’s in add/remove programs.
-
-## Additional information
-
-### How to install this update for customers who deploy CAS-CAS Proxying - CAS Proxy Deployment Guidance in Exchange 2010
-
-If your scenario meets both the following conditions, apply the update rollup on the internet-facing Client Access servers (CAS) before you apply the update rollup on the non–internet-facing CAS: 
-- You’re a CAS Proxy Deployment Guidance customer.
-- You have deployed [CAS-CAS proxying](https://docs.microsoft.com/previous-versions/exchange-server/exchange-140/bb310763(v=exchg.140)?redirectedfrom=MSDN).
+**Error message**: "Allocation failed. We do not have sufficient capacity for the requested VM size in this region. Read more about improving likelihood of allocation success at https:\//aka.ms/allocation-guidance"
 
 > [!NOTE]
-> For other Exchange Server 2010 configurations, you don’t have to apply the update rollup on your servers in any particular order.
+> If you are troubleshooting a virtual machine scale set (VMSS), the process is the same as a standard VM. To resolve the issue, you should follow the directions in this article.
+> 
+>**Error message**: "Allocation failed. If you are trying to add a new VM to a Virtual Machine Scale Set with a single placement group or update/resize an existing VM in a Virtual Machine Scale Set with a single placement group, please note that such allocation is scoped to a single cluster, and it is possible that the cluster is out of capacity. Please read more about improving likelihood of allocation success at http:\//aka.ms/allocation-guidance."
 
-### How to install this update on a DBCE version of Windows Server 2012
+This article explains the causes of some of the common allocation failures and suggests possible remedies.
 
-You can’t install or uninstall Update Rollup 32 for Exchange Server 2010 SP3 on a double byte character set (DBCS) version of Windows Server 2012 if the language preference for non-Unicode programs is set to the default language. To work around this issue, you must first change this setting. To do this, follow these steps:
+If your Azure issue is not addressed in this article, visit the [Azure forums on MSDN and Stack Overflow](https://azure.microsoft.com/support/forums/). You can post your issue on these forums or to @AzureSupport on Twitter. Also, you can file an Azure support request by selecting Get support on the [Azure support](https://azure.microsoft.com/support/options/) site.
 
-1. In Control Panel, select **Clock, Region and Language**, select **Region**, and then select **Administrative**.
-2. In the **Language for non-Unicode programs** area, select **Change system locale**.
-3. In the **Current system locale** list, select **English (United States)**, and then select **OK**.
+Until your preferred VM type is available in your preferred region, we advise customers who encounter deployment issues to consider the guidance in the following table as a temporary workaround. 
 
-After you successfully install or uninstall Update Rollup 32, revert this language setting, as appropriate.
+Identify the scenario that best matches your case, and then retry the allocation request by using the corresponding suggested workaround to increase the likelihood of allocation success. Alternatively, you can always retry later. This is because enough resources may have been freed in the cluster, region, or zone to accommodate your request. 
+
+
+## Resize a VM or add VMs to an existing availability set
+
+### Cause
+
+A request to resize a VM or add a VM to an existing availability set must be tried at the original cluster that hosts the existing availability set. The requested VM size is supported by the cluster, but the cluster may not currently have sufficient capacity. 
+
+### Workaround
+
+If the VM can be part of a different availability set, create a VM in a different availability set (in the same region). This new VM can then be added to the same virtual network.
+
+Stop (deallocate) all VMs in the same availability set, then restart each one.
+To stop: Click Resource groups > [your resource group] > Resources > [your availability set] > Virtual Machines > [your virtual machine] > Stop.
+After all VMs stop, select the first VM, and then click Start.
+This step makes sure that a new allocation attempt is run and that a new cluster can be selected that has sufficient capacity.
+
+## Restart partially stopped (deallocated) VMs
+
+### Cause
+
+Partial deallocation means that you stopped (deallocated) one or more, but not all, VMs in an availability set. When you deallocate a VM, the associated resources are released. Restarting VMs in a partially deallocated availability set is the same as adding VMs to an existing availability set. Therefore, the allocation request must be tried at the original cluster that hosts the existing availability set that may not have sufficient capacity.
+
+### Workaround
+
+Stop (deallocate) all VMs in the same availability set, then restart each one.
+To stop: Click Resource groups > [your resource group] > Resources > [your availability set] > Virtual Machines > [your virtual machine] > Stop.
+After all VMs stop, select the first VM, and then click Start.
+This will make sure that a new allocation attempt is run and that a new cluster can be selected that has sufficient capacity.
+
+## Restart fully stopped (deallocated) VMs
+
+### Cause
+
+Full deallocation means that you stopped (deallocated) all VMs in an availability set. The allocation request to restart these VMs will target all clusters that support the desired size within the region or zone. Change your allocation request per the suggestions in this article, and retry the request to improve the chance of allocation success. 
+
+### Workaround
+
+If you use older VM series or sizes, such as Dv1, DSv1, Av1, D15v2, or DS15v2, consider moving to newer versions. See these recommendations for specific VM sizes.
+If you don’t have the option to use a different VM size, try deploying to a different region within the same geo. For more information about the available VM sizes in each region at https://aka.ms/azure-regions
+
+If you are using availability zones, try another zone within the region that may have available capacity for the requested VM size.
+
+If your allocation request is large (more than 500 cores), see the guidance in the following sections to break up the request into smaller deployments.
+
+Try [redeploying the VM](./redeploy-to-new-node-windows.md). Redeploying the VM allocates the VM to a new cluster within the region.
+
+## Allocation failures for older VM sizes (Av1, Dv1, DSv1, D15v2, DS15v2, etc.)
+
+As we expand Azure infrastructure, we deploy newer-generation hardware that’s designed to support the latest virtual machine types. Some of the older series VMs do not run on our latest generation infrastructure. For this reason, customers may occasionally experience allocation failures for these legacy SKUs. To avoid this problem, we encourage customers who are using legacy series virtual machines to consider moving to the equivalent newer VMs per the following recommendations: These VMs are optimized for the latest hardware and will let you take advantage of better pricing and performance. 
+
+|Legacy VM-series/size|Recommended newer VM-series/size|More information|
+|----------------------|----------------------------|--------------------|
+|Av1-series|[Av2-series](/azure/virtual-machines/av2-series)|https://azure.microsoft.com/blog/new-av2-series-vm-sizes/
+|Dv1 or DSv1-series (D1 to D5)|[Dv3 or DSv3-series](/azure/virtual-machines/dv3-dsv3-series)|https://azure.microsoft.com/blog/introducing-the-new-dv3-and-ev3-vm-sizes/
+|Dv1 or DSv1-series (D11 to D14)|[Ev3 or ESv3-series](/azure/virtual-machines/ev3-esv3-series)|
+|D15v2 or DS15v2|If you are using theResource Manager deployment model in order to take advantage of the larger VM sizes, consider moving to D16v3/DS16v3 or D32v3/DS32v3. These are designed to run on the latest generation hardware. If you are using the Resource Manager deployment model to make sure your VM instance is isolated to hardware dedicated to a single customer, consider moving to the new isolated VM sizes, E64i_v3 or E64is_v3, which are designed to run on the latest generation hardware. |https://azure.microsoft.com/blog/new-isolated-vm-sizes-now-available/
+
+## Allocation failures for large deployments (more than 500 cores)
+
+Reduce the number of instances of the requested VM size, and then retry the deployment operation. Additionally, for larger deployments, you may want to evaluate [Azure virtual machine scale sets](/azure/virtual-machine-scale-sets). The number of VM instances can automatically increase or decrease in response to demand or a defined schedule, and you have a greater chance of allocation success because the deployments can be spread across multiple clusters. 
+
+## Background information
+### How allocation works
+The servers in Azure datacenters are partitioned into clusters. Normally, an allocation request is attempted in multiple clusters, but it's possible that certain constraints from the allocation request force the Azure platform to attempt the request in only one cluster. In this article, we'll refer to this as "pinned to a cluster." Diagram 1 below illustrates the case of a normal allocation that is attempted in multiple clusters. Diagram 2 illustrates the case of an allocation that's pinned to Cluster 2 because that's where the existing Cloud Service CS_1 or availability set is hosted.
+![Allocation Diagram](./media/virtual-machines-common-allocation-failure/Allocation1.png)
+
+### Why allocation failures happen
+When an allocation request is pinned to a cluster, there's a higher chance of failing to find free resources since the available resource pool is smaller. Furthermore, if your allocation request is pinned to a cluster but the type of resource you requested is not supported by that cluster, your request will fail even if the cluster has free resources. The following Diagram 3 illustrates the case where a pinned allocation fails because the only candidate cluster does not have free resources. Diagram 4 illustrates the case where a pinned allocation fails because the only candidate cluster does not support the requested VM size, even though the cluster has free resources.
+
+![Pinned Allocation Failure](./media/virtual-machines-common-allocation-failure/Allocation2.png)
