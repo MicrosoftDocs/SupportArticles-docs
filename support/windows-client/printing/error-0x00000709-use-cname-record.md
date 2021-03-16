@@ -48,7 +48,7 @@ To work around this issue, follow these steps on the print server, and then rest
 
 1. Implement the `DnsOnWire` registry value that's described in the following article:
 
-   [Error message when you try to connect to a printer by using an alias (CNAME) resource record: "Windows couldn't connect to the printer"](https://support.microsoft.com/help/979602).
+   [Error message when you try to connect to a printer by using an alias (CNAME) resource record: "Windows couldn't connect to the printer"](https://support.microsoft.com/help/979602)
 
 2. Edit the local Hosts file to include the CNAME record for the server.
 

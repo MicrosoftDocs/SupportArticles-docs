@@ -7,7 +7,7 @@ ms.reviewer: mlaing
 ---
 # HTTP Error 405.0 when you visit a website that is hosted on a server that is running IIS
 
-This article helps you resolve **HTTP Error 405.0**. this error occurs when you visit a website that's hosted on a server running Internet Information Services (IIS).
+This article helps you resolve **HTTP Error 405.0**. This error occurs when you visit a website that's hosted on a server running Internet Information Services (IIS).
 
 _Original product version:_ &nbsp; Internet Information Services 7.0 and later versions  
 _Original KB number:_ &nbsp; 942051
