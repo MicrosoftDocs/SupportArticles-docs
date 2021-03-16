@@ -1,12 +1,13 @@
 ---
 title: Creating a Linux virtual machine in Azure
-description: This article introduces how to create a Linux virtual machine in Azure and connecting to it.
+description: This article introduces how to create a Linux virtual machine in Azure and connect to it.
 ms.date: 03/08/2021
-ms.prod-support-area-path:
-ms.prod: aspnet-core-api
+ms.prod: 
 ms.reviewer: ramakoni
 ---
 # Part 1.1 - Creating a Linux virtual machine in Azure and connecting to it
+
+_Applies to:_ &nbsp;
 
 **Goal of this part**
 
@@ -25,13 +26,13 @@ To make sure that all the labs in this guide work as intended, we recommend that
 This part (1.1) contains the following steps:
 
 - Creating a Linux virtual machine in Windows Azure
-- Connecting to the Linux virtual machine:
-  - By using PowerShell SSH client
-  - By using PuTTY
+- [Connecting to the Linux virtual machine](#connecting-to-the-linux-virtual-machine):
+  - [By using PowerShell SSH client](#connecting-by-using-powershell-ssh-terminal)
+  - [By using PuTTY](#connecting-by-using-putty)
 
-If you're familiar with Linux, you might want to skip this part entirely and go directly to Part 1.2.
+If you're familiar with Linux, you might want to skip this part entirely and go directly to [Part 1.2 - Linux special directories, elevated users, and package managers](/troubleshoot/aspnetcore/linus-special-directories).
 
-## Create a Linux virtual machine in Windows Azure
+## Creating a Linux virtual machine in Windows Azure
 
 Your first decision is which distribution of Linux you want to use. There are different flavors and distributions of the Linux operating system, commonly referred to as "distros". According to this Linux Documentation Project article, there are many similarities between the different distributions. The commands that are used in this series are almost the same for every Linux distro, although the installation package managers may differ. However, the general instructions will be same regardless of the distro that's used.
 
@@ -128,11 +129,11 @@ If you have never connected to this server before, you receive the following war
 
 > The authenticity of host '\<HostName>' can't be established.
 
-![enter yes](./media/creating-vm/yes.png)
+:::image type="content" source="./media/creating-vm/yes.png" alt-text="enter yes" border="true":::
 
 If you enter *yes*, you receive the following additional warning:
 
-![enter yes 2](./media/creating-vm/yes2.png)
+:::image type="content" source="./media/creating-vm/yes2.png" alt-text="enter yes2" border="true":::
 
 Essentially, the SSH client wants the private key to be "more private". In other words, the private key that is contained in the .pem file is accessible to other users on the computer that you're connecting to. The expectation is that a private key should be accessible to only the user who will initialize the connections to the Linux virtual machine.
 
@@ -171,9 +172,9 @@ To convert files, follow these steps:
 
     ![putty key](./media/creating-vm/puttykey.png)
 
-3. Make sure that **All Files** is selected because the default selection for PuTTYgen is PPK. 
+3. Make sure that **All Files** is selected because the default selection for PuTTYgen is PPK.
 
-    ![all files](./media/creating-vm/allfiles.png)
+    :::image type="content" source="./media/creating-vm/allfiles.png" alt-text="all files" border="true":::
 
 4. Locate and open the desired PEM file. You should see the following message that indicates that PuTTYgen was able to import the key. Now, you can save the private key in PPK format.
 
@@ -181,7 +182,7 @@ To convert files, follow these steps:
 
 5. Select **OK**, and then select **Save private key**:
 
-    ![save key](./media/creating-vm/savekey.png)
+    :::image type="content" source="./media/creating-vm/savekey.png" alt-text="save key" border="true":::
 
     PuTTYgen will prompt you to confirm that you want to save the key without a passphrase. Select **yes**, and save the private key in PPK format.
 
@@ -203,7 +204,7 @@ To convert files, follow these steps:
 
     > The server's host key is not cached in the registry. You have no guarantee that the server is the computer you think it is.
 
-    ![security alert](./media/creating-vm/alert.png)
+    :::image type="content" source="./media/creating-vm/alert.png" alt-text="alert window" border="true":::
 
     This message resembles the message that's generated the first time that you connect to the virtual machine by using an SSH client in PowerShell.
 
