@@ -5,7 +5,7 @@ ms.date: 03/15/2021
 ms.prod-support-area-path: 
 ms.reviewer: bernawy
 ---
-# The error you receive is Error AADSTS75005 - The request is not a valid Saml2 protocol message.
+# The error you receive is Error AADSTS75005 - The request is not a valid Saml2 protocol message
 
 This article describes a problem in which you receive the error message "Error AADSTS75005 - The request is not a valid Saml2 protocol message." when trying to sign into a SAML-based single sign-on (SSO) configured app that has been integrated with Azure Active Directory (Azure AD).
 
