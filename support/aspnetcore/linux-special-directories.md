@@ -2,7 +2,7 @@
 title: The Linux directories, users, and package managers
 description: This article describes the Linux special directories, elevated users, and how to use the package managers.
 ms.date: 03/08/2021
-ms.prod: 
+ms.prod: aspnet-core-api
 ms.reviewer: ramakoni
 ---
 # Part 1.2 - Linux special directories, elevated users, and package managers

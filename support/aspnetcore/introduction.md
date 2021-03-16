@@ -2,7 +2,7 @@
 title: Troubleshooting in ASP.NET Core application on Linux
 description: This article describes the installation, management and troubleshooting in ASP.NET Core application on Linux.
 ms.date: 03/08/2021
-ms.prod: 
+ms.prod: aspnet-core-api
 ms.reviewer: ramakoni
 ---
 # ASP.NET Core on Linux troubleshooting
