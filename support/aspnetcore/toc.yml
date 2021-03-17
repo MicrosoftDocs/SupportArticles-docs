@@ -1,6 +1,6 @@
 - name: Connecting Linux managing basic tasks
   items:
-  - name: Introduction
+  - name: Overview of ASP.NET Core on Linux troubleshooting
     href: introduction.md
   - name: Part 1.1 Creating a Linux virtual machine in Azure
     href: creating-vm.md
