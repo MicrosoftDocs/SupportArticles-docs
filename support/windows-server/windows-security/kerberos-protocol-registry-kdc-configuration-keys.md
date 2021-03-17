@@ -1,6 +1,6 @@
 ---
-title: Registry entries about Kerberos protocol and KDC
-description: Lists the registry entries in Windows Server that can be used for Kerberos protocol testing and for troubleshooting Kerberos authentication issues.
+title: Registry entries about Kerberos protocol and Key Distribution Center (KDC)
+description: Lists the registry entries in Windows Server that can be used for Kerberos protocol testing and troubleshooting Kerberos authentication issues.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 837361
 
 Kerberos is an authentication mechanism that is used to verify user or host identity. Kerberos is the preferred authentication method for services in Windows.
 
-If you are running Windows, you can modify Kerberos parameters to help troubleshoot Kerberos authentication issues or to test the Kerberos protocol. To do this, add or modify the registry entries that are listed in the following sections.
+If you are running Windows, you can modify Kerberos parameters to help troubleshoot Kerberos authentication issues, or to test the Kerberos protocol. To do so, add or modify the registry entries that are listed in the following sections.
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
@@ -39,14 +39,14 @@ The registry entries that are listed in this section must be added to the follow
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters`
 
 > [!NOTE]
-> If the **Parameters** key is not listed under **Kerberos**, you must create the key.
+> If the **Parameters** key isn't listed under **Kerberos**, you must create the key.
 
 - Entry: SkewTime
 
   - Type: REG_DWORD
   - Default Value: 5 (minutes)
 
-    This value is the maximum time difference that is permitted between the client computer and the server that accepts Kerberos authentication.
+    This value is the maximum time difference that's permitted between the client computer and the server that accepts Kerberos authentication.
 
 - Entry: LogLevel
 
@@ -156,7 +156,7 @@ The registry entries that are listed in this section must be added to the follow
     |DEB_TRACE_TCACHE|0x00000080|Not implemented|
     |DEB_TRACE_LOGON|0x00000100|This macro enables logon tracing such as in `LsaApLogonUserEx2()`.|
     |DEB_TRACE_KDC|0x00000200|This macro enables tracing before and after calls to `KerbMakeKdcCall()`.|
-    |DEB_TRACE_CTXT2|0x00000400|This macro enables additional context tracing.|
+    |DEB_TRACE_CTXT2|0x00000400|This macro enables extra context tracing.|
     |DEB_TRACE_TIME|0x00000800|This macro enables the time skew tracing that is found in Timesync.cxx.|
     |DEB_TRACE_USER|0x00001000|This macro enables user API tracing that is used together with DEB_TRACE_API and that is found mostly in Userapi.cxx.|
     |DEB_TRACE_LEAKS|0x00002000| |
@@ -213,7 +213,7 @@ The registry entries that are listed in this section must be added to the follow
   - Type: REG_DWORD
   - Default Value: Any RFC 1510 value
 
-    This value indicates whether there are additional options that must be sent as KDC options in Ticket Granting Service requests (TGS_REQ).
+    This value indicates whether there are more options that must be sent as KDC options in Ticket Granting Service requests (TGS_REQ).
 
 - Entry: ClientIpAddress
 
@@ -221,7 +221,7 @@ The registry entries that are listed in this section must be added to the follow
   - Default Value: 0 (This setting is 0 because of Dynamic Host Configuration Protocol and network address translation issues.)
   - Possible values: 0 (false) or any non-zero value (true)
 
-    This value indicates whether a client IP address will be added in AS_REQ to force the **Caddr** field to contain IP addresses in all tickets.
+    This value indicates whether a client IP address will be added in AS_REQ to force the **`Caddr`** field to contain IP addresses in all tickets.
 
 - Entry: TgtRenewalTime
 
@@ -264,7 +264,7 @@ The registry entries that are listed in this section must be added to the follow
   - Default Value: 1
   - Possible values: 0 (false) or any non-zero value (true)
 
-    This value indicates whether IP addresses for the TGS_REQ and the TGT **Caddr** field will be checked.
+    This value indicates whether IP addresses for the TGS_REQ and the TGT **`Caddr`** field will be checked.
 
 - Entry: NewConnectionTimeout
 
@@ -294,7 +294,7 @@ The registry entries that are listed in this section must be added to the follow
     - 1 (decimal) or 0x1 (hexadecimal): Audit SPN unknown errors.
     - 2 (decimal) or 0x2 (hexadecimal): Log PKINIT errors. (PKINIT is an Internet Engineering Task Force (IETF) Internet draft for *Public Key Cryptography for Initial Authentication in Kerberos*.)
     - 4 (decimal) or 0x4 (hexadecimal): Log all KDC errors.
-    - 8 (decimal) or 0x8 (hexadecimal): Log KDC warning event 25 in the system log when user asking for S4U2Self ticket does not have sufficient access to target user.
+    - 8 (decimal) or 0x8 (hexadecimal): Log KDC warning event 25 in the system log when user asking for S4U2Self ticket doesn't have sufficient access to target user.
     - 16 (decimal) or 0x10 (hexadecimal): Log audit events on encryption type (ETYPE) and bad options errors. This value indicates what information the KDC will write to event logs and to audits.
 
 - Entry: KdcDebugLevel

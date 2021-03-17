@@ -24,7 +24,7 @@ This article was written by [Yuval Sinay](https://mvp.microsoft.com/en-US/Public
 
 ## Symptoms
 
-In some organizations, there are regular backup procedures for Enterprise Windows Certificate Authority. In case of server problem (software/hardware), there may need to reinstall the Enterprise Windows Certificate Authority. Before you can reinstall the Enterprise Windows Certificate Authority, you may need to delete manually objects and data that belong to the original Enterprise Windows and reside in the Windows Active Directory.
+In some organizations, there are regular backup procedures for Enterprise Windows Certificate Authority. If there is server problem (software/hardware), there may need to reinstall the Enterprise Windows Certificate Authority. Before you can reinstall the Enterprise Windows Certificate Authority, you may need to delete manually objects and data that belong to the original Enterprise Windows and reside in the Windows Active Directory.
 
 ## Cause
 
@@ -34,9 +34,16 @@ Enterprise Windows Certificate Authority saves the configurations settings and d
 
 **A. Backup:**  
 
-It's recommended that you back up all the nodes that contain active directory-related data: Windows Domain Controllers, Exchange Servers, Active Directory Connector, Windows Server with Services for Unix, ISA Server Enterprise, Enterprise Windows Certificate Authority - **before** and **after** you following this procedure.
+You're recommended to back up all the nodes that contain active directory-related data **before** and **after** you follow this procedure, including:
 
-The following procedure should be use as last resort and may impact on your production environment and may require to reboot some nodes/services.
+- Windows Domain Controllers
+- Exchange Servers
+- Active Directory Connector
+- Windows Server with Services for Unix
+- ISA Server Enterprise
+- Enterprise Windows Certificate Authority
+
+Use the following procedure as last resort. It may affect your production environment, and may require to restart some nodes/services.
 
 **B. Active Directory Clean:**  
 
@@ -51,7 +58,7 @@ The following procedure should be use as last resort and may impact on your prod
 To remove all Certification Services objects from Active Directory:
 
 1. Start "**Active Directory Sites and Services**".
-2. Click the "**View**" menu option, and select "**Show Services**" Node.
+2. Select the "**View**" menu option, and select "**Show Services**" Node.
 3. Expand the "**Services**", and then expand "**Public Key Services**".
 4. Select the "**AIA**" node.
 5. In the right-hand pane, locate the "**certificateAuthority**" object for your Certification Authority. Delete the object.
@@ -67,13 +74,13 @@ To remove all Certification Services objects from Active Directory:
     > [!NOTE]
     > Delete all the Certificate Templates only if no other Enterprise CAs are installed in the forest. If the templates are inadvertently deleted, restore the
     templates from backup.
-14. Click the "**Public key Services**" node and locate the "**NTAuthCertificates**" object.
+14. Select the "**Public key Services**" node and locate the "**NTAuthCertificates**" object.
 15. If there are no other Enterprise or Stand-alone CAs installed in the forest, delete the object, otherwise leave it alone.
-16. Use "**Active Directory Sites and Services**" or "**Repadmin**" command from the Windows resource kit to force replication to the other domain controllers in the domain/forest.
+16. Use "**Active Directory Sites and Services**" or "**`Repadmin`**" command from the Windows resource kit to force replication to the other domain controllers in the domain/forest.
 
 ### Domain Controller Cleanup  
 
-Once the CA has been taken down, the certificates that have been issued to all the domain controllers need to be removed. This can be done easily using DSSTORE.EXE from the Resource Kit:
+Once the CA has been taken down, the certificates that have been issued to all the domain controllers need to be removed. It can be done easily by using DSSTORE.EXE from the Resource Kit:
 
 You can also remove old domain controller certificates by using `certutil` command:
 

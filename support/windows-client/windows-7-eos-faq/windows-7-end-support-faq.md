@@ -15,7 +15,7 @@ ms.technology: windows-client-eos
 ---
 # Windows 7 EoS FAQ documentation
 
-The topics in this section summarize the frequently asked questions about the end of support for Windows 7.
+This article summarizes the frequently asked questions about the end of support for Windows 7.
 
 This article is intended for use by IT professionals. If you're looking for information for home users, see [Windows 7 support ended on January 14, 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020).
 

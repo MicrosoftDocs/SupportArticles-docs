@@ -6,7 +6,7 @@ ms.prod-support-area-path: Health, diagnostic, and performance features
 ---
 # An application pool exceeds time limits during shutdown in IIS
 
-This article helps you resolve the problem where an unexpected runtime error may be thrown when an application pool exceeds time limits during shutdown in Microsoft Internet Information Services (IIS).
+An unexpected runtime error may be thrown when an application pool exceeds time limits during shutdown in Microsoft Internet Information Services (IIS).
 
 _Original product version:_ &nbsp; Internet Information Services 7.0, 7.5  
 _Original KB number:_ &nbsp; 2634635
@@ -29,9 +29,9 @@ On a computer that's running IIS 7.0 or 7.5, the message will look similar to th
 
 ## Cause
 
-This message is logged to the event log when an application pool takes longer than the configured `ShutdownTimeLimit` property to shut down. When this time limit is exceeded, the worker process will be forcibly shut down and recycled and the event log message created.
+This message is logged to the event log when an application pool takes longer than the configured `ShutdownTimeLimit` property to shut down. When this time limit is exceeded, the worker process will be forcibly shut down and recycled. And the event log message will be created.
 
-It's possible this message will appear in the event log without any negative observed behavior to end users browsing the web sites hosted in that application pool. However, the presence of the event suggests one of the following is true:
+It's possible this message will appear in the event log without any negative observed behavior to end users browsing the web sites hosted in that application pool. However, the presence of the event suggests one of the following conditions is true:
 
 - The `ShutdownTimeLimit` is set to too low of a number.
 - A problem has occurred in the web application that is hindering it from shutting down in a timely manner.
@@ -43,13 +43,13 @@ To resolve this problem, choose one of the following methods.
 
 ## Resolution 1: Increase the ShutdownTimeLimit value
 
-It is possible that the default `ShutdownTimeLimit` value was modified from its default value of 90 seconds. It can be expected that an application pool needs time to fully shut down, as any requests currently processing when the shutdown is initiated and needs to be given a certain amount of time to complete. Setting the `ShutdownTimeLimit` value too low may cause these erroneous event log warnings in high traffic web applications or in web applications that have requests that are expected to take some time to complete.
+It's possible that the default `ShutdownTimeLimit` value was modified from its default value of 90 seconds. An application pool needs time to fully shut down, as any requests currently processing when the shutdown is initiated and needs to be given a certain amount of time to complete. Setting the `ShutdownTimeLimit` value too low may cause these erroneous event log warnings in high traffic web applications or in web applications that have requests that are expected to take some time to complete.
 
 To modify the `ShutdownTimeLimit` value in IIS 7.0 and IIS 7.5, see [Process Model Settings for an Application Pool \<processModel>](/iis/configuration/system.applicationHost/applicationPools/add/processModel).
 
 ## Resolution 2: Troubleshoot why the application pool isn't shutting down in a timely manner
 
-As mentioned earlier, it is possible that something is going on in the application pool that is hindering it from being able to shut down in a timely manner. One of the more common problems that occur here is when existing HyperText Transfer Protocol (HTTP) requests aren't able to complete. To troubleshoot why the application pool is taking too long to shut down, capture a memory dump of the w3wp.exe process in which the application pool is running, when the shutdown problem is occurring.
+As mentioned earlier, it's possible that something is going on in the application pool that's hindering it from being able to shut down in a timely manner. One of the more common problems that occur here is when existing HyperText Transfer Protocol (HTTP) requests aren't able to complete. To troubleshoot why the application pool is taking too long to shut down, capture a memory dump of the w3wp.exe process in which the application pool is running, when the shutdown problem is occurring.
 
 For more information on capturing memory dumps of IIS processes, see [Debug Diagnostics Tool v1.2 is now available](https://support.microsoft.com/help/2580960).
 

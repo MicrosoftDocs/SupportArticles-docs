@@ -29,7 +29,7 @@ Remote access clients include direct dial-in and virtual private network (VPN) c
 
 You can use the remote access account lockout feature to specify how many times a remote access authentication has to fail against a valid user account before the user is denied access. An attacker can try to access an organization through remote access by sending credentials (valid user name, guessed password) during the VPN connection authentication process. During a dictionary attack, the attacker sends hundreds or thousands of credentials by using a list of passwords based on common words or phrases.
 
-The advantage of activating account lockout is that brute force attacks, such as a dictionary attack, are unlikely to be successful because statistically at least, the account is locked out long before a randomly issued password is likely to be correct. An attacker can still create a denial of service condition that intentionally locks out user accounts.
+The advantage of activating account lockout is that brute force attacks, such as a dictionary attack, are unlikely to be successful. It's because statistically at least, the account is locked out long before a randomly issued password is likely to be correct. An attacker can still create a denial of service condition that intentionally locks out user accounts.
 
 ## Configure remote access client account lockout feature
 
@@ -70,16 +70,16 @@ The failed attempts counter is periodically reset to zero (0). If an account is 
 
 ## Manually unlock a remote access client
 
-If the account is locked out, the user can try to log on again after the lockout timer has run out, or you can delete the
+If the account is locked out, the user can try to log on again after the lockout timer has run out. Or, you can delete the
  **DomainName:UserName** value in the following registry key:
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess\Parameters\AccountLockout`
 
 To manually unlock an account, follow these steps:
 
-1. Click **Start**, click **Run**, type regedit in the **Open** box, and then press ENTER.
+1. Select **Start** > **Run**, type `regedit` in the **Open** box, and then press ENTER.
 
-2. Locate and then click the following registry key:
+2. Locate and then select the following registry key:
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RemoteAccess\Parameters\AccountLockout`
 
@@ -87,7 +87,7 @@ To manually unlock an account, follow these steps:
 
 4. Quit Registry Editor.
 
-5. Test the account to confirm that it is no longer locked out.
+5. Test the account to confirm that it's no longer locked out.
 
 ## References
 
