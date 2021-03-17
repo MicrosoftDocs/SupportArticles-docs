@@ -22,7 +22,7 @@ search.appverid: MET150
 ---
 # Can't send or receive emails when using TLS 1.0 or TLS 1.1
 
-Exchange Server (on-premises) users can't send email messages to or receive email messages from Office 365 users if the on-premises server uses Transport Layer Security (TLS) 1.0 or TLS 1.1, and vice versa. This issue occurs because TLS 1.0 and TLS 1.1 protocols are deprecated in Office 365. When this issue occurs, one of the following error message is displayed:
+Exchange Server (on-premises) users can't send email messages to or receive email messages from Office 365 users if the on-premises server uses Transport Layer Security (TLS) 1.0 or TLS 1.1, and vice versa. This issue occurs because TLS 1.0 and TLS 1.1 protocols are deprecated in Office 365. When this issue occurs, one of the following error messages is displayed:
 
 - > 421 4.4.2 Connection dropped due to SocketError
 
