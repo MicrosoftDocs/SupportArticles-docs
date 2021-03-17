@@ -46,10 +46,10 @@ Currently, the Windows operating system uses signatures at offset 3 in the boot 
 
 ## How to determine whether the boot sector is FAT32, FAT16, or NTFS
 
-To determine whether the USB flash drive was formatted by using one of the following file systems:
+Check two strings in the boot sector to determine if the USB flash drive was formatted by using one of the following file systems:
 
 - FAT32
 - FAT16
 - NTFS
 
-you must check two strings in the boot sector. If the strings contain FAT32, FAT16 or NTFS, the boot sector was formatted in that particular file system format.
+If the strings contain FAT32, FAT16, or NTFS, the boot sector was formatted in that particular file system format.
