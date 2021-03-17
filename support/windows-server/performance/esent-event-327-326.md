@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2900773
 
 ## Symptoms
 
-While using Windows Server 2012 and later versions, events as shown below are logged in the application event log at high frequency (about 5 times/sec) regarding SystemIdentity.mdb.
+When using Windows Server 2012 and later versions, the following events are logged in the application event log at high frequency (about 5 times/sec) about SystemIdentity.mdb.
 
 > Source: ESENT  
 Event ID: 327  
