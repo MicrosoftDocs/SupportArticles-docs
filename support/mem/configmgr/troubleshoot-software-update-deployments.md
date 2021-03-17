@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 3090264
 
 ## Summary
 
-When you deploy software updates in Configuration Manager (ConfigMgr 2012 or ConfigMgr 2012 R2), you typically add the updates to a software update group and then deploy the software update group to clients. When you create the deployment, the update policy is sent to client computers. The update content files are downloaded from a distribution point to the local cache on the client computer. The updates are then available for installation on the client. Normally this process is completed successfully with little effort. However, issues may sometimes arise that cause update deployment to fail. We cover the two most common failure scenarios and provide troubleshooting suggestions for each.
+When you deploy software updates in Configuration Manager, you typically add the updates to a software update group. Then deploy the software update group to clients. When you create the deployment, the update policy is sent to client computers. The update content files are downloaded from a distribution point to the local cache on the client computer. The updates are then available for installation on the client. Normally this process is completed successfully with little effort. However, issues may sometimes arise that cause update deployment to fail. We cover the two most common failure scenarios and provide troubleshooting suggestions for each.
 
 For more information about software updates in Configuration Manager, see [Software updates introduction](software-updates-introduction.md).
 
@@ -36,7 +36,7 @@ When software update deployment fails, the problem generally falls into one of t
 
 1. Check to see whether the scan failed during the deployment evaluation. For more information about scan failures, see [Troubleshoot software update scan failures in Configuration Manager](troubleshoot-software-update-scan-failures.md).
 2. Review WUAHandler.log and WindowsUpdate.log to find the errors received during update installation.
-3. To rule out an installation issue with the update itself, try to manually install the update or install it from Microsoft Update (if possible) to see whether the update installation is successful.
+3. To rule out an installation issue with the update itself, manually install the update or install it from Microsoft Update (if possible). See whether the update installation is successful.
 4. Most .NET Framework update failures are caused by corrupted .NET Framework installations. In these cases, try to manually install the update. If the installation process fails, see [Fix Windows Update errors](https://support.microsoft.com/help/10164/fix-windows-update-errors).
 
 For more information, see [Installation, supersedence, or detection issues with specific updates](troubleshoot-software-update-management.md#installation-supersedence-or-detection-issues-with-specific-updates).
@@ -80,13 +80,13 @@ If possible, [enable verbose and debug logging](enable-verbose-logging.md) if th
     > StartTime is 02/10/14 22:00:00 ServiceWindowManager  
     > Duration for the Service Window is Total days: 0, hours: 07, mins: 00, secs: 00 ServiceWindowManager
 
-    Generally, service windows with IDs containing all lowercase alpha-numeric characters are non-business hour (NBH) maintenance windows. They're based on business hours configured in Software Center. However, service windows with IDs containing all uppercase alpha-numeric characters are maintenance windows defined for the collection in the Configuration Manager console. In the example, all service windows are non-business hour windows except the one with ID 1E957DDD-0A26-434C-952A-586F3E31E319 (which is a maintenance window defined for the collection that holds the client).
+    Generally, service windows with IDs containing all lowercase alpha-numeric characters are non-business hour (NBH) maintenance windows. They're based on business hours configured in Software Center. However, service windows with IDs containing all uppercase alpha-numeric characters are maintenance windows defined for the collection in the Configuration Manager console. In the example, all service windows are non-business hour windows, except the one with ID 1E957DDD-0A26-434C-952A-586F3E31E319. This window is a maintenance window defined for the collection that holds the client.
 
-2. Review the UpdatesDeployment.log file, and locate the following line to check whether the deployment was set to ignore the maintenance window:
+2. Review the UpdatesDeployment.log file. Locate the following line to check whether the deployment was set to ignore the maintenance window:
 
     > Notify reboot with deadline = Sunday, Feb 09, 2014. - 21:30:17, **Ignore reboot Window = True**, NotifyUI = True
 
-3. Review the MaintenanceCoordinator.log file, and locate the following line to check whether the deployment was set to ignore the maintenance window. A value of **1** for `swoverride` means that the ignore maintenance window setting is enabled.
+3. Review the MaintenanceCoordinator.log file. Locate the following line to check whether the deployment was set to ignore the maintenance window. A value of **1** for `swoverride` means that the ignore maintenance window setting is enabled.
 
     > RequestPersistence(id=Update download job, persist=1, **swoverride=1**, swType=4, pendingWFDisable=0, deadline=1)
 
