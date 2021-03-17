@@ -5,7 +5,7 @@ ms.date: 03/15/2021
 ms.prod-support-area-path: 
 ms.reviewer: bernawy
 ---
-# Error AADSTS750054 - SAMLRequest or SAMLResponse must be present as query string parameters in HTTP request for SAML Redirect binding.
+# Error AADSTS750054 - SAMLRequest or SAMLResponse must be present as query string parameters in HTTP request for SAML Redirect binding
 
 This article describes a problem in which you receive the error message "Error AADSTS750054 - SAMLRequest or SAMLResponse must be present as query string parameters in HTTP request for SAML Redirect binding." when trying to sign into a SAML-based single sign-on (SSO) configured app that has been integrated with Azure Active Directory (Azure AD).
 
