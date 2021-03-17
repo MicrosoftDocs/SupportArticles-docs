@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4505440
 
 This guide assumes that a software update point has already been installed and configured. For more information about configuring software updates in Configuration Manager, see [Prepare for software updates management](/mem/configmgr/sum/get-started/prepare-for-software-updates-management).
 
-Before you start troubleshooting, it's important to emphasize that while it may seem obvious, the better you understand the problem you're experiencing, the quicker and easier it will be for you to fix it. Whether you're tasked with fixing a problem that you are experiencing yourself, or a problem reported to you by someone in your organization, it's recommended that you take a moment and answer the following questions:
+Before you start troubleshooting, it's important to emphasize that, the better you understand the problem you're experiencing, the quicker and easier it will be for you to fix it. Whether you're tasked with fixing a problem that you are experiencing, or a problem reported to you by someone in your organization, take a moment and answer the following questions:
 
 1. What specifically isn't working and/or what is your goal?
 2. What is the frequency or pattern for the issue? Is the problem still happening?
@@ -192,15 +192,15 @@ Many issues with software update scan can be caused by one of the following reas
 
 To fix such issues, see [Scan failures due to missing or corrupted components](troubleshoot-software-update-scan-failures.md#scan-failures-due-to-missing-or-corrupted-components).
 
-There's a known issue where a 32-bit Windows 7 ConfigMgr 2012 R2 client requesting an update scan fails to return scan results to Configuration Manager. It causes the client to report incorrect compliance status and the updates fail to install when Configuration Manager requests the update cycle. However, if you use the Windows Update control panel applet, the updates usually install fine. When you're experiencing this problem, you receive a message similar to the following one in WindowsUpdate.log:
+There's a known issue that a 32-bit Windows 7 ConfigMgr 2012 R2 client requesting an update scan fails to return scan results to Configuration Manager. It causes the client to report incorrect compliance status and the updates fail to install when Configuration Manager requests the update cycle. However, if you use the Windows Update control panel applet, the updates usually install fine. When you're experiencing this problem, you receive a message similar to the following one in WindowsUpdate.log:
 
 > WARNING: ISusInternal::GetUpdateMetadata2 failed, hr=8007000E
 
-It's a memory allocation issue, 64-bit Windows 7 computers won't see this error since their address space is effectively unlimited. However, they'll exhibit high memory and high CPU utilization, possibly affecting performance. X86 clients will also exhibit high memory usage (usually around 1.2 GB to 1.4 GB).
+It's a memory allocation issue, 64-bit Windows 7 computers won't see this error since their address space is effectively unlimited. However, they'll exhibit high memory and high CPU usage, possibly affecting performance. X86 clients will also exhibit high memory usage (usually around 1.2 GB to 1.4 GB).
 
 To fix this issue, apply [Windows Update Client for Windows 7: June 2015](https://support.microsoft.com/help/3050265).
 
-To summarize, when troubleshooting scan failures, check the WUAHandler.log and WindowsUpdate.log files. Because WUAHandler simply reports what Windows Update Agent reported, the error in WUAHandler would be the same error that was reported by the Windows Update Agent itself. More information about the error can be found in WindowsUpdate.log. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
+When troubleshooting scan failures, check the WUAHandler.log and WindowsUpdate.log files. WUAHandler simply reports what Windows Update Agent reported. So, the error in WUAHandler would be the same error that was reported by the Windows Update Agent itself. More information about the error can be found in WindowsUpdate.log. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
 
 Your best source of information will come from the logs and the error codes they contain. For more information about the error codes, see [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).
 
@@ -228,7 +228,7 @@ Windows Update Agent starts a scan after receiving a request from the Configurat
 
 #### Troubleshoot issues in step 3
 
-During a scan, the Windows Update Agent needs to communicate with the `ClientWebService` and `SimpleAuthWebService` virtual directories on the WSUS computer in order to perform a scan. If the client cannot communicate with the WSUS computer, the scan will fail. This issue can happen for many reasons, including:
+During a scan, the Windows Update Agent needs to communicate with the `ClientWebService` and `SimpleAuthWebService` virtual directories on the WSUS computer to perform a scan. If the client can't communicate with the WSUS computer, the scan will fail. This issue can happen for many reasons, including:
 
 - **Proxy related issues**
 
@@ -257,7 +257,7 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
 
      The software updates feature automatically configures a local Group Policy setting for the Configuration Manager client so that it's configured with the software update point source location and port number. Both the server name and port number are required for the client to find the software update point.
 
-     If an Active Directory Group Policy setting is applied to computers for software update point client installation, it overrides the local Group Policy setting. If the value of the setting that's defined in the Active Directory Group Policy is different from the one that's being set by Configuration Manager, the scan will fail on the client because it can't locate the correct WSUS computer. In this situation, WUAHandler.log will show the following message:
+     If an Active Directory Group Policy setting is applied to computers for software update point client installation, it overrides the local Group Policy setting. If the value of the setting defined in the Active Directory Group Policy is different from the one set by Configuration Manager, the scan will fail on the client because it can't locate the correct WSUS computer. In this situation, WUAHandler.log will show the following message:
 
      > Group policy settings were overwritten by a higher authority (Domain Controller) to: Server <`http://server`> and Policy ENABLED
 
@@ -306,7 +306,7 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
                 telnet SUPSERVER.CONTOSO.COM 8530
                 ```
 
-                If the port is not accessible, telnet will return an error that resembles the following one:
+                If the port isn't accessible, telnet will return an error that resembles the following one:
 
                 > Could not open connection to the host, on port \<*PortNumber*>
 
@@ -333,7 +333,7 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
   - On Windows Vista or later versions: `netsh winhttp show proxy`
   - On Windows XP: `proxycfg.exe`
 
-  If the proxy settings are correct, verify connectivity with the WSUS computer by completing the steps in **HTTP timeout errors**. Also review the IIS logs on the WSUS computer to confirm that the HTTP errors are being returned from WSUS. If the WSUS computer is not returning the error, the issue is likely with an intermediate firewall or proxy.
+  If the proxy settings are correct, verify connectivity with the WSUS computer by completing the steps in **HTTP timeout errors**. Also review the IIS logs on the WSUS computer to confirm that the HTTP errors are being returned from WSUS. If the WSUS computer isn't returning the error, the issue is likely with an intermediate firewall or proxy.
 
 - **Certificate problems**
 
@@ -350,9 +350,9 @@ The following are logged in WUAHandler.log:
 
 Problems here should be addressed the same way as scan failures in [step 3](#step-3-windows-update-agent-wua-starts-the-scan-against-the-wsus-computer).
 
-As mentioned earlier in this guide, when troubleshooting scan failures, check the WUAHandler.log and WindowsUpdate.log files. Because WUAHandler simply reports what Windows Update Agent reported, the error in WUAHandler would be the same error that was reported by the Windows Update Agent itself. More information about the error could be found in WindowsUpdate.log. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
+As mentioned earlier in this guide, when troubleshooting scan failures, check the WUAHandler.log and WindowsUpdate.log files. WUAHandler simply reports what Windows Update Agent reported. So the error in WUAHandler would be the same error that was reported by the Windows Update Agent itself. More information about the error could be found in WindowsUpdate.log. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
 
-There are many reasons why a software update scan might fail. It could be because of one of the issues mentioned earlier, or a communication or firewall issue between the client and the software update point computer. Your best source of information will come from the logs and the error codes they contain. For more information about the error codes, see [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).  
+There are many reasons why a software update scan might fail. It could be caused by one of the issues mentioned earlier, or a communication or firewall issue between the client and the software update point computer. Your best source of information will come from the logs and the error codes they contain. For more information about the error codes, see [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).  
 
 ### Step 5: WUAHandler parses the scan results
 
@@ -371,9 +371,9 @@ The following entries are logged in WUAHandler.log:
 
 Problems can be addressed the same way as scan failures in [step 3](#step-3-windows-update-agent-wua-starts-the-scan-against-the-wsus-computer).
 
-As mentioned earlier in this guide, when troubleshooting scan failures, check the WUAHandler.log and WindowsUpdate.log files. Because WUAHandler simply reports what Windows Update Agent reported, the error in WUAHandler would be the same error that was reported by the Windows Update Agent itself. More information about the error could be found in WindowsUpdate.log. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
+As mentioned earlier in this guide, when troubleshooting scan failures, check the WUAHandler.log and WindowsUpdate.log files. WUAHandler simply reports what Windows Update Agent reported. So the error in WUAHandler would be the same error that was reported by the Windows Update Agent itself. More information about the error could be found in WindowsUpdate.log. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
 
-Generally speaking, there are many reasons why a software update scan might fail. It could be because of one of the issues mentioned above, or it could come down to a communication or firewall issue between the client and the software update point computer. Your best source of information will come from the logs and the error codes they contain. As a reference, see [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).
+Generally speaking, there are many reasons why a software update scan might fail. It could be caused by one of the issues mentioned earlier, or by a communication or firewall issue between the client and the software update point computer. Your best source of information will come from the logs and the error codes they contain. As a reference, see [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).
 
 ### Step 6: Update store records the status and raises a state message for each update in WMI
 
@@ -401,9 +401,9 @@ StateMessage.log showing state messaged being recorded with **State ID 2** (miss
 
 Problems here should be addressed the same way as scan failures in [step 3](#step-3-windows-update-agent-wua-starts-the-scan-against-the-wsus-computer).
 
-As mentioned earlier in this guide, when troubleshooting scan failures, check the WUAHandler.log and WindowsUpdate.log files. Because WUAHandler simply reports what Windows Update Agent reported, the error in WUAHandler would be the same error that was reported by the Windows Update Agent itself. More information about the error could be found in WindowsUpdate.log. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
+As mentioned earlier in this guide, when troubleshooting scan failures, check the WUAHandler.log and WindowsUpdate.log files. WUAHandler simply reports what Windows Update Agent reported. So the error in WUAHandler would be the same error that was reported by the Windows Update Agent itself. More information about the error could be found in WindowsUpdate.log. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
 
-Generally speaking, there are many reasons why a software update scan might fail. It could be because of one of the issues mentioned above, or it could come down to a communication or firewall issue between the client and the software update point computer. Your best source of information will come from the logs and the error codes they contain. As a reference, see [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).  
+Generally speaking, there are many reasons why a software update scan might fail. It could be caused by one of the issues mentioned earlier, or by a communication or firewall issue between the client and the software update point computer. Your best source of information will come from the logs and the error codes they contain. As a reference, see [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).  
 
 ### Step 7: State messages are sent to the management point
 
@@ -416,7 +416,7 @@ When WUAHandler successfully receives the results from the Windows Update Agent,
 
 Problems here should be addressed the same way as scan failures in [step 3](#step-3-windows-update-agent-wua-starts-the-scan-against-the-wsus-computer), although failures at this stage will likely be surfaced in the WindowsUpdate.log file specifically. To understand how to read WindowsUpdate.log, see [Windows Update log files](/windows/deployment/update/windows-update-logs).
 
-Generally speaking, there are many reasons why a software update scan might fail. It could be because of one of the issues mentioned above, or it could come down to a communication or firewall issue between the client and the software update point computer. Your best source of information will come from the logs and the error codes they contain. As a reference, see [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).
+Generally speaking, there are many reasons why a software update scan might fail. It could be caused by one of the issues mentioned earlier, or by a communication or firewall issue between the client and the software update point computer. Your best source of information will come from the logs and the error codes they contain. As a reference, see [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors).
 
 ## WSUS to Microsoft Update synchronization
 
@@ -461,12 +461,12 @@ After a synchronization starts, the WSUS server attempts to make an HTTP connect
 
 WSUS <=winhttp=> Network entities <=> Internet
 
-- Does a network entity (proxy, firewall, security filter, etc.) exist between the WSUS host machine and the Internet?
+- Does a network entity (proxy, firewall, security filter, and so on) exist between the WSUS host machine and the Internet?
 - If a proxy exists and the WSUS server is required to use the proxy, is the proxy configured within the proper WSUS settings?
 
 #### Troubleshoot a manual sync in step 2
 
-1. Confirm that the WSUS service is running. If you see that a manual synchronization has started but it stays at 0%, it's due to the WSUS service (**Update Services** on WSUS 3.x; **WSUS Service** on Windows Server 2012 and later versions) being in a stopped state.
+1. Confirm that the WSUS service is running. If a manual synchronization has started but it stays at 0%, it's because the WSUS service (**Update Services** on WSUS 3.x; **WSUS Service** on Windows Server 2012 and later versions) is in a stopped state.
 
 2. Reset the WSUS console MMC cache by completing the following steps:
 
@@ -492,19 +492,19 @@ Deployment issues that occur with specific updates can be broken into the areas 
 
 |Areas|Installation|Supersedence|Detection|
 |---|---|---|---|
-|Components|<ul><li>WUA</li><li>Update Installer (Component Based Servicing (CBS), MSI)</li><li>CCMExec</li></ul>|Update metadata|<ul><li>WUA</li><li>Update metadata</li><li>Update Installer (CBS, MSI)</li></ul>|
+|Components|<ul><li>WUA</li><li>Update Installer (Component-Based Servicing (CBS), MSI)</li><li>CCMExec</li></ul>|Update metadata|<ul><li>WUA</li><li>Update metadata</li><li>Update Installer (CBS, MSI)</li></ul>|
 |||||
 
 ### Installation issues
 
 What is the installer (CBS, MSI, other)?
 
-#### CBS (Component Based Servicing)
+#### CBS
 
 For updates that apply to Windows Vista and later versions, CBS is used to handle the installation.
 
 1. Gather the CBS log (`%Windir%\Logs\Cbs\Cbs.log`) and perform an initial review to gain insight into the cause of the failure. Troubleshooting installation-based issues through CBS logs is beyond the scope of this guide. For more information, see [Fix Windows corruption errors by using the DISM or System Update Readiness tool](https://support.microsoft.com/help/947821).
-1. Does the update install successfully as a logged on user? If it does install successfully as a logged on user, does it only fail when installed under the System context? If so, focus on troubleshooting the manual installation failure under the System context.
+1. Does the update install successfully as a logged on user? If so, does it fail only when it's installed under the System context? In this case, focus on troubleshooting the manual installation failure under the System context.
 
 #### MSI (Windows Installer)
 
@@ -515,9 +515,9 @@ For non-Windows software updates, MSI is used to handle the installation.
 
     When reviewing the resulting logs, check for return value 3 within the log and the lines preceding that entry for insight into the failure.
 
-3. Check whether the same update fails to install manually under the local system context by using the same installation switches that failed during the software update deployment.
+3. Check whether the same update fails to install manually under the local system context. To do so, use the same installation switches that failed during the software update deployment.
 
-    If it fails, test the installation as the logged on user with the same installation switches to understand if it's an issue with installing under local system. If it works, you can then focus the issue on how to properly install the update using the local system context. It may require checking for administrative deployment guidance within the KB for the update or online.
+    If it fails, test the installation as the logged on user with the same installation switches. Check if it's an issue with installing under local system. If it works, you can then focus the issue on how to properly install the update using the local system context. It may require checking for administrative deployment guidance within the KB for the update or online.
 
 ### Supersedence issues
 
