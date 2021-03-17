@@ -22,19 +22,19 @@ search.appverid: MET150
 ---
 # Can't send or receive emails when using TLS 1.0 or TLS 1.1
 
-This issue occurs because Transport Layer Security (TLS) 1.0 and TLS 1.1 protocols are deprecated in Office 365. If Exchange Server (on-premises) uses TLS 1.0 or TLS 1.1, Office 365 users can't send mail to or receive mail from the on-premises server users, and vice versa. Additionally, one of following errors occurs on the mail flow.
+Exchange Server (on-premises) users can't send email messages to or receive email messages from Office 365 users if the on-premises server uses Transport Layer Security (TLS) 1.0 or TLS 1.1, and vice versa. This issue occurs because TLS 1.0 and TLS 1.1 protocols are deprecated in Office 365. When this issue occurs, one of the following error message is displayed:
 
-## 421 4.4.2 Connection dropped due to SocketError
+- > 421 4.4.2 Connection dropped due to SocketError
 
-Users receive this non-delivery report (NDR) when sending email messages. Also, this error message appears in the server's [Queue Viewer](/exchange/mail-flow/queues/queue-viewer).
+    Users receive this non-delivery report (NDR) when sending email messages. This error message is also displayed in the [Queue Viewer](/exchange/mail-flow/queues/queue-viewer).
 
-## TLS negotiation failed with error SocketError
+- > TLS negotiation failed with error SocketError
 
-This error message appears in the [protocol log](/exchange/mail-flow/connectors/protocol-logging) file of the server's Send connector.
+    The error message is displayed in the [protocol log](/exchange/mail-flow/connectors/protocol-logging) file of the Send connector.
 
-## 451 5.7.3 Must issue a STARTTLS command first
+- > 451 5.7.3 Must issue a STARTTLS command first
 
-This error message appears in the [protocol log](/exchange/mail-flow/connectors/protocol-logging) file of the server's Send or Receive connector.
+    The error message is displayed in the [protocol log](/exchange/mail-flow/connectors/protocol-logging) file of the Send or Receive connector.
 
 ## Solution: Enable TLS 1.2
 
