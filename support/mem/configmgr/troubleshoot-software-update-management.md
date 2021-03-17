@@ -164,13 +164,13 @@ For more information about software update scan failures troubleshooting, see [T
 
 ### Step 2: Scan Agent requests the scan and WUAHandler starts the scan
 
-After the client has identified and set the WSUS server that will be its update source for software update scans, Scan Agent requests the scan from WUAHandler that uses the Windows Update Agent API to request a software update scan from the Windows Update Agent. A scan may result from one of the scenarios:
+After the client has identified and set the WSUS server that will be its update source for software update scans, Scan Agent requests the scan from WUAHandler that uses the Windows Update Agent API to request a software update scan from the Windows Update Agent. A scan may result from:
 
 - A scheduled or manual software update scan
 - A scheduled or manual software updated deployment re-evaluation
 - A deployment that becomes active
 
-which triggers an evaluation. In ScanAgent.log:
+The scan triggers an evaluation. In ScanAgent.log:
 
 > ScanJob({JobID}): CScanJob::Execute - successfully requested Scan, ScanType=1  
 
@@ -247,9 +247,9 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
 
   1. To confirm that the client is connecting to the correct WSUS server, find the URL of the WSUS computer used by the Windows Update Agent client. This URL can be found by checking the `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate` registry subkey or by viewing the WindowsUpdate.log file.
 
-     Common reasons that the WSUS assignment may be one of the following scenarios:
+     Common reasons that the WSUS assignment may be incorrect include:
 
-     - Incorrect include Group Policy conflicts
+     - Group Policy conflicts
      - The addition of a SUP to a secondary site after initial client installation
 
      > [!NOTE]
@@ -261,12 +261,7 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
 
      > Group policy settings were overwritten by a higher authority (Domain Controller) to: Server <`http://server`> and Policy ENABLED
 
-     The software update point for client installation and software updates must meet the following requirements:
-
-     - They're the same server.
-     - They're specified in the Active Directory Group Policy setting with the correct name format and port information.
-
-     For example, it would be *<`http://server1.contoso.com:80`>* if the software update point was using the default website.
+     The software update point for client installation and software updates must be the same server. And it must be specified in the Active Directory Group Policy setting with the correct name format and port information. For example, it would be *<`http://server1.contoso.com:80`>* if the software update point was using the default website.
 
   2. If the server URL is correct, access the server using a URL similar to the following one to verify connectivity between the client and the WSUS computer:
 
