@@ -24,15 +24,15 @@ If you select **Details**, the following more details are displayed:
 
 > T:420  
 ActivityId: \<GUID>  
->Exception : Unhandled Exception: Microsoft.Crm.Asynchronous.EmailConnector.ExchangeSyncException: Failed to sync the item to the CRM server, error code : 102    at   Microsoft.Crm.Asynchronous.EmailConnector.CrmItem.PerformActionBasedOnUserDecision(Int32 errorCode,  
-SyncItemChangeType changeType)    at Microsoft.Crm.Asynchronous.EmailConnector.CrmItem.UpdateItem()    at  
+>Exception : Unhandled Exception: Microsoft.Crm.Asynchronous.EmailConnector.ExchangeSyncException: Failed to sync the item to the CRM server, error code : 102    at   Microsoft.Crm.Asynchronous.EmailConnector.CrmItem.PerformActionBasedOnUserDecision(Int32 errorCode,  
+SyncItemChangeType changeType)    at Microsoft.Crm.Asynchronous.EmailConnector.CrmItem.UpdateItem()    at  
 Microsoft.Crm.Asynchronous.EmailConnector.ExchangeSyncSteps.WriteToCrmStep.UpdateInCrm(IEnumerable`1 syncItems)
 
 ## Cause
 
 This will occur if duplicate detection is enabled in Microsoft Dynamics 365 and the contact you tracked in Outlook matches an existing record in Microsoft Dynamics 365.
 
-For example: Assume you have a duplicate detection rule configured based only on first name and last name and there is an existing contact record in Microsoft Dynamics 365 named Nancy Anderson. If you have a contact in Outlook with the same name and choose to track that contact in Microsoft Dynamics 365, the duplicate detection rule will detect a match and won't create the record without confirmation.
+For example: Assume you have a duplicate detection rule configured based only on first name and last name and there is an existing contact record in Microsoft Dynamics 365 named Nancy Anderson. If you have a contact in Outlook with the same name and choose to track that contact in Microsoft Dynamics 365, the duplicate detection rule will detect a match and won't create the record without confirmation.
 
 ## Resolution
 

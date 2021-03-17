@@ -16,19 +16,19 @@ _Original KB number:_ &nbsp; 4535432
 
 In Microsoft Power Automate, when you create a flow, here's what could happen with null field that cause trouble:
 
-1. You may be expecting wrong behavior when doing an action with null field.
+1. You may be expecting wrong behavior when doing an action with null field.
 2. If you aren't handling null fields correctly, you may be expecting runtime errors like:
 
-   - > **InvalidTemplate**. Unable to process template language expressions. The provided value is of type 'Null'.
+   - > **InvalidTemplate**. Unable to process template language expressions. The provided value is of type 'Null'.
 
    :::image type="content" source="media/getting-errors-null-fields/invaildtemplate-error.png" alt-text="Invalid template runtime error.":::
 
 ## Cause
 
-- If a flow runs with a null field, it will cause:
+- If a flow runs with a null field, it will cause:
   - **Wrong behavior**: flow action's input is receiving null field, when it expects a different value.
 - Use expression towards null fields. It will cause:
-  - **Runtime error**: expression expects its parameter to be a string, an object, or an array but receives null.
+  - **Runtime error**: expression expects its parameter to be a string, an object, or an array but receives null.
 
 ## Flow error resolution
 
@@ -38,7 +38,7 @@ You can set up a condition check for null field. Here are the steps to create a 
 
     :::image type="content" source="media/getting-errors-null-fields/add-new-condition-action.png" alt-text="Condition action.":::
 
-2. Choose dynamic content output (for example, user email) you want to check.
+2. Choose dynamic content output (for example, user email) you want to check.
 
     :::image type="content" source="media/getting-errors-null-fields/choose-user-email.png" alt-text="Condition for null with email.":::
 
@@ -54,7 +54,7 @@ You can also use the coalesce function to provide default values when a value is
 :::image type="content" source="media/getting-errors-null-fields/coalesce-function-provide-default-values.png" alt-text="Use coalesce function with ''.":::
 
 > [!NOTE]
-> If you're still getting a runtime error, it may be caused by reference null properties in an object. You should use the question mark operator **?**. For example, to handle null outputs from a trigger, you can use this expression:  
+> If you're still getting a runtime error, it may be caused by reference null properties in an object. You should use the question mark operator **?**. For example, to handle null outputs from a trigger, you can use this expression:  
 > `@coalesce(trigger().outputs?.body?.<someProperty>, '<property-default-value>').`
 
 For more information, see [Coalesce](/azure/logic-apps/workflow-definition-language-functions-reference#coalesce) and [Operators](/azure/logic-apps/logic-apps-workflow-definition-language#operators).

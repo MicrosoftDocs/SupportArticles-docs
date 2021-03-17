@@ -16,9 +16,9 @@ _Original KB number:_ &nbsp; 4513672
 
 > Failed to create the Common Data Service database in this environment with status code 'ViralServicePlanRequired'
 
-This error occurs in organizations that have disabled self-service signups. Self-service signups are required to assign viral plans to users attempting to provision resources and interact with the Common Data service (CDS). Tenants have multiple options to resolve it.
+This error occurs in organizations that have disabled self-service signups. Self-service signups are required to assign viral plans to users attempting to provision resources and interact with the Common Data service (CDS). Tenants have multiple options to resolve it.
 
-1. Enable `AllowAdHocSubscriptions` (tenant level configuration) via PowerShell.
+1. Enable `AllowAdHocSubscriptions` (tenant level configuration) via PowerShell.
 
     ```powershell
     Install the MSOnline module if necessary: 
@@ -38,12 +38,12 @@ This error occurs in organizations that have disabled self-service signups. Self
     Set-MsolCompanySettings -AllowAdHocSubscriptions $true 
     ```
 
-1. Assign a paid Microsoft Flow plan (P1 or P2) to the users attempting to first provision approvals or a Common Data Service database via [Office 365](https://portal.office.com/). It's only necessary to get the database provisioned.  
+1. Assign a paid Microsoft Flow plan (P1 or P2) to the users attempting to first provision approvals or a Common Data Service database via [Office 365](https://portal.office.com/). It's only necessary to get the database provisioned.  
 
     > [!NOTE]
-    > Trial plans aren't sufficient to for Approval CDS provisioning. GCC tenants can only use approach #2 to be able to provision database instances.
+    > Trial plans aren't sufficient to for Approval CDS provisioning. GCC tenants can only use approach #2 to be able to provision database instances.
 
-1. Create the database as an environment admin directly from [Power Platform admin center](https://admin.powerplatform.microsoft.com)  
+1. Create the database as an environment admin directly from [Power Platform admin center](https://admin.powerplatform.microsoft.com)  
 
 ## Error with status code "AADApplicationDisabled"
 
@@ -53,7 +53,7 @@ This error occurs in organizations that have disabled self-service signups. Self
 
 These errors occur if the Dynamics CRM Online / Common Data Service applications are disabled either in the tenant, or through Conditional Access for specific users. The exact error message may vary depending on the exact state of the Common Data Service instance corresponding to the PowerApps/Flow environment - unprovisioned, provisioned but no Approvals installed, or Approvals already installed.
 
-To resolve, tenant administrators will need to go to the **Enterprise Applications** tab under **Azure Active Directory** on [Microsoft Azure](https://ms.portal.azure.com) to ensure application 00000007-0000-0000-c000-000000000000 (Common Data Service / Dynamics CRM Online) is enabled for users to sign in, and any relevant Conditional Access policies grant the necessary access to users expecting to use Flow Approvals.
+To resolve, tenant administrators will need to go to the **Enterprise Applications** tab under **Azure Active Directory** on [Microsoft Azure](https://ms.portal.azure.com) to ensure application 00000007-0000-0000-c000-000000000000 (Common Data Service / Dynamics CRM Online) is enabled for users to sign in, and any relevant Conditional Access policies grant the necessary access to users expecting to use Flow Approvals.
 
 :::image type="content" source="./media/flow-approval-cds-provisioning-errors/properties-settings.png" alt-text="Set the Enabled for users to sign-in option to Yes.":::
 
@@ -67,16 +67,16 @@ The Common Data Service instance has been disabled in this environment. It isn't
 
 > The Common Data Service Database for this environment is not ready yet.
 
-The database for this instance is still being provisioned, or has failed provisioning. Rerunning a Flow that uses approvals will attempt to reprovision the instance.  
+The database for this instance is still being provisioned, or has failed provisioning. Rerunning a Flow that uses approvals will attempt to reprovision the instance.  
 
 ## Error "User has no permission to create database"
 
-> The current user doesn't have permissions to create a Common Data Service database for this environment.
+> The current user doesn't have permissions to create a Common Data Service database for this environment.
 
 For non-Default Flow and PowerApps environments, only environment admins can directly (through the Flow Admin portal) or indirectly (through Flow Approvals) create the Common Data Service database.
 
 Either an administrator must:
 
-- Create the environment manually from the Flow Admin portal.
+- Create the environment manually from the Flow Admin portal.
 - Create and run an Approvals Flow.
 - Grant environment administrator permission to the current user.

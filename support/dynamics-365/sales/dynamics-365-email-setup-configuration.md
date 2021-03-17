@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 4020807
 - [Configure the E-mail Router](/previous-versions/dynamicscrm-2016/administering-dynamics-365/hh699786(v=crm.8))
 - [E-mail Router Demystified - Troubleshooting (Part 1)](https://community.dynamics.com/crm/b/dynamicscrmsupportblog/posts/email-router-demystified-troubleshooting-part-1)
 - [E-mail Router Demystified - Troubleshooting (Part 2)](https://community.dynamics.com/crm/b/dynamicscrmsupportblog/archive/2015/01/16/email-router-demystified-troubleshooting-part-2)
-- [E-mail Router Demystified - Troubleshooting (Part 3)](https://community.dynamics.com/crm/b/dynamicscrmsupportblog/archive/2016/05/11/email-router-demystified-troubleshooting-part-3)
+- [E-mail Router Demystified - Troubleshooting (Part 3)](https://community.dynamics.com/crm/b/dynamicscrmsupportblog/archive/2016/05/11/email-router-demystified-troubleshooting-part-3)
 - [E-mail Router Demystified - Tools for Troubleshooting - Fiddler](https://community.dynamics.com/crm/b/dynamicscrmsupportblog/posts/email-router-demystified-tools-for-troubleshooting-fiddler)
 - [E-mail Router Demystified - Tools for Troubleshooting - Message Analyzer](https://community.dynamics.com/crm/b/dynamicscrmsupportblog/posts/email-router-demystified-tools-for-troubleshooting-message-analyzer)
 - [E-mail Router Demystified - Tools for Troubleshooting - Email Router Logging](https://community.dynamics.com/crm/b/dynamicscrmsupportblog/posts/email-router-demystified-tools-for-troubleshooting-email-router-logging)

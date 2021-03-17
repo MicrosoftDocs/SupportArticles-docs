@@ -16,12 +16,12 @@ _Original KB number:_ &nbsp; 4471947
 
 The following warning level alert appears within a Microsoft Dynamics 365 mailbox record:
 
-> An unknown error occurred while receiving email through the mailbox [Mailbox Name]. The owner of the associated email server profile [Profile Name] has been notified. The system will try to receive email again later.  
-Email Server Error Code: Exchange server returned UnknownIncomingEmailIntegrationError -2147220970 exception.
+> An unknown error occurred while receiving email through the mailbox [Mailbox Name]. The owner of the associated email server profile [Profile Name] has been notified. The system will try to receive email again later.  
+Email Server Error Code: Exchange server returned UnknownIncomingEmailIntegrationError -2147220970 exception.
 
 ## Cause
 
-This warning may appear if Server-Side Synchronization attempted to retrieve emails but encountered an unexpected error. This is typically a temporary issue and the emails will be retrieved successfully on the next synchronization cycle (typically 15 minutes).
+This warning may appear if Server-Side Synchronization attempted to retrieve emails but encountered an unexpected error. This is typically a temporary issue and the emails will be retrieved successfully on the next synchronization cycle (typically 15 minutes).
 
 ## Resolution
 

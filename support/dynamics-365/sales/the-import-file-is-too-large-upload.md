@@ -25,12 +25,12 @@ Although the error message indicates a problem with the [Maximum size of solutio
 
 ## Resolution
 
-Select the **Download Log File** button to see a more detailed message. You may see details such as the following message:
+Select the **Download Log File** button to see a more detailed message. You may see details such as the following message:
 
-> The import failed. For more information, see the related error messages. : System.Data.SqlClient.SqlException (0x80131904) Column names in each table must be unique. Column name '\<column name>' in table '\<entity/table name>' is specified more than once.
+> The import failed. For more information, see the related error messages. : System.Data.SqlClient.SqlException (0x80131904) Column names in each table must be unique. Column name '\<column name>' in table '\<entity/table name>' is specified more than once.
 
 The example message above is a SQL error that can occur if you try to import a field that already exists in that entity.
 
-Example: If you had created a custom field in the organization with a schema name called new_field1 on the Account entity. Now you're trying to import a solution that contains a field with that same schema name on the Account entity. SQL doesn't allow multiple columns with the same name in the same table so it will cause the import to fail. You may find that in the target environment, you already had a field with the same schema name but different casing such as new_Field1 and the field in the solution you're importing is new_field1. If the field with the same name isn't needed in the target environment, delete it and then try the import again.
+Example: If you had created a custom field in the organization with a schema name called new_field1 on the Account entity. Now you're trying to import a solution that contains a field with that same schema name on the Account entity. SQL doesn't allow multiple columns with the same name in the same table so it will cause the import to fail. You may find that in the target environment, you already had a field with the same schema name but different casing such as new_Field1 and the field in the solution you're importing is new_field1. If the field with the same name isn't needed in the target environment, delete it and then try the import again.
 
 If the error persists and you aren't able to resolve the issue using the details in the log file, contact Microsoft Support for assistance. You can also use the information in the log file to search for potential solutions in the [Dynamics 365 Communities](https://community.dynamics.com/f).

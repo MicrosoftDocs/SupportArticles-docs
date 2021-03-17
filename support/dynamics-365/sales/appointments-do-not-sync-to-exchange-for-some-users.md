@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4494491
 
 Appointments do not sync from Microsoft Dynamics 365 to Microsoft Exchange for some users. If you view the Alerts section for a corresponding mailbox in Microsoft Dynamics 365, you see the following alert message:
 
-> Appointments, contacts, and tasks for the mailbox \<Mailbox Name> couldn't be synchronized. The owner of the associated email server profile \<Profile Name> has been notified. The system will try again later.  
+> Appointments, contacts, and tasks for the mailbox \<Mailbox Name> couldn't be synchronized. The owner of the associated email server profile \<Profile Name> has been notified. The system will try again later.  
 > **Email Server Error Code:** Exchange.server returned 383 error.
 
 ## Cause
@@ -34,7 +34,7 @@ Microsoft is aware of an [issue with the Exchange Web Services API](https://gith
 - (GMT+03:00) Istanbul - Turkey Standard Time
 - (GMT+03:00) Minsk - Belarus Standard Time
 - (GMT+04:00) Astrakhan, Ulyanovsk - Astrakhan Standard Time
-- (GMT+04:00) Baku - Azerbaijan Standard Time
+- (GMT+04:00) Baku - Azerbaijan Standard Time
 - (GMT+04:00) Izhevsk, Samara - Russia Time Zone 3
 - (GMT+04:00) Moscow, St. Petersburg, Volgograd - Russian Standard Time
 - (GMT+04:00) Yerevan - Caucasus Standard Time

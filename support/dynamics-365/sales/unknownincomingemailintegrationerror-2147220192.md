@@ -16,13 +16,13 @@ _Original KB number:_ &nbsp; 4551320
 
 Emails are not received in a Microsoft Dynamics 365 mailbox and you see a warning alert like the following in a user's mailbox record:
 
-> An unknown error occurred while receiving email through the mailbox "[Mailbox Name]". The owner of the associated email server profile [Profile Name] has been notified. The system will try to receive email again later.
+> An unknown error occurred while receiving email through the mailbox "[Mailbox Name]". The owner of the associated email server profile [Profile Name] has been notified. The system will try to receive email again later.
 >
 > **Email Server Error Code:** Exchange server returned UnknownIncomingEmailIntegrationError -2147220192
 
 ## Cause
 
-Error -2147220192 indicates the owner of the queue does not have sufficient privileges to work with the queue. The user is likely missing sufficient Read access to the Queue entity.
+Error -2147220192 indicates the owner of the queue does not have sufficient privileges to work with the queue. The user is likely missing sufficient Read access to the Queue entity.
 
 ## Resolution
 

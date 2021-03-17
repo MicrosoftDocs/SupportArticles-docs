@@ -31,7 +31,7 @@ Microsoft is aware of this issue and investigating additional potential solution
 
 ### Download and install version 9 of Microsoft Dynamics 365 for Outlook
 
-Download and install version 9 of Microsoft Dynamics 365 for Outlook from [Dynamics 365 for Outlook, version 9.0 (Outlook client)](https://www.microsoft.com/download/details.aspx?id=56972).
+Download and install version 9 of Microsoft Dynamics 365 for Outlook from [Dynamics 365 for Outlook, version 9.0 (Outlook client)](https://www.microsoft.com/download/details.aspx?id=56972).
 
 ### Uninstall the LinkedIn solutions
 
@@ -44,4 +44,4 @@ For some organizations, the LinkedIn Sales Navigator solution was installed auto
 1. To uninstall a solution, sign in to the Microsoft Dynamics 365 web application as a user with the System Administrator role.
 2. Navigate to **Settings** and then select **Solutions**.
 3. Select the solution with the **Name** = **LinkedInSalesNavigatorControlsForUnifiedClient** and then select **Delete.**  
-4. Repeat this process for the other two solutions mentioned above in the order they are listed.
+4. Repeat this process for the other two solutions mentioned above in the order they are listed.

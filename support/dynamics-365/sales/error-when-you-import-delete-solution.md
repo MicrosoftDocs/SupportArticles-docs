@@ -16,10 +16,10 @@ _Original KB number:_ &nbsp; 4456770
 
 When attempting to install a solution in Dynamics 365, you see the following message:
 
-> "The import of solution: [Solution Name] failed.  
-Error code 80040220"
+> "The import of solution: [Solution Name] failed.  
+Error code 80040220"
 
-The detail section shows the following message:
+The detail section shows the following message:
 
 > "You do not have permission to access these records. Contact your Microsoft Dynamics 365 administrator."
 

@@ -1,20 +1,20 @@
 ---
 title: Mailbox fails to be tested and enabled
-description: This article provides a resolution for the problem that occurs when a Dynamics 365 mailbox is configured to use Server-Side Synchronization with Gmail.
+description: This article provides a resolution for the problem that occurs when a Dynamics 365 mailbox is configured to use Server-Side Synchronization with Gmail.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 
 ---
 # Troubleshooting Server-Side Synchronization with Gmail
 
-This article helps you resolve the problem that occurs when a Dynamics 365 mailbox is configured to use Server-Side Synchronization with Gmail.
+This article helps you resolve the problem that occurs when a Dynamics 365 mailbox is configured to use Server-Side Synchronization with Gmail.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  
 _Original KB number:_ &nbsp; 4493342
 
 ## Symptoms
 
-When a Dynamics 365 mailbox is configured to use Server-Side Synchronization with Gmail, the mailbox may fail to be tested and enabled successfully or incoming emails are not received in Dynamics 365.
+When a Dynamics 365 mailbox is configured to use Server-Side Synchronization with Gmail, the mailbox may fail to be tested and enabled successfully or incoming emails are not received in Dynamics 365.
 
 ## Cause
 
@@ -31,4 +31,4 @@ If the mailbox is tested and enabled successfully but incoming email is not crea
 
 [Read Gmail messages on other email clients using POP](https://support.google.com/mail/answer/7104828)
 
-You can follow the steps mentioned in the article above to update the Gmail email address in Dynamics 365 to include `recent:` at the beginning. Example: `recent:example@gmail.com`.
+You can follow the steps mentioned in the article above to update the Gmail email address in Dynamics 365 to include `recent:` at the beginning. Example: `recent:example@gmail.com`.

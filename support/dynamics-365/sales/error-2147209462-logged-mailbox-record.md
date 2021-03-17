@@ -16,8 +16,8 @@ _Original KB number:_ &nbsp; 4500778
 
 The following alert is logged within the mailbox record for a Dynamics 365 mailbox:
 
-> An unknown error occurred while receiving email through the mailbox "Your mailbox is now connected to Dynamics 365". The owner of the associated email server profile [Mailbox Name] has been notified. The system will try to receive email again later.  
-**Email Server Error Code:** Exchange server returned UnknownIncomingEmailIntegrationError -2147209462 exception.
+> An unknown error occurred while receiving email through the mailbox "Your mailbox is now connected to Dynamics 365". The owner of the associated email server profile [Mailbox Name] has been notified. The system will try to receive email again later.  
+**Email Server Error Code:** Exchange server returned UnknownIncomingEmailIntegrationError -2147209462 exception.
 
 ## Cause
 

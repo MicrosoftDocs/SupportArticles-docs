@@ -25,7 +25,7 @@ If you select **Technical Details**, you see the following message along with mo
 
 ## Cause
 
-A solution package contains Dynamics 365 customizations that are stored as XML. This XML has a specific schema definition that identifies which elements are valid. If the XML contains elements that aren't valid according to the schema definition, this error message will appear when trying to import the solution.
+A solution package contains Dynamics 365 customizations that are stored as XML. This XML has a specific schema definition that identifies which elements are valid. If the XML contains elements that aren't valid according to the schema definition, this error message will appear when trying to import the solution.
 
 ## Resolution
 
@@ -37,7 +37,7 @@ A solution package contains Dynamics 365 customizations that are stored as XML. 
 - ["The element 'savedquery' has incomplete content](https://support.microsoft.com/help/4463330)
 
 **If you had manually modified the customizations XML**  
-Select the Technical Details link within the error dialog. You'll then see additional details about what invalid elements are found in the XML. The message also includes a link to download the schema file that can be used with an XML editor that supports schema validation. After correcting any invalid elements in the XML, try to import the solution again.
+Select the Technical Details link within the error dialog. You'll then see additional details about what invalid elements are found in the XML. The message also includes a link to download the schema file that can be used with an XML editor that supports schema validation. After correcting any invalid elements in the XML, try to import the solution again.
 
 For more information, see [Edit the customizations XML file with schema validation](/dynamics365/customerengagement/on-premises/developer/customize-dev/edit-customizations-xml-file-schema-validation)
 

@@ -22,10 +22,10 @@ In PowerAutomate, when a flow has **When a new email arrives in a shared mailbox
 
 ## Cause
 
-By default, the trigger will have the following attachment-related options set to **No**.  This is because triggering on all mails doesn't miss any (you might want to trigger on emails without attachments too) and attachments can be large in size:
+By default, the trigger will have the following attachment-related options set to **No**.  This is because triggering on all mails doesn't miss any (you might want to trigger on emails without attachments too) and attachments can be large in size:
 
 - Only with Attachments
-  - If set to **No**, it will trigger on all emails.  If **Yes**, it will trigger on emails with attachments. Use the latter if your flow only needs to trigger on mails with attachments; otherwise, keep it set to **No**.
+  - If set to **No**, it will trigger on all emails.  If **Yes**, it will trigger on emails with attachments. Use the latter if your flow only needs to trigger on mails with attachments; otherwise, keep it set to **No**.
 - Include Attachments
   - If set to **No**, it will not include the attachments content (it will be set to null).
   - For example, if set to **No** and you have a SharePoint **Create File** action that uses the null attachment content, then this will result in **400 Bad Request** errors because the file content would be null, or empty, which is invalid.

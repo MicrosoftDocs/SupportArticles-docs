@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4506139
 
 ## Introduction
 
-We are modifying the approval process for new/updated/changed mailboxes. To provide more management flexibility, we are adding the [Exchange administrator](/microsoft-365/admin/add-users/about-admin-roles) as someone who can approve mailboxes. In addition, we're documenting how those authorized to do mailbox approval could change the default settings so user and queue mailboxes would not require approval.
+We are modifying the approval process for new/updated/changed mailboxes. To provide more management flexibility, we are adding the [Exchange administrator](/microsoft-365/admin/add-users/about-admin-roles) as someone who can approve mailboxes. In addition, we're documenting how those authorized to do mailbox approval could change the default settings so user and queue mailboxes would not require approval.
 
 The mailbox approval process is illustrated in the following flow chart.
 
@@ -23,7 +23,7 @@ The mailbox approval process is illustrated in the following flow chart.
 > [!NOTE]
 > When the Server-Side Synchronization feature initially released, only the [Global administrator](/microsoft-365/admin/add-users/about-admin-roles) role was able to approve mailboxes.
 >
-> We are rolling out these changes region-by-region as part of [Service Update 60](https://support.microsoft.com/help/4506766); first for Customer Engagement Online/Exchange Online and then for Customer Engagement Online/Exchange On-premises.
+> We are rolling out these changes region-by-region as part of [Service Update 60](https://support.microsoft.com/help/4506766); first for Customer Engagement Online/Exchange Online and then for Customer Engagement Online/Exchange On-premises.
 
 ## Permission Model
 
@@ -31,8 +31,8 @@ The mailbox approval process is illustrated in the following flow chart.
 
 To approve mailboxes in Dynamics 365:
 
-1. You must be a Dynamics 365 System Administrator and either an [Exchange or Office 365 Global administrator](/microsoft-365/admin/add-users/about-admin-roles).
-1. You must have the Approve Email Addresses for Users or Queues privilege.
+1. You must be a Dynamics 365 System Administrator and either an [Exchange or Office 365 Global administrator](/microsoft-365/admin/add-users/about-admin-roles).
+1. You must have the Approve Email Addresses for Users or Queues privilege.
 
 For more information, see [Approve email](/power-platform/admin/connect-exchange-online#approve-email).
 
@@ -41,7 +41,7 @@ For more information, see [Approve email](/power-platform/admin/connect-exchange
 > [!WARNING]
 > This option is not recommended as it exposes the possibility of syncing an Exchange mailbox to Dynamics 365 without proper authorization.
 
-To remove the requirement of approving all User or Queue mailboxes, a Dynamics 365 System Administrator (with Exchange administrator or Global administrator rights) must follow these steps:
+To remove the requirement of approving all User or Queue mailboxes, a Dynamics 365 System Administrator (with Exchange administrator or Global administrator rights) must follow these steps:
 
 1. Open the Customer Engagement web application.
 2. Navigate to **Settings**, **Administration**, and then click **System Settings**.
@@ -49,8 +49,8 @@ To remove the requirement of approving all User or Queue mailboxes, a Dynamics
 
     :::image type="content" source="media/changes-to-mailbox-approval-in-dynamics-365/system-settings.png" alt-text="Screenshot of unchecking Email settings under System Settings.":::
 
-For more information, see [Remove requirement to Approve](/power-platform/admin/connect-exchange-online#approve-email).
+For more information, see [Remove requirement to Approve](/power-platform/admin/connect-exchange-online#approve-email).
 
 ## Questions
 
-If you have questions after reading the provided documentation on this topic, you can contact customer support.
+If you have questions after reading the provided documentation on this topic, you can contact customer support.

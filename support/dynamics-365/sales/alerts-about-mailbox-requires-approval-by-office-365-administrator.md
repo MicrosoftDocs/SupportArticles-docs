@@ -20,7 +20,7 @@ After you select the Test & Enable Mailbox button on a mailbox record in Microso
 
 > Email cannot be sent because the email address of the mailbox \<Mailbox Name> requires an approval by an Office 365 administrator. The mailbox didn't synchronize. The owner of the email server profile Microsoft Exchange Online has been notified.
 
-> Appointments, contacts, and tasks can't be synchronized because the email address of the mailbox \<Mailbox Name> requires an approval by an Office 365 administrator. A notification about this is posted on the alerts wall for the owner of the email server profile Microsoft Exchange Online.
+> Appointments, contacts, and tasks can't be synchronized because the email address of the mailbox \<Mailbox Name> requires an approval by an Office 365 administrator. A notification about this is posted on the alerts wall for the owner of the email server profile Microsoft Exchange Online.
 
 You may also see the following notification within the mailbox record:
 

@@ -93,7 +93,7 @@ The following products have been tested or are currently being tested for compat
 |Office 2007|-|-|Not Compatible|
 |Office 2010 (Cached-Exchange Mode Only)|RTM|7.0.0.3543|Compatible|
 |Office 2013 (Cached-Exchange Mode Only)|RTM|7.0.0.3543|Compatible|
-|Office 2016 (Cached-Exchange Mode Only)|Update 0.2|7.0.2.0053| |
+|Office 2016 (Cached-Exchange Mode Only)|Update 0.2|7.0.2.0053| |
 |Office 365|RTM|7.0.0.3543|Compatible|
 |Windows 7 (for clients)|RTM|7.0.0.3543|Compatible|
 |Windows 8.0 (for clients)|RTM|7.0.0.3543|Compatible|

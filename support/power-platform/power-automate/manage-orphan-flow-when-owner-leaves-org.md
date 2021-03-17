@@ -14,9 +14,9 @@ _Original KB number:_ &nbsp; 4556130
 
 ## What are orphaned flows?
 
-A flow turns into an orphaned flow when it doesn't have a valid owner anymore. It often happens when the creator or owner of the flow has left the organization and there's no co-owner. If the flow uses connections that require authentication, then it may start failing because the user identity isn't valid anymore.
+A flow turns into an orphaned flow when it doesn't have a valid owner anymore. It often happens when the creator or owner of the flow has left the organization and there's no co-owner. If the flow uses connections that require authentication, then it may start failing because the user identity isn't valid anymore.
 
-Admins can maintain continuity on the business process automated by the flow by adding one or more co-owners to it. Co-owners basically have full control over the flow just like the original owner, and can fix authentication for connections if any and enable the flow if it has been disabled.
+Admins can maintain continuity on the business process automated by the flow by adding one or more co-owners to it. Co-owners basically have full control over the flow just like the original owner, and can fix authentication for connections if any and enable the flow if it has been disabled.
 
 ## How to check if there are orphaned flows
 
@@ -31,7 +31,7 @@ Select **Load more** to load the next set of flows so as to ensure you've looked
 
 1. From the flow list, select the orphaned flow to open the flow details page.
 2. Select **Manage sharing** at the bottom of the Owners list.
-3. Type in a new owner name and select the new owner account.
+3. Type in a new owner name and select the new owner account.
 4. Select **Save** to save the changes.
 
 > [!NOTE]
@@ -39,12 +39,12 @@ Select **Load more** to load the next set of flows so as to ensure you've looked
 
 ## Manage orphaned flows through Power Automate cmdlets for administrators
 
-As an Admin, you can also manage flows by running [Power Apps cmdlets for administrators](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators-preview). Make sure you've followed the instructions to complete the installation if you haven't done it before.
+As an Admin, you can also manage flows by running [Power Apps cmdlets for administrators](/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators-preview). Make sure you've followed the instructions to complete the installation if you haven't done it before.
 
 ### Fixing permissions for one flow
 
 You'll need the environment name and flow name (a GUID).
-Run the `Get-AdminFlowOwnerRole` cmdlet with environment name and flow name to get the list of users and their roles. Which will enable you to verify the current permissions set for the flow.
+Run the `Get-AdminFlowOwnerRole` cmdlet with environment name and flow name to get the list of users and their roles. Which will enable you to verify the current permissions set for the flow.
 
 To assign a co-owner to a flow, run `Set-AdminFlowOwnerRole` with the AAD principal object ID of the new owner.
 
@@ -67,7 +67,7 @@ Get-AdminFlow -EnvironmentName <env name> -CreatedBy <user AAD object id>
 
 ### Listing all orphaned flows in an environment
 
-To get all flows that don't have valid users, loop through all flows in one environment, and verify there's at least one owner or co-owner that exists in AAD. The following script provides an example:
+To get all flows that don't have valid users, loop through all flows in one environment, and verify there's at least one owner or co-owner that exists in AAD. The following script provides an example:
 
 ```csharp
 $env = "<your environment name>"
@@ -100,4 +100,4 @@ foreach ($flow in $flows)
 }
 ```
 
-You can also inject the `Set-AdminFlowOwnerRole` cmdlet to assign a co-owner for each flow that doesn't have a valid owner.
+You can also inject the `Set-AdminFlowOwnerRole` cmdlet to assign a co-owner for each flow that doesn't have a valid owner.

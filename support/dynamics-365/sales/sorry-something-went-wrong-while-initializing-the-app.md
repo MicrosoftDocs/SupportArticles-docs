@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4078135
 
 ## Symptoms
 
-When you select the Microsoft Dynamics 365 app in Outlook (anywhere the app is supported) and your Microsoft Dynamics 365 (online) instance is version 9.x, you see the following error message:
+When you select the Microsoft Dynamics 365 app in Outlook (anywhere the app is supported) and your Microsoft Dynamics 365 (online) instance is version 9.x, you see the following error message:
 
 > Sorry, something went wrong while initializing the app. Please try again, or restart the app
 

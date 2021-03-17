@@ -18,15 +18,15 @@ When attempting to import a solution in Microsoft Dynamics 365, the solution imp
 
 > Plug-in assembly does not contain the required types or assembly content cannot be updated.
 >
-> Error code: 8004418b
+> Error code: 8004418b
 
 ## Cause
 
-This error occurs if you have modified an assembly included in this solution but the version of the solution was not incremented.
+This error occurs if you have modified an assembly included in this solution but the version of the solution was not incremented.
 
 Examples:
 
-Changing the name, version, isolation level, public key token, or culture of the assembly without increasing the version of the solution will cause this error. Changes like these require a solution upgrade (version change) instead of a solution update.
+Changing the name, version, isolation level, public key token, or culture of the assembly without increasing the version of the solution will cause this error. Changes like these require a solution upgrade (version change) instead of a solution update.
 
 ## Resolution
 

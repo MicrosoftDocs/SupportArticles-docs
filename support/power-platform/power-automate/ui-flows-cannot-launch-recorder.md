@@ -48,8 +48,8 @@ UI flows recorder won't launch. Instead, the UI flows wizard will prompt you to 
 
 4. Check that you've installed the UI flows package:
 
-    - In Windows 10, navigate to **Settings** → **Apps & features**  
-    - In Windows 8.1 or earlier, navigate to **Control Panel** → **Add or Remove Programs**
+    - In Windows 10, navigate to **Settings** → **Apps & features**  
+    - In Windows 8.1 or earlier, navigate to **Control Panel** → **Add or Remove Programs**
 
     Look for the UI flows installation package:
 

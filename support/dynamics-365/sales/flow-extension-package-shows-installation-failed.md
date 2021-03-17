@@ -26,4 +26,4 @@ The installation of old version 1.0.0.3 of Microsoft Flow Extensions Package fai
 
 If you see installation is failed for Microsoft Flow Extensions Package 1.0.0.3, then no action is required and this error can be ignored.
 
-It's because an updated package Microsoft Flow Extensions Anchor package is already present in the org.
+It's because an updated package Microsoft Flow Extensions Anchor package is already present in the org.

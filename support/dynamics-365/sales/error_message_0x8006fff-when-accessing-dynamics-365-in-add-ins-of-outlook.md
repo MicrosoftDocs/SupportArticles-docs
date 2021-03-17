@@ -29,14 +29,14 @@ This Microsoft Dynamics 365 feature requires some Outlook updates. If the necess
 
 ## Resolution
 
-The required updates depend on the version of Office you have installed. There is a Windows Installer (MSI) based version of Office and a Click-to-Run (C2R) version of Office.  
+The required updates depend on the version of Office you have installed. There is a Windows Installer (MSI) based version of Office and a Click-to-Run (C2R) version of Office.  
 
 ### Click-to-Run (C2R) version of Office
 
-The necessary updates are included in build 7466 or later. You can view the build number in Outlook by selecting the **File** menu and then selecting **Office Account**. If your build number is less than 7466, install the latest Office updates.
+The necessary updates are included in build 7466 or later. You can view the build number in Outlook by selecting the **File** menu and then selecting **Office Account**. If your build number is less than 7466, install the latest Office updates.
 
 > [!IMPORTANT]
-> If you are using Office 365 ProPlus and are configured to use the Deferred Channel for updates, you may not receive the latest available updates required to use this feature. If you are configured to use this option, the words **Deferred Channel** will appear just above the version number.
+> If you are using Office 365 ProPlus and are configured to use the Deferred Channel for updates, you may not receive the latest available updates required to use this feature. If you are configured to use this option, the words **Deferred Channel** will appear just above the version number.
 
 For more information about the different update channels and how to configure the use of a different update channel, see [Overview of update channels for Microsoft 365 Apps](/deployoffice/overview-update-channels) and [Change the Microsoft 365 Apps update channel for devices in your organization](/deployoffice/change-update-channels).
 

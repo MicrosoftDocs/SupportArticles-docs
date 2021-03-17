@@ -36,7 +36,7 @@ One of the tests necessary to enable the mailbox for Server-Side Sync didn't com
 4. Look for any errors and review the message that is displayed.
 
     > [!NOTE]
-    > If no errors appear, navigate to **Settings**, **Email Configuration**, and then **Email Configuration Settings**. In the **Configure alerts** section, verify the **Error** option is selected. If it wasn't already selected, enable this option and select **OK**. Then select the **Test & Enable Mailbox** button again and check for any errors.
+    > If no errors appear, navigate to **Settings**, **Email Configuration**, and then **Email Configuration Settings**. In the **Configure alerts** section, verify the **Error** option is selected. If it wasn't already selected, enable this option and select **OK**. Then select the **Test & Enable Mailbox** button again and check for any errors.
 
     > [!IMPORTANT]
     > When doing the **Test & Enable Mailbox** action, make sure to select the checkbox that appears in the dialog.

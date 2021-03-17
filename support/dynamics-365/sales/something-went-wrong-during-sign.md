@@ -36,7 +36,7 @@ Close the app, and open it again. If the problem still exists, try closing your 
 
 Resolution 2
 
-If you changed your Dynamics 365 (online) URL after Microsoft Dynamics 365 App for Outlook was installed, you need to redeploy the app:
+If you changed your Dynamics 365 (online) URL after Microsoft Dynamics 365 App for Outlook was installed, you need to redeploy the app:
 
 1. A user with the System Administrator role can redeploy the app to users by opening the Dynamics 365 web application, and then navigating to the Dynamics 365 App for Outlook area within Settings.
 1. Select the users who should have the app redeployed and use one of the **Add App** buttons to redeploy the app.

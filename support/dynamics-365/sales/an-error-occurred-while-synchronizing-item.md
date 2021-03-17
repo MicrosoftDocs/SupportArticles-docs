@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4477141
 
 ## Symptoms
 
-The following alert appears within a Dynamics 365 mailbox record:
+The following alert appears within a Dynamics 365 mailbox record:
 
 > "An error occurred while synchronizing the item [Item Name] from Microsoft Dynamics 365 for the mailbox [Mailbox Name].
 >
@@ -22,7 +22,7 @@ The following alert appears within a Dynamics 365 mailbox record:
 
 ## Cause
 
-This message may appear if Server-Side Synchronization attempted to synchronize an item with Microsoft Exchange but met an error. It's typically a temporary issue and the item will be retrieved successfully on the next synchronization cycle (typically 15 minutes).
+This message may appear if Server-Side Synchronization attempted to synchronize an item with Microsoft Exchange but met an error. It's typically a temporary issue and the item will be retrieved successfully on the next synchronization cycle (typically 15 minutes).
 
 ## Resolution
 

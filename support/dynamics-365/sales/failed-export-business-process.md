@@ -22,29 +22,29 @@ You may also see a reference to error code 80060376.
 
 ## Cause
 
-In the December 2016 update for Dynamics 365, Business Process Flow entities were introduced. These entities are backing entities for Business Process Flows and are created when Business Process Flows(BPFs) are first activated. During this entity creation, a dependency is also created between a given BPF and its corresponding entity. It's to enforce that a BPF and its entity are always treated as a pair and there's never a scenario where a BPF can be introduced without its backing entity in to an org. that is on the December 2016 update for Dynamics 365 or above.
+In the December 2016 update for Dynamics 365, Business Process Flow entities were introduced. These entities are backing entities for Business Process Flows and are created when Business Process Flows(BPFs) are first activated. During this entity creation, a dependency is also created between a given BPF and its corresponding entity. It's to enforce that a BPF and its entity are always treated as a pair and there's never a scenario where a BPF can be introduced without its backing entity in to an org. that is on the December 2016 update for Dynamics 365 or above.
 
 The following scenarios typically result in the failure called out above:
 
-### Scenario 1 - BPF in draft state
+### Scenario 1 - BPF in draft state
 
 1. Navigate to **Settings** -> **Processes**
 1. Create a BPF and save it. Don't activate it.
-1. Add the BPF created in step 1 above to a solution and try to export it. Export will fail.
+1. Add the BPF created in step 1 above to a solution and try to export it. Export will fail.
 
-### Scenario 2 - BPF activated from within solution explorer
+### Scenario 2 - BPF activated from within solution explorer
 
-1. Navigate **to Settings** -> **Solutions**
-1. Create a new solution - SolutionA.
-1. From within solution explorer for SolutionA created in step 2. above, create a new BPF from under the Processes node.  
-1. Once the BPF is completed, activate it.  
-1. Select **Export** to export SolutionA.  
-1. Ignore the Missing Dependencies screen you're presented with that will call out the corresponding BPF entity that needs to be added to the solution.  
-1. Continue to export SolutionA. Export will fail.
+1. Navigate **to Settings** -> **Solutions**
+1. Create a new solution - SolutionA.
+1. From within solution explorer for SolutionA created in step 2. above, create a new BPF from under the Processes node.  
+1. Once the BPF is completed, activate it.  
+1. Select **Export** to export SolutionA.  
+1. Ignore the Missing Dependencies screen you're presented with that will call out the corresponding BPF entity that needs to be added to the solution.  
+1. Continue to export SolutionA. Export will fail.
 
 ## Resolution
 
-To unblock solution export in the scenarios outlined above, before attempting to export, do the following steps.
+To unblock solution export in the scenarios outlined above, before attempting to export, do the following steps.
 
 ### Scenario 1 - BPF in draft state
 
@@ -54,7 +54,7 @@ To unblock solution export in the scenarios outlined above, before attempting t
 
 1. Export the solution and it should succeed.
 
-### Scenario 2 - BPF activated from solution explorer
+### Scenario 2 - BPF activated from solution explorer
 
-1. Manually add the required BPF entity(that is called out explicitly in the Missing Dependencies screen you'll be presented with during solution export) to the solution.
+1. Manually add the required BPF entity(that is called out explicitly in the Missing Dependencies screen you'll be presented with during solution export) to the solution.
 1. Export the solution and it should succeed.

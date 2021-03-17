@@ -23,12 +23,12 @@ If you download the log file and open it in Excel, you see more details such as 
 
 **Symptom 1 Details:**
 
-> Failure 0x80048539  
+> Failure 0x80048539  
 Solution manifest import: FAILURE: Patch version 1.0.1.0 is invalid for parent version 1.1.0.0
 
 **Symptom 2 Details:**
 
-> Failure 0x80048539  
+> Failure 0x80048539  
 Solution manifest import: FAILURE: Holding solution MyPatchTesting_Upgrade already exists.
 
 ## Cause
@@ -62,4 +62,4 @@ Verify the solution patch version you are trying to import is a higher version t
 
 If you see the error details mentioned in the Symptom 2 Details section mentioned above:
 
-Navigate to **Settings**, **Customizations**, and then select **Solutions**. Select the existing installed solution you are trying to upgrade and then select **Apply Solution Upgrade**.
+Navigate to **Settings**, **Customizations**, and then select **Solutions**. Select the existing installed solution you are trying to upgrade and then select **Apply Solution Upgrade**.

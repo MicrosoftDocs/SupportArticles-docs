@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4456128
 - **How can I get a portal subscription?**
 
     A portal subscription can be acquired through two means:
-    1. We provide one portal addon with the purchase of certain types and quantities of Dynamics 365 user license. Details are present in [Dynamics 365 pricing and licensing guide](https://go.microsoft.com/fwlink/?LinkId=866544&clcid=0x409). It's important to note that you only get one portal addon with user licenses even if you have bought multiple types or quantities of valid licenses.
+    1. We provide one portal addon with the purchase of certain types and quantities of Dynamics 365 user license. Details are present in [Dynamics 365 pricing and licensing guide](https://go.microsoft.com/fwlink/?LinkId=866544&clcid=0x409). It's important to note that you only get one portal addon with user licenses even if you have bought multiple types or quantities of valid licenses.
     2. Other portal subscription can be purchased by purchasing a Portal Add-on subscription. This subscription is an addon subscription to Dynamics 365 and is available to be purchased if you have appropriate Dynamics 365 licenses.
 
 - **How can I change Portal Type and audience after a Portal is provisioned?**
@@ -28,7 +28,7 @@ _Original KB number:_ &nbsp; 4456128
 
     After provisioning a portal, you can change base URL of the portal by following [this documentation](/dynamics365/customer-engagement/portals/change-base-url).
 
-- **How can I delete a Portal once it's provisioned?**
+- **How can I delete a Portal once it's provisioned?**
 
     Each portal is composed of two parts:
     1. Portal host - It's the website that runs the portal code.
@@ -52,7 +52,7 @@ _Original KB number:_ &nbsp; 4456128
     1. This step will delete your associated Portal resources and the Portal URL won't be accessible after the operation completes.
     1. Once your existing Portal is reset, then you need to go to your new tenant (or to new geo of existing tenant) and provision a portal available there.
 
-- **We recently did a restore of our Dynamics 365 organization from an old backup, and now the Portal connected to that org isn't working. How do we fix it?**
+- **We recently did a restore of our Dynamics 365 organization from an old backup, and now the Portal connected to that org isn't working. How do we fix it?**
 
     When a dynamics 365 organization is restored from a backup, there are various changes that are done in your organization that can break your Portal's connection with the org. Follow these steps to fix it:
 
@@ -85,7 +85,7 @@ _Original KB number:_ &nbsp; 4456128
 
 - **When accessing my Portal, I see a generic error page. How can I find error details?**
 
-    Whenever a server error occurs while trying to render the portal, a generic error page is shown to end users along with timestamp and Activity ID of that error. Portal administrators can configure their portal to get the actual error details that are helpful in debugging and fixing issues. You can use one or both of the following options:
+    Whenever a server error occurs while trying to render the portal, a generic error page is shown to end users along with timestamp and Activity ID of that error. Portal administrators can configure their portal to get the actual error details that are helpful in debugging and fixing issues. You can use one or both of the following options:
 
     1. **Disable the custom error page**
 

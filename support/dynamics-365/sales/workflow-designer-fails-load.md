@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4523940
 
 ## Symptoms
 
-After customizing the main form of a CDS entity that is used in a Workflow, selecting **Set Properties** on one of this entity's steps(for example, Create, Update and so on) results in the associated window failing to load.
+After customizing the main form of a CDS entity that is used in a Workflow, selecting **Set Properties** on one of this entity's steps(for example, Create, Update and so on) results in the associated window failing to load.
 
 ## Cause
 
@@ -24,7 +24,7 @@ One thing to note is that as opposed to the form designer that displays only the
 
 ## Resolution
 
-There are a few workarounds listed below to unblock this scenario:
+There are a few workarounds listed below to unblock this scenario:
 
 1. If the form customization is known(for example, an IFrame control on the entity's main form that points to an invalid URL), fixing it and then saving and publishing the form will rectify the problem.
 2. Removing the customization from the form if not required is another option.

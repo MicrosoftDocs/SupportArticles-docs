@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4293912
 
 ## Symptoms
 
-You are trying to configure the Microsoft Dynamics 365 Outlook client in a deployment that utilizes ADFS for authentication and it is failing with an error. The generic error that the user sees occurring is **An error occurred. Contact your administrator for more information**. If you review the config log Microsoft.Crm.Application.Outlook.ConfigWizard-Client.log, you will see the following error logged.
+You are trying to configure the Microsoft Dynamics 365 Outlook client in a deployment that utilizes ADFS for authentication and it is failing with an error. The generic error that the user sees occurring is **An error occurred. Contact your administrator for more information**. If you review the config log Microsoft.Crm.Application.Outlook.ConfigWizard-Client.log, you will see the following error logged.
 
 > \>Crm Exception: Message: accessing_ws_metadata_exchange_failed: Accessing WS metadata exchange failed, ErrorCode: -2147204335, InnerException: Microsoft.IdentityModel.Clients.ActiveDirectory.AdalServiceException: accessing_ws_metadata_exchange_failed: Accessing WS metadata exchange failed ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
 >
@@ -35,7 +35,7 @@ One possible cause of this issue is that Forms Authentication was not enabled fo
 Enable forms authentication within the ADFS Management Console.
 
 1. On the server where ADFS is enabled, open the Management Console. Select **Start**, type *Administrative Tools* and press Enter.
-2. Double-click AD FS Management to open it.
+2. Double-click AD FS Management to open it.
 3. In the management console, select **Authentication Policies**.
 4. Now in the right window pane, in the Global Settings under Primary Authentication, select the **Edit** button.
 5. Verify that Forms Authentication is checked both in the Extranet and Intranet sections. By default Forms Authentication is unchecked in the Intranet section.

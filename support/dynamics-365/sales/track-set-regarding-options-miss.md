@@ -23,7 +23,7 @@ When you're viewing an email and opening Dynamics 365 App for Outlook, the **Tra
 
 **Cause 1:** Your Dynamics 365 security role doesn't have access to the App for Outlook Dashboard.
 
-**Cause 2:** The sitemap of the App for Outlook app module was customized and the dashboards area is no longer configured to use the App for Outlook Dashboard.
+**Cause 2:** The sitemap of the App for Outlook app module was customized and the dashboards area is no longer configured to use the App for Outlook Dashboard.
 
 ## Resolution
 

@@ -24,7 +24,7 @@ S/MIME allows you to encrypt emails and digitally sign them.
 
 ## Symptoms
 
-PEC Emails aren't getting synchronized with Server-Side Synchronization or Email Router.
+PEC Emails aren't getting synchronized with Server-Side Synchronization or Email Router.
 
 ## Cause
 

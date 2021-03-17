@@ -47,7 +47,7 @@ Extra Selenium IDE flow input will be generated if you use for each command. It'
 
 ## Frame Index
 
-Selenium IDE flow might fail to run through the flow if there are some lazy-loaded frames. The recording might playback successfully while testing through the Selenium IDE and might fail while running through the Power Automate infrastructure. Selenium IDE identifies frames by the order they were loaded rather than the actual element order in the document. Playback at runtime selects the frame with the element order index, and it might not match with the Selenium IDE recording index, and the playback can fail. Use a better CSS selector for identifying the frame and parent frame.
+Selenium IDE flow might fail to run through the flow if there are some lazy-loaded frames. The recording might playback successfully while testing through the Selenium IDE and might fail while running through the Power Automate infrastructure. Selenium IDE identifies frames by the order they were loaded rather than the actual element order in the document. Playback at runtime selects the frame with the element order index, and it might not match with the Selenium IDE recording index, and the playback can fail. Use a better CSS selector for identifying the frame and parent frame.
 
 ## Local Playback vs. Playback through Power Automate infrastructure
 

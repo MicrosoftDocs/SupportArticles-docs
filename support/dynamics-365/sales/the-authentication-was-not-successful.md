@@ -42,7 +42,7 @@ Use the steps in ["Something went wrong during sign-in" error using Dynamics 365
 **Resolution 2:**
 
 1. Open a command prompt.
-2. Run the following command:  
+2. Run the following command:  
     `icacls %userprofile%\Appdata\LocalLow /t /setintegritylevel (OI)(CI)L`
 
 **Resolution 3:**  
@@ -58,12 +58,12 @@ Clear your browser cache.
 > [!IMPORTANT]
 > Although you may have other browsers installed on your computer, Outlook desktop always uses Internet Explorer when displaying web content such as inside Dynamics 365 App for Outlook.
 
-After clearing your browser cache, close all Internet Explorer and Outlook desktop windows, and make sure through Task Manager, there are no remaining Internet Explorer processes running.
+After clearing your browser cache, close all Internet Explorer and Outlook desktop windows, and make sure through Task Manager, there are no remaining Internet Explorer processes running.
 
 If this issue only appears in Outlook desktop and clearing the cache via Internet Options doesn't help, try clearing it via F12 chooser (not applicable for Windows 7):
 
 1. Open Dynamics app in Outlook desktop.
-2. Open **IEChooser.exe** in `%WindowsFolder%\System32\F12` (example: `C:\Windows\System32\F12`)
+2. Open **IEChooser.exe** in `%WindowsFolder%\System32\F12` (example: `C:\Windows\System32\F12`)
 3. Select **Dynamics 365**  
 4. Select the **Network** tab and then select the **Clear cache** button.
 

@@ -23,10 +23,10 @@ When viewing the detailed error in the grid, the details column shows the follow
 
 > "Invalid display order value. The display order must be greater or equal to 10000."
 
-If you select Download Log File and open the file in Excel, a message like the following one is found on the **components** tab:
+If you select Download Log File and open the file in Excel, a message like the following one is found on the **components** tab:
 
 > "0x80044327  
-The nav pane order 0 is not allowed - it must be at least as large as 10000 for the entityRelationshipId \<relationshipId>"
+The nav pane order 0 is not allowed - it must be at least as large as 10000 for the entityRelationshipId \<relationshipId>"
 
 ## Cause
 

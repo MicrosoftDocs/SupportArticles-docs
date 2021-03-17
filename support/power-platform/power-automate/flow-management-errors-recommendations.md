@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 4515140
 
     > "When a record is created, updated, or deleted."
 
-    Because it isn't supported in Flows that aren't hosted in a [solution](/power-automate/overview-solution-flows). You must [create a cloud flow in a solution](/power-automate/create-flow-solution) to use this trigger.
+    Because it isn't supported in Flows that aren't hosted in a [solution](/power-automate/overview-solution-flows). You must [create a cloud flow in a solution](/power-automate/create-flow-solution) to use this trigger.
 
 ## Can't edit Flow
 
@@ -26,7 +26,7 @@ If you can't edit your Flow, be sure your company IT policies don't block servic
 
 ## Forms Pro doesn't appear active even though users have a license
 
-Some customers have complained that attempts to use Forms Pro result in an Error Message:  
+Some customers have complained that attempts to use Forms Pro result in an Error Message:  
 > "Your IT Department has turned off signup for Microsoft Forms Pro. Contact them to complete signup".
 
-The user may need to sign up for the Microsoft Pro Forms free subscription.
+The user may need to sign up for the Microsoft Pro Forms free subscription.

@@ -43,7 +43,7 @@ Make sure the URLs used by Dynamics 365 and also your authentication URLs are us
     `https://login.windows.net`  
 
     > [!IMPORTANT]
-    > If you use federated authentication to access Dynamics 365 using your corporate credentials, you also need to add the authentication URLs used by your company. For example: If your company uses Active Directory Federation Services (ADFS) with an authentication URL of `https://adfs.contoso.com/...`, add this URL to the same zone or make sure both zones have the same Protected Mode setting.  
+    > If you use federated authentication to access Dynamics 365 using your corporate credentials, you also need to add the authentication URLs used by your company. For example: If your company uses Active Directory Federation Services (ADFS) with an authentication URL of `https://adfs.contoso.com/...`, add this URL to the same zone or make sure both zones have the same Protected Mode setting.  
 
 4. Click **Add**, click **Close**, and then click **OK**.
 5. Click **OK** to close the Internet Options dialog box.

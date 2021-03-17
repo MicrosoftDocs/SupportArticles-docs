@@ -14,11 +14,11 @@ _Original KB number:_ &nbsp; 4464333
 
 ## Symptoms
 
-When attempting to import a solution in Dynamics 365, the import fails with error code 80044150
+When attempting to import a solution in Dynamics 365, the import fails with error code 80044150
 
 ## Cause
 
-Error code 80044150 indicates a SQL exception occurred.
+Error code 80044150 indicates a SQL exception occurred.
 
 ## Resolution
 

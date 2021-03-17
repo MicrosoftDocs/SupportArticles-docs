@@ -18,7 +18,7 @@ Emails are not received in a Microsoft Dynamics 365 mailbox and you see a warnin
 
 > An unknown error occurred while receiving email through the mailbox [Mailbox Name]. The owner of the associated email server profile [Profile Name] has been notified. The system will try to receive email again later.
 >
-> **Email Server Error Code:**  Exchange server returned UnknownIncomingEmailIntegrationError -2147167669 exception.
+> **Email Server Error Code:**  Exchange server returned UnknownIncomingEmailIntegrationError -2147167669 exception.
 
 ## Cause
 

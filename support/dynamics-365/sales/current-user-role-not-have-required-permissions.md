@@ -1,13 +1,13 @@
 ---
 title: User role doesn't have required permissions
-description: Fixes an issue in which you can't open Microsoft Dynamics 365 App for Outlook if your Dynamics 365 security role doesn't have access to the app module.
+description: Fixes an issue in which you can't open Microsoft Dynamics 365 App for Outlook if your Dynamics 365 security role doesn't have access to the app module.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 
 ---
 # "We are unable to show Dynamics 365 App for Outlook because current user role does not have required permissions" error occurs in Microsoft Dynamics 365 App for Outlook
 
-This article helps you fix an issue in which you can't open Microsoft Dynamics 365 App for Outlook if your Dynamics 365 security role doesn't have access to the app module.
+This article helps you fix an issue in which you can't open Microsoft Dynamics 365 App for Outlook if your Dynamics 365 security role doesn't have access to the app module.
 
 _Applies to:_ &nbsp; Microsoft Dynamics CRM Online  
 _Original KB number:_ &nbsp; 4229661
@@ -26,7 +26,7 @@ If you click **Show more**, the additional details include the following info:
 
 ## Cause
 
-This error appears if your Dynamics 365 security role doesn't have access to the app module used by the Dynamics 365 App for Outlook.
+This error appears if your Dynamics 365 security role doesn't have access to the app module used by the Dynamics 365 App for Outlook.
 
 ## Resolution
 

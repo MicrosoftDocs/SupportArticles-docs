@@ -21,7 +21,7 @@ Error code 8004f016
 
 The grid within the error dialog includes a row of **Type** = **Mappings** and **Name** = **contact-lead**. The detail text shown for this row is the following message:
 
-> A managed solution cannot overwrite a AttributeMap component on the target system that has an unmanaged base instance.  The most likely scenario for this error is that an unmanaged solution has installed a new unmanaged AttributeMap component on the target system, and now a managed solution from the same publisher is trying to install that same AttributeMap component as managed.  This will cause an invalid layering of solutions on the target system and is not allowed.
+> A managed solution cannot overwrite a AttributeMap component on the target system that has an unmanaged base instance.  The most likely scenario for this error is that an unmanaged solution has installed a new unmanaged AttributeMap component on the target system, and now a managed solution from the same publisher is trying to install that same AttributeMap component as managed.  This will cause an invalid layering of solutions on the target system and is not allowed.
 
 ## Cause
 
@@ -37,7 +37,7 @@ This is a standard relationship that can be found within the Contact entity unde
 
 **Option 2:** Remove the XML for the contact-lead attribute map:
 
-1. Extract the contents of the solution file and open the customizations.xml file in a text editor.
+1. Extract the contents of the solution file and open the customizations.xml file in a text editor.
 2. Locate and remove the following section of XML:
 
     ```xml

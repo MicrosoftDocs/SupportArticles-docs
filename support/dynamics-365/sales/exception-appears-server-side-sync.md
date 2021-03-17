@@ -22,13 +22,13 @@ A warning level alert like the following message appears within a Dynamics 365 m
 
 ## Cause
 
-Error code -2147220956 indicates an IsvUnexpected error. Which typically indicates a custom plug-in or workflow is throwing an error and causing the creation of the item to fail.
+Error code -2147220956 indicates an IsvUnexpected error. Which typically indicates a custom plug-in or workflow is throwing an error and causing the creation of the item to fail.
 
 ## Resolution
 
-The following steps use the example of an email record that is failing to be created. If you're seeing this error logged for another type of item such as an Appointment, Contact, or Task, the same type of steps can be applied by replacing references to email with the type of record you're troubleshooting.
+The following steps use the example of an email record that is failing to be created. If you're seeing this error logged for another type of item such as an Appointment, Contact, or Task, the same type of steps can be applied by replacing references to email with the type of record you're troubleshooting.
 
-Check to see if you have any custom plugins or workflows that run synchronously on the creation of an email. If a plugin or workflow is causing an error, Server-Side Synchronization won't create the email. The steps below can help you identify if there are any workflows or plugins in your organization that run during creation of an email:
+Check to see if you have any custom plugins or workflows that run synchronously on the creation of an email. If a plugin or workflow is causing an error, Server-Side Synchronization won't create the email. The steps below can help you identify if there are any workflows or plugins in your organization that run during creation of an email:
 
 ### Workflow
 
@@ -37,7 +37,7 @@ Check to see if you have any custom plugins or workflows that run synchronously 
 3. Sort on the **Primary Entity** column and look for any rows with **Email** as the primary entity and **Workflow** as the category.
 
     Instead, you can use the filtering options in the grid to filter on Category = Workflow and Primary Entity = Email
-4. Open each workflow you find that meets the criteria above (if any).
+4. Open each workflow you find that meets the criteria above (if any).
 5. If the **Start when** options have the **Record is created** option is selected, and the **Run this workflow in the background (recommended)** option isn't selected, this workflow could potentially be the cause.
 
     > [!NOTE]

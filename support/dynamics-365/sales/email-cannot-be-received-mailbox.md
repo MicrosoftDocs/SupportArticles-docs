@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4463808
 
 ## Symptoms
 
-When you attempt to test and enable a mailbox in Microsoft Dynamics 365, you receive the following error:
+When you attempt to test and enable a mailbox in Microsoft Dynamics 365, you receive the following error:
 
 > "Email cannot not be received for the mailbox [mailbox name] because the email server location or the incoming email port specified in the associated email server profile [profile name] is incorrect. The mailbox didn't synchronize. The owner of the email server profile has been notified.
 >
@@ -24,11 +24,11 @@ If you select details, you see the following extra details:
 
 > "ActivityId: \<GUID>  
 \>Error : System.Net.Sockets.SocketException (0x80004005): No such host is known  
-   at System.Net.Dns.GetAddrInfo(String name)  
-   at System.Net.Dns.InternalGetHostByName(String hostName, Boolean includeIPv6)  
-   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress)  
-   at System.Net.Sockets.TcpClient.Connect(String hostname, Int32 port)  
-   at Microsoft.Crm.Asynchronous.EmailConnector.Pop3Client.Connect()"
+   at System.Net.Dns.GetAddrInfo(String name)  
+   at System.Net.Dns.InternalGetHostByName(String hostName, Boolean includeIPv6)  
+   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress)  
+   at System.Net.Sockets.TcpClient.Connect(String hostname, Int32 port)  
+   at Microsoft.Crm.Asynchronous.EmailConnector.Pop3Client.Connect()"
 
 ## Cause
 
@@ -46,14 +46,14 @@ This error can occur if the server location or port in the email server profile 
 3. Verify the **Incoming Server Location** value.
 
     > [!NOTE]
-    > Refer to the documentation from your email provider for the correct addresses. For [Gmail](https://support.google.com/mail/answer/7104828), the incoming server location would be `pop.gmail.com` and the outgoing server location would be `smtp.gmail.com`.
+    > Refer to the documentation from your email provider for the correct addresses. For [Gmail](https://support.google.com/mail/answer/7104828), the incoming server location would be `pop.gmail.com` and the outgoing server location would be `smtp.gmail.com`.
 
 4. Select **Advanced**.  
 
 5. Verify the **Incoming Port** value and then select **Save**.
 
     > [!NOTE]
-    > Refer to the documentation from your email provider for the correct ports to use when connecting to the SMTP service. For [Gmail](https://support.google.com/mail/answer/7104828), the incoming POP3 port is 995 and outgoing SMTP port is 587.
+    > Refer to the documentation from your email provider for the correct ports to use when connecting to the SMTP service. For [Gmail](https://support.google.com/mail/answer/7104828), the incoming POP3 port is 995 and outgoing SMTP port is 587.
 
 6. Select **Mailboxes** and then select the mailbox that received the error.  
 

@@ -20,7 +20,7 @@ When attempting to use the Dynamics 365 App for Outlook, you see the following e
 
 If you select the **Show more** link, the extra details include the following error:
 
-> "Error: window.Office not available"
+> "Error: window.Office not available"
 
 ## Cause
 

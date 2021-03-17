@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4500989
 
 ## Symptoms
 
-Uninstalling a portals solution such as MicrosoftCrmPortalBase or MicrosoftCrmPortalDependency fails with the following error:
+Uninstalling a portals solution such as MicrosoftCrmPortalBase or MicrosoftCrmPortalDependency fails with the following error:
 
 > "Solution [Solution Name] cannot be deleted due to dependencies from other components in the system. Remove all dependencies to allow for solution deletion.
 >
@@ -22,14 +22,14 @@ Uninstalling a portals solution such as MicrosoftCrmPortalBase or MicrosoftCrmP
 
 ## Cause
 
-When installing portal capabilities for Dynamics 365, multiple solutions are installed. Some of the solutions include core portal features and others include specific functionality (that is, Customer Portal or Employee Self Service). When installing the solutions, the core solutions gets installed first and then the specific ones. Once installed, you may also have done customizations to the portal solution(s).
+When installing portal capabilities for Dynamics 365, multiple solutions are installed. Some of the solutions include core portal features and others include specific functionality (that is, Customer Portal or Employee Self Service). When installing the solutions, the core solutions gets installed first and then the specific ones. Once installed, you may also have done customizations to the portal solution(s).
 
 ## Resolution
 
 To uninstall the portals solutions successfully, you need to follow the steps in reverse order.
 
 1. Undo customizations of portal entities (if applicable).
-2. Uninstall solutions in reverse order of how they were installed. Refer to the table below for each package Un-installation sequence (top to bottom).
+2. Uninstall solutions in reverse order of how they were installed. Refer to the table below for each package Un-installation sequence (top to bottom).
 
     |BasePortal|CommunityPortal|CustomerPortal|ESSPortal|StarterPortal|
     |---|---|---|---|---|

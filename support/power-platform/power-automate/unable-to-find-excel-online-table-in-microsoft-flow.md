@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4527553
 
 ## Symptoms
 
-When trying to access information in an Excel spreadsheet that is not formatted as a table, you may not be able to see a table present in the drop-down menu.
+When trying to access information in an Excel spreadsheet that is not formatted as a table, you may not be able to see a table present in the drop-down menu.
 
 :::image type="content" source="media/unable-to-find-excel-online-table-in-microsoft-flow/no-table-in-dropdown.png" alt-text="Excel table drop-down has no table":::
 
@@ -38,7 +38,7 @@ To create a table from scratch, follow these steps:
 To convert existing data into a table, follow these steps:
 
 1. Select the cells containing the data you want to convert into a table.
-2. Select **Home** > **Format as Table**.
+2. Select **Home** > **Format as Table**.
 3. Select the type of table you want and select **Ok**.
 
 Headers will automatically be included in the table, which will default to Column1, Column2, and so on. They can be renamed by double-clicking and typing a new header name.

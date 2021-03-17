@@ -16,15 +16,15 @@ _Original KB number:_ &nbsp; 2015877
 
 This problem may manifest itself with multiple symptoms or any one of the symptoms listed below.
 
-1. Frequent disconnections from Microsoft Dynamics CRM Servers. Microsoft Dynamics CRM client system tray icon will show "There is a problem communicating with the Microsoft Dynamics CRM Server. The Server might be unavailable. Try again later. If the problem persists, contact your system administrator."
+1. Frequent disconnections from Microsoft Dynamics CRM Servers. Microsoft Dynamics CRM client system tray icon will show "There is a problem communicating with the Microsoft Dynamics CRM Server. The Server might be unavailable. Try again later. If the problem persists, contact your system administrator."
 
-2. Frequent disconnections from Microsoft Office Communicator (if installed) to the Microsoft Exchange Server(s). This will often show up with Microsoft Office Communicator showing in a disconnected state and will show messages like "Trying to connect."
+2. Frequent disconnections from Microsoft Office Communicator (if installed) to the Microsoft Exchange Server(s). This will often show up with Microsoft Office Communicator showing in a disconnected state and will show messages like "Trying to connect."
 
-3. Disconnections inside Microsoft Outlook to the Microsoft Exchange Server(s). This may show up as "Folder last updated x day and time" in the lower right-hand corner of Microsoft Outlook where x day and time is a day and time that is not current or possibly an hour or two older than the current day and time.
+3. Disconnections inside Microsoft Outlook to the Microsoft Exchange Server(s). This may show up as "Folder last updated x day and time" in the lower right-hand corner of Microsoft Outlook where x day and time is a day and time that is not current or possibly an hour or two older than the current day and time.
 
 4. The Microsoft Outlook process may have more than 10,000 handles open (can be seen with Windows Task Manager or the Microsoft Sysinternals utility, Process Explorer).
 
-5. If Microsoft CRM Dynamics Client platform tracing has been enabled ([Generating tracing files for support](/previous-versions/dynamics-crm4/implementation-guide/dd979085(v=crm.6)), the additional errors may be seen in the Microsoft Dynamics CRM platform trace files. Typically the errors noted below will be seen in the files named MachineName-OUTLOOK-Client-YYYYMMDD-#.log where YYYY = the year, MM = the month, and DD = the date the log file was created. Note that some of these messages will also be logged in the Application event log from the client computer having the issues.
+5. If Microsoft CRM Dynamics Client platform tracing has been enabled ([Generating tracing files for support](/previous-versions/dynamics-crm4/implementation-guide/dd979085(v=crm.6)), the additional errors may be seen in the Microsoft Dynamics CRM platform trace files. Typically the errors noted below will be seen in the files named MachineName-OUTLOOK-Client-YYYYMMDD-#.log where YYYY = the year, MM = the month, and DD = the date the log file was created. Note that some of these messages will also be logged in the Application event log from the client computer having the issues.
 
     1. The Microsoft CRM Outlook add-in failed to initialize the user's language setting. Restart Microsoft Outlook and try again. HR=0x8007000e. Context=. Function=CEnableState::Activate. Line=169.
 
@@ -43,11 +43,11 @@ This problem may manifest itself with multiple symptoms or any one of the sympto
     8. LoadMetadataForRichClient() got exception: System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
 
 > [!NOTE]
-> The following steps for capturing a memory dump are optional as the symptoms seen should be captured with event log errors or Microsoft Dynamics CRM client platform trace error logs.
+> The following steps for capturing a memory dump are optional as the symptoms seen should be captured with event log errors or Microsoft Dynamics CRM client platform trace error logs.
 
 If a memory dump has been captured of the Microsoft Outlook process using these steps:
 
-Add the registry path: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework`  
+Add the registry path: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework`  
 Key: **GCBreakOnOOM**  
 Type: DWORD  
 Value: 2
@@ -65,11 +65,11 @@ Setting the above key causes a DebugBreak within the process when a System.OutOf
 9. Select **Next** and provide a name for the rule and location where the dump files must be saved.
 10. Select **Next** and then **Finish** button.
 
-You may see a System.OutOfMemoryException listed in the managed threads when analyzing that memory dump with Windbg and the SOS !threads command. You may also see a System.Net.WebException error listed.
+You may see a System.OutOfMemoryException listed in the managed threads when analyzing that memory dump with Windbg and the SOS !threads command. You may also see a System.Net.WebException error listed.
 
 ## Cause
 
-This problem occurs because Outlook 2003 and Outlook 2007 allocate more memory for caching .pst files than earlier versions of Microsoft Outlook. After you enable this registry key, Outlook 2003 or Outlook 2007 will allocate the same amount of memory as earlier versions of Outlook for caching .pst files. This is typically only seen with having larger numbers of open PST files loaded in Microsoft Outlook such as 50 or more PST files loaded.
+This problem occurs because Outlook 2003 and Outlook 2007 allocate more memory for caching .pst files than earlier versions of Microsoft Outlook. After you enable this registry key, Outlook 2003 or Outlook 2007 will allocate the same amount of memory as earlier versions of Outlook for caching .pst files. This is typically only seen with having larger numbers of open PST files loaded in Microsoft Outlook such as 50 or more PST files loaded.
 
 ## Resolution
 

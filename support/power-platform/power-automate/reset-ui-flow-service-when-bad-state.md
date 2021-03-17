@@ -14,13 +14,13 @@ _Original KB number:_ &nbsp; 4555618
 
 ## Symptoms
 
-If you're in a state where you're consistently experiencing an error when doing a UI flow run, recording or test, but nothing is actionable, it may help to restart UI flows by restarting the service.
+If you're in a state where you're consistently experiencing an error when doing a UI flow run, recording or test, but nothing is actionable, it may help to restart UI flows by restarting the service.
 
 You must be an admin on the machine to restart the service.
 
 ## Resolution
 
-Before restarting the UI flow service, verify in the task manager that the UI flows agent (`Microsoft.Flow.Rpa.Agent`) isn't running. If it's running, select **End task**.
+Before restarting the UI flow service, verify in the task manager that the UI flows agent (`Microsoft.Flow.Rpa.Agent`) isn't running. If it's running, select **End task**.
 
 :::image type="content" source="media/reset-ui-flow-service-when-bad-state/select-end-task.png" alt-text="RPA Agent process in task manager screenshot.":::
 
@@ -30,7 +30,7 @@ Use the following methods to restart the UI flow service in the following order.
 > You must be an admin to restart the service.
 
 - Method 1: Restart *UIFlowService*
-  - Open the task manager and go to **the services tab**, then look for **UIFlowService**, right-click on it, and select **Restart**.
+  - Open the task manager and go to **the services tab**, then look for **UIFlowService**, right-click on it, and select **Restart**.
   
   :::image type="content" source="media/reset-ui-flow-service-when-bad-state/restart-uiflowservice.png" alt-text="UI flow service in task manager screenshot.":::
 

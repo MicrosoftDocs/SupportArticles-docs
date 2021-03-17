@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4558635
 
 ## Symptoms
 
-After being updated to the 2003.5 release, a dashboard that has a subgrid that has been configured to use a custom control (for example, an editable grid) doesn't load in UCI.
+After being updated to the 2003.5 release, a dashboard that has a subgrid that has been configured to use a custom control (for example, an editable grid) doesn't load in UCI.
 
 The dashboard may be stuck with a loading spinner, or it may show a generic error message:
 
@@ -22,13 +22,13 @@ The dashboard may be stuck with a loading spinner, or it may show a generic erro
 
 ## Cause
 
-This issue is caused when there's a subgrid on the dashboard that has been configured to use a custom control, but not for all form factors. When there's a custom control configuration, but not all form factors have one, then it ends up being an unhandled null exception that prevents the dashboard from loading.
+This issue is caused when there's a subgrid on the dashboard that has been configured to use a custom control, but not for all form factors. When there's a custom control configuration, but not all form factors have one, then it ends up being an unhandled null exception that prevents the dashboard from loading.
 
 For example, the control configuration may look something like this:
 
 :::image type="content" source="media/uci-dashboard-does-not-load/select-add-custom-control-configuration.png" alt-text="Subgrid custom control configuration for only web form factor.":::
 
-Alternately, it may be caused by a control configuration that isn't used for any form factor, such as something like this:
+Alternately, it may be caused by a control configuration that isn't used for any form factor, such as something like this:
 
 :::image type="content" source="media/uci-dashboard-does-not-load/unused-editable-grid.png" alt-text="Unused subgrid custom control configuration.":::
 

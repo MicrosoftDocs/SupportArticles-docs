@@ -20,7 +20,7 @@ When attempting to use the Dynamics 365 App for Outlook, you see the following m
 
 ## Cause
 
-Your Microsoft Dynamics 365 user is disabled.
+Your Microsoft Dynamics 365 user is disabled.
 
 ## Resolution
 

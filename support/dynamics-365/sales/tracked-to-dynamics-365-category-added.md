@@ -14,17 +14,17 @@ _Original KB number:_ &nbsp; 4501716
 
 ## Symptoms
 
-Users configured to use Server-Side Synchronization with Microsoft Dynamics 365 may see a new category available in their Exchange mailbox and in Outlook. For example: If the user uses the **Categorize** option in Outlook on an item such as an email message or appointment, they see a new category called **Tracked to Dynamics 365**.
+Users configured to use Server-Side Synchronization with Microsoft Dynamics 365 may see a new category available in their Exchange mailbox and in Outlook. For example: If the user uses the **Categorize** option in Outlook on an item such as an email message or appointment, they see a new category called **Tracked to Dynamics 365**.
 
 When viewing the **Alerts** area for a user's mailbox, you may see the following information level alert message:
 
-> Outlook Category "Tracked To Dynamics 365" has been enabled for the mailbox [Mailbox Name] as the OrgDBOrgSetting is enabled. Use this Outlook category to track emails, appointments and tasks.
+> Outlook Category "Tracked To Dynamics 365" has been enabled for the mailbox [Mailbox Name] as the OrgDBOrgSetting is enabled. Use this Outlook category to track emails, appointments and tasks.
 
 ## Cause
 
 This experience is part of a feature that's now enabled by default:
 
-[Use Outlook category to track appointments and emails](/power-platform/admin/use-outlook-category-track-appointments-emails)  
+[Use Outlook category to track appointments and emails](/power-platform/admin/use-outlook-category-track-appointments-emails)  
 
 ## Resolution
 

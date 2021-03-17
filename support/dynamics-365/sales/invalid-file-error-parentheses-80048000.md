@@ -14,11 +14,11 @@ _Original KB number:_ &nbsp; 4457975
 
 ## Symptoms
 
-When attempting to import a solution in Dynamics 365, the import fails with error code 80048000.
+When attempting to import a solution in Dynamics 365, the import fails with error code 80048000.
 
 ## Cause
 
-Error code 80040216 indicates an invalid file error occurred.
+Error code 80040216 indicates an invalid file error occurred.
 
 ## Resolution
 

@@ -24,9 +24,9 @@ This error will appear if the user associated with the mailbox record does not h
 
 ## Resolution
 
-Option 1: Assign Microsoft Dynamics 365 App for Outlook User security role
+Option 1: Assign Microsoft Dynamics 365 App for Outlook User security role
 
-A standard role exists to provide the privileges required to use Microsoft Dynamics 365 App for Outlook. This role is named Microsoft Dynamics 365 App for Outlook User and can be assigned to users who need to use App for Outlook. For more information on this role, see [Provide security role access](/dynamics365/outlook-app/deploy-dynamics-365-app-for-outlook#provide-security-role-access).
+A standard role exists to provide the privileges required to use Microsoft Dynamics 365 App for Outlook. This role is named Microsoft Dynamics 365 App for Outlook User and can be assigned to users who need to use App for Outlook. For more information on this role, see [Provide security role access](/dynamics365/outlook-app/deploy-dynamics-365-app-for-outlook#provide-security-role-access).
 
 Option 2: Custom Role
 
@@ -41,9 +41,9 @@ The following table lists privileges required to use Microsoft Dynamics 365 App 
 |prvReadEmailServerProfile|EmailServerProfile|Business Management|
 |prvReadRole|Security Role|Business Management|
 |prvReadUser|User|Business Management|
-|prvWriteMailbox|Mailbox|Business Management|
-|prvReadMailbox|Mailbox|Business Management|
-|prvReadOrganization|Organization|Business Management|
+|prvWriteMailbox|Mailbox|Business Management|
+|prvReadMailbox|Mailbox|Business Management|
+|prvReadOrganization|Organization|Business Management|
 |prvSyncToOutlook (exchangesyncidmapping|Sync to Outlook|Business Management --> Privacy-related privileges|
 |prvUseOfficeApps|Use Dynamics 365 App for Outlook|Business Management --> Privacy-related privileges|
 |prvAppendToAccount|Account|Core Records|

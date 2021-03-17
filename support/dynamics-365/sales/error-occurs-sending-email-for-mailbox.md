@@ -16,16 +16,16 @@ _Original KB number:_ &nbsp; 4092737
 
 When you attempt to test and enable a mailbox in Microsoft Dynamics 365, you receive following error:
 
-> "An error occurred in sending email for mailbox "Your mailbox is now connected to Dynamics 365" while connecting to the email server. The owner of the associated email server profile \<Mailbox Name> has been notified. The system will try to send email again later.  
-**Email Server Error Code:**  Web server returned ConnectFailure exception."
+> "An error occurred in sending email for mailbox "Your mailbox is now connected to Dynamics 365" while connecting to the email server. The owner of the associated email server profile \<Mailbox Name> has been notified. The system will try to send email again later.  
+**Email Server Error Code:**  Web server returned ConnectFailure exception."
 
 ## Cause
 
-This error can occur if Dynamics 365 is unable to connect to your email server.
+This error can occur if Dynamics 365 is unable to connect to your email server.
 
 If you're using Dynamics 365 Online with Exchange on-premises, it can occur if your firewall doesn't allow communication from Dynamics 365 online.
 
-If you're using an SMTP/POP3 provider such as Gmail, it can occur if the port values within the Advanced section of the email server profile aren't correct.
+If you're using an SMTP/POP3 provider such as Gmail, it can occur if the port values within the Advanced section of the email server profile aren't correct.
 
 ## Resolution
 
@@ -42,10 +42,10 @@ Verify the correct ports are specified:
     > You can also select the name of the Email Server Profile within the error message. It appears as a hyperlink which will open the correct Email Server Profile record.
 
 3. Select **Advanced**.
-4. Verify the **Incoming Port** and **Outgoing Port** values, and then select **Save**.
+4. Verify the **Incoming Port** and **Outgoing Port** values, and then select **Save**.
 
     > [!NOTE]
-    > Refer to the documentation from your email provider for the correct ports to use when connecting to the SMTP service. For [Gmail](https://support.google.com/mail/answer/7104828), the incoming POP3 port is 995 and outgoing SMTP port is 587.
+    > Refer to the documentation from your email provider for the correct ports to use when connecting to the SMTP service. For [Gmail](https://support.google.com/mail/answer/7104828), the incoming POP3 port is 995 and outgoing SMTP port is 587.
 
 5. Select **Mailboxes** and then select the mailbox that received the error.
 6. Select the **Test & Enable Mailboxes** button.

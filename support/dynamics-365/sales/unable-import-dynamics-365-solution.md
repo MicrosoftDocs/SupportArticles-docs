@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4499713
 
 ## Symptoms
 
-When attempting to import a Dynamics 365 solution or install an app, the import/install fails. If you're importing a solution from within the Dynamics 365 web application, you may see a reference to error code 8004f114. If you're installing an app from the administration center, you may only see a message indicating the installation failed.
+When attempting to import a Dynamics 365 solution or install an app, the import/install fails. If you're importing a solution from within the Dynamics 365 web application, you may see a reference to error code 8004f114. If you're installing an app from the administration center, you may only see a message indicating the installation failed.
 
 ## Cause
 

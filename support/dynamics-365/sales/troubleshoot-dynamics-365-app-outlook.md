@@ -33,6 +33,6 @@ _Original KB number:_ &nbsp; 4345545
 
 - [Dynamics 365 App for Outlook User Guide](/dynamics365/outlook-app/dynamics-365-app-outlook-user-s-guide#customize-the-track-regarding-card)
 - [Deploy Dynamics 365 App for Outlook](/dynamics365/outlook-app/deploy-dynamics-365-app-for-outlook#filter-entities-and-views-that-appear-in-dynamics-365-app-for-outlook)
-- [Add a custom entity to Quick create](/dynamics365/outlook-app/dynamics-365-app-outlook-user-s-guide#add-a-custom-entity-to-quick-create)  
+- [Add a custom entity to Quick create](/dynamics365/outlook-app/dynamics-365-app-outlook-user-s-guide#add-a-custom-entity-to-quick-create)  
 - [Enable a custom entity to appear in the Regarding lookup](/dynamics365/outlook-app/dynamics-365-app-outlook-user-s-guide#enable-a-custom-entity-to-appear-in-the-regarding-lookup)
 - [Search on custom field in Regarding lookup](/dynamics365/outlook-app/dynamics-365-app-outlook-user-s-guide#search-on-custom-field-in-regarding-lookup)

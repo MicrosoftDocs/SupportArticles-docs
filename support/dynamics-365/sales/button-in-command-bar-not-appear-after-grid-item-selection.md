@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4481268
 
 ## Symptoms
 
-There's a custom button that is customized to appear in the grid (either `HomePageGrid` or a `SubGrid`) in Microsoft Dynamics CRM Online.
+There's a custom button that is customized to appear in the grid (either `HomePageGrid` or a `SubGrid`) in Microsoft Dynamics CRM Online.
 
 In web client, this button will appear in the ribbon/command bar, regardless if grid items are selected or not.
 
@@ -22,14 +22,14 @@ In UCI, this button will appear when no grid items are selected, but once one or
 
 ## Cause
 
-As part of the design for UCI, we've changed the behavior to be more context sensitive. Specifically, on grids, buttons are considered either *item specific* or not, and only *item-specific* buttons are shown when one or more items are selected, while non *item-specific* buttons are shown otherwise.
+As part of the design for UCI, we've changed the behavior to be more context sensitive. Specifically, on grids, buttons are considered either *item specific* or not, and only *item-specific* buttons are shown when one or more items are selected, while non *item-specific* buttons are shown otherwise.
 
-This means that buttons that don't require an item to be selected, will simply not be shown when an item is selected.  
+This means that buttons that don't require an item to be selected, will simply not be shown when an item is selected.  
 
-The method that the determination is made is based on whether the command associated with the ribbon button has a SelectionCount rule. If it has a SelectionCount rule, it's considered to be an *item-specific* command.
+The method that the determination is made is based on whether the command associated with the ribbon button has a SelectionCount rule. If it has a SelectionCount rule, it's considered to be an *item-specific* command.
 
 > [!NOTE]
-> Flyouts and split buttons are excluded from this change, and still shown in both cases of when items are selected or not. This is to ensure that menu items, some of which may be generated dynamically, is not incorrectly hidden.
+> Flyouts and split buttons are excluded from this change, and still shown in both cases of when items are selected or not. This is to ensure that menu items, some of which may be generated dynamically, is not incorrectly hidden.
 
 ## Resolution
 

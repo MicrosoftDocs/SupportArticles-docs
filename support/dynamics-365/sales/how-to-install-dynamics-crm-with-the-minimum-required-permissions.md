@@ -244,7 +244,7 @@ For the Auto Group Management option, use one of the following methods. Use Meth
 
 > [!NOTE]
 > The Auto Group Management option can be used only if you are installing Microsoft Dynamics CRM by using pre-created Active Directory security groups.  
-> When import organization wizard runs to import organization it considers AutoGroupManagementOff registry value to assign necessary SQL permissions on the imported database. If it's set to 1 import org wizard will not assign SQL permissions on the database, so SQL permissions may need to be assigned through SQL management studio after the import wizard succeeds. If it's set to 0 import org wizard will assign SQL permissions on the database. By default AutoGroupManagementOff reg value is set to 0.
+> When import organization wizard runs to import organization it considers AutoGroupManagementOff registry value to assign necessary SQL permissions on the imported database. If it's set to 1 import org wizard will not assign SQL permissions on the database, so SQL permissions may need to be assigned through SQL management studio after the import wizard succeeds. If it's set to 0 import org wizard will assign SQL permissions on the database. By default AutoGroupManagementOff reg value is set to 0.
 
 ### Method 1 - Set the AutoGroupManagementOff option to false
 

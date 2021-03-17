@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4534996
 
 ## Symptoms
 
-Creating an Excel trigger flow using, for example, the ["request approval for a selected row" template](https://preview.flow.microsoft.com/galleries/public/templates/4c8abe0d62ab4333860da9ad218cc8f7/request-approval-for-a-selected-row/), browsing to the workbook in OneDrive works but the template does not list the tables in the excel file, but gives an API error **could not retrieve values, error executing the API**.
+Creating an Excel trigger flow using, for example, the ["request approval for a selected row" template](https://preview.flow.microsoft.com/galleries/public/templates/4c8abe0d62ab4333860da9ad218cc8f7/request-approval-for-a-selected-row/), browsing to the workbook in OneDrive works but the template does not list the tables in the excel file, but gives an API error **could not retrieve values, error executing the API**.
 
 ## Cause
 

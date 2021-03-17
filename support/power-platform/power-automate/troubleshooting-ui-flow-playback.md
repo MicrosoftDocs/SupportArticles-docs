@@ -37,7 +37,7 @@ If the scenario isn't mentioned above, you can try if the following steps help t
 
         :::image type="content" source="./media/troubleshooting-ui-flow-playback/record-edit-steps.png" alt-text="Edit steps.":::
   
-    3. For UIA Element Not Found issue, it might be caused by various reasons, try to enable coordinate based playback. [Issue with UI flows - UIAElementNotFound](https://support.microsoft.com/help/4555804)
+    3. For UIA Element Not Found issue, it might be caused by various reasons, try to enable coordinate based playback. [Issue with UI flows - UIAElementNotFound](https://support.microsoft.com/help/4555804)
 
 ## Tips and tricks
 

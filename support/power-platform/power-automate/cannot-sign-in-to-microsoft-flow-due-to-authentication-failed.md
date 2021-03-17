@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4316891
 
 ## Symptoms
 
-When you try to sign in to Microsoft Flow, you receive an **Authentication Failed** error message that resembles the following:
+When you try to sign in to Microsoft Flow, you receive an **Authentication Failed** error message that resembles the following:
 
 :::image type="content" source="media/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed/authentication-failed-error.png" alt-text="A 404 error page when signing in to Flow":::
 
@@ -26,9 +26,9 @@ This URL indicates that your tenant is affected by this issue.
 
 ## Cause
 
-This issue occurs when the last Flow license (or Office license that includes Flow) expires in your tenant. In this situation, the Flow service is disabled in Azure Active Directory (Azure AD).
+This issue occurs when the last Flow license (or Office license that includes Flow) expires in your tenant. In this situation, the Flow service is disabled in Azure Active Directory (Azure AD).
 
-Although this behavior is appropriate for most applications, it also blocks access to Flow if a relevant license exists in the tenant, even though Flow can be used for free without a license.
+Although this behavior is appropriate for most applications, it also blocks access to Flow if a relevant license exists in the tenant, even though Flow can be used for free without a license.
 
 Flow is now excluded from the list of applications for which access is automatically disabled because of an expired license. However, tenants that were already disabled aren't reverted to a non-disabled state. In such cases, access to Flow remains blocked.
 
@@ -37,7 +37,7 @@ Flow is now excluded from the list of applications for which access is automatic
 To resolve this problem, follow these steps.
 
 > [!NOTE]
-> These steps can be performed only by the tenant administrator.
+> These steps can be performed only by the tenant administrator.
 
 1. Open the [Azure portal](https://portal.azure.com)), and sign in.
 2. In the navigation bar, open Azure Active Directory Settings.
@@ -51,7 +51,7 @@ To resolve this problem, follow these steps.
 4. Paste **7df0a125-d3be-4c96-aa54-591f83ff541c** into the filter input.
 
     > [!NOTE]
-    > This is the application ID for the Flow service. You may have to select **All applications** in the **Show** list.
+    > This is the application ID for the Flow service. You may have to select **All applications** in the **Show** list.
 
     :::image type="content" source="media/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed/filter.png" alt-text="Paste 7df0a125-d3be-4c96-aa54-591f83ff541c into the filter input":::
 

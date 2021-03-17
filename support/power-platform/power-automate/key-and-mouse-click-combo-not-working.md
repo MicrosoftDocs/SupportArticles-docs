@@ -1,6 +1,6 @@
 ---
 title: Key and mouse click combo not working
-description: Key and mouse click combo not working. However, currently keyboard and mouse click combo is not supported.
+description: Key and mouse click combo not working. However, currently keyboard and mouse click combo is not supported.
 ms.reviewer: 
 ms.topic: article
 ms.date: 
@@ -14,4 +14,4 @@ _Original KB number:_ &nbsp; 4555844
 
 ## Status
 
-Currently keyboard and mouse click combo is not supported; check link in verifying issues for more information.
+Currently keyboard and mouse click combo is not supported; check link in verifying issues for more information.

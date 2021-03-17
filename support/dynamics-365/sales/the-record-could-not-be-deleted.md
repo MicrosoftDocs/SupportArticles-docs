@@ -23,7 +23,7 @@ The record cannot be deleted because it is associated with another record."
 
 This error can occur if you're trying to delete a solution that contains a component that is still used by another component.
 
-Example: If the solution includes an image web resource and that image is used by a Theme, you would meet this error when trying to delete that solution.
+Example: If the solution includes an image web resource and that image is used by a Theme, you would meet this error when trying to delete that solution.
 
 ## Resolution
 

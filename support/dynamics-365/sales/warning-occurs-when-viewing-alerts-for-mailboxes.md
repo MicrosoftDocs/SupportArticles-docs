@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4470093
 
 When viewing alerts for a mailbox in Microsoft Dynamics 365, you see the following warning:
 
-> Appointments, contacts, and tasks for the mailbox [Mailbox Name] couldn't be synchronized. The owner of the associated email server profile [Profile Name] has been notified. The system will try again later.
+> Appointments, contacts, and tasks for the mailbox [Mailbox Name] couldn't be synchronized. The owner of the associated email server profile [Profile Name] has been notified. The system will try again later.
 
 The following additional details are also included:
 

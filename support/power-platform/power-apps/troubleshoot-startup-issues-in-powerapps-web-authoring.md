@@ -39,7 +39,7 @@ _Original KB number:_ &nbsp; 4023606
   errorNumber: 0  
   errorMessage: Script error
 
-If you experience one of the issues that's described in this section, check out the common errors matrix, below, and then try [Resolution 1](#resolution-1---enable-storage-of-local-data-in-your-browser), [Resolution 2](#resolution-2---configure-trust-zones-for-internet-explorer-and-edge), or [Resolution 3](#resolution-3---azure-active-directory-errors) to resolve the problem.
+If you experience one of the issues that's described in this section, check out the common errors matrix, below, and then try [Resolution 1](#resolution-1---enable-storage-of-local-data-in-your-browser), [Resolution 2](#resolution-2---configure-trust-zones-for-internet-explorer-and-edge), or [Resolution 3](#resolution-3---azure-active-directory-errors) to resolve the problem.
 
 ## Common error matrix
 
@@ -89,7 +89,7 @@ PowerApps Web Authoring stores some data locally in your browser, including user
 ### Instructions for Edge
 
 > [!NOTE]
-> For Internet Explorer, follow Instructions for Internet Explorer 11 above.
+> For Internet Explorer, follow Instructions for Internet Explorer 11 above.
 
 1. Open Edge.
 2. On the Edge toolbar, select **More**.
@@ -108,8 +108,8 @@ PowerApps Web Authoring stores some data locally in your browser, including user
 3. Near the bottom of the page, select **Show advanced settings**.
 4. In the Privacy section, select **Content settings**.
 5. Select **Allow local data to be set (recommended)**.
-6. Make sure that **Block third-party cookies and site data**  is not selected.
-7. Select **Manage exceptions**  and make sure that there are no exceptions for `https://create.powerapps.com`, `https://*.create.powerapps.com`, and `https://login.microsoftonline.com`. If there are such exceptions, remove them by selecting the **x** sign for the corresponding rows.
+6. Make sure that **Block third-party cookies and site data**  is not selected.
+7. Select **Manage exceptions**  and make sure that there are no exceptions for `https://create.powerapps.com`, `https://*.create.powerapps.com`, and `https://login.microsoftonline.com`. If there are such exceptions, remove them by selecting the **x** sign for the corresponding rows.
 8. Select **Done**.
 
 #### Option 2 - Create exceptions to allow local data for PowerApps and associated services
@@ -123,7 +123,7 @@ PowerApps Web Authoring stores some data locally in your browser, including user
 
 ## Resolution 2 - Configure Trust Zones for Internet Explorer and Edge
 
-Internet Explorer and Edge useTrust Zones. Problems can occur if services on which PowerApps Web Authoring relies are in different Trust Zones in your browser settings. While these settings apply to both Internet Explorer and Edge, the easiest way to access them is from Internet Explorer. (You might need assistance from your IT administrator to change some of these settings.)
+Internet Explorer and Edge useTrust Zones. Problems can occur if services on which PowerApps Web Authoring relies are in different Trust Zones in your browser settings. While these settings apply to both Internet Explorer and Edge, the easiest way to access them is from Internet Explorer. (You might need assistance from your IT administrator to change some of these settings.)
 
 ### Option 1 - Add the required PowerApps domains to the Trusted Sites zone
 
@@ -161,13 +161,13 @@ Internet Explorer and Edge useTrust Zones. Problems can occur if services on whi
 
 ## Resolution 3 - Azure Active Directory errors
 
-Azure Active Directory (AAD) is the technology on which the PowerApps ecosystem relies for user authentication and authorization.
+Azure Active Directory (AAD) is the technology on which the PowerApps ecosystem relies for user authentication and authorization.
 
-The error page that you see might contain additional information that can help diagnose and fix the problem.
+The error page that you see might contain additional information that can help diagnose and fix the problem.
 
 > [!NOTE]
 > To resolve ADD errors, you might need assistance from your IT department.
 
 ## About PowerApps Web Authoring
 
-PowerApps Web Authoring is the tool that lets you author and edit your PowerApps applications on the web. When you use the PowerApps Web Authoring tool, the address bar in your browser will show text like `https://create.powerapps.com/...` and may also include a region code, such as in https://**eu**.create.powerapps.com/....
+PowerApps Web Authoring is the tool that lets you author and edit your PowerApps applications on the web. When you use the PowerApps Web Authoring tool, the address bar in your browser will show text like `https://create.powerapps.com/...` and may also include a region code, such as in https://**eu**.create.powerapps.com/....

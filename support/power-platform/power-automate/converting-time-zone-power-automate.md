@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4557244
 
 ## Symptoms
 
-When you're passing datetimes through triggers and actions in Microsoft Power Automate, users may find a datetime in the wrong time zone. Users may wish to convert the time zone (frequently in UTC) to their local time.
+When you're passing datetimes through triggers and actions in Microsoft Power Automate, users may find a datetime in the wrong time zone. Users may wish to convert the time zone (frequently in UTC) to their local time.
 
 ## Cause
 
@@ -26,7 +26,7 @@ Some services use strictly UTC time to avoid confusion.
 
 There are two ways to solve it - via an action or an expression.
 
-### Using the action
+### Using the action
 
 Power Automate has a built-in operation called **Convert time zone**.
 
@@ -38,7 +38,7 @@ The **Convert time zone** operation has a few required inputs:
 
 :::image type="content" source="media/converting-time-zone-power-automate/required-inputs.png" alt-text="Required inputs in Convert time zone operation.":::
 
-**Base time**: The datetime you wish to convert.
+**Base time**: The datetime you wish to convert.
 **Source time zone**: The time zone that the datetime is currently in.
 **Destination time zone**: The time zone you want to convert your date to.
 

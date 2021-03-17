@@ -20,7 +20,7 @@ When you select the Microsoft Dynamics 365 app in Outlook (anywhere the app is s
 
 ## Cause
 
-You do not have sufficient privileges to use the Microsoft Dynamics CRM App for Outlook. This error occurs if your security role in Microsoft Dynamics 365 does not include the *Use Dynamics 365 App for Outlook* privilege.
+You do not have sufficient privileges to use the Microsoft Dynamics CRM App for Outlook. This error occurs if your security role in Microsoft Dynamics 365 does not include the *Use Dynamics 365 App for Outlook* privilege.
 
 ## Resolution
 

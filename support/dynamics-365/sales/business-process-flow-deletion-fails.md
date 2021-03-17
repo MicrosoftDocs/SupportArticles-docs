@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4527365
 
 ## Symptoms
 
-When trying to delete a business process flow, sometimes the operation fails because of dependency. However, when end user selects the dependency list, it shows no entry.
+When trying to delete a business process flow, sometimes the operation fails because of dependency. However, when end user selects the dependency list, it shows no entry.
 
 ## Cause
 

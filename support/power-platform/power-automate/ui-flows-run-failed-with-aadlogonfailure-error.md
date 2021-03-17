@@ -7,14 +7,14 @@ ms.date:
 ---
 # Desktop flows run failed with AadLogonFailure error code
 
-This article provides a resolution to solve the unattended desktop flows run failure issue.
+This article provides a resolution to solve the unattended desktop flows run failure issue.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4555446
 
 ## Symptoms
 
-Your unattended desktop flows run failed with the error code **AadLogonFailure**.
+Your unattended desktop flows run failed with the error code **AadLogonFailure**.
 
 ## Cause
 

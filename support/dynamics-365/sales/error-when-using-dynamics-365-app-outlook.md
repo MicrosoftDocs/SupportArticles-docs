@@ -23,8 +23,8 @@ When using Dynamics 365 App for Outlook, you see the following message:
 This message appears in the following scenario:
 
 - You are composing an email while within one mailbox (Mailbox A).
-- You change the From field in Outlook to another mailbox (Mailbox B).
-- You then open Dynamics 365 App for Outlook.
+- You change the From field in Outlook to another mailbox (Mailbox B).
+- You then open Dynamics 365 App for Outlook.
 
 ## Resolution
 

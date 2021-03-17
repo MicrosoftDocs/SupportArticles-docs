@@ -28,7 +28,7 @@ If you select **Show more**, you see more details such as the following message:
 The Dynamics 365 App for Outlook requires Server-Side Synchronization to be enabled for your mailbox. This error occurs when your mailbox in Dynamics 365 isn't enabled for incoming email using [Server-Side Synchronization](/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks).
 
 > [!NOTE]
-> Your mailbox needed to have had Server-Side Synchronization configured correctly before the app could be deployed to your mailbox. However, if the status of your mailbox in Dynamics 365 changes later to a failure status, you would receive this error until the mailbox is correctly configured and enabled again.
+> Your mailbox needed to have had Server-Side Synchronization configured correctly before the app could be deployed to your mailbox. However, if the status of your mailbox in Dynamics 365 changes later to a failure status, you would receive this error until the mailbox is correctly configured and enabled again.
 
 ## Resolution
 
@@ -38,7 +38,7 @@ Verify your mailbox is enabled for incoming email with Server-Side Synchronizati
 2. Navigate to **Settings** and then select **Email Configuration**.
 3. Select **Mailboxes** and then change the view to **Active Mailboxes**.
 4. Locate and open the mailbox record for the user meeting the error.
-5. Verify the **Incoming Email** option is set to **Server-Side Synchronization or Email Router**. If the app will also be used to track Appointments or Contacts in Outlook, verify the Appointments, Contacts, and Tasks setting as well.
+5. Verify the **Incoming Email** option is set to **Server-Side Synchronization or Email Router**. If the app will also be used to track Appointments or Contacts in Outlook, verify the Appointments, Contacts, and Tasks setting as well.
 6. If the **Incoming Email Status** doesn't already show as **Success**, select **Test & Enable Mailbox** and make sure to select the checkbox that appears in the dialog.
 7. If the mailbox tests don't succeed, review the messages in the **Alerts** section. If an alert includes a Learn More link, select this link for more details. If you continue to see failures after selecting **Test & Enable Mailbox**, see [Failure after clicking Test & Enable Mailbox in Dynamics 365](https://support.microsoft.com/help/4091246) for more guidance.
 8. After the mailbox shows Success for Incoming Email Status, close and reopen Outlook. Then try to open the Dynamics 365 App for Outlook again.

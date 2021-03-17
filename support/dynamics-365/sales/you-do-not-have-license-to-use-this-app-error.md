@@ -20,13 +20,13 @@ When attempting to use the Microsoft Dynamics 365 App for Outlook, you see the f
 
 ## Cause
 
-The user does not have a Microsoft Dynamics 365 license assigned in Office 365.  
+The user does not have a Microsoft Dynamics 365 license assigned in Office 365.  
 
 ## Resolution
 
 For administrator:
 
-Assign a Microsoft Dynamics 365 license to the user.  
+Assign a Microsoft Dynamics 365 license to the user.  
 
 > [!NOTE]
 > After assigning a Microsoft Dynamics 365 license to the user in the Microsoft Online Portal, it may take a few minutes for the license information to sync to Microsoft Dynamics 365.

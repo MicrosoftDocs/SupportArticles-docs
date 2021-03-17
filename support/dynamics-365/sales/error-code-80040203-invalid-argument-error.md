@@ -23,8 +23,8 @@ Error Code 80040203."
 > This error code is documented in [Web service error codes](/powerapps/developer/common-data-service/org-service/web-service-error-codes) with the following information:
 >
 > Name: InvalidArgument  
-> Hex: 80040203  
-> Number: -2147220989  
+> Hex: 80040203  
+> Number: -2147220989  
 > Invalid argument.  
 
 ## Cause

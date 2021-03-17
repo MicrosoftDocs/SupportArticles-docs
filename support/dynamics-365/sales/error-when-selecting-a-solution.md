@@ -17,9 +17,9 @@ _Original KB number:_ &nbsp; 4457858
 When you select a solution in Dynamics 365 and then select the **Apply Solution Upgrade** button, you receive the following error:
 
 > "Action not available.  
-The [Solution Name] solution doesn't have an upgrade that is ready to be applied."
+The [Solution Name] solution doesn't have an upgrade that is ready to be applied."
 
-If you select **Download Log File**, the log file includes a reference to error code -2147187397.
+If you select **Download Log File**, the log file includes a reference to error code -2147187397.
 
 ## Cause
 
@@ -29,4 +29,4 @@ The **Apply Solution Upgrade** button is intended to be used when you've importe
 
 ## Resolution
 
-Only use the **Apply Solution Upgrade** button if you've imported an update for a solution that was already installed and you chose the **Stage for upgrade** option.
+Only use the **Apply Solution Upgrade** button if you've imported an update for a solution that was already installed and you chose the **Stage for upgrade** option.

@@ -18,7 +18,7 @@ When attempting to test and enable a mailbox in Dynamics 365, the results show a
 
 > "The mailbox location could not be determined while sending the email message "Your mailbox is now connected to Dynamics 365". Mailbox [Mailbox Name] didn't synchronize. The owner of the associated email server profile [Email Server Profile Name] has been notified."
 
-> "The location of the mailbox [Mailbox Name] could not be determined while receiving email. The owner of the associated email server profile [Email Server Profile Name] has been notified. The system will try to receive email again later."
+> "The location of the mailbox [Mailbox Name] could not be determined while receiving email. The owner of the associated email server profile [Email Server Profile Name] has been notified. The system will try to receive email again later."
 
 ## Cause
 
@@ -34,6 +34,6 @@ Either fix the autodiscover issue with Exchange or change the **Auto Discover Se
 4. Open your email server profile record for your Exchange on-premises configuration.
 5. Change the **Auto Discover Server Location** setting to **No.**  
 6. Set the **Incoming Server Location** and **Outgoing Server Location** settings to your Exchange Web Services URL.  
-    For example: `https://mail.yourdomain.com/EWS/Exchange.asmx`
+    For example: `https://mail.yourdomain.com/EWS/Exchange.asmx`
 7. Select **Save**.
 8. Try to test and enable the mailboxes again.

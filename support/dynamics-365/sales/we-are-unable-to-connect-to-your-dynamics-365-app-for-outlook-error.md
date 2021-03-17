@@ -47,7 +47,7 @@ Depending on the version of your operating system, you may be able to change the
 5. If you see a **Notify me when a website cache or database exceeds** option, change the value to **200** and select **OK**. Alternatively, you can select `dynamics.com` from the list of websites and then select **Exceed limit**. If these options do not appear, continue to Option 2.
 6. Clear the Internet Explorer history and cache. For detailed steps, see [View and delete your browsing history in Internet Explorer](https://support.microsoft.com/topic/view-and-delete-your-browsing-history-in-internet-explorer-098ffe52-5ac9-a449-c296-c735c32c8678).
 
-### Option 2 - Increase the database limit within the registry
+### Option 2 - Increase the database limit within the registry
 
 > [!IMPORTANT]
 > This section contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).

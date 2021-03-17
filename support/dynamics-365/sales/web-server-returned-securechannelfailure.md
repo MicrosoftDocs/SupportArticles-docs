@@ -32,7 +32,7 @@ If you select **Details**, you see the following additional information:
 
 ## Cause
 
-It typically indicates an SSL or TLS configuration issue. One potential cause is a known issue that can occur when connecting Dynamics 365 Online to an Exchange on-premises environment that is located behind an F5 (BIG-IP) system.
+It typically indicates an SSL or TLS configuration issue. One potential cause is a known issue that can occur when connecting Dynamics 365 Online to an Exchange on-premises environment that is located behind an F5 (BIG-IP) system.
 
 ## Resolution
 

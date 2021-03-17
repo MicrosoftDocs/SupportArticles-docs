@@ -20,7 +20,7 @@ When trying to run UI flows, you may see this error:
 
 ## Verifying issue
 
-This error usually occurs if your UI flows has the property **Use coordinates** set to **true** and UI flows is unable to locate the right element using coordinates. It is possible that the version of the recorded app is different from version of the app used while playing back, which may cause this discrepancy.
+This error usually occurs if your UI flows has the property **Use coordinates** set to **true** and UI flows is unable to locate the right element using coordinates. It is possible that the version of the recorded app is different from version of the app used while playing back, which may cause this discrepancy.
 
 Check that the version of the app that you are using while recording and the version of the app that is being used for playback are the same.
 

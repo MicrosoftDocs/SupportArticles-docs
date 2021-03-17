@@ -18,7 +18,7 @@ A user is unable to add Microsoft Dynamics CRM entities to the Microsoft Outlook
 
 ## Cause
 
-Solutions Module in Outlook 2010 prevents Microsoft Dynamics CRM folders from being added to the favorites section.
+Solutions Module in Outlook 2010 prevents Microsoft Dynamics CRM folders from being added to the favorites section.
 
 ## Resolution
 
@@ -33,4 +33,4 @@ To fix this issue, follow these steps:
 7. Run the Outlook.exe file as admin.
 8. C:\Program Files (x86)\Microsoft Office\Office14\Outlook.exe.
 9. Right-click the Outlook.exe file and run as administrator.
-10. Now try to add the Microsoft Dynamics CRM add-in under the favorites in Outlook 2010.
+10. Now try to add the Microsoft Dynamics CRM add-in under the favorites in Outlook 2010.

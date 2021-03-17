@@ -24,7 +24,7 @@ Check [Known issues and solutions](/power-automate/desktop-flows/create-desktop#
 
 - Make sure that the output text is in a readable field.
 - Make sure there is not an extra click action between selecting the recorder and selecting the field.
-- If it does happen, you can identify and delete the extra step in the recorder later. For more information, see [Edit Windows recorder (V1) flows](/power-automate/desktop-flows/edit-desktop).
+- If it does happen, you can identify and delete the extra step in the recorder later. For more information, see [Edit Windows recorder (V1) flows](/power-automate/desktop-flows/edit-desktop).
 
 ## Best practices
 

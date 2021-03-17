@@ -29,7 +29,7 @@ Example: You create a solution in your development environment and export it as 
 
 Once a solution is installed in an environment as managed, you should only import the managed version of the solution into the environment.
 
-Import a copy of the solution that is the same mode. In the example provided in the [Cause](#cause) section, import would succeed if the solution being imported was a managed solution.
+Import a copy of the solution that is the same mode. In the example provided in the [Cause](#cause) section, import would succeed if the solution being imported was a managed solution.
 
 ## More information
 

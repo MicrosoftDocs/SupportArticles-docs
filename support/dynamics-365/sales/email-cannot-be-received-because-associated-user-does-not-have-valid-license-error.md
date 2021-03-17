@@ -16,8 +16,8 @@ _Original KB number:_ &nbsp; 4053825
 
 When you attempt to Test and Enable a mailbox in Microsoft Dynamics 365, one of the following alerts is logged:
 
-> Email can't be received for the mailbox \<Mailbox Name> because the associated user doesn't have a valid Microsoft Dynamics 365 license. The mailbox didn't synchronize. A notification about this is posted on the alerts wall for the owner of the email server profile Microsoft Exchange Online.  
-  Email Server Error Code: IncomingEmailNoLicenseAssigned
+> Email can't be received for the mailbox \<Mailbox Name> because the associated user doesn't have a valid Microsoft Dynamics 365 license. The mailbox didn't synchronize. A notification about this is posted on the alerts wall for the owner of the email server profile Microsoft Exchange Online.  
+  Email Server Error Code: IncomingEmailNoLicenseAssigned
 
 > Email can't be sent for the mailbox "Test Message" because the associated user doesn't have a valid Microsoft Dynamics 365 license. The mailbox didn't synchronize. A notification about this is posted on the alerts wall for the owner of the email server profile.  
 Email Server Error Code: OutgoingEmailNoLicenseAssigned
@@ -30,10 +30,10 @@ The user does not have a Microsoft Dynamics 365 license assigned or the owning u
 
 ### Verify the user has a Microsoft Dynamics 365 license
 
-Assign a Microsoft Dynamics 365 license to the user. Refer to the **Add a license to a user account** section of the [Create users and assign security roles](/power-platform/admin/create-users-assign-online-security-roles) article.
+Assign a Microsoft Dynamics 365 license to the user. Refer to the **Add a license to a user account** section of the [Create users and assign security roles](/power-platform/admin/create-users-assign-online-security-roles) article.
 
 > [!NOTE]
-> After assigning the Microsoft Dynamics 365 license to the user, it may take a few minutes for this change to sync from Office 365 to Microsoft Dynamics 365.
+> After assigning the Microsoft Dynamics 365 license to the user, it may take a few minutes for this change to sync from Office 365 to Microsoft Dynamics 365.
 
 ### Verify the user is not in Administrative access mode
 

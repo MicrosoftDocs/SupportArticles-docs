@@ -20,7 +20,7 @@ When attempting to use the Dynamics 365 App for Outlook, you see the following m
 
 ## Cause
 
-This error can occur if there's a security group associated with the Dynamics 365 instance, and you aren't a member of that security group.  
+This error can occur if there's a security group associated with the Dynamics 365 instance, and you aren't a member of that security group.  
 
 ## Resolution
 

@@ -18,17 +18,17 @@ You want to send an email with an image in the body, for example with the Office
 
 ## More information
 
-In the body, first switch to code view by selecting `</>` (or for some actions, set `IsHtml:Yes`) see the NOTE below. You can use HTML to embed the image, to do so add the following to the email body where you want the image to show:
+In the body, first switch to code view by selecting `</>` (or for some actions, set `IsHtml:Yes`) see the NOTE below. You can use HTML to embed the image, to do so add the following to the email body where you want the image to show:
 
 ```html
-<img src="URL" />
+<img src="URL" />
 ```
 
 Where:
 
-- URL is a link to the image, this can be a public link or dynamic content from a previous action (such as a link for an image in SharePoint.)
+- URL is a link to the image, this can be a public link or dynamic content from a previous action (such as a link for an image in SharePoint.)
 - URL can instead be a base64 encoded image, you can find a tool/website online that will encode for you (or use the `dataUri()` expression with file content from a previous action.)
-- You can specify additional attributes such as to: configure the size of the image or `alt`. text in case the image cannot load. See resources below for more information.
+- You can specify additional attributes such as to: configure the size of the image or `alt`. text in case the image cannot load. See resources below for more information.
 
 Example image with a link and size:
 
@@ -36,14 +36,14 @@ Example image with a link and size:
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf8peeAQ8Jbw4lowjdYM9OYVJFJr8EwgGNTsJ6BtbqPdNHWz2m" width="500" height="100">
 ```
 
-Example image with base64 (clipped for readability) and the `alt` attribute:
+Example image with base64 (clipped for readability) and the `alt` attribute:
 
 ```html
 \<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAABzCAMAAA......" alt="SomeImage" />
 ```
 
 > [!NOTE]
-> To see if your action supports HTML, check if the action has the parameter `body` of type `html` in the connector documentation. Otherwise, for some actions you may need to choose `Is HTML: Yes` under Advanced Options.
+> To see if your action supports HTML, check if the action has the parameter `body` of type `html` in the connector documentation. Otherwise, for some actions you may need to choose `Is HTML: Yes` under Advanced Options.
 
 ## Resources
 

@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4471980
 
 ## Symptoms
 
-The following alert appears within a Dynamics 365 mailbox record:
+The following alert appears within a Dynamics 365 mailbox record:
 
 > "An unknown error occurred while receiving email. Mailbox Michael Dwyer didn't synchronize. The owner of the associated email server profile Microsoft Exchange Online has been notified.
 >
@@ -22,8 +22,8 @@ The following alert appears within a Dynamics 365 mailbox record:
 
 ## Cause
 
-This message may appear if Server-Side Synchronization attempted to retrieve emails but met an error. It's typically a temporary issue and the emails will be retrieved successfully on the next synchronization cycle (typically 15 minutes).
+This message may appear if Server-Side Synchronization attempted to retrieve emails but met an error. It's typically a temporary issue and the emails will be retrieved successfully on the next synchronization cycle (typically 15 minutes).
 
 ## Resolution
 
-If this message doesn't persist on the next synchronization cycle (typically 15 minutes), this message can be ignored. If this message persists and email isn't being retrieved by Server-Side Synchronization, you can contact Microsoft Support. There may be an issue with your email server so you can first verify you can send and receive email successfully with your email service.
+If this message doesn't persist on the next synchronization cycle (typically 15 minutes), this message can be ignored. If this message persists and email isn't being retrieved by Server-Side Synchronization, you can contact Microsoft Support. There may be an issue with your email server so you can first verify you can send and receive email successfully with your email service.

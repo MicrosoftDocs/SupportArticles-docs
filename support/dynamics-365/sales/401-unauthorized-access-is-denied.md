@@ -14,9 +14,9 @@ _Original KB number:_ &nbsp; 2686840
 
 ## Symptoms
 
-Users may not be able to sign in to Microsoft Dynamics CRM using internal claims-based authentication or IFD. The user will be repeatedly prompted to sign in.
+Users may not be able to sign in to Microsoft Dynamics CRM using internal claims-based authentication or IFD. The user will be repeatedly prompted to sign in.
 
-In the Microsoft Dynamics CRM user interface, the user will see the message below:
+In the Microsoft Dynamics CRM user interface, the user will see the message below:
 
 > HTTP Error 401 - Unauthorized Access is denied.
 
@@ -35,26 +35,26 @@ In ADFS Management Console, update the Federation metadata URLs and do an IIS re
 If  above steps don't resolve the issue, follow below steps:
 
 1. On the Microsoft Dynamics CRM server, go to Deployment Manager and disable the Claims-Based Authentication.
-2. On the Microsoft Dynamics CRM server, select the **Start** menu, select **Run**, and type **iisreset** to complete an IIS reset.
+2. On the Microsoft Dynamics CRM server, select the **Start** menu, select **Run**, and type **iisreset** to complete an IIS reset.
 3. Reconfigure Claims-Based Authentication from Deployment Manager, keeping all the settings same.
 4. Reconfigure IFD through the Microsoft Dynamics CRM Deployment Manager.
-5. On the Microsoft Dynamics CRM server, select the **Start** menu, select **Run**, and type **iisreset** to complete an IIS reset.
-6. In ADFS Management Console on the ADFS server, update the corresponding Federation Metadata URLs.
-    1. Go to the ADFS Server and open the ADFS management Console.
-    1. Select **Relying Party Trusts** to display the internal and external relying party trusts.
+5. On the Microsoft Dynamics CRM server, select the **Start** menu, select **Run**, and type **iisreset** to complete an IIS reset.
+6. In ADFS Management Console on the ADFS server, update the corresponding Federation Metadata URLs.
+    1. Go to the ADFS Server and open the ADFS management Console.
+    1. Select **Relying Party Trusts** to display the internal and external relying party trusts.
     1. Right-click each and select **Update Federation Metadata**.
-    1. Go to the Microsoft Dynamics CRM server, select the **Start** menu, select **Run** and type **iisreset** to complete an IIS reset.
-    1. Next, browse to **Service** on the ADFS server and restart the ADFS service.
+    1. Go to the Microsoft Dynamics CRM server, select the **Start** menu, select **Run** and type **iisreset** to complete an IIS reset.
+    1. Next, browse to **Service** on the ADFS server and restart the ADFS service.
 
 ## More information
 
 The signing certificate in ADFS (**Service** -> **Certificates** -> **Token-Decryption / Token-Signing**) shows two Token-decrypting and Token-signing certificates with one Primary and one Secondary status.
 
-There are two signing certificates. The second signing certificate was created by ADFS automatically because the first signing certificate was reaching its expiration date. This feature in ADFS is called Auto Certificate Rollover.
+There are two signing certificates. The second signing certificate was created by ADFS automatically because the first signing certificate was reaching its expiration date. This feature in ADFS is called Auto Certificate Rollover.
 
-In the Microsoft Dynamics CRM server database, it still has the old certificate entry, which causes the authentication to fail. The issue will be resolved once the database is updated with the recently renewed certificate after the reconfiguration of IFD and claims.
+In the Microsoft Dynamics CRM server database, it still has the old certificate entry, which causes the authentication to fail. The issue will be resolved once the database is updated with the recently renewed certificate after the reconfiguration of IFD and claims.
 
-The following error can be seen in event viewer of the ADFS server (Application and Services Logs -> ADFS 2.0 -> Admin):
+The following error can be seen in event viewer of the ADFS server (Application and Services Logs -> ADFS 2.0 -> Admin):
 
 > Exception information:  
 Exception type: SecurityTokenException  

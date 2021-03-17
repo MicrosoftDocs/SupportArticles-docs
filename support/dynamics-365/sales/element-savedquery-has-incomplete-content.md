@@ -27,7 +27,7 @@ The textbox showing more details include the following information:
 
 > "The element 'savedquery' has incomplete content. List of possible elements expected: 'LocalizedNames'."
 
-The textbox also includes extra details such as part of the FetchXML used for the saved query (view).
+The textbox also includes extra details such as part of the FetchXML used for the saved query (view).
 
 ## Cause
 
@@ -44,54 +44,54 @@ To allow the solution to import successfully, the LocalizedNames section within 
 
     ```xml
     <savedquery unmodified="1">
-                <isquickfindquery>0</isquickfindquery>
-                <isprivate>0</isprivate>
-                <isdefault>0</isdefault>
-                <savedqueryid>{65ffaf9a-e8c5-432d-860b-32f841b00d87}</savedqueryid>
-                <queryapi></queryapi>
-                <layoutxml>
-                  <grid name="resultset" jump="name" select="1" icon="1" preview="1">
-                    <row name="result" id="accountid">
-                      <cell name="name" width="300" />
-                      <cell name="telephone1" width="100" />
-                      <cell name="address1_city" width="100" />
-                      <cell name="primarycontactid" width="150" />
-                      <cell name="accountprimarycontactidcontactcontactid.emailaddress1" width="150" disableSorting="1" />
-                      <cell name="statecode" width="100" />
-                    </row>
-                  </grid>
-                </layoutxml>
-                <querytype>0</querytype>
-                <fetchxml>
-                  <fetch version="1.0" output-format="xml-platform" mapping="logical">
-                    <entity name="account">
-                      <attribute name="name" />
-                      <attribute name="telephone1" />
-                      <attribute name="address1_city" />
-                      <attribute name="primarycontactid" />
-                      <link-entity alias="accountprimarycontactidcontactcontactid" name="contact" from="contactid" to="primarycontactid" link-type="outer" visible="false">
-                        <attribute name="emailaddress1" />
-                      </link-entity>
-                      <attribute name="statecode" />
-                    </entity>
-                  </fetch>
-                </fetchxml>
-                <IntroducedVersion>9.0.0.0</IntroducedVersion>
+                <isquickfindquery>0</isquickfindquery>
+                <isprivate>0</isprivate>
+                <isdefault>0</isdefault>
+                <savedqueryid>{65ffaf9a-e8c5-432d-860b-32f841b00d87}</savedqueryid>
+                <queryapi></queryapi>
+                <layoutxml>
+                  <grid name="resultset" jump="name" select="1" icon="1" preview="1">
+                    <row name="result" id="accountid">
+                      <cell name="name" width="300" />
+                      <cell name="telephone1" width="100" />
+                      <cell name="address1_city" width="100" />
+                      <cell name="primarycontactid" width="150" />
+                      <cell name="accountprimarycontactidcontactcontactid.emailaddress1" width="150" disableSorting="1" />
+                      <cell name="statecode" width="100" />
+                    </row>
+                  </grid>
+                </layoutxml>
+                <querytype>0</querytype>
+                <fetchxml>
+                  <fetch version="1.0" output-format="xml-platform" mapping="logical">
+                    <entity name="account">
+                      <attribute name="name" />
+                      <attribute name="telephone1" />
+                      <attribute name="address1_city" />
+                      <attribute name="primarycontactid" />
+                      <link-entity alias="accountprimarycontactidcontactcontactid" name="contact" from="contactid" to="primarycontactid" link-type="outer" visible="false">
+                        <attribute name="emailaddress1" />
+                      </link-entity>
+                      <attribute name="statecode" />
+                    </entity>
+                  </fetch>
+                </fetchxml>
+                <IntroducedVersion>9.0.0.0</IntroducedVersion>
                 <LocalizedNames>
-                  <LocalizedName description="All Accounts" languagecode="1033" />
-                </LocalizedNames>
-              </savedquery>
+                  <LocalizedName description="All Accounts" languagecode="1033" />
+                </LocalizedNames>
+              </savedquery>
     ```
 
 5. After correcting the XML, select all of the components you extracted from the solution file and send them to a new .zip file.
 6. Attempt to import the solution again.
 
 > [!NOTE]
-> If there are multiple saved queries (views) missing the \<LocalizedNames> section, the steps may need to be repeated for each view.
+> If there are multiple saved queries (views) missing the \<LocalizedNames> section, the steps may need to be repeated for each view.
 
 ## More information
 
-If you aren't sure of the correct saved query (view) name to provide for this section, you can find the name using the `savedqueryid` value and the Dynamics 365 WebAPI. In the example above, the `savedqueryid` value is 65ffaf9a-e8c5-432d-860b-32f841b00d87. You can then access the following URL in your web browser to return the name of the view:
+If you aren't sure of the correct saved query (view) name to provide for this section, you can find the name using the `savedqueryid` value and the Dynamics 365 WebAPI. In the example above, the `savedqueryid` value is 65ffaf9a-e8c5-432d-860b-32f841b00d87. You can then access the following URL in your web browser to return the name of the view:
 
 `https://<your dynamics 365 URL>/api/data/v9.0/savedqueries(<savedqueryid>)?$select=name`
 

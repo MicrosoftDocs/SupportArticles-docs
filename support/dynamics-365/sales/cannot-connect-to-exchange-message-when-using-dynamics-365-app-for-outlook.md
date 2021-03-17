@@ -74,7 +74,7 @@ This typically occurs when using a Microsoft Exchange on-premises mailbox and ma
 
    `Get-AuthConfig | FL`
 3. Verify the results show **IsValid** as **True**.
-4. Copy the value returned for CurrentCertificateThumbprint and use it in the following command:
+4. Copy the value returned for CurrentCertificateThumbprint and use it in the following command:
 
     ```powershell
     Get-ExchangeCertificate -Thumbprint <CurrentCertificateThumbprint Value>| FL

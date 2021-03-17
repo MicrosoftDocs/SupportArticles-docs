@@ -20,7 +20,7 @@ After deploying Dynamics 365 App for Outlook, the app doesn't appear within Outl
 
 **Cause 1**: The version of Outlook or Exchange isn't supported.
 
-**Cause 2**: Enable optional connected experiences setting is disabled in Outlook (applies to Microsoft 365 Apps for enterprise).
+**Cause 2**: Enable optional connected experiences setting is disabled in Outlook (applies to Microsoft 365 Apps for enterprise).
 
 **Cause 3**: The Reading Pane isn't enabled.
 
@@ -40,7 +40,7 @@ If you're using Microsoft 365 Apps for enterprise, verify the **Enable optional 
 
 1. Select **File** > **Office Account** > **Account Privacy** > **Manage Settings**.
 2. Locate the setting **Enable optional connected experiences.**  
-3. Verify this setting is enabled. If it's disabled, no add-ins will be displayed in Outlook.
+3. Verify this setting is enabled. If it's disabled, no add-ins will be displayed in Outlook.
 
     For more information about this setting, see [Use policy settings to manage privacy controls for Microsoft 365 Apps for enterprise](/deployoffice/privacy/manage-privacy-controls).
 

@@ -18,7 +18,7 @@ When attempting to import a solution in Dynamics 365, you see an error with the 
 
 > "The import solution must have a higher version than the existing solution it is upgrading"
 
-You may also see a reference to error code 80048541.
+You may also see a reference to error code 80048541.
 
 ## Cause
 

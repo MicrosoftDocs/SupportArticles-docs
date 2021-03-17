@@ -23,12 +23,12 @@ Error code 80048068"
 
 ### Cause 1
 
-This message can occur if you're trying to import a solution from a newer version of Dynamics 365. For example: If you had a solution created in Dynamics 365 9.0, and are trying to import it into a Dynamics 365 organization that is version 8.2. This error also occurs if the solution was exported from a version 9.1 organization and you're trying to import it into an organization that is version 9.0.
+This message can occur if you're trying to import a solution from a newer version of Dynamics 365. For example: If you had a solution created in Dynamics 365 9.0, and are trying to import it into a Dynamics 365 organization that is version 8.2. This error also occurs if the solution was exported from a version 9.1 organization and you're trying to import it into an organization that is version 9.0.
 
 ### Cause 2
 
-This message will also occur if you try to import a solution that is from Dynamics 365 2011 (5.0) or earlier. If you open the solution.xml file within the solution zip file and see the version information at the top is from 5.0, it's the cause of the error.
+This message will also occur if you try to import a solution that is from Dynamics 365 2011 (5.0) or earlier. If you open the solution.xml file within the solution zip file and see the version information at the top is from 5.0, it's the cause of the error.
 
 ## Resolution
 
-There isn't a supported way to import a solution from a higher version of Dynamics 365 into an organization that is a lower version. There's also not a supported way to import a solution from version 2011 (5.x) into a Dynamics 365 organization that is version 9.x or later.
+There isn't a supported way to import a solution from a higher version of Dynamics 365 into an organization that is a lower version. There's also not a supported way to import a solution from version 2011 (5.x) into a Dynamics 365 organization that is version 9.x or later.

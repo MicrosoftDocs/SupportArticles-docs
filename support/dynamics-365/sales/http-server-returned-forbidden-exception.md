@@ -22,19 +22,19 @@ Email Server Error Code: Http server returned Forbidden exception."
 If you select **Details**, the following other details are shown:
 
 > "Error : System.Net.WebException: The request failed with HTTP status 403: Forbidden.  
-   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)  
-   at System.Web.Services.Protocols.SoapHttpClientProtocol.EndInvoke(IAsyncResult asyncResult)  
-   at Microsoft.Crm.Asynchronous.EmailConnector.ExchangeServiceBinding.EndCreateItem(IAsyncResult asyncResult)  
-   at Microsoft.Crm.Asynchronous.EmailConnector.ExchangeOutgoingEmailProvider.EndCreateItem()"
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)  
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.EndInvoke(IAsyncResult asyncResult)  
+   at Microsoft.Crm.Asynchronous.EmailConnector.ExchangeServiceBinding.EndCreateItem(IAsyncResult asyncResult)  
+   at Microsoft.Crm.Asynchronous.EmailConnector.ExchangeOutgoingEmailProvider.EndCreateItem()"
 
 ## Cause
 
-Dynamics 365 communicates with Microsoft Exchange using Exchange Web Services (EWS) requests. If EWS is disabled, this error will occur. The following contents are some potential ways that EWS may be disabled or restricted in Exchange:
+Dynamics 365 communicates with Microsoft Exchange using Exchange Web Services (EWS) requests. If EWS is disabled, this error will occur. The following contents are some potential ways that EWS may be disabled or restricted in Exchange:
 
-1. EWS is disabled for the mailbox
+1. EWS is disabled for the mailbox
 2. EWS is disabled for the entire organization
-3. The `EwsApplicationAccessPolicy` is set to **EnforceAllowList** and `the EwsAllowList` doesn't allow access from Dynamics 365 (CRM).
-4. The `EwsApplicationAccessPolicy` is set to **EnforceBlockList** and `the EwsBlockList` includes Dynamics 365 (CRM).
+3. The `EwsApplicationAccessPolicy` is set to **EnforceAllowList** and `the EwsAllowList` doesn't allow access from Dynamics 365 (CRM).
+4. The `EwsApplicationAccessPolicy` is set to **EnforceBlockList** and `the EwsBlockList` includes Dynamics 365 (CRM).
 
 ## Resolution
 
@@ -49,7 +49,7 @@ Dynamics 365 communicates with Microsoft Exchange using Exchange Web Services (E
 2. If **EwsEnabled** is set to **False**, use the following PowerShell command to enable Exchange Web Services (EWS) for the mailbox:
 
     ```powershell
-    Set-CASMailbox <mailbox-alias> -EwsEnabled $True
+    Set-CASMailbox <mailbox-alias> -EwsEnabled $True
     ```
 
     > [!IMPORTANT]
@@ -66,7 +66,7 @@ Dynamics 365 communicates with Microsoft Exchange using Exchange Web Services (E
 2. Verify that **EwsEnabled** isn't set to **False**. The following command can be used to set **EwsEnabled** to **True** if it's currently set to **False**:
 
     ```powershell
-    Set-OrganizationConfig -EwsEnabled $True
+    Set-OrganizationConfig -EwsEnabled $True
     ```
 
     > [!IMPORTANT]
@@ -94,7 +94,7 @@ Dynamics 365 communicates with Microsoft Exchange using Exchange Web Services (E
 
 For more information about changing Exchange settings using PowerShell and controlling access to EWS, see the following articles:
 
-- [Exchange Server PowerShell (Exchange Management Shell)](/powershell/exchange/exchange-management-shell)  
+- [Exchange Server PowerShell (Exchange Management Shell)](/powershell/exchange/exchange-management-shell)  
 - [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
-- [Control access to EWS in Exchange](/exchange/client-developer/exchange-web-services/how-to-control-access-to-ews-in-exchange)  
+- [Control access to EWS in Exchange](/exchange/client-developer/exchange-web-services/how-to-control-access-to-ews-in-exchange)  
 - [Set-CASMailbox](/powershell/module/exchange/set-casmailbox)

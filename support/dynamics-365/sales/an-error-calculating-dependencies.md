@@ -18,25 +18,25 @@ When attempting to import a solution in Dynamics 365, you receive the following 
 
 > "The import of solution: [solution name] failed"
 
-You may also see a reference to error code 8004F036. If you view the Detail column in the grid, you see a message such as:
+You may also see a reference to error code 8004F036. If you view the Detail column in the grid, you see a message such as:
 
 > "There was an error calculating dependencies for this component. Missing component id [GUID]"
 
 If you select **Download Log File** and view the **Components** tab in Excel, you see a message such as:
 
-> "The dependent component SystemForm (Id=[GUID 1]) does not exist.  Failure trying to associate it with SystemForm (Id=[GUID 2]) as a dependency. Missing dependency lookup type = PrimaryKeyLookup."
+> "The dependent component SystemForm (Id=[GUID 1]) does not exist.  Failure trying to associate it with SystemForm (Id=[GUID 2]) as a dependency. Missing dependency lookup type = PrimaryKeyLookup."
 
 ## Cause
 
-This error can occur if the solution you're importing includes a component that depends on another component, but that dependent component isn't in the solution that you're importing and doesn't exist in the target organization.
+This error can occur if the solution you're importing includes a component that depends on another component, but that dependent component isn't in the solution that you're importing and doesn't exist in the target organization.
 
-Example: You exported a solution from your development environment and tried to import it into your production environment. If the solution contains a component (ex. a system form) that references another dependent component (ex. a view or another system form), this error would occur if that dependent component isn't in the solution and not in the target organization.
+Example: You exported a solution from your development environment and tried to import it into your production environment. If the solution contains a component (ex. a system form) that references another dependent component (ex. a view or another system form), this error would occur if that dependent component isn't in the solution and not in the target organization.
 
-The error indicates the required dependent component with an id of [GUID 1] doesn't exist in the solution or the target organization. The solution import process is trying to associate this component to an existing component [GUID 2] as a child dependency. Because component [GUID 1] doesn't exist, the association can't be made.
+The error indicates the required dependent component with an id of [GUID 1] doesn't exist in the solution or the target organization. The solution import process is trying to associate this component to an existing component [GUID 2] as a child dependency. Because component [GUID 1] doesn't exist, the association can't be made.
 
 ### Another possible cause
 
-If you receive this type of error and the details reference Template as the dependent component, it may happen if the template was developed using a language that isn't enabled in the environment where the solution is being imported. For example: If a template was created in English, but the English language isn't enabled in the environment where you're importing the solution, it can be another cause of this error. To enable other languages, navigate to **Settings**, select **Administration**, and then select **Languages**.
+If you receive this type of error and the details reference Template as the dependent component, it may happen if the template was developed using a language that isn't enabled in the environment where the solution is being imported. For example: If a template was created in English, but the English language isn't enabled in the environment where you're importing the solution, it can be another cause of this error. To enable other languages, navigate to **Settings**, select **Administration**, and then select **Languages**.
 
 ## Resolution
 
@@ -65,7 +65,7 @@ If you aren't sure which component is missing, follow these steps:
     </MissingDependency>
     ```
 
-    The XML shown above indicates the solution is missing a dependent component named [Component Name 1] with an ID of  [GUID 1]. Because this component doesn't exist within this solution, it needs to exist in the target organization to be imported successfully.
+    The XML shown above indicates the solution is missing a dependent component named [Component Name 1] with an ID of  [GUID 1]. Because this component doesn't exist within this solution, it needs to exist in the target organization to be imported successfully.
 
 ## Example resolution
 
@@ -73,7 +73,7 @@ Example error:
 
 > "The dependent component SystemForm (Id=2e28cc31-d344-412d-b393-3e108b23363a) does not exist. Failure trying to associate it with SystemForm (Id=6d2cf5e0-c3bd-40fb-9842-b5c67409e23b) as a dependency. Missing dependency lookup type = PrimaryKeyLookup."
 
-Open the solution.xml file and search for 2e28cc31-d344-412d-b393-3e108b23363a. You'll then find the following XML:
+Open the solution.xml file and search for 2e28cc31-d344-412d-b393-3e108b23363a. You'll then find the following XML:
 
 ```xml
 <MissingDependency>

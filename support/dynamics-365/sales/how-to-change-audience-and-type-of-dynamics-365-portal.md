@@ -25,7 +25,7 @@ This option cannot be changed on the Portal Details page.
 You can change to a different portal audience and type by using the **Manage Dynamics 365 Instance** option:
 
 1. Go to the Dynamics 365 Administration Center, and then select the **Applications** tab.
-2. Select the application row for your Portal Add-On, and then select **Manage**.
+2. Select the application row for your Portal Add-On, and then select **Manage**.
 3. Select **Manage Dynamics 365 Instance**.
 4. Select **Update Dynamics 365 instance**.
 5. Use the options that appear to change the Portal Audience or portal type.

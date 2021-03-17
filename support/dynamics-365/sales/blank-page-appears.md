@@ -22,7 +22,7 @@ When attempting to use the Dynamics 365 App for Outlook on Outlook desktop, you 
 
 **Cause 2:** It can occur if the LocalLow folder has an incorrect integrity level. The correct setting is to have the integrity level set to low as the folder name indicates.
 
-**Cause 3:** This issue can occur if an issue is cached in Internet Explorer or Edge. If it was previously working but quit working recently, it's most likely the cause.
+**Cause 3:** This issue can occur if an issue is cached in Internet Explorer or Edge. If it was previously working but quit working recently, it's most likely the cause.
 
 **Cause 4:** Microsoft is aware of an issue that can occur under the following conditions:
 
@@ -38,7 +38,7 @@ Use the steps in ["Something went wrong during sign-in" error using Dynamics 365
 **Resolution 2:**
 
 1. Open a command prompt.
-2. Run the following command:  
+2. Run the following command:  
     `icacls %userprofile%\Appdata\LocalLow /t /setintegritylevel (OI)(CI)L`
 
 **Resolution 3:**  

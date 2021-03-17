@@ -28,7 +28,7 @@ For commercial Power Automate (all geos), Approval mails may come from any IP wi
 - 94.245.112.0/27
 - 207.46.50.192/26
 
-All approval emails will be sent with a sender address of `maccount@microsoft.com.`
+All approval emails will be sent with a sender address of `maccount@microsoft.com.`
 
 ## GCC (Government)
 
@@ -37,7 +37,7 @@ For GCC and GCC High Power Automate, Approval mails may come from any of the fol
 - 131.253.121.20
 - 131.253.121.52
 
-Approval emails will be sent in these environments with a sender address of `flow-noreply@microsoft.com`
+Approval emails will be sent in these environments with a sender address of `flow-noreply@microsoft.com`
 
 ## China
 
@@ -50,4 +50,4 @@ Approval mails may come from any of the following IPs:
 - 42.159.163.82
 - 42.159.163.83
 
-All approval emails will be sent with a sender address of `maccount@microsoft.com`.
+All approval emails will be sent with a sender address of `maccount@microsoft.com`.

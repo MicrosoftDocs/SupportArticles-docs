@@ -150,13 +150,13 @@ By the time the "Wait for an approval" action executed, the approval had already
 
 ### InvalidApprovalCustomOptions
 
-> The response options provided for this approval are invalid.  Options must be less than 100 characters and cannot be blank.
+> The response options provided for this approval are invalid.  Options must be less than 100 characters and cannot be blank.
 
 This occurs if the inputs to the Custom Response options for an approval are invalid and need to be fixed in the Flow designer. The constraints are specified in the error message itself.
 
 ### InvalidApprovalCreateRequestTitleMissing
 
-> Required field 'title' is missing or empty
+> Required field 'title' is missing or empty
 
 The approval title was null or empty, which is not supported.
 

@@ -20,7 +20,7 @@ When you try to save a folder-level tracking mapping in Microsoft Dynamics 365, 
 
 ## Cause
 
-This error can occur if the user does not have sufficient privileges for the Mailbox Auto Tracking Folder entity.
+This error can occur if the user does not have sufficient privileges for the Mailbox Auto Tracking Folder entity.
 
 ## Resolution
 

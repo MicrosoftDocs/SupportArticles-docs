@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4555842
 
 ## Symptoms
 
-Drag and Drop or double-click isn't being recorded properly.
+Drag and Drop or double-click isn't being recorded properly.
 
 ## Verifying issue
 

@@ -22,7 +22,7 @@ When attempting to delete a solution in Microsoft Dynamics 365, you encounter th
 
 In the error message above, Solution A and Solution B are placeholder values. Solution A would be the name of the solution you are trying to delete. Solution B would be the name of a solution that depends on one or more components in the solution you are trying to delete.
 
-If you select the **Download Log File** button, you see a reference to error code **-2147159995** or **-2147160032**.
+If you select the **Download Log File** button, you see a reference to error code **-2147159995** or **-2147160032**.
 
 ## Cause
 

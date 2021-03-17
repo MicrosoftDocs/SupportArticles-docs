@@ -20,7 +20,7 @@ When installing Microsoft Dynamics 365 marketing application, users may receive 
 
 ## Cause
 
-Microsoft Dynamics 365 Marketing trial expired after 30 days. Once trial marketing instance expires, it leaves a marketing application on user tenant in **Non configured** state. This marketing application can't be configured on any other instance. When user tries to select this instance, it throws the error.  
+Microsoft Dynamics 365 Marketing trial expired after 30 days. Once trial marketing instance expires, it leaves a marketing application on user tenant in **Non configured** state. This marketing application can't be configured on any other instance. When user tries to select this instance, it throws the error.  
 
 ## Resolution
 

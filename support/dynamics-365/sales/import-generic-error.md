@@ -14,11 +14,11 @@ _Original KB number:_ &nbsp; 4459696
 
 ## Symptoms
 
-When attempting to import a solution in Dynamics 365, the import fails with error code 8004801e.
+When attempting to import a solution in Dynamics 365, the import fails with error code 8004801e.
 
 ## Cause
 
-Error code 8004801e indicates a generic error occurred during import of the solution.
+Error code 8004801e indicates a generic error occurred during import of the solution.
 
 ## Resolution
 

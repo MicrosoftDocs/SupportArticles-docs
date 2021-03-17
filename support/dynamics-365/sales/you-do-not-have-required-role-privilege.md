@@ -20,7 +20,7 @@ When attempting to use the Dynamics 365 App for Outlook, you see the following m
 
 ## Cause
 
-This message can appear when a user without the System Administrator role tries to open Dynamics 365 App for Outlook ,and their mailbox is configured with a Dynamics 365 Sandbox environment with Admin mode turned enabled. When Admin Mode is enabled, only users with the System Administrator role can access the environment.
+This message can appear when a user without the System Administrator role tries to open Dynamics 365 App for Outlook ,and their mailbox is configured with a Dynamics 365 Sandbox environment with Admin mode turned enabled. When Admin Mode is enabled, only users with the System Administrator role can access the environment.
 
 ## Resolution
 

@@ -36,7 +36,7 @@ You can add the **My Apps** option under **Settings** by editing the sitemap wit
 9. In the **Title** field, type **My Apps**.
 10. For the **Icon** option, select the following option if it's available or select the default icon or any other icon:  
     **AppModule_Default_Icon.png**.
-11. Use the following value for the **ID** value: **nav_app_modules**
+11. Use the following value for the **ID** value: **nav_app_modules**
 12. Select **Save** and then select **Publish**.
 13. Close the sitemap designer.
 14. Within the Solution dialog, select **Publish All Customizations**.

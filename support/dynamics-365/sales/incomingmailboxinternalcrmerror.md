@@ -17,11 +17,11 @@ _Original KB number:_ &nbsp; 4471948
 The following information level alert appears within a Dynamics 365 mailbox record:
 
 > "An internal Microsoft Dynamics 365 error occurred while receiving email through the mailbox [Mailbox Name]. The owner of the associated email server profile [Profile Name] has been notified. The system will try to receive email again later.  
-Email Server Error Code: IncomingMailboxInternalCrmError"
+Email Server Error Code: IncomingMailboxInternalCrmError"
 
 ## Cause
 
-This message may appear if Server-Side Synchronization attempted to retrieve emails but met an internal error. It's typically a temporary issue and the emails will be retrieved successfully on the next synchronization cycle (typically 15 minutes).
+This message may appear if Server-Side Synchronization attempted to retrieve emails but met an internal error. It's typically a temporary issue and the emails will be retrieved successfully on the next synchronization cycle (typically 15 minutes).
 
 ## Resolution
 

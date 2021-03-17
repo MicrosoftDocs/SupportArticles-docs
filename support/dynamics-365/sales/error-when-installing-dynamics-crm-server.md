@@ -20,7 +20,7 @@ When you try to install Dynamics CRM Server 2016, the Environment Diagnostics wi
 
 ## Cause
 
-The Dynamics CRM Server 2016 wizard requires connectivity check through [Microsoft OLE DB Provider for SQL Server](/sql/ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server) to start database creation. The installation documentation lists [software installed](https://technet.microsoft.com/library/hh699706.aspx) during the setup. It includes the [Install or upgrade Microsoft Dynamics CRM Server](/previous-versions/dynamicscrm-2016/deployment-administrators-guide/hh699706(v=crm.8)). The setup uses this native client and during the phase of the configuration database creation, OLE DB connection is required.
+The Dynamics CRM Server 2016 wizard requires connectivity check through [Microsoft OLE DB Provider for SQL Server](/sql/ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server) to start database creation. The installation documentation lists [software installed](https://technet.microsoft.com/library/hh699706.aspx) during the setup. It includes the [Install or upgrade Microsoft Dynamics CRM Server](/previous-versions/dynamicscrm-2016/deployment-administrators-guide/hh699706(v=crm.8)). The setup uses this native client and during the phase of the configuration database creation, OLE DB connection is required.
 
 This connectivity failure reproduces when a test connection is created for the given SQL Server through a Universal Data Link (UDL) file.
 
@@ -38,7 +38,7 @@ The connectivity may fail even if TLS 1.1 or 1.2 is enabled on the SQL Server as
 
 ## Resolution
 
-Enable TLS 1.0 for Microsoft OLE DB Provider for SQL Server on SQL Server. TLS 1.0 can be enabled with the following registry changes:
+Enable TLS 1.0 for Microsoft OLE DB Provider for SQL Server on SQL Server. TLS 1.0 can be enabled with the following registry changes:
 
 `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server] "Enabled"=dword:00000001`
 `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server] "DisabledByDefault"=dword:00000000`
@@ -52,7 +52,7 @@ If the organization policy requires TLS 1.0 to be disabled, it can be done after
 `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Client] "Enabled"=dword:00000000`
 `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Client] "DisabledByDefault"=dword:00000001`
 
-TLS 1.0 may also need to be enabled on Dynamics CRM Server 2016 as client.
+TLS 1.0 may also need to be enabled on Dynamics CRM Server 2016 as client.
 
 ## More information
 

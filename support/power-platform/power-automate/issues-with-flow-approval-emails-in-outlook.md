@@ -38,7 +38,7 @@ This situation can also arise if there are SMTP mail delays between Microsoft Fl
 
 ## Issue 2 - Outlook Desktop does not present actionable messages but Outlook Web (OWA) does
 
-This is a known issue fixed in Outlook Desktop builds 1911(16.0.12228) and higher, involving user permissions accessing the Office Add-in store. A temporary workaround is to make sure that the affected users have access to the Office Store for Add-ins (though this is temporary and will not be necessary after Office desktop release). To verify this case, look for the following registry key. If empty, the user does not have access to the Office store and will not receive actionable emails in Outlook Desktop.
+This is a known issue fixed in Outlook Desktop builds 1911(16.0.12228) and higher, involving user permissions accessing the Office Add-in store. A temporary workaround is to make sure that the affected users have access to the Office Store for Add-ins (though this is temporary and will not be necessary after Office desktop release). To verify this case, look for the following registry key. If empty, the user does not have access to the Office store and will not receive actionable emails in Outlook Desktop.
 
 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Outlook\Options\WebExt\MarketplaceUrls`
 

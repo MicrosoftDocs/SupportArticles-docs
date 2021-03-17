@@ -39,8 +39,8 @@ Verify your mailbox is enabled for incoming email with Server-Side Synchronizati
 3. Select **Mailboxes** and then change the view to **Active Mailboxes**.
 4. Locate and open the mailbox record for the user meeting the error.
 5. Verify the **Appointments, Contacts, and Tasks** option is set to **Server-Side Synchronization or Email Router**.
-6. If the **Appointments, Contacts, and Tasks Status**  doesn't already show as **Success**, select **Test & Enable Mailbox** and make sure to select the checkbox that appears in the dialog.
-7. If the mailbox tests don't succeed, review the messages in the **Alerts** section. If an alert includes a Learn More link, select this link for more details. If you continue to see failures after selecting **Test & Enable Mailbox**, see [Failure after clicking Test & Enable Mailbox in Dynamics 365](https://support.microsoft.com/help/4091246) for more guidance.
+6. If the **Appointments, Contacts, and Tasks Status**  doesn't already show as **Success**, select **Test & Enable Mailbox** and make sure to select the checkbox that appears in the dialog.
+7. If the mailbox tests don't succeed, review the messages in the **Alerts** section. If an alert includes a Learn More link, select this link for more details. If you continue to see failures after selecting **Test & Enable Mailbox**, see [Failure after clicking Test & Enable Mailbox in Dynamics 365](https://support.microsoft.com/help/4091246) for more guidance.
 8. After the mailbox shows Success for Appointments, Contacts, and Tasks Status, close and reopen Outlook. Then try to open the Dynamics 365 App for Outlook again.
 9. If this message continues to appear after the mailbox is successfully Tested & Enabled and you closed and reopened Outlook, it could occur if the user is a member of multiple Dynamics 365 instances and the app was deployed from some other instance where the mailbox isn't Tested & Enabled.
 

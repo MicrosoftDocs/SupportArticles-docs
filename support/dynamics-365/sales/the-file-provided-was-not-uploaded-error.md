@@ -22,7 +22,7 @@ When attempting to import a solution in Dynamics 365, you receive the following 
 
 ## Cause
 
-Error code 80071153 indicates a duplicate component is present in the XML of the solution. It's caused by someone manually modifying the XML.
+Error code 80071153 indicates a duplicate component is present in the XML of the solution. It's caused by someone manually modifying the XML.
 
 ## Resolution
 

@@ -27,15 +27,15 @@ The textbox showing more details include the following information:
 
 > "The element 'Workflow' has invalid child element 'ProcessTriggers'. List of possible elements expected: 'XamlFileName, ImageFileName, Type, Subprocess, Category, Mode, LanguageCode, Scope, OnDemand, TriggerOnUpdateAttributeList, TriggerOnCreate, TriggerOnDelete, AsyncAutodelete, SyncWorkflowLogOnFailure, StateCode, StatusCode, CreateStage, UpdateStage, DeleteStage, Rank, processorder, processroleassignment, RunAs, SdkMessageId, UniqueName, IsTransacted, IntroducedVersion, IsCustomizable, RendererObjectTypeCode, BusinessProcessType, FormId, PrimaryEntity'."
 
-The textbox also includes extra details such as the name of a Business Process Flow process. If you find the name of this process, you can reference it when following the workaround included in the [Resolution](#resolution) section of this article.
+The textbox also includes extra details such as the name of a Business Process Flow process. If you find the name of this process, you can reference it when following the workaround included in the [Resolution](#resolution) section of this article.
 
 ## Cause
 
-If you export a standard Business Process Flow process and try to import it, you may meet this error. Microsoft is aware of an issue that can cause this error to occur and is planning to release a fix.
+If you export a standard Business Process Flow process and try to import it, you may meet this error. Microsoft is aware of an issue that can cause this error to occur and is planning to release a fix.
 
 ## Resolution
 
-You can work around this issue by adding the missing \<PrimaryEntity> node that is expected:
+You can work around this issue by adding the missing \<PrimaryEntity> node that is expected:
 
 1. Extract the contents of the solution .zip file you're trying to import.
 2. Open the customizations.xml file in a text editor.
@@ -60,7 +60,7 @@ You can work around this issue by adding the missing \<PrimaryEntity> node that
     <Workflow WorkflowId="{919e14d1-6489-4852-abd0-a63a6ecaac5d}" Name="Lead to Opportunity Sales Process" Description="This is the default process flow to work on a lead and convert it to an opportunity." unmodified="1">
      **<PrimaryEntity>lead</PrimaryEntity>**  
     <ProcessTriggers />
-        </Workflow>
+        </Workflow>
     ```
 
     > [!NOTE]

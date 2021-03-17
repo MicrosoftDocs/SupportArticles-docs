@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4486472
 
 When using Dynamics 365 for phones and tablets, you receive the following message:
 
-> "We can't find any apps for your role. To check for recently-added apps, select Refresh.  
+> "We can't find any apps for your role. To check for recently-added apps, select Refresh.  
 If you can't find your app, change your search criteria and try again."
 
 ## Cause
@@ -29,13 +29,13 @@ If you can't find your app, change your search criteria and try again."
 
 **Resolution 1**: Verify user has access to at least one Unified Interface app.
 
-1. Access the Dynamics 365 web application as a user with the System Administrator security role.
+1. Access the Dynamics 365 web application as a user with the System Administrator security role.
 2. Navigate to **Settings** and then select **My Apps**.
 
     > [!NOTE]
     > If you don't see My Apps, you can add **/apps** to the end of your URL:
     > `https://<your_organization_URL>/apps`  
-    > Example: `https://contoso.crm.dynamics.com/apps`
+    > Example: `https://contoso.crm.dynamics.com/apps`
 
 3. Locate the app you want the user to use and select the ellipses (**...**) option and then select **Manage Roles**.
 
@@ -48,7 +48,7 @@ For more information, see [Manage access to apps by using security roles](/dynam
 
 **Resolution 2**: Verify the user's role includes the Model-driven App privilege
 
-1. Access the Dynamics 365 web application as a user with the System Administrator security role.
+1. Access the Dynamics 365 web application as a user with the System Administrator security role.
 2. Navigate to **Settings,** select **Security**, and then select **Security Roles**.
 3. Open the role assigned to the user.
 4. Select the **Customization** tab and locate the **Model-driven App** privilege. Verify the role includes at least **Read** access for this privilege.

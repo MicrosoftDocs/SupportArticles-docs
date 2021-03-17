@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4515139
 
 ## Flow Runtime errors
 
-- If your Flow appears to run slowly, it's likely being throttled. For more information, see [Limits for automated, scheduled, and instant flows](/power-automate/limits-and-config#request-limits).
+- If your Flow appears to run slowly, it's likely being throttled. For more information, see [Limits for automated, scheduled, and instant flows](/power-automate/limits-and-config#request-limits).
 - If you're using the **Apply to Each** action, make sure you have concurrency enabled.
 - If you're using variables, be aware that variables exclusively lock and will slow down loops significantly.
 - If using a [Dynamics 365 trigger](/power-automate/connection-dynamics365#trigger-based-logic), consider using the [Common Data Service connector](/power-automate/connection-cds) instead. In rare cases, Dynamics 365 triggers can take up to 2 hours to fire.

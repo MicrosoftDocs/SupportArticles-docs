@@ -16,8 +16,8 @@ _Original KB number:_ &nbsp; 4552636
 
 You may receive this error when doing any of these actions on a flow that uses **premium** connectors:
 
-- Importing the flow
-- Enabling/disabling the flow
+- Importing the flow
+- Enabling/disabling the flow
 - Saving/Save as on the flow
 - Any other permanent modification to the flow
 
@@ -25,16 +25,16 @@ You may receive this error when doing any of these actions on a flow that uses *
 
 ## Cause
 
-This error means a Power Automate license is required for the current user to do the action (a Power Apps, Dynamics 365, or Office 365 license isn't sufficient).
+This error means a Power Automate license is required for the current user to do the action (a Power Apps, Dynamics 365, or Office 365 license isn't sufficient).
 
-Users who are shared a flow with premium connectors (not belonging to a **Per Flow** plan) will each need a **Per User** plan to edit or manually trigger the flow.
+Users who are shared a flow with premium connectors (not belonging to a **Per Flow** plan) will each need a **Per User** plan to edit or manually trigger the flow.
 
 If saving/modifying the flow was possible for the same user previously, it's possible that their license has expired.
 
 ## Resolution
 
-- Purchase a **Per User** plan or **Per Flow** plan for Power Automate
-- Instead, you can start a trial for the **Per User** plan lasting 90 days after which you'll require a paid plan to run/edit flows using premium connectors.
+- Purchase a **Per User** plan or **Per Flow** plan for Power Automate
+- Instead, you can start a trial for the **Per User** plan lasting 90 days after which you'll require a paid plan to run/edit flows using premium connectors.
 
 All these options (with more information) are available at [Power Automate pricing](https://flow.microsoft.com/pricing/).
 

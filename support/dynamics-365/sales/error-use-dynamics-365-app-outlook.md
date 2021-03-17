@@ -32,5 +32,5 @@ Verify your user's business unit is enabled.
 1. View the Organization Information section to identify the selected business unit of the user.
 1. Navigate to **Settings** -> **Security** again.
 1. Click **Business Units** and then change the view to **Inactive Business Units**.
-1. If you see the user's business unit as inactive, either enable it or update the user to be in a different business unit that is active.
+1. If you see the user's business unit as inactive, either enable it or update the user to be in a different business unit that is active.
 1. Try to open the Dynamics 365 App for Outlook again.

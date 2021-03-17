@@ -14,9 +14,9 @@ _Original KB number:_ &nbsp; 4533363
 
 ## Symptoms
 
-While creating a flow from blank or with a template that is using any trigger/action from OneDrive connector, if you try to sign in using office 365 account, you may receive the error:
+While creating a flow from blank or with a template that is using any trigger/action from OneDrive connector, if you try to sign in using office 365 account, you may receive the error:
 
-> Sorry, we can't sign you in here with your account.
+> Sorry, we can't sign you in here with your account.
 
 ## Resolution
 

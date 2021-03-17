@@ -22,7 +22,7 @@ If you select **Download Log file**, you see the following error:
 
 > The solution installation or removal failed due to the installation or removal of another solution at the same time. Please try again later.
 
-You may also see a reference to error code **-2147020463** or **80071151**.
+You may also see a reference to error code **-2147020463** or **80071151**.
 
 ## Cause
 

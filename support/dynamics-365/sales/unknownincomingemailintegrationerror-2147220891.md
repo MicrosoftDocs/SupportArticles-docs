@@ -22,7 +22,7 @@ When viewing the alerts section within a mailbox record in Dynamics 365, you see
 
 - > "An internal Microsoft Dynamics 365 error occurred while synchronizing appointments, contacts, and tasks for the mailbox "\<Mailbox Name>". The owner of the associated email server profile \<Profile Name> has been notified. The system will try again later.
     >
-    > **Email Server Error Code:**  Crm.80040265.ISV code aborted the operation."
+    > **Email Server Error Code:**  Crm.80040265.ISV code aborted the operation."
 
 ## Cause
 
@@ -34,7 +34,7 @@ If you see the second message listed in the [Symptoms](#symptoms) section, it's 
 
 ## Resolution
 
-Check to see if you have any custom plugins or workflows that run synchronously on the creation of the record type mentioned in the error (ex. email, appointment, contact, or task). If a plugin or workflow is causing an error during the creation of the record, Server-Side Synchronization can't create the record successfully. The steps below can help you identify if there are any workflows or plugins in your organization that run during creation of an email. The same steps can be used for other entities like appointment if it's the record type that is failing to be created:  
+Check to see if you have any custom plugins or workflows that run synchronously on the creation of the record type mentioned in the error (ex. email, appointment, contact, or task). If a plugin or workflow is causing an error during the creation of the record, Server-Side Synchronization can't create the record successfully. The steps below can help you identify if there are any workflows or plugins in your organization that run during creation of an email. The same steps can be used for other entities like appointment if it's the record type that is failing to be created:  
 
 ### Workflow
 
@@ -44,7 +44,7 @@ Check to see if you have any custom plugins or workflows that run synchronously 
 
     Instead, you can use the filtering options in the grid to filter on **Category = Workflow** and **Primary Entity = Email**
 
-4. Open each workflow you find that meets the criteria above (if any).
+4. Open each workflow you find that meets the criteria above (if any).
 5. If the **Start when** options have the **Record is created** option is selected, and the **Run this workflow in the background (recommended)** option isn't selected, this workflow could potentially be the cause.
 6. Select the **Process Sessions** section on the left side of the page and look for any failures related to the email that wasn't created successfully.
 

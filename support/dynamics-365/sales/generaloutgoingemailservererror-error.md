@@ -1,6 +1,6 @@
 ---
 title: GeneralOutgoingEmailServerError error
-description: Email Server Error Code GeneralOutgoingEmailServerError occurs in a Microsoft Dynamics 365 mailbox record. Provides a resolution.
+description: Email Server Error Code GeneralOutgoingEmailServerError occurs in a Microsoft Dynamics 365 mailbox record. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 
@@ -14,10 +14,10 @@ _Original KB number:_ &nbsp; 4471979
 
 ## Symptoms
 
-The following alert appears within a Microsoft Dynamics 365 mailbox record:
+The following alert appears within a Microsoft Dynamics 365 mailbox record:
 
-> An unexpected error occurred while sending the email message "[Email Subject]". Mailbox [Mailbox Name] didn't synchronize. The owner of the associated email server profile [Profile Name] has been notified.  
-Email Server Error Code: GeneralOutgoingEmailServerError
+> An unexpected error occurred while sending the email message "[Email Subject]". Mailbox [Mailbox Name] didn't synchronize. The owner of the associated email server profile [Profile Name] has been notified.  
+Email Server Error Code: GeneralOutgoingEmailServerError
 
 ## Cause
 
@@ -25,4 +25,4 @@ This message may appear if Server-Side Synchronization attempted to send an emai
 
 ## Resolution
 
-If this message does not continue to occur, it can be ignored. If this message continues to be logged and you have emails that won't send successfully, you can contact Microsoft Support for assistance. There may be an issue with your email server so you can first verify you can send and receive email successfully with your email service.
+If this message does not continue to occur, it can be ignored. If this message continues to be logged and you have emails that won't send successfully, you can contact Microsoft Support for assistance. There may be an issue with your email server so you can first verify you can send and receive email successfully with your email service.

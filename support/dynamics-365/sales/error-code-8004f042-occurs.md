@@ -21,12 +21,12 @@ Error code 8004F042."
 
 If you download the log file and open it in Excel, you see more details such as the following message:
 
-> "Failure 0x8004F042  
+> "Failure 0x8004F042  
 Solution manifest import: FAILURE: Solution patch with version [version number] already exists. Updating patch is not supported."
 
 ## Cause
 
-Error code 8004F042 indicates you're trying to import a patch that is already installed with the same version.
+Error code 8004F042 indicates you're trying to import a patch that is already installed with the same version.
 
 ## Resolution
 

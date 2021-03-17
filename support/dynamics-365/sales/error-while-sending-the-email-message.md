@@ -16,18 +16,18 @@ _Original KB number:_ &nbsp; 4092733
 
 When you attempt to test and enable a mailbox in Microsoft Dynamics 365, you receive the following error:
 
-> "An unknown error occurred while sending the email message "Your mailbox is now connected to Dynamics 365". Mailbox \<Mailbox Name> didn't synchronize. The owner of the associated email server profile \<Profile Name> has been notified."
+> "An unknown error occurred while sending the email message "Your mailbox is now connected to Dynamics 365". Mailbox \<Mailbox Name> didn't synchronize. The owner of the associated email server profile \<Profile Name> has been notified."
 
 If you select the **Details** section, you may also see more details such as the following text:
 
 > "Error : System.Net.Mail.SmtpException: Syntax error, command unrecognized. The server response was:  
-   at System.Net.Mail.SmtpConnection.ConnectAndHandshakeAsyncResult.End(IAsyncResult result)  
-   at System.Net.Mail.SmtpTransport.EndGetConnection(IAsyncResult result)  
-   at System.Net.Mail.SmtpClient.ConnectCallback(IAsyncResult result)"
+   at System.Net.Mail.SmtpConnection.ConnectAndHandshakeAsyncResult.End(IAsyncResult result)  
+   at System.Net.Mail.SmtpTransport.EndGetConnection(IAsyncResult result)  
+   at System.Net.Mail.SmtpClient.ConnectCallback(IAsyncResult result)"
 
 ## Cause
 
-This error can occur if the Outgoing Port value within the Advanced section of the email server profile isn't correct.
+This error can occur if the Outgoing Port value within the Advanced section of the email server profile isn't correct.
 
 ## Resolution
 
@@ -43,7 +43,7 @@ To fix this issue, follow these steps:
 4. Correct the **Outgoing Port** value and then select **Save**.
 
     > [!NOTE]
-    > Refer to the documentation from your email provider for the correct ports to use when connecting to the SMTP service. For [Gmail](https://support.google.com/mail/answer/7104828) the port is 587.
+    > Refer to the documentation from your email provider for the correct ports to use when connecting to the SMTP service. For [Gmail](https://support.google.com/mail/answer/7104828) the port is 587.
 
 5. Select **Mailboxes** and then select the mailbox that received the error.
 6. Select the **Test & Enable Mailboxes** button.

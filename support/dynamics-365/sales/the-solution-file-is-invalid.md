@@ -33,4 +33,4 @@ If you attempt to import a solution file that doesn't contain these files, this 
 
 Verify the .zip file you're trying to import contains the files mentioned in the [cause](#cause) section and then attempt to import the solution again.
 
-Example: If you had extracted the solution .zip file and made manual changes to customizations.xml but rezipped just that file, you would receive this error. You need to select all of the files that were in the .zip file and choose to compress them to a zipped folder before trying to reimport them.
+Example: If you had extracted the solution .zip file and made manual changes to customizations.xml but rezipped just that file, you would receive this error. You need to select all of the files that were in the .zip file and choose to compress them to a zipped folder before trying to reimport them.

@@ -43,19 +43,19 @@ Source File: Not available
 Line Number: Not available  
 Request URL: `https://CrmOrgName.dynamics.com/AppWebServices/Workflow.asmx`  
 Stack Trace Info: [ArgumentException: An item with the same key has already been added.]  
-   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)  
-   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)  
-   at Microsoft.Crm.Application.Components.UI.OptionGroup.AddItem(String text, String value, ListDictionary expandos)  
-   at Microsoft.Crm.Application.Controls.CreateStepControl.RenderEntityList(HtmlTextWriter writer, StepControlType stepType, String onChange)  
-   at Microsoft.Crm.Application.Controls.StepBaseControl.RenderEntity(HtmlTextWriter writer, StepControlType stepType, String onChange)  
-   at Microsoft.Crm.Application.Controls.CreateStepControl.Render(HtmlTextWriter writer)  
-   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)  
-   at Microsoft.Crm.Application.Controls.CompositeStepBaseControl.RenderChildSteps(HtmlTextWriter writer)  
-   at Microsoft.Crm.Application.Controls.WorkflowStepControl.Render(HtmlTextWriter writer)  
-   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)  
-   at Microsoft.Crm.Application.WebServices.WorkflowWebService.RenderWorkflow(WorkflowStep workflowStep, Boolean bSave, String parentStepId, String rendererTypeCode)  
-   at Microsoft.Crm.Application.WebServices.WorkflowWebService.RenderWorkflow(WorkflowStep workflowStep, String parentStepId, String rendererTypeCode)  
-   at Microsoft.Crm.Application.WebServices.WorkflowWebService.AddCreateEntityStep(String parentId, String entityId, String descriptionXml, String parentStepId, String rendererTypeCode)  
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)  
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)  
+   at Microsoft.Crm.Application.Components.UI.OptionGroup.AddItem(String text, String value, ListDictionary expandos)  
+   at Microsoft.Crm.Application.Controls.CreateStepControl.RenderEntityList(HtmlTextWriter writer, StepControlType stepType, String onChange)  
+   at Microsoft.Crm.Application.Controls.StepBaseControl.RenderEntity(HtmlTextWriter writer, StepControlType stepType, String onChange)  
+   at Microsoft.Crm.Application.Controls.CreateStepControl.Render(HtmlTextWriter writer)  
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)  
+   at Microsoft.Crm.Application.Controls.CompositeStepBaseControl.RenderChildSteps(HtmlTextWriter writer)  
+   at Microsoft.Crm.Application.Controls.WorkflowStepControl.Render(HtmlTextWriter writer)  
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)  
+   at Microsoft.Crm.Application.WebServices.WorkflowWebService.RenderWorkflow(WorkflowStep workflowStep, Boolean bSave, String parentStepId, String rendererTypeCode)  
+   at Microsoft.Crm.Application.WebServices.WorkflowWebService.RenderWorkflow(WorkflowStep workflowStep, String parentStepId, String rendererTypeCode)  
+   at Microsoft.Crm.Application.WebServices.WorkflowWebService.AddCreateEntityStep(String parentId, String entityId, String descriptionXml, String parentStepId, String rendererTypeCode)  
 
 Additionally, you may also see the following message.
 > ***MSCRM:ASSERTEX*** - ENTITY Singular LOCALIZED NAME NOT FOUND: logical name = 'msdyn_orginsightsuserdashboarddefinition' LANGUAGE ID = 1033
@@ -66,7 +66,7 @@ One possible cause to this error is with an Entity naming convention within Cust
 
 > ***MSCRM:ASSERTEX*** - ENTITY Singular LOCALIZED NAME NOT FOUND: logical name = '**msdyn_orginsightsuserdashboarddefinition**' LANGUAGE ID = 1033
 
-The problem stays with the Entity that contains the attribute `msdyn_orginsightsuserdashboarddefinition`. You'll need to look for this attribute in the Microsoft Dynamics 365 customizations.
+The problem stays with the Entity that contains the attribute `msdyn_orginsightsuserdashboarddefinition`. You'll need to look for this attribute in the Microsoft Dynamics 365 customizations.
 
 The problematic entity is easy to find within customizations as it's normally listed at the top of the entities with no name listed. See the below screenshot:
 
@@ -85,4 +85,4 @@ To resolve this error, you'll need to give the entity you located in the [cause]
     :::image type="content" source="media/an-item-with-same-key-has-been-added/entity-definition.jpg" alt-text="give the entity a Display Name and a Plural Name.":::
 
 6. After naming the entity, select **Save** and then select **Publish**.
-7. Finally, go back to your workflow editor and attempt to create a new workflow or edit an existing. It will now succeed.
+7. Finally, go back to your workflow editor and attempt to create a new workflow or edit an existing. It will now succeed.

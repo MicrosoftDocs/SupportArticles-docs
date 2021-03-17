@@ -33,12 +33,12 @@ First try clearing the browser cache in Internet Explorer:
 
     - [View and delete your browsing history in Internet Explorer](/topic/view-and-delete-your-browsing-history-in-internet-explorer-098ffe52-5ac9-a449-c296-c735c32c8678)
 
-2. Close all Internet Explorer and Outlook Desktop windows and make sure through Task Manager there are no remaining Internet Explorer or Outlook processes running.
+2. Close all Internet Explorer and Outlook Desktop windows and make sure through Task Manager there are no remaining Internet Explorer or Outlook processes running.
 
 If this issue only appears in Outlook desktop and clearing the cache via Internet Options doesn't help, try clearing it via F12 chooser (not applicable for Windows 7):
 
 1. Open Dynamics app in Outlook desktop
-2. Open **IEChooser.exe** in `%WindowsFolder%\System32\F12` (example: `C:\Windows\System32\F12`)
+2. Open **IEChooser.exe** in `%WindowsFolder%\System32\F12` (example: `C:\Windows\System32\F12`)
 3. Select **Dynamics 365**  
 4. Select the **Network** tab and then select the **Clear cache** button.
 

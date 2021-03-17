@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 4345669
 2. Look for any errors and review the message that is displayed.  
 
     > [!NOTE]
-    > If no errors appear, navigate to **Settings**, **Email Configuration**, and then **Email Configuration Settings**. In the **Configure alerts** section, verify the **Error** option is selected. If this was not already selected, enable this option and select **OK**. Then select the **Test & Enable Mailbox** button again and check for any errors. When performing the Test & Enable action, also make sure to select the checkbox that appears in the dialog.
+    > If no errors appear, navigate to **Settings**, **Email Configuration**, and then **Email Configuration Settings**. In the **Configure alerts** section, verify the **Error** option is selected. If this was not already selected, enable this option and select **OK**. Then select the **Test & Enable Mailbox** button again and check for any errors. When performing the Test & Enable action, also make sure to select the checkbox that appears in the dialog.
 
 3. Select the **Learn more** link if it appears. If there's an article designed to help with that specific error, this link will direct you to it.
 

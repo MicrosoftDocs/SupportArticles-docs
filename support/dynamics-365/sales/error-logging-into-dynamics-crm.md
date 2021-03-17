@@ -21,32 +21,32 @@ When logging into Microsoft Dynamics CRM, the following error is presented to th
 
 Enabling platform tracing and reviewing the trace logs after reproducing the error, administrators will see the following logged.
 
-> Process: w3wp |Organization:00000000-0000-0000-0000-000000000000 |Thread:   19 |Category: Application |User: 00000000-0000-0000-0000-000000000000 |Level: Error |ReqId: \<ReqId> |ActivityId: \<ActivityId> | HttpApplication.RecordError  ilOffset = 0x41  
-    at HttpApplication.RecordError(Exception error)  ilOffset = 0x41  
-    at PipelineStepManager.ResumeSteps(Exception error)  ilOffset = 0xEE  
-    at HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)  ilOffset = 0x31  
-    at HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)  ilOffset = 0xB0  
-    at PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)  ilOffset = 0x131  
-    at PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)  ilOffset = 0x0  
-    at UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)  ilOffset = 0xFFFFFFFF  
-    at UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)  ilOffset = 0xFFFFFFFF  
-    at PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)  ilOffset = 0x1E7  
-    at PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)  ilOffset = 0x0  
+> Process: w3wp |Organization:00000000-0000-0000-0000-000000000000 |Thread:   19 |Category: Application |User: 00000000-0000-0000-0000-000000000000 |Level: Error |ReqId: \<ReqId> |ActivityId: \<ActivityId> | HttpApplication.RecordError  ilOffset = 0x41  
+    at HttpApplication.RecordError(Exception error)  ilOffset = 0x41  
+    at PipelineStepManager.ResumeSteps(Exception error)  ilOffset = 0xEE  
+    at HttpApplication.BeginProcessRequestNotification(HttpContext context, AsyncCallback cb)  ilOffset = 0x31  
+    at HttpRuntime.ProcessRequestNotificationPrivate(IIS7WorkerRequest wr, HttpContext context)  ilOffset = 0xB0  
+    at PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)  ilOffset = 0x131  
+    at PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)  ilOffset = 0x0  
+    at UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)  ilOffset = 0xFFFFFFFF  
+    at UnsafeIISMethods.MgdIndicateCompletion(IntPtr pHandler, RequestNotificationStatus& notificationStatus)  ilOffset = 0xFFFFFFFF  
+    at PipelineRuntime.ProcessRequestNotificationHelper(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)  ilOffset = 0x1E7  
+    at PipelineRuntime.ProcessRequestNotification(IntPtr rootedObjectsPointer, IntPtr nativeRequestContext, IntPtr moduleData, Int32 flags)  ilOffset = 0x0  
 > \>Request `https://ServerName.domain.com/CrmOrganizationName/default.aspx` failed with exception System.NullReferenceException: Object reference not set to an instance of an object.  
-   at Microsoft.Crm.Application.Utility.Util.GetConfigurableThemeStyleParameters()  
-   at Microsoft.Crm.Application.Utility.Util.GetConfigurableThemeStyleSheetUrl()  
-   at Microsoft.Crm.Controls.Header..ctor(Boolean isControlHeader)  
-   at Microsoft.Crm.Controls.BasicHeader..ctor()  
-   at Microsoft.Crm.Application.Controls.AppHeader..ctor()  
-   at ASP.default_aspx.__BuildControlcrmHeader()  
-   at ASP.default_aspx.__BuildControlTree(default_aspx __ctrl)  
-   at ASP.default_aspx.FrameworkInitialize()  
-   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)  
-   at System.Web.UI.Page.ProcessRequest()  
-   at System.Web.UI.Page.ProcessRequest(HttpContext context)  
-   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()  
-   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)  
-   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+   at Microsoft.Crm.Application.Utility.Util.GetConfigurableThemeStyleParameters()  
+   at Microsoft.Crm.Application.Utility.Util.GetConfigurableThemeStyleSheetUrl()  
+   at Microsoft.Crm.Controls.Header..ctor(Boolean isControlHeader)  
+   at Microsoft.Crm.Controls.BasicHeader..ctor()  
+   at Microsoft.Crm.Application.Controls.AppHeader..ctor()  
+   at ASP.default_aspx.__BuildControlcrmHeader()  
+   at ASP.default_aspx.__BuildControlTree(default_aspx __ctrl)  
+   at ASP.default_aspx.FrameworkInitialize()  
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)  
+   at System.Web.UI.Page.ProcessRequest()  
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)  
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()  
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)  
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
 
 ## Cause
 
@@ -69,40 +69,40 @@ To resolve the error, SQL Server administrators must update the `OrganizationBas
 The following query will update the `OrganizationBase` table with the default out of the box theme data.
 
 ```sql
-Update OrganizationBase set DefaultThemeData = 
+Update OrganizationBase set DefaultThemeData = 
 '<theme themeId="f499443d-2082-4938-8842-e7ee62de9a23" updateTimeStamp="636054720539124867">
- <globallinkcolor>#1160B7</globallinkcolor>
- <selectedlinkeffect>#B1D6F0</selectedlinkeffect>
- <hoverlinkeffect>#D7EBF9</hoverlinkeffect>
- <navbarbackgroundcolor>#002050</navbarbackgroundcolor>
- <navbarshelfcolor>#DFE2E8</navbarshelfcolor>
- <headercolor>#1160B7</headercolor>
- <controlshade>#F3F1F1</controlshade>
- <controlborder>#CCCCCC</controlborder>
- <processcontrolcolor>#D24726</processcontrolcolor>
- <defaultentitycolor>#001CA5</defaultentitycolor>
- <defaultcustomentitycolor>#006551</defaultcustomentitycolor>
- <backgroundcolor>#FFFFFF</backgroundcolor>
- <logoid/>
- <logotooltip>Microsoft Dynamics CRM</logotooltip>
+ <globallinkcolor>#1160B7</globallinkcolor>
+ <selectedlinkeffect>#B1D6F0</selectedlinkeffect>
+ <hoverlinkeffect>#D7EBF9</hoverlinkeffect>
+ <navbarbackgroundcolor>#002050</navbarbackgroundcolor>
+ <navbarshelfcolor>#DFE2E8</navbarshelfcolor>
+ <headercolor>#1160B7</headercolor>
+ <controlshade>#F3F1F1</controlshade>
+ <controlborder>#CCCCCC</controlborder>
+ <processcontrolcolor>#D24726</processcontrolcolor>
+ <defaultentitycolor>#001CA5</defaultentitycolor>
+ <defaultcustomentitycolor>#006551</defaultcustomentitycolor>
+ <backgroundcolor>#FFFFFF</backgroundcolor>
+ <logoid/>
+ <logotooltip>Microsoft Dynamics CRM</logotooltip>
 </theme>'
 
 Update OrganizationBase set HighContrastThemeData =
 '<theme themeId="f499443d-2082-4938-8842-e7ee62de9a23" updateTimeStamp="636054720539124867">
- <globallinkcolor>#1160B7</globallinkcolor>
- <selectedlinkeffect>#B1D6F0</selectedlinkeffect>
- <hoverlinkeffect>#D7EBF9</hoverlinkeffect>
- <navbarbackgroundcolor>#002050</navbarbackgroundcolor>
- <navbarshelfcolor>#DFE2E8</navbarshelfcolor>
- <headercolor>#1160B7</headercolor>
- <controlshade>#F3F1F1</controlshade>
- <controlborder>#CCCCCC</controlborder>
- <processcontrolcolor>#D24726</processcontrolcolor>
- <defaultentitycolor>#001CA5</defaultentitycolor>
- <defaultcustomentitycolor>#006551</defaultcustomentitycolor>
- <backgroundcolor>#FFFFFF</backgroundcolor>
- <logoid/>
- <logotooltip>Microsoft Dynamics CRM</logotooltip>
+ <globallinkcolor>#1160B7</globallinkcolor>
+ <selectedlinkeffect>#B1D6F0</selectedlinkeffect>
+ <hoverlinkeffect>#D7EBF9</hoverlinkeffect>
+ <navbarbackgroundcolor>#002050</navbarbackgroundcolor>
+ <navbarshelfcolor>#DFE2E8</navbarshelfcolor>
+ <headercolor>#1160B7</headercolor>
+ <controlshade>#F3F1F1</controlshade>
+ <controlborder>#CCCCCC</controlborder>
+ <processcontrolcolor>#D24726</processcontrolcolor>
+ <defaultentitycolor>#001CA5</defaultentitycolor>
+ <defaultcustomentitycolor>#006551</defaultcustomentitycolor>
+ <backgroundcolor>#FFFFFF</backgroundcolor>
+ <logoid/>
+ <logotooltip>Microsoft Dynamics CRM</logotooltip>
 </theme>'
 ```
 

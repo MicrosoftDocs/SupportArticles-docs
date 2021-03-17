@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4053783
 
 The following alert is logged within a mailbox record in Microsoft Dynamics 365:
 
-> "An error occurred while creating the incoming email \<Email Subject> in Microsoft Dynamics 365 for the mailbox \<Mailbox Name>."
+> "An error occurred while creating the incoming email \<Email Subject> in Microsoft Dynamics 365 for the mailbox \<Mailbox Name>."
 
 If you select **View Details** within the alert, you see the following additional information:
 
@@ -24,7 +24,7 @@ If you select **View Details** within the alert, you see the following additiona
 
 or:
 
-> "Email Server Error Code: InvalidForwardMailItem"
+> "Email Server Error Code: InvalidForwardMailItem"
 
 ## Cause
 

@@ -27,7 +27,7 @@ The `RunOnce` registry key exists.
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756/).
 
-Check the crm40setup.log to identify the registry key that causes the issue. The crm40setup.log is located in %appdata%\Microsoft\MSCRM\Logs. Once you have found the registry key, you can delete the registry key with the following steps:
+Check the crm40setup.log to identify the registry key that causes the issue. The crm40setup.log is located in %appdata%\Microsoft\MSCRM\Logs. Once you have found the registry key, you can delete the registry key with the following steps:
 
 1. Select **Start**, select **Run** and type *regedit*, and then select **OK**.
 2. Locate the registry key listed in the Setup Log. For example, the registry key is `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce`.

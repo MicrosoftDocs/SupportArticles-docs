@@ -3,7 +3,7 @@
   items:
   - name: Access Issues
     items:
-    - name: Startup issues in Web Authoring
+    - name: Startup issues in Web Authoring
       href: troubleshoot-startup-issues-in-powerapps-web-authoring.md
   - name: Connections
     items:

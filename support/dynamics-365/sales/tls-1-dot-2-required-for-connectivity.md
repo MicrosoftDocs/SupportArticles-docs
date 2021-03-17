@@ -35,7 +35,7 @@ All [supported browsers](/previous-versions/dynamicscrm-2016/administering-dynam
 
 For help identify if your browser supports the TLS 1.2 requirement, go to this [validation test page](https://tls1-2validationtest.crm10.dynamics.com/TLSvalidation.html).
 
-### For developer tools provided by Microsoft
+### For developer tools provided by Microsoft
 
 See [What's new for Customer Engagement developer documentation in version 9.0](https://cloudblogs.microsoft.com/dynamics365/it/2017/11/01/whats-new-for-customer-engagement-developer-documentation-in-version-9-0/) to get the latest on our developer tools documentation. Update to the [latest version of tools](/dynamics365/customerengagement/on-premises/developer/download-tools-nuget), used in development, from NuGet. Examples of developer tools include the Plugin Registration Tool and Configuration Migration Tool. Version 9.0 of these tools are backward compatible and can be used for Dynamics 365 (online) version 8.2 Government.
 
@@ -48,7 +48,7 @@ Recompile your client applications using .NET framework 4.6.2 or higher. If your
 When you are running your project/solution in Visual Studio 2015 in debug mode, there is a known issue where you may not be able to connect to Dynamics 365 (online) version 9.x or Dynamics 365 (online) version 8.2 Government. This happens regardless of whether you are using a Target Framework of 4.6.2 or higher. This can occur because the Visual Studio hosting process is compiled against .NET 4.5 which means by default it doesn't support TLS 1.2. You can disable the Visual Studio hosting process as a workaround. Right-click on the name of your project in Visual Studio and then click Properties. On the **Debug** tab, you can uncheck the **Enable the Visual Studio hosting process** option.
 
 > [!NOTE]
-> This only impacts the debug experience in Visual Studio 2015. This doesn't impact the binaries or executable that's built. The same issue doesn't occur in Visual Studio 2017.
+> This only impacts the debug experience in Visual Studio 2015. This doesn't impact the binaries or executable that's built. The same issue doesn't occur in Visual Studio 2017.
 
 ### One important note for .NET based apps
 
@@ -111,7 +111,7 @@ Dynamics 365 (online) version 9.x
 
 ## Example errors
 
-Below are some potential connectivity errors  you might encounter when non-TLS 1.2 security protocol is used:
+Below are some potential connectivity errors  you might encounter when non-TLS 1.2 security protocol is used:
 
 ### Browser error
 
@@ -120,43 +120,43 @@ Below are some potential connectivity errors  you might encounter when non-TLS 
 
 ### Connector error
 
-> "Microsoft.Xrm.Tooling.CrmConnectControl Information: 8 : Login Status in Connect is =  Validating connection to Microsoft Dynamics CRM...  
+> "Microsoft.Xrm.Tooling.CrmConnectControl Information: 8 : Login Status in Connect is =  Validating connection to Microsoft Dynamics CRM...  
 >
-> Microsoft.Xrm.Tooling.Connector.CrmServiceClient Error: 2 : ERROR REQUESTING Token FROM THE Authentication context  
+> Microsoft.Xrm.Tooling.Connector.CrmServiceClient Error: 2 : ERROR REQUESTING Token FROM THE Authentication context  
 >
-> Microsoft.Xrm.Tooling.Connector.CrmServiceClient Error: 2 : Source  : mscorlib  
+> Microsoft.Xrm.Tooling.Connector.CrmServiceClient Error: 2 : Source  : mscorlib  
 >
-> Method  : ThrowIfExceptional  
+> Method  : ThrowIfExceptional  
 >
-> Error  : **One or more errors occurred**.  
+> Error  : **One or more errors occurred**.  
 >
-> Stack Trace  : at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)  
+> Stack Trace  : at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)  
 >
-> at System.Threading.Tasks.Task\`1.GetResultCore(Boolean waitCompletionNotification)  
+> at System.Threading.Tasks.Task\`1.GetResultCore(Boolean waitCompletionNotification)  
 >
-> at System.Threading.Tasks.Task\`1.get_Result()  
+> at System.Threading.Tasks.Task\`1.get_Result()  
 >
-> at Microsoft.Xrm.Tooling.Connector.CrmWebSvc.ExecuteAuthenticateServiceProcess(Uri serviceUrl, ClientCredentials clientCredentials, UserIdentifier user, String clientId, Uri redirectUri, PromptBehavior promptBehavior, String tokenCachePath, Boolean isOnPrem, String authority, Uri& targetServiceUrl, AuthenticationContext& authContext, String& resource)  
+> at Microsoft.Xrm.Tooling.Connector.CrmWebSvc.ExecuteAuthenticateServiceProcess(Uri serviceUrl, ClientCredentials clientCredentials, UserIdentifier user, String clientId, Uri redirectUri, PromptBehavior promptBehavior, String tokenCachePath, Boolean isOnPrem, String authority, Uri& targetServiceUrl, AuthenticationContext& authContext, String& resource)  
 >
-> Inner Exception Level 1  :  
+> Inner Exception Level 1  :  
 >
-> Source  : Microsoft.IdentityModel.Clients.ActiveDirectory  
+> Source  : Microsoft.IdentityModel.Clients.ActiveDirectory  
 >
-> Method  : Close  
+> Method  : Close  
 >
-> Error  : **Object reference not set to an instance of an object**.  
+> Error  : **Object reference not set to an instance of an object**.  
 >
-> Stack Trace  : at Microsoft.IdentityModel.Clients.ActiveDirectory.HttpWebResponseWrapper.Close()  
+> Stack Trace  : at Microsoft.IdentityModel.Clients.ActiveDirectory.HttpWebResponseWrapper.Close()  
 >
-> at Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationParameters.\<CreateFromResourceUrlCommonAsync>d__0.MoveNext()  
+> at Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationParameters.\<CreateFromResourceUrlCommonAsync>d__0.MoveNext()  
 >
 > \--- End of stack trace from previous location where exception was thrown ---  
 >
-> at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+> at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
 >
-> at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+> at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
 >
-> at Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationParameters.\<CreateFromResourceUrlAsync>d__8.MoveNext()"
+> at Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationParameters.\<CreateFromResourceUrlAsync>d__8.MoveNext()"
 
 ### Developer tools error
 
@@ -174,7 +174,7 @@ Below are some potential connectivity errors  you might encounter when non-TLS 
 >
 > at System.ServiceModel.Description.MetadataExchangeClient.MetadataRetriever.Retrieve(TimeoutHelper timeoutHelper)
 >
-> Inner Exception Level 2 :  
+> Inner Exception Level 2 :  
 >
 > Source : System
 >

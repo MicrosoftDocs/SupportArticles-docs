@@ -21,7 +21,7 @@ Error code 8004801c"
 
 ## Cause
 
-This error can occur if you attempt to import a solution that is already installed but the Publisher has changed.
+This error can occur if you attempt to import a solution that is already installed but the Publisher has changed.
 
 ## Resolution
 

@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4481318
 After you select the **Test & Enable Mailbox** button in Dynamics 365, the tests fail and the following alert is logged:
 
 > "The email message "Your mailbox is now connected to Dynamics 365" cannot be sent because the mailbox [Mailbox Name] is deactivated or disabled for outgoing email.  
-**Email Server Error Code:**  MailboxDisabled"
+**Email Server Error Code:**  MailboxDisabled"
 
 ## Cause
 

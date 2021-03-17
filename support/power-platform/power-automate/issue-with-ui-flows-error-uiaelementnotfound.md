@@ -27,7 +27,7 @@ This error occurs if your UI flows has the property **Use coordinates** set to *
 
   :::image type="content" source="media/issue-with-ui-flows-error-uiaelementnotfound/show-more.jpg" alt-text="UIAElementNotFoundErrorLaunchApplication":::
 
-- Verify that the properties Screen width, Screen height, Screen scale matches the display settings in your PC (shown in next step).
+- Verify that the properties Screen width, Screen height, Screen scale matches the display settings in your PC (shown in next step).
 
   :::image type="content" source="media/issue-with-ui-flows-error-uiaelementnotfound/properties.jpg" alt-text="UIAElementNotFoundError LaunchApplication Show More":::
 

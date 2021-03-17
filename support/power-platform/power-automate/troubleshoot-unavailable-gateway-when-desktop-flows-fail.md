@@ -20,7 +20,7 @@ You are able to test your desktop flows locally, but they fail with a gateway er
 
 Go to the run summary page of the flow, and look at the error for the **desktop flows** step.
 
-**Unreachable gateway**, **The target gateway is not available**, and **Could not connect to UI flows running on your machine** are good candidates for this problem.
+**Unreachable gateway**, **The target gateway is not available**, and **Could not connect to UI flows running on your machine** are good candidates for this problem.
 
 :::image type="content" source="media/troubleshoot-unavailable-gateway-when-desktop-flows-fail/error-for-desktop-flows-step.png" alt-text="Failed run because of unavailable gateway":::
 

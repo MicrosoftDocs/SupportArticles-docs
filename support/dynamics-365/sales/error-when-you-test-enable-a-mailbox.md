@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4052824
 
 ## Symptoms
 
-When you attempt to Test and Enable a mailbox in Dynamics 365, the following alert is logged:
+When you attempt to Test and Enable a mailbox in Dynamics 365, the following alert is logged:
 
 > "Appointments, contacts, and tasks can't be synchronized for the mailbox \<Mailbox Name> because the mailbox user doesn't have sufficient permissions on this mailbox.
 >
@@ -24,11 +24,11 @@ If you select to view the details, the following extra details are shown:
 
 > "T:195  
 ActivityId: \<GUID>  
-\>Exception : Unhandled Exception: Microsoft.Crm.CrmSecurityException: SecLib::AccessCheckEx failed. Returned hr = -2147187962, ObjectID: \<GUID>, OwnerId: \<GUID>,  OwnerIdType: 8 and CallingUser: \<GUID>. ObjectTypeCode: 4120, objectBusinessUnitId: \<GUID>, AccessRights: WriteAccess     at Microsoft.Crm.BusinessEntities.SecurityLibrary.AccessCheckEx2(ExecutionContext context, SecurityPrincipal principal, SecurityPrincipal ownerPrincipal, Guid objectId, Int32 objectTypeCode, Guid objectBusinessUnitId, AccessRights rights)    at Microsoft.Crm.Asynchronous.EmailConnector.ExchangeSyncUtility.HasExchangeSyncIdMappingAccess(Guid userId, Int32 userIdTypeCode, IACTProviderContext orgContext)    at Microsoft.Crm.Asynchronous.EmailConnector.ExchangeSyncWorker.PerformPreMailboxSyncChecks()    at Microsoft.Crm.Asynchronous.EmailConnector.ExchangeS..."
+\>Exception : Unhandled Exception: Microsoft.Crm.CrmSecurityException: SecLib::AccessCheckEx failed. Returned hr = -2147187962, ObjectID: \<GUID>, OwnerId: \<GUID>,  OwnerIdType: 8 and CallingUser: \<GUID>. ObjectTypeCode: 4120, objectBusinessUnitId: \<GUID>, AccessRights: WriteAccess     at Microsoft.Crm.BusinessEntities.SecurityLibrary.AccessCheckEx2(ExecutionContext context, SecurityPrincipal principal, SecurityPrincipal ownerPrincipal, Guid objectId, Int32 objectTypeCode, Guid objectBusinessUnitId, AccessRights rights)    at Microsoft.Crm.Asynchronous.EmailConnector.ExchangeSyncUtility.HasExchangeSyncIdMappingAccess(Guid userId, Int32 userIdTypeCode, IACTProviderContext orgContext)    at Microsoft.Crm.Asynchronous.EmailConnector.ExchangeSyncWorker.PerformPreMailboxSyncChecks()    at Microsoft.Crm.Asynchronous.EmailConnector.ExchangeS..."
 
 ## Cause
 
-The Dynamics 365 user associated with the mailbox doesn't have sufficient privileges. It's often caused by the user not having a security role assigned or their security role is missing user level read or write access to the Mailbox entity.
+The Dynamics 365 user associated with the mailbox doesn't have sufficient privileges. It's often caused by the user not having a security role assigned or their security role is missing user level read or write access to the Mailbox entity.
 
 > [!IMPORTANT]
 > Verify the Owner of the mailbox record is the same as the User. Example: If the mailbox is a User mailbox for Paul Cannon, verify the Owner value within the mailbox record for Paul Cannon shows as Paul Cannon. If it's some other user, that user may not have access to this user's mailbox.

@@ -41,18 +41,18 @@ Uninstalling the Report Authoring Extension doesn't resolve the problem.
 
 ## Cause
 
-This issue occurs because of an issue in the Report Authoring Extension setup process. When the Report Authoring Extension is installed using the default installation path, the following assemblies are placed into `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE`, replacing any older versions of the files already in that location.
+This issue occurs because of an issue in the Report Authoring Extension setup process. When the Report Authoring Extension is installed using the default installation path, the following assemblies are placed into `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE`, replacing any older versions of the files already in that location.
 
 - Microsoft.IdentityModel.Clients.ActiveDirectory.dll - File Version: 2.22.x.x
 - Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll - File Version: 2.22.x.x
 
-Visual Studio attempts to load older versions of the files that don't exist, because the devenv.exe.config file contains a binding redirect entry that still points to version 2.16.0.0. The Report Authoring Extension setup process didn't update the binding redirect to point to version 2.22.0.0 when the files were replaced.
+Visual Studio attempts to load older versions of the files that don't exist, because the devenv.exe.config file contains a binding redirect entry that still points to version 2.16.0.0. The Report Authoring Extension setup process didn't update the binding redirect to point to version 2.22.0.0 when the files were replaced.
 
 ## Resolution
 
-To resolve this issue, follow these steps to change the binding redirects in the devenv.exe.config file to point to version 2.22.0.0:
+To resolve this issue, follow these steps to change the binding redirects in the devenv.exe.config file to point to version 2.22.0.0:
 
-- Edit these two files to change the value of the versions for the bindingRedirect entry to the correct version, 2.22.0.0:
+- Edit these two files to change the value of the versions for the bindingRedirect entry to the correct version, 2.22.0.0:
   - `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE` - devenv.exe.config
   - `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\PrivateAssemblies` - PreviewProcessingService.exe.config
 

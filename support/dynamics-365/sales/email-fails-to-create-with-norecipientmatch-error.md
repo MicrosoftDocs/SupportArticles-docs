@@ -36,7 +36,7 @@ When Microsoft Dynamics 365 evaluates an email in your mailbox, multiple conditi
 
 4. There is not a row in the EmailSearchBase table for the User or Queue mailbox that received the email.
 
-   When looking for matching User or Queue records, Microsoft Dynamics 365 queries a table called EmailSearchBase. This table should automatically have a row for the email address of every email enabled record including Users and Queues. On rare occasions this table may be missing a row, which can then cause Microsoft Dynamics 365 to not find a matching row when querying this table for Users or Queues that are on the email message.
+   When looking for matching User or Queue records, Microsoft Dynamics 365 queries a table called EmailSearchBase. This table should automatically have a row for the email address of every email enabled record including Users and Queues. On rare occasions this table may be missing a row, which can then cause Microsoft Dynamics 365 to not find a matching row when querying this table for Users or Queues that are on the email message.
 
    You can open a web browser and use the Microsoft Dynamics 365 Web API to verify if a row exists for the user or queue email address that received the email message. Use the following syntax:
 
@@ -76,4 +76,4 @@ Review the characteristics of the email and which option you have configured in 
 
     1. Open the User or Queue record in Microsoft Dynamics 365.
     2. Change the email address value to something else and select **Save**.
-    3. Then change the email address value back to the correct value and select **Save**. This will normally recreate the missing row.
+    3. Then change the email address value back to the correct value and select **Save**. This will normally recreate the missing row.

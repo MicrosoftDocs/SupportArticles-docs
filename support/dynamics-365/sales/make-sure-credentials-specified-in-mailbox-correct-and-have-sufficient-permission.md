@@ -14,13 +14,13 @@ _Original KB number:_ &nbsp; 4092797
 
 ## Symptoms
 
-When you attempt to test and enable a mailbox in Microsoft Dynamics 365, you encounter one of the following errors:
+When you attempt to test and enable a mailbox in Microsoft Dynamics 365, you encounter one of the following errors:
 
 > The email message "Your mailbox is now connected to Dynamics 365" cannot be sent. Make sure that the credentials specified in the mailbox \<Mailbox Name> are correct and have sufficient permissions for sending email. Then, enable the mailbox for email processing.  
-Email Server Error Code:**  InvalidOutgoingMailboxCredentials"
+Email Server Error Code:**  InvalidOutgoingMailboxCredentials"
 
-> Email cannot be received for the mailbox \<Mailbox Name>. Make sure that the credentials specified in the mailbox are correct and have sufficient permissions for receiving email. Then, enable the mailbox for email processing.  
-Email Server Error Code:  InvalidIncomingMailboxCredentials
+> Email cannot be received for the mailbox \<Mailbox Name>. Make sure that the credentials specified in the mailbox are correct and have sufficient permissions for receiving email. Then, enable the mailbox for email processing.  
+Email Server Error Code:  InvalidIncomingMailboxCredentials
 
 ## Cause
 
@@ -35,7 +35,7 @@ This error can occur if credentials are not provided in the mailbox record or if
     > [!NOTE]
     > You can also click the name of the mailbox within the error message. This appears as a hyperlink which will open the correct mailbox record.
 
-4. Within the **Credentials** section, verify the **Allow to Use Credentials for Email Processing** is set to **Yes** and the correct **User Name** and **Password** to access the corresponding mailbox are provided.
+4. Within the **Credentials** section, verify the **Allow to Use Credentials for Email Processing** is set to **Yes** and the correct **User Name** and **Password** to access the corresponding mailbox are provided.
 
 5. Select **Save** and then select **Test & Enable Mailbox**.
 6. After the tests complete, view the **Alerts** section if the results do not appear as Success.

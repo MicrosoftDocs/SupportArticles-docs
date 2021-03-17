@@ -26,7 +26,7 @@ If you select **Download Log File**, you see a message similar to the following:
 
 > Attribute [attribute name] is a Boolean, but a Picklist type was specified.
 
-You also see a reference to error code **80041A06**.
+You also see a reference to error code **80041A06**.
 
 ## Cause
 
