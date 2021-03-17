@@ -1,6 +1,6 @@
 ---
 title: An application pool exceeds time limits
-description: An application pool takes longer time and exceeds time limits during shutdown. This article provides resolutions for this problem.
+description: An application pool takes longer time and exceeds time limits during shutdown in Internet Information Services (IIS). This article provides resolutions for this problem.
 ms.date: 04/03/2020
 ms.prod-support-area-path: Health, diagnostic, and performance features
 ---
@@ -43,13 +43,13 @@ To resolve this problem, choose one of the following methods.
 
 ## Resolution 1: Increase the ShutdownTimeLimit value
 
-It's possible that the default `ShutdownTimeLimit` value was modified from its default value of 90 seconds. An application pool needs time to fully shut down, as any requests currently processing when the shutdown is initiated and needs to be given a certain amount of time to complete. Setting the `ShutdownTimeLimit` value too low may cause these erroneous event log warnings in high traffic web applications or in web applications that have requests that are expected to take some time to complete.
+It's possible that the default `ShutdownTimeLimit` value was modified from its default value of 90 seconds. An application pool needs time to fully shut down, as any requests currently processing when the shutdown is started and needs to be given a certain amount of time to complete. Setting the `ShutdownTimeLimit` value too low may cause these erroneous event log warnings in high traffic web applications or in web applications that have requests that are expected to take some time to complete.
 
 To modify the `ShutdownTimeLimit` value in IIS 7.0 and IIS 7.5, see [Process Model Settings for an Application Pool \<processModel>](/iis/configuration/system.applicationHost/applicationPools/add/processModel).
 
 ## Resolution 2: Troubleshoot why the application pool isn't shutting down in a timely manner
 
-As mentioned earlier, it's possible that something is going on in the application pool that's hindering it from being able to shut down in a timely manner. One of the more common problems that occur here is when existing HyperText Transfer Protocol (HTTP) requests aren't able to complete. To troubleshoot why the application pool is taking too long to shut down, capture a memory dump of the w3wp.exe process in which the application pool is running, when the shutdown problem is occurring.
+As mentioned earlier, it's possible that something is going on in the application pool. So it can't shut down in a timely manner. One of the more common problems is when existing HyperText Transfer Protocol (HTTP) requests aren't able to complete. To troubleshoot why the application pool is taking too long to shut down, capture a memory dump of the w3wp.exe process in which the application pool is running, when the shutdown problem is occurring.
 
 For more information on capturing memory dumps of IIS processes, see [Debug Diagnostics Tool v1.2 is now available](https://support.microsoft.com/help/2580960).
 

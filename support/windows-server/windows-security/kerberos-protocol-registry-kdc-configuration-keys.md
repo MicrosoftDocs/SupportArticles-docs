@@ -56,7 +56,7 @@ The registry entries that are listed in this section must be added to the follow
     This value indicates whether events are logged in the system event log. If this value is set to any non-zero value, all Kerberos-related events are logged in the system event log.
 
     > [!NOTE]
-    > The events logged may include false positives where the Kerberos client retries with different request flags that then succeed. Therefore, do not assume that you have a Kerberos problem when you see an event logged based on this setting. See [How to enable Kerberos event logging](https://support.microsoft.com/help/262177) for more information.
+    > The events logged may include false positives where the Kerberos client retries with different request flags that then succeed. Therefore, do not assume that you have a Kerberos problem when you see an event logged based on this setting. For more information, see [How to enable Kerberos event logging](https://support.microsoft.com/help/262177) .
 
 - Entry: MaxPacketSize
 
@@ -102,7 +102,7 @@ The registry entries that are listed in this section must be added to the follow
     This value indicates the default encryption type for pre-authentication.
     Default value is RC4 is 23 (decimal) or 0x17 (hexadecimal)
 
-    When you want to use AES, set the value to the following:
+    When you want to use AES, set the value to one of the following values:
 
     - aes256-cts-hmac-sha1-96: 18 or 0x12
     - aes128-cts-hmac-sha1-96: 17 or 0x11
@@ -114,14 +114,14 @@ The registry entries that are listed in this section must be added to the follow
   - Type: REG_DWORD
   - Default Value: 10 (minutes)
 
-    This is the time-out value that is used to invalidate a domain controller from a different site in the domain controller cache.
+    It's the time-out value that's used to invalidate a domain controller from a different site in the domain controller cache.
 
 - Entry: NearKdcTimeout
 
   - Type: REG_DWORD
   - Default Value: 30 (minutes)
 
-    This is the time-out value that is used to invalidate a domain controller in the same site in the domain controller cache.
+    It's the time-out value that's used to invalidate a domain controller in the same site in the domain controller cache.
 
 - Entry: StronglyEncryptDatagram
 
@@ -146,7 +146,7 @@ The registry entries that are listed in this section must be added to the follow
 
     |Macro Name|Value|Note|
     |---|---|---|
-    |DEB_ERROR|0x00000001|This is the default InfoLevel for checked builds. This produces error messages across components.|
+    |DEB_ERROR|0x00000001|It's the default InfoLevel for checked builds. It produces error messages across components.|
     |DEB_WARN|0x00000002|This macro generates warning messages across components. In some cases, these messages can be ignored.|
     |DEB_TRACE|0x00000004|This macro enables general tracing events.|
     |DEB_TRACE_API|0x00000008|This macro enables user API tracing events that are logged on entry and on exit to an externally exported function that is implemented through SSPI.|
@@ -278,7 +278,7 @@ The registry entries that are listed in this section must be added to the follow
   - Type: REG_DWORD
   - Default Value: 1465 (decimal, bytes)
 
-    This value is the maximum UDP packet size in TGS_REP and Authentication Service Replies (AS_REP) messages. If the packet size exceeds this value, the KDC returns a **KRB_ERR_RESPONSE_TOO_BIG** message that requests that the client switch to TCP.
+    This value is the maximum UDP packet size in TGS_REP and Authentication Service Replies (AS_REP) messages. If the packet size exceeds this value, the KDC returns a **KRB_ERR_RESPONSE_TOO_BIG** message that requests that the client switches to TCP.
 
     > [!NOTE]
     > Increasing **MaxDatagramReplySize** may increase the likelihood of Kerberos UDP packets being fragmented.
@@ -304,4 +304,4 @@ The registry entries that are listed in this section must be added to the follow
 
     This value indicates whether debug logging is on (1) or off (0).
 
-    If the value is set to **0x10000000** (hexadecimal) or **268435456** (decimal), specific file or line information will be returned in the **edata** field of **KERB_ERRORS** as **PKERB_EXT_ERROR** errors during a KDC processing failure.
+    If the value is set to **0x10000000** (hexadecimal) or **268435456** (decimal), specific file or line information will be returned in the **`edata`** field of **KERB_ERRORS** as **PKERB_EXT_ERROR** errors during a KDC processing failure.
