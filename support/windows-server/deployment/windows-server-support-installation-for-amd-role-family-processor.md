@@ -24,13 +24,15 @@ _Original KB number:_ &nbsp; 4514607
 
 This section provides Windows Server support with respect to total number of logical processors.
 
-- Windows Server 2019
+- Windows Server 2019 and Windows Server 2016  
 
-    Windows Server 2019 supports all AMD EPYC 7000 Series processors. For AMD EPYC 7002 and EPYC 7003 Series processors, use at least the refreshed media image released early October 2019.
+  Windows Server 2019 and Windows Server 2016 support AMD EPYC 7*xx*2-series CPUs. The following list identifies the minimum build versions that this support requires:
 
-- Windows Server 2016
-
-    Windows Server 2016 supports all AMD EPYC processors. The support is limited to a maximum of 255 logical processors. Windows Server 2016 doesn’t support the x2APIC mode. For AMD EPYC 7002 and 7003 series processors, disable the x2APIC mode and IOMMU in the computer's basic input/output system (BIOS). For dual processor servers using 64 core AMD EPYC 7002 or 64 core 7003 Series Processors SKUs, make sure SMT is also disabled in the BIOS.
+  - Windows Server 2019 servers that have X2APIC enabled: October 2019 Full Media Refresh (FMR) image build version 17763.737.
+  - Windows Server 2019 servers that have X2APIC disabled: November 2018 image build version 17763.107.
+  - Windows Server 2016: February 2018 FMR image build version 14393.1884.  
+  
+  Windows FMR images that meet the minimum build version requirements are available through the system hardware vendor or appropriate licensing channels.
 
 - Windows Server 2012 R2
 
