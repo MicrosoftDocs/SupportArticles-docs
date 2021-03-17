@@ -25,4 +25,4 @@ Verify that the value in the Identifier textbox matches the value for the identi
 
 ## More Information
 
-For a full list of Active Directory authentication and authorization error codes see [Azure AD Authentication and authorization error codes](azure/active-directory/develop/reference-aadsts-error-codes)
+For a full list of Active Directory authentication and authorization error codes see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
