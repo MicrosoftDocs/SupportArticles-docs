@@ -7,21 +7,21 @@ ms.reviewer: dahans
 ---
 # Enable support for TLS 1.2 in your environment for Azure AD TLS 1.1 and 1.0 deprecation
 
-We will soon remove support in Active Directory for the following services:
+We will soon remove support in Azure Active Directory for the following services:
 
 - TLS 1.1
 - TLS 1.0
 - 3DES cipher suite **(TLS_RSA_WITH_3DES_EDE_CBC_SHA)**
 
-These services are being deprecated for the following reasons:
+These protocols and ciphers are being deprecated for the following reasons:
 
 - To comply with the latest compliance standards for the [Federal Risk and Authorization Management Program (FedRAMP)](https://www.fedramp.gov/).
 - To improve security when users interact with our cloud services.
 
 The services will be deprecated on the following dates:
 
-- **TLS 1.0**, **1.1** and **3 DES Cipher suite** in U.S. government instances starting on **March 31, 2021**.
-- **TLS 1.0**, **1.1** and **3 DES Cipher suite** in public instances starting **June 30, 2021**.
+- **TLS 1.0**, **1.1** and **3DES Cipher suite** in U.S. government instances starting on **March 31, 2021**.
+- **TLS 1.0**, **1.1** and **3DES Cipher suite** in public instances starting **June 30, 2021**.
 
 ## Enable support for TLS 1.2 in your environment
 
@@ -100,7 +100,7 @@ To enable TLS 1.2, use the PowerShell script that's provided in [TLS 1.2 enforce
 
 ### Update and configure .NET Framework to support TLS 1.2
 
-Dependencies may include managed applications and Windows PowerShell scripts by using .NET Framework.
+Dependencies may include managed applications and Windows PowerShell scripts using .NET Framework.
 
 #### Install .NET updates to enable strong cryptography
 
