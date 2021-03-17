@@ -1,7 +1,7 @@
 ---
 title: Dial pad in missing in Teams
 description: Microsoft Teams users cannot make outbound calls to external phone numbers because of no dial pad in Teams.
-author: TobyTu
+author: helenclu
 ms.author: kellybos
 manager: dcscontentpm
 audience: ITPro 

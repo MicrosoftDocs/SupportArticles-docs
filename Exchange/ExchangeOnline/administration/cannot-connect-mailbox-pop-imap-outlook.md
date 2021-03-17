@@ -1,7 +1,7 @@
 ---
 title: Can't connect to Outlook with POP/IMAP and Modern authentication 
 description: Describes why you cannot connect to Outlook by using POP/IMAP and SMTP protocols, and Modern authentication.
-author: TobyTu
+author: helenclu
 ms.author: nriera
 manager: dcscontentpm
 audience: ITPro 

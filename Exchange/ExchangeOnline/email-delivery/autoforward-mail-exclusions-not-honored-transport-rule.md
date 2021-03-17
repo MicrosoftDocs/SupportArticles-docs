@@ -1,7 +1,7 @@
 ---
 title: A transport rule doesn't match if user mailbox rules automatically forward messages
 description: The transport rule doesn't honor the exclusions, and it rejects the messages. This article provides a resolution.
-author: TobyTu
+author: helenclu
 ms.author: arindamt
 manager: dcscontentpm
 audience: ITPro 

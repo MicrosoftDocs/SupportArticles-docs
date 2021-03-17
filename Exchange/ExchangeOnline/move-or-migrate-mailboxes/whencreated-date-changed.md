@@ -1,7 +1,7 @@
 ---
 title: The value of WhenCreated is changed in Exchange Online
 description: The user, mailbox, contact, or distribution group WhenCreated date is changed in Exchange Online
-author: TobyTu
+author: helenclu
 ms.author: namin
 manager: dcscontentpm
 audience: ITPro 

@@ -1,7 +1,7 @@
 ---
 title: OneDrive for Business stopped at "Setting up..." screen
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 2/20/2020
 audience: Admin
@@ -70,7 +70,7 @@ If the profile doesn't exist, perform a sync from the Active Directory. You can 
 
 ### Check Personal Site Capabilities
 
-Another reason for provisioning issues on OneDrive sites is the lack of enough capabilities to the site to be provisioned. This value can be found within the user's profile in SharePoint. For more information about the Personal Site Capabilities property and what each number represents, see the Microsoft support article [PersonalSiteCapabilities enumeration](https://docs.microsoft.com/previous-versions/office/sharepoint-csom/jj163383%28v%3Doffice.15%29).
+Another reason for provisioning issues on OneDrive sites is the lack of enough capabilities to the site to be provisioned. This value can be found within the user's profile in SharePoint. For more information about the Personal Site Capabilities property and what each number represents, see the Microsoft support article [PersonalSiteCapabilities enumeration](/previous-versions/office/sharepoint-csom/jj163383%28v%3Doffice.15%29).
 
 To perform this verification and/or change of the value follow the below steps:
 1.	Sign in to portal.office.com with an admin account.
@@ -109,13 +109,13 @@ If you have the [SharePoint Online Management Shell](https://www.microsoft.com/d
     ```
     Get-SPOSite -Site https://contoso-my.sharepoint.com/personal/user_contoso_onmicrosoft_com 
     ```
-    [Get-SPOSite documentation](https://docs.microsoft.com/powershell/module/sharepoint-online/get-sposite?view=sharepoint-ps )
+    [Get-SPOSite documentation](/powershell/module/sharepoint-online/get-sposite?view=sharepoint-ps&preserve-view=true)
 
 - To attempt to restore ownership, run the following PowerShell command: 
     ```
     Set-SPOSite -Identity https://contoso-my.sharepoint.com/personal/user_contoso_onmicrosoft_com -Owner user@contoso.onmicrosoft.com 
     ```
-    [Set-SPOSite documentation](https://docs.microsoft.com/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps)
+    [Set-SPOSite documentation](/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps&preserve-view=true)
 
 
 ### Run a self-diagnostics tool

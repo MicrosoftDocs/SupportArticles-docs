@@ -1,7 +1,7 @@
 ---
 title: Teams meetings are limited to 250
-ms.author: v-todmc
-author: McCoyBot
+ms.author: luche
+author: helenclu
 ms.date: 4/9/2020
 audience: ITPro
 ms.topic: article
