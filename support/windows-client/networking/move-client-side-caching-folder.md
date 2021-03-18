@@ -114,7 +114,7 @@ If the cache size is zero, you must change only the registry settings as given i
     1. Select **Continue a transfer in progress**.
     2. Select **No, I've copied files and settings to a CD, DVD, or other removable media**.
     3. Select **On an external hard disk or network location**.
-    4. Type the path of the Savedata.mig file that was created in step 4e of the procedure in the [Move the CSC folder](#move-the-csc-folder) section.
+    4. Type the path of the Savedata.mig file created in step 4e in the [Move the CSC folder](#move-the-csc-folder) section.
     5. Map the user account on the old computer to the corresponding user account on the new computer.
     6. Select **Next** > **Transfer**.
     7. Restart the computer.
