@@ -24,7 +24,7 @@ This article was written by [Yuval Sinay](https://mvp.microsoft.com/en-US/Public
 
 ## Symptoms
 
-In some organizations, there are regular backup procedures for Enterprise Windows Certificate Authority. If there is server problem (software/hardware), there may need to reinstall the Enterprise Windows Certificate Authority. Before you can reinstall the Enterprise Windows Certificate Authority, you may need to delete manually objects and data that belong to the original Enterprise Windows and reside in the Windows Active Directory.
+In some organizations, there are regular backup procedures for Enterprise Windows Certificate Authority. If there's a server problem (software/hardware), you may need to reinstall the Enterprise Windows Certificate Authority. Before you can reinstall the Enterprise Windows Certificate Authority, you may need to manually delete objects and data that belong to the original Enterprise Windows and reside in the Windows Active Directory.
 
 ## Cause
 

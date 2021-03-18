@@ -48,7 +48,7 @@ Proxy Auto Configuration (PAC) file settings can also be manually configured in 
 
 ### Proxy/Firewall client software
 
-Proxy/Firewall client software is specific to the brand of proxy server that you use. Microsoft Forefront Threat Management Gateway (TMG) 2010 is an example of a proxy server that can use client software to control proxy settings. Proxy/Firewall client software that is installed as an LSP driver will not work in Windows with any Modern/Microsoft Store apps but will work with standard apps. Proxy/Firewall client software that's installed as a WFP driver will work with Windows in all apps. Contact the proxy server manufacturer if you have other questions about how to use the manufacturer's client software together with Windows.
+Proxy/Firewall client software is specific to the brand of proxy server that you use. Microsoft Forefront Threat Management Gateway (TMG) 2010 is an example of a proxy server that can use client software to control proxy settings. Proxy/Firewall client software that's installed as an LSP driver won't work in Windows with any Modern/Microsoft Store apps, but will work with standard apps. Proxy/Firewall client software that's installed as a WFP driver will work with Windows in all apps. Contact the proxy server manufacturer if you have other questions about how to use the manufacturer's client software together with Windows.
 
 > [!NOTE]
 > The TMG/ISA firewall client tool is LSP based and will not work with Modern/Microsoft Store apps.
@@ -63,5 +63,5 @@ For more information about how to use WPAD, see the following articles:
 [Configuring Web proxy clients to automatically detect a Forefront TMG server](https://technet.microsoft.com/library/cc995139)  
 [Automatic Detection](https://technet.microsoft.com/library/gg699445.aspx)  
 
-For more information about how to configure proxy server settings by using Group Policy, see the following articles:  
+For more information about how to configure proxy server settings by using Group Policy, see the following article:  
 [Internet Explorer Maintenance Extension Tools and Settings](https://technet.microsoft.com/library/cc736412.aspx)
