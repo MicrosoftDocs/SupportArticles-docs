@@ -173,16 +173,16 @@ For more information, see [this article](/topic/you-get-a-blank-page-after-loggi
 
 [Back to top](#summary)
 
-### Can't sign in to OWA or EAC 
+### Can't sign in to OWA or EAC
 
 **Issue**
 
-When you try to sign in to OWA or the EAC in Exchange Server, the web browser freezes or you see a message that the redirect limit was reached. Additionally, Event 1003 is logged in the event viewer. 
+When you try to sign in to OWA or the EAC in Exchange Server, the web browser freezes or you see a message that the redirect limit was reached. Additionally, Event 1003 is logged in the event viewer.
 
 >Event ID: 1003
 >Source: MSExchange Front End HTTPS Proxy
->[Owa] An internal server error occurred. The unhandled exception was: System.NullReferenceException: Object reference not set to an instance of an object.
->   at Microsoft.Exchange.HttpProxy.FbaModule.ParseCadataCookies(HttpApplication httpApplication)
+>An internal server error occurred. The unhandled exception was: System.NullReferenceException: Object reference not set to an instance of an object.
+>at Microsoft.Exchange.HttpProxy.FbaModule.ParseCadataCookies(HttpApplication httpApplication)
 
 **Cause**
 
@@ -190,7 +190,7 @@ This issue occurs because the Exchange Server Open Authentication (OAuth) certif
 
 **Resolution**
 
-Follow the steps in this [article](https://docs.microsoft.com/en-us/exchange/troubleshoot/administration/cannot-access-owa-or-ecp-if-oauth-expired#resolution) to fix the issue.
+Follow the steps in this [article](/exchange/troubleshoot/administration/cannot-access-owa-or-ecp-if-oauth-expired#resolution&preserve-view=true) to fix the issue.
 
 [Back to top](#summary)
 
