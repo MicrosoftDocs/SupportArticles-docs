@@ -65,6 +65,8 @@
       href: ./teams-conferencing/no-dial-pad.md
     - name: Give Control doesn't work
       href: ./teams-conferencing/give-control-doesn’t-work-sharescreen.md
+    - name: Lenovo Yoga L13 might shut down during Teams meetings
+      href: ./teams-conferencing/lenovo-shut-down-during-meeting.md
     - name: Organizer can't start Outlook meeting and stuck in virtual lobby
       href: ./known-issues/organizer-cant-start-teams-meeting.md
     - name: PSTN callers with the same "From" number are shown as the same user
