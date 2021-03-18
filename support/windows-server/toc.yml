@@ -108,6 +108,8 @@
       href: ./identity/raise-active-directory-domain-forest-functional-levels.md
   - name: Active Directory Federation Services (AD FS)
     items:
+    - name: Troubleshoot ADFS SSO issues
+      href: ./identity/troubleshoot-ad-fs-sso-issue.md
     - name: ADFS 2.0 certificate error
       href: ./identity/adfs-2-certificate-error-build-chain.md
     - name: ADFS 2.0 error 401
