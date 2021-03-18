@@ -1,6 +1,6 @@
 ---
-title: remove Enterprise Windows Certificate Authority
-description: Describes steps to delete manually Enterprise Windows Certificate Authority from a Windows 2000/2003 domain.
+title: Remove Enterprise Windows Certificate Authority
+description: Describes how to manually delete Enterprise Windows Certificate Authority from a Windows 2000/2003 domain.
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
@@ -15,12 +15,10 @@ ms.technology: windows-server-active-directory
 ---
 # How to remove manually Enterprise Windows Certificate Authority from a Windows 2000/2003 domain
 
-This article describes how to delete manually objects and data that belong to the original Enterprise Windows and reside in the Windows Active Directory.
+This article was written by [Yuval Sinay](https://mvp.microsoft.com/en-US/PublicProfile/7674?fullName=Yuval%20Sinay), Microsoft MVP.
 
 _Original product version:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 555151
-
-This article was written by [Yuval Sinay](https://mvp.microsoft.com/en-US/PublicProfile/7674?fullName=Yuval%20Sinay), Microsoft MVP.
 
 ## Symptoms
 
@@ -34,7 +32,7 @@ Enterprise Windows Certificate Authority saves the configurations settings and d
 
 **A. Backup:**  
 
-You're recommended to back up all the nodes that contain active directory-related data **before** and **after** you follow this procedure, including:
+You're recommended to back up all the nodes that contain Active Directory-related data **before** and **after** you follow this procedure, including:
 
 - Windows Domain Controllers
 - Exchange Servers
