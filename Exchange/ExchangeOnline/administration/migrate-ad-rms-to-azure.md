@@ -165,4 +165,5 @@ This is the preferred remediation method for customers who can invest the necess
 
 For guidance to migrate from AD RMS to Azure RMS, see [Migrating from AD RMS to Azure Information Protection](/azure/information-protection/migrate-from-ad-rms-to-azure-rms).
 
-> [!NOTE] If you have run the steps from Method 2, and you choose to run Method 3 later, you can skip those same steps when you do the full migration to Azure RMS. This is because the Method 2 steps are a subset of the steps for the full migration.
+> [!NOTE]
+> If you have run the steps from Method 2, and you choose to run Method 3 later, you can skip those same steps when you do the full migration to Azure RMS. This is because the Method 2 steps are a subset of the steps for the full migration.
