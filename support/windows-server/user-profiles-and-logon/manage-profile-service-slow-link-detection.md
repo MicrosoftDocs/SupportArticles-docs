@@ -23,7 +23,7 @@ _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Win
 
 ## Summary
 
-Windows User Profile Service can use slow link detection to determine whether to download a roaming user profile to the client computer when the user signs in. If the service determines that the connection to the client computer is slow (or if you disable slow link detection), the client skips the download and loads the local copy of the roaming user profile. The service also records an event that resembles the following:
+Windows User Profile Service can use slow link detection to determine whether to download a roaming user profile to the client computer when the user signs in. If the service determines that the connection to the client computer is slow, synchronization is skipped. The service also records an event that resembles the following:
 
 > Log Name:      Application  
 > Source:        Microsoft-Windows-User Profiles Service  
@@ -134,11 +134,11 @@ To make sure that slow link detection works reliably under a variety of conditio
 
 When the user signs in to Windows, the User Profile Service enumerates all the files in the user profile to determine what to update on the local copy. This update might involve downloading a few files that have changed (an incremental update) or downloading the entire user profile (full sync). When the user signs out, Windows uploads any profile files that have changed. This transaction resembles an incremental update.
 
-For testing, consider the time that's required to download the entire user profile.
+To determine your SLA, consider the time that's required to download the entire user profile.
 
 Also, consider the largest profile that you have. Because the User Profile Service enumerates the files, the "size" of a profile depends on both the number of files and the total amount of data in those files.
 
-Make sure that the user sign-in experience meets the SLA even when doing a full download of the largest profile.
+You should test variations of profile sync types and network conditions to determine whether slow link detection makes a measurement that meets the logon SLA.
 
 #### Tuning the user profiles
 
