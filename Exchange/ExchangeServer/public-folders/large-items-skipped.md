@@ -14,6 +14,7 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: mireb
 appliesto:
+- Exchange Server 2010
 - Exchange Server 2013
 - Exchange Server 2016
 - Exchange Server 2019
