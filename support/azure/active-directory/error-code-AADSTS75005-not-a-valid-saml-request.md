@@ -28,3 +28,7 @@ Azure AD doesn’t support the SAML request sent by the application for single s
     - [Azure AD Single Sign-on SAML protocol requirements](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-saml-protocol)
 
 The application vendor should validate that they support the Azure AD SAML implementation for single sign-on.
+
+## More Information
+
+For a full list of Active Directory Authentication and authorization error codes see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)

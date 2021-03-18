@@ -22,3 +22,7 @@ The `Issuer` attribute sent from the application to Azure AD in the SAML request
 Ensure that the `Issuer` attribute in the SAML request matches the Identifier value configured in Azure AD.
 
 On the SAML-based SSO configuration page, in the **Basic SAML configuration** section, verify that the value in the Identifier textbox matches the value for the identifier value displayed in the error.
+
+## More Information
+
+For a full list of Active Directory Authentication and authorization error codes see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
