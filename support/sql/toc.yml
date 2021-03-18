@@ -369,9 +369,9 @@
       href: performance/troubleshoot-slow-running-queries.md
     - name: Understand and resolve blocking problems
       href: performance/understand-resolve-blocking.md
-    - name: Updates and configuration options for high-performance workloads (SQL 2016 and SQL 2014)
+    - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)
       href: performance/recommended-updates-configuration-options.md
-    - name: Updates and configuration options for high-performance workloads (SQL 2017 and SQL 2016)
+    - name: Updates and configuration options for high-performance workloads (SQL Server 2017 and 2016)
       href: performance/recommended-updates-configuration-workloads.md
     - name: Upgrading compatibility level degrades performance for spatial queries
       href: performance/upgrade-compatibility-level-degrades-performance.md
