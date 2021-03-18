@@ -152,7 +152,6 @@ sections:
             If you purchase Windows 7 ESU before the monthly invoice generation date, the purchase will be shown on the previous month's invoice. It won't be shown on the current calendar month's invoice.
           
             For example, in March, if CSP purchased ESU before March 6, the purchase would show on February's invoice.
-          
   - name: ESU coverage
     questions: 
       - question: |
@@ -168,7 +167,7 @@ sections:
       - question: |
          Do Windows 7 Embedded products qualify?
         answer: |
-            Yes, there's an ESU program specifically for embedded devices. For more information, see [ESU for Windows 7 Embedded](#esu-for-windows-7-embedded).  
+            Yes, there's an ESU program specifically for embedded devices. For more information, see [ESU for Windows 7 Embedded](#esu-for-windows-7-embedded-).  
           
       - question: |
          Can Windows 7 Pro OEM customers purchase Windows 7 ESU?
@@ -178,7 +177,7 @@ sections:
       - question: |
          Windows 7 VMs hosted in Azure receive free ESU. How are updates delivered to these VMs?
         answer: |
-            ESU for Windows 7 VMs on Azure is delivered by using the same methods as for on-premises clients. For more information, see the [ESU deployment section](#esu-deployment) in this article.  
+            ESU for Windows 7 VMs on Azure is delivered by using the same methods as for on-premises clients. For more information, see the [ESU deployment section](#esu-deployment-) in this article.  
           
       - question: |
          Will Microsoft Security Essentials (MSE) continue to protect my computer after end of support?
