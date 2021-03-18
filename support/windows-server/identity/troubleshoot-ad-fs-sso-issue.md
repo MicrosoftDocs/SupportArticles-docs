@@ -774,7 +774,7 @@ To determine if you’re using self-signed certificates, follow these steps:
    Get-ADFSCerticate -CertificateType "token-signing"
    ```
 
-   :::image type="content" alt-text="Get-ADFSCerticate cmdlet, "token-signing"" source="media\troubleshoot-adfs-sso-issue\get-adfscertificate.jpg" border="true":::
+   :::image type="content" alt-text="Get-ADFSCerticate cmdlet, token-signing" source="media\troubleshoot-adfs-sso-issue\get-adfscertificate.jpg" border="true":::
 
 2. Examine the certificate attributes.  
 
