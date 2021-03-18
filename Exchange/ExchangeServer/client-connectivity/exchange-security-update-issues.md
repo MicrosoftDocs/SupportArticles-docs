@@ -38,7 +38,7 @@ This article describes the methods to verify the installation of Microsoft Excha
 - [HTTP 500 errors in OWA or ECP](#http-500-errors-in-owa-or-ecp)
 - [Missing images in ECP](#missing-images-in-ecp)
 - [Blank page in EAC or OWA](#blank-page-in-eac-or-owa)
-- [Can't sign in to Outlook on the web or EAC if Exchange Server OAuth certificate is expired](#cant-sign-in-to-outlook-on-the-web-or-eac-if-exchange-server-oauth-certificate-is-expired)
+- [Can't sign in to OWA or EAC](#cant-sign-in-to-owa-or-eac)
 - [Can't access EAC or OWA after Exchange installation](#cant-access-eac-or-owa-after-exchange-installation)
 - [Exchange Server setup does not run](#exchange-server-setup-does-not-run)
 - [Upgrade patch can't be installed](#upgrade-patch-cant-be-installed)
@@ -172,11 +172,11 @@ For more information, see [this article](/topic/you-get-a-blank-page-after-loggi
 
 [Back to top](#summary)
 
-### Can't sign in to Outlook on the web or EAC if Exchange Server OAuth certificate is expired
+### Can't sign in to OWA or EAC 
 
 **Issue**
 
-When you try to sign in to Outlook on the web or the EAC in Exchange Server, the web browser freezes or reports that the redirect limit was reached. Additionally, Event 1003 is logged in the event viewer. For example, the following entry is logged:
+When you try to sign in to OWA or the EAC in Exchange Server, the web browser freezes or you see a message that the redirect limit was reached. Additionally, Event 1003 is logged in the event viewer. 
 
 >Event ID: 1003
 >Source: MSExchange Front End HTTPS Proxy
@@ -185,11 +185,11 @@ When you try to sign in to Outlook on the web or the EAC in Exchange Server, the
 
 **Cause**
 
-This issue occurs because the Exchange Server Open Authentication (OAuth) certificate is expired.
+This issue occurs because the Exchange Server Open Authentication (OAuth) certificate has expired.
 
 **Resolution**
 
-Follow the resolution steps in this [article](https://docs.microsoft.com/en-us/exchange/troubleshoot/administration/cannot-access-owa-or-ecp-if-oauth-expired#resolution).
+Follow the steps in this [article](https://docs.microsoft.com/en-us/exchange/troubleshoot/administration/cannot-access-owa-or-ecp-if-oauth-expired#resolution) to fix the issue.
 
 [Back to top](#summary)
 
@@ -199,7 +199,6 @@ Follow the resolution steps in this [article](https://docs.microsoft.com/en-us/e
 
 When installing Exchange Server 2016 or Exchange Server 2013, the installation process might have failed or been interrupted at some stage, then resumed and finally completed successfully. However, when you try to access EAC or OWA, you receive the following error message:
 
-> :-(  
 >something went wrong
 >
 >Sorry, we can't get that information right now. Please try again later. If the problem continues, contact your helpdesk.
