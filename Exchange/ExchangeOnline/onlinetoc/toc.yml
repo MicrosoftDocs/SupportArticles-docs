@@ -249,6 +249,8 @@
       href: ../email-delivery/wrong-office-365-region-exo.md
     - name: Emails aren't received for a new domain
       href: ../email-delivery/emails-not-received-for-new-domain.md
+    - name: Errors when sending/receiving emails
+      href: ../email-delivery/send-receive-emails-socketerror.md
     - name: External recipients can't get distribution group emails
       href: ../email-delivery/external-recipients-not-receiving-distribution-group-emails.md
     - name: Find and fix email delivery issues
