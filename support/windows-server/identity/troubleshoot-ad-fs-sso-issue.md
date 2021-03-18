@@ -610,7 +610,7 @@ In this scenario, check if this issue occurs in an Azure AD scenario. If so, do 
 
 If a user is trying to log in to Azure AD, they will be redirected to AD FS for authentication for a federated domain. One of the possible reasons for a failed login is that the user is not yet synced to Azure AD. You might see a loop from Azure AD to AD FS after the first authentication attempt at AD FS. To determine whether the user is synced to Azure AD, follow these steps:
 
-1. [Download](http://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185) and install the Azure AD PowerShell module for Windows PowerShell.
+1. [Download](https://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185) and install the Azure AD PowerShell module for Windows PowerShell.
 1. Open Windows PowerShell with the "Run as administrator" option.
 1. Initiate a connection to Azure AD by running the following command:  
 `Connect-MsolService`
@@ -631,7 +631,7 @@ Azure AD requires immutableID and the user’s UPN to authenticate the user.
 > - Azure AD Sync
 > - Azure Active Directory Sync (DirSync)
 
-Administrators can use Azure AD Connect for automatic management of AD FS trust with Azure AD. If you are not managing the trust via Azure AD Connect, we recommend that you do so by [downloading Azure AD Connect](http://go.microsoft.com/fwlink/?LinkId=615771) Azure AD Connect enables automatic claim rules management based on sync settings.
+Administrators can use Azure AD Connect for automatic management of AD FS trust with Azure AD. If you are not managing the trust via Azure AD Connect, we recommend that you do so by [downloading Azure AD Connect](https://go.microsoft.com/fwlink/?LinkId=615771) Azure AD Connect enables automatic claim rules management based on sync settings.
 
 To check if the claim rules for immutableID and UPN in AD FS matches what Azure AD uses, follow these steps:
 
