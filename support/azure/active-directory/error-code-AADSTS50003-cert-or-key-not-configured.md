@@ -25,3 +25,7 @@ To delete and create a new certificate, follow the steps below:
 1. Select Expiration date and then click **Save**.
 1. Check **Make new certificate active** to override the active certificate. Then, click **Save** at the top of the pane and accept to activate the rollover certificate.
 1. Under the **SAML Signing Certificate** section, click **remove** to remove the **Unused** certificate.
+
+## More Information
+
+For a full list of Active Directory Authentication and authorization error codes see [Azure AD Authentication and authorization error codes](https://docs.microsoft.com/azure/active-directory/develop/reference-aadsts-error-codes)
