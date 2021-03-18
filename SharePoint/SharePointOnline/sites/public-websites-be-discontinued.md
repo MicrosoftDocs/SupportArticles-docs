@@ -134,8 +134,6 @@ Customers can use any website hosting service and aren't limited to the third-pa
 
 If you're using your Public Website for anonymous access to content and need an alternative solution for the future, go to [Share SharePoint files or folders](https://support.office.com/article/1fe37332-0f9a-4719-970e-d2578da4941c) for more information about sharing content anonymously from your SharePoint Online sites.
 
-### Third-party disclaimer information
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

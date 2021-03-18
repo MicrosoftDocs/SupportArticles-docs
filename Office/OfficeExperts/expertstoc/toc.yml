@@ -71,8 +71,6 @@
       href: ../excel/excel-online-external-users-cannot-refresh-data-connections.md
     - name: Create An Excel Add-In to Calculate Body Mass Index
       href: ../excel/create-add-in-to-calculate-bmi.md
-    - name: Excel Online cross KCD data refresh not supported
-      href: ../excel/excel-online-cross-forest-kcd-data-refresh-is-not-supported.md
     - name: Issue when refresh Project Online data in Excel Online
       href: ../excel/excel-online-refresh-fails-project-online-using-timebyday.md
     - name: Refresh SQL Azure database data in Excel Online
