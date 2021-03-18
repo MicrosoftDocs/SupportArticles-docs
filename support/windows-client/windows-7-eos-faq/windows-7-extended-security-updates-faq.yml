@@ -404,8 +404,9 @@ sections:
             Yes. For detailed instructions, see [Obtaining Extended Security Updates for eligible Windows devices](https://aka.ms/Windows7ESU).
           
   - name: ESU for Windows 7 Embedded
-    questions: |
-      - question: Do Windows 7 Embedded products qualify for ESU?
+    questions: 
+      - question: |
+         Do Windows 7 Embedded products qualify for ESU?
         answer: |
             Yes, there is an ESU program specifically for embedded devices. This program includes:
           
