@@ -787,13 +787,11 @@ To confirm if the certificates renew automatically, follow these steps:
    - If **AutoCertificateRollover = TRUE**, AD FS automatically generates new certificates (30 days prior to expiration by default) and sets them as the primary certificates (25 days prior to expiration).
    - If **AutoCertificateRollover = FALSE**, you need to manually replace the certificates.
 
-## General troubleshooting
-
-### Check the ADFS-related components and services
+## Check the ADFS-related components and services
 
 This article introduces how to check the ADFS-related components and services. These steps could help when you are troubleshooting sign-on (SSO) issues with Active Directory Federation Services (ADFS).
 
-#### Check DNS
+### Check DNS
 
 Accessing ADFS should point directly to one of the WAP (Web Application Proxy) servers or the load balancer in front of the WAP servers. Do the following checks:
 
@@ -805,7 +803,7 @@ If WAP is not implemented in your scenario for external access, check if accessi
 - Ping the federation service name (e.g. `fs.contoso.com`). Confirm if the IP address that you get resolves to one of the ADFS servers or the load balancer of the ADFS servers.
 - Check if there is an A record for the federation service in the DNS server. The A record should point to one of the ADFS servers or to the load balancer of the ADFS servers.
 
-#### Check the load balancer if it is used
+### Check the load balancer if it is used
 
 Check if firewall is blocking traffic between:
 
@@ -818,7 +816,7 @@ If probe is enabled on the load balancer, check the following:
 - Check if port 80 is enabled in the firewall on the WAP servers and ADFS servers.
 - Ensure that probe is set for port 80 and for the endpoint /adfs/probe.
 
-#### Check the firewall settings
+### Check the firewall settings
 
 Check if inbound traffic through TCP port 443 is enabled on:
 
@@ -833,7 +831,7 @@ Check if inbound traffic through TCP port 49443 is enabled on the firewall betwe
 > [!NOTE]
 > The configuration is not required on the firewall between the Web Application Proxy server and the federation servers.
 
-#### Check if the endpoint is enabled on the proxy
+### Check if the endpoint is enabled on the proxy
 
 ADFS provides various endpoints for different functionalities and scenarios. Not all endpoints are enabled by default. To check the whether the endpoint is enabled on the proxy, following these steps:
 
@@ -842,14 +840,14 @@ ADFS provides various endpoints for different functionalities and scenarios. Not
 3. Locate the endpoint and verify if the status is enabled on the **Proxy Enabled** column.  
    ![ADFS Proxy Enabled](media\troubleshoot-adfs-sso-issue\adfs-endpoints.png)
 
-### Check the proxy trust relationship between Web Application Proxy and AD FS
+## Check the proxy trust relationship between Web Application Proxy and AD FS
 
 If Web Application Proxy (WAP) is deployed, the proxy trust relationship must be established between the WAP server and the AD FS server. Check if the proxy trust relationship is established or starts to fail at some point in time.
 
 > [!NOTE]
 > Information on this page applies to AD FS 2012 R2 and later.
 
-#### Background information
+### Background information
 
 The proxy trust relationship is client certificate based. When you run the Web Application Proxy post-install wizard, the wizard generates a self-signed client certificate using the credentials that you specified in the wizard. Then the wizard inserts the certificate into the AD FS configuration database and adds it to the AdfsTrustedDevices certificate store on the AD FS server.
 
@@ -888,7 +886,7 @@ DS Mapper Usage : Disabled
 Negotiate Client Certificate : Disabled
 ```
 
-#### Run script to automatically detect problems
+### Run script to automatically detect problems
 
 To automatically detect problems with the proxy trust relationship, run the following script. Based on the problem detected, take the action accordingly.
 
@@ -910,7 +908,7 @@ While($i -lt $httpsslcertoutput.count)
         $hostnameport = $false
         if ( ( $httpsslcertoutput[$i] -match "IP:port" ) ) { $ipport = $true }
         elseif ( ( $httpsslcertoutput[$i] -match "Hostname:port" ) ) { $hostnameport = $true }
-        ### Check for IP specific certificate bindings
+        ## Check for IP specific certificate bindings
         if ( ( $ipport -eq $true ) )
         {
             $httpsslcertoutput[$i]
@@ -923,7 +921,7 @@ While($i -lt $httpsslcertoutput.count)
             $i = $i + 14
             continue
         }
-        ### check that CTL Store is set for ADFS service binding
+        ## check that CTL Store is set for ADFS service binding
         elseif ( $hostnameport -eq $true )
         {
             $httpsslcertoutput[$i]
@@ -942,7 +940,7 @@ If ( $certbindingissuedetected -eq $false ) { Write-Host "Check Passed: No certi
 }
 function checkadfstrusteddevicesstore()
 {
-### check for CA issued (non-self signed) certs in the AdfsTrustedDevices cert store
+## check for CA issued (non-self signed) certs in the AdfsTrustedDevices cert store
 Write-Host; Write-Host "2 – Checking AdfsTrustedDevices cert store for non-self signed certificates"
 $certlist = Get-Childitem cert:\LocalMachine\AdfsTrustedDevices -recurse | Where-Object {$_.Issuer -ne $_.Subject}
 If ( $certlist.count -gt 0 )
@@ -1014,7 +1012,7 @@ checkproxytrustcerts($syncproxytrustcerts)
 Write-Host; Write-Host("All checks completed.")
 ```
 
-#### Problem 1: There is an IP specific binding
+### Problem 1: There is an IP specific binding
 
 The binding may conflict with the AD FS certificate binding on port 443.
 
@@ -1035,7 +1033,7 @@ The IP:port binding takes the highest precedence. If an IP:port binding is in th
    - Why the IP:port binding is there.
    - If the binding relies on the default CTL store for client certificate authentication.
 
-#### Problem 2: The AD FS certificate binding doesn’t have CTL Store Name set to AdfsTrustedDevices
+### Problem 2: The AD FS certificate binding doesn’t have CTL Store Name set to AdfsTrustedDevices
 
 If Azure AD Connect is installed, use AAD Connect to set CTL Store Name to AdfsTrustedDevices for the SSL certificate bindings on all AD FS servers. If Azure AD Connect is not installed, regenerate the AD FS certificate bindings by running the following command on all AD FS servers.
 
@@ -1043,7 +1041,7 @@ If Azure AD Connect is installed, use AAD Connect to set CTL Store Name to AdfsT
 Set-AdfsSslCertificate -Thumbprint Thumbprint
 ```
 
-#### Problem 3: A certificate that is not self-signed exists in the AdfsTrustedDevices certificate store
+### Problem 3: A certificate that is not self-signed exists in the AdfsTrustedDevices certificate store
 
 If a CA issued certificate is in a certificate store where only self-signed certificates would normally exist, the CTL generated from the store would only contain the CA issued certificate. The AdfsTrustedDevices certificate store is such a store that is supposed to have only self-signed certificates. These certificates are:
 
@@ -1054,24 +1052,24 @@ If a CA issued certificate is in a certificate store where only self-signed cert
 
 Therefore, delete any CA issued certificate from the AdfsTrustedDevices certificate store.
 
-#### Problem 4: Install KB2964735 or re-run the script with -syncproxytrustcerts
+### Problem 4: Install KB2964735 or re-run the script with -syncproxytrustcerts
 
 When a proxy trust relationship is established with an AD FS server, the client certificate is written to the AD FS configuration database and added to the AdfsTrustedDevices certificate store on the AD FS server. For an AD FS farm deployment, the client certificate is expected to be synced to the other AD FS servers. If the sync doesn’t happen for some reason, a proxy trust relationship will only work against the AD FS server the trust was established with, but not against the other AD FS servers.
 
 To solve this problem, use one of the following methods.
 
-##### Method 1
+#### Method 1
 
 Install the update documented in [KB 2964735](https://support.microsoft.com/topic/700e0502-c19a-54e4-9c5f-65c2844d9a9f) on all AD FS servers. After the update is installed, a sync of the client certificate is expected to happen automatically.
 
-##### Method 2
+#### Method 2
 
 Run the script with the – syncproxytrustcerts switch to manually sync the client certificates from the AD FS configuration database to the AdfsTrustedDevices certificate store. The script should be run on all the AD FS servers in the farm.
 
 > [!NOTE]
 > This is not a permanent solution because the client certificates will be renewed on a regular basis.
 
-#### Problem 5: All checks are passed. But the problem persists
+### Problem 5: All checks are passed. But the problem persists
 
 Check if there is a time or time zone mismatch. If time matches but the time zone doesn’t, proxy trust relationship will also fail to be established.
 
@@ -1081,18 +1079,18 @@ If SSL termination is happening on a network device between AD FS servers and th
 
 Disable SSL termination on the network device between the AD FS and WAP servers.
 
-### Use the Dump Token app for ADFS SSO troubleshooting
+## Use the Dump Token app for ADFS SSO troubleshooting
 
 The Dump Token app is helpful when debugging problems with your federation service as well as validating custom claim rules. It is not an official solution but a good independent debugging solution that is recommended for the troubleshooting purposes.
 
-#### Before using the Dump Token app
+### Before using the Dump Token app
 
 Before using the Dump Token app, you need to:
 
 1. Get the information of the relying party for the application you want to access. If OAuth authentication is implemented, get the OAuth client information as well.
 2. Set up the Dump Token app.
 
-#### Get the relying party and OAuth client information
+### Get the relying party and OAuth client information
 
 If you use a conventional relying party, follow these steps:
 
@@ -1136,7 +1134,7 @@ If you use the Application Group feature in Windows Server 2016, follow the step
    $client = Get-AdfsServerApplication ClientName
    ```
 
-#### Set up the Dump Token app
+### Set up the Dump Token app
 
 To set up the Dump Token app, run the following commands in the Windows PowerShell window:
 
@@ -1150,13 +1148,13 @@ Add-ADFSRelyingPartyTrust -Name "urn:dumptoken" -Identifier "urn:dumptoken" -Iss
 
 Now continue with the following troubleshooting methods. At the end of each method, see if the problem is solved. If not, use another method.
 
-#### Troubleshooting methods
+### Troubleshooting methods
 
-##### Check the authorization policy to see if the user is impacted
+#### Check the authorization policy to see if the user is impacted
 
 In this method, you start by getting the policy details, and then use the Dump Token app to diagnose the policy to see if the user is impacted.
 
-###### Get the policy details
+##### Get the policy details
 
 $rp.IssuanceAuthorizationRules shows the authorization rules of the relying party.
 
@@ -1170,7 +1168,7 @@ If $rp.ResultantPolicy doesn’t have the details about the policy, look into th
    `$rp = Get-AdfsRelyingPartyTrust RPName`
 3. Check `$rp.IssuanceAuthorizationRules` and `$rp. AdditionalAuthenticationRules`.
 
-###### Use the Dump Token app to diagnose the authorization policy
+##### Use the Dump Token app to diagnose the authorization policy
 
 1. Set the Dump Token authentication policy to be the same as the failing relying party.
 2. Have the user open one of the following links depending on the authentication policy you set.
@@ -1183,7 +1181,7 @@ If $rp.ResultantPolicy doesn’t have the details about the policy, look into th
 
 What you get is the set of claims of the user. See if there is anything in the authorization policy that explicitly denies or allows the user based on these claims.
 
-##### Check if any missing or unexpected claim causes access deny to the resource
+#### Check if any missing or unexpected claim causes access deny to the resource
 
 1. Configure the claim rules in the Dump Token app to be the same as the claim rules of the failing relying party.
 2. Configure the Dump Token authentication policy to be the same as the failing relying party.
@@ -1199,7 +1197,7 @@ This is the set of claims the relying party is going to get for the user. If any
 
 If all the claims are present, check with the application owner to see which claim is missing or unexpected.
 
-##### Check if a device state is required
+#### Check if a device state is required
 
 If the authorization rules check for device claims, verify if any of these device claims are missing in the list of claims you get from the Dump Token app. The missing claims could block device authentication. To get the claims from the Dump Token app, follow the steps in the **Use the Dump Token app to diagnose the authorization policy** section in the **Check authorization policy if the user was impacted** method.
 
