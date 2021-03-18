@@ -126,8 +126,6 @@ Once you have found an object taking much memory, you can dig further by using t
 
 You can get the address of the object you're looking for in the `dumpheap` command.
 
-To learn more about how to set up and use these commands, see [Troubleshooting ASP.NET using WinDbg and the SOS extension](https://support.microsoft.com/help/892277/troubleshooting-asp-net-using-windbg-and-the-sos-extension).
-
 We'll be trying to incorporate more ways to use this diagnostic tool for specific situations in these columns. Let us know if we're doing a good job!
 
 ## Memory and performance articles

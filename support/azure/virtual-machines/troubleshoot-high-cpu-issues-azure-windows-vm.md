@@ -1,14 +1,14 @@
 ---
 title: Troubleshoot high-CPU issues for Azure Windows virtual machines
 description: .
-services: virtual-machines-windows, azure-resource-manager
+services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: mnanda
 manager: dcscontentpm
 editor: v-jesits
 tags: azure-resource-manager
-
-ms.service: virtual-machines-windows
+ms.service: virtual-machines
+ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
