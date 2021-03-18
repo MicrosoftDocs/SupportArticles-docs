@@ -21,7 +21,7 @@ Select one of the following section according to the type of issue that you enco
 
 _Original KB number:_ &nbsp; 4034932
 
-## User gets an unexpected NTLM or forms-based authentication prompt
+## NTLM or forms-based authentication prompt
 
 During troubleshooting single sign-on (SSO) issues with Active Directory Federation Services (AD FS), if users received unexpected NTLM or forms-based authentication prompt, follow the steps in this article to troubleshoot this issue.
 
@@ -147,7 +147,7 @@ Request parameters like **WAUTH** and **RequestedAuthNContext** in authenticatio
 
 If SSO is disabled, enable it and test if the issue is resolved.
 
-## User gets, or repeatedly gets, an unexpected multi-factor authentication prompt
+## Multi-factor authentication prompt
 
 To troubleshoot this issue, check if the claim rules in the relying party are correctly set for multi-factor authentication.
 
@@ -288,7 +288,7 @@ Then, check the external sign-in functionality using IdpInitiatedSignOn. Use the
 
 3. Enter the correct credentials of a valid user on the sign-in page.
 
-If the sign-in is unsuccessful, see [Check the AD FS related components and services](#check-the-adfs-related-components-and-services) and [Check the proxy trust relationship between Web Application Proxy and AD FS](#check-the-proxy-trust-relationship-between-web-application-proxy-and-ad-fs).
+If the sign-in is unsuccessful, see [Check the AD FS related components and services](#check-the-adfs-related-components-and-services) and [Check the proxy trust relationship](#check-the-proxy-trust-relationship).
 
 If the sign-in is successful, continue the troubleshooting with the steps in [All users are impacted by the issue, and the user can access some of the relying parties](#all-users-are-impacted-by-the-issue-and-the-user-can-access-some-of-the-relying-parties).
 
@@ -541,7 +541,7 @@ If `$rp.EncryptClaims` returns **Enabled**, relying party encryption is enabled.
 
 ##### The previous two methods don't work
 
-To continue the troubleshooting, see [Use the Dump Token app for troubleshooting](#use-the-dump-token-app-for-adfs-sso-troubleshooting).
+To continue the troubleshooting, see [Use the Dump Token app](#use-the-dump-token-app).
 
 #### Not all users are impacted by the issue, and the user can't access any of the relying parties
 
@@ -604,7 +604,7 @@ If these steps did not help you solve the issue, continue the troubleshooting wi
 
 #### Not all users are impacted by the issue, and the user can access some of the relying parties
 
-In this scenario, check if this issue occurs in an Azure AD scenario. If so, do these checks to troubleshoot this issue. If not, see [Use the Dump Token app for troubleshooting](#use-the-dump-token-app-for-adfs-sso-troubleshooting) to troubleshoot this issue.
+In this scenario, check if this issue occurs in an Azure AD scenario. If so, do these checks to troubleshoot this issue. If not, see [Use the Dump Token app](#use-the-dump-token-app) to troubleshoot this issue.
 
 ##### Check if the user is synced to Azure AD
 
@@ -656,7 +656,7 @@ To check if the claim rules for immutableID and UPN in AD FS matches what Azure 
    - If AD FS is managed by Azure AD Connect, reset the relying party trust by using Azure AD Connect.
    - If AD FS is not managed by Azure AD Connect, correct the claims with the right attributes.
 
-If these checks did not help you solve the issue, see [Use the Dump Token app for troubleshooting](#use-the-dump-token-app-for-adfs-sso-troubleshooting) to troubleshoot this issue.
+If these checks did not help you solve the issue, see [Use the Dump Token app](#use-the-dump-token-app) to troubleshoot this issue.
 
 ### This issue occurs at the application side
 
@@ -840,7 +840,7 @@ ADFS provides various endpoints for different functionalities and scenarios. Not
 3. Locate the endpoint and verify if the status is enabled on the **Proxy Enabled** column.  
    ![ADFS Proxy Enabled](media\troubleshoot-adfs-sso-issue\adfs-endpoints.png)
 
-## Check the proxy trust relationship between Web Application Proxy and AD FS
+## Check the proxy trust relationship
 
 If Web Application Proxy (WAP) is deployed, the proxy trust relationship must be established between the WAP server and the AD FS server. Check if the proxy trust relationship is established or starts to fail at some point in time.
 
@@ -1079,7 +1079,7 @@ If SSL termination is happening on a network device between AD FS servers and th
 
 Disable SSL termination on the network device between the AD FS and WAP servers.
 
-## Use the Dump Token app for ADFS SSO troubleshooting
+## Use the Dump Token app
 
 The Dump Token app is helpful when debugging problems with your federation service as well as validating custom claim rules. It is not an official solution but a good independent debugging solution that is recommended for the troubleshooting purposes.
 
