@@ -290,7 +290,7 @@ Then, check the external sign-in functionality using IdpInitiatedSignOn. Use the
 
 If the sign-in is unsuccessful, see [Check the AD FS related components and services](#check-the-adfs-related-components-and-services) and [Check the proxy trust relationship between Web Application Proxy and AD FS](#check-the-proxy-trust-relationship-between-web-application-proxy-and-ad-fs).
 
-If the sign-in is successful, continue the troubleshooting with the steps in [All users are impacted by the issue, and the user can access some of the relying parties](#all-users-are-impacted-by-the-issue,-and-the-user-can-access-some-of-the-relying-parties).
+If the sign-in is successful, continue the troubleshooting with the steps in [All users are impacted by the issue, and the user can access some of the relying parties](#all-users-are-impacted-by-the-issue-and-the-user-can-access-some-of-the-relying-parties).
 
 ##### The sign-in is unsuccessful
 
