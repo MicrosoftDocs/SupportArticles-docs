@@ -22,7 +22,10 @@ _Original KB number:_ &nbsp; 4514607
 
 ## Windows Server support
 
-This section provides Windows Server support with respect to total number of logical processors.
+This section provides information about Windows Server support with respect to total number of logical processors.
+
+> [!NOTE]  
+> If X2APIC support is not available or is disabled, the support is limited to a maximum of 255 logical processors.
 
 - Windows Server 2019 and Windows Server 2016  
 
