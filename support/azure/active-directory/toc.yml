@@ -104,6 +104,8 @@
     href: upgrade-fails-error-code-1603.md
   - name: Error 80070005 in Azure AD Sync Services config wizard
     href: aad-sync-services-config-wizard-error.md
+  - name: Errors with event ID 6301 after installing Azure AD Connect
+    href: tvp-errors-when-AADConnect-installed-on-Windows-Server-2019.md
   - name: Fail to install Azure AD Module
     href: unable-install-aad-module-powershell.md
   - name: Fail to sync domain-based filtering changes

@@ -108,6 +108,8 @@
       href: ./identity/raise-active-directory-domain-forest-functional-levels.md
   - name: Active Directory Federation Services (AD FS)
     items:
+    - name: Troubleshoot ADFS SSO issues
+      href: ./identity/troubleshoot-ad-fs-sso-issue.md
     - name: ADFS 2.0 certificate error
       href: ./identity/adfs-2-certificate-error-build-chain.md
     - name: ADFS 2.0 error 401
@@ -2408,6 +2410,8 @@
       href: ./system-management-components/winrm-service-not-start-uninstall-winrm-2.md
   - name: WMI
     items:
+    - name: High CPU usage by WmiPrvSE.exe process
+      href: ./system-management-components/high-cpu-usage-wmiprvse-process-regular-intervals.md
     - name: Error 0x8004106C while you run WMI queries
       href: ./system-management-components/wmi-error-0x8004106c.md
     - name: Event 5605 when querying MSCluster namespace by WMI
