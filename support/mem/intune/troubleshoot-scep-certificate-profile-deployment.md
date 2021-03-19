@@ -14,9 +14,9 @@ The SCEP certificate profile, and the trusted certificate profile specified in t
 
 |                  |Trusted certificate profile assignment includes User|Trusted certificate profile assignment includes Device|Trusted certificate profile assignment includes User and Device|
 |------------------|---------|--------|--------|
-|**SCEP Profile assignment includes User**|Success|Failure|Success|
-|**SCEP Profile assignment includes Device**|Failure|Success|Success|
-|**SCEP Profile assignment includes User and Device**|Success|Success|Success|
+|**SCEP certificate profile assignment includes User**|Success|Failure|Success|
+|**SCEP certificate profile assignment includes Device**|Failure|Success|Success|
+|**SCEP certificate profile assignment includes User and Device**|Success|Success|Success|
 
 ## Android
 
