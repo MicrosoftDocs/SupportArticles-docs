@@ -34,7 +34,7 @@ Additionally, the following event logs are received.
 
  > [7]0E08.0F10::02/21/19-20:42:08.9726563 [Microsoft-Windows-Hyper-V-VMMS-Admin] The Virtual Machine Management Service failed to setup the listen socket for Virtual Machine migration connections for address\<IP address>: %%2147952449 (0x80072741).  
  >
- > [6]0E08.1C10::02/21/19-20:42:20.1233454 [Microsoft-Windows-Hyper-V-VMMS-Networking] Failed to connect Ethernet switch port (switch name = '\<SwitchName>', port name = '\<PortName>', adapter GUID = '{\<AdapterGUID>}'): %%2147942402 (0x80070002).  
+ > [6]0E08.1C10::02/21/19-20:42:20.1233454 [Microsoft-Windows-Hyper-V-VMMS-Networking] Failed to connect Ethernet switch port (switch name = '6F75CCC9-4C0E-4FF0-B7CF-201BA3049695', port name = '0C231741-FFA9-44A0-9858-D14648575166', adapter GUID = '{5F133C55-E3E9-4D71-B455-7E431E4BBB27}'): %%2147942402 (0x80070002).  
  >
  > [3]0E08.0F10::02/21/19-20:42:20.3394763 [Microsoft-Windows-Hyper-V-VMMS-Admin] The Virtual Machine Management Service failed to setup the listen socket for Virtual Machine migration connections for address \<IP address>: %%2147952449 (0x80072741).  
  >
