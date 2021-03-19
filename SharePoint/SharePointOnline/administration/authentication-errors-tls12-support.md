@@ -83,3 +83,16 @@ As previously communicated in the Microsoft 365 Admin Center (for example, commu
    **Resolution**
    
    Upgrade to a later version of the browser.
+   
+   **Issue 5**
+
+   **Symptom**
+   
+   Authentication issues with Windows Server 2012 R2 due to missing two cipher suites that are needed for Azure Front Door. 
+   
+   TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+   TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+
+   **Resolution**
+   
+   Configuration to add the missing cipher suites must be completed on Windows 2012 R2. If Windows 2012 R2 is still experiencing the issue, ensure there are no Windows Group Policy (GOP) exceptions that would prevent the cipher suites on Windwos 2012 R2 servers.<br/>
