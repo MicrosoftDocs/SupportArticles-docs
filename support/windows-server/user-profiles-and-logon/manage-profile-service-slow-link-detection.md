@@ -23,7 +23,7 @@ _Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Win
 
 ## Summary
 
-Windows User Profile Service can use slow link detection to determine whether to download a roaming user profile to the client computer when the user signs in. If the service determines that the connection to the client computer is slow, synchronization is skipped. The service also records an event that resembles the following:
+Windows User Profile Service can use slow link detection to determine whether to download a roaming user profile to the client computer when the user signs in. If the service determines that the connection to the client computer is slow, the client skips the download. Instead, it loads the local copy of the roaming user profile. The service also records an event that resembles the following:
 
 > Log Name:      Application  
 > Source:        Microsoft-Windows-User Profiles Service  
@@ -42,7 +42,7 @@ The default configuration of the slow link detection settings should correctly i
 
 ## More information
 
-The following sections describe how the slow link detection algorithm works, and recommends a starting point and factors to consider in your own testing and tuning.
+The following sections describe how the slow link detection algorithm works, and recommend a starting point and factors to consider in your own testing and tuning.
 
 ### How Windows detects slow links
 
@@ -83,7 +83,7 @@ The new algorithm uses a different file access pattern. Instead of writing data 
 
 This algorithm produces more accurate delay and throughput measurements. The new maximum **PingBufferSize** value provides more flexibility. However, if the link is very slow, a large **PingBufferSize** value might slow down the algorithm itself so that it delays the whole process of downloading the user profile.
 
-#### Settings the control slow link detection
+#### Settings that control slow link detection
 
 Windows provides several Group Policy settings that control slow link detection. The following table describes some of the most important of these policies. For more information about how to use these policies, see [Policy CSP - ADMX_UserProfiles: ADMX_UserProfiles/SlowLinkTimeOut](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-admx-userprofiles#admx-userprofiles-slowlinktimeout).
 
@@ -110,16 +110,16 @@ The following values are the defaults for the [policy and registry settings](#se
 - **Time to wait**: 120 milliseconds
 - **PingBufferSize**: 65,536 bytes
 
-We've tested slow link detection by using < 10-Mbit/s broadband links plus VPN, Wi-Fi networks, and LAN connections. This testing shows that a **PingBufferSize** of **1,048,576** (1 MB) provides an effective balance between identifying slow links and delaying the link detection process. We recommend that you use this value to start testing. Depending on your environment, the actual value that you should use might be lower or higher.
+We've tested slow link detection by using < 10-Mbit/s broadband links plus VPN, Wi-Fi networks, and LAN connections. This testing shows that a **PingBufferSize** of **1,048,576** (1 MB) provides a balance between correctly identifying slow links and delaying the link detection process. We recommend that you use this value to start testing. Depending on your environment, the actual value that you should use might be lower or higher.
 
-To make sure that slow link detection works reliably under a variety of conditions, test several combinations of profiles (both full and incremental sync) and network conditions.
+To make sure that slow link detection works reliably under various conditions, test several combinations of profiles (both full and incremental sync) and network conditions.
 
 #### Network factors to consider
 
 - **Slowest potential speeds**.
   Account for the slowest network links that you expect your users to have. Typically, these include mobile carrier connections (such as LTE or UMTS) and home internet connections (such as DSL and cable).
 
-  These networks tend to have asymmetric speeds. This means that they download files at higher speeds than they upload files. Because it uses four times as many reads as writes of the same data, the new slow link detection algorithm is well-suited to analyzing asymmetric-speed networks.
+  These networks tend to have asymmetric speeds. This design means that they download files at higher speeds than they upload files. Because it uses four times as many reads as writes of the same data, the new slow link detection algorithm is well-suited to analyzing asymmetric-speed networks.
 
   > [!NOTE]  
   > When a user signs out of Windows, Windows uploads any profile files that were updated during the user session. A link that has been identified as a fast link might still produce a slow sign-out experience.
@@ -134,11 +134,7 @@ To make sure that slow link detection works reliably under a variety of conditio
 
 When the user signs in to Windows, the User Profile Service enumerates all the files in the user profile to determine what to update on the local copy. This update might involve downloading a few files that have changed (an incremental update) or downloading the entire user profile (full sync). When the user signs out, Windows uploads any profile files that have changed. This transaction resembles an incremental update.
 
-To determine your SLA, consider the time that's required to download the entire user profile.
-
-Also, consider the largest profile that you have. Because the User Profile Service enumerates the files, the "size" of a profile depends on both the number of files and the total amount of data in those files.
-
-You should test variations of profile sync types and network conditions to determine whether slow link detection makes a measurement that meets the logon SLA.
+For testing, consider the time that's required to download the entire user profile, especially the largest profile that you have. Because the User Profile Service enumerates the files, the "size" of a profile depends on both the number of files and the total amount of data in those files. Make sure that the user sign-in experience meets the SLA even when doing a full download of the largest profile.
 
 #### Tuning the user profiles
 
