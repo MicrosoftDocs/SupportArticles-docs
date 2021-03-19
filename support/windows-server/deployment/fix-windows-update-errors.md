@@ -16,7 +16,7 @@ adobe-target: true
 ---
 # Fix Windows Update errors by using the DISM or System Update Readiness tool
 
-_Original product version:_ &nbsp; Windows 10, version 1809 and later versions, Windows Server 2012 R2, Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Original product version:_ &nbsp; Windows 10, version 1809 and later versions, Windows 8.1, Windows Server 2012 R2, Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 947821
 
 ## Symptom
@@ -25,11 +25,11 @@ Windows updates and service packs may fail to install if there are [corruption e
 
 This article is intended for Support agents and IT professionals. If you are home users and looking for more information about fixing Windows update errors, see [Fix Windows Update errors](https://support.microsoft.com/help/10164).
 
-## Resolution for Windows 10 and Windows Server 2012 R2
+## Resolution for Windows 8.1, Windows 10 and Windows Server 2012 R2
 
 To resolve this problem, use the inbox Deployment Image Servicing and Management (DISM) tool. Then, install the Windows update or service pack again.
 
-1. Open an elevated command prompt. To do this, swipe in from the right edge of the screen, and then tap Search. Or, if you are using a mouse, point to the lower-right corner of the screen, and then select **Search**. Type *Command Prompt* in the **Search** box, right-select **Command Prompt**, and then select **Run as administrator**. If you are prompted for an administrator password or for a confirmation, type the password, or select **Allow**.
+1. Open an elevated command prompt. To do this, open **Start** menu or **Start** screen, type *Command Prompt*, right-select **Command Prompt**, and then select **Run as administrator**. If you are prompted for an administrator password or for a confirmation, type the password, or select **Allow**.
 
 2. Type the following command, and then press Enter. It may take several minutes for the command operation to be completed.
 
