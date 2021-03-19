@@ -85,9 +85,9 @@ productDirectory:
     summary: Troubleshooting articles for Microsoft Dynamics 365
     url: dynamics-365/index.yml
       
-  - title: Power Platform
+  - title: Microsoft Power Platform
     imageSrc: "media/hub-landing/power-platform.png"
-    summary: Troubleshooting articles for Power Platform
+    summary: Troubleshooting articles for Microsoft Power Platform
     url: power-platform/index.yml
 
   - title: Previous Versions

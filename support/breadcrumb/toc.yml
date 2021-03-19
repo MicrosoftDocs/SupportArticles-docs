@@ -111,7 +111,7 @@
         tocHref: /troubleshoot/azure/virtual-machines/
         topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
 
-    - name: Dynamics 365
+    - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/
       topicHref: /troubleshoot/dynamics-365/
       items:
@@ -125,7 +125,7 @@
         tocHref: /troubleshoot/dynamics-365/sales/
         topicHref: /troubleshoot/dynamics-365/sales/welcome-sales
 
-    - name: Power Platform
+    - name: Microsoft Power Platform
       tocHref: /troubleshoot/power-platform/
       topicHref: /troubleshoot/power-platform/
       items:

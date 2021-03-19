@@ -43,7 +43,7 @@ This error occurs in organizations that have disabled self-service signups. Self
     > [!NOTE]
     > Trial plans aren't sufficient to for Approval CDS provisioning. GCC tenants can only use approach #2 to be able to provision database instances.
 
-1. Create the database as an environment admin directly from [Power Platform admin center](https://admin.powerplatform.microsoft.com)  
+1. Create the database as an environment admin directly from [Power Platform Admin Center](https://admin.powerplatform.microsoft.com)  
 
 ## Error with status code "AADApplicationDisabled"
 
@@ -73,7 +73,7 @@ The database for this instance is still being provisioned, or has failed provisi
 
 > The current user doesn't have permissions to create a Common Data Service database for this environment.
 
-For non-Default Flow and PowerApps environments, only environment admins can directly (through the Flow Admin portal) or indirectly (through Flow Approvals) create the Common Data Service database.
+For non-Default Flow and Power Appsenvironments, only environment admins can directly (through the Flow Admin portal) or indirectly (through Flow Approvals) create the Common Data Service database.
 
 Either an administrator must:
 

@@ -1,22 +1,22 @@
 ---
-title: Troubleshooting startup issues in PowerApps Web Authoring
-description: Describes common startup problems in PowerApps Web Authoring. Troubleshooting steps and resolutions are provided.
+title: Troubleshooting startup issues in Power Apps Web Authoring
+description: Describes common startup problems in Power Apps Web Authoring. Troubleshooting steps and resolutions are provided.
 ms.reviewer: davidni
 ms.topic: troubleshooting
 ms.date: 
 ---
-# Troubleshooting startup issues in PowerApps Web Authoring
+# Troubleshooting startup issues in Power Apps Web Authoring
 
-This troubleshooting guide helps fix the following two common configuration problems that prevent [PowerApps Web Authoring](#about-powerapps-web-authoring) from starting.
+This troubleshooting guide helps fix the following two common configuration problems that prevent [Power Apps Web Authoring](#about-power-apps-web-authoring) from starting.
 
 _Applies to:_ &nbsp; Power Apps  
 _Original KB number:_ &nbsp; 4023606
 
-## Two startup issues in PowerApps Web Authoring
+## Two startup issues in Power Apps Web Authoring
 
 - You receive a "Hmmm ... We couldn't sign you in" error message and identifier that resembles the following image:
 
-  :::image type="content" source="media/troubleshoot-startup-issues-in-powerapps-web-authoring/error.png" alt-text="Error screen.":::
+  :::image type="content" source="media/troubleshoot-startup-issues-in-power-apps-web-authoring/error.png" alt-text="Error screen.":::
 
   > [!NOTE]
   > View the [Common errors matrix](#common-error-matrix), later in this article, to see all error codes.
@@ -54,7 +54,7 @@ If you experience one of the issues that's described in this section, check out 
 
 ## Resolution 1 - Enable storage of local data in your browser
 
-PowerApps Web Authoring stores some data locally in your browser, including user identity and preferences. PowerApps Web Authoring can't function if the browser is configured to disallow this.
+Power Apps Web Authoring stores some data locally in your browser, including user identity and preferences. Power Apps Web Authoring can't function if the browser is configured to disallow this.
 
 ### Instructions for Internet Explorer 11
 
@@ -71,13 +71,13 @@ PowerApps Web Authoring stores some data locally in your browser, including user
 9. In the **Settings** section, select **Advanced**.
 10. Select the **Privacy** tab.
 11. Select **Internet Options**.
-12. On the browser toolbar, select the gear icon ![Gear Icon](./media/troubleshoot-startup-issues-in-powerapps-web-authoring/gear-icon.png).
+12. On the browser toolbar, select the gear icon ![Gear Icon](./media/troubleshoot-startup-issues-in-power-apps-web-authoring/gear-icon.png).
 13. Open Internet Explorer.
 
-#### Option 2 - Create exceptions to enable local data for PowerApps and associated services
+#### Option 2 - Create exceptions to enable local data for Power Apps and associated services
 
 1. Open Internet Explorer.
-2. On the browser toolbar, select the gear icon ![Gear Icon](./media/troubleshoot-startup-issues-in-powerapps-web-authoring/gear-icon.png).
+2. On the browser toolbar, select the gear icon ![Gear Icon](./media/troubleshoot-startup-issues-in-power-apps-web-authoring/gear-icon.png).
 3. Select **Internet Options**.
 4. Select the **Privacy** tab.
 5. In the **Settings** section, select **Sites**.
@@ -112,7 +112,7 @@ PowerApps Web Authoring stores some data locally in your browser, including user
 7. Select **Manage exceptions**  and make sure that there are no exceptions for `https://create.powerapps.com`, `https://*.create.powerapps.com`, and `https://login.microsoftonline.com`. If there are such exceptions, remove them by selecting the **x** sign for the corresponding rows.
 8. Select **Done**.
 
-#### Option 2 - Create exceptions to allow local data for PowerApps and associated services
+#### Option 2 - Create exceptions to allow local data for Power Apps and associated services
 
 1. On the browser toolbar, select **More**.
 2. Select **Settings**.
@@ -123,11 +123,11 @@ PowerApps Web Authoring stores some data locally in your browser, including user
 
 ## Resolution 2 - Configure Trust Zones for Internet Explorer and Edge
 
-Internet Explorer and Edge useTrust Zones. Problems can occur if services on which PowerApps Web Authoring relies are in different Trust Zones in your browser settings. While these settings apply to both Internet Explorer and Edge, the easiest way to access them is from Internet Explorer. (You might need assistance from your IT administrator to change some of these settings.)
+Internet Explorer and Edge useTrust Zones. Problems can occur if services on which Power Apps Web Authoring relies are in different Trust Zones in your browser settings. While these settings apply to both Internet Explorer and Edge, the easiest way to access them is from Internet Explorer. (You might need assistance from your IT administrator to change some of these settings.)
 
-### Option 1 - Add the required PowerApps domains to the Trusted Sites zone
+### Option 1 - Add the required Power Apps domains to the Trusted Sites zone
 
-1. On the browser toolbar, select the gear icon ![Gear Icon](./media/troubleshoot-startup-issues-in-powerapps-web-authoring/gear-icon.png).
+1. On the browser toolbar, select the gear icon ![Gear Icon](./media/troubleshoot-startup-issues-in-power-apps-web-authoring/gear-icon.png).
 2. Select **Internet Options**.
 3. Select the **Security** tab.
 4. Select **Trusted sites**.
@@ -143,9 +143,9 @@ Internet Explorer and Edge useTrust Zones. Problems can occur if services on whi
 8. Select **OK**.
 9. Close all Internet Explorer and Edge windows.
 
-### Option 2 - Remove all the PowerApps domains from the Trusted Sites zone
+### Option 2 - Remove all the Power Apps domains from the Trusted Sites zone
 
-1. On the browser toolbar, select the gear icon ![Gear Icon](./media/troubleshoot-startup-issues-in-powerapps-web-authoring/gear-icon.png).
+1. On the browser toolbar, select the gear icon ![Gear Icon](./media/troubleshoot-startup-issues-in-power-apps-web-authoring/gear-icon.png).
 2. Select **Internet Options**.
 3. Select the **Security** tab.
 4. Select **Trusted sites**.
@@ -161,13 +161,13 @@ Internet Explorer and Edge useTrust Zones. Problems can occur if services on whi
 
 ## Resolution 3 - Azure Active Directory errors
 
-Azure Active Directory (AAD) is the technology on which the PowerApps ecosystem relies for user authentication and authorization.
+Azure Active Directory (AAD) is the technology on which the Power Apps ecosystem relies for user authentication and authorization.
 
 The error page that you see might contain additional information that can help diagnose and fix the problem.
 
 > [!NOTE]
 > To resolve ADD errors, you might need assistance from your IT department.
 
-## About PowerApps Web Authoring
+## About Power Apps Web Authoring
 
-PowerApps Web Authoring is the tool that lets you author and edit your PowerApps applications on the web. When you use the PowerApps Web Authoring tool, the address bar in your browser will show text like `https://create.powerapps.com/...` and may also include a region code, such as in https://**eu**.create.powerapps.com/....
+Power Apps Web Authoring is the tool that lets you author and edit your Power Apps applications on the web. When you use the Power Apps Web Authoring tool, the address bar in your browser will show text like `https://create.powerapps.com/...` and may also include a region code, such as in https://**eu**.create.powerapps.com/....

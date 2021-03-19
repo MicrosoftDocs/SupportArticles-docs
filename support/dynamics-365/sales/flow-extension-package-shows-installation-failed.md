@@ -9,7 +9,7 @@ ms.date:
 
 This article provides a solution to an issue where Microsoft Flow Extension Package shows Installation failed.
 
-_Applies to:_ &nbsp; Power Platform  
+_Applies to:_ &nbsp; Microsoft Power Platform  
 _Original KB number:_ &nbsp; 4560419
 
 ## Symptoms

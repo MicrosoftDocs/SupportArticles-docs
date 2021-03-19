@@ -28,7 +28,7 @@ This experience is part of a feature that's now enabled by default:
 
 ## Resolution
 
-You can disable this feature within the [Power Platform Administration Center](https://admin.powerplatform.microsoft.com):
+You can disable this feature within the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com):
 
 1. Access [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com/) as an administrator.
 2. On the **Environments** tab, click **...** next to the name of the environment and then click **Settings**.

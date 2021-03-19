@@ -131,7 +131,7 @@ To resolve this issue, users must sign in to the Flow portal under conditions th
 
 #### Effect 3 - Users can't create a connection directly
 
-If users don't sign in to Flow by using criteria that matches the policies, they can't create a connection directly, either through PowerApps or Flow. Users see the following error message when they try to create a connection:
+If users don't sign in to Flow by using criteria that matches the policies, they can't create a connection directly, either through Power Appsor Flow. Users see the following error message when they try to create a connection:
 
 > AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access \<service>.
 

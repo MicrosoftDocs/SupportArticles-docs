@@ -102,7 +102,7 @@ The database for this instance is still being provisioned, or has failed provisi
 
 > The current user does not have permissions to create a Common Data Service database for this environment. Please ask an environment administrator to create the database.
 
-For non-Default Flow and PowerApps environments, only environment admins can directly (through the Flow Admin portal) or indirectly (through Flow Approvals) create the Common Data Service database. Either an administrator must
+For non-Default Flow and Power Appsenvironments, only environment admins can directly (through the Flow Admin portal) or indirectly (through Flow Approvals) create the Common Data Service database. Either an administrator must
 
 - Create the environment manually from the Flow Admin portal.
 - Create and run an Approvals Flow.

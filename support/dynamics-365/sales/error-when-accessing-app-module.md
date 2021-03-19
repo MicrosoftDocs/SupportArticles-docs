@@ -40,4 +40,4 @@ The resolution is to reach out to your administrator and request the license to 
 
 **Access to Custom Apps:**
 
-For access to custom apps (canvas or model-driven), you need to be assigned a Dynamics 365 Enterprise or Professional license, **PowerApps Per User** plan or the environment needs to be given **PowerApps per app** plans (aka **app passes**). For more information about **PowerApps per app** plans (aka **app passes**), see [About Power Apps per app plans](/power-platform/admin/about-powerapps-perapp).
+For access to custom apps (canvas or model-driven), you need to be assigned a Dynamics 365 Enterprise or Professional license, **Power AppsPer User** plan or the environment needs to be given **Power Appsper app** plans (aka **app passes**). For more information about **Power Appsper app** plans (aka **app passes**), see [About Power Apps per app plans](/power-platform/admin/about-powerapps-perapp).

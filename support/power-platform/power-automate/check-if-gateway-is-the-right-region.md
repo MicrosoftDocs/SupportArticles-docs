@@ -19,7 +19,7 @@ I can't see my gateway in Power Automate, either on the Gateway page and/or when
 ## Verifying issue
 
 1. Check the region of your Power Apps environment
-    1. Go to the [Power Platform environment admin page](https://admin.powerplatform.microsoft.com/environments).
+    1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments).
     1. Verify the region of the environment you're using:
 
         :::image type="content" source="media/check-if-gateway-is-the-right-region/verify-region-environment.png" alt-text="Check region of Power Platform environment.":::
@@ -55,7 +55,7 @@ It's unfortunately not possible to change the region of a gateway that's already
 
     :::image type="content" source="media/check-if-gateway-is-the-right-region/select-change-region-link.png" alt-text="Change the gateway region.":::
 
-1. Select the region matching your PowerApps environment, and hit **Done**.
+1. Select the region matching your Power Apps environment, and hit **Done**.
 1. Keep following the Gateway installation wizard until complete.
 1. Go to the Gateway page of the flow portal in the target environment.
 1. Verify that the Gateway properly appears in the list of Gateways. If the Gateway is still missing, contact the Microsoft support.

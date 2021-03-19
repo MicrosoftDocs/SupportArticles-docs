@@ -1,20 +1,20 @@
 ---
 title: Best practices when updating a Flow
-description: This article describes best practices around updating Microsoft Flows used by PowerApps.
+description: This article describes best practices around updating Microsoft Flows used by Power Apps.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 
 ---
 # Best practices when updating a Flow used by a Power App
 
-This article describes best practices around updating Microsoft Flows used by PowerApps.
+This article describes best practices around updating Microsoft Flows used by Power Apps.
 
 _Applies to:_ &nbsp; Power Apps  
 _Original KB number:_ &nbsp; 4477072
 
 ## Symptoms
 
-After updating a Flow, calls to that Flow from PowerApps start failing.
+After updating a Flow, calls to that Flow from Power Apps start failing.
 
 - If a new input is added to a Flow without a Power App being updated, the Flow will fail with an error message like:
 
@@ -26,7 +26,7 @@ After updating a Flow, calls to that Flow from PowerApps start failing.
 
     In PowerApps, it may look like
 
-    :::image type="content" source="media/best-practices-when-updating-a-flow/powerapp-error.png" alt-text="PowerApps Flow failure error.":::
+    :::image type="content" source="media/best-practices-when-updating-a-flow/powerapp-error.png" alt-text="Power AppsFlow failure error.":::
 
     Or in Flow
 
@@ -34,17 +34,17 @@ After updating a Flow, calls to that Flow from PowerApps start failing.
 
     > Unable to process template language expressions in action 'Send_an_email' inputs at line '1' and column '1899': 'The template language expression 'json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$connections']['shared_office365']['connectionId']' cannot be evaluated because property 'shared_office365' doesn't exist, available properties are 'shared_flowpush'. Please see `https://aka.ms/logicexpressions` for usage details.'.
 
-- If a response output is removed, PowerApps will treat the value as blank and the PowerApp will behave unexpectedly.  
+- If a response output is removed, Power Appswill treat the value as blank and the PowerApp will behave unexpectedly.  
 
 ## Cause
 
-To invoke a Flow from PowerApps, PowerApps needs to know what inputs the Flow needs, what connections to supply to Flow and what outputs a Flow will return. PowerApps store this information in the definition of your Power App. Which creates a binding between a version of a Power App and the Flows used in it. Changing any of these three aspects of a Flow can break all previous versions of PowerApps that integrate with that Flow. To fix an affected Power App or to make use of one of these Flow changes, the Power App needs to be updated.
+To invoke a Flow from PowerApps, Power Appsneeds to know what inputs the Flow needs, what connections to supply to Flow and what outputs a Flow will return. Power Appsstore this information in the definition of your Power App. Which creates a binding between a version of a Power App and the Flows used in it. Changing any of these three aspects of a Flow can break all previous versions of Power Appsthat integrate with that Flow. To fix an affected Power App or to make use of one of these Flow changes, the Power App needs to be updated.
 
-Types of changes most likely to break a PowerApps ability to call a flow include:
+Types of changes most likely to break a Power Appsability to call a flow include:
 
-- Adding a new Ask in PowerApps token.
+- Adding a new Ask in Power Appstoken.
 
-    :::image type="content" source="media/best-practices-when-updating-a-flow/ask-powerapps.png" alt-text="Adding a PowerApps token.":::
+    :::image type="content" source="media/best-practices-when-updating-a-flow/ask-powerapps.png" alt-text="Adding a Power Appstoken.":::
 
 - Adding a new connection. For example, by adding a new action from a Connector that wasn't previously used like the SharePoint Connector.
 
@@ -54,21 +54,21 @@ Types of changes most likely to break a PowerApps ability to call a flow include
 
     :::image type="content" source="media/best-practices-when-updating-a-flow/change-existing-connection.png" alt-text="Changing a connection in Flow.":::
 
-- Removing an output from a Respond to PowerApps actions.
+- Removing an output from a Respond to Power Appsactions.
 
-    :::image type="content" source="media/best-practices-when-updating-a-flow/remove-output.png" alt-text="Removing a Respond to PowerApps output in Flow.":::
+    :::image type="content" source="media/best-practices-when-updating-a-flow/remove-output.png" alt-text="Removing a Respond to Power Appsoutput in Flow.":::
 
-Other changes to the inputs or outputs won't break the integration between PowerApps and Flow but will require the Power App to be updated so that it can use them.
+Other changes to the inputs or outputs won't break the integration between Power Appsand Flow but will require the Power App to be updated so that it can use them.
 
 ## Resolution
 
 - **Changing a live PowerApp**  
 
-    Once a Power App is published, it's **always** recommended to make copies of Flows used by the PowerApps to make any updates. Any update to a Flow referenced by a live Power App has the potential to break existing users. **Don't** delete or turn off the existing Flows until all users have been upgraded to the new published version of the Power App.
+    Once a Power App is published, it's **always** recommended to make copies of Flows used by the Power Appsto make any updates. Any update to a Flow referenced by a live Power App has the potential to break existing users. **Don't** delete or turn off the existing Flows until all users have been upgraded to the new published version of the Power App.
 
     :::image type="content" source="./media/best-practices-when-updating-a-flow/make-copy-flow.png" alt-text="Flow Save as dialog.":::
 
-    In the new version of the Power App, reference the new Flows. When the new version of the Power App is published, users will start to use the new Flows with the correct inputs, outputs, and connections. Which will prevent Flow updates for new versions of PowerApps from affecting users of the existing version.
+    In the new version of the Power App, reference the new Flows. When the new version of the Power App is published, users will start to use the new Flows with the correct inputs, outputs, and connections. Which will prevent Flow updates for new versions of Power Appsfrom affecting users of the existing version.
 
 - **Changing a PowerApp development version**
 
