@@ -2411,7 +2411,7 @@
   - name: WMI
     items:
     - name: High CPU usage by WmiPrvSE.exe process
-      href: /system-management-components/high-cpu-usage-wmiprvse-process-regular-intervals.md
+      href: ./system-management-components/high-cpu-usage-wmiprvse-process-regular-intervals.md
     - name: Error 0x8004106C while you run WMI queries
       href: ./system-management-components/wmi-error-0x8004106c.md
     - name: Event 5605 when querying MSCluster namespace by WMI
