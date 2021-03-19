@@ -30,14 +30,14 @@ After you install a security update on a server that’s running Microsoft Excha
 
 OWA displays the following error message:
 
-Something went wrong<br/>
+Something went wrong</br>
 Your request couldn’t be completed. HTTP Status code: 500
 
 ![Something went wrong. Your request couldn’t be completed. HTTP Status code: 500](./media/owa-stops-working-after-update/ExchangeServer-OWA-SomethingWentWrong.png)
 
 ECP displays the following error message:
 
->Server Error in ‘/ecp’ Application.<br>
+>Server Error in ‘/ecp’ Application.</br>
 Could not load file or assembly ‘Microsoft.Exchange.Common, Version=15.0.0.0 …Culture=neutral, PublicKeyToken=31bf3856ad364e54’ or one of its dependencies. The system cannot find the file specified.
 
 ![Server Error in ecp Application Could not load file or assembly Microsoft.Exchange.Common](./media/owa-stops-working-after-update/Could-not-load-file-or-assembly.png)
@@ -74,7 +74,7 @@ If the ECP error message continues to display, do the following:
 - C:\Program Files\Microsoft\Exchange Server\V15\bin\CmdletExtensionAgents;
 - C:\Program Files\Microsoft\Exchange Server\V15\ClientAccess\Owa\bin
 
-**Note** The paths must point to where Exchange Server is installed. The following examples assume that the program is installed on drive C and that the version is Microsoft Exchange Server 2013. If it is installed on a different drive on your server, or if you’re using a different version such as Microsoft Exchange Server 2010, then use the path and version information that's appropriate for your installation.
+**Note. The paths must point to where Exchange Server is installed. The following examples assume that the program is installed on drive C and that the version is Microsoft Exchange Server 2013. If it is installed on a different drive on your server, or if you’re using a different version such as Microsoft Exchange Server 2010, then use the path and version information that's appropriate for your installation.
 
 1. Navigate to a folder that includes Exchange Server scripts. By default, scripts are located in the following path for Exchange Server 2013:
 
