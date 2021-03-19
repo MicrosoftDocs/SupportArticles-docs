@@ -15,7 +15,7 @@ ms.technology: windows-client-networking
 ---
 # Move the client-side caching (CSC) folder to a new location in Windows
 
-This article describes how to move the client-side caching (CSC) folder in Windows and how to delete the old cache folder after you move the CSC cache folder to a new location.
+This article describes how to move the CSC folder in Windows. It also provides steps to delete the old cache folder after you move the CSC cache folder to a new location.
 
 _Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1709, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 942960
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 942960
 
 ## Why you can't use Cachemov.exe
 
-The Cachemov.exe tool isn't supported in Windows Vista and later versions of Windows. When you try to use the Cachemov.exe tool to move the client-side caching (CSC) folder in Windows Vista and later versions of Windows, you may receive the following error message:
+The Cachemov.exe tool isn't supported in Windows Vista and later versions of Windows. When you try to use the Cachemov.exe tool to move the CSC folder in Windows Vista and later versions of Windows, you may receive the following error message:
 
 > cachemov.exe - Ordinal Not Found  
 > The ordinal 51 could not be located in the dynamic link library CSCDLL.dll
@@ -72,7 +72,7 @@ To move the CSC cache folder to another location in Windows Vista, Windows 7, Wi
     4. Select **External hard disk or to a network location**.
     5. Type a path where you want to save the Savedata.mig file, and then select **Next**.
     6. Select **Advanced options**.
-    7. In the **Select user accounts, files, and settings to transfer** dialog box, do the following:
+    7. In the **Select user accounts, files, and settings to transfer** dialog box, do the steps:
 
         1. Clear all check boxes.
         2. Under **System and program settings (all users)**, expand **Windows Settings** > **Network and Internet**, and then select the **Offline Files** check box.
