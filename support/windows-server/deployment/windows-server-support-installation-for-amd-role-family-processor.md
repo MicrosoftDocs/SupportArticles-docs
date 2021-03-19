@@ -48,7 +48,7 @@ This section provides information about Windows Server support with respect to t
 
 ## AMD EPYC Processor SKU support
 
-AMD offers a wide range of EPYC 7000 Series Processors, including the EPYC 7002 and EPYC 7003 Series Processors. You can determine the specific processor model SKUs and the corresponding maximum threads in the following articles:
+AMD offers a wide range of EPYC 7000 Series Processors, including the EPYC 7002 and EPYC 7003 Series Processors. You can determine the specific processor model SKUs and the corresponding maximum threads from the following articles:
 
 - [AMD EPYC™ 7002 Series Processors](https://www.amd.com/en/processors/epyc-7002-series)
 - [AMD EPYC™ 7003 Series Processors](https://www.amd.com/en/processors/epyc-7003-series)
