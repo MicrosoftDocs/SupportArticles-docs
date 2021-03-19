@@ -110,8 +110,8 @@ Get-PublicFolderMailboxMigrationRequest | where {$_.TargetMailbox -eq "<Ma
 Then, restart the public folder migration batch:
 
 ```powershell
-Start-MigrationBatch PublicFolderMigration
 Stop-MigrationBatch PublicFolderMigration
+Start-MigrationBatch PublicFolderMigration
 ```
 
 ## More information
