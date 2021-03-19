@@ -12,10 +12,11 @@ ms.date: 03/18/2021
 
 ## Symptoms
 
-You use an automatic deployment rule (ADR) to deploy software updates. However, the updates aren't downloaded when you run the ADR. And you receive the following error messages in the Patchdownloader.log file:
+You use an automatic deployment rule (ADR) to deploy software updates. However, the updates aren't downloaded when you run the ADR. Additionally, you receive the following error messages in the Patchdownloader.log file:
 
 ```output
 Failed to create temp file with GetTempFileName() at temp location C:\Windows\TEMP\, error 80 Software Updates Patch Downloader 
+
 ERROR: DownloadUpdateContent() failed with hr=0x80070050 Software Updates Patch Downloader 
 ```
 
