@@ -37,4 +37,4 @@ This problem is fixed in [Update Rollup for Microsoft Endpoint Configuration Man
 
 The fix will be included in Configuration Manager current branch, version 2103.
 
-To fix the problem in Configuration Manager current branch version 1910, 2002, and 2006, delete the .tmp files in c:\windows\temp. And then rerun the ADR.
+To fix the problem in Configuration Manager current branch version 1910, 2002, and 2006, delete the .tmp files in c:\windows\temp, and then rerun the ADR.
