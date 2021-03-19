@@ -513,6 +513,8 @@
       href: ../public-folders/migrationbatch-fails-no-public-folder-mailboxes.md
     - name: Public folder meetings cannot be modified in OWA
       href: /exchange/troubleshoot/calendars/public-folder-meetings-not-modified-in-owa?context=/exchange/troubleshoot/context/server-context
+    - name: Large items skipped during migration
+      href: ../public-folders/large-items-skipped.md
     - name: Public folder migration stops at 95%
       href: ../public-folders/public-folder-migration-fails.md
     - name: Troubleshoot public folder replication issues
