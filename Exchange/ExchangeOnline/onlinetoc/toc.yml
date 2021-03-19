@@ -75,6 +75,8 @@
       href: ../administration/how-to-create-organizational-forms-library.md
     - name: How to disable Exchange ActiveSync for users
       href: ../administration/how-to-disable-exchange-activesync-for-users.md
+    - name: How to migrate AD RMS to Azure RMS in Exchange Online
+      href: ../administration/migrate-ad-rms-to-azure.md
     - name: How to use PowerShell to grant admin access to all mailboxes
       href: ../administration/how-to-use-powershell-to-grant-admin-access-to-all-mailboxes.md
     - name: Inactive mailbox isn't automatically reconnected to AD
