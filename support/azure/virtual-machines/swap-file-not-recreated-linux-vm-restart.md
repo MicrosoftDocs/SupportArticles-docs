@@ -69,7 +69,8 @@ To resolve this problem, follow these steps:
         ```
 
     2. Make the file executable by using the `# chmod +x create_swapfile.sh` command.
-    3. Restart the server, and check for swap enablement. Here is an example of how to enable the swap capability: 
+    3. Stop and Start the VM or Redeploy it from the portal, and check for swap enablement.
+        Here is an example of how to enable the swap capability: 
 
         ```    
         root@ub1804-ephemeral:/var/lib/cloud/scripts/per-boot# free -m 
