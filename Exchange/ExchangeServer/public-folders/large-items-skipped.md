@@ -21,7 +21,7 @@ appliesto:
 - Exchange Online
 search.appverid: MET150
 ---
-# Large Items are skipped during public folder migration
+# Large items are skipped during public folder migration
 
 ## Symptoms
 
