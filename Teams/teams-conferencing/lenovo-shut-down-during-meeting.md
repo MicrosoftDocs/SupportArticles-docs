@@ -32,18 +32,18 @@ To work around this issue, reduce the value of the Maximum processor state setti
 
 1. Right-click the battery icon in the task bar, and then select **Power Options**
 
-    :::image type="content" source="./media/lenovo-shut-down-during-meeting/poweroptions-menu.png" alt-text=" ":::           
+    :::image type="content" source="./media/lenovo-shut-down-during-meeting/poweroptions-menu.png" alt-text="Image shows Power Options location":::
 
 2. Select **Change plan settings**
-     :::image type="content" source="./media/lenovo-shut-down-during-meeting/poweroptions-changeplan.png" alt-text=" ":::
+     :::image type="content" source="./media/lenovo-shut-down-during-meeting/poweroptions-changeplan.png" alt-text="Image highlights location of Change plan settings button":::
 
 3. Select **Change advanced power settings**
 
-    :::image type="content" source="./media/lenovo-shut-down-during-meeting/poweroptions-changeadvanced.png" alt-text=" ":::       
+    :::image type="content" source="./media/lenovo-shut-down-during-meeting/poweroptions-changeadvanced.png" alt-text="Image shows location of Change advanced power settings":::
 
 4. Expand **Processor power management** and then **Maximum processor state**. Change both **On battery** and **Plugged in** options to **99%**, and then select **OK**
 
-    :::image type="content" source="./media/lenovo-shut-down-during-meeting/poweroptions-maxproc.png" alt-text=" ":::             
+    :::image type="content" source="./media/lenovo-shut-down-during-meeting/poweroptions-maxproc.png" alt-text="Image highlights location of Maximum processor state setting":::
 
 5. Reboot the L13 device.
 
