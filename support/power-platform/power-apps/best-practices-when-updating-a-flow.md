@@ -24,7 +24,7 @@ After updating a Flow, calls to that Flow from Power Apps start failing.
 
 - If the connections required to run a flow change, an error complaining about connections should appear:
 
-    In PowerApps, it may look like
+    In Power Apps, it may look like
 
     :::image type="content" source="media/best-practices-when-updating-a-flow/powerapp-error.png" alt-text="Power AppsFlow failure error.":::
 
@@ -38,7 +38,7 @@ After updating a Flow, calls to that Flow from Power Apps start failing.
 
 ## Cause
 
-To invoke a Flow from PowerApps, Power Appsneeds to know what inputs the Flow needs, what connections to supply to Flow and what outputs a Flow will return. Power Appsstore this information in the definition of your Power App. Which creates a binding between a version of a Power App and the Flows used in it. Changing any of these three aspects of a Flow can break all previous versions of Power Appsthat integrate with that Flow. To fix an affected Power App or to make use of one of these Flow changes, the Power App needs to be updated.
+To invoke a Flow from Power Apps, Power Appsneeds to know what inputs the Flow needs, what connections to supply to Flow and what outputs a Flow will return. Power Appsstore this information in the definition of your Power App. Which creates a binding between a version of a Power App and the Flows used in it. Changing any of these three aspects of a Flow can break all previous versions of Power Appsthat integrate with that Flow. To fix an affected Power App or to make use of one of these Flow changes, the Power App needs to be updated.
 
 Types of changes most likely to break a Power Appsability to call a flow include:
 
@@ -74,7 +74,7 @@ Other changes to the inputs or outputs won't break the integration between Power
 
     While developing a Power App, making changes to a Flow not used by a live version of the PowerApp is easy. After making changes to the inputs, outputs, or connections of a non-published Flow,  reselect the Flow from the Flows Pane.
 
-    :::image type="content" source="media/best-practices-when-updating-a-flow/reselect-flow.png" alt-text="Updating a Flow definition in PowerApps.":::
+    :::image type="content" source="media/best-practices-when-updating-a-flow/reselect-flow.png" alt-text="Updating a Flow definition in Power Apps.":::
 
     It will update the definition of the Flow in the PowerApp validating that the correct input, outputs, and connections are used in the Power App.
 

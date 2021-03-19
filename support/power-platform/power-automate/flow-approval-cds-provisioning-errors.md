@@ -51,7 +51,7 @@ This error occurs in organizations that have disabled self-service signups. Self
 
 > Resource '`https://publishers.crm.dynamics.com`' has been disabled by your tenant administrator. Contact your tenant administrator and request that they enable '`https://publishers.crm.dynamics.com`' in the Azure Portal.'.
 
-These errors occur if the Dynamics CRM Online / Common Data Service applications are disabled either in the tenant, or through Conditional Access for specific users. The exact error message may vary depending on the exact state of the Common Data Service instance corresponding to the PowerApps/Flow environment - unprovisioned, provisioned but no Approvals installed, or Approvals already installed.
+These errors occur if the Dynamics CRM Online / Common Data Service applications are disabled either in the tenant, or through Conditional Access for specific users. The exact error message may vary depending on the exact state of the Common Data Service instance corresponding to the Power Apps/Flow environment - unprovisioned, provisioned but no Approvals installed, or Approvals already installed.
 
 To resolve, tenant administrators will need to go to the **Enterprise Applications** tab under **Azure Active Directory** on [Microsoft Azure](https://ms.portal.azure.com) to ensure application 00000007-0000-0000-c000-000000000000 (Common Data Service / Dynamics CRM Online) is enabled for users to sign in, and any relevant Conditional Access policies grant the necessary access to users expecting to use Flow Approvals.
 

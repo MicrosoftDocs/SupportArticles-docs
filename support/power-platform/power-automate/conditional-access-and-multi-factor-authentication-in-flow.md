@@ -149,7 +149,7 @@ If Exchange Online or SharePoint access is controlled by a conditional access po
 
 #### Effect 5 - Using flow features embedded in other Microsoft services
 
-When a flow is embedded in Microsoft services such as SharePoint, PowerApps, Excel, and Teams, the flow users are also subject to conditional access and multi-factor policies based on how they authenticated to the host service. For example, if a user signs in to SharePoint by using single-factor authentication, but tries to create or use a flow that requires multi-factor access to Microsoft Graph, the user receives an error message.
+When a flow is embedded in Microsoft services such as SharePoint, Power Apps, Excel, and Teams, the flow users are also subject to conditional access and multi-factor policies based on how they authenticated to the host service. For example, if a user signs in to SharePoint by using single-factor authentication, but tries to create or use a flow that requires multi-factor access to Microsoft Graph, the user receives an error message.
 
 #### Effect 6 - Sharing flows by using SharePoint lists and libraries
 
