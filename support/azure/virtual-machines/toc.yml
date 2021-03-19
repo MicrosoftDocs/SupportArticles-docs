@@ -65,7 +65,7 @@
   - name: VM startup is stuck
     href: troubleshoot-vm-boot-configure-update.md
   - name: VM lifecycle and states
-    href: /azure/virtual-machines/states-lifecycle
+    href: /azure/virtual-machines/states-billing
 - name: Cannot connect to my VM
   items:
   - name: Linux
