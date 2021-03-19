@@ -44,7 +44,7 @@ The version number for the last ***** will change based on the updates that have
 
 To see the version number and the most recent update installed, go to the **Help** menu, and select **About Internet Explorer**.
 
-Internet Explorer 11 on Windows 10 has a slight different versioning. Because Internet Explorer 11 changes its version with each update in the second part with the according OS-Build info. For example, if you have Windows 10 version 1607 with the KB4580346 from October 13, 2020, the Operating System shows an OS Build-number of 14393.3986 (as per winver.exe). Internet Explorer 11 will show as version 11.3986.14393.0.
+Internet Explorer 11 on Windows 10 has a slight different versioning. Internet Explorer 11 changes its version with each update in the second part with the according OS-Build information. For example, if you have Windows 10 version 1607 with the KB4580346 from October 13, 2020, the Operating System shows an OS Build-number of 14393.3986 (as per winver.exe). Internet Explorer 11 will show as version 11.3986.14393.0.
 
 > [!Note]
 > The minor version number, build number, and sub-build number may be displayed without trailing zeros. For example, version 7.00.5730.1100 may be displayed as 7.0.5730.11.

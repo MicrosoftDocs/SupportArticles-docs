@@ -155,9 +155,9 @@ To troubleshoot this issue, follow these steps:
 
 ## WSUS Control Manager reports an error
 
-Unlike WCM and WSyncMgr, WSUS Control Manager (WSUSCtrl) resides on the software update point (SUP) itself. If SUP is remote, WSUSCtrl.log will be present on the SUP instead of on the site server. WSUS Control Manager periodically checks WSUS to make sure WSUS components are healthy. If WSUS components are unhealthy, WCM and WSyncMgr can't communicate with WSUS. In most cases, errors in WCM.log resemble the errors in WsyncMgr.log. However, an exception to this case could be when the SUP is remote from the site server. If WSUS components are healthy, WSUSCtrl.log on the remote SUP doesn't report any errors. However, if the site server can't connect to the WSUS server remotely, you'll see errors in WCM.log and/or WSyncMgr.log even though WSUS itself is healthy.
+Unlike WCM and WSyncMgr, WSUS Control Manager (WSUSCtrl) resides on the software update point (SUP) itself. If SUP is remote, WSUSCtrl.log will be present on the SUP instead of on the site server. WSUS Control Manager periodically checks WSUS to make sure WSUS components are healthy. If WSUS components are unhealthy, WCM and WSyncMgr can't communicate with WSUS. In most cases, errors in WCM.log resemble the errors in WsyncMgr.log. However, an exception to this case could be when the SUP is remote from the site server. If WSUS components are healthy, WSUSCtrl.log on the remote SUP doesn't report any errors. However, if the site server can't connect to the WSUS server remotely, you'll see errors in WCM.log or WSyncMgr.log even though WSUS itself is healthy.
 
-To check whether WSUS is functioning as expected, run the following command on the WSUS server. Then review the Application log in Event Viewer for errors:
+To check whether WSUS is functioning as expected, run the following command on the WSUS server. Then review the Application log entry in Event Viewer for errors:
 
 ```console
 %ProgramFiles%\Update Services\Tools\wsusutil.exe check health
