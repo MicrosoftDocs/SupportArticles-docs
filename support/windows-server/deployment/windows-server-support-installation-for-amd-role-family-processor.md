@@ -41,7 +41,7 @@ This section provides information about Windows Server support with respect to t
 
     Windows Server 2012 R2 supports all AMD EPYC processors. Support is limited to a maximum of 255 logical processors. 
     
-    Windows Server 2012 R2 doesn’t support the X2APIC mode. For AMD EPYC 7002 and 7003 Series processors, disable the X2APIC mode and IOMMU in the BIOS. For dual-processor servers that use 64-core , make sure that SMT is also disabled in the BIOS.
+    Windows Server 2012 R2 doesn’t support the X2APIC mode. For AMD EPYC 7002 and 7003 Series processors, disable the X2APIC mode and IOMMU in the BIOS. For dual-processor servers that use 64 cores, make sure that SMT is also disabled in the BIOS.
 
     > [!NOTE]
     > Windows Server 2012 R2 is in [extended support cycle](/lifecycle/products/?alpha=Windows%20Server%202012%20R2). We recommend that you upgrade to the latest modern Windows Server 2019 operating system.
