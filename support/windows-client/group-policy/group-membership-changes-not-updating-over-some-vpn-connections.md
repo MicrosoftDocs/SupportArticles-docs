@@ -135,7 +135,7 @@ To resolve this problem, use a VPN solution that can establish a VPN connection
 
 If you cannot use a VPN that establishes a client connection before the user signs in, these workarounds can mitigate this problem.
 
-### Workaround for changes in group membership
+### Workaround for user security context and access control
 
 After you add a user to a group or remove a user from a group, provide the following steps to the user. This procedure provides the only supported workaround that refreshes the user security context on clients that do not connect to the VPN before the user signs in.
 
