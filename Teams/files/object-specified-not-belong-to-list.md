@@ -32,12 +32,27 @@ This error occurs if the name of the document library on your SharePoint site wa
 
 ## Resolution
 
-To resolve this issue, revert the name the document library to "Shared Documents." You must have administrator permissions to make this change.
+To resolve this issue, revert the name the document library to "Shared Documents." You must have site owner permissions to make this change.
 
-1. Open the SharePoint site in [SharePoint Designer](https://www.microsoft.com/download/details.aspx?id=35491).
-2. Go to **All Files**.
-3. Locate the document library folder by its new name. For example, in the following screenshot, the default name was changed to "Renamed Documents."
+1. Install the [PnP.PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps) module.
+2. Using [Connect-PnPOnline](https://docs.microsoft.com/powershell/module/sharepoint-pnp/connect-pnponline), connect to the SharePoint Site. For example:
 
-   :::image type="content" source="media/object-specified-not-belong-to-list/renamed-documents.png" alt-text="Screenshot of the renamed document library in All Files.":::
+```powershell
+Connect-PnPOnline https://contoso.sharepoint.com/sites/team -Interactive
+```
 
-4. Right-click the folder, select **Rename**, and then change the name to **Shared Documents**.
+3. Using [Get-PnPList](https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnplist), place the document library into a variable using the Title of the library. In this example, the Title of the library is 'Renamed Documents'.
+
+```powershell
+$list = Get-PnPList 'Renamed Documents'
+```
+
+> [!NOTE]
+> To see all Document Libraries on the site, you can run `Get-PnPList` without any parameters.
+
+4. Change the document library name to **Shared Documents**.
+
+```
+$list.RootFolder.MoveTo('Shared Documents')
+$list.Update()
+```
