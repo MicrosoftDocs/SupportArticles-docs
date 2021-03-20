@@ -21,7 +21,7 @@ appliesto:
 
 When you [create a shared mailbox](/microsoft-365/admin/email/create-a-shared-mailbox), a license won't be assigned before users sign in to the shared mailbox. This behavior is by design. Therefore, a time zone isn't set automatically after a shared mailbox is created. See [About shared mailboxes](/microsoft-365/admin/email/about-shared-mailboxes) about when a license will be assigned to a shared mailbox.
 
-To check and set the time zone for a new shared mailbox, sign in to the Microsoft 365 account as a tenant administrator and run the [Get-MailboxRegionalConfiguration](/powershell/module/exchange/get-mailboxregionalconfiguration) cmdlet as follows:
+To check and set the time zone for a new shared mailbox, sign in to Microsoft 365 as a tenant admin and run the [Get-MailboxRegionalConfiguration](/powershell/module/exchange/get-mailboxregionalconfiguration) cmdlet as follows:
 
 **To check the time zone setting:**
 
