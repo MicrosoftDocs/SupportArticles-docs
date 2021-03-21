@@ -2,62 +2,9 @@
 
 
 
-## Week of February 08, 2021
+## Week of March 15, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 2/9/2021 | [Create a default Site collection Term Set if none is present](/sharepoint/troubleshoot/administration/create-default-site-term-set) | added |
-| 2/10/2021 | [Error when trying to create a list From Excel - Something went wrong. The file does not exist](/sharepoint/troubleshoot/lists-and-libraries/error-create-list-excel) | added |
-| 2/12/2021 | [Documents aren't displayed in web browser when you're using TLS 1.2](/sharepoint/troubleshoot/lists-and-libraries/documents-not-displayed-in-web-browser-when-using-tls-1.2) | modified |
-
-
-## Week of February 01, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 2/3/2021 | [Enable coauthoring for OneDrive-synced files](/sharepoint/troubleshoot/sync/enable-co-authoring-for-onedrive-synced-file) | modified |
-
-
-## Week of January 25, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 1/27/2021 | [SharePoint Online or OneDrive for Business access denied due to organizational policies error message](/sharepoint/troubleshoot/sharing-and-permissions/access-denied-due-to-org-policies) | modified |
-
-
-## Week of January 18, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 1/20/2021 | [Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive](/sharepoint/troubleshoot/diagnostics/sharepoint-and-onedrive-diagnostics) | modified |
-
-
-## Week of December 14, 2020
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 12/15/2020 | [Can't open documents in a local client from Chrome](/sharepoint/troubleshoot/lists-and-libraries/cant-open-sp-documents-from-chrome) | modified |
-| 12/15/2020 | [Native SharePoint PDF parser iFilter alternatives](/sharepoint/troubleshoot/lists-and-libraries/ifilter-alternative-to-the-native-pdf-parser) | modified |
-| 12/16/2020 | [Unexpected error when creating a calendar overlay](/sharepoint/troubleshoot/lists-and-libraries/fails-creating-calendar-overlay) | modified |
-
-
-## Week of January 11, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 1/13/2021 | [Provider-hosted add-ins stop working and HTTP 401 error after you configure SharePoint farm hybrid features](/sharepoint/troubleshoot/administration/provider-hosted-add-ins-stop-working-and-http-401-error-after-configure-farm-hybrid-features) | modified |
-
-
-## Week of January 04, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 1/4/2021 | [Mapping and syncing network drives that connect to SharePoint Online](/sharepoint/troubleshoot/administration/troubleshoot-mapped-network-drives) | modified |
-| 1/7/2021 | [Everyone except external users group is removed on Office 365](/sharepoint/troubleshoot/sharing-and-permissions/everyone-except-external-user-removed) | modified |
+| 3/15/2021 | [SharePoint Online Public Websites to be discontinued](/sharepoint/troubleshoot/sites/public-websites-be-discontinued) | modified |
