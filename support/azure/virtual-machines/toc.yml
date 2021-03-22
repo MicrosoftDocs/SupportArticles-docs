@@ -421,7 +421,7 @@
     - name: Overview
       href: /azure/virtual-machines/windows/disk-encryption-overview
     - name: Troubleshoot
-      href: /virtual-machines/windows/disk-encryption-troubleshooting
+      href: /azure/virtual-machines/windows/disk-encryption-troubleshooting
     - name: FAQ
       href: /azure/virtual-machines/windows/disk-encryption-faq
   - name: Linux
@@ -497,4 +497,3 @@
     href: how-to-videos-windows-virtual-desktop.md
   - name: Support for 32-bit operating systems
     href: support-32-bit-operating-systems-virtual-machines.md
-
