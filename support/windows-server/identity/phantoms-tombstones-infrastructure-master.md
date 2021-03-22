@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp;248047
 
 ## Summary
 
-This article describes how phantoms are used in Microsoft Windows 2000 and in Microsoft Windows Server 2003.
+This article describes how phantoms are used in Windows Server.
 
 ## More information
 
