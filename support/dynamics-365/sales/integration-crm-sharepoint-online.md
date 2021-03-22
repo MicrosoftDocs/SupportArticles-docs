@@ -30,7 +30,7 @@ A working SharePoint Subscription and Workplace should be created for 2007 (BPOS
 1. Select **Sharepoint Sites**.
 1. Enter the Display Name and the Description.
 1. Under **URL Options**, select **Absolute URL**.
-1. Enter the Absolute URL (Example: `https:// orgname.sharepoint.microsoftonline.com`).
+1. Enter the Absolute URL (Example: `https://orgname.sharepoint.microsoftonline.com`).
 1. Select **Save** & **Close**.
 1. Under **Document Management**, select **SharePoint Document Locations**.
 1. Enter the Display name and description of the location.
