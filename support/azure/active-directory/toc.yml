@@ -3,6 +3,8 @@
 
 - name: App Integration and Development 
   items:
+  - name: Troubleshoot adding apps
+    href: troubleshoot-adding-apps.md
   - name: Troubleshoot sign-in to SAML-based SSO apps
     items:
       - name: Troubleshoot signing in to SAML-based single sign-on configured apps
