@@ -40,13 +40,13 @@ If you want to install and start Microsoft Support and Recovery Assistant (SaRA)
     > [!NOTE]
     >
     > - You can use the quiet switch (**/q** or **/quiet**) to run Setup without any user interaction or user interface. For example, see the following screenshot.<br />
-    > ![SaRA cmd line setup.](media//120760-1.png)<br />
+    > :::image type="content" source="media/install-sara-from-network-share/120760-1.png" alt-text="SaRA cmd line setup.":::
     > If the **/q** (or **/quiet**) switch is used, SaraSetup.exe runs in the background.
-    > ![SaRA runs in quiet mode.](media//120760-2.png)
+    > :::image type="content" source="media/install-sara-from-network-share/120760-2.png" alt-text="SaRA runs in quiet mode.":::
     > - To run the installation and see output from the setup process in the Command Prompt window, use **/d** or **/debug** instead of **/q** (or **/quiet**) at the command prompt. For example, see the following screenshot.
-    > ![SaRA installation using debug mode.](media//120760-3.png)
+    > :::image type="content" source="media/install-sara-from-network-share/120760-3.png" alt-text="SaRA installation using debug mode.":::
     > - Use the **/?**, **/h**, or **/help** switches to display the following window that shows all available command-line switches for SaraSetup.exe.
-    > ![Command line switches for the SaRA setup.](media//120760-4.png)
+    > :::image type="content" source="media/install-sara-from-network-share/120760-4.png" alt-text="/q or /quiet - no UI displayed during install, /d or /debug - debug console shown instead of UI, /? /h or /help - displays help information":::
     If SaRA is installed by using the /q, /quiet, /d, or /debug switches, the End User License Agreement (EULA) is displayed when the Support and Recovery Assistant is started for the first time.
 
 ### Manual installation
@@ -56,11 +56,12 @@ To manually install the SaRA tool, follow these steps:
 1. On the computer on which you want to install SaRA, browse to the shared folder.
 1. Double-click **SaraSetup.exe**.
 1. Select **Install**.
-   ![SaRA setup screen.](media//120760-5.png)
+   :::image type="content" source="media/install-sara-from-network-share/120760-5.png" alt-text="SaRA setup screen.":::
 1.	Wait for the download and installation process to finish.
-   ![SaRA setup installation progress.](media//120760-6.png)
+   :::image type="content" source="media/install-sara-from-network-share/120760-6.png" alt-text="SaRA setup installation progress.":::
 1.	After the installation is complete, and the End User License agreement has been accepted, the first Support and Recovery screen will be displayed.
-   ![The Support and Recovery screen.](media//120760-7.png)
+   :::image type="content" source="media/install-sara-from-network-share/120760-7.png" alt-text="The Support and Recovery screen.":::
+
 
 ## Maintaining the SaRA installation folder and updating SaRA
 
@@ -75,12 +76,13 @@ Any computer that has SaRA already installed can now be updated by using the fol
 1. Start SaRA on a computer on which it's already installed.
 2. Select **OK**, and wait for the update to finish.
 
-   ![Application update](./media//3.png)
+   :::image type="content" source="media/install-sara-from-network-share/3.png" alt-text="Application update.":::
 
-   ![Installation progress bar](./media//5.png)
+   :::image type="content" source="media/install-sara-from-network-share/5.png" alt-text="Installation progress bar.":::
 
 SaRA is now installed and ready to run troubleshooting scenarios.
-![The Support and Recovery screen.](media//120760-7.png)
+:::image type="content" source="media/install-sara-from-network-share/120760-7.png" alt-text="The Support and Recovery screen.":::
+
 
 ## SaRA version history
 
