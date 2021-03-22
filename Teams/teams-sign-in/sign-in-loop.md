@@ -43,7 +43,7 @@ Change Microsoft Edge, Internet Explorer or Google Chrome settings using adminis
     - [*.]sfbassets.com
     - [*.]skypeforbusiness.com
 
-    :::image type="content" source="https://github.com/RAJU2529/OfficeDocs-Support/blob/public/edge.png" alt-text="Screenshot of edge.":::
+    :::image type="content" source="media/sign-in-loop/edge.png" alt-text="Screenshot of edge.":::
 
 ### Internet Explorer
 
