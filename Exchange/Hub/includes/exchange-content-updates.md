@@ -2,43 +2,25 @@
 
 
 
+## Week of March 15, 2021
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 3/15/2021 | [Repair failed installations of Exchange Cumulative and Security updates](/exchange/troubleshoot/client-connectivity/exchange-security-update-issues) | modified |
+| 3/17/2021 | [SocketError when sending or receiving email messages](/exchange/troubleshoot/email-delivery/send-receive-emails-socketerror) | added |
+| 3/18/2021 | [SocketError when sending or receiving email messages](/exchange/troubleshoot/email-delivery/send-receive-emails-socketerror) | modified |
+| 3/18/2021 | [Repair failed installations of Exchange Cumulative and Security updates](/exchange/troubleshoot/client-connectivity/exchange-security-update-issues) | modified |
+| 3/18/2021 | [OWA or ECP stops working after you install a security update](/exchange/troubleshoot/client-connectivity/owa-stops-working-after-update) | modified |
+| 3/19/2021 | [How to migrate AD RMS to Azure RMS in Exchange Online](/exchange/troubleshoot/administration/migrate-ad-rms-to-azure) | added |
+| 3/19/2021 | [Large items are skipped during public folder migration](/exchange/troubleshoot/public-folders/large-items-skipped) | added |
+| 3/19/2021 | [Large items are skipped during public folder migration](/exchange/troubleshoot/public-folders/large-items-skipped) | modified |
+| 3/19/2021 | [Emails aren't saved in the Sent Items folder](/exchange/troubleshoot/administration/email-from-shared-mailbox-not-saved-sent-items) | modified |
+
+
 ## Week of February 15, 2021
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 2/16/2021 | [Set IIS SMTP for outgoing TLS authentication](/exchange/troubleshoot/send-emails/how-to-set-iis-smtp-for-outgoing-tls-auth) | modified |
-
-
-## Week of February 08, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 2/8/2021 | [Bad Request when connecting to Exchange Online PowerShell](/exchange/troubleshoot/administration/bad-request-error-when-connecting-to-exchange-online-powershell) | modified |
-| 2/12/2021 | The time zone setting is set incorrectly to (UTC) Monrovia, Reykjavik | removed |
-
-
-## Week of February 01, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 2/3/2021 | [Restored deleted public folders from dumpster cause a migration batch failure](/exchange/troubleshoot/move-or-migrate-mailboxes/public-folder-migration-batch-error) | added |
-| 2/4/2021 | [Restored deleted public folders from dumpster cause a migration batch failure](/exchange/troubleshoot/move-or-migrate-mailboxes/public-folder-migration-batch-error) | modified |
-
-
-## Week of January 25, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 1/28/2021 | [Out-of-office replies and voting options show wrongly](/exchange/troubleshoot/send-emails/out-of-office-replies-and-voting-options-appear-incorrectly) | modified |
-
-
-## Week of January 18, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 1/20/2021 | [REST API is not yet supported error](/exchange/troubleshoot/user-and-shared-mailboxes/rest-api-is-not-yet-supported-for-this-mailbox-error) | modified |
