@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 4527873
 Get answers to common questions about the following end-of-support topics for Windows 7:
 
 - [General information](./windows-7-end-support-faq-general.md)
-- [FAQ about Extended Security Updates (ESU) for Windows 7](./windows-7-extended-security-updates-faq.md)
+- [FAQ about Extended Security Updates (ESU) for Windows 7](./windows-7-extended-security-updates-faq.yml)
   - ESU purchasing
   - ESU coverage
   - ESU deployment
