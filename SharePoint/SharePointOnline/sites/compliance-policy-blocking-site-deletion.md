@@ -43,7 +43,7 @@ To remove the **Invalid retention hold**, try one of the following methods, depe
 
 ### Non-administrators
 
-If you receive the **Compliance policy** error message, contact your [Microsoft 365 Administrator](https://docs.microsoft.com/microsoft-365/admin/add-users/about-admin-roles).
+If you receive the **Compliance policy** error message, contact your [Microsoft 365 Administrator](/microsoft-365/admin/add-users/about-admin-roles).
 
 ### Administrators
 

@@ -56,7 +56,7 @@ To resolve this issue, follow the steps for the version of ASP.NET that you are 
    ```
    aspnet_regiis -ir
    ```
-   **Note** For more information about the difference between the -ir  command-line option and the -i  command-line option, see [ASP.NET IIS Registration Tool](https://msdn.microsoft.com/library/k6h9cz8h%28vs.71%29.aspx) on the Microsoft Developer Network (MSDN) website.    
+   **Note** For more information about the difference between the -ir  command-line option and the -i  command-line option, see [ASP.NET IIS Registration Tool](/previous-versions/dotnet/netframework-1.1/k6h9cz8h(v=vs.71)) on the Microsoft Developer Network (MSDN) website.    
 
 4. Type exit, and then press Enter to close the command prompt.     
 
@@ -72,7 +72,7 @@ To resolve this issue, follow the steps for the version of ASP.NET that you are 
    aspnet_regiis -ir
    ```
 
-   **Note** For more information about the difference between the -ir command-line option and the -i command-line, see [ASP.NET IIS Registration Tool](https://msdn.microsoft.com/library/k6h9cz8h%28vs.71%29.aspx) on the Microsoft Developer Network (MSDN) website.      
+   **Note** For more information about the difference between the -ir command-line option and the -i command-line, see [ASP.NET IIS Registration Tool](/previous-versions/dotnet/netframework-1.1/k6h9cz8h(v=vs.71)) on the Microsoft Developer Network (MSDN) website.      
 
 ## Workaround  
 

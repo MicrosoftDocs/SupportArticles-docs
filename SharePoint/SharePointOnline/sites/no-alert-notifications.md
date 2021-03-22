@@ -40,7 +40,7 @@ Investigate the user's permissions for the list, for the library, or for the tas
 - If these permissions are present, go to Solution 2.
 - If these permissions aren't present, direct the user to the site administrator to have these permissions corrected.
 
-For more information about Permission Levels, see [Understanding Permission Levels](https://docs.microsoft.com/sharepoint/understanding-permission-levels).
+For more information about Permission Levels, see [Understanding Permission Levels](/sharepoint/understanding-permission-levels).
 
 ### Solution 2
 

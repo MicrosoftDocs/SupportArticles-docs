@@ -37,7 +37,7 @@ If you are affected by this change, you can use one of the following workarounds
 ### Workaround 1: Use the OneDrive sync client for SharePoint workloads
 
 The OneDrive Sync Client (OneDrive.exe) is the recommended client for syncing SharePoint Online and SharePoint 2019 content. It will continue to allow coauthoring capabilities for synced files, together with features and improvements such as Files On-Demand. We recommend that all users and organizations move to the OneDrive sync client. 
-For more information about how to deploy the OneDrive sync client, see [The OneDrive sync client](https://docs.microsoft.com/onedrive/one-drive-sync).
+For more information about how to deploy the OneDrive sync client, see [The OneDrive sync client](/onedrive/one-drive-sync).
 
 ### Workaround 2: Open the file directly from SharePoint 
 

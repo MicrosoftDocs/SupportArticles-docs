@@ -33,9 +33,9 @@ Remove-SPOExternalUser
 
 For more information about this cmdlet, go to the following Microsoft websites:
 
-- [Remove-SPOExternalUser](https://docs.microsoft.com/powershell/module/sharepoint-online/Remove-SPOExternalUser?view=sharepoint-ps)
+- [Remove-SPOExternalUser](/powershell/module/sharepoint-online/Remove-SPOExternalUser?view=sharepoint-ps)
 
-- [What is the SharePoint Online Management Shell?](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps)
+- [What is the SharePoint Online Management Shell?](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps)
 
 ## More information
 
