@@ -1,5 +1,5 @@
 ---
-title: Installing the Microsoft Loopback Adapter in Windows 8 and Windows Server 2012
+title: Installing the Microsoft Loopback Adapter in Windows
 description: Fixes an issue where you can't find the Microsoft Loopback Adapter.
 ms.date: 09/07/2020
 author: Deland-Han
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.prod-support-area-path: Devices and Drivers
 ms.technology: windows-server-deployment
 ---
-# Installing the Microsoft Loopback Adapter in Windows 8 and Windows Server 2012
+# Installing the Microsoft Loopback Adapter in Windows
 
 This article helps fix an issue where you can't find the Microsoft Loopback Adapter.
 
