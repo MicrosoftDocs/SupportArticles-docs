@@ -210,7 +210,7 @@
     href: remove-msoluser-user-not-found-recyclebin.md
   - name: Request isn't processed when resetting password
     href: request-not-processed-reset-pwd.md
-  - name: Set up your enterprise for working remotely faq
+  - name: Set up your enterprise for working remotely FAQ
     href: faq-set-up-enterprise-work-remotely.md
   - name: The term is not recognized error in Azure PowerShell
     href: term-cmdlet-name-not-recognized-aad-cmdlet.md
