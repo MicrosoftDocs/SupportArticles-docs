@@ -50,11 +50,11 @@ To fix the issue, use one of the following methods:
   **Note** This is the recommended solution because it requires the least amount of administrative effort.
 - Method 2:
 
-   The appropriate administrator can manage delegator and delegate relationships by using the SEFAUtil.exe tool. For more information, see [Lync Server 2013 Resource Kit Tools Documentation](https://technet.microsoft.com/library/jj945604%28v=ocs.15%29.aspx).   
+   The appropriate administrator can manage delegator and delegate relationships by using the SEFAUtil.exe tool. For more information, see [Lync Server 2013 Resource Kit Tools Documentation](/previous-versions/office/lync-server-2013/lync-server-2013-resource-kit-tools-documentation).   
 
 ## More Information
 
-By default, the EnableDelegation parameter is set to $True in the voice policy. For more information about voice policy parameters. see [New-CsVoicePolicy](https://technet.microsoft.com/library/gg425856.aspx).
+By default, the EnableDelegation parameter is set to $True in the voice policy. For more information about voice policy parameters. see [New-CsVoicePolicy](/powershell/module/skype/New-CsVoicePolicy).
 
 To check the value for the EnableExchangeDelegateSync parameter, run the following cmdlet:
 

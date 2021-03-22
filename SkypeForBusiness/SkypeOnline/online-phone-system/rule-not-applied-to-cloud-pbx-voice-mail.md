@@ -27,6 +27,6 @@ This is the expected behavior. There's currently no workaround. Cloud PBX voice 
 
 ## More Information
 
-For more information about Cloud PBX voice mail, see [Set up Cloud Voicemail](https://docs.microsoft.com/microsoftteams/set-up-phone-system-voicemail?toc=/skypeforbusiness/toc.json&bc=/skypeforbusiness/breadcrumb/toc.json).
+For more information about Cloud PBX voice mail, see [Set up Cloud Voicemail](/microsoftteams/set-up-phone-system-voicemail?bc=%2fskypeforbusiness%2fbreadcrumb%2ftoc.json&toc=%2fskypeforbusiness%2ftoc.json).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
