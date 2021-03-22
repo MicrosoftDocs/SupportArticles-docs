@@ -451,7 +451,7 @@ Before software update compliance data can be presented in the console or report
 
 For most of these tasks, the status logged by StateSys.log isn't an error code. Instead, it's the number of rows returned by the appropriate SQL Server stored procedure that performs the summarization.
 
-Summarization tasks specified to software updates are:
+Summarization tasks specific to software updates are:
 
 - **SUM Assignment Compliance Evaluator**  
 
