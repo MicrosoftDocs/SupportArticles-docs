@@ -55,5 +55,5 @@ Depending on how the firewall is configured, you may have to block the following
 ## References
 
 - [Support Tip: How to enable Intune app protection policies with the Office mobile](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-enable-intune-app-protection-policies-with/ba-p/1045493)
-- [How to: Require approved client apps for cloud app access with Conditional Access](https://docs.microsoft.com/azure/active-directory/conditional-access/app-based-conditional-access)
-- [Require approved client app](https://docs.microsoft.com/azure/active-directory/conditional-access/concept-conditional-access-grant#require-approved-client-app)
+- [How to: Require approved client apps for cloud app access with Conditional Access](/azure/active-directory/conditional-access/app-based-conditional-access)
+- [Require approved client app](/azure/active-directory/conditional-access/concept-conditional-access-grant#require-approved-client-app)
