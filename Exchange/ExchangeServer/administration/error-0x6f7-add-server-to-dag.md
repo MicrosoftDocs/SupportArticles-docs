@@ -46,7 +46,7 @@ Configure one NIC in the cluster with a default gateway. Then configure static r
 
 > [!NOTE]
 > You should *not* have more than one default gateway on the *server* as per the following:  
-> [Plan for high availability and site resilience](https://technet.microsoft.com/library/dd638104.aspx)
+> [Plan for high availability and site resilience](/Exchange/high-availability/plan-ha)
 
 ## More information
 

@@ -38,7 +38,7 @@ Did you get this error when you were creating a new user? "This email address is
 
 Before you can do this procedure, you need the following:
   
-- [Connect to Exchange Online PowerShell](https://go.microsoft.com/fwlink/p/?linkid=396554)
+- [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
 - The name of the group
 - The email address that you want to remove
 

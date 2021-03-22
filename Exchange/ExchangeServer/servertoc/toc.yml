@@ -200,9 +200,9 @@
     - name: Managing RBAC roles shows warnings or errors
       href: ../administration/managing-rbac-roles-display-warnings-or-errors.md
     - name: MAPI applications can't access archive mailboxes
-      href: ../administration/mapi-apps-cannot-access-archive-mailboxes.md
+      href: /outlook/troubleshoot/user-interface/mapi-apps-cannot-access-archive-mailboxes
     - name: MAPI is the only way to change profiles
-      href: ../administration/mapi-is-the-only-way-to-change-profiles.md
+      href: /outlook/troubleshoot/user-interface/mapi-is-the-only-way-to-change-profiles
     - name: MCDB status is Offline and SSDs aren't formatted
       href: ../administration/mcdb-status-is-offline-ssds-aren’t-formatted.md
     - name: Modern attachment doesn't work with web proxy
@@ -302,7 +302,7 @@
     - name: Can't create appointment or all day event
       href: ../client-connectivity/cannot-create-appointment.md
     - name: Can't open documents on a network file share
-      href: /exchange/troubleshoot/outlook-on-the-web-issues/cannot-open-documents-on-network-file-share?context=/exchange/troubleshoot/context/server-context
+      href: ../../ExchangeOnline/outlook-on-the-web-issues/cannot-open-documents-on-network-file-share.md?context=%2fexchange%2ftroubleshoot%2fcontext%2fserver-context
     - name: Can't open OWA, ECP, or EMS after a self-signed certificate is removed
       href: ../client-connectivity/owa-ecp-ems-cannot-connect-after-self-signed-certificate-removed.md
     - name: Can't search people in OWA
@@ -426,13 +426,13 @@
     - name: 554 5.4.14 Hop count exceeded
       href: ../mailflow/hop-count-exceeded-possible-mail-loop.md
     - name: Apps for Outlook 2013 can't activate in email
-      href: ../mailflow/apps-for-outlook-2013-do-not-activate-as-expected.md
+      href: /outlook/troubleshoot/user-interface/apps-for-outlook-2013-do-not-activate-as-expected
     - name: Assertion Failed when editing a transport rule
       href: ../mailflow/cannot-edit-transport-rule.md
     - name: Attachments are dropped during IMAIL conversion
       href: ../mailflow/attachments-dropped-during-imail-conversion.md
     - name: Blank emails after installing ESET NOD32 4.x
-      href: ../mailflow/empty-email-body-esetnod32-4x-installed.md
+      href: /outlook/troubleshoot/user-interface/empty-email-body-esetnod32-4x-installed
     - name: Can't send an email with full access
       href: ../mailflow/cannot-send-email-with-full-access.md
     - name: Can't send or receive emails behind a Cisco PIX or ASA firewall
@@ -512,7 +512,7 @@
     - name: No active public folder mailboxes were found
       href: ../public-folders/migrationbatch-fails-no-public-folder-mailboxes.md
     - name: Public folder meetings cannot be modified in OWA
-      href: /exchange/troubleshoot/calendars/public-folder-meetings-not-modified-in-owa?context=/exchange/troubleshoot/context/server-context
+      href: ../../ExchangeOnline/calendars/public-folder-meetings-not-modified-in-owa.md?context=%2fexchange%2ftroubleshoot%2fcontext%2fserver-context
     - name: Large items skipped during migration
       href: ../public-folders/large-items-skipped.md
     - name: Public folder migration stops at 95%
