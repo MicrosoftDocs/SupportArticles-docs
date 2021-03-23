@@ -53,8 +53,8 @@ If, for any reason, you can't remove the Azure Active Directory Sync tool from t
 
 For more info about Windows Server Essentials and Office 365, see the following resources:
 
-- [Manage Office 365 in Windows Server Essentials](https://technet.microsoft.com/library/jj593240.aspx)   
-- [How to create a service integration add-in for Windows Server Essentials Experience](https://blogs.technet.com/b/sbs/archive/2014/01/01/how-to-create-a-service-integration-add-in-for-windows-server-essentials-experience.aspx)   
-- [Manage online accounts for Windows Server Essentials users](https://technet.microsoft.com/library/dn737016.aspx)   
+- [Manage Office 365 in Windows Server Essentials](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj593240(v=ws.11))   
+- [How to create a service integration add-in for Windows Server Essentials Experience](/archive/blogs/sbs/how-to-create-a-service-integration-add-in-for-windows-server-essentials-experience)   
+- [Manage online accounts for Windows Server Essentials users](/previous-versions/windows/it-pro/windows-server-essentials-sbs/dn737016(v=ws.11))   
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

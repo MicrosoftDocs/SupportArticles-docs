@@ -35,7 +35,7 @@ This problem occurs because the MIME types that are associated with the default 
 
 To resolve this problem, reset the MIME types that are associated with the default Outlook Web App policy to the default values. To do this, follow these steps:
 
-1. Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see [Connect to Exchange Online Using Remote PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx).
+1. Connect to Exchange Online by using remote PowerShell. For more information about how to do this, see [Connect to Exchange Online Using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. Run the following commands:
 
     ```powershell
@@ -55,6 +55,6 @@ To resolve this problem, reset the MIME types that are associated with the defau
 
 ## More information
 
-For more information about Outlook Web App mailbox policies, go to [Outlook Web App Mailbox Policy Procedures](https://technet.microsoft.com/library/jj674295%28v=exchg.150%29.aspx).
+For more information about Outlook Web App mailbox policies, go to [Outlook Web App Mailbox Policy Procedures](/exchange/clients-and-mobile-in-exchange-online/outlook-on-the-web/outlook-web-app-mailbox-policy-procedures).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

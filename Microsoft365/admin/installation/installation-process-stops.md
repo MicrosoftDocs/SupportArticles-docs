@@ -38,11 +38,11 @@ Run the following PsExec command to set the proxy for the System account. To do 
 
 **Psexec –s "netsh winhttp set proxy **proxyserver**"**
 
-To download the Psexec tool, go to [PsExec v2.2](https://technet.microsoft.com/sysinternals/bb897553.aspx).
+To download the Psexec tool, go to [PsExec v2.2](/sysinternals/downloads/psexec).
 
 ### Method 2
 
-Use the Office Deployment Tool to download the Office 365 Click-to-Run source. For more information about how to use the Office Deployment Tool, see [Overview of the Office Deployment Tool](https://technet.microsoft.com/library/jj219424.aspx).
+Use the Office Deployment Tool to download the Office 365 Click-to-Run source. For more information about how to use the Office Deployment Tool, see [Overview of the Office Deployment Tool](/deployoffice/overview-office-deployment-tool).
 
 ### Method 3
 

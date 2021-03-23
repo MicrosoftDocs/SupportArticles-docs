@@ -63,8 +63,8 @@ For more information about how to update root certificates for a particular vers
 
 Rerun the Hybrid Configuration Wizard to update the deployment and resolve the issue. For more information about how to run the Hybrid Configuration Wizard, go to the following Microsoft websites:
 
-- Exchange 2013: [Manage a Hybrid Deployment](https://technet.microsoft.com/library/jj200791%28v=exchg.150%29.aspx)
-- Exchange 2010: [Manage a Hybrid Deployment](https://technet.microsoft.com/library/hh529933%28v=exchg.141%29.aspx)
+- Exchange 2013: [Manage a Hybrid Deployment](/previous-versions/exchange-server/exchange-150/jj200791(v=exchg.150))
+- Exchange 2010: [Manage a Hybrid Deployment](/previous-versions/office/exchange-server-2010/hh529933(v=exchg.141))
 
 ## More information
 
