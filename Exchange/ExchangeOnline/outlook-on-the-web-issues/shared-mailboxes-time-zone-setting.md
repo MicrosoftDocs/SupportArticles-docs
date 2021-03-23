@@ -31,7 +31,7 @@ To set the time zone for a shared mailbox, run the [Set-MailboxRegionalConfigura
 
 `Set-MailboxRegionalConfiguration -Identity "<Shared_mailbox_name>" -TimeZone "<Supported_time_zone_key_name>"`
 
-For example, to set the time zone for the shared mailbox named **Shared mailbox B** to **Central Standard Time**, the cmdlet will look as follows:
+For example, to set the time zone for a shared mailbox named **Shared mailbox B** to **Central Standard Time**, the cmdlet will look as follows:
 
 `Set-MailboxRegionalConfiguration -Identity "Shared mailbox B" -TimeZone "Central Standard Time"`
 
