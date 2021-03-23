@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot deployment of Simple Certificate Enrollment Protocol (SCEP) certificate profiles to devices with Microsoft Intune
 description: Troubleshoot sending a SCEP certificate profile to a device with Intune.
-ms.date: 01/30/2020
+ms.date: 03/19/2021
 ms.reviewer: lacranda
 ---
 # Troubleshoot deployment of a SCEP certificate profile to devices in Microsoft Intune
@@ -9,6 +9,14 @@ ms.reviewer: lacranda
 Use the following information to help you troubleshoot deployment of Simple Certificate Enrollment Protocol (SCEP) certificate profiles with Intune.
 
 This article references Step 1 of the [SCEP communication flow overview](troubleshoot-scep-certificate-profiles.md).
+
+The SCEP certificate profile, and the trusted certificate profile specified in the SCEP profile, must both be assigned to the same user, or the same device. The following table shows the expected result of mixed assignments:
+
+|                  |Trusted certificate profile assignment includes User|Trusted certificate profile assignment includes Device|Trusted certificate profile assignment includes User and Device|
+|------------------|---------|--------|--------|
+|**SCEP certificate profile assignment includes User**|Success|Failure|Success|
+|**SCEP certificate profile assignment includes Device**|Failure|Success|Success|
+|**SCEP certificate profile assignment includes User and Device**|Success|Success|Success|
 
 ## Android
 
@@ -70,7 +78,7 @@ Examples of key entries:
 
 ### Validate that the Windows device was sent the policy
 
-To validate the profile was sent to the device you expect, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Troubleshooting + Support** > **Troubleshoot**.  On the *Troubleshoot* window, set **Assignments** to **Configuration profiles** and then validate the following configurations:
+To validate the profile was sent to the device you expect, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Troubleshooting + Support** > **Troubleshoot**.  On the *Troubleshoot* window, set **Assignments** to **Configuration profiles** and then validate the following configurations:
 
 1. Specify a User that should receive the SCEP certificate profile.
 
