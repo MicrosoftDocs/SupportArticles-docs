@@ -306,28 +306,30 @@
 
 - name: VM performance issues
   items:
+  - name: Performance diagnostics (Perfinsights)
+    items:
+    - name: Performance diagnostics in the Azure Portal
+      href: performance-diagnostics.md
+    - name: Performance diagnostics VM extension
+      items:
+      - name: Performance diagnostics extension in Windows
+        href: performance-diagnostics-vm-extension.md
+    - name: PerfInsights standalone tool
+      items:
+      - name: PerfInsights in Windows
+        href: how-to-use-perfinsights.md
+      - name: PerfInsights in Linux
+        href: how-to-use-perfinsights-linux.md
+- name: Troubleshoot VM Performance issues
+  items:
+  - name: Troubleshoot performance issues through Monitoring
+    href: troubleshoot-performance-virtual-machine-linux-windows.md
+  - name: Troubleshoot high CPU issues for Azure Windows virtual machines
+    href: troubleshoot-high-cpu-issues-azure-windows-vm.md
+- name: Known performance issues
+  items:
   - name: Poor performance on Windows Server 2012 R2
     href: poor-performance-emulated-storage-stack.md
-  - name: Troubleshoot Azure VM Performance issues
-    items:
-    - name: Performance issues on Linux or Windows
-      href: troubleshoot-performance-virtual-machine-linux-windows.md
-    - name: Performance diagnostics
-      href: performance-diagnostics.md
-    - name: Troubleshoot high CPU issues for Azure Windows Virtual Machine
-      href: troubleshoot-high-cpu-issues-azure-windows-vm.md
-  - name: PerfInsights
-    items:
-    - name: Windows
-      items:
-      - name: How to use PerfInsights
-        href: how-to-use-perfinsights.md
-      - name: Performance diagnostics extension
-        href: performance-diagnostics-vm-extension.md
-    - name: Linux
-      items:
-      - name: How to use PerfInsights
-        href: how-to-use-perfinsights-linux.md
 
 - name: Help with VM password reset
   items:
