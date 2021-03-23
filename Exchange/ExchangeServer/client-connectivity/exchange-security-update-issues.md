@@ -53,6 +53,10 @@ This article describes the methods to verify the installation of Microsoft Excha
 - [Mail flow has stopped](#mail-flow-has-stopped)
 - [Exchange Setup or PrepareAD error](#exchange-setup-or-preparead-error)
 - [Exchange setup fails with error code 1603](#exchange-setup-fails-with-error-code-1603)
+- [Update .NET when migrating from an unsupported CU](#update-net-when-migrating-from-an-unsupported-cu)
+- [Handle customized OWA or .config files](#handle-customized-owa-or-config-files)
+- [Install the update for CAS-CAS Proxying deployment](#install-the-update-for-cas-cas-proxying-deployment)
+- [Install the update on DBCS version of Windows Server 2012](#install-the-update-on-dbcs-version-of-windows-server-2012)
 
 ## Additional information
 
