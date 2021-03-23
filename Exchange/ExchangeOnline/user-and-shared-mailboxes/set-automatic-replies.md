@@ -46,6 +46,6 @@ Run the following cmdlet in Exchange Online PowerShell:
 Set-MailboxAutoReplyConfiguration
 ```
 
-For more information about this cmdlet, see [Set-MailboxAutoReplyConfiguration](https://docs.microsoft.com/powershell/module/exchange/mailboxes/set-mailboxautoreplyconfiguration).
+For more information about this cmdlet, see [Set-MailboxAutoReplyConfiguration](/powershell/module/exchange/mailboxes/set-mailboxautoreplyconfiguration).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

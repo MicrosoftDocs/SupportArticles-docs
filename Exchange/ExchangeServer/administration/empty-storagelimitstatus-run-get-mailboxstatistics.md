@@ -58,4 +58,4 @@ Get-MailboxStatistics -Database DatabaseName | ft displayname,*quota*,*size -Aut
 
 ## More information
 
-For more information about the Get-MailboxStatistics cmdlet in Exchange Server 2013, see [General information about the Get-MailboxStatistics cmdlet](https://technet.microsoft.com/library/bb124612.aspx).
+For more information about the Get-MailboxStatistics cmdlet in Exchange Server 2013, see [General information about the Get-MailboxStatistics cmdlet](/powershell/module/exchange/get-mailboxstatistics).

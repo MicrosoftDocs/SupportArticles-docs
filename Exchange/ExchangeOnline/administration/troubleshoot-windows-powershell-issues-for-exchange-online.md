@@ -44,7 +44,7 @@ For more information about how to connect to Exchange Online by using remote Pow
 
 To troubleshoot the Windows PowerShell connection to Exchange Online issues, see the following articles:
 
-- ["WinRM client cannot process the request" error when you connect to Exchange Online through remote Windows PowerShell](/exchange/troubleshoot/administration/winrm-cannot-process-request)
-- [https://docs.microsoft.com/en-us/exchange/troubleshoot/administration/access-denied-connect-powershell](/exchange/troubleshoot/administration/access-denied-connect-powershell)
+- ["WinRM client cannot process the request" error when you connect to Exchange Online through remote Windows PowerShell](./winrm-cannot-process-request.md)
+- [https://docs.microsoft.com/en-us/exchange/troubleshoot/administration/access-denied-connect-powershell](./access-denied-connect-powershell.md)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

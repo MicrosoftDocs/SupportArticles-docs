@@ -21,11 +21,11 @@ appliesto:
 
 ## Symptoms
 
-You set up an Office 365 Advanced Threat Protection (ATP) [anti-phishing policy](https://docs.microsoft.com/office365/securitycompliance/set-up-anti-phishing-policies) to help protect your organization from malicious impersonation-based phishing attacks and other phishing attacks. However, the policy does not act as expected on impersonation messages.
+You set up an Office 365 Advanced Threat Protection (ATP) [anti-phishing policy](/office365/securitycompliance/set-up-anti-phishing-policies) to help protect your organization from malicious impersonation-based phishing attacks and other phishing attacks. However, the policy does not act as expected on impersonation messages.
 
 ## Cause
 
-When a message is processed, it may have more than one malicious indicator. When this occurs, the action taken on the message is based on the order in which policies are applied. For more information about the ordering of policies, see [What policy applies when multiple protection methods and detection scans run on your email](https://docs.microsoft.com/microsoft-365/security/office-365-security/how-policies-and-protections-are-combined).
+When a message is processed, it may have more than one malicious indicator. When this occurs, the action taken on the message is based on the order in which policies are applied. For more information about the ordering of policies, see [What policy applies when multiple protection methods and detection scans run on your email](/microsoft-365/security/office-365-security/how-policies-and-protections-are-combined).
 
 ## Workaround
 
