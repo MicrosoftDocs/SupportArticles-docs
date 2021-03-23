@@ -179,7 +179,7 @@ The steps below remove the external user's ability to access SharePoint Online. 
 
 Next, you have to remove the account from Azure Active Directory. To do this, follow these steps:
 
-1. Download and install the Azure Active Directory PowerShell Module and its prerequisites. To this, go to [Manage Azure AD using Windows PowerShell](https://technet.microsoft.com/library/jj151815.aspx).
+1. Download and install the Azure Active Directory PowerShell Module and its prerequisites. To this, go to [Manage Azure AD using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)).
 
 2. Open the Azure Active Directory PowerShell Module, and then run the following commands:
 

@@ -7,4 +7,4 @@
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 3/15/2021 | [SharePoint Online Public Websites to be discontinued](/sharepoint/troubleshoot/sites/public-websites-be-discontinued) | modified |
+| 3/15/2021 | [SharePoint Online Public Websites to be discontinued](../../SharePointOnline/sites/public-websites-be-discontinued.md) | modified |

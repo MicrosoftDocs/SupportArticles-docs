@@ -41,7 +41,7 @@ Use this method only if you cannot install hotfix 2771431 as described in the "M
 
 1. Make sure that the server meets the minimum hardware requirements for SharePoint Server 2013. For more information about the minimum hardware requirements for SharePoint Server 2013, go to the following Microsoft TechNet website:
 
-   [Hardware and software requirements for SharePoint 2013](https://technet.microsoft.com/library/cc262485%28v=office.15%29.aspx)
+   [Hardware and software requirements for SharePoint 2013](/SharePoint/install/hardware-and-software-requirements-0)
 
 2. Manually install the Windows Server 2012 Roles and Features that are required by SharePoint 2013. To do this, use one of the following methods, depending on whether the SharePoint server is connected to the Internet or is offline.   
 
@@ -69,7 +69,7 @@ Use this method only if you cannot install hotfix 2771431 as described in the "M
    - If the server does not have an Internet connection, the PrerequisiteInstaller.exe cannot continue past the "Configuring Application Server Role, Web Server (IIS Role)" phase, and you may receive the following error message:  
 
      **Add-WindowsFeature: The request to add or remove features on the specified server failed.
-   Installation of one or more roles, role services, or features failed. The source files could not be downloaded. Use the "source" option to specify the location of the files that are required to restore the feature. For more information on specifying a source location, see [https://go.microsoft.com/fwlink/?LinkId=243077](https://go.microsoft.com/fwlink/?linkid=243077). Error: 0x800f0906**
+   Installation of one or more roles, role services, or features failed. The source files could not be downloaded. Use the "source" option to specify the location of the files that are required to restore the feature. For more information on specifying a source location, see [https://go.microsoft.com/fwlink/?LinkId=243077](/windows-hardware/manufacture/desktop/configure-a-windows-repair-source). Error: 0x800f0906**
 
      The 0x800F0906 error code indicates that the computer cannot download the required files from Windows Update.  
 
@@ -117,9 +117,9 @@ Use this method only if you cannot install hotfix 2771431 as described in the "M
 ### Download prerequisites for offline installation  
 
 In certain scenarios where installing prerequisites directly from the Internet is not possible, you can download the prerequisites and then install them from a network share or a UNC path. For more information, see the following article:   
-[Install prerequisites for SharePoint 2013 from a network share](https://technet.microsoft.com/library/ff686793.aspx)
+[Install prerequisites for SharePoint 2013 from a network share](/SharePoint/install/install-prerequisites-from-network-share)
 
-Software prerequisites that are required for the installation of SharePoint Server 2013 on Windows Server 2012 are listed in the following together with their download links where appropriate. Be aware that you can enable the Web Server (IIS) role and the Application Server role in Server Manager. You can find the complete list of prerequisites [here](https://technet.microsoft.com/library/cc262485.aspx#section5).  
+Software prerequisites that are required for the installation of SharePoint Server 2013 on Windows Server 2012 are listed in the following together with their download links where appropriate. Be aware that you can enable the Web Server (IIS) role and the Application Server role in Server Manager. You can find the complete list of prerequisites [here](/SharePoint/install/hardware-and-software-requirements#section5).  
 
 - [Microsoft .NET Framework version 4.5](https://go.microsoft.com/fwlink/p/?linkid=250950)   
 - [Windows Management Framework 3.0](https://go.microsoft.com/fwlink/p/?linkid=273961)   
@@ -129,7 +129,7 @@ Software prerequisites that are required for the installation of SharePoint Serv
 - [Microsoft Sync Framework Runtime v1.0 SP1 (x64)](https://go.microsoft.com/fwlink/p/?linkid=224449)   
 - [Microsoft AppFabric 1.1 for Windows Server](https://www.microsoft.com/download/details.aspx?id=27115)   
 - [Windows Identity Extensions](https://go.microsoft.com/fwlink/p/?linkid=252368)   
-- [Microsoft Information Protection and Control Client (MSIPC)](https://www.microsoft.com/download/details.aspx?id=38396) MSIPC.dll - Microsoft Active Directory Rights Management Services Client. See [AD RMS Client 2.0 Deployment Notes](https://technet.microsoft.com/library/jj159267%28v=ws.10%29.aspx) for more information.  
+- [Microsoft Information Protection and Control Client (MSIPC)](https://www.microsoft.com/download/details.aspx?id=38396) MSIPC.dll - Microsoft Active Directory Rights Management Services Client. See [AD RMS Client 2.0 Deployment Notes](/azure/information-protection/rms-client/client-deployment-notes) for more information.  
 - [Microsoft WCF Data Services 5.0 for OData V3](https://www.microsoft.com/download/details.aspx?id=29306)   
 - [Cumulative Update Package 1 for Microsoft AppFabric 1.1 for Windows Server (KB 2671763)](https://support.microsoft.com/help/2671763)     
 
