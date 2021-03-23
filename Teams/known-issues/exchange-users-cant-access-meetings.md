@@ -47,6 +47,6 @@ Set-organizationconfig -EwsAllowList @{Add="MicrosoftNinja/*","SkypeSpaces/*"}
 
 ## More information
 
-For more information, see the Microsoft article on [Set-OrganizationConfig](https://docs.microsoft.com/powershell/module/exchange/organization/Set-OrganizationConfig).
+For more information, see the Microsoft article on [Set-OrganizationConfig](/powershell/module/exchange/organization/Set-OrganizationConfig).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

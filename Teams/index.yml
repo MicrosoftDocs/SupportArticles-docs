@@ -35,7 +35,7 @@ productDirectory:
     - title: Microsoft Teams
       imageSrc: https://docs.microsoft.com/media/logos/logo_MSTeams.svg
       links:
-        - url: /microsoftteams/troubleshoot/teams-welcome
+        - url: ./teams-welcome.md
           text: Microsoft Teams
     - title: Office
       # imageSrc should be square in ratio with no whitespace
