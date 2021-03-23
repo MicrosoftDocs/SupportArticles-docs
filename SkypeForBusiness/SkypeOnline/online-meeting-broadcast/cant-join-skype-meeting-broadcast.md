@@ -49,7 +49,7 @@ The Skype for Business client uses the Unified Communications Web API (UCWA) for
 For more information, see the following Microsoft websites:
 
 - [Set up your network for Skype Meeting Broadcast](https://support.office.com/article/set-up-skype-meeting-broadcast-dfa736b9-4920-4f48-b8c0-b5487ec6086f)   
-- [Office 365 URLs and IP address ranges](https://go.microsoft.com/fwlink/?linkid=512957&clcid=0x409)
+- [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges)
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 

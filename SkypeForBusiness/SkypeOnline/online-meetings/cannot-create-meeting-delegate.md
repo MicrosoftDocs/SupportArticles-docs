@@ -41,7 +41,7 @@ To fix this issue, define the same location for the affected users by setting th
 
 - If users are hosted on an on-premises server, such as a domain controller (DC) that is running Active Directory Domain Service (AD DS), you must manually update the preferred data location value in on-premises AD, and then sync the updates to Azure AD by using Azure AD Connect. To do this, see the following article:
 
-    [Azure Active Directory Connect sync: Configure preferred data location for Office 365 resources](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation)
+    [Azure Active Directory Connect sync: Configure preferred data location for Office 365 resources](/azure/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation)
 
     This cmdlet sets the preferred data location property of a user whose user principal name is davidchew@contoso.com to EUR (European Union).
 

@@ -28,7 +28,7 @@ After you install the Microsoft .NET Framework Security Update MS16-065 on a Fro
 - External clients that connect from outside your corporate network through Edge servers are not affected.   
 - All clients can continue to join meetings, use instant messaging, see Presence information, and hear meeting audio.   
 - This problem affects on-premises environments. This problem does not affect the Office 365 Skype for Business Online service.   
-For a complete list of the .NET Framework updates that can cause this problem, see the [Microsoft Security Bulletin MS16-065 - Important](https://technet.microsoft.com/library/security/ms16-065) topic on the Microsoft TechNet website. 
+For a complete list of the .NET Framework updates that can cause this problem, see the [Microsoft Security Bulletin MS16-065 - Important](/security-updates/SecurityBulletins/2016/ms16-065) topic on the Microsoft TechNet website. 
 
 The following are the known modalities that are affected by this problem:
 
@@ -48,7 +48,7 @@ The error messages that users may receive when this problem occurs include the f
 
 This problem occurs because an information disclosure vulnerability exists in the Transport Layer Security protocol and the Secure Sockets Layer protocol (TLS/SSL) as they are implemented in the encryption component of the Microsoft .NET Framework. An attacker who successfully exploits this vulnerability can decrypt encrypted TLS/SSL traffic.
 
-This vulnerability is fixed by the security update that's discussed in [Microsoft Security Bulletin MS16-065](https://technet.microsoft.com/library/security/ms16-065). This update changes the way that the .NET Framework encryption component sends and receives encrypted network packets.
+This vulnerability is fixed by the security update that's discussed in [Microsoft Security Bulletin MS16-065](/security-updates/SecurityBulletins/2016/ms16-065). This update changes the way that the .NET Framework encryption component sends and receives encrypted network packets.
 
 The changes that are introduced in this security update affect how Skype for Business; Lync desktop clients for PC; and Skype for Business for Crestron RL, Polycom CX8000, and SMART Room System communicate together with the Web Conferencing Service on the Front End and Standard Edition servers. These changes cause the problems that are mentioned in the "Symptoms" section.
 
@@ -90,7 +90,7 @@ These fixes apply to the following Click-to-Run installations:
 - Deferred Channel (DC): Office version 16.0.6741.2048 and later versions   
 - All other channels: Office version 16.0.6965.2058 and later versions   
 - Lync 2013 (Skype for Business): Builds 15.0.4833.1001 and later versions   
-To update Lync 2013 (Skype for Business) immediately, see [Update Office 2013 or Office 365](https://docs.microsoft.com/officeupdates/update-history-office-2013).
+To update Lync 2013 (Skype for Business) immediately, see [Update Office 2013 or Office 365](/officeupdates/update-history-office-2013).
 
 To determine whether your Office installation is Click-to-Run or MSI-based, follow these steps:
 
@@ -248,6 +248,6 @@ To learn more about the MS16-065 Security Update, see the following article in t
 
 [3155464](https://support.microsoft.com/help/3155464) MS16-065: Description of the TLS/SSL protocol information disclosure vulnerability (CVE-2016-0149): May 10, 2016
 
-For a complete list of related .NET Framework updates, see the [Microsoft Security Bulletin MS16-065 – Important](https://technet.microsoft.com/library/security/ms16-065) topic on the Microsoft TechNet website.
+For a complete list of related .NET Framework updates, see the [Microsoft Security Bulletin MS16-065 – Important](/security-updates/SecurityBulletins/2016/ms16-065) topic on the Microsoft TechNet website.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

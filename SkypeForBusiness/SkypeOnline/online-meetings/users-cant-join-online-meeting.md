@@ -29,7 +29,7 @@ When users on Lync Mobile 2013 try to join an online meeting, they may experienc
 
 ## Solution
 
-To resolve these issues, visit the [Joining a Lync Meeting](https://aka.ms/lyncmeetingjoin). Complete the steps and if your issue isn't resolved, you should be presented with an alternative option to join the meeting.
+To resolve these issues, visit the [Joining a Lync Meeting](/MicrosoftTeams/troubleshoot/meetings/how-to-join-a-teams-meeting). Complete the steps and if your issue isn't resolved, you should be presented with an alternative option to join the meeting.
 
 ## More Information
 

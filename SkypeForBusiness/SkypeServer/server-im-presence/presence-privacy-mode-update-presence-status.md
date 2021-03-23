@@ -82,9 +82,9 @@ If **EnablePrivacyMode** is set to false for all its displayed instances that ar
 
 For more information about how to use the Lync Server enhanced presence privacy mode policy configurations, see the following documentations:
 
-- [Configuring enhanced presence privacy mode in Lync Server 2013](https://docs.microsoft.com/lyncserver/lync-server-2013-configuring-enhanced-presence-privacy-mode)
-- [Get-CsPrivacyConfiguration](https://docs.microsoft.com/powershell/module/skype/Get-CsPrivacyConfiguration?view=skype-ps)
-- [Set-CsPrivacyConfiguration](https://docs.microsoft.com/powershell/module/skype/Set-CsPrivacyConfiguration?view=skype-ps)
+- [Configuring enhanced presence privacy mode in Lync Server 2013](/lyncserver/lync-server-2013-configuring-enhanced-presence-privacy-mode)
+- [Get-CsPrivacyConfiguration](/powershell/module/skype/Get-CsPrivacyConfiguration?view=skype-ps)
+- [Set-CsPrivacyConfiguration](/powershell/module/skype/Set-CsPrivacyConfiguration?view=skype-ps)
 
 ## More information
 

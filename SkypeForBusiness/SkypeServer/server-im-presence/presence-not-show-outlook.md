@@ -84,7 +84,7 @@ In Outlook 2010, the **QueryServiceForStatus** and **EnableDynamicPresence** reg
 
 For more information about how to administer the Office 2010 group policy templates, visit the following Microsoft website:
 
-[Office 2010 Administrative Template files (ADM, ADMX, ADML) and Office Customization Tool](https://technet.microsoft.com/library/cc178992.aspx)
+[Office 2010 Administrative Template files (ADM, ADMX, ADML) and Office Customization Tool](/previous-versions/office/office-2013-resource-kit/cc178992(v=office.15))
 
 ## Status
 

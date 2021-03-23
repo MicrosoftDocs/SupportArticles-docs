@@ -55,4 +55,4 @@ Additionally, the tracing log will display the following error, together with an
 
 ## More Information
 
-For more information, see [Plan your hybrid deployment for Skype for Business Server 2015](https://technet.microsoft.com/library/jj205403.aspx).
+For more information, see [Plan your hybrid deployment for Skype for Business Server 2015](/skypeforbusiness/hybrid/plan-hybrid-connectivity?bc=%2fSkypeForBusiness%2fbreadcrumb%2ftoc.json&toc=%2fSkypeForBusiness%2ftoc.json).
