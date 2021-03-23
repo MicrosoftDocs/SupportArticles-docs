@@ -40,7 +40,7 @@ Error message 3
 
 When you use Windows Vista with the Microsoft Dynamics CRM for Outlook and when you enable platform tracing, you receive an error message that resembles the following:
 
-> Client Configuration: [Error] COM registry keys appear to be corrupted. Rerun the CRM Configuration Wizard or contact your Microsoft Dynamics CRM administrator. ---> System.TypeLoadException: Retrieving the COM class factory for component with CLSID {1385B9FE-D8DA-4A39-B990-5C870F8CAAD3} failed due to the following error: 80131522. at  
+> Client Configuration: [Error] COM registry keys appear to be corrupted. Rerun the CRM Configuration Wizard or contact your Microsoft Dynamics CRM administrator. ---> System.TypeLoadException: Retrieving the COM class factory for component with CLSID {\<ID>} failed due to the following error: 80131522. at  
 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandle& ctor, Boolean& bNeedSecurityCheck) at  
 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean fillCache) at  System.RuntimeType.CreateInstanceImpl(Boolean publicOnly, Boolean skipVisibilityChecks, Boolean fillCache) at  
 System.Activator.CreateInstance(Type type, Boolean nonPublic) at  

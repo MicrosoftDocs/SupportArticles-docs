@@ -40,7 +40,7 @@ The issue will be resolved by removing the stale records in the ACL. Follow the 
 
     The above should show us all the reserved namespaces.
 
-2. Look in the results to verify if you have an RUL like the example below:
+2. Look in the results to verify if you have an URL likes the example below:
 
     Reserved URL : `https://+:444/adfs/services/`  
     Can't lookup sid, Error: 1332  

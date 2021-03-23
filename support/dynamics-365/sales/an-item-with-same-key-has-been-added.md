@@ -22,7 +22,7 @@ Selecting the **Download Log** button will display the following information:
 
 > Unhandled Exception: System.ServiceModel.FaultException\`1[[Microsoft.Xrm.Sdk.OrganizationServiceFault, Microsoft.Xrm.Sdk, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]: System.ArgumentException: An item with the same key has already been added.Detail:  
 \<OrganizationServiceFault xmlns:i="`https://www.w3.org/2001/XMLSchema-instance`" xmlns="`https://schemas.microsoft.com/xrm/2011/Contracts`">  
-  \<ActivityId>afa2227c-21ba-4588-a11f-e8d0dd02a289\</ActivityId>  
+  \<ActivityId>xxx\</ActivityId>  
   \<ErrorCode>-2147220970\</ErrorCode>  
   \<ErrorDetails xmlns:d2p1="`https://schemas.datacontract.org/2004/07/System.Collections.Generic`" />  
   \<Message>System.ArgumentException: An item with the same key has already been added.\</Message>  

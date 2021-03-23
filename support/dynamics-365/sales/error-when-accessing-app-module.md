@@ -30,7 +30,7 @@ For example, if the user with a team member license tries to access the Customer
 >
 >Details
 >
-> User does not have any license to access this app module uniqueName= Customerservicehub from publisher= dynamics365customerengagement. A license is required with one of the service plans: 'Dynamics 365 for Customer Service: 99340b49-fb81-4b1e-976b-8f2ae8e9394f
+> User does not have any license to access this app module uniqueName= Customerservicehub from publisher= dynamics365customerengagement. A license is required with one of the service plans: 'Dynamics 365 for Customer Service: \<GUID>
 
 ## Resolution
 

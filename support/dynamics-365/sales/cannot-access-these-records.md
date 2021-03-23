@@ -48,7 +48,7 @@ If you're still coming across issues, connect CRM for Outlook to your CRM Online
 
 The log file contains the following error with the Principal user reference matching your SystemUserId:
 
-> 09:17:01|  Error| Exception : Principal user (Id=4294cbf9-7534-e311-8b6d-6c3be5a8f660, type=8) is missing prvReadMailbox privilege (Id=8e17de3a-5a69-479c-9535-1f7be75b2987)  
+> 09:17:01|  Error| Exception : Principal user (Id=\<ID>, type=8) is missing prvReadMailbox privilege (Id=8e17de3a-5a69-479c-9535-1f7be75b2987)  
 at Microsoft.Crm.Application.Platform.ServiceCommands.PlatformCommand.XrmExecuteInternal()  
    at Microsoft.Crm.Application.Platform.ServiceCommands.RetrieveCommand.Execute()  
    at Microsoft.Crm.Caching.MailboxWebServiceCacheLoader.LoadCacheData(Guid key, IOrganizationContext context)  
@@ -61,7 +61,7 @@ at Microsoft.Crm.Application.Platform.ServiceCommands.PlatformCommand.XrmExecute
 
 If the user is a member of a team that only has user level Read access to the Mailbox entity, and they don't have a security role assigned directly to their user record with user level Read access to the Mailbox entity, the log file contains the following error with the Owner ID and Calling User reference matching your SystemUserId:
 
-> 17:16:47|  Error| Exception : SecLib::AccessCheckEx failed. Returned hr = -2147187962, ObjectID: 7f27247a-dda1-e411-80d9-fc15b4285da4, OwnerId: 4294cbf9-7534-e311-8b6d-6c3be5a8f660,  OwnerIdType: 8 and CallingUser: 4294cbf9-7534-e311-8b6d-6c3be5a8f660. ObjectTypeCode: 9606, objectBusinessUnitId: 8bce1ea5-1e75-e411-80cf-c4346bac89f4, AccessRights: ReadAccess  
+> 17:16:47|  Error| Exception : SecLib::AccessCheckEx failed. Returned hr = -2147187962, ObjectID: 7f27247a-dda1-e411-80d9-fc15b4285da4, OwnerId: \<ID>,  OwnerIdType: 8 and CallingUser: \<ID>. ObjectTypeCode: 9606, objectBusinessUnitId: 8bce1ea5-1e75-e411-80cf-c4346bac89f4, AccessRights: ReadAccess  
 Server stack trace:  
    at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)  
    at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)  

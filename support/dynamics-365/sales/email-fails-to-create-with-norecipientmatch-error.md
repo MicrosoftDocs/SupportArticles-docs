@@ -20,10 +20,10 @@ When Microsoft Dynamics 365 evaluates an email in your mailbox, multiple conditi
 
 1. None of the email addresses on the To or Cc lines of the email are users or queues in Microsoft Dynamics 365.
    - Example A: You received the email because it was sent to a distribution group and you are a member of that distribution group. Your email address stored in Microsoft Dynamics 365 is not actually on the To or Cc lines of the email.
-   - Example B: You have multiple email addresses (for example, `Christopher@contoso.com` and `Christoper.Reed@contoso.com`) for the same mailbox but the email addresses on the To or Cc line of the email does not match any of the email addresses stored in your user record in Microsoft Dynamics 365.
+   - Example B: You have multiple email addresses (for example, `John@contoso.com` and `John.David@contoso.com`) for the same mailbox but the email addresses on the To or Cc line of the email does not match any of the email addresses stored in your user record in Microsoft Dynamics 365.
 
 2. There is a user or queue on the To or Cc line of the email but the following conditions exist:
-   - The email address used by the User or Queue exists on other records in Microsoft Dynamics 365. For example: A User has the email address `Christopher@contoso.com` but that email address also exists on one of the email address fields of another email enabled entity such as a user, queue, contact, lead, or account.
+   - The email address used by the User or Queue exists on other records in Microsoft Dynamics 365. For example: A User has the email address `John@contoso.com` but that email address also exists on one of the email address fields of another email enabled entity such as a user, queue, contact, lead, or account.
    - Your organization is configured to leave email address values as unresolved if multiple matches are found.
 
      The combination of the two conditions mentioned above would cause the email to not be resolved to a user or queue record.
@@ -42,7 +42,7 @@ When Microsoft Dynamics 365 evaluates an email in your mailbox, multiple conditi
 
    `https://<Your Organization URL>/api/data/v9.1/emailsearches?$filter=emailaddress eq '<email address of user or queue>'`
 
-   Example: `https://contoso.crm.dynamics.com/api/data/v9.1/emailsearches?$filter=emailaddress eq 'Christopher@contoso.com'`
+   Example: `https://contoso.crm.dynamics.com/api/data/v9.1/emailsearches?$filter=emailaddress eq 'John@contoso.com'`
 
    If no record is returned, this would indicate a row does not exist for that email address in the EmailSearchBase table.
 

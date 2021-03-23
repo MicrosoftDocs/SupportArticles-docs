@@ -40,7 +40,7 @@ If you aren't using CRM Online or prefer to fix the issue manually, complete the
 1. Close Outlook.
 2. Open Windows Explorer and navigate to `<install directory>:\Users\<Your User>\AppData\Local\Microsoft\MSCRM\Client`.
 
-    Example: `C:\Users\terryadams\AppData\Local\Microsoft\MSCRM\Client`
+    Example: `C:\Users\<username>\AppData\Local\Microsoft\MSCRM\Client`
 
     > [!NOTE]
     > The AppData folder is hidden by default. You can change the View settings to show Hidden items or you can copy and paste the following path into your folder path:  

@@ -21,7 +21,7 @@ Email Server Error Code: Crm.80042f09.UserNotAssignedRoles
 
 If you select to view the **Details**, the following additional details are shown:  
 
-> T:1738ActivityId: 3594490d-96d3-493b-861e-023b016a6050>Exception : Unhandled Exception: Microsoft.Crm.Asynchronous.EmailConnector.ExchangeSyncException: Failed to retrieve the sync state : Unhandled Exception: System.ServiceModel.FaultException`1[[Microsoft.Xrm.Sdk.OrganizationServiceFault, Microsoft.Xrm.Sdk, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]: SecLib::RetrievePrivilegeForUser failed - no roles are assigned to user. Returned hr = -2147209463, User: \<GUID>Detail: 3594490d-96d3-493b-861e-023b016a6050 -2147209463 SecLib::RetrievePrivilegeForUser failed - no roles are assigned to user. Returned hr = -2147209463, User: \<GUID>...  
+> T:1738ActivityId: \<ID> >Exception : Unhandled Exception: Microsoft.Crm.Asynchronous.EmailConnector.ExchangeSyncException: Failed to retrieve the sync state : Unhandled Exception: System.ServiceModel.FaultException`1[[Microsoft.Xrm.Sdk.OrganizationServiceFault, Microsoft.Xrm.Sdk, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]: SecLib::RetrievePrivilegeForUser failed - no roles are assigned to user. Returned hr = -2147209463, User: \<GUID> Detail: \<ID> -2147209463 SecLib::RetrievePrivilegeForUser failed - no roles are assigned to user. Returned hr = -2147209463, User: \<GUID>...  
 
 ## Cause
 
