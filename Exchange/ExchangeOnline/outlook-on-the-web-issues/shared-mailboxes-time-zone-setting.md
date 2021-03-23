@@ -19,7 +19,7 @@ appliesto:
 ---
 # Setting the time zone for a shared mailbox in Outlook on the web
 
-When you [create a shared mailbox](/microsoft-365/admin/email/create-a-shared-mailbox), the mailbox isn't immediately assigned a license. This is because users don't sign in to a shared mailbox directly. This behavior is by design. Therefore, a time zone isn't automatically set after a shared mailbox is created. For information about when licenses are assigned to shared mailboxes, see [About shared mailboxes](/microsoft-365/admin/email/about-shared-mailboxes).
+When you [create a shared mailbox](/microsoft-365/admin/email/create-a-shared-mailbox), the mailbox isn't immediately assigned a license. This behavior is by design. A time zone isn't automatically set after a shared mailbox is created because users don't sign in to shared mailboxes directly. For information about when licenses are assigned to shared mailboxes, see [About shared mailboxes](/microsoft-365/admin/email/about-shared-mailboxes).
 
 To check the time zone setting on a new shared mailbox, sign in to your Microsoft 365 account as a tenant administrator, and run the [Get-MailboxRegionalConfiguration](/powershell/module/exchange/get-mailboxregionalconfiguration) cmdlet:
 
