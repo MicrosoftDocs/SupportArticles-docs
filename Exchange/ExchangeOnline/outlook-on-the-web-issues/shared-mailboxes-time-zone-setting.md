@@ -35,5 +35,5 @@ For example, to set the time zone for the shared mailbox named **Shared mailbox 
 
 `Set-MailboxRegionalConfiguration -Identity "Shared mailbox B" -TimeZone "Central Standard Time"`
 
----
+___
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
