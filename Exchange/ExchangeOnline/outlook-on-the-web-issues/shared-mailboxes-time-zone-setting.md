@@ -23,7 +23,7 @@ When you [create a shared mailbox](/microsoft-365/admin/email/create-a-shared-ma
 
 To check the time zone setting on a new shared mailbox, sign in to your Microsoft 365 account as a tenant administrator, and run the [Get-MailboxRegionalConfiguration](/powershell/module/exchange/get-mailboxregionalconfiguration) cmdlet:
 
-`Get-MailboxRegionalConfiguration -Identity "<*Shared_mailbox_name*>"`
+`Get-MailboxRegionalConfiguration *-Identity* "<*Shared_mailbox_name*>"`
 
 **Note:** In the cmdlet output, fields such as "TimeZone" will have a value of **\<null>** or **no value set**.
 
