@@ -150,7 +150,7 @@ The configuration changes appear straightforward. We will use this code to repla
 
 ### Finding the correct Nginx configuration file
 
-The primary Nginx configuration file is `/etc/nginx/nginx.conf`. To inspect the configuration, use the cat `/etc/nginx/nginx.conf` command, and search for the server directive.
+The primary Nginx configuration file is `/etc/nginx/nginx.conf`. To inspect the configuration, use the `cat /etc/nginx/nginx.conf` command, and search for the server directive.
 
 :::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/cat.png" alt-text="BuggyAmb cat" border="true":::
 
@@ -167,7 +167,7 @@ If you inspect these directories, you won't find any configuration files in `/et
 
 :::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/conf.png" alt-text="BuggyAmb conf" border="true":::
 
-The default configuration file looks like a prime candidate to host the configuration that we're looking for. If you inspect the `/etc/nginx/sites-enabled/default file` by using cat `/etc/nginx/sites-enabled/default`, you would see that the default server directive is put within the following code.
+The default configuration file looks like a prime candidate to host the configuration that we're looking for. If you inspect the `/etc/nginx/sites-enabled/default file` by using `cat /etc/nginx/sites-enabled/default`, you would see that the default server directive is put within the following code.
 
 :::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/default.png" alt-text="BuggyAmb default" border="true":::
 
@@ -202,7 +202,7 @@ The changes are now saved, and you have to restart the Nginx service for these c
 
 As you can see here, the configuration file that was changed appears to be correct.
 
-We have to restart Nginx so that the changes take effect: 
+We have to restart Nginx so that the changes take effect:
 
 ```bash
 sudo systemctl restart nginx

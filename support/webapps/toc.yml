@@ -4,5 +4,8 @@
 - name: ASP.NET
   href: ../aspnet/toc.yml
 
+- name: ASP.NET Core
+  href: ../aspnetcire/toc.yml
+
 - name: Internet Information Services
   href: ../iis/toc.yml
