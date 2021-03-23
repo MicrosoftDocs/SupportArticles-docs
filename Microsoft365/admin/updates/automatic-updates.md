@@ -116,5 +116,4 @@ After you copy the Administrative Template files to AD DS, you'll find the updat
 
 ## More information
 
-For more information about configuring the update settings via GPO, see [Configure update settings for Microsoft 365 Apps for enterprise](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus). 
-
+For more information about configuring the update settings via GPO, see [Configure update settings for Microsoft 365 Apps for enterprise](/deployoffice/configure-update-settings-for-office-365-proplus).

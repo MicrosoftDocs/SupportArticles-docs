@@ -28,7 +28,7 @@ search.appverid: MET150
 
 ## Symptoms
 
-Authentication automatically fails in some Microsoft Office applications and Outlook may go into the "Need Password" state without any interaction. Additionally, when you make a Web Account Manager API call to [FindAllAccountsAsync](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webauthenticationcoremanager.findallaccountsasync), you may see error code "-2147024809" in the AAD logs or Office Client logs.
+Authentication automatically fails in some Microsoft Office applications and Outlook may go into the "Need Password" state without any interaction. Additionally, when you make a Web Account Manager API call to [FindAllAccountsAsync](/uwp/api/windows.security.authentication.web.core.webauthenticationcoremanager.findallaccountsasync), you may see error code "-2147024809" in the AAD logs or Office Client logs.
 
 > [!IMPORTANT]
 > This issue occurs only on computers that are running Windows 10, version 1703 or later, and Office 365 version 1807 or later.
@@ -45,7 +45,7 @@ The authentication issue occurs because of missing package information about eit
 To fix this issue, use PowerShell to reinstall the packages for ADAL (for organizational or work accounts) and Live ID (for personal accounts such as @outlook.com, @hotmail.com, and so on). To do this, follow these steps:
 
 1. Right-click the Windows icon in your task bar, and then select **Windows PowerShell (Admin)**.
-2. If you're prompted by a User Account Control ([UAC](https://docs.microsoft.com/windows/security/identity-protection/user-account-control/user-account-control-overview)) window, select **Yes** to start PowerShell.
+2. If you're prompted by a User Account Control ([UAC](/windows/security/identity-protection/user-account-control/user-account-control-overview)) window, select **Yes** to start PowerShell.
 3. If your issue is about a work account, you have to fix the ADAL package. Run the following command in the command console:
 
    ```powershell

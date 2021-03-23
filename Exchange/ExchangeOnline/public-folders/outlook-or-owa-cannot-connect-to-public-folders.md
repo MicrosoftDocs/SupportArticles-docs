@@ -358,7 +358,7 @@ Alternatively, add X500 address manually by running this command on-premises:
 Set-RemoteMailbox -Identity "mailbox name" -EmailAddresses @{add="X500:replace with legacyexchangeDN value from the cloud object"}
 ```
 
-For more information about `Set-RemoteMailbox`, see this [article](https://docs.microsoft.com/powershell/module/exchange/set-remotemailbox?view=exchange-ps).
+For more information about `Set-RemoteMailbox`, see this [article](/powershell/module/exchange/set-remotemailbox?view=exchange-ps).
 
 **Does this resolve your issue?**
 

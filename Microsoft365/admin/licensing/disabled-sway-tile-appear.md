@@ -50,7 +50,7 @@ To enable or disable Sway for a specific user in an organization, follow these s
     ![Screen shot of the Assign License page in Office 365 ](./media/disabled-sway-tile-appear/sway-service.jpg)    
  
 
-To enable or disable Sway for one or more users in an organization or for all users in the whole organization, use the necessary Windows PowerShell scripts that are described in [Disable access to services with Office 365 PowerShell](https://go.microsoft.com/fwlink/p/?linkid=691483).
+To enable or disable Sway for one or more users in an organization or for all users in the whole organization, use the necessary Windows PowerShell scripts that are described in [Disable access to services with Office 365 PowerShell](/microsoft-365/enterprise/disable-access-to-services-with-microsoft-365-powershell).
 
 ## Workaround
 

@@ -92,8 +92,9 @@ Get-Command Exsetup.exe | ForEach {$_.FileVersionInfo}
 | Exchange Server 2019  | For CU8: 15.02.0792.010</br>For CU7: 15.02.0721.013</br>For CU6: 15.02.0659.012</br>For CU5: 15.02.0595.008</br>For CU4: 15.02.0529.013</br>For CU3: 15.02.0464.015</br>For CU2: 15.02.0397.011</br>For CU1: 15.02.0330.011</br>For RTM: 15.02.0221.018 |
 | Exchange Server 2016  | For CU19: 15.01.2176.009</br>For CU18: 15.01.2106.013</br>For CU17: 15.01.2044.013</br>For CU16: 15.01.1979.008</br>For CU15: 15.01.1913.012</br>For CU14: 15.01.1847.012</br>For CU13: 15.01.1779.008</br>For CU12: 15.01.1713.010</br>For CU11: 15.01.1591.018</br>For CU10: 15.01.1531.012</br>For CU9: 15.01.1466.013</br>For CU8: 15.01.1415.008 |
 | Exchange Server 2013  | For CU23: 15.00.1497.012</br>For CU22: 15.00.1473.006</br>For CU21: 15.00.1395.012  |
+|||
 
-For details about the available SUs, see [Description of the security update for Microsoft Exchange Server 2019, 2016, and 2013: March 2, 2021 (KB5000871)](/topic/description-of-the-security-update-for-microsoft-exchange-server-2019-2016-and-2013-march-2-2021-kb5000871-9800a6bb-0a21-4ee7-b9da-fa85b3e1d23b).
+For details about the available SUs, see [Description of the security update for Microsoft Exchange Server 2019, 2016, and 2013: March 2, 2021 (KB5000871)](https://support.microsoft.com/topic/description-of-the-security-update-for-microsoft-exchange-server-2019-2016-and-2013-march-2-2021-kb5000871-9800a6bb-0a21-4ee7-b9da-fa85b3e1d23b).
 
 [Back to top](#summary)
 
@@ -116,7 +117,7 @@ Reinstall the security update from an elevated command prompt.
 1. Type the full path of the .msp file for the security update, and then press **Enter**.
 1. After the update installs, restart the server.
 
-For more information, see [OWA or ECP stops working after you install a security update](https://docs.microsoft.com/exchange/troubleshoot/client-connectivity/owa-stops-working-after-update).
+For more information, see [OWA or ECP stops working after you install a security update](./owa-stops-working-after-update.md).
 
 [Back to top](#summary)
 
@@ -173,7 +174,7 @@ This issue occurs if the SSL binding on 0.0.0.0:444 has one or more of the follo
 
     ![The SSL certificate for the SSL binding for the Exchange Back End site on the Mailbox server.](./media/exchange-security-update-issues/back-end-binding.png)  
 
-For more information, see [this article](/topic/you-get-a-blank-page-after-logging-in-eac-or-owa-in-exchange-2013-or-exchange-2016-a24db2f2-4d67-806b-670b-efb8f08605f7).
+For more information, see [this article](https://support.microsoft.com/topic/you-get-a-blank-page-after-logging-in-eac-or-owa-in-exchange-2013-or-exchange-2016-a24db2f2-4d67-806b-670b-efb8f08605f7).
 
 [Back to top](#summary)
 
@@ -194,7 +195,7 @@ This issue occurs because the Exchange Server Open Authentication (OAuth) certif
 
 **Resolution**
 
-Follow the steps in this [article](/exchange/troubleshoot/administration/cannot-access-owa-or-ecp-if-oauth-expired#resolution&preserve-view=true) to fix the issue.
+Follow the steps in this [article](../administration/cannot-access-owa-or-ecp-if-oauth-expired.md?preserve-view=true#resolution) to fix the issue.
 
 [Back to top](#summary)
 
@@ -243,7 +244,7 @@ Do the following:
     Restart-Service WAS,W3SVC
     ```
 
-    For more information, see [this article](/exchange/troubleshoot/client-connectivity/event-1309-code-3005-cannot-access-owa-ecp).
+    For more information, see [this article](./event-1309-code-3005-cannot-access-owa-ecp.md).
 
 [Back to top](#summary)
 
@@ -272,7 +273,7 @@ In the absence of these conditions, another setup.exe file located in `C:\Progra
 
 Run the upgrade by using "`.\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell) or "`D:\setup.exe /m:upgrade /IAcceptExchangeServerLicenseTerms`" (PowerShell and command prompt).
 
-For more information, see [this article](https://docs.microsoft.com/exchange/troubleshoot/setup/ex2019-setup-does-not-run-correctly-started-powershell).
+For more information, see [this article](../setup/ex2019-setup-does-not-run-correctly-started-powershell.md).
 
 [Back to top](#summary)
 
@@ -301,7 +302,7 @@ The installation fails because services didn't stop properly.
 
 **Resolution**
 
-Use the best practice to reboot the server before installing the CU or SU. For the antivirus software you're running, set proper [exclusions](https://docs.microsoft.com/Exchange/antispam-and-antimalware/windows-antivirus-software?view=exchserver-2019&preserve-view=true) or consider turning it off during the setup. In some cases where services still don't stop or start as expected, do the following.
+Use the best practice to reboot the server before installing the CU or SU. For the antivirus software you're running, set proper [exclusions](/Exchange/antispam-and-antimalware/windows-antivirus-software?preserve-view=true&view=exchserver-2019) or consider turning it off during the setup. In some cases where services still don't stop or start as expected, do the following.
 
 1. Rename the C:\ExchangeSetupLogs folder (for example, ExchangeSetupLogs-OLD).
 2. Change the startup type for Exchange services in the services.msc console to **Automatic**.
@@ -599,7 +600,7 @@ When you apply a CU (for Exchange Server 2013, 2016 or 2019) or Rollup package (
 If your scenario meets both the following conditions, apply the update rollup on the internet-facing CAS before you apply the update rollup on the non–internet-facing CAS:
 
 - You’re a CAS Proxy Deployment Guidance customer.
-- You have deployed [CAS-CAS proxying](https://docs.microsoft.com/previous-versions/exchange-server/exchange-140/bb310763(v=exchg.140)?redirectedfrom=MSDN).
+- You have deployed [CAS-CAS proxying](/previous-versions/exchange-server/exchange-140/bb310763(v=exchg.140)).
 
 > [!NOTE]
 > For other Exchange Server 2010 configurations, you don’t have to apply the update rollup on your servers in a specific order.

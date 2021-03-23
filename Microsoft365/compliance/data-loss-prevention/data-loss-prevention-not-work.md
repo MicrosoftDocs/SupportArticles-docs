@@ -66,6 +66,6 @@ Did this fix the problem?
 
 For more information about DLP features in Exchange Online Protection, go to the following Microsoft TechNet website:
 
-> [Data Loss Prevention](https://technet.microsoft.com/library/jj150527.aspx)
+> [Data Loss Prevention](/Exchange/policy-and-compliance/data-loss-prevention/data-loss-prevention)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

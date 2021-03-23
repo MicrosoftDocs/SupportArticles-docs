@@ -42,6 +42,6 @@ To resolve this issue, change the domain that's used for your SharePoint Online 
 
 ## More information
 
-For more information, see [You get an error message when you try to remove a domain from Office 365](https://docs.microsoft.com/office365/troubleshoot/administration/error-remove-domain-from-office-365).  
+For more information, see [You get an error message when you try to remove a domain from Office 365](../administration/error-remove-domain-from-office-365.md).  
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
