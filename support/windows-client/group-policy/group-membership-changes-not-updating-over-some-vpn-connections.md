@@ -38,7 +38,7 @@ If the user locks and then unlocks Windows while the client remains connected to
 ## Cause
 
 > [!IMPORTANT]  
-> In this article, we assume that you have implemented Authentication Mechanism Assurance (AMA), and you require the user to authenticate by using a Smart Card in order to access network resources. These network resources use Kerberos tickets to manage user access.
+> In this article, we assume that you have implemented Authentication Mechanism Assurance (AMA) in the domain, and that you require the user to authenticate by using a Smart Card in order to access network resources. These network resources use Kerberos tickets to manage user access. For more information, see [Description of AMA usage in interactive logon scenarios in Windows](https://support.microsoft.com/topic/description-of-ama-usage-in-interactive-logon-scenarios-in-windows-a61e0931-f11a-73ad-6221-e117ed6e913f).
 
 In an office environment, it's common for a user to sign out of Windows at the end of the workday. When the user signs in the next day, the client is already connected to the network and has direct access to a domain controller. Under these conditions, changes to group membership take effect quickly. The user has the correct access levels the next day (the next time the user signs in). Similarly, changes to Group Policy appear to take effect within a day or two (after the user signs in once or twice, depending policies that are due to apply).
 
@@ -50,7 +50,7 @@ In a home environment, the user probably disconnects from the VPN at the end of 
 This behavior occurs because Windows uses cached information to improve performance when users sign in, and to sign in users on domain-joined clients that are not connected to the network. The unexpected consequences arise when the client exclusively uses a VPN to connect to the network, and the client cannot establish the VPN connection until *after* the user signs in.
 
 > [!IMPORTANT]  
-> This behavior is relevant only in the interactive logon scenario. Access to network resources works as expected because there's no need for logon optimization. Therefore, cached group membership isn't used. The DC is contacted to create the new ticket by using the freshest Authentication Mechanism Assurance (AMA) group membership information.​ For more information, see [Description of AMA usage in interactive logon scenarios in Windows](https://support.microsoft.com/topic/description-of-ama-usage-in-interactive-logon-scenarios-in-windows-a61e0931-f11a-73ad-6221-e117ed6e913f).
+> This behavior is relevant only in the interactive logon scenario. Access to network resources works as expected because the network logon does not use cached information. Instead, the group information comes from a domain controller query.
 
 ### Effects on the user security context and access control
 
