@@ -25,7 +25,8 @@ To check the time zone setting on a new shared mailbox, sign into your Microsoft
 
 `Get-MailboxRegionalConfiguration -Identity "<Shared_mailbox_name>"`
 
-In the output from the cmdlet, fields such as "TimeZone" will display the value **\<null>** or **no value set**.
+> [!NOTE]
+> In the output from the cmdlet, fields such as "TimeZone" will display the value **\<null>** or **no value set**.
 
 To set the time zone for a shared mailbox, run the [Set-MailboxRegionalConfiguration](/powershell/module/exchange/set-mailboxregionalconfiguration) cmdlet as follows:
 
