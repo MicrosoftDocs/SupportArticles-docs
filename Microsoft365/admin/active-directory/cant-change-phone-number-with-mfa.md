@@ -37,6 +37,6 @@ Change the user's office phone number in the on-premises Active Directory.
 
 ## More Information
 
-For more information about Azure Multi-Factor Authentication, see [Azure Multi-Factor Authentication](https://msdn.microsoft.com/library/azure/dn249471.aspx).
+For more information about Azure Multi-Factor Authentication, see [Azure Multi-Factor Authentication](/previous-versions/azure/azure-services/dn249471(v=azure.100)).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

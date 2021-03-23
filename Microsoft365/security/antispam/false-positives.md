@@ -89,9 +89,9 @@ To do this, take one of the following actions, as appropriate for your situation
 
     If the necessary connectors aren't created, EOP will automatically detect when this situation occurs and stop enforcing the ASF option for SPF hard fail. When the required connectors are created, the service detects this and starts enforcing the ASF option.
 
-    For more information about connectors, see [Configure mail flow using connectors in Office 365](https://technet.microsoft.com/library/ms.exch.eac.connectorselection%28v=exchg.150%29.aspx).
+    For more information about connectors, see [Configure mail flow using connectors in Office 365](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow).
 
-    For more information about centralized mail control options, see [Transport options in Exchange 2013 hybrid deployments](https://technet.microsoft.com/library/jj659055%28v=exchg.150%29.aspx).
+    For more information about centralized mail control options, see [Transport options in Exchange 2013 hybrid deployments](/exchange/transport-options).
 
 ## More information
 

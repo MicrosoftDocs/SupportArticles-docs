@@ -27,7 +27,7 @@ appliesto:
 
 Consider the following scenario. You update the relying party trust with Microsoft Azure Active Directory (Azure AD) in Active Directory Federation Services (AD FS) 2.0 by using the procedures that are described in one of the following resources: 
  
-- [Limiting Access to Office 365 Services Based on the Location of the Client](https://technet.microsoft.com/library/hh526961%28ws.10%29.aspx)    
+- [Limiting Access to Office 365 Services Based on the Location of the Client](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh526961(v=ws.10))    
 - ["Federation service identifier specified in the AD FS 2.0 server is already in use." error when you try to set up another federated domain in Office 365, Azure, or Intune ](https://support.microsoft.com/help/2618887)
 
 However, after you do this, authentication fails for federated users when they try to sign in to a Microsoft cloud service such as Office 365, Azure, or Microsoft Intune from a sign-in webpage whose URL starts with `https://login.microsoftonline.com/login`. After the user clicks Sign in at \<DomainName> on the webpage, the user gets the following error message:

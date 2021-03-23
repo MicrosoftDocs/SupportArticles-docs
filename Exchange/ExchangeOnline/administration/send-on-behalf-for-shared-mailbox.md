@@ -32,11 +32,11 @@ This issue occurs because the **Send on Behalf** permission can't be managed in 
 
 To work around this issue, add the **Send on Behalf** permission by using Windows Remote PowerShell. To do this, follow the instructions on the following Microsoft TechNet website:
 
-[Manage permissions for recipients in Exchange Online](https://technet.microsoft.com/library/jj919240%28v=exchg.150%29.aspx)
+[Manage permissions for recipients in Exchange Online](/exchange/recipients-in-exchange-online/manage-permissions-for-recipients)
 
 > [!NOTE]
 > If you use Office 365, you can use Office 365 Admin Portal to assign the **Send on Behalf** permission to shared mailboxes.
 
 ## More Information
 
-For more information about shared mailboxes, see [Shared Mailboxes](https://technet.microsoft.com/library/jj150498%28v=exchg.150%29.aspx).
+For more information about shared mailboxes, see [Shared Mailboxes](/exchange/shared-mailboxes-exchange-2013-help).

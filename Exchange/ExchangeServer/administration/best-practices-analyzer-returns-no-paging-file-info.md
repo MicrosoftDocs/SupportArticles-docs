@@ -63,4 +63,4 @@ You receive this message if you don't set a custom size for the paging file.
 
 ## References
 
-For information about how to set the paging file size on a server that's running Exchange Server, see [Page File Size is Less than Physical Memory Size Plus 10 MB](https://technet.microsoft.com/library/cc431357%28v=exchg.80%29.aspx).
+For information about how to set the paging file size on a server that's running Exchange Server, see [Page File Size is Less than Physical Memory Size Plus 10 MB](/previous-versions/office/exchange-server-analyzer/cc431357(v=exchg.80)).

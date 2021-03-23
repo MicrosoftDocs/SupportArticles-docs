@@ -26,7 +26,7 @@ _Original KB number:_&nbsp;4493792
 
 In Microsoft Outlook for Office 365, when the new Office 365 Message Encryption Capabilities feature is enabled, **Encrypt-Only**  is added as a new ad-hoc template. **Encrypt-Only**  enables message encryption without rights restrictions. This article describes how to disable the **Encrypt-Only** option in Outlook.
 
-For more information about the feature, see [Encrypt-Only option for emails](https://docs.microsoft.com/azure/information-protection/configure-usage-rights#encrypt-only-option-for-emails).
+For more information about the feature, see [Encrypt-Only option for emails](/azure/information-protection/configure-usage-rights#encrypt-only-option-for-emails).
 
 ## More information
 

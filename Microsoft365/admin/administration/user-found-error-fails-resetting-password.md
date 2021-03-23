@@ -32,7 +32,7 @@ To resolve this issue, use Microsoft Azure Active Directory Module for Windows P
 1. Start Azure Active Directory Module for Windows PowerShell, and connect to Azure Active Directory.
 
    > [!NOTE]
-   > For more info about Azure Active Directory Module for Windows PowerShell, go to the following Microsoft website: [Azure Active Directory Cmdlets](https://aka.ms/aadposh).
+   > For more info about Azure Active Directory Module for Windows PowerShell, go to the following Microsoft website: [Azure Active Directory Cmdlets](/previous-versions/azure/jj151815(v=azure.100)).
 
 1. Change the UPN of the user to the default domain. To do this, run the following command:
 

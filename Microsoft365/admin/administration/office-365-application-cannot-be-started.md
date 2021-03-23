@@ -56,6 +56,6 @@ To check whether the problem is fixed, follow these steps:
      
 ## More information
 
-For more information, see [ClickOnce Unmanaged API Reference](https://msdn.microsoft.com/library/bb629396.aspx).
+For more information, see [ClickOnce Unmanaged API Reference](/previous-versions/visualstudio/visual-studio-2015/deployment/clickonce-unmanaged-api-reference).
 
 Still need help? Go to the [https://go.microsoft.com/fwlink/?linkid=2003907](https://go.microsoft.com/fwlink/?linkid=2003907) website.

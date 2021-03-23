@@ -36,6 +36,6 @@ Turn off the Untrusted Font Blocking feature. For more information about how to 
 
 ## More information
 
-For more information, see [Block untrusted fonts in an enterprise](https://technet.microsoft.com/itpro/windows/keep-secure/block-untrusted-fonts-in-enterprise).
+For more information, see [Block untrusted fonts in an enterprise](/windows/security/threat-protection/block-untrusted-fonts-in-enterprise).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

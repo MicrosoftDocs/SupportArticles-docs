@@ -36,7 +36,7 @@ Connect-MsolService : Access Denied. You do not have permissions to call this cm
 
 ## Resolution 
 
-This issue can be resolved by adding the member/user to an administrator role within Azure. For more information, see the article [Add-MsolRoleMember](https://docs.microsoft.com/powershell/module/msonline/add-msolrolemember?view=azureadps-1.0&preserve-view=true).
+This issue can be resolved by adding the member/user to an administrator role within Azure. For more information, see the article [Add-MsolRoleMember](/powershell/module/msonline/add-msolrolemember?preserve-view=true&view=azureadps-1.0).
 
 ## More information 
 

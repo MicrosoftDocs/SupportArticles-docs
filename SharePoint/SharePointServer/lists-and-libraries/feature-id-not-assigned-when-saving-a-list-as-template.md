@@ -37,6 +37,6 @@ $web.Update()
 
 ## More Information  
 
-[Document Property Promotion and Demotion](https://msdn.microsoft.com/library/aa543341.aspx)
+[Document Property Promotion and Demotion](/previous-versions/office/developer/sharepoint-2010/aa543341(v=office.14))
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

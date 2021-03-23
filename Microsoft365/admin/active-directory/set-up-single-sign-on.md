@@ -67,7 +67,7 @@ For information about common problems that can cause this configuration to fail,
 
 - The following Microsoft TechNet article:
 
-   [Using a Third-Party Proxy as a Replacement to an AD FS 2.0 Federation Server Proxy](https://technet.microsoft.com/library/hh852618%28v=ws.10%29.aspx)   
+   [Using a Third-Party Proxy as a Replacement to an AD FS 2.0 Federation Server Proxy](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh852618(v=ws.10))   
 
 ### Scenario 3: Non-published AD FS
 
@@ -114,7 +114,7 @@ Each scenario can be varied by using a stand-alone AD FS Federation server inste
 
 On-premises AD FS availability directly affects Microsoft cloud service availability for federated users, and its service level is the responsibility of the  customer. The Microsoft TechNet library contains extensive guidance on how to plan and deploy AD FS in the on-premises environment. This guidance can help customers reach their target service level for this critical subsystem. For more information, go to the following TechNet website: 
 
-[Active Directory Federation Services (AD FS) 2.0](https://technet.microsoft.com/library/adfs2%28ws.10%29.aspx)
+[Active Directory Federation Services (AD FS) 2.0](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd727958(v=ws.10))
 
 ## References 
 

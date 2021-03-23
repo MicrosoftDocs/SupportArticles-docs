@@ -60,9 +60,8 @@ After the site is registered as an app catalog, return to the SharePoint Modern 
 
 For more information about the app catalog feature, see the following articles:
 
-- [Use the App Catalog to make custom business apps available for your SharePoint environment](https://docs.microsoft.com/sharepoint/use-app-catalog)
-- [Manage access to Azure AD-secured APIs](https://docs.microsoft.com/sharepoint/api-access)
+- [Use the App Catalog to make custom business apps available for your SharePoint environment](/sharepoint/use-app-catalog)
+- [Manage access to Azure AD-secured APIs](/sharepoint/api-access)
 
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
-

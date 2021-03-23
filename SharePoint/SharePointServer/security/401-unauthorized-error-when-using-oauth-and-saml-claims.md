@@ -112,6 +112,6 @@ Microsoft has confirmed that this is a problem in the SharePoint farm versions t
 
 ## References  
 
-[SharePoint Updates](https://technet.microsoft.com/library/4b32dfba-1af6-4077-9a92-7cec8f220f20)
+[SharePoint Updates](/officeupdates/sharepoint-updates)
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

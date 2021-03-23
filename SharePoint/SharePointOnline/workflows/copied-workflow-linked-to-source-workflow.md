@@ -59,7 +59,7 @@ Delete the additional .xml file that was created when the workflow was copied an
 1. Copy the contents of the affected workflow, and then paste the contents to the blank workflow.
 1. Delete the original workflow.
 
-For more information about copy-and-paste support of workflow contents in SharePoint Designer 2013, go to [Copy-and-Paste support in SharePoint Designer 2013](https://blogs.msdn.microsoft.com/sharepointdesigner/2012/08/10/copy-and-paste-support-in-sharepoint-designer-2013/).
+For more information about copy-and-paste support of workflow contents in SharePoint Designer 2013, go to [Copy-and-Paste support in SharePoint Designer 2013](/archive/blogs/sharepointdesigner/copy-and-paste-support-in-sharepoint-designer-2013).
 
 ## More information
 

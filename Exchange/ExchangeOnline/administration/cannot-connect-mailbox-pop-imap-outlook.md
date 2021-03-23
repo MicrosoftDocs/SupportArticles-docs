@@ -24,7 +24,7 @@ Microsoft recently announced the Exchange Online capability to use OAuth authent
 
 If you have disabled Basic authentication, and you are trying to configure an Outlook profile by using POP and SMTP or IMAP and SMTP, you will notice that Outlook neither connects nor authenticates. This is because Outlook supports Modern authentication for only Exchange, Outlook.com, and Gmail at this time.
 
-If you're using POP/IMAP and SMTP for an Exchange Online account in Outlook, you must enable Basic authentication for these protocols. To do this, disable [Azure Active Directory security defaults](https://docs.microsoft.com/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) if they are enabled.
+If you're using POP/IMAP and SMTP for an Exchange Online account in Outlook, you must enable Basic authentication for these protocols. To do this, disable [Azure Active Directory security defaults](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) if they are enabled.
 
 ## Enable Basic authentication for POP and IMAP protocols
 
@@ -61,7 +61,7 @@ To enable Basic authentication, run the following command to revert the value to
 Set-TransportConfig -SmtpClientAuthenticationDisabled $False
 ```
 
-For more information about the `Set-TransportConfig` command, see [Set-TransportConfig](https://docs.microsoft.com/powershell/module/exchange/set-transportconfig).
+For more information about the `Set-TransportConfig` command, see [Set-TransportConfig](/powershell/module/exchange/set-transportconfig).
 
 ### Mailbox level
 
@@ -81,4 +81,4 @@ To enable Basic authentication, run the following command to revert the value to
 Set-CasMailbox <mailbox account> -SmtpClientAuthenticationDisabled $False
 ```
 
-For more information about the `Set-CasMailbox` command, see [Set-CasMailbox](https://docs.microsoft.com/powershell/module/exchange/set-casmailbox).
+For more information about the `Set-CasMailbox` command, see [Set-CasMailbox](/powershell/module/exchange/set-casmailbox).

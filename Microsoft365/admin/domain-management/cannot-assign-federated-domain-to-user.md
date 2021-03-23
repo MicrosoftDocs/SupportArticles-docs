@@ -42,12 +42,12 @@ To work around this behavior, create a matching user account in the on-premises 
    2. Click **Admin**, and then click **Exchange** to open Exchange Admin Center.   
    3. Locate the user account, and then double-click it.   
    4. In the left navigation pane, click **Email Address**, and then note the primary SMTP address of the user account.   
-2. Start Active Directory Users and Computers, and then create a user account in the on-premises domain that matches the Office 365 user account. For more information about how to do this, see [Create a User Account in Active Directory Users and Computers](https://technet.microsoft.com/library/dd894463%28ws.10%29.aspx).   
+2. Start Active Directory Users and Computers, and then create a user account in the on-premises domain that matches the Office 365 user account. For more information about how to do this, see [Create a User Account in Active Directory Users and Computers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd894463(v=ws.10)).   
 3. Make sure that the UPN of the user account is updated to the federated domain name. For more information about how to do this, see [Troubleshoot Active Directory user accounts that are piloted as Office 365 SSO-enabled user IDs](https://support.microsoft.com/help/2392130).    
 4. Use Active Directory Service Interfaces (ADSI) Edit to edit the **proxyAddresses** attribute of the user object so that it matches the primary SMTP address that you noted in step 1D. To do this, follow these steps:
 
    > [!NOTE]
-   > For more information about how to install ADSI Edit, see [Installing ADSI Edit](https://technet.microsoft.com/library/cc773354%28v=ws.10%29.aspx#bkmk_installingadsiedit).
+   > For more information about how to install ADSI Edit, see [Installing ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)#bkmk_installingadsiedit).
 
    1. Click **Start**, click **Run**, type **ADSIEdit.msc**, and then click **OK**.   
    2. Right-click **ADSI Edit**, select **Connect to**, and then click **OK** to load the domain partition.   
@@ -60,7 +60,7 @@ To work around this behavior, create a matching user account in the on-premises 
    6. Click **OK** two times, and then exit ADSI Edit.
 
    For more information about how to use ADSI Edit to edit Active Directory attributes, go to the following Microsoft TechNet website:
-  [Using ADSI Edit](https://technet.microsoft.com/library/cc773354%28v=ws.10%29.aspx#bkmk_usingadsiedit) 
+  [Using ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)#bkmk_usingadsiedit) 
 5. Force directory synchronization.
 
 ## More information

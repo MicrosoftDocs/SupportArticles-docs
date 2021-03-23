@@ -49,9 +49,9 @@ The permissions list contains a Grant All column and a Deny All column. You can 
 
 For more information, please the following articles:  
 
-- [Manage permission policies for a Web application (SharePoint Foundation 2010)](https://technet.microsoft.com/library/ff607712.aspx)    
-- [Manage permission policies for a Web application (SharePoint Server 2010)](https://technet.microsoft.com/library/ff608071.aspx)   
-- [User permissions and permission levels (SharePoint Server 2010)](https://technet.microsoft.com/library/cc721640.aspx)   
-- [SPBasePermissions Enumeration](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx)     
+- [Manage permission policies for a Web application (SharePoint Foundation 2010)](/previous-versions/office/sharepoint-foundation-2010/ff607712(v=office.14))    
+- [Manage permission policies for a Web application (SharePoint Server 2010)](/SharePoint/administration/manage-permission-policies-for-a-web-application)   
+- [User permissions and permission levels (SharePoint Server 2010)](/SharePoint/sites/user-permissions-and-permission-levels)   
+- [SPBasePermissions Enumeration](/previous-versions/office/sharepoint-server/ms412690(v=office.15))     
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

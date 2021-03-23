@@ -31,7 +31,7 @@ This error occurs when an Azure Active Directory application uses IdentifierURIs
 You can retrieve a list of applications that refer to the domain by running the following cmdlet.
 
 > [!IMPORTANT]
-> The cmdlet requires that you install[Azure Active Directory PowerShell for Graph](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2?view=azureadps-2.0).     
+> The cmdlet requires that you install[Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0).     
 
 ```pwoershell
 Get-AzureADApplication | Where-Object -Property identifieruris -Match '<domain to remove>' 
