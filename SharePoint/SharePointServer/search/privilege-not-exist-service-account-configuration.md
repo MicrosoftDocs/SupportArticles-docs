@@ -53,8 +53,8 @@ To resolve this problem, make sure that the SERVICE account includes the Create 
 
 For more information about global objects, visit the following Websites:
 
-- [Create global objects](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc739176(v=ws.10)?redirectedfrom=MSDN)
-- [User Rights](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457125(v=technet.10)?redirectedfrom=MSDN)
+- [Create global objects](/previous-versions/windows/it-pro/windows-server-2003/cc739176(v=ws.10))
+- [User Rights](/previous-versions/windows/it-pro/windows-xp/bb457125(v=technet.10))
 
 ## More information
 

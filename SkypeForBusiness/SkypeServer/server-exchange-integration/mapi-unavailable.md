@@ -57,7 +57,7 @@ First Release Deferred Channel (FRDC): Fixed in builds 16.0.6965.2078 and later
 
 Deferred Channel (DC): Fixed in builds 16.0.6965.2092 and later
 
-For more information about C2R Channel builds, see [Office 365 client update channel releases](https://technet.microsoft.com/office/mt465751).
+For more information about C2R Channel builds, see [Office 365 client update channel releases](/officeupdates/release-notes-microsoft365-apps).
 
 ## Workaround
 

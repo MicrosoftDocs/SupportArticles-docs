@@ -46,7 +46,7 @@ In the SharePoint Management shell, run the following command:
  Set-SPLogLevel -TraceSeverity VerboseEx  
 ```  
 
-**Note** This may cause performance issues on the farm. We recommend that you restrict the duration to the minimum and reset the ULS logging level to the default value after the behavior has been reproduced by using [Clear-SPLogLevel](https://docs.microsoft.com/powershell/module/sharepoint-server/clear-sploglevel?view=sharepoint-ps).
+**Note** This may cause performance issues on the farm. We recommend that you restrict the duration to the minimum and reset the ULS logging level to the default value after the behavior has been reproduced by using [Clear-SPLogLevel](/powershell/module/sharepoint-server/clear-sploglevel?view=sharepoint-ps).
 
 If the performance impact prevents full VerboseEx tracing, set the logging level for all categories to **Verbose** and the logging level for "Legacy Workflow Infrastructure" (or "Workflow Infrastructure" in SharePoint 2010) and "Timer" categories to **VerboseEx**. To do this, run the following commands in the SharePoint Management shell:   
 

@@ -32,6 +32,6 @@ Create the meeting using live events in Teams, which can host up to 10,000 users
 
 ## More information
 
-For more information see [What are Microsoft Team live events?](https://docs.microsoft.com/microsoftteams/teams-live-events/what-are-teams-live-events)
+For more information see [What are Microsoft Team live events?](/microsoftteams/teams-live-events/what-are-teams-live-events)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

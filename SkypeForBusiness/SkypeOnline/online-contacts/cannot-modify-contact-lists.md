@@ -41,7 +41,7 @@ Notes
 - If your users will be using Lync 2010 or Lync for Mac 2011 as their primary client, then run the cmdlet.   
 - If you use this cmdlet with the **-force** switch, you run the risk of disconnecting your users from their contacts.   
 
-For more information about the **Invoke-CsUcsRollback** cmdlet, see [Roll back migrated users in Lync Server 2013](https://technet.microsoft.com/library/jj205224.aspx).
+For more information about the **Invoke-CsUcsRollback** cmdlet, see [Roll back migrated users in Lync Server 2013](/previous-versions/office/lync-server-2013/lync-server-2013-roll-back-migrated-users).
 
 ## Workaround
 

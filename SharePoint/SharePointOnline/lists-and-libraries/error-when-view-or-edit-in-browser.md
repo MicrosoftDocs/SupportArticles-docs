@@ -90,7 +90,7 @@ To create the service applications and the service application proxies by using 
 
 The Service Applications get and retrieve content and settings from the SharePoint Content Databases and the Configuration Database. In order for the Service Applications to process documents, they must have appropriate permissions on both databases. For more information as to the recommended permissions, please see the "Account permissions and security settings (SharePoint Server 2010)" TechNet article found here:  
 
-[Account permissions and security settings in SharePoint 2013](https://technet.microsoft.com/library/cc678863.aspx)  
+[Account permissions and security settings in SharePoint 2013](/SharePoint/install/account-permissions-and-security-settings-in-sharepoint-server-2016)  
 
 ### Resolution 4: Check the Farm Account   
 
@@ -104,12 +104,12 @@ In a Farm Setup, we suggest that the Farm Account be running under a different a
 
 4. To create a different or new service account, the following link provides the detail steps:  
 
-   [Service Accounts Step-by-Step Guide](https://technet.microsoft.com/library/dd548356%28ws.10%29.aspx)  
+   [Service Accounts Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd548356(v=ws.10))  
 
    **Note** It is not a requirement to run the Farm account and Service accounts under different managed accounts. This resolution is provided as a possible troubleshooting technique.   
 
 ## More Information  
 
-[Deploy Offices Online (Installed on SharePoint 2010 Products)](https://technet.microsoft.com/library/ff431687%28office.14%29.aspx)
+[Deploy Offices Online (Installed on SharePoint 2010 Products)](/previous-versions/office/sharepoint-server-2010/ff431687(v=office.14))
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

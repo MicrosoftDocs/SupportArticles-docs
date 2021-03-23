@@ -32,7 +32,7 @@ The owner isn't a member of the Microsoft 365 group associated with the team. Th
 
 ## Resolution
 
-Add the owner as a member of the Microsoft 365 group. For more information, see [Add or remove members from Microsoft 365 groups using the admin center](https://docs.microsoft.com/microsoft-365/admin/create-groups/add-or-remove-members-from-groups?view=o365-worldwide&preserve-view=true).
+Add the owner as a member of the Microsoft 365 group. For more information, see [Add or remove members from Microsoft 365 groups using the admin center](/microsoft-365/admin/create-groups/add-or-remove-members-from-groups?preserve-view=true&view=o365-worldwide).
 
 ## More information
 

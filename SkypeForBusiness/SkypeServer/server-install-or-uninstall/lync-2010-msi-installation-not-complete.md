@@ -85,6 +85,6 @@ The definition of the UseMSIForLyncInstallation Lync 2010 Group Policy setting i
 
 For detailed information about how to automate the Lync 2010 deployment methods, visit the following Microsoft TechNet website:
 
-[IT-Managed Installation of Lync 2010](https://technet.microsoft.com/library/gg425733.aspx)
+[IT-Managed Installation of Lync 2010](/previous-versions/office/skype-server-2010/gg425733(v=ocs.14))
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

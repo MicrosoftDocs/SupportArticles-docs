@@ -31,9 +31,9 @@ You have a Microsoft Microsoft 365 Apps for enterprise or Office 365 E3 subscrip
 
 To install only Skype for Business 2016, you have to use the 2016 version of the Office Deployment Tool (ODT) for Click-to-Run.
 
-For more information about the Office Deployment Tool, see [Overview of the Office Deployment Tool](https://technet.microsoft.com/library/jj219422%28v=office.15%29.aspx). 
+For more information about the Office Deployment Tool, see [Overview of the Office Deployment Tool](/deployoffice/overview-office-deployment-tool). 
 
-For information about excluding programs from the installation, see [Configuration options for the Office Deployment Tool](https://technet.microsoft.com/library/dn745895.aspx).
+For information about excluding programs from the installation, see [Configuration options for the Office Deployment Tool](/deployoffice/office-deployment-tool-configuration-options).
 
 A sample Configuration.XML file:
 

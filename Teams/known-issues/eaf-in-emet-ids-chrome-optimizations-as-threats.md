@@ -31,6 +31,6 @@ An issue has been identified with Chromium sandbox in which the Export Address T
 To work around this issue, turn off EAF for Teams. More about this issue can be found in the [EMET mitigations guidelines](https://support.microsoft.com/help/2909257/emet-mitigations-guidelines). 
 
 ## More information
-For more information about Windows Defender ATP and EAF policy, see [Enable exploit protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection).
+For more information about Windows Defender ATP and EAF policy, see [Enable exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

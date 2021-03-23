@@ -33,7 +33,7 @@ Below is a collection of the top issues. If your issue isn't listed there, brows
 
 - [SharePoint help & learning](https://support.microsoft.com/sharepoint)
 - [SharePoint end user troubleshooting](https://support.microsoft.com/office/b6c6bab7-55f9-454a-924a-13bea01558ef)
-- [SharePoint administrator documentation](https://docs.microsoft.com/sharepoint/introduction)
+- [SharePoint administrator documentation](/sharepoint/introduction)
 
 ## Still need help
 

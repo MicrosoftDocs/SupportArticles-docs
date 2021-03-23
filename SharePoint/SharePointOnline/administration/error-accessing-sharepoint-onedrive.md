@@ -35,7 +35,7 @@ Your subscription to either **SharePoint** or **OneDrive** might have expired.
 
 ### Reactivate your subscription
 
-To reactivate your Microsoft 365 subscription, see [Reactive your subscription](https://docs.microsoft.com/microsoft-365/commerce/subscriptions/reactivate-your-subscription)
+To reactivate your Microsoft 365 subscription, see [Reactive your subscription](/microsoft-365/commerce/subscriptions/reactivate-your-subscription)
 
 ### Flush the DNS cache
 
@@ -53,7 +53,7 @@ To flush the local systems DNS cache:
 
 Once the DNS has been flushed, try to access **SharePoint** or **OneDrive** again.
 
-If you are still unable to access your service, contact [Microsoft technical support](https://go.microsoft.com/fwlink/?linkid=869559).
+If you are still unable to access your service, contact [Microsoft technical support](/microsoft-365/admin/contact-support-for-business-products).
 
 ## More information
 

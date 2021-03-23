@@ -26,7 +26,7 @@ description: Learn how to install Office 365 apps.
 
 Sometimes, things just aren't working. Here's some help for fixing administrative problems with Office 365.
   
- **If you need immediate help, [contact support](https://docs.microsoft.com/office365/admin/contact-support-for-business-products)** to help resolve your technical issues.
+ **If you need immediate help, [contact support](/office365/admin/contact-support-for-business-products)** to help resolve your technical issues.
   
 ## Troubleshoot Office installation issues
 
@@ -49,11 +49,11 @@ It could also happen because you haven't assigned a license to yourself or your 
   
 3. In the left navigation, select **Subscriptions**.
 
-   You'll see the services that you're licensed to use, such as the latest desktop version of Office, Project, Visio, SharePoint Online or OneDrive for Business, and Exchange Online. If you don't see **The latest desktop version of Office** in the list (or **Project** or **Visio** if you bought plans with those applications), see [Assign licenses to users in Office 365 for business](https://docs.microsoft.com/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
+   You'll see the services that you're licensed to use, such as the latest desktop version of Office, Project, Visio, SharePoint Online or OneDrive for Business, and Exchange Online. If you don't see **The latest desktop version of Office** in the list (or **Project** or **Visio** if you bought plans with those applications), see [Assign licenses to users in Office 365 for business](/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
     
-Not all Office 365 plans come with Office. If your organization has a plan that doesn't include the latest desktop version of Office, as the admin, you can [switch to a different Office 365 plan or subscription](https://docs.microsoft.com/office365/admin/subscriptions-and-billing/switch-to-a-different-plan). 
+Not all Office 365 plans come with Office. If your organization has a plan that doesn't include the latest desktop version of Office, as the admin, you can [switch to a different Office 365 plan or subscription](/office365/admin/subscriptions-and-billing/switch-to-a-different-plan). 
   
-If you're not sure what plan you have, follow the steps in [What subscription do I have?](https://docs.microsoft.com/office365/admin/admin-overview/what-subscription-do-i-have) For a comparison of plans, see the [small business plans comparison](https://products.office.com/business/compare-office-365-for-business-plans) or [enterprise plans comparison](https://products.office.com/en-us/business/compare-more-office-365-for-business-plans).
+If you're not sure what plan you have, follow the steps in [What subscription do I have?](/office365/admin/admin-overview/what-subscription-do-i-have) For a comparison of plans, see the [small business plans comparison](https://products.office.com/business/compare-office-365-for-business-plans) or [enterprise plans comparison](https://products.office.com/en-us/business/compare-more-office-365-for-business-plans).
   
 ### I recently switched plans and now get messages I can't use Office
 
@@ -112,4 +112,4 @@ To reinstall Office 2016 or Office 2013, see [Download and install or reinstall 
 For a detailed troubleshooting instructions, and to help your users troubleshoot potential issues, see [Troubleshoot Office installation issues in Office 365 for business](https://support.office.com/article/fbbf663b-1e76-46d2-a417-0aa78ed2fb9a).
 
 > [!NOTE]
-> If you're using Office 365 operated by 21Vianet in China, please [contact the 21Vianet support team](https://docs.microsoft.com/office365/admin/contact-support-for-business-products).
+> If you're using Office 365 operated by 21Vianet in China, please [contact the 21Vianet support team](/office365/admin/contact-support-for-business-products).
