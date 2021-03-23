@@ -170,7 +170,7 @@ If the application requires constant uptime, running .NET Core application withi
 
 ## Next steps
 
-[Part 2.2 - Installing Nginx and configuring it as a reverse proxy](/troubleshoot/aspnetcore/install-nginx-configure-it-reverse-proxy)
+[Part 2.2 - Installing Nginx and configuring it as a reverse proxy server](/troubleshoot/aspnetcore/install-nginx-configure-it-reverse-proxy)
 
 Make sure that the web application starts automatically. Install and configure Nginx as a reverse proxy to route HTTP requests that are made to port 80 to the dotnet application instead (so that clients can connect without having to provide the port number).
 

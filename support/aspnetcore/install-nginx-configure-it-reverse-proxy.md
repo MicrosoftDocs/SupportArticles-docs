@@ -1,15 +1,15 @@
 ---
-title: Install Nginx and configure it as a reverse proxy
-description: This article describes how to install Nginx and configure it as a reverse proxy.
+title: Install Nginx and configure it as a reverse proxy server
+description: This article describes how to install Nginx and configure it as a reverse proxy server.
 ms.date: 03/18/2021
 ms.prod: aspnet-core-api
 ms.reviewer: ramakoni
 ---
-# Part 2.2 - Installing Nginx and configuring it as a reverse proxy
+# Part 2.2 - Installing Nginx and configuring it as a reverse proxy server
 
 _Applies to:_ &nbsp; .NET Core 2.1, .NET Core 3.1  
 
-This article introduces how to install Nginx and configure it as a reverse proxy.
+This article introduces how to install Nginx and configure it as a reverse proxy server.
 
 ## Prerequisites
 
