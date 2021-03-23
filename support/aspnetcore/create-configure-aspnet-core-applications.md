@@ -13,7 +13,7 @@ This article introduces how to create and configure ASP.NET Core applications in
 
 ## Prerequisites
 
-To follow the exercises in this part, you must have a .NET Core SDK installed. To install the SDK, refer to the installation instructions in Part 1, as necessary.
+To follow the exercises in this part, you must have a .NET Core SDK installed. To install the SDK, refer to the installation instructions in [Part 1](/troubleshoot/aspnetcore/creating-vm), as necessary.
 
 ## Goal of this part
 

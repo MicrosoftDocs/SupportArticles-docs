@@ -59,7 +59,7 @@ The `systemctl` command is used to manage "services" for such tasks as showing t
 
 :::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/systemctl.png" alt-text="BuggyAmb systemctl" border="true":::
 
-This command generates some useful information. As this screenshot shows, Nginx is in **active (running)** status, and the process ID of the Nginx instance is 8539. Also notice the "enabled" and "vendor preset: enabled" statements. "Enabled" means that this daemon will start when the machine is restarted, and "vendor preset: enabled" means that Nginx is enabled by default when it's installed. Therefore, Nginx will start automatically when the server is started.
+This command generates some useful information. As this screenshot shows, Nginx is in `active (running)` status, and the process ID of the Nginx instance is 8539. Also notice the `enabled` and `vendor preset: enabled` statements. `Enabled` means that this daemon will start when the machine is restarted, and `vendor preset: enabled` means that Nginx is enabled by default when it's installed. Therefore, Nginx will start automatically when the server is started.
 
 ## Testing the Nginx installation
 
@@ -146,7 +146,7 @@ This configuration indicates the following:
 > [!NOTE]
 > The `server_name _` line in the code. This is used as a catch-all directive. If you want to learn more about *server_name*, refer to the [official documentation](http://nginx.org/en/docs/http/server_names.html).
 
-The configuration changes appear straightforward. We will use this code to replace the "server" directive section in the configuration file. But where is the configuration file?
+The configuration changes appear straightforward. We will use this code to replace the `server` directive section in the configuration file. But where is the configuration file?
 
 ### Finding the correct Nginx configuration file
 
@@ -154,7 +154,7 @@ The primary Nginx configuration file is `/etc/nginx/nginx.conf`. To inspect the 
 
 :::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/cat.png" alt-text="BuggyAmb cat" border="true":::
 
-Scroll through the configuration to locate the server directive. You should expect not to find it. We can put the desired configuration changes somewhere inside the configuration file. However, ideally, you wouldn't want to replace the original configuration file. This is to prevent introducing configuration errors that might prevent the server from starting correctly. The "server" section is not in the main configuration file. If you keep scrolling through the configuration file, you'll discover that there are some `include` directives.
+Scroll through the configuration to locate the server directive. You should expect not to find it. We can put the desired configuration changes somewhere inside the configuration file. However, ideally, you wouldn't want to replace the original configuration file. This is to prevent introducing configuration errors that might prevent the server from starting correctly. The `server` section is not in the main configuration file. If you keep scrolling through the configuration file, you'll discover that there are some `include` directives.
 
 :::image type="content" source="./media/install-nginx-configure-it-reverse-proxy/include.png" alt-text="BuggyAmb include" border="true":::
 
